@@ -41,6 +41,11 @@ def main() -> int:
 
     # tarjeta primero, para que el servidor pueda servirla
     unit = json.loads(unit_path.read_text(encoding="utf-8"))
+    # El test ejerce SIEMPRE las tres plataformas, pase lo que pase con los
+    # targets de la pieza real: a esta le quitamos Threads por no tener todavia
+    # credenciales, y eso no debe reducir la cobertura del publicador. El
+    # archivo se restaura al final desde 'backup'.
+    unit["targets"] = ["facebook", "instagram", "threads"]
     card = publish.render_card(unit)
 
     srv, base = fake_graph.start(card)
