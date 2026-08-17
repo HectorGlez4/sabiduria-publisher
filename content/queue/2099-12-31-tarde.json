@@ -1,0 +1,18 @@
+{
+  "id": "2099-12-31-tarde",
+  "publish_at": "2099-12-31T19:00:00Z",
+  "slot": "tarde",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Pieza desechable para validar el aviso de fallo",
+    "hook": "Esta pieza existe solo para provocar un fallo controlado.",
+    "body": ["No se publica en ningun sitio."],
+    "question": "¿Salta el aviso?"
+  },
+  "card": {"renderer": "text_card", "variant": "gold", "title": "PRUEBA", "subtitle": "Sub", "body": "Cuerpo"},
+  "tags": {"primary": "#SabiduriaDeBolsillo", "topic": ["#viral"], "extended": []},
+  "sources": [{"claim": "es una prueba", "source": "el propio repo"}],
+  "targets": ["facebook"],
+  "status": "ready",
+  "results": {}
+}
