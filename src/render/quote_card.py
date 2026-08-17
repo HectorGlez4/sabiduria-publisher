@@ -15,6 +15,7 @@ Identidad visual de la pagina:
 """
 import argparse
 import os
+import sys
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
@@ -27,11 +28,10 @@ CREAM = (247, 241, 228)
 CREAM_DEEP = (238, 228, 208)
 INK = (44, 38, 28)
 
-FONT_DIR = "/usr/share/fonts/truetype/google-fonts"
-LORA = os.path.join(FONT_DIR, "Lora-Variable.ttf")
-LORA_IT = os.path.join(FONT_DIR, "Lora-Italic-Variable.ttf")
-POPPINS = os.path.join(FONT_DIR, "Poppins-Medium.ttf")
-POPPINS_LIGHT = os.path.join(FONT_DIR, "Poppins-Light.ttf")
+# Las fuentes van empaquetadas en assets/fonts/ para que la tarjeta sea
+# identica en cualquier maquina. Ver src/render/fonts.py.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fonts import LORA, LORA_IT, POPPINS, POPPINS_LIGHT  # noqa: E402
 
 W, H = 1080, 1350
 
@@ -77,6 +77,24 @@ def fit_quote(draw, text, max_w, max_h, path, start=78, min_size=40):
     return font, lines, min_size * 1.42
 
 
+def fit_tracked(draw, text, max_w, path, start=30, min_size=17, tracking=3.0):
+    """Mayor tamano que hace caber una linea con letter-spacing dentro de max_w.
+
+    La cita ya tenia fit_quote; la linea de autor no, y por eso las atribuciones
+    largas ("Seneca, Sobre la brevedad de la vida, 1.3 (hacia el ano 49)") se
+    salian del marco por los dos lados. El tracking encoge con la fuente: si se
+    dejara fijo, la version pequena parece otra tipografia.
+    """
+    for size in range(start, min_size - 1, -1):
+        font = ImageFont.truetype(path, size)
+        tr = tracking * size / start
+        w = sum(draw.textlength(ch, font=font) for ch in text)
+        w += tr * max(len(text) - 1, 0)
+        if w <= max_w:
+            return font, tr
+    return ImageFont.truetype(path, min_size), tracking * min_size / start
+
+
 def make_card(quote, author, out_path, variant="cream", kicker="SABIDURÍA DE BOLSILLO"):
     quote = quote.strip().strip('"').strip("“”")
     if variant == "gold":
@@ -109,8 +127,9 @@ def make_card(quote, author, out_path, variant="cream", kicker="SABIDURÍA DE BO
     # Filete + autor
     ry = 1058
     d.line([(W / 2 - 70, ry), (W / 2 + 70, ry)], fill=accent, width=2)
-    fa = ImageFont.truetype(POPPINS, 30)
-    track_text(d, (0, ry + 34), author.upper(), fa, fg, tracking=3.0, anchor_center_x=W / 2)
+    author_line = author.upper()
+    fa, atr = fit_tracked(d, author_line, W - 2 * (m + 40), POPPINS)
+    track_text(d, (0, ry + 34), author_line, fa, fg, tracking=atr, anchor_center_x=W / 2)
 
     # Firma de marca
     fk = ImageFont.truetype(POPPINS_LIGHT, 22)

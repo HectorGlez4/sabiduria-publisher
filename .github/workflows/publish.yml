@@ -36,11 +36,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Las fuentes NO se instalan del sistema: van empaquetadas en
+      # assets/fonts/. Aquí había un "apt-get install fonts-lora fonts-poppins"
+      # con "|| true": ninguno de los dos paquetes existe en Ubuntu, así que el
+      # paso salía en verde y la publicación reventaba después, al renderizar.
       - name: Instalar dependencias
-        run: |
-          pip install --quiet pillow requests
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq fonts-lora fonts-poppins || true
+        run: pip install --quiet -r requirements.txt
 
       - name: Publicar
         env:

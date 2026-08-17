@@ -18,6 +18,7 @@ La ruta de --out debe ser /mnt/user-data/outputs/AAAA-MM-DD-franja.png
 """
 import argparse
 import os
+import sys
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
@@ -28,11 +29,10 @@ CREAM = (247, 241, 228)
 CREAM_DEEP = (238, 228, 208)
 INK = (44, 38, 28)
 
-FONT_DIR = "/usr/share/fonts/truetype/google-fonts"
-LORA = os.path.join(FONT_DIR, "Lora-Variable.ttf")
-LORA_IT = os.path.join(FONT_DIR, "Lora-Italic-Variable.ttf")
-POPPINS = os.path.join(FONT_DIR, "Poppins-Medium.ttf")
-POPPINS_LIGHT = os.path.join(FONT_DIR, "Poppins-Light.ttf")
+# Las fuentes van empaquetadas en assets/fonts/ para que la tarjeta sea
+# identica en cualquier maquina. Ver src/render/fonts.py.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from fonts import LORA, LORA_IT, POPPINS, POPPINS_LIGHT  # noqa: E402
 
 W, H = 1080, 1350
 

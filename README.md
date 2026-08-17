@@ -44,7 +44,8 @@ src/
   render/*.py          Generadores de tarjeta (deterministas)
   platforms/meta.py    Facebook + Instagram + Threads por Graph API
   platforms/_pending.py Lo que está bloqueado y por qué
-assets/                PNG generados. No se versionan: se reproducen del JSON
+assets/fonts/          Lora y Poppins (OFL). Estas SÍ se versionan
+assets/*.png           Tarjetas generadas. No: se reproducen del JSON
 ```
 
 El principio que sostiene todo: **la imagen y los textos son funciones puras del
@@ -70,6 +71,19 @@ hay una cita sin atribución confirmada, falta la tarjeta, el subtítulo repite 
 gancho, el cuerpo pasa de 300 caracteres, hay etiquetas prohibidas, o algún texto
 excede el límite de su plataforma. Probado con casos negativos: los cuatro fallos
 típicos se detectan.
+
+**Lo que todavía NO comprueba**, y conviene tener presente al migrar el contenido
+pendiente:
+
+- el máximo de 3 al día y el mínimo de 4 horas entre publicaciones
+- la no repetición de tema o cita en 90 días
+- la alternancia cream/gold contra la última publicación real
+
+`content/published/` hoy solo se escribe, nunca se lee, así que las tres reglas
+dependen de que alguien se acuerde. La alternancia se lleva a mano: la pieza de
+Séneca trae un campo `_nota_variante` donde alguien anotó que corrigió gold→cream
+después de que ya se hubiera cometido el error una vez. Con una sola pieza en cola
+no se nota; con 38, sí. Pendiente para después de la primera publicación.
 
 ---
 
@@ -102,11 +116,35 @@ Instagram → Threads → cambio de estado → movimiento del archivo.
 Reproduce a propósito los dos comportamientos que es imposible acertar a ciegas:
 el contenedor de Instagram que tarda en procesarse (obliga a hacer polling) y el
 error `9007 / subcode 2207006` "Media ID is not available" en el primer intento
-de `media_publish` (obliga a reintentar). Once comprobaciones, incluida la
-idempotencia: una pieza con `post_id` no se reenvía nunca.
+de `media_publish` (obliga a reintentar). Catorce comprobaciones, incluidas la
+idempotencia (una pieza con `post_id` no se reenvía nunca) y las dos de la
+tarjeta: que las fuentes se resuelvan dentro del repo y que una atribución larga
+quepa en el marco.
 
 Si esto pasa, lo único que puede fallar en producción son credenciales y
 permisos, no la orquestación.
+
+## Tipografía
+
+Las fuentes van **empaquetadas en `assets/fonts/`**, no instaladas del sistema.
+Lora y Poppins son OFL-1.1, así que redistribuirlas en un repo público es
+legítimo; sus licencias están junto a los archivos.
+
+La razón no es comodidad: es el mismo principio que sostiene el resto. Si la
+fuente la pone el sistema operativo, la tarjeta deja de ser una función pura del
+JSON y la misma pieza sale distinta en tu Mac y en Actions, sin que nadie se
+entere hasta que está publicada.
+
+Antes esto eran rutas absolutas a `/usr/share/fonts/truetype/google-fonts`, el
+sandbox donde se redactó el repo. Fuera de ahí, PIL levantaba `OSError: cannot
+open resource` y la publicación moría en el primer paso. El workflow creía
+cubrirlo con `apt-get install fonts-lora fonts-poppins || true`, pero ninguno de
+los dos paquetes existe en Ubuntu y el `|| true` se tragaba el fallo: el paso
+salía en verde y reventaba después, al renderizar.
+
+`src/render/fonts.py` busca en `SDB_FONT_DIR` (para probar otra tipografía sin
+tocar código), luego en `assets/fonts/`, y si no las encuentra dice dónde buscó
+en vez de dejar el error de PIL.
 
 ---
 

@@ -73,7 +73,15 @@ def render_card(unit: dict) -> pathlib.Path:
     else:
         cmd += ["--title", card["title"], "--subtitle", card["subtitle"], "--body", card["body"]]
 
-    subprocess.run(cmd, check=True, capture_output=True)
+    # Sin capturar y reemitir stderr, un fallo del renderer llega aquí como un
+    # CalledProcessError opaco que no dice ni la excepción ni la línea. Costó
+    # una sesión entera diagnosticar así unas rutas de fuente inexistentes.
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        detalle = (r.stderr or r.stdout or "(sin salida)").strip()
+        raise RuntimeError(
+            f"falló el renderer {card['renderer']} (código {r.returncode}):\n{detalle}"
+        )
     if not out.exists():
         raise RuntimeError(f"la tarjeta no se generó: {out}")
     return out

@@ -57,6 +57,32 @@ def main() -> int:
         "SDB_IG_USER_ID": "IG", "SDB_THREADS_USER_ID": "TH", "SDB_THREADS_TOKEN": "T",
     })
 
+    print("\n0. Tarjeta: fuentes y encaje")
+    # Las rutas de fuente eran absolutas al sandbox donde se escribio el repo.
+    # Fuera de ahi, PIL levantaba "cannot open resource" y la publicacion moria
+    # en el primer paso. Se comprueba que se resuelven DENTRO del repo.
+    sys.path.insert(0, str(ROOT / "src" / "render"))
+    import fonts as brand_fonts
+    import quote_card as qc
+    from PIL import Image, ImageDraw
+
+    rutas = [brand_fonts.LORA, brand_fonts.LORA_IT,
+             brand_fonts.POPPINS, brand_fonts.POPPINS_LIGHT]
+    check(all(pathlib.Path(r).is_file() for r in rutas),
+          "las cuatro fuentes de marca existen")
+    check(all(str(ROOT) in r for r in rutas),
+          "se resuelven dentro del repo, no del sistema operativo")
+
+    # La cita tenia fit_quote; la linea de autor no, y las atribuciones largas
+    # se salian del marco por los dos lados (visible en la tarjeta de ejemplo).
+    d = ImageDraw.Draw(Image.new("RGB", (qc.W, qc.H)))
+    max_w = qc.W - 2 * (46 + 40)
+    largo = "SÉNECA, SOBRE LA BREVEDAD DE LA VIDA, 1.3 (HACIA EL AÑO 49)"
+    f, tr = qc.fit_tracked(d, largo, max_w, qc.POPPINS)
+    ancho = sum(d.textlength(c, font=f) for c in largo) + tr * (len(largo) - 1)
+    check(ancho <= max_w,
+          f"una atribucion larga cabe en el marco ({ancho:.0f} <= {max_w} px)")
+
     print("\n1. Comprobaciones previas")
     check(variants.preflight(unit) == [], "la pieza pasa limpia")
 
