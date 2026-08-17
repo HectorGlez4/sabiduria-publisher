@@ -108,13 +108,41 @@ def upload_asset(path: pathlib.Path) -> str:
     return hosting.upload(path, ROOT)
 
 
+def contexto_para(unit: dict, dry_run: bool) -> tuple[list[dict], "datetime | None"]:
+    """
+    Con qué historial y con qué reloj se juzga la pieza.
+
+    Al publicar de verdad: el historial real y la hora real, porque la cadencia
+    mide el espaciado que ven los filtros de spam.
+
+    En ensayo: la pieza se juzga EN SU TURNO, no ahora. Cuentan también las
+    piezas de la cola programadas antes que ella, que para entonces ya habrán
+    salido. Sin esto, un ensayo de una pieza del día 20 la compara contra la
+    última publicación real de hoy y da errores de alternancia que no existen,
+    y la cadencia la bloquea por estar a media hora de algo que salió hace un
+    rato. El ensayo dejaría de servir justo cuando más se usa.
+    """
+    historial = load_history()
+    if not dry_run:
+        return historial, datetime.now(timezone.utc)
+
+    cuando = unit.get("publish_at") or ""
+    for p in sorted(QUEUE.glob("*.json")):
+        otra = load(p)
+        if otra.get("id") == unit.get("id"):
+            continue
+        if (otra.get("publish_at") or "") < cuando:
+            otra = dict(otra)
+            otra["results"] = {"_simulado": {"published_at": otra.get("publish_at")}}
+            historial.append(otra)
+    return historial, None
+
+
 def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
     print(f"\n▶ {unit['id']} · {unit['pillar']} · {unit['core'].get('subject', '')}")
 
-    # La hora real, no la programada: si esto sale fuera de horario —por --id
-    # o por un cron retrasado— la cadencia tiene que medir el espaciado de
-    # verdad, que es lo que ven los filtros de spam.
-    problems = variants.preflight(unit, load_history(), datetime.now(timezone.utc))
+    historial, ahora = contexto_para(unit, dry_run)
+    problems = variants.preflight(unit, historial, ahora)
     if problems:
         print("  ✗ no pasa las comprobaciones previas:")
         for p in problems:

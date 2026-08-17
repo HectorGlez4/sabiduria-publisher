@@ -16,7 +16,11 @@ sys.path.insert(0, str(ROOT))
 
 from datetime import datetime, timezone  # noqa: E402
 
-from src import variants  # noqa: E402
+import json  # noqa: E402
+import shutil  # noqa: E402
+import tempfile  # noqa: E402
+
+from src import publish, variants  # noqa: E402
 
 FALLOS: list[str] = []
 
@@ -142,6 +146,37 @@ def main() -> int:
         pieza("2026-09-01-tarde", "2026-09-01T19:00:00Z", tema="Otro", variante="gold"),
         hist), "2026-08-05-tarde"),
         "el mensaje señala la última real, no una anterior")
+
+    print("\n6. El ensayo juzga la pieza EN SU TURNO, no ahora")
+    # Sin esto, ensayar una pieza del dia 20 la compara contra la ultima
+    # publicacion real de hoy: da errores de alternancia que no existen y la
+    # cadencia la bloquea. El ensayo dejaria de servir justo cuando mas se usa.
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="sdb-reglas-"))
+    qdir, pdir = tmp / "queue", tmp / "published"
+    qdir.mkdir(parents=True); pdir.mkdir(parents=True)
+    publish.QUEUE, publish.PUBLISHED = qdir, pdir
+
+    (pdir / "a.json").write_text(json.dumps(
+        publicada("2026-09-01-tarde", "2026-09-01T19:00:00Z", variante="cream")), encoding="utf-8")
+    entremedias = pieza("2026-09-01-noche", "2026-09-02T01:30:00Z",
+                        tema="Tema intermedio", variante="gold")
+    despues = pieza("2026-09-02-manana", "2026-09-02T14:00:00Z",
+                    tema="Tema posterior", variante="cream")
+    (qdir / "b.json").write_text(json.dumps(entremedias), encoding="utf-8")
+    (qdir / "c.json").write_text(json.dumps(despues), encoding="utf-8")
+
+    hist, ahora = publish.contexto_para(despues, dry_run=True)
+    check(ahora is None, "en ensayo no se usa el reloj actual")
+    check(any(h.get("id") == "2026-09-01-noche" for h in hist),
+          "el ensayo cuenta la pieza de la cola que sale antes")
+    check(variants.preflight(despues, hist, ahora) == [],
+          "una pieza 'cream' pasa si entre medias sale una 'gold'")
+
+    hist2, ahora2 = publish.contexto_para(despues, dry_run=False)
+    check(ahora2 is not None, "al publicar de verdad sí se usa el reloj actual")
+    check(not any(h.get("id") == "2026-09-01-noche" for h in hist2),
+          "al publicar de verdad solo cuenta lo REALMENTE publicado")
+    shutil.rmtree(tmp, ignore_errors=True)
 
     print()
     if FALLOS:
