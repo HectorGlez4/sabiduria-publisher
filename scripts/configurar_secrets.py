@@ -30,6 +30,8 @@ API = os.environ.get("META_API_VERSION", "v24.0")
 # Igual que en meta.py: permite apuntar a un doble de la API para probar esto
 # sin gastar un token real. En uso normal se deja sin definir.
 GRAPH = os.environ.get("META_GRAPH_BASE") or f"https://graph.facebook.com/{API}"
+APP_ID_POR_DEFECTO = "3733795406925924"
+WORKIT_ENV = "/Users/hec/dev/WorkItContentCreation/server/.env"
 
 
 def leer_token() -> str:
@@ -46,6 +48,64 @@ def leer_token() -> str:
         "  Añade a .env una línea:  SDB_USER_TOKEN=EAA...\n"
         "  (.env está en .gitignore; el token no sale de tu máquina)"
     )
+
+
+def leer_app_secret() -> tuple[str, str]:
+    """App id y secret. El secret no se imprime ni se registra en ningun sitio."""
+    app_id = os.environ.get("SDB_APP_ID", "").strip() or APP_ID_POR_DEFECTO
+    sec = os.environ.get("SDB_APP_SECRET", "").strip()
+    fuentes = [ROOT / ".env", pathlib.Path(WORKIT_ENV)]
+    for f in fuentes:
+        if sec:
+            break
+        if not f.is_file():
+            continue
+        for linea in f.read_text(encoding="utf-8", errors="ignore").splitlines():
+            for clave in ("SDB_APP_SECRET=", "FACEBOOK_APP_SECRET="):
+                if linea.startswith(clave):
+                    sec = linea.split("=", 1)[1].strip().strip('"').strip("'")
+            if linea.startswith("FACEBOOK_APP_ID=") and not os.environ.get("SDB_APP_ID"):
+                app_id = linea.split("=", 1)[1].strip().strip('"').strip("'")
+    if not sec:
+        sys.exit(
+            "No encuentro el App Secret, y sin el no se puede canjear el token.\n"
+            f"  Lo busco en {ROOT / '.env'} (SDB_APP_SECRET=) y en {WORKIT_ENV}\n"
+            "  (FACEBOOK_APP_SECRET=). No lo imprimo en ningun momento."
+        )
+    return app_id, sec
+
+
+def canjear_por_larga_duracion(corto: str) -> str:
+    """
+    Cambia el token de ~1 h del Explorer por uno de ~60 dias.
+
+    Importa mas de lo que parece: los tokens de PAGINA heredan la caducidad del
+    token de usuario con el que se piden. Pedidos con el token corto, caducan en
+    una hora y manana no se publica. Pedidos con uno de larga duracion, los
+    tokens de pagina ya no caducan.
+    """
+    app_id, secret = leer_app_secret()
+    r = requests.get(
+        f"{GRAPH}/oauth/access_token",
+        params={
+            "grant_type": "fb_exchange_token",
+            "client_id": app_id,
+            "client_secret": secret,
+            "fb_exchange_token": corto,
+        },
+        timeout=60,
+    )
+    if not r.ok:
+        err = r.json().get("error", {})
+        sys.exit(
+            f"No se pudo canjear el token: {err.get('message', r.text[:200])}\n"
+            "  Comprueba que el App Secret corresponde a la app del token."
+        )
+    largo = r.json().get("access_token")
+    if not largo:
+        sys.exit("El canje no devolvio token.")
+    print("  ✓ token de usuario canjeado por uno de larga duracion (~60 dias)")
+    return largo
 
 
 def cuentas(token: str) -> list[dict]:
@@ -85,7 +145,9 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true", help="enseña sin poner nada")
     a = ap.parse_args()
 
-    paginas = cuentas(leer_token())
+    print("\nCanjeando el token del Explorer, que dura ~1 hora:")
+    token = canjear_por_larga_duracion(leer_token())
+    paginas = cuentas(token)
     if not paginas:
         sys.exit("El token no da acceso a ninguna página. ¿Falta el scope pages_show_list?")
 
