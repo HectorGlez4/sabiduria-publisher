@@ -226,6 +226,45 @@ def _mismo_tema(a: str, b: str) -> bool:
     return len(_claves(a) & _claves(b)) >= 2
 
 
+def _problemas_de_cadencia(unit: dict, historial: list[dict],
+                           ahora: datetime | None = None) -> list[str]:
+    """
+    Máximo 3 al día en hora de CDMX y mínimo 4 h entre publicaciones.
+
+    Va separada del resto a propósito: es el ÚNICO problema que se arregla solo
+    con el paso del tiempo. Dentro de unas horas la misma pieza pasa sin tocar
+    nada; el contenido mal, la repetición y la alternancia siguen ahí mañana.
+
+    La distinción decide qué hacer cuando una pieza no pasa. Si es cadencia, se
+    reintenta luego. Si no, hay que apartarla: pick_due() vuelve a elegir la
+    misma pieza vencida en cada ejecución, así que un problema permanente atasca
+    la cola entera y no vuelve a publicarse nada.
+    """
+    problemas: list[str] = []
+    cuando = ahora or _instante(unit)
+    if not historial or not cuando:
+        return problemas
+    reales = sorted(t for t in (_instante(h) for h in historial) if t)
+    if not reales:
+        return problemas
+
+    dia = cuando.astimezone(CDMX).date()
+    mismo_dia = [t for t in reales if t.astimezone(CDMX).date() == dia]
+    if len(mismo_dia) >= MAX_POR_DIA:
+        problemas.append(
+            f"ya hay {len(mismo_dia)} publicaciones el {dia} en hora de CDMX: "
+            f"el maximo es {MAX_POR_DIA} al dia"
+        )
+    cercanas = [t for t in reales
+                if abs((cuando - t).total_seconds()) < HORAS_MINIMAS * 3600]
+    if cercanas:
+        h = min(abs((cuando - t).total_seconds()) for t in cercanas) / 3600
+        problemas.append(
+            f"a {h:.1f} h de otra publicacion: el minimo son {HORAS_MINIMAS} horas"
+        )
+    return problemas
+
+
 def _problemas_de_historial(unit: dict, historial: list[dict],
                             ahora: datetime | None = None) -> list[str]:
     """
@@ -244,23 +283,6 @@ def _problemas_de_historial(unit: dict, historial: list[dict],
     reales = [(h, _instante(h)) for h in historial]
     reales = [(h, t) for h, t in reales if t]
     reales.sort(key=lambda x: x[1])
-
-    # ── cadencia ──
-    if cuando:
-        dia = cuando.astimezone(CDMX).date()
-        mismo_dia = [t for _, t in reales if t.astimezone(CDMX).date() == dia]
-        if len(mismo_dia) >= MAX_POR_DIA:
-            problemas.append(
-                f"ya hay {len(mismo_dia)} publicaciones el {dia} en hora de CDMX: "
-                f"el maximo es {MAX_POR_DIA} al dia"
-            )
-        cercanas = [t for _, t in reales
-                    if abs((cuando - t).total_seconds()) < HORAS_MINIMAS * 3600]
-        if cercanas:
-            h = min(abs((cuando - t).total_seconds()) for t in cercanas) / 3600
-            problemas.append(
-                f"a {h:.1f} h de otra publicacion: el minimo son {HORAS_MINIMAS} horas"
-            )
 
     # ── no repetir en 90 dias ──
     if cuando:
@@ -343,5 +365,20 @@ def preflight(unit: dict, historial: list[dict] | None = None,
                 problems.append(f"{p}: {e}")
 
     problems += _problemas_de_historial(unit, historial or [], ahora)
+    problems += _problemas_de_cadencia(unit, historial or [], ahora)
 
     return problems
+
+
+def preflight_separado(unit: dict, historial: list[dict] | None = None,
+                       ahora: datetime | None = None) -> tuple[list[str], list[str]]:
+    """
+    Los mismos problemas que preflight(), divididos en (permanentes, transitorios).
+
+    publish.py los necesita separados para decidir entre reintentar más tarde y
+    apartar la pieza. Ver _problemas_de_cadencia sobre por qué importa.
+    """
+    h = historial or []
+    transitorios = _problemas_de_cadencia(unit, h, ahora)
+    permanentes = [p for p in preflight(unit, h, ahora) if p not in transitorios]
+    return permanentes, transitorios

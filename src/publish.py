@@ -31,6 +31,11 @@ QUEUE = ROOT / "content" / "queue"
 PUBLISHED = ROOT / "content" / "published"
 ASSETS = ROOT / "assets"
 
+# Reintentos de una pieza que falló en la plataforma. Un error de Meta suele
+# ser pasajero; tres seguidos ya no, y entonces se aparta para que no bloquee
+# la cola indefinidamente.
+MAX_INTENTOS = 3
+
 
 def load(path: pathlib.Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -138,16 +143,48 @@ def contexto_para(unit: dict, dry_run: bool) -> tuple[list[dict], "datetime | No
     return historial, None
 
 
-def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
+def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
+    """
+    Devuelve el desenlace, no un booleano.
+
+    Hacen falta cuatro, no dos: 'aplazada' —la cadencia dice que aún no toca— es
+    funcionamiento normal, no un fallo, y tratarla como tal pintaba el workflow
+    de rojo y dispararía el aviso en cada ejecución fuera de ventana.
+
+        published  · salió
+        ensayo     · dry-run correcto
+        aplazada   · aún no toca; se reintenta sola
+        bloqueada  · necesita que alguien mire
+        fallida    · falló en la plataforma, se reintentará
+    """
     print(f"\n▶ {unit['id']} · {unit['pillar']} · {unit['core'].get('subject', '')}")
 
     historial, ahora = contexto_para(unit, dry_run)
-    problems = variants.preflight(unit, historial, ahora)
-    if problems:
-        print("  ✗ no pasa las comprobaciones previas:")
-        for p in problems:
+    permanentes, transitorios = variants.preflight_separado(unit, historial, ahora)
+
+    if permanentes:
+        # Se aparta. Si se dejara en 'ready', pick_due() volvería a elegir esta
+        # misma pieza vencida en cada ejecución y la cola no avanzaría nunca:
+        # un problema de contenido en una pieza silenciaría la página entera.
+        print("  ✗ no pasa las comprobaciones previas (requiere intervención):")
+        for p in permanentes:
             print(f"      - {p}")
-        return False
+        if not dry_run:
+            unit["status"] = "blocked"
+            unit["blocked_reason"] = permanentes
+            save(unit, path)
+            print("  · apartada como 'blocked' para que la cola siga avanzando")
+            print("    revísala con: python3 scripts/revisar_bloqueadas.py")
+        return "bloqueada"
+
+    if transitorios:
+        # Cadencia: se arregla sola con el paso del tiempo. Se deja en 'ready'
+        # y se reintenta en la próxima ejecución, sin tocar el archivo.
+        print("  · aún no toca, se reintenta en la próxima ejecución:")
+        for p in transitorios:
+            print(f"      - {p}")
+        return "aplazada"
+
     print("  ✓ comprobaciones previas")
 
     card_path = render_card(unit)
@@ -160,7 +197,7 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
 
     if dry_run:
         print("  · dry-run: no se publica nada")
-        return True
+        return "ensayo"
 
     image_url = upload_asset(card_path)
     unit.setdefault("results", {})
@@ -184,14 +221,36 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
             ok = False
         save(unit, path)
 
-    unit["status"] = "published" if ok else "failed"
+    if ok:
+        unit["status"] = "published"
+        unit.pop("attempts", None)
+    else:
+        # Un fallo de plataforma se reintenta: la idempotencia impide reenviar
+        # lo que ya salió. Antes se marcaba 'failed' sin más y pick_due() la
+        # saltaba para siempre: un error pasajero de Meta enterraba una pieza
+        # verificada, en silencio.
+        intentos = int(unit.get("attempts") or 0) + 1
+        unit["attempts"] = intentos
+        unit["last_attempt"] = datetime.now(timezone.utc).isoformat()
+        if intentos >= MAX_INTENTOS:
+            unit["status"] = "blocked"
+            unit["blocked_reason"] = [
+                f"falló {intentos} veces en la plataforma; último error: "
+                + "; ".join(f"{k}: {v['error']}" for k, v in unit["results"].items()
+                            if v.get("error"))
+            ]
+            print(f"  ✗ {intentos} intentos fallidos: apartada como 'blocked'")
+        else:
+            unit["status"] = "ready"
+            print(f"  · intento {intentos} de {MAX_INTENTOS}: se reintentará")
     save(unit, path)
 
     if ok:
         PUBLISHED.mkdir(parents=True, exist_ok=True)
         path.rename(PUBLISHED / path.name)
         print(f"  ✓ movida a content/published/{path.name}")
-    return ok
+        return "published"
+    return "bloqueada" if unit["status"] == "blocked" else "fallida"
 
 
 def main() -> int:
@@ -216,7 +275,12 @@ def main() -> int:
         print("usa --due o --id", file=sys.stderr)
         return 1
 
-    return 0 if publish_unit(unit, path, a.dry_run) else 1
+    desenlace = publish_unit(unit, path, a.dry_run)
+    # 'aplazada' no es un fallo: la cadencia dice que aún no toca y la próxima
+    # ejecución lo resolverá sola. Si saliera con código 1, el workflow se
+    # pintaría de rojo y el aviso saltaría cada vez, que es como se aprende a
+    # ignorar los avisos.
+    return 0 if desenlace in ("published", "ensayo", "aplazada") else 1
 
 
 if __name__ == "__main__":

@@ -129,7 +129,7 @@ def main() -> int:
 
     print("\n2. Publicación completa")
     ok = publish.publish_unit(unit, unit_path)
-    check(ok, "publish_unit devuelve éxito")
+    check(ok == "published", "publish_unit devuelve 'published'")
 
     print("\n3. Resultados por plataforma")
     r = unit.get("results", {})

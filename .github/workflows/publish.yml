@@ -28,6 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write          # para hacer commit del resultado
+      issues: write            # para avisar si una publicación falla
 
     steps:
       - uses: actions/checkout@v4
@@ -71,6 +72,46 @@ jobs:
           [ -n "${{ inputs.id }}" ] && ARGS="--id ${{ inputs.id }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           python3 -m src.publish $ARGS
+
+      # Sin esto, un fallo un jueves se descubre mirando la página. Ahora que
+      # publica sola tres veces al día, eso es demasiado tarde.
+      # No salta cuando una pieza queda 'aplazada' por cadencia: eso sale con
+      # código 0 a propósito, porque es funcionamiento normal y un aviso que
+      # salta siempre es un aviso que se aprende a ignorar.
+      - name: Avisar si falló
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          CUERPO="La ejecución de *publicar* falló.
+
+          Registro: $RUN_URL
+
+          Qué mirar, por orden:
+          1. \`python3 scripts/revisar_bloqueadas.py\` — si una pieza quedó apartada, dice por qué
+          2. Si el error es de credenciales, el token de página pudo invalidarse
+          3. Si es de red o de Meta, la pieza se reintenta sola en la próxima ejecución (hasta 3 veces)
+
+          Este aviso se cierra solo cuando una publicación vuelve a salir bien."
+          EXISTE=$(gh issue list --label publicacion-fallida --state open --limit 1 --json number -q '.[0].number')
+          if [ -n "$EXISTE" ]; then
+            gh issue comment "$EXISTE" --body "$CUERPO"
+          else
+            gh label create publicacion-fallida --color B60205 --description "Fallo del publicador automático" 2>/dev/null || true
+            gh issue create --title "Falló una publicación automática" --label publicacion-fallida --body "$CUERPO"
+          fi
+
+      # Si vuelve a publicar bien, se cierra el aviso: un aviso que se queda
+      # abierto para siempre deja de significar nada.
+      - name: Cerrar el aviso si ya salió bien
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for N in $(gh issue list --label publicacion-fallida --state open --json number -q '.[].number'); do
+            gh issue close "$N" --comment "Una publicación posterior salió bien. Se cierra."
+          done
 
       - name: Registrar el resultado
         if: always()
