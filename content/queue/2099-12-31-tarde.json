@@ -6,13 +6,37 @@
   "core": {
     "subject": "Pieza desechable para validar el aviso de fallo",
     "hook": "Esta pieza existe solo para provocar un fallo controlado.",
-    "body": ["No se publica en ningun sitio."],
+    "body": [
+      "No se publica en ningun sitio."
+    ],
     "question": "¿Salta el aviso?"
   },
-  "card": {"renderer": "text_card", "variant": "gold", "title": "PRUEBA", "subtitle": "Sub", "body": "Cuerpo"},
-  "tags": {"primary": "#SabiduriaDeBolsillo", "topic": ["#viral"], "extended": []},
-  "sources": [{"claim": "es una prueba", "source": "el propio repo"}],
-  "targets": ["facebook"],
-  "status": "ready",
-  "results": {}
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "PRUEBA",
+    "subtitle": "Sub",
+    "body": "Cuerpo"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#viral"
+    ],
+    "extended": []
+  },
+  "sources": [
+    {
+      "claim": "es una prueba",
+      "source": "el propio repo"
+    }
+  ],
+  "targets": [
+    "facebook"
+  ],
+  "status": "blocked",
+  "results": {},
+  "blocked_reason": [
+    "etiqueta prohibida: #viral (activa filtros de spam)"
+  ]
 }
