@@ -1,0 +1,74 @@
+{
+  "id": "2026-08-25-tarde",
+  "publish_at": "2026-08-25T19:12:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "José Martí: la frase que se cita siempre sola y que en el original es la segunda de tres",
+    "hook": "\"Ser culto es el único modo de ser libre.\"\n— José Martí, \"Maestros ambulantes\", La América, Nueva York, mayo de 1884",
+    "body": [
+      "En el original esa frase no va sola. Martí escribió tres seguidas: ser bueno es el único modo de ser dichoso, ser culto es el único modo de ser libre, y en lo común de la naturaleza humana se necesita ser próspero para ser bueno. La tercera es la que nadie repite, y es la que sostiene a las otras dos.",
+      "Tampoco era un discurso solemne. Salió en un mensuario neoyorquino de agricultura, comercio e industria, donde Martí publicó unos cuarenta textos entre marzo de 1883 y julio de 1884. Y proponía algo muy concreto: maestros que caminaran hasta el campo, porque el campo no podía caminar hasta la escuela.",
+      "Leída entera, la idea incomoda un poco más. La cultura libera. Pero primero hay que poder comer."
+    ],
+    "question": "¿Quién tuvo que ir hasta donde estabas tú para enseñarte algo?",
+    "quote": {
+      "text": "Ser culto es el único modo de ser libre.",
+      "author": "José Martí (1853-1895)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JoseMarti",
+      "#Educacion",
+      "#Frases"
+    ],
+    "extended": [
+      "#Marti",
+      "#Cuba",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#NuestraAmerica",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "José Martí: la frase que se cita siempre sola y que en el original es la segunda de tres",
+      "source": "Obras completas vol. 8 (PDF del acervo CLACSO / Centro de Estudios Martianos)"
+    },
+    {
+      "claim": "José Martí: la frase que se cita siempre sola y que en el original es la segunda de tres",
+      "source": "Luis Toledo Sande"
+    },
+    {
+      "claim": "José Martí: la frase que se cita siempre sola y que en el original es la segunda de tres",
+      "source": "\"José Martí y la prosperidad\" (que reproduce el pasaje completo y da la referencia de tomo y páginas)"
+    },
+    {
+      "claim": "José Martí: la frase que se cita siempre sola y que en el original es la segunda de tres",
+      "source": "el estudio Fuentes y enfoques del periodismo de José Martí en el mensuario La América"
+    }
+  ],
+  "do_not_use": [
+    "\"lo dijo en un discurso\" (es un artículo de prensa)",
+    "atribuir la frase a Nuestra América (1891, es otro texto)",
+    "llamar a Martí \"director\" de La América (las fuentes lo consignan como redactor)",
+    "citar la frase suelta como si fuera una sentencia aislada sin mencionar que va con otras dos",
+    "ni fechar el artículo en enero de 1884 (es mayo)"
+  ],
+  "_verificacion_prosa": "la frase pertenece al artículo **\"Maestros ambulantes\"**, publicado por José Martí en el mensuario **La América** de Nueva York en **mayo de 1884**; recogido en las *Obras completas*, volumen 8 (*Nuestra América*), págs. 288-292. Pasaje literal completo: *\"Ser bueno es el único modo de ser dichoso. Ser culto es el único modo de ser libre. Pero, en lo común de la naturaleza humana, se necesita ser próspero para ser bueno.\"* La frase célebre es la segunda de las tres; la tercera casi nunca se cita. *La América* era un mensuario neoyorquino de agricultura, comercio e industria, fundado en abril de 1882; Martí publicó en él unos cuarenta textos entre **marzo de 1883 y julio de 1884**. José Martí, 1853-1895. Fuentes: Obras completas vol. 8 (PDF del acervo CLACSO / Centro de Estudios Martianos), Luis Toledo Sande, \"José Martí y la prosperidad\" (que reproduce el pasaje completo y da la referencia de tomo y páginas), y el estudio *Fuentes y enfoques del periodismo de José Martí en el mensuario La América*. **No usar:** \"lo dijo en un discurso\" (es un artículo de prensa); atribuir la frase a *Nuestra América* (1891, es otro texto); llamar a Martí \"director\" de La América (las fuentes lo consignan como redactor); citar la frase suelta como si fuera una sentencia aislada sin mencionar que va con otras dos; ni fechar el artículo en enero de 1884 (es mayo).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

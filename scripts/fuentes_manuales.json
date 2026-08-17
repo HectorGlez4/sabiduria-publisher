@@ -1,0 +1,62 @@
+{
+  "_nota": "Piezas cuya prosa de Verificación nombra las fuentes dentro del texto, sin la etiqueta 'Fuentes:' que lee el conversor. Extraídas a mano leyendo la prosa entera; no se ha añadido nada que no estuviera ahí. Este archivo se aplica al final de scripts/migrar.py, así que volver a migrar no pierde el trabajo.",
+
+  "2026-08-21-tarde": {
+    "sources": [
+      {
+        "claim": "La frase es de Don Quijote de la Mancha, segunda parte, capítulo XXV (1615), en el episodio de la aventura del rebuzno",
+        "source": "Miguel de Cervantes, Don Quijote de la Mancha, II, cap. XXV (1615)"
+      },
+      {
+        "claim": "Clasificada entre las frases auténticas, frente a las que circulan falsamente atribuidas al Quijote",
+        "source": "Centro de Estudios Cervantinos de Alcázar"
+      }
+    ],
+    "do_not_use": [
+      "Atribuir la frase a un personaje concreto: no se pudo confirmar en una edición crítica accesible quién la pronuncia, así que se acredita autor y obra, no personaje. Para afinarlo: cvc.cervantes.es, Quijote, parte 2, cap. XXV."
+    ]
+  },
+
+  "2026-08-27-tarde": {
+    "sources": [
+      {
+        "claim": "La frase pertenece a Meditaciones del Quijote, primer libro de Ortega, publicado en 1914 por Publicaciones de la Residencia de Estudiantes (Madrid, serie II, vol. I; Imprenta Clásica Española), en la Meditación preliminar, epígrafe 6",
+        "source": "José Ortega y Gasset, Meditaciones del Quijote (Madrid, 1914)"
+      },
+      {
+        "claim": "Redacción literal comprobada sobre el texto de la primera edición: 'Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.'",
+        "source": "Project Gutenberg, ebook 57448 (facsímil digitalizado de la primera edición)",
+        "url": "https://www.gutenberg.org/ebooks/57448"
+      },
+      {
+        "claim": "Datos biográficos: 9 de mayo de 1883 – 18 de octubre de 1955; cátedra de Metafísica de la Universidad Central de Madrid entre 1910 y 1936; regreso a España a partir de 1945",
+        "source": "Fundación José Ortega y Gasset – Gregorio Marañón"
+      }
+    ]
+  },
+
+  "2026-08-28-tarde": {
+    "sources": [
+      {
+        "claim": "El pasaje pertenece a Sociedades americanas en 1828, publicada por entregas (Arequipa 1828, Concepción 1834, Valparaíso 1838, Lima 1842); el texto citado se lee en la edición de Lima, 1842, p. 47",
+        "source": "Simón Rodríguez, Sociedades americanas en 1828 (Lima, 1842), p. 47"
+      },
+      {
+        "claim": "Transcripción del pasaje verificada, con la ortografía original de Rodríguez",
+        "source": "Francisco A. Ortega, Revista de Estudios Sociales n.º 38 (enero de 2011), pp. 30-46; el pasaje en la p. 37"
+      },
+      {
+        "claim": "Datos biográficos: nacido en Caracas el 28 de octubre de 1769; maestro de Bolívar desde 1791; escuelas en Bogotá (1824) y Chuquisaca (1826); muerto el 28 de febrero de 1854 en Amotape; restos trasladados al Panteón Nacional de Caracas en 1954",
+        "source": "Diccionario de Historia de Venezuela, Fundación Empresas Polar, entrada 'Rodríguez, Simón'"
+      },
+      {
+        "claim": "El pasaje trata de instituciones y gobiernos, no de educación; su extrapolación al terreno pedagógico es una lectura posterior",
+        "source": "Julio Mosquera, '\"O Inventamos o Erramos\" no es una consigna educativa' (aporrea)"
+      },
+      {
+        "claim": "El nombre Samuel Robinson lo adoptó en el exilio, en Kingston",
+        "source": "Wikipedia en inglés, 'Simón Rodríguez'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "2026-08-30-manana",
+  "publish_at": "2026-08-30T14:21:00Z",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el tornaviaje: cruzar el Pacífico hacia el oeste se sabía hacer desde Magallanes, volver tardó más de cuarenta años, y el barco que lo consiguió primero no se llevó el mérito",
+    "hook": "EL TORNAVIAJE: durante cuarenta años se pudo cruzar el Pacífico, pero no volver",
+    "body": [
+      "Ir era posible desde Magallanes. Regresar, no: los vientos empujaban siempre hacia el oeste y expedición tras expedición se quedó del otro lado. El 1 de junio de 1565 el fraile agustino Andrés de Urdaneta salió de Cebú en el San Pedro con doscientos hombres y probó otra cosa: subir hasta el paralelo 38 a buscar vientos contrarios. Llegó a Acapulco el 8 de octubre, cuatro meses y ocho días después. Del escorbuto solo quedaban dieciocho hombres capaces de maniobrar.",
+      "Lo que casi nadie cuenta es que no fue el primero. Un patache diminuto, el San Lucas, se había separado de la flota en diciembre de 1564 y llegó al puerto de la Navidad el 9 de agosto, dos meses antes. A su capitán, Alonso de Arellano, lo investigaron por desertor: ni lo castigaron ni lo premiaron. Urdaneta traía mejores diarios y mejores mapas, y el mérito fue suyo.",
+      "Esa ruta funcionó doscientos cincuenta años, hasta 1815."
+    ],
+    "question": "¿Cuánto pesa llegar primero si nadie te cree el relato?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL TORNAVIAJE",
+    "subtitle": "La ruta de vuelta que tardó cuarenta años en encontrarse",
+    "body": "En 1565 un fraile agustino salió de Cebú, subió hasta el paralelo 38 a buscar vientos del oeste y llegó a Acapulco en cuatro meses. Del escorbuto solo quedaban dieciocho hombres capaces de maniobrar. Otro barco había llegado dos meses antes y a su capitán lo juzgaron por desertor."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Acapulco",
+      "#Historia",
+      "#Curiosidades"
+    ],
+    "extended": [
+      "#DatosCuriosos",
+      "#GaleonDeManila",
+      "#NaoDeChina",
+      "#Mexico",
+      "#Filipinas",
+      "#Navegacion",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el tornaviaje: cruzar el Pacífico hacia el oeste se sabía hacer desde Magallanes, volver tardó más de cuarenta años, y el barco que lo consiguió primero no se llevó el mérito",
+      "source": "Wikipedia en inglés (Andrés de Urdaneta, Alonso de Arellano, Manila galleon)"
+    },
+    {
+      "claim": "el tornaviaje: cruzar el Pacífico hacia el oeste se sabía hacer desde Magallanes, volver tardó más de cuarenta años, y el barco que lo consiguió primero no se llevó el mérito",
+      "source": "ANU Press (The Spanish Lake / capítulo sobre el tornaviaje: fecha del 9 de agosto en Navidad y valoración del crédito)"
+    },
+    {
+      "claim": "el tornaviaje: cruzar el Pacífico hacia el oeste se sabía hacer desde Magallanes, volver tardó más de cuarenta años, y el barco que lo consiguió primero no se llevó el mérito",
+      "source": "Arqueología Mexicana (El Galeón de Manila. La ruta transpacífica)"
+    }
+  ],
+  "do_not_use": [
+    "\"Urdaneta descubrió el tornaviaje\" a secas (llegó segundo; el crédito es por la documentación y por haber formulado la ruta, no por la primicia)",
+    "\"Arellano desertó\" como hecho (la investigación fue inconclusa)",
+    "una fecha cerrada de salida de la flota de Legazpi distinta del 21 de noviembre de 1564",
+    "\"el galeón unió por primera vez el mundo entero\" como superlativo cerrado (la formulación defendible es \"primera línea regular que cruzó el Pacífico durante 250 años\")",
+    "cifras de plata americana que llegó a China (las estimaciones publicadas varían mucho y no se verificaron para esta entrada)",
+    "ni presentar a Lope Martín como héroe (acabó implicado en un motín posterior)"
+  ],
+  "_verificacion_prosa": "**Andrés de Urdaneta**, fraile agustino, **1508 – 3 de junio de 1568**; profesó votos en 1553 y fue ordenado sacerdote en 1557. **Viaje de vuelta:** salió de **Cebú el 1 de junio de 1565** a bordo del **San Pedro**, con una tripulación de **200 hombres**; navegó al noreste **hasta el paralelo 38**, donde encontró vientos favorables del oeste que lo llevaron a cruzar el Pacífico; avistó la isla de Santa Catalina el **18 de septiembre de 1565** y **llegó a Acapulco el 8 de octubre de 1565**, \"completando un viaje de cuatro meses y ocho días\" (129 días). Estado de la tripulación: \"la mayor parte de la tripulación sufría escorbuto y **solo 18 seguían con fuerzas suficientes para gobernar el barco**\". **El San Lucas:** patache al mando de **Alonso de Arellano**, con el piloto **Lope Martín**, que **se separó de la flota de Legazpi el 1 de diciembre de 1564** (la flota había salido de México el 21 de noviembre); cruzó de vuelta y **llegó a Navidad el 9 de agosto de 1565**, \"dos meses antes\" que Urdaneta. \"Tras la investigación de la Audiencia, Arellano no fue castigado por deserción ni recompensado por el éxito\"; y \"Urdaneta conservó mejores diarios y mapas del viaje, y por eso los historiadores le dieron el crédito\". Arellano murió en México en 1579; su relación del viaje se publicó en España en 1887. **La ruta:** el galeón de Manila operó **de 1565 a 1815**, 250 años; real cédula de **1593** que limita a dos naos anuales por puerto; **108 barcos** hicieron la travesía como galeones de Manila, de los cuales **26 fueron capturados o hundidos por el enemigo**; el último en llegar a Manila fue el **San Fernando o Magallanes, en 1815**, que llegó vacío porque su carga había sido requisada en México. Fuentes: Wikipedia en inglés (*Andrés de Urdaneta*, *Alonso de Arellano*, *Manila galleon*), ANU Press (*The Spanish Lake* / capítulo sobre el tornaviaje: fecha del 9 de agosto en Navidad y valoración del crédito), Arqueología Mexicana (*El Galeón de Manila. La ruta transpacífica*). **No usar:** \"Urdaneta descubrió el tornaviaje\" a secas (llegó segundo; el crédito es por la documentación y por haber formulado la ruta, no por la primicia); \"Arellano desertó\" como hecho (la investigación fue inconclusa); una fecha cerrada de salida de la flota de Legazpi distinta del 21 de noviembre de 1564; \"el galeón unió por primera vez el mundo entero\" como superlativo cerrado (la formulación defendible es \"primera línea regular que cruzó el Pacífico durante 250 años\"); cifras de plata americana que llegó a China (las estimaciones publicadas varían mucho y no se verificaron para esta entrada); ni presentar a Lope Martín como héroe (acabó implicado en un motín posterior).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

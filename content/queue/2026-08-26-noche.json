@@ -1,0 +1,78 @@
+{
+  "id": "2026-08-26-noche",
+  "publish_at": "2026-08-27T01:41:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+    "hook": "MIYAMOTO MUSASHI GANÓ MÁS DE SESENTA COMBATES Y SU ÚLTIMO ESCRITO CASI NO HABLA DE ESPADAS",
+    "body": [
+      "Contó él mismo que su primer duelo fue a los trece años y que entre esa edad y los veintinueve peleó unas sesenta veces sin perder una sola. Hacia 1643 se retiró a una cueva del monte Iwato, en Higo, y ahí terminó su tratado a comienzos de 1645.",
+      "Siete días antes de morir repartió lo que tenía y entregó a su discípulo Terao Magonojo dos papeles. Uno era ese tratado. El otro, un rollo de veintiuna líneas fechado el día doce del quinto mes: el Dokkodo, el camino de andar solo.",
+      "No es un manual de combate. De esas veintiuna líneas, solo dos nombran las armas o la estrategia. Las demás dicen cosas como no desear casa propia, no arrepentirse de lo hecho, no aficionarse a los objetos. Y una que desarma: venera a los budas y a los dioses, y no cuentes con ellos.",
+      "El rollo original se conserva en Kumamoto. Lo firmó un hombre que ya lo había ganado todo y estaba soltando."
+    ],
+    "question": "¿Qué de lo que hoy te parece imprescindible no aparecería en tu lista?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "MUSASHI",
+    "subtitle": "Veintiuna líneas escritas siete días antes de morir",
+    "body": "Se llama Dokkodo, el camino de andar solo. Lo entregó a un discípulo junto con su tratado de esgrima y murió una semana después. Solo dos de sus veintiuna reglas nombran las armas. Una dice: venera a los dioses y no cuentes con ellos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Musashi",
+      "#Japon",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#MiyamotoMusashi",
+      "#Samurai",
+      "#Bushido",
+      "#FilosofiaOriental",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Frases"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+      "source": "Wikisource en japonés (獨行道, lista de preceptos y colofón)"
+    },
+    {
+      "claim": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+      "source": "Wikipedia en japonés (独行道: fecha, destinatario, autógrafo y museo)"
+    },
+    {
+      "claim": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+      "source": "Wikipedia en inglés (Miyamoto Musashi, Dokkōdō)"
+    },
+    {
+      "claim": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+      "source": "HandWiki (biografía: fecha y circunstancias de la muerte, entrega de ambos textos siete días antes)"
+    },
+    {
+      "claim": "Miyamoto Musashi y el Dokkōdō: las veintiuna líneas que escribió siete días antes de morir",
+      "source": "traducción inglesa del prólogo del Book of Five Rings"
+    }
+  ],
+  "do_not_use": [
+    "\"12 de mayo de 1645\" como fecha del calendario occidental (el colofón está en calendario lunar japonés: decir \"el día doce del quinto mes\")",
+    "\"61 duelos\" o \"62 duelos\" como cifra cerrada (las fuentes discrepan; el propio Musashi dice \"hasta sesenta\")",
+    "\"escribió el Dokkōdō para sus discípulos como manual\" (es una regla de conducta propia, un jisei de vida)",
+    "atribuirle la frase viral \"no hay nada fuera de ti mismo…\" y demás sentencias de internet que no están en el corpus",
+    "\"murió en la cueva\" como hecho cerrado (las fuentes varían entre Reigandō y su residencia en Kumamoto: el copy no lo afirma)",
+    "el duelo de Ganryūjima con Sasaki Kojirō como relato fiable (la tradición lo fecha el 13 de abril de 1612, pero los detalles están muy discutidos: el copy no lo menciona)"
+  ],
+  "_verificacion_prosa": "Miyamoto Musashi, c. 1584 – **13 de junio de 1645** (Shōhō 2, día 19 del quinto mes), muerto a los sesenta y dos años; la causa que registran las fuentes es un cáncer torácico. **Duelos:** el propio prólogo del *Go rin no sho* dice que su primer duelo fue a los trece años contra Arima Kihei, el segundo a los dieciséis contra Tadashima Akiyama, que a los veintiuno subió a la capital y que \"no falló ni una vez, aun habiendo tenido hasta sesenta encuentros. Esto fue entre los trece y los veintiocho o veintinueve años\". Las biografías modernas cifran el total en 61 o 62 duelos sin derrota; el copy usa la formulación del propio Musashi (\"más de sesenta\"), no la cifra redonda. **Retiro:** en **1643** se retiró a la cueva de Reigandō, en el monte Iwato (Higo, actual prefectura de Kumamoto), y terminó el *Go rin no sho* en el **segundo mes de 1645**. **Dokkōdō** (独行道 / 獨行道, \"el camino de andar solo\"): rollo autógrafo de **21 preceptos**, con colofón *正保弐年 五月十二日* — día doce del quinto mes de Shōhō 2 (1645) — firmado *新免武藏 玄信* y dirigido a *寺尾孫之丞殿*, Terao Magonojō, el mismo discípulo que recibió ese día el *Go rin no sho*, siete días antes de la muerte de Musashi. El autógrafo se conserva y es Bien Cultural de Interés de la prefectura de Kumamoto, en el Museo de Arte de la Prefectura de Kumamoto. **Preceptos citados en el copy**, según el texto japonés: 「私宅においてのぞむ心なし」 (no desear casa propia), 「我事において後悔をせず」 (no arrepentirse de lo hecho), 「物毎にすきこのむ事なし」 (no tener preferencias por las cosas), 「兵具は格別、よの道具たしなまず」 (salvo las armas, no aficionarse a ningún objeto) y 「仏神は貴し、仏神をたのまず」 (venerar a los budas y a los dioses, y no contar con ellos). **Recuento comprobado sobre la lista completa:** de los veintiún preceptos, solo dos nombran las armas o la estrategia (el de los *hyōgu* y el último, 「常に兵法の道をはなれず」). Musashi fue además pintor y calígrafo; se le atribuyen obras a la tinta como *Koboku meigekizu* (el alcaudón sobre la rama seca). Fuentes: Wikisource en japonés (獨行道, lista de preceptos y colofón), Wikipedia en japonés (独行道: fecha, destinatario, autógrafo y museo), Wikipedia en inglés (*Miyamoto Musashi*, *Dokkōdō*), HandWiki (biografía: fecha y circunstancias de la muerte, entrega de ambos textos siete días antes), traducción inglesa del prólogo del *Book of Five Rings*. **No usar:** \"12 de mayo de 1645\" como fecha del calendario occidental (el colofón está en calendario lunar japonés: decir \"el día doce del quinto mes\"); \"61 duelos\" o \"62 duelos\" como cifra cerrada (las fuentes discrepan; el propio Musashi dice \"hasta sesenta\"); \"escribió el Dokkōdō para sus discípulos como manual\" (es una regla de conducta propia, un *jisei* de vida); atribuirle la frase viral \"no hay nada fuera de ti mismo…\" y demás sentencias de internet que no están en el corpus; \"murió en la cueva\" como hecho cerrado (las fuentes varían entre Reigandō y su residencia en Kumamoto: el copy no lo afirma); y el duelo de Ganryūjima con Sasaki Kojirō como relato fiable (la tradición lo fecha el 13 de abril de 1612, pero los detalles están muy discutidos: el copy no lo menciona).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

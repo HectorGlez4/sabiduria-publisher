@@ -1,0 +1,140 @@
+{
+  "id": "2026-08-29-manana",
+  "publish_at": "2026-08-29T14:52:00Z",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+    "hook": "WU ZETIAN LLEGÓ A EMPERADOR DE CHINA Y SU LÁPIDA QUEDÓ SIN UNA SOLA PALABRA",
+    "body": [
+      "Se proclamó emperador el 19 de octubre del 690. No emperatriz consorte: emperador, el mismo título que los hombres. Es la única mujer de la historia de China que lo llevó. La apartaron del trono en febrero del 705 y murió ese diciembre, a los 81 años.",
+      "En su mausoleo, en la provincia china de Shaanxi, se levantó una estela de más de seis metros y casi cien toneladas. Nadie grabó nada en ella. El porqué se sigue discutiendo: que lo pidió ella para que la juzgaran las generaciones siguientes, que ningún texto alcanzaba, o que su hijo no supo si llamarla emperatriz o emperador.",
+      "Lo que casi nadie sabe es que hoy no está en blanco. Los visitantes fueron escribiendo encima: se cuentan cuarenta y dos inscripciones, la más antigua de 1103. Una la dejó un príncipe de la dinastía Jin en escritura kitán, que todavía no se ha descifrado.",
+      "Dejó su juicio vacío. Lo llenaron otros, y una parte ya no se puede leer."
+    ],
+    "question": "¿Qué se dice de ti cuando tú no dices nada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "WU ZETIAN",
+    "subtitle": "Cien toneladas de piedra levantadas para no decir nada",
+    "body": "Fue la única mujer que gobernó China con el título de emperador. En su tumba se alzó una estela de casi cien toneladas y quedó sin una palabra. Hoy lleva cuarenta y dos inscripciones que le añadieron otros, la más antigua de 1103, y una de ellas sigue sin poder leerse."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WuZetian",
+      "#China",
+      "#MujeresEnLaHistoria"
+    ],
+    "extended": [
+      "#HistoriaDeChina",
+      "#Historia",
+      "#HistoriaAntigua",
+      "#Arqueologia",
+      "#CivilizacionesAntiguas",
+      "#Curiosidades",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "Wikipedia en inglés (Wu Zetian). Estela sin palabras (無字碑) del mausoleo de Qianling"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "provincia de Shaanxi. Medidas: las fuentes académicas discrepan — la medida más aceptada es 6"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "30 × 2"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "10 × 1"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "49 m; Zhang Yongxiang da 7"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "53 m de alto y unas 98"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "8 toneladas; Han Zhikuan"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "7"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "9 × 2"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "7 × 1"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "3 m y 98"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "9 toneladas. Por eso el copy dice \"más de seis metros y casi cien toneladas\""
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "sin cifra cerrada. Inscripciones posteriores: 42 en total (32 en la cara frontal, 10 en el reverso); la más antigua es de 1103 (registro de Wang Gu, dinastía Song); hay inscripciones Jin"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "Yuan y sobre todo Ming"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "ninguna Qing. Tres hipótesis académicas sobre por qué quedó sin texto"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "ninguna probada: que ella lo dejó dispuesto para que la juzgaran las generaciones siguientes (tesis de Guo Moruo); que sus méritos no cabían en un texto; y que su hijo"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "el emperador Zhongzong"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "no resolvió cómo nombrarla —emperatriz o emperador— y la estela vacía fue el resultado de ese dilema. Fuente: reseña académica sobre la estela sin palabras de Qianling publicada por la Biblioteca de Shanxi (sxlib.org.cn, sección de investigación sobre la cultura de Qianling). La inscripción del príncipe Jin: 郎君行記"
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "\"Registro del hermano menor del emperador de la Gran Jin\""
+    },
+    {
+      "claim": "Wu Zetian: la única mujer de la historia de China que tomó el título de emperador dejó su lápida sin una sola palabra, y con los siglos otros la llenaron de escritura ajena",
+      "source": "grabada sobre la propia estela; fue el único monumento en escritura kitán grande conocido antes del siglo XX y hasta los años veinte se dio por escrita en jurchen: se identificó como kitán tras aparecer las lápidas del emperador Xingzong de Liao y su consorte. La escritura kitán grande sigue en su mayor parte sin descifrar: solo se conoce el valor de una parte de los signos (números, algunos de los cinco elementos, los doce animales). Fuentes: Wikipedia en inglés (List of Khitan inscriptions, Khitan large script, Jurchen script)"
+    }
+  ],
+  "do_not_use": [
+    "la fecha exacta de esa inscripción (la fuente china la da como 天會十三年, 1135, y otras la fechan en 1134 por la conversión del calendario lunar: el copy no da año, solo \"un príncipe de la dinastía Jin\")",
+    "\"escritura jurchen\" (es kitán grande, y esa confusión es justo lo que se corrigió en los años veinte)",
+    "\"la escritura kitán es indescifrable\" sin matiz (está parcialmente descifrada)",
+    "\"Wu Zetian mandó dejar la estela en blanco\" como hecho (es una de tres hipótesis, y el copy las presenta como discusión abierta)",
+    "llamarla \"emperatriz\" como si fuera su título en el 690 (tomó el de emperador)",
+    "una cifra cerrada de altura o de peso",
+    "\"fue la única mujer que gobernó China\" a secas (hubo regentes y emperatrices con poder efectivo: lo único indiscutido es que fue la única que tomó el título de emperador)",
+    "el mausoleo como tumba \"nunca excavada\" o \"nunca saqueada\", dato que no se verificó para esta entrada"
+  ],
+  "_verificacion_prosa": "**Wu Zetian**, nacida el **17 de febrero de 624** y muerta el **16 de diciembre de 705**, a los 81 años. Emperatriz consorte desde **655**; administró de hecho el imperio tras el derrame cerebral de su esposo, el emperador Gaozong, en 660, y gobernó como emperatriz viuda y regente desde la muerte de él en 683. Se proclamó **emperador (huangdi) el 19 de octubre de 690**, fundando la dinastía **Zhou**. Fue apartada del poder el **22 de febrero de 705** por el golpe de Shenlong, que abolió la Zhou y restauró la Tang. Wikipedia en inglés la describe como \"la única soberana indiscutida de la historia de China\" en asumir el título de huangdi. Creó los **exámenes de palacio y militares basados solo en el mérito** y en **693** amplió el acceso al sistema de exámenes a plebeyos y gentes antes excluidas. Fuente: Wikipedia en inglés (*Wu Zetian*). **Estela sin palabras** (無字碑) del **mausoleo de Qianling**, provincia de Shaanxi. **Medidas: las fuentes académicas discrepan** — la medida más aceptada es 6,30 × 2,10 × 1,49 m; Zhang Yongxiang da 7,53 m de alto y unas 98,8 toneladas; Han Zhikuan, 7,9 × 2,7 × 1,3 m y 98,9 toneladas. Por eso el copy dice \"más de seis metros y casi cien toneladas\", sin cifra cerrada. **Inscripciones posteriores: 42 en total** (32 en la cara frontal, 10 en el reverso); la más antigua es de **1103** (registro de Wang Gu, dinastía Song); hay inscripciones Jin, Yuan y sobre todo Ming, y ninguna Qing. **Tres hipótesis académicas sobre por qué quedó sin texto**, ninguna probada: que ella lo dejó dispuesto para que la juzgaran las generaciones siguientes (tesis de Guo Moruo); que sus méritos no cabían en un texto; y que su hijo, el emperador Zhongzong, no resolvió cómo nombrarla —emperatriz o emperador— y la estela vacía fue el resultado de ese dilema. Fuente: reseña académica sobre la estela sin palabras de Qianling publicada por la Biblioteca de Shanxi (sxlib.org.cn, sección de investigación sobre la cultura de Qianling). **La inscripción del príncipe Jin:** 郎君行記, \"Registro del hermano menor del emperador de la Gran Jin\", grabada sobre la propia estela; fue **el único monumento en escritura kitán grande conocido antes del siglo XX** y hasta los años veinte se dio por escrita en jurchen: se identificó como kitán tras aparecer las lápidas del emperador Xingzong de Liao y su consorte. La **escritura kitán grande sigue en su mayor parte sin descifrar**: solo se conoce el valor de una parte de los signos (números, algunos de los cinco elementos, los doce animales). Fuentes: Wikipedia en inglés (*List of Khitan inscriptions*, *Khitan large script*, *Jurchen script*). **No usar:** la fecha exacta de esa inscripción (la fuente china la da como 天會十三年, 1135, y otras la fechan en 1134 por la conversión del calendario lunar: el copy no da año, solo \"un príncipe de la dinastía Jin\"); \"escritura jurchen\" (es kitán grande, y esa confusión es justo lo que se corrigió en los años veinte); \"la escritura kitán es indescifrable\" sin matiz (está parcialmente descifrada); \"Wu Zetian mandó dejar la estela en blanco\" como hecho (es una de tres hipótesis, y el copy las presenta como discusión abierta); llamarla \"emperatriz\" como si fuera su título en el 690 (tomó el de emperador); una cifra cerrada de altura o de peso; \"fue la única mujer que gobernó China\" a secas (hubo regentes y emperatrices con poder efectivo: lo único indiscutido es que fue la única que tomó el título de emperador); y el mausoleo como tumba \"nunca excavada\" o \"nunca saqueada\", dato que no se verificó para esta entrada.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

@@ -1,0 +1,75 @@
+{
+  "id": "2026-08-19-noche",
+  "publish_at": "2026-08-20T02:03:00Z",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+    "hook": "EL CERO YA ESTABA GRABADO EN PIEDRA EN CHIAPAS EN EL AÑO 36 ANTES DE CRISTO",
+    "body": [
+      "La Estela 2 de Chiapa de Corzo lleva una fecha escrita en Cuenta Larga. Ese sistema es posicional, como el nuestro: el lugar que ocupa un signo cambia su valor. Y un sistema posicional no funciona sin un signo para la nada.",
+      "Todo el sistema se maneja con tres cosas: un punto vale uno, una barra vale cinco, y el cero se dibuja como una concha, o como una flor, o como una mano.",
+      "Dos precisiones que casi nunca se hacen. La primera: Chiapa de Corzo no es un sitio maya, es de tradición zoque y epi-olmeca. El cero mesoamericano no lo estrenaron los mayas, lo heredaron y lo perfeccionaron. La segunda: en la India, Brahmagupta escribió las reglas para operar con el cero en el año 628, y Europa no lo adoptó hasta el Liber Abaci de 1202.",
+      "Mil doscientos años de diferencia, en dos continentes que no sabían el uno del otro."
+    ],
+    "question": "¿Cuántas ideas se inventaron dos veces porque nadie podía contarlas de un lado al otro?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "EL CERO DE MESOAMÉRICA",
+    "subtitle": "Grabado en piedra en el año 36 antes de Cristo",
+    "body": "La Estela 2 de Chiapa de Corzo lleva una fecha que solo funciona si existe un signo para la nada. Europa no usó el cero hasta el Liber Abaci de 1202: doce siglos más tarde. Y no fueron los mayas quienes lo estrenaron, sino sus vecinos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Mesoamerica",
+      "#Mayas",
+      "#Chiapas"
+    ],
+    "extended": [
+      "#Mexico",
+      "#Arqueologia",
+      "#Historia",
+      "#CivilizacionesAntiguas",
+      "#Matematicas",
+      "#Olmecas",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "Wikipedia (Mesoamerican Long Count calendar)"
+    },
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "Maya Exploration Center (PDF sobre el cero en la América precolombina)"
+    },
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "Mexicolore. **Importante"
+    },
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "no usar:** \"los mayas inventaron el cero\". Ni Chiapa de Corzo ni Tres Zapotes son sitios mayas: son de tradición zoque/epi-olmeca. La formulación correcta es \"en Mesoamérica ya se usaba el cero posicional en el 36 a.C.\"; los mayas lo heredaron y lo llevaron a su máximo desarrollo. Tampoco: \"antes que nadie en el mundo\" (los babilonios usaban un marcador de posición siglos antes)"
+    },
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "\"la Cuenta Larga es vigesimal pura\" (la tercera posición vale 18 × 20 = 360 días)"
+    },
+    {
+      "claim": "el cero de Mesoamérica, grabado en piedra en el 36 a.C.",
+      "source": "ni \"3114 a.C.\" como inscripción (es la fecha base mítica)"
+    }
+  ],
+  "do_not_use": [],
+  "_verificacion_prosa": "la inscripción de Cuenta Larga contemporánea más antigua conocida está en la Estela 2 de Chiapa de Corzo (Chiapas), con fecha reconstruida equivalente al 8 de diciembre del 36 a.C.; la segunda es la Estela C de Tres Zapotes (Veracruz), 1 de septiembre del 32 a.C. La Cuenta Larga es posicional y exige un signo de cero. Sistema vigesimal con tres signos: punto (1), barra (5) y glifo de cero, que se representa con una concha y también con formas de flor, mano y cabeza. Brahmagupta da las primeras reglas aritméticas del cero como número en el *Brāhmasphuṭasiddhānta* (628 d.C.); Fibonacci publica el *Liber Abaci* en 1202. Fuentes: Wikipedia (*Mesoamerican Long Count calendar*), Maya Exploration Center (PDF sobre el cero en la América precolombina), Mexicolore. **Importante, no usar:** \"los mayas inventaron el cero\". Ni Chiapa de Corzo ni Tres Zapotes son sitios mayas: son de tradición zoque/epi-olmeca. La formulación correcta es \"en Mesoamérica ya se usaba el cero posicional en el 36 a.C.\"; los mayas lo heredaron y lo llevaron a su máximo desarrollo. Tampoco: \"antes que nadie en el mundo\" (los babilonios usaban un marcador de posición siglos antes), \"la Cuenta Larga es vigesimal pura\" (la tercera posición vale 18 × 20 = 360 días), ni \"3114 a.C.\" como inscripción (es la fecha base mítica).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

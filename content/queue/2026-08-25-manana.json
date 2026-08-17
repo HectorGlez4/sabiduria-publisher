@@ -1,0 +1,85 @@
+{
+  "id": "2026-08-25-manana",
+  "publish_at": "2026-08-25T14:24:00Z",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+    "hook": "JUANA AZURDUY: fue teniente coronel del ejército y la enterraron en una fosa común",
+    "body": [
+      "Nació en el Alto Perú en 1780. El 3 de marzo de 1816, en el asalto al Cerro Rico de Potosí, le arrancó la bandera de las manos al abanderado español. Belgrano lo dejó anotado en su parte y le regaló su propio sable. Ese mismo año recibió el grado de teniente coronel.",
+      "Seis meses más tarde, en la batalla de La Laguna, mataron a su esposo y le cortaron la cabeza. Ella estaba embarazada. De sus cinco hijos, cuatro murieron durante la guerra, de enfermedad y de hambre. En 1825 Bolívar le concedió una pensión: la cobró cinco años y después dejó de llegarle.",
+      "Murió el 25 de mayo de 1862, a los 81 años, en la miseria. La enterraron en una fosa común.",
+      "Cien años después sacaron sus restos de ahí y los llevaron a un mausoleo en Sucre. Argentina la ascendió a generala en julio de 2009. Bolivia la nombró mariscala en agosto de 2011: ciento cuarenta y nueve años tarde."
+    ],
+    "question": "¿Cuánto tarda un país en reconocer a quien ya no puede enterarse?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "JUANA AZURDUY",
+    "subtitle": "Los grados le llegaron siglo y medio después de muerta",
+    "body": "En 1816 le arrancó la bandera al abanderado español en el Cerro Rico de Potosí y la nombraron teniente coronel. Murió en la miseria en 1862 y fue a una fosa común. Argentina la ascendió a generala en 2009. Bolivia la hizo mariscala en 2011."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JuanaAzurduy",
+      "#Bolivia",
+      "#Independencia"
+    ],
+    "extended": [
+      "#Argentina",
+      "#AltoPeru",
+      "#Historia",
+      "#MujeresEnLaHistoria",
+      "#HistoriaLatinoamericana",
+      "#Sucre",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Argentina.gob.ar (Museo Casa Rosada, Medallas de las Patricias)"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Ministerio de Cultura de Argentina"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Casa Rosada (nota del acto de 2009)"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "La Gaceta y Perfil (julio de 2009)"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Los Tiempos (Bolivia, agosto de 2011)"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Infobae (reportaje de 2024)"
+    },
+    {
+      "claim": "Juana Azurduy: teniente coronel en 1816, fosa común en 1862, generala en 2009",
+      "source": "Wikipedia en inglés"
+    }
+  ],
+  "do_not_use": [
+    "el lugar exacto de nacimiento como dato cerrado (las fuentes se reparten entre Toroca, cerca de Potosí, y Chuquisaca) ni el lugar exacto de muerte (varias páginas oficiales argentinas dicen Jujuy y las fuentes bolivianas dicen Sucre/Chuquisaca: por eso el copy no nombra la ciudad)",
+    "\"comandó 6.000 soldados\" (cifra sin fuente primaria sólida)",
+    "\"fue la primera mujer con rango militar del mundo\" (superlativo no verificable)",
+    "la fecha exacta del sable de Belgrano (las fuentes discrepan entre 1813 y 1816: el copy no la da)",
+    "confundir el ascenso argentino de 2009 con el boliviano de 2011"
+  ],
+  "_verificacion_prosa": "nació el 12 de julio de 1780 en el Alto Perú, en territorio de la actual Bolivia. Casó con Manuel Ascencio Padilla en 1805. Asalto al Cerro Rico de Potosí, 3 de marzo de 1816: le arrancó la bandera de las manos al abanderado realista, hecho que Belgrano consignó en su parte; Belgrano le entregó su propio sable en señal de reconocimiento. Ese mismo año de 1816 recibió el grado de **teniente coronel**. Su esposo murió el 14 de septiembre de 1816 en la batalla de La Laguna: fue degollado y su cabeza expuesta en una pica; ella estaba embarazada. De sus cinco hijos, cuatro murieron durante la guerra por enfermedad y hambre; sobrevivió Luisa. En 1825 Bolívar le concedió una pensión (60 pesos mensuales según varias fuentes) que dejó de percibir hacia 1830. Murió el **25 de mayo de 1862, a los 81 años, en la pobreza**, y fue enterrada en una fosa común; cien años después sus restos se exhumaron y se trasladaron a un mausoleo en Sucre. **Ascenso póstumo a generala del Ejército Argentino:** decreto firmado por la presidenta Cristina Fernández de Kirchner en **julio de 2009** (la prensa fecha la firma entre el 13 y el 15 de julio: por eso el copy dice solo \"julio de 2009\"). **Mariscala del Estado Plurinacional de Bolivia:** resolución de la Asamblea Legislativa Plurinacional en sesión solemne en la Casa de la Libertad de Sucre, **6 de agosto de 2011**, en el 186.º aniversario de la independencia boliviana. Fuentes: Argentina.gob.ar (Museo Casa Rosada, Medallas de las Patricias), Ministerio de Cultura de Argentina, Casa Rosada (nota del acto de 2009), La Gaceta y Perfil (julio de 2009), Los Tiempos (Bolivia, agosto de 2011), Infobae (reportaje de 2024), Wikipedia en inglés. **No usar:** el lugar exacto de nacimiento como dato cerrado (las fuentes se reparten entre Toroca, cerca de Potosí, y Chuquisaca) ni el lugar exacto de muerte (varias páginas oficiales argentinas dicen Jujuy y las fuentes bolivianas dicen Sucre/Chuquisaca: por eso el copy no nombra la ciudad); \"comandó 6.000 soldados\" (cifra sin fuente primaria sólida); \"fue la primera mujer con rango militar del mundo\" (superlativo no verificable); la fecha exacta del sable de Belgrano (las fuentes discrepan entre 1813 y 1816: el copy no la da); y confundir el ascenso argentino de 2009 con el boliviano de 2011.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

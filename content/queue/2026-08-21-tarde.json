@@ -1,0 +1,62 @@
+{
+  "id": "2026-08-21-tarde",
+  "publish_at": "2026-08-21T19:50:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Cervantes, leer y andar",
+    "hook": "\"El que lee mucho y anda mucho, ve mucho y sabe mucho.\"\n— Cervantes, Don Quijote de la Mancha, segunda parte, capítulo XXV (1615)",
+    "body": [
+      "Conviene decir de entrada que esta sí es de Cervantes. La mayoría de las frases que circulan firmadas \"Don Quijote\" no están en el libro: son invenciones que el propio Centro de Estudios Cervantinos se dedica a desmentir una por una.",
+      "Y la frase pone dos verbos juntos que solemos separar: leer y andar. No dice que leer baste. Dice que el que hace las dos cosas ve mucho, y solo después de ver, sabe.",
+      "Cervantes tenía autoridad para afirmarlo. Estuvo cinco años cautivo en Argel, perdió el uso de la mano izquierda en Lepanto, recorrió Andalucía cobrando impuestos y pasó por la cárcel. Escribió la segunda parte del Quijote a los 68 años, un año antes de morir."
+    ],
+    "question": "¿De lo que sabes hoy, cuánto lo leíste y cuánto lo caminaste?",
+    "quote": {
+      "text": "El que lee mucho y anda mucho, ve mucho y sabe mucho.",
+      "author": "Cervantes, Don Quijote II, 25 (1615)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Cervantes",
+      "#Quijote",
+      "#Lectura"
+    ],
+    "extended": [
+      "#DonQuijote",
+      "#Literatura",
+      "#Libros",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La frase es de Don Quijote de la Mancha, segunda parte, capítulo XXV (1615), en el episodio de la aventura del rebuzno",
+      "source": "Miguel de Cervantes, Don Quijote de la Mancha, II, cap. XXV (1615)"
+    },
+    {
+      "claim": "Clasificada entre las frases auténticas, frente a las que circulan falsamente atribuidas al Quijote",
+      "source": "Centro de Estudios Cervantinos de Alcázar"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a un personaje concreto: no se pudo confirmar en una edición crítica accesible quién la pronuncia, así que se acredita autor y obra, no personaje. Para afinarlo: cvc.cervantes.es, Quijote, parte 2, cap. XXV."
+  ],
+  "_verificacion_prosa": "*Don Quijote de la Mancha*, segunda parte, capítulo XXV (1615), en el episodio de la aventura del rebuzno. El Centro de Estudios Cervantinos de Alcázar la clasifica entre las frases **auténticas**, frente a las que circulan falsamente atribuidas al Quijote. Miguel de Cervantes, 1547-1616. **Punto abierto:** no se pudo confirmar en una edición crítica accesible qué personaje la pronuncia exactamente (el acceso a la edición del Centro Virtual Cervantes está bloqueado a robots). Por eso la tarjeta acredita autor y obra, no un personaje. Si en la sesión de carga se quiere afinar, comprobarlo en cvc.cervantes.es → Quijote → parte 2, cap. XXV.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

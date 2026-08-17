@@ -1,0 +1,64 @@
+{
+  "id": "2026-08-17-noche",
+  "publish_at": "2026-08-18T01:38:00Z",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los quipus incas: un archivo legible en su forma e ilegible en su contenido",
+    "hook": "LOS QUIPUS: un archivo que sigue intacto y que nadie puede leer",
+    "body": [
+      "El imperio inca administró millones de personas sin alfabeto. Su sistema eran cuerdas de algodón y de fibra de llama, anudadas y teñidas: los quipus. Los llevaban funcionarios especializados, los quipucamayocs, y había varios por comunidad para poder cotejar los registros entre sí.",
+      "La parte numérica está descifrada desde hace un siglo: base diez, la altura del nudo marca la posición, y el cero se escribe dejando el espacio vacío. Lo que no se ha podido leer es todo lo demás: el color, la fibra, el sentido en que se torció la hebra.",
+      "Hay un quipu con 586 cuerdas que guarda más de quince mil datos ordenados con una precisión evidente. Está entero. Es ilegible."
+    ],
+    "question": "¿Qué se pierde cuando desaparece la última persona que sabía leer algo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "LOS QUIPUS",
+    "subtitle": "Sabemos leer sus números. No sabemos leer sus palabras.",
+    "body": "Un quipu conservado tiene 586 cuerdas anudadas y guarda más de 15.000 datos perfectamente ordenados. Nadie ha podido interpretarlos. Es un archivo intacto y a la vez ilegible, quinientos años después."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Incas",
+      "#Peru",
+      "#Quipu"
+    ],
+    "extended": [
+      "#Andes",
+      "#Historia",
+      "#CivilizacionesAntiguas",
+      "#Arqueologia",
+      "#Cusco",
+      "#Tahuantinsuyo",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "los quipus incas: un archivo legible en su forma e ilegible en su contenido",
+      "source": "Khipu Field Guide"
+    },
+    {
+      "claim": "los quipus incas: un archivo legible en su forma e ilegible en su contenido",
+      "source": "Smarthistory"
+    },
+    {
+      "claim": "los quipus incas: un archivo legible en su forma e ilegible en su contenido",
+      "source": "American Mathematical Society (Feature Column)"
+    }
+  ],
+  "do_not_use": [
+    "\"ya se descifraron\" (solo la capa numérica), \"eran escritura\", \"eran una computadora\", \"eran código binario\", \"los españoles los quemaron todos de golpe\", \"el más antiguo es de Caral y tiene 5.000 años\" (proto-quipu en discusión; el primero indiscutible es wari, c. 600-1000 d.C.)"
+  ],
+  "_verificacion_prosa": "cuerdas de algodón o fibra de camélido anudadas. Capa numérica descifrada a principios del siglo XX por L. Leland Locke: base 10 posicional, nudo en ocho = 1, nudo largo de 2 a 9 vueltas = 2 a 9, nudo simple para decenas y centenas según altura, cero = ausencia de nudo. Los quipucamayocs eran los funcionarios que los llevaban. La colección más grande del mundo está en el Museo Etnológico de Berlín: 298 ejemplares; en Perú quedan cerca de 200. Un quipu documentado tiene 586 cuerdas en 8 sectores y almacena más de 15.000 datos sin interpretar. El Tercer Concilio Limense ordenó quemar quipus considerados idolátricos en 1583. Fuentes: Khipu Field Guide, Smarthistory, American Mathematical Society (Feature Column). **No usar:** \"ya se descifraron\" (solo la capa numérica), \"eran escritura\", \"eran una computadora\", \"eran código binario\", \"los españoles los quemaron todos de golpe\", \"el más antiguo es de Caral y tiene 5.000 años\" (proto-quipu en discusión; el primero indiscutible es wari, c. 600-1000 d.C.).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

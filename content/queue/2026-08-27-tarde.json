@@ -1,0 +1,70 @@
+{
+  "id": "2026-08-27-tarde",
+  "publish_at": "2026-08-27T19:19:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ortega y Gasset: la frase se cita a medias y en plural, y la mitad que se cae es la que obliga a algo",
+    "hook": "\"Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.\"\n— José Ortega y Gasset, Meditaciones del Quijote (1914)",
+    "body": [
+      "Casi siempre se cita a medias y en plural: \"yo soy yo y mis circunstancias\". Recortada así queda en un encogimiento de hombros, casi una excusa: esto es lo que hay, esto me tocó. La frase entera dice lo contrario, porque la segunda mitad es una obligación.",
+      "Circunstancia, en singular, es lo que está alrededor: el barrio, el trabajo, la gente que a uno le tocó. Ortega no propone resignarse a eso ni escapar de eso, sino salvarlo, y advierte que no hay salvación propia por separado. Lo escribió a los treinta y un años, en su primer libro, siendo catedrático en Madrid; veintidós años después tuvo que salir del país, y esa también fue su circunstancia."
+    ],
+    "question": "¿Qué parte de lo que te rodea estás esperando cambiar en vez de atender?",
+    "quote": {
+      "text": "Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.",
+      "author": "José Ortega y Gasset (1883-1955)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#OrtegaYGasset",
+      "#Filosofia",
+      "#Frases"
+    ],
+    "extended": [
+      "#Ortega",
+      "#FilosofiaEspanola",
+      "#Circunstancia",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Pensamiento"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La frase pertenece a Meditaciones del Quijote, primer libro de Ortega, publicado en 1914 por Publicaciones de la Residencia de Estudiantes (Madrid, serie II, vol. I; Imprenta Clásica Española), en la Meditación preliminar, epígrafe 6",
+      "source": "José Ortega y Gasset, Meditaciones del Quijote (Madrid, 1914)"
+    },
+    {
+      "claim": "Redacción literal comprobada sobre el texto de la primera edición: 'Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.'",
+      "source": "Project Gutenberg, ebook 57448 (facsímil digitalizado de la primera edición)",
+      "url": "https://www.gutenberg.org/ebooks/57448"
+    },
+    {
+      "claim": "Datos biográficos: 9 de mayo de 1883 – 18 de octubre de 1955; cátedra de Metafísica de la Universidad Central de Madrid entre 1910 y 1936; regreso a España a partir de 1945",
+      "source": "Fundación José Ortega y Gasset – Gregorio Marañón"
+    }
+  ],
+  "do_not_use": [
+    "la versión en plural \"yo soy yo y mis circunstancias\" como si fuera la original (el texto dice circunstancia, en singular)",
+    "citar solo la primera mitad, que es donde se pierde la idea",
+    "llamarla \"su frase más famosa de La rebelión de las masas\" (es otro libro, 1930)",
+    "dar el epígrafe exacto como dato cerrado (ver el punto abierto de arriba)",
+    "ni fechar en 1914 su cátedra o la Revista de Occidente (la cátedra es de 1910; la revista, posterior)"
+  ],
+  "_verificacion_prosa": "la frase pertenece a ***Meditaciones del Quijote*, primer libro de José Ortega y Gasset, publicado en 1914 por Publicaciones de la Residencia de Estudiantes (Madrid, serie II, vol. I; Imprenta Clásica Española)**. Redacción literal comprobada sobre el texto de esa primera edición (facsímil digitalizado en Project Gutenberg, ebook 57448): *\"Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.\"* En ese texto la frase aparece en la **Meditación preliminar**, epígrafe 6 (\"Cultura mediterránea\"), y va seguida de la cita latina *\"Benefac loco illi quo natus es\"* y de la idea de \"salvar las apariencias\". **Punto abierto:** algunas ediciones y estudios modernos (p. ej. el artículo de *Perfiles Educativos* / SciELO México, 2008) la sitúan en el prólogo \"Lector…\", con paginación distinta; por eso el copy acredita solo obra y año, no el epígrafe. Datos biográficos verificados con la **Fundación José Ortega y Gasset – Gregorio Marañón**: nació el **9 de mayo de 1883** y murió el **18 de octubre de 1955**; ocupó la cátedra de Metafísica de la Universidad Central de Madrid **entre 1910 y 1936**; en 1936 tuvo que abandonar la docencia y salir del país, y volvió a España a partir de **1945**. *Meditaciones del Quijote* fue **su primer libro**, publicado a los 31 años. **No usar:** la versión en plural \"yo soy yo y mis circunstancias\" como si fuera la original (el texto dice *circunstancia*, en singular); citar solo la primera mitad, que es donde se pierde la idea; llamarla \"su frase más famosa de *La rebelión de las masas*\" (es otro libro, 1930); dar el epígrafe exacto como dato cerrado (ver el punto abierto de arriba); ni fechar en 1914 su cátedra o la Revista de Occidente (la cátedra es de 1910; la revista, posterior).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

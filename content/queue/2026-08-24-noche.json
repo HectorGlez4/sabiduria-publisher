@@ -1,0 +1,78 @@
+{
+  "id": "2026-08-24-noche",
+  "publish_at": "2026-08-25T02:07:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+    "hook": "EPICURO: la palabra que lleva su nombre significa hoy lo contrario de lo que él enseñó",
+    "body": [
+      "Nació en Samos en el 341 antes de Cristo y hacia el 306 compró un huerto a las afueras de Atenas. Ahí abrió su escuela. No era un aula: era una casa con jardín, y entraban mujeres y esclavos.",
+      "Escribió unos trescientos rollos. Sobrevivieron tres cartas y dos colecciones de máximas. En una de ellas pide: \"Mándame un tarrito de queso, para poder darme un banquete cuando quiera\". Vivía de pan y agua. Ese era su lujo.",
+      "No enseñó el goce, sino su administración. Por placer entendía la ausencia de dolor en el cuerpo y de inquietud en el alma, y advertía que eso no lo dan las borracheras ni las mesas espléndidas, sino el razonamiento sereno.",
+      "Murió en el 270, a los setenta y dos, de una obstrucción urinaria. Ese último día escribió una carta: los dolores no admitían aumento, y frente a ellos ponía la alegría de recordar sus conversaciones.",
+      "Hoy llamamos epicúreo al que se entrega al placer."
+    ],
+    "question": "¿Cuánto de lo que llamas placer te deja en paz después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EPICURO",
+    "subtitle": "La palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+    "body": "Vivía de pan y agua. En una carta pidió un tarrito de queso para poder darse un banquete cuando quisiera. Por placer entendía la ausencia de dolor en el cuerpo y de inquietud en el alma, no las mesas espléndidas. Hoy llamamos epicúreo al que se entrega al goce."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Epicuro",
+      "#Filosofia",
+      "#Grecia"
+    ],
+    "extended": [
+      "#FilosofiaGriega",
+      "#Epicureismo",
+      "#Reflexiones",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Sabiduria",
+      "#Serenidad"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+      "source": "Diógenes Laercio"
+    },
+    {
+      "claim": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+      "source": "Vidas de los filósofos ilustres"
+    },
+    {
+      "claim": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+      "source": "libro X (texto en epicurus.net y Loeb Classical Library)"
+    },
+    {
+      "claim": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+      "source": "Wikipedia (Epicurus)"
+    },
+    {
+      "claim": "Epicuro: la palabra que lleva su nombre significa hoy lo contrario de lo que enseñó",
+      "source": "Antigone Journal (traducción de la Carta a Meneceo)"
+    }
+  ],
+  "do_not_use": [
+    "\"— Epicuro\" al pie de las frases hedonistas que circulan en redes (la mayoría no están en el corpus)",
+    "el destinatario de la carta final como dato cerrado (Diógenes Laercio dice Idomeneo, Cicerón dice Hermarco: por eso el copy dice solo \"escribió una carta\")",
+    "\"fundó el hedonismo\" (su placer es ataraxía y aponía, ausencia de perturbación y de dolor, no acumulación de goce)",
+    "\"era ateo\" (admitía dioses, pero indiferentes a los humanos)",
+    "la caricatura antigua del glotón, que viene de sus rivales estoicos y de polemistas posteriores, no de sus textos"
+  ],
+  "_verificacion_prosa": "nació en febrero del 341 a.C. en la colonia ateniense de Samos y murió en Atenas en el 270 a.C., a los 72 años, por una obstrucción de las vías urinarias. Fundó su escuela, el Jardín (*Kêpos*), en Atenas hacia el 306 a.C.; admitía mujeres —Temista, Leontion, Hedeia, Nikidion y otras cuyos nombres se conservan— y también esclavos: Diógenes Laercio menciona a Mis, esclavo de Epicuro, como participante de la escuela. Escribió unos **300 rollos**; sobreviven **tres cartas** (a Heródoto, a Pítocles y a Meneceo), las *Máximas capitales*, las *Sentencias vaticanas* y fragmentos de los papiros carbonizados de Herculano. Cita del queso, recogida por Diógenes Laercio en su vida de Epicuro (libro X): *\"Send me a little pot of cheese, that, when I like, I may fare sumptuously\"* — \"Mándame un tarrito de queso, para poder darme un banquete cuando quiera\"; el mismo pasaje registra que se contentaba con pan y agua. Definición de placer, *Carta a Meneceo* (Diógenes Laercio X, 131-132): por placer se entiende \"la ausencia de dolor en el cuerpo y de perturbación en el alma\", y no lo producen \"las borracheras continuas, ni las juergas, ni los placeres sexuales, ni el disfrute del pescado y demás manjares de una mesa lujosa, sino el razonamiento sobrio\". Carta del último día (Diógenes Laercio X, 22): \"En este día feliz, que es también el último de mi vida, te escribo esto. Mis dolores continuos de estranguria y disentería son tan grandes que nada podría aumentarlos; pero frente a todos ellos pongo la alegría del alma al recordar nuestras conversaciones pasadas\". Fuentes: Diógenes Laercio, *Vidas de los filósofos ilustres*, libro X (texto en epicurus.net y Loeb Classical Library), Wikipedia (*Epicurus*), Antigone Journal (traducción de la *Carta a Meneceo*). **No usar:** \"— Epicuro\" al pie de las frases hedonistas que circulan en redes (la mayoría no están en el corpus); el destinatario de la carta final como dato cerrado (Diógenes Laercio dice Idomeneo, Cicerón dice Hermarco: por eso el copy dice solo \"escribió una carta\"); \"fundó el hedonismo\" (su placer es *ataraxía* y *aponía*, ausencia de perturbación y de dolor, no acumulación de goce); \"era ateo\" (admitía dioses, pero indiferentes a los humanos); y la caricatura antigua del glotón, que viene de sus rivales estoicos y de polemistas posteriores, no de sus textos.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

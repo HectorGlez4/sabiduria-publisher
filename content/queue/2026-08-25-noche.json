@@ -1,0 +1,78 @@
+{
+  "id": "2026-08-25-noche",
+  "publish_at": "2026-08-26T01:48:00Z",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+    "hook": "EL CILINDRO DE CIRO: lo llaman la primera declaración de derechos humanos y nació escondido en un muro",
+    "body": [
+      "En marzo de 1879, en las ruinas del templo de Marduk en Babilonia, apareció un cilindro de barro de veintidós centímetros cubierto de cuneiforme. Lo mandó escribir Ciro el Grande tras tomar la ciudad, en el 539 antes de Cristo. Sus cuarenta y cinco líneas devuelven los dioses a sus templos y a los deportados a su tierra.",
+      "El giro está en el formato. No era un edicto para leer en la plaza: era un depósito de cimentación, de los que se tapiaban en un muro. Lo redactaron sacerdotes de Marduk. Y no nombra a los judíos, ni a Jerusalén, ni a Judea.",
+      "En 1971 Irán regaló una réplica a la ONU como la primera carta de derechos humanos del mundo. Ahí sigue expuesta. Un curador del Museo Británico lo resume así: en la antigüedad no había derechos humanos.",
+      "En 2010 aparecieron dos fragmentos de tablilla con ese mismo texto, copiado para repartirlo. Alguien sí quería que se leyera."
+    ],
+    "question": "¿Cuántas cosas admiramos por lo que quisimos que fueran?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "EL CILINDRO DE CIRO",
+    "subtitle": "Un objeto famoso por decir algo que en realidad no dice",
+    "body": "Barro cocido, veintidós centímetros, cuarenta y cinco líneas en cuneiforme, año 539 antes de Cristo. Ciro devuelve los dioses a sus templos y a los deportados a su tierra. No es una declaración para el pueblo: es un depósito de cimentación, hecho para quedar tapiado dentro de un muro."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Persia",
+      "#Babilonia",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Historia",
+      "#CivilizacionesAntiguas",
+      "#Mesopotamia",
+      "#Iran",
+      "#HistoriaAntigua",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+      "source": "Encyclopaedia Iranica (Cyrus iv. The Cyrus cylinder)"
+    },
+    {
+      "claim": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+      "source": "Yale Peabody Museum (nota sobre la conferencia de Irving Finkel)"
+    },
+    {
+      "claim": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+      "source": "Naciones Unidas (catálogo de obsequios, \"Replica of Edict of Cyrus\")"
+    },
+    {
+      "claim": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+      "source": "The Art Newspaper (1 de febrero de 2010)"
+    },
+    {
+      "claim": "el cilindro de Ciro: el objeto que la ONU exhibe como primera declaración de derechos humanos y que en realidad es un depósito de cimentación babilonio",
+      "source": "Wikipedia (Cyrus Cylinder)"
+    }
+  ],
+  "do_not_use": [
+    "\"la primera declaración de derechos humanos\" como hecho (es lectura moderna, rechazada por los especialistas)",
+    "\"liberó a los judíos de Babilonia\" apoyándose en el cilindro (el texto no los nombra: eso está en la Biblia, es otra fuente y otro debate)",
+    "\"Ciro lo escribió\" (lo redactaron sacerdotes de Marduk en su nombre)",
+    "\"es el documento más antiguo de su tipo\" (es una inscripción de cimentación de un género con siglos de tradición)",
+    "la traducción falsa que circula en internet con frases sobre la libertad de culto y la abolición de la esclavitud (interpolación moderna, no está en el acadio)",
+    "dar el hallazgo de Yale con fecha cerrada de unión al original"
+  ],
+  "_verificacion_prosa": "cilindro de arcilla con inscripción en acadio cuneiforme, hallado en **marzo de 1879** por **Hormuzd Rassam** en Babilonia (actual Irak), en el recinto del templo de Marduk. Mide unos **22,5 cm** de largo por 10 cm de diámetro máximo. Texto compuesto **después de la conquista persa de Babilonia en el 539 a.C.** (entre 539 y 530 a.C.). Museo Británico, n.º 90920. **Género:** inscripción de cimentación (*foundation deposit*) de la tradición constructiva babilonia y asiria, redactada en estilo arcaizante; Encyclopaedia Iranica precisa que \"el texto fue en realidad compuesto por sacerdotes de Marduk\" y que funcionaba como \"una típica inscripción mesopotámica de construcción colocada como depósito de cimentación\". **Extensión:** 45 líneas — 35 en la pieza principal y las líneas 36-45 en un fragmento conservado en Yale que P.-R. Berger identificó como parte del mismo objeto. **Contenido:** denuncia al rey depuesto Nabonido como impío, afirma que Marduk eligió a Ciro, describe la devolución de las estatuas divinas a sus santuarios de Mesopotamia, la repatriación de poblaciones desplazadas y la restauración del templo Esagila. **No menciona a los judíos, ni Jerusalén, ni Judea.** **Uso moderno:** el 14 de octubre de 1971 la princesa Ashraf Pahlavi, hermana del sah de Irán, entregó una réplica al secretario general de la ONU U Thant; la ONU la conserva en el Edificio de Conferencias, 2.º piso, y la describe en su catálogo de obsequios como \"una antigua declaración de derechos humanos\". **Rechazo académico:** Irving Finkel, conservador del Museo Británico, en su conferencia del Museo Peabody de Yale: \"No hay derechos humanos en la antigüedad. Nunca hubo derechos humanos en la antigüedad\"; añade que el cilindro estaba oculto dentro de un muro, donde casi nadie lo vería, y que las decisiones de Ciro fueron gobierno pragmático, no concesión de derechos. Neil MacGregor advierte de que el texto es \"estándar\" y de que hay declaraciones comparables dos milenios anteriores a Ciro. **Hallazgo de 2010:** el profesor emérito Wilfred Lambert identificó en enero de 2010, entre las cerca de 130.000 tablillas cuneiformes del Museo Británico, un fragmento con el mismo texto; Irving Finkel identificó después un segundo fragmento de la misma tablilla. Conclusión publicada: el texto no circuló solo en forma de cilindro oculto en cimientos, sino como proclama copiada en tablillas y distribuida por el imperio; además uno de los fragmentos aclaró un pasaje ilegible del cilindro. Fuentes: Encyclopaedia Iranica (*Cyrus iv. The Cyrus cylinder*), Yale Peabody Museum (nota sobre la conferencia de Irving Finkel), Naciones Unidas (catálogo de obsequios, \"Replica of Edict of Cyrus\"), The Art Newspaper (1 de febrero de 2010), Wikipedia (*Cyrus Cylinder*). **No usar:** \"la primera declaración de derechos humanos\" como hecho (es lectura moderna, rechazada por los especialistas); \"liberó a los judíos de Babilonia\" apoyándose en el cilindro (el texto no los nombra: eso está en la Biblia, es otra fuente y otro debate); \"Ciro lo escribió\" (lo redactaron sacerdotes de Marduk en su nombre); \"es el documento más antiguo de su tipo\" (es una inscripción de cimentación de un género con siglos de tradición); la traducción falsa que circula en internet con frases sobre la libertad de culto y la abolición de la esclavitud (interpolación moderna, no está en el acadio); y dar el hallazgo de Yale con fecha cerrada de unión al original.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

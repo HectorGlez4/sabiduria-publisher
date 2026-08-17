@@ -1,0 +1,65 @@
+{
+  "id": "2026-08-20-manana",
+  "publish_at": "2026-08-20T14:06:00Z",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Mansa Musa y el dato real de El Cairo",
+    "hook": "MANSA MUSA: el dato real no son los millones, es un precio anotado en El Cairo",
+    "body": [
+      "Reinó en Malí en la primera mitad del siglo XIV. En 1324 salió hacia La Meca y recorrió unos 4.300 kilómetros. Pasó por El Cairo, y ahí quedó registrado lo único que se puede afirmar con una fuente en la mano.",
+      "Lo anotó al-Umari, un historiador árabe de Damasco: antes de que Musa llegara, el mithqal de oro se cambiaba por 25 dírhams de plata. Después, cayó por debajo de 22, y no volvió a subir de ahí durante al menos doce años.",
+      "Un hombre de paso movió durante más de una década el precio del metal más codiciado del mundo.",
+      "Lo otro, la cifra de los cuatrocientos mil millones de dólares que se repite en todas partes, no es historia: salió en 2012 de una página web de patrimonios de famosos, sin método y sin fuentes."
+    ],
+    "question": "¿Por qué preferimos una cifra inventada a un dato verificable?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "MANSA MUSA",
+    "subtitle": "El único hombre que hizo bajar el precio del oro de paso",
+    "body": "En 1324 cruzó 4.300 kilómetros hasta La Meca. Un cronista de Damasco anotó la cifra: en El Cairo el oro pasó de 25 a menos de 22 dírhams y no volvió a subir en doce años. Lo que circula sobre su fortuna en dólares es invento de internet."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MansaMusa",
+      "#Mali",
+      "#Historia"
+    ],
+    "extended": [
+      "#Tombuctu",
+      "#Africa",
+      "#HistoriaAfricana",
+      "#Oro",
+      "#Curiosidades",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Mansa Musa y el dato real de El Cairo",
+      "source": "UNESCO (sitio Tombuctú)"
+    },
+    {
+      "claim": "Mansa Musa y el dato real de El Cairo",
+      "source": "World History Commons (relato de al-Umari)"
+    },
+    {
+      "claim": "Mansa Musa y el dato real de El Cairo",
+      "source": "Britannica"
+    }
+  ],
+  "do_not_use": [
+    "los \"400.000 millones de dólares\" (salen de Celebrity Net Worth, 2012, sin metodología ni fuentes primarias), \"hundió el precio del oro\" o \"arruinó Egipto una década\" (lo documentado es la caída de 25 a menos de 22 dírhams por mithqal durante unos doce años), las cifras del cortejo como estadística (60.000 personas, 12.000 esclavos: presentarlas como \"las crónicas hablan de…\"), al-Sahili como arquitecto de Djinguereber (la erudición reciente lo cuestiona), \"la Universidad de Sankoré con 25.000 estudiantes\", y la fecha 1327 para Djinguereber (es tradicional, no documentada)"
+  ],
+  "_verificacion_prosa": "reinado aproximado 1312-1337 (Britannica registra \"desde 1307 o 1312\"); probablemente murió en 1337. Peregrinación a La Meca en 1324-1325, unos 4.300 km de recorrido, pasando por El Cairo. El dato duro viene de al-Umari, historiador árabe de Damasco (recogido en el *Corpus of Early Arabic Sources for West African History*, 1981): antes de la llegada de Musa el mithqal de oro valía 25 dírhams de plata; después cayó a menos de 22 y no volvió a superar esa cifra durante al menos doce años. Musa incorporó Tombuctú al imperio de Malí y financió mezquitas y madrasas. UNESCO atribuye la construcción inicial de la mezquita de Djinguereber al \"sultán Kankan Moussa\". Fuentes: UNESCO (sitio Tombuctú), World History Commons (relato de al-Umari), Britannica. **No usar:** los \"400.000 millones de dólares\" (salen de Celebrity Net Worth, 2012, sin metodología ni fuentes primarias), \"hundió el precio del oro\" o \"arruinó Egipto una década\" (lo documentado es la caída de 25 a menos de 22 dírhams por mithqal durante unos doce años), las cifras del cortejo como estadística (60.000 personas, 12.000 esclavos: presentarlas como \"las crónicas hablan de…\"), al-Sahili como arquitecto de Djinguereber (la erudición reciente lo cuestiona), \"la Universidad de Sankoré con 25.000 estudiantes\", y la fecha 1327 para Djinguereber (es tradicional, no documentada).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

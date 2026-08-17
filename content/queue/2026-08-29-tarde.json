@@ -1,0 +1,70 @@
+{
+  "id": "2026-08-29-tarde",
+  "publish_at": "2026-08-29T19:36:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Baltasar Gracián: el elogio de la brevedad está en un aforismo titulado \"No cansar\", y la mitad que nadie cita es la segunda",
+    "hook": "\"Lo bueno, si breve, dos veces bueno; y aun lo malo, si poco, no tan malo.\"\n— Baltasar Gracián, Oráculo manual y arte de prudencia, aforismo 105 (1647)",
+    "body": [
+      "El aforismo se titula \"No cansar\" y está en un libro de trescientas máximas, cada una del tamaño de un párrafo. Gracián era jesuita y lo publicó bajo seudónimo, sin permiso de sus superiores. Escribía corto por una razón que él mismo da: lo que se gana en cortesía se pierde en palabras.",
+      "La mitad que casi nunca se cita es la segunda, y es la más honesta. La brevedad no vuelve bueno lo que no lo es: solo abrevia el daño. Sirve igual para una reunión, para un reclamo o para una mala noticia que hay que dar.",
+      "El propio aforismo termina con cuatro palabras que se cumplen a sí mismas: lo bien dicho se dice presto. En enero de 1658 desterraron a Gracián a un pueblo del Pirineo por publicar sin licencia; murió en diciembre."
+    ],
+    "question": "¿Qué de lo que dijiste esta semana habría ganado con la mitad de las palabras?",
+    "quote": {
+      "text": "Lo bueno, si breve, dos veces bueno; y aun lo malo, si poco, no tan malo.",
+      "author": "Baltasar Gracián (1601-1658)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#BaltasarGracian",
+      "#Aforismos",
+      "#SigloDeOro"
+    ],
+    "extended": [
+      "#Gracian",
+      "#Barroco",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Baltasar Gracián: el elogio de la brevedad está en un aforismo titulado \"No cansar\", y la mitad que nadie cita es la segunda",
+      "source": "texto íntegro del Oráculo manual y arte de prudencia (edición en PDF del acervo de la Secretaría de Educación de Coahuila, aforismo 105 verificado palabra por palabra)"
+    },
+    {
+      "claim": "Baltasar Gracián: el elogio de la brevedad está en un aforismo titulado \"No cansar\", y la mitad que nadie cita es la segunda",
+      "source": "Britannica (biografía de Baltasar Gracián: fechas, orden jesuita, año de publicación)"
+    },
+    {
+      "claim": "Baltasar Gracián: el elogio de la brevedad está en un aforismo titulado \"No cansar\", y la mitad que nadie cita es la segunda",
+      "source": "Wikipedia en inglés (Baltasar Gracián: seudónimo, 300 aforismos, traducción de Schopenhauer, juicio de Nietzsche, destierro a Graus en enero de 1658)"
+    }
+  ],
+  "do_not_use": [
+    "citar solo \"lo bueno, si breve, dos veces bueno\" sin la segunda mitad, que es donde está el matiz",
+    "decir que la frase es el título o el remate del aforismo (el remate es \"lo bien dicho se dize presto\")",
+    "dar Huesca y Lastanosa como editor del Oráculo con fecha cerrada (no confirmado en las fuentes consultadas para este libro en concreto)",
+    "afirmar que \"Lorenzo Gracián\" era su hermano como hecho probado",
+    "ni atribuirle la expresión \"menos es más\" (es de Mies van der Rohe, siglo XX)"
+  ],
+  "_verificacion_prosa": "la frase pertenece al **aforismo 105, titulado \"No cansar\"**, del *Oráculo manual y arte de prudencia* (1647), libro de **300 máximas con comentario**. Redacción original del aforismo, consultada en el texto completo: *\"Suele ser pessado el hombre de un negocio, y el de un verbo. La brevedad es lisongera, y más negociante; gana por lo cortés lo que pierde por lo corto. Lo bueno, si breve, dos vezes bueno; y aun lo malo, si poco, no tan malo. […] Lo bien dicho se dize presto.\"* Es decir: la frase célebre es la tercera oración del aforismo, no su título ni su cierre, y el aforismo termina con \"lo bien dicho se dize presto\". Baltasar Gracián y Morales, jesuita: nacido el **8 de enero de 1601** en Belmonte de Calatayud (Zaragoza), muerto el **6 de diciembre de 1658** en Tarazona, a los 57 años. Publicó sus obras principales bajo el seudónimo **\"Lorenzo Gracián\"**, sin licencia de sus superiores; en **enero de 1658** fue desterrado a Graus (Huesca) y apartado a destinos menores tras publicar *El Criticón*. **Schopenhauer** tradujo el *Oráculo manual* al alemán y **Nietzsche** escribió que Europa no ha producido nada más fino ni más complejo en materia de sutileza moral. Fuentes: texto íntegro del *Oráculo manual y arte de prudencia* (edición en PDF del acervo de la Secretaría de Educación de Coahuila, aforismo 105 verificado palabra por palabra), Britannica (biografía de Baltasar Gracián: fechas, orden jesuita, año de publicación), Wikipedia en inglés (*Baltasar Gracián*: seudónimo, 300 aforismos, traducción de Schopenhauer, juicio de Nietzsche, destierro a Graus en enero de 1658). **No usar:** citar solo \"lo bueno, si breve, dos veces bueno\" sin la segunda mitad, que es donde está el matiz; decir que la frase es el título o el remate del aforismo (el remate es \"lo bien dicho se dize presto\"); dar Huesca y Lastanosa como editor del *Oráculo* con fecha cerrada (no confirmado en las fuentes consultadas para este libro en concreto); afirmar que \"Lorenzo Gracián\" era su hermano como hecho probado; ni atribuirle la expresión \"menos es más\" (es de Mies van der Rohe, siglo XX).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

@@ -1,0 +1,76 @@
+{
+  "id": "2026-08-26-manana",
+  "publish_at": "2026-08-26T14:15:00Z",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+    "hook": "UN HOSPITAL QUE NACIÓ PORQUE UN FRAILE CAMBIÓ SU SERMÓN A MITAD DE CAMINO",
+    "body": [
+      "El 24 de febrero de 1409, en Valencia, el mercedario Juan Gilabert Jofré iba a predicar a la catedral. En el camino vio a unos jóvenes golpeando a un hombre que había perdido la razón. Subió al púlpito y habló de otra cosa: pidió una casa donde recoger a los enfermos que nadie quería. Once vecinos pusieron el dinero. En mayo empezaron las obras del Hospital dels Ignoscents, Folls e Orats.",
+      "Se repite que fue el primero del mundo. No lo fue. En Granada, la lápida fundacional del maristán, hoy en el Museo de la Alhambra, fecha la obra entre septiembre de 1365 y junio de 1367, por orden de Muhammad V. Cuarenta y dos años antes, copiando un modelo del norte de África.",
+      "De aquel maristán no queda casi nada: fue casa de la moneda, almacén de vino, cuartel, cárcel y casa de vecinos, y lo derribaron en 1843. Del hospital de Valencia sobrevive una sala: hoy es una biblioteca pública."
+    ],
+    "question": "¿Cuántas veces lo primero fue solo lo primero que quisimos recordar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "VALENCIA, 1409",
+    "subtitle": "El hospital que llamamos el primero, y que no lo fue",
+    "body": "Un fraile vio en la calle cómo golpeaban a un hombre que había perdido la razón y esa mañana predicó otra cosa. Once vecinos pusieron el dinero. Pero en Granada ya había un maristán levantado entre 1365 y 1367, y su modelo venía del norte de África."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Historia",
+      "#Curiosidades",
+      "#SaludMental"
+    ],
+    "extended": [
+      "#DatosCuriosos",
+      "#EdadMedia",
+      "#Valencia",
+      "#Granada",
+      "#AlAndalus",
+      "#Medicina",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+      "source": "Patronato de la Alhambra y Generalife (lápida fundacional y recorrido histórico del maristán)"
+    },
+    {
+      "claim": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+      "source": "Wikipedia en español (Hospital de los Pobres Inocentes)"
+    },
+    {
+      "claim": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+      "source": "Wikipedia en inglés (Joan Gilabert Jofré)"
+    },
+    {
+      "claim": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+      "source": "American Journal of Psychiatry (2012)"
+    },
+    {
+      "claim": "el hospital de Valencia de 1409, al que se llama \"el primer psiquiátrico del mundo\", y el maristán de Granada que lo precede en cuarenta y dos años",
+      "source": "Cultura de los Cuidados n.º 45 (2016)"
+    }
+  ],
+  "do_not_use": [
+    "\"el primer hospital psiquiátrico del mundo\" como hecho (es la formulación que el propio post desmonta; la Wikipedia en español lo llama solo \"uno de los primeros\" y \"el primero de España\")",
+    "una fecha cerrada para el maristán de Fez que sirvió de modelo (las fuentes discrepan entre c. 1286 y c. 1350: decir solo \"un modelo del norte de África\")",
+    "que Jofré hubiera visitado maristanes norteafricanos (lo sugiere el artículo del AJP, no está documentado con firmeza)",
+    "\"manicomio\" como término neutro",
+    "cifras de internados del hospital de Valencia (no verificadas)"
+  ],
+  "_verificacion_prosa": "el sermón del mercedario Juan Gilabert Jofré (Joan Gilabert Jofré) fue el **24 de febrero de 1409**, primer domingo de Cuaresma, en la catedral de Valencia; camino al púlpito vio a unos jóvenes agrediendo a un hombre con trastorno mental y cambió la prédica para pedir un lugar donde recogerlos. Lo financiaron **once vecinos de Valencia encabezados por Llorenç Salom**. Las obras arrancaron en **mayo de 1409**. Nombre de la institución: *Hospital dels Ignoscents, Folls e Orats* (también *Hospital dels Innocents* / *dels Folls*). Licencia real de **Martín I el Humano**; bula de **Benedicto XIII fechada el 26 de febrero de 1410**. En 1512 se fundió con otros hospitales en el Hospital General de Valencia; incendio de 1545; hoy una de las enfermerías originales alberga la Biblioteca Pública de Valencia. **Maristán de Granada:** su lápida fundacional, conservada en la sala IV del Museo de la Alhambra, fecha la obra entre el **27 de septiembre – 8 de octubre de 1365** y el **9 – 18 de junio de 1367**, por orden de **Muhammad V**, tras las epidemias de peste que golpearon Granada desde 1348; el cronista Ibn al-Jatib lo describe como edificio suntuoso con muchas salas, patio amplio y aguas corrientes. Tras la conquista fue Casa de la Moneda (1499-1502), almacén de vino (mediados del s. XVII), cuartel (1820), cárcel (1825) y casa de vecinos (desde 1836); permiso de derribo en **julio de 1843** y demolición parcial en agosto de ese año; excavaciones de 1984 a 1999; Bien de Interés Cultural desde 2005. El *American Journal of Psychiatry* (2012, \"The Lions of Granada Maristan\") lo sitúa entre los primeros hospitales de Europa que incluían la atención a enfermos mentales, con unidades por tipo de dolencia; el artículo de *Cultura de los Cuidados* (2016) sobre el legado islámico en los cuidados psiquiátricos sostiene lo mismo. Fuentes: Patronato de la Alhambra y Generalife (lápida fundacional y recorrido histórico del maristán), Wikipedia en español (*Hospital de los Pobres Inocentes*), Wikipedia en inglés (*Joan Gilabert Jofré*), *American Journal of Psychiatry* (2012), *Cultura de los Cuidados* n.º 45 (2016). **No usar:** \"el primer hospital psiquiátrico del mundo\" como hecho (es la formulación que el propio post desmonta; la Wikipedia en español lo llama solo \"uno de los primeros\" y \"el primero de España\"); una fecha cerrada para el maristán de Fez que sirvió de modelo (las fuentes discrepan entre c. 1286 y c. 1350: decir solo \"un modelo del norte de África\"); que Jofré hubiera visitado maristanes norteafricanos (lo sugiere el artículo del AJP, no está documentado con firmeza); \"manicomio\" como término neutro; y cifras de internados del hospital de Valencia (no verificadas).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

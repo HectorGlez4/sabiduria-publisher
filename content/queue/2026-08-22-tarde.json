@@ -1,0 +1,61 @@
+{
+  "id": "2026-08-22-tarde",
+  "publish_at": "2026-08-22T19:16:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Heráclito y el río que sí permanece",
+    "hook": "\"A quienes entran en los mismos ríos les fluyen aguas siempre distintas.\"\n— Heráclito, fragmento B12",
+    "body": [
+      "Este es el único fragmento del río que los especialistas dan por auténtico. Y dice justo lo contrario de lo que todos repetimos.",
+      "La versión conocida, \"nadie se baña dos veces en el mismo río\", no es de Heráclito: es el resumen que hizo Platón un siglo después, y le da la vuelta al sentido. Platón lo lee como imposibilidad: nada se repite, nada permanece.",
+      "Heráclito estaba diciendo algo más raro y más útil. El río es el mismo. Precisamente por eso el agua tiene que ser distinta. Lo que le da identidad no es quedarse quieto: es no dejar de correr.",
+      "Aplicado a una persona, cambia todo. No eres el mismo porque no hayas cambiado. Eres el mismo porque no has parado."
+    ],
+    "question": "¿Qué parte de ti se ha mantenido igual solo porque siguió moviéndose?",
+    "quote": {
+      "text": "A quienes entran en los mismos ríos les fluyen aguas siempre distintas.",
+      "author": "Heráclito (fragmento B12)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Heraclito",
+      "#Filosofia",
+      "#Grecia"
+    ],
+    "extended": [
+      "#FilosofiaGriega",
+      "#Presocraticos",
+      "#Reflexiones",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Sabiduria",
+      "#Cambio"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Heráclito y el río que sí permanece",
+      "source": "Stanford Encyclopedia of Philosophy (Heraclitus, sección de los fragmentos del río)"
+    },
+    {
+      "claim": "Heráclito y el río que sí permanece",
+      "source": "Wikipedia"
+    }
+  ],
+  "do_not_use": [],
+  "_verificacion_prosa": "fragmento DK 22 B12, el único fragmento fluvial que la filología considera auténtico: \"a quienes entran en los mismos ríos les fluyen aguas siempre distintas\". La versión popular (\"no se puede entrar dos veces en el mismo río\") es el resumen de Platón en *Crátilo* 402a, probablemente vía Crátilo, e **invierte el sentido**: B12 dice que el río permanece el mismo mientras el agua cambia. Los fragmentos B49a y B91 se consideran paráfrasis o malas lecturas. \"Nadie se baña dos veces\" es doblemente libre: *bañarse* no traduce ἐμβαίνειν, que es entrar o poner el pie. Heráclito de Éfeso, c. 540-c. 480 a.C. Fuentes: Stanford Encyclopedia of Philosophy (Heraclitus, sección de los fragmentos del río), Wikipedia.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

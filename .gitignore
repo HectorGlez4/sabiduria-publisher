@@ -3,3 +3,4 @@ assets/*.png
 __pycache__/
 *.pyc
 .venv/
+content/_migrar/

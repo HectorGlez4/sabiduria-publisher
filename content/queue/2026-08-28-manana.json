@@ -1,0 +1,80 @@
+{
+  "id": "2026-08-28-manana",
+  "publish_at": "2026-08-28T14:31:00Z",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+    "hook": "EL BRAILLE LO CREÓ UN ADOLESCENTE Y SU PROPIA ESCUELA LLEGÓ A PROHIBIRLO",
+    "body": [
+      "Louis Braille perdió la vista a los tres años, con una lezna del taller de su padre. A los diez entró en la escuela de jóvenes ciegos de París. A los doce tuvo en las manos un sistema de puntos en relieve que Charles Barbier había ofrecido a la institución. Le pareció incómodo y lo rehízo entero: seis puntos, del tamaño de una yema. Publicó su versión en 1829, con veinte años.",
+      "Lo que casi nadie cuenta es lo que vino después. En 1840 llegó un director nuevo, Pierre-Armand Dufau, y prohibió el sistema en la escuela donde había nacido. Los alumnos siguieron escribiéndolo a escondidas. En 1844, en la inauguración de la sede nueva, fueron ellos quienes lo demostraron en público. La escuela lo adoptó oficialmente en 1854, dos años después de que Braille muriera.",
+      "Sobrevivió porque quienes lo necesitaban no dejaron de usarlo."
+    ],
+    "question": "¿Qué cosa útil conoces que haya tenido que abrirse paso contra quien debía cuidarla?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL BRAILLE",
+    "subtitle": "Seis puntos que tardaron veinticinco años en ser aceptados",
+    "body": "Perdió la vista a los tres años y a los doce tuvo en las manos un sistema de puntos que le pareció incómodo. Publicó el suyo en 1829. Un director lo prohibió en 1840 y los alumnos siguieron usándolo a escondidas. La escuela lo adoptó en 1854, dos años después de su muerte."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Braille",
+      "#Historia",
+      "#Curiosidades"
+    ],
+    "extended": [
+      "#LouisBraille",
+      "#DatosCuriosos",
+      "#Lectura",
+      "#Educacion",
+      "#Inclusion",
+      "#Francia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "Britannica (Braille writing system)"
+    },
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "Wikipedia en inglés (Louis Braille)"
+    },
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "Museo Louis Braille de Coupvray (página del Institut des Jeunes Aveugles)"
+    },
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "Perkins School for the Blind (Louis Braille, Charles Barbier, and the making of a myth)"
+    },
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "American Council of the Blind (Have We Had It Wrong All These Years?)"
+    },
+    {
+      "claim": "el braille: lo publicó un muchacho de veinte años, su propia escuela lo prohibió y lo adoptó oficialmente dos años después de su muerte",
+      "source": "National Geographic"
+    }
+  ],
+  "do_not_use": [
+    "\"Barbier inventó la escritura nocturna para el ejército de Napoleón\" (mito)",
+    "\"Braille inventó el sistema a los doce años\" como dato cerrado (a los doce conoció el de Barbier; publicó el suyo en 1829, con veinte)",
+    "\"Dufau quemó los libros en braille\" como hecho firme (lo afirma National Geographic, pero no lo recogen el museo ni las fuentes institucionales: en el copy solo se dice que lo prohibió)",
+    "\"Braille y Barbier eran enemigos\" (no hay constancia de que se conocieran antes de 1833)",
+    "ni \"el braille es un idioma\" (es un sistema de escritura)"
+  ],
+  "_verificacion_prosa": "Louis Braille, **4 de enero de 1809** (Coupvray) – **6 de enero de 1852** (París), a los 43 años. Perdió la vista por un accidente con una **lezna** en el taller de guarnicionería de su padre a los **tres años**; la infección alcanzó el otro ojo y a los cinco estaba completamente ciego. Entró en la Institución Real de Jóvenes Ciegos de París en **febrero de 1819**, con diez años. En **1821** llegó a la escuela el sistema de puntos en relieve de **Charles Barbier**; Braille lo encontró incómodo —los signos ocupaban demasiado espacio— y lo rehízo sobre una celda de **seis puntos**. **Publicó su sistema en 1829**, con veinte años; edición revisada en **1837**. **Prohibición:** **Pierre-Armand Dufau** dirigió la institución desde **1840** y, contrario al braille, **lo prohibió**; el Museo Louis Braille de Coupvray registra que \"los alumnos siguieron usándolo en secreto\". Dufau cambió de posición por insistencia de su adjunto **Joseph Guadet**, y en la **inauguración de la sede nueva del 56 del bulevar de los Inválidos, en 1844** (edificio construido en 1843), los propios alumnos hicieron demostraciones públicas de lectura y escritura. **Adopción oficial de la escuela de París: 1854**, dos años después de la muerte de Braille (Britannica: \"was not officially adopted by the school in Paris until 1854, two years after Braille's death\"). Congreso internacional de París que lo adopta como estándar: **1878**. Restos trasladados al Panteón en **1952**. **Mito descartado:** que Barbier creó su código como \"escritura nocturna\" para que los soldados de Napoleón leyeran órdenes a oscuras. Barbier publicó su método en **1815** mencionando expresamente a las personas ciegas como destinatarias, y lo ofreció a la escuela ese mismo año (rechazado) y de nuevo en 1821 (aceptado); la Perkins School for the Blind atribuye el relato militar a dos biógrafos de **los años cincuenta** (Pierre Henri y Jean Roblin), y la investigación de Philippa Campsie sobre los papeles de Barbier llega a lo mismo. Fuentes: Britannica (*Braille writing system*), Wikipedia en inglés (*Louis Braille*), Museo Louis Braille de Coupvray (página del Institut des Jeunes Aveugles), Perkins School for the Blind (*Louis Braille, Charles Barbier, and the making of a myth*), American Council of the Blind (*Have We Had It Wrong All These Years?*), National Geographic. **No usar:** \"Barbier inventó la escritura nocturna para el ejército de Napoleón\" (mito); \"Braille inventó el sistema a los doce años\" como dato cerrado (a los doce conoció el de Barbier; publicó el suyo en 1829, con veinte); \"Dufau quemó los libros en braille\" como hecho firme (lo afirma National Geographic, pero no lo recogen el museo ni las fuentes institucionales: en el copy solo se dice que lo prohibió); \"Braille y Barbier eran enemigos\" (no hay constancia de que se conocieran antes de 1833); ni \"el braille es un idioma\" (es un sistema de escritura).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

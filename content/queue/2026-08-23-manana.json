@@ -1,0 +1,64 @@
+{
+  "id": "2026-08-23-manana",
+  "publish_at": "2026-08-23T14:09:00Z",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Policarpa Salavarrieta y la frase que no dijo",
+    "hook": "POLICARPA SALAVARRIETA: la frase que todos le atribuyen la escribió un presidente cuarenta años después",
+    "body": [
+      "Era costurera, y ese fue su método. Cosía en casa de las señoras realistas de Santafé para escuchar de qué hablaban: cuántas tropas había, hacia dónde iban, quién estaba con quién. Con eso armó una red y reclutó jóvenes para la causa.",
+      "No la delató un chisme. La delató un papel: una lista de nombres que ella había entregado y que su compañero Alejo Sabaraín llevaba en el bolsillo cuando lo capturaron camino del Casanare. El consejo de guerra fue el 10 de noviembre de 1817. La fusilaron el 14, en la Plaza Mayor, por la espalda, como se fusilaba a los traidores a la Corona. Tenía poco más de veinte años.",
+      "Y aquí lo que casi nadie sabe. El famoso \"¡Pueblo indolente! ¡Cuán diversa sería hoy vuestra suerte…\" no lo escribió ella ni ningún testigo. Lo publicó en 1857 José Hilario López, que había estado allí y que después fue presidente de Colombia. Lo único que anotó un cronista de la época es más seco y más suyo: que camino al patíbulo iba maldiciendo a los españoles."
+    ],
+    "question": "¿Preferimos a nuestros héroes con un discurso o con su voz real?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "POLICARPA SALAVARRIETA",
+    "subtitle": "La frase que todos le atribuyen la escribió un presidente, cuarenta años después",
+    "body": "Cosía en casa de las señoras realistas para escuchar de qué hablaban. La delató una lista de nombres en el bolsillo de un compañero capturado. La fusilaron por la espalda el 14 de noviembre de 1817. Lo único que un testigo anotó: iba maldiciendo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Policarpa",
+      "#Colombia",
+      "#Independencia"
+    ],
+    "extended": [
+      "#PolicarpaSalavarrieta",
+      "#Bogota",
+      "#Historia",
+      "#MujeresEnLaHistoria",
+      "#HistoriaDeColombia",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Policarpa Salavarrieta y la frase que no dijo",
+      "source": "Banrepcultural (enciclopedia)"
+    },
+    {
+      "claim": "Policarpa Salavarrieta y la frase que no dijo",
+      "source": "Universidad del Rosario"
+    },
+    {
+      "claim": "Policarpa Salavarrieta y la frase que no dijo",
+      "source": "politika.io (sobre los usos de su memoria)"
+    }
+  ],
+  "do_not_use": [
+    "\"¡Pueblo indolente! ¡Cuán diversa sería hoy vuestra suerte…\" como cita histórica: la publicó en 1857, cuarenta años después, José Hilario López, que llegó a presidente de Colombia. Tampoco \"viles soldados, volved las armas…\" ni \"aunque mujer y joven, me sobra valor…\": mismo relato tardío. Ni \"era analfabeta\" o \"simple mensajera\" (operaba una red de inteligencia con listas escritas)"
+  ],
+  "_verificacion_prosa": "no hay certeza sobre su nacimiento: la Academia Colombiana de Historia fijó por resolución de 1991 el 26 de enero de 1795 en Guaduas, pero la enciclopedia del Banco de la República advierte que no hay claridad sobre la fecha ni el lugar y que su partida de bautismo nunca se ha encontrado. Costurera; su método documentado fue coser en casa de las señoras realistas en Santafé para escuchar conversaciones, averiguar movimientos de tropas y reclutar jóvenes. La delataron por una lista de nombres que le había entregado y que llevaba encima Alejo Sabaraín al ser capturado camino del Casanare. Consejo de guerra el 10 de noviembre de 1817; sentencia y capilla el 13; fusilada el 14 de noviembre de 1817 en la Plaza Mayor, hoy Plaza de Bolívar, por la espalda, como traidora a la Corona. Tenía entre 22 y 24 años. Últimas palabras: la única fuente cercana en el tiempo es el diario del cronista bogotano José María Caballero, que registra que camino al patíbulo \"no hacía sino maldecir a los españoles\". Apareció en el billete de 10.000 pesos emitido el 1 de julio de 1995; el 14 de noviembre es el Día de la Mujer Colombiana (Ley 44 de 1967). Fuentes: Banrepcultural (enciclopedia), Universidad del Rosario, politika.io (sobre los usos de su memoria). **No usar:** \"¡Pueblo indolente! ¡Cuán diversa sería hoy vuestra suerte…\" como cita histórica: la publicó en 1857, cuarenta años después, José Hilario López, que llegó a presidente de Colombia. Tampoco \"viles soldados, volved las armas…\" ni \"aunque mujer y joven, me sobra valor…\": mismo relato tardío. Ni \"era analfabeta\" o \"simple mensajera\" (operaba una red de inteligencia con listas escritas).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

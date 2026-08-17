@@ -1,0 +1,79 @@
+{
+  "id": "2026-08-28-tarde",
+  "publish_at": "2026-08-28T19:43:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Simón Rodríguez: la frase que se repite en las escuelas se escribió sobre instituciones y gobiernos",
+    "hook": "\"La América española es original: originales han de ser sus instituciones y su gobierno. O inventamos o erramos.\"\n— Simón Rodríguez, Sociedades americanas en 1828 (edición de Lima, 1842)",
+    "body": [
+      "La escribió el maestro de Bolívar, el mismo que años después lo acompañó por Europa y guardó de memoria su juramento de Roma. Se repite todo el tiempo en escuelas y discursos sobre educación, y no fue escrita para eso: Rodríguez hablaba de instituciones y de gobiernos, y advertía que copiar los modelos de Europa o de Estados Unidos era la forma más segura de equivocarse.",
+      "En el original ni se escribe así: usaba una ortografía propia, con \"orijinal\" en jota. Murió el 28 de febrero de 1854 en Amotape, un pueblo del norte del Perú, sin nada. Sus restos entraron al Panteón Nacional de Caracas cien años más tarde."
+    ],
+    "question": "¿Qué estás copiando de un modelo que no se hizo pensando en tu caso?",
+    "quote": {
+      "text": "La América española es original: originales han de ser sus instituciones y su gobierno. O inventamos o erramos.",
+      "author": "Simón Rodríguez (1769-1854)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SimonRodriguez",
+      "#AmericaLatina",
+      "#Frases"
+    ],
+    "extended": [
+      "#SimonBolivar",
+      "#Venezuela",
+      "#Peru",
+      "#Educacion",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El pasaje pertenece a Sociedades americanas en 1828, publicada por entregas (Arequipa 1828, Concepción 1834, Valparaíso 1838, Lima 1842); el texto citado se lee en la edición de Lima, 1842, p. 47",
+      "source": "Simón Rodríguez, Sociedades americanas en 1828 (Lima, 1842), p. 47"
+    },
+    {
+      "claim": "Transcripción del pasaje verificada, con la ortografía original de Rodríguez",
+      "source": "Francisco A. Ortega, Revista de Estudios Sociales n.º 38 (enero de 2011), pp. 30-46; el pasaje en la p. 37"
+    },
+    {
+      "claim": "Datos biográficos: nacido en Caracas el 28 de octubre de 1769; maestro de Bolívar desde 1791; escuelas en Bogotá (1824) y Chuquisaca (1826); muerto el 28 de febrero de 1854 en Amotape; restos trasladados al Panteón Nacional de Caracas en 1954",
+      "source": "Diccionario de Historia de Venezuela, Fundación Empresas Polar, entrada 'Rodríguez, Simón'"
+    },
+    {
+      "claim": "El pasaje trata de instituciones y gobiernos, no de educación; su extrapolación al terreno pedagógico es una lectura posterior",
+      "source": "Julio Mosquera, '\"O Inventamos o Erramos\" no es una consigna educativa' (aporrea)"
+    },
+    {
+      "claim": "El nombre Samuel Robinson lo adoptó en el exilio, en Kingston",
+      "source": "Wikipedia en inglés, 'Simón Rodríguez'"
+    }
+  ],
+  "do_not_use": [
+    "presentarla como consigna pedagógica del propio Rodríguez",
+    "citar \"o inventamos o erramos\" suelta, sin la primera mitad, que es donde está la idea",
+    "dar la ortografía modernizada como si fuera la original",
+    "\"1771\" como año de nacimiento (la fecha documentada es 1769)",
+    "\"lo expulsaron de Bolivia\" (renunció)",
+    "\"Samuel Robinson era su nombre verdadero\" (lo adoptó en el exilio)",
+    "ni fechar el pasaje solo en 1828 sin señalar que se lee en la edición de Lima de 1842"
+  ],
+  "_verificacion_prosa": "el pasaje pertenece a ***Sociedades americanas en 1828***, obra publicada por entregas —Arequipa (1828), Concepción (1834), Valparaíso (1838) y **Lima (1842)**—. Redacción original, con la ortografía propia de Rodríguez: *\"Dónde irémos a buscar modelos?... —La América Española es orijinal = ORIJINALES han de ser sus Instituciones i su Gobierno = i ORIJINALES los medios de fundar uno i otro\"*, seguido de *\"O inventamos o erramos\"*. Transcripción verificada en el artículo de **Francisco A. Ortega**, *Revista de Estudios Sociales* n.º 38 (enero de 2011, pp. 30-46, el pasaje en la p. 37), que remite a la edición de **Lima, 1842, p. 47**. **Datos biográficos** verificados con la entrada \"Rodríguez, Simón\" del *Diccionario de Historia de Venezuela* de la **Fundación Empresas Polar**: nació en Caracas el **28 de octubre de 1769**; al casarse en 1793 se declaró \"expósito de esta feligresía\"; fue maestro de Bolívar desde **1791**, se reencontró con él en París en **1804** y en Roma, en 1805, memorizó y conservó su juramento; fundó una escuela-taller en **Bogotá (1824)** y otra en **Chuquisaca (1826)**, de la que renunció ese mismo año por su choque con el presidente **Antonio José de Sucre**; murió el **28 de febrero de 1854 en Amotape** (norte del Perú), en la pobreza, y sus restos fueron trasladados al **Panteón Nacional de Caracas en 1954**. El nombre **Samuel Robinson** lo adoptó en el exilio, en Kingston (Wikipedia en inglés). **Contexto de la frase:** Julio Mosquera, *\"O Inventamos o Erramos\" no es una consigna educativa* (aporrea), documenta que el pasaje trata de **instituciones y gobiernos**, no de educación, y critica su extrapolación acrítica al terreno pedagógico. **Nota de tarjeta:** la tarjeta moderniza la ortografía (orijinal → original, \"i\" → \"y\"), práctica habitual al citar textos del siglo XIX; el copy lo advierte expresamente para no falsear el original. **No usar:** presentarla como consigna pedagógica del propio Rodríguez; citar \"o inventamos o erramos\" suelta, sin la primera mitad, que es donde está la idea; dar la ortografía modernizada como si fuera la original; \"1771\" como año de nacimiento (la fecha documentada es 1769); \"lo expulsaron de Bolivia\" (renunció); \"Samuel Robinson era su nombre verdadero\" (lo adoptó en el exilio); ni fechar el pasaje solo en 1828 sin señalar que se lee en la edición de Lima de 1842.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

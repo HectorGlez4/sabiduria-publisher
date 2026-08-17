@@ -1,0 +1,67 @@
+{
+  "id": "2026-08-30-noche",
+  "publish_at": "2026-08-31T02:15:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Boecio: uno de los libros más leídos de la Edad Media lo escribió un condenado a muerte en su celda, y en él no aparece Cristo ni una vez",
+    "hook": "BOECIO ESCRIBIÓ UNO DE LOS LIBROS MÁS LEÍDOS DE LA EDAD MEDIA EN UNA CELDA, ESPERANDO QUE LO EJECUTARAN",
+    "body": [
+      "Era el segundo hombre del reino: maestro de los oficios de Teodorico, el rey ostrogodo que gobernaba Italia desde Rávena. Lo acusaron de traición y de practicar magia, lo encarcelaron y lo mandaron matar hacia el año 526. Pasó preso alrededor de un año, y ahí escribió.",
+      "El libro es un diálogo. La Filosofía se le aparece en la celda con forma de mujer y le pregunta de qué se queja. Cuando él enumera lo perdido —el cargo, el nombre, la casa, la reputación—, ella le responde con una imagen que después recorrió toda la Edad Media: la rueda de la Fortuna. Nada de eso era suyo. Estaba prestado, y la rueda gira.",
+      "Un detalle que casi nadie menciona: Boecio era cristiano y había escrito tratados de teología, pero en este libro no aparece Cristo ni una sola vez. Se consuela únicamente con lo que puede razonar.",
+      "Lo tradujeron un rey de Inglaterra, Chaucer y la reina Isabel I."
+    ],
+    "question": "¿Qué de lo que hoy llamas tuyo te lo prestaron?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "BOECIO",
+    "subtitle": "Lo escribió en una celda, esperando que lo ejecutaran",
+    "body": "Fue el segundo hombre del reino hasta que lo acusaron de traición. Preso, escribió un diálogo con la Filosofía, que le explicó la suerte con la imagen de una rueda que gira. Era cristiano y no nombró a Cristo ni una vez: se consoló solo con lo que podía razonar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Boecio",
+      "#Filosofia",
+      "#EdadMedia"
+    ],
+    "extended": [
+      "#Roma",
+      "#Libros",
+      "#Fortuna",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#FrasesEnEspanol",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Boecio: uno de los libros más leídos de la Edad Media lo escribió un condenado a muerte en su celda, y en él no aparece Cristo ni una vez",
+      "source": "Stanford Encyclopedia of Philosophy (Anicius Manlius Severinus Boethius)"
+    },
+    {
+      "claim": "Boecio: uno de los libros más leídos de la Edad Media lo escribió un condenado a muerte en su celda, y en él no aparece Cristo ni una vez",
+      "source": "Wikipedia en inglés (On the Consolation of Philosophy)"
+    }
+  ],
+  "do_not_use": [
+    "el lugar de la prisión o de la ejecución como dato cerrado (la tradición dice Pavía y el Ager Calventianus, cerca de Milán; la SEP no lo precisa: el copy no nombra ciudad)",
+    "una fecha cerrada de muerte (524, 525 y 526 circulan: decir \"hacia el 526\")",
+    "\"el libro más leído de Europa después de la Biblia\" (formulación divulgativa que las fuentes consultadas no sostienen: decir \"uno de los más leídos e influyentes\")",
+    "\"no menciona a Dios\" (sí razona sobre Dios y el sumo bien; lo que no aparece es Cristo, las Escrituras ni la doctrina cristiana)",
+    "\"la carta del tarot viene de este libro\" (la imagen de la rueda es anterior y más amplia; lo defendible es que este libro la volvió corriente en la Edad Media)",
+    "\"fue el último romano\" como etiqueta cerrada",
+    "contar su caída como una condena probada (las acusaciones nunca se demostraron y él sostuvo su inocencia)"
+  ],
+  "_verificacion_prosa": "**Anicio Manlio Severino Boecio**, nacido hacia el **475-477** y muerto probablemente en el **526**. Llegó a **magister officiorum** (\"maestro de los oficios\") de **Teodorico**, rey ostrogodo que gobernaba Italia desde **Rávena**; la Stanford Encyclopedia of Philosophy lo describe como \"uno de los funcionarios de más alto rango\". Cayó en desgracia —probablemente por denunciar la corrupción de la corte—, fue **acusado de traición y de practicar magia**, encarcelado y ejecutado. **La consolación de la filosofía** la escribió **en prisión, esperando el juicio y la ejecución**; la Wikipedia en inglés fecha la redacción en **523** y precisa que pasó **un año preso** antes del final. **Forma:** *prosimetrum*, prosa y verso alternados, en **cinco libros**; es un diálogo entre el propio Boecio y la **Filosofía**, personificada como una mujer que se le aparece en la celda. **La rueda de la Fortuna:** la Filosofía le explica el carácter caprichoso de la suerte con la imagen de la *rueda de la Fortuna*, que a través de este libro se convirtió en una de las imágenes recurrentes de la Edad Media. **Ausencia de cristianismo:** la SEP subraya que la obra \"no contiene ninguna referencia explícita al cristianismo\" y considera que eso \"plantea un problema especial\", dado que Boecio era cristiano y autor de tratados teológicos, los ***Opuscula sacra***; la Wikipedia añade que el texto no tiene \"nada distintivamente cristiano\" ni \"nada específicamente pagano\". **Difusión:** \"una de las obras filosóficas más populares e influyentes\" desde la época carolingia hasta el final de la Edad Media y más allá; en el siglo XX se conservaban **cerca de cuatrocientos manuscritos**. **Traductores:** el rey **Alfredo el Grande** (inglés antiguo), **Geoffrey Chaucer** (inglés medio) y la reina **Isabel I** (inglés moderno temprano). Boecio tradujo además al latín las obras lógicas de Aristóteles. Fuentes: Stanford Encyclopedia of Philosophy (*Anicius Manlius Severinus Boethius*), Wikipedia en inglés (*On the Consolation of Philosophy*). **No usar:** el lugar de la prisión o de la ejecución como dato cerrado (la tradición dice Pavía y el Ager Calventianus, cerca de Milán; la SEP no lo precisa: el copy no nombra ciudad); una fecha cerrada de muerte (524, 525 y 526 circulan: decir \"hacia el 526\"); \"el libro más leído de Europa después de la Biblia\" (formulación divulgativa que las fuentes consultadas no sostienen: decir \"uno de los más leídos e influyentes\"); \"no menciona a Dios\" (sí razona sobre Dios y el sumo bien; lo que no aparece es Cristo, las Escrituras ni la doctrina cristiana); \"la carta del tarot viene de este libro\" (la imagen de la rueda es anterior y más amplia; lo defendible es que este libro la volvió corriente en la Edad Media); \"fue el último romano\" como etiqueta cerrada; y contar su caída como una condena probada (las acusaciones nunca se demostraron y él sostuvo su inocencia).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

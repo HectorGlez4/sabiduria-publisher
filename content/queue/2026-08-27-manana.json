@@ -1,0 +1,78 @@
+{
+  "id": "2026-08-27-manana",
+  "publish_at": "2026-08-27T14:47:00Z",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+    "hook": "MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA",
+    "body": [
+      "Vivía de vender fósiles en la playa de Lyme Regis, al sur de Inglaterra. En 1811 su hermano encontró el cráneo de un animal desconocido y ella desenterró el resto del esqueleto: el primer ictiosaurio que llegó a la ciencia londinense. En diciembre de 1823 sacó del acantilado el primer esqueleto completo de plesiosaurio. Cuvier, la mayor autoridad de Europa, lo dio por falso antes de rectificar.",
+      "Los artículos que describieron esos animales casi nunca llevaban su nombre. La Sociedad Geológica de Londres discutió su plesiosaurio en una reunión a la que no la invitaron. Nunca fue socia: no admitían mujeres.",
+      "Murió el 9 de marzo de 1847. Al año siguiente el presidente de esa misma sociedad leyó su elogio fúnebre ante los socios, rompiendo la norma por alguien de fuera. Las mujeres pudieron ingresar en mayo de 1919: setenta y dos años tarde."
+    ],
+    "question": "¿De quién es el mérito: de quien encuentra o de quien escribe?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "MARY ANNING",
+    "subtitle": "Los fósiles eran suyos; las firmas de los artículos, de otros",
+    "body": "En diciembre de 1823 sacó de un acantilado inglés el primer esqueleto completo de plesiosaurio. La Sociedad Geológica de Londres lo discutió en una reunión a la que no la invitaron: no admitía mujeres. Empezó a admitirlas en 1919, setenta y dos años después de su muerte."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MaryAnning",
+      "#Paleontologia",
+      "#MujeresEnLaCiencia"
+    ],
+    "extended": [
+      "#Fosiles",
+      "#Ciencia",
+      "#HistoriaDeLaCiencia",
+      "#MujeresEnLaHistoria",
+      "#Inglaterra",
+      "#Geologia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+      "source": "Natural History Museum (Mary Anning: the unsung hero of fossil discovery)"
+    },
+    {
+      "claim": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+      "source": "Sociedad Geológica de Londres (exposición Mary Anning and the Geological Society y entrada de blog The road to Fellowship)"
+    },
+    {
+      "claim": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+      "source": "UCMP Berkeley"
+    },
+    {
+      "claim": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+      "source": "The Conversation"
+    },
+    {
+      "claim": "Mary Anning: encontró los fósiles que fundaron la paleontología y nunca pudo pertenecer a la sociedad científica que los estudiaba",
+      "source": "Museo de Lyme Regis"
+    }
+  ],
+  "do_not_use": [
+    "\"1904\" ni \"1908\" como año de admisión de mujeres (son hitos parciales; la fecha es 1919)",
+    "su edad exacta al excavar el ictiosaurio (las fuentes discrepan entre 10 y 12 años: no darla)",
+    "\"descubrió el primer ictiosaurio\" a secas (fue el primero que llegó a la ciencia londinense y se describió, no el primer fósil de ictiosaurio hallado)",
+    "\"fue la primera paleontóloga del mundo\" (superlativo no verificable)",
+    "el trabalenguas inglés \"she sells sea shells\" como referido a ella (atribución no documentada)",
+    "la anécdota del rayo que la habría alcanzado de bebé",
+    "la causa de su muerte, que no aporta nada al post"
+  ],
+  "_verificacion_prosa": "Mary Anning, 1799 – **9 de marzo de 1847**, Lyme Regis (Dorset, sur de Inglaterra). Vivió de vender fósiles; tras la muerte de su padre en 1810 la familia saldó deudas con esas ventas. **Ictiosaurio:** su hermano Joseph encontró el cráneo en el otoño de **1811** y Mary excavó el resto del esqueleto a partir de noviembre de 1812, terminando a principios de 1813; fue el primer ejemplar que llegó a la comunidad científica de Londres y el primero descrito en la literatura. **Plesiosaurio:** **diciembre de 1823**, primer esqueleto completo de *Plesiosaurus*; Georges Cuvier revisó los dibujos y lo dio por falso, error o composición, y rectificó al recibir nuevas ilustraciones; la Sociedad Geológica de Londres convocó una reunión especial sobre el hallazgo *\"a la que Mary no fue invitada\"* (Natural History Museum). **Pterosaurio:** **diciembre de 1828**, primeros restos de *Dimorphodon*, primer pterosaurio hallado fuera de Alemania. **Crédito:** los científicos que compraban las piezas que ella excavaba, limpiaba, preparaba e identificaba \"a menudo no la acreditaban en sus artículos\" (NHM); UCMP Berkeley: la mayoría de sus hallazgos acabaron en museos y colecciones privadas sin crédito para ella. **Renta vitalicia:** 25 libras anuales desde **1838**, reunidas por la British Association for the Advancement of Science y la Sociedad Geológica (The Conversation); la Sociedad Geológica documenta además una colecta de 200 libras impulsada por Buckland y Murchison y una ayuda de 300 libras del Bounty Fund gestionada ante lord Melbourne (carta del 10 de diciembre de 1835). **Nunca fue socia** de la Sociedad Geológica de Londres. **Elogio fúnebre:** lo leyó Henry De la Beche, entonces presidente y amigo suyo durante 35 años, en la Anniversary Meeting del **18 de febrero de 1848**, dejando constancia de que se apartaba de la norma; publicado en el *Quarterly Journal of the Geological Society*, vol. 4 (1848). **Primeras socias:** **21 de mayo de 1919**, ocho mujeres elegidas (entre ellas Gertrude Elles) tras una enmienda de los estatutos; hitos previos: Catherine Raisin premiada con el Lyell Fund en 1893 sin poder asistir a la ceremonia, apertura de hecho de las reuniones en 1901, primera ponencia leída por una mujer el 9 de noviembre de 1904, y una moción de ingreso rechazada en 1908 por diez votos. Fuentes: Natural History Museum (*Mary Anning: the unsung hero of fossil discovery*), Sociedad Geológica de Londres (exposición *Mary Anning and the Geological Society* y entrada de blog *The road to Fellowship*), UCMP Berkeley, The Conversation, Museo de Lyme Regis. **No usar:** \"1904\" ni \"1908\" como año de admisión de mujeres (son hitos parciales; la fecha es 1919); su edad exacta al excavar el ictiosaurio (las fuentes discrepan entre 10 y 12 años: no darla); \"descubrió el primer ictiosaurio\" a secas (fue el primero que llegó a la ciencia londinense y se describió, no el primer fósil de ictiosaurio hallado); \"fue la primera paleontóloga del mundo\" (superlativo no verificable); el trabalenguas inglés \"she sells sea shells\" como referido a ella (atribución no documentada); la anécdota del rayo que la habría alcanzado de bebé; y la causa de su muerte, que no aporta nada al post.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

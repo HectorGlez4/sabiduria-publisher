@@ -1,0 +1,70 @@
+{
+  "id": "2026-08-28-noche",
+  "publish_at": "2026-08-29T01:59:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Montaigne se encerró en una torre a descansar la cabeza, le salió al revés, y de ese fracaso nació el ensayo",
+    "hook": "MONTAIGNE SE ENCERRÓ EN UNA TORRE PARA ESTAR EN PAZ Y ENCONTRÓ LO CONTRARIO",
+    "body": [
+      "El 28 de febrero de 1571, el día que cumplía treinta y ocho años, mandó pintar en la pared de su estudio que se retiraba de la corte y de los cargos públicos a pasar en calma lo poco que le quedara de vida. Se encerró en la torre de su castillo, con más de mil libros y con sentencias griegas y latinas pintadas en las vigas del techo.",
+      "Le salió al revés, y lo dejó anotado en un capítulo brevísimo, De la ociosidad. Esperaba que su espíritu, ya sin ocupaciones, descansara en sí mismo. Lo que hizo fue producir quimeras y monstruos fantásticos, encabalgados los unos sobre los otros, sin orden ni propósito.",
+      "Su reacción fue rara: empezó a registrarlos por escrito, con la esperanza de que su propio espíritu acabara avergonzándose de sí mismo.",
+      "De ese registro salieron los Ensayos, en 1580. Del retiro no quedó tanto: viajando por Italia lo eligieron alcalde de Burdeos, y aceptó."
+    ],
+    "question": "¿Qué se te aparece en la cabeza cuando por fin no tienes nada que hacer?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "MONTAIGNE",
+    "subtitle": "Se retiró a pensar en calma y le salió una cabeza desbocada",
+    "body": "El 28 de febrero de 1571 dejó por escrito que se apartaba del mundo para descansar. En la soledad su mente empezó a producir quimeras y monstruos fantásticos, uno encabalgado sobre otro, sin orden ni propósito. Se puso a anotarlos para que le diera vergüenza. Así nació el ensayo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Montaigne",
+      "#Filosofia",
+      "#Ensayo"
+    ],
+    "extended": [
+      "#FilosofiaFrancesa",
+      "#Renacimiento",
+      "#Libros",
+      "#Lectura",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#FrasesEnEspanol"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Montaigne se encerró en una torre a descansar la cabeza, le salió al revés, y de ese fracaso nació el ensayo",
+      "source": "Wikipedia en inglés (Michel de Montaigne, Montaigne's tower)"
+    },
+    {
+      "claim": "Montaigne se encerró en una torre a descansar la cabeza, le salió al revés, y de ese fracaso nació el ensayo",
+      "source": "Stanford Encyclopedia of Philosophy (entrada Michel de Montaigne)"
+    },
+    {
+      "claim": "Montaigne se encerró en una torre a descansar la cabeza, le salió al revés, y de ese fracaso nació el ensayo",
+      "source": "texto español de De la ociosidad (elretruecano.com)"
+    }
+  ],
+  "do_not_use": [
+    "la frase \"mi vida estuvo llena de terribles desgracias, la mayoría de las cuales nunca ocurrieron\" (circula por todas partes atribuida a Montaigne y solo aparece en sitios de citas, sin obra ni capítulo: no se usa)",
+    "el año exacto de la elección como alcalde (las fuentes se reparten entre 1580, 1581 y 1582: el copy no lo da)",
+    "\"1.500 libros\" como cifra cerrada",
+    "la edad de 37 años (la SEP la da así, pero la inscripción de su propia pared dice 38 y la fecha es su cumpleaños)",
+    "\"se retiró del mundo para siempre\" (volvió al cargo público y viajó a Italia y Alemania)",
+    "presentarlo como escéptico sin más (\"Que sais-je?\" es una divisa, no un sistema)"
+  ],
+  "_verificacion_prosa": "Michel de Montaigne, **28 de febrero de 1533 – 13 de septiembre de 1592**. **Inscripción de 1571**, pintada en la pared de su estudio, texto según la traducción inglesa recogida en Wikipedia: *\"In the year of Christ 1571, at the age of thirty-eight, on the last day of February, his birthday, Michael de Montaigne, long weary of the servitude of the court and of public employments, while still entire, retired to the bosom of the learned virgins, where in calm and freedom from all cares he will spend what little remains of his life, now more than half run out\"*; el artículo *Montaigne's tower* añade que la dedicó \"à sa liberté, à sa tranquillité et à son loisir\". **Torre:** capilla en la planta baja, dormitorio en la segunda, y arriba el gabinete-biblioteca (estudio de unos 3 × 2,5 m); **más de mil volúmenes** (la ficha biográfica de Wikipedia da \"unos 1.500\": por eso el copy dice \"más de mil\"); **46 de las 48 vigas de roble** llevan pintadas sentencias griegas y latinas, 67 en total; la biblioteca no se conserva, las vigas sí. **Essais I, 8, \"De la ociosidad\":** esperaba que su espíritu, ocioso, se entretuviera consigo mismo, y lo que obtuvo fue \"tantas quimeras y monstruos fantásticos, encabalgados los unos sobre los otros, sin orden ni propósito\"; y por eso \"he empezado a registrarlos, esperando causarle con el tiempo vergüenza a sí mismo\". **Ensayos:** primera edición en **1580** (libros I y II); tercer libro en 1588. **Alcaldía de Burdeos:** lo eligieron **estando de viaje por Italia** y sirvió dos mandatos, hasta **1585**. **Divisa:** hacia 1576 hizo acuñar una medalla con *Epecho* (\"me abstengo\") y *Que sais-je?* (\"¿qué sé yo?\"). Fuentes: Wikipedia en inglés (*Michel de Montaigne*, *Montaigne's tower*), Stanford Encyclopedia of Philosophy (entrada *Michel de Montaigne*), texto español de *De la ociosidad* (elretruecano.com). **No usar:** la frase \"mi vida estuvo llena de terribles desgracias, la mayoría de las cuales nunca ocurrieron\" (circula por todas partes atribuida a Montaigne y solo aparece en sitios de citas, sin obra ni capítulo: no se usa); el año exacto de la elección como alcalde (las fuentes se reparten entre 1580, 1581 y 1582: el copy no lo da); \"1.500 libros\" como cifra cerrada; la edad de 37 años (la SEP la da así, pero la inscripción de su propia pared dice 38 y la fecha es su cumpleaños); \"se retiró del mundo para siempre\" (volvió al cargo público y viajó a Italia y Alemania); y presentarlo como escéptico sin más (\"Que sais-je?\" es una divisa, no un sistema).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

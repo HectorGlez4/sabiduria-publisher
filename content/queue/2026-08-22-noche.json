@@ -1,0 +1,61 @@
+{
+  "id": "2026-08-22-noche",
+  "publish_at": "2026-08-23T01:51:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Marco Aurelio y el cuaderno que nadie debía leer",
+    "hook": "MARCO AURELIO ESCRIBIÓ EL CUADERNO MÁS LEÍDO DE LA HISTORIA PARA QUE NADIE LO LEYERA",
+    "body": [
+      "No se llamaba Meditaciones. No tenía título. El encabezado griego dice \"cosas para sí mismo\", y eso es exactamente lo que era: un cuaderno privado, escrito entre el 170 y el 180, en campaña militar. El libro primero lleva anotado el lugar: \"en el país de los cuados\". El segundo, \"en Carnunto\".",
+      "Lo escribió en griego, que no era la lengua del Imperio que gobernaba. No hay un solo indicio de que quisiera publicarlo. La primera mención de que ese texto existía es de un obispo del siglo IX, y no llegó a una imprenta hasta 1559, en Zúrich: casi mil cuatrocientos años después.",
+      "El contexto importa. Mientras escribía, una peste recorría el Imperio desde el 165. Su coemperador murió de ella. De al menos catorce hijos, cinco lo sobrevivieron.",
+      "En el libro sexto anotó que si consideras bueno o malo algo que no está en tu poder, cuando llegue tendrás que culpar a los dioses y odiar a los hombres. No es la frase de un filósofo sereno en una biblioteca. Es la de alguien que acababa de comprobarlo."
+    ],
+    "question": "¿Qué escribirías si supieras con certeza que nadie lo va a leer?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "MARCO AURELIO",
+    "subtitle": "Escribió el cuaderno más leído de la historia para que nadie lo leyera",
+    "body": "Sin título, en griego y no en latín, en una tienda de campaña, mientras enterraba hijos y a su coemperador muerto de peste. Pasó casi mil cuatrocientos años entre copistas antes de llegar a una imprenta, en Zúrich, en 1559."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MarcoAurelio",
+      "#Estoicismo",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#FilosofiaEstoica",
+      "#Meditaciones",
+      "#Roma",
+      "#Reflexiones",
+      "#Frases",
+      "#Sabiduria",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Marco Aurelio y el cuaderno que nadie debía leer",
+      "source": "Wikipedia (Meditations, Antonine Plague)"
+    },
+    {
+      "claim": "Marco Aurelio y el cuaderno que nadie debía leer",
+      "source": "MIT Classics (texto de las Meditaciones)"
+    }
+  ],
+  "do_not_use": [
+    "\"dicotomía del control\" como expresión suya (es término moderno; la formulación clásica es de Epicteto, Enquiridión 1), cifras cerradas de muertos de la peste (las estimaciones publicadas van del 2 % al 33 %: dar el rango), \"fue viruela\" (no hay ADN recuperado; el sarampión sigue siendo alternativa plausible), \"de 14 hijos solo sobrevivió uno\" (sobrevivieron cinco; Cómodo fue el único hijo varón), las citas virales no localizables (\"todo lo que oímos es una opinión\", \"lo que hacemos ahora resuena en la eternidad\"), y el argumento de Gladiator"
+  ],
+  "_verificacion_prosa": "nació el 26 de abril de 121, reinó del 161 al 17 de marzo de 180, murió a los 58 años; gobernó con Lucio Vero como coemperador de 161 a 169. El título griego original de las *Meditaciones* es Τὰ εἰς ἑαυτόν, \"Cosas para sí mismo\": cuaderno privado, en griego y no en latín, escrito entre 170 y 180 en campaña. El libro I lleva la nota \"en el país de los cuados\"; el libro II, \"en Carnunto\". Primera mención directa: Aretas de Cesarea (c. 860-935); la división en 12 libros aparece en la Suda (finales del s. X); primera edición impresa por Wilhelm Xylander, Zúrich, 1558-1559. Peste antonina del 165 al 180; Lucio Vero murió de ella en 169. Al menos 14 hijos con Faustina la Menor, de los que cinco lo sobrevivieron (cuatro hijas y Cómodo). Pasaje concreto, *Meditaciones* VI, 41: \"Todo aquello que, no estando en tu poder, supongas que es bueno o malo para ti, hace necesario que, si te sobreviene ese mal o pierdes ese bien, culpes a los dioses y odies también a los hombres\". Complemento, VIII, 47. Fuentes: Wikipedia (*Meditations*, *Antonine Plague*), MIT Classics (texto de las *Meditaciones*). **No usar:** \"dicotomía del control\" como expresión suya (es término moderno; la formulación clásica es de Epicteto, *Enquiridión* 1), cifras cerradas de muertos de la peste (las estimaciones publicadas van del 2 % al 33 %: dar el rango), \"fue viruela\" (no hay ADN recuperado; el sarampión sigue siendo alternativa plausible), \"de 14 hijos solo sobrevivió uno\" (sobrevivieron cinco; Cómodo fue el único hijo varón), las citas virales no localizables (\"todo lo que oímos es una opinión\", \"lo que hacemos ahora resuena en la eternidad\"), y el argumento de *Gladiator*.",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}

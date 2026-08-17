@@ -1,0 +1,61 @@
+{
+  "id": "2026-08-18-noche",
+  "publish_at": "2026-08-19T01:56:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Epicteto, el esclavo cuyos apuntes de clase acabó leyendo un emperador",
+    "hook": "EPICTETO: nació esclavo y nunca escribió un libro. El hombre más poderoso del mundo lo citaba de memoria",
+    "body": [
+      "Nació hacia el año 50 en lo que hoy es Turquía, propiedad de Epafrodito, un liberto que era secretario personal de Nerón. Ese mismo Epafrodito fue quien le sostuvo la mano a Nerón cuando el emperador se mató, en junio del 68. Siendo todavía esclavo, Epicteto pidió permiso para estudiar filosofía. Se lo dieron.",
+      "Cuando Domiciano expulsó a los filósofos de Italia, hacia el año 89, se fue a Nicópolis, en la costa griega, y abrió una escuela. Enseñó unos cuarenta años y no escribió una sola línea: todo lo que conservamos son los apuntes de un alumno, Arriano.",
+      "Su manual empieza así: unas cosas dependen de nosotros y otras no. De nosotros: el juicio, el deseo, el rechazo. No de nosotros: el cuerpo, la propiedad, la reputación, los cargos.",
+      "Un siglo después, un emperador romano llenaba su diario privado con esa idea."
+    ],
+    "question": "¿Cuánto de lo que te quitó el sueño esta semana estaba de tu lado de la línea?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EPICTETO",
+    "subtitle": "Nació esclavo, no escribió ni una línea, y un emperador lo citaba de memoria",
+    "body": "Todo lo que sabemos de él son apuntes de clase que tomó un alumno. Su libro empieza distinguiendo lo que depende de nosotros -el juicio, el deseo- de lo que no: el cuerpo, la fama, los cargos. Marco Aurelio lo leyó y lo copió."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Epicteto",
+      "#Estoicismo",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#FilosofiaEstoica",
+      "#Enquiridion",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Roma",
+      "#FrasesEnEspanol",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Epicteto, el esclavo cuyos apuntes de clase acabó leyendo un emperador",
+      "source": "Stanford Encyclopedia of Philosophy"
+    },
+    {
+      "claim": "Epicteto, el esclavo cuyos apuntes de clase acabó leyendo un emperador",
+      "source": "Internet Encyclopedia of Philosophy"
+    }
+  ],
+  "do_not_use": [
+    "que su amo le rompió la pierna como hecho (lo dice Celso vía Orígenes y lo contradicen Simplicio y la Suda: presentarlo como una de tres versiones o no mencionarlo), \"fue maestro de Marco Aurelio\" (nunca se conocieron; Marco nació en 121 y lo leyó en Arriano), \"el estoicismo es reprimir las emociones\", y la frase viral de las dos orejas y una boca (no está en su corpus)"
+  ],
+  "_verificacion_prosa": "nació hacia 50-55 d.C. en Hierápolis (Frigia) y murió hacia 135 en Nicópolis del Epiro; ninguna fecha es exacta. Nació esclavo; su amo fue Epafrodito, liberto rico y secretario *a libellis* de Nerón, el mismo que asistió a Nerón en su suicidio el 9 de junio del 68. Con permiso de ese amo estudió estoicismo con Musonio Rufo siendo todavía esclavo. Domiciano expulsó a los filósofos de Italia hacia el año 89 (algunas fuentes, 93-95) y Epicteto fundó su escuela en Nicópolis. No escribió una línea: las *Disertaciones* (originalmente 8 libros o más, sobreviven 4) y el *Enquiridión* (53 capítulos) los compiló su alumno Arriano de Nicomedia. La dicotomía del control es la primera frase del *Enquiridión*. Fuentes: Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy. **No usar:** que su amo le rompió la pierna como hecho (lo dice Celso vía Orígenes y lo contradicen Simplicio y la Suda: presentarlo como una de tres versiones o no mencionarlo), \"fue maestro de Marco Aurelio\" (nunca se conocieron; Marco nació en 121 y lo leyó en Arriano), \"el estoicismo es reprimir las emociones\", y la frase viral de las dos orejas y una boca (no está en su corpus).",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft",
+  "results": {}
+}
