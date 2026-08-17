@@ -36,6 +36,17 @@ def load(path: pathlib.Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_history() -> list[dict]:
+    """
+    Lo ya publicado. Sin esto no se pueden comprobar cadencia, repetición ni
+    alternancia: las tres se miden contra lo que salió de verdad, no contra la
+    cola. Hasta ahora content/published/ solo se escribía y nunca se leía.
+    """
+    if not PUBLISHED.exists():
+        return []
+    return [load(p) for p in sorted(PUBLISHED.glob("*.json"))]
+
+
 def save(unit: dict, path: pathlib.Path) -> None:
     path.write_text(json.dumps(unit, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -100,7 +111,7 @@ def upload_asset(path: pathlib.Path) -> str:
 def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
     print(f"\n▶ {unit['id']} · {unit['pillar']} · {unit['core'].get('subject', '')}")
 
-    problems = variants.preflight(unit)
+    problems = variants.preflight(unit, load_history())
     if problems:
         print("  ✗ no pasa las comprobaciones previas:")
         for p in problems:

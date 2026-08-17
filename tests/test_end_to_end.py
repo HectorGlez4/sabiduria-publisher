@@ -15,6 +15,7 @@ import os
 import pathlib
 import shutil
 import sys
+import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -23,6 +24,38 @@ import fake_graph_shim  # noqa: E402,F401  (configura el entorno antes de import
 
 from src import publish, variants  # noqa: E402
 from src.platforms import meta  # noqa: E402
+
+# Pieza de prueba, independiente del contenido real. Reproduce la forma de una
+# tarjeta de cita, que es la que ejercita mas codigo (quote_card + atribucion).
+FIXTURE = """{
+  "id": "2099-01-01-tarde",
+  "publish_at": "2099-01-01T19:00:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Pieza de prueba del publicador",
+    "hook": "Una frase de prueba que no se publica en ningun sitio.",
+    "quote": {
+      "text": "Una frase de prueba que no se publica en ningun sitio.",
+      "author": "Nadie",
+      "work": "Obra inexistente para comprobar que la atribucion larga cabe",
+      "attribution_verified": true
+    },
+    "body": ["Primer parrafo de prueba.", "Segundo parrafo de prueba."],
+    "question": "\u00bfUna pregunta de prueba?"
+  },
+  "card": {"renderer": "quote_card", "variant": "cream"},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Prueba", "#Test"],
+    "extended": ["#Uno", "#Dos", "#Tres", "#Cuatro", "#Cinco", "#Seis", "#Siete"]
+  },
+  "sources": [{"claim": "es una prueba", "source": "el propio test"}],
+  "do_not_use": [],
+  "targets": ["facebook", "instagram", "threads"],
+  "status": "ready",
+  "results": {}
+}"""
 
 FAILURES: list[str] = []
 
@@ -36,16 +69,19 @@ def check(cond: bool, label: str) -> None:
 def main() -> int:
     import fake_graph
 
-    unit_path = ROOT / "content" / "queue" / "2026-08-17-tarde.json"
-    backup = json.loads(unit_path.read_text(encoding="utf-8"))
+    # El test trabaja sobre su PROPIA pieza y sus PROPIOS directorios. Antes
+    # usaba la pieza real de la cola como fixture y se rompio dos veces: al
+    # quitarle Threads perdio cobertura, y al publicarse de verdad el archivo
+    # desaparecio de content/queue/. El contenido vivo no es un fixture.
+    tmp = pathlib.Path(tempfile.mkdtemp(prefix="sdb-test-"))
+    publish.QUEUE = tmp / "queue"
+    publish.PUBLISHED = tmp / "published"
+    publish.ASSETS = tmp / "assets"
+    publish.QUEUE.mkdir(parents=True)
 
-    # tarjeta primero, para que el servidor pueda servirla
-    unit = json.loads(unit_path.read_text(encoding="utf-8"))
-    # El test ejerce SIEMPRE las tres plataformas, pase lo que pase con los
-    # targets de la pieza real: a esta le quitamos Threads por no tener todavia
-    # credenciales, y eso no debe reducir la cobertura del publicador. El
-    # archivo se restaura al final desde 'backup'.
-    unit["targets"] = ["facebook", "instagram", "threads"]
+    unit = json.loads(FIXTURE)
+    unit_path = publish.QUEUE / f"{unit['id']}.json"
+    unit_path.write_text(json.dumps(unit, ensure_ascii=False, indent=2), encoding="utf-8")
     card = publish.render_card(unit)
 
     srv, base = fake_graph.start(card)
@@ -89,7 +125,7 @@ def main() -> int:
           f"una atribucion larga cabe en el marco ({ancho:.0f} <= {max_w} px)")
 
     print("\n1. Comprobaciones previas")
-    check(variants.preflight(unit) == [], "la pieza pasa limpia")
+    check(variants.preflight(unit, []) == [], "la pieza pasa limpia")
 
     print("\n2. Publicación completa")
     ok = publish.publish_unit(unit, unit_path)
@@ -107,7 +143,7 @@ def main() -> int:
 
     print("\n5. Estado final")
     check(unit["status"] == "published", "la pieza queda 'published'")
-    moved = ROOT / "content" / "published" / unit_path.name
+    moved = publish.PUBLISHED / unit_path.name
     check(moved.exists(), "el archivo se movió a content/published/")
     check(not unit_path.exists(), "ya no está en la cola: no se puede republicar")
 
@@ -120,11 +156,9 @@ def main() -> int:
             FAILURES.append(f"{p} sin post_id registrado")
     check(fake_graph.STATE["publish_attempts"] == before, "una pieza publicada no se vuelve a enviar")
 
-    # restaurar
+    # limpieza: todo vivio en un directorio temporal, no se toca nada real
     srv.shutdown()
-    moved.unlink(missing_ok=True)
-    unit_path.write_text(json.dumps(backup, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    shutil.rmtree(ROOT / "content" / "published", ignore_errors=True)
+    shutil.rmtree(tmp, ignore_errors=True)
 
     print()
     if FAILURES:

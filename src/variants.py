@@ -11,6 +11,18 @@ arreglo va aquí o en el esquema — nunca en el contenido de una pieza suelta.
 """
 from __future__ import annotations
 
+import re
+import unicodedata
+from datetime import datetime, timedelta, timezone
+
+# CDMX es UTC-6 todo el año: México suprimió el horario de verano en 2022, así
+# que un desfase fijo es correcto y no hace falta base de datos de zonas.
+CDMX = timezone(timedelta(hours=-6))
+
+MAX_POR_DIA = 3
+HORAS_MINIMAS = 4
+DIAS_SIN_REPETIR = 90
+
 LIMITS = {
     "facebook": {"max_chars": 63206, "max_tags": 5, "cut": 250},
     "instagram": {"max_chars": 2200, "max_tags": 12, "cut": 125},
@@ -133,10 +145,153 @@ def build_all(unit: dict) -> dict:
     return {p: build(unit, p) for p in unit.get("targets", []) if p in RENDERERS}
 
 
-def preflight(unit: dict) -> list[str]:
+
+# ───────────────── Reglas que dependen del historial ─────────────────
+#
+# Las tres se comprueban contra lo REALMENTE PUBLICADO (content/published/),
+# no contra la cola. Es la distincion que ya se equivoco una vez con la
+# alternancia: la cola es una intencion, el historial es un hecho.
+
+
+def _instante(unit: dict) -> datetime | None:
+    """Cuando salio de verdad; si no consta, cuando estaba previsto."""
+    for r in (unit.get("results") or {}).values():
+        if r.get("published_at"):
+            try:
+                return datetime.fromisoformat(r["published_at"].replace("Z", "+00:00"))
+            except ValueError:
+                pass
+    if unit.get("publish_at"):
+        try:
+            return datetime.fromisoformat(unit["publish_at"].replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return None
+
+
+def _normalizar(t: str) -> str:
+    """Minusculas, sin acentos y sin puntuacion, para comparar temas."""
+    t = unicodedata.normalize("NFD", (t or "").lower())
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    t = re.sub(r"[^a-z0-9 ]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+# Palabras que describen la FORMA del contenido, no su tema. Sin quitarlas,
+# dos piezas sin nada que ver ("el verso que escribio dias antes de morir" y
+# "las lineas que escribio dias antes de morir") parecen la misma. Se midio
+# contra los 42 temas reales: con esta lista y umbral 2 no queda ningun falso
+# positivo, y sigue detectandose el mismo tema redactado de otra manera.
+VACIAS = {
+    # gramaticales
+    "el", "la", "los", "las", "un", "una", "de", "del", "que", "por", "para",
+    "con", "sin", "sobre", "como", "mas", "pero", "sus", "sino", "cuando",
+    "donde", "este", "esta", "esto", "esos", "esas", "and", "the", "pero",
+    "desde", "hasta", "entre", "tras", "ante", "segun", "aunque", "porque",
+    # forma del contenido
+    "frase", "frases", "cita", "citas", "verso", "versos", "poema", "poemas",
+    "texto", "textos", "libro", "libros", "obra", "obras", "linea", "lineas",
+    "palabra", "palabras", "pagina", "paginas", "capitulo", "carta", "cartas",
+    "escribio", "escribir", "escrito", "escribia", "dijo", "dice", "decia",
+    "publico", "publicada", "publicado", "redacto", "firmo",
+    # biografia generica
+    "dias", "dia", "anos", "ano", "siglo", "siglos", "morir", "muerte",
+    "murio", "nacio", "vida", "muerto", "antes", "despues", "primera",
+    "primer", "primero", "segunda", "segundo", "ultima", "ultimo", "propia",
+    "propio", "mismo", "misma", "sobre", "acabo", "quedo", "salio",
+    "salir", "resulto", "termino", "acabar", "hizo", "hacer",
+}
+
+
+def _claves(t: str) -> set[str]:
+    return {w for w in _normalizar(t).split() if len(w) >= 4 and w not in VACIAS}
+
+
+def _mismo_tema(a: str, b: str) -> bool:
+    """
+    Dos temas son el mismo si coinciden normalizados, si uno contiene al otro,
+    o si comparten dos o mas palabras significativas.
+
+    'Significativa' excluye las palabras de VACIAS, que describen la forma del
+    contenido y no su tema. El umbral se fijo midiendo, no a ojo: con umbral 2
+    y sin esa lista salian 9 falsos positivos entre los 42 temas reales (pares
+    que solo compartian 'frase' y 'cita'); con la lista, ninguno. Importa
+    porque un falso positivo BLOQUEA una publicacion legitima.
+    """
+    na, nb = _normalizar(a).strip(), _normalizar(b).strip()
+    if not na or not nb:
+        return False
+    if na == nb or na in nb or nb in na:
+        return True
+    return len(_claves(a) & _claves(b)) >= 2
+
+
+def _problemas_de_historial(unit: dict, historial: list[dict]) -> list[str]:
+    problemas: list[str] = []
+    cuando = _instante(unit)
+    if not historial:
+        return problemas
+
+    reales = [(h, _instante(h)) for h in historial]
+    reales = [(h, t) for h, t in reales if t]
+    reales.sort(key=lambda x: x[1])
+
+    # ── cadencia ──
+    if cuando:
+        dia = cuando.astimezone(CDMX).date()
+        mismo_dia = [t for _, t in reales if t.astimezone(CDMX).date() == dia]
+        if len(mismo_dia) >= MAX_POR_DIA:
+            problemas.append(
+                f"ya hay {len(mismo_dia)} publicaciones el {dia} en hora de CDMX: "
+                f"el maximo es {MAX_POR_DIA} al dia"
+            )
+        cercanas = [t for _, t in reales
+                    if abs((cuando - t).total_seconds()) < HORAS_MINIMAS * 3600]
+        if cercanas:
+            h = min(abs((cuando - t).total_seconds()) for t in cercanas) / 3600
+            problemas.append(
+                f"a {h:.1f} h de otra publicacion: el minimo son {HORAS_MINIMAS} horas"
+            )
+
+    # ── no repetir en 90 dias ──
+    if cuando:
+        limite = cuando - timedelta(days=DIAS_SIN_REPETIR)
+        recientes = [h for h, t in reales if t >= limite]
+        tema = (unit.get("core") or {}).get("subject") or ""
+        cita = ((unit.get("core") or {}).get("quote") or {}).get("text") or ""
+        for h in recientes:
+            otro = (h.get("core") or {}).get("subject") or ""
+            if tema and _mismo_tema(tema, otro):
+                problemas.append(
+                    f"tema repetido en menos de {DIAS_SIN_REPETIR} dias: "
+                    f"'{otro}' ({h.get('id')})"
+                )
+            ocita = ((h.get("core") or {}).get("quote") or {}).get("text") or ""
+            if cita and ocita and _normalizar(cita) == _normalizar(ocita):
+                problemas.append(f"cita ya publicada en {h.get('id')}")
+
+    # ── alternancia contra la ULTIMA PUBLICACION REAL ──
+    ultima = reales[-1][0]
+    v_ultima = (ultima.get("card") or {}).get("variant")
+    v_esta = (unit.get("card") or {}).get("variant")
+    if v_ultima and v_esta and v_ultima == v_esta:
+        problemas.append(
+            f"variante '{v_esta}' repetida: la ultima publicacion real "
+            f"({ultima.get('id')}) tambien salio {v_ultima}"
+        )
+
+    return problemas
+
+
+def preflight(unit: dict, historial: list[dict] | None = None) -> list[str]:
     """
     Comprobaciones que tienen que pasar ANTES de publicar nada.
     Devuelve la lista de problemas; vacía significa que la pieza es publicable.
+
+    'historial' son las piezas ya publicadas (content/published/). Sin él no se
+    pueden comprobar cadencia, repetición ni alternancia, porque las tres se
+    miden contra lo realmente publicado. publish.py lo carga y lo pasa; una
+    lista vacía significa que aún no hay historial, no que la regla no aplique.
     """
     problems = []
     core = unit.get("core") or {}
@@ -176,5 +331,7 @@ def preflight(unit: dict) -> list[str]:
                     problems.append(f"{p}: {len(out['text'])} caracteres, máximo {lim}")
             except Exception as e:  # noqa: BLE001
                 problems.append(f"{p}: {e}")
+
+    problems += _problemas_de_historial(unit, historial or [])
 
     return problems
