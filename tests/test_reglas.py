@@ -14,6 +14,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from datetime import datetime, timezone  # noqa: E402
+
 from src import variants  # noqa: E402
 
 FALLOS: list[str] = []
@@ -85,6 +87,17 @@ def main() -> int:
     separada = pieza("2026-09-02-noche", "2026-09-02T01:30:00Z", variante="gold")
     check(not tiene(variants.preflight(separada, hist), "minimo son 4 horas"),
           "a 6,5 h pasa")
+
+    print("\n3b. La cadencia mide la hora REAL, no la programada")
+    hist = [publicada("2026-09-01-tarde", "2026-09-01T19:00:00Z")]
+    # programada a 6,5 h: sobre el papel esta bien
+    tarde = pieza("2026-09-02-noche", "2026-09-02T01:30:00Z", variante="gold")
+    check(not tiene(variants.preflight(tarde, hist), "minimo son 4 horas"),
+          "a su hora prevista pasa")
+    # pero si se fuerza media hora despues de la anterior, no
+    forzada = datetime(2026, 9, 1, 19, 30, tzinfo=timezone.utc)
+    check(tiene(variants.preflight(tarde, hist, forzada), "minimo son 4 horas"),
+          "forzada 30 min despues de la anterior se bloquea")
 
     print("\n4. Sin repetir tema ni cita en 90 días")
     hist = [publicada("2026-08-01-tarde", "2026-08-01T19:00:00Z",

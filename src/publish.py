@@ -111,7 +111,10 @@ def upload_asset(path: pathlib.Path) -> str:
 def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> bool:
     print(f"\n▶ {unit['id']} · {unit['pillar']} · {unit['core'].get('subject', '')}")
 
-    problems = variants.preflight(unit, load_history())
+    # La hora real, no la programada: si esto sale fuera de horario —por --id
+    # o por un cron retrasado— la cadencia tiene que medir el espaciado de
+    # verdad, que es lo que ven los filtros de spam.
+    problems = variants.preflight(unit, load_history(), datetime.now(timezone.utc))
     if problems:
         print("  ✗ no pasa las comprobaciones previas:")
         for p in problems:

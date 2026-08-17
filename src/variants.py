@@ -226,9 +226,18 @@ def _mismo_tema(a: str, b: str) -> bool:
     return len(_claves(a) & _claves(b)) >= 2
 
 
-def _problemas_de_historial(unit: dict, historial: list[dict]) -> list[str]:
+def _problemas_de_historial(unit: dict, historial: list[dict],
+                            ahora: datetime | None = None) -> list[str]:
+    """
+    'ahora' es el instante en que se va a publicar de verdad. Importa: la
+    cadencia es una regla ANTI-SPAM, asi que mide el espaciado real, no el
+    planeado. Una pieza programada a las 01:38 puede estar a 5 h de la anterior
+    sobre el papel y salir a 30 minutos si se fuerza por --id o si el cron se
+    retrasa. Al publicar se pasa la hora real; al auditar la cola se deja vacio
+    y se usa el horario previsto, que ahi es lo correcto.
+    """
     problemas: list[str] = []
-    cuando = _instante(unit)
+    cuando = ahora or _instante(unit)
     if not historial:
         return problemas
 
@@ -283,7 +292,8 @@ def _problemas_de_historial(unit: dict, historial: list[dict]) -> list[str]:
     return problemas
 
 
-def preflight(unit: dict, historial: list[dict] | None = None) -> list[str]:
+def preflight(unit: dict, historial: list[dict] | None = None,
+              ahora: datetime | None = None) -> list[str]:
     """
     Comprobaciones que tienen que pasar ANTES de publicar nada.
     Devuelve la lista de problemas; vacía significa que la pieza es publicable.
@@ -332,6 +342,6 @@ def preflight(unit: dict, historial: list[dict] | None = None) -> list[str]:
             except Exception as e:  # noqa: BLE001
                 problems.append(f"{p}: {e}")
 
-    problems += _problemas_de_historial(unit, historial or [])
+    problems += _problemas_de_historial(unit, historial or [], ahora)
 
     return problems
