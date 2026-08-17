@@ -113,7 +113,7 @@ def cuentas(token: str) -> list[dict]:
         f"{GRAPH}/me/accounts",
         params={
             "access_token": token,
-            "fields": "id,name,access_token,instagram_business_account{id,username}",
+            "fields": "id,name,access_token,tasks,instagram_business_account{id,username}",
         },
         timeout=60,
     )
@@ -138,11 +138,60 @@ def poner_secret(nombre: str, valor: str, repo: str) -> None:
     print(f"  ✓ {nombre}")
 
 
+def verificar(token_pagina: str, page_id: str, ig_id: str | None,
+              tasks: list[str] | None) -> int:
+    """
+    Comprueba de SOLO LECTURA que el token de pagina sirve de verdad.
+
+    Existe para separar "las credenciales estan mal" de "la orquestacion esta
+    mal" ANTES de publicar en una pagina real. No escribe nada.
+    """
+    fallos = 0
+
+    r = requests.get(f"{GRAPH}/{page_id}",
+                     params={"fields": "name,fan_count,verification_status",
+                             "access_token": token_pagina}, timeout=60)
+    if r.ok:
+        d = r.json()
+        print(f"  ✓ pagina: {d.get('name')} · {d.get('fan_count', '?')} seguidores "
+              f"· {d.get('verification_status', 'sin dato')}")
+    else:
+        fallos += 1
+        print(f"  ✗ pagina: {r.json().get('error', {}).get('message', r.text[:120])}")
+
+    # 'tasks' dice que permisos REALES hay sobre la pagina. Viene de la llamada
+    # de descubrimiento, que se hace con el token de USUARIO: pedirselo a
+    # /me/accounts con el token de PAGINA falla, y ademas falla en silencio.
+    if tasks is None:
+        fallos += 1
+        print("  ✗ no se pudo leer 'tasks': no se puede confirmar permiso de publicar")
+    else:
+        tiene = "CREATE_CONTENT" in tasks
+        fallos += 0 if tiene else 1
+        print(f"  {'✓' if tiene else '✗'} permiso de publicar (CREATE_CONTENT)")
+        print(f"      permisos sobre la pagina: {', '.join(tasks) or '(ninguno)'}")
+
+    if ig_id:
+        r = requests.get(f"{GRAPH}/{ig_id}",
+                         params={"fields": "username,media_count",
+                                 "access_token": token_pagina}, timeout=60)
+        if r.ok:
+            d = r.json()
+            print(f"  ✓ instagram: @{d.get('username')} · {d.get('media_count', '?')} publicaciones")
+        else:
+            fallos += 1
+            print(f"  ✗ instagram: {r.json().get('error', {}).get('message', r.text[:120])}")
+
+    return fallos
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pagina", help="nombre (o parte) de la página; si falta, las lista")
     ap.add_argument("--repo", default="HectorGlez4/sabiduria-publisher")
     ap.add_argument("--dry-run", action="store_true", help="enseña sin poner nada")
+    ap.add_argument("--verificar", action="store_true",
+                    help="comprueba de solo lectura que el token sirve; no publica")
     a = ap.parse_args()
 
     print("\nCanjeando el token del Explorer, que dura ~1 hora:")
@@ -177,6 +226,15 @@ def main() -> int:
     secrets = {"SDB_PAGE_ID": pag["id"], "SDB_PAGE_TOKEN": pag["access_token"]}
     if ig.get("id"):
         secrets["SDB_IG_USER_ID"] = ig["id"]
+
+    if a.verificar:
+        print("\nVerificando de solo lectura (no se publica nada):")
+        fallos = verificar(pag["access_token"], pag["id"], ig.get("id"), pag.get("tasks"))
+        if fallos:
+            print(f"\n{fallos} comprobacion(es) fallaron. NO publiques todavia.")
+            return 1
+        print("\nLas credenciales sirven. El publicador puede salir.")
+        return 0
 
     if a.dry_run:
         print(f"\nPondría estos secrets en {a.repo} (valores ocultos):")
