@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unidad de contenido canónica — Sabiduría De Bolsillo",
+  "description": "Una investigación verificada produce UNA de estas. De aquí se derivan todas las variantes por plataforma. Nunca se escribe copy por plataforma a mano.",
+  "type": "object",
+  "required": ["id", "slot", "pillar", "core", "card", "sources", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-(manana|tarde|noche)$",
+      "description": "Fecha de publicación + franja. Es también el nombre del archivo y de la imagen."
+    },
+    "publish_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Instante UTC. Aplicar jitter de 5-50 min sobre la hora base de la franja."
+    },
+    "slot": { "enum": ["manana", "tarde", "noche"] },
+    "pillar": {
+      "enum": ["figura", "cita", "civilizacion", "filosofia", "curiosidad", "arte-ciencia"]
+    },
+
+    "core": {
+      "type": "object",
+      "description": "El contenido, sin formato de ninguna red. Esto es lo único que redacta la investigación.",
+      "required": ["hook", "body", "question"],
+      "properties": {
+        "subject": { "type": "string", "description": "Figura, obra o tema. Se usa para el control anti-repetición." },
+        "hook": { "type": "string", "description": "La promesa en una línea. Tiene que sostenerse sola: es lo único que se ve antes del corte." },
+        "body": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Párrafos en orden: el hecho con cifras / el giro / qué significa hoy."
+        },
+        "question": { "type": "string", "description": "Una sola pregunta abierta y breve." },
+        "quote": {
+          "type": "object",
+          "description": "Solo para el pilar 'cita'.",
+          "properties": {
+            "text": { "type": "string" },
+            "author": { "type": "string" },
+            "work": { "type": "string" },
+            "attribution_verified": { "type": "boolean" }
+          }
+        }
+      }
+    },
+
+    "card": {
+      "type": "object",
+      "description": "Parámetros deterministas de la imagen. El PNG no se versiona: se regenera desde aquí.",
+      "required": ["renderer", "variant"],
+      "properties": {
+        "renderer": { "enum": ["quote_card", "text_card"] },
+        "variant": { "enum": ["cream", "gold"], "description": "Alterna contra la ÚLTIMA PUBLICACIÓN REAL, no contra la entrada anterior de la cola." },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string", "description": "No puede repetir literalmente el hook." },
+        "body": { "type": "string", "maxLength": 300 }
+      }
+    },
+
+    "tags": {
+      "type": "object",
+      "description": "Etiquetas por familia. Cada plataforma toma las que le tocan; no se escriben dos veces.",
+      "properties": {
+        "primary": { "type": "string", "default": "#SabiduriaDeBolsillo" },
+        "topic": { "type": "array", "items": { "type": "string" }, "description": "2-4 específicas del tema. Las que van a Facebook." },
+        "extended": { "type": "array", "items": { "type": "string" }, "description": "Las adicionales hasta 8-12 para Instagram." }
+      }
+    },
+
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Verificación. Sin al menos una fuente, la pieza no es publicable.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+
+    "do_not_use": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Datos falsos o disputados que circulan sobre este tema. Se conservan para que nadie los reintroduzca."
+    },
+
+    "targets": {
+      "type": "array",
+      "items": { "enum": ["facebook", "instagram", "threads", "x", "linkedin", "tiktok", "youtube"] },
+      "default": ["facebook", "instagram", "threads"]
+    },
+
+    "status": {
+      "enum": ["draft", "ready", "publishing", "published", "failed", "blocked"],
+      "description": "blocked = la plataforma exige algo que aún no tenemos (p. ej. auditoría de TikTok)."
+    },
+
+    "results": {
+      "type": "object",
+      "description": "Se rellena al publicar. Un id por plataforma.",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "post_id": { "type": "string" },
+          "published_at": { "type": "string", "format": "date-time" },
+          "url": { "type": "string" },
+          "error": { "type": "string" }
+        }
+      }
+    }
+  }
+}

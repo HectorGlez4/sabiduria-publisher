@@ -1,0 +1,69 @@
+name: publicar
+
+# Las tres franjas, en hora de Ciudad de México (UTC-6).
+# Los minutos NO son redondos a propósito: publicar siempre al mismo minuto es
+# un patrón que los filtros de spam reconocen. El jitter fino lo aplica el
+# campo publish_at de cada pieza; esto solo abre la ventana.
+on:
+  schedule:
+    - cron: "12 14 * * *"   # 08:12 CDMX — mañana
+    - cron: "07 19 * * *"   # 13:07 CDMX — tarde
+    - cron: "38 01 * * *"   # 19:38 CDMX — noche (día anterior en CDMX)
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Publicar una pieza concreta (ej. 2026-08-18-tarde). Vacío = la vencida más antigua."
+        required: false
+      dry_run:
+        description: "Generar y validar sin publicar"
+        type: boolean
+        default: false
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false   # nunca cancelar una publicación a medias
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # para hacer commit del resultado
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install --quiet pillow requests
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-lora fonts-poppins || true
+
+      - name: Publicar
+        env:
+          SDB_PAGE_ID:          ${{ secrets.SDB_PAGE_ID }}
+          SDB_PAGE_TOKEN:       ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_IG_USER_ID:       ${{ secrets.SDB_IG_USER_ID }}
+          SDB_THREADS_USER_ID:  ${{ secrets.SDB_THREADS_USER_ID }}
+          SDB_THREADS_TOKEN:    ${{ secrets.SDB_THREADS_TOKEN }}
+          R2_ACCOUNT_ID:        ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID:     ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_PUBLIC_BASE:       ${{ secrets.R2_PUBLIC_BASE }}
+        run: |
+          ARGS="--due"
+          [ -n "${{ inputs.id }}" ] && ARGS="--id ${{ inputs.id }}"
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python3 -m src.publish $ARGS
+
+      - name: Registrar el resultado
+        if: always()
+        run: |
+          git config user.name  "sabiduria-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/
+          git diff --staged --quiet || git commit -m "publicado: $(date -u +%F' '%R) UTC"
+          git push
