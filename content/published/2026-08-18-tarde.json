@@ -74,10 +74,12 @@
     "facebook",
     "instagram"
   ],
-  "status": "ready",
+  "status": "published",
   "results": {
     "facebook": {
-      "error": "HTTP 500 · code=1 subcode=None · Please reduce the amount of data you're asking for, then retry your request"
+      "post_id": "100618132774413_1072237728934220",
+      "url": "https://www.facebook.com/874327782058550/posts/1072237728934220",
+      "published_at": "2026-08-18T20:45:29.452999+00:00"
     },
     "instagram": {
       "post_id": "17970041165942633",
@@ -85,6 +87,5 @@
       "published_at": "2026-08-18T19:47:12.133955+00:00"
     }
   },
-  "attempts": 1,
   "last_attempt": "2026-08-18T19:47:12.134537+00:00"
 }
