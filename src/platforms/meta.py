@@ -54,6 +54,25 @@ def _get(url: str, params: dict, timeout: int = 60) -> dict:
     return r.json()
 
 
+def _permalink(obj_id: str, token: str, campo: str, respaldo: str) -> str:
+    """
+    Pregunta a la API por el enlace real en vez de construirlo.
+
+    Construirlo era adivinar, y se adivinaba mal: el permalink de Instagram usa
+    un codigo corto, no el id numerico del medio, asi que la URL guardada daba
+    "Sorry, this page isn't available" aunque la publicacion estuviera viva.
+
+    Nunca levanta: en este punto la publicacion YA salio, y un enlace es un
+    dato de registro. Perder el enlace es molesto; perder la publicacion por no
+    poder leerlo seria absurdo.
+    """
+    try:
+        d = _get(f"{GRAPH}/{obj_id}", {"fields": campo, "access_token": token})
+        return d.get(campo) or respaldo
+    except Exception:  # noqa: BLE001
+        return respaldo
+
+
 # ─────────────────────────── Facebook ───────────────────────────
 
 def publish_facebook(image_url: str, caption: str) -> dict:
@@ -68,7 +87,11 @@ def publish_facebook(image_url: str, caption: str) -> dict:
         {"url": image_url, "caption": caption, "access_token": token},
     )
     post_id = out.get("post_id") or out.get("id")
-    return {"post_id": post_id, "url": f"https://www.facebook.com/{post_id}"}
+    return {
+        "post_id": post_id,
+        "url": _permalink(post_id, token, "permalink_url",
+                          f"https://www.facebook.com/{post_id}"),
+    }
 
 
 # ─────────────────────────── Instagram ───────────────────────────
@@ -124,7 +147,11 @@ def publish_instagram(image_url: str, caption: str) -> dict:
     )
     _wait_for_container(container["id"], token)
     out = _publish_with_retry(ig_id, container["id"], token)
-    return {"post_id": out["id"], "url": f"https://www.instagram.com/p/{out['id']}"}
+    return {
+        "post_id": out["id"],
+        "url": _permalink(out["id"], token, "permalink",
+                          f"https://www.instagram.com/p/{out['id']}"),
+    }
 
 
 # ─────────────────────────── Threads ───────────────────────────

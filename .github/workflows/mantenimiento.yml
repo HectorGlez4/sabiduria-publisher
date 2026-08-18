@@ -1,0 +1,50 @@
+name: mantenimiento
+
+# Tareas puntuales que necesitan las credenciales, y por eso no se pueden
+# ejecutar desde un portátil sin tener el token delante. Solo a mano.
+on:
+  workflow_dispatch:
+    inputs:
+      tarea:
+        description: "Qué ejecutar"
+        type: choice
+        required: true
+        options:
+          - corregir-enlaces
+      dry_run:
+        description: "Enseñar sin escribir"
+        type: boolean
+        default: true
+
+jobs:
+  mantenimiento:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r requirements.txt
+
+      - name: Ejecutar
+        env:
+          SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
+        run: |
+          ARGS=""
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="--dry-run"
+          case "${{ inputs.tarea }}" in
+            corregir-enlaces) python3 scripts/corregir_enlaces.py $ARGS ;;
+            *) echo "tarea desconocida"; exit 1 ;;
+          esac
+
+      - name: Registrar el resultado
+        if: ${{ inputs.dry_run == false }}
+        run: |
+          git config user.name  "sabiduria-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/
+          git diff --staged --quiet || git commit -m "mantenimiento: ${{ inputs.tarea }}"
+          git push

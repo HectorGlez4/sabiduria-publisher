@@ -58,6 +58,12 @@ class Handler(BaseHTTPRequestHandler):
             self.wfile.write(IMAGE_BYTES)
             return
 
+        # permalink real, que no se puede construir desde el id
+        if path == "/IG_POST_1":
+            return self._json(200, {"permalink": "https://www.instagram.com/p/ABC123xyz/"})
+        if path == "/PAGE_POST_1":
+            return self._json(200, {"permalink_url": "https://www.facebook.com/pagina/posts/1"})
+
         # polling del contenedor
         if re.fullmatch(r"/container_\d+", path):
             STATE["polls"] += 1

@@ -136,6 +136,12 @@ def main() -> int:
     check(r.get("facebook", {}).get("post_id") == "PAGE_POST_1", "Facebook devolvió post_id")
     check(r.get("instagram", {}).get("post_id") == "IG_POST_1", "Instagram devolvió post_id")
     check(r.get("threads", {}).get("post_id") == "TH_POST_1", "Threads devolvió post_id")
+    # El enlace se PIDE a la API. Construirlo desde el id daba una URL rota en
+    # Instagram, que usa un código corto y no el id numérico del medio.
+    check(r.get("instagram", {}).get("url") == "https://www.instagram.com/p/ABC123xyz/",
+          "Instagram guarda el permalink real, no uno construido")
+    check(r.get("facebook", {}).get("url") == "https://www.facebook.com/pagina/posts/1",
+          "Facebook guarda el permalink real")
 
     print("\n4. Comportamiento difícil de acertar a ciegas")
     check(fake_graph.STATE["polls"] >= 2, f"esperó el procesamiento del contenedor ({fake_graph.STATE['polls']} sondeos)")
