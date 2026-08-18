@@ -1,14 +1,25 @@
 name: publicar
 
-# Las tres franjas, en hora de Ciudad de México (UTC-6).
-# Los minutos NO son redondos a propósito: publicar siempre al mismo minuto es
-# un patrón que los filtros de spam reconocen. El jitter fino lo aplica el
-# campo publish_at de cada pieza; esto solo abre la ventana.
+# Cada hora, y son las REGLAS las que deciden qué sale.
+#
+# Antes había tres disparos, uno por franja, a las 14:12 / 19:07 / 01:38 UTC.
+# No funcionaba: el jitter de 5-50 minutos empuja las piezas más allá de su
+# propio cron, y 37 de las 40 en cola tenían la hora DESPUÉS del disparo que
+# debía recogerlas. Cada una esperaba al siguiente y salía una franja tarde, en
+# cascada. La noche del 17 de agosto no se notó porque GitHub retrasó el cron
+# una hora y la demora tapó el hueco; ese retraso va de minutos a una hora sin
+# aviso, así que era una moneda al aire cada día.
+#
+# Con ejecución horaria, publish_at marca el "no antes de" y el control real lo
+# llevan las reglas de cadencia de variants.py: máximo 3 al día en hora de CDMX
+# y mínimo 4 horas entre publicaciones. Se autocorrige: si una ejecución falla o
+# se retrasa, la siguiente entra en una hora, no en cinco.
+#
+# El minuto 23 no es redondo a propósito, y la demora natural de Actions añade
+# la variación que antes buscaba el jitter.
 on:
   schedule:
-    - cron: "12 14 * * *"   # 08:12 CDMX — mañana
-    - cron: "07 19 * * *"   # 13:07 CDMX — tarde
-    - cron: "38 01 * * *"   # 19:38 CDMX — noche (día anterior en CDMX)
+    - cron: "23 * * * *"
   workflow_dispatch:
     inputs:
       id:
