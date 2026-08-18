@@ -75,5 +75,16 @@
     "instagram"
   ],
   "status": "ready",
-  "results": {}
+  "results": {
+    "facebook": {
+      "error": "HTTP 500 · code=1 subcode=None · Please reduce the amount of data you're asking for, then retry your request"
+    },
+    "instagram": {
+      "post_id": "17970041165942633",
+      "url": "https://www.instagram.com/p/DcMZciSj6c8/",
+      "published_at": "2026-08-18T19:47:12.133955+00:00"
+    }
+  },
+  "attempts": 1,
+  "last_attempt": "2026-08-18T19:47:12.134537+00:00"
 }
