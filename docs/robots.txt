@@ -1,0 +1,13 @@
+# Sin restricciones. Existe por Meta: su rastreador devolvía 403 al leer la
+# URL de eliminación de datos y su propio aviso apunta a robots.txt. Sin
+# fichero, GitHub Pages responde 404 a /robots.txt, y hay rastreadores que
+# tratan ese 404 como "no puedo comprobarlo, no entro".
+User-agent: *
+Allow: /
+
+# El rastreador de Meta, nombrado explícitamente por si el comodín no basta.
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: facebookcatalog
+Allow: /
