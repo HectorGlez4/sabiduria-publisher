@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Sabiduría de Bolsillo</title>
+<meta name="description" content="Política de privacidad de SabiduriaBolsilloPost, la herramienta de publicación de Sabiduría de Bolsillo.">
+<link rel="icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="marca">
+  <img class="escudo" src="icono.png" alt="">
+  <h1>Política de privacidad</h1>
+  <p>SabiduriaBolsilloPost</p>
+</header>
+
+<div class="envoltorio">
+
+  <p class="tenue">Última actualización: 24 de agosto de 2026</p>
+
+  <h2>Qué es esta aplicación</h2>
+
+  <p><strong>SabiduriaBolsilloPost</strong> es una herramienta de publicación
+  automática de uso propio. Su única función es tomar contenido escrito y
+  revisado de antemano por su operador y publicarlo en las cuentas del propio
+  operador:</p>
+
+  <ul>
+    <li>la página de Facebook <strong>Sabiduría de Bolsillo</strong></li>
+    <li>la cuenta de Instagram Business <strong>@sabiduriabolsillo</strong></li>
+    <li>el perfil de Threads de la misma marca</li>
+  </ul>
+
+  <p>No es un producto ofrecido a terceros. No tiene registro de usuarios, ni
+  formularios, ni inicio de sesión público. Nadie más que el operador puede
+  usarla.</p>
+
+  <h2>Qué datos se tratan</h2>
+
+  <p><strong>De terceros: ninguno.</strong> La aplicación no pide, no recibe y no
+  almacena datos personales de ninguna persona que no sea su operador. No lee
+  perfiles, no descarga listas de seguidores y no guarda comentarios ni
+  mensajes.</p>
+
+  <p><strong>Del operador</strong>, y solo lo imprescindible para publicar:</p>
+
+  <div class="envoltorio-tabla">
+  <table>
+    <thead>
+      <tr><th>Dato</th><th>Para qué</th><th>Dónde vive</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Identificador de la página de Facebook</td><td>saber dónde publicar</td><td>GitHub Secrets, cifrado</td></tr>
+      <tr><td>Token de acceso de página</td><td>autorizar la publicación</td><td>GitHub Secrets, cifrado</td></tr>
+      <tr><td>Identificador de la cuenta de Instagram Business</td><td>saber dónde publicar</td><td>GitHub Secrets, cifrado</td></tr>
+      <tr><td>Identificador y token de Threads</td><td>saber dónde publicar</td><td>GitHub Secrets, cifrado</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Esas credenciales se guardan como <em>secrets</em> cifrados de GitHub
+  Actions. No aparecen en el código, no se escriben en disco, no se registran en
+  los logs y no se transmiten a ningún destino que no sea la propia API de
+  Meta.</p>
+
+  <h2>Qué se publica</h2>
+
+  <p>El texto y las imágenes de cada publicación se generan a partir de fichas de
+  contenido versionadas en un repositorio público de GitHub. Ese contenido es
+  material editorial —citas, historia, divulgación— redactado y verificado antes
+  de salir. No contiene datos personales de terceros.</p>
+
+  <h2>Con quién se comparte</h2>
+
+  <p>Con nadie. Los únicos destinatarios de cualquier dato son:</p>
+
+  <ul>
+    <li><strong>Meta Platforms</strong>, a través de la Graph API, para efectuar la publicación.</li>
+    <li><strong>GitHub</strong>, como plataforma donde se ejecuta el proceso y se guardan los <em>secrets</em>.</li>
+  </ul>
+
+  <p>No hay analítica de terceros, ni publicidad, ni venta o cesión de datos.</p>
+
+  <h2>Cuánto tiempo se conserva</h2>
+
+  <p>Las credenciales se conservan mientras la herramienta esté en uso, y se
+  revocan desde la configuración de Meta cuando deja de usarse. El registro de lo
+  publicado —identificador y enlace de cada publicación— se conserva en el
+  repositorio para evitar publicar dos veces lo mismo.</p>
+
+  <h2>Eliminación de datos</h2>
+
+  <p>Las instrucciones completas están en
+  <a href="eliminacion-de-datos.html">Eliminación de datos</a>.</p>
+
+  <h2>Contacto</h2>
+
+  <p><a href="mailto:hector.gonzalez@work-it.fr">hector.gonzalez@work-it.fr</a></p>
+
+  <nav class="documentos">
+    <a href="index.html">Inicio</a>
+    <a href="eliminacion-de-datos.html">Eliminación de datos</a>
+    <a href="terminos.html">Condiciones del servicio</a>
+  </nav>
+
+  <footer>
+    Sabiduría de Bolsillo · <a href="mailto:hector.gonzalez@work-it.fr">hector.gonzalez@work-it.fr</a>
+  </footer>
+
+</div>
+</body>
+</html>

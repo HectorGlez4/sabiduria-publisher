@@ -11,6 +11,7 @@ on:
         required: true
         options:
           - corregir-enlaces
+          - diagnostico-meta
       dry_run:
         description: "Enseñar sin escribir"
         type: boolean
@@ -32,11 +33,14 @@ jobs:
       - name: Ejecutar
         env:
           SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_PAGE_ID:    ${{ secrets.SDB_PAGE_ID }}
         run: |
           ARGS=""
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="--dry-run"
           case "${{ inputs.tarea }}" in
             corregir-enlaces) python3 scripts/corregir_enlaces.py $ARGS ;;
+            # Solo lee. No publica nada y no imprime ningún token.
+            diagnostico-meta) python3 scripts/diagnostico_meta.py ;;
             *) echo "tarea desconocida"; exit 1 ;;
           esac
 

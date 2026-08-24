@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminación de datos · Sabiduría de Bolsillo</title>
+<meta name="description" content="Instrucciones explícitas para eliminar cualquier dato tratado por SabiduriaBolsilloPost.">
+<link rel="icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="marca">
+  <img class="escudo" src="icono.png" alt="">
+  <h1>Eliminación de datos</h1>
+  <p>SabiduriaBolsilloPost</p>
+</header>
+
+<div class="envoltorio">
+
+  <p class="tenue">Última actualización: 24 de agosto de 2026</p>
+
+  <p><strong>SabiduriaBolsilloPost no recopila datos personales de
+  terceros.</strong> Es una herramienta de publicación de uso propio: publica en
+  las cuentas de su propio operador y no tiene usuarios además de él. Ver la
+  <a href="privacidad.html">política de privacidad</a>.</p>
+
+  <p>Por eso no existe ningún dato de tercero que eliminar. Aun así, aquí están
+  las instrucciones explícitas para borrar todo lo que la aplicación llega a
+  tocar.</p>
+
+  <h2>Si eres el operador de la aplicación</h2>
+
+  <div class="tarjeta">
+    <h3>1 · Revocar el acceso de la aplicación</h3>
+    <p>En Facebook: <em>Configuración y privacidad → Configuración → Aplicaciones
+    y sitios web → SabiduriaBolsilloPost → Eliminar</em>.</p>
+    <p>Esto invalida de inmediato todos los tokens emitidos para la aplicación. A
+    partir de ese momento no puede publicar nada.</p>
+  </div>
+
+  <div class="tarjeta">
+    <h3>2 · Borrar las credenciales guardadas</h3>
+    <p>En el repositorio de GitHub: <em>Settings → Secrets and variables →
+    Actions</em>, y eliminar <code>SDB_PAGE_ID</code>,
+    <code>SDB_PAGE_TOKEN</code>, <code>SDB_IG_USER_ID</code>,
+    <code>SDB_THREADS_USER_ID</code> y <code>SDB_THREADS_TOKEN</code>.</p>
+  </div>
+
+  <div class="tarjeta">
+    <h3>3 · Borrar el registro de publicaciones</h3>
+    <p>Los identificadores y enlaces de lo ya publicado están en
+    <code>content/published/</code> del repositorio. Basta con borrar ese
+    directorio y confirmar el cambio.</p>
+  </div>
+
+  <div class="tarjeta">
+    <h3>4 · Borrar las publicaciones ya salidas</h3>
+    <p>Las publicaciones que ya están en Facebook, Instagram o Threads pertenecen
+    a esas cuentas, no a la aplicación. Se borran desde cada red, como cualquier
+    otra publicación.</p>
+  </div>
+
+  <h2>Si crees que tienes datos en esta aplicación</h2>
+
+  <p>No los tienes: la aplicación no lee ni guarda información de personas ajenas
+  a su operador. Si aun así quieres comprobarlo o pedir una eliminación, escribe
+  a <a href="mailto:hector.gonzalez@work-it.fr">hector.gonzalez@work-it.fr</a> y
+  se responderá en un plazo máximo de 30 días.</p>
+
+  <nav class="documentos">
+    <a href="index.html">Inicio</a>
+    <a href="privacidad.html">Política de privacidad</a>
+    <a href="terminos.html">Condiciones del servicio</a>
+  </nav>
+
+  <footer>
+    Sabiduría de Bolsillo · <a href="mailto:hector.gonzalez@work-it.fr">hector.gonzalez@work-it.fr</a>
+  </footer>
+
+</div>
+</body>
+</html>
