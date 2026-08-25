@@ -54,9 +54,15 @@ FEED_URL = "https://sabiduria.work-it.fr/feed.xml"
 REPO = "HectorGlez4/sabiduria-publisher"
 RAMA = "main"
 
-# Cuántas piezas se ofrecen. dlvr.it y compañía solo miran las nuevas, así que
-# esto es solo la ventana de recuperación si el servicio estuvo caído un día.
-MAXIMO = 25
+# Cuántas piezas se ofrecen. Normalmente es la ventana de recuperación por si el
+# servicio de turno estuvo caído un día: solo mira las nuevas.
+#
+# TEMPORALMENTE EN 1 para encender el Zap sin riesgo. Un feed con las 22 piezas
+# históricas puede provocar que el servicio las publique TODAS de golpe al
+# activarse, y son 28.000 seguidores mirando. Con una sola pieza, lo peor que
+# puede pasar es una publicación de más. Subir a 25 en cuanto se confirme que
+# el Zap publica bien.
+MAXIMO = 1
 
 
 def _url_de_tarjeta(pieza_id: str) -> str:
