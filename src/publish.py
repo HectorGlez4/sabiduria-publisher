@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
 
-from src import hosting, variants  # noqa: E402
+from src import feed, hosting, variants  # noqa: E402
 from src.platforms import meta  # noqa: E402
 from src.platforms._pending import PENDING  # noqa: E402
 
@@ -35,6 +35,22 @@ ASSETS = ROOT / "assets"
 # ser pasajero; tres seguidos ya no, y entonces se aparta para que no bloquee
 # la cola indefinidamente.
 MAX_INTENTOS = 3
+
+# Plataformas que ya NO se publican por API porque se sirven por el feed RSS.
+#
+# No es lo mismo que _pending.PENDING: aquello levanta PlatformBlocked porque la
+# plataforma no puede publicar de ninguna manera. Facebook sí publica —lo hace
+# dlvr.it leyendo docs/feed.xml— así que la pieza no debe fallar ni reintentarse;
+# solo se salta la llamada a Meta.
+#
+# El motivo: la app está en modo desarrollo, y Meta solo enseña a los usuarios con
+# rol en la app lo que genera una app en ese modo. Las 22 publicaciones que salieron
+# por API entre el 17 y el 25 de agosto existen, son públicas para el operador y
+# tienen alcance exactamente cero. Ver src/feed.py.
+#
+# Para volver a la API: vaciar este conjunto. Nada más. `targets` sigue diciendo
+# la verdad —la pieza va dirigida a Facebook— y por eso el feed sabe cuáles coger.
+POR_FEED = {"facebook"}
 
 
 def load(path: pathlib.Path) -> dict:
@@ -204,8 +220,21 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
     ok = True
 
     for platform in unit.get("targets", []):
-        if unit["results"].get(platform, {}).get("post_id"):
+        ya = unit["results"].get(platform, {})
+        if ya.get("post_id") or ya.get("via"):
             print(f"  · {platform}: ya publicado, se salta")
+            continue
+        if platform in POR_FEED:
+            # Se deja constancia de que la pieza SÍ va a Facebook y por dónde. Sin
+            # esta marca, el registro diría que no se publicó, que es falso, y la
+            # idempotencia de arriba no tendría de qué agarrarse.
+            unit["results"][platform] = {
+                "via": "rss",
+                "feed": "https://sabiduria.work-it.fr/feed.xml",
+                "published_at": datetime.now(timezone.utc).isoformat(),
+            }
+            print(f"  · {platform}: se sirve por el feed RSS, no por API")
+            save(unit, path)
             continue
         if platform in PENDING:
             PENDING[platform]()  # levanta PlatformBlocked con el motivo exacto
@@ -249,6 +278,11 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
         PUBLISHED.mkdir(parents=True, exist_ok=True)
         path.rename(PUBLISHED / path.name)
         print(f"  ✓ movida a content/published/{path.name}")
+        # El feed se regenera DESPUÉS de mover la pieza, porque feed.py lee
+        # content/published/. Regenerarlo antes dejaría fuera justo la pieza que
+        # se acaba de publicar, que es la única que le importa a dlvr.it.
+        ruta_feed = feed.escribir()
+        print(f"  ✓ feed: {ruta_feed.relative_to(ROOT)}")
         return "published"
     return "bloqueada" if unit["status"] == "blocked" else "fallida"
 

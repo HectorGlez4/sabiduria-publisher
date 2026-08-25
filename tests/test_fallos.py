@@ -46,7 +46,10 @@ def pieza(pid: str, cuando: str, **kw) -> dict:
         "tags": {"primary": "#SabiduriaDeBolsillo", "topic": kw.get("topic", ["#Uno"]),
                  "extended": []},
         "sources": [{"claim": "c", "source": "s"}],
-        "targets": ["facebook"], "status": "ready", "results": {},
+        # Facebook por defecto porque es lo que ejercita la mayoría de casos, pero
+        # configurable: desde que Facebook se sirve por RSS, los casos que necesitan
+        # un fallo REAL de plataforma tienen que apuntar a una que llame a la API.
+        "targets": kw.get("targets", ["facebook"]), "status": "ready", "results": {},
     }
     return u
 
@@ -109,7 +112,7 @@ def main() -> int:
     print("\n3. Un fallo de plataforma se reintenta y no se entierra")
     tmp = entorno()
     import fake_graph_shim  # noqa: F401
-    p = pieza("2026-01-01-tarde", "2026-01-01T19:00:00Z")
+    p = pieza("2026-01-01-tarde", "2026-01-01T19:00:00Z", targets=["instagram"])
     ruta = publish.QUEUE / "p.json"
     ruta.write_text(json.dumps(p), encoding="utf-8")
     publish.upload_asset = lambda x: "https://example.invalid/x.png"
@@ -119,7 +122,10 @@ def main() -> int:
 
     from src.platforms import meta
     original = dict(meta.PUBLISHERS)
-    meta.PUBLISHERS["facebook"] = revienta
+    # Instagram y no Facebook: Facebook ya no pasa por meta.PUBLISHERS, se sirve
+    # por el feed RSS. Lo que este caso comprueba —que un fallo de plataforma se
+    # reintenta en vez de enterrar la pieza— necesita una que sí llame a la API.
+    meta.PUBLISHERS["instagram"] = revienta
     try:
         for intento in (1, 2):
             publish.publish_unit(json.loads(ruta.read_text(encoding="utf-8")), ruta)

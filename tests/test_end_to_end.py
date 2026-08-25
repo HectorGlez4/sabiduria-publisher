@@ -133,15 +133,19 @@ def main() -> int:
 
     print("\n3. Resultados por plataforma")
     r = unit.get("results", {})
-    check(r.get("facebook", {}).get("post_id") == "PAGE_POST_1", "Facebook devolvió post_id")
+    # Facebook ya no sale por API: se sirve por el feed RSS (ver POR_FEED en
+    # publish.py). El registro lo dice explícitamente en vez de quedar vacío,
+    # que es lo que sostiene la idempotencia de más abajo.
+    check(r.get("facebook", {}).get("via") == "rss", "Facebook queda marcado como servido por RSS")
+    check("post_id" not in r.get("facebook", {}), "Facebook no inventa un post_id de API")
     check(r.get("instagram", {}).get("post_id") == "IG_POST_1", "Instagram devolvió post_id")
     check(r.get("threads", {}).get("post_id") == "TH_POST_1", "Threads devolvió post_id")
     # El enlace se PIDE a la API. Construirlo desde el id daba una URL rota en
     # Instagram, que usa un código corto y no el id numérico del medio.
     check(r.get("instagram", {}).get("url") == "https://www.instagram.com/p/ABC123xyz/",
           "Instagram guarda el permalink real, no uno construido")
-    check(r.get("facebook", {}).get("url") == "https://www.facebook.com/pagina/posts/1",
-          "Facebook guarda el permalink real")
+    check(r.get("facebook", {}).get("feed", "").endswith("/feed.xml"),
+          "Facebook guarda de qué feed se sirve")
 
     print("\n4. Comportamiento difícil de acertar a ciegas")
     check(fake_graph.STATE["polls"] >= 2, f"esperó el procesamiento del contenedor ({fake_graph.STATE['polls']} sondeos)")
@@ -157,9 +161,13 @@ def main() -> int:
     unit2 = json.loads(moved.read_text(encoding="utf-8"))
     before = fake_graph.STATE["publish_attempts"]
     for p in unit2["targets"]:
-        already = bool(unit2["results"].get(p, {}).get("post_id"))
+        registro = unit2["results"].get(p, {})
+        # 'post_id' para lo que sale por API, 'via' para lo que se sirve por el
+        # feed. Las dos marcas valen: lo que se comprueba es que la pieza no se
+        # pueda reenviar, no por qué camino salió.
+        already = bool(registro.get("post_id") or registro.get("via"))
         if not already:
-            FAILURES.append(f"{p} sin post_id registrado")
+            FAILURES.append(f"{p} sin marca de publicación registrada")
     check(fake_graph.STATE["publish_attempts"] == before, "una pieza publicada no se vuelve a enviar")
 
     # limpieza: todo vivio en un directorio temporal, no se toca nada real
