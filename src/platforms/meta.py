@@ -94,6 +94,56 @@ def publish_facebook(image_url: str, caption: str) -> dict:
     }
 
 
+# ─────────────────────────── Facebook Historias ───────────────────────────
+
+def publish_story(image_url: str, _caption: str = "") -> dict:
+    """
+    Dos pasos: subir la foto SIN publicar, y luego convertirla en historia.
+
+      POST /{page-id}/photos        published=false   → photo_id
+      POST /{page-id}/photo_stories photo_id=…        → {success, post_id}
+
+    El primer paso es el mismo endpoint que usa `publish_facebook`, con una
+    diferencia que lo cambia todo: `published=false` deja la foto subida y sin
+    aparecer en ninguna parte. Sin ese parámetro tendrías la misma imagen dos
+    veces —una en el feed y otra como historia—, que es justo lo que no se quiere.
+
+    Una historia no lleva pie: el texto va dentro de la imagen. Por eso el
+    segundo argumento se ignora y está ahí solo para que la firma encaje con la
+    de los demás adaptadores y el bucle de publish.py no tenga que distinguir.
+
+    Las historias caducan a las 24 horas. No se registra permalink porque no hay
+    nada estable a lo que enlazar.
+    """
+    page_id = os.environ["SDB_PAGE_ID"]
+    token = os.environ["SDB_PAGE_TOKEN"]
+
+    foto = _post(
+        f"{GRAPH}/{page_id}/photos",
+        {"url": image_url, "published": "false", "access_token": token},
+    )
+    photo_id = foto.get("id")
+    if not photo_id:
+        raise MetaError(f"la foto de la historia no devolvió id: {foto}")
+
+    out = _post(
+        f"{GRAPH}/{page_id}/photo_stories",
+        {"photo_id": photo_id, "access_token": token},
+    )
+    if not out.get("success", True):
+        raise MetaError(f"la historia no se publicó: {out}")
+
+    return {
+        "post_id": str(out.get("post_id") or photo_id),
+        "photo_id": photo_id,
+        # Las historias no tienen permalink estable: duran 24 h y luego no hay
+        # nada a lo que apuntar. Se deja constancia en vez de inventar una URL
+        # que mañana daría "esta página no está disponible".
+        "url": None,
+        "caduca": "24h",
+    }
+
+
 # ─────────────────────────── Facebook Reels ───────────────────────────
 
 # Los reels NO pasan por graph.facebook.com para el binario: hay un host
@@ -308,6 +358,9 @@ PUBLISHERS = {
     # hacer. Se mete una pieza al día como reel y en dos semanas se compara el
     # alcance contra las fotos, con datos y no con opiniones.
     "facebook_reel": publish_reel,
+    # Una historia NO sustituye a la publicación: es otra superficie y caduca en
+    # 24 h, así que se suma a los targets en vez de reemplazar nada.
+    "facebook_story": publish_story,
     "instagram": publish_instagram,
     "threads": publish_threads,
 }

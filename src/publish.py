@@ -154,6 +154,38 @@ def render_reel(unit: dict) -> pathlib.Path:
     return out
 
 
+def render_story(unit: dict) -> pathlib.Path:
+    """
+    El PNG vertical de la historia: el último fotograma del reel, quieto.
+
+    Mismos huecos que el reel, y por el mismo motivo — en una cita el título es
+    el autor y el cuerpo es la cita.
+    """
+    card = unit["card"]
+    out = ASSETS / f"{unit['id']}-historia.png"
+    script = ROOT / "src" / "render" / "historia.py"
+
+    cmd = [sys.executable, str(script), "--variant", card["variant"], "--out", str(out)]
+    if card["renderer"] == "quote_card":
+        q = unit["core"]["quote"]
+        autor = f"{q['author']}, {q['work']}" if q.get("work") else q["author"]
+        cmd += ["--title", autor, "--body", q["text"]]
+    else:
+        cmd += ["--title", card["title"], "--body", card["body"]]
+        if card.get("subtitle"):
+            cmd += ["--subtitle", card["subtitle"]]
+    if unit["core"].get("question"):
+        cmd += ["--question", unit["core"]["question"]]
+
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        detalle = (r.stderr or r.stdout or "(sin salida)").strip()
+        raise RuntimeError(f"falló el renderer de la historia (código {r.returncode}):\n{detalle}")
+    if not out.exists():
+        raise RuntimeError(f"la historia no se generó: {out}")
+    return out
+
+
 def upload_asset(path: pathlib.Path) -> str:
     """
     Publica la imagen y devuelve su URL HTTPS pública.
@@ -248,10 +280,17 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
     # El reel no tiene derivación propia en variants.py, así que no sale del
     # bucle de arriba. Sin esta línea, un ensayo de una pieza de mañana no
     # enseñaba NADA de Facebook y parecía que no se iba a publicar allí.
+    # Ni el reel ni la historia tienen derivación propia en variants.py, así que
+    # no salen del bucle de arriba. Sin estas líneas, un ensayo no enseñaba NADA
+    # de esas superficies y parecía que la pieza no se iba a publicar allí — que
+    # es exactamente el síntoma con el que se destapó el KeyError del reel.
     if "facebook_reel" in unit.get("targets", []):
         v = variants.build(unit, "facebook")
         print(f"      {'reel (fb)':11s} {len(v['text']):5d} car.  "
               f"{v['text'].split(chr(10))[0][:70]}…")
+    if "facebook_story" in unit.get("targets", []):
+        print(f"      {'historia':11s} {'—':>5s} car.  "
+              f"sin pie: el texto va dentro de la imagen, 1080x1920, caduca en 24 h")
 
     if dry_run:
         print("  · dry-run: no se publica nada")
@@ -291,6 +330,11 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
                 # mañana 'facebook' ya no está —lo sustituyó 'facebook_reel'—,
                 # así que texts["facebook"] daba KeyError. Lo cazó el --dry-run.
                 res = fn(str(render_reel(unit)), variants.build(unit, "facebook")["text"])
+            elif platform == "facebook_story":
+                # La historia SÍ va por URL, como la foto: Meta la descarga. Pero
+                # es una imagen distinta —9:16 en vez de 4:5— así que se sube
+                # aparte y no se reutiliza `image_url`.
+                res = fn(upload_asset(render_story(unit)), "")
             else:
                 res = fn(image_url, texts[platform]["text"])
             res["published_at"] = datetime.now(timezone.utc).isoformat()
