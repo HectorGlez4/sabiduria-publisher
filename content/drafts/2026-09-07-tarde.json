@@ -1,0 +1,77 @@
+{
+  "id": "2026-09-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "La frase más citada de García Márquez sobre la memoria no está en ningún capítulo suyo: es lo primero que se lee al abrir sus memorias, y es una advertencia.",
+    "body": [
+      "Vivir para contarla se publicó el 8 de octubre de 2002 en la Ciudad de México. Es el primero de tres volúmenes de memorias previstos; los otros dos nunca se publicaron. El libro abarca desde su nacimiento, en 1927, hasta 1950. La frase va sola, sin firma, como epígrafe, antes de que empiece el relato. Y justo después llega la primera línea del capítulo uno: \"Mi madre me pidió que la acompañara a vender la casa\".",
+      "Puesta ahí, la frase deja de ser un adorno. Es una advertencia sobre el método: lo que sigue no es un expediente, es una memoria. La parte que casi nunca se cita es la última, y es la que más pesa: no dice solo qué se recuerda, dice cómo se recuerda para contarlo. El viaje que abre el libro tiene fecha. El 18 de febrero de 1950 acompañó a su madre a Aracataca a vender la casa de sus abuelos. Fueron dos días. Él llegó a decir que fue la decisión más importante de su vida de escritor: de esa casa salieron el taller de los pescaditos de oro, el corredor de las begonias y Macondo entero.",
+      "El final tiene algo de ironía. A ningún autor en español le atribuyen tantas páginas que no escribió. En el año 2000, mientras él estaba enfermo, circuló por correo electrónico una despedida titulada \"La marioneta\" firmada con su nombre; la había escrito el ventrílocuo mexicano Johnny Welch para su muñeco. García Márquez salió a decir que estaba vivo y que lo único que podía matarlo era que dijeran que él había escrito algo tan cursi. Murió el 17 de abril de 2014. De él ya no queda la vida que vivió: queda la que otros recuerdan, y cómo la cuentan."
+    ],
+    "question": "¿Qué recuerdas de una manera que ya no coincide con lo que pasó?",
+    "subject": "Gabriel García Márquez",
+    "quote": {
+      "text": "La vida no es la que uno vivió, sino la que uno recuerda y cómo la recuerda para contarla.",
+      "author": "Gabriel García Márquez",
+      "work": "Vivir para contarla (2002), epígrafe",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "El texto exacto del epígrafe, cotejado sobre el cuerpo del libro: \"La vida no es la que uno vivió, sino la que uno recuerda y cómo la recuerda para contarla\". Aparece solo y SIN firma ni atribución al comienzo del volumen, antes del capítulo uno, cuya primera frase es \"Mi madre me pidió que la acompañara a vender la casa\".",
+      "source": "Texto íntegro de Vivir para contarla (edición digital en PDF del acervo de mercaba.org), páginas preliminares y arranque del capítulo 1",
+      "url": "https://www.mercaba.org/SANLUIS/ALiteratura/Literatura%20contempor%C3%A1nea/Garc%C3%ADa%20M%C3%A1rquez,%20Gabriel/Gabriel%20Garc%C3%ADa%20M%C3%A1rquez%20-%20Vivir%20para%20contarla.pdf"
+    },
+    {
+      "claim": "Confirmación institucional de la autoría y de la función del epígrafe: García Márquez usó esa frase como epígrafe de sus memorias para advertir al lector de que la realidad del libro está recreada con herramientas literarias y de que algunas anécdotas pueden ser invenciones de la memoria. La misma ficha data la publicación el 8 de octubre de 2002 en la Ciudad de México y recoge que en 1996, en la Universidad de Guadalajara, leyó en público el primer capítulo bajo el título provisional \"Vivir para contarlo\".",
+      "source": "Centro Gabo (Fundación Gabo), \"Las memorias de Gabriel García Márquez, leídas por él mismo\"",
+      "url": "https://centrogabo.org/gabo/contemos-gabo/las-memorias-de-gabriel-garcia-marquez-leidas-por-el-mismo"
+    },
+    {
+      "claim": "Vivir para contarla es el primero de tres volúmenes de relatos autobiográficos y abarca el periodo comprendido entre 1927 y 1950; se centra en la infancia, la familia, la educación y los primeros trabajos del autor como periodista.",
+      "source": "Wikipedia en español, artículo \"Vivir para contarla\"",
+      "url": "https://es.wikipedia.org/wiki/Vivir_para_contarla"
+    },
+    {
+      "claim": "El viaje que abre el libro está fechado el 18 de febrero de 1950: García Márquez, de 22 años, acompañó a su madre a Aracataca a vender la casa de los abuelos. La visita duró dos días y él la consideró la decisión más importante de su carrera de escritor. De esa casa proceden elementos concretos de Cien años de soledad: el taller de pescaditos de oro del abuelo y el corredor de las begonias.",
+      "source": "Centro Gabo (Fundación Gabo), \"La casa de Gabriel García Márquez en Aracataca\"",
+      "url": "https://centrogabo.org/la-casa-de-gabriel-garcia-marquez-en-aracataca"
+    },
+    {
+      "claim": "El poema \"La marioneta\" no es de García Márquez: lo escribió el ventrílocuo mexicano Johnny Welch para su muñeco El Mofles, y circuló en 2000 por cadenas de correo electrónico y presentaciones atribuido al escritor, mientras él estaba enfermo (linfoma diagnosticado en 1999). García Márquez respondió en una rueda de prensa: \"Quiero decirles que estoy vivo y que lo único que me podría matar es que digan que yo escribí algo tan cursi\".",
+      "source": "Centro Gabo (Fundación Gabo), \"La Marioneta, el poema que nunca escribió Gabriel García Márquez\"",
+      "url": "https://centrogabo.org/gabo/contemos-gabo/la-marioneta-el-poema-que-nunca-escribio-gabriel-garcia-marquez"
+    },
+    {
+      "claim": "\"13 líneas para vivir\" tampoco es suya: empezó a circular a principios del siglo XXI en una presentación atribuida a García Márquez, y su primera línea procede del poema \"Why I Love You\", de la poeta estadounidense Mary Carolyn Davies. El mismo artículo enumera otros textos apócrifos que se le adjudican: \"El drama del desencantado\", \"Cuando los padres se quedan huérfanos\", \"La Muerte en Samarra\", \"Ladrón de sábado\" y un falso fragmento de Cien años de soledad.",
+      "source": "Centro Gabo (Fundación Gabo), \"'13 líneas para vivir', un texto que NO escribió Gabriel García Márquez\"",
+      "url": "https://centrogabo.org/gabo/contemos-gabo/13-lineas-para-vivir-un-texto-que-no-escribio-gabriel-garcia-marquez"
+    },
+    {
+      "claim": "Datos biográficos: Gabriel García Márquez nació el 6 de marzo de 1927 en Aracataca (Magdalena, Colombia) y murió el 17 de abril de 2014 en la Ciudad de México; recibió el Premio Nobel de Literatura en 1982.",
+      "source": "Fundación Gabo, ficha institucional del fundador; Biblioteca Nacional de la República Argentina, efeméride del 6 de marzo de 1927",
+      "url": "https://fundaciongabo.org/es/institucion/fundador"
+    }
+  ],
+  "do_not_use": [
+    "\"La marioneta\" / \"Si por un instante Dios se olvidara de que soy una marioneta de trapo…\". DESCARTADA de raíz: es el texto falso más difundido del mundo hispanohablante. Lo escribió el ventrílocuo mexicano Johnny Welch para su muñeco El Mofles y circuló en 2000 por cadenas de correo firmado con el nombre de García Márquez, aprovechando que él estaba enfermo. Él mismo lo desmintió en público. Se menciona en el cuerpo de la pieza justamente para desmontarlo, nunca en la tarjeta ni como frase suya.",
+    "\"13 líneas para vivir\" y las líneas sueltas que se extraen de ese texto. DESCARTADAS: el Centro Gabo las clasifica como apócrifas; la primera línea procede del poema \"Why I Love You\", de Mary Carolyn Davies. No aparecen en ninguna obra, memoria ni entrevista suya.",
+    "\"El drama del desencantado\", \"Cuando los padres se quedan huérfanos\", \"La Muerte en Samarra\", \"Ladrón de sábado\" y el falso fragmento de Cien años de soledad. DESCARTADOS: el Centro Gabo los registra expresamente como textos que García Márquez no escribió. Ninguna cita extraída de ellos puede firmarse con su nombre.",
+    "\"No llores porque terminó, sonríe porque sucedió\", atribuida a él en miles de publicaciones. DESCARTADA en esta investigación: no se pudo localizar en ninguna obra suya ni en fuente institucional que la respalde. Sin obra y sin página, no se usa.",
+    "\"Nadie merece tus lágrimas, y quien las merezca no te hará llorar\". DESCARTADA por el mismo motivo: circula firmada por él, arrastrada por las mismas cadenas de correo que \"La marioneta\", y no se localizó en su obra.",
+    "Escribir el título como \"Vivir para contarlo\". El título publicado es Vivir para contarla, en femenino, porque remite a la vida. \"Vivir para contarlo\" fue solo el título provisional con el que leyó el primer capítulo en la Universidad de Guadalajara en 1996, y esa versión difiere del texto de 2002.",
+    "Citar el epígrafe con capítulo, página o número de línea, o presentarlo como una declaración de una entrevista. En el libro va solo y SIN firma, en las páginas preliminares, antes del capítulo uno. La tarjeta acredita autor, obra y la condición de epígrafe, y nada más.",
+    "Un tiraje inicial cerrado para la primera edición (circulan cifras de cientos de miles y de un millón de ejemplares). NO VERIFICADO en esta sesión: la pieza no da ninguna cifra de tirada.",
+    "Decir que el libro cuenta su vida entera. No la cuenta: se detiene en 1950 y los otros dos volúmenes previstos nunca se publicaron.",
+    "Presentar la frase como un permiso para inventar o como un \"la memoria miente\". García Márquez no dice que el recuerdo sea falso: dice que la vida que queda es la recordada y la contada. Convertirlo en relativismo, o en consigna de autoayuda sobre \"vivir el presente\", es exactamente lo contrario de lo que hace la frase en su sitio, que es advertir al lector antes de empezar.",
+    "Cualquier referencia al estado de salud o de memoria de García Márquez en sus últimos años como cierre irónico de la pieza. No se verificó aquí, no hace falta para el giro y convierte un dato médico en recurso literario.",
+    "REVISAR: la cita se reconstruyó del claim de la fuente, no del hook. Cotejar redacción antes de encolar."
+  ],
+  "status": "draft"
+}

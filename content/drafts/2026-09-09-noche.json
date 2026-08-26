@@ -1,0 +1,74 @@
+{
+  "id": "2026-09-09-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "hook": "En 1972 unos obreros chinos desenterraron por accidente las tablillas que debían resolver si Sun Tzu existió.",
+    "body": [
+      "En abril de 1972, en Yinqueshan, cerca de Linyi, unos obreros abrieron por accidente dos tumbas de la dinastía Han, selladas entre los años 134 y 118 antes de Cristo. Dentro había 4.942 tablillas de bambú escritas. Entre ellas, trece capítulos de El arte de la guerra y dieciséis capítulos de otro tratado militar, el de Sun Bin, perdido desde hacía más de mil cuatrocientos años.",
+      "Desde el siglo XII los eruditos chinos sospechaban de Sun Tzu. Ye Shi, que vivió entre 1150 y 1223, señaló algo incómodo: el Zuo Zhuan, la crónica que registra a casi todos los personajes notables de aquella época, no lo nombra ni una vez. Las tablillas no zanjaron eso. Confirmaron que el texto era antiguo y que los dos tratados eran obras distintas, no una sola confundida por los copistas. Del hombre siguen sin aparecer rastros anteriores a Sima Qian, su primer biógrafo.",
+      "El libro de estrategia más citado del planeta se sostiene sin una biografía que lo respalde. Lo que la arqueología comprobó fue el texto, no la firma. Trece capítulos siguen siendo útiles sin que sepamos con certeza quién los escribió."
+    ],
+    "question": "¿Cuántas ideas aceptas por quién las firma y no por lo que dicen?",
+    "subject": "Sun Tzu y las tablillas de Yinqueshan (1972)"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL ARTE DE LA GUERRA",
+    "subtitle": "Trece capítulos que sobrevivieron a la duda sobre su propio autor",
+    "body": "En 1972 unos obreros abrieron dos tumbas Han en Yinqueshan: 4.942 tablillas de bambú selladas antes del año 118 antes de Cristo. Los capítulos hallados coinciden con el texto que leemos hoy. Del hombre, en cambio, no hay rastro anterior a su primer biógrafo.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Las tumbas de Yinqueshan (Lanshan, Linyi, Shandong) las descubrieron por accidente unos obreros de la construcción en abril de 1972; la tumba n.º 1 contenía 4.942 tablillas de bambú y la n.º 2, otras 32. Entre los textos: trece capítulos fragmentarios de El arte de la guerra de Sunzi y dieciséis capítulos del Arte de la guerra de Sun Bin, \"desaparecido durante al menos 1.400 años\", además de capítulos de las Seis estrategias, del Weiliaozi y del Yanzi chunqiu.",
+      "source": "Wikipedia en inglés, Yinqueshan Han Slips",
+      "url": "https://en.wikipedia.org/wiki/Yinqueshan_Han_Slips"
+    },
+    {
+      "claim": "Medidas y datación: 4.942 tablillas de unos 28 cm de largo, 0,7 de ancho y 0,2 de grosor; el enterramiento de ambas tumbas se fecha en torno al 140/134 a.C. y el 118 a.C., y los textos se escribieron antes de esas fechas.",
+      "source": "History of Information (ficha sobre las tablillas de Yinqueshan)",
+      "url": "https://www.historyofinformation.com/detail.php?id=2492"
+    },
+    {
+      "claim": "Duda sobre la historicidad: desde el siglo XII, en la dinastía Song, los eruditos cuestionaron la existencia de Sun Tzu. Ye Shi (1150-1223) observó que el Zuo Zhuan, que menciona a la mayoría de las figuras notables del periodo de Primaveras y Otoños, no menciona a Sun Tzu en absoluto. El nombre \"Sun Wu\" no aparece en ninguna fuente anterior a las Memorias históricas de Sima Qian.",
+      "source": "Wikipedia en inglés, Sun Tzu (sección sobre historicidad)",
+      "url": "https://en.wikipedia.org/wiki/Sun_Tzu"
+    },
+    {
+      "claim": "Qué aportaron las tablillas al texto: la versión recuperada en Yinqueshan, sellada entre el 134 y el 118 a.C., contiene alrededor de un tercio de los capítulos de El arte de la guerra actual y sus textos coinciden estrechamente; el hallazgo respalda la datación de la obra a comienzos del periodo de los Reinos Combatientes. La obra se compone de trece capítulos.",
+      "source": "Wikipedia en inglés, Sun Tzu / The Art of War",
+      "url": "https://en.wikipedia.org/wiki/Sun_Tzu"
+    },
+    {
+      "claim": "Sun Bin: descendiente supuesto de Sun Tzu, muerto en el 316 a.C.; su libro se dio por perdido después de la dinastía Han y algunos historiadores dudaron incluso de que hubiera existido, porque las únicas pruebas eran referencias en textos posteriores. Los fragmentos recuperados en 1972 en Linyi contenían su texto.",
+      "source": "Wikipedia en inglés, Sun Bin y Sun Bin's Art of War",
+      "url": "https://en.wikipedia.org/wiki/Sun_Bin"
+    },
+    {
+      "claim": "Atribución tradicional y datación alternativa: Sun Tzu \"floreció en el siglo V a.C.\" y \"se le considera tradicionalmente el autor de El arte de la guerra, pero es más probable que la obra se escribiera a comienzos del periodo de los Reinos Combatientes (475-221 a.C.)\".",
+      "source": "Encyclopaedia Britannica, entrada Sunzi",
+      "url": "https://www.britannica.com/biography/Sunzi"
+    },
+    {
+      "claim": "Las tablillas se conservan hoy en Shandong (museo de las tablillas de bambú Han de Yinqueshan, en Linyi) y se describen como cerca de 5.000 tablillas de la dinastía Han occidental que documentan los escritos atribuidos a Sunzi y a Sun Bin.",
+      "source": "China Daily (govt.chinadaily.com.cn), \"Bamboo slips chronicle China's ancient military philosophy\", junio de 2022",
+      "url": "https://govt.chinadaily.com.cn/s/202206/14/WS62a82e87498ea2749279aae8/bamboo-slips-chronicle-chinas-ancient-military-philosophy.html"
+    }
+  ],
+  "do_not_use": [
+    "\"Las tablillas de Yinqueshan demostraron que Sun Tzu existió.\" Es justo lo contrario de lo que probaron: confirmaron la antigüedad del texto y que el tratado de Sun Bin era una obra distinta, no que Sun Wu fuera un personaje histórico. La duda sobre el hombre sigue abierta y el post se construye sobre esa distinción.",
+    "\"Sun Tzu escribió El arte de la guerra en el siglo V antes de Cristo.\" Britannica lo da como atribución tradicional y advierte que la obra probablemente se escribió a comienzos del periodo de los Reinos Combatientes (475-221 a.C.). No dar una fecha cerrada de redacción.",
+    "\"Sun Tzu nunca existió\" como afirmación cerrada. Lo verificable es que su nombre no aparece en ninguna fuente anterior a Sima Qian y que el Zuo Zhuan no lo menciona. Eso es una ausencia de pruebas, no una prueba de inexistencia: presentarlo como duda documentada, que es lo que es.",
+    "El día exacto del hallazgo. Descartado en esta investigación: la Wikipedia en inglés da el 10 de abril de 1972, pero la segunda fuente consultada (History of Information) dice solo \"abril de 1972\". Se usa el mes, no el día.",
+    "La fecha del sellado de las tumbas como dato único. Descartado el uso de una sola cifra: una fuente da \"en torno al 140/134 a.C. y el 118 a.C.\" y otra, \"entre el 134 y el 118 a.C.\". Se usa el rango 134-118.",
+    "El episodio de las concubinas del rey Helü (Sun Tzu entrena a 180 concubinas y manda ejecutar a las dos favoritas para imponer disciplina) como hecho histórico. Procede de la biografía de Sima Qian, siglos posterior, y es precisamente el tipo de relato que alimentó la sospecha de los eruditos Song. Si se cuenta, se cuenta como lo que narra Sima Qian.",
+    "\"Mantén cerca a tus amigos y más cerca a tus enemigos\", atribuida constantemente a Sun Tzu. Descartada en esta investigación: no se localizó en los trece capítulos y no se encontró ninguna fuente sólida que documente su origen real, así que no se atribuye ni a Sun Tzu ni a nadie más.",
+    "\"En medio del caos también hay oportunidad\", atribuida a Sun Tzu en redes y en libros de gestión. Descartada por el mismo motivo: circula solo en agregadores de citas (Goodreads, AZQuotes, LinkedIn), sin capítulo ni edición que la respalde.",
+    "\"Sun Bin era hijo de Sun Tzu.\" Las fuentes lo dan como supuesto descendiente, no como hijo, y la propia relación entre ambos forma parte de lo que se discute.",
+    "\"Sun Bin y Sun Wu eran la misma persona\" o \"El arte de la guerra lo escribió Sun Bin\". Fue una hipótesis viva mientras solo se conservaba un tratado; las tablillas de 1972, con los dos textos juntos en la misma tumba, la desactivan.",
+    "\"El arte de la guerra es el libro más antiguo de estrategia militar del mundo\" y demás superlativos: no verificado para esta pieza.",
+    "Leer el libro como manual de negocios o de superación personal. Es una lectura del siglo XX y no aporta nada a la pieza, que trata de cómo se comprueba un texto antiguo."
+  ],
+  "status": "draft"
+}

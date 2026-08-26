@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-06-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "hook": "Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.",
+    "body": [
+      "En 1801, en el Real Seminario de Minería de la Ciudad de México, Andrés Manuel del Río analizó un plomo pardo traído de la mina del Cardonal, en Zimapán. Encontró un metal que nadie había descrito. Lo llamó primero pancromio, por la variedad de colores que daban sus compuestos, y después eritronio, por el rojo que tomaban sus sales al calentarse con ácido.",
+      "En abril de 1803 lo visitó Alexander von Humboldt. Dudó del hallazgo, le pareció cromo, y se llevó a Europa las muestras y el manuscrito. En París, el químico Collet-Descotils examinó el mineral y concluyó en 1805 que ahí no había ningún metal nuevo. Del Río ni siquiera esperó a esa publicación: ya en 1804 se había retractado por escrito, sin volver a analizar nada. Casi treinta años más tarde, un químico sueco encontró el mismo metal en un mineral de hierro y lo llamó vanadio. En 1831 Friedrich Wöhler tomó la muestra que Humboldt se había llevado de México y comprobó que vanadio y eritronio eran el mismo elemento.",
+      "Del Río vivió todavía dieciocho años después de esa confirmación y murió en la Ciudad de México en 1849, a los 84. No perdió el elemento por un error de laboratorio. Lo perdió por darle más peso a la autoridad de París que a lo que tenía delante, en su propia mesa."
+    ],
+    "question": "¿Qué dejaste de sostener solo porque alguien con más autoridad dijo lo contrario?",
+    "subject": "Andrés Manuel del Río y el eritronio"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "ANDRÉS MANUEL DEL RÍO",
+    "subtitle": "Descubrió un metal nuevo y aceptó por carta ajena que no existía",
+    "body": "En 1801 halló un metal desconocido en un mineral de Zimapán y lo llamó eritronio. Un laboratorio de París dijo que era cromo. En 1804 se retractó, sin volver a analizarlo. Casi treinta años después el mismo metal reapareció en Suecia con otro nombre: vanadio.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "En 1801 del Río analizó el plomo pardo de la mina de La Purísima del Cardonal, cerca de Zimapán (Hidalgo); propuso primero el nombre pancromio y después eritronio, por el rojo de sus sales.",
+      "source": "\"Andrés del Río, Alexander von Humboldt and the twice-discovered element\" (estudio académico en PDF, University of Illinois, IDEALS)",
+      "url": "https://www.ideals.illinois.edu/items/134633/bitstreams/443144/data.pdf"
+    },
+    {
+      "claim": "Humboldt se reunió con del Río en la Ciudad de México en abril de 1803, dudó del hallazgo y llevó a Europa el manuscrito y las muestras, que entregó a Collet-Descotils en el Institut de France.",
+      "source": "Mismo estudio (IDEALS, University of Illinois)",
+      "url": "https://www.ideals.illinois.edu/items/134633/bitstreams/443144/data.pdf"
+    },
+    {
+      "claim": "Collet-Descotils publicó en 1805 que el mineral \"no contiene nada de un metal nuevo\"; del Río ya se había retractado en 1804, concluyendo que el plomo pardo era un cromato de plomo.",
+      "source": "Mismo estudio (IDEALS) y reseña histórica \"Andrés Manuel del Río and the Two Discoveries of Vanadium\"",
+      "url": "https://www.jargonium.com/post/andr%C3%A9s-manuel-del-rio-and-the-two-discoveries-of-vanadium"
+    },
+    {
+      "claim": "Sefström halló el metal en un mineral de hierro sueco y lo nombró vanadio por Vanadís; en 1831 Wöhler analizó la muestra de plomo pardo que conservaba Humboldt y demostró que el vanadio y el eritronio de del Río eran idénticos.",
+      "source": "IDEALS (University of Illinois) y jargonium.com",
+      "url": "https://www.ideals.illinois.edu/items/134633/bitstreams/443144/data.pdf"
+    },
+    {
+      "claim": "Del Río nació el 10 de noviembre de 1764 en Madrid, se embarcó en Cádiz en agosto de 1794 rumbo a Veracruz y comenzó su curso de orictognosia en el Real Seminario de Minería el 27 de abril de 1795.",
+      "source": "Heurema, ficha biográfica de Andrés Manuel del Río",
+      "url": "https://www.heurema.com/POFQ-ManueldelRio.htm"
+    },
+    {
+      "claim": "Murió el 23 de marzo de 1849 en la Ciudad de México, a los 84 años. El vanadio metálico no se aisló puro hasta 1867, por Henry E. Roscoe.",
+      "source": "Naukas, \"Andrés Manuel del Río, el polifacético madrileño que descubrió un elemento químico en México\"",
+      "url": "https://naukas.com/2020/06/22/andres-manuel-del-rio-el-polifacetico-madrileno-que-descubrio-un-elemento-quimico-en-mexico/"
+    },
+    {
+      "claim": "Su tratado Elementos de Orictognosia, cuya primera parte se publicó en 1795, está considerado la primera obra de mineralogía escrita en América.",
+      "source": "Wikipedia en español, \"Elementos de Orictognosia\"",
+      "url": "https://es.wikipedia.org/wiki/Elementos_de_Orictognosia"
+    }
+  ],
+  "do_not_use": [
+    "\"Los suecos le robaron el descubrimiento\": falso. Del Río se retractó por su cuenta en 1804, veintiséis o veintisiete años antes de que Sefström llegara al mismo metal, y por una vía distinta (un mineral de hierro sueco, no el plomo pardo mexicano). El episodio es de autoridad científica mal repartida, no de robo.",
+    "Un año cerrado para el hallazgo de Sefström: las fuentes consultadas se reparten entre 1830 y 1831. Por eso el texto dice solo \"casi treinta años después\". Descartada la cifra exacta.",
+    "\"El manuscrito de del Río se perdió en un naufragio camino de París\": circula en divulgación, pero el estudio académico consultado solo afirma que el manuscrito nunca se publicó. Versión descartada por falta de respaldo.",
+    "\"Humboldt le robó u ocultó el descubrimiento\": falso y además injusto. Humboldt dudó, pero transportó él mismo el manuscrito y las muestras a Europa, y fue precisamente su ejemplar de plomo pardo el que permitió a Wöhler darle la razón a del Río en 1831.",
+    "\"Del Río aisló el vanadio\": no. Obtuvo y describió sus compuestos; el metal puro lo aisló Henry E. Roscoe en 1867.",
+    "\"Lo llamó eritronio desde el principio\": no. El primer nombre que propuso fue pancromio, por la variedad de colores de sus compuestos.",
+    "\"El vanadio es el único elemento químico descubierto en México\": superlativo que aparece en prensa divulgativa y que no se pudo verificar en fuente sólida en esta sesión. Descartado del texto.",
+    "\"Era mexicano\" o \"era español\", a secas: nació en Madrid en 1764, vivió en México desde finales de 1794 y murió allí en 1849. Las fuentes lo describen como hispanomexicano; conviene decir las dos cosas.",
+    "\"La delrioíta lleva su nombre\": existe un mineral llamado delrioíta, un vanadato de calcio y estroncio descrito en 1959, pero la etimología no se pudo confirmar en ninguna fuente accesible (mindat y GeoScienceWorld devolvieron error 403). Dato descartado del texto por no verificado.",
+    "\"Solo sabemos de él por el vanadio\": empobrece el dato real. Escribió Elementos de Orictognosia (primera parte, 1795), considerada la primera obra de mineralogía de América."
+  ],
+  "status": "draft"
+}

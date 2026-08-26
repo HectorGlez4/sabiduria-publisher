@@ -1,0 +1,65 @@
+{
+  "id": "2026-09-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "\"Si tienes un jardín en tu biblioteca, nada faltará.\"",
+    "body": [
+      "La escribió Cicerón en el año 46 antes de Cristo, en una nota breve a su amigo Marco Terencio Varrón, para arreglar una visita. La frase entera dice así en latín: Tu si minus ad nos, nos accurremus ad te: si hortum in bibliotheca habes, deerit nihil. Es decir: si tú no vienes, vamos nosotros; si tienes un jardín en la biblioteca, no hará falta nada más. No era una sentencia sobre la buena vida. Era el remate de una carta cuyo cuerpo es una broma sobre lógica: Cicerón le dice que, según Diodoro, si va a venir es necesario que venga, y si no, venir es imposible. Está en el libro IX de las Cartas a los amigos, dieciséis libros con correspondencia del 62 al 43 antes de Cristo que su liberto Tirón reunió después de su muerte. Ninguna de esas cartas se escribió para ser publicada.",
+      "La versión que circula cambia una preposición: un jardín y una biblioteca, en vez de un jardín en la biblioteca. Con esa letra de diferencia, una nota entre dos amigos sobre una casa concreta se convierte en un lema universal. Y hay algo más que casi nadie sabe. El destinatario, Varrón, fue el hombre a quien César encargó en el 47 antes de Cristo la biblioteca pública de Roma. Escribió cerca de setenta y cuatro obras en unos seiscientos veinte libros. Sobrevive una completa. Cuando llegaron las proscripciones, Marco Antonio lo incluyó en las listas y perdió sus bienes, la biblioteca entre ellos.",
+      "La frase se cita hoy en camisetas, en placas y en marcadores de libros como una receta de felicidad doméstica. En su origen es más modesta y también más frágil: describe una casa que existía, con un jardín y unos estantes, y se la escribió un hombre asesinado tres años después a otro que acabó sin sus libros. Lo que quedó no fue la biblioteca. Fue la nota que hablaba de ella."
+    ],
+    "question": "¿Qué lugar te basta para no extrañar nada?",
+    "subject": "Cicerón",
+    "quote": {
+      "text": "Si tienes un jardín en tu biblioteca, nada faltará.",
+      "author": "Marco Tulio Cicerón",
+      "work": "Ad familiares IX, 4 (46 a.C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto latino literal de la frase y de la oración que la precede: \"Tu si minus ad nos, nos accurremus ad te: si hortum in bibliotheca habes, deerit nihil\", en Ad familiares IX, 4.",
+      "source": "Latin is Simple, biblioteca de textos: Cicerón, Ad familiares IX",
+      "url": "https://www.latin-is-simple.com/en/library/cicero/letters-to-friends/ad-familiares-9/"
+    },
+    {
+      "claim": "La carta es Ad familiares IX, 4, dirigida a Marco Terencio Varrón, fechada en el 46 a.C.; se recogen cuatro traducciones inglesas distintas (Webbe 1620, Melmoth 1753, Shuckburgh 1899, Shackleton Bailey 1978) y se señala que la versión popular \"If you have a garden and a library, you have everything you need\" desplaza el sentido del original.",
+      "source": "WIST Quotations, ficha de Cicerón, Ad Familiares 9.4.1 (tr. Williams, Loeb, 1928)",
+      "url": "https://wist.info/cicero-marcus-tullius/43635/"
+    },
+    {
+      "claim": "Contenido de la carta: Cicerón bromea con las doctrinas de Diodoro y de Crisipo sobre lo posible y lo necesario, menciona a Diodoto y cierra con la línea del jardín en la biblioteca; encabezamiento \"A M. Terencio Varrón\", Túsculo, junio.",
+      "source": "Edición de la correspondencia de Cicerón en orden cronológico (traducción de Shuckburgh), carta CDLXIV (F IX, 4)",
+      "url": "https://pages.pomona.edu/~cmc24747/sources/cic_web/cic_fam_9.htm"
+    },
+    {
+      "claim": "Las Cartas a los amigos son dieciséis libros con correspondencia del 62 al 43 a.C., publicadas probablemente por su liberto y secretario Marco Tulio Tirón después de la muerte de Cicerón.",
+      "source": "Wikipedia en inglés, Epistulae ad Familiares",
+      "url": "https://en.wikipedia.org/wiki/Epistulae_ad_Familiares"
+    },
+    {
+      "claim": "Varrón (116-27 a.C.) fue nombrado por César en el 47 a.C. para hacerse cargo de la biblioteca pública de Roma; Ritschl estimó su obra en 74 títulos y unos 620 libros, de los que solo sobrevive uno completo (Rerum rusticarum libri tres); Marco Antonio lo proscribió y perdió gran parte de sus bienes, incluida su biblioteca.",
+      "source": "Wikipedia en inglés, Marcus Terentius Varro",
+      "url": "https://en.wikipedia.org/wiki/Marcus_Terentius_Varro"
+    }
+  ],
+  "do_not_use": [
+    "\"Si tienes un jardín y una biblioteca, tendrás todo lo que necesitas\": es la versión que circula en todas partes y cambia una preposición. El latín dice in bibliotheca, un jardín DENTRO de la biblioteca, y habla de la casa concreta de Varrón, no de una receta general de vida.",
+    "Presentarla como una máxima solemne sobre la buena vida o sobre la lectura: es la línea de cierre de una nota breve para acordar una visita, cuyo cuerpo es una broma sobre lógica modal (Diodoro contra Crisipo).",
+    "Dar \"jardín\" como única traducción posible de hortus: está más cerca de huerto, y Shackleton Bailey (1978) traduce \"kitchen garden\". La tarjeta usa \"jardín\" por ser la lectura más difundida y defendible, no por ser la única.",
+    "La traducción de Melmoth (1753), \"As your library is situated in your garden…\": invierte jardín y biblioteca. Es una versión libre del siglo XVIII y no reproduce el orden del original.",
+    "\"Nihil deerit\" como redacción del original: las ediciones consultadas dan deerit nihil. La forma invertida circula mucho y no es la que trae el texto.",
+    "Atribuirla a un tratado de Cicerón (De officiis, De senectute) o citarla como \"Cicerón\" a secas: está en una carta privada, Ad familiares IX, 4.",
+    "Decir que Cicerón escribió esa carta para la posteridad: las cartas las reunió su liberto Tirón tras su muerte, y no se escribieron para publicarse.",
+    "Afirmar que la biblioteca pública que César encargó a Varrón llegó a abrirse: la fuente consultada solo registra el encargo del 47 a.C., no su construcción. En el texto se dice \"le encargó\", nunca \"la construyó\".",
+    "Dar una fecha cerrada de lugar y mes para la carta: la edición de Shuckburgh la sitúa en Túsculo en junio, y otras ediciones la fechan en Roma. Lo firme es el año 46 a.C.",
+    "Contar la pérdida de la biblioteca de Varrón con detalles de saqueo o de villa concreta: lo documentado es que Marco Antonio lo proscribió y que perdió gran parte de sus bienes, la biblioteca incluida."
+  ],
+  "status": "draft"
+}

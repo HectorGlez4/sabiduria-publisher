@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-02-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "Roma no sembró de sal las ruinas de Cartago: ese dato entró en los libros de historia en 1930.",
+    "body": [
+      "En el 146 antes de Cristo, tras tres años de asedio, Escipión Emiliano tomó Cartago: seis días de combate calle por calle y cincuenta mil personas vendidas como esclavas.",
+      "El detalle que todo el mundo repite, que sembraron sal para que nada volviera a crecer, no aparece en ninguna fuente antigua. Se coló en la Cambridge Ancient History en 1930 y un artículo de 1986 lo desmontó: venía de la Biblia, del castigo de Siquem.",
+      "De la biblioteca de Cartago, Roma se quedó con un solo título: los veintiocho tomos de agricultura de Magón, que el Senado mandó traducir al latín. Del enemigo se destruye todo, menos lo que sirve."
+    ],
+    "question": "¿Qué le has aprendido a alguien con quien no querías parecerte?",
+    "subject": "Cartago 146 a.C."
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "CARTAGO, 146 A. C.",
+    "subtitle": "Ninguna fuente antigua menciona la sal: el bulo tiene menos de un siglo.",
+    "body": "Roma arrasó la ciudad en el 146 antes de Cristo y vendió a cincuenta mil personas como esclavas. De su biblioteca se quedó un solo libro: los veintiocho tomos de agricultura de Magón, que el Senado mandó traducir al latín. Lo de la sal no lo escribió ningún romano.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Ninguna fuente antigua menciona que se sembrara sal en Cartago; la historia entra en la literatura académica con el capítulo de B. Hallward en la Cambridge Ancient History (1930) y R. T. Ridley la desmonta en 1986, señalando como origen el caso bíblico de Siquem (Jueces 9,45).",
+      "source": "R. T. Ridley, «To Be Taken with a Pinch of Salt: The Destruction of Carthage», Classical Philology 81.2 (1986), pp. 140-146",
+      "url": "https://www.journals.uchicago.edu/doi/10.1086/366973"
+    },
+    {
+      "claim": "Comprobación independiente de lo anterior: «The story of salt is a modern invention, there is no ancient evidence to support it». Apiano, la fuente antigua más completa, describe el saqueo y la prohibición de habitar el lugar, pero no la sal.",
+      "source": "Bad Ancient, «Was the earth of Carthage salted after its fall during the Third Punic War?»",
+      "url": "https://www.badancient.com/claims/carthage-salted/"
+    },
+    {
+      "claim": "Tercera guerra púnica: 149-146 a.C. Asalto final de Escipión Emiliano en la primavera del 146; seis días de combate casa por casa; 50.000 prisioneros vendidos como esclavos; el solar quedó confiscado como ager publicus. La misma entrada califica la siembra de sal de invención moderna.",
+      "source": "Wikipedia en inglés, «Third Punic War»",
+      "url": "https://en.wikipedia.org/wiki/Third_Punic_War"
+    },
+    {
+      "claim": "Plinio el Viejo (Historia natural 18.22): tras la toma de Cartago el Senado entregó las bibliotecas de la ciudad a los reyes de África y ordenó, solo en el caso de Magón, que su obra se tradujera al latín, encargándola a conocedores del púnico, entre ellos D. Junio Silano.",
+      "source": "Plinio, Naturalis Historia XVIII, cap. 5, en la traducción de Bostock y Riley (Project Gutenberg)",
+      "url": "https://www.gutenberg.org/files/61113/61113-h/61113-h.htm"
+    },
+    {
+      "claim": "Columela llama a Magón «padre de la agricultura» y precisa el número de libros: «paying greatest reverence to the Carthaginian Mago as the father of husbandry, inasmuch as his twenty-eight memorable volumes were translated into the Latin tongue by senatorial decree» (De re rustica 1.1.13).",
+      "source": "Columela, De re rustica I, 1, 13 (ToposText)",
+      "url": "https://topostext.org/work/799"
+    },
+    {
+      "claim": "La obra de Magón constaba de 28 libros; el original púnico se perdió y solo sobrevive en citas de Varrón, Columela, Plinio y Gargilio Marcial. Cassio Dionisio lo adaptó al griego.",
+      "source": "Wikipedia en inglés, «Mago (agricultural writer)» y «Decimus Junius Silanus (translator of Mago)»",
+      "url": "https://en.wikipedia.org/wiki/Mago_(agricultural_writer)"
+    },
+    {
+      "claim": "El solar no quedó desierto para siempre: Cayo Graco intentó una colonia en el 122 a.C. que fracasó, y la refundación efectiva es cesariana; la Cartago romana llegó a ser capital de la provincia de África y uno de los centros más importantes del imperio en los siglos III y IV.",
+      "source": "Livius.org, «Roman Carthage»",
+      "url": "https://www.livius.org/articles/place/carthage/roman-carthage/"
+    }
+  ],
+  "do_not_use": [
+    "«Roma sembró de sal las ruinas de Cartago». Es el bulo que este post corrige. No hay una sola fuente antigua que lo diga; el relato se calca del castigo de Siquem en Jueces 9,45 y llega a la historiografía moderna a través de la Cambridge Ancient History de 1930.",
+    "«Es un mito del siglo XIX» a secas. Hay un rastro anterior (The New American Cyclopaedia, 1858-1863), pero lo que lo convirtió en dato aceptado fue el capítulo de 1930. Dar el 1930 y el desmontaje de 1986, no el siglo redondo.",
+    "«Escipión maldijo el suelo para que nada creciera». Descartado en esta investigación: Apiano dice expresamente que el terreno no fue maldecido y Ridley subraya que de la sal y del arado no hay nada en las fuentes; la Wikipedia en inglés sí habla de una maldición sobre quien repoblara el sitio. Punto en disputa: se afirma solo que el Senado prohibió habitarlo y confiscó el solar como ager publicus.",
+    "«El incendio duró diecisiete días». Circula en divulgación y no aparece en ninguna de las fuentes comprobadas aquí. Lo que sí está documentado son seis días de combate calle por calle.",
+    "«Los treinta y dos libros de Magón». La traducción inglesa de Bostock y Riley dice thirty-two, pero el latín es duodetriginta —veintiocho— y Columela escribe «twenty-eight memorable volumes». Se usa veintiocho.",
+    "«Cartago quedó desierta para siempre». Roma refundó la ciudad en el mismo sitio: colonia fallida de Cayo Graco en el 122 a.C. y refundación cesariana después. Evitar además una fecha cerrada para esa refundación: las fuentes se reparten entre el 44 a.C. y el gobierno de Augusto.",
+    "«Catón cerraba todos sus discursos con Ceterum censeo Carthaginem esse delendam». La fórmula latina exacta no está en ninguna fuente antigua; Plutarco transmite una paráfrasis en griego. No se usa como cita literal.",
+    "Cifras de población de la Cartago púnica y del número de muertos en el asalto: no se verificaron para esta entrada.",
+    "«Escipión lloró ante las ruinas y citó a Homero». Anécdota de Polibio transmitida por Apiano; no se comprobó en esta sesión y queda fuera del copy.",
+    "Recordatorio heredado que sigue vigente: «los mayas inventaron el cero» (fue Mesoamérica zoque y epi-olmeca), las chinampas como «jardines flotantes» (son islotes fijos) y el mapa de Vinlandia (falsificación del siglo XX)."
+  ],
+  "status": "draft"
+}

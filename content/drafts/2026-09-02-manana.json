@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-02-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "hook": "Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.",
+    "body": [
+      "Entre los años 381 y 384, una mujer hispanorromana llamada Egeria recorrió el Mediterráneo oriental: el Sinaí, Egipto, Constantinopla, Mesopotamia, Edesa. Se quedó tres años en Jerusalén. Iba anotándolo todo en una larga carta dirigida a un grupo de mujeres a las que llamaba hermanas.",
+      "Esa carta sobrevivió en una sola copia, hecha en el siglo XI en la abadía de Montecassino. Gian Francesco Gamurrini la encontró en 1884 en una biblioteca de Arezzo: sin título, sin fecha, sin nombre de autor, con el principio y el final perdidos. La atribuyó a otra mujer. En 1903 Marius Férotin dio con la clave en un lugar inesperado: una carta del monje gallego Valerio del Bierzo, escrita casi tres siglos más tarde, que elogiaba a una tal Egeria por haber emprendido con corazón intrépido un camino inmenso.",
+      "Gracias a esas páginas sabemos cómo se celebraba la Semana Santa en la Jerusalén del siglo IV. El relato estuvo completo todo ese tiempo. Lo que faltaba era el nombre."
+    ],
+    "question": "¿Cuánto de lo que hoy sabemos llegó hasta nosotros sin firma?",
+    "subject": "Egeria, la viajera hispanorromana del siglo IV"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EGERIA",
+    "subtitle": "Escribió en el siglo IV y la reconocieron en 1903",
+    "body": "Entre 381 y 384 recorrió el Sinaí, Egipto y Mesopotamia, y pasó tres años en Jerusalén anotando lo que veía. Su relato apareció en 1884 en Arezzo sin título y sin firma. Diecinueve años después, una carta del siglo VII le devolvió el nombre.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Egeria fue una mujer hispanorromana autora de un relato de peregrinación a Tierra Santa fechado hacia 381/2-384; el códice que lo conserva (Codex Aretinus) se copió en Montecassino en el siglo XI y lo halló Gian Francesco Gamurrini en 1884 en una biblioteca monástica de Arezzo; el texto carece de título, fecha y atribución, y le faltan el principio y el final. En 1903 Marius Férotin sostuvo que la autora era Egeria, conocida por una carta del monje gallego Valerio del Bierzo, del siglo VII. Gamurrini la había atribuido antes a Silvia de Aquitania.",
+      "source": "Wikipedia en inglés, «Egeria (pilgrim)»",
+      "url": "https://en.wikipedia.org/wiki/Egeria_(pilgrim)"
+    },
+    {
+      "claim": "El manuscrito se halló en 1884 en la Biblioteca della Confraternità dei Laici de Arezzo, copiado en el scriptorium de Montecassino en el siglo XI; el viaje se fecha entre 381 y 384, partiendo de Gallaecia; la ruta incluye Constantinopla, Capadocia, Antioquía, Jerusalén, el Sinaí, Mesopotamia y Edesa; la identificación de 1903 se debe a Marius Férotin a partir de la epístola de Valerio del Bierzo, que habla de un viaje inmenso emprendido con corazón intrépido.",
+      "source": "Wikipedia en español, «Itinerario de Egeria»",
+      "url": "https://es.wikipedia.org/wiki/Itinerario_de_Egeria"
+    },
+    {
+      "claim": "El Codex Aretinus 405 se produjo en el siglo XI en el monasterio de Montecassino y hoy está en Arezzo; al pergamino le faltan el principio y el final; los especialistas deducen que Egeria viajó tres años entre 381 y 384; el texto es el primer informe occidental sobre las comunidades cristianas de Levante y aporta información de primera mano sobre las prácticas religiosas de la época.",
+      "source": "Biblical Archaeology Society, «Text Treasures: The Pilgrimage of Egeria»",
+      "url": "https://www.biblicalarchaeology.org/daily/ancient-cultures/ancient-rome/text-treasures-the-pilgrimage-of-egeria/"
+    },
+    {
+      "claim": "Al texto le faltan el principio y el final, y además al menos dos folios del cuerpo; el peso de la opinión académica favorece la datación temprana, 381-384; la obra es un documento crítico para liturgistas e historiadores del monacato y una mina para los filólogos del latín tardío.",
+      "source": "Encyclopedia.com, «Egeria, Itinerarium of» (New Catholic Encyclopedia)",
+      "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/egeria-itinerarium"
+    },
+    {
+      "claim": "El Itinerarium Burdigalense, de 333-334, es el itinerario cristiano más antiguo que se conoce, es anónimo y consiste en una enumeración seca de ciudades, postas y distancias. Por eso no se llama a Egeria «la primera peregrina» ni a su texto «el primer relato de peregrinación».",
+      "source": "Wikipedia en inglés, «Itinerarium Burdigalense»",
+      "url": "https://en.wikipedia.org/wiki/Itinerarium_Burdigalense"
+    }
+  ],
+  "do_not_use": [
+    "«Egeria era monja»: la condición religiosa está discutida. Se apoya en que llama sorores (hermanas) a sus destinatarias, pero Hagith Sivan (1988) señaló que en esa época era corriente que los cristianos laicos se trataran de hermanos y hermanas. Descartado como hecho: el texto solo dice que escribía para un grupo de mujeres.",
+    "«Era gallega» como dato cerrado: la carta de Valerio del Bierzo la sitúa en Gallaecia, pero Karl Meister (1909) sostuvo que su latín no muestra rasgos ibéricos y propuso la Galia Narbonense. Descartado el gentilicio; se usa «hispanorromana», que es lo que la fuente principal afirma.",
+    "«Silvia de Aquitania» como autora: fue la atribución inicial del propio Gamurrini en 1884 y quedó descartada con la identificación de Férotin en 1903. También circularon Galla Placidia y otros nombres. Se anota porque es exactamente el error que este post cuenta, no uno que se pueda repetir.",
+    "«El primer relato de peregrinación cristiana»: el Itinerarium Burdigalense es de 333-334, medio siglo anterior. Es anónimo y es una lista de postas y distancias, no una narración, y esa es la diferencia que sí se puede afirmar.",
+    "«El relato de viaje más antiguo escrito por una mujer que se conserva»: superlativo que las fuentes consultadas no sostienen. La formulación prudente que usan es «posiblemente la primera autora de Hispania». Descartado el superlativo.",
+    "La datación del siglo VI: Karl Meister (1909) propuso situar el viaje en el reinado de Justiniano (527-565). Es postura minoritaria; la mayoría de los especialistas mantiene el siglo IV. No se menciona en el copy para no dar por abierta una discusión que está prácticamente cerrada, pero queda anotada aquí.",
+    "Un número exacto de hojas perdidas en el cuerpo del manuscrito: la Biblical Archaeology Society dice cuatro páginas del centro y la New Catholic Encyclopedia dice «al menos dos folios». Las fuentes discrepan: solo se afirma que faltan el principio y el final.",
+    "«Viajó sola»: es la imagen que circula y no está documentada. Se sabe que se movió con acompañantes y que en tramos del recorrido la escoltaron soldados. El copy dice cuánto duró el viaje y por dónde pasó, no que fuera sola.",
+    "La frase de Valerio del Bierzo entre comillas en español: el original latino es «totis nisibus intrepido corde inmensum totius orbis arripuit iter». En el copy va parafraseada, sin comillas, porque no se verificó una traducción canónica al castellano.",
+    "Un año concreto para la carta de Valerio del Bierzo: las fuentes consultadas solo la sitúan en el siglo VII. No dar «hacia 680» ni ninguna fecha cerrada.",
+    "El nombre exacto de la biblioteca de Arezzo como dato cerrado: la Wikipedia en español dice Biblioteca della Confraternità dei Laici, la inglesa dice «una biblioteca monástica» y la Biblical Archaeology Society dice «la biblioteca municipal». Se dice solo «una biblioteca de Arezzo».",
+    "Grafías alternativas del nombre (Etheria, Aetheria) presentadas como error: son variantes de los manuscritos, no equivocaciones. Se usa Egeria, que es la forma aceptada, sin corregir a nadie."
+  ],
+  "status": "draft"
+}

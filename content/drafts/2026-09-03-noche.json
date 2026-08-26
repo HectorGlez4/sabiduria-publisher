@@ -1,0 +1,68 @@
+{
+  "id": "2026-09-03-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "Un pueblo convirtió el agua escondida en su única muralla: quien no sabía dónde estaba, moría de sed.",
+    "body": [
+      "Diodoro de Sicilia, que escribió sobre ellos en el siglo I a.C., dejó anotada su ley: no sembrar grano, no plantar árboles frutales, no beber vino y no construir casas, bajo pena de muerte. La razón era militar. Un pueblo que no posee nada no puede ser sitiado. Su reserva era el agua: excavaban depósitos en el desierto, los revestían por dentro, los llenaban con agua de lluvia, sellaban la boca a ras del suelo y dejaban encima señales que solo ellos sabían leer. En el 312 a.C., Antígono, general de Alejandro Magno, intentó someterlos y fracasó.",
+      "Tres siglos después el mismo pueblo había roto su propia ley. Levantó Petra: una ciudad de piedra, con casas, presas y tuberías de terracota unidas con mortero, tramos de treinta y cinco centímetros ensamblados uno tras otro. Para que las crecidas repentinas del wadi no arrasaran el desfiladero de entrada, cortaron en la roca un túnel de 88 metros que desviaba el agua por otro barranco. Roma anexó el reino en el año 106.",
+      "En 1963 esa defensa ya no estaba operativa. Una crecida entró por el desfiladero y mató a veintidós turistas franceses y a un guía local. Al año siguiente Jordania levantó una presa nueva sobre los cimientos nabateos, y sigue ahí. La obra se entendió cuando faltó."
+    ],
+    "question": "¿Qué te está protegiendo hoy sin que lo notes?",
+    "subject": "Los nabateos"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "LOS NABATEOS",
+    "subtitle": "Escondieron el agua para que el desierto los defendiera",
+    "body": "Su ley prohibía sembrar, plantar árboles y construir casas: nada que un ejército pudiera quitarles. Guardaban el agua de lluvia en depósitos sellados a ras del suelo, marcados con señales que solo ellos sabían leer. Tres siglos después levantaron Petra en piedra.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "La ley nabatea: no sembrar grano, no plantar árboles frutales, no beber vino, no construir casas, bajo pena de muerte. Texto citado: \"It is their custom neither to plant grain, set out any fruit-bearing tree, use wine, nor construct any house; and if anyone is found acting contrary to this, death is his penalty.\"",
+      "source": "Diodoro de Sicilia, Biblioteca histórica XIX, 94 (traducción Loeb reproducida por Livius)",
+      "url": "https://www.livius.org/sources/content/diodorus/diodorus-on-the-nabataeans/"
+    },
+    {
+      "claim": "Los depósitos: excavaciones de boca estrecha que se ensanchan hacia abajo, revestidas de estuco, llenadas con agua de lluvia; \"they close the openings, making them even with the rest of the ground, and they leave signs that are known to themselves but are unrecognizable by others\". El desierto les servía de fortaleza porque solo ellos podían beber en él.",
+      "source": "Diodoro de Sicilia XIX, 94, 6-9 (Livius; cita coincidente en Nabataea.net)",
+      "url": "https://nabataea.net/explore/history/water-collection/"
+    },
+    {
+      "claim": "En el 312 a.C. Antígono I Monoftalmos, general de Alejandro Magno, intentó conquistar su territorio sin éxito. El reino nabateo se mantuvo independiente hasta que Trajano lo incorporó a la provincia romana de Arabia en el año 106 d.C. Petra (Raqmu) era su centro.",
+      "source": "Metropolitan Museum of Art, ensayo \"Nabataean Kingdom and Petra\"",
+      "url": "https://www.metmuseum.org/essays/nabataean-kingdom-and-petra"
+    },
+    {
+      "claim": "Tuberías de terracota de unos 0,35 m de largo, con diámetro interior de ~14 a 23 cm, selladas en las juntas con mortero hidráulico; sistema construido en el siglo I a.C. y comienzos del I d.C., alimentado por siete manantiales (Ain Mousa entre ellos).",
+      "source": "Charles R. Ortloff, \"Hydraulic Engineering at 100 BC–AD 300 Nabataean Petra (Jordan)\", Water (MDPI), 2020",
+      "url": "https://www.mdpi.com/2073-4441/12/12/3498"
+    },
+    {
+      "claim": "El túnel de Al Mudhlim, excavado en la roca por los nabateos, mide 88 metros y desviaba las crecidas repentinas del wadi hacia el Wadi Mudhlim para que no entraran por el Siq; junto a él, la presa de Bab as-Siq.",
+      "source": "Petra Development and Tourism Region Authority, sitio oficial visitpetra.jo, ficha \"Al Mudhlim Tunnel and Bab as Siq Dam\"",
+      "url": "https://www.visitpetra.jo/en/Location/101"
+    },
+    {
+      "claim": "\"The last fatal flash flood struck Petra in 1963 when 22 French tourists and a local guide were killed by rapidly rising waters\"; tras la tragedia, el Departamento de Antigüedades de Jordania construyó una presa para impedir que el agua entrara en el desfiladero. La presa actual data de 1964 y se levantó sobre la estructura nabatea original.",
+      "source": "Arab News / AFP, \"In Jordan's ancient Petra, sirens warn of flash floods\"; fecha de 1964 y reconstrucción sobre la obra nabatea en visitpetra.jo y en la documentación de Ueli Bellwald recogida por Universes in Universe",
+      "url": "https://www.arabnews.com/node/1406666/amp"
+    }
+  ],
+  "do_not_use": [
+    "\"Petra fue descubierta en 1812 por Johann Ludwig Burckhardt\": nunca estuvo perdida. Los bedul y otras tribus locales vivían en el sitio y lo conocían; Burckhardt fue el primer europeo de la época moderna en describirla. Además, ese giro (\"el lugar que nunca estuvo perdido\") ya está usado en la entrada de Angkor del 27 de agosto: no repetirlo.",
+    "\"El Tesoro (Al-Khazneh) guardaba el tesoro de un faraón\": el nombre viene de una leyenda beduina sobre la urna de la fachada; el edificio es funerario, probablemente la tumba del rey Aretas IV.",
+    "Cifra cerrada de población de Petra. DESCARTADA en esta investigación: Ortloff da ~20.000 habitantes en su artículo de 2020 (MDPI) y 30.000 en el de 2005. Dos publicaciones del mismo autor no coinciden, así que la pieza no da ninguna cifra de habitantes.",
+    "Longitud de la conducción desde Ain Mousa. DESCARTADA: el artículo de 2020 habla de unos 14 km hasta la entrada del Siq más ~2 km adicionales, mientras que el de 2005 sitúa el manantial a unos 7 km de Wadi Mousa. No se usa ninguna distancia.",
+    "La altura de 12,8 metros. DESCARTADA: el sitio oficial visitpetra.jo la atribuye al túnel y Universes in Universe a la presa. Se usa solo la longitud del túnel (88 m), que ambas fuentes sostienen (Universes da ~90 m, cifra compatible).",
+    "\"Cada depósito medía un pletro de lado\" (unos 30 m). Lo dice Diodoro, pero es su propia cifra y no está respaldada por hallazgos arqueológicos: no se cita.",
+    "\"Los nabateos eran nómadas primitivos sin técnica\": construyeron presas, conducciones a presión parcial, terrazas de cultivo y una ciudad tallada en roca. La renuncia a las casas era una decisión legal y estratégica, no una carencia.",
+    "\"Los nabateos mantuvieron siempre su ley de no construir casas\": la abandonaron, y Petra es la prueba. Contar la ley sin decir que la rompieron falsea el punto de la pieza.",
+    "\"Los nabateos inventaron el hormigón hidráulico\" o \"la presa\": ninguna de las dos cosas; usaron mortero hidráulico ya conocido en el Mediterráneo.",
+    "\"Murieron 23 franceses en 1963\": fueron 22 turistas franceses y un guía local. La cifra combinada de 23 borra al guía.",
+    "\"Indiana Jones y la última cruzada se rodó dentro del Tesoro\": solo la fachada; el interior es una sala vacía tallada en la roca. Dato irrelevante para la pieza y falso tal como circula."
+  ],
+  "status": "draft"
+}

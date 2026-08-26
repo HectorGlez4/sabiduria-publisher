@@ -1,0 +1,65 @@
+{
+  "id": "2026-09-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "\"Hombre soy: nada humano me es ajeno.\"",
+    "body": [
+      "Es el verso 77 de una comedia latina, Heautontimorumenos, que se estrenó en Roma en los juegos Megalenses del año 163 antes de Cristo. La escribió Terencio, autor de seis comedias, las seis conservadas completas hasta hoy: un caso raro en el teatro antiguo. La escena es una conversación de vecinos. Un viejo llamado Cremes lleva rato interrogando a Menedemo, que se castiga a sí mismo trabajando la tierra de sol a sol. Menedemo se harta y le pregunta si tiene tanto tiempo libre como para ocuparse de asuntos ajenos. Y entonces Cremes contesta con la frase.",
+      "Es decir: no es un manifiesto. Es la excusa de un entrometido, dicha para salir del paso. El público romano, sin embargo, la oyó por encima del personaje. San Agustín, más de cinco siglos después, escribió en una de sus cartas (155, 14) que al oírla los teatros enteros rompían en aplausos. Cicerón la citó dos veces en su obra, y Séneca también. Un detalle más para el que quiera buscarla: en las ediciones latinas suele imprimirse \"humani nil\", no \"nihil\", que es la forma que circula.",
+      "La frase sobrevivió a quien la dice. Veintidós siglos después la seguimos usando en serio, casi siempre sin saber que sale de una comedia y que quien la pronuncia está defendiendo su derecho a preguntar de más. Tal vez ahí esté lo interesante: la línea funciona como excusa y como principio a la vez, y de qué lado cae depende por completo de para qué se use."
+    ],
+    "question": "¿Cuándo tu interés por otra persona fue cuidado y cuándo fue solo entrometerte?",
+    "subject": "Terencio",
+    "quote": {
+      "text": "Hombre soy: nada humano me es ajeno.",
+      "author": "Terencio",
+      "work": "Heauton Timorumenos, v. 77",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "El texto latino es el verso 77 del Heauton Timorumenos de Terencio: \"homo sum: humani nil a me alienum puto\". Lo pronuncia Cremes, un viejo entrometido, como respuesta defensiva a Menedemo, que acaba de preguntarle si tiene tanto tiempo libre como para ocuparse de asuntos ajenos que no le conciernen. La frase recibió después una interpretación mucho más amplia que su contexto original.",
+      "source": "Wikipedia en inglés, artículo \"Homo sum, humani nihil a me alienum puto\"",
+      "url": "https://en.wikipedia.org/wiki/Homo_sum,_humani_nihil_a_me_alienum_puto"
+    },
+    {
+      "claim": "Cicerón la cita dos veces (De legibus 1.33 y De officiis 1.29-30); san Agustín, en Cartas 155, 14, refiere que \"los teatros enteros rompían en aplausos\" (theatra tota... applausisse) al oírla; Séneca también la recoge. Usuarios posteriores: Montaigne, Marx, Dostoievski, Fielding y George Eliot.",
+      "source": "Wikipedia en inglés, artículo \"Homo sum, humani nihil a me alienum puto\"",
+      "url": "https://en.wikipedia.org/wiki/Homo_sum,_humani_nihil_a_me_alienum_puto"
+    },
+    {
+      "claim": "Confirmación independiente del verso 77 y del contexto dramático: Cremes lo dice defensivamente ante el reproche de Menedemo por meterse en lo que no le incumbe. La obra se sitúa en el año 163 a.C.",
+      "source": "Wikipedia en inglés, artículo \"Heauton Timorumenos\"",
+      "url": "https://en.wikipedia.org/wiki/Heauton_Timorumenos"
+    },
+    {
+      "claim": "Edición académica en español con introducción, versión y notas de José Juan Del Col (Instituto Superior Juan XXIII, Bahía Blanca): sitúa el estreno en los juegos Megalenses del 163 a.C., bajo la edilidad de Lucio Cornelio Léntulo y Lucio Valerio Flaco; traduce el verso 77 como \"Soy hombre; y por lo tanto, nada que sea humano me resulta extraño\", puesto en boca de Cremes tras la pregunta de Menedemo (\"¿tienes tanto tiempo libre como para ocuparte en asuntos ajenos?\"); y consigna que la citaron Cicerón, Séneca y san Agustín, y que al oírse en el teatro el público prorrumpió en grandes aplausos.",
+      "source": "Terencio, Heautontimorumenos (El atormentador de sí mismo), introducción, versión y notas de José Juan Del Col, PDF institucional",
+      "url": "https://juan23.edu.ar/delcol/pdf/terencio_heautontimorumenos.pdf"
+    },
+    {
+      "claim": "Terencio escribió exactamente seis comedias, las seis conservadas completas; las didascalias fechan el Heauton Timorumenos en 163 a.C. La tradición biográfica antigua (la Vita Terenti transmitida en el comentario de Donato y atribuida a Suetonio) lo hace nacido en Cartago y esclavo del senador P. Terencio Lucano, que lo educó y lo liberó, pero la erudición moderna considera esa biografía en buena medida conjetural, reconstruida a partir de las propias obras y de las didascalias. Las fechas de nacimiento (c. 184 o c. 194 a.C.) y de muerte (159 o 158 a.C.) están en discusión, y el cognomen \"Afer\" no denota necesariamente origen africano.",
+      "source": "Wikipedia en inglés, artículo \"Terence\"",
+      "url": "https://en.wikipedia.org/wiki/Terence"
+    }
+  ],
+  "do_not_use": [
+    "Atribuirla a Karl Marx. Marx la dio como su máxima favorita en el cuestionario \"Confesión\" de 1865 y de ahí viene el enredo, pero la frase es de Terencio y le lleva más de dos mil años de ventaja. DESCARTADA como atribución en esta investigación.",
+    "Atribuirla a Cicerón o a Séneca. Los dos la citaron —Cicerón en De legibus 1.33 y en De officiis 1.29-30—, y esa es exactamente la vía por la que la frase llegó a la posteridad desprendida de su autor. Citarlos como fuente, nunca como autores.",
+    "Presentarla como el credo humanista del propio Terencio. En la obra no la dice el autor: la dice Cremes, un viejo entrometido, para justificar que se mete en los asuntos de su vecino después de que este le reprocha justamente eso. Ese es el giro de la pieza y no puede omitirse.",
+    "La versión \"nada humano me es indiferente\". Cambia el sentido: alienum es ajeno, extraño, de otro; no indiferente. La traducción académica cotejada (Del Col) dice \"nada que sea humano me resulta extraño\", y la forma tradicional en español es \"nada humano me es ajeno\". La tarjeta usa esta última, que es la de uso corriente, y se deja constancia aquí de que es una versión tradicional y no una traducción literal.",
+    "Dar el latín como \"humani nihil\" y presentarlo como la lectura del texto. Las ediciones de Terencio suelen imprimir \"homo sum: humani nil a me alienum puto\"; \"nihil\" es la forma que circula y con la que se titula habitualmente la sentencia, pero no la que se lee en el verso.",
+    "\"Terencio nació esclavo en Cartago y lo liberó un senador romano.\" Lo cuenta la Vita Terenti transmitida por Donato y atribuida a Suetonio, pero la erudición moderna considera esa biografía en buena medida conjetural, deducida de las propias comedias. DESCARTADO como hecho para esta pieza, aunque sea el dato más atractivo de todos: si alguna vez se usa, tiene que ir como \"la tradición antigua cuenta que…\". Tampoco vale apoyarlo en el cognomen \"Afer\": no denota necesariamente origen africano.",
+    "Fechas cerradas de nacimiento y muerte. Las fuentes se reparten entre c. 184 y c. 194 a.C. para el nacimiento y entre 159 y 158 a.C. para la muerte. Por eso la tarjeta acredita obra y año de estreno, no los años de vida del autor.",
+    "Presentar el aplauso del teatro como testimonio de un contemporáneo. Lo cuenta san Agustín en Cartas 155, 14, más de cinco siglos después del estreno.",
+    "\"Es la primera declaración humanista de la historia\" o cualquier superlativo equivalente. No es verificable y además contradice el contexto real de la frase.",
+    "Traducir el título como \"El que se atormenta a sí mismo\" y atribuirle a Terencio la invención del argumento sin comprobarlo: la relación de esta comedia con su modelo griego no se verificó en esta sesión. En la pieza se usa solo el título en griego transliterado y su versión corriente en español, \"El atormentador de sí mismo\"."
+  ],
+  "status": "draft"
+}

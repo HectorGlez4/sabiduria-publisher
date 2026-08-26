@@ -1,0 +1,58 @@
+{
+  "id": "2026-09-04-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "hook": "La pantalla anunció cinco misiles nucleares en camino. El hombre de guardia decidió que la máquina mentía.",
+    "body": [
+      "Poco después de la medianoche del 26 de septiembre de 1983, en un búnker llamado Serpujov-15, el sistema de satélites Oko anunció el lanzamiento de un misil estadounidense. Enseguida, cuatro más. De guardia estaba el teniente coronel Stanislav Petrov.",
+      "Informó a sus superiores que era una falla del sistema. Se apoyó en dos cosas: nadie empieza una guerra nuclear con cinco misiles, y los radares de tierra no confirmaban nada. Tenía razón. Era luz del sol reflejada en nubes de gran altura, alineadas con la órbita de los satélites. No hubo condecoración: le pusieron una reprimenda por llevar mal el diario de guardia.",
+      "El episodio se hizo público en 1998, cuando el general Yuri Votintsev lo contó en sus memorias: quince años después. Petrov nunca aceptó que lo llamaran héroe. Decía que estuvo en el lugar adecuado en el momento adecuado y que solo hacía su trabajo. Murió el 19 de mayo de 2017 y la noticia tardó cuatro meses en salir de su casa."
+    ],
+    "question": "¿Qué decisión tuya, sin testigos, resultó ser la correcta?",
+    "subject": "Stanislav Petrov y la falsa alarma nuclear soviética del 26 de septiembre de 1983"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "STANISLAV PETROV",
+    "subtitle": "Quince años después, un general lo contó en sus memorias y el mundo se enteró.",
+    "body": "26 de septiembre de 1983, pasada la medianoche. El sistema de satélites soviético anuncia un misil estadounidense, y enseguida cuatro más. El oficial de guardia informa que es una falla. Era luz del sol reflejada en nubes altas. Lo reprendieron por llevar mal el diario de guardia.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Fecha, hora, lugar y secuencia: el 26 de septiembre de 1983, poco después de la medianoche, el teniente coronel Stanislav Petrov era el oficial de guardia en el centro de mando de Serpujov-15, del sistema satelital de alerta temprana Oko. El sistema notificó primero un misil balístico intercontinental y después otros cuatro, cinco en total. Petrov lo reportó como falla del sistema. La causa real fue una alineación inusual de la luz solar sobre nubes de gran altitud con las órbitas Molniya de los satélites. El general Yuri Votintsev, que recibió su informe, lo dio a conocer públicamente en 1998. Petrov recibió una reprimenda por errores en el diario de guardia, ningún premio, y fue reasignado a un puesto menos sensible.",
+      "source": "Wikipedia en inglés, «1983 Soviet nuclear false alarm incident»",
+      "url": "https://en.wikipedia.org/wiki/1983_Soviet_nuclear_false_alarm_incident"
+    },
+    {
+      "claim": "Datos biográficos: nació el 7 de septiembre de 1939 en Vladivostok; sirvió en las Fuerzas de Defensa Aérea soviéticas entre 1972 y 1984; murió el 19 de mayo de 2017 de neumonía y su muerte no se conoció ampliamente hasta septiembre de ese año. Premios: World Citizen Award de la Association of World Citizens (21 de mayo de 2004, y una segunda entrega en enero de 2006 en Nueva York), Premio de los Medios Alemanes (2012) y Premio de la Paz de Dresde (17 de febrero de 2013). Declaraciones propias: «Es amable de su parte considerarme un héroe. No sé si lo soy» y «todo aquello no significaba nada para mí: era mi trabajo».",
+      "source": "Wikipedia en inglés, «Stanislav Petrov»",
+      "url": "https://en.wikipedia.org/wiki/Stanislav_Petrov"
+    },
+    {
+      "claim": "Razonamiento de Petrov y consecuencias, en sus propias palabras: describe la sirena y la pantalla roja, el segundo, tercero, cuarto y quinto misil, y explica que desconfió porque los radares no detectaban nada y porque le pareció imposible que la alerta atravesara en segundos todos los puestos de comprobación. La reprimenda fue por el diario de guardia, no por su decisión. Él mismo calificaba su certeza de «cincuenta y cincuenta».",
+      "source": "BBC News, «Stanislav Petrov: The man who may have saved the world» (2013)",
+      "url": "https://feeds.bbci.co.uk/news/world-europe-24280831"
+    },
+    {
+      "claim": "Matiz sobre el relato heroico: las alertas se transmitían automáticamente al Estado Mayor soviético, de modo que existían más capas de decisión por encima de Petrov; su juicio fue, en sus propias palabras, «una conjetura informada» apoyada en la ausencia de confirmación por radar. Él sostenía que los extranjeros exageraban su heroísmo y que solo estuvo en el lugar y el momento adecuados; y que no hubo reconocimiento oficial porque alguien habría tenido que cargar con la culpa del fallo del sistema.",
+      "source": "Russia Matters (Harvard Kennedy School, Belfer Center), «Nuclear Near Miss: Remembering the ‘Man Who Saved the World’»",
+      "url": "https://www.russiamatters.org/blog/nuclear-near-miss-remembering-man-who-saved-world"
+    }
+  ],
+  "do_not_use": [
+    "«Petrov salvó el mundo él solo» o «tenía el dedo sobre el botón». Su función era informar, no lanzar: no había ningún botón a su alcance. Además, las alertas del sistema se transmitían automáticamente al Estado Mayor, y por encima de él quedaban varias capas de decisión, incluida la política. La formulación defendible es que su informe evitó que la alerta subiera por la cadena como ataque confirmado. Él mismo rechazaba el relato heroico.",
+    "«Lo castigaron por desobedecer» o «lo degradaron por no dar la alarma». La reprimenda documentada fue por errores en el diario de guardia. Lo que no hubo fue premio, y su propia explicación es que reconocerlo habría obligado a culpar a alguien por el fallo del sistema. Presentarlo como represalia por la decisión no está sostenido por las fuentes.",
+    "Confundirlo con Vasili Arjípov. Son dos hombres y dos episodios distintos: Arjípov estaba a bordo del submarino soviético B-59 durante la crisis de los misiles de 1962. La confusión circula mucho y arruina la pieza entera.",
+    "«Fue un error informático» o «un fallo de software». La causa documentada es óptica: luz solar reflejada en nubes de gran altitud, en una alineación poco frecuente con las órbitas Molniya de los satélites. El sistema funcionaba; lo que interpretó mal fue lo que estaba viendo.",
+    "«La ONU le entregó una medalla». El World Citizen Award lo concede la Association of World Citizens, una organización con sede en San Francisco. Una de las entregas se hizo en Nueva York, en el edificio de Naciones Unidas, que no es lo mismo que un premio de la ONU. El galardón con cifra verificable es el Premio de la Paz de Dresde, del 17 de febrero de 2013.",
+    "«El mundo lo supo enseguida» o cualquier fecha anterior a 1998 para la difusión del caso. Petrov guardó silencio y el episodio salió a la luz cuando el general Votintsev publicó sus memorias, quince años después.",
+    "«Murió en septiembre de 2017». Murió el 19 de mayo de 2017; la noticia se difundió en septiembre. El dato interesante es justamente ese desfase, así que equivocar la fecha lo destruye.",
+    "DESCARTADO AL VERIFICAR: los veintitrés minutos que Petrov dice haber esperado y el número exacto de puestos de comprobación que la alerta atravesó (las fuentes dan veintiocho, veintinueve y treinta). Ambos datos vienen de su propio testimonio años después y no coinciden entre fuentes: la pieza no da ninguna de las dos cifras.",
+    "DESCARTADO AL VERIFICAR: la candidatura al Premio Nobel de la Paz que se le atribuye en muchas notas de prensa. No se pudo confirmar en ninguna fuente sólida en esta sesión, así que no se menciona.",
+    "DESCARTADO AL VERIFICAR: presentar el episodio como el único momento en que el mundo estuvo cerca de una guerra nuclear. Los especialistas lo cuentan como uno de varios incidentes de la Guerra Fría, no como un punto único. Decirlo en superlativo es falso y además innecesario: la noche del 26 de septiembre se sostiene sola.",
+    "No usar imágenes, cifras de víctimas hipotéticas ni lenguaje catastrofista. El tono de la pieza es el de un hombre solo en un turno de noche haciendo bien su trabajo, no el de un thriller."
+  ],
+  "status": "draft"
+}

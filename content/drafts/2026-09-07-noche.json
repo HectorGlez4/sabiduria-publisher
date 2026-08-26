@@ -1,0 +1,71 @@
+{
+  "id": "2026-09-07-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "El relato del diluvio y el arca se leyó por primera vez en 1872, y no fue en una Biblia: fue en una tablilla de barro.",
+    "body": [
+      "El 3 de diciembre de 1872, ante la Sociedad de Arqueología Bíblica de Londres, un empleado del Museo Británico llamado George Smith leyó la traducción de una tablilla de barro del siglo VII antes de Cristo, sacada de las ruinas de Nínive. Contaba un diluvio, un barco, un hombre que se salva y un ave enviada a buscar tierra firme. Entre el público estaba el primer ministro Gladstone. La tablilla llevaba unos veinte años guardada en el museo, sin que nadie pudiera leerla.",
+      "Smith no era arqueólogo ni había pisado una universidad. A los catorce años entró de aprendiz en un taller de grabado de billetes y pasaba las horas libres en las salas del museo, aprendiendo cuneiforme por su cuenta, hasta que lo contrataron para reparar tablillas. Al texto le faltaba un pedazo. Un periódico, el Daily Telegraph, le pagó mil guineas para ir a buscarlo. Empezó a excavar en Nínive el 7 de mayo de 1873 y el 14 encontró un fragmento con diecisiete líneas: las que faltaban. Murió tres años después, a los treinta y seis, volviendo de su tercera expedición.",
+      "Esa tablilla es la undécima del Poema de Gilgamesh, y el hombre que sobrevive al agua se llama Utnapishtim. No prueba ni desmiente nada sobre la Biblia: muestra que la historia ya circulaba antes, en otra lengua y con otros nombres. Y muestra otra cosa, más incómoda. Estuvo veinte años al alcance de la mano, catalogada y a salvo, esperando a alguien que no tenía credenciales para leerla."
+    ],
+    "question": "¿Qué tienes delante desde hace años sin haber aprendido a leerlo?",
+    "subject": "La Tablilla del Diluvio (Gilgamesh XI) y George Smith"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "LA TABLILLA DEL DILUVIO",
+    "subtitle": "La leyó primero un aprendiz de grabador de billetes",
+    "body": "Barro cocido, siglo VII antes de Cristo, hallado en Nínive. Cuenta un diluvio, un barco y un ave enviada a buscar tierra. Llevaba veinte años en el Museo Británico sin que nadie pudiera leerla. La descifró en 1872 un aprendiz de grabador de billetes que aprendió cuneiforme por su cuenta.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "George Smith (26 de marzo de 1840 – 19 de agosto de 1876, Alepo, a los 36 años) fue aprendiz de grabador de billetes desde los catorce; identificó en el Museo Británico un relato del diluvio y lo presentó ante la Sociedad de Arqueología Bíblica en 1872, con el primer ministro Gladstone entre los asistentes; un periódico costeó la expedición y al quinto día de excavar en Nínive, en mayo de 1873, halló el fragmento que completaba el relato.",
+      "source": "Encyclopaedia Britannica, entrada «George Smith (British Assyriologist)»",
+      "url": "https://www.britannica.com/biography/George-Smith-British-Assyriologist"
+    },
+    {
+      "claim": "Fecha exacta de la conferencia: 3 de diciembre de 1872, ante la Society of Biblical Archaeology de Londres.",
+      "source": "Christian History Institute, «George Smith Announced His Stunning Gilgamesh Find»",
+      "url": "https://christianhistoryinstitute.org/dailystory/permalink/george-smith-announced-his-stunning-gilgamesh-find"
+    },
+    {
+      "claim": "El editor del Daily Telegraph, Edwin Arnold, financió la expedición con mil guineas; Smith empezó a trabajar el 7 de mayo de 1873 y el 14 de mayo halló fragmentos con «la mayor parte de diecisiete líneas» del relato del diluvio; murió de disentería en Alepo el 19 de agosto de 1876, a los 36 años, de regreso de su tercera expedición.",
+      "source": "Smithsonian Magazine, «Epic Hero»",
+      "url": "https://www.smithsonianmag.com/history/epic-hero-153362976/"
+    },
+    {
+      "claim": "La Tablilla del Diluvio es la K.3375 del Museo Británico, del siglo VII a.C., procedente de la biblioteca de Asurbanipal (rey del 668 al 631 a.C.) en Nínive, actual Mosul.",
+      "source": "Tyndale House, «Artefact in focus: The Flood Tablet»",
+      "url": "https://tyndalehouse.com/2024/10/09/the-flood-tablet/"
+    },
+    {
+      "claim": "El relato del diluvio ocupa la tablilla XI del Poema de Gilgamesh; el superviviente se llama Utnapishtim; el episodio está adaptado del poema acadio más antiguo de Atrahasis, con pasajes casi literales, y hay menciones al diluvio en poemas sumerios anteriores a la versión estándar babilónica.",
+      "source": "Wikipedia en inglés, «Gilgamesh flood myth»",
+      "url": "https://en.wikipedia.org/wiki/Gilgamesh_flood_myth"
+    },
+    {
+      "claim": "La biblioteca de Asurbanipal aportó más de 30.000 tablillas cuneiformes halladas en las ruinas de Nínive, excavadas entre 1851 y 1932; de ahí que la tablilla llevara unos veinte años en Londres cuando Smith la leyó en 1872.",
+      "source": "British Museum, proyecto «What was Ashurbanipal's Library?»",
+      "url": "https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library"
+    },
+    {
+      "claim": "Smith fue aprendiz en la casa de grabado de billetes Bradbury and Evans, estudiaba las tablillas del museo en sus horas de comida y fue contratado hacia 1866 como reparador de tablillas; el episodio en que se habría desnudado de emoción procede de E. A. Wallis Budge, cuyo testimonio los especialistas consideran poco fiable.",
+      "source": "Thin End of the Wedge (pódcast de asiriología), episodio 49: «George Smith: the man behind the headlines», transcripción",
+      "url": "https://www.wedgepod.org/49-george-smith-the-man-behind-the-headlines-transcript/"
+    }
+  ],
+  "do_not_use": [
+    "«Smith se puso a correr por la sala y empezó a desnudarse de la emoción al leer la tablilla»: la anécdota la cuenta E. A. Wallis Budge décadas después y los asiriólogos advierten que su relato contiene errores demostrables. Descartada: circula como si fuera testimonio directo y no lo es.",
+    "«El Poema de Gilgamesh es la historia más antigua del mundo»: el relato del diluvio de la tablilla XI está adaptado del poema de Atrahasis, anterior, y hay menciones al diluvio en poemas sumerios previos. La versión estándar babilónica es una compilación posterior. Formulación defendible: el relato ya circulaba antes en otras lenguas y con otros nombres.",
+    "«La tablilla prueba que el diluvio bíblico ocurrió» y su contraria, «demuestra que la Biblia lo copió»: lo que hay es una tradición literaria mesopotámica compartida y anterior. El post se queda en eso y no entra en el debate teológico.",
+    "«Fue The Times quien financió la expedición»: lo repite alguna divulgación, pero Britannica y Smithsonian atribuyen la financiación al Daily Telegraph, cuyo editor Edwin Arnold puso las mil guineas. Versión descartada por contradecir las fuentes principales.",
+    "La causa de la muerte como dato cerrado: unas fuentes dicen disentería y otras peste y agotamiento. Descartada: se dice solo que murió en Alepo el 19 de agosto de 1876, a los 36 años, de regreso de su tercera expedición.",
+    "«George Smith descubrió el Poema de Gilgamesh» o «lo desenterró en Nínive»: las tablillas las habían excavado Layard y Rassam en los años cincuenta del siglo XIX y estaban en el Museo Británico. Lo que hizo Smith fue identificar y traducir el texto; solo el fragmento de 1873 lo excavó él.",
+    "Confundir la Tablilla del Diluvio (K.3375, Museo Británico) con la tablilla de Nimrud K.3751, que es otro objeto y otro texto.",
+    "«El texto es sumerio»: la tablilla XI está en acadio. Existe un relato sumerio del diluvio, con Ziusudra, pero es otra obra; tampoco conviene tratar a Utnapishtim, Atrahasis y Ziusudra como el mismo personaje sin matizar que son nombres de tradiciones distintas.",
+    "Dar el número de tablillas de la biblioteca de Asurbanipal como cifra exacta: las fuentes dicen «más de 30.000» hallazgos de Nínive, y el propio Museo Británico advierte que no todas pertenecen a la biblioteca real."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-08-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "Movieron bloques de ocho toneladas sin rueda, sin metal y sin una sola pieza de barro cocido.",
+    "body": [
+      "En el sureste de Turquía, entre el 9600 y el 8200 antes de Cristo, alguien levantó círculos de pilares de piedra en forma de T. Los mayores miden cinco metros y medio y pesan unas ocho toneladas, y están tallados con zorros, escorpiones, buitres y serpientes. Son seis mil años anteriores a Stonehenge.",
+      "Del sitio se han recuperado más de cien mil fragmentos de hueso animal. Todos son de especies salvajes: gacela sobre todo, jabalí, ciervo, aves. Quienes lo construyeron todavía cazaban. El trigo domesticado aparece en la región unos quinientos años después. Primero el monumento; después, el campo sembrado.",
+      "Y seguimos sin saber qué era. La UNESCO lo inscribió en 2018 evitando la palabra templo: los llama edificios comunales. Un arqueólogo sostiene desde 2011 que eran casas. Lo más antiguo que construimos en grande todavía no tiene nombre seguro."
+    ],
+    "question": "¿Qué se construye primero, cuando todavía no hay nada resuelto?",
+    "subject": "Göbekli Tepe"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "GÖBEKLI TEPE",
+    "subtitle": "Círculos de piedra alzados seis mil años antes de Stonehenge",
+    "body": "Pilares en forma de T, de cinco metros y medio y ocho toneladas, tallados con zorros, escorpiones y buitres. Quienes los alzaron no tenían cerámica, ni metal, ni rueda: comían gacela salvaje. El trigo sembrado llegó a la región quinientos años después.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Datación entre 9600 y 8200 a.C.; pilares en T de hasta 5,50 m tallados con animales salvajes; los constructores fueron cazadores-recolectores del Neolítico precerámico; inscripción en la Lista del Patrimonio Mundial en 2018; la UNESCO describe las estructuras como 'monumental communal buildings (enclosures)' usadas probablemente en rituales, y evita la palabra templo.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, ficha oficial de Göbekli Tepe",
+      "url": "https://whc.unesco.org/en/list/1572"
+    },
+    {
+      "claim": "Los pilares centrales miden unos 5,5 m y pesan unas 8 toneladas; ocupación de c. 9500/9250 a 8000/7750 cal a.C.; más de diez grandes edificios especiales (A-I); el sitio fue registrado en un sondeo de las universidades de Chicago y Estambul en los años sesenta y no se reconoció su arquitectura hasta 1994, con Klaus Schmidt, Murat Akman y Michael Morsch; las excavaciones empezaron en 1995 y siguen.",
+      "source": "The Tepe Telegrams, blog del proyecto de excavación (Instituto Arqueológico Alemán, DAI)",
+      "url": "https://www.dainst.blog/the-tepe-telegrams/the-research-project/"
+    },
+    {
+      "claim": "El sondeo de los años sesenta dio el montículo por un cementerio medieval abandonado; Schmidt leyó ese informe y visitó el lugar en 1994; más de 100.000 fragmentos óseos, todos de animales salvajes, con la gacela por encima del 60 %; el trigo domesticado aparece en un poblado cercano unos quinientos años después de la construcción.",
+      "source": "Smithsonian Magazine, 'Gobekli Tepe: The World's First Temple?'",
+      "url": "https://www.smithsonianmag.com/history/gobekli-tepe-the-worlds-first-temple-83613665/"
+    },
+    {
+      "claim": "E. B. Banning, 'So Fair a House: Göbekli Tepe and the Identification of Temples in the Pre-Pottery Neolithic of the Near East', Current Anthropology 52/5 (2011), pp. 619-660, sostiene que las estructuras eran viviendas ricas en símbolos, no templos. El equipo de excavación responde con la escasez de agua (cisternas de unos 153 m³, manantial más cercano a 5 km) y la ausencia casi total de figurillas de barro, habituales en los poblados contemporáneos.",
+      "source": "The Tepe Telegrams, 'A Sanctuary … or so fair a House?' (24 de enero de 2017)",
+      "url": "https://www.dainst.blog/the-tepe-telegrams/2017/01/24/a-sanctuary-or-so-fair-a-house/"
+    },
+    {
+      "claim": "El equipo de excavación publicó una refutación de la lectura del pilar 43 ('piedra de los buitres') como registro de un impacto cometario del Dryas Reciente.",
+      "source": "J. Notroff, O. Dietrich y cols., 'More than a Vulture: A Response to Sweatman and Tsikritsis' (2017)",
+      "url": "https://www.dainst.blog/the-tepe-telegrams/2017/07/03/more-than-a-vulture-a-response-to-sweatman-and-tsikritsis/"
+    }
+  ],
+  "do_not_use": [
+    "'El templo más antiguo del mundo' como hecho. Es la etiqueta periodística del sitio y las fuentes serias la esquivan: la UNESCO lo inscribió en 2018 hablando de 'edificios comunales', y la función religiosa es una interpretación, no un dato. La formulación defendible es 'el conjunto megalítico monumental más antiguo conocido'.",
+    "'Siete mil años antes que Stonehenge' o 'anterior a las pirámides en diez mil años'. Con la fecha alta de la UNESCO (9600 a.C.) y el inicio de Stonehenge hacia el 3000 a.C. la diferencia es de unos 6.600 años: se dice 'seis mil', no siete mil. Frente a Guiza (c. 2560 a.C.) sí son unos siete mil.",
+    "'Lo enterraron a propósito para ocultarlo'. El relleno intencional de los recintos fue la interpretación de Klaus Schmidt y no está cerrado: hay estudios recientes que apuntan a un relleno por procesos naturales. Si se menciona, va como hipótesis del excavador.",
+    "'Vivían allí todo el año' y también 'no vivía nadie allí'. VERSIÓN DESCARTADA EN ESTA SESIÓN: se consideró montar el giro sobre 'en realidad sí era un poblado' y se descartó, porque el propio equipo de excavación argumenta lo contrario (cisternas de unos 153 m³, insuficientes para el verano sin lluvia; manantial a 5 km; ausencia casi total de figurillas de barro). El asunto sigue abierto y el post solo afirma que la discusión existe.",
+    "El pilar 43 como crónica de un impacto de cometa en el Dryas Reciente (tesis de Sweatman y Tsikritsis). El equipo de excavación publicó una refutación en 2017.",
+    "Extraterrestres, la Atlántida y la 'civilización perdida anterior a la historia'. Göbekli Tepe es el imán pseudoarqueológico más grande del mundo y arrastra a la página entera si se le da entrada.",
+    "'Solo se ha excavado el 5 %' como cifra cerrada. El dato circula atribuido a Schmidt, sin actualización desde entonces. Decir 'una parte pequeña del montículo'.",
+    "'No conocían la agricultura' en términos absolutos. Lo verificable es que la fauna consumida era toda salvaje y que el trigo domesticado aparece en la zona unos quinientos años más tarde; en el sitio sí se procesaban cereales silvestres a gran escala. Se afirma lo que hay: no había cerámica, ni metal, ni rueda, ni animales domésticos en la mesa.",
+    "Una fecha fundacional exacta. La UNESCO da 9600-8200 a.C. y el Instituto Arqueológico Alemán 9500/9250-8000/7750 cal a.C. Se usa el rango, nunca un año.",
+    "'Klaus Schmidt descubrió el sitio'. El montículo ya figuraba en un sondeo de las universidades de Chicago y Estambul de los años sesenta, que lo tomó por un cementerio medieval. Schmidt leyó ese informe y fue quien reconoció qué era, en 1994.",
+    "'Göbekli Tepe inventó la agricultura' o 'el templo creó la civilización'. Es la hipótesis de Schmidt sobre la causalidad, discutida y no demostrada. El orden temporal sí es afirmable; la causa, no."
+  ],
+  "status": "draft"
+}

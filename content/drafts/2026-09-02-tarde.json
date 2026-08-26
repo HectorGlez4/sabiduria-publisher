@@ -1,0 +1,75 @@
+{
+  "id": "2026-09-02-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "\"Se vive con la esperanza de llegar a ser un recuerdo.\"",
+    "body": [
+      "Antonio Porchia nació en Conflenti, en Calabria, en 1885, y emigró muy joven a Buenos Aires con su madre y sus hermanos. Fue cestero, carpintero, trabajador del puerto y tipógrafo. Publicó un solo libro, a los 58 años: Voces, en 1943, mil ejemplares costeados por él mismo. No se vendieron. Los guardó en casa de unos amigos de La Boca.",
+      "Terminó donándolos a la Sociedad Protectora de Bibliotecas Populares, que los repartió por bibliotecas rurales del país. Ahí lo encontró el escritor francés Roger Caillois, que le dijo que cambiaría todo lo que había escrito por esas líneas. En 1949 salió en París la traducción francesa, en una tirada de 950 ejemplares. André Breton escribió después que el pensamiento más dúctil en lengua española era, para él, el de aquel argentino.",
+      "Porchia nunca dio el libro por cerrado: en cada reedición añadía aforismos y retiraba otros. Murió en noviembre de 1968. La frase sobre el recuerdo la escribió un hombre que había regalado su obra entera sin saber jamás en qué manos iba a caer."
+    ],
+    "question": "¿De quién te gustaría ser un recuerdo?",
+    "subject": "Antonio Porchia",
+    "quote": {
+      "text": "Se vive con la esperanza de llegar a ser un recuerdo.",
+      "author": "Antonio Porchia",
+      "work": "Voces (1943)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "El aforismo \"Se vive con la esperanza de llegar a ser un recuerdo\" está en el texto de Voces, con esa redacción exacta.",
+      "source": "Texto íntegro de Voces, 12.ª edición, Edicial S. A., 1989, dedicada a Roger Caillois; incluye además la sección \"Voces nuevas\"",
+      "url": "https://pdfcoffee.com/voces-antonio-porchia-5-pdf-free.html"
+    },
+    {
+      "claim": "El mismo aforismo aparece, palabra por palabra, en dos antologías independientes entre sí, lo que descarta una errata de transcripción.",
+      "source": "Zenda, \"15 voces de Antonio Porchia\"; y la recopilación de aforismos de Un Sin Sentido, que además fecha la obra en 1943",
+      "url": "https://www.zendalibros.com/15-voces-de-antonio-porchia/"
+    },
+    {
+      "claim": "Primera edición de Voces en 1943, por la Asociación de Arte y Letras Impulso, con una tirada de mil ejemplares; los ejemplares sin vender se guardaron en casa de amigos de La Boca y después se donaron a la Sociedad Protectora de Bibliotecas Populares, que los repartió por bibliotecas rurales. Oficios: cestero, carpintero, trabajador del puerto, tipógrafo. Nacimiento en Conflenti (Calabria) en 1885 y muerte el 9 de noviembre de 1968. Frase de André Breton: \"El pensamiento más dúctil de expresión española es, para mí, el de Antonio Porchia, argentino\".",
+      "source": "Revista Poesía Más Poesía (Grupo Cero), monográfico sobre Antonio Porchia",
+      "url": "https://poesiamaspoesia.com/155-poesia-mas-poesia-antonio-porchia/"
+    },
+    {
+      "claim": "Porchia tenía 58 años al publicar su primer y único libro; donó gran cantidad de ejemplares a la Sociedad Protectora de Bibliotecas Populares; Roger Caillois lo tradujo al francés; en 1948 preparó una segunda edición con más aforismos y repitió la operación en reediciones sucesivas. Nació el 13 de noviembre de 1885 y murió el 9 de noviembre de 1968. Recoge la misma frase de Breton, con idéntica redacción.",
+      "source": "La Nación (Buenos Aires), \"Antonio Porchia, el inmigrante italiano que escribió un solo libro y se convirtió en best seller\", 14 de diciembre de 2021",
+      "url": "https://www.lanacion.com.ar/cultura/antonio-porchia-el-inmigrante-italiano-que-escribio-un-solo-libro-y-se-convirtio-en-best-seller-nid14122021/"
+    },
+    {
+      "claim": "Tirada de mil ejemplares por la editorial Impulso; los libros no se vendieron; Caillois le dijo \"Por esas líneas yo cambiaría todo lo que he escrito\"; tercera aparición de la frase de Breton sobre el pensamiento más dúctil; Porchia eliminaba aforismos de forma constante y la investigadora Laura Cerrato rescató en 1992 cerca de cincuenta voces descartadas.",
+      "source": "Jot Down Cultural Magazine, \"Porchia, el poeta que vivía entre voces\", octubre de 2017",
+      "url": "https://www.jotdown.es/2017/10/porchia-el-poeta-que-vivia-entre-voces/"
+    },
+    {
+      "claim": "La traducción francesa, Voix, se publicó en París por GLM en 1949, con tirada limitada de 950 ejemplares en papel vélin, en formato in-12 de 48 páginas; recoge unos trescientos aforismos y fue seguida de numerosas traducciones posteriores.",
+      "source": "Ficha bibliográfica del lote 254 (ejemplar n.º 242 de la edición original de Voix, GLM, París, 1949), casa de subastas Vermot et Associés",
+      "url": "https://www.vermotetassocies.com/lot/112291/14253300"
+    },
+    {
+      "claim": "Porchia murió en Vicente López, provincia de Buenos Aires, en 1968; trabajó de cestero y carpintero y tuvo una imprenta en San Telmo hasta 1936; sus primeros aforismos aparecieron en la publicación La Fragua.",
+      "source": "La Prensa (Buenos Aires), nota de Cultura sobre Antonio Porchia",
+      "url": "https://www.laprensa.com.ar/Antonio-Porchia-541300.note.aspx"
+    }
+  ],
+  "do_not_use": [
+    "\"Sé lo que te he dado, no sé lo que has recibido\": es la versión que circula en las listas de frases, pero el texto de Voces dice \"Qué te he dado, lo sé. Qué has recibido, no lo sé\". Es una reescritura, no una traducción: Porchia escribió en español y no hay original que traducir. Verificado contra el texto del libro.",
+    "Un año cerrado para su llegada a Argentina. Las fuentes se reparten entre 1902 y 1906, y ninguna aporta documento: por eso la pieza dice solo \"muy joven\". Descartado tras encontrar las dos fechas en fuentes de calidad equivalente.",
+    "\"Voces fue un éxito desde el principio\" o \"se convirtió en best seller en Argentina\". La primera edición de mil ejemplares no se vendió; el reconocimiento llegó desde Francia, seis años después, y las ventas grandes son muy posteriores.",
+    "\"Escribió un solo libro y no volvió a tocarlo\". Es justo lo contrario: añadió aforismos en la segunda edición de 1948 y en las siguientes, y retiró otros. En 1992 la investigadora Laura Cerrato rescató cerca de cincuenta voces que él mismo había descartado.",
+    "\"Roger Caillois lo descubrió y lo tradujo el mismo año\". Entre la edición argentina de 1943 y la francesa de GLM en 1949 hay seis años, y Caillois publicó antes selecciones sueltas en revistas. No comprimir la cronología.",
+    "Citar a André Breton diciendo \"el pensamiento más profundo\" o \"el más hondo\" de lengua española. Las tres fuentes consultadas coinciden en \"el más dúctil\", que es otra cosa y es la palabra que él eligió.",
+    "Atribuir a Porchia aforismos tomados de listas de frases de internet sin obra ni edición detrás. Voces no lleva numeración de aforismos y las recopilaciones online mezclan versiones de distintas ediciones; solo se usó una línea cotejada contra el texto del libro.",
+    "\"Era un obrero analfabeto\" o \"un poeta sin instrucción\". Fue tipógrafo e impresor, tuvo taller propio y publicó sus primeros textos en prensa: trabajaba con la letra todos los días.",
+    "Presentar la frase como consuelo sobre la muerte o como lema de superación personal. En Voces es una observación seca sobre para qué vive la gente, sin promesa ninguna.",
+    "Dar por buena la etiqueta de \"poeta maldito\" o \"ermitaño\" que arrastran algunas semblanzas: recibía visitas, trató con el grupo de artistas que lo empujó a publicar y colaboró con la revista Sur por mediación de Caillois."
+  ],
+  "status": "draft"
+}

@@ -352,6 +352,14 @@ def preflight(unit: dict, historial: list[dict] | None = None,
         problems.append("sin tarjeta: la regla de imagen exige la misma imagen en todas las redes")
 
     q = core.get("quote")
+    # Un quote_card sin cita reventaba en publish.py:101 con un KeyError a mitad
+    # del renderizado, DESPUES de pasar la comprobacion previa: la regla de abajo
+    # solo mira las citas que existen. Salio al migrar 8 piezas cuyo conversor no
+    # copio core.quote. Un fallo asi tiene que decir que le falta a la pieza.
+    if (unit.get("card") or {}).get("renderer") == "quote_card" and not q:
+        problems.append(
+            "tarjeta de cita sin core.quote: el renderizador la exige"
+        )
     if q and not q.get("attribution_verified"):
         problems.append(
             f"cita sin atribución verificada ({q.get('author', '?')}): "

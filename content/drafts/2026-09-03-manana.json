@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-03-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "hook": "En 1803 la vacuna contra la viruela cruzó el Atlántico dentro del cuerpo de veintidós niños.",
+    "body": [
+      "El 30 de noviembre de 1803 zarpó de A Coruña la corbeta María Pita. A bordo viajaban veintidós niños expósitos, de entre tres y nueve años. No existía forma de conservar la vacuna contra la viruela: para que llegara a América tenía que ir viva, pasando de brazo a brazo, de una pareja de niños a la siguiente, durante toda la travesía.",
+      "Con ellos iba Isabel Zendal Gómez, rectora de la Casa de Expósitos de A Coruña, incorporada a la expedición por real orden del 14 de octubre de 1803. Entre aquellos niños estaba su propio hijo, Benito Vélez. Ninguno de los veintidós volvió a Galicia. Ella se quedó en Puebla de los Ángeles y murió allí. No se conoce la fecha.",
+      "La cadena no admitía un solo día de descuido: si los niños enfermaban, la vacuna se perdía en mitad del océano. Lo que cruzó el mar no fue un frasco, fue un cuidado sostenido mañana tras mañana. Hoy su nombre está en hospitales. En los papeles de la época aparece escrito de decenas de formas distintas."
+    ],
+    "question": "¿Quién sostiene hoy, sin figurar en ningún lado, algo que tú das por seguro?",
+    "subject": "Isabel Zendal y la Real Expedición Filantrópica de la Vacuna (1803-1806)"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "ISABEL ZENDAL",
+    "subtitle": "Rectora de un orfanato de A Coruña, embarcada por real orden en 1803",
+    "body": "El 30 de noviembre de 1803 zarpó de A Coruña la María Pita. La vacuna de la viruela no se podía guardar: viajó viva, pasando de brazo a brazo entre veintidós niños expósitos. Ella los cuidó toda la travesía. Uno de esos niños era su hijo.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "La expedición zarpó de A Coruña el 30 de noviembre de 1803 en la corbeta María Pita, con 22 niños expósitos de entre tres y nueve años, y la vacuna se transmitió de un niño a otro durante la travesía. Ninguno de los niños regresó a Galicia; Isabel Zendal permaneció en Puebla con su hijo Benito Vélez.",
+      "source": "Wikipedia en español, 'Real Expedición Filantrópica de la Vacuna'",
+      "url": "https://es.wikipedia.org/wiki/Real_Expedici%C3%B3n_Filantr%C3%B3pica_de_la_Vacuna"
+    },
+    {
+      "claim": "Isabel Zendal Gómez, nacida en 1773 en la provincia de A Coruña, era rectora de la Casa de Expósitos de A Coruña y fue incorporada oficialmente a la expedición el 14 de octubre de 1803. Murió en Puebla de los Ángeles, sin fecha conocida. Su nombre aparece en los documentos con decenas de grafías distintas.",
+      "source": "Wikipedia en español, 'Isabel Zendal Gómez'",
+      "url": "https://es.wikipedia.org/wiki/Isabel_Zendal_G%C3%B3mez"
+    },
+    {
+      "claim": "La real orden que autoriza su incorporación la transmite el 14 de octubre de 1803 el ministro de Gracia y Justicia, Josef Antonio Caballero; se la nombra como enfermera y el pase de la vacuna se hacía por parejas de niños en ciclos de unos diez días.",
+      "source": "Redalyc, artículo académico 'Papel de Isabel Zendal en la Expedición Balmis'",
+      "url": "https://www.redalyc.org/journal/3666/366659675026/html/"
+    },
+    {
+      "claim": "Salida el 30 de noviembre de 1803 en la corbeta María Pita con 22 niños; en Nueva España se sumaron más niños para la travesía del Pacífico; la expedición alcanzó el Caribe, México, Sudamérica, Filipinas, Macao y Cantón, y dejó instaladas juntas locales de vacunación.",
+      "source": "CSIC (Consejo Superior de Investigaciones Científicas), 'Balmis: la expedición española que llevó la vacuna de la viruela a Asia y América'",
+      "url": "https://www.csic.es/es/actualidad-del-csic/balmis-la-expedicion-espanola-que-llevo-la-vacuna-de-la-viruela-asia-y-america"
+    },
+    {
+      "claim": "La expedición la dirigió el médico militar Francisco Javier de Balmis, llevó 22 niños expósitos como portadores y Balmis regresó en 1806. Isabel Zendal era la rectora del orfanato Casa de Expósitos de A Coruña y formaba parte del personal sanitario.",
+      "source": "Wikipedia en inglés, 'Balmis Expedition'",
+      "url": "https://en.wikipedia.org/wiki/Balmis_Expedition"
+    },
+    {
+      "claim": "Se sabe muy poco de los últimos años de Isabel Zendal; solo se confirma que murió en Puebla de los Ángeles. Su nombre se registró en numerosas variantes (Zendal, Sendalla, Zendalla, entre otras).",
+      "source": "National Geographic Historia, 'Isabel Zendal, la primera enfermera en misión internacional'",
+      "url": "https://historia.nationalgeographic.com.es/a/isabel-zendal-primera-enfermera-mision-internacional_15935"
+    }
+  ],
+  "do_not_use": [
+    "«La OMS la reconoció en 1950 como la primera enfermera de la historia en misión internacional». DESCARTADO en esta investigación: lo repiten prensa, colegios profesionales e instituciones públicas, pero la referencia rastreable no es un documento de la OMS, sino una nota de prensa de 2014 (La Opinión A Coruña) citada por Wikipedia. No se localizó ninguna fuente primaria de la OMS. Es el dato más citado sobre ella y el peor sostenido: no usarlo mientras no aparezca el documento.",
+    "«Fue la primera enfermera de la historia», a secas. Superlativo no verificable y además una deformación del anterior, que ya es dudoso.",
+    "La cita de Edward Jenner («no imagino que los anales de la historia ofrezcan un ejemplo de filantropía tan noble y tan amplio como este»). DESCARTADA: circula en todas partes, pero la única referencia localizada es secundaria (Tarragó, 2001, vía Wikipedia). No se halló la carta ni el texto original. No citarla entre comillas.",
+    "Cifras de vacunados. National Geographic da unas 250.000 personas; la Wikipedia en inglés dice solo «cientos de miles». Sin cifra cerrada verificable: el texto no da ninguna.",
+    "Intervalo del pase brazo a brazo. Las fuentes discrepan: nueve o diez días (Wikipedia en español, artículo de Redalyc) frente a quince días (CSIC). Por eso el copy describe el mecanismo sin dar el intervalo.",
+    "Número de niños embarcados. La cifra sólida y repetida por casi todas las fuentes es 22; National Geographic dice 23. Se usa 22.",
+    "Número de niños reclutados en Nueva España para cruzar el Pacífico: 26 (Wikipedia en español, CSIC) frente a 25 (Wikipedia en inglés). No dar cifra cerrada; en este post ni se menciona.",
+    "Edad de los niños. Las fuentes en español dicen «entre tres y nueve años»; la Wikipedia en inglés dice «aged 3 to 10». Se usa la horquilla en español, pero si en una revisión futura se quiere blindar el dato, escribir «ninguno pasaba de los diez años».",
+    "Edad de Benito Vélez. La entrada de la expedición lo lista con nueve años, pero la ficha de su madre da como fecha de nacimiento el 31 de julio de 1793, lo que en noviembre de 1803 daría diez. Contradicción interna entre dos artículos: NO dar su edad. En este post se le nombra sin edad.",
+    "Número de variantes documentadas de su nombre: 35 según la Wikipedia en español, «unas 300» según la inglesa. Por eso el copy dice «decenas de formas distintas».",
+    "Fecha de su muerte. Desconocida: las fuentes solo consignan «siglo XIX» y el lugar, Puebla de los Ángeles. No inventarla ni redondearla.",
+    "Llamar «huérfanos» a los niños sin matiz. Eran expósitos, niños abandonados o entregados a la inclusa, que no es lo mismo: el propio hijo de Isabel Zendal iba a bordo con su madre viva. Usar «expósitos».",
+    "«Todos los niños murieron» o «ninguno sobrevivió». Falso. Lo documentado es que ninguno regresó a Galicia y que la Corona ordenó que fueran mantenidos y educados en América hasta tener oficio.",
+    "«Balmis inventó la vacuna». No: la vacuna contra la viruela es de Edward Jenner (1796). Balmis dirigió su distribución.",
+    "Presentar la expedición como gesto puramente humanitario sin más. Fue una orden de la Corona española sobre sus territorios de ultramar; el mérito sanitario es real, el marco es colonial. Este post no entra en el debate, pero no debe negarlo."
+  ],
+  "status": "draft"
+}

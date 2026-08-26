@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-05-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "hook": "En 1924 le negaron el voto por ser mujer. Pidió que le mostraran en qué artículo lo decía.",
+    "body": [
+      "El 2 de mayo de 1924, Matilde Hidalgo se presentó en la junta electoral de Machala, en Ecuador, para inscribirse en el padrón. La rechazaron por ser mujer. Tenía 34 años. Ya era la primera bachiller del país, titulada el 8 de octubre de 1913, y la primera ecuatoriana con doctorado en medicina, en 1921.",
+      "Su alegato no fue político, fue literal. La Constitución pedía dos cosas para votar: tener más de veintiún años y saber leer y escribir. En ninguna parte decía hombre. El caso subió hasta el Gobierno, y la resolución fechada el 9 de junio de 1924 le dio la razón: no había prohibición legal para que las mujeres se inscribieran en los registros electorales, y por lo tanto debía ser inscrita.",
+      "Cinco años después, la Constitución de 1929 hizo de Ecuador el primer país de América Latina en reconocer el voto de las mujeres. Para empezar no hizo falta una ley nueva: hizo falta que alguien leyera entera la que ya existía. Ecuador conmemora esa resolución cada 9 de junio. En 1941, Matilde Hidalgo fue además la primera ecuatoriana elegida por votación popular."
+    ],
+    "question": "¿Qué derecho ya escrito nunca has reclamado?",
+    "subject": "Matilde Hidalgo de Procel (Ecuador, 1924)"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "MATILDE HIDALGO",
+    "subtitle": "Ecuador, 1924: ganó el voto leyendo la ley con más cuidado que quienes se lo negaban",
+    "body": "Se presentó a inscribirse en el padrón de Machala y la rechazaron por ser mujer. Alegó que la Constitución solo exigía veintiún años y saber leer y escribir. La resolución del 9 de junio de 1924 le dio la razón: no había prohibición legal. Ecuador reconoció el voto femenino en 1929.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Nació en Loja en 1889 y murió en Guayaquil el 20 de febrero de 1974. El 8 de octubre de 1913 fue la primera mujer del Ecuador en obtener el bachillerato; en 1921 obtuvo el doctorado en medicina, la primera del país.",
+      "source": "Sitio web oficial Matilde Hidalgo de Procel (biografía) y Wikipedia en inglés, \"Matilde Hidalgo\"",
+      "url": "https://matildehidalgodeprocel.org/"
+    },
+    {
+      "claim": "El 2 de mayo de 1924 se presentó a empadronarse en la junta electoral de Machala y fue rechazada por ser mujer; alegó que la Constitución solo exigía ser mayor de 21 años y saber leer y escribir, sin mención del sexo.",
+      "source": "GK City, \"¿Quién fue Matilde Hidalgo?\" (10 de mayo de 2024) y sitio oficial",
+      "url": "https://gk.city/2024/05/10/quien-fue-matilde-hidalgo/"
+    },
+    {
+      "claim": "Texto de la resolución habilitante, atribuida al ministro Francisco Ochoa Ortiz: \"no hay prohibición legal para que las mujeres se inscribieran en los Registros electorales; y que, por consiguiente, la referida señora debe ser inscrita como lo había solicitado en uso de su derecho\".",
+      "source": "Infobae América, \"Quién fue Matilde Hidalgo…\" (4 de diciembre de 2021)",
+      "url": "https://www.infobae.com/america/america-latina/2021/12/04/quien-fue-matilde-hidalgo-la-primera-mujer-que-voto-en-una-eleccion-nacional-en-america-latina-y-desafio-al-machismo/"
+    },
+    {
+      "claim": "El 9 de junio de 1924 se emitió el informe habilitante del sufragio; Ecuador conmemora ese día como Día Nacional del Voto Femenino. La misma fuente sitúa su voto en las elecciones legislativas del 10 de mayo de 1924.",
+      "source": "Tribunal Contencioso Electoral del Ecuador, nota institucional del 9 de junio de 2023",
+      "url": "https://www.tce.gob.ec/index.php/2023/06/09/dia-nacional-del-voto-femenino-la-labor-del-tce-por-garantizar-la-participacion-politica-de-las-mujeres-continua/"
+    },
+    {
+      "claim": "El PNUD Ecuador coincide en el 10 de mayo de 1924 como fecha del voto y en el 9 de junio como fecha conmemorativa del centenario.",
+      "source": "PNUD Ecuador, blog \"Mujeres y democracia: 100 años del voto femenino en Ecuador\"",
+      "url": "https://www.undp.org/es/ecuador/blog/mujeres-y-democracia-100-anos-del-voto-femenino-en-ecuador"
+    },
+    {
+      "claim": "El artículo 13 de la Constitución de 1929 (expedida en Quito el 26 de marzo de 1929) definió como ciudadano al \"hombre o mujer\" mayor de 21 años que supiera leer y escribir: Ecuador fue el primer país de América Latina en reconocer el voto femenino.",
+      "source": "Wikipedia en inglés, \"Women's suffrage in Ecuador\"; Tribunal Contencioso Electoral del Ecuador",
+      "url": "https://en.wikipedia.org/wiki/Women%27s_suffrage_in_Ecuador"
+    },
+    {
+      "claim": "En 1941 fue elegida diputada suplente por la provincia de Loja: primera ecuatoriana en ocupar un cargo de elección popular. Antes fue concejala de Machala (1925) y vicepresidenta del concejo (1936).",
+      "source": "Sitio oficial Matilde Hidalgo de Procel; El Universo (21 de noviembre de 2019)",
+      "url": "https://www.eluniverso.com/noticias/2019/11/21/nota/7614563/matilde-hidalgo-procel-primera-mujer-america-latina-que-pudo-votar/"
+    },
+    {
+      "claim": "Julieta Lanteri fue incorporada al padrón el 16 de julio de 1911 por vía judicial y votó el 26 de noviembre de 1911 en La Boca, Buenos Aires, en elecciones MUNICIPALES: por eso la formulación correcta para Matilde Hidalgo es \"primera en una elección nacional\".",
+      "source": "Tribunal Electoral de Misiones (Argentina) y La Gaceta",
+      "url": "https://www.electoralmisiones.gov.ar/16-de-julio-de-1911-julieta-lanteri-se-convierte-en-la-primer-mujer-en-ser-incluida-en-el-padron-electoral-argentino/"
+    }
+  ],
+  "do_not_use": [
+    "\"Primera mujer en votar de América Latina\", a secas. Descartado: Julieta Lanteri votó en Buenos Aires el 26 de noviembre de 1911, pero en una elección MUNICIPAL, tras un amparo judicial. La formulación defendible es \"primera mujer de América Latina que votó en una elección nacional\". Por eso el texto de esta pieza no usa ningún superlativo sobre el voto en sí y se apoya en la resolución y en la Constitución de 1929.",
+    "La fecha exacta en que Matilde Hidalgo depositó su voto. Descartada por contradicción entre fuentes: el TCE y el PNUD Ecuador dan el 10 de mayo de 1924 (elecciones legislativas); la Wikipedia en inglés dice 9 de junio de 1924 y sitúa el acto en Loja; el sitio oficial solo fecha la resolución. Tampoco puede afirmarse el ORDEN entre el voto y la resolución del 9 de junio, porque ninguna fuente consultada lo explica. La pieza da el 2 de mayo (empadronamiento) y el 9 de junio (resolución), que sí coinciden en varias fuentes, y dice \"las elecciones legislativas de ese año\" sin día.",
+    "La fecha exacta de nacimiento. Circulan el 29 y el 25 de septiembre de 1889. Se usa solo el año, y la edad (34) que es la misma en cualquiera de las dos versiones.",
+    "\"Ecuador fue el primer país del mundo en dar el voto a las mujeres\". Falso: Nueva Zelanda lo hizo en 1893 y varios países lo hicieron antes de 1929. El dato correcto es que fue el primero de América Latina.",
+    "\"El Consejo de Estado le dio permiso especial\" o \"le hicieron una excepción\". El texto de la resolución dice lo contrario: constata que no existía prohibición legal. La diferencia es el corazón de la historia y conviene no perderla.",
+    "Frases célebres atribuidas a Matilde Hidalgo. No se localizó ninguna cita suya verificada en fuentes primarias; el material que circula en redes no está respaldado.",
+    "Las anécdotas de hostigamiento escolar (que la apedrearan, que las familias cruzaran la calle al verla, que rezaran para que no volviera). Circulan en notas de prensa sin fuente documental; no se usan.",
+    "\"Fue la primera médica de América Latina\" o \"la primera mujer en votar del continente\". Superlativos no verificables: lo confirmado es que fue la primera doctora en medicina del Ecuador y la primera ecuatoriana elegida por votación popular.",
+    "Llamarla únicamente \"la primera votante\". Reduce a un solo día una biografía que incluye el primer bachillerato femenino del país (1913), el primer doctorado en medicina (1921) y el primer cargo de elección popular ocupado por una mujer (1941)."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "2026-09-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "\"Hay golpes en la vida, tan fuertes... Yo no sé.\" — César Vallejo, poema inicial de Los heraldos negros",
+    "body": [
+      "El libro que abre ese verso lleva 1918 en la portada. Entró a la Imprenta Souza Ferreyra de Lima a mediados de ese año y no llegó a las librerías hasta mediados de julio de 1919. Doce meses detenido, esperando un prólogo que Abraham Valdelomar había prometido y que nunca escribió. El libro salió sin él, con un epígrafe del Evangelio en su lugar: quien pueda entender, que entienda.",
+      "Vallejo no esperó quieto: durante ese año volvía a la imprenta a corregir sus propios poemas. De aquella primera edición se han localizado diez ejemplares con variantes entre sí, y el investigador que los cotejó concluyó que hubo al menos media docena de primeras ediciones distintas. Valdelomar murió cuatro meses después de que el libro llegara a las tiendas, a los treinta y un años.",
+      "El verso más repetido de la poesía peruana no afirma nada. Nombra el golpe y se detiene. En la misma estrofa, dos veces, el poeta admite que no sabe explicarlo."
+    ],
+    "question": "¿Qué golpe de los tuyos todavía no sabes explicar?",
+    "subject": "César Vallejo",
+    "quote": {
+      "text": "Hay golpes en la vida, tan fuertes... Yo no sé.",
+      "author": "César Vallejo",
+      "work": "Los heraldos negros (1918)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "La edición príncipe es de la Imprenta Souza Ferreyra de Lima, lleva pie de imprenta de 1918 y circuló recién a mediados de julio de 1919. La entrada acompaña facsímiles de esa primera edición.",
+      "source": "Asociación Internacional de Peruanistas, publicación de los facsimilares de la edición príncipe (julio de 2019)",
+      "url": "https://asociacioninternacionaldeperuanistas.blogspot.com/2019/07/los-heraldos-negros-edicion-principe.html"
+    },
+    {
+      "claim": "El libro esperó cerca de un año en la imprenta el prólogo prometido por Abraham Valdelomar, que nunca llegó; mientras tanto Vallejo visitaba la imprenta y corregía poemas. Se han localizado diez ejemplares de la editio princeps con variantes entre sí: \"puede decirse que el poeta dio a la luz al menos media docena de primeras ediciones\". Cita de Espejo Asturrizaga recogida en el artículo: \"A mediados de 1918 Los heraldos negros están listos para salir de la imprenta... El libro aparece y se lleva a las librerías de Lima en julio de 1919\".",
+      "source": "Antonio Cajero Vázquez, \"La edición y los editores de Los heraldos negros [1919]\", artículo académico consultado en SciELO México",
+      "url": "https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1665-899X2013000200012"
+    },
+    {
+      "claim": "\"Si bien la fecha de publicación del poemario indica 1918 —porque entró a la imprenta entre junio y julio de ese año—, este, en realidad, fue publicado en julio de 1919\". Nombra la imprenta Souza Ferreyra y señala que, al no haber prólogo, Vallejo lo sustituyó por un epígrafe.",
+      "source": "Casa de la Literatura Peruana (Ministerio de Educación del Perú), \"César Vallejo: la historia detrás de la publicación de sus obras\"",
+      "url": "https://www.casadelaliteratura.gob.pe/cesar-vallejo-la-historia-detras-la-publicacion-obras/"
+    },
+    {
+      "claim": "El epígrafe del libro es \"Qui potest capere capiat\" (quien pueda entender, que entienda), tomado del Evangelio; el poema liminar es homónimo y va seguido de seis secciones: \"Plafones ágiles\", \"Buzos\", \"De la tierra\", \"Nostalgias imperiales\", \"Truenos\" y \"Canciones de hogar\".",
+      "source": "Tonos Digital, revista de estudios filológicos, Universidad de Murcia (estudio sobre Los heraldos negros)",
+      "url": "https://www.um.es/tonosdigital/znum25/secciones/estudios-31-asegura__vallejo.htm"
+    },
+    {
+      "claim": "Texto del verso inicial y comprobación de que la expresión \"Yo no sé\" aparece dos veces en el poema, ambas en la primera estrofa. También el epígrafe del libro.",
+      "source": "Obra poética de César Vallejo, edición en PDF del acervo de la Fundación BBVA Perú; contrastada con la transcripción de biblioteca-antologica.org",
+      "url": "https://fundacionbbva.pe/wp-content/uploads/2016/04/libro_000037.pdf"
+    },
+    {
+      "claim": "Abraham Valdelomar (27 de abril de 1888 – 3 de noviembre de 1919) murió a los 31 años en Ayacucho, dos días después de una caída por unas escaleras que le fracturó la columna: cuatro meses después de que el libro llegara a las librerías.",
+      "source": "Wikipedia en inglés, \"Abraham Valdelomar\"",
+      "url": "https://en.wikipedia.org/wiki/Abraham_Valdelomar"
+    },
+    {
+      "claim": "César Vallejo nació el 16 de marzo de 1892 en Santiago de Chuco (La Libertad, Perú) y murió el 15 de abril de 1938 en París, a los 46 años. Estuvo preso 112 días en Trujillo, del 6 de noviembre de 1920 al 26 de febrero de 1921, es decir, después de la publicación del libro.",
+      "source": "Wikipedia en inglés, \"César Vallejo\"",
+      "url": "https://en.wikipedia.org/wiki/C%C3%A9sar_Vallejo"
+    },
+    {
+      "claim": "La primera edición de Trilce (1922) se imprimió en los talleres de la Penitenciaría de Lima, con una tirada de 200 ejemplares. Dato usado solo para no confundir esa imprenta con la de Los heraldos negros.",
+      "source": "Wikipedia en inglés, \"Trilce\"",
+      "url": "https://en.wikipedia.org/wiki/Trilce"
+    }
+  ],
+  "do_not_use": [
+    "Dar por canónica una puntuación del final del verso. Circulan \"Yo no sé.\", \"Yo no sé!\" y \"¡Yo no sé!\": la edición de la Fundación BBVA y el estudio de Tonos Digital traen el signo de exclamación de cierre sin apertura, y otras transcripciones traen punto. La discrepancia tiene una causa documentada: la propia editio princeps existe en al menos media docena de estados distintos porque Vallejo corregía en la imprenta. Las palabras del verso no están en discusión; el signo final sí. Por eso la tarjeta usa la forma con punto y nunca se le añade un signo de apertura que no aparece en ninguna edición.",
+    "\"El prólogo no se escribió porque Valdelomar murió\". Es la versión más repetida y no cuadra con las fechas: el libro estaba en las librerías de Lima a mediados de julio de 1919 y Valdelomar murió el 3 de noviembre de 1919. Lo verificable es que prometió el prólogo, el libro esperó cerca de un año y salió sin él.",
+    "\"Los heraldos negros se imprimió en la penitenciaría de Lima\". Esa es la imprenta de Trilce (1922, 200 ejemplares). Los heraldos negros se imprimió en la Imprenta Souza Ferreyra.",
+    "Fechar el libro solo en 1918 —es el pie de imprenta, no la circulación— ni solo en 1919 sin explicar la portada. La formulación correcta lleva las dos fechas.",
+    "\"Vallejo escribió el poema en la cárcel\". Estuvo preso 112 días en Trujillo, pero entre noviembre de 1920 y febrero de 1921, más de un año después de que el libro circulara.",
+    "Afirmar cuál es el verso final del poema o decir que cierra repitiendo el primero: las transcripciones consultadas no coinciden y no se pudo dirimir sobre la edición príncipe. Por eso el texto solo afirma lo comprobado, que \"Yo no sé\" aparece dos veces en la primera estrofa.",
+    "Citar \"Golpes como del odio de Dios\" como una declaración de Vallejo sobre la fe. Es un símil dentro del poema, no una afirmación del autor.",
+    "Mezclar este verso con \"Me moriré en París con aguacero\" (de \"Piedra negra sobre una piedra blanca\") o con \"Masa\": son poemas de libros posteriores, publicados póstumamente en 1939.",
+    "Presentar la cita como consuelo o como lema de superación. El poema no explica el golpe ni promete nada: el eje del texto es justamente que el poeta admite no saber."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-05-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "El imperio mongol movía un mensaje de Corea a Persia, y la factura la pagaban los pueblos del camino.",
+    "body": [
+      "La red se llamaba yam. Las postas se levantaban cada 32 a 64 kilómetros y guardaban caballos de refresco, comida y techo. Para exigirlo bastaba con enseñar una paiza: una placa de metal con una fórmula grabada. En el Museo Metropolitano de Nueva York se conserva una, de hierro con incrustación de plata, de dieciocho por once centímetros, escrita en alfabeto pakpa. Dice que es orden del emperador por la fuerza del cielo eterno, y que quien no respete a su portador cometerá una falta.",
+      "Nada de eso lo pagaba el tesoro. Lo pagaban las aldeas junto al camino. El visir Rashid al-Din, que lo vio de cerca, escribió que los enviados no se conformaban con su asignación de monturas y provisiones: desplumaban a cualquiera que se cruzara. Anotó también que un gobernador cobraba el impuesto diez veces al año, y que en algunos lugares se cobraba veinte o treinta. Y como la placa no llevaba nombre, los ladrones las robaban para pasar por enviados y saquear las postas.",
+      "Gazán, que gobernó el Ilkanato de 1295 a 1304, tuvo que rehacerlo entero: anuló todas las placas en circulación, mandó grabar en las nuevas el nombre de su portador, limitó cada permiso a entre uno y cuatro caballos y pasó el gasto de las postas al tesoro central. La red más veloz de su tiempo no la puso en riesgo ningún ejército. La puso en riesgo un trozo de metal que cualquiera podía llevar encima."
+    ],
+    "question": "¿Qué puerta se te abre hoy sin que nadie compruebe que eres tú?",
+    "subject": "El yam mongol y la paiza"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL YAM",
+    "subtitle": "La red de postas más rápida de la Edad Media, y quién la sostenía",
+    "body": "Las postas se alzaban cada treinta o sesenta kilómetros y daban caballo, comida y techo a quien mostrara una placa de metal. No lo pagaba el tesoro: lo pagaban las aldeas del camino. Los ladrones las robaban para pasar por enviados. Hubo que grabar en ellas el nombre del portador.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "El yam: red de postas del imperio mongol. La Historia secreta de los mongoles atribuye su fundación a Ogodei, aunque bajo Gengis Kan ya existía un sistema rudimentario. Las estaciones estaban separadas por unos 32 a 64 km y tenían caballos de refresco, comida y refugio. Se podían enviar personas y mensajes de Corea a Persia y de Mongolia a Vietnam.",
+      "source": "Wikipedia en inglés, «Yam (route)»",
+      "url": "https://en.wikipedia.org/wiki/Yam_(route)"
+    },
+    {
+      "claim": "La paiza (gerege) era una placa que autorizaba a su portador a exigir monturas, raciones y alojamiento en las postas, y bienes y servicios a la población civil. Fórmula grabada en alfabeto pakpa: «Por la fuerza del cielo eterno, [esto es] una orden del emperador. Quien no muestre respeto [al portador] será culpable de una falta».",
+      "source": "Wikipedia en inglés, «Paiza»",
+      "url": "https://en.wikipedia.org/wiki/Paiza"
+    },
+    {
+      "claim": "Objeto concreto: paiza de hierro con incrustación de plata, 18,1 × 11,4 cm, imperio mongol / dinastía Yuan, finales del s. XIII – principios del XIV, Metropolitan Museum of Art, n.º 1993.256. Daba derecho a «habitación, comida, caballos frescos y escolta» de posta en posta. Bajo Kublai la inscripción se simplificó y dejó de decir «morirá». Muchas paizas nombradas de oro o plata eran en realidad de metal base con incrustación.",
+      "source": "Christopher P. Atwood, «Signs of Authority in the Mongol Empire», Project Himalayan Art, Rubin Museum",
+      "url": "https://rubinmuseum.org/projecthimalayanart/essays/mongol-messengers-badge-paiza-or-gerege-in-pakpa-script/"
+    },
+    {
+      "claim": "Coste sobre la población y abusos, según Rashid al-Din: «Los enviados no se conformaban con sus asignaciones de monturas y provisiones: a cualquiera que se cruzaran, lo desplumaban» (p. 57); «un gobernador cobraba el qubchur a los campesinos diez veces al año, aunque en algunos lugares el qubchur se cobraba veinte o treinta veces» (p. 62). Los ladrones robaban decretos y placas para hacerse pasar por enviados y saquear las postas. Reforma de Gazán: solo con permiso sellado, de uno a cuatro caballos por permiso (p. 61); postas cada tres farsang, unos 18 km, con quince caballos cada una (p. 65); anulación de todas las placas anteriores y financiación desde el tesoro central.",
+      "source": "Hodong Kim, «The Postal Relay System in Western Asia under the Mongol Rule and Ghazan Khan's Reform», The Journal of Northeast Asian History, vol. 19, n.º 1 (invierno de 2022), pp. 43-85",
+      "url": "https://accesson.kr/jnah/assets/pdf/57195/journal-19-1-43.pdf"
+    },
+    {
+      "claim": "Gazán (Mahmud Gazán): 5 de noviembre de 1271 – 11 de mayo de 1304; séptimo ilkán, reinó de 1295 a 1304. Nombró visir a Rashid al-Din en 1298, cargo que este ocupó veinte años. Rediseñó las paizas en dos rangos y les hizo constar el nombre del portador para impedir que se traspasaran; unificó pesos, medidas y moneda, y ordenó un nuevo censo.",
+      "source": "Wikipedia en inglés, «Ghazan»",
+      "url": "https://en.wikipedia.org/wiki/Ghazan"
+    }
+  ],
+  "do_not_use": [
+    "«Gengis Kan inventó el correo» o «el yam lo creó Gengis Kan». La Historia secreta de los mongoles y varias fuentes persas atribuyen la instalación de las postas a Ogodei; bajo Gengis solo existía un sistema rudimentario. Decir «lo organizó el imperio», no «lo inventó Gengis».",
+    "Cualquier cifra cerrada de kilómetros diarios de los mensajeros. Las fuentes se contradicen de forma escandalosa: Wikipedia da 200-300 km al día, historyofinformation.com dice 20-30 millas al día, y el artículo de Hodong Kim da 360 km diarios para los correos montados tras la reforma de Gazán. Sin fuente primaria que arbitre, no se da número.",
+    "«1.400 postas y 50.000 caballos solo en China al final del reinado de Kublai», junto con 1.400 bueyes, 6.700 mulas, 400 carros, 6.000 barcas, más de 200 perros y 1.150 ovejas. DESCARTADO EN ESTA SESIÓN: la cifra circula por todas partes pero se rastrea a Wikipedia y, detrás, a Rossabi, sin acceso a la fuente primaria. Era la apertura prevista del post y se cambió por las distancias entre postas, que sí están sostenidas. Si alguna sesión futura consigue la referencia exacta de Rossabi con página, el dato se recupera.",
+    "«La paiza fue el primer pasaporte del mundo». Formulación de páginas comerciales de ciudadanía y visados, no de la historiografía. No era documento de identidad ni de cruce de fronteras: era una orden de requisa. Un pasaporte protege a su portador de la autoridad; la paiza autorizaba a su portador a exigirle cosas a la gente.",
+    "«Las paizas eran de oro macizo». Atwood advierte que, aunque los rangos se nombraban por oro, plata o cabeza de tigre, muchas eran de metal base con a lo sumo incrustación de oro o plata. La del Museo Metropolitano es de hierro.",
+    "«El yam inspiró al Pony Express» o «fue el primer servicio postal de la historia». No hay línea de influencia documentada con el Pony Express, y existieron sistemas de postas anteriores: el cursus publicus romano y el barid islámico, entre otros.",
+    "La «Pax Mongolica» presentada como una paz próspera y benigna sin más. Este post existe precisamente porque la infraestructura que se celebra se financiaba con requisa forzosa sobre los campesinos del camino. Tampoco vale el extremo contrario: «los mongoles solo destruyeron».",
+    "Decir que Gazán reformó el sistema «en 1300» o en cualquier año concreto. Las medidas se reparten a lo largo de su reinado (1295-1304) y las fuentes consultadas no fechan cada decreto. Dar el reinado, no el año.",
+    "«Escritura phags-pa» descrita como un idioma. Es un alfabeto encargado por Kublai Kan para escribir varias lenguas del imperio. En la tarjeta y en el copy se escribe «pakpa», sin diacríticos, para no depender de los glifos de la fuente."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-07-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "hook": "En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.",
+    "body": [
+      "El monte Tambora, en la isla indonesia de Sumbawa, empezó a erupcionar el 5 de abril de 1815 y llegó a su clímax el día 10. La montaña perdió cerca de un tercio de su altura: de unos 4.300 metros quedó en 2.851. La explosión se oyó a más de 2.600 kilómetros. Las estimaciones de víctimas van de once mil por el efecto directo a más de setenta mil sumando el hambre y las epidemias que vinieron después.",
+      "El polvo dio la vuelta al planeta. En 1816 la temperatura media del hemisferio norte bajó alrededor de medio grado y el verano no llegó. El 6 de junio nevó en Albany, en el estado de Nueva York. A doce mil kilómetros del volcán, junto al lago de Ginebra, la lluvia encerró en una casa a cuatro huéspedes ingleses durante días. Uno de ellos propuso que cada uno escribiera una historia de fantasmas. De ahí salió Frankenstein, que Mary Shelley empezó a los dieciocho años, y el relato que fundó el vampiro moderno.",
+      "Medio grado de temperatura media. Bastó para arruinar las cosechas de un continente, provocar la peor hambruna europea del siglo y dejar dos libros que seguimos leyendo doscientos años después. El clima nunca fue el fondo del cuadro."
+    ],
+    "question": "¿Cuánto de lo que hoy eres empezó lejos, en algo que no elegiste?",
+    "subject": "El año sin verano de 1816"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL AÑO SIN VERANO",
+    "subtitle": "Un volcán de Indonesia y una casa junto al lago de Ginebra",
+    "body": "En abril de 1815 el Tambora perdió un tercio de su altura y la explosión se oyó a más de dos mil seiscientos kilómetros. Al año siguiente el hemisferio norte se quedó sin verano: nevó en junio. A doce mil kilómetros, la lluvia encerró a cuatro huéspedes junto al lago de Ginebra.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "El Tambora entró en erupción el 5 de abril de 1815, con el clímax el 10 de abril; VEI 7; la cumbre pasó de unos 4.300 m a 2.851 m, cerca de un tercio menos; la explosión se oyó al menos a 2.600 km. Las cifras de muertos discrepan según la fuente: 10.000 directos (Zollinger, 1855), 11.000 directos más 49.000 por hambre y epidemias (Tanguy y cols., 1998), al menos 71.000 en total (Oppenheimer), 88.000 (Petroeschevsky, 1949), 100.000 (Reid).",
+      "source": "Wikipedia en inglés, 1815 eruption of Mount Tambora",
+      "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
+    },
+    {
+      "claim": "La erupción hizo caer la temperatura global en el verano boreal de 1816 en 0,53 °C, dentro de un rango citado de 0,4 a 0,7 °C. La NOAA lo resume como un descenso de un grado Fahrenheit en el hemisferio norte y atribuye a la erupción pérdidas de cosecha y escasez de alimento en América del Norte, Europa occidental y parte de Asia.",
+      "source": "NOAA/NESDIS, This Day In History: Mount Tambora Explosively Erupts in 1815",
+      "url": "https://www.nesdis.noaa.gov/news/day-history-mount-tambora-explosively-erupts-1815"
+    },
+    {
+      "claim": "El 6 de junio de 1816 nevó en Albany (Nueva York) y en Dennysville (Maine); hubo heladas cinco noches seguidas a finales de junio en Cape May (Nueva Jersey). Europa sufrió la peor hambruna del siglo y motines por comida. En junio de 1816, junto al lago de Ginebra, Mary Shelley, Percy Shelley, Lord Byron y John Polidori quedaron confinados por el clima; Byron propuso un concurso de historias de miedo, del que salieron Frankenstein y el fragmento que inspiró El vampiro de Polidori.",
+      "source": "Wikipedia en inglés, Year Without a Summer",
+      "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
+    },
+    {
+      "claim": "Texto autógrafo de Mary Shelley en la introducción de 1831: «But it proved a wet, ungenial summer, and incessant rain often confined us for days to the house» y «\"We will each write a ghost story,\" said Lord Byron; and his proposition was acceded to».",
+      "source": "Mary Shelley, introducción a la edición de 1831 de Frankenstein (texto en Project Gutenberg)",
+      "url": "https://www.gutenberg.org/files/42324/42324-h/42324-h.htm"
+    },
+    {
+      "claim": "Frankenstein se publicó el 1 de enero de 1818, de forma anónima, con prólogo de Percy Bysshe Shelley, en una tirada de 500 ejemplares en tres volúmenes. Mary Shelley empezó a escribirlo a los 18 años y lo terminó en abril o mayo de 1817, a los 19.",
+      "source": "Wikipedia en inglés, Frankenstein",
+      "url": "https://en.wikipedia.org/wiki/Frankenstein"
+    },
+    {
+      "claim": "El vampiro es de John William Polidori y se publicó el 1 de abril de 1819 en The New Monthly Magazine con la firma falsa «A Tale by Lord Byron»; Polidori aclaró la autoría en una carta al editor del 1 de mayo de 1819.",
+      "source": "Wikipedia en inglés, The Vampyre",
+      "url": "https://en.wikipedia.org/wiki/The_Vampyre"
+    },
+    {
+      "claim": "Primer trayecto documentado de la Laufmaschine de Karl Drais: 12 de junio de 1817, de Mannheim al Schwetzinger Relaishaus, unos 7 km, algo más de una hora ida y vuelta. El artículo sobre Drais no menciona la falta de caballos ni el año sin verano como motivo de la invención.",
+      "source": "Wikipedia en inglés, Karl Drais",
+      "url": "https://en.wikipedia.org/wiki/Karl_Drais"
+    }
+  ],
+  "do_not_use": [
+    "«La mayor erupción de la historia», sin matiz. Lo defendible es que es la mayor erupción documentada de la historia moderna y la más reciente confirmada de VEI 7. En el registro geológico hay erupciones mayores.",
+    "Una cifra cerrada de muertos. Circulan 10.000, 71.000, 88.000, 90.000 y 100.000, y provienen de estimaciones distintas y no comparables entre sí. Se usa el rango de once mil por efecto directo a más de setenta mil con hambre y epidemias, y se dice que las fuentes discrepan.",
+    "«El Tambora inventó la bicicleta». La falta de avena para los caballos «pudo haber inspirado» a Karl Drais, según la propia formulación especulativa de la Wikipedia; el artículo dedicado a Drais no lo menciona siquiera. DESCARTADO como giro de esta pieza por ser hipótesis, no hecho: era el remate más atractivo y no resistió la comprobación.",
+    "«Nevó en julio en Nueva Inglaterra». Lo afirma la NOAA, pero sin fecha ni localidad. Lo documentado con día y lugar es el 6 de junio de 1816 en Albany (Nueva York) y en Dennysville (Maine). DESCARTADA la versión de julio por no poder fecharla; se usa la de junio.",
+    "«La erupción causó la primera pandemia de cólera». La Wikipedia lo enuncia como relación causal (monzón retrasado, lluvias torrenciales, propagación desde Bengala hasta Moscú), pero no se localizó una segunda fuente independiente que lo sostenga. DESCARTADO para esta pieza.",
+    "«Mary Shelley escribió Frankenstein esa noche». Esa noche concibió la idea. Terminó el libro en abril o mayo de 1817 y se publicó el 1 de enero de 1818.",
+    "«Frankenstein se publicó firmado por Mary Shelley». Salió anónimo, con prólogo de Percy Shelley. Su nombre aparece en la edición de 1831.",
+    "«El vampiro es de Lord Byron». Es de John Polidori. Se publicó en 1819 con la firma falsa de Byron, y ese error de atribución sigue circulando doscientos años después.",
+    "«El monstruo se llama Frankenstein». Frankenstein es el apellido del científico. La criatura no tiene nombre en la novela.",
+    "«1816 fue el año más frío de la historia». No verificado y muy improbable como superlativo. Lo documentado es un descenso de la temperatura media de entre 0,4 y 0,7 °C."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "2026-09-04-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "La tradición rapanui siempre dijo que los moái caminaron. Se archivó como leyenda.",
+    "body": [
+      "En Rapa Nui se tallaron casi mil moái, algunos de más de diez metros, y hubo que llevarlos desde una sola cantera hasta la costa. El 7 de octubre de 2025, Carl Lipo y Terry Hunt publicaron en el Journal of Archaeological Science el análisis de 962 estatuas, con atención especial a las 62 que quedaron tiradas en los caminos antiguos.",
+      "Esas 62 comparten dos rasgos que las de los altares no tienen: base ancha en forma de D e inclinación hacia adelante. Y los caminos que las acompañan miden 4,5 metros de ancho, con el fondo cóncavo. Con una réplica de 4,35 toneladas hecha a esa forma exacta, dieciocho personas movieron la figura cien metros en cuarenta minutos, meciéndola de pie con cuerdas.",
+      "Durante más de un siglo, la explicación de los propios isleños se guardó en el cajón de los mitos mientras se probaban trineos y rodillos. La forma del moái no era un capricho del escultor: era una instrucción de uso. No todos los especialistas lo dan por cerrado, pero la respuesta que se descartaba por ingenua es la que va resistiendo la prueba."
+    ],
+    "question": "¿A quién dejaste de escuchar porque dabas por hecho que ya sabías la respuesta?",
+    "subject": "Rapa Nui"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "LOS MOÁI CAMINARON",
+    "subtitle": "Los isleños llevaban un siglo explicándolo y nadie les creyó",
+    "body": "Casi mil estatuas, algunas de más de diez metros, salieron de una sola cantera. Base ancha en forma de D e inclinación hacia adelante: con una réplica de 4,35 toneladas, dieciocho personas la movieron cien metros en cuarenta minutos, meciéndola de pie con cuerdas.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Análisis sistemático de 962 moái, con foco en 62 estatuas de los caminos; base ancha en forma de D e inclinación hacia adelante; caminos de 4,5 m de ancho y sección cóncava; réplica de 4,35 toneladas movida cien metros en cuarenta minutos por dieciocho personas.",
+      "source": "Carl P. Lipo y Terry L. Hunt, «The walking moai hypothesis: Archaeological evidence, experimental validation, and response to critics», Journal of Archaeological Science. Resumen del artículo verificado palabra por palabra.",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5370027"
+    },
+    {
+      "claim": "Fecha de publicación (7 de octubre de 2025), volumen 183, artículo 106383, DOI 10.1016/j.jas.2025.106383. Filiaciones: Lipo en Binghamton University, Hunt en la University of Arizona.",
+      "source": "Sci.News, nota sobre el artículo",
+      "url": "https://www.sci.news/archaeology/walking-moai-hypothesis-14269.html"
+    },
+    {
+      "claim": "La tradición oral rapanui sostiene que las estatuas «caminaron» desde la cantera y los estudiosos occidentales la desestimaron como mito; el trabajo de Hunt y Lipo la respalda.",
+      "source": "School of Anthropology, University of Arizona: «Dr. Terry Hunt publishes walking statues: oral history meets archaeology»",
+      "url": "https://anthropology.arizona.edu/news/dr-terry-hunt-publishes-walking-statues-oral-history-meets-archaeology"
+    },
+    {
+      "claim": "Detalles del experimento con la réplica (tres cuerdas, dieciocho personas) y testimonio actual de un guía rapanui: «We know the truth. The statues walked.»",
+      "source": "National Geographic, 22 de junio de 2012",
+      "url": "https://www.nationalgeographic.com/culture/article/120622-easter-island-statues-moved-hunt-lipo-science-rocked"
+    },
+    {
+      "claim": "Existe crítica académica viva: Nicolas Cauwe (Museos Reales de Arte e Historia, Bruselas) sostiene que varias estatuas de los caminos estuvieron de pie durante décadas; Jo Anne Van Tilburg (UCLA, Easter Island Statue Project) defiende el transporte horizontal sobre un bastidor de madera y resume su objeción así: «Just because something could be done, doesn't mean it was».",
+      "source": "The Star, «Mystery of the walking statues», 25 de diciembre de 2025",
+      "url": "https://www.thestar.com.my/news/focus/2025/12/25/mystery-of-the-walking-statues"
+    },
+    {
+      "claim": "No hay evidencia genómica de un colapso poblacional en el siglo XVII: quince genomas antiguos rapanui (1670-1950) y el modelo que mejor ajusta es el de cuello de botella del 0 %. Además, alrededor del 10 % de ascendencia amerindia, fechada hacia 1250-1430, es decir, contacto anterior a los europeos.",
+      "source": "J. V. Moreno-Mayar, A.-S. Malaspinas y cols., «Ancient Rapanui genomes reveal resilience and pre-European contact with the Americas», Nature 633, 389-397, 11 de septiembre de 2024",
+      "url": "https://www.nature.com/articles/s41586-024-07881-4"
+    }
+  ],
+  "do_not_use": [
+    "«El misterio quedó resuelto» o «se demostró definitivamente». El propio artículo de 2025 lleva en el título «response to critics». Nicolas Cauwe sostiene que varias estatuas de los caminos estuvieron de pie décadas o más de un siglo, y Jo Anne Van Tilburg defiende el transporte horizontal sobre bastidor de madera (experimento de 1998: cincuenta personas, moái de hormigón de diez toneladas). La formulación honesta es «la hipótesis que mejor explica la evidencia», nunca «la prueba definitiva».",
+    "«Los rapanui se suicidaron ecológicamente» y toda la tesis del ecocidio. El estudio genómico de Nature del 11 de septiembre de 2024 secuenció quince genomas antiguos y concluyó que el modelo que mejor ajusta es sin reducción de población en el siglo XVII. La deforestación está documentada; el colapso demográfico que se le atribuía, no.",
+    "«Los moái los hicieron sudamericanos» (tesis de Thor Heyerdahl): descartada. El mismo estudio de 2024 sí detecta alrededor de un 10 % de ascendencia amerindia fechada hacia 1250-1430, pero eso es contacto entre polinesios y América, no el origen de la población ni de las estatuas. Confundir contacto con autoría es el error clásico de este tema.",
+    "«Los moái son cabezas»: tienen cuerpo, enterrado por el sedimento en los ejemplares de la cantera. No se usó en esta pieza y no debe usarse como dato de color sin fuente propia.",
+    "«Extraterrestres», «una civilización perdida» o cualquier variante que le quite la autoría a los rapanui. Es exactamente el error que esta pieza corrige: la explicación correcta la dieron ellos.",
+    "Fecha del experimento de la réplica: se descartó darla. National Geographic lo publica el 22 de junio de 2012 y The Star lo fecha en 2011. Se acredita solo el artículo de octubre de 2025, que es donde están las cifras verificadas.",
+    "Cifra cerrada de moái: circulan 887, unos 950 y «casi mil». Se descartó cualquier número redondo. El único dato duro es «962 estatuas analizadas», del artículo de 2025; en el copy se dice «casi mil».",
+    "«Los llevaron hasta dieciocho kilómetros»: el dato circula mucho, pero en esta sesión solo apareció en una fuente periodística. Descartado por eso.",
+    "«El moái inconcluso Te Tokanga mide 21,6 m y pesa 270 toneladas»: cifra hallada en una sola entrada de enciclopedia y no confirmada en una segunda fuente. Descartada en esta sesión.",
+    "Atribuir la tradición oral a un etnógrafo concreto (Routledge en 1919, Métraux en 1940): no se pudo confirmar quién la registró primero. Se acredita como tradición oral rapanui, sin nombre propio.",
+    "«Los europeos derribaron los moái»: no verificado en esta sesión. El derribo (huri moái) suele atribuirse a conflictos internos entre los siglos XVIII y XIX, pero no se comprobó con fuente. No usar sin verificar antes."
+  ],
+  "status": "draft"
+}

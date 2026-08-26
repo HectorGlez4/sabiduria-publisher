@@ -1,0 +1,83 @@
+{
+  "id": "2026-09-06-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "El refrán que todos usamos para desconfiar de un solo dato lo escribió Aristóteles para hablar de la felicidad.",
+    "body": [
+      "Está en la Ética a Nicómaco, libro primero, capítulo séptimo. La referencia exacta es 1098a18, y esos números tienen un significado: página 1098, primera columna, línea 18 de la edición de Aristóteles que Immanuel Bekker preparó para la Academia Prusiana entre 1831 y 1837, cinco volúmenes que desde entonces son la manera de citarlo en todo el mundo. La obra tiene diez libros y no se escribió para publicarse: los tratados que conservamos de él eran material de clase del Liceo, y de toda su producción sobrevive alrededor de un tercio. Aristóteles acababa de definir la felicidad como una actividad del alma conforme a la virtud, y le había puesto una condición: en una vida completa. Entonces soltó la golondrina.",
+      "Dos precisiones que casi nadie hace. La primera es de traducción: la palabra griega es éar, que significa primavera. El verano lo pusieron los traductores, y en inglés lo fijó así la versión de Ross de 1908. La segunda pesa más. La otra frase que circula por todas partes firmada por Aristóteles, la de que somos lo que hacemos repetidamente y por eso la excelencia no es un acto sino un hábito, no es suya: la escribió Will Durant en 1926, en La historia de la filosofía, resumiendo con sus propias palabras un pasaje del libro segundo de esta misma Ética.",
+      "Hoy el refrán se usa como advertencia contra las conclusiones apresuradas: un caso aislado no prueba nada. Aristóteles lo usaba para algo más incómodo. Decía que una vida no se juzga por un tramo. Un buen día no hace feliz a nadie, y un mal día tampoco condena a nadie. La cuenta se hace entera, y mientras se está viviendo nunca está cerrada."
+    ],
+    "question": "¿Qué estás midiendo por un solo día?",
+    "subject": "Aristóteles",
+    "quote": {
+      "text": "Una golondrina no hace primavera, ni un solo día.",
+      "author": "Aristóteles",
+      "work": "Ética a Nicómaco I, 7 (1098a18)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "El texto griego del pasaje, con su referencia Bekker 1098a18, libro I, capítulo 7: \"μία γὰρ χελιδὼν ἔαρ οὐ ποιεῖ, οὐδὲ μία ἡμέρα· οὕτω δὲ οὐδὲ μακάριον καὶ εὐδαίμονα μία ἡμέρα οὐδ' ὀλίγος χρόνος\". Traducción inglesa cotejada: \"For one swallow does not make a spring; nor one day. And in this way, neither blessed nor eudaimonious does one day [make], nor a short time.\" El contexto es la exigencia de una vida completa para la eudaimonía, no un momento aislado.",
+      "source": "AristotleWalks, transcripción del texto griego y traducción de la Ethica Nicomachea, libro I",
+      "url": "https://www.aristotlewalks.com/aristotle-en-book-i/"
+    },
+    {
+      "claim": "Confirmación independiente de la misma línea con la referencia 1.7, 1098a.18, y de las variantes de traducción: Rackham (1934) traduce \"one swallow does not make spring\"; Ross (1908) sustituye \"spring\" por \"summer\"; Crisp (2000) mantiene \"spring\". La nota precisa que el griego emplea ἔαρ, primavera, y que \"verano\" es una decisión interpretativa del traductor, no una traducción literal.",
+      "source": "WIST Quotations, ficha de Aristóteles, Nicomachean Ethics 1.7, 1098a.18",
+      "url": "https://wist.info/aristotle/40482/"
+    },
+    {
+      "claim": "El proverbio griego μία χελιδὼν ἔαρ οὐ ποιεῖ se registra con origen en Aristóteles, Ética a Nicómaco, referencia Bekker 1098a18, y significa literalmente \"una golondrina no hace primavera\".",
+      "source": "Wiktionary en inglés, entrada \"μία χελιδὼν ἔαρ οὐ ποιεῖ\"",
+      "url": "https://en.wiktionary.org/wiki/%CE%BC%CE%AF%CE%B1_%CF%87%CE%B5%CE%BB%CE%B9%CE%B4%E1%BD%BC%CE%BD_%E1%BC%94%CE%B1%CF%81_%CE%BF%E1%BD%90_%CF%80%CE%BF%CE%B9%CE%B5%E1%BF%96"
+    },
+    {
+      "claim": "La frase \"We are what we repeatedly do. Excellence, then, is not an act, but a habit\" figura expresamente en la sección de citas MAL ATRIBUIDAS de Aristóteles: es de Will Durant, The Story of Philosophy (1926), que resumía con palabras propias las ideas aristotélicas sobre virtud y hábito. La misma sección desmiente otras muy difundidas: \"Happiness depends upon ourselves\" (glosa del traductor J. A. K. Thomson, 1955), \"There is only one way to avoid criticism: do nothing, say nothing and be nothing\" (Elbert Hubbard, 1898), \"Those who can, do; those who cannot, teach\" (atribuida a George Bernard Shaw, Man and Superman, 1903) y \"Plato is dear to me, but dearer still is truth\" (no rastreable en Aristóteles).",
+      "source": "Wikiquote en inglés, artículo \"Aristotle\", secciones Nicomachean Ethics y Misattributed",
+      "url": "https://en.wikiquote.org/wiki/Aristotle"
+    },
+    {
+      "claim": "La numeración Bekker es el sistema estándar de cita de Aristóteles: la creó el filólogo August Immanuel Bekker (1785-1871) en la edición de las obras completas publicada por la Academia Prusiana de Ciencias en Berlín entre 1831 y 1837, en cinco volúmenes. Cada referencia se lee como página, letra de columna (a o b) y número de línea; cada página tiene dos columnas, de veinte a cuarenta líneas cada una.",
+      "source": "Wikipedia en inglés, artículo \"Bekker numbering\"",
+      "url": "https://en.wikipedia.org/wiki/Bekker_numbering"
+    },
+    {
+      "claim": "La Ética nicomáquea consta de diez libros; las obras conservadas de Aristóteles no eran libros destinados a la publicación, sino manuales y apuntes para la enseñanza en el Liceo. El pasaje de la golondrina se cita en la exposición sobre la vida completa: la felicidad requiere una existencia entera de actividad virtuosa, no momentos aislados. El título de la obra probablemente no procede de una dedicatoria del propio Aristóteles: hay quien lo atribuye a Andrónico de Rodas, siglos después.",
+      "source": "Wikipedia en español, artículo \"Ética nicomáquea\"",
+      "url": "https://es.wikipedia.org/wiki/%C3%89tica_nicom%C3%A1quea"
+    },
+    {
+      "claim": "Aristóteles nació en 384 a.C. en Estagira (Liga Calcídica, norte de Grecia) y murió en 322 a.C. en Calcis, Eubea, a los 61 o 62 años. \"Those works that have survived are in treatise form and were not, for the most part, intended for widespread publication; they are generally thought to be lecture aids for his students\", y solo se conserva alrededor de un tercio de su producción original.",
+      "source": "Wikipedia en inglés, artículo \"Aristotle\"",
+      "url": "https://en.wikipedia.org/wiki/Aristotle"
+    },
+    {
+      "claim": "Traducción castellana de referencia del pasaje, en la forma en que circula en las ediciones españolas: \"Porque una golondrina no hace verano, ni un solo día, y así tampoco hace venturoso y feliz un solo día o un poco tiempo\". Sirve para dejar constancia de que \"verano\" es la forma consagrada en español pese a que el griego dice primavera.",
+      "source": "Wikipedia en español, artículo \"Ética de Aristóteles\"",
+      "url": "https://es.wikipedia.org/wiki/%C3%89tica_de_Arist%C3%B3teles"
+    }
+  ],
+  "do_not_use": [
+    "\"Somos lo que hacemos repetidamente. La excelencia, entonces, no es un acto sino un hábito.\" DESCARTADA como cita de Aristóteles en esta investigación: es la falsa atribución más difundida del filósofo. La escribió Will Durant en The Story of Philosophy (1926), resumiendo con palabras propias el libro segundo de la Ética a Nicómaco. Wikiquote la clasifica expresamente como mal atribuida. Se menciona en el cuerpo del post justamente para desmontarla, nunca en la tarjeta ni firmada por Aristóteles.",
+    "\"La felicidad depende de nosotros mismos.\" DESCARTADA: no está en el griego. Es una glosa interpretativa que introdujo el traductor J. A. K. Thomson en su versión inglesa de la Ética (1955) y que después circuló como frase literal.",
+    "\"Solo hay una manera de evitar las críticas: no hacer nada, no decir nada y no ser nada.\" DESCARTADA: es de Elbert Hubbard, Little Journeys to the Homes of American Statesmen (1898). Veintidós siglos de distancia.",
+    "\"El que puede, hace; el que no puede, enseña.\" DESCARTADA: se atribuye a George Bernard Shaw, Man and Superman (1903), y no a Aristóteles.",
+    "\"Amigo de Platón, pero más amiga la verdad.\" DESCARTADA como cita textual: Wikiquote la registra como no rastreable en el corpus aristotélico. Es una formulación posterior, probablemente derivada de una lectura libre de un pasaje de la Ética.",
+    "\"La peor forma de desigualdad es tratar de igualar cosas desiguales.\" DESCARTADA: apareció en la revista TIME en 1974 como explicación de la política de Aristóteles y se condensó después en forma de cita.",
+    "\"Una golondrina no hace verano\" presentada como la traducción del original. No lo es: la palabra griega es éar, primavera. \"Verano\" entró por los traductores —en inglés lo fija la versión de Ross de 1908— y en español es la forma consagrada, incluso en ediciones académicas. Se puede mencionar como la forma popular, nunca como el texto de Aristóteles. La tarjeta usa una versión fiel al griego, no la traducción castellana de uso corriente, y eso se hace constar aquí para no presentarla como la traducción canónica.",
+    "Citar solo la primera mitad, \"una golondrina no hace primavera\", como si fuera una sentencia completa. Suelta se convierte en un refrán sobre datos aislados y se pierde justo lo que dice Aristóteles: que lo que no se juzga por un día es la vida de una persona.",
+    "\"El refrán viene de la fábula de Esopo del joven y la golondrina.\" Lo afirma la entrada de Wiktionary, y NO SE PUDO CONFIRMAR en ninguna otra fuente en esta sesión. Descartado: no se usa.",
+    "\"Aristóteles se lo dedicó a su hijo Nicómaco.\" Descartado como hecho: el origen del título está discutido y hay quien lo atribuye a Andrónico de Rodas, siglos después. Si alguna vez se usa, solo como \"se ha sugerido que…\".",
+    "Presentar la Ética a Nicómaco como un libro escrito para el público. No lo fue: los tratados conservados son material de enseñanza del Liceo. Ese dato es parte del giro de la pieza y confundirlo la desarma.",
+    "Fechas de composición cerradas para la obra (circula \"hacia el 325 a.C.\"). No se verificó en esta sesión: la pieza da solo los años de vida del autor y la referencia Bekker.",
+    "REVISAR: la cita se reconstruyó del claim de la fuente, no del hook. Cotejar redacción antes de encolar."
+  ],
+  "status": "draft"
+}

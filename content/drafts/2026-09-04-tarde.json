@@ -1,0 +1,56 @@
+{
+  "id": "2026-09-04-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "hook": "La frase que se cita como serenidad zen no es un consejo de calma: es un método de trabajo.",
+    "body": [
+      "La escribió Baruch Spinoza en el Tratado político, en el cuarto párrafo del primer capítulo. Ese libro quedó inconcluso: se interrumpe en el capítulo 11, mientras trataba la democracia, porque Spinoza murió antes de terminarlo, en 1677, a los 44 años. Se publicó ese mismo año, ya muerto él, en sus Obras póstumas. En ese pasaje se distancia de quienes describen a los hombres no como son, sino como querrían que fuesen, y dice que él prefirió no burlarse de las acciones humanas, ni lamentarlas, ni detestarlas, sino comprenderlas.",
+      "El texto que hoy circula por todas partes firmado 'el Dios de Spinoza' -el que empieza 'deja de andar rezando'- no es suyo: lo escribió el autor mexicano Anand Dílvar en 2005, en su libro Conversaciones con mi guía. Y esta frase real se confunde a menudo con el prefacio de la Ética, donde Spinoza propone estudiar las pasiones humanas como si fueran cuestión de líneas, superficies y cuerpos. Es la misma idea, pero otro libro.",
+      "El giro está en el verbo final. No pide resignarse ni perdonar: pide entender. Para Spinoza, el odio, la ira o la envidia no son pecados que reprender, sino fenómenos que examinar, como se examina el calor o una tormenta. Comprender no es rendirse ante algo. En su sistema, es el primer paso para dejar de estar a su merced."
+    ],
+    "question": "¿Qué te resultaría más difícil de comprender en lugar de juzgar?",
+    "subject": "Baruch Spinoza",
+    "quote": {
+      "text": "No reírse, no lamentarse ni maldecir, sino comprender.",
+      "author": "Baruch Spinoza",
+      "work": "Tratado político, cap. 1, §4 (1677)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "La frase es del Tratado político, cap. 1, §4; texto latino: 'Sedulo curavi, humanas actiones non ridere, non lugere, neque detestari, sed intelligere'.",
+      "source": "Wikiquote (Baruch Spinoza), que la cita del Political Treatise, cap. 1",
+      "url": "https://en.wikiquote.org/wiki/Baruch_Spinoza"
+    },
+    {
+      "claim": "El Tratado político quedó inconcluso (se interrumpe en el cap. 11) y se publicó póstumamente en 1677, en las Obras póstumas; Spinoza vivió 1632-1677.",
+      "source": "Wikipedia (Tractatus Politicus) y Stanford Encyclopedia of Philosophy",
+      "url": "https://en.wikipedia.org/wiki/Tractatus_Politicus"
+    },
+    {
+      "claim": "El prefacio de la Ética, parte III, contiene la idea emparentada pero distinta: tratar las acciones y apetitos humanos 'perinde ac si quaestio de lineis, planis aut de corporibus esset'.",
+      "source": "The Latin Library, Ethica III (Praefatio)",
+      "url": "https://www.thelatinlibrary.com/spinoza.ethica3.html"
+    },
+    {
+      "claim": "El texto viral 'el Dios de Spinoza' ('deja de andar rezando...') no es de Spinoza: lo escribió el mexicano Anand Dílvar en 2005 (Conversaciones con mi guía).",
+      "source": "Verificador de La República",
+      "url": "https://larepublica.pe/verificador/2021/10/06/no-texto-viral-sobre-el-dios-de-spinoza-no-corresponde-al-filosofo-holandes"
+    }
+  ],
+  "do_not_use": [
+    "El texto viral 'El Dios de Spinoza' ('Deja de andar rezando y golpeándote el pecho...'): NO es de Spinoza. Lo escribió el autor mexicano Anand Dílvar en 2005, en Conversaciones con mi guía; en el original un personaje dice 'si Dios existiera, te diría...'. Es la falsa atribución más difundida del filósofo.",
+    "No confundir la frase con el prefacio de la Ética (parte III): ahí Spinoza dice algo emparentado -estudiar los afectos 'como si fuera cuestión de líneas, superficies y cuerpos' y critica a quienes prefieren detestarlos antes que entenderlos-, pero la frase 'non ridere, non lugere...' es del Tratado político, no de la Ética.",
+    "No atribuirla a Einstein: Einstein declaró creer en 'el Dios de Spinoza', y de ahí el enredo, pero esta frase no es de Einstein.",
+    "No recortarla omitiendo 'lamentar' (lugere): algunas traducciones dejan fuera ese verbo; el original latino trae los cuatro (no burlarse, no lamentar, no detestar, sino comprender).",
+    "No presentarla como consejo de calma o de 'no juzgar y ya': en Spinoza comprender es un método racional, no una actitud de indiferencia serena.",
+    "REVISAR: la cita se reconstruyó del claim de la fuente, no del hook. Cotejar redacción antes de encolar."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "2026-09-06-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "hook": "Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.",
+    "body": [
+      "Hacia el año 261 antes de Cristo, en el octavo de su reinado, el emperador Ashoka conquistó el reino de Kalinga, en la costa este de la India. Las cifras las dio él mismo, talladas en roca en el llamado Edicto XIII: ciento cincuenta mil personas deportadas, cien mil muertas y muchas más muertas después. Es de las pocas veces en la historia en que un vencedor deja escrito el número de sus víctimas.",
+      "Ese texto se repite por todo el imperio, del norte del actual Pakistán al sur de la India, y en Kandahar se grabó incluso en griego para que lo leyeran allí. Falta en un solo sitio: en Kalinga. En las dos rocas del territorio arrasado, Dhauli y Jaugada, el Edicto XIII no está, y su lugar lo ocupan otros textos, dirigidos a los funcionarios de la zona.",
+      "Tampoco dejó de matar. En uno de sus pilares concede a los condenados a muerte tres días de plazo, no la vida. Y firmó todo aquello con un título, no con su nombre: hasta 1915, cuando un ingeniero de minas de oro llamado C. Beadon dio en Maski con la primera inscripción que decía Asoka, nadie podía afirmar con certeza quién había escrito los edictos. Reconocer en voz alta y reparar donde duele no son la misma cosa."
+    ],
+    "question": "¿A quién le falta escuchar una disculpa que ya contaste a todos los demás?",
+    "subject": "Ashoka y el Edicto XIII"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL EDICTO XIII",
+    "subtitle": "Las cifras de la matanza las dio el propio vencedor",
+    "body": "Hacia el 261 antes de Cristo, Ashoka arrasó el reino de Kalinga y mandó tallar la cuenta en roca: ciento cincuenta mil deportados y cien mil muertos. Ese texto se grabó por todo su imperio, hasta en griego. En las dos rocas de Kalinga, justo donde ocurrió, no aparece.",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Cifras del Edicto Mayor en Roca XIII: 150.000 deportados, 100.000 muertos y muchos más muertos después; la conquista de Kalinga ocurre ocho años después de su consagración, hacia el 261-260 a.C. Reinado de Ashoka: 268-232 a.C.",
+      "source": "World History Encyclopedia, 'The Edicts of Ashoka the Great'; Wikipedia en inglés, 'Kalinga War' (traducción del edicto: 'One hundred and fifty thousand were deported, one hundred thousand were killed and many more died')",
+      "url": "https://www.worldhistory.org/Edicts_of_Ashoka/"
+    },
+    {
+      "claim": "El Edicto XIII no aparece en las inscripciones halladas en Kalinga: en Dhauli y Jaugada los edictos XI, XII y XIII están ausentes y su lugar lo ocupan dos edictos separados dirigidos a los funcionarios locales.",
+      "source": "Anuvada, traducción anotada del Edicto Mayor en Roca XIII (versión de Kalsi): 'This edict (along with XI and XII) is conspicuously absent from the inscriptions actually found in this territory'; coincidente con Puratattva, 'Dhauli - Thus Spoke Ashoka' ('Edicts XI-XIII are replaced by two special edicts, known as Kaling Edict I and Kalinga Edict II')",
+      "url": "https://anuvada.substack.com/p/ashokas-major-rock-edict-xiii-kalsi"
+    },
+    {
+      "claim": "En Kandahar (Afganistán) se conserva una versión griega con el final del Edicto XII y el comienzo del Edicto XIII, hallada en 1963.",
+      "source": "Wikipedia en inglés, 'Kandahar Greek Edicts of Ashoka': 'a Greek version of the end of the 12th Edict... and the beginning of the 13th Edict'",
+      "url": "https://en.wikipedia.org/wiki/Kandahar_Greek_Edicts_of_Ashoka"
+    },
+    {
+      "claim": "Los edictos se firman con el título Devanampiya Piyadasi, sin el nombre Ashoka. La inscripción de Maski, hallada en 1915 por C. Beadon, ingeniero británico de minas de oro, en el actual distrito de Raichur (Karnataka), es la primera que lo nombra Asoka y la que fija la identificación.",
+      "source": "Wikipedia en inglés, 'Edicts of Ashoka' ('found in 1915 by C. Beadon, a British gold-mining engineer'; 'confirmed the association of the title Devanampriya with the name Asoka'); Way of Bodhi, 'The Maski Rock Edict of Ashoka' (coincidente)",
+      "url": "https://en.wikipedia.org/wiki/Edicts_of_Ashoka"
+    },
+    {
+      "claim": "Ashoka no abolió la pena de muerte: el Edicto en Pilar IV concede a los condenados tres días de plazo, para que sus parientes intercedan o para que el reo se prepare.",
+      "source": "Puratattva, 'Edicts of Ashoka - Pillar Edict IV': 'To men who are bound with fetters, on whom punishment has been passed and who have been condemned to death, have I granted three days'; y su comentario: 'It is clear from the edict that Ashoka did not abolish capital punishment'",
+      "url": "https://puratattva.in/the-mauryas-19/"
+    },
+    {
+      "claim": "James Prinsep descifró la escritura brahmi y publicó sus resultados en 1837.",
+      "source": "World History Encyclopedia, 'The Edicts of Ashoka the Great'",
+      "url": "https://www.worldhistory.org/Edicts_of_Ashoka/"
+    },
+    {
+      "claim": "El capitel de los leones de Sarnath fue adoptado como emblema del Estado de la India el 26 de enero de 1950.",
+      "source": "Wikipedia en inglés, 'State Emblem of India': 'On 26-January-1950, a representation of the Lion Capital of Ashoka... was adopted as the State Emblem of India'",
+      "url": "https://en.wikipedia.org/wiki/State_Emblem_of_India"
+    }
+  ],
+  "do_not_use": [
+    "\"Ashoka se convirtió al budismo de golpe por el horror de Kalinga\": DESCARTADO en esta investigación. El relato de la conversión instantánea procede de crónicas muy posteriores (Ashokavadana, crónicas cingalesas), no de los edictos. El propio Edicto Menor en Roca —el de Maski, entre otros— describe una adhesión gradual: llevaba dos años y medio como seguidor laico antes de acercarse de veras a la comunidad. Se puede decir que el edicto expresa arrepentimiento; no que la matanza lo convirtiera en un día.",
+    "\"Ashoka abolió la pena de muerte\": falso. El Edicto en Pilar IV solo concede tres días de plazo al condenado. Conservó el aparato punitivo del imperio.",
+    "\"Renunció a la guerra y desmanteló su ejército\": no consta en ninguna fuente. Mantuvo Kalinga conquistada; nunca la devolvió.",
+    "\"El nombre Ashoka aparece grabado en los edictos\": no en la inmensa mayoría. Firman con el título Devanampiya Piyadasi, 'el amado de los dioses, el que mira con afecto'. Maski (1915) es el primero que lo nombra Asoka.",
+    "\"Prinsep identificó a Ashoka en 1837\": matiz importante, versión DESCARTADA tal cual. En 1837 descifró el brahmi y publicó, pero al principio asoció Piyadasi con Devanampiya Tissa, rey de Ceilán; la identificación con Ashoka se apoyó primero en fuentes textuales (el Dipavamsa que George Turnour localizó ese mismo año) y no quedó cerrada epigráficamente hasta Maski, en 1915. Decir 'descifró la escritura en 1837' es correcto; 'identificó a Ashoka en 1837' no.",
+    "\"250.000 muertos en Kalinga\": error de suma que circula mucho. El edicto dice cien mil muertos, ciento cincuenta mil deportados y 'muchos más murieron'. Deportado no es muerto.",
+    "\"El Edicto XIII sí está en Kalinga, dentro del Edicto Separado II\": versión DESCARTADA. La sostiene una página divulgativa (Puratattva) y no la respaldan las traducciones anotadas: los dos edictos separados de Dhauli y Jaugada son instrucciones administrativas a los funcionarios ('todos los hombres son mis hijos'), no repiten la confesión ni las cifras.",
+    "\"Ashoka fue el primer gobernante de la historia que pidió perdón\": superlativo no verificable. No usar.",
+    "Fecha de la rueda de Ashoka en la bandera de la India: NO verificada en esta sesión. Solo está comprobada la adopción del capitel de Sarnath como emblema del Estado, el 26 de enero de 1950.",
+    "Cifras de población o de extensión del imperio maurya, y el número total de edictos conservados: las fuentes divulgativas discrepan (33 inscripciones en unas, más en otras) y no se verificaron aquí. No darlas como dato cerrado.",
+    "Ubicación actual del capitel original de Sarnath: no se verificó el museo concreto. Decir solo 'se conserva en Sarnath'."
+  ],
+  "status": "draft"
+}
