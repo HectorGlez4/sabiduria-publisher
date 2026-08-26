@@ -60,6 +60,12 @@
     "facebook_reel"
   ],
   "status": "ready",
-  "results": {},
-  "reemision_de": "2026-08-17-tarde"
+  "results": {
+    "facebook_reel": {
+      "error": "falló el renderer del reel (código 1):\nTraceback (most recent call last):\n  File \"/home/runner/work/sabiduria-publisher/sabiduria-publisher/src/render/reel.py\", line 203, in <module>\n    ruta = make_reel(a.title, a.body, a.out, a.subtitle, a.question, a.variant)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/sabiduria-publisher/sabiduria-publisher/src/render/reel.py\", line 185, in make_reel\n    r = subprocess.run(cmd, capture_output=True, text=True)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/subprocess.py\", line 548, in run\n    with Popen(*popenargs, **kwargs) as process:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/subprocess.py\", line 1026, in __init__\n    self._execute_child(args, executable, preexec_fn, close_fds,\n  File \"/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/subprocess.py\", line 1955, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+    }
+  },
+  "reemision_de": "2026-08-17-tarde",
+  "attempts": 1,
+  "last_attempt": "2026-08-26T20:19:27.020815+00:00"
 }
