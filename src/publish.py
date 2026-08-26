@@ -120,6 +120,40 @@ def render_card(unit: dict) -> pathlib.Path:
     return out
 
 
+def render_reel(unit: dict) -> pathlib.Path:
+    """
+    El MP4 vertical de la pieza. Mismo trato que render_card: se regenera desde
+    los parámetros y no se versiona.
+
+    Las dos plantillas alimentan los mismos cuatro huecos del reel. En una cita
+    el "título" es el autor y el "cuerpo" es la cita, que es justo el orden en
+    que se leen en pantalla: primero de quién es, después qué dijo.
+    """
+    card = unit["card"]
+    out = ASSETS / f"{unit['id']}-reel.mp4"
+    script = ROOT / "src" / "render" / "reel.py"
+
+    cmd = [sys.executable, str(script), "--variant", card["variant"], "--out", str(out)]
+    if card["renderer"] == "quote_card":
+        q = unit["core"]["quote"]
+        autor = f"{q['author']}, {q['work']}" if q.get("work") else q["author"]
+        cmd += ["--title", autor, "--body", q["text"]]
+    else:
+        cmd += ["--title", card["title"], "--body", card["body"]]
+        if card.get("subtitle"):
+            cmd += ["--subtitle", card["subtitle"]]
+    if unit["core"].get("question"):
+        cmd += ["--question", unit["core"]["question"]]
+
+    r = subprocess.run(cmd, capture_output=True, text=True)
+    if r.returncode != 0:
+        detalle = (r.stderr or r.stdout or "(sin salida)").strip()
+        raise RuntimeError(f"falló el renderer del reel (código {r.returncode}):\n{detalle}")
+    if not out.exists():
+        raise RuntimeError(f"el reel no se generó: {out}")
+    return out
+
+
 def upload_asset(path: pathlib.Path) -> str:
     """
     Publica la imagen y devuelve su URL HTTPS pública.
@@ -241,7 +275,14 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
             PENDING[platform]()  # levanta PlatformBlocked con el motivo exacto
         try:
             fn = meta.PUBLISHERS[platform]
-            res = fn(image_url, texts[platform]["text"])
+            if platform == "facebook_reel":
+                # El reel se SUBE, no se descarga de una URL: este adaptador
+                # recibe una ruta y no `image_url`. Y reutiliza el copy de
+                # Facebook, porque variants.py no deriva texto propio para el
+                # reel — es la misma pieza en otro formato, no otra pieza.
+                res = fn(str(render_reel(unit)), texts["facebook"]["text"])
+            else:
+                res = fn(image_url, texts[platform]["text"])
             res["published_at"] = datetime.now(timezone.utc).isoformat()
             unit["results"][platform] = res
             print(f"  ✓ {platform}: {res['post_id']}")

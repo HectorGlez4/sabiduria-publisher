@@ -94,6 +94,105 @@ def publish_facebook(image_url: str, caption: str) -> dict:
     }
 
 
+# ─────────────────────────── Facebook Reels ───────────────────────────
+
+# Los reels NO pasan por graph.facebook.com para el binario: hay un host
+# aparte, y olvidarlo devuelve un error que no menciona el host por ningún lado.
+RUPLOAD = os.environ.get("META_RUPLOAD_BASE") or "https://rupload.facebook.com/video-upload"
+
+
+def publish_reel(video_path: str, description: str) -> dict:
+    """
+    Tres fases, y ninguna se puede saltar.
+
+      start   POST /{page-id}/video_reels   → devuelve video_id
+      upload  POST a rupload.facebook.com con el binario en el cuerpo
+      finish  POST /{page-id}/video_reels con video_state=PUBLISHED
+
+    A diferencia de /photos —que es una sola llamada con una URL y ya— aquí el
+    vídeo se SUBE. No vale darle una URL pública: por eso este adaptador recibe
+    una ruta de fichero y no una URL, y por eso no necesita el hosting de
+    src/hosting.py.
+
+    Por qué reels y no fotos: la página tiene 28.000 seguidores y su mejor foto
+    en 90 días llegó a 408 personas. Los reels son la única superficie que
+    reparte a no seguidores. Ver la cabecera de src/render/reel.py.
+    """
+    page_id = os.environ["SDB_PAGE_ID"]
+    token = os.environ["SDB_PAGE_TOKEN"]
+    tamano = os.path.getsize(video_path)
+
+    inicio = _post(
+        f"{GRAPH}/{page_id}/video_reels",
+        {"upload_phase": "start", "access_token": token},
+    )
+    video_id = inicio["video_id"]
+
+    # El binario va en el cuerpo crudo, y las cabeceras son obligatorias:
+    # 'Authorization: OAuth <token>' —no el parámetro access_token de siempre—
+    # más offset y file_size. Si falta file_size, Meta acepta la petición y
+    # deja el vídeo a medias sin decir nada.
+    with open(video_path, "rb") as f:
+        r = requests.post(
+            f"{RUPLOAD}/{API_VERSION}/{video_id}",
+            headers={
+                "Authorization": f"OAuth {token}",
+                "offset": "0",
+                "file_size": str(tamano),
+                "Content-Type": "application/octet-stream",
+            },
+            data=f.read(),
+            timeout=300,
+        )
+    if not r.ok:
+        raise MetaError(f"subida del reel HTTP {r.status_code}: {r.text[:300]}")
+
+    _esperar_reel(video_id, token)
+
+    fin = _post(
+        f"{GRAPH}/{page_id}/video_reels",
+        {
+            "upload_phase": "finish",
+            "video_id": video_id,
+            "video_state": "PUBLISHED",
+            "description": description,
+            "access_token": token,
+        },
+    )
+    if not fin.get("success", True):
+        raise MetaError(f"el reel no se publicó: {fin}")
+
+    return {
+        "post_id": video_id,
+        "url": _permalink(video_id, token, "permalink_url",
+                          f"https://www.facebook.com/reel/{video_id}"),
+    }
+
+
+def _esperar_reel(video_id: str, token: str, attempts: int = 20, delay: int = 6) -> None:
+    """
+    Facebook procesa el vídeo de forma asíncrona, igual que Instagram con su
+    contenedor. Publicar antes de que termine devuelve un reel roto o vacío.
+
+    No levanta si el estado no llega a 'ready': hay vídeos que se quedan en
+    'in_progress' y aun así publican bien. Se le da su tiempo y se sigue; si de
+    verdad está mal, la fase finish lo dirá con un error de verdad.
+    """
+    for _ in range(attempts):
+        time.sleep(delay)
+        try:
+            estado = _get(f"{GRAPH}/{video_id}",
+                          {"fields": "status", "access_token": token})
+        except MetaError:
+            continue
+        fase = ((estado.get("status") or {}).get("video_status")
+                or (estado.get("status") or {}).get("uploading_phase", {}).get("status"))
+        if fase in ("ready", "complete", "published"):
+            return
+        if fase == "error":
+            raise MetaError(f"Facebook rechazó el vídeo del reel: {estado.get('status')}")
+
+
 # ─────────────────────────── Instagram ───────────────────────────
 
 def _wait_for_container(container_id: str, token: str, attempts: int = 12, delay: int = 5) -> None:
@@ -205,6 +304,10 @@ def discover(user_token: str) -> None:
 
 PUBLISHERS = {
     "facebook": publish_facebook,
+    # No está en `targets` de ninguna pieza todavía: es la prueba que hay que
+    # hacer. Se mete una pieza al día como reel y en dos semanas se compara el
+    # alcance contra las fotos, con datos y no con opiniones.
+    "facebook_reel": publish_reel,
     "instagram": publish_instagram,
     "threads": publish_threads,
 }
