@@ -1,0 +1,62 @@
+{
+  "id": "2026-09-10-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "El bulevar del Temple de Daguerre",
+    "hook": "La primera fotografía de un ser humano se hizo sin que el fotógrafo lo buscara, y la placa original ya no existe.",
+    "body": [
+      "Entre el 24 de abril y el 4 de mayo de 1837 o 1838 —la fecha exacta sigue sin fijarse—, Louis Daguerre apuntó su cámara al bulevar del Temple de París desde una ventana alta. El bulevar era una de las calles más transitadas de la ciudad. En la placa aparece vacío.",
+      "Para entonces Daguerre había bajado el tiempo de exposición a cuatro o cinco minutos, cuando poco antes hacían falta ocho horas. Cuatro minutos siguen siendo demasiados para un carruaje o para alguien que camina: la luz de todo lo que se movía se repartió por la placa y no llegó a formar imagen. Quedaron dos figuras en la esquina inferior izquierda. Un hombre que se hacía limpiar los zapatos y el limpiabotas agachado ante él. Estuvieron quietos el tiempo suficiente porque el trabajo lo exigía.",
+      "En octubre de 1839 Daguerre le regaló al rey Luis I de Baviera un tríptico enmarcado con esta imagen a la derecha. Las placas pasaron del palacio real al Museo Nacional de Baviera, se deterioraron durante la Segunda Guerra Mundial y en 1970 se prestaron al Museo Municipal de Múnich para restaurarlas. El intento las arruinó del todo. Lo que hoy circula en cualquier libro y en cualquier pantalla desciende de las reproducciones que Beaumont Newhall hizo en 1936 o 1937, cuando volvió a encontrarlas. El original de la primera persona fotografiada se perdió intentando salvarlo."
+    ],
+    "question": "¿Qué cosa tuya sobrevive solo en copias?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "PARÍS, 1838",
+    "subtitle": "Una calle llena que salió vacía",
+    "body": "El bulevar del Temple era de los más transitados de París. La exposición duró cuatro o cinco minutos y borró a todo el que se movía. Solo quedaron dos hombres: uno se hacía limpiar los zapatos, el otro se los limpiaba."
+  },
+  "sources": [
+    {
+      "claim": "El daguerrotipo se hizo entre el 24 de abril y el 4 de mayo de 1837 o 1838; la fecha no está fijada.",
+      "source": "Wikipedia (en), «Boulevard du Temple (photograph)», con referencias a la bibliografía sobre Daguerre",
+      "url": "https://en.wikipedia.org/wiki/Boulevard_du_Temple_(photograph)"
+    },
+    {
+      "claim": "Hacia 1838 Daguerre había reducido el tiempo de exposición a cuatro o cinco minutos, frente a las ocho horas que exigían los métodos anteriores.",
+      "source": "Wikipedia (en), «Boulevard du Temple (photograph)»",
+      "url": "https://en.wikipedia.org/wiki/Boulevard_du_Temple_(photograph)"
+    },
+    {
+      "claim": "En octubre de 1839 Daguerre entregó al rey Luis I de Baviera un tríptico enmarcado en el que esta fotografía era la imagen de la derecha.",
+      "source": "Wikipedia (en), «Boulevard du Temple (photograph)»",
+      "url": "https://en.wikipedia.org/wiki/Boulevard_du_Temple_(photograph)"
+    },
+    {
+      "claim": "Las placas se guardaron en el palacio real, pasaron al Museo Nacional de Baviera, se deterioraron durante la Segunda Guerra Mundial y en 1970 se prestaron al Museo Municipal de Múnich para un intento de restauración que las arruinó todavía más.",
+      "source": "Wikipedia (en), «Boulevard du Temple (photograph)»",
+      "url": "https://en.wikipedia.org/wiki/Boulevard_du_Temple_(photograph)"
+    },
+    {
+      "claim": "Las versiones que circulan hoy descienden de las reproducciones que Beaumont Newhall hizo tras redescubrir las placas en 1936 o 1937, no de los originales dañados.",
+      "source": "Wikipedia (en), «Boulevard du Temple (photograph)»",
+      "url": "https://en.wikipedia.org/wiki/Boulevard_du_Temple_(photograph)"
+    },
+    {
+      "claim": "La figura visible en la esquina inferior izquierda es un hombre al que un limpiabotas atiende; se considera la primera imagen fotográfica de un ser humano.",
+      "source": "Artnet News, «Oldest Photograph of a Human Is Back in the Spotlight»",
+      "url": "https://news.artnet.com/art-world/oldest-photograph-of-a-human-is-back-in-the-spotlight-159766"
+    }
+  ],
+  "do_not_use": [
+    "No decir que la exposición duró diez minutos. Es la cifra que más circula, pero las fuentes que documentan el avance técnico de Daguerre dan cuatro o cinco minutos hacia 1838.",
+    "No dar 1838 como fecha cerrada. El intervalo documentado es entre el 24 de abril y el 4 de mayo, y el año oscila entre 1837 y 1838.",
+    "No decir que en la imagen hay solo dos personas. Se han señalado figuras tenues adicionales, posiblemente un niño asomado a una ventana y un caballo; no está resuelto.",
+    "No decir que la placa se destruyó en la guerra. Se deterioró durante la guerra, pero lo que la arruinó definitivamente fue el intento de restauración de 1970."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}

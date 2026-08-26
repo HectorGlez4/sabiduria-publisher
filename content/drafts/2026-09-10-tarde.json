@@ -1,0 +1,59 @@
+{
+  "id": "2026-09-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sor Juana Inés de la Cruz",
+    "hook": "\"Si Aristóteles hubiera guisado, mucho más hubiera escrito.\"",
+    "body": [
+      "La frase está en la Respuesta a sor Filotea de la Cruz, que Sor Juana Inés de la Cruz fechó el 1 de marzo de 1691. No es una ocurrencia suelta: llega después de varias páginas en las que cuenta lo que aprendió mirando cómo se comporta el azúcar, cómo cuaja un huevo, por qué la yema y la clara sirven para cosas contrarias.",
+      "El contexto de la carta importa. El obispo de Puebla, Manuel Fernández de Santa Cruz, había publicado un texto suyo sin permiso y lo había acompañado de una amonestación firmada con seudónimo de monja: sor Filotea, que le recomendaba dejar las letras profanas. La Respuesta es lo que Sor Juana contesta a eso, y se considera el primer texto escrito en el hemisferio occidental que defiende el derecho de las mujeres a estudiar.",
+      "Justo antes de la frase escribe: \"¿qué podemos saber las mujeres sino filosofías de cocina?\". La pregunta suena a resignación y no lo es. Está diciendo que el sitio al que la confinaron también es un sitio donde se piensa, y que a Aristóteles le habría venido bien pasar por ahí."
+    ],
+    "question": "¿Qué aprendiste en un lugar donde nadie esperaba que aprendieras algo?",
+    "quote": {
+      "text": "Si Aristóteles hubiera guisado, mucho más hubiera escrito.",
+      "author": "Sor Juana Inés de la Cruz",
+      "work": "Respuesta a sor Filotea de la Cruz (1691)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto literal de la frase y de su contexto inmediato: «pero, señora, ¿qué podemos saber las mujeres sino filosofías de cocina? Bien dijo Lupercio Leonardo, que bien se puede filosofar y aderezar la cena. Y yo suelo decir viendo estas cosillas: Si Aristóteles hubiera guisado, mucho más hubiera escrito.»",
+      "source": "Selección de «Respuesta a la muy ilustre sor Filotea de la Cruz» (1691), edición docente de Berry College",
+      "url": "https://sites.berry.edu/dslade/wp-content/uploads/sites/8/2016/01/Sor-Juana.pdf"
+    },
+    {
+      "claim": "La Respuesta es una carta de defensa que Sor Juana escribió en 1691 contestando a Manuel Fernández de Santa Cruz, obispo de Puebla, que había usado el seudónimo «sor Filotea».",
+      "source": "Wikipedia (en), «La Respuesta a Sor Filotea de la Cruz»",
+      "url": "https://en.wikipedia.org/wiki/La_Respuesta_a_Sor_Filotea_de_la_Cruz"
+    },
+    {
+      "claim": "La Respuesta se considera la primera obra escrita en el hemisferio occidental que defiende el derecho de las mujeres a recibir educación.",
+      "source": "Wikipedia (en), «La Respuesta a Sor Filotea de la Cruz»",
+      "url": "https://en.wikipedia.org/wiki/La_Respuesta_a_Sor_Filotea_de_la_Cruz"
+    },
+    {
+      "claim": "Ficha bibliográfica de la obra, con título completo «Respuesta de la poetisa a la muy ilustre sor Filotea de la Cruz».",
+      "source": "Enciclopedia de la Literatura en México (FLM)",
+      "url": "http://www.elem.mx/obra/datos/2588"
+    },
+    {
+      "claim": "Las observaciones domésticas que preceden a la frase incluyen el comportamiento del azúcar y el hecho de que la yema y la clara de un mismo huevo sirven para cosas contrarias.",
+      "source": "Selección de «Respuesta a la muy ilustre sor Filotea de la Cruz» (1691), edición docente de Berry College",
+      "url": "https://sites.berry.edu/dslade/wp-content/uploads/sites/8/2016/01/Sor-Juana.pdf"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir a Sor Juana la frase «bien se puede filosofar y aderezar la cena». Ella la cita expresamente como de Lupercio Leonardo de Argensola.",
+    "No presentar a sor Filotea como una monja real. Era el seudónimo del obispo de Puebla, Manuel Fernández de Santa Cruz.",
+    "No decir que la frase es una queja. En el texto va precedida de una defensa del conocimiento que se obtiene observando, no de una lamentación."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}

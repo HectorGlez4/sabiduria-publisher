@@ -1,0 +1,57 @@
+{
+  "id": "2026-09-10-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Caral, en el valle de Supe",
+    "hook": "La ciudad más antigua de América levantó seis pirámides y no dejó una sola muralla.",
+    "body": [
+      "Caral está a 23 kilómetros del Pacífico, tierra adentro, en el valle de Supe. Los fechados por radiocarbono publicados en Science en 2001 por Ruth Shady, Jonathan Haas y Winifred Creamer sitúan su arquitectura monumental, su asentamiento urbano y su agricultura de riego entre el 2627 y el 1977 antes de Cristo. Es contemporánea de las primeras pirámides de Egipto y de las ciudades de Mesopotamia.",
+      "La zona central ocupa 65 hectáreas con arquitectura monumental, residencial y no residencial, y Caral es uno de dieciocho grandes sitios precerámicos del mismo valle. Seis estructuras piramidales, plazas circulares hundidas, un sistema de canales. Todo lo que se espera de un Estado consolidado.",
+      "Lo que no ha aparecido son armas, fortificaciones ni restos humanos con marcas de violencia. Es una ausencia, y una ausencia no demuestra nada por sí sola: puede que aún no se haya excavado donde estaban. Pero llevan más de treinta años buscando en dieciocho sitios, y en un lugar donde se construyó tanto durante seis siglos, nadie construyó un muro para defenderse de nadie."
+    ],
+    "question": "¿Qué crees que hace falta para que un lugar no necesite murallas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "VALLE DE SUPE, 2627 a.C.",
+    "subtitle": "Seis pirámides, ninguna muralla",
+    "body": "Caral es la ciudad más antigua de América y es contemporánea de las primeras pirámides de Egipto. En más de treinta años de excavación no han aparecido armas, fortificaciones ni huesos con marcas de violencia."
+  },
+  "sources": [
+    {
+      "claim": "Los fechados por radiocarbono sitúan la arquitectura monumental, el asentamiento urbano y la agricultura de riego en Caral entre 4090 años antes del presente (2627 a.C. calibrado) y 3640 años antes del presente (1977 a.C. calibrado).",
+      "source": "Shady Solís, R., Haas, J. y Creamer, W., «Dating Caral, a Preceramic Site in the Supe Valley on the Central Coast of Peru», Science 292 (5517), 2001, pp. 723-726",
+      "url": "https://ui.adsabs.harvard.edu/abs/2001Sci...292..723S/abstract"
+    },
+    {
+      "claim": "Caral se encuentra a 23 kilómetros tierra adentro desde la costa del Pacífico y su zona central abarca 65 hectáreas de arquitectura monumental, residencial y no residencial.",
+      "source": "Shady Solís, Haas y Creamer, Science 292 (5517), 2001",
+      "url": "https://ui.adsabs.harvard.edu/abs/2001Sci...292..723S/abstract"
+    },
+    {
+      "claim": "Caral es uno de dieciocho grandes sitios precerámicos del valle de Supe.",
+      "source": "Shady Solís, Haas y Creamer, Science 292 (5517), 2001",
+      "url": "https://ui.adsabs.harvard.edu/abs/2001Sci...292..723S/abstract"
+    },
+    {
+      "claim": "La Ciudad Sagrada de Caral-Supe fue inscrita en la Lista del Patrimonio Mundial en 2009; el sitio abarca 626 hectáreas, incluye seis estructuras piramidales y plazas circulares hundidas, y se describe como un Estado sociopolítico plenamente desarrollado.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, ficha de la Ciudad Sagrada de Caral-Supe (n.º 1269)",
+      "url": "https://whc.unesco.org/en/list/1269/"
+    },
+    {
+      "claim": "En Caral-Supe no se han hallado armas, fortificaciones defensivas ni traumatismos en los restos humanos.",
+      "source": "New World Encyclopedia, «Norte Chico civilization», síntesis de los trabajos de campo publicados",
+      "url": "https://www.newworldencyclopedia.org/entry/Norte_Chico_civilization"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Caral era una civilización sin guerra ni conflicto. Lo documentado es que no se han encontrado armas, fortificaciones ni huesos con marcas de violencia. Es ausencia de evidencia, y hay que decirlo así.",
+    "No decir que Caral es la ciudad más antigua del mundo. Es el centro urbano más antiguo conocido de América, contemporáneo de Mesopotamia y Egipto, no anterior.",
+    "No presentar el hallazgo como obra de un solo equipo. Ruth Shady acusó a Jonathan Haas y Winifred Creamer de plagio por un artículo de 2004 en Nature; la disputa por la autoría llegó a investigaciones de ética en ambos países y sigue siendo materia delicada.",
+    "No usar la cifra de 626 hectáreas para la zona central. Esas son las del sitio inscrito por la UNESCO; la zona central con arquitectura monumental son 65."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}
