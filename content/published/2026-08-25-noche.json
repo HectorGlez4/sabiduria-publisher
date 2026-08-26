@@ -73,6 +73,17 @@
     "facebook",
     "instagram"
   ],
-  "status": "ready",
-  "results": {}
+  "status": "published",
+  "results": {
+    "facebook": {
+      "via": "rss",
+      "feed": "https://sabiduria.work-it.fr/feed.xml",
+      "published_at": "2026-08-26T02:06:30.350560+00:00"
+    },
+    "instagram": {
+      "post_id": "18142741105560949",
+      "url": "https://www.instagram.com/p/DcfGcqijcIX/",
+      "published_at": "2026-08-26T02:06:44.710679+00:00"
+    }
+  }
 }
