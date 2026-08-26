@@ -1,0 +1,79 @@
+{
+  "id": "2026-08-30-re04-reel",
+  "publish_at": "2026-08-30T19:25:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+    "hook": "\"Yo fui el arquitecto de mi propio destino.\"\n— Amado Nervo, \"En paz\"",
+    "body": [
+      "Este verso se ha vuelto un eslogan de superación personal. En el poema no lo es. El verso anterior dice desde dónde habla: muy cerca de mi ocaso. No es alguien celebrando lo que consiguió, es un hombre haciendo cuentas al final.",
+      "Y las cuentas salen raras. Agradece que la vida nunca le prometiera nada: ni mayo eterno, ni solo noches buenas. Por eso no termina en victoria, termina en empate. La última línea dice que la vida no le debe nada y que quedan en paz.",
+      "Nervo lo escribió después de perder a la mujer con la que vivió diez años, muerta en 1912. Él murió en Montevideo en mayo de 1919, a los cuarenta y ocho."
+    ],
+    "question": "¿Con quién o con qué te falta quedar en paz?",
+    "quote": {
+      "text": "Yo fui el arquitecto de mi propio destino.",
+      "author": "Amado Nervo (1870-1919)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AmadoNervo",
+      "#Poesia",
+      "#Frases"
+    ],
+    "extended": [
+      "#Nervo",
+      "#PoesiaEnEspanol",
+      "#Mexico",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+      "source": "poemario.com"
+    },
+    {
+      "claim": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+      "source": "Cultura Genial (análisis de \"En paz\")"
+    },
+    {
+      "claim": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+      "source": "México Desconocido (biografía)"
+    },
+    {
+      "claim": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+      "source": "Museo Amado Nervo / CECAN"
+    },
+    {
+      "claim": "Amado Nervo: el verso que se usa como lema de superación personal es, en el poema, un balance de cuentas hecho al final de la vida",
+      "source": "Gaceta UNAM (150 años de su nacimiento)"
+    }
+  ],
+  "do_not_use": [
+    "un año cerrado para Elevación (ver el punto abierto)",
+    "citar el verso como consigna de superación personal sin el contexto del poema, que es exactamente lo que este post corrige",
+    "\"lo escribió en su lecho de muerte\" (el poema es anterior a 1919)",
+    "llamar esposa a Ana Cecilia (no estuvieron casados)",
+    "atribuirle el poema \"En paz\" a La amada inmóvil (es otro libro)",
+    "ni dar la fecha del 20 de marzo de 1915 como dato firme (una sola fuente)"
+  ],
+  "_verificacion_prosa": "el verso pertenece al poema **\"En paz\"**, recogido en el libro ***Elevación***. Texto verificado línea por línea en dos transcripciones independientes (poemario.com y Cultura Genial), coincidentes: *\"Muy cerca de mi ocaso, yo te bendigo, vida, / porque nunca me diste ni esperanza fallida, / ni trabajos injustos, ni pena inmerecida; // porque veo al final de mi rudo camino / que yo fui el arquitecto de mi propio destino; // que si extraje las mieles o la hiel de las cosas, / fue porque en ellas puse hiel o mieles sabrosas: / cuando planté rosales, coseché siempre rosas. // ...Cierto, a mis lozanías va a seguir el invierno: / ¡mas tú no me dijiste que mayo fuese eterno! // Hallé sin duda largas las noches de mis penas; / mas no me prometiste tan sólo noches buenas; / y en cambio tuve algunas santamente serenas... // Amé, fui amado, el sol acarició mi faz. / ¡Vida, nada me debes! ¡Vida, estamos en paz!\"*. **Punto abierto:** el año de *Elevación* no está cerrado en las fuentes consultadas — el Museo Amado Nervo (CECAN, Tepic) lo da como **1916** y poemario.com como **1917**; Cultura Genial añade que el poema se escribió el 20 de marzo de 1915. Por eso la tarjeta y el copy acreditan **autor y poema, sin año**. Cultura Genial también señala que el poema lleva un **epígrafe en latín** sobre el artífice de sí mismo, y lee el conjunto como aceptación y gratitud, no como celebración del triunfo. **Datos biográficos** (México Desconocido, Gaceta UNAM): Amado Nervo nació en **1870 en Tepic, Nayarit**, y murió el **24 de mayo de 1919 en Montevideo**, a los 48 años. Conoció en París a **Ana Cecilia Luisa Dailliez**, con quien mantuvo una relación de **diez años hasta la muerte de ella en 1912**; le dedicó *La amada inmóvil*, publicado póstumamente en **1922**. Fuentes: poemario.com, Cultura Genial (análisis de \"En paz\"), México Desconocido (biografía), Museo Amado Nervo / CECAN, Gaceta UNAM (150 años de su nacimiento). **No usar:** un año cerrado para *Elevación* (ver el punto abierto); citar el verso como consigna de superación personal sin el contexto del poema, que es exactamente lo que este post corrige; \"lo escribió en su lecho de muerte\" (el poema es anterior a 1919); llamar esposa a Ana Cecilia (no estuvieron casados); atribuirle el poema \"En paz\" a *La amada inmóvil* (es otro libro); ni dar la fecha del 20 de marzo de 1915 como dato firme (una sola fuente).",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-18-tarde"
+}

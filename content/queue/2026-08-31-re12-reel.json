@@ -1,0 +1,61 @@
+{
+  "id": "2026-08-31-re12-reel",
+  "publish_at": "2026-08-31T19:44:00Z",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Ramón y Cajal y el Nobel compartido con quien lo negaba",
+    "hook": "RAMÓN Y CAJAL: le dieron el Nobel a medias con el hombre que negaba lo que él había demostrado",
+    "body": [
+      "Estocolmo, 11 de diciembre de 1906. El premio de Medicina se reparte en partes iguales entre Santiago Ramón y Cajal y el italiano Camillo Golgi, por sus trabajos sobre la estructura del sistema nervioso.",
+      "Golgi habló primero. Tituló su conferencia \"La doctrina de la neurona: teoría y hechos\" y la usó para defender que el sistema nervioso era una red continua, atacando de frente la tesis que Cajal iba a exponer justo después: que las neuronas son células separadas. Cajal escuchó desde la sala. Después describió el reparto diciendo que quedaba unido a su rival como hermanos siameses pegados por los hombros.",
+      "El detalle final es casi cruel: la técnica que Cajal usó para demostrar que Golgi se equivocaba era la tinción de plata que había inventado Golgi.",
+      "Golgi murió sin aceptarlo nunca. La razón la dio el microscopio electrónico, cincuenta años más tarde."
+    ],
+    "question": "¿Se puede tener razón y no vivir para verlo reconocido?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "RAMÓN Y CAJAL",
+    "subtitle": "Compartió el Nobel con el hombre que negaba su descubrimiento",
+    "body": "En diciembre de 1906 Golgi habló primero y usó su discurso para rebatir la teoría de Cajal, con Cajal en la sala. Y la técnica con la que Cajal había desmontado a Golgi era la tinción que Golgi mismo había inventado."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#RamonYCajal",
+      "#Ciencia",
+      "#Nobel"
+    ],
+    "extended": [
+      "#Neurociencia",
+      "#Cerebro",
+      "#Historia",
+      "#HistoriaDeLaCiencia",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Neuronas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Ramón y Cajal y el Nobel compartido con quien lo negaba",
+      "source": "NobelPrize.org (1906)"
+    },
+    {
+      "claim": "Ramón y Cajal y el Nobel compartido con quien lo negaba",
+      "source": "Frontiers in Neuroanatomy (2010)"
+    }
+  ],
+  "do_not_use": [
+    "\"2.900 o 12.000 dibujos\" (no respaldado), \"descubrió la neurona\" o \"descubrió la sinapsis\" (el término \"neurona\" lo acuñó Waldeyer en 1891 y \"sinapsis\" Sherrington en 1897), \"trabajó solo\" (hubo escuela española: Simarro, Río-Hortega, Lafora, Achúcarro), y la versión floral de \"las flores del cerebro\": el original de Recuerdos de mi vida habla del \"vergel de la substancia gris\" y de \"las misteriosas mariposas del alma\""
+  ],
+  "_verificacion_prosa": "nació el 1 de mayo de 1852 en Petilla de Aragón (Navarra), murió el 17 de octubre de 1934 en Madrid a los 82 años. Nobel de Medicina 1906, compartido en partes iguales con Camillo Golgi, con la motivación oficial \"en reconocimiento de su trabajo sobre la estructura del sistema nervioso\"; las conferencias se dictaron el 11 de diciembre de 1906. Golgi habló primero, tituló su conferencia \"La doctrina de la neurona: teoría y hechos\" y defendió el reticularismo, atacando la teoría neuronal que Cajal defendería a continuación; nunca aceptó la doctrina neuronal. Cajal aprendió la tinción de plata de Golgi en 1887, en Madrid, viendo preparaciones en casa del psiquiatra Luis Simarro. El catálogo del Legado Cajal (DeFelipe y cols., *Frontiers in Neuroanatomy*, 2010) cifra 1.976 dibujos, 1.907 de su mano. Fuentes: NobelPrize.org (1906), *Frontiers in Neuroanatomy* (2010). **No usar:** \"2.900 o 12.000 dibujos\" (no respaldado), \"descubrió la neurona\" o \"descubrió la sinapsis\" (el término \"neurona\" lo acuñó Waldeyer en 1891 y \"sinapsis\" Sherrington en 1897), \"trabajó solo\" (hubo escuela española: Simarro, Río-Hortega, Lafora, Achúcarro), y la versión floral de \"las flores del cerebro\": el original de *Recuerdos de mi vida* habla del \"vergel de la substancia gris\" y de \"las misteriosas mariposas del alma\".",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-21-manana"
+}

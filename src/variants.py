@@ -19,8 +19,17 @@ from datetime import datetime, timedelta, timezone
 # que un desfase fijo es correcto y no hace falta base de datos de zonas.
 CDMX = timezone(timedelta(hours=-6))
 
-MAX_POR_DIA = 3
-HORAS_MINIMAS = 4
+# Ritmo. Subido el 26 de agosto de 2026 de 3/día y 4 h a 10/día y 1 h, por
+# decisión explícita: los objetivos semanales de la página piden ~8 publicaciones
+# diarias entre foto, reel e historia, y con 3 al día no se alcanzan nunca.
+#
+# Estos dos números siguen siendo una regla ANTI-SPAM, no una formalidad. Lo que
+# protegen es el espaciado: diez piezas repartidas en el día no se parecen a diez
+# piezas seguidas en veinte minutos, y solo la segunda forma parece un bot.
+# Si hay que subir más, súbase MAX_POR_DIA; bajar HORAS_MINIMAS de 1 es lo que de
+# verdad empieza a parecer automatizado.
+MAX_POR_DIA = 10
+HORAS_MINIMAS = 1
 DIAS_SIN_REPETIR = 90
 
 LIMITS = {
@@ -283,6 +292,13 @@ def _problemas_de_historial(unit: dict, historial: list[dict],
     reales = [(h, _instante(h)) for h in historial]
     reales = [(h, t) for h, t in reales if t]
     reales.sort(key=lambda x: x[1])
+
+    # Una reemisión repite a propósito: es la MISMA pieza saliendo en otro
+    # formato y en otra superficie, semanas después. La regla de los 90 días
+    # existe para que no se cuele dos veces el mismo tema por descuido, no para
+    # impedir reutilizar el archivo, así que se salta aquí y solo aquí.
+    if unit.get("reemision_de"):
+        return problemas
 
     # ── no repetir en 90 dias ──
     if cuando:

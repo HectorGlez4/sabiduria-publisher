@@ -1,0 +1,77 @@
+{
+  "id": "2026-09-01-re21-story",
+  "publish_at": "2026-09-01T21:29:00Z",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+    "hook": "EL HORMIGÓN ROMANO SE REPARA SOLO, Y DURANTE DÉCADAS ESO SE TOMÓ POR UN DEFECTO",
+    "body": [
+      "En los muros romanos aparecen grumos blancos de cal, del tamaño de un grano de arroz. Se leyeron mucho tiempo como prueba de una mezcla mal hecha: obra descuidada, material barato.",
+      "En enero de 2023 un equipo del MIT publicó lo contrario en Science Advances. Esos grumos son depósitos de calcio. Cuando se abre una grieta y entra agua, el calcio se disuelve, vuelve a cristalizar y sella la fisura desde dentro. Lo repitieron en laboratorio: la probeta hecha a la romana se cerró sola en dos semanas; la de control siguió agrietada.",
+      "Plinio el Viejo ya lo había escrito hacia el año 77: el hormigón de los puertos se vuelve \"una sola masa de piedra, inexpugnable a las olas y más fuerte cada día\". Sonaba a exageración.",
+      "La cúpula del Panteón mide 43 metros y sigue siendo la mayor del mundo en hormigón sin armar. Casi mil novecientos años sin una varilla de acero."
+    ],
+    "question": "¿Cuántas cosas llamamos defecto solo porque no entendemos para qué sirven?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL HORMIGÓN ROMANO",
+    "subtitle": "Se repara solo, y durante décadas eso se tomó por un defecto",
+    "body": "Los grumos blancos de cal en los muros romanos se leyeron como una mezcla mal hecha. En 2023 el MIT demostró que son depósitos de calcio: cuando entra agua por una grieta, cristalizan y la sellan desde dentro. Una probeta agrietada se cerró sola en dos semanas."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Roma",
+      "#Historia",
+      "#Ciencia"
+    ],
+    "extended": [
+      "#ImperioRomano",
+      "#Arqueologia",
+      "#Ingenieria",
+      "#Panteon",
+      "#HistoriaAntigua",
+      "#DatosCuriosos",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "MIT News (enero de 2023)"
+    },
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "Science Advances"
+    },
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "American Ceramic Society"
+    },
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "ScienceAlert"
+    },
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "EurekAlert (nota de prensa del estudio de 2017)"
+    },
+    {
+      "claim": "el hormigón romano se repara solo, y lo que lo consigue se tomó durante décadas por un defecto de fabricación",
+      "source": "archeoroma.es (Panteón)"
+    }
+  ],
+  "do_not_use": [
+    "\"la fórmula del hormigón romano se perdió\" o \"no sabemos reproducirla\" (sí se sabe: el estudio de 2023 la reprodujo en laboratorio), \"el hormigón romano es más resistente que el moderno\" (no lo es en compresión; es más durable), la sección exacta de Plinio (no confirmada: dar solo obra y año aproximado), \"los romanos sabían que se autorreparaba\" como hecho probado (lo que sostiene el artículo es que la inclusión de los clastos era intencional), y la fecha exacta del 6 o el 20 de enero de 2023 (las fuentes discrepan: decir solo \"enero de 2023\")"
+  ],
+  "_verificacion_prosa": "los *lime clasts* (grumos blancos de cal, de escala milimétrica) presentes en el hormigón romano se interpretaron mucho tiempo como prueba de mala calidad: cal mal calcinada o mezclado descuidado. El estudio de Linda M. Seymour, Admir Masic y colaboradores (MIT, con Harvard y laboratorios de Italia y Suiza), *\"Hot mixing: Mechanistic insights into the durability of ancient Roman concrete\"*, **Science Advances, enero de 2023**, DOI 10.1126/sciadv.add1602, demuestra lo contrario: los grumos son depósitos de calcio generados por el mezclado en caliente con cal viva (*hot mixing*) y funcionan como reservorio. Cuando una grieta deja pasar agua, el calcio se disuelve y recristaliza como calcita, sellando la fisura. Muestras analizadas: mortero de la muralla de la ciudad de Priverno (Privernum), Italia, de unos 2.000 años. Ensayo de laboratorio: probetas fabricadas con receta romana, fracturadas a propósito y expuestas al paso de agua durante 30 días; la probeta con cal viva se selló y dejó de dejar pasar agua **en dos semanas**, la de control siguió agrietada y el agua siguió corriendo. Antecedente: Marie Jackson y cols., *American Mineralogist*, 3 de julio de 2017, DOI 10.2138/am-2017-5993CCBY, mostraron que en el hormigón marino romano el agua de mar hace crecer minerales nuevos (tobermorita aluminosa y filipsita). Plinio el Viejo, *Historia natural* (hacia el año 77): las estructuras de hormigón de los puertos se vuelven \"una sola masa de piedra, inexpugnable a las olas y más fuerte cada día\". Cúpula del Panteón de Roma: 43,4 m de diámetro interior, terminada bajo Adriano en el siglo II; es la mayor cúpula de hormigón sin armar jamás construida. Fuentes: MIT News (enero de 2023), *Science Advances*, American Ceramic Society, ScienceAlert, EurekAlert (nota de prensa del estudio de 2017), archeoroma.es (Panteón). **No usar:** \"la fórmula del hormigón romano se perdió\" o \"no sabemos reproducirla\" (sí se sabe: el estudio de 2023 la reprodujo en laboratorio), \"el hormigón romano es más resistente que el moderno\" (no lo es en compresión; es más **durable**), la sección exacta de Plinio (no confirmada: dar solo obra y año aproximado), \"los romanos sabían que se autorreparaba\" como hecho probado (lo que sostiene el artículo es que la inclusión de los clastos era intencional), y la fecha exacta del 6 o el 20 de enero de 2023 (las fuentes discrepan: decir solo \"enero de 2023\").",
+  "targets": [
+    "facebook_story"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-24-manana"
+}

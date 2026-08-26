@@ -71,36 +71,43 @@ def main() -> int:
     u = pieza("2026-09-01-tarde", "2026-09-01T19:00:00Z")
     check(variants.preflight(u, []) == [], "una pieza limpia pasa sin historial")
 
-    print("\n2. Máximo 3 al día, en hora de CDMX")
-    dia = [publicada(f"2026-09-01-{s}", h) for s, h in
-           [("manana", "2026-09-01T14:00:00Z"), ("tarde", "2026-09-01T19:00:00Z"),
-            ("noche", "2026-09-02T01:30:00Z")]]
-    # 01:30 UTC del 2 es todavia el 1 en CDMX: la cuarta del mismo dia
+    print(f"\n2. Máximo {variants.MAX_POR_DIA} al día, en hora de CDMX")
+    # El tope se lee de la constante y no se escribe a mano. Cuando el ritmo
+    # subió de 3 a 10 estos casos se cayeron con el número incrustado, y lo que
+    # comprueban —que EXISTE un tope y se aplica— no había cambiado.
+    dia = [publicada(f"2026-09-01-n{i}", f"2026-09-01T{14 + i // 2}:{(i % 2) * 30:02d}:00Z")
+           for i in range(variants.MAX_POR_DIA)]
+    # 01:30 UTC del 2 es todavia el 1 en CDMX: la que sobra del mismo dia
     cuarta = pieza("2026-09-02-extra", "2026-09-02T02:00:00Z")
     p = variants.preflight(cuarta, dia)
-    check(tiene(p, "maximo es 3 al dia"), "una cuarta el mismo día CDMX se bloquea")
+    check(tiene(p, f"maximo es {variants.MAX_POR_DIA} al dia"),
+          f"la número {variants.MAX_POR_DIA + 1} del mismo día CDMX se bloquea")
     otra = pieza("2026-09-02-manana", "2026-09-02T14:00:00Z", variante="gold")
     check(not tiene(variants.preflight(otra, dia), "maximo es 3"),
           "la primera del día siguiente pasa")
 
-    print("\n3. Mínimo 4 horas entre publicaciones")
+    print(f"\n3. Mínimo {variants.HORAS_MINIMAS} h entre publicaciones")
     hist = [publicada("2026-09-01-tarde", "2026-09-01T19:00:00Z")]
-    pegada = pieza("2026-09-01-noche", "2026-09-01T21:00:00Z", variante="gold")
-    check(tiene(variants.preflight(pegada, hist), "minimo son 4 horas"),
-          "a 2 h de la anterior se bloquea")
+    # Media hora dentro del mínimo, sea cual sea el mínimo.
+    justo_antes = 19 * 60 + int(variants.HORAS_MINIMAS * 60) - 30
+    pegada = pieza("2026-09-01-noche",
+                   f"2026-09-01T{justo_antes // 60:02d}:{justo_antes % 60:02d}:00Z",
+                   variante="gold")
+    check(tiene(variants.preflight(pegada, hist), f"minimo son {variants.HORAS_MINIMAS} horas"),
+          f"a {variants.HORAS_MINIMAS - 0.5:g} h de la anterior se bloquea")
     separada = pieza("2026-09-02-noche", "2026-09-02T01:30:00Z", variante="gold")
-    check(not tiene(variants.preflight(separada, hist), "minimo son 4 horas"),
+    check(not tiene(variants.preflight(separada, hist), f"minimo son {variants.HORAS_MINIMAS} horas"),
           "a 6,5 h pasa")
 
     print("\n3b. La cadencia mide la hora REAL, no la programada")
     hist = [publicada("2026-09-01-tarde", "2026-09-01T19:00:00Z")]
     # programada a 6,5 h: sobre el papel esta bien
     tarde = pieza("2026-09-02-noche", "2026-09-02T01:30:00Z", variante="gold")
-    check(not tiene(variants.preflight(tarde, hist), "minimo son 4 horas"),
+    check(not tiene(variants.preflight(tarde, hist), f"minimo son {variants.HORAS_MINIMAS} horas"),
           "a su hora prevista pasa")
     # pero si se fuerza media hora despues de la anterior, no
     forzada = datetime(2026, 9, 1, 19, 30, tzinfo=timezone.utc)
-    check(tiene(variants.preflight(tarde, hist, forzada), "minimo son 4 horas"),
+    check(tiene(variants.preflight(tarde, hist, forzada), f"minimo son {variants.HORAS_MINIMAS} horas"),
           "forzada 30 min despues de la anterior se bloquea")
 
     print("\n4. Sin repetir tema ni cita en 90 días")

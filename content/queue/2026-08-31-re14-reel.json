@@ -1,0 +1,65 @@
+{
+  "id": "2026-08-31-re14-reel",
+  "publish_at": "2026-08-31T23:42:00Z",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los vikingos en América y la tormenta solar del año 993",
+    "hook": "AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar",
+    "body": [
+      "En 1960 un explorador noruego siguió las indicaciones de unos vecinos de Terranova hasta unos montículos cubiertos de hierba. Debajo había ocho edificios de madera y turba, clavos de reparación de barcos y un horno pequeño para fundir hierro. Se llama L'Anse aux Meadows y es el único asentamiento nórdico confirmado en América del Norte.",
+      "Durante sesenta años se supo que era de alrededor del año 1000. En octubre de 2021, un equipo de la Universidad de Groninga publicó en Nature una fecha exacta, y el método es lo mejor de la historia.",
+      "Entre el 992 y el 993 una tormenta solar enorme dejó un pico de radiocarbono idéntico en los anillos de los árboles de todo el planeta. En tres troncos cortados con filo metálico en Terranova, ese pico aparece 29 anillos antes de la corteza. La cuenta da un año: 1021.",
+      "Cuatrocientos setenta y un años antes de Colón, fechados por el Sol."
+    ],
+    "question": "¿Qué otra cosa estará esperando su tormenta solar para dejar de ser aproximada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "AÑO 1021",
+    "subtitle": "Una tormenta solar fechó a los vikingos en América",
+    "body": "En 993 el Sol dejó una marca de radiocarbono idéntica en los anillos de todos los árboles del planeta. Esa marca aparece 29 anillos antes de la corteza en tres troncos cortados con hacha en Terranova. Talados en 1021: 471 años antes de Colón."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Vikingos",
+      "#Historia",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Nordicos",
+      "#America",
+      "#Ciencia",
+      "#DatosCuriosos",
+      "#Terranova",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "los vikingos en América y la tormenta solar del año 993",
+      "source": "Nature (2021)"
+    },
+    {
+      "claim": "los vikingos en América y la tormenta solar del año 993",
+      "source": "The Canadian Encyclopedia"
+    },
+    {
+      "claim": "los vikingos en América y la tormenta solar del año 993",
+      "source": "Yale Library (sobre el mapa de Vinlandia)"
+    }
+  ],
+  "do_not_use": [
+    "1021 como \"el año en que llegaron\" (es la fecha de tala de esas tres piezas), que Leif Erikson estuviera allí en persona (inferencia, no hecho), el mapa de Vinlandia de Yale (falsificación del siglo XX, confirmada el 2 de septiembre de 2021), Point Rosee (descartado) y la piedra rúnica de Kensington (fraude)"
+  ],
+  "_verificacion_prosa": "L'Anse aux Meadows, punta norte de Terranova, lo localizó en 1960 Helge Ingstad; las excavaciones las dirigió la arqueóloga Anne Stine Ingstad entre 1961 y 1968. Ocho edificios de madera y turba en cuatro complejos, clavos de reparación de barcos y un pequeño horno de fundición de hierro; ocupación breve, unos diez años en torno al año 1000. Patrimonio de la Humanidad desde 1978. Kuitems y cols. (Universidad de Groninga), *Nature*, 20 de octubre de 2021: tres piezas de madera de tres árboles distintos, con marcas de corte de filo metálico, dan fecha de tala del año 1021. El método: una tormenta solar entre 992 y 993 dejó un pico de radiocarbono idéntico en los anillos de árboles de todo el planeta; ese pico aparece 29 anillos antes del borde de la corteza. Se hallaron nueces y madera de butternut (*Juglans cinerea*), que no crece en Terranova: prueban viajes más al sur. Los cascos con cuernos los diseñó Carl Emil Doepler para el estreno del ciclo completo de *El anillo del nibelungo* en Bayreuth, del 13 al 17 de agosto de 1876. Fuentes: *Nature* (2021), The Canadian Encyclopedia, Yale Library (sobre el mapa de Vinlandia). **No usar:** 1021 como \"el año en que llegaron\" (es la fecha de tala de esas tres piezas), que Leif Erikson estuviera allí en persona (inferencia, no hecho), el mapa de Vinlandia de Yale (falsificación del siglo XX, confirmada el 2 de septiembre de 2021), Point Rosee (descartado) y la piedra rúnica de Kensington (fraude).",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-21-noche"
+}

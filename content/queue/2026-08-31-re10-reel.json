@@ -1,0 +1,60 @@
+{
+  "id": "2026-08-31-re10-reel",
+  "publish_at": "2026-08-31T15:41:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "lo que Sócrates dijo de verdad",
+    "hook": "\"Lo que no sé, tampoco creo saberlo.\"\n— Sócrates, en la Apología de Platón, 21d",
+    "body": [
+      "La frase que todo el mundo cita es otra: \"solo sé que no sé nada\". Y no está en ningún texto. No la escribió Platón, no la recogió Jenofonte, no aparece en ninguna fuente antigua. Es una construcción posterior, en latín primero y luego traducida de vuelta al griego para que pareciera original.",
+      "Lo que Sócrates dice en la Apología es más modesto y bastante más difícil. No declara que no sabe nada. Dice que, de lo que no sabe, tampoco se cree que lo sepa.",
+      "Es una distinción incómoda, porque no habla de ignorancia. Habla de la costumbre de opinar sobre lo que no se ha estudiado."
+    ],
+    "question": "¿De cuántas cosas tienes una opinión firme sin haberlas mirado de cerca?",
+    "quote": {
+      "text": "Lo que no sé, tampoco creo saberlo.",
+      "author": "Sócrates, en la Apología de Platón",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Socrates",
+      "#Filosofia",
+      "#Platon"
+    ],
+    "extended": [
+      "#FilosofiaGriega",
+      "#Grecia",
+      "#Reflexiones",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Sabiduria",
+      "#PensamientoCritico"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "lo que Sócrates dijo de verdad",
+      "source": "Wikipedia (I know that I know nothing)"
+    },
+    {
+      "claim": "lo que Sócrates dijo de verdad",
+      "source": "Wikiquote (Socrates, sección Misattributed). Por eso la tarjeta acredita la fuente: \"Sócrates, en la Apología de Platón\""
+    }
+  ],
+  "do_not_use": [],
+  "_verificacion_prosa": "Platón, *Apología de Sócrates* 21d: ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι — \"lo que no sé, tampoco creo saberlo\". La frase \"solo sé que no sé nada\" **no aparece** en ningún texto de Platón ni de Jenofonte; Wikiquote la clasifica como mal atribuida. El latín *scio me nihil scire* y el griego retrotraducido son construcciones posteriores. Sócrates, c. 470/469-399 a.C. Fuentes: Wikipedia (*I know that I know nothing*), Wikiquote (Socrates, sección *Misattributed*). Por eso la tarjeta acredita la fuente: \"Sócrates, en la *Apología* de Platón\".",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-20-tarde"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "2026-08-26-re06-reel",
+  "publish_at": "2026-08-26T23:33:00Z",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el papel: el más antiguo del mundo es un mapa, y es tres siglos anterior a quien \"lo inventó\"",
+    "hook": "EL PAPEL MÁS ANTIGUO DEL MUNDO ES UN MAPA, Y ES TRES SIGLOS ANTERIOR A SU \"INVENTOR\"",
+    "body": [
+      "Los libros escolares dan una fecha: año 105, China, un funcionario de la corte llamado Cai Lun mezcla corteza de árbol, trapos viejos, cáñamo y redes de pesca desechadas. Es cierto que lo hizo y que lo hizo mejor que nadie. No es cierto que lo inventara.",
+      "En 1986, en una tumba de Fangmatan, en la provincia de Gansu, apareció un fragmento de papel fechado entre el 179 y el 141 antes de Cristo. Llevaba dibujado un mapa. Casi tres siglos antes de Cai Lun.",
+      "Lo que sí midió el tiempo con crueldad fue el viaje: el papel se fabricaba en Samarcanda hacia el 751, en Bagdad en el 794, y no estuvo bien establecido en Europa hasta alrededor de 1150. Al norte de los Alpes, no hubo molino hasta 1390.",
+      "Mil años de ventaja para el material más barato de la historia."
+    ],
+    "question": "¿Cuántas cosas que damos por obvias tardaron siglos en cruzar una frontera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "EL PAPEL",
+    "subtitle": "El más antiguo del mundo es un mapa, y nadie sabe quién lo hizo",
+    "body": "Un fragmento hallado en una tumba de Fangmatan, en Gansu, está fechado entre 179 y 141 antes de Cristo. Es tres siglos anterior al funcionario chino al que los libros llaman inventor del papel. Europa tardó otros mil años en aprender a fabricarlo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#China",
+      "#Historia",
+      "#Curiosidades"
+    ],
+    "extended": [
+      "#DatosCuriosos",
+      "#Arqueologia",
+      "#Papel",
+      "#Inventos",
+      "#HistoriaAntigua",
+      "#Sabiduria",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el papel: el más antiguo del mundo es un mapa, y es tres siglos anterior a quien \"lo inventó\"",
+      "source": "Britannica (Cai Lun)"
+    },
+    {
+      "claim": "el papel: el más antiguo del mundo es un mapa, y es tres siglos anterior a quien \"lo inventó\"",
+      "source": "Wikipedia (History of paper, Fangmatan)"
+    }
+  ],
+  "do_not_use": [
+    "\"Cai Lun inventó el papel\" (la arqueología lo desmiente: perfeccionó y oficializó el proceso), la historia de los prisioneros chinos del Talas que enseñaron a los árabes (los especialistas la consideran probablemente apócrifa), \"1056\" en Xàtiva como dato duro (documentalmente frágil), \"Fabriano fue el primer molino de Europa\", \"llegó a Europa por los cruzados\" (fue por al-Ándalus y Sicilia)"
+  ],
+  "_verificacion_prosa": "Cai Lun, eunuco y funcionario de la corte Han, presenta su método hacia el año 105 d.C. (corteza macerada, desechos de cáñamo, trapos, redes de pesca). El papel más antiguo conservado es un fragmento de la Tumba 5 de Fangmatan (Gansu), excavada en 1986, datado entre 179 y 141 a.C., y formaba parte de un mapa. Otros hallazgos previos: Dunhuang hacia 65 a.C. y Paso de Yumen hacia 8 a.C. (este ya con escritura). Producción establecida en Samarcanda hacia 751; molinos en Bagdad en 794-795. En Europa, fabricación firmemente establecida en Xàtiva hacia 1150; primer molino al norte de los Alpes en Núremberg, 1390. Fuentes: Britannica (Cai Lun), Wikipedia (*History of paper*, *Fangmatan*). **No usar:** \"Cai Lun inventó el papel\" (la arqueología lo desmiente: perfeccionó y oficializó el proceso), la historia de los prisioneros chinos del Talas que enseñaron a los árabes (los especialistas la consideran probablemente apócrifa), \"1056\" en Xàtiva como dato duro (documentalmente frágil), \"Fabriano fue el primer molino de Europa\", \"llegó a Europa por los cruzados\" (fue por al-Ándalus y Sicilia).",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-19-manana"
+}

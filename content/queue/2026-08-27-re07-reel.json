@@ -1,0 +1,62 @@
+{
+  "id": "2026-08-27-re07-reel",
+  "publish_at": "2026-08-27T01:26:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Frida Kahlo y la página de su diario de 1953",
+    "hook": "\"Pies, ¿para qué los quiero, si tengo alas pa' volar?\"\n— Frida Kahlo, en su diario, 1953",
+    "body": [
+      "La frase no es un lema. Es el pie de un dibujo. En una página fechada en 1953, Frida pintó a la acuarela dos pies cortados sobre un pedestal, con una planta marchita al lado, y escribió eso debajo.",
+      "Se repite mucho que lo escribió tras la amputación de su pierna. No se sabe: la entrada no lleva mes, y la operación fue en agosto de ese año. Lo que sí quedó, escrito de su mano, es el \"pa' volar\" así, en corto, como se habla.",
+      "Murió al año siguiente. El diario se publicó en facsímil cuarenta años después."
+    ],
+    "question": "¿Qué dirías si te tocara escribir sobre lo que ya no tienes?",
+    "quote": {
+      "text": "Pies, ¿para qué los quiero, si tengo alas pa' volar?",
+      "author": "Frida Kahlo (1907-1954)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#FridaKahlo",
+      "#Arte",
+      "#Mexico"
+    ],
+    "extended": [
+      "#Frida",
+      "#ArteMexicano",
+      "#MujeresEnLaHistoria",
+      "#Reflexiones",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Pintura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Frida Kahlo y la página de su diario de 1953",
+      "source": "Google Arts & Culture (páginas del diario, Museo Dolores Olmedo)"
+    },
+    {
+      "claim": "Frida Kahlo y la página de su diario de 1953",
+      "source": "Wikiquote"
+    }
+  ],
+  "do_not_use": [
+    "\"lo escribió después de que le amputaran la pierna\". El mes de la entrada no está documentado y la amputación de su pierna derecha fue en agosto de 1953: no se puede afirmar el orden"
+  ],
+  "_verificacion_prosa": "*El diario de Frida Kahlo* (cuaderno 1944-1954), página fechada 1953: acuarela de dos pies cercenados sobre un pedestal con una planta marchita, y el texto al pie del dibujo. Publicado en facsímil en 1995. La redacción autógrafa es coloquial: \"pa' volar\". Frida Kahlo, 1907-1954. Fuentes: Google Arts & Culture (páginas del diario, Museo Dolores Olmedo), Wikiquote. **No usar:** \"lo escribió después de que le amputaran la pierna\". El mes de la entrada no está documentado y la amputación de su pierna derecha fue en agosto de 1953: no se puede afirmar el orden.",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-19-tarde"
+}

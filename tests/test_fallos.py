@@ -25,7 +25,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tests"))
 
-from src import publish  # noqa: E402
+from src import publish, variants  # noqa: E402
 
 FALLOS: list[str] = []
 
@@ -91,20 +91,24 @@ def main() -> int:
     # contra el reloj real, así que un historial fechado en enero no la activa.
     tmp = entorno()
     publish.upload_asset = lambda x: "https://example.invalid/x.png"
-    hace_2h = (datetime.now(timezone.utc) - timedelta(hours=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # A la mitad del mínimo: dentro esté el mínimo donde esté. Con las horas
+    # escritas a mano esto se rompió al bajar la cadencia de 4 h a 1 h.
+    dentro_del_minimo = (datetime.now(timezone.utc)
+                         - timedelta(hours=variants.HORAS_MINIMAS / 2)).strftime("%Y-%m-%dT%H:%M:%SZ")
     # temas bien distintos: si comparten palabras salta la regla de repeticion
-    ya = pieza("2026-01-01-manana", hace_2h, tema="Los quipus incas")
+    ya = pieza("2026-01-01-manana", dentro_del_minimo, tema="Los quipus incas")
     ya["status"] = "published"
-    ya["results"] = {"facebook": {"post_id": "X", "published_at": hace_2h}}
+    ya["results"] = {"facebook": {"post_id": "X", "published_at": dentro_del_minimo}}
     (publish.PUBLISHED / "ya.json").write_text(json.dumps(ya), encoding="utf-8")
-    pegada = pieza("2026-01-01-tarde", hace_2h, variante="gold",
+    pegada = pieza("2026-01-01-tarde", dentro_del_minimo, variante="gold",
                    tema="Hipatia de Alejandria")
     pp = publish.QUEUE / "pegada.json"
     pp.write_text(json.dumps(pegada), encoding="utf-8")
 
     ok = publish.publish_unit(json.loads(pp.read_text(encoding="utf-8")), pp)
     tras = json.loads(pp.read_text(encoding="utf-8"))
-    check(ok == "aplazada", "a 2 h de la anterior queda aplazada, no fallida")
+    check(ok == "aplazada",
+          f"dentro del mínimo de {variants.HORAS_MINIMAS} h queda aplazada, no fallida")
     check(tras["status"] == "ready", "sigue en 'ready': se reintentará")
     check("blocked_reason" not in tras, "no se le pone motivo de bloqueo")
     shutil.rmtree(tmp, ignore_errors=True)

@@ -1,0 +1,60 @@
+{
+  "id": "2026-08-31-re11-reel",
+  "publish_at": "2026-08-31T17:06:00Z",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "el segundo dardo",
+    "hook": "EL SEGUNDO DARDO: una metáfora de hace más de dos mil años, con precisión de manual clínico",
+    "body": [
+      "Está en el canon budista, en un texto breve catalogado como Saṃyutta Nikāya 36.6. La imagen es esta: a un hombre lo atraviesa un dardo y, justo después, lo alcanza un segundo. Sentirá lo que causan dos dardos.",
+      "El primero es lo que pasó. El segundo es lo que uno se cuenta sobre lo que pasó: el pesar, la lamentación, la vuelta y vuelta. El texto no dice que el entrenamiento haga desaparecer el dolor. Dice algo más medido: que el discípulo instruido siente exactamente un dardo, no dos.",
+      "Vale la pena decirlo: la frase que circula, \"el dolor es inevitable, el sufrimiento es opcional\", no está en el canon. Es un resumen moderno, y le quita al original lo que tiene de mejor, que es su exactitud."
+    ],
+    "question": "¿Cuál de tus dos dardos de esta semana llegó de fuera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL SEGUNDO DARDO",
+    "subtitle": "Canon budista pali, Samyutta Nikaya 36.6",
+    "body": "Es como si a un hombre le atravesara un dardo y, justo después, lo alcanzara un segundo. Sentirá lo que causan dos dardos. El texto no promete que el dolor desaparezca: dice que el primero llega solo y el segundo lo dispara uno mismo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Budismo",
+      "#Filosofia",
+      "#Reflexiones"
+    ],
+    "extended": [
+      "#Buda",
+      "#FilosofiaOriental",
+      "#Sabiduria",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Mindfulness",
+      "#Serenidad"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el segundo dardo",
+      "source": "Access to Insight (traducciones de Nyanaponika Thera y Thanissaro Bhikkhu)"
+    },
+    {
+      "claim": "el segundo dardo",
+      "source": "Internet Encyclopedia of Philosophy"
+    }
+  ],
+  "do_not_use": [
+    "\"el dolor es inevitable, el sufrimiento es opcional\" (no está en el canon pali; es formulación moderna de divulgación), fechas cerradas para el Buda (la mayoría de los especialistas actuales sitúa su muerte hacia el 400 a.C.; decir \"entre los siglos VI y IV a.C.\"), ni \"el Buda escribió\" (los suttas se transmitieron oralmente y se fijaron por escrito siglos después). Nota técnica: en el subtítulo de la tarjeta va \"Samyutta Nikaya\" sin diacríticos a propósito — la fuente Lora no tiene el glifo \"ṃ\" y saldría un cuadro vacío"
+  ],
+  "_verificacion_prosa": "*Sallatha Sutta*, Saṃyutta Nikāya 36.6 (SN 36.6), dentro del *Vedanā Saṃyutta*; referencia PTS S iv 207. Traducción de Nyanaponika Thera: *\"It is as if a man were pierced by a dart and, following the first piercing, he is hit by a second dart. So that person will experience feelings caused by two darts.\"* El sutta contrasta al \"hombre común no instruido\" (*assutavā puthujjano*), que ante una sensación dolorosa siente el dolor físico y además el mental (*soka* y *parideva*, pesar y lamentación), con el \"noble discípulo instruido\" (*sutavā ariyasāvako*), que siente solo el primero. Fuentes: Access to Insight (traducciones de Nyanaponika Thera y Thanissaro Bhikkhu), Internet Encyclopedia of Philosophy. **No usar:** \"el dolor es inevitable, el sufrimiento es opcional\" (no está en el canon pali; es formulación moderna de divulgación), fechas cerradas para el Buda (la mayoría de los especialistas actuales sitúa su muerte hacia el 400 a.C.; decir \"entre los siglos VI y IV a.C.\"), ni \"el Buda escribió\" (los suttas se transmitieron oralmente y se fijaron por escrito siglos después). **Nota técnica:** en el subtítulo de la tarjeta va \"Samyutta Nikaya\" sin diacríticos a propósito — la fuente Lora no tiene el glifo \"ṃ\" y saldría un cuadro vacío.",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-20-noche"
+}

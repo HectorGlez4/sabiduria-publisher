@@ -1,0 +1,65 @@
+{
+  "id": "2026-08-30-re01-reel",
+  "publish_at": "2026-08-30T14:39:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Séneca — el tiempo perdido",
+    "hook": "No tenemos poco tiempo: hemos perdido mucho.",
+    "quote": {
+      "text": "No tenemos poco tiempo: hemos perdido mucho.",
+      "author": "Séneca",
+      "work": "Sobre la brevedad de la vida, 1.3 (hacia el año 49)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Séneca no escribió eso para consolar a nadie. Lo escribió como un reproche, dirigido a un funcionario romano que administraba el abasto de trigo de la ciudad y se quejaba de no tener horas.",
+      "El original latino usa un tiempo pasado: hemos perdido. No es un problema de agenda. Es una cuenta ya cerrada, de la que no se recupera nada.",
+      "Casi dos mil años después seguimos diciendo la misma frase, palabra por palabra: que no nos alcanza el día."
+    ],
+    "question": "¿En qué se te fue el tiempo que hoy dirías que no tuviste?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "_nota_variante": "La entrada original decía gold, pero la última publicación real (Sor Juana, 17 ago) salió gold. La alternancia se calcula contra lo publicado, no contra la cola."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Seneca",
+      "#Estoicismo",
+      "#Reflexiones"
+    ],
+    "extended": [
+      "#Filosofia",
+      "#FilosofiaEstoica",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#ElTiempo",
+      "#Sabiduria",
+      "#Roma"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino: 'Non exiguum temporis habemus, sed multum perdidimus'",
+      "source": "De brevitate vitae 1.3",
+      "url": "https://www.thelatinlibrary.com/sen/sen.brevitate.shtml"
+    },
+    {
+      "claim": "Destinatario: Paulino, prefecto del abasto de grano de Roma",
+      "source": "Loeb Classical Library, Moral Essays II"
+    }
+  ],
+  "do_not_use": [
+    "La versión 'es que perdemos mucho': cambia el perfecto latino por presente y le quita el sentido de cuenta cerrada.",
+    "Fechas cerradas de nacimiento de Séneca: c. 4 a.C. es aproximado."
+  ],
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-17-tarde"
+}

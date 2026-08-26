@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-01-re19-story",
+  "publish_at": "2026-09-01T17:41:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "el \"porqué\" que se le atribuye a Frankl y es de Nietzsche",
+    "hook": "\"Quien tiene un porqué para vivir soporta casi cualquier cómo.\"\n— Friedrich Nietzsche, El crepúsculo de los ídolos, 1888",
+    "body": [
+      "Esta frase circula en todas partes firmada por Viktor Frankl. No es suya, y él nunca dijo que lo fuera: la citó como de Nietzsche, con nombre y apellido, en el libro que escribió en 1946 al salir de los campos de concentración.",
+      "El malentendido tiene una explicación sencilla. Frankl la usó como lema de su propia experiencia, y la frase quedó tan pegada a ese libro que se le atribuyó al autor en lugar de a la fuente.",
+      "Vale la pena conservar los dos nombres, porque juntos dicen más. Nietzsche la escribió en 1888, en una sección que tituló \"Sentencias y flechas\", como una intuición. Frankl, medio siglo después, la puso a prueba en el peor lugar posible y volvió a contarlo.",
+      "Una frase pensada en un escritorio y comprobada en el infierno."
+    ],
+    "question": "¿Cuál es hoy tu porqué?",
+    "quote": {
+      "text": "Quien tiene un porqué para vivir soporta casi cualquier cómo.",
+      "author": "Friedrich Nietzsche (1844-1900)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Nietzsche",
+      "#Frankl",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#ViktorFrankl",
+      "#Sentido",
+      "#Reflexiones",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Sabiduria",
+      "#ElHombreEnBuscaDeSentido",
+      "#Citas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "el \"porqué\" que se le atribuye a Frankl y es de Nietzsche",
+      "source": "Zitatforschung/Falschzitate (análisis del origen y de la versión abreviada)"
+    },
+    {
+      "claim": "el \"porqué\" que se le atribuye a Frankl y es de Nietzsche",
+      "source": "Zeno.org (texto original de Götzen-Dämmerung). No usar nunca \"— Viktor Frankl\" a secas: Frankl es el transmisor"
+    },
+    {
+      "claim": "el \"porqué\" que se le atribuye a Frankl y es de Nietzsche",
+      "source": "no el autor"
+    }
+  ],
+  "do_not_use": [],
+  "_verificacion_prosa": "la frase es de Friedrich Nietzsche, *El crepúsculo de los ídolos*, \"Sentencias y flechas\" 12 (escrito en 1888, publicado en 1889): *\"Hat man sein warum? des Lebens, so verträgt man sich fast mit jedem wie?\"*. La forma abreviada alemana surge en los años veinte. Viktor Frankl (1905-1997) la usa como lema en *Ein Psychologe erlebt das Konzentrationslager* (1946), luego *El hombre en busca de sentido*, **citándola explícitamente como de Nietzsche**. Nietzsche, 1844-1900. Fuentes: Zitatforschung/Falschzitate (análisis del origen y de la versión abreviada), Zeno.org (texto original de *Götzen-Dämmerung*). **No usar nunca** \"— Viktor Frankl\" a secas: Frankl es el transmisor, no el autor.",
+  "targets": [
+    "facebook_story"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-23-tarde"
+}

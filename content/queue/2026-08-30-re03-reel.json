@@ -1,0 +1,69 @@
+{
+  "id": "2026-08-30-re03-reel",
+  "publish_at": "2026-08-30T17:25:00Z",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Leonardo da Vinci: los mejores dibujos anatómicos del Renacimiento no llegaron a la imprenta hasta finales del siglo XIX, y para entonces no le servían a nadie",
+    "hook": "LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ",
+    "body": [
+      "Diseccionó alrededor de treinta cuerpos humanos a lo largo de su vida. En el invierno de 1510 y 1511 trabajó en la facultad de medicina de Pavía, junto al catedrático de anatomía Marcantonio della Torre, y solo esa temporada pudo abrir hasta veinte cadáveres. De ahí salieron cientos de hojas de dibujos con miles de palabras de notas.",
+      "Los dos planeaban un tratado ilustrado. Della Torre murió de peste en 1511, a los treinta años. Leonardo siguió solo, nunca lo terminó, y murió en 1519. Sus papeles pasaron a su discípulo Francesco Melzi, un coleccionista los encuadernó después en un álbum, y ese álbum entró en la colección real inglesa hacia 1670. Ahí se quedaron.",
+      "No se publicaron ni se entendieron hasta finales del siglo XIX. Para entonces la anatomía moderna llevaba más de tres siglos en marcha: la había fundado otro libro, impreso en 1543."
+    ],
+    "question": "¿Qué guardas terminado a medias, esperando el momento perfecto?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "LEONARDO",
+    "subtitle": "Los mejores dibujos de anatomía del Renacimiento no le sirvieron a nadie",
+    "body": "Diseccionó unos treinta cuerpos y llenó cientos de hojas con lo que vio dentro. Quería publicar un tratado ilustrado y no lo terminó. Los papeles quedaron en manos privadas casi cuatro siglos. Cuando por fin se publicaron, la medicina ya había averiguado aquello por su cuenta."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Leonardo",
+      "#Anatomia",
+      "#Ciencia"
+    ],
+    "extended": [
+      "#LeonardoDaVinci",
+      "#Arte",
+      "#Renacimiento",
+      "#HistoriaDeLaCiencia",
+      "#Medicina",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Leonardo da Vinci: los mejores dibujos anatómicos del Renacimiento no llegaron a la imprenta hasta finales del siglo XIX, y para entonces no le servían a nadie",
+      "source": "Royal Collection Trust (Leonardo's Study of Anatomy)"
+    },
+    {
+      "claim": "Leonardo da Vinci: los mejores dibujos anatómicos del Renacimiento no llegaron a la imprenta hasta finales del siglo XIX, y para entonces no le servían a nadie",
+      "source": "Wikipedia en inglés (Marcantonio della Torre)"
+    },
+    {
+      "claim": "Leonardo da Vinci: los mejores dibujos anatómicos del Renacimiento no llegaron a la imprenta hasta finales del siglo XIX, y para entonces no le servían a nadie",
+      "source": "Metropolitan Museum of Art (edición facsímil de los dibujos anatómicos de Windsor)"
+    }
+  ],
+  "do_not_use": [
+    "una cifra cerrada de dibujos (circulan 240 y también 750: las fuentes discrepan, y el Royal Collection Trust dice solo \"cientos\")",
+    "\"Leonardo descubrió la circulación de la sangre\" (describió el funcionamiento de las válvulas cardíacas, no el circuito, que es de Harvey en 1628)",
+    "\"sus dibujos fueron la base de la anatomía moderna\" (es justo lo contrario: no circularon)",
+    "\"robaba cadáveres\" (trabajó con permiso en hospitales de Florencia, Roma y Pavía)",
+    "la fecha exacta de entrada del álbum en la colección real como dato cerrado (el Royal Collection Trust dice \"hacia 1670\" y otras fuentes dan 1690)",
+    "presentar a della Torre como discípulo suyo (era catedrático y bastante más joven, pero la relación fue de colaboración)"
+  ],
+  "_verificacion_prosa": "Leonardo da Vinci, **15 de abril de 1452 – 2 de mayo de 1519**. El Royal Collection Trust, que custodia los dibujos, resume así sus campañas anatómicas: diseccionó \"quizá treinta cadáveres humanos (y muchos más animales)\" en dos etapas, hacia 1490 y entre 1506 y 1513, \"registrando sus hallazgos en cientos de dibujos detallados y muchos miles de palabras de discusión y explicación\". Sobre el invierno decisivo: \"durante el invierno de 1510-11, Leonardo trabajaba al parecer en la facultad de medicina de la universidad de Pavía, al sur de Milán, junto al catedrático de anatomía Marcantonio della Torre\", y \"pudo haber diseccionado hasta veinte cadáveres ese invierno\". **Objetivo declarado:** publicar un tratado ilustrado de anatomía. **Por qué no se publicó**, según la misma fuente: \"su perfeccionismo, sus dificultades para reconciliar sus observaciones con las creencias tradicionales, y la mala suerte, sin más, le impidieron llevar su trabajo a término\". **Marcantonio della Torre:** nacido en 1481, muerto de peste en 1511, a los treinta años (Wikipedia en inglés). **Recorrido de los papeles:** \"Leonardo dejó sus papeles a su ayudante Francesco Melzi\"; después Pompeo Leoni \"los montó en un álbum de dibujos mayoritariamente artísticos que entró en la Colección Real hacia 1670\". **Publicación:** \"no fue hasta finales del siglo XIX cuando los dibujos anatómicos de Leonardo se publicaron y se entendieron por fin\". **Contraste:** la anatomía moderna la funda la *De humani corporis fabrica* de Andrés Vesalio, impresa en Basilea en **1543**, treinta y dos años después del invierno de Pavía. Fuentes: Royal Collection Trust (*Leonardo's Study of Anatomy*), Wikipedia en inglés (*Marcantonio della Torre*), Metropolitan Museum of Art (edición facsímil de los dibujos anatómicos de Windsor). **No usar:** una cifra cerrada de dibujos (circulan 240 y también 750: las fuentes discrepan, y el Royal Collection Trust dice solo \"cientos\"); \"Leonardo descubrió la circulación de la sangre\" (describió el funcionamiento de las válvulas cardíacas, no el circuito, que es de Harvey en 1628); \"sus dibujos fueron la base de la anatomía moderna\" (es justo lo contrario: no circularon); \"robaba cadáveres\" (trabajó con permiso en hospitales de Florencia, Roma y Pavía); la fecha exacta de entrada del álbum en la colección real como dato cerrado (el Royal Collection Trust dice \"hacia 1670\" y otras fuentes dan 1690); y presentar a della Torre como discípulo suyo (era catedrático y bastante más joven, pero la relación fue de colaboración).",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-18-manana"
+}
