@@ -245,6 +245,13 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
     for platform, v in texts.items():
         preview = v["text"].split("\n")[0][:70]
         print(f"      {platform:11s} {len(v['text']):5d} car.  {preview}…")
+    # El reel no tiene derivación propia en variants.py, así que no sale del
+    # bucle de arriba. Sin esta línea, un ensayo de una pieza de mañana no
+    # enseñaba NADA de Facebook y parecía que no se iba a publicar allí.
+    if "facebook_reel" in unit.get("targets", []):
+        v = variants.build(unit, "facebook")
+        print(f"      {'reel (fb)':11s} {len(v['text']):5d} car.  "
+              f"{v['text'].split(chr(10))[0][:70]}…")
 
     if dry_run:
         print("  · dry-run: no se publica nada")
@@ -277,10 +284,13 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
             fn = meta.PUBLISHERS[platform]
             if platform == "facebook_reel":
                 # El reel se SUBE, no se descarga de una URL: este adaptador
-                # recibe una ruta y no `image_url`. Y reutiliza el copy de
-                # Facebook, porque variants.py no deriva texto propio para el
-                # reel — es la misma pieza en otro formato, no otra pieza.
-                res = fn(str(render_reel(unit)), texts["facebook"]["text"])
+                # recibe una ruta y no `image_url`.
+                #
+                # El copy se deriva aquí y NO se saca de `texts`: build_all()
+                # solo compone lo que está en `targets`, y en las piezas de
+                # mañana 'facebook' ya no está —lo sustituyó 'facebook_reel'—,
+                # así que texts["facebook"] daba KeyError. Lo cazó el --dry-run.
+                res = fn(str(render_reel(unit)), variants.build(unit, "facebook")["text"])
             else:
                 res = fn(image_url, texts[platform]["text"])
             res["published_at"] = datetime.now(timezone.utc).isoformat()

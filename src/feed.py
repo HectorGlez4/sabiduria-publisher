@@ -102,7 +102,9 @@ def piezas() -> list[dict]:
     fuera = []
     for p in sorted(PUBLICADAS.glob("*.json")):
         unidad = json.loads(p.read_text(encoding="utf-8"))
-        if "facebook" not in (unidad.get("targets") or []):
+        # `facebook_reel` cuenta: es la misma pieza en otro formato, y si el
+        # respaldo tuviera que entrar en acción tendría que llevarla también.
+        if not {"facebook", "facebook_reel"} & set(unidad.get("targets") or []):
             continue
         fuera.append(unidad)
     fuera.sort(key=_fecha, reverse=True)
