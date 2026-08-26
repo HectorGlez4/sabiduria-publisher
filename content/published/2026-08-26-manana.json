@@ -71,6 +71,17 @@
     "facebook",
     "instagram"
   ],
-  "status": "ready",
-  "results": {}
+  "status": "published",
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1078522208305772",
+      "url": "https://www.facebook.com/874327782058550/posts/1078522208305772",
+      "published_at": "2026-08-26T07:47:26.651137+00:00"
+    },
+    "instagram": {
+      "post_id": "17923885308417772",
+      "url": "https://www.instagram.com/p/Dcftdr1gFLc/",
+      "published_at": "2026-08-26T07:47:41.624764+00:00"
+    }
+  }
 }
