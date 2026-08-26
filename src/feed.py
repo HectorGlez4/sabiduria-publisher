@@ -6,17 +6,20 @@ El feed RSS del que Facebook se sirve.
 
 Por qué existe
 ──────────────
-Publicar en la página por Graph API exige que la app esté publicada, y publicarla
-exige verificación del negocio. Mientras eso no ocurra, TODO lo que sale por API
-se crea correctamente y no lo ve nadie: Meta documenta que los datos que genera
-una app en modo desarrollo "can only be seen by role users". Veintitantas
-publicaciones con alcance exactamente cero lo confirmaron.
+Nació como vía de escape: entre el 17 y el 25 de agosto de 2026 todo lo que salía
+por la Graph API tenía alcance exactamente cero, porque la app estaba en modo
+desarrollo. La idea era dársela a dlvr.it, Zapier o IFTTT —que ya tienen su app
+verificada por Meta— para que publicaran de forma nativa.
 
-La salida no es saltarse la verificación: es no necesitarla. Servicios como
-dlvr.it, IFTTT o Zapier YA tienen su app verificada por Meta y su producto es
-justamente publicar en tu página en tu nombre. Se les da este feed, leen cada
-pieza nueva y la publican de forma nativa. La página recibe una publicación
-normal, con su alcance normal.
+No hizo falta: la app se publicó el 25 de agosto y Facebook volvió a la API. El
+feed se queda porque es barato de mantener y es la red de seguridad si Meta
+vuelve a cerrar el camino de la API.
+
+Un aviso si algún día se activa un servicio de estos: la página está en New Pages
+Experience (`has_transitioned_to_new_page_experience: True`), y ninguno de los
+tres la lista entre las páginas disponibles. Zapier cargaba "1 resultado" y no
+era esta. Ese es el muro con el que se chocó, y no es cosa de un proveedor
+concreto.
 
 Dos detalles que costaron encontrarse y que este módulo depende de ellos
 ──────────────────────────────────────────────────────────────────────
@@ -57,12 +60,7 @@ RAMA = "main"
 # Cuántas piezas se ofrecen. Normalmente es la ventana de recuperación por si el
 # servicio de turno estuvo caído un día: solo mira las nuevas.
 #
-# TEMPORALMENTE EN 1 para encender el Zap sin riesgo. Un feed con las 22 piezas
-# históricas puede provocar que el servicio las publique TODAS de golpe al
-# activarse, y son 28.000 seguidores mirando. Con una sola pieza, lo peor que
-# puede pasar es una publicación de más. Subir a 25 en cuanto se confirme que
-# el Zap publica bien.
-MAXIMO = 1
+MAXIMO = 25
 
 
 def _url_de_tarjeta(pieza_id: str) -> str:

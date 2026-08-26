@@ -36,21 +36,22 @@ ASSETS = ROOT / "assets"
 # la cola indefinidamente.
 MAX_INTENTOS = 3
 
-# Plataformas que ya NO se publican por API porque se sirven por el feed RSS.
+# Plataformas que NO se publican por API sino por el feed RSS (src/feed.py).
 #
-# No es lo mismo que _pending.PENDING: aquello levanta PlatformBlocked porque la
-# plataforma no puede publicar de ninguna manera. Facebook sí publica —lo hace
-# dlvr.it leyendo docs/feed.xml— así que la pieza no debe fallar ni reintentarse;
-# solo se salta la llamada a Meta.
+# VACÍO desde el 25 de agosto de 2026: la app WorkItAdmin ya está publicada y
+# Facebook vuelve a salir por la Graph API con normalidad.
 #
-# El motivo: la app está en modo desarrollo, y Meta solo enseña a los usuarios con
-# rol en la app lo que genera una app en ese modo. Las 22 publicaciones que salieron
-# por API entre el 17 y el 25 de agosto existen, son públicas para el operador y
-# tienen alcance exactamente cero. Ver src/feed.py.
+# Lo que pasó, por si vuelve: entre el 17 y el 25 de agosto las publicaciones de
+# Facebook tuvieron alcance exactamente cero mientras Instagram iba bien. La causa
+# era que la app estaba en modo desarrollo, y Meta solo enseña a los usuarios con
+# rol en la app lo que una app genera en ese modo. Costó encontrarlo porque el
+# token es de WorkItAdmin (3733795406925924) y no de SabiduriaBolsilloPost: se
+# estuvo mirando la app equivocada. `scripts/diagnostico_meta.py` lo dice en su
+# primera sección, y es lo primero que hay que ejecutar si el alcance vuelve a
+# caer a cero.
 #
-# Para volver a la API: vaciar este conjunto. Nada más. `targets` sigue diciendo
-# la verdad —la pieza va dirigida a Facebook— y por eso el feed sabe cuáles coger.
-POR_FEED = {"facebook"}
+# Poner {"facebook"} aquí desvía Facebook al feed sin hacer fallar la pieza.
+POR_FEED: set[str] = set()
 
 
 def load(path: pathlib.Path) -> dict:
