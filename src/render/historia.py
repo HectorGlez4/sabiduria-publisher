@@ -43,7 +43,15 @@ def make_story(title: str, body: str, out_path: str, subtitle: str | None = None
                question: str | None = None, variant: str = "cream") -> str:
     marcos = fotogramas(title, body, subtitle, question, variant)
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
-    marcos[-1].save(out_path, "PNG", optimize=True)
+
+    # El formato lo decide la extensión, porque las dos redes no piden lo mismo:
+    # Facebook acepta el PNG tal cual, e Instagram documenta JPEG como el ÚNICO
+    # formato admitido para publicar por API. Un PNG a /media lo rechaza.
+    if out_path.lower().endswith((".jpg", ".jpeg")):
+        # JPEG no tiene canal alfa; sin convertir, Pillow falla al guardar.
+        marcos[-1].convert("RGB").save(out_path, "JPEG", quality=92, optimize=True)
+    else:
+        marcos[-1].save(out_path, "PNG", optimize=True)
 
     kb = os.path.getsize(out_path) // 1024
     if kb > KB_RECOMENDADOS:

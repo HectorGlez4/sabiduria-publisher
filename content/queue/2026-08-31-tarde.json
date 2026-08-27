@@ -68,7 +68,8 @@
   "targets": [
     "facebook",
     "instagram",
-    "facebook_story"
+    "facebook_story",
+    "instagram_story"
   ],
   "status": "ready",
   "results": {}

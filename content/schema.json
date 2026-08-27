@@ -92,7 +92,7 @@
 
     "targets": {
       "type": "array",
-      "items": { "enum": ["facebook", "facebook_reel", "facebook_story", "instagram", "threads", "x", "linkedin", "tiktok", "youtube"] },
+      "items": { "enum": ["facebook", "facebook_reel", "facebook_story", "instagram", "instagram_story", "threads", "x", "linkedin", "tiktok", "youtube"] },
       "default": ["facebook", "instagram", "threads"]
     },
 

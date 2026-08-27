@@ -155,7 +155,7 @@ def render_reel(unit: dict) -> pathlib.Path:
     return out
 
 
-def render_story(unit: dict) -> pathlib.Path:
+def render_story(unit: dict, formato: str = "png") -> pathlib.Path:
     """
     El PNG vertical de la historia: el último fotograma del reel, quieto.
 
@@ -163,7 +163,7 @@ def render_story(unit: dict) -> pathlib.Path:
     el autor y el cuerpo es la cita.
     """
     card = unit["card"]
-    out = ASSETS / f"{unit['id']}-historia.png"
+    out = ASSETS / f"{unit['id']}-historia.{formato}"
     script = ROOT / "src" / "render" / "historia.py"
 
     cmd = [sys.executable, str(script), "--variant", card["variant"], "--out", str(out)]
@@ -289,9 +289,11 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
         v = variants.build(unit, "facebook")
         print(f"      {'reel (fb)':11s} {len(v['text']):5d} car.  "
               f"{v['text'].split(chr(10))[0][:70]}…")
-    if "facebook_story" in unit.get("targets", []):
-        print(f"      {'historia':11s} {'—':>5s} car.  "
-              f"sin pie: el texto va dentro de la imagen, 1080x1920, caduca en 24 h")
+    for red, etiqueta in (("facebook_story", "historia fb"),
+                          ("instagram_story", "historia ig")):
+        if red in unit.get("targets", []):
+            print(f"      {etiqueta:11s} {'—':>5s} car.  "
+                  f"sin pie: el texto va dentro de la imagen, 1080x1920, caduca en 24 h")
 
     if dry_run:
         print("  · dry-run: no se publica nada")
@@ -331,11 +333,17 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
                 # mañana 'facebook' ya no está —lo sustituyó 'facebook_reel'—,
                 # así que texts["facebook"] daba KeyError. Lo cazó el --dry-run.
                 res = fn(str(render_reel(unit)), variants.build(unit, "facebook")["text"])
-            elif platform == "facebook_story":
+            elif platform in ("facebook_story", "instagram_story"):
                 # La historia SÍ va por URL, como la foto: Meta la descarga. Pero
                 # es una imagen distinta —9:16 en vez de 4:5— así que se sube
                 # aparte y no se reutiliza `image_url`.
-                res = fn(upload_asset(render_story(unit)), "")
+                #
+                # Y el formato cambia según la red: Instagram documenta JPEG como
+                # el único admitido para publicar por API, mientras que Facebook
+                # se traga el PNG. Se renderiza en el que toque en vez de mandar
+                # el mismo archivo a las dos y descubrir el rechazo publicando.
+                fmt = "jpg" if platform == "instagram_story" else "png"
+                res = fn(upload_asset(render_story(unit, fmt)), "")
             else:
                 res = fn(image_url, texts[platform]["text"])
             res["published_at"] = datetime.now(timezone.utc).isoformat()

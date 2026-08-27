@@ -54,7 +54,8 @@
   ],
   "_verificacion_prosa": "*Don Quijote de la Mancha*, segunda parte, capítulo XXV (1615), en el episodio de la aventura del rebuzno. El Centro de Estudios Cervantinos de Alcázar la clasifica entre las frases **auténticas**, frente a las que circulan falsamente atribuidas al Quijote. Miguel de Cervantes, 1547-1616. **Punto abierto:** no se pudo confirmar en una edición crítica accesible qué personaje la pronuncia exactamente (el acceso a la edición del Centro Virtual Cervantes está bloqueado a robots). Por eso la tarjeta acredita autor y obra, no un personaje. Si en la sesión de carga se quiere afinar, comprobarlo en cvc.cervantes.es → Quijote → parte 2, cap. XXV.",
   "targets": [
-    "facebook_story"
+    "facebook_story",
+    "instagram_story"
   ],
   "status": "ready",
   "results": {},

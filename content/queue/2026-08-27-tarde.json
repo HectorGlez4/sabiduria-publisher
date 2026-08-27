@@ -19,7 +19,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -64,7 +64,8 @@
   "targets": [
     "facebook",
     "instagram",
-    "facebook_story"
+    "facebook_story",
+    "instagram_story"
   ],
   "status": "ready",
   "results": {}

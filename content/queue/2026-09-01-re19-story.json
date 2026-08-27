@@ -58,7 +58,8 @@
   "do_not_use": [],
   "_verificacion_prosa": "la frase es de Friedrich Nietzsche, *El crepúsculo de los ídolos*, \"Sentencias y flechas\" 12 (escrito en 1888, publicado en 1889): *\"Hat man sein warum? des Lebens, so verträgt man sich fast mit jedem wie?\"*. La forma abreviada alemana surge en los años veinte. Viktor Frankl (1905-1997) la usa como lema en *Ein Psychologe erlebt das Konzentrationslager* (1946), luego *El hombre en busca de sentido*, **citándola explícitamente como de Nietzsche**. Nietzsche, 1844-1900. Fuentes: Zitatforschung/Falschzitate (análisis del origen y de la versión abreviada), Zeno.org (texto original de *Götzen-Dämmerung*). **No usar nunca** \"— Viktor Frankl\" a secas: Frankl es el transmisor, no el autor.",
   "targets": [
-    "facebook_story"
+    "facebook_story",
+    "instagram_story"
   ],
   "status": "ready",
   "results": {},

@@ -342,7 +342,21 @@ def _problemas_de_historial(unit: dict, historial: list[dict],
                 problemas.append(f"cita ya publicada en {h.get('id')}")
 
     # ── alternancia contra la ULTIMA PUBLICACION REAL ──
-    ultima = reales[-1][0]
+    #
+    # Las reemisiones no cuentan como referencia. Están exentas de alternar
+    # —salen arriba, con el resto de reglas de historial— y dejarlas fijar la
+    # referencia era una asimetría con consecuencias: una reemisión heredaba la
+    # variante de su original, no alternaba con nadie, y aun así obligaba a
+    # alternar contra ella a la siguiente pieza nueva. Con el ritmo agresivo
+    # intercalando reemisiones entre originales, eso bloqueó cuatro piezas de la
+    # cola de la última semana de agosto, y el bloqueo es PERMANENTE: pick_due()
+    # vuelve a elegir la misma pieza vencida y atasca la cola entera detrás.
+    #
+    # Si una pieza no tiene que alternar, tampoco puede obligar a otras.
+    originales = [r for r in reales if not r[0].get("reemision_de")]
+    if not originales:
+        return problemas
+    ultima = originales[-1][0]
     v_ultima = (ultima.get("card") or {}).get("variant")
     v_esta = (unit.get("card") or {}).get("variant")
     if v_ultima and v_esta and v_ultima == v_esta:

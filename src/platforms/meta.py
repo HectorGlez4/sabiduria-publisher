@@ -303,6 +303,44 @@ def publish_instagram(image_url: str, caption: str) -> dict:
     }
 
 
+def publish_instagram_story(image_url: str, _caption: str = "") -> dict:
+    """
+    Historia de Instagram: mismo endpoint que una foto, con media_type=STORIES.
+
+      POST /{ig-user-id}/media          media_type=STORIES, image_url=…
+      POST /{ig-user-id}/media_publish  creation_id=…
+
+    Dos cosas que no son iguales que en la foto de feed:
+
+    · **Solo JPEG.** La documentación de publicación de Instagram lo dice sin
+      matices: JPEG es el único formato de imagen admitido, y los JPEG
+      extendidos (MPO, JPS) tampoco. Por eso publish.py renderiza la historia en
+      .jpg para esta red y en .png para Facebook, que sí acepta PNG.
+
+    · **Sin pie.** El texto va dentro de la imagen, como en la de Facebook. El
+      segundo argumento existe para que la firma encaje con la de los demás
+      adaptadores.
+
+    Caduca en 24 h. No se registra permalink: consultarlo cuesta otra llamada
+    para devolver una URL que mañana da "contenido no disponible". Se deja el id
+    del medio, que es lo que sirve para pedir métricas mientras vive.
+    """
+    ig_id = os.environ["SDB_IG_USER_ID"]
+    token = os.environ["SDB_PAGE_TOKEN"]
+
+    container = _post(
+        f"{GRAPH}/{ig_id}/media",
+        {"media_type": "STORIES", "image_url": image_url, "access_token": token},
+    )
+    _wait_for_container(container["id"], token)
+    out = _publish_with_retry(ig_id, container["id"], token)
+    return {
+        "post_id": out["id"],
+        "url": None,
+        "caduca": "24h",
+    }
+
+
 # ─────────────────────────── Threads ───────────────────────────
 
 def publish_threads(image_url: str, text: str) -> dict:
@@ -362,5 +400,9 @@ PUBLISHERS = {
     # 24 h, así que se suma a los targets en vez de reemplazar nada.
     "facebook_story": publish_story,
     "instagram": publish_instagram,
+    # La misma pieza como historia de Instagram. Va aparte de "instagram"
+    # porque es otra superficie: la foto vive en el perfil y la historia caduca
+    # en 24 h, así que se suman en `targets` en vez de sustituirse.
+    "instagram_story": publish_instagram_story,
     "threads": publish_threads,
 }
