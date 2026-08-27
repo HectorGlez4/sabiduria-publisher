@@ -74,6 +74,24 @@
     "instagram",
     "facebook_story"
   ],
-  "status": "ready",
-  "results": {}
+  "status": "published",
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1079318981559428",
+      "url": "https://www.facebook.com/874327782058550/posts/1079318981559428",
+      "published_at": "2026-08-27T06:45:52.282788+00:00"
+    },
+    "instagram": {
+      "post_id": "18087457043438273",
+      "url": "https://www.instagram.com/p/DciLNoQIHRb/",
+      "published_at": "2026-08-27T06:46:06.252660+00:00"
+    },
+    "facebook_story": {
+      "post_id": "1244192494502732",
+      "photo_id": "1079319461559380",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-08-27T06:46:15.354550+00:00"
+    }
+  }
 }
