@@ -52,8 +52,22 @@ jobs:
       # assets/fonts/. Aquí había un "apt-get install fonts-lora fonts-poppins"
       # con "|| true": ninguno de los dos paquetes existe en Ubuntu, así que el
       # paso salía en verde y la publicación reventaba después, al renderizar.
+      # ffmpeg NO viene en ubuntu-latest y src/render/reel.py lo invoca por
+      # subprocess. Sin esto el render del reel muere con
+      # "FileNotFoundError: [Errno 2] ... 'ffmpeg'" y la pieza gasta un intento;
+      # a los tres se aparta como 'blocked'. Pasó con 2026-08-26-re01-reel, que
+      # falló dos veces antes de que nadie mirara. Sin "|| true": si el paquete
+      # no está, esto tiene que ponerse rojo aquí y no reventar al renderizar.
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+
       - name: Instalar dependencias
         run: pip install --quiet -r requirements.txt
+
+      # Que ffmpeg exista y sepa hacer H.264, que es lo que pide Meta. Es una
+      # línea y convierte un fallo de producción en un fallo de arranque.
+      - name: Comprobar ffmpeg
+        run: ffmpeg -hide_banner -encoders | grep -q libx264 && ffmpeg -version | head -1
 
       # La identidad tiene que estar puesta ANTES de publicar, no despues: el
       # backend de hosting 'github' hace commit del PNG DENTRO del paso de
