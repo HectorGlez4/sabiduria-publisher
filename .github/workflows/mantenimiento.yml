@@ -12,6 +12,7 @@ on:
         options:
           - corregir-enlaces
           - diagnostico-meta
+          - threads-user-id
       dry_run:
         description: "Enseñar sin escribir"
         type: boolean
@@ -32,8 +33,9 @@ jobs:
 
       - name: Ejecutar
         env:
-          SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
-          SDB_PAGE_ID:    ${{ secrets.SDB_PAGE_ID }}
+          SDB_PAGE_TOKEN:      ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_PAGE_ID:         ${{ secrets.SDB_PAGE_ID }}
+          SDB_THREADS_TOKEN:   ${{ secrets.SDB_THREADS_TOKEN }}
         run: |
           ARGS=""
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="--dry-run"
@@ -41,6 +43,12 @@ jobs:
             corregir-enlaces) python3 scripts/corregir_enlaces.py $ARGS ;;
             # Solo lee. No publica nada y no imprime ningún token.
             diagnostico-meta) python3 scripts/diagnostico_meta.py ;;
+            # El id de usuario de Threads no se puede consultar sin el token, y
+            # el token vive aquí como secreto y no se puede leer desde fuera.
+            # Preguntárselo a la API desde dentro del runner evita tener que
+            # volver a generarlo y manejarlo a mano. El id NO es secreto: es
+            # público en el perfil, así que imprimirlo en el log no expone nada.
+            threads-user-id) python3 scripts/threads_user_id.py ;;
             *) echo "tarea desconocida"; exit 1 ;;
           esac
 
