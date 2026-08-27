@@ -76,7 +76,8 @@
   "publish_at": "2026-08-28T23:17:00Z",
   "targets": [
     "facebook",
-    "instagram"
+    "instagram",
+    "threads"
   ],
   "results": {}
 }

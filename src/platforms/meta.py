@@ -343,18 +343,27 @@ def publish_instagram_story(image_url: str, _caption: str = "") -> dict:
 
 # ─────────────────────────── Threads ───────────────────────────
 
-def publish_threads(image_url: str, text: str) -> dict:
+def publish_threads(image_url: str | None, text: str) -> dict:
     """
     Mismo patrón de dos pasos que Instagram. Usa su propio token
     (las credenciales de la app de Threads ya existen en WorkIt).
+
+    Con `image_url` a None publica un hilo de SOLO TEXTO (media_type=TEXT). Es
+    lo que usa scripts/hilos.py: en Threads el formato nativo es el texto con su
+    enlace, y mandar media_type=IMAGE con image_url vacío hace que la API
+    rechace el contenedor. Con imagen sigue funcionando igual que antes, para la
+    pieza que salga en las tres redes a la vez.
     """
     user_id = os.environ["SDB_THREADS_USER_ID"]
     token = os.environ["SDB_THREADS_TOKEN"]
 
-    container = _post(
-        f"{THREADS_GRAPH}/{user_id}/threads",
-        {"media_type": "IMAGE", "image_url": image_url, "text": text, "access_token": token},
-    )
+    campos = {"text": text, "access_token": token}
+    if image_url:
+        campos |= {"media_type": "IMAGE", "image_url": image_url}
+    else:
+        campos["media_type"] = "TEXT"
+
+    container = _post(f"{THREADS_GRAPH}/{user_id}/threads", campos)
     time.sleep(5)
     out = _post(
         f"{THREADS_GRAPH}/{user_id}/threads_publish",

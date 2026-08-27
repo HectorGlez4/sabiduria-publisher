@@ -65,7 +65,8 @@
     "facebook",
     "instagram",
     "facebook_story",
-    "instagram_story"
+    "instagram_story",
+    "threads"
   ],
   "status": "ready",
   "results": {}

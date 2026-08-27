@@ -72,7 +72,8 @@
   "status": "ready",
   "targets": [
     "facebook",
-    "instagram"
+    "instagram",
+    "threads"
   ],
   "results": {},
   "publish_at": "2026-08-30T16:17:00Z"

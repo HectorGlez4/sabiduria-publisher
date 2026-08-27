@@ -52,6 +52,20 @@ HORAS_DE_ATRASO = 3
 HORAS_MINIMAS_ATRASO = 0.35
 DIAS_SIN_REPETIR = 90
 
+# El sitio al que apuntan los enlaces. Vive aquí y no en feed.py porque ahora lo
+# usan los dos, y dos constantes con la misma URL se separan el día que cambie.
+SITIO = "https://sabiduriadebolsillo.net"
+
+
+def enlace(de: str) -> str:
+    """El enlace al sitio con su marca de origen.
+
+    `de` cierra el conjunto a las cuentas propias (FR-22 del sitio): la medición
+    registra de dónde vino la visita y no lo que le pongan en la URL.
+    """
+    return f"{SITIO}/?de={de}"
+
+
 LIMITS = {
     "facebook": {"max_chars": 63206, "max_tags": 5, "cut": 250},
     "instagram": {"max_chars": 2200, "max_tags": 12, "cut": 125},
@@ -96,8 +110,22 @@ def _long_form(unit: dict, tags: list[str]) -> str:
 
 
 def facebook(unit: dict) -> dict:
-    """Pie de foto. Facebook corta cerca de los 250 caracteres con 'Ver más'."""
-    return {"text": _long_form(unit, _tags(unit, LIMITS["facebook"]["max_tags"]))}
+    """
+    Pie de foto. Facebook corta cerca de los 250 caracteres con 'Ver más'.
+
+    El enlace al sitio SOLO si la pieza lo pide con `con_enlace`, y no por
+    defecto. Facebook despriorriza lo que saca a la gente de la plataforma, así
+    que un enlace en cada publicación paga alcance en todas para ganar visitas
+    en todas. Marcando una al día se paga el peaje una vez y las demás salen
+    limpias — y queda medible: si la del enlace rinde parecido a las otras, el
+    peaje no existe y se sube; si rinde la mitad, existe y se sabe cuánto.
+
+    Va al final y detrás de las etiquetas, donde estorba menos al gancho.
+    """
+    text = _long_form(unit, _tags(unit, LIMITS["facebook"]["max_tags"]))
+    if unit.get("con_enlace"):
+        text += f"\n\n{enlace('facebook')}"
+    return {"text": text}
 
 
 def instagram(unit: dict) -> dict:
@@ -112,13 +140,25 @@ def threads(unit: dict) -> dict:
     """
     500 caracteres y sin hashtags: en Threads leen como spam.
     Se queda el gancho y el remate, que es lo que aguanta el formato corto.
+
+    Y SIEMPRE el enlace al sitio. Es la única de las tres redes donde un enlace
+    no cuesta nada: Instagram no los hace clicables en el pie y Facebook
+    despriorriza lo que saca a la gente de la plataforma. En Threads el enlace
+    funciona y no hay alcance que perder.
+
+    El sitio del enlace se reserva ANTES de componer, no se recorta después: un
+    texto cortado a 500 y luego con el enlace pegado detrás pasa de 500 y la API
+    lo rechaza.
     """
     core = unit["core"]
+    url = enlace("threads")
+    espacio = LIMITS["threads"]["max_chars"] - len(url) - 2   # el \n\n de separación
+
     head = _quote_header(unit) or core["hook"]
     text = f"{head}\n\n{core['body'][-1]}" if core.get("body") else head
-    if len(text) > 500:
+    if len(text) > espacio:
         text = f"{head}\n\n{core['question']}"
-    return {"text": text[:500].rstrip()}
+    return {"text": f"{text[:espacio].rstrip()}\n\n{url}"}
 
 
 def x(unit: dict) -> dict:

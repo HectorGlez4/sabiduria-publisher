@@ -1,0 +1,66 @@
+name: hilos
+
+# Threads tiene su propio reloj y su propio carril.
+#
+# No va dentro de publicar.yml a propósito: la cadencia de variants.py cuenta
+# UNIDADES y no plataformas, así que veinticuatro hilos al día se comerían los
+# doce huecos diarios y no saldría ni una foto ni un reel. Threads es otra
+# superficie, con otro público y otro ritmo nativo.
+#
+# Cada hora en el minuto 41, lejos del 23 de publicar.yml para no competir por
+# los runners ni por el grupo de concurrencia.
+on:
+  schedule:
+    - cron: "41 * * * *"
+  workflow_dispatch:
+    inputs:
+      cuantos:
+        description: "Cuántos hilos como máximo en esta ejecución"
+        required: false
+        default: "4"
+      dry_run:
+        description: "Enseñar sin publicar"
+        type: boolean
+        default: false
+
+concurrency:
+  group: hilos
+  cancel-in-progress: false
+
+jobs:
+  hilos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # 4 hilos con esperas de 55 min son ~3 h. Igual que en publicar.yml, el
+    # trabajo por ejecución es la defensa contra un cron que se salta horas.
+    timeout-minutes: 240
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r requirements.txt
+
+      - name: Configurar git
+        run: |
+          git config user.name  "sabiduria-bot"
+          git config user.email "bot@users.noreply.github.com"
+
+      - name: Publicar hilos
+        env:
+          SDB_THREADS_USER_ID: ${{ secrets.SDB_THREADS_USER_ID }}
+          SDB_THREADS_TOKEN:   ${{ secrets.SDB_THREADS_TOKEN }}
+        run: |
+          ARGS="--max ${{ inputs.cuantos || '4' }}"
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python3 scripts/hilos.py $ARGS
+
+      - name: Registrar el resultado
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then echo "sin cambios"; exit 0; fi
+          git add content/published/
+          git commit -m "hilos: $(date -u +'%F %H:%M UTC')"
+          git pull --rebase origin main
+          git push origin main

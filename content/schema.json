@@ -90,6 +90,11 @@
       "description": "Datos falsos o disputados que circulan sobre este tema. Se conservan para que nadie los reintroduzca."
     },
 
+    "con_enlace": {
+      "type": "boolean",
+      "description": "Añade el enlace al sitio en el pie de Facebook. Se marca UNA pieza al día: un enlace en cada publicación paga alcance en todas, porque Facebook despriorriza lo que saca a la gente de la plataforma."
+    },
+
     "targets": {
       "type": "array",
       "items": { "enum": ["facebook", "facebook_reel", "facebook_story", "instagram", "instagram_story", "threads", "x", "linkedin", "tiktok", "youtube"] },

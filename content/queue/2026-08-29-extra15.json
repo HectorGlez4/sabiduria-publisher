@@ -64,7 +64,8 @@
   ],
   "targets": [
     "facebook",
-    "instagram"
+    "instagram",
+    "threads"
   ],
   "status": "ready",
   "results": {},
