@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lao Tse y el viaje de mil li (Daodejing 64)",
+    "hook": "\"Un viaje de mil li comienza bajo los pies.\"",
+    "body": [
+      "En chino son ocho caracteres: 千里之行，始於足下. Los dos últimos, 足下, significan literalmente «bajo los pies», el suelo que uno tiene debajo, el sitio donde está parado. No dicen «un solo paso». El paso lo puso la traducción: así lo vierte James Legge al inglés en el siglo XIX, «commenced with a single step», y de ahí pasó a casi todos los idiomas. Las millas tampoco están. El li medía unos 405 metros antes de la dinastía Qin, de modo que mil li son unos cuatrocientos kilómetros, no mil seiscientos.",
+      "La línea tampoco está sola. Viene después de otras dos: el árbol que se abraza con dificultad nació de un brote mínimo; la torre de nueve pisos se levantó desde un montón de tierra. Y viene antes de esta, 為者敗之，執者失之: el que actúa, lo echa a perder; el que agarra, lo pierde. El capítulo 64 no está animando a nadie a empezar. Está diciendo que todo lo grande fue pequeño, que por eso conviene ocuparse de las cosas mientras todavía son pequeñas, y que quien las fuerza las arruina.",
+      "El cierre lo confirma: cuidar el final igual que el principio, y no habrá obra malograda. La gente, dice el texto, fracasa cuando está a punto de terminar. La frase se usa hoy para arrancar algo; en su capítulo es una advertencia sobre el empeño. Y el remedio que propone no es dar el primer paso: es mirar el suelo que uno ya tiene bajo los pies."
+    ],
+    "question": "¿Qué cosa se te echó a perder justo por empujarla de más?",
+    "quote": {
+      "text": "Un viaje de mil li comienza bajo los pies.",
+      "author": "Lao Tse",
+      "work": "Tao Te King (Daodejing), capítulo 64",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto original completo del capítulo 64 del Daodejing, con la secuencia «合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。为者败之，执者失之» y el cierre «慎终如始，则无败事». Incluye la traducción de James Legge, que vierte la línea como «the journey of a thousand li commenced with a single step».",
+      "source": "Chinese Text Project (ctext.org), Dao De Jing, capítulo 64, texto chino y traducción de James Legge",
+      "url": "https://ctext.org/dao-de-jing/ens?chapter=64"
+    },
+    {
+      "claim": "足下 (zú xià) significa literalmente «bajo los pies» o «donde uno está parado»; la frase pertenece al capítulo 64 del Tao Te King y suele atribuirse por error a Confucio. La línea inmediatamente anterior, también célebre en China, habla del árbol que nace de un brote y de la torre de nueve pisos que se levanta desde un montón de tierra.",
+      "source": "Wikipedia (en), «A journey of a thousand miles begins with a single step»",
+      "url": "https://en.wikipedia.org/wiki/A_journey_of_a_thousand_miles_begins_with_a_single_step"
+    },
+    {
+      "claim": "Concordancia de traducciones del capítulo 64. Las versiones literales conservan el suelo: LaFargue, «A thousand mile journey begins under your feet». Las difundidas lo sustituyen por el paso: Legge, «commenced with a single step»; Wu, «begins with a single step». En español circulan «un viaje de mil millas empieza con un solo paso» y «un viaje de mil leguas comienza con el primer paso».",
+      "source": "Chapter 64, Tao Te Ching (Dao De Jing) by Lao Tzu: English and Spanish Language Translations, Commentary, Concordance, Index",
+      "url": "https://egreenway.com/taoism/ttclz64.htm"
+    },
+    {
+      "claim": "El li midió aproximadamente 405 metros antes de la dinastía Qin, 576 metros durante ella y 415,8 metros en la dinastía Han. El equivalente actual de medio kilómetro es una estandarización de 1929.",
+      "source": "Wikipedia (es), «Li (unidad de longitud)»",
+      "url": "https://es.wikipedia.org/wiki/Li_(unidad_de_longitud)"
+    },
+    {
+      "claim": "El Daodejing es un texto compuesto: distintas colecciones de dichos atribuidos a Lao Tse se pusieron por escrito probablemente desde la segunda mitad del siglo V a.C., y hacia mediados del siglo III a.C. la obra había alcanzado una forma relativamente estable. Para parte de los estudiosos modernos, Lao Tse es enteramente legendario.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Laozi»",
+      "url": "https://plato.stanford.edu/entries/laozi/"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir la frase a Confucio. Es un error de atribución frecuente: la línea está en el capítulo 64 del Daodejing, no en las Analectas.",
+    "No dar «mil millas» como la distancia del original. El texto dice mil li, unos cuatrocientos kilómetros con la medida anterior a la dinastía Qin. «Mil millas» es un arrastre de las traducciones inglesas.",
+    "No presentar a Lao Tse como un autor histórico documentado. La tradición lo sitúa en el siglo VI a.C., pero para una parte de los estudiosos es una figura enteramente legendaria, y el Daodejing es una compilación formada a lo largo de siglos. La atribución que aquí se verifica es que la línea está en el capítulo 64 de esa obra.",
+    "No usar la frase como lema de superación personal sin decir lo que sigue. En el mismo capítulo, dos líneas después, el texto afirma que quien actúa lo echa a perder y quien agarra lo pierde.",
+    "No decir que Legge inventó la fórmula «un solo paso». Lo documentado es que su traducción la emplea y que es una de las versiones que la difundieron; no está establecido quién la usó primero."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}

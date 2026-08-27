@@ -1,0 +1,58 @@
+{
+  "id": "2026-09-11-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Meroe y las pirámides del reino de Kush",
+    "hook": "Sudán tiene más del doble de pirámides que Egipto. Un cazador de tesoros derribó cuarenta buscando oro, y cuando lo encontró, en Europa dijeron que era falso.",
+    "body": [
+      "El reino de Kush gobernó la franja entre el Nilo y el Atbara durante más de mil años. En Meroe, su capital tardía, hay tres cementerios con más de mil tumbas y al menos ciento cuarenta y siete pirámides: veinticuatro en el del sur, cuarenta y una en el del norte, ochenta y dos en el del oeste. En todo Sudán se cuentan unas doscientas cincuenta y cinco pirámides nubias, más del doble de las que se levantaron en Egipto. No se parecen a las egipcias: miden entre diez y treinta metros y suben con una inclinación de unos setenta y dos grados, frente a los cincuenta y cuatro de Guiza. Son estrechas y empinadas. En el cementerio del norte, el real, están enterrados treinta reyes, ocho reinas que gobernaron por derecho propio y tres personas más.",
+      "El 10 de agosto de 1834 llegó a Meroe Giuseppe Ferlini, médico y soldado boloñés, con permiso del gobernador general de Sudán para excavar. Las cámaras kushitas no se dejaban abrir, así que optó por desmontar las pirámides piedra por piedra. Arrasó la N6, la de la reina Amanishakheto, que hasta ese momento seguía en pie con veintiocho metros de altura. Cerca de la cúspide dio con una cámara pequeña y un recipiente lleno de joyas de oro con vidrio fundido: sellos, collares, aretes, brazaletes, amuletos. Intactos desde el entierro de la reina, en el siglo I antes de nuestra era.",
+      "Llevó el tesoro a Europa y no consiguió venderlo. Los expertos del Museo Británico dictaminaron que era falso y no quisieron ninguna pieza. Tardó diez años en cambiar la respuesta: en 1844, el egiptólogo alemán Karl Richard Lepsius, que había estado en Meroe y había visto las pirámides con sus propios ojos, certificó que las joyas eran auténticas. Entonces se vendieron. La mayor parte fue a Berlín; la menor la compró Luis I de Baviera. Ahí siguen, en vitrinas de Berlín y de Múnich. La pirámide de veintiocho metros no está en ninguna parte."
+    ],
+    "question": "¿Qué hace falta creer para mirar algo verdadero y llamarlo falso?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "MEROE, 10 DE AGOSTO DE 1834",
+    "subtitle": "Las joyas se salvaron, la tumba no",
+    "body": "Ferlini desmontó la pirámide de la reina Amanishakheto, de veintiocho metros, y encontró su oro intacto. En Europa el Museo Británico lo declaró falso. Diez años después Lepsius certificó que era auténtico y se vendió a Berlín y a Múnich."
+  },
+  "sources": [
+    {
+      "claim": "Los tres cementerios de Meroe contienen más de mil tumbas, de las cuales al menos 147 son pirámides: al menos 24 en el cementerio sur, 41 en el norte y al menos 82 en el oeste. El cementerio norte es el principal enterramiento real, con 30 reyes, 8 reinas gobernantes por derecho propio y otros tres individuos. Las pirámides miden entre 10 y 30 metros y tienen una inclinación de unos 72 grados, frente a los 54 grados de las egipcias.",
+      "source": "Wikipedia (en), «Pyramids of Meroë»",
+      "url": "https://en.wikipedia.org/wiki/Pyramids_of_Mero%C3%AB"
+    },
+    {
+      "claim": "Existen unas 255 pirámides nubias repartidas en El-Kurru, Nuri, Jebel Barkal y Meroe: más del doble de las construidas en el Antiguo Egipto. Ferlini es considerado responsable de la destrucción de más de cuarenta pirámides.",
+      "source": "Wikipedia (en), «Nubian pyramids»",
+      "url": "https://en.wikipedia.org/wiki/Nubian_pyramids"
+    },
+    {
+      "claim": "Giuseppe Ferlini (1797-1870), médico y soldado italiano, llegó a Meroe el 10 de agosto de 1834 con permiso del gobernador general de Sudán. Niveló la pirámide N6, que hasta entonces se alzaba 28 metros, y halló en una cámara situada un poco por debajo del vértice un tesoro de joyas de oro y plata intacto desde el enterramiento de la reina Amanishakheto. El Museo Británico rechazó las piezas tras dictaminar sus expertos que eran falsas; finalmente Luis I de Baviera compró una parte —hoy en el Museo Estatal de Arte Egipcio de Múnich— y el resto lo adquirió el Museo Egipcio de Berlín.",
+      "source": "Wikipedia (en), «Giuseppe Ferlini»",
+      "url": "https://en.wikipedia.org/wiki/Giuseppe_Ferlini"
+    },
+    {
+      "claim": "Las piezas de oro con vidrio fundido —sellos, collares, aretes, brazaletes y amuletos— fueron consideradas falsificaciones cuando se ofrecieron en venta en Europa. Su autenticidad quedó confirmada en 1844 por R. Lepsius, que durante su expedición a Egipto y Nubia había visitado Meroe y visto las pirámides. La mayor parte de los hallazgos la compró Berlín; la parte menor ya la había comprado Luis I de Baviera.",
+      "source": "Museo Egipcio de Berlín (Sociedad para la Promoción del Museo Egipcio de Berlín), «The Ancient Sudan»",
+      "url": "https://www.egyptian-museum-berlin.com/c33.php"
+    },
+    {
+      "claim": "Los sitios arqueológicos de la Isla de Meroe fueron inscritos en la Lista del Patrimonio Mundial en 2011. La zona semidesértica entre el Nilo y el Atbara fue el corazón del reino de Kush, una potencia desde el siglo VIII a.C. hasta el siglo IV d.C. El bien incluye la ciudad real de Meroe y los sitios de Naqa y Musawwarat es Sufra.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, «Archaeological Sites of the Island of Meroe» (n.º 1336)",
+      "url": "https://whc.unesco.org/en/list/1336/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que en Sudán hay dos mil pirámides. Es una cifra que circula en prensa de viajes y no se sostiene: el recuento documentado es de unas 255 pirámides nubias en cuatro sitios, de las cuales al menos 147 están en Meroe.",
+    "No dar por firme que Ferlini destruyó exactamente cuarenta pirámides. Se le atribuye la destrucción de más de cuarenta, pero en su propio informe de 1838 relata haber desmantelado cinco, posiblemente seis. La cifra alta incluye el efecto de los imitadores que su hallazgo provocó.",
+    "No llamar arqueólogo a Ferlini. Era médico militar y buscador de tesoros; usó explosivos y desmontó las pirámides piedra por piedra para llegar a las cámaras.",
+    "No decir que las pirámides de Meroe son copias de las egipcias. Son estructuras distintas: mucho más pequeñas en planta, de 10 a 30 metros de alto y con una inclinación de unos 72 grados frente a los 54 de Guiza.",
+    "No afirmar que el rechazo del Museo Británico se debió explícitamente al racismo. Lo documentado es que sus expertos dictaminaron que las piezas eran falsas y que la autenticidad la confirmó Lepsius en 1844. Las lecturas sobre el motivo de fondo son interpretación, no dato."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}

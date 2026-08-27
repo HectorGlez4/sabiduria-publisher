@@ -1,0 +1,67 @@
+{
+  "id": "2026-09-11-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Eunice Newton Foote y el experimento de 1856",
+    "hook": "En 1856 midió que el dióxido de carbono calienta el aire más que cualquier otro gas. El trabajo se leyó en voz alta y no lo leyó ella.",
+    "body": [
+      "El 23 de agosto de 1856, en la reunión de la Asociación Estadounidense para el Avance de la Ciencia en Albany, Joseph Henry, secretario del Instituto Smithsoniano, leyó un trabajo ajeno: «Circumstances affecting the heat of the sun's rays», de Eunice Newton Foote. El montaje era simple. Cilindros de vidrio iguales, de treinta pulgadas de largo por cuatro de diámetro, con termómetros dentro, llenos de gases distintos y puestos al sol. Hidrógeno, 104 grados Fahrenheit. Aire común, 106. Oxígeno, 108. Ácido carbónico —lo que hoy llamamos dióxido de carbono—, 125. Y al retirarlo del sol, escribió, tardaba muchas veces más en enfriarse.",
+      "De ahí sacó la frase que importa, publicada ese noviembre en el American Journal of Science and Arts: una atmósfera de ese gas le daría a la Tierra una temperatura alta, y si en algún periodo hubo más proporción que ahora, un aumento de temperatura tuvo que resultar necesariamente. Es 1856. John Tyndall publicaría sus primeros resultados sobre gases y calor tres años después, en 1859, con otro instrumental y midiendo otra cosa. Ocho años antes de aquel verano, Foote había estado en Seneca Falls: su nombre es la quinta firma de la Declaración de Sentimientos, justo debajo del de Elizabeth Cady Stanton.",
+      "Por qué no presentó ella su propio trabajo no consta en ninguna parte. Lo que sí consta es lo que vino después: nadie la citó. La historia del calentamiento se contó desde 1859 durante siglo y medio. En 2011, un geólogo llamado Raymond Sorenson encontró por casualidad el resumen de aquella sesión en un anuario de descubrimientos científicos del siglo XIX, reconoció la fecha y avisó. Ciento cincuenta y cinco años entre publicar un hallazgo y que alguien lo leyera."
+    ],
+    "question": "¿Cuánto de lo que hoy damos por sabido lo dijo antes alguien a quien nadie citó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "ALBANY, 23 DE AGOSTO DE 1856",
+    "subtitle": "Cuatro gases al sol, cuatro termómetros",
+    "body": "Aire común, 106 grados. Oxígeno, 108. Ácido carbónico, 125, y el que más tardaba en enfriarse. Eunice Newton Foote lo escribió en 1856. El trabajo lo leyó otro en voz alta y nadie volvió a citarlo hasta 2011."
+  },
+  "sources": [
+    {
+      "claim": "El 23 de agosto de 1856, en la reunión de la AAAS en Albany (Nueva York), Joseph Henry, secretario del Instituto Smithsoniano, presentó el trabajo de Eunice Newton Foote «Circumstances affecting the heat of the sun's rays»; no consta por qué no lo presentó ella.",
+      "source": "American Institute of Physics (AIP), «From Foote-Note to Climate Science Founder»",
+      "url": "https://www.aip.org/library/from-foote-note-to-climate-science-founder"
+    },
+    {
+      "claim": "Temperaturas registradas por Foote en los cilindros expuestos al sol: hidrógeno 104 °F, aire común 106 °F, oxígeno 108 °F, ácido carbónico 125 °F; el recipiente con ácido carbónico tardó muchas veces más en enfriarse al retirarlo del sol.",
+      "source": "Transcripción del texto original de «Circumstances affecting the heat of the sun's rays» (1856)",
+      "url": "https://davidmorrow.net/eunice-foote/"
+    },
+    {
+      "claim": "Texto de la conclusión de Foote: «An atmosphere of that gas would give to our earth a high temperature; and if as some suppose, at one period of its history the air had mixed with it a larger proportion than at present, an increased temperature… must have necessarily resulted.» Publicado en American Journal of Science, 2.ª serie, vol. XXII, noviembre de 1856, pp. 382-383.",
+      "source": "The Public Domain Review, «First Paper to Link CO2 and Global Warming, by Eunice Foote (1856)», con facsímil de la publicación original",
+      "url": "https://publicdomainreview.org/collection/first-paper-to-link-co2-and-global-warming-by-eunice-foote-1856/"
+    },
+    {
+      "claim": "Los cilindros de vidrio eran idénticos, de treinta pulgadas de largo por cuatro de diámetro, con termómetros dentro. El nombre de Foote es el quinto de la lista de firmantes de la Declaración de Sentimientos de Seneca Falls (1848), inmediatamente debajo del de Elizabeth Cady Stanton.",
+      "source": "Physics Today (AIP), «Eunice Newton Foote's nearly forgotten discovery»",
+      "url": "https://physicstoday.aip.org/news/eunice-newton-footes-nearly-forgotten-discovery"
+    },
+    {
+      "claim": "John Tyndall publicó sus primeros resultados sobre absorción de calor por gases atmosféricos en 1859, tres años después de Foote, con instrumental distinto basado en radiación infrarroja. Su biógrafo Roland Jackson concluye que es improbable que Tyndall conociera el trabajo de Foote.",
+      "source": "Physics Today (AIP), «Eunice Newton Foote's nearly forgotten discovery»",
+      "url": "https://physicstoday.aip.org/news/eunice-newton-footes-nearly-forgotten-discovery"
+    },
+    {
+      "claim": "El geólogo Raymond Sorenson redescubrió el trabajo de Foote en 2011, al encontrar el resumen de la presentación de Joseph Henry en un volumen del «Annual of Scientific Discovery» de David A. Wells.",
+      "source": "Physics Today (AIP), «Eunice Newton Foote's nearly forgotten discovery»",
+      "url": "https://physicstoday.aip.org/news/eunice-newton-footes-nearly-forgotten-discovery"
+    },
+    {
+      "claim": "Lista oficial de firmantes de la Declaración de Sentimientos de la Convención de Seneca Falls, 19-20 de julio de 1848.",
+      "source": "Library of Congress, «Our Roll of Honor», Convención de Seneca Falls",
+      "url": "https://www.loc.gov/resource/rbcmil.scrp4006701/?st=text"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Foote demostró el efecto invernadero tal como se entiende hoy. Su montaje medía el calentamiento de gases dentro de cilindros de vidrio expuestos a la luz solar; la absorción de infrarrojo térmico la midió Tyndall en 1859 con otro instrumental. Existe un estudio dedicado a reinterpretar qué midió exactamente: Ortiz, J. y Jackson, R., «Understanding Eunice Foote's 1856 experiments: heat absorption by atmospheric gases», Notes and Records of the Royal Society 76 (1), 2022, pp. 67-84.",
+    "No decir que a Foote se le prohibió presentar su trabajo por ser mujer. No está documentado el motivo; las fuentes institucionales dicen expresamente que no se sabe por qué lo leyó Joseph Henry. Lo que sí está documentado es que las pocas mujeres con membresía en la AAAS del siglo XIX rara vez presentaban su propio trabajo.",
+    "No decir que Tyndall le robó o plagió el hallazgo. Su biógrafo Roland Jackson sostiene que es improbable que conociera el trabajo de Foote, y el enfoque experimental de ambos es distinto.",
+    "No llamarla «la primera científica del clima» sin matiz. Fue la primera en publicar la relación entre proporción de dióxido de carbono en el aire y temperatura de la Tierra; la disciplina no existía todavía."
+  ],
+  "targets": ["facebook", "instagram"],
+  "status": "draft"
+}
