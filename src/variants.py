@@ -30,6 +30,21 @@ CDMX = timezone(timedelta(hours=-6))
 # verdad empieza a parecer automatizado.
 MAX_POR_DIA = 10
 HORAS_MINIMAS = 1
+
+# Recuperación de atrasos.
+#
+# El espaciado normal de 1 h solo funciona si el reloj dispara una vez por hora.
+# Las ejecuciones programadas de GitHub son "best effort": bajo carga se
+# retrasan y a veces se descartan. El 27 de agosto se perdieron SIETE horas
+# seguidas. Con un hueco así, cada hora perdida es una publicación que ya no
+# cabe: la ventana de la semana no se estira.
+#
+# Por eso una pieza que lleva más de HORAS_DE_ATRASO esperando puede salir con
+# un espaciado menor, el justo para drenar el atraso sin amontonar. Veinte
+# minutos entre dos piezas atrasadas no es una ráfaga; publicar ocho seguidas en
+# diez minutos sí lo sería, y el tope diario lo sigue impidiendo.
+HORAS_DE_ATRASO = 3
+HORAS_MINIMAS_ATRASO = 0.35
 DIAS_SIN_REPETIR = 90
 
 LIMITS = {
@@ -264,12 +279,21 @@ def _problemas_de_cadencia(unit: dict, historial: list[dict],
             f"ya hay {len(mismo_dia)} publicaciones el {dia} en hora de CDMX: "
             f"el maximo es {MAX_POR_DIA} al dia"
         )
+    # El espaciado exigible depende de cuánto lleve esperando la pieza. Se mide
+    # contra su hora PREVISTA, no contra el reloj: 'cuando' es el reloj real al
+    # publicar de verdad, y comparar el reloj consigo mismo daría cero siempre.
+    prevista = _instante(unit)
+    atrasada = bool(prevista and (cuando - prevista).total_seconds() > HORAS_DE_ATRASO * 3600)
+    minimo = HORAS_MINIMAS_ATRASO if atrasada else HORAS_MINIMAS
+
     cercanas = [t for t in reales
-                if abs((cuando - t).total_seconds()) < HORAS_MINIMAS * 3600]
+                if abs((cuando - t).total_seconds()) < minimo * 3600]
     if cercanas:
         h = min(abs((cuando - t).total_seconds()) for t in cercanas) / 3600
+        detalle = (f" (en recuperacion: lleva mas de {HORAS_DE_ATRASO} h de atraso)"
+                   if atrasada else "")
         problemas.append(
-            f"a {h:.1f} h de otra publicacion: el minimo son {HORAS_MINIMAS} horas"
+            f"a {h:.1f} h de otra publicacion: el minimo son {minimo:g} horas{detalle}"
         )
     return problemas
 

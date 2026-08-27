@@ -388,6 +388,9 @@ def main() -> int:
     ap.add_argument("--due", action="store_true", help="la pieza vencida más antigua en estado ready")
     ap.add_argument("--id", help="una pieza concreta por id")
     ap.add_argument("--dry-run", action="store_true", help="genera y valida, sin publicar")
+    ap.add_argument("--max", type=int, default=1, metavar="N",
+                    help="con --due, cuantas piezas vencidas intentar como maximo "
+                         "en esta ejecucion (por defecto 1)")
     a = ap.parse_args()
 
     if a.id:
@@ -397,10 +400,29 @@ def main() -> int:
             return 1
         unit = load(path)
     elif a.due:
-        unit, path = pick_due()
-        if not unit:
-            print("nada vencido pendiente de publicar")
-            return 0
+        # Varias por ejecucion, no una.
+        #
+        # Con una sola pieza por ejecucion el ritmo real es exactamente el ritmo
+        # del reloj, y las ejecuciones programadas de GitHub no son fiables: el
+        # 27 de agosto se perdieron siete horas seguidas y con ellas siete
+        # publicaciones que ya no cabian en la semana.
+        #
+        # El bucle NO salta la cadencia: cada pieza vuelve a pasar el preflight.
+        # Lo que hace es aprovechar la ejecucion que si ocurrio para drenar lo
+        # atrasado, al espaciado reducido que permite variants.HORAS_DE_ATRASO.
+        # Se para en cuanto una pieza queda 'aplazada', porque pick_due() elige
+        # siempre la mas antigua: si esa no puede salir, las siguientes tampoco.
+        ultimo = "published"
+        for n in range(max(a.max, 1)):
+            unit, path = pick_due()
+            if not unit:
+                print("nada vencido pendiente de publicar" if n == 0
+                      else f"no queda nada mas vencido (salieron {n})")
+                return 0
+            ultimo = publish_unit(unit, path, a.dry_run)
+            if ultimo != "published":
+                break
+        return 0 if ultimo in ("published", "ensayo", "aplazada") else 1
     else:
         print("usa --due o --id", file=sys.stderr)
         return 1

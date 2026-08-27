@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 27 Aug 2026 03:57:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 07:19:36 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Caminante, no hay camino, se hace camino al andar.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-26-tarde</guid>
+      <pubDate>Thu, 27 Aug 2026 06:45:52 +0000</pubDate>
+      <description><![CDATA["Caminante, no hay camino, se hace camino al andar."
+— Antonio Machado (1875-1939)
+
+A esta frase se le suele pegar otra: "golpe a golpe, verso a verso". No es de Machado. La escribió Joan Manuel Serrat en 1969, en las estrofas propias que añadió al musicalizar el poema. El original tiene diez versos y no menciona ningún golpe.
+
+Y dice algo bastante menos alentador de lo que se supone. El camino no está delante: son las huellas que ya dejaste. Por eso el poema sigue con la senda que nunca se ha de volver a pisar, y termina con estelas en la mar, que es lo que dura una huella en el agua.
+
+Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruzó a Francia el 27 y murió en Collioure un mes después. En el bolsillo del abrigo le encontraron un papel arrugado con un último verso escrito a lápiz.
+
+¿Qué camino tuyo solo se entendió cuando ya lo habías andado?
+
+#SabiduriaDeBolsillo #Machado #Poesia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-tarde.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-tarde.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>No tenemos poco tiempo: hemos perdido mucho.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -504,26 +524,6 @@ Un siglo después, un emperador romano llenaba su diario privado con esa idea.
 #SabiduriaDeBolsillo #Epicteto #Estoicismo #Filosofia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-noche.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-noche.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Yo fui el arquitecto de mi propio destino.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-18-tarde</guid>
-      <pubDate>Tue, 18 Aug 2026 20:45:29 +0000</pubDate>
-      <description><![CDATA["Yo fui el arquitecto de mi propio destino."
-— Amado Nervo (1870-1919)
-
-Este verso se ha vuelto un eslogan de superación personal. En el poema no lo es. El verso anterior dice desde dónde habla: muy cerca de mi ocaso. No es alguien celebrando lo que consiguió, es un hombre haciendo cuentas al final.
-
-Y las cuentas salen raras. Agradece que la vida nunca le prometiera nada: ni mayo eterno, ni solo noches buenas. Por eso no termina en victoria, termina en empate. La última línea dice que la vida no le debe nada y que quedan en paz.
-
-Nervo lo escribió después de perder a la mujer con la que vivió diez años, muerta en 1912. Él murió en Montevideo en mayo de 1919, a los cuarenta y ocho.
-
-¿Con quién o con qué te falta quedar en paz?
-
-#SabiduriaDeBolsillo #AmadoNervo #Poesia #Frases]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-tarde.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-tarde.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
