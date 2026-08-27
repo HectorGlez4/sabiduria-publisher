@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-07-manana",
-  "slot": "manana",
+  "id": "2026-08-28-extra13",
+  "slot": "tarde",
   "pillar": "curiosidad",
   "core": {
     "hook": "En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.",
@@ -68,5 +68,11 @@
     "«El monstruo se llama Frankenstein». Frankenstein es el apellido del científico. La criatura no tiene nombre en la novela.",
     "«1816 fue el año más frío de la historia». No verificado y muy improbable como superlativo. Lo documentado es un descenso de la temperatura media de entre 0,4 y 0,7 °C."
   ],
-  "status": "draft"
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "publish_at": "2026-08-30T17:17:00Z"
 }

@@ -1,6 +1,6 @@
 {
   "id": "2026-08-29-noche",
-  "publish_at": "2026-08-30T01:53:00Z",
+  "publish_at": "2026-08-29T15:17:00Z",
   "slot": "noche",
   "pillar": "civilizacion",
   "core": {
@@ -16,7 +16,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "EL GRAN ZIMBABUE",
     "subtitle": "Una ciudad de piedra que un régimen prefirió atribuir a extranjeros",
     "body": "Muros de granito encajados sin mortero, once metros de alto, levantados entre los siglos XI y XV en el sureste de África. Desde 1905 la arqueología sabía que eran obra africana. En los años setenta un gobierno todavía presionaba para que no se dijera en voz alta."

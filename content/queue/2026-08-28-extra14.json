@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-09-noche",
-  "slot": "noche",
+  "id": "2026-08-28-extra14",
+  "slot": "tarde",
   "pillar": "filosofia",
   "core": {
     "hook": "En 1972 unos obreros chinos desenterraron por accidente las tablillas que debían resolver si Sun Tzu existió.",
@@ -17,7 +17,7 @@
     "title": "EL ARTE DE LA GUERRA",
     "subtitle": "Trece capítulos que sobrevivieron a la duda sobre su propio autor",
     "body": "En 1972 unos obreros abrieron dos tumbas Han en Yinqueshan: 4.942 tablillas de bambú selladas antes del año 118 antes de Cristo. Los capítulos hallados coinciden con el texto que leemos hoy. Del hombre, en cambio, no hay rastro anterior a su primer biógrafo.",
-    "variant": "cream"
+    "variant": "gold"
   },
   "sources": [
     {
@@ -70,5 +70,11 @@
     "\"El arte de la guerra es el libro más antiguo de estrategia militar del mundo\" y demás superlativos: no verificado para esta pieza.",
     "Leer el libro como manual de negocios o de superación personal. Es una lectura del siglo XX y no aporta nada a la pieza, que trata de cómo se comprueba un texto antiguo."
   ],
-  "status": "draft"
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "publish_at": "2026-08-30T18:17:00Z"
 }

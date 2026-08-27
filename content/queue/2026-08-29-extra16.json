@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-02-noche",
-  "slot": "noche",
+  "id": "2026-08-29-extra16",
+  "slot": "tarde",
   "pillar": "civilizacion",
   "core": {
     "hook": "Roma no sembró de sal las ruinas de Cartago: ese dato entró en los libros de historia en 1930.",
@@ -68,5 +68,11 @@
     "«Escipión lloró ante las ruinas y citó a Homero». Anécdota de Polibio transmitida por Apiano; no se comprobó en esta sesión y queda fuera del copy.",
     "Recordatorio heredado que sigue vigente: «los mayas inventaron el cero» (fue Mesoamérica zoque y epi-olmeca), las chinampas como «jardines flotantes» (son islotes fijos) y el mapa de Vinlandia (falsificación del siglo XX)."
   ],
-  "status": "draft"
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "publish_at": "2026-08-30T20:17:00Z"
 }

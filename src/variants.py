@@ -28,7 +28,12 @@ CDMX = timezone(timedelta(hours=-6))
 # piezas seguidas en veinte minutos, y solo la segunda forma parece un bot.
 # Si hay que subir más, súbase MAX_POR_DIA; bajar HORAS_MINIMAS de 1 es lo que de
 # verdad empieza a parecer automatizado.
-MAX_POR_DIA = 10
+# Subido de 10 a 12 el 27 de agosto: los objetivos de la semana piden 44
+# publicaciones entre foto, reel e historia, y con 10 al día no caben en los
+# días que quedan. El comentario de arriba ya decía cuál es el dial correcto —
+# subir el tope, no bajar el espaciado—, y doce piezas separadas una hora se
+# reparten por doce horas del día, que no es una ráfaga.
+MAX_POR_DIA = 12
 HORAS_MINIMAS = 1
 
 # Recuperación de atrasos.

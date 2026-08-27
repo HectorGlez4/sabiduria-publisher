@@ -1,6 +1,6 @@
 {
   "id": "2026-08-29-manana",
-  "publish_at": "2026-08-29T14:52:00Z",
+  "publish_at": "2026-08-29T01:17:00Z",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -16,7 +16,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "WU ZETIAN",
     "subtitle": "Cien toneladas de piedra levantadas para no decir nada",
     "body": "Fue la única mujer que gobernó China con el título de emperador. En su tumba se alzó una estela de casi cien toneladas y quedó sin una palabra. Hoy lleva cuarenta y dos inscripciones que le añadieron otros, la más antigua de 1103, y una de ellas sigue sin poder leerse."

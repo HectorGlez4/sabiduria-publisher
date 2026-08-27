@@ -1,6 +1,6 @@
 {
   "id": "2026-08-27-manana",
-  "publish_at": "2026-08-27T14:47:00Z",
+  "publish_at": "2026-08-27T16:17:00Z",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -15,7 +15,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "MARY ANNING",
     "subtitle": "Los fósiles eran suyos; las firmas de los artículos, de otros",
     "body": "En diciembre de 1823 sacó de un acantilado inglés el primer esqueleto completo de plesiosaurio. La Sociedad Geológica de Londres lo discutió en una reunión a la que no la invitaron: no admitía mujeres. Empezó a admitirlas en 1919, setenta y dos años después de su muerte."

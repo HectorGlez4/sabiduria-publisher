@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-11-manana",
-  "slot": "manana",
+  "id": "2026-08-29-extra15",
+  "slot": "tarde",
   "pillar": "figura",
   "core": {
     "subject": "Eunice Newton Foote y el experimento de 1856",
@@ -62,6 +62,11 @@
     "No decir que Tyndall le robó o plagió el hallazgo. Su biógrafo Roland Jackson sostiene que es improbable que conociera el trabajo de Foote, y el enfoque experimental de ambos es distinto.",
     "No llamarla «la primera científica del clima» sin matiz. Fue la primera en publicar la relación entre proporción de dióxido de carbono en el aire y temperatura de la Tierra; la disciplina no existía todavía."
   ],
-  "targets": ["facebook", "instagram"],
-  "status": "draft"
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-08-30T19:17:00Z"
 }
