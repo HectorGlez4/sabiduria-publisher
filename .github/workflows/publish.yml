@@ -37,10 +37,11 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
-    # Con --max 6 el job espera 22 min entre piezas: hasta ~2 h de reloj. El
-    # límite por defecto son 6 h; 150 min deja margen y evita que un cuelgue en
-    # la subida de un reel se coma el runner media jornada.
-    timeout-minutes: 150
+    # Con --max 12 el job espera 22 min entre piezas: hasta ~4,5 h de reloj más
+    # lo que tarden las subidas. 330 min deja margen sobre eso y sigue por
+    # debajo del límite de 6 h, así que un cuelgue en la subida de un reel no se
+    # come el runner una jornada entera.
+    timeout-minutes: 330
     permissions:
       contents: write          # para hacer commit del resultado
       issues: write            # para avisar si una publicación falla
@@ -97,12 +98,17 @@ jobs:
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_PUBLIC_BASE:       ${{ secrets.R2_PUBLIC_BASE }}
         run: |
-          # --max 6: las ejecuciones programadas de GitHub son best effort y el
-          # 27 de agosto se perdieron siete horas seguidas. Con una pieza por
-          # ejecución, cada hora perdida era una publicación que ya no cabía en
-          # la semana. El bucle no salta la cadencia —cada pieza repasa el
-          # preflight—, solo aprovecha la ejecución que sí ocurrió.
-          ARGS="--due --max 6"
+          # --max 12: las ejecuciones programadas de GitHub son best effort, y el
+          # 27 de agosto se degradaron de una hora clavada a dos huecos seguidos
+          # de más de diez horas. Con --max 6 y esperas de 22 min, una ejecución
+          # cubre ~2 h de reloj; con doce cubre el día entero, que es el tope
+          # diario de variants.MAX_POR_DIA. Así dos ejecuciones supervivientes
+          # bastan para la jornada en vez de las veinticuatro que hacían falta.
+          #
+          # El bucle no salta la cadencia —cada pieza repasa el preflight con el
+          # historial ya actualizado por la anterior—, solo aprovecha la
+          # ejecución que sí ocurrió.
+          ARGS="--due --max 12"
           [ -n "${{ inputs.id }}" ] && ARGS="--id ${{ inputs.id }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           python3 -m src.publish $ARGS
