@@ -7,7 +7,7 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 27 Aug 2026 07:19:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 07:24:42 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Caminante, no hay camino, se hace camino al andar.</title>
@@ -28,6 +28,25 @@ Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruz�
 #SabiduriaDeBolsillo #Machado #Poesia #Frases]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-tarde.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>LOS QUIPUS: un archivo que sigue intacto y que nadie puede leer</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-26-re02-reel</guid>
+      <pubDate>Wed, 26 Aug 2026 15:35:00 +0000</pubDate>
+      <description><![CDATA[LOS QUIPUS: un archivo que sigue intacto y que nadie puede leer
+
+El imperio inca administró millones de personas sin alfabeto. Su sistema eran cuerdas de algodón y de fibra de llama, anudadas y teñidas: los quipus. Los llevaban funcionarios especializados, los quipucamayocs, y había varios por comunidad para poder cotejar los registros entre sí.
+
+La parte numérica está descifrada desde hace un siglo: base diez, la altura del nudo marca la posición, y el cero se escribe dejando el espacio vacío. Lo que no se ha podido leer es todo lo demás: el color, la fibra, el sentido en que se torció la hebra.
+
+Hay un quipu con 586 cuerdas que guarda más de quince mil datos ordenados con una precisión evidente. Está entero. Es ilegible.
+
+¿Qué se pierde cuando desaparece la última persona que sabía leer algo?
+
+#SabiduriaDeBolsillo #Incas #Peru #Quipu]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-re02-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-re02-reel.png" medium="image" type="image/png"/>
     </item>
     <item>
       <title>No tenemos poco tiempo: hemos perdido mucho.</title>
@@ -503,27 +522,6 @@ Mil años de ventaja para el material más barato de la historia.
 #SabiduriaDeBolsillo #China #Historia #Curiosidades]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-19-manana.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-19-manana.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EPICTETO: nació esclavo y nunca escribió un libro. El hombre más poderoso del mundo lo citaba de memoria</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-18-noche</guid>
-      <pubDate>Wed, 19 Aug 2026 01:57:38 +0000</pubDate>
-      <description><![CDATA[EPICTETO: nació esclavo y nunca escribió un libro. El hombre más poderoso del mundo lo citaba de memoria
-
-Nació hacia el año 50 en lo que hoy es Turquía, propiedad de Epafrodito, un liberto que era secretario personal de Nerón. Ese mismo Epafrodito fue quien le sostuvo la mano a Nerón cuando el emperador se mató, en junio del 68. Siendo todavía esclavo, Epicteto pidió permiso para estudiar filosofía. Se lo dieron.
-
-Cuando Domiciano expulsó a los filósofos de Italia, hacia el año 89, se fue a Nicópolis, en la costa griega, y abrió una escuela. Enseñó unos cuarenta años y no escribió una sola línea: todo lo que conservamos son los apuntes de un alumno, Arriano.
-
-Su manual empieza así: unas cosas dependen de nosotros y otras no. De nosotros: el juicio, el deseo, el rechazo. No de nosotros: el cuerpo, la propiedad, la reputación, los cargos.
-
-Un siglo después, un emperador romano llenaba su diario privado con esa idea.
-
-¿Cuánto de lo que te quitó el sueño esta semana estaba de tu lado de la línea?
-
-#SabiduriaDeBolsillo #Epicteto #Estoicismo #Filosofia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-noche.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-noche.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

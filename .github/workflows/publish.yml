@@ -37,6 +37,10 @@ concurrency:
 jobs:
   publicar:
     runs-on: ubuntu-latest
+    # Con --max 6 el job espera 22 min entre piezas: hasta ~2 h de reloj. El
+    # límite por defecto son 6 h; 150 min deja margen y evita que un cuelgue en
+    # la subida de un reel se coma el runner media jornada.
+    timeout-minutes: 150
     permissions:
       contents: write          # para hacer commit del resultado
       issues: write            # para avisar si una publicación falla

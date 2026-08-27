@@ -18,6 +18,7 @@ import json
 import pathlib
 import subprocess
 import sys
+import time
 from datetime import datetime, timezone
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
@@ -422,6 +423,21 @@ def main() -> int:
             ultimo = publish_unit(unit, path, a.dry_run)
             if ultimo != "published":
                 break
+            # Esperar el espaciado antes de la siguiente.
+            #
+            # Sin esto el bucle no sirve de nada: una ejecución dura minutos y
+            # el espaciado de recuperación son 21, así que la segunda pieza
+            # siempre salía 'aplazada' a 0,0 h de la primera y el bucle moría en
+            # la vuelta dos. Comprobado en la ejecución 33049310523.
+            #
+            # Esperar dentro del job convierte UNA ejecución superviviente en
+            # varias publicaciones, que es justo lo que hace falta cuando GitHub
+            # se salta horas enteras. El coste es tener el job ocupado; el grupo
+            # de concurrencia ya impide que dos publiquen a la vez.
+            if n + 1 < max(a.max, 1) and not a.dry_run:
+                espera = variants.HORAS_MINIMAS_ATRASO * 3600 + 60
+                print(f"  · esperando {espera / 60:.0f} min para respetar el espaciado")
+                time.sleep(espera)
         return 0 if ultimo in ("published", "ensayo", "aplazada") else 1
     else:
         print("usa --due o --id", file=sys.stderr)
