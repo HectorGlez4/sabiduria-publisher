@@ -166,6 +166,29 @@ def main() -> int:
             FAILURES.append(f"{p} sin marca de publicación registrada")
     check(fake_graph.STATE["publish_attempts"] == before, "una pieza publicada no se vuelve a enviar")
 
+    print("\n7. El feed se construye con una pieza que solo va a reel")
+    # Regresion real: feed.py hacia build_all(u)["facebook"], y build_all solo
+    # devuelve las plataformas que la pieza tiene en `targets`. Una reemision a
+    # reel lleva SOLO 'facebook_reel', asi que el feed reventaba con
+    # KeyError: 'facebook' DESPUES de publicar el reel y moverlo a published/:
+    # la publicacion salia bien y el workflow terminaba en rojo.
+    #
+    # Se prueba _item() y no construir(): feed.PUBLICADAS apunta al repo real,
+    # no al temporal de este test, asi que construir() leeria content/published
+    # de verdad. _item() es donde estaba el fallo y no toca disco.
+    from src import feed  # noqa: E402
+    solo_reel = json.loads(moved.read_text(encoding="utf-8"))
+    solo_reel["targets"] = ["facebook_reel"]
+    solo_reel["results"] = {"facebook_reel": {"post_id": "R1",
+                                              "published_at": "2026-01-02T19:00:00Z"}}
+    try:
+        item = feed._item(solo_reel)
+        check("<item>" in item and "<description>" in item,
+              "una pieza de solo-reel produce su entrada del feed")
+    except KeyError as e:
+        FAILURES.append(f"el feed revienta con una pieza de solo-reel: KeyError {e}")
+        check(False, "una pieza de solo-reel produce su entrada del feed")
+
     # limpieza: todo vivio en un directorio temporal, no se toca nada real
     srv.shutdown()
     shutil.rmtree(tmp, ignore_errors=True)

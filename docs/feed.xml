@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 27 Aug 2026 03:48:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 03:57:10 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>No tenemos poco tiempo: hemos perdido mucho.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-26-re01-reel</guid>
+      <pubDate>Wed, 26 Aug 2026 14:11:00 +0000</pubDate>
+      <description><![CDATA["No tenemos poco tiempo: hemos perdido mucho."
+— Séneca, Sobre la brevedad de la vida, 1.3 (hacia el año 49)
+
+Séneca no escribió eso para consolar a nadie. Lo escribió como un reproche, dirigido a un funcionario romano que administraba el abasto de trigo de la ciudad y se quejaba de no tener horas.
+
+El original latino usa un tiempo pasado: hemos perdido. No es un problema de agenda. Es una cuenta ya cerrada, de la que no se recupera nada.
+
+Casi dos mil años después seguimos diciendo la misma frase, palabra por palabra: que no nos alcanza el día.
+
+¿En qué se te fue el tiempo que hoy dirías que no tuviste?
+
+#SabiduriaDeBolsillo #Seneca #Estoicismo #Reflexiones]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-re01-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-26-re01-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>UN HOSPITAL QUE NACIÓ PORQUE UN FRAILE CAMBIÓ SU SERMÓN A MITAD DE CAMINO</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -504,25 +524,6 @@ Nervo lo escribió después de perder a la mujer con la que vivió diez años, m
 #SabiduriaDeBolsillo #AmadoNervo #Poesia #Frases]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-18-manana</guid>
-      <pubDate>Tue, 18 Aug 2026 14:58:40 +0000</pubDate>
-      <description><![CDATA[LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ
-
-Diseccionó alrededor de treinta cuerpos humanos a lo largo de su vida. En el invierno de 1510 y 1511 trabajó en la facultad de medicina de Pavía, junto al catedrático de anatomía Marcantonio della Torre, y solo esa temporada pudo abrir hasta veinte cadáveres. De ahí salieron cientos de hojas de dibujos con miles de palabras de notas.
-
-Los dos planeaban un tratado ilustrado. Della Torre murió de peste en 1511, a los treinta años. Leonardo siguió solo, nunca lo terminó, y murió en 1519. Sus papeles pasaron a su discípulo Francesco Melzi, un coleccionista los encuadernó después en un álbum, y ese álbum entró en la colección real inglesa hacia 1670. Ahí se quedaron.
-
-No se publicaron ni se entendieron hasta finales del siglo XIX. Para entonces la anatomía moderna llevaba más de tres siglos en marcha: la había fundado otro libro, impreso en 1543.
-
-¿Qué guardas terminado a medias, esperando el momento perfecto?
-
-#SabiduriaDeBolsillo #Leonardo #Anatomia #Ciencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-18-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

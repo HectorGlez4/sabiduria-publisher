@@ -112,7 +112,13 @@ def piezas() -> list[dict]:
 
 
 def _item(unidad: dict) -> str:
-    texto = variants.build_all(unidad)["facebook"]["text"]
+    # build(), no build_all()[...]: build_all solo devuelve las plataformas que
+    # la pieza tiene en `targets`, y una reemision a reel lleva SOLO
+    # 'facebook_reel'. Con build_all esto reventaba con KeyError: 'facebook'
+    # DESPUES de haber publicado el reel y haberlo movido a published/ — la
+    # publicacion salia bien y el workflow terminaba en rojo abriendo un aviso.
+    # publish.py ya usa build() por esta misma razon para los reels.
+    texto = variants.build(unidad, "facebook")["text"]
     enlace = f"{SITIO}/?de=facebook"
     imagen = _url_de_tarjeta(unidad["id"])
     return f"""    <item>
