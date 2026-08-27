@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 27 Aug 2026 20:46:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Aug 2026 20:55:14 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ANGKOR NUNCA ESTUVO PERDIDO: HAY CATORCE FIRMAS JAPONESAS GRABADAS EN SUS MUROS</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-27-noche</guid>
+      <pubDate>Thu, 27 Aug 2026 20:53:52 +0000</pubDate>
+      <description><![CDATA[ANGKOR NUNCA ESTUVO PERDIDO: HAY CATORCE FIRMAS JAPONESAS GRABADAS EN SUS MUROS
+
+Se repite que un naturalista francés encontró el templo devorado por la selva en enero de 1860. Él nunca dijo eso: llegó guiado por un misionero que ya sabía el camino, y dejó anotado que un fraile portugués había estado ahí en 1586.
+
+Lo que casi nadie sabe está en la piedra. En la galería en cruz de Angkor Wat hay catorce inscripciones japonesas fechadas entre 1612 y 1632. La más conocida la firmó Morimoto Ukondayu Kazufusa, que pasó ahí el año nuevo jemer de 1632 y escribió que rezaba por su padre y por su madre muerta.
+
+Aquellos peregrinos creían estar en la India, en el monasterio donde predicó el Buda. Uno de ellos levantó un plano del templo: la copia que se conserva es de 1715, está en un museo de Mito y es el plano más antiguo de Angkor que existe.
+
+Cuando llegaron los franceses, todavía vivían monjes dentro del recinto.
+
+¿Cuántas cosas llamamos descubrimiento solo porque nos enteramos tarde?
+
+#SabiduriaDeBolsillo #Angkor #Camboya #Historia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-noche.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-noche.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>MIYAMOTO MUSASHI GANÓ MÁS DE SESENTA COMBATES Y SU ÚLTIMO ESCRITO CASI NO HABLA DE ESPADAS</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -501,27 +522,6 @@ Cervantes tenía autoridad para afirmarlo. Estuvo cinco años cautivo en Argel, 
 #SabiduriaDeBolsillo #Cervantes #Quijote #Lectura]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-21-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-21-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>RAMÓN Y CAJAL: le dieron el Nobel a medias con el hombre que negaba lo que él había demostrado</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-21-manana</guid>
-      <pubDate>Fri, 21 Aug 2026 15:00:06 +0000</pubDate>
-      <description><![CDATA[RAMÓN Y CAJAL: le dieron el Nobel a medias con el hombre que negaba lo que él había demostrado
-
-Estocolmo, 11 de diciembre de 1906. El premio de Medicina se reparte en partes iguales entre Santiago Ramón y Cajal y el italiano Camillo Golgi, por sus trabajos sobre la estructura del sistema nervioso.
-
-Golgi habló primero. Tituló su conferencia "La doctrina de la neurona: teoría y hechos" y la usó para defender que el sistema nervioso era una red continua, atacando de frente la tesis que Cajal iba a exponer justo después: que las neuronas son células separadas. Cajal escuchó desde la sala. Después describió el reparto diciendo que quedaba unido a su rival como hermanos siameses pegados por los hombros.
-
-El detalle final es casi cruel: la técnica que Cajal usó para demostrar que Golgi se equivocaba era la tinción de plata que había inventado Golgi.
-
-Golgi murió sin aceptarlo nunca. La razón la dio el microscopio electrónico, cincuenta años más tarde.
-
-¿Se puede tener razón y no vivir para verlo reconocido?
-
-#SabiduriaDeBolsillo #RamonYCajal #Ciencia #Nobel]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-21-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-21-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
