@@ -1,0 +1,85 @@
+{
+  "id": "2026-09-12-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "El metro y el error que Méchain calló (1792-1799)",
+    "hook": "EL HOMBRE QUE MIDIÓ EL METRO ENCONTRÓ UN ERROR EN SU PROPIA CIFRA Y SE LO GUARDÓ DIEZ AÑOS",
+    "body": [
+      "En 1791 la Academia de Ciencias de París decidió que la nueva unidad de longitud sería la diezmillonésima parte de la distancia del polo al ecuador. Para conocer esa distancia había que medir un arco de meridiano entre Dunkerque y Barcelona. Jean-Baptiste Delambre tomó el tramo del norte; Pierre Méchain, el del sur. Méchain salió de París el 28 de junio de 1792, con la Revolución en marcha y con Francia a punto de entrar en guerra con España.",
+      "Su trabajo dependía de fijar la latitud de Barcelona. Tomó una serie de observaciones desde el castillo de Montjuïc y otra desde la posada donde quedó bloqueado cuando la guerra le cerró el paso. Al reducir los datos vio que las dos series no coincidían: unos tres segundos de arco. No podía volver al castillo a repetirlo. No informó a nadie y retocó sus cuadernos para que la dispersión pareciera menor. Las triangulaciones se cerraron en noviembre de 1798 y el 22 de junio de 1799 la barra de platino que fijaba el metro se depositó en los Archivos Nacionales.",
+      "Diez años después le llegó la salida. El Bureau des Longitudes aprobó prolongar el meridiano hasta las Baleares, y esa prolongación volvía innecesaria su latitud de Barcelona. Habían designado a otro astrónomo para el viaje. Méchain exigió ir él. Murió el 20 de septiembre de 1804 en Castellón de la Plana, agotado y con fiebre, sin haber cerrado la medición. Delambre encontró el error al heredar sus cuadernos.",
+      "El metro quedó unos 0,197 milímetros más corto de lo que pedía su definición. La causa principal no fue Méchain: fue la desviación de la vertical, la plomada que deja de apuntar al centro de la Tierra cuando hay masa de montaña cerca, algo que en 1799 nadie sabía descontar. Se pasó una década guardando un secreto que la física le habría perdonado."
+    ],
+    "question": "¿Qué error propio has cargado más tiempo del que valía?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL METRO, 1799",
+    "subtitle": "La unidad salió corta y quien lo sospechó primero se lo calló",
+    "body": "En 1794, en Barcelona, Méchain vio que sus dos series de latitudes no coincidían: unos tres segundos de arco. No pudo repetir la medición, no se lo dijo a nadie y retocó sus cuadernos. El metro salió 0,197 mm corto, y la causa principal no fue él, sino la desviación de la vertical."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Historia",
+      "#Ciencia",
+      "#Curiosidades"
+    ],
+    "extended": [
+      "#DatosCuriosos",
+      "#SistemaMetrico",
+      "#Geodesia",
+      "#HistoriaDeLaCiencia",
+      "#Barcelona",
+      "#Francia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En 1791 se fijó el metro como la diezmillonésima parte del cuadrante; Delambre midió el tramo Dunkerque-Rodez y Méchain el de Rodez-Barcelona; Méchain salió de París el 28 de junio de 1792.",
+      "source": "MacTutor History of Mathematics, University of St Andrews — biografía de Pierre Méchain",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mechain/"
+    },
+    {
+      "claim": "En marzo de 1794 Méchain comprobó que las latitudes tomadas desde la posada no coincidían con las de Mont-Jouy, no pudo volver al castillo, no informó a nadie y alteró sus datos para reducir la desviación aparente respecto de la media.",
+      "source": "MacTutor History of Mathematics, University of St Andrews — biografía de Pierre Méchain",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Mechain/"
+    },
+    {
+      "claim": "La discrepancia en la latitud de Barcelona era de unos tres segundos de arco y Méchain la mantuvo en secreto; Delambre solo la conoció al heredar sus cuadernos.",
+      "source": "Dictionary of Scientific Biography, entrada \"Méchain, Pierre-François-André\" (Encyclopedia.com)",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/mechain-pierre-fran"
+    },
+    {
+      "claim": "La expedición de prolongación a las Baleares, que volvía innecesaria su latitud de Barcelona, salió de París el 26 de abril de 1803 con Méchain al frente por insistencia propia; murió el 20 de septiembre de 1804 en Castellón de la Plana.",
+      "source": "Dictionary of Scientific Biography, entrada \"Méchain, Pierre-François-André\" (Encyclopedia.com)",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/mechain-pierre-fran"
+    },
+    {
+      "claim": "Las triangulaciones se completaron en 1798 y la barra de platino se depositó en los Archivos Nacionales el 22 de junio de 1799 (4 de mesidor del año VII).",
+      "source": "Wikipedia en inglés — Arc measurement of Delambre and Méchain",
+      "url": "https://en.wikipedia.org/wiki/Arc_measurement_of_Delambre_and_M%C3%A9chain"
+    },
+    {
+      "claim": "El metro es unos 0,197 milímetros más corto de lo que correspondería a su definición original, sobre todo por no haber tenido en cuenta la desviación de la vertical en el extremo sur del arco.",
+      "source": "Wikipedia en inglés — History of the metre",
+      "url": "https://en.wikipedia.org/wiki/History_of_the_metre"
+    }
+  ],
+  "do_not_use": [
+    "\"el error de Méchain es la razón de que el metro sea corto\": la causa principal del desvío de 0,197 mm es la desviación de la vertical en el extremo sur del arco, no su discrepancia de Barcelona",
+    "\"falsificó los datos\" o \"cometió fraude\": lo documentado es que ocultó la discrepancia y alisó la dispersión de sus series, no que inventara mediciones",
+    "una causa cerrada de su muerte: circulan fiebre amarilla (hubo epidemia a bordo de la expedición) y malaria; decir solo \"fiebre\"",
+    "el nombre de la posada de Barcelona (\"Fontana de Oro\") como dato firme: aparece en divulgación, no en las fuentes de referencia consultadas",
+    "presentar los tres segundos de arco como una cifra exacta y definitiva: es el orden de magnitud que da el Dictionary of Scientific Biography, no una medida cerrada",
+    "\"el metro se definió a partir del meridiano que pasa por París\" como si el arco fuera todo el meridiano: se midió solo el tramo Dunkerque-Barcelona y de ahí se extrapoló el cuadrante"
+  ],
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft"
+}

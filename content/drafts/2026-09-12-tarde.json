@@ -1,0 +1,84 @@
+{
+  "id": "2026-09-12-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Wollstonecraft y la Vindicación de 1792",
+    "hook": "\"No deseo que las mujeres tengan poder sobre los hombres, sino sobre sí mismas.\"\n— Mary Wollstonecraft, Vindicación de los derechos de la mujer, cap. IV (1792)",
+    "body": [
+      "La frase es una respuesta, y casi nunca se cita con lo que responde. En el capítulo IV del libro, Wollstonecraft transcribe a Rousseau: «Educad a las mujeres como a los hombres, y cuanto más se parezcan a nuestro sexo, menos poder tendrán sobre nosotros». Y contesta en la línea siguiente: ese es justamente el punto al que apunto. No deseo que tengan poder sobre los hombres, sino sobre sí mismas.",
+      "El libro salió en Londres en 1792, escrito deprisa, contra un informe que Talleyrand había presentado el año anterior a la Asamblea Nacional francesa y que reservaba a las niñas una educación solo doméstica. No fue un escándalo: se recibió bien y tuvo reseñas favorables.",
+      "Lo que la hundió fue un gesto de amor. En 1798, un año después de su muerte, su viudo William Godwin publicó unas memorias en las que contó sin adornos la vida privada de ella: el amante estadounidense, la hija nacida fuera del matrimonio, los intentos de suicidio, las cartas incluidas en apéndice. La reputación se derrumbó y arrastró el libro con ella durante décadas.",
+      "Las sufragistas del siglo XIX volvieron a él y lo devolvieron a la circulación. Hoy la frase se cita casi siempre sola, sin la línea de Rousseau delante, y así suena a consejo de vida. En su lugar no lo es: es una réplica a un hombre que había escrito que educarlas bien las haría menos manejables."
+    ],
+    "question": "¿Sobre qué parte de tu vida decide todavía alguien más?",
+    "quote": {
+      "text": "No deseo que las mujeres tengan poder sobre los hombres, sino sobre sí mismas.",
+      "author": "Mary Wollstonecraft",
+      "work": "Vindicación de los derechos de la mujer, cap. IV (1792)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Wollstonecraft",
+      "#Frases",
+      "#Historia"
+    ],
+    "extended": [
+      "#MaryWollstonecraft",
+      "#FrasesEnEspanol",
+      "#Filosofia",
+      "#SigloXVIII",
+      "#Literatura",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El pasaje completo dice: «\"Educad a las mujeres como a los hombres\", dice Rousseau, \"y cuanto más se parezcan a nuestro sexo, menos poder tendrán sobre nosotros\". Ese es justamente el punto al que apunto. No deseo que tengan poder sobre los hombres, sino sobre sí mismas», y está en el capítulo IV de la Vindicación.",
+      "source": "Universidad de Iowa, Florence Boos — Selections from Wollstonecraft's A Vindication of the Rights of Woman (edición Norton 1967, ed. Charles Hagelman, pp. 106-107)",
+      "url": "https://victorianfboos.studio.uiowa.edu/selections-wollstonecrafts-vindication-rights-woman-1791"
+    },
+    {
+      "claim": "La cita se atribuye a A Vindication of the Rights of Woman, capítulo 4, 1792.",
+      "source": "WIST Quotations — ficha con cita bibliográfica de la obra y el capítulo",
+      "url": "https://wist.info/wollstonecraft-mary/58148/"
+    },
+    {
+      "claim": "Wollstonecraft dedicó la Vindicación a Talleyrand, cuyo plan para el nuevo currículo francés proponía reservar a las niñas una educación solo doméstica; el libro sugiere que las mujeres tengan representantes propios; y buena parte de su mala fama posterior se debe al relato de Godwin en Memoirs of the Author of a 'Vindication of the Rights of Woman' (1798).",
+      "source": "Stanford Encyclopedia of Philosophy — Mary Wollstonecraft",
+      "url": "https://plato.stanford.edu/entries/wollstonecraft/"
+    },
+    {
+      "claim": "La primera edición se publicó en enero de 1792 y fue en general bien recibida en su momento; solo después de las memorias de su marido, en 1798, pasó a ser una figura denostada.",
+      "source": "Wikipedia en inglés — A Vindication of the Rights of Woman",
+      "url": "https://en.wikipedia.org/wiki/A_Vindication_of_the_Rights_of_Woman"
+    },
+    {
+      "claim": "Godwin publicó las memorias un año después de la muerte de Wollstonecraft e incluyó en apéndice las cartas privadas a su antiguo amante, Gilbert Imlay, lo que volvió al público en su contra.",
+      "source": "BRANCH / Ghislaine McDayter — On the Publication of William Godwin's Memoirs (1798); y Literary Hub sobre el mismo episodio",
+      "url": "https://branchcollective.org/?ps_articles=ghislaine-mcdayter-on-the-publication-of-william-godwins-memoirs-of-the-author-of-a-vindication-of-the-rights-of-woman-1798"
+    }
+  ],
+  "do_not_use": [
+    "citar la frase suelta, sin la línea de Rousseau que contesta: sola parece una máxima propia y en el texto es una réplica",
+    "\"Wollstonecraft reclamó el voto para las mujeres\": la Vindicación no plantea el sufragio como programa; lo que hay es la sugerencia de que las mujeres tengan representantes propios",
+    "\"el libro escandalizó a su época\" o \"fue prohibido\": se recibió bien en 1792; el descrédito llegó en 1798 con las memorias de Godwin, y recayó sobre ella, no sobre el argumento",
+    "presentar la traducción como literal palabra por palabra: el original dice \"them\", pronombre que remite a las mujeres de la frase de Rousseau, y aquí se explicita para que la frase se sostenga sola",
+    "fijar en qué edición aparece la dedicatoria a Talleyrand: las fuentes discrepan entre la primera y la segunda, así que solo se dice que el libro está dedicado a él",
+    "confundirla con su hija, Mary Shelley, autora de Frankenstein",
+    "llamarla \"la primera feminista\": es una etiqueta posterior y discutida, y no aporta nada al dato"
+  ],
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft"
+}
