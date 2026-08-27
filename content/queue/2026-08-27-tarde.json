@@ -67,6 +67,9 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
-  "results": {}
+  "status": "blocked",
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-08-26-tarde) tambien salio gold"
+  ]
 }
