@@ -33,6 +33,7 @@ from __future__ import annotations
 import argparse
 import json
 import pathlib
+import subprocess
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -100,6 +101,29 @@ def puede_publicar(ahora: datetime) -> str | None:
     return None
 
 
+def _registrar(ruta: pathlib.Path, pieza_id: str) -> None:
+    """Sube el registro de ESTE hilo antes de esperar al siguiente.
+
+    Registrar al final de la ejecución no vale: con --max 4 y esperas de 55 min
+    un job dura tres horas, y en ese hueco otra ejecución arranca con un
+    checkout que todavía no tiene estos hilos, elige las mismas piezas y las
+    republica. Pasó el 28 de agosto: cuatro hilos salieron dos veces porque la
+    ejecución programada de las 05:36 esperó en el grupo de concurrencia, entró
+    con el árbol de antes y no vio lo que la anterior llevaba publicado.
+
+    El grupo de concurrencia impide que corran a la vez, no que la segunda
+    empiece con datos viejos. Lo único que lo impide es publicar el registro en
+    cuanto existe.
+    """
+    for orden in (["add", str(ruta)],
+                  ["commit", "-m", f"hilo: {pieza_id}"],
+                  ["pull", "--rebase", "--autostash", "origin", "HEAD"],
+                  ["push", "origin", "HEAD"]):
+        r = subprocess.run(["git", *orden], cwd=ROOT, capture_output=True, text=True)
+        if r.returncode != 0 and orden[0] not in ("commit",):
+            print(f"    ! git {orden[0]}: {r.stderr.strip()[:120]}", file=sys.stderr)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--max", type=int, default=1, metavar="N",
@@ -136,6 +160,7 @@ def main() -> int:
         u.setdefault("results", {})["threads"] = res
         ruta.write_text(json.dumps(u, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"  ✓ threads: {res.get('post_id')}")
+        _registrar(ruta, u["id"])
 
         if n + 1 < max(a.max, 1):
             print(f"  · esperando {MINUTOS_ENTRE_HILOS} min")

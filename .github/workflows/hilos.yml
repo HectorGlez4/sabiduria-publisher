@@ -57,10 +57,19 @@ jobs:
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           python3 scripts/hilos.py $ARGS
 
-      - name: Registrar el resultado
+      # hilos.py ya sube el registro de cada hilo en cuanto lo publica. Este
+      # paso solo recoge lo que haya quedado suelto (un push fallido a mitad).
+      - name: Recoger lo que quede sin registrar
+        if: always()
         run: |
           if [ -z "$(git status --porcelain)" ]; then echo "sin cambios"; exit 0; fi
           git add content/published/
           git commit -m "hilos: $(date -u +'%F %H:%M UTC')"
-          git pull --rebase origin main
+          # Misma limpieza que publicar.yml: un rebase a medias de un intento
+          # anterior hace fallar todo lo que venga detrás, y el registro de los
+          # hilos ya publicados se pierde. Pasó el 28 a las 05:36: cuatro hilos
+          # salieron y el commit que los registraba no llegó a subir.
+          git rebase --abort 2>/dev/null || true
+          git checkout -- docs/feed.xml 2>/dev/null || true
+          git pull --rebase --autostash origin main
           git push origin main
