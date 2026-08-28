@@ -1,6 +1,6 @@
 {
   "id": "2026-08-30-noche",
-  "publish_at": "2026-08-30T01:17:00Z",
+  "publish_at": "2026-08-30T00:17:00Z",
   "slot": "noche",
   "pillar": "filosofia",
   "core": {
@@ -16,7 +16,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "BOECIO",
     "subtitle": "Lo escribió en una celda, esperando que lo ejecutaran",
     "body": "Fue el segundo hombre del reino hasta que lo acusaron de traición. Preso, escribió un diálogo con la Filosofía, que le explicó la suerte con la imagen de una rueda que gira. Era cristiano y no nombró a Cristo ni una vez: se consoló solo con lo que podía razonar."

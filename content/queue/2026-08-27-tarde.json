@@ -1,6 +1,6 @@
 {
   "id": "2026-08-27-tarde",
-  "publish_at": "2026-08-28T15:17:00Z",
+  "publish_at": "2026-08-28T19:17:00Z",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -19,7 +19,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",

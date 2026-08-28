@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "sources": [
     {
@@ -82,5 +82,5 @@
     "threads"
   ],
   "results": {},
-  "publish_at": "2026-08-30T15:17:00Z"
+  "publish_at": "2026-08-30T01:17:00Z"
 }
