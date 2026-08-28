@@ -1,0 +1,77 @@
+{
+  "id": "2026-09-13-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "La Gran Ley de la Paz de la Confederación Haudenosaunee",
+    "hook": "SU CONSTITUCIÓN NO ESTÁ ESCRITA EN PAPEL: ESTÁ COSIDA EN CUENTAS DE CONCHA Y SE RECITA",
+    "body": [
+      "Cinco naciones del noreste de América del Norte —mohawk, oneida, onondaga, cayuga y seneca— dejaron de pelear entre sí y se unieron bajo la Gayanashagowa, la Gran Ley de la Paz. En 1722 se sumó la tuscarora y fueron seis. La ley no se redactó: se fijó en cinturones de wampum, cuentas de concha cosidas en figuras que sirven de soporte de memoria a quien la recita. Las transcripciones que circulan hoy la ordenan en ciento diecisiete artículos.",
+      "El Consejo reúne cincuenta jefes, repartidos así: catorce onondaga, diez cayuga, nueve mohawk, nueve oneida y ocho seneca. No se decide por mayoría. Los onondaga, guardianes del fuego, presentan el asunto; lo debaten primero los Hermanos Mayores, después responden los Hermanos Menores, y va y viene entre las tres bancadas hasta que se llega a una sola mente. A los jefes los nombran las madres de clan, y las madres de clan pueden destituirlos.",
+      "Cuándo empezó todo esto no está resuelto. La tradición oral cuenta que el consejo que ratificó la ley coincidió con un eclipse total de Sol, y sobre esa pista se han propuesto tres fechas: 909, 1142 y 1451. Buena parte de la historiografía académica sitúa la formación de la confederación entre mediados del siglo XV y el XVII. El mecanismo se conoce con precisión; el año, no.",
+      "En octubre de 1988, el Congreso de Estados Unidos aprobó la resolución concurrente 331, que reconoce la contribución de la Confederación Iroquesa al desarrollo de la Constitución del país. La Cámara la aprobó el día 4 y el Senado el 21. Cuánta influencia hubo en realidad es una discusión abierta entre historiadores, y sigue abierta. El Consejo, mientras tanto, se sigue reuniendo."
+    ],
+    "question": "¿Qué acuerdo tuyo se sostiene sin estar escrito?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "LA GRAN LEY DE LA PAZ",
+    "subtitle": "Una constitución que nunca se puso por escrito",
+    "body": "Cinco naciones se unieron bajo la Gayanashagowa, fijada en cinturones de wampum en vez de en papel. Su Consejo reúne cincuenta jefes y no decide por mayoría: el asunto va y viene entre tres bancadas hasta que se llega a una sola mente. Los nombran las madres de clan, que pueden destituirlos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Haudenosaunee",
+      "#Historia",
+      "#Civilizaciones"
+    ],
+    "extended": [
+      "#PueblosOriginarios",
+      "#AmericaDelNorte",
+      "#HistoriaAntigua",
+      "#Cultura",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Antropologia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Consejo de la Confederación lo integran catorce jefes onondaga (entre ellos el Tadodaho, que preside), nueve mohawk, ocho seneca, nueve oneida y diez cayuga; los onondaga son los guardianes del fuego y presentan los asuntos; los Hermanos Mayores debaten primero y los Hermanos Menores responden, y la propuesta circula entre las tres bancadas hasta alcanzar «una sola mente», es decir, el consenso; a los dirigentes los elige la madre de clan.",
+      "source": "Onondaga Nation — Government of the Haudenosaunee Confederacy",
+      "url": "https://www.onondaganation.org/government/"
+    },
+    {
+      "claim": "La Gran Ley de la Paz (Gayanashagowa) es la constitución oral de la Confederación Haudenosaunee, creada por el Gran Pacificador y su portavoz Hiawatha, que unió a mohawk, onondaga, oneida, cayuga y seneca, con la incorporación de los tuscarora en 1722; consta de ciento diecisiete artículos en tres secciones; los cinturones de wampum con símbolos pictográficos servían de soporte mnemotécnico para la transmisión oral; el Consejo reúne cincuenta jefes; las mujeres del clan participan en la elección de los jefes y pueden destituirlos; la fecha de fundación es incierta; en 1988 el Congreso aprobó la resolución concurrente 331, y la tesis de la influencia sobre la Constitución estadounidense está disputada entre historiadores, con Donald Grinde a favor y Elisabeth Tooker y Jack Rakove en contra.",
+      "source": "Wikipedia en inglés — Great Law of Peace",
+      "url": "https://en.wikipedia.org/wiki/Great_Law_of_Peace"
+    },
+    {
+      "claim": "La tradición sitúa un eclipse total de Sol durante el proceso de aceptación de la Gran Ley de la Paz, y sobre esa base se han propuesto tres fechas distintas para la fundación de la confederación: 1451, 1142 y, más recientemente, 909; el Gran Pacificador encargó al Tadodaho presidir un Consejo de cincuenta hoyane, con el mandato de decidir pensando en las siete generaciones por nacer.",
+      "source": "Syracuse University, College of Arts & Sciences — «How a Solar Eclipse Helped the Haudenosaunee Confederacy Forge the First Known Democracy»",
+      "url": "https://artsandsciences.syracuse.edu/2024-eclipse/solar-eclipse-helped-the-haudenosaunee-confederacy-forge-the-first-democracy/"
+    },
+    {
+      "claim": "La resolución H.Con.Res.331 lleva por título «To acknowledge the contribution of the Iroquois Confederacy of Nations to the development of the United States Constitution and to reaffirm the continuing government-to-government relationship between Indian tribes and the United States established in the Constitution»; la Cámara de Representantes la aprobó el 4 de octubre de 1988 y el Senado el 21 de octubre de 1988.",
+      "source": "Onondaga Nation — «Congress' 100th Session Acknowledges Haudenosaunee Influence»",
+      "url": "https://www.onondaganation.org/uncategorized/2023/congress-100th-session-acknowledges-haudenosaunee-influence/"
+    }
+  ],
+  "do_not_use": [
+    "\"la Constitución de Estados Unidos se copió de la Gran Ley de la Paz\": la llamada tesis de la influencia está disputada. Donald Grinde la sostiene; Elisabeth Tooker y Jack Rakove la rechazan por falta de evidencia y por las diferencias estructurales entre ambos sistemas. La resolución de 1988 es un reconocimiento político, no un cierre historiográfico",
+    "dar una fecha de fundación como hecho: circulan 909, 1102, 1142, 1190 y 1451, y la historiografía académica mayoritaria apunta a un rango entre mediados del siglo XV y el XVII. Se enuncian las hipótesis, nunca una sola cifra",
+    "\"el wampum era su moneda\": los cinturones son registro diplomático y soporte de memoria. El uso monetario es posterior y de origen colonial",
+    "\"la primera democracia del mundo\" como dato establecido: es una formulación divulgativa y comparativa, no una constatación histórica",
+    "presentar al Tadodaho como un rey o jefe supremo con poder de decisión: preside el Consejo, y el Consejo decide por consenso",
+    "llamarlos \"una tribu\": son seis naciones confederadas. Y conviene el endónimo haudenosaunee; \"iroqués\" es un exónimo de origen francés que se conserva solo cuando la fuente citada lo usa, como en el título de la resolución de 1988",
+    "atribuir a los tuscarora asientos propios en el Consejo de cincuenta: se incorporaron en 1722 y las fuentes consultadas no les asignan un número de jefes en ese reparto",
+    "el recuento de votos de la resolución de 1988: circula la cifra de 408 contra 8 en la Cámara, y no se ha podido comprobar en el registro oficial"
+  ],
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "status": "draft"
+}
