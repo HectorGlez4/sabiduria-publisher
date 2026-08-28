@@ -73,12 +73,17 @@
     "facebook_reel",
     "instagram"
   ],
-  "status": "ready",
+  "status": "published",
   "results": {
     "facebook_reel": {
       "post_id": "1080158318142161",
       "published_at": "2026-08-28T06:22:00+00:00",
       "conciliado": true
+    },
+    "instagram": {
+      "post_id": "18070992299549425",
+      "url": "https://www.instagram.com/p/DcmCdK3m40p/",
+      "published_at": "2026-08-28T18:46:32.562664+00:00"
     }
   }
 }
