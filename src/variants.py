@@ -238,6 +238,39 @@ def _instante(unit: dict) -> datetime | None:
     return None
 
 
+# Superficies que la cadencia protege: el muro de Facebook y el perfil de
+# Instagram, donde el público es el mismo y ve las publicaciones seguidas.
+#
+# Threads NO cuenta. Tiene su propio carril y su propio reloj —una por hora, en
+# scripts/hilos.py— y contarlo aquí tuvo un efecto que no vi venir: cada hilo
+# consumía el espaciado mínimo del publicador, así que con hilos cada hora NO
+# PODÍA SALIR NADA MÁS. El 28 de agosto salieron doce hilos y solo cinco piezas
+# del publicador, con cinco vencidas atascadas repitiendo "a 0.7 h de otra
+# publicacion". Separé el reloj de Threads pero no su contabilidad, y la mitad
+# que faltaba era esta.
+SUPERFICIES_DE_CADENCIA = ("facebook", "facebook_reel", "facebook_story",
+                           "instagram", "instagram_story")
+
+
+def _instante_de_cadencia(unit: dict) -> datetime | None:
+    """Cuándo ocupó una de las superficies que la cadencia protege."""
+    for red, r in (unit.get("results") or {}).items():
+        if red in SUPERFICIES_DE_CADENCIA and r.get("published_at"):
+            try:
+                return datetime.fromisoformat(r["published_at"].replace("Z", "+00:00"))
+            except ValueError:
+                pass
+    # Sin resultado en esas superficies pero con hueco reservado: cuenta la hora
+    # prevista, que es lo que hace una pieza de la cola todavía sin publicar.
+    if any(x in SUPERFICIES_DE_CADENCIA for x in (unit.get("targets") or [])) \
+            and unit.get("publish_at"):
+        try:
+            return datetime.fromisoformat(unit["publish_at"].replace("Z", "+00:00"))
+        except ValueError:
+            return None
+    return None
+
+
 def _normalizar(t: str) -> str:
     """Minusculas, sin acentos y sin puntuacion, para comparar temas."""
     t = unicodedata.normalize("NFD", (t or "").lower())
@@ -313,7 +346,7 @@ def _problemas_de_cadencia(unit: dict, historial: list[dict],
     cuando = ahora or _instante(unit)
     if not historial or not cuando:
         return problemas
-    reales = sorted(t for t in (_instante(h) for h in historial) if t)
+    reales = sorted(t for t in (_instante_de_cadencia(h) for h in historial) if t)
     if not reales:
         return problemas
 
@@ -327,7 +360,7 @@ def _problemas_de_cadencia(unit: dict, historial: list[dict],
     # El espaciado exigible depende de cuánto lleve esperando la pieza. Se mide
     # contra su hora PREVISTA, no contra el reloj: 'cuando' es el reloj real al
     # publicar de verdad, y comparar el reloj consigo mismo daría cero siempre.
-    prevista = _instante(unit)
+    prevista = _instante_de_cadencia(unit) or _instante(unit)
     atrasada = bool(prevista and (cuando - prevista).total_seconds() > HORAS_DE_ATRASO * 3600)
     minimo = HORAS_MINIMAS_ATRASO if atrasada else HORAS_MINIMAS
 
