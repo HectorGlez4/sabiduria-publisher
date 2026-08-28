@@ -47,6 +47,37 @@ def _repo_slug(root: pathlib.Path) -> str:
     return url.removesuffix(".git").strip("/")
 
 
+# Cuántas veces se reintenta el push cuando otro proceso se adelantó.
+#
+# Este push ocurre DENTRO de publicar, porque Meta descarga la imagen de
+# raw.githubusercontent y tiene que existir en remoto antes de la llamada. Si
+# falla, la pieza no se publica: es un fallo de infraestructura disfrazado de
+# fallo de contenido.
+#
+# Desde que hilos.yml empuja a main cada hora hay contención de verdad: entre el
+# 27 y el 28 de agosto este push se llevó por delante varias publicaciones con
+# "! [rejected] main -> main (fetch first)". Antes de Threads la carrera era rara
+# y por eso nunca se vio.
+INTENTOS_DE_PUSH = 4
+
+
+def _empujar(branch: str, root: pathlib.Path) -> None:
+    """Push con rebase y reintento: otro proceso puede haber empujado en medio."""
+    for intento in range(1, INTENTOS_DE_PUSH + 1):
+        try:
+            _git("push", "origin", branch, cwd=root)
+            return
+        except HostingError as e:
+            if "rejected" not in str(e) or intento == INTENTOS_DE_PUSH:
+                raise
+            # --autostash porque en este punto quedan ficheros sin indexar (los
+            # PNG de otras piezas, el feed a medio regenerar) y `pull --rebase`
+            # se niega a correr con el árbol sucio: "cannot pull with rebase:
+            # You have unstaged changes". Eso convertía el reintento en un
+            # segundo error en vez de en una solución.
+            _git("pull", "--rebase", "--autostash", "origin", branch, cwd=root)
+
+
 def upload_github(path: pathlib.Path, root: pathlib.Path) -> str:
     """
     Versiona la tarjeta y devuelve su URL cruda.
@@ -63,7 +94,7 @@ def upload_github(path: pathlib.Path, root: pathlib.Path) -> str:
     status = _git("status", "--porcelain", str(rel), cwd=root)
     if status:
         _git("commit", "-m", f"tarjeta: {path.stem}", cwd=root)
-    _git("push", "origin", branch, cwd=root)
+    _empujar(branch, root)
 
     url = f"https://raw.githubusercontent.com/{slug}/{branch}/{rel.as_posix()}"
     _verify_public(url)

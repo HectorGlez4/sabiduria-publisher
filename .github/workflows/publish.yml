@@ -167,5 +167,8 @@ jobs:
           #
           # Pasó el 27 de agosto a las 20:46. Esa vez solo se perdió el PNG,
           # pero la misma carrera con una publicación dentro sí duplica.
-          git pull --rebase origin main
+          # --autostash: el paso de publicar deja PNG sin indexar y `pull
+          # --rebase` se niega con "cannot pull with rebase: You have unstaged
+          # changes", que convertía este arreglo en un segundo error.
+          git pull --rebase --autostash origin main
           git push origin main
