@@ -158,4 +158,14 @@ jobs:
         run: |
           git add content/
           git diff --staged --quiet || git commit -m "publicado: $(date -u +%F' '%R) UTC"
-          git push
+          # --rebase ANTES del push, como en hilos.yml. Sin esto, cualquier otro
+          # push concurrente —el de hilos, el de la rutina de borradores, o el
+          # mío desde el portátil— rechaza este con "fetch first" y SE PIERDE el
+          # commit que registra la publicación. La pieza ya salió a Meta pero
+          # sigue en la cola, así que la siguiente ejecución la vuelve a
+          # publicar: un post duplicado que nadie ve venir.
+          #
+          # Pasó el 27 de agosto a las 20:46. Esa vez solo se perdió el PNG,
+          # pero la misma carrera con una publicación dentro sí duplica.
+          git pull --rebase origin main
+          git push origin main
