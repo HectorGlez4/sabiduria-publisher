@@ -13,6 +13,7 @@ on:
           - corregir-enlaces
           - diagnostico-meta
           - threads-user-id
+          - conciliar
       dry_run:
         description: "Enseñar sin escribir"
         type: boolean
@@ -49,6 +50,10 @@ jobs:
             # volver a generarlo y manejarlo a mano. El id NO es secreto: es
             # público en el perfil, así que imprimirlo en el log no expone nada.
             threads-user-id) python3 scripts/threads_user_id.py ;;
+            # Compara el feed de la página con lo que el repo cree haber
+            # publicado. Con --dry-run solo informa; sin él registra los ids que
+            # Meta confirma. Nunca borra nada.
+            conciliar) python3 scripts/conciliar.py $([ "${{ inputs.dry_run }}" = "true" ] || echo --escribir) ;;
             *) echo "tarea desconocida"; exit 1 ;;
           esac
 
