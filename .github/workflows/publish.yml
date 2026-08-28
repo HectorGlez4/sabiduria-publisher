@@ -170,5 +170,10 @@ jobs:
           # --autostash: el paso de publicar deja PNG sin indexar y `pull
           # --rebase` se niega con "cannot pull with rebase: You have unstaged
           # changes", que convertía este arreglo en un segundo error.
+          # Si un intento anterior dejó el árbol a medias, aquí falla TODO con
+          # "unmerged files" y el registro de lo publicado se pierde aunque la
+          # publicación haya salido. Se limpia antes de nada.
+          git rebase --abort 2>/dev/null || true
+          git checkout -- docs/feed.xml 2>/dev/null || true
           git pull --rebase --autostash origin main
           git push origin main

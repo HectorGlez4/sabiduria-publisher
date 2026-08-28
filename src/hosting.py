@@ -61,6 +61,28 @@ def _repo_slug(root: pathlib.Path) -> str:
 INTENTOS_DE_PUSH = 4
 
 
+# Ficheros DERIVADOS: se regeneran solos, así que ante un conflicto se descartan
+# en vez de intentar fundirlos. docs/feed.xml se reescribe entero en cada
+# publicación —incluida su marca de tiempo— así que dos ejecuciones solapadas
+# chocan ahí SIEMPRE. Fundir dos versiones de un fichero generado no tiene
+# sentido: la próxima publicación lo reescribe igual.
+DERIVADOS = ("docs/feed.xml",)
+
+
+def _sin_conflicto(root: pathlib.Path) -> None:
+    """Deja el árbol en un estado en el que se pueda volver a intentar.
+
+    Un rebase a medias deja ficheros en conflicto, y a partir de ahí TODO falla:
+    el commit siguiente muere con "Committing is not possible because you have
+    unmerged files" y el paso que registra la publicación no llega a correr. Es
+    lo que pasó el 28 de agosto: dos reels se publicaron de verdad y el registro
+    se quedó fuera porque el árbol estaba roto de un reintento anterior.
+    """
+    subprocess.run(["git", "rebase", "--abort"], cwd=root, capture_output=True)
+    for f in DERIVADOS:
+        subprocess.run(["git", "checkout", "--", f], cwd=root, capture_output=True)
+
+
 def _empujar(branch: str, root: pathlib.Path) -> None:
     """Push con rebase y reintento: otro proceso puede haber empujado en medio."""
     for intento in range(1, INTENTOS_DE_PUSH + 1):
@@ -69,13 +91,22 @@ def _empujar(branch: str, root: pathlib.Path) -> None:
             return
         except HostingError as e:
             if "rejected" not in str(e) or intento == INTENTOS_DE_PUSH:
+                _sin_conflicto(root)
                 raise
-            # --autostash porque en este punto quedan ficheros sin indexar (los
-            # PNG de otras piezas, el feed a medio regenerar) y `pull --rebase`
-            # se niega a correr con el árbol sucio: "cannot pull with rebase:
-            # You have unstaged changes". Eso convertía el reintento en un
-            # segundo error en vez de en una solución.
-            _git("pull", "--rebase", "--autostash", "origin", branch, cwd=root)
+            # Los derivados se descartan ANTES de rebasar: si no, el rebase
+            # choca en ellos y deja el árbol a medias.
+            for f in DERIVADOS:
+                subprocess.run(["git", "checkout", "--", f], cwd=root,
+                               capture_output=True)
+            # --autostash porque quedan PNG de otras piezas sin indexar y
+            # `pull --rebase` se niega con el árbol sucio.
+            try:
+                _git("pull", "--rebase", "--autostash", "origin", branch, cwd=root)
+            except HostingError:
+                # Un conflicto aquí no es recuperable de forma automática sin
+                # arriesgar el registro de lo publicado. Se deja el árbol limpio
+                # y se reintenta el push desde cero en la vuelta siguiente.
+                _sin_conflicto(root)
 
 
 def upload_github(path: pathlib.Path, root: pathlib.Path) -> str:
