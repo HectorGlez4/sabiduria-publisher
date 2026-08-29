@@ -1,0 +1,86 @@
+{
+  "id": "2026-09-14-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Alice Ball y el aceite de chaulmoogra (1915)",
+    "hook": "RESOLVIÓ A LOS 23 AÑOS EL TRATAMIENTO QUE NADIE LOGRABA INYECTAR, Y OTRO LE PUSO SU PROPIO NOMBRE",
+    "body": [
+      "Alice Augusta Ball nació en Seattle el 24 de julio de 1892. Sacó dos licenciaturas en la Universidad de Washington —química farmacéutica en 1912 y farmacia en 1914— y en 1915 obtuvo una maestría en química en el College of Hawái. Fue la primera mujer y la primera persona negra en conseguirla allí. Su tesis no trataba de la lepra: trataba de la raíz de kava.",
+      "El aceite de chaulmoogra frenaba la enfermedad de Hansen desde hacía siglos, pero era intratable: espeso, mal absorbido, doloroso, con abscesos bajo la piel y resultados irregulares. Ball aisló los ésteres etílicos de sus ácidos grasos y obtuvo una forma que el cuerpo sí aceptaba inyectada. Le tomó menos de un año, y trabajó fuera de sus horas y sin cobrar por ello.",
+      "Murió el 31 de diciembre de 1916, a los 24 años. Arthur Dean, presidente de la universidad, continuó el trabajo, lo publicó en una serie de artículos sin mencionarla y lo llamó \"método Dean\". Seis años después, el médico Harry Hollmann lo corrigió por escrito en una revista médica: \"La señorita Ball me resolvió el problema haciendo los ésteres etílicos de los ácidos grasos del aceite de chaulmoogra\". Propuso llamarlo método Ball.",
+      "Un diario de 1921 contaba unos 140 enfermos dados de alta en tres años en el hospital de Kalihi. Su nombre no aparecía en ninguna parte."
+    ],
+    "question": "¿Cuántos métodos llevan el nombre de quien los firmó y no el de quien los halló?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "ALICE BALL",
+    "subtitle": "El hallazgo que llevó durante años el apellido de otra persona",
+    "body": "En 1915 aisló los ésteres etílicos del aceite de chaulmoogra y lo volvió inyectable. Le tomó menos de un año. Murió al año siguiente, a los 24. El presidente de su universidad publicó el hallazgo sin nombrarla y lo llamó método Dean. En 1922 un médico lo corrigió: era el método Ball."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AliceBall",
+      "#HistoriaDeLaCiencia",
+      "#Quimica"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Hawai",
+      "#Medicina",
+      "#Lepra",
+      "#CienciaEHistoria",
+      "#Investigacion",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Alice Ball nació el 24 de julio de 1892 en Seattle, sacó dos licenciaturas en la Universidad de Washington (química farmacéutica en 1912 y farmacia en 1914), obtuvo la maestría en química en el College of Hawái y murió el 31 de diciembre de 1916 a los 24 años",
+      "source": "Smithsonian Magazine, \"The Trailblazing Black Woman Chemist Who Discovered a Treatment for Leprosy\"",
+      "url": "https://www.smithsonianmag.com/history/the-trailblazing-black-woman-chemist-who-discovered-a-treatment-for-leprosy-180979772/"
+    },
+    {
+      "claim": "Logró la forma inyectable en menos de un año, investigando fuera de sus horas y sin cobrar; el método consistió en aislar los ésteres etílicos de los ácidos grasos del aceite de chaulmoogra",
+      "source": "Smithsonian Magazine, \"The Trailblazing Black Woman Chemist Who Discovered a Treatment for Leprosy\"",
+      "url": "https://www.smithsonianmag.com/history/the-trailblazing-black-woman-chemist-who-discovered-a-treatment-for-leprosy-180979772/"
+    },
+    {
+      "claim": "Su tesis de maestría trataba de los componentes activos de la raíz de kava, y el aceite de chaulmoogra antes de ella daba resultados irregulares, náuseas y abscesos bajo la piel",
+      "source": "National Geographic, \"Meet Alice Ball, the Woman Who Made a Leprosy Drug From Chaulmoogra Oil\"",
+      "url": "https://www.nationalgeographic.com/science/article/alice-ball-leprosy-hansens-disease-hawaii-womens-history-science"
+    },
+    {
+      "claim": "Arthur Dean publicó una serie de artículos con la investigación de Ball y llamó al tratamiento \"método Dean\"; Harry Hollmann lo corrigió en un artículo de revista de 1922 y propuso llamarlo método Ball",
+      "source": "National Women's History Museum, biografía de Alice Ball",
+      "url": "https://www.womenshistory.org/education-resources/biographies/alice-ball"
+    },
+    {
+      "claim": "Cita textual de Hollmann (1922): \"Miss Ball solved the problem for me by making the ethyl esters of the fatty acids found in chaulmoogra oil\"",
+      "source": "Smithsonian Magazine, \"The Trailblazing Black Woman Chemist Who Discovered a Treatment for Leprosy\"",
+      "url": "https://www.smithsonianmag.com/history/the-trailblazing-black-woman-chemist-who-discovered-a-treatment-for-leprosy-180979772/"
+    },
+    {
+      "claim": "Un artículo de prensa de 1921 informaba de unos 140 enfermos dados de alta en tres años en el hospital de Kalihi tras instaurarse la terapia",
+      "source": "Hektoen International (revista de humanidades médicas), \"The scourge, the scientist, and the swindle\", que cita el New York Times de 1921",
+      "url": "https://hekint.org/2020/08/18/the-scourge-the-scientist-and-the-swindle/"
+    }
+  ],
+  "do_not_use": [
+    "no afirmar que murió por inhalar cloro en un accidente de laboratorio: es la versión de algunas fuentes, pero el National Women's History Museum dice que la causa exacta se desconoce",
+    "no dar fecha al Día de Alice Ball en Hawái: las fuentes consultadas se contradicen entre el 28 y el 29 de febrero",
+    "no decir que Alice Ball \"curó la lepra\": el método hizo tratable e inyectable el aceite de chaulmoogra, no curó la enfermedad, y los antibióticos llegaron después",
+    "no dar la cifra de 151 altas en Kalihi ni de 44 en Kalaupapa entre 1919 y 1922: aparece en resúmenes de búsqueda pero no se pudo confirmar en la fuente",
+    "no afirmar que fue la primera mujer negra en licenciarse en la Universidad de Washington: lo verificado es la maestría en el College of Hawái",
+    "no decir que Arthur Dean falsificó nada: lo documentado es que publicó el trabajo sin acreditarla"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
