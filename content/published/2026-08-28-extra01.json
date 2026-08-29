@@ -72,12 +72,28 @@
     "\"Fue la primera médica de América Latina\" o \"la primera mujer en votar del continente\". Superlativos no verificables: lo confirmado es que fue la primera doctora en medicina del Ecuador y la primera ecuatoriana elegida por votación popular.",
     "Llamarla únicamente \"la primera votante\". Reduce a un solo día una biografía que incluye el primer bachillerato femenino del país (1913), el primer doctorado en medicina (1921) y el primer cargo de elección popular ocupado por una mujer (1941)."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-08-29T14:17:00Z",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1081335151357811",
+      "url": "https://www.facebook.com/874327782058550/posts/1081335151357811",
+      "published_at": "2026-08-29T14:36:07.960843+00:00"
+    },
+    "instagram": {
+      "post_id": "18092181599640613",
+      "url": "https://www.instagram.com/p/DcoKntZHYxu/",
+      "published_at": "2026-08-29T14:36:21.588253+00:00"
+    },
+    "threads": {
+      "post_id": "18012652202747271",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18012652202747271",
+      "published_at": "2026-08-29T14:36:33.378073+00:00"
+    }
+  }
 }
