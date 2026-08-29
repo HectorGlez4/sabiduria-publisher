@@ -135,6 +135,17 @@
     "facebook_reel",
     "instagram"
   ],
-  "status": "ready",
-  "results": {}
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "1801954147917698",
+      "url": "/reel/1801954147917698/",
+      "published_at": "2026-08-29T18:44:50.542678+00:00"
+    },
+    "instagram": {
+      "post_id": "18026567819686455",
+      "url": "https://www.instagram.com/p/DconFPxk4t_/",
+      "published_at": "2026-08-29T18:45:05.042213+00:00"
+    }
+  }
 }
