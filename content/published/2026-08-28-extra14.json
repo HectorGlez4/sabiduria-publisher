@@ -70,13 +70,29 @@
     "\"El arte de la guerra es el libro más antiguo de estrategia militar del mundo\" y demás superlativos: no verificado para esta pieza.",
     "Leer el libro como manual de negocios o de superación personal. Es una lectura del siglo XX y no aporta nada a la pieza, que trata de cómo se comprueba un texto antiguo."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1082415084583151",
+      "url": "https://www.facebook.com/874327782058550/posts/1082415084583151",
+      "published_at": "2026-08-30T20:46:41.915494+00:00"
+    },
+    "instagram": {
+      "post_id": "18149145952523611",
+      "url": "https://www.instagram.com/p/DcrZ0pYoH8k/",
+      "published_at": "2026-08-30T20:46:56.379042+00:00"
+    },
+    "threads": {
+      "post_id": "17988636699049854",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17988636699049854",
+      "published_at": "2026-08-30T20:47:10.424723+00:00"
+    }
+  },
   "publish_at": "2026-08-30T16:17:00Z",
   "con_enlace": true
 }
