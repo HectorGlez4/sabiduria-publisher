@@ -63,7 +63,13 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "895510506680980",
+      "url": "/reel/895510506680980/",
+      "published_at": "2026-08-30T01:44:36.541358+00:00"
+    }
+  },
   "reemision_de": "2026-08-18-manana"
 }
