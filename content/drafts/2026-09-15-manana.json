@@ -1,0 +1,92 @@
+{
+  "id": "2026-09-15-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "El azul que falta en Homero",
+    "hook": "HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO",
+    "body": [
+      "En 1858 William Gladstone publicó Studies on Homer and the Homeric Age, tres volúmenes sobre el mundo de la Ilíada y la Odisea. En una sección del tercero se puso a contar: anotó cada palabra de color del texto griego, registró cómo se usaba y la clasificó. Negro aparece unas ciento setenta veces. Blanco, cerca de cien. Rojo, amarillo y violeta, apenas unas decenas entre los tres. Azul no aparece ninguna vez.",
+      "El mar de Homero es oînops, color de vino. Gladstone concluyó que el ojo griego todavía no separaba bien los colores. Una década después, el filólogo Lazarus Geiger llevó la búsqueda a los himnos védicos, la Biblia hebrea, las sagas islandesas y el Corán, y encontró el mismo hueco en todos. Su observación: de esos textos antiguos nadie aprendería que el cielo es azul.",
+      "No era el ojo. En 1969 Brent Berlin y Paul Kay publicaron Basic Color Terms en la University of California Press y describieron un orden fijo en el que las lenguas van adquiriendo sus nombres de color: primero oscuro y claro, luego rojo, después verde y amarillo, y el azul en quinto lugar, antes solo del marrón y de los últimos matices. En 2017, un estudio publicado en PNAS sobre las lenguas del World Color Survey encontró una razón: en todas ellas los colores cálidos se comunican con más precisión que los fríos, y los objetos de los que se habla suelen ser cálidos mientras que los fondos son fríos.",
+      "Se nombra lo que hay que separar de un fondo. El cielo y el mar no se separan de nada: son el fondo."
+    ],
+    "question": "¿Cuántas cosas dejamos de distinguir porque nadie nos dio la palabra?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "EL AZUL AUSENTE",
+    "subtitle": "Un primer ministro contó los colores de la Ilíada y encontró un hueco",
+    "body": "En 1858 Gladstone contó cada palabra de color de la Ilíada y la Odisea: negro unas ciento setenta veces, blanco cerca de cien, y azul ninguna. El mar es \"color de vino\". No era un defecto del ojo: el vocabulario del color aparece en las lenguas en un orden fijo, y el azul llega siempre tarde."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Homero",
+      "#Lenguaje",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Color",
+      "#Linguistica",
+      "#Gladstone",
+      "#GreciaAntigua",
+      "#Percepcion",
+      "#Curiosidades",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Gladstone dedicó una sección entera de Studies on Homer and the Homeric Age (1858) a la percepción y el uso del color en Homero: la sección IV del tercer volumen, titulada \"Homer's Perceptions and Use of Colour\"",
+      "source": "Cambridge University Press, edición de W. E. Gladstone, Studies on Homer and the Homeric Age, capítulo \"Homer's Perceptions and Use of Colour\" (SECT. IV)",
+      "url": "https://www.cambridge.org/core/books/abs/studies-on-homer-and-the-homeric-age/homers-perceptions-and-use-of-colour/210459F6C06CCD0A56D22544EDC22777"
+    },
+    {
+      "claim": "Gladstone publicó en 1858 tres volúmenes y abordó el color de forma estadística: contó cada palabra usada para indicar color, registró cómo se usaba y la clasificó en una tabla de ocho términos griegos cuyas frecuencias van desde unas ciento setenta apariciones para \"negro\" hasta una sola para \"rosa\"",
+      "source": "Significance, revista de la Royal Statistical Society y la American Statistical Association (Oxford University Press), \"How Gladstone linked classical studies and statistics\"",
+      "url": "https://significancemagazine.com/how-gladstone-linked-classical-studies-and-statistics-2/"
+    },
+    {
+      "claim": "Texto original completo del tercer volumen de Studies on Homer and the Homeric Age (1858), donde figura el análisis del color",
+      "source": "Project Gutenberg, W. E. Gladstone, Studies on Homer and the Homeric Age, Vol. 3 of 3",
+      "url": "https://www.gutenberg.org/ebooks/53004"
+    },
+    {
+      "claim": "Gladstone halló una ausencia total del azul en las descripciones homéricas; kyanós aparece de forma limitada y significa \"oscuro\", no azul. La expresión oînops póntos combina oînos (vino) y óps (ojo, rostro). Lazarus Geiger, en la década de 1860, examinó otros textos antiguos y encontró que el azul faltaba en todos, y propuso que la terminología del color se desarrolla en una secuencia universal que termina siempre en el azul",
+      "source": "Wikipedia en inglés, \"Wine-dark sea\"",
+      "url": "https://en.wikipedia.org/wiki/Wine-dark_sea"
+    },
+    {
+      "claim": "Geiger presentó sus conclusiones en una conferencia ante la Asamblea de Naturalistas y Médicos Alemanes en 1867, titulada \"On the Color Sense in Primitive Times and its Evolution\", y encontró la misma carencia cromática en el sánscrito védico, el hebreo bíblico, el islandés antiguo y el árabe clásico. Cita de Geiger: \"there is only one thing that no one would ever learn from those ancient songs who did not already know it, and that is that the sky is blue\"",
+      "source": "Linguistic Discovery, \"Were the Ancient Greeks colorblind?\" (recopila las cifras de Gladstone y la conferencia de Geiger)",
+      "url": "https://linguisticdiscovery.com/posts/color-term-hierarchy/"
+    },
+    {
+      "claim": "Basic Color Terms: Their Universality and Evolution, de Brent Berlin y Paul Kay, se publicó en 1969 en University of California Press y propone siete etapas en orden estricto: I oscuro-frío y claro-cálido, II rojo, III verde o amarillo, IV verde y amarillo, V azul, VI marrón, VII morado, rosa, naranja o gris",
+      "source": "Wikipedia en inglés, \"Basic Color Terms\"",
+      "url": "https://en.wikipedia.org/wiki/Basic_Color_Terms"
+    },
+    {
+      "claim": "El estudio \"Color naming across languages reflects color use\", publicado en PNAS en 2017 (DOI 10.1073/pnas.1619666114), analiza las lenguas del World Color Survey y concluye que los colores cálidos se comunican con más eficacia que los fríos en todas ellas, y que ese patrón refleja la estadística del mundo: los objetos de los que se habla suelen ser cálidos y los fondos, fríos",
+      "source": "PNAS, Gibson et al., \"Color naming across languages reflects color use\", 2017",
+      "url": "https://www.pnas.org/doi/abs/10.1073/pnas.1619666114"
+    }
+  ],
+  "do_not_use": [
+    "no decir que los griegos eran daltónicos ni que veían menos colores: esa fue la hipótesis de Gladstone en 1858 y la investigación posterior la descartó; lo que varía es el vocabulario, no el ojo",
+    "no dar la cifra exacta de apariciones de rojo, amarillo o violeta en Homero como dato firme: las cifras detalladas (rojo 13, amarillo 10, violeta 6) proceden de una tabla secundaria y no se contrastaron contra el texto griego; solo \"negro unas 170\" está respaldado por la fuente de la Royal Statistical Society",
+    "no decir que \"color de vino\" aparece cinco veces en la Ilíada y doce en la Odisea: esa cuenta circula en fuentes terciarias y no se verificó contra una edición crítica",
+    "no afirmar que Berlin y Kay estudiaron 98 lenguas y 20 en profundidad: esa cifra aparece en resúmenes divulgativos y no se pudo confirmar en una fuente de calidad",
+    "no dar el número de lenguas del World Color Survey analizadas en el estudio de PNAS de 2017: la página del artículo devolvió 403 y la cifra de 110 solo se leyó en un resumen de búsqueda",
+    "no atribuir al estudio de PNAS una explicación sobre agudeza visual: su hallazgo es sobre eficiencia comunicativa y necesidad de nombrar, no sobre percepción",
+    "no fechar en 1858 la publicación completa de las tres partes ni atribuirle un número exacto de páginas: la fuente consultada habla de tres volúmenes de 1858 sin dar el total"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
