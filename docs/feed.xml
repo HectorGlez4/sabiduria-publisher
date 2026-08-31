@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 31 Aug 2026 19:45:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 20:14:27 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-manana</guid>
+      <pubDate>Mon, 31 Aug 2026 20:14:11 +0000</pubDate>
+      <description><![CDATA[Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.
+
+Entre los años 381 y 384, una mujer hispanorromana llamada Egeria recorrió el Mediterráneo oriental: el Sinaí, Egipto, Constantinopla, Mesopotamia, Edesa. Se quedó tres años en Jerusalén. Iba anotándolo todo en una larga carta dirigida a un grupo de mujeres a las que llamaba hermanas.
+
+Esa carta sobrevivió en una sola copia, hecha en el siglo XI en la abadía de Montecassino. Gian Francesco Gamurrini la encontró en 1884 en una biblioteca de Arezzo: sin título, sin fecha, sin nombre de autor, con el principio y el final perdidos. La atribuyó a otra mujer. En 1903 Marius Férotin dio con la clave en un lugar inesperado: una carta del monje gallego Valerio del Bierzo, escrita casi tres siglos más tarde, que elogiaba a una tal Egeria por haber emprendido con corazón intrépido un camino inmenso.
+
+Gracias a esas páginas sabemos cómo se celebraba la Semana Santa en la Jerusalén del siglo IV. El relato estuvo completo todo ese tiempo. Lo que faltaba era el nombre.
+
+¿Cuánto de lo que hoy sabemos llegó hasta nosotros sin firma?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -485,26 +504,6 @@ Vale la pena decirlo: la frase que circula, "el dolor es inevitable, el sufrimie
 #SabiduriaDeBolsillo #Budismo #Filosofia #Reflexiones]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re11-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re11-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Lo que no sé, tampoco creo saberlo.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-27-re10-reel</guid>
-      <pubDate>Fri, 28 Aug 2026 17:17:00 +0000</pubDate>
-      <description><![CDATA["Lo que no sé, tampoco creo saberlo."
-— Sócrates, en la Apología de Platón
-
-La frase que todo el mundo cita es otra: "solo sé que no sé nada". Y no está en ningún texto. No la escribió Platón, no la recogió Jenofonte, no aparece en ninguna fuente antigua. Es una construcción posterior, en latín primero y luego traducida de vuelta al griego para que pareciera original.
-
-Lo que Sócrates dice en la Apología es más modesto y bastante más difícil. No declara que no sabe nada. Dice que, de lo que no sabe, tampoco se cree que lo sepa.
-
-Es una distinción incómoda, porque no habla de ignorancia. Habla de la costumbre de opinar sobre lo que no se ha estudiado.
-
-¿De cuántas cosas tienes una opinión firme sin haberlas mirado de cerca?
-
-#SabiduriaDeBolsillo #Socrates #Filosofia #Platon]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re10-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re10-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

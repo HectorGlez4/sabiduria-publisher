@@ -60,13 +60,24 @@
     "El nombre exacto de la biblioteca de Arezzo como dato cerrado: la Wikipedia en español dice Biblioteca della Confraternità dei Laici, la inglesa dice «una biblioteca monástica» y la Biblical Archaeology Society dice «la biblioteca municipal». Se dice solo «una biblioteca de Arezzo».",
     "Grafías alternativas del nombre (Etheria, Aetheria) presentadas como error: son variantes de los manuscritos, no equivocaciones. Se usa Egeria, que es la forma aceptada, sin corregir a nadie."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-08-31T14:21:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1083199307838062",
+      "url": "https://www.facebook.com/874327782058550/posts/1083199307838062",
+      "published_at": "2026-08-31T20:14:11.984030+00:00"
+    },
+    "instagram": {
+      "post_id": "17904089862522443",
+      "url": "https://www.instagram.com/p/Dct65h2o9-b/",
+      "published_at": "2026-08-31T20:14:27.888250+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
