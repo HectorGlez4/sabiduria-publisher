@@ -63,10 +63,22 @@ from src import publish, variants  # noqa: E402
 # de verdad hace falta, porque por debajo de unos días sí se nota.
 DIAS_DE_REPOSO = 7
 
-# Las horas en que se reparte el día, en UTC. Salen de las tres franjas de
-# linea-editorial.md y se rellenan los huecos entre ellas, en vez de amontonar
-# al final: el objetivo es volumen repartido, no una ráfaga.
-HORAS = [14, 15, 17, 19, 21, 23, 1, 3]
+# Las horas en que se reparte el día, en UTC. El objetivo es volumen repartido,
+# no una ráfaga.
+#
+# NO pueden coincidir con las horas base de las tres franjas de programar.py
+# (BASE = manana 14:00, tarde 19:00, noche 01:30, más un jitter de 5 a 50 min).
+# La lista anterior —[14, 15, 17, 19, 21, 23, 1, 3]— las pisaba de frente en 14,
+# 19 y 1, y como la cadencia exige 1 h de separación, cada reel dejaba su franja
+# sin poder encolarse: el 31 de agosto no entraba ninguna pieza nueva el 3 de
+# septiembre porque había reels a las 14:17 y a las 20:17. Los dos programadores
+# se repartían el día sin saber el uno del otro.
+#
+# Ventanas prohibidas, con la hora de la franja más el jitter y 1 h de margen:
+#   00:30-03:20  (noche)   13:00-15:50  (mañana)   18:00-20:50  (tarde)
+# Estas ocho caen fuera de las tres, y con las 3 franjas suman 11 al día, por
+# debajo de variants.MAX_POR_DIA.
+HORAS = [4, 6, 8, 10, 12, 16, 21, 23]
 
 
 def _instante(dia: date, hora: int, sal: int) -> str:

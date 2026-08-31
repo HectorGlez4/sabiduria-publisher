@@ -156,7 +156,14 @@ jobs:
       - name: Registrar el resultado
         if: always()
         run: |
-          git add content/
+          # docs/feed.xml TAMBIEN. publish_unit() lo regenera despues de mover la
+          # pieza a published/, pero con `git add content/` a secas ese cambio se
+          # quedaba sin indexar y moria con el runner: el feed publicado llevaba
+          # congelado desde el 29 de agosto mientras se seguia publicando a diario.
+          # No rompio nada porque POR_FEED esta vacio y todo sale por API, pero el
+          # feed es la superficie de respaldo —el plan B si Facebook vuelve a
+          # cortar el alcance— y un plan B que no se actualiza no es un plan B.
+          git add content/ docs/feed.xml
           git diff --staged --quiet || git commit -m "publicado: $(date -u +%F' '%R) UTC"
           # --rebase ANTES del push, como en hilos.yml. Sin esto, cualquier otro
           # push concurrente —el de hilos, el de la rutina de borradores, o el

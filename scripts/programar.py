@@ -85,14 +85,22 @@ def siguiente_turno(ahora: datetime) -> tuple[str, str, str]:
 
 def variante_para(cuando: str) -> str:
     """
-    Alterna contra el VECINO ANTERIOR en el tiempo, no contra el final de la
+    Alterna contra el ORIGINAL ANTERIOR en el tiempo, no contra el final de la
     cola: así da igual que la pieza se añada al final o rellene un hueco.
 
     Si hay vecino posterior se comprueba que tampoco choque con él. Cuando los
     dos vecinos llevan la misma variante el hueco es irrellenable sin romper la
     cadena, y más vale decirlo que dejar el problema escondido.
     """
-    c = cadena()
+    # Las reemisiones NO cuentan como referencia, igual que en
+    # variants._problemas_de_historial. Estan exentas de alternar —salen con el
+    # resto de reglas de historial— y dejarlas fijar la referencia rompia este
+    # script contra el preflight: aqui se alternaba contra el vecino temporal,
+    # que con el ritmo agresivo casi siempre es una reemision, y alli contra la
+    # ultima ORIGINAL. Las dos daban variantes distintas, asi que programar.py
+    # escribia una variante que publish.py rechazaba despues. Bloqueaba TODA
+    # pieza nueva, no una: el 31 de agosto no se podia encolar nada.
+    c = [u for u in cadena() if not u.get("reemision_de")]
     antes = [u for u in c if (u.get("publish_at") or "") < cuando]
     despues = [u for u in c if (u.get("publish_at") or "") > cuando]
 
