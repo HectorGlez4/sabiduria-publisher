@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 31 Aug 2026 04:59:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 13:08:59 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-27-extra12</guid>
+      <pubDate>Mon, 31 Aug 2026 08:46:40 +0000</pubDate>
+      <description><![CDATA[Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.
+
+Hacia el año 261 antes de Cristo, en el octavo de su reinado, el emperador Ashoka conquistó el reino de Kalinga, en la costa este de la India. Las cifras las dio él mismo, talladas en roca en el llamado Edicto XIII: ciento cincuenta mil personas deportadas, cien mil muertas y muchas más muertas después. Es de las pocas veces en la historia en que un vencedor deja escrito el número de sus víctimas.
+
+Ese texto se repite por todo el imperio, del norte del actual Pakistán al sur de la India, y en Kandahar se grabó incluso en griego para que lo leyeran allí. Falta en un solo sitio: en Kalinga. En las dos rocas del territorio arrasado, Dhauli y Jaugada, el Edicto XIII no está, y su lugar lo ocupan otros textos, dirigidos a los funcionarios de la zona.
+
+Tampoco dejó de matar. En uno de sus pilares concede a los condenados a muerte tres días de plazo, no la vida. Y firmó todo aquello con un título, no con su nombre: hasta 1915, cuando un ingeniero de minas de oro llamado C. Beadon dio en Maski con la primera inscripción que decía Asoka, nadie podía afirmar con certeza quién había escrito los edictos. Reconocer en voz alta y reparar donde duele no son la misma cosa.
+
+¿A quién le falta escuchar una disculpa que ya contaste a todos los demás?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>He cometido el peor de los pecados que un hombre puede cometer. No he sido feliz.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -486,27 +505,6 @@ Es una distinción incómoda, porque no habla de ignorancia. Habla de la costumb
 #SabiduriaDeBolsillo #Socrates #Filosofia #Platon]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re10-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re10-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>MANSA MUSA: el dato real no son los millones, es un precio anotado en El Cairo</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-27-re09-reel</guid>
-      <pubDate>Fri, 28 Aug 2026 15:17:00 +0000</pubDate>
-      <description><![CDATA[MANSA MUSA: el dato real no son los millones, es un precio anotado en El Cairo
-
-Reinó en Malí en la primera mitad del siglo XIV. En 1324 salió hacia La Meca y recorrió unos 4.300 kilómetros. Pasó por El Cairo, y ahí quedó registrado lo único que se puede afirmar con una fuente en la mano.
-
-Lo anotó al-Umari, un historiador árabe de Damasco: antes de que Musa llegara, el mithqal de oro se cambiaba por 25 dírhams de plata. Después, cayó por debajo de 22, y no volvió a subir de ahí durante al menos doce años.
-
-Un hombre de paso movió durante más de una década el precio del metal más codiciado del mundo.
-
-Lo otro, la cifra de los cuatrocientos mil millones de dólares que se repite en todas partes, no es historia: salió en 2012 de una página web de patrimonios de famosos, sin método y sin fuentes.
-
-¿Por qué preferimos una cifra inventada a un dato verificable?
-
-#SabiduriaDeBolsillo #MansaMusa #Mali #Historia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re09-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re09-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
