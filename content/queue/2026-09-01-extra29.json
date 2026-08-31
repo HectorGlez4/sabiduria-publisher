@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-16-noche",
-  "slot": "noche",
+  "id": "2026-09-01-extra29",
+  "slot": "tarde",
   "pillar": "civilizacion",
   "core": {
     "subject": "La escritura del Indo y sus textos de cinco signos",
@@ -83,5 +83,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-01T15:47:00Z"
 }

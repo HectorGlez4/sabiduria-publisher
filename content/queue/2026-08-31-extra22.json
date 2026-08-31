@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-12-manana",
-  "slot": "manana",
+  "id": "2026-08-31-extra22",
+  "slot": "tarde",
   "pillar": "curiosidad",
   "core": {
     "subject": "El metro y el error que Méchain calló (1792-1799)",
@@ -79,7 +79,10 @@
   ],
   "targets": [
     "facebook",
-    "instagram"
+    "instagram",
+    "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-08-31T21:47:00Z"
 }

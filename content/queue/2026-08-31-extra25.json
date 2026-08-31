@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-10-tarde",
+  "id": "2026-08-31-extra25",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "sources": [
     {
@@ -54,6 +54,12 @@
     "No presentar a sor Filotea como una monja real. Era el seudónimo del obispo de Puebla, Manuel Fernández de Santa Cruz.",
     "No decir que la frase es una queja. En el texto va precedida de una defensa del conocimiento que se obtiene observando, no de una lamentación."
   ],
-  "targets": ["facebook", "instagram"],
-  "status": "draft"
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-01T00:47:00Z"
 }

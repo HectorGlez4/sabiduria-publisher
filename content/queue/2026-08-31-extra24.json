@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-10-manana",
-  "slot": "manana",
+  "id": "2026-08-31-extra24",
+  "slot": "tarde",
   "pillar": "arte-ciencia",
   "core": {
     "subject": "El bulevar del Temple de Daguerre",
@@ -14,7 +14,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "PARÍS, 1838",
     "subtitle": "Una calle llena que salió vacía",
     "body": "El bulevar del Temple era de los más transitados de París. La exposición duró cuatro o cinco minutos y borró a todo el que se movía. Solo quedaron dos hombres: uno se hacía limpiar los zapatos, el otro se los limpiaba."
@@ -57,6 +57,12 @@
     "No decir que en la imagen hay solo dos personas. Se han señalado figuras tenues adicionales, posiblemente un niño asomado a una ventana y un caballo; no está resuelto.",
     "No decir que la placa se destruyó en la guerra. Se deterioró durante la guerra, pero lo que la arruinó definitivamente fue el intento de restauración de 1970."
   ],
-  "targets": ["facebook", "instagram"],
-  "status": "draft"
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-08-31T23:47:00Z"
 }

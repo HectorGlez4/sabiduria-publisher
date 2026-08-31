@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-15-manana",
-  "slot": "manana",
+  "id": "2026-08-31-extra21",
+  "slot": "tarde",
   "pillar": "curiosidad",
   "core": {
     "subject": "El azul que falta en Homero",
@@ -88,5 +88,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-08-31T20:47:00Z"
 }

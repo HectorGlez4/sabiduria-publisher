@@ -17,7 +17,7 @@
     "title": "EGERIA",
     "subtitle": "Escribió en el siglo IV y la reconocieron en 1903",
     "body": "Entre 381 y 384 recorrió el Sinaí, Egipto y Mesopotamia, y pasó tres años en Jerusalén anotando lo que veía. Su relato apareció en 1884 en Arezzo sin título y sin firma. Diecinueve años después, una carta del siglo VII le devolvió el nombre.",
-    "variant": "gold"
+    "variant": "cream"
   },
   "sources": [
     {
@@ -60,7 +60,7 @@
     "El nombre exacto de la biblioteca de Arezzo como dato cerrado: la Wikipedia en español dice Biblioteca della Confraternità dei Laici, la inglesa dice «una biblioteca monástica» y la Biblical Archaeology Society dice «la biblioteca municipal». Se dice solo «una biblioteca de Arezzo».",
     "Grafías alternativas del nombre (Etheria, Aetheria) presentadas como error: son variantes de los manuscritos, no equivocaciones. Se usa Egeria, que es la forma aceptada, sin corregir a nadie."
   ],
-  "status": "blocked",
+  "status": "ready",
   "publish_at": "2026-08-31T14:21:00Z",
   "targets": [
     "facebook",
@@ -71,8 +71,5 @@
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
     "extended": []
-  },
-  "blocked_reason": [
-    "variante 'gold' repetida: la ultima publicacion real (2026-08-27-extra12) tambien salio gold"
-  ]
+  }
 }

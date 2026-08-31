@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-14-manana",
-  "slot": "manana",
+  "id": "2026-08-31-extra23",
+  "slot": "tarde",
   "pillar": "arte-ciencia",
   "core": {
     "subject": "Alice Ball y el aceite de chaulmoogra (1915)",
@@ -15,7 +15,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "ALICE BALL",
     "subtitle": "El hallazgo que llevó durante años el apellido de otra persona",
     "body": "En 1915 aisló los ésteres etílicos del aceite de chaulmoogra y lo volvió inyectable. Le tomó menos de un año. Murió al año siguiente, a los 24. El presidente de su universidad publicó el hallazgo sin nombrarla y lo llamó método Dean. En 1922 un médico lo corrigió: era el método Ball."
@@ -82,5 +82,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-08-31T22:47:00Z"
 }

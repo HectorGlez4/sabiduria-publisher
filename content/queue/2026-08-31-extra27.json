@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-10-noche",
-  "slot": "noche",
+  "id": "2026-08-31-extra27",
+  "slot": "tarde",
   "pillar": "civilizacion",
   "core": {
     "subject": "Caral, en el valle de Supe",
@@ -14,7 +14,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "VALLE DE SUPE, 2627 a.C.",
     "subtitle": "Seis pirámides, ninguna muralla",
     "body": "Caral es la ciudad más antigua de América y es contemporánea de las primeras pirámides de Egipto. En más de treinta años de excavación no han aparecido armas, fortificaciones ni huesos con marcas de violencia."
@@ -52,6 +52,12 @@
     "No presentar el hallazgo como obra de un solo equipo. Ruth Shady acusó a Jonathan Haas y Winifred Creamer de plagio por un artículo de 2004 en Nature; la disputa por la autoría llegó a investigaciones de ética en ambos países y sigue siendo materia delicada.",
     "No usar la cifra de 626 hectáreas para la zona central. Esas son las del sitio inscrito por la UNESCO; la zona central con arquitectura monumental son 65."
   ],
-  "targets": ["facebook", "instagram"],
-  "status": "draft"
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-01T03:47:00Z"
 }
