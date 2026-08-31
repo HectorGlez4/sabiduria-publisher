@@ -1,0 +1,91 @@
+{
+  "id": "2026-09-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Evelyn Beatrice Hall, biógrafa de Voltaire",
+    "hook": "LA FRASE MÁS CITADA DE VOLTAIRE SOBRE LA LIBERTAD DE EXPRESIÓN LA ESCRIBIÓ SU BIÓGRAFA INGLESA EN 1906",
+    "quote": {
+      "text": "Desapruebo lo que dices, pero defenderé hasta la muerte tu derecho a decirlo.",
+      "author": "Evelyn Beatrice Hall (seudónimo: S. G. Tallentyre)",
+      "work": "The Friends of Voltaire, 1906, capítulo \"Helvétius: The Contradiction\". Original: \"I disapprove of what you say, but I will defend to the death your right to say it\"",
+      "attribution_verified": true
+    },
+    "body": [
+      "Evelyn Beatrice Hall, escritora inglesa nacida en 1868 y muerta en 1956, firmaba con nombre de hombre: S. G. Tallentyre. En 1906 publicó The Friends of Voltaire, diez retratos de los amigos del filósofo, cada uno con su epíteto. El séptimo era Helvétius, el de la contradicción. Al contar la condena y la quema del libro De l'Esprit, Hall resumió en una línea la actitud de Voltaire ante lo que no compartía. Y cometió un descuido pequeño: puso la línea entre comillas.",
+      "Las comillas hicieron el resto. La frase empezó a circular como si Voltaire la hubiera dicho, y sigue circulando así. La propia Hall lo desmintió por escrito. En una carta del 9 de mayo de 1939, publicada después en la revista académica Modern Language Notes, dejó constancia de que la expresión era suya y de que no debió haberla puesto entre comillas.",
+      "Hay incluso una fuente falsa de repuesto: quien duda suele remitir a una carta de Voltaire a monsieur Le Riche del 6 de febrero de 1770. La frase no está en esa carta.",
+      "La definición más repetida de la tolerancia en Occidente no es una cita. Es el resumen que alguien hizo de otro, y ese alguien pasó un siglo sin figurar."
+    ],
+    "question": "¿Cuánto de lo que citamos es en realidad el resumen que hizo un tercero?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "EVELYN BEATRICE HALL",
+    "subtitle": "La frase no es de Voltaire: es de quien escribió sobre él",
+    "body": "The Friends of Voltaire, 1906, capítulo sobre Helvétius. Hall resumió en una línea la actitud de Voltaire ante las ideas que no compartía, y la puso entre comillas. En 1939 aclaró por carta que la expresión era suya. Sigue atribuyéndose a un hombre que llevaba más de un siglo muerto."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Voltaire",
+      "#Citas",
+      "#LibertadDeExpresion"
+    ],
+    "extended": [
+      "#EvelynBeatriceHall",
+      "#Ilustracion",
+      "#Filosofia",
+      "#Tolerancia",
+      "#Literatura",
+      "#Lecturas",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Evelyn Beatrice Hall (1868-1956), que escribía bajo el seudónimo S. G. Tallentyre, creó la frase \"I disapprove of what you say, but I will defend to the death your right to say it\" en The Friends of Voltaire (1906), en el capítulo \"Helvétius: The Contradiction\", como ilustración de las convicciones de Voltaire y no como cita suya; la frase se le atribuye erróneamente a Voltaire",
+      "source": "Wikipedia en inglés, \"Evelyn Beatrice Hall\"",
+      "url": "https://en.wikipedia.org/wiki/Evelyn_Beatrice_Hall"
+    },
+    {
+      "claim": "The Friends of Voltaire (1906) recoge diez retratos con epíteto —d'Alembert el pensador, Diderot el conversador, Galiani el ingenioso, Vauvenargues el aforista, d'Holbach el anfitrión, Grimm el periodista, Helvétius la contradicción, Turgot el estadista, Beaumarchais el dramaturgo y Condorcet el aristócrata—; la frase aparece en el capítulo de Helvétius, al tratar la persecución de su libro, y era un resumen de Hall, no una cita literal",
+      "source": "Wikipedia en inglés, \"The Friends of Voltaire\"",
+      "url": "https://en.wikipedia.org/wiki/The_Friends_of_Voltaire"
+    },
+    {
+      "claim": "En una carta fechada el 9 de mayo de 1939, publicada en Modern Language Notes (noviembre de 1943, vol. 58, n.º 7, pp. 534-535), Hall escribió: \"The phrase 'I wholly disapprove of what you say and will defend to the death your right to say it' which you have found in my book 'Voltaire in His Letters' is my own expression and should not have been put in inverted commas\". La frase apareció por primera vez en The Friends of Voltaire (1906), pp. 198-199, entrecomillada, y Hall la formuló para expresar su idea de la actitud de Voltaire ante la persecución de De l'Esprit, obra de Claude-Adrien Helvétius de 1758",
+      "source": "Quote Investigator, \"Quote Origin: I Disapprove of What You Say, But I Will Defend to the Death Your Right to Say It\"",
+      "url": "https://quoteinvestigator.com/2015/06/01/defend-say/"
+    },
+    {
+      "claim": "La frase figura entre las atribuciones falsas a Voltaire: la redactó Hall en 1906 como síntesis de sus creencias. La carta de Voltaire a monsieur Le Riche del 6 de febrero de 1770, que suele citarse como origen, no contiene la frase que se le atribuye",
+      "source": "Wikiquote en inglés, Voltaire, sección \"Misattributed\"",
+      "url": "https://en.wikiquote.org/wiki/Voltaire"
+    },
+    {
+      "claim": "The Friends of Voltaire, de S. G. Tallentyre (Evelyn Beatrice Hall), edición de 1906, con la portada de John Murray, Albemarle Street, Londres; el volumen contiene los capítulos sobre d'Alembert, Diderot y los demás amigos de Voltaire",
+      "source": "Internet Archive, ejemplar digitalizado de The Friends of Voltaire (1906)",
+      "url": "https://archive.org/stream/friendsofvoltair00tall/friendsofvoltair00tall_djvu.txt"
+    }
+  ],
+  "do_not_use": [
+    "no atribuir la frase a Voltaire bajo ninguna forma: no está en su obra ni en su correspondencia, y su autora la reconoció como propia por escrito",
+    "no citar como origen la carta de Voltaire a monsieur Le Riche del 6 de febrero de 1770: la frase no aparece en esa carta",
+    "no usar la versión \"detesto lo que escribes, pero daría mi vida para que pudieras seguir escribiendo\": es la formulación apócrifa asociada a esa carta de 1770",
+    "no presentar la variante \"I wholly disapprove of what you say and will defend to the death your right to say it\" como el texto de 1906: esa es la redacción que la propia Hall menciona en 1939 refiriéndose a otro libro suyo, Voltaire in His Letters",
+    "no dar por comprobada la página 199 ni el tramo 198-199: procede de fichas secundarias y no se leyó una imagen de la página; las descargas de texto completo consultadas se truncaron antes del capítulo de Helvétius",
+    "no dar por firme el editor de la edición de 1906: la portada del ejemplar digitalizado en Internet Archive dice John Murray, mientras otras fichas mencionan a Smith, Elder & Co. y una edición de G. P. Putnam's Sons en 1907",
+    "no fechar la quema de De l'Esprit: la obra de Helvétius es de 1758 según la fuente consultada, pero el año concreto de la condena y la quema no se verificó en esta entrada",
+    "no afirmar que Reader's Digest difundió la frase en junio de 1934 ni que Hall respondió en Saturday Review el 11 de mayo de 1935: esos dos datos aparecieron en un resumen de búsqueda y no se confirmaron al leer la fuente",
+    "no describir a Hall como francesa, ni como contemporánea o conocida de Voltaire: es una escritora inglesa nacida noventa años después de la muerte del filósofo",
+    "no decir que ocultó su identidad por vergüenza: solo consta que publicaba bajo el seudónimo S. G. Tallentyre, sin explicación documentada en las fuentes consultadas"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

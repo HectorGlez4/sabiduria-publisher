@@ -1,0 +1,87 @@
+{
+  "id": "2026-09-16-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "La escritura del Indo y sus textos de cinco signos",
+    "hook": "DEJARON CINCO MIL INSCRIPCIONES Y NINGUNA SE PUEDE LEER: SUS TEXTOS SON DEMASIADO CORTOS PARA DESCIFRARSE",
+    "body": [
+      "La civilización del Indo alcanzó su fase madura entre el 2600 y el 1900 antes de Cristo, sobre un territorio de cerca de un millón de kilómetros cuadrados y miles de asentamientos. Sus ladrillos siguen casi en todas partes la misma proporción: cuatro de largo por dos de ancho por uno de alto. Mohenjo-Daro, excavada desde 1921, se extendía por unas cien hectáreas sobre una serie de montículos, con trazado en cuadrícula, pozos repartidos por la ciudad y una red de desagüe a la que se conectaba la zona de baño de casi cada casa.",
+      "Lo que no tenía era palacio. Ni templos ostentosos, ni monumentos, ni tumba real, ni una sede evidente de gobierno. Lo más parecido a un edificio religioso es el Gran Baño, una alberca impermeable de ladrillo cocido sobre el montículo más alto.",
+      "Y dejaron escritura. Desde 1924 se han excavado alrededor de cinco mil inscripciones, y sigue sin descifrarse ninguna. Los recuentos de signos distintos van de 419, según Iravatham Mahadevan, a 694 en la lista de Bryan Wells. El obstáculo no es la cantidad de material sino su tamaño: el texto medio tiene unos cinco signos. No existe ningún bilingüe. Ni siquiera se sabe qué lengua hablaban.",
+      "En enero de 2025, en el centenario del anuncio del descubrimiento, el gobierno de Tamil Nadu ofreció un millón de dólares a quien la descifre. Conocemos el trazado de sus calles, la medida de sus ladrillos y el recorrido de sus aguas. No conocemos una sola palabra suya."
+    ],
+    "question": "¿Qué parte de nosotros seguirá siendo legible cuando se pierda la lengua?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "LA ESCRITURA DEL INDO",
+    "subtitle": "Sabemos cómo drenaban sus calles y no sabemos qué lengua hablaban",
+    "body": "Fase madura, 2600-1900 a.C., cerca de un millón de kilómetros cuadrados. Ladrillos en proporción cuatro-dos-uno de una punta a otra, calles en cuadrícula, desagüe en casi cada casa. Y unas cinco mil inscripciones que nadie sabe leer: el texto medio tiene cinco signos y no hay ningún bilingüe."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#CivilizacionDelIndo",
+      "#Arqueologia",
+      "#MohenjoDaro"
+    ],
+    "extended": [
+      "#Historia",
+      "#Escritura",
+      "#Antiguedad",
+      "#Pakistan",
+      "#Ciudades",
+      "#Curiosidades",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La fase madura de la civilización del Indo abarca del 2600 al 1900 a.C. y cubre un área vasta de un millón de kilómetros cuadrados con miles de yacimientos; la proporción típica de sus ladrillos es 4:2:1 (largo, ancho, alto), llamada \"la proporción del Indo\", mantenida mediante moldes normalizados; la escritura del Indo no ha sido descifrada, y la existencia de un sistema de escritura apunta a un uso contable y administrativo",
+      "source": "Aurangzeb Khan y Carsten Lemmen (Helmholtz-Zentrum Geesthacht), \"Bricks and urbanism in the Indus Civilization\", arXiv:1303.1426",
+      "url": "https://ar5iv.labs.arxiv.org/html/1303.1426"
+    },
+    {
+      "claim": "La civilización del Indo era desconocida hasta 1921, cuando las excavaciones en el actual Pakistán revelaron Mohenjo Daro y Harappa. Mohenjo Daro se extendía por unos 250 acres (100 hectáreas) sobre una serie de montículos y floreció entre el 2500 y el 1900 a.C. Tenía un trazado de calles bien planificado y un elaborado sistema de drenaje, con pozos por toda la ciudad y una zona de baño con desagüe en casi cada casa. El Gran Baño era una alberca impermeable de ladrillo cocido sobre un montículo, lo más parecido a un templo que se ha hallado. La ciudad carece de palacios ostentosos, templos o monumentos, y no hay una sede central de gobierno evidente ni pruebas de un rey o una reina",
+      "source": "National Geographic, \"The lost city of Mohenjo Daro\" (cita a Gregory Possehl y Jonathan Mark Kenoyer)",
+      "url": "https://www.nationalgeographic.com/history/article/mohenjo-daro"
+    },
+    {
+      "claim": "Los recuentos de signos distintos de la escritura del Indo van de 419 en el sistema de Iravatham Mahadevan (años setenta) a unos 694 en la lista de Bryan Wells (2015); hacia 1992 se habían hallado unos 4.000 objetos inscritos y hacia 2025 se habían excavado unas 5.000 inscripciones desde 1924; la longitud media de una inscripción ronda los cinco signos; no se ha encontrado ninguna inscripción bilingüe, la lengua hablada de Harappa no ha sido identificada y ni siquiera hay acuerdo sobre si los símbolos representan una lengua. En 2025 el ministro principal de Tamil Nadu, M. K. Stalin, anunció un premio de un millón de dólares por descifrar la escritura",
+      "source": "Wikipedia en inglés, \"Indus script\"",
+      "url": "https://en.wikipedia.org/wiki/Indus_script"
+    },
+    {
+      "claim": "El ministro principal de Tamil Nadu, M. K. Stalin, anunció un premio de un millón de dólares estadounidenses para quien logre descifrar y dar una comprensión coherente de la escritura de la civilización del valle del Indo, durante la ceremonia inaugural del Seminario Internacional por el Centenario del Descubrimiento de la Civilización del Valle del Indo, en el Museo del Gobierno de Egmore, Chennai; anunció además una dotación para una cátedra de investigación con el nombre del arqueólogo Iravatham Mahadevan",
+      "source": "The Tribune (India), \"Stalin announces $1 mn prize for deciphering Indus Valley script\"",
+      "url": "https://www.tribuneindia.com/news/india/stalin-announces-1-mn-prize-for-deciphering-indus-valley-script/amp"
+    },
+    {
+      "claim": "Las inscripciones del Indo siguen sin descifrar; el trabajo computacional sobre sellos y tablillas propone que las tablillas en miniatura halladas en Harappa pudieron servir para registrar raciones asignadas a porteadores o trabajadores, y que los sellos tuvieron funciones económicas más allá de marcar la propiedad",
+      "source": "Rajesh P. N. Rao, \"The Indus Script and Economics. A Role for Indus Seals and Tablets in Rationing and Administration of Labor\", arXiv:1812.00049",
+      "url": "https://arxiv.org/abs/1812.00049"
+    }
+  ],
+  "do_not_use": [
+    "no dar diecisiete signos como longitud del texto más largo sobre una sola superficie: la cifra apareció en un resumen de búsqueda de harappa.com y la página devolvió un bloqueo al intentar leerla; lo verificado es solo la media de unos cinco signos",
+    "no fijar la fecha exacta del anuncio del premio de Tamil Nadu: una fuente lo sitúa el 5 y otra el 6 de enero de 2025; por eso aquí se dice solo enero de 2025",
+    "no repetir la afirmación de que alrededor del 60 por ciento de los símbolos del Indo coincide con hallazgos de Tamil Nadu: procede del discurso político que anunció el premio, no de un trabajo revisado",
+    "no decir que la escritura del Indo es dravídica: es una hipótesis, la de Asko Parpola entre otros, y no un hecho establecido",
+    "no afirmar que los signos representan con seguridad una lengua: hay investigadores que sostienen que podrían ser un sistema no lingüístico, y la cuestión sigue abierta",
+    "no describir el Gran Baño como un templo: la fuente dice que es lo más parecido a un templo hallado en la ciudad, no que lo sea",
+    "no presentar la proporción 4:2:1 de los ladrillos como universal: hay ciudades, como Kalibangan, donde se documentan otras proporciones",
+    "no concluir de la ausencia de palacios y tumbas reales que fuera una sociedad igualitaria: lo verificado es la ausencia de esos edificios y monumentos; el debate sobre cómo se gobernaba sigue abierto",
+    "no atribuir el declive de la civilización a una invasión aria: es una explicación antigua y disputada, y el trabajo consultado subraya la disrupción social frente a las causas ambientales",
+    "no llamarla la civilización más antigua ni la primera: es contemporánea de Mesopotamia y Egipto, no anterior",
+    "no fechar el descubrimiento en 1922 ni atribuirlo a un solo excavador: la fuente consultada da 1921 para las excavaciones que la revelaron",
+    "no confundir el número de inscripciones con el de objetos: unas 5.000 inscripciones excavadas desde 1924 y unos 4.000 objetos inscritos hacia 1992 son cifras de recuentos distintos"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
