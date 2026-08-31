@@ -60,7 +60,21 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_story": {
+      "post_id": "2141439150116432",
+      "photo_id": "1082608251230501",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-08-31T03:31:18.735011+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17909332677284501",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-08-31T03:31:32.375396+00:00"
+    }
+  },
   "reemision_de": "2026-08-23-noche"
 }

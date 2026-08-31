@@ -72,7 +72,21 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_story": {
+      "post_id": "2473039713218480",
+      "photo_id": "1082620054562654",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-08-31T03:53:41.786229+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17894443239395618",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-08-31T03:53:55.675104+00:00"
+    }
+  },
   "reemision_de": "2026-08-24-manana"
 }
