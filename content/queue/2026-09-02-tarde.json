@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-03-tarde",
+  "id": "2026-09-02-tarde",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -68,5 +68,16 @@
     "Presentar el Decálogo como un texto de superación personal o de motivación creativa. Es exactamente lo contrario: prohíbe el mercado, exige sangre y termina en vergüenza. Ese es el giro del post.",
     "Atribuir el Decálogo a Ternura, Tala o Lagar. Las fuentes cotejadas lo vinculan a Desolación (1922)."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-02T19:17:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

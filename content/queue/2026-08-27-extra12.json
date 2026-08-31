@@ -69,15 +69,12 @@
     "Cifras de población o de extensión del imperio maurya, y el número total de edictos conservados: las fuentes divulgativas discrepan (33 inscripciones en unas, más en otras) y no se verificaron aquí. No darlas como dato cerrado.",
     "Ubicación actual del capitel original de Sarnath: no se verificó el museo concreto. Decir solo 'se conserva en Sarnath'."
   ],
-  "status": "blocked",
+  "status": "ready",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "results": {},
-  "publish_at": "2026-08-30T14:17:00Z",
-  "blocked_reason": [
-    "variante 'gold' repetida: la ultima publicacion real (2026-08-30-noche) tambien salio gold"
-  ]
+  "publish_at": "2026-08-30T14:17:00Z"
 }

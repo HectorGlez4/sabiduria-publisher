@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-05-noche",
+  "id": "2026-09-02-noche",
   "slot": "noche",
   "pillar": "civilizacion",
   "core": {
@@ -57,5 +57,16 @@
     "Decir que Gazán reformó el sistema «en 1300» o en cualquier año concreto. Las medidas se reparten a lo largo de su reinado (1295-1304) y las fuentes consultadas no fechan cada decreto. Dar el reinado, no el año.",
     "«Escritura phags-pa» descrita como un idioma. Es un alfabeto encargado por Kublai Kan para escribir varias lenguas del imperio. En la tarjeta y en el copy se escribe «pakpa», sin diacríticos, para no depender de los glifos de la fuente."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-03T01:58:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

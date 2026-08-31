@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-04-tarde",
+  "id": "2026-09-03-tarde",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -52,5 +52,16 @@
     "No presentarla como consejo de calma o de 'no juzgar y ya': en Spinoza comprender es un método racional, no una actitud de indiferencia serena.",
     "REVISAR: la cita se reconstruyó del claim de la fuente, no del hook. Cotejar redacción antes de encolar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-03T19:44:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

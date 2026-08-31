@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-03-manana",
+  "id": "2026-09-01-manana",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -17,7 +17,7 @@
     "title": "ISABEL ZENDAL",
     "subtitle": "Rectora de un orfanato de A Coruña, embarcada por real orden en 1803",
     "body": "El 30 de noviembre de 1803 zarpó de A Coruña la María Pita. La vacuna de la viruela no se podía guardar: viajó viva, pasando de brazo a brazo entre veintidós niños expósitos. Ella los cuidó toda la travesía. Uno de esos niños era su hijo.",
-    "variant": "cream"
+    "variant": "gold"
   },
   "sources": [
     {
@@ -68,5 +68,16 @@
     "«Balmis inventó la vacuna». No: la vacuna contra la viruela es de Edward Jenner (1796). Balmis dirigió su distribución.",
     "Presentar la expedición como gesto puramente humanitario sin más. Fue una orden de la Corona española sobre sus territorios de ultramar; el mérito sanitario es real, el marco es colonial. Este post no entra en el debate, pero no debe negarlo."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-01T14:39:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

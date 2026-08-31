@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-04-manana",
+  "id": "2026-09-02-manana",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -17,7 +17,7 @@
     "title": "STANISLAV PETROV",
     "subtitle": "Quince años después, un general lo contó en sus memorias y el mundo se enteró.",
     "body": "26 de septiembre de 1983, pasada la medianoche. El sistema de satélites soviético anuncia un misil estadounidense, y enseguida cuatro más. El oficial de guardia informa que es una falla. Era luz del sol reflejada en nubes altas. Lo reprendieron por llevar mal el diario de guardia.",
-    "variant": "gold"
+    "variant": "cream"
   },
   "sources": [
     {
@@ -54,5 +54,16 @@
     "DESCARTADO AL VERIFICAR: presentar el episodio como el único momento en que el mundo estuvo cerca de una guerra nuclear. Los especialistas lo cuentan como uno de varios incidentes de la Guerra Fría, no como un punto único. Decirlo en superlativo es falso y además innecesario: la noche del 26 de septiembre se sostiene sola.",
     "No usar imágenes, cifras de víctimas hipotéticas ni lenguaje catastrofista. El tono de la pieza es el de un hombre solo en un turno de noche haciendo bien su trabajo, no el de un thriller."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-02T14:16:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

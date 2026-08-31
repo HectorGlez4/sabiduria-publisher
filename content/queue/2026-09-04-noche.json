@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-08-noche",
+  "id": "2026-09-04-noche",
   "slot": "noche",
   "pillar": "civilizacion",
   "core": {
@@ -17,7 +17,7 @@
     "title": "GÖBEKLI TEPE",
     "subtitle": "Círculos de piedra alzados seis mil años antes de Stonehenge",
     "body": "Pilares en forma de T, de cinco metros y medio y ocho toneladas, tallados con zorros, escorpiones y buitres. Quienes los alzaron no tenían cerámica, ni metal, ni rueda: comían gacela salvaje. El trigo sembrado llegó a la región quinientos años después.",
-    "variant": "gold"
+    "variant": "cream"
   },
   "sources": [
     {
@@ -59,5 +59,16 @@
     "'Klaus Schmidt descubrió el sitio'. El montículo ya figuraba en un sondeo de las universidades de Chicago y Estambul de los años sesenta, que lo tomó por un cementerio medieval. Schmidt leyó ese informe y fue quien reconoció qué era, en 1994.",
     "'Göbekli Tepe inventó la agricultura' o 'el templo creó la civilización'. Es la hipótesis de Schmidt sobre la causalidad, discutida y no demostrada. El orden temporal sí es afirmable; la causa, no."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-05T02:18:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

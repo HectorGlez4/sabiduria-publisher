@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-07-noche",
+  "id": "2026-09-03-noche",
   "slot": "noche",
   "pillar": "civilizacion",
   "core": {
@@ -17,7 +17,7 @@
     "title": "LA TABLILLA DEL DILUVIO",
     "subtitle": "La leyó primero un aprendiz de grabador de billetes",
     "body": "Barro cocido, siglo VII antes de Cristo, hallado en Nínive. Cuenta un diluvio, un barco y un ave enviada a buscar tierra. Llevaba veinte años en el Museo Británico sin que nadie pudiera leerla. La descifró en 1872 un aprendiz de grabador de billetes que aprendió cuneiforme por su cuenta.",
-    "variant": "cream"
+    "variant": "gold"
   },
   "sources": [
     {
@@ -67,5 +67,16 @@
     "«El texto es sumerio»: la tablilla XI está en acadio. Existe un relato sumerio del diluvio, con Ziusudra, pero es otra obra; tampoco conviene tratar a Utnapishtim, Atrahasis y Ziusudra como el mismo personaje sin matizar que son nombres de tradiciones distintas.",
     "Dar el número de tablillas de la biblioteca de Asurbanipal como cifra exacta: las fuentes dicen «más de 30.000» hallazgos de Nínive, y el propio Museo Británico advierte que no todas pertenecen a la biblioteca real."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-04T01:38:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

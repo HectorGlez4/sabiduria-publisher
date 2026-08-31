@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-08-manana",
+  "id": "2026-09-04-manana",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -17,7 +17,7 @@
     "title": "SEQUOYAH",
     "subtitle": "Lo acusaron de brujería antes de creerle",
     "body": "Trabajó unos doce años hasta fijar un signo por cada sílaba de su lengua: ochenta y seis, luego reducidos a ochenta y cinco. No leía ninguna lengua, ni la propia. En 1821 lo probó ante el Consejo leyendo en voz alta, desde otro cuarto, lo que había escrito su hija.",
-    "variant": "gold"
+    "variant": "cream"
   },
   "sources": [
     {
@@ -64,5 +64,16 @@
     "DESCARTE DE ESTA SESIÓN: se consideró cerrar la pieza señalando que la escritura cherokee está hoy en Unicode y en los teclados. El dato es probable, pero no se verificó en esta sesión y quedó fuera. Si una sesión futura lo quiere usar, hay que comprobarlo primero en el estándar Unicode, no en fuentes secundarias.",
     "DESCARTE DE ESTA SESIÓN: no se usa la Wikipedia como única fuente de ningún dato del post. Cada cifra y cada fecha del cuerpo aparece en al menos dos de las fuentes listadas, salvo la incautación de la imprenta de 1835, que se apoya solo en el artículo 'Cherokee Phoenix' y por eso se enuncia con la fecha y el actor exactos que da esa fuente, sin adorno."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-04T14:08:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-06-manana",
+  "id": "2026-09-03-manana",
   "slot": "manana",
   "pillar": "figura",
   "core": {
@@ -68,5 +68,16 @@
     "\"La delrioíta lleva su nombre\": existe un mineral llamado delrioíta, un vanadato de calcio y estroncio descrito en 1959, pero la etimología no se pudo confirmar en ninguna fuente accesible (mindat y GeoScienceWorld devolvieron error 403). Dato descartado del texto por no verificado.",
     "\"Solo sabemos de él por el vanadio\": empobrece el dato real. Escribió Elementos de Orictognosia (primera parte, 1795), considerada la primera obra de mineralogía de América."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-03T14:27:00Z",
+  "targets": [
+    "facebook",
+    "instagram"
+  ],
+  "results": {},
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
 }
