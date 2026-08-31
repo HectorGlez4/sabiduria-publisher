@@ -75,6 +75,22 @@
     "instagram",
     "threads"
   ],
-  "results": {},
-  "publish_at": "2026-08-30T14:17:00Z"
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1082770424547617",
+      "url": "https://www.facebook.com/874327782058550/posts/1082770424547617",
+      "published_at": "2026-08-31T08:46:40.231190+00:00"
+    },
+    "instagram": {
+      "post_id": "17933724528127602",
+      "url": "https://www.instagram.com/p/DcssN3PnR9Y/",
+      "published_at": "2026-08-31T08:46:52.218518+00:00"
+    },
+    "threads": {
+      "error": "HTTP 400 · code=1 subcode=2207052 · An unknown error occurred"
+    }
+  },
+  "publish_at": "2026-08-30T14:17:00Z",
+  "attempts": 1,
+  "last_attempt": "2026-08-31T08:46:52.916461+00:00"
 }
