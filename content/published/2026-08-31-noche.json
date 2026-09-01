@@ -64,13 +64,24 @@
     "\"Murieron 23 franceses en 1963\": fueron 22 turistas franceses y un guía local. La cifra combinada de 23 borra al guía.",
     "\"Indiana Jones y la última cruzada se rodó dentro del Tesoro\": solo la fachada; el interior es una sala vacía tallada en la roca. Dato irrelevante para la pieza y falso tal como circula."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-01T01:53:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1083491487808844",
+      "url": "https://www.facebook.com/874327782058550/posts/1083491487808844",
+      "published_at": "2026-09-01T05:45:40.874927+00:00"
+    },
+    "instagram": {
+      "post_id": "18153480901515657",
+      "url": "https://www.instagram.com/p/Dcu8TEZDDv5/",
+      "published_at": "2026-09-01T05:45:52.514221+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
