@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 31 Aug 2026 22:46:57 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2026 23:57:44 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EL HOMBRE QUE MIDIÓ EL METRO ENCONTRÓ UN ERROR EN SU PROPIA CIFRA Y SE LO GUARDÓ DIEZ AÑOS</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-extra22</guid>
+      <pubDate>Mon, 31 Aug 2026 23:57:18 +0000</pubDate>
+      <description><![CDATA[EL HOMBRE QUE MIDIÓ EL METRO ENCONTRÓ UN ERROR EN SU PROPIA CIFRA Y SE LO GUARDÓ DIEZ AÑOS
+
+En 1791 la Academia de Ciencias de París decidió que la nueva unidad de longitud sería la diezmillonésima parte de la distancia del polo al ecuador. Para conocer esa distancia había que medir un arco de meridiano entre Dunkerque y Barcelona. Jean-Baptiste Delambre tomó el tramo del norte; Pierre Méchain, el del sur. Méchain salió de París el 28 de junio de 1792, con la Revolución en marcha y con Francia a punto de entrar en guerra con España.
+
+Su trabajo dependía de fijar la latitud de Barcelona. Tomó una serie de observaciones desde el castillo de Montjuïc y otra desde la posada donde quedó bloqueado cuando la guerra le cerró el paso. Al reducir los datos vio que las dos series no coincidían: unos tres segundos de arco. No podía volver al castillo a repetirlo. No informó a nadie y retocó sus cuadernos para que la dispersión pareciera menor. Las triangulaciones se cerraron en noviembre de 1798 y el 22 de junio de 1799 la barra de platino que fijaba el metro se depositó en los Archivos Nacionales.
+
+Diez años después le llegó la salida. El Bureau des Longitudes aprobó prolongar el meridiano hasta las Baleares, y esa prolongación volvía innecesaria su latitud de Barcelona. Habían designado a otro astrónomo para el viaje. Méchain exigió ir él. Murió el 20 de septiembre de 1804 en Castellón de la Plana, agotado y con fiebre, sin haber cerrado la medición. Delambre encontró el error al heredar sus cuadernos.
+
+El metro quedó unos 0,197 milímetros más corto de lo que pedía su definición. La causa principal no fue Méchain: fue la desviación de la vertical, la plomada que deja de apuntar al centro de la Tierra cuando hay masa de montaña cerca, algo que en 1799 nadie sabía descontar. Se pasó una década guardando un secreto que la física le habría perdonado.
+
+¿Qué error propio has cargado más tiempo del que valía?
+
+#SabiduriaDeBolsillo #Historia #Ciencia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra22.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra22.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,25 +508,6 @@ Golgi murió sin aceptarlo nunca. La razón la dio el microscopio electrónico, 
 #SabiduriaDeBolsillo #RamonYCajal #Ciencia #Nobel]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re12-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-re12-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-27-manana</guid>
-      <pubDate>Fri, 28 Aug 2026 19:33:43 +0000</pubDate>
-      <description><![CDATA[MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA
-
-Vivía de vender fósiles en la playa de Lyme Regis, al sur de Inglaterra. En 1811 su hermano encontró el cráneo de un animal desconocido y ella desenterró el resto del esqueleto: el primer ictiosaurio que llegó a la ciencia londinense. En diciembre de 1823 sacó del acantilado el primer esqueleto completo de plesiosaurio. Cuvier, la mayor autoridad de Europa, lo dio por falso antes de rectificar.
-
-Los artículos que describieron esos animales casi nunca llevaban su nombre. La Sociedad Geológica de Londres discutió su plesiosaurio en una reunión a la que no la invitaron. Nunca fue socia: no admitían mujeres.
-
-Murió el 9 de marzo de 1847. Al año siguiente el presidente de esa misma sociedad leyó su elogio fúnebre ante los socios, rompiendo la norma por alguien de fuera. Las mujeres pudieron ingresar en mayo de 1919: setenta y dos años tarde.
-
-¿De quién es el mérito: de quien encuentra o de quien escribe?
-
-#SabiduriaDeBolsillo #MaryAnning #Paleontologia #MujeresEnLaCiencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
