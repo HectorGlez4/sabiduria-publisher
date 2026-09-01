@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 01 Sep 2026 09:11:21 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2026 15:04:13 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>En 1803 la vacuna contra la viruela cruzó el Atlántico dentro del cuerpo de veintidós niños.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-01-manana</guid>
+      <pubDate>Tue, 01 Sep 2026 15:03:57 +0000</pubDate>
+      <description><![CDATA[En 1803 la vacuna contra la viruela cruzó el Atlántico dentro del cuerpo de veintidós niños.
+
+El 30 de noviembre de 1803 zarpó de A Coruña la corbeta María Pita. A bordo viajaban veintidós niños expósitos, de entre tres y nueve años. No existía forma de conservar la vacuna contra la viruela: para que llegara a América tenía que ir viva, pasando de brazo a brazo, de una pareja de niños a la siguiente, durante toda la travesía.
+
+Con ellos iba Isabel Zendal Gómez, rectora de la Casa de Expósitos de A Coruña, incorporada a la expedición por real orden del 14 de octubre de 1803. Entre aquellos niños estaba su propio hijo, Benito Vélez. Ninguno de los veintidós volvió a Galicia. Ella se quedó en Puebla de los Ángeles y murió allí. No se conoce la fecha.
+
+La cadena no admitía un solo día de descuido: si los niños enfermaban, la vacuna se perdía en mitad del océano. Lo que cruzó el mar no fue un frasco, fue un cuidado sostenido mañana tras mañana. Hoy su nombre está en hospitales. En los papeles de la época aparece escrito de decenas de formas distintas.
+
+¿Quién sostiene hoy, sin figurar en ningún lado, algo que tú das por seguro?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Si tienes un jardín en tu biblioteca, nada faltará.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -489,26 +508,6 @@ El propio aforismo termina con cuatro palabras que se cumplen a sí mismas: lo b
 #SabiduriaDeBolsillo #BaltasarGracian #Aforismos #SigloDeOro]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>No tenemos poco tiempo: hemos perdido mucho.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-30-re01-reel</guid>
-      <pubDate>Sat, 29 Aug 2026 20:17:00 +0000</pubDate>
-      <description><![CDATA["No tenemos poco tiempo: hemos perdido mucho."
-— Séneca, Sobre la brevedad de la vida, 1.3 (hacia el año 49)
-
-Séneca no escribió eso para consolar a nadie. Lo escribió como un reproche, dirigido a un funcionario romano que administraba el abasto de trigo de la ciudad y se quejaba de no tener horas.
-
-El original latino usa un tiempo pasado: hemos perdido. No es un problema de agenda. Es una cuenta ya cerrada, de la que no se recupera nada.
-
-Casi dos mil años después seguimos diciendo la misma frase, palabra por palabra: que no nos alcanza el día.
-
-¿En qué se te fue el tiempo que hoy dirías que no tuviste?
-
-#SabiduriaDeBolsillo #Seneca #Estoicismo #Reflexiones]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re01-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re01-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
