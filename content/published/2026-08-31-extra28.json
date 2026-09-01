@@ -61,12 +61,28 @@
     "Dar una fecha cerrada de lugar y mes para la carta: la edición de Shuckburgh la sitúa en Túsculo en junio, y otras ediciones la fechan en Roma. Lo firme es el año 46 a.C.",
     "Contar la pérdida de la biblioteca de Varrón con detalles de saqueo o de villa concreta: lo documentado es que Marco Antonio lo proscribió y que perdió gran parte de sus bienes, la biblioteca incluida."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1083604241130902",
+      "url": "https://www.facebook.com/874327782058550/posts/1083604241130902",
+      "published_at": "2026-09-01T09:10:47.062275+00:00"
+    },
+    "instagram": {
+      "post_id": "17954526420247042",
+      "url": "https://www.instagram.com/p/DcvTxiziHNH/",
+      "published_at": "2026-09-01T09:11:09.276131+00:00"
+    },
+    "threads": {
+      "post_id": "18105918467272092",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18105918467272092",
+      "published_at": "2026-09-01T09:11:21.988627+00:00"
+    }
+  },
   "publish_at": "2026-09-01T04:47:00Z"
 }
