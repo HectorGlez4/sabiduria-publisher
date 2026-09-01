@@ -14,6 +14,7 @@ on:
           - diagnostico-meta
           - threads-user-id
           - conciliar
+          - reels-estado
       dry_run:
         description: "Enseñar sin escribir"
         type: boolean
@@ -53,6 +54,8 @@ jobs:
             # Compara el feed de la página con lo que el repo cree haber
             # publicado. Con --dry-run solo informa; sin él registra los ids que
             # Meta confirma. Nunca borra nada.
+            # Solo lee: pregunta a Meta el estado real de cada reel.
+            reels-estado) python3 scripts/reels_estado.py ;;
             conciliar) python3 scripts/conciliar.py $([ "${{ inputs.dry_run }}" = "true" ] || echo --escribir) ;;
             *) echo "tarea desconocida"; exit 1 ;;
           esac

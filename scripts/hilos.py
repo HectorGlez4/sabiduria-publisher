@@ -115,13 +115,28 @@ def _registrar(ruta: pathlib.Path, pieza_id: str) -> None:
     empiece con datos viejos. Lo único que lo impide es publicar el registro en
     cuanto existe.
     """
+    # La rama por su nombre, no "HEAD": `git push origin HEAD` falla con "The
+    # destination you provided is not a full refname" y `pull origin HEAD`
+    # tampoco hace lo que parece. Con eso el registro no subía, y el rebase a
+    # medias que dejaba detrás llegó a escribir marcadores de conflicto DENTRO
+    # de un JSON de contenido — la ejecución siguiente murió con JSONDecodeError
+    # al leerlo. No llegó a comitearse, pero el fallo era de los caros.
+    rama = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
+                          cwd=ROOT, capture_output=True, text=True).stdout.strip() or "main"
+
     for orden in (["add", str(ruta)],
                   ["commit", "-m", f"hilo: {pieza_id}"],
-                  ["pull", "--rebase", "--autostash", "origin", "HEAD"],
-                  ["push", "origin", "HEAD"]):
+                  ["pull", "--rebase", "--autostash", "origin", rama],
+                  ["push", "origin", f"HEAD:{rama}"]):
         r = subprocess.run(["git", *orden], cwd=ROOT, capture_output=True, text=True)
-        if r.returncode != 0 and orden[0] not in ("commit",):
+        if r.returncode != 0 and orden[0] != "commit":
             print(f"    ! git {orden[0]}: {r.stderr.strip()[:120]}", file=sys.stderr)
+            if orden[0] == "pull":
+                # Un rebase a medias corrompe lo que toque y hace fallar todo lo
+                # que venga detrás. Se aborta y se deja el árbol utilizable.
+                subprocess.run(["git", "rebase", "--abort"], cwd=ROOT,
+                               capture_output=True)
+                return
 
 
 def main() -> int:
