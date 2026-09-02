@@ -1,0 +1,53 @@
+{
+  "id": "2026-09-15-extra41",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Confucio y la rectificación de los nombres",
+    "hook": "Le preguntaron por dónde empezaría si le entregaran el gobierno de un país. Respondió: por corregir los nombres. No hablaba del idioma. Hablaba de un hombre que se hacía llamar heredero sin serlo.",
+    "body": [
+      "El pasaje está en las Analectas, libro XIII, capítulo 3. El discípulo Zilu pregunta qué haría primero si el señor de Wei lo pusiera al frente de la administración. Confucio contesta: 必也正名乎, «habría que corregir los nombres». Zilu se desconcierta, y el maestro encadena la explicación: si los nombres no son correctos, el lenguaje no se ajusta; si el lenguaje no se ajusta, los asuntos no llegan a término.",
+      "Suena a tesis sobre el vocabulario. Era una acusación con destinatario. En Wei gobernaba Zhe, nieto del duque Ling, que había ocupado el trono mientras su padre Kuaikui —el heredero legítimo— seguía desterrado en el estado de Jin. Cuando el padre quiso volver, el hijo le puso sitio. En el 480 a.C. Kuaikui lo depuso. El título de sucesor lo llevaba quien no tenía derecho a él, y el país entero se ordenaba según ese error. La Stanford Encyclopedia of Philosophy lo formula al revés de como suele traducirse: zhengming no pide arreglar los nombres, pide arreglar la conducta y la realidad social para que correspondan al lenguaje con el que cada quien se presenta.",
+      "Esa inversión es todo el asunto. Cuando la palabra y el hecho dejan de coincidir hay dos salidas, y no valen lo mismo: mover la palabra hasta que cubra el hecho, o mover el hecho hasta que merezca la palabra. La primera es gratis y se hace todos los días. Lo que se le pedía al gobernante de Wei era la segunda."
+    ],
+    "question": "¿Qué sigues llamando por un nombre que ya no le corresponde?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "ANALECTAS XIII, 3",
+    "subtitle": "Dos salidas cuando la palabra y el hecho no coinciden",
+    "body": "Confucio dijo que empezaría a gobernar corrigiendo los nombres. No pedía cambiar las palabras: pedía cambiar la conducta hasta que mereciera el nombre que ya llevaba. Se lo decía a un rey que ocupaba el trono de su padre desterrado."
+  },
+  "sources": [
+    {
+      "claim": "En Analectas XIII.3 Zilu pregunta a Confucio qué haría primero si el gobernante de Wei lo empleara en la administración, y Confucio responde 必也正名乎 («habría que corregir los nombres»), explicando después que 名不正，則言不順；言不順，則事不成 (si los nombres no son correctos, el lenguaje no se ajusta a la verdad; si el lenguaje no se ajusta, los asuntos no se llevan a cabo).",
+      "source": "Chinese Text Project, Analectas, capítulo Zi Lu, pasaje 3 (texto chino con la traducción de James Legge)",
+      "url": "https://ctext.org/analects/zi-lu"
+    },
+    {
+      "claim": "Zhengming no se refiere a la «rectificación de los nombres» en el sentido en que suelen traducirlo los estudiosos de las Analectas, sino a rectificar la conducta de las personas y la realidad social para que correspondan al lenguaje con el que la gente se identifica y describe sus papeles. En Lunyu 13.3 Confucio apunta contra el gobernante ilegítimo de Wei, que a su juicio usaba indebidamente el título de «sucesor», un título que pertenecía a su padre, el gobernante legítimo de Wei que había sido forzado al exilio.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Confucius» (edición archivada, verano de 2013)",
+      "url": "https://plato.stanford.edu/archives/sum2013/entries/confucius/"
+    },
+    {
+      "claim": "El duque Chu de Wei, de nombre personal Zhe, sucedió al duque Ling mientras su padre Kuaikui estaba huido en el estado de Jin; cuando Kuaikui intentó volver, el duque Chu le puso sitio y padre e hijo quedaron enemistados. En el 480 a.C. Kuaikui depuso a su hijo y reinó como duque Zhuang II de Wei.",
+      "source": "Wikipedia (en), «Duke Chu of Wey»",
+      "url": "https://en.wikipedia.org/wiki/Duke_Chu_of_Wey"
+    }
+  ],
+  "do_not_use": [
+    "No presentar 13.3 como doctrina indiscutida de Confucio. Arthur Waley argumentó contra su fiabilidad histórica: el pasaje usa un estilo de «argumento en cadena» que no aparece en ningún otro lugar de las Analectas, y resulta extraño que Zilu se sorprenda tanto si la idea fuera central en el pensamiento del maestro. Bruce Brooks lo considera una interpolación tardía en el libro XIII.",
+    "No atribuir a Confucio la teoría desarrollada de la rectificación de los nombres. Quien la elabora como doctrina es Xunzi, más de un siglo después; en las Analectas solo está este pasaje.",
+    "No traducir zhengming como si Confucio pidiera vigilar el uso correcto de las palabras. Esa lectura invierte el sentido según la Stanford Encyclopedia: lo que hay que ajustar es la conducta, no el diccionario.",
+    "No fijar el año en que Zhe subió al trono. Las fuentes lo dan en el 493 y en el 492 a.C. según cómo cuenten la muerte del duque Ling. El 480 a.C. de su deposición sí es firme.",
+    "No confundir el estado de Wei 衛 (Wey) con el estado de Wei 魏 de los Reinos Combatientes. Son dos entidades distintas que en alfabeto latino se escriben igual.",
+    "No usar la versión de que Confucio se negó a servir a ninguno de los dos bandos como si fuera parte de 13.3. Ese matiz procede de otros pasajes de las Analectas, no de este."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

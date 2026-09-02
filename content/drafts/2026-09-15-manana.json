@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-15-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Cándido López y la batalla de Curupaytí (1866)",
+    "hook": "Perdió la mano derecha a los veintiséis años y aprendió a pintar con la izquierda. Lo más raro es lo otro: pasó el resto de su vida insistiendo en que aquello no era arte.",
+    "body": [
+      "Cándido López nació en Buenos Aires el 29 de agosto de 1840 y se enroló como oficial de infantería en la Guerra de la Triple Alianza. El 22 de septiembre de 1866, en el asalto a Curupaytí, un casco de metralla le destrozó la mano derecha mientras intentaba pasar la primera línea de trincheras. Hubo que amputar. Aquella jornada dejó 4.033 bajas aliadas según el parte oficial, y fuentes de la época duplican o triplican esa cifra.",
+      "Hacia 1869 empezó a practicar con la mano izquierda. De ahí en adelante, y hasta su muerte en 1902, trabajó sobre los apuntes que había tomado en campaña. Eligió un formato extrañamente apaisado —el ancho tres veces la altura— y un punto de vista alto, de modo que cada tela funciona menos como escena que como plano: se ve dónde estaba cada columna. Cuando expuso la serie en 1885, lo que se elogió fue su veracidad histórica. No eran arte, eran documentos, y así los presentaba el pintor mismo. El Estado los compró en 1887.",
+      "La corrección tardó décadas y no vino de él. En 1936 José León Pagano incluyó su obra en la muestra Un siglo de Arte en la Argentina; en 1949 publicó la primera monografía; en 1971 el Museo Nacional de Bellas Artes le dedicó una retrospectiva. Los cuadros eran los mismos que en 1885. Lo que cambió fue quién los miraba y con qué palabra."
+    ],
+    "question": "¿Qué trabajo tuyo estás llamando «apenas un registro»?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "CURUPAYTÍ, 1866",
+    "subtitle": "Los presentaba como documentos, no como cuadros",
+    "body": "Un casco de metralla le destrozó la mano derecha a los veintiséis años. Aprendió a pintar con la izquierda y levantó la serie sobre la guerra desde sus apuntes de campaña. Tuvieron que pasar ochenta y cinco años para que un museo los colgara como arte."
+  },
+  "sources": [
+    {
+      "claim": "Cándido López nació en Buenos Aires el 29 de agosto de 1840 y falleció en la misma ciudad el 31 de diciembre de 1902; sus telas tienen un formato apaisado inusual, en proporción de uno a tres.",
+      "source": "Arte de la Argentina, ficha de artista «López, Cándido»",
+      "url": "https://artedelaargentina.com.ar/disciplinas/artista/pintura/candido-lopez"
+    },
+    {
+      "claim": "López nació en 1840 y murió en 1902, se enroló como oficial de infantería en la Guerra de la Triple Alianza, en la batalla de Curupaytí una munición le estalló cerca y el médico debió amputarle el brazo derecho, entrenó después su mano izquierda, y pintó la serie sobre la guerra entre 1870 y 1902 a partir de apuntes tomados en el campo de batalla; la expuso en 1885 y el Estado nacional la adquirió en 1887.",
+      "source": "Educ.ar, portal educativo de la Secretaría de Educación (Argentina), ficha sobre Cándido López",
+      "url": "https://www.educ.ar/recursos/131144/candido-lopez-vista-del-interior-de-curuzu-mirado-de-aguas-a"
+    },
+    {
+      "claim": "López fue herido en la mano derecha por una munición de metralla cuando intentaba pasar la primera línea de trincheras en Curupaytí y aprendió después a pintar con la mano izquierda; eligió un formato extraordinariamente apaisado, de tres veces la altura en el ancho de la tela, con puntos de vista elevados que funcionan casi como mapas de las estrategias militares. En la exposición de 1885 se destacó la veracidad histórica de sus pinturas: «No eran arte, eran documentos y así las presentaba el pintor mismo». Recién en la década de 1930 José León Pagano incluyó su trabajo en la exposición Un siglo de Arte en la Argentina (1936) y publicó la primera monografía sobre él en 1949, con la retrospectiva del Museo Nacional de Bellas Artes en 1971 como culminación.",
+      "source": "Revista Cine Documental, «Cándido López. Los campos de batalla (José Luis García, 2005): reescrituras de la Historia y la contemporaneidad»",
+      "url": "http://revista.cinedocumental.com.ar/candido-lopez-los-campos-de-batalla-garcia-2005-reescrituras-de-la-historia-y-la-contemporaneidad/"
+    },
+    {
+      "claim": "La batalla de Curupaytí se libró el 22 de septiembre de 1866; el parte oficial registró 4.033 bajas aliadas, y existen fuentes de la época que duplican o triplican esa cifra.",
+      "source": "Wikipedia (es), «Batalla de Curupaytí»",
+      "url": "https://es.wikipedia.org/wiki/Batalla_de_Curupayt%C3%AD"
+    },
+    {
+      "claim": "López nació el 29 de agosto de 1840 y murió el 31 de diciembre de 1902; hacia 1869 comenzó a practicar pintura con su mano izquierda; sus obras se conservan en el Museo Histórico Nacional, el Museo Mitre, el Museo de Luján y el Museo Nacional de Bellas Artes.",
+      "source": "Wikipedia (es), «Cándido López (pintor)»",
+      "url": "https://es.wikipedia.org/wiki/C%C3%A1ndido_L%C3%B3pez_(pintor)"
+    }
+  ],
+  "do_not_use": [
+    "No dar un número cerrado de cuadros de la serie. Las fuentes discrepan: se habla de 52 obras terminadas, de 58 y de unas 60 conservadas, y de 29 expuestas en 1885. Decir una cifra como si fuera firme es inventar precisión.",
+    "No fijar el grado militar. Unas fuentes lo dan como teniente del batallón de infantería de San Nicolás y otras como subteniente. «Oficial de infantería» es lo único que sostienen todas.",
+    "No decir que perdió el brazo entero de un golpe. La metralla le destrozó la mano derecha y la amputación fue por etapas; circula además una segunda amputación por encima del codo en 1868 cuya fecha no está bien establecida.",
+    "No decir que su obra estuvo olvidada hasta la retrospectiva de 1971. José León Pagano ya la había incluido en Un siglo de Arte en la Argentina en 1936 y le dedicó una monografía en 1949.",
+    "No decir que pintó los cuadros en el frente. Pintó desde apuntes tomados en campaña; la ejecución de la serie es posterior a la guerra, entre 1870 y 1902.",
+    "No decir que el Museo Nacional de Bellas Artes conserva la serie completa. Está repartida: el grueso está en el Museo Histórico Nacional, y hay obras además en el Museo Mitre y en el Museo de Luján.",
+    "No llamarlo «el primer pintor que retrató una guerra desde dentro». Es una etiqueta promocional sin base; lo verificable es su condición de combatiente herido en la batalla que después pintó."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
