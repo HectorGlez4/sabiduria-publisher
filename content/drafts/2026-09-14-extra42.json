@@ -1,0 +1,74 @@
+{
+  "id": "2026-09-14-extra42",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Ibn Tufayl y el filósofo autodidacta",
+    "hook": "Un médico de Guadix escribió en el siglo XII la historia de un niño que crece solo en una isla y llega a la verdad sin maestro, sin libro y sin lengua.",
+    "body": [
+      "Ibn Tufayl nació en Guadix hacia 1105 y murió en Marrakech en 1185 o 1186. Fue jurista, médico y secretario del califa almohade Abu Yaqub Yusuf; cuando se retiró del cargo, recomendó a Averroes como sucesor suyo. De toda su obra en prosa sobrevive un solo libro, la Risālat Ḥayy ibn Yaqẓān, escrita en al-Ándalus hacia 1160. Cuenta la vida de Hayy, un niño criado por una gacela en una isla deshabitada, que observando y razonando llega por su cuenta al orden de la naturaleza y a la idea de lo divino. Su desarrollo avanza por tramos de siete años: imitación de los animales, fabricación de herramientas, contemplación abstracta, ejercicio espiritual.",
+      "El final es la parte que casi nunca se cita. Hayy conoce a Absal, un asceta que llega buscando soledad, aprende de él la lengua y viaja con él a la isla habitada. Allí intenta enseñar lo que descubrió. Cuanto más explica, más rechazo provoca, y no entre malas personas: entre gente que buscaba de buena fe el bien. Concluye que la mayoría necesita las imágenes y los relatos de la religión, deja de insistir y vuelve a su isla.",
+      "En 1671 Edward Pococke el Joven lo tradujo al latín en Oxford con el título Philosophus Autodidactus. Locke había sido alumno de Pococke, y los años en que empezó a redactar su Ensayo sobre el entendimiento humano coinciden con los de esa traducción. Al castellano no llegó hasta 1900, en la versión de Francisco Pons Boigues. El libro que sostiene que una persona sola puede alcanzar la verdad esperó más de setecientos años para poder leerse en la lengua que hoy se habla donde se escribió."
+    ],
+    "question": "¿Qué has entendido sin que nadie te lo enseñara?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "AL-ÁNDALUS, HACIA 1160",
+    "subtitle": "Un niño solo en una isla",
+    "body": "Ibn Tufayl imaginó a un hombre criado por una gacela que llega a la verdad sin maestro ni libro. Al final vuelve a su isla: intentó enseñar lo que sabía y no lo entendieron. Al castellano no se tradujo hasta 1900."
+  },
+  "sources": [
+    {
+      "claim": "Abu Bakr Muhammad ibn Tufayl (Guadix, hacia 1105 – Marrakech, 1185 o 1186) fue filósofo, médico y escritor andalusí, secretario y médico del califa almohade Abu Yaqub Yusuf en Marrakech, y se le recuerda esencialmente por una sola obra, la Risalat Hayy ibn Yaqzan.",
+      "source": "Portal digital de Historia de la traducción en España (PHTE), Universitat Pompeu Fabra, entrada «Ibn Tufayl, Abu Bakr»",
+      "url": "https://phte.upf.edu/dhte/arabe/ibn-tufayi-abu-bakr/"
+    },
+    {
+      "claim": "Edward Pococke publicó en Oxford en 1671 la traducción latina de la obra con el título Philosophus Autodidactus; la primera versión castellana es la de Francisco Pons Boigues, «El filósofo autodidacto de Abentofáil» (1900), y en 1934 apareció la de Ángel González Palencia.",
+      "source": "Portal digital de Historia de la traducción en España (PHTE), Universitat Pompeu Fabra, entrada «Ibn Tufayl, Abu Bakr»",
+      "url": "https://phte.upf.edu/dhte/arabe/ibn-tufayi-abu-bakr/"
+    },
+    {
+      "claim": "Ibn Tufayl se formó en jurisprudencia y ciencia islámica, además de medicina y cirugía; fue secretario del gobernador almohade de Granada y médico del califa Abu Yaqub Yusuf; niega en el prólogo de su obra haber sido discípulo de Avempace, pese a que la atribución circula.",
+      "source": "Real Academia de la Historia, Diccionario Biográfico electrónico, entrada «Ibn Tufayl»",
+      "url": "https://dbe.rah.es/biografias/12580/ibn-tufayl"
+    },
+    {
+      "claim": "Ibn Tufayl ofrece dos relatos alternativos del origen de Hayy —generación espontánea a partir del barro, o niño abandonado y echado al mar—, una gacela lo amamanta y lo cría, y su desarrollo sigue un patrón por tramos de siete años: imitación de los animales, razonamiento práctico y fabricación de herramientas, contemplación abstracta y ejercicio espiritual.",
+      "source": "Encyclopedia.com, «Hayy ibn Yaqzan»",
+      "url": "https://www.encyclopedia.com/arts/culture-magazines/hayy-ibn-yaqzan"
+    },
+    {
+      "claim": "Absal, un asceta llegado de otra isla, enseña a Hayy la lengua y reconoce que las verdades que Hayy descubrió por su cuenta coinciden con las enseñanzas simbólicas de su religión; el intento de instruir a la gente de la isla de Salaman fracasa, Hayy concluye que la mayoría no tiene capacidad para sus razonamientos, y ambos vuelven a la isla desierta.",
+      "source": "Encyclopedia.com, «Hayy ibn Yaqzan»",
+      "url": "https://www.encyclopedia.com/arts/culture-magazines/hayy-ibn-yaqzan"
+    },
+    {
+      "claim": "Hayy vuelve a su isla con Absal, donde ambos llevan una vida de contemplación hasta la muerte; el título con que Pococke presentó la obra en 1671 la reformuló como demostración de que la razón humana puede ascender por sí sola de lo inferior a lo superior, lo que desplaza el acento intuitivo del original.",
+      "source": "Aeon, «Ibn Tufayl and the story of the feral child of philosophy»",
+      "url": "https://aeon.co/ideas/ibn-tufayl-and-the-story-of-the-feral-child-of-philosophy"
+    },
+    {
+      "claim": "Ibn Tufayl fue médico y visir del califa almohade Abu Yaqub Yusuf hasta 1182, cuando renunció y recomendó a Averroes como sucesor suyo; antes lo había presentado ante el soberano.",
+      "source": "New World Encyclopedia, «Ibn Tufayl»",
+      "url": "https://www.newworldencyclopedia.org/entry/Ibn_Tufayl"
+    }
+  ],
+  "do_not_use": [
+    "No afirmar como hecho que Hayy ibn Yaqzan inspiró Robinson Crusoe. Es un paralelismo señalado por la crítica, no una deuda documentada por Defoe.",
+    "No afirmar que Locke tomó de ahí la tabula rasa. Lo documentado es que fue alumno de Pococke y que las fechas coinciden; la influencia directa se discute y no está probada.",
+    "No extender la lista de influidos a Newton, Kant, Hume o Berkeley. Esa cadena circula en resúmenes divulgativos y no la sostiene ninguna evidencia de lectura.",
+    "No llamar a Ibn Tufayl discípulo de Avempace. Él mismo lo desmiente en el prólogo de su obra.",
+    "No dar 1185 como fecha cerrada de su muerte: las fuentes dan 1185 o 1186.",
+    "No presentar el libro como un elogio del individuo contra la religión. El propio final lo contradice: Hayy concluye que la mayoría necesita las imágenes religiosas y deja de predicar.",
+    "No decir que es «la primera novela de la historia». Se lee a veces como la primera novela filosófica árabe, pero la etiqueta absoluta es falsa."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

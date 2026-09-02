@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-14-extra43",
+  "slot": "tarde",
+  "pillar": "figura",
+  "core": {
+    "subject": "Guaman Poma y su carta al rey Felipe III",
+    "hook": "Escribió mil doscientas páginas y cuatrocientos dibujos para que el rey de España supiera lo que pasaba en los Andes. El rey no lo leyó nunca.",
+    "body": [
+      "Felipe Guaman Poma de Ayala, andino de la región de Lucanas, nació hacia 1535 y murió hacia 1615. Terminó ese mismo año El primer nueva corónica y buen gobierno: mil doscientas páginas en castellano con pasajes en quechua y cuatrocientos dibujos a pluma a página completa, hechos por él. No es una crónica de anticuario. Es una denuncia del gobierno colonial, encabezada por una carta al rey Felipe III fechada el 14 de febrero de 1615 y firmada en Santiago de Chipao.",
+      "El manuscrito salió probablemente de Lima hacia Madrid en 1616. No consta que llegara a manos del rey. Lo siguiente que se sabe de él es que ya estaba en las colecciones reales danesas en la década de 1660, atribuido a Cornelius Pedersen Lerche, embajador de Dinamarca en España y coleccionista de libros. Figura catalogado en Copenhague en 1729. Y ahí siguió, ordenado y a la vista, hasta que en 1908 el historiador alemán Richard Pietschmann lo identificó a partir de un catálogo manuscrito antiguo. Casi trescientos años, no perdido: sin lector.",
+      "La primera edición facsimilar se publicó en París en 1936. Hoy el manuscrito tiene la signatura GKS 2232 4º en la Biblioteca Real de Dinamarca, está digitalizado entero y en abierto, y desde 2007 figura en el registro Memoria del Mundo de la UNESCO. Es la fuente ilustrada más extensa que existe sobre el mundo andino escrita por un andino. Llegó a millones de lectores. Ninguno era aquel al que iba dirigida."
+    ],
+    "question": "¿Qué haces con lo que sabes cuando no hay quien lo escuche?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "PERÚ, 1615",
+    "subtitle": "Mil doscientas páginas para un rey que no las leyó",
+    "body": "Guaman Poma escribió y dibujó una denuncia del gobierno colonial dirigida a Felipe III. El manuscrito acabó en Copenhague, catalogado y a la vista, y nadie lo leyó hasta 1908."
+  },
+  "sources": [
+    {
+      "claim": "El manuscrito de mil doscientas páginas contiene cuatrocientos dibujos a pluma en blanco y negro a página completa; está escrito en castellano con pasajes en quechua por Felipe Guaman Poma de Ayala (h. 1535 – h. 1615), y probablemente se envió de Lima a Madrid en 1616 dirigido al rey Felipe III. Pudo ser adquirido en España por el embajador danés Cornelius Lerche (1615-1681) y entregado al rey Federico III.",
+      "source": "Det Kgl. Bibliotek (Biblioteca Real de Dinamarca), «Chronicle of Guaman Poma»",
+      "url": "https://www.kb.dk/en/find-materials/collections/manuscript-collection/chronicle-guaman-poma"
+    },
+    {
+      "claim": "El manuscrito tiene la signatura GKS 2232 4º; integró las colecciones reales danesas desde la década de 1660, durante el reinado de Federico III, y aparece en un catálogo de 1729. Richard Pietschmann lo identificó en 1908 a partir de un catálogo manuscrito de 1784-1786. La primera edición facsimilar se publicó en París en 1936. Probablemente Felipe III no lo recibió en persona, aunque el manuscrito sí llegó a la corte real española.",
+      "source": "Corpus. Archivos virtuales de la alteridad americana (SciELO Argentina), «La Nueva corónica y buen gobierno de Guaman Poma: del manuscrito autógrafo del siglo XVII a su reproducción digital del siglo XXI»",
+      "url": "https://www.scielo.org.ar/scielo.php?script=sci_arttext&pid=S2718-658X2022000200034"
+    },
+    {
+      "claim": "La carta al rey Felipe III que encabeza la obra está fechada el 14 de febrero de 1615.",
+      "source": "Det Kgl. Bibliotek, edición digital «Guaman Poma – Letter to a King / Carta al Rey»",
+      "url": "https://poma.kb.dk/permalink/2006/poma/info/en/docs/carta1615/index.htm"
+    },
+    {
+      "claim": "La obra consta de mil doscientas páginas con cuatrocientas ilustraciones a página completa, permanece en Dinamarca desde 1660, fue redescubierta en 1908 e inscrita en el Registro Internacional de la Memoria del Mundo de la UNESCO en 2007 (y en el registro regional para América Latina y el Caribe en 2011).",
+      "source": "UNESCO, Memoria del Mundo, «First New Chronicle and Good Government by Felipe Guamán Poma de Ayala»",
+      "url": "https://www.unesco.org/en/memory-world/lac/first-new-chronicle-and-good-government-felipe-guaman-poma-de-ayala"
+    },
+    {
+      "claim": "Pietschmann examinó la colección real de la Biblioteca de Copenhague durante el XV Congreso Internacional de Orientalistas, celebrado allí en agosto de 1908, y dio a conocer el hallazgo a la comunidad científica en el Congreso Internacional de Americanistas de Londres de 1912, con actas publicadas en 1913.",
+      "source": "Corpus. Archivos virtuales de la alteridad americana (SciELO Argentina), estudio sobre el manuscrito de Guaman Poma",
+      "url": "https://www.scielo.org.ar/scielo.php?script=sci_arttext&pid=S2718-658X2022000200034"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el manuscrito «se perdió» ni que «apareció por casualidad en un desván». Estuvo catalogado en la Biblioteca Real de Copenhague desde el siglo XVIII: lo que faltó fue que alguien lo buscara.",
+    "No dar por seguro que Felipe III lo recibió, lo leyó o lo rechazó. Las fuentes indican que probablemente no llegó a sus manos, aunque sí llegó a la corte española.",
+    "No decir que la UNESCO lo inscribió en 1999. Esa fecha circula en resúmenes; el Registro Internacional de la Memoria del Mundo lo recoge en 2007, y el registro regional en 2011.",
+    "No decir que Pietschmann tropezó con él por azar. Lo identificó en 1908 a partir de un catálogo manuscrito de 1784-1786, sabiendo que la biblioteca custodiaba manuscritos americanos del siglo XVII.",
+    "No dar 1615 como fecha cerrada de la muerte de Guaman Poma ni de la terminación de la obra: las fuentes dan «hacia 1615» para ambas, y el envío se sitúa en 1616.",
+    "No traducir «corónica» como error de imprenta ni corregirlo a «crónica» al citar el título. La grafía del original es «El primer nueva corónica y buen gobierno»."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

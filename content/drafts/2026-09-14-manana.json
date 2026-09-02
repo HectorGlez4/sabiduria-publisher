@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-14-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Maria Sibylla Merian y el viaje a Surinam de 1699",
+    "hook": "Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.",
+    "body": [
+      "Maria Sibylla Merian nació en Fráncfort en 1647 y murió en Ámsterdam en 1717. En abril de 1699 se embarcó hacia Surinam con su hija menor, Dorothea. Los naturalistas neerlandeses de su tiempo viajaban con el respaldo de las grandes compañías comerciales; ella no. Vendió parte de su colección y alrededor de doscientos cincuenta y cinco pinturas propias, y completó el resto con una ayuda pequeña del ayuntamiento de Ámsterdam.",
+      "Estuvo dos años en la selva, hasta que una enfermedad la obligó a volver en 1701. Lo que trajo no era una colección de ejemplares clavados con alfileres. Había dibujado a los insectos vivos y en su sitio: el huevo, la oruga, la crisálida y el adulto en la misma lámina, y encima la planta concreta de la que aquel animal comía. En 1705 publicó Metamorphosis insectorum Surinamensium, sesenta láminas de cobre, en neerlandés y en latín, asumiendo ella el riesgo económico de la edición.",
+      "Poner al insecto sobre su planta parece una decisión de composición. Es una tesis: que un ser vivo no se entiende separado de aquello con lo que se relaciona. La palabra ecología no existiría hasta 1866, siglo y medio después. Hay algo más en ese libro que casi ningún naturalista de la época escribió: Merian dejó constancia de dónde venía su información, y cita el conocimiento de las personas esclavizadas y de los habitantes originarios de Surinam."
+    ],
+    "question": "¿A quién le debes un dato que hoy das por tuyo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "ÁMSTERDAM, 1699",
+    "subtitle": "Se pagó ella misma la expedición",
+    "body": "Ninguna compañía la respaldó. Vendió doscientos cincuenta y cinco cuadros suyos y parte de su colección, y se embarcó hacia Surinam con su hija menor. Volvió con sesenta láminas que dibujaban al insecto junto a la planta de la que comía."
+  },
+  "sources": [
+    {
+      "claim": "Maria Sibylla Merian vivió entre 1647 y 1717 y tenía cincuenta y dos años cuando viajó a Surinam en 1699 con su hija menor, Dorothea.",
+      "source": "Rijksmuseum, nota de prensa sobre la adquisición de una obra cumbre de Merian",
+      "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-acquires-highlight-of-maria-sibylla-merian-s-oeuvre"
+    },
+    {
+      "claim": "Nació el 2 de abril de 1647, murió el 13 de enero de 1717 en Ámsterdam, y partió hacia Surinam en abril de 1699 con cincuenta y dos años; financió el viaje vendiendo parte de su colección de arte y de ejemplares.",
+      "source": "Biblioteca de la Universidad Complutense de Madrid, blog Folio Complutense, «María Sibylla Merian, la científica de las mariposas»",
+      "url": "https://webs.ucm.es/BUCM/blogs/Foliocomplutense/8672.php"
+    },
+    {
+      "claim": "Merian y su hija se sostuvieron económicamente durante el viaje con la venta de unas 255 pinturas propias; circulan rumores de un patrocinio de la Compañía Neerlandesa de las Indias Occidentales, pero no hay reconocimiento de ese patrocinio en los escritos de Merian.",
+      "source": "The Public Domain Review, «Maria Sibylla Merian's Metamorphosis Insectorum Surinamensium (1705)»",
+      "url": "https://publicdomainreview.org/collection/merian-metamorphosis"
+    },
+    {
+      "claim": "El viaje de estudio a Surinam duró de 1699 a 1701; la primera edición de Metamorphosis insectorum Surinamensium se publicó en 1705 en Ámsterdam con sesenta láminas, en versiones neerlandesa y latina, y Merian asumió personalmente el riesgo económico de la publicación.",
+      "source": "Universidad de Utrecht, Colecciones Especiales, «Metamorphosis by Merian»",
+      "url": "https://www.uu.nl/en/special-collections/the-treasury/early-and-rare-prints/metamorphosis-by-merian"
+    },
+    {
+      "claim": "Su método consistía en representar en una misma lámina los distintos estadios del insecto —huevo, oruga, pupa y adulto— y la planta concreta de la que se alimentaba, observados vivos en su hábitat.",
+      "source": "Universidad de Utrecht, Colecciones Especiales, «Metamorphosis by Merian»; Biblioteca de la Universidad Complutense de Madrid, Folio Complutense",
+      "url": "https://www.uu.nl/en/special-collections/the-treasury/early-and-rare-prints/metamorphosis-by-merian"
+    },
+    {
+      "claim": "La obra contiene descripciones de las circunstancias en que Merian reunió su información y revela que se apoyó en el conocimiento de personas esclavizadas y de los habitantes originarios de Surinam.",
+      "source": "Rijksmuseum, nota de prensa sobre la adquisición de una obra cumbre de Merian",
+      "url": "https://www.rijksmuseum.nl/en/press/press-releases/rijksmuseum-acquires-highlight-of-maria-sibylla-merian-s-oeuvre"
+    },
+    {
+      "claim": "Regresó de Surinam en 1701 tras contraer una enfermedad de tipo palúdico que interrumpió el trabajo de campo.",
+      "source": "The Public Domain Review, «Maria Sibylla Merian's Metamorphosis Insectorum Surinamensium (1705)»",
+      "url": "https://publicdomainreview.org/collection/merian-metamorphosis"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Merian demostró que la generación espontánea era falsa. La idea ya venía siendo refutada por Francesco Redi (1668) y por Jan Swammerdam; su trabajo documentó ciclos vitales completos, pero atribuirle en solitario el derribo de esa creencia es falso.",
+    "No decir que la Compañía Neerlandesa de las Indias Occidentales financió el viaje. Es un rumor recurrente: no hay reconocimiento de patrocinio alguno en los escritos de Merian.",
+    "No decir que la primera edición tiene setenta y dos láminas. Son sesenta. Las setenta y dos corresponden a la edición ampliada de 1719, posterior a su muerte.",
+    "No llamarla «la primera mujer naturalista». Es una etiqueta promocional, no un dato: hubo naturalistas mujeres antes, y el mérito de Merian es metodológico, no cronológico.",
+    "No decir que viajó sola. La acompañó su hija menor, Dorothea, que además siguió publicando su obra después de 1717."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "2026-09-14-extra41",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Los diez días de octubre de 1582",
+    "hook": "Teresa de Ávila murió a las nueve de la noche del jueves 4 de octubre de 1582. La enterraron a la mañana siguiente, que fue viernes 15.",
+    "body": [
+      "El calendario juliano corría unos once minutos largo cada año. En dieciséis siglos, esos minutos se habían convertido en diez días de desfase, y el equinoccio de primavera —del que depende el cálculo de la Pascua— ya no caía donde lo habían fijado los padres del Concilio de Nicea. La bula Inter gravissimas, firmada por Gregorio XIII el 24 de febrero de 1582, ordenó la corrección: suprimir del calendario los días 5 a 14 de octubre de aquel año. Al jueves 4 le siguió el viernes 15.",
+      "Teresa de Jesús agonizaba esa misma noche en Alba de Tormes. Murió con las nueve campanadas del jueves 4. Su funeral se celebró a las diez de la mañana siguiente, y esa mañana ya era 15 de octubre. Ahí quedó su fiesta. No hubo diez días de agonía: hubo una noche, y dos nombres para las dos orillas de esa noche.",
+      "Los países católicos aplicaron el cambio en 1582. Inglaterra y sus colonias esperaron hasta 1752. Durante casi ciento setenta años, Europa escribió dos fechas distintas para el mismo instante. De ahí viene la coincidencia más repetida de la historia literaria: Cervantes y Shakespeare figuran los dos en el 23 de abril de 1616. Pero el 23 inglés era juliano; en el calendario que hoy usamos, Shakespeare murió el 3 de mayo. Y el 23 de Cervantes es el día en que lo enterraron: murió el 22."
+    ],
+    "question": "¿Qué coincidencia que das por cierta depende solo de cómo se cuenta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "OCTUBRE DE 1582",
+    "subtitle": "Al jueves 4 le siguió el viernes 15",
+    "body": "Diez días suprimidos por bula para devolver el equinoccio a su sitio. Teresa de Ávila murió la noche del jueves 4 y la enterraron a la mañana siguiente, ya 15 de octubre. Inglaterra tardaría ciento setenta años en cambiar."
+  },
+  "sources": [
+    {
+      "claim": "El error acumulado del calendario juliano era de unos once minutos y quince segundos al año, lo que había producido un desfase de diez días en los aproximadamente mil seiscientos años de vigencia; el problema se volvió urgente porque afectaba a la fecha de la Pascua. El 4 de octubre de 1582 fue seguido directamente por el 15 de octubre.",
+      "source": "CSIC, Casa de la Ciencia, «Los diez días borrados de la historia»",
+      "url": "https://www.casadelaciencia.csic.es/es/blog/diez-dias-borrados-historia"
+    },
+    {
+      "claim": "Inter gravissimas es la bula papal promulgada por Gregorio XIII el 24 de febrero de 1582; ordenó suprimir diez días de octubre de 1582 para devolver el equinoccio de primavera a la fecha fijada por los padres del Concilio de Nicea, de modo que al 4 de octubre siguiera el 15.",
+      "source": "Wikipedia (en), «Inter gravissimas», con el texto de la bula",
+      "url": "https://en.wikipedia.org/wiki/Inter_gravissimas"
+    },
+    {
+      "claim": "Teresa de Jesús murió el jueves 4 de octubre de 1582 en una celda del convento de Alba de Tormes, al dar el reloj las nueve; el día siguiente, por efecto de la reforma del calendario de Gregorio XIII, fue 15 de octubre, y a las diez de la mañana se celebró su funeral en la iglesia recién concluida.",
+      "source": "Monasterio de la Anunciación de Nuestra Señora, Carmelitas Descalzas de Alba de Tormes, «Alba de Tormes y Teresa»",
+      "url": "https://carmelitasalba.org/historia-y-arte/alba-de-tormes-y-teresa/"
+    },
+    {
+      "claim": "Ni Shakespeare ni Cervantes murieron el 23 de abril de 1616: Shakespeare murió once días después que Cervantes, el 3 de mayo según el calendario gregoriano que España había adoptado en 1582, aunque en el calendario juliano que Inglaterra usó hasta 1752 esa fecha fuera el 23 de abril. En España se registraba como fecha de defunción la del entierro, de modo que Cervantes fue enterrado el 23 y murió el 22.",
+      "source": "Folger Shakespeare Library, «Shakespeare and Cervantes: 400 Years Later»",
+      "url": "https://www.folger.edu/blogs/shakespeare-and-beyond/shakespeare-and-cervantes-400-years/"
+    },
+    {
+      "claim": "En el momento de la muerte de Cervantes, España ya usaba el calendario gregoriano e Inglaterra seguía con el juliano; por el criterio actual, la muerte de Shakespeare correspondería al 3 de mayo, y el 23 de abril de 1616 se admite hoy como el día de su entierro en el caso de Cervantes.",
+      "source": "Cambridge University Library, Special Collections, «Is this the day, of all the days?»",
+      "url": "https://specialcollections-blog.lib.cam.ac.uk/?p=12507"
+    },
+    {
+      "claim": "Inglaterra y sus colonias no aplicaron el calendario gregoriano hasta septiembre de 1752.",
+      "source": "CSIC, Casa de la Ciencia, «Los diez días borrados de la historia»",
+      "url": "https://www.casadelaciencia.csic.es/es/blog/diez-dias-borrados-historia"
+    }
+  ],
+  "do_not_use": [
+    "No decir que «se perdieron diez días de historia» ni que la gente vivió diez días menos. No se suprimió tiempo: se suprimieron diez etiquetas del calendario para devolver el equinoccio a su sitio.",
+    "No contar los motines del «devolvednos nuestros once días». Es un relato asociado al cambio inglés de 1752, construido en buena parte sobre un cuadro de Hogarth, y los historiadores no lo dan por hecho.",
+    "No decir que Cervantes y Shakespeare murieron el mismo día. Cervantes murió el 22 de abril y fue enterrado el 23; Shakespeare murió un 23 juliano, que equivale al 3 de mayo gregoriano.",
+    "No decir que toda Europa cambió a la vez en octubre de 1582, ni agrupar a Francia con España en esa misma noche. La adopción francesa fue posterior dentro del mismo año, y las fuentes divulgativas suelen juntarlas sin distinguir.",
+    "No decir que Teresa de Ávila murió «el 15 de octubre». Murió el jueves 4 a las nueve de la noche; el 15 es el día del entierro, y por eso quedó fijada ahí su fiesta.",
+    "No atribuir el cálculo a Gregorio XIII en persona. La reforma la elaboró una comisión de astrónomos y matemáticos; el papa la promulgó."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
