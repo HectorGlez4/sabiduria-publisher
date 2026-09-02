@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 02 Sep 2026 02:47:23 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 08:51:18 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Yo fui el arquitecto de mi propio destino.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-30-re04-reel</guid>
+      <pubDate>Wed, 02 Sep 2026 06:17:00 +0000</pubDate>
+      <description><![CDATA["Yo fui el arquitecto de mi propio destino."
+— Amado Nervo (1870-1919)
+
+Este verso se ha vuelto un eslogan de superación personal. En el poema no lo es. El verso anterior dice desde dónde habla: muy cerca de mi ocaso. No es alguien celebrando lo que consiguió, es un hombre haciendo cuentas al final.
+
+Y las cuentas salen raras. Agradece que la vida nunca le prometiera nada: ni mayo eterno, ni solo noches buenas. Por eso no termina en victoria, termina en empate. La última línea dice que la vida no le debe nada y que quedan en paz.
+
+Nervo lo escribió después de perder a la mujer con la que vivió diez años, muerta en 1912. Él murió en Montevideo en mayo de 1919, a los cuarenta y ocho.
+
+¿Con quién o con qué te falta quedar en paz?
+
+#SabiduriaDeBolsillo #AmadoNervo #Poesia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re04-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re04-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>La tradición rapanui siempre dijo que los moái caminaron. Se archivó como leyenda.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,26 +512,6 @@ Lo tradujeron un rey de Inglaterra, Chaucer y la reina Isabel I.
 #SabiduriaDeBolsillo #Boecio #Filosofia #EdadMedia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-noche.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-noche.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Hay golpes en la vida, tan fuertes... Yo no sé." — César Vallejo, poema inicial de Los heraldos negros</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-27-extra11</guid>
-      <pubDate>Sun, 30 Aug 2026 07:08:56 +0000</pubDate>
-      <description><![CDATA["Hay golpes en la vida, tan fuertes... Yo no sé."
-— César Vallejo, Los heraldos negros (1918)
-
-El libro que abre ese verso lleva 1918 en la portada. Entró a la Imprenta Souza Ferreyra de Lima a mediados de ese año y no llegó a las librerías hasta mediados de julio de 1919. Doce meses detenido, esperando un prólogo que Abraham Valdelomar había prometido y que nunca escribió. El libro salió sin él, con un epígrafe del Evangelio en su lugar: quien pueda entender, que entienda.
-
-Vallejo no esperó quieto: durante ese año volvía a la imprenta a corregir sus propios poemas. De aquella primera edición se han localizado diez ejemplares con variantes entre sí, y el investigador que los cotejó concluyó que hubo al menos media docena de primeras ediciones distintas. Valdelomar murió cuatro meses después de que el libro llegara a las tiendas, a los treinta y un años.
-
-El verso más repetido de la poesía peruana no afirma nada. Nombra el golpe y se detiene. En la misma estrofa, dos veces, el poeta admite que no sabe explicarlo.
-
-¿Qué golpe de los tuyos todavía no sabes explicar?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra11.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra11.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
