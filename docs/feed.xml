@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 02 Sep 2026 12:48:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 14:36:20 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La pantalla anunció cinco misiles nucleares en camino. El hombre de guardia decidió que la máquina mentía.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-02-manana</guid>
+      <pubDate>Wed, 02 Sep 2026 14:36:08 +0000</pubDate>
+      <description><![CDATA[La pantalla anunció cinco misiles nucleares en camino. El hombre de guardia decidió que la máquina mentía.
+
+Poco después de la medianoche del 26 de septiembre de 1983, en un búnker llamado Serpujov-15, el sistema de satélites Oko anunció el lanzamiento de un misil estadounidense. Enseguida, cuatro más. De guardia estaba el teniente coronel Stanislav Petrov.
+
+Informó a sus superiores que era una falla del sistema. Se apoyó en dos cosas: nadie empieza una guerra nuclear con cinco misiles, y los radares de tierra no confirmaban nada. Tenía razón. Era luz del sol reflejada en nubes de gran altura, alineadas con la órbita de los satélites. No hubo condecoración: le pusieron una reprimenda por llevar mal el diario de guardia.
+
+El episodio se hizo público en 1998, cuando el general Yuri Votintsev lo contó en sus memorias: quince años después. Petrov nunca aceptó que lo llamaran héroe. Decía que estuvo en el lugar adecuado en el momento adecuado y que solo hacía su trabajo. Murió el 19 de mayo de 2017 y la noticia tardó cuatro meses en salir de su casa.
+
+¿Qué decisión tuya, sin testigos, resultó ser la correcta?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-manana.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-manana.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>EPICTETO: nació esclavo y nunca escribió un libro. El hombre más poderoso del mundo lo citaba de memoria</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -493,25 +512,6 @@ Por qué no presentó ella su propio trabajo no consta en ninguna parte. Lo que 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-extra15.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-extra15.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-28-extra13</guid>
-      <pubDate>Sun, 30 Aug 2026 17:39:55 +0000</pubDate>
-      <description><![CDATA[En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.
-
-El monte Tambora, en la isla indonesia de Sumbawa, empezó a erupcionar el 5 de abril de 1815 y llegó a su clímax el día 10. La montaña perdió cerca de un tercio de su altura: de unos 4.300 metros quedó en 2.851. La explosión se oyó a más de 2.600 kilómetros. Las estimaciones de víctimas van de once mil por el efecto directo a más de setenta mil sumando el hambre y las epidemias que vinieron después.
-
-El polvo dio la vuelta al planeta. En 1816 la temperatura media del hemisferio norte bajó alrededor de medio grado y el verano no llegó. El 6 de junio nevó en Albany, en el estado de Nueva York. A doce mil kilómetros del volcán, junto al lago de Ginebra, la lluvia encerró en una casa a cuatro huéspedes ingleses durante días. Uno de ellos propuso que cada uno escribiera una historia de fantasmas. De ahí salió Frankenstein, que Mary Shelley empezó a los dieciocho años, y el relato que fundó el vampiro moderno.
-
-Medio grado de temperatura media. Bastó para arruinar las cosechas de un continente, provocar la peor hambruna europea del siglo y dejar dos libros que seguimos leyendo doscientos años después. El clima nunca fue el fondo del cuadro.
-
-¿Cuánto de lo que hoy eres empezó lejos, en algo que no elegiste?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra13.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra13.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

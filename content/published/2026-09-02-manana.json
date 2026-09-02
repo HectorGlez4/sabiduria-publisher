@@ -54,13 +54,24 @@
     "DESCARTADO AL VERIFICAR: presentar el episodio como el único momento en que el mundo estuvo cerca de una guerra nuclear. Los especialistas lo cuentan como uno de varios incidentes de la Guerra Fría, no como un punto único. Decirlo en superlativo es falso y además innecesario: la noche del 26 de septiembre se sostiene sola.",
     "No usar imágenes, cifras de víctimas hipotéticas ni lenguaje catastrofista. El tono de la pieza es el de un hombre solo en un turno de noche haciendo bien su trabajo, no el de un thriller."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-02T14:16:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1084669757691017",
+      "url": "https://www.facebook.com/874327782058550/posts/1084669757691017",
+      "published_at": "2026-09-02T14:36:08.584224+00:00"
+    },
+    "instagram": {
+      "post_id": "18342514261283531",
+      "url": "https://www.instagram.com/p/DcydzNsFFQh/",
+      "published_at": "2026-09-02T14:36:20.709174+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
