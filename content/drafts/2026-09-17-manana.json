@@ -1,0 +1,74 @@
+{
+  "id": "2026-09-17-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el mármol antiguo estaba pintado",
+    "hook": "La escultura clásica no era blanca. Lo blanco es lo que quedó, y en 1938 un museo se encargó de terminar el trabajo.",
+    "body": [
+      "En 1980, en Atenas, el arqueólogo Vinzenz Brinkmann iluminó de costado unas esculturas que todo el mundo daba por blancas y aparecieron restos de color. La luz rasante delata en la superficie del mármol el relieve que dejó la pintura; la luz ultravioleta delata lo que ya no se ve. De ahí salió Bunte Götter, la exposición de reconstrucciones policromadas que desde 2003 recorre el mundo y ha pasado de los tres millones de visitantes.",
+      "El blanco no fue un accidente del todo. En 1764 Johann Joachim Winckelmann publicó su Historia del arte de la Antigüedad y escribió que cuanto más blanco es un cuerpo, más bello es. Había visto estatuas pintadas en Nápoles y descartó la evidencia. Entre 1937 y 1938, en el Museo Británico, se rasparon las esculturas del Partenón con cinceles de cobre y carborundo para quitarles la pátina y devolverles una blancura que nunca habían tenido. El director John Forsdyke lo descubrió en septiembre de 1938. La comisión interna concluyó que el daño era evidente, y el museo mantuvo la documentación cerrada hasta los años noventa.",
+      "En octubre de 2023, la revista Antiquity publicó el examen de esas mismas piedras con luminiscencia inducida por luz visible, una técnica que detecta el azul egipcio aunque solo queden partículas sueltas. Apareció en once figuras de los frontones y en una del friso, junto con blancos de yeso y de hueso y un colorante púrpura. Después de dos mil cuatrocientos años de intemperie y de un raspado con cobre, el color seguía ahí."
+    ],
+    "question": "¿Qué cosa das por su forma original solo porque así te llegó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "EL MÁRMOL NO ERA BLANCO",
+    "subtitle": "Una técnica de 2023 encontró el color que el siglo XX raspó",
+    "body": "La escultura griega estaba pintada. En 1764 Winckelmann escribió que cuanto más blanco es un cuerpo, más bello es. En 1938 el Museo Británico raspó las esculturas del Partenón con cobre para blanquearlas. En 2023 aún se halló azul egipcio en doce de ellas."
+  },
+  "sources": [
+    {
+      "claim": "Vinzenz Brinkmann descubrió en 1980, siendo becario en Atenas, numerosas trazas de color en esculturas griegas; ideó una lámpara que ilumina el objeto de forma oblicua para destacar el relieve de la superficie. El proyecto de investigación sobre policromía del Liebieghaus lleva más de cuarenta años dirigido por Vinzenz Brinkmann y Ulrike Koch-Brinkmann, y la exposición itinerante ha superado los tres millones de visitantes desde que empezó a girar en 2003.",
+      "source": "Liebieghaus Skulpturensammlung (Frankfurt), Liebieghaus Polychromy Research Project",
+      "url": "https://liebieghaus.de/en/polychromy-research"
+    },
+    {
+      "claim": "La exposición «Bunte Götter – Die Farbigkeit antiker Skulptur» (Gods in Color) se inauguró en Múnich en 2003 y se basa en la investigación sobre policromía antigua que Vinzenz Brinkmann realiza desde comienzos de los años ochenta. Para hacer visible la pintura desvanecida sobre el mármol se recurrió a la luz ultravioleta, según un procedimiento desarrollado por la fotógrafa Eva-Maria Czakó.",
+      "source": "Gods in Color / Bunte Götter, ficha de la exposición itinerante",
+      "url": "https://en.wikipedia.org/wiki/Gods_in_Color"
+    },
+    {
+      "claim": "En 1764 Johann Joachim Winckelmann publicó Geschichte der Kunst des Alterthums (Historia del arte de la Antigüedad), donde sostiene que cuanto más blanco es un cuerpo, más bello es, y que el color contribuye a la belleza pero no es la belleza. Tuvo acceso a los hallazgos policromados de Pompeya y Herculano y examinó personalmente en Nápoles una estatua pintada de Artemisa, y aun así rechazó la evidencia del color.",
+      "source": "Smithsonian Magazine, «True Colors» (reportaje sobre la policromía antigua y la construcción del ideal blanco)",
+      "url": "https://www.smithsonianmag.com/arts-culture/true-colors-17888/"
+    },
+    {
+      "claim": "Entre 1937 y 1938 parte de las esculturas del Partenón del Museo Británico se limpiaron con métodos agresivos y no autorizados —raspadores y cinceles de cobre y carborundo abrasivo— para retirar la pátina anaranjada, a instancias de Joseph Duveen, que financiaba la nueva galería. En septiembre de 1938 el director John Forsdyke descubrió la limpieza en curso; Sidney Smith le había advertido el 22 de septiembre de que unos bloques del friso presentaban un aspecto crudo. La comisión de investigación concluyó que el daño era evidente y no podía exagerarse, y el museo mantuvo la documentación reservada hasta los años noventa. El conservador Ian Jenkins publicó análisis detallados del episodio en 1999 y 2001.",
+      "source": "Ficha documental del escándalo de limpieza de 1937-1938 de las esculturas del Partenón; y Ian Jenkins, «Cleaning and Controversy: The Parthenon Sculptures 1811–1939», British Museum Occasional Paper",
+      "url": "https://en.wikipedia.org/wiki/1937%E2%80%931938_Elgin_Marbles_cleaning_scandal"
+    },
+    {
+      "claim": "Ficha institucional de la publicación del Museo Británico «Cleaning and Controversy: The Parthenon Sculptures 1811–1939», de Ian Jenkins, en el repositorio de investigación del propio museo.",
+      "source": "British Museum Research Repository (British Library Hyku)",
+      "url": "https://britishmuseum.iro.bl.uk/concern/books/58d52358-258e-4e92-a147-695e2584eb83"
+    },
+    {
+      "claim": "Giovanni Verri, Hero Granger-Taylor, Ian Jenkins, Tracey Sweek, Katarzyna Weglowska y William Thomas Wootton, «The goddess' new clothes: the carving and polychromy of the Parthenon Sculptures», Antiquity, vol. 97, n.º 395, publicado en línea el 11 de octubre de 2023. Se detectó azul egipcio en once esculturas de los frontones y en una figura del friso, además de blancos de yeso y de hueso y un colorante púrpura identificado provisionalmente como una sustancia con antraquinona.",
+      "source": "Antiquity (Cambridge University Press), artículo revisado por pares",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/goddess-new-clothes-the-carving-and-polychromy-of-the-parthenon-sculptures/9D7277925E339AC98642081CBAAD8794"
+    },
+    {
+      "claim": "El estudio se publicó en Antiquity en octubre de 2023 y lo firman investigadores del King's College de Londres, el Museo Británico y el Art Institute of Chicago. Emplea la luminiscencia inducida por luz visible, técnica no invasiva desarrollada por Giovanni Verri, que detecta trazas microscópicas del pigmento azul egipcio. Se creía que las esculturas griegas eran de mármol blanco porque la pintura rara vez sobrevive a la intemperie, y porque restauraciones históricas retiraron las trazas que quedaban para restablecer la supuesta blancura original.",
+      "source": "King's College London, nota de prensa sobre el estudio",
+      "url": "https://www.kcl.ac.uk/news/scientific-analysis-reveals-the-true-colours-of-the-parthenon-sculptures"
+    }
+  ],
+  "do_not_use": [
+    "«Las estatuas griegas eran de colores chillones». Las reconstrucciones del Liebieghaus son hipótesis fundadas en trazas de pigmento, no fotografías del original: el análisis dice qué pigmento hubo y dónde, no la saturación exacta ni el acabado. Decir que se sabe el aspecto final es ir más lejos que la fuente.",
+    "Culpar a Winckelmann de haber inventado el mito. Lo que consta es que en 1764 defendió el ideal blanco teniendo delante evidencia en contra. La blancura visible se debe sobre todo a la pérdida de pintura por intemperie; él dio a esa pérdida el rango de canon estético.",
+    "«El Museo Británico destruyó las esculturas del Partenón en 1938». El propio Ian Jenkins, que documentó el episodio, sostuvo que el daño físico estaba lejos de ser evidente y que el escándalo real fue la limpieza no autorizada y su ocultación. La pieza se queda en lo que sí consta: los cinceles de cobre, el carborundo, la fecha y el encubrimiento.",
+    "Atribuir la orden de limpieza al museo sin más. Quien presionó repetidamente para retirar la pátina fue Joseph Duveen, que financiaba la galería nueva, y a él nunca se le interrogó en la investigación interna. Personal del museo fue despedido, se retiró o dimitió.",
+    "Confundir el hallazgo de 2009 con el estudio de 2023. Las primeras trazas se detectaron con esta técnica en 2009; el recuento de once figuras de los frontones y una del friso procede del artículo de Antiquity de octubre de 2023.",
+    "Llamar «azul egipcio» a cualquier resto azul antiguo. Es un pigmento sintético concreto, y lo que permite detectarlo es su propiedad de absorber luz visible y reemitir infrarrojo; ese comportamiento es lo que hace la técnica, no un análisis químico del color a simple vista.",
+    "Decir que se encontró color en el Partenón de Atenas. Lo examinado son las esculturas del Partenón conservadas en el Museo Británico, no el edificio ni las piezas de Atenas."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

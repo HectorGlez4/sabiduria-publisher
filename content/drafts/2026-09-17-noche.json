@@ -1,0 +1,75 @@
+{
+  "id": "2026-09-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Aksum y la estela que volvió de Roma",
+    "hook": "El bloque de piedra más grande que se ha extraído de una cantera se talló en Etiopía, y se partió el día que intentaron levantarlo.",
+    "body": [
+      "En el norte de Etiopía, al borde de la ciudad de Aksum, hay un campo con unos ciento veinte monolitos de granito. Los mayores están tallados como edificios de varios pisos: hileras de vigas fingidas, ventanas que no se abren y una puerta falsa al pie, con cerradura incluida. Señalaban tumbas reales y se levantaron sobre todo en el siglo IV. El más alto medía treinta y tres metros y pesaba alrededor de quinientas toneladas: la mayor pieza de piedra jamás sacada de una cantera. Nunca llegó a estar de pie. Se quebró durante el montaje y ahí sigue, tumbado y roto.",
+      "Quien los levantó no era un reino menor. Aksum acuñaba moneda propia desde alrededor del año 270 —oro, plata y bronce—, y en el siglo III el profeta persa Mani lo contó entre las cuatro grandes potencias del mundo, junto a Roma, Persia y China. Su rey Ezana se convirtió al cristianismo hacia mediados del siglo IV y mandó grabar sus victorias en una piedra escrita en tres sistemas: griego, ge'ez y sabeo. Sus monedas cambiaron el disco y la media luna por la cruz, probablemente el primer uso de ese símbolo en una moneda.",
+      "En 1937, durante la ocupación italiana, una estela de veinticuatro metros y unas ciento cincuenta toneladas fue cortada en tres, embarcada y erigida en Roma. La descubrieron oficialmente el 28 de octubre de 1937, aniversario de la marcha sobre Roma. Volvió sesenta y ocho años después: las tres piezas llegaron a Aksum entre el 19 y el 25 de abril de 2005, pagadas por Italia, y un equipo dirigido por la UNESCO montó el último bloque el 31 de julio de 2008. Se inauguró el 4 de septiembre. Costó once años de gestiones devolver lo que se había tardado unos meses en llevarse."
+    ],
+    "question": "¿Qué se pierde de un monumento cuando se lo saca del lugar para el que fue tallado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "AKSUM, SIGLO IV",
+    "subtitle": "Ciento veinte monolitos, y el mayor nunca se sostuvo",
+    "body": "En Aksum hay unos 120 monolitos de granito tallados como edificios de varios pisos. El más alto medía 33 metros y pesaba unas 500 toneladas: la mayor piedra jamás extraída de una cantera. Se partió al montarla. Otra, llevada a Roma en 1937, volvió en 2005."
+  },
+  "sources": [
+    {
+      "claim": "El campo de estelas de Aksum reúne alrededor de 120 monolitos de granito, tallados con puertas y ventanas no funcionales que les dan aspecto de edificios de varios pisos y rematados por un remate semicircular. Conmemoraban a los gobernantes de la ciudad y marcaban enterramientos reales. La más alta se rompió durante su erección y yace en el suelo partida en tres. Los monumentos mayores se fechan en el apogeo del reino bajo Ezana, en el segundo cuarto del siglo IV.",
+      "source": "EBSCO Research Starters (Anthropology), «Giant Stelae Are Raised at Aksum»",
+      "url": "https://www.ebsco.com/research-starters/anthropology/giant-stelae-are-raised-aksum"
+    },
+    {
+      "claim": "La Gran Estela mide 33 metros. La estela llevada a Roma mide 24 metros, tiene dos puertas falsas en la base y decoraciones que imitan ventanas en todos sus lados. Llegó a Nápoles el 27 de marzo de 1937 y se inauguró oficialmente el 28 de octubre de 1937 en la plaza de Porta Capena, en Roma. La pieza central se repatrió el 19 de abril de 2005 y las otras dos el 22 y el 25 de abril. El monumento se volvió a erigir en su lugar de origen y se inauguró el 4 de septiembre de 2008.",
+      "source": "Ficha enciclopédica del Obelisco de Axum (dimensiones y cronología del traslado y la devolución)",
+      "url": "https://en.wikipedia.org/wiki/Obelisk_of_Axum"
+    },
+    {
+      "claim": "El monumento mide 24 metros de alto y pesa 150 toneladas; es la segunda estela más grande del sitio Patrimonio Mundial de Aksum y tiene unos 1.700 años. Fue llevado a Roma por soldados italianos durante la invasión de Benito Mussolini en 1937. Italia aprobó su devolución en abril de 2005 y financió el desmontaje, el transporte y la reconstrucción; por su tamaño hubo que dividirlo en tres piezas. Los equipos de la UNESCO completaron la instalación a finales de julio de 2008, con ceremonia oficial de inauguración el 4 de septiembre de 2008.",
+      "source": "UN News (Naciones Unidas), «UNESCO teams successfully reinstall Ethiopian obelisk to original site», agosto de 2008",
+      "url": "https://news.un.org/en/story/2008/08/268092"
+    },
+    {
+      "claim": "Aksum dominó el Cuerno de África y la región del mar Rojo durante buena parte del primer milenio, con su período más próspero entre los siglos IV y VI. El rey Ezana (r. hacia 325-360) emitió moneda de oro: las primeras piezas llevaban el creciente y el disco paganos y las posteriores los sustituyeron por cruces cristianas. El profeta persa Mani, en el siglo III, identificó a Aksum como una de las cuatro superpotencias del mundo junto a Roma, Persia y China. La Gran Estela alcanzaba unos treinta metros y más de 570 toneladas, una de las mayores esculturas monolíticas de la historia.",
+      "source": "Archaeology Magazine (Archaeological Institute of America), «Africa's Merchant Kings», julio-agosto de 2023",
+      "url": "https://archaeology.org/issues/july-august-2023/features/aksum-ethiopia-eritrea-kingdom/"
+    },
+    {
+      "claim": "El reino de Aksum floreció entre los siglos I y VII, con su apogeo en el siglo IV bajo Ezana; empezó a acuñar moneda propia desde el año 270; la conversión de Ezana al cristianismo fue el acontecimiento decisivo de su reinado; el sitio conserva alrededor de 120 hitos monumentales de piedra en el llamado Campo de las Estelas, y las inscripciones monumentales de Ezana están escritas en tres sistemas de escritura.",
+      "source": "Ministerio de Cultura de Francia, portal de arqueología, «The kingdom of Aksum»",
+      "url": "https://archeologie.culture.gouv.fr/proche-orient/en/kingdom-aksum"
+    },
+    {
+      "claim": "La Piedra de Ezana data del siglo IV, entre 330 y 356, y está inscrita en tres lenguas y escrituras: griego, ge'ez y sabeo. Documenta la conversión de Ezana al cristianismo y sus victorias militares.",
+      "source": "Ficha enciclopédica de la Piedra de Ezana",
+      "url": "https://en.wikipedia.org/wiki/Ezana_Stone"
+    },
+    {
+      "claim": "Aksum fue inscrito en la Lista del Patrimonio Mundial de la UNESCO en 1980; las ruinas, fechadas entre los siglos I y XIII, incluyen obeliscos monolíticos, estelas gigantes, tumbas reales y restos de castillos.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, ficha del sitio «Aksum» (el sitio devuelve 403 al acceso directo; dato recogido de la ficha pública)",
+      "url": "https://whc.unesco.org/en/list/15/"
+    }
+  ],
+  "do_not_use": [
+    "«La estela más alta medía 234 pies (71 metros)». La cifra circula en varias fichas divulgativas y es un error propagado: las fuentes que dan medidas coherentes sitúan la Gran Estela en unos 33 metros, es decir unos 108 pies. La pieza usa los 33 metros.",
+    "Dar el peso de la Gran Estela como cifra exacta. Las fuentes consultadas oscilan entre unas 500 y más de 570 toneladas. La pieza dice «alrededor de quinientas toneladas» a propósito.",
+    "Igual con la estela devuelta: la UNESCO y Naciones Unidas dan 150 toneladas y otras fichas 160. Se usa la cifra de Naciones Unidas y no se presenta como dato cerrado.",
+    "«Los obeliscos de Aksum». Son estelas, no obeliscos: no son cuadrangulares y afiladas al modo egipcio sino losas talladas como fachadas de edificios. El nombre «obelisco de Axum» se conserva porque así se llamó en Roma a la pieza trasladada, pero no describe bien el monumento.",
+    "«Etiopía fue el primer país cristiano del mundo». Es una afirmación disputada y las fuentes consultadas no la sostienen así. Lo que consta es que Aksum fue uno de los primeros grandes reinos en adoptar el cristianismo y, según varias fuentes, el primer Estado en poner la cruz en sus monedas.",
+    "Fechar la devolución en un solo día. Italia aprobó el retorno en abril de 2005 y las tres piezas llegaron en fechas distintas de ese mes; la reinstalación terminó el 31 de julio de 2008 y la inauguración fue el 4 de septiembre de 2008. Dar «2005» a secas como fecha de la reinstalación es falso.",
+    "Atribuir a la caída de la Gran Estela la conversión de Ezana. Es una hipótesis que algunos estudiosos han planteado, no un hecho establecido; la pieza no la usa.",
+    "Sostener que las estelas se levantaron con una técnica conocida. Las fuentes consultadas no describen el método de erección, y afirmar cualquiera de las reconstrucciones que circulan sería ir más allá del dato."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
