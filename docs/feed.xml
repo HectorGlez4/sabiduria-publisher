@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 02 Sep 2026 16:48:47 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 21:54:25 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Amarás la belleza, que es la sombra de Dios sobre el Universo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-02-tarde</guid>
+      <pubDate>Wed, 02 Sep 2026 21:54:11 +0000</pubDate>
+      <description><![CDATA["Amarás la belleza, que es la sombra de Dios sobre el Universo."
+— Gabriela Mistral, Decálogo del artista (Desolación, 1922)
+
+Es el primero de diez mandamientos que Gabriela Mistral escribió para quien hace una obra. Aparecieron en Desolación, el libro que la dio a conocer y que ella no publicó: lo editó en Nueva York, en 1922, el Instituto de las Españas de la Universidad de Columbia, después de que el profesor Federico de Onís diera una conferencia sobre sus poemas en 1921. A los profesores de español que la escucharon les impresionó que aquella poeta fuera además maestra de escuela. Lo era desde los quince años. El Nobel llegaría en 1945: la primera persona de América Latina en recibirlo en Literatura.
+
+El decálogo no consuela a nadie. Prohíbe dar la belleza como cebo para los sentidos y ordena darla como alimento del alma. Prohíbe llevar la obra a las ferias. Manda entregarla "como se da un hijo: restando sangre de tu corazón". Y el mandamiento décimo cierra sin premio ninguno: de toda creación saldrás con vergüenza, porque fue inferior a tu sueño. Diez reglas, y la última quita la satisfacción de haber terminado.
+
+El original mecanografiado de ese decálogo se conserva hoy en la Biblioteca Nacional de Chile: una hoja de veintiocho centímetros, con manchas de óxido. Llegó dentro del legado de la escritora, 18.497 piezas manuscritas y unas 120.000 hojas que volvieron al país en 2007, medio siglo después de su muerte. La mujer que la memoria escolar guarda como pura ternura dejó escrito, para sí misma, el pliego de condiciones más duro que se le puede poner a un trabajo.
+
+¿Cuándo fue la última vez que algo tuyo se pareció a lo que habías imaginado?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-tarde.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-tarde.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>EL PAPEL MÁS ANTIGUO DEL MUNDO ES UN MAPA, Y ES TRES SIGLOS ANTERIOR A SU "INVENTOR</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -495,25 +515,6 @@ El libro de estrategia más citado del planeta se sostiene sin una biografía qu
 https://sabiduriadebolsillo.net/?de=facebook]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra14.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra14.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Roma no sembró de sal las ruinas de Cartago: ese dato entró en los libros de historia en 1930.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-29-extra16</guid>
-      <pubDate>Sun, 30 Aug 2026 21:31:52 +0000</pubDate>
-      <description><![CDATA[Roma no sembró de sal las ruinas de Cartago: ese dato entró en los libros de historia en 1930.
-
-En el 146 antes de Cristo, tras tres años de asedio, Escipión Emiliano tomó Cartago: seis días de combate calle por calle y cincuenta mil personas vendidas como esclavas.
-
-El detalle que todo el mundo repite, que sembraron sal para que nada volviera a crecer, no aparece en ninguna fuente antigua. Se coló en la Cambridge Ancient History en 1930 y un artículo de 1986 lo desmontó: venía de la Biblia, del castigo de Siquem.
-
-De la biblioteca de Cartago, Roma se quedó con un solo título: los veintiocho tomos de agricultura de Magón, que el Senado mandó traducir al latín. Del enemigo se destruye todo, menos lo que sirve.
-
-¿Qué le has aprendido a alguien con quien no querías parecerte?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-extra16.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-29-extra16.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
