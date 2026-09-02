@@ -1,0 +1,67 @@
+{
+  "id": "2026-09-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ibn Jaldún y el partidismo del historiador",
+    "hook": "\"El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten.\"",
+    "body": [
+      "Ibn Jaldún nació en Túnez el 27 de mayo de 1332. En 1375 se retiró con una tribu árabe a Qalat ibn Salama, cerca de la actual Frenda, en Argelia. Pasó allí más de tres años, y en noviembre de 1377 cerró el primer borrador de la Muqaddima: la introducción y primer libro de su historia universal.",
+      "Antes de narrar un solo hecho, dedicó esa introducción a explicar por qué los relatos históricos suelen ser falsos, y fue enumerando las causas una por una. La primera de la lista es el partidismo. Si el alma recibe una información con imparcialidad, escribe, le dedica el examen que esa información merece, y su verdad o su falsedad se hace evidente; si está infectada de partidismo por una opinión o una escuela, acepta sin vacilar un instante lo que le resulta agradable.",
+      "El fallo no está en el dato: está en quien lo recibe. Y es un mecanismo que se aplica primero a uno mismo, no a los demás. Ibn Jaldún murió en El Cairo el 17 de marzo de 1406, y la primera traducción completa de su libro al inglés, la de Franz Rosenthal en tres volúmenes, tardó más de cinco siglos y medio en llegar."
+    ],
+    "question": "¿Qué fue lo último que diste por cierto sin comprobarlo, porque te daba la razón?",
+    "quote": {
+      "text": "El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten.",
+      "author": "Ibn Jaldún",
+      "work": "Al-Muqaddima (1377), Introducción",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "El pasaje citado está en la Introducción de la Muqaddima, en la sección sobre las causas de la falsedad en la información histórica. Rosenthal traduce: \"Prejudice and partisanship obscure the critical faculty and preclude critical investigation. The result is that falsehoods are accepted and transmitted\", precedido de \"If the soul is impartial in receiving information, it devotes to that information the share of critical investigation the information deserves, and its truth or untruth thus becomes clear. However, if the soul is infected with partisanship for a particular opinion or sect, it accepts without a moment's hesitation the information that is agreeable to it\". La traducción al español de esta pieza se hizo sobre esas dos oraciones.",
+      "source": "Ibn Jaldún, The Muqaddimah, traducción de Franz Rosenthal, texto íntegro en línea (Ocean Library), Libro Primero, introducción sobre la naturaleza de la civilización",
+      "url": "https://oceanlibrary.com/server/chunked/d68b24838e7ab1d188aaed8444dee621/f10a2a01bed167c05957ffede8eebc30.html"
+    },
+    {
+      "claim": "En el prefacio del Libro Primero, Ibn Jaldún enumera las razones por las que \"el informe histórico, por su naturaleza, está muy frecuentado por la mentira\", y el partidismo por opiniones y escuelas es una de ellas. La traducción completa al inglés, de Franz Rosenthal, se publicó en tres volúmenes en 1958 dentro de la Bollingen Series.",
+      "source": "EBSCO Research Starters, \"Ibn Khaldūn Completes His Muqaddimah\"; y ficha bibliográfica de la traducción de Rosenthal (Princeton University Press, 3 vols.)",
+      "url": "https://www.ebsco.com/research-starters/history/ibn-khaldun-completes-his-muqaddimah"
+    },
+    {
+      "claim": "Ibn Jaldún nació en Túnez el 27 de mayo de 1332 y escribió la Muqaddima en 1377 como prefacio y primer libro de su volumen de historia universal.",
+      "source": "World History Commons (Roy Rosenzweig Center for History and New Media, George Mason University), \"Ibn Khaldun's Study of History (1377 CE)\"",
+      "url": "https://worldhistorycommons.org/ibn-khalduns-study-history-1377-ce"
+    },
+    {
+      "claim": "Pasó más de tres años (1375-1378) en Qalat ibn Salama, donde empezó su gran historia del mundo; en noviembre de 1377 completó el primer borrador de la Introducción (Muqaddima), aunque siguió revisándola el resto de su vida. Murió de forma inesperada en El Cairo el 17 de marzo de 1406.",
+      "source": "Encyclopedia.com, entrada biográfica \"Ibn Khaldun\"",
+      "url": "https://www.encyclopedia.com/people/history/historians-miscellaneous-biographies/ibn-khaldun"
+    },
+    {
+      "claim": "El lugar del retiro era una aldea pequeña con una tribu árabe cerca de lo que hoy es Frenda, Argelia, y allí completó la primera edición de la Muqaddima entre 1375 y 1379.",
+      "source": "EBSCO Research Starters, \"Ibn Khaldūn Completes His Muqaddimah\"",
+      "url": "https://www.ebsco.com/research-starters/history/ibn-khaldun-completes-his-muqaddimah"
+    }
+  ],
+  "do_not_use": [
+    "\"La historia la escriben los vencedores\", atribuida a Ibn Jaldún. Circula sin obra, capítulo ni edición, y ninguna de las fuentes consultadas la recoge en la Muqaddima. Además dice otra cosa: en Ibn Jaldún la falsedad no la impone el vencedor, la acepta sin examen el lector afín.",
+    "Fechar la Muqaddima en 1375 o en 1379 a secas. El retiro en Qalat ibn Salama va de 1375 a 1378 y el primer borrador de la Introducción se cierra en noviembre de 1377; él siguió revisando el texto hasta su muerte. Dar una sola fecha sin decir cuál es fuente de error.",
+    "Resumir la cita como \"el prejuicio impide ver la verdad\". Es una paráfrasis, no el texto. Rosenthal traduce dos oraciones y la segunda —que las falsedades se aceptan y se transmiten— es la que sostiene el argumento: el daño no es no ver, es propagar.",
+    "Presentar el pasaje como una crítica a los cronistas ajenos. En la Muqaddima el partidismo es una condición del alma que recibe la información, cualquiera que sea. Leerlo como acusación a terceros invierte exactamente lo que dice.",
+    "Llamarlo \"el primer sociólogo\" sin matiz. Es una etiqueta acuñada siglos después; lo que consta es que propuso una ciencia de la civilización como método para separar lo verosímil de lo falso en los relatos históricos.",
+    "Tratar \"Ibn Khaldun\" e \"Ibn Jaldún\" como dos autores. Es la misma persona: la primera es la transliteración inglesa y la segunda la castellana.",
+    "Atribuirle la frase citada en primera persona del plural (\"nublamos nuestra facultad crítica\"). El texto habla del alma en tercera persona y esa distancia es deliberada."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

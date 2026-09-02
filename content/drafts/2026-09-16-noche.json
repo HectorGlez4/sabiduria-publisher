@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-16-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Persépolis: las tablillas de la fortificación",
+    "hook": "Del imperio persa no se conservan sus crónicas oficiales, sino sus recibos. Y en los recibos, las obreras tienen nombre y ración.",
+    "body": [
+      "En 1933, arqueólogos del Instituto Oriental de la Universidad de Chicago que despejaban los palacios en ruinas de Persépolis encontraron tablillas de arcilla en dos cuartos pequeños de un bastión de la muralla. No eran himnos ni proclamas reales: era el archivo de una sola oficina administrativa, de los años en torno al 500 a.C. Se calculan entre 20.500 y 26.000 documentos originales repartidos en miles de fragmentos, la mayoría en cuneiforme elamita.",
+      "R. T. Hallock publicó más de 2.100 de esos textos en 1969. Registran el movimiento y el gasto de alimentos en la región de Persépolis durante los quince años que terminan en el 493 a.C., bajo Darío I: raciones fijas de cebada, vino y harina que funcionaban como salario en especie. Ahí aparecen las trabajadoras. Las supervisoras se llamaban arashshara, «gran jefa», y recibían más vino y más grano por dirigir grupos numerosos. Una mujer, Irdabama, mandaba sobre una fuerza de trabajo de unas 480 personas y viajaba por negocios con su propio séquito.",
+      "El mismo archivo guarda el límite. Las mujeres embarazadas y las recién paridas cobraban un suplemento durante el primer mes, y la madre de un varón recibía el doble que la madre de una niña. Las dos cosas están en la misma contabilidad: el trabajo de una mujer valía lo que valía su oficio, y una hija recién nacida valía la mitad que un hijo. Un imperio no se retrata en lo que proclama, sino en lo que anota cuando cree que nadie lo va a leer."
+    ],
+    "question": "¿Qué contarán de nosotros los registros que no escribimos para ser leídos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "PERSÉPOLIS, HACIA EL 500 a.C.",
+    "subtitle": "Lo que anota una administración cuando nadie la mira",
+    "body": "En 1933 aparecieron en la muralla de Persépolis más de veinte mil tablillas: el archivo de gastos de Darío I. En él las trabajadoras cobran por oficio y algunas dirigen equipos de cientos. Y la madre de un varón recibe el doble que la madre de una niña."
+  },
+  "sources": [
+    {
+      "claim": "En 1933, arqueólogos del Instituto Oriental que trabajaban en Persépolis, despejando los palacios en ruinas de Darío, Jerjes y sus sucesores aqueménidas, encontraron tablillas de arcilla en dos cuartos pequeños de un bastión de la muralla de la fortificación. El archivo comprende entre unos 20.500 y 26.000 documentos originales representados por miles de fragmentos, con unos 15.000-18.000 textos en cuneiforme elamita, y son registros producidos por una sola organización administrativa en los años en torno al 500 a.C.",
+      "source": "Institute for the Study of Ancient Cultures (antes Oriental Institute), Universidad de Chicago — página del proyecto Persepolis Fortification Archive",
+      "url": "https://isac.uchicago.edu/research/projects/persepolis-fortification-archive"
+    },
+    {
+      "claim": "R. T. Hallock, Persepolis Fortification Tablets (OIP 92), Oriental Institute of the University of Chicago, 1969: más de 2.100 textos elamitas publicados, que tratan del movimiento y el gasto de productos alimenticios en la región de Persépolis en los quince años que terminan en el 493 a.C. Es el mayor cuerpo coherente de material sobre administración persa disponible, y muestra escalas de ración fijas que funcionaban como pago salarial en forma de mercancía.",
+      "source": "Ficha y texto íntegro de OIP 92 en Internet Archive (publicación del Oriental Institute)",
+      "url": "https://archive.org/details/oip92"
+    },
+    {
+      "claim": "Las supervisoras mejor pagadas se llamaban arashshara («gran jefa») y recibían una cantidad mayor de vino y grano por supervisar el trabajo de grupos a menudo numerosos. Las mujeres embarazadas recibían salarios más altos, igual que las recién paridas durante el primer mes tras el parto. La madre, la partera y el médico que atendían el nacimiento recibían además una bonificación si la criatura era varón. Irdabama viajaba mucho por negocios, era una de las personas más ricas de su tiempo y mandaba sobre una fuerza de trabajo de 480 personas.",
+      "source": "World History Encyclopedia, \"Women in Ancient Persia\"",
+      "url": "https://www.worldhistory.org/article/1492/women-in-ancient-persia/"
+    },
+    {
+      "claim": "Las tablillas de la fortificación ofrecen una visión única de la posición de las trabajadoras que recibían raciones de alimento en Persépolis; algunas obreras recibían raciones mayores que hombres de condición comparable. Como madres de recién nacidos, las mujeres recibían raciones extra, y las madres de niños varones recibían el doble de alimento que las madres de niñas (Brosius, 1996).",
+      "source": "Encyclopaedia Iranica, entrada \"WOMEN i. In Pre-Islamic Persia\" (consultada vía búsqueda: el sitio devuelve 403 al acceso directo)",
+      "url": "https://www.iranicaonline.org/articles/women-i/"
+    },
+    {
+      "claim": "Maria Brosius peina los textos de la fortificación en busca de información sobre mujeres no reales y ofrece cuadros detallados de las raciones pagadas a trabajadoras tanto en puestos de supervisión como de peonaje. Los textos indican que Irdabama era una mujer rica y poderosa con una gran fuerza de trabajo de hombres y mujeres a su cargo. El propio reseñista advierte que el conocimiento limitado del elamita de los textos impide saber con exactitud qué hacían esas trabajadoras.",
+      "source": "Bryn Mawr Classical Review 1996.08.06, reseña de Maria Brosius, Women in Ancient Persia, 559-331 BC (Oxford)",
+      "url": "https://bmcr.brynmawr.edu/1996/1996.08.06/"
+    }
+  ],
+  "do_not_use": [
+    "\"En el imperio persa hombres y mujeres cobraban exactamente lo mismo\". Circula como dato redondo y las fuentes no lo sostienen así. Constan las dos cosas a la vez: raciones fijadas por oficio y experiencia, con algunas trabajadoras cobrando más que hombres de rango comparable, y una diferencia explícita a favor de la madre de un varón. Decir solo la primera mitad falsea el archivo.",
+    "Afirmar la condición jurídica de esos trabajadores. Ninguna de las fuentes consultadas la establece, y la reseña de Brosius advierte que el conocimiento del elamita administrativo no permite saber siquiera con exactitud qué hacían. No usar \"esclavos\" ni \"asalariados libres\": la pieza se limita a lo que registran las raciones.",
+    "Cifras redondas sobre el número de tablillas. Las estimaciones del conjunto van de unos 20.500 a 26.000 documentos originales entre miles de fragmentos, y solo algo más de 2.100 textos estaban publicados en 1969. No dar \"treinta mil\" ni \"cincuenta mil\", y no confundir el total hallado con el total publicado.",
+    "Presentar a Irdabama como reina o esposa real. Las fuentes consultadas la describen como una mujer muy rica con una gran fuerza de trabajo de hombres y mujeres a su cargo, no como portadora de un título regio.",
+    "\"Las tablillas se salvaron porque el incendio de Alejandro las coció\". Es una explicación que circula y que no se verificó en ninguna de las fuentes consultadas. No se usó.",
+    "Mezclar este archivo con otros hallazgos de Persépolis. Todo lo que dice la pieza procede del archivo de la fortificación publicado por Hallock en OIP 92; no atribuirle datos de otros conjuntos de tablillas del mismo yacimiento.",
+    "Extender la ración doble por hijo varón a todo el imperio aqueménida o a todo el período. El dato procede de un archivo administrativo local y de quince años concretos, hasta el 493 a.C., bajo Darío I."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
