@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-14-manana",
-  "slot": "manana",
+  "id": "2026-09-05-extra51",
+  "slot": "tarde",
   "pillar": "arte-ciencia",
   "core": {
     "subject": "Maria Sibylla Merian y el viaje a Surinam de 1699",
@@ -14,7 +14,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "ÁMSTERDAM, 1699",
     "subtitle": "Se pagó ella misma la expedición",
     "body": "Ninguna compañía la respaldó. Vendió doscientos cincuenta y cinco cuadros suyos y parte de su colección, y se embarcó hacia Surinam con su hija menor. Volvió con sesenta láminas que dibujaban al insecto junto a la planta de la que comía."
@@ -68,5 +68,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T15:31:00Z"
 }

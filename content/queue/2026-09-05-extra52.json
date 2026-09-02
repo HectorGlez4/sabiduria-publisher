@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-14-extra42",
-  "slot": "noche",
+  "id": "2026-09-05-extra52",
+  "slot": "tarde",
   "pillar": "filosofia",
   "core": {
     "subject": "Ibn Tufayl y el filósofo autodidacta",
@@ -70,5 +70,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T16:31:00Z"
 }

@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-14-extra41",
-  "slot": "manana",
+  "id": "2026-09-05-extra53",
+  "slot": "tarde",
   "pillar": "curiosidad",
   "core": {
     "subject": "Los diez días de octubre de 1582",
@@ -64,5 +64,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T17:31:00Z"
 }

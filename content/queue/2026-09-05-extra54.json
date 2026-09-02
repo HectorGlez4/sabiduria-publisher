@@ -1,5 +1,5 @@
 {
-  "id": "2026-09-16-tarde",
+  "id": "2026-09-05-extra54",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "EVELYN BEATRICE HALL",
     "subtitle": "La frase no es de Voltaire: es de quien escribió sobre él",
     "body": "The Friends of Voltaire, 1906, capítulo sobre Helvétius. Hall resumió en una línea la actitud de Voltaire ante las ideas que no compartía, y la puso entre comillas. En 1939 aclaró por carta que la expresión era suya. Sigue atribuyéndose a un hombre que llevaba más de un siglo muerto."
@@ -87,5 +87,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T18:31:00Z"
 }

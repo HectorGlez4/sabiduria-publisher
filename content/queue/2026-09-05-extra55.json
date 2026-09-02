@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-11-noche",
-  "slot": "noche",
+  "id": "2026-09-05-extra55",
+  "slot": "tarde",
   "pillar": "civilizacion",
   "core": {
     "subject": "Meroe y las pirámides del reino de Kush",
@@ -53,6 +53,12 @@
     "No decir que las pirámides de Meroe son copias de las egipcias. Son estructuras distintas: mucho más pequeñas en planta, de 10 a 30 metros de alto y con una inclinación de unos 72 grados frente a los 54 de Guiza.",
     "No afirmar que el rechazo del Museo Británico se debió explícitamente al racismo. Lo documentado es que sus expertos dictaminaron que las piezas eran falsas y que la autenticidad la confirmó Lepsius en 1844. Las lecturas sobre el motivo de fondo son interpretación, no dato."
   ],
-  "targets": ["facebook", "instagram"],
-  "status": "draft"
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T19:31:00Z"
 }
