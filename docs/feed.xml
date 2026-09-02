@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 01 Sep 2026 22:00:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 00:21:52 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Se vive con la esperanza de llegar a ser un recuerdo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-01-tarde</guid>
+      <pubDate>Wed, 02 Sep 2026 00:21:37 +0000</pubDate>
+      <description><![CDATA["Se vive con la esperanza de llegar a ser un recuerdo."
+— Antonio Porchia, Voces (1943)
+
+Antonio Porchia nació en Conflenti, en Calabria, en 1885, y emigró muy joven a Buenos Aires con su madre y sus hermanos. Fue cestero, carpintero, trabajador del puerto y tipógrafo. Publicó un solo libro, a los 58 años: Voces, en 1943, mil ejemplares costeados por él mismo. No se vendieron. Los guardó en casa de unos amigos de La Boca.
+
+Terminó donándolos a la Sociedad Protectora de Bibliotecas Populares, que los repartió por bibliotecas rurales del país. Ahí lo encontró el escritor francés Roger Caillois, que le dijo que cambiaría todo lo que había escrito por esas líneas. En 1949 salió en París la traducción francesa, en una tirada de 950 ejemplares. André Breton escribió después que el pensamiento más dúctil en lengua española era, para él, el de aquel argentino.
+
+Porchia nunca dio el libro por cerrado: en cada reedición añadía aforismos y retiraba otros. Murió en noviembre de 1968. La frase sobre el recuerdo la escribió un hombre que había regalado su obra entera sin saber jamás en qué manos iba a caer.
+
+¿De quién te gustaría ser un recuerdo?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-tarde.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-tarde.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un viaje de mil li comienza bajo los pies.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -495,25 +515,6 @@ Fue un fracaso. Vendió unos mil doscientos ejemplares el primer año y el New Y
 https://sabiduriadebolsillo.net/?de=facebook]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EL TORNAVIAJE: durante cuarenta años se pudo cruzar el Pacífico, pero no volver</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-30-manana</guid>
-      <pubDate>Sun, 30 Aug 2026 00:31:25 +0000</pubDate>
-      <description><![CDATA[EL TORNAVIAJE: durante cuarenta años se pudo cruzar el Pacífico, pero no volver
-
-Ir era posible desde Magallanes. Regresar, no: los vientos empujaban siempre hacia el oeste y expedición tras expedición se quedó del otro lado. El 1 de junio de 1565 el fraile agustino Andrés de Urdaneta salió de Cebú en el San Pedro con doscientos hombres y probó otra cosa: subir hasta el paralelo 38 a buscar vientos contrarios. Llegó a Acapulco el 8 de octubre, cuatro meses y ocho días después. Del escorbuto solo quedaban dieciocho hombres capaces de maniobrar.
-
-Lo que casi nadie cuenta es que no fue el primero. Un patache diminuto, el San Lucas, se había separado de la flota en diciembre de 1564 y llegó al puerto de la Navidad el 9 de agosto, dos meses antes. A su capitán, Alonso de Arellano, lo investigaron por desertor: ni lo castigaron ni lo premiaron. Urdaneta traía mejores diarios y mejores mapas, y el mérito fue suyo.
-
-Esa ruta funcionó doscientos cincuenta años, hasta 1815.
-
-¿Cuánto pesa llegar primero si nadie te cree el relato?
-
-#SabiduriaDeBolsillo #Acapulco #Historia #Curiosidades]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
