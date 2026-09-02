@@ -15,6 +15,7 @@ on:
           - threads-user-id
           - conciliar
           - reels-estado
+          - rendimiento
       dry_run:
         description: "Enseñar sin escribir"
         type: boolean
@@ -56,6 +57,8 @@ jobs:
             # Meta confirma. Nunca borra nada.
             # Solo lee: pregunta a Meta el estado real de cada reel.
             reels-estado) python3 scripts/reels_estado.py ;;
+            # Solo lee: reacciones, comentarios y veces compartida por pilar.
+            rendimiento) python3 scripts/rendimiento.py ;;
             conciliar) python3 scripts/conciliar.py $([ "${{ inputs.dry_run }}" = "true" ] || echo --escribir) ;;
             *) echo "tarea desconocida"; exit 1 ;;
           esac
