@@ -7,7 +7,7 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 02 Sep 2026 21:54:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 00:26:22 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Amarás la belleza, que es la sombra de Dios sobre el Universo.</title>
@@ -28,6 +28,26 @@ El original mecanografiado de ese decálogo se conserva hoy en la Biblioteca Nac
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-tarde.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>Pies, ¿para qué los quiero, si tengo alas pa' volar?</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re07-reel</guid>
+      <pubDate>Wed, 02 Sep 2026 21:12:00 +0000</pubDate>
+      <description><![CDATA["Pies, ¿para qué los quiero, si tengo alas pa' volar?"
+— Frida Kahlo (1907-1954)
+
+La frase no es un lema. Es el pie de un dibujo. En una página fechada en 1953, Frida pintó a la acuarela dos pies cortados sobre un pedestal, con una planta marchita al lado, y escribió eso debajo.
+
+Se repite mucho que lo escribió tras la amputación de su pierna. No se sabe: la entrada no lleva mes, y la operación fue en agosto de ese año. Lo que sí quedó, escrito de su mano, es el "pa' volar" así, en corto, como se habla.
+
+Murió al año siguiente. El diario se publicó en facsímil cuarenta años después.
+
+¿Qué dirías si te tocara escribir sobre lo que ya no tienes?
+
+#SabiduriaDeBolsillo #FridaKahlo #Arte #Mexico]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re07-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re07-reel.png" medium="image" type="image/png"/>
     </item>
     <item>
       <title>EL PAPEL MÁS ANTIGUO DEL MUNDO ES UN MAPA, Y ES TRES SIGLOS ANTERIOR A SU "INVENTOR</title>
@@ -494,27 +514,6 @@ Termina diciendo que no lo abandona la sombra de haber sido un desdichado. Nadie
 https://sabiduriadebolsillo.net/?de=facebook]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>En 1972 unos obreros chinos desenterraron por accidente las tablillas que debían resolver si Sun Tzu existió.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-28-extra14</guid>
-      <pubDate>Sun, 30 Aug 2026 21:55:11 +0000</pubDate>
-      <description><![CDATA[En 1972 unos obreros chinos desenterraron por accidente las tablillas que debían resolver si Sun Tzu existió.
-
-En abril de 1972, en Yinqueshan, cerca de Linyi, unos obreros abrieron por accidente dos tumbas de la dinastía Han, selladas entre los años 134 y 118 antes de Cristo. Dentro había 4.942 tablillas de bambú escritas. Entre ellas, trece capítulos de El arte de la guerra y dieciséis capítulos de otro tratado militar, el de Sun Bin, perdido desde hacía más de mil cuatrocientos años.
-
-Desde el siglo XII los eruditos chinos sospechaban de Sun Tzu. Ye Shi, que vivió entre 1150 y 1223, señaló algo incómodo: el Zuo Zhuan, la crónica que registra a casi todos los personajes notables de aquella época, no lo nombra ni una vez. Las tablillas no zanjaron eso. Confirmaron que el texto era antiguo y que los dos tratados eran obras distintas, no una sola confundida por los copistas. Del hombre siguen sin aparecer rastros anteriores a Sima Qian, su primer biógrafo.
-
-El libro de estrategia más citado del planeta se sostiene sin una biografía que lo respalde. Lo que la arqueología comprobó fue el texto, no la firma. Trece capítulos siguen siendo útiles sin que sepamos con certeza quién los escribió.
-
-¿Cuántas ideas aceptas por quién las firma y no por lo que dicen?
-
-#SabiduriaDeBolsillo
-
-https://sabiduriadebolsillo.net/?de=facebook]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra14.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-28-extra14.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
