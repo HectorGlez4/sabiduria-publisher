@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:26:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 02:46:34 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El imperio mongol movía un mensaje de Corea a Persia, y la factura la pagaban los pueblos del camino.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-02-noche</guid>
+      <pubDate>Thu, 03 Sep 2026 02:46:21 +0000</pubDate>
+      <description><![CDATA[El imperio mongol movía un mensaje de Corea a Persia, y la factura la pagaban los pueblos del camino.
+
+La red se llamaba yam. Las postas se levantaban cada 32 a 64 kilómetros y guardaban caballos de refresco, comida y techo. Para exigirlo bastaba con enseñar una paiza: una placa de metal con una fórmula grabada. En el Museo Metropolitano de Nueva York se conserva una, de hierro con incrustación de plata, de dieciocho por once centímetros, escrita en alfabeto pakpa. Dice que es orden del emperador por la fuerza del cielo eterno, y que quien no respete a su portador cometerá una falta.
+
+Nada de eso lo pagaba el tesoro. Lo pagaban las aldeas junto al camino. El visir Rashid al-Din, que lo vio de cerca, escribió que los enviados no se conformaban con su asignación de monturas y provisiones: desplumaban a cualquiera que se cruzara. Anotó también que un gobernador cobraba el impuesto diez veces al año, y que en algunos lugares se cobraba veinte o treinta. Y como la placa no llevaba nombre, los ladrones las robaban para pasar por enviados y saquear las postas.
+
+Gazán, que gobernó el Ilkanato de 1295 a 1304, tuvo que rehacerlo entero: anuló todas las placas en circulación, mandó grabar en las nuevas el nombre de su portador, limitó cada permiso a entre uno y cuatro caballos y pasó el gasto de las postas al tesoro central. La red más veloz de su tiempo no la puso en riesgo ningún ejército. La puso en riesgo un trozo de metal que cualquiera podía llevar encima.
+
+¿Qué puerta se te abre hoy sin que nadie compruebe que eres tú?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-noche.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-noche.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Amarás la belleza, que es la sombra de Dios sobre el Universo.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,28 +511,6 @@ Tampoco dejó de matar. En uno de sus pilares concede a los condenados a muerte 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>He cometido el peor de los pecados que un hombre puede cometer. No he sido feliz.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-tarde</guid>
-      <pubDate>Sun, 30 Aug 2026 22:17:47 +0000</pubDate>
-      <description><![CDATA["He cometido el peor de los pecados que un hombre puede cometer. No he sido feliz."
-— Jorge Luis Borges (1899-1986)
-
-No es una pose literaria. El 8 de julio de 1975 murió su madre, Leonor Acevedo, a los noventa y nueve años. Era ella quien le leía en voz alta y quien le tomaba el dictado desde que él se quedó ciego. Borges contó después que escribió este soneto pocos días más tarde. Tenía setenta y cinco años.
-
-El poema sigue, y no se ablanda. Dice que sus padres lo engendraron para el juego arriesgado y hermoso de la vida y que él los defraudó; que le legaron valor y no fue valiente; que su mente se aplicó a las simétricas porfías del arte, que entreteje naderías. Esas naderías son su obra completa.
-
-Termina diciendo que no lo abandona la sombra de haber sido un desdichado. Nadie que lo leyera desde afuera habría firmado ese balance.
-
-¿Con qué vara te estás midiendo?
-
-#SabiduriaDeBolsillo #Borges #Literatura #Poesia
-
-https://sabiduriadebolsillo.net/?de=facebook]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-tarde.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-tarde.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
