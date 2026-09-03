@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 20:00:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 22:43:07 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El que lee mucho y anda mucho, ve mucho y sabe mucho.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re13-reel</guid>
+      <pubDate>Thu, 03 Sep 2026 21:34:00 +0000</pubDate>
+      <description><![CDATA["El que lee mucho y anda mucho, ve mucho y sabe mucho."
+— Cervantes, Don Quijote II, 25 (1615)
+
+Conviene decir de entrada que esta sí es de Cervantes. La mayoría de las frases que circulan firmadas "Don Quijote" no están en el libro: son invenciones que el propio Centro de Estudios Cervantinos se dedica a desmentir una por una.
+
+Y la frase pone dos verbos juntos que solemos separar: leer y andar. No dice que leer baste. Dice que el que hace las dos cosas ve mucho, y solo después de ver, sabe.
+
+Cervantes tenía autoridad para afirmarlo. Estuvo cinco años cautivo en Argel, perdió el uso de la mano izquierda en Lepanto, recorrió Andalucía cobrando impuestos y pasó por la cárcel. Escribió la segunda parte del Quijote a los 68 años, un año antes de morir.
+
+¿De lo que sabes hoy, cuánto lo leíste y cuánto lo caminaste?
+
+#SabiduriaDeBolsillo #Cervantes #Quijote #Lectura]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re13-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re13-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>La frase que se cita como serenidad zen no es un consejo de calma: es un método de trabajo.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,25 +510,6 @@ Justo antes de la frase escribe: "¿qué podemos saber las mujeres sino filosof�
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra25.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra25.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La primera fotografía de un ser humano se hizo sin que el fotógrafo lo buscara, y la placa original ya no existe.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra24</guid>
-      <pubDate>Tue, 01 Sep 2026 03:09:43 +0000</pubDate>
-      <description><![CDATA[La primera fotografía de un ser humano se hizo sin que el fotógrafo lo buscara, y la placa original ya no existe.
-
-Entre el 24 de abril y el 4 de mayo de 1837 o 1838 —la fecha exacta sigue sin fijarse—, Louis Daguerre apuntó su cámara al bulevar del Temple de París desde una ventana alta. El bulevar era una de las calles más transitadas de la ciudad. En la placa aparece vacío.
-
-Para entonces Daguerre había bajado el tiempo de exposición a cuatro o cinco minutos, cuando poco antes hacían falta ocho horas. Cuatro minutos siguen siendo demasiados para un carruaje o para alguien que camina: la luz de todo lo que se movía se repartió por la placa y no llegó a formar imagen. Quedaron dos figuras en la esquina inferior izquierda. Un hombre que se hacía limpiar los zapatos y el limpiabotas agachado ante él. Estuvieron quietos el tiempo suficiente porque el trabajo lo exigía.
-
-En octubre de 1839 Daguerre le regaló al rey Luis I de Baviera un tríptico enmarcado con esta imagen a la derecha. Las placas pasaron del palacio real al Museo Nacional de Baviera, se deterioraron durante la Segunda Guerra Mundial y en 1970 se prestaron al Museo Municipal de Múnich para restaurarlas. El intento las arruinó del todo. Lo que hoy circula en cualquier libro y en cualquier pantalla desciende de las reproducciones que Beaumont Newhall hizo en 1936 o 1937, cuando volvió a encontrarlas. El original de la primera persona fotografiada se perdió intentando salvarlo.
-
-¿Qué cosa tuya sobrevive solo en copias?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra24.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra24.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
