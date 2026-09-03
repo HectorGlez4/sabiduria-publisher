@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 11:31:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 16:34:46 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-03-manana</guid>
+      <pubDate>Thu, 03 Sep 2026 16:34:33 +0000</pubDate>
+      <description><![CDATA[Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.
+
+En 1801, en el Real Seminario de Minería de la Ciudad de México, Andrés Manuel del Río analizó un plomo pardo traído de la mina del Cardonal, en Zimapán. Encontró un metal que nadie había descrito. Lo llamó primero pancromio, por la variedad de colores que daban sus compuestos, y después eritronio, por el rojo que tomaban sus sales al calentarse con ácido.
+
+En abril de 1803 lo visitó Alexander von Humboldt. Dudó del hallazgo, le pareció cromo, y se llevó a Europa las muestras y el manuscrito. En París, el químico Collet-Descotils examinó el mineral y concluyó en 1805 que ahí no había ningún metal nuevo. Del Río ni siquiera esperó a esa publicación: ya en 1804 se había retractado por escrito, sin volver a analizar nada. Casi treinta años más tarde, un químico sueco encontró el mismo metal en un mineral de hierro y lo llamó vanadio. En 1831 Friedrich Wöhler tomó la muestra que Humboldt se había llevado de México y comprobó que vanadio y eritronio eran el mismo elemento.
+
+Del Río vivió todavía dieciocho años después de esa confirmación y murió en la Ciudad de México en 1849, a los 84. No perdió el elemento por un error de laboratorio. Lo perdió por darle más peso a la autoridad de París que a lo que tenía delante, en su propia mesa.
+
+¿Qué dejaste de sostener solo porque alguien con más autoridad dijo lo contrario?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-manana.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-manana.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>EL SEGUNDO DARDO: una metáfora de hace más de dos mil años, con precisión de manual clínico</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -491,27 +510,6 @@ El metro quedó unos 0,197 milímetros más corto de lo que pedía su definició
 #SabiduriaDeBolsillo #Historia #Ciencia #Curiosidades]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra22.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra22.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra21</guid>
-      <pubDate>Mon, 31 Aug 2026 22:46:31 +0000</pubDate>
-      <description><![CDATA[HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO
-
-En 1858 William Gladstone publicó Studies on Homer and the Homeric Age, tres volúmenes sobre el mundo de la Ilíada y la Odisea. En una sección del tercero se puso a contar: anotó cada palabra de color del texto griego, registró cómo se usaba y la clasificó. Negro aparece unas ciento setenta veces. Blanco, cerca de cien. Rojo, amarillo y violeta, apenas unas decenas entre los tres. Azul no aparece ninguna vez.
-
-El mar de Homero es oînops, color de vino. Gladstone concluyó que el ojo griego todavía no separaba bien los colores. Una década después, el filólogo Lazarus Geiger llevó la búsqueda a los himnos védicos, la Biblia hebrea, las sagas islandesas y el Corán, y encontró el mismo hueco en todos. Su observación: de esos textos antiguos nadie aprendería que el cielo es azul.
-
-No era el ojo. En 1969 Brent Berlin y Paul Kay publicaron Basic Color Terms en la University of California Press y describieron un orden fijo en el que las lenguas van adquiriendo sus nombres de color: primero oscuro y claro, luego rojo, después verde y amarillo, y el azul en quinto lugar, antes solo del marrón y de los últimos matices. En 2017, un estudio publicado en PNAS sobre las lenguas del World Color Survey encontró una razón: en todas ellas los colores cálidos se comunican con más precisión que los fríos, y los objetos de los que se habla suelen ser cálidos mientras que los fondos son fríos.
-
-Se nombra lo que hay que separar de un fondo. El cielo y el mar no se separan de nada: son el fondo.
-
-¿Cuántas cosas dejamos de distinguir porque nadie nos dio la palabra?
-
-#SabiduriaDeBolsillo #Homero #Lenguaje #HistoriaDeLaCiencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra21.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra21.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
