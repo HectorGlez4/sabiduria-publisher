@@ -52,13 +52,24 @@
     "No presentarla como consejo de calma o de 'no juzgar y ya': en Spinoza comprender es un método racional, no una actitud de indiferencia serena.",
     "REVISAR: la cita se reconstruyó del claim de la fuente, no del hook. Cotejar redacción antes de encolar."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-03T19:44:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1085719330919393",
+      "url": "https://www.facebook.com/874327782058550/posts/1085719330919393",
+      "published_at": "2026-09-03T20:00:42.607987+00:00"
+    },
+    "instagram": {
+      "post_id": "17967018639158039",
+      "url": "https://www.instagram.com/p/Dc1nvURm2TA/",
+      "published_at": "2026-09-03T20:00:56.801207+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],

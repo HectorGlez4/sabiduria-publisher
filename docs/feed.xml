@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 18:49:35 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 20:00:56 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La frase que se cita como serenidad zen no es un consejo de calma: es un método de trabajo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-03-tarde</guid>
+      <pubDate>Thu, 03 Sep 2026 20:00:42 +0000</pubDate>
+      <description><![CDATA["No reírse, no lamentarse ni maldecir, sino comprender."
+— Baruch Spinoza, Tratado político, cap. 1, §4 (1677)
+
+La escribió Baruch Spinoza en el Tratado político, en el cuarto párrafo del primer capítulo. Ese libro quedó inconcluso: se interrumpe en el capítulo 11, mientras trataba la democracia, porque Spinoza murió antes de terminarlo, en 1677, a los 44 años. Se publicó ese mismo año, ya muerto él, en sus Obras póstumas. En ese pasaje se distancia de quienes describen a los hombres no como son, sino como querrían que fuesen, y dice que él prefirió no burlarse de las acciones humanas, ni lamentarlas, ni detestarlas, sino comprenderlas.
+
+El texto que hoy circula por todas partes firmado 'el Dios de Spinoza' -el que empieza 'deja de andar rezando'- no es suyo: lo escribió el autor mexicano Anand Dílvar en 2005, en su libro Conversaciones con mi guía. Y esta frase real se confunde a menudo con el prefacio de la Ética, donde Spinoza propone estudiar las pasiones humanas como si fueran cuestión de líneas, superficies y cuerpos. Es la misma idea, pero otro libro.
+
+El giro está en el verbo final. No pide resignarse ni perdonar: pide entender. Para Spinoza, el odio, la ira o la envidia no son pecados que reprender, sino fenómenos que examinar, como se examina el calor o una tormenta. Comprender no es rendirse ante algo. En su sistema, es el primer paso para dejar de estar a su merced.
+
+¿Qué te resultaría más difícil de comprender en lugar de juzgar?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-tarde.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-tarde.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -489,27 +509,6 @@ En octubre de 1839 Daguerre le regaló al rey Luis I de Baviera un tríptico enm
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra24.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra24.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>RESOLVIÓ A LOS 23 AÑOS EL TRATAMIENTO QUE NADIE LOGRABA INYECTAR, Y OTRO LE PUSO SU PROPIO NOMBRE</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra23</guid>
-      <pubDate>Tue, 01 Sep 2026 02:47:09 +0000</pubDate>
-      <description><![CDATA[RESOLVIÓ A LOS 23 AÑOS EL TRATAMIENTO QUE NADIE LOGRABA INYECTAR, Y OTRO LE PUSO SU PROPIO NOMBRE
-
-Alice Augusta Ball nació en Seattle el 24 de julio de 1892. Sacó dos licenciaturas en la Universidad de Washington —química farmacéutica en 1912 y farmacia en 1914— y en 1915 obtuvo una maestría en química en el College of Hawái. Fue la primera mujer y la primera persona negra en conseguirla allí. Su tesis no trataba de la lepra: trataba de la raíz de kava.
-
-El aceite de chaulmoogra frenaba la enfermedad de Hansen desde hacía siglos, pero era intratable: espeso, mal absorbido, doloroso, con abscesos bajo la piel y resultados irregulares. Ball aisló los ésteres etílicos de sus ácidos grasos y obtuvo una forma que el cuerpo sí aceptaba inyectada. Le tomó menos de un año, y trabajó fuera de sus horas y sin cobrar por ello.
-
-Murió el 31 de diciembre de 1916, a los 24 años. Arthur Dean, presidente de la universidad, continuó el trabajo, lo publicó en una serie de artículos sin mencionarla y lo llamó "método Dean". Seis años después, el médico Harry Hollmann lo corrigió por escrito en una revista médica: "La señorita Ball me resolvió el problema haciendo los ésteres etílicos de los ácidos grasos del aceite de chaulmoogra". Propuso llamarlo método Ball.
-
-Un diario de 1921 contaba unos 140 enfermos dados de alta en tres años en el hospital de Kalihi. Su nombre no aparecía en ninguna parte.
-
-¿Cuántos métodos llevan el nombre de quien los firmó y no el de quien los halló?
-
-#SabiduriaDeBolsillo #AliceBall #HistoriaDeLaCiencia #Quimica]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra23.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra23.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
