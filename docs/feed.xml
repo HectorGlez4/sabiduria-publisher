@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 08:50:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 11:31:17 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EL SEGUNDO DARDO: una metáfora de hace más de dos mil años, con precisión de manual clínico</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re11-reel</guid>
+      <pubDate>Thu, 03 Sep 2026 10:13:00 +0000</pubDate>
+      <description><![CDATA[EL SEGUNDO DARDO: una metáfora de hace más de dos mil años, con precisión de manual clínico
+
+Está en el canon budista, en un texto breve catalogado como Saṃyutta Nikāya 36.6. La imagen es esta: a un hombre lo atraviesa un dardo y, justo después, lo alcanza un segundo. Sentirá lo que causan dos dardos.
+
+El primero es lo que pasó. El segundo es lo que uno se cuenta sobre lo que pasó: el pesar, la lamentación, la vuelta y vuelta. El texto no dice que el entrenamiento haga desaparecer el dolor. Dice algo más medido: que el discípulo instruido siente exactamente un dardo, no dos.
+
+Vale la pena decirlo: la frase que circula, "el dolor es inevitable, el sufrimiento es opcional", no está en el canon. Es un resumen moderno, y le quita al original lo que tiene de mejor, que es su exactitud.
+
+¿Cuál de tus dos dardos de esta semana llegó de fuera?
+
+#SabiduriaDeBolsillo #Budismo #Filosofia #Reflexiones]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re11-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re11-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Lo que no sé, tampoco creo saberlo.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -493,25 +512,6 @@ Se nombra lo que hay que separar de un fondo. El cielo y el mar no se separan de
 #SabiduriaDeBolsillo #Homero #Lenguaje #HistoriaDeLaCiencia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra21.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra21.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-manana</guid>
-      <pubDate>Mon, 31 Aug 2026 20:14:11 +0000</pubDate>
-      <description><![CDATA[Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.
-
-Entre los años 381 y 384, una mujer hispanorromana llamada Egeria recorrió el Mediterráneo oriental: el Sinaí, Egipto, Constantinopla, Mesopotamia, Edesa. Se quedó tres años en Jerusalén. Iba anotándolo todo en una larga carta dirigida a un grupo de mujeres a las que llamaba hermanas.
-
-Esa carta sobrevivió en una sola copia, hecha en el siglo XI en la abadía de Montecassino. Gian Francesco Gamurrini la encontró en 1884 en una biblioteca de Arezzo: sin título, sin fecha, sin nombre de autor, con el principio y el final perdidos. La atribuyó a otra mujer. En 1903 Marius Férotin dio con la clave en un lugar inesperado: una carta del monje gallego Valerio del Bierzo, escrita casi tres siglos más tarde, que elogiaba a una tal Egeria por haber emprendido con corazón intrépido un camino inmenso.
-
-Gracias a esas páginas sabemos cómo se celebraba la Semana Santa en la Jerusalén del siglo IV. El relato estuvo completo todo ese tiempo. Lo que faltaba era el nombre.
-
-¿Cuánto de lo que hoy sabemos llegó hasta nosotros sin firma?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
