@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 02:46:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 08:50:12 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lo que no sé, tampoco creo saberlo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re10-reel</guid>
+      <pubDate>Thu, 03 Sep 2026 06:26:00 +0000</pubDate>
+      <description><![CDATA["Lo que no sé, tampoco creo saberlo."
+— Sócrates, en la Apología de Platón
+
+La frase que todo el mundo cita es otra: "solo sé que no sé nada". Y no está en ningún texto. No la escribió Platón, no la recogió Jenofonte, no aparece en ninguna fuente antigua. Es una construcción posterior, en latín primero y luego traducida de vuelta al griego para que pareciera original.
+
+Lo que Sócrates dice en la Apología es más modesto y bastante más difícil. No declara que no sabe nada. Dice que, de lo que no sabe, tampoco se cree que lo sepa.
+
+Es una distinción incómoda, porque no habla de ignorancia. Habla de la costumbre de opinar sobre lo que no se ha estudiado.
+
+¿De cuántas cosas tienes una opinión firme sin haberlas mirado de cerca?
+
+#SabiduriaDeBolsillo #Socrates #Filosofia #Platon]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re10-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re10-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El imperio mongol movía un mensaje de Corea a Persia, y la factura la pagaban los pueblos del camino.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,25 +512,6 @@ Gracias a esas páginas sabemos cómo se celebraba la Semana Santa en la Jerusal
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-manana.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-27-extra12</guid>
-      <pubDate>Mon, 31 Aug 2026 08:46:40 +0000</pubDate>
-      <description><![CDATA[Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.
-
-Hacia el año 261 antes de Cristo, en el octavo de su reinado, el emperador Ashoka conquistó el reino de Kalinga, en la costa este de la India. Las cifras las dio él mismo, talladas en roca en el llamado Edicto XIII: ciento cincuenta mil personas deportadas, cien mil muertas y muchas más muertas después. Es de las pocas veces en la historia en que un vencedor deja escrito el número de sus víctimas.
-
-Ese texto se repite por todo el imperio, del norte del actual Pakistán al sur de la India, y en Kandahar se grabó incluso en griego para que lo leyeran allí. Falta en un solo sitio: en Kalinga. En las dos rocas del territorio arrasado, Dhauli y Jaugada, el Edicto XIII no está, y su lugar lo ocupan otros textos, dirigidos a los funcionarios de la zona.
-
-Tampoco dejó de matar. En uno de sus pilares concede a los condenados a muerte tres días de plazo, no la vida. Y firmó todo aquello con un título, no con su nombre: hasta 1915, cuando un ingeniero de minas de oro llamado C. Beadon dio en Maski con la primera inscripción que decía Asoka, nadie podía afirmar con certeza quién había escrito los edictos. Reconocer en voz alta y reparar donde duele no son la misma cosa.
-
-¿A quién le falta escuchar una disculpa que ya contaste a todos los demás?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-27-extra12.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
