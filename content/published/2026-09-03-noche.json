@@ -67,13 +67,24 @@
     "«El texto es sumerio»: la tablilla XI está en acadio. Existe un relato sumerio del diluvio, con Ziusudra, pero es otra obra; tampoco conviene tratar a Utnapishtim, Atrahasis y Ziusudra como el mismo personaje sin matizar que son nombres de tradiciones distintas.",
     "Dar el número de tablillas de la biblioteca de Asurbanipal como cifra exacta: las fuentes dicen «más de 30.000» hallazgos de Nínive, y el propio Museo Británico advierte que no todas pertenecen a la biblioteca real."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-04T01:38:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1085999970891329",
+      "url": "https://www.facebook.com/874327782058550/posts/1085999970891329",
+      "published_at": "2026-09-04T04:46:33.545786+00:00"
+    },
+    "instagram": {
+      "post_id": "18198624538334357",
+      "url": "https://www.instagram.com/p/Dc2j68LCJhH/",
+      "published_at": "2026-09-04T04:46:51.919388+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],

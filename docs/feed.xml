@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 03 Sep 2026 22:43:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 04:46:51 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El relato del diluvio y el arca se leyó por primera vez en 1872, y no fue en una Biblia: fue en una tablilla de barro.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-03-noche</guid>
+      <pubDate>Fri, 04 Sep 2026 04:46:33 +0000</pubDate>
+      <description><![CDATA[El relato del diluvio y el arca se leyó por primera vez en 1872, y no fue en una Biblia: fue en una tablilla de barro.
+
+El 3 de diciembre de 1872, ante la Sociedad de Arqueología Bíblica de Londres, un empleado del Museo Británico llamado George Smith leyó la traducción de una tablilla de barro del siglo VII antes de Cristo, sacada de las ruinas de Nínive. Contaba un diluvio, un barco, un hombre que se salva y un ave enviada a buscar tierra firme. Entre el público estaba el primer ministro Gladstone. La tablilla llevaba unos veinte años guardada en el museo, sin que nadie pudiera leerla.
+
+Smith no era arqueólogo ni había pisado una universidad. A los catorce años entró de aprendiz en un taller de grabado de billetes y pasaba las horas libres en las salas del museo, aprendiendo cuneiforme por su cuenta, hasta que lo contrataron para reparar tablillas. Al texto le faltaba un pedazo. Un periódico, el Daily Telegraph, le pagó mil guineas para ir a buscarlo. Empezó a excavar en Nínive el 7 de mayo de 1873 y el 14 encontró un fragmento con diecisiete líneas: las que faltaban. Murió tres años después, a los treinta y seis, volviendo de su tercera expedición.
+
+Esa tablilla es la undécima del Poema de Gilgamesh, y el hombre que sobrevive al agua se llama Utnapishtim. No prueba ni desmiente nada sobre la Biblia: muestra que la historia ya circulaba antes, en otra lengua y con otros nombres. Y muestra otra cosa, más incómoda. Estuvo veinte años al alcance de la mano, catalogada y a salvo, esperando a alguien que no tenía credenciales para leerla.
+
+¿Qué tienes delante desde hace años sin haber aprendido a leerlo?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-noche.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-noche.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El que lee mucho y anda mucho, ve mucho y sabe mucho.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,26 +509,6 @@ En 1963 esa defensa ya no estaba operativa. Una crecida entró por el desfilader
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-noche.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-noche.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Si Aristóteles hubiera guisado, mucho más hubiera escrito.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra25</guid>
-      <pubDate>Tue, 01 Sep 2026 05:23:06 +0000</pubDate>
-      <description><![CDATA["Si Aristóteles hubiera guisado, mucho más hubiera escrito."
-— Sor Juana Inés de la Cruz, Respuesta a sor Filotea de la Cruz (1691)
-
-La frase está en la Respuesta a sor Filotea de la Cruz, que Sor Juana Inés de la Cruz fechó el 1 de marzo de 1691. No es una ocurrencia suelta: llega después de varias páginas en las que cuenta lo que aprendió mirando cómo se comporta el azúcar, cómo cuaja un huevo, por qué la yema y la clara sirven para cosas contrarias.
-
-El contexto de la carta importa. El obispo de Puebla, Manuel Fernández de Santa Cruz, había publicado un texto suyo sin permiso y lo había acompañado de una amonestación firmada con seudónimo de monja: sor Filotea, que le recomendaba dejar las letras profanas. La Respuesta es lo que Sor Juana contesta a eso, y se considera el primer texto escrito en el hemisferio occidental que defiende el derecho de las mujeres a estudiar.
-
-Justo antes de la frase escribe: "¿qué podemos saber las mujeres sino filosofías de cocina?". La pregunta suena a resignación y no lo es. Está diciendo que el sitio al que la confinaron también es un sitio donde se piensa, y que a Aristóteles le habría venido bien pasar por ahí.
-
-¿Qué aprendiste en un lugar donde nadie esperaba que aprendieras algo?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra25.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra25.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
