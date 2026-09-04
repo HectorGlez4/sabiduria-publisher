@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 19:43:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 22:28:35 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Caminante, no hay camino, se hace camino al andar.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-04-re41-reel</guid>
+      <pubDate>Fri, 04 Sep 2026 20:09:00 +0000</pubDate>
+      <description><![CDATA["Caminante, no hay camino, se hace camino al andar."
+— Antonio Machado (1875-1939)
+
+A esta frase se le suele pegar otra: "golpe a golpe, verso a verso". No es de Machado. La escribió Joan Manuel Serrat en 1969, en las estrofas propias que añadió al musicalizar el poema. El original tiene diez versos y no menciona ningún golpe.
+
+Y dice algo bastante menos alentador de lo que se supone. El camino no está delante: son las huellas que ya dejaste. Por eso el poema sigue con la senda que nunca se ha de volver a pisar, y termina con estelas en la mar, que es lo que dura una huella en el agua.
+
+Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruzó a Francia el 27 y murió en Collioure un mes después. En el bolsillo del abrigo le encontraron un papel arrugado con un último verso escrito a lápiz.
+
+¿Qué camino tuyo solo se entendió cuando ya lo habías andado?
+
+#SabiduriaDeBolsillo #Machado #Poesia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-re41-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-re41-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Hombre soy: nada humano me es ajeno.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,29 +510,6 @@ Cien años después sacaron sus restos de ahí y los llevaron a un mausoleo en S
 #SabiduriaDeBolsillo #JuanaAzurduy #Bolivia #Independencia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re32-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re32-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EPICURO: la palabra que lleva su nombre significa hoy lo contrario de lo que él enseñó</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-01-re31-reel</guid>
-      <pubDate>Tue, 01 Sep 2026 17:23:00 +0000</pubDate>
-      <description><![CDATA[EPICURO: la palabra que lleva su nombre significa hoy lo contrario de lo que él enseñó
-
-Nació en Samos en el 341 antes de Cristo y hacia el 306 compró un huerto a las afueras de Atenas. Ahí abrió su escuela. No era un aula: era una casa con jardín, y entraban mujeres y esclavos.
-
-Escribió unos trescientos rollos. Sobrevivieron tres cartas y dos colecciones de máximas. En una de ellas pide: "Mándame un tarrito de queso, para poder darme un banquete cuando quiera". Vivía de pan y agua. Ese era su lujo.
-
-No enseñó el goce, sino su administración. Por placer entendía la ausencia de dolor en el cuerpo y de inquietud en el alma, y advertía que eso no lo dan las borracheras ni las mesas espléndidas, sino el razonamiento sereno.
-
-Murió en el 270, a los setenta y dos, de una obstrucción urinaria. Ese último día escribió una carta: los dolores no admitían aumento, y frente a ellos ponía la alegría de recordar sus conversaciones.
-
-Hoy llamamos epicúreo al que se entrega al placer.
-
-¿Cuánto de lo que llamas placer te deja en paz después?
-
-#SabiduriaDeBolsillo #Epicuro #Filosofia #Grecia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re31-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re31-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
