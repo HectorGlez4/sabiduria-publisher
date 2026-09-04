@@ -61,13 +61,24 @@
     "\"Es la primera declaración humanista de la historia\" o cualquier superlativo equivalente. No es verificable y además contradice el contexto real de la frase.",
     "Traducir el título como \"El que se atormenta a sí mismo\" y atribuirle a Terencio la invención del argumento sin comprobarlo: la relación de esta comedia con su modelo griego no se verificó en esta sesión. En la pieza se usa solo el título en griego transliterado y su versión corriente en español, \"El atormentador de sí mismo\"."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-04T19:16:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1086578214166838",
+      "url": "https://www.facebook.com/874327782058550/posts/1086578214166838",
+      "published_at": "2026-09-04T19:43:11.999004+00:00"
+    },
+    "instagram": {
+      "post_id": "18026157911906922",
+      "url": "https://www.instagram.com/p/Dc4KiAXmWCz/",
+      "published_at": "2026-09-04T19:43:26.378799+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],

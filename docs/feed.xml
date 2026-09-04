@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 19:00:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 19:43:26 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hombre soy: nada humano me es ajeno.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-04-tarde</guid>
+      <pubDate>Fri, 04 Sep 2026 19:43:11 +0000</pubDate>
+      <description><![CDATA["Hombre soy: nada humano me es ajeno."
+— Terencio, Heauton Timorumenos, v. 77
+
+Es el verso 77 de una comedia latina, Heautontimorumenos, que se estrenó en Roma en los juegos Megalenses del año 163 antes de Cristo. La escribió Terencio, autor de seis comedias, las seis conservadas completas hasta hoy: un caso raro en el teatro antiguo. La escena es una conversación de vecinos. Un viejo llamado Cremes lleva rato interrogando a Menedemo, que se castiga a sí mismo trabajando la tierra de sol a sol. Menedemo se harta y le pregunta si tiene tanto tiempo libre como para ocuparse de asuntos ajenos. Y entonces Cremes contesta con la frase.
+
+Es decir: no es un manifiesto. Es la excusa de un entrometido, dicha para salir del paso. El público romano, sin embargo, la oyó por encima del personaje. San Agustín, más de cinco siglos después, escribió en una de sus cartas (155, 14) que al oírla los teatros enteros rompían en aplausos. Cicerón la citó dos veces en su obra, y Séneca también. Un detalle más para el que quiera buscarla: en las ediciones latinas suele imprimirse "humani nil", no "nihil", que es la forma que circula.
+
+La frase sobrevivió a quien la dice. Veintidós siglos después la seguimos usando en serio, casi siempre sin saber que sale de una comedia y que quien la pronuncia está defendiendo su derecho a preguntar de más. Tal vez ahí esté lo interesante: la línea funciona como excusa y como principio a la vez, y de qué lado cae depende por completo de para qué se use.
+
+¿Cuándo tu interés por otra persona fue cuidado y cuándo fue solo entrometerte?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-tarde.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-tarde.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>A quienes entran en los mismos ríos les fluyen aguas siempre distintas.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -493,25 +513,6 @@ Hoy llamamos epicúreo al que se entrega al placer.
 #SabiduriaDeBolsillo #Epicuro #Filosofia #Grecia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re31-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re31-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>En 1803 la vacuna contra la viruela cruzó el Atlántico dentro del cuerpo de veintidós niños.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-01-manana</guid>
-      <pubDate>Tue, 01 Sep 2026 15:03:57 +0000</pubDate>
-      <description><![CDATA[En 1803 la vacuna contra la viruela cruzó el Atlántico dentro del cuerpo de veintidós niños.
-
-El 30 de noviembre de 1803 zarpó de A Coruña la corbeta María Pita. A bordo viajaban veintidós niños expósitos, de entre tres y nueve años. No existía forma de conservar la vacuna contra la viruela: para que llegara a América tenía que ir viva, pasando de brazo a brazo, de una pareja de niños a la siguiente, durante toda la travesía.
-
-Con ellos iba Isabel Zendal Gómez, rectora de la Casa de Expósitos de A Coruña, incorporada a la expedición por real orden del 14 de octubre de 1803. Entre aquellos niños estaba su propio hijo, Benito Vélez. Ninguno de los veintidós volvió a Galicia. Ella se quedó en Puebla de los Ángeles y murió allí. No se conoce la fecha.
-
-La cadena no admitía un solo día de descuido: si los niños enfermaban, la vacuna se perdía en mitad del océano. Lo que cruzó el mar no fue un frasco, fue un cuidado sostenido mañana tras mañana. Hoy su nombre está en hospitales. En los papeles de la época aparece escrito de decenas de formas distintas.
-
-¿Quién sostiene hoy, sin figurar en ningún lado, algo que tú das por seguro?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
