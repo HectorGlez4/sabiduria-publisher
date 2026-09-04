@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 10:49:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 14:52:06 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SEQUOYAH NO SABÍA LEER EN NINGUNA LENGUA Y LE DIO UNA ESCRITURA COMPLETA A SU PUEBLO</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-04-manana</guid>
+      <pubDate>Fri, 04 Sep 2026 14:51:52 +0000</pubDate>
+      <description><![CDATA[SEQUOYAH NO SABÍA LEER EN NINGUNA LENGUA Y LE DIO UNA ESCRITURA COMPLETA A SU PUEBLO
+
+No hablaba ni leía otro idioma que el cherokee. Trabajó alrededor de doce años, desde 1809, hasta dar con la solución: un signo para cada sílaba de su lengua. Fijó ochenta y seis, que después se redujeron a ochenta y cinco. En 1821 lo llevó ante el Consejo Cherokee.
+
+Lo habían acusado de brujería. La prueba fue esta: lo separaron de su hija Ahyokah en cuartos distintos, cada uno escribió un mensaje, intercambiaron los papeles y cada uno leyó en voz alta lo que el otro había puesto. En 1824 el Consejo Nacional Cherokee le entregó una medalla. El 21 de febrero de 1828 salió en New Echota, Georgia, el primer número del Cherokee Phoenix, impreso a dos columnas, en inglés y en cherokee. En agosto de 1835 la Guardia de Georgia se llevó la imprenta para que no se publicara más.
+
+Una imprenta cabe en una carreta y se puede confiscar. Una escritura que ya está en la cabeza de miles de personas, no. Eso fue lo que quedó de un hombre al que primero llevaron a juicio por brujo.
+
+¿Qué de lo que sabes se perdería si nadie lo escribiera?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-manana.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-manana.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -491,25 +510,6 @@ La frase se cita hoy en camisetas, en placas y en marcadores de libros como una 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra28.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra28.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La ciudad más antigua de América levantó seis pirámides y no dejó una sola muralla.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra27</guid>
-      <pubDate>Tue, 01 Sep 2026 08:47:58 +0000</pubDate>
-      <description><![CDATA[La ciudad más antigua de América levantó seis pirámides y no dejó una sola muralla.
-
-Caral está a 23 kilómetros del Pacífico, tierra adentro, en el valle de Supe. Los fechados por radiocarbono publicados en Science en 2001 por Ruth Shady, Jonathan Haas y Winifred Creamer sitúan su arquitectura monumental, su asentamiento urbano y su agricultura de riego entre el 2627 y el 1977 antes de Cristo. Es contemporánea de las primeras pirámides de Egipto y de las ciudades de Mesopotamia.
-
-La zona central ocupa 65 hectáreas con arquitectura monumental, residencial y no residencial, y Caral es uno de dieciocho grandes sitios precerámicos del mismo valle. Seis estructuras piramidales, plazas circulares hundidas, un sistema de canales. Todo lo que se espera de un Estado consolidado.
-
-Lo que no ha aparecido son armas, fortificaciones ni restos humanos con marcas de violencia. Es una ausencia, y una ausencia no demuestra nada por sí sola: puede que aún no se haya excavado donde estaban. Pero llevan más de treinta años buscando en dieciocho sitios, y en un lugar donde se construyó tanto durante seis siglos, nadie construyó un muro para defenderse de nadie.
-
-¿Qué crees que hace falta para que un lugar no necesite murallas?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra27.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra27.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

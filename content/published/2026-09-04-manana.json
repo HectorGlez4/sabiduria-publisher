@@ -64,13 +64,24 @@
     "DESCARTE DE ESTA SESIÓN: se consideró cerrar la pieza señalando que la escritura cherokee está hoy en Unicode y en los teclados. El dato es probable, pero no se verificó en esta sesión y quedó fuera. Si una sesión futura lo quiere usar, hay que comprobarlo primero en el estándar Unicode, no en fuentes secundarias.",
     "DESCARTE DE ESTA SESIÓN: no se usa la Wikipedia como única fuente de ningún dato del post. Cada cifra y cada fecha del cuerpo aparece en al menos dos de las fuentes listadas, salvo la incautación de la imprenta de 1835, que se apoya solo en el artículo 'Cherokee Phoenix' y por eso se enuncia con la fecha y el actor exactos que da esa fuente, sin adorno."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-04T14:08:00Z",
   "targets": [
     "facebook",
     "instagram"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1086388680852458",
+      "url": "https://www.facebook.com/874327782058550/posts/1086388680852458",
+      "published_at": "2026-09-04T14:51:52.678500+00:00"
+    },
+    "instagram": {
+      "post_id": "17941702557300663",
+      "url": "https://www.instagram.com/p/Dc3pMRPDghh/",
+      "published_at": "2026-09-04T14:52:06.739272+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
