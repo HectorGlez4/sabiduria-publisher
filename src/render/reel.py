@@ -68,7 +68,21 @@ W, H = 1080, 1920
 # El título entra en el bloque CERO a propósito. La primera versión abría con
 # el lienzo vacío durante 0,9 s, y en un reel ese es justo el segundo que
 # decide si alguien se queda: abrir sin gancho es regalarlo.
-TIEMPOS = [1.4, 1.8, 3.0, 2.4]
+# Los cuatro tramos de la revelación.
+#
+# El primero es corto a propósito: en un feed de reels el primer segundo decide
+# si alguien se queda, así que lo que aparece ahí tiene que ser la carga y no la
+# etiqueta. El último es el más largo porque es donde el texto está completo y
+# es lo único que se puede releer.
+TIEMPOS = [1.2, 1.6, 2.6, 3.6]
+
+# Zoom lento y continuo sobre todo el vídeo.
+#
+# Cuatro fotogramas fijos encadenados no tienen una sola imagen en movimiento, y
+# tanto quien mira como el reparto de Facebook responden al movimiento. Un 6% a
+# lo largo de nueve segundos no se percibe como zoom: se percibe como que la
+# imagen está viva. Más que eso empieza a recortar el texto de los bordes.
+ZOOM_TOTAL = 1.06
 
 
 def _lienzo(variant: str):
@@ -90,9 +104,17 @@ def _lienzo(variant: str):
 
 
 def fotogramas(title: str, body: str, subtitle: str | None,
-               question: str | None, variant: str) -> list[Image.Image]:
+               question: str | None, variant: str,
+               cuerpo_primero: bool = False) -> list[Image.Image]:
     """
     Los cuatro estados de la revelación.
+
+    `cuerpo_primero` invierte el orden para las citas. En una tarjeta que se
+    mira tiene sentido leer primero de quién es y después qué dijo; en un reel
+    que se desliza es al revés, porque el nombre de un autor es una etiqueta y
+    la frase es la carga. Con el orden anterior, "BENITO JUÁREZ (1806-1872)"
+    ocupaba los primeros 3,2 segundos él solo y la cita no aparecía hasta
+    entonces — justo el tramo en el que se decide si alguien se queda.
 
     Se compone SIEMPRE sobre el mismo lienzo y se va acumulando, así que las
     posiciones no pueden bailar entre fotograma y fotograma: se calculan una
@@ -129,13 +151,25 @@ def fotogramas(title: str, body: str, subtitle: str | None,
     for etapa in range(4):
         img = base.copy()
         d = ImageDraw.Draw(img)
-        bloque(d, y_titulo, tlines, ft, fg, tlh)   # el gancho, desde el primer cuadro
-        if etapa >= 1:
-            d.line([(W / 2 - 90, y_filete), (W / 2 + 90, y_filete)], fill=accent, width=2)
-            if slines:
-                bloque(d, y_sub, slines, fs, accent, slh)
-        if etapa >= 2:
+        if cuerpo_primero:
+            # La frase primero; quién la dijo, después.
             bloque(d, y_cuerpo, blines, fb, fg, blh)
+            if etapa >= 1:
+                bloque(d, y_titulo, tlines, ft, fg, tlh)
+            if etapa >= 2:
+                d.line([(W / 2 - 90, y_filete), (W / 2 + 90, y_filete)],
+                       fill=accent, width=2)
+                if slines:
+                    bloque(d, y_sub, slines, fs, accent, slh)
+        else:
+            bloque(d, y_titulo, tlines, ft, fg, tlh)
+            if etapa >= 1:
+                d.line([(W / 2 - 90, y_filete), (W / 2 + 90, y_filete)],
+                       fill=accent, width=2)
+                if slines:
+                    bloque(d, y_sub, slines, fs, accent, slh)
+            if etapa >= 2:
+                bloque(d, y_cuerpo, blines, fb, fg, blh)
         if etapa >= 3 and qlines:
             bloque(d, y_pregunta, qlines, fq, accent, qlh)
         salida.append(img)
@@ -143,8 +177,9 @@ def fotogramas(title: str, body: str, subtitle: str | None,
 
 
 def make_reel(title: str, body: str, out_path: str, subtitle: str | None = None,
-              question: str | None = None, variant: str = "cream") -> str:
-    marcos = fotogramas(title, body, subtitle, question, variant)
+              question: str | None = None, variant: str = "cream",
+              cuerpo_primero: bool = False) -> str:
+    marcos = fotogramas(title, body, subtitle, question, variant, cuerpo_primero)
     total = sum(TIEMPOS)
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -170,8 +205,22 @@ def make_reel(title: str, body: str, out_path: str, subtitle: str | None = None,
             # cuadros de la lista: al de t=0 le aplica el fundido de entrada
             # entero, lo deja negro, y ese negro se estira los 1,4 s que dura el
             # bloque. El reel abría con la pantalla apagada.
-            "-vf", (f"fps=30,fade=t=in:st=0:d=0.4,"
-                    f"fade=t=out:st={total - 0.4:.2f}:d=0.4,format=yuv420p"),
+            # fps=30 va PRIMERO: si no, fade ve solo los cuatro fotogramas del
+            # concat y apaga el primero entero. Costó un reel que abría con 1,4 s
+            # de negro y no se vio a ojo, se vio midiendo el brillo por segundo.
+            #
+            # zoompan usa `on` —el número de fotograma de SALIDA— y no `zoom`,
+            # porque zoom se reinicia en cada imagen de entrada y aquí las
+            # entradas son cuatro: con `zoom` el zoom daría un salto en cada
+            # corte en vez de crecer de forma continua.
+            #
+            # Sin desvanecido final: apagar los últimos 0,4 s quita justo el
+            # tramo en que el texto está completo, que es el único que se puede
+            # releer y el que decide si alguien lo comparte.
+            "-vf", (f"fps=30,"
+                    f"zoompan=z='min(1+{(ZOOM_TOTAL - 1) / (total * 30):.6f}*on,{ZOOM_TOTAL})'"
+                    f":d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H},"
+                    f"fade=t=in:st=0:d=0.4,format=yuv420p"),
             "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-r", "30",
             "-c:a", "aac", "-b:a", "96k", "-shortest",
             # Recorte explícito. Hay que repetir el último fichero para que
@@ -198,8 +247,11 @@ if __name__ == "__main__":
     p.add_argument("--subtitle")
     p.add_argument("--question")
     p.add_argument("--variant", default="cream", choices=["cream", "gold"])
+    p.add_argument("--cuerpo-primero", action="store_true",
+                   help="revela la frase antes que el autor (citas)")
     p.add_argument("--out", required=True)
     a = p.parse_args()
-    ruta = make_reel(a.title, a.body, a.out, a.subtitle, a.question, a.variant)
+    ruta = make_reel(a.title, a.body, a.out, a.subtitle, a.question, a.variant,
+                     a.cuerpo_primero)
     kb = os.path.getsize(ruta) // 1024
     print(f"{ruta} · {kb} KB · {W}x{H} · {sum(TIEMPOS):.1f}s")

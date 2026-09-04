@@ -127,8 +127,10 @@ def render_reel(unit: dict) -> pathlib.Path:
     los parámetros y no se versiona.
 
     Las dos plantillas alimentan los mismos cuatro huecos del reel. En una cita
-    el "título" es el autor y el "cuerpo" es la cita, que es justo el orden en
-    que se leen en pantalla: primero de quién es, después qué dijo.
+    el "título" es el autor y el "cuerpo" es la cita — pero en el reel se revelan
+    al revés (--cuerpo-primero): en un feed que se desliza el nombre del autor es
+    una etiqueta y la frase es la carga, y los primeros segundos deciden si
+    alguien se queda. En la tarjeta fija el orden sigue siendo el de siempre.
     """
     card = unit["card"]
     out = ASSETS / f"{unit['id']}-reel.mp4"
@@ -138,7 +140,7 @@ def render_reel(unit: dict) -> pathlib.Path:
     if card["renderer"] == "quote_card":
         q = unit["core"]["quote"]
         autor = f"{q['author']}, {q['work']}" if q.get("work") else q["author"]
-        cmd += ["--title", autor, "--body", q["text"]]
+        cmd += ["--title", autor, "--body", q["text"], "--cuerpo-primero"]
     else:
         cmd += ["--title", card["title"], "--body", card["body"]]
         if card.get("subtitle"):
