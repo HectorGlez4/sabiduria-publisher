@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 04:46:51 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 08:48:48 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re14-reel</guid>
+      <pubDate>Fri, 04 Sep 2026 06:16:00 +0000</pubDate>
+      <description><![CDATA[AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar
+
+En 1960 un explorador noruego siguió las indicaciones de unos vecinos de Terranova hasta unos montículos cubiertos de hierba. Debajo había ocho edificios de madera y turba, clavos de reparación de barcos y un horno pequeño para fundir hierro. Se llama L'Anse aux Meadows y es el único asentamiento nórdico confirmado en América del Norte.
+
+Durante sesenta años se supo que era de alrededor del año 1000. En octubre de 2021, un equipo de la Universidad de Groninga publicó en Nature una fecha exacta, y el método es lo mejor de la historia.
+
+Entre el 992 y el 993 una tormenta solar enorme dejó un pico de radiocarbono idéntico en los anillos de los árboles de todo el planeta. En tres troncos cortados con filo metálico en Terranova, ese pico aparece 29 anillos antes de la corteza. La cuenta da un año: 1021.
+
+Cuatrocientos setenta y un años antes de Colón, fechados por el Sol.
+
+¿Qué otra cosa estará esperando su tormenta solar para dejar de ser aproximada?
+
+#SabiduriaDeBolsillo #Vikingos #Historia #Arqueologia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re14-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re14-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El relato del diluvio y el arca se leyó por primera vez en 1872, y no fue en una Biblia: fue en una tablilla de barro.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,25 +511,6 @@ Las sufragistas del siglo XIX volvieron a él y lo devolvieron a la circulación
 #SabiduriaDeBolsillo #Wollstonecraft #Frases #Historia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra26.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra26.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Un pueblo convirtió el agua escondida en su única muralla: quien no sabía dónde estaba, moría de sed.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-noche</guid>
-      <pubDate>Tue, 01 Sep 2026 05:45:40 +0000</pubDate>
-      <description><![CDATA[Un pueblo convirtió el agua escondida en su única muralla: quien no sabía dónde estaba, moría de sed.
-
-Diodoro de Sicilia, que escribió sobre ellos en el siglo I a.C., dejó anotada su ley: no sembrar grano, no plantar árboles frutales, no beber vino y no construir casas, bajo pena de muerte. La razón era militar. Un pueblo que no posee nada no puede ser sitiado. Su reserva era el agua: excavaban depósitos en el desierto, los revestían por dentro, los llenaban con agua de lluvia, sellaban la boca a ras del suelo y dejaban encima señales que solo ellos sabían leer. En el 312 a.C., Antígono, general de Alejandro Magno, intentó someterlos y fracasó.
-
-Tres siglos después el mismo pueblo había roto su propia ley. Levantó Petra: una ciudad de piedra, con casas, presas y tuberías de terracota unidas con mortero, tramos de treinta y cinco centímetros ensamblados uno tras otro. Para que las crecidas repentinas del wadi no arrasaran el desfiladero de entrada, cortaron en la roca un túnel de 88 metros que desviaba el agua por otro barranco. Roma anexó el reino en el año 106.
-
-En 1963 esa defensa ya no estaba operativa. Una crecida entró por el desfiladero y mató a veintidós turistas franceses y a un guía local. Al año siguiente Jordania levantó una presa nueva sobre los cimientos nabateos, y sigue ahí. La obra se entendió cuando faltó.
-
-¿Qué te está protegiendo hoy sin que lo notes?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-noche.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-noche.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
