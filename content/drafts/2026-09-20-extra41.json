@@ -1,0 +1,65 @@
+{
+  "id": "2026-09-20-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Olympe de Gouges y el artículo X de 1791",
+    "hook": "\"La mujer tiene derecho a subir al cadalso; debe tener igualmente el de subir a la tribuna.\"",
+    "body": [
+      "El 5 de septiembre de 1791, Marie Gouze —nacida en Montauban en 1748 y conocida como Olympe de Gouges— publicó una reescritura de la Declaración de los Derechos del Hombre: preámbulo, diecisiete artículos y un postámbulo, dedicada a María Antonieta. Se imprimieron cinco ejemplares para que el texto se debatiera en la Asamblea Nacional. No se debatió. El primer artículo empieza: «La mujer nace libre y permanece igual al hombre en derechos». La frase del cadalso está en el décimo.",
+      "Y no es una consigna suelta: es la parte central de un artículo sobre la libertad de opinión. El artículo X entero dice: «Nadie debe ser inquietado por sus opiniones, ni siquiera las fundamentales; la mujer tiene derecho a subir al cadalso, debe tener igualmente el de subir a la tribuna, siempre que sus manifestaciones no perturben el orden público establecido por la ley». Lo que se cita es el medio. Lo que se cae es el argumento —si la ley ya le reconoce a una mujer el derecho a ser ejecutada, no puede negarle el de hablar— y también la condición final, que le pone límite a ese mismo derecho.",
+      "Dos años y dos meses después, el 3 de noviembre de 1793, Olympe de Gouges fue guillotinada en la plaza de la Revolución. Fue la segunda mujer ejecutada bajo el Terror, después de María Antonieta, a quien había dedicado el texto. La condenó el Tribunal revolucionario por sus posiciones girondinas y su oposición a Robespierre, no por la Declaración de 1791. El verbo del artículo X, en cambio, no era una metáfora: había escrito «tiene derecho a subir al cadalso», y subió."
+    ],
+    "question": "¿Qué condición se le suele añadir al derecho de hablar?",
+    "quote": {
+      "text": "La mujer tiene derecho a subir al cadalso; debe tener igualmente el de subir a la tribuna.",
+      "author": "Olympe de Gouges",
+      "work": "Declaración de los derechos de la mujer y de la ciudadana, artículo X, 5 de septiembre de 1791",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Olympe de Gouges",
+    "subtitle": "Declaración de los derechos de la mujer, artículo X, 1791",
+    "body": "La frase que se cita es el medio de un artículo sobre la libertad de opinión. Empieza en «Nadie debe ser inquietado por sus opiniones» y termina en una condición: «siempre que sus manifestaciones no perturben el orden público establecido por la ley». Dos años después fue guillotinada."
+  },
+  "sources": [
+    {
+      "claim": "Texto literal del artículo X de la Déclaration des droits de la femme et de la citoyenne: «Nul ne doit être inquiété pour ses opinions même fondamentales ; la femme a le droit de monter sur l'échafaud ; elle doit avoir également celui de monter à la tribune, pourvu que ses manifestations ne troublent pas l'ordre public établi par la loi.» El documento se publicó el 5 de septiembre de 1791 y se compone de preámbulo, diecisiete artículos y postámbulo. Está dirigido a María Antonieta.",
+      "source": "Assemblée nationale (Francia), «5 septembre 1791 — Déclaration des droits de la femme et de la citoyenne, Olympe de Gouges»",
+      "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/revolution-francaise/declaration-des-droits-de-la-femme-et-de-la-citoyenne-olympe-de-gouges"
+    },
+    {
+      "claim": "La Déclaration se publicó en septiembre de 1791, dedicada a María Antonieta, reina de Francia. Propuesta para ser debatida en la Asamblea Nacional, se imprimió en cinco ejemplares («elle est alors tirée à cinq exemplaires»), y no llegó a debatirse formalmente. Consta de diecisiete artículos seguidos de una propuesta de nuevo contrato social entre hombres y mujeres. Olympe de Gouges fue arrestada como opositora a Robespierre y a los montañeses y condenada por el Tribunal revolucionario por sus posiciones girondinas.",
+      "source": "Bibliothèque nationale de France, BnF Essentiels, «Olympe de Gouges et la Déclaration des droits de la femme et de la citoyenne»",
+      "url": "https://essentiels.bnf.fr/fr/litterature/18e-siecle/d82c8468-ea13-484f-8e2e-5c17066e32fa-litterature-en-revolution/article/bdb2b184-e606-4b8c-b7b3-8e740827ae0d-olympe-gouges-et-declaration-droits-la-femme-et-la-citoyenne"
+    },
+    {
+      "claim": "Nació como Marie Gouze el 7 de mayo de 1748 en Montauban. En 1791 publicó la Déclaration des droits de la femme et de la citoyenne, dedicada a María Antonieta, cuyo primer artículo proclama: «La femme naît libre et demeure égale en droits à l'homme.» Fue ejecutada el 3 de noviembre de 1793, la segunda mujer guillotinada después de María Antonieta. Su primera obra de teatro contra la esclavitud, Zamore et Mirza ou l'Esclavage des Noirs, fue redactada en 1784 e inscrita en 1785 en el repertorio de la Comédie-Française, aunque no se representó hasta la Revolución.",
+      "source": "Fondation pour la mémoire de l'esclavage, biografía de Olympe de Gouges",
+      "url": "https://memoire-esclavage.org/biographies/olympe-de-gouges"
+    },
+    {
+      "claim": "Olympe de Gouges fue guillotinada el 3 de noviembre de 1793. Detenida y denunciada en julio de 1793, compareció ante el tribunal el 2 de noviembre y fue condenada a muerte el 3. La ejecución tuvo lugar en el cadalso de la plaza de la Revolución, en París. En el calendario revolucionario, la fecha corresponde al 13 de brumario del año II.",
+      "source": "France Pittoresque, «3 novembre 1793 : Olympe de Gouges est guillotinée»",
+      "url": "https://www.france-pittoresque.com/spip.php?article14292="
+    }
+  ],
+  "do_not_use": [
+    "Citar la frase como si fuera el artículo X completo. Es su parte central. El artículo empieza en «Nadie debe ser inquietado por sus opiniones, ni siquiera las fundamentales» y termina en una condición que casi nunca se reproduce: «siempre que sus manifestaciones no perturben el orden público establecido por la ley». Sin el principio se pierde que el tema del artículo es la libertad de opinión; sin el final se pierde que el derecho viene acotado.",
+    "Decir que la Asamblea Nacional debatió o rechazó el texto. No lo debatió. Se imprimió en cinco ejemplares con esa intención y la propuesta no prosperó.",
+    "Fechar su ejecución el 5 o el 6 de noviembre de 1793. Circulan las dos fechas, incluso en fichas institucionales. La documentada es el 3 de noviembre de 1793 —13 de brumario del año II—, un día después de comparecer ante el Tribunal revolucionario.",
+    "Sostener que fue guillotinada por haber escrito la Declaración de 1791. Fue condenada en 1793 por sus posiciones girondinas y su oposición a Robespierre. La coincidencia entre el verbo del artículo X y su muerte es real y es lo que hace la pieza, pero no hay una relación de causa entre el texto de 1791 y la condena de 1793.",
+    "Presentarla como autora de la primera declaración de derechos de las mujeres sin más matiz, o llamarla «la primera feminista». Su texto es de 1791 y la Vindicación de Mary Wollstonecraft es de 1792: son dos escritos casi simultáneos y de tradiciones distintas, y establecer una prioridad entre ellos no aporta nada y se equivoca con facilidad.",
+    "Llamarla Olympe de Gouges de nacimiento. Nació Marie Gouze en Montauban, el 7 de mayo de 1748; «Olympe de Gouges» es el nombre que ella se dio.",
+    "Traducir «échafaud» por «patíbulo» o por «horca». Es el cadalso de la guillotina, y la palabra importa porque el artículo la usa como el ejemplo extremo de un derecho que la ley sí le concedía a las mujeres."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
