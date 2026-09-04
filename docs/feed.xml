@@ -7,8 +7,30 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 14:52:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 16:33:21 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A quienes entran en los mismos ríos les fluyen aguas siempre distintas.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-01-re16-reel</guid>
+      <pubDate>Fri, 04 Sep 2026 16:30:00 +0000</pubDate>
+      <description><![CDATA["A quienes entran en los mismos ríos les fluyen aguas siempre distintas."
+— Heráclito (fragmento B12)
+
+Este es el único fragmento del río que los especialistas dan por auténtico. Y dice justo lo contrario de lo que todos repetimos.
+
+La versión conocida, "nadie se baña dos veces en el mismo río", no es de Heráclito: es el resumen que hizo Platón un siglo después, y le da la vuelta al sentido. Platón lo lee como imposibilidad: nada se repite, nada permanece.
+
+Heráclito estaba diciendo algo más raro y más útil. El río es el mismo. Precisamente por eso el agua tiene que ser distinta. Lo que le da identidad no es quedarse quieto: es no dejar de correr.
+
+Aplicado a una persona, cambia todo. No eres el mismo porque no hayas cambiado. Eres el mismo porque no has parado.
+
+¿Qué parte de ti se ha mantenido igual solo porque siguió moviéndose?
+
+#SabiduriaDeBolsillo #Heraclito #Filosofia #Grecia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re16-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re16-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>SEQUOYAH NO SABÍA LEER EN NINGUNA LENGUA Y LE DIO UNA ESCRITURA COMPLETA A SU PUEBLO</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,26 +512,6 @@ La cadena no admitía un solo día de descuido: si los niños enfermaban, la vac
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-manana.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Si tienes un jardín en tu biblioteca, nada faltará.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra28</guid>
-      <pubDate>Tue, 01 Sep 2026 09:10:47 +0000</pubDate>
-      <description><![CDATA["Si tienes un jardín en tu biblioteca, nada faltará."
-— Marco Tulio Cicerón, Ad familiares IX, 4 (46 a.C.)
-
-La escribió Cicerón en el año 46 antes de Cristo, en una nota breve a su amigo Marco Terencio Varrón, para arreglar una visita. La frase entera dice así en latín: Tu si minus ad nos, nos accurremus ad te: si hortum in bibliotheca habes, deerit nihil. Es decir: si tú no vienes, vamos nosotros; si tienes un jardín en la biblioteca, no hará falta nada más. No era una sentencia sobre la buena vida. Era el remate de una carta cuyo cuerpo es una broma sobre lógica: Cicerón le dice que, según Diodoro, si va a venir es necesario que venga, y si no, venir es imposible. Está en el libro IX de las Cartas a los amigos, dieciséis libros con correspondencia del 62 al 43 antes de Cristo que su liberto Tirón reunió después de su muerte. Ninguna de esas cartas se escribió para ser publicada.
-
-La versión que circula cambia una preposición: un jardín y una biblioteca, en vez de un jardín en la biblioteca. Con esa letra de diferencia, una nota entre dos amigos sobre una casa concreta se convierte en un lema universal. Y hay algo más que casi nadie sabe. El destinatario, Varrón, fue el hombre a quien César encargó en el 47 antes de Cristo la biblioteca pública de Roma. Escribió cerca de setenta y cuatro obras en unos seiscientos veinte libros. Sobrevive una completa. Cuando llegaron las proscripciones, Marco Antonio lo incluyó en las listas y perdió sus bienes, la biblioteca entre ellos.
-
-La frase se cita hoy en camisetas, en placas y en marcadores de libros como una receta de felicidad doméstica. En su origen es más modesta y también más frágil: describe una casa que existía, con un jardín y unos estantes, y se la escribió un hombre asesinado tres años después a otro que acabó sin sus libros. Lo que quedó no fue la biblioteca. Fue la nota que hablaba de ella.
-
-¿Qué lugar te basta para no extrañar nada?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra28.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra28.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
