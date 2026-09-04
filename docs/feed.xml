@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 04 Sep 2026 08:48:48 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 10:49:52 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-01-re15-reel</guid>
+      <pubDate>Fri, 04 Sep 2026 10:32:00 +0000</pubDate>
+      <description><![CDATA["ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE
+
+Viene del latín oriens: el sol que sale. Durante siglos, orientar algo fue alinearlo hacia el este, como se alineaban las iglesias. Que la palabra sirva para situarse respecto a cualquier punto cardinal es reciente: ese uso se documenta hacia 1842.
+
+La costumbre está dibujada en los mapas. En las mappae mundi cristianas, arriba no iba el norte: iba el este. En el mapa de Hereford, de alrededor del año 1300, pintado sobre una sola piel de becerro de metro y medio, el borde superior lo ocupa el Paraíso terrenal y el centro exacto lo ocupa Jerusalén. La lógica no era geográfica, era narrativa: arriba estaba el principio de la historia.
+
+Y el norte arriba no lo trajo la brújula, como se repite: lo trajo Ptolomeo, que hacia el año 150 lo puso así en su Geografía por comodidad de dibujo. Europa lo adoptó cuando lo redescubrió, más de mil doscientos años después.
+
+Cada vez que alguien dice que necesita orientarse, está mirando al amanecer sin saberlo.
+
+¿Qué otras palabras usamos a diario sin ver lo que llevan dentro?
+
+#SabiduriaDeBolsillo #Mapas #Etimologia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re15-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-01-re15-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -489,28 +510,6 @@ Lo que no ha aparecido son armas, fortificaciones ni restos humanos con marcas d
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra27.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra27.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>No deseo que las mujeres tengan poder sobre los hombres, sino sobre sí mismas.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-08-31-extra26</guid>
-      <pubDate>Tue, 01 Sep 2026 06:07:58 +0000</pubDate>
-      <description><![CDATA["No deseo que las mujeres tengan poder sobre los hombres, sino sobre sí mismas."
-— Mary Wollstonecraft, Vindicación de los derechos de la mujer, cap. IV (1792)
-
-La frase es una respuesta, y casi nunca se cita con lo que responde. En el capítulo IV del libro, Wollstonecraft transcribe a Rousseau: «Educad a las mujeres como a los hombres, y cuanto más se parezcan a nuestro sexo, menos poder tendrán sobre nosotros». Y contesta en la línea siguiente: ese es justamente el punto al que apunto. No deseo que tengan poder sobre los hombres, sino sobre sí mismas.
-
-El libro salió en Londres en 1792, escrito deprisa, contra un informe que Talleyrand había presentado el año anterior a la Asamblea Nacional francesa y que reservaba a las niñas una educación solo doméstica. No fue un escándalo: se recibió bien y tuvo reseñas favorables.
-
-Lo que la hundió fue un gesto de amor. En 1798, un año después de su muerte, su viudo William Godwin publicó unas memorias en las que contó sin adornos la vida privada de ella: el amante estadounidense, la hija nacida fuera del matrimonio, los intentos de suicidio, las cartas incluidas en apéndice. La reputación se derrumbó y arrastró el libro con ella durante décadas.
-
-Las sufragistas del siglo XIX volvieron a él y lo devolvieron a la circulación. Hoy la frase se cita casi siempre sola, sin la línea de Rousseau delante, y así suena a consejo de vida. En su lugar no lo es: es una réplica a un hombre que había escrito que educarlas bien las haría menos manejables.
-
-¿Sobre qué parte de tu vida decide todavía alguien más?
-
-#SabiduriaDeBolsillo #Wollstonecraft #Frases #Historia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra26.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-extra26.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
