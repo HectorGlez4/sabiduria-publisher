@@ -1,0 +1,80 @@
+{
+  "id": "2026-09-04-re45-reel",
+  "publish_at": "2026-09-05T00:09:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+    "hook": "\"Tus hijos no son tus hijos: son hijos e hijas de la vida, deseosa de sí misma.\"\n— Kahlil Gibran, El profeta (1923)",
+    "body": [
+      "El capítulo se titula \"De los hijos\" y suele citarse como un elogio tierno de la crianza. No lo es. Es una advertencia sobre la propiedad, y sigue así: puedes darles tu amor, pero no tus pensamientos; puedes alojar sus cuerpos, pero no sus almas; puedes esforzarte por parecerte a ellos, pero no pretendas que ellos se parezcan a ti.",
+      "Quien lo escribió salió de un pueblo del Líbano siendo niño y creció en Boston. El árabe era su lengua literaria, pero este libro lo escribió en inglés, en Nueva York, y salió el 23 de septiembre de 1923.",
+      "Fue un fracaso. Vendió unos mil doscientos ejemplares el primer año y el New York Times ni siquiera lo reseñó. Hoy pasa de diez millones, está en más de cien idiomas y no ha dejado de imprimirse un solo año desde entonces. Él murió en 1931, a los cuarenta y ocho, sin llegar a ver casi nada de eso."
+    ],
+    "question": "¿A quién estás queriendo sin querer que se te parezca?",
+    "quote": {
+      "text": "Tus hijos no son tus hijos: son hijos e hijas de la vida, deseosa de sí misma.",
+      "author": "Kahlil Gibran (1883-1931)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#KhalilGibran",
+      "#ElProfeta",
+      "#Frases"
+    ],
+    "extended": [
+      "#Gibran",
+      "#Libano",
+      "#Poesia",
+      "#PoesiaEnEspanol",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+      "source": "Academy of American Poets / poets.org (biografía, primer año de ventas, ausencia de reseña del NYT)"
+    },
+    {
+      "claim": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+      "source": "Wikipedia en inglés (Kahlil Gibran, The Prophet (book))"
+    },
+    {
+      "claim": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+      "source": "Britannica (Khalil Gibran: fechas y composición en inglés)"
+    },
+    {
+      "claim": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+      "source": "History.com (efeméride del 23 de septiembre de 1923)"
+    },
+    {
+      "claim": "Kahlil Gibran: el poema más citado del mundo sobre la crianza no es un elogio tierno, es una advertencia contra la propiedad; y su libro fue un fracaso comercial el año que salió",
+      "source": "americanliterature.com (texto de On Children)"
+    }
+  ],
+  "do_not_use": [
+    "la traducción castellana de \"vosotros\", que choca con el español neutro de la página — la tarjeta y el copy usan la forma de tuteo, y eso se hace constar aquí para no presentarla como la traducción canónica",
+    "\"lo escribió para sus hijos\" o cualquier dato familiar (las fuentes consultadas no registran matrimonio ni descendencia, y el post no lo afirma en ningún sentido)",
+    "la causa de su muerte, que no aporta nada",
+    "el puesto que ocupa en las listas de poetas más vendidos (la comparación arrastra a un autor ya publicado el 12 de agosto)",
+    "\"El profeta es un libro religioso\" (no pertenece a ninguna confesión)",
+    "\"1885\" como año de emigración (poets.org lo da así, pero la fecha coherente con su nacimiento y con la Wikipedia en inglés es 1895: por eso el copy dice solo \"siendo niño\")",
+    "citar el verso suelto como consigna de crianza permisiva, que es justo lo que este post corrige"
+  ],
+  "_verificacion_prosa": "el pasaje pertenece al capítulo **\"De los hijos\"** (*On Children*) de ***El profeta***, publicado el **23 de septiembre de 1923** por **Alfred A. Knopf**, en **inglés**. Texto original verificado: *\"Your children are not your children. / They are the sons and daughters of Life's longing for itself. / They come through you but not from you, / And though they are with you yet they belong not to you. // You may give them your love but not your thoughts, / For they have their own thoughts. / You may house their bodies but not their souls, / For their souls dwell in the house of tomorrow, which you cannot visit, not even in your dreams. / You may strive to be like them, but seek not to make them like you…\"* (americanliterature.com, transcripción del capítulo completo). **Estructura del libro:** 26 poemas en prosa; el profeta Almustafá lleva doce años en la ciudad de Orfalese y, antes de embarcarse, responde a los vecinos sobre el amor, el matrimonio, los hijos, el trabajo, la alegría y el dolor, la libertad, la enseñanza, la amistad, el tiempo, la belleza y la muerte (Wikipedia en inglés, *The Prophet (book)*). **Recepción:** la Academy of American Poets registra que el libro **no fue reseñado por el New York Times** y que **vendió solo unos 1.200 ejemplares en su primer año**; History.com coincide en la cifra y en que la venta creció por el boca a boca durante décadas. **Hoy:** más de **10 millones de ejemplares** vendidos, **más de 100 idiomas**, y **nunca ha estado descatalogado** (\"It has never been out of print\", Wikipedia en inglés); la edición estadounidense por sí sola pasaba de nueve millones en 2012. **Biografía:** Kahlil Gibran, **6 de enero de 1883** en Bsharri (entonces Monte Líbano otomano) – **10 de abril de 1931** en Nueva York, a los **48 años**. Emigró con su madre y sus hermanos a Boston siendo niño; volvió a Líbano a estudiar entre 1898 y 1902 y se instaló definitivamente en Nueva York en **1911**. **El árabe fue su primera lengua literaria** y sus primeros libros son en árabe; *El profeta* lo escribió en inglés. **Mary Haskell** lo sostuvo económicamente y **editó todos sus escritos en inglés**; estuvieron brevemente comprometidos entre 1910 y 1911. Fuentes: Academy of American Poets / poets.org (biografía, primer año de ventas, ausencia de reseña del NYT), Wikipedia en inglés (*Kahlil Gibran*, *The Prophet (book)*), Britannica (*Khalil Gibran*: fechas y composición en inglés), History.com (efeméride del 23 de septiembre de 1923), americanliterature.com (texto de *On Children*). **No usar:** la traducción castellana de \"vosotros\", que choca con el español neutro de la página — la tarjeta y el copy usan la forma de tuteo, y eso se hace constar aquí para no presentarla como la traducción canónica; \"lo escribió para sus hijos\" o cualquier dato familiar (las fuentes consultadas no registran matrimonio ni descendencia, y el post no lo afirma en ningún sentido); la causa de su muerte, que no aporta nada; el puesto que ocupa en las listas de poetas más vendidos (la comparación arrastra a un autor ya publicado el 12 de agosto); \"El profeta es un libro religioso\" (no pertenece a ninguna confesión); \"1885\" como año de emigración (poets.org lo da así, pero la fecha coherente con su nacimiento y con la Wikipedia en inglés es 1895: por eso el copy dice solo \"siendo niño\"); y citar el verso suelto como consigna de crianza permisiva, que es justo lo que este post corrige.",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-30-tarde"
+}

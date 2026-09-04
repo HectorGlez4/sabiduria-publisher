@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-08-extra91",
+  "slot": "tarde",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Ole Rømer y los eclipses de Ío (1676)",
+    "hook": "Al hombre al que se le atribuye la primera medición de la velocidad de la luz le falta un detalle en la biografía: nunca publicó una cifra de la velocidad de la luz.",
+    "body": [
+      "Ole Rømer, astrónomo danés en el Observatorio de París, llevaba años cronometrando los eclipses de Ío, la luna interior de Júpiter. El intervalo entre un eclipse y el siguiente no salía constante: se acortaba mientras la Tierra se acercaba a Júpiter y se alargaba mientras se alejaba. El 22 de agosto de 1676 Cassini presentó el hallazgo a la Academia de Ciencias de París; el 21 de noviembre lo expuso Rømer en persona, y en diciembre apareció en el Journal des Sçavans. Su conclusión fue que la luz tarda unos veintidós minutos en cruzar el diámetro de la órbita terrestre.",
+      "Eso es un retraso, no una velocidad. Rømer nunca convirtió su número a leguas ni a millas por segundo. El primero en hacerlo fue Christiaan Huygens, que combinó los veintidós minutos con el diámetro de la órbita que Cassini había medido en 1671 y obtuvo unos 110 millones de toesas por segundo: alrededor de 214.000 kilómetros por segundo. La prueba, en cambio, sí fue de Rømer, y fue una predicción: anunció que la reaparición de Ío prevista para noviembre de 1676 llegaría con unos diez minutos de retraso sobre lo calculado. Se observó el 9 de noviembre.",
+      "La cifra estaba mal. Veintidós minutos equivalen a 226.663 kilómetros por segundo, un 24,4 % por debajo del valor real de 299.792. Y la explicación tampoco convenció: Cassini, que la había presentado, la rechazó, y Picard compartió sus dudas. La finitud de la luz no quedó asentada hasta que James Bradley midió la aberración estelar, medio siglo después. Lo que Rømer aportó no fue el número correcto. Fue la prueba de que ahí había un número."
+    ],
+    "question": "¿Cuánto vale una cifra equivocada que abre la pregunta correcta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "PARÍS, 1676",
+    "subtitle": "Publicó un retraso, no una velocidad",
+    "body": "Los eclipses de Ío se atrasaban cuando la Tierra se alejaba de Júpiter. Rømer dedujo que la luz tarda en llegar, y lo demostró prediciendo un retraso de diez minutos. Su cifra fallaba por un cuarto, y Cassini la rechazó."
+  },
+  "sources": [
+    {
+      "claim": "Cassini presentó los hallazgos de Rømer a la Academia Real de Ciencias de París el 22 de agosto de 1676; Rømer predijo que una reaparición de Ío ocurriría unos diez minutos más tarde de lo calculado y se observó el 9 de noviembre de 1676. Rømer calculó que la luz tarda unos veintidós minutos en cruzar el diámetro completo de la órbita terrestre, pero nunca publicó formalmente un valor numérico de la velocidad en unidades terrestres. Huygens fue el primero en convertir el resultado en unidades concretas: unos 110 millones de toesas por segundo, aproximadamente 214.000 kilómetros por segundo. El Journal des Sçavans publicó la presentación el 7 de diciembre de 1676.",
+      "source": "Wikipedia (en), «Rømer's determination of the speed of light»",
+      "url": "https://en.wikipedia.org/wiki/R%C3%B8mer%27s_determination_of_the_speed_of_light"
+    },
+    {
+      "claim": "La cifra de veintidós minutos corresponde a 226.663 km/s, un 24,4 % por debajo del valor verdadero de 299.792 km/s. Cassini rechazó la explicación y Picard compartía sus dudas, mientras que Huygens, Halley, Newton y Flamsteed la aceptaron; la finitud de la velocidad de la luz no fue plenamente admitida hasta las mediciones de aberración estelar de James Bradley.",
+      "source": "Wikipedia (en), «Rømer's determination of the speed of light»",
+      "url": "https://en.wikipedia.org/wiki/R%C3%B8mer%27s_determination_of_the_speed_of_light"
+    },
+    {
+      "claim": "Rømer anunció sus resultados a la Academia Real de Ciencias francesa el 21 de noviembre de 1676, con publicación en el Journal des Sçavans en diciembre; al presentarlos afirmó que la luz tardaba unos veintidós minutos en cruzar el diámetro de la órbita anual de la Tierra. Su obra publicada no contenía ningún valor numérico explícito de la velocidad de la luz. Huygens aceptó la finitud de la luz y Cassini se resistió a ella; la hipótesis de Rømer se impuso a la del tiempo instantáneo tras las mediciones de aberración estelar de James Bradley en 1728.",
+      "source": "Optics & Photonics News (Optica), «Ole Rømer and the Speed of Light», vol. 20, n.º 7",
+      "url": "https://www.optica-opn.org/home/articles/volume_20/issue_7/features/ole_r%C3%B8mer_and_the_speed_of_light/"
+    },
+    {
+      "claim": "Rømer observó las lunas de Júpiter desde Uraniborg, en la isla de Hveen cerca de Copenhague, y desde el Observatorio de París, y advirtió que el tiempo entre eclipses de una misma luna no era siempre el mismo, con un patrón ligado a la distancia entre la Tierra y Júpiter.",
+      "source": "Carnegie Science, Everyday Cosmology, línea de tiempo, «1676: Ole Rømer Measures the Speed of Light»",
+      "url": "https://cosmology.carnegiescience.edu/timeline/1676.html"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Rømer «midió la velocidad de la luz» en el sentido de haber dado una cifra. Lo que publicó fue un retraso —unos veintidós minutos para el diámetro de la órbita terrestre—, no una velocidad en unidades terrestres.",
+    "No atribuirle a Rømer los ~214.000 km/s. Ese número lo derivó Huygens combinando el retraso con el diámetro de la órbita medido por Cassini en 1671.",
+    "No presentar su resultado como exacto ni «asombrosamente preciso». Equivale a 226.663 km/s, un 24,4 % por debajo del valor real.",
+    "No decir que la comunidad científica lo aceptó enseguida. Cassini —que había presentado el trabajo a la Academia— lo rechazó, y Picard compartió sus dudas; la aceptación plena llegó con la aberración estelar de Bradley, medio siglo más tarde.",
+    "No dar una sola fecha para el anuncio. Cassini lo presentó el 22 de agosto de 1676, Rømer el 21 de noviembre, y el Journal des Sçavans lo publicó en diciembre. Las divulgaciones suelen elegir una y omitir las otras.",
+    "No fijar el año de Bradley. Las fuentes dan 1727, 1728 y 1729 según se refieran a las observaciones o a la publicación.",
+    "No decir que Rømer buscaba medir la velocidad de la luz. Trabajaba sobre las tablas de los eclipses de los satélites de Júpiter, que se usaban para el problema de la longitud geográfica; la discrepancia apareció en ese trabajo."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-08T15:33:00Z"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2026-09-08-extra94",
+  "slot": "tarde",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Nan Madol, los islotes de basalto de Pohnpei",
+    "hook": "En 2016 la UNESCO lo inscribió en la Lista del Patrimonio Mundial y en la Lista del Patrimonio en Peligro el mismo día. Lo que lo está destruyendo no es el saqueo: son los manglares.",
+    "body": [
+      "Frente a la costa sureste de Pohnpei, en Micronesia, hay casi un centenar de islotes artificiales levantados sobre el arrecife y separados por canales de marea. Los muros son columnas de basalto de varias toneladas, extraídas de afloramientos del otro lado de la isla principal y llevadas hasta el arrecife. La ocupación empieza hacia el año 900, pero la construcción megalítica —la que define el sitio— arranca en torno al 1200, con la dinastía Saudeleur, y se detiene cuando esa dinastía se derrumba a comienzos del siglo XVII.",
+      "En 2016 un equipo dirigido por el arqueólogo Mark McCoy fechó por series de uranio la tumba monumental de Nandauwas, de ochenta por sesenta metros y muros de más de ocho de alto. El resultado acotó su construcción a una ventana de veinte años, entre 1180 y 1200: un siglo antes de lo que se suponía. Eso convierte a Pohnpei en la primera isla del Pacífico gobernada por un jefe único, y la prueba no es un documento. Es el peso de las piedras: para mover eso hace falta alguien capaz de ordenarlo.",
+      "Los canales eran la ciudad. Por ahí se entraba, por ahí se separaban los recintos, y esa era la idea. Hoy los canales se están azolvando, y en el sedimento crecen manglares cuyas raíces empujan los muros desde dentro. Ese es el motivo exacto por el que el sitio entró en la lista de peligro el mismo día que en la de honor. Lo que sostenía la obra dejó de mantenerse, y la obra empezó a comérsela lo que crece cuando nadie limpia."
+    ],
+    "question": "¿Qué se te está cerrando por falta de mantenimiento y no de valor?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "POHNPEI, HACIA 1200",
+    "subtitle": "Inscrito y declarado en peligro el mismo día",
+    "body": "Casi cien islotes artificiales sobre un arrecife, con muros de columnas de basalto traídas del otro lado de la isla. Los canales que los separaban se azolvan, y los manglares que crecen en el sedimento empujan los muros desde dentro."
+  },
+  "sources": [
+    {
+      "claim": "Nan Madol fue añadido a la Lista del Patrimonio Mundial en 2016 e inscrito al mismo tiempo en la Lista del Patrimonio Mundial en Peligro; la amenaza principal es la sedimentación de los canales de agua, que contribuye al crecimiento incontrolado de manglares y debilita las estructuras existentes. El sitio comprende 99 islotes artificiales frente a la costa sureste de Pohnpei, con estructuras construidas entre 1200 y 1500 d.C., centro ceremonial de la dinastía Saudeleur.",
+      "source": "UN News (Naciones Unidas), «UNESCO adds four new sites to World Heritage List», julio de 2016",
+      "url": "https://news.un.org/en/story/2016/07/534472"
+    },
+    {
+      "claim": "El complejo comprende más de noventa islotes rectilíneos construidos sobre el arrecife, en un área de unas 80 hectáreas de las que los islotes ocupan unas 30. La ocupación inicial se dio hacia el año 1 d.C. sobre islotes naturales; la construcción de islotes artificiales comenzó al menos hacia el 900 d.C., y la construcción megalítica con basalto columnar no empezó hasta cerca del 1200 d.C. La dinastía Saudeleur se desmoronó a comienzos del siglo XVII. Las columnas de basalto pesaban varias toneladas o más y fueron extraídas de afloramientos de la isla principal de Pohnpei.",
+      "source": "International Archaeological Research Institute (IARII), «Monumental Architecture of Nan Madol»",
+      "url": "https://iarii.org/research/monumental-architecture-of-nan-madol/"
+    },
+    {
+      "claim": "Un equipo dirigido por el arqueólogo Mark McCoy, de la Southern Methodist University, con colegas de Estados Unidos, China, Japón y Reino Unido, dató por series de uranio la tumba monumental de Nandauwas y acotó su construcción a una ventana de veinte años, entre 1180 y 1200, más de un siglo antes de la cronología anterior. Es la evidencia directa más temprana de construcción monumental en el Pacífico y sitúa a Pohnpei como la primera isla del Pacífico gobernada por un jefe único. La tumba mide 80 por 60 metros y sus muros superan los 8 metros de alto; las piedras de basalto, de varias toneladas cada una, se extrajeron de canteras al otro lado de la isla.",
+      "source": "Sci.News, «Nan Madol: Archaeologists Uncover Earliest Evidence of Chiefdom in Pacific», sobre el estudio de McCoy et al. publicado en Quaternary Research",
+      "url": "https://www.sci.news/archaeology/nan-madol-earliest-evidence-chiefdom-pacific-04338.html"
+    }
+  ],
+  "do_not_use": [
+    "No dar un número cerrado de islotes. Las fuentes dicen «más de noventa», 92 y 99 según qué se cuente como islote. «Casi un centenar» es lo que sostienen todas.",
+    "No repetir la cifra de 750.000 toneladas de basalto ni la de un peso medio de 5 toneladas por columna con máximos de 50. Circula mucho, pero procede de fuentes divulgativas sin respaldo arqueológico citado; lo verificable es «varias toneladas o más».",
+    "No decir que nadie sabe quién lo construyó ni insinuar misterio de origen desconocido. Se sabe: la dinastía Saudeleur, y la tradición oral pohnpeiana lo conserva. Lo que no está establecido es el método exacto de transporte de las columnas.",
+    "No decir que las columnas de basalto son talladas. Son basalto columnar natural, que se fractura en prismas al enfriarse; se extrajeron y se movieron, no se labraron con esa forma.",
+    "No llamarlo «la Venecia del Pacífico». Es una etiqueta turística que impone una comparación europea sobre un sitio que no la necesita.",
+    "No decir que fue abandonado de golpe ni fechar su fin en 1500. La construcción principal va del 1200 al 1500 y la caída de los Saudeleur se sitúa a comienzos del siglo XVII; el sitio siguió teniendo uso ritual después.",
+    "No atribuir el estudio de datación a la revista PNAS. Se publicó en Quaternary Research."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-08T18:33:00Z"
+}

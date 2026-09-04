@@ -1,0 +1,71 @@
+{
+  "id": "2026-09-06-extra68",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "el proverbio de los leones y el cazador",
+    "hook": "\"Hasta que los leones tengan sus propios historiadores, la historia de la cacería glorificará siempre al cazador.\"",
+    "body": [
+      "La frase se cita en todo el mundo con un solo nombre debajo: Chinua Achebe. Y él la dijo, en efecto, en la entrevista que le hizo Jerome Brooks para The Paris Review en 1994. Pero casi nunca se reproduce la oración entera. Achebe empieza así: «Hay ese gran proverbio: que hasta que los leones tengan sus propios historiadores, la historia de la cacería glorificará siempre al cazador». Lo que sigue explica por qué se hizo escritor: para que el relato de la cacería refleje también la agonía, el trabajo, incluso la valentía de los leones. No la presenta como propia. La presenta como un proverbio, y lo hace en las primeras cuatro palabras.",
+      "El proverbio existe, y es anterior. El proyecto African Proverbs, alojado por la Universidad Tangaza de Nairobi, recogió en 2006 la versión en ewé-miná, lengua de Benín, Ghana y Togo: «Gnatola ma no kpon sia, eyenabe adelan to kpo mi sena» —hasta que el león tenga su propio narrador, el cazador tendrá siempre la mejor parte de la historia—. La misma ficha registra variantes en igbo, en Nigeria, y en Kenia y Zimbabue, donde los leones no narran sino que escriben. No hay un autor: hay una familia de versiones en lenguas distintas, que es la forma que tiene de existir un proverbio.",
+      "Y ahí está lo que hace la frase más filosa de lo que parece. Un dicho colectivo, sin firma, sobre quién se queda con el relato de la cacería, terminó teniendo un dueño: el nombre africano más célebre que lo pronunció en inglés ante una revista literaria de Nueva York. No hubo robo. Achebe dijo «ese gran proverbio» cada vez. La atribución se la puso el mundo, que necesita un nombre para citar y toma el que tiene más cerca y más luz. El proverbio describe, sin quererlo, lo que le pasó al proverbio."
+    ],
+    "question": "¿De quién es una frase que nadie firmó?",
+    "quote": {
+      "text": "Hasta que los leones tengan sus propios historiadores, la historia de la cacería glorificará siempre al cazador.",
+      "author": "Proverbio africano, citado por Chinua Achebe",
+      "work": "«The Art of Fiction No. 139», entrevista de Jerome Brooks en The Paris Review, invierno de 1994; versión ewé-miná recogida por el proyecto African Proverbs de la Universidad Tangaza, Nairobi, 2006",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Los leones y el cazador",
+    "subtitle": "Proverbio africano, citado por Chinua Achebe",
+    "body": "Achebe no la presentó como suya. En 1994 dijo: «Hay ese gran proverbio». La versión ewé-miná se recoge en Benín, Ghana y Togo, y hay variantes en igbo, en Kenia y en Zimbabue. Una frase colectiva sobre quién cuenta la cacería terminó teniendo un solo dueño."
+  },
+  "sources": [
+    {
+      "claim": "Transcripción de la entrevista «Chinua Achebe, The Art of Fiction No. 139», publicada en The Paris Review. El pasaje dice literalmente: «There is that great proverb—that until the lions have their own historians, the history of the hunt will always glorify the hunter.» Achebe lo dice al explicar cómo entendió la necesidad de que los escritores africanos contaran sus propias historias, y añade que hay que narrar para que la historia de la cacería refleje también la agonía, el trabajo y la valentía de los leones.",
+      "source": "Transcripción de la entrevista de The Paris Review circulada en la lista académica USA/Africa Dialogue Series",
+      "url": "https://groups.google.com/g/usaafricadialogue/c/LSjnYkMyGyU"
+    },
+    {
+      "claim": "Metadatos de la entrevista: «Chinua Achebe, The Art of Fiction No. 139», entrevistador Jerome Brooks, publicación The Paris Review, diciembre de 1994.",
+      "source": "Longform, ficha de la entrevista de The Paris Review",
+      "url": "https://longform.org/posts/chinua-achebe-the-art-of-fiction-no-139"
+    },
+    {
+      "claim": "Proverbio del mes de abril de 2006: en ewé-miná, «Gnatola ma no kpon sia, eyenabe adelan to kpo mi sena»; en inglés, «Until the lion has his or her own storyteller, the hunter will always have the best part of the story». Lengua ewé-miná, hablada en Benín, Ghana y Togo. La ficha registra variantes: en igbo (Nigeria), «Until lions have their own historians, tales of the hunt shall always glorify the hunter»; en Kenia y Zimbabue, «Until lions start writing down their own stories, the hunters will always be the heroes». El comentario explica que quien no tiene voz pierde: el león frente al cazador, el siervo frente al amo.",
+      "source": "African Proverbs, Sayings and Stories, proyecto alojado por la Universidad Tangaza (Nairobi)",
+      "url": "https://afriprov.tangaza.ac.ke/april-2006-proverb-quntil-the-lion-has-his-or-her-own-storyteller-the-hunter-will-always-have-the-best-part-of-the-storyq-ewe-mina-benin-ghana-and-togo/"
+    },
+    {
+      "claim": "Reportaje de NPR de Annalisa Quinn del 22 de marzo de 2013, tras la muerte de Achebe. Recoge la frase citándola de la entrevista de The Paris Review de 1994 y la presenta como un proverbio que Achebe invocó, no como una creación suya: al decir «that great proverb», Achebe indica que se trata de un dicho tradicional.",
+      "source": "NPR, «Chinua Achebe And The Bravery Of Lions»",
+      "url": "https://www.nprillinois.org/2013-03-22/chinua-achebe-and-the-bravery-of-lions"
+    },
+    {
+      "claim": "Home and Exile es una colección de conferencias que Chinua Achebe dictó en la Universidad de Harvard en 1998 y que se publicó como libro en 2000.",
+      "source": "Ficha enciclopédica de Home and Exile",
+      "url": "https://en.wikipedia.org/wiki/Home_and_Exile"
+    }
+  ],
+  "do_not_use": [
+    "Presentarla como un aforismo original de Chinua Achebe. Es el error que se comete casi siempre y el que esta pieza corrige: en la entrevista de 1994 la frase va precedida de «There is that great proverb», y Achebe la atribuye a la tradición, no a sí mismo.",
+    "Fijarle una sola nacionalidad: «proverbio keniano», «proverbio nigeriano», «proverbio igbo». Las tres formas circulan y ninguna está probada como la original. La ficha del proyecto African Proverbs documenta la versión ewé-miná de Benín, Ghana y Togo y registra además variantes en igbo y en Kenia y Zimbabue. Un proverbio en varias lenguas no tiene un país de origen certificado.",
+    "Mezclar las versiones en una sola cita. La ewé-miná habla de un narrador y de «la mejor parte de la historia»; la igbo, de historiadores y de la cacería; la de Kenia y Zimbabue dice que los leones escriban. Coserlas produce una frase que nadie dijo.",
+    "Datarla. No hay fecha ni autor documentados para el proverbio, y ponerle un siglo o una dinastía es inventar. Lo fechado es su uso: la entrevista de 1994 y las conferencias de Harvard de 1998, recogidas en Home and Exile.",
+    "Sostener que a Achebe «le robaron» la frase o que él «se apropió» de un proverbio ajeno. Ninguna de las dos cosas: él la citó como proverbio y el mundo le puso su nombre al citarla de vuelta. Es un desplazamiento de atribución, no una disputa entre partes.",
+    "Traducir «historians» como «escritores» o «narradores» cuando se cita la versión que Achebe dio. Dijo historiadores, y esa palabra es la que hace la frase, porque el asunto no es quién cuenta cuentos sino quién levanta el registro que después se da por historia."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-06T16:33:00Z"
+}

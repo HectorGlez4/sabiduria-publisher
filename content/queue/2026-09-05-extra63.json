@@ -1,0 +1,74 @@
+{
+  "id": "2026-09-05-extra63",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Fernando Birri y la utopía en el horizonte",
+    "hook": "\"Ella está en el horizonte —dice Fernando Birri—. Me acerco dos pasos, ella se aleja dos pasos. Camino diez pasos y el horizonte se corre diez pasos más allá. Por mucho que yo camine, nunca la alcanzaré. ¿Para qué sirve la utopía? Para eso sirve: para caminar.\"",
+    "body": [
+      "La frase se atribuye casi siempre a Eduardo Galeano, y él nunca dijo que fuera suya. La escribió, sí, en «Ventana sobre la utopía», una de las viñetas de Las palabras andantes, publicado en 1993. Pero dentro del texto está la aclaración, en medio de la primera oración: «—dice Fernando Birri—». Galeano armó el pasaje a partir de lo que Birri respondió en voz alta en una conversación en Cartagena de Indias, cuando alguien del público preguntó para qué sirve la utopía.",
+      "La versión que circula perdió dos cosas. La primera palabra del original es «Ella»: el sujeto está en el título de la viñeta, no en la frase, y por eso las copias lo sustituyen por «La utopía está en el horizonte», que se sostiene sola. La segunda es el inciso que da el crédito. Al quitarlo, la cita queda limpia y el autor cambia de nombre. No hizo falta ninguna mala intención: bastó recortar por donde el texto respiraba.",
+      "Birri nació en Santa Fe el 13 de marzo de 1925 y murió en Roma el 27 de diciembre de 2017, a los noventa y dos años. Volvió a la Argentina en 1956 tras estudiar cine en Roma y fundó en su ciudad el instituto de cine de la Universidad Nacional del Litoral. En 1986, junto con Gabriel García Márquez, puso en marcha la Escuela Internacional de Cine y Televisión de San Antonio de los Baños, en Cuba. Dedicó la vida a montar escuelas: cosas que sirven, sobre todo, para que otros sigan caminando."
+    ],
+    "question": "¿Hacia qué caminas sabiendo que no vas a llegar?",
+    "quote": {
+      "text": "Ella está en el horizonte —dice Fernando Birri—. Me acerco dos pasos, ella se aleja dos pasos. Camino diez pasos y el horizonte se corre diez pasos más allá. Por mucho que yo camine, nunca la alcanzaré. ¿Para qué sirve la utopía? Para eso sirve: para caminar.",
+      "author": "Fernando Birri, citado por Eduardo Galeano",
+      "work": "Eduardo Galeano, Las palabras andantes (1993), viñeta «Ventana sobre la utopía»",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto exacto de la viñeta: «Ella está en el horizonte –dice Fernando Birri–. Me acerco dos pasos, ella se aleja dos pasos. Camino diez pasos y el horizonte se corre diez pasos más allá. Por mucho que yo camine, nunca la alcanzaré. ¿Para qué sirve la utopía? Para eso sirve: para caminar». El texto es de Eduardo Galeano y acredita dentro de la propia frase a Fernando Birri como quien lo dijo.",
+      "source": "Instituto Cervantes, Centro Virtual Cervantes, DidactiRed (ficha didáctica con el texto íntegro)",
+      "url": "https://cvc.cervantes.es/aula/didactired/anteriores/abril_14/07042014_02.htm"
+    },
+    {
+      "claim": "«Ventana sobre la utopía» es un fragmento de Las palabras andantes, del uruguayo Eduardo Galeano, y el texto rinde homenaje al cineasta argentino Fernando Birri como autor de las palabras.",
+      "source": "Organización de Estados Iberoamericanos (OEI), campaña «Leer Nos Conecta» de OEI República Dominicana",
+      "url": "https://twitter.com/oeidigital/status/1188714529716355073"
+    },
+    {
+      "claim": "Las palabras andantes, de Eduardo Galeano, se publicó en 1993 en Siglo XXI Editores; reúne cuentos, minicuentos, anécdotas y relatos breves con más de cuatrocientos grabados del artista brasileño José Francisco Borges, y su estructura está hecha de viñetas tituladas «Ventana sobre…».",
+      "source": "Ficha del libro en Siglo XXI de España Editores (Casa del Libro) y ejemplar catalogado en Internet Archive",
+      "url": "https://archive.org/details/laspalabrasandan0000gale"
+    },
+    {
+      "claim": "El pasaje lo armó Eduardo Galeano a partir de una respuesta del cineasta Fernando Birri durante una conversación que ambos mantuvieron en Cartagena de Indias, ante la pregunta de alguien del público sobre para qué sirve la utopía. La escuela de cine que Birri dirigió recoge la frase atribuyéndola a él.",
+      "source": "Escuela Internacional de Cine y Televisión (EICTV), San Antonio de los Baños, «Birri celebra a Birri»",
+      "url": "https://www.eictv.org/noticias/birri-celebra-a-birri/"
+    },
+    {
+      "claim": "Fernando Birri nació el 13 de marzo de 1925 y murió el 27 de diciembre de 2017 en Roma, a los 92 años. En Santa Fe creó lo que llegó a ser el Instituto de Cinematografía de la Universidad Nacional del Litoral. Junto con Gabriel García Márquez fundó en 1986 la Escuela Internacional de Cine y Televisión en San Antonio de los Baños, Cuba.",
+      "source": "Brown University Library, Fernando Birri Archive, biografía",
+      "url": "https://library.brown.edu/birri/bio.html"
+    },
+    {
+      "claim": "Birri estudió cine en el Centro Sperimentale di Cinematografia de Roma entre 1950 y 1953 y regresó a Santa Fe en 1956 para formar el instituto de cine de la Universidad Nacional del Litoral. Se le considera el padre del nuevo cine latinoamericano.",
+      "source": "Ficha enciclopédica de Fernando Birri",
+      "url": "https://en.wikipedia.org/wiki/Fernando_Birri"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Eduardo Galeano. Es el error más extendido y el motivo de esta pieza: Galeano la escribió, pero dentro del texto acredita a Fernando Birri, que fue quien la dijo. Firmarla «Eduardo Galeano» a secas borra al autor de las palabras.",
+    "Citarla empezando por «La utopía está en el horizonte». Es la versión reescrita para que la frase se sostenga fuera del libro. El original empieza por «Ella», porque el sujeto lo pone el título de la viñeta, «Ventana sobre la utopía».",
+    "Citarla sin el inciso «—dice Fernando Birri—». Ese inciso es parte del texto de Galeano, no un añadido editorial, y es precisamente lo que se pierde en las copias.",
+    "Dar por cerrada la referencia del libro sin matiz. La mayoría de las fuentes consultadas —incluida la OEI— sitúan «Ventana sobre la utopía» en Las palabras andantes (1993); una ficha didáctica del Centro Virtual Cervantes la atribuye en cambio a El libro de los abrazos (1989). La pieza sigue la atribución mayoritaria y deja constancia de la discrepancia.",
+    "Añadir el remate «para eso sirve: para caminar, para seguir caminando» o versiones alargadas. El texto cierra en «para caminar»; lo demás son ampliaciones que circulan en redes.",
+    "Presentarla como una definición de utopía de Galeano ensayista. Es la transcripción de una respuesta oral dada en un encuentro público en Cartagena de Indias, recogida después por escrito.",
+    "Fechar Tire dié, la película de Birri, con seguridad. Las fuentes consultadas dan fechas distintas para su rodaje y su primera versión, así que la pieza no la menciona con año."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-05T23:33:00Z"
+}

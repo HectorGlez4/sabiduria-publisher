@@ -1,0 +1,78 @@
+{
+  "id": "2026-09-04-re41-reel",
+  "publish_at": "2026-09-04T20:09:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+    "hook": "\"Caminante, no hay camino, se hace camino al andar.\"\n— Antonio Machado, Proverbios y cantares XXIX, Campos de Castilla (1912)",
+    "body": [
+      "A esta frase se le suele pegar otra: \"golpe a golpe, verso a verso\". No es de Machado. La escribió Joan Manuel Serrat en 1969, en las estrofas propias que añadió al musicalizar el poema. El original tiene diez versos y no menciona ningún golpe.",
+      "Y dice algo bastante menos alentador de lo que se supone. El camino no está delante: son las huellas que ya dejaste. Por eso el poema sigue con la senda que nunca se ha de volver a pisar, y termina con estelas en la mar, que es lo que dura una huella en el agua.",
+      "Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruzó a Francia el 27 y murió en Collioure un mes después. En el bolsillo del abrigo le encontraron un papel arrugado con un último verso escrito a lápiz."
+    ],
+    "question": "¿Qué camino tuyo solo se entendió cuando ya lo habías andado?",
+    "quote": {
+      "text": "Caminante, no hay camino, se hace camino al andar.",
+      "author": "Antonio Machado (1875-1939)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Machado",
+      "#Poesia",
+      "#Frases"
+    ],
+    "extended": [
+      "#AntonioMachado",
+      "#PoesiaEnEspanol",
+      "#Serrat",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+      "source": "Wikipedia en inglés (Antonio Machado: fechas, Collioure, Campos de Castilla 1912, el papel del bolsillo)"
+    },
+    {
+      "claim": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+      "source": "scalar.usc.edu / Liter·Alia (Caminante, no hay camino, 1912, y el número XXIX)"
+    },
+    {
+      "claim": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+      "source": "agora.xtec.cat (composición de la letra de \"Cantares\")"
+    },
+    {
+      "claim": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+      "source": "antiwarsongs.org (poemas XLIV, I y XXIX; el resto es de Serrat)"
+    },
+    {
+      "claim": "Antonio Machado: la línea que casi siempre se le pega (\"golpe a golpe, verso a verso\") no es suya, y el poema dice algo menos alentador de lo que se supone",
+      "source": "khronoshistoria.com (cronología del paso a Francia y de la muerte)"
+    }
+  ],
+  "do_not_use": [
+    "\"golpe a golpe, verso a verso\" como verso de Machado (es el error que el propio post corrige)",
+    "citar el último verso del bolsillo entre comillas con redacción cerrada (circulan dos formas, \"y este sol de infancia\" y \"y este sol de la infancia\": el copy lo parafrasea sin comillas)",
+    "\"cruzó los Pirineos a pie\" como hecho cerrado (parte del trayecto lo hicieron en vehículo y un gendarme los ayudó en el último tramo: el copy solo da las fechas)",
+    "\"murió en un campo de concentración\" (murió en una pensión de Collioure)",
+    "ni presentar el poema como consigna de superación personal, que es justo lo contrario de su cierre"
+  ],
+  "_verificacion_prosa": "el poema es el **XXIX de \"Proverbios y cantares\"**, en ***Campos de Castilla*, publicado en 1912**. Diez versos: *\"Caminante, son tus huellas / el camino, y nada más; / caminante, no hay camino, / se hace camino al andar. / Al andar se hace camino, / y al volver la vista atrás / se ve la senda que nunca / se ha de volver a pisar. / Caminante, no hay camino, / sino estelas en la mar.\"* **\"Golpe a golpe, verso a verso\" no está en Machado:** pertenece a las estrofas propias que **Joan Manuel Serrat** escribió para \"Cantares\", del disco *Dedicado a Antonio Machado, poeta* (1969). El material didáctico del Departament d'Ensenyament (agora.xtec.cat) lo describe así: la letra se compone de \"tres estrofas de Antonio Machado, *Proverbios y cantares*, de su obra *Campos de Castilla* (1912)\" y \"tres estrofas escritas por el propio Serrat, en las que incorpora los versos *caminante no hay camino / se hace camino al andar*\"; Antiwar Songs coincide y precisa que los poemas usados son el XLIV, el I y el XXIX. **Biografía:** Antonio Machado, **26 de julio de 1875 – 22 de febrero de 1939**. Salió de Barcelona el **22 de enero de 1939** con su madre, Ana Ruiz; tardaron cuatro días en recorrer los unos 170 km hasta la frontera; cruzaron a Francia el **27 de enero** y llegaron a **Collioure el 28**. Murió allí el 22 de febrero; su madre, tres días después. Su hermano José encontró en el bolsillo de su abrigo un papel arrugado con un último verso escrito a lápiz. Fuentes: Wikipedia en inglés (*Antonio Machado*: fechas, Collioure, *Campos de Castilla* 1912, el papel del bolsillo), scalar.usc.edu / Liter·Alia (*Caminante, no hay camino*, 1912, y el número XXIX), agora.xtec.cat (composición de la letra de \"Cantares\"), antiwarsongs.org (poemas XLIV, I y XXIX; el resto es de Serrat), khronoshistoria.com (cronología del paso a Francia y de la muerte). **No usar:** \"golpe a golpe, verso a verso\" como verso de Machado (es el error que el propio post corrige); citar el último verso del bolsillo entre comillas con redacción cerrada (circulan dos formas, \"y este sol de infancia\" y \"y este sol de la infancia\": el copy lo parafrasea sin comillas); \"cruzó los Pirineos a pie\" como hecho cerrado (parte del trayecto lo hicieron en vehículo y un gendarme los ayudó en el último tramo: el copy solo da las fechas); \"murió en un campo de concentración\" (murió en una pensión de Collioure); ni presentar el poema como consigna de superación personal, que es justo lo contrario de su cierre.",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-26-tarde"
+}

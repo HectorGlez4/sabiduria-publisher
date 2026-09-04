@@ -1,0 +1,70 @@
+{
+  "id": "2026-09-07-extra81",
+  "slot": "tarde",
+  "pillar": "figura",
+  "core": {
+    "hook": "La literatura tardó siglos en tener autor. La primera persona que puso su nombre al final de un texto fue una sacerdotisa, hace más de cuatro mil años.",
+    "body": [
+      "Enheduanna fue suma sacerdotisa del dios luna Nanna en la ciudad de Ur, hacia el año 2300 antes de Cristo, e hija de Sargón de Acad. Reunió una colección de cuarenta y dos himnos a los templos de Sumeria, más de quinientas líneas, y al final hizo algo que hasta entonces nadie había hecho: escribir quién lo había compuesto. El cierre dice que la compiladora de las tablillas fue Enheduanna, y añade una línea que suena a conciencia de estar estrenando algo: se ha creado algo que nadie ha creado antes.",
+      "De su tiempo queda un solo objeto: un disco de piedra de veinticinco centímetros, hallado en pedazos en las excavaciones de Ur y hoy en un museo de Filadelfia. La inscripción del reverso la nombra como sacerdotisa de Nanna e hija de Sargón. Los poemas, en cambio, no se conservan en tablillas suyas: las copias más antiguas son de escribas de alrededor del 1750 antes de Cristo, unos quinientos cincuenta años posteriores. Por eso hay especialistas que dudan de que los escribiera ella y otros que sostienen que la firma se copió porque estaba ahí.",
+      "El debate sigue abierto y probablemente no se cierre. Lo que no se discute es el gesto. Antes de esas líneas los textos existían sin dueño: nadie respondía por ellos. Firmar fue aceptar que detrás de unas palabras hay alguien a quien se le pueden pedir cuentas."
+    ],
+    "question": "¿Qué parte de lo que haces firmarías con tu nombre?",
+    "subject": "Enheduanna, suma sacerdotisa de Ur hacia el 2300 a.C."
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "ENHEDUANNA",
+    "subtitle": "Antes de ella, los textos no tenían dueño",
+    "body": "Suma sacerdotisa en Ur hacia el 2300 antes de Cristo, hija de Sargon de Acad. Reunió cuarenta y dos himnos a los templos de Sumeria y escribió al final quién los había compilado. De su época solo queda un disco de piedra que apareció hecho pedazos.",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Enheduanna vivió hacia el siglo XXIII a.C. en Ur y es la autora más antigua conocida cuyo nombre está registrado en la historia. Fue hija de Sargón de Acad (reinó c. 2334-2279 a.C.) y ocupó el cargo de sacerdotisa en al servicio del dios luna Nanna, con funciones religiosas y administrativas.",
+      "source": "Encyclopaedia Britannica, «Enheduanna»",
+      "url": "https://www.britannica.com/biography/Enheduanna"
+    },
+    {
+      "claim": "Los Himnos de los templos abarcan 42 templos de ciudades sumerias y el colofón final dice literalmente: «The compiler of the tablets was En-hedu-ana. My king, something has been created that no one has created before». La numeración de esa edición llega a 545 líneas.",
+      "source": "ETCSL (Electronic Text Corpus of Sumerian Literature), Universidad de Oxford, «The temple hymns: translation»",
+      "url": "https://etcsl.orinst.ox.ac.uk/section4/tr4801.htm"
+    },
+    {
+      "claim": "El Disco de Enheduana es una pieza de unos 25 x 7 cm hallada en estado muy fragmentario en las excavaciones de Ur dirigidas por Leonard y Katharine Woolley. La inscripción dice: «Enheduana, sacerdotisa de Nanna, esposa de Nanna, hija de Sargón, rey del mundo, construyó un altar en el templo de Inana-Zaza en Ur y lo llamó Altar, la Mesa del Cielo». La restauración con la que se exhibe hoy está discutida por muchos especialistas.",
+      "source": "Proyecto Enheduana (enheduana.org), «The Disk of Enheduana»",
+      "url": "https://enheduana.org/disk-of-enheduana/"
+    },
+    {
+      "claim": "Ficha del objeto: número B16665, caliza y calcita, 25 cm de diámetro exterior y 7 cm de grosor, procedente de Ur (Irak), Período Acadio Antiguo, c. 2300 a.C.; una cara lleva una escena de sacrificio en relieve y el reverso, la inscripción de Enheduanna. La ficha consigna que se halló en una cámara del templo de Nin-Gal de época de Larsa, durante la expedición conjunta del British Museum y el University Museum a Ur.",
+      "source": "Penn Museum, ficha del objeto B16665",
+      "url": "https://collections.penn.museum/collections/object/293415"
+    },
+    {
+      "claim": "Estado del debate sobre la autoría: Eleanor Robson y otros sostienen que los textos conservados son estilísticamente demasiado tardíos para ser de ella y que los escribas paleobabilónicos pudieron insertar su nombre para construir identidad cultural en torno a una figura respetada. Las tablillas de la Exaltación de Inanna se inscribieron hacia el 1750 a.C., unos 550 años después de su muerte. Sidney Babcock y otros defienden la atribución apoyándose en las firmas textuales y en la mención explícita de los propios escribas.",
+      "source": "AramcoWorld, «Was Enheduanna the World's First Author?» (2022)",
+      "url": "https://www.aramcoworld.com/articles/2022/was-enheduanna-the-worlds-first-author"
+    }
+  ],
+  "do_not_use": [
+    "«Enheduanna inventó la poesía» o «escribió el primer poema de la historia»: falso. Existe literatura sumeria anterior, anónima. Lo verificable y lo que sostiene la pieza es que es la primera autora conocida por su nombre, no la primera persona que compuso.",
+    "Dar por cerrado que ella escribió los poemas. Es una atribución discutida: Eleanor Robson y otros la ponen en duda por razones estilísticas y de datación. El copy dice que los textos llevan su firma y expone el debate, que es justo el giro de la pieza.",
+    "«Se conserva su manuscrito» o «sus tablillas originales»: no. Las copias más antiguas de sus poemas son de hacia el 1750 a.C., unos 550 años posteriores. El único objeto contemporáneo suyo es el disco.",
+    "Una fecha cerrada para el hallazgo del disco. La ficha del Penn Museum sitúa la campaña en 1926 y el proyecto Enheduana lo fecha en 1927. Descartadas ambas como dato duro: se dice solo «en las excavaciones de Ur», sin año.",
+    "Describir el disco como una pieza intacta o dar por buena la imagen que se exhibe: apareció muy fragmentario y la restauración —que añadió una figura y un zigurat— está contestada por muchos especialistas. El copy dice que apareció hecho pedazos y no describe la escena.",
+    "«545 líneas» como cifra cerrada: es la numeración de la edición de ETCSL y otras ediciones pueden numerar distinto. Por eso el copy dice «más de quinientas líneas». Lo mismo con el número de himnos: se usa 42, que es la cifra de ETCSL; circula también 43.",
+    "El destierro que narra la Exaltación de Inanna (el episodio del usurpador Lugalanne) como hecho biográfico. Se descartó de esta pieza: es un poema, y no se localizó en esta sesión una fuente independiente que corrobore el episodio. Si se quisiera usar en el futuro, hay que verificarlo antes.",
+    "«La primera escritora de la historia» con el superlativo puesto en el género: la formulación que sostienen las fuentes es «el primer autor o autora conocido por su nombre», sin distinción de sexo. El dato es más fuerte así, y además es el correcto.",
+    "«Fue la primera suma sacerdotisa de Ur»: el cargo de en existía antes que ella. Lo documentado es que lo ocupó, no que lo estrenara.",
+    "Cifras exactas de distancia temporal con Homero («1.500 años antes de Homero» circula en la divulgación). Las fechas de Homero son ellas mismas aproximadas; si se usa, decir «más de mil quinientos años» y nunca una cifra cerrada.",
+    "Traducir el colofón entre comillas como si fuera versión canónica al español: la que se maneja aquí es traducción de la inglesa de ETCSL. El copy la parafrasea sin comillas."
+  ],
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "results": {},
+  "publish_at": "2026-09-07T17:33:00Z"
+}

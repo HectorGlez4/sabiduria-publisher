@@ -1,0 +1,68 @@
+{
+  "id": "2026-09-07-extra79",
+  "slot": "tarde",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "El Popol Vuh y la copia de Francisco Ximénez",
+    "hook": "El libro fundacional de la literatura maya k'iche' sobrevive en una sola copia. La hizo un fraile dominico, y el título que le puso dice para qué.",
+    "body": [
+      "El Popol Vuh que se lee hoy no es un códice prehispánico. Es un texto alfabético: lo escribieron k'iche's que habían aprendido caracteres latinos, probablemente entre 1554 y 1558. Ese manuscrito nunca ha aparecido. Lo que existe es la copia que hizo el dominico Francisco Ximénez (1666-1729) siendo cura de Santo Tomás Chichicastenango, a partir de 1701: dos columnas enfrentadas, k'iche' a un lado, castellano al otro. Es la única fuente del texto completo que le queda al mundo.",
+      "El encabezado que Ximénez le puso no deja lugar a dudas sobre el encargo: «Empiezan las historias del origen de los indios de esta provincia de Guatemala traducido de la lengua quiché en la castellana para más comodidad de los ministros de el Sto. Evangelio». Y en un solo punto del relato interviene por su cuenta. Cuando un personaje empieza a hablar con los cuatro primeros hombres, Ximénez anota entre paréntesis: «Demonio q'les hablaba». Es su único comentario explícito dentro del texto. Néstor Quiroa mostró en 2011, en la revista The Americas, que el prólogo y las anotaciones formaban parte de una estrategia misional: no condenar de frente las creencias mayas, sino mapearlas para poder reinterpretarlas.",
+      "Después vino el viaje. Muerto Ximénez, los dominicos guardaron sus papeles hasta que la expulsión del clero de 1829 y 1830 los llevó a la Universidad de San Carlos. En 1855 el abate francés Charles Étienne Brasseur de Bourbourg se hizo con el manuscrito y lo sacó del país. Pasó por el coleccionista Alphonse Pinart y por el librero parisino Charles Leclerc, hasta que en 1887 lo compró Edward E. Ayer y se lo llevó a Chicago. Está en la Newberry Library desde 1912, catalogado como Ayer MS 1515. Guatemala declaró el Popol Vuh patrimonio cultural intangible en 2012."
+    ],
+    "question": "¿Qué se ha conservado solo porque alguien quiso guardarlo para refutarlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL ÚNICO EJEMPLAR",
+    "subtitle": "El libro k'iche' llegó hasta hoy en la copia de quien lo estudiaba para rebatirlo",
+    "body": "Entre 1701 y 1715, en Chichicastenango, el dominico Francisco Ximénez copió el Popol Vuh en dos columnas: k'iche' y castellano. Es la única fuente que queda del texto entero. El título que le puso dice que lo tradujo para comodidad de los ministros del Evangelio. Hoy está en Chicago."
+  },
+  "sources": [
+    {
+      "claim": "Francisco Ximénez, sacerdote dominico y lingüista (1666-1729), transcribió el manuscrito entre 1700 y 1715 en Chichicastenango, Guatemala. Elaboró un texto bilingüe con el original k'iche' en caracteres latinos y la traducción castellana al lado. La copia de Ximénez deriva de una versión anterior, preparada probablemente en el siglo XVI por un hablante nativo instruido en caracteres latinos. Brasseur de Bourbourg afirmó haber comprado el manuscrito al dirigente indígena Ignacio Coloche en Rabinal, Guatemala, en 1855, aunque el punto es objeto de discusión. Tras su muerte en 1874 la colección pasó a Alphonse Pinart, que la vendió en 1883 al librero parisino Charles Leclerc; Edward E. Ayer se la compró a Leclerc en 1887 y la llevó a Chicago. Está en la Newberry desde 1912. La signatura es Ayer MS 1515.",
+      "source": "Newberry Library (Chicago), guía de investigación «Popol Vuh»",
+      "url": "https://www.newberry.org/collection/research-guide/popol-vuh"
+    },
+    {
+      "claim": "El texto alfabético k'iche' se compuso probablemente entre 1554 y 1558; el manuscrito que sirvió de fuente a Ximénez nunca ha sido hallado, de modo que su copia es la única base para los estudios. En 1701 el dominico Francisco Ximénez llegó a Santo Tomás Chichicastenango y transcribió el relato en columnas paralelas de k'iche' y castellano. Hacia 1714 incorporó el contenido en castellano a su historia eclesiástica. Muerto Ximénez, la orden dominica conservó sus manuscritos hasta 1829-1830, cuando el general Francisco Morazán expulsó al clero de Guatemala y la Universidad de San Carlos asumió la custodia. En 1855 Brasseur de Bourbourg obtuvo el manuscrito de la biblioteca de la universidad. Tras su muerte en 1874 pasó por Alphonse Pinart y por Edward E. Ayer, que donó su colección de diecisiete mil piezas a la Newberry Library de Chicago en 1911. Guatemala declaró el Popol Vuh patrimonio cultural intangible en 2012.",
+      "source": "Ficha enciclopédica del Popol Vuh",
+      "url": "https://en.wikipedia.org/wiki/Popol_Vuh"
+    },
+    {
+      "claim": "Néstor Quiroa, «The Popol Vuh and the Dominican Religious Extirpation in Highland Guatemala: Prologues and Annotations of Fr. Francisco Ximénez», The Americas, vol. 67, n.º 4, abril de 2011, pp. 467-494. El artículo sostiene que la transcripción y las anotaciones de Ximénez no fueron mera documentación erudita, sino parte de una estrategia misional: las notas servían para identificar conceptos religiosos indígenas que pudieran reinterpretarse en clave cristiana, buscando la conversión por persuasión intelectual antes que por supresión violenta.",
+      "source": "The Americas (Cambridge University Press), artículo revisado por pares",
+      "url": "https://www.cambridge.org/core/journals/americas/article/abs/popol-vuh-and-the-dominican-religious-extirpation-in-highland-guatemala-prologues-and-annotations-of-fr-francisco-ximenez/4F4E2CEECA48F3377DA26E32F8BDA0B8"
+    },
+    {
+      "claim": "Ximénez compiló el manuscrito mientras era cura párroco de Santo Tomás Chichicastenango, en 1701-1702. El texto lleva por encabezado: «Empiezan las historias del origen de los índíos de esta provinçia de Gvatemala tradvcido de la lengva qviche en la castellana para mas commodidad de los mínístros de el Sto. Evangelío». Cuando una persona (jun winaq) empieza a hablar con los cuatro fundadores, Ximénez añadió la acotación «(Demonium loquens cis) / (Demonío q'les hablaba)». Allen J. Christenson señala que es el único comentario explícito de Ximénez dentro del texto.",
+      "source": "Universidad de Virginia, proyecto Multepal, ficha de la «Historia de la provincia de San Vicente de Chiapa y Guatemala de la orden de predicadores»",
+      "url": "https://multepal.spanitalport.virginia.edu/node/4"
+    },
+    {
+      "claim": "El manuscrito del Popol Vuh llegó a la Newberry junto con otros manuscritos contemporáneos de Francisco Ximénez, todos catalogados bajo la signatura Ayer MS 1515. Entre 1701 y 1703 el fraile Francisco Ximénez pudo ver el manuscrito mientras servía como cura párroco, e hizo la única copia que se conserva.",
+      "source": "Newberry Library, guía «Spanish-American Colonial Manuscripts»",
+      "url": "https://www.newberry.org/collection/research-guide/spanish-american-colonial-manuscripts"
+    }
+  ],
+  "do_not_use": [
+    "«El Popol Vuh es un códice maya prehispánico». No lo es. El texto que se conserva es alfabético, escrito con caracteres latinos hacia mediados del siglo XVI por k'iche's ya alfabetizados. Los códices mayas jeroglíficos —Dresde, París, Madrid— son otra cosa y no contienen este relato.",
+    "«Ximénez descubrió el Popol Vuh». Copió un manuscrito alfabético que ya existía y que le llegó a las manos siendo párroco. Descubrir no es la palabra.",
+    "Dar por cierta una sola versión de cómo salió de Guatemala. La Newberry recoge que Brasseur de Bourbourg afirmó haberlo comprado a Ignacio Coloche en Rabinal en 1855, y advierte que el punto está en discusión; otras fuentes sostienen que lo obtuvo de la biblioteca de la Universidad de San Carlos. La pieza dice que se hizo con él en 1855 y no elige versión.",
+    "Fijar una sola fecha para la copia. La Newberry la sitúa entre 1700 y 1715; otras fuentes dan 1701-1703 para la transcripción bilingüe y hacia 1714 para su incorporación a la Historia de la provincia de San Vicente de Chiapa y Guatemala. La pieza usa el rango de la institución que custodia el manuscrito.",
+    "Discrepancia sobre la llegada al Newberry: la propia biblioteca dice «desde 1912»; la ficha enciclopédica sitúa la donación de la colección Ayer en 1911. La pieza usa 1912, el dato de la institución.",
+    "Presentar a Ximénez como un salvador de la cultura maya. Quiroa (2011) documenta que el prólogo y las anotaciones respondían a una estrategia de extirpación religiosa dominica. El efecto —que el texto se conservara— es real; la intención documentada era otra.",
+    "Presentarlo, al revés, como un censor que mutiló el texto. Lo copió íntegro, y su única intervención explícita es la acotación del demonio. Ese es precisamente el motivo por el que su copia sirve.",
+    "Traducir «Popol Vuh» como «libro del consejo» sin matiz, o afirmar que Ximénez tradujo el título así. La pieza no traduce el título porque las fuentes consultadas no fijan una sola versión.",
+    "Confundir la copia con el original. Todo lo que se sabe del texto pasa por el manuscrito de Ximénez: no hay un segundo testimonio con el que cotejarlo."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-07T15:33:00Z"
+}

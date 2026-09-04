@@ -1,0 +1,69 @@
+{
+  "id": "2026-09-05-extra65",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Matsuo Bashō y la vía del pincel de Kōbō Daishi",
+    "hook": "\"No busques las huellas de los antiguos: busca lo que ellos buscaron.\"",
+    "body": [
+      "Bashō escribió esa línea en 1693 y no es un haiku. Es prosa, y es una carta de despedida. Morikawa Kyoriku (1656-1715), samurái de Hikone y pintor, lo había conocido en Edo en el otoño de 1692; en el quinto mes de 1693 volvía a su tierra. Nueve meses de trato. No se vieron nunca más: Bashō murió al año siguiente. El texto se conoce como «Kyoriku ribetsu no kotoba», palabras de despedida a Kyoriku, y también como «Saimon no ji», el discurso de la puerta de leña.",
+      "Bashō no presenta la frase como suya. La oración completa dice que eso «se ve también en la vía del pincel del Gran Maestro de Nanzan» —Kōbō Daishi, el monje Kūkai, muerto en 835— y añade enseguida: y lo mismo vale para el haikai. Al servicio de referencia de la Biblioteca Nacional de la Dieta de Japón le preguntaron justamente si la frase era de Bashō. La respuesta remite al Shōryōshū, la colección de prosa y poesía en chino de Kūkai, donde este escribe sobre caligrafía: imitar la intención de los antiguos es bueno; parecerse a sus trazos no es destreza. Bashō tomó un precepto de pincel y lo pasó a la poesía.",
+      "En la misma página hay otra línea que casi no se cita. Kyoriku pintaba mejor que él, y Bashō lo escribe sin rodeos: de la pintura lo toma por maestro suyo; del haikai lo enseña y lo hace discípulo suyo. Le pide después que no pierda «ese hilo delgado». Y cierra levantando la lámpara para acompañarlo hasta la puerta de leña, y despedirse ahí. El consejo contra la imitación viene de alguien que, en el mismo papel, se declara alumno de su alumno."
+    ],
+    "question": "¿A quién estás imitando cuando podrías estar buscando lo que él buscaba?",
+    "quote": {
+      "text": "No busques las huellas de los antiguos: busca lo que ellos buscaron.",
+      "author": "Matsuo Bashō",
+      "work": "«Kyoriku ribetsu no kotoba», también llamado «Saimon no ji» (1693), despedida a Morikawa Kyoriku; impreso en «Infutagi» y en «Fūzoku monzen». Original: 古人の跡を求めず、古人の求めたる所を求めよ",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Consulta de referencia sobre si «古人の跡を求めず、古人の求めしところを求めよ» fue dicha primero por Matsuo Bashō y cuál es su procedencia. La respuesta sitúa la frase en el «柴門の辞» de Bashō y en el «許六離別の詞» recogido en «韻塞», remitiendo a Koten haibungaku taikei, tomo 10 (Shūeisha, 1970), p. 387. Señala que la frase se apoya en el «遍照発揮性霊集» de Kūkai, tomo 3, en el escrito «勅賜の屏風を書し了つて即ち献ずる表», cuyo texto dice: «書亦古意ニ擬スルヲ以テ善シト為シ、古跡ニ似ルヲ以テ巧ト為サズ». Obras de referencia citadas: Kōhon Bashō zenshū, tomo 10 (Kadokawa, 1969); Koten haibungaku taikei, tomos 5 y 10 (Shūeisha, 1970); Nihon koten bungaku taikei, tomo 71 (Iwanami, 1965); Kōbō Daishi Kūkai zenshū, tomo 6 (Chikuma, 1984).",
+      "source": "Biblioteca Nacional de la Dieta de Japón, Base de Datos Cooperativa de Referencia (レファレンス協同データベース)",
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000050814&page=ref_view"
+    },
+    {
+      "claim": "«柴門辞» (Saimon no ji) es una obra en prosa de Matsuo Bashō del sexto año de la era Genroku (1693). Se le dio a su discípulo Morikawa Kyoriku en el quinto mes de ese año, cuando volvía de Edo a Hikone. Su título alternativo es «許六離別詞» (palabras de despedida a Kyoriku). Se imprimió en «韻塞» (Infutagi) y en «風俗文選» (Fūzoku monzen). El texto discute el «後鳥羽院御口伝» a propósito de la idea de que la elegancia poética tiene verdad y a la vez añade tristeza.",
+      "source": "Kotobank (recopilación de entradas del Seisenban Nihon kokugo daijiten y de enciclopedias japonesas de referencia), entrada «柴門辞»",
+      "url": "https://kotobank.jp/word/%E6%9F%B4%E9%96%80%E8%BE%9E-2041635"
+    },
+    {
+      "claim": "Texto del pasaje: «されば、この御言葉を力として、その細き一筋をたどり失ふことなかれ。なほ、「古人の跡を求めず、古人の求めしところを求めよ」と、南山大師の筆の道にも見えたり。「風雅もまたこれに同じ」と言ひて、燈火をかかげて、柴門の外に送りて別るるのみ。元禄六孟夏末 風羅坊芭蕉». Antes, sobre Kyoriku: «画はとつて予が師とし、風雅はをしへて予が弟子となす». La frase va entre comillas dentro del propio texto de Bashō y remite al «Gran Maestro de Nanzan», epíteto de Kōbō Daishi. La firma fecha el escrito a fines del cuarto mes lunar del sexto año de Genroku (1693).",
+      "source": "Transcripción del «許六離別の詞（柴門の辞）» en la base de datos de Bashō alojada por la Universidad Prefectural de Yamanashi (芭蕉DB)",
+      "url": "https://www2.yamanashi-ken.ac.jp/~itoyo/basho/saimon/saimonji.htm"
+    },
+    {
+      "claim": "Morikawa Kyoriku (森川許六) vivió del 1 de octubre de 1656 al 23 de septiembre de 1715. Fue un samurái del dominio de Hikone y se cuenta entre los diez mejores discípulos de Bashō. Lo conoció en Edo en agosto de 1692 y fue su alumno durante nueve meses, hasta mayo de 1693; lo visitaba con frecuencia y recibía instrucción directa. Tras volver a su tierra natal no tuvo ocasión de volver a encontrarse con Bashō.",
+      "source": "Ficha enciclopédica de Morikawa Kyoriku",
+      "url": "https://en.wikipedia.org/wiki/Morikawa_Kyoriku"
+    },
+    {
+      "claim": "El «遍照発揮性霊集» (Shōryōshū) es la colección de poemas y prosa en chino de Kūkai (空海, Kōbō Daishi), compilada por su discípulo Shinjō (真済) en diez tomos. Reúne poemas, epitafios, memoriales al trono, cartas y textos votivos. Se completó probablemente poco después de la muerte de Kūkai, en 835; la obra fechada más tardía en los tomos 1 a 7 es de 828-829. Es la colección literaria individual más antigua de un autor japonés.",
+      "source": "Ficha enciclopédica japonesa del «性霊集»",
+      "url": "https://ja.wikipedia.org/wiki/%E6%80%A7%E9%9C%8A%E9%9B%86"
+    }
+  ],
+  "do_not_use": [
+    "Citarla como un haiku de Bashō. No lo es. Es prosa: una despedida escrita en 1693 a un discípulo que se volvía a su provincia. Presentarla en tres versos es fabricar un poema que nunca existió.",
+    "Atribuirla a Oku no hosomichi o a Oi no kobumi. Son los diarios de viaje más conocidos de Bashō y la frase no está en ninguno de los dos. Está en el «Kyoriku ribetsu no kotoba», también llamado «Saimon no ji».",
+    "«La frase no es de Bashō, es de Kūkai». Es tan inexacto como lo contrario. Las palabras tal como circulan son de Bashō; lo que él hace es remitirlas a la vía del pincel de Kōbō Daishi. El pasaje de Kūkai en el Shōryōshū dice otra cosa y con otras palabras —trata de caligrafía—, y la base de referencia de la Biblioteca Nacional de la Dieta lo presenta como el fundamento de la formulación de Bashō, no como su texto literal.",
+    "Dar por única una grafía del original. Las transcripciones modernas alternan entre «求めしところ» y «求めたる所», y entre «求めず» y «もとめず». No hay una forma canónica única en las ediciones consultadas.",
+    "Fechar la primera impresión. Las fuentes consultadas discrepan sobre el año de «韻塞»: unas lo dan en 1696 y otras en 1702. Lo que sí consta es que se imprimió después de la muerte de Bashō, en 1694, y que también aparece en «風俗文選».",
+    "Traducirla como «no sigas los pasos de los sabios». «古人» son los antiguos, los que vinieron antes, no los sabios; y «跡» son las huellas o los trazos que dejaron, un término que en el original conecta directamente con la caligrafía de la que Bashō toma la idea.",
+    "Convertirla en un lema de originalidad a toda costa. Bashō la escribe inmediatamente después de pedirle a Kyoriku que no pierda «ese hilo delgado» de una tradición concreta, la que arranca del «後鳥羽院御口伝». No dice que se prescinda de los antiguos: dice adónde miraban."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-06T01:33:00Z"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "2026-09-04-re46-reel",
+  "publish_at": "2026-09-05T01:09:00Z",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Jorge Luis Borges: el verso más duro que escribió sobre sí mismo lo redactó a los pocos días de morir su madre, y en él llama \"naderías\" a toda su obra",
+    "hook": "\"He cometido el peor de los pecados que un hombre puede cometer. No he sido feliz.\"\n— Jorge Luis Borges, \"El remordimiento\", La moneda de hierro (1976)",
+    "body": [
+      "No es una pose literaria. El 8 de julio de 1975 murió su madre, Leonor Acevedo, a los noventa y nueve años. Era ella quien le leía en voz alta y quien le tomaba el dictado desde que él se quedó ciego. Borges contó después que escribió este soneto pocos días más tarde. Tenía setenta y cinco años.",
+      "El poema sigue, y no se ablanda. Dice que sus padres lo engendraron para el juego arriesgado y hermoso de la vida y que él los defraudó; que le legaron valor y no fue valiente; que su mente se aplicó a las simétricas porfías del arte, que entreteje naderías. Esas naderías son su obra completa.",
+      "Termina diciendo que no lo abandona la sombra de haber sido un desdichado. Nadie que lo leyera desde afuera habría firmado ese balance."
+    ],
+    "question": "¿Con qué vara te estás midiendo?",
+    "quote": {
+      "text": "He cometido el peor de los pecados que un hombre puede cometer. No he sido feliz.",
+      "author": "Jorge Luis Borges (1899-1986)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Borges",
+      "#Literatura",
+      "#Poesia"
+    ],
+    "extended": [
+      "#JorgeLuisBorges",
+      "#PoesiaEnEspanol",
+      "#Argentina",
+      "#BuenosAires",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Jorge Luis Borges: el verso más duro que escribió sobre sí mismo lo redactó a los pocos días de morir su madre, y en él llama \"naderías\" a toda su obra",
+      "source": "Borges Center / Universidad de Pittsburgh (bibliografía de 1976)"
+    },
+    {
+      "claim": "Jorge Luis Borges: el verso más duro que escribió sobre sí mismo lo redactó a los pocos días de morir su madre, y en él llama \"naderías\" a toda su obra",
+      "source": "poemas-del-alma.com y poemario.com (texto del poema)"
+    },
+    {
+      "claim": "Jorge Luis Borges: el verso más duro que escribió sobre sí mismo lo redactó a los pocos días de morir su madre, y en él llama \"naderías\" a toda su obra",
+      "source": "Jot Down (contexto y primera publicación)"
+    },
+    {
+      "claim": "Jorge Luis Borges: el verso más duro que escribió sobre sí mismo lo redactó a los pocos días de morir su madre, y en él llama \"naderías\" a toda su obra",
+      "source": "Wikipedia en inglés (Leonor Acevedo Suárez)"
+    }
+  ],
+  "do_not_use": [
+    "la fecha del 21 de septiembre de 1975 en La Nación ni el \"cuatro días después\" como datos duros en el copy (los sostiene una sola fuente, y el segundo es además un recuerdo del propio Borges quince años más tarde: por eso el copy dice \"pocos días\" y se lo atribuye a él)",
+    "\"lo escribió en su lecho de muerte\" (murió en 1986, once años después)",
+    "\"Borges nunca fue feliz\" como afirmación biográfica (el poema es un juicio propio, no un diagnóstico)",
+    "citar el verso sin nombrar el poema, que es lo que convierte la frase en un lema de autoayuda invertido",
+    "ni decir que era su último libro (después vinieron Historia de la noche, 1977, y La cifra, 1981)"
+  ],
+  "_verificacion_prosa": "el poema es **\"El remordimiento\"**, soneto incluido en ***La moneda de hierro***, publicado en **Buenos Aires por Emecé en 1976**; la primera edición y el índice con el poema están registrados en la bibliografía del **Borges Center de la Universidad de Pittsburgh** (162 pp., primera edición). Texto verificado **línea por línea en dos transcripciones independientes y coincidentes** (poemas-del-alma.com y poemario.com): *\"He cometido el peor de los pecados / que un hombre puede cometer. No he sido / feliz. Que los glaciares del olvido / me arrastren y me pierdan, despiadados. // Mis padres me engendraron para el juego / arriesgado y hermoso de la vida, / para la tierra, el agua, el aire, el fuego. / Los defraudé. No fui feliz. Cumplida // no fue su joven voluntad. Mi mente / se aplicó a las simétricas porfías / del arte, que entreteje naderías. // Me legaron valor. No fui valiente. / No me abandona. Siempre está a mi lado / la sombra de haber sido un desdichado.\"* **Madre:** Leonor Acevedo Suárez, nacida el 22 de mayo de 1876 y muerta el **8 de julio de 1975**, a los noventa y nueve años; tradujo del inglés y del francés (Lawrence, Saroyan, Faulkner) y asistió en la lectura y el dictado primero a su marido y después a su hijo, ambos con la misma ceguera hereditaria (Wikipedia en inglés, *Leonor Acevedo Suárez*). **Circunstancia de escritura:** Jot Down (*El pecado de Borges*, diciembre de 2018) recoge que Borges declaró en una entrevista de televisión de 1980 haberlo escrito cuatro días después de la muerte de su madre, y fecha la primera publicación del soneto en el diario *La Nación* de Buenos Aires el 21 de septiembre de 1975. **Edad:** Borges nació el 24 de agosto de 1899, así que en julio de 1975 tenía **setenta y cinco años**, no setenta y seis. Fuentes: Borges Center / Universidad de Pittsburgh (bibliografía de 1976), poemas-del-alma.com y poemario.com (texto del poema), Jot Down (contexto y primera publicación), Wikipedia en inglés (*Leonor Acevedo Suárez*). **No usar:** la fecha del 21 de septiembre de 1975 en *La Nación* ni el \"cuatro días después\" como datos duros en el copy (los sostiene una sola fuente, y el segundo es además un recuerdo del propio Borges quince años más tarde: por eso el copy dice \"pocos días\" y se lo atribuye a él); \"lo escribió en su lecho de muerte\" (murió en 1986, once años después); \"Borges nunca fue feliz\" como afirmación biográfica (el poema es un juicio propio, no un diagnóstico); citar el verso sin nombrar el poema, que es lo que convierte la frase en un lema de autoayuda invertido; ni decir que era su último libro (después vinieron *Historia de la noche*, 1977, y *La cifra*, 1981).",
+  "targets": [
+    "facebook_reel"
+  ],
+  "status": "ready",
+  "results": {},
+  "reemision_de": "2026-08-31-tarde"
+}

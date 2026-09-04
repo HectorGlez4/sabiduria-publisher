@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-07-extra84",
+  "slot": "tarde",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Anna Atkins y los cianotipos de algas británicas",
+    "hook": "El primer libro ilustrado con fotografías lo hizo una botánica, y no tiene una sola línea de imprenta.",
+    "body": [
+      "En octubre de 1843, Anna Atkins entregó a la Royal Society un volumen con una dedicatoria escrita a mano: «For the Royal Society, Presented by Mrs Atkins». Dentro no había grabados ni litografías. Había cianotipos: siluetas blancas de algas sobre un azul de Prusia intenso, obtenidas apoyando el alga húmeda directamente sobre papel sensibilizado con sales de hierro y dejándolo unos minutos al sol. El procedimiento tenía un año: lo había inventado John Herschel en 1842. Talbot publicaría The Pencil of Nature en 1844. La primera entrega de Atkins es anterior.",
+      "No lo hizo una artista, sino una botánica resolviendo un problema de su disciplina. El Manual of the British Algae que William Henry Harvey publicó en 1841 no llevaba una sola ilustración, y un alga seca y después dibujada pierde justo aquello que hay que comparar: la forma. Atkins siguió su nomenclatura y fue rotulando cada lámina de su puño y letra. Entre 1843 y 1853 sacó doce entregas, reunidas luego en tres volúmenes; los ejemplares del Natural History Museum tienen 411 láminas cada uno. Las cerca de 450 páginas de texto están manuscritas y reproducidas por el mismo procedimiento fotográfico: la imprenta no interviene en ningún momento.",
+      "Lo que ahí se inventa no es una imagen bonita. Es un modo de reproducir una forma sin que la mano se meta entre el objeto y la página: contacto directo, tamaño real, sin cámara y sin negativo. La imprenta llevaba cuatro siglos copiando palabras idénticas y seguía sin poder copiar una forma natural sin un dibujante en medio. Atkins quitó al dibujante. Y por eso mismo cada ejemplar es artesanal y ninguno coincide del todo con otro: el Natural History Museum cuenta trece copias conocidas; el Metropolitan, una veintena."
+    ],
+    "question": "¿Qué se pierde cuando una forma se dibuja en lugar de registrarse?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El libro azul de las algas",
+    "subtitle": "Anna Atkins, 1843-1853",
+    "body": "Herschel inventó el cianotipo en 1842. Un año después, Atkins apoyaba algas húmedas sobre papel sensibilizado y las dejaba al sol. Doce entregas, tres volúmenes, más de cuatrocientas láminas y unas 450 páginas de texto manuscrito: ni una línea salió de una imprenta."
+  },
+  "sources": [
+    {
+      "claim": "El primer volumen de Photographs of British Algae fue inscrito en octubre de 1843 con las palabras «For the Royal Society, Presented by Mrs Atkins». Los ejemplares que conserva el museo tienen 411 láminas cada uno, con los nombres científicos escritos a mano por Anna Atkins. Se conocen solo trece copias del libro manuscrito, algunas en distinto estado de finalización. La donación fue el primer libro ilustrado fotográficamente y precede a The Pencil of Nature de Talbot, publicado en 1844.",
+      "source": "Natural History Museum (Londres), «Anna Atkins's cyanotypes: the first book of photographs»",
+      "url": "https://www.nhm.ac.uk/discover/anna-atkins-cyanotypes-the-first-book-of-photographs.html"
+    },
+    {
+      "claim": "El cianotipo fue inventado por Sir John Herschel en 1842. El procedimiento consiste en preparar el papel con soluciones de sal de hierro, exponer un objeto en contacto con ese papel a la luz solar durante unos minutos y lavarlo después en agua, lo que produce una imagen blanca sobre un fondo azul cian intenso. La ficha del museo describe a Anna Atkins como la primera persona en producir un libro ilustrado fotográficamente, y señala que ya era una ilustradora botánica experta cuando adoptó la técnica.",
+      "source": "Victoria and Albert Museum, ficha de un cianotipo de Anna Atkins (Festuca ovina)",
+      "url": "https://collections.vam.ac.uk/item/O69139/festuca-ovina-fescue-grasses-photograph-atkins-anna"
+    },
+    {
+      "claim": "Photographs of British Algae se produjo entre 1843 y 1853, en doce partes seguidas de tres volúmenes, con unas 450 páginas de texto manuscrito acompañando a las imágenes fotográficas. El texto fue manuscrito, no impreso. La obra se vincula al manual de William Henry Harvey, A Manual of the British Algae. La Sociedad Linneana conserva tres volúmenes.",
+      "source": "The Linnean Society of London, «A Secret Treasure: Anna Atkins's Photographs of British Algae»",
+      "url": "https://www.linnean.org/news/2024/12/05/a-secret-treasure-anna-atkinss-photographs-of-british-algae"
+    },
+    {
+      "claim": "Photographs of British Algae se publicó en fascículos a partir de 1843 y es un hito en la historia de la fotografía: el primer libro impreso e ilustrado fotográficamente. Atkins colocaba las algas húmedas directamente sobre papel sensibilizado y lo exponía a la luz solar. Basó su nomenclatura en el Manual of British Algae de William Harvey, de 1841, que no llevaba ilustraciones, y rotuló cada lámina de su puño y letra. Contribuyó con tres volúmenes y más de 400 imágenes fotográficas, completados en 1853. Se cree que existen unas 20 copias conocidas.",
+      "source": "The Metropolitan Museum of Art, ficha de «Photographs of British Algae: Cyanotype Impressions»",
+      "url": "https://www.metmuseum.org/art/collection/search/286656"
+    }
+  ],
+  "do_not_use": [
+    "Decir que Atkins inventó el cianotipo. Lo inventó John Herschel en 1842, un año antes de la primera entrega del libro. Herschel era amigo de la familia y visitante habitual de la casa de los Atkins en Kent; el padre de Anna, John George Children, era miembro de la Royal Society. Lo que Atkins inventó no fue el procedimiento, sino su uso sistemático como forma de publicación.",
+    "Dar una cifra única de láminas. Los ejemplares no son idénticos entre sí: el Natural History Museum cuenta 411 láminas en los suyos, el Metropolitan habla de más de 400 imágenes y otras fuentes dan 424. Es un libro hecho a mano, ejemplar por ejemplar, y por eso las cifras no coinciden. Escribir «más de cuatrocientas» es exacto; escribir una cifra cerrada, no.",
+    "Dar una cifra única de ejemplares conservados. El Natural History Museum dice trece copias conocidas; el Metropolitan, unas veinte. Ambas cifras son de institución y no coinciden: conviene citar las dos o hablar de una veintena escasa.",
+    "Llamarla sin más «la primera mujer fotógrafa». El Victoria and Albert Museum la describe así, pero esa prioridad está disputada y no depende de este libro. El dato firme, y el que sostiene la pieza, es otro: el primer libro ilustrado con fotografías.",
+    "Presentar The Pencil of Nature de Fox Talbot como el primer libro ilustrado con fotografías. Empezó a publicarse en fascículos en 1844, después de la primera entrega de Atkins de octubre de 1843.",
+    "Llamar «fotografías» a las láminas en el sentido corriente de la palabra. Son fotogramas: contacto directo del alga sobre el papel sensibilizado, a tamaño real, sin cámara y sin negativo. Nadie fotografió las algas; las algas se imprimieron a sí mismas.",
+    "Presentarlo como un libro de arte. Es una obra de referencia botánica, concebida como el complemento ilustrado que le faltaba al manual de Harvey de 1841. La belleza del azul de Prusia es una consecuencia del procedimiento, no su propósito."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-07T20:33:00Z"
+}

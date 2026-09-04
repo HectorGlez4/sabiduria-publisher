@@ -1,0 +1,79 @@
+{
+  "id": "2026-09-07-extra86",
+  "slot": "tarde",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Mozi: el mohismo y la defensa de las ciudades",
+    "hook": "CAMINÓ DIEZ DÍAS Y DIEZ NOCHES PARA IMPEDIR UNA GUERRA, Y LA DETUVO SIN PELEARLA",
+    "body": [
+      "Mozi vivió en China entre el 470 y el 391 antes de nuestra era, casi en los mismos años que Sócrates. Venía de la clase artesana, no de la nobleza. Su escuela sostenía diez tesis, y la más citada es jian ai: suele traducirse por «amor universal», pero designa algo más frío y más exigente, un cuidado imparcial que no distingue entre los propios y los extraños.",
+      "El capítulo «Gongshu» del libro que lleva su nombre cuenta lo siguiente. El reino de Chu preparaba un ataque contra Song y ya tenía listas las escalas de asalto que le había construido el ingeniero Gongshu Ban. Mozi caminó diez días y diez noches hasta la capital. Ante la corte se desató el cinturón, trazó con él una muralla y tomó un palo pequeño por armamento. Gongshu Ban dispuso nueve máquinas de ataque. Mozi lo rechazó nueve veces.",
+      "Gongshu Ban dijo que sabía cómo vencerlo, pero que no lo diría. Mozi respondió que también él sabía cuál era ese modo: matarlo. Y añadió que trescientos discípulos suyos ya estaban sobre la muralla de Song con los instrumentos de defensa preparados. El rey de Chu canceló el ataque.",
+      "Los mohistas no eran pacifistas. Condenaban la agresión no provocada y se volvieron especialistas en resistirla: el último cuarto de su libro es un manual de fortificación y de tácticas de defensa. Ahí estaba su límite. Cuando Qin unificó China en el 221 a.C. dejaron de existir los reinos pequeños a los que acudían, y a mediados de la dinastía Han su escuela había desaparecido casi por completo."
+    ],
+    "question": "¿Qué sabes hacer que solo sirve mientras el problema exista?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "MOZI, SIGLO V a.C.",
+    "subtitle": "La escuela que dejó de hacer falta el día en que ganó",
+    "body": "Chu iba a atacar a Song con escalas de asalto recién construidas. Mozi caminó diez días y diez noches hasta la corte, se desató el cinturón, trazó con él una muralla y, con un palo por armamento, rechazó nueve veces las nueve máquinas de Gongshu Ban. El ataque se canceló sin una sola baja."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Filosofia",
+      "#ChinaAntigua",
+      "#Historia"
+    ],
+    "extended": [
+      "#Mozi",
+      "#Mohismo",
+      "#FilosofiaChina",
+      "#PensamientoAntiguo",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Civilizaciones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Mozi vivió a mediados y finales del siglo V a.C., aproximadamente en los mismos años que Sócrates; jian ai se traduce habitualmente por \"amor universal\" pero designa un cuidado inclusivo e imparcial, no un afecto apasionado; muchos mohistas se hicieron especialistas en guerra defensiva y acudían en auxilio de ciudades amenazadas; el último cuarto del Mozi trata de tácticas de defensa y fortificación de plazas sitiadas.",
+      "source": "Stanford Encyclopedia of Philosophy — Mohism",
+      "url": "https://plato.stanford.edu/entries/mohism/"
+    },
+    {
+      "claim": "El Mozi consta tradicionalmente de setenta y un capítulos; las diez tesis son elevar a los dignos, identificarse con lo superior, cuidado imparcial, condena de la agresión militar, moderación en el gasto, moderación en los funerales, la voluntad del Cielo, el esclarecimiento de los espíritus, condena de la música y condena del fatalismo; la comunidad mohista aportaba a los estados pequeños su pericia en tecnología de contraasedio y probablemente no sobrevivió a la dinastía Qin (221-206 a.C.).",
+      "source": "Internet Encyclopedia of Philosophy — Mozi (Mo-tzu)",
+      "url": "https://iep.utm.edu/mozi/"
+    },
+    {
+      "claim": "El capítulo «Gongshu» narra que Mozi \"caminó diez días y diez noches y llegó a Ying\", que \"se desató el cinturón y trazó con él una ciudad, y usó un palo pequeño como armamento\", que \"Gongshu Ban dispuso nueve máquinas de ataque distintas\" y \"Mozi lo rechazó nueve veces\", que Mozi respondió a la amenaza de muerte diciendo que sus discípulos, Qin Huali y otros hasta trescientos, ya esperaban armados con sus instrumentos de defensa sobre la muralla de Song, y que el señor de Chu concluyó: \"pues no ataquemos más a Song\".",
+      "source": "Chinese Text Project — Mozi, capítulo «Gongshu», traducción inglesa de W. P. Mei",
+      "url": "https://ctext.org/mozi/gong-shu"
+    },
+    {
+      "claim": "Mozi (c. 470-391 a.C.) nació en Lu y procedía de la clase artesana; el mohismo perdió favor tras el establecimiento de la dinastía Qin en 221 a.C. y había desaparecido casi por completo a mediados del Han occidental (202 a.C. - 9 d.C.).",
+      "source": "Wikipedia en inglés — Mozi",
+      "url": "https://en.wikipedia.org/wiki/Mozi"
+    }
+  ],
+  "do_not_use": [
+    "\"amor universal\" como traducción de jian ai sin matizarla: designa un cuidado imparcial y desapasionado hacia todos, no un sentimiento",
+    "\"los mohistas eran pacifistas\": condenaban la agresión no provocada, y muchos de ellos fueron ingenieros militares al servicio de la defensa",
+    "una cifra cerrada de capítulos conservados del Mozi: sobre los 71 originales se citan 53 y también 58 según la fuente, así que no se da número",
+    "presentar el episodio de Gongshu como hecho histórico comprobado: es lo que narra el propio libro, un texto de escuela, y así se enuncia",
+    "\"Qin Shi Huang quemó los libros mohistas\" como causa de la desaparición: la quema de libros es un relato tradicional y discutido, y no explica por sí sola el final de la escuela",
+    "confundir a Mozi con Mencio (Mengzi), que fue un pensador posterior y adversario suyo",
+    "atribuir a Mozi la frase \"el amor a todos por igual\" u otras máximas de circulación motivacional que no están en el texto"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-07T22:33:00Z"
+}

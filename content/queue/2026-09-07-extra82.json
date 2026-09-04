@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-07-extra82",
+  "slot": "tarde",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los Chinchorro y las momias de niños de Camarones",
+    "hook": "Las momias artificiales más antiguas que se conocen no se hicieron para reyes. Se hicieron para recién nacidos.",
+    "body": [
+      "El 27 de julio de 2021 la Unesco inscribió en la Lista del Patrimonio Mundial la momificación artificial de la cultura Chinchorro, en la región chilena de Arica y Parinacota. Esa gente ocupó la costa del desierto de Atacama desde alrededor del 5450 a.C. hasta el 890 a.C. Su procedimiento no era un embalsamamiento: era un desarme. Se desarticulaba el cuerpo, se le retiraban los órganos y a veces la piel, se rellenaban las cavidades con fibras, ceniza y arcilla, se rearmaba el esqueleto sobre palos y se cubría todo con una pasta de manganeso negro, sustituida siglos después por ocre rojo. Tres mil años antes de la primera momia egipcia.",
+      "El detalle que casi nunca se cuenta está en Camarones. El Museo Nacional de Historia Natural de Chile lo dice sin rodeos: en ese sitio solo los infantes fueron momificados. Cinco niños con tratamiento mortuorio y máscaras rojas. En la colección hay además un feto de cinco meses de gestación, trabajado con delicadeza. Las fechas de Camarones 14, publicadas en 1984, van de 7.500 a 6.600 años antes del presente, con un infante datado en 7.000. La técnica funeraria más laboriosa del mundo antiguo no empezó por un jefe ni por un anciano. Empezó por los muertos que en cualquier sociedad tienen menos poder que nadie.",
+      "Por qué, no se sabe con certeza. Bernardo Arriaza, de la Universidad de Tarapacá, sostiene desde hace casi dos décadas una hipótesis: en el valle de Camarones el agua tiene niveles altísimos de arsénico —se ha detectado en el cabello y los tejidos de las momias— y el envenenamiento crónico produce abortos y mortalidad neonatal alta. La momificación habría sido, en esa lectura, una respuesta al duelo. Arriaza lo publicó en el Cambridge Archaeological Journal y lo plantea como hipótesis, no como hecho. Lo que no es hipótesis es lo que quedó: gente sin Estado, sin escritura y sin pirámides que dedicó su trabajo más difícil a preservar a sus hijos muertos, durante milenios."
+    ],
+    "question": "¿Qué revela de un pueblo aquello a lo que le dedica su trabajo más difícil?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Chinchorro",
+    "subtitle": "Camarones, siete mil años atrás",
+    "body": "En el sitio de Camarones solo se momificó a los infantes: cinco niños con máscaras rojas y un feto de cinco meses trabajado con delicadeza. Tres mil años antes que Egipto. La técnica funeraria más laboriosa del mundo antiguo empezó por quienes no alcanzaron a hablar."
+  },
+  "sources": [
+    {
+      "claim": "El 27 de julio de 2021 el Comité del Patrimonio Mundial inscribió el bien «Asentamientos y Momificación Artificial de la Cultura Chinchorro en la Región de Arica y Parinacota» en la Lista del Patrimonio Mundial. La cultura residió en la costa árida del norte del desierto de Atacama, en el extremo norte de Chile, desde aproximadamente 5450 a.C. hasta 890 a.C. El sitio consta de tres componentes: Faldeo Norte del Morro de Arica y Colón 10, ambos en la ciudad de Arica, y Desembocadura de Camarones, a unos 100 km al sur. Presenta «la evidencia arqueológica más antigua conocida de la momificación artificial de cuerpos», con cementerios que contienen tanto cuerpos momificados artificialmente como otros conservados por las condiciones ambientales. Los Chinchorro «perfeccionaron complejas prácticas funerarias, por las que desmembraban y volvían a ensamblar sistemáticamente cuerpos» de individuos de todas las edades y estatus social.",
+      "source": "Consejo de Monumentos Nacionales de Chile, ficha del sitio de Patrimonio Mundial «Asentamiento y momificación artificial de la cultura Chinchorro»",
+      "url": "https://www.monumentos.gob.cl/patrimonio-mundial/actual/asentamiento-y-momificacion-artificial-de-la-cultura-chinchorro"
+    },
+    {
+      "claim": "«Hace más de siete mil años y tres mil años antes que los egipcios, los Chinchorro comenzaron a momificar los cuerpos de sus infantes.» Los ejemplares más antiguos datan de 7.600 años antes del presente y provienen del sitio Camarones 14. «En este sitio solo los infantes fueron momificados, se hallaron 5 infantes con tratamiento mortuorio y máscaras rojas.» La colección incluye además «un feto de 5 meses de gestación delicadamente trabajado». Nota publicada el 27 de julio de 2021, día de la inscripción en la Lista del Patrimonio Mundial.",
+      "source": "Museo Nacional de Historia Natural de Chile, «Chinchorro Patrimonio de la Humanidad»",
+      "url": "https://www.mnhn.gob.cl/noticias/chinchorro-patrimonio-de-la-humanidad"
+    },
+    {
+      "claim": "El arqueólogo alemán Max Uhle llegó en 1911 y excavó en el Morro de Arica y la Pampa del Chinchorro, iniciando el estudio científico de estas momias y revelando cuerpos momificados tanto natural como artificialmente. La publicación de los hallazgos de Camarones 14 por Schiappacasse y Niemeyer en 1984 abrió una nueva fase en la investigación: el sitio entregó fechados de 7.500 a 6.600 años antes del presente, con un infante datado directamente en 7.000 años AP. Bittman y Munizaga plantearon por primera vez que podrían ser las momias artificiales más antiguas del mundo.",
+      "source": "Museo Nacional de Historia Natural de Chile, exposición en línea sobre la cultura Chinchorro, sección «El descubrimiento»",
+      "url": "https://www.exposicionesmnhn.cl/chinchorro/descubrimiento.html"
+    },
+    {
+      "claim": "Bernardo Arriaza, antropólogo físico de la Universidad de Tarapacá, sostiene desde hace cerca de dos décadas la hipótesis del hidroarsenicismo: en la zona de Camarones los niveles de arsénico en el agua son muy altos y se ha comprobado la presencia de arsénico en cabellos y tejidos de las momias; el envenenamiento crónico afectaría los procesos reproductivos, con abortos y muertes neonatales. Cita textual de Arriaza: «Las primeras poblaciones que llegan ahí para asentarse se empiezan a envenenar crónicamente por el arsénico». La nota presenta la tesis en condicional —«habría sido clave», «estaría asociado», «podría explicar»—, es decir, como hipótesis explorada y no como hecho establecido. Menciona un estudio de 2017 en el American Journal of Physical Anthropology liderado por Mauricio Moraga.",
+      "source": "Universidad de Chile, «¿Por qué la cultura Chinchorro momificaba a sus muertos? Contaminación por arsénico habría sido clave»",
+      "url": "https://www.uchile.cl/noticias/178589/por-que-la-cultura-chinchorro-momificaba-a-sus-muertos"
+    },
+    {
+      "claim": "Bernardo Arriaza, de la Universidad de Tarapacá, propone que los Chinchorro desarrollaron la momificación «como respuesta al duelo provocado por las altas tasas de mortalidad infantil», y que el cuerpo transformado se convirtió en un lienzo para expresar emoción y en un medio de consuelo. Los restos momificados más antiguos se hallaron en el valle de Camarones, donde niveles tóxicos de arsénico envenenaban las fuentes de agua y causaban abortos frecuentes y alta mortalidad infantil. La técnica incluía extraer órganos, en ocasiones descarnar el cuerpo, rellenar las cavidades con fibras y arcilla y reensamblar los restos sobre palos antes de aplicar una pasta negra de manganeso, sustituida más tarde por ocre rojo. Entre los primeros individuos momificados, «muchos de los cuales eran niños». La investigación apareció en el Cambridge Archaeological Journal.",
+      "source": "Archaeology Magazine (Archaeological Institute of America), «Why Did Chile's Chinchorro People Begin Making Mummies?», 5 de enero de 2026",
+      "url": "https://archaeology.org/news/2026/01/05/why-did-chiles-chinchorro-people-begin-making-mummies/"
+    }
+  ],
+  "do_not_use": [
+    "«Las momias más antiguas del mundo», a secas. La formulación correcta, y la que usa la Unesco, es momificación artificial: son la evidencia arqueológica más antigua conocida de cuerpos momificados a propósito. En los mismos cementerios hay cuerpos conservados por el clima del desierto sin intervención humana, y esos no cuentan para la comparación.",
+    "Dar el hidroarsenicismo por explicación probada. Es la hipótesis de Bernardo Arriaza y las propias fuentes universitarias la enuncian en condicional. Está bien contarla; no está bien escribir «momificaban a sus niños porque el agua tenía arsénico» como si fuera un hecho cerrado.",
+    "Fijar una sola cifra de antigüedad. El Museo Nacional de Historia Natural da 7.600 años AP para los ejemplares más antiguos de Camarones 14; la exposición del mismo museo da un rango de 7.500 a 6.600 AP para el sitio, con un infante datado en 7.000. Escribir «tienen exactamente X años» es elegir un número entre varios sin decirlo.",
+    "Sugerir contacto o influencia con Egipto. Los separan miles de kilómetros y unos tres milenios. La comparación con Egipto sirve para dar escala en el tiempo y nada más; convertirla en préstamo o en carrera entre culturas es inventar una relación que no existe.",
+    "Atribuirles pirámides, ciudades, escritura o un Estado. Nada de eso aparece en las fuentes, y el interés del caso es precisamente el contrario: un tratamiento funerario de enorme complejidad sostenido durante milenios por gente que no levantó monumentos.",
+    "Decir que momificaban solo a los niños. En Camarones 14 sí, y ese es el dato. Pero la práctica en su conjunto abarcó, según la descripción oficial del bien, individuos de todas las edades y de todo estatus social. Lo notable es por dónde empezó, no que se quedara ahí.",
+    "Fechar el descubrimiento en 1917. Las excavaciones de Max Uhle en el Morro de Arica y la Pampa del Chinchorro comenzaron en 1911, según la exposición del Museo Nacional de Historia Natural."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "results": {},
+  "publish_at": "2026-09-07T18:33:00Z"
+}
