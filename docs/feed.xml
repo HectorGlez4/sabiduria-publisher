@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 05 Sep 2026 17:10:16 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 19:11:49 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Un médico de Guadix escribió en el siglo XII la historia de un niño que crece solo en una isla y llega a la verdad sin maestro, sin libro y sin lengua.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-05-extra52</guid>
+      <pubDate>Sat, 05 Sep 2026 19:11:14 +0000</pubDate>
+      <description><![CDATA[Un médico de Guadix escribió en el siglo XII la historia de un niño que crece solo en una isla y llega a la verdad sin maestro, sin libro y sin lengua.
+
+Ibn Tufayl nació en Guadix hacia 1105 y murió en Marrakech en 1185 o 1186. Fue jurista, médico y secretario del califa almohade Abu Yaqub Yusuf; cuando se retiró del cargo, recomendó a Averroes como sucesor suyo. De toda su obra en prosa sobrevive un solo libro, la Risālat Ḥayy ibn Yaqẓān, escrita en al-Ándalus hacia 1160. Cuenta la vida de Hayy, un niño criado por una gacela en una isla deshabitada, que observando y razonando llega por su cuenta al orden de la naturaleza y a la idea de lo divino. Su desarrollo avanza por tramos de siete años: imitación de los animales, fabricación de herramientas, contemplación abstracta, ejercicio espiritual.
+
+El final es la parte que casi nunca se cita. Hayy conoce a Absal, un asceta que llega buscando soledad, aprende de él la lengua y viaja con él a la isla habitada. Allí intenta enseñar lo que descubrió. Cuanto más explica, más rechazo provoca, y no entre malas personas: entre gente que buscaba de buena fe el bien. Concluye que la mayoría necesita las imágenes y los relatos de la religión, deja de insistir y vuelve a su isla.
+
+En 1671 Edward Pococke el Joven lo tradujo al latín en Oxford con el título Philosophus Autodidactus. Locke había sido alumno de Pococke, y los años en que empezó a redactar su Ensayo sobre el entendimiento humano coinciden con los de esa traducción. Al castellano no llegó hasta 1900, en la versión de Francisco Pons Boigues. El libro que sostiene que una persona sola puede alcanzar la verdad esperó más de setecientos años para poder leerse en la lengua que hoy se habla donde se escribió.
+
+¿Qué has entendido sin que nadie te lo enseñara?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra52.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra52.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -483,25 +502,6 @@ Mil años de ventaja para el material más barato de la historia.
 #SabiduriaDeBolsillo #China #Historia #Curiosidades]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re06-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-30-re06-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La pantalla anunció cinco misiles nucleares en camino. El hombre de guardia decidió que la máquina mentía.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-02-manana</guid>
-      <pubDate>Wed, 02 Sep 2026 14:36:08 +0000</pubDate>
-      <description><![CDATA[La pantalla anunció cinco misiles nucleares en camino. El hombre de guardia decidió que la máquina mentía.
-
-Poco después de la medianoche del 26 de septiembre de 1983, en un búnker llamado Serpujov-15, el sistema de satélites Oko anunció el lanzamiento de un misil estadounidense. Enseguida, cuatro más. De guardia estaba el teniente coronel Stanislav Petrov.
-
-Informó a sus superiores que era una falla del sistema. Se apoyó en dos cosas: nadie empieza una guerra nuclear con cinco misiles, y los radares de tierra no confirmaban nada. Tenía razón. Era luz del sol reflejada en nubes de gran altura, alineadas con la órbita de los satélites. No hubo condecoración: le pusieron una reprimenda por llevar mal el diario de guardia.
-
-El episodio se hizo público en 1998, cuando el general Yuri Votintsev lo contó en sus memorias: quince años después. Petrov nunca aceptó que lo llamaran héroe. Decía que estuvo en el lugar adecuado en el momento adecuado y que solo hacía su trabajo. Murió el 19 de mayo de 2017 y la noticia tardó cuatro meses en salir de su casa.
-
-¿Qué decisión tuya, sin testigos, resultó ser la correcta?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-02-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
