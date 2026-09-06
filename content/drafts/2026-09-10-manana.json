@@ -1,0 +1,78 @@
+{
+  "id": "2026-09-10-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Lise Meitner y la fisión explicada en el exilio",
+    "hook": "El experimento se hizo en Berlín, la explicación se escribió en un hotel de Suecia, y el Nobel lo recibió uno solo de los cuatro.",
+    "body": [
+      "En julio de 1938 Lise Meitner salió de Berlín con dos maletas pequeñas y muy poco dinero. Llevaba treinta años trabajando con el químico Otto Hahn; su ascendencia judía la había dejado sin protección. Pasó por el instituto de Niels Bohr en Copenhague y se estableció en Estocolmo. En diciembre, Hahn le escribió desde Berlín: al bombardear uranio con neutrones les aparecía bario, un elemento con poco más de la mitad de la masa del uranio, y no sabía explicarlo.",
+      "Meitner pasó la Navidad de 1938 en un hotel cerca de Gotemburgo. Allí la visitó su sobrino Otto Frisch, físico en Copenhague, y entre los dos hicieron las cuentas: el núcleo de uranio se partía en dos. Frisch le preguntó a un biólogo del instituto de Bohr cómo se llamaba la división de una bacteria; le dijeron «fission», y así quedó bautizada. La explicación salió en Nature el 11 de febrero de 1939, volumen 143, páginas 239 y 240. El artículo experimental de Hahn y Strassmann se había enviado el 22 de diciembre y se publicó el 6 de enero en Naturwissenschaften, sin el nombre de Meitner: firmar con una judía en el exilio era políticamente imposible en la Alemania de 1939.",
+      "El Nobel de Química de 1944 se concedió a Otto Hahn en solitario, por el descubrimiento de la fisión de los núcleos pesados; la ceremonia se celebró en diciembre de 1945. Meitner fue candidata 48 veces —diecinueve en química y veintinueve en física, entre 1924 y 1965— y no lo recibió nunca. En 1997 la Unión Internacional de Química Pura y Aplicada le puso su nombre al elemento 109: meitnerio."
+    ],
+    "question": "¿Cuántas explicaciones que hoy usamos llevan el nombre de quien pudo firmarlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La explicación llegó por carta",
+    "subtitle": "Suecia, diciembre de 1938",
+    "body": "Hahn encontró bario donde debía haber uranio y no supo explicarlo. Lise Meitner, exiliada en Suecia, hizo las cuentas con su sobrino Otto Frisch y le puso nombre al fenómeno: fisión."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LiseMeitner", "#HistoriaDeLaCiencia", "#MujeresEnLaCiencia"],
+    "extended": ["#Fisica", "#FisionNuclear", "#OttoHahn", "#Nobel", "#Exilio", "#Ciencia", "#SigloXX", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Meitner huyó de Berlín en julio de 1938 con dos maletas pequeñas y muy poco dinero; pasó primero por el instituto de Bohr en Copenhague y siguió hasta Estocolmo. El 16 de diciembre de 1938 Hahn y Strassmann se convencieron por mediciones cuidadosas de que uno de los productos era bario, y Hahn escribió a Meitner pidiéndole que interpretara el resultado.",
+      "source": "Physics Today (American Institute of Physics), «On the belated discovery of fission»",
+      "url": "https://physicstoday.aip.org/features/on-the-belated-discovery-of-fission"
+    },
+    {
+      "claim": "Meitner huyó de la ocupación nazi en julio de 1938 con ayuda de Niels Bohr y se instaló en Estocolmo, en el Instituto Nobel de Física; recibió después la carta de Hahn sobre el bario y resolvió el problema con su sobrino Otto Frisch.",
+      "source": "Office for Science and Society, Universidad McGill, «Lise Meitner: A Noble Scientist»",
+      "url": "https://www.mcgill.ca/oss/article/history/lise-meitner-noble-scientist"
+    },
+    {
+      "claim": "Meitner estaba en un pequeño hotel cerca de Gotemburgo cuando la visitó Frisch, que trabajaba en Copenhague; Frisch preguntó a un biólogo del instituto de Bohr cómo se llamaba la división bacteriana, le dijeron «fission» y tomó esa palabra para la escisión del uranio.",
+      "source": "Atomic Heritage Foundation / National Museum of Nuclear Science & History, «Meitner & Frisch On Nuclear Fission»",
+      "url": "https://ahf.nuclearmuseum.org/ahf/key-documents/meitner-frisch-nuclear-fission/"
+    },
+    {
+      "claim": "La referencia completa del artículo es: Lise Meitner y O. R. Frisch, «Disintegration of Uranium by Neutrons: a New Type of Nuclear Reaction», Nature, vol. 143, pp. 239-240, 11 de febrero de 1939. Hahn y Strassmann hicieron su descubrimiento en diciembre de 1938 bombardeando uranio con neutrones.",
+      "source": "German History Intersections (Instituto Histórico Alemán de Washington), documento 160",
+      "url": "https://germanhistory-intersections.org/en/knowledge-and-education/ghis:document-160"
+    },
+    {
+      "claim": "El artículo de Hahn y Strassmann se envió el 22 de diciembre de 1938 y se publicó el 6 de enero de 1939 en Naturwissenschaften; el hallazgo del bario salió solo a nombre de Hahn y Strassmann porque habría sido políticamente imposible incluir como coautora a una judía en el exilio.",
+      "source": "Linda Hall Library, «Scientist of the Day: Fritz Strassmann»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/fritz-strassmann/"
+    },
+    {
+      "claim": "Hahn recibió el Premio Nobel de Química de 1944; Meitner y Frisch aportaron el marco teórico basado en el modelo de gota de Bohr, y muchos consideraron que ella debió compartirlo.",
+      "source": "Science History Institute, biografía «Otto Hahn, Lise Meitner, and Fritz Strassmann»",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/otto-hahn-lise-meitner-and-fritz-strassmann/"
+    },
+    {
+      "claim": "Meitner fue nominada 29 veces al Nobel de Física y 19 al de Química; su primera nominación es de 1924 y la última de 1965, tres años antes de su muerte.",
+      "source": "Physics World (Institute of Physics), «Overlooked for the Nobel: Lise Meitner»",
+      "url": "https://physicsworld.com/a/overlooked-for-the-nobel-lise-meitner/"
+    },
+    {
+      "claim": "En 1997 la IUPAC dio oficialmente el nombre de meitnerio (Mt) al elemento 109 en honor de Lise Meitner (1878-1968).",
+      "source": "Royal Society of Chemistry, tabla periódica interactiva, ficha del elemento 109",
+      "url": "https://periodic-table.rsc.org/element/109/meitnerium"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Meitner se exilió en Copenhague. Circula así en algunas fichas divulgativas —incluida la de German History Intersections—, pero pasó por el instituto de Bohr y se estableció en Estocolmo, en el Instituto Nobel de Física. Copenhague era donde trabajaba Frisch.",
+    "No decir que Hahn recibió el Nobel de Física. Fue el de Química de 1944, «por el descubrimiento de la fisión de los núcleos pesados». Algunas divulgaciones lo confunden.",
+    "No cerrar la cifra de nominaciones en 46. La cuenta documentada por el archivo de nominaciones es de 19 en química y 29 en física, 48 en total; la cifra de 46 circula en comunicaciones divulgativas y no coincide con ese desglose.",
+    "No llamarla «la madre de la bomba atómica». Es un titular de prensa estadounidense de 1945 que ella rechazó: no participó en el Proyecto Manhattan y declinó la invitación a trabajar en el arma.",
+    "No decir que Meitner descubrió la fisión sola ni que Hahn se la robó sin matiz. El experimento químico fue de Hahn y Strassmann en Berlín; la interpretación física fue de Meitner y Frisch. Lo verificable es el reparto del crédito por el premio, no una intención."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-10-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "el Dhammapada y el verso 5 sobre el odio",
+    "hook": "La frase budista más repetida en Occidente dice que al odio lo apaga el amor. El texto original no dice amor.",
+    "quote": {
+      "text": "El odio nunca se apacigua con odio en este mundo; solo con la ausencia de odio se apacigua. Ésta es una ley eterna.",
+      "author": "Dhammapada, canon budista pali",
+      "work": "Capítulo I, Yamakavagga (Versos gemelos), verso 5; texto pali del Khuddaka Nikāya, traducido al inglés por F. Max Müller en The Sacred Books of the East, vol. X (Oxford, 1881), y por Acharya Buddharakkhita en la edición de la Buddhist Publication Society",
+      "attribution_verified": true
+    },
+    "body": [
+      "El verso es el quinto del primer capítulo del Dhammapada, la antología de veintiséis capítulos recogida en el Khuddaka Nikāya del canon pali. En pali dice: «Na hi verena verāni sammantīdha kudācanaṁ; averena ca sammanti, esa dhammo sanantano». Los dos versos anteriores lo preparan con una letanía: me insultó, me golpeó, me venció, me robó. Quien guarda esos pensamientos, dice el texto, no apaga nada.",
+      "En 1881, Max Müller lo tradujo al inglés para la colección Sacred Books of the East y escribió: «hatred ceases by love, this is an old rule». De ahí viene el «solo el amor» que hoy se repite en carteles y discursos. Pero la palabra pali es avera, que significa ausencia de odio, y las traducciones modernas la respetan: «solo con la ausencia de odio se apacigua». No es lo mismo. La primera versión pide querer al que hizo daño; la segunda pide algo más pequeño y más difícil: dejar de devolverlo.",
+      "El texto tampoco lo presenta como un consejo. Lo cierra con «esa dhammo sanantano»: una ley antigua, una regla que ya estaba ahí. El comentario tradicional sitúa la escena en el monasterio de Jetavana, en Sāvatthī, ante dos mujeres atrapadas en una cadena de venganzas que venía de vidas anteriores."
+    ],
+    "question": "¿Qué se necesita para dejar de devolver un golpe sin tener que perdonarlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Dhammapada", "#Budismo", "#SabiduriaAntigua"],
+    "extended": ["#Citas", "#Filosofia", "#Traduccion", "#India", "#Pali", "#TextosClasicos", "#Etica", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "El texto pali del verso 5 es «Na hi verena verāni / sammantīdha kudācanaṁ / averena ca sammanti / esa dhammo sanantano», del capítulo Yamakavagga (Los pares). El comentario asociado es el Kālayakkhinī Vatthu, situado en el monasterio de Jetavana, y narra a dos mujeres encadenadas en venganzas sucesivas a lo largo de varias existencias.",
+      "source": "Tipitaka.net, «The Dhammapada: Verses and Stories», verso 5",
+      "url": "https://www.tipitaka.net/tipitaka/dhp/verseload.php?verse=005"
+    },
+    {
+      "claim": "La traducción del pali de Acharya Buddharakkhita rinde el verso 5 como «Hatred is never appeased by hatred in this world. By non-hatred alone is hatred appeased. This is a law eternal», dentro del capítulo Yamakavagga (Pairs). Los versos 3 y 4 son la letanía «He abused me, he struck me, he overpowered me, he robbed me».",
+      "source": "Access to Insight, Dhammapada I, traducción de Acharya Buddharakkhita",
+      "url": "https://www.accesstoinsight.org/tipitaka/kn/dhp/dhp.01.budd.html"
+    },
+    {
+      "claim": "La traducción de F. Max Müller, publicada en The Sacred Books of the East, vol. X, parte I, dice literalmente en el verso 5: «For hatred does not cease by hatred at any time: hatred ceases by love, this is an old rule». Los versos 3 y 4 traen la misma letanía de agravios.",
+      "source": "Project Gutenberg, edición digital de «The Dhammapada», traducción de F. Max Müller (Sacred Books of the East, vol. X, parte I), ebook 2017",
+      "url": "https://www.gutenberg.org/files/2017/2017-h/2017-h.htm"
+    },
+    {
+      "claim": "El Dhammapada pertenece al Khuddaka Nikāya del canon pali y está organizado en veintiséis capítulos (vaggas), de los que el primero es el Yamakavagga.",
+      "source": "Access to Insight, índice del Dhammapada (Khuddaka Nikāya)",
+      "url": "https://www.accesstoinsight.org/tipitaka/kn/dhp/index.html"
+    },
+    {
+      "claim": "El volumen X de The Sacred Books of the East, con la traducción del Dhammapada por F. Max Müller, se publicó en Oxford en 1881.",
+      "source": "Registro bibliográfico de la serie The Sacred Books of the East, vol. X, parte I (Oxford, 1881), corroborado en las fichas de la edición digital del texto",
+      "url": "https://en.wikisource.org/wiki/Dhammapada_(Muller)"
+    }
+  ],
+  "do_not_use": [
+    "No citar el verso como «el odio nunca cesa con odio, solo el amor lo apaga» presentándolo como traducción del pali. La palabra «amor» es una elección de Max Müller en 1881; el pali dice avera, ausencia de odio o de enemistad.",
+    "No atribuirlo como frase suelta a Buda sin más. El Dhammapada es una antología del canon pali, y este pasaje tiene capítulo y número: Yamakavagga, verso 5. Citarlo sin esa referencia es lo que permite que circulen versiones inventadas.",
+    "No confundirlo con la frase «la oscuridad no puede expulsar a la oscuridad; solo la luz puede hacerlo», de Martin Luther King. Se citan juntas a menudo y se atribuyen entre sí, pero son textos distintos y de tradiciones distintas.",
+    "No dar una fecha de composición cerrada para el Dhammapada. La datación de la antología y de su puesta por escrito está discutida; lo verificable es su lugar en el canon pali y el número del verso.",
+    "No traducir «esa dhammo sanantano» como una recomendación. El texto lo enuncia como ley o regla antigua, no como consejo moral."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

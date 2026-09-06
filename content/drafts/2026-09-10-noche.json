@@ -1,0 +1,58 @@
+{
+  "id": "2026-09-10-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Teotihuacán: la ciudad que llegó sin su nombre",
+    "hook": "La ciudad más grande de América en su tiempo tuvo cien mil habitantes y no sabemos cómo la llamaban ellos.",
+    "body": [
+      "Teotihuacán, en el altiplano central de México, floreció entre el año 50 y el 650 de nuestra era. El levantamiento que dirigió el arqueólogo René Millon en los años sesenta cartografió unas dos mil hectáreas y registró más de cinco mil estructuras. Hacia el año 350 vivían allí unas cien mil personas. La mayoría no lo hacía en casas sueltas: la ciudad estaba organizada en unos dos mil trescientos conjuntos amurallados de varias familias, agrupadas alrededor de patios, muchas veces dedicadas a un mismo oficio, como la obsidiana o la cerámica.",
+      "Hacia el año 250 se instalaron en ella grupos venidos de lejos, en barrios propios: uno oaxaqueño, otro de comerciantes de la costa del Golfo. Alrededor del 550 el centro ceremonial fue incendiado y los objetos rituales aparecieron rotos y esparcidos a propósito. Los grupos nahuas llegaron al valle en el siglo XIII y encontraron las pirámides en ruinas, abandonadas desde hacía unos seiscientos años. Les pareció que un lugar así solo podía explicarse de una manera y lo llamaron Teotihuacán: el sitio donde se hicieron los dioses.",
+      "Ese es el nombre con el que la ciudad entró en la historia y con el que la inscribió la Unesco en 1987. No es el suyo. El que usaban sus habitantes, los que trazaron la calzada y levantaron las pirámides, no aparece en ninguna parte: se perdió seis siglos antes de que alguien volviera a mirar hacia allí."
+    ],
+    "question": "¿Cuánto de lo que damos por antiguo lo nombró alguien que llegó después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El sitio donde se hicieron los dioses",
+    "subtitle": "Altiplano de México, siglo XIII",
+    "body": "Cuando los grupos nahuas llegaron al valle, la ciudad llevaba unos seiscientos años abandonada. Le pusieron el nombre con el que hoy la conocemos. El que le dieron sus constructores se desconoce."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Teotihuacan", "#Mesoamerica", "#Arqueologia"],
+    "extended": ["#Historia", "#Mexico", "#Piramides", "#CiudadesAntiguas", "#PatrimonioMundial", "#CulturasOriginarias", "#Civilizaciones", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Teotihuacán floreció aproximadamente entre el 50 y el 650 d.C., con su apogeo en los siglos IV y V; ocupó casi ocho millas cuadradas y albergó unos cien mil habitantes entre el 350 y el 450, lo que la convirtió en la mayor ciudad del México antiguo. Cuando los grupos aztecas llegaron en el siglo XIII encontraron la ciudad abandonada y la llamaron Teotihuacan, «lugar de los dioses» o «lugar de la deificación»; el nombre que usaban sus propios habitantes se desconoce. Fue inscrita en la Lista del Patrimonio Mundial en 1987.",
+      "source": "Instituto Nacional de Antropología e Historia (INAH), ficha oficial de la Zona Arqueológica de Teotihuacán",
+      "url": "https://lugares.inah.gob.mx/en/node/4528"
+    },
+    {
+      "claim": "El Teotihuacan Mapping Project, dirigido por René Millon en los años sesenta, hizo un levantamiento de cobertura casi total de la ciudad: documentó más de 5.000 estructuras individuales, estableció una extensión de más de 2.000 hectáreas de trazado urbano denso y planificado, y una población de entre 80.000 y 120.000 habitantes durante su ocupación (c. 100 a.C.-600 d.C.).",
+      "source": "School of Human Evolution and Social Change, Arizona State University, «Teotihuacan Mapping Project»",
+      "url": "https://shesc.asu.edu/research/projects/teotihuacan-mapping-project-completing-research-and-sharing-data-0"
+    },
+    {
+      "claim": "Estudio demográfico sobre los conjuntos habitacionales de Teotihuacán: parte de la cifra de 2.300 conjuntos usada por Millon y concluye que «100.000 personas es la estimación más razonable» para la población de las fases Xolalpan-Metepec.",
+      "source": "Michael E. Smith, Abhishek Chatterjee, Angela C. Huster, Sierra Stewart y Marion Forest, «Apartment Compounds, Households, and Population in the Ancient City of Teotihuacan, Mexico», Ancient Mesoamerica, Cambridge University Press, 2019",
+      "url": "https://www.cambridge.org/core/journals/ancient-mesoamerica/article/apartment-compounds-households-and-population-in-the-ancient-city-of-teotihuacan-mexico/1BED268FF26F27FD2A64B38851EF32D0"
+    },
+    {
+      "claim": "Se estiman unos 2.000 conjuntos habitacionales, cada uno con varios apartamentos familiares en torno a un patio común, y familias extensas especializadas en oficios como la obsidiana o la cerámica. Hacia el 250 d.C. grupos migrantes se asentaron en tres barrios distintos, entre ellos el Barrio Oaxaqueño y el Barrio de los Comerciantes. Hacia el 550 d.C. el centro ceremonial fue incendiado y los objetos rituales fueron rotos y esparcidos deliberadamente.",
+      "source": "de Young Museum (Fine Arts Museums of San Francisco), exposición «Teotihuacan: City of Water, City of Fire», relato en Google Arts & Culture",
+      "url": "https://artsandculture.google.com/story/teotihuacan-city-of-water-city-of-fire-de-young-museum/AwVRkilCgvwQLg?hl=en"
+    }
+  ],
+  "do_not_use": [
+    "No llamar aztecas o mexicas a los constructores de Teotihuacán. La ciudad estaba abandonada desde hacía unos seiscientos años cuando los grupos nahuas llegaron al valle; solo le pusieron el nombre.",
+    "No afirmar que Teotihuacán no tuvo reyes. Es una hipótesis extendida —no se ha identificado ninguna tumba real ni el retrato de un gobernante concreto—, pero sigue en discusión entre arqueólogos y no es un hecho establecido. Lo verificable es que no se conoce el nombre de ninguno.",
+    "No presentar «Pirámide del Sol», «Pirámide de la Luna», «Calzada de los Muertos» ni «La Ciudadela» como nombres originales. Son designaciones nahuas y coloniales muy posteriores al abandono de la ciudad.",
+    "No dar por cerrada la fecha de llegada de los grupos nahuas al valle: el INAH la sitúa en el siglo XIII y otras divulgaciones en el XIV. Si se menciona, la del INAH es la que aquí se sostiene.",
+    "No atribuir la caída de la ciudad a una invasión. El incendio del centro ceremonial hacia el 550 está documentado, pero sus causas —tensiones internas, crisis ambiental o conflicto— siguen abiertas."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

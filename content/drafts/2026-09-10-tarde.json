@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Emily Dickinson y la esperanza con plumas",
+    "hook": "El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.",
+    "quote": {
+      "text": "La esperanza es esa cosa con plumas que se posa en el alma y canta la melodía sin las palabras.",
+      "author": "Emily Dickinson",
+      "work": "«Hope» is the thing with feathers (Fr. 314 / J. 254), en Poems by Emily Dickinson, Second Series, Roberts Brothers, Boston, 1891, libro I, poema VI",
+      "attribution_verified": true
+    },
+    "body": [
+      "Emily Dickinson murió en Amherst, Massachusetts, en 1886. En vida se le publicaron once poemas de los casi mil ochocientos que escribió, casi todos sin su permiso, en periódicos que además le cambiaban el título y la puntuación. De uno de ellos se quejó por escrito. El manuscrito de este poema está en la biblioteca Houghton de Harvard, cosido por ella misma en el fascículo 13, hacia 1861.",
+      "Su hermana Lavinia encontró los poemas en un arcón después del entierro. Mabel Loomis Todd y Thomas Wentworth Higginson los prepararon para la imprenta, y en 1891 este salió en Poems by Emily Dickinson, Second Series. Los editores hicieron lo que Dickinson había reprochado en vida: le pusieron el título «Hope», quitaron las comillas con que ella marcaba la palabra en el primer verso y sustituyeron sus rayas por comas y puntos. La versión que se cita en el mundo es esa, la corregida.",
+      "El poema no dice que la esperanza consuele. Dice que canta más dulce en el vendaval, que hace falta una tormenta muy fuerte para acallarla, y termina con una cuenta: la escuchó en la tierra más fría y en el mar más extraño, y ni en la peor necesidad le pidió una migaja."
+    ],
+    "question": "¿Qué cosas sostienen la vida sin cobrar nada por hacerlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#EmilyDickinson", "#Poesia", "#Esperanza"],
+    "extended": ["#Citas", "#Literatura", "#SigloXIX", "#Manuscritos", "#Libros", "#LiteraturaNorteamericana", "#Escritura", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "El texto impreso en 1891 lleva el título «HOPE.» y empieza «Hope is the thing with feathers / That perches in the soul, / And sings the tune without the words, / And never stops at all», y cierra «I've heard it in the chillest land, / And on the strangest sea; / Yet, never, in extremity, / It asked a crumb of me». Aparece en la sección I, LIFE, como poema VI de Poems by Emily Dickinson, Series Two (1891), editado por Mabel Loomis Todd y Thomas Wentworth Higginson.",
+      "source": "Project Gutenberg, edición digital íntegra de «Poems by Emily Dickinson, Series Two» (1891), ebook 2679",
+      "url": "https://www.gutenberg.org/cache/epub/2679/pg2679.txt"
+    },
+    {
+      "claim": "Solo once de los casi mil ochocientos poemas de Dickinson se publicaron en vida, entre 1852 y 1866, en el Springfield Daily Republican (5), el Drum Beat de Brooklyn (4), el Round Table de Nueva York (1) y el Brooklyn Daily Union (1), casi siempre sin su consentimiento, sin título o con título puesto por los editores. Ella misma protestó por los cambios de puntuación en «A narrow Fellow in the Grass».",
+      "source": "Emily Dickinson Museum, «I had told you I did not print: Poems Published in Dickinson's Lifetime»",
+      "url": "https://www.emilydickinsonmuseum.org/publishedinlifetime/"
+    },
+    {
+      "claim": "Tras la muerte de Emily en 1886, su hermana Lavinia encontró cientos de poemas —cerca de mil ochocientos— sin instrucciones sobre qué hacer con ellos y decidió publicarlos. Todd y Higginson normalizaron la puntuación, añadieron títulos donde no los había y cambiaron palabras para mejorar la rima o la comprensión.",
+      "source": "Emily Dickinson Museum, «The Posthumous Discovery of Dickinson's Poems»",
+      "url": "https://www.emilydickinsonmuseum.org/emily-dickinson/poetry/the-poet-at-work/the-posthumous-discovery-of-dickinsons-poems/"
+    },
+    {
+      "claim": "El manuscrito autógrafo se conserva en la Houghton Library de Harvard, cosido en el fascículo 13, compilado hacia 1861; Johnson lo numeró 254 en su edición de 1955 y Franklin 314 en la suya. La primera publicación fue en 1891, en Poems by Emily Dickinson, second series (Roberts Brothers, Boston), con Higginson y Todd como editores, que sustituyeron la mayoría de las rayas por puntuación convencional.",
+      "source": "Wikipedia en inglés, entrada «\"Hope\" is the thing with feathers» (fuente de menor rango, contrastada con las anteriores para los datos de manuscrito y numeración)",
+      "url": "https://en.wikipedia.org/wiki/%22Hope%22_is_the_thing_with_feathers"
+    },
+    {
+      "claim": "Ficha del conjunto de imágenes del manuscrito «(46b) \"Hope\" is the thing with feathers, J254, Fr314», Houghton Library, en la edición digital del Emily Dickinson Archive.",
+      "source": "Emily Dickinson Archive (Houghton Library, Universidad de Harvard)",
+      "url": "https://www.edickinson.org/editions/1/image_sets/235535"
+    }
+  ],
+  "do_not_use": [
+    "No dar por segura la fecha de composición. El fascículo 13 se fecha hacia 1861, pero la edición de Franklin propone 1862 a partir del examen del manuscrito. La discrepancia sigue abierta: lo verificable es el fascículo, no el año exacto.",
+    "No citar el primer verso sin las comillas cuando se hable del manuscrito. Dickinson escribió «\"Hope\" is the thing with feathers» entrecomillando la palabra, como quien va a definir un término; el título «Hope» y la puntuación regular son de los editores de 1891.",
+    "No decir que Dickinson nunca publicó nada. Se le publicaron once poemas en vida, entre 1852 y 1866, casi siempre sin su consentimiento y con retoques editoriales.",
+    "No presentar el poema como un elogio del optimismo. El texto insiste en la tormenta, en la tierra más fría y en el mar más extraño; su cierre es una cuenta de lo que la esperanza no cobró.",
+    "No atribuir el hallazgo de los poemas a los editores. Fue Lavinia Dickinson quien encontró el arcón en 1886 e insistió en publicarlos; Todd y Higginson llegaron después."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
