@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-09-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Henrietta Leavitt y las cefeidas",
+    "hook": "En 1912, la mujer que medía estrellas a treinta centavos la hora dejó escrita la regla con la que hoy se mide el universo.",
+    "body": [
+      "Henrietta Swan Leavitt entró al Observatorio de Harvard en 1895 como voluntaria. Volvió en 1903 ya con sueldo: treinta centavos la hora, cinco más que la tarifa corriente. Su trabajo era comparar placas fotográficas y anotar qué estrellas cambiaban de brillo. En 1908 publicó un catálogo de 1.777 variables de las Nubes de Magallanes y dejó apuntada una observación de una línea: las más brillantes tardaban más en repetir su ciclo.",
+      "Lo decisivo era dónde miraba. Todas esas estrellas estaban en la misma nube, es decir, a una distancia parecida de la Tierra: la diferencia de brillo entre ellas no era un efecto de la lejanía, era real. En 1912 la Circular 173 del observatorio publicó la regla medida sobre veinticinco de esas estrellas. La firmaba el director, Edward Pickering, y el primer párrafo aclara que el trabajo lo preparó Leavitt.",
+      "Desde entonces basta cronometrar el ciclo de una de esas estrellas para saber a qué distancia está. Esa es la vara con la que se estableció que hay galaxias fuera de la nuestra y que se alejan. Leavitt murió en 1921, a los 53 años. En 1925 un matemático sueco escribió queriendo proponerla al Nobel y hubo que responderle que llevaba cuatro años muerta."
+    ],
+    "question": "¿Cuánto de lo que hoy damos por sabido lo midió alguien que no firmaba?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La vara para medir el universo",
+    "subtitle": "Harvard, 1912",
+    "body": "Comparando placas fotográficas a treinta centavos la hora, Henrietta Leavitt encontró que el brillo de ciertas estrellas depende de su ciclo. Con esa regla se mide hoy la distancia a otras galaxias."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#HenriettaLeavitt", "#Astronomia", "#MujeresEnLaCiencia"],
+    "extended": ["#HistoriaDeLaCiencia", "#Cefeidas", "#Harvard", "#Universo", "#Ciencia", "#Estrellas", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Leavitt entró al Observatorio de Harvard en 1895 sin sueldo y volvió en 1903 cobrando treinta centavos la hora; murió el 12 de diciembre de 1921 a los 53 años.",
+      "source": "Linda Hall Library, «Scientist of the Day: Henrietta Swan Leavitt»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/henrietta-swan-leavitt/"
+    },
+    {
+      "claim": "Pickering le ofreció treinta centavos la hora frente a los veinticinco habituales; en 1925 Mittag-Leffler escribió con intención de proponerla al Nobel de Física de 1926 sin saber que había muerto en diciembre de 1921.",
+      "source": "MacTutor History of Mathematics, University of St Andrews, biografía de Henrietta Swan Leavitt",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Leavitt/"
+    },
+    {
+      "claim": "El catálogo de 1908, «1777 variables in the Magellanic Clouds», se publicó en Annals of Harvard College Observatory, vol. 60, pp. 87-108, y ya señalaba que las variables más brillantes tienen los periodos más largos.",
+      "source": "NASA/ADS, ficha bibliográfica del artículo de 1908",
+      "url": "https://ui.adsabs.harvard.edu/abs/1908AnHar..60...87L"
+    },
+    {
+      "claim": "«Periods of 25 Variable Stars in the Small Magellanic Cloud» se publicó en marzo de 1912 en Harvard College Observatory Circular 173, pp. 1-3, firmada por Leavitt y Pickering.",
+      "source": "NASA/ADS, ficha bibliográfica de la Circular 173 (1912)",
+      "url": "https://ui.adsabs.harvard.edu/abs/1912HarCi.173....1L/abstract"
+    },
+    {
+      "claim": "La Circular de 1912 dice «A remarkable relation between the brightness of these variables and the lengths of their periods will be noticed»; el artículo salió bajo el nombre de Pickering, que acreditó a Leavitt en el primer párrafo.",
+      "source": "MacTutor History of Mathematics (University of St Andrews) y Linda Hall Library",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Leavitt/"
+    },
+    {
+      "claim": "Leavitt halló 1.777 estrellas variables en las Nubes de Magallanes y midió sus periodos; Edwin Hubble se apoyó después en ese resultado.",
+      "source": "Armagh Observatory and Planetarium, «Measuring the Universe»",
+      "url": "https://armaghplanet.com/measuring-the-universe.html"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Leavitt «descubrió que el universo se expande». Estableció la relación entre el periodo y el brillo de las cefeidas; la expansión la midió Edwin Hubble en 1929 usando esa herramienta.",
+    "No decir que fue nominada al Nobel. En 1925 Gösta Mittag-Leffler escribió con la intención de proponerla, se le informó de que había muerto en 1921 y la nominación nunca llegó a cursarse: el premio no se concede a título póstumo.",
+    "Las 1.777 variables del catálogo de 1908 no son «todas las que descubrió en su vida» ni un descubrimiento en el sentido moderno de autoría individual: es el número de variables de las Nubes de Magallanes que reunió y publicó en ese catálogo."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

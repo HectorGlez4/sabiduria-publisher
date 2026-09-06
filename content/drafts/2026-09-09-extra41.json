@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-09-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Kafka y el hacha para el mar helado",
+    "hook": "La frase más repetida de Kafka sobre los libros no está en ninguno de sus libros: está en una carta que escribió a los veinte años.",
+    "quote": {
+      "text": "Un libro debe ser el hacha que rompa el mar helado dentro de nosotros.",
+      "author": "Franz Kafka",
+      "work": "Carta a Oskar Pollak, 27 de enero de 1904",
+      "attribution_verified": true
+    },
+    "body": [
+      "El miércoles 27 de enero de 1904, Franz Kafka le escribió desde Praga a Oskar Pollak, compañero suyo del instituto. Tenía veinte años, estudiaba Derecho y no había publicado nada. Venía de leerse de un tirón unas mil ochocientas páginas de los diarios de Friedrich Hebbel y quería contarle qué le había hecho aquello.",
+      "Antes del hacha, la carta pone condiciones. Solo deberían leerse libros que muerdan y pinchen, escribe; si el libro no nos despierta de un puñetazo en el cráneo, para qué leerlo. Los que nos hacen felices podríamos escribirlos nosotros mismos. Los que hacen falta son los que actúan como una desgracia que duele mucho, o como la muerte de alguien a quien queríamos más que a nosotros. Y entonces llega la frase, y detrás un remate de dos palabras: «Eso creo».",
+      "No es una poética publicada: es una carta privada de un chico de veinte años, recogida décadas después en el epistolario póstumo. Hoy la frase se imprime en carteles de librería como una invitación cordial a leer; en el original, la lista de lo que un libro debe hacernos pasa por el destierro y el suicidio."
+    ],
+    "question": "¿Cuál fue el último libro que no lo dejó igual?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#FranzKafka", "#Lectura", "#Literatura"],
+    "extended": ["#Citas", "#Praga", "#Libros", "#Correspondencia", "#SigloXX", "#LiteraturaAlemana", "#Escritura", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "La carta está encabezada «An Oskar Pollak (Prag, 27. Januar 1904; Mittwoch)» y su texto dice: «Ich glaube, man sollte überhaupt nur solche Bücher lesen, die einen beißen und stechen. Wenn das Buch, das wir lesen, uns nicht mit einem Faustschlag auf den Schädel weckt, wozu lesen wir dann das Buch? [...] Wir brauchen aber die Bücher, die auf uns wirken wie ein Unglück, das uns sehr schmerzt, wie der Tod eines, den wir lieber hatten als uns, wie wenn wir in Wälder verstoßen würden, von allen Menschen weg, wie ein Selbstmord, ein Buch muß die Axt sein für das gefrorene Meer in uns. Das glaube ich.»",
+      "source": "Universidad de Viena, edición digital de la correspondencia de Kafka (Werner Haas), carta 1904-01-27",
+      "url": "https://homepage.univie.ac.at/werner.haas/1904/br04-003.htm"
+    },
+    {
+      "claim": "Transcripción independiente de la misma carta con idéntico encabezado y texto alemán, incluido el cierre «Das glaube ich»; menciona la lectura seguida de los diarios de Hebbel, de unas 1.800 páginas.",
+      "source": "LiteratPro, «An Oskar Pollak (Prag, 27. Januar 1904; Mittwoch)»",
+      "url": "https://www.literatpro.de/prosa/161116/an-oskar-pollak-prag-27-januar-1904-mittwoch"
+    },
+    {
+      "claim": "La carta se publicó en el epistolario póstumo «Briefe 1902-1924» (S. Fischer Verlag), con edición licenciada para Europa de Schocken Books, Nueva York, 1958, p. 27.",
+      "source": "The Key Library, ficha bibliográfica «Brief an Oskar Pollak, 27. Januar 1904. Briefe 1902-1924»",
+      "url": "https://www.the-key-book.com/en/key-library/franz--kafka-1883-1924/non-defini-ou-inconnu/475-brief-an-oskar-pollak-27-januar-1904-briefe-1902-1924-extrakt/"
+    },
+    {
+      "claim": "Oskar Pollak (1883-1915) fue historiador del arte checo y compañero de Kafka en el Altstädter Gymnasium de Praga.",
+      "source": "Wikipedia en inglés, entrada «Oskar Pollak» (fuente de menor rango, usada solo para el dato biográfico del destinatario)",
+      "url": "https://en.wikipedia.org/wiki/Oskar_Pollak"
+    }
+  ],
+  "do_not_use": [
+    "No presentarla como una frase de una obra publicada de Kafka ni como parte de un ensayo suyo. Es una carta privada, recogida en el epistolario póstumo Briefe 1902-1924, que él nunca preparó para publicación.",
+    "No citarla como una invitación amable a la lectura. La frase cierra una enumeración en la que el libro deseable se compara con una desgracia que duele mucho, con la muerte de un ser querido, con el destierro a los bosques y con un suicidio.",
+    "No alterar la imagen del original: «ein Buch muß die Axt sein für das gefrorene Meer in uns». Es un hacha y es un mar helado, no un pico, ni hielo, ni un iceberg.",
+    "No fechar la carta en 1903 ni atribuirla a otro destinatario: está fechada en Praga el miércoles 27 de enero de 1904 y va dirigida a Oskar Pollak.",
+    "No dar por cerrada la cifra de páginas de Hebbel como dato de Kafka verificado por terceros: es lo que la propia carta cuenta de su lectura, unas 1.800 páginas de los diarios."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

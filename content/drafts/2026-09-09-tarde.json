@@ -1,0 +1,65 @@
+{
+  "id": "2026-09-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Frederick Douglass y la exigencia al poder",
+    "hook": "La frase más citada de Frederick Douglass se corta siempre por la mitad, y la mitad que se cae es la que mide algo.",
+    "quote": {
+      "text": "El poder no concede nada sin que se le exija. Nunca lo hizo ni lo hará.",
+      "author": "Frederick Douglass",
+      "work": "Discurso de la emancipación en las Antillas, 1857",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 3 de agosto de 1857, en Canandaigua, estado de Nueva York, Frederick Douglass habló en la celebración del Primero de Agosto: el aniversario de la emancipación en las colonias británicas del Caribe, decretada en 1834. Llevaba diecinueve años fuera de la esclavitud, de la que había escapado en 1838. El discurso se imprimió ese mismo año en Rochester, en un folleto que reunía dos alocuciones suyas, y de ahí vienen las líneas que hoy se repiten.",
+      "En el original la frase no viaja sola. Lleva remate —«Nunca lo hizo ni lo hará»— y comparte pasaje con otras dos sentencias: «Si no hay lucha, no hay progreso» y «Los límites de los tiranos los fija la resistencia de aquellos a quienes oprimen». Entre ellas hay una instrucción que casi nunca se cita: averigüen a qué se somete un pueblo en silencio y habrán averiguado la medida exacta de la injusticia que se le impondrá.",
+      "Cortada por la mitad, la frase suena a consigna de ánimo. Entera es una medición, y apunta al que la lee: no dice que el poder sea malo, dice que lo que se tolera callando es el tamaño exacto de lo que se recibirá."
+    ],
+    "question": "¿Cuánto de lo que hoy parece inevitable lo es solo porque nadie lo ha exigido?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#FrederickDouglass", "#Abolicion", "#HistoriaDeEstadosUnidos"],
+    "extended": ["#Citas", "#Discursos", "#Esclavitud", "#DerechosCiviles", "#Historia", "#Libertad", "#Oratoria", "#SigloXIX"]
+  },
+  "sources": [
+    {
+      "claim": "El pasaje dice «Power concedes nothing without a demand. It never did and it never will», junto a «Find out just what any people will quietly submit to and you have found out the exact measure of injustice and wrong which will be imposed upon them» y «The limits of tyrants are prescribed by the endurance of those whom they oppress». El discurso es «The Significance of Emancipation in the West Indies», pronunciado en Canandaigua, Nueva York, el 3 de agosto de 1857.",
+      "source": "Frederick Douglass Papers Project, edición digital, ítem 10509 (edición crítica del Frederick Douglass Papers)",
+      "url": "https://frederickdouglasspapersproject.com/s/digitaledition/item/10509"
+    },
+    {
+      "claim": "El texto del discurso se publicó en 1857 en el folleto «Two Speeches, By Frederick Douglass» (Rochester), pp. 3-24, y también en Frederick Douglass' Paper del 7 de agosto de 1857.",
+      "source": "Frederick Douglass Papers Project, nota editorial de procedencia del ítem 10509",
+      "url": "https://frederickdouglasspapersproject.com/item/10509"
+    },
+    {
+      "claim": "El folleto de 1857 se titula «Two speeches, by Frederick Douglass: one on West India emancipation, delivered at Canandaigua, Aug. 4th, and the other on the Dred Scott decision, delivered in New York... May, 1857», impreso en Rochester por C. P. Dewey. El ejemplar forma parte de los Frederick Douglass Papers.",
+      "source": "Library of Congress, Frederick Douglass Papers: Speech, Article, and Book File, 1846-1894",
+      "url": "https://www.loc.gov/resource/mss11879.21039/"
+    },
+    {
+      "claim": "El folleto de 1857 está digitalizado íntegro y accesible; su ficha bibliográfica confirma pie de imprenta en Rochester, 1857.",
+      "source": "HathiTrust Digital Library, registro de catálogo 101686761",
+      "url": "https://catalog.hathitrust.org/Record/101686761"
+    },
+    {
+      "claim": "El acto era una celebración del «Primero de Agosto», aniversario de la abolición de la esclavitud en las colonias británicas del Caribe (Ley de 1833, en vigor el 1 de agosto de 1834); el discurso de 1857 es el texto donde aparece «If there is no struggle, there is no progress».",
+      "source": "BlackPast, «(1857) Frederick Douglass, If There Is No Struggle, There Is No Progress»",
+      "url": "https://blackpast.org/african-american-history/1857-frederick-douglass-if-there-no-struggle-there-no-progress/"
+    }
+  ],
+  "do_not_use": [
+    "No dar como única la fecha del 4 de agosto: la portada del folleto de 1857 dice que el discurso se pronunció el 4 de agosto en Canandaigua, mientras que la edición crítica del Frederick Douglass Papers Project lo fecha el 3 de agosto. Si se menciona la fecha, la del 3 es la de la edición crítica.",
+    "No afirmar en qué orden aparecen las sentencias del pasaje. Las versiones que circulan lo ordenan de maneras distintas: unas colocan «Power concedes nothing without a demand» antes de «Find out just what any people will quietly submit to» y otras después. Citar el pasaje, nunca su secuencia.",
+    "No presentar «If there is no struggle, there is no progress» como el título del discurso. Es una frase del mismo pasaje; el título del discurso es sobre la emancipación en las Antillas, y aquel encabezado procede de antologías posteriores.",
+    "No dar una edad exacta de Douglass en 1857 ni una fecha de nacimiento cerrada. Nació esclavizado hacia 1817-1818 y él mismo nunca supo el día; lo verificable es que escapó en 1838."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

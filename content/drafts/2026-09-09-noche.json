@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-09-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Cahokia y el montículo de los Monjes",
+    "hook": "La mayor ciudad al norte de México antes de 1492 llegó entera hasta nosotros. Todo menos su nombre.",
+    "body": [
+      "Hacia 1100, en la llanura del Misisipi frente a la desembocadura del Misuri, había una ciudad de entre diez mil y veinte mil habitantes repartidos por unas 1.600 hectáreas, con alrededor de ciento veinte montículos de tierra. El mayor se levantó en catorce etapas: cubre seis hectáreas y sube en cuatro terrazas hasta los treinta metros. Es la mayor estructura de tierra construida en América antes de la llegada europea.",
+      "Nada de eso conserva el nombre que tuvo. Al montículo mayor se le llama «de los Monjes» por unos trapenses franceses que se instalaron en el terreno en el otoño de 1809 —se lo había cedido un vecino de la zona, Nicholas Jarrot— y que se marcharon tres años después. A la ciudad se la llama Cahokia por un pueblo que vivía en el valle cuando llegaron los franceses en el siglo XVII, cuando la ciudad llevaba siglos vacía. Cómo la llamaban quienes la levantaron no se sabe.",
+      "La ciudad se despobló en el siglo XIV, antes de que ningún europeo llegara al valle. Es Patrimonio Mundial de la UNESCO desde 1982, y hoy el estado de Illinois protege setenta y dos de los cerca de ochenta montículos que quedan en pie. Se conservó la forma completa de un lugar del que no ha sobrevivido cómo se llamaba."
+    ],
+    "question": "¿Qué se conserva mejor de un lugar: lo que se construyó o cómo se llamaba?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La ciudad sin nombre",
+    "subtitle": "Llanura del Misisipi, hacia 1100",
+    "body": "Vivían allí entre diez y veinte mil personas, y su montículo mayor llega a treinta metros. Se llama «de los Monjes» por unos trapenses de 1809, y la ciudad, Cahokia, por un pueblo que llegó siglos después. Cómo la llamaron sus constructores no se sabe."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Cahokia", "#Misisipi", "#ArqueologiaAmericana"],
+    "extended": ["#Historia", "#Civilizaciones", "#PatrimonioMundial", "#UNESCO", "#AmericaPrecolombina", "#Illinois", "#Arqueologia", "#Monticulos"]
+  },
+  "sources": [
+    {
+      "claim": "Cahokia ocupó cerca de 1.600 hectáreas y contó con unos 120 montículos; el montículo de los Monjes se construyó en catorce etapas, cubre seis hectáreas y se eleva en cuatro terrazas hasta los 30 metros, siendo la mayor estructura de tierra prehistórica del Nuevo Mundo; la población se estima en 10.000-20.000 personas en su apogeo, entre 1050 y 1150. Inscrito en la Lista del Patrimonio Mundial en 1982 (criterios iii y iv).",
+      "source": "UNESCO, Centro del Patrimonio Mundial, ficha del sitio n.º 198 «Cahokia Mounds State Historic Site»",
+      "url": "https://whc.unesco.org/en/list/198"
+    },
+    {
+      "claim": "La ciudad llegó a cubrir 4.000 acres con una población de entre diez y veinte mil personas en su apogeo, hacia 1100; el sitio estuvo ocupado entre 700 y 1400; se conservan 70 de los 120 montículos originales; fue declarado Patrimonio Mundial por la UNESCO en diciembre de 1982.",
+      "source": "Illinois Department of Natural Resources, Historic Preservation Division, ficha oficial de Cahokia Mounds",
+      "url": "https://dnrhistoric.illinois.gov/experience/sites/site.cahokia-mounds.html"
+    },
+    {
+      "claim": "El estado de Illinois protege hoy unos 2.200 acres del área central y 72 de los casi 80 montículos que quedan; el sitio fue declarado National Historic Landmark en 1965 y Patrimonio Mundial de la UNESCO en 1982.",
+      "source": "Cahokia Mounds State Historic Site, sitio oficial",
+      "url": "https://cahokiamounds.org/"
+    },
+    {
+      "claim": "Los trapenses llegaron en el otoño de 1809 y se marcharon en 1812 según Reynolds o en marzo de 1813 según Spalding; Nicholas Jarrot, de Cahokia, cedió a Dom Urban Guillet unas 400 acres que incluían el gran montículo, y desde entonces el lugar se conoce popularmente como Monks Mound.",
+      "source": "«The Trappists of Monks Mound», Illinois Catholic Historical Review 8 (1925), pp. 106-136, edición digital de la Universidad de Chicago",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Gazetteer/Places/America/United_States/Illinois/_Texts/journals/IllCHR/8/2/The_Trappists_of_Monks_Mound*.html"
+    },
+    {
+      "claim": "El nombre actual del montículo procede de un grupo de monjes trapenses que vivieron cerca entre los siglos XVIII y XIX; no se conoce el nombre que el montículo ni la ciudad tuvieron en la Antigüedad. La ciudad floreció entre c. 600 y c. 1350.",
+      "source": "World History Encyclopedia, ficha «Monks Mound at Cahokia»",
+      "url": "https://www.worldhistory.org/image/13898/monks-mound-at-cahokia/"
+    }
+  ],
+  "do_not_use": [
+    "No repetir sin matiz que Cahokia «era más grande que Londres». La comparación circula mucho, pero las estimaciones de población de ambas ciudades hacia 1100 son amplias y discutidas. Lo verificable son las cifras de Cahokia (10.000-20.000 entre 1050 y 1150), no el puesto en un ranking.",
+    "No decir que Cahokia se «perdió» o estuvo «desaparecida». Nunca dejó de verse: los montículos siguieron en pie, y en el siglo XIX hubo monjes viviendo y cultivando encima del mayor de ellos.",
+    "No afirmar que el pueblo cahokia del siglo XVII descendiera de los constructores de la ciudad. Lo verificable es que el nombre del sitio se tomó del pueblo que habitaba el valle cuando llegaron los franceses, no de quienes la levantaron; la identidad y la lengua de estos últimos siguen sin establecerse.",
+    "No dar un año exacto para la salida de los trapenses: las fuentes del XIX difieren entre 1812 (Reynolds) y marzo de 1813 (Spalding).",
+    "No intercambiar las cifras de montículos, que cuentan cosas distintas: unos 120 en su apogeo, cerca de 80 que sobreviven, 72 protegidos hoy por el estado de Illinois.",
+    "No cerrar las fechas de ocupación en un solo par: la UNESCO da 800-1400, la ficha de Illinois 700-1400 y otras referencias c. 600-c. 1350. Decir «siglo XIV» para el despoblamiento es lo que sostienen todas."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

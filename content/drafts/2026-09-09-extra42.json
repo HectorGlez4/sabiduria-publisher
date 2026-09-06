@@ -1,0 +1,56 @@
+{
+  "id": "2026-09-09-extra42",
+  "slot": "noche",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Mencio y el soberano que pesa menos",
+    "hook": "Un texto chino del siglo IV a.C. ordena tres cosas por su valor y deja al gobernante en último lugar. Mil setecientos años después, un emperador lo mandó recortar.",
+    "quote": {
+      "text": "El pueblo es lo más valioso; los altares de la tierra y el grano vienen después; el soberano es lo de menos.",
+      "author": "Mencio",
+      "work": "Mengzi 7B14 (Jin Xin II), siglo IV a.C.",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Mengzi recoge las conversaciones de Meng Ke —Mencio en su forma latinizada—, seguidor de la escuela de Confucio un siglo después de la muerte de este. El libro se divide en siete libros con dos partes cada uno; el pasaje está en el séptimo, segunda parte, capítulo catorce. En el original son diez caracteres: 民為貴，社稷次之，君為輕.",
+      "En 1372, el primer emperador Ming, Zhu Yuanzhang, se enfureció leyendo el Mengzi y llegó a exigir que se sacara a Mencio del canon confuciano. Sus ministros lo disuadieron, pero los sacrificios en su honor quedaron suspendidos aquel año. En 1394 mandó compilar una edición depurada, el Mengzi jiewen, que suprimía ochenta y cinco pasajes; ninguno de ellos podía volver a aparecer en los exámenes imperiales. Este era uno de los ochenta y cinco.",
+      "El texto íntegro se restituyó en 1415, cuarenta y tres años después de aquel enfado. Lo que la censura señala es lo que la frase de verdad dice: no es un elogio del pueblo, es una jerarquía, y pone al que manda en el último renglón de tres."
+    ],
+    "question": "¿Qué dice de una frase el hecho de que alguien la quisiera borrar?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mencio", "#Confucianismo", "#China"],
+    "extended": ["#Citas", "#Filosofia", "#HistoriaDeChina", "#Mengzi", "#DinastiaMing", "#Censura", "#Clasicos", "#PensamientoAntiguo"]
+  },
+  "sources": [
+    {
+      "claim": "El pasaje dice «民為貴，社稷次之，君為輕。是故得乎丘民而為天子，得乎天子為諸侯，得乎諸侯為大夫» y se traduce «The people are the most important element in a nation; the spirits of the land and grain are the next; the sovereign is the lightest». Está en el Mengzi, libro Jin Xin II.",
+      "source": "Chinese Text Project (ctext.org), Mengzi, Jin Xin II, texto chino con la traducción de James Legge",
+      "url": "https://ctext.org/mengzi/jin-xin-ii/ens"
+    },
+    {
+      "claim": "El Mengzi se divide en siete libros, cada uno en dos partes (A y B) subdivididas en capítulos, de modo que 7B38 es el último pasaje. Mencio vivió en el siglo IV a.C., un siglo después de la muerte de Confucio, y se declaraba seguidor suyo; el texto lo compilaron sus discípulos y lo editó Zhao Qi en el siglo II d.C.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Mencius»",
+      "url": "https://plato.stanford.edu/entries/mencius/"
+    },
+    {
+      "claim": "En 1372 Zhu Yuanzhang se enfureció con un pasaje del Mengzi y exigió sacar a Mencio del canon confuciano; el ministro Qian Tang y otros lo disuadieron, y los sacrificios a Mencio se suspendieron ese año. En 1394 Liu Sanwu compiló el Mengzi jiewen, que suprimía ochenta y cinco entradas, entre ellas la del «min wei gui»; ninguna de las suprimidas podía aparecer en los exámenes. El texto completo se restituyó en 1415 con la gran colección de comentarios a los Cuatro Libros.",
+      "source": "Jing Wang, «The Scholar and the State: Fiction as Political Discourse in Late Imperial China», University of Washington Press, 2015, cap. 2",
+      "url": "https://uw.manifoldapp.org/read/9a8d98ad-7922-48ba-93c6-eefa2e68d66d/section/b3e11c4a-05ea-47a2-85be-e76ab1dc5d6a"
+    }
+  ],
+  "do_not_use": [
+    "No presentar el pasaje como una defensa de la democracia ni del sufragio. Es una jerarquía de valor dentro de una monarquía: sitúa al pueblo por encima del soberano como fundamento de la legitimidad de este, no como fuente de un poder que se vote.",
+    "No decir que el emperador Hongwu logró expulsar a Mencio del canon. Lo exigió en 1372 y sus ministros lo disuadieron; lo que sí consiguió fue la edición depurada de 1394 y la exclusión de esos pasajes de los exámenes.",
+    "No fechar el Mengzi jiewen en 1395: la fuente académica lo sitúa en 1394. Y la restitución del texto íntegro es de 1415, no del final del reinado de Hongwu.",
+    "No dar una fecha exacta de nacimiento o muerte de Mencio. Las que circulan (372-289 a.C.) son reconstrucciones tardías y no constan en el propio Mengzi; lo verificable es el siglo IV a.C.",
+    "No traducir 社稷 como «el Estado» sin más. Son literalmente los altares de los dioses de la tierra y del grano; se usan por metonimia para el reino, y perder la imagen borra que la lista va de lo concreto a lo institucional."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
