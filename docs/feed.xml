@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 06 Sep 2026 03:09:34 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 04:53:59 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Escucha esta caña cómo se queja: cuenta historias de separaciones.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-05-extra64</guid>
+      <pubDate>Sun, 06 Sep 2026 04:53:30 +0000</pubDate>
+      <description><![CDATA["Escucha esta caña cómo se queja: cuenta historias de separaciones."
+— Yalal ad-Din Rumi, Masnavi, Libro I, verso 1 (ed. crítica de R. A. Nicholson, 1925-1940)
+
+Es el verso 1 del Libro I del Masnavi, la obra mayor de Yalal ad-Din Rumi. Abre una serie de dieciocho versos sobre una flauta de caña arrancada del cañaveral, que llora porque fue cortada. Reynold A. Nicholson estableció el texto persa a partir de los manuscritos más antiguos disponibles —el primero de ellos copiado en Konya en 1278, cinco años después de la muerte del poeta— y publicó edición crítica, traducción y comentario en ocho volúmenes entre 1925 y 1940. Sigue siendo el texto de referencia.
+
+Esa precisión hace falta por un motivo concreto. Rumi es hoy uno de los poetas más citados del planeta y buena parte de lo que circula con su nombre no está en sus libros. Ibrahim Gamard, que trabaja sobre el persa original, ha documentado poemas populares que no aparecen en los manuscritos más antiguos y otros donde el intermediario inglés añadió imágenes que el texto no tiene. Un artículo de 2024 en Delos, revista de traducción de la Universidad de Florida, señala que las versiones más difundidas despojan a los versos de su contexto islámico y de sus raíces persas.
+
+El verso auténtico promete menos y pesa más. No habla de unión: nombra una separación, y sostiene que el lamento de la caña cortada es exactamente lo que la vuelve música. Ochocientos años después, lo que más se comparte con la firma de Rumi suele ser lo que Rumi no escribió.
+
+¿De quién es, en realidad, la frase que más repites?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra64.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra64.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Ella está en el horizonte —dice Fernando Birri—. Me acerco dos pasos, ella se aleja dos pasos. Camino diez pasos y el horizonte se corre diez pasos más allá. Por mucho que yo camine, nunca la alcanzaré. ¿Para qué sirve la utopía? Para eso sirve: para caminar.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -482,25 +502,6 @@ El giro está en el verbo final. No pide resignarse ni perdonar: pide entender. 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-tarde.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-tarde.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-03-manana</guid>
-      <pubDate>Thu, 03 Sep 2026 16:34:33 +0000</pubDate>
-      <description><![CDATA[Descubrió el elemento 23 y tres años después firmó que se había equivocado. No se había equivocado.
-
-En 1801, en el Real Seminario de Minería de la Ciudad de México, Andrés Manuel del Río analizó un plomo pardo traído de la mina del Cardonal, en Zimapán. Encontró un metal que nadie había descrito. Lo llamó primero pancromio, por la variedad de colores que daban sus compuestos, y después eritronio, por el rojo que tomaban sus sales al calentarse con ácido.
-
-En abril de 1803 lo visitó Alexander von Humboldt. Dudó del hallazgo, le pareció cromo, y se llevó a Europa las muestras y el manuscrito. En París, el químico Collet-Descotils examinó el mineral y concluyó en 1805 que ahí no había ningún metal nuevo. Del Río ni siquiera esperó a esa publicación: ya en 1804 se había retractado por escrito, sin volver a analizar nada. Casi treinta años más tarde, un químico sueco encontró el mismo metal en un mineral de hierro y lo llamó vanadio. En 1831 Friedrich Wöhler tomó la muestra que Humboldt se había llevado de México y comprobó que vanadio y eritronio eran el mismo elemento.
-
-Del Río vivió todavía dieciocho años después de esa confirmación y murió en la Ciudad de México en 1849, a los 84. No perdió el elemento por un error de laboratorio. Lo perdió por darle más peso a la autoridad de París que a lo que tenía delante, en su propia mesa.
-
-¿Qué dejaste de sostener solo porque alguien con más autoridad dijo lo contrario?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-manana.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-03-manana.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
