@@ -9,7 +9,7 @@
     "quote": {
       "text": "La esperanza es esa cosa con plumas que se posa en el alma y canta la melodía sin las palabras.",
       "author": "Emily Dickinson",
-      "work": "«Hope» is the thing with feathers (Fr. 314 / J. 254), en Poems by Emily Dickinson, Second Series, Roberts Brothers, Boston, 1891, libro I, poema VI",
+      "work": "«Hope» is the thing with feathers (Fr. 314 / J. 254), en Poems by Emily Dickinson",
       "attribution_verified": true
     },
     "body": [
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#EmilyDickinson", "#Poesia", "#Esperanza"],
-    "extended": ["#Citas", "#Literatura", "#SigloXIX", "#Manuscritos", "#Libros", "#LiteraturaNorteamericana", "#Escritura", "#Clasicos"]
+    "topic": [
+      "#EmilyDickinson",
+      "#Poesia",
+      "#Esperanza"
+    ],
+    "extended": [
+      "#Citas",
+      "#Literatura",
+      "#SigloXIX",
+      "#Manuscritos",
+      "#Libros",
+      "#LiteraturaNorteamericana",
+      "#Escritura",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -62,5 +75,9 @@
     "No presentar el poema como un elogio del optimismo. El texto insiste en la tormenta, en la tierra más fría y en el mar más extraño; su cierre es una cuenta de lo que la esperanza no cobró.",
     "No atribuir el hallazgo de los poemas a los editores. Fue Lavinia Dickinson quien encontró el arcón en 1886 e insistió en publicarlos; Todd y Higginson llegaron después."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -9,7 +9,7 @@
     "quote": {
       "text": "El odio nunca se apacigua con odio en este mundo; solo con la ausencia de odio se apacigua. Ésta es una ley eterna.",
       "author": "Dhammapada, canon budista pali",
-      "work": "Capítulo I, Yamakavagga (Versos gemelos), verso 5; texto pali del Khuddaka Nikāya, traducido al inglés por F. Max Müller en The Sacred Books of the East, vol. X (Oxford, 1881), y por Acharya Buddharakkhita en la edición de la Buddhist Publication Society",
+      "work": "Capítulo I, Yamakavagga (Versos gemelos)",
       "attribution_verified": true
     },
     "body": [
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Dhammapada", "#Budismo", "#SabiduriaAntigua"],
-    "extended": ["#Citas", "#Filosofia", "#Traduccion", "#India", "#Pali", "#TextosClasicos", "#Etica", "#Historia"]
+    "topic": [
+      "#Dhammapada",
+      "#Budismo",
+      "#SabiduriaAntigua"
+    ],
+    "extended": [
+      "#Citas",
+      "#Filosofia",
+      "#Traduccion",
+      "#India",
+      "#Pali",
+      "#TextosClasicos",
+      "#Etica",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -62,5 +75,9 @@
     "No dar una fecha de composición cerrada para el Dhammapada. La datación de la antología y de su puesta por escrito está discutida; lo verificable es su lugar en el canon pali y el número del verso.",
     "No traducir «esa dhammo sanantano» como una recomendación. El texto lo enuncia como ley o regla antigua, no como consejo moral."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

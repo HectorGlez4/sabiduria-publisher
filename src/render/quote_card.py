@@ -95,6 +95,58 @@ def fit_tracked(draw, text, max_w, path, start=30, min_size=17, tracking=3.0):
     return ImageFont.truetype(path, min_size), tracking * min_size / start
 
 
+def _envolver(draw, text, font, tracking, max_w, max_lineas):
+    """Reparte la atribución en líneas que quepan, o None si no hay manera."""
+    def ancho(s):
+        return (sum(draw.textlength(ch, font=font) for ch in s)
+                + tracking * max(len(s) - 1, 0))
+
+    lineas, actual = [], ""
+    for palabra in text.split(" "):
+        prueba = f"{actual} {palabra}".strip()
+        if ancho(prueba) <= max_w:
+            actual = prueba
+            continue
+        if not actual:
+            return None            # una sola palabra ya no cabe
+        lineas.append(actual)
+        actual = palabra
+        if len(lineas) >= max_lineas:
+            return None
+    if actual:
+        lineas.append(actual)
+    return lineas if len(lineas) <= max_lineas else None
+
+
+def fit_atribucion(draw, text, max_w, path, start=30, min_size=17, max_lineas=3):
+    """La atribución, en las menos líneas posibles y SIEMPRE dentro del marco.
+
+    fit_tracked encogía hasta min_size y, si aun así no cabía, DEVOLVÍA min_size
+    igualmente: el texto se salía por los dos lados y se comía el nombre del
+    autor. Con atribuciones de 160 y 215 caracteres —que traían el capítulo y
+    hasta la cita original en otro idioma— no hay tamaño legible que quepa en
+    una línea.
+
+    Se prefieren pocas líneas: la atribución acompaña a la cita, no compite con
+    ella. Tres es el techo; por encima de eso el problema no es tipográfico sino
+    de contenido, y lo ataja variants.preflight antes de llegar aquí.
+    """
+    for n in range(1, max_lineas + 1):
+        arranque = start if n == 1 else min(start, 26)
+        for size in range(arranque, min_size - 1, -1):
+            font = ImageFont.truetype(path, size)
+            tr = 3.0 * size / start
+            lineas = _envolver(draw, text, font, tr, max_w, n)
+            if lineas and len(lineas) == n:
+                return font, tr, lineas
+    # Último recurso: que no se salga aunque haya que recortar. Nunca debería
+    # llegarse aquí — preflight bloquea las atribuciones desmedidas.
+    font = ImageFont.truetype(path, min_size)
+    tr = 3.0 * min_size / start
+    lineas = _envolver(draw, text, font, tr, max_w, 99) or [text]
+    return font, tr, lineas[:max_lineas]
+
+
 def make_card(quote, author, out_path, variant="cream", kicker="SABIDURÍA DE BOLSILLO"):
     quote = quote.strip().strip('"').strip("“”")
     if variant == "gold":
@@ -128,8 +180,11 @@ def make_card(quote, author, out_path, variant="cream", kicker="SABIDURÍA DE BO
     ry = 1058
     d.line([(W / 2 - 70, ry), (W / 2 + 70, ry)], fill=accent, width=2)
     author_line = author.upper()
-    fa, atr = fit_tracked(d, author_line, W - 2 * (m + 40), POPPINS)
-    track_text(d, (0, ry + 34), author_line, fa, fg, tracking=atr, anchor_center_x=W / 2)
+    fa, atr, alineas = fit_atribucion(d, author_line, W - 2 * (m + 40), POPPINS)
+    ay = ry + 34
+    for ln in alineas:
+        track_text(d, (0, ay), ln, fa, fg, tracking=atr, anchor_center_x=W / 2)
+        ay += fa.size + 10
 
     # Firma de marca
     fk = ImageFont.truetype(POPPINS_LIGHT, 22)

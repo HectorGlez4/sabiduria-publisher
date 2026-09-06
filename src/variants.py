@@ -52,6 +52,14 @@ HORAS_DE_ATRASO = 3
 HORAS_MINIMAS_ATRASO = 0.35
 DIAS_SIN_REPETIR = 90
 
+# Cuánto puede medir "AUTOR, OBRA" impreso bajo el filete de la tarjeta.
+#
+# Ciento diez caracteres caben en dos líneas legibles a 1080 px de ancho. Por
+# encima, el renderizador tiene que bajar a tres líneas o recortar, y una
+# atribución de tres líneas compite visualmente con la cita, que es lo que la
+# tarjeta viene a decir.
+MAX_ATRIBUCION = 110
+
 # El sitio al que apuntan los enlaces. Vive aquí y no en feed.py porque ahora lo
 # usan los dos, y dos constantes con la misma URL se separan el día que cambie.
 SITIO = "https://sabiduriadebolsillo.net"
@@ -475,6 +483,18 @@ def preflight(unit: dict, historial: list[dict] | None = None,
     if (unit.get("card") or {}).get("renderer") == "quote_card" and not q:
         problems.append(
             "tarjeta de cita sin core.quote: el renderizador la exige"
+        )
+    # La atribución va impresa en una sola zona de la tarjeta, bajo el filete.
+    # Con 165 caracteres —que traían capítulo y hasta la cita original en otro
+    # idioma— no hay tamaño legible que quepa: el renderizador la recortaba por
+    # los dos lados y se comía el nombre del autor. El sitio de la referencia
+    # bibliográfica completa es `sources`, que existe para eso; `quote.work` es
+    # la obra, no la ficha.
+    if q and len(f"{q.get('author','')}, {q.get('work','')}") > MAX_ATRIBUCION:
+        problems.append(
+            f"atribución de {len(q.get('author',''))+len(q.get('work',''))+2} "
+            f"caracteres: no cabe en la tarjeta (máximo {MAX_ATRIBUCION}). "
+            f"La referencia completa va en 'sources'; 'work' es solo la obra"
         )
     if q and not q.get("attribution_verified"):
         problems.append(
