@@ -1,0 +1,66 @@
+{
+  "id": "2026-09-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Safo y el fragmento 147",
+    "hook": "El verso de Safo sobre ser recordada llegó hasta nosotros porque, setecientos años después, un hombre lo citó para quejarse de que le habían quitado su estatua.",
+    "quote": {
+      "text": "Digo que alguien se acordará de nosotras, incluso en otro tiempo.",
+      "author": "Safo de Lesbos",
+      "work": "Fragmento 147 (Lobel-Page y Voigt)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Safo nació en Lesbos hacia el 630 a.C. Los eruditos de la Biblioteca de Alejandría reunieron su obra en nueve libros, y se calcula que escribió unos diez mil versos. Hoy queda un solo poema completo y unos doscientos fragmentos. Ese poema entero, la oda a Afrodita, sobrevivió porque Dionisio de Halicarnaso lo copió íntegro hacia el año 30 a.C. para explicar cómo se ensamblaba un texto. De Safo, casi todo lo que tenemos está dentro de citas ajenas.",
+      "El fragmento 147 son cuatro palabras en dialecto eolio: μνάσεσθαί τινα φαῖμι καὶ ἕτερον ἀμμέων. Están en el párrafo 47 de un discurso pronunciado en Corinto en el siglo II de nuestra era. Quien habla se queja de que los corintios le levantaron una estatua de bronce y después la retiraron, sin juicio y sin cargo alguno; dice que no le importa que la fundan, y cita a Safo, «que lo dice bellísimamente». El discurso se transmitió durante siglos con el número XXXVII del corpus de Dión de Prusa. Desde el siglo XIX los especialistas coinciden en que no es suyo, sino de Favorino de Arlés, sofista de la época de Adriano.",
+      "La cadena termina de un modo que Favorino no buscaba. Perdió su estatua y perdió también su firma: mil quinientos años leyéndose su discurso bajo el nombre de otro. Lo único que quedó intacto es la frase prestada que había citado de paso. Safo apostó a que alguien se acordaría, y ganó la apuesta por una vía que no podía prever."
+    ],
+    "question": "¿Quién decide qué parte de lo que hacemos sobrevive?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Safo", "#PoesiaGriega", "#Memoria"],
+    "extended": ["#Citas", "#GreciaAntigua", "#Literatura", "#Filologia", "#Lesbos", "#Clasicos", "#Poesia", "#HistoriaDeLosLibros"]
+  },
+  "sources": [
+    {
+      "claim": "El texto griego del fragmento 147 es «μνάσεσθαί τινά φαῖμι † καὶ ἕτερον † ἀμμέων». Las cruces marcan que el pasaje está corrupto en ese punto; μνάσεσθαι significa «se acordará (de)» y rige genitivo, y φαῖμι introduce el estilo indirecto.",
+      "source": "The Digital Sappho (proyecto académico de edición y comentario del texto griego), sección «Fragments 118-168»",
+      "url": "https://digitalsappho.org/fragments/fr118-168/"
+    },
+    {
+      "claim": "En el párrafo 47 del Discurso XXXVII el orador dice: «Some one, I ween, will yet remember me, as Sappho very beautifully says», y a continuación cita a Hesíodo sobre la fama. En el párrafo 46 acepta que su estatua acabe en el crisol, y en el 16 acusa a los corintios de haberla desterrado sin juicio y sin cargo alguno. La introducción del volumen advierte que este discurso «plainly is not the work of Dio»: Emperius propuso hace tiempo a Favorino de Arlés como autor y esa identificación cuenta con aprobación general.",
+      "source": "LacusCurtius (Universidad de Chicago), edición Loeb de Dión Crisóstomo, Discurso 37, con notas del editor",
+      "url": "http://penelope.uchicago.edu/Thayer/E/Roman/Texts/Dio_Chrysostom/Discourses/37*.html"
+    },
+    {
+      "claim": "El «Discurso corintio» se conserva como Oración 37 del corpus de Dión Crisóstomo, pero los estudiosos modernos lo atribuyen casi unánimemente a Favorino; en él se queja ante los corintios por haber retirado una estatua erigida en su honor.",
+      "source": "The Cambridge Classical Journal (Cambridge University Press), artículo «Favorinus' Corinthian Oration in its Corinthian context»",
+      "url": "https://www.cambridge.org/core/journals/cambridge-classical-journal/article/abs/favorinus-corinthian-oration-in-its-corinthian-context/CC163BFE80F95C2D692FCA4ACFF15873"
+    },
+    {
+      "claim": "Ficha del Discurso 37, «The Corinthian Discourse», en el volumen LCL 376 de la Loeb Classical Library.",
+      "source": "Loeb Classical Library (Harvard University Press)",
+      "url": "https://www.loebclassics.com/view/dio_chrysostom-discourses_37_corinthean_discourse/1946/pb_LCL376.45.xml"
+    },
+    {
+      "claim": "La edición estándar de la obra de Safo preparada en la Biblioteca de Alejandría hacia el siglo III a.C. ocupaba nueve libros o rollos de papiro; se calcula que escribió unos diez mil versos. Solo un poema, el fragmento 1 u oda a Afrodita, sobrevive completo, y lo hace porque Dionisio de Halicarnaso lo citó entero en «Sobre la composición literaria», hacia el 30 a.C. Del resto quedan unos doscientos fragmentos, en algunos casos de una sola palabra.",
+      "source": "Wikipedia en inglés, entrada «Poetry of Sappho» (fuente de menor rango, usada solo para las cifras generales del corpus y contrastada con las anteriores)",
+      "url": "https://en.wikipedia.org/wiki/Poetry_of_Sappho"
+    }
+  ],
+  "do_not_use": [
+    "No presentar el verso como texto seguro. Las ediciones críticas marcan con cruces «καὶ ἕτερον»; la lectura «ὕστερον» —«más tarde», «en otro tiempo»— es una enmienda. La versión inglesa célebre de Anne Carson, «even in another time», descansa en esa corrección, no en el texto transmitido.",
+    "No atribuir el discurso a Dión de Prusa. Circula así por el número 37 del corpus y por la costumbre editorial, pero el consenso desde Emperius es que lo escribió Favorino de Arlés.",
+    "No traducir el verso en singular sin advertirlo. El griego ἀμμέων es «de nosotros/nosotras»; la traducción inglesa de Crosby en la Loeb lo pasa a «me», ajustándolo al hilo del discurso.",
+    "No decir que la obra de Safo se perdió en el incendio de la Biblioteca de Alejandría ni que la Iglesia la quemó. Son relatos muy repetidos y sin evidencia; la pérdida se explica por el cambio de dialecto, de métrica y de gustos escolares, y por qué se seguía copiando al pasar del rollo al códice.",
+    "No decir que de Safo no queda nada más. Además del poema completo y los fragmentos conocidos, hallazgos papirológicos de 2004 y 2014 añadieron texto nuevo, con debate abierto sobre su autenticidad en algún caso."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

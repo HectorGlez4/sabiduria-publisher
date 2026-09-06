@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-11-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "los bronces de Benín y el latón de las manillas",
+    "hook": "Se llaman bronces de Benín, pero son de latón. Y el latón llegó en forma de moneda: las pulseras con las que Europa pagaba en la costa africana.",
+    "body": [
+      "El reino de Benín ocupaba el sur de la actual Nigeria, y su corte encargaba placas y figuras fundidas en metal. La mayor parte se produjo entre 1517 y la década de 1570, bajo los reinados del Oba Esigie y de su hijo Orhogbua. El nombre con que se los conoce en el mundo es un error de material: los análisis muestran que la mayoría son latón o latón plomado, a veces con algo de estaño, y no bronce. Los fundieron artesanos edo con el método de la cera perdida, un modelo de cera formado sobre un núcleo de arcilla.",
+      "El 5 de abril de 2023, un equipo dirigido por Tobias Skowronek publicó en PLOS ONE el análisis de sesenta y siete manillas: pulseras de latón en forma de herradura que servían de moneda en el comercio europeo en África occidental, y con las que se compraban oro, marfil y personas esclavizadas. Las piezas se recuperaron de cinco naufragios en el Atlántico y de tres yacimientos en tierra, en Europa y en África. Las razones isotópicas del plomo de las manillas más antiguas coinciden con las de los minerales de plomo y cinc de Renania, la región entre Aquisgrán, Colonia y Stolberg, y también con las de los propios bronces de Benín. En 1548, Portugal encargó a la casa Fugger 432 toneladas de manillas —casi un millón cuatrocientas mil pulseras— para entregar en tres años.",
+      "El resultado es una superposición incómoda: las placas que registran la corte de Benín están fundidas con la moneda de aquel comercio, hecha con mineral alemán. En febrero de 1897 una expedición militar británica arrasó la ciudad y se llevó miles de piezas. Hoy el proyecto Digital Benin documenta 5.304 objetos repartidos en 139 instituciones de 21 países. El Smithsonian devolvió veintinueve a Nigeria en octubre de 2022."
+    ],
+    "question": "¿Qué cambia en un objeto cuando se sabe de dónde vino el material?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "No son de bronce",
+    "subtitle": "Benín, entre 1517 y 1570",
+    "body": "Los análisis isotópicos publicados en 2023 apuntan a Renania. El metal llegó como manillas: las pulseras de latón que Europa usaba de moneda en la costa africana. La corte de Benín las fundió y las convirtió en las placas de su palacio."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ReinoDeBenin", "#HistoriaDeAfrica", "#Arqueometria"],
+    "extended": ["#Nigeria", "#Arte", "#Museos", "#Restitucion", "#Metalurgia", "#Colonialismo", "#HistoriaDelArte", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Referencia completa: Skowronek TB, DeCorse CR, Denk R y otros, «German brass for Benin Bronzes: Geochemical analysis insights into the early Atlantic trade», PLOS ONE, 5 de abril de 2023, DOI 10.1371/journal.pone.0283415. Se analizaron 67 manillas procedentes de cinco naufragios (Getaria en España, Elmina en Ghana, Cape Cod en Massachusetts, el sitio 35F del canal de la Mancha y las islas Sorlingas) y de tres contextos terrestres (isla de Grötö en Suecia, el sitio urbano de Elmina en Ghana y Sierra Leona). Las manillas anteriores al siglo XVIII muestran mayor afinidad isotópica con los bronces de Benín, y los datos coinciden con los minerales de plomo y cinc de Renania. Renania abasteció las manillas entre los siglos XV y XVIII, hasta que la industria británica tomó el comercio a finales del XVIII.",
+      "source": "PLOS ONE (revista revisada por pares, acceso abierto), artículo pone.0283415",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0283415"
+    },
+    {
+      "claim": "El artículo indica que las piezas de Benín conservadas en museos europeos y estadounidenses proceden en su gran mayoría de la expedición británica de 1897, y que en su composición «la mayoría son latón o latón plomado, a veces con pequeñas cantidades de estaño». Las razones isotópicas del plomo de las manillas tempranas de naufragios de los siglos XVI y XVII se acercan más a las de los bronces de Benín y coinciden con las de los minerales de plomo y cinc de Renania.",
+      "source": "PubMed Central (Biblioteca Nacional de Medicina de EE. UU.), texto completo del artículo, PMC10075414",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10075414/"
+    },
+    {
+      "claim": "Las manillas eran pulseras de latón en forma de herradura que funcionaron como moneda en el comercio transatlántico, cambiadas por oro, marfil y personas esclavizadas en los mercados de África occidental entre el siglo XVI y comienzos del XIX. Los bronces de Benín están hechos principalmente de latón, no de bronce. Su producción se sitúa probablemente entre 1517 y la década de 1570, durante los reinados del Oba Esigie y su hijo Orhogbua. En 1548 Portugal encargó a la familia de mercaderes Fugger 432 toneladas de manillas —casi 1,4 millones de pulseras— a entregar en tres años. La incursión militar británica sobre Benín ocurrió en febrero de 1897 y se llevó miles de bienes culturales. En octubre de 2022 la Institución Smithsonian devolvió 29 bronces de Benín a la Comisión Nacional de Museos y Monumentos de Nigeria.",
+      "source": "Smithsonian Magazine, «What Shipwrecks Reveal About the Origins of the Benin Bronzes»",
+      "url": "https://www.smithsonianmag.com/history/what-shipwrecks-reveal-about-the-origins-of-the-benin-bronzes-180981925/"
+    },
+    {
+      "claim": "La plataforma reúne datos, imágenes e investigación vinculada de 5.304 objetos procedentes de 139 instituciones en 21 países.",
+      "source": "Digital Benin (proyecto del Museum am Rothenbaum, MARKK, Hamburgo, con instituciones nigerianas)",
+      "url": "https://digitalbenin.org/"
+    },
+    {
+      "claim": "El consejo de regentes del Smithsonian votó el 13 de junio de 2022 la desafectación de 29 bronces de Benín de la colección del Museo Nacional de Arte Africano, retirados en la incursión británica de 1897 sobre la ciudad de Benín, para devolverlos a la Comisión Nacional de Museos y Monumentos de Nigeria.",
+      "source": "Institución Smithsonian, sala de prensa oficial",
+      "url": "https://dashboard.si.edu/es/newsdesk/releases/smithsonian-board-regents-votes-return-29-benin-bronzes-nigeria"
+    }
+  ],
+  "do_not_use": [
+    "No presentar el estudio de 2023 como si probara un origen europeo del arte de Benín. Identifica la procedencia del metal, no la de la técnica ni la del diseño: la fundición a la cera perdida y la iconografía son edo, y el trabajo se hacía en Benín por encargo de la corte.",
+    "No decir que todo el latón de Benín es de Renania. La coincidencia isotópica es fuerte para las manillas anteriores al siglo XVIII; hacia finales de ese siglo la industria británica desplazó a la alemana en el comercio del latón.",
+    "No cerrar la cifra de objetos saqueados en 1897. Circulan cantidades de entre tres mil y cinco mil según la fuente; lo que sostienen las publicaciones institucionales es «miles».",
+    "No dar por documentada la fecha de fundación del gremio de fundidores Igun Eronmwon. La tradición la remonta al Oba Oguola, en torno a los siglos XIII y XIV, pero es tradición oral, no un dato de archivo.",
+    "No llamarlos «bronces» sin aclarar el material. El nombre quedó fijado por el uso museístico del siglo XIX y contradice los análisis: son mayoritariamente latón, una aleación de cobre y cinc.",
+    "No describir las manillas como adorno. Eran unidad de cuenta y medio de pago, con pesos normalizados por tipo, y su circulación está ligada al comercio de personas esclavizadas."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

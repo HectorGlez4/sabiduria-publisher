@@ -1,0 +1,67 @@
+{
+  "id": "2026-09-11-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Maimónides y los grados de la caridad",
+    "hook": "En la escala de la caridad de Maimónides, el escalón más alto no es dar en secreto. Es un préstamo, una sociedad o un trabajo.",
+    "quote": {
+      "text": "El grado más alto, por encima del cual no hay otro, es sostener con un obsequio, un préstamo, una sociedad o un trabajo a quien ha caído en la pobreza, para que no tenga que pedir a otros.",
+      "author": "Maimónides (Moshé ben Maimón)",
+      "work": "Mishné Torá, Leyes de los dones a los pobres, cap. 10",
+      "attribution_verified": true
+    },
+    "body": [
+      "Moshé ben Maimón nació en Córdoba en 1138 y murió en Fustat, en Egipto, en 1204. Entre 1170 y 1180 compuso la Mishné Torá, un código completo de la ley judía en catorce libros, escrito en hebreo claro y conciso para que pudiera leerse sin depender de comentaristas. En el libro dedicado a los dones a los pobres, capítulo décimo, ordenó la caridad en ocho grados, cada uno por encima del anterior.",
+      "La escala no mide la cantidad. En los peldaños bajos está quien da con mala cara, o menos de lo que corresponde. Más arriba, quien da después de que le pidan; y luego, quien da antes. Más arriba todavía, quien da sin saber a quién y sin que el otro sepa de quién: eso que suele tomarse por la cima. Pero encima de todo eso Maimónides pone algo que ni siquiera es una limosna. Un obsequio, un préstamo, una sociedad, un empleo. El grado más alto de la caridad es el que la vuelve innecesaria.",
+      "Ese orden no aparece como escala ni en la Biblia ni en el Talmud: es la ordenación de Maimónides. Y su criterio no es cuánto se entrega, ni con qué pureza de intención, sino qué queda después. El texto dice que la mano del otro «quede fortalecida», para que no tenga que pedir a nadie. Ocho siglos más tarde, cualquier discusión sobre ayudar sigue moviéndose entre esos dos extremos: lo que alivia hoy y lo que quita la necesidad."
+    ],
+    "question": "¿Cuándo una ayuda deja de hacer falta?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Maimonides", "#FilosofiaMedieval", "#Etica"],
+    "extended": ["#Citas", "#Sefarad", "#Cordoba", "#Judaismo", "#Filosofia", "#EdadMedia", "#Solidaridad", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Traducción de Eliyahu Touger (Moznaim) del capítulo 10 de Hilkhot Matnot Aniyim. La halajá 7 dice: «the highest level beyond which there is none is a person who supports a Jew who has fallen into poverty by giving him a present or a loan, entering into partnership with him, or finding him work so that his hand will be fortified so that he will not have to ask others for alms». La halajá 8 describe el grado siguiente: dar sin saber a quién y sin que el pobre sepa de quién recibió.",
+      "source": "Chabad.org, biblioteca, «Matnot Aniyim, Chapter 10», traducción de Eliyahu Touger publicada por Moznaim",
+      "url": "https://www.chabad.org/library/article_cdo/aid/986711/jewish/Matnot-Aniyim-Chapter-10.htm"
+    },
+    {
+      "claim": "Texto hebreo (Torat Emet) y traducción inglesa (Eliyahu Touger, Moznaim, c. 1986-c. 2007) de Mishné Torá, Dones a los pobres, capítulo 10. En la segmentación de Sefaria los ocho grados aparecen agrupados y el más alto se describe como sostener con «a present or a loan, entering into partnership with him, or finding him work so that his hand will be fortified».",
+      "source": "Sefaria (biblioteca digital de textos judíos), API de textos, Mishneh Torah, Gifts to the Poor 10",
+      "url": "https://www.sefaria.org/Mishneh_Torah,_Gifts_to_the_Poor.10.7"
+    },
+    {
+      "claim": "Maimónides (rabí Moshé ben Maimón, Córdoba 1138 - Fustat 1204) fue exégeta y autoridad halájica, filósofo, científico, médico y líder judío reconocido más allá de su comunidad.",
+      "source": "Museo de Israel, Jerusalén, ficha de la exposición «Maimonides»",
+      "url": "https://www.imj.org.il/en/exhibitions/maimonides"
+    },
+    {
+      "claim": "Moshé ben Maimón (1138-1204) es el mayor filósofo judío del periodo medieval. La Mishné Torá, su compendio de la ley judía en catorce volúmenes, lo estableció como la principal autoridad rabínica de su tiempo.",
+      "source": "Stanford Encyclopedia of Philosophy (Universidad de Stanford), entrada «Maimonides»",
+      "url": "https://plato.stanford.edu/entries/maimonides/"
+    },
+    {
+      "claim": "Los ocho grados de la caridad se citan habitualmente como Mishné Torá, Leyes de la caridad, 10:7-14, en la traducción de Touger.",
+      "source": "Instituto Tecnológico de Massachusetts (MIT), copia del texto «Maimonides' Eight Levels of Charity, Mishneh Torah, Laws of Charity, 10:7-14»",
+      "url": "https://web.mit.edu/allanmc/www/maimonides.pdf"
+    }
+  ],
+  "do_not_use": [
+    "No dar por única la numeración 10:7-14. Es la de la traducción de Touger y la más citada, pero la segmentación de Sefaria agrupa los ocho grados en un tramo distinto del capítulo 10. Lo estable es el capítulo, no el número de halajá.",
+    "No universalizar la cita sin advertirlo. El texto habla literalmente de sostener la mano de un hermano de Israel empobrecido; las versiones divulgativas suelen quitar esa precisión y presentarlo como un principio general.",
+    "No fijar 1138 como fecha de nacimiento sin matiz. Es la que dan el Museo de Israel y la Stanford Encyclopedia, pero también circula 1135 y la discusión sigue abierta.",
+    "No llamarlo «la escalera de Maimónides» como si la imagen fuera suya. El texto habla de grados, uno por encima del otro; la metáfora de la escalera es posterior y de uso divulgativo.",
+    "No decir que el grado más alto es dar en el anonimato. El anonimato doble es el segundo; el primero es el préstamo, la sociedad o el empleo que evitan que el otro tenga que pedir.",
+    "No atribuir la clasificación al Talmud ni a la Biblia. Los materiales son antiguos, pero la ordenación en ocho grados es de Maimónides."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-11-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "el mecanismo de Anticitera",
+    "hook": "El aparato más complejo que dejó la Antigüedad griega salió del mar en 1901 y pasó medio siglo catalogado como un bulto de bronce corroído.",
+    "body": [
+      "En la primavera de 1900, unos buzos de esponjas de la isla de Symi se refugiaron de un temporal frente a Anticitera, entre Creta y el Peloponeso. Debajo encontraron un naufragio del siglo I a.C. El rescate se prolongó durante 1901 y llevó al Museo Arqueológico Nacional de Atenas estatuas de bronce, mármoles, vidrio y joyas. Entre todo aquello viajaba un bloque de bronce corroído del tamaño de un libro, sin ningún atractivo evidente.",
+      "El 17 de mayo de 1902 el arqueólogo Valerios Stais vio en ese bloque algo que no encajaba: una rueda dentada. Fue la primera vez que alguien reconoció que aquello era un mecanismo. El dato no llevó a ninguna parte durante décadas. Recién en 1959 Derek de Solla Price publicó en Scientific American un artículo titulado «An Ancient Greek Computer»; en 1971 radiografió los fragmentos con el físico griego Charalampos Karakalos, y en 1974 sacó «Gears from the Greeks», la primera reconstrucción sistemática del aparato.",
+      "En 2006, un equipo encabezado por Tony Freeth publicó en Nature, volumen 444, páginas 587 a 591, una tomografía de rayos X de alta resolución de los fragmentos. Dentro había miles de caracteres de texto que nadie había leído en dos mil años. El aparato predecía eclipses mediante el ciclo de Saros, de 223 lunaciones, y reproducía la velocidad variable de la Luna con un pasador que corría por una ranura. Sobreviven ochenta y dos fragmentos y treinta ruedas dentadas de bronce, expuestos todos en Atenas desde 2013. Ningún otro objeto conocido alcanza esa complejidad de engranajes hasta los relojes astronómicos europeos, más de mil años después."
+    ],
+    "question": "¿Qué se necesita para reconocer algo que todavía no tiene nombre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Una piedra con un engranaje dentro",
+    "subtitle": "Atenas, 17 de mayo de 1902",
+    "body": "Los buzos lo subieron junto a las estatuas y nadie supo qué era. Valerios Stais vio una rueda dentada asomando en el bronce. Hicieron falta cien años y una tomografía para leer qué hacía: predecir eclipses."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Anticitera", "#GreciaAntigua", "#HistoriaDeLaCiencia"],
+    "extended": ["#Arqueologia", "#Astronomia", "#Ingenieria", "#Naufragios", "#MuseoDeAtenas", "#Helenismo", "#Ciencia", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Unos buzos de esponjas hallaron el naufragio frente a Anticitera en 1900 y subieron estatuaria y ánforas. El 17 de mayo de 1902 el arqueólogo Valerios Stais advirtió que el bloque de roca parecía tener incrustada parte de una rueda dentada: fue el primer reconocimiento de que el objeto era un mecanismo. Price concluyó en 1951 que se trataba de una computadora astronómica antigua, publicó el artículo de Scientific American en 1959 y la monografía en 1974. No se conoce ningún otro aparato semejante del mundo antiguo, y nada comparable reaparece hasta los relojes mecánicos del segundo milenio.",
+      "source": "Linda Hall Library of Science, Engineering & Technology, «Scientist of the Day: The Antikythera Mechanism»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/the-antikythera-mechanism/"
+    },
+    {
+      "claim": "Referencia completa del estudio moderno: T. Freeth y otros, «Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism», Nature, volumen 444, páginas 587-591, 2006.",
+      "source": "Nature (Springer Nature), ficha del artículo nature05357",
+      "url": "https://www.nature.com/articles/nature05357"
+    },
+    {
+      "claim": "El mecanismo predecía eclipses a partir del ciclo de Saros de 223 meses lunares; el dial trasero inferior es una espiral de cuatro vueltas dedicada a ese ciclo. Un dispositivo de pasador y ranura sobre los engranajes epicíclicos k1 y k2 produce la variación que calcula la anomalía lunar. La tomografía reveló miles de caracteres de texto ocultos dentro de los fragmentos, no leídos en más de dos mil años.",
+      "source": "PLOS ONE, Freeth y Jones, «Eclipse Prediction on the Ancient Greek Astronomical Calculating Machine Known as the Antikythera Mechanism» (2014)",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0103275"
+    },
+    {
+      "claim": "En 1971 Price colaboró con el físico nuclear griego Charalampos Karakalos para radiografiar el mecanismo. El resultado fue el trabajo de 1974 «Gears from the Greeks: The Antikythera Mechanism — A Calendar Computer from ca. 80 B.C.», primera decodificación sistemática del aparato.",
+      "source": "American Philosophical Society, «Gears from the Greeks: The Antikythera Mechanism, by Derek de Solla Price»",
+      "url": "https://www.amphilsoc.org/news/gears-greeks-antikythera-mechanism-derek-de-solla-price"
+    },
+    {
+      "claim": "Los 82 fragmentos supervivientes se exhiben en la sala permanente del Museo Arqueológico Nacional de Atenas desde 2013. El fragmento A, el mayor, conserva el engranaje motriz de cuatro radios y la mayor parte de los trenes de engranajes; sobreviven treinta ruedas dentadas de bronce.",
+      "source": "Antikythera Mechanism Research Project (proyecto conjunto de las universidades de Cardiff, Atenas y Salónica con el Museo Arqueológico Nacional de Atenas), sección del museo",
+      "url": "http://www.antikythera-mechanism.gr/museum"
+    }
+  ],
+  "do_not_use": [
+    "No dar una fecha única de fabricación. Price la situó hacia el 80 a.C., el equipo de Freeth entre 150 y 100 a.C., y Carman y Evans propusieron el 205 a.C. a partir del ciclo de eclipses. La discusión sigue abierta: lo verificable es el naufragio del siglo I a.C., no el año del aparato.",
+    "No atribuirlo a Arquímedes. Cicerón describe una esfera mecánica de Arquímedes, y de ahí sale la asociación, pero no hay ninguna evidencia material ni textual que vincule este objeto con él.",
+    "No decir que sobreviven treinta ruedas porque el aparato tuviera treinta. Treinta son las conservadas; las reconstrucciones proponen bastantes más en el diseño original.",
+    "No llamarlo «computadora» sin matiz. Es un calculador analógico de engranajes: no se programa, ejecuta siempre el mismo cálculo. El término lo popularizó el título de Price en 1959.",
+    "No decir que la pieza se identificó al sacarla del agua. Estuvo catalogada como un bulto de bronce corroído; el reconocimiento llegó en 1902 y la explicación del funcionamiento, ya con tomografía, más de un siglo después del hallazgo."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
