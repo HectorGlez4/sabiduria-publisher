@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 07 Sep 2026 09:09:50 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 16:34:49 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El libro fundacional de la literatura maya k'iche' sobrevive en una sola copia. La hizo un fraile dominico, y el título que le puso dice para qué.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-07-extra79</guid>
+      <pubDate>Mon, 07 Sep 2026 16:34:15 +0000</pubDate>
+      <description><![CDATA[El libro fundacional de la literatura maya k'iche' sobrevive en una sola copia. La hizo un fraile dominico, y el título que le puso dice para qué.
+
+El Popol Vuh que se lee hoy no es un códice prehispánico. Es un texto alfabético: lo escribieron k'iche's que habían aprendido caracteres latinos, probablemente entre 1554 y 1558. Ese manuscrito nunca ha aparecido. Lo que existe es la copia que hizo el dominico Francisco Ximénez (1666-1729) siendo cura de Santo Tomás Chichicastenango, a partir de 1701: dos columnas enfrentadas, k'iche' a un lado, castellano al otro. Es la única fuente del texto completo que le queda al mundo.
+
+El encabezado que Ximénez le puso no deja lugar a dudas sobre el encargo: «Empiezan las historias del origen de los indios de esta provincia de Guatemala traducido de la lengua quiché en la castellana para más comodidad de los ministros de el Sto. Evangelio». Y en un solo punto del relato interviene por su cuenta. Cuando un personaje empieza a hablar con los cuatro primeros hombres, Ximénez anota entre paréntesis: «Demonio q'les hablaba». Es su único comentario explícito dentro del texto. Néstor Quiroa mostró en 2011, en la revista The Americas, que el prólogo y las anotaciones formaban parte de una estrategia misional: no condenar de frente las creencias mayas, sino mapearlas para poder reinterpretarlas.
+
+Después vino el viaje. Muerto Ximénez, los dominicos guardaron sus papeles hasta que la expulsión del clero de 1829 y 1830 los llevó a la Universidad de San Carlos. En 1855 el abate francés Charles Étienne Brasseur de Bourbourg se hizo con el manuscrito y lo sacó del país. Pasó por el coleccionista Alphonse Pinart y por el librero parisino Charles Leclerc, hasta que en 1887 lo compró Edward E. Ayer y se lo llevó a Chicago. Está en la Newberry Library desde 1912, catalogado como Ayer MS 1515. Guatemala declaró el Popol Vuh patrimonio cultural intangible en 2012.
+
+¿Qué se ha conservado solo porque alguien quiso guardarlo para refutarlo?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra79.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra79.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El libro más antiguo que se conserva impreso con tipos de metal móviles no es europeo. Salió de un templo coreano en 1377 y hoy está en París.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,25 +506,6 @@ Poner al insecto sobre su planta parece una decisión de composición. Es una te
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra51.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra51.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Movieron bloques de ocho toneladas sin rueda, sin metal y sin una sola pieza de barro cocido.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-04-noche</guid>
-      <pubDate>Sat, 05 Sep 2026 06:12:33 +0000</pubDate>
-      <description><![CDATA[Movieron bloques de ocho toneladas sin rueda, sin metal y sin una sola pieza de barro cocido.
-
-En el sureste de Turquía, entre el 9600 y el 8200 antes de Cristo, alguien levantó círculos de pilares de piedra en forma de T. Los mayores miden cinco metros y medio y pesan unas ocho toneladas, y están tallados con zorros, escorpiones, buitres y serpientes. Son seis mil años anteriores a Stonehenge.
-
-Del sitio se han recuperado más de cien mil fragmentos de hueso animal. Todos son de especies salvajes: gacela sobre todo, jabalí, ciervo, aves. Quienes lo construyeron todavía cazaban. El trigo domesticado aparece en la región unos quinientos años después. Primero el monumento; después, el campo sembrado.
-
-Y seguimos sin saber qué era. La UNESCO lo inscribió en 2018 evitando la palabra templo: los llama edificios comunales. Un arqueólogo sostiene desde 2011 que eran casas. Lo más antiguo que construimos en grande todavía no tiene nombre seguro.
-
-¿Qué se construye primero, cuando todavía no hay nada resuelto?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-noche.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-04-noche.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
