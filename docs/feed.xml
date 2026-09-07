@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 07 Sep 2026 16:34:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 18:47:07 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Del imperio persa no se conservan sus crónicas oficiales, sino sus recibos. Y en los recibos, las obreras tienen nombre y ración.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-07-extra80</guid>
+      <pubDate>Mon, 07 Sep 2026 18:46:41 +0000</pubDate>
+      <description><![CDATA[Del imperio persa no se conservan sus crónicas oficiales, sino sus recibos. Y en los recibos, las obreras tienen nombre y ración.
+
+En 1933, arqueólogos del Instituto Oriental de la Universidad de Chicago que despejaban los palacios en ruinas de Persépolis encontraron tablillas de arcilla en dos cuartos pequeños de un bastión de la muralla. No eran himnos ni proclamas reales: era el archivo de una sola oficina administrativa, de los años en torno al 500 a.C. Se calculan entre 20.500 y 26.000 documentos originales repartidos en miles de fragmentos, la mayoría en cuneiforme elamita.
+
+R. T. Hallock publicó más de 2.100 de esos textos en 1969. Registran el movimiento y el gasto de alimentos en la región de Persépolis durante los quince años que terminan en el 493 a.C., bajo Darío I: raciones fijas de cebada, vino y harina que funcionaban como salario en especie. Ahí aparecen las trabajadoras. Las supervisoras se llamaban arashshara, «gran jefa», y recibían más vino y más grano por dirigir grupos numerosos. Una mujer, Irdabama, mandaba sobre una fuerza de trabajo de unas 480 personas y viajaba por negocios con su propio séquito.
+
+El mismo archivo guarda el límite. Las mujeres embarazadas y las recién paridas cobraban un suplemento durante el primer mes, y la madre de un varón recibía el doble que la madre de una niña. Las dos cosas están en la misma contabilidad: el trabajo de una mujer valía lo que valía su oficio, y una hija recién nacida valía la mitad que un hijo. Un imperio no se retrata en lo que proclama, sino en lo que anota cuando cree que nadie lo va a leer.
+
+¿Qué contarán de nosotros los registros que no escribimos para ser leídos?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra80.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra80.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El libro fundacional de la literatura maya k'iche' sobrevive en una sola copia. La hizo un fraile dominico, y el título que le puso dice para qué.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,25 +506,6 @@ En 1671 Edward Pococke el Joven lo tradujo al latín en Oxford con el título Ph
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra52.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra52.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-05-extra51</guid>
-      <pubDate>Sat, 05 Sep 2026 17:09:46 +0000</pubDate>
-      <description><![CDATA[Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.
-
-Maria Sibylla Merian nació en Fráncfort en 1647 y murió en Ámsterdam en 1717. En abril de 1699 se embarcó hacia Surinam con su hija menor, Dorothea. Los naturalistas neerlandeses de su tiempo viajaban con el respaldo de las grandes compañías comerciales; ella no. Vendió parte de su colección y alrededor de doscientos cincuenta y cinco pinturas propias, y completó el resto con una ayuda pequeña del ayuntamiento de Ámsterdam.
-
-Estuvo dos años en la selva, hasta que una enfermedad la obligó a volver en 1701. Lo que trajo no era una colección de ejemplares clavados con alfileres. Había dibujado a los insectos vivos y en su sitio: el huevo, la oruga, la crisálida y el adulto en la misma lámina, y encima la planta concreta de la que aquel animal comía. En 1705 publicó Metamorphosis insectorum Surinamensium, sesenta láminas de cobre, en neerlandés y en latín, asumiendo ella el riesgo económico de la edición.
-
-Poner al insecto sobre su planta parece una decisión de composición. Es una tesis: que un ser vivo no se entiende separado de aquello con lo que se relaciona. La palabra ecología no existiría hasta 1866, siglo y medio después. Hay algo más en ese libro que casi ningún naturalista de la época escribió: Merian dejó constancia de dónde venía su información, y cita el conocimiento de las personas esclavizadas y de los habitantes originarios de Surinam.
-
-¿A quién le debes un dato que hoy das por tuyo?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra51.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-05-extra51.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
