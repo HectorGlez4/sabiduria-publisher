@@ -1,0 +1,69 @@
+{
+  "id": "2026-09-12-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el Códice de Dresde y Ernst Förstemann",
+    "hook": "De todos los libros mayas quedan cuatro. El más completo empezó a descifrarlo un bibliotecario de Dresde que no conocía la lengua ni había pisado nunca Yucatán.",
+    "body": [
+      "El Códice de Dresde son treinta y nueve hojas de papel de corteza, plegadas en acordeón y escritas por las dos caras, hechas en la península de Yucatán en el posclásico tardío, entre 1300 y 1521. Contiene calendarios adivinatorios, tablas astronómicas y meteorológicas, y unas cuatrocientas figuras de dioses. Es el más rico de los cuatro manuscritos mayas que se conservan en el mundo. Cómo llegó a Europa no se sabe. En 1739 Johann Christian Götze, inspector jefe de la biblioteca de la corte sajona, se lo compró en Viena a un particular, casi de balde y sin saber qué tenía delante. En 1740 aparece registrado como un libro mexicano de valor incalculable.",
+      "Ernst Wilhelm Förstemann dirigía la Biblioteca Real de Dresde y tenía afición por las matemáticas. Desde 1880 trabajó sobre el códice que custodiaba. Reconstruyó el sistema de numeración vigesimal maya, el signo del cero, la rueda calendárica de cincuenta y dos años y el funcionamiento de las tablas de Venus, que sirvieron para fijar fechas de guerra. Publicó su análisis en 1886; el comentario completo salió en alemán en 1901 y el Museo Peabody de Harvard lo editó en inglés en 1906. No sabía maya. Nadie sabía leer los glifos. Lo que hizo fue aritmética: aislar las columnas de puntos y barras y comprobar que los intervalos cerraban solos.",
+      "Los glifos no empezaron a leerse como escritura fonética hasta 1952, cuando el lingüista Yuri Knórosov sostuvo que representaban sonidos y no ideas. El códice está hoy en la Cámara del Tesoro del Museo del Libro de la SLUB, abierto en dos tiras que suman 3,56 metros entre cristales. Sus tres primeras páginas están dañadas por agua y en partes apenas se reconocen. Se puede reconstruir la aritmética de un pueblo mucho antes de poder leer una sola de sus palabras."
+    ],
+    "question": "¿Qué se puede entender de un pueblo antes de entender su lengua?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Quedan cuatro",
+    "subtitle": "Yucatán, entre 1300 y 1521",
+    "body": "El bibliotecario de Dresde que lo custodiaba reconstruyó desde 1880 la numeración vigesimal maya, el cero y las tablas de Venus. No sabía la lengua: nadie sabía leerla. Trabajó con las columnas de puntos y barras."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CodiceDeDresde", "#Mayas", "#Mesoamerica"],
+    "extended": ["#Astronomia", "#Manuscritos", "#Yucatan", "#HistoriaDeAmerica", "#Arqueologia", "#Bibliotecas", "#Escritura", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "El Códice de Dresde es «el de mayor calidad y más rico en contenido de los 4 manuscritos mayas conservados en el mundo». Se originó en el periodo maya posclásico tardío, hacia 1300-1521, en la península de Yucatán. Consta de 39 hojas de líber de corteza, plegadas originalmente en acordeón; hoy se exhiben como dos tiras de 3,56 metros de longitud combinada, entre cristales, en la Cámara del Tesoro del Museo del Libro de la SLUB. Fue adquirido en 1739 por el bibliotecario Johann Christian Götze en Viena, y su origen maya no se reconoció hasta el siglo XIX.",
+      "source": "SLUB Dresden (Sächsische Landesbibliothek – Staats- und Universitätsbibliothek), página del Códice Maya de Dresde",
+      "url": "https://www.slub-dresden.de/en/explore/manuscripts/the-dresden-maya-codex"
+    },
+    {
+      "claim": "El códice fue comprado en 1739 por Johann Christian Götze, capellán de la corte electoral sajona e inspector jefe de la biblioteca, «como cosa desconocida y casi de balde», a un particular no identificado de Viena. En 1740 se menciona oficialmente por primera vez como un «invaluable libro mexicano»; en 1743 Götze lo describe en detalle como manuscrito plegado de 39 hojas; en 1755 se cataloga como pieza 162 de los manuscritos orientales de la Biblioteca Electoral.",
+      "source": "SLUB Dresden, sección «Provenance / Acquisition» del Códice Maya de Dresde",
+      "url": "https://www.slub-dresden.de/en/explore/manuscripts/the-dresden-maya-codex/provenance-acquisition"
+    },
+    {
+      "claim": "El códice contiene calendarios adivinatorios y tablas astronómicas, unos 400 dibujos parcialmente coloreados, sobre todo figuras de dioses, junto a textos jeroglíficos y columnas numéricas; documenta el calendario ritual de 260 días (Tzolk'in) y el sistema de Cuenta Larga, con almanaques de profecía, ciclos de Venus, predicción de eclipses y ceremonias de lluvia. Las páginas 1 a 3 son «en partes apenas reconocibles por daño de agua».",
+      "source": "SLUB Dresden, sección «Content» del Códice Maya de Dresde",
+      "url": "https://www.slub-dresden.de/en/explore/manuscripts/the-dresden-maya-codex/content"
+    },
+    {
+      "claim": "Ernst Wilhelm Förstemann, director de la Biblioteca Pública Real de Dresde, publicó en 1886 su investigación sobre el sistema numérico y calendárico maya y sus cálculos astronómicos. Su «Commentary on the Maya manuscript in the Royal Public Library of Dresden» lo publicó el Museo Peabody de Harvard en 1906.",
+      "source": "SLUB Dresden, sección «Deciphering» del Códice Maya de Dresde",
+      "url": "https://www.slub-dresden.de/en/explore/manuscripts/the-dresden-maya-codex/deciphering"
+    },
+    {
+      "claim": "Ficha bibliográfica completa: Ernst Förstemann, «Commentary on the Maya Manuscript in the Royal Public Library of Dresden», traducido por Selma Wesselhoeft y A. M. Parker, Peabody Museum of American Archaeology and Ethnology, Harvard University, octubre de 1906. La nota de las traductoras indica que la edición alemana original es de 1901.",
+      "source": "Project Gutenberg, edición digital del comentario de Förstemann",
+      "url": "https://www.gutenberg.org/files/43519/43519-h/43519-h.htm"
+    },
+    {
+      "claim": "Cronología del desciframiento: en 1880 Förstemann, «bibliotecario con afición por las matemáticas» de la Biblioteca Real de Dresde, descifró las tablas astronómicas mayas, incluidos los ciclos de Venus usados para decidir cuándo hacer la guerra, y el sistema de medida del tiempo hoy llamado rueda calendárica, de 52 años. En 1952 el lingüista ruso Yuri Knórosov propuso que los glifos representaban sonidos, como las letras, y que la escritura maya combinaba elementos fonéticos y logográficos.",
+      "source": "NOVA (PBS / WGBH), «Cracking the Maya Code», línea de tiempo del desciframiento",
+      "url": "https://www.pbs.org/wgbh/nova/mayacode/time-03.html"
+    }
+  ],
+  "do_not_use": [
+    "No llamarlo «el libro más antiguo de América» sin matizar. La SLUB lo fecha en el posclásico tardío, entre 1300 y 1521; la afirmación circula mucho, pero la datación es aproximada y hay otros manuscritos mesoamericanos en disputa por ese título.",
+    "No atribuir a Förstemann el desciframiento de la escritura maya. Descifró el sistema numérico, el calendario y las tablas astronómicas, que son aritmética. La lectura fonética de los glifos empezó en 1952 con Yuri Knórosov.",
+    "No decir que el daño de agua de las primeras páginas se produjo en el bombardeo de Dresde de febrero de 1945. Es la explicación más repetida, pero las páginas de la SLUB consultadas registran el daño sin datarlo ni atribuirle causa; no dar por verificada la cadena causal.",
+    "No afirmar que el códice llegó a Europa en el envío de Hernán Cortés a Carlos V en 1519. Es una hipótesis del propio Götze; la SLUB recoge también otras, como la de Förstemann sobre un libro forrado de piel de jaguar entregado por Francisco de los Cobos a Paolo Giovio, o la de John F. Chuchiak sobre la colección del archiduque Fernando II en Ambras. La vía real es desconocida.",
+    "No decir que Diego de Landa quemó «todos» los libros mayas ni fijar en su hoguera la pérdida completa. La quema de Maní está documentada, pero la desaparición de los códices se explica también por el clima, el soporte orgánico y siglos de destrucción dispersa; y de los cuatro supervivientes ninguno se rescató de allí.",
+    "No usar el códice para hablar de una profecía maya del fin del mundo en 2012. Las tablas registran ciclos que se reinician; no hay en el manuscrito anuncio alguno de un final."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

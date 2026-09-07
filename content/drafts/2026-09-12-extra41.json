@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-12-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Christine de Pizan y la Ciudad de las Damas",
+    "hook": "En 1405, después de leer un libro que la dejó avergonzada de ser mujer, Christine de Pizan escribió la respuesta. Y después se ocupó ella misma de vigilar cómo la copiaban.",
+    "quote": {
+      "text": "Si fuera costumbre mandar a las niñas a la escuela y enseñarles las ciencias como se hace con los varones, aprenderían con la misma perfección.",
+      "author": "Christine de Pizan",
+      "work": "La ciudad de las damas, libro I, capítulo 27 (1405)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Nació en Venecia en 1365 y se crió en París, adonde su padre llegó como astrólogo del rey Carlos V. Empezó a escribir a los veinticuatro años, cuando su marido, secretario real, murió de golpe y quedó con una casa que mantener. Es una de las primeras autoras profesionales de Europa y, con seguridad, de las más prolíficas: decenas de obras mayores y cientos de baladas y poemas en tres décadas. La ciudad de las damas es de 1405. Abre con ella leyendo las Lamentaciones de Mateolo, un clérigo del siglo XIII que sostenía que las mujeres arruinan la vida de los hombres, y con la vergüenza que esa lectura le deja encima.",
+      "La frase no la dice ella. La dice Razón, uno de los tres personajes —Razón, Rectitud y Justicia— que se le aparecen y le encargan levantar la ciudad del título. Y no es una consigna suelta: es la respuesta a la tesis de que la inteligencia de las mujeres es menor por naturaleza. El argumento de Christine es que la diferencia está en la escuela, no en la cabeza. Con sus libros hizo además algo poco frecuente: no se limitó a escribirlos. El manuscrito Harley 4431 de la British Library, el mayor conjunto conservado de su obra, se copió, decoró y corrigió bajo su supervisión entre 1410 y 1414, antes de entregarse a la reina Isabel de Baviera; el catálogo admite que algunos pasajes podrían ser de su propia mano.",
+      "Después de la derrota francesa de Azincourt, en 1415, se retiró a un convento y dejó de publicar. Once años más tarde volvió una sola vez. El 31 de julio de 1429 terminó el Ditié de Jehanne d'Arc: el primer poema compuesto sobre Juana de Arco en cualquier lengua, y el único de importancia escrito mientras Juana seguía viva. No escribió nada más."
+    ],
+    "question": "¿Cuánto de lo que llamamos talento es en realidad acceso?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ChristineDePizan", "#EdadMedia", "#Educacion"],
+    "extended": ["#Citas", "#Literatura", "#Francia", "#Manuscritos", "#HistoriaDeLasMujeres", "#Paris", "#Libros", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Extracto de la traducción inglesa: «If it were the custom to put the little maidens to the school and they were made to learn the sciences as they do to the man children, it follows that they should learn as perfectly». La ficha lo sitúa en La ciudad de las damas, I.27, sobre traducción inglesa temprana editada en Tempe, Arizona, 2004, y remite al manuscrito British Library Harley MS 4431. El argumento es que si las niñas recibieran las mismas oportunidades educativas que los niños mostrarían igual capacidad: la diferencia la marca la educación, no la capacidad intelectual.",
+      "source": "The National Archives (Reino Unido), recurso educativo «Medieval society», fuente 6d",
+      "url": "https://www.nationalarchives.gov.uk/education/resources/medieval-society/source-6d-christine-de-pizans-book-of-the-city-or-ladies/"
+    },
+    {
+      "claim": "Christine de Pizan es «una de las primeras autoras profesionales de Europa y, con certeza, una de las más prolíficas». Nació en Venecia y se trasladó a París de niña, cuando su padre pasó a ser astrólogo real de Carlos V. Empezó a escribir profesionalmente a los veinticuatro años, tras la muerte repentina de su marido, secretario real, para mantener a su familia; produjo decenas de obras mayores y cientos de poemas.",
+      "source": "British Library, artículo «Christine de Pizan and the Book of the Queen»",
+      "url": "https://www.bl.uk/stories/blogs/posts/christine-de-pizan-and-the-book-of-the-queen"
+    },
+    {
+      "claim": "Harley MS 4431, «The Book of the Queen», está fechado hacia 1410-1414 y se entregó probablemente como regalo de Año Nuevo en enero de 1414. Es el mayor conjunto manuscrito conservado de la obra de Christine de Pizan, reunido para Isabel de Baviera, reina consorte de Carlos VI de Francia, y «producido bajo la supervisión de la autora». El catálogo añade: «posiblemente algunos pasajes están de la mano de la propia Christine de Pizan», cuestión planteada en un artículo de 1965 y no resuelta entonces.",
+      "source": "British Library, catálogo de archivos y manuscritos, ficha de Harley MS 4431",
+      "url": "https://searcharchives.bl.uk/catalog/040-002050268"
+    },
+    {
+      "claim": "El Ditié de Jehanne d'Arc se terminó el 31 de julio de 1429, en plena racha de éxitos del ejército francés, que acababa de tomar Château-Thierry el 29 de julio. La introducción de la edición de referencia lo describe como «el primer poema compuesto —en cualquier lengua— sobre Jeanne d'Arc, el único importante escrito mientras Jeanne seguía viva». Edición citada: A. J. Kennedy y K. Varty, Oxford, Society for the Study of Medieval Languages and Literature, 1977.",
+      "source": "Jeanne-darc.info, sección de crónicas contemporáneas, con el texto en francés medio y la traducción de la edición Kennedy-Varty",
+      "url": "https://www.jeanne-darc.info/contemporary-chronicles-other-testimonies/christine-de-pizan-le-ditie-de-jehanne-darc/"
+    }
+  ],
+  "do_not_use": [
+    "No poner la frase en boca de Christine como declaración propia. La pronuncia Razón, uno de los tres personajes alegóricos del libro, dentro de una refutación de la idea de que las mujeres son menos capaces por naturaleza.",
+    "No llamarla «la primera feminista» ni atribuirle un programa moderno de igualdad de derechos. Escribe dentro del debate literario de su tiempo y responde a la tradición misógina con sus mismas herramientas, la acumulación de ejemplos de mujeres.",
+    "No decir que escribió de su puño y letra el Harley 4431. La British Library consigna que se produjo bajo su supervisión y que «posiblemente» algunos pasajes sean suyos; la cuestión sigue abierta desde que se planteó en 1965.",
+    "No dar por firme la fecha de su muerte. Circulan hacia 1430 y hacia 1431, y una ficha de la propia British Library llega a consignar «c. 1414», que corresponde al manuscrito y no a su vida.",
+    "No decir que el Ditié es el único texto contemporáneo sobre Juana de Arco. Es el primer poema en cualquier lengua sobre ella y el único de importancia escrito en vida de Juana; existen además crónicas y la documentación de sus procesos.",
+    "No presentar las Lamentaciones de Mateolo como una obra marginal ni como un panfleto anónimo. Es un texto del siglo XIII que circulaba traducido al francés y que Christine cita por su nombre como punto de partida del libro.",
+    "No citar el pasaje en versiones modernizadas que le añaden vocabulario actual como «igualdad» o «derechos». El extracto que documenta The National Archives procede de una traducción inglesa temprana, editada en Tempe, Arizona, en 2004."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

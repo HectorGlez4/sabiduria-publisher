@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-12-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "el palimpsesto de Arquímedes",
+    "hook": "En 1229 un sacerdote raspó un libro de Arquímedes para escribir oraciones encima. El daño peor llegó setecientos años después, y venía cubierto de pan de oro.",
+    "body": [
+      "El volumen original se copió en la segunda mitad del siglo X, casi con seguridad en Constantinopla, y reunía siete tratados de Arquímedes, muerto en Siracusa en el 212 a.C. En 1229 alguien lo deshizo, raspó la tinta de las hojas, las giró noventa grados y las volvió a coser convertidas en devocionario. No fue un ataque contra la ciencia griega: era reciclaje. El pergamino costaba caro y esos tratados ya casi no se leían. De aquel libro dependen tres obras que no existen en ningún otro sitio: el Método de los teoremas mecánicos, el Stomachion y la única versión griega de Sobre los cuerpos flotantes.",
+      "En 1906 el filólogo danés Johan Ludvig Heiberg reconoció el texto antiguo bajo las oraciones, en una biblioteca de Constantinopla. Lo fotografió y entre 1910 y 1915 publicó una nueva edición de sus obras completas. Tras su última consulta, en 1908, el manuscrito desapareció; reapareció en una colección privada francesa que decía tenerlo desde los años veinte. Para entonces alguien había pintado sobre él cuatro imágenes de los evangelistas, con pan de oro, encima del devocionario y del Arquímedes que había debajo. El historiador John Lowden demostró que eran falsas: copian láminas de un libro publicado en 1929.",
+      "El 29 de octubre de 1998 Christie's lo vendió a un coleccionista anónimo por dos millones de dólares. En enero de 1999 lo depositó en el Walters Art Museum de Baltimore, para conservarlo y estudiarlo. La luz ultravioleta y el proceso de imágenes recuperaron cerca del ochenta por ciento. Lo que quedaba bajo el oro falso solo cedió el 6 de agosto de 2006, en el acelerador lineal de Stanford, por fluorescencia de rayos X. Allí estaba el Método, donde Arquímedes razona con conjuntos infinitos, y el Stomachion, que hoy se lee como un problema de combinatoria."
+    ],
+    "question": "¿Qué se pierde cuando algo se cuida por su precio?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Debajo del oro",
+    "subtitle": "Constantinopla, siglo X",
+    "body": "El manuscrito se raspó en 1229 para hacer un devocionario. Ya en el siglo XX, alguien pintó encima cuatro evangelistas con pan de oro para venderlo mejor. Leer lo que ese oro tapó exigió un acelerador de partículas."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Arquimedes", "#HistoriaDeLaCiencia", "#Manuscritos"],
+    "extended": ["#Matematicas", "#Bizancio", "#Museos", "#Arqueometria", "#Conservacion", "#GreciaAntigua", "#HistoriaDeLosLibros", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "El manuscrito de Arquímedes se escribió en la segunda mitad del siglo X, casi con certeza en Constantinopla. El eucologio que se hizo raspándolo se terminó en abril de 1229 y probablemente se elaboró en Jerusalén. Tres obras existen solo aquí: Sobre los cuerpos flotantes en griego, el Método de los teoremas mecánicos y el Stomachion.",
+      "source": "The Archimedes Palimpsest Project (Walters Art Museum), sección «About»",
+      "url": "https://www.archimedespalimpsest.org/about/"
+    },
+    {
+      "claim": "Heiberg visitó el Metochion en 1906 y halló siete tratados de Arquímedes, incluida la fuente única del Método, el Stomachion y Sobre los cuerpos flotantes en griego; fotografió la obra y entre 1910 y 1915 publicó una nueva edición de las obras completas. El manuscrito desapareció del Metochion después de su última consulta en 1908 y reapareció en una colección privada francesa que afirmaba tenerlo desde los años veinte. Se añadieron después cuatro pinturas de los evangelistas sobre el devocionario y sobre el texto de Arquímedes; John Lowden estableció la falsificación al comprobar que copiaban una publicación de 1929, «Manuscrits Grecs de la Bibliothèque Nationale». El 29 de octubre de 1998 Christie's lo vendió a un coleccionista estadounidense anónimo por dos millones de dólares, y en enero de 1999 el comprador lo depositó en el Walters Art Museum de Baltimore para su conservación y estudio.",
+      "source": "The Archimedes Palimpsest Project (Walters Art Museum), sección «History»",
+      "url": "https://www.archimedespalimpsest.org/about/history/"
+    },
+    {
+      "claim": "En 1229 un sacerdote griego raspó el texto y escribió oraciones encima; Heiberg no logró descifrarlo todo y no atendió a los diagramas. Después de 1938 se pintaron sobre varias páginas iluminaciones de estilo bizantino para aumentar su valor de mercado. Equipos de Johns Hopkins y del Rochester Institute of Technology recuperaron cerca del ochenta por ciento del texto con luz ultravioleta, y el sincrotrón de Stanford leyó por fluorescencia de rayos X lo que quedaba bajo el pan de oro. Aparecieron el Método, el Stomachion, comentarios a Aristóteles y discursos del orador ateniense Hiperides.",
+      "source": "Smithsonian Magazine (Smithsonian Institution), «Reading Between the Lines»",
+      "url": "https://www.smithsonianmag.com/science-nature/reading-between-the-lines-148131057/"
+    },
+    {
+      "claim": "La lectura por fluorescencia de rayos X se hizo en el Stanford Linear Accelerator Center el 6 de agosto de 2006, sobre un manuscrito del siglo X reciclado por un monje del siglo XIII para hacer un devocionario.",
+      "source": "Universidad de Stanford, página de Keith Devlin sobre el palimpsesto",
+      "url": "https://web.stanford.edu/~kdevlin/palimpsest.html"
+    }
+  ],
+  "do_not_use": [
+    "No presentar al copista de 1229 como un fanático que quiso borrar la ciencia pagana. Raspar pergamino para reutilizarlo era práctica corriente y económica, y en el mismo devocionario se reaprovecharon hojas de otros manuscritos.",
+    "No decir que Heiberg leyó el texto completo. Trabajó con lupa, luz y fotografías, no pudo descifrarlo todo y dejó de lado los diagramas, que la imagen moderna sí recuperó.",
+    "No llamar bizantinas a las cuatro imágenes doradas de los evangelistas. Son falsificaciones modernas: John Lowden demostró que copian láminas de una publicación de 1929.",
+    "No fechar la falsificación con precisión. Circula la cifra de 1938 por un pigmento, pero el argumento firme y documentado por el propio proyecto es solo que son posteriores a 1929.",
+    "No decir que el manuscrito contiene «un libro perdido de Arquímedes». El volumen raspado reunía siete tratados, y bajo el devocionario aparecieron además discursos de Hiperides y comentarios a Aristóteles procedentes de otros manuscritos reutilizados.",
+    "No afirmar que el comprador de 1998 ocultó el manuscrito. En enero de 1999 lo depositó en el Walters Art Museum para su conservación y estudio, y de ahí salió el proyecto de imagen.",
+    "No decir que Arquímedes «inventó el cálculo». En el Método razona con procedimientos infinitesimales y con infinitos en acto, lo que adelanta ideas del cálculo, pero no es el cálculo diferencial e integral formulado en el siglo XVII.",
+    "No dar el 28 de octubre como fecha de la subasta. El proyecto del Walters consigna el 29 de octubre de 1998."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
