@@ -31,7 +31,7 @@
   "sources": [
     {
       "claim": "El Papiro Prisse está datado en la dinastía XII (1991-1785 a.C.) y es uno de los papiros literarios mejor conservados del Egipto antiguo. Se conserva en la Biblioteca Nacional de Francia con la signatura Égyptien 183-194, figura entre los tesoros de la institución, que lo presenta como «el libro más antiguo del mundo», y fue entregado por Émile Prisse d'Avennes. La unidad Égyptien 183 contiene la «Enseñanza para Kagemni» y las siguientes, Égyptien 186-194, la «Enseñanza de Ptahhotep».",
-      "source": "Bibliothèque nationale de France, Département des manuscrits, catálogo Archives et manuscrits, «Egyptien 183-194. Papyrus Prisse»",
+      "source": "Bibliothèque nationale de France, Département des manuscrits, catálogo Archives et manuscrits, «Egyptien 183-194. Papyrus Prisse». ATENCIÓN: la ficha devuelve 403 a la consulta directa; su contenido se leyó a través del resumen del buscador, no abriendo la página. Los datos de signatura, datación y procedencia están además corroborados por Gunn y por los títulos de las unidades digitalizadas en Gallica.",
       "url": "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q"
     },
     {
@@ -60,6 +60,7 @@
     "No numerar la máxima sin advertir que las ediciones difieren. Aquí se sigue la numeración en que esta es la primera máxima, la de Gunn y la de las ediciones que arrancan la serie tras el prólogo; otras traducciones abren la lista con una máxima distinta.",
     "No dar una fecha exacta de entrega del papiro a la biblioteca. Circulan 1842, 1843 y 1847; el facsímil de Prisse d'Avennes se publicó en 1847 y lo seguro es la década de 1840.",
     "No repetir la cronología de Gunn. Su edición de 1906 sitúa a Isesi hacia 3580-3536 a.C.; la cronología actual lo lleva a 2414-2375 a.C. Cualquier cifra tomada de esa introducción está desfasada en más de mil años.",
+    "No atribuir a la BnF la etiqueta «el libro más antiguo del mundo» como cita textual. La ficha del catálogo no se pudo abrir directamente y ese rótulo procede del resumen del buscador; lo verificable es que Gunn tituló así su traducción de 1906 y que la BnF cuenta el papiro entre sus tesoros.",
     "No decir que es «el libro más antiguo del mundo» sin más. Es como lo presenta la propia BnF, y como tituló Gunn su traducción, pero se refiere a los textos literarios completos conservados en un solo manuscrito; hay escritura egipcia y mesopotámica muy anterior.",
     "No convertir la máxima en un elogio de la humildad personal. El argumento del texto es sobre los límites del oficio: al arte no se le ve el final y ningún artesano lo domina entero. La consecuencia práctica es consultar a cualquiera, no sentirse pequeño.",
     "No presentar las Máximas como un texto igualitario. El grueso de la obra enseña deferencia hacia superiores y mayores, y está dirigido a jóvenes de familias influyentes que iban a ocupar cargos. La primera máxima destaca precisamente por contrastar con eso."
