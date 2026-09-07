@@ -59,12 +59,28 @@
     "Cifras exactas de distancia temporal con Homero («1.500 años antes de Homero» circula en la divulgación). Las fechas de Homero son ellas mismas aproximadas; si se usa, decir «más de mil quinientos años» y nunca una cifra cerrada.",
     "Traducir el colofón entre comillas como si fuera versión canónica al español: la que se maneja aquí es traducción de la inglesa de ETCSL. El copy la parafrasea sin comillas."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1089174853907174",
+      "url": "https://www.facebook.com/874327782058550/posts/1089174853907174",
+      "published_at": "2026-09-07T20:41:07.222571+00:00"
+    },
+    "instagram": {
+      "post_id": "18164310838420059",
+      "url": "https://www.instagram.com/p/Dc__i4Zn6Ca/",
+      "published_at": "2026-09-07T20:41:23.583698+00:00"
+    },
+    "threads": {
+      "post_id": "18114615580952559",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18114615580952559",
+      "published_at": "2026-09-07T20:41:38.176751+00:00"
+    }
+  },
   "publish_at": "2026-09-07T17:33:00Z"
 }
