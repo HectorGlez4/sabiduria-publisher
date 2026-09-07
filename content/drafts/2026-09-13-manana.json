@@ -1,0 +1,60 @@
+{
+  "id": "2026-09-13-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Émilie du Châtelet y los Principia en francés",
+    "hook": "Los Principia de Newton se han traducido al francés una sola vez por entero. Quien lo hizo dejó el manuscrito en la biblioteca del rey el 9 de septiembre de 1749 y murió al día siguiente.",
+    "body": [
+      "Gabrielle Émilie Le Tonnelier de Breteuil, marquesa du Châtelet, nació en París el 17 de diciembre de 1706. En 1740 publicó sin firma las Instituciones de física, un manual dirigido a su hijo que en realidad discutía los cimientos de la mecánica; la segunda edición, en Ámsterdam en 1742, ya llevaba su nombre. Hacia 1745 emprendió la traducción de los Philosophiae naturalis principia mathematica y le añadió un comentario propio: una exposición abreviada del sistema del mundo y una solución analítica de sus problemas principales, con el cálculo de Leibniz. Trabajó en ello los cinco últimos años de su vida.",
+      "Antes había hecho algo más incómodo. La disputa del momento era cómo se mide la fuerza de un cuerpo en movimiento: la Academia de París defendía mv; los leibnizianos, mv². Du Châtelet repitió y divulgó un experimento de Willem 's Gravesande, dejar caer bolas desde distintas alturas sobre una lámina de arcilla blanda y medir el hueco, y mostró que la marca no crecía con la velocidad sino con su cuadrado. En 1740 criticó por escrito las posiciones cartesianas de Dortous de Mairan, secretario de la Academia de Ciencias. Mairan le respondió al año siguiente y ella replicó. Las mujeres no podían publicar en las actas de la Academia; discutiendo con su secretario, entró igualmente en la conversación impresa.",
+      "Dio a luz el 4 de septiembre de 1749 y murió seis días después, a los cuarenta y dos años. El manuscrito ya estaba entregado. En 1756 salió una edición incompleta; la definitiva, en dos tomos, apareció en 1759, revisada por el matemático Alexis Clairaut y con un prefacio histórico de Voltaire. Nadie la ha reemplazado. Quien lee hoy a Newton en francés sigue leyendo las palabras que ella eligió."
+    ],
+    "question": "¿Cuántas obras que llamamos originales se leen por la mano de quien las tradujo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La única traducción",
+    "subtitle": "París, 9 de septiembre de 1749",
+    "body": "Émilie du Châtelet depositó su traducción de Newton en la Biblioteca del Rey y murió al día siguiente. La edición completa tardó diez años en salir. Sigue siendo la única versión francesa íntegra de los Principia."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#EmilieDuChatelet", "#Newton", "#HistoriaDeLaCiencia"],
+    "extended": ["#Fisica", "#Ilustracion", "#Traduccion", "#MujeresEnLaCiencia", "#Matematicas", "#Francia", "#SigloXVIII", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Du Châtelet produjo «la primera traducción moderna de los Philosophiae Naturalis Principia Mathematica de Isaac Newton» junto con el matemático Alexis Clairaut. El manuscrito quedó depositado en la Biblioteca Nacional y se publicó en 1756 (incompleto) y en 1759 (completo). «Hasta el día de hoy, sigue siendo la única traducción completa al francés de la obra mayor de Newton.» Sobre la disputa: «Tras criticar las posiciones cartesianas del secretario de la Real Academia de Ciencias de París, Jean-Jacques Dortous de Mairan, en 1740, Du Châtelet provocó que Mairan respondiera a sus ideas sobre las fuerzas de los cuerpos.» Sus Instituciones de física se publicaron en París en 1740 y se reeditaron y tradujeron a varias lenguas en menos de dos años. Murió seis días después de dar a luz, a comienzos de sus cuarenta.",
+      "source": "Project Vox, Duke University Libraries, entrada «Du Châtelet (1706-1749)»",
+      "url": "https://projectvox.org/du-chatelet-1706-1749/"
+    },
+    {
+      "claim": "Nació el 17 de diciembre de 1706 en París y murió el 10 de septiembre de 1749, poco después de dar a luz, a los 42 años. Las Instituciones de física, su obra mayor, se publicaron en 1740 y tuvieron segunda edición en 1742; en ellas «proporcionó la base metafísica de la física newtoniana que hacía tiempo había aceptado». Su defensa de la fuerza viva, del lado de Leibniz, la llevó a la disputa con Jean-Jacques Dortous de Mairan. Presentó una memoria sobre la naturaleza del fuego al concurso de la Academia y su trabajo se publicó junto al de los tres premiados, entre ellos Euler. Empezó la traducción y el comentario de los Principia a comienzos de los años cuarenta y los terminó antes de morir; permanecieron inéditos hasta 1759 y siguen siendo la traducción francesa de referencia.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Émilie du Châtelet» (Universidad de Stanford)",
+      "url": "https://plato.stanford.edu/entries/emilie-du-chatelet/"
+    },
+    {
+      "claim": "Emprendió la traducción en 1745 y trabajó en ella los cinco últimos años de su vida. Depositó el manuscrito en la Biblioteca Real el día antes de morir, en 1749. La publicación de 1759 incluye el prefacio histórico de Voltaire, la traducción y un comentario en dos partes: «Exposición abreviada del sistema del mundo» y «Solución analítica de los principales problemas», esta última resuelta con métodos leibnizianos de cálculo integral. Alexis Clairaut revisó el trabajo para asegurar la publicación póstuma. Voltaire escribió que ver que «Newton escribió esta obra» y que «una dama la tradujo y la aclaró» eran «dos maravillas».",
+      "source": "Robert Hermann, «La traduction et les commentaires des Principia de Newton par Émilie du Châtelet», revista BibNum (OpenEdition Journals)",
+      "url": "https://journals.openedition.org/bibnum/722"
+    },
+    {
+      "claim": "Inspirada por las teorías de Leibniz, repitió y divulgó un experimento ideado por Willem 's Gravesande en el que se dejaban caer bolas pesadas desde distintas alturas sobre una lámina de arcilla blanda; combinando el concepto de Leibniz con esas observaciones mostró que la fuerza viva depende del cuadrado de las velocidades. La primera edición de las Instituciones de física salió anónima en París en 1740; la segunda apareció en Ámsterdam dos años después con el título modificado y la autoría declarada.",
+      "source": "Wikipedia en inglés, entradas «Émilie du Châtelet» y «Vis viva» (fuente de menor rango, usada solo para el detalle del experimento de la arcilla y de las dos ediciones, y contrastada con Project Vox y la Stanford Encyclopedia of Philosophy)",
+      "url": "https://en.wikipedia.org/wiki/%C3%89milie_du_Ch%C3%A2telet"
+    }
+  ],
+  "do_not_use": [
+    "No decir que descubrió la energía cinética ni que anticipó E=mc². Lo que hizo fue defender y fundamentar la medida leibniziana mv² frente a la cartesiana mv en la controversia de las fuerzas vivas; la energía cinética como magnitud del siglo XIX es posterior, y la equivalencia masa-energía no tiene relación con este trabajo.",
+    "No decir que ganó el premio de la Academia de Ciencias con su memoria sobre el fuego. No lo ganó: la Academia publicó su texto junto al de los tres premiados, entre ellos Euler.",
+    "No decir que murió en el parto. Dio a luz el 4 de septiembre de 1749 y murió el 10, seis días después.",
+    "No presentar a Clairaut como coautor de la traducción. Revisó el trabajo y preparó la edición póstuma; la traducción y el comentario son de ella.",
+    "No decir que la traducción se publicó en vida ni que salió completa en 1756. La edición de 1756 es incompleta; la definitiva, en dos tomos, es de 1759.",
+    "No describirla como colaboradora o discípula de Voltaire. Voltaire escribió el prefacio histórico de la edición póstuma; la obra científica, incluidas las Instituciones de física de 1740 y la polémica con Mairan, es suya.",
+    "No decir que la Academia de Ciencias la admitió. Las mujeres no podían publicar en sus actas; lo que consiguió fue que el intercambio con su secretario se imprimiera y circulara."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

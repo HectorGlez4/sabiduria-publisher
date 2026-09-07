@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-13-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el Liber Linteus, el único libro de lino etrusco",
+    "hook": "El texto más largo que queda de la lengua etrusca sobrevivió porque alguien lo cortó en tiras y lo usó para envolver a una muerta en Egipto. Nadie se dio cuenta durante más de cuarenta años.",
+    "body": [
+      "El Liber Linteus Zagrabiensis es el único libro de lino que ha llegado desde la Antigüedad. Medía unos 340 por 44 centímetros y estaba escrito en doce columnas, de derecha a izquierda, en tinta negra con líneas y signos en rojo. Conserva alrededor de mil trescientos vocablos, que se reducen a unas quinientas palabras o raíces distintas: es, con diferencia, el texto etrusco más extenso que existe. Se data entre finales del siglo III y el siglo II a.C. No es literatura ni historia. Es un calendario ritual: ceremonias ordenadas por meses, con libaciones y sacrificios, y nombres de dioses como Tinia, Nethuns y Thesan.",
+      "En algún momento el rollo llegó a Egipto, quizá a Alejandría, y allí un taller de embalsamadores lo cortó en once bandas para vendar a una mujer de treinta o cuarenta años. Casi con seguridad no había ninguna relación entre el libro y la difunta: era el lino que había a mano. En 1848 o 1849, Mihail Barić, exfuncionario de la Cancillería Real Húngara en Viena, compró esa momia en Egipto como recuerdo de viaje y la puso en su casa. Murió en 1859 y su hermano la cedió a la institución estatal de Zagreb en la década siguiente. Durante todo ese tiempo el texto estuvo a la vista y se tomó por decoración egipcia.",
+      "Fue el egiptólogo Jakob Krall quien reconoció que aquella escritura no era egipcia sino etrusca, a principios de la década de 1890, y quien reordenó las tiras hasta devolverles la forma de libro. Hoy se guarda en una sala refrigerada del Museo Arqueológico de Zagreb. Los etruscos vivieron junto a Roma durante siglos, escribieron con un alfabeto derivado del griego que cualquiera puede pronunciar, y de toda su literatura no queda un solo libro que alguien decidiera conservar. Queda este, que se salvó por ser tela."
+    ],
+    "question": "¿Cuánto de lo que hoy llamamos patrimonio se salvó por accidente?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Se salvó por ser tela",
+    "subtitle": "Etruria, siglo II a.C.",
+    "body": "El único libro de lino de la Antigüedad se conservó porque unos embalsamadores lo cortaron en once bandas para vendar a una mujer. Es el texto etrusco más largo que existe: un calendario de ceremonias, mes por mes."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LiberLinteus", "#Etruscos", "#Zagreb"],
+    "extended": ["#Arqueologia", "#Escritura", "#LenguasAntiguas", "#Museos", "#Egipto", "#Italia", "#HistoriaAntigua", "#Manuscritos"]
+  },
+  "sources": [
+    {
+      "claim": "«Un exfuncionario esloveno de la Cancillería Real Húngara en Viena, Mihail Barić, compró una momia en Egipto en 1848 o 1849. El texto de sus vendas de lino fue reconocido como etrusco por un egiptólogo, J. Krall, en 1891.» «El libro, que medía originalmente unos 340 x 44,4 cm, tiene 12 columnas de texto y una pequeña cubierta vacía.» Contiene unos 1.300 vocablos reducibles a «unas 500 palabras o raíces distintas». Belfiore «caracteriza el Liber Linteus como un calendario ritual». El texto data «de finales del siglo III al siglo II a.C.». «Un libro de lino, probablemente usado como rollo, fue cortado limpiamente en 11 bandas que llevaban textos escritos con tinta»; pudo haber sido llevado a Egipto, por ejemplo a Alejandría, en los últimos siglos antes de nuestra era.",
+      "source": "Bryn Mawr Classical Review, reseña de Valentina Belfiore, «Il liber linteus di Zagabria: testualità e contenuto», Biblioteca di «Studi Etruschi» 50, 2010",
+      "url": "https://bmcr.brynmawr.edu/2011/2011.01.36"
+    },
+    {
+      "claim": "Por la forma de las letras, el texto se escribió «casi con certeza en Perugia o en su región, entre c. 200 y 150 a.C.». El libro medía doce pies etruscos de largo, unos 3,45 metros, con 12 columnas inscritas de unos 45 cm de alto por 26 de ancho, letras de 7 mm y márgenes de 2 cm. Funciona como calendario ritual, con listas seriadas de ceremonias, algunas fechadas por meses, y menciona sacerdocios, la ciudad y la comunidad. El textil único se cortó en tiras horizontales para vendar la momia; algunas faltan por completo y otras están muy dañadas, pero los pasajes formulares permitieron restituir partes apreciables.",
+      "source": "Bryn Mawr Classical Review, reseña de L. B. van der Meer, «Liber Linteus Zagrabiensis. The Linen Book of Zagreb. A Comment on the Longest Etruscan Text», Monographs on Antiquity 4, 2007",
+      "url": "https://bmcr.brynmawr.edu/2008/2008.05.37/"
+    },
+    {
+      "claim": "El manuscrito tiene 230 líneas de texto, con 1.330 palabras legibles pero solo unas 500 palabras o raíces distintas, y se conserva alrededor del 60 % del texto. Está dispuesto en doce columnas escritas de derecha a izquierda, con tinta negra para el texto principal y tinta roja para líneas y signos diacríticos. En 1848 Mihajlo Barić, funcionario croata, compró una momia femenina en Alejandría como recuerdo de viaje y la exhibió en Viena; a su muerte, en 1859, su hermano Ilija la heredó y la donó al instituto estatal de Zagreb en 1867. Jakob Krall, experto en copto, fue el primero en identificar la escritura como etrusca, en 1892, y reordenó las tiras de lino. Un papiro hallado en el sarcófago identificaba a una mujer egipcia llamada Nesi-hensu, esposa de un sastre tebano, aunque análisis posteriores sugieren que ese papiro es casi un siglo posterior a la momia. El texto es un calendario ritual y menciona a dioses como Tinia, Nethuns y Thesan. Se guarda en una sala refrigerada del Museo Arqueológico de Zagreb.",
+      "source": "Wikipedia en inglés, entrada «Liber Linteus» (fuente de menor rango, usada para el detalle material, la cadena de propiedad y los dioses nombrados, y contrastada con las dos reseñas de Bryn Mawr Classical Review)",
+      "url": "https://en.wikipedia.org/wiki/Liber_Linteus"
+    },
+    {
+      "claim": "El Museo Arqueológico de Zagreb conserva más de 450.000 objetos y una colección egipcia única en la región, entre cuyas piezas está la momia de Zagreb con el libro de lino etrusco, el Liber Linteus Zagrabiensis.",
+      "source": "Wikipedia en inglés, entrada «Archaeological Museum in Zagreb» (fuente de menor rango, usada solo para situar la pieza en su museo)",
+      "url": "https://en.wikipedia.org/wiki/Archaeological_Museum_in_Zagreb"
+    }
+  ],
+  "do_not_use": [
+    "No dar una fecha única para la identificación de Krall. La reseña de Bryn Mawr sobre la edición de Belfiore la sitúa en 1891 y otras fuentes en 1892. Decir «a principios de la década de 1890» es lo que sostienen todas.",
+    "No dar una fecha única para la llegada a Zagreb. Circulan 1862 y 1867 según la fuente. Lo seguro es que fue en la década de 1860, después de la muerte de Barić en 1859.",
+    "No presentar la datación como cerrada. La paleografía lleva el texto a finales del siglo III o al siglo II a.C., y van der Meer lo sitúa en Perugia entre 200 y 150 a.C.; el radiocarbono del lino ha dado una fecha bastante anterior, en torno al siglo IV a.C. Son medidas de cosas distintas —la tela y la escritura— y no hay acuerdo sobre cómo conciliarlas.",
+    "No afirmar que la difunta se llamaba Nesi-hensu. El nombre viene de un papiro hallado en el sarcófago, y análisis posteriores indican que ese papiro es casi un siglo posterior a la momia, de modo que puede no corresponderle.",
+    "No sugerir que la mujer era etrusca ni que el libro se eligió por ella. Es casi seguro que no hay relación entre ambos: el lino era el material disponible en el taller de embalsamamiento.",
+    "No decir que el etrusco es una lengua indescifrada. El alfabeto, derivado del griego, se lee sin dificultad y se pronuncia; lo que falta es vocabulario y comprensión gramatical completa, porque casi no hay textos largos ni bilingües extensos.",
+    "No llamarlo el libro más antiguo de Europa sin matizar. Es el único libro de lino conservado de la Antigüedad y el texto etrusco más largo; hay escritura europea muy anterior en otros soportes.",
+    "No decir que se descifró el contenido entero. Se conserva en torno al 60 % del texto y solo se entiende parcialmente: se reconoce la estructura de calendario, las fechas y los nombres divinos, no un sentido continuo."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

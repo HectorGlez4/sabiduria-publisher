@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-13-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Saadi de Shiraz y los hijos de Adán",
+    "hook": "Los versos persas que cuelgan en la ONU no se escribieron para conmover a nadie. Saadi se los dijo a la cara a un rey injusto que había ido a pedirle oraciones, y después le ordenó hacer justicia.",
+    "quote": {
+      "text": "Los hijos de Adán son miembros unos de otros, creados de una misma esencia. Cuando la desgracia hiere a uno, los demás no pueden quedar en reposo.",
+      "author": "Saadi de Shiraz",
+      "work": "Golestán, capítulo 1, historia 10 (1258)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Saadi de Shiraz, que vivió hacia 1213-1292, terminó el Golestán, «el jardín de rosas», en 1258. Es una obra didáctica en prosa entreverada de versos breves: una introducción, ocho capítulos y una conclusión, cada uno con historias, máximas y advertencias. La escribió para enseñar reglas de conducta lo mismo a reyes que a derviches, y durante siglos fue el libro con el que se aprendía a leer persa. El pasaje de los hijos de Adán no está en un capítulo sobre la fraternidad. Está en el primero, que trata de la conducta de los reyes, y es la historia número diez.",
+      "La escena es concreta. Saadi está rezando en Damasco, junto a la tumba del profeta Yahia, cuando llega en peregrinación un rey árabe conocido por su injusticia. El rey le pide que interceda por él, porque teme a un enemigo poderoso. Saadi le responde que se apiade de sus propios súbditos débiles si no quiere temer a un brazo fuerte, y ahí introduce los versos. Lo que sigue no es un consuelo: le dice que se saque el algodón de los oídos y administre justicia a su pueblo, porque el día en que no la haya habrá otro día en que rendir cuentas. El poema es un argumento dentro de una reprimenda.",
+      "En 2005 la República Islámica de Irán regaló a las Naciones Unidas un tapiz tejido por Mohammad Seirafian, de Isfahán, de unos cinco metros por cinco, con esos versos bordados en hilo de oro. Cuelga en el segundo piso del edificio de conferencias, en Nueva York. Circula desde hace años que el poema está inscrito en la entrada de la sede: no lo está. Mohammad Javad Zarif, representante de Irán ante la organización entre 2002 y 2007, buscó la inscripción en Nueva York y en Ginebra y no encontró rastro de ella."
+    ],
+    "question": "¿A quién le resulta cómodo un poema que en su origen era una orden?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Saadi", "#Golestan", "#PoesiaPersa"],
+    "extended": ["#Citas", "#Persia", "#Iran", "#Literatura", "#EdadMedia", "#Manuscritos", "#Justicia", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "«El poeta persa Shaykh Sa'di Shirazi (ca. 1213-1292) compuso su Gulistan, obra didáctica en prosa y verso, en 1258.» La obra «incluye ocho capítulos, una introducción y una conclusión, y cada capítulo narra cierto número de historias, máximas y advertencias». Sa'di la compuso «para enseñar las reglas de conducta en la vida tanto a los reyes como a los derviches». Está principalmente en prosa, intercalada con poemas breves.",
+      "source": "Library of Congress, Persian Manuscript Collection, «Sa'di's Gulistan (The Rose Garden)»",
+      "url": "https://www.loc.gov/item/2019714510/"
+    },
+    {
+      "claim": "Traducción publicada del capítulo 1, historia 10: Saadi reza junto a la tumba del profeta Yahia en Damasco cuando llega en peregrinación un rey árabe famoso por su injusticia, que le pide apoyo espiritual contra un enemigo poderoso. Saadi responde: «The sons of Adam are limbs of each other / Having been created of one essence. / When the calamity of time afflicts one limb / The other limbs cannot remain at rest», y añade la orden «extract the cotton from your ears and administer justice to your people». En el prefacio, el propio texto data la obra: «At a period when our time was pleasant / The Hejret was six hundred and fifty-six», es decir 656 de la Hégira, 1258.",
+      "source": "Edward Rehatsek, «The Gulistan or Rose Garden of Sa'di», traducción de 1888 (texto completo en Internet Archive)",
+      "url": "https://archive.org/stream/TheGulistanOrRoseGardenOfSadi-EdwardRehatsek/The_Gulistan__Rehatsek_djvu.txt"
+    },
+    {
+      "claim": "«En 2005, esta alfombra iraní fue entregada a las Naciones Unidas por la República Islámica de Irán.» Mide 207 x 191 pulgadas, su autor es Mohammad Seirafian y se encuentra en el segundo piso del edificio de conferencias. La entrega se registra el 22 de agosto de 2005 y la pieza se hizo en relación con la iniciativa «Diálogo entre Civilizaciones» iniciada en 2001. La traducción inglesa que la acompaña dice: «All human beings are members of one frame, Since all, at first, from the same essence came. When time afflicts a limb with pain, The other limbs cannot at rest remain. If thou feel not for other's misery, A human being is no name for thee.»",
+      "source": "Naciones Unidas, catálogo oficial UN Gifts, ficha «Persian carpet»",
+      "url": "https://www.un.org/ungifts/persian-carpet"
+    },
+    {
+      "claim": "El poema figura en el Golestán, capítulo 1, historia 10, terminado en 1258. Existen dos lecturas del segundo hemistiquio del primer verso: «a'zā-ye yekdigar-and» (miembros unos de otros) y «a'zā-ye yek paykar-and» (miembros de un mismo cuerpo). La primera aparece en todos los manuscritos tempranos, dentro de los sesenta años posteriores a la composición, según Habib Yaghmai, y es la de la edición estándar de Mohammad Ali Foroughi y la del billete iraní de 100.000 riales de 2010; la segunda es la que siguen la mayoría de las traducciones inglesas por su cercanía a un hadiz. Mohammad Seirafian, dueño de un taller de alfombras de Isfahán, donó un tapiz de cinco por cinco metros con el poema en hilo de oro, instalado en 2005 en una sala del interior de la sede de la ONU en Nueva York; la placa que lo acompaña traduce «All human beings are members of one frame». Mohammad Javad Zarif, representante de Irán ante la ONU entre 2002 y 2007, «buscó en ambos lugares en vano y no pudo encontrar rastro» de la supuesta inscripción en las puertas de entrada de la ONU en Nueva York o en Ginebra. Barack Obama citó el primer verso en su mensaje de Noruz grabado el 20 de marzo de 2009.",
+      "source": "Wikipedia en inglés, entrada «Bani Adam» (fuente de menor rango, usada para las variantes textuales, el episodio de Zarif y el detalle del tapiz, y contrastada con la ficha oficial de la ONU y con la traducción de Rehatsek)",
+      "url": "https://en.wikipedia.org/wiki/Bani_Adam"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el poema está inscrito en la entrada de la sede de la ONU. Es la afirmación más repetida sobre estos versos y es falsa: lo que hay es un tapiz regalado en 2005, colgado en el segundo piso del edificio de conferencias. Mohammad Javad Zarif, representante iraní ante la organización, buscó la inscripción en Nueva York y en Ginebra y no la encontró.",
+    "No zanjar la variante textual. El primer verso se transmite en dos lecturas: «miembros unos de otros» (yekdigar) y «miembros de un mismo cuerpo» (yek paykar). La primera es la de los manuscritos más antiguos y la de la edición de Foroughi; la segunda es la que traducen casi todos los textos ingleses, incluida la placa de la ONU. Aquí se usa la primera, y conviene decir que hay dos.",
+    "No presentar el poema como un saludo humanista suelto. Se dice dentro de una reprimenda a un rey injusto que había ido a pedir oraciones, y desemboca en una orden: hacer justicia a su pueblo.",
+    "No vincular la fecha de composición con la caída de Bagdad ante los mongoles, ocurrida ese mismo año. Coinciden en 1258, pero ninguna de las fuentes consultadas sostiene que el Golestán responda a ese hecho.",
+    "No dar las fechas de Saadi como exactas. Circulan 1210, 1213 y 1216 para el nacimiento, y 1291 o 1292 para la muerte. La Biblioteca del Congreso consigna «ca. 1213-1292».",
+    "No atribuir a Saadi la traducción inglesa que aparece en la ONU. Es una versión libre del siglo XX que sigue la lectura «one frame», y no reproduce la estructura del original.",
+    "No presentar la historia como una fábula. El capítulo primero del Golestán trata de la conducta de los reyes y sus relatos se presentan como episodios vividos o referidos, no como apólogos con animales."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

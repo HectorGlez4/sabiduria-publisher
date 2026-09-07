@@ -1,0 +1,68 @@
+{
+  "id": "2026-09-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Ptahhotep y el papiro que la BnF llama el libro más antiguo",
+    "hook": "El texto que la Biblioteca Nacional de Francia presenta como el libro más antiguo del mundo lo escribió, supuestamente, un funcionario de hace cuarenta y cuatro siglos. Su consejo de apertura es que hables con el ignorante igual que con el sabio.",
+    "quote": {
+      "text": "No te enorgullezcas de tu saber; habla con el ignorante como hablas con el sabio. Al arte no se le puede poner límite, y no hay artesano que llegue a dominarlo por completo.",
+      "author": "Ptahhotep (atribuido)",
+      "work": "Máximas de Ptahhotep, máxima 1; Papiro Prisse",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Papiro Prisse se guarda en la Biblioteca Nacional de Francia con la signatura Égyptien 183-194, y la propia institución lo cuenta entre sus tesoros como el libro más antiguo del mundo. Es una copia de la dinastía XII, hacia el 1900 a.C. Contiene dos textos de enseñanza: uno para Kagemni y otro atribuido a Ptahhotep, visir del rey Dyedkara Isesi, de la dinastía V, que reinó hacia 2414-2375 a.C. Sobreviven cuatro copias de las Máximas y esta es la única completa. Émile Prisse d'Avennes lo obtuvo en Tebas y lo entregó a la biblioteca real de París en la década de 1840; su facsímil se publicó en 1847.",
+      "El texto se presenta como el encargo de un anciano que pide al rey permiso para transmitirle a su hijo lo que ha aprendido en el oficio. Casi todo lo que sigue es jerarquía: cómo tratar a un superior, cuándo callarse, cómo comportarse en la mesa de alguien más poderoso. Por eso la primera máxima desentona. Le dice a un joven destinado a mandar que su saber no lo pone por encima de nadie, y que consulte al ignorante en los mismos términos en que consultaría a un maestro. El argumento no es de cortesía sino de límites: al oficio no se le ve el final, y nadie lo agota.",
+      "Del autor no hay certeza. Ptahhotep fue un personaje real, con mastaba en Saqqara norte, pero entre él y la copia que conservamos median unos quinientos años, y parte de los especialistas sostiene que la obra se compuso en el Reino Medio y se le atribuyó después a una figura antigua para darle autoridad. Queda entonces un texto sin autor seguro que enseña a desconfiar de la propia autoridad. Se ha copiado durante cuatro mil años sin que nadie pudiera firmarlo del todo."
+    ],
+    "question": "¿A quién dejaste de preguntar por dar por hecho que no sabía?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ptahhotep", "#EgiptoAntiguo", "#PapiroPrisse"],
+    "extended": ["#Citas", "#Manuscritos", "#Sabiduria", "#Egiptologia", "#Bibliotecas", "#Escritura", "#HistoriaAntigua", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "El Papiro Prisse está datado en la dinastía XII (1991-1785 a.C.) y es uno de los papiros literarios mejor conservados del Egipto antiguo. Se conserva en la Biblioteca Nacional de Francia con la signatura Égyptien 183-194, figura entre los tesoros de la institución, que lo presenta como «el libro más antiguo del mundo», y fue entregado por Émile Prisse d'Avennes. La unidad Égyptien 183 contiene la «Enseñanza para Kagemni» y las siguientes, Égyptien 186-194, la «Enseñanza de Ptahhotep».",
+      "source": "Bibliothèque nationale de France, Département des manuscrits, catálogo Archives et manuscrits, «Egyptien 183-194. Papyrus Prisse»",
+      "url": "https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q"
+    },
+    {
+      "claim": "La BnF ha digitalizado el papiro hoja por hoja en Gallica: la unidad Égyptien 186 corresponde a la «Enseignement de Ptahhotep (1-73)», es decir, las primeras líneas del texto, entre ellas la máxima inicial.",
+      "source": "Gallica, Bibliothèque nationale de France, «Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)»",
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b8304609v.image"
+    },
+    {
+      "claim": "Traducción publicada de la primera máxima: «Be not proud because thou art learned; but discourse with the ignorant man, as with the sage. For no limit can be set to skill, neither is there any craftsman that possesseth full advantages.» En la introducción, Gunn indica que el manuscrito se conserva en la Bibliothèque Nationale de París, que fue entregado hacia 1847 por Prisse d'Avennes, que lo había obtenido en Egipto, y que la copia no es anterior a la dinastía XI y probablemente es de la XII. Ptahhotep aparece como gobernador y visir bajo el rey Isesi, penúltimo soberano de la dinastía V.",
+      "source": "Battiscombe G. Gunn, «The Instruction of Ptah-hotep and the Instruction of Ke'gemni: The Oldest Books in the World», Londres, 1906 (edición en Project Gutenberg)",
+      "url": "https://www.gutenberg.org/files/30508/30508-h/30508-h.htm"
+    },
+    {
+      "claim": "Ptahhotep aparece como visir durante el reinado de Dyedkara Isesi, en la dinastía V. Sobreviven cuatro copias de las Enseñanzas; el Papiro Prisse, de la dinastía XII, es «la única versión completa» y se encuentra en la Bibliothèque Nationale de París. El texto se enmarca como la petición de un anciano al rey para que su hijo lo suceda y reciba su enseñanza. Sobre la fecha de composición no hay acuerdo: William Kelly Simpson considera que la obra «se compuso originalmente durante el Reino Medio (aproximadamente 2040 a 1782 a.C.), en concreto la dinastía XII», aunque algunas máximas puedan proceder del Reino Antiguo.",
+      "source": "Wikipedia en inglés, entrada «The Maxims of Ptahhotep» (fuente de menor rango, usada para el número de copias, el marco narrativo y el estado del debate sobre la datación, y contrastada con la BnF y con Gunn)",
+      "url": "https://en.wikipedia.org/wiki/The_Maxims_of_Ptahhotep"
+    },
+    {
+      "claim": "Dyedkara Isesi reinó hacia 2414-2375 a.C., en la dinastía V. Ptahhotep fue visir durante su reinado y su tumba es una mastaba en Saqqara norte.",
+      "source": "Wikipedia en inglés, entrada «Ptahhotep (Djedkare)» (fuente de menor rango, usada solo para las fechas del reinado y la ubicación de la mastaba)",
+      "url": "https://en.wikipedia.org/wiki/Ptahhotep_(Djedkare)"
+    }
+  ],
+  "do_not_use": [
+    "No presentar a Ptahhotep como autor seguro. El texto se le atribuye, pero la copia conservada es unos quinientos años posterior a su época y una parte de los especialistas sostiene que la obra se compuso en el Reino Medio. Decir «atribuido» no es una cautela decorativa: es el estado real de la cuestión.",
+    "No numerar la máxima sin advertir que las ediciones difieren. Aquí se sigue la numeración en que esta es la primera máxima, la de Gunn y la de las ediciones que arrancan la serie tras el prólogo; otras traducciones abren la lista con una máxima distinta.",
+    "No dar una fecha exacta de entrega del papiro a la biblioteca. Circulan 1842, 1843 y 1847; el facsímil de Prisse d'Avennes se publicó en 1847 y lo seguro es la década de 1840.",
+    "No repetir la cronología de Gunn. Su edición de 1906 sitúa a Isesi hacia 3580-3536 a.C.; la cronología actual lo lleva a 2414-2375 a.C. Cualquier cifra tomada de esa introducción está desfasada en más de mil años.",
+    "No decir que es «el libro más antiguo del mundo» sin más. Es como lo presenta la propia BnF, y como tituló Gunn su traducción, pero se refiere a los textos literarios completos conservados en un solo manuscrito; hay escritura egipcia y mesopotámica muy anterior.",
+    "No convertir la máxima en un elogio de la humildad personal. El argumento del texto es sobre los límites del oficio: al arte no se le ve el final y ningún artesano lo domina entero. La consecuencia práctica es consultar a cualquiera, no sentirse pequeño.",
+    "No presentar las Máximas como un texto igualitario. El grueso de la obra enseña deferencia hacia superiores y mayores, y está dirigido a jóvenes de familias influyentes que iban a ocupar cargos. La primera máxima destaca precisamente por contrastar con eso."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
