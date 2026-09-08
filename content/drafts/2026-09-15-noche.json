@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-15-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Ugarit y los abecedarios de Ras Shamra",
+    "hook": "El orden en que decimos las letras aparece por primera vez en unas tablillas de barro de una ciudad siria desaparecida hace treinta y dos siglos. Los signos de esas tablillas no se parecen a los nuestros.",
+    "body": [
+      "En la primavera de 1929, la primera campaña de excavación en Ras Shamra, en la costa siria, sacó a la luz tablillas escritas con un sistema que nadie había visto. En 1930, trabajando por separado en Halle, París y Jerusalén, Hans Bauer, Charles Virolleaud y Édouard Dhorme lo descifraron: un alfabeto cuneiforme de treinta signos, escrito de izquierda a derecha, que anotaba una lengua semítica desconocida. La ciudad se llamaba Ugarit. Sus textos van del siglo XIV a comienzos del XII antes de nuestra era, cuando la ciudad desapareció.",
+      "Entre esas tablillas hay una clase particular: los abecedarios, ejercicios de escuela con las letras en su orden. Se conocen más de diez. El Louvre guarda el AO 19992, hallado por Claude Schaeffer en 1938, al que le faltan siete letras. Y ese orden es, con muy pocas diferencias, el fenicio: el mismo que heredaron el hebreo, el griego, el latín y este alfabeto. Conviene una precisión que suele perderse. Los signos cuneiformes de Ugarit no son antepasados de nuestras letras; el Ministerio de Cultura francés lo dice sin rodeos: ese alfabeto no parece haber tenido heredero directo. Lo que sobrevivió no fue la forma de las letras. Fue la fila.",
+      "Y hay una tablilla que complica el cuadro. En 1988 apareció en Ras Shamra la RS 88.2215: treinta letras del mismo alfabeto, en otro orden. No empieza por a-b-g-d sino por h-l-ḥ-m. Pierre Bordreuil y Dennis Pardee la publicaron en 1995 en los Comptes rendus de la Académie des Inscriptions et Belles-Lettres. Ese segundo orden, el halaham, está muy documentado en la epigrafía sudarábiga y se perpetúa en el arranque del abecedario etíope. En una misma ciudad convivían dos maneras de ordenar las letras. Las dos siguen vivas. Ninguna es más lógica: una ganó aquí y la otra allá."
+    ],
+    "question": "¿Cuántas cosas repites en un orden que nadie te explicó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El orden que sobrevivió a la ciudad",
+    "subtitle": "Ras Shamra, Siria, excavaciones desde 1929",
+    "body": "Ugarit escribió con un alfabeto cuneiforme de treinta signos. Sus tablillas de escuela conservan el orden de las letras: casi el mismo que el fenicio, y de ahí el griego y el latino. Los signos no dejaron descendencia. El orden sí."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ugarit", "#RasShamra", "#HistoriaDelAlfabeto"],
+    "extended": ["#Arqueologia", "#Siria", "#EdadDelBronce", "#Escritura", "#Louvre", "#Epigrafia", "#Civilizaciones", "#Lenguas"]
+  },
+  "sources": [
+    {
+      "claim": "La escritura ugarítica es un alfabeto cuneiforme de 30 signos consonánticos, con una variante «corta» de 22. Está documentada aproximadamente desde el siglo XIV hasta comienzos del siglo XII a.C. Casi todos los textos proceden de Ugarit (Ras Shamra) y de Ras Ibn Hani. Se han descubierto más de diez abecedarios, y su secuencia «resulta muy próxima a la del fenicio», lo que indica una tradición escolar compartida. Un abecedario, el RS 88.2215, presenta en cambio un orden sudsemítico distinto: h, l, ḥ, m. Los escribas escribían horizontalmente desde el ángulo superior izquierdo hacia la derecha, separando las palabras con un trazo vertical.",
+      "source": "Mnamon, «Antiche scritture del Mediterraneo», proyecto de la Scuola Normale Superiore de Pisa, ficha «Ougaritique»",
+      "url": "https://mnamon.sns.it/index.php?page=Scrittura&id=30&lang=fr"
+    },
+    {
+      "claim": "La tablilla RS 12.033 es un abecedario descubierto en 1948 en las excavaciones del Palacio Real de Ras Shamra. El alfabeto completo, llamado «largo», consta de 30 letras, cuyo orden es constante. Los signos se componen de entre uno y seis trazos hechos con el «qalam» en tres orientaciones —horizontal, vertical y oblicua— y se leen de izquierda a derecha. El documento contribuyó a confirmar los principios del desciframiento del ugarítico.",
+      "source": "Ministère de la Culture (Francia), sitio «Ougarit», ficha «Un abécédaire: la tablette RS 12.033»",
+      "url": "https://archeologie.culture.gouv.fr/ougarit/fr/un-abecedaire-la-tablette-rs-12033"
+    },
+    {
+      "claim": "El alfabeto cuneiforme de Ugarit tenía 30 signos. El yacimiento se excavó por primera vez en 1929 y la escritura fue descifrada rápidamente por Ch. Virolleaud, H. Bauer y É. Dhorme. La página precisa que ese alfabeto «no parece haber tenido un heredero directo, contrariamente al alfabeto lineal (‘fenicio’)».",
+      "source": "Ministère de la Culture (Francia), sitio «Ougarit», ficha «Les alphabets à Ougarit»",
+      "url": "https://archeologie.culture.gouv.fr/ougarit/fr/les-alphabets-ougarit"
+    },
+    {
+      "claim": "Pierre Bordreuil y Dennis Pardee, «Un abécédaire du type sud-sémitique découvert en 1988 dans les fouilles archéologiques françaises de Ras Shamra-Ougarit», Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres, 1995, volumen 139, número 3, páginas 855-860. La tablilla RS 88.2215 contiene treinta letras del alfabeto cuneiforme ugarítico ordenadas según la secuencia sudsemítica «halaham», distinta del orden «abgad». Ese orden está atestiguado en abundante documentación sudarábiga y «se perpetuará en el abecedario etíope al menos en su inicio».",
+      "source": "Persée, Comptes rendus des séances de l’Académie des Inscriptions et Belles-Lettres (1995)",
+      "url": "https://www.persee.fr/doc/crai_0065-0536_1995_num_139_3_15526"
+    },
+    {
+      "claim": "Fragmento de tablilla de arcilla cocida, número de inventario AO 19992, número de excavación RS 10.087, procedente de Ras Shamra (montículo noroeste del tell), datado en el Bronce Reciente II (-1400 a -1200), de 6,7 cm de alto por 4,3 cm de ancho. El museo lo describe como «abécédaire cunéiforme incomplet auquel il manque 7 lettres». Fue descubierto en 1938 en las excavaciones dirigidas por Claude Schaeffer y se expone en la sala 301 del ala Sully.",
+      "source": "Musée du Louvre, catálogo de colecciones, Departamento de Antigüedades Orientales",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010144705"
+    },
+    {
+      "claim": "Fragmento de tablilla con las huellas de un abecedario, inventario AO 19998 A, número de excavación RS 5.274, procedente de la acrópolis de Ras Shamra, datado en el Bronce Reciente (-1550 a -1150), de 30 mm de alto por 40 mm de ancho. Confirma la existencia de varios ejemplares de abecedarios escolares hallados en Ugarit.",
+      "source": "Musée du Louvre, catálogo de colecciones",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010459153"
+    },
+    {
+      "claim": "En la primavera de 1929, Claude Schaeffer descubrió en Ras Shamra un conjunto de tablillas y fragmentos con una escritura cuneiforme nunca vista. En septiembre de 1930, Hans Bauer en Halle, Charles Virolleaud en París y Édouard Dhorme en Jerusalén lograron descifrar esos signos e identificaron la escritura alfabética de una lengua semítica nueva, que llamaron ugarítico por el nombre antiguo de la ciudad.",
+      "source": "Académie des Inscriptions et Belles-Lettres, presentación del volumen «Les écritures mises au jour sur le site d’Ougarit (Syrie) et leur déchiffrement − 1930-2010»",
+      "url": "https://aibl.fr/publications/les-ecritures-mises-au-jour-sur-le-site-dougarit-syrie-et-leur-dechiffrement-%E2%88%92-1930-2010/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el alfabeto latino o el griego descienden de la escritura de Ugarit. El Ministerio de Cultura francés lo niega expresamente: el alfabeto cuneiforme ugarítico no parece haber tenido heredero directo. Lo que se hereda es el orden de las letras, no los signos, y por vía del alfabeto lineal fenicio.",
+    "No llamar a Ugarit «la cuna del alfabeto» ni decir que allí se inventó el alfabeto. La escritura alfabética es anterior y de otra rama, la protosinaítica y protocananea; lo que Ugarit aporta es el testimonio más antiguo conocido del orden alfabético.",
+    "No decir que el orden ugarítico y el fenicio son idénticos. Las fuentes dicen «muy próximo». Hay diferencias, entre otras cosas porque el ugarítico tiene treinta signos y el fenicio veintidós.",
+    "No presentar el orden halaham como una curiosidad muerta. Está documentado en la epigrafía sudarábiga y sobrevive en el arranque del abecedario etíope; es un orden vivo, no una variante fallida.",
+    "No atribuir el desciframiento a una sola persona. Bauer, Virolleaud y Dhorme trabajaron por separado en 1930, en Halle, París y Jerusalén, y las fuentes francesas añaden a D. Cohen. Fue un resultado convergente, no un hallazgo individual.",
+    "No fechar el descubrimiento del yacimiento en 1928. Lo que suele contarse de esa fecha es el hallazgo casual previo; la primera campaña arqueológica, dirigida por Claude Schaeffer, es de la primavera de 1929, y esa es la fecha que sostienen las fuentes citadas.",
+    "No dar el número de abecedarios como cerrado. Mnamon habla de «más de diez»; conviene decir eso y no una cifra exacta.",
+    "No decir que la tablilla RS 88.2215 es más antigua ni más moderna que las del orden abgad. Las fuentes citadas no establecen esa prioridad: lo que documentan es que los dos órdenes se practicaban en el mismo horizonte."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

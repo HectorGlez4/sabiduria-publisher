@@ -1,0 +1,69 @@
+{
+  "id": "2026-09-15-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Kenkō y la segunda flecha del arquero",
+    "hook": "Un maestro de tiro con arco le prohíbe al aprendiz llevar dos flechas. No porque la segunda estorbe: porque existiendo ya arruina la primera. El texto es japonés y tiene cerca de setecientos años.",
+    "quote": {
+      "text": "El que empieza no debe tomar dos flechas. Fiado en la segunda, descuida la primera. Cada vez, sin pensar en el acierto ni en el fallo, resuélvete a que todo se decida en esta única flecha.",
+      "author": "Yoshida Kenkō",
+      "work": "Tsurezuregusa (Ocurrencias de un ocioso), sección 92; escrito entre 1330 y 1332",
+      "attribution_verified": true
+    },
+    "body": [
+      "Kenkō fue un monje budista que escribió entre 1330 y 1332 un cuaderno de doscientas cuarenta y tres secciones, de una línea unas y de varias páginas otras. Es uno de los tres libros que definen el género japonés del «zuihitsu», seguir el pincel: escribir a donde lleve el pensamiento, sin plan. La sección 92 cuenta una escena mínima. Un hombre aprende a tirar con arco y se pone frente al blanco con dos flechas entre los dedos. El maestro lo corrige y le explica por qué.",
+      "El maestro no habla de técnica. Habla de lo que la flecha de repuesto le hace a la atención antes de que nadie dispare. El texto lo dice con una precisión incómoda: teniendo apenas dos flechas, y delante del maestro, ¿quién pensaría descuidar una? La negligencia no es una decisión. «El desgano, aunque uno mismo no lo advierta, el maestro lo advierte.» Y Kenkō cierra: esta advertencia vale para todas las cosas. Lo que sigue casi nunca se cita. El que estudia un camino piensa de noche que ya tendrá la mañana, y de mañana que ya tendrá la noche. Si la pereza se esconde así en un día entero, cuánto menos vamos a reconocerla dentro de un solo instante.",
+      "La segunda flecha no falla por mala. Falla por estar. Nada de esto condena tener un plan alternativo: es una observación sobre dónde va la atención cuando existe un respaldo. Kenkō no pide quemar las naves; pide notar el descuento que uno se aplica sin darse cuenta. Y un dato sobre el propio libro: estas notas circularon casi tres siglos sin mayor eco, porque la obra es modelo del estilo y del gusto japoneses desde el siglo XVII, no desde el XIV. Del hombre que escribió sobre no aplazar, la posteridad se ocupó trescientos años más tarde."
+    ],
+    "question": "¿Qué estás haciendo hoy con una flecha de repuesto en la mano?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Kenko", "#Tsurezuregusa", "#LiteraturaJaponesa"],
+    "extended": ["#Citas", "#Japon", "#Zuihitsu", "#Atencion", "#Clasicos", "#SigloXIV", "#Budismo", "#Ensayo"]
+  },
+  "sources": [
+    {
+      "claim": "Texto original de la sección 92: «弓を射ることを習ふ人、もろ矢をたばさみて的に向ふ。師の曰く、「初心の人二つの矢を持つことなかれ。後の矢を頼みて、初めの矢になほざりの心あり、毎度たゞ得失なく、この一箭に定むべしと思へ。」といふ。わづかに二つの矢、師の前にて一つをおろそかにせむと思はむや。懈怠の心、みづから知らずといへども、師これを知る。このいましめ萬事にわたるべし。» La obra tiene 243 secciones, de la 1 a la 243. La edición base declarada por la fuente es «日本文学大系: 校註», tomo 3, 国民図書, era Taishō 14-15 (1925-1926).",
+      "source": "Wikisource en japonés, 徒然草 (校註日本文學大系), edición de 国民図書",
+      "url": "https://ja.wikisource.org/wiki/%E5%BE%92%E7%84%B6%E8%8D%89_(%E6%A0%A1%E8%A8%BB%E6%97%A5%E6%9C%AC%E6%96%87%E5%AD%A6%E5%A4%A7%E7%B3%BB)"
+    },
+    {
+      "claim": "La segunda parte de la sección 92 continúa: «道を學する人、夕には朝あらむことを思ひ、朝には夕あらむことを思ひて、重ねて懇に修せむことを期す。況んや一刹那のうちにおいて、懈怠の心あることを知らんや。何ぞ、たゞ今の一念において、直ちにすることの甚だ難き。» Es decir: quien estudia un camino piensa de noche que tendrá la mañana y de mañana que tendrá la noche, y aplaza la práctica esmerada; si eso ocurre en un día, con cuánta menos razón advertirá el desgano dentro de un solo instante.",
+      "source": "tsurezuregusa.com, edición en línea del Tsurezuregusa con texto original y versión en japonés moderno, sección 92 (fuente de menor rango, usada para corroborar la segunda mitad del pasaje; el texto coincide con el de la edición de 校註日本文學大系 citada arriba)",
+      "url": "https://tsurezuregusa.com/092dan/"
+    },
+    {
+      "claim": "El Tsurezuregusa fue «escrito entre 1330 y 1332» por un sacerdote budista, Kenkō, y «ha servido como modelo del estilo y el gusto japoneses desde el siglo XVII». La edición vigente recoge la «aclamada traducción de Donald Keene».",
+      "source": "Columbia University Press, ficha editorial de «Essays in Idleness: The Tsurezuregusa of Kenkō», traducción de Donald Keene",
+      "url": "https://cup.columbia.edu/book/essays-in-idleness/9780231112550/"
+    },
+    {
+      "claim": "Ficha bibliográfica de la traducción de referencia: Donald Keene (trad.), «Essays in Idleness: The Tsurezuregusa of Kenkō», xxii + 213 pp., Nueva York y Londres, Columbia University Press, 1967, reseñada en el Bulletin of the School of Oriental and African Studies.",
+      "source": "Cambridge Core, reseña en el Bulletin of the School of Oriental and African Studies (University of London)",
+      "url": "https://www.cambridge.org/core/journals/bulletin-of-the-school-of-oriental-and-african-studies/article/donald-keene-tr-essays-in-idleness-the-tsurezuregusa-of-kenko-xxii-213-pp-new-york-and-london-columbia-university-press-1967-650-58s/28CF29D09533A978FD679B3F23918436"
+    },
+    {
+      "claim": "Registro de autoridad del autor en el catálogo del ejemplar digitalizado de la traducción de Keene: «Yoshida, Kenkō, 1282?-1350». Confirma que las fechas de vida del autor son aproximadas.",
+      "source": "Internet Archive, ejemplar catalogado de «Essays in idleness: the Tsurezuregusa of Kenkō»",
+      "url": "https://archive.org/details/essaysinidleness0000yosh"
+    }
+  ],
+  "do_not_use": [
+    "No presentar el pasaje como una máxima zen ni atribuirlo al budismo zen. Kenkō fue monje budista, pero la sección 92 no invoca ninguna escuela; la lectura zen es un añadido posterior, muy extendido en la literatura de tiro con arco.",
+    "No convertirlo en un «no tengas plan B». El texto no habla de eliminar alternativas, sino del desgano que aparece en la primera flecha por saber que hay una segunda. Es una observación sobre la atención, no una regla de estrategia.",
+    "No citar solo la primera frase. La segunda mitad de la sección, la que pasa del arco al estudio y al instante presente, es la que da sentido a la advertencia, y es la que casi siempre se cae.",
+    "No dar las fechas de Kenkō como seguras. Los catálogos las registran con interrogante: 1282?-1350. La fecha firme es la de la composición del libro, entre 1330 y 1332.",
+    "No decir que el libro fue célebre desde el siglo XIV. Se tiene por clásico y por modelo de estilo desde el siglo XVII; de su composición y su publicación se sabe poco y buena parte es conjetura.",
+    "No atribuir a Kenkō la anécdota como experiencia propia. El texto dice «cierto hombre» que aprendía a tirar con arco; no se identifica al arquero ni al maestro.",
+    "No citar la traducción de Donald Keene palabra por palabra sin tenerla delante. La versión en español de esta pieza se hizo desde el texto japonés de la edición citada; la traducción inglesa de Keene, de 1967, se menciona solo como referencia estándar.",
+    "No numerar la sección como 91 ni como 93. En la numeración corriente de las 243 secciones es la 92, y así aparece en las ediciones japonesas citadas."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

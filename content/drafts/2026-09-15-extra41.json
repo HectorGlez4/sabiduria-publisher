@@ -1,0 +1,70 @@
+{
+  "id": "2026-09-15-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Sojourner Truth y el discurso de Akron de 1851",
+    "hook": "La frase por la que se recuerda este discurso no está en la única transcripción hecha por alguien que estuvo en la sala. La escribió otra persona doce años después, en un habla que Sojourner Truth no tenía.",
+    "quote": {
+      "text": "No sé leer, pero sé oír. He oído la Biblia y he aprendido que Eva hizo pecar al hombre. Pues bien: si la mujer puso el mundo patas arriba, denle la oportunidad de ponerlo otra vez del derecho.",
+      "author": "Sojourner Truth",
+      "work": "Convención de Akron, 1851; Anti-Slavery Bugle, 21 de junio de 1851",
+      "attribution_verified": true
+    },
+    "body": [
+      "Nació hacia 1797 en el condado de Ulster, Nueva York, con el nombre de Isabella Baumfree. La esclavizaron colonos neerlandeses y el neerlandés fue su primera lengua. Quedó libre el 4 de julio de 1827, por una ley del estado que liberaba ese día a los nacidos antes de 1799. Nunca aprendió a leer ni a escribir. El 29 de mayo de 1851 habló en la Convención de Derechos de la Mujer de Akron, Ohio. Marius Robinson, director del Anti-Slavery Bugle y secretario de la convención, publicó lo que dijo tres semanas después; eran amigos y revisaron juntos el texto antes de imprimirlo.",
+      "La versión que todo el mundo conoce no es esa. La escribió Frances Dana Gage, que había presidido la convención, y la publicó el 23 de abril de 1863 en el New York Independent: doce años más tarde. Gage añadió el estribillo «Ar’n’t I a woman?», repetido cuatro veces, y trece hijos vendidos como esclavos. En el texto de Robinson no está ninguna de las dos cosas. Y la escribió en un dialecto sureño que Truth no podía tener: la esclavizaron en Nueva York y hablaba neerlandés antes que inglés.",
+      "Lo que sí dijo cabe en tres golpes. «Soy los derechos de la mujer.» «Tengo tanto músculo como cualquier hombre y puedo hacer tanto trabajo: he arado, segado, descascarado, talado y guadañado.» Y sobre la inteligencia: si la mujer tiene una pinta y el hombre un cuarto de galón, ¿por qué no puede tener su pinta llena? Gage no era una adversaria: era una aliada que mejoró la frase para que golpeara más fuerte. Ese es el punto incómodo. La cita más famosa de una mujer que no sabía escribir se la escribió otra, y funcionó tan bien que tapó su voz siglo y medio."
+    ],
+    "question": "¿A quién le has puesto palabras en la boca creyendo que lo defendías?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SojournerTruth", "#Akron1851", "#HistoriaDeEstadosUnidos"],
+    "extended": ["#Citas", "#Abolicionismo", "#DerechosDeLasMujeres", "#SigloXIX", "#Archivos", "#Prensa", "#Testimonio", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la transcripción de Marius Robinson, publicada en el Salem Anti-Slavery Bugle el 21 de junio de 1851: «I am a woman’s rights. I have as much muscle as any man, and can do as much work as any man. I have plowed and reaped and husked and chopped and mowed, and can any man do more than that?»; «if woman have a pint and man a quart —why can’t she have her little pint full?»; «I can’t read, but I can hear. I have heard the bible and have learned that Eve caused man to sin. Well if woman upset the world, do give her a chance to set it right side up again.» El discurso se pronunció el 29 de mayo de 1851 en la Convención de Derechos de la Mujer de Akron, Ohio. El título popular «Ain’t I a Woman?» procede de relatos posteriores, no de esta versión de 1851.",
+      "source": "House Divided / Knowledge for Freedom seminar, Dickinson College, «Sojourner Truth, woman’s rights speech (1851)»",
+      "url": "https://housedivided.dickinson.edu/sites/teagle/texts/sojourner-truth-womans-rights-speech-1851/"
+    },
+    {
+      "claim": "Procedencia documental de las dos versiones. Versión Robinson: Salem (OH) Anti-Slavery Bugle, 21 de junio de 1851, página 4, transcrita por M. Robinson; empieza «May I say a few words? I want to say a few words about this matter. I am a woman’s rights...». Versión Gage: New York Independent, 23 de abril de 1863, página 1, transcrita por F. D. Gage; empieza «Well, chillen, whar dar’s so much racket dar must be som’ting out o’ kilter...». Robinson presenta un inglés estándar; Gage emplea un dialecto fonético que ha generado debate historiográfico sobre autenticidad.",
+      "source": "Voices of Democracy: The U.S. Oratory Project, University of Maryland, «Truth, Address at the Woman’s Rights Convention, Speech Text»",
+      "url": "https://voicesofdemocracy.umd.edu/truth-address-at-the-womans-rights-convention-speech-text/"
+    },
+    {
+      "claim": "El proyecto documenta las diferencias entre ambas versiones: Robinson escribió en lengua estándar y Gage añadió un dialecto sureño de persona esclavizada que el proyecto califica de falso; la frase «ar’n’t I a woman?», repetida cuatro veces, solo aparece en Gage; los «thirteen chillen» vendidos como esclavos también son añadido de Gage y no figuran en Robinson. Robinson y Truth eran buenos amigos y revisaron la transcripción antes de publicarla. La versión de Robinson es la «más correcta históricamente».",
+      "source": "The Sojourner Truth Project, «Compare the Speeches»",
+      "url": "https://www.thesojournertruthproject.com/compare-the-speeches"
+    },
+    {
+      "claim": "Nombre de nacimiento: Isabella Baumfree. Nació en el condado de Ulster, Nueva York, hacia 1797. «Enslaved by Dutch settlers, Dutch was her first language.» Una ley de Nueva York de 1817 dispuso que todas las personas esclavizadas en el estado nacidas antes del 4 de julio de 1799 quedarían libres el 4 de julio de 1827. El proceso para recuperar a su hijo Peter, vendido ilegalmente, terminó en 1828 cuando el tribunal falló a su favor. Adoptó el nombre de Sojourner Truth en 1843. Dictó sus memorias a su amiga Olive Gilbert. La página precisa además que en la versión de Robinson la frase «Ain’t I a Woman» no está presente, y que la versión de Frances Gage se publicó en 1863, doce años después del discurso.",
+      "source": "National Park Service, biografía de Sojourner Truth y artículo «Sojourner Truth: Ain’t I A Woman?»",
+      "url": "https://www.nps.gov/people/sojourner-truth.htm"
+    },
+    {
+      "claim": "Reproducción del pasaje del Anti-Slavery Bugle: «I want to say a few words about this matter. I am a woman’s rights. I have as much muscle as any man, and can do as much work as any man... As for intellect, all I can say is, if woman have a pint and man a quart —why can’t she have her little pint full?» El periodista Marius Robinson transcribió la intervención en la Convención de Derechos de la Mujer de Akron, Ohio, del 29 de mayo de 1851.",
+      "source": "Educating for American Democracy, ficha de fuente primaria «The Anti-Slavery Bugle, Sojourner Truth at the Women’s Rights Convention (1851)»",
+      "url": "https://www.educatingforamericandemocracy.org/primary-source/the-anti-slavery-bugle-sojourner-truth-at-the-womens-rights-convention-1851/"
+    }
+  ],
+  "do_not_use": [
+    "No citar «¿Acaso no soy una mujer?» como palabras de Sojourner Truth. La frase, en cualquiera de sus formas —«Ar’n’t I a woman?», «Ain’t I a woman?»—, aparece por primera vez en la versión que Frances Dana Gage publicó en 1863, doce años después. No está en la transcripción de 1851.",
+    "No reproducir el discurso en dialecto sureño. Es un añadido de Gage. Truth fue esclavizada en el estado de Nueva York y su primera lengua fue el neerlandés; ese habla no era la suya.",
+    "No decir que tuvo trece hijos ni que trece le fueron vendidos como esclavos. Es otro añadido de la versión de 1863. Las fuentes coinciden en que ese dato no está en el texto de 1851.",
+    "No presentar a Frances Gage como una falsificadora ni atribuirle mala fe. Presidió la convención y era del mismo bando; lo que hizo fue reescribir el discurso años después, y así se debe decir.",
+    "No llamar «el discurso original» a ningún texto. No existe grabación ni taquigrafía. Lo que hay es la transcripción de un testigo, Marius Robinson, hecha tres semanas después y revisada con ella; por eso se la considera la versión más fiable, no la palabra exacta.",
+    "No decir que Truth era analfabeta por descuido o que aprendió a leer de mayor. No aprendió a leer ni a escribir; dictaba. Ese hecho es justamente lo que hace posible el problema de la cita.",
+    "No fijar la fecha de la convención sin matiz. Las fuentes de esta pieza sitúan su intervención el 29 de mayo de 1851; alguna página institucional da el 28 de mayo como fecha de la convención, que se celebró en más de una jornada. Usar el 29 de mayo para el discurso.",
+    "No datar su nacimiento con precisión. Las fuentes dicen «hacia 1797»; no hay registro exacto.",
+    "No atribuir el hallazgo a una sola persona. La corrección del texto se debe al trabajo de la historiadora Nell Irvin Painter y, después, al del Sojourner Truth Project, que cotejó ambas versiones."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

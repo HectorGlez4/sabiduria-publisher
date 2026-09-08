@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-15-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "status": "draft",
+  "core": {
+    "subject": "al-Juarismi y las palabras álgebra, guarismo y algoritmo",
+    "hook": "Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.",
+    "body": [
+      "Muhammad ibn Musa al-Juarismi vivió aproximadamente entre el 780 y el 850 y trabajó en la Casa de la Sabiduría de Bagdad, la academia que fundó el califa al-Mamún. Allí escribió el «Kitab al-mujtasar fi hisab al-yabr wa-l-muqabala». Las dos palabras del título son dos operaciones: «al-yabr» es completar, quitar de una ecuación los términos negativos; «al-muqabala» es equilibrar, reducir los términos iguales de ambos lados. De la primera salió «álgebra». La sección final del libro no es teoría: son repartos de testamentos y legados según el derecho islámico de sucesiones. El álgebra empezó como herramienta de notario.",
+      "Con «algoritmo» la cosa se complica. Su aritmética llegó a Europa en una traducción latina cuyo único manuscrito conocido está en la Universidad de Cambridge, con la signatura Ms. Ii.6.5, y que empieza con dos palabras: «Dixit Algorizmi», dijo al-Juarismi. De ese nombre latinizado sale «algorismus». El título por el que se cita el manuscrito, «Algoritmi de numero Indorum», no es medieval: lo puso Baldassarre Boncompagni al editarlo en 1857. Y el Diccionario de la lengua española no suscribe esa etimología: para «algoritmo» propone «quizá del lat. tardío *algobarismus». La derivación desde el nombre propio se la reserva a «guarismo».",
+      "El diccionario tiene además un tropiezo peor, y está documentado. Antonio J. Durán, del Instituto de Matemáticas de la Universidad de Sevilla, revisó siglo y medio de ediciones: la de 1956 atribuyó a al-Juarismi la invención de los logaritmos, y el error siguió impreso en 1970 y en 1984. Los logaritmos los publicó John Napier en Edimburgo en 1614: unos ocho siglos más tarde. Un nombre puede sobrevivir mil doscientos años dentro de una palabra de uso diario y seguir sin que se sepa bien de quién es."
+    ],
+    "question": "¿Cuántas palabras que usas a diario son el nombre de alguien?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Un nombre dentro de tres palabras",
+    "subtitle": "Bagdad, hacia el año 820",
+    "body": "Al-Juarismi escribió en la Casa de la Sabiduría un libro cuyo título dio la palabra álgebra. Su nombre latinizado, «Algorizmi», dio guarismo y, según la lectura más difundida, algoritmo. La parte final de ese libro trata de repartos de herencias."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AlJuarismi", "#Algebra", "#HistoriaDeLasMatematicas"],
+    "extended": ["#Etimologia", "#Bagdad", "#CasaDeLaSabiduria", "#Algoritmos", "#Lengua", "#Ciencia", "#EdadMedia", "#Manuscritos"]
+  },
+  "sources": [
+    {
+      "claim": "Al-Juarismi nació hacia el 780 y murió hacia el 850. Trabajó como erudito bajo el califa al-Mamún, que fundó en Bagdad la academia conocida como Casa de la Sabiduría para traducir manuscritos griegos e investigar en matemáticas y astronomía. Su tratado de álgebra se titula «Hisab al-jabr w’al-muqabala» y dio nombre a la disciplina. «Al-jabr» significa completar: retirar los términos negativos de una ecuación. «Al-muqabala» significa equilibrar: reducir las potencias iguales que aparecen a ambos lados. La parte final del libro se ocupa de las complicadas reglas islámicas de herencia. Su tratado de aritmética se tradujo al latín como «Algoritmi de numero Indorum»; de esa forma latinizada de su nombre, «Algoritmi», procede el término moderno «algoritmo», y esa obra presentó a Europa el sistema de numeración posicional de origen indio.",
+      "source": "MacTutor History of Mathematics Archive, University of St Andrews, biografía de al-Khwarizmi",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Khwarizmi/"
+    },
+    {
+      "claim": "«The algebra of Mohammed ben Musa», de Muhammad ibn Musa al-Khuwarizmi, edición y traducción de Friedrich August Rosen, publicada en Londres en 1831 por el Oriental Translation Fund, con texto árabe y traducción inglesa enfrentados; xvi, 208, [4], 122, [2] páginas.",
+      "source": "Internet Archive, ejemplar digitalizado de la edición de Rosen (Londres, 1831)",
+      "url": "https://archive.org/details/algebraofmohamme00khuwrich"
+    },
+    {
+      "claim": "«Dixit Algorizmi» es la frase con la que arranca un manuscrito conservado en la biblioteca de la Universidad de Cambridge con la signatura Ms. Ii.6.5, al que se suele citar por el título «Algoritmi de numero Indorum». Ese título lo inventó Baldassarre Boncompagni al publicarlo en 1857. Es probablemente el texto más próximo a lo que escribió al-Juarismi, y su traducción latina en el siglo XII introdujo el término «algoritmo» en Occidente.",
+      "source": "Baldassarre Boncompagni, «Trattati d’aritmetica: Algoritmi de numero indorum» (Roma, 1857), ejemplar digitalizado; corroborado por la entrada enciclopédica sobre al-Khwarizmi que documenta la signatura y la autoría del título",
+      "url": "https://archive.org/details/bub_gb_Jyat9f1pSIYC"
+    },
+    {
+      "claim": "El Diccionario de la lengua española da para «algoritmo» la etimología «quizá del lat. tardío *algobarismus, y este abrev. del ár. clás. ḥisābu lḡubār, ‘cálculo mediante cifras arábigas’», y no la derivación directa del nombre del matemático. Para «guarismo» sí remite al nombre: procede del antiguo «alguarismo», y este del hispanoárabe *alguarismí, gentilicio del matemático al-Juarismi.",
+      "source": "Diccionario de la lengua española (RAE-ASALE), entradas «algoritmo», «alguarismo» y «guarismo». dle.rae.es devuelve error 403 a la herramienta de descarga usada aquí; el texto de la etimología se recogió de los extractos indexados de esas mismas entradas y coincide con lo que citan las fuentes secundarias consultadas",
+      "url": "https://dle.rae.es/algoritmo"
+    },
+    {
+      "claim": "Joan Corominas deriva «guarismo» del antiguo «alguarismo» (‘arte de contar, aritmética’), y este de Al-ḫuwārizmî, sobrenombre del matemático árabe. Primeras documentaciones: «alguarismo» en 1256-1276, en los Libros del saber de astronomía III, 36; «guarismo» en 1570, en C. de las Casas. Aparece también en el Cancionero de Baena, en Nebrija y en Hurtado de Mendoza, con las variantes «algurismo», «arguarysmo» y «algarismo».",
+      "source": "Joan Corominas, Diccionario crítico etimológico, entrada «guarismo», reproducido en la Biblia Medieval",
+      "url": "https://bibliamedieval.es/bibliateca.es/corominas/DATA/HTML/guarismo.html"
+    },
+    {
+      "claim": "Antonio J. Durán, del Instituto de Matemáticas de la Universidad de Sevilla (IMUS), reconstruye el tratamiento etimológico de «guarismo» en el diccionario de la Academia: antes de 1869 no se daba etimología; ediciones posteriores remitieron a una voz árabe «huarezmi»; la edición de 1956 atribuyó a al-Juarismi la invención de los logaritmos, y «el garrafal error se mantiene en las ediciones de 1970 y 1984»; la etimología desapareció en 1989, reapareció en 1992 sin la atribución de los logaritmos y volvió a desaparecer en 2001.",
+      "source": "Antonio J. Durán, «Las aventuras del guarismo en el diccionario de la RAE», blog del Instituto de Matemáticas de la Universidad de Sevilla (IMUS), 2018",
+      "url": "https://institucional.us.es/blogimus/2018/03/las-aventuras-del-guarismo-en-el-diccionario-de-la-rae/"
+    },
+    {
+      "claim": "John Napier (1550, castillo de Merchiston, Edimburgo - 4 de abril de 1617, Edimburgo) publicó en 1614 el «Mirifici logarithmorum canonis descriptio», su obra sobre logaritmos; en 1616 apareció la traducción inglesa de Edward Wright.",
+      "source": "MacTutor History of Mathematics Archive, University of St Andrews, biografía de John Napier",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Napier/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que al-Juarismi inventó el álgebra ni el cero ni los números arábigos. El sistema posicional es de origen indio; lo que hizo su aritmética fue presentarlo de forma sistemática a Europa a través de la traducción latina.",
+    "No decir que inventó los logaritmos. Es exactamente el error que el diccionario de la Academia arrastró desde 1956 hasta 1984. Los publicó John Napier en 1614.",
+    "No presentar «Algoritmi de numero Indorum» como el título original ni como título medieval. Lo acuñó Baldassarre Boncompagni en 1857; el manuscrito de Cambridge empieza «Dixit Algorizmi».",
+    "No afirmar sin matiz que «algoritmo» viene del nombre de al-Juarismi. Es la explicación más difundida y la que sostiene MacTutor, pero el Diccionario de la lengua española propone otra vía, *algobarismus, y algunos filólogos objetan además que un término latino no puede derivar por esa ruta del árabe clásico. La derivación desde el nombre propio que sí es pacífica es la de «guarismo».",
+    "No llamarlo árabe sin más ni asignarle una nacionalidad moderna. La nisba «al-Juarismi» remite a Corasmia, y su origen se discute; lo que está documentado es dónde trabajó, Bagdad.",
+    "No dar por segura la Casa de la Sabiduría como institución con edificio, plantilla y biblioteca al modo moderno. Es como se cuenta habitualmente, pero su naturaleza exacta se discute entre historiadores; aquí se dice solo lo que sostiene la fuente citada: que al-Mamún la fundó y que al-Juarismi trabajó allí.",
+    "No fechar el libro de álgebra con precisión. Las fuentes dan «hacia 820» y «hacia 830»; conviene decir «hacia el año 820» y no una fecha exacta.",
+    "No decir que la parte de herencias es un apéndice menor. Es la sección final y ocupa una parte considerable de la obra; ese es justamente el dato que interesa, porque muestra para qué se escribió."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
