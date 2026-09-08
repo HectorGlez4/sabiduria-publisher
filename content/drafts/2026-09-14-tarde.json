@@ -1,0 +1,63 @@
+{
+  "id": "2026-09-14-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Tiruvalluvar y el dístico 314 del Tirukkural",
+    "hook": "Un poema tamil de hace unos quince siglos manda castigar a quien te hizo daño. El castigo que prescribe es hacerle un bien, y la instrucción no termina ahí: termina en olvidar las dos cosas.",
+    "quote": {
+      "text": "El castigo para quien te hizo daño es hacerle un bien que lo avergüence; y después dejar pasar lo uno y lo otro.",
+      "author": "Tiruvalluvar",
+      "work": "Tirukkural, libro I, capítulo 32, dístico 314; traducción de G. U. Pope, 1886",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Tirukkural son 1.330 dísticos en tamil, de dos líneas cada uno, repartidos en 133 capítulos de diez. Se atribuye a Tiruvalluvar, de quien no se sabe casi nada con certeza. La fecha se ha discutido durante más de un siglo: se han propuesto desde el 300 a.C. hasta el siglo V d.C.; Kamil Zvelebil descartó las fechas anteriores al siglo V porque nada en el texto las sostiene, y Stuart Blackburn sitúa el consenso actual hacia el año 500. La primera traducción inglesa completa la publicó el misionero G. U. Pope en Londres en 1886, con gramática, notas, léxico y concordancia.",
+      "El dístico 314 está en el libro primero, el de la virtud, dentro del capítulo 32, que se titula «No hacer daño». Ahí la frase deja de ser un elogio de la bondad. Tiene tres movimientos y ninguno sobra. El primero es un castigo, y la palabra es esa. El segundo convierte el castigo en un bien hecho al ofensor, con un propósito declarado: que se avergüence. Los comentaristas tamiles insisten en que esa vergüenza no es humillación pública sino el despertar de la propia conciencia del que hizo el daño. El tercero es el verbo final, «viḍal», dejar ir: olvidar el mal recibido y también el bien devuelto. Pope lo traduce «y pasa por alto el agravio».",
+      "La mitad que suele caerse al citar es la tercera. Sin ella la frase es un consejo de generosidad; con ella es una regla de contabilidad. Devolver bien por mal es fácil de convertir en crédito: se recuerda, se menciona, se cobra. El dístico cierra esa salida. Obliga a soltar la ofensa y, en el mismo gesto, el mérito de haberla perdonado. Lo que queda no es un saldo a favor. No queda nada."
+    ],
+    "question": "¿Se puede hacer un bien sin llevar la cuenta?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Tirukkural", "#Tiruvalluvar", "#LiteraturaTamil"],
+    "extended": ["#Citas", "#India", "#Etica", "#PoesiaClasica", "#Sabiduria", "#Traduccion", "#Clasicos", "#Perdon"]
+  },
+  "sources": [
+    {
+      "claim": "Texto tamil del dístico 314: «இன்னாசெய் தாரை ஒறுத்தல் அவர்நாண / நன்னயஞ் செய்து விடல்». Pertenece al libro primero, அறத்துப்பால் (Virtud), capítulo 32, இன்னாசெய்யாமை («No hacer daño»). Traducción de G. U. Pope: «To punish wrong, with kindly benefits the doers ply; / Thus shame their souls; but pass the ill unheeded by.» Traducción de Shuddhananda Bharati: «Doing good-turns, put them to shame / Thus chide the evil who do harm.» Los comentarios tamiles de Mu. Varadarajan y Salomon Pappaiah glosan el verbo final como olvidar tanto el mal recibido como el bien devuelto.",
+      "source": "thirukkural.io, edición en línea del Tirukkural con texto tamil, transliteración, traducciones y comentarios clásicos",
+      "url": "https://thirukkural.io/kural/314"
+    },
+    {
+      "claim": "El dístico 314 figura en la sección 1 (Virtud, அறத்துப்பால்), capítulo 32 (இன்னாசெய்யாமை, «No causar daño»). Traducción de Pope, 1886: «To punish wrong, with kindly benefits the doers ply; Thus shame their souls; but pass the ill unheeded by.» Traducción de Aiyar, 1916: «How shall a man punish them that have injured him? Let him do them a good turn and make them ashamed in their hearts.» El Tirukkural contiene 133 capítulos.",
+      "source": "thekural.org, edición en línea de los 1.330 dísticos en tamil e inglés",
+      "url": "https://thekural.org/kural/314"
+    },
+    {
+      "claim": "«Tiruvalluvanayanar arulicceyta Tirukkural = The ‘Sacred’ Kurral of Tiruvalluva-Nayanar», con introducción, gramática, traducción, notas, léxico y concordancia por el reverendo G. U. Pope, publicado por W. H. Allen & Co. en Londres en 1886; incluye la traducción inglesa de F. W. Ellis y la latina de Constanzo Beschi. Pope terminó su traducción el 1 de septiembre de 1886. Es la primera traducción inglesa completa de la obra. El volumen recoge también las versiones en prosa de W. H. Drew y John Lazarus.",
+      "source": "Internet Archive, ejemplar digitalizado de la edición de 1886 (W. H. Allen & Co., Londres), procedente de la Universidad de Toronto",
+      "url": "https://archive.org/details/tiruvalluvanayan00tiruuoft"
+    },
+    {
+      "claim": "El Tirukkural consta de 1.330 dísticos de dos líneas repartidos en 133 capítulos de diez. Sobre la datación: se ha propuesto un abanico que va del 300 a.C. al siglo V d.C.; Kamil Zvelebil rechazó las fechas anteriores al siglo V por no estar sostenidas por rasgos internos del texto ni por su ausencia en el corpus tamil anterior; Stuart Blackburn identifica el «consenso académico actual» en torno al año 500 d.C.",
+      "source": "Wikipedia en inglés, entradas «Kural» y «Dating the Tirukkural» (fuente de menor rango, usada solo para el estado de la discusión sobre la fecha, que atribuye explícitamente a Zvelebil y a Blackburn; la estructura de la obra y el texto del dístico están corroborados por las ediciones del propio Kural citadas arriba)",
+      "url": "https://en.wikipedia.org/wiki/Dating_the_Tirukkural"
+    }
+  ],
+  "do_not_use": [
+    "No datar el Tirukkural en el siglo I a.C. ni en el III a.C. Son fechas que circulan mucho y que Zvelebil descartó por falta de apoyo en el texto. El consenso académico que recoge Blackburn está en torno al año 500 d.C., y conviene decir que la fecha se discute.",
+    "No presentar el dístico como un consejo de mansedumbre ni de «poner la otra mejilla». El original empieza por un verbo de castigo y declara un propósito: avergonzar al ofensor. La comparación con el evangelio es del lector, no del texto.",
+    "No traducir esa vergüenza como humillación. Los comentaristas tamiles la entienden como el despertar de la conciencia del que hizo el daño, no como su exposición pública.",
+    "No citar solo la primera mitad. El verbo final, «viḍal», es parte de la instrucción: soltar el mal recibido y el bien devuelto. Sin él la frase cambia de sentido.",
+    "No adscribir la obra a una religión. El Tirukkural ha sido reclamado por tradiciones distintas y esa discusión no está zanjada; ninguna de las fuentes consultadas aquí la resuelve, así que no se toca.",
+    "No dar por buena la biografía de Tiruvalluvar. Las fechas, el oficio de tejedor y los episodios que se le atribuyen proceden de tradiciones tardías, no de fuentes contemporáneas.",
+    "No decir que Pope hizo la primera traducción a una lengua europea. Es la primera traducción inglesa completa, de 1886; antes había versiones parciales, y Constanzo Beschi había traducido parte al latín en el siglo XVIII."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

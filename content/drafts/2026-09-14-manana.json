@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-14-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Beatrix Potter y su ponencia micológica de 1897",
+    "hook": "El 1 de abril de 1897 se leyó en la Linnean Society de Londres un trabajo sobre germinación de esporas firmado por Helen B. Potter. Una semana después ella misma lo retiró, y no queda ninguna copia.",
+    "body": [
+      "Antes de los cuentos hubo microscopio. Beatrix Potter (1866-1943) empezó a pintar hongos a los veinte años y en 1892 conoció a Charles McIntosh, cartero rural y naturalista de Perthshire, que le enviaba especímenes vivos y le enseñó taxonomía y microscopía. Su tío, el químico Henry Roscoe, la puso en contacto con George Massee, encargado de criptógamas inferiores en Kew. De ahí salió un artículo, «On the germination of the spores of Agaricineae», que Massee leyó en su nombre el 1 de abril de 1897.",
+      "El 8 de abril, siete días después, Potter retiró el trabajo y no volvió a presentarlo. Le escribió a McIntosh que, según Massee, había sido «bien recibido», pero que le pedían más trabajo antes de imprimirlo. Ella detectó errores propios y prefirió retirarlo. La Sociedad no conserva ninguna versión en su archivo. Lo que sí quedó fueron los dibujos. En 1943 legó su colección de historia natural al Armitt Museum de Ambleside: más de doscientos cincuenta dibujos de hongos, más de cuarenta de musgos y numerosos estudios al microscopio.",
+      "La versión que circula dice que la Sociedad la rechazó por ser mujer y que se adelantó a la teoría de la simbiosis en los líquenes. La propia Linnean Society matiza las dos cosas. Las mujeres no fueron admitidas como miembros hasta 1905, pero la costumbre era que ningún autor leyera su propio trabajo: lo leía otra persona. Y sobre los líquenes: una nota al pie mal traducida hizo creer que Potter los tenía por unión de hongo y alga; sostenía lo contrario, que eran organismos autónomos, la posición corriente en la década de 1890. Queda algo más pequeño y más cierto: unas acuarelas tan exactas que los micólogos siguen usándolas para identificar especies."
+    ],
+    "question": "¿Cuánto de lo que admiramos en alguien se lo hemos añadido nosotros?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El artículo que ella retiró",
+    "subtitle": "Londres, 8 de abril de 1897",
+    "body": "Beatrix Potter presentó a la Linnean Society un trabajo sobre germinación de esporas. Lo leyó George Massee el 1 de abril de 1897. Una semana después ella lo retiró por errores propios. No se conserva ninguna copia."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BeatrixPotter", "#Micologia", "#LinneanSociety"],
+    "extended": ["#HistoriaDeLaCiencia", "#Hongos", "#Ilustracion", "#MujeresEnLaCiencia", "#Botanica", "#Museos", "#SigloXIX", "#Naturalistas"]
+  },
+  "sources": [
+    {
+      "claim": "El artículo se tituló «On the germination of the spores of Agaricineae», se presentó como Helen B. Potter en 1897 y se registró con el número 2978. «La práctica aceptada era que los trabajos siempre los leyera alguien distinto del autor. Normalmente los habrían leído los secretarios de Zoología o de Botánica de la Sociedad.» El trabajo fue «leído y discutido» el 1 de abril de 1897, «pero luego retirado, por Potter, el 8 de abril, y nunca vuelto a presentar». «Lamentablemente, como retiró el trabajo y no devolvió una versión enmendada para su publicación, no conservamos ninguna versión de él en nuestros archivos.» Las mujeres no fueron admitidas como miembros de la Sociedad hasta 1905. «Una nota al pie mal traducida llevó a algunos historiadores a creer que Potter creía que los líquenes eran una combinación estrechamente ligada de hongos y algas. En realidad Potter creía lo contrario, que los líquenes eran organismos autónomos», que era la posición mayoritaria en los años noventa del siglo XIX. Massee era «encargado de criptógamas inferiores en los Reales Jardines Botánicos de Kew» y el tío de Potter, Henry Roscoe, se la presentó. Potter escribió a McIntosh: «Mi trabajo fue leído en la Linnean Society y ‘bien recibido’ según el señor Massee, pero dicen que requiere más trabajo antes de imprimirse.» En 1997 John Marsden reconoció que Potter había sufrido una injusticia.",
+      "source": "The Linnean Society of London, «Beatrix Potter (1866-1943): The Tale of the Linnean Society»",
+      "url": "https://www.linnean.org/the-society/history-of-science/beatrix-potter-the-tale-of-the-linnean-society"
+    },
+    {
+      "claim": "«En su muerte, en 1943, nos legó sus exquisitos dibujos y acuarelas botánicas, junto con sus ejemplares personales de las primeras ediciones de sus libros ‘pequeños’.» El museo conserva «más de 250 dibujos de hongos, más de 40 de musgos distintos y muchos estudios al microscopio» de la germinación de esporas. Su investigación se presentó en un trabajo titulado «On the Germination of the Spores of Agaricineae» ante la Linnean Society.",
+      "source": "The Armitt Museum, Gallery & Library (Ambleside), página de la colección Beatrix Potter",
+      "url": "https://www.armitt.com/beatrix-potter/"
+    },
+    {
+      "claim": "Potter vivió entre 1866 y 1943, completó unas 350 pinturas de hongos y líquenes, pintó sus primeras acuarelas de setas conocidas a los veinte años y trabó amistad en 1892 con Charlie McIntosh, cartero y naturalista escocés, que le aportó conocimientos, validación e instrucción en técnicas de microscopio. En 1897 presentó un artículo de investigación a la Linnean Society de Londres. Sus «acuarelas se consideran tan exactas que los micólogos modernos todavía recurren a ellas para identificar hongos».",
+      "source": "Byron Breedlove, «Beatrix Potter, Author, Naturalist, Mycologist», Emerging Infectious Diseases (revista de los Centers for Disease Control and Prevention), 2019",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6711238/"
+    },
+    {
+      "claim": "«Massee presentó el trabajo en su nombre porque, como mujer, no se le permitía asistir a las sesiones ni leer su propio trabajo.» Fue «rechazada por el entonces director de Kew, por mujer y por aficionada». Charles McIntosh, «micólogo aficionado respetado, le enseñó taxonomía y le suministró especímenes vivos». «Beatrix Potter donó sus dibujos micológicos y científicos al Armitt Museum and Library de Ambleside.» «En 1997 la Linnean Society finalmente le emitió una disculpa póstuma por el sexismo mostrado en el trato dado a su investigación.»",
+      "source": "National Botanic Garden of Wales / Gardd Fotaneg Genedlaethol Cymru, «Beatrix Potter - mycologist extraordinaire» (2016). Se cita aquí porque representa la versión difundida, que en varios puntos contradice a la propia Linnean Society; ver do_not_use.",
+      "url": "https://botanicgarden.wales/2016/03/beatrix-potter-mycologist-extraordinaire/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que la Linnean Society rechazó el trabajo. No lo rechazó: lo leyó y lo discutió el 1 de abril de 1897 y pidió más trabajo antes de imprimirlo. Quien lo retiró, el 8 de abril, fue Potter.",
+    "No decir que Massee tuvo que leerlo porque ella era mujer. Varias fuentes de calidad lo afirman, pero la propia Sociedad precisa que ningún autor leía su trabajo: era la práctica para todos. Lo que sí es cierto es que las mujeres no fueron admitidas como miembros hasta 1905.",
+    "No decir que Potter anticipó la simbiosis de los líquenes. Es la afirmación más repetida sobre ella y la Linnean Society la desmiente: procede de una nota al pie mal traducida. Potter sostenía que los líquenes eran organismos autónomos, la posición mayoritaria en su época.",
+    "No decir que la teoría de la simbiosis en líquenes es suya en ningún grado. La hipótesis dual la formuló Simon Schwendener en 1868, casi treinta años antes.",
+    "No afirmar que en 1997 la Sociedad emitió una disculpa formal. Es como suele contarse, pero la página histórica de la propia institución no usa esa palabra: recoge que John Marsden reconoció que Potter había sufrido una injusticia.",
+    "No dar una cifra única de dibujos. El Armitt, que los custodia, habla de más de 250 de hongos y más de 40 de musgos; otras fuentes dicen 300 y 350 incluyendo líquenes. Conviene usar la del museo o decir «más de doscientos cincuenta».",
+    "No decir que el manuscrito se conserva. No existe copia conocida: la Sociedad no guarda ninguna versión en su archivo porque el texto corregido nunca se devolvió.",
+    "No presentarla como micóloga profesional ni decir que abandonó la ciencia por los cuentos. Fue naturalista aficionada, siguió con sus estudios al microscopio varios años después de 1897, y no hay fuente que establezca esa relación de causa."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

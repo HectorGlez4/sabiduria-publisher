@@ -1,0 +1,64 @@
+{
+  "id": "2026-09-14-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "La Boétie y la servidumbre voluntaria",
+    "hook": "Un estudiante de derecho escribió que para acabar con un tirano no hace falta empujarlo. Basta con dejar de sostenerlo. El texto tardó más de veinte años en imprimirse y lo estrenaron sus adversarios políticos.",
+    "quote": {
+      "text": "Decidíos a no servir más, y seréis libres. No os pido que lo empujéis ni que lo derribéis; solo que dejéis de sostenerlo, y lo veréis, como un gran coloso al que le han quitado la base, desplomarse por su propio peso y romperse.",
+      "author": "Étienne de La Boétie",
+      "work": "Discurso de la servidumbre voluntaria (h. 1548); edición francesa de 1922",
+      "attribution_verified": true
+    },
+    "body": [
+      "Étienne de La Boétie nació en Sarlat en 1530 y murió en 1563, a los treinta y tres años, siendo magistrado del Parlamento de Burdeos. El Discurso lo escribió siendo muy joven, aunque no se sabe exactamente cuándo. Montaigne, su amigo, dijo que lo compuso a los dieciséis o los dieciocho años; hay quien sitúa la redacción en 1548, mientras estudiaba en Orleans, y quien la retrasa a 1552 o 1553, cuando tendría unos veintidós. La incertidumbre viene de lo mismo: el texto permaneció inédito durante décadas.",
+      "Su pregunta no es cómo se derriba a un tirano. Es por qué tantos obedecen a uno solo que no tiene más fuerza que la que le prestan quienes le obedecen. De ahí la imagen del coloso: una estatua enorme sobre una base que se le puede retirar sin violencia. La receta no es una insurrección, es una resta: dejar de sostener. El poder que describe no se toma por asalto porque no está en el que manda, sino repartido en los que consienten.",
+      "Lo que le pasó al texto contradice su tesis de una manera incómoda. La Boétie murió en 1563 y Montaigne heredó los papeles; había concebido los Ensayos como el estuche del Discurso. En 1574, dos años después de la matanza de San Bartolomé, unos panfletistas protestantes lo imprimieron incompleto dentro de Le Réveille-matin des François, con el título Contr'un, y volvió a circular en los Mémoires de l'estat de France de Simon Goulart, entre 1576 y 1578. Montaigne renunció entonces a incluirlo, por temor a que lo tomaran por calvinista. Un escrito contra la obediencia se estrenó como munición de partido, y el amigo que lo custodiaba lo dejó fuera de su obra."
+    ],
+    "question": "¿Qué estás sosteniendo sin haberlo decidido?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LaBoetie", "#ServidumbreVoluntaria", "#Montaigne"],
+    "extended": ["#Citas", "#FilosofiaPolitica", "#Renacimiento", "#Francia", "#SigloXVI", "#Libros", "#Libertad", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Texto verbatim del pasaje: «Soyez résolus de ne servir plus, et vous voilà libres. Je ne veux pas que vous le poussiez ou l'ébranliez, mais seulement ne le soutenez plus, et vous le verrez, comme un grand colosse à qui on a dérobé sa base, de son poids même fondre en bas et se rompre.»",
+      "source": "Wikisource en francés, «Discours de la servitude volontaire», edición de 1922, texto entero",
+      "url": "https://fr.wikisource.org/wiki/Discours_de_la_servitude_volontaire/%C3%89dition_1922/Texte_entier"
+    },
+    {
+      "claim": "«Según Montaigne, La Boétie compuso la obra a los dieciséis o dieciocho años, en 1546 o, más probablemente, en 1548, mientras estudiaba en la Universidad de Orleans. Después la revisó.» El texto permaneció inédito en vida del autor. «Una versión manuscrita incompleta apareció en Le Réveille-matin des François et de leurs voisins en 1574, dos años después de la matanza de San Bartolomé.» Los Mémoires de l'Estat de France sous Charles Neufiesme de Simon Goulart (1576-1578) circularon del mismo modo como literatura de resistencia protestante. Montaigne retiró deliberadamente el texto de los Ensayos y se refirió a él en el capítulo XXVIII del libro I: «C'est un discours auquel il donna le nom de La Servitude volontaire... Il l'écrivit par manière d'essai en sa première jeunesse.»",
+      "source": "Encyclopædia Universalis, ficha «Discours de la servitude volontaire»",
+      "url": "https://www.universalis.fr/encyclopedie/discours-de-la-servitude-volontaire/"
+    },
+    {
+      "claim": "«Como permaneció inédito mucho después de su composición, la fecha de preparación del Discurso sobre la servidumbre voluntaria es incierta.» Montaigne sostiene que La Boétie lo escribió con «16-18 años»; «estudios recientes sugieren que La Boétie escribió el Discurso entre 1552 y 1553», cuando tenía «unos 22 años y estudiaba en la universidad». «Tras la muerte de La Boétie en 1563, Montaigne entró en posesión del manuscrito, pero se negó a publicarlo.» «En 1576 el Discurso entró en circulación entre los hugonotes exiliados en el Condado de Holanda» y fue «publicado póstumamente y de forma clandestina en 1577».",
+      "source": "Wikipedia en inglés, entrada «Discourse on Voluntary Servitude» (fuente de menor rango, usada para la datación tardía propuesta por la crítica reciente y contrastada con Universalis, que da otras fechas; ver do_not_use)",
+      "url": "https://en.wikipedia.org/wiki/Discourse_on_Voluntary_Servitude"
+    },
+    {
+      "claim": "La obra se conoce también como Contr'un, nombre elegido para la edición protestante de 1574. Montaigne había escrito los Ensayos como «écrin», estuche, de este discurso, y la publicación apresurada de 1574 «impidió a Montaigne incluirlo en sus Ensayos, por temor a aparecer como calvinista y a desacreditar la obra». El Discurso se publicó en 1574 en Le Réveille-matin des François por los monarcómacos protestantes y de forma anónima en los Mémoires de l'estat de France (tres volúmenes) de Simon Goulart. Se cita como fuente primaria el manuscrito de Mesmes, conservado en la Biblioteca Nacional de Francia. Según el historiador Jacques-Auguste de Thou existiría un vínculo entre la revuelta campesina de Guyena contra la gabela y el Discurso.",
+      "source": "Wikipedia en francés, entrada «Discours de la servitude volontaire» (fuente de menor rango, usada para el título Contr'un, el papel de los monarcómacos y la existencia del manuscrito de Mesmes; el manuscrito no se consultó directamente en Gallica)",
+      "url": "https://fr.wikipedia.org/wiki/Discours_de_la_servitude_volontaire"
+    }
+  ],
+  "do_not_use": [
+    "No dar 1548 como fecha cierta de redacción. Montaigne habla de los dieciséis o dieciocho años; Universalis propone 1546 o 1548; la crítica reciente lo lleva a 1552-1553, con La Boétie ya de unos veintidós. Hay que decir que la fecha se discute.",
+    "No fijar un año único para la primera edición completa. Las fuentes consultadas dan 1574 para la aparición parcial en Le Réveille-matin des François y luego 1576, 1577 o 1578 para el texto completo dentro de los Mémoires de l'estat de France de Simon Goulart, publicados en varios volúmenes. Lo seguro es el 1574 parcial y que el texto completo circuló en los Mémoires de Goulart.",
+    "No decir que Montaigne publicó el Discurso. Heredó el manuscrito y se negó a publicarlo; después de la edición protestante de 1574 renunció a incluirlo en los Ensayos para que no lo tomaran por calvinista.",
+    "No llamar al Discurso un manifiesto anarquista ni atribuirle la invención de la desobediencia civil. Es un ejercicio de retórica y filosofía política del siglo XVI; las lecturas anarquistas y las comparaciones con Thoreau o Gandhi son posteriores y ajenas al texto.",
+    "No atribuir a La Boétie el título Contr'un. Es el nombre que le pusieron los editores protestantes en 1574.",
+    "No vincular el Discurso con la revuelta de la gabela en Guyena como si fuera un hecho establecido. Procede de una lectura del historiador Jacques-Auguste de Thou y sigue siendo una hipótesis.",
+    "No decir que La Boétie murió a los treinta y dos ni a los treinta y cuatro. Nació en 1530 y murió en 1563: treinta y tres años.",
+    "No presentar la frase como una llamada a la revolución violenta. El propio pasaje excluye empujar y derribar: lo que pide es retirar el sostén."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

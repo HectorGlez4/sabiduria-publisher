@@ -1,0 +1,61 @@
+{
+  "id": "2026-09-14-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Sanxingdui y los pozos sin escritura",
+    "hook": "En 1986, unos obreros que sacaban arcilla para un tejar en Sichuan abrieron dos fosas con más de mil objetos de bronce, oro y jade. En cuarenta años de excavación no ha aparecido en el yacimiento un solo signo escrito.",
+    "body": [
+      "Sanxingdui está en la llanura de Chengdu, en el suroeste de China. El primer aviso fue en 1927, cuando aparecieron jades al abrir una acequia. El hallazgo grande llegó en 1986: dos fosas rectangulares con más de mil piezas. Dentro había máscaras de bronce que no se parecen a nada del resto de China, una figura humana en pie de 2,6 metros, colmillos de elefante quemados y un árbol de bronce que, reconstruido, mide 3,96 metros. El centro urbano ocupaba 3,6 kilómetros cuadrados. Casi todos los objetos fueron rotos o quemados a propósito antes de enterrarlos.",
+      "En 2019 se detectaron seis fosas más junto a las dos primeras. Se excavaron entre 2020 y 2022 y dieron 3.155 piezas completas —1.238 de bronce, 543 de oro, 565 de jade— y más de trece mil objetos contando fragmentos. Los resultados se presentaron en junio de 2022 en el museo de Guanghan. La datación por carbono de unas doscientas piezas dio entre 1131 y 1012 a.C.: la época final de la dinastía Shang, que gobernaba a más de mil kilómetros de allí, en el valle del río Amarillo.",
+      "Y ahí está lo que falta. En Anyang, capital Shang de esos mismos siglos, se conservan decenas de miles de inscripciones en huesos oraculares. En Sanxingdui no ha aparecido escritura: ni en las fosas ni en ningún otro punto del yacimiento. Tampoco restos humanos asociados. El lugar se abandonó hacia el 1000 a.C. y no figura en la historiografía china transmitida: lo que se sabe del reino de Shu viene de textos muy posteriores y escasos. Si aquellas máscaras se rompieron como acto final de un rito o por una emergencia, dicen los arqueólogos, no se puede afirmar de manera concluyente. Toda la interpretación descansa en objetos que nadie explicó por escrito."
+    ],
+    "question": "¿Qué se sabría de nosotros si solo quedaran los objetos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Una ciudad sin una sola letra",
+    "subtitle": "Sichuan, hacia 1100 a.C.",
+    "body": "Ocho fosas, más de trece mil objetos de bronce, oro y jade, rotos y quemados antes de enterrarlos. En Sanxingdui no ha aparecido escritura. Mientras tanto, los Shang llenaban de inscripciones los huesos oraculares de Anyang."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Sanxingdui", "#ChinaAntigua", "#Arqueologia"],
+    "extended": ["#EdadDelBronce", "#Sichuan", "#Shang", "#Escritura", "#Museos", "#Excavaciones", "#HistoriaAntigua", "#Civilizaciones"]
+  },
+  "sources": [
+    {
+      "claim": "«Aparecieron más pistas en 1927, cuando se encontraron jades durante labores de apertura de una zanja.» «En 1986, unos obreros que extraían arcilla para un tejar dieron por casualidad con dos fosas rectangulares.» «El centro urbano cubría un área de 3,6 km²», con murallas «que alcanzan una anchura de unos 40 m en la base». «Una razón clave de que el contenido de las fosas sea a la vez fuente de asombro y de desconcierto procede de algo que no se ha encontrado en las fosas, ni en ninguna otra parte de Sanxingdui: escritura.» En cambio, «se conocen escrituras de yacimientos pertenecientes al Estado Shang, como Anyang, en el río Amarillo». Muchos de los objetos «fueron deliberadamente destrozados o quemados antes de ser enterrados». La máscara de bronce «se remonta a c. 1300-1100 a.C.» y el asentamiento «fue abandonado hacia el 1000 a.C.». La figura en pie mide «2,6 m de altura en total», la máscara mayor «1,31 m de ancho» y el árbol de bronce reconstruido «3,96 m», con una altura original «que quizá alcanzara unos 5 m». Siete de las ocho fosas contenían una capa de colmillos de elefante quemados. Si la destrucción «fue una parte final del ritual o una respuesta a algún tipo de emergencia no es algo que podamos afirmar de manera concluyente».",
+      "source": "Current World Archaeology (revista de Current Publishing), «The lost world of Sanxingdui: Fabulous finds from a forgotten civilisation»",
+      "url": "https://the-past.com/feature/the-lost-world-of-sanxingdui-fabulous-finds-from-a-forgotten-civilisation/"
+    },
+    {
+      "claim": "Datación por carbono: «de 1131 a 1012 a.C., lo que significa que la mayoría de estas fosas son de hace 3.200 a 3.000 años, durante la dinastía Shang tardía». Seis fosas dieron 3.155 reliquias culturales completas —1.238 de bronce, 543 de oro y 565 de jade— y más de 13.000 piezas contando fragmentos. Las fosas 3 a 8 se excavaron en una nueva campaña iniciada en 2020. Los resultados los anunció Ran Honglin, arqueólogo responsable del proyecto por el Instituto Provincial de Reliquias Culturales y Arqueología de Sichuan, en el museo de Sanxingdui, en Guanghan. Del antiguo reino de Shu «se decía que dominaba la actual región de Sichuan, pero su documentación era escasa».",
+      "source": "China Daily, «Sanxingdui site a seemingly limitless archaeological treasure trove», 13 de junio de 2022",
+      "url": "https://www.chinadaily.com.cn/a/202206/13/WS62a6eb76a310fd2b29e62657.html"
+    },
+    {
+      "claim": "«13.000 artefactos desenterrados en el yacimiento de las Ruinas de Sanxingdui en los dos últimos años», hallados «en seis fosas sacrificiales», incluidos «1.238 objetos de bronce, 543 de oro y 565 de jade». En 1986 los arqueólogos encontraron «dos fosas llenas de 1.000 artefactos». «No sobreviven hoy registros escritos ni restos humanos asociados a los Sanxingdui.» Los objetos fueron «rotos o quemados antes del enterramiento», lo que lleva a los expertos a concluir que «se habían depositado en las fosas como parte de un ritual sacrificial». Se cree que la civilización formaba parte del Estado de Shu en sentido amplio, «que prosperó en la llanura de Chengdu hasta su derrota por el Estado de Qin en 316 a.C.».",
+      "source": "Smithsonian Magazine, «Trove of 13,000 Artifacts Sheds Light on Enigmatic Chinese Civilization» (2022)",
+      "url": "https://www.smithsonianmag.com/smart-news/trove-of-13000-artifacts-sheds-light-on-enigmatic-chinese-civilization-180980254/"
+    },
+    {
+      "claim": "En 2019 se detectaron seis fosas adicionales junto a las dos originales, excavadas entre 2020 y 2022; en total se han excavado ocho fosas. Los artefactos de la cultura de Sanxingdui son de un momento avanzado de la Edad del Bronce en la cuenca de Sichuan, una región remota rodeada de montañas altas, y atestiguan una cultura del bronce muy desarrollada e independiente de la Shang, largo tiempo considerada la cuna de la civilización china.",
+      "source": "World Archaeology (Current Publishing), «The lost world of Sanxingdui»",
+      "url": "https://www.world-archaeology.com/features/the-lost-world-of-sanxingdui/"
+    }
+  ],
+  "do_not_use": [
+    "No decir ni insinuar que las máscaras son de origen extraterrestre, ni repetir que sus rasgos «no son chinos». Es lo que más circula sobre Sanxingdui y no lo sostiene ninguna fuente arqueológica: el yacimiento pertenece a la Edad del Bronce de la cuenca de Sichuan y mantuvo intercambio con las llanuras centrales.",
+    "No decir que Sanxingdui era una civilización desconocida por completo para la historiografía china. Lo correcto es que el yacimiento no aparece en los textos transmitidos y que lo que se cuenta del reino de Shu procede de fuentes muy posteriores y escasas.",
+    "No identificar sin más Sanxingdui con el reino de Shu. Se cree que forma parte de esa tradición cultural, pero la relación no está establecida con la precisión que suele darse por hecha.",
+    "No fechar los objetos en 3000 a.C. ni hablar de cinco mil años. La datación por carbono de unas doscientas piezas de las fosas nuevas dio entre 1131 y 1012 a.C.; las piezas de 1986 se sitúan hacia 1300-1100 a.C.",
+    "No decir que se han encontrado inscripciones o símbolos escritos. No ha aparecido escritura ni en las fosas ni en el resto del yacimiento, y esa ausencia es precisamente lo que hace difícil interpretarlo.",
+    "No afirmar que las fosas son tumbas. No hay restos humanos asociados; la lectura de los arqueólogos es que se trata de depósitos rituales.",
+    "No dar por resuelto por qué se rompieron y quemaron los objetos. Las fuentes dicen expresamente que no puede afirmarse de manera concluyente si fue el cierre de un rito o la respuesta a una emergencia.",
+    "No decir que fue el propio hallazgo de 1986 el que descubrió el yacimiento. Ya había aparecido material en 1927, al abrir una acequia."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
