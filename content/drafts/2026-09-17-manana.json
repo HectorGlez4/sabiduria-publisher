@@ -1,0 +1,78 @@
+{
+  "id": "2026-09-17-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "John Snow y el mapa del cólera de 1854",
+    "hook": "El mapa más famoso de la salud pública no descubrió nada. Se dibujó después, cuando el brote ya bajaba, y el organismo que debía leerlo concluyó al año siguiente que la culpa había sido del aire.",
+    "body": [
+      "El brote empezó en el Soho de Londres el 31 de agosto de 1854. En tres días murieron ciento veintisiete personas; en diez, más de quinientas. El recuento del episodio se fija en seiscientas dieciséis. John Snow, médico anestesista, no salió a dibujar: salió a preguntar. Con las listas de defunciones fue casa por casa averiguando de qué bomba bebía cada muerto. La noche del jueves 7 de septiembre expuso lo reunido ante la Junta de Guardianes de la parroquia de St James. Al día siguiente quitaron la palanca de la bomba de Broad Street.",
+      "Lo que casi nunca se cuenta es el orden de los hechos. Cuando la palanca cayó, la epidemia ya bajaba. Snow escribió que los ataques habían disminuido tanto antes de cortar el agua que era imposible decidir si el pozo seguía envenenado; tres cuartas partes de los vecinos de las calles más golpeadas se habían marchado. Y el mapa de las barras negras, el que se enseña en todas las escuelas de salud pública, vino después: una primera versión se mostró a la Sociedad Epidemiológica a finales de 1854, y la de la segunda edición del libro, en 1855, añadió una línea de puntos con las casas más cercanas a esa bomba a pie que a ninguna otra. El mapa no fue el hallazgo. Fue el argumento.",
+      "Quien cerró el caso fue un hombre que había salido a refutarlo. Henry Whitehead, coadjutor de St Luke, creía en el aire viciado y conocía a los vecinos uno por uno. Buscando el error de Snow dio con el primer enfermo: una niña de pocos meses de la familia Lewis, del número 40 de Broad Street, cuyos pañales se enjuagaban en un pozo negro pegado al de agua. Nada de eso bastó: la Junta General de Sanidad dictaminó que el causante había sido el aire. Snow murió el 16 de junio de 1858, a los cuarenta y cinco años, sin haber ganado la discusión."
+    ],
+    "question": "¿Cuánto tarda en aceptarse algo que ya estaba demostrado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El mapa llegó después",
+    "subtitle": "Soho, Londres, 1854",
+    "body": "Snow no descubrió el foco con el mapa. Fue casa por casa con las listas de defunciones y dibujó al terminar. Cuando quitaron la palanca de la bomba, el 8 de septiembre de 1854, la epidemia ya bajaba. La Junta General de Sanidad dictaminó que el causante había sido el aire."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JohnSnow", "#Epidemiologia", "#Londres"],
+    "extended": ["#HistoriaDeLaCiencia", "#SaludPublica", "#Mapas", "#Colera", "#SigloXIX", "#Medicina", "#Ciencia", "#Datos"]
+  },
+  "sources": [
+    {
+      "claim": "El brote empezó el 31 de agosto de 1854 en el Soho. En tres días murieron 127 personas y para el 10 de septiembre habían muerto más de 500; la cifra total del episodio se sitúa en 616. Snow expuso sus hallazgos ante la Junta de Guardianes de la parroquia de St James la noche del jueves 7 de septiembre de 1854 y la palanca de la bomba se retiró el 8 de septiembre. Las muertes ya descendían antes de esa retirada: Snow escribió que ‘the attacks had so far diminished before the use of the water was stopped, that it is impossible to decide whether the well still contained the cholera poison’. Henry Whitehead era coadjutor de la iglesia de St Luke en el Soho, creía en la teoría miasmática y acabó ayudando a Snow a rastrear la contaminación hasta un pozo negro defectuoso situado a unos tres pies del pozo de agua, y a identificar el caso índice: un bebé contagiado por otra vía. La primera edición del libro de Snow es de 1849 y la segunda, con el análisis de 1854, de 1855. La Junta General de Sanidad atribuyó la epidemia al miasma y no aceptó la explicación de Snow.",
+      "source": "Wikipedia en inglés, «1854 Broad Street cholera outbreak»",
+      "url": "https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak"
+    },
+    {
+      "claim": "La epidemia ya estaba remitiendo cuando se retiró la palanca, en parte por la huida de la población: ‘the flight of the population … in less than six days … the most afflicted streets were deserted by more than three-quarters of their inhabitants’. Snow rastreó unas 600 muertes por cólera ocurridas en un periodo de diez días, y el brote alcanzó su punto máximo entre finales de agosto y principios de septiembre. Snow convenció a unas autoridades civiles dudosas de retirar la palanca de la bomba de Broad Street, y la epidemia, que ya estaba disminuyendo, desapareció en pocos días.",
+      "source": "«John Snow, Cholera, the Broad Street Pump; Waterborne Diseases Then and Now», artículo alojado en PubMed Central (National Library of Medicine, NIH)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7150208/"
+    },
+    {
+      "claim": "El brote del Soho comenzó el 31 de agosto de 1854 y en diez días murieron 500 personas. Snow tomó las direcciones de los fallecidos y empezó a situar los casos sobre un mapa. La profesión médica lo ignoró en buena medida tras su publicación de 1849, y la aceptación plena de su tesis llegó mucho después.",
+      "source": "London Museum, colecciones, «John Snow: Cholera & the Broad Street pump»",
+      "url": "https://www.londonmuseum.org.uk/collections/london-stories/john-snow-cholera-broad-street-pump/"
+    },
+    {
+      "claim": "Los documentos primarios del Comité de Investigación del Cólera (Cholera Inquiry Committee) de la parroquia de St James, Westminster, incluyen el informe de Snow fechado el 12 de diciembre de 1854 y publicado en julio de 1855; el informe del agrimensor, «Mr. York's Report», fechado el 1 de mayo de 1855; y la introducción y el informe general de Marshall, del 25 de julio de 1855. Se conserva además la carta de Snow a los editores de Medical Times and Gazette del 23 de septiembre de 1854 sobre sus primeras indagaciones, sus cuadernos de casos y su testimonio ante el comité parlamentario de Medical Relief and Public Health del 5 de marzo de 1855.",
+      "source": "The John Snow Archive and Research Companion, Michigan State University, «Cholera in St. James: Sources»",
+      "url": "https://johnsnow.matrix.msu.edu/broadstpump/cholera-in-st-james-sources/"
+    },
+    {
+      "claim": "John Snow nació el 15 de marzo de 1813 y murió el 16 de junio de 1858, a los 45 años. Fue pionero de la anestesia y de la epidemiología. Publicó «On the Mode of Communication of Cholera» en dos ediciones: un ensayo inicial en 1849 y un tratado más detallado en 1855 que incorpora los resultados de su investigación del brote del Soho. No fue hasta 1866 cuando William Farr, uno de sus opositores, reconoció la validez de la transmisión por agua al investigar otro brote.",
+      "source": "Wikipedia en inglés, «John Snow»",
+      "url": "https://en.wikipedia.org/wiki/John_Snow"
+    },
+    {
+      "claim": "Henry Whitehead fue coadjutor de la iglesia de St Luke, en el Soho, durante el brote de 1854. Creía inicialmente en la teoría miasmática y cambió de posición ante las pruebas. Trabajando con Snow rastreó la contaminación desde un pozo negro hasta el agua de la bomba de Broad Street. La entrada identifica al bebé Lewis, del número 40 de Broad Street, como caso índice, y señala que una filtración en el sótano contaminó el pozo.",
+      "source": "Wikipedia en inglés, «Henry Whitehead (priest)»",
+      "url": "https://en.wikipedia.org/wiki/Henry_Whitehead_(priest)"
+    },
+    {
+      "claim": "La versión del mapa de Snow que más se reproduce se mostró a la Sociedad Epidemiológica a finales de 1854, y la publicada en la actualización de 1855 de «On the Mode of Communication of Cholera» es distinta: corrigió la posición de la bomba de Broad Street, situada varias yardas más allá de donde figuraba en el primer mapa, y añadió una capa con una línea isócrona que marca el límite de los hogares para los que caminar hasta la bomba de Broad Street era más corto que ir a cualquier otra bomba, en la práctica un diagrama de Voronói. La discusión académica sobre la construcción del mito está en Howard Brody y colaboradores, «Map-making and myth-making in Broad Street: the London cholera epidemic, 1854», The Lancet, 2000, y en Edward Tufte (1999), pp. 27-37.",
+      "source": "Datos de las dos versiones del mapa recogidos de los extractos indexados de la entrada «1854 Broad Street cholera outbreak» y de la ficha del conjunto de datos «Snow.pumps» del paquete HistData. El artículo de Brody y colaboradores se cita como referencia bibliográfica: de thelancet.com solo se consultó la ficha del resumen, no el texto completo",
+      "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(00)02442-9/abstract"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Snow descubrió el foco dibujando el mapa. El trabajo fue de campo: listas de defunciones y visitas casa por casa. El mapa se dibujó después, y la versión más reproducida se presentó a la Sociedad Epidemiológica a finales de 1854, con el brote ya terminado.",
+    "No decir que retirar la palanca detuvo la epidemia. Las muertes ya caían el 8 de septiembre: Snow mismo escribió que era imposible decidir si el pozo seguía siendo peligroso, y tres cuartas partes de los vecinos de las calles más afectadas se habían marchado.",
+    "No presentar a las autoridades como convencidas. La Junta General de Sanidad reunió información y la interpretó a favor del aire, no del agua. Whitehead fue la excepción, y llegó a esa posición partiendo de la contraria.",
+    "No dar el nombre de pila de la niña como dato firme. Circula como Frances Lewis, de cinco meses, del número 40 de Broad Street, pero las referencias enciclopédicas la nombran solo como el bebé Lewis. Aquí se la menciona sin nombre propio.",
+    "No atribuir a Snow el conocimiento de la bacteria. Filippo Pacini la observó en 1854 y su trabajo pasó inadvertido; la identificación que cambió el consenso es posterior y las fuentes divulgativas la fechan en 1883 o en 1884. Por eso no se da ninguna de las dos fechas: el hito documentado aquí es el de 1866, cuando William Farr aceptó la transmisión por agua.",
+    "No llamar a Snow bacteriólogo ni germenista moderno. Hablaba de un veneno del cólera que se multiplicaba en el intestino y viajaba en el agua, sin agente identificado.",
+    "No usar «616» como cifra indiscutida. Es el recuento que se cita con más frecuencia para el episodio completo; también circulan otras, y las cifras de los primeros diez días (más de 500) son un dato distinto que no debe sumarse ni confundirse con aquella.",
+    "No situar el pozo negro lejos del pozo de agua ni convertirlo en una alcantarilla. Las fuentes lo describen a unos tres pies del pozo, con una filtración que contaminó el agua.",
+    "No fechar la retirada de la palanca el 7 de septiembre. El 7 fue la reunión con la Junta de Guardianes; la palanca se quitó el día 8.",
+    "No decir que Snow vivió para ver aceptada su tesis. Murió el 16 de junio de 1858 y el reconocimiento por parte de sus opositores llegó después."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-17-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Dōgen y el Genjōkōan",
+    "hook": "El texto más citado del zen no se predicó a una comunidad de monjes. Se escribió en otoño de 1233 para un solo hombre, laico, que vivía en el otro extremo del país.",
+    "quote": {
+      "text": "Estudiar la vía del Buda es estudiarse a uno mismo. Estudiarse a uno mismo es olvidarse de uno mismo.",
+      "author": "Dōgen",
+      "work": "Shōbōgenzō, «Genjōkōan» (1233)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Dōgen vivió entre 1200 y 1253 y fundó en Japón la escuela sōtō. A mediados del otoño de 1233 escribió estas páginas y se las entregó a Yō Kōshū, un discípulo laico de la isla de Kyūshū. No era una prédica ante una asamblea ni una instrucción monástica: era un escrito dirigido a una persona concreta que no vivía en un monasterio. La frase continúa una línea más, y esa tercera es la que cierra el movimiento: olvidarse de uno mismo es ser confirmado por las diez mil cosas. La secuencia no termina en el conocimiento de sí. Termina en su desaparición.",
+      "El título engaña en español, y también en inglés. «Kōan» aquí no significa lo que significa en Occidente: no es el acertijo paradójico, la pregunta sin respuesta que se le entrega a un discípulo para que se estrelle contra ella. En «Genjōkōan», «genjō» es manifestarse, hacerse presente, y «kōan» apunta al asunto mismo, al fondo de la cuestión. Suele traducirse como la actualización del punto fundamental. No hay nada que resolver: hay algo que ocurre. Leerlo como un enigma es empezar por el error.",
+      "Lo escribió pronto y lo puso al principio tarde. En 1252, diecinueve años después, al ordenar la versión del Shōbōgenzō en setenta y cinco fascículos, Dōgen colocó esta carta a la cabeza de todo y la revisó. Murió al año siguiente. Es decir: al final de su vida, teniendo delante toda su obra, decidió que aquello que había escrito para un laico de provincias iba primero. Lo más antiguo, situado en el umbral de lo demás, y por su autor, que ya sabía cuánto había escrito después."
+    ],
+    "question": "¿Qué texto tuyo pondrías primero si tuvieras que ordenarlo todo hoy?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Dogen", "#Zen", "#Japon"],
+    "extended": ["#Citas", "#Filosofia", "#Budismo", "#SigloXIII", "#Meditacion", "#Libros", "#Oriente", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El texto se titula «Genjōkōan (Actualization of Reality)» y constituye el capítulo de apertura del Shōbōgenzō (The True Dharma Eye Treasury). Dōgen Zenji lo compuso a mediados del otoño de 1233 y lo dedicó a Yō Kōshū, un discípulo laico residente en Kyūshū. La obra se compiló en 1252. El pasaje, en la traducción de Shohaku Okumura, dice: ‘To study the Buddha Way is to study the self. To study the self is to forget the self. To forget the self is to be verified by all things’.",
+      "source": "Tricycle: The Buddhist Review, artículo «To Study the Self Is to Forget the Self», con la traducción de Shohaku Okumura, procedente de «Meeting the Myriad Things», de Shinshu Roberts con Shohaku Okumura y Zuiko Redding (Shambhala Publications, 2025)",
+      "url": "https://tricycle.org/article/dogen-genjokoan/"
+    },
+    {
+      "claim": "«Genjōkōan» (現成公按) se traduce como «Actualizing the Fundamental Point». «Genjō» significa manifestar o actualizar, y «kōan» se refiere aquí al ‘corazón del asunto’ (the heart of the matter), no a las historias didácticas o acertijos que la palabra designa en otros usos. Fue escrito en 1233 por Dōgen, fundador de la escuela sōtō del budismo zen, y compuesto específicamente para un practicante laico llamado Koshu Yō. Aparece como primer fascículo de la versión en 75 fascículos del Shōbōgenzō.",
+      "source": "Wikipedia en inglés, «Genjōkōan»",
+      "url": "https://en.wikipedia.org/wiki/Genj%C5%8Dk%C5%8Dan"
+    },
+    {
+      "claim": "El texto fue escrito hacia mediados del otoño del primer año de la era Tempuku (1233) y entregado al estudiante laico Koshu Yo, de la isla de Kyūshū. Hubo muy pocos cambios en su contenido entre 1233 y 1252, cuando Dōgen compiló el Shōbōgenzō en 75 fascículos e incluyó el «Genjōkōan» al principio; consta como revisado en el cuarto año de la era Kenchō (1252).",
+      "source": "Datos del colofón recogidos de los extractos indexados de traducciones anotadas del «Genjōkōan» en circulación académica y monástica (entre ellas la de Shohaku Okumura alojada por Zen Bristol y la del Village Zendo). Los PDF no pudieron convertirse a texto con la herramienta usada aquí; la fecha, el destinatario y la revisión de 1252 coinciden de forma independiente con la ficha de Tricycle y con la entrada enciclopédica citadas arriba",
+      "url": "https://www.zenbristol.co.uk/wp-content/uploads/2021/04/Genjokoan-trans._Okumura.pdf"
+    },
+    {
+      "claim": "Dōgen Kigen (1200-1253) fue el fundador de la escuela sōtō del budismo zen y es uno de los pensadores más originales y profundos de la historia de Japón. El «Genjōkōan», que puede traducirse como «The Presencing of Truth», es un texto clave para entender su pensamiento y el fascículo central de su obra mayor, el Shōbōgenzō («Treasury of the True Dharma Eye»), colección de 95 fascículos sobre materias que van de las prácticas monásticas a la filosofía del lenguaje, del ser y del tiempo.",
+      "source": "St Andrews Encyclopaedia of Theology, University of St Andrews, entrada «Dōgen (1200-1253)»; corroborado por la entrada «Japanese Zen Buddhist Philosophy» de la Stanford Encyclopedia of Philosophy, que sitúa a Dōgen (1200-1253) como fundador de la escuela sōtō",
+      "url": "https://www.saet.ac.uk/Buddhism/Dogen"
+    },
+    {
+      "claim": "El pasaje circula en español, en el ámbito de la comunidad sōtō hispanohablante, como «Estudiar el Buddhismo Zen significa estudiarse a sí mismo. Estudiarse a sí mismo significa olvidarse de sí mismo», atribuido al «Shobogenzo Genjokoan» del maestro Dōgen. La versión que se ofrece en esta pieza es una traducción propia al español neutro, cotejada con esa y con la inglesa de Okumura.",
+      "source": "Comunidad Budista Sōtō Zen (sotozen.es), Zendo Digital, textos, «Estudiarse significa olvidarse»; kusen del maestro Dokushô Villalba, Valencia, 7 de enero de 1991",
+      "url": "https://sotozen.es/en/zendodigital/textos/estudiarse-significa-olvidarse/"
+    },
+    {
+      "claim": "La Stanford Encyclopedia of Philosophy trata a Dōgen (1200-1254) dentro de la entrada dedicada a la filosofía zen japonesa, como fundador de la escuela sōtō. No existe una entrada monográfica sobre Dōgen en esa enciclopedia: la dirección plato.stanford.edu/entries/dogen/ devuelve error 404.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Japanese Zen Buddhist Philosophy»",
+      "url": "https://plato.stanford.edu/entries/japanese-zen/"
+    }
+  ],
+  "do_not_use": [
+    "No traducir «kōan» aquí como acertijo o enigma paradójico. En «Genjōkōan» la palabra apunta al asunto mismo, al fondo de la cuestión; el sentido de historia didáctica o pregunta sin salida corresponde a otros usos y a la difusión occidental del zen.",
+    "No decir que el «Genjōkōan» fue una prédica a los monjes. Se escribió y se entregó a Yō Kōshū, un discípulo laico de Kyūshū; esa es la circunstancia documentada en el colofón.",
+    "No citar las dos primeras frases como si el pasaje terminara ahí. La tercera —olvidarse de uno mismo es ser confirmado por las diez mil cosas— es la que cierra el movimiento, y sin ella la cita parece una invitación a la introspección, que es justo lo contrario de lo que dice.",
+    "No convertir el pasaje en un consejo de autoconocimiento. La secuencia va del estudio de sí al olvido de sí; leerla como una consigna de mirar hacia dentro invierte su sentido.",
+    "No fechar el «Genjōkōan» en 1252. Se escribió en 1233; 1252 es el año en que Dōgen ordenó el Shōbōgenzō en 75 fascículos, lo colocó al principio y lo revisó.",
+    "No dar una sola cifra de fascículos del Shōbōgenzō como definitiva. Circulan varias recensiones: la de 75 fascículos, que es la que abre este texto, y también recuentos de 95. Si se cita una, hay que decir cuál.",
+    "No presentar una traducción castellana concreta como el texto original. El original es japonés del siglo XIII; toda versión en español o en inglés es traducción, y las que circulan difieren entre sí en «ser confirmado», «ser verificado» o «ser iluminado» por las diez mil cosas.",
+    "No atribuir la frase a una supuesta entrada monográfica de la Stanford Encyclopedia of Philosophy sobre Dōgen. No existe: esa dirección da error 404, y lo que hay es la entrada sobre filosofía zen japonesa.",
+    "No decir que Dōgen murió inmediatamente después de compilar la obra. Ordenó la versión de 75 fascículos en 1252 y murió en 1253; es el año siguiente, no el mismo.",
+    "No traducir «diez mil cosas» como una cifra. Es la fórmula que designa la totalidad de lo que existe, no un recuento."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

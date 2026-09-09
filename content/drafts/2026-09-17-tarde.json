@@ -1,0 +1,76 @@
+{
+  "id": "2026-09-17-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Rosario Castellanos y el umbral",
+    "hook": "Se cita como una afirmación luminosa. En el poema es lo que queda al final de una resta: once nombres de mujer examinados y descartados uno por uno, empezando por el suicidio.",
+    "quote": {
+      "text": "Otro modo de ser humano y libre. Otro modo de ser.",
+      "author": "Rosario Castellanos",
+      "work": "«Meditación en el umbral», en Poesía no eres tú, FCE, 1972",
+      "attribution_verified": true
+    },
+    "body": [
+      "El poema no empieza proponiendo: empieza negando. La primera línea descarta tirarse bajo un tren como la Ana de Tolstói. Y sigue con una lista de mujeres que la tradición ofrece como modelo: Madame Bovary, Teresa de Ávila, Sor Juana, Jane Austen, Emily Dickinson, Safo, Mesalina, María Egipciaca, Magdalena, Clemencia Isaura. Santas, suicidas, cortesanas, reclusas. Once destinos, y todos tienen algo en común: son nombres que ya pertenecen a otra. Ninguno está disponible para una mujer viva. El poema los examina y los va dejando atrás. La frase famosa no abre nada. Es lo único que sigue en pie cuando se acaba la lista.",
+      "El libro que la recoge se llama «Poesía no eres tú». El título es una respuesta. Bécquer había cerrado su rima más conocida diciéndole a una mujer que la poesía era ella: el elogio que convierte a alguien en objeto del poema y le retira el derecho a escribirlo. Castellanos contesta que no. El Fondo de Cultura Económica publicó el volumen en 1972, en Letras Mexicanas, y fue el primero que reunió toda su obra poética de 1948 a 1971. Dentro van también sus traducciones de Emily Dickinson, uno de los nombres que el poema había puesto en la lista y descartado. La descartada era, además, alguien a quien ella había traducido.",
+      "De las dos líneas finales, la que circula es casi siempre la primera. En camisetas, en carteles, en discursos se lee «otro modo de ser humano y libre», y ahí se corta. La que se cae es la más corta y la más difícil: «Otro modo de ser». Sin adjetivos. Ni humano ni libre: solo ser, de otra manera, sin decir cuál. Castellanos no dejó escrito en qué consistía ese modo. Fue embajadora de México en Israel desde el 11 de febrero de 1971 y murió en Tel Aviv el 7 de agosto de 1974, a los cuarenta y nueve años, sin haberlo respondido."
+    ],
+    "question": "¿Cuántos de los modelos que te ofrecieron llevaban el nombre de otra persona?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#RosarioCastellanos", "#PoesiaMexicana", "#Mexico"],
+    "extended": ["#Citas", "#Poesia", "#Literatura", "#SigloXX", "#Feminismo", "#Libros", "#AmericaLatina", "#Chiapas"]
+  },
+  "sources": [
+    {
+      "claim": "El poema «Meditación en el umbral» comienza con los versos «No, no es la solución / tirarse bajo un tren como la Ana de Tolstoy» y termina con el verso «Otro modo de ser.». Las tres líneas finales del poema son «Otro modo de ser humano y libre. / Otro modo de ser.». Las figuras que el poema menciona, en orden, son: Ana (de Tolstói), Madame Bovary, Teresa de Ávila, Sor Juana Inés de la Cruz, Jane Austen, Emily Dickinson, Safo, Mesalina, María Egipciaca, María Magdalena y Clemencia Isaura.",
+      "source": "Texto del poema cotejado en dos sitios literarios independientes: Ciudad Seva (biblioteca digital de Luis López Nieves, Universidad del Sagrado Corazón) y Trianarts. Coinciden en el primer verso, en el verso final y en la nómina de figuras",
+      "url": "https://ciudadseva.com/texto/meditacion-en-el-umbral-castellanos/"
+    },
+    {
+      "claim": "Registro bibliográfico de la obra: «Poesía no eres tú: obra poética 1948-1971», de Rosario Castellanos. Primera edición: Fondo de Cultura Económica, colección Letras Mexicanas, México D.F., 1972. Género: poesía, obras individuales. Ediciones posteriores del FCE en la colección Lecturas Mexicanas: 1985, 1995 y 2004 (ISBN 9789681671174). El volumen recoge la obra poética de la autora e incluye los poemas dramáticos «Salomé» y «Judith», junto con sus traducciones de Emily Dickinson, Paul Claudel y Saint-John Perse.",
+      "source": "Enciclopedia de la Literatura en México (ELEM), Fundación para las Letras Mexicanas y Secretaría de Cultura, ficha de la obra n.º 72967",
+      "url": "https://www.elem.mx/obra/datos/72967"
+    },
+    {
+      "claim": "«Poesía no eres tú» fue publicado por el Fondo de Cultura Económica en 1972 y reunió por primera vez toda la trayectoria poética de Castellanos. El volumen incluye, además de la poesía de 1948 a 1971, los poemas dramáticos «Salomé» y «Judith» y sus traducciones de Emily Dickinson, Paul Claudel y Saint-John Perse. Rosario Castellanos nació en Ciudad de México en 1925 y murió en Tel Aviv, Israel, en 1974.",
+      "source": "Fondo de Cultura Económica, ficha de catálogo del libro y ficha de autora",
+      "url": "https://www.fondodeculturaeconomica.com/Ficha/9786071622617/F"
+    },
+    {
+      "claim": "Rosario Castellanos fue embajadora de México en Israel desde el 11 de febrero de 1971 hasta 1974. Murió el 7 de agosto de 1974 en Tel Aviv, a los 49 años, por una descarga eléctrica procedente de un cable defectuoso de una lámpara de su residencia diplomática. La versión oficial atribuye la muerte a un accidente eléctrico; han circulado además conjeturas sobre un posible suicidio ligado a una depresión crónica, que siguen siendo especulativas.",
+      "source": "Instituto Nacional de Bellas Artes (INBA), sala de prensa, «Rosario Castellanos, pionera en las luchas por los derechos de la mujer y de los pueblos indígenas»; nombramiento y fecha corroborados por Corriente Alterna (UNAM) sobre su archivo diplomático",
+      "url": "https://inba.gob.mx/prensa/20676/rosario-castellanos-pionera-en-las-luchas-por-los-derechos-de-la-mujer-y-de-los-pueblos-indigenas"
+    },
+    {
+      "claim": "El título «Poesía no eres tú» invierte el cierre de la rima XXI de Gustavo Adolfo Bécquer, que termina «¿Qué es poesía? Y tú me lo preguntas… / Poesía… eres tú», donde el poeta se dirige a una mujer y la identifica con la poesía.",
+      "source": "Rima XXI de Gustavo Adolfo Bécquer, texto en dominio público, en la Biblioteca Virtual Miguel de Cervantes. cervantesvirtual.com devuelve error 403 a la herramienta de descarga usada aquí; el texto de la rima es de dominio público y de transmisión estable, y se contrastó con los extractos indexados de esa misma ficha",
+      "url": "https://www.cervantesvirtual.com/obra-visor/rimas--15/html/"
+    },
+    {
+      "claim": "Corriente Alterna, publicación de la Escuela Nacional de Estudios Superiores de la UNAM, documenta a partir del archivo diplomático la etapa de Castellanos como embajadora en Israel y las circunstancias de su vida interrumpida en 1974.",
+      "source": "Corriente Alterna, UNAM, «Rosario Castellanos: el archivo diplomático de una vida interrumpida»",
+      "url": "https://corrientealterna.unam.mx/nota/rosario-castellanos-el-archivo-diplomatico-de-una-vida-interrumpida/"
+    }
+  ],
+  "do_not_use": [
+    "No citar «otro modo de ser humano y libre» como el final del poema. El poema no termina ahí: la última línea es «Otro modo de ser», más corta y sin adjetivos, y es la que se pierde casi siempre al citar.",
+    "No presentar la frase como una consigna afirmativa suelta. Llega después de que el poema examine y descarte once figuras femeninas, y la primera cosa que descarta es el suicidio.",
+    "No fechar el poema en 1948. Hay sitios que lo datan así, probablemente por el arco 1948-1971 que da título al volumen. La fecha verificable aquí es la del libro que lo recoge, «Poesía no eres tú» (FCE, Letras Mexicanas, 1972); no se ha podido confirmar en qué sección interna del volumen aparece ni cuál fue su primera publicación suelta, y por eso no se afirma ninguna de las dos cosas.",
+    "No citar como fuente la antología «Meditación en el umbral: antología poética» (FCE, 1985). Es posterior y toma su título del poema; usarla como origen invierte el orden de las publicaciones.",
+    "No afirmar que Rosario Castellanos se suicidó. La versión oficial es una descarga eléctrica de una lámpara defectuosa en su residencia de Tel Aviv el 7 de agosto de 1974. Las conjeturas de suicidio existen y son especulativas; enlazarlas con el primer verso del poema sería una insinuación sin sustento.",
+    "No decir que murió a los 50 ni a los 48. Nació en 1925 y murió el 7 de agosto de 1974: tenía cuarenta y nueve años.",
+    "No atribuir a Castellanos la palabra «feminismo» dentro del poema. No aparece; el poema trabaja por acumulación de nombres propios y por descarte.",
+    "No convertir la lista del poema en una lista de heroínas admiradas. Son destinos disponibles y examinados, no un homenaje: incluye a la vez a santas, suicidas, cortesanas y reclusas.",
+    "No decir que «Poesía no eres tú» es un poemario nuevo de 1972. Es el volumen que reúne por primera vez su obra poética de 1948 a 1971, más los poemas dramáticos «Salomé» y «Judith» y sus traducciones.",
+    "No atribuir el verso de Bécquer a otra rima. El «Poesía… eres tú» cierra la rima XXI, y es a esa fórmula a la que responde el título del libro."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

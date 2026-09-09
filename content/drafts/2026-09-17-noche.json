@@ -1,0 +1,78 @@
+{
+  "id": "2026-09-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "los jardines colgantes y la ciudad equivocada",
+    "hook": "Es la única de las siete maravillas que nadie ha localizado. Ningún texto babilonio la menciona, y Heródoto describió Babilonia entera sin nombrarla una sola vez.",
+    "body": [
+      "Las descripciones que tenemos son todas tardías y ajenas. Beroso, Diodoro, Josefo: griegos y romanos que escriben siglos después del esplendor de Babilonia, ninguno testigo. Ninguna inscripción real babilonia dice nada de un jardín así. Robert Koldewey excavó la ciudad entre 1899 y 1917, dieciocho campañas, y no apareció el terraplén regado que describen los clásicos. Heródoto es el silencio más ruidoso: recorrió Babilonia, midió sus murallas, y no menciona ningún jardín suspendido. Una maravilla del mundo que sus contemporáneos no vieron.",
+      "A unos quinientos kilómetros al norte hay un rey que sí dejó constancia. Senaquerib de Asiria, que reinó entre el 704 y el 681 antes de nuestra era, describe en sus prismas de arcilla el jardín que plantó en Nínive: una réplica del monte Amano, y una obra que llama, con esas palabras, una maravilla para todos los pueblos. Describe además haber fundido en bronce unos cilindros y unas palmas para elevar agua, y haber traído un caudal desde las montañas. Eso último está en el suelo: la expedición del Instituto Oriental de Chicago excavó en 1933 el acueducto de Jerwan, publicado en 1935, una estructura de piedra que no se conoce en ninguna otra parte antes de época romana.",
+      "La hipótesis la sostuvo la asirióloga Stephanie Dalley en Oxford University Press, en 2013: la maravilla existió, pero está catalogada bajo la ciudad equivocada. Los reyes asirios llevaban también el título de reyes de Babilonia, y los griegos confundían con frecuencia las dos capitales. No es consenso. Otros especialistas objetan que la lectura de las palabras asirias para esos cilindros es nueva, y que el argumento elige entre las fuentes clásicas las que le convienen. Lo que ya no se sostiene es la versión escolar: la que da por hecho el lugar, el rey y el motivo."
+    ],
+    "question": "¿Cuántas cosas damos por localizadas solo porque tienen nombre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La maravilla sin dirección",
+    "subtitle": "Babilonia y Nínive, siglo VII a.C.",
+    "body": "Ningún texto babilonio menciona los jardines colgantes, y dieciocho años de excavación en Babilonia no hallaron rastro. Quinientos kilómetros al norte, un rey asirio describió el jardín que plantó y lo llamó una maravilla para todos los pueblos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JardinesColgantes", "#Ninive", "#Mesopotamia"],
+    "extended": ["#Civilizaciones", "#Arqueologia", "#Asiria", "#Babilonia", "#Historia", "#SieteMaravillas", "#MundoAntiguo", "#Senaquerib"]
+  },
+  "sources": [
+    {
+      "claim": "Los jardines los describen escritores griegos y romanos —Beroso, Diodoro y Josefo— en época helenística y romana, siglos después del apogeo de Babilonia. Heródoto, que documentó extensamente la vida babilonia, no los menciona nunca. Ninguna inscripción real babilonia se refiere a ellos, y las excavaciones de Babilonia entre 1899 y 1917 no encontraron rastros físicos que apoyaran su existencia allí. Senaquerib de Asiria (704-681 a.C.) dejó constancia de haber creado jardines elaborados en Nínive: describe haber plantado ‘a botanic garden, a replica of Mount Amanus’ y declara ‘I have released an inexhaustible flow of water for a distance of one kilometre and a half’. Los bajorrelieves de su palacio muestran jardines regados con acueductos y canales elevados. Senaquerib habría empleado un mecanismo de elevación de agua, precursor del célebre tornillo de Arquímedes. Los griegos confundían con frecuencia Babilonia y Nínive, capitales respectivas de los imperios babilonio y asirio, lo que pudo llevarlos a atribuir a la ciudad más famosa unos jardines asirios.",
+      "source": "Centre for the Study of Manuscript Cultures (CSMC), Universität Hamburg, sección Mesopotamia, «The Hanging Gardens of Babylon were at … Nineveh!»",
+      "url": "https://www.csmc.uni-hamburg.de/publications/mesopotamia/2018-01-30.html"
+    },
+    {
+      "claim": "No se ha hallado prueba arqueológica de los jardines en las ruinas de Babilonia ni en los textos cuneiformes, de modo que su ubicación histórica no está establecida. La asirióloga Stephanie Dalley propone que estuvieron en Nínive, a unas 300 millas al norte de Babilonia, hacia el 700 a.C., un siglo antes del reinado de Nabucodonosor. Senaquerib encargó textos cuneiformes en prismas de arcilla que describen el jardín de su palacio como ‘a wonder for all peoples’ y documentan dispositivos de bronce para elevar agua que coinciden con los relatos griegos. Cerca de Nínive se descubrió un sistema de acueducto y canales de época de Senaquerib. Los relieves de piedra de los palacios de Nínive representan jardines aterrazados y arbolados con paseos de columnas y techumbres escalonadas, muy próximos a las descripciones griegas.",
+      "source": "Archaeology Magazine (Archaeological Institute of America), serie «Secrets of the Seven Wonders», entrega dedicada al jardín colgante",
+      "url": "https://archaeology.org/issues/online/collection/hanging-garden/secrets-of-the-seven-wonders/"
+    },
+    {
+      "claim": "La excavación del acueducto de Jerwan la llevó a cabo la Iraq Expedition del Oriental Institute en 1933; la fábrica resultó pertenecer a un acueducto construido por Senaquerib de Asiria poco después del 700 a.C., un tipo de estructura desconocido en ningún otro lugar antes de época romana. Seton Lloyd describió la arquitectura del acueducto de Jerwan y de la cabecera del canal en la garganta del Gomel, y Thorkild Jacobsen se ocupó de los registros cuneiformes hallados en Jerwan. El canal al que pertenecía el acueducto se rastreó desde la garganta del río Gomel, donde están las inscripciones de Bavian, hasta el río Khosr, aguas arriba de Nínive. El estudio se publicó en 1935 en University of Chicago Press como OIP 24, dentro de Oriental Institute Publications, y documenta además otros cuatro acueductos menores que salvaban los uadis que cortaban el trazado del canal.",
+      "source": "Institute for the Study of Ancient Cultures (antes Oriental Institute), University of Chicago, ficha de la publicación OIP 24, «Sennacherib's Aqueduct at Jerwan», de Thorkild Jacobsen y Seton Lloyd",
+      "url": "https://isac.uchicago.edu/research/publications/oip/oip-24-sennacherib%E2%80%99s-aqueduct-jerwan"
+    },
+    {
+      "claim": "Ficha editorial del libro en que se formula la hipótesis: Stephanie Dalley, «The Mystery of the Hanging Garden of Babylon: An Elusive World Wonder Traced», Oxford University Press, 2013 (edición en rústica ISBN 9780198728849).",
+      "source": "Oxford University Press, catálogo académico, ficha del título",
+      "url": "https://global.oup.com/academic/product/the-mystery-of-the-hanging-garden-of-babylon-9780198728849"
+    },
+    {
+      "claim": "La hipótesis no goza de consenso. Las objeciones señalan que la tesis se apoya en interpretaciones selectivas de las fuentes clásicas, con los problemas de método que eso acarrea, y que los detalles de la interpretación de Dalley del texto de Senaquerib —la lectura de las palabras clave para ‘tornillos’ y ‘cilindros’ es nueva— y de las imágenes de sus relieves son discutibles. Entre las respuestas críticas se citan la de Bagg (2000, pp. 198-207), centrada en objeciones de técnica hidráulica, y la de Reade (2000), que defiende la tesis babilonia tradicional. La discusión permanece sin resolver.",
+      "source": "Estado de la crítica recogido de los extractos indexados del artículo académico en alemán «Hängenden Gärten», alojado en achemenet.com, y de reseñas académicas del libro de Dalley. No se pudo descargar el texto completo del PDF con la herramienta usada aquí; por eso las objeciones se atribuyen a Bagg y Reade sin citar su argumentación literal",
+      "url": "http://www.achemenet.com/pdf/in-press/Haengende-Garten.pdf"
+    },
+    {
+      "claim": "La discusión académica sobre la identificación se ha publicado en la revista IRAQ (British Institute for the Study of Iraq, Cambridge University Press), con los artículos «The Hanging Gardens of Nineveh» y «Nineveh, Babylon and the Hanging Gardens: cuneiform and classical sources reconciled». La cuestión del acueducto de Jerwan ha sido reexaminada en la misma revista en «Back to Sennacherib's Aqueduct at Jerwan: a Reassessment of the Textual Evidence».",
+      "source": "Cambridge Core, revista IRAQ; fichas de los artículos. Solo se consultaron las fichas de resumen, no los textos completos",
+      "url": "https://www.cambridge.org/core/journals/iraq/article/abs/back-to-sennacheribs-aqueduct-at-jerwan-a-reassessment-of-the-textual-evidence/39A2AECAC027DE734B6087711ACCE754"
+    },
+    {
+      "claim": "La comparación entre el dispositivo descrito por Senaquerib y el tornillo de Arquímedes se argumenta en Stephanie Dalley y John Peter Oleson, «Sennacherib, Archimedes, and the Water Screw: The Context of Invention in the Ancient World». El tornillo elevador de agua se atribuye tradicionalmente a Arquímedes, que vivió cientos de años después de Senaquerib, y se ha supuesto desde antiguo que la invención era anterior a su epónimo. Senaquerib describe moldes de arcilla para grandes cilindros y palmas ‘alamittu’ sobre las cisternas.",
+      "source": "Artículo de Dalley y Oleson, copia en PDF alojada en un servidor académico de la Danmarks Tekniske Universitet (wiki.fysik.dtu.dk). El PDF no pudo ser convertido a texto por la herramienta usada aquí; los datos de autoría, título y contenido proceden de los extractos indexados de ese mismo artículo y de la ficha del repositorio",
+      "url": "https://wiki.fysik.dtu.dk/~askhl/files/teknhist/44.1dalley.pdf"
+    }
+  ],
+  "do_not_use": [
+    "No decir que los jardines colgantes estaban en Babilonia y los construyó Nabucodonosor II para consolar a su esposa meda, que añoraba las montañas. Es la versión escolar y no la sostiene ninguna fuente contemporánea: no hay inscripción babilonia que los mencione ni resto arqueológico en la ciudad.",
+    "No presentar la tesis de Nínive como demostrada. Es la hipótesis de Stephanie Dalley (Oxford University Press, 2013) y está discutida: Bagg y Reade objetaron, la lectura de las palabras asirias para los cilindros es nueva y el uso de las fuentes clásicas se ha llamado selectivo.",
+    "No afirmar que Senaquerib llamó a su jardín ‘jardín colgante’. Lo que dicen sus prismas es que la obra era una maravilla para todos los pueblos y que plantó una réplica del monte Amano; el nombre que hoy usamos es griego y posterior.",
+    "No dar por seguro que Senaquerib inventó el tornillo de Arquímedes. Lo que hay es una descripción de cilindros y palmas de bronce fundidos sobre cisternas, y una interpretación —de Dalley y Oleson— que ve ahí un antecedente. La lectura de esos términos es precisamente uno de los puntos en disputa.",
+    "No decir que Heródoto negó la existencia de los jardines. No los negó: no los menciona. La diferencia importa, y el argumento se apoya en el silencio, no en un desmentido.",
+    "No convertir el acueducto de Jerwan en prueba de los jardines. Lo que está documentado y excavado es el acueducto, en 1933, publicado en 1935: prueba una obra hidráulica mayor de Senaquerib, no la identidad de la maravilla.",
+    "No decir que las excavaciones de Babilonia fueron superficiales o breves. Koldewey trabajó allí entre 1899 y 1917; el hallazgo negativo pesa precisamente porque la excavación fue larga.",
+    "No tratar a Beroso, Diodoro y Josefo como testigos. Son muy posteriores y ninguno vio los jardines; ese es el problema de fondo de toda la tradición.",
+    "No situar Nínive junto a Babilonia. Están a unos quinientos kilómetros de distancia (unas trescientas millas), en cuencas distintas: Nínive sobre el Tigris, en el norte; Babilonia sobre el Éufrates, en el sur.",
+    "No decir que las siete maravillas son todas de ubicación desconocida. El jardín colgante es el caso singular: es la única cuya localización no está establecida."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
