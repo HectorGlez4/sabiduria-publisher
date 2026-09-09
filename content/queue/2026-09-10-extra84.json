@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-17-extra41",
+  "id": "2026-09-10-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Dōgen y el Genjōkōan",
     "hook": "El texto más citado del zen no se predicó a una comunidad de monjes. Se escribió en otoño de 1233 para un solo hombre, laico, que vivía en el otro extremo del país.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Dogen", "#Zen", "#Japon"],
-    "extended": ["#Citas", "#Filosofia", "#Budismo", "#SigloXIII", "#Meditacion", "#Libros", "#Oriente", "#Sabiduria"]
+    "topic": [
+      "#Dogen",
+      "#Zen",
+      "#Japon"
+    ],
+    "extended": [
+      "#Citas",
+      "#Filosofia",
+      "#Budismo",
+      "#SigloXIII",
+      "#Meditacion",
+      "#Libros",
+      "#Oriente",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -72,5 +85,11 @@
     "No decir que Dōgen murió inmediatamente después de compilar la obra. Ordenó la versión de 75 fascículos en 1252 y murió en 1253; es el año siguiente, no el mismo.",
     "No traducir «diez mil cosas» como una cifra. Es la fórmula que designa la totalidad de lo que existe, no un recuento."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-10T19:26:00Z",
+  "results": {}
 }

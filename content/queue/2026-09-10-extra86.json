@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-09-tarde",
+  "id": "2026-09-10-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Frederick Douglass y la exigencia al poder",
     "hook": "La frase más citada de Frederick Douglass se corta siempre por la mitad, y la mitad que se cae es la que mide algo.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#FrederickDouglass", "#Abolicion", "#HistoriaDeEstadosUnidos"],
-    "extended": ["#Citas", "#Discursos", "#Esclavitud", "#DerechosCiviles", "#Historia", "#Libertad", "#Oratoria", "#SigloXIX"]
+    "topic": [
+      "#FrederickDouglass",
+      "#Abolicion",
+      "#HistoriaDeEstadosUnidos"
+    ],
+    "extended": [
+      "#Citas",
+      "#Discursos",
+      "#Esclavitud",
+      "#DerechosCiviles",
+      "#Historia",
+      "#Libertad",
+      "#Oratoria",
+      "#SigloXIX"
+    ]
   },
   "sources": [
     {
@@ -61,5 +74,11 @@
     "No presentar «If there is no struggle, there is no progress» como el título del discurso. Es una frase del mismo pasaje; el título del discurso es sobre la emancipación en las Antillas, y aquel encabezado procede de antologías posteriores.",
     "No dar una edad exacta de Douglass en 1857 ni una fecha de nacimiento cerrada. Nació esclavizado hacia 1817-1818 y él mismo nunca supo el día; lo verificable es que escapó en 1838."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-11T01:26:00Z",
+  "results": {}
 }

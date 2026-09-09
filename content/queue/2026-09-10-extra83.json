@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-16-extra41",
+  "id": "2026-09-10-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Bolívar y la Carta de Jamaica de 1815",
     "hook": "El texto más citado de la independencia hispanoamericana se leyó durante casi dos siglos en traducción o en copia de copia. El manuscrito español que lo contiene no apareció hasta hace pocos años, y no en Venezuela.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SimonBolivar", "#CartaDeJamaica", "#Independencia"],
-    "extended": ["#Citas", "#AmericaLatina", "#Historia", "#Archivos", "#Ecuador", "#Venezuela", "#SigloXIX", "#Documentos"]
+    "topic": [
+      "#SimonBolivar",
+      "#CartaDeJamaica",
+      "#Independencia"
+    ],
+    "extended": [
+      "#Citas",
+      "#AmericaLatina",
+      "#Historia",
+      "#Archivos",
+      "#Ecuador",
+      "#Venezuela",
+      "#SigloXIX",
+      "#Documentos"
+    ]
   },
   "sources": [
     {
@@ -71,5 +84,11 @@
     "No situar el manuscrito original en Venezuela ni en Colombia. Está en el Archivo Histórico del Ministerio de Cultura y Patrimonio del Ecuador, en Quito.",
     "No usar la frase como consigna de orgullo continental sin su contexto. «Un pequeño género humano» se dice en una carta escrita desde el exilio y en un momento de derrota militar, no desde la victoria."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-10T15:26:00Z",
+  "results": {}
 }

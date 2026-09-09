@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-10-tarde",
+  "id": "2026-09-11-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Emily Dickinson y la esperanza con plumas",
     "hook": "El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.",
@@ -79,5 +79,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-09-11T17:26:00Z",
+  "results": {}
 }

@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-17-tarde",
+  "id": "2026-09-10-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Rosario Castellanos y el umbral",
     "hook": "Se cita como una afirmación luminosa. En el poema es lo que queda al final de una resta: once nombres de mujer examinados y descartados uno por uno, empezando por el suicidio.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#RosarioCastellanos", "#PoesiaMexicana", "#Mexico"],
-    "extended": ["#Citas", "#Poesia", "#Literatura", "#SigloXX", "#Feminismo", "#Libros", "#AmericaLatina", "#Chiapas"]
+    "topic": [
+      "#RosarioCastellanos",
+      "#PoesiaMexicana",
+      "#Mexico"
+    ],
+    "extended": [
+      "#Citas",
+      "#Poesia",
+      "#Literatura",
+      "#SigloXX",
+      "#Feminismo",
+      "#Libros",
+      "#AmericaLatina",
+      "#Chiapas"
+    ]
   },
   "sources": [
     {
@@ -72,5 +85,11 @@
     "No decir que «Poesía no eres tú» es un poemario nuevo de 1972. Es el volumen que reúne por primera vez su obra poética de 1948 a 1971, más los poemas dramáticos «Salomé» y «Judith» y sus traducciones.",
     "No atribuir el verso de Bécquer a otra rima. El «Poesía… eres tú» cierra la rima XXI, y es a esa fórmula a la que responde el título del libro."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-10T20:26:00Z",
+  "results": {}
 }

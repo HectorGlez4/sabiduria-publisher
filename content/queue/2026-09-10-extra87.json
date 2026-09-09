@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-10-extra41",
+  "id": "2026-09-10-extra87",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "el Dhammapada y el verso 5 sobre el odio",
     "hook": "La frase budista más repetida en Occidente dice que al odio lo apaga el amor. El texto original no dice amor.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -79,5 +79,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-09-11T04:26:00Z",
+  "results": {}
 }

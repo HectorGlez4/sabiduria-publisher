@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-12-tarde",
+  "id": "2026-09-09-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "el Hávamál y la estrofa del buen nombre",
     "hook": "La estrofa nórdica más citada sobre la fama que no muere empieza con las mismas tres palabras que un poema anterior. Ese otro poema no consuela a nadie: termina en tierra vacía y gente sometida.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Havamal", "#EddaPoetica", "#Islandia"],
-    "extended": ["#Citas", "#Vikingos", "#Manuscritos", "#PoesiaAntigua", "#Nordico", "#EdadMedia", "#Literatura", "#Clasicos"]
+    "topic": [
+      "#Havamal",
+      "#EddaPoetica",
+      "#Islandia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Vikingos",
+      "#Manuscritos",
+      "#PoesiaAntigua",
+      "#Nordico",
+      "#EdadMedia",
+      "#Literatura",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -68,5 +81,11 @@
     "No decir que la estrofa habla de «gloria» o de «honor guerrero». Orðstírr es la reputación que se labra con lo que uno hace y con lo que de uno se dice; la estrofa 77, gemela, la remata además con el juicio que se emite sobre cada muerto.",
     "No presentar a Hákon el Bueno como un rey pagano. Se crió y fue bautizado en la corte inglesa de Athelstan; su propio escaldo lo lleva al Valhalla, y ese es justamente el punto del poema."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-10T02:26:00Z",
+  "results": {}
 }
