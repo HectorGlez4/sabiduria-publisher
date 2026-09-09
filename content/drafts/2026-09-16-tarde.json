@@ -1,0 +1,81 @@
+{
+  "id": "2026-09-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Simone de Beauvoir: no se nace mujer",
+    "hook": "La frase más citada del feminismo del siglo XX no abre el libro del que viene. Abre el segundo tomo, a mitad de obra, y es la primera línea de un razonamiento que casi nunca se cita entero.",
+    "quote": {
+      "text": "No se nace mujer: se llega a serlo.",
+      "author": "Simone de Beauvoir",
+      "work": "El segundo sexo, tomo II, apertura del capítulo «Infancia»; Gallimard, 1949",
+      "attribution_verified": true
+    },
+    "body": [
+      "Gallimard publicó «Le Deuxième Sexe» en 1949, en dos tomos y cerca de novecientas ochenta páginas: «Les faits et les mythes» primero, «L'expérience vécue» meses después. La frase no está al principio de la obra. Está al principio del segundo tomo, y lo que sigue es lo que la explica: ningún destino biológico, psíquico ni económico define la figura que la hembra humana adopta dentro de la sociedad; es el conjunto de la civilización el que elabora eso que se llama femenino. La frase sola parece una consigna. Con la segunda mitad es una tesis, y una que obliga a demostrarse.",
+      "El viaje de esas seis palabras al inglés dice mucho. La traducción de H. M. Parshley, de 1953, recortó unas ciento cuarenta y cinco páginas de las novecientas setenta y dos del original, alrededor del quince por ciento, y tradujo «becomes, a woman», con artículo. La versión íntegra de Constance Borde y Sheila Malovany-Chevallier, de 2009, quita el artículo: «becomes, woman». No es una pelea de gramáticos. Con artículo, una se convierte en un ejemplar de una categoría; sin él, se convierte en algo más parecido a una condición. Hay un libro académico entero dedicado a esa sola frase, editado por Bonnie Mann y Martina Ferrari en Oxford University Press en 2017: trescientas sesenta y dos páginas. El español, donde se dice «no se nace mujer» y no cabe artículo, nunca tuvo ese problema.",
+      "El libro incomodó desde el primer día. El Vaticano lo puso en el Índice de libros prohibidos en 1956, por hablar de sexualidad femenina y por negar que el instinto maternal fuera innato. El 26 de marzo de este año, setenta años después de aquella condena, Gallimard lo incorporó a la Pléiade con el número 683: la colección que la casa reserva a sus clásicos. La misma obra, el mismo texto, dos veredictos opuestos separados por siete décadas."
+    ],
+    "question": "¿Qué parte de lo que crees ser te fue enseñada?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SimoneDeBeauvoir", "#ElSegundoSexo", "#Filosofia"],
+    "extended": ["#Citas", "#Feminismo", "#Literatura", "#Francia", "#SigloXX", "#Traduccion", "#Libros", "#Existencialismo"]
+  },
+  "sources": [
+    {
+      "claim": "La frase francesa es «On ne naît pas femme: on le devient», con dos puntos, y procede de «Le Deuxième Sexe» (1949). La traducción de H. M. Parshley (1952-1953, abreviada) la vertió como «One is not born, but rather becomes, a woman»; la de Constance Borde y Sheila Malovany-Chevallier (2010, íntegra) la vierte como «One is not born, but rather becomes, woman», sin artículo. La presencia o ausencia del artículo tiene peso filosófico: unos leen en su inclusión un constructivismo social y en su omisión una lectura de fenomenología existencial. El volumen reseñado es «On ne naît pas femme: on le devient… The Life of a Sentence», editado por Bonnie Mann y Martina Ferrari, Oxford University Press, 2017, 362 páginas.",
+      "source": "Notre Dame Philosophical Reviews, University of Notre Dame, reseña de «The Life of a Sentence»",
+      "url": "https://ndpr.nd.edu/reviews/on-ne-nait-pas-femme-on-le-deviant-the-life-of-a-sentence/"
+    },
+    {
+      "claim": "«Le Deuxième Sexe» se publicó en Gallimard en 1949 en dos tomos, «Les faits et les mythes» y «L'expérience vécue», con un total en torno a las 978 páginas. Los dos volúmenes salieron con meses de diferencia dentro de 1949. Referencias de catálogo del editor: ISBN 9782070205134 (tomo I) y 9782070205141 (tomo II), colección Blanche.",
+      "source": "Catálogo de Éditions Gallimard, fichas de «Le Deuxième Sexe» I y II. gallimard.fr rechazó la descarga directa («Request Rejected») a la herramienta usada aquí; los datos de título, tomos, colección e ISBN se recogieron de los extractos indexados de esas mismas fichas de catálogo",
+      "url": "https://www.gallimard.fr/catalogue/le-deuxieme-sexe-2-l-experience-vecue/9782070205141"
+    },
+    {
+      "claim": "«Le Deuxième Sexe» entró en la Bibliothèque de la Pléiade el 26 de marzo de 2026, con el número 683 de la colección, coincidiendo con el cuarenta aniversario de la muerte de Simone de Beauvoir (1986). El Vaticano puso la obra en el Índice en 1956 por considerarla «contraria a la fe católica», por su tratamiento de la sexualidad femenina y por rechazar que el instinto maternal fuera innato.",
+      "source": "franceinfo (Radio France), sección Culture/Livres, sobre la entrada de la obra en la Pléiade",
+      "url": "https://www.franceinfo.fr/culture/livres/le-deuxieme-sexe-entre-dans-la-pleiade-a-l-occasion-du-40e-anniversaire-de-la-mort-de-simone-de-beauvoir_7893038.html"
+    },
+    {
+      "claim": "Toril Moi, James B. Duke Professor of Literature and Romance Studies y profesora de Inglés y Estudios Teatrales en la Universidad de Duke, es autora del ensayo «While We Wait: Notes on the English Translation of The Second Sex» y de la reseña de la nueva traducción publicada en la London Review of Books. Su crítica sostiene que los recortes y omisiones de Parshley, unidos a su incompetencia filosófica, dañaron la reputación intelectual de Beauvoir.",
+      "source": "Página personal académica de Toril Moi, Duke University, con sus escritos sobre las traducciones de «The Second Sex»",
+      "url": "http://www.torilmoi.com/latest/the-new-translation-of-the-second-sex/"
+    },
+    {
+      "claim": "Parshley redujo el texto francés original, de 972 páginas, en unas 145 páginas: un recorte del quince por ciento. La nueva traducción íntegra de Constance Borde y Sheila Malovany-Chevallier apareció en Knopf, presentada como «Complete and Unabridged for the First Time».",
+      "source": "The Chronicle of Higher Education, «The Second 'Second Sex'», de Carlin Romano; copia alojada en el sitio académico de Toril Moi (Duke University)",
+      "url": "http://www.torilmoi.com/wp-content/uploads/2009/09/Romano_The-Second-Second-Sex.pdf"
+    },
+    {
+      "claim": "La traducción española de referencia actual es «El segundo sexo», traducción de Alicia Martorell, con prólogo a la edición española de Teresa López Pardina, publicada por Ediciones Cátedra en la colección Feminismos. En esa versión el pasaje reza: «No se nace mujer: se llega a serlo. Ningún destino biológico, psíquico, económico, define la imagen que reviste en el seno de la sociedad la hembra humana».",
+      "source": "Ficha de catálogo de Ediciones Cátedra y registro bibliográfico de la Biblioteca de la Universidad de Cádiz para la edición de Martorell",
+      "url": "https://bibcatalogo.uca.es/cgi-bin/koha/opac-detail.pl?biblionumber=861917"
+    },
+    {
+      "claim": "Existieron traducciones rioplatenses de «Le deuxième sexe» anteriores a la edición española de referencia, estudiadas como objeto propio por la crítica de la traducción: «Las traducciones rioplatenses de Le deuxième sexe de Simone de Beauvoir: marcas de época en torno a la enunciación de identidades generizadas».",
+      "source": "Mutatis Mutandis. Revista Latinoamericana de Traducción, Universidad de Antioquia",
+      "url": "https://revistas.udea.edu.co/index.php/mutatismutandis/article/view/24117"
+    }
+  ],
+  "do_not_use": [
+    "No decir que la frase abre «El segundo sexo». Abre el tomo II, «L'expérience vécue», a mitad de una obra de casi novecientas ochenta páginas. El tomo I empieza con la biología y los mitos.",
+    "No citar la frase suelta como si fuera una consigna cerrada. La oración siguiente —ningún destino biológico, psíquico ni económico define lo que la sociedad llama femenino— es la que convierte el eslogan en tesis, y es la que se cae casi siempre.",
+    "No poner en boca de Beauvoir la palabra «género». No aparece en la frase ni en el sentido que hoy se le da; ese uso técnico es posterior y atribuírselo es un anacronismo.",
+    "No citar la traducción inglesa de Parshley como si fuera fiel. Recortó unas 145 páginas de 972, alrededor del quince por ciento, y su versión estuvo vigente en inglés desde 1953 hasta que en 2009 apareció la íntegra de Borde y Malovany-Chevallier.",
+    "No trasladar al español el problema del artículo. En inglés se discute «a woman» frente a «woman»; en español «no se nace mujer» no admite artículo y la ambigüedad no existe. Contarlo como si el lector hispanohablante lo padeciera es falso.",
+    "No fechar la condena vaticana en 1949. La obra entró en el Índice de libros prohibidos en 1956, siete años después de publicarse.",
+    "No decir que la traducción de Cátedra fue la primera al español. Hubo traducciones rioplatenses anteriores; la de Alicia Martorell se cita aquí por ser la de referencia hoy en España, no por ser la primera.",
+    "No atribuir la frase a «El segundo sexo, 1953» ni a ninguna edición inglesa. El original es francés y de 1949; las fechas inglesas son de traducción.",
+    "No confundir los dos tomos ni sumar sus páginas como si fueran un volumen. Son dos, publicados con meses de diferencia dentro de 1949.",
+    "No decir que la Pléiade la incorporó «recientemente» sin fecha. Fue el 26 de marzo de 2026, con el número 683 de la colección."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

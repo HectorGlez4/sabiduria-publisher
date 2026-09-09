@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-16-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "los puquios de Nazca y sus ojos en espiral",
+    "hook": "En el desierto de Nazca hay una obra de la misma gente que trazó las líneas. No se ve desde el aire, no representa nada y sigue funcionando: de los cuarenta y dos acueductos registrados, veintinueve todavía llevan agua.",
+    "body": [
+      "La cuenca del río Grande recibe la lluvia arriba, en los Andes, y la baja en cauces que corren tres o cuatro meses al año. Abajo, donde vivía la gente, el año es sequía. La respuesta fueron los puquios: galerías que van a buscar el agua del subsuelo y la conducen por gravedad hasta reservorios y campos de cultivo. Tramos a cielo abierto y tramos en túnel, forrados con lajas de piedra y techados con troncos de huarango. Cada diez o treinta metros se abre un pozo en espiral —los llaman ojos— por el que se baja caminando en círculos hasta el canal. No son adornos ni miradores: son la puerta de mantenimiento. Un sistema enterrado que nadie pudiera limpiar habría durado una generación.",
+      "Fecharlas fue un problema, y el motivo dice algo sobre cómo se escribe la historia. Los documentos coloniales no las mencionan: ni confirman que ya existieran ni dicen que las trajeran los españoles. El archivo calla. Por eso se sostuvo durante décadas que la técnica era europea, parecida a la de desaguar minas: Potosí ya se drenaba con canales subterráneos en 1556. La respuesta no vino de un papel. Persis Clarkson y Ronald Dorn dataron el material orgánico atrapado en el barniz de roca de los dinteles de dos puquios y publicaron las fechas en 1995: en torno al 560 y al 640 de nuestra era. Precolombinos.",
+      "El contraste con el vecino es difícil de ignorar. Las líneas de Nazca, que solo se leen desde el aire y no riegan nada, entraron en la lista del Patrimonio Mundial en 1994. Los acueductos, que siguen dando de beber al valle mil quinientos años después, se presentaron a esa misma lista el 5 de agosto de 2019 y ahí siguen, en la lista indicativa. Una civilización se juzga casi siempre por lo que dejó para mirar, y casi nunca por lo que dejó funcionando."
+    ],
+    "question": "¿Qué de lo que usas hoy fue construido por alguien cuyo nombre no sabes?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Lo que quedó funcionando",
+    "subtitle": "Valle de Nazca, hacia el año 500",
+    "body": "Los puquios son galerías que buscan el agua del subsuelo y la conducen por gravedad. Cada diez o treinta metros se abre un pozo en espiral para bajar a limpiarlas. De los cuarenta y dos acueductos registrados, veintinueve todavía llevan agua."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Nazca", "#Puquios", "#Peru"],
+    "extended": ["#Arqueologia", "#Civilizaciones", "#Ingenieria", "#Agua", "#Andes", "#Historia", "#Patrimonio", "#AmericaPrehispanica"]
+  },
+  "sources": [
+    {
+      "claim": "Persis B. Clarkson y Ronald I. Dorn dataron por espectrometría de masas con acelerador (AMS) el material orgánico contenido en el barniz de roca de los dinteles de piedra de dos puquios. Las medidas calibradas dieron cal A.D. 560(620)650 y cal A.D. 600(640)660, a una sigma, e indican una edad precolombina. Los autores subrayan que los documentos coloniales ni confirman ni niegan la existencia de los puquios, y que por eso la datación cronométrica era indispensable frente al silencio del archivo escrito.",
+      "source": "Persis B. Clarkson y Ronald I. Dorn, «New Chronometric Dates for the Puquios of Nasca, Peru», Latin American Antiquity, vol. 6, n.º 1 (1995), Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/latin-american-antiquity/article/abs/new-chronometric-dates-for-the-puquios-of-nasca-peru/1813C48FA131E0AAD3FC41C4C2500884"
+    },
+    {
+      "claim": "De los 42 acueductos existentes en Nazca, 29 todavía transportan agua. Están construidos con lajas de piedra y troncos de huarango. Los ojos son pozos de ventilación y acceso de forma espiral por los que se baja al subsuelo. Los tres sistemas principales son Ocongalla, Cantalloc y Achaco. La construcción se sitúa hacia el siglo VI, en torno al año 500. El Ministerio de Cultura del Perú inició en 2015 la colocación de hitos de delimitación en Achaco, y en 2022 empezó una restauración de Ocongalla con financiación privada. Los acueductos entraron en la lista indicativa del Patrimonio Mundial en 2019.",
+      "source": "Wikipedia en español, «Acueductos de Nazca» (usada para los recuentos y los nombres de los sistemas; las cifras concuerdan con las que dan las fuentes de divulgación consultadas y la datación con la de Clarkson y Dorn)",
+      "url": "https://es.wikipedia.org/wiki/Acueductos_de_Nazca"
+    },
+    {
+      "claim": "Los «Nasca Aqueducts» se presentaron a la lista indicativa del Patrimonio Mundial el 5 de agosto de 2019, como bien cultural bajo los criterios (iii) y (iv), en la región de Ica, provincia de Nasca, distritos de Nasca y Vista Alegre; identificador 6407. Se sitúan en la cuenca del río Grande, un sistema hidrográfico en el que las lluvias caen en la sierra alta y generan cursos intermitentes que duran entre tres y cuatro meses al año; los acueductos están en la parte baja de la cuenca, una franja desértica muy seca donde el agua escasea casi todo el año y en muchos casos hay sequía total.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, lista indicativa, ficha 6407 «Nasca Aqueducts», presentada por Perú. whc.unesco.org devuelve error 403 a la herramienta de descarga usada aquí; los datos se recogieron de los extractos indexados de esa misma ficha oficial",
+      "url": "https://whc.unesco.org/en/tentativelists/6407"
+    },
+    {
+      "claim": "Las «Líneas y geoglifos de Nasca y Palpa» se inscribieron en la Lista del Patrimonio Mundial en 1994, con el número de referencia 700 y los criterios culturales (i), (iii) y (iv). Los geoglifos cubren unos 450 km² en la llanura costera peruana, a unos 400 km al sur de Lima, y se trazaron entre el 500 a.C. y el 500 d.C.",
+      "source": "UNESCO, Centro del Patrimonio Mundial, ficha del bien n.º 700; corroborado por el Centro Cultural Inca Garcilaso del Ministerio de Relaciones Exteriores del Perú",
+      "url": "https://whc.unesco.org/en/list/700/"
+    },
+    {
+      "claim": "Rosa Lasaponara y Nicola Masini, del Consejo Nacional de Investigación de Italia (CNR), en cooperación con el arqueólogo Giuseppe Orefici, estudiaron los puquios de Nazca con imágenes de satélite y concluyeron que el sistema fue en su día mucho más extenso, observando cómo se distribuían los puquios respecto de asentamientos vecinos que sí son fáciles de datar. En 2016 se emplearon aeronaves pilotadas a distancia para cartografiar y documentar cinco sistemas de muestra. Los puquios combinan tramos de zanja y tramos de túnel, con los ojos en espiral como accesos verticales y respiraderos.",
+      "source": "Rosa Lasaponara y Nicola Masini, «Following the Ancient Nasca Puquios from Space», capítulo publicado por Springer y alojado por el Instituto UNESCO-HIST",
+      "url": "https://www.unesco-hist.org/uploads/files/20160125/Springer_Lasaponara&Masini_chapter12_pubblicato.pdf"
+    },
+    {
+      "claim": "La hipótesis de un origen español sostiene que la técnica de los puquios no difiere sustancialmente de las que usaron los españoles desde el inicio de la conquista para desaguar minas; un ejemplo temprano es la mina de Potosí, drenada con canales subterráneos ya en 1556. Pese a las dudas, el consenso general en 2017 era que los puquios de Nazca son de origen prehispánico, del Nasca Medio (hacia el 500 d.C.), con modificaciones españolas y republicanas posteriores.",
+      "source": "Artículo enciclopédico en inglés «Puquios», que recoge y referencia el estado de la discusión académica sobre la datación; el extremo prehispánico está sostenido de forma independiente por Clarkson y Dorn (1995), citados arriba",
+      "url": "https://en.wikipedia.org/wiki/Puquios"
+    }
+  ],
+  "do_not_use": [
+    "No decir que los puquios son obra de los incas. Son anteriores: la datación cronométrica los sitúa hacia el 560-640 d.C., en el horizonte nazca, siglos antes del Tahuantinsuyo.",
+    "No dar por zanjada la discusión sobre su origen. La hipótesis de una introducción española existió y se apoyaba en el parecido con las técnicas de desagüe de minas; lo que la desplaza no es un documento sino las dataciones de 1995. Conviene decirlo así.",
+    "No decir que los documentos coloniales confirman su antigüedad. Callan. Ese silencio fue precisamente el argumento de quienes los creían europeos.",
+    "No dar una sola cifra de acueductos como definitiva. Circulan varios recuentos: 42 registrados con 29 en funcionamiento, y también 46 construidos con 32 en uso. Aquí se usa el primero; si se cita otro, hay que decir de dónde sale.",
+    "No llamar «pozos de agua» a los ojos. Son accesos y respiraderos en espiral para bajar a limpiar y mantener la galería; el agua corre por el canal de abajo.",
+    "No decir que los acueductos son Patrimonio de la Humanidad. No lo son: están en la lista indicativa desde el 5 de agosto de 2019. Las que sí están inscritas, desde 1994, son las líneas y geoglifos.",
+    "No presentarlos como una obra intacta desde el siglo VI. Se acepta que hubo modificaciones coloniales y republicanas sobre la traza original, y hay tramos restaurados en el siglo XXI.",
+    "No confundirlos con los qanats persas ni afirmar una influencia entre ambos. La semejanza funcional es real y no hay ninguna conexión demostrada; decirlo es una comparación, no un origen.",
+    "No atribuir los ojos en espiral a una función ritual o astronómica. Las fuentes citadas los describen como accesos de mantenimiento y ventilación."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

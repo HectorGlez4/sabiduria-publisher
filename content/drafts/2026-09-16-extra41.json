@@ -1,0 +1,75 @@
+{
+  "id": "2026-09-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Bolívar y la Carta de Jamaica de 1815",
+    "hook": "El texto más citado de la independencia hispanoamericana se leyó durante casi dos siglos en traducción o en copia de copia. El manuscrito español que lo contiene no apareció hasta hace pocos años, y no en Venezuela.",
+    "quote": {
+      "text": "Nosotros somos un pequeño género humano; poseemos un mundo aparte, cercado por dilatados mares.",
+      "author": "Simón Bolívar",
+      "work": "Carta de Jamaica. Kingston, 6 de septiembre de 1815",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 6 de septiembre de 1815, en Kingston, Simón Bolívar le dictó a su secretario Pedro Briceño Méndez la «Contestación de un americano meridional a un caballero de esta isla». El caballero era Henry Cullen, un comerciante inglés que vivía en Falmouth, Jamaica, y que le había escrito para preguntarle por la situación de América. Era, literalmente, una carta a un particular. La escribió un hombre en el exilio, en meses en que las fuerzas realistas estaban recuperando el control del continente. El 20 de septiembre ya existía una traducción al inglés.",
+      "Y esa traducción fue la que viajó. La carta se publicó en inglés en Jamaica en 1818 y otra vez en 1825. En español no se imprimió hasta 1833, en el tomo XXI de la «Colección de documentos relativos a la vida pública del Libertador», de Francisco Javier Yánez y Cristóbal Mendoza. Del manuscrito español no se sabía nada, y esa ausencia dejaba abierta una duda incómoda sobre cada palabra: lo que se citaba era una transcripción tardía, sin original con que compararla. El historiador ecuatoriano Amílcar Varela identificó un manuscrito en español en el Archivo Histórico del Banco Central del Ecuador; su autenticidad se verificó y se hizo pública en 2014. Ciento noventa y nueve años después.",
+      "La Unesco inscribió la versión española en el registro Memoria del Mundo de América Latina y el Caribe en 2016, y en 2017 el llamado Manuscrito de Bogotá, la traducción inglesa que conserva el Archivo General de la Nación de Colombia. El original español está hoy en el Archivo Histórico del Ministerio de Cultura y Patrimonio del Ecuador, en Quito. Un continente entero se citó a sí mismo durante dos siglos con un papel que no tenía delante."
+    ],
+    "question": "¿Cuánto de lo que damos por dicho lo leímos en la copia de una copia?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SimonBolivar", "#CartaDeJamaica", "#Independencia"],
+    "extended": ["#Citas", "#AmericaLatina", "#Historia", "#Archivos", "#Ecuador", "#Venezuela", "#SigloXIX", "#Documentos"]
+  },
+  "sources": [
+    {
+      "claim": "El documento se titula «Reply of a South American to a Gentleman of this Island» («Contestación de un americano meridional a un caballero de esta isla»), está fechado el 6 de septiembre de 1815 y existe en dos versiones: el original en español, conservado en el Archivo Histórico del Ministerio de Cultura y Patrimonio del Ecuador, en Quito, y la traducción inglesa, el Manuscrito de Bogotá, que custodia el Archivo General de la Nación de Colombia. La versión española se inscribió en el registro Memoria del Mundo de América Latina y el Caribe en 2016 y la inglesa en 2017. El historiador ecuatoriano Amílcar Varela identificó el manuscrito español en 1996 en el Archivo Histórico del Banco Central del Ecuador. La carta se escribió durante la lucha por la independencia, en un momento crítico en que las fuerzas realistas estaban restableciendo el control colonial.",
+      "source": "Unesco, Memoria del Mundo, América Latina y el Caribe, ficha del documento «Reply of a South American to a Gentleman of this Island (The Jamaica Letter, Simón Bolívar, 1815)»",
+      "url": "https://www.unesco.org/en/memory-world/lac/reply-south-american-gentleman-island-jamaica-letter-simon-bolivar-1815"
+    },
+    {
+      "claim": "Simón Bolívar dictó la carta a su secretario Pedro Briceño Méndez el 6 de septiembre de 1815 en Kingston, Jamaica. Iba dirigida a Henry Cullen, comerciante británico residente en Falmouth, Jamaica, que le había escrito antes. Se publicó en inglés en «The Jamaica Quarterly Journal and Literary Gazette» (1818) y en «The Jamaica Journal and Kingston Chronicle» (1825). En español no se publicó hasta 1833, en el tomo XXI de la «Colección de documentos relativos a la vida pública del Libertador», recopilada por Francisco Javier Yánez y Cristóbal Mendoza. El manuscrito original en español se dio a conocer en Ecuador en noviembre de 2014, según el relato de 2016 del propio investigador Amílcar Varela Jara.",
+      "source": "Wikipedia en español, «Carta de Jamaica» (usada para la cadena editorial y las fechas de publicación; los datos de archivo, autoría y hallazgo coinciden con la ficha de la Unesco citada arriba)",
+      "url": "https://es.wikipedia.org/wiki/Carta_de_Jamaica"
+    },
+    {
+      "claim": "Transcripción académica del texto de la Carta de Jamaica en la que consta el pasaje: «Nosotros somos un pequeño género humano; poseemos un mundo aparte, cercado por dilatados mares, nuevo en casi todas las artes y ciencias». La carta se titula «Contestación de un americano meridional a un caballero de esta isla» y está fechada el 6 de septiembre de 1815.",
+      "source": "University of Pennsylvania, materiales de curso de literatura hispanoamericana, transcripción de la «Carta de Jamaica» y el «Discurso de Angostura»",
+      "url": "https://ccat.sas.upenn.edu/romance/spanish/219/09independencia/lecturas/bolivar.html"
+    },
+    {
+      "claim": "Transcripción independiente del mismo texto en materiales docentes universitarios, en la que el pasaje aparece con la variante «cercado por dilatados mares; nuevos en casi todas las artes y ciencias, aunque en cierto modo viejos en los usos de la sociedad civil». La primera cláusula —«Nosotros somos un pequeño género humano; poseemos un mundo aparte, cercado por dilatados mares»— es idéntica en ambas transcripciones.",
+      "source": "Columbia University, Department of Latin American and Iberian Cultures, texto de la «Carta de Jamaica» en PDF para el curso Spanish 3350",
+      "url": "https://www.columbia.edu/cu/spanish/courses/spanish3350/02independencia/pdf/jamaica.pdf"
+    },
+    {
+      "claim": "Ficha de repositorio institucional de la «Carta de Jamaica. Kingston, 6 de septiembre de 1815», que registra el documento con la marca «(atribuido)», señal de la cautela archivística que arrastró el texto mientras no hubo manuscrito original en español con que cotejarlo.",
+      "source": "Memórica. México, haz memoria — repositorio digital de la Secretaría de Cultura de México",
+      "url": "https://memoricamexico.gob.mx/swb/memorica/Cedula?oId=3qaBpX0BNtHWGgPgTEGf"
+    },
+    {
+      "claim": "El Viceministerio de Cultura y Patrimonio del Ecuador mantiene una página institucional dedicada a «Simón Bolívar y la Carta de Jamaica», sobre el manuscrito conservado en el país. culturaypatrimonio.gob.ec devuelve error 403 a la herramienta de descarga usada aquí; se cita como referencia institucional del país depositario y no se le atribuye ningún dato que no sostengan además las fuentes anteriores.",
+      "source": "Viceministerio de Cultura y Patrimonio del Ecuador",
+      "url": "https://www.culturaypatrimonio.gob.ec/simon-bolivar-y-la-carta-de-jamaica/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Bolívar escribió la carta de su puño y letra. La dictó a su secretario Pedro Briceño Méndez. El manuscrito hallado en Quito es una copia de época en español, no un autógrafo del Libertador.",
+    "No citar el pasaje más allá de la primera cláusula sin advertir que las transcripciones difieren. Unas dan «nuevo en casi todas las artes y ciencias» y otras «nuevos», con puntuación distinta. Lo que coincide en todas es «Nosotros somos un pequeño género humano; poseemos un mundo aparte, cercado por dilatados mares».",
+    "No presentar la Carta de Jamaica como un manifiesto público. Fue la respuesta privada a la carta de un comerciante inglés, Henry Cullen; su condición de documento fundacional es posterior y la construyó su circulación.",
+    "No dar por seguro el año del hallazgo sin matiz. La ficha de la Unesco dice que Amílcar Varela identificó el manuscrito en 1996 en el Archivo Histórico del Banco Central del Ecuador; la verificación y la difusión pública son de 2014. Conviene distinguir hallazgo de autenticación.",
+    "No decir que hasta 2014 no existía texto en español. Existía desde 1833, en la recopilación de Yánez y Mendoza; lo que no existía era el manuscrito con que cotejarlo. Ese es el matiz de la pieza.",
+    "No afirmar que la Carta de Jamaica proclama la independencia ni que funda una república. Es un diagnóstico y una previsión, dirigidos además a persuadir a las potencias europeas, en particular a Gran Bretaña, de apoyar la causa.",
+    "No confundir los dos documentos inscritos por la Unesco. La versión española, en Quito, se inscribió en 2016; el Manuscrito de Bogotá, que es la traducción inglesa y está en el Archivo General de la Nación de Colombia, en 2017.",
+    "No situar el manuscrito original en Venezuela ni en Colombia. Está en el Archivo Histórico del Ministerio de Cultura y Patrimonio del Ecuador, en Quito.",
+    "No usar la frase como consigna de orgullo continental sin su contexto. «Un pequeño género humano» se dice en una carta escrita desde el exilio y en un momento de derrota militar, no desde la victoria."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

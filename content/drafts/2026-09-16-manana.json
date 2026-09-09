@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-16-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Semmelweis y el cloruro de cal de 1847",
+    "hook": "En 1823 el Hospital General de Viena mejoró la enseñanza: los estudiantes empezarían a aprender haciendo autopsias. La mortalidad de las parturientas pasó de cerca del uno por ciento al siete y medio. Nadie ató los dos hechos durante veinticuatro años.",
+    "body": [
+      "Ignaz Semmelweis nació en 1818 en Tabán, hoy parte de Budapest, y entró en 1844 en obstetricia del Hospital General de Viena. La maternidad tenía dos salas. En la Primera atendían médicos y estudiantes; en la Segunda, parteras. Morían tres veces más mujeres en la de los médicos. Semmelweis fue descartando explicaciones una por una: la ventilación, el hacinamiento, la postura del parto, incluso el recorrido que hacía por la sala un sacerdote tocando una campanilla. Ninguna movió la cifra.",
+      "El 13 de marzo de 1847 murió Jakob Kolletschka, patólogo y amigo suyo, después de que el bisturí de un estudiante le abriera un dedo durante una autopsia. Semmelweis leyó el informe y encontró en su amigo las mismas lesiones que veía en las mujeres muertas de fiebre puerperal. No tenía la palabra bacteria ni la idea: habló de «partículas cadavéricas». En mayo de 1847 ordenó que todo el que entrara en la Primera sala se lavara las manos con cloruro de cal. Abril había cerrado con 18,27 por ciento de muertes. El año 1848 cerró con 1,27.",
+      "Lo que vino después no fue el reconocimiento. Su contrato en Viena terminó el 20 de marzo de 1849. Sus resultados de 1848, los buenos, no los publicó él hasta 1861: trece años de silencio que explicó en el prólogo de su libro diciendo que era enemigo de toda polémica y que prefería dejar que el tiempo abriera camino a la verdad. Lo único que había salido antes fue una nota que su colega Ferdinand von Hebra escribió por él en 1847, con cifras incompletas y un error de cálculo. Murió en 1865 en un manicomio de Oberdöbling, a las afueras de Viena, por las heridas que recibió allí dentro."
+    ],
+    "question": "¿Cuánto tarda en aceptarse algo que ya está demostrado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Trece años de silencio",
+    "subtitle": "Viena, 1847",
+    "body": "Semmelweis ordenó lavarse las manos con cloruro de cal y la mortalidad de la sala de los médicos cayó del 18,27 por ciento al 1,27. Sus cifras buenas no las publicó hasta 1861. Dijo en el prólogo que era enemigo de la polémica y que prefería esperar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Semmelweis", "#HistoriaDeLaMedicina", "#Viena"],
+    "extended": ["#Ciencia", "#SigloXIX", "#SaludPublica", "#Higiene", "#Evidencia", "#Hospitales", "#Obstetricia", "#Divulgacion"]
+  },
+  "sources": [
+    {
+      "claim": "Ignaz Semmelweis nació en 1818 en Tabán, hoy parte de Budapest, e ingresó en el servicio de obstetricia del Hospital General de Viena tras obtener el título de médico en 1844. El Hospital General tenía dos salas de obstetricia, y la atendida por médicos registraba una mortalidad tres veces mayor que la de las parteras. Jakob Kolletschka murió en 1847 después de que le cortaran la mano durante una autopsia, y los hallazgos anatomopatológicos fueron idénticos a los de la fiebre puerperal. Semmelweis impuso el lavado con cloruro de cal en los meses siguientes y la mortalidad bajó «del 18,27 % al 1,27 %, en 1848». Su contrato en el Hospital General terminó el 20 de marzo de 1849. Después trabajó en el hospital Szent Rókus de Pest. Publicó «Die Ätiologie, der Begriff und die Prophylaxis des Kindbettfiebers» (1861). Murió en 1865 en un manicomio de Oberdöbling, a las afueras de Viena.",
+      "source": "Science History Institute, biografía científica de Ignaz Semmelweis",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/ignaz-semmelweis/"
+    },
+    {
+      "claim": "Antes de 1823 moría en el hospital de Viena aproximadamente una de cada cien mujeres en el parto. Tras el cambio de norma de 1823, que obligaba a los estudiantes a practicar autopsias, la mortalidad subió al 7,5 por ciento. La Primera División, atendida por médicos y estudiantes, tenía una mortalidad muy superior a la Segunda, atendida por parteras. Desde mayo de 1847 Semmelweis exigió que todo el que entrara en la Primera División se lavara las manos en una solución de cloro, y las muertes por fiebre puerperal cayeron con fuerza antes de que terminara el año. Semmelweis murió por las heridas sufridas en un manicomio vienés.",
+      "source": "The Conversation, artículo de Leslie S. Leighton, Visiting Lecturer of History, Georgia State University",
+      "url": "https://theconversation.com/ignaz-semmelweis-the-doctor-who-discovered-the-disease-fighting-power-of-hand-washing-in-1847-135528"
+    },
+    {
+      "claim": "«A mediados de mayo de 1847 (la fecha exacta se desconoce), Semmelweis empezó a exigir que todo el personal médico se lavara a fondo con una solución de cloro.» En sus 22 meses de ejercicio en la Primera División, de junio de 1847 a marzo de 1849, ingresaron 6.495 mujeres y murieron 142: una razón de mortalidad acumulada de 2,19 por cada 100 ingresos. Semmelweis dejó Viena en octubre de 1850. Su obra mayor es «Die Aetiologie, der Begriff und die Prophylaxis des Kindbettfiebers».",
+      "source": "PubMed Central (PMC9203449), artículo revisado por pares sobre la intervención de Semmelweis en el Allgemeines Krankenhaus",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9203449/"
+    },
+    {
+      "claim": "Los resultados de los últimos siete meses de 1847 (mortalidad en torno al 3,04 por ciento) se publicaron a finales de ese año en una nota editorial de Ferdinand von Hebra en la «Zeitschrift der Gesellschaft der Ärzte zu Wien». Los resultados de 1848, muy mejores (1,27 por ciento), quedaron inéditos hasta la obra mayor de Semmelweis en 1861: trece años de retraso. En el prólogo de 1861 Semmelweis explicó que era «enemigo de toda polémica» y que creía poder «dejar al tiempo abrir camino a la verdad». La nota de Hebra de 1847 contenía un error: la mortalidad de los cinco primeros meses se calculó como 5,6 por ciento cuando era 7,8.",
+      "source": "PubMed Central (PMC12103370), «The disservice of publishing preliminary results based on a premature hypothesis – Semmelweis' ordeal revisited»",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12103370/"
+    },
+    {
+      "claim": "Jakob Kolletschka (24 de julio de 1803 - 13 de marzo de 1847) fue un patólogo y médico forense checo-austriaco. Murió tras recibir la herida de un bisturí mientras practicaba una autopsia a una mujer fallecida de fiebre puerperal.",
+      "source": "Ficha biográfica de Jakob Kolletschka; la fecha de muerte concuerda con el relato del episodio en las fuentes académicas citadas arriba",
+      "url": "https://en.wikipedia.org/wiki/Jakob_Kolletschka"
+    },
+    {
+      "claim": "Semmelweis examinó casi todas las diferencias que pudo identificar entre las dos salas —ventilación, hacinamiento, postura del parto e incluso el recorrido que hacía por la sala un sacerdote tocando una campanilla tras cada muerte— y ninguna explicaba por qué la sala de los médicos era mucho más mortal. Las mujeres suplicaban que las ingresaran en la Segunda sala.",
+      "source": "NPR, Shots — Health News, «The Doctor Who Championed Hand-Washing And Briefly Saved Lives» (12 de enero de 2015). La descarga directa de la página agotó el tiempo de espera de la herramienta usada aquí; el contenido se recogió de los extractos indexados de ese mismo artículo y coincide con el relato de las fuentes académicas citadas arriba",
+      "url": "https://www.npr.org/sections/health-shots/2015/01/12/375663920/the-doctor-who-championed-hand-washing-and-saved-women-s-lives"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Semmelweis descubrió los microbios ni que aplicó la teoría germinal. No tenía ni la palabra ni el concepto: habló de «partículas cadavéricas» y de «materia orgánica animal en descomposición». Pasteur y Lister vinieron después.",
+    "No decir que ordenó «lavarse las manos con agua y jabón». El lavado con agua y jabón ya se hacía y no bastaba; lo que impuso fue una solución de cloruro de cal, elegida porque quitaba el olor a descomposición.",
+    "No decir que toda la profesión lo rechazó. En Viena tuvo apoyos de peso: Ferdinand von Hebra publicó sus resultados preliminares en 1847 y trabajó cerca de él, igual que el patólogo Carl von Rokitansky. El rechazo fue mayoritario, no unánime.",
+    "No presentarlo como una víctima que nunca publicó. Los resultados de 1847 salieron en 1847 por mano de Hebra; los de 1848, los mejores, los guardó él mismo trece años. Es parte del problema, no solo del castigo.",
+    "No dar el año del libro sin margen. Las fuentes lo citan como 1860 y como 1861; el pie de imprenta habitual es 1861. Si hay que elegir una fecha, 1861, y no presentarla como indiscutida.",
+    "No decir que murió de fiebre puerperal ni de la misma infección que estudió. Es un cierre poético muy repetido y las circunstancias exactas se discuten. Lo que sostienen las fuentes citadas es que murió en 1865 en el manicomio de Oberdöbling por heridas sufridas allí.",
+    "No usar la expresión «reflejo Semmelweis» como si fuera de su época o de la literatura médica del siglo XIX. Es una acuñación muy posterior y aquí no hace falta.",
+    "No dar una sola cifra de mortalidad como «la» cifra. Las fuentes manejan varias según el período: 18,27 por ciento en abril de 1847, 1,27 por ciento en 1848, 2,19 por cada 100 ingresos en los 22 meses de junio de 1847 a marzo de 1849. Conviene decir cuál es cuál.",
+    "No decir que la reforma de 1823 fue un error de gestión sin más. Fue una mejora real de la enseñanza médica; el daño vino de que nadie sabía todavía que las manos transportaban la enfermedad. Ese es el punto de la pieza."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
