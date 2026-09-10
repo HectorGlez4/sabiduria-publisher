@@ -2,7 +2,7 @@
   "id": "2026-09-10-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Bolívar y la Carta de Jamaica de 1815",
     "hook": "El texto más citado de la independencia hispanoamericana se leyó durante casi dos siglos en traducción o en copia de copia. El manuscrito español que lo contiene no apareció hasta hace pocos años, y no en Venezuela.",
@@ -90,5 +90,21 @@
     "threads"
   ],
   "publish_at": "2026-09-10T15:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1091685936989399",
+      "url": "https://www.facebook.com/874327782058550/posts/1091685936989399",
+      "published_at": "2026-09-10T18:35:39.115289+00:00"
+    },
+    "instagram": {
+      "post_id": "18124312153867815",
+      "url": "https://www.instagram.com/p/DdHfkdIm9Xj/",
+      "published_at": "2026-09-10T18:35:53.600842+00:00"
+    },
+    "threads": {
+      "post_id": "18085147577317332",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18085147577317332",
+      "published_at": "2026-09-10T18:36:08.062387+00:00"
+    }
+  }
 }
