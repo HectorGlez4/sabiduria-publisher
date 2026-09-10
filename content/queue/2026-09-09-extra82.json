@@ -2,7 +2,7 @@
   "id": "2026-09-09-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "el Hávamál y la estrofa del buen nombre",
     "hook": "La estrofa nórdica más citada sobre la fama que no muere empieza con las mismas tres palabras que un poema anterior. Ese otro poema no consuela a nadie: termina en tierra vacía y gente sometida.",
@@ -103,5 +103,10 @@
     }
   },
   "attempts": 1,
-  "last_attempt": "2026-09-10T09:59:55.950743+00:00"
+  "last_attempt": "2026-09-10T09:59:55.950743+00:00",
+  "blocked_reason": [
+    "tema repetido en menos de 90 dias: 'el Hávamál y la estrofa del buen nombre' (2026-09-09-extra82)",
+    "cita ya publicada en 2026-09-09-extra82",
+    "variante 'gold' repetida: la ultima publicacion real (2026-09-09-extra82) tambien salio gold"
+  ]
 }
