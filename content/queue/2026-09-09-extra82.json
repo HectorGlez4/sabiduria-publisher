@@ -1,0 +1,107 @@
+{
+  "id": "2026-09-09-extra82",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "ready",
+  "core": {
+    "subject": "el Hávamál y la estrofa del buen nombre",
+    "hook": "La estrofa nórdica más citada sobre la fama que no muere empieza con las mismas tres palabras que un poema anterior. Ese otro poema no consuela a nadie: termina en tierra vacía y gente sometida.",
+    "quote": {
+      "text": "Muere el ganado, mueren los parientes, uno mismo muere igual; pero el buen nombre nunca muere para quien logra ganárselo.",
+      "author": "Anónimo (Edda poética)",
+      "work": "Hávamál, estrofa 76; Codex Regius, hacia 1270",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Hávamál, «las palabras del Altísimo», tiene unas ciento sesenta y cuatro estrofas y se conserva en un solo manuscrito: el Codex Regius, GKS 2365 4to, copiado en Islandia hacia 1270 y hoy en el Instituto Árni Magnússon de Reikiavik. Sus primeras ochenta estrofas no son épica. Son consejos de huésped y de anfitrión: cuándo hablar, cuándo callarse, cuánto beber, cómo entrar en una casa ajena. La estrofa 76 está dentro de ese manual de modales. Y la 77 repite sus tres primeras líneas para cambiarle el final: allí lo que no muere es el juicio que se hace sobre cada muerto.",
+      "Las mismas palabras abren el remate de otro poema. Eyvindr skáldaspillir compuso el Hákonarmál a la muerte de Hákon el Bueno, rey de Noruega, herido en la batalla de Fitjar en 961. Son veintiuna estrofas, del siglo X: tres siglos anteriores al manuscrito que conserva el Hávamál. La última dice que muere el ganado, mueren los parientes, se vacían la tierra y el reino desde que Hákon se fue con los dioses paganos, y que mucha gente vive sometida. Ningún nombre sobrevive ahí. Solo queda el país peor de como estaba.",
+      "El propio Hákon complica la escena. Se había criado en Inglaterra, en la corte del rey Athelstan, y allí fue bautizado; su escaldo lo despide igualmente camino del Valhalla, recibido por Hermóðr y Bragi. Sobre cuál de los dos poemas tomó del otro no hay acuerdo: pudo ser al revés, o pudieron beber ambos de una fórmula anterior. Eso es lo único seguro. Las tres palabras venían de antes que los dos textos, y servían para decir cosas opuestas según quién las terminara."
+    ],
+    "question": "¿Cuánto cambia una frase heredada según cómo se la remate?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Havamal",
+      "#EddaPoetica",
+      "#Islandia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Vikingos",
+      "#Manuscritos",
+      "#PoesiaAntigua",
+      "#Nordico",
+      "#EdadMedia",
+      "#Literatura",
+      "#Clasicos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Codex Regius de la Edda poética, GKS 2365 4to, data de hacia 1270. El Instituto Árni Magnússon de Estudios Islandeses, junto con el Instituto Arnamagnæano de Copenhague, publicó su edición electrónica con imágenes de todas las páginas, transcripción diplomática y análisis morfosintáctico; la edición impresa apareció en 2019.",
+      "source": "Árni Magnússon Institute for Icelandic Studies (Reikiavik)",
+      "url": "https://www.arnastofnun.is/en/news/new-electronic-edition-codex-regius-poetic-edda"
+    },
+    {
+      "claim": "La única fuente conservada del Hávamál es el Codex Regius del siglo XIII, salvo dos secciones breves. El poema es compuesto: la primera sección, el Gestaþáttr (estrofas 1-80), reúne consejos prácticos sobre hospitalidad y conducta del huésped. Las estrofas 76 y 77 contienen la línea «muere el ganado, mueren los parientes», que aparece también en el Hákonarmál del siglo X de Eyvindr skáldaspillir, prueba de que versos concretos son siglos anteriores al manuscrito.",
+      "source": "Wikipedia en inglés, entrada «Hávamál» (fuente de menor rango, usada para la estructura del poema y contrastada con las demás)",
+      "url": "https://en.wikipedia.org/wiki/H%C3%A1vam%C3%A1l"
+    },
+    {
+      "claim": "Traducción publicada de la estrofa: «Cattle die, and kinsmen die, / And so one dies one's self; / But a noble name will never die, / If good renown one gets.»",
+      "source": "Henry Adams Bellows, «The Poetic Edda», The American-Scandinavian Foundation, 1923 (edición en Project Gutenberg). Bellows numera esta estrofa como 77, no como 76: reordenó el manuscrito.",
+      "url": "https://www.gutenberg.org/files/73533/73533-h/73533-h.htm"
+    },
+    {
+      "claim": "Texto y traducción de la estrofa final del Hákonarmál: «Deyr fé, deyja frændr, eyðisk land ok láð, síz Hôkun fór með heiðin goð; mǫrg es þjóð of þéuð» — «Muere el ganado, mueren los parientes, se vacían la tierra y el reino desde que Hákon se fue con los dioses paganos; mucha gente está sometida». La edición de referencia es la de R. D. Fulk en «Poetry from the Kings' Sagas 1: From Mythical Times to c. 1035», Skaldic Poetry of the Scandinavian Middle Ages 1, Brepols, 2012.",
+      "source": "Skaldic Poetry of the Scandinavian Middle Ages, base de datos académica, Eyvindr skáldaspillir Finnsson, Hákonarmál 21",
+      "url": "https://skaldic.org/m.php?i=2540&p=verse"
+    },
+    {
+      "claim": "El Hákonarmál tiene veintiuna estrofas en ljóðaháttr y narra la caída de Hákon el Bueno en la batalla de Fitjar y su recibimiento por Hermóðr y Bragi; está pensado para presentar al Hákon cristiano como amigo de los dioses paganos. Sobre su relación con el Hávamál: «la visión tradicional es que el Hákonarmál tomó de ese poema, pero también es posible que la relación sea inversa o que ambos poemas bebieran de una tercera fuente».",
+      "source": "Wikipedia en inglés, entrada «Hákonarmál» (fuente de menor rango, usada para el contenido del poema y contrastada con la base de datos escáldica)",
+      "url": "https://en.wikipedia.org/wiki/H%C3%A1konarm%C3%A1l"
+    },
+    {
+      "claim": "Hákon el Bueno reinó en Noruega de 934 a 961. Su padre, Harald el de Hermosa Cabellera, lo envió a la corte del rey Athelstan de Inglaterra, donde conoció el cristianismo y fue bautizado; de ahí su apodo Adalsteinsfóstri. Fue herido de muerte en la batalla de Fitjar y murió en 961 en Håkonshella, Hordaland.",
+      "source": "Wikipedia en inglés, entrada «Haakon the Good» (fuente de menor rango, usada para los datos biográficos)",
+      "url": "https://en.wikipedia.org/wiki/Haakon_the_Good"
+    }
+  ],
+  "do_not_use": [
+    "No citar la estrofa por su número sin advertir que las ediciones difieren. En la numeración habitual es la 76; Bellows, en su traducción de 1923, reordenó el manuscrito y la publica como 77.",
+    "No presentar el Hávamál como un poema unitario ni como «el código de honor vikingo». Es una compilación de al menos cinco secciones distintas, y la que contiene esta estrofa son consejos domésticos de huésped y anfitrión.",
+    "No atribuir el poema a Odín como autor. El título significa «palabras del Altísimo» y el texto se presenta como dicho por él, pero es una obra anónima de transmisión oral, conservada en un manuscrito de hacia 1270.",
+    "No afirmar que el Hávamál es anterior al Hákonarmál. La dependencia entre ambos está abierta: pudo ser en cualquier dirección, o los dos pudieron tomar la fórmula de una tercera fuente.",
+    "No decir que la estrofa habla de «gloria» o de «honor guerrero». Orðstírr es la reputación que se labra con lo que uno hace y con lo que de uno se dice; la estrofa 77, gemela, la remata además con el juicio que se emite sobre cada muerto.",
+    "No presentar a Hákon el Bueno como un rey pagano. Se crió y fue bautizado en la corte inglesa de Athelstan; su propio escaldo lo lleva al Valhalla, y ese es justamente el punto del poema."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-10T02:26:00Z",
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1091327160358610",
+      "url": "https://www.facebook.com/874327782058550/posts/1091327160358610",
+      "published_at": "2026-09-10T09:57:43.544064+00:00"
+    },
+    "instagram": {
+      "post_id": "18623580541039276",
+      "url": "https://www.instagram.com/p/DdGkS_bicG3/",
+      "published_at": "2026-09-10T09:57:55.868905+00:00"
+    },
+    "threads": {
+      "error": "HTTP 504: <html>\n<head>\n<title>5xx Server Error</title>\n</head>\n\n<body>\n<h1>5xx Server Error</h1>\n</body>\n\n</html>\n"
+    }
+  },
+  "attempts": 1,
+  "last_attempt": "2026-09-10T09:59:55.950743+00:00"
+}
