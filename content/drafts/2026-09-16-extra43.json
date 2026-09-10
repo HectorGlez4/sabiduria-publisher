@@ -1,0 +1,72 @@
+{
+  "id": "2026-09-16-extra43",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "el diario de guerra de Yi Sun-sin",
+    "hook": "Anotó casi todos los días de siete años de guerra. El último asiento es del día 17 del undécimo mes de 1598. Dos días después, una bala lo mató en el estrecho de Noryang.",
+    "body": [
+      "El «Nanjung Ilgi» —diario en medio de la guerra— lo escribió Yi Sun-sin, comandante naval del reino de Joseon, mientras duró la invasión japonesa de 1592 a 1598. Empieza el primer día de 1592 y termina el día 17 del undécimo mes de 1598. Son 205 páginas en folio. De los ocho volúmenes originales se conservan siete: uno se perdió. Dentro no hay solo combates. Hay el tiempo que hacía, el relieve de cada costa, los nombres de los oficiales, la vida de la gente común y lo que él sentía.",
+      "Lo que lo vuelve un documento y no un monumento son sus grietas. Los asientos no son continuos: hay tramos enteros en blanco, semanas en que no pudo o no quiso escribir. Los volúmenes quinto y sexto se solapan, porque volvió sobre lo ya anotado y lo reescribió. El séptimo tiene ocho páginas y cubre los meses noveno y décimo de 1598. Un diario de mando que se contradice consigo mismo y se interrumpe vale más, como fuente, que una crónica sin costuras.",
+      "El día 19 de ese undécimo mes —el 16 de diciembre de 1598 en nuestro calendario— una bala de arcabuz lo alcanzó bajo el brazo izquierdo durante la persecución final en Noryang. El diario ya se había detenido dos días antes. La UNESCO lo inscribió en el registro Memoria del Mundo en 2013, y en Corea es el Tesoro Nacional número 76. La organización lo describe sin comparación en la historia mundial como relato de un comandante escrito dentro del campo de batalla."
+    ],
+    "question": "¿Qué quedaría de tus días si alguien los leyera cuatro siglos después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El diario se detuvo dos días antes",
+    "subtitle": "Corea, 1592-1598",
+    "body": "Yi Sun-sin anotó casi cada día de siete años de guerra: 205 páginas en folio, siete volúmenes de los ocho que hubo. El último asiento es del día 17 del undécimo mes de 1598. El día 19 lo mató una bala en Noryang."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#YiSunsin", "#Corea", "#NanjungIlgi"],
+    "extended": ["#Historia", "#Joseon", "#SigloXVI", "#Diarios", "#Unesco", "#MemoriaDelMundo", "#Archivos"]
+  },
+  "sources": [
+    {
+      "claim": "El «Nanjung Ilgi» es el diario manuscrito del almirante Yi Sun-sin, escrito durante las invasiones japonesas de 1592-1598: siete volúmenes de notas redactadas casi a diario desde enero de 1592 hasta noviembre de 1598, hasta los días previos a la muerte de Yi Sun-sin. Los asientos «describen en detalle las situaciones de combate diarias, las opiniones y los sentimientos personales del almirante, observaciones sobre el tiempo, los rasgos topográficos de los campos de batalla y la vida de la gente común». La UNESCO lo describe como «sin igual en la historia mundial como relato de un comandante escrito en el campo de batalla». Inscrito en el registro Memoria del Mundo en 2013, a propuesta de la República de Corea.",
+      "source": "UNESCO, registro Memoria del Mundo, ficha «Nanjung Ilgi: War Diary of Admiral Yi Sun-sin»",
+      "url": "https://www.unesco.org/en/memory-world/nanjung-ilgi-war-diary-admiral-yi-sun-sin"
+    },
+    {
+      "claim": "«El diario consta de siete libros, cada uno de los cuales cubre aproximadamente un año» y abarca «del 1 de enero de 1592 al 17 de noviembre de 1598». Está designado Tesoro Nacional número 76. «De esos ocho volúmenes, siete se conservan hoy.»",
+      "source": "Korea Heritage Service (servicio estatal coreano de patrimonio), ficha de Memoria del Mundo sobre el Nanjung Ilgi",
+      "url": "https://english.khs.go.kr/cop/bbs/selectBoardArticle.do?ctgryLrcls=CTGRY168&nttId=58157&bbsId=BBSMSTR_1205&mn=EN_03_03"
+    },
+    {
+      "claim": "El original tiene 205 páginas en folio repartidas en 7 volúmenes, con asientos no continuos que reflejan los períodos en que el almirante no pudo llevar el registro a diario. Desglose por volumen: I, 27 páginas (quinta luna de 1592 a tercera luna de 1593); II, 30 páginas (quinta a novena luna de 1593); III, 50 páginas (primera a undécima luna de 1594); IV, 41 páginas (primera a décima luna de 1596); V, 27 páginas (cuarta a décima luna de 1597); VI, 20 páginas (octava luna de 1597 a primera luna de 1598); VII, 8 páginas (novena a décima luna de 1598). «Hay además cierto solapamiento entre los volúmenes V y VI, donde el almirante Yi al parecer revisó más tarde asientos anteriores.»",
+      "source": "Artículo enciclopédico «Nanjung ilgi» (fuente terciaria, usada solo para el desglose codicológico por volumen; las cifras generales y las fechas coinciden con la UNESCO y con el Korea Heritage Service citados arriba)",
+      "url": "https://en.wikipedia.org/wiki/Nanjung_ilgi"
+    },
+    {
+      "claim": "La batalla de Noryang se libró el 16 de diciembre de 1598 del calendario gregoriano, que corresponde al día 19 del undécimo mes lunar. Yi Sun-sin fue alcanzado por una bala de arcabuz cerca de la axila izquierda durante la fase de persecución de la batalla.",
+      "source": "Artículo enciclopédico «Battle of Noryang» (fuente terciaria, usada para la conversión de fecha lunar a gregoriana y para la circunstancia de la muerte)",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Noryang"
+    },
+    {
+      "claim": "«El diario es un registro contemporáneo de la guerra Imjin: Yi escribía un asiento casi todos los días, expresando sus responsabilidades y sus dificultades como comandante, así como la añoranza de su familia.» El manuscrito autógrafo está designado Tesoro Nacional y se exhibió en la muestra «El gran almirante Yi Sun-sin» del Museo Nacional de Corea, entre 369 piezas y seis Tesoros Nacionales.",
+      "source": "The Korea Herald, crónica de la exposición del Museo Nacional de Corea dedicada a Yi Sun-sin",
+      "url": "https://www.koreaherald.com/article/10625115"
+    },
+    {
+      "claim": "El formulario de candidatura presentado a la UNESCO por la República de Corea para el Nanjung Ilgi existe y es público, pero su descarga llegó aquí como PDF binario que la herramienta usada no pudo convertir a texto. Se deja constancia de la referencia sin citar contenido de ella: nada de esta pieza se apoya en este documento.",
+      "source": "UNESCO, formulario de candidatura al registro Memoria del Mundo presentado por la República de Corea (no consultable con los medios de esta sesión)",
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/republic_of_korea_nanjung_ilgi.pdf"
+    }
+  ],
+  "do_not_use": [
+    "No citar «Aún le quedan a vuestro siervo doce barcos» como cita verificada. Es la frase más repetida de Yi Sun-sin, pero no está en el Nanjung Ilgi: procede de un memorial al rey recogido en el «Yi Chungmugong Jeonseo», la compilación que se mandó imprimir en 1795, casi dos siglos después. No se ha podido comprobar su texto ni su sección en una fuente de calidad, así que aquí no se usa como cita.",
+    "No leer las fechas del diario como fechas del calendario gregoriano. Son del calendario lunar de Joseon. El último asiento es del día 17 del undécimo mes de 1598, y Noryang fue el día 19 de ese mismo mes, que en el gregoriano cae el 16 de diciembre de 1598. Mezclar los dos calendarios es el error más fácil de cometer aquí.",
+    "No decir que el diario tuvo siempre siete volúmenes. Las fuentes coreanas dicen que de ocho se conservan siete: falta uno, y conviene decirlo.",
+    "No decir que cubre los siete años sin interrupción. Los asientos no son continuos, hay tramos en blanco, y los volúmenes quinto y sexto se solapan porque volvió sobre lo ya escrito.",
+    "No atribuir al diario las últimas palabras de Yi Sun-sin («no anunciéis mi muerte»). Están en los relatos de la batalla, no en el Nanjung Ilgi, que se detiene dos días antes de Noryang.",
+    "No confundir el Nanjung Ilgi con el «Yi Chungmugong Jeonseo». El primero es el manuscrito autógrafo; el segundo es una compilación impresa por orden real en 1795.",
+    "No llamar «memorias» al diario. Se escribió durante la campaña, no después; el título significa literalmente diario en medio de la guerra.",
+    "No presentar la inscripción de la UNESCO como un premio ni como una declaración de patrimonio de la humanidad. Memoria del Mundo es un registro documental, y la inscripción es de 2013.",
+    "No dar el año en que fue designado Tesoro Nacional número 76: las fuentes consultadas aquí dan el número pero no la fecha de designación, y no se ha verificado."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

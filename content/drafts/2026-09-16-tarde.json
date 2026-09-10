@@ -1,0 +1,70 @@
+{
+  "id": "2026-09-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Horacio y el carpe diem de la Oda I 11",
+    "hook": "«Carpe» no es un verbo de conquista. Es un verbo de huerta: se usa para recoger fruta madura. Y el verso que va justo antes manda podar la esperanza.",
+    "quote": {
+      "text": "Sé sabia, filtra el vino y, en tan breve espacio, poda la esperanza larga. Mientras hablamos, habrá huido el tiempo envidioso: cosecha el día, fiándote lo menos posible del siguiente.",
+      "author": "Horacio",
+      "work": "Odas I 11, versos 6-8 (año 23 a.C.)",
+      "attribution_verified": true
+    },
+    "body": [
+      "La oda tiene ocho versos y está dirigida a una tal Leucónoe. Empieza prohibiéndole algo: no preguntes qué final nos han asignado los dioses, y no consultes los «números babilonios» —las tablas astrológicas con las que se calculaba el porvenir—. El poema entero nace de un rechazo a la adivinación. Horacio, hijo de un liberto de Apulia, la publicó en el año 23 a.C., en el primero de los tres libros de Odas que salieron juntos.",
+      "El final acumula cuatro imperativos y los cuatro son manuales: sé sabia, filtra el vino, poda, cosecha. «Reseco» es podar la vid. «Carpo» es arrancar la fruta o la flor cuando está en punto. La latinista Maria S. Marsilio insiste en que «carpe diem» es una metáfora de huerto y que se traduce mejor por «recoge el día». No hay violencia en el gesto. Hay estación, medida y cosecha; y la orden inmediatamente anterior es recortar la esperanza larga hasta el tamaño del espacio breve que uno tiene.",
+      "La frase se cita hoy como permiso para el exceso, y el poema pide lo contrario. No dice que el día sea lo único que hay; dice que el mañana merece la menor confianza posible, que es otra cosa. Tampoco promete nada: puede que Júpiter conceda muchos inviernos, dice el verso cuarto, o puede que este sea el último. Dos palabras sobrevivieron veinte siglos y se llevaron el sentido cambiado. Lo que Horacio manda podar no es el futuro: es la expectativa que uno pone en él."
+    ],
+    "question": "¿Qué esperanza larga te está costando el día de hoy?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Horacio", "#CarpeDiem", "#PoesiaLatina"],
+    "extended": ["#Citas", "#RomaAntigua", "#Clasicos", "#Odas", "#Latin", "#Literatura", "#Filosofia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino completo de la Oda I 11: «Tu ne quaesieris, scire nefas, quem mihi, quem tibi / finem di dederint, Leuconoe, nec Babylonios / temptaris numeros. ut melius, quidquid erit, pati. / seu pluris hiemes seu tribuit Iuppiter ultimam, / quae nunc oppositis debilitat pumicibus mare / Tyrrhenum: sapias, vina liques et spatio brevi / spem longam reseces. dum loquimur, fugerit invida / aetas: carpe diem quam minimum credula postero.» El poema tiene ocho versos y se dirige a Leucónoe.",
+      "source": "Perseus Digital Library (Tufts University), texto latino según la edición de Paul Shorey y Gordon J. Laing, «Horace, Odes and Epodes», Chicago, Benj. H. Sanborn & Co., 1919",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0024%3Abook%3D1%3Apoem%3D11"
+    },
+    {
+      "claim": "Traducción inglesa de referencia del mismo poema en Perseus: John Conington, «The Odes and Carmen Saeculare of Horace», Londres, George Bell and Sons, 1882.",
+      "source": "Perseus Digital Library (Tufts University), traducción de John Conington (1882)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0025%3Abook%3D1%3Apoem%3D11"
+    },
+    {
+      "claim": "Notas eruditas sobre el poema: «Babylonios numeros» remite a las tablas astrológicas babilonias, que usaban cálculos numéricos para predecir el futuro, y Leucónoe habría consultado a los astrólogos sobre su porvenir y el del poeta. «Vina liques» es filtrar el vino para quitarle el poso y beberlo ya. «Spem longam reseces» es una metáfora de poda de la vid. «Carpe» es «metáfora del mundo natural» que sugiere «arrancar fruta o flores» y culmina una serie de verbos sensoriales y agrícolas (sapio, liquo, reseco). La condición de Leucónoe es «probablemente de esclava o meretriz». El metro destaca por el coriambo, que encierra «carpe diem» en una sola unidad rítmica.",
+      "source": "Feminae Romanae, comentario escolar y notas de lectura sobre Horacio, Odas 1.11 (fuente de rango menor que Perseus, usada para la anotación filológica del pasaje; coincide con el texto latino citado arriba)",
+      "url": "https://feminaeromanae.org/horace1.11_notes.html"
+    },
+    {
+      "claim": "«Carpe» es el imperativo presente activo de segunda persona singular de «carpo», «recoger o arrancar». La latinista Maria S. Marsilio, profesora emérita de Saint Joseph's University, señala que «carpe diem» es una metáfora hortícola que se traduce con más exactitud como «recoger el día», evocando la recolección de frutos o flores maduros. La frase aparece en el libro I de las Odas, del año 23 a.C.",
+      "source": "Artículo enciclopédico «Carpe diem», que recoge y referencia la lectura de la latinista Maria S. Marsilio (fuente terciaria, usada solo para esta atribución de lectura; el texto latino está verificado en Perseus)",
+      "url": "https://en.wikipedia.org/wiki/Carpe_diem"
+    },
+    {
+      "claim": "«Horacio (Quinto Horacio Flaco) nació en Apulia, Italia, en el 65 a.C.» y «murió en el 8 a.C.». «En el 23 a.C. se publicaron los tres primeros libros de las Odas.» Su padre era un liberto italiano que lo envió a la mejor escuela de Roma. Hacia el 38 a.C. entró en el círculo de Mecenas, consejero de Augusto.",
+      "source": "Academy of American Poets (poets.org), ficha biográfica de Horacio",
+      "url": "https://poets.org/poet/horace"
+    }
+  ],
+  "do_not_use": [
+    "No traducir «carpe diem» como una invitación al exceso o al desenfreno. «Carpo» es recoger fruta madura, y el verso inmediatamente anterior ordena podar la esperanza larga. El poema es de mesura, no de hedonismo.",
+    "No decir «vive cada día como si fuera el último». El texto no dice eso: dice que hay que fiarse lo menos posible del día siguiente, y admite expresamente que Júpiter puede conceder muchos inviernos más.",
+    "No dar como origen la película «El club de los poetas muertos» (1989). La popularizó en el siglo XX; la línea es de Horacio y se publicó en el año 23 a.C.",
+    "No confundirla con «Gather ye rosebuds while ye may», de Robert Herrick (siglo XVII). Es otro poema, de otra lengua y de una tradición posterior que bebe de Horacio, no la fuente.",
+    "No tratar «memento mori» como sinónimo. Es una fórmula distinta, de tradición distinta, y mezclarlas borra lo que cada una dice.",
+    "No presentar a Leucónoe como una persona documentada. Es un nombre dentro del poema; los comentaristas la sitúan probablemente en condición servil o de meretriz, y no hay registro histórico de ella.",
+    "No decir que Horacio nació esclavo. El liberto era su padre; Horacio nació libre y estudió en Roma y en Atenas.",
+    "No etiquetar la oda como epicúrea o estoica sin matiz. Los comentaristas discuten la etiqueta y el poema mezcla motivos; la pieza no necesita colgarle una escuela.",
+    "No citar «carpe diem» aislado como si fuera el poema. Son dos palabras del último verso de ocho, y separadas de «quam minimum credula postero» dicen la mitad."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

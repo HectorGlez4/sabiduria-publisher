@@ -1,0 +1,65 @@
+{
+  "id": "2026-09-16-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Erasmo y el adagio Dulce bellum inexpertis",
+    "hook": "El proverbio no era suyo: lo encontró hecho. Lo que hizo Erasmo fue ponerle mil líneas de comentario detrás, y esas veinte páginas se convirtieron en el panfleto más reimpreso de Europa.",
+    "quote": {
+      "text": "La guerra es dulce para quien no la ha probado. Hay asuntos entre los negocios de los mortales cuyo peligro y cuyo daño nadie alcanza a percibir hasta que hace la prueba.",
+      "author": "Erasmo de Rotterdam",
+      "work": "Adagios IV i 1, «Dulce bellum inexpertis» (1515)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Los «Adagios» empezaron en 1500 como una colección modesta de proverbios griegos y latinos, pensada para enseñar a escribir bien en latín. Erasmo la fue engordando durante treinta años. La edición que Froben imprimió en Basilea en 1515 tenía cerca de setecientas páginas en folio y 3.411 entradas. «Dulce bellum inexpertis» ya estaba en la primera colección, con unas pocas líneas de comentario. En 1515 Erasmo la puso a la cabeza del cuarto millar y le añadió mil líneas.",
+      "El comentario abre así: es un proverbio elegante, y entre todos muy usado con solemnidad por los escritos de muchos autores excelentes. Y sigue con la observación que lo sostiene: hay asuntos humanos cuyo peligro y cuyo daño nadie percibe hasta que hace la prueba, y por eso el dicho vale para todo negocio unido a gran riesgo y a muchos males. De ahí baja a la guerra entre cristianos y no vuelve a subir. La entrada dejó de ser una entrada: era un tratado dentro de un diccionario de refranes.",
+      "Froben lo imprimió aparte en abril de 1517, en un cuaderno de veinte páginas. Lo llamaron «Bellum Erasmi», por abreviar, y corrió de lector en lector hasta que media Europa erudita estaba reimprimiéndolo. La primera versión inglesa salió en el invierno de 1533-34, de la imprenta de Berthelet, el impresor del rey; no se sabe quién la tradujo. Un refrán que circulaba como sabiduría de taberna acabó convertido, por obra de un comentarista, en un argumento."
+    ],
+    "question": "¿Qué te parece dulce solamente porque no lo has probado?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Erasmo", "#Adagios", "#Renacimiento"],
+    "extended": ["#Citas", "#Humanismo", "#SigloXVI", "#Libros", "#Imprenta", "#Paz", "#Latin"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del ensayo en su primera traducción inglesa. Abre: «It is both an elegant proverb, and among all others, by the writings of many excellent authors, full often and solemnly used, Dulce bellum inexpertis, that is to say, War is sweet to them that know it not.» Y continúa: «There be some things among mortal men's businesses, in the which how great danger and hurt there is, a man cannot perceive till he make a proof... So after this manner of fashion, this proverb may be applied to every business that is adjoined with great peril and with many evils.» La introducción de esta edición documenta que la edición definitiva de Froben en Basilea (1515) tenía cerca de setecientas páginas en folio y 3.411 entradas, y que este ensayo fue la adición más larga e importante de aquella edición; que Froben lo imprimió por separado en abril de 1517 en un cuarto de veinte páginas, conocido como «Bellum Erasmi», que corrió de lector en lector y fue reimpreso por media Europa erudita; y que la traducción inglesa salió por Berthelet, el impresor del rey, en el invierno de 1533-34, con traductor de identidad incierta.",
+      "source": "Project Gutenberg, «Erasmus against War» (Dulce bellum inexpertis), texto íntegro con introducción editorial",
+      "url": "https://www.gutenberg.org/files/39487/39487-h/39487-h.htm"
+    },
+    {
+      "claim": "La misma obra en la Christian Classics Ethereal Library, edición electrónica de «Against War» de Erasmo. Sirve de segunda copia independiente del mismo texto.",
+      "source": "Christian Classics Ethereal Library, «Desiderius Erasmus: Against War»",
+      "url": "https://ccel.org/ccel/erasmus/against_war/against_war.ii.html"
+    },
+    {
+      "claim": "«Dulce bellum inexpertis» es el adagio número 1 de la sección que la edición crítica moderna numera IV i, y encabeza el volumen; la lista de esa sección va de «1. Dulce bellum inexpertis / War is a treat for those who have not tried it» a «100. Odi puerulos, praecoci sapientia».",
+      "source": "University of Toronto Press (a través del catálogo de De Gruyter Brill), índice del volumen de «Collected Works of Erasmus» que contiene los Adagios III iv 1 - IV ii 100",
+      "url": "https://www.degruyterbrill.com/document/doi/10.3138/9781442670624-009/html?lang=en"
+    },
+    {
+      "claim": "El volumen 35 de «Collected Works of Erasmus», University of Toronto Press, 2005, cubre los Adagios III.iv.1-IV.ii.100, contiene discursos sobre 900 adagios e incluye los «justamente famosos comentarios antibélicos» de Erasmo.",
+      "source": "Bryn Mawr Classical Review, reseña académica de «The Collected Works of Erasmus: Adages III.iv.1-IV.ii.100», vol. 35",
+      "url": "https://bmcr.brynmawr.edu/2006/2006.06.06/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el proverbio es de Erasmo. Él lo recogió: los «Adagios» son una colección de refranes griegos y latinos, y en la primera edición esta entrada llevaba apenas unas líneas de comentario. Lo suyo es el comentario, no la frase.",
+    "No fechar el ensayo en 1500. La entrada existía desde el principio de la colección, pero el tratado apareció por primera vez en la edición de Froben de 1515.",
+    "No confundirlo con «Elogio de la locura» (1511). Son dos obras distintas de Erasmo y se mezclan a menudo.",
+    "No atribuir el proverbio a Píndaro dentro de esta pieza. La tradición se lo asigna, pero el texto consultado aquí no lo dice; sin comprobarlo en la fuente, no se afirma.",
+    "No dar el número de adagios como una cifra fija. Creció edición a edición: la de Froben de 1515 traía 3.411 entradas y las posteriores pasaron de cuatro mil.",
+    "No citar la traducción inglesa de 1533-34 como versión autorizada ni como texto de Erasmo. Es anónima, la introducción moderna dice que carece por completo de distinción, y aquí se usó solo para fijar el sentido.",
+    "No traducir «inexpertis» por «inexperto» en el sentido de torpe o novato. Es quien no lo ha probado, quien no tiene experiencia de ello.",
+    "No presentar a Erasmo como pacifista absoluto sin matiz. El texto es una condena extensa y frontal de la guerra entre cristianos; hasta dónde llegaba su rechazo en otros supuestos lo discuten los especialistas.",
+    "No decir que el panfleto fue prohibido o perseguido. Lo que consta en las fuentes citadas es lo contrario: se reimprimió por toda Europa desde 1517."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

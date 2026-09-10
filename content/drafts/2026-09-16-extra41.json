@@ -1,0 +1,70 @@
+{
+  "id": "2026-09-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Ida B. Wells y el educador que es la prensa",
+    "hook": "Escribió que no hay educador comparable a la prensa cinco meses después de que una turba destruyera la suya y vendieran la maquinaria para cobrarse las deudas.",
+    "quote": {
+      "text": "La gente tiene que saber antes de poder actuar, y no hay educador que se compare con la prensa.",
+      "author": "Ida B. Wells",
+      "work": "Southern Horrors, capítulo «Self-Help» (1892)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 9 de marzo de 1892, en Memphis, tres hombres fueron sacados de la cárcel y linchados: Thomas Moss, Calvin McDowell y Will Stewart. Tenían una tienda de comestibles, la People's Grocery, que le quitaba clientela a un comercio blanco de la esquina. Ida B. Wells, nacida esclava en Holly Springs en 1862, era editora y copropietaria del Memphis Free Speech and Headlight. El 21 de mayo publicó un editorial sin firma: nadie en esta parte del país cree la vieja mentira raída de que los hombres negros violan a mujeres blancas.",
+      "El 27 de mayo una turba entró en la redacción y la destrozó. Los acreedores se quedaron con el local y remataron el equipo. Wells estaba en Nueva York y le llegaron cartas y telegramas avisándole de que volver le costaría el cuerpo. No se calló: el 25 de junio de 1892 reimprimió su explicación completa en el New York Age. Unas señoras de Nueva York y Brooklyn reunieron el dinero el 5 de octubre en el Lyric Hall, y así salió el folleto. Lo firmó en Nueva York el 26 de octubre de 1892.",
+      "La frase está en el último capítulo, «Self-Help», y no es un elogio del periodismo en general. Dice, en el mismo párrafo, que la prensa publica informes poco fiables y adulterados sobre los linchamientos, y que los periódicos afroamericanos son los únicos que imprimen la verdad y no tienen medios para pagar reporteros. Su respuesta a que le rompieran la imprenta fue imprimir más. Murió en Chicago en 1931; el Pulitzer le llegó en 2020, ochenta y nueve años después."
+    ],
+    "question": "¿Qué haces cuando destruyen el medio con el que ibas a responder?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#IdaBWells", "#Periodismo", "#SigloXIX"],
+    "extended": ["#Citas", "#EstadosUnidos", "#DerechosCiviles", "#Prensa", "#Memphis", "#Historia", "#LibertadDeExpresion"]
+  },
+  "sources": [
+    {
+      "claim": "Texto primario de «Southern Horrors: Lynch Law in All Its Phases» (1892). En el capítulo «Self-Help»: «The assertion has been substantiated throughout these pages that the press contains unreliable and doctored reports of lynchings, and one of the most necessary things for the race to do is to get these facts before the public. The people must know before they can act, and there is no educator to compare with the press. The Afro-American papers are the only ones which will print the truth, and they lack means to employ agents and detectives to get at the facts.» El prefacio está firmado «IDA B. WELLS, New York City, Oct. 26, 1892» y dice que lo esencial se publicó en el New York Age el 25 de junio de 1892, en explicación del editorial que los blancos de Memphis consideraron bastante infame para justificar la destrucción del Free Speech; y que el esfuerzo de las señoras de Nueva York y Brooklyn del 5 de octubre permitió editarlo en folleto. Los seis capítulos son: The Offense; The Black and White of It; The New Cry; The Malicious and Untruthful White Press; The South's Position; Self-Help.",
+      "source": "Project Gutenberg, edición electrónica del texto íntegro de «Southern Horrors: Lynch Law in All Its Phases», de Ida B. Wells-Barnett (1892)",
+      "url": "https://www.gutenberg.org/cache/epub/14975/pg14975.txt"
+    },
+    {
+      "claim": "El editorial del Free Speech del 21 de mayo de 1892, reproducido dentro del propio folleto: «Nobody in this section of the country believes the old thread-bare lie that Negro men rape white women. If Southern white men are not careful, they will overreach themselves and public sentiment will have a reaction; a conclusion will then be reached which will be very damaging to the moral reputation of their women.» El texto también relata que Fleming, gerente y dueño de la mitad del Free Speech, tuvo que huir de la ciudad; que llegaron cartas y telegramas a Nueva York, donde ella pasaba sus vacaciones, avisándole de que volver le costaría daño físico; y que los acreedores tomaron posesión de la oficina y vendieron el equipo.",
+      "source": "Project Gutenberg, mismo texto íntegro de «Southern Horrors» (1892), capítulo «The Offense»",
+      "url": "https://www.gutenberg.org/cache/epub/14975/pg14975.txt"
+    },
+    {
+      "claim": "Ida B. Wells nació el 16 de julio de 1862 en Holly Springs, Misisipi, y murió el 25 de marzo de 1931 en Chicago, Illinois. En 1892 tres hombres —Tom Moss, Calvin McDowell y Will Stewart— abrieron una tienda de comestibles que atraía clientela de un competidor blanco; tras un enfrentamiento fueron encarcelados y «una turba de linchamiento los sacó de sus celdas y los asesinó». Después del editorial de Wells, una turba atacó la redacción de su periódico en 1892 y «destruyó todo su equipo»; ella estaba en Nueva York. En 2020 recibió el premio Pulitzer «por su reportaje destacado y valiente sobre la violencia horrible y despiadada contra los afroamericanos durante la era de los linchamientos».",
+      "source": "National Park Service (Servicio de Parques Nacionales de Estados Unidos), ficha biográfica de Ida B. Wells",
+      "url": "https://www.nps.gov/people/idabwells.htm"
+    },
+    {
+      "claim": "El Pulitzer anunció el 4 de mayo de 2020 una mención especial póstuma a Ida B. Wells «for her outstanding and courageous reporting on the horrific and vicious violence against African Americans during the era of lynching», acompañada de una dotación de al menos 50.000 dólares en apoyo de su misión.",
+      "source": "The Pulitzer Prizes, ficha oficial de la mención especial a Ida B. Wells. La descarga directa de pulitzer.org devolvió 403 a la herramienta usada aquí; el texto de la mención se recogió de los extractos indexados de esa misma página y coincide literalmente con el que reproduce la ficha del National Park Service citada arriba",
+      "url": "https://www.pulitzer.org/winners/ida-b-wells"
+    },
+    {
+      "claim": "El fondo documental de referencia sobre Wells son los Ida B. Wells Papers, 1884-1998, conservados en el Special Collections Research Center de la Biblioteca de la Universidad de Chicago.",
+      "source": "University of Chicago Library, instrumento de descripción del fondo Ida B. Wells Papers",
+      "url": "https://www.lib.uchicago.edu/e/scrc/findingaids/view.php?eadid=ICU.SPCL.IBWELLS"
+    }
+  ],
+  "do_not_use": [
+    "No usar «The way to right wrongs is to turn the light of truth upon them» como cita verificada. Es la frase que más circula bajo su nombre, pero no aparece en «Southern Horrors» y las fuentes que la citan la remiten a la publicidad de sus conferencias, no a una obra fechada con capítulo. Sin localización no pasa el listón de esta página.",
+    "No decir que estaba en Filadelfia cuando destruyeron el periódico. Varias divulgaciones lo repiten; su propio texto de 1892 dice que estaba en Nueva York, de vacaciones. Manda la fuente primaria.",
+    "No decir que el editorial del 21 de mayo iba firmado por ella. Salió sin firma, y en Memphis se lo atribuyeron primero a su socio Fleming.",
+    "No leer la frase como un elogio del periodismo en general. En el mismo párrafo acusa a la prensa de publicar informes poco fiables y adulterados; el elogio es del periódico afroamericano que sí imprime la verdad y no tiene medios para investigar.",
+    "No presentar el linchamiento de la People's Grocery como castigo de un delito probado. Los tres hombres fueron sacados de la cárcel antes de cualquier juicio.",
+    "No llamar al Free Speech «el primer periódico negro» de nada. Era el Memphis Free Speech and Headlight, del que ella era editora y dueña de una parte junto a J. L. Fleming.",
+    "No dar a entender que recibió el Pulitzer en vida ni que fue un premio ordinario. Es una mención especial póstuma, anunciada en 2020, ochenta y nueve años después de su muerte.",
+    "No decir que la mataron por escribir. Murió en Chicago el 25 de marzo de 1931; lo que destruyeron en 1892 fue la imprenta y su posibilidad de volver a Memphis.",
+    "No fechar «Southern Horrors» en 1893 ni confundirlo con «A Red Record» (1895), que es otro folleto suyo, posterior y más extenso."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
