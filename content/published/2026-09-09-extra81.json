@@ -2,7 +2,7 @@
   "id": "2026-09-09-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Simone de Beauvoir: no se nace mujer",
     "hook": "La frase más citada del feminismo del siglo XX no abre el libro del que viene. Abre el segundo tomo, a mitad de obra, y es la primera línea de un razonamiento que casi nunca se cita entero.",
@@ -96,5 +96,21 @@
     "threads"
   ],
   "publish_at": "2026-09-09T22:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1090989697059023",
+      "url": "https://www.facebook.com/874327782058550/posts/1090989697059023",
+      "published_at": "2026-09-10T00:21:58.739911+00:00"
+    },
+    "instagram": {
+      "post_id": "18148268023539954",
+      "url": "https://www.instagram.com/p/DdFiaNGDjQW/",
+      "published_at": "2026-09-10T00:22:15.187388+00:00"
+    },
+    "threads": {
+      "post_id": "18107485058260933",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18107485058260933",
+      "published_at": "2026-09-10T00:22:29.026245+00:00"
+    }
+  }
 }
