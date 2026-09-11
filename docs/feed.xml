@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 11 Sep 2026 18:43:14 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 21:48:55 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-11-extra88</guid>
+      <pubDate>Fri, 11 Sep 2026 21:48:28 +0000</pubDate>
+      <description><![CDATA["La esperanza es esa cosa con plumas que se posa en el alma y canta la melodía sin las palabras."
+— Emily Dickinson, «Hope» is the thing with feathers (Fr. 314 / J. 254), en Poems by Emily Dickinson
+
+Emily Dickinson murió en Amherst, Massachusetts, en 1886. En vida se le publicaron once poemas de los casi mil ochocientos que escribió, casi todos sin su permiso, en periódicos que además le cambiaban el título y la puntuación. De uno de ellos se quejó por escrito. El manuscrito de este poema está en la biblioteca Houghton de Harvard, cosido por ella misma en el fascículo 13, hacia 1861.
+
+Su hermana Lavinia encontró los poemas en un arcón después del entierro. Mabel Loomis Todd y Thomas Wentworth Higginson los prepararon para la imprenta, y en 1891 este salió en Poems by Emily Dickinson, Second Series. Los editores hicieron lo que Dickinson había reprochado en vida: le pusieron el título «Hope», quitaron las comillas con que ella marcaba la palabra en el primer verso y sustituyeron sus rayas por comas y puntos. La versión que se cita en el mundo es esa, la corregida.
+
+El poema no dice que la esperanza consuele. Dice que canta más dulce en el vendaval, que hace falta una tormenta muy fuerte para acallarla, y termina con una cuenta: la escuchó en la tierra más fría y en el mar más extraño, y ni en la peor necesidad le pidió una migaja.
+
+¿Qué cosas sostienen la vida sin cobrar nada por hacerlo?
+
+#SabiduriaDeBolsillo #EmilyDickinson #Poesia #Esperanza]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-11-extra88.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-11-extra88.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>WU ZETIAN LLEGÓ A EMPERADOR DE CHINA Y SU LÁPIDA QUEDÓ SIN UNA SOLA PALABRA</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -491,25 +511,6 @@ Desde el 24 de septiembre de 1970 cuelga una réplica en cobre en el segundo pis
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra85.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra85.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El primer libro ilustrado con fotografías lo hizo una botánica, y no tiene una sola línea de imprenta.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-07-extra84</guid>
-      <pubDate>Mon, 07 Sep 2026 23:37:30 +0000</pubDate>
-      <description><![CDATA[El primer libro ilustrado con fotografías lo hizo una botánica, y no tiene una sola línea de imprenta.
-
-En octubre de 1843, Anna Atkins entregó a la Royal Society un volumen con una dedicatoria escrita a mano: «For the Royal Society, Presented by Mrs Atkins». Dentro no había grabados ni litografías. Había cianotipos: siluetas blancas de algas sobre un azul de Prusia intenso, obtenidas apoyando el alga húmeda directamente sobre papel sensibilizado con sales de hierro y dejándolo unos minutos al sol. El procedimiento tenía un año: lo había inventado John Herschel en 1842. Talbot publicaría The Pencil of Nature en 1844. La primera entrega de Atkins es anterior.
-
-No lo hizo una artista, sino una botánica resolviendo un problema de su disciplina. El Manual of the British Algae que William Henry Harvey publicó en 1841 no llevaba una sola ilustración, y un alga seca y después dibujada pierde justo aquello que hay que comparar: la forma. Atkins siguió su nomenclatura y fue rotulando cada lámina de su puño y letra. Entre 1843 y 1853 sacó doce entregas, reunidas luego en tres volúmenes; los ejemplares del Natural History Museum tienen 411 láminas cada uno. Las cerca de 450 páginas de texto están manuscritas y reproducidas por el mismo procedimiento fotográfico: la imprenta no interviene en ningún momento.
-
-Lo que ahí se inventa no es una imagen bonita. Es un modo de reproducir una forma sin que la mano se meta entre el objeto y la página: contacto directo, tamaño real, sin cámara y sin negativo. La imprenta llevaba cuatro siglos copiando palabras idénticas y seguía sin poder copiar una forma natural sin un dibujante en medio. Atkins quitó al dibujante. Y por eso mismo cada ejemplar es artesanal y ninguno coincide del todo con otro: el Natural History Museum cuenta trece copias conocidas; el Metropolitan, una veintena.
-
-¿Qué se pierde cuando una forma se dibuja en lugar de registrarse?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra84.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra84.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
