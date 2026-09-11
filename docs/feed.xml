@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 11 Sep 2026 03:15:45 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 04:55:29 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La frase más citada de Frederick Douglass se corta siempre por la mitad, y la mitad que se cae es la que mide algo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-10-extra86</guid>
+      <pubDate>Fri, 11 Sep 2026 04:55:00 +0000</pubDate>
+      <description><![CDATA["El poder no concede nada sin que se le exija. Nunca lo hizo ni lo hará."
+— Frederick Douglass, Discurso de la emancipación en las Antillas, 1857
+
+El 3 de agosto de 1857, en Canandaigua, estado de Nueva York, Frederick Douglass habló en la celebración del Primero de Agosto: el aniversario de la emancipación en las colonias británicas del Caribe, decretada en 1834. Llevaba diecinueve años fuera de la esclavitud, de la que había escapado en 1838. El discurso se imprimió ese mismo año en Rochester, en un folleto que reunía dos alocuciones suyas, y de ahí vienen las líneas que hoy se repiten.
+
+En el original la frase no viaja sola. Lleva remate —«Nunca lo hizo ni lo hará»— y comparte pasaje con otras dos sentencias: «Si no hay lucha, no hay progreso» y «Los límites de los tiranos los fija la resistencia de aquellos a quienes oprimen». Entre ellas hay una instrucción que casi nunca se cita: averigüen a qué se somete un pueblo en silencio y habrán averiguado la medida exacta de la injusticia que se le impondrá.
+
+Cortada por la mitad, la frase suena a consigna de ánimo. Entera es una medición, y apunta al que la lee: no dice que el poder sea malo, dice que lo que se tolera callando es el tamaño exacto de lo que se recibirá.
+
+¿Cuánto de lo que hoy parece inevitable lo es solo porque nadie lo ha exigido?
+
+#SabiduriaDeBolsillo #FrederickDouglass #Abolicion #HistoriaDeEstadosUnidos]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-10-extra86.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-10-extra86.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Se cita como una afirmación luminosa. En el poema es lo que queda al final de una resta: once nombres de mujer examinados y descartados uno por uno, empezando por el suicidio.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,25 +507,6 @@ El debate sigue abierto y probablemente no se cierre. Lo que no se discute es el
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Del imperio persa no se conservan sus crónicas oficiales, sino sus recibos. Y en los recibos, las obreras tienen nombre y ración.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-07-extra80</guid>
-      <pubDate>Mon, 07 Sep 2026 18:46:41 +0000</pubDate>
-      <description><![CDATA[Del imperio persa no se conservan sus crónicas oficiales, sino sus recibos. Y en los recibos, las obreras tienen nombre y ración.
-
-En 1933, arqueólogos del Instituto Oriental de la Universidad de Chicago que despejaban los palacios en ruinas de Persépolis encontraron tablillas de arcilla en dos cuartos pequeños de un bastión de la muralla. No eran himnos ni proclamas reales: era el archivo de una sola oficina administrativa, de los años en torno al 500 a.C. Se calculan entre 20.500 y 26.000 documentos originales repartidos en miles de fragmentos, la mayoría en cuneiforme elamita.
-
-R. T. Hallock publicó más de 2.100 de esos textos en 1969. Registran el movimiento y el gasto de alimentos en la región de Persépolis durante los quince años que terminan en el 493 a.C., bajo Darío I: raciones fijas de cebada, vino y harina que funcionaban como salario en especie. Ahí aparecen las trabajadoras. Las supervisoras se llamaban arashshara, «gran jefa», y recibían más vino y más grano por dirigir grupos numerosos. Una mujer, Irdabama, mandaba sobre una fuerza de trabajo de unas 480 personas y viajaba por negocios con su propio séquito.
-
-El mismo archivo guarda el límite. Las mujeres embarazadas y las recién paridas cobraban un suplemento durante el primer mes, y la madre de un varón recibía el doble que la madre de una niña. Las dos cosas están en la misma contabilidad: el trabajo de una mujer valía lo que valía su oficio, y una hija recién nacida valía la mitad que un hijo. Un imperio no se retrata en lo que proclama, sino en lo que anota cuando cree que nadie lo va a leer.
-
-¿Qué contarán de nosotros los registros que no escribimos para ser leídos?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra80.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra80.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

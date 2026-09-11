@@ -2,7 +2,7 @@
   "id": "2026-09-10-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Frederick Douglass y la exigencia al poder",
     "hook": "La frase más citada de Frederick Douglass se corta siempre por la mitad, y la mitad que se cae es la que mide algo.",
@@ -80,5 +80,21 @@
     "threads"
   ],
   "publish_at": "2026-09-11T01:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1092019100289416",
+      "url": "https://www.facebook.com/874327782058550/posts/1092019100289416",
+      "published_at": "2026-09-11T04:55:00.586463+00:00"
+    },
+    "instagram": {
+      "post_id": "17947790436290700",
+      "url": "https://www.instagram.com/p/DdImcx_m1Ga/",
+      "published_at": "2026-09-11T04:55:15.642285+00:00"
+    },
+    "threads": {
+      "post_id": "18097412093377228",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18097412093377228",
+      "published_at": "2026-09-11T04:55:29.754294+00:00"
+    }
+  }
 }
