@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 11 Sep 2026 21:48:55 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 14:17:33 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MANSA MUSA: el dato real no son los millones, es un precio anotado en El Cairo</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-08-31-re09-reel</guid>
+      <pubDate>Sat, 12 Sep 2026 12:10:00 +0000</pubDate>
+      <description><![CDATA[MANSA MUSA: el dato real no son los millones, es un precio anotado en El Cairo
+
+Reinó en Malí en la primera mitad del siglo XIV. En 1324 salió hacia La Meca y recorrió unos 4.300 kilómetros. Pasó por El Cairo, y ahí quedó registrado lo único que se puede afirmar con una fuente en la mano.
+
+Lo anotó al-Umari, un historiador árabe de Damasco: antes de que Musa llegara, el mithqal de oro se cambiaba por 25 dírhams de plata. Después, cayó por debajo de 22, y no volvió a subir de ahí durante al menos doce años.
+
+Un hombre de paso movió durante más de una década el precio del metal más codiciado del mundo.
+
+Lo otro, la cifra de los cuatrocientos mil millones de dólares que se repite en todas partes, no es historia: salió en 2012 de una página web de patrimonios de famosos, sin método y sin fuentes.
+
+¿Por qué preferimos una cifra inventada a un dato verificable?
+
+#SabiduriaDeBolsillo #MansaMusa #Mali #Historia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re09-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-08-31-re09-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,25 +513,6 @@ Los mohistas no eran pacifistas. Condenaban la agresión no provocada y se volvi
 #SabiduriaDeBolsillo #Filosofia #ChinaAntigua #Historia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra86.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra86.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Del acuerdo de paz más antiguo del que se conservan las dos copias, ninguna de las dos es el documento que se firmó.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-07-extra85</guid>
-      <pubDate>Tue, 08 Sep 2026 02:46:44 +0000</pubDate>
-      <description><![CDATA[Del acuerdo de paz más antiguo del que se conservan las dos copias, ninguna de las dos es el documento que se firmó.
-
-Hacia 1259 a.C., Ramsés II de Egipto y Hattusili III de Hatti pusieron por escrito el final de una guerra que había empezado quince años antes, con la batalla de Kadesh. De ese acuerdo se conservan dos textos, uno por bando. El egipcio está grabado en jeroglíficos en los muros del templo de Karnak, treinta líneas, y en el Ramesseum, diez; Champollion copió parte en 1828 y se publicó después de su muerte, en 1844. El hitita está en tablillas de arcilla cocida escritas en cuneiforme, halladas en Boğazköy —la antigua Hattusa— por Hugo Winckler y Theodore Makridi entre 1906 y 1908. Hoy se reparten entre Estambul y Berlín.
-
-Ninguno de los dos es el documento que se firmó. Lo que las dos cortes intercambiaron fueron tablillas de plata, y las dos se perdieron. Lo que sobrevive son copias, en dos lenguas distintas, de un texto redactado en una tercera: el acadio, lengua franca de la diplomacia del Bronce y lengua materna de ninguna de las dos partes. Los dos textos se corresponden casi cláusula por cláusula —amistad perpetua, no agresión, defensa mutua, entrega de fugitivos—, pero no son idénticos: el preámbulo hitita es evasivo y el egipcio afirma sin rodeos que los dos estados habían estado en guerra. Y el tratado que todo el mundo llama «de Kadesh» no menciona Kadesh.
-
-Desde el 24 de septiembre de 1970 cuelga una réplica en cobre en el segundo piso del edificio de conferencias de la ONU, junto a la entrada de la sala del Consejo de Seguridad; la donó Turquía. La ficha oficial lo fecha en 1269 a.C. y lo llama «el tratado de paz más antiguo conocido». Ninguna de las dos cosas se sostiene: la fecha aceptada ronda el 1259, y el acuerdo diplomático más antiguo que se conoce es el de Ebla y Abarsal, de hacia el 2350 a.C., del que sobrevive una sola tablilla. Una sola versión: la del vencedor. Lo excepcional del egipcio-hitita no es su edad. Es que, por una vez, se guardó la copia de los dos.
-
-¿Qué cambia en un acuerdo cuando se conserva la versión de las dos partes?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra85.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-07-extra85.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
