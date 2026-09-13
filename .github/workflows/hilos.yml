@@ -78,22 +78,26 @@ jobs:
           # estaba colgado.
           python3 -u scripts/hilos.py $ARGS
 
-      # hilos.py ya sube el registro de cada hilo en cuanto lo publica. Este
-      # paso solo recoge lo que haya quedado suelto (un push fallido a mitad).
+      # hilos.py sube el registro de cada hilo en cuanto lo publica. Este paso
+      # recoge lo que se haya quedado atrás — y "atrás" incluye los commits
+      # hechos pero NO subidos, no solo los ficheros sin comitear.
+      #
+      # Mirar solo `git status` fue el fallo del 13 de septiembre: _registrar
+      # comiteó cuatro hilos, cada pull falló, el árbol quedó limpio, este paso
+      # vio "sin cambios" y salió. Los cuatro registros murieron con el runner.
       - name: Recoger lo que quede sin registrar
         if: always()
         run: |
-          if [ -z "$(git status --porcelain)" ]; then echo "sin cambios"; exit 0; fi
+          git fetch -q origin main
+          SIN_COMITEAR="$(git status --porcelain -- content/)"
+          SIN_SUBIR="$(git log --oneline origin/main..HEAD)"
+          if [ -z "$SIN_COMITEAR$SIN_SUBIR" ]; then echo "sin cambios"; exit 0; fi
+          echo "sin comitear:"; echo "$SIN_COMITEAR"
+          echo "sin subir:";    echo "$SIN_SUBIR"
           git add content/published/
           [ -f content/hilos_sitio.json ] && git add content/hilos_sitio.json
-          # Con los hilos registrándose uno a uno puede no quedar nada que
-          # recoger, y un commit sin cambios preparados sale con error.
           git diff --cached --quiet || git commit -m "hilos: $(date -u +'%F %H:%M UTC')"
-          # Misma limpieza que publicar.yml: un rebase a medias de un intento
-          # anterior hace fallar todo lo que venga detrás, y el registro de los
-          # hilos ya publicados se pierde. Pasó el 28 a las 05:36: cuatro hilos
-          # salieron y el commit que los registraba no llegó a subir.
           git rebase --abort 2>/dev/null || true
           git checkout -- docs/feed.xml 2>/dev/null || true
           git pull --rebase --autostash origin main
-          git push origin main
+          git push origin HEAD:main

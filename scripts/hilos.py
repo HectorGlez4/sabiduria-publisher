@@ -200,43 +200,81 @@ def puede_publicar(ahora: datetime) -> str | None:
     return None
 
 
-def _registrar(ruta: pathlib.Path, pieza_id: str) -> None:
-    """Sube el registro de ESTE hilo antes de esperar al siguiente.
+INTENTOS_DE_REGISTRO = 5
 
-    Registrar al final de la ejecución no vale: con --max 4 y esperas de 55 min
-    un job dura tres horas, y en ese hueco otra ejecución arranca con un
-    checkout que todavía no tiene estos hilos, elige las mismas piezas y las
-    republica. Pasó el 28 de agosto: cuatro hilos salieron dos veces porque la
-    ejecución programada de las 05:36 esperó en el grupo de concurrencia, entró
-    con el árbol de antes y no vio lo que la anterior llevaba publicado.
 
-    El grupo de concurrencia impide que corran a la vez, no que la segunda
-    empiece con datos viejos. Lo único que lo impide es publicar el registro en
-    cuanto existe.
+def _git(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+
+
+def _registrar(descripcion: str, aplicar) -> bool:
+    """Sube el registro de UN hilo en cuanto se publica. True si llegó a origin.
+
+    `aplicar` es una función que escribe el cambio —un campo en un JSON— y
+    devuelve las rutas que tocó. Se le pasa la FUNCIÓN y no el fichero ya escrito
+    porque puede hacer falta volver a aplicarla.
+
+    Por qué no `pull --rebase`
+    ──────────────────────────
+    Hasta el 13 de septiembre esto era add, commit, `pull --rebase` y push. Ese día
+    fallaron los cuatro pull de un mismo job, cada uno abortó sin subir nada, y
+    cuatro hilos quedaron publicados sin registrar: dos se volvieron a publicar a
+    la hora siguiente. La causa exacta no se pudo saber —el log cortaba el error a
+    120 caracteres— y en local no se reprodujo, ni con clon superficial.
+
+    En vez de apostar por una hipótesis, se quita el rebase: se descarga el main
+    más reciente, se descarta lo local, se VUELVE A APLICAR el cambio encima, y se
+    empuja. El cambio es diminuto y se sabe entero, así que reconstruirlo es
+    trivial y no puede chocar. Si otro proceso empuja en medio, se reintenta desde
+    cero.
+
+    Solo en GitHub Actions. El `reset --hard` en un portátil borraría trabajo sin
+    comitear; fuera de CI el registro es un commit y un push normales.
     """
-    # La rama por su nombre, no "HEAD": `git push origin HEAD` falla con "The
-    # destination you provided is not a full refname" y `pull origin HEAD`
-    # tampoco hace lo que parece. Con eso el registro no subía, y el rebase a
-    # medias que dejaba detrás llegó a escribir marcadores de conflicto DENTRO
-    # de un JSON de contenido — la ejecución siguiente murió con JSONDecodeError
-    # al leerlo. No llegó a comitearse, pero el fallo era de los caros.
-    rama = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"],
-                          cwd=ROOT, capture_output=True, text=True).stdout.strip() or "main"
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        rutas = aplicar()
+        _git("add", *map(str, rutas))
+        if _git("diff", "--cached", "--quiet").returncode == 0:
+            return True
+        _git("commit", "-q", "-m", f"hilo: {descripcion}")
+        r = _git("push", "-q", "origin", "HEAD")
+        if r.returncode != 0:
+            print(f"    ! git push (código {r.returncode}):\n{r.stderr.strip()}",
+                  file=sys.stderr)
+        return r.returncode == 0
 
-    for orden in (["add", str(ruta)],
-                  ["commit", "-m", f"hilo: {pieza_id}"],
-                  ["pull", "--rebase", "--autostash", "origin", rama],
-                  ["push", "origin", f"HEAD:{rama}"]):
-        r = subprocess.run(["git", *orden], cwd=ROOT, capture_output=True, text=True)
-        if r.returncode != 0 and orden[0] != "commit":
-            print(f"    ! git {orden[0]}: {r.stderr.strip()[:120]}", file=sys.stderr)
-            if orden[0] == "pull":
-                # Un rebase a medias corrompe lo que toque y hace fallar todo lo
-                # que venga detrás. Se aborta y se deja el árbol utilizable.
-                subprocess.run(["git", "rebase", "--abort"], cwd=ROOT,
-                               capture_output=True)
-                return
+    for intento in range(1, INTENTOS_DE_REGISTRO + 1):
+        f = _git("fetch", "-q", "origin", "main")
+        if f.returncode != 0:
+            print(f"    ! fetch, intento {intento} (código {f.returncode}):\n"
+                  f"{f.stderr.strip()}", file=sys.stderr)
+            time.sleep(min(2 ** intento, 30))
+            continue
+        _git("reset", "-q", "--hard", "origin/main")
+        try:
+            rutas = aplicar()
+        except Exception as e:  # el fichero desapareció en origin, JSON roto…
+            print(f"    ! no se pudo reaplicar el registro: {type(e).__name__}: {e}",
+                  file=sys.stderr)
+            return False
+        _git("add", *map(str, rutas))
+        if _git("diff", "--cached", "--quiet").returncode == 0:
+            return True   # origin ya lo tenía idéntico
+        c = _git("commit", "-q", "-m", f"hilo: {descripcion}")
+        if c.returncode != 0:
+            print(f"    ! commit, intento {intento} (código {c.returncode}):\n"
+                  f"{c.stderr.strip()}", file=sys.stderr)
+            continue
+        r = _git("push", "-q", "origin", "HEAD:main")
+        if r.returncode == 0:
+            return True
+        print(f"    ! push, intento {intento} (código {r.returncode}):\n"
+              f"{r.stderr.strip()}", file=sys.stderr)
+        time.sleep(min(2 ** intento, 30))
 
+    print(f"    ✗ registro de «{descripcion}» sin subir tras "
+          f"{INTENTOS_DE_REGISTRO} intentos", file=sys.stderr)
+    return False
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -265,14 +303,23 @@ def main() -> int:
                 print("  · dry-run: no se publica nada")
                 return 0
             res = meta.publish_threads(None, texto)
-            registro = _registro()
-            registro[c["slug"]] = {"post_id": res.get("post_id"),
-                                   "published_at": ahora.isoformat(),
-                                   "autor": c["autor"]}
-            REGISTRO_SITIO.write_text(
-                json.dumps(registro, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            entrada = {"post_id": res.get("post_id"),
+                       "published_at": ahora.isoformat(),
+                       "autor": c["autor"]}
+
+            def aplicar(slug=c["slug"], entrada=entrada):
+                # Relee el registro del disco: tras el reset es el de origin, que
+                # puede traer hilos que otro proceso registró mientras tanto.
+                registro = _registro()
+                registro[slug] = entrada
+                REGISTRO_SITIO.write_text(
+                    json.dumps(registro, ensure_ascii=False, indent=2) + "\n",
+                    encoding="utf-8")
+                return [REGISTRO_SITIO]
+
+            aplicar()   # en local ya, para que la cadencia lo vea aunque el push falle
             print(f"  ✓ threads: {res.get('post_id')}")
-            _registrar(REGISTRO_SITIO, f"sitio {c['slug']}")
+            _registrar(f"sitio {c['slug']}", aplicar)
         else:
             cola = candidatas()
             if not cola:
@@ -293,10 +340,20 @@ def main() -> int:
             # pide image_url por firma, pero un hilo de solo texto es lo que rinde.
             res = meta.publish_threads(None, texto)
             res["published_at"] = ahora.isoformat()
-            u.setdefault("results", {})["threads"] = res
-            ruta.write_text(json.dumps(u, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+            def aplicar(ruta=ruta, res=res):
+                # Relee la pieza: tras el reset es la de origin, que puede traer
+                # otros campos cambiados —un cita_slug, un resultado de publish—
+                # y solo se toca results.threads.
+                pieza = json.loads(ruta.read_text(encoding="utf-8"))
+                pieza.setdefault("results", {})["threads"] = res
+                ruta.write_text(json.dumps(pieza, ensure_ascii=False, indent=2) + "\n",
+                                encoding="utf-8")
+                return [ruta]
+
+            aplicar()
             print(f"  ✓ threads: {res.get('post_id')}")
-            _registrar(ruta, u["id"])
+            _registrar(u["id"], aplicar)
 
         if n + 1 < max(a.max, 1):
             print(f"  · esperando {MINUTOS_ENTRE_HILOS} min")
