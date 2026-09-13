@@ -2,7 +2,7 @@
   "id": "2026-09-13-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Maimónides y los grados de la caridad",
     "hook": "En la escala de la caridad de Maimónides, el escalón más alto no es dar en secreto. Es un préstamo, una sociedad o un trabajo.",
@@ -82,5 +82,21 @@
     "threads"
   ],
   "publish_at": "2026-09-13T15:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1094164936741499",
+      "url": "https://www.facebook.com/874327782058550/posts/1094164936741499",
+      "published_at": "2026-09-13T17:00:00.463357+00:00"
+    },
+    "instagram": {
+      "post_id": "18134138884640516",
+      "url": "https://www.instagram.com/p/DdPDAlfiZhw/",
+      "published_at": "2026-09-13T17:00:18.734379+00:00"
+    },
+    "threads": {
+      "post_id": "18406031032091611",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18406031032091611",
+      "published_at": "2026-09-13T17:00:30.787879+00:00"
+    }
+  }
 }
