@@ -1,0 +1,11 @@
+{
+  "run_group_id": "LAB-SMOKE-001-CANCEL",
+  "started_at": "2026-09-13T22:32:44.465036+00:00",
+  "results": {
+    "facebook_story": {
+      "status": "failed",
+      "error": "Invalid isoformat string: '1789338639'"
+    }
+  },
+  "finished_at": "2026-09-13T22:32:45.610156+00:00"
+}

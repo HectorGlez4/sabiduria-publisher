@@ -88,7 +88,11 @@ def main() -> int:
                 raw = story.get("creation_time")
                 if not raw:
                     continue
-                created = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+                created = (
+                    datetime.fromtimestamp(int(raw), tz=timezone.utc)
+                    if str(raw).isdigit()
+                    else datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+                )
                 if expected_start <= created <= expected_end:
                     matches.append(story)
             if len(matches) != 1:
