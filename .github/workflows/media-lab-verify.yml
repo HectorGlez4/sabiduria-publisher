@@ -1,0 +1,34 @@
+name: media-lab-verify
+
+on:
+  workflow_dispatch:
+    inputs:
+      manifest:
+        description: "Verification manifest under experiments/media-lab/manifests/"
+        required: true
+        default: "experiments/media-lab/manifests/LAB-F12-001-A-verify.json"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r requirements.txt
+      - name: Verify live posts without mutation
+        env:
+          SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_THREADS_TOKEN: ${{ secrets.SDB_THREADS_TOKEN }}
+          MANIFEST: ${{ inputs.manifest }}
+        run: python3 experiments/media-lab/verify_api.py "$MANIFEST" --output experiments/media-lab/verification-result.json
+      - name: Preserve verification result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-lab-verification-${{ github.run_id }}
+          path: experiments/media-lab/verification-result.json
+          if-no-files-found: warn

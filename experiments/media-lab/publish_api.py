@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -15,6 +16,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from src.platforms.meta import (  # noqa: E402
+    THREADS_GRAPH,
+    _get,
     publish_facebook,
     publish_instagram,
     publish_threads,
@@ -66,6 +69,15 @@ def main() -> int:
         try:
             caption = manifest["captions"][platform]
             result = PUBLISHERS[platform](asset_url, caption)
+            if platform == "threads":
+                detail = _get(
+                    f"{THREADS_GRAPH}/{result['post_id']}",
+                    {
+                        "fields": "id,permalink,timestamp,media_type",
+                        "access_token": os.environ["SDB_THREADS_TOKEN"],
+                    },
+                )
+                result["url"] = detail.get("permalink") or result.get("url")
             output["results"][platform] = {
                 "status": "submitted",
                 "started_at": started,

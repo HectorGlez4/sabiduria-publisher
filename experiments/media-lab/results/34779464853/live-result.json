@@ -1,0 +1,30 @@
+{
+  "run_group_id": "LAB-F12-001-A-API",
+  "route": "api",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-F12-001/anna-atkins-single-4x5.jpg",
+  "started_at": "2026-09-13T20:01:51.934109+00:00",
+  "results": {
+    "facebook": {
+      "status": "submitted",
+      "started_at": "2026-09-13T20:01:51.934132+00:00",
+      "finished_at": "2026-09-13T20:01:57.265998+00:00",
+      "post_id": "100618132774413_1094273873397272",
+      "url": "https://www.facebook.com/874327782058550/posts/1094273873397272"
+    },
+    "instagram": {
+      "status": "submitted",
+      "started_at": "2026-09-13T20:01:57.266402+00:00",
+      "finished_at": "2026-09-13T20:02:10.903508+00:00",
+      "post_id": "17912269851275257",
+      "url": "https://www.instagram.com/p/DdPX1J9jwt1/"
+    },
+    "threads": {
+      "status": "submitted",
+      "started_at": "2026-09-13T20:02:10.903795+00:00",
+      "finished_at": "2026-09-13T20:02:23.653274+00:00",
+      "post_id": "17974500300131308",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17974500300131308"
+    }
+  },
+  "finished_at": "2026-09-13T20:02:23.653643+00:00"
+}
