@@ -1,13 +1,13 @@
 # Media lab progress
 
-Updated: 2026-09-13 22:15 Europe/Madrid
+Updated: 2026-09-13 22:30 Europe/Madrid
 
 ## Current checkpoint
 
 - Campaign Day 1 started on 2026-09-13.
 - Mandatory brand identities are verified natively for Facebook, Instagram and Threads.
 - The Samsung SM-S918B is connected and authorized over ADB on Android 16.
-- Edits is installed and opens to Projects; import, audio, export and account/destination fidelity are not yet verified.
+- Edits is installed and opens to Projects. Still-image import, the audio picker and local export are verified; adding licensed audio, account/destination fidelity and a publishable export remain unverified.
 - Day 1 family `LAB-F12-001` is live on Facebook, Instagram and Threads through API-MASTER. All three native displays were visually verified.
 - API variant A uses the Anna Atkins cyanotype object-led editorial. Canonical URLs are stored in the run records and `coverage.json`.
 - Android variant B uses a distinct Maria Sibylla Merian factual piece under `PAIR-SINGLE-01`; it is rendered, transferred to the phone and ready for a later collision-checked window.
@@ -35,12 +35,14 @@ Updated: 2026-09-13 22:15 Europe/Madrid
 - Threads native attachment menu exposes Text, Quote, Poll and Location.
 - Merian Android master SHA-256: `ced93d7c407e25fba0c6337dff9b8aee01a25f535f41fbae9aaf11c586e17c41`; first generation was rejected for an implausible metallic pupa, then repaired once.
 - Edits import/export probe succeeded: the 4:5 master imported and exported as a 3.03 s, 1080×1920, 30 fps HEVC MP4. It is not publishable because it is too short, letterboxed and unverified for API codec compatibility.
+- `storyboards.md` now defines all twelve required low-cost format hypotheses, their source and `do_not_use` gates, platform adaptations and current readiness. F01, F03, F05, F08, F10 and F12 are the initial finished-prototype slate; F12 is already live.
+- `findings.md` records the Day 1 free workflow and defers any paid round until repeatability, publishable audio/motion and mature audience measurements expose a measurable gap.
 
 ## Pending / blockers
 
 - Probe Instagram API account identity/insights and Threads insights without exposing secrets.
 - Open Facebook/Instagram Story editors to verify polls, location stickers and music.
-- Verify Edits account association, import, audio, export, recovered MP4 and both API-EDITS / ANDROID-EDITS routes.
+- Verify Edits account association, licensed audio, publishable export and both API-EDITS / ANDROID-EDITS routes.
 - Add owned/licensed audio and create a publishable 8–15 second Edits export; current silent export is only technical evidence.
 - Capture baseline metrics for current production posts at comparable ages.
 - No recurring automation has been created.
