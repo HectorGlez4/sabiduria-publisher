@@ -1,0 +1,34 @@
+name: media-lab-cancel
+
+on:
+  workflow_dispatch:
+    inputs:
+      manifest:
+        description: "Exact cancellation manifest"
+        required: true
+        default: "experiments/media-lab/manifests/LAB-SMOKE-001-cancel.json"
+
+jobs:
+  cancel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r requirements.txt
+      - name: Delete only allowlisted rejected lab objects
+        env:
+          SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_THREADS_TOKEN: ${{ secrets.SDB_THREADS_TOKEN }}
+          MANIFEST: ${{ inputs.manifest }}
+        run: python3 experiments/media-lab/cancel_publication.py "$MANIFEST" --output experiments/media-lab/cancel-result.json
+      - name: Preserve cancellation result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-lab-cancel-${{ github.run_id }}
+          path: experiments/media-lab/cancel-result.json
+          if-no-files-found: warn
