@@ -1,0 +1,186 @@
+{
+  "run_id": "LAB-F12-001-B-INSTAGRAM",
+  "cohort": "experiment",
+  "coverage_cell_id": "CELL-008",
+  "baseline_match_ids": [],
+  "family_id": "LAB-F12-001",
+  "parent_run_id": null,
+  "campaign_day": 2,
+  "image_batch_id": "I01",
+  "platform": "instagram",
+  "actual_native_format": "feed_single_image",
+  "adaptation_notes": "Use the full Merian caption from the brief.",
+  "audio_treatment": "none",
+  "location_treatment": {
+    "visual_place": "illustrated Surinam setting",
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": 5272,
+    "nearby_production_posts": [],
+    "matched_comparison_ids": [
+      "LAB-F12-001-A-INSTAGRAM"
+    ]
+  },
+  "round": 1,
+  "status": "ready",
+  "tool_option_id": "T05",
+  "format_id": "F12",
+  "seed_source_path": "content/published/2026-09-05-extra51.json",
+  "seed_source_sha256": null,
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-F12-001-B.md",
+  "hypothesis": "Android native delivery of a distinct but closely matched object-led editorial image will be reliable without materially changing crop or caption.",
+  "changed_variable": "publishing route and factual topic within the same single-image format",
+  "controls": [
+    "4:5 1080x1350 JPEG",
+    "same editorial density and disclosure policy as API variant A",
+    "no audio",
+    "public organic audience"
+  ],
+  "tool": {
+    "name": "Android native app",
+    "version": "Instagram 446.0.0.49.77",
+    "model": null,
+    "plan": "existing account allowance",
+    "access_checked_at": "2026-09-13T19:52:00Z"
+  },
+  "timing": {
+    "started_at": "2026-09-13T20:06:00Z",
+    "first_acceptable_at": "2026-09-13T20:08:00Z",
+    "finished_at": "2026-09-13T20:09:00Z",
+    "wall_elapsed_seconds": 180,
+    "one_time_setup_active_seconds": 0,
+    "human_active_seconds": 0,
+    "agent_active_seconds": 120,
+    "approval_or_device_wait_seconds": 0,
+    "stages": [
+      {
+        "name": "generation and focused repair",
+        "started_at": "2026-09-13T20:06:00Z",
+        "finished_at": "2026-09-13T20:08:00Z",
+        "active_seconds": 75,
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "overlay and phone transfer",
+        "started_at": "2026-09-13T20:08:00Z",
+        "finished_at": "2026-09-13T20:09:00Z",
+        "active_seconds": 45,
+        "overlaps_another_stage": false
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "number": 1,
+      "settings_or_prompt": "Original Merian-inspired life-cycle scene.",
+      "outcome": "rejected: metallic ornamental pupa failed biological plausibility gate",
+      "elapsed_seconds": 30,
+      "spend_eur": 0,
+      "artifact_paths": [
+        "experiments/media-lab/assets/LAB-F12-001-B/merian-attempt-1-rejected.png"
+      ]
+    },
+    {
+      "number": 2,
+      "settings_or_prompt": "Focused edit: replace metallic pupa with natural cocoon and preserve composition.",
+      "outcome": "accepted for editorial use with non-species-identification disclosure",
+      "elapsed_seconds": 44,
+      "spend_eur": 0,
+      "artifact_paths": [
+        "experiments/media-lab/assets/LAB-F12-001-B/merian-original-repaired.png",
+        "experiments/media-lab/assets/LAB-F12-001-B/merian-single-4x5.jpg"
+      ]
+    }
+  ],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": "two built-in image operations (one generation, one edit)",
+    "subscription_allocation": null,
+    "local_compute_seconds": 1
+  },
+  "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-F12-001-B/merian-single-4x5.jpg",
+      "sha256": "ced93d7c407e25fba0c6337dff9b8aee01a25f535f41fbae9aaf11c586e17c41",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1350",
+      "duration_seconds": null,
+      "source_license": "Derivative of original included-generation artwork; bundled OFL overlay fonts",
+      "role": "publishable_master"
+    }
+  ],
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
+  "review": {
+    "evaluator": "Codex visual and factual QA",
+    "visual": 4,
+    "clarity": 5,
+    "voice": null,
+    "pacing": null,
+    "brand": 4,
+    "hook": 4,
+    "not_applicable": [
+      "voice",
+      "pacing"
+    ],
+    "notes": "First generation rejected. Repair removed metallic pupa. Caption explicitly avoids claiming a specific species or surviving plate."
+  },
+  "publication": {
+    "route_id": "ANDROID-MASTER",
+    "comparison_pair_id": "PAIR-SINGLE-01",
+    "creation_origin": "built-in image generation plus deterministic overlay",
+    "publishing_transport": "instagram Android native composer",
+    "native_app_and_version": "446.0.0.49.77",
+    "api_version": null,
+    "route_assigned_at": "2026-09-13T20:09:00Z",
+    "phone_transfer_seconds": 1,
+    "publishing_active_seconds": null,
+    "native_changes_from_master": [],
+    "human_interventions": [],
+    "fidelity_checks": {
+      "caption": null,
+      "cover": null,
+      "media_order": "not_applicable",
+      "aspect_ratio": null,
+      "audio": "not_applicable"
+    },
+    "destination": "instagram",
+    "agreed_batch_reference": "PAIR-SINGLE-01 Android side",
+    "requested_audience": "public",
+    "actual_audience": null,
+    "submitted_at": null,
+    "processing_completed_at": null,
+    "playback_verified_at": null,
+    "post_id": null,
+    "post_url": null,
+    "audio_verified": null,
+    "master_sha256": "ced93d7c407e25fba0c6337dff9b8aee01a25f535f41fbae9aaf11c586e17c41",
+    "snapshots": []
+  },
+  "missing_data_reasons": {
+    "publication": "Ready on the phone but deliberately held to avoid a same-session duplicate burst after API variant A.",
+    "audience_metrics": "Not published yet."
+  },
+  "decision": "Ready for Android-native release after a live production collision check on 2026-09-14 or later.",
+  "next_action": "Publish once through the instagram native brand composer, verify public URL and crop, then set 24h/72h/7d metric due times."
+}
+

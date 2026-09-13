@@ -155,8 +155,8 @@
       "platform": "threads",
       "route": "android_native",
       "native_format": "native_poll_or_location",
-      "status": "pending_deeper_probe",
-      "evidence": "Composer attachment control is present but its submenu has not yet been opened."
+      "status": "supported_verified",
+      "evidence": "evidence/android/threads-attachment-menu.xml shows Text, Quote, Poll and Location on @sabiduriabolsillo."
     }
   ],
   "families": [
@@ -165,7 +165,7 @@
       "campaign_day": 1,
       "family_type": "single_image_editorial",
       "topic": "Anna Atkins cyanotype object-led editorial",
-      "status": "ready"
+      "status": "published_partial_coverage"
     },
     {
       "family_id": "LAB-PERSON-002",
@@ -268,15 +268,19 @@
       "treatment": "single image with caption",
       "publishing_route": "api",
       "variant_id": "A",
-      "capability_evidence": null,
-      "status": "ready",
+      "capability_evidence": "API submission result 34779464853 plus read-only Graph verification 34779622895 and Android display capture.",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "planned_publish_at": "2026-09-13T20:01:45+00:00",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-A-FACEBOOK.json",
+      "post_id": "100618132774413_1094273873397272",
+      "post_url": "https://www.facebook.com/874327782058550/posts/1094273873397272",
+      "playback_or_display_verified_at": "2026-09-13T20:03:00+00:00",
+      "measurement_due_at": [
+        "2026-09-14T20:01:52+00:00",
+        "2026-09-16T20:01:52+00:00",
+        "2026-09-20T20:01:52+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
@@ -306,15 +310,19 @@
       "treatment": "4:5 image with caption",
       "publishing_route": "api",
       "variant_id": "A",
-      "capability_evidence": null,
-      "status": "ready",
+      "capability_evidence": "API submission result 34779464853 plus read-only Graph verification 34779622895 and Android display capture.",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "planned_publish_at": "2026-09-13T20:01:55+00:00",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-A-INSTAGRAM.json",
+      "post_id": "17912269851275257",
+      "post_url": "https://www.instagram.com/p/DdPX1J9jwt1/",
+      "playback_or_display_verified_at": "2026-09-13T20:03:30+00:00",
+      "measurement_due_at": [
+        "2026-09-14T20:02:07+00:00",
+        "2026-09-16T20:02:07+00:00",
+        "2026-09-20T20:02:07+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
@@ -344,15 +352,19 @@
       "treatment": "image with concise text",
       "publishing_route": "api",
       "variant_id": "A",
-      "capability_evidence": null,
-      "status": "ready",
+      "capability_evidence": "API submission result 34779464853 plus read-only Graph verification 34779622895 and Android display capture using the canonical permalink.",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "planned_publish_at": "2026-09-13T20:02:08+00:00",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-A-THREADS.json",
+      "post_id": "17974500300131308",
+      "post_url": "https://www.threads.com/@sabiduriabolsillo/post/DdPX21Rj-ie",
+      "playback_or_display_verified_at": "2026-09-13T20:05:15+00:00",
+      "measurement_due_at": [
+        "2026-09-14T20:02:20+00:00",
+        "2026-09-16T20:02:20+00:00",
+        "2026-09-20T20:02:20+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
@@ -364,10 +376,10 @@
       "publishing_route": "android_native",
       "variant_id": "B",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "ready",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
+      "planned_publish_at": "2026-09-14 after live production collision check",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-B-FACEBOOK.json",
       "post_id": null,
       "post_url": null,
       "playback_or_display_verified_at": null,
@@ -402,10 +414,10 @@
       "publishing_route": "android_native",
       "variant_id": "B",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "ready",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
+      "planned_publish_at": "2026-09-14 after live production collision check",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-B-INSTAGRAM.json",
       "post_id": null,
       "post_url": null,
       "playback_or_display_verified_at": null,
@@ -440,10 +452,10 @@
       "publishing_route": "android_native",
       "variant_id": "B",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "ready",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
+      "planned_publish_at": "2026-09-14 after live production collision check",
+      "run_record": "experiments/media-lab/runs/LAB-F12-001-B-THREADS.json",
       "post_id": null,
       "post_url": null,
       "playback_or_display_verified_at": null,
@@ -2845,7 +2857,37 @@
       "measurement_completed_at": []
     }
   ],
-  "baseline_posts": [],
+  "baseline_posts": [
+    {
+      "baseline_id": "2026-09-13-extra81-facebook",
+      "cohort": "normal_scheduled",
+      "platform": "facebook",
+      "native_format": "feed_single_image",
+      "published_at": "2026-09-13T17:00:00.463357+00:00",
+      "post_url": "https://www.facebook.com/874327782058550/posts/1094164936741499",
+      "metrics": null,
+      "missing_data_reason": "Age-matched snapshot not yet collected."
+    },
+    {
+      "baseline_id": "2026-09-13-extra81-instagram",
+      "cohort": "normal_scheduled",
+      "platform": "instagram",
+      "native_format": "feed_single_image",
+      "published_at": "2026-09-13T17:00:18.734379+00:00",
+      "post_url": "https://www.instagram.com/p/DdPDAlfiZhw/",
+      "metrics": null,
+      "missing_data_reason": "Age-matched snapshot not yet collected."
+    },
+    {
+      "baseline_id": "2026-09-13-extra81-threads",
+      "cohort": "normal_scheduled",
+      "platform": "threads",
+      "native_format": "feed_single_image",
+      "published_at": "2026-09-13T17:00:30.787879+00:00",
+      "post_url": "https://www.threads.net/@sabiduriabolsillo/post/18406031032091611",
+      "metrics": null,
+      "missing_data_reason": "Canonical permalink and age-matched snapshot still need API reconciliation."
+    }
+  ],
   "cell_template": null
 }
-

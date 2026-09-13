@@ -22,7 +22,21 @@ def fit_font(draw: ImageDraw.ImageDraw, text: str, width: int, max_size: int, mi
     return ImageFont.truetype(str(FONT_BOLD), min_size)
 
 
-def render(source: Path, destination: Path) -> None:
+def parse_rgb(value: str) -> tuple[int, int, int]:
+    parts = tuple(int(part) for part in value.split(","))
+    if len(parts) != 3 or any(part < 0 or part > 255 for part in parts):
+        raise argparse.ArgumentTypeError("color must be R,G,B with values from 0 to 255")
+    return parts
+
+
+def render(
+    source: Path,
+    destination: Path,
+    lines: list[str],
+    sub: str,
+    panel_rgb: tuple[int, int, int],
+    accent_rgb: tuple[int, int, int],
+) -> None:
     image = Image.open(source).convert("RGB")
     target_ratio = 4 / 5
     source_ratio = image.width / image.height
@@ -38,9 +52,8 @@ def render(source: Path, destination: Path) -> None:
 
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
-    draw.rounded_rectangle((54, 76, 1026, 405), radius=24, fill=(5, 39, 73, 224))
+    draw.rounded_rectangle((54, 76, 1026, 405), radius=24, fill=(*panel_rgb, 224))
 
-    lines = ["EL PRIMER LIBRO ILUSTRADO", "CON FOTOGRAFÍAS", "ERA AZUL"]
     y = 108
     for line in lines:
         font = fit_font(draw, line, 876, 66, 46)
@@ -50,16 +63,15 @@ def render(source: Path, destination: Path) -> None:
         y += 78
 
     sub_font = ImageFont.truetype(str(FONT_SERIF), 38)
-    sub = "Anna Atkins · 1843"
     sub_box = draw.textbbox((0, 0), sub, font=sub_font)
-    draw.text(((1080 - (sub_box[2] - sub_box[0])) // 2, 340), sub, font=sub_font, fill=(176, 220, 236, 255))
+    draw.text(((1080 - (sub_box[2] - sub_box[0])) // 2, 340), sub, font=sub_font, fill=(*accent_rgb, 255))
 
     brand_font = ImageFont.truetype(str(FONT_BOLD), 23)
     brand = "SABIDURÍA DE BOLSILLO"
     brand_box = draw.textbbox((0, 0), brand, font=brand_font)
     pad = 18
     bx = 1030 - (brand_box[2] - brand_box[0]) - 2 * pad
-    draw.rounded_rectangle((bx, 1268, 1030, 1321), radius=14, fill=(5, 39, 73, 216))
+    draw.rounded_rectangle((bx, 1268, 1030, 1321), radius=14, fill=(*panel_rgb, 216))
     draw.text((bx + pad, 1278), brand, font=brand_font, fill=(249, 240, 211, 255))
 
     image = Image.alpha_composite(image.convert("RGBA"), overlay).convert("RGB")
@@ -71,8 +83,19 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("source", type=Path)
     parser.add_argument("destination", type=Path)
+    parser.add_argument(
+        "--headline",
+        default="EL PRIMER LIBRO ILUSTRADO|CON FOTOGRAFÍAS|ERA AZUL",
+        help="Three lines separated by |",
+    )
+    parser.add_argument("--subhead", default="Anna Atkins · 1843")
+    parser.add_argument("--panel-rgb", type=parse_rgb, default=(5, 39, 73))
+    parser.add_argument("--accent-rgb", type=parse_rgb, default=(176, 220, 236))
     args = parser.parse_args()
-    render(args.source, args.destination)
+    lines = args.headline.split("|")
+    if len(lines) != 3:
+        parser.error("--headline must contain exactly three lines separated by |")
+    render(args.source, args.destination, lines, args.subhead, args.panel_rgb, args.accent_rgb)
 
 
 if __name__ == "__main__":

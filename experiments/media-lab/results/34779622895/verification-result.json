@@ -1,0 +1,40 @@
+{
+  "run_group_id": "LAB-F12-001-A-API",
+  "observed_at": "2026-09-13T20:04:42.713759+00:00",
+  "results": {
+    "facebook": {
+      "status": "verified",
+      "detail": {
+        "id": "100618132774413_1094273873397272",
+        "permalink_url": "https://www.facebook.com/874327782058550/posts/1094273873397272",
+        "created_time": "2026-09-13T20:01:52+0000",
+        "message": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos obtenidos al apoyar algas sobre papel sensibilizado y exponerlo al sol. No era un libro de arte, sino una solución botánica: registrar formas sin que un dibujante interviniera. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original inspirada en el proceso; no reproduce una lámina histórica. Fuentes: Natural History Museum, V&A, The Met y Linnean Society.\n\n#SabiduriaDeBolsillo #AnnaAtkins #HistoriaDeLaFotografia",
+        "full_picture": "https://scontent-lhr11-1.xx.fbcdn.net/v/t39.30808-6/809168218_1094273853397274_3129021916054700803_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9MUKhuYLq8QQ7kNvwHZex6m&_nc_oc=AdqbO5FDt0cwBeTWZEmfU4_twXCNZS6s8Dqn-QvXHo2J5Uu8A21oMp3xFnOhHpyD-og&_nc_zt=23&_nc_ht=scontent-lhr11-1.xx&edm=AJfPMC4EAAAA&_nc_gid=rXHDpxDfv5Fk-tzvCEEdxA&_nc_tpa=Q5bMBQLDMJ8yWFb-34OAE_S5hiN6ZaYAO5C6YP8ZOsmHnxz6eXTz_rigRtV2ak_Gw_JSYaCrK3zSGWQwmA&oh=00_AQJiP4otpmSUiRF-pJO1UngeCdt32RW7qkyNFPm1x_xTAg&oe=6AACE227",
+        "is_published": true,
+        "is_hidden": false
+      }
+    },
+    "instagram": {
+      "status": "verified",
+      "detail": {
+        "id": "17912269851275257",
+        "caption": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos obtenidos al apoyar algas sobre papel sensibilizado y exponerlo al sol. No era un libro de arte, sino una solución botánica: registrar formas sin que un dibujante interviniera. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original inspirada en el proceso; no reproduce una lámina histórica. Fuentes: Natural History Museum, V&A, The Met y Linnean Society.\n\n#SabiduriaDeBolsillo #AnnaAtkins #HistoriaDeLaFotografia",
+        "media_type": "IMAGE",
+        "media_url": "https://scontent-lhr11-1.cdninstagram.com/v/t51.82787-15/808478539_18040348919822351_4920604514108905894_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=101&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=_CJglYxTDwIQ7kNvwEkNGis&_nc_oc=AdrTWIhAlRIiRUB41AG9PQ3WDsCkFIuyQSHVohnlFCQxZLkXmnRP8R9xPxnDtcCS6gk&_nc_zt=23&_nc_ht=scontent-lhr11-1.cdninstagram.com&edm=AIZKd-4EAAAA&_nc_gid=tnejHdtwDfKpo4VTUIGGtQ&oh=00_AQI02xgc9OIjBcrNGa6AzFWb-4K1sVUqB6Od9j1TjR0IUA&oe=6AACF04E",
+        "permalink": "https://www.instagram.com/p/DdPX1J9jwt1/",
+        "timestamp": "2026-09-13T20:02:07+0000"
+      }
+    },
+    "threads": {
+      "status": "verified",
+      "detail": {
+        "id": "17974500300131308",
+        "permalink": "https://www.threads.com/@sabiduriabolsillo/post/DdPX21Rj-ie",
+        "timestamp": "2026-09-13T20:02:20+0000",
+        "text": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos hechos al apoyar algas sobre papel sensibilizado y exponerlo al sol. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original; no reproduce una lámina histórica.",
+        "media_type": "IMAGE",
+        "media_url": "https://scontent-lhr6-1.cdninstagram.com/v/t51.82787-15/808971264_17976881970104841_337738242301627570_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ES2FV3xZGD0Q7kNvwF3HSPy&_nc_oc=AdphZ9jhR5doZrosDRDcL5_WxQmjEDVhS8uYK5ud6TR2k89EG6JP-FrVzMXAdM8gnp8&_nc_zt=23&_nc_ht=scontent-lhr6-1.cdninstagram.com&edm=ANQ71j8EAAAA&_nc_gid=MIgUeJerKXeVe0NzBxljOQ&_nc_tpa=Q5bMBQI7a2jcKohVb6qyQTZA-e_7jADE7XbbxVZOA1FEJskN8P0M1bV-GlZN4PO0Mg_i5XkzLKMyme8l&oh=00_AQL1mkt5dN7d9iJ-7QbAFZcUuRw8fR8qyLhmJ9lemOzhrA&oe=6AACCBE7"
+      }
+    }
+  }
+}

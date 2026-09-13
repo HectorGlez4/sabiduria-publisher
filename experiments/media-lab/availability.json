@@ -1,0 +1,120 @@
+{
+  "checked_at": "2026-09-13T20:11:00+00:00",
+  "round": 1,
+  "incremental_spend_eur": 0,
+  "options": [
+    {
+      "id": "T01",
+      "option": "Existing renderer + FFmpeg",
+      "status": "tested_supported",
+      "evidence": "ffmpeg/ffprobe installed; deterministic overlay rendered reproducibly with identical SHA-256.",
+      "next": "Build controlled motion baseline."
+    },
+    {
+      "id": "T02",
+      "option": "Built-in image generation",
+      "status": "tested_supported_with_repair",
+      "evidence": "Anna accepted first attempt. Merian attempt 1 rejected for metallic pupa; one focused edit produced a usable candidate.",
+      "next": "Continue bounded I01 gallery; log included allowance, not universal free cost."
+    },
+    {
+      "id": "T03",
+      "option": "Open-access originals",
+      "status": "pending",
+      "evidence": "Verified corpus contains institutional source links; no asset downloaded in this run.",
+      "next": "Select one asset with item-level public-domain evidence for I08."
+    },
+    {
+      "id": "T04",
+      "option": "Edits on Samsung",
+      "status": "partially_tested",
+      "evidence": "com.instagram.basel 445.0.0.46.83 opened; 4:5 JPEG imported; Add audio catalog opened; silent 3.03 s 1080x1920 HEVC MP4 exported and recovered.",
+      "next": "Add owned/licensed audio, export 8–15 s H.264-compatible version if available, then test API-EDITS and ANDROID-EDITS in separate release slots."
+    },
+    {
+      "id": "T05",
+      "option": "Native Instagram/Facebook creation",
+      "status": "partially_tested",
+      "evidence": "Correct brand composers inspected. Facebook exposes feed media/music/location/story/reel; Instagram exposes Post/Story/Reel/Live/Edits.",
+      "next": "Publish distinct Android variant B in spaced windows; verify crops and URLs."
+    },
+    {
+      "id": "T06",
+      "option": "Kokoro locally",
+      "status": "blocked_missing_dependency",
+      "evidence": "kokoro and torch absent from the current Python environment.",
+      "next": "Install locally only within the 90-minute setup ceiling when narration day begins."
+    },
+    {
+      "id": "T07",
+      "option": "Human phone narration",
+      "status": "deferred_optional_user_contribution",
+      "evidence": "No recording requested from the user; campaign must not block on it.",
+      "next": "Offer only for the controlled voice comparison."
+    },
+    {
+      "id": "T08",
+      "option": "Canva Free",
+      "status": "not_installed_account_unverified",
+      "evidence": "No local Canva app detected; connected account allowance not checked.",
+      "next": "Probe web/account only after mandatory Meta launch cells."
+    },
+    {
+      "id": "T09",
+      "option": "CapCut free features",
+      "status": "installed_unverified",
+      "evidence": "/Applications/CapCut.app exists.",
+      "next": "Check account, free export and captions with the reference timeline."
+    },
+    {
+      "id": "T10",
+      "option": "Adobe Express Free",
+      "status": "not_installed_account_unverified",
+      "evidence": "No local Adobe Express app detected.",
+      "next": "Probe web allowance later without starting a trial."
+    },
+    {
+      "id": "T11",
+      "option": "DaVinci Resolve Free",
+      "status": "not_installed",
+      "evidence": "No local DaVinci Resolve app detected.",
+      "next": "Defer unless local editor comparison remains valuable."
+    },
+    {
+      "id": "T12",
+      "option": "ElevenLabs Free",
+      "status": "deferred_nonpublishable_rights",
+      "evidence": "Campaign plan restricts free output to private evaluation.",
+      "next": "Use only in private voice bake-off; never publish free output."
+    },
+    {
+      "id": "T13",
+      "option": "HeyGen Free",
+      "status": "account_unverified",
+      "evidence": "No installed native app found; allowance/export rights not checked.",
+      "next": "Probe only after presenter family establishes a measurable need."
+    },
+    {
+      "id": "T14",
+      "option": "Runway free credits",
+      "status": "account_unverified",
+      "evidence": "No balance or rights verification completed.",
+      "next": "Conditional motion probe after shared reference image is selected."
+    },
+    {
+      "id": "T15",
+      "option": "Pika free allowance",
+      "status": "account_unverified",
+      "evidence": "No balance or rights verification completed.",
+      "next": "Conditional matched motion probe; do not infer API entitlement."
+    },
+    {
+      "id": "T16",
+      "option": "Music/sound treatment",
+      "status": "partially_tested",
+      "evidence": "Edits native music catalog and Original audio tab visible; ffmpeg available locally. No track selected because export/reuse rights are not yet established.",
+      "next": "Create or select an owned/explicitly licensed bed and retain a clean master."
+    }
+  ]
+}
+

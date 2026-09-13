@@ -92,10 +92,13 @@
           "gif",
           "sticker",
           "music",
-          "attachment"
+          "attachment",
+          "poll",
+          "location",
+          "quote"
         ]
       },
-      "blocker": "Poll/location submenu and follower count still require a deeper native probe; carousel/video need lab adapter implementation.",
+      "blocker": "Follower count still requires a deeper native probe; carousel/video need lab adapter implementation. Poll and Location were confirmed in the native attachment menu.",
       "required_for_campaign": true
     },
     {
