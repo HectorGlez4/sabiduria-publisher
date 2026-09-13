@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-29-extra90",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Teresa de Jesús, «la paciencia todo lo…»",
+    "hook": "\"la paciencia todo lo alcanza.\"",
+    "body": [
+      "Religiosa y escritora abulense, reformadora del Carmelo. Escribió sobre la vida interior en una prosa deliberadamente llana."
+    ],
+    "question": "¿Qué te sostuvo la última vez que se puso difícil?",
+    "quote": {
+      "text": "la paciencia todo lo alcanza.",
+      "author": "Teresa de Jesús (1515-1582)",
+      "work": "Nada te turbe",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Teresa de Jesús en «Nada te turbe». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Nada_te_turbe"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "teresa-de-jesus-la-paciencia-todo-lo-alcanza",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-29T22:26:00Z",
+  "results": {}
+}

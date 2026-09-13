@@ -142,10 +142,17 @@ def huecos(dias: int, cola: list[dict], archivo: list[dict],
     return sorted(fuera)
 
 
-def candidatas_reemision(archivo: list[dict], ultima: dict, ahora: datetime.datetime,
-                         reposo: int) -> list[dict]:
-    """Piezas del archivo cuyo contenido lleva suficiente sin aparecer."""
-    limite = ahora - datetime.timedelta(days=reposo)
+def candidatas_reemision(archivo: list[dict], ultima: dict,
+                        cuando: datetime.datetime, reposo: int) -> list[dict]:
+    """Piezas cuyo contenido llevará suficiente sin aparecer EN SU FECHA DE SALIDA.
+
+    El reposo se mide contra el hueco que va a ocupar la reemisión, no contra el
+    reloj de ahora. Programando dos semanas por delante la diferencia es enorme:
+    una pieza que salió anteayer no es reemitible hoy, pero sí lo será el día 30.
+    Medirlo contra `ahora` descartaba de golpe todo lo publicado la última
+    semana, que es justo el archivo más reciente.
+    """
+    limite = cuando - datetime.timedelta(days=reposo)
     fuera = []
     for u in archivo:
         s = (u.get("core") or {}).get("subject") or ""
@@ -193,18 +200,21 @@ def main() -> int:
           f"{cupo['historia']} historias")
 
     # Fotos del banco: las citas primero, y dentro de cada grupo más fuentes antes.
+    # Se excluyen las marcadas "REVISAR:" — la marca de que la CITA se
+    # reconstruyó y hay que cotejarla antes de publicar. No las que dicen
+    # "REVISAR LA PREGUNTA", que es un aviso de estilo sobre el cierre: una
+    # pregunta mejorable no impide publicar, una atribución sin cotejar sí.
     fotos = sorted(
         (b for b in banco
-         if not any("REVISAR" in x for x in b[1].get("do_not_use", []))),
+         if not any(x.startswith("REVISAR:") for x in b[1].get("do_not_use", []))),
         key=lambda b: (b[1]["pillar"] != "cita", -len(b[1].get("sources", []))))
     if len(fotos) < cupo["foto"]:
         print(f"  ⚠ el banco da para {len(fotos)} fotos y hacen falta {cupo['foto']}")
 
-    reemitibles = candidatas_reemision(
-        [u for _, u in archivo], ultima, ahora, a.reposo)
-    if len(reemitibles) < cupo["reel"] + cupo["historia"]:
-        print(f"  ⚠ el archivo da para {len(reemitibles)} reemisiones y hacen falta "
-              f"{cupo['reel'] + cupo['historia']}")
+    archivo_u = [u for _, u in archivo]
+    hoy_reemitibles = candidatas_reemision(archivo_u, ultima, ahora, a.reposo)
+    print(f"  reemitibles hoy: {len(hoy_reemitibles)} "
+          f"(más, según avanza la fecha de cada hueco)")
 
     # Intercalado por día: foto, reel, foto, historia…
     #
@@ -228,6 +238,7 @@ def main() -> int:
 
     nuevas: list[tuple[pathlib.Path | None, dict]] = []
     i_foto = i_re = 0
+    usados: set[str] = set()
     for tipo, cuando in zip(plan_tipos, libres):
         if tipo == "foto":
             if i_foto >= len(fotos):
@@ -241,9 +252,17 @@ def main() -> int:
             u["targets"] = ["facebook", "instagram", "threads"]
             nuevas.append((ruta, u))
         else:
-            if i_re >= len(reemitibles):
+            # Se resuelve con la fecha del hueco, y se descarta lo ya elegido en
+            # esta misma pasada: dos reemisiones del mismo sujeto en el mismo
+            # plan serían el duplicado de agosto otra vez.
+            libres = [u for u in candidatas_reemision(archivo_u, ultima, cuando, a.reposo)
+                      if u["id"] not in usados]
+            if not libres:
                 continue
-            orig = reemitibles[i_re]; i_re += 1
+            orig = libres[0]
+            usados.add(orig["id"])
+            ultima[(orig.get("core") or {}).get("subject", "")] = cuando
+            i_re += 1
             nuevas.append((None, reemision(orig, tipo, cuando, 50 + i_re)))
 
     # Alternancia sobre el orden real, contando lo ya encolado.

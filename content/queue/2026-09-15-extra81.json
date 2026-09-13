@@ -1,0 +1,105 @@
+{
+  "id": "2026-09-15-extra81",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "ready",
+  "core": {
+    "subject": "Ana Frank y la entrada del 15 de julio de 1944",
+    "hook": "La frase que se cita como consuelo no cierra el párrafo: lo abre. Lo que viene después dice que ve el mundo convertirse en un desierto y que oye acercarse el trueno que también los destruirá a ellos.",
+    "quote": {
+      "text": "Sigo creyendo, a pesar de todo, que la gente es buena de corazón.",
+      "author": "Ana Frank",
+      "work": "Diario, 15 de julio de 1944",
+      "attribution_verified": true
+    },
+    "body": [
+      "La anotación es del 15 de julio de 1944, escrita en la Casa de atrás de Ámsterdam. Después de esa línea siguen otras cuatro. Dice que le resulta imposible construir su vida sobre un cimiento de caos, sufrimiento y muerte. Que ve el mundo convertirse poco a poco en un desierto. Que oye el trueno acercarse y que un día los destruirá también a ellos. Que siente el sufrimiento de millones. Solo entonces mira al cielo y piensa que todo cambiará para bien. La esperanza está ahí, pero llega la última y viene detrás del inventario.",
+      "Veinte días más tarde, el 4 de agosto de 1944, la policía entró en el escondite. La última anotación del diario es del 1 de agosto. De los ocho escondidos sobrevivió uno, su padre. Ana y su hermana Margot murieron en Bergen-Belsen: la fecha oficial fue durante décadas el 31 de marzo de 1945, hasta que en 2015 la Casa de Ana Frank cruzó los archivos de la Cruz Roja, del Servicio Internacional de Búsquedas de Bad Arolsen y del memorial del campo con testimonios de supervivientes, y concluyó que habían muerto en febrero. El libro se publicó el 25 de junio de 1947.",
+      "Después empezó la carrera de la frase por su cuenta. La obra de teatro de Frances Goodrich y Albert Hackett se estrenó en Broadway el 5 de octubre de 1955 y ganó el Pulitzer al año siguiente; Otto Frank no asistió nunca a una función. La crítica Hazel Rochman escribió que esa oración fue arrancada de su contexto y proclamada en escenarios y pantallas de todo el mundo como un mensaje sentimental de curación y esperanza. El contexto que se quitó no es un matiz: es la parte en la que una muchacha de quince años cuenta exactamente lo que está viendo venir."
+    ],
+    "question": "¿Qué se pierde cuando una frase se cita sin lo que venía después?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AnaFrank",
+      "#Diario",
+      "#SegundaGuerraMundial"
+    ],
+    "extended": [
+      "#Citas",
+      "#Historia",
+      "#Holocausto",
+      "#Amsterdam",
+      "#Memoria",
+      "#Literatura",
+      "#SigloXX",
+      "#Testimonio"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La Casa de Ana Frank, en su base de conocimiento, cita la entrada del 15 de julio de 1944 con este texto: «It's difficult in times like these: ideals, dreams and cherished hopes rise within us, only to be crushed by grim reality. It's a wonder I haven't abandoned all my ideals, they seem so absurd and impractical. Yet I cling to them because I still believe, in spite of everything, that people are truly good at heart.» La frase sobre la bondad de la gente pertenece, por tanto, a esa fecha y a ese párrafo.",
+      "source": "Anne Frank House (Casa de Ana Frank), base de conocimiento, ficha «Philosophy of life, Anne Frank»",
+      "url": "https://research.annefrank.org/en/onderwerpen/06baebbd-7420-48fb-833f-6c7ee60ba232/"
+    },
+    {
+      "claim": "Continuación del mismo párrafo del 15 de julio de 1944, en la traducción inglesa de uso corriente: «It's utterly impossible for me to build my life on a foundation of chaos, suffering and death. I see the world being slowly transformed into a wilderness, I hear the approaching thunder that, one day, will destroy us too, I feel the suffering of millions. And yet, when I look up at the sky, I somehow feel that everything will change for the better, that this cruelty too shall end, that peace and tranquility will return once more.» Es decir: el cimiento de caos, sufrimiento y muerte; el mundo convertido en desierto; el trueno que se acerca y que los destruirá también a ellos; el sufrimiento de millones; y, al final, la mirada al cielo.",
+      "source": "University of Dayton Libraries, colección «Imprints and Impressions», ficha de lectura comentada de «Anne Frank: The Diary of a Young Girl, July 15, 1944»",
+      "url": "https://ecommons.udayton.edu/rosebk_commentary/49/"
+    },
+    {
+      "claim": "El 28 de marzo de 1944 el ministro neerlandés en el exilio Gerrit Bolkestein pidió por radio que se conservaran los documentos personales de la ocupación. Ana empezó el 20 de mayo de 1944 a reescribir su diario en hojas sueltas (la versión B, «Het Achterhuis») a partir de la versión A original. Su última carta del diario está fechada el 1 de agosto de 1944, tres días antes de la detención. «Het Achterhuis» se publicó el 25 de junio de 1947, compilado por Otto Frank a partir de la reescritura, de los textos originales posteriores a marzo de 1944 y de algunos relatos breves.",
+      "source": "Anne Frank House (Casa de Ana Frank), «The complete works of Anne Frank»",
+      "url": "https://www.annefrank.org/en/anne-frank/diary/complete-works-anne-frank/"
+    },
+    {
+      "claim": "Las versiones del diario son tres: las anotaciones originales de junio de 1942 a agosto de 1944; la versión que la propia Ana reescribió tras la emisión radiofónica de 1944; y la edición que preparó Otto Frank. Entre el 20 de mayo y su detención el 4 de agosto de 1944, Ana pasó a hojas sueltas, con revisiones, cerca de dos tercios de sus anotaciones originales. La última entrada es del 1 de agosto de 1944 y la detención, del 4 de agosto de 1944. La primera edición neerlandesa apareció en 1947.",
+      "source": "United States Holocaust Memorial Museum, Holocaust Encyclopedia, artículo «Anne Frank: Diary»",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/anne-frank-diary"
+    },
+    {
+      "claim": "La Cruz Roja concluyó en su momento que Ana y Margot Frank habían muerto entre el 1 y el 31 de marzo de 1945, y las autoridades neerlandesas fijaron como fecha oficial de defunción el 31 de marzo para ambas. La Casa de Ana Frank investigó de nuevo los últimos meses de las hermanas estudiando los archivos de la Cruz Roja, del Servicio Internacional de Búsquedas de Bad Arolsen y del memorial de Bergen-Belsen, junto con testimonios de supervivientes, y concluyó que la fecha de sus muertes tuvo que ser en febrero de 1945.",
+      "source": "Anne Frank House (Casa de Ana Frank), nota de prensa del 31 de marzo de 2015, «Anne Frank's last months»",
+      "url": "https://www.annefrank.org/en/about-us/news-and-press/news/2015/3/31/anne-franks-last-months/"
+    },
+    {
+      "claim": "La obra teatral de Frances Goodrich y Albert Hackett se estrenó en Broadway el 5 de octubre de 1955, tras funciones de prueba en Filadelfia desde el 15 de septiembre de 1955. Otto Frank conservaba los derechos de traducción y adaptación por su contrato editorial de 1946 y mantuvo correspondencia intensa con los Hackett, pero nunca asistió a una representación: «the idea that my wife and children as well as I will be presented on the stage is a painful one to me». La versión de Meyer Levin fue rechazada en octubre de 1952; Levin demandó a partir de enero de 1955 y el caso se cerró en octubre de 1959 con un pago de 50.000 dólares.",
+      "source": "Anne Frank House (Casa de Ana Frank), base de conocimiento, ficha «Otto Frank and the play 'The Diary of Anne Frank'»",
+      "url": "https://research.annefrank.org/en/onderwerpen/287e2f8b-9a45-4ce4-b3b7-59cc1f6cdfb4/"
+    },
+    {
+      "claim": "La obra de teatro se estrenó el 5 de octubre de 1955 en el Cort Theatre de Broadway, obtuvo el premio Tony a la mejor obra en 1956 y el premio Pulitzer de teatro de 1956, concedido a Albert Hackett y Frances Goodrich.",
+      "source": "Wikipedia en inglés, «The Diary of Anne Frank (play)»",
+      "url": "https://en.wikipedia.org/wiki/The_Diary_of_Anne_Frank_(play)"
+    },
+    {
+      "claim": "Sobre el uso descontextualizado de la frase, la crítica Hazel Rochman, citada en este trabajo universitario: «That famous sentence ‘still I believe, in spite of everything, that people are really good at heart' has been wrenched out of context and trumpeted on stage and screens across the world as a sentimental message of healing and hope.» El trabajo también documenta que Goodrich y Hackett atenuaron la identidad judía de Ana para hacer la historia universal.",
+      "source": "University of California, Santa Barbara, Oral History Project, proseminario «Legacies of the Holocaust» del profesor Harold Marcuse; trabajo de Jessica Landfried (marzo de 2002, revisado en junio de 2002)",
+      "url": "https://holocaust.projects.history.ucsb.edu/Research/AnneFrank/AnneF20pFinalHM.htm"
+    }
+  ],
+  "do_not_use": [
+    "No citar la frase sola como mensaje de optimismo. En el diario abre un párrafo cuyo resto describe el mundo convirtiéndose en un desierto, el trueno que se acerca y el sufrimiento de millones. Citar solo la primera línea es exactamente la operación que la crítica lleva décadas señalando.",
+    "No decir que la frase es la última que escribió. La última anotación del diario es del 1 de agosto de 1944; esta es del 15 de julio.",
+    "No decir que la escribió en la versión que estaba reescribiendo para publicar. Ana empezó esa reescritura el 20 de mayo de 1944 y no llegó a cubrir julio: las entradas de esos meses se conservan en su forma original.",
+    "No dar el 31 de marzo de 1945 como fecha de su muerte. Es la fecha oficial que fijaron las autoridades neerlandesas a partir del informe de la Cruz Roja; la investigación de la Casa de Ana Frank publicada en 2015 sitúa la muerte de Ana y Margot en febrero de 1945.",
+    "No afirmar que la obra de teatro termina con esa frase sin más. Circula así en muchas divulgaciones y es verosímil, pero las fichas institucionales consultadas no lo documentan; lo que sí está documentado es que la frase se difundió en escenarios y pantallas fuera de su contexto.",
+    "No presentar el diario como un texto publicado tal cual se escribió. Hay tres estados: la versión original, la reescritura de la propia Ana y la edición de Otto Frank, que compiló ambas y corrigió errores de lengua.",
+    "No fijar una sola traducción al español como la canónica. El original es neerlandés y la frase circula en varias versiones castellanas; aquí se da una lectura fiel al sentido del original, no una edición concreta.",
+    "No decir que Otto Frank se opuso a la obra de teatro. Colaboró con los adaptadores y elogió versiones posteriores del guion; lo que no hizo fue asistir a ninguna función.",
+    "No confundir el pleito de Meyer Levin con una disputa sobre la frase. Levin demandó por fraude, incumplimiento de contrato y plagio tras el rechazo de su propia adaptación en octubre de 1952.",
+    "No llamar «diario» a un solo cuaderno. El conjunto incluye el cuaderno de tapas de cuadros, otros cuadernos, las hojas sueltas de la reescritura y relatos breves."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-16T02:26:00Z",
+  "results": {}
+}

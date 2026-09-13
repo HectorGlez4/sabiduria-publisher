@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-22-extra82",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Francisco de Quevedo, «Rey que se deja…»",
+    "hook": "\"Rey que se deja quitar la capa, da ánimo para que le quiten la vida.\"",
+    "body": [
+      "Poeta y prosista del Siglo de Oro, capaz del insulto más afilado y del soneto amoroso más grave sin cambiar de registro."
+    ],
+    "question": "¿De qué te costó más soltarte?",
+    "quote": {
+      "text": "Rey que se deja quitar la capa, da ánimo para que le quiten la vida.",
+      "author": "Francisco de Quevedo (1580-1645)",
+      "work": "Marco Bruto",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Francisco de Quevedo en «Marco Bruto». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Marco_Bruto"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "francisco-de-quevedo-rey-que-se-deja-quitar-la-capa",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-23T01:26:00Z",
+  "results": {}
+}

@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-28-extra87",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Miguel de Unamuno, «Ha sido mi convicción…»",
+    "hook": "\"Ha sido mi convicción de siempre, más arraigada y más corroborada en mí cuanto más tiempo pasa, la de que la suprema virtud de un hombre debe ser la sinceridad.\"",
+    "body": [
+      "Filósofo y novelista vasco, rector de Salamanca en tres ocasiones y destituido otras tantas. Escribió sobre la contradicción entre lo que la razón admite y lo que el hombre necesita."
+    ],
+    "question": "¿Qué virtud admiras y no practicas?",
+    "quote": {
+      "text": "Ha sido mi convicción de siempre, más arraigada y más corroborada en mí cuanto más tiempo pasa, la de que la suprema virtud de un hombre debe ser la sinceridad.",
+      "author": "Miguel de Unamuno (1864-1936)",
+      "work": "Verdad y vida",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Miguel de Unamuno en «Verdad y vida». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Verdad_y_vida"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "miguel-de-unamuno-ha-sido-mi-conviccion-de-siempre-mas",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-29T01:26:00Z",
+  "results": {}
+}

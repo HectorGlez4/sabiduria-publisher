@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-26-extra86",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Miguel de Cervantes, «donde hay música no…»",
+    "hook": "\"donde hay música no puede haber cosa mala\"",
+    "body": [
+      "Soldado en Lepanto, cautivo en Argel y recaudador de impuestos antes que novelista. Publicó la primera parte del Quijote a los cincuenta y siete años."
+    ],
+    "question": "¿Qué harías hoy si no hubiera prisa?",
+    "quote": {
+      "text": "donde hay música no puede haber cosa mala",
+      "author": "Miguel de Cervantes (1547-1616)",
+      "work": "Don Quijote",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Miguel de Cervantes en «Don Quijote». Estado de derechos: dominio-público.",
+      "source": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/cache/epub/2000/pg2000.txt"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "miguel-de-cervantes-donde-hay-musica-no-puede-haber-cosa",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-27T03:26:00Z",
+  "results": {}
+}

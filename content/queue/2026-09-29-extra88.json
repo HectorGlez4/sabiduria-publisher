@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-29-extra88",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Rosalía de Castro, «Ninguno sabe decir una…»",
+    "hook": "\"Ninguno sabe decir una sola palabra en gallego, y casi están por olvidarse de la puerta de su casa y del nombre de sus amigos.\"",
+    "body": [
+      "Poeta gallega, figura central del Rexurdimento. Escribió en gallego y en castellano sobre la emigración, la pérdida y la tierra."
+    ],
+    "question": "¿Qué lugar sigues llamando tuyo?",
+    "quote": {
+      "text": "Ninguno sabe decir una sola palabra en gallego, y casi están por olvidarse de la puerta de su casa y del nombre de sus amigos.",
+      "author": "Rosalía de Castro (1837-1885)",
+      "work": "El cadiceño",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Rosalía de Castro en «El cadiceño». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/El_cadiceño"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "rosalia-de-castro-ninguno-sabe-decir-una-sola-palabra-en",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-29T15:26:00Z",
+  "results": {}
+}

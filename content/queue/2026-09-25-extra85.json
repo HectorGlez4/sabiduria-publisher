@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-25-extra85",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Manuel González Prada, «Algunos pretenden redimir a…»",
+    "hook": "\"Algunos pretenden redimir a la Humanidad sin haber logrado catequizar a su familia, olvidando que antes de pronunciar discursos y de escribir libros, se necesita hablar la más elocuente de las lenguas, el ejemplo.\"",
+    "body": [
+      "Ensayista y polemista peruano. Su prosa, breve y cortante, sacudió a un país que salía derrotado de la guerra."
+    ],
+    "question": "¿Qué frase te cambió algo?",
+    "quote": {
+      "text": "Algunos pretenden redimir a la Humanidad sin haber logrado catequizar a su familia, olvidando que antes de pronunciar discursos y de escribir libros, se necesita hablar la más elocuente de las lenguas, el ejemplo.",
+      "author": "Manuel González Prada (1844-1918)",
+      "work": "Las esclavas de la Iglesia",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Manuel González Prada en «Las esclavas de la Iglesia». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Las_esclavas_de_la_Iglesia"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "manuel-gonzalez-prada-algunos-pretenden-redimir-a-la-humanidad-sin",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-25T23:26:00Z",
+  "results": {}
+}

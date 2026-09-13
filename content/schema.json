@@ -7,7 +7,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-(manana|tarde|noche|extra[0-9]{2}|re[0-9]{2}-(reel|story|foto))$",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-(manana|tarde|noche|extra[0-9]{2,3}|re[0-9]{2,3}-(reel|story|foto))$",
       "description": "Fecha de publicación + franja. Es también el nombre del archivo y de la imagen. Las tres franjas son las piezas originales del día. 'reNN-formato' son reemisiones del archivo que escribe scripts/ritmo.py; 'extraNN' son originales adicionales por encima de las tres franjas. Las dos últimas formas existen porque el ritmo semanal pide más de tres publicaciones diarias y tres franjas no dan para eso: se añadieron aquí cuando ya había 37 ids así en la cola que este patrón declaraba inválidos sin que nada lo comprobara."
     },
     "publish_at": {
@@ -88,6 +88,11 @@
       "type": "array",
       "items": { "type": "string" },
       "description": "Datos falsos o disputados que circulan sobre este tema. Se conservan para que nadie los reintroduzca."
+    },
+
+    "cita_slug": {
+      "type": "string",
+      "description": "Slug de esta cita en sabiduriadebolsillo.net. Cuando existe, el hilo de Threads enlaza a /cita/{slug} en vez de a la portada: llevar a la página de la frase que se acaba de leer convierte el enlace en la continuación natural del hilo, no en un anuncio del sitio."
     },
 
     "con_enlace": {

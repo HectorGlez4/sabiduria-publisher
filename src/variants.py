@@ -159,7 +159,12 @@ def threads(unit: dict) -> dict:
     lo rechaza.
     """
     core = unit["core"]
-    url = enlace("threads")
+    # Si la pieza viene del corpus del sitio, el enlace va a SU página, no a la
+    # portada: quien acaba de leer la frase llega a la frase, con su autor, su
+    # obra y su procedencia. Una portada obliga a buscar otra vez lo que ya
+    # tenía delante.
+    slug = unit.get("cita_slug")
+    url = f"{SITIO}/cita/{slug}?de=threads" if slug else enlace("threads")
     espacio = LIMITS["threads"]["max_chars"] - len(url) - 2   # el \n\n de separación
 
     head = _quote_header(unit) or core["hook"]

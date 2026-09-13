@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-29-extra89",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Séneca, «No haré cosa alguna…»",
+    "hook": "\"No haré cosa alguna por la opinión, harélas todas por la conciencia.\"",
+    "body": [
+      "Filósofo estoico nacido en Córdoba, tutor y después consejero de Nerón. Su obra moral, escrita casi toda en forma de carta o de diálogo, trata de cómo vivir con lo que no se puede cambiar."
+    ],
+    "question": "¿Qué virtud admiras y no practicas?",
+    "quote": {
+      "text": "No haré cosa alguna por la opinión, harélas todas por la conciencia.",
+      "author": "Séneca (-4-65)",
+      "work": "De la vida bienaventurada",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Séneca en «De la vida bienaventurada». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/De_la_vida_bienaventurada"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "seneca-no-hare-cosa-alguna-por-la-opinion",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-29T17:26:00Z",
+  "results": {}
+}

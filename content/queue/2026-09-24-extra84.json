@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-24-extra84",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Juan Montalvo, «El faisán, la perdiz…»",
+    "hook": "\"El faisán, la perdiz son necesidades para el opulento, hijo de la gula; al pobre, como al filósofo, no le atormentan deseos de cosas exquisitas.\"",
+    "body": [
+      "Ensayista ecuatoriano, desterrado casi toda su vida por escribir contra los tiranos de su país. «Mi pluma lo mató», dijo al morir uno de ellos."
+    ],
+    "question": "¿Qué virtud admiras y no practicas?",
+    "quote": {
+      "text": "El faisán, la perdiz son necesidades para el opulento, hijo de la gula; al pobre, como al filósofo, no le atormentan deseos de cosas exquisitas.",
+      "author": "Juan Montalvo (1832-1889)",
+      "work": "Capítulos que se le olvidaron a Cervantes",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Juan Montalvo en «Capítulos que se le olvidaron a Cervantes». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Cap%C3%ADtulos_que_se_le_olvidaron_a_Cervantes/Cap%C3%ADtulo_III"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "juan-montalvo-el-faisan-la-perdiz-son-necesidades-para",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-25T02:26:00Z",
+  "results": {}
+}

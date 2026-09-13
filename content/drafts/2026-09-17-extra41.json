@@ -1,0 +1,71 @@
+{
+  "id": "2026-09-17-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Chinua Achebe y el aceite de palma de las palabras",
+    "hook": "La novela africana más leída del mundo estuvo meses arrumbada en un rincón de una agencia de mecanografía de Londres. Solo existía una copia, escrita a mano, y el autor ya había pagado por adelantado.",
+    "quote": {
+      "text": "Entre los igbo, el arte de la conversación se tiene en mucho, y los proverbios son el aceite de palma con que se comen las palabras.",
+      "author": "Chinua Achebe",
+      "work": "Todo se desmorona, capítulo 1 (1958)",
+      "attribution_verified": true
+    },
+    "body": [
+      "La frase está en la primera página del libro y es una declaración de método. Achebe escribe en inglés, pero hace que sus personajes hablen en proverbios igbo, de modo que el lector europeo tenga que entrar en una retórica que no es la suya. El aceite de palma es lo que impide que la comida se queme mientras se cocina: el proverbio hace eso con una conversación difícil. Lo escribió empujado por la indignación que le produjo «Mister Johnson», de Joyce Cary, donde el africano es un criado cómico que adora a su jefe colonial.",
+      "El manuscrito casi no llega. Achebe vio el anuncio de una agencia de mecanografía en la revista The Spectator, mandó a Londres el único original a mano y pagó veintidós libras por giro postal. Después, silencio durante meses. Cuando Angela Beattie, compañera suya en la radiodifusora de Nigeria, viajó a Londres de permiso, se presentó en la oficina y encontró el paquete polvoriento en un rincón. De allí salió una sola copia mecanografiada. El libro se publicó el 17 de junio de 1958, en Heinemann, con una tirada inicial de unos dos mil ejemplares.",
+      "El final explica el título de la frase que abre esta pieza. Después de la muerte de Okonkwo, el comisario de distrito calcula cuánto espacio le dará en el libro que piensa escribir: primero un capítulo entero, luego un párrafo. El libro se titulará «La pacificación de las tribus primitivas del bajo Níger», y esa es la última línea de la novela. Achebe la construyó entera para que se oyera la otra voz. Lleva más de diez millones de ejemplares vendidos y más de cincuenta lenguas; el título, en cambio, viene de un poema irlandés."
+    ],
+    "question": "¿Quién decide cuánto espacio merece una vida en un libro?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ChinuaAchebe", "#Nigeria", "#Literatura"],
+    "extended": ["#Citas", "#Africa", "#Igbo", "#Colonialismo", "#Novela", "#Historia", "#SigloXX", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "«Things Fall Apart» se publicó el 17 de junio de 1958 en Londres, por Heinemann, con una tirada inicial en tapa dura de unos 2.000 ejemplares. El título procede del poema «The Second Coming» (1919) de W. B. Yeats, cuyos primeros versos sirven de epígrafe. Achebe vio el anuncio de una agencia de mecanografía londinense en la revista The Spectator, envió su manuscrito escrito a mano y pagó 22 libras mediante giro postal británico; pasaron meses sin respuesta. Cuando su colega de la radiodifusora nigeriana Angela Beattie viajó a Londres de permiso, recuperó el manuscrito polvoriento de un rincón de la oficina de la agencia y consiguió que se enviara de vuelta una única copia mecanografiada. La novela se ha traducido a más de cincuenta lenguas. Termina con el comisario de distrito planeando escribir sobre la muerte de Okonkwo en su libro, titulado «The Pacification of the Primitive Tribes of the Lower Niger». En el capítulo 1 aparece la frase «Among the Igbo the art of conversation is regarded very highly, and proverbs are the palm-oil with which words are eaten».",
+      "source": "Wikipedia en inglés, «Things Fall Apart»",
+      "url": "https://en.wikipedia.org/wiki/Things_Fall_Apart"
+    },
+    {
+      "claim": "El libro se publicó hace sesenta años por Heinemann en Londres, ha vendido más de diez millones de ejemplares y se ha traducido a más de cincuenta lenguas. En su ensayo «The African Writer and the English Language», Achebe defendió una posición de «ambos» y no de «uno u otro»: el escritor africano podía forjar «an English which is at once universal and able to carry his peculiar experience», y con ello rechazar de manera más sutil el dominio histórico del inglés estándar. Ngũgĩ wa Thiong'o sostuvo la posición contraria: la restauración de la memoria cultural pasaba por rehabilitar las lenguas maternas, en lo que llamó una descolonización de la mente.",
+      "source": "The Conversation, artículo académico de Sarah Jilani (University of Cambridge), «Things Fall Apart: Chinua Achebe and the languages of African literature»",
+      "url": "https://theconversation.com/things-fall-apart-chinua-achebe-and-the-languages-of-african-literature-106006"
+    },
+    {
+      "claim": "Compilación universitaria de declaraciones del propio Achebe. Sobre la lengua: se propuso «fashioning out an English which is at once universal and able to carry his peculiar experience» («The African Writer and the English Language»). Sobre el origen del libro: su indignación ante «Mister Johnson», de Joyce Cary —donde aparece «a comic African who slavishly adores his white colonist boss»— inspiró la escritura de «Things Fall Apart». Sobre su propósito como novelista: «to help my society regain belief in itself and put away the complexes of years of denigration and self-abasement» («The Novelist as Teacher», recogido en «Morning Yet on Creation Day», 1975, y en «Hopes and Impediments», 1988).",
+      "source": "Central Oregon Community College, materiales del curso HUM 211 de la profesora Cora Agatucci, «Chinua Achebe: In His Own Words»",
+      "url": "https://web.cocc.edu/cagatucci/classes/hum211/achebe2.htm"
+    },
+    {
+      "claim": "«Things Fall Apart» se publicó por primera vez en 1958 y es la primera novela de la trilogía africana de Chinua Achebe. El Pozen Family Center for Human Rights la describe como un relato clásico sobre el encuentro cataclísmico de África con Europa cuando esta establece su presencia colonial en el continente, y sitúa a Okonkwo, guerrero igbo de Umuofia, a finales del siglo XIX.",
+      "source": "University of Chicago, Pozen Family Center for Human Rights, ficha de su biblioteca virtual sobre «Things Fall Apart»",
+      "url": "https://humanrights.uchicago.edu/virtual-library/citation/things-fall-apart"
+    },
+    {
+      "claim": "La novela fue republicada en 1962 como primer título de la African Writers Series de Heinemann, con Achebe como director de la colección. La publicación de «Things Fall Apart» en 1958 se considera el momento inaugural de la ficción africana moderna.",
+      "source": "Extractos indexados de la entrada «Things Fall Apart» de Wikipedia en inglés y de la ficha del libro en el catálogo de la MIT Press Bookstore («Chinua Achebe's Things Fall Apart: A Casebook», Oxford University Press)",
+      "url": "https://mitpressbookstore.mit.edu/book/9780195147643"
+    }
+  ],
+  "do_not_use": [
+    "No presentar la frase como un proverbio igbo anónimo. Es una frase del narrador de Achebe, en el capítulo 1 de la novela, sobre el uso igbo de los proverbios.",
+    "No dar la versión castellana como texto de una edición concreta. El original es inglés; aquí se traduce del texto de 1958, y en español circulan varias traducciones con el título «Todo se desmorona» y también «Todo se derrumba».",
+    "No decir que el título es una imagen africana. Viene del poema «The Second Coming» de W. B. Yeats, de 1919, cuyos primeros versos abren el libro como epígrafe.",
+    "No decir que la agencia de mecanografía perdió el manuscrito. Lo tenían y no lo tocaron: apareció polvoriento en un rincón de la oficina cuando Angela Beattie fue en persona. Achebe ya había pagado veintidós libras por giro postal.",
+    "No convertir a Angela Beattie en su editora ni en su agente. Era una compañera de trabajo en la radiodifusora de Nigeria que viajaba a Londres de permiso.",
+    "No decir que Achebe rechazaba escribir en inglés. Defendió lo contrario: forjar un inglés capaz de cargar con una experiencia africana. Quien sostuvo que había que volver a las lenguas maternas fue Ngũgĩ wa Thiong'o, y esa discusión sigue abierta.",
+    "No decir que la novela fue un éxito inmediato. La tirada inicial fue de unos dos mil ejemplares en 1958; la difusión masiva llegó con la African Writers Series a partir de 1962.",
+    "No atribuir a Okonkwo las opiniones de Achebe. Es un personaje, y la novela no lo presenta como modelo.",
+    "No traducir el título del libro del comisario suavizándolo. En la novela se llama «The Pacification of the Primitive Tribes of the Lower Niger», y el efecto del final depende de que esas palabras suenen tal cual.",
+    "No dar la cifra de ventas como exacta ni actualizada al día de hoy. «Más de diez millones de ejemplares» y «más de cincuenta lenguas» son los órdenes de magnitud que dan las fuentes consultadas."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

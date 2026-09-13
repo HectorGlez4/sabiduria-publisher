@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-20-extra81",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Concepción Arenal, «Muchos comen que no…»",
+    "hook": "\"Muchos comen que no trabajan, pero ninguno que no trabaja es persona; es cosa, que anda descalza o en coche, cubierta de galas o de andrajos, pero cosa siempre.\"",
+    "body": [
+      "Jurista y reformadora social gallega. Asistió de oyente a las clases de Derecho vestida de hombre porque no se admitía a mujeres, y dedicó su obra a las cárceles y a la beneficencia."
+    ],
+    "question": "¿Qué parte de tu trabajo harías gratis?",
+    "quote": {
+      "text": "Muchos comen que no trabajan, pero ninguno que no trabaja es persona; es cosa, que anda descalza o en coche, cubierta de galas o de andrajos, pero cosa siempre.",
+      "author": "Concepción Arenal (1820-1893)",
+      "work": "La educación de la mujer",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a Concepción Arenal en «La educación de la mujer». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/La_educación_de_la_mujer/2"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "concepcion-arenal-muchos-comen-que-no-trabajan-pero-ninguno",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-21T03:26:00Z",
+  "results": {}
+}

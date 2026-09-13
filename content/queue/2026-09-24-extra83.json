@@ -1,0 +1,42 @@
+{
+  "id": "2026-09-24-extra83",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "José Enrique Rodó, «A la vocación que…»",
+    "hook": "\"A la vocación que fracasa puede suceder otra vocación; al amor que perece, puede sustituirse un amor nuevo; a la felicidad desvanecida puede hallarse el reparo de otra manera de felicidad...\"",
+    "body": [
+      "Ensayista uruguayo. Escribió para los jóvenes de su siglo un ideal de vida interior frente a la prisa y al provecho."
+    ],
+    "question": "¿Qué virtud admiras y no practicas?",
+    "quote": {
+      "text": "A la vocación que fracasa puede suceder otra vocación; al amor que perece, puede sustituirse un amor nuevo; a la felicidad desvanecida puede hallarse el reparo de otra manera de felicidad...",
+      "author": "José Enrique Rodó (1871-1917)",
+      "work": "Motivos de Proteo",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita, atribuida a José Enrique Rodó en «Motivos de Proteo». Estado de derechos: dominio-público.",
+      "source": "Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Motivos_de_Proteo/011"
+    }
+  ],
+  "do_not_use": [
+    "REVISAR LA PREGUNTA: se generó a partir del tema del corpus, no mirando esta cita concreta. Cámbiala si no encaja."
+  ],
+  "cita_slug": "jose-enrique-rodo-a-la-vocacion-que-fracasa-puede-suceder",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "ready",
+  "publish_at": "2026-09-24T17:26:00Z",
+  "results": {}
+}
