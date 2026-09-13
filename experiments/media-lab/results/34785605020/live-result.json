@@ -1,0 +1,30 @@
+{
+  "run_group_id": "LAB-SMOKE-001-API",
+  "route": "api",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-SMOKE-001/lab-open-feed.jpg",
+  "started_at": "2026-09-13T22:03:09.891402+00:00",
+  "results": {
+    "facebook": {
+      "status": "submitted",
+      "started_at": "2026-09-13T22:03:09.891422+00:00",
+      "finished_at": "2026-09-13T22:03:14.352447+00:00",
+      "post_id": "100618132774413_1094337836724209",
+      "url": "https://www.facebook.com/874327782058550/posts/1094337836724209"
+    },
+    "instagram": {
+      "status": "submitted",
+      "started_at": "2026-09-13T22:03:14.352938+00:00",
+      "finished_at": "2026-09-13T22:03:26.839424+00:00",
+      "post_id": "18136362397617451",
+      "url": "https://www.instagram.com/p/DdPltdnjvjR/"
+    },
+    "threads": {
+      "status": "submitted",
+      "started_at": "2026-09-13T22:03:26.839919+00:00",
+      "finished_at": "2026-09-13T22:03:38.338460+00:00",
+      "post_id": "18066257342767471",
+      "url": "https://www.threads.com/@sabiduriabolsillo/post/DdPlu99FpLQ"
+    }
+  },
+  "finished_at": "2026-09-13T22:03:38.338957+00:00"
+}

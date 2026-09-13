@@ -1,0 +1,23 @@
+{
+  "run_id": "LAB-SMOKE-001-INSTAGRAM-STORY",
+  "cohort": "diagnostic_experiment",
+  "coverage_cell_id": null,
+  "family_id": "LAB-SMOKE-001",
+  "campaign_day": 2,
+  "platform": "instagram",
+  "actual_native_format": "story_image_poll",
+  "adaptation_notes": "9:16 master transferred by ADB; native multi-option poll added in Instagram.",
+  "status": "completed",
+  "tool_option_id": "T01",
+  "format_id": "diagnostic-story-poll",
+  "timing": {"started_at": "2026-09-13T22:03:54+00:00", "finished_at": "2026-09-13T22:06:29+00:00", "wall_elapsed_seconds": 155, "agent_active_seconds": 155, "human_active_seconds": 0, "approval_or_device_wait_seconds": 0},
+  "attempts": [{"number": 1, "outcome": "published_and_visually_verified", "elapsed_seconds": 155, "spend_eur": 0}],
+  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "local_compute_seconds": 0},
+  "artifacts": [{"path": "experiments/media-lab/assets/LAB-SMOKE-001/lab-open-story.jpg", "sha256": "ea1c1d9b4feb246b293f19d693a720fa2d39b201700c452ae68501e83c42f328", "media_type": "image/jpeg", "dimensions": "1080x1920", "role": "publishable_story_master"}, {"path": "experiments/media-lab/evidence/android/LAB-SMOKE-001-instagram-story-live.png", "role": "private_native_live_evidence"}],
+  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "review": {"evaluator": "Codex live visual QA", "visual": 5, "clarity": 5, "brand": 5, "hook": 4, "not_applicable": ["audio"], "notes": "Live Story showed @sabiduriabolsillo and functional poll options Trivia / Misterio visual."},
+  "publication": {"route_id": "ANDROID-NATIVE", "publishing_transport": "ADB transfer plus Instagram native Story composer", "native_app_and_version": "Instagram 445.0.0.45.83 on Samsung SM-S721B Android 16", "phone_transfer_seconds": 0.4, "publishing_active_seconds": 155, "native_changes_from_master": ["Added native poll: Que formato prefieres? / Trivia / Misterio visual"], "human_interventions": [], "fidelity_checks": {"caption": "not_applicable", "cover": true, "media_order": "not_applicable", "aspect_ratio": true, "audio": "not_applicable"}, "destination": "Instagram @sabiduriabolsillo", "requested_audience": "public", "actual_audience": "public", "submitted_at": "2026-09-13T22:05:56+00:00", "processing_completed_at": "2026-09-13T22:06:04+00:00", "playback_verified_at": "2026-09-13T22:06:29+00:00", "post_id": null, "post_url": null, "audio_verified": null, "master_sha256": "ea1c1d9b4feb246b293f19d693a720fa2d39b201700c452ae68501e83c42f328"},
+  "missing_data_reasons": {"post_url": "Instagram Stories do not expose a durable public permalink in this native flow.", "audience_metrics": "Capture before expiry and at the available Story insight age."},
+  "decision": "Android native route passed with live interactive poll.",
+  "next_action": "Capture Story views/reach/replies before expiry."
+}

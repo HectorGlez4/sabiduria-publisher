@@ -1,0 +1,52 @@
+{
+  "run_id": "LAB-SMOKE-001-FACEBOOK",
+  "cohort": "diagnostic_experiment",
+  "coverage_cell_id": null,
+  "family_id": "LAB-SMOKE-001",
+  "campaign_day": 2,
+  "platform": "facebook",
+  "actual_native_format": "feed_single_image",
+  "adaptation_notes": "Additional public smoke test; excluded from the scheduled 136-cell register.",
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": 27875,
+    "nearby_production_posts": ["hilos workflow 34784447892 remained active in its deliberate hourly sleep loop"],
+    "matched_comparison_ids": ["LAB-SMOKE-001-INSTAGRAM", "LAB-SMOKE-001-THREADS"]
+  },
+  "status": "completed",
+  "tool_option_id": "T02",
+  "format_id": "diagnostic-feed",
+  "hypothesis": "A public cross-network smoke test can validate API identity, upload, processing and canonical URL capture without changing the production queue.",
+  "changed_variable": "destination network",
+  "controls": ["same 1080x1350 master", "same response prompt", "public organic audience", "zero incremental spend"],
+  "timing": {
+    "started_at": "2026-09-13T22:03:09.891402+00:00",
+    "finished_at": "2026-09-13T22:03:14.352447+00:00",
+    "wall_elapsed_seconds": 4.461,
+    "agent_active_seconds": 4.461,
+    "human_active_seconds": 0,
+    "approval_or_device_wait_seconds": 0,
+    "stages": [{"name": "API submit", "active_seconds": 4.461}]
+  },
+  "attempts": [{"number": 1, "outcome": "submitted", "elapsed_seconds": 4.461, "spend_eur": 0}],
+  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "local_compute_seconds": 0},
+  "artifacts": [{"path": "experiments/media-lab/assets/LAB-SMOKE-001/lab-open-feed.jpg", "sha256": "b72f38f23a4f4674ceb9005a4ef52d5eee8129b58b898ecbd76e178a9b7fcdc4", "media_type": "image/jpeg", "dimensions": "1080x1350", "role": "publishable_master"}],
+  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "review": {"evaluator": "Codex visual QA", "visual": 5, "clarity": 5, "brand": 5, "hook": 4, "not_applicable": ["factual accuracy", "audio"], "notes": "Original code-rendered audience-choice card; no external factual claim."},
+  "publication": {
+    "route_id": "API-MASTER",
+    "publishing_transport": "Meta official API via isolated GitHub Actions workflow 34785605020",
+    "api_version": "v24.0",
+    "destination": "Facebook Page Sabiduria De Bolsillo",
+    "requested_audience": "public",
+    "actual_audience": "public",
+    "submitted_at": "2026-09-13T22:03:09.891422+00:00",
+    "processing_completed_at": "2026-09-13T22:03:14.352447+00:00",
+    "post_id": "100618132774413_1094337836724209",
+    "post_url": "https://www.facebook.com/874327782058550/posts/1094337836724209",
+    "master_sha256": "b72f38f23a4f4674ceb9005a4ef52d5eee8129b58b898ecbd76e178a9b7fcdc4"
+  },
+  "missing_data_reasons": {"audience_metrics": "Due at 24h, 72h and 7d."},
+  "decision": "Published; retain as out-of-register system check.",
+  "next_action": "Collect same-age platform metrics."
+}

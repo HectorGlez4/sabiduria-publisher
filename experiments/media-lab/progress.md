@@ -1,6 +1,6 @@
 # Media lab progress
 
-Updated: 2026-09-13 23:21 Europe/Madrid
+Updated: 2026-09-14 00:10 Europe/Madrid
 
 ## Current checkpoint
 
@@ -8,9 +8,11 @@ Updated: 2026-09-13 23:21 Europe/Madrid
 - Temporary Codex heartbeat `media-lab-hasta-1-octubre` is active at 10:10, 15:10 and 20:10 Europe/Madrid each day through 2026-10-01 inclusive. It may publish at most one coverage cell per execution after a live collision check.
 - Schedule preflight is recorded in `schedule-preflight.md`: phone and Meta connectivity passed; Instagram was switched back from personal `hec.gonzlez` to brand `@sabiduriabolsillo`; GitHub web/API connectivity, authentication, Actions access and required secret names were revalidated at 23:21 and pending lab commits were pushed.
 - Mandatory brand identities are verified natively for Facebook, Instagram and Threads.
-- The Samsung SM-S918B is connected and authorized over ADB on Android 16.
+- The original Samsung SM-S918B has been replaced for unattended lab work by an authorized Samsung SM-S721B (ADB serial `R5CXB1AWYNF`) on Android 16. Facebook 576.0.0.42.73, Instagram 445.0.0.45.83, Threads 446.0.0.32.78 and Edits 446.2.0.51.77 are installed. Facebook Page, Instagram `@sabiduriabolsillo` and Threads `@sabiduriabolsillo` were independently verified on the new phone.
+- MaaS360/Knox enforces a 120-second maximum display timeout and blocks Android's normal stay-awake setting. LaunchAgent `com.sabiduria.medialab.phone-awake` sends a neutral ADB activity event every 45 seconds while this exact serial is connected; the Mac keep-awake LaunchAgent is also running. A phone reboot still requires one manual unlock.
 - Edits is installed and opens to Projects. Still-image import, the audio picker, local export and handoff to Instagram Reel plus Facebook brand Reel/Story composers are verified; adding licensed audio and producing a publishable export remain unverified.
 - Day 1 family `LAB-F12-001` is live on Facebook, Instagram and Threads through API-MASTER. All three native displays were visually verified.
+- Out-of-register diagnostic family `LAB-SMOKE-001` completed on 2026-09-14 without consuming scheduled coverage cells: public API feeds succeeded on Facebook, Instagram and Threads; public Android-native Stories with interactive polls succeeded and were visually verified on Facebook Page and Instagram. A second native Threads publication was intentionally held because the normal hourly `hilos` workflow was active and it would have created a near-identical burst.
 - API variant A uses the Anna Atkins cyanotype object-led editorial. Canonical URLs are stored in the run records and `coverage.json`.
 - Android variant B uses a distinct Maria Sibylla Merian factual piece under `PAIR-SINGLE-01`; it is rendered, transferred to the phone and ready for a later collision-checked window.
 - The production run published Facebook Reel `2026-09-13-re51-reel` at 2026-09-13 21:37 Europe/Madrid and completed at 21:59. The lab held publication while it was active, then released at 22:01–22:02.
@@ -33,6 +35,7 @@ Updated: 2026-09-13 23:21 Europe/Madrid
 - Image generation: one included generation accepted on first attempt; zero incremental spend.
 - Final master SHA-256: `32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b`.
 - Live Day 1 URLs: Facebook `https://www.facebook.com/874327782058550/posts/1094273873397272`; Instagram `https://www.instagram.com/p/DdPX1J9jwt1/`; Threads `https://www.threads.com/@sabiduriabolsillo/post/DdPX21Rj-ie`.
+- Full-run diagnostic URLs: Facebook `https://www.facebook.com/874327782058550/posts/1094337836724209`; Instagram `https://www.instagram.com/p/DdPltdnjvjR/`; Threads `https://www.threads.com/@sabiduriabolsillo/post/DdPlu99FpLQ`. Native Stories have no durable public permalink; live screenshots are stored under ignored Android evidence and exact submission/verification times are in the run records.
 - API active publishing time: Facebook 5.332 s; Instagram 13.637 s; Threads 12.749 s. All succeeded on the first submission attempt.
 - Read-only Graph verification confirmed exact captions/media, Facebook `is_published=true` and `is_hidden=false`, and canonical Instagram/Threads permalinks.
 - Threads native attachment menu exposes Text, Quote, Poll and Location.
