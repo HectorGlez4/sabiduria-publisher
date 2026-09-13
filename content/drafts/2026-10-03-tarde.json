@@ -13,11 +13,11 @@
       "attribution_verified": true
     },
     "body": [
-      "Nació en Nyeri, Kenia, en 1940. En 1971 se doctoró en la Universidad de Nairobi y fue la primera mujer de África oriental y central en obtener un doctorado; después, la primera en dirigir un departamento universitario. En 1977 fundó el Green Belt Movement. En la propia conferencia de Oslo explica de dónde salió la idea, y no habla de conciencia planetaria: dice que respondía a necesidades que habían identificado las mujeres del campo —falta de leña, agua potable, dietas equilibradas, techo e ingresos— y que plantar árboles fue la manera natural de atender algunas de ellas. El movimiento lleva más de cincuenta y un millones de árboles plantados en Kenia.",
-      "El trabajo tuvo un precio que la frase no deja ver. Bajo el gobierno de Daniel arap Moi, entre 1978 y 2002, la policía keniana la agredió con regularidad; en 1992 fue detenida. Cuando el comité noruego le dio el Nobel de la Paz en 2004, fue la primera mujer africana en recibirlo y la primera galardonada elegida por un trabajo centrado en la sostenibilidad ambiental. El anuncio se discutió: se preguntó en voz alta qué tenía que ver plantar árboles con la paz. La línea sobre el nuevo nivel de conciencia la dice alguien a quien habían golpeado por plantarlos, y la dice después de hablar de leña y de agua, no antes.",
-      "La conferencia tampoco termina en la exhortación. Termina en un recuerdo. Maathai cuenta que de niña iba a un arroyo junto a su casa a buscar agua para su madre, y que entre las hojas de malanga intentaba en vano recoger las tiras de huevos de rana, creyendo que eran cuentas de collar. Más de cincuenta años después, dice, el arroyo se ha secado, las mujeres caminan largas distancias por un agua que no siempre está limpia, y los niños nunca sabrán lo que han perdido. El desafío, escribe, es devolverles a los renacuajos su casa. Murió en 2011."
+      "Nació en Nyeri, Kenia, en 1940. En 1971 se doctoró en la Universidad de Nairobi: fue la primera mujer de África oriental y central en obtener un doctorado, y después la primera en dirigir un departamento universitario. En 1977 fundó el Green Belt Movement. En la propia conferencia de Oslo explica de dónde salió la idea, y no habla de conciencia planetaria: dice que respondía a necesidades identificadas por las mujeres del campo —falta de leña, agua potable, dietas equilibradas, techo e ingresos— y que plantar árboles fue la manera natural de atenderlas. El movimiento lleva más de cincuenta y un millones de árboles en Kenia.",
+      "El trabajo tuvo un precio que la frase no deja ver. Bajo Daniel arap Moi, entre 1978 y 2002, la policía keniana la agredió con regularidad; en 1992 fue detenida. Cuando le dieron el Nobel de la Paz en 2004 fue la primera mujer africana en recibirlo y la primera galardonada elegida por un trabajo centrado en la sostenibilidad ambiental. La línea sobre el nuevo nivel de conciencia la dice alguien a quien habían golpeado por plantar árboles, y la dice después de hablar de leña y de agua, no antes.",
+      "La conferencia tampoco termina en la exhortación. Termina en un recuerdo. Maathai cuenta que de niña iba a un arroyo junto a su casa a buscar agua para su madre, y que entre las hojas de malanga intentaba en vano recoger las tiras de huevos de rana, creyendo que eran cuentas de collar. Más de cincuenta años después, dice, el arroyo se ha secado, las mujeres caminan mucho por agua que no siempre está limpia y los niños nunca sabrán lo que han perdido. El desafío, escribe, es devolverles a los renacuajos su casa. Murió en 2011."
     ],
-    "question": "¿Qué se pierde de una frase cuando se la separa de lo que la hizo necesaria?"
+    "question": "¿Qué se pierde de una frase al separarla de lo que la hizo necesaria?"
   },
   "card": {
     "renderer": "quote_card",
@@ -26,7 +26,7 @@
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": ["#WangariMaathai", "#Kenia", "#GreenBeltMovement"],
-    "extended": ["#Citas", "#Africa", "#Nobel", "#MedioAmbiente", "#Historia", "#Arboles", "#Mujeres", "#Oslo"]
+    "extended": ["#Citas", "#Africa", "#Nobel", "#Historia", "#Arboles", "#Mujeres", "#Oslo"]
   },
   "sources": [
     {

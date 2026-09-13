@@ -5,11 +5,11 @@
   "status": "draft",
   "core": {
     "subject": "la grana cochinilla y el secreto de 250 años",
-    "hook": "Durante más de trescientos años el segundo producto de exportación de la Nueva España, solo por detrás de la plata, fue un insecto. España dejó que Europa creyera que era una semilla.",
+    "hook": "Durante más de trescientos años el segundo producto de exportación de la Nueva España, detrás de la plata, fue un insecto. España dejó que Europa creyera que era una semilla.",
     "body": [
-      "Se llama Dactylopius coccus. En náhuatl, nocheztli: sangre de nopal. Es un insecto sin alas que se pega a las pencas del nopal y les chupa el jugo. La hembra fabrica ácido carmínico para que no se la coman, y de ahí sale un rojo que teñía hasta doce veces más que el kermes europeo. Se recogen a los noventa días, se matan en agua hirviendo y se secan al sol hasta el treinta por ciento de su peso. Hacen falta unos setenta mil para producir un kilo de tinte. Cortés informó del colorante a Carlos V en 1523; el primer cargamento llegó a España en 1526. En el siglo XVIII, Oaxaca producía el noventa y nueve por ciento de la grana que salía del virreinato.",
-      "La corona no vendió solo el tinte: vendió una versión falsa de lo que era. En la documentación comercial la grana se nombraba siempre con palabras de agricultura —semilla, cosecha, fruto—, para que los compradores europeos siguieran creyendo que compraban un vegetal. Sacar el insecto vivo estaba prohibido por las leyes de Indias. En 1777 un botánico francés, Nicolas-Joseph Thiéry de Menonville, se hizo pasar por catalán, entró por Cuba a Veracruz y llegó a Oaxaca a buscar nopales infestados. El virrey le ordenó marcharse: no estaba dispuesto, dijo, a abrir a los extranjeros los secretos del país. Aun así se llevó los insectos a Saint-Domingue y montó un criadero en Puerto Príncipe. Murió en 1780. Sin él, nadie los cuidó y el criadero se deshizo.",
-      "El monopolio no lo rompió el espionaje. Lo rompió la química. Los colorantes sintéticos de anilina, desde la década de 1850, dieron el mismo rojo por una fracción del precio, y la industria de la grana cayó en pocos años. Tlaxcala, que había sido de las primeras zonas productoras, pasó a vivir del pulque. Hoy la mayor parte de la cochinilla del mundo se cultiva en Perú, no en México, y el ácido carmínico volvió por otra puerta: es el aditivo E-120, autorizado en la Unión Europea y reevaluado por la EFSA en 2015. Está en yogures, embutidos, palitos de surimi y pintalabios. En la etiqueta aparece como carmín, o como cochinilla."
+      "Se llama Dactylopius coccus. En náhuatl, nocheztli: sangre de nopal. Es un insecto sin alas que se pega a las pencas del nopal y les chupa el jugo. La hembra fabrica ácido carmínico para que no se la coman, y de ahí sale un rojo que teñía hasta doce veces más que el kermes europeo. Se recogen a los noventa días, se hierven y se secan al sol. Hacen falta unos setenta mil para un kilo de tinte. Cortés informó del colorante a Carlos V en 1523 y el primer cargamento llegó a España en 1526. En el siglo XVIII, Oaxaca producía el noventa y nueve por ciento de la grana del virreinato.",
+      "La corona no vendió solo el tinte: vendió una versión falsa de lo que era. En la documentación comercial la grana se nombraba con palabras de agricultura —semilla, cosecha, fruto—, para que los compradores europeos siguieran creyendo que era un vegetal. Sacar el insecto vivo lo prohibían las leyes de Indias. En 1777 el botánico francés Nicolas-Joseph Thiéry de Menonville se hizo pasar por catalán, entró por Cuba a Veracruz y llegó a Oaxaca a buscar nopales infestados. El virrey le ordenó marcharse: no estaba dispuesto, dijo, a abrir a los extranjeros los secretos del país. Aun así se llevó los insectos a Saint-Domingue y montó un criadero en Puerto Príncipe. Murió en 1780 y nadie volvió a cuidarlos.",
+      "El monopolio no lo rompió el espionaje. Lo rompió la química. Los colorantes de anilina, desde la década de 1850, dieron el mismo rojo por una fracción del precio y la industria cayó en pocos años. Tlaxcala, de las primeras zonas productoras, pasó a vivir del pulque. Hoy la mayor parte se cultiva en Perú, no en México, y el ácido carmínico volvió por otra puerta: es el aditivo E-120, autorizado en la Unión Europea y reevaluado por la EFSA en 2015. Está en yogures, embutidos, surimi y pintalabios. En la etiqueta se lee carmín."
     ],
     "question": "¿Cuánto de lo que compramos sigue sin llamarse por su nombre?"
   },
@@ -23,7 +23,7 @@
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": ["#GranaCochinilla", "#Oaxaca", "#NuevaEspana"],
-    "extended": ["#Historia", "#Mexico", "#Color", "#Arte", "#Ciencia", "#Comercio", "#SigloXVIII", "#Curiosidades"]
+    "extended": ["#Historia", "#Mexico", "#Color", "#Arte", "#Ciencia", "#Comercio", "#SigloXVIII"]
   },
   "sources": [
     {

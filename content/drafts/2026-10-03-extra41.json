@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-03-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Primo Levi y el Shemà de 1946",
+    "hook": "El poema que abre el libro no es un lamento. Es una orden calcada de una oración judía, y no acaba donde suele citarse: acaba en una maldición.",
+    "quote": {
+      "text": "Meditad que esto ha sido: os encomiendo estas palabras. Grabadlas en vuestro corazón, estando en casa, andando por la calle, al acostaros, al levantaros; repetídselas a vuestros hijos.",
+      "author": "Primo Levi",
+      "work": "Shemà, 10 de enero de 1946, epígrafe de Si esto es un hombre",
+      "attribution_verified": true
+    },
+    "body": [
+      "Lleva fecha: 10 de enero de 1946. Auschwitz fue liberado el 27 de enero de 1945, así que Levi escribió estos veintitrés versos libres menos de un año después de volver. Shemà significa «escucha» en hebreo y es el arranque de la oración central del judaísmo; el propio Levi dejó dicho que el poema es una paráfrasis de ella. El crítico Alberto Cavaglion señala que los versos que van de «grabadlas» a «hijos» calcan el Deuteronomio 6, 6-7: el mandato de repetir la ley a los hijos en casa y en el camino, al acostarse y al levantarse. Levi cambia el objeto del mandato. Lo que hay que grabar en el corazón ya no es la unidad de Dios. Es lo que pasó en el campo.",
+      "La cita suele detenerse en «repetídselas a vuestros hijos». El poema no. Siguen tres versos que nadie reproduce: la oración incluye lo que le ocurrirá a quien desobedezca, y Levi lo conserva. Que se deshaga la casa, que la enfermedad estorbe, que los propios hijos aparten la cara. Era químico y agnóstico; no estaba rezando. Usaba la estructura de una plegaria —mandato y castigo— para que la advertencia fuera obligación y no ruego. El poema no pide que se recuerde. Ordena que se recuerde.",
+      "El libro estuvo a punto de no existir. El manuscrito se llamaba «Los hundidos y los salvados» y lo rechazó Einaudi, donde lo leyeron Cesare Pavese y Natalia Ginzburg. Lo publicó una editorial pequeña de Turín, De Silva, dirigida por Franco Antonicelli: 11 de octubre de 1947, 2.500 ejemplares, de los que se vendieron algo más de 1.500. Fue Antonicelli quien puso el título, sacándolo del poema al quitarle el imperativo. Varios centenares de invendidos se ahogaron en un sótano en la inundación de Florencia de 1966. Einaudi lo reeditó en 1958 y esa edición lo hizo un clásico."
+    ],
+    "question": "¿Qué parte de una advertencia se cae cuando se repite mucho?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PrimoLevi", "#SiEstoEsUnHombre", "#Memoria"],
+    "extended": ["#Citas", "#Literatura", "#Italia", "#Poesia", "#Historia", "#SigloXX", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema «Shemà» con la fecha al pie, 10 de enero de 1946. Incluye los versos «Meditate che questo è stato: / Vi comando queste parole / Scolpitele nel vostro cuore / Stando in casa andando per via, / Coricandovi alzandovi; / Ripetetele ai vostri figli». La composición procede de «Ad ora incerta». Según el propio Levi, shemà, «escucha» en hebreo, es el comienzo de la oración fundamental del judaísmo, y esta composición es una paráfrasis suya. Se usó como epígrafe en los anticipos de «Se questo è un uomo» publicados en L'amico del popolo en 1947.",
+      "source": "Istituto della Enciclopedia Italiana Treccani, sección «Una poesia al giorno», ficha de «Shemà» de Primo Levi",
+      "url": "https://www.treccani.it/magazine/strumenti/una_poesia_al_giorno/06_26_Levi_Primo.html"
+    },
+    {
+      "claim": "Alberto Cavaglion identifica los versos 17 a 19 del poema, de «Scolpitele» a «figli», como paráfrasis fiel de Deuteronomio 6, 6-7, y los describe como preámbulo de la reescritura de la oración central del judaísmo. Sostiene que la parodia sacra no es cómica sino una práctica literaria seria, empleada por Dante y por escritores judíos medievales, y que Levi, agnóstico e ilustrado, usó la Escritura para descifrar el caos del campo. El título original de la composición era «Salmo».",
+      "source": "storiAmestre, revista de la asociación de historia storiAmestre (Venecia), «Pio bove un corno. Primo Levi, la parodia e la parodia sacra», sobre los trabajos de Alberto Cavaglion",
+      "url": "https://storiamestre.it/2016/12/05/pio-bove-un-corno/"
+    },
+    {
+      "claim": "La primera edición la publicó Francesco De Silva en Turín, en la colección Biblioteca Leone Ginzburg, subtitulada «Documentos y Estudios de Historia Contemporánea», bajo la dirección de Franco Antonicelli. Se terminó el 11 de octubre de 1947; 198 páginas; 2.500 ejemplares, de los que se vendieron más de 1.500. Einaudi había rechazado el manuscrito, evaluado por Cesare Pavese y Natalia Ginzburg; la hermana de Levi, Anna Maria, lo hizo llegar a Alessandro Galante Garrone, que lo encaminó hacia Antonicelli. Antonicelli tuvo la idea de eliminar el imperativo «Considera» de uno de los versos del poema y así fijó el título definitivo. En 1949 De Silva pasó a La Nuova Italia (Florencia), y en la inundación de Florencia del 4 de noviembre de 1966 varios centenares de ejemplares invendidos quedaron sumergidos en el sótano.",
+      "source": "Centro Internazionale di Studi Primo Levi (Turín), ficha «Se questo è un uomo, edizione 1947»",
+      "url": "https://www.primolevi.it/en/se-questo-uomo-edizione-1947"
+    },
+    {
+      "claim": "«Shemà» es un texto de veintitrés versos libres que abre «Se questo è un uomo», publicada por primera vez en 1947 por De Silva. El poema está fechado el 10 de enero de 1946, poco menos de un año después de la liberación de Auschwitz, ocurrida el 27 de enero de 1945. El manuscrito, titulado inicialmente «I sommersi e i salvati», fue rechazado por varios editores, entre ellos Einaudi; Antonicelli aceptó publicarlo y cambió el título por el que se conoce hoy, inspirado en las palabras del Shemà.",
+      "source": "Sololibri.net, «Shemà: analisi della poesia di Primo Levi in Se questo è un uomo», y ilLibraio.it, «Primo Levi: i libri e la vita dell'autore di Se questo è un uomo». Corroboran la cronología editorial que da el Centro Studi Primo Levi",
+      "url": "https://www.sololibri.net/shema-analisi-testo-parafrasi-primo-levi.html"
+    },
+    {
+      "claim": "En 1958 Einaudi reeditó «Se questo è un uomo». Entre la edición de 1947 y la de 1958 el texto se enriqueció con episodios nuevos, y a partir de esa edición definitiva de Einaudi el libro empezó a afirmarse en Italia y en el mundo como una de las grandes obras literarias y testimoniales del siglo XX. El manuscrito había sido rechazado en 1946 por Einaudi, primero por Natalia Ginzburg, entonces consultora de la editorial, y después por Cesare Pavese, que argumentó que ya se habían publicado demasiados libros sobre los campos y que era mejor esperar.",
+      "source": "Wikipedia en italiano, «Se questo è un uomo», sección de historia editorial; y Giulio Einaudi editore, ficha del catálogo de la obra",
+      "url": "https://it.wikipedia.org/wiki/Se_questo_%C3%A8_un_uomo"
+    },
+    {
+      "claim": "Texto íntegro del poema en italiano con la fecha del 10 de enero de 1946, incluidos los tres versos finales «O vi si sfaccia la casa, / la malattia vi impedisca, / i vostri nati torcano il viso da voi». Shemà significa «escucha» en hebreo y la expresión «Shemà Israel» encabeza una oración fundamental de la liturgia judía, recitada en las oraciones de la mañana y de la tarde.",
+      "source": "Library WeSchool, ficha didáctica «Primo Levi, Shemà: testo integrale»",
+      "url": "https://library.weschool.com/lezione/primo-levi-shem%C3%A0-testo-integrale-2866.html"
+    }
+  ],
+  "do_not_use": [
+    "No citar el poema cortándolo en «repetídselas a vuestros hijos» y presentarlo como una invitación a recordar. Los tres versos finales son una maldición condicional —que se deshaga la casa, que la enfermedad estorbe, que los hijos aparten la cara— y forman parte de la estructura que Levi toma de la oración. Sin ellos el poema dice lo contrario de lo que dice.",
+    "No decir que el poema se titulaba «Shemà» en 1947. En la primera edición funciona como epígrafe; el título original de la composición era «Salmo», y el nombre con el que se conoce se consolidó al recogerse en el libro de poemas «Ad ora incerta» (1984).",
+    "No decir que Levi escribió el poema como creyente. Era químico y agnóstico. Cavaglion sitúa el texto en la tradición de la parodia sacra, una práctica literaria seria, no en la devoción.",
+    "No decir que Einaudi rechazó el libro por antisemitismo. Lo que documentan las fuentes es el juicio editorial de Cesare Pavese, que sostuvo que ya se habían publicado demasiados libros sobre los campos y que convenía esperar, con Natalia Ginzburg como primera lectora.",
+    "No atribuir el título «Si esto es un hombre» a Primo Levi. El manuscrito se llamaba «I sommersi e i salvati» —título que Levi reutilizaría en 1986 para otro libro— y fue Franco Antonicelli quien sacó el definitivo del propio poema quitándole el imperativo.",
+    "No decir que la primera edición fue un fracaso absoluto ni que no se vendió nada. De los 2.500 ejemplares se vendieron más de 1.500; lo que se perdió fueron varios centenares de invendidos, ahogados en la inundación de Florencia del 4 de noviembre de 1966.",
+    "No confundir las dos ediciones. La de 1947 es de De Silva; la de 1958, de Einaudi, está ampliada con episodios nuevos y es la que difundió la obra.",
+    "No traducir «Meditate che questo è stato» como «pensad que esto pudo pasar». El verbo va en pasado y es afirmativo: esto ha sido. El poema no plantea una hipótesis.",
+    "No reproducir el poema completo. Sigue en derechos de autor; aquí se cita un fragmento breve con atribución de obra y fecha, y el resto se describe."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

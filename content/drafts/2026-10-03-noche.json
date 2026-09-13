@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-03-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "la Señora de Cao y el fardo de veintiséis capas",
+    "hook": "Cien kilos de bulto, veintiséis capas de tela y seis meses para abrirlo. Dentro había una mujer de veinticinco años, enterrada con las porras y los cetros que en su cultura llevaba quien mandaba.",
+    "body": [
+      "El enterramiento apareció en 2005 en la Huaca Cao Viejo, en el complejo El Brujo, valle de Chicama, al norte de Trujillo. El 15 de mayo de 2006 el equipo de Régulo Franco Jordán extrajo el fardo intacto: cien kilos, un metro ochenta. Tardaron seis meses en desenvolver sus veintiséis capas de tela. Dentro había una mujer mochica de entre veinte y veinticinco años, de un metro cuarenta y cinco, muerta al parecer por complicaciones de un parto. La acompañaban dieciocho collares de oro, plata, lapislázuli y turquesa, treinta narigueras, coronas de cobre dorado, cetros de madera y dos porras de metal. Tenía tatuados los antebrazos, los tobillos y los dedos: serpientes, arañas, cocodrilos, monos, jaguares, abejas, mariposas.",
+      "Suele decirse que el hallazgo demostró que en el antiguo Perú también gobernaban las mujeres. La frase es más rotunda que la evidencia. Quince años antes, en 1991, Luis Jaime Castillo y Christopher Donnan habían excavado en San José de Moro la tumba de una sacerdotisa mochica del año 750. El poder femenino no apareció en 2006. Y los arqueólogos son más prudentes que los titulares: el proyecto Huacas del Sol y de la Luna la llama sacerdotisa guerrera en sentido figurado. Lo nuevo de Cao no fue que una mujer tuviera autoridad, sino con qué la enterraron: porras y cetros, emblemas de mando, no de culto.",
+      "El 4 de julio de 2017, tras diez meses de trabajo, El Brujo, la Fundación Wiese y FARO Technologies presentaron la reconstrucción de su rostro. Partieron del cráneo, documentado con láser, y lo contrastaron con fotografías de mujeres que viven hoy en Magdalena de Cao. Se exhibe en el Museo Cao: una cara concreta, de alguien que murió a los veinticinco años hace mil seiscientos."
+    ],
+    "question": "¿Cuánto de lo que creemos saber de una civilización depende de qué se excavó primero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Señora de Cao",
+    "subtitle": "Mil seiscientos años bajo veintiséis capas de tela, en el valle de Chicama",
+    "body": "La enterraron con dieciocho collares, treinta narigueras, coronas de cobre dorado y dos porras de metal. Los tatuajes le cubrían antebrazos, tobillos y dedos: serpientes, arañas, jaguares, abejas. Tenía veinticinco años."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SenoraDeCao", "#Mochica", "#Peru"],
+    "extended": ["#Arqueologia", "#Historia", "#ElBrujo", "#LaLibertad", "#Civilizaciones", "#AmericaPrehispanica", "#Museos", "#Trujillo"]
+  },
+  "sources": [
+    {
+      "claim": "La Señora de Cao fue descubierta en 2006 por el arqueólogo Régulo Franco Jordán, del Ministerio de Cultura del Perú, en la Huaca Cao Viejo, complejo arqueológico El Brujo, valle de Chicama, provincia de Ascope, departamento de La Libertad, a unos 60 km al noroeste de Trujillo. El fardo mide 181 cm de largo por 75 de ancho y 42 de alto y se data hacia los siglos IV-V d.C. El ajuar incluye dos porras metálicas a los lados, cuencos, placas cuadradas de metal, varillas delgadas con cabezas de ave y una concentración de joyas en la base del cráneo. Es la primera tumba de una mujer de élite mochica hallada con ese contexto, y la ubicación en recinto ceremonial junto con acompañantes sacrificados indica un rango político y religioso alto.",
+      "source": "Fundación Wiese, institución que gestiona el Complejo Arqueológico El Brujo y el Museo Cao, ficha «La Señora de Cao»",
+      "url": "https://www.fundacionwiese.org/blog/es/la-senora-cao/"
+    },
+    {
+      "claim": "El hallazgo inicial del enterramiento fue en 2005; el 15 de mayo de 2006 el equipo extrajo el fardo funerario intacto, de unos cien kilos y 1,80 m de longitud. Durante seis meses el equipo dirigido por Régulo Franco, con la especialista textil Arabel Fernández y el experto en bioantropología John Verano, desenvolvió las veintiséis capas de tela del fardo.",
+      "source": "Historia National Geographic (edición española), «La momia de la Señora de Cao, la poderosa reina del pueblo mochica peruano». El sitio devuelve error 403 a la descarga automatizada; el contenido se consultó en el extracto indexado del buscador",
+      "url": "https://historia.nationalgeographic.com.es/a/senora-cao-poderosa-reina-pueblo-mochica-peruano_6322"
+    },
+    {
+      "claim": "Murió entre los 20 y los 25 años, medía 1,45 m y la causa de la muerte se atribuye a complicaciones posteriores al parto (una crisis convulsiva, eclampsia). Los tatuajes representan serpientes, arañas, cocodrilos, monos, jaguares, abejas y mariposas, y cubren manos, brazos y pies. El ajuar comprende 18 collares de oro, plata, lapislázuli, cuarzo y turquesa, 30 narigueras de oro y plata, diademas y coronas de cobre dorado, cetros de madera recubiertos de cobre y placas metálicas en la envoltura de algodón. El cuerpo se conservó con sulfuro de mercurio. La réplica en 3D y la reconstrucción del rostro se presentaron el 4 de julio de 2017 y se exhiben en el Museo Cao.",
+      "source": "Wikipedia en español, «Dama de Cao»",
+      "url": "https://es.wikipedia.org/wiki/Dama_de_Cao"
+    },
+    {
+      "claim": "La Sacerdotisa de San José de Moro fue descubierta en 1991 por los arqueólogos Luis Jaime Castillo (Pontificia Universidad Católica del Perú) y Christopher B. Donnan (Universidad de California en Los Ángeles). Data de hacia el año 750 d.C., en el periodo mochica tardío, y fue enterrada junto a las copas del sacrificio y el tocado distintivo que marcaba su posición social. Cumplía una función que ningún hombre podía ejercer: comunicar a los hombres la voluntad de los dioses.",
+      "source": "PromPerú (marca país Perú, portal oficial peru.info), «Mujeres clave de la historia del Perú: la Sacerdotisa de San José de Moro»",
+      "url": "https://peru.info/es-pe/talento/blogperu/6/24/mujeres-clave-de-la-historia-del-peru--la-sacerdotisa-de-san-jose-de-moro"
+    },
+    {
+      "claim": "El proyecto arqueológico describe a la Dama de Cao como una «sacerdotisa guerrera en sentido figurado» y «una autoridad de gran importancia en su tiempo», con funciones políticas y religiosas estimadas. Sostiene que las mujeres, junto con los hombres, desempeñaron cargos políticos, religiosos y administrativos en la sociedad moche, y no emplea el término «gobernantes» sin matiz. Cita los trabajos de Walter Alva y Christopher Donnan (1993) y de Santiago Uceda (1997).",
+      "source": "Proyecto Arqueológico Huacas del Sol y de la Luna (Universidad Nacional de Trujillo / Patronato Huacas del Valle de Moche), «El rol de la mujer en la élite Moche»",
+      "url": "https://huacasdemoche.pe/noticias/el-rol-de-la-mujer-en-la-elite-moche/"
+    },
+    {
+      "claim": "El rostro se reveló tras diez meses de trabajo realizado por arqueólogos del Complejo Arqueológico El Brujo, la Fundación Wiese y FARO Technologies, con documentación del cráneo mediante tecnología láser 3D de alta precisión. Se empleó como referencia un banco de fotografías de mujeres actuales de Magdalena de Cao, complementado con documentación etnográfica de investigadores como Enrique Brüning y Rafael Larco Hoyle. La Señora de Cao se exhibe en el Museo Cao del Complejo Arqueológico El Brujo, en el distrito de Magdalena de Cao, región La Libertad.",
+      "source": "ILAM, Instituto Latinoamericano de Museos y Parques, «Perú: revelan el rostro de la Señora de Cao»",
+      "url": "https://ilam.org/peru-revelan-el-rostro-de-la-senora-de-cao-la-mujer-mas-poderosa-del-periodo-prehispanico/"
+    },
+    {
+      "claim": "La presentación del rostro fue el 4 de julio de 2017, tras diez meses de trabajo, y se difundió internacionalmente a través de National Geographic. Participaron los arqueólogos de El Brujo, la Fundación Wiese, FARO Technologies, 3D Systems, Grupo Abstract y ARQ 3D. Se presume que concentró poder político y religioso en el valle de Chicama.",
+      "source": "Fundación Wiese, «Dan a conocer al mundo el rostro de la Señora de Cao, poderosa líder del Perú prehispánico»",
+      "url": "https://www.fundacionwiese.org/blog/es/dan-conocer-al-mundo-rostro-la-senora-cao-poderosa-lider-del-peru-prehispanico"
+    }
+  ],
+  "do_not_use": [
+    "No decir que su hallazgo demostró por primera vez que en el antiguo Perú las mujeres tenían poder. La Sacerdotisa de San José de Moro se excavó en 1991, quince años antes, y también era una mujer mochica de altísimo rango. Lo específico de Cao son los emblemas de mando de su ajuar, no el hecho de que fuera mujer.",
+    "No llamarla «gobernante» como si fuera un dato cerrado. El propio proyecto arqueológico Huacas del Sol y de la Luna la describe como sacerdotisa guerrera en sentido figurado y como autoridad de gran importancia, con funciones políticas y religiosas estimadas. La discusión entre gobernante y sacerdotisa sigue abierta.",
+    "No decir que es la única tumba de una mujer gobernante de la América precolombina. Es una afirmación que circula mucho y que no sostiene ninguna de las fuentes institucionales consultadas; además existen otros enterramientos femeninos de alto rango en la costa norte del Perú, como la Señora de Chornancap, hallada en 2011, de quien los investigadores dicen expresamente que no fue soberana.",
+    "No fijar 2006 como año del descubrimiento sin matiz. El enterramiento se localizó en 2005; el 15 de mayo de 2006 se extrajo el fardo y fue entonces cuando se hizo público. Las fuentes institucionales dan una u otra fecha según a qué momento se refieran.",
+    "No dar la causa de la muerte como certeza. Las fuentes hablan de complicaciones posteriores a un parto y mencionan eclampsia como hipótesis a partir de la autopsia, no como diagnóstico confirmado.",
+    "No decir que el rostro reconstruido es su retrato. Es una reconstrucción a partir del cráneo contrastada con un banco fotográfico de mujeres actuales de Magdalena de Cao y con documentación etnográfica: una aproximación, no una fotografía.",
+    "No llamar «incas» a los mochicas. La cultura mochica se desarrolló en la costa norte del Perú entre los siglos I y VIII d.C., siglos antes del Tahuantinsuyo.",
+    "No confundirla con el Señor de Sipán, hallado por Walter Alva en 1987 en Lambayeque. Son sitios, valles y enterramientos distintos.",
+    "No interpretar los tatuajes como adorno. Según Régulo Franco, las serpientes y las arañas remiten a la fertilidad de la tierra y se asocian a atributos sobrenaturales; esa lectura es una interpretación arqueológica, no una lectura literal del cuerpo."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
