@@ -1,0 +1,40 @@
+{
+  "run_group_id": "LAB-SMOKE-001-VERIFY",
+  "observed_at": "2026-09-13T22:10:55.943756+00:00",
+  "results": {
+    "facebook": {
+      "status": "verified",
+      "detail": {
+        "id": "100618132774413_1094337836724209",
+        "permalink_url": "https://www.facebook.com/874327782058550/posts/1094337836724209",
+        "created_time": "2026-09-13T22:03:09+0000",
+        "message": "Abrimos el laboratorio de Sabiduría de Bolsillo. Estamos probando nuevas maneras de contar historias y queremos empezar por la que más curiosidad te dé.\n\n¿Qué quieres ver primero?\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Esta publicación forma parte de una prueba pública adicional del laboratorio.\n\n#SabiduriaDeBolsillo #LaboratorioAbierto",
+        "full_picture": "https://scontent-lhr11-1.xx.fbcdn.net/v/t39.30808-6/800643900_1094337823390877_1265520012073234659_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=qy1n95-amsoQ7kNvwGCZvIa&_nc_oc=AdqIzUSi72Csi8HpbyDIEEo7NdiKrM0EYNAiohJkT-s3Wg-ajpPF126OyJYxk2LYQ9U&_nc_zt=23&_nc_ht=scontent-lhr11-1.xx&edm=AJfPMC4EAAAA&_nc_gid=2CzlGx_iveNzKwXzMphCmw&_nc_tpa=Q5bMBQJqL3OJcveuc-QP3QuP5RVHJ7VMQ7XC_bpv6V2Wz1d3f0ZUM0N8wyGrGrwPG1S3ycPByM_iLSbkyw&oh=00_AQJqEKdqKoh7WqPRq8JBLNWpUrqBpW3vLvaUulw-gaHfOg&oe=6AACDB64",
+        "is_published": true,
+        "is_hidden": false
+      }
+    },
+    "instagram": {
+      "status": "verified",
+      "detail": {
+        "id": "18136362397617451",
+        "caption": "Abrimos el laboratorio de Sabiduría de Bolsillo. Estamos probando nuevas maneras de contar historias y queremos empezar por la que más curiosidad te dé.\n\n¿Qué quieres ver primero?\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Esta publicación forma parte de una prueba pública adicional del laboratorio.\n\n#SabiduriaDeBolsillo #LaboratorioAbierto",
+        "media_type": "IMAGE",
+        "media_url": "https://scontent-lhr6-1.cdninstagram.com/v/t51.82787-15/807938355_18040357508822351_2720027754063611566_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=L629QoHT70UQ7kNvwEH-z88&_nc_oc=AdoSj4ulMWtiryQ6pR2c6fa6NbOzPL0k5Qc130X0Zyr-wWypyAUSpfa5_rOPVFNcaHw&_nc_zt=23&_nc_ht=scontent-lhr6-1.cdninstagram.com&edm=AIZKd-4EAAAA&_nc_gid=vPEIQkRPiSbf16dXaTgRaQ&oh=00_AQI37xvGPF8_ESo-Bbekyj0zSquabibEK9wqx4qyrLWFQA&oe=6AACE6C5",
+        "permalink": "https://www.instagram.com/p/DdPltdnjvjR/",
+        "timestamp": "2026-09-13T22:03:24+0000"
+      }
+    },
+    "threads": {
+      "status": "verified",
+      "detail": {
+        "id": "18066257342767471",
+        "permalink": "https://www.threads.com/@sabiduriabolsillo/post/DdPlu99FpLQ",
+        "timestamp": "2026-09-13T22:03:35+0000",
+        "text": "Abrimos el laboratorio de Sabiduría de Bolsillo. ¿Qué formato quieres ver primero?\n\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Prueba pública adicional del laboratorio.",
+        "media_type": "IMAGE",
+        "media_url": "https://scontent-lhr11-1.cdninstagram.com/v/t51.82787-15/808855642_17976890871104841_7264147746202620058_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiRkVFRC5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=ppMFlSEyDZsQ7kNvwEtEzL5&_nc_oc=AdqTrUs6B5u_gAdhHtPKpL56XYBJNA4Td2ofdNH_1tLCbAidJ5WXVDXGXlzzWP3WsXM&_nc_zt=23&_nc_ht=scontent-lhr11-1.cdninstagram.com&edm=ANQ71j8EAAAA&_nc_gid=2NjRWvTuV1UP6ZGzNWBV6w&_nc_tpa=Q5bMBQKji0b_yifPpMGzTb-Q0Jt-GKOH_tSbGHjI8LaO4sXpEOhosORkSR82rk_bqBGJyFPwyC2YpI4d&oh=00_AQIgR-kJYkdDZdF9a-Y0vbnpSDyrnNGC0qu4mMD38pAGqA&oe=6AACD828"
+      }
+    }
+  }
+}

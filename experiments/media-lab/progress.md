@@ -36,6 +36,7 @@ Updated: 2026-09-14 00:10 Europe/Madrid
 - Final master SHA-256: `32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b`.
 - Live Day 1 URLs: Facebook `https://www.facebook.com/874327782058550/posts/1094273873397272`; Instagram `https://www.instagram.com/p/DdPX1J9jwt1/`; Threads `https://www.threads.com/@sabiduriabolsillo/post/DdPX21Rj-ie`.
 - Full-run diagnostic URLs: Facebook `https://www.facebook.com/874327782058550/posts/1094337836724209`; Instagram `https://www.instagram.com/p/DdPltdnjvjR/`; Threads `https://www.threads.com/@sabiduriabolsillo/post/DdPlu99FpLQ`. Native Stories have no durable public permalink; live screenshots are stored under ignored Android evidence and exact submission/verification times are in the run records.
+- Read-only workflow `34786004788` verified `LAB-SMOKE-001` at 2026-09-14 00:10 Europe/Madrid: exact captions and image media matched on all three feeds; Facebook reported `is_published=true` and `is_hidden=false`; Instagram and Threads returned the expected canonical permalinks. The publishing workflow was `34785605020`; both completed successfully.
 - API active publishing time: Facebook 5.332 s; Instagram 13.637 s; Threads 12.749 s. All succeeded on the first submission attempt.
 - Read-only Graph verification confirmed exact captions/media, Facebook `is_published=true` and `is_hidden=false`, and canonical Instagram/Threads permalinks.
 - Threads native attachment menu exposes Text, Quote, Poll and Location.
