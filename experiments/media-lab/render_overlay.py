@@ -37,6 +37,7 @@ def render(
     panel_rgb: tuple[int, int, int],
     accent_rgb: tuple[int, int, int],
     output_format: str,
+    disclosure: str,
 ) -> None:
     image = Image.open(source).convert("RGB")
     is_story = output_format == "story"
@@ -81,6 +82,23 @@ def render(
     draw.rounded_rectangle((bx, brand_top, 1030, brand_top + 53), radius=14, fill=(*panel_rgb, 216))
     draw.text((bx + pad, brand_top + 10), brand, font=brand_font, fill=(249, 240, 211, 255))
 
+    if disclosure:
+        disclosure_font = ImageFont.truetype(str(FONT_BOLD), 20)
+        disclosure_box = draw.textbbox((0, 0), disclosure, font=disclosure_font)
+        disclosure_width = disclosure_box[2] - disclosure_box[0]
+        disclosure_top = brand_top
+        draw.rounded_rectangle(
+            (50, disclosure_top, 50 + disclosure_width + 2 * pad, disclosure_top + 53),
+            radius=14,
+            fill=(*panel_rgb, 216),
+        )
+        draw.text(
+            (50 + pad, disclosure_top + 12),
+            disclosure,
+            font=disclosure_font,
+            fill=(249, 240, 211, 255),
+        )
+
     image = Image.alpha_composite(image.convert("RGBA"), overlay).convert("RGB")
     destination.parent.mkdir(parents=True, exist_ok=True)
     image.save(destination, "JPEG", quality=94, optimize=True, progressive=True)
@@ -99,11 +117,21 @@ def main() -> None:
     parser.add_argument("--panel-rgb", type=parse_rgb, default=(5, 39, 73))
     parser.add_argument("--accent-rgb", type=parse_rgb, default=(176, 220, 236))
     parser.add_argument("--format", choices=("feed", "story"), default="feed")
+    parser.add_argument("--disclosure", default="")
     args = parser.parse_args()
     lines = args.headline.split("|")
     if len(lines) != 3:
         parser.error("--headline must contain exactly three lines separated by |")
-    render(args.source, args.destination, lines, args.subhead, args.panel_rgb, args.accent_rgb, args.format)
+    render(
+        args.source,
+        args.destination,
+        lines,
+        args.subhead,
+        args.panel_rgb,
+        args.accent_rgb,
+        args.format,
+        args.disclosure,
+    )
 
 
 if __name__ == "__main__":

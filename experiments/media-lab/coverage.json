@@ -182,11 +182,11 @@
       "status": "published_partial_coverage"
     },
     {
-      "family_id": "LAB-PERSON-002",
-      "campaign_day": 2,
-      "family_type": "generated_person_overlay",
-      "topic": "Generated fictional presenter with sparse headline",
-      "status": "planned"
+    "family_id": "LAB-PERSON-002",
+    "campaign_day": 2,
+    "family_type": "generated_person_overlay",
+    "topic": "Fictional museum presenter introduces the Lamarr–Antheil frequency-hopping patent",
+    "status": "prototype_ready_route_records_pending"
     },
     {
       "family_id": "LAB-PLACE-003",

@@ -1,6 +1,6 @@
 # Media lab progress
 
-Updated: 2026-09-13 22:23 Europe/Madrid
+Updated: 2026-09-13 22:30 Europe/Madrid
 
 ## Current checkpoint
 
@@ -41,6 +41,7 @@ Updated: 2026-09-13 22:23 Europe/Madrid
 - `storyboards.md` now defines all twelve required low-cost format hypotheses, their source and `do_not_use` gates, platform adaptations and current readiness. F01, F03, F05, F08, F10 and F12 are the initial finished-prototype slate; F12 is already live.
 - `findings.md` records the Day 1 free workflow and defers any paid round until repeatability, publishable audio/motion and mature audience measurements expose a measurable gap.
 - Anna API and Merian Android Story masters are rendered at 1080×1920, visually reviewed and recorded as ready for Facebook and Instagram. Both masters are also transferred to the phone; publication remains held for spaced windows.
+- Day 2 I01 has a reviewed publishable fictional-presenter prototype about the Lamarr–Antheil patent. The image visibly says `PRESENTADORA FICTICIA`; its paired object-led candidate was rejected from public use because generated instrument labels failed the evidence/typography gate.
 
 ## Pending / blockers
 
