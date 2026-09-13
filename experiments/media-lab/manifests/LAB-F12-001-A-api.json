@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-F12-001-A-API",
+  "family_id": "LAB-F12-001",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-F12-001/anna-atkins-single-4x5.jpg",
+  "asset_sha256": "32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-F12-001/anna-atkins-single-4x5.jpg",
+  "platforms": ["facebook", "instagram", "threads"],
+  "captions": {
+    "facebook": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos obtenidos al apoyar algas sobre papel sensibilizado y exponerlo al sol. No era un libro de arte, sino una solución botánica: registrar formas sin que un dibujante interviniera. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original inspirada en el proceso; no reproduce una lámina histórica. Fuentes: Natural History Museum, V&A, The Met y Linnean Society.\n\n#SabiduriaDeBolsillo #AnnaAtkins #HistoriaDeLaFotografia",
+    "instagram": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos obtenidos al apoyar algas sobre papel sensibilizado y exponerlo al sol. No era un libro de arte, sino una solución botánica: registrar formas sin que un dibujante interviniera. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original inspirada en el proceso; no reproduce una lámina histórica. Fuentes: Natural History Museum, V&A, The Met y Linnean Society.\n\n#SabiduriaDeBolsillo #AnnaAtkins #HistoriaDeLaFotografia",
+    "threads": "En 1843, Anna Atkins empezó a publicar Photographs of British Algae: cianotipos hechos al apoyar algas sobre papel sensibilizado y exponerlo al sol. La primera entrega precedió por un año a The Pencil of Nature de Talbot.\n\n¿Qué forma natural reconocerías solo por su silueta?\n\nIlustración editorial original; no reproduce una lámina histórica."
+  }
+}

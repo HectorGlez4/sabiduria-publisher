@@ -1,0 +1,197 @@
+{
+  "run_id": "LAB-F12-001-A-THREADS",
+  "cohort": "experiment",
+  "coverage_cell_id": "CELL-005",
+  "baseline_match_ids": [
+    "2026-09-13-extra81",
+    "2026-09-13-re51-reel"
+  ],
+  "family_id": "LAB-F12-001",
+  "parent_run_id": null,
+  "campaign_day": 1,
+  "image_batch_id": "I01",
+  "platform": "threads",
+  "actual_native_format": "feed_single_image",
+  "adaptation_notes": "Same 4:5 master with a shorter platform-specific caption.",
+  "audio_treatment": "none",
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": null,
+    "nearby_production_posts": [
+      "Normal Threads lane published at 2026-09-13T19:29:50Z; high-frequency baseline and duplicate incidents are confounders."
+    ],
+    "matched_comparison_ids": [
+      "LAB-F12-001-B-THREADS"
+    ]
+  },
+  "round": 1,
+  "status": "ready",
+  "tool_option_id": "T02",
+  "format_id": "F12",
+  "seed_source_path": "content/published/2026-09-07-extra84.json",
+  "seed_source_sha256": null,
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-F12-001.md",
+  "hypothesis": "An object-led editorial image will deliver stronger immediate comprehension than the prior production text card while remaining fast enough to repeat.",
+  "changed_variable": "generated editorial scene versus production text card",
+  "controls": [
+    "identical master across mandatory networks",
+    "same factual core",
+    "no audio",
+    "public organic audience"
+  ],
+  "tool": {
+    "name": "built-in image generation + Pillow overlay",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": "2026-09-13T20:02:00Z"
+  },
+  "timing": {
+    "started_at": "2026-09-13T19:55:00Z",
+    "first_acceptable_at": "2026-09-13T20:03:00Z",
+    "finished_at": "2026-09-13T20:06:00Z",
+    "wall_elapsed_seconds": 660,
+    "one_time_setup_active_seconds": 180,
+    "human_active_seconds": 0,
+    "agent_active_seconds": 480,
+    "approval_or_device_wait_seconds": 0,
+    "stages": [
+      {
+        "name": "source review and prompt",
+        "started_at": "2026-09-13T19:55:00Z",
+        "finished_at": "2026-09-13T20:02:00Z",
+        "active_seconds": 240,
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "image generation wait",
+        "started_at": "2026-09-13T20:02:00Z",
+        "finished_at": "2026-09-13T20:03:00Z",
+        "active_seconds": 20,
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "deterministic overlay and QA",
+        "started_at": "2026-09-13T20:03:00Z",
+        "finished_at": "2026-09-13T20:06:00Z",
+        "active_seconds": 220,
+        "overlaps_another_stage": false
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "number": 1,
+      "settings_or_prompt": "Use case: historical-scene\nAsset type: 4:5 editorial social-media image for Sabiduría de Bolsillo, Day 1 single-image experiment\nPrimary request: Create an original, visually arresting editorial illustration inspired by Anna Atkins's 1843 cyanotype work, centered on a single delicate British algae specimen making a white photogram silhouette against rich Prussian blue sensitized paper. The image should immediately communicate scientific discovery, sunlight, paper, and botanical form without pretending to reproduce a specific surviving plate.\nScene/backdrop: a restrained 1840s British botanical worktable at the edge of frame, with the cyanotype sheet as the dominant subject; subtle glass contact frame and soft daylight, period-appropriate materials only.\nSubject: one intricate algae specimen in crisp pale silhouette on blue paper; no identifiable real person.\nStyle/medium: polished editorial illustration with tactile photographic-paper grain, historically grounded, elegant and contemporary enough for a cultural-history account.\nComposition/framing: portrait 4:5; the cyanotype occupies most of the frame; generous clean dark-blue negative space in the upper third and lower edge for a later code-rendered Spanish headline and small brand mark.\nLighting/mood: cool Prussian blue, sunlight glow at one edge, curious and contemplative.\nColor palette: Prussian blue, cyan, warm off-white, tiny muted brass accents.\nConstraints: no text, no letters, no numbers, no logos, no watermark; do not imitate or copy a specific museum plate; no anachronistic tools; no camera; no printed typography; no hands; accurate botanical silhouette rather than fantasy coral.",
+      "outcome": "accepted",
+      "elapsed_seconds": 23,
+      "spend_eur": 0,
+      "artifact_paths": [
+        "experiments/media-lab/assets/LAB-F12-001/anna-atkins-cyanotype-original.png",
+        "experiments/media-lab/assets/LAB-F12-001/anna-atkins-single-4x5.jpg"
+      ]
+    }
+  ],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": "one built-in image generation",
+    "subscription_allocation": null,
+    "local_compute_seconds": 1
+  },
+  "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-F12-001/anna-atkins-cyanotype-original.png",
+      "sha256": "008b149b0edc148e9f0ee8eb55305f0f5d5f8458b28005b9fcd7841f5ab5a2a8",
+      "media_type": "image/png",
+      "dimensions": "1122x1402",
+      "duration_seconds": null,
+      "source_license": "Original generated output under existing included allowance",
+      "role": "original"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-F12-001/anna-atkins-single-4x5.jpg",
+      "sha256": "32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1350",
+      "duration_seconds": null,
+      "source_license": "Derivative of original generated output; overlay uses bundled OFL fonts",
+      "role": "publishable_master"
+    }
+  ],
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
+  "review": {
+    "evaluator": "Codex visual QA; human audience response pending",
+    "visual": 4,
+    "clarity": 5,
+    "voice": null,
+    "pacing": null,
+    "brand": 4,
+    "hook": 4,
+    "not_applicable": [
+      "voice",
+      "pacing"
+    ],
+    "notes": "Exact Spanish overlay is crisp at phone size. The generated specimen is editorial, not presented as a specific museum plate. Caption contains explicit reconstruction disclosure."
+  },
+  "publication": {
+    "route_id": "API-MASTER",
+    "comparison_pair_id": "PAIR-SINGLE-01",
+    "creation_origin": "built-in image generation plus deterministic overlay",
+    "publishing_transport": "Meta official API via isolated GitHub Actions lab workflow",
+    "native_app_and_version": null,
+    "api_version": "v24.0",
+    "route_assigned_at": "2026-09-13T20:07:00Z",
+    "phone_transfer_seconds": null,
+    "publishing_active_seconds": null,
+    "native_changes_from_master": [],
+    "human_interventions": [],
+    "fidelity_checks": {
+      "caption": null,
+      "cover": null,
+      "media_order": null,
+      "aspect_ratio": null,
+      "audio": "not_applicable"
+    },
+    "destination": "threads",
+    "agreed_batch_reference": "TWO-WEEK-CAMPAIGN.md Day 1",
+    "requested_audience": "public",
+    "actual_audience": null,
+    "submitted_at": null,
+    "processing_completed_at": null,
+    "playback_verified_at": null,
+    "post_id": null,
+    "post_url": null,
+    "audio_verified": null,
+    "master_sha256": "32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b",
+    "snapshots": []
+  },
+  "missing_data_reasons": {
+    "publication": "Not submitted yet; waiting for isolated workflow commit and safe spacing after production posts.",
+    "audience_metrics": "Available only after publication and scheduled post age thresholds."
+  },
+  "decision": "Publish API variant A once the current production run has cleared; use a distinct factual variant B for the Android matched route.",
+  "next_action": "Submit isolated lab workflow, verify each public post visually, then record 24h/72h/7d metric due times."
+}
+

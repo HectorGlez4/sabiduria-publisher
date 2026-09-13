@@ -1,0 +1,150 @@
+{
+  "status": "mandatory_brand_accounts_verified; api_ids_partially_pending_read_only_probe",
+  "campaign_start_date": "2026-09-13",
+  "publishing_timezone": "Europe/Madrid",
+  "intended_audience": "public",
+  "brand": "Sabiduría de Bolsillo",
+  "targets": [
+    {
+      "platform": "facebook",
+      "priority": "mandatory",
+      "account_id": "100618132774413",
+      "handle_or_url": "https://www.facebook.com/874327782058550",
+      "display_name": "Sabiduria De Bolsillo",
+      "identity_verified_at": "2026-09-13T21:53:00+02:00",
+      "publishing_route": [
+        "api",
+        "android_native"
+      ],
+      "analytics_access": "Confirmed by read-only Graph API probe: pages_read_engagement and native Professional dashboard",
+      "follower_count_observed": 27875,
+      "formats": {
+        "api": [
+          "feed_single_image",
+          "story_image",
+          "reel_video"
+        ],
+        "android_native": [
+          "feed_text",
+          "feed_photo",
+          "multi_photo",
+          "story",
+          "reel",
+          "live",
+          "music",
+          "location"
+        ]
+      },
+      "blocker": "The Graph Page id is inferred from live post object ids because GitHub masks the configured id in logs. Native Page poll was not visible in the inspected feed composer; Story editor still requires a deeper probe.",
+      "required_for_campaign": true
+    },
+    {
+      "platform": "instagram",
+      "priority": "mandatory",
+      "account_id": null,
+      "handle_or_url": "https://www.instagram.com/sabiduriabolsillo/",
+      "display_name": "Sabiduria De Bolsillo",
+      "identity_verified_at": "2026-09-13T21:56:00+02:00",
+      "publishing_route": [
+        "api",
+        "android_native"
+      ],
+      "analytics_access": "Native Professional dashboard visible; API insights permission not yet probed",
+      "follower_count_observed": 5272,
+      "formats": {
+        "api": [
+          "feed_single_image",
+          "story_image"
+        ],
+        "android_native": [
+          "post",
+          "carousel_via_post_picker_pending",
+          "story",
+          "reel",
+          "live",
+          "edits"
+        ]
+      },
+      "blocker": "Account was available but not initially active; switched from personal profile to @sabiduriabolsillo. API account ID remains stored only as a GitHub secret.",
+      "required_for_campaign": true
+    },
+    {
+      "platform": "threads",
+      "priority": "mandatory",
+      "account_id": null,
+      "handle_or_url": "https://www.threads.com/@sabiduriabolsillo",
+      "display_name": "sabiduriabolsillo",
+      "identity_verified_at": "2026-09-13T21:52:00+02:00",
+      "publishing_route": [
+        "api",
+        "android_native"
+      ],
+      "analytics_access": "Native profile available; API insights probe pending",
+      "follower_count_observed": null,
+      "formats": {
+        "api": [
+          "feed_text",
+          "feed_single_image"
+        ],
+        "android_native": [
+          "text",
+          "gallery",
+          "gif",
+          "sticker",
+          "music",
+          "attachment"
+        ]
+      },
+      "blocker": "Poll/location submenu and follower count still require a deeper native probe; carousel/video need lab adapter implementation.",
+      "required_for_campaign": true
+    },
+    {
+      "platform": "x",
+      "priority": "secondary",
+      "account_id": null,
+      "handle_or_url": null,
+      "identity_verified_at": null,
+      "publishing_route": null,
+      "analytics_access": null,
+      "formats": {},
+      "blocker": "Deferred until mandatory Meta launch cells are stable.",
+      "required_for_campaign": false
+    },
+    {
+      "platform": "linkedin",
+      "priority": "secondary",
+      "account_id": null,
+      "handle_or_url": null,
+      "identity_verified_at": null,
+      "publishing_route": null,
+      "analytics_access": null,
+      "formats": {},
+      "blocker": "Deferred until mandatory Meta launch cells are stable.",
+      "required_for_campaign": false
+    },
+    {
+      "platform": "tiktok",
+      "priority": "secondary",
+      "account_id": null,
+      "handle_or_url": null,
+      "identity_verified_at": null,
+      "publishing_route": null,
+      "analytics_access": null,
+      "formats": {},
+      "blocker": "Deferred until mandatory Meta launch cells are stable.",
+      "required_for_campaign": false
+    },
+    {
+      "platform": "youtube",
+      "priority": "secondary",
+      "account_id": null,
+      "handle_or_url": null,
+      "identity_verified_at": null,
+      "publishing_route": null,
+      "analytics_access": null,
+      "formats": {},
+      "blocker": "Deferred until mandatory Meta launch cells are stable.",
+      "required_for_campaign": false
+    }
+  ]
+}

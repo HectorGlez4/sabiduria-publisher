@@ -1,0 +1,29 @@
+{
+  "status": "inventory_required",
+  "mandatory_networks": ["facebook", "instagram", "threads"],
+  "required_routes_where_supported": ["api", "android_native"],
+  "production_schedule_policy": "unchanged_additional_lab_posts",
+  "capabilities": [],
+  "families": [],
+  "cells": [],
+  "baseline_posts": [],
+  "cell_template": {
+    "cell_id": null,
+    "family_id": null,
+    "platform": null,
+    "native_format": null,
+    "treatment": null,
+    "publishing_route": null,
+    "variant_id": null,
+    "capability_evidence": null,
+    "status": "planned",
+    "reason_if_blocked_or_unsupported": null,
+    "planned_publish_at": null,
+    "run_record": null,
+    "post_id": null,
+    "post_url": null,
+    "playback_or_display_verified_at": null,
+    "measurement_due_at": [],
+    "measurement_completed_at": []
+  }
+}

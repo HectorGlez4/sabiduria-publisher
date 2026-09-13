@@ -1,0 +1,49 @@
+name: media-lab
+
+on:
+  workflow_dispatch:
+    inputs:
+      manifest:
+        description: "Manifest under experiments/media-lab/manifests/"
+        required: true
+        default: "experiments/media-lab/manifests/LAB-F12-001-A-api.json"
+
+concurrency:
+  group: media-lab
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet -r requirements.txt
+      - name: Validate manifest path
+        env:
+          MANIFEST: ${{ inputs.manifest }}
+        run: |
+          case "$MANIFEST" in
+            experiments/media-lab/manifests/LAB-*.json) ;;
+            *) echo "invalid lab manifest path"; exit 2 ;;
+          esac
+      - name: Publish isolated lab manifest
+        env:
+          SDB_PAGE_ID: ${{ secrets.SDB_PAGE_ID }}
+          SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
+          SDB_IG_USER_ID: ${{ secrets.SDB_IG_USER_ID }}
+          SDB_THREADS_USER_ID: ${{ secrets.SDB_THREADS_USER_ID }}
+          SDB_THREADS_TOKEN: ${{ secrets.SDB_THREADS_TOKEN }}
+          MANIFEST: ${{ inputs.manifest }}
+        run: python3 experiments/media-lab/publish_api.py "$MANIFEST" --output experiments/media-lab/live-result.json
+      - name: Preserve result even on partial failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: media-lab-result-${{ github.run_id }}
+          path: experiments/media-lab/live-result.json
+          if-no-files-found: warn
