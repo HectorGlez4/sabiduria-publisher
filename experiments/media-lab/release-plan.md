@@ -8,7 +8,7 @@ The verified matrix currently contains 136 required cells. A conservative ceilin
 
 | Day | Family | Planned lab releases | Route emphasis |
 |---|---|---:|---|
-| 1 | Single-image editorial | 3 published feed images; Story variants remain planned | API-MASTER on Facebook, Instagram, Threads |
+| 1 | Single-image editorial | 3 published feed images; 4 Facebook/Instagram Story variants ready and held for spaced windows | API-MASTER live; API/Android Story masters prepared |
 | 2 | Single-image matched variant + generated person prep | up to 3 feed images after a live collision check | ANDROID-MASTER on Facebook, Instagram, Threads |
 | 3 | Place-led image | up to 3 feed images | alternate route assignment |
 | 4 | Four-option trivia | up to 3 feed images | API/native split; native polls prepared separately |
@@ -30,6 +30,7 @@ The verified matrix currently contains 136 required cells. A conservative ceilin
 - Avoid sending native and API variants of the same factual creative to the same feed. Matched route pairs use different verified topics.
 - The production publisher checks hourly at minute 23 and the normal Threads lane at minute 41. Because Threads is already high-frequency, every Threads lab post records both neighboring normal posts as confounders.
 - The Day 2 Android variant has no fixed automated schedule. Earliest candidate window is 2026-09-14 after a fresh collision check; the three networks should be staggered if their live queues diverge.
+- The Anna API Story pair and Merian Android Story pair are publishable masters, but they must not be released together or immediately after their related feed variants. Stories require 6-hour and pre-expiry measurement availability, so use a window that can be observed.
 
 ## Measurement windows
 

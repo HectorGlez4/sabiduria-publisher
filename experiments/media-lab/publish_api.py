@@ -20,13 +20,17 @@ from src.platforms.meta import (  # noqa: E402
     _get,
     publish_facebook,
     publish_instagram,
+    publish_instagram_story,
+    publish_story,
     publish_threads,
 )
 
 
 PUBLISHERS = {
     "facebook": publish_facebook,
+    "facebook_story": publish_story,
     "instagram": publish_instagram,
+    "instagram_story": publish_instagram_story,
     "threads": publish_threads,
 }
 

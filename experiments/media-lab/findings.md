@@ -1,6 +1,6 @@
 # Media lab findings
 
-Updated: 2026-09-13 22:30 Europe/Madrid
+Updated: 2026-09-13 22:23 Europe/Madrid
 
 ## Day 1 operational findings
 
@@ -10,9 +10,11 @@ Read-only API checks confirmed caption and media fidelity, and native Android in
 
 The first image-generation direction was accepted and finished with a deterministic code overlay so Spanish spelling, dates and line breaks did not depend on generated text. The matched Merian direction needed one focused repair because the first pupa looked metallic and biologically implausible. That is evidence of an image-QA cost, not yet evidence that a paid image workflow would be better.
 
-The Android phone is viable as a native route: ADB control is authorized; the three brand accounts were resolved; Facebook, Instagram and Threads composers opened; and the finished Android comparison image was transferred. Threads visibly exposes Poll and Location attachments. Facebook and Instagram Story interaction controls have not yet been verified, so those cells remain planned rather than being inferred from other surfaces.
+The Android phone is viable as a native route: ADB control is authorized; the three brand accounts were resolved; Facebook, Instagram and Threads composers opened; and the finished Android comparison image was transferred. Threads visibly exposes Poll and Location attachments. Facebook's brand Story editor exposes Poll, Question, Location, Music and Link stickers. Instagram's brand Story editor exposes Multi-option Poll, Question, Location, Music, Slider and Link, while its Story picker offers multi-select, Templates and Collage. These are verified draft capabilities; no Story was shared during the probe.
 
 Edits successfully imported the Merian still and exported a local file, but its first default output was a silent 3.03-second, 1080×1920, 30 fps HEVC video with the 4:5 image letterboxed. It was rejected before publication: it is below the documented Facebook Reel minimum used by the project, has poor use of the vertical frame, contains no audible treatment and has not passed API codec compatibility. The next free test is an 8–15-second full-frame export with owned narration or licensed audio.
+
+Edits also handed that export directly to Instagram's Reel composer and to a Facebook destination chooser that named `Sabiduria De Bolsillo` and offered both Reel and Story. Instagram's pre-share screen exposed Poll, Prompt, Location and AI-label controls. The handoffs establish route availability, but not delivery reliability, because the rejected master was never shared.
 
 ## Measurement limits
 

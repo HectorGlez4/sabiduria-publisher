@@ -36,9 +36,12 @@ def render(
     sub: str,
     panel_rgb: tuple[int, int, int],
     accent_rgb: tuple[int, int, int],
+    output_format: str,
 ) -> None:
     image = Image.open(source).convert("RGB")
-    target_ratio = 4 / 5
+    is_story = output_format == "story"
+    target_size = (1080, 1920) if is_story else (1080, 1350)
+    target_ratio = target_size[0] / target_size[1]
     source_ratio = image.width / image.height
     if source_ratio > target_ratio:
         crop_width = round(image.height * target_ratio)
@@ -48,31 +51,35 @@ def render(
         crop_height = round(image.width / target_ratio)
         top = (image.height - crop_height) // 2
         image = image.crop((0, top, image.width, top + crop_height))
-    image = image.resize((1080, 1350), Image.Resampling.LANCZOS)
+    image = image.resize(target_size, Image.Resampling.LANCZOS)
 
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
-    draw.rounded_rectangle((54, 76, 1026, 405), radius=24, fill=(*panel_rgb, 224))
+    panel_top = 170 if is_story else 76
+    panel_bottom = 600 if is_story else 405
+    draw.rounded_rectangle((54, panel_top, 1026, panel_bottom), radius=24, fill=(*panel_rgb, 224))
 
-    y = 108
+    y = 220 if is_story else 108
     for line in lines:
-        font = fit_font(draw, line, 876, 66, 46)
+        font = fit_font(draw, line, 876, 72 if is_story else 66, 46)
         box = draw.textbbox((0, 0), line, font=font)
         x = (1080 - (box[2] - box[0])) // 2
         draw.text((x, y), line, font=font, fill=(249, 240, 211, 255))
-        y += 78
+        y += 86 if is_story else 78
 
-    sub_font = ImageFont.truetype(str(FONT_SERIF), 38)
+    sub_font = ImageFont.truetype(str(FONT_SERIF), 42 if is_story else 38)
     sub_box = draw.textbbox((0, 0), sub, font=sub_font)
-    draw.text(((1080 - (sub_box[2] - sub_box[0])) // 2, 340), sub, font=sub_font, fill=(*accent_rgb, 255))
+    sub_y = 500 if is_story else 340
+    draw.text(((1080 - (sub_box[2] - sub_box[0])) // 2, sub_y), sub, font=sub_font, fill=(*accent_rgb, 255))
 
     brand_font = ImageFont.truetype(str(FONT_BOLD), 23)
     brand = "SABIDURÍA DE BOLSILLO"
     brand_box = draw.textbbox((0, 0), brand, font=brand_font)
     pad = 18
     bx = 1030 - (brand_box[2] - brand_box[0]) - 2 * pad
-    draw.rounded_rectangle((bx, 1268, 1030, 1321), radius=14, fill=(*panel_rgb, 216))
-    draw.text((bx + pad, 1278), brand, font=brand_font, fill=(249, 240, 211, 255))
+    brand_top = 1775 if is_story else 1268
+    draw.rounded_rectangle((bx, brand_top, 1030, brand_top + 53), radius=14, fill=(*panel_rgb, 216))
+    draw.text((bx + pad, brand_top + 10), brand, font=brand_font, fill=(249, 240, 211, 255))
 
     image = Image.alpha_composite(image.convert("RGBA"), overlay).convert("RGB")
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -91,11 +98,12 @@ def main() -> None:
     parser.add_argument("--subhead", default="Anna Atkins · 1843")
     parser.add_argument("--panel-rgb", type=parse_rgb, default=(5, 39, 73))
     parser.add_argument("--accent-rgb", type=parse_rgb, default=(176, 220, 236))
+    parser.add_argument("--format", choices=("feed", "story"), default="feed")
     args = parser.parse_args()
     lines = args.headline.split("|")
     if len(lines) != 3:
         parser.error("--headline must contain exactly three lines separated by |")
-    render(args.source, args.destination, lines, args.subhead, args.panel_rgb, args.accent_rgb)
+    render(args.source, args.destination, lines, args.subhead, args.panel_rgb, args.accent_rgb, args.format)
 
 
 if __name__ == "__main__":

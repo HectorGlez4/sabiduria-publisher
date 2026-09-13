@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-13T20:11:00+00:00",
+  "checked_at": "2026-09-13T20:23:00+00:00",
   "round": 1,
   "incremental_spend_eur": 0,
   "options": [
@@ -28,15 +28,15 @@
       "id": "T04",
       "option": "Edits on Samsung",
       "status": "partially_tested",
-      "evidence": "com.instagram.basel 445.0.0.46.83 opened; 4:5 JPEG imported; Add audio catalog opened; silent 3.03 s 1080x1920 HEVC MP4 exported and recovered.",
-      "next": "Add owned/licensed audio, export 8–15 s H.264-compatible version if available, then test API-EDITS and ANDROID-EDITS in separate release slots."
+      "evidence": "com.instagram.basel 445.0.0.46.83 opened; 4:5 JPEG imported; Add audio catalog opened; silent 3.03 s 1080x1920 HEVC MP4 exported and recovered. Edits handed the export to Instagram's Reel composer and to Facebook's brand-specific Reel/Story chooser without publishing.",
+      "next": "Add owned/licensed audio, export an 8–15 s full-frame version, then test API-EDITS and ANDROID-EDITS with a publishable master in separate release slots."
     },
     {
       "id": "T05",
       "option": "Native Instagram/Facebook creation",
-      "status": "partially_tested",
-      "evidence": "Correct brand composers inspected. Facebook exposes feed media/music/location/story/reel; Instagram exposes Post/Story/Reel/Live/Edits.",
-      "next": "Publish distinct Android variant B in spaced windows; verify crops and URLs."
+      "status": "tested_supported_draft_only",
+      "evidence": "Correct brand composers inspected. Facebook exposes feed media/music/location/story/reel; its Story editor exposes audio, Poll, Question, Location and Link stickers. Instagram exposes Post/Story/Reel/Live/Edits; its Story picker supports multiple media, Templates, Music and Collage, while its sticker panel exposes Multi-option Poll, Question, Location, Music, Slider and Link.",
+      "next": "Publish distinct Android variant B in spaced windows; verify crops, interactions and canonical URLs."
     },
     {
       "id": "T06",
@@ -117,4 +117,3 @@
     }
   ]
 }
-

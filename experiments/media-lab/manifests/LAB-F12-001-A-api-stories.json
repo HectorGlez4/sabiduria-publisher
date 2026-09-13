@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-F12-001-A-API-STORIES",
+  "family_id": "LAB-F12-001",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-F12-001/anna-atkins-story-9x16.jpg",
+  "asset_sha256": "8f5ef0b970fc4c4f297d54bc7d55c97465cedab110939251807d37e5be210091",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-F12-001/anna-atkins-story-9x16.jpg",
+  "platforms": ["facebook_story", "instagram_story"],
+  "captions": {
+    "facebook_story": "",
+    "instagram_story": ""
+  }
+}

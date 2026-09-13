@@ -29,13 +29,19 @@
           "feed_photo",
           "multi_photo",
           "story",
+          "story_poll",
+          "story_question",
+          "story_music",
+          "story_location",
           "reel",
           "live",
           "music",
-          "location"
+          "location",
+          "edits_to_reel",
+          "edits_to_story"
         ]
       },
-      "blocker": "The Graph Page id is inferred from live post object ids because GitHub masks the configured id in logs. Native Page poll was not visible in the inspected feed composer; Story editor still requires a deeper probe.",
+      "blocker": "The Graph Page id is inferred from live post object ids because GitHub masks the configured id in logs. A Page-feed poll was not visible in the inspected feed composer; Story poll and other Story stickers are verified separately.",
       "required_for_campaign": true
     },
     {
@@ -60,9 +66,15 @@
           "post",
           "carousel_via_post_picker_pending",
           "story",
+          "story_poll",
+          "story_question",
+          "story_music",
+          "story_location",
+          "story_slider",
           "reel",
           "live",
-          "edits"
+          "edits",
+          "edits_to_reel"
         ]
       },
       "blocker": "Account was available but not initially active; switched from personal profile to @sabiduriabolsillo. API account ID remains stored only as a GitHub secret.",

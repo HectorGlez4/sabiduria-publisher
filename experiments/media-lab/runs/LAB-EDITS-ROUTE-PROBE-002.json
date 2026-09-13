@@ -1,0 +1,109 @@
+{
+  "run_id": "LAB-EDITS-ROUTE-PROBE-002",
+  "cohort": "experiment",
+  "coverage_cell_id": null,
+  "baseline_match_ids": [],
+  "family_id": "LAB-F12-001",
+  "parent_run_id": "LAB-EDITS-PROBE-001",
+  "campaign_day": 1,
+  "image_batch_id": "I01",
+  "platform": "android_edits_and_native_story",
+  "actual_native_format": "draft_route_and_interaction_probe",
+  "adaptation_notes": "Reused the rejected silent Edits export only to inspect pre-share destinations and Story controls. No Share action was taken.",
+  "audio_treatment": "none; capability menus inspected only",
+  "location_treatment": {
+    "visual_place": "illustrated Surinam landscape",
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": "Location stickers exposed on Facebook and Instagram; no place selected"
+  },
+  "round": 1,
+  "status": "completed",
+  "tool_option_id": "T04/T05",
+  "format_id": "delivery_and_story_capability_probe",
+  "seed_source_path": "content/published/2026-09-05-extra51.json",
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-F12-001-B.md",
+  "hypothesis": "Edits can hand an export to the correct Instagram and Facebook brand composers, and both native Story editors expose the required interactive controls.",
+  "changed_variable": "destination and composer surface only; master unchanged",
+  "controls": [
+    "same rejected 3.03-second Edits export",
+    "no caption",
+    "no interaction configured",
+    "no public publishing"
+  ],
+  "tool": {
+    "name": "Edits + Instagram + Facebook on Samsung",
+    "version": "Edits 445.0.0.46.83; Instagram 446.0.0.49.77; Facebook 576.0.0.42.73",
+    "plan": "existing account allowance",
+    "access_checked_at": "2026-09-13T20:18:40+00:00"
+  },
+  "timing": {
+    "started_at": "2026-09-13T20:18:40+00:00",
+    "finished_at": "2026-09-13T20:23:00+00:00",
+    "wall_elapsed_seconds": 260,
+    "human_active_seconds": 0,
+    "agent_active_seconds": 210,
+    "approval_or_device_wait_seconds": 0,
+    "stages": [
+      {
+        "name": "Edits to Instagram Reel composer",
+        "active_seconds": 55
+      },
+      {
+        "name": "Edits to Facebook brand Reel/Story chooser and Story stickers",
+        "active_seconds": 85
+      },
+      {
+        "name": "Instagram brand Story picker and stickers",
+        "active_seconds": 70
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "number": 1,
+      "settings_or_prompt": "Inspect destination/composer menus with the existing rejected export; exit before Share.",
+      "outcome": "completed_without_publication",
+      "elapsed_seconds": 260,
+      "spend_eur": 0,
+      "artifact_paths": [
+        "experiments/media-lab/evidence/android/edits-to-instagram-reel-composer.png",
+        "experiments/media-lab/evidence/android/edits-to-facebook-brand-destination.png",
+        "experiments/media-lab/evidence/android/facebook-story-sticker-capabilities.png",
+        "experiments/media-lab/evidence/android/instagram-story-sticker-capabilities.png"
+      ]
+    }
+  ],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0
+  },
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": false,
+    "usable_export": false,
+    "within_budget": true
+  },
+  "review": {
+    "evaluator": "Codex Android UI inspection",
+    "notes": "Instagram Reel handoff succeeded. Facebook named Sabiduria De Bolsillo and offered Reel/Story. Facebook Story exposed Poll, Question, Location, Music and Link; Instagram Story exposed Multi-option Poll, Question, Location, Music, Slider and Link. Draft capability does not prove successful public delivery."
+  },
+  "publication": {
+    "route_id": "ANDROID-EDITS-DRAFT-PROBE",
+    "publishing_transport": "Edits external share intents to installed native apps",
+    "destination": "Instagram @sabiduriabolsillo and Facebook Sabiduria De Bolsillo pre-share composers",
+    "requested_audience": "public, not submitted",
+    "actual_audience": null,
+    "submitted_at": null,
+    "post_id": null,
+    "post_url": null
+  },
+  "missing_data_reasons": {
+    "publication": "The media master failed the publishability gate, so every composer was exited before Share.",
+    "delivery_reliability": "A visible pre-share route does not establish upload, processing, final display or audible playback."
+  },
+  "decision": "Mark the Edits-to-Instagram-Reel, Edits-to-Facebook-Reel/Story and native Story-interaction routes as draft-supported, not publication-verified.",
+  "next_action": "Create a full-frame 8–15-second rights-safe master, then publish each route in a separate collision-checked slot and verify the final URL, display and audio."
+}
