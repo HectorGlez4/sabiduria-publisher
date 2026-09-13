@@ -71,7 +71,12 @@ jobs:
         run: |
           ARGS="--max ${{ inputs.cuantos || '4' }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
-          python3 scripts/hilos.py $ARGS
+          # -u: sin búfer. En CI la salida no va a un terminal y Python la
+          # acumula; si GitHub mata el job por timeout, lo acumulado se pierde
+          # y el job muere sin log. El 13 de septiembre un job de hilos pasó
+          # horas en este paso sin dejar una línea que dijera si dormía o
+          # estaba colgado.
+          python3 -u scripts/hilos.py $ARGS
 
       # hilos.py ya sube el registro de cada hilo en cuanto lo publica. Este
       # paso solo recoge lo que haya quedado suelto (un push fallido a mitad).

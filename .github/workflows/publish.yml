@@ -119,7 +119,12 @@ jobs:
           ARGS="--due --max 15"
           [ -n "${{ inputs.id }}" ] && ARGS="--id ${{ inputs.id }}"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
-          python3 -m src.publish $ARGS
+          # -u: sin búfer. En CI la salida no va a un terminal y Python la
+          # acumula; si GitHub mata el job por timeout, lo acumulado se pierde
+          # y el job muere sin log. El 13 de septiembre un job de hilos pasó
+          # horas en este paso sin dejar una línea que dijera si dormía o
+          # estaba colgado.
+          python3 -u -m src.publish $ARGS
 
       # Sin esto, un fallo un jueves se descubre mirando la página. Ahora que
       # publica sola tres veces al día, eso es demasiado tarde.
