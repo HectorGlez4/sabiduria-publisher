@@ -141,12 +141,22 @@
       "platform": "tiktok",
       "priority": "secondary",
       "account_id": null,
-      "handle_or_url": null,
-      "identity_verified_at": null,
-      "publishing_route": null,
-      "analytics_access": null,
-      "formats": {},
-      "blocker": "Deferred until mandatory Meta launch cells are stable.",
+      "handle_or_url": "https://www.tiktok.com/@sabiduriabolsillo",
+      "display_name": "Sabiduria de bolsillo",
+      "identity_verified_at": "2026-09-14T00:42:00+02:00",
+      "publishing_route": [
+        "android_native"
+      ],
+      "route_scope": "Only Android-native lab variants are eligible for TikTok. API publication is intentionally out of scope.",
+      "analytics_access": "Profile visible in the native app; analytics permission and metric surfaces pending composer/login verification.",
+      "follower_count_observed": 19700,
+      "formats": {
+        "android_native": [
+          "video_post_pending_composer_probe",
+          "photo_post_pending_composer_probe"
+        ]
+      },
+      "blocker": "TikTok brand account @sabiduriabolsillo is signed in on Samsung SM-S721B, but TikTok presented a native puzzle verification before composer access. The verification must be completed by the user; format capability, import, preview and public posting remain pending.",
       "required_for_campaign": false
     },
     {

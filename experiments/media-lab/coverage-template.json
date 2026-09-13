@@ -2,6 +2,13 @@
   "status": "inventory_required",
   "mandatory_networks": ["facebook", "instagram", "threads"],
   "required_routes_where_supported": ["api", "android_native"],
+  "secondary_native_extensions": {
+    "tiktok": {
+      "eligible_source_routes": ["android_native"],
+      "eligibility": "Add a TikTok cell for each phone-native generated-content variant after the TikTok brand identity, composer/import capability and final-preview QA are verified. Do not infer API support or treat a pending native verification as coverage.",
+      "required_route": "android_native"
+    }
+  },
   "production_schedule_policy": "unchanged_additional_lab_posts",
   "capabilities": [],
   "families": [],

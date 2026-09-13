@@ -1,6 +1,6 @@
 # Media lab progress
 
-Updated: 2026-09-14 00:10 Europe/Madrid
+Updated: 2026-09-14 00:42 Europe/Madrid
 
 ## Current checkpoint
 
@@ -12,6 +12,8 @@ Updated: 2026-09-14 00:10 Europe/Madrid
 - MaaS360/Knox enforces a 120-second maximum display timeout and blocks Android's normal stay-awake setting. LaunchAgent `com.sabiduria.medialab.phone-awake` sends a neutral ADB activity event every 45 seconds while this exact serial is connected; the Mac keep-awake LaunchAgent is also running. A phone reboot still requires one manual unlock.
 - Edits is installed and opens to Projects. Still-image import, the audio picker, local export and handoff to Instagram Reel plus Facebook brand Reel/Story composers are verified; adding licensed audio and producing a publishable export remain unverified.
 - Day 1 family `LAB-F12-001` is live on Facebook, Instagram and Threads through API-MASTER. All three native displays were visually verified.
+- TikTok is now an additional target for Android-native lab variants only. The authenticated brand profile `@sabiduriabolsillo` was observed with 19.7K followers on the authorized Samsung; TikTok stopped at its native puzzle verification before composer access. No TikTok publication is counted or scheduled until the user completes that verification and the phone route has passed import, native-preview and visual-QA probes.
+- The previous `LAB-SMOKE-001` poll composition exposed an overlay defect. From this checkpoint onward, `visual-qa-gate.md` is mandatory before every public submission: the exact native/API final preview must receive an explicit independent-agent PASS. A missing or failed verdict blocks publishing.
 - Out-of-register diagnostic family `LAB-SMOKE-001` completed on 2026-09-14 without consuming scheduled coverage cells: public API feeds succeeded on Facebook, Instagram and Threads; public Android-native Stories with interactive polls succeeded and were visually verified on Facebook Page and Instagram. A second native Threads publication was intentionally held because the normal hourly `hilos` workflow was active and it would have created a near-identical burst.
 - API variant A uses the Anna Atkins cyanotype object-led editorial. Canonical URLs are stored in the run records and `coverage.json`.
 - Android variant B uses a distinct Maria Sibylla Merian factual piece under `PAIR-SINGLE-01`; it is rendered, transferred to the phone and ready for a later collision-checked window.
