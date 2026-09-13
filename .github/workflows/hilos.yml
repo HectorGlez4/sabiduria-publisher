@@ -48,6 +48,22 @@ jobs:
           git config user.name  "sabiduria-bot"
           git config user.email "bot@users.noreply.github.com"
 
+      # El corpus del sitio, para que el carril tenga citas nuevas que enlazar a
+      # su página. Se clona FUERA del workspace: dentro, git status del
+      # publicador vería la carpeta como cambio y el paso final intentaría
+      # comitear sin nada preparado. Solo citas y autores, sin historial.
+      #
+      # continue-on-error: si GitHub no puede clonar, el carril sigue con el
+      # archivo y el paso sale en rojo — degradar sin avisar escondería el fallo.
+      - name: Traer el corpus del sitio
+        continue-on-error: true
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse \
+            https://github.com/HectorGlez4/hectorglez4.github.io.git "$RUNNER_TEMP/sitio"
+          git -C "$RUNNER_TEMP/sitio" sparse-checkout set corpus/citas corpus/autores
+          echo "SDB_SITIO_DIR=$RUNNER_TEMP/sitio" >> "$GITHUB_ENV"
+          echo "citas: $(ls "$RUNNER_TEMP/sitio/corpus/citas" | wc -l)"
+
       - name: Publicar hilos
         env:
           SDB_THREADS_USER_ID: ${{ secrets.SDB_THREADS_USER_ID }}
@@ -64,7 +80,10 @@ jobs:
         run: |
           if [ -z "$(git status --porcelain)" ]; then echo "sin cambios"; exit 0; fi
           git add content/published/
-          git commit -m "hilos: $(date -u +'%F %H:%M UTC')"
+          [ -f content/hilos_sitio.json ] && git add content/hilos_sitio.json
+          # Con los hilos registrándose uno a uno puede no quedar nada que
+          # recoger, y un commit sin cambios preparados sale con error.
+          git diff --cached --quiet || git commit -m "hilos: $(date -u +'%F %H:%M UTC')"
           # Misma limpieza que publicar.yml: un rebase a medias de un intento
           # anterior hace fallar todo lo que venga detrás, y el registro de los
           # hilos ya publicados se pierde. Pasó el 28 a las 05:36: cuatro hilos

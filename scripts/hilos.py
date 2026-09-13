@@ -32,6 +32,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import random
+import os
 import pathlib
 import subprocess
 import sys
@@ -45,6 +48,21 @@ from src import variants  # noqa: E402
 from src.platforms import meta  # noqa: E402
 
 ARCHIVO = ROOT / "content" / "published"
+
+# El corpus del sitio. En el portátil está al lado; en GitHub Actions el workflow
+# lo clona y pasa la ruta por SDB_SITIO_DIR. Si no está, el carril sigue tirando
+# del archivo como siempre.
+SITIO = pathlib.Path(os.environ.get("SDB_SITIO_DIR", "/Users/hec/dev/sitio-sdb"))
+
+# Qué citas del sitio ya salieron como hilo. Va aparte de content/published/ a
+# propósito: published/ es la memoria del muro de Facebook e Instagram, y de ahí
+# leen la regla de no repetir tema en 90 días y la cadencia. Un hilo de Threads
+# no aparece en ese muro y no debe contar en sus reglas.
+REGISTRO_SITIO = ROOT / "content" / "hilos_sitio.json"
+
+# Una cita más larga que esto no deja sitio al autor y al enlace dentro de los
+# 500 caracteres: variants.threads la cortaría a mitad de frase.
+MAX_CITA = 360
 
 # Una por hora, que es lo pedido. El espaciado se mide contra el último hilo
 # REAL, no contra el reloj de la ejecución: si GitHub se salta horas —y se las
@@ -63,6 +81,83 @@ def _cuando(u: dict) -> datetime | None:
     if not t:
         return None
     return datetime.fromisoformat(t.replace("Z", "+00:00"))
+
+
+def _registro() -> dict:
+    if REGISTRO_SITIO.exists():
+        return json.loads(REGISTRO_SITIO.read_text(encoding="utf-8"))
+    return {}
+
+
+def _campo(texto: str, clave: str) -> str:
+    m = re.search(rf'^{clave}:\s*"(.*?)"\s*$', texto, re.M)
+    return m.group(1) if m else ""
+
+
+def corpus_sitio() -> list[dict]:
+    """Las citas del sitio, con lo que hace falta para componer el hilo."""
+    citas_dir = SITIO / "corpus" / "citas"
+    if not citas_dir.exists():
+        return []
+    autores = {}
+    for f in (SITIO / "corpus" / "autores").glob("*.yml"):
+        y = f.read_text(encoding="utf-8")
+        nac = re.search(r"^añoNacimiento:\s*(-?\d+)", y, re.M)
+        fal = re.search(r"^añoFallecimiento:\s*(-?\d+)", y, re.M)
+        años = f" ({nac.group(1)}-{fal.group(1)})" if nac and fal else ""
+        autores[f.stem] = {"nombre": _campo(y, "nombre") + años,
+                           "semblanza": _campo(y, "semblanza")}
+    fuera = []
+    for f in sorted(citas_dir.glob("*.md")):
+        md = f.read_text(encoding="utf-8")
+        slug, texto, autor = _campo(md, "slug"), _campo(md, "texto"), _campo(md, "autor")
+        if not (slug and texto and autor in autores) or len(texto) > MAX_CITA:
+            continue
+        obra = re.search(r'^\s+obra:\s*"(.*?)"', md, re.M)
+        fuera.append({"slug": slug, "texto": texto, "autor": autor,
+                      "nombre": autores[autor]["nombre"],
+                      "semblanza": autores[autor]["semblanza"],
+                      "obra": obra.group(1) if obra else ""})
+    # Orden barajado pero fijo: alfabético saldrían todas las de Amado Nervo
+    # seguidas, y aleatorio cada ejecución no se podría reproducir.
+    random.Random(20260913).shuffle(fuera)
+    return fuera
+
+
+def candidata_sitio() -> dict | None:
+    """La siguiente cita del sitio que no ha salido, sin repetir autor seguido."""
+    registro = _registro()
+    # Las que ya están en nuestras piezas salen por el archivo, con su imagen:
+    # publicarlas también por aquí sería el mismo texto dos veces.
+    nuestras = set()
+    for carpeta in ("published", "queue"):
+        for p in (ROOT / "content" / carpeta).glob("*.json"):
+            q = (json.loads(p.read_text(encoding="utf-8")).get("core") or {}).get("quote") or {}
+            if q.get("text"):
+                nuestras.add(q["text"].strip().lower()[:60])
+    ultimo_autor = ""
+    if registro:
+        ultimo_autor = max(registro.values(), key=lambda r: r["published_at"]).get("autor", "")
+    libres = [c for c in corpus_sitio()
+              if c["slug"] not in registro and c["texto"].strip().lower()[:60] not in nuestras]
+    for c in libres:
+        if c["autor"] != ultimo_autor:
+            return c
+    return libres[0] if libres else None
+
+
+def _unidad_de(c: dict) -> dict:
+    """Una pieza en memoria, solo para que variants.threads la componga igual.
+
+    No se guarda en ningún sitio: reutilizar variants es lo que garantiza que el
+    enlace se reserve antes de cortar a 500 y que el formato sea el de siempre.
+    """
+    return {"id": f"sitio:{c['slug']}", "cita_slug": c["slug"],
+            "core": {"hook": f'"{c["texto"]}"',
+                     "body": [c["semblanza"]] if c["semblanza"] else [],
+                     "question": "",
+                     "quote": {"text": c["texto"], "author": c["nombre"],
+                               "work": c["obra"]}}}
 
 
 def candidatas() -> list[tuple[pathlib.Path, dict]]:
@@ -84,6 +179,10 @@ def hilos_recientes() -> list[datetime]:
         t = _cuando(json.loads(p.read_text(encoding="utf-8")))
         if t:
             fuera.append(t)
+    # Los del sitio también: si no contaran, el espaciado de 55 min y el tope
+    # diario solo verían la mitad de los hilos y el carril publicaría el doble.
+    for r in _registro().values():
+        fuera.append(datetime.fromisoformat(r["published_at"].replace("Z", "+00:00")))
     return sorted(fuera)
 
 
@@ -153,29 +252,51 @@ def main() -> int:
             print(f"  · aún no toca: {motivo}")
             return 0
 
-        cola = candidatas()
-        if not cola:
-            print("no hay nada en el archivo que publicar")
-            return 0
-        ruta, u = cola[0]
+        # Primero una cita del sitio que no haya salido: el archivo ya salió
+        # entero en Threads —177 de 177— y seguir tirando de él es republicar.
+        # Cada cita del sitio es inédita aquí y enlaza a su propia página.
+        c = candidata_sitio()
+        if c:
+            u = _unidad_de(c)
+            texto = variants.build(u, "threads")["text"]
+            print(f"\n▶ sitio · {c['nombre'][:30]} · «{c['texto'][:44]}…»")
+            print(f"  {len(texto)} car. · …{texto.splitlines()[-1][-70:]}")
+            if a.dry_run:
+                print("  · dry-run: no se publica nada")
+                return 0
+            res = meta.publish_threads(None, texto)
+            registro = _registro()
+            registro[c["slug"]] = {"post_id": res.get("post_id"),
+                                   "published_at": ahora.isoformat(),
+                                   "autor": c["autor"]}
+            REGISTRO_SITIO.write_text(
+                json.dumps(registro, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"  ✓ threads: {res.get('post_id')}")
+            _registrar(REGISTRO_SITIO, f"sitio {c['slug']}")
+        else:
+            cola = candidatas()
+            if not cola:
+                print("no hay nada que publicar, ni en el sitio ni en el archivo")
+                return 0
+            ruta, u = cola[0]
 
-        texto = variants.build(u, "threads")["text"]
-        anterior = _cuando(u)
-        marca = "reemitida" if anterior else "inédita en Threads"
-        print(f"\n▶ {u['id']} · {(u.get('core') or {}).get('subject', '')[:50]} · {marca}")
-        print(f"  {len(texto)} car.")
-        if a.dry_run:
-            print("  · dry-run: no se publica nada")
-            return 0
+            texto = variants.build(u, "threads")["text"]
+            anterior = _cuando(u)
+            marca = "reemitida" if anterior else "inédita en Threads"
+            print(f"\n▶ {u['id']} · {(u.get('core') or {}).get('subject', '')[:50]} · {marca}")
+            print(f"  {len(texto)} car.")
+            if a.dry_run:
+                print("  · dry-run: no se publica nada")
+                return 0
 
-        # Threads publica texto con enlace: no necesita imagen. El adaptador pide
-        # image_url por firma, pero un hilo de solo texto es lo que rinde ahí.
-        res = meta.publish_threads(None, texto)
-        res["published_at"] = ahora.isoformat()
-        u.setdefault("results", {})["threads"] = res
-        ruta.write_text(json.dumps(u, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"  ✓ threads: {res.get('post_id')}")
-        _registrar(ruta, u["id"])
+            # Threads publica texto con enlace: no necesita imagen. El adaptador
+            # pide image_url por firma, pero un hilo de solo texto es lo que rinde.
+            res = meta.publish_threads(None, texto)
+            res["published_at"] = ahora.isoformat()
+            u.setdefault("results", {})["threads"] = res
+            ruta.write_text(json.dumps(u, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"  ✓ threads: {res.get('post_id')}")
+            _registrar(ruta, u["id"])
 
         if n + 1 < max(a.max, 1):
             print(f"  · esperando {MINUTOS_ENTRE_HILOS} min")
