@@ -28,6 +28,14 @@ def delete(url: str, token: str) -> dict:
     return payload
 
 
+def get(url: str, token: str, fields: str) -> dict:
+    response = requests.get(url, params={"access_token": token, "fields": fields}, timeout=45)
+    payload = response.json()
+    if not response.ok:
+        raise RuntimeError(f"GET failed ({response.status_code}): {payload}")
+    return payload
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", type=Path)
@@ -45,23 +53,55 @@ def main() -> int:
         raise SystemExit("unexpected Threads target")
 
     output = {"run_group_id": manifest["run_group_id"], "started_at": now(), "results": {}}
-    try:
+    if manifest.get("delete_facebook_feed", True):
+      try:
         output["results"]["facebook_feed"] = {
             "status": "deleted",
             "target": expected_facebook,
             "response": delete(f"{GRAPH}/{expected_facebook}", os.environ["SDB_PAGE_TOKEN"]),
         }
-    except Exception as exc:  # noqa: BLE001
+      except Exception as exc:  # noqa: BLE001
         output["results"]["facebook_feed"] = {"status": "failed", "error": str(exc)[:500]}
 
-    try:
+    if manifest.get("delete_threads_feed", True):
+      try:
         output["results"]["threads_feed"] = {
             "status": "deleted",
             "target": expected_threads,
             "response": delete(f"{THREADS_GRAPH}/{expected_threads}", os.environ["SDB_THREADS_TOKEN"]),
         }
-    except Exception as exc:  # noqa: BLE001
+      except Exception as exc:  # noqa: BLE001
         output["results"]["threads_feed"] = {"status": "failed", "error": str(exc)[:500]}
+
+    if manifest.get("delete_facebook_story"):
+        try:
+            page_id = expected_facebook.split("_", 1)[0]
+            stories = get(
+                f"{GRAPH}/{page_id}/stories",
+                os.environ["SDB_PAGE_TOKEN"],
+                "id,creation_time,status",
+            ).get("data", [])
+            expected_start = datetime.fromisoformat(manifest["facebook_story_created_after"])
+            expected_end = datetime.fromisoformat(manifest["facebook_story_created_before"])
+            matches = []
+            for story in stories:
+                raw = story.get("creation_time")
+                if not raw:
+                    continue
+                created = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+                if expected_start <= created <= expected_end:
+                    matches.append(story)
+            if len(matches) != 1:
+                raise RuntimeError(f"expected exactly one Story in guarded window; found {len(matches)}: {matches}")
+            story_id = matches[0]["id"]
+            output["results"]["facebook_story"] = {
+                "status": "deleted",
+                "target": story_id,
+                "matched_creation_time": matches[0].get("creation_time"),
+                "response": delete(f"{GRAPH}/{story_id}", os.environ["SDB_PAGE_TOKEN"]),
+            }
+        except Exception as exc:  # noqa: BLE001
+            output["results"]["facebook_story"] = {"status": "failed", "error": str(exc)[:500]}
 
     output["finished_at"] = now()
     args.output.parent.mkdir(parents=True, exist_ok=True)

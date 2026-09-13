@@ -3,5 +3,10 @@
   "reason": "User cancelled rejected metacontent after visual QA failure",
   "facebook_post_id": "100618132774413_1094337836724209",
   "instagram_post_id": "18136362397617451",
-  "threads_post_id": "18066257342767471"
+  "threads_post_id": "18066257342767471",
+  "delete_facebook_feed": false,
+  "delete_threads_feed": false,
+  "delete_facebook_story": true,
+  "facebook_story_created_after": "2026-09-13T22:08:00+00:00",
+  "facebook_story_created_before": "2026-09-13T22:09:30+00:00"
 }

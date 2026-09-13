@@ -1,0 +1,18 @@
+{
+  "run_group_id": "LAB-SMOKE-001-CANCEL",
+  "started_at": "2026-09-13T22:29:48.308241+00:00",
+  "results": {
+    "facebook_feed": {
+      "status": "deleted",
+      "target": "100618132774413_1094337836724209",
+      "response": {
+        "success": true
+      }
+    },
+    "threads_feed": {
+      "status": "failed",
+      "error": "DELETE failed (500): {'error': {'message': 'Application does not have permission for this action', 'code': 10, 'type': 'THApiException', 'fbtrace_id': 'A2MpRgOarMx6w1Rddxx8tds'}}"
+    }
+  },
+  "finished_at": "2026-09-13T22:29:52.813663+00:00"
+}
