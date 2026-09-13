@@ -79,7 +79,7 @@ def main() -> int:
             stories = get(
                 f"{GRAPH}/{page_id}/stories",
                 os.environ["SDB_PAGE_TOKEN"],
-                "id,creation_time,status",
+                "id,post_id,creation_time,status",
             ).get("data", [])
             expected_start = datetime.fromisoformat(manifest["facebook_story_created_after"])
             expected_end = datetime.fromisoformat(manifest["facebook_story_created_before"])
@@ -97,7 +97,9 @@ def main() -> int:
                     matches.append(story)
             if len(matches) != 1:
                 raise RuntimeError(f"expected exactly one Story in guarded window; found {len(matches)}: {matches}")
-            story_id = matches[0]["id"]
+            story_id = matches[0].get("id") or matches[0].get("post_id")
+            if not story_id:
+                raise RuntimeError(f"guarded Story matched but returned no deletable id: {matches[0]}")
             output["results"]["facebook_story"] = {
                 "status": "deleted",
                 "target": story_id,
