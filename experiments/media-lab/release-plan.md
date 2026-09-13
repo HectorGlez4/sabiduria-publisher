@@ -25,12 +25,14 @@ The verified matrix currently contains 136 required cells. A conservative ceilin
 
 ## Timing policy
 
+- A temporary Codex heartbeat runs daily at 10:10, 15:10 and 20:10 Europe/Madrid from 2026-09-14 through 2026-10-01 inclusive. Each run may publish at most one lab coverage cell, so related releases are separated rather than emitted as a three-network burst.
 - Before every release, read the live production Actions runs and latest platform post times.
 - Never move or suppress a production post. If a production upload is active, hold the lab release and continue offline work.
 - Avoid sending native and API variants of the same factual creative to the same feed. Matched route pairs use different verified topics.
 - The production publisher checks hourly at minute 23 and the normal Threads lane at minute 41. Because Threads is already high-frequency, every Threads lab post records both neighboring normal posts as confounders.
 - The Day 2 Android variant has no fixed automated schedule. Earliest candidate window is 2026-09-14 after a fresh collision check; the three networks should be staggered if their live queues diverge.
 - The Anna API Story pair and Merian Android Story pair are publishable masters, but they must not be released together or immediately after their related feed variants. Stories require 6-hour and pre-expiry measurement availability, so use a window that can be observed.
+- Android slots are conditional on the authorized Samsung being connected and the brand identity being visible. If the phone is unavailable, the run records the route state and continues API-safe creation or measurements; it must not substitute a personal account or falsely mark the cell covered.
 
 ## Measurement windows
 

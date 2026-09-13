@@ -1,10 +1,11 @@
 # Media lab progress
 
-Updated: 2026-09-13 22:30 Europe/Madrid
+Updated: 2026-09-13 22:40 Europe/Madrid
 
 ## Current checkpoint
 
 - Campaign Day 1 started on 2026-09-13.
+- Temporary Codex heartbeat `media-lab-hasta-1-octubre` is active at 10:10, 15:10 and 20:10 Europe/Madrid each day through 2026-10-01 inclusive. It may publish at most one coverage cell per execution after a live collision check.
 - Mandatory brand identities are verified natively for Facebook, Instagram and Threads.
 - The Samsung SM-S918B is connected and authorized over ADB on Android 16.
 - Edits is installed and opens to Projects. Still-image import, the audio picker, local export and handoff to Instagram Reel plus Facebook brand Reel/Story composers are verified; adding licensed audio and producing a publishable export remain unverified.
@@ -49,7 +50,7 @@ Updated: 2026-09-13 22:30 Europe/Madrid
 - Verify Edits account association, licensed audio, publishable export and both API-EDITS / ANDROID-EDITS routes.
 - Add owned/licensed audio and create a publishable 8–15 second Edits export; current silent export is only technical evidence.
 - Capture baseline metrics for current production posts at comparable ages.
-- No recurring automation has been created.
+- The temporary automation must stop after its final 2026-10-01 window. It does not authorize paid services, production-queue edits, duplicate uploads or publication to an ambiguous/personal account.
 
 ## Next safe actions
 
