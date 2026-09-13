@@ -20,7 +20,10 @@ import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qs, urlparse
 
-STATE = {"polls": 0, "publish_attempts": 0, "calls": []}
+# hilos: lo que "hay en Threads". threads_publish_500: cuántas veces seguidas
+# threads_publish contesta 500; con sale_igual, el hilo sale aunque conteste 500.
+STATE = {"polls": 0, "publish_attempts": 0, "calls": [],
+         "hilos": [], "threads_publish_500": 0, "sale_igual": False}
 IMAGE_BYTES = b""
 
 
@@ -64,6 +67,9 @@ class Handler(BaseHTTPRequestHandler):
         if path == "/PAGE_POST_1":
             return self._json(200, {"permalink_url": "https://www.facebook.com/pagina/posts/1"})
 
+        if path.endswith("/threads"):
+            return self._json(200, {"data": list(reversed(STATE["hilos"]))})
+
         # polling del contenedor
         if re.fullmatch(r"/container_\d+", path):
             STATE["polls"] += 1
@@ -106,9 +112,24 @@ class Handler(BaseHTTPRequestHandler):
             return self._json(200, {"id": "IG_POST_1"})
 
         if path.endswith("/threads"):
+            STATE["th_texto"] = data.get("text", [""])[0]
             return self._json(200, {"id": "th_container_1"})
         if path.endswith("/threads_publish"):
-            return self._json(200, {"id": "TH_POST_1"})
+            def sale():
+                import datetime as dt
+                hilo_id = f"TH_POST_{len(STATE['hilos']) + 1}"
+                STATE["hilos"].append({
+                    "id": hilo_id, "text": STATE.get("th_texto", ""),
+                    "timestamp": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S+0000"),
+                    "permalink": f"https://www.threads.net/@x/post/{hilo_id}"})
+                return hilo_id
+            if STATE["threads_publish_500"] > 0:
+                STATE["threads_publish_500"] -= 1
+                if STATE["sale_igual"]:
+                    sale()
+                return self._json(500, {"error": {"code": 2, "message":
+                    "An unexpected error has occurred. Please retry your request later."}})
+            return self._json(200, {"id": sale()})
 
         return self._json(404, {"error": {"message": f"sin ruta {path}", "code": 100}})
 

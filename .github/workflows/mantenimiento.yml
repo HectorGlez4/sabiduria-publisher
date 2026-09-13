@@ -13,6 +13,7 @@ on:
           - corregir-enlaces
           - diagnostico-meta
           - threads-user-id
+          - threads-recientes
           - conciliar
           - reels-estado
           - rendimiento
@@ -39,6 +40,7 @@ jobs:
           SDB_PAGE_TOKEN:      ${{ secrets.SDB_PAGE_TOKEN }}
           SDB_PAGE_ID:         ${{ secrets.SDB_PAGE_ID }}
           SDB_THREADS_TOKEN:   ${{ secrets.SDB_THREADS_TOKEN }}
+          SDB_THREADS_USER_ID: ${{ secrets.SDB_THREADS_USER_ID }}
         run: |
           ARGS=""
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="--dry-run"
@@ -52,6 +54,8 @@ jobs:
             # volver a generarlo y manejarlo a mano. El id NO es secreto: es
             # público en el perfil, así que imprimirlo en el log no expone nada.
             threads-user-id) python3 scripts/threads_user_id.py ;;
+            # Solo lee: lo que Threads tiene de verdad, con los duplicados marcados.
+            threads-recientes) python3 scripts/threads_recientes.py ;;
             # Compara el feed de la página con lo que el repo cree haber
             # publicado. Con --dry-run solo informa; sin él registra los ids que
             # Meta confirma. Nunca borra nada.

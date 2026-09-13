@@ -276,6 +276,34 @@ def _registrar(descripcion: str, aplicar) -> bool:
           f"{INTENTOS_DE_REGISTRO} intentos", file=sys.stderr)
     return False
 
+DIAS_DE_MEMORIA_THREADS = 2   # ~50 hilos a uno por hora: lo que devuelve buscar_hilo
+
+
+def _ya_en_threads(texto: str) -> dict | None:
+    """
+    Si este texto ya está en Threads aunque el repo no lo tenga registrado.
+
+    Es la última línea contra los duplicados: da igual por qué se perdió el
+    registro —un 500 que sí publicó, un push que no llegó—, lo que hay en Threads
+    manda. Si Threads no contesta se publica igual: parar cada hora por una
+    consulta fallida cuesta más que el duplicado raro que se colaría.
+    """
+    try:
+        ya = meta.buscar_hilo(
+            texto, datetime.now(timezone.utc) - timedelta(days=DIAS_DE_MEMORIA_THREADS))
+    except meta.MetaError as e:
+        print(f"  ! no se pudo consultar Threads ({e}); se publica sin comprobar",
+              file=sys.stderr)
+        return None
+    if ya:
+        # Threads da «…+0000»; el registro compara published_at como texto, así
+        # que se guarda con el mismo formato que los demás.
+        ya["timestamp"] = datetime.strptime(ya["timestamp"], "%Y-%m-%dT%H:%M:%S%z").isoformat()
+        print(f"  · ya estaba en Threads ({ya['id']}, {ya.get('timestamp')}): "
+              "se registra sin republicar")
+    return ya
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--max", type=int, default=1, metavar="N",
@@ -302,10 +330,13 @@ def main() -> int:
             if a.dry_run:
                 print("  · dry-run: no se publica nada")
                 return 0
-            res = meta.publish_threads(None, texto)
+            ya = _ya_en_threads(texto)
+            res = ({"post_id": ya["id"]} if ya else meta.publish_threads(None, texto))
             entrada = {"post_id": res.get("post_id"),
-                       "published_at": ahora.isoformat(),
+                       "published_at": ya["timestamp"] if ya else ahora.isoformat(),
                        "autor": c["autor"]}
+            if ya:
+                entrada["conciliado"] = True
 
             def aplicar(slug=c["slug"], entrada=entrada):
                 # Relee el registro del disco: tras el reset es el de origin, que
@@ -338,8 +369,13 @@ def main() -> int:
 
             # Threads publica texto con enlace: no necesita imagen. El adaptador
             # pide image_url por firma, pero un hilo de solo texto es lo que rinde.
-            res = meta.publish_threads(None, texto)
-            res["published_at"] = ahora.isoformat()
+            ya = _ya_en_threads(texto)
+            if ya:
+                res = {"post_id": ya["id"], "url": ya.get("permalink"),
+                       "published_at": ya["timestamp"], "conciliado": True}
+            else:
+                res = meta.publish_threads(None, texto)
+                res["published_at"] = ahora.isoformat()
 
             def aplicar(ruta=ruta, res=res):
                 # Relee la pieza: tras el reset es la de origin, que puede traer
@@ -355,7 +391,8 @@ def main() -> int:
             print(f"  ✓ threads: {res.get('post_id')}")
             _registrar(u["id"], aplicar)
 
-        if n + 1 < max(a.max, 1):
+        # Si solo se registró uno que ya estaba, no salió nada nuevo: no hay que esperar.
+        if n + 1 < max(a.max, 1) and not ya:
             print(f"  · esperando {MINUTOS_ENTRE_HILOS} min")
             time.sleep(MINUTOS_ENTRE_HILOS * 60 + 30)
     return 0

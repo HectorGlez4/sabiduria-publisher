@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import os
 import time
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -363,13 +364,75 @@ def publish_threads(image_url: str | None, text: str) -> dict:
     else:
         campos["media_type"] = "TEXT"
 
+    # Margen por si el reloj del runner y el de Meta no coinciden.
+    antes_de_publicar = datetime.now(timezone.utc) - timedelta(minutes=10)
     container = _post(f"{THREADS_GRAPH}/{user_id}/threads", campos)
     time.sleep(5)
-    out = _post(
-        f"{THREADS_GRAPH}/{user_id}/threads_publish",
-        {"creation_id": container["id"], "access_token": token},
-    )
+    for intento in range(1, INTENTOS_THREADS_PUBLISH + 1):
+        try:
+            out = _post(
+                f"{THREADS_GRAPH}/{user_id}/threads_publish",
+                {"creation_id": container["id"], "access_token": token},
+            )
+            break
+        except MetaError as e:
+            # Un error de threads_publish no dice si el hilo salió. El 13 de
+            # septiembre un HTTP 500 «retry later» dejó esa duda: rendirse puede
+            # dejar un hilo publicado sin registrar —y la hora siguiente lo
+            # duplica—, y reintentar sin mirar no aclara nada. Se mira primero.
+            # Reintentar es seguro: un contenedor solo se publica una vez.
+            time.sleep(10)
+            try:
+                ya = buscar_hilo(text, antes_de_publicar)
+            except MetaError:
+                ya = None
+            if ya:
+                print(f"  · threads_publish falló ({e}), pero el hilo salió: {ya['id']}")
+                out = {"id": ya["id"]}
+                break
+            if intento == INTENTOS_THREADS_PUBLISH:
+                raise
+            print(f"  · threads_publish, intento {intento}: {e} · no salió, reintento")
     return {"post_id": out["id"], "url": f"https://www.threads.net/@sabiduriabolsillo/post/{out['id']}"}
+
+
+INTENTOS_THREADS_PUBLISH = 3
+
+
+def huella(texto: str | None) -> str:
+    """Lo que identifica un hilo: el principio del texto, sin diferencias de espacios.
+    Solo el principio, por si Threads retoca el enlace del final."""
+    return " ".join((texto or "").split())[:120]
+
+
+def threads_recientes(limite: int = 25) -> list[dict]:
+    """Los últimos hilos de la cuenta según Threads, no según el repo. Solo lee."""
+    user_id = os.environ.get("SDB_THREADS_USER_ID") or "me"
+    d = _get(
+        f"{THREADS_GRAPH}/{user_id}/threads",
+        {"fields": "id,text,timestamp,permalink", "limit": limite,
+         "access_token": os.environ["SDB_THREADS_TOKEN"]},
+    )
+    return d.get("data", [])
+
+
+def buscar_hilo(text: str, desde: datetime, limite: int = 50) -> dict | None:
+    """
+    El hilo con este texto publicado después de `desde`, o None.
+
+    Publicar en Meta y registrarlo en git son dos pasos, y entre ellos se pierden
+    cosas: un 500 que sí publicó, un push que no llegó. El registro del repo dice
+    lo que creemos haber publicado; esto se lo pregunta a Threads.
+    """
+    buscada = huella(text)
+    for h in threads_recientes(limite):
+        try:
+            cuando = datetime.strptime(h["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        except (KeyError, ValueError):
+            continue
+        if cuando >= desde and huella(h.get("text")) == buscada:
+            return h
+    return None
 
 
 # ─────────────────────────── Descubrimiento ───────────────────────────
