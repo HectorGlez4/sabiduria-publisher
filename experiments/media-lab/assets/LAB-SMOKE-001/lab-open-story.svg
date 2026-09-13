@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17253b"/>
+      <stop offset="0.6" stop-color="#273d5b"/>
+      <stop offset="1" stop-color="#9d7734"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+  <circle cx="900" cy="230" r="330" fill="#e2b85b" opacity="0.13"/>
+  <circle cx="120" cy="1700" r="390" fill="#f7ecd0" opacity="0.06"/>
+  <text x="90" y="230" fill="#e6bd63" font-family="Poppins, sans-serif" font-size="37" font-weight="600" letter-spacing="7">LABORATORIO ABIERTO</text>
+  <text x="90" y="410" fill="#fff8e8" font-family="Lora, serif" font-size="92" font-weight="600">Ayúdanos a elegir</text>
+  <text x="90" y="515" fill="#fff8e8" font-family="Lora, serif" font-size="92" font-weight="600">la próxima prueba</text>
+  <rect x="90" y="670" width="900" height="250" rx="38" fill="#f8edcf"/>
+  <text x="540" y="775" text-anchor="middle" fill="#17253b" font-family="Poppins, sans-serif" font-size="52" font-weight="600">MISTERIO VISUAL</text>
+  <text x="540" y="850" text-anchor="middle" fill="#9d7734" font-family="Lora, serif" font-size="38">observar antes de revelar</text>
+  <text x="540" y="1035" text-anchor="middle" fill="#e6bd63" font-family="Poppins, sans-serif" font-size="34" font-weight="600" letter-spacing="5">O</text>
+  <rect x="90" y="1150" width="900" height="250" rx="38" fill="#f8edcf"/>
+  <text x="540" y="1255" text-anchor="middle" fill="#17253b" font-family="Poppins, sans-serif" font-size="52" font-weight="600">TRIVIA</text>
+  <text x="540" y="1330" text-anchor="middle" fill="#9d7734" font-family="Lora, serif" font-size="38">elegir antes de explicar</text>
+  <text x="540" y="1535" text-anchor="middle" fill="#fff8e8" font-family="Poppins, sans-serif" font-size="39">Vota en la encuesta</text>
+  <line x1="90" y1="1685" x2="990" y2="1685" stroke="#e6bd63" stroke-width="3" opacity="0.65"/>
+  <text x="90" y="1770" fill="#fff8e8" font-family="Poppins, sans-serif" font-size="29" letter-spacing="4">SABIDURÍA DE BOLSILLO</text>
+  <text x="990" y="1770" text-anchor="end" fill="#e6bd63" font-family="Poppins, sans-serif" font-size="25">LAB-SMOKE-001</text>
+</svg>

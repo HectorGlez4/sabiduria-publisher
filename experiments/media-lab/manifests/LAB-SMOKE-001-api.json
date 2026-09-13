@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-SMOKE-001-API",
+  "family_id": "LAB-SMOKE-001",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-SMOKE-001/lab-open-feed.jpg",
+  "asset_sha256": "b72f38f23a4f4674ceb9005a4ef52d5eee8129b58b898ecbd76e178a9b7fcdc4",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-SMOKE-001/lab-open-feed.jpg",
+  "platforms": ["facebook", "instagram", "threads"],
+  "captions": {
+    "facebook": "Abrimos el laboratorio de Sabiduría de Bolsillo. Estamos probando nuevas maneras de contar historias y queremos empezar por la que más curiosidad te dé.\n\n¿Qué quieres ver primero?\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Esta publicación forma parte de una prueba pública adicional del laboratorio.\n\n#SabiduriaDeBolsillo #LaboratorioAbierto",
+    "instagram": "Abrimos el laboratorio de Sabiduría de Bolsillo. Estamos probando nuevas maneras de contar historias y queremos empezar por la que más curiosidad te dé.\n\n¿Qué quieres ver primero?\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Esta publicación forma parte de una prueba pública adicional del laboratorio.\n\n#SabiduriaDeBolsillo #LaboratorioAbierto",
+    "threads": "Abrimos el laboratorio de Sabiduría de Bolsillo. ¿Qué formato quieres ver primero?\n\nA) Misterio visual\nB) Trivia\nC) Historia en 3 escenas\n\nResponde A, B o C. Prueba pública adicional del laboratorio."
+  }
+}
