@@ -265,6 +265,19 @@ def main() -> int:
             i_re += 1
             nuevas.append((None, reemision(orig, tipo, cuando, 50 + i_re)))
 
+    # Enlazar las citas a su página del sitio antes de escribirlas: lo que
+    # llegue a la cola sin `cita_slug` publicará su hilo apuntando a la portada.
+    # Si el repo del sitio no está en esta máquina no se enlaza nada, pero se
+    # encola igual — un hilo con enlace a la portada es mejor que un hueco.
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from enlazar_citas import Emparejador, corpus_del_sitio, enlazar  # noqa: E402
+    _corpus = corpus_del_sitio()
+    if _corpus:
+        _emp = Emparejador(_corpus)
+        _n = sum(enlazar(u, _emp) for _, u in nuevas)
+        if _n:
+            print(f"  {_n} citas enlazadas a su página del sitio")
+
     # Alternancia sobre el orden real, contando lo ya encolado.
     todo = sorted([(None, u) for _, u in cola] + nuevas,
                   key=lambda x: x[1]["publish_at"])

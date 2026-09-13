@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-03-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Wangari Maathai y la conferencia de Oslo de 2004",
+    "hook": "La frase circula sola, como un cartel de oficina. En la conferencia de donde sale, lo que se estaba pidiendo era leña, agua limpia y tierra que no se fuera con la lluvia.",
+    "quote": {
+      "text": "En el curso de la historia llega un momento en que la humanidad es llamada a pasar a un nuevo nivel de conciencia, a alcanzar un terreno moral más alto. Un momento en que tenemos que despojarnos del miedo y darnos esperanza unos a otros. Ese momento es ahora.",
+      "author": "Wangari Maathai",
+      "work": "Conferencia Nobel de la Paz, Oslo, 10 de diciembre de 2004",
+      "attribution_verified": true
+    },
+    "body": [
+      "Nació en Nyeri, Kenia, en 1940. En 1971 se doctoró en la Universidad de Nairobi y fue la primera mujer de África oriental y central en obtener un doctorado; después, la primera en dirigir un departamento universitario. En 1977 fundó el Green Belt Movement. En la propia conferencia de Oslo explica de dónde salió la idea, y no habla de conciencia planetaria: dice que respondía a necesidades que habían identificado las mujeres del campo —falta de leña, agua potable, dietas equilibradas, techo e ingresos— y que plantar árboles fue la manera natural de atender algunas de ellas. El movimiento lleva más de cincuenta y un millones de árboles plantados en Kenia.",
+      "El trabajo tuvo un precio que la frase no deja ver. Bajo el gobierno de Daniel arap Moi, entre 1978 y 2002, la policía keniana la agredió con regularidad; en 1992 fue detenida. Cuando el comité noruego le dio el Nobel de la Paz en 2004, fue la primera mujer africana en recibirlo y la primera galardonada elegida por un trabajo centrado en la sostenibilidad ambiental. El anuncio se discutió: se preguntó en voz alta qué tenía que ver plantar árboles con la paz. La línea sobre el nuevo nivel de conciencia la dice alguien a quien habían golpeado por plantarlos, y la dice después de hablar de leña y de agua, no antes.",
+      "La conferencia tampoco termina en la exhortación. Termina en un recuerdo. Maathai cuenta que de niña iba a un arroyo junto a su casa a buscar agua para su madre, y que entre las hojas de malanga intentaba en vano recoger las tiras de huevos de rana, creyendo que eran cuentas de collar. Más de cincuenta años después, dice, el arroyo se ha secado, las mujeres caminan largas distancias por un agua que no siempre está limpia, y los niños nunca sabrán lo que han perdido. El desafío, escribe, es devolverles a los renacuajos su casa. Murió en 2011."
+    ],
+    "question": "¿Qué se pierde de una frase cuando se la separa de lo que la hizo necesaria?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#WangariMaathai", "#Kenia", "#GreenBeltMovement"],
+    "extended": ["#Citas", "#Africa", "#Nobel", "#MedioAmbiente", "#Historia", "#Arboles", "#Mujeres", "#Oslo"]
+  },
+  "sources": [
+    {
+      "claim": "Conferencia Nobel de Wangari Maathai, pronunciada en Oslo, Noruega, el 10 de diciembre de 2004; fuente citada: Maathai, Wangari, «Nobel Lecture», Nobel Foundation. Reproduce literalmente el arranque del pasaje: «In the course of history, there comes a time when humanity is called to shift to a new level of consciousness...». Reproduce también el pasaje sobre el origen del movimiento: «In 1977, when we started the Green Belt Movement, I was partly responding to needs identified by rural women, namely lack of firewood, clean drinking water, balanced diets, shelter and income... Tree planting became a natural choice to address some of the initial basic needs identified by women». Y el cierre: «As I conclude I reflect on my childhood experience when I would visit a stream next to our home to fetch water for my mother... Playing among the arrowroot leaves I tried in vain to pick up the strands of frogs' eggs, believing they were beads».",
+      "source": "Encyclopedia.com, reproducción del texto de la conferencia Nobel acreditado a la Nobel Foundation (nobelprize.org bloquea la descarga automatizada, por lo que el texto se cotejó en reproducciones que acreditan a la Fundación Nobel)",
+      "url": "https://www.encyclopedia.com/environment/energy-government-and-defense-magazines/wangari-maathai-nobel-lecture"
+    },
+    {
+      "claim": "Texto completo del pasaje citado, atribuido al discurso de aceptación del Premio Nobel de la Paz de Wangari Maathai de 2004: «In the course of history there comes a time when humanity is called to shift to a new level of consciousness. To reach a higher moral ground. A time when we have to shed our fear and give hope to each other. That time is now».",
+      "source": "Taking Root: The Vision of Wangari Maathai, sitio oficial del documental de Lisa Merton y Alan Dater, sección «Words from Wangari»",
+      "url": "https://takingrootfilm.com/the-film/words-from-wangari/"
+    },
+    {
+      "claim": "Cierre de la conferencia: «Playing among the arrowroot leaves I tried in vain to pick up the strands of frogs' eggs, believing they were beads»; «Today, over 50 years later, the stream has dried up, women walk long distances for water, which is not always clean, and children will never know what they have lost»; «The challenge is to restore the home of the tadpoles and give back to our children a world of beauty and wonder».",
+      "source": "Reproducciones independientes del texto íntegro de la conferencia Nobel de 2004, localizadas por búsqueda de las frases exactas",
+      "url": "https://speakingfrog.com/?p=1033"
+    },
+    {
+      "claim": "Wangari Maathai (1940-2011) nació en Nyeri, Kenia. Obtuvo su doctorado en la Universidad de Nairobi en 1971 y fue la primera mujer de África oriental y central en conseguir un doctorado, así como la primera en dirigir un departamento universitario. Fundó el Green Belt Movement en 1977. Recibió el Premio Nobel de la Paz en 2004 como fundadora del movimiento.",
+      "source": "The Green Belt Movement, sitio oficial de la organización fundada por Maathai, biografía",
+      "url": "https://www.greenbeltmovement.org/wangari-maathai/"
+    },
+    {
+      "claim": "El Green Belt Movement fue fundado en 1977 y ha plantado más de 51 millones de árboles en Kenia. Maathai fue la primera mujer africana en ganar el Premio Nobel de la Paz, la primera mujer de África oriental en obtener un doctorado y la primera en dirigir un departamento universitario. Fue detenida en 1992 por sus actividades políticas y sufrió agresiones regulares de la policía keniana durante el gobierno de Daniel arap Moi (1978-2002).",
+      "source": "London School of Economics and Political Science, LSE Firoz Lalji Institute for Africa, Hub for African Thought, ficha «Wangari Maathai»",
+      "url": "https://www.lse.ac.uk/africa/hub-for-african-thought/thinkers/wangari-maathai"
+    },
+    {
+      "claim": "Maathai fue la primera mujer africana en recibir el Premio Nobel de la Paz y la primera galardonada seleccionada por actividades centradas principalmente en la sostenibilidad ambiental. El Green Belt Movement se fundó en 1977 con el fin de regenerar los bosques de África y poner fin a la privación y el conflicto creados por la deforestación, y ha plantado más de 51 millones de árboles en Kenia.",
+      "source": "The Green Belt Movement, página institucional sobre el Premio Nobel de la Paz de 2004",
+      "url": "https://www.greenbeltmovement.org/the-nobel-peace-prize/"
+    }
+  ],
+  "do_not_use": [
+    "No citar esta frase como si fuera un lema general sobre el optimismo. En la conferencia aparece dentro de un texto cuyo contenido concreto es la leña, el agua potable, la erosión del suelo y la represión política en Kenia.",
+    "No dar por buena una sola puntuación del original inglés. Circulan dos versiones: una con coma («...a new level of consciousness, to reach a higher moral ground») y otra con punto y frase aparte («...a new level of consciousness. To reach a higher moral ground»). Aquí se traduce al español y no se presenta ninguna de las dos como la puntuación canónica.",
+    "No decir que el texto se verificó en nobelprize.org. El sitio de la Fundación Nobel devuelve error 403 a la descarga automatizada. El texto se cotejó en reproducciones independientes, una de ellas acreditada expresamente a la Nobel Foundation.",
+    "No atribuir la frase a su discurso de aceptación en la ceremonia como si fuera distinto de la conferencia Nobel. Las fuentes la sitúan en la intervención de Oslo del 10 de diciembre de 2004; no se ha podido separar con certeza documental el texto de la ceremonia del de la conferencia, así que aquí se nombra solo la conferencia Nobel.",
+    "No decir que fundó el movimiento plantando siete árboles en Nairobi. Es un dato que circula mucho y no se localizó en ninguna fuente institucional durante esta verificación.",
+    "No presentar su doctorado como el primero de una mujer africana. Las fuentes precisan la región: primera mujer de África oriental y central.",
+    "No convertir la cifra de árboles en un dato cerrado. Las fuentes dicen «más de 51 millones», no una cantidad exacta, y siguen plantando.",
+    "No llamarla «la mujer árbol» ni usar apodos de prensa. Fue bióloga, catedrática de anatomía veterinaria y diputada; reducirla al apodo borra eso."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
