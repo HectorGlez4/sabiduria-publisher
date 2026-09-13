@@ -1,6 +1,6 @@
 # Scheduled media-lab preflight
 
-Checked: 2026-09-13 22:49 Europe/Madrid
+Checked: 2026-09-13 23:21 Europe/Madrid
 
 ## Schedule
 
@@ -18,9 +18,9 @@ Checked: 2026-09-13 22:49 Europe/Madrid
 |---|---|---|
 | Codex heartbeat | Ready | Active automation TOML exists and targets this thread. |
 | Mac power | Ready while connected to AC | Mac was on AC power. Temporary launchd job `com.sabiduria.medialab.keepawake` runs `caffeinate -s` through the campaign window; the display may sleep and the assertion applies only while AC remains connected. |
-| Internet | Partial | Meta Graph and raw GitHub content respond. `github.com` and `api.github.com` timed out during the preflight. Retry before every API workflow dispatch or push. |
-| GitHub credentials | Present, not remotely validated | A token exists in the keychain. `gh auth status` could not validate it while the GitHub API route was unreachable. Do not classify it as expired unless validation still fails after connectivity returns. |
-| Git worktree | Lab commit pending push | `main` is one commit ahead of `origin/main`; three pre-existing untracked docs remain untouched. |
+| Internet | Ready | GitHub returned HTTP 200, GitHub API operations succeeded, Meta Graph responds and raw asset hosting is reachable. Every run still performs its normal live check. |
+| GitHub credentials | Ready | `gh auth status` validated `HectorGlez4`; token includes `repo` and `workflow`. All five required Meta secret names are present. No secret values were exposed. |
+| Git worktree | Synchronized | Pending media-lab commits were pushed to `origin/main`; three pre-existing untracked docs remain untouched. |
 | Samsung phone | Ready now | SM-S918B, Android 16, ADB authorized, awake, unlocked, USB-powered, 93% during the check. |
 | Facebook | Brand verified | Native navigation reached `Sabiduria De Bolsillo`. |
 | Instagram | Corrected and verified | Preflight found personal `hec.gonzlez` active; switched back to brand `@sabiduriabolsillo` and verified the 5,272-follower brand profile. |
@@ -34,7 +34,7 @@ Checked: 2026-09-13 22:49 Europe/Madrid
 3. Leave the Samsung connected by USB, with USB debugging authorization retained. Android-native publication additionally requires the phone to be unlockable without user intervention; if it locks securely, the automation must skip Android rather than guess or publish blindly.
 4. Keep Facebook, Instagram, Threads and Edits signed in. Instagram must remain on `@sabiduriabolsillo`; every native run still verifies the visible identity immediately before Share.
 5. Do not revoke the existing Meta/GitHub tokens or change account permissions during the campaign.
-6. Restore reliable access to `github.com` and `api.github.com`. Without it, GitHub Actions API publishing, production-collision inspection and pushing lab records are blocked; native Android and offline creation may still proceed.
+6. Keep reliable access to `github.com` and `api.github.com`. If connectivity drops again, GitHub Actions API publishing, production-collision inspection and pushing lab records pause; native Android and offline creation may still proceed.
 7. Keep enough disk space and prevent system restarts or automatic OS/app updates during unattended windows when possible.
 
 ## Execution behavior when a dependency fails

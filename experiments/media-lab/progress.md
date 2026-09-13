@@ -1,12 +1,12 @@
 # Media lab progress
 
-Updated: 2026-09-13 22:49 Europe/Madrid
+Updated: 2026-09-13 23:21 Europe/Madrid
 
 ## Current checkpoint
 
 - Campaign Day 1 started on 2026-09-13.
 - Temporary Codex heartbeat `media-lab-hasta-1-octubre` is active at 10:10, 15:10 and 20:10 Europe/Madrid each day through 2026-10-01 inclusive. It may publish at most one coverage cell per execution after a live collision check.
-- Schedule preflight is recorded in `schedule-preflight.md`: phone and Meta connectivity passed; Instagram was switched back from personal `hec.gonzlez` to brand `@sabiduriabolsillo`; GitHub web/API connectivity timed out and must be retried before API dispatch/push.
+- Schedule preflight is recorded in `schedule-preflight.md`: phone and Meta connectivity passed; Instagram was switched back from personal `hec.gonzlez` to brand `@sabiduriabolsillo`; GitHub web/API connectivity, authentication, Actions access and required secret names were revalidated at 23:21 and pending lab commits were pushed.
 - Mandatory brand identities are verified natively for Facebook, Instagram and Threads.
 - The Samsung SM-S918B is connected and authorized over ADB on Android 16.
 - Edits is installed and opens to Projects. Still-image import, the audio picker, local export and handoff to Instagram Reel plus Facebook brand Reel/Story composers are verified; adding licensed audio and producing a publishable export remain unverified.
