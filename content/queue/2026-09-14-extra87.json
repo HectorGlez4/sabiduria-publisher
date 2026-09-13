@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-16-tarde",
+  "id": "2026-09-14-extra87",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Horacio y el carpe diem de la Oda I 11",
     "hook": "«Carpe» no es un verbo de conquista. Es un verbo de huerta: se usa para recoger fruta madura. Y el verso que va justo antes manda podar la esperanza.",
@@ -25,8 +25,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Horacio", "#CarpeDiem", "#PoesiaLatina"],
-    "extended": ["#Citas", "#RomaAntigua", "#Clasicos", "#Odas", "#Latin", "#Literatura", "#Filosofia"]
+    "topic": [
+      "#Horacio",
+      "#CarpeDiem",
+      "#PoesiaLatina"
+    ],
+    "extended": [
+      "#Citas",
+      "#RomaAntigua",
+      "#Clasicos",
+      "#Odas",
+      "#Latin",
+      "#Literatura",
+      "#Filosofia"
+    ]
   },
   "sources": [
     {
@@ -66,5 +78,11 @@
     "No etiquetar la oda como epicúrea o estoica sin matiz. Los comentaristas discuten la etiqueta y el poema mezcla motivos; la pieza no necesita colgarle una escuela.",
     "No citar «carpe diem» aislado como si fuera el poema. Son dos palabras del último verso de ocho, y separadas de «quam minimum credula postero» dicen la mitad."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-14T23:26:00Z",
+  "results": {}
 }

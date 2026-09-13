@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-12-extra41",
+  "id": "2026-09-14-extra89",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Christine de Pizan y la Ciudad de las Damas",
     "hook": "En 1405, después de leer un libro que la dejó avergonzada de ser mujer, Christine de Pizan escribió la respuesta. Y después se ocupó ella misma de vigilar cómo la copiaban.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#ChristineDePizan", "#EdadMedia", "#Educacion"],
-    "extended": ["#Citas", "#Literatura", "#Francia", "#Manuscritos", "#HistoriaDeLasMujeres", "#Paris", "#Libros", "#Clasicos"]
+    "topic": [
+      "#ChristineDePizan",
+      "#EdadMedia",
+      "#Educacion"
+    ],
+    "extended": [
+      "#Citas",
+      "#Literatura",
+      "#Francia",
+      "#Manuscritos",
+      "#HistoriaDeLasMujeres",
+      "#Paris",
+      "#Libros",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -59,5 +72,11 @@
     "No presentar las Lamentaciones de Mateolo como una obra marginal ni como un panfleto anónimo. Es un texto del siglo XIII que circulaba traducido al francés y que Christine cita por su nombre como punto de partida del libro.",
     "No citar el pasaje en versiones modernizadas que le añaden vocabulario actual como «igualdad» o «derechos». El extracto que documenta The National Archives procede de una traducción inglesa temprana, editada en Tempe, Arizona, en 2004."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-15T03:26:00Z",
+  "results": {}
 }

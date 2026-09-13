@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-15-extra41",
+  "id": "2026-09-13-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Sojourner Truth y el discurso de Akron de 1851",
     "hook": "La frase por la que se recuerda este discurso no está en la única transcripción hecha por alguien que estuvo en la sala. La escribió otra persona doce años después, en un habla que Sojourner Truth no tenía.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SojournerTruth", "#Akron1851", "#HistoriaDeEstadosUnidos"],
-    "extended": ["#Citas", "#Abolicionismo", "#DerechosDeLasMujeres", "#SigloXIX", "#Archivos", "#Prensa", "#Testimonio", "#Historia"]
+    "topic": [
+      "#SojournerTruth",
+      "#Akron1851",
+      "#HistoriaDeEstadosUnidos"
+    ],
+    "extended": [
+      "#Citas",
+      "#Abolicionismo",
+      "#DerechosDeLasMujeres",
+      "#SigloXIX",
+      "#Archivos",
+      "#Prensa",
+      "#Testimonio",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -66,5 +79,11 @@
     "No datar su nacimiento con precisión. Las fuentes dicen «hacia 1797»; no hay registro exacto.",
     "No atribuir el hallazgo a una sola persona. La corrección del texto se debe al trabajo de la historiadora Nell Irvin Painter y, después, al del Sojourner Truth Project, que cotejó ambas versiones."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-14T03:26:00Z",
+  "results": {}
 }

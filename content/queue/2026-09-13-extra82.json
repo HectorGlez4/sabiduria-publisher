@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-11-tarde",
+  "id": "2026-09-13-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Safo y el fragmento 147",
     "hook": "El verso de Safo sobre ser recordada llegó hasta nosotros porque, setecientos años después, un hombre lo citó para quejarse de que le habían quitado su estatua.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Safo", "#PoesiaGriega", "#Memoria"],
-    "extended": ["#Citas", "#GreciaAntigua", "#Literatura", "#Filologia", "#Lesbos", "#Clasicos", "#Poesia", "#HistoriaDeLosLibros"]
+    "topic": [
+      "#Safo",
+      "#PoesiaGriega",
+      "#Memoria"
+    ],
+    "extended": [
+      "#Citas",
+      "#GreciaAntigua",
+      "#Literatura",
+      "#Filologia",
+      "#Lesbos",
+      "#Clasicos",
+      "#Poesia",
+      "#HistoriaDeLosLibros"
+    ]
   },
   "sources": [
     {
@@ -62,5 +75,11 @@
     "No decir que la obra de Safo se perdió en el incendio de la Biblioteca de Alejandría ni que la Iglesia la quemó. Son relatos muy repetidos y sin evidencia; la pérdida se explica por el cambio de dialecto, de métrica y de gustos escolares, y por qué se seguía copiando al pasar del rollo al códice.",
     "No decir que de Safo no queda nada más. Además del poema completo y los fragmentos conocidos, hallazgos papirológicos de 2004 y 2014 añadieron texto nuevo, con debate abierto sobre su autenticidad en algún caso."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-13T20:26:00Z",
+  "results": {}
 }

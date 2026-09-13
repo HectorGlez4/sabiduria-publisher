@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-16-extra41",
+  "id": "2026-09-14-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Ida B. Wells y el educador que es la prensa",
     "hook": "Escribió que no hay educador comparable a la prensa cinco meses después de que una turba destruyera la suya y vendieran la maquinaria para cobrarse las deudas.",
@@ -25,8 +25,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#IdaBWells", "#Periodismo", "#SigloXIX"],
-    "extended": ["#Citas", "#EstadosUnidos", "#DerechosCiviles", "#Prensa", "#Memphis", "#Historia", "#LibertadDeExpresion"]
+    "topic": [
+      "#IdaBWells",
+      "#Periodismo",
+      "#SigloXIX"
+    ],
+    "extended": [
+      "#Citas",
+      "#EstadosUnidos",
+      "#DerechosCiviles",
+      "#Prensa",
+      "#Memphis",
+      "#Historia",
+      "#LibertadDeExpresion"
+    ]
   },
   "sources": [
     {
@@ -66,5 +78,11 @@
     "No decir que la mataron por escribir. Murió en Chicago el 25 de marzo de 1931; lo que destruyeron en 1892 fue la imprenta y su posibilidad de volver a Memphis.",
     "No fechar «Southern Horrors» en 1893 ni confundirlo con «A Red Record» (1895), que es otro folleto suyo, posterior y más extenso."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-14T19:26:00Z",
+  "results": {}
 }

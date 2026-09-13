@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-14-extra41",
+  "id": "2026-09-15-extra91",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "La Boétie y la servidumbre voluntaria",
     "hook": "Un estudiante de derecho escribió que para acabar con un tirano no hace falta empujarlo. Basta con dejar de sostenerlo. El texto tardó más de veinte años en imprimirse y lo estrenaron sus adversarios políticos.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#LaBoetie", "#ServidumbreVoluntaria", "#Montaigne"],
-    "extended": ["#Citas", "#FilosofiaPolitica", "#Renacimiento", "#Francia", "#SigloXVI", "#Libros", "#Libertad", "#Clasicos"]
+    "topic": [
+      "#LaBoetie",
+      "#ServidumbreVoluntaria",
+      "#Montaigne"
+    ],
+    "extended": [
+      "#Citas",
+      "#FilosofiaPolitica",
+      "#Renacimiento",
+      "#Francia",
+      "#SigloXVI",
+      "#Libros",
+      "#Libertad",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -60,5 +73,11 @@
     "No decir que La Boétie murió a los treinta y dos ni a los treinta y cuatro. Nació en 1530 y murió en 1563: treinta y tres años.",
     "No presentar la frase como una llamada a la revolución violenta. El propio pasaje excluye empujar y derribar: lo que pide es retirar el sostén."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-15T22:26:00Z",
+  "results": {}
 }

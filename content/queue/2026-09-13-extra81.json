@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-11-extra41",
+  "id": "2026-09-13-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Maimónides y los grados de la caridad",
     "hook": "En la escala de la caridad de Maimónides, el escalón más alto no es dar en secreto. Es un préstamo, una sociedad o un trabajo.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Maimonides", "#FilosofiaMedieval", "#Etica"],
-    "extended": ["#Citas", "#Sefarad", "#Cordoba", "#Judaismo", "#Filosofia", "#EdadMedia", "#Solidaridad", "#Clasicos"]
+    "topic": [
+      "#Maimonides",
+      "#FilosofiaMedieval",
+      "#Etica"
+    ],
+    "extended": [
+      "#Citas",
+      "#Sefarad",
+      "#Cordoba",
+      "#Judaismo",
+      "#Filosofia",
+      "#EdadMedia",
+      "#Solidaridad",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -63,5 +76,11 @@
     "No decir que el grado más alto es dar en el anonimato. El anonimato doble es el segundo; el primero es el préstamo, la sociedad o el empleo que evitan que el otro tenga que pedir.",
     "No atribuir la clasificación al Talmud ni a la Biblia. Los materiales son antiguos, pero la ordenación en ocho grados es de Maimónides."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-13T15:26:00Z",
+  "results": {}
 }

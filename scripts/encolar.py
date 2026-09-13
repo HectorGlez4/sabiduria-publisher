@@ -294,9 +294,28 @@ def main() -> int:
         print("\n  --dry-run: no se escribe nada")
         return 0
 
+    # Se reescribe una pieza que ya estaba en la cola SOLO si sigue ahí.
+    #
+    # El publicador corre cada hora y mueve lo que publica a content/published/.
+    # Entre que este script lee la cola y la escribe pueden pasar minutos, y
+    # reescribir a ciegas RESUCITA en la cola una pieza que acaba de publicarse:
+    # la siguiente ejecución la publica otra vez. Pasó con 2026-09-09-extra82,
+    # que salió dos veces en Facebook e Instagram con ids distintos.
+    ids_nuevos = {u["id"] for _, u in nuevas}
+    resucitadas = 0
     for _, u in todo:
-        (QUEUE / f"{u['id']}.json").write_text(
-            json.dumps(u, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        destino = QUEUE / f"{u['id']}.json"
+        if u["id"] not in ids_nuevos and not destino.exists():
+            resucitadas += 1
+            continue
+        if (PUBLISHED / f"{u['id']}.json").exists():
+            resucitadas += 1
+            continue
+        destino.write_text(json.dumps(u, ensure_ascii=False, indent=2) + "\n",
+                           encoding="utf-8")
+    if resucitadas:
+        print(f"  · {resucitadas} pieza(s) se publicaron mientras corría esto; "
+              f"no se reescriben")
     for ruta, _ in nuevas:
         if ruta and ruta.exists():
             ruta.unlink()

@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-15-tarde",
+  "id": "2026-09-13-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Kenkō y la segunda flecha del arquero",
     "hook": "Un maestro de tiro con arco le prohíbe al aprendiz llevar dos flechas. No porque la segunda estorbe: porque existiendo ya arruina la primera. El texto es japonés y tiene cerca de setecientos años.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Kenko", "#Tsurezuregusa", "#LiteraturaJaponesa"],
-    "extended": ["#Citas", "#Japon", "#Zuihitsu", "#Atencion", "#Clasicos", "#SigloXIV", "#Budismo", "#Ensayo"]
+    "topic": [
+      "#Kenko",
+      "#Tsurezuregusa",
+      "#LiteraturaJaponesa"
+    ],
+    "extended": [
+      "#Citas",
+      "#Japon",
+      "#Zuihitsu",
+      "#Atencion",
+      "#Clasicos",
+      "#SigloXIV",
+      "#Budismo",
+      "#Ensayo"
+    ]
   },
   "sources": [
     {
@@ -65,5 +78,11 @@
     "No citar la traducción de Donald Keene palabra por palabra sin tenerla delante. La versión en español de esta pieza se hizo desde el texto japonés de la edición citada; la traducción inglesa de Keene, de 1967, se menciona solo como referencia estándar.",
     "No numerar la sección como 91 ni como 93. En la numeración corriente de las 243 secciones es la 92, y así aparece en las ediciones japonesas citadas."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-14T04:26:00Z",
+  "results": {}
 }

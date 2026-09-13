@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-13-tarde",
+  "id": "2026-09-13-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Ptahhotep y el papiro que la BnF llama el libro más antiguo",
     "hook": "El texto que la Biblioteca Nacional de Francia presenta como el libro más antiguo del mundo lo escribió, supuestamente, un funcionario de hace cuarenta y cuatro siglos. Su consejo de apertura es que hables con el ignorante igual que con el sabio.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Ptahhotep", "#EgiptoAntiguo", "#PapiroPrisse"],
-    "extended": ["#Citas", "#Manuscritos", "#Sabiduria", "#Egiptologia", "#Bibliotecas", "#Escritura", "#HistoriaAntigua", "#Clasicos"]
+    "topic": [
+      "#Ptahhotep",
+      "#EgiptoAntiguo",
+      "#PapiroPrisse"
+    ],
+    "extended": [
+      "#Citas",
+      "#Manuscritos",
+      "#Sabiduria",
+      "#Egiptologia",
+      "#Bibliotecas",
+      "#Escritura",
+      "#HistoriaAntigua",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -65,5 +78,11 @@
     "No convertir la máxima en un elogio de la humildad personal. El argumento del texto es sobre los límites del oficio: al arte no se le ve el final y ningún artesano lo domina entero. La consecuencia práctica es consultar a cualquiera, no sentirse pequeño.",
     "No presentar las Máximas como un texto igualitario. El grueso de la obra enseña deferencia hacia superiores y mayores, y está dirigido a jóvenes de familias influyentes que iban a ocupar cargos. La primera máxima destaca precisamente por contrastar con eso."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-14T01:26:00Z",
+  "results": {}
 }

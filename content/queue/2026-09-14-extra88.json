@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-09-extra41",
+  "id": "2026-09-14-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Kafka y el hacha para el mar helado",
     "hook": "La frase más repetida de Kafka sobre los libros no está en ninguno de sus libros: está en una carta que escribió a los veinte años.",
@@ -25,8 +25,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#FranzKafka", "#Lectura", "#Literatura"],
-    "extended": ["#Citas", "#Praga", "#Libros", "#Correspondencia", "#SigloXX", "#LiteraturaAlemana", "#Escritura", "#Clasicos"]
+    "topic": [
+      "#FranzKafka",
+      "#Lectura",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Citas",
+      "#Praga",
+      "#Libros",
+      "#Correspondencia",
+      "#SigloXX",
+      "#LiteraturaAlemana",
+      "#Escritura",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -57,5 +70,11 @@
     "No fechar la carta en 1903 ni atribuirla a otro destinatario: está fechada en Praga el miércoles 27 de enero de 1904 y va dirigida a Oskar Pollak.",
     "No dar por cerrada la cifra de páginas de Hebbel como dato de Kafka verificado por terceros: es lo que la propia carta cuenta de su lectura, unas 1.800 páginas de los diarios."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-15T02:26:00Z",
+  "results": {}
 }
