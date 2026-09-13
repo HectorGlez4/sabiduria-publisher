@@ -1,0 +1,71 @@
+{
+  "id": "2026-09-17-extra43",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "status": "draft",
+  "core": {
+    "subject": "Ibn Hazm y el único manuscrito de El collar de la paloma",
+    "hook": "Escribió unas cuatrocientas obras y sobreviven unas cuarenta. Del libro por el que hoy se le conoce queda exactamente una copia en el mundo, hecha casi tres siglos después de su muerte.",
+    "body": [
+      "Ibn Hazm nació en Córdoba el 7 de noviembre de 994 y murió cerca de Huelva el 15 de agosto de 1064. Su producción se calcula en unas cuatrocientas obras y unas ochenta mil páginas. Hacia 1053, al-Muʿtadid de Sevilla mandó quemar sus libros en público. Los versos que se le atribuyen como respuesta dicen que aunque quemen el papel nunca quemarán lo que contiene, porque lo lleva dentro. De todo aquello han llegado hasta nosotros unos cuarenta títulos: una décima parte.",
+      "Uno de ellos es El collar de la paloma, un tratado sobre el amor que escribió hacia 1022, en Játiva. Se conserva en un solo manuscrito: el Or. 927 de la Biblioteca de la Universidad de Leiden, copiado en el año 738 de la hégira, 1338 de nuestra era, a partir de un original que ya se ha perdido. Llegó allí por un camino improbable. Levinus Warner, residente neerlandés en Constantinopla durante dos décadas, reunió algo más de novecientos manuscritos orientales y los dejó en herencia a la universidad; murió el 22 de junio de 1665 y los envíos llegaron a Leiden entre diciembre de 1668 y 1674.",
+      "Ahí se quedó, catalogado y quieto, hasta que D. K. Pétrof publicó la primera edición del texto en 1914. Del libro a la imprenta pasaron cerca de novecientos años. Las traducciones vinieron después: la inglesa de Nykl en 1931, la de Arberry en 1951. Es decir: la obra más leída hoy de un autor cuya biblioteca ardió en una plaza sobrevivió porque alguien, en algún lugar de Oriente, la copió una vez, y porque un diplomático la compró en un mercado seiscientos años más tarde sin saber lo que llevaba."
+    ],
+    "question": "¿Cuántos libros dependen ahora mismo de una sola copia?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Queda una copia",
+    "subtitle": "Játiva, hacia 1022 — Leiden, Or. 927",
+    "body": "De las cuatrocientas obras de Ibn Hazm sobreviven unas cuarenta. De El collar de la paloma queda un solo manuscrito, copiado en 1338 de un original perdido y conservado en Leiden. Se imprimió por primera vez en 1914, casi novecientos años después de escribirse."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#IbnHazm", "#AlAndalus", "#Manuscritos"],
+    "extended": ["#Historia", "#Libros", "#Cordoba", "#Leiden", "#Bibliotecas", "#SigloXI", "#Literatura", "#Patrimonio"]
+  },
+  "sources": [
+    {
+      "claim": "Ibn Hazm nació el 7 de noviembre de 994 en Córdoba y murió el 15 de agosto de 1064 cerca de Huelva. Produjo unas 400 obras, de las que sobreviven unas 40, y su producción escrita se cifra en unas 80.000 páginas. Hacia 1053 el rey al-Muʿtadid de Sevilla ordenó quemar públicamente sus libros por la oposición de los alfaquíes. En respuesta compuso el verso: «Though you burn the paper, you will not burn what the paper contains; / which is preserved in my soul despite you». Escribió «Tawq al-hamama» (El collar de la paloma) entre 1022 y 1027, residiendo en Játiva.",
+      "source": "Wikipedia en inglés, «Ibn Hazm»",
+      "url": "https://en.wikipedia.org/wiki/Ibn_Hazm"
+    },
+    {
+      "claim": "Versión castellana de los mismos versos, en la guía bibliográfica dedicada a Ibn Hazm: «aunque queméis el papel, / nunca quemaréis lo que contiene, / puesto que en mi interior lo llevo». La guía sitúa la quema por orden de al-Muʿtadid de Sevilla y da como fechas del autor 994-1064.",
+      "source": "Universidad de Huelva, Biblioteca Universitaria, guía temática «Ibn Hazm»",
+      "url": "https://guiasbuh.uhu.es/IbnHazm"
+    },
+    {
+      "claim": "Ficha de catálogo del manuscrito: título «Ṭawq al-ḥamāma fī 'al-ulfa wa-al-ullīf»; autor Ibn Ḥazm, ʿAlī b. Ahmad (m. 456/1064); signatura Or. 927; obra escrita hacia 1022 en Játiva, al sur de Valencia; conservado en la colección de manuscritos, archivos y cartas de las Bibliotecas de la Universidad de Leiden.",
+      "source": "Leiden University Libraries, Digital Collections, ficha del manuscrito Or. 927",
+      "url": "https://digitalcollections.universiteitleiden.nl/view/item/1567570"
+    },
+    {
+      "claim": "La colección Levinus Warner de las Bibliotecas de la Universidad de Leiden contiene el manuscrito único del «Tawq al-hamama» de Ibn Hazm (Or. 927), tratado sobre el amor y la amistad del andalusí ʿAlī b. Ahmad Ibn Hazm (994-1064), fechado en 738/1338. El manuscrito fue editado por primera vez por D. K. Pétrof en 1914 y ha sido editado muchas veces desde entonces. Warner formó su colección privada de algo más de 900 manuscritos en lenguas de Oriente Medio durante sus veinte años de residencia permanente en Estambul.",
+      "source": "Leiden University Libraries, guía de la colección «Levinus Warner collection» (ubl211). La descarga directa devolvió 403 a la herramienta usada aquí; los datos se recogieron de los extractos indexados de esa misma página",
+      "url": "https://collectionguides.universiteitleiden.nl/resources/ubl211"
+    },
+    {
+      "claim": "Levinus Warner (h. 1618 - 22 de junio de 1665) fue diplomático de la República Neerlandesa en el Imperio otomano y residente en Constantinopla desde su primer nombramiento por los Estados Generales el 30 de enero de 1655. Reunió algo más de 900 manuscritos en lenguas de Oriente Medio, 73 manuscritos hebreos, algunos griegos y dos armenios, más 218 libros impresos hebreos. Por testamento legó toda su colección —el Legatum Warnerianum— a la Biblioteca de la Universidad de Leiden; llegó en varios envíos desde diciembre de 1668 hasta 1674.",
+      "source": "Wikipedia en inglés, «Levinus Warner»",
+      "url": "https://en.wikipedia.org/wiki/Levinus_Warner"
+    },
+    {
+      "claim": "El tratado fue escrito en el año 1022 y se conserva en un único manuscrito, registrado como Or. 927 en las colecciones orientales de la Biblioteca de la Universidad de Leiden, copiado en 1338 —probablemente en Egipto o Siria— a partir de un original hoy perdido, en escritura árabe sobre papel y con 108 folios. La traducción inglesa de A. R. Nykl apareció en 1931 y la de A. J. Arberry en 1951.",
+      "source": "Wikipedia en inglés, «The Ring of the Dove». Las fechas de las traducciones de Nykl y Arberry se leyeron directamente en la página; los datos codicológicos (lugar de copia, folios, procedencia Warner) se recogieron de los extractos indexados de esa misma entrada y coinciden con la ficha de Leiden",
+      "url": "https://en.wikipedia.org/wiki/The_Ring_of_the_Dove"
+    }
+  ],
+  "do_not_use": [
+    "No dar los versos de la quema como cita verificada con obra, capítulo y edición. Se le atribuyen desde antiguo y aparecen en fuentes de calidad con dos redacciones distintas, pero no se ha podido comprobar en qué obra se transmiten. Por eso aquí se refieren como versos atribuidos y no se usan como cita.",
+    "No decir que se quemó toda su obra en Sevilla. Lo que está documentado es una quema pública de sus libros por orden de al-Muʿtadid hacia 1053; la pérdida del resto de los cerca de cuatrocientos títulos es obra de nueve siglos, no de una hoguera.",
+    "No fechar El collar de la paloma con un solo año cerrado. Las fuentes lo sitúan hacia 1022, y alguna lo extiende hasta 1027; se escribió en Játiva.",
+    "No confundir la fecha de la obra con la del manuscrito. La obra es de hacia 1022; la copia que sobrevive es de 738 de la hégira, 1338 de nuestra era, hecha ya fuera de la península.",
+    "No decir que Leiden compró el manuscrito. Llegó por el legado testamentario de Levinus Warner, que lo había adquirido durante sus veinte años en Constantinopla; los envíos llegaron entre 1668 y 1674, después de su muerte en 1665.",
+    "No llamar al libro un manual erótico. Es un tratado sobre el amor y la amistad escrito por un jurista, con capítulos sobre sus causas, sus señales y sus desenlaces.",
+    "No decir que estuvo perdido. Estuvo catalogado y accesible en Leiden; lo que no hubo, hasta la edición de D. K. Pétrof de 1914, fue un texto impreso.",
+    "No dar cifras exactas de obras y páginas como si fueran un inventario. «Unas cuatrocientas obras», «unas ochenta mil páginas» y «unas cuarenta conservadas» son estimaciones que vienen de las noticias antiguas sobre su producción."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

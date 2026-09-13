@@ -1,0 +1,70 @@
+{
+  "id": "2026-09-17-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Teresa de Jesús y las Moradas escritas en 1577",
+    "hook": "Escribió su libro mayor mientras la Inquisición tenía secuestrado el anterior. Lo empezó el 2 de junio de 1577 y lo terminó el 29 de noviembre: seis meses, con su obra previa incautada.",
+    "quote": {
+      "text": "No está la cosa en pensar mucho, sino en amar mucho.",
+      "author": "Teresa de Jesús",
+      "work": "Las Moradas, cuartas moradas, cap. 1 (1577)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Libro de la vida había sido denunciado al Santo Oficio en 1574 por la princesa de Éboli y otros. El autógrafo fue incautado en febrero de 1575. El dominico Domingo Báñez lo aprobó el 7 de julio de ese mismo año, y aun así el manuscrito se quedó donde estaba: bajo custodia inquisitorial, más de una década, hasta después de que ella muriera. En esa situación, y por encargo, Teresa se sentó a escribir otro libro entero desde cero. Lo llamó Castillo interior; se conoce como Las Moradas. Siete estancias concéntricas, de la primera a la unión.",
+      "La frase está en las cuartas moradas, en el capítulo primero, y es una advertencia práctica a sus monjas: para avanzar en este camino, dice, la cosa no está en pensar mucho sino en amar mucho, y por eso hagan lo que más las despierte a amar. Se cita como un elogio del sentimiento contra la razón. En el propio libro no termina ahí. En las séptimas moradas, capítulo cuarto, cierra el argumento sin adornos: para esto es la oración, hijas mías, de esto sirve este matrimonio espiritual, de que nazcan siempre obras, obras.",
+      "El final de la historia del libro secuestrado tampoco lo vio. Teresa murió en 1582. En 1586 su discípula Ana de Jesús logró recuperar el autógrafo del Libro de la vida, y fray Luis de León preparó la primera edición impresa de la obra teresiana, publicada en Salamanca en 1588, seis años después de su muerte. El manuscrito original pasó en 1592 a la biblioteca de El Escorial, reclamado por Felipe II, y allí sigue, catalogado como Vitrina 26. Nada de lo que escribió se imprimió mientras vivió."
+    ],
+    "question": "¿Qué se escribe cuando te han quitado lo que ya habías escrito?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TeresaDeJesus", "#Mistica", "#SigloXVI"],
+    "extended": ["#Citas", "#Espana", "#Inquisicion", "#Literatura", "#Historia", "#Avila", "#Escritoras", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Texto revisado de Moradas cuartas, capítulo 1, número 7: «Solo quiero que estéis advertidas que para aprovechar mucho en este camino y subir a las moradas que deseamos, no está la cosa en pensar mucho, sino en amar mucho». La revisión del texto, las notas y el comentario son de Tomás Álvarez, O.C.D.",
+      "source": "Revista Ecclesia, serie «Santa Teresa de Jesús — Las Moradas», Moradas cuartas, capítulo 1, con revisión del texto, notas y comentario de Tomás Álvarez, O.C.D., editor de la edición crítica teresiana",
+      "url": "https://revistaecclesia.es/santa-teresa-de-jesus-las-moradas-moradas-cuartas-capitulo-1-revision-del-texto-notas-y-comentario-tomas-alvarez-o-c-d/"
+    },
+    {
+      "claim": "Texto de Moradas séptimas, capítulo 4, número 6: «Para esto es la oración, hijas mías; de esto sirve este matrimonio espiritual: de que nazcan siempre obras, obras». En el número 7 continúa: «poco me aprovecha estarme muy recogida a solas haciendo actos con nuestro Señor... si en saliendo de allí, que se ofrece la ocasión, lo hago todo al revés». La revisión del texto y las notas son de Tomás Álvarez, O.C.D.",
+      "source": "Reproducción del texto revisado por Tomás Álvarez, O.C.D., de Moradas séptimas, capítulo 4",
+      "url": "http://teresadoctora.blogspot.com/2013/06/moradas-septimas-cap-4.html"
+    },
+    {
+      "claim": "Teresa empezó a componer Las Moradas el 2 de junio de 1577 y lo terminó el 29 de noviembre de 1577. La Inquisición española estaba examinando su obra anterior, «Vida de Santa Teresa de Jesús», para determinar si sus experiencias místicas podían constituir herejía, y ese escrutinio explica su reticencia inicial a escribir el nuevo manuscrito. La primera edición apareció en Salamanca en 1588, con fray Luis de León como editor, elegido para ello en agosto de 1586. La obra divide el avance espiritual en siete moradas y describe el alma como «un castillo todo de un diamante o muy claro cristal».",
+      "source": "Wikipedia en español, «Las moradas»",
+      "url": "https://es.wikipedia.org/wiki/Las_moradas"
+    },
+    {
+      "claim": "El «Libro de la vida» fue denunciado a la Inquisición en 1574 por «la intrigante princesa de Éboli y otros». El manuscrito fue incautado en febrero de 1575. Domingo Báñez lo aprobó el 7 de julio de 1575. La obra permaneció bajo custodia inquisitorial hasta después de la muerte de Teresa. En 1586 su discípula Ana de Jesús recuperó el autógrafo, y fray Luis de León preparó la primera edición impresa, publicada en Salamanca en 1588 dentro de «Los libros de la Madre Teresa de Jesús». El manuscrito original ingresó en 1592 en la Biblioteca de El Escorial, requerido por Felipe II, y allí se conserva con la signatura Vitrina 26.",
+      "source": "Portal teresavila.com, entrada enciclopédica «Vida, Libro de la», editado por Editorial Monte Carmelo (Grupo Editorial Fonte), Burgos",
+      "url": "https://teresavila.com/entrada/vida-libro-de-la/"
+    },
+    {
+      "claim": "Corroboración independiente del secuestro inquisitorial y de su desenlace: la denuncia de la princesa de Éboli en 1574 por contener «visiones, revelaciones y doctrinas peligrosas»; la entrega del manuscrito por Domingo Báñez; la permanencia bajo custodia del Santo Oficio hasta después de la muerte de la autora; la recuperación por Ana de Jesús en 1586; y la impresión de fray Luis de León en Salamanca en 1588.",
+      "source": "Real Academia Española, estudio introductorio de su edición de «Santa Teresa de Jesús, Libro de la vida» (edición, estudio y notas), y materiales del seminario «Teresa de Jesús y su obra» del profesor Enrique Villalba, Universidad Carlos III de Madrid. De ambos documentos se consultaron los extractos indexados, no el PDF completo",
+      "url": "https://www.rae.es/sites/default/files/hojear_libro_de_la_vida_0.pdf"
+    }
+  ],
+  "do_not_use": [
+    "No usar «Nada te turbe, nada te espante» como cita verificada de Teresa. Es el texto que más circula bajo su nombre y se conserva asociado a su breviario, pero su autoría se discute —hay quien la atribuye a san Juan de la Cruz— y sin una localización firme en obra, capítulo y edición no pasa el listón de esta página.",
+    "No leer «no está la cosa en pensar mucho, sino en amar mucho» como un elogio del sentimiento frente a la razón. En el mismo libro, las séptimas moradas rematan el argumento pidiendo obras, y el propio texto dice que de poco sirve el recogimiento si al salir se hace todo al revés.",
+    "No decir que la Inquisición la juzgó o la condenó. Lo documentado es la denuncia de 1574, la incautación del autógrafo del Libro de la vida en febrero de 1575 y su retención durante más de una década, pese a la aprobación de Domingo Báñez del 7 de julio de 1575.",
+    "No decir que escribió Las Moradas en la cárcel ni encerrada por el Santo Oficio. Lo escribió por encargo, entre el 2 de junio y el 29 de noviembre de 1577, mientras su obra anterior seguía incautada.",
+    "No confundir los dos manuscritos. El autógrafo que está en El Escorial con la signatura Vitrina 26 es el del Libro de la vida; Las Moradas es obra distinta y posterior.",
+    "No decir que fray Luis de León la conoció. Preparó la primera edición impresa, publicada en Salamanca en 1588, seis años después de la muerte de Teresa en 1582.",
+    "No dar «Las Moradas» como título puesto por ella. Lo tituló Castillo interior; el nombre con el que se conoce viene del uso posterior.",
+    "No atribuir la denuncia solo a la princesa de Éboli. Las fuentes dicen «la princesa de Éboli y otros»; fue una denuncia con más de una firma.",
+    "No presentar la cita en una ortografía modernizada como si fuera el original tal cual. El texto castellano del siglo XVI se cita aquí en la revisión de Tomás Álvarez, O.C.D."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
