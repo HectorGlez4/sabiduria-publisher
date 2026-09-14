@@ -53,7 +53,12 @@ Updated: 2026-09-14 00:42 Europe/Madrid
 - Anna API and Merian Android Story masters are rendered at 1080×1920, visually reviewed and recorded as ready for Facebook and Instagram. Both masters are also transferred to the phone; publication remains held for spaced windows.
 - Day 2 I01 has a reviewed publishable fictional-presenter prototype about the Lamarr–Antheil patent. The image visibly says `PRESENTADORA FICTICIA`; its paired object-led candidate was rejected from public use because generated instrument labels failed the evidence/typography gate.
 
+- 2026-09-14 21:38 Europe/Madrid: first supervised Claude window (plan fase 1, task 13) published `CELL-018` (`LAB-PERSON-002` variant B, Instagram feed, Android native) through `lab.py` only: encargo `ENC-20260914-001` reusing the accepted fictional-presenter generation, `seleccionar` picked only CELL-018, native music «Natural — Florian Christl», agent visual QA PASS with no human confirmation, `ig compartir` returned `confirmado_sin_conteo` because production (`2026-09-14-re57-story`, Stories only, and `hilos`) was running; reconciled as confirmed (grid position 1, posts 3714 → 3715). Instagram auto-shared it to the Facebook Page. Run: `runs/LAB-PERSON-002-B-INSTAGRAM.json`; post URL still to resolve read-only.
+
 ## Pending / blockers
+
+- **Blocking before the scheduled window task:** `lab.py ig pie` returned ok with Instagram's hashtag dropdown still open in the supervised window (plan task 10f); the detector does not see it in the uiautomator dump. `compartir` still fails closed via `compositor_listo`, but the scheduled task `sabiduria-media-lab` must not be enabled until 10f is fixed.
+- Resolve the Instagram permalink of `LAB-PERSON-002-B-INSTAGRAM` read-only and capture its 24 h metrics from 2026-09-15 21:38.
 
 - Probe Instagram API account identity/insights and Threads insights without exposing secrets.
 - Verify Edits account association, licensed audio, publishable export and both API-EDITS / ANDROID-EDITS routes.

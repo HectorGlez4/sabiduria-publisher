@@ -1,0 +1,59 @@
+{
+  "encargo_id": "ENC-20260914-001",
+  "creado_en": "2026-09-14T19:31:16+00:00",
+  "coverage_cell_ids": [
+    "CELL-018"
+  ],
+  "family_id": "LAB-PERSON-002",
+  "brief_path": "experiments/media-lab/briefs/LAB-PERSON-002.md",
+  "do_not_use": [
+    "Do not say Lamarr invented Wi-Fi or Bluetooth.",
+    "Do not reduce Antheil to a secondary helper.",
+    "Do not claim the Navy confiscated or classified the patent.",
+    "Do not describe generated equipment, paper perforations, maps or labels as documentary evidence.",
+    "Do not identify the fictional presenter as Lamarr, a witness or a real expert."
+  ],
+  "formato": {
+    "nativo": "feed_single_image",
+    "ancho": 1080,
+    "alto": 1350
+  },
+  "variantes": 1,
+  "prompt": "Use case: ads-marketing\nAsset type: Sabiduría de Bolsillo social editorial, portrait master for 4:5 and 9:16 crops\nPrimary request: Create the face-led direction for a controlled comparison about the 1941–1942 frequency-hopping patent by Hedy Kiesler Markey and George Antheil.\nScene/backdrop: a carefully reconstructed early-1940s radio engineering workroom or museum-like technical archive, with vacuum-tube radio equipment and a generic long punched-paper roll suggesting a player-piano mechanism.\nSubject: one clearly fictional present-day female museum educator, adult, expressive and intelligent, holding the punched-paper roll and inviting curiosity; she is not Hedy Lamarr, not a historical witness, and must not resemble a recognizable celebrity.\nStyle/medium: premium editorial photography with subtly cinematic historical atmosphere, believable skin and hands, documentary restraint rather than advertising gloss.\nComposition/framing: vertical portrait, educator placed in the lower-right/middle area, radio apparatus and paper roll visible, generous quiet negative space across the upper third for a later Spanish headline; crop-safe for 4:5 and 9:16.\nLighting/mood: warm tungsten work light with cool teal shadows, thoughtful and intriguing.\nColor palette: deep teal, warm brass, cream paper, restrained amber.\nText (verbatim): none.\nConstraints: no readable patent text, no numbers, no logos, no watermark; paper perforations may be schematic but physically plausible; historically plausible equipment; anatomically correct hands; no implication that the presenter is Hedy Lamarr; one person only.\nAvoid: celebrity likeness, 1950s or modern electronics, Wi-Fi symbols, smartphones, futuristic holograms, glamorized pin-up styling, fake archival labels, extra fingers, garbled writing.",
+  "restricciones": [
+    "sin texto legible, números, logos ni marcas de agua",
+    "una sola persona, presentadora ficticia que no se parezca a Hedy Lamarr ni a ninguna celebridad"
+  ],
+  "destino_assets": "experiments/media-lab/assets/LAB-PERSON-002",
+  "max_intentos": 2,
+  "estado": "usado",
+  "lock_owner": null,
+  "lock_expira": null,
+  "imagenes": [
+    {
+      "ruta": "experiments/media-lab/assets/LAB-PERSON-002/ENC-20260914-001-v1.png",
+      "sha256": "9c9182400d6f97e9132bc9a557149277971bbb0896fd20db90f7958a6d536a78",
+      "ancho": 1122,
+      "alto": 1402,
+      "origen": "codex-exec",
+      "generado_en": "2026-09-14T19:32:08+00:00"
+    }
+  ],
+  "intentos": [
+    {
+      "numero": 1,
+      "resultado": "generado",
+      "origen": "codex-exec",
+      "en": "2026-09-14T19:32:08+00:00"
+    }
+  ],
+  "revision": {
+    "resultado": "aprobado",
+    "motivo": "Reutiliza la generación de la dirección A ya aceptada en briefs/LAB-PERSON-002.md: una presentadora ficticia, manos y cara correctas, sin letras ni números legibles, hueco para el titular; cumple do_not_use.",
+    "revisado_en": "2026-09-14T19:32:08+00:00"
+  },
+  "runs": [
+    "LAB-PERSON-002-B-INSTAGRAM"
+  ],
+  "no_lanzados": 0
+}

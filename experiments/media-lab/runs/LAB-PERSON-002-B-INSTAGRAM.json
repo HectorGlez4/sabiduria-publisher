@@ -1,0 +1,251 @@
+{
+  "run_id": "LAB-PERSON-002-B-INSTAGRAM",
+  "cohort": "experiment",
+  "coverage_cell_id": "CELL-018",
+  "baseline_match_ids": [],
+  "family_id": "LAB-PERSON-002",
+  "parent_run_id": null,
+  "campaign_day": 2,
+  "image_batch_id": "I01",
+  "platform": "instagram",
+  "actual_native_format": "feed_single_image_with_native_music",
+  "adaptation_notes": "Supervised first window of the Claude publishing flow (plan fase 1, tarea 13). Reuses the already accepted fictional-presenter generation instead of a new Codex generation: original PNG registered as the encargo image, deterministic 4:5 master with overlay and PRESENTADORA FICTICIA disclosure from briefs/LAB-PERSON-002.md. Encargo ENC-20260914-001 (owner codex-exec, image = accepted original copied to ENC-20260914-001-v1.png) approved by Claude; lab.py seleccionar --max 2 returned only CELL-018.",
+  "audio_treatment": "native_instagram_music: Natural — Florian Christl (Instagram suggested audio)",
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": null,
+    "nearby_production_posts": [
+      {
+        "id": "2026-09-14-re57-story",
+        "targets": [
+          "facebook_story",
+          "instagram_story"
+        ],
+        "workflow": "publicar",
+        "workflow_run": 34887254592,
+        "status_at": "2026-09-14T19:38:25Z in_progress (Stories only)",
+        "note": "Production Stories publishing during the window; different surface (Stories), informational only per user decision."
+      },
+      {
+        "workflow": "hilos",
+        "workflow_runs": [
+          34882815309,
+          34887704966
+        ],
+        "status_at": "2026-09-14T19:38:25Z in_progress / pending"
+      }
+    ],
+    "matched_comparison_ids": []
+  },
+  "round": 1,
+  "status": "completed",
+  "tool_option_id": null,
+  "format_id": "image_overlay",
+  "seed_source_path": "content/published/2026-09-07-extra88.json",
+  "seed_source_sha256": "743deac669c2ab9168ffa4d03ee313d8d68fe85215295a2a348a7355e761c9e2",
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-PERSON-002.md",
+  "hypothesis": "The Claude window can publish an approved lab image end-to-end through the Android native Instagram composer (lab.py ig steps) with agent visual QA and no human confirmation.",
+  "changed_variable": "publishing route (Android native via lab.py) for the fictional-presenter master",
+  "controls": [
+    "same master as the API variant A cell CELL-013",
+    "same caption draft as briefs/LAB-PERSON-002.md"
+  ],
+  "tool": {
+    "name": "lab.py + Instagram Android",
+    "version": null,
+    "model": null,
+    "plan": null,
+    "access_checked_at": null
+  },
+  "timing": {
+    "started_at": "2026-09-14T19:30:47Z",
+    "first_acceptable_at": "2026-09-14T19:38:30Z",
+    "finished_at": "2026-09-14T19:41:00Z",
+    "wall_elapsed_seconds": null,
+    "one_time_setup_active_seconds": null,
+    "human_active_seconds": 0,
+    "agent_active_seconds": null,
+    "approval_or_device_wait_seconds": null,
+    "stages": [
+      {
+        "name": "window lock, preflight, encargo, selection",
+        "started_at": "2026-09-14T19:30:47Z",
+        "finished_at": "2026-09-14T19:32:10Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "phone transfer and native composer: crop, music, caption",
+        "started_at": "2026-09-14T19:31:46Z",
+        "finished_at": "2026-09-14T19:35:30Z",
+        "overlaps_another_stage": true
+      },
+      {
+        "name": "visual QA, preflight, share, reconciliation, live verification",
+        "started_at": "2026-09-14T19:36:00Z",
+        "finished_at": "2026-09-14T19:41:00Z",
+        "overlaps_another_stage": false
+      }
+    ]
+  },
+  "attempts": [],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
+  "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/hedy-patent-fictional-presenter-4x5.jpg",
+      "sha256": "5ca7bfcbb9a376388ada1b9fcb0919484928cfe334765f0bad218c7cf15e90f6",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1350",
+      "role": "publishable_master"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/hedy-patent-fictional-presenter-original.png",
+      "sha256": "9c9182400d6f97e9132bc9a557149277971bbb0896fd20db90f7958a6d536a78",
+      "media_type": "image/png",
+      "dimensions": "1122x1402",
+      "role": "generation_source"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/caption-instagram.txt",
+      "role": "caption"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/ENC-20260914-001-v1.png",
+      "sha256": "9c9182400d6f97e9132bc9a557149277971bbb0896fd20db90f7958a6d536a78",
+      "role": "encargo_image_copy_of_generation_source"
+    }
+  ],
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
+  "visual_qa": {
+    "reviews": [
+      {
+        "number": 1,
+        "reviewed_at": "2026-09-14T19:38:30Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": [
+          "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-04b-sin-desplegable.png",
+          "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-02-recorte.png",
+          "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-03-audio.png",
+          "experiments/media-lab/assets/LAB-PERSON-002/hedy-patent-fictional-presenter-4x5.jpg"
+        ],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": [
+          "Full 4:5 image matches master: headline box, Lamarr + Antheil · 1942, PRESENTADORA FICTICIA and brand badge complete.",
+          "Music chip sits above the image in the editor, not over text.",
+          "Final composer: full caption, no hashtag dropdown or keyboard, music row and Partager clear.",
+          "Composer thumbnail is an app preview strip only."
+        ]
+      }
+    ]
+  },
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
+  "publication": {
+    "route_id": "ANDROID-MASTER",
+    "comparison_pair_id": null,
+    "creation_origin": "built-in image generation plus deterministic overlay",
+    "publishing_transport": "lab.py telefono-subir + lab.py ig (Instagram Android native composer, scrcpy clipboard paste)",
+    "native_app_and_version": "Instagram 446.0.0.49.77 on Samsung SM-S721B Android 16",
+    "api_version": null,
+    "route_assigned_at": "2026-09-14T19:32:10Z",
+    "phone_transfer_seconds": 1,
+    "publishing_active_seconds": null,
+    "native_changes_from_master": [
+      "native music: Natural — Florian Christl"
+    ],
+    "human_interventions": [],
+    "fidelity_checks": {
+      "caption": "exact caption read back from composer by lab.py compositor_listo before share (838 bytes file)",
+      "cover": null,
+      "media_order": "not_applicable",
+      "aspect_ratio": "4:5 restored in picker (ig-02-recorte.png)",
+      "audio": "Natural — Florian Christl present in composer before share"
+    },
+    "destination": "Instagram @sabiduriabolsillo",
+    "agreed_batch_reference": null,
+    "requested_audience": "public",
+    "actual_audience": "public",
+    "submitted_at": "2026-09-14T19:37:56Z",
+    "processing_completed_at": "2026-09-14T19:38:17Z",
+    "playback_verified_at": "2026-09-14T19:40:00Z",
+    "cross_posting": "Instagram post menu shows 'Partagé sur Facebook' (ig-07-menu-publicacion.png): Accounts Center auto-share cross-posted this feed photo to the Facebook Page. Counted as an extra publication, not a lab cell (user decision 2026-09-14). CELL-011 (facebook feed, API) of the same family will be a near-duplicate on the Page.",
+    "post_id": null,
+    "post_url": null,
+    "audio_verified": true,
+    "master_sha256": "5ca7bfcbb9a376388ada1b9fcb0919484928cfe334765f0bad218c7cf15e90f6",
+    "snapshots": [],
+    "subido_en": "2026-09-14T19:31:46.653080+00:00",
+    "publicaciones_antes": 3714,
+    "evidence": [
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-01-selector.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-02-recorte.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-02b-editor.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-03-audio.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-03b-detalles.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-04-compositor.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-04b-sin-desplegable.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05a-antes.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05-publicado.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png",
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-07-menu-publicacion.png"
+    ],
+    "incidents": [
+      "lab.py ig pie returned ok while the hashtag suggestion dropdown was still open (ig-04-compositor.png); one lab.py telefono-atras closed it (ig-04b-sin-desplegable.png). Detector bug recorded as plan task 10f."
+    ],
+    "publicaciones_despues": 3715,
+    "share_result": {
+      "lab_estado": "confirmado_sin_conteo",
+      "exit_code": 5,
+      "reason": "--produccion-cercana: production publish/hilos in progress, so the +1 alone does not prove identity",
+      "reconciliation": "2026-09-14T19:39Z: profile grid position 1 is the 88 FILAS PARA CAMBIAR DE FRECUENCIA master (ig-05-publicado.png), count 3714 -> 3715; the concurrent production piece 2026-09-14-re57-story targets only facebook_story and instagram_story, which do not add to the feed post count; pre-share capture ig-05a-antes.png shows the clean composer with full caption, music Natural and Partager. Reconciled as confirmed, no retry.",
+      "captures": [
+        "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05a-antes.png",
+        "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05-publicado.png"
+      ]
+    },
+    "live_verification": "Brand profile grid position 1 (posts 3714 -> 3715); live post header 'sabiduriabolsillo' with 'Florian Christl · Natural'; caption opens «En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente…»; 'il y a 2 minutes'; full 4:5 image with PRESENTADORA FICTICIA and brand badge (Instagram mute control overlays the badge corner in-app only). Evidence experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png"
+  },
+  "missing_data_reasons": {
+    "post_url": "The native Instagram app offers no copy-link in the post menu; the link lives in the send sheet and the Android clipboard is not readable over ADB. Resolve read-only by listing recent Instagram media for the account (media-lab-verify search mode proposed in the phase 2 spec) and write post_id/post_url here.",
+    "facebook_crosspost_url": "Auto-shared by Instagram; permalink not captured.",
+    "audience_metrics": "Capture 24 h / 72 h / 7 d Instagram insights from 2026-09-15T19:38Z."
+  },
+  "decision": "First supervised Claude window published CELL-018 end-to-end through lab.py on the phone with agent visual QA and no human confirmation. Share reconciled as confirmed. Two process findings: lab.py ig pie accepted a composer with the hashtag dropdown still open (task 10f, blocking before the scheduled task), and the encargo owner choices do not include a reuse owner (codex-exec used).",
+  "next_action": "Resolve post_url read-only; capture 24 h metrics; fix task 10f before enabling sabiduria-media-lab."
+}
