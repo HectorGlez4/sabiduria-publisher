@@ -376,12 +376,49 @@ def seccion_manifiesto_y_cerrojo() -> None:
         check(not cerrojo.soltar(pathlib.Path(d) / "no-existe.lock", "manual"), "soltar sin cerrojo no rompe")
 
 
+XML_SELECTOR = """<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<hierarchy rotation="0">
+<node text="" content-desc="" class="android.widget.FrameLayout" bounds="[0,0][1080,2340]">
+<node text="Nouvelle publication" content-desc="" class="android.widget.TextView" bounds="[158,92][847,249]"/>
+<node text="Suivant" content-desc="" class="android.widget.TextView" bounds="[847,92][1080,249]"/>
+<node text="" content-desc="Modifier le rognage" class="android.widget.ImageView" bounds="[34,1194][135,1295]"/>
+<node text="" content-desc="Désélectionné Miniature de la photo du 14 septembre 2026 9:29" class="android.view.View" bounds="[542,1479][807,1744]"/>
+<node text="" content-desc="Sélectionné Miniature de la photo du 14 septembre 2026 10:39" class="android.view.View" bounds="[273,1479][538,1744]"/>
+<node text="" content-desc="Publier uniquement sur le profil" class="android.view.View" bounds="[0,0][0,0]"/>
+<node text="«Conténtese con hacer»." content-desc="" class="android.widget.AutoCompleteTextView" bounds="[45,519][1035,1228]"/>
+</node>
+</hierarchy>"""
+
+
+def seccion_interfaz() -> None:
+    print("\n6. Lectura de la interfaz del teléfono")
+    from labkit import instagram_feed, telefono
+
+    nodos = telefono.nodos(XML_SELECTOR)
+    check(all(n["bounds"] != (0, 0, 0, 0) for n in nodos), "descarta nodos invisibles de tamaño cero")
+    s = telefono.buscar(XML_SELECTOR, texto="Suivant")
+    check(s is not None and s["centro"] == (963, 170), "busca por texto exacto y calcula el centro")
+    check(telefono.buscar(XML_SELECTOR, texto="Modifier le rognage") is not None, "también busca en content-desc")
+    check(telefono.buscar(XML_SELECTOR, texto="Publier uniquement sur le profil") is None,
+          "no devuelve un nodo invisible aunque coincida")
+    check(telefono.buscar(XML_SELECTOR, empieza="Sélectionné Miniature") is not None, "busca por prefijo")
+    check(telefono.textos(XML_SELECTOR).count("«Conténtese con hacer».") == 1,
+          "textos() decodifica entidades y conserva «»")
+    check(instagram_feed.primera_miniatura_seleccionada(XML_SELECTOR),
+          "reconoce que la primera miniatura de la cuadrícula es la seleccionada")
+    otro = XML_SELECTOR.replace('"Sélectionné Miniature', '"Désélectionné Miniature', 1).replace(
+        'Désélectionné Miniature de la photo du 14 septembre 2026 9:29', 'Sélectionné Miniature de la photo du 14 septembre 2026 9:29')
+    check(not instagram_feed.primera_miniatura_seleccionada(otro),
+          "detecta cuando la seleccionada no es la primera")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
     seccion_colision,
     seccion_seleccion,
     seccion_manifiesto_y_cerrojo,
+    seccion_interfaz,
 ]
 
 
