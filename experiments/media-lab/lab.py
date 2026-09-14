@@ -57,7 +57,9 @@ ASSETS = "experiments/media-lab/assets/"
 EXTENSIONES_SUBIDA = (".png", ".jpg", ".jpeg")
 _NOMBRE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
 _FAMILIA = re.compile(r"[A-Za-z0-9_-]+")
-EXTENSIONES_MASTER = (".jpg", ".jpeg", ".png")
+# render_overlay.render() siempre guarda JPEG (Image.save(..., "JPEG", ...)), sea cual sea la
+# extensión pedida: solo se admiten las extensiones que describen bien ese contenido.
+EXTENSIONES_MASTER = (".jpg", ".jpeg")
 
 
 class ArgumentoNoValido(ValueError):
@@ -336,8 +338,16 @@ def cmd_render(a) -> int:
     _nombre_archivo_simple(a.salida, EXTENSIONES_MASTER, "--salida")
     destino = ASSETS_DIR / enc["destino_assets"] / a.salida
     _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
-    render_overlay.render(origen, destino, lineas, a.subtitulo, a.panel_rgb, a.accent_rgb, a.formato,
-                          a.aviso or "")
+    # Escritura atómica: render_overlay guarda directo en destino, así que un fallo a mitad
+    # (disco lleno, excepción de Pillow…) dejaría un JPEG truncado con el nombre bueno. Se
+    # renderiza en un temporal de al lado y solo se publica con os.replace si terminó bien.
+    temporal = destino.with_name(f".{destino.name}.tmp")
+    try:
+        render_overlay.render(origen, temporal, lineas, a.subtitulo, a.panel_rgb, a.accent_rgb, a.formato,
+                              a.aviso or "")
+        os.replace(temporal, destino)
+    finally:
+        temporal.unlink(missing_ok=True)
     with Image.open(destino) as im:
         ancho, alto = im.size
     emitir({"ok": True, "master": f"{enc['destino_assets']}/{a.salida}", "sha256": sha256(destino),
@@ -354,7 +364,12 @@ def cmd_tarjeta(a) -> int:
     _nombre_archivo_simple(a.salida, (".png",), "--salida")
     destino = ASSETS_DIR / ASSETS / a.familia / a.salida
     _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
-    quote_card.make_card(a.cita, a.autor, str(destino), variant=a.variante)
+    temporal = destino.with_name(f".{destino.name}.tmp")
+    try:
+        quote_card.make_card(a.cita, a.autor, str(temporal), variant=a.variante)
+        os.replace(temporal, destino)
+    finally:
+        temporal.unlink(missing_ok=True)
     with Image.open(destino) as im:
         ancho, alto = im.size
     emitir({"ok": True, "tarjeta": f"{ASSETS}{a.familia}/{a.salida}", "sha256": sha256(destino),

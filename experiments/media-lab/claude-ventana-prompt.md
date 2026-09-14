@@ -10,8 +10,8 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 - A partir del 2026-10-02 no publiques: resume y pide al usuario que desactive esta tarea.
 
 ## Pasos
-0. `lab.py turno`. Si `toca` es false, termina en silencio: sin informe, sin cerrojo y sin ningún otro comando. Si es true, `lab.py turno --marcar` y sigue.
-1. `lab.py lock-tomar --dueno programada`. Si devuelve `cerrojo: false`, termina: hay otra ventana en curso.
+0. `lab.py turno`. Si no sale con 0 o `toca` es false, termina en silencio (si salió con 2, una sola línea de informe con el error; no edites `turnos.json` ni `.turno-hecho`).
+1. `lab.py lock-tomar --dueno programada`; si `cerrojo` es false, termina sin marcar el turno. Luego `lab.py turno --marcar`; si no sale con 0 o no confirma el marcado, suelta el cerrojo (`lab.py lock-soltar --dueno programada`) y termina.
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar --dueno programada` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera. Si `telefono.listo` es false (bloqueado, dormido o desconectado), no toques el teléfono en toda la ventana: no intentes despertarlo ni desbloquearlo, salta las celdas `android_native`, sigue con las de API y di en el informe que el teléfono no estaba disponible para que el usuario lo desbloquee.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.

@@ -2628,7 +2628,8 @@ def seccion_render() -> None:
                                    "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "mal-formato.jpg")
             check(codigo == 2, f"render rechaza un --formato que no coincide con el del encargo ({codigo}, {datos})")
 
-            for salida, motivo in (("sub/archivo.jpg", "contiene «/»"), ("../fuera.jpg", "contiene «..»")):
+            for salida, motivo in (("sub/archivo.jpg", "contiene «/»"), ("../fuera.jpg", "contiene «..»"),
+                                   ("feed.png", "no es .jpg/.jpeg (render_overlay siempre escribe JPEG)")):
                 codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
                                        "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", salida)
                 check(codigo == 2, f"render rechaza --salida que {motivo} ({codigo}, {datos})")
@@ -2636,6 +2637,29 @@ def seccion_render() -> None:
             codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
                                    "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "feed.jpg")
             check(codigo == 2, f"render no pisa un máster ya existente ({codigo}, {datos})")
+
+            print("   · escritura atómica: un fallo a mitad no deja destino ni temporal")
+            import render_overlay
+
+            def render_a_medias(source, destination, lines, sub, panel_rgb, accent_rgb, output_format, disclosure):
+                pathlib.Path(destination).write_bytes(b"mitad de un jpeg")
+                raise OSError("disco lleno (simulado)")
+
+            destino_falla = raiz / "experiments/media-lab/assets/LAB-RENDER-001/falla.jpg"
+            temporal_falla = raiz / "experiments/media-lab/assets/LAB-RENDER-001/.falla.jpg.tmp"
+            original_render = render_overlay.render
+            render_overlay.render = render_a_medias
+            try:
+                codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                       "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "falla.jpg")
+            finally:
+                render_overlay.render = original_render
+            check(codigo != 0 and not destino_falla.exists() and not temporal_falla.exists(),
+                  f"un fallo al renderizar no deja destino ni temporal ({codigo}, {datos})")
+            codigo, datos, err = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                     "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "falla.jpg")
+            check(codigo == 0 and destino_falla.is_file(),
+                  f"un reintento con el mismo --salida funciona tras el fallo ({codigo}, {datos or err})")
 
         print("   · tarjeta")
         with LabAislado(raiz) as lab:
@@ -2649,6 +2673,28 @@ def seccion_render() -> None:
             codigo, datos, _ = lab("tarjeta", "--familia", "LAB CARD 002", "--cita", "Otra cita.",
                                    "--autor", "Autor", "--salida", "otra.png")
             check(codigo == 2, f"tarjeta rechaza una familia con espacios ({codigo}, {datos})")
+
+            import quote_card
+
+            def make_card_a_medias(quote, author, out_path, variant="cream", kicker="SABIDURÍA DE BOLSILLO"):
+                pathlib.Path(out_path).write_bytes(b"mitad de un png")
+                raise OSError("disco lleno (simulado)")
+
+            destino_falla = raiz / "experiments/media-lab/assets/LAB-CARD-001/falla.png"
+            temporal_falla = raiz / "experiments/media-lab/assets/LAB-CARD-001/.falla.png.tmp"
+            original_make_card = quote_card.make_card
+            quote_card.make_card = make_card_a_medias
+            try:
+                codigo, datos, _ = lab("tarjeta", "--familia", "LAB-CARD-001",
+                                       "--cita", "Otra cita de prueba.", "--autor", "Autor", "--salida", "falla.png")
+            finally:
+                quote_card.make_card = original_make_card
+            check(codigo != 0 and not destino_falla.exists() and not temporal_falla.exists(),
+                  f"un fallo al guardar la tarjeta no deja destino ni temporal ({codigo}, {datos})")
+            codigo, datos, err = lab("tarjeta", "--familia", "LAB-CARD-001",
+                                     "--cita", "Otra cita de prueba.", "--autor", "Autor", "--salida", "falla.png")
+            check(codigo == 0 and destino_falla.is_file(),
+                  f"un reintento con el mismo --salida funciona tras el fallo ({codigo}, {datos or err})")
 
 
 def seccion_turno() -> None:
@@ -2680,14 +2726,14 @@ def seccion_turno() -> None:
     r = T.turno_actual(datetime.fromisoformat("2026-09-15T00:40:00+02:00"), ancla, 5, 30,
                        ultimo_atendido="2026-09-14T22:40:00+00:00")
     check(r["toca"] is False and r["motivo"] == "turno ya atendido", f"un turno ya atendido no vuelve a tocar ({r})")
-    r = T.turno_actual(datetime.fromisoformat("2026-09-16T01:40:00+02:00"), ancla, 5, 30, None)
-    check(r["toca"] is True, "un día después la hora local ha girado 1h (01:40 toca)")
-    r = T.turno_actual(datetime.fromisoformat("2026-09-16T00:40:00+02:00"), ancla, 5, 30, None)
-    check(r["toca"] is False, "un día después 00:40 ya no coincide con ningún turno")
-    antes = T.turno_actual(datetime.fromisoformat("2026-10-25T00:00:00+00:00"), ancla, 5, 30, None)
-    despues = T.turno_actual(datetime.fromisoformat("2026-10-25T06:00:00+00:00"), ancla, 5, 30, None)
-    check((despues["turno_inicio"] - antes["turno_inicio"]).total_seconds() % (5 * 3600) == 0,
-          "el cruce del cambio de hora del 25 de octubre mantiene turnos de 5 horas reales")
+    from zoneinfo import ZoneInfo
+    madrid = ZoneInfo("Europe/Madrid")
+    r = T.turno_actual(datetime.fromisoformat("2026-10-25T00:41:00+02:00"), ancla, 5, 30, None)
+    check((r["siguiente"] - r["turno_inicio"]).total_seconds() == 18000,
+          f"dos turnos seguidos a caballo del cambio de hora del 25 de octubre están separados 18000 s reales ({r})")
+    check(r["turno_inicio"].astimezone(madrid).isoformat(timespec="seconds") == "2026-10-25T00:40:00+02:00"
+          and r["siguiente"].astimezone(madrid).isoformat(timespec="seconds") == "2026-10-25T04:40:00+01:00",
+          f"en hora de Madrid el turno pasa de +02:00 a +01:00 con el cambio de hora ({r})")
 
     print("   · CLI lab.py turno")
     with tempfile.TemporaryDirectory() as d:
@@ -2698,15 +2744,27 @@ def seccion_turno() -> None:
             check(codigo == 0 and campo(datos, "toca") is True, f"toca en el ancla exacta ({codigo}, {datos})")
             codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T01:40:00+02:00")
             check(codigo == 0 and campo(datos, "toca") is False, f"no toca una hora después ({codigo}, {datos})")
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T23:40:00Z")
+            check(codigo == 0 and campo(datos, "toca") is True
+                  and campo(datos, "turno_inicio_madrid") == "2026-09-16T01:40:00+02:00",
+                  f"un día después la hora local ha girado 1h: toca a la 01:40 de Madrid ({codigo}, {datos})")
+
+            turno_hecho = raiz / ".turno-hecho"
+            check(not turno_hecho.exists(), "de partida no hay .turno-hecho")
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
+            check(codigo == 2 and campo(datos, "error") == "no se marca: fuera del turno" and not turno_hecho.exists(),
+                  f"--marcar fuera de turno (sin marcar previo) sale con 2 y no crea .turno-hecho ({codigo}, {datos})")
 
             codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar")
-            check(codigo == 0 and campo(datos, "marcado") is True and (raiz / ".turno-hecho").is_file(),
+            check(codigo == 0 and campo(datos, "marcado") is True and turno_hecho.is_file(),
                   f"--marcar escribe .turno-hecho cuando toca ({codigo}, {datos})")
+            marcado_antes = turno_hecho.read_text(encoding="utf-8")
             codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:45:00+02:00")
             check(codigo == 0 and campo(datos, "toca") is False and campo(datos, "motivo") == "turno ya atendido",
                   f"una segunda llamada ya no toca: turno ya atendido ({codigo}, {datos})")
             codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
-            check(codigo == 2, f"--marcar fuera de turno sale con 2 ({codigo}, {datos})")
+            check(codigo == 2 and turno_hecho.read_text(encoding="utf-8") == marcado_antes,
+                  f"--marcar de un turno ya atendido tampoco toca .turno-hecho ({codigo}, {datos})")
 
         with LabAislado(raiz) as lab:
             (raiz / "turnos.json").write_text("{ no es json", encoding="utf-8")
