@@ -25,7 +25,8 @@ import phone_clipboard
 from labkit import telefono
 from labkit.instagram_pantallas import *  # noqa: F401,F403 — reexporta `instagram_pantallas.__all__`
 from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _campos, _coincidencias,
-                                        _exigir_compositor_con_pie, _nodo, _suivant, _tiene_pie, campo_pie,
+                                        _exigir_compositor_con_pie, _nodo, _suivant, _tiene_pie,
+                                        banners_de_volcado, campo_pie,
                                         compositor_listo, evaluar_envio, hay_desplegable_hashtags,
                                         miniatura_coincide, observacion_de_volcado, perfil_activo,
                                         publicaciones_de_perfil, punto_mas, seleccion_unica, tema_de_chip)
@@ -33,6 +34,7 @@ from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _cam
 ATRAS, CTRL_IZQ, TECLA_A = 4, 113, 29
 ESPERA_S = 25
 OBSERVACION_S = 90
+CAPTURA_ERROR_S = 10  # la captura tras un error es best-effort: no alarga la salida
 
 
 class BorradorPendiente(PantallaInesperada):
@@ -243,11 +245,14 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
         telefono.tocar(*boton["centro"])
 
         observaciones: list[dict] = []
+        banners_vistos: list[tuple[int, int, int, int]] = []  # el error puede salir cuando el banner ya se fue
         inicio = time.monotonic()
         while time.monotonic() - inicio < OBSERVACION_S:
             time.sleep(1.5)
             try:
-                observaciones.append(observacion_de_volcado(telefono.volcado(), boton["bounds"]))
+                xml = telefono.volcado()
+                observaciones.append(observacion_de_volcado(xml, boton["bounds"], banners_vistos))
+                banners_vistos += banners_de_volcado(xml)
             except telefono.TelefonoError:
                 observaciones.append({"valido": False, "compositor": False, "banner": False, "fallo": False})
             parcial = evaluar_envio(observaciones)
@@ -292,7 +297,8 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
         resultado["estado"] = "error_tras_pulsar"
         resultado["error"] = f"{type(e).__name__}: {e}"
         try:
-            resultado["captura_error"] = str(telefono.captura(evidencia / "ig-05-error.png"))
+            resultado["captura_error"] = str(telefono.captura(evidencia / "ig-05-error.png",
+                                                              timeout=CAPTURA_ERROR_S))
         except Exception as e_captura:  # noqa: BLE001 — la captura es best-effort: el resultado vuelve igual
             avisos.append(f"no se pudo capturar tras el error: {type(e_captura).__name__}: {e_captura}")
     return resultado

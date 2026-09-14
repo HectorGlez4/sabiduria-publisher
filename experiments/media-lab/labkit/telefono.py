@@ -237,10 +237,10 @@ def volcado(timeout: int = 30) -> str:
     return xml
 
 
-def captura(destino: Path) -> Path:
-    """Guarda un screencap en `destino`. Un fallo del disco (crear la carpeta o escribir)
-    sale como TelefonoError, igual que uno de adb."""
-    datos = adb("exec-out", "screencap", "-p").stdout
+def captura(destino: Path, timeout: int = 60) -> Path:
+    """Guarda un screencap en `destino`, esperando a adb como mucho `timeout` s. Un fallo
+    del disco (crear la carpeta o escribir) sale como TelefonoError, igual que uno de adb."""
+    datos = adb("exec-out", "screencap", "-p", timeout=timeout).stdout
     if not es_png(datos):
         raise TelefonoError(f"screencap no devolvió un PNG ({len(datos)} bytes)")
     try:

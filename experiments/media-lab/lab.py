@@ -431,19 +431,36 @@ def cmd_generar(a) -> int:
             carpeta_salida = Path(tempfile.mkdtemp(prefix="codex-exec-"))
             salida = carpeta_salida / "respuesta.json"
             codigo, cola = _ejecutar_codex(enc, salida, a.timeout, vivo)
-        except Exception:
-            # Un error entre tomar y lanzar Codex (`_permitidas`, `mkdtemp`…) no puede dejar el
-            # encargo en generando 30 minutos. Se libera en vez de `_deshacer`: Codex no corrió y
-            # no hay intento que contar. Si ya se había lanzado, se relanza sin tocarlo.
+        except Exception as e:
+            # Una excepción no puede dejar el encargo en generando 30 minutos.
             if not vivo["lanzado"]:
-                _liberar(ruta)
+                # Antes del lanzamiento (`_permitidas`, `mkdtemp`…): se libera en vez de `_deshacer`,
+                # porque Codex no corrió y no hay intento que contar.
+                problemas = _liberar(ruta)
+            else:
+                # Codex pudo escribir: guardia y deshacer (contando el intento) antes de relanzar.
+                ajenos = _ajenos(antes, permitidas)
+                nota = f"error tras lanzar Codex: {type(e).__name__}: {e}"
+                if ajenos:
+                    nota += f"; cambió: {', '.join(ajenos)}"
+                problemas = [nota, *_deshacer(ruta, nota, bloquear=bool(ajenos))]
+            for problema in problemas:
+                print(problema, file=sys.stderr)
+                e.add_note(problema)
             raise
         respuesta = _leer_respuesta(salida)
         ajenos = _ajenos(antes, permitidas)
-        if vivo["senal"] is not None and not vivo["lanzado"] and not ajenos:
-            nota = f"interrumpido por señal {vivo['senal']} antes de lanzar Codex"
-            emitir({"ok": False, "errores": [nota, *_liberar(ruta)], "ajenos": []})
-            return 1
+        if not vivo["lanzado"]:
+            # Señal antes del lanzamiento o fallo de Popen: Codex no corrió, así que se libera sin
+            # sumar intento ni bloquear aunque haya cambios ajenos (no son suyos); se informan con 6.
+            if vivo["senal"] is not None:
+                nota = f"interrumpido por señal {vivo['senal']} antes de lanzar Codex"
+            else:
+                nota = cola.strip() or "codex exec no se lanzó"
+            if ajenos:
+                nota += f"; cambió: {', '.join(ajenos)}"
+            emitir({"ok": False, "errores": [nota, *_liberar(ruta)], "ajenos": ajenos})
+            return 6 if ajenos else 1
         if vivo["senal"] is not None:
             nota = f"interrumpido por señal {vivo['senal']}"
             if ajenos:

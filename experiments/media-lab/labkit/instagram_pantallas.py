@@ -19,7 +19,7 @@ from labkit import telefono
 
 __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
-    "PantallaInesperada",
+    "LARGO_AVISO_CORTO", "PantallaInesperada", "banners_de_volcado",
     "perfil_activo", "publicaciones_de_perfil", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
     "hay_desplegable_hashtags", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
     "compositor_listo", "observacion_de_volcado", "evaluar_envio",
@@ -36,6 +36,8 @@ MARCAS_FALLO = ("Réessayer", "Impossible de publier", "n’a pas pu", "n'a pas 
 # inferior a esta altura o menos, o cerca del propio banner «Publication sur…».
 ZONA_AVISO_PX = 600
 MARGEN_BANNER_PX = 250
+# Un texto de fallo así de corto cuenta en cualquier sitio: los pies de otras cuentas son largos.
+LARGO_AVISO_CORTO = 80
 _MESES = {"janvier": 1, "fevrier": 2, "février": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
           "juillet": 7, "aout": 8, "août": 8, "septembre": 9, "octobre": 10, "novembre": 11,
           "decembre": 12, "décembre": 12}
@@ -219,37 +221,53 @@ def _es_banner(n: dict) -> bool:
     return any(v.startswith(f"Publication sur {MARCA}") for v in (n["texto"], n["desc"]))
 
 
-def _junto_al_aviso(n: dict, banners: list[dict]) -> bool:
+def banners_de_volcado(xml: str) -> list[tuple[int, int, int, int]]:
+    """Bounds de los avisos «Publication sur <marca>…» de Instagram en el volcado."""
+    return [n["bounds"] for n in telefono.buscar_todos(xml, paquete=PAQUETE) if _es_banner(n)]
+
+
+def _junto_al_aviso(n: dict, banners: list[tuple[int, int, int, int]]) -> bool:
     """El nodo está en la zona del aviso de subida: borde inferior a ZONA_AVISO_PX o menos,
-    o a MARGEN_BANNER_PX o menos (en vertical) de algún banner «Publication sur…»."""
+    o a MARGEN_BANNER_PX o menos (en vertical) de alguno de los bounds de banner dados."""
     _, y1, _, y2 = n["bounds"]
     if y2 <= ZONA_AVISO_PX:
         return True
-    return any(y1 <= b["bounds"][3] + MARGEN_BANNER_PX and y2 >= b["bounds"][1] - MARGEN_BANNER_PX
-               for b in banners)
+    return any(y1 <= b[3] + MARGEN_BANNER_PX and y2 >= b[1] - MARGEN_BANNER_PX for b in banners)
 
 
-def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | None = None) -> dict:
+def _es_aviso_de_fallo(n: dict, banners: list[tuple[int, int, int, int]]) -> bool:
+    """Texto de fallo fuera del campo del pie que es corto (≤ LARGO_AVISO_CORTO, en
+    cualquier sitio) o está junto al aviso de subida (ver `_junto_al_aviso`)."""
+    if n["clase"] in CLASES_CAMPO:
+        return False
+    return any(any(marca in v for marca in MARCAS_FALLO)
+               and (len(v) <= LARGO_AVISO_CORTO or _junto_al_aviso(n, banners))
+               for v in (n["texto"], n["desc"]))
+
+
+def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | None = None,
+                           banners_previos: list[tuple[int, int, int, int]] | None = None) -> dict:
     """Lo que dice un volcado tras pulsar Partager.
 
     - valido: hay Instagram en primer plano.
     - compositor: sigue el título «Nouvelle publication», o el «Partager» pulsado (mismos
       bounds), o el campo del pie. Otro «Partager» (el de compartir una publicación del
       inicio) no cuenta.
-    - banner: «Publication sur sabiduriabolsillo…».
-    - fallo: un aviso de error de Instagram en la zona del aviso de subida (ver
-      `_junto_al_aviso`). No cuentan el campo del pie (texto nuestro) ni los pies de otras
-      publicaciones del inicio más abajo."""
+    - banner: «Publication sur sabiduriabolsillo…» en este volcado.
+    - fallo: un aviso de error de Instagram fuera del campo del pie (texto nuestro) que es
+      corto, o que está en la zona del aviso de subida: la de arriba, o junto a un banner de
+      este volcado o de `banners_previos` (bounds vistos antes: el banner puede irse justo
+      cuando sale el error). Un pie largo de otra cuenta más abajo no cuenta."""
     ig = telefono.buscar_todos(xml, paquete=PAQUETE)
     boton = boton_bounds is not None and any(
         _dice(n, "Partager") and n["bounds"] == tuple(boton_bounds) for n in ig)
-    banners = [n for n in ig if _es_banner(n)]
+    propios = [n["bounds"] for n in ig if _es_banner(n)]
+    zona = propios + [tuple(b) for b in (banners_previos or [])]
     return {"valido": bool(ig),
             "compositor": any(_dice(n, "Nouvelle publication") for n in ig) or boton
             or any(n["clase"] in CLASES_CAMPO for n in ig),
-            "banner": bool(banners),
-            "fallo": any(marca in v for n in ig if n["clase"] not in CLASES_CAMPO and _junto_al_aviso(n, banners)
-                         for v in (n["texto"], n["desc"]) for marca in MARCAS_FALLO)}
+            "banner": bool(propios),
+            "fallo": any(_es_aviso_de_fallo(n, zona) for n in ig)}
 
 
 def evaluar_envio(observaciones: list[dict]) -> str:

@@ -522,6 +522,7 @@ class TelefonoSimulado:
         self.combinaciones: list[tuple] = []
         self.pegados: list[str] = []
         self.capturas: list[str] = []
+        self.plazos_captura: list = []
         self.prohibidos: list[str] = []
         self.reloj = 1000.0
 
@@ -556,8 +557,9 @@ class TelefonoSimulado:
         v = self.teclado_estado()
         return True if v is None else v
 
-    def captura(self, destino: pathlib.Path) -> pathlib.Path:
+    def captura(self, destino: pathlib.Path, timeout=None) -> pathlib.Path:
         self.capturas.append(destino.name)
+        self.plazos_captura.append(timeout)
         return destino
 
     def lanzar(self, paquete: str) -> None:
@@ -864,7 +866,9 @@ def seccion_interfaz() -> None:
           == "confirmado", "el fallo de un volcado inválido no cuenta")
 
     print("   · seguimiento de la revisión (10b): fallos solo junto al aviso de subida")
-    pie_con_fallo = "Réessayer n'a pas pu, dice el pie de otra cuenta"
+    pie_con_fallo = ("Réessayer n'a pas pu, dice el pie de otra cuenta, que es largo como los pies de verdad "
+                     "#citas #sabiduria")
+    check(len(pie_con_fallo) > 80, "el pie ajeno de estas pruebas pasa de 80 caracteres")
     check(IG.observacion_de_volcado(xml_inicio(pie_ajeno=pie_con_fallo))["fallo"] is False,
           "(M-2) un pie del inicio más abajo con «Réessayer» no es un fallo")
     check(IG.observacion_de_volcado(xml_inicio(banner=True, pie_ajeno=pie_con_fallo))["fallo"] is False,
@@ -875,8 +879,36 @@ def seccion_interfaz() -> None:
           "(M-2) un aviso de error junto al banner cuenta aunque esté por debajo de 600 px")
     check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,500][1080,600]", texto="Réessayer")))["fallo"] is True,
           "(M-2) un aviso con el borde inferior en 600 px cuenta")
-    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,520][1080,601]", texto="Réessayer")))["fallo"] is False,
-          "(M-2) sin banner, un aviso que baja de 600 px no cuenta")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,1500][1080,1600]", texto="Impossible de publier. Réessayer")))
+          ["fallo"] is True, "(10d) sin banner, un aviso corto de Instagram bajo en pantalla sí cuenta")
+    ochenta = "Réessayer " + "x" * 70
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,1500][1080,1600]", texto=ochenta)))["fallo"] is True
+          and IG.observacion_de_volcado(jerarquia(nodo_xml("[0,1500][1080,1600]", texto=ochenta + "x")))["fallo"] is False,
+          "(10d) lejos del aviso, un texto de fallo de 80 caracteres cuenta y uno de 81 no")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,1500][1080,1600]", texto="Réessayer",
+                                                       clase="android.widget.EditText")))["fallo"] is False,
+          "(10d) un «Réessayer» corto dentro del campo del pie no cuenta")
+
+    def observa(xml, **kw):
+        try:
+            return IG.observacion_de_volcado(xml, **kw)
+        except Exception as e:  # noqa: BLE001
+            return {"error": repr(e)}
+
+    largo_fallo = ("La publication n’a pas pu être partagée. Vérifiez votre connexion et réessayez plus tard, "
+                   "s’il vous plaît.")
+    banner_bajo_solo = jerarquia(nodo_xml("[0,900][1080,980]", texto="Publication sur sabiduriabolsillo…"))
+    fallo_bajo = jerarquia(nodo_xml("[0,990][1080,1070]", texto=largo_fallo))
+    check(len(largo_fallo) > 80 and observa(fallo_bajo).get("fallo") is False,
+          "(10d) sin banner en este volcado ni en los anteriores, un aviso largo bajo no cuenta")
+    check(observa(fallo_bajo, banners_previos=[(0, 900, 1080, 980)]).get("fallo") is True,
+          f"(10d) un aviso junto a un banner visto en un volcado anterior cuenta ({observa(fallo_bajo, banners_previos=[(0, 900, 1080, 980)])})")
+    check(observa(fallo_bajo, banners_previos=[(0, 250, 1080, 330)]).get("fallo") is False,
+          "(10d) un banner anterior lejano no hace contar un aviso largo")
+    banners_de = getattr(IG, "banners_de_volcado", None)
+    check(banners_de is not None and banners_de(banner_bajo_solo) == [(0, 900, 1080, 980)]
+          and banners_de(xml_inicio()) == [],
+          "(10d) banners_de_volcado da los bounds de los avisos «Publication sur…»")
 
     import importlib
     try:
@@ -998,14 +1030,17 @@ def seccion_interfaz() -> None:
     check(err is None and sim.capturas == ["ig-05a-antes.png", "ig-05-error.png"]
           and str(res.get("captura_error")).endswith("ig-05-error.png"),
           f"(M-3) tras error_tras_pulsar queda la captura ig-05-error.png ({sim.capturas}, {res and res.get('captura_error')})")
+    plazo_error = sim.plazos_captura[-1] if len(sim.plazos_captura) == 2 else None
+    check(isinstance(plazo_error, (int, float)) and 0 < plazo_error <= 10,
+          f"(10d) la captura best-effort del error espera como mucho 10 s ({sim.plazos_captura})")
 
     sim = TelefonoSimulado([comp], falla_tocar=T.TelefonoError("device offline"))
     captura_normal = sim.captura
 
-    def captura_rota(destino):
+    def captura_rota(destino, timeout=None):
         if destino.name == "ig-05-error.png":
             raise OSError(5, "Input/output error")
-        return captura_normal(destino)
+        return captura_normal(destino, timeout=timeout)
     sim.captura = captura_rota
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
     check(err is None and res["estado"] == "error_tras_pulsar" and res["error"].startswith("TelefonoError")
@@ -1021,12 +1056,16 @@ def seccion_interfaz() -> None:
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711, produccion_cercana=True))
     check(err is None and res["estado"] == "fallido",
           f"(M-1) con producción cercana un fallido sigue siendo fallido ({err or res['estado']})")
-    feed_pie = xml_inicio(pie_ajeno="Réessayer n'a pas pu, dice el pie de otra cuenta")
-    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True, pie_ajeno="Réessayer"), feed_pie, feed_pie, feed_pie,
+    feed_pie = xml_inicio(pie_ajeno=pie_con_fallo)
+    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True, pie_ajeno=pie_con_fallo), feed_pie, feed_pie, feed_pie,
                             xml_perfil()])
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
     check(err is None and res["estado"] == "confirmado",
           f"(M-2) un pie ajeno con «Réessayer» en el inicio no convierte el envío en fallido ({err or res['estado']})")
+    sim = TelefonoSimulado([comp, comp, banner_bajo_solo, fallo_bajo])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "fallido" and sim.toques.count(centro) == 1,
+          f"(10d) compartir recuerda el banner de un volcado anterior: el aviso largo de después da fallido ({err or res['estado']})")
 
     sim_obs = TelefonoSimulado([comp, comp, T.TelefonoError("volcado no válido")])
     res, err = con_telefono_simulado(sim_obs, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
@@ -1093,9 +1132,12 @@ def seccion_interfaz() -> None:
     import subprocess as sp
     import tempfile
     adb_original = T.adb
+    plazos_adb: list = []
     try:
-        T.adb = lambda *args, timeout=60: sp.CompletedProcess(args, 0, stdout=b"\x89PNG\r\n\x1a\n" + b"\0" * 8,
-                                                              stderr=b"")
+        def adb_png(*args, timeout=60):
+            plazos_adb.append(timeout)
+            return sp.CompletedProcess(args, 0, stdout=b"\x89PNG\r\n\x1a\n" + b"\0" * 8, stderr=b"")
+        T.adb = adb_png
         with tempfile.TemporaryDirectory() as d:
             archivo = pathlib.Path(d) / "soy-un-archivo"
             archivo.write_text("x", encoding="utf-8")
@@ -1107,14 +1149,29 @@ def seccion_interfaz() -> None:
             buena = T.captura(pathlib.Path(d) / "ev" / "x.png")
             check(tipo_error is T.TelefonoError and buena.is_file(),
                   f"(M-4) captura convierte el OSError del disco en TelefonoError ({tipo_error})")
+            plazos_adb.clear()
+            T.captura(pathlib.Path(d) / "ev" / "normal.png")
+            try:
+                T.captura(pathlib.Path(d) / "ev" / "corta.png", timeout=7)
+            except TypeError:
+                pass
+            check(plazos_adb[-1:] == [7] and plazos_adb[:1] == [60],
+                  f"(10d) captura pasa su timeout a adb y por defecto sigue en 60 s ({plazos_adb})")
     finally:
         T.adb = adb_original
 
     class PopenFalso:
-        def __init__(self, respuestas: list):
+        def __init__(self, respuestas: list, falla_wait: BaseException | None = None):
             self.respuestas = list(respuestas)
+            self.falla_wait = falla_wait
             self.llamadas: list = []
             self.stdout = io.StringIO()
+
+        def wait(self, timeout=None):
+            self.llamadas.append(("wait", timeout))
+            if self.falla_wait is not None:
+                raise self.falla_wait
+            return -9
 
         def poll(self):
             return None
@@ -1138,9 +1195,18 @@ def seccion_interfaz() -> None:
     except Exception as e:  # noqa: BLE001
         salida_parar, escapo = None, e
     check(escapo is None and salida_parar == ""
-          and atascado.llamadas == ["terminate", ("communicate", 5), "kill", ("communicate", 5)]
+          and atascado.llamadas == ["terminate", ("communicate", 5), "kill", ("communicate", 5), ("wait", 1)]
           and atascado.stdout.closed,
-          f"(M-7) _parar espera 5 s también tras kill e ignora un segundo timeout ({escapo!r}, {atascado.llamadas})")
+          f"(M-7, 10d) _parar espera 5 s también tras kill, ignora un segundo timeout, cierra stdout y recoge "
+          f"con wait(1) ({escapo!r}, {atascado.llamadas})")
+    zombi = PopenFalso([sp.TimeoutExpired("scrcpy", 5), sp.TimeoutExpired("scrcpy", 5)],
+                       falla_wait=sp.TimeoutExpired("scrcpy", 1))
+    try:
+        salida_zombi, escapo = phone_clipboard._parar(zombi), None
+    except Exception as e:  # noqa: BLE001
+        salida_zombi, escapo = None, e
+    check(escapo is None and salida_zombi == "" and zombi.llamadas[-1:] == [("wait", 1)],
+          f"(10d) si wait(1) también agota el tiempo, _parar vuelve igual ({escapo!r}, {zombi.llamadas})")
     lento = PopenFalso([sp.TimeoutExpired("scrcpy", 5), "adiós\n"])
     check(phone_clipboard._parar(lento) == "adiós\n" and lento.llamadas[-1] == ("communicate", 5),
           "(M-7) si tras kill el servidor sale, _parar devuelve lo que escribió")
@@ -1819,7 +1885,7 @@ def seccion_cli_en_proceso() -> None:
             modulo = lab.lab
             viejos = {"CODEX": codex_rescate.CODEX, "comando": codex_rescate.comando,
                       "estado_git": modulo.guardia.estado_git, "_permitidas": modulo._permitidas,
-                      "mkdtemp": tf.mkdtemp}
+                      "mkdtemp": tf.mkdtemp, "_liberar": modulo._liberar, "_cola": modulo._cola}
             permitidas_original = modulo._permitidas
             try:
                 # `python --version` hace de «codex --version»; el Codex de verdad nunca se lanza.
@@ -1857,12 +1923,77 @@ def seccion_cli_en_proceso() -> None:
                       and enc_roto["intentos"] == [] and enc_roto["lock_owner"] is None and not llamadas,
                       f"(G-2) un error entre tomar y lanzar Codex no deja el encargo en generando ({codigo}, {datos}, "
                       f"{enc_roto['estado']})")
+
+                print("   · generar sin lanzar Codex no gasta intentos; tras lanzarlo, guardia antes de relanzar (10d)")
+                ajena = "experiments/media-lab/results/ajeno-de-prueba.txt"
+
+                def git_que_cambia():
+                    fotos = iter([{}])
+                    return lambda raiz: next(fotos, {ajena: "1"})
+
+                llamadas.clear()
+                modulo._permitidas = senal_antes_de_lanzar
+                modulo.guardia.estado_git = git_que_cambia()
+                con_ajenos, _ = guardar_encargo(raiz, 6, ["C-TH-API"])
+                codigo, datos, _ = lab("generar", "--encargo", con_ajenos)
+                modulo._permitidas = permitidas_original
+                enc_ajenos = E.cargar(raiz / "encargos" / f"{con_ajenos}.json")
+                errores_ajenos = campo(datos, "errores") or [""]
+                check(codigo == 6 and campo(datos, "ajenos") == [ajena] and enc_ajenos["estado"] == "pedido"
+                      and enc_ajenos["intentos"] == [] and enc_ajenos["lock_owner"] is None and not llamadas
+                      and "antes de lanzar Codex" in errores_ajenos[0] and ajena in errores_ajenos[0],
+                      f"(10d) señal antes de lanzar con ajenos: se informan, sale con 6 y el encargo vuelve a pedido sin "
+                      f"intento ni bloqueo ({codigo}, {datos}, {enc_ajenos['estado']}, {len(enc_ajenos['intentos'])})")
+
+                modulo.guardia.estado_git = lambda raiz: {}
+                codex_rescate.comando = lambda prompt, salida: [str(raiz / "codex-que-no-existe")]
+                sin_popen, _ = guardar_encargo(raiz, 7, ["C-TH-API"])
+                codigo, datos, _ = lab("generar", "--encargo", sin_popen)
+                enc_popen = E.cargar(raiz / "encargos" / f"{sin_popen}.json")
+                check(codigo == 1 and enc_popen["estado"] == "pedido" and enc_popen["intentos"] == []
+                      and enc_popen["lock_owner"] is None
+                      and "no arrancó" in str((campo(datos, "errores") or [""])[0]),
+                      f"(10d) si Popen falla, Codex no se lanzó: pedido sin sumar intento ({codigo}, {datos}, "
+                      f"{enc_popen['estado']}, {len(enc_popen['intentos'])})")
+
+                # Tras lanzar un proceso inofensivo (python -c pass, nunca Codex), falla la lectura de su salida.
+                codex_rescate.comando = lambda prompt, salida: [sys.executable, "-c", "pass"]
+
+                def cola_rota(archivo):
+                    raise OSError(5, "cola ilegible")
+
+                modulo._cola = cola_rota
+                modulo.guardia.estado_git = git_que_cambia()
+                tras_lanzar, _ = guardar_encargo(raiz, 8, ["C-TH-API"])
+                codigo, datos, salida_err = lab("generar", "--encargo", tras_lanzar)
+                modulo._cola = viejos["_cola"]
+                enc_tras = E.cargar(raiz / "encargos" / f"{tras_lanzar}.json")
+                ultimo = (enc_tras["intentos"] or [{}])[-1]
+                check(codigo == 2 and campo(datos, "tipo") == "OSError" and enc_tras["estado"] != "generando"
+                      and len(enc_tras["intentos"]) == 1 and ultimo.get("resultado") == "fallo"
+                      and "error tras lanzar Codex" in str(ultimo.get("nota")) and ajena in str(ultimo.get("nota"))
+                      and ajena in salida_err,
+                      f"(10d) una excepción tras lanzar Codex pasa la guardia y deshace con la nota antes de relanzar "
+                      f"({codigo}, {datos}, {enc_tras['estado']}, {ultimo}, {salida_err!r})")
+
+                codex_rescate.comando = prohibido("codex_rescate.comando")
+                modulo.guardia.estado_git = lambda raiz: {}
+                modulo._liberar = lambda ruta: ["no se pudo liberar el encargo: prueba de stderr"]
+                tf.mkdtemp = sin_disco
+                sin_liberar, _ = guardar_encargo(raiz, 9, ["C-TH-API"])
+                codigo, datos, salida_err = lab("generar", "--encargo", sin_liberar)
+                tf.mkdtemp = viejos["mkdtemp"]
+                modulo._liberar = viejos["_liberar"]
+                check(codigo == 2 and "no se pudo liberar el encargo: prueba de stderr" in salida_err,
+                      f"(10d) los errores de _liberar antes de relanzar salen por stderr ({codigo}, {salida_err!r})")
             finally:
                 codex_rescate.CODEX = viejos["CODEX"]
                 codex_rescate.comando = viejos["comando"]
                 modulo.guardia.estado_git = viejos["estado_git"]
                 modulo._permitidas = viejos["_permitidas"]
                 tf.mkdtemp = viejos["mkdtemp"]
+                modulo._liberar = viejos["_liberar"]
+                modulo._cola = viejos["_cola"]
     finally:
         for obj, n, f in originales:
             setattr(obj, n, f)

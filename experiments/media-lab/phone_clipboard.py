@@ -63,7 +63,8 @@ def _parar(server: subprocess.Popen) -> str:
     """Termina el servidor, espera a que salga y devuelve lo que escribió.
 
     Tras `kill()` también se espera como mucho 5 s: si ni así sale (adb colgado), se deja
-    de leer su salida, se cierra la tubería y se devuelve lo que haya (nada)."""
+    de leer su salida, se cierra la tubería, se intenta recogerlo 1 s más y se devuelve lo
+    que haya (nada)."""
     if server.poll() is None:
         server.terminate()
     try:
@@ -79,6 +80,10 @@ def _parar(server: subprocess.Popen) -> str:
                     server.stdout.close()
                 except OSError:
                     pass
+            try:
+                server.wait(timeout=1)
+            except subprocess.TimeoutExpired:
+                pass  # sin recoger: no se bloquea la salida por un proceso que no muere
     return out or ""
 
 
