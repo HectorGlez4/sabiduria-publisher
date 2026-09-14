@@ -2,7 +2,7 @@
   "id": "2026-09-14-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Ida B. Wells y el educador que es la prensa",
     "hook": "Escribió que no hay educador comparable a la prensa cinco meses después de que una turba destruyera la suya y vendieran la maquinaria para cobrarse las deudas.",
@@ -84,5 +84,21 @@
     "threads"
   ],
   "publish_at": "2026-09-14T19:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1095244336633559",
+      "url": "https://www.facebook.com/874327782058550/posts/1095244336633559",
+      "published_at": "2026-09-14T22:46:45.426264+00:00"
+    },
+    "instagram": {
+      "post_id": "18581095138069570",
+      "url": "https://www.instagram.com/p/DdSPfFZlMLU/",
+      "published_at": "2026-09-14T22:46:55.729611+00:00"
+    },
+    "threads": {
+      "post_id": "18409360774081520",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18409360774081520",
+      "published_at": "2026-09-14T22:47:14.760529+00:00"
+    }
+  }
 }

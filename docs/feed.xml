@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 14 Sep 2026 19:31:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 22:47:14 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Escribió que no hay educador comparable a la prensa cinco meses después de que una turba destruyera la suya y vendieran la maquinaria para cobrarse las deudas.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-14-extra86</guid>
+      <pubDate>Mon, 14 Sep 2026 22:46:45 +0000</pubDate>
+      <description><![CDATA["La gente tiene que saber antes de poder actuar, y no hay educador que se compare con la prensa."
+— Ida B. Wells, Southern Horrors, capítulo «Self-Help» (1892)
+
+El 9 de marzo de 1892, en Memphis, tres hombres fueron sacados de la cárcel y linchados: Thomas Moss, Calvin McDowell y Will Stewart. Tenían una tienda de comestibles, la People's Grocery, que le quitaba clientela a un comercio blanco de la esquina. Ida B. Wells, nacida esclava en Holly Springs en 1862, era editora y copropietaria del Memphis Free Speech and Headlight. El 21 de mayo publicó un editorial sin firma: nadie en esta parte del país cree la vieja mentira raída de que los hombres negros violan a mujeres blancas.
+
+El 27 de mayo una turba entró en la redacción y la destrozó. Los acreedores se quedaron con el local y remataron el equipo. Wells estaba en Nueva York y le llegaron cartas y telegramas avisándole de que volver le costaría el cuerpo. No se calló: el 25 de junio de 1892 reimprimió su explicación completa en el New York Age. Unas señoras de Nueva York y Brooklyn reunieron el dinero el 5 de octubre en el Lyric Hall, y así salió el folleto. Lo firmó en Nueva York el 26 de octubre de 1892.
+
+La frase está en el último capítulo, «Self-Help», y no es un elogio del periodismo en general. Dice, en el mismo párrafo, que la prensa publica informes poco fiables y adulterados sobre los linchamientos, y que los periódicos afroamericanos son los únicos que imprimen la verdad y no tienen medios para pagar reporteros. Su respuesta a que le rompieran la imprenta fue imprimir más. Murió en Chicago en 1931; el Pulitzer le llegó en 2020, ochenta y nueve años después.
+
+¿Qué haces cuando destruyen el medio con el que ibas a responder?
+
+#SabiduriaDeBolsillo #IdaBWells #Periodismo #SigloXIX]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-extra86.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-extra86.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Hay golpes en la vida, tan fuertes... Yo no sé." — César Vallejo, poema inicial de Los heraldos negros</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -489,27 +509,6 @@ El libro incomodó desde el primer día. El Vaticano lo puso en el Índice de li
 #SabiduriaDeBolsillo #SimoneDeBeauvoir #ElSegundoSexo #Filosofia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EL CILINDRO DE CIRO: lo llaman la primera declaración de derechos humanos y nació escondido en un muro</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-09-re51-reel</guid>
-      <pubDate>Wed, 09 Sep 2026 23:26:00 +0000</pubDate>
-      <description><![CDATA[EL CILINDRO DE CIRO: lo llaman la primera declaración de derechos humanos y nació escondido en un muro
-
-En marzo de 1879, en las ruinas del templo de Marduk en Babilonia, apareció un cilindro de barro de veintidós centímetros cubierto de cuneiforme. Lo mandó escribir Ciro el Grande tras tomar la ciudad, en el 539 antes de Cristo. Sus cuarenta y cinco líneas devuelven los dioses a sus templos y a los deportados a su tierra.
-
-El giro está en el formato. No era un edicto para leer en la plaza: era un depósito de cimentación, de los que se tapiaban en un muro. Lo redactaron sacerdotes de Marduk. Y no nombra a los judíos, ni a Jerusalén, ni a Judea.
-
-En 1971 Irán regaló una réplica a la ONU como la primera carta de derechos humanos del mundo. Ahí sigue expuesta. Un curador del Museo Británico lo resume así: en la antigüedad no había derechos humanos.
-
-En 2010 aparecieron dos fragmentos de tablilla con ese mismo texto, copiado para repartirlo. Alguien sí quería que se leyera.
-
-¿Cuántas cosas admiramos por lo que quisimos que fueran?
-
-#SabiduriaDeBolsillo #Persia #Babilonia #Arqueologia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
