@@ -162,7 +162,8 @@ def seccion_encargos() -> None:
     fuera = dict(img[0], ruta="experiments/media-lab/assets/OTRA/ENC-20260915-001-v1.png")
     for label, imagenes in (("más imágenes que variantes", [img[0], v2, v3]),
                             ("rutas repetidas", [img[0], img[0]]),
-                            ("imagen fuera de destino_assets", [fuera])):
+                            ("imagen fuera de destino_assets", [fuera]),
+                            ("ruta que escapa con ..", [dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/../../../../src/x.png")])):
         e5 = base(variantes=2)
         E.tomar(e5, "codex-heartbeat", t0)
         check(falla(lambda: E.marcar_generado(e5, "codex-heartbeat", imagenes, t0)),
@@ -193,6 +194,17 @@ def seccion_encargos() -> None:
         except E.EncargoError as err:
             mensaje = str(err)
         check("ENC-20260915-002.json" in mensaje, "un encargo ilegible da un error que nombra el archivo")
+
+    with tempfile.TemporaryDirectory() as d:
+        carpeta = pathlib.Path(d)
+        (carpeta / "ENC-20260915-001.json").write_text("{}", encoding="utf-8")
+        try:
+            E.listar(carpeta)
+            mensaje = ""
+        except E.EncargoError as err:
+            mensaje = str(err)
+        check("ENC-20260915-001.json" in mensaje and "incompleto" in mensaje,
+              "un JSON válido pero sin campos da un error que nombra el archivo")
 
 
 SECCIONES = [

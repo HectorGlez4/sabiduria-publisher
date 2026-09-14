@@ -11,7 +11,7 @@ import json
 import os
 import re
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 LOCK_MINUTOS = 30
 MAX_EN_COLA = 6
@@ -93,7 +93,8 @@ def marcar_generado(enc: dict, owner: str, imagenes: list[dict], ahora: datetime
     if len(set(rutas)) != len(rutas):
         raise EncargoError("rutas de imagen repetidas")
     for ruta in rutas:
-        if not ruta.startswith(enc["destino_assets"] + "/"):
+        partes = PurePosixPath(ruta).parts
+        if ".." in partes or not ruta.startswith(enc["destino_assets"] + "/") or ruta.endswith("/"):
             raise EncargoError(f"{ruta} está fuera de {enc['destino_assets']}")
     enc["imagenes"] = [{**im, "origen": owner, "generado_en": _iso(ahora)} for im in imagenes]
     enc["intentos"].append({"numero": len(enc["intentos"]) + 1, "resultado": "generado",
@@ -154,8 +155,12 @@ def guardar(ruta: Path, enc: dict) -> None:
     # Escritura atómica: un corte a mitad no deja un JSON truncado que bloquee a los dos agentes.
     # El temporal empieza por punto para que no coincida con ENC-*.json.
     tmp = ruta.with_name(f".{ruta.name}.tmp")
-    tmp.write_text(json.dumps(enc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    os.replace(tmp, ruta)
+    try:
+        tmp.write_text(json.dumps(enc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        os.replace(tmp, ruta)
+    except BaseException:
+        tmp.unlink(missing_ok=True)
+        raise
 
 
 def listar(carpeta: Path) -> list[tuple[Path, dict]]:
@@ -164,9 +169,12 @@ def listar(carpeta: Path) -> list[tuple[Path, dict]]:
     pares = []
     for p in carpeta.glob("ENC-*.json"):
         try:
-            pares.append((p, cargar(p)))
+            enc = cargar(p)
         except (OSError, ValueError) as e:
             raise EncargoError(f"{p.name} ilegible: {e}") from e
+        if not isinstance(enc, dict) or not {"creado_en", "encargo_id", "estado"} <= set(enc):
+            raise EncargoError(f"{p.name} incompleto: faltan creado_en, encargo_id o estado")
+        pares.append((p, enc))
     return sorted(pares, key=lambda par: (par[1]["creado_en"], par[1]["encargo_id"]))
 
 
