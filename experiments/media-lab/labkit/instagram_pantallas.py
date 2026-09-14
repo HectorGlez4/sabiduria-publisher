@@ -257,17 +257,23 @@ def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | N
     - fallo: un aviso de error de Instagram fuera del campo del pie (texto nuestro) que es
       corto, o que está en la zona del aviso de subida: la de arriba, o junto a un banner de
       este volcado o de `banners_previos` (bounds vistos antes: el banner puede irse justo
-      cuando sale el error). Un pie largo de otra cuenta más abajo no cuenta."""
+      cuando sale el error). Un pie largo de otra cuenta más abajo no cuenta.
+    - fallo_texto / fallo_bounds: texto (text o content-desc) y bounds del primer aviso que
+      hizo `fallo` True; None si `fallo` es False. Para conciliar en segundos un `fallido`
+      provocado por un texto corto ajeno, sin cambiar la decisión de `fallo`."""
     ig = telefono.buscar_todos(xml, paquete=PAQUETE)
     boton = boton_bounds is not None and any(
         _dice(n, "Partager") and n["bounds"] == tuple(boton_bounds) for n in ig)
     propios = [n["bounds"] for n in ig if _es_banner(n)]
     zona = propios + [tuple(b) for b in (banners_previos or [])]
+    culpable = next((n for n in ig if _es_aviso_de_fallo(n, zona)), None)
     return {"valido": bool(ig),
             "compositor": any(_dice(n, "Nouvelle publication") for n in ig) or boton
             or any(n["clase"] in CLASES_CAMPO for n in ig),
             "banner": bool(propios),
-            "fallo": any(_es_aviso_de_fallo(n, zona) for n in ig)}
+            "fallo": culpable is not None,
+            "fallo_texto": (culpable["texto"] or culpable["desc"]) if culpable else None,
+            "fallo_bounds": culpable["bounds"] if culpable else None}
 
 
 def evaluar_envio(observaciones: list[dict]) -> str:

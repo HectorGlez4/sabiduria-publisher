@@ -227,6 +227,28 @@ def seccion_encargos() -> None:
               and e12["lock_owner"] == "codex-heartbeat", "liberar solo lo hace el dueño del bloqueo")
         check(falla(lambda: E.liberar(base(), "codex-exec")), "liberar exige un encargo generando")
 
+        print("   · liberar: tres no-lanzamientos seguidos bloquean el encargo (10e)")
+        e13 = base()
+        E.tomar(e13, "codex-exec", t0)
+        E.liberar(e13, "codex-exec")
+        E.tomar(e13, "codex-exec", t0)
+        E.liberar(e13, "codex-exec")
+        check(e13["estado"] == "pedido" and e13["no_lanzados"] == 2,
+              f"dos no-lanzamientos seguidos: sigue en pedido ({e13['estado']}, {e13['no_lanzados']})")
+        E.tomar(e13, "codex-exec", t0)
+        E.liberar(e13, "codex-exec")
+        check(e13["estado"] == "bloqueado" and e13["no_lanzados"] == 3 and e13["lock_owner"] is None
+              and e13["intentos"] == [] and e13.get("nota_no_lanzado"),
+              f"al tercer no-lanzamiento seguido: bloqueado con nota, sin sumar intento "
+              f"({e13['estado']}, {e13['no_lanzados']}, {e13.get('nota_no_lanzado')!r})")
+
+        e14 = base()
+        del e14["no_lanzados"]  # simula un JSON viejo sin el campo
+        E.tomar(e14, "codex-exec", t0)
+        E.liberar(e14, "codex-exec")
+        check(e14["estado"] == "pedido" and e14["no_lanzados"] == 1,
+              "un encargo viejo sin no_lanzados sigue cargando y cuenta desde 1")
+
     v2 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v2.png")
     v3 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v3.png")
     fuera = dict(img[0], ruta="experiments/media-lab/assets/OTRA/ENC-20260915-001-v1.png")
@@ -534,6 +556,7 @@ class TelefonoSimulado:
         self.capturas: list[str] = []
         self.plazos_captura: list = []
         self.prohibidos: list[str] = []
+        self.orden: list[str] = []  # «cortina» y «lanzar:<paquete>», para comprobar el orden
         self.reloj = 1000.0
 
     @staticmethod
@@ -573,7 +596,10 @@ class TelefonoSimulado:
         return destino
 
     def lanzar(self, paquete: str) -> None:
-        pass
+        self.orden.append(f"lanzar:{paquete}")
+
+    def cerrar_cortina(self) -> None:
+        self.orden.append("cortina")
 
     def pegar(self, texto: str, paste: bool = True) -> None:
         self.pegados.append(texto)
@@ -600,7 +626,8 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
                (telefono, "tecla", sim.tecla), (telefono, "combinacion", sim.combinacion),
                (telefono, "estado", sim.estado), (telefono, "teclado_visible", sim.teclado_visible),
                (telefono, "teclado_estado", sim.teclado_estado), (telefono, "captura", sim.captura),
-               (telefono, "lanzar", sim.lanzar), (telefono, "shell", sim.prohibido),
+               (telefono, "lanzar", sim.lanzar), (telefono, "cerrar_cortina", sim.cerrar_cortina),
+               (telefono, "shell", sim.prohibido),
                (telefono, "adb", sim.prohibido), (phone_clipboard, "pegar", sim.pegar),
                (phone_clipboard, "adb", sim.prohibido), (subprocess, "run", sim.prohibido),
                (subprocess, "Popen", sim.prohibido),
@@ -840,9 +867,11 @@ def seccion_interfaz() -> None:
           "el banner de un volcado inválido no cuenta")
     check(IG.evaluar_envio([]) == "timeout", "sin observaciones: timeout")
     inicio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Publication sur sabiduriabolsillo…"))
-    check(IG.observacion_de_volcado(inicio) == {"valido": True, "compositor": False, "banner": True, "fallo": False},
+    check(IG.observacion_de_volcado(inicio) == {"valido": True, "compositor": False, "banner": True, "fallo": False,
+                                                "fallo_texto": None, "fallo_bounds": None},
           "observa el banner en el inicio")
-    check(IG.observacion_de_volcado(comp) == {"valido": True, "compositor": True, "banner": False, "fallo": False},
+    check(IG.observacion_de_volcado(comp) == {"valido": True, "compositor": True, "banner": False, "fallo": False,
+                                              "fallo_texto": None, "fallo_bounds": None},
           "observa el compositor")
     check(IG.observacion_de_volcado(jerarquia().replace(PAQUETE_IG, "com.sec.android.app.launcher"))["valido"] is False,
           "un volcado sin Instagram en primer plano no es válido")
@@ -862,6 +891,12 @@ def seccion_interfaz() -> None:
     for aviso in ("Impossible de publier. Réessayer", "La publication n’a pas pu être partagée",
                   "La publication n'a pas pu être partagée", "Réessayer"):
         check(IG.observacion_de_volcado(xml_inicio(aviso=aviso))["fallo"] is True, f"reconoce el fallo «{aviso}»")
+    obs_aviso = IG.observacion_de_volcado(xml_inicio(aviso="Impossible de publier. Réessayer"))
+    check(obs_aviso["fallo_texto"] == "Impossible de publier. Réessayer" and obs_aviso["fallo_bounds"] == (0, 340, 1080, 420),
+          f"(10e) observacion_de_volcado devuelve el texto y los bounds del aviso que coincidió ({obs_aviso})")
+    check(IG.observacion_de_volcado(xml_inicio())["fallo_texto"] is None
+          and IG.observacion_de_volcado(xml_inicio())["fallo_bounds"] is None,
+          "(10e) sin aviso de fallo, fallo_texto y fallo_bounds son None")
     check(IG.observacion_de_volcado(xml_compositor(pie="Réessayer, n'a pas pu"))["fallo"] is False,
           "el texto del propio pie no es un aviso de fallo")
     check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,0][100,100]", texto="Réessayer",
@@ -1031,6 +1066,8 @@ def seccion_interfaz() -> None:
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
     check(err is None and res["estado"] == "fallido" and sim.toques.count(centro) == 1,
           f"(c) banner y luego aviso de error: fallido con un solo toque ({err or res['estado']})")
+    check(any("Impossible de publier. Réessayer" in a for a in res["avisos"]),
+          f"(10e) compartir copia el texto del aviso de fallo a avisos ({res['avisos']})")
 
     sim = TelefonoSimulado([comp], falla_tocar=T.TelefonoError("device offline"))
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
@@ -1103,6 +1140,21 @@ def seccion_interfaz() -> None:
           and sim.combinaciones == [(IG.CTRL_IZQ, IG.TECLA_A)],
           f"(g) teclado abierto y luego cerrado: exactamente un «atrás» ({err!r}, {sim.teclas})")
 
+    print("   · (10e) el desplegable de hashtags puede tardar unos segundos en aparecer tras pegar")
+    desplegable = xml_compositor(despues=LISTA_HASHTAGS)
+    sim = TelefonoSimulado([comp, comp, desplegable, comp], teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
+          f"(10e-a) el desplegable aparece en el segundo volcado tras pegar y luego desaparece: "
+          f"exactamente un «atrás», compositor capturado ({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([desplegable], teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [IG.ATRAS, IG.ATRAS]
+          and "ig-04-compositor.png" not in sim.capturas,
+          f"(10e-b) el desplegable sigue abierto tras 2 «atrás»: PantallaInesperada, "
+          f"exactamente 2 «atrás» y sin captura del compositor ({err!r}, {sim.teclas}, {sim.capturas})")
+
     sim = TelefonoSimulado([comp], falla_pegar=RuntimeError("no se pudo hablar con scrcpy-server"))
     res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
     check(isinstance(err, T.TelefonoError) and str(err).startswith("portapapeles:") and sim.teclas == [],
@@ -1117,6 +1169,8 @@ def seccion_interfaz() -> None:
     sim = TelefonoSimulado([comp])
     res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
     check(isinstance(err, IG.BorradorPendiente) and sim.toques == [], "abrir con un borrador a medias: no se toca")
+    check(sim.orden == ["cortina", f"lanzar:{IG.PAQUETE}"],
+          f"(10e) abrir cierra la cortina de notificaciones una vez antes de lanzar Instagram ({sim.orden})")
 
     print("   · seguimiento de la revisión (10b): teclado, «#» ajeno y pantalla de arranque")
     sim = TelefonoSimulado([comp], teclado=(True, None))
@@ -1961,10 +2015,19 @@ def seccion_cli_en_proceso() -> None:
                 codigo, datos, _ = lab("generar", "--encargo", sin_popen)
                 enc_popen = E.cargar(raiz / "encargos" / f"{sin_popen}.json")
                 check(codigo == 1 and enc_popen["estado"] == "pedido" and enc_popen["intentos"] == []
-                      and enc_popen["lock_owner"] is None
+                      and enc_popen["lock_owner"] is None and enc_popen.get("no_lanzados") == 1
                       and "no arrancó" in str((campo(datos, "errores") or [""])[0]),
                       f"(10d) si Popen falla, Codex no se lanzó: pedido sin sumar intento ({codigo}, {datos}, "
                       f"{enc_popen['estado']}, {len(enc_popen['intentos'])})")
+
+                for _ in range(2):
+                    codigo, datos, _ = lab("generar", "--encargo", sin_popen)
+                enc_popen = E.cargar(raiz / "encargos" / f"{sin_popen}.json")
+                check(codigo == 1 and enc_popen["estado"] == "bloqueado" and enc_popen["intentos"] == []
+                      and enc_popen["lock_owner"] is None and enc_popen.get("no_lanzados") == 3
+                      and enc_popen.get("nota_no_lanzado"),
+                      f"(10e) Popen falla 3 veces seguidas: el encargo queda bloqueado sin sumar intentos "
+                      f"({codigo}, {datos}, {enc_popen['estado']}, {enc_popen.get('no_lanzados')})")
 
                 # Tras lanzar un proceso inofensivo (python -c pass, nunca Codex), falla la lectura de su salida.
                 codex_rescate.comando = lambda prompt, salida: [sys.executable, "-c", "pass"]

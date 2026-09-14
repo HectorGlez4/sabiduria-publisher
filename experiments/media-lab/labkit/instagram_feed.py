@@ -35,6 +35,9 @@ ATRAS, CTRL_IZQ, TECLA_A = 4, 113, 29
 ESPERA_S = 25
 OBSERVACION_S = 90
 CAPTURA_ERROR_S = 10  # la captura tras un error es best-effort: no alarga la salida
+VOLCADOS_LIMPIOS_TRAS_PEGAR = 3  # seguidos, sin teclado ni desplegable, antes de dar el pie por bueno
+ESPERA_ENTRE_VOLCADOS_S = 2.5
+INTENTOS_ATRAS_PIE = 2  # tope total de «atrás» para cerrar teclado o desplegable tras pegar
 
 
 class BorradorPendiente(PantallaInesperada):
@@ -88,6 +91,7 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     if isinstance(subido_en, str):
         subido_en = datetime.fromisoformat(subido_en)
     _exigir_listo()
+    telefono.cerrar_cortina()
     telefono.lanzar(PAQUETE)
     time.sleep(4)
     xml = _esperar_que(
@@ -167,6 +171,11 @@ def _hay_que_cerrar(xml: str) -> bool:
 
 
 def escribir_pie(pie: str, evidencia: Path) -> Path:
+    """Pega el pie y no da la pantalla por buena hasta ver `VOLCADOS_LIMPIOS_TRAS_PEGAR`
+    volcados frescos seguidos sin teclado ni desplegable: Instagram puede abrir el
+    desplegable de hashtags unos segundos después de pegar, cuando el primer volcado de
+    comprobación ya salió limpio. Cada vez que aparece teclado o desplegable se pulsa
+    «atrás» (tope `INTENTOS_ATRAS_PIE` en total) y se reinicia la cuenta de limpios."""
     _exigir_listo()
     xml = _esperar_que(lambda x: campo_pie(x) is not None, "el campo del pie")
     telefono.tocar(*campo_pie(xml)["centro"])
@@ -181,16 +190,25 @@ def escribir_pie(pie: str, evidencia: Path) -> Path:
     xml = _volcado_fresco()
     if not _tiene_pie(xml, pie):
         raise PantallaInesperada("el pie leído del teléfono no coincide con el archivo")
-    for _ in range(2):
-        if not _hay_que_cerrar(xml):
-            break
-        telefono.tecla(ATRAS)
-        time.sleep(2)
-        xml = _volcado_fresco()
-        _exigir_compositor_con_pie(xml, pie)
-    else:
+
+    atras_usados = 0
+    limpios = 0
+    while limpios < VOLCADOS_LIMPIOS_TRAS_PEGAR:
         if _hay_que_cerrar(xml):
-            raise PantallaInesperada("el teclado o el desplegable siguen abiertos tras 2 «atrás»")
+            atras_usados += 1
+            if atras_usados > INTENTOS_ATRAS_PIE:
+                raise PantallaInesperada(
+                    f"el teclado o el desplegable siguen abiertos tras {INTENTOS_ATRAS_PIE} «atrás»")
+            telefono.tecla(ATRAS)
+            time.sleep(2)
+            xml = _volcado_fresco()
+            _exigir_compositor_con_pie(xml, pie)
+            limpios = 0
+            continue
+        limpios += 1
+        if limpios < VOLCADOS_LIMPIOS_TRAS_PEGAR:
+            time.sleep(ESPERA_ENTRE_VOLCADOS_S)
+            xml = _volcado_fresco()
     return telefono.captura(evidencia / "ig-04-compositor.png")
 
 
@@ -262,6 +280,11 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
             if parcial == "fallido":
                 break
         estado = evaluar_envio(observaciones)
+        if estado == "fallido":
+            culpable = next((o for o in observaciones if o.get("fallo")), None)
+            if culpable:
+                avisos.append(f"Instagram avisó de un error: {culpable.get('fallo_texto')!r} "
+                              f"en {culpable.get('fallo_bounds')}")
 
         try:
             if telefono.estado()["listo"]:

@@ -267,6 +267,11 @@ def lanzar(paquete: str) -> None:
     shell(f"monkey -p {paquete} -c android.intent.category.LAUNCHER 1")
 
 
+def cerrar_cortina() -> None:
+    """Repliega la cortina de notificaciones si está desplegada (no despierta ni desbloquea)."""
+    shell("cmd statusbar collapse")
+
+
 def estado() -> dict:
     """Solo lee: nunca despierta ni desbloquea. Sin teléfono no lanza, dice que no está listo."""
     try:
