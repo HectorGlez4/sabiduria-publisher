@@ -202,6 +202,21 @@ def seccion_encargos() -> None:
         check(falla(lambda: E.invalidar(e10, "x", t0)) and e10["estado"] == "aprobado",
               "invalidar no toca un encargo ya aprobado")
 
+    print("   · liberar lo que codex exec tomó sin llegar a lanzar Codex (G-1)")
+    if not hasattr(E, "liberar"):
+        check(False, "encargos.liberar existe")
+    else:
+        e11 = base()
+        E.tomar(e11, "codex-exec", t0)
+        E.liberar(e11, "codex-exec")
+        check(e11["estado"] == "pedido" and e11["lock_owner"] is None and e11["lock_expira"] is None
+              and e11["intentos"] == [], "liberar devuelve el encargo a pedido sin sumar intento y suelta el bloqueo")
+        e12 = base()
+        E.tomar(e12, "codex-heartbeat", t0)
+        check(falla(lambda: E.liberar(e12, "codex-exec")) and e12["estado"] == "generando"
+              and e12["lock_owner"] == "codex-heartbeat", "liberar solo lo hace el dueño del bloqueo")
+        check(falla(lambda: E.liberar(base(), "codex-exec")), "liberar exige un encargo generando")
+
     v2 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v2.png")
     v3 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v3.png")
     fuera = dict(img[0], ruta="experiments/media-lab/assets/OTRA/ENC-20260915-001-v1.png")
@@ -473,11 +488,13 @@ def xml_compositor(*, titulo: bool = True, pie: str = PIE_PRUEBA, tema: bool = T
         despues)
 
 
-def xml_inicio(*, banner: bool = False, aviso: str = "") -> str:
-    """Inicio de Instagram: una publicación con su propio botón «Partager» y la barra de abajo."""
+def xml_inicio(*, banner: bool = False, aviso: str = "", pie_ajeno: str = "") -> str:
+    """Inicio de Instagram: una publicación con su propio botón «Partager» y la barra de abajo.
+    `pie_ajeno` es el pie de una publicación de otra cuenta, más abajo en pantalla."""
     return jerarquia(
         nodo_xml("[0,250][1080,330]", texto="Publication sur sabiduriabolsillo…") if banner else "",
         nodo_xml("[0,340][1080,420]", texto=aviso) if aviso else "",
+        nodo_xml("[0,1200][1080,1320]", texto=pie_ajeno) if pie_ajeno else "",
         nodo_xml("[900,1500][1000,1600]", desc="Partager", clase="android.widget.ImageView",
                  extra='clickable="true"'),
         nodo_xml("[864,2200][1080,2340]", desc="Profil", clase="android.widget.FrameLayout",
@@ -846,6 +863,38 @@ def seccion_interfaz() -> None:
     check(IG.evaluar_envio([dict(fallo, valido=False), v(False, True), v(False, False), v(False, False)])
           == "confirmado", "el fallo de un volcado inválido no cuenta")
 
+    print("   · seguimiento de la revisión (10b): fallos solo junto al aviso de subida")
+    pie_con_fallo = "Réessayer n'a pas pu, dice el pie de otra cuenta"
+    check(IG.observacion_de_volcado(xml_inicio(pie_ajeno=pie_con_fallo))["fallo"] is False,
+          "(M-2) un pie del inicio más abajo con «Réessayer» no es un fallo")
+    check(IG.observacion_de_volcado(xml_inicio(banner=True, pie_ajeno=pie_con_fallo))["fallo"] is False,
+          "(M-2) con el banner arriba, un pie lejano con «Réessayer» tampoco")
+    banner_bajo = jerarquia(nodo_xml("[0,900][1080,980]", texto="Publication sur sabiduriabolsillo…"),
+                            nodo_xml("[0,990][1080,1070]", texto="Impossible de publier. Réessayer"))
+    check(IG.observacion_de_volcado(banner_bajo)["fallo"] is True,
+          "(M-2) un aviso de error junto al banner cuenta aunque esté por debajo de 600 px")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,500][1080,600]", texto="Réessayer")))["fallo"] is True,
+          "(M-2) un aviso con el borde inferior en 600 px cuenta")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,520][1080,601]", texto="Réessayer")))["fallo"] is False,
+          "(M-2) sin banner, un aviso que baja de 600 px no cuenta")
+
+    import importlib
+    try:
+        pantallas = importlib.import_module("labkit.instagram_pantallas")
+    except ImportError:
+        pantallas = None
+    nombres = getattr(pantallas, "__all__", [])
+    check(pantallas is not None and {"observacion_de_volcado", "evaluar_envio", "compositor_listo", "perfil_activo",
+                                     "seleccion_unica", "_nodo", "PantallaInesperada"} <= set(nombres)
+          and all(getattr(IG, n, None) is getattr(pantallas, n) for n in nombres),
+          "(M-8) los lectores puros viven en instagram_pantallas y instagram_feed los reexporta")
+    fuente = pathlib.Path(pantallas.__file__).read_text(encoding="utf-8") if pantallas else ""
+    prohibidas = ("telefono.volcado", "telefono.tocar", "telefono.tecla", "telefono.captura", "telefono.shell",
+                  "telefono.adb", "telefono.estado(", "telefono.teclado", "telefono.lanzar", "import time",
+                  "phone_clipboard")
+    check(bool(fuente) and not [p for p in prohibidas if p in fuente],
+          f"(M-8) instagram_pantallas no hace E/S ({[p for p in prohibidas if p in fuente]})")
+
     check(IG.hay_desplegable_hashtags(jerarquia(nodo_xml("[0,1500][300,1600]", texto="#citas",
                                                          paquete="com.samsung.android.honeyboard"))),
           "sin paquete, cualquier # fuera del campo cuenta como desplegable")
@@ -946,6 +995,38 @@ def seccion_interfaz() -> None:
     check(err is None and res["estado"] == "error_tras_pulsar" and res["error"].startswith("TelefonoError")
           and res["submitted_at"] and res["captura_antes"] and len(sim.toques) == 1,
           f"(d) el toque falla: error_tras_pulsar, un intento y nada se escapa ({err or res})")
+    check(err is None and sim.capturas == ["ig-05a-antes.png", "ig-05-error.png"]
+          and str(res.get("captura_error")).endswith("ig-05-error.png"),
+          f"(M-3) tras error_tras_pulsar queda la captura ig-05-error.png ({sim.capturas}, {res and res.get('captura_error')})")
+
+    sim = TelefonoSimulado([comp], falla_tocar=T.TelefonoError("device offline"))
+    captura_normal = sim.captura
+
+    def captura_rota(destino):
+        if destino.name == "ig-05-error.png":
+            raise OSError(5, "Input/output error")
+        return captura_normal(destino)
+    sim.captura = captura_rota
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "error_tras_pulsar" and res["error"].startswith("TelefonoError")
+          and "captura_error" in res and res["captura_error"] is None,
+          f"(M-3) si la captura del error también falla, el resultado vuelve igual ({err or res})")
+
+    sim = TelefonoSimulado(publicado)
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711, produccion_cercana=True))
+    check(err is None and res["estado"] == "confirmado_sin_conteo" and res["publicaciones_despues"] == 3712
+          and sim.toques.count(centro) == 1,
+          f"(M-1) con producción cercana un confirmado baja a confirmado_sin_conteo ({err or res['estado']})")
+    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True), xml_inicio(aviso="Impossible de publier. Réessayer")])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711, produccion_cercana=True))
+    check(err is None and res["estado"] == "fallido",
+          f"(M-1) con producción cercana un fallido sigue siendo fallido ({err or res['estado']})")
+    feed_pie = xml_inicio(pie_ajeno="Réessayer n'a pas pu, dice el pie de otra cuenta")
+    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True, pie_ajeno="Réessayer"), feed_pie, feed_pie, feed_pie,
+                            xml_perfil()])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "confirmado",
+          f"(M-2) un pie ajeno con «Réessayer» en el inicio no convierte el envío en fallido ({err or res['estado']})")
 
     sim_obs = TelefonoSimulado([comp, comp, T.TelefonoError("volcado no válido")])
     res, err = con_telefono_simulado(sim_obs, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
@@ -987,6 +1068,82 @@ def seccion_interfaz() -> None:
     sim = TelefonoSimulado([comp])
     res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
     check(isinstance(err, IG.BorradorPendiente) and sim.toques == [], "abrir con un borrador a medias: no se toca")
+
+    print("   · seguimiento de la revisión (10b): teclado, «#» ajeno y pantalla de arranque")
+    sim = TelefonoSimulado([comp], teclado=(True, None))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, IntentoDeES) and sim.teclas == [IG.ATRAS]
+          and "ig-04-compositor.png" not in sim.capturas,
+          f"(M-6) teclado abierto y luego ilegible: exactamente un «atrás» y PantallaInesperada ({err!r}, {sim.teclas})")
+    sugerencia = nodo_xml("[0,1500][300,1600]", texto="#citas", paquete="com.samsung.android.honeyboard")
+    sim = TelefonoSimulado([xml_compositor(despues=sugerencia)], teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [] and sim.capturas == ["ig-04-compositor.png"],
+          f"(M-6) un «#» de otra aplicación con el teclado cerrado: ningún «atrás» ({err!r}, {sim.teclas})")
+    arranque = jerarquia(nodo_xml("[340,1000][740,1400]", desc="Instagram", clase="android.widget.ImageView"))
+    menu_crear = jerarquia(nodo_xml("[100,1500][980,1650]", texto="Publication"))
+    sim = TelefonoSimulado([arranque, xml_inicio(), xml_perfil(), menu_crear, SELECTOR_IG])
+    res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+    check(err is None and sim.toques.count(perfil_centro) == 1 and sim.toques[:1] == [perfil_centro]
+          and res["publicaciones_antes"] == 3712 and sim.capturas == ["ig-01-selector.png"],
+          f"(M-6) abrir con pantalla de arranque y luego el inicio: exactamente un toque en Profil ({err!r}, {sim.toques})")
+
+    print("   · seguimiento de la revisión (10b): captura sin disco y parada del portapapeles")
+    import io
+    import subprocess as sp
+    import tempfile
+    adb_original = T.adb
+    try:
+        T.adb = lambda *args, timeout=60: sp.CompletedProcess(args, 0, stdout=b"\x89PNG\r\n\x1a\n" + b"\0" * 8,
+                                                              stderr=b"")
+        with tempfile.TemporaryDirectory() as d:
+            archivo = pathlib.Path(d) / "soy-un-archivo"
+            archivo.write_text("x", encoding="utf-8")
+            try:
+                T.captura(archivo / "sub" / "x.png")
+                tipo_error = None
+            except Exception as e:  # noqa: BLE001
+                tipo_error = type(e)
+            buena = T.captura(pathlib.Path(d) / "ev" / "x.png")
+            check(tipo_error is T.TelefonoError and buena.is_file(),
+                  f"(M-4) captura convierte el OSError del disco en TelefonoError ({tipo_error})")
+    finally:
+        T.adb = adb_original
+
+    class PopenFalso:
+        def __init__(self, respuestas: list):
+            self.respuestas = list(respuestas)
+            self.llamadas: list = []
+            self.stdout = io.StringIO()
+
+        def poll(self):
+            return None
+
+        def terminate(self):
+            self.llamadas.append("terminate")
+
+        def kill(self):
+            self.llamadas.append("kill")
+
+        def communicate(self, timeout=None):
+            self.llamadas.append(("communicate", timeout))
+            r = self.respuestas.pop(0)
+            if isinstance(r, BaseException):
+                raise r
+            return r, None
+
+    atascado = PopenFalso([sp.TimeoutExpired("scrcpy", 5), sp.TimeoutExpired("scrcpy", 5)])
+    try:
+        salida_parar, escapo = phone_clipboard._parar(atascado), None
+    except Exception as e:  # noqa: BLE001
+        salida_parar, escapo = None, e
+    check(escapo is None and salida_parar == ""
+          and atascado.llamadas == ["terminate", ("communicate", 5), "kill", ("communicate", 5)]
+          and atascado.stdout.closed,
+          f"(M-7) _parar espera 5 s también tras kill e ignora un segundo timeout ({escapo!r}, {atascado.llamadas})")
+    lento = PopenFalso([sp.TimeoutExpired("scrcpy", 5), "adiós\n"])
+    check(phone_clipboard._parar(lento) == "adiós\n" and lento.llamadas[-1] == ("communicate", 5),
+          "(M-7) si tras kill el servidor sale, _parar devuelve lo que escribió")
 
     lanzador = jerarquia(nodo_xml("[0,0][1080,200]", texto="Inicio")).replace(PAQUETE_IG, "com.sec.android.app.launcher")
     sim = TelefonoSimulado([lanzador])
@@ -1512,6 +1669,7 @@ def seccion_cli_en_proceso() -> None:
                 (("ig", "abrir", "--run", "RUN-1"), "abrir sin --subido-en"),
                 (("ig", "abrir", "--run", "RUN-1", "--subido-en", "ayer"), "abrir con --subido-en ilegible"),
                 (("ig", "abrir", "--run", "RUN-1", "--subido-en", "2026-09-14T10:00:00"), "abrir con --subido-en sin zona"),
+                (("ig", "recorte", "--run", "RUN-1", "--produccion-cercana"), "--produccion-cercana fuera de compartir"),
                 (("ig", "recorte", "--run", "../x"), "--run con .."),
                 (("telefono-captura", "--run", "RUN-1", "--nombre", "../x"), "--nombre con .."),
                 (("telefono-atras", "--run", "/tmp/x", "--nombre", "a"), "--run absoluto"),
@@ -1525,6 +1683,27 @@ def seccion_cli_en_proceso() -> None:
                 codigo, datos, _ = lab(*args)
                 check(codigo == 2 and campo(datos, "ok") is False and not llamadas,
                       f"{label}: sale con 2 sin tocar el teléfono ({codigo}, {llamadas})")
+            codigo, datos, _ = lab("ig", "abrir", "--run", "RUN-1", "--subido-en", "ayer")
+            check(codigo == 2 and campo(datos, "tipo") == "ArgumentoNoValido" and "--subido-en" in error(datos),
+                  f"(M-4) un --subido-en ilegible da un error que lo nombra ({codigo}, {datos})")
+
+            recibido: dict = {}
+
+            def compartir_falso(pie_, tema_, ev_, antes_, produccion_cercana=False):
+                recibido.update(produccion_cercana=produccion_cercana, antes=antes_)
+                return {"estado": "confirmado_sin_conteo" if produccion_cercana else "confirmado"}
+
+            instagram_feed.compartir = compartir_falso
+            base_compartir = ("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T",
+                              "--publicaciones-antes", "3")
+            codigo, datos, _ = lab(*base_compartir, "--produccion-cercana")
+            check(codigo == 5 and recibido.get("produccion_cercana") is True and recibido.get("antes") == 3
+                  and campo(datos, "estado") == "confirmado_sin_conteo",
+                  f"(M-1) ig compartir --produccion-cercana lo pasa a compartir y sale con 5 ({codigo}, {recibido})")
+            recibido.clear()
+            codigo, datos, _ = lab(*base_compartir)
+            check(codigo == 0 and recibido.get("produccion_cercana") is False,
+                  f"(M-1) sin --produccion-cercana compartir recibe False ({codigo}, {recibido})")
 
             def pantalla(*args, **kwargs):
                 raise instagram_feed.PantallaInesperada("no aparece «Modifier le rognage»")
@@ -1633,6 +1812,57 @@ def seccion_cli_en_proceso() -> None:
             check(lab.lab._deshacer(ruta_pendiente, "interrumpido por señal 15", True) == []
                   and ruta_pendiente.read_bytes() == antes,
                   "_deshacer no toca un encargo que sigue en pedido (señal antes de tomarlo)")
+
+            print("   · generar: señal o error antes de lanzar Codex (G-1, G-2)")
+            import signal
+            import tempfile as tf
+            modulo = lab.lab
+            viejos = {"CODEX": codex_rescate.CODEX, "comando": codex_rescate.comando,
+                      "estado_git": modulo.guardia.estado_git, "_permitidas": modulo._permitidas,
+                      "mkdtemp": tf.mkdtemp}
+            permitidas_original = modulo._permitidas
+            try:
+                # `python --version` hace de «codex --version»; el Codex de verdad nunca se lanza.
+                codex_rescate.CODEX = sys.executable
+                codex_rescate.comando = prohibido("codex_rescate.comando")
+                modulo.guardia.estado_git = lambda raiz: {}
+
+                def senal_antes_de_lanzar(enc, ruta):
+                    signal.getsignal(signal.SIGTERM)(signal.SIGTERM, None)  # el manejador de generar, sin señal real
+                    return permitidas_original(enc, ruta)
+
+                llamadas.clear()
+                modulo._permitidas = senal_antes_de_lanzar
+                senalado, _ = guardar_encargo(raiz, 4, ["C-TH-API"])
+                codigo, datos, _ = lab("generar", "--encargo", senalado)
+                enc_senal = E.cargar(raiz / "encargos" / f"{senalado}.json")
+                errores_senal = campo(datos, "errores") or [""]
+                check(codigo == 1 and enc_senal["estado"] == "pedido" and enc_senal["intentos"] == []
+                      and enc_senal["lock_owner"] is None and not llamadas
+                      and errores_senal[0].startswith(f"interrumpido por señal {int(signal.SIGTERM)}"),
+                      f"(G-1) señal antes de lanzar Codex: vuelve a pedido sin sumar intento ({codigo}, {datos}, "
+                      f"{enc_senal['estado']}, {len(enc_senal['intentos'])} intentos, {llamadas})")
+
+                modulo._permitidas = permitidas_original
+
+                def sin_disco(*args, **kwargs):
+                    raise OSError(28, "No space left on device")
+
+                tf.mkdtemp = sin_disco
+                roto, _ = guardar_encargo(raiz, 5, ["C-TH-API"])
+                codigo, datos, _ = lab("generar", "--encargo", roto)
+                tf.mkdtemp = viejos["mkdtemp"]
+                enc_roto = E.cargar(raiz / "encargos" / f"{roto}.json")
+                check(codigo == 2 and campo(datos, "tipo") == "OSError" and enc_roto["estado"] == "pedido"
+                      and enc_roto["intentos"] == [] and enc_roto["lock_owner"] is None and not llamadas,
+                      f"(G-2) un error entre tomar y lanzar Codex no deja el encargo en generando ({codigo}, {datos}, "
+                      f"{enc_roto['estado']})")
+            finally:
+                codex_rescate.CODEX = viejos["CODEX"]
+                codex_rescate.comando = viejos["comando"]
+                modulo.guardia.estado_git = viejos["estado_git"]
+                modulo._permitidas = viejos["_permitidas"]
+                tf.mkdtemp = viejos["mkdtemp"]
     finally:
         for obj, n, f in originales:
             setattr(obj, n, f)

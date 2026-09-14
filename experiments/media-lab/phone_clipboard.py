@@ -60,14 +60,25 @@ def argumentos_servidor(scid: int) -> list[str]:
 
 
 def _parar(server: subprocess.Popen) -> str:
-    """Termina el servidor, espera a que salga y devuelve lo que escribió."""
+    """Termina el servidor, espera a que salga y devuelve lo que escribió.
+
+    Tras `kill()` también se espera como mucho 5 s: si ni así sale (adb colgado), se deja
+    de leer su salida, se cierra la tubería y se devuelve lo que haya (nada)."""
     if server.poll() is None:
         server.terminate()
     try:
         out, _ = server.communicate(timeout=5)
     except subprocess.TimeoutExpired:
         server.kill()
-        out, _ = server.communicate()
+        try:
+            out, _ = server.communicate(timeout=5)
+        except subprocess.TimeoutExpired:
+            out = ""
+            if server.stdout is not None:
+                try:
+                    server.stdout.close()
+                except OSError:
+                    pass
     return out or ""
 
 

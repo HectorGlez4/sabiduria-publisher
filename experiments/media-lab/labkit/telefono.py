@@ -238,11 +238,16 @@ def volcado(timeout: int = 30) -> str:
 
 
 def captura(destino: Path) -> Path:
+    """Guarda un screencap en `destino`. Un fallo del disco (crear la carpeta o escribir)
+    sale como TelefonoError, igual que uno de adb."""
     datos = adb("exec-out", "screencap", "-p").stdout
     if not es_png(datos):
         raise TelefonoError(f"screencap no devolvió un PNG ({len(datos)} bytes)")
-    destino.parent.mkdir(parents=True, exist_ok=True)
-    destino.write_bytes(datos)
+    try:
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_bytes(datos)
+    except OSError as e:
+        raise TelefonoError(f"no se pudo guardar la captura en {destino}: {e}") from e
     return destino
 
 

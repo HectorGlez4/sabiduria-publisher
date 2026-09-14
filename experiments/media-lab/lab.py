@@ -322,6 +322,7 @@ def _ejecutar_codex(enc: dict, salida: Path, timeout: int, vivo: dict) -> tuple[
                                     start_new_session=True)
         except OSError as e:
             return None, f"codex exec no arrancó: {e}"
+        vivo["lanzado"] = True  # desde aquí Codex pudo escribir: una interrupción ya cuenta como intento
         aviso = ""
         vivo["proc"] = proc
         try:
@@ -378,6 +379,20 @@ def _deshacer(ruta: Path, nota: str, bloquear: bool) -> list[str]:
     return []
 
 
+def _liberar(ruta: Path) -> list[str]:
+    """Devuelve a pedido, sin sumar intento, un encargo que `generar` tomó pero en el que Codex
+    no llegó a lanzarse (señal o error antes del lanzamiento): no hubo intento que contar.
+    Solo toca un encargo que siga en generando por codex-exec."""
+    try:
+        enc = encargos.cargar(ruta)
+        if enc["estado"] != "generando" or enc["lock_owner"] != "codex-exec":
+            return []
+        encargos.guardar(ruta, encargos.liberar(enc, "codex-exec"))
+    except (OSError, ValueError, KeyError, TypeError) as e:
+        return [f"no se pudo liberar el encargo: {type(e).__name__}: {e}"]
+    return []
+
+
 def cmd_generar(a) -> int:
     ruta = ruta_encargo(a.encargo)
     enc = encargos.cargar(ruta)
@@ -397,7 +412,7 @@ def cmd_generar(a) -> int:
     except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
         emitir({"ok": False, "errores": [f"no se pudo tomar la foto de git: {e}"]})
         return 1
-    vivo: dict = {"proc": None, "senal": None}
+    vivo: dict = {"proc": None, "senal": None, "lanzado": False}
 
     def al_recibir(numero, _marco) -> None:
         # Quien nos llama se va: Codex no puede seguir escribiendo sin nadie que lo compruebe.
@@ -411,12 +426,24 @@ def cmd_generar(a) -> int:
     try:
         enc = encargos.tomar(enc, "codex-exec", ahora())
         encargos.guardar(ruta, enc)
-        permitidas = _permitidas(enc, ruta)
-        carpeta_salida = Path(tempfile.mkdtemp(prefix="codex-exec-"))
-        salida = carpeta_salida / "respuesta.json"
-        codigo, cola = _ejecutar_codex(enc, salida, a.timeout, vivo)
+        try:
+            permitidas = _permitidas(enc, ruta)
+            carpeta_salida = Path(tempfile.mkdtemp(prefix="codex-exec-"))
+            salida = carpeta_salida / "respuesta.json"
+            codigo, cola = _ejecutar_codex(enc, salida, a.timeout, vivo)
+        except Exception:
+            # Un error entre tomar y lanzar Codex (`_permitidas`, `mkdtemp`…) no puede dejar el
+            # encargo en generando 30 minutos. Se libera en vez de `_deshacer`: Codex no corrió y
+            # no hay intento que contar. Si ya se había lanzado, se relanza sin tocarlo.
+            if not vivo["lanzado"]:
+                _liberar(ruta)
+            raise
         respuesta = _leer_respuesta(salida)
         ajenos = _ajenos(antes, permitidas)
+        if vivo["senal"] is not None and not vivo["lanzado"] and not ajenos:
+            nota = f"interrumpido por señal {vivo['senal']} antes de lanzar Codex"
+            emitir({"ok": False, "errores": [nota, *_liberar(ruta)], "ajenos": []})
+            return 1
         if vivo["senal"] is not None:
             nota = f"interrumpido por señal {vivo['senal']}"
             if ajenos:
@@ -549,8 +576,12 @@ def cmd_ig(a) -> int:
         pie = Path(a.pie).read_text(encoding="utf-8").rstrip("\n")
     if a.paso == "abrir":
         _exigir(bool(a.subido_en), "--subido-en es obligatorio en abrir (lo devuelve telefono-subir)")
-        subido = datetime.fromisoformat(a.subido_en)
+        try:
+            subido = datetime.fromisoformat(a.subido_en)
+        except ValueError as e:
+            raise ArgumentoNoValido(f"--subido-en no es una fecha ISO 8601: {a.subido_en!r}") from e
         _exigir(subido.tzinfo is not None, "--subido-en necesita zona horaria")
+    _exigir(not a.produccion_cercana or a.paso == "compartir", "--produccion-cercana solo vale en compartir")
     if a.paso == "compartir":
         _exigir(bool(a.tema) and a.publicaciones_antes is not None, "compartir exige --tema y --publicaciones-antes")
     pasos = {
@@ -561,7 +592,8 @@ def cmd_ig(a) -> int:
         "detalles": lambda: {"captura": ig.detalles(ev)},
         "pie": lambda: {"captura": ig.escribir_pie(pie, ev)},
         # compartir sale con 5 si el envío no queda confirmado, para conciliar antes de nada
-        "compartir": lambda: ig.compartir(pie, a.tema, ev, a.publicaciones_antes),
+        "compartir": lambda: ig.compartir(pie, a.tema, ev, a.publicaciones_antes,
+                                          produccion_cercana=a.produccion_cercana),
     }
     codigo_de = (lambda res: 0 if res["estado"] == "confirmado" else 5) if a.paso == "compartir" else (lambda res: 0)
     return _paso_telefono(ev, f"ig-inesperada-{a.paso}", pasos[a.paso], codigo_de)
@@ -661,6 +693,8 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--subido-en", help="subido_en que devolvió telefono-subir (abrir)")
     p.add_argument("--tema", help="tema que devolvió ig audio (compartir)")
     p.add_argument("--publicaciones-antes", type=int, help="publicaciones_antes que devolvió ig abrir (compartir)")
+    p.add_argument("--produccion-cercana", action="store_true",
+                   help="preflight trajo espera: un confirmado baja a confirmado_sin_conteo (compartir)")
     p.set_defaults(func=cmd_ig)
     return ap
 

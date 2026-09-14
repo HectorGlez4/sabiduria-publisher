@@ -122,6 +122,16 @@ def marcar_fallo(enc: dict, owner: str, nota: str, ahora: datetime) -> dict:
     return enc
 
 
+def liberar(enc: dict, owner: str) -> dict:
+    """Devuelve a pedido un encargo que `owner` tomó y en el que no llegó a generarse nada
+    (p. ej. `lab.py generar` interrumpido o con un error antes de lanzar Codex).
+
+    No suma intento: Codex no corrió. Solo desde generando y por el dueño del bloqueo."""
+    _exigir_bloqueo(enc, owner)
+    enc.update(estado="pedido", lock_owner=None, lock_expira=None)
+    return enc
+
+
 def invalidar(enc: dict, nota: str, ahora: datetime, bloquear: bool = False) -> dict:
     """Deshace un generado de `codex exec` que no pasó las comprobaciones de `lab.py generar`.
 
