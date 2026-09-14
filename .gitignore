@@ -7,3 +7,7 @@ content/_migrar/
 assets/*.mp4
 experiments/media-lab/.ventana.lock
 experiments/media-lab/.turno-hecho
+experiments/media-lab/.turno-hecho.tmp
+experiments/media-lab/.turno-hecho.*.tmp
+experiments/media-lab/.turno.lock
+experiments/media-lab/assets/**/.*.tmp

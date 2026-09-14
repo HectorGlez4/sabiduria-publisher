@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import copy
+import fcntl
 import hashlib
 import json
 import os
@@ -134,8 +135,8 @@ def _formato_de_encargo(formato: dict) -> str | None:
 
 
 def _nombre_archivo_simple(nombre: str, extensiones: tuple[str, ...], que: str) -> None:
-    _exigir(bool(nombre) and "/" not in nombre and ".." not in nombre and nombre not in (".", ".."),
-            f"{que} debe ser un nombre de archivo simple, sin «/» ni «..»: {nombre!r}")
+    """El mismo criterio de nombre que --local en telefono-subir: sin rutas, espacios ni tildes."""
+    _exigir(bool(_NOMBRE.fullmatch(nombre)), f"{que} debe ser un nombre de archivo simple: {nombre!r}")
     _exigir(Path(nombre).suffix.lower() in extensiones,
             f"{que} debe terminar en {' o '.join(extensiones)}: {nombre!r}")
 
@@ -199,18 +200,7 @@ def _entero_positivo(valor: object) -> bool:
     return isinstance(valor, int) and not isinstance(valor, bool) and valor > 0
 
 
-def cmd_turno(a) -> int:
-    ancla, cada_horas, tolerancia_min = _turno_config(TURNOS)
-    if a.ahora:
-        try:
-            t = datetime.fromisoformat(a.ahora)
-        except ValueError as e:
-            raise ArgumentoNoValido(f"--ahora no es una fecha ISO 8601: {a.ahora!r}") from e
-        _exigir(t.tzinfo is not None, "--ahora necesita zona horaria")
-    else:
-        t = ahora()
-    ultimo = TURNO_HECHO.read_text(encoding="utf-8").strip() if TURNO_HECHO.is_file() else None
-    r = turnos.turno_actual(t, ancla, cada_horas, tolerancia_min, ultimo)
+def _turno_salida(r: dict) -> dict:
     madrid = ZoneInfo("Europe/Madrid")
 
     def _fechas(clave: str, valor: datetime) -> None:
@@ -222,13 +212,50 @@ def cmd_turno(a) -> int:
     _fechas("turno_inicio", r["turno_inicio"])
     _fechas("siguiente", r["siguiente"])
     _fechas("ahora", r["ahora"])
-    if a.marcar:
+    return salida
+
+
+def cmd_turno(a) -> int:
+    # --ahora solo sirve para pruebas; junto con --marcar podría usarse para forzar un marcado
+    # fuera de su turno real, así que además de hacerlo un LAB_TURNOS lo delata como prueba.
+    _exigir(not (a.marcar and a.ahora and not os.environ.get("LAB_TURNOS")),
+            "--ahora junto con --marcar solo vale en pruebas (con LAB_TURNOS definido)")
+    ancla, cada_horas, tolerancia_min = _turno_config(TURNOS)
+    if a.ahora:
+        try:
+            t = datetime.fromisoformat(a.ahora)
+        except ValueError as e:
+            raise ArgumentoNoValido(f"--ahora no es una fecha ISO 8601: {a.ahora!r}") from e
+        _exigir(t.tzinfo is not None, "--ahora necesita zona horaria")
+    else:
+        t = ahora()
+
+    if not a.marcar:
+        ultimo = TURNO_HECHO.read_text(encoding="utf-8").strip() if TURNO_HECHO.is_file() else None
+        emitir(_turno_salida(turnos.turno_actual(t, ancla, cada_horas, tolerancia_min, ultimo)))
+        return 0
+
+    # --marcar: dos disparos casi simultáneos (dos ventanas arrancadas a la vez) no deben marcar
+    # los dos. Todo el ciclo léer-decidir-escribir va bajo un flock exclusivo sobre un archivo
+    # aparte del propio .turno-hecho, con el nombre único de escritura dentro del lock.
+    bloqueo = TURNO_HECHO.with_name(".turno.lock")
+    bloqueo.parent.mkdir(parents=True, exist_ok=True)
+    with open(bloqueo, "a+") as fh:
+        fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
+        ultimo = TURNO_HECHO.read_text(encoding="utf-8").strip() if TURNO_HECHO.is_file() else None
+        r = turnos.turno_actual(t, ancla, cada_horas, tolerancia_min, ultimo)
+        salida = _turno_salida(r)
         if not r["toca"]:
             return _rechazo("TurnoNoValido", [f"no se marca: {r['motivo']}"])
-        tmp = TURNO_HECHO.with_name(f".{TURNO_HECHO.name}.tmp")
-        TURNO_HECHO.parent.mkdir(parents=True, exist_ok=True)
-        tmp.write_text(salida["turno_inicio"], encoding="utf-8")
-        os.replace(tmp, TURNO_HECHO)
+        fd, tmp_nombre = tempfile.mkstemp(dir=str(TURNO_HECHO.parent), prefix=f".{TURNO_HECHO.name}.",
+                                          suffix=".tmp")
+        tmp = Path(tmp_nombre)
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(salida["turno_inicio"])
+            os.replace(tmp, TURNO_HECHO)
+        finally:
+            tmp.unlink(missing_ok=True)
         salida["marcado"] = True
     emitir(salida)
     return 0
@@ -317,17 +344,27 @@ def cmd_seleccionar(a) -> int:
 
 def cmd_render(a) -> int:
     """Máster con texto determinista sobre una imagen ya aprobada. Nunca reutiliza el máster
-    de otro encargo: la imagen de origen sale de las imágenes registradas de ESTE encargo."""
+    de otro encargo: la imagen de origen sale de las imágenes registradas de ESTE encargo.
+
+    El JSON del encargo pasa por Codex (codex-generado, codex-fallo…): family_id, destino_assets
+    y la ruta de la imagen se validan como datos externos, no como algo que ya se dio por bueno."""
     import render_overlay
     from PIL import Image
     enc = encargos.cargar(ruta_encargo(a.encargo))
     if enc["estado"] not in ("aprobado", "usado"):
         return _rechazo("ImagenNoValida", [f"{a.encargo} no está aprobado ni usado (estado {enc['estado']})"])
+    if not _FAMILIA.fullmatch(enc.get("family_id") or ""):
+        return _rechazo("ImagenNoValida", [f"encargo con family_id no válido: {enc.get('family_id')!r}"])
+    if enc.get("destino_assets") != f"{ASSETS}{enc['family_id']}":
+        return _rechazo("ImagenNoValida", [f"encargo con destino_assets inconsistente: {enc.get('destino_assets')!r}"])
     if not (1 <= a.variante <= len(enc["imagenes"])):
         return _rechazo("ImagenNoValida", [f"la variante {a.variante} no existe en {a.encargo}"])
     imagen = enc["imagenes"][a.variante - 1]
-    origen = ROOT / imagen["ruta"]
-    if origen.is_symlink() or not origen.is_file() or sha256(origen) != imagen["sha256"]:
+    try:
+        origen = _relativa_sin_salidas(imagen["ruta"], enc["destino_assets"] + "/", "la imagen de origen")
+    except ArgumentoNoValido as e:
+        return _rechazo("ImagenNoValida", [str(e)])
+    if sha256(origen) != imagen["sha256"]:
         return _rechazo("ImagenNoValida",
                         [f"la imagen de origen no coincide con el hash registrado: {imagen['ruta']}"])
     lineas = a.titular.split("|")
@@ -337,20 +374,14 @@ def cmd_render(a) -> int:
             f"--formato {a.formato!r} no coincide con el formato del encargo {enc['formato']} (esperado {esperado!r})")
     _nombre_archivo_simple(a.salida, EXTENSIONES_MASTER, "--salida")
     destino = ASSETS_DIR / enc["destino_assets"] / a.salida
-    _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
-    # Escritura atómica: render_overlay guarda directo en destino, así que un fallo a mitad
-    # (disco lleno, excepción de Pillow…) dejaría un JPEG truncado con el nombre bueno. Se
-    # renderiza en un temporal de al lado y solo se publica con os.replace si terminó bien.
-    temporal = destino.with_name(f".{destino.name}.tmp")
-    try:
-        render_overlay.render(origen, temporal, lineas, a.subtitulo, a.panel_rgb, a.accent_rgb, a.formato,
-                              a.aviso or "")
-        os.replace(temporal, destino)
-    finally:
-        temporal.unlink(missing_ok=True)
-    with Image.open(destino) as im:
-        ancho, alto = im.size
-    emitir({"ok": True, "master": f"{enc['destino_assets']}/{a.salida}", "sha256": sha256(destino),
+    _exigir(destino.parent.resolve().is_relative_to((ASSETS_DIR / ASSETS).resolve()),
+            f"la ruta de destino sale de {ASSETS}: {a.salida}")
+    ancho, alto, hash_temporal = _renderizar_y_publicar(
+        destino, lambda temporal: render_overlay.render(
+            origen, temporal, lineas, a.subtitulo, a.panel_rgb, a.accent_rgb, a.formato, a.aviso or ""))
+    if ancho is None:
+        return _rechazo("ArgumentoNoValido", [f"--salida ya existe: {a.salida}"])
+    emitir({"ok": True, "master": f"{enc['destino_assets']}/{a.salida}", "sha256": hash_temporal,
             "ancho": ancho, "alto": alto, "formato": a.formato})
     return 0
 
@@ -358,23 +389,42 @@ def cmd_render(a) -> int:
 def cmd_tarjeta(a) -> int:
     """Tarjeta de cita (src/render/quote_card.py), para encargos que no llevan foto de fondo."""
     import quote_card
-    from PIL import Image
     _exigir(bool(_FAMILIA.fullmatch(a.familia)),
             f"--familia no válida: solo letras, dígitos, guion y guion bajo: {a.familia!r}")
     _nombre_archivo_simple(a.salida, (".png",), "--salida")
     destino = ASSETS_DIR / ASSETS / a.familia / a.salida
-    _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
-    temporal = destino.with_name(f".{destino.name}.tmp")
-    try:
-        quote_card.make_card(a.cita, a.autor, str(temporal), variant=a.variante)
-        os.replace(temporal, destino)
-    finally:
-        temporal.unlink(missing_ok=True)
-    with Image.open(destino) as im:
-        ancho, alto = im.size
-    emitir({"ok": True, "tarjeta": f"{ASSETS}{a.familia}/{a.salida}", "sha256": sha256(destino),
+    ancho, alto, hash_temporal = _renderizar_y_publicar(
+        destino, lambda temporal: quote_card.make_card(a.cita, a.autor, str(temporal), variant=a.variante))
+    if ancho is None:
+        return _rechazo("ArgumentoNoValido", [f"--salida ya existe: {a.salida}"])
+    emitir({"ok": True, "tarjeta": f"{ASSETS}{a.familia}/{a.salida}", "sha256": hash_temporal,
             "ancho": ancho, "alto": alto})
     return 0
+
+
+def _renderizar_y_publicar(destino: Path, dibujar) -> tuple[int | None, int | None, str | None]:
+    """Llama a `dibujar(temporal)` (que escribe la imagen en `temporal`, al lado de `destino`),
+    mide esa imagen ANTES de publicarla y solo entonces la publica con un enlace duro exclusivo
+    (falla si `destino` ya existe, así dos publicaciones a la vez con el mismo nombre no pueden
+    pisarse ni dejar un archivo a medias): así un fallo en la medición no puede dejar publicado
+    un máster que el llamador cree fallido. `dibujar` no ve nunca el nombre final: un fallo a
+    mitad (disco lleno, excepción de Pillow…) no deja un archivo a medias con el nombre bueno.
+
+    Devuelve (ancho, alto, sha256) o (None, None, None) si `destino` ya existía."""
+    from PIL import Image
+    temporal = destino.with_name(f".{destino.name}.tmp")
+    try:
+        dibujar(temporal)
+        with Image.open(temporal) as im:
+            ancho, alto = im.size
+        hash_temporal = sha256(temporal)
+        try:
+            os.link(temporal, destino)
+        except FileExistsError:
+            return None, None, None
+    finally:
+        temporal.unlink(missing_ok=True)
+    return ancho, alto, hash_temporal
 
 
 # ── generación (Codex) ──────────────────────────────────────────────────────
@@ -810,7 +860,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_lock_soltar)
 
     p = sub.add_parser("turno")
-    p.add_argument("--ahora", help="fecha ISO 8601 con zona, solo para pruebas")
+    p.add_argument("--ahora", help=argparse.SUPPRESS)
     p.add_argument("--marcar", action="store_true", help="anota este turno como atendido si toca")
     p.set_defaults(func=cmd_turno)
 
@@ -851,7 +901,7 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--aviso", default="", help='p. ej. "PRESENTADORA FICTICIA"')
     p.add_argument("--panel-rgb", type=_rgb, default=(5, 39, 73))
     p.add_argument("--accent-rgb", type=_rgb, default=(176, 220, 236))
-    p.add_argument("--salida", required=True, help="nombre de archivo .jpg/.jpeg/.png, sin ruta")
+    p.add_argument("--salida", required=True, help="nombre de archivo .jpg o .jpeg, sin ruta")
     p.set_defaults(func=cmd_render)
     p = sub.add_parser("tarjeta")
     p.add_argument("--familia", required=True)

@@ -2620,6 +2620,59 @@ def seccion_render() -> None:
             check(codigo == 2 and campo(datos, "tipo") == "ImagenNoValida",
                   f"render rechaza un sha256 alterado ({codigo}, {datos})")
 
+            print("   · I-2: el JSON del encargo (pudo pasar por Codex) no se da por bueno")
+
+            def sin_escribir_nada(nombre_salida):
+                return not (raiz / "experiments/media-lab/assets/LAB-RENDER-001" / nombre_salida).exists()
+
+            eid_abs = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-004", {"ancho": 1080, "alto": 1350})
+            ruta_enc_abs = raiz / "encargos" / f"{eid_abs}.json"
+            enc_abs = json.loads(ruta_enc_abs.read_text(encoding="utf-8"))
+            enc_abs["destino_assets"] = "/tmp/destino-absoluto-de-prueba"
+            ruta_enc_abs.write_text(json.dumps(enc_abs), encoding="utf-8")
+            codigo, datos, _ = lab("render", "--encargo", eid_abs, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "abs-destino.jpg")
+            check(codigo == 2 and sin_escribir_nada("abs-destino.jpg"),
+                  f"render rechaza un destino_assets absoluto sin escribir nada ({codigo}, {datos})")
+
+            eid_dd = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-005", {"ancho": 1080, "alto": 1350})
+            ruta_enc_dd = raiz / "encargos" / f"{eid_dd}.json"
+            enc_dd = json.loads(ruta_enc_dd.read_text(encoding="utf-8"))
+            enc_dd["imagenes"][0]["ruta"] = "experiments/media-lab/assets/LAB-RENDER-001/../../../etc/passwd"
+            ruta_enc_dd.write_text(json.dumps(enc_dd), encoding="utf-8")
+            codigo, datos, _ = lab("render", "--encargo", eid_dd, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "ruta-dd.jpg")
+            check(codigo == 2 and sin_escribir_nada("ruta-dd.jpg"),
+                  f"render rechaza una ruta de imagen con «..» sin escribir nada ({codigo}, {datos})")
+
+            eid_rabs = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-006", {"ancho": 1080, "alto": 1350})
+            ruta_enc_rabs = raiz / "encargos" / f"{eid_rabs}.json"
+            enc_rabs = json.loads(ruta_enc_rabs.read_text(encoding="utf-8"))
+            enc_rabs["imagenes"][0]["ruta"] = "/etc/passwd"
+            ruta_enc_rabs.write_text(json.dumps(enc_rabs), encoding="utf-8")
+            codigo, datos, _ = lab("render", "--encargo", eid_rabs, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "ruta-abs.jpg")
+            check(codigo == 2 and sin_escribir_nada("ruta-abs.jpg"),
+                  f"render rechaza una ruta de imagen absoluta sin escribir nada ({codigo}, {datos})")
+
+            eid_link = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-007", {"ancho": 1080, "alto": 1350})
+            fuera = raiz / "fuera-del-repo"
+            fuera.mkdir()
+            imagen_fuera = fuera / "escondida.png"
+            Image.new("RGB", (1080, 1350), (10, 20, 30)).save(imagen_fuera, "PNG")
+            enlace = raiz / "experiments/media-lab/assets/LAB-RENDER-001/enlace"
+            enlace.symlink_to(fuera, target_is_directory=True)
+            ruta_enc_link = raiz / "encargos" / f"{eid_link}.json"
+            enc_link = json.loads(ruta_enc_link.read_text(encoding="utf-8"))
+            enc_link["imagenes"][0] = {
+                "ruta": "experiments/media-lab/assets/LAB-RENDER-001/enlace/escondida.png",
+                "sha256": hashlib.sha256(imagen_fuera.read_bytes()).hexdigest(), "ancho": 1080, "alto": 1350}
+            ruta_enc_link.write_text(json.dumps(enc_link), encoding="utf-8")
+            codigo, datos, _ = lab("render", "--encargo", eid_link, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "ruta-enlazada.jpg")
+            check(codigo == 2 and sin_escribir_nada("ruta-enlazada.jpg"),
+                  f"render rechaza una carpeta intermedia enlazada fuera de destino_assets ({codigo}, {datos})")
+
             codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
                                    "--titular", "UNO|DOS", "--subtitulo", "Sub", "--salida", "dos-lineas.jpg")
             check(codigo == 2, f"render exige exactamente 3 líneas en --titular ({codigo}, {datos})")
@@ -2629,7 +2682,9 @@ def seccion_render() -> None:
             check(codigo == 2, f"render rechaza un --formato que no coincide con el del encargo ({codigo}, {datos})")
 
             for salida, motivo in (("sub/archivo.jpg", "contiene «/»"), ("../fuera.jpg", "contiene «..»"),
-                                   ("feed.png", "no es .jpg/.jpeg (render_overlay siempre escribe JPEG)")):
+                                   ("feed.png", "no es .jpg/.jpeg (render_overlay siempre escribe JPEG)"),
+                                   ("archivo con espacio.jpg", "tiene un espacio"),
+                                   ("archivo-tílde.jpg", "tiene una tilde")):
                 codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
                                        "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", salida)
                 check(codigo == 2, f"render rechaza --salida que {motivo} ({codigo}, {datos})")
@@ -2654,7 +2709,7 @@ def seccion_render() -> None:
                                        "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "falla.jpg")
             finally:
                 render_overlay.render = original_render
-            check(codigo != 0 and not destino_falla.exists() and not temporal_falla.exists(),
+            check(codigo == 2 and not destino_falla.exists() and not temporal_falla.exists(),
                   f"un fallo al renderizar no deja destino ni temporal ({codigo}, {datos})")
             codigo, datos, err = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
                                      "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "falla.jpg")
@@ -2673,6 +2728,10 @@ def seccion_render() -> None:
             codigo, datos, _ = lab("tarjeta", "--familia", "LAB CARD 002", "--cita", "Otra cita.",
                                    "--autor", "Autor", "--salida", "otra.png")
             check(codigo == 2, f"tarjeta rechaza una familia con espacios ({codigo}, {datos})")
+            for salida, motivo in (("con espacio.png", "tiene un espacio"), ("con-tílde.png", "tiene una tilde")):
+                codigo, datos, _ = lab("tarjeta", "--familia", "LAB-CARD-001", "--cita", "Otra cita.",
+                                       "--autor", "Autor", "--salida", salida)
+                check(codigo == 2, f"tarjeta rechaza --salida que {motivo} ({codigo}, {datos})")
 
             import quote_card
 
@@ -2689,7 +2748,7 @@ def seccion_render() -> None:
                                        "--cita", "Otra cita de prueba.", "--autor", "Autor", "--salida", "falla.png")
             finally:
                 quote_card.make_card = original_make_card
-            check(codigo != 0 and not destino_falla.exists() and not temporal_falla.exists(),
+            check(codigo == 2 and not destino_falla.exists() and not temporal_falla.exists(),
                   f"un fallo al guardar la tarjeta no deja destino ni temporal ({codigo}, {datos})")
             codigo, datos, err = lab("tarjeta", "--familia", "LAB-CARD-001",
                                      "--cita", "Otra cita de prueba.", "--autor", "Autor", "--salida", "falla.png")
@@ -2700,6 +2759,8 @@ def seccion_render() -> None:
 def seccion_turno() -> None:
     print("\n13. turno: ventanas cada cada_horas horas alrededor del reloj")
     import json
+    import os
+    import subprocess
     import tempfile
     from labkit import turnos as T
 
@@ -2715,9 +2776,12 @@ def seccion_turno() -> None:
         ("2026-09-15T00:40:00+02:00", True, "toca"),
         ("2026-09-15T05:40:00+02:00", True, "toca"),
         ("2026-09-15T01:40:00+02:00", False, "fuera del turno"),
-        ("2026-09-15T05:39:00+02:00", False, "fuera del turno"),
+        ("2026-09-15T05:35:00+02:00", False, "fuera del turno"),
         ("2026-09-15T06:00:00+02:00", True, "toca"),
         ("2026-09-15T06:11:00+02:00", False, "fuera del turno"),
+        # margen de 2 min hacia atrás (M-6): un disparo justo antes de la marca no pierde el turno.
+        ("2026-09-15T00:39:00+02:00", True, "toca"),
+        ("2026-09-15T00:37:00+02:00", False, "fuera del turno"),
     ]
     for iso, toca_esperado, motivo_esperado in casos:
         r = T.turno_actual(datetime.fromisoformat(iso), ancla, 5, 30, None)
@@ -2734,6 +2798,12 @@ def seccion_turno() -> None:
     check(r["turno_inicio"].astimezone(madrid).isoformat(timespec="seconds") == "2026-10-25T00:40:00+02:00"
           and r["siguiente"].astimezone(madrid).isoformat(timespec="seconds") == "2026-10-25T04:40:00+01:00",
           f"en hora de Madrid el turno pasa de +02:00 a +01:00 con el cambio de hora ({r})")
+    # M-7: prueba de DST no tautológica, encadenando el turno_inicio de un lado del cambio de
+    # hora con el siguiente del turno del otro lado.
+    r_antes = T.turno_actual(datetime.fromisoformat("2026-10-25T00:41:00+02:00"), ancla, 5, 30, None)
+    r_despues = T.turno_actual(datetime.fromisoformat("2026-10-25T04:41:00+01:00"), ancla, 5, 30, None)
+    check(r_despues["toca"] is True and r_despues["turno_inicio"] == r_antes["siguiente"],
+          f"el turno de las 04:41+01:00 es el siguiente del de las 00:40+02:00 ({r_antes}, {r_despues})")
 
     print("   · CLI lab.py turno")
     with tempfile.TemporaryDirectory() as d:
@@ -2751,20 +2821,39 @@ def seccion_turno() -> None:
 
             turno_hecho = raiz / ".turno-hecho"
             check(not turno_hecho.exists(), "de partida no hay .turno-hecho")
-            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
-            check(codigo == 2 and campo(datos, "error") == "no se marca: fuera del turno" and not turno_hecho.exists(),
-                  f"--marcar fuera de turno (sin marcar previo) sale con 2 y no crea .turno-hecho ({codigo}, {datos})")
 
+            # M-5: --ahora junto con --marcar exige LAB_TURNOS (delata que es una prueba).
+            check("LAB_TURNOS" not in os.environ, "de partida no hay LAB_TURNOS en el entorno")
             codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar")
-            check(codigo == 0 and campo(datos, "marcado") is True and turno_hecho.is_file(),
-                  f"--marcar escribe .turno-hecho cuando toca ({codigo}, {datos})")
-            marcado_antes = turno_hecho.read_text(encoding="utf-8")
-            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:45:00+02:00")
-            check(codigo == 0 and campo(datos, "toca") is False and campo(datos, "motivo") == "turno ya atendido",
-                  f"una segunda llamada ya no toca: turno ya atendido ({codigo}, {datos})")
-            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
-            check(codigo == 2 and turno_hecho.read_text(encoding="utf-8") == marcado_antes,
-                  f"--marcar de un turno ya atendido tampoco toca .turno-hecho ({codigo}, {datos})")
+            check(codigo == 2 and "LAB_TURNOS" in (campo(datos, "error") or "") and not turno_hecho.exists(),
+                  f"--ahora junto con --marcar sin LAB_TURNOS sale con 2 sin marcar ({codigo}, {datos})")
+
+            os.environ["LAB_TURNOS"] = str(raiz / "turnos.json")
+            try:
+                codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
+                check(codigo == 2 and campo(datos, "error") == "no se marca: fuera del turno"
+                      and not turno_hecho.exists(),
+                      f"--marcar fuera de turno (sin marcar previo) sale con 2 y no crea .turno-hecho ({codigo}, {datos})")
+
+                codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar")
+                check(codigo == 0 and campo(datos, "marcado") is True and turno_hecho.is_file(),
+                      f"--marcar escribe .turno-hecho cuando toca ({codigo}, {datos})")
+                marcado_antes = turno_hecho.read_text(encoding="utf-8")
+
+                # I-1: dos --marcar seguidos sobre el MISMO turno (mismo --ahora): el segundo no marca.
+                codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar")
+                check(codigo == 2 and campo(datos, "error") == "no se marca: turno ya atendido"
+                      and turno_hecho.read_text(encoding="utf-8") == marcado_antes,
+                      f"dos --marcar seguidos sobre el mismo turno: el segundo sale con 2 ({codigo}, {datos})")
+
+                codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:45:00+02:00")
+                check(codigo == 0 and campo(datos, "toca") is False and campo(datos, "motivo") == "turno ya atendido",
+                      f"una segunda llamada ya no toca: turno ya atendido ({codigo}, {datos})")
+                codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
+                check(codigo == 2 and turno_hecho.read_text(encoding="utf-8") == marcado_antes,
+                      f"--marcar de un turno ya atendido tampoco toca .turno-hecho ({codigo}, {datos})")
+            finally:
+                del os.environ["LAB_TURNOS"]
 
         with LabAislado(raiz) as lab:
             (raiz / "turnos.json").write_text("{ no es json", encoding="utf-8")
@@ -2773,6 +2862,24 @@ def seccion_turno() -> None:
             (raiz / "turnos.json").write_text(json.dumps({"ancla": "2026-09-15T00:40:00+02:00"}), encoding="utf-8")
             codigo, datos, _ = lab("turno")
             check(codigo == 2, f"turnos.json incompleto sale con 2 ({codigo}, {datos})")
+
+    print("   · I-1: --marcar es atómico entre dos procesos a la vez")
+    with tempfile.TemporaryDirectory() as d2:
+        raiz2 = pathlib.Path(d2)
+        turnos_json = raiz2 / "turnos.json"
+        turnos_json.write_text(json.dumps({"ancla": "2026-09-15T00:40:00+02:00", "cada_horas": 5,
+                                           "tolerancia_min": 30}), encoding="utf-8")
+        turno_hecho2 = raiz2 / ".turno-hecho"
+        env = {**os.environ, "LAB_TURNOS": str(turnos_json), "LAB_TURNO_HECHO": str(turno_hecho2)}
+        lab_py = ROOT / "experiments" / "media-lab" / "lab.py"
+        cmd = [sys.executable, str(lab_py), "turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar"]
+        procesos = [subprocess.Popen(cmd, cwd=ROOT, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                     text=True) for _ in range(2)]
+        salidas = [p.communicate() for p in procesos]
+        codigos = sorted(p.returncode for p in procesos)
+        check(codigos == [0, 2],
+              f"de dos --marcar a la vez sobre el mismo turno, exactamente uno marca ({codigos}, {salidas})")
+        check(turno_hecho2.is_file(), "el turno queda marcado tras la carrera de dos procesos")
 
 
 SECCIONES = [
