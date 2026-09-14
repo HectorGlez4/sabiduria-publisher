@@ -58,9 +58,8 @@ Updated: 2026-09-14 00:42 Europe/Madrid
 
 ## Pending / blockers
 
-- **Blocking before the scheduled window task:** `lab.py ig pie` returned ok with Instagram's hashtag dropdown still open in the supervised window (plan task 10f); the detector does not see it in the uiautomator dump. `compartir` still fails closed via `compositor_listo`, but the scheduled task `sabiduria-media-lab` must not be enabled until 10f is fixed.
 - Resolve the Instagram permalink of `LAB-PERSON-002-B-INSTAGRAM` read-only and capture its 24 h metrics from 2026-09-15 21:38.
-- **Blocking unattended publication (2026-09-15):** the scheduled task cannot render masters (`render_overlay.py` / `src/render/quote_card.py` are outside its allowed commands). Needs a user decision: add a `lab.py` render subcommand or allow the render script in the task. CELL-011/013 are selectable and waiting on it.
+- 2026-09-15: unattended master rendering unblocked with `lab.py render` / `lab.py tarjeta` (task 15); windows now run every 5 hours around the clock via `lab.py turno` (anchor 2026-09-15 00:40 Europe/Madrid).
 - **Blocking metrics (2026-09-15):** Day 1 24 h snapshots for CELL-001/003/005 were due 2026-09-14 20:01–20:02 UTC and are overdue; no allowed command reads insights (`verify_api.py` only reads post fields, no metrics workflow exists).
 
 - Probe Instagram API account identity/insights and Threads insights without exposing secrets.
