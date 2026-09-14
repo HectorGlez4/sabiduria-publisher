@@ -200,4 +200,5 @@ La tarea programada solo corre con la app de Claude abierta. Si está cerrada, c
 - La interfaz de las apps cambia sin aviso (Instagram en francés en este teléfono). Los scripts localizan los controles por texto o descripción y se detienen si no los encuentran.
 - MaaS360 limita la pantalla a 120 s. Depende del LaunchAgent `com.sabiduria.medialab.phone-awake`, y un reinicio del teléfono exige un desbloqueo manual.
 - Dos publicaciones por ventana, la copia automática en Facebook y las coincidencias con producción elevan la carga de audiencia; todo queda registrado como factor de confusión.
+- El CDN raw de GitHub cachea unos 5 min: `publish_api.py` compara el sha256 del asset descargado con el del manifiesto y no publica si difieren, así que un reintento con la imagen corregida puede tener que esperar a la caché.
 - Un encargo no comprueba que sus celdas compartan relación de aspecto: el prompt de la ventana prohíbe mezclar feed y story en un mismo encargo.

@@ -827,6 +827,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 7: Manifiestos API y cerrojo de ventana
 
+> **Ampliada tras la revisión de calidad:** las historias se publican sin pie, un manifiesto no mezcla feed y stories, `run_group_id`, `..` y sha256 se validan estrictamente, hay `manifiesto_verificacion`/`ruta_verificacion` (`-verify.json`), `publish_api.py` no publica si el asset servido no coincide con `asset_sha256` (caché del CDN), `verify_api.py` verifica solo las redes presentes, y el cerrojo renueva para su dueño y solo lo suelta su dueño (`soltar(ruta, dueno)`). El código vigente está en el commit que sigue a `d471c6a`; lo de abajo es la versión inicial.
+
 **Files:**
 - Create: `experiments/media-lab/labkit/manifiesto.py`
 - Create: `experiments/media-lab/labkit/cerrojo.py`
@@ -1589,8 +1591,8 @@ def cmd_lock_tomar(a) -> int:
 
 
 def cmd_lock_soltar(a) -> int:
-    cerrojo.soltar(LOCK)
-    emitir({"cerrojo": "soltado"})
+    soltado = cerrojo.soltar(LOCK, a.dueno)
+    emitir({"cerrojo": "soltado" if soltado else "no era tuyo o no existía"})
     return 0
 
 
@@ -1729,6 +1731,15 @@ def cmd_manifiesto_api(a) -> int:
     return 0
 
 
+def cmd_manifiesto_verificacion(a) -> int:
+    post_ids = dict(par.split("=", 1) for par in a.post)
+    m = manifiesto.manifiesto_verificacion(a.run_group, post_ids)
+    destino = ROOT / manifiesto.ruta_verificacion(a.run_group)
+    destino.write_text(json.dumps(m, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    emitir({"manifiesto": manifiesto.ruta_verificacion(a.run_group)})
+    return 0
+
+
 # ── teléfono ────────────────────────────────────────────────────────────────
 
 def _evidencia(run_id: str) -> Path:
@@ -1791,7 +1802,9 @@ def construir() -> argparse.ArgumentParser:
     p = sub.add_parser("lock-tomar")
     p.add_argument("--dueno", default="claude")
     p.set_defaults(func=cmd_lock_tomar)
-    sub.add_parser("lock-soltar").set_defaults(func=cmd_lock_soltar)
+    p = sub.add_parser("lock-soltar")
+    p.add_argument("--dueno", default="claude")
+    p.set_defaults(func=cmd_lock_soltar)
 
     p = sub.add_parser("encargo-nuevo")
     p.add_argument("--cell", action="append", required=True)
@@ -1846,6 +1859,10 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--caption", action="append", required=True, help="plataforma=ruta_del_pie")
     p.add_argument("--family")
     p.set_defaults(func=cmd_manifiesto_api)
+    p = sub.add_parser("manifiesto-verificacion")
+    p.add_argument("--run-group", required=True)
+    p.add_argument("--post", action="append", required=True, help="plataforma=post_id")
+    p.set_defaults(func=cmd_manifiesto_verificacion)
 
     p = sub.add_parser("telefono-subir")
     p.add_argument("--local", required=True)
@@ -2025,23 +2042,23 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 
 ## Pasos
 1. `lab.py lock-tomar --dueno programada`. Si devuelve `cerrojo: false`, termina: hay otra ventana en curso.
-2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar` y termina informando.
+2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar --dueno programada` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera. Si `telefono.listo` es false (bloqueado, dormido o desconectado), no toques el teléfono en toda la ventana: no intentes despertarlo ni desbloquearlo, salta las celdas `android_native`, sigue con las de API y di en el informe que el teléfono no estaba disponible para que el usuario lo desbloquee.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
 5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, sin mezclar en un mismo encargo celdas de feed (4:5) y de story (9:16), hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
 6. `lab.py seleccionar --max 2`, añadiendo `--sin-telefono` si `telefono.listo` era false. Si devuelve [], salta al paso 8.
-7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`):
+7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`). Antes de cada celda renueva el cerrojo con `lab.py lock-tomar --dueno programada`:
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
    b. Teléfono (instagram/feed_single_image): `lab.py telefono-subir --local <máster>`; `lab.py ig abrir --run RUN`; `ig recorte`; `ig editor`; `ig audio`; `ig pie --pie <archivo>`. Si hay desplegable de hashtags: `lab.py telefono-atras --run RUN --nombre ig-04b`. Mira cada captura.
       API: `lab.py manifiesto-api --run-group LAB-…-API --asset <máster> --caption facebook=<archivo> …`; commit y push del máster y el manifiesto (sección C de la spec) para que asset_url exista; la vista previa para QA es el máster con el pie.
    c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo: pon la celda en `"status": "blocked"` con `reason_if_blocked_or_unsupported` en coverage.json para que la siguiente ventana no la vuelva a elegir.
    d. `lab.py preflight` y anota `espera` (producción cercana) en el run. No frena la publicación.
-   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo>`. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`.
+   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo>`. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`. Con los post_id del resultado: `lab.py manifiesto-verificacion --run-group <el mismo> --post facebook=<id> …` (solo feed; las historias no se verifican por API), commit y push de ese manifiesto, y `gh workflow run media-lab-verify -f manifest=<ruta>`.
    f. Verifica la publicación en directo (URL/ID, identidad, audiencia, música). En Instagram por teléfono, la copia automática en Facebook va en `publication.cross_posting` del run.
    g. Actualiza el run, la celda de coverage.json, `lab.py encargo-usado --encargo ID --run RUN` y experiments/media-lab/progress.md.
 8. Métricas: captura las instantáneas vencidas (24 h, 72 h, 7 d; Stories unas 6 h y antes de caducar) de los runs publicados y guárdalas en sus runs.
 9. Commit solo de rutas propias: `git add experiments/media-lab/<rutas concretas>`, `git commit -m "media lab claude: …"`, `git fetch origin main`, `git rebase origin/main` y `git push origin HEAD:main`. Si hay conflicto: `git rebase --abort` e informa.
-10. `lab.py lock-soltar`.
+10. `lab.py lock-soltar --dueno programada`.
 
 ## Informe
 Si no publicaste nada y no hubo fallo, basta con una línea con el motivo (por ejemplo, ningún encargo aprobado). Si publicaste, da celda, red, ruta, URL y veredicto de QA. Si algo bloqueó, di qué y qué decisión hace falta del usuario.
