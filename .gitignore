@@ -5,3 +5,4 @@ __pycache__/
 .venv/
 content/_migrar/
 assets/*.mp4
+experiments/media-lab/.ventana.lock

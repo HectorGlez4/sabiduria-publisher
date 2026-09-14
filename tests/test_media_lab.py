@@ -300,11 +300,49 @@ def seccion_seleccion() -> None:
     check(S.elegir(celdas, todos, max_celdas=0) == [], "max_celdas=0 no devuelve nada")
 
 
+def seccion_manifiesto_y_cerrojo() -> None:
+    print("\n5. Manifiestos API y cerrojo de ventana")
+    import tempfile
+    from datetime import datetime, timedelta, timezone
+    from labkit import cerrojo, manifiesto as M
+
+    asset = "experiments/media-lab/assets/LAB-F01-001/master-4x5.jpg"
+    m = M.manifiesto_api("LAB-F01-001-API", asset, "ab" * 32,
+                         {"facebook": "Pie FB", "threads": "Pie Threads"}, family_id="LAB-F01-001")
+    check(m["route"] == "api" and m["audience"] == "public", "ruta api y audiencia pública explícitas")
+    check(m["asset_url"] == M.RAW_BASE + asset, "asset_url apunta al raw de main")
+    check(m["platforms"] == ["facebook", "threads"], "platforms sale de los pies")
+    check(M.ruta_manifiesto("LAB-F01-001-API") == "experiments/media-lab/manifests/LAB-F01-001-API.json",
+          "ruta que acepta el workflow media-lab")
+    for args, label in ((("X-1", asset, "ab", {"facebook": "p"}), "run_group sin LAB-"),
+                        (("LAB-X", "/tmp/a.jpg", "ab", {"facebook": "p"}), "asset fuera de assets"),
+                        (("LAB-X", asset, "ab", {"tiktok": "p"}), "plataforma sin publicador"),
+                        (("LAB-X", asset, "ab", {"threads": "x" * 501}), "Threads de más de 500"),
+                        (("LAB-X", asset, "ab", {"instagram": "x" * 2201}), "Instagram de más de 2200"),
+                        (("LAB-X", asset, "ab", {"facebook": ""}), "pie vacío")):
+        try:
+            M.manifiesto_api(*args)
+            ok = False
+        except M.ManifiestoError:
+            ok = True
+        check(ok, f"rechaza: {label}")
+
+    t = datetime(2026, 9, 15, 8, 40, tzinfo=timezone.utc)
+    with tempfile.TemporaryDirectory() as d:
+        lock = pathlib.Path(d) / ".ventana.lock"
+        check(cerrojo.tomar(lock, t, "programada"), "el cerrojo libre se toma")
+        check(not cerrojo.tomar(lock, t + timedelta(minutes=30), "manual"), "un cerrojo de 30 min no se pisa")
+        check(cerrojo.tomar(lock, t + timedelta(minutes=91), "manual"), "un cerrojo de más de 90 min se considera abandonado")
+        cerrojo.soltar(lock)
+        check(not lock.exists(), "soltar borra el cerrojo")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
     seccion_colision,
     seccion_seleccion,
+    seccion_manifiesto_y_cerrojo,
 ]
 
 
