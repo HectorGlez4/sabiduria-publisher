@@ -53,7 +53,7 @@
     "matched_comparison_ids": []
   },
   "round": 1,
-  "status": "completed",
+  "status": "in_progress",
   "tool_option_id": null,
   "format_id": "image_overlay",
   "seed_source_path": "content/published/2026-09-07-extra88.json",
@@ -74,8 +74,8 @@
   },
   "timing": {
     "started_at": "2026-09-14T19:30:47Z",
-    "first_acceptable_at": "2026-09-14T19:38:30Z",
-    "finished_at": "2026-09-14T19:41:00Z",
+    "first_acceptable_at": null,
+    "finished_at": null,
     "wall_elapsed_seconds": null,
     "one_time_setup_active_seconds": null,
     "human_active_seconds": 0,
@@ -93,12 +93,6 @@
         "started_at": "2026-09-14T19:31:46Z",
         "finished_at": "2026-09-14T19:35:30Z",
         "overlaps_another_stage": true
-      },
-      {
-        "name": "visual QA, preflight, share, reconciliation, live verification",
-        "started_at": "2026-09-14T19:36:00Z",
-        "finished_at": "2026-09-14T19:41:00Z",
-        "overlaps_another_stage": false
       }
     ]
   },
@@ -124,15 +118,6 @@
       "media_type": "image/png",
       "dimensions": "1122x1402",
       "role": "generation_source"
-    },
-    {
-      "path": "experiments/media-lab/assets/LAB-PERSON-002/caption-instagram.txt",
-      "role": "caption"
-    },
-    {
-      "path": "experiments/media-lab/assets/LAB-PERSON-002/ENC-20260914-001-v1.png",
-      "sha256": "9c9182400d6f97e9132bc9a557149277971bbb0896fd20db90f7958a6d536a78",
-      "role": "encargo_image_copy_of_generation_source"
     }
   ],
   "gates": {
@@ -204,9 +189,9 @@
     "submitted_at": "2026-09-14T19:37:56Z",
     "processing_completed_at": "2026-09-14T19:38:17Z",
     "playback_verified_at": "2026-09-14T19:40:00Z",
-    "cross_posting": "Instagram post menu shows 'Partagé sur Facebook' (ig-07-menu-publicacion.png): Accounts Center auto-share cross-posted this feed photo to the Facebook Page. Counted as an extra publication, not a lab cell (user decision 2026-09-14). CELL-011 (facebook feed, API) of the same family will be a near-duplicate on the Page.",
-    "post_id": null,
-    "post_url": null,
+    "cross_posting": null,
+    "post_id": "DdR54JEgxHN",
+    "post_url": "https://www.instagram.com/p/DdR54JEgxHN/",
     "audio_verified": true,
     "master_sha256": "5ca7bfcbb9a376388ada1b9fcb0919484928cfe334765f0bad218c7cf15e90f6",
     "snapshots": [],
@@ -222,8 +207,7 @@
       "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-04b-sin-desplegable.png",
       "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05a-antes.png",
       "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05-publicado.png",
-      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png",
-      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-07-menu-publicacion.png"
+      "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png"
     ],
     "incidents": [
       "lab.py ig pie returned ok while the hashtag suggestion dropdown was still open (ig-04-compositor.png); one lab.py telefono-atras closed it (ig-04b-sin-desplegable.png). Detector bug recorded as plan task 10f."
@@ -239,13 +223,10 @@
         "experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-05-publicado.png"
       ]
     },
-    "live_verification": "Brand profile grid position 1 (posts 3714 -> 3715); live post header 'sabiduriabolsillo' with 'Florian Christl · Natural'; caption opens «En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente…»; 'il y a 2 minutes'; full 4:5 image with PRESENTADORA FICTICIA and brand badge (Instagram mute control overlays the badge corner in-app only). Evidence experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png"
+    "live_verification": "Brand profile grid position 1 (posts 3714 -> 3715); live post header 'sabiduriabolsillo' with 'Florian Christl · Natural'; caption opens «En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente…»; 'il y a 2 minutes'; full 4:5 image with PRESENTADORA FICTICIA and brand badge (Instagram mute control overlays the badge corner in-app only). Evidence experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png",
+    "post_url_source": "2026-09-14T19:52Z: decoded locally (macOS Core Image CIDetector) from the post's own Instagram 'Code QR' screen on the phone; tracking query parameters removed."
   },
-  "missing_data_reasons": {
-    "post_url": "The native Instagram app offers no copy-link in the post menu; the link lives in the send sheet and the Android clipboard is not readable over ADB. Resolve read-only by listing recent Instagram media for the account (media-lab-verify search mode proposed in the phase 2 spec) and write post_id/post_url here.",
-    "facebook_crosspost_url": "Auto-shared by Instagram; permalink not captured.",
-    "audience_metrics": "Capture 24 h / 72 h / 7 d Instagram insights from 2026-09-15T19:38Z."
-  },
-  "decision": "First supervised Claude window published CELL-018 end-to-end through lab.py on the phone with agent visual QA and no human confirmation. Share reconciled as confirmed. Two process findings: lab.py ig pie accepted a composer with the hashtag dropdown still open (task 10f, blocking before the scheduled task), and the encargo owner choices do not include a reuse owner (codex-exec used).",
-  "next_action": "Resolve post_url read-only; capture 24 h metrics; fix task 10f before enabling sabiduria-media-lab."
+  "missing_data_reasons": {},
+  "decision": null,
+  "next_action": "Capture 24 h metrics from 2026-09-15T19:38Z; fix task 10f before enabling sabiduria-media-lab."
 }

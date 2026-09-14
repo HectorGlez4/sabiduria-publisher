@@ -2256,6 +2256,8 @@ Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe
 
 ### Task 10f: El detector del desplegable de hashtags no lo ve (bloqueante antes de la tarea 14)
 
+> **Hecha en `d51ffb7` y `f00fff3`** (spec ✅; calidad aprobada con menores; comprobada con los dos `dumpsys window windows` reales: abierto → solo `PopupWindow:de536c5` con frame (0,1448,1080,2205); cerrado → nada). Implementación final: `ventanas_emergentes_de` exige el prefijo `PopupWindow:` y cuenta la ventana por `package=` del bloque o `mParentWindow`, visible salvo `isVisible=false` (o `mHasSurface=false` si falta), frame `frame=`/`mFrame=` o None (cuenta); `emergente_desplegable`/`parece_desplegable` (≥ 90 % del ancho) deciden; `_desplegable_abierto` sustituye a `_hay_que_cerrar`. Menores pendientes: añadir `package=com.instagram.android` al bloque `KHCD` del test; prueba «sin isVisible y mHasSurface=false no cuenta»; docstring de `ventanas_emergentes_de` remite a `emergente_desplegable`.
+
 > **Diagnóstico (sonda SONDA-10F, 2026-09-14 21:46, sin publicar):** el desplegable de sugerencias es una **ventana aparte** que `uiautomator dump` no incluye. Volcado fresco y captura tomados a la vez: el volcado muestra el compositor limpio (`caption_add_on_recyclerview` con «Sondage»/«Invite», `music_track_title`, `share_footer_button` pulsable y sin tapar), la captura muestra el desplegable encima. En `adb shell dumpsys window windows` aparece solo mientras está abierto:
 > ```
 > Window #11 Window{49fd424 u0 PopupWindow:de536c5}:

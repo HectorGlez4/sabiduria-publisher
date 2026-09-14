@@ -622,8 +622,8 @@
       "reason_if_blocked_or_unsupported": null,
       "planned_publish_at": "2026-09-14T19:37:56+00:00",
       "run_record": "experiments/media-lab/runs/LAB-PERSON-002-B-INSTAGRAM.json",
-      "post_id": null,
-      "post_url": null,
+      "post_id": "DdR54JEgxHN",
+      "post_url": "https://www.instagram.com/p/DdR54JEgxHN/",
       "playback_or_display_verified_at": "2026-09-14T19:40:00+00:00",
       "measurement_due_at": [
         "2026-09-15T19:38:17+00:00",
