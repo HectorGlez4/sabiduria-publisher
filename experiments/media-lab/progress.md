@@ -5,7 +5,7 @@ Updated: 2026-09-14 00:42 Europe/Madrid
 ## Current checkpoint
 
 - Campaign Day 1 started on 2026-09-13.
-- Temporary Codex heartbeat `media-lab-hasta-1-octubre` is active at 10:10, 15:10 and 20:10 Europe/Madrid each day through 2026-10-01 inclusive. It may publish at most one coverage cell per execution after a live collision check.
+- Codex heartbeat `media-lab-hasta-1-octubre` now only generates images from `encargos/` (10:10, 15:10, 20:10 until 2026-10-01). Claude scheduled task `sabiduria-media-lab` (10:40, 15:40, 20:40) owns selection, QA and all phone/API publishing, up to 2 cells per window. Phase 1 phone route: Instagram feed only.
 - Schedule preflight is recorded in `schedule-preflight.md`: phone and Meta connectivity passed; Instagram was switched back from personal `hec.gonzlez` to brand `@sabiduriabolsillo`; GitHub web/API connectivity, authentication, Actions access and required secret names were revalidated at 23:21 and pending lab commits were pushed.
 - Mandatory brand identities are verified natively for Facebook, Instagram and Threads.
 - The original Samsung SM-S918B has been replaced for unattended lab work by an authorized Samsung SM-S721B (ADB serial `R5CXB1AWYNF`) on Android 16. Facebook 576.0.0.42.73, Instagram 445.0.0.45.83, Threads 446.0.0.32.78 and Edits 446.2.0.51.77 are installed. Facebook Page, Instagram `@sabiduriabolsillo` and Threads `@sabiduriabolsillo` were independently verified on the new phone.

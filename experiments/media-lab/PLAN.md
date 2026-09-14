@@ -1,5 +1,7 @@
 # Sabiduría media lab: creation and publishing benchmark
 
+> **Reparto vigente desde 2026-09-14:** Codex (automatización `media-lab-hasta-1-octubre`) solo genera imágenes desde `encargos/`. Claude encarga, revisa, hace QA y publica por teléfono y API desde la tarea programada `sabiduria-media-lab` (10:40, 15:40 y 20:40). Diseño: `docs/superpowers/specs/2026-09-14-media-lab-chatgpt-claude-design.md`. Todo pasa por `experiments/media-lab/lab.py`.
+
 Prepared 2026-09-13. Status: planned, not executed. The user will start testing in a new session. Read [TWO-WEEK-CAMPAIGN.md](TWO-WEEK-CAMPAIGN.md) first: the latest scope adds extensive image variations, Facebook-first trivia/carousels/audio/location formats and actual publishing across all existing brand targets. That campaign takes precedence where this original benchmark differs; the tool comparisons and paid-round framework below still apply.
 
 ## Objective and scope

@@ -1,5 +1,7 @@
 # Scheduled media-lab preflight
 
+> **Reparto vigente desde 2026-09-14:** Codex (automatización `media-lab-hasta-1-octubre`) solo genera imágenes desde `encargos/`. Claude encarga, revisa, hace QA y publica por teléfono y API desde la tarea programada `sabiduria-media-lab` (10:40, 15:40 y 20:40). Diseño: `docs/superpowers/specs/2026-09-14-media-lab-chatgpt-claude-design.md`. Todo pasa por `experiments/media-lab/lab.py`.
+
 Checked: 2026-09-13 23:21 Europe/Madrid
 
 ## Schedule
