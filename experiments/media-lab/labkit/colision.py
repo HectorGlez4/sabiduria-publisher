@@ -1,10 +1,10 @@
 """
-¿Toca esperar por producción?
+Producción cercana: qué está publicando producción alrededor de ahora.
 
-La regla es la del propio publicador cuando recupera atrasos: 21 minutos entre
-dos piezas. Además, mientras `publicar` o `hilos` están subiendo no sale nada del
-laboratorio, y una pieza atrasada en la cola cuenta como inminente: el reloj de
-GitHub la puede disparar en cualquier momento.
+Solo informativo (decisión del usuario, 2026-09-14): el laboratorio publica igual
+y copia este motivo en el run como factor de confusión. La ventana es la del propio
+publicador cuando recupera atrasos, 21 minutos; también se anotan `publicar` o
+`hilos` en curso y las piezas atrasadas de la cola, que pueden salir en cualquier momento.
 """
 from __future__ import annotations
 
