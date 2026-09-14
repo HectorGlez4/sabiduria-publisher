@@ -2041,12 +2041,12 @@ git fetch origin main && git rebase origin/main && git push origin HEAD:main
 **Files:**
 - Create (temporal, se borra al terminar): `experiments/media-lab/encargos/ENC-<hoy>-001.json` y su imagen
 
-- [ ] **Step 1: Comprobación previa real**
+- [x] **Step 1: Comprobación previa real**
 
 Run: `.venv/bin/python experiments/media-lab/lab.py preflight`
 Expected: JSON con `telefono.listo: true` y `github: true`. `espera` puede traer un motivo, porque la sonda no publica.
 
-- [ ] **Step 2: Encargo de prueba**
+- [x] **Step 2: Encargo de prueba**
 
 ```bash
 printf 'Un astrolabio de latón sobre una mesa de madera oscura, luz lateral cálida, fondo liso, estilo fotográfico editorial' > /private/tmp/claude-501/-Users-hec-dev-sabiduriaPublisher/sonda-prompt.txt
@@ -2055,7 +2055,7 @@ printf 'Un astrolabio de latón sobre una mesa de madera oscura, luz lateral cá
 
 Expected: JSON con `"estado": "pedido"`. Anotar `encargo_id`.
 
-- [ ] **Step 3: Sonda de `codex exec` (gasta una generación incluida)**
+- [x] **Step 3: Sonda de `codex exec` (gasta una generación incluida)**
 
 Antes, anotar en `experiments/media-lab/findings.md` la salida de `/Applications/ChatGPT.app/Contents/Resources/codex --version`. La sonda confirma también que `lab.py generar` no informa archivos `ajenos`.
 
@@ -2064,7 +2064,7 @@ Run: `.venv/bin/python experiments/media-lab/lab.py generar --encargo <encargo_i
 - Expected OK: `{"ok": true, "imagenes": [...]}`, con el PNG en `experiments/media-lab/assets/LAB-SONDA-001/`. Abrir la imagen y comprobar que no tiene texto.
 - Si falla: guardar la salida en `experiments/media-lab/findings.md` bajo «Rescate codex exec: no disponible». La ventana sigue funcionando solo con la cola de Codex. Anotarlo en la spec (riesgo 1) y continuar.
 
-- [ ] **Step 4: Sonda del teléfono hasta el compositor, sin compartir**
+- [x] **Step 4: Sonda del teléfono hasta el compositor, sin compartir**
 
 Con una foto cualquiera ya en `Pictures/SabiduriaLab`, por ejemplo `LAB-QUOTE-001-gracian.png`:
 
@@ -2080,11 +2080,11 @@ Con una foto cualquiera ya en `Pictures/SabiduriaLab`, por ejemplo `LAB-QUOTE-00
 
 Tras CADA comando, abrir la captura indicada en `captura` con Read y comprobar que muestra lo esperado antes de lanzar el siguiente: selector, 4:5 completo, editor, chip de música añadido, compositor con pie, música y «Partager» sin desplegable. Si hay desplegable: `lab.py telefono-atras --run SONDA-IG --nombre ig-04b-sin-desplegable`.
 
-- [ ] **Step 5: Salir sin publicar**
+- [x] **Step 5: Salir sin publicar**
 
 Pulsar atrás hasta la pantalla de descarte con `lab.py telefono-atras --run SONDA-IG --nombre salida-N` y mirar cada captura. En el diálogo de descarte, localizar el botón de descartar en la captura y pulsarlo con `adb shell input tap X Y`. Esa pulsación es solo de esta sonda supervisada, no del flujo desatendido. Confirmar en el perfil que no hay publicación nueva.
 
-- [ ] **Step 6: Limpiar**
+- [x] **Step 6: Limpiar**
 
 ```bash
 rm -f experiments/media-lab/encargos/ENC-*-001.json
@@ -2100,7 +2100,7 @@ Si `encargos/` queda vacío, borrarlo también. Nada de esto se comitea.
 **Files:**
 - Modify: `.claude/settings.local.json`
 
-- [ ] **Step 1: Añadir las reglas**
+- [x] **Step 1: Añadir las reglas**
 
 Añadir al array `permissions.allow`, sin tocar las existentes:
 
@@ -2118,7 +2118,7 @@ Añadir al array `permissions.allow`, sin tocar las existentes:
 "Bash(git push origin HEAD:main)"
 ```
 
-- [ ] **Step 2: Validar el JSON**
+- [x] **Step 2: Validar el JSON**
 
 Run: `.venv/bin/python -c "import json;d=json.load(open('.claude/settings.local.json'));print(len(d['permissions']['allow']))"`
 Expected: `32`, las 21 reglas existentes más 11.
@@ -2132,7 +2132,7 @@ Expected: `32`, las 21 reglas existentes más 11.
 **Files:**
 - Create: `experiments/media-lab/claude-ventana-prompt.md`
 
-- [ ] **Step 1: Escribir el prompt de la ventana**
+- [x] **Step 1: Escribir el prompt de la ventana**
 
 ```markdown
 Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publicación del laboratorio Sabiduría de Bolsillo. El diseño completo está en docs/superpowers/specs/2026-09-14-media-lab-chatgpt-claude-design.md: léelo si dudas.
@@ -2170,11 +2170,11 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 Si no publicaste nada y no hubo fallo, basta con una línea con el motivo (por ejemplo, ningún encargo aprobado). Si publicaste, da celda, red, ruta, URL y veredicto de QA. Si algo bloqueó, di qué y qué decisión hace falta del usuario.
 ```
 
-- [ ] **Step 2: Ventana supervisada con el usuario presente**
+- [x] **Step 2: Ventana supervisada con el usuario presente**
 
 Ejecutar el prompt anterior a mano en esta sesión, paso a paso, usando `--dueno manual` en lugar de `--dueno programada` en `lock-tomar` y `lock-soltar`, con al menos un encargo aprobado para una celda `instagram/feed_single_image/android_native` de `coverage.json`. Comprobar antes que ninguna celda anterior en `coverage.json` tiene encargo aprobado: `seleccionar` sigue ese orden y elegiría primero una celda de API. Si hace falta, antes crear el encargo y esperar a la automatización de Codex o usar `lab.py generar`. Sin confirmación humana antes del paso 7e (decisión del usuario, 2026-09-14): basta el PASS del agente revisor.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add experiments/media-lab/claude-ventana-prompt.md
@@ -2190,7 +2190,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 **Files:**
 - Modify: `experiments/media-lab/PLAN.md`, `experiments/media-lab/START-HERE.md`, `experiments/media-lab/schedule-preflight.md`, `experiments/media-lab/progress.md`
 
-- [ ] **Step 1: Crear la tarea programada**
+- [x] **Step 1: Crear la tarea programada**
 
 Llamar a `mcp__scheduled-tasks__create_scheduled_task` con:
 - `taskId`: `sabiduria-media-lab`
@@ -2201,7 +2201,7 @@ Llamar a `mcp__scheduled-tasks__create_scheduled_task` con:
 
 Decir al usuario que solo corre con la app de Claude abierta y que, si está cerrada, corre al abrirla.
 
-- [ ] **Step 2: Actualizar la documentación del laboratorio**
+- [x] **Step 2: Actualizar la documentación del laboratorio**
 
 Añadir al principio de `experiments/media-lab/START-HERE.md`, `PLAN.md` y `schedule-preflight.md` este bloque:
 
@@ -2215,12 +2215,12 @@ En `progress.md`, sustituir la viñeta que empieza por «Temporary Codex heartbe
 - Codex heartbeat `media-lab-hasta-1-octubre` now only generates images from `encargos/` (10:10, 15:10, 20:10 until 2026-10-01). Claude scheduled task `sabiduria-media-lab` (10:40, 15:40, 20:40) owns selection, QA and all phone/API publishing, up to 2 cells per window. Phase 1 phone route: Instagram feed only.
 ```
 
-- [ ] **Step 3: Pruebas finales**
+- [x] **Step 3: Pruebas finales**
 
 Run: `.venv/bin/python tests/test_media_lab.py`
 Expected: `El laboratorio cumple sus contratos.`
 
-- [ ] **Step 4: Commit y push**
+- [x] **Step 4: Commit y push**
 
 ```bash
 git add experiments/media-lab/START-HERE.md experiments/media-lab/PLAN.md experiments/media-lab/schedule-preflight.md experiments/media-lab/progress.md
@@ -2304,6 +2304,10 @@ Menores aprobados sin bloquear en la re-revisión de `98f7c77`. Hacerlos despué
 - [ ] **G-1 (revisión de 10c):** en `generar`, marcar `vivo["lanzado"] = True` tras `Popen`; si llega una señal antes del lanzamiento y no hay cambios ajenos, devolver el encargo a `pedido` sin sumar intento (`encargos.liberar(enc, owner)` nuevo, con prueba).
 - [ ] **G-2 (revisión de 10c):** si entre `tomar` y el lanzamiento de Codex salta una excepción (`_permitidas`, `mkdtemp`), llamar a `_deshacer(ruta, f"error antes de lanzar Codex: {e}", bloquear=False)` y relanzar, para no dejar el encargo en `generando` 30 minutos.
 - [ ] **M-8:** mover los lectores puros de `instagram_feed.py` (perfil, selector, compositor, envío) a `labkit/instagram_pantallas.py`, reexportándolos para no romper llamadas; hacerlo antes de añadir Stories en la fase 2.
+
+## Estado de la fase 1 (2026-09-14 22:20)
+
+Tareas 1–14 hechas, con 10b–10f. Sondas en `findings.md`; primera ventana supervisada publicó CELL-018 (https://www.instagram.com/p/DdR54JEgxHN/); tarea programada `sabiduria-media-lab` creada (10:40, 15:40, 20:40). Pendiente del usuario: volver a pegar `codex-heartbeat-prompt.md` en la automatización de Codex (el archivo local seguía con la versión anterior a las 22:20).
 
 ## Fase 2 (plan aparte)
 
