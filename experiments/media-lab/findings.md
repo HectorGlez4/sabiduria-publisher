@@ -44,3 +44,17 @@ No paid provider, trial or API call is recommended yet. The observed gaps all ha
 - **Audience value:** no post has reached its first 24-hour measurement point. Do not pay to scale a treatment before retention, reach and meaningful engagement show a measurable gap or opportunity.
 
 After mature measurements exist, a paid proposal should name the exact failed free baseline, the candidate provider, the matched retest, a spending cap, output/commercial rights, and cost per accepted piece including discarded attempts.
+
+## Rescate codex exec (sonda del 2026-09-14)
+
+- Versión probada: `codex-cli 0.154.0-alpha.6.2` (`/Applications/ChatGPT.app/Contents/Resources/codex`), con la configuración del usuario.
+- `lab.py generar --encargo ENC-20260914-001 --timeout 600` (astrolabio, feed 1080×1350, «sin texto»): `ok` en unos 2 min, un PNG de 1080×1350 sin letras ni números, encargo en `generado` con `origen: codex-exec`, y la guardia no informó archivos ajenos. Rescate disponible.
+- La nota de Codex dice que registró él mismo la imagen con `codex-generado`; el estado final coincide con el que deja `generar`.
+- Hay que lanzarlo fuera del minuto de otras tareas programadas que comitean en el mismo árbol (p. ej. `sabiduria-respaldo-reloj`, hacia las :45 cada 2 h): un commit ajeno durante la generación la marcaría como cambios ajenos y bloquearía el encargo.
+
+## Sonda del teléfono hasta el compositor (2026-09-14, sin publicar)
+
+- `ig abrir` con la cortina de notificaciones desplegada sale con 4 (`PantallaInesperada`) y `telefono-atras` se niega fuera de Instagram: falla cerrado. Se cerró con `cmd statusbar collapse` y el reintento funcionó (`publicaciones_antes` 3714).
+- `ig recorte` dejó el 4:5 completo (marco y firma visibles); `ig editor` y `ig audio` añadieron el tema sugerido («Feeling Good par Nina Simone»); `ig detalles` mostró la fila de música.
+- **Fallo:** `ig pie` devolvió `ok` pero la captura mostraba el desplegable de hashtags sobre la música y «Partager»; aparece segundos después del volcado que lo comprueba. Un `telefono-atras` lo cerró sin tocar el pie. Sin arreglo, `ig compartir` fallaría cerrado en cada ventana (tarea 10e).
+- Salida: dos «atrás» hasta «Recommencer ?», toque en «Recommencer», un «atrás» más hasta el perfil: sigue en 3714 publicaciones, no se publicó nada.
