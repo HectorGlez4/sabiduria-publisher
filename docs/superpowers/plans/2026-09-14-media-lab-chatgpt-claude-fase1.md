@@ -2309,6 +2309,14 @@ Menores aprobados sin bloquear en la re-revisión de `98f7c77`. Hacerlos despué
 
 Tareas 1–14 hechas, con 10b–10f. Sondas en `findings.md`; primera ventana supervisada publicó CELL-018 (https://www.instagram.com/p/DdR54JEgxHN/); tarea programada `sabiduria-media-lab` creada (10:40, 15:40, 20:40). Prompt de Codex actualizado por el usuario (automation.toml modificado 2026-09-14 23:41): coincide con `codex-heartbeat-prompt.md` salvo las comillas invertidas de `codex-generado`/`codex-fallo` en el paso 4, sin cambio de instrucciones; horario 10:10, 15:10 y 20:10 hasta el 2026-10-01, activo.
 
+### Task 15: `lab.py render`/`tarjeta`, turnos cada 5 h y cola de 10 (hecha)
+
+> **Hecha en `1f70b29`, `055019e`, `eaf3371` y `ca7b72f`** (spec ✅; calidad aprobada con menores). Motivo: la primera ventana desatendida (2026-09-15 00:32, `81d0e26`) no podía crear el máster. Decisión del usuario del 2026-09-15: ventanas cada 5 h continuas (la hora se desplaza cada día), hasta 2 celdas; la tarea programada se dispara `40 * * * *` y el paso 0 del prompt es `lab.py turno` (ancla 2026-09-15 00:40, `turnos.json`, tolerancia 30 min y 2 min de adelanto, `--marcar` con `flock`). Menores pendientes: temporal único con `mkstemp` en `_renderizar_y_publicar`; la prueba de dos procesos debería tomar ella el `flock` para discriminar; `cmd_tarjeta` sin la comprobación `destino.parent.resolve().is_relative_to(...)`; quitar `.turno-hecho.tmp` de `.gitignore`; abrir `.turno.lock` con `O_NOFOLLOW`.
+
+### Task 16: métricas desatendidas (pendiente)
+
+- [ ] Modo `--metricas` en `verify_api.py` y `media-lab-verify.yml`, búsqueda del id de Graph de publicaciones por teléfono (shortcode) y `lab.py metricas-registrar`; diseño en el scratchpad de la sesión del 2026-09-15 (`metricas-diseno.md`), a volcar aquí al empezar.
+
 ## Fase 2 (plan aparte)
 
 Flujos de teléfono para Instagram Stories (con sticker o encuesta), Facebook feed y Stories como Página, Threads y TikTok. Cada uno necesita su módulo `labkit/<red>_<formato>.py`, pruebas del analizador con volcados reales y ampliar `seleccion.TELEFONO_FASE_1`.
