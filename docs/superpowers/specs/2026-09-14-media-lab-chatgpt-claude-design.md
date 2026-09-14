@@ -102,7 +102,7 @@ Tarea programada `sabiduria-media-lab`, cron `40 10,15,20 * * *` (hora local de 
    - pie pegado con `phone_clipboard.py` y releído exacto;
    - cerrar el desplegable de hashtags.
    - **La evidencia final es `screencap`**, nunca un volcado de `uiautomator`, porque puede ir con retraso.
-9. **QA visual.** Agente independiente con las rutas de captura, el máster, el pie y `visual-qa-gate.md`. Exige PASS explícito. Ante FAIL, corregir y repetir una vez; si vuelve a fallar, saltar la celda y registrarlo.
+9. **QA visual.** Agente independiente con las rutas de captura, el máster, el pie y `visual-qa-gate.md`. Exige PASS explícito. El revisor solo comprueba que no haya texto ni imagen cortados o tapados, y no hay confirmación humana antes de publicar (decisión del usuario, 2026-09-14). Ante FAIL, corregir y repetir una vez; si vuelve a fallar, saltar la celda y registrarlo.
 10. **Publicación.** Repetir `preflight` justo antes para anotar la producción cercana en el run, sin esperar. En el teléfono, pulsar Compartir; por API, `gh workflow run media-lab -f manifest=<ruta>` y después `media-lab-verify`.
 11. **Verificación:**
     - URL o ID, identidad, audiencia pública y música en la publicación en directo;
