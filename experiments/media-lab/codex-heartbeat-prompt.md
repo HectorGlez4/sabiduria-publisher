@@ -10,7 +10,8 @@ Prohibido, sin excepciones: publicar en cualquier red, usar adb o el teléfono, 
    .venv/bin/python experiments/media-lab/lab.py codex-generado --encargo <encargo_id> --owner codex-heartbeat --imagen <ruta1> [--imagen <ruta2>]
    Si la generación falló o no puedes cumplir las restricciones, ejecuta:
    .venv/bin/python experiments/media-lab/lab.py codex-fallo --encargo <encargo_id> --owner codex-heartbeat --nota "<motivo breve>"
-5. Cuando hayas terminado con TODOS los encargos devueltos en el paso 2, comitea juntos, en un único commit, sus JSON y sus imágenes:
+   Si `codex-generado` sale con error, ejecuta `codex-fallo` para ese encargo con el mensaje de error como nota.
+5. Cuando hayas terminado con TODOS los encargos devueltos en el paso 2, comitea juntos, en un único commit, sus JSON y las imágenes de los encargos que quedaron generados:
    git add <cada experiments/media-lab/encargos/<encargo_id>.json devuelto> <cada imagen guardada>
    git commit -m "media lab codex: encargos <id1> [<id2>] <generado|fallo>"
    git fetch origin main && git rebase origin/main && git push origin HEAD:main

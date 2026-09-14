@@ -8,29 +8,50 @@ Todo lo que toca encargos, teléfono, Codex o GitHub pasa por aquí: basta con
 autorizar este comando para que una ejecución desatendida no se quede colgada
 esperando un permiso que nadie va a contestar. A propósito no hay ningún
 subcomando que borre o cancele publicaciones: eso es manual (media-lab-cancel).
+
+Códigos de salida: 0 bien; 1 fallo de generación o interrupción; 2 argumentos o
+datos no válidos (siempre con JSON {"ok": false, "tipo", "error"}); 3 cerrojo no
+tomado o no soltado; 4 pantalla inesperada o error del teléfono; 5 envío de
+Instagram no confirmado; 6 Codex tocó archivos no permitidos.
 """
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
+import re
 import signal
 import subprocess
 import sys
 import tempfile
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 LAB = Path(__file__).resolve().parent
 ROOT = LAB.parents[1]
 sys.path.insert(0, str(LAB))
 
-from labkit import cerrojo, codex_rescate, colision, encargos, manifiesto, seleccion  # noqa: E402
+from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, seleccion  # noqa: E402
 
 ENCARGOS = Path(os.environ.get("LAB_ENCARGOS_DIR", LAB / "encargos"))
+COBERTURA = Path(os.environ.get("LAB_COVERAGE", LAB / "coverage.json"))
 EVIDENCIA = LAB / "evidence" / "android"
 LOCK = LAB / ".ventana.lock"
+
+DUENOS_VENTANA = ("programada", "manual")
+ESTADOS_ACTIVOS = ("pedido", "generando", "generado", "aprobado")
+TIMEOUT_CODEX_S = 420
+COLA_BYTES = 1500
+SENALES = (signal.SIGTERM, signal.SIGHUP, signal.SIGINT)
+ASSETS = "experiments/media-lab/assets/"
+EXTENSIONES_SUBIDA = (".png", ".jpg", ".jpeg")
+_NOMBRE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+
+
+class ArgumentoNoValido(ValueError):
+    pass
 
 
 def ahora() -> datetime:
@@ -49,6 +70,29 @@ def ruta_encargo(encargo_id: str) -> Path:
     return ENCARGOS / f"{encargo_id}.json"
 
 
+def _exigir(condicion: bool, mensaje: str) -> None:
+    if not condicion:
+        raise ArgumentoNoValido(mensaje)
+
+
+def _rechazo(tipo: str, errores: list[str]) -> int:
+    emitir({"ok": False, "tipo": tipo, "error": "; ".join(errores), "errores": errores})
+    return 2
+
+
+def _relativa_sin_salidas(rel: str, base: str, que: str) -> Path:
+    """ROOT/rel si rel es relativa, empieza por base, no tiene «..», no es un enlace, existe
+    y, resuelta, sigue dentro de ROOT/base."""
+    partes = PurePosixPath(rel)
+    _exigir(not partes.is_absolute() and rel.startswith(base) and ".." not in partes.parts,
+            f"{que} debe ser una ruta relativa bajo {base} sin «..»: {rel}")
+    p = ROOT / rel
+    _exigir(not p.is_symlink(), f"{que} es un enlace simbólico: {rel}")
+    _exigir(p.is_file(), f"{que} no existe: {rel}")
+    _exigir(p.resolve().is_relative_to((ROOT / base).resolve()), f"{que} sale de {base}: {rel}")
+    return p
+
+
 # ── comprobación previa ─────────────────────────────────────────────────────
 
 def cmd_preflight(a) -> int:
@@ -56,7 +100,7 @@ def cmd_preflight(a) -> int:
     t = ahora()
     try:
         tel = telefono.estado()
-    except Exception as e:  # noqa: BLE001
+    except Exception as e:  # noqa: BLE001 — preflight informa, nunca rompe
         tel = {"listo": False, "error": f"{type(e).__name__}: {e}"}
     try:
         en_curso = colision.workflows_en_curso()
@@ -80,38 +124,68 @@ def cmd_lock_tomar(a) -> int:
 def cmd_lock_soltar(a) -> int:
     soltado = cerrojo.soltar(LOCK, a.dueno)
     emitir({"cerrojo": "soltado" if soltado else "no era tuyo o no existía"})
-    return 0
+    return 0 if soltado else 3
 
 
 # ── encargos (Claude) ───────────────────────────────────────────────────────
 
+def _comprobar_celdas(ids: list[str], todos: list[dict]) -> None:
+    """Las celdas existen, se pueden publicar, comparten formato y no tienen ya un encargo en curso."""
+    celdas = {c["cell_id"]: c for c in json.loads(COBERTURA.read_text(encoding="utf-8"))["cells"]}
+    problemas = []
+    if len(set(ids)) != len(ids):
+        problemas.append("hay celdas repetidas en --cell")
+    for cid in dict.fromkeys(ids):
+        c = celdas.get(cid)
+        if c is None:
+            problemas.append(f"{cid} no está en coverage.json")
+            continue
+        if c["status"] not in seleccion.ESTADOS_ELEGIBLES:
+            problemas.append(f"{cid} está en {c['status']}")
+        if not seleccion._ruta_implementada(c):
+            problemas.append(f"{cid}: {c['platform']}/{c['native_format']} por {c['publishing_route']} no está implementado")
+    formatos = sorted({celdas[cid]["native_format"] for cid in ids if cid in celdas})
+    if len(formatos) > 1:
+        problemas.append(f"un encargo no mezcla formatos: {', '.join(formatos)}")
+    ocupadas = {cid: e["encargo_id"] for e in todos if e["estado"] in ESTADOS_ACTIVOS
+                for cid in e.get("coverage_cell_ids", [])}
+    for cid in dict.fromkeys(ids):
+        if cid in ocupadas:
+            problemas.append(f"{cid} ya tiene el encargo {ocupadas[cid]} en curso")
+    _exigir(not problemas, "; ".join(problemas))
+
+
 def cmd_encargo_nuevo(a) -> int:
     t = ahora()
     todos = [e for _, e in encargos.listar(ENCARGOS)]
-    if encargos.en_cola(todos) >= encargos.MAX_EN_COLA:
-        print(f"ya hay {encargos.MAX_EN_COLA} encargos en cola", file=sys.stderr)
-        return 2
+    _exigir(encargos.en_cola(todos) < encargos.MAX_EN_COLA, f"ya hay {encargos.MAX_EN_COLA} encargos en cola")
+    _comprobar_celdas(a.cell, todos)
     enc = encargos.nuevo(
         encargos.siguiente_id(ENCARGOS, t), coverage_cell_ids=a.cell, family_id=a.family,
         brief_path=a.brief, do_not_use=a.do_not_use or [], formato=json.loads(a.formato),
         prompt=Path(a.prompt_file).read_text(encoding="utf-8").strip(),
         restricciones=a.restriccion or [],
-        destino_assets=f"experiments/media-lab/assets/{a.family}", ahora=t, variantes=a.variantes)
+        destino_assets=f"{ASSETS}{a.family}", ahora=t, variantes=a.variantes)
     encargos.guardar(ruta_encargo(enc["encargo_id"]), enc)
     emitir(enc)
     return 0
 
 
 def cmd_encargos(a) -> int:
-    emitir([{k: e[k] for k in ("encargo_id", "estado", "coverage_cell_ids", "lock_owner", "imagenes")}
-            for _, e in encargos.listar(ENCARGOS)])
+    buenos, malos = encargos.listar_tolerante(ENCARGOS)
+    emitir([{k: e.get(k) for k in ("encargo_id", "estado", "coverage_cell_ids", "lock_owner", "imagenes")}
+            for _, e in buenos] + malos)
     return 0
 
 
 def cmd_encargo_revisar(a) -> int:
     ruta = ruta_encargo(a.encargo)
-    enc = encargos.revisar(encargos.cargar(ruta), aprobado=a.aprobado, motivo=a.motivo,
-                           ahora=ahora(), correccion=a.correccion)
+    enc = encargos.cargar(ruta)
+    if a.aprobado:
+        errores = codex_rescate.validar(enc, ROOT)
+        if errores:
+            return _rechazo("ImagenNoValida", errores)
+    enc = encargos.revisar(enc, aprobado=a.aprobado, motivo=a.motivo, ahora=ahora(), correccion=a.correccion)
     encargos.guardar(ruta, enc)
     emitir({"encargo_id": enc["encargo_id"], "estado": enc["estado"]})
     return 0
@@ -126,7 +200,7 @@ def cmd_encargo_usado(a) -> int:
 
 
 def cmd_seleccionar(a) -> int:
-    cov = json.loads((LAB / "coverage.json").read_text(encoding="utf-8"))
+    cov = json.loads(COBERTURA.read_text(encoding="utf-8"))
     emitir(seleccion.elegir(cov["cells"], [e for _, e in encargos.listar(ENCARGOS)],
                             max_celdas=a.max, telefono_listo=not a.sin_telefono))
     return 0
@@ -151,24 +225,45 @@ def cmd_codex_tomar(a) -> int:
 
 
 def cmd_codex_generado(a) -> int:
-    from PIL import Image
+    """Registra las imágenes solo si son exactamente las pedidas y la copia resultante valida;
+    si algo falla no se guarda nada."""
+    from PIL import Image, UnidentifiedImageError
     ruta = ruta_encargo(a.encargo)
     enc = encargos.cargar(ruta)
-    imagenes = []
+    pedidas = codex_rescate.rutas_imagen(enc)
+    carpeta = (ROOT / enc["destino_assets"]).resolve()
+    errores: list[str] = []
+    imagenes: list[dict] = []
     for rel in a.imagen:
-        if not rel.startswith(enc["destino_assets"] + "/"):
-            print(f"{rel} está fuera de {enc['destino_assets']}", file=sys.stderr)
-            return 2
         p = ROOT / rel
-        if not p.is_file():
-            print(f"no existe {rel}", file=sys.stderr)
-            return 2
-        with Image.open(p) as im:
-            ancho, alto = im.size
-        imagenes.append({"ruta": rel, "sha256": sha256(p), "ancho": ancho, "alto": alto})
-    encargos.marcar_generado(enc, a.owner, imagenes, ahora())
-    encargos.guardar(ruta, enc)
-    emitir(enc["imagenes"])
+        if rel not in pedidas:
+            errores.append(f"{rel} no es una de las rutas pedidas ({', '.join(pedidas)})")
+        elif p.is_symlink():
+            errores.append(f"{rel} es un enlace simbólico")
+        elif not p.is_file():
+            errores.append(f"no existe {rel}")
+        elif not p.resolve().is_relative_to(carpeta):
+            errores.append(f"{rel} sale de {enc['destino_assets']}")
+        else:
+            try:
+                with Image.open(p) as im:
+                    ancho, alto = im.size
+            except (OSError, UnidentifiedImageError, Image.DecompressionBombError) as e:
+                errores.append(f"{rel} no es una imagen legible ({type(e).__name__})")
+            else:
+                imagenes.append({"ruta": rel, "sha256": sha256(p), "ancho": ancho, "alto": alto})
+    copia = copy.deepcopy(enc)
+    if not errores:
+        try:
+            encargos.marcar_generado(copia, a.owner, imagenes, ahora())
+        except encargos.EncargoError as e:
+            errores.append(str(e))
+        else:
+            errores += codex_rescate.validar(copia, ROOT)
+    if errores:
+        return _rechazo("ImagenNoValida", errores)
+    encargos.guardar(ruta, copia)
+    emitir(copia["imagenes"])
     return 0
 
 
@@ -180,44 +275,82 @@ def cmd_codex_fallo(a) -> int:
     return 0
 
 
-def _estado_git() -> dict[str, str]:
-    """
-    Hash actual de las rutas con cambios respecto a HEAD y de lo ignorado que importa.
+def _matar_grupo(proc: subprocess.Popen | None) -> None:
+    """SIGKILL a todo el grupo de Codex. Si ya se recogió su código no se toca: el pid
+    podría ser de otro proceso."""
+    if proc is None or proc.returncode is not None:
+        return
+    try:
+        os.killpg(proc.pid, signal.SIGKILL)
+    except (ProcessLookupError, PermissionError):
+        pass
 
-    Lo ignorado no aparece en `git status`: se añaden a mano los secretos, el cerrojo de
-    ventana y las tarjetas de producción, que Codex no debe tocar.
-    """
-    r = subprocess.run(["git", "status", "--porcelain", "-z", "-uall"], cwd=ROOT, capture_output=True,
-                       timeout=60, stdin=subprocess.DEVNULL)
-    if r.returncode != 0:
-        raise RuntimeError(f"git status falló: {r.stderr.decode(errors='replace').strip()[:200]}")
-    rutas: list[str] = []
-    campos = r.stdout.decode("utf-8", errors="surrogateescape").split("\0")
-    i = 0
-    while i < len(campos):
-        registro = campos[i]
-        i += 1
-        if not registro:
-            continue
-        rutas.append(registro[3:])
-        if registro[0] in "RC" or registro[1] in "RC":
-            i += 1  # en -z, un renombrado o copia trae después la ruta de origen
-    rutas += [".env", "experiments/media-lab/.ventana.lock"]
-    rutas += [str(q.relative_to(ROOT)) for q in (ROOT / "assets").glob("*.png")]
-    fuera = {}
-    for ruta in rutas:
-        q = ROOT / ruta
-        if q.is_symlink():
-            fuera[ruta] = "enlace:" + os.readlink(q)
-        elif q.is_file():
-            fuera[ruta] = hashlib.sha256(q.read_bytes()).hexdigest()
+
+def _cola(archivo) -> str:
+    archivo.seek(0, os.SEEK_END)
+    archivo.seek(max(0, archivo.tell() - COLA_BYTES))
+    return archivo.read().decode("utf-8", errors="replace")
+
+
+def _leer_respuesta(salida: Path):
+    try:
+        return json.loads(salida.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
+def _ejecutar_codex(enc: dict, salida: Path, timeout: int, vivo: dict) -> tuple[int | None, str]:
+    """Lanza codex exec en su propio grupo, espera como mucho `timeout` s y devuelve
+    (código o None, cola de su salida). `vivo["proc"]` es el proceso mientras corre, para
+    que el manejador de señales pueda matarlo."""
+    with tempfile.TemporaryFile() as registro:
+        try:
+            proc = subprocess.Popen(codex_rescate.comando(codex_rescate.prompt_para(enc), salida), cwd=ROOT,
+                                    stdin=subprocess.DEVNULL, stdout=registro, stderr=subprocess.STDOUT,
+                                    start_new_session=True)
+        except OSError as e:
+            return None, f"codex exec no arrancó: {e}"
+        aviso = ""
+        vivo["proc"] = proc
+        try:
+            if vivo["senal"] is not None:  # la señal llegó mientras arrancaba
+                _matar_grupo(proc)
+            try:
+                codigo = proc.wait(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                _matar_grupo(proc)  # también sus hijos: nada escribe tarde
+                codigo, aviso = None, f"codex exec superó {timeout} s\n"
+                try:
+                    proc.wait(timeout=10)
+                except subprocess.TimeoutExpired:
+                    aviso += "codex exec no terminó 10 s después de SIGKILL\n"
+        finally:
+            vivo["proc"] = None
+        return codigo, aviso + _cola(registro)
+
+
+def _deshacer(ruta: Path, nota: str, bloquear: bool) -> list[str]:
+    """Deja el encargo como tras un fallo si codex-exec lo dejó generando o generado."""
+    try:
+        enc = encargos.cargar(ruta)
+        if enc["estado"] == "generando" and enc["lock_owner"] == "codex-exec":
+            encargos.marcar_fallo(enc, "codex-exec", nota, ahora())
+        elif enc["estado"] == "generado" and (enc.get("intentos") or [{}])[-1].get("origen") == "codex-exec":
+            encargos.invalidar(enc, nota, ahora(), bloquear=bloquear)
         else:
-            fuera[ruta] = "-"
-    return fuera
+            return []
+        encargos.guardar(ruta, enc)
+    except (OSError, ValueError, KeyError, TypeError) as e:
+        return [f"no se pudo deshacer el encargo: {type(e).__name__}: {e}"]
+    return []
 
 
 def cmd_generar(a) -> int:
     ruta = ruta_encargo(a.encargo)
+    enc = encargos.cargar(ruta)
+    if not encargos.tomable(enc, ahora()):
+        raise encargos.EncargoError(f"{a.encargo} no se puede tomar en estado {enc['estado']}")
+    _exigir(a.timeout > 0, "--timeout debe ser positivo")
     try:
         v = subprocess.run([codex_rescate.CODEX, "--version"], capture_output=True, text=True,
                            timeout=30, stdin=subprocess.DEVNULL)
@@ -227,70 +360,102 @@ def cmd_generar(a) -> int:
         emitir({"ok": False, "errores": [f"codex no disponible: {e}"]})
         return 1
     try:
-        antes = _estado_git()
+        antes = guardia.estado_git(ROOT)
     except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
         emitir({"ok": False, "errores": [f"no se pudo tomar la foto de git: {e}"]})
         return 1
-    enc = encargos.tomar(encargos.cargar(ruta), "codex-exec", ahora())
+    enc = encargos.tomar(enc, "codex-exec", ahora())
     encargos.guardar(ruta, enc)
     permitidas = set(codex_rescate.rutas_imagen(enc))
     try:
-        permitidas.add(str(ruta.resolve().relative_to(ROOT)))
+        permitidas.add(ruta.resolve().relative_to(ROOT).as_posix())
     except ValueError:
         pass  # LAB_ENCARGOS_DIR fuera del repo (pruebas)
     salida = Path(tempfile.gettempdir()) / f"codex-exec-{a.encargo}.json"
+    salida.unlink(missing_ok=True)
+    vivo: dict = {"proc": None, "senal": None}
+
+    def al_recibir(numero, _marco) -> None:
+        # Quien nos llama se va: Codex no puede seguir escribiendo sin nadie que lo compruebe.
+        vivo["senal"] = numero
+        _matar_grupo(vivo["proc"])
+
+    previos = {s: signal.signal(s, al_recibir) for s in SENALES}
     try:
-        proc = subprocess.Popen(codex_rescate.comando(codex_rescate.prompt_para(enc), salida), cwd=ROOT,
-                                stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                                text=True, start_new_session=True)
+        codigo, cola = _ejecutar_codex(enc, salida, a.timeout, vivo)
+        respuesta = _leer_respuesta(salida)
+        if vivo["senal"] is not None:
+            nota = f"interrumpido por señal {vivo['senal']}"
+            _deshacer(ruta, nota, bloquear=False)
+            emitir({"ok": False, "errores": [nota]})
+            return 1
         try:
-            out, _ = proc.communicate(timeout=a.timeout)
-            codigo, cola = proc.returncode, (out or "")[-1500:]
-        except subprocess.TimeoutExpired:
-            os.killpg(proc.pid, signal.SIGKILL)  # también sus hijos: nada escribe tarde
-            proc.communicate()
-            codigo, cola = None, f"codex exec superó {a.timeout} s"
-    except OSError as e:
-        codigo, cola = None, f"codex exec no arrancó: {e}"
-    try:
-        despues = _estado_git()
-        ajenos = sorted(r for r in antes.keys() | despues.keys()
-                        if antes.get(r) != despues.get(r) and r not in permitidas)
-    except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
-        ajenos = [f"<no se pudo comprobar git: {e}>"]
-    enc = encargos.cargar(ruta)
-    errores = codex_rescate.validar(enc)
-    if ajenos:
-        errores.append("Codex cambió archivos no permitidos: " + ", ".join(ajenos))
-    if errores:
-        if enc["estado"] == "generando" and enc["lock_owner"] == "codex-exec":
-            encargos.marcar_fallo(enc, "codex-exec", f"{'; '.join(errores)} | exit={codigo}", ahora())
-            encargos.guardar(ruta, enc)
-        emitir({"ok": False, "errores": errores, "ajenos": ajenos, "exit": codigo, "salida": cola})
-        return 6 if ajenos else 1
-    emitir({"ok": True, "imagenes": enc["imagenes"]})
-    return 0
+            ajenos = guardia.cambios_ajenos(antes, guardia.estado_git(ROOT), permitidas)
+        except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
+            ajenos = [f"<no se pudo comprobar git: {e}>"]
+        try:
+            enc = encargos.cargar(ruta)
+            errores = codex_rescate.validar(enc, ROOT)
+        except (OSError, ValueError, KeyError, TypeError) as e:
+            errores = [f"encargo ilegible tras codex exec: {type(e).__name__}: {e}"]
+        if ajenos:
+            errores.append("Codex cambió archivos no permitidos: " + ", ".join(ajenos))
+        if errores:
+            errores += _deshacer(ruta, f"{'; '.join(errores)} | exit={codigo}", bloquear=bool(ajenos))
+            emitir({"ok": False, "errores": errores, "ajenos": ajenos, "exit": codigo, "salida": cola,
+                    "respuesta": respuesta})
+            return 6 if ajenos else 1
+        emitir({"ok": True, "imagenes": enc["imagenes"], "respuesta": respuesta})
+        return 0
+    finally:
+        for s, manejador in previos.items():
+            signal.signal(s, manejador)
+        salida.unlink(missing_ok=True)
 
 
 # ── API ─────────────────────────────────────────────────────────────────────
 
+def _pares(textos: list[str], que: str) -> dict[str, str]:
+    fuera: dict[str, str] = {}
+    for texto in textos:
+        clave, igual, valor = texto.partition("=")
+        if not igual or not clave or not valor:
+            raise manifiesto.ManifiestoError(f"{que} debe tener la forma plataforma=valor: {texto!r}")
+        if clave in fuera:
+            raise manifiesto.ManifiestoError(f"{que} repite {clave}")
+        fuera[clave] = valor
+    return fuera
+
+
+def _escribir_manifiesto(rel: str, datos: dict) -> None:
+    """Crea el manifiesto; si ya existe no lo pisa."""
+    destino = ROOT / rel
+    texto = json.dumps(datos, ensure_ascii=False, indent=2) + "\n"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with destino.open("x", encoding="utf-8") as f:
+            f.write(texto)
+    except FileExistsError as e:
+        raise manifiesto.ManifiestoError(f"{rel} ya existe: no se pisa un manifiesto") from e
+
+
 def cmd_manifiesto_api(a) -> int:
-    captions = {}
-    for par in a.caption:
-        plataforma, archivo = par.split("=", 1)
-        captions[plataforma] = Path(archivo).read_text(encoding="utf-8").rstrip("\n")
-    m = manifiesto.manifiesto_api(a.run_group, a.asset, sha256(ROOT / a.asset), captions, family_id=a.family)
-    destino = ROOT / manifiesto.ruta_manifiesto(a.run_group)
-    destino.write_text(json.dumps(m, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    rutas_pies = _pares(a.caption, "--caption")
+    try:
+        asset = _relativa_sin_salidas(a.asset, ASSETS, "el asset")
+    except ArgumentoNoValido as e:
+        raise manifiesto.ManifiestoError(str(e)) from e
+    captions = {plataforma: Path(archivo).read_text(encoding="utf-8").rstrip("\n")
+                for plataforma, archivo in rutas_pies.items()}
+    m = manifiesto.manifiesto_api(a.run_group, a.asset, sha256(asset), captions, family_id=a.family)
+    _escribir_manifiesto(manifiesto.ruta_manifiesto(a.run_group), m)
     emitir({"manifiesto": manifiesto.ruta_manifiesto(a.run_group), "platforms": m["platforms"]})
     return 0
 
 
 def cmd_manifiesto_verificacion(a) -> int:
-    post_ids = dict(par.split("=", 1) for par in a.post)
-    m = manifiesto.manifiesto_verificacion(a.run_group, post_ids)
-    destino = ROOT / manifiesto.ruta_verificacion(a.run_group)
-    destino.write_text(json.dumps(m, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    m = manifiesto.manifiesto_verificacion(a.run_group, _pares(a.post, "--post"))
+    _escribir_manifiesto(manifiesto.ruta_verificacion(a.run_group), m)
     emitir({"manifiesto": manifiesto.ruta_verificacion(a.run_group)})
     return 0
 
@@ -301,67 +466,73 @@ def _evidencia(run_id: str) -> Path:
     return EVIDENCIA / run_id
 
 
-def cmd_telefono_subir(a) -> int:
-    from labkit import telefono
-    local = ROOT / a.local
-    remoto = f"/sdcard/Pictures/SabiduriaLab/{local.name}"
-    emitir({"remoto": remoto, **telefono.subir(local, remoto)})
-    return 0
-
-
-def cmd_telefono_captura(a) -> int:
-    from labkit import telefono
-    emitir({"captura": str(telefono.captura(_evidencia(a.run) / f"{a.nombre}.png"))})
-    return 0
-
-
-def cmd_telefono_atras(a) -> int:
-    from labkit import instagram_feed
-    emitir({"captura": str(instagram_feed.atras(_evidencia(a.run), a.nombre))})
-    return 0
-
-
-def cmd_ig(a) -> int:
-    from labkit import instagram_feed as ig
-    from labkit import telefono
-    ev = _evidencia(a.run)
-
-    def leer_pie() -> str:
-        if not a.pie:
-            raise SystemExit("--pie es obligatorio en este paso")
-        return Path(a.pie).read_text(encoding="utf-8").rstrip("\n")
-
+def _paso_telefono(ev: Path, nombre: str, fn, codigo_de=lambda res: 0) -> int:
+    """Ejecuta un paso de teléfono. Ante una pantalla inesperada o un error de adb intenta
+    una captura `nombre`.png, emite JSON y sale con 4; nunca reintenta nada."""
+    from labkit import instagram_feed, telefono
     try:
-        if a.paso == "abrir":
-            if not a.subido_en:
-                raise SystemExit("--subido-en es obligatorio en abrir (lo devuelve telefono-subir)")
-            res = ig.abrir_nueva_publicacion(ev, a.subido_en)
-        elif a.paso == "recorte":
-            res = {"captura": ig.alternar_recorte(ev)}
-        elif a.paso == "editor":
-            res = {"captura": ig.siguiente(ev, "ig-02b-editor")}
-        elif a.paso == "audio":
-            res = ig.anadir_audio_sugerido(ev)
-        elif a.paso == "detalles":
-            res = {"captura": ig.detalles(ev)}
-        elif a.paso == "pie":
-            res = {"captura": ig.escribir_pie(leer_pie(), ev)}
-        else:  # compartir: sale con 5 si el envío no queda confirmado, para conciliar antes de nada
-            if not a.tema or a.publicaciones_antes is None:
-                raise SystemExit("compartir exige --tema y --publicaciones-antes")
-            res = ig.compartir(leer_pie(), a.tema, ev, a.publicaciones_antes)
-            confirmado = res["estado"] == "confirmado"
-            emitir({"ok": confirmado, **res})
-            return 0 if confirmado else 5
-    except (ig.PantallaInesperada, telefono.TelefonoError) as e:
+        res = fn()
+    except (instagram_feed.PantallaInesperada, telefono.TelefonoError) as e:
         try:
-            captura = telefono.captura(ev / f"ig-inesperada-{a.paso}.png")
+            captura = telefono.captura(ev / f"{nombre}.png")
         except telefono.TelefonoError:
             captura = None
         emitir({"ok": False, "tipo": type(e).__name__, "error": str(e), "captura": captura})
         return 4
-    emitir({"ok": True, **res})
-    return 0
+    codigo = codigo_de(res)
+    emitir({"ok": codigo == 0, **res})
+    return codigo
+
+
+def cmd_telefono_subir(a) -> int:
+    from labkit import telefono
+    local = _relativa_sin_salidas(a.local, "experiments/media-lab/", "--local")
+    _exigir(local.suffix.lower() in EXTENSIONES_SUBIDA, f"--local debe ser {', '.join(EXTENSIONES_SUBIDA)}: {a.local}")
+    _exigir(bool(_NOMBRE.fullmatch(local.name)), f"nombre de archivo no apto para MediaStore: {local.name}")
+    remoto = f"/sdcard/Pictures/SabiduriaLab/{local.name}"
+    return _paso_telefono(_evidencia("subidas"), f"subir-inesperada-{local.stem}",
+                          lambda: {"remoto": remoto, **telefono.subir(local, remoto)})
+
+
+def cmd_telefono_captura(a) -> int:
+    from labkit import telefono
+    ev = _evidencia(a.run)
+    return _paso_telefono(ev, f"{a.nombre}-inesperada",
+                          lambda: {"captura": str(telefono.captura(ev / f"{a.nombre}.png"))})
+
+
+def cmd_telefono_atras(a) -> int:
+    from labkit import instagram_feed
+    ev = _evidencia(a.run)
+    return _paso_telefono(ev, f"{a.nombre}-inesperada",
+                          lambda: {"captura": str(instagram_feed.atras(ev, a.nombre))})
+
+
+def cmd_ig(a) -> int:
+    from labkit import instagram_feed as ig
+    ev = _evidencia(a.run)
+    pie = subido = None
+    if a.paso in ("pie", "compartir"):
+        _exigir(bool(a.pie), "--pie es obligatorio en este paso")
+        pie = Path(a.pie).read_text(encoding="utf-8").rstrip("\n")
+    if a.paso == "abrir":
+        _exigir(bool(a.subido_en), "--subido-en es obligatorio en abrir (lo devuelve telefono-subir)")
+        subido = datetime.fromisoformat(a.subido_en)
+        _exigir(subido.tzinfo is not None, "--subido-en necesita zona horaria")
+    if a.paso == "compartir":
+        _exigir(bool(a.tema) and a.publicaciones_antes is not None, "compartir exige --tema y --publicaciones-antes")
+    pasos = {
+        "abrir": lambda: ig.abrir_nueva_publicacion(ev, subido),
+        "recorte": lambda: {"captura": ig.alternar_recorte(ev)},
+        "editor": lambda: {"captura": ig.siguiente(ev, "ig-02b-editor")},
+        "audio": lambda: ig.anadir_audio_sugerido(ev),
+        "detalles": lambda: {"captura": ig.detalles(ev)},
+        "pie": lambda: {"captura": ig.escribir_pie(pie, ev)},
+        # compartir sale con 5 si el envío no queda confirmado, para conciliar antes de nada
+        "compartir": lambda: ig.compartir(pie, a.tema, ev, a.publicaciones_antes),
+    }
+    codigo_de = (lambda res: 0 if res["estado"] == "confirmado" else 5) if a.paso == "compartir" else (lambda res: 0)
+    return _paso_telefono(ev, f"ig-inesperada-{a.paso}", pasos[a.paso], codigo_de)
 
 
 def construir() -> argparse.ArgumentParser:
@@ -370,10 +541,10 @@ def construir() -> argparse.ArgumentParser:
 
     sub.add_parser("preflight").set_defaults(func=cmd_preflight)
     p = sub.add_parser("lock-tomar")
-    p.add_argument("--dueno", default="claude")
+    p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
     p.set_defaults(func=cmd_lock_tomar)
     p = sub.add_parser("lock-soltar")
-    p.add_argument("--dueno", default="claude")
+    p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
     p.set_defaults(func=cmd_lock_soltar)
 
     p = sub.add_parser("encargo-nuevo")
@@ -420,7 +591,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_codex_fallo)
     p = sub.add_parser("generar")
     p.add_argument("--encargo", required=True)
-    p.add_argument("--timeout", type=int, default=600)
+    p.add_argument("--timeout", type=int, default=TIMEOUT_CODEX_S)
     p.set_defaults(func=cmd_generar)
 
     p = sub.add_parser("manifiesto-api")
@@ -435,7 +606,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_manifiesto_verificacion)
 
     p = sub.add_parser("telefono-subir")
-    p.add_argument("--local", required=True)
+    p.add_argument("--local", required=True, help="imagen bajo experiments/media-lab/ (.png, .jpg o .jpeg)")
     p.set_defaults(func=cmd_telefono_subir)
     for nombre, func in (("telefono-captura", cmd_telefono_captura), ("telefono-atras", cmd_telefono_atras)):
         p = sub.add_parser(nombre)
@@ -456,12 +627,17 @@ def construir() -> argparse.ArgumentParser:
 def main() -> int:
     a = construir().parse_args()
     try:
+        encargo_id = getattr(a, "encargo", None)
+        if encargo_id is not None:
+            _exigir(bool(encargos._ID.fullmatch(encargo_id)), f"--encargo no válido: {encargo_id!r}")
+        for campo in ("run", "nombre"):
+            valor = getattr(a, campo, None)
+            if valor is not None:
+                _exigir(bool(_NOMBRE.fullmatch(valor)),
+                        f"--{campo} solo admite letras, dígitos, punto, guion y guion bajo: {valor!r}")
         return a.func(a)
-    except encargos.EncargoError as e:
-        print(f"encargo: {e}", file=sys.stderr)
-        return 2
-    except manifiesto.ManifiestoError as e:
-        print(f"manifiesto: {e}", file=sys.stderr)
+    except (encargos.EncargoError, manifiesto.ManifiestoError, OSError, ValueError, KeyError) as e:
+        emitir({"ok": False, "tipo": type(e).__name__, "error": str(e)})
         return 2
 
 

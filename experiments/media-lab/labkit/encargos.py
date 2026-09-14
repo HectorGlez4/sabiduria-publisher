@@ -35,6 +35,10 @@ def _dt(s: str) -> datetime:
     return datetime.fromisoformat(s.replace("Z", "+00:00"))
 
 
+def _entero_positivo(valor: object) -> bool:
+    return isinstance(valor, int) and not isinstance(valor, bool) and valor > 0
+
+
 def nuevo(encargo_id: str, *, coverage_cell_ids: list[str], family_id: str, brief_path: str,
           do_not_use: list[str], formato: dict, prompt: str, restricciones: list[str],
           destino_assets: str, ahora: datetime, variantes: int = 1, max_intentos: int = 2) -> dict:
@@ -47,6 +51,11 @@ def nuevo(encargo_id: str, *, coverage_cell_ids: list[str], family_id: str, brie
     destino = destino_assets.rstrip("/")
     if destino != f"experiments/media-lab/assets/{family_id}":
         raise EncargoError(f"destino_assets debe ser experiments/media-lab/assets/{family_id}")
+    # validar (codex_rescate) mide la orientación contra ancho y alto: sin ellos no se comprueba nada.
+    if not isinstance(formato, dict) or not all(_entero_positivo(formato.get(k)) for k in ("ancho", "alto")):
+        raise EncargoError("formato debe ser un objeto con ancho y alto enteros positivos")
+    if not isinstance(prompt, str) or not prompt.strip():
+        raise EncargoError("el prompt no puede estar vacío")
     return {
         "encargo_id": encargo_id, "creado_en": _iso(ahora),
         "coverage_cell_ids": list(coverage_cell_ids), "family_id": family_id,
@@ -113,6 +122,24 @@ def marcar_fallo(enc: dict, owner: str, nota: str, ahora: datetime) -> dict:
     return enc
 
 
+def invalidar(enc: dict, nota: str, ahora: datetime, bloquear: bool = False) -> dict:
+    """Deshace un generado de `codex exec` que no pasó las comprobaciones de `lab.py generar`.
+
+    Las imágenes pasan a `imagenes_invalidas` del último intento, con la nota. Queda en
+    bloqueado si se pide (Codex tocó archivos ajenos) o si ya no quedan intentos."""
+    ultimo = enc["intentos"][-1] if enc.get("intentos") else {}
+    if enc["estado"] != "generado" or ultimo.get("origen") != "codex-exec":
+        raise EncargoError(f"{enc['encargo_id']}: solo se invalida lo generado por codex-exec, "
+                           f"no {enc['estado']} de {ultimo.get('origen')}")
+    ultimo["imagenes_invalidas"] = enc["imagenes"]
+    ultimo["nota"] = nota
+    ultimo["invalidado_en"] = _iso(ahora)
+    enc["imagenes"] = []
+    agotado = len(enc["intentos"]) >= enc["max_intentos"]
+    enc.update(estado="bloqueado" if bloquear or agotado else "pedido", lock_owner=None, lock_expira=None)
+    return enc
+
+
 def revisar(enc: dict, *, aprobado: bool, motivo: str, ahora: datetime,
             correccion: str | None = None) -> dict:
     if enc["estado"] != "generado":
@@ -164,19 +191,38 @@ def guardar(ruta: Path, enc: dict) -> None:
         raise
 
 
+def _leer(p: Path) -> dict:
+    try:
+        enc = cargar(p)
+    except (OSError, ValueError) as e:
+        raise EncargoError(f"{p.name} ilegible: {e}") from e
+    if not isinstance(enc, dict) or not {"creado_en", "encargo_id", "estado"} <= set(enc):
+        raise EncargoError(f"{p.name} incompleto: faltan creado_en, encargo_id o estado")
+    return enc
+
+
+def _ordenados(pares: list[tuple[Path, dict]]) -> list[tuple[Path, dict]]:
+    return sorted(pares, key=lambda par: (par[1]["creado_en"], par[1]["encargo_id"]))
+
+
 def listar(carpeta: Path) -> list[tuple[Path, dict]]:
     if not carpeta.exists():
         return []
-    pares = []
-    for p in carpeta.glob("ENC-*.json"):
+    return _ordenados([(p, _leer(p)) for p in carpeta.glob("ENC-*.json")])
+
+
+def listar_tolerante(carpeta: Path) -> tuple[list[tuple[Path, dict]], list[dict]]:
+    """Como `listar`, pero los archivos ilegibles o incompletos salen aparte como
+    {"archivo", "error"} en lugar de hacer fallar el listado entero."""
+    if not carpeta.exists():
+        return [], []
+    buenos, malos = [], []
+    for p in sorted(carpeta.glob("ENC-*.json")):
         try:
-            enc = cargar(p)
-        except (OSError, ValueError) as e:
-            raise EncargoError(f"{p.name} ilegible: {e}") from e
-        if not isinstance(enc, dict) or not {"creado_en", "encargo_id", "estado"} <= set(enc):
-            raise EncargoError(f"{p.name} incompleto: faltan creado_en, encargo_id o estado")
-        pares.append((p, enc))
-    return sorted(pares, key=lambda par: (par[1]["creado_en"], par[1]["encargo_id"]))
+            buenos.append((p, _leer(p)))
+        except EncargoError as e:
+            malos.append({"archivo": p.name, "error": str(e)})
+    return _ordenados(buenos), malos
 
 
 def siguiente_id(carpeta: Path, ahora: datetime) -> str:

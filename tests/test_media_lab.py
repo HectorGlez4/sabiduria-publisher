@@ -110,11 +110,19 @@ def seccion_encargos() -> None:
     check(E.en_cola([base(), e2, e]) == 1, "en_cola cuenta solo pedido y generando")
 
     comunes = dict(coverage_cell_ids=["C"], family_id="F", brief_path="b", do_not_use=[],
-                   formato={}, prompt="p", restricciones=[],
+                   formato={"ancho": 1080, "alto": 1350}, prompt="p", restricciones=[],
                    destino_assets="experiments/media-lab/assets/F", ahora=t0)
+    check(E.nuevo("ENC-20260915-009", **comunes)["estado"] == "pedido",
+          "los datos comunes de estas pruebas son válidos (cada rechazo se debe solo a su cambio)")
     for eid, cambio, label in (("X-1", {}, "id sin ENC-"),
                                ("ENC-20260915-009", {"variantes": 3}, "3 variantes"),
-                               ("ENC-20260915-009", {"destino_assets": "/tmp"}, "destino fuera de assets")):
+                               ("ENC-20260915-009", {"destino_assets": "/tmp"}, "destino fuera de assets"),
+                               ("ENC-20260915-009", {"formato": {}}, "formato sin ancho ni alto"),
+                               ("ENC-20260915-009", {"formato": [1080, 1350]}, "formato que no es un objeto"),
+                               ("ENC-20260915-009", {"formato": {"ancho": "1080", "alto": 1350}}, "ancho no entero"),
+                               ("ENC-20260915-009", {"formato": {"ancho": True, "alto": 1350}}, "ancho booleano"),
+                               ("ENC-20260915-009", {"formato": {"ancho": 1080, "alto": 0}}, "alto no positivo"),
+                               ("ENC-20260915-009", {"prompt": "  \n"}, "prompt vacío")):
         try:
             E.nuevo(eid, **{**comunes, **cambio})
             ok = False
@@ -156,6 +164,43 @@ def seccion_encargos() -> None:
     E.tomar(e4, "codex-exec", t0)
     E.marcar_fallo(e4, "codex-exec", "tiempo agotado", t0)
     check(e4["estado"] == "pedido" and e4["lock_owner"] is None, "un fallo con intentos restantes vuelve a pedido")
+
+    print("   · invalidar lo que dejó generado codex exec")
+    if not hasattr(E, "invalidar"):
+        check(False, "encargos.invalidar existe")
+    else:
+        e6 = base()
+        E.tomar(e6, "codex-exec", t0)
+        E.marcar_generado(e6, "codex-exec", img, t0)
+        E.invalidar(e6, "Codex cambió .env", t0)
+        check(e6["estado"] == "pedido" and e6["imagenes"] == [] and e6["lock_owner"] is None
+              and [i["ruta"] for i in e6["intentos"][-1].get("imagenes_invalidas", [])] == [img[0]["ruta"]]
+              and e6["intentos"][-1].get("nota") == "Codex cambió .env",
+              "invalidar con intentos restantes vuelve a pedido y guarda las imágenes y la nota en el intento")
+        e7 = base()
+        E.tomar(e7, "codex-exec", t0)
+        E.marcar_generado(e7, "codex-exec", img, t0)
+        E.invalidar(e7, "archivos ajenos", t0, bloquear=True)
+        check(e7["estado"] == "bloqueado" and e7["imagenes"] == [], "invalidar con bloquear deja el encargo bloqueado")
+        e8 = base()
+        E.tomar(e8, "codex-exec", t0)
+        E.marcar_fallo(e8, "codex-exec", "sin imagen", t0)
+        E.tomar(e8, "codex-exec", t0)
+        E.marcar_generado(e8, "codex-exec", img, t0)
+        E.invalidar(e8, "hash distinto", t0)
+        check(e8["estado"] == "bloqueado", "invalidar con los intentos agotados bloquea")
+        e9 = base()
+        E.tomar(e9, "codex-heartbeat", t0)
+        E.marcar_generado(e9, "codex-heartbeat", img, t0)
+        check(falla(lambda: E.invalidar(e9, "x", t0)) and e9["estado"] == "generado",
+              "invalidar no toca lo generado por el heartbeat")
+        check(falla(lambda: E.invalidar(base(), "x", t0)), "invalidar exige un encargo generado")
+        e10 = base()
+        E.tomar(e10, "codex-exec", t0)
+        E.marcar_generado(e10, "codex-exec", img, t0)
+        E.revisar(e10, aprobado=True, motivo="ok", ahora=t0)
+        check(falla(lambda: E.invalidar(e10, "x", t0)) and e10["estado"] == "aprobado",
+              "invalidar no toca un encargo ya aprobado")
 
     v2 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v2.png")
     v3 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v3.png")
@@ -959,7 +1004,7 @@ def seccion_interfaz() -> None:
 def _rechaza_familia(E, t) -> bool:
     try:
         E.nuevo("ENC-20260915-010", coverage_cell_ids=["C"], family_id="LAB X;rm", brief_path="b",
-                do_not_use=[], formato={}, prompt="p", restricciones=[],
+                do_not_use=[], formato={"ancho": 1080, "alto": 1350}, prompt="p", restricciones=[],
                 destino_assets="experiments/media-lab/assets/LAB X;rm", ahora=t)
         return False
     except E.EncargoError:
@@ -1075,7 +1120,12 @@ def seccion_cli() -> None:
 
     lab = ROOT / "experiments" / "media-lab" / "lab.py"
     with tempfile.TemporaryDirectory() as d:
-        env = {**os.environ, "LAB_ENCARGOS_DIR": d}
+        cobertura = pathlib.Path(d) / "coverage.json"
+        cobertura.write_text(json.dumps({"cells": [{"cell_id": "CELL-900", "platform": "instagram",
+                                                    "native_format": "feed_single_image",
+                                                    "publishing_route": "api", "status": "planned"}]}),
+                             encoding="utf-8")
+        env = {**os.environ, "LAB_ENCARGOS_DIR": d, "LAB_COVERAGE": str(cobertura)}
 
         def lab_cmd(*args):
             r = subprocess.run([sys.executable, str(lab), *args], cwd=ROOT, env=env,
@@ -1087,7 +1137,7 @@ def seccion_cli() -> None:
         codigo, out, err = lab_cmd("encargo-nuevo", "--cell", "CELL-900", "--family", "LAB-TEST-001",
                                    "--brief", "b.md", "--formato", '{"ancho":1080,"alto":1350}',
                                    "--prompt-file", str(prompt), "--restriccion", "sin texto")
-        check(codigo == 0, f"encargo-nuevo funciona {err[-200:]}")
+        check(codigo == 0, f"encargo-nuevo funciona {(err or out)[-200:]}")
         eid = json.loads(out)["encargo_id"]
         codigo, out, _ = lab_cmd("codex-tomar", "--owner", "codex-heartbeat", "--max", "2")
         tomados = json.loads(out)
@@ -1095,10 +1145,11 @@ def seccion_cli() -> None:
         imagen = ROOT / tomados[0]["rutas"][0]
         imagen.parent.mkdir(parents=True, exist_ok=True)
         try:
-            Image.new("RGB", (64, 80), (200, 180, 120)).save(imagen)
+            Image.new("RGB", (768, 1152), (200, 180, 120)).save(imagen)
             codigo, out, err = lab_cmd("codex-generado", "--encargo", eid, "--owner", "codex-heartbeat",
                                        "--imagen", tomados[0]["rutas"][0])
-            check(codigo == 0 and json.loads(out)[0]["ancho"] == 64, f"codex-generado mide la imagen {err[-200:]}")
+            check(codigo == 0 and json.loads(out)[0]["ancho"] == 768,
+                  f"codex-generado mide la imagen {(err or out)[-200:]}")
             codigo, _, _ = lab_cmd("encargo-revisar", "--encargo", eid, "--aprobado", "--motivo", "prueba")
             check(codigo == 0, "encargo-revisar aprueba")
             enc = json.loads((pathlib.Path(d) / f"{eid}.json").read_text(encoding="utf-8"))
@@ -1114,6 +1165,603 @@ def seccion_cli() -> None:
                 pass
 
 
+def seccion_guardia() -> None:
+    print("\n9. Guardia de archivos alrededor de codex exec")
+    import hashlib
+    import subprocess
+    import tempfile
+    try:
+        from labkit import guardia as G
+    except ImportError as e:
+        check(False, f"existe labkit.guardia ({e})")
+        return
+
+    antes = {"a.txt": "h1", "b.txt": "h2", ".env": "h3", "experiments/media-lab/encargos/ENC-1.json": "h4"}
+    check(G.cambios_ajenos(antes, dict(antes), set()) == [], "sin cambios no hay ajenos")
+    check(G.cambios_ajenos(antes, {**antes, "a.txt": "otro"}, set()) == ["a.txt"], "detecta un archivo cambiado")
+    check(G.cambios_ajenos(antes, {**antes, "c.txt": "h5"}, set()) == ["c.txt"], "detecta un archivo añadido")
+    check(G.cambios_ajenos(antes, {**antes, ".env": "-"}, set()) == [".env"], "detecta un archivo borrado")
+    revertido = {k: v for k, v in antes.items() if k != "b.txt"}
+    check(G.cambios_ajenos(antes, revertido, set()) == ["b.txt"],
+          "detecta un archivo devuelto a HEAD (sale de git status: unión de claves)")
+    check(G.cambios_ajenos(antes, {**antes, "experiments/media-lab/encargos/ENC-1.json": "h9", "a.txt": "x"},
+                           {"experiments/media-lab/encargos/ENC-1.json"}) == ["a.txt"],
+          "las rutas permitidas no cuentan")
+    check(G.cambios_ajenos({}, {"z": "1", "a": "2"}, set()) == ["a", "z"], "los ajenos salen ordenados")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        subprocess.run(["git", "init", "-q", str(raiz)], check=True, capture_output=True, timeout=60)
+
+        def escribir(rel: str, datos: bytes = b"x") -> None:
+            p = raiz / rel
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_bytes(datos)
+
+        (raiz / ".gitignore").write_text("assets/\n__pycache__/\n.env*\n.claude/\n", encoding="utf-8")
+        for rel in (".claude/settings.json", "experiments/media-lab/.env.local",
+                    "experiments/media-lab/labkit/__pycache__/m.cpython-314.pyc", "assets/sub/carta.jpg",
+                    "assets/.DS_Store", ".DS_Store", ".git/hooks/pre-commit"):
+            escribir(rel)
+        escribir("nuevo.txt", b"hola")
+        (raiz / "enlace.txt").symlink_to("nuevo.txt")
+        foto = G.estado_git(raiz)
+        x = hashlib.sha256(b"x").hexdigest()
+        check(foto.get(".claude/settings.json") == x and foto.get(".claude/settings.local.json") == "-",
+              "vigila los permisos de Claude aunque estén ignorados (el que falta vale «-»)")
+        check(foto.get("experiments/media-lab/.env.local") == x, "vigila experiments/media-lab/.env*")
+        check(foto.get("experiments/media-lab/labkit/__pycache__/m.cpython-314.pyc") == x, "vigila los .pyc del laboratorio")
+        check(foto.get("assets/sub/carta.jpg") == x, "vigila cualquier archivo de assets/, no solo png")
+        check(foto.get(".git/config", "-") != "-" and foto.get(".git/hooks/pre-commit") == x,
+              "vigila .git/config y los ganchos de git")
+        check(foto.get("nuevo.txt") == hashlib.sha256(b"hola").hexdigest() and foto.get("enlace.txt") == "enlace:nuevo.txt",
+              "incluye lo que da git status y anota los enlaces con su destino")
+        check(not any(pathlib.PurePosixPath(r).name == ".DS_Store" for r in foto), "ignora los .DS_Store")
+
+
+_LAB_CLI = None
+
+
+def modulo_lab():
+    """lab.py importado una sola vez como módulo, para llamar a main() en proceso."""
+    global _LAB_CLI
+    if _LAB_CLI is None:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("lab_cli", ROOT / "experiments" / "media-lab" / "lab.py")
+        modulo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(modulo)
+        _LAB_CLI = modulo
+    return _LAB_CLI
+
+
+class LabAislado:
+    """lab.py en proceso con ROOT, encargos, cerrojo, evidencia y cobertura en una carpeta temporal.
+
+    Llamarlo con los argumentos de la CLI devuelve (código, JSON emitido o None, stderr). Si algo
+    se escapa de lab.main() (una IntentoDeES o un error sin capturar) el código es None."""
+
+    _FALTA = object()
+
+    def __init__(self, raiz: pathlib.Path):
+        self.raiz = raiz
+        self.lab = modulo_lab()
+        self.viejos: dict = {}
+
+    def __enter__(self) -> "LabAislado":
+        nuevos = {"ROOT": self.raiz, "ENCARGOS": self.raiz / "encargos", "LOCK": self.raiz / ".ventana.lock",
+                  "EVIDENCIA": self.raiz / "evidence", "COBERTURA": self.raiz / "coverage.json"}
+        for nombre, valor in nuevos.items():
+            self.viejos[nombre] = getattr(self.lab, nombre, self._FALTA)
+            setattr(self.lab, nombre, valor)
+        return self
+
+    def __exit__(self, *exc) -> None:
+        for nombre, valor in self.viejos.items():
+            if valor is self._FALTA:
+                delattr(self.lab, nombre)
+            else:
+                setattr(self.lab, nombre, valor)
+
+    def __call__(self, *args):
+        import contextlib
+        import io
+        import json
+        out, err = io.StringIO(), io.StringIO()
+        argv = sys.argv
+        sys.argv = ["lab.py", *map(str, args)]
+        try:
+            with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+                try:
+                    codigo = self.lab.main()
+                except SystemExit as e:
+                    codigo = e.code if isinstance(e.code, int) else 1
+                except (Exception, IntentoDeES) as e:
+                    codigo = None
+                    err.write(f"escapó {e!r}")
+        finally:
+            sys.argv = argv
+        try:
+            datos = json.loads(out.getvalue())
+        except ValueError:
+            datos = None
+        return codigo, datos, err.getvalue()
+
+
+CELDAS_PRUEBA = [
+    {"cell_id": "C-IG-TEL", "platform": "instagram", "native_format": "feed_single_image",
+     "publishing_route": "android_native", "status": "planned"},
+    {"cell_id": "C-FB-API", "platform": "facebook", "native_format": "feed_single_image",
+     "publishing_route": "api", "status": "planned"},
+    {"cell_id": "C-TH-API", "platform": "threads", "native_format": "feed_single_image",
+     "publishing_route": "api", "status": "ready"},
+    {"cell_id": "C-STORY", "platform": "instagram", "native_format": "story_image",
+     "publishing_route": "api", "status": "planned"},
+    {"cell_id": "C-PUB", "platform": "threads", "native_format": "feed_single_image",
+     "publishing_route": "api", "status": "published"},
+    {"cell_id": "C-CARR", "platform": "instagram", "native_format": "feed_carousel",
+     "publishing_route": "api", "status": "planned"},
+]
+
+
+def campo(datos, clave):
+    return datos.get(clave) if isinstance(datos, dict) else None
+
+
+def seccion_cli_en_proceso() -> None:
+    print("\n10. CLI lab.py en proceso: validaciones antes de tocar nada")
+    import contextlib
+    import hashlib
+    import json
+    import tempfile
+    from datetime import datetime, timezone
+    from PIL import Image
+    from labkit import codex_rescate, encargos as E, instagram_feed, telefono
+
+    t = datetime.now(timezone.utc)
+    familia = "LAB-CLI-001"
+
+    @contextlib.contextmanager
+    def entorno():
+        with tempfile.TemporaryDirectory() as d:
+            raiz = pathlib.Path(d)
+            (raiz / "encargos").mkdir()
+            (raiz / "coverage.json").write_text(json.dumps({"cells": CELDAS_PRUEBA}), encoding="utf-8")
+            (raiz / "prompt.txt").write_text("Un astrolabio de latón", encoding="utf-8")
+            with LabAislado(raiz) as lab:
+                yield lab, raiz
+
+    def guardar_encargo(raiz, n, celdas):
+        eid = f"ENC-{t:%Y%m%d}-{n:03d}"
+        enc = E.nuevo(eid, coverage_cell_ids=celdas, family_id=familia, brief_path="b.md", do_not_use=[],
+                      formato={"ancho": 1080, "alto": 1350}, prompt="Un astrolabio", restricciones=["sin texto"],
+                      destino_assets=f"experiments/media-lab/assets/{familia}", ahora=t)
+        E.guardar(raiz / "encargos" / f"{eid}.json", enc)
+        return eid, enc
+
+    def png(raiz, rel, ancho, alto):
+        p = raiz / rel
+        p.parent.mkdir(parents=True, exist_ok=True)
+        Image.new("RGB", (ancho, alto), (120, 90, 60)).save(p, "PNG")
+        return {"ruta": rel, "sha256": hashlib.sha256(p.read_bytes()).hexdigest(), "ancho": ancho, "alto": alto}
+
+    def generado(raiz, n, celdas, ancho=768, alto=1152):
+        eid, enc = guardar_encargo(raiz, n, celdas)
+        imagen = png(raiz, f"experiments/media-lab/assets/{familia}/{eid}-v1.png", ancho, alto)
+        E.tomar(enc, "codex-heartbeat", t)
+        E.marcar_generado(enc, "codex-heartbeat", [imagen], t)
+        E.guardar(raiz / "encargos" / f"{eid}.json", enc)
+        return eid
+
+    def aprobar(raiz, n, celdas):
+        eid = generado(raiz, n, celdas)
+        ruta = raiz / "encargos" / f"{eid}.json"
+        E.guardar(ruta, E.revisar(E.cargar(ruta), aprobado=True, motivo="prueba", ahora=t))
+        return eid
+
+    def nuevo(lab, *celdas, formato='{"ancho":1080,"alto":1350}'):
+        args = ["encargo-nuevo", "--family", familia, "--brief", "b.md", "--formato", formato,
+                "--prompt-file", lab.raiz / "prompt.txt"]
+        for c in celdas:
+            args += ["--cell", c]
+        return lab(*args)
+
+    def error(datos) -> str:
+        return str(campo(datos, "error") or "")
+
+    llamadas: list[str] = []
+
+    def prohibido(nombre):
+        def f(*args, **kwargs):
+            llamadas.append(nombre)
+            raise IntentoDeES(nombre)
+        return f
+
+    parches = [(telefono, n) for n in ("adb", "shell", "volcado", "captura", "estado", "subir", "tocar",
+                                       "tecla", "lanzar")]
+    parches += [(instagram_feed, n) for n in ("abrir_nueva_publicacion", "alternar_recorte", "siguiente",
+                                              "anadir_audio_sugerido", "detalles", "escribir_pie", "atras",
+                                              "compartir")]
+    originales = [(obj, n, getattr(obj, n)) for obj, n in parches]
+    try:
+        for obj, n in parches:
+            setattr(obj, n, prohibido(n))
+
+        print("   · encargo-nuevo y cola")
+        with entorno() as (lab, raiz):
+            for n in range(1, 7):
+                guardar_encargo(raiz, n, [f"X{n}"])
+            codigo, datos, _ = nuevo(lab, "C-FB-API")
+            check(codigo == 2 and "cola" in error(datos), f"con 6 en cola el 7.º encargo sale con 2 ({codigo}, {datos})")
+            check(len(list((raiz / "encargos").glob("ENC-*.json"))) == 6, "el encargo rechazado por la cola no se guarda")
+
+        with entorno() as (lab, raiz):
+            for celdas, label in ((["C-NADA"], "celda que no existe"), (["C-PUB"], "celda ya publicada"),
+                                  (["C-CARR"], "ruta sin implementar"),
+                                  (["C-FB-API", "C-STORY"], "feed y story mezclados"),
+                                  (["C-FB-API", "C-FB-API"], "celda repetida")):
+                codigo, datos, _ = nuevo(lab, *celdas)
+                check(codigo == 2 and campo(datos, "ok") is False, f"encargo-nuevo rechaza: {label} ({codigo}, {error(datos)})")
+            codigo, datos, _ = nuevo(lab, "C-TH-API", formato="{}")
+            check(codigo == 2 and campo(datos, "tipo") == "EncargoError",
+                  f"encargo-nuevo rechaza un formato sin ancho ni alto ({codigo}, {datos})")
+            check(not list((raiz / "encargos").glob("ENC-*.json")), "ningún rechazo deja un encargo")
+            codigo, datos, _ = nuevo(lab, "C-TH-API", "C-FB-API")
+            eid = str(campo(datos, "encargo_id"))
+            check(codigo == 0 and campo(datos, "coverage_cell_ids") == ["C-TH-API", "C-FB-API"],
+                  f"dos celdas de feed implementadas y libres: encargo creado ({codigo}, {datos})")
+            codigo, datos, _ = nuevo(lab, "C-FB-API")
+            check(codigo == 2 and eid in error(datos),
+                  f"una celda con un encargo en curso no admite otro ({codigo}, {error(datos)})")
+
+            print("   · codex-fallo, encargo-usado y encargos")
+            for _ in range(2):
+                lab("codex-tomar", "--owner", "codex-heartbeat", "--max", "1")
+                codigo, datos, _ = lab("codex-fallo", "--encargo", eid, "--owner", "codex-heartbeat", "--nota", "sin imagen")
+            check(codigo == 0 and campo(datos, "estado") == "bloqueado", f"dos codex-fallo dejan el encargo bloqueado ({datos})")
+            ruta = raiz / "encargos" / f"{eid}.json"
+            antes = ruta.read_bytes() if ruta.exists() else b""
+            codigo, datos, _ = lab("encargo-usado", "--encargo", eid, "--run", "LAB-RUN-1")
+            check(codigo == 2 and campo(datos, "ok") is False and ruta.exists() and ruta.read_bytes() == antes,
+                  f"encargo-usado rechaza un encargo que no está aprobado ({codigo})")
+            codigo, datos, _ = lab("encargo-usado", "--encargo", "../ENC-x", "--run", "LAB-RUN-1")
+            check(codigo == 2 and campo(datos, "ok") is False, f"un --encargo con forma rara sale con 2 ({codigo})")
+            (raiz / "encargos" / "ENC-20990101-001.json").write_text("{", encoding="utf-8")
+            codigo, datos, _ = lab("encargos")
+            filas = datos if isinstance(datos, list) else []
+            check(codigo == 0 and any(f.get("archivo") == "ENC-20990101-001.json" and f.get("error") for f in filas)
+                  and any(f.get("encargo_id") == eid for f in filas),
+                  f"encargos lista aparte los archivos ilegibles sin fallar ({codigo})")
+
+        print("   · cerrojo")
+        with entorno() as (lab, raiz):
+            codigos = [lab(*args)[0] for args in (("lock-tomar", "--dueno", "programada"),
+                                                  ("lock-soltar", "--dueno", "manual"),
+                                                  ("lock-tomar", "--dueno", "manual"),
+                                                  ("lock-soltar", "--dueno", "programada"),
+                                                  ("lock-soltar", "--dueno", "programada"),
+                                                  ("lock-tomar", "--dueno", "claude"))]
+            check(codigos == [0, 3, 3, 0, 3, 2],
+                  f"manual no suelta ni pisa el de programada; soltar sin cerrojo da 3; dueño desconocido 2 ({codigos})")
+
+        print("   · seleccionar")
+        with entorno() as (lab, raiz):
+            for n, celda in enumerate(("C-IG-TEL", "C-FB-API", "C-TH-API"), start=1):
+                aprobar(raiz, n, [celda])
+            ids = lambda d: [c["cell_id"] for c in d] if isinstance(d, list) else d  # noqa: E731
+            _, datos, _ = lab("seleccionar", "--max", "2")
+            check(ids(datos) == ["C-IG-TEL", "C-TH-API"], f"seleccionar con la cobertura temporal ({ids(datos)})")
+            _, datos, _ = lab("seleccionar", "--max", "2", "--sin-telefono")
+            check(ids(datos) == ["C-FB-API", "C-TH-API"], f"seleccionar --sin-telefono descarta el teléfono ({ids(datos)})")
+
+        print("   · manifiestos")
+        with entorno() as (lab, raiz):
+            asset = f"experiments/media-lab/assets/{familia}/master.jpg"
+            (raiz / asset).parent.mkdir(parents=True, exist_ok=True)
+            (raiz / asset).write_bytes(b"jpg")
+            (raiz / "fuera.jpg").write_bytes(b"fuera")
+            enlace = f"experiments/media-lab/assets/{familia}/enlace.jpg"
+            (raiz / enlace).symlink_to(raiz / "fuera.jpg")
+            pie = raiz / "pie.txt"
+            pie.write_text("Pie de prueba\n", encoding="utf-8")
+            api = ("manifiesto-api", "--run-group", "LAB-CLI-001-API", "--caption", f"facebook={pie}")
+            manifiestos = raiz / "experiments" / "media-lab" / "manifests"
+            for ruta_asset, label in ((str(raiz / asset), "ruta absoluta"),
+                                      (f"experiments/media-lab/assets/{familia}/no.jpg", "archivo que no existe"),
+                                      (f"experiments/media-lab/assets/{familia}/../../../../fuera.jpg", "ruta con .."),
+                                      (enlace, "enlace simbólico")):
+                codigo, datos, _ = lab(*api, "--asset", ruta_asset)
+                check(codigo == 2 and campo(datos, "ok") is False, f"manifiesto-api rechaza: {label} ({codigo})")
+            check(not list(manifiestos.glob("*.json")), "ningún rechazo escribe un manifiesto")
+            codigo, datos, _ = lab(*api, "--asset", asset)
+            escrito = manifiestos / "LAB-CLI-001-API.json"
+            m = json.loads(escrito.read_text(encoding="utf-8")) if escrito.exists() else {}
+            check(codigo == 0 and m.get("asset_sha256") == hashlib.sha256(b"jpg").hexdigest()
+                  and m.get("captions") == {"facebook": "Pie de prueba"}, f"manifiesto-api escribe el manifiesto ({codigo})")
+            codigo, datos, _ = lab(*api, "--asset", asset)
+            check(codigo == 2 and escrito.exists() and json.loads(escrito.read_text(encoding="utf-8")) == m,
+                  f"manifiesto-api no pisa un manifiesto existente ({codigo})")
+            codigo, datos, _ = lab("manifiesto-api", "--run-group", "LAB-CLI-002-API", "--caption", "facebook",
+                                   "--asset", asset)
+            check(codigo == 2 and campo(datos, "tipo") == "ManifiestoError", f"un --caption sin = da ManifiestoError ({datos})")
+            codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-001-API", "--post", "facebook")
+            check(codigo == 2 and campo(datos, "tipo") == "ManifiestoError", f"un --post sin = da ManifiestoError ({datos})")
+            verificar = ("manifiesto-verificacion", "--run-group", "LAB-CLI-001-API", "--post", "facebook=123_456")
+            codigo_1, codigo_2 = lab(*verificar)[0], lab(*verificar)[0]
+            check((codigo_1, codigo_2) == (0, 2), f"manifiesto-verificacion escribe una vez y no pisa ({codigo_1}, {codigo_2})")
+
+        print("   · teléfono: argumentos antes de cualquier adb")
+        with entorno() as (lab, raiz):
+            pie = raiz / "pie.txt"
+            pie.write_text("Pie\n", encoding="utf-8")
+            png(raiz, "fuera.png", 10, 10)
+            enlace = f"experiments/media-lab/assets/{familia}/enlace.png"
+            (raiz / enlace).parent.mkdir(parents=True, exist_ok=True)
+            (raiz / enlace).symlink_to(raiz / "fuera.png")
+            casos = (
+                (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--publicaciones-antes", "3"), "compartir sin --tema"),
+                (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T"), "compartir sin --publicaciones-antes"),
+                (("ig", "compartir", "--run", "RUN-1", "--tema", "T", "--publicaciones-antes", "3"), "compartir sin --pie"),
+                (("ig", "pie", "--run", "RUN-1"), "pie sin --pie"),
+                (("ig", "abrir", "--run", "RUN-1"), "abrir sin --subido-en"),
+                (("ig", "abrir", "--run", "RUN-1", "--subido-en", "ayer"), "abrir con --subido-en ilegible"),
+                (("ig", "abrir", "--run", "RUN-1", "--subido-en", "2026-09-14T10:00:00"), "abrir con --subido-en sin zona"),
+                (("ig", "recorte", "--run", "../x"), "--run con .."),
+                (("telefono-captura", "--run", "RUN-1", "--nombre", "../x"), "--nombre con .."),
+                (("telefono-atras", "--run", "/tmp/x", "--nombre", "a"), "--run absoluto"),
+                (("telefono-subir", "--local", "/etc/hosts"), "subir un archivo de fuera"),
+                (("telefono-subir", "--local", "experiments/media-lab/assets/../../../x.png"), "subir con .."),
+                (("telefono-subir", "--local", "experiments/media-lab/lab.py"), "subir algo que no es imagen"),
+                (("telefono-subir", "--local", enlace), "subir un enlace simbólico"),
+            )
+            for args, label in casos:
+                llamadas.clear()
+                codigo, datos, _ = lab(*args)
+                check(codigo == 2 and campo(datos, "ok") is False and not llamadas,
+                      f"{label}: sale con 2 sin tocar el teléfono ({codigo}, {llamadas})")
+
+            def pantalla(*args, **kwargs):
+                raise instagram_feed.PantallaInesperada("no aparece «Modifier le rognage»")
+
+            def sin_adb(*args, **kwargs):
+                raise telefono.TelefonoError("device offline")
+
+            instagram_feed.alternar_recorte = pantalla
+            telefono.captura = lambda destino: destino
+            codigo, datos, _ = lab("ig", "recorte", "--run", "RUN-1")
+            check(codigo == 4 and campo(datos, "tipo") == "PantallaInesperada"
+                  and str(campo(datos, "captura")).endswith("RUN-1/ig-inesperada-recorte.png"),
+                  f"una pantalla inesperada sale con 4, su captura y JSON ({codigo}, {datos})")
+            telefono.subir = sin_adb
+            png(raiz, f"experiments/media-lab/assets/{familia}/master.png", 10, 10)
+            codigo, datos, _ = lab("telefono-subir", "--local", f"experiments/media-lab/assets/{familia}/master.png")
+            check(codigo == 4 and campo(datos, "tipo") == "TelefonoError", f"telefono-subir sin adb sale con 4 ({codigo}, {datos})")
+            telefono.captura = sin_adb
+            codigo, datos, _ = lab("telefono-captura", "--run", "RUN-1", "--nombre", "perfil")
+            check(codigo == 4 and campo(datos, "captura") is None, f"telefono-captura sin adb sale con 4 ({codigo}, {datos})")
+            instagram_feed.alternar_recorte = lambda ev: ev / "ig-02-recorte.png"
+            codigo, datos, _ = lab("ig", "recorte", "--run", "RUN-1")
+            check(codigo == 0 and campo(datos, "ok") is True and str(campo(datos, "captura")).endswith("RUN-1/ig-02-recorte.png"),
+                  f"un paso correcto sale con 0 y su captura ({codigo}, {datos})")
+
+        print("   · codex-generado y encargo-revisar")
+        with entorno() as (lab, raiz):
+            eid, _ = guardar_encargo(raiz, 1, ["C-FB-API"])
+            lab("codex-tomar", "--owner", "codex-heartbeat")
+            ruta = raiz / "encargos" / f"{eid}.json"
+            pedida = f"experiments/media-lab/assets/{familia}/{eid}-v1.png"
+            destino = raiz / pedida
+            png(raiz, "fuera/valida.png", 768, 1152)
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            destino.symlink_to(raiz / "fuera" / "valida.png")
+            png(raiz, f"experiments/media-lab/assets/{familia}/{eid}-v2.png", 768, 1152)
+            png(raiz, f"experiments/media-lab/assets/{familia}/otra.png", 768, 1152)
+
+            def generado_cli(*imagenes, owner="codex-heartbeat"):
+                args = ["codex-generado", "--encargo", eid, "--owner", owner]
+                for im in imagenes:
+                    args += ["--imagen", im]
+                antes = ruta.read_bytes()
+                codigo, datos, _ = lab(*args)
+                return codigo, datos, ruta.read_bytes() == antes
+
+            codigo, datos, igual = generado_cli(pedida)
+            check(codigo == 2 and igual, f"codex-generado rechaza un enlace simbólico a un PNG válido sin guardar ({codigo})")
+            destino.unlink()
+            destino.write_text("no soy una imagen", encoding="utf-8")
+            codigo, datos, igual = generado_cli(pedida)
+            check(codigo == 2 and igual and campo(datos, "ok") is False,
+                  f"codex-generado rechaza un archivo de texto sin guardar ({codigo})")
+            destino.unlink()
+            png(raiz, pedida, 768, 1152)
+            for otra, label in ((f"experiments/media-lab/assets/{familia}/{eid}-v2.png", "una variante hermana no pedida"),
+                                (f"experiments/media-lab/assets/{familia}/otra.png", "otra imagen de la misma carpeta")):
+                codigo, datos, igual = generado_cli(otra)
+                check(codigo == 2 and igual, f"codex-generado rechaza {label} ({codigo})")
+            codigo, datos, igual = generado_cli(pedida, owner="codex-exec")
+            check(codigo == 2 and igual, f"codex-generado rechaza a quien no tiene el bloqueo ({codigo})")
+            destino.unlink()
+            png(raiz, pedida, 64, 80)
+            codigo, datos, igual = generado_cli(pedida)
+            check(codigo == 2 and igual and "pequeña" in error(datos),
+                  f"codex-generado valida la copia y rechaza una imagen diminuta ({codigo}, {error(datos)})")
+            destino.unlink()
+            png(raiz, pedida, 768, 1152)
+            codigo, datos, igual = generado_cli(pedida)
+            check(codigo == 0 and not igual and E.cargar(ruta)["estado"] == "generado",
+                  f"codex-generado guarda una imagen pedida e íntegra ({codigo}, {datos})")
+
+            diminuta = generado(raiz, 2, ["C-TH-API"], ancho=64, alto=80)
+            codigo, datos, _ = lab("encargo-revisar", "--encargo", diminuta, "--aprobado", "--motivo", "prueba")
+            check(codigo == 2 and E.cargar(raiz / "encargos" / f"{diminuta}.json")["estado"] == "generado",
+                  f"encargo-revisar --aprobado no aprueba una imagen que no valida ({codigo})")
+            codigo, datos, _ = lab("encargo-revisar", "--encargo", eid, "--aprobado", "--motivo", "prueba")
+            check(codigo == 0 and E.cargar(ruta)["estado"] == "aprobado", f"encargo-revisar aprueba una imagen íntegra ({codigo})")
+
+            codex_original = codex_rescate.CODEX
+            codex_rescate.CODEX = str(raiz / "codex-que-no-existe")
+            try:
+                codigo, datos, _ = lab("generar", "--encargo", eid)
+            finally:
+                codex_rescate.CODEX = codex_original
+            check(codigo == 2 and campo(datos, "tipo") == "EncargoError",
+                  f"generar sobre un encargo aprobado sale con 2 antes de buscar Codex ({codigo}, {datos})")
+    finally:
+        for obj, n, f in originales:
+            setattr(obj, n, f)
+
+
+CODEX_FALSO = r'''#!__PYTHON__
+"""Codex falso para las pruebas de lab.py generar: nunca habla con nadie."""
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+args = sys.argv[1:]
+if args == ["--version"]:
+    print("codex-falso 0.0")
+    sys.exit(0)
+modo = os.environ["CODEX_FALSO_MODO"]
+marcas = Path(os.environ["CODEX_FALSO_MARCAS"])
+prompt = args[-1]
+salida = Path(args[args.index("-o") + 1])
+eid = re.search(r"--encargo (ENC-\d{8}-\d{3,})", prompt).group(1)
+rutas = re.findall(r"--imagen (\S+)", prompt)
+if modo == "colgado":
+    nieto = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(120)"])
+    (marcas / "nieto.pid").write_text(str(nieto.pid))
+    (marcas / "arrancado").write_text("1")
+    time.sleep(120)
+    sys.exit(0)
+from PIL import Image
+for ruta in rutas:
+    p = Path(ruta)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    Image.new("RGB", (768, 1152), (120, 90, 60)).save(p, "PNG")
+imagenes = [x for ruta in rutas for x in ("--imagen", ruta)]
+r = subprocess.run([sys.executable, "experiments/media-lab/lab.py", "codex-generado", "--encargo", eid,
+                    "--owner", "codex-exec", *imagenes])
+if modo == "ajeno":
+    Path(os.environ["CODEX_FALSO_AJENO"]).write_text("Codex no debería escribir aquí", encoding="utf-8")
+salida.write_text(json.dumps({"estado": "generado", "encargo_id": eid}), encoding="utf-8")
+sys.exit(r.returncode)
+'''
+
+
+def seccion_generar() -> None:
+    print("\n11. generar de extremo a extremo con un Codex falso")
+    import json
+    import os
+    import shutil
+    import signal
+    import subprocess
+    import tempfile
+    import time
+    import uuid
+    from datetime import datetime, timezone
+    from labkit import encargos as E
+
+    lab = ROOT / "experiments" / "media-lab" / "lab.py"
+    familia = f"LAB-TEST-GEN-{uuid.uuid4().hex[:8].upper()}"
+    carpeta_assets = ROOT / "experiments" / "media-lab" / "assets" / familia
+    ajeno = ROOT / "experiments" / "media-lab" / "results" / f"codex-falso-{uuid.uuid4().hex}.txt"
+    t = datetime.now(timezone.utc)
+    with tempfile.TemporaryDirectory() as d:
+        base = pathlib.Path(d)
+        encs = base / "encargos"
+        marcas = base / "marcas"
+        encs.mkdir()
+        marcas.mkdir()
+        falso = base / "codex-falso"
+        falso.write_text(CODEX_FALSO.replace("__PYTHON__", sys.executable), encoding="utf-8")
+        falso.chmod(0o755)
+
+        def encargo(n: int) -> str:
+            eid = f"ENC-{t:%Y%m%d}-{n:03d}"
+            E.guardar(encs / f"{eid}.json", E.nuevo(
+                eid, coverage_cell_ids=["C1"], family_id=familia, brief_path="b.md", do_not_use=[],
+                formato={"ancho": 1080, "alto": 1350}, prompt="Un astrolabio", restricciones=["sin texto"],
+                destino_assets=f"experiments/media-lab/assets/{familia}", ahora=t))
+            return eid
+
+        def generar(eid: str, modo: str, *extra: str, senal: bool = False):
+            env = {**os.environ, "MEDIA_LAB_CODEX": str(falso), "LAB_ENCARGOS_DIR": str(encs),
+                   "CODEX_FALSO_MODO": modo, "CODEX_FALSO_MARCAS": str(marcas), "CODEX_FALSO_AJENO": str(ajeno)}
+            proc = subprocess.Popen([sys.executable, str(lab), "generar", "--encargo", eid, *extra], cwd=ROOT,
+                                    env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            if senal:
+                limite = time.monotonic() + 20
+                while not (marcas / "arrancado").exists() and time.monotonic() < limite:
+                    time.sleep(0.1)
+                proc.send_signal(signal.SIGTERM)
+            try:
+                out, err = proc.communicate(timeout=90)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+                out, err = proc.communicate()
+            try:
+                datos = json.loads(out)
+            except ValueError:
+                datos = None
+            return proc.returncode, datos, (err or out)[-400:]
+
+        def muerto(archivo_pid: pathlib.Path) -> bool:
+            if not archivo_pid.exists():
+                return False
+            pid = int(archivo_pid.read_text())
+            limite = time.monotonic() + 5
+            while time.monotonic() < limite:
+                try:
+                    os.kill(pid, 0)
+                except ProcessLookupError:
+                    return True
+                time.sleep(0.1)
+            return False
+
+        try:
+            eid = encargo(1)
+            codigo, datos, cola = generar(eid, "bien")
+            enc = E.cargar(encs / f"{eid}.json")
+            check(codigo == 0 and campo(datos, "ok") is True and enc["estado"] == "generado"
+                  and enc["imagenes"][0]["ancho"] == 768
+                  and campo(datos, "respuesta") == {"estado": "generado", "encargo_id": eid},
+                  f"(a) Codex genera y registra: exit 0, generado y respuesta leída ({codigo}, {datos or cola})")
+            check(not (pathlib.Path(tempfile.gettempdir()) / f"codex-exec-{eid}.json").exists(),
+                  "(a) el archivo -o de Codex se borra al terminar")
+
+            eid = encargo(2)
+            codigo, datos, cola = generar(eid, "ajeno")
+            enc = E.cargar(encs / f"{eid}.json")
+            check(codigo == 6 and enc["estado"] == "bloqueado" and enc["imagenes"] == []
+                  and str(ajeno.relative_to(ROOT)) in (campo(datos, "ajenos") or []),
+                  f"(b) Codex escribe fuera de lo permitido: exit 6 y el encargo no queda generado ({codigo}, {datos or cola})")
+
+            eid = encargo(3)
+            inicio = time.monotonic()
+            codigo, datos, cola = generar(eid, "colgado", "--timeout", "2")
+            duracion = time.monotonic() - inicio
+            enc = E.cargar(encs / f"{eid}.json")
+            check(codigo == 1 and enc["estado"] == "pedido" and enc["lock_owner"] is None and duracion < 45,
+                  f"(c) Codex colgado: exit 1 tras --timeout y el encargo vuelve a pedido ({codigo}, {duracion:.1f} s, {datos or cola})")
+            check(muerto(marcas / "nieto.pid"), "(c) el grupo de procesos de Codex muere entero, nietos incluidos")
+
+            for marca in marcas.iterdir():
+                marca.unlink()
+            eid = encargo(4)
+            codigo, datos, cola = generar(eid, "colgado", "--timeout", "60", senal=True)
+            enc = E.cargar(encs / f"{eid}.json")
+            check(codigo == 1 and datos == {"ok": False, "errores": [f"interrumpido por señal {int(signal.SIGTERM)}"]}
+                  and enc["estado"] == "pedido",
+                  f"(d) SIGTERM a generar: mata a Codex, deja el encargo en pedido y sale con 1 ({codigo}, {datos or cola})")
+            check(muerto(marcas / "nieto.pid"), "(d) tras la señal no queda ningún proceso de Codex")
+        finally:
+            shutil.rmtree(carpeta_assets, ignore_errors=True)
+            ajeno.unlink(missing_ok=True)
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -1123,6 +1771,9 @@ SECCIONES = [
     seccion_interfaz,
     seccion_codex,
     seccion_cli,
+    seccion_guardia,
+    seccion_cli_en_proceso,
+    seccion_generar,
 ]
 
 
