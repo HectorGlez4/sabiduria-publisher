@@ -40,26 +40,32 @@ def nodos(xml: str) -> list[dict]:
     """Nodos visibles en orden de documento. Descarta los de ancho o alto cero.
 
     `clickable` es False si falta el atributo; `enabled` es True si falta (uiautomator
-    siempre los escribe, la omisión solo se da en XML sintético)."""
+    siempre los escribe, la omisión solo se da en XML sintético). `profundidad` es el
+    nivel real en el árbol (0 = primer <node>), contando también los nodos descartados:
+    el antecesor visible más cercano de un nodo es el anterior con menor profundidad."""
     try:
         raiz = ET.fromstring(xml.lstrip().encode("utf-8"))
     except ET.ParseError as e:
         raise TelefonoError(f"volcado ilegible: {e}") from e
     fuera = []
-    for el in raiz.iter("node"):
-        m = _BOUNDS.fullmatch(el.get("bounds", ""))
-        if not m:
-            continue
-        x1, y1, x2, y2 = map(int, m.groups())
-        if x2 <= x1 or y2 <= y1:
-            continue
-        fuera.append({"texto": el.get("text", ""), "desc": el.get("content-desc", ""),
-                      "clase": el.get("class", ""), "package": el.get("package", ""),
-                      "resource_id": el.get("resource-id", ""),
-                      "clickable": el.get("clickable", "false") == "true",
-                      "enabled": el.get("enabled", "true") == "true",
-                      "bounds": (x1, y1, x2, y2),
-                      "centro": ((x1 + x2) // 2, (y1 + y2) // 2)})
+    pila = [(raiz, -1)]
+    while pila:
+        el, nivel = pila.pop()
+        if el.tag == "node":
+            nivel += 1
+            m = _BOUNDS.fullmatch(el.get("bounds", ""))
+            if m:
+                x1, y1, x2, y2 = map(int, m.groups())
+                if x2 > x1 and y2 > y1:
+                    fuera.append({"texto": el.get("text", ""), "desc": el.get("content-desc", ""),
+                                  "clase": el.get("class", ""), "package": el.get("package", ""),
+                                  "resource_id": el.get("resource-id", ""),
+                                  "clickable": el.get("clickable", "false") == "true",
+                                  "enabled": el.get("enabled", "true") == "true",
+                                  "profundidad": nivel,
+                                  "bounds": (x1, y1, x2, y2),
+                                  "centro": ((x1 + x2) // 2, (y1 + y2) // 2)})
+        pila.extend((hijo, nivel) for hijo in reversed(list(el)))
     return fuera
 
 
@@ -183,6 +189,17 @@ def fila_mediastore_presente(salida: str, nombre: str) -> bool:
     return False
 
 
+def plazos_volcado(timeout: int) -> tuple[int, int]:
+    """Reparto del plazo de un volcado: dos tercios para uiautomator y el resto para
+    leer el archivo, cada uno de 5 s como mínimo."""
+    volcar = max(5, timeout * 2 // 3)
+    return volcar, max(5, timeout - volcar)
+
+
+def es_png(datos: bytes) -> bool:
+    return datos.startswith(b"\x89PNG\r\n\x1a\n")
+
+
 def sha256_de_salida(salida: str) -> str:
     partes = salida.split()
     if not partes or not _SHA256.fullmatch(partes[0]):
@@ -208,18 +225,24 @@ def shell(cmd: str, timeout: int = 60) -> str:
     return adb("shell", cmd, timeout=timeout).stdout.decode(errors="replace")
 
 
-def volcado() -> str:
-    """Volcado recién hecho; TelefonoError si no es de ahora o no se puede leer."""
-    salida = shell(f"rm -f {REMOTO_UI}; uiautomator dump --compressed {REMOTO_UI}", timeout=30)
-    xml = adb("exec-out", "cat", REMOTO_UI).stdout.decode("utf-8", errors="replace")
+def volcado(timeout: int = 30) -> str:
+    """Volcado recién hecho; TelefonoError si no es de ahora o no se puede leer.
+
+    `timeout` se reparte entre el volcado y la lectura (ver `plazos_volcado`)."""
+    volcar, leer = plazos_volcado(timeout)
+    salida = shell(f"rm -f {REMOTO_UI}; uiautomator dump --compressed {REMOTO_UI}", timeout=volcar)
+    xml = adb("exec-out", "cat", REMOTO_UI, timeout=leer).stdout.decode("utf-8", errors="replace")
     if not volcado_valido(salida, xml):
         raise TelefonoError(f"volcado no válido: {salida.strip()[:200]!r}")
     return xml
 
 
 def captura(destino: Path) -> Path:
+    datos = adb("exec-out", "screencap", "-p").stdout
+    if not es_png(datos):
+        raise TelefonoError(f"screencap no devolvió un PNG ({len(datos)} bytes)")
     destino.parent.mkdir(parents=True, exist_ok=True)
-    destino.write_bytes(adb("exec-out", "screencap", "-p").stdout)
+    destino.write_bytes(datos)
     return destino
 
 
@@ -254,9 +277,17 @@ def estado() -> dict:
     return {"adb": True, **leido}
 
 
+def teclado_estado() -> bool | None:
+    """True/False si se sabe si el teclado está abierto; None si no se puede leer."""
+    try:
+        return teclado_desde_dumpsys(shell("dumpsys input_method", timeout=30))
+    except TelefonoError:
+        return None
+
+
 def teclado_visible() -> bool:
     """Si no se puede saber, se da por visible."""
-    visible = teclado_desde_dumpsys(shell("dumpsys input_method", timeout=30))
+    visible = teclado_estado()
     return True if visible is None else visible
 
 

@@ -418,14 +418,131 @@ LISTA_HASHTAGS = nodo_xml("[0,1000][1080,1400]", clase="android.widget.ListView"
 
 
 def xml_compositor(*, titulo: bool = True, pie: str = PIE_PRUEBA, tema: bool = True,
-                   partager: bool = True, despues: str = "") -> str:
+                   partager: bool = True, despues: str = "", boton: str = BOTON_PARTAGER) -> str:
     return jerarquia(
         nodo_xml("[158,92][922,249]", texto="Nouvelle publication") if titulo else "",
         nodo_xml("[45,300][1035,700]", texto=pie, clase="android.widget.AutoCompleteTextView"),
         nodo_xml("[200,900][600,960]", texto="Autumn Days") if tema else "",
         nodo_xml("[200,960][600,1020]", texto="Morunas") if tema else "",
-        BOTON_PARTAGER if partager else "",
+        boton if partager else "",
         despues)
+
+
+def xml_inicio(*, banner: bool = False, aviso: str = "") -> str:
+    """Inicio de Instagram: una publicación con su propio botón «Partager» y la barra de abajo."""
+    return jerarquia(
+        nodo_xml("[0,250][1080,330]", texto="Publication sur sabiduriabolsillo…") if banner else "",
+        nodo_xml("[0,340][1080,420]", texto=aviso) if aviso else "",
+        nodo_xml("[900,1500][1000,1600]", desc="Partager", clase="android.widget.ImageView",
+                 extra='clickable="true"'),
+        nodo_xml("[864,2200][1080,2340]", desc="Profil", clase="android.widget.FrameLayout",
+                 extra='clickable="true"'))
+
+
+class IntentoDeES(BaseException):
+    """Una prueba intentó hablar con el teléfono de verdad. BaseException para que
+    ningún `except Exception` del código la esconda."""
+
+
+class TelefonoSimulado:
+    """Teléfono de mentira: volcados guionizados (el último se repite), toques, teclas y
+    capturas anotados, y un reloj que avanza 2 s en cada lectura."""
+
+    def __init__(self, volcados: list, *, teclado: tuple = (False,), listo: bool = True,
+                 falla_tocar: Exception | None = None, falla_pegar: Exception | None = None):
+        self.volcados = list(volcados)
+        self.teclado = list(teclado)
+        self.listo = listo
+        self.falla_tocar = falla_tocar
+        self.falla_pegar = falla_pegar
+        self.toques: list[tuple[int, int]] = []
+        self.teclas: list[int] = []
+        self.combinaciones: list[tuple] = []
+        self.pegados: list[str] = []
+        self.capturas: list[str] = []
+        self.prohibidos: list[str] = []
+        self.reloj = 1000.0
+
+    @staticmethod
+    def _siguiente(lista: list):
+        return lista.pop(0) if len(lista) > 1 else lista[0]
+
+    def volcado(self, timeout: int = 30) -> str:
+        v = self._siguiente(self.volcados)
+        if isinstance(v, BaseException):
+            raise v
+        return v
+
+    def tocar(self, x: int, y: int) -> None:
+        self.toques.append((x, y))
+        if self.falla_tocar is not None:
+            raise self.falla_tocar
+
+    def tecla(self, codigo: int) -> None:
+        self.teclas.append(codigo)
+
+    def combinacion(self, *codigos: int) -> None:
+        self.combinaciones.append(codigos)
+
+    def estado(self) -> dict:
+        return {"adb": True, "despierto": self.listo, "bloqueado": not self.listo, "listo": self.listo}
+
+    def teclado_estado(self):
+        return self._siguiente(self.teclado)
+
+    def teclado_visible(self) -> bool:
+        v = self.teclado_estado()
+        return True if v is None else v
+
+    def captura(self, destino: pathlib.Path) -> pathlib.Path:
+        self.capturas.append(destino.name)
+        return destino
+
+    def lanzar(self, paquete: str) -> None:
+        pass
+
+    def pegar(self, texto: str, paste: bool = True) -> None:
+        self.pegados.append(texto)
+        if self.falla_pegar is not None:
+            raise self.falla_pegar
+
+    def monotonic(self) -> float:
+        self.reloj += 2
+        return self.reloj
+
+    def prohibido(self, *args, **kwargs):
+        self.prohibidos.append(repr(args)[:120])
+        raise IntentoDeES(repr(args)[:120])
+
+
+def con_telefono_simulado(sim: TelefonoSimulado, accion):
+    """Ejecuta accion() con el teléfono, el portapapeles, subprocess y el reloj
+    sustituidos; lo restaura todo pase lo que pase. Devuelve (resultado, excepción)."""
+    import subprocess
+    import phone_clipboard
+    from labkit import instagram_feed, telefono
+
+    cambios = [(telefono, "volcado", sim.volcado), (telefono, "tocar", sim.tocar),
+               (telefono, "tecla", sim.tecla), (telefono, "combinacion", sim.combinacion),
+               (telefono, "estado", sim.estado), (telefono, "teclado_visible", sim.teclado_visible),
+               (telefono, "teclado_estado", sim.teclado_estado), (telefono, "captura", sim.captura),
+               (telefono, "lanzar", sim.lanzar), (telefono, "shell", sim.prohibido),
+               (telefono, "adb", sim.prohibido), (phone_clipboard, "pegar", sim.pegar),
+               (phone_clipboard, "adb", sim.prohibido), (subprocess, "run", sim.prohibido),
+               (subprocess, "Popen", sim.prohibido),
+               (instagram_feed.time, "sleep", lambda segundos: None),
+               (instagram_feed.time, "monotonic", sim.monotonic)]
+    originales = [(obj, nombre, getattr(obj, nombre)) for obj, nombre, _ in cambios]
+    try:
+        for obj, nombre, nuevo in cambios:
+            setattr(obj, nombre, nuevo)
+        try:
+            return accion(), None
+        except (Exception, IntentoDeES) as e:
+            return None, e
+    finally:
+        for obj, nombre, viejo in originales:
+            setattr(obj, nombre, viejo)
 
 
 def xml_perfil(titulo: str = "sabiduriabolsillo", publicaciones: str = "3 712publications",
@@ -619,6 +736,7 @@ def seccion_interfaz() -> None:
     check("ambiguo" in (lanza(lambda: IG._nodo(dos_suivant, texto="Suivant"), IG.PantallaInesperada) or ""),
           "dos controles iguales en sitios distintos: ambiguo")
     anidado = jerarquia(nodo_xml("[45,2081][1035,2205]", texto="Partager", clase="android.widget.Button",
+                                 extra='clickable="true"',
                                  hijos=nodo_xml("[480,2115][600,2170]", texto="Partager")))
     check(IG._nodo(anidado, texto="Partager")["clase"] == "android.widget.Button",
           "un botón y su etiqueta con el mismo texto no son ambiguos")
@@ -648,12 +766,194 @@ def seccion_interfaz() -> None:
           "el banner de un volcado inválido no cuenta")
     check(IG.evaluar_envio([]) == "timeout", "sin observaciones: timeout")
     inicio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Publication sur sabiduriabolsillo…"))
-    check(IG.observacion_de_volcado(inicio) == {"valido": True, "compositor": False, "banner": True},
+    check(IG.observacion_de_volcado(inicio) == {"valido": True, "compositor": False, "banner": True, "fallo": False},
           "observa el banner en el inicio")
-    check(IG.observacion_de_volcado(comp) == {"valido": True, "compositor": True, "banner": False},
+    check(IG.observacion_de_volcado(comp) == {"valido": True, "compositor": True, "banner": False, "fallo": False},
           "observa el compositor")
     check(IG.observacion_de_volcado(jerarquia().replace(PAQUETE_IG, "com.sec.android.app.launcher"))["valido"] is False,
           "un volcado sin Instagram en primer plano no es válido")
+
+    print("   · segunda revisión: fallos, compositor por bounds y botón pulsable")
+    etiqueta = T.buscar(comp, texto="Partager")["bounds"]
+    feed = xml_inicio()
+    check(IG.observacion_de_volcado(feed, etiqueta)["compositor"] is False,
+          "un «Partager» de una publicación del inicio no es el compositor")
+    solo_boton = jerarquia(BOTON_PARTAGER)
+    check(IG.observacion_de_volcado(solo_boton, etiqueta)["compositor"] is True,
+          "el «Partager» pulsado (mismos bounds) sigue siendo el compositor")
+    check(IG.observacion_de_volcado(solo_boton)["compositor"] is False, "sin bounds del botón no se compara")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[45,300][1035,700]", texto="x",
+                                                       clase="android.widget.EditText")))["compositor"] is True,
+          "el campo del pie abierto es el compositor")
+    for aviso in ("Impossible de publier. Réessayer", "La publication n’a pas pu être partagée",
+                  "La publication n'a pas pu être partagée", "Réessayer"):
+        check(IG.observacion_de_volcado(xml_inicio(aviso=aviso))["fallo"] is True, f"reconoce el fallo «{aviso}»")
+    check(IG.observacion_de_volcado(xml_compositor(pie="Réessayer, n'a pas pu"))["fallo"] is False,
+          "el texto del propio pie no es un aviso de fallo")
+    check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,0][100,100]", texto="Réessayer",
+                                                       paquete="com.android.systemui")))["fallo"] is False,
+          "un «Réessayer» de otra aplicación no cuenta")
+    fallo = {"valido": True, "compositor": False, "banner": False, "fallo": True}
+    check(IG.evaluar_envio([v(False, True), v(False, False), v(False, False), fallo]) == "fallido",
+          "un fallo tras el banner manda sobre la confirmación")
+    check(IG.evaluar_envio([v(False, True), fallo, v(False, False), v(False, False)]) == "fallido",
+          "un fallo visto en cualquier momento da fallido")
+    check(IG.evaluar_envio([dict(fallo, valido=False), v(False, True), v(False, False), v(False, False)])
+          == "confirmado", "el fallo de un volcado inválido no cuenta")
+
+    check(IG.hay_desplegable_hashtags(jerarquia(nodo_xml("[0,1500][300,1600]", texto="#citas",
+                                                         paquete="com.samsung.android.honeyboard"))),
+          "sin paquete, cualquier # fuera del campo cuenta como desplegable")
+    check(not IG.hay_desplegable_hashtags(jerarquia(nodo_xml("[0,1500][300,1600]", texto="#citas",
+                                                             paquete="com.samsung.android.honeyboard")),
+                                          paquete=PAQUETE_IG),
+          "con paquete, las sugerencias del teclado no son el desplegable de Instagram")
+
+    check(IG.partager_pulsable(comp), "una etiqueta dentro de un botón pulsable se puede pulsar")
+    desactivado = xml_compositor(boton=nodo_xml(
+        "[45,2081][1035,2205]", clase="android.widget.Button", extra='clickable="true" enabled="false"',
+        hijos=nodo_xml("[480,2115][600,2170]", texto="Partager")))
+    inerte = xml_compositor(boton=nodo_xml("[45,2081][1035,2205]", clase="android.widget.Button",
+                                           hijos=nodo_xml("[480,2115][600,2170]", texto="Partager")))
+    for xml, label in ((desactivado, "botón desactivado"), (inerte, "sin nada pulsable")):
+        problemas = IG.compositor_listo(xml, PIE_PRUEBA, tema)
+        check(problemas == ["Partager no pulsable"], f"compositor_listo detecta Partager no pulsable: {label}")
+    directo = xml_compositor(boton=nodo_xml("[45,2081][1035,2205]", texto="Partager", clase="android.widget.Button",
+                                            extra='clickable="true"'))
+    check(IG.compositor_listo(directo, PIE_PRUEBA, tema) == [], "un botón con el texto y pulsable está listo")
+
+    grande = jerarquia(nodo_xml("[0,1800][1080,2340]", desc="Partager", clase="android.widget.FrameLayout",
+                                hijos=nodo_xml("[45,2081][1035,2205]", desc="Partager",
+                                               clase="android.widget.Button", extra='clickable="true"')))
+    elegido = IG._nodo(grande, texto="Partager")
+    check(elegido["clase"] == "android.widget.Button" and elegido["bounds"] == (45, 2081, 1035, 2205),
+          "contenedor y botón con la misma desc: elige el único pulsable")
+    ninguno = grande.replace(' clickable="true"', "")
+    check(IG._nodo(ninguno, texto="Partager")["bounds"] == (45, 2081, 1035, 2205),
+          "sin un único pulsable, elige el de menor área")
+    fuera_pulsable = grande.replace(' clickable="true"', "").replace(
+        'class="android.widget.FrameLayout"', 'class="android.widget.FrameLayout" clickable="true"')
+    check(IG._nodo(fuera_pulsable, texto="Partager")["clase"] == "android.widget.FrameLayout",
+          "si solo el contenedor es pulsable, elige el contenedor")
+
+    check(T.nodos(fino)[0]["profundidad"] == 0 and T.buscar(fino, texto="Partager")["profundidad"] == 1,
+          "nodos() da la profundidad en el árbol")
+    check(T.plazos_volcado(30) == (20, 10), "un volcado de 30 s: 20 para volcar y 10 para leer")
+    check(all(min(T.plazos_volcado(t)) >= 5 for t in range(1, 61)), "cada parte del volcado tiene 5 s como mínimo")
+    check(T.es_png(b"\x89PNG\r\n\x1a\n" + b"\x00" * 8), "reconoce la firma PNG")
+    check(not T.es_png(b"") and not T.es_png(b"error: device offline"), "una captura vacía o de texto no es PNG")
+
+    import phone_clipboard
+    args = phone_clipboard.argumentos_servidor(0x2A)
+    check(args[:4] == ["adb", "-s", phone_clipboard.SERIAL, "shell"], "scrcpy-server se lanza por adb shell")
+    check(all(a in args for a in ("power_on=false", "control=true", "video=false", "audio=false", "scid=0000002a")),
+          "scrcpy-server sin POWER al arrancar, solo control y scid de 8 cifras hex")
+
+    shell_original = T.shell
+    try:
+        T.shell = lambda cmd, timeout=60: "  mInputShown=true\n"
+        leido = T.teclado_estado()
+
+        def sin_adb(cmd, timeout=60):
+            raise T.TelefonoError("sin adb")
+        T.shell = sin_adb
+        desconocido, visible = T.teclado_estado(), T.teclado_visible()
+    finally:
+        T.shell = shell_original
+    check(leido is True and desconocido is None and visible is True,
+          "teclado_estado da None si no se puede leer y teclado_visible lo da por abierto")
+
+    print("   · teléfono simulado")
+    import time as reloj
+    sleep_original, monotonic_original = reloj.sleep, reloj.monotonic
+    evid = pathlib.Path("evidencia-simulada")
+    centro = T.buscar(comp, texto="Partager")["centro"]
+    perfil_centro = T.buscar(feed, texto="Profil")["centro"]
+    publicado = [comp, comp, xml_inicio(banner=True), feed, feed, feed, xml_perfil()]
+
+    sim = TelefonoSimulado(publicado)
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "confirmado" and res["publicaciones_despues"] == 3712,
+          f"(a) banner, inicio limpio y perfil +1: confirmado ({err or res['estado']})")
+    check(sim.toques.count(centro) == 1 and sim.toques[0] == centro and sim.toques[1:] == [perfil_centro],
+          f"(a) un solo toque en Partager y luego Profil ({sim.toques})")
+    check(sim.capturas == ["ig-05a-antes.png", "ig-05-publicado.png"] and res["processing_completed_at"],
+          "(a) captura antes, captura después y hora de fin")
+    check(not sim.prohibidos, "(a) sin E/S real")
+
+    sim = TelefonoSimulado(publicado)
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, None))
+    check(err is None and res["estado"] == "confirmado_sin_conteo" and sim.toques.count(centro) == 1,
+          f"(b) sin conteo previo: confirmado_sin_conteo con un solo toque ({err or res['estado']})")
+
+    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True), feed, feed, feed,
+                            xml_perfil(publicaciones="3 713publications")])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "conteo_no_cuadra", f"perfil +2: conteo_no_cuadra ({err or res['estado']})")
+
+    sim = TelefonoSimulado([comp, comp, xml_inicio(banner=True), xml_inicio(aviso="Impossible de publier. Réessayer")])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "fallido" and sim.toques.count(centro) == 1,
+          f"(c) banner y luego aviso de error: fallido con un solo toque ({err or res['estado']})")
+
+    sim = TelefonoSimulado([comp], falla_tocar=T.TelefonoError("device offline"))
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "error_tras_pulsar" and res["error"].startswith("TelefonoError")
+          and res["submitted_at"] and res["captura_antes"] and len(sim.toques) == 1,
+          f"(d) el toque falla: error_tras_pulsar, un intento y nada se escapa ({err or res})")
+
+    sim_obs = TelefonoSimulado([comp, comp, T.TelefonoError("volcado no válido")])
+    res, err = con_telefono_simulado(sim_obs, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(err is None and res["estado"] == "timeout" and len(sim_obs.toques) == 1,
+          f"sin volcados válidos tras pulsar: timeout y un solo toque ({err or res['estado']})")
+
+    sim = TelefonoSimulado([xml_compositor(despues=LISTA_HASHTAGS)])
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, IntentoDeES) and sim.toques == [],
+          f"(e) desplegable abierto: PantallaInesperada sin tocar ({err!r})")
+
+    sim = TelefonoSimulado([comp], teclado=(True,))
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(isinstance(err, IG.PantallaInesperada) and sim.toques == [] and sim.capturas == [],
+          "con el teclado abierto no se captura ni se toca")
+
+    sim = TelefonoSimulado([comp], teclado=(None,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and "teclado" in str(err) and sim.teclas == []
+          and sim.pegados == [PIE_PRUEBA], f"(f) teclado ilegible tras pegar: se para sin «atrás» ({err!r})")
+
+    sim = TelefonoSimulado([comp], teclado=(True, False))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"]
+          and sim.combinaciones == [(IG.CTRL_IZQ, IG.TECLA_A)],
+          f"(g) teclado abierto y luego cerrado: exactamente un «atrás» ({err!r}, {sim.teclas})")
+
+    sim = TelefonoSimulado([comp], falla_pegar=RuntimeError("no se pudo hablar con scrcpy-server"))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, T.TelefonoError) and str(err).startswith("portapapeles:") and sim.teclas == [],
+          f"un fallo del portapapeles sale como TelefonoError ({err!r})")
+
+    sim = TelefonoSimulado([comp], listo=False)
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.TelefonoNoListo) and sim.toques == [] and sim.pegados == [],
+          "con el teléfono no listo no se toca ni se pega")
+
+    subida = datetime(2026, 9, 14, 8, 39, tzinfo=timezone.utc)
+    sim = TelefonoSimulado([comp])
+    res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+    check(isinstance(err, IG.BorradorPendiente) and sim.toques == [], "abrir con un borrador a medias: no se toca")
+
+    lanzador = jerarquia(nodo_xml("[0,0][1080,200]", texto="Inicio")).replace(PAQUETE_IG, "com.sec.android.app.launcher")
+    sim = TelefonoSimulado([lanzador])
+    res, err = con_telefono_simulado(sim, lambda: IG.atras(evid, "x"))
+    check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [], "atrás sin Instagram en primer plano no se pulsa")
+
+    sim = TelefonoSimulado([comp])
+    con_telefono_simulado(sim, lambda: (_ for _ in ()).throw(RuntimeError("escenario roto")))
+    check(reloj.sleep is sleep_original and reloj.monotonic is monotonic_original
+          and T.volcado.__name__ == "volcado" and T.tocar.__name__ == "tocar"
+          and phone_clipboard.pegar.__name__ == "pegar",
+          "los sustitutos se restauran aunque el escenario falle")
 
 
 SECCIONES = [

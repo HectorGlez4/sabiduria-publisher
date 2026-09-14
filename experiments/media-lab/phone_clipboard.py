@@ -46,6 +46,19 @@ def set_clipboard_message(text: str, paste: bool, sequence: int = 0) -> bytes:
     return struct.pack(">BQBI", TYPE_SET_CLIPBOARD, sequence, 1 if paste else 0, len(data)) + data
 
 
+def argumentos_servidor(scid: int) -> list[str]:
+    """Orden que arranca scrcpy-server solo con control (sin vídeo ni audio).
+
+    power_on=false es obligatorio: scrcpy 4.1 tiene powerOn activado por defecto y, con
+    control y la pantalla apagada, inyecta KEYCODE_POWER al arrancar. El teléfono lo
+    gestiona MaaS360 y aquí nunca se despierta."""
+    return ["adb", "-s", SERIAL, "shell",
+            f"CLASSPATH={SERVER_REMOTE}", "app_process", "/", "com.genymobile.scrcpy.Server",
+            SCRCPY_VERSION, f"scid={scid:08x}", "log_level=info", "tunnel_forward=true",
+            "video=false", "audio=false", "control=true", "power_on=false", "send_dummy_byte=false",
+            "send_device_meta=false", "clipboard_autosync=false", "cleanup=false"]
+
+
 def _parar(server: subprocess.Popen) -> str:
     """Termina el servidor, espera a que salga y devuelve lo que escribió."""
     if server.poll() is None:
@@ -72,13 +85,8 @@ def pegar(text: str, paste: bool = True) -> None:
 
     server: subprocess.Popen | None = None
     try:
-        server = subprocess.Popen(
-            ["adb", "-s", SERIAL, "shell",
-             f"CLASSPATH={SERVER_REMOTE}", "app_process", "/", "com.genymobile.scrcpy.Server",
-             SCRCPY_VERSION, f"scid={scid:08x}", "log_level=info", "tunnel_forward=true",
-             "video=false", "audio=false", "control=true", "send_dummy_byte=false",
-             "send_device_meta=false", "clipboard_autosync=false", "cleanup=false"],
-            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        server = subprocess.Popen(argumentos_servidor(scid),
+                                  stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         # Con túnel forward, connect() funciona aunque nadie escuche todavía: el
         # socket se cierra al primer uso. Se reintenta hasta que el envío aguanta.
         deadline = time.time() + 15
