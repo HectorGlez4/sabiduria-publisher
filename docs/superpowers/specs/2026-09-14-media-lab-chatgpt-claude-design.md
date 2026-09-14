@@ -93,7 +93,7 @@ Tarea programada `sabiduria-media-lab`, cron `40 10,15,20 * * *` (hora local de 
    - Si no hay encargos `generado` o `aprobado` para las celdas elegibles, `lab.py generar --encargo <id>` (máximo uno por ventana).
    - Crear encargos nuevos hasta que haya como máximo 6 en `pedido` o `generando` para la automatización de Codex. Nunca más de 6.
 5. **Revisión de imágenes nuevas.** Claude examina cada `generado` (verosimilitud, sin texto espurio ni defectos) y lo marca `aprobado` o `rechazado`.
-6. **Selección.** Hasta 2 celdas elegibles, alternando red, formato y ruta. La segunda sale al menos 21 min después de la primera.
+6. **Selección.** Hasta 2 celdas elegibles, en el orden de `coverage.json`: la segunda difiere de la primera en red o ruta. La segunda sale al menos 21 min después de la primera.
 7. **Máster.** Texto superpuesto determinista, sha256 y artefacto registrado. Para el teléfono, `lab.py telefono subir` con comprobación del hash en el dispositivo. Para API, manifiesto en `manifests/`.
 8. **Composición nativa** (teléfono):
    - identidad de marca visible;

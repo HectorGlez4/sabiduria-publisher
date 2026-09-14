@@ -706,6 +706,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 6: Selección de celdas
 
+> **Ampliada tras la revisión de calidad:** `seleccion.py` añade `API_FASE_1` (solo imágenes sueltas: feed y story de Facebook e Instagram, feed de Threads), acepta encargos `usado` para las celdas hermanas sin publicar, recibe `telefono_listo` y corta con `>=`. El código y las pruebas vigentes están en el commit que sigue a `bc0d857`; lo de abajo es la versión inicial.
+
 **Files:**
 - Create: `experiments/media-lab/labkit/seleccion.py`
 - Modify: `tests/test_media_lab.py`
@@ -1636,7 +1638,8 @@ def cmd_encargo_usado(a) -> int:
 
 def cmd_seleccionar(a) -> int:
     cov = json.loads((LAB / "coverage.json").read_text(encoding="utf-8"))
-    emitir(seleccion.elegir(cov["cells"], [e for _, e in encargos.listar(ENCARGOS)], max_celdas=a.max))
+    emitir(seleccion.elegir(cov["cells"], [e for _, e in encargos.listar(ENCARGOS)],
+                            max_celdas=a.max, telefono_listo=not a.sin_telefono))
     return 0
 
 
@@ -1815,6 +1818,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_encargo_usado)
     p = sub.add_parser("seleccionar")
     p.add_argument("--max", type=int, default=2)
+    p.add_argument("--sin-telefono", action="store_true", help="descarta celdas android_native")
     p.set_defaults(func=cmd_seleccionar)
 
     p = sub.add_parser("codex-tomar")
@@ -2024,13 +2028,13 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera. Si `telefono.listo` es false (bloqueado, dormido o desconectado), no toques el teléfono en toda la ventana: no intentes despertarlo ni desbloquearlo, salta las celdas `android_native`, sigue con las de API y di en el informe que el teléfono no estaba disponible para que el usuario lo desbloquee.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
-5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
-6. `lab.py seleccionar --max 2`. Si devuelve [], salta al paso 8.
+5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
+6. `lab.py seleccionar --max 2`, añadiendo `--sin-telefono` si `telefono.listo` era false. Si devuelve [], salta al paso 8.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`):
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
    b. Teléfono (instagram/feed_single_image): `lab.py telefono-subir --local <máster>`; `lab.py ig abrir --run RUN`; `ig recorte`; `ig editor`; `ig audio`; `ig pie --pie <archivo>`. Si hay desplegable de hashtags: `lab.py telefono-atras --run RUN --nombre ig-04b`. Mira cada captura.
       API: `lab.py manifiesto-api --run-group LAB-…-API --asset <máster> --caption facebook=<archivo> …`; commit y push del máster y el manifiesto (sección C de la spec) para que asset_url exista; la vista previa para QA es el máster con el pie.
-   c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo.
+   c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo: pon la celda en `"status": "blocked"` con `reason_if_blocked_or_unsupported` en coverage.json para que la siguiente ventana no la vuelva a elegir.
    d. `lab.py preflight` y anota `espera` (producción cercana) en el run. No frena la publicación.
    e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo>`. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`.
    f. Verifica la publicación en directo (URL/ID, identidad, audiencia, música). En Instagram por teléfono, la copia automática en Facebook va en `publication.cross_posting` del run.
