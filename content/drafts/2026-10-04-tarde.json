@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-04-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Blaise Pascal y las razones del corazón",
+    "hook": "Se cita para disculpar un amor que no conviene. Pascal la escribió en una hoja de apuntes sobre cómo se llega a Dios, en el mismo legajo que la apuesta.",
+    "quote": {
+      "text": "El corazón tiene sus razones, que la razón no conoce: se sabe en mil cosas.",
+      "author": "Blaise Pascal",
+      "work": "Pensamientos, fragmento Laf. 423",
+      "attribution_verified": true
+    },
+    "body": [
+      "Blaise Pascal murió en 1662. Sus apuntes, fragmentos en papeles sueltos, los publicaron los editores de Port-Royal en 1670 con el título de Pensamientos. La frase está en el legajo que la edición de Louis Lafuma numera del 418 al 426 y que la crítica llama Preuves par discours I. Es el mismo legajo del fragmento Infinito, nada, donde está el argumento de la apuesta. Y la frase no termina donde se suele cortar. Sigue: se sabe en mil cosas. Pascal está proponiendo un modo de conocer, no pidiendo indulgencia para un sentimiento.",
+      "Unas líneas más abajo, en el mismo legajo, aclara de qué corazón habla: es el corazón el que siente a Dios, y no la razón; eso es la fe. Para Pascal, lector de san Agustín, el corazón no es solo el lugar de las emociones. Los editores de la edición crítica en línea lo describen como una facultad que a la vez conoce, quiere y siente. La frase juega además con dos sentidos de una misma palabra: las razones del corazón no son las de la razón.",
+      "El uso sentimental ya incomodaba en el siglo XX. T. S. Eliot, en la introducción que escribió para una edición inglesa de los Pensamientos, anotó que la frase se oye citar muy a menudo, y a menudo con un propósito equivocado. El filósofo Hervé Pasqua habla directamente de un malentendido. Leída en su sitio, la línea no excusa ninguna elección. Dice algo más incómodo para quien confía solo en los argumentos: que hay cosas que se saben sin demostración, y que para Pascal a Dios se llega por ahí."
+    ],
+    "question": "¿Qué cosas sabemos sin haber podido demostrarlas nunca?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pascal", "#Pensamientos", "#Filosofia"],
+    "extended": ["#Citas", "#SigloXVII", "#Francia", "#Fe", "#Razon", "#Literatura", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Dossier «Preuves par discours I», Lafuma 418 a 426 (serie II), Sellier 680; manuscritos RO 3-1 r°/v° y RO 7-1 r°/v°. Texto: «Le cœur a ses raisons que la raison ne connaît point : on le sait en mille choses.» En el mismo dossier: «C'est le cœur qui sent Dieu et non la raison. Voilà ce que c'est que la foi. Dieu sensible au cœur, non à la raison.» El dossier contiene también el fragmento ‘Infini rien’ y el argumento de la apuesta.",
+      "source": "Les Pensées de Pascal, edición electrónica crítica (Université Clermont Auvergne, CNRS, Bibliothèque nationale de France), dossier Preuves par discours I, texto modernizado",
+      "url": "https://www.penseesdepascal.fr/II/II1-moderne.php"
+    },
+    {
+      "claim": "Página temática sobre el corazón en Pascal. Cita el fragmento Laf. 423, Sel. 680 («Je dis que le cœur aime l'être universel naturellement…») y explica que Pascal trata el corazón como un receptáculo o facultad que abarca dimensiones intelectuales, volitivas y afectivas, no solo la emoción.",
+      "source": "Les Pensées de Pascal, edición electrónica crítica (Université Clermont Auvergne, CNRS, BnF), página «Le cœur»",
+      "url": "https://www.penseesdepascal.fr/General/Lecoeur.php"
+    },
+    {
+      "claim": "La frase procede de los Pensamientos de Blaise Pascal, fragmento ‘Preuves par discours I’ (Laf. 423, Sel. 680); los Pensamientos se publicaron por primera vez en 1670 por Port-Royal. Pese al uso popular sobre las emociones amorosas, trata de religión: la razón no es el mejor medio para aprehender a Dios. Hervé Pasqua califica el uso actual de malentendido. La frase es un ejemplo de antanaclasis: «raisons» y «raison» se usan en sentidos distintos.",
+      "source": "Wikipedia en francés, artículo «Le cœur a ses raisons que la raison ne connaît point»",
+      "url": "https://fr.wikipedia.org/wiki/Le_c%C5%93ur_a_ses_raisons_que_la_raison_ne_conna%C3%AEt_point"
+    },
+    {
+      "claim": "Introducción de T. S. Eliot a los Pensées de Pascal (E. P. Dutton, 1958): «Le coeur a ses raisons que la raison ne connaît point: how often one has heard that quoted, and quoted often to the wrong purpose!»",
+      "source": "Project Gutenberg, «Pascal's Pensées», ebook 18269, edición de E. P. Dutton & Co. (Nueva York, 1958) con introducción de T. S. Eliot",
+      "url": "https://www.gutenberg.org/cache/epub/18269/pg18269.txt"
+    },
+    {
+      "claim": "Pascal murió en 1662 y los Pensamientos se publicaron póstumamente en 1670 por Port-Royal.",
+      "source": "Stanford Encyclopedia of Philosophy, Desmond Clarke y William Wood, «Blaise Pascal», revisión sustancial del 22 de junio de 2015",
+      "url": "https://plato.stanford.edu/entries/pascal/"
+    }
+  ],
+  "do_not_use": [
+    "No presentar la frase como una máxima sobre el amor romántico. Está en un dossier de apuntes apologéticos, junto a la apuesta, y el propio dossier aclara que el corazón es lo que siente a Dios.",
+    "No dar el número de Brunschvicg (277, según circula) sin cotejarlo: no se pudo abrir ninguna edición con esa numeración durante esta verificación. Aquí se cita por Lafuma (423), confirmado en la edición crítica en línea y en Wikipedia en francés.",
+    "No afirmar que la frase aparece en la edición de Port-Royal de 1670. Los Pensamientos se publicaron en 1670, pero no se comprobó en qué capítulo de esa edición, ni si está, este fragmento concreto.",
+    "No relacionar la frase con el Discours sur les passions de l'amour. No se verificó ningún vínculo con ese texto ni su autoría durante esta investigación.",
+    "No citar la versión cortada «el corazón tiene razones que la razón no entiende» como traducción literal. El original dice «ne connaît point» (no conoce) y sigue con «on le sait en mille choses».",
+    "No dar la edad de Pascal a su muerte ni atribuirle un plan de obra concreto (una apología en tantos capítulos) sin fuente abierta: no se verificó en esta sesión."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

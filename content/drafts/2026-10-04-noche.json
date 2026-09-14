@@ -1,0 +1,60 @@
+{
+  "id": "2026-10-04-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Pandora y la jarra de Hesíodo",
+    "hook": "En el poema griego no hay ninguna caja. Hay una gran jarra de almacén. La caja apareció en 1508, en el latín de un humanista de Róterdam.",
+    "body": [
+      "La historia está en Trabajos y días, de Hesíodo. Zeus manda fabricar a la primera mujer, Pandora, como castigo por el fuego que Prometeo robó para los hombres. En los versos 94 a 99 ella levanta con las manos la gran tapa de la jarra, y los males se esparcen y traen dolor a los hombres. Solo la Esperanza se queda dentro, en una morada que no se rompe, bajo el borde, y no sale por la puerta. La palabra griega es pithos: una tinaja grande, de las que se usaban para guardar provisiones.",
+      "La caja es de Erasmo. En la edición de 1508 de sus Adagia, la colección de proverbios clásicos, contó el mito para ilustrar el dicho latino Malo accepto stultus sapit: el necio aprende después del daño. Allí la vasija ya no es un pithos sino una pyxis, una cajita. Y quien la abre ya no es la mujer, sino Epimeteo, que la había recibido junto con la vasija, y cuyo nombre quiere decir el que piensa después. Immanuel Musäus, en un estudio de 2004 sobre el mito desde Hesíodo hasta Erasmo, sugiere que se le cruzó la cajita de Psique, leída entonces como imagen del alma.",
+      "El cambio no es un detalle de anticuario. Una tinaja de almacén es un objeto de la casa, pesado, que no se lleva a ninguna parte; una cajita cabe en una mano. La expresión abrir la caja de Pandora sale de la versión de Erasmo, no de Hesíodo. Dora y Erwin Panofsky dedicaron en 1956 un libro entero a seguir ese objeto por la historia del arte. Y el enigma de fondo sigue abierto: los estudiosos no se ponen de acuerdo en si la Esperanza encerrada es un consuelo que se queda con los hombres o un mal más que no llegó a salir."
+    ],
+    "question": "¿La esperanza que se quedó en la jarra es un consuelo o una trampa?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Pandora no tenía caja",
+    "subtitle": "Hesíodo habla de una tinaja; la cajita la puso Erasmo en 1508",
+    "body": "En Trabajos y días, la primera mujer levanta la tapa de una gran jarra de almacén y los males se esparcen. Solo la Esperanza queda dentro, bajo el borde. La cajita, y la expresión que la acompaña, llegaron siglos después en el latín de Erasmo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pandora", "#Hesiodo", "#MitologiaGriega"],
+    "extended": ["#Erasmo", "#Grecia", "#Mitologia", "#Historia", "#Renacimiento", "#Literatura", "#Traduccion"]
+  },
+  "sources": [
+    {
+      "claim": "Hesíodo, Trabajos y días, versos 94-99, traducción de Hugh G. Evelyn-White (1914): «But the woman took off the great lid of the jar with her hands and scattered all these and her thought caused sorrow and mischief to men. Only Hope remained there in an unbreakable home within under the rim of the great jar, and did not fly out at the door».",
+      "source": "Perseus Digital Library, Tufts University, Hesiod, Works and Days, trad. Hugh G. Evelyn-White (Cambridge, MA / Londres, 1914)",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0132:card=90"
+    },
+    {
+      "claim": "Los versos 42-58 de Trabajos y días tratan del robo del fuego por Prometeo y de la creación de la mujer por Zeus como castigo.",
+      "source": "Perseus Digital Library, Tufts University, Hesiod, Works and Days, trad. Hugh G. Evelyn-White (1914)",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0132:card=42"
+    },
+    {
+      "claim": "La palabra griega pithos (πίθος) designa una jarra grande, no una caja. «The mistranslation of pithos is usually attributed to the 16th-century humanist Erasmus who, in his Latin account of the story of Pandora, changed the Greek pithos to pyxis, meaning ‘box’.» Aparece en los Adagia (1508), para ilustrar el dicho latino Malo accepto stultus sapit. En la versión de Erasmo abre la caja Epimeteo, cuyo nombre significa ‘Afterthought’. Los estudiosos discrepan en si la Esperanza (elpis) que queda en la jarra es un bien o un mal. Dora y Erwin Panofsky, Pandora's Box: The Changing Aspects of a Mythical Symbol (1956).",
+      "source": "Wikipedia en inglés, artículo «Pandora's box»",
+      "url": "https://en.wikipedia.org/wiki/Pandora%27s_box"
+    },
+    {
+      "claim": "Reseña de E. F. Beall a Immanuel Musäus, Der Pandoramythos bei Hesiod und seine Rezeption bis Erasmus von Rotterdam (Hypomnemata 151, Gotinga, 2004). Erasmus cometió «a well known mistake in writing that the vessel of evil was a pyxis, not a dolium», error del que procede la idea moderna de abrir la caja de Pandora. En Erasmo entra en la historia Epimeteo, que recibe a Pandora y la vasija y la abre. Musäus sugiere que la confusión de Erasmo entre la jarra de Pandora y la caja de Psique estuvo condicionada por la lectura neoplatónica de Pandora como alma.",
+      "source": "Bryn Mawr Classical Review 2006.07.16, reseña de E. F. Beall",
+      "url": "https://bmcr.brynmawr.edu/2006/2006.07.16"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Erasmo tradujo mal a Hesíodo en una traducción de Trabajos y días. El cambio está en su relato latino del mito dentro de los Adagia, al comentar el proverbio Malo accepto stultus sapit, no en una traducción del poema.",
+    "No afirmar que 1508 es la primera edición de los Adagia. Hubo una colección anterior de Erasmo; aquí solo se dice que el pasaje está en la edición de 1508, que es la que citan las fuentes consultadas.",
+    "No dar medidas concretas del pithos («del tamaño de una persona») ni una lista cerrada de lo que guardaba. Circulan en páginas de divulgación, pero ninguna fuente abierta en esta verificación las sostiene.",
+    "No presentar como hecho que Erasmo confundió la jarra con la caja de Psique. Es una hipótesis de Musäus, recogida como sugerencia por la reseña de Bryn Mawr.",
+    "No decir que en Hesíodo la Esperanza es un regalo de los dioses ni que es un mal. Es un debate abierto entre los estudiosos; el texto solo dice que se quedó dentro.",
+    "No atribuir a Hesíodo que Pandora abrió la jarra por curiosidad. Los versos 94-99 no dan motivo; el tópico de la curiosidad es posterior y no se verificó aquí su origen.",
+    "No usar la fórmula «error de traducción de hace 500 años» con fecha exacta de medio milenio: el pasaje se fecha en 1508 y conviene dar el año."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

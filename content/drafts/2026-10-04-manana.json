@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-04-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Ada Lovelace y la Nota G de 1843",
+    "hook": "En 1843 una matemática de veintisiete años escribió que la máquina no podía originar nada. Ciento siete años después, Alan Turing le puso su nombre a esa idea para rebatirla.",
+    "body": [
+      "En 1842 el ingeniero italiano Luigi Menabrea publicó en francés un artículo sobre la máquina analítica de Charles Babbage. Ada Lovelace, hija de Lord Byron, lo tradujo al inglés y le añadió siete notas, de la A a la G. Salió en 1843 en los Scientific Memoirs de Richard Taylor, firmado solo con sus iniciales, A.A.L. De las sesenta y seis páginas, cuarenta y una eran notas suyas. En la Nota G incluyó una tabla que detallaba, operación por operación, cómo calcularía la máquina un número de Bernoulli. Es la primera descripción publicada de algo así.",
+      "La máquina nunca se construyó. Lovelace escribió sobre ella como si existiera, y fue lejos: dijo que podría actuar sobre cosas distintas del número y hasta componer piezas de música elaboradas. Pero en la misma Nota G puso un límite. La máquina analítica, escribió, no tiene pretensión alguna de originar nada; puede hacer lo que sepamos ordenarle. En 1950, en su artículo Computing Machinery and Intelligence, Turing llamó a esa frase la objeción de Lady Lovelace, y respondió que las máquinas sí pueden tomarnos por sorpresa.",
+      "Suele llamársela la primera programadora, y el título pide matiz. Los apuntes personales de Babbage entre 1837 y 1840 ya contienen programas para la máquina, aunque quedaron sin publicar. La tabla de la Nota G salió de cartas que los dos se cruzaron corrigiéndola; en una, Babbage pregunta dónde ha ido a parar la nota. El historiador Thomas Misa lo resume así: el mérito entre ellos no es un juego de suma cero. Lovelace murió en 1852, a los treinta y seis años. Su límite sigue citándose cada vez que se discute qué puede hacer una máquina."
+    ],
+    "question": "¿Qué tendría que hacer una máquina para que dejáramos de decir que solo obedece?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ada Lovelace y la Nota G",
+    "subtitle": "La tabla de 1843 y la frase que Turing quiso rebatir",
+    "body": "Describió paso a paso cómo una máquina que nunca se construyó calcularía un número de Bernoulli. En la misma nota escribió que esa máquina no podía originar nada. Turing le contestó en 1950."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AdaLovelace", "#Babbage", "#HistoriaDeLaComputacion"],
+    "extended": ["#Ciencia", "#Matematicas", "#Turing", "#SigloXIX", "#Mujeres", "#Historia", "#Tecnologia"]
+  },
+  "sources": [
+    {
+      "claim": "Ada Lovelace nació el 10 de diciembre de 1815 en Piccadilly y murió el 27 de noviembre de 1852 en Marylebone, Londres. Menabrea publicó en 1842 «Notions sur la machine analytique de Charles Babbage»; la traducción de Lovelace apareció en el volumen 3 de los Scientific Memoirs de Richard Taylor en 1843, firmada «AAL», con notas que llegaban a «about three times the length of the original memoir». Cita de Lovelace: «the engine might compose elaborate and scientific pieces of music of any degree of complexity or extent».",
+      "source": "MacTutor History of Mathematics Archive, University of St Andrews, biografía «Augusta Ada King, Countess of Lovelace»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/"
+    },
+    {
+      "claim": "Lovelace tradujo el trabajo de Menabrea y lo amplió; el artículo se publicó en los Taylor's Scientific Memoirs en agosto de 1843. De las sesenta y seis páginas del artículo, cuarenta y una son sus apéndices. La Nota G mostraba el funcionamiento de la máquina con el cálculo de los números de Bernoulli mediante una gran tabla cuyas columnas representaban datos, variables y resultados intermedios. En la correspondencia, Babbage escribe «Where is it gone?» cuando pierden el rastro de la Nota G. Cita: «The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform». Turing rebatió lo que llamó «Lady Lovelace's objection». La máquina analítica nunca se construyó.",
+      "source": "Bodleian Libraries, University of Oxford, blog Ada Lovelace; Christopher Hollings, Ursula Martin y Adrian Rice, «Ada Lovelace and the Analytical Engine», 26 de julio de 2018",
+      "url": "https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/26/ada-lovelace-and-the-analytical-engine/"
+    },
+    {
+      "claim": "Transcripción íntegra de «Sketch of the Analytical Engine», Scientific Memoirs, vol. 3, 1843, con las notas del traductor firmadas A.A.L. Nota A: «the engine might compose elaborate and scientific pieces of music of any degree of complexity or extent». Nota G: «The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform». El diagrama de la Nota G calcula el número de Bernoulli que Lovelace designa B7.",
+      "source": "Fourmilab (John Walker), transcripción del texto de Menabrea traducido y anotado por Ada Lovelace",
+      "url": "https://www.fourmilab.ch/babbage/sketch.html"
+    },
+    {
+      "claim": "La objeción de Lady Lovelace procede de su memoria sobre la máquina analítica de Babbage: «The Analytical Engine has no pretensions to originate anything. It can do whatever we know how to order it to perform». Turing (1950) respondió, entre otras cosas, que los computadores digitales hacen cosas que nos toman por sorpresa.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «The Turing Test», revisión sustancial del 4 de octubre de 2021",
+      "url": "https://plato.stanford.edu/entries/turing-test/"
+    },
+    {
+      "claim": "«In 1843 she published a translation from the French of an article on the Analytical Engine by an Italian engineer, Luigi Menabrea, to which Ada added extensive notes of her own.» Las notas incluyeron «the first published description of a stepwise sequence of operations for solving certain mathematical problems», y aunque se la llama a menudo «the first programmer», los biógrafos debaten el alcance y la originalidad de su contribución.",
+      "source": "Computer History Museum (Mountain View, California), exposición «The Babbage Engine», página «Ada Lovelace»",
+      "url": "https://www.computerhistory.org/babbage/adalovelace/"
+    },
+    {
+      "claim": "Lovelace añadió siete notas, de la A a la G, a su traducción de Menabrea. La Nota G describe un método para calcular números de Bernoulli y «is often called the first published computer program», pero «Babbage's personal notes from 1837 to 1840 contain the first programs for the engine», que en su mayoría quedaron sin publicar. Murió de cáncer a los 36 años, el 27 de noviembre de 1852.",
+      "source": "Wikipedia en inglés, artículo «Ada Lovelace»",
+      "url": "https://en.wikipedia.org/wiki/Ada_Lovelace"
+    },
+    {
+      "claim": "«Credit between Lovelace and Babbage is not a zero-sum game, where any credit added to Lovelace somehow detracts from Babbage. Ample evidence indicates Babbage and Lovelace each had important contributions to the famous 1843 Sketch of Babbage's Analytical Engine and the accompanying Notes.»",
+      "source": "Thomas J. Misa, «Charles Babbage, Ada Lovelace, and the Bernoulli Numbers», arXiv:2301.02919, 2023 (resumen)",
+      "url": "https://arxiv.org/abs/2301.02919"
+    }
+  ],
+  "do_not_use": [
+    "No llamarla sin más «la primera programadora de la historia». Los apuntes de Babbage de 1837-1840 ya contienen programas para la máquina, aunque sin publicar; lo defendible es que la Nota G es la primera descripción publicada de una secuencia de operaciones de ese tipo, y que la tabla salió de un trabajo con Babbage.",
+    "No decir tampoco que Lovelace solo tradujo y que las notas son de Babbage. Las fuentes académicas (Hollings, Martin y Rice; Misa) documentan una contribución propia y un trabajo compartido.",
+    "No fijar el mes de publicación. El blog de la Bodleian dice agosto de 1843 y otras fuentes dicen septiembre. Aquí solo se dice 1843.",
+    "No decir que la máquina analítica llegó a construirse ni que el programa de la Nota G llegó a ejecutarse en ella. Nunca se construyó.",
+    "No afirmar que la tabla de la Nota G contiene un error concreto. Circula la idea de que tiene un «bug», pero no se comprobó en ninguna fuente abierta durante esta verificación.",
+    "No citar el volumen de Mind del artículo de Turing a partir de copias en PDF de cursos universitarios: alguna lo da como «Mind 49», que no se pudo cotejar. Aquí solo se dice 1950.",
+    "No poner en boca de Turing la frase literal «las máquinas me sorprenden con mucha frecuencia»: no se pudo abrir el artículo original, y la respuesta se resume según la Stanford Encyclopedia of Philosophy."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}

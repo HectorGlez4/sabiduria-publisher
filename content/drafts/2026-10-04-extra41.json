@@ -1,0 +1,63 @@
+{
+  "id": "2026-10-04-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "la Bhagavad Gita y el verso 2.47",
+    "hook": "Se lee como un consejo para trabajar sin ansiedad. Krishna se lo dice a un guerrero que acaba de anunciar que no piensa pelear contra su propia familia.",
+    "quote": {
+      "text": "Tu incumbencia es solo la acción, nunca sus frutos. Que el fruto de la acción no sea tu motivo, ni te apegues a la inacción.",
+      "author": "Bhagavad Gita",
+      "work": "Capítulo 2, verso 47 (Mahabharata, libro VI)",
+      "attribution_verified": true
+    },
+    "body": [
+      "La Bhagavad Gita son setecientos versos en sánscrito, en dieciocho capítulos, dentro del libro sexto del Mahabharata, el Bhishma Parva. Es un diálogo entre el príncipe Arjuna y Krishna en el campo de Kurukshetra, justo antes de la batalla, mientras los dos ejércitos esperan formados. Arjuna mira al bando contrario y ve parientes, amigos y maestros. En el segundo capítulo lo dice sin rodeos: no voy a pelear. Y se queda callado.",
+      "Krishna no lo consuela. Le reprocha el abatimiento: no cedas a la flaqueza, levántate. El verso 47 llega dentro de esa respuesta. A Arjuna le toca la acción, no su resultado. El verso siguiente remata: actúa renunciando al apego, igual ante el éxito que ante el fracaso; a ese equilibrio se le llama yoga. La acción de la que se habla, en ese punto del poema, es entrar en combate contra la propia familia. La indiferencia hacia los frutos no se presenta como un método para rendir más, sino como el argumento para que un hombre haga lo que le repugna.",
+      "Su fecha no se conoce con precisión. Las estimaciones académicas van de varios siglos antes de nuestra era a los primeros siglos después, y una antología universitaria la describe como añadida al Mahabharata en ese intervalo. Su lectura moderna la llevó lejos del campo de batalla. Gandhi, que hizo de la no violencia un método político, se sabía de memoria los últimos diecinueve versos de este mismo capítulo y los consideraba su compañía. El capítulo que recitaba empieza con un hombre que no quiere matar."
+    ],
+    "question": "¿Hasta dónde puede uno desentenderse de las consecuencias de lo que hace?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BhagavadGita", "#Mahabharata", "#India"],
+    "extended": ["#Citas", "#Sanscrito", "#Filosofia", "#Krishna", "#Arjuna", "#Historia", "#Gandhi"]
+  },
+  "sources": [
+    {
+      "claim": "The Bhagavad-Gita, traducción de Annie Wood Besant, 4.ª edición (1922). Discurso 2, verso 47, en devanagari: «कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥ ४७ ॥» y en inglés: «Thy business is with the action only, never with its fruits; so let not the fruit of action be thy motive, nor be thou to inaction attached.» Verso 48: «Perform action, O Dhananjaya, dwelling in union with the divine, renouncing attachments and balanced evenly in success and failure: equilibrium is called yoga.» Verso 9: Arjuna dice a Govinda «I will not fight!» y se queda en silencio. Versos 2-3: «Whence hath this dejection befallen thee in this perilous strait…», «Yield not to impotence, O Partha! it doth not befit thee. Shake off this paltry faint-heartedness! Stand up, Parantapa!»",
+      "source": "Wikisource, «Bhagavad-Gita (Besant 4th)/Discourse 2», transcripción de la 4.ª edición de la traducción de Annie Besant (1922)",
+      "url": "https://en.wikisource.org/wiki/Bhagavad-Gita_(Besant_4th)/Discourse_2"
+    },
+    {
+      "claim": "Traducción en verso de Sir Edwin Arnold, The Song Celestial (edición de Truslove, Hanson & Comba, Nueva York, 1900). Capítulo II: «Let right deeds be / Thy motive, not the fruit which comes from them». Reproche de Krishna: «How hath this weakness taken thee? Whence springs / The inglorious trouble, shameful to the brave». Arjuna en el capítulo I: «Killing these / Must breed but anguish, Krishna!».",
+      "source": "Project Gutenberg, ebook 2388, «The Bhagavad-Gita» (The Song Celestial), trad. Sir Edwin Arnold",
+      "url": "https://www.gutenberg.org/cache/epub/2388/pg2388.txt"
+    },
+    {
+      "claim": "La Bhagavad Gita tiene 18 capítulos y 700 versos y está en el Bhishma Parva del Mahabharata (capítulos 23-40 o 25-42 según la recensión). Se desarrolla en el campo de batalla de Kurukshetra, donde Arjuna, ante ejércitos con parientes y maestros, duda de si la guerra es justa. Las fechas propuestas por los estudiosos varían entre los siglos V-IV a.C. y el siglo I d.C. Gandhi «memorized the last 19 verses of the second chapter, considering them as his companion».",
+      "source": "Wikipedia en inglés, artículo «Bhagavad Gita»",
+      "url": "https://en.wikipedia.org/wiki/Bhagavad_Gita"
+    },
+    {
+      "claim": "La Bhagavad Gita recoge la conversación entre Krishna y Arjuna justo antes de la batalla de Kurukshetra; los dos están literalmente entre los dos ejércitos mientras ambos bandos esperan la señal de Arjuna para empezar. Fue «added to The Mahabharata between 400 B.C.E. and 400 C.E.». El verso II.47 se traduce como que se tiene control solo sobre el propio deber, pero no sobre los resultados.",
+      "source": "Laura Getty y Kyounghye Kwon (eds.), Compact Anthology of World Literature, University of North Georgia Press, cap. 3.1 «The Bhagavad Gita» (traducción de Ramananda Prasad), en LibreTexts Humanities",
+      "url": "https://human.libretexts.org/Bookshelves/Literature_and_Literacy/World_Literature/Compact_Anthology_of_World_Literature_(Getty_and_Kwon)/03:_India/3.01:_The_Bhagavad_Gita"
+    }
+  ],
+  "do_not_use": [
+    "No citar la traducción de Telang (Sacred Books of the East, vol. 8, Oxford, 1882) con palabras literales. Se localizó el volumen en archive.org, pero la herramienta no pudo extraer el texto del verso 2.47 de forma fiable, así que no se da por verificada su redacción.",
+    "La versión española de la cita es propia, hecha sobre la traducción de Besant (1922) y cotejada con el sánscrito y con Arnold. No presentarla como la traducción de ninguna edición publicada en español.",
+    "No usar el verso como lema de productividad o de gestión del estrés sin su contexto: se dice para convencer a Arjuna de combatir después de que él se niega a hacerlo.",
+    "No confundir este verso con el que recordó Oppenheimer tras la prueba Trinity («Ahora me he convertido en la Muerte…»). Ese es del capítulo 11, verso 32, no del 2.47.",
+    "No dar una fecha precisa de composición ni la tradicional del 3100 a.C. como dato histórico. Las fuentes académicas dan un intervalo amplio y discrepan entre sí.",
+    "No decir que Gandhi recitaba el verso 47. Lo que sostienen las fuentes es que se sabía de memoria los últimos diecinueve versos del capítulo 2, que no incluyen el 47.",
+    "No presentar a Vyasa como autor histórico comprobado. La tradición le atribuye el Mahabharata; Wikisource lo pone como autor en la ficha, pero eso no es una atribución crítica."
+  ],
+  "targets": ["facebook", "instagram", "threads"]
+}
