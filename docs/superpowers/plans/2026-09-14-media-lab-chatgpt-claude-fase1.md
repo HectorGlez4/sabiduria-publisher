@@ -1300,6 +1300,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 9: Rescate con `codex exec`
 
+> **Ampliada tras la revisión de calidad:** `comando` carga la configuración de Codex del usuario (permiso explícito del usuario, 2026-09-14), el prompt delimita el encargo, `validar` rechaza rutas no pedidas, archivos no PNG, dimensiones distintas, imágenes de lado < 512 y orientación equivocada, `CODEX` admite `MEDIA_LAB_CODEX` y `family_id` solo acepta `[A-Za-z0-9_-]`. El código vigente está en el commit que sigue a `c59b2c0`; lo de abajo es la versión inicial.
+
 **Files:**
 - Create: `experiments/media-lab/labkit/codex_rescate.py`
 - Create: `experiments/media-lab/codex-resultado.schema.json`
@@ -1532,8 +1534,10 @@ import argparse
 import hashlib
 import json
 import os
+import signal
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -1695,26 +1699,62 @@ def cmd_codex_fallo(a) -> int:
     return 0
 
 
+def _estado_git() -> dict[str, str]:
+    """Rutas con cambios respecto a HEAD y el hash actual de cada una ("-" si no es un archivo)."""
+    r = subprocess.run(["git", "status", "--porcelain", "-uall"], cwd=ROOT, capture_output=True,
+                       text=True, timeout=60, stdin=subprocess.DEVNULL)
+    fuera = {}
+    for linea in r.stdout.splitlines():
+        ruta = linea[3:].split(" -> ")[-1].strip('"')
+        p = ROOT / ruta
+        fuera[ruta] = hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else "-"
+    return fuera
+
+
 def cmd_generar(a) -> int:
     ruta = ruta_encargo(a.encargo)
+    try:
+        v = subprocess.run([codex_rescate.CODEX, "--version"], capture_output=True, text=True,
+                           timeout=30, stdin=subprocess.DEVNULL)
+        if v.returncode != 0:
+            raise OSError(v.stderr.strip()[:200] or f"exit {v.returncode}")
+    except (OSError, subprocess.TimeoutExpired) as e:
+        emitir({"ok": False, "errores": [f"codex no disponible: {e}"]})
+        return 1
+    antes = _estado_git()
     enc = encargos.tomar(encargos.cargar(ruta), "codex-exec", ahora())
     encargos.guardar(ruta, enc)
-    salida = LAB / "results" / f"codex-exec-{a.encargo}.json"
-    salida.parent.mkdir(parents=True, exist_ok=True)
+    permitidas = set(codex_rescate.rutas_imagen(enc))
     try:
-        r = subprocess.run(codex_rescate.comando(codex_rescate.prompt_para(enc), salida),
-                           cwd=ROOT, capture_output=True, text=True, timeout=a.timeout)
-        codigo, cola = r.returncode, (r.stdout + r.stderr)[-1500:]
-    except subprocess.TimeoutExpired:
-        codigo, cola = None, f"codex exec superó {a.timeout} s"
+        permitidas.add(str(ruta.resolve().relative_to(ROOT)))
+    except ValueError:
+        pass  # LAB_ENCARGOS_DIR fuera del repo (pruebas)
+    salida = Path(tempfile.gettempdir()) / f"codex-exec-{a.encargo}.json"
+    try:
+        proc = subprocess.Popen(codex_rescate.comando(codex_rescate.prompt_para(enc), salida), cwd=ROOT,
+                                stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                text=True, start_new_session=True)
+        try:
+            out, _ = proc.communicate(timeout=a.timeout)
+            codigo, cola = proc.returncode, (out or "")[-1500:]
+        except subprocess.TimeoutExpired:
+            os.killpg(proc.pid, signal.SIGKILL)  # también sus hijos: nada escribe tarde
+            proc.communicate()
+            codigo, cola = None, f"codex exec superó {a.timeout} s"
+    except OSError as e:
+        codigo, cola = None, f"codex exec no arrancó: {e}"
+    despues = _estado_git()
+    ajenos = sorted(r for r, h in despues.items() if antes.get(r) != h and r not in permitidas)
     enc = encargos.cargar(ruta)
     errores = codex_rescate.validar(enc)
+    if ajenos:
+        errores.append("Codex cambió archivos no permitidos: " + ", ".join(ajenos))
     if errores:
         if enc["estado"] == "generando" and enc["lock_owner"] == "codex-exec":
             encargos.marcar_fallo(enc, "codex-exec", f"{'; '.join(errores)} | exit={codigo}", ahora())
             encargos.guardar(ruta, enc)
-        emitir({"ok": False, "errores": errores, "exit": codigo, "salida": cola})
-        return 1
+        emitir({"ok": False, "errores": errores, "ajenos": ajenos, "exit": codigo, "salida": cola})
+        return 6 if ajenos else 1
     emitir({"ok": True, "imagenes": enc["imagenes"]})
     return 0
 
@@ -1976,6 +2016,8 @@ Expected: JSON con `"estado": "pedido"`. Anotar `encargo_id`.
 
 - [ ] **Step 3: Sonda de `codex exec` (gasta una generación incluida)**
 
+Antes, anotar en `experiments/media-lab/findings.md` la salida de `/Applications/ChatGPT.app/Contents/Resources/codex --version`. La sonda confirma también que `lab.py generar` no informa archivos `ajenos`.
+
 Run: `.venv/bin/python experiments/media-lab/lab.py generar --encargo <encargo_id> --timeout 600`
 
 - Expected OK: `{"ok": true, "imagenes": [...]}`, con el PNG en `experiments/media-lab/assets/LAB-SONDA-001/`. Abrir la imagen y comprobar que no tiene texto.
@@ -2067,7 +2109,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar --dueno programada` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera. Si `telefono.listo` es false (bloqueado, dormido o desconectado), no toques el teléfono en toda la ventana: no intentes despertarlo ni desbloquearlo, salta las celdas `android_native`, sigue con las de API y di en el informe que el teléfono no estaba disponible para que el usuario lo desbloquee.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
-5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, sin mezclar en un mismo encargo celdas de feed (4:5) y de story (9:16), hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
+5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, sin mezclar en un mismo encargo celdas de feed (4:5) y de story (9:16), hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4. Si sale con código 6 (Codex cambió archivos no permitidos), no generes más en esta ventana, no comitees esos cambios y enumera los archivos en el informe para el usuario.
 6. `lab.py seleccionar --max 2`, añadiendo `--sin-telefono` si `telefono.listo` era false. Si devuelve [], salta al paso 8.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`). Antes de cada celda renueva el cerrojo con `lab.py lock-tomar --dueno programada`; si devuelve `cerrojo: false`, otra sesión tomó el relevo: no publiques más celdas y salta al paso 9:
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
