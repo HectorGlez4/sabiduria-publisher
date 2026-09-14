@@ -307,19 +307,25 @@ def seccion_manifiesto_y_cerrojo() -> None:
     from labkit import cerrojo, manifiesto as M
 
     asset = "experiments/media-lab/assets/LAB-F01-001/master-4x5.jpg"
-    m = M.manifiesto_api("LAB-F01-001-API", asset, "ab" * 32,
+    S = "ab" * 32
+    m = M.manifiesto_api("LAB-F01-001-API", asset, S,
                          {"facebook": "Pie FB", "threads": "Pie Threads"}, family_id="LAB-F01-001")
     check(m["route"] == "api" and m["audience"] == "public", "ruta api y audiencia pública explícitas")
     check(m["asset_url"] == M.RAW_BASE + asset, "asset_url apunta al raw de main")
     check(m["platforms"] == ["facebook", "threads"], "platforms sale de los pies")
     check(M.ruta_manifiesto("LAB-F01-001-API") == "experiments/media-lab/manifests/LAB-F01-001-API.json",
           "ruta que acepta el workflow media-lab")
-    for args, label in ((("X-1", asset, "ab", {"facebook": "p"}), "run_group sin LAB-"),
-                        (("LAB-X", "/tmp/a.jpg", "ab", {"facebook": "p"}), "asset fuera de assets"),
-                        (("LAB-X", asset, "ab", {"tiktok": "p"}), "plataforma sin publicador"),
-                        (("LAB-X", asset, "ab", {"threads": "x" * 501}), "Threads de más de 500"),
-                        (("LAB-X", asset, "ab", {"instagram": "x" * 2201}), "Instagram de más de 2200"),
-                        (("LAB-X", asset, "ab", {"facebook": ""}), "pie vacío")):
+    for args, label in ((("X-1", asset, S, {"facebook": "p"}), "run_group sin LAB-"),
+                        (("LAB-a b;rm", asset, S, {"facebook": "p"}), "run_group con caracteres raros"),
+                        (("LAB-../../x", asset, S, {"facebook": "p"}), "run_group que escapa de manifests"),
+                        (("LAB-X", "/tmp/a.jpg", S, {"facebook": "p"}), "asset fuera de assets"),
+                        (("LAB-X", "experiments/media-lab/assets/../../src/x.jpg", S, {"facebook": "p"}), "asset con .."),
+                        (("LAB-X", asset, "", {"facebook": "p"}), "sha256 vacío"),
+                        (("LAB-X", asset, S, {"tiktok": "p"}), "plataforma sin publicador"),
+                        (("LAB-X", asset, S, {"threads": "x" * 501}), "Threads de más de 500"),
+                        (("LAB-X", asset, S, {"instagram": "x" * 2201}), "Instagram de más de 2200"),
+                        (("LAB-X", asset, S, {"facebook": ""}), "pie vacío"),
+                        (("LAB-X", asset, S, {"facebook": "p", "facebook_story": ""}), "feed y story mezclados")):
         try:
             M.manifiesto_api(*args)
             ok = False
@@ -333,8 +339,41 @@ def seccion_manifiesto_y_cerrojo() -> None:
         check(cerrojo.tomar(lock, t, "programada"), "el cerrojo libre se toma")
         check(not cerrojo.tomar(lock, t + timedelta(minutes=30), "manual"), "un cerrojo de 30 min no se pisa")
         check(cerrojo.tomar(lock, t + timedelta(minutes=91), "manual"), "un cerrojo de más de 90 min se considera abandonado")
-        cerrojo.soltar(lock)
+        cerrojo.soltar(lock, "manual")
         check(not lock.exists(), "soltar borra el cerrojo")
+
+    check(M.manifiesto_api("LAB-X", asset, S, {"threads": "x" * 500})["captions"]["threads"] == "x" * 500,
+          "un pie de Threads de 500 exactos se acepta")
+    hist = M.manifiesto_api("LAB-X-STORY", asset, S, {"facebook_story": "", "instagram_story": "ignorado"})
+    check(hist["captions"] == {"facebook_story": "", "instagram_story": ""},
+          "las historias se publican sin pie")
+    check("family_id" not in M.manifiesto_api("LAB-X", asset, S, {"facebook": "p"}), "sin family_id no se añade la clave")
+    v = M.manifiesto_verificacion("LAB-F01-001-API", {"facebook": "123_456", "threads": "789"})
+    check(v == {"run_group_id": "LAB-F01-001-API", "post_ids": {"facebook": "123_456", "threads": "789"}},
+          "manifiesto de verificación con las redes publicadas")
+    check(M.ruta_verificacion("LAB-F01-001-API") == "experiments/media-lab/manifests/LAB-F01-001-API-verify.json",
+          "la verificación no pisa el manifiesto de publicación")
+    for post_ids, label in (({}, "sin post_ids"), ({"tiktok": "1"}, "red no verificable"), ({"facebook": ""}, "post_id vacío")):
+        try:
+            M.manifiesto_verificacion("LAB-X", post_ids)
+            ok = False
+        except M.ManifiestoError:
+            ok = True
+        check(ok, f"verificación rechaza: {label}")
+
+    with tempfile.TemporaryDirectory() as d:
+        lock = pathlib.Path(d) / ".ventana.lock"
+        for contenido, label in (("[1]", "lista"), ('{"desde": 5}', "desde no textual"), ("no json", "texto")):
+            lock.write_text(contenido, encoding="utf-8")
+            check(cerrojo.tomar(lock, t, "programada"), f"un cerrojo corrupto ({label}) se trata como abandonado")
+        lock.write_text('{"dueno": "manual", "desde": "2026-09-15T08:20:00"}', encoding="utf-8")
+        check(not cerrojo.tomar(lock, t, "programada"), "un cerrojo reciente sin zona horaria bloquea sin romper")
+        check(cerrojo.tomar(lock, t, "manual"), "el mismo dueño renueva su cerrojo")
+        check(not cerrojo.soltar(lock, "programada") and lock.exists(), "otro dueño no suelta el cerrojo")
+        lock.write_text('{"dueno": "manual", "desde": "2026-09-15T10:00:00+00:00"}', encoding="utf-8")
+        check(cerrojo.tomar(lock, t, "programada"), "un cerrojo con fecha futura se trata como abandonado")
+        check(list(pathlib.Path(d).glob(".*.tmp")) == [], "tomar no deja temporales")
+        check(not cerrojo.soltar(pathlib.Path(d) / "no-existe.lock", "manual"), "soltar sin cerrojo no rompe")
 
 
 SECCIONES = [

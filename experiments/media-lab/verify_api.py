@@ -15,6 +15,12 @@ sys.path.insert(0, str(ROOT))
 
 from src.platforms.meta import GRAPH, THREADS_GRAPH, _get  # noqa: E402
 
+CONSULTAS = {
+    "facebook": (GRAPH, "id,permalink_url,created_time,message,full_picture,is_published,is_hidden", "SDB_PAGE_TOKEN"),
+    "instagram": (GRAPH, "id,permalink,timestamp,caption,media_type,media_url", "SDB_PAGE_TOKEN"),
+    "threads": (THREADS_GRAPH, "id,permalink,timestamp,text,media_type,media_url", "SDB_THREADS_TOKEN"),
+}
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -27,26 +33,10 @@ def main() -> int:
         "observed_at": datetime.now(timezone.utc).isoformat(),
         "results": {},
     }
-    queries = {
-        "facebook": (
-            f"{GRAPH}/{manifest['post_ids']['facebook']}",
-            "id,permalink_url,created_time,message,full_picture,is_published,is_hidden",
-            os.environ["SDB_PAGE_TOKEN"],
-        ),
-        "instagram": (
-            f"{GRAPH}/{manifest['post_ids']['instagram']}",
-            "id,permalink,timestamp,caption,media_type,media_url",
-            os.environ["SDB_PAGE_TOKEN"],
-        ),
-        "threads": (
-            f"{THREADS_GRAPH}/{manifest['post_ids']['threads']}",
-            "id,permalink,timestamp,text,media_type,media_url",
-            os.environ["SDB_THREADS_TOKEN"],
-        ),
-    }
-    for platform, (url, fields, token) in queries.items():
+    for platform, post_id in manifest["post_ids"].items():
         try:
-            detail = _get(url, {"fields": fields, "access_token": token})
+            base, fields, token_env = CONSULTAS[platform]
+            detail = _get(f"{base}/{post_id}", {"fields": fields, "access_token": os.environ[token_env]})
             output["results"][platform] = {"status": "verified", "detail": detail}
         except Exception as exc:  # noqa: BLE001
             output["results"][platform] = {

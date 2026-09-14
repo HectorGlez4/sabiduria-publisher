@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -59,6 +60,10 @@ def main() -> int:
     probe.raise_for_status()
     if not probe.headers.get("content-type", "").startswith("image/"):
         raise SystemExit(f"asset is not an image: {probe.headers.get('content-type')}")
+    expected_sha = manifest.get("asset_sha256")
+    if expected_sha and hashlib.sha256(probe.content).hexdigest() != expected_sha:
+        raise SystemExit("asset_url serves bytes that don't match asset_sha256 "
+                         "(raw CDN cache or missing push): refusing to publish")
 
     output = {
         "run_group_id": run_group_id,
