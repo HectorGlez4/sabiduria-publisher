@@ -2258,6 +2258,8 @@ Menores aprobados sin bloquear en la re-revisión de `98f7c77`. Hacerlos despué
 - [ ] **M-5:** documentar en la ventana que un código 4 en `ig compartir` por sugerencias del teclado es un bloqueo esperado (falla cerrado).
 - [ ] **M-6:** pruebas nuevas: teclado True y luego None → exactamente un «atrás» y `PantallaInesperada`; un «#» de otra app con teclado cerrado → ningún «atrás»; `abrir` con pantalla de arranque y luego inicio con Profil → exactamente un toque en Profil.
 - [ ] **M-7:** en `phone_clipboard._parar`, `communicate(timeout=5)` también tras `kill()`, ignorando un segundo `TimeoutExpired`.
+- [ ] **G-1 (revisión de 10c):** en `generar`, marcar `vivo["lanzado"] = True` tras `Popen`; si llega una señal antes del lanzamiento y no hay cambios ajenos, devolver el encargo a `pedido` sin sumar intento (`encargos.liberar(enc, owner)` nuevo, con prueba).
+- [ ] **G-2 (revisión de 10c):** si entre `tomar` y el lanzamiento de Codex salta una excepción (`_permitidas`, `mkdtemp`), llamar a `_deshacer(ruta, f"error antes de lanzar Codex: {e}", bloquear=False)` y relanzar, para no dejar el encargo en `generando` 30 minutos.
 - [ ] **M-8:** mover los lectores puros de `instagram_feed.py` (perfil, selector, compositor, envío) a `labkit/instagram_pantallas.py`, reexportándolos para no romper llamadas; hacerlo antes de añadir Stories en la fase 2.
 
 ## Fase 2 (plan aparte)
