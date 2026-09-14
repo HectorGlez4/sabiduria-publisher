@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "properties": {
+    "encargo_id": {"type": "string"},
+    "imagenes": {"type": "array", "items": {"type": "string"}},
+    "ok": {"type": "boolean"},
+    "nota": {"type": "string"}
+  },
+  "required": ["encargo_id", "imagenes", "ok", "nota"],
+  "additionalProperties": false
+}

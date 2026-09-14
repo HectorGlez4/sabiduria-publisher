@@ -956,6 +956,43 @@ def seccion_interfaz() -> None:
           "los sustitutos se restauran aunque el escenario falle")
 
 
+def seccion_codex() -> None:
+    print("\n7. Rescate con codex exec")
+    import hashlib
+    import tempfile
+    from datetime import datetime, timezone
+    from labkit import codex_rescate as R, encargos as E
+
+    t = datetime(2026, 9, 15, 8, 40, tzinfo=timezone.utc)
+    enc = E.nuevo("ENC-20260915-003", coverage_cell_ids=["C1"], family_id="LAB-F01-001",
+                  brief_path="b", do_not_use=["no inventar inscripciones"], formato={"ancho": 1080, "alto": 1350},
+                  prompt="Un astrolabio", restricciones=["sin texto"],
+                  destino_assets="experiments/media-lab/assets/LAB-F01-001", ahora=t, variantes=2)
+    check(R.rutas_imagen(enc) == ["experiments/media-lab/assets/LAB-F01-001/ENC-20260915-003-v1.png",
+                                  "experiments/media-lab/assets/LAB-F01-001/ENC-20260915-003-v2.png"],
+          "una ruta por variante dentro de destino_assets")
+    p = R.prompt_para(enc)
+    check("codex-generado --encargo ENC-20260915-003 --owner codex-exec" in p, "el prompt usa lab.py para marcar generado")
+    check("adb" in p and "No publiques" in p, "el prompt prohíbe publicar y usar el teléfono")
+    cmd = R.comando(p, pathlib.Path("/tmp/salida.json"))
+    check(cmd[:2] == [R.CODEX, "exec"] and cmd[cmd.index("-s") + 1] == "workspace-write"
+          and "--output-schema" in cmd and cmd[-1] == p, "comando con sandbox workspace-write y esquema")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        check(R.validar(enc, raiz) == [f"estado pedido, se esperaba generado"], "no valida un encargo sin generar")
+        ruta = raiz / "experiments/media-lab/assets/LAB-F01-001/ENC-20260915-003-v1.png"
+        ruta.parent.mkdir(parents=True)
+        ruta.write_bytes(b"png falso")
+        E.tomar(enc, "codex-exec", t)
+        E.marcar_generado(enc, "codex-exec", [{"ruta": str(ruta.relative_to(raiz)),
+                                              "sha256": hashlib.sha256(b"png falso").hexdigest(),
+                                              "ancho": 1, "alto": 1}], t)
+        check(R.validar(enc, raiz) == [], "valida cuando el archivo existe y el hash coincide")
+        ruta.write_bytes(b"cambiado")
+        check(any("hash" in e for e in R.validar(enc, raiz)), "detecta un archivo cambiado")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -963,6 +1000,7 @@ SECCIONES = [
     seccion_seleccion,
     seccion_manifiesto_y_cerrojo,
     seccion_interfaz,
+    seccion_codex,
 ]
 
 
