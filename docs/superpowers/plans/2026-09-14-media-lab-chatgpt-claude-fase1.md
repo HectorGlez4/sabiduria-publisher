@@ -2247,6 +2247,13 @@ Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe
 - Prompt de Codex: si `codex-generado` falla, `codex-fallo`; solo se comitean imágenes de encargos generados. El usuario debe volver a pegarlo después de este commit.
 - Pruebas en proceso de todos los comandos sin teléfono y de `generar` con un Codex falso (éxito, cambios ajenos → 6, tiempo agotado).
 
+### Task 10e: Menores de la revisión de 10d (antes de la tarea 14)
+
+- [ ] `observacion_de_volcado` devuelve el texto y los bounds del aviso de fallo que coincidió, y `compartir` los copia en `avisos`, para conciliar en segundos un `fallido` provocado por un texto corto ajeno (p. ej. un botón «Réessayer» del feed). Opcional: un texto corto que no está junto a un aviso solo corta la observación si aparece en dos volcados válidos seguidos.
+- [ ] `generar`: contador aparte `no_lanzados` en el encargo; cada fallo de `Popen` o señal antes del lanzamiento lo incrementa y, al llegar a 3, el encargo pasa a `bloqueado` con nota (evita bucles infinitos si `Popen` falla siempre igual, p. ej. E2BIG por un prompt demasiado largo en argv).
+
+> **Hecha en `a93094f` y `cb0220a`** la tarea 10d (incluye `marcar_fallo(bloquear=)`: un encargo `generando` con cambios ajenos queda `bloqueado`).
+
 ### Task 10d: Menores de la revisión de 10b
 
 - [ ] `observacion_de_volcado(xml, boton_bounds, banners_previos)`: conservar los bounds del aviso «Publication sur…» vistos en volcados anteriores y contar un texto de fallo junto a ellos; contar también un texto de fallo corto (≤ 80 caracteres) en cualquier parte de la pantalla de Instagram. Actualizar la prueba que hoy da por bueno no detectar un aviso bajo 600 px.
