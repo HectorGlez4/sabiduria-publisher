@@ -956,6 +956,16 @@ def seccion_interfaz() -> None:
           "los sustitutos se restauran aunque el escenario falle")
 
 
+def _rechaza_familia(E, t) -> bool:
+    try:
+        E.nuevo("ENC-20260915-010", coverage_cell_ids=["C"], family_id="LAB X;rm", brief_path="b",
+                do_not_use=[], formato={}, prompt="p", restricciones=[],
+                destino_assets="experiments/media-lab/assets/LAB X;rm", ahora=t)
+        return False
+    except E.EncargoError:
+        return True
+
+
 def seccion_codex() -> None:
     print("\n7. Rescate con codex exec")
     import hashlib
@@ -973,24 +983,71 @@ def seccion_codex() -> None:
           "una ruta por variante dentro de destino_assets")
     p = R.prompt_para(enc)
     check("codex-generado --encargo ENC-20260915-003 --owner codex-exec" in p, "el prompt usa lab.py para marcar generado")
-    check("adb" in p and "No publiques" in p, "el prompt prohíbe publicar y usar el teléfono")
+    check("No uses adb" in p and "No publiques" in p, "el prompt prohíbe publicar y usar el teléfono")
+    check("<<<ENCARGO" in p and "ENCARGO>>>" in p and "- sin texto" in p and "- no inventar inscripciones" in p,
+          "el encargo va delimitado y con sus restricciones en viñetas")
     cmd = R.comando(p, pathlib.Path("/tmp/salida.json"))
     check(cmd[:2] == [R.CODEX, "exec"] and cmd[cmd.index("-s") + 1] == "workspace-write"
           and "--output-schema" in cmd and cmd[-1] == p, "comando con sandbox workspace-write y esquema")
 
+    from PIL import Image
+
+    def png(ruta: pathlib.Path, ancho: int, alto: int, tipo: str = "PNG") -> str:
+        ruta.parent.mkdir(parents=True, exist_ok=True)
+        Image.new("RGB", (ancho, alto), (120, 90, 60)).save(ruta, tipo)
+        return hashlib.sha256(ruta.read_bytes()).hexdigest()
+
+    def generado(raiz: pathlib.Path, imagenes: list[dict]) -> dict:
+        e = E.nuevo("ENC-20260915-003", coverage_cell_ids=["C1"], family_id="LAB-F01-001", brief_path="b",
+                    do_not_use=[], formato={"ancho": 1080, "alto": 1350}, prompt="Un astrolabio",
+                    restricciones=["sin texto"], destino_assets="experiments/media-lab/assets/LAB-F01-001",
+                    ahora=t, variantes=2)
+        E.tomar(e, "codex-exec", t)
+        E.marcar_generado(e, "codex-exec", imagenes, t)
+        return e
+
+    base = "experiments/media-lab/assets/LAB-F01-001/"
     with tempfile.TemporaryDirectory() as d:
         raiz = pathlib.Path(d)
-        check(R.validar(enc, raiz) == [f"estado pedido, se esperaba generado"], "no valida un encargo sin generar")
-        ruta = raiz / "experiments/media-lab/assets/LAB-F01-001/ENC-20260915-003-v1.png"
-        ruta.parent.mkdir(parents=True)
-        ruta.write_bytes(b"png falso")
-        E.tomar(enc, "codex-exec", t)
-        E.marcar_generado(enc, "codex-exec", [{"ruta": str(ruta.relative_to(raiz)),
-                                              "sha256": hashlib.sha256(b"png falso").hexdigest(),
-                                              "ancho": 1, "alto": 1}], t)
-        check(R.validar(enc, raiz) == [], "valida cuando el archivo existe y el hash coincide")
-        ruta.write_bytes(b"cambiado")
-        check(any("hash" in e for e in R.validar(enc, raiz)), "detecta un archivo cambiado")
+        check(R.validar(enc, raiz) == ["estado pedido, se esperaba generado"], "no valida un encargo sin generar")
+        v1 = raiz / (base + "ENC-20260915-003-v1.png")
+        e_ok = generado(raiz, [{"ruta": base + "ENC-20260915-003-v1.png", "sha256": png(v1, 768, 1152),
+                                "ancho": 768, "alto": 1152}])
+        check(R.validar(e_ok, raiz) == [], "valida un PNG pedido, íntegro, del tamaño registrado y vertical")
+        v1.write_bytes(b"cambiado")
+        check(any("hash" in x for x in R.validar(e_ok, raiz)), "detecta un archivo cambiado")
+        v1.unlink()
+        check(any("no existe" in x for x in R.validar(e_ok, raiz)), "detecta un archivo que falta")
+
+        otra = raiz / (base + "ENC-20260915-099-v1.png")
+        e_ajena = generado(raiz, [{"ruta": base + "ENC-20260915-099-v1.png", "sha256": png(otra, 768, 1152),
+                                   "ancho": 768, "alto": 1152}])
+        check(any("ruta no pedida" in x for x in R.validar(e_ajena, raiz)),
+              "rechaza una imagen registrada en una ruta que no se pidió")
+
+        jpg = raiz / (base + "ENC-20260915-003-v2.png")
+        e_jpg = generado(raiz, [{"ruta": base + "ENC-20260915-003-v2.png", "sha256": png(jpg, 768, 1152, "JPEG"),
+                                 "ancho": 768, "alto": 1152}])
+        check(any("no es PNG" in x for x in R.validar(e_jpg, raiz)), "rechaza un JPEG guardado como .png")
+
+        pequena = raiz / (base + "ENC-20260915-003-v1.png")
+        e_peq = generado(raiz, [{"ruta": base + "ENC-20260915-003-v1.png", "sha256": png(pequena, 300, 400),
+                                 "ancho": 300, "alto": 400}])
+        check(any("demasiado pequeña" in x for x in R.validar(e_peq, raiz)), "rechaza una imagen diminuta")
+
+        e_tam = generado(raiz, [{"ruta": base + "ENC-20260915-003-v1.png", "sha256": png(pequena, 768, 1152),
+                                 "ancho": 1024, "alto": 1536}])
+        check(any("mide 768x1152" in x for x in R.validar(e_tam, raiz)), "detecta dimensiones distintas de las registradas")
+
+        apaisada = raiz / (base + "ENC-20260915-003-v2.png")
+        e_hor = generado(raiz, [{"ruta": base + "ENC-20260915-003-v2.png", "sha256": png(apaisada, 1152, 768),
+                                 "ancho": 1152, "alto": 768}])
+        check(any("orientación" in x for x in R.validar(e_hor, raiz)), "rechaza una imagen apaisada para un formato vertical")
+
+        vacio = dict(e_ok, imagenes=[])
+        check("sin imágenes registradas" in R.validar(vacio, raiz), "un generado sin imágenes no valida")
+
+    check(E.EncargoError is not None and _rechaza_familia(E, t), "family_id con espacios o ; se rechaza")
 
 
 SECCIONES = [

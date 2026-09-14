@@ -18,6 +18,7 @@ MAX_EN_COLA = 6
 DUENOS_GENERACION = ("codex-heartbeat", "codex-exec")
 
 _ID = re.compile(r"ENC-(\d{8})-(\d{3,})")
+_FAMILIA = re.compile(r"[A-Za-z0-9_-]+")
 
 
 class EncargoError(ValueError):
@@ -41,8 +42,8 @@ def nuevo(encargo_id: str, *, coverage_cell_ids: list[str], family_id: str, brie
         raise EncargoError("encargo_id debe empezar por ENC-")
     if not 1 <= variantes <= 2:
         raise EncargoError("variantes debe ser 1 o 2")
-    if "/" in family_id or family_id in ("", ".", ".."):
-        raise EncargoError("family_id no válido")
+    if not _FAMILIA.fullmatch(family_id):
+        raise EncargoError("family_id no válido: solo letras, dígitos, guion y guion bajo")
     destino = destino_assets.rstrip("/")
     if destino != f"experiments/media-lab/assets/{family_id}":
         raise EncargoError(f"destino_assets debe ser experiments/media-lab/assets/{family_id}")
