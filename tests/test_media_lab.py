@@ -1800,7 +1800,9 @@ class LabAislado:
 
     def __enter__(self) -> "LabAislado":
         nuevos = {"ROOT": self.raiz, "ENCARGOS": self.raiz / "encargos", "LOCK": self.raiz / ".ventana.lock",
-                  "EVIDENCIA": self.raiz / "evidence", "COBERTURA": self.raiz / "coverage.json"}
+                  "EVIDENCIA": self.raiz / "evidence", "COBERTURA": self.raiz / "coverage.json",
+                  "ASSETS_DIR": self.raiz, "TURNOS": self.raiz / "turnos.json",
+                  "TURNO_HECHO": self.raiz / ".turno-hecho"}
         for nombre, valor in nuevos.items():
             self.viejos[nombre] = getattr(self.lab, nombre, self._FALTA)
             setattr(self.lab, nombre, valor)
@@ -1939,11 +1941,11 @@ def seccion_cli_en_proceso() -> None:
 
         print("   · encargo-nuevo y cola")
         with entorno() as (lab, raiz):
-            for n in range(1, 7):
+            for n in range(1, 11):
                 guardar_encargo(raiz, n, [f"X{n}"])
             codigo, datos, _ = nuevo(lab, "C-FB-API")
-            check(codigo == 2 and "cola" in error(datos), f"con 6 en cola el 7.º encargo sale con 2 ({codigo}, {datos})")
-            check(len(list((raiz / "encargos").glob("ENC-*.json"))) == 6, "el encargo rechazado por la cola no se guarda")
+            check(codigo == 2 and "cola" in error(datos), f"con 10 en cola el 11.º encargo sale con 2 ({codigo}, {datos})")
+            check(len(list((raiz / "encargos").glob("ENC-*.json"))) == 10, "el encargo rechazado por la cola no se guarda")
 
         with entorno() as (lab, raiz):
             for celdas, label in ((["C-NADA"], "celda que no existe"), (["C-PUB"], "celda ya publicada"),
@@ -2545,6 +2547,176 @@ def seccion_generar() -> None:
             ajeno_sin_generar.unlink(missing_ok=True)
 
 
+def seccion_render() -> None:
+    print("\n12. render y tarjeta: máster determinista en proceso, sin tocar experiments/media-lab/assets/ del repo")
+    import hashlib
+    import json
+    import tempfile
+    from datetime import datetime, timezone
+    from PIL import Image
+    from labkit import encargos as E
+
+    t = datetime.now(timezone.utc)
+
+    def encargo_aprobado(raiz, familia, eid, formato, ancho_img=None, alto_img=None):
+        ancho_img = ancho_img or formato["ancho"]
+        alto_img = alto_img or formato["alto"]
+        enc = E.nuevo(eid, coverage_cell_ids=["X"], family_id=familia, brief_path="b.md", do_not_use=[],
+                      formato=formato, prompt="Un dibujo de prueba", restricciones=["sin texto"],
+                      destino_assets=f"experiments/media-lab/assets/{familia}", ahora=t)
+        ruta_img = f"experiments/media-lab/assets/{familia}/{eid}-v1.png"
+        p = raiz / ruta_img
+        p.parent.mkdir(parents=True, exist_ok=True)
+        Image.new("RGB", (ancho_img, alto_img), (90, 96, 102)).save(p, "PNG")
+        imagen = {"ruta": ruta_img, "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
+                  "ancho": ancho_img, "alto": alto_img}
+        E.tomar(enc, "codex-heartbeat", t)
+        E.marcar_generado(enc, "codex-heartbeat", [imagen], t)
+        E.revisar(enc, aprobado=True, motivo="prueba", ahora=t)
+        E.guardar(raiz / "encargos" / f"{eid}.json", enc)
+        return eid
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        (raiz / "encargos").mkdir()
+        (raiz / "coverage.json").write_text(json.dumps({"cells": []}), encoding="utf-8")
+        with LabAislado(raiz) as lab:
+            eid_feed = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-001", {"ancho": 1080, "alto": 1350})
+            eid_story = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-002", {"ancho": 1080, "alto": 1920})
+
+            codigo, datos, err = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                     "--titular", "UNO|DOS|TRES", "--subtitulo", "Subtítulo",
+                                     "--salida", "feed.jpg")
+            destino_feed = raiz / "experiments/media-lab/assets/LAB-RENDER-001/feed.jpg"
+            check(codigo == 0 and campo(datos, "ok") is True and campo(datos, "ancho") == 1080
+                  and campo(datos, "alto") == 1350 and destino_feed.is_file()
+                  and campo(datos, "sha256") == hashlib.sha256(destino_feed.read_bytes()).hexdigest(),
+                  f"render feed produce un JPEG 1080x1350 con su sha256 ({codigo}, {datos or err})")
+
+            codigo, datos, err = lab("render", "--encargo", eid_story, "--variante", "1", "--formato", "story",
+                                     "--titular", "UNO|DOS|TRES", "--subtitulo", "Subtítulo",
+                                     "--aviso", "PRESENTADORA FICTICIA", "--salida", "story.jpg")
+            destino_story = raiz / "experiments/media-lab/assets/LAB-RENDER-001/story.jpg"
+            check(codigo == 0 and campo(datos, "ancho") == 1080 and campo(datos, "alto") == 1920
+                  and destino_story.is_file(), f"render story produce un JPEG 1080x1920 ({codigo}, {datos or err})")
+
+            eid_pedido = "ENC-20260101-099"
+            enc_pedido = E.nuevo(eid_pedido, coverage_cell_ids=["X"], family_id="LAB-RENDER-001", brief_path="b.md",
+                                 do_not_use=[], formato={"ancho": 1080, "alto": 1350}, prompt="Un dibujo",
+                                 restricciones=[], destino_assets="experiments/media-lab/assets/LAB-RENDER-001",
+                                 ahora=t)
+            E.guardar(raiz / "encargos" / f"{eid_pedido}.json", enc_pedido)
+            codigo, datos, _ = lab("render", "--encargo", eid_pedido, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "no.jpg")
+            check(codigo == 2, f"render rechaza un encargo en pedido ({codigo}, {datos})")
+
+            eid_hash = encargo_aprobado(raiz, "LAB-RENDER-001", "ENC-20260101-003", {"ancho": 1080, "alto": 1350})
+            ruta_enc_hash = raiz / "encargos" / f"{eid_hash}.json"
+            enc_hash = json.loads(ruta_enc_hash.read_text(encoding="utf-8"))
+            enc_hash["imagenes"][0]["sha256"] = "0" * 64
+            ruta_enc_hash.write_text(json.dumps(enc_hash), encoding="utf-8")
+            codigo, datos, _ = lab("render", "--encargo", eid_hash, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "hash.jpg")
+            check(codigo == 2 and campo(datos, "tipo") == "ImagenNoValida",
+                  f"render rechaza un sha256 alterado ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS", "--subtitulo", "Sub", "--salida", "dos-lineas.jpg")
+            check(codigo == 2, f"render exige exactamente 3 líneas en --titular ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "story",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "mal-formato.jpg")
+            check(codigo == 2, f"render rechaza un --formato que no coincide con el del encargo ({codigo}, {datos})")
+
+            for salida, motivo in (("sub/archivo.jpg", "contiene «/»"), ("../fuera.jpg", "contiene «..»")):
+                codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                       "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", salida)
+                check(codigo == 2, f"render rechaza --salida que {motivo} ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("render", "--encargo", eid_feed, "--variante", "1", "--formato", "feed",
+                                   "--titular", "UNO|DOS|TRES", "--subtitulo", "Sub", "--salida", "feed.jpg")
+            check(codigo == 2, f"render no pisa un máster ya existente ({codigo}, {datos})")
+
+        print("   · tarjeta")
+        with LabAislado(raiz) as lab:
+            codigo, datos, err = lab("tarjeta", "--familia", "LAB-CARD-001",
+                                     "--cita", "Una cita breve para la prueba de la tarjeta.",
+                                     "--autor", "Autor de Prueba", "--salida", "card.png")
+            destino_card = raiz / "experiments/media-lab/assets/LAB-CARD-001/card.png"
+            check(codigo == 0 and campo(datos, "ok") is True and campo(datos, "ancho") == 1080
+                  and campo(datos, "alto") == 1350 and destino_card.is_file(),
+                  f"tarjeta produce un PNG 1080x1350 ({codigo}, {datos or err})")
+            codigo, datos, _ = lab("tarjeta", "--familia", "LAB CARD 002", "--cita", "Otra cita.",
+                                   "--autor", "Autor", "--salida", "otra.png")
+            check(codigo == 2, f"tarjeta rechaza una familia con espacios ({codigo}, {datos})")
+
+
+def seccion_turno() -> None:
+    print("\n13. turno: ventanas cada cada_horas horas alrededor del reloj")
+    import json
+    import tempfile
+    from labkit import turnos as T
+
+    def config(d, ancla="2026-09-15T00:40:00+02:00", cada_horas=5, tolerancia_min=30):
+        (pathlib.Path(d) / "turnos.json").write_text(
+            json.dumps({"ancla": ancla, "cada_horas": cada_horas, "tolerancia_min": tolerancia_min}),
+            encoding="utf-8")
+
+    print("   · lógica pura (labkit.turnos)")
+    from datetime import datetime
+    ancla = datetime.fromisoformat("2026-09-15T00:40:00+02:00")
+    casos = [
+        ("2026-09-15T00:40:00+02:00", True, "toca"),
+        ("2026-09-15T05:40:00+02:00", True, "toca"),
+        ("2026-09-15T01:40:00+02:00", False, "fuera del turno"),
+        ("2026-09-15T05:39:00+02:00", False, "fuera del turno"),
+        ("2026-09-15T06:00:00+02:00", True, "toca"),
+        ("2026-09-15T06:11:00+02:00", False, "fuera del turno"),
+    ]
+    for iso, toca_esperado, motivo_esperado in casos:
+        r = T.turno_actual(datetime.fromisoformat(iso), ancla, 5, 30, None)
+        check(r["toca"] == toca_esperado and r["motivo"] == motivo_esperado,
+              f"{iso} → toca={toca_esperado} ({r})")
+    r = T.turno_actual(datetime.fromisoformat("2026-09-15T00:40:00+02:00"), ancla, 5, 30,
+                       ultimo_atendido="2026-09-14T22:40:00+00:00")
+    check(r["toca"] is False and r["motivo"] == "turno ya atendido", f"un turno ya atendido no vuelve a tocar ({r})")
+    r = T.turno_actual(datetime.fromisoformat("2026-09-16T01:40:00+02:00"), ancla, 5, 30, None)
+    check(r["toca"] is True, "un día después la hora local ha girado 1h (01:40 toca)")
+    r = T.turno_actual(datetime.fromisoformat("2026-09-16T00:40:00+02:00"), ancla, 5, 30, None)
+    check(r["toca"] is False, "un día después 00:40 ya no coincide con ningún turno")
+    antes = T.turno_actual(datetime.fromisoformat("2026-10-25T00:00:00+00:00"), ancla, 5, 30, None)
+    despues = T.turno_actual(datetime.fromisoformat("2026-10-25T06:00:00+00:00"), ancla, 5, 30, None)
+    check((despues["turno_inicio"] - antes["turno_inicio"]).total_seconds() % (5 * 3600) == 0,
+          "el cruce del cambio de hora del 25 de octubre mantiene turnos de 5 horas reales")
+
+    print("   · CLI lab.py turno")
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        config(raiz)
+        with LabAislado(raiz) as lab:
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00")
+            check(codigo == 0 and campo(datos, "toca") is True, f"toca en el ancla exacta ({codigo}, {datos})")
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T01:40:00+02:00")
+            check(codigo == 0 and campo(datos, "toca") is False, f"no toca una hora después ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:40:00+02:00", "--marcar")
+            check(codigo == 0 and campo(datos, "marcado") is True and (raiz / ".turno-hecho").is_file(),
+                  f"--marcar escribe .turno-hecho cuando toca ({codigo}, {datos})")
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T00:45:00+02:00")
+            check(codigo == 0 and campo(datos, "toca") is False and campo(datos, "motivo") == "turno ya atendido",
+                  f"una segunda llamada ya no toca: turno ya atendido ({codigo}, {datos})")
+            codigo, datos, _ = lab("turno", "--ahora", "2026-09-15T02:00:00+02:00", "--marcar")
+            check(codigo == 2, f"--marcar fuera de turno sale con 2 ({codigo}, {datos})")
+
+        with LabAislado(raiz) as lab:
+            (raiz / "turnos.json").write_text("{ no es json", encoding="utf-8")
+            codigo, datos, _ = lab("turno")
+            check(codigo == 2, f"turnos.json inválido sale con 2 ({codigo}, {datos})")
+            (raiz / "turnos.json").write_text(json.dumps({"ancla": "2026-09-15T00:40:00+02:00"}), encoding="utf-8")
+            codigo, datos, _ = lab("turno")
+            check(codigo == 2, f"turnos.json incompleto sale con 2 ({codigo}, {datos})")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -2557,6 +2729,8 @@ SECCIONES = [
     seccion_guardia,
     seccion_cli_en_proceso,
     seccion_generar,
+    seccion_render,
+    seccion_turno,
 ]
 
 

@@ -29,17 +29,24 @@ import sys
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
+from zoneinfo import ZoneInfo
 
 LAB = Path(__file__).resolve().parent
 ROOT = LAB.parents[1]
 sys.path.insert(0, str(LAB))
+sys.path.insert(0, str(ROOT / "src" / "render"))
 
-from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, seleccion  # noqa: E402
+from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, seleccion, turnos  # noqa: E402
 
 ENCARGOS = Path(os.environ.get("LAB_ENCARGOS_DIR", LAB / "encargos"))
 COBERTURA = Path(os.environ.get("LAB_COVERAGE", LAB / "coverage.json"))
+# Solo para render/tarjeta: dónde escriben los másteres. Por defecto ROOT (el repo real);
+# las pruebas lo redirigen a una carpeta temporal para no ensuciar experiments/media-lab/assets/.
+ASSETS_DIR = Path(os.environ.get("LAB_ASSETS_DIR", ROOT))
 EVIDENCIA = LAB / "evidence" / "android"
 LOCK = LAB / ".ventana.lock"
+TURNOS = Path(os.environ.get("LAB_TURNOS", LAB / "turnos.json"))
+TURNO_HECHO = Path(os.environ.get("LAB_TURNO_HECHO", LAB / ".turno-hecho"))
 
 DUENOS_VENTANA = ("programada", "manual")
 ESTADOS_ACTIVOS = ("pedido", "generando", "generado", "aprobado")
@@ -49,6 +56,8 @@ SENALES = (signal.SIGTERM, signal.SIGHUP, signal.SIGINT)
 ASSETS = "experiments/media-lab/assets/"
 EXTENSIONES_SUBIDA = (".png", ".jpg", ".jpeg")
 _NOMBRE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+_FAMILIA = re.compile(r"[A-Za-z0-9_-]+")
+EXTENSIONES_MASTER = (".jpg", ".jpeg", ".png")
 
 
 class ArgumentoNoValido(ValueError):
@@ -94,6 +103,41 @@ def _relativa_sin_salidas(rel: str, base: str, que: str) -> Path:
     return p
 
 
+def _rgb(valor: str) -> tuple[int, int, int]:
+    """Type de argparse para --panel-rgb/--accent-rgb: no depende de Pillow, así que construir()
+    no obliga a tenerlo instalado solo para montar los subcomandos."""
+    partes = valor.split(",")
+    if len(partes) != 3:
+        raise argparse.ArgumentTypeError("el color debe ser R,G,B")
+    try:
+        rgb = tuple(int(p) for p in partes)
+    except ValueError:
+        raise argparse.ArgumentTypeError("el color debe ser R,G,B con enteros") from None
+    if any(v < 0 or v > 255 for v in rgb):
+        raise argparse.ArgumentTypeError("el color debe ser R,G,B con valores de 0 a 255")
+    return rgb
+
+
+def _formato_de_encargo(formato: dict) -> str | None:
+    """«feed» si alto/ancho ≈ 1.25 (1080x1350), «story» si ≈ 1.78 (1080x1920), si no None."""
+    ancho, alto = (formato or {}).get("ancho"), (formato or {}).get("alto")
+    if not ancho or not alto:
+        return None
+    ratio = alto / ancho
+    if abs(ratio - 1.25) < 0.03:
+        return "feed"
+    if abs(ratio - 16 / 9) < 0.03:
+        return "story"
+    return None
+
+
+def _nombre_archivo_simple(nombre: str, extensiones: tuple[str, ...], que: str) -> None:
+    _exigir(bool(nombre) and "/" not in nombre and ".." not in nombre and nombre not in (".", ".."),
+            f"{que} debe ser un nombre de archivo simple, sin «/» ni «..»: {nombre!r}")
+    _exigir(Path(nombre).suffix.lower() in extensiones,
+            f"{que} debe terminar en {' o '.join(extensiones)}: {nombre!r}")
+
+
 # ── comprobación previa ─────────────────────────────────────────────────────
 
 def cmd_preflight(a) -> int:
@@ -126,6 +170,66 @@ def cmd_lock_soltar(a) -> int:
     soltado = cerrojo.soltar(LOCK, a.dueno)
     emitir({"cerrojo": "soltado" if soltado else "no era tuyo o no existía"})
     return 0 if soltado else 3
+
+
+# ── turno ────────────────────────────────────────────────────────────────────
+
+def _turno_config(ruta: Path) -> tuple[datetime, int, int]:
+    try:
+        datos = json.loads(ruta.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        raise ArgumentoNoValido(f"{ruta.name} ilegible: {type(e).__name__}: {e}") from e
+    _exigir(isinstance(datos, dict), f"{ruta.name} debe ser un objeto JSON")
+    faltan = {"ancla", "cada_horas", "tolerancia_min"} - set(datos)
+    _exigir(not faltan, f"{ruta.name} incompleto: faltan {', '.join(sorted(faltan))}")
+    try:
+        ancla = datetime.fromisoformat(datos["ancla"])
+    except (TypeError, ValueError) as e:
+        raise ArgumentoNoValido(f"ancla no es una fecha ISO 8601 válida: {datos.get('ancla')!r}") from e
+    _exigir(ancla.tzinfo is not None, "ancla necesita zona horaria")
+    cada_horas, tolerancia_min = datos["cada_horas"], datos["tolerancia_min"]
+    _exigir(_entero_positivo(cada_horas), "cada_horas debe ser un entero positivo")
+    _exigir(_entero_positivo(tolerancia_min), "tolerancia_min debe ser un entero positivo")
+    return ancla, cada_horas, tolerancia_min
+
+
+def _entero_positivo(valor: object) -> bool:
+    return isinstance(valor, int) and not isinstance(valor, bool) and valor > 0
+
+
+def cmd_turno(a) -> int:
+    ancla, cada_horas, tolerancia_min = _turno_config(TURNOS)
+    if a.ahora:
+        try:
+            t = datetime.fromisoformat(a.ahora)
+        except ValueError as e:
+            raise ArgumentoNoValido(f"--ahora no es una fecha ISO 8601: {a.ahora!r}") from e
+        _exigir(t.tzinfo is not None, "--ahora necesita zona horaria")
+    else:
+        t = ahora()
+    ultimo = TURNO_HECHO.read_text(encoding="utf-8").strip() if TURNO_HECHO.is_file() else None
+    r = turnos.turno_actual(t, ancla, cada_horas, tolerancia_min, ultimo)
+    madrid = ZoneInfo("Europe/Madrid")
+
+    def _fechas(clave: str, valor: datetime) -> None:
+        salida[clave] = valor.isoformat(timespec="seconds")
+        salida[f"{clave}_madrid"] = valor.astimezone(madrid).isoformat(timespec="seconds")
+
+    salida: dict = {"toca": r["toca"], "motivo": r["motivo"],
+                    "minutos_desde_inicio": round(r["minutos_desde_inicio"], 3)}
+    _fechas("turno_inicio", r["turno_inicio"])
+    _fechas("siguiente", r["siguiente"])
+    _fechas("ahora", r["ahora"])
+    if a.marcar:
+        if not r["toca"]:
+            return _rechazo("TurnoNoValido", [f"no se marca: {r['motivo']}"])
+        tmp = TURNO_HECHO.with_name(f".{TURNO_HECHO.name}.tmp")
+        TURNO_HECHO.parent.mkdir(parents=True, exist_ok=True)
+        tmp.write_text(salida["turno_inicio"], encoding="utf-8")
+        os.replace(tmp, TURNO_HECHO)
+        salida["marcado"] = True
+    emitir(salida)
+    return 0
 
 
 # ── encargos (Claude) ───────────────────────────────────────────────────────
@@ -204,6 +308,57 @@ def cmd_seleccionar(a) -> int:
     cov = json.loads(COBERTURA.read_text(encoding="utf-8"))
     emitir(seleccion.elegir(cov["cells"], [e for _, e in encargos.listar(ENCARGOS)],
                             max_celdas=a.max, telefono_listo=not a.sin_telefono))
+    return 0
+
+
+# ── render (Claude) ─────────────────────────────────────────────────────────
+
+def cmd_render(a) -> int:
+    """Máster con texto determinista sobre una imagen ya aprobada. Nunca reutiliza el máster
+    de otro encargo: la imagen de origen sale de las imágenes registradas de ESTE encargo."""
+    import render_overlay
+    from PIL import Image
+    enc = encargos.cargar(ruta_encargo(a.encargo))
+    if enc["estado"] not in ("aprobado", "usado"):
+        return _rechazo("ImagenNoValida", [f"{a.encargo} no está aprobado ni usado (estado {enc['estado']})"])
+    if not (1 <= a.variante <= len(enc["imagenes"])):
+        return _rechazo("ImagenNoValida", [f"la variante {a.variante} no existe en {a.encargo}"])
+    imagen = enc["imagenes"][a.variante - 1]
+    origen = ROOT / imagen["ruta"]
+    if origen.is_symlink() or not origen.is_file() or sha256(origen) != imagen["sha256"]:
+        return _rechazo("ImagenNoValida",
+                        [f"la imagen de origen no coincide con el hash registrado: {imagen['ruta']}"])
+    lineas = a.titular.split("|")
+    _exigir(len(lineas) == 3, "--titular debe tener exactamente 3 líneas separadas por «|»")
+    esperado = _formato_de_encargo(enc["formato"])
+    _exigir(esperado == a.formato,
+            f"--formato {a.formato!r} no coincide con el formato del encargo {enc['formato']} (esperado {esperado!r})")
+    _nombre_archivo_simple(a.salida, EXTENSIONES_MASTER, "--salida")
+    destino = ASSETS_DIR / enc["destino_assets"] / a.salida
+    _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
+    render_overlay.render(origen, destino, lineas, a.subtitulo, a.panel_rgb, a.accent_rgb, a.formato,
+                          a.aviso or "")
+    with Image.open(destino) as im:
+        ancho, alto = im.size
+    emitir({"ok": True, "master": f"{enc['destino_assets']}/{a.salida}", "sha256": sha256(destino),
+            "ancho": ancho, "alto": alto, "formato": a.formato})
+    return 0
+
+
+def cmd_tarjeta(a) -> int:
+    """Tarjeta de cita (src/render/quote_card.py), para encargos que no llevan foto de fondo."""
+    import quote_card
+    from PIL import Image
+    _exigir(bool(_FAMILIA.fullmatch(a.familia)),
+            f"--familia no válida: solo letras, dígitos, guion y guion bajo: {a.familia!r}")
+    _nombre_archivo_simple(a.salida, (".png",), "--salida")
+    destino = ASSETS_DIR / ASSETS / a.familia / a.salida
+    _exigir(not destino.exists(), f"--salida ya existe: {a.salida}")
+    quote_card.make_card(a.cita, a.autor, str(destino), variant=a.variante)
+    with Image.open(destino) as im:
+        ancho, alto = im.size
+    emitir({"ok": True, "tarjeta": f"{ASSETS}{a.familia}/{a.salida}", "sha256": sha256(destino),
+            "ancho": ancho, "alto": alto})
     return 0
 
 
@@ -639,6 +794,11 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
     p.set_defaults(func=cmd_lock_soltar)
 
+    p = sub.add_parser("turno")
+    p.add_argument("--ahora", help="fecha ISO 8601 con zona, solo para pruebas")
+    p.add_argument("--marcar", action="store_true", help="anota este turno como atendido si toca")
+    p.set_defaults(func=cmd_turno)
+
     p = sub.add_parser("encargo-nuevo")
     p.add_argument("--cell", action="append", required=True)
     p.add_argument("--family", required=True)
@@ -666,6 +826,25 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--max", type=int, default=2)
     p.add_argument("--sin-telefono", action="store_true", help="descarta celdas android_native")
     p.set_defaults(func=cmd_seleccionar)
+
+    p = sub.add_parser("render")
+    p.add_argument("--encargo", required=True)
+    p.add_argument("--variante", type=int, default=1)
+    p.add_argument("--formato", choices=("feed", "story"), required=True)
+    p.add_argument("--titular", required=True, help="tres líneas separadas por |")
+    p.add_argument("--subtitulo", required=True)
+    p.add_argument("--aviso", default="", help='p. ej. "PRESENTADORA FICTICIA"')
+    p.add_argument("--panel-rgb", type=_rgb, default=(5, 39, 73))
+    p.add_argument("--accent-rgb", type=_rgb, default=(176, 220, 236))
+    p.add_argument("--salida", required=True, help="nombre de archivo .jpg/.jpeg/.png, sin ruta")
+    p.set_defaults(func=cmd_render)
+    p = sub.add_parser("tarjeta")
+    p.add_argument("--familia", required=True)
+    p.add_argument("--cita", required=True)
+    p.add_argument("--autor", required=True)
+    p.add_argument("--salida", required=True, help="nombre de archivo .png, sin ruta")
+    p.add_argument("--variante", choices=("cream", "gold"), default="cream")
+    p.set_defaults(func=cmd_tarjeta)
 
     p = sub.add_parser("codex-tomar")
     p.add_argument("--owner", choices=encargos.DUENOS_GENERACION, required=True)

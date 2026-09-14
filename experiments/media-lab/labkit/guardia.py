@@ -15,7 +15,7 @@ from pathlib import Path, PurePosixPath
 # Siempre vigilados aunque git no los muestre: secretos, permisos de Claude, configuración
 # de git y el cerrojo de ventana. Si faltan, su huella es «-».
 FIJOS = (".env", ".claude/settings.local.json", ".claude/settings.json", ".git/config",
-         "experiments/media-lab/.ventana.lock")
+         "experiments/media-lab/.ventana.lock", "experiments/media-lab/.turno-hecho")
 # Finder los crea solo con abrir una carpeta: no dicen nada de Codex.
 IGNORADOS = {".DS_Store"}
 

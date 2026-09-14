@@ -14,7 +14,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 
 LOCK_MINUTOS = 30
-MAX_EN_COLA = 6
+MAX_EN_COLA = 10
 DUENOS_GENERACION = ("codex-heartbeat", "codex-exec")
 MAX_NO_LANZADOS = 3  # no-lanzamientos de Codex SEGUIDOS (señal, fallo de Popen o error antes de
                      # lanzar) antes de bloquear; la racha se corta en cuanto Codex sí llega a

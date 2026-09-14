@@ -6,3 +6,4 @@ __pycache__/
 content/_migrar/
 assets/*.mp4
 experiments/media-lab/.ventana.lock
+experiments/media-lab/.turno-hecho
