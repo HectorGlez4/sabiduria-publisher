@@ -164,6 +164,16 @@ def seccion_encargos() -> None:
     E.tomar(e4, "codex-exec", t0)
     E.marcar_fallo(e4, "codex-exec", "tiempo agotado", t0)
     check(e4["estado"] == "pedido" and e4["lock_owner"] is None, "un fallo con intentos restantes vuelve a pedido")
+    e4b = base()
+    E.tomar(e4b, "codex-exec", t0)
+    try:
+        E.marcar_fallo(e4b, "codex-exec", "Codex cambió .env", t0, bloquear=True)
+    except TypeError:
+        pass
+    check(e4b["estado"] == "bloqueado" and e4b["lock_owner"] is None and e4b["lock_expira"] is None
+          and len(e4b["intentos"]) == 1 and e4b["intentos"][0]["resultado"] == "fallo"
+          and e4b["intentos"][0]["nota"] == "Codex cambió .env",
+          f"marcar_fallo con bloquear queda bloqueado aunque queden intentos, con el intento anotado ({e4b['estado']})")
 
     print("   · invalidar lo que dejó generado codex exec")
     if not hasattr(E, "invalidar"):
@@ -1969,11 +1979,12 @@ def seccion_cli_en_proceso() -> None:
                 modulo._cola = viejos["_cola"]
                 enc_tras = E.cargar(raiz / "encargos" / f"{tras_lanzar}.json")
                 ultimo = (enc_tras["intentos"] or [{}])[-1]
-                check(codigo == 2 and campo(datos, "tipo") == "OSError" and enc_tras["estado"] != "generando"
+                check(codigo == 2 and campo(datos, "tipo") == "OSError" and enc_tras["estado"] == "bloqueado"
                       and len(enc_tras["intentos"]) == 1 and ultimo.get("resultado") == "fallo"
                       and "error tras lanzar Codex" in str(ultimo.get("nota")) and ajena in str(ultimo.get("nota"))
                       and ajena in salida_err,
-                      f"(10d) una excepción tras lanzar Codex pasa la guardia y deshace con la nota antes de relanzar "
+                      f"(10d) una excepción tras lanzar Codex con cambios ajenos pasa la guardia y deja el encargo "
+                      f"bloqueado con la nota antes de relanzar "
                       f"({codigo}, {datos}, {enc_tras['estado']}, {ultimo}, {salida_err!r})")
 
                 codex_rescate.comando = prohibido("codex_rescate.comando")
@@ -2019,8 +2030,10 @@ prompt = args[-1]
 salida = Path(args[args.index("-o") + 1])
 eid = re.search(r"--encargo (ENC-\d{8}-\d{3,})", prompt).group(1)
 rutas = re.findall(r"--imagen (\S+)", prompt)
-if modo in ("ajeno", "ajeno-colgado"):
+if modo in ("ajeno", "ajeno-colgado", "ajeno-sin-generar"):
     Path(os.environ["CODEX_FALSO_AJENO"]).write_text("Codex no debería escribir aquí", encoding="utf-8")
+if modo == "ajeno-sin-generar":
+    sys.exit(1)  # falla sin llamar a codex-generado: el encargo sigue en generando
 if modo in ("colgado", "ajeno-colgado"):
     nieto = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(120)"])
     (marcas / "nieto.pid").write_text(str(nieto.pid))
@@ -2066,6 +2079,7 @@ def seccion_generar() -> None:
     unico = uuid.uuid4().hex
     ajeno = resultados / f"codex-falso-{unico}-b.txt"
     ajeno_senal = resultados / f"codex-falso-{unico}-e.txt"
+    ajeno_sin_generar = resultados / f"codex-falso-{unico}-g.txt"
     encargos_en_repo = resultados / f"encargos-prueba-{unico}"
     temporal = pathlib.Path(tempfile.gettempdir())
     salidas_antes = set(temporal.glob("codex-exec-*"))
@@ -2167,11 +2181,22 @@ def seccion_generar() -> None:
             codigo, datos, cola = generar(eid, "ajeno-colgado", "--timeout", "60", senal=True, fuera=ajeno_senal)
             enc = E.cargar(encs / f"{eid}.json")
             errores = campo(datos, "errores") or [""]
-            check(codigo == 6 and enc["estado"] != "generado" and enc["imagenes"] == []
+            check(codigo == 6 and enc["estado"] == "bloqueado" and enc["imagenes"] == [] and len(enc["intentos"]) == 1
                   and str(ajeno_senal.relative_to(ROOT)) in (campo(datos, "ajenos") or [])
                   and errores[0].startswith(f"interrumpido por señal {int(signal.SIGTERM)}; cambió: "),
-                  f"(e) Codex escribe fuera y llega SIGTERM: exit 6 con los ajenos y el encargo no queda generado ({codigo}, {datos or cola})")
+                  f"(e) Codex escribe fuera y llega SIGTERM con el encargo en generando: exit 6 con los ajenos y "
+                  f"el encargo queda bloqueado ({codigo}, {enc['estado']}, {datos or cola})")
             check(muerto(marcas / "nieto.pid"), "(e) tras la señal no queda ningún proceso de Codex")
+
+            eid = encargo(7)
+            codigo, datos, cola = generar(eid, "ajeno-sin-generar", fuera=ajeno_sin_generar)
+            enc = E.cargar(encs / f"{eid}.json")
+            ultimo = (enc["intentos"] or [{}])[-1]
+            check(codigo == 6 and enc["estado"] == "bloqueado" and enc["lock_owner"] is None
+                  and len(enc["intentos"]) == 1 and ultimo.get("resultado") == "fallo"
+                  and str(ajeno_sin_generar.relative_to(ROOT)) in (campo(datos, "ajenos") or []),
+                  f"(g) Codex escribe fuera y falla sin registrar imágenes (encargo en generando): exit 6 y el "
+                  f"encargo queda bloqueado, no vuelve a pedido ({codigo}, {enc['estado']}, {datos or cola})")
 
             encargos_en_repo.mkdir(parents=True)
             eid = encargo(6, carpeta=encargos_en_repo)
@@ -2186,6 +2211,7 @@ def seccion_generar() -> None:
             shutil.rmtree(encargos_en_repo, ignore_errors=True)
             ajeno.unlink(missing_ok=True)
             ajeno_senal.unlink(missing_ok=True)
+            ajeno_sin_generar.unlink(missing_ok=True)
 
 
 SECCIONES = [

@@ -363,12 +363,14 @@ def _ajenos(antes: dict[str, str], permitidas: set[str]) -> list[str]:
 
 
 def _deshacer(ruta: Path, nota: str, bloquear: bool) -> list[str]:
-    """Deja el encargo como tras un fallo si codex-exec lo dejó generando o generado.
-    En cualquier otro estado (p. ej. aún en pedido) no hace nada."""
+    """Deja el encargo como tras un fallo si codex-exec lo dejó generando o generado; con
+    `bloquear` (Codex tocó archivos ajenos) queda bloqueado en los dos casos, para que otra
+    ventana no lo reintente. En cualquier otro estado (p. ej. aún en pedido) no hace nada.
+    Solo para después de lanzar Codex: si no llegó a lanzarse se usa `_liberar`."""
     try:
         enc = encargos.cargar(ruta)
         if enc["estado"] == "generando" and enc["lock_owner"] == "codex-exec":
-            encargos.marcar_fallo(enc, "codex-exec", nota, ahora())
+            encargos.marcar_fallo(enc, "codex-exec", nota, ahora(), bloquear=bloquear)
         elif enc["estado"] == "generado" and (enc.get("intentos") or [{}])[-1].get("origen") == "codex-exec":
             encargos.invalidar(enc, nota, ahora(), bloquear=bloquear)
         else:

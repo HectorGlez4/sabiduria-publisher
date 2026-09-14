@@ -113,11 +113,15 @@ def marcar_generado(enc: dict, owner: str, imagenes: list[dict], ahora: datetime
     return enc
 
 
-def marcar_fallo(enc: dict, owner: str, nota: str, ahora: datetime) -> dict:
+def marcar_fallo(enc: dict, owner: str, nota: str, ahora: datetime, bloquear: bool = False) -> dict:
+    """Anota un intento fallido y suelta el bloqueo. Vuelve a pedido si quedan intentos;
+    queda bloqueado si se agotaron o si se pide `bloquear` (p. ej. Codex tocó archivos ajenos:
+    otro intento podría repetirlo)."""
     _exigir_bloqueo(enc, owner)
     enc["intentos"].append({"numero": len(enc["intentos"]) + 1, "resultado": "fallo",
                             "origen": owner, "nota": nota, "en": _iso(ahora)})
-    siguiente = "pedido" if len(enc["intentos"]) < enc["max_intentos"] else "bloqueado"
+    agotado = len(enc["intentos"]) >= enc["max_intentos"]
+    siguiente = "bloqueado" if bloquear or agotado else "pedido"
     enc.update(estado=siguiente, lock_owner=None, lock_expira=None)
     return enc
 
