@@ -198,7 +198,7 @@ La tarea programada solo corre con la app de Claude abierta. Si está cerrada, c
 - `codex exec` con generación de imágenes sin interfaz no está probado: la sonda 1 lo decide. Si no funciona, el rescate queda desactivado y el sistema funciona con la cola atendida por la automatización de Codex (enfoque A).
 - `phone_clipboard.py` depende del protocolo interno de scrcpy 4.1. Una actualización de Homebrew puede romperlo, y el test de bytes lo detectaría.
 - La interfaz de las apps cambia sin aviso (Instagram en francés en este teléfono). Los scripts localizan los controles por texto o descripción y se detienen si no los encuentran.
-- MaaS360 limita la pantalla a 120 s. Depende del LaunchAgent `com.sabiduria.medialab.phone-awake`, y un reinicio del teléfono exige un desbloqueo manual.
+- MaaS360 bloquea la pantalla a los 120 s. La automatización no depende de mantener el teléfono despierto ni lo despierta o desbloquea: si en la ventana no está listo, salta las celdas de teléfono, publica por API y lo informa. Un reinicio del teléfono exige un desbloqueo manual.
 - Dos publicaciones por ventana, la copia automática en Facebook y las coincidencias con producción elevan la carga de audiencia; todo queda registrado como factor de confusión.
 - El CDN raw de GitHub cachea unos 5 min: `publish_api.py` compara el sha256 del asset descargado con el del manifiesto y no publica si difieren, así que un reintento con la imagen corregida puede tener que esperar a la caché.
 - Un encargo no comprueba que sus celdas compartan relación de aspecto: el prompt de la ventana prohíbe mezclar feed y story en un mismo encargo.
