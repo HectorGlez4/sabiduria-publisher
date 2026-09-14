@@ -249,10 +249,43 @@ def seccion_colision() -> None:
         check(all(p <= t for p in pubs), "no devuelve publicaciones futuras")
 
 
+def seccion_seleccion() -> None:
+    print("\n4. Selección de hasta 2 celdas")
+    from labkit import seleccion as S
+
+    def celda(cid, plataforma, formato, ruta, estado="planned"):
+        return {"cell_id": cid, "platform": plataforma, "native_format": formato,
+                "publishing_route": ruta, "status": estado}
+
+    def aprobado(*cids):
+        return {"estado": "aprobado", "coverage_cell_ids": list(cids)}
+
+    celdas = [
+        celda("C1", "instagram", "feed_single_image", "android_native"),
+        celda("C2", "facebook", "feed_single_image", "api"),
+        celda("C3", "instagram", "feed_single_image", "android_native"),
+        celda("C4", "threads", "feed_single_image", "api"),
+        celda("C5", "instagram", "story_image", "android_native"),
+        celda("C6", "threads", "feed_single_image", "api", estado="published"),
+    ]
+    todos = [aprobado("C1", "C2", "C3", "C4", "C5", "C6")]
+    elegidas = [c["cell_id"] for c in S.elegir(celdas, todos)]
+    check(elegidas == ["C1", "C4"],
+          "tras Instagram por teléfono no sale Facebook (copia automática) ni otra celda igual")
+    check([c["cell_id"] for c in S.elegir(celdas, [aprobado("C5")])] == [],
+          "en la fase 1 el teléfono solo publica el feed de Instagram")
+    check([c["cell_id"] for c in S.elegir(celdas, [aprobado("C6")])] == [],
+          "una celda ya publicada no es elegible")
+    check([c["cell_id"] for c in S.elegir(celdas, [{"estado": "generado", "coverage_cell_ids": ["C1"]}])] == [],
+          "sin encargo aprobado no hay celda")
+    check(len(S.elegir(celdas, todos, max_celdas=1)) == 1, "respeta max_celdas")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
     seccion_colision,
+    seccion_seleccion,
 ]
 
 
