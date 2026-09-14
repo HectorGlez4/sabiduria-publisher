@@ -11,7 +11,7 @@ Repartir el laboratorio (`experiments/media-lab/`) entre los dos agentes instala
 
 Motivo: el plan de Claude tiene muchos más tokens, y hoy la automatización de Codex hace todo el trabajo, teléfono incluido.
 
-Criterio de éxito: durante una semana de ventanas programadas, el teléfono solo lo toca Claude y ninguna celda sale sin PASS de QA visual. Además, ninguna publicación del laboratorio cae a menos de 21 minutos de una de producción, y cada imagen publicada tiene un encargo con origen, hash y estado `usado`.
+Criterio de éxito: durante una semana de ventanas programadas, el teléfono solo lo toca Claude y ninguna celda sale sin PASS de QA visual. Además, cada publicación del laboratorio registra la producción cercana en su run, y cada imagen publicada tiene un encargo con origen, hash y estado `usado`.
 
 ## Decisiones tomadas
 
@@ -22,6 +22,7 @@ Criterio de éxito: durante una semana de ventanas programadas, el teléfono sol
 | Ruta API | La lleva Claude, que lanza los workflows con `gh`. |
 | Ritmo de Claude | 3 ventanas diarias (10:40, 15:40 y 20:40, hora de Madrid) y hasta 2 celdas por ventana. |
 | Autocompartido Instagram → Facebook | Se deja activo. Cada copia en Facebook se registra como publicación extra y en esa ventana no sale otra celda de Facebook. |
+| Colisión con producción | **No frena** (decisión del usuario, 2026-09-14): se publica aunque producción esté subiendo o acabe de publicar, y la producción cercana se anota en el run como factor de confusión. |
 | Enfoque | Híbrido: cola de encargos atendida por la automatización de Codex, más una generación de rescate con `codex exec` si una ventana no tiene imágenes listas. |
 | Cambio del prompt de Codex | Claude lo escribe en un archivo y el usuario lo pega en el editor de la automatización en la app de ChatGPT. Claude no edita `~/.codex/automations/*/automation.toml`. |
 
@@ -32,7 +33,7 @@ Criterio de éxito: durante una semana de ventanas programadas, el teléfono sol
 | Encargos | Claude | Escribe `experiments/media-lab/encargos/<id>.json` a partir de celdas de `coverage.json` | — |
 | Generación programada | Codex (10:10, 15:10 y 20:10) | Genera los encargos en `pedido` y guarda imagen, hash y estado | Publicar, usar `adb`, lanzar workflows, editar `coverage.json`, runs o `progress.md` |
 | Generación de rescate | Claude, vía `codex exec` | Un encargo por ventana cuando no hay nada `generado` o `aprobado` | Saltarse un bloqueo vigente de Codex |
-| Publicación | Claude (10:40, 15:40 y 20:40) | Comprobación previa, QA independiente, teléfono o API, verificación y registros | Publicar sin PASS o con producción subiendo |
+| Publicación | Claude (10:40, 15:40 y 20:40) | Comprobación previa, QA independiente, teléfono o API, verificación y registros | Publicar sin PASS |
 | Punto de entrada | `experiments/media-lab/lab.py` | Todos los pasos de encargos, teléfono, API y comprobación previa como subcomandos | Borrar o cancelar publicaciones: eso sigue siendo manual con `media-lab-cancel` |
 
 Los dos agentes solo se comunican mediante los archivos de encargos.
@@ -87,12 +88,12 @@ Tarea programada `sabiduria-media-lab`, cron `40 10,15,20 * * *` (hora local de 
    - teléfono en estado `device`, despierto y sin pantalla de bloqueo;
    - versiones de las apps;
    - GitHub accesible;
-   - **colisión con producción**: esperar si `publicar` o `hilos` están en curso, o si hay una publicación de producción publicada o programada (`content/queue/*.json`, `publish_at`) a menos de 21 min.
+   - **producción cercana (solo informativo)**: anotar si `publicar` o `hilos` están en curso y las publicaciones de producción publicadas o programadas (`content/queue/*.json`, `publish_at`) a menos de 21 min. **No frena la publicación**: se registra como factor de confusión en el run.
 4. **Reposición:**
    - Si no hay encargos `generado` o `aprobado` para las celdas elegibles, `lab.py generar --encargo <id>` (máximo uno por ventana).
    - Crear encargos nuevos hasta que haya como máximo 6 en `pedido` o `generando` para la automatización de Codex. Nunca más de 6.
 5. **Revisión de imágenes nuevas.** Claude examina cada `generado` (verosimilitud, sin texto espurio ni defectos) y lo marca `aprobado` o `rechazado`.
-6. **Selección.** Hasta 2 celdas elegibles, alternando red, formato y ruta. La segunda sale al menos 21 min después de la primera y lejos de producción.
+6. **Selección.** Hasta 2 celdas elegibles, alternando red, formato y ruta. La segunda sale al menos 21 min después de la primera.
 7. **Máster.** Texto superpuesto determinista, sha256 y artefacto registrado. Para el teléfono, `lab.py telefono subir` con comprobación del hash en el dispositivo. Para API, manifiesto en `manifests/`.
 8. **Composición nativa** (teléfono):
    - identidad de marca visible;
@@ -102,7 +103,7 @@ Tarea programada `sabiduria-media-lab`, cron `40 10,15,20 * * *` (hora local de 
    - cerrar el desplegable de hashtags.
    - **La evidencia final es `screencap`**, nunca un volcado de `uiautomator`, porque puede ir con retraso.
 9. **QA visual.** Agente independiente con las rutas de captura, el máster, el pie y `visual-qa-gate.md`. Exige PASS explícito. Ante FAIL, corregir y repetir una vez; si vuelve a fallar, saltar la celda y registrarlo.
-10. **Publicación.** Repetir la comprobación de colisión justo antes. En el teléfono, pulsar Compartir; por API, `gh workflow run media-lab -f manifest=<ruta>` y después `media-lab-verify`.
+10. **Publicación.** Repetir `preflight` justo antes para anotar la producción cercana en el run, sin esperar. En el teléfono, pulsar Compartir; por API, `gh workflow run media-lab -f manifest=<ruta>` y después `media-lab-verify`.
 11. **Verificación:**
     - URL o ID, identidad, audiencia pública y música en la publicación en directo;
     - una copia automática de Instagram en Facebook se registra en `cross_posting` del run, sin contarla como celda.
@@ -163,7 +164,7 @@ Se añaden:
 
 `git commit *` y `gh run list:*` ya están permitidos. Una orden no autorizada deja colgada la ejecución desatendida; ya ha pasado dos veces en otra rutina de este repo.
 
-La tarea programada solo corre con la app de Claude abierta. Si está cerrada, corre al abrirla, así que la comprobación de colisión se hace siempre en el momento de ejecutar, nunca a la hora nominal.
+La tarea programada solo corre con la app de Claude abierta. Si está cerrada, corre al abrirla, así que la producción cercana se anota siempre en el momento de ejecutar, nunca a la hora nominal.
 
 ### B. Pruebas
 
@@ -198,4 +199,4 @@ La tarea programada solo corre con la app de Claude abierta. Si está cerrada, c
 - `phone_clipboard.py` depende del protocolo interno de scrcpy 4.1. Una actualización de Homebrew puede romperlo, y el test de bytes lo detectaría.
 - La interfaz de las apps cambia sin aviso (Instagram en francés en este teléfono). Los scripts localizan los controles por texto o descripción y se detienen si no los encuentran.
 - MaaS360 limita la pantalla a 120 s. Depende del LaunchAgent `com.sabiduria.medialab.phone-awake`, y un reinicio del teléfono exige un desbloqueo manual.
-- Dos publicaciones por ventana más la copia automática en Facebook elevan la carga de audiencia; queda registrada como factor de confusión.
+- Dos publicaciones por ventana, la copia automática en Facebook y las coincidencias con producción elevan la carga de audiencia; todo queda registrado como factor de confusión.

@@ -22,7 +22,7 @@
 |---|---|
 | `experiments/media-lab/labkit/__init__.py` | Paquete vacío |
 | `experiments/media-lab/labkit/encargos.py` | Estados, bloqueos, lectura y escritura de encargos. Puro salvo `cargar`, `guardar` y `listar`. |
-| `experiments/media-lab/labkit/colision.py` | Decide si hay que esperar por producción. Parte pura y lectura de cola, publicados y `gh`. |
+| `experiments/media-lab/labkit/colision.py` | Resume la producción cercana: solo informativo, no frena la publicación. Parte pura y lectura de cola, publicados y `gh`. |
 | `experiments/media-lab/labkit/seleccion.py` | Elige hasta 2 celdas elegibles. Puro. |
 | `experiments/media-lab/labkit/manifiesto.py` | Construye y valida manifiestos API. Puro. |
 | `experiments/media-lab/labkit/cerrojo.py` | Cerrojo de ventana en disco |
@@ -608,12 +608,12 @@ Expected: `ImportError: cannot import name 'colision' from 'labkit'`
 
 ```python
 """
-¿Toca esperar por producción?
+Producción cercana: qué está publicando producción alrededor de ahora.
 
-La regla es la del propio publicador cuando recupera atrasos: 21 minutos entre
-dos piezas. Además, mientras `publicar` o `hilos` están subiendo no sale nada del
-laboratorio, y una pieza atrasada en la cola cuenta como inminente: el reloj de
-GitHub la puede disparar en cualquier momento.
+Solo informativo (decisión del usuario, 2026-09-14): el laboratorio publica igual
+y copia este motivo en el run como factor de confusión. La ventana es la del propio
+publicador cuando recupera atrasos, 21 minutos; también se anotan `publicar` o
+`hilos` en curso y las piezas atrasadas de la cola, que pueden salir en cualquier momento.
 """
 from __future__ import annotations
 
@@ -1575,7 +1575,7 @@ def cmd_preflight(a) -> int:
             en_curso=en_curso)
         github = True
     except Exception as e:  # noqa: BLE001
-        github, espera = False, f"GitHub no responde ({type(e).__name__}): sin comprobación de colisión no se publica"
+        github, espera = False, f"GitHub no responde ({type(e).__name__}): sin datos de producción cercana"
     emitir({"ahora": t.isoformat(timespec="seconds"), "telefono": tel, "github": github, "espera": espera})
     return 0
 
@@ -2014,7 +2014,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 ## Reglas que no se rompen
 - Solo usa estos comandos: `.venv/bin/python experiments/media-lab/lab.py …`, `.venv/bin/python tests/test_media_lab.py`, `gh run list …`, `gh run view …`, `gh run watch …`, `gh run download …`, `gh workflow run media-lab…`, `git add experiments/media-lab/…`, `git commit …`, `git fetch origin main`, `git rebase origin/main`, `git rebase --abort`, `git push origin HEAD:main`. Cualquier otro comando abre un permiso que nadie contesta y te deja colgada. Para leer archivos y capturas usa Read; para editar JSON, Edit o Write.
 - Nunca publiques sin PASS explícito de un agente independiente sobre la captura final (experiments/media-lab/visual-qa-gate.md).
-- Nunca publiques si `lab.py preflight` devuelve `espera` distinto de null. Repítelo justo antes de cada Compartir o workflow.
+- `lab.py preflight` devuelve en `espera` la producción cercana. Es solo informativo: no esperes ni saltes celdas por ello (decisión del usuario, 2026-09-14). Cópialo en `exposure_context.nearby_production_posts` del run y repítelo justo antes de cada Compartir o workflow para registrarlo.
 - Nunca pulses nada a ciegas: tras cada `lab.py ig <paso>` abre la captura con Read y confirma que muestra lo esperado.
 - Nunca reintentes un envío dudoso por la otra ruta; concilia contra la plataforma primero.
 - A partir del 2026-10-02 no publiques: resume y pide al usuario que desactive esta tarea.
@@ -2025,13 +2025,13 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 3. `lab.py preflight`. Anota teléfono, github y espera.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
 5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
-6. `lab.py seleccionar --max 2`. Si devuelve [] o `espera` no es null, salta al paso 10.
+6. `lab.py seleccionar --max 2`. Si devuelve [], salta al paso 8.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`):
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
    b. Teléfono (instagram/feed_single_image): `lab.py telefono-subir --local <máster>`; `lab.py ig abrir --run RUN`; `ig recorte`; `ig editor`; `ig audio`; `ig pie --pie <archivo>`. Si hay desplegable de hashtags: `lab.py telefono-atras --run RUN --nombre ig-04b`. Mira cada captura.
       API: `lab.py manifiesto-api --run-group LAB-…-API --asset <máster> --caption facebook=<archivo> …`; commit y push del máster y el manifiesto (sección C de la spec) para que asset_url exista; la vista previa para QA es el máster con el pie.
    c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo.
-   d. `lab.py preflight`: si `espera` no es null, no publiques esta celda.
+   d. `lab.py preflight` y anota `espera` (producción cercana) en el run. No frena la publicación.
    e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo>`. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`.
    f. Verifica la publicación en directo (URL/ID, identidad, audiencia, música). En Instagram por teléfono, la copia automática en Facebook va en `publication.cross_posting` del run.
    g. Actualiza el run, la celda de coverage.json, `lab.py encargo-usado --encargo ID --run RUN` y experiments/media-lab/progress.md.
@@ -2040,7 +2040,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 10. `lab.py lock-soltar`.
 
 ## Informe
-Si no publicaste nada y no hubo fallo, basta con una línea con el motivo (por ejemplo, la espera de producción). Si publicaste, da celda, red, ruta, URL y veredicto de QA. Si algo bloqueó, di qué y qué decisión hace falta del usuario.
+Si no publicaste nada y no hubo fallo, basta con una línea con el motivo (por ejemplo, ningún encargo aprobado). Si publicaste, da celda, red, ruta, URL y veredicto de QA. Si algo bloqueó, di qué y qué decisión hace falta del usuario.
 ```
 
 - [ ] **Step 2: Ventana supervisada con el usuario presente**
