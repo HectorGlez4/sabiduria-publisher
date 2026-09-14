@@ -267,9 +267,10 @@ def lanzar(paquete: str) -> None:
     shell(f"monkey -p {paquete} -c android.intent.category.LAUNCHER 1")
 
 
-def cerrar_cortina() -> None:
-    """Repliega la cortina de notificaciones si está desplegada (no despierta ni desbloquea)."""
-    shell("cmd statusbar collapse")
+def cerrar_cortina(timeout: int = 15) -> None:
+    """Repliega la cortina de notificaciones si está desplegada (no despierta ni desbloquea).
+    Timeout corto: quien llama la usa como best-effort y no debe quedarse bloqueado en ella."""
+    shell("cmd statusbar collapse", timeout=timeout)
 
 
 def estado() -> dict:

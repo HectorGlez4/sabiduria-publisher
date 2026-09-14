@@ -249,6 +249,28 @@ def seccion_encargos() -> None:
         check(e14["estado"] == "pedido" and e14["no_lanzados"] == 1,
               "un encargo viejo sin no_lanzados sigue cargando y cuenta desde 1")
 
+        print("   · liberar: marcar_generado y marcar_fallo cortan la racha de no_lanzados (I-1)")
+        e15 = base()
+        E.tomar(e15, "codex-exec", t0)
+        E.liberar(e15, "codex-exec")
+        E.tomar(e15, "codex-exec", t0)
+        E.liberar(e15, "codex-exec")
+        check(e15["no_lanzados"] == 2, f"dos no-lanzamientos antes de que Codex corra ({e15['no_lanzados']})")
+        E.tomar(e15, "codex-exec", t0)
+        E.marcar_fallo(e15, "codex-exec", "tiempo agotado", t0)
+        check(e15["no_lanzados"] == 0 and e15.get("nota_no_lanzado") is None,
+              f"(I-1) marcar_fallo (Codex sí corrió) reinicia no_lanzados a 0 ({e15['no_lanzados']})")
+        E.tomar(e15, "codex-exec", t0)
+        E.liberar(e15, "codex-exec")
+        check(e15["estado"] == "pedido" and e15["no_lanzados"] == 1,
+              f"(I-1) tras el reinicio, liberar vuelve a contar desde 1 ({e15['estado']}, {e15['no_lanzados']})")
+
+        e16 = base()
+        E.tomar(e16, "codex-exec", t0)
+        E.marcar_generado(e16, "codex-exec", img, t0)
+        check(e16["no_lanzados"] == 0,
+              "(I-1) marcar_generado (Codex sí corrió) deja no_lanzados en 0")
+
     v2 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v2.png")
     v3 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v3.png")
     fuera = dict(img[0], ruta="experiments/media-lab/assets/OTRA/ENC-20260915-001-v1.png")
@@ -543,12 +565,14 @@ class TelefonoSimulado:
     capturas anotados, y un reloj que avanza 2 s en cada lectura."""
 
     def __init__(self, volcados: list, *, teclado: tuple = (False,), listo: bool = True,
-                 falla_tocar: Exception | None = None, falla_pegar: Exception | None = None):
+                 falla_tocar: Exception | None = None, falla_pegar: Exception | None = None,
+                 falla_cortina: Exception | None = None):
         self.volcados = list(volcados)
         self.teclado = list(teclado)
         self.listo = listo
         self.falla_tocar = falla_tocar
         self.falla_pegar = falla_pegar
+        self.falla_cortina = falla_cortina
         self.toques: list[tuple[int, int]] = []
         self.teclas: list[int] = []
         self.combinaciones: list[tuple] = []
@@ -600,6 +624,8 @@ class TelefonoSimulado:
 
     def cerrar_cortina(self) -> None:
         self.orden.append("cortina")
+        if self.falla_cortina is not None:
+            raise self.falla_cortina
 
     def pegar(self, texto: str, paste: bool = True) -> None:
         self.pegados.append(texto)
@@ -897,6 +923,16 @@ def seccion_interfaz() -> None:
     check(IG.observacion_de_volcado(xml_inicio())["fallo_texto"] is None
           and IG.observacion_de_volcado(xml_inicio())["fallo_bounds"] is None,
           "(10e) sin aviso de fallo, fallo_texto y fallo_bounds son None")
+    nodo_mixto = jerarquia(nodo_xml("[0,0][200,100]", texto="algo intrascendente", desc="Réessayer"))
+    obs_mixto = IG.observacion_de_volcado(nodo_mixto)
+    check(obs_mixto["fallo"] is True and obs_mixto["fallo_texto"] == "Réessayer",
+          f"(M-3) fallo_texto es el campo que realmente contiene la marca de fallo, no «texto or desc» ({obs_mixto})")
+    texto_largo = "Réessayer: " + "x" * 150
+    nodo_largo = jerarquia(nodo_xml("[0,300][1080,400]", texto=texto_largo))
+    obs_largo = IG.observacion_de_volcado(nodo_largo)
+    check(obs_largo["fallo"] is True and obs_largo["fallo_texto"] == texto_largo[:100] + "…"
+          and len(obs_largo["fallo_texto"]) == 101,
+          f"(M-4) fallo_texto se recorta a 100 caracteres con «…» si es más largo (len={len(obs_largo['fallo_texto'])})")
     check(IG.observacion_de_volcado(xml_compositor(pie="Réessayer, n'a pas pu"))["fallo"] is False,
           "el texto del propio pie no es un aviso de fallo")
     check(IG.observacion_de_volcado(jerarquia(nodo_xml("[0,0][100,100]", texto="Réessayer",
@@ -1142,10 +1178,18 @@ def seccion_interfaz() -> None:
 
     print("   · (10e) el desplegable de hashtags puede tardar unos segundos en aparecer tras pegar")
     desplegable = xml_compositor(despues=LISTA_HASHTAGS)
+    otra_app = jerarquia(nodo_xml("[0,0][1080,2340]", texto="Écran verrouillé", paquete="com.android.systemui"))
+
     sim = TelefonoSimulado([comp, comp, desplegable, comp], teclado=(False,))
     res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [] and sim.capturas == ["ig-04-compositor.png"],
+          f"(M-2) el desplegable se cierra solo: se confirma con un volcado fresco y no se pulsa «atrás» "
+          f"({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([comp, comp, desplegable, desplegable, comp], teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
     check(err is None and sim.teclas == [IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
-          f"(10e-a) el desplegable aparece en el segundo volcado tras pegar y luego desaparece: "
+          f"(10e-a) el desplegable sigue abierto tras confirmarlo con un volcado fresco: "
           f"exactamente un «atrás», compositor capturado ({err!r}, {sim.teclas}, {sim.capturas})")
 
     sim = TelefonoSimulado([desplegable], teclado=(False,))
@@ -1154,6 +1198,38 @@ def seccion_interfaz() -> None:
           and "ig-04-compositor.png" not in sim.capturas,
           f"(10e-b) el desplegable sigue abierto tras 2 «atrás»: PantallaInesperada, "
           f"exactamente 2 «atrás» y sin captura del compositor ({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([comp, comp, otra_app], teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [] and "ig-04-compositor.png" not in sim.capturas,
+          f"(I-2) otra pantalla delante en el bucle de limpios: PantallaInesperada, sin «atrás» ni captura "
+          f"({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([comp], teclado=(False,))
+
+    def reloj_veloz():
+        sim.reloj += 40
+        return sim.reloj
+    sim.monotonic = reloj_veloz
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and str(IG.ESTABILIZACION_TIMEOUT_S) in str(err)
+          and sim.teclas == [] and "ig-04-compositor.png" not in sim.capturas,
+          f"(M-1) el bucle de estabilización tiene un tope total: PantallaInesperada sin captura ({err!r})")
+
+    guion_reinicio = [comp, comp, comp, desplegable, desplegable, comp, comp, desplegable, desplegable,
+                      comp, comp, comp]
+    sim = TelefonoSimulado(guion_reinicio, teclado=(False,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [IG.ATRAS, IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
+          f"(M-7-i) el desplegable reaparece dos veces: cada «atrás» reinicia la cuenta de limpios "
+          f"(sin reinicio saldría solo un «atrás») ({err!r}, {sim.teclas})")
+
+    guion_teclado_y_desplegable = [comp, comp, comp, comp, desplegable, desplegable, comp, comp, comp]
+    sim = TelefonoSimulado(guion_teclado_y_desplegable, teclado=(True, False))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [IG.ATRAS, IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
+          f"(M-7-ii) teclado abierto y luego un desplegable tardío: agotan los 2 «atrás» y aun así "
+          f"termina bien ({err!r}, {sim.teclas})")
 
     sim = TelefonoSimulado([comp], falla_pegar=RuntimeError("no se pudo hablar con scrcpy-server"))
     res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
@@ -1171,6 +1247,11 @@ def seccion_interfaz() -> None:
     check(isinstance(err, IG.BorradorPendiente) and sim.toques == [], "abrir con un borrador a medias: no se toca")
     check(sim.orden == ["cortina", f"lanzar:{IG.PAQUETE}"],
           f"(10e) abrir cierra la cortina de notificaciones una vez antes de lanzar Instagram ({sim.orden})")
+
+    sim = TelefonoSimulado([comp], falla_cortina=T.TelefonoError("cortina no disponible"))
+    res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+    check(isinstance(err, IG.BorradorPendiente) and sim.orden == ["cortina", f"lanzar:{IG.PAQUETE}"],
+          f"(M-5) cerrar_cortina falla: abrir sigue adelante y lanza Instagram igual ({err!r}, {sim.orden})")
 
     print("   · seguimiento de la revisión (10b): teclado, «#» ajeno y pantalla de arranque")
     sim = TelefonoSimulado([comp], teclado=(True, None))
@@ -1190,6 +1271,8 @@ def seccion_interfaz() -> None:
     check(err is None and sim.toques.count(perfil_centro) == 1 and sim.toques[:1] == [perfil_centro]
           and res["publicaciones_antes"] == 3712 and sim.capturas == ["ig-01-selector.png"],
           f"(M-6) abrir con pantalla de arranque y luego el inicio: exactamente un toque en Profil ({err!r}, {sim.toques})")
+    check(sim.orden[:1] == ["cortina"],
+          f"(M-7-iv) en el camino feliz de abrir, cerrar_cortina se llama antes de todo lo demás ({sim.orden})")
 
     print("   · seguimiento de la revisión (10b): captura sin disco y parada del portapapeles")
     import io
@@ -1972,6 +2055,8 @@ def seccion_cli_en_proceso() -> None:
                       and errores_senal[0].startswith(f"interrumpido por señal {int(signal.SIGTERM)}"),
                       f"(G-1) señal antes de lanzar Codex: vuelve a pedido sin sumar intento ({codigo}, {datos}, "
                       f"{enc_senal['estado']}, {len(enc_senal['intentos'])} intentos, {llamadas})")
+                check(enc_senal.get("no_lanzados") == 1,
+                      f"(M-7-iii) una señal antes de lanzar también cuenta como no-lanzamiento ({enc_senal.get('no_lanzados')})")
 
                 modulo._permitidas = permitidas_original
 
@@ -1987,6 +2072,8 @@ def seccion_cli_en_proceso() -> None:
                       and enc_roto["intentos"] == [] and enc_roto["lock_owner"] is None and not llamadas,
                       f"(G-2) un error entre tomar y lanzar Codex no deja el encargo en generando ({codigo}, {datos}, "
                       f"{enc_roto['estado']})")
+                check(enc_roto.get("no_lanzados") == 1,
+                      f"(M-7-iii) un error antes de lanzar también cuenta como no-lanzamiento ({enc_roto.get('no_lanzados')})")
 
                 print("   · generar sin lanzar Codex no gasta intentos; tras lanzarlo, guardia antes de relanzar (10d)")
                 ajena = "experiments/media-lab/results/ajeno-de-prueba.txt"

@@ -38,6 +38,9 @@ ZONA_AVISO_PX = 600
 MARGEN_BANNER_PX = 250
 # Un texto de fallo así de corto cuenta en cualquier sitio: los pies de otras cuentas son largos.
 LARGO_AVISO_CORTO = 80
+# Tope de fallo_texto (y de lo que compartir copia a avisos): puede ser el pie de otra
+# cuenta y acaba en un run de git, así que no vale la pena guardarlo entero.
+LARGO_FALLO_TEXTO_COPIADO = 100
 _MESES = {"janvier": 1, "fevrier": 2, "février": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
           "juillet": 7, "aout": 8, "août": 8, "septembre": 9, "octobre": 10, "novembre": 11,
           "decembre": 12, "décembre": 12}
@@ -245,6 +248,21 @@ def _es_aviso_de_fallo(n: dict, banners: list[tuple[int, int, int, int]]) -> boo
                for v in (n["texto"], n["desc"]))
 
 
+def _campo_de_aviso(n: dict) -> str | None:
+    """El primero de (texto, desc) que contiene una marca de fallo (ver MARCAS_FALLO), no
+    simplemente el que no esté vacío."""
+    for v in (n["texto"], n["desc"]):
+        if any(marca in v for marca in MARCAS_FALLO):
+            return v
+    return None
+
+
+def _recortado(texto: str, limite: int = LARGO_FALLO_TEXTO_COPIADO) -> str:
+    """`texto` tal cual si mide `limite` o menos; si no, recortado con «…» al final: puede
+    ser el pie de otra cuenta y acaba en un run de git."""
+    return texto if len(texto) <= limite else texto[:limite] + "…"
+
+
 def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | None = None,
                            banners_previos: list[tuple[int, int, int, int]] | None = None) -> dict:
     """Lo que dice un volcado tras pulsar Partager.
@@ -258,9 +276,10 @@ def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | N
       corto, o que está en la zona del aviso de subida: la de arriba, o junto a un banner de
       este volcado o de `banners_previos` (bounds vistos antes: el banner puede irse justo
       cuando sale el error). Un pie largo de otra cuenta más abajo no cuenta.
-    - fallo_texto / fallo_bounds: texto (text o content-desc) y bounds del primer aviso que
-      hizo `fallo` True; None si `fallo` es False. Para conciliar en segundos un `fallido`
-      provocado por un texto corto ajeno, sin cambiar la decisión de `fallo`."""
+    - fallo_texto / fallo_bounds: el primero de (texto, content-desc) que contiene una marca
+      de fallo (recortado a LARGO_FALLO_TEXTO_COPIADO caracteres) y los bounds del primer
+      aviso que hizo `fallo` True; None si `fallo` es False. Para conciliar en segundos un
+      `fallido` provocado por un texto corto ajeno, sin cambiar la decisión de `fallo`."""
     ig = telefono.buscar_todos(xml, paquete=PAQUETE)
     boton = boton_bounds is not None and any(
         _dice(n, "Partager") and n["bounds"] == tuple(boton_bounds) for n in ig)
@@ -272,7 +291,7 @@ def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | N
             or any(n["clase"] in CLASES_CAMPO for n in ig),
             "banner": bool(propios),
             "fallo": culpable is not None,
-            "fallo_texto": (culpable["texto"] or culpable["desc"]) if culpable else None,
+            "fallo_texto": _recortado(_campo_de_aviso(culpable)) if culpable else None,
             "fallo_bounds": culpable["bounds"] if culpable else None}
 
 

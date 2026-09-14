@@ -16,7 +16,9 @@ from pathlib import Path, PurePosixPath
 LOCK_MINUTOS = 30
 MAX_EN_COLA = 6
 DUENOS_GENERACION = ("codex-heartbeat", "codex-exec")
-MAX_NO_LANZADOS = 3  # no-lanzamientos de Codex seguidos (Popen o señal) antes de bloquear
+MAX_NO_LANZADOS = 3  # no-lanzamientos de Codex SEGUIDOS (señal, fallo de Popen o error antes de
+                     # lanzar) antes de bloquear; la racha se corta en cuanto Codex sí llega a
+                     # correr (marcar_generado o marcar_fallo reinician no_lanzados a 0)
 
 _ID = re.compile(r"ENC-(\d{8})-(\d{3,})")
 _FAMILIA = re.compile(r"[A-Za-z0-9_-]+")
@@ -111,6 +113,8 @@ def marcar_generado(enc: dict, owner: str, imagenes: list[dict], ahora: datetime
     enc["intentos"].append({"numero": len(enc["intentos"]) + 1, "resultado": "generado",
                             "origen": owner, "en": _iso(ahora)})
     enc.update(estado="generado", lock_owner=None, lock_expira=None)
+    enc["no_lanzados"] = 0  # Codex sí corrió: corta la racha de no-lanzamientos
+    enc.pop("nota_no_lanzado", None)
     return enc
 
 
@@ -124,24 +128,29 @@ def marcar_fallo(enc: dict, owner: str, nota: str, ahora: datetime, bloquear: bo
     agotado = len(enc["intentos"]) >= enc["max_intentos"]
     siguiente = "bloqueado" if bloquear or agotado else "pedido"
     enc.update(estado=siguiente, lock_owner=None, lock_expira=None)
+    enc["no_lanzados"] = 0  # Codex sí corrió: corta la racha de no-lanzamientos
+    enc.pop("nota_no_lanzado", None)
     return enc
 
 
 def liberar(enc: dict, owner: str) -> dict:
-    """Devuelve a pedido un encargo que `owner` tomó y en el que no llegó a generarse nada
-    (p. ej. `lab.py generar` interrumpido o con un error antes de lanzar Codex).
+    """Devuelve a pedido un encargo que `owner` tomó y en el que no llegó a generarse nada:
+    una señal, un fallo de `Popen` o cualquier otro error antes de lanzar Codex. Las tres
+    causas cuentan igual, señal incluida (su impacto es pequeño: en cuanto Codex corre de
+    verdad, `marcar_generado`/`marcar_fallo` cortan la racha).
 
     No suma intento: Codex no corrió. Cuenta aparte en `no_lanzados` (los JSON viejos sin el
-    campo empiezan en 0): al llegar a MAX_NO_LANZADOS no-lanzamientos seguidos (p. ej. Popen
+    campo empiezan en 0): al llegar a MAX_NO_LANZADOS no-lanzamientos SEGUIDOS (p. ej. Popen
     falla siempre igual, como E2BIG por un prompt demasiado largo en argv) el encargo queda
-    bloqueado en vez de volver a pedido, para no reintentar en bucle. Solo desde generando y
-    por el dueño del bloqueo."""
+    bloqueado en vez de volver a pedido, para no reintentar en bucle. «Seguidos» se corta en
+    cuanto Codex sí llega a correr: `marcar_generado` y `marcar_fallo` reinician `no_lanzados`
+    a 0. Solo desde generando y por el dueño del bloqueo."""
     _exigir_bloqueo(enc, owner)
     no_lanzados = enc.get("no_lanzados", 0) + 1
     enc["no_lanzados"] = no_lanzados
     if no_lanzados >= MAX_NO_LANZADOS:
         enc["nota_no_lanzado"] = (f"bloqueado tras {no_lanzados} intentos seguidos en los que Codex "
-                                  "no llegó a lanzarse (señal o fallo de Popen)")
+                                  "no llegó a lanzarse (señal, fallo de Popen o error antes de lanzar Codex)")
         enc.update(estado="bloqueado", lock_owner=None, lock_expira=None)
     else:
         enc.update(estado="pedido", lock_owner=None, lock_expira=None)
