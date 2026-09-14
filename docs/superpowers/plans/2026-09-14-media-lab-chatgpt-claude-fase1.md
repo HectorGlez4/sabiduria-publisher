@@ -979,6 +979,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 8: Primitivas del teléfono y pasos del feed de Instagram
 
+> **Endurecida tras la revisión de calidad (commit `8cc7eb8`):** volcados validados (`rm -f` + `dumped to`), estado que falla cerrado, `tapado`, `subir` con `subido_en` y MediaStore, cuenta leída en la barra superior, selección única con fecha de la miniatura, `detalles` separado de `escribir_pie`, cierre de teclado/desplegable verificado y `compartir(pie, tema, evidencia, publicaciones_antes)` con `estado` confirmado por aviso de subida y contador del perfil. El código vigente está en ese commit; lo de abajo es la versión inicial.
+
 **Files:**
 - Create: `experiments/media-lab/labkit/telefono.py`
 - Create: `experiments/media-lab/labkit/instagram_feed.py`
@@ -1551,7 +1553,7 @@ def ahora() -> datetime:
 
 
 def emitir(obj) -> None:
-    print(json.dumps(obj, ensure_ascii=False, indent=2))
+    print(json.dumps(obj, ensure_ascii=False, indent=2, default=str))
 
 
 def sha256(ruta: Path) -> str:
@@ -1750,7 +1752,7 @@ def cmd_telefono_subir(a) -> int:
     from labkit import telefono
     local = ROOT / a.local
     remoto = f"/sdcard/Pictures/SabiduriaLab/{local.name}"
-    emitir({"remoto": remoto, "sha256": telefono.subir(local, remoto)})
+    emitir({"remoto": remoto, **telefono.subir(local, remoto)})
     return 0
 
 
@@ -1768,27 +1770,40 @@ def cmd_telefono_atras(a) -> int:
 
 def cmd_ig(a) -> int:
     from labkit import instagram_feed as ig
+    from labkit import telefono
     ev = _evidencia(a.run)
+
+    def leer_pie() -> str:
+        if not a.pie:
+            raise SystemExit("--pie es obligatorio en este paso")
+        return Path(a.pie).read_text(encoding="utf-8").rstrip("\n")
+
     try:
         if a.paso == "abrir":
-            res = {"captura": str(ig.abrir_nueva_publicacion(ev))}
+            if not a.subido_en:
+                raise SystemExit("--subido-en es obligatorio en abrir (lo devuelve telefono-subir)")
+            res = ig.abrir_nueva_publicacion(ev, a.subido_en)
         elif a.paso == "recorte":
-            res = {"captura": str(ig.alternar_recorte(ev))}
+            res = {"captura": ig.alternar_recorte(ev)}
         elif a.paso == "editor":
-            res = {"captura": str(ig.siguiente(ev, "ig-02b-editor"))}
+            res = {"captura": ig.siguiente(ev, "ig-02b-editor")}
         elif a.paso == "audio":
             res = ig.anadir_audio_sugerido(ev)
+        elif a.paso == "detalles":
+            res = {"captura": ig.detalles(ev)}
         elif a.paso == "pie":
-            ig.siguiente(ev, "ig-03b-detalles")
-            res = {"captura": str(ig.escribir_pie(Path(a.pie).read_text(encoding="utf-8").rstrip("\n"), ev))}
-        elif a.paso == "compartir":
-            res = ig.compartir(Path(a.pie).read_text(encoding="utf-8").rstrip("\n"), ev)
-        else:
-            raise ValueError(a.paso)
-    except ig.PantallaInesperada as e:
-        from labkit import telefono
-        captura = telefono.captura(ev / f"ig-inesperada-{a.paso}.png")
-        emitir({"ok": False, "error": str(e), "captura": str(captura)})
+            res = {"captura": ig.escribir_pie(leer_pie(), ev)}
+        else:  # compartir: sale con 5 si el envío no queda confirmado, para conciliar antes de nada
+            res = ig.compartir(leer_pie(), a.tema, ev, a.publicaciones_antes)
+            confirmado = res["estado"] == "confirmado"
+            emitir({"ok": confirmado, **res})
+            return 0 if confirmado else 5
+    except (ig.PantallaInesperada, telefono.TelefonoError) as e:
+        try:
+            captura = telefono.captura(ev / f"ig-inesperada-{a.paso}.png")
+        except telefono.TelefonoError:
+            captura = None
+        emitir({"ok": False, "tipo": type(e).__name__, "error": str(e), "captura": captura})
         return 4
     emitir({"ok": True, **res})
     return 0
@@ -1873,9 +1888,12 @@ def construir() -> argparse.ArgumentParser:
         p.add_argument("--nombre", required=True)
         p.set_defaults(func=func)
     p = sub.add_parser("ig")
-    p.add_argument("paso", choices=("abrir", "recorte", "editor", "audio", "pie", "compartir"))
+    p.add_argument("paso", choices=("abrir", "recorte", "editor", "audio", "detalles", "pie", "compartir"))
     p.add_argument("--run", required=True)
-    p.add_argument("--pie")
+    p.add_argument("--pie", help="archivo del pie (pie, compartir)")
+    p.add_argument("--subido-en", help="subido_en que devolvió telefono-subir (abrir)")
+    p.add_argument("--tema", help="tema que devolvió ig audio (compartir)")
+    p.add_argument("--publicaciones-antes", type=int, help="publicaciones_antes que devolvió ig abrir (compartir)")
     p.set_defaults(func=cmd_ig)
     return ap
 
@@ -1966,10 +1984,12 @@ Run: `.venv/bin/python experiments/media-lab/lab.py generar --encargo <encargo_i
 Con una foto cualquiera ya en `Pictures/SabiduriaLab`, por ejemplo `LAB-QUOTE-001-gracian.png`:
 
 ```bash
-.venv/bin/python experiments/media-lab/lab.py ig abrir --run SONDA-IG
+.venv/bin/python experiments/media-lab/lab.py telefono-subir --local experiments/media-lab/assets/LAB-QUOTE-001/gracian-hacer-decir-4x5.png
+.venv/bin/python experiments/media-lab/lab.py ig abrir --run SONDA-IG --subido-en <subido_en del paso anterior>
 .venv/bin/python experiments/media-lab/lab.py ig recorte --run SONDA-IG
 .venv/bin/python experiments/media-lab/lab.py ig editor --run SONDA-IG
 .venv/bin/python experiments/media-lab/lab.py ig audio --run SONDA-IG
+.venv/bin/python experiments/media-lab/lab.py ig detalles --run SONDA-IG
 .venv/bin/python experiments/media-lab/lab.py ig pie --run SONDA-IG --pie experiments/media-lab/assets/LAB-QUOTE-001/caption-instagram.txt
 ```
 
@@ -2049,11 +2069,11 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 6. `lab.py seleccionar --max 2`, añadiendo `--sin-telefono` si `telefono.listo` era false. Si devuelve [], salta al paso 8.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`). Antes de cada celda renueva el cerrojo con `lab.py lock-tomar --dueno programada`; si devuelve `cerrojo: false`, otra sesión tomó el relevo: no publiques más celdas y salta al paso 9:
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
-   b. Teléfono (instagram/feed_single_image): `lab.py telefono-subir --local <máster>`; `lab.py ig abrir --run RUN`; `ig recorte`; `ig editor`; `ig audio`; `ig pie --pie <archivo>`. Si hay desplegable de hashtags: `lab.py telefono-atras --run RUN --nombre ig-04b`. Mira cada captura.
+   b. Teléfono (instagram/feed_single_image): `lab.py telefono-subir --local <máster>` (anota `subido_en`); `lab.py ig abrir --run RUN --subido-en <subido_en>` (anota `publicaciones_antes`); `ig recorte --run RUN` y confirma en la captura que la imagen está completa en 4:5 (el volcado no lo muestra); `ig editor --run RUN`; `ig audio --run RUN` (anota `tema`); `ig detalles --run RUN`; `ig pie --run RUN --pie <archivo>`. Mira cada captura antes del paso siguiente. Si un paso sale con código 4 (`PantallaInesperada`, `BorradorPendiente`, `TelefonoNoListo` o `TelefonoError`), no toques más el teléfono en esta ventana: regístralo con su captura y sigue con API.
       API: `lab.py manifiesto-api --run-group LAB-…-API --asset <máster> --caption facebook=<archivo> …`; commit y push del máster y el manifiesto (sección C de la spec) para que asset_url exista; la vista previa para QA es el máster con el pie.
    c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo: pon la celda en `"status": "blocked"` con `reason_if_blocked_or_unsupported` en coverage.json para que la siguiente ventana no la vuelva a elegir.
    d. `lab.py preflight` y anota `espera` (producción cercana) en el run. No frena la publicación.
-   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo>`. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`. Con los post_id del resultado: `lab.py manifiesto-verificacion --run-group <el mismo> --post facebook=<id> …` (solo feed: si la celda es solo de historias, sáltate este paso de verificación), commit y push de ese manifiesto, y `gh workflow run media-lab-verify -f manifest=<ruta>`.
+   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo> --tema <tema> --publicaciones-antes <n>`. Si sale con código 5 (`estado` distinto de `confirmado`), el envío es dudoso: no repitas nada; mira `captura` y `captura_antes`, comprueba el perfil con `lab.py telefono-captura` y concilia antes de registrar. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`. Con los post_id del resultado: `lab.py manifiesto-verificacion --run-group <el mismo> --post facebook=<id> …` (solo feed: si la celda es solo de historias, sáltate este paso de verificación), commit y push de ese manifiesto, y `gh workflow run media-lab-verify -f manifest=<ruta>`.
    f. Verifica la publicación en directo (URL/ID, identidad, audiencia, música). En Instagram por teléfono, la copia automática en Facebook va en `publication.cross_posting` del run.
    g. Actualiza el run, la celda de coverage.json, `lab.py encargo-usado --encargo ID --run RUN` y experiments/media-lab/progress.md.
 8. Métricas: captura las instantáneas vencidas (24 h, 72 h, 7 d; Stories unas 6 h y antes de caducar) de los runs publicados y guárdalas en sus runs.
