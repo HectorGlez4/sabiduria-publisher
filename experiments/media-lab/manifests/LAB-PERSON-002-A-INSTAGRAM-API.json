@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-PERSON-002-A-INSTAGRAM-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
+  "asset_sha256": "55c939fa434cd096b9a3ae117d6ad8d9a9bc42798c863ad2793a8102ca1c026f",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
+  "platforms": [
+    "instagram"
+  ],
+  "captions": {
+    "instagram": "En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente para un sistema de comunicación secreto: transmisor y receptor cambiarían de frecuencia de forma sincronizada. El documento proponía un mecanismo inspirado en los rollos perforados de las pianolas y mencionaba 88 filas y 88 frecuencias portadoras. La patente US 2.292.387 se concedió el 11 de agosto de 1942.\n\nNo inventaron el wifi ni el bluetooth. Su trabajo fue un antecedente técnico del espectro ensanchado por salto de frecuencia.\n\nLa mujer de la imagen es una presentadora ficticia generada para este experimento; no representa a Hedy Lamarr. Escena editorial original, no fotografía histórica. Fuentes: patente US 2.292.387, National Inventors Hall of Fame y National WWII Museum.\n\n#SabiduriaDeBolsillo #HedyLamarr #GeorgeAntheil #HistoriaDeLaTecnologia"
+  },
+  "family_id": "LAB-PERSON-002"
+}
