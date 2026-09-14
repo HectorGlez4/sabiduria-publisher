@@ -8,6 +8,8 @@ dejar un encargo en un estado que el otro no espera.
 from __future__ import annotations
 
 import json
+import os
+import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -15,12 +17,16 @@ LOCK_MINUTOS = 30
 MAX_EN_COLA = 6
 DUENOS_GENERACION = ("codex-heartbeat", "codex-exec")
 
+_ID = re.compile(r"ENC-(\d{8})-(\d{3,})")
+
 
 class EncargoError(ValueError):
     pass
 
 
 def _iso(t: datetime) -> str:
+    if t.tzinfo is None:
+        raise EncargoError("fecha sin zona horaria")
     return t.astimezone(timezone.utc).isoformat(timespec="seconds")
 
 
@@ -35,14 +41,17 @@ def nuevo(encargo_id: str, *, coverage_cell_ids: list[str], family_id: str, brie
         raise EncargoError("encargo_id debe empezar por ENC-")
     if not 1 <= variantes <= 2:
         raise EncargoError("variantes debe ser 1 o 2")
-    if not destino_assets.startswith("experiments/media-lab/assets/"):
-        raise EncargoError("destino_assets debe estar bajo experiments/media-lab/assets/")
+    if "/" in family_id or family_id in ("", ".", ".."):
+        raise EncargoError("family_id no válido")
+    destino = destino_assets.rstrip("/")
+    if destino != f"experiments/media-lab/assets/{family_id}":
+        raise EncargoError(f"destino_assets debe ser experiments/media-lab/assets/{family_id}")
     return {
         "encargo_id": encargo_id, "creado_en": _iso(ahora),
         "coverage_cell_ids": list(coverage_cell_ids), "family_id": family_id,
         "brief_path": brief_path, "do_not_use": list(do_not_use), "formato": formato,
         "variantes": variantes, "prompt": prompt, "restricciones": list(restricciones),
-        "destino_assets": destino_assets.rstrip("/"), "max_intentos": max_intentos,
+        "destino_assets": destino, "max_intentos": max_intentos,
         "estado": "pedido", "lock_owner": None, "lock_expira": None,
         "imagenes": [], "intentos": [], "revision": None, "runs": [],
     }
@@ -78,6 +87,14 @@ def marcar_generado(enc: dict, owner: str, imagenes: list[dict], ahora: datetime
         faltan = {"ruta", "sha256", "ancho", "alto"} - set(im)
         if faltan:
             raise EncargoError(f"imagen sin {sorted(faltan)}")
+    if len(imagenes) > enc["variantes"]:
+        raise EncargoError(f"{len(imagenes)} imágenes para {enc['variantes']} variante(s)")
+    rutas = [im["ruta"] for im in imagenes]
+    if len(set(rutas)) != len(rutas):
+        raise EncargoError("rutas de imagen repetidas")
+    for ruta in rutas:
+        if not ruta.startswith(enc["destino_assets"] + "/"):
+            raise EncargoError(f"{ruta} está fuera de {enc['destino_assets']}")
     enc["imagenes"] = [{**im, "origen": owner, "generado_en": _iso(ahora)} for im in imagenes]
     enc["intentos"].append({"numero": len(enc["intentos"]) + 1, "resultado": "generado",
                             "origen": owner, "en": _iso(ahora)})
@@ -100,12 +117,15 @@ def revisar(enc: dict, *, aprobado: bool, motivo: str, ahora: datetime,
         raise EncargoError(f"solo se revisa un encargo generado, no {enc['estado']}")
     if not aprobado and not correccion:
         raise EncargoError("un rechazo necesita la corrección para el siguiente intento")
-    enc["revision"] = {"resultado": "aprobado" if aprobado else "rechazado",
-                       "motivo": motivo, "revisado_en": _iso(ahora)}
+    revision = {"resultado": "aprobado" if aprobado else "rechazado",
+                "motivo": motivo, "revisado_en": _iso(ahora)}
     if aprobado:
+        enc["revision"] = revision
         enc["estado"] = "aprobado"
         return enc
     enc["intentos"][-1]["imagenes_rechazadas"] = enc["imagenes"]
+    enc["intentos"][-1]["revision"] = revision
+    enc["revision"] = None
     enc["imagenes"] = []
     enc["restricciones"].append(correccion)
     enc["estado"] = "pedido" if len(enc["intentos"]) < enc["max_intentos"] else "bloqueado"
@@ -131,17 +151,33 @@ def cargar(ruta: Path) -> dict:
 
 def guardar(ruta: Path, enc: dict) -> None:
     ruta.parent.mkdir(parents=True, exist_ok=True)
-    ruta.write_text(json.dumps(enc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Escritura atómica: un corte a mitad no deja un JSON truncado que bloquee a los dos agentes.
+    # El temporal empieza por punto para que no coincida con ENC-*.json.
+    tmp = ruta.with_name(f".{ruta.name}.tmp")
+    tmp.write_text(json.dumps(enc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(tmp, ruta)
 
 
 def listar(carpeta: Path) -> list[tuple[Path, dict]]:
     if not carpeta.exists():
         return []
-    pares = [(p, cargar(p)) for p in carpeta.glob("ENC-*.json")]
+    pares = []
+    for p in carpeta.glob("ENC-*.json"):
+        try:
+            pares.append((p, cargar(p)))
+        except (OSError, ValueError) as e:
+            raise EncargoError(f"{p.name} ilegible: {e}") from e
     return sorted(pares, key=lambda par: (par[1]["creado_en"], par[1]["encargo_id"]))
 
 
 def siguiente_id(carpeta: Path, ahora: datetime) -> str:
-    prefijo = f"ENC-{ahora.astimezone(timezone.utc):%Y%m%d}-"
-    usados = [int(p.stem.rsplit("-", 1)[1]) for p in carpeta.glob(f"{prefijo}*.json")] if carpeta.exists() else []
-    return f"{prefijo}{max(usados, default=0) + 1:03d}"
+    if ahora.tzinfo is None:
+        raise EncargoError("fecha sin zona horaria")
+    dia = f"{ahora.astimezone(timezone.utc):%Y%m%d}"
+    usados = []
+    if carpeta.exists():
+        for p in carpeta.glob(f"ENC-{dia}-*.json"):
+            m = _ID.fullmatch(p.stem)
+            if m:
+                usados.append(int(m.group(2)))
+    return f"ENC-{dia}-{max(usados, default=0) + 1:03d}"

@@ -57,13 +57,13 @@ def seccion_encargos() -> None:
 
     t0 = datetime(2026, 9, 15, 8, 0, tzinfo=timezone.utc)
 
-    def base(encargo_id: str = "ENC-20260915-001") -> dict:
+    def base(encargo_id: str = "ENC-20260915-001", variantes: int = 1) -> dict:
         return E.nuevo(
             encargo_id, coverage_cell_ids=["CELL-011"], family_id="LAB-F01-001",
             brief_path="experiments/media-lab/briefs/LAB-F01-001.md", do_not_use=[],
             formato={"nativo": "feed_single_image", "ancho": 1080, "alto": 1350},
             prompt="Un astrolabio de latón sobre una mesa de madera", restricciones=["sin texto"],
-            destino_assets="experiments/media-lab/assets/LAB-F01-001", ahora=t0)
+            destino_assets="experiments/media-lab/assets/LAB-F01-001", variantes=variantes, ahora=t0)
 
     img = [{"ruta": "experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v1.png",
             "sha256": "ab", "ancho": 1024, "alto": 1536}]
@@ -133,6 +133,66 @@ def seccion_encargos() -> None:
               "el archivo es JSON legible")
         check([e["encargo_id"] for _, e in E.listar(carpeta)] == ["ENC-20260915-001"],
               "listar devuelve los encargos del directorio")
+
+    print("   · endurecimiento tras la revisión de calidad")
+
+    def falla(accion) -> bool:
+        try:
+            accion()
+            return False
+        except E.EncargoError:
+            return True
+
+    check(e["revision"] is None and e["intentos"][0]["revision"]["motivo"] == "texto espurio",
+          "la revisión de un rechazo queda en su intento, no en el encargo")
+    e3 = base()
+    E.tomar(e3, "codex-heartbeat", t0)
+    check(falla(lambda: E.tomar(base(), "otro", t0)), "tomar con un dueño desconocido falla")
+    check(falla(lambda: E.tomar(e3, "codex-exec", t0 + timedelta(minutes=5))), "tomar un bloqueo vigente falla")
+    E.tomar(e3, "codex-exec", t0 + timedelta(minutes=31))
+    check(falla(lambda: E.marcar_generado(e3, "codex-heartbeat", img, t0 + timedelta(minutes=32))),
+          "tras robar un bloqueo vencido, el dueño anterior ya no puede marcar generado")
+    e4 = base()
+    E.tomar(e4, "codex-exec", t0)
+    E.marcar_fallo(e4, "codex-exec", "tiempo agotado", t0)
+    check(e4["estado"] == "pedido" and e4["lock_owner"] is None, "un fallo con intentos restantes vuelve a pedido")
+
+    v2 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v2.png")
+    v3 = dict(img[0], ruta="experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v3.png")
+    fuera = dict(img[0], ruta="experiments/media-lab/assets/OTRA/ENC-20260915-001-v1.png")
+    for label, imagenes in (("más imágenes que variantes", [img[0], v2, v3]),
+                            ("rutas repetidas", [img[0], img[0]]),
+                            ("imagen fuera de destino_assets", [fuera])):
+        e5 = base(variantes=2)
+        E.tomar(e5, "codex-heartbeat", t0)
+        check(falla(lambda: E.marcar_generado(e5, "codex-heartbeat", imagenes, t0)),
+              f"marcar_generado rechaza: {label}")
+
+    check(falla(lambda: E.nuevo("ENC-20260915-010", **{**comunes, "destino_assets": "experiments/media-lab/assets/OTRA"})),
+          "nuevo exige destino_assets = assets/<family_id>")
+    check(falla(lambda: E.nuevo("ENC-20260915-011", **{**comunes, "family_id": "..",
+                                                       "destino_assets": "experiments/media-lab/assets/.."})),
+          "nuevo rechaza un family_id que escapa de assets")
+    check(falla(lambda: E.nuevo("ENC-20260915-012", **{**comunes, "ahora": datetime(2026, 9, 15, 8, 0)})),
+          "nuevo rechaza una fecha sin zona horaria")
+
+    with tempfile.TemporaryDirectory() as d:
+        carpeta = pathlib.Path(d)
+        (carpeta / "ENC-20260915-abc.json").write_text("{}", encoding="utf-8")
+        (carpeta / "ENC-20260915-004.json").write_text("{}", encoding="utf-8")
+        check(E.siguiente_id(carpeta, t0) == "ENC-20260915-005",
+              "siguiente_id ignora sufijos no numéricos y sigue al mayor")
+    with tempfile.TemporaryDirectory() as d:
+        carpeta = pathlib.Path(d)
+        E.guardar(carpeta / "ENC-20260915-001.json", base())
+        check(list(carpeta.glob(".*.tmp")) == [], "guardar no deja temporales")
+        (carpeta / "ENC-20260915-002.json").write_text("{", encoding="utf-8")
+        try:
+            E.listar(carpeta)
+            mensaje = ""
+        except E.EncargoError as err:
+            mensaje = str(err)
+        check("ENC-20260915-002.json" in mensaje, "un encargo ilegible da un error que nombra el archivo")
 
 
 SECCIONES = [
