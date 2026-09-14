@@ -28,6 +28,7 @@ from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _cam
                                         _exigir_compositor_con_pie, _nodo, _suivant, _tiene_pie,
                                         banners_de_volcado, campo_pie,
                                         compositor_listo, evaluar_envio, hay_desplegable_hashtags,
+                                        hay_desplegable_por_ventana,
                                         miniatura_coincide, observacion_de_volcado, perfil_activo,
                                         publicaciones_de_perfil, punto_mas, seleccion_unica, tema_de_chip)
 
@@ -165,14 +166,23 @@ def detalles(evidencia: Path) -> Path:
     return telefono.captura(evidencia / "ig-03b-detalles.png")
 
 
+def _hay_que_cerrar(xml: str, emergentes: list[dict]) -> bool:
+    """El desplegable de hashtags está abierto: por nodos (`hay_desplegable_hashtags`) o
+    por una ventana emergente que el volcado no incluye pero se solapa con la fila de
+    música o con «Partager» (`hay_desplegable_por_ventana`; ver Task 10f)."""
+    return hay_desplegable_hashtags(xml, paquete=PAQUETE) or hay_desplegable_por_ventana(xml, emergentes)
+
+
 def _estado_cierre(xml: str) -> tuple[bool, bool]:
     """(teclado abierto, desplegable de Instagram abierto). Si no se sabe si el teclado
     está abierto, se para sin pulsar atrás: un «atrás» con todo cerrado sacaría del
-    compositor."""
+    compositor. Un TelefonoError de `telefono.ventanas_emergentes` no se atrapa aquí: se
+    propaga y no se pulsa nada (falla cerrado)."""
     teclado = telefono.teclado_estado()
     if teclado is None:
         raise PantallaInesperada("no se puede leer si el teclado está abierto")
-    return teclado, hay_desplegable_hashtags(xml, paquete=PAQUETE)
+    emergentes = telefono.ventanas_emergentes(PAQUETE)
+    return teclado, _hay_que_cerrar(xml, emergentes)
 
 
 def escribir_pie(pie: str, evidencia: Path) -> Path:
@@ -260,12 +270,12 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
         raise PantallaInesperada("el teclado está visible (o no se sabe): no se comparte")
     captura_antes = str(telefono.captura(evidencia / "ig-05a-antes.png"))
     xml1 = _volcado_fresco()
-    problemas = compositor_listo(xml1, pie, tema)
+    problemas = compositor_listo(xml1, pie, tema, telefono.ventanas_emergentes(PAQUETE))
     if problemas:
         raise PantallaInesperada(f"el compositor no está listo para compartir: {problemas}")
     time.sleep(1.5)
     xml2 = _volcado_fresco()
-    problemas = compositor_listo(xml2, pie, tema)
+    problemas = compositor_listo(xml2, pie, tema, telefono.ventanas_emergentes(PAQUETE))
     if problemas:
         raise PantallaInesperada(f"el compositor no está listo para compartir (2.º volcado): {problemas}")
     posiciones = [[n["bounds"] for n in telefono.buscar_todos(x, texto="Partager", paquete=PAQUETE)]

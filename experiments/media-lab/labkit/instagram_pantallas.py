@@ -21,7 +21,8 @@ __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
     "LARGO_AVISO_CORTO", "PantallaInesperada", "banners_de_volcado",
     "perfil_activo", "publicaciones_de_perfil", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
-    "hay_desplegable_hashtags", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
+    "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "punto_mas", "tema_de_chip", "campo_pie",
+    "partager_pulsable",
     "compositor_listo", "observacion_de_volcado", "evaluar_envio",
     "_es_textview", "_dice", "_area", "_campos", "_elegir", "_coincidencias", "_nodo", "_suivant",
     "_tiene_pie", "_exigir_compositor_con_pie",
@@ -130,6 +131,50 @@ def hay_desplegable_hashtags(xml: str, paquete: str | None = None) -> bool:
                for n in telefono.buscar_todos(xml, paquete=paquete))
 
 
+# Sufijo del resource-id de la fila de música en el compositor (Task 10f, medido el
+# 2026-09-14). El desplegable de hashtags es una ventana aparte que uiautomator dump no
+# incluye: `hay_desplegable_por_ventana` la reconoce por su solape con esta fila o con
+# «Partager», que sí están en el volcado.
+RESOURCE_ID_MUSICA = "music_track_title"
+ALTURA_PANTALLA_PX = 2340  # medida del Samsung del laboratorio (serie R5CXB1AWYNF)
+
+
+def _fila_musica_o_partager(xml: str, paquete: str) -> list[tuple[int, int, int, int]]:
+    """Bounds de la fila de música (resource-id que acaba en RESOURCE_ID_MUSICA) y de
+    «Partager», de `paquete`. Puede salir vacía si el compositor no muestra ninguno."""
+    nodos = telefono.buscar_todos(xml, paquete=paquete)
+    return ([n["bounds"] for n in nodos if n["resource_id"].endswith(RESOURCE_ID_MUSICA)]
+            + [n["bounds"] for n in nodos if _dice(n, "Partager")])
+
+
+def _se_solapan_verticalmente(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> bool:
+    _, ay1, _, ay2 = a
+    _, by1, _, by2 = b
+    return ay1 < by2 and by1 < ay2
+
+
+def hay_desplegable_por_ventana(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> bool:
+    """Alguna de `emergentes` (ver `telefono.ventanas_emergentes_de`, ya filtradas a
+    `paquete`) se solapa verticalmente con la fila de música o con «Partager»; si ninguno
+    de los dos aparece en el volcado, cuenta cualquier emergente con el frame en la mitad
+    inferior de la pantalla (ver Task 10f: el desplegable es una `PopupWindow` que
+    `uiautomator dump` no incluye, así que aquí solo se compara contra lo que sí trae el
+    volcado)."""
+    if not emergentes:
+        return False
+    referencias = _fila_musica_o_partager(xml, paquete)
+    for e in emergentes:
+        frame = e.get("frame")
+        if frame is None:
+            continue
+        if referencias:
+            if any(_se_solapan_verticalmente(frame, r) for r in referencias):
+                return True
+        elif frame[1] >= ALTURA_PANTALLA_PX // 2:
+            return True
+    return False
+
+
 def punto_mas(bounds: tuple[int, int, int, int]) -> tuple[int, int]:
     """El «+» del chip de audio: a la derecha, en su tercio superior (medido el 2026-09-14)."""
     x1, y1, x2, y2 = bounds
@@ -181,8 +226,12 @@ def partager_pulsable(xml: str) -> bool:
     return False
 
 
-def compositor_listo(xml: str, pie: str, tema: str | None) -> list[str]:
-    """Problemas que impiden compartir; lista vacía = listo."""
+def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict] | None = None) -> list[str]:
+    """Problemas que impiden compartir; lista vacía = listo.
+
+    `emergentes` (ver `telefono.ventanas_emergentes`) detecta el desplegable de hashtags
+    cuando es una ventana aparte que el volcado no muestra (Task 10f); sin él, solo se mira
+    el volcado, como antes."""
     problemas = []
     if telefono.buscar(xml, texto="Nouvelle publication", paquete=PAQUETE) is None:
         problemas.append("falta «Nouvelle publication»")
@@ -202,6 +251,8 @@ def compositor_listo(xml: str, pie: str, tema: str | None) -> list[str]:
             problemas.append("Partager no pulsable")
     if hay_desplegable_hashtags(xml):
         problemas.append("desplegable de hashtags abierto")
+    if hay_desplegable_por_ventana(xml, emergentes or []):
+        problemas.append("desplegable de hashtags abierto (ventana emergente)")
     return problemas
 
 

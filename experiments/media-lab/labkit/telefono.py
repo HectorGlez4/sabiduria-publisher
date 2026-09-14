@@ -170,6 +170,44 @@ def tapado(xml: str, nodo: dict) -> bool:
     return False
 
 
+_VENTANA_DUMPSYS = re.compile(r"Window #\d+ Window\{[0-9a-f]+ u\d+ (?P<nombre>[^}]+)\}:")
+_VENTANA_PADRE = re.compile(r"mParentWindow=Window\{[0-9a-f]+ u\d+ (?P<padre>[^}]+)\}")
+_VENTANA_VISIBLE = re.compile(r"isVisible=(true|false)")
+_VENTANA_FRAME = re.compile(r"\bframe=\[(-?\d+),(-?\d+)\]\[(-?\d+),(-?\d+)\]")
+
+
+def ventanas_emergentes_de(texto: str, paquete: str) -> list[dict]:
+    """Ventanas `PopupWindow:*` visibles de `paquete` en `dumpsys window windows`.
+
+    El desplegable de sugerencias de hashtags de Instagram es una ventana aparte que
+    `uiautomator dump` no incluye (ver Task 10f): esta lectura complementa al volcado.
+    Cada bloque `Window #N Window{… <nombre>}:` se extiende hasta el siguiente bloque (o
+    el final del texto); solo cuentan los que empiezan por «PopupWindow:», cuyo
+    `mParentWindow` es del paquete dado (comparado como `"<paquete>/"`) y con
+    `isVisible=true`. Un bloque sin `frame=[x1,y1][x2,y2]` se ignora. Texto vacío da lista
+    vacía."""
+    encabezados = list(_VENTANA_DUMPSYS.finditer(texto))
+    emergentes = []
+    for i, m in enumerate(encabezados):
+        nombre = m.group("nombre").strip()
+        if not nombre.startswith("PopupWindow:"):
+            continue
+        fin = encabezados[i + 1].start() if i + 1 < len(encabezados) else len(texto)
+        bloque = texto[m.end():fin]
+        padre = _VENTANA_PADRE.search(bloque)
+        if not padre or not padre.group("padre").startswith(f"{paquete}/"):
+            continue
+        visible = _VENTANA_VISIBLE.search(bloque)
+        if not visible or visible.group(1) != "true":
+            continue
+        frame = _VENTANA_FRAME.search(bloque)
+        if not frame:
+            continue
+        x1, y1, x2, y2 = map(int, frame.groups())
+        emergentes.append({"nombre": nombre, "frame": (x1, y1, x2, y2)})
+    return emergentes
+
+
 def consulta_mediastore(nombre: str) -> str:
     """Orden de shell que busca la imagen por nombre en MediaStore."""
     if not _NOMBRE_SEGURO.fullmatch(nombre):
@@ -286,6 +324,13 @@ def estado() -> dict:
     except TelefonoError:
         leido = {"despierto": False, "bloqueado": None, "listo": False}
     return {"adb": True, **leido}
+
+
+def ventanas_emergentes(paquete: str, timeout: int = 15) -> list[dict]:
+    """Ventanas `PopupWindow:*` de `paquete` (por ejemplo el desplegable de hashtags de
+    Instagram, invisible para `uiautomator dump`; ver Task 10f). Si `dumpsys` falla se
+    propaga TelefonoError: quien llama falla cerrado."""
+    return ventanas_emergentes_de(shell("dumpsys window windows", timeout=timeout), paquete)
 
 
 def teclado_estado() -> bool | None:

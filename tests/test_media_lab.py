@@ -564,11 +564,12 @@ class TelefonoSimulado:
     """Teléfono de mentira: volcados guionizados (el último se repite), toques, teclas y
     capturas anotados, y un reloj que avanza 2 s en cada lectura."""
 
-    def __init__(self, volcados: list, *, teclado: tuple = (False,), listo: bool = True,
-                 falla_tocar: Exception | None = None, falla_pegar: Exception | None = None,
-                 falla_cortina: Exception | None = None):
+    def __init__(self, volcados: list, *, teclado: tuple = (False,), emergentes: tuple = ((),),
+                 listo: bool = True, falla_tocar: Exception | None = None,
+                 falla_pegar: Exception | None = None, falla_cortina: Exception | None = None):
         self.volcados = list(volcados)
         self.teclado = list(teclado)
+        self.emergentes = list(emergentes)
         self.listo = listo
         self.falla_tocar = falla_tocar
         self.falla_pegar = falla_pegar
@@ -609,6 +610,12 @@ class TelefonoSimulado:
 
     def teclado_estado(self):
         return self._siguiente(self.teclado)
+
+    def ventanas_emergentes(self, paquete: str, timeout: int = 15):
+        v = self._siguiente(self.emergentes)
+        if isinstance(v, BaseException):
+            raise v
+        return v
 
     def teclado_visible(self) -> bool:
         v = self.teclado_estado()
@@ -651,7 +658,8 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
     cambios = [(telefono, "volcado", sim.volcado), (telefono, "tocar", sim.tocar),
                (telefono, "tecla", sim.tecla), (telefono, "combinacion", sim.combinacion),
                (telefono, "estado", sim.estado), (telefono, "teclado_visible", sim.teclado_visible),
-               (telefono, "teclado_estado", sim.teclado_estado), (telefono, "captura", sim.captura),
+               (telefono, "teclado_estado", sim.teclado_estado),
+               (telefono, "ventanas_emergentes", sim.ventanas_emergentes), (telefono, "captura", sim.captura),
                (telefono, "lanzar", sim.lanzar), (telefono, "cerrar_cortina", sim.cerrar_cortina),
                (telefono, "shell", sim.prohibido),
                (telefono, "adb", sim.prohibido), (phone_clipboard, "pegar", sim.pegar),
@@ -1070,6 +1078,54 @@ def seccion_interfaz() -> None:
     check(leido is True and desconocido is None and visible is True,
           "teclado_estado da None si no se puede leer y teclado_visible lo da por abierto")
 
+    print("   · (Task 10f) ventanas emergentes: el desplegable de hashtags es una ventana aparte")
+    dumpsys_popup = """  Window #11 Window{49fd424 u0 PopupWindow:de536c5}:
+    mDisplayId=0 rootTaskId=1 mSession=Session{3c0b2c1 12345:u0a10234} mClient=android.os.BinderProxy@8b0a1f0
+    mOwnerUid=10234 showForAllUsers=false package=com.instagram.android appop=NONE
+    mAttrs={(0,1448)(1080xwrap) gr=TOP START CENTER DISPLAY_CLIP_VERTICAL sim={state=unchanged adjust=resize} ty=APPLICATION_PANEL surfaceInsets=Rect(0, 0 - 0, 0) (manual)
+    mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=true
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    Frames: parent=[0,0][1080,2340] display=[0,92][1080,2205] frame=[0,1448][1080,2205] last=[0,1448][1080,2205] insetsChanged=false
+    isVisible=true
+  Window #12 Window{2e76a1 u0 KHCD.0OKT}:
+    mAttrs={(0,0)(1xfill) sim={adjust=resize} ty=APPLICATION_ATTACHED_DIALOG fmt=TRANSLUCENT
+    mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=false
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    Frames: parent=[0,92][1080,2205] display=[0,92][1080,2205] frame=[539,92][540,2205] last=[539,92][540,2205] insetsChanged=false
+    isVisible=true
+  Window #13 Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity}:
+    mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSPARENT wanim=0x10302f6
+    isVisible=true
+"""
+    check(T.ventanas_emergentes_de(dumpsys_popup, PAQUETE_IG)
+          == [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}],
+          "(10f) el lector puro extrae la PopupWindow visible del paquete, con su frame")
+    sin_popup = dumpsys_popup[dumpsys_popup.index("  Window #12"):]
+    check(T.ventanas_emergentes_de(sin_popup, PAQUETE_IG) == [],
+          "(10f) sin el bloque PopupWindow no hay emergentes")
+    check(T.ventanas_emergentes_de(dumpsys_popup, "com.other.app") == [],
+          "(10f) una PopupWindow de otro paquete no cuenta")
+    check(T.ventanas_emergentes_de(dumpsys_popup.replace("isVisible=true", "isVisible=false", 1), PAQUETE_IG) == [],
+          "(10f) isVisible=false no cuenta")
+    check(T.ventanas_emergentes_de("", PAQUETE_IG) == [], "(10f) texto vacío: lista vacía")
+
+    shell_original = T.shell
+    try:
+        T.shell = lambda cmd, timeout=60: dumpsys_popup
+        via_shell = T.ventanas_emergentes(PAQUETE_IG)
+
+        def falla_dumpsys(cmd, timeout=60):
+            raise T.TelefonoError("adb no responde")
+        T.shell = falla_dumpsys
+        fallo = lanza(lambda: T.ventanas_emergentes(PAQUETE_IG), T.TelefonoError)
+    finally:
+        T.shell = shell_original
+    check(via_shell == [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}],
+          "(10f) ventanas_emergentes aplica el lector a la salida de dumpsys")
+    check(fallo is not None, "(10f) si dumpsys falla, ventanas_emergentes falla cerrado con TelefonoError")
+
     print("   · teléfono simulado")
     import time as reloj
     sleep_original, monotonic_original = reloj.sleep, reloj.monotonic
@@ -1273,6 +1329,40 @@ def seccion_interfaz() -> None:
           f"(M-6) abrir con pantalla de arranque y luego el inicio: exactamente un toque en Profil ({err!r}, {sim.toques})")
     check(sim.orden[:1] == ["cortina"],
           f"(M-7-iv) en el camino feliz de abrir, cerrar_cortina se llama antes de todo lo demás ({sim.orden})")
+
+    print("   · (Task 10f) el desplegable de hashtags como ventana emergente (uiautomator dump no la ve)")
+    emergente_abierta = [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}]
+    check(IG.compositor_listo(comp, PIE_PRUEBA, tema, emergente_abierta)
+          == ["desplegable de hashtags abierto (ventana emergente)"],
+          "(10f) compositor_listo con una emergente que se solapa con «Partager» añade el problema")
+    check(IG.compositor_listo(comp, PIE_PRUEBA, tema) == [],
+          "(10f) sin el parámetro emergentes, compositor_listo se comporta como antes")
+    check(IG.compositor_listo(comp, PIE_PRUEBA, tema, []) == [],
+          "(10f) con una lista de emergentes vacía, compositor_listo se comporta como antes")
+
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta, emergente_abierta, ()))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(err is None and sim.teclas == [IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
+          f"(10f) la emergente se ve en dos volcados (incluida la confirmación) y luego se cierra tras el «atrás»: "
+          f"exactamente un «atrás» y captura ({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [IG.ATRAS, IG.ATRAS]
+          and "ig-04-compositor.png" not in sim.capturas,
+          f"(10f) la emergente persiste: PantallaInesperada, exactamente 2 «atrás» y sin captura "
+          f"({err!r}, {sim.teclas}, {sim.capturas})")
+
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta,))
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, IntentoDeES) and sim.toques == [],
+          f"(10f) compartir con volcados limpios pero una emergente abierta: PantallaInesperada y ningún toque "
+          f"({err!r}, {sim.toques})")
+
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(T.TelefonoError("dumpsys no responde"),))
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(isinstance(err, T.TelefonoError) and not isinstance(err, IntentoDeES) and sim.toques == [],
+          f"(10f) si ventanas_emergentes falla dentro de compartir, falla cerrado sin tocar ({err!r}, {sim.toques})")
 
     print("   · seguimiento de la revisión (10b): captura sin disco y parada del portapapeles")
     import io
