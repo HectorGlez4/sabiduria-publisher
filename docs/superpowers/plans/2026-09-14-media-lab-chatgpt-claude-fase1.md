@@ -1473,8 +1473,7 @@ def seccion_cli() -> None:
         prompt.write_text("Un astrolabio de latón", encoding="utf-8")
         codigo, out, err = lab_cmd("encargo-nuevo", "--cell", "CELL-900", "--family", "LAB-TEST-001",
                                    "--brief", "b.md", "--formato", '{"ancho":1080,"alto":1350}',
-                                   "--prompt-file", str(prompt), "--restriccion", "sin texto",
-                                   "--destino", "experiments/media-lab/assets/LAB-TEST-001")
+                                   "--prompt-file", str(prompt), "--restriccion", "sin texto")
         check(codigo == 0, f"encargo-nuevo funciona {err[-200:]}")
         eid = json.loads(out)["encargo_id"]
         codigo, out, _ = lab_cmd("codex-tomar", "--owner", "codex-heartbeat", "--max", "2")
@@ -1605,7 +1604,8 @@ def cmd_encargo_nuevo(a) -> int:
         encargos.siguiente_id(ENCARGOS, t), coverage_cell_ids=a.cell, family_id=a.family,
         brief_path=a.brief, do_not_use=a.do_not_use or [], formato=json.loads(a.formato),
         prompt=Path(a.prompt_file).read_text(encoding="utf-8").strip(),
-        restricciones=a.restriccion or [], destino_assets=a.destino, ahora=t, variantes=a.variantes)
+        restricciones=a.restriccion or [],
+        destino_assets=f"experiments/media-lab/assets/{a.family}", ahora=t, variantes=a.variantes)
     encargos.guardar(ruta_encargo(enc["encargo_id"]), enc)
     emitir(enc)
     return 0
@@ -1798,7 +1798,6 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--formato", required=True, help="JSON, p. ej. '{\"nativo\":\"feed_single_image\",\"ancho\":1080,\"alto\":1350}'")
     p.add_argument("--prompt-file", required=True)
     p.add_argument("--restriccion", action="append")
-    p.add_argument("--destino", required=True)
     p.add_argument("--variantes", type=int, default=1)
     p.set_defaults(func=cmd_encargo_nuevo)
     sub.add_parser("encargos").set_defaults(func=cmd_encargos)
@@ -1929,7 +1928,7 @@ Expected: JSON con `telefono.listo: true` y `github: true`. `espera` puede traer
 
 ```bash
 printf 'Un astrolabio de latón sobre una mesa de madera oscura, luz lateral cálida, fondo liso, estilo fotográfico editorial' > /private/tmp/claude-501/-Users-hec-dev-sabiduriaPublisher/sonda-prompt.txt
-.venv/bin/python experiments/media-lab/lab.py encargo-nuevo --cell SONDA --family LAB-SONDA-001 --brief sonda --formato '{"nativo":"feed_single_image","ancho":1080,"alto":1350}' --prompt-file /private/tmp/claude-501/-Users-hec-dev-sabiduriaPublisher/sonda-prompt.txt --restriccion "sin texto" --destino experiments/media-lab/assets/LAB-SONDA-001
+.venv/bin/python experiments/media-lab/lab.py encargo-nuevo --cell SONDA --family LAB-SONDA-001 --brief sonda --formato '{"nativo":"feed_single_image","ancho":1080,"alto":1350}' --prompt-file /private/tmp/claude-501/-Users-hec-dev-sabiduriaPublisher/sonda-prompt.txt --restriccion "sin texto"
 ```
 
 Expected: JSON con `"estado": "pedido"`. Anotar `encargo_id`.
@@ -2025,7 +2024,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
-5. Reposición: crea encargos con `lab.py encargo-nuevo` para las próximas celdas `planned` de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
+5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
 6. `lab.py seleccionar --max 2`. Si devuelve [] o `espera` no es null, salta al paso 10.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`):
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
