@@ -2,7 +2,7 @@
   "id": "2026-09-13-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Safo y el fragmento 147",
     "hook": "El verso de Safo sobre ser recordada llegó hasta nosotros porque, setecientos años después, un hombre lo citó para quejarse de que le habían quitado su estatua.",
@@ -81,5 +81,21 @@
     "threads"
   ],
   "publish_at": "2026-09-13T20:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1094413540049972",
+      "url": "https://www.facebook.com/874327782058550/posts/1094413540049972",
+      "published_at": "2026-09-14T00:47:01.560511+00:00"
+    },
+    "instagram": {
+      "post_id": "18219109429337999",
+      "url": "https://www.instagram.com/p/DdP4dEpm8Jv/",
+      "published_at": "2026-09-14T00:47:13.670381+00:00"
+    },
+    "threads": {
+      "post_id": "18099060257197070",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18099060257197070",
+      "published_at": "2026-09-14T00:47:26.265237+00:00"
+    }
+  }
 }
