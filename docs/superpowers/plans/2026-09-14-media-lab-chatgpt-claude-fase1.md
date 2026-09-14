@@ -1455,6 +1455,15 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - Create: `experiments/media-lab/lab.py`
 - Modify: `tests/test_media_lab.py`
 
+- [ ] **Step 0: Seguimiento de la revisión de la tarea 9 en `codex_rescate.py`**
+
+En `experiments/media-lab/labkit/codex_rescate.py`:
+- En `validar`, justo antes de `if not p.is_file():`, rechazar enlaces: `if p.is_symlink(): errores.append(f"{im['ruta']} es un enlace simbólico"); continue`.
+- En `_validar_imagen`, capturar también `Image.DecompressionBombError`: `except (OSError, UnidentifiedImageError, Image.DecompressionBombError):`.
+- Aceptar una imagen cuadrada para un formato rectangular (se recorta bien después): la condición de orientación pasa a `if fa and fh and fa != fh and ancho != alto and (fh > fa) != (alto > ancho):` y el comentario lo dice.
+
+Pruebas nuevas en `seccion_codex` (dentro del directorio temporal): un enlace simbólico en la ruta pedida hacia un PNG válido fuera de `destino_assets` → error «enlace simbólico»; un PNG 1024×1024 registrado como 1024×1024 para el formato 1080×1350 → `validar` sin errores. Quitar el redundante `E.EncargoError is not None and` de la comprobación de `family_id`. Commit aparte: `media lab claude: rescate rechaza enlaces y acepta imágenes cuadradas` con el trailer.
+
 - [ ] **Step 1: Escribir la prueba (flujo de encargos por la CLI, sin teléfono ni red)**
 
 Añadir antes de `SECCIONES` y registrar `seccion_cli,`:
@@ -1700,14 +1709,38 @@ def cmd_codex_fallo(a) -> int:
 
 
 def _estado_git() -> dict[str, str]:
-    """Rutas con cambios respecto a HEAD y el hash actual de cada una ("-" si no es un archivo)."""
-    r = subprocess.run(["git", "status", "--porcelain", "-uall"], cwd=ROOT, capture_output=True,
-                       text=True, timeout=60, stdin=subprocess.DEVNULL)
+    """
+    Hash actual de las rutas con cambios respecto a HEAD y de lo ignorado que importa.
+
+    Lo ignorado no aparece en `git status`: se añaden a mano los secretos, el cerrojo de
+    ventana y las tarjetas de producción, que Codex no debe tocar.
+    """
+    r = subprocess.run(["git", "status", "--porcelain", "-z", "-uall"], cwd=ROOT, capture_output=True,
+                       timeout=60, stdin=subprocess.DEVNULL)
+    if r.returncode != 0:
+        raise RuntimeError(f"git status falló: {r.stderr.decode(errors='replace').strip()[:200]}")
+    rutas: list[str] = []
+    campos = r.stdout.decode("utf-8", errors="surrogateescape").split("\0")
+    i = 0
+    while i < len(campos):
+        registro = campos[i]
+        i += 1
+        if not registro:
+            continue
+        rutas.append(registro[3:])
+        if registro[0] in "RC" or registro[1] in "RC":
+            i += 1  # en -z, un renombrado o copia trae después la ruta de origen
+    rutas += [".env", "experiments/media-lab/.ventana.lock"]
+    rutas += [str(q.relative_to(ROOT)) for q in (ROOT / "assets").glob("*.png")]
     fuera = {}
-    for linea in r.stdout.splitlines():
-        ruta = linea[3:].split(" -> ")[-1].strip('"')
-        p = ROOT / ruta
-        fuera[ruta] = hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else "-"
+    for ruta in rutas:
+        q = ROOT / ruta
+        if q.is_symlink():
+            fuera[ruta] = "enlace:" + os.readlink(q)
+        elif q.is_file():
+            fuera[ruta] = hashlib.sha256(q.read_bytes()).hexdigest()
+        else:
+            fuera[ruta] = "-"
     return fuera
 
 
@@ -1721,7 +1754,11 @@ def cmd_generar(a) -> int:
     except (OSError, subprocess.TimeoutExpired) as e:
         emitir({"ok": False, "errores": [f"codex no disponible: {e}"]})
         return 1
-    antes = _estado_git()
+    try:
+        antes = _estado_git()
+    except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
+        emitir({"ok": False, "errores": [f"no se pudo tomar la foto de git: {e}"]})
+        return 1
     enc = encargos.tomar(encargos.cargar(ruta), "codex-exec", ahora())
     encargos.guardar(ruta, enc)
     permitidas = set(codex_rescate.rutas_imagen(enc))
@@ -1743,8 +1780,12 @@ def cmd_generar(a) -> int:
             codigo, cola = None, f"codex exec superó {a.timeout} s"
     except OSError as e:
         codigo, cola = None, f"codex exec no arrancó: {e}"
-    despues = _estado_git()
-    ajenos = sorted(r for r, h in despues.items() if antes.get(r) != h and r not in permitidas)
+    try:
+        despues = _estado_git()
+        ajenos = sorted(r for r in antes.keys() | despues.keys()
+                        if antes.get(r) != despues.get(r) and r not in permitidas)
+    except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
+        ajenos = [f"<no se pudo comprobar git: {e}>"]
     enc = encargos.cargar(ruta)
     errores = codex_rescate.validar(enc)
     if ajenos:
