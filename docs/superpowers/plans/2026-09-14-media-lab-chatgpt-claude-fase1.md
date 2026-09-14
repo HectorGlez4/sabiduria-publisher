@@ -2148,6 +2148,19 @@ git fetch origin main && git rebase origin/main && git push origin HEAD:main
 
 ---
 
+### Task 10b: Seguimiento de la revisión de la tarea 8 (antes de las sondas)
+
+Menores aprobados sin bloquear en la re-revisión de `98f7c77`. Hacerlos después de la tarea 10 y antes de la tarea 11, con pruebas de teléfono simulado donde aplique:
+
+- [ ] **M-1:** `compartir(..., produccion_cercana: bool = False)`; si es True y el resultado sería `confirmado`, bajarlo a `confirmado_sin_conteo`. `lab.py ig compartir` recibe `--produccion-cercana` y la ventana lo pasa cuando `preflight` trae `espera`.
+- [ ] **M-2:** en `observacion_de_volcado`, buscar los textos de fallo solo en la zona del aviso de subida (borde inferior ≤ 600 px o junto al nodo «Publication sur…»), no en pies ajenos del inicio.
+- [ ] **M-3:** en el `except` de `compartir`, captura best-effort `ig-05-error.png` envuelta en su propio `try/except Exception`.
+- [ ] **M-4:** `telefono.captura` convierte `OSError` de `mkdir`/`write_bytes` en `TelefonoError`; `cmd_ig` valida `--subido-en` con `datetime.fromisoformat` y sale con `SystemExit` claro si no parsea.
+- [ ] **M-5:** documentar en la ventana que un código 4 en `ig compartir` por sugerencias del teclado es un bloqueo esperado (falla cerrado).
+- [ ] **M-6:** pruebas nuevas: teclado True y luego None → exactamente un «atrás» y `PantallaInesperada`; un «#» de otra app con teclado cerrado → ningún «atrás»; `abrir` con pantalla de arranque y luego inicio con Profil → exactamente un toque en Profil.
+- [ ] **M-7:** en `phone_clipboard._parar`, `communicate(timeout=5)` también tras `kill()`, ignorando un segundo `TimeoutExpired`.
+- [ ] **M-8:** mover los lectores puros de `instagram_feed.py` (perfil, selector, compositor, envío) a `labkit/instagram_pantallas.py`, reexportándolos para no romper llamadas; hacerlo antes de añadir Stories en la fase 2.
+
 ## Fase 2 (plan aparte)
 
 Flujos de teléfono para Instagram Stories (con sticker o encuesta), Facebook feed y Stories como Página, Threads y TikTok. Cada uno necesita su módulo `labkit/<red>_<formato>.py`, pruebas del analizador con volcados reales y ampliar `seleccion.TELEFONO_FASE_1`.
