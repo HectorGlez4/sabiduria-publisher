@@ -979,7 +979,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 ### Task 8: Primitivas del teléfono y pasos del feed de Instagram
 
-> **Endurecida tras la revisión de calidad (commit `8cc7eb8`):** volcados validados (`rm -f` + `dumped to`), estado que falla cerrado, `tapado`, `subir` con `subido_en` y MediaStore, cuenta leída en la barra superior, selección única con fecha de la miniatura, `detalles` separado de `escribir_pie`, cierre de teclado/desplegable verificado y `compartir(pie, tema, evidencia, publicaciones_antes)` con `estado` confirmado por aviso de subida y contador del perfil. El código vigente está en ese commit; lo de abajo es la versión inicial.
+> **Endurecida tras la revisión de calidad (commit `8cc7eb8`):** volcados validados (`rm -f` + `dumped to`), estado que falla cerrado, `tapado`, `subir` con `subido_en` y MediaStore, cuenta leída en la barra superior, selección única con fecha de la miniatura, `detalles` separado de `escribir_pie`, cierre de teclado/desplegable verificado y `compartir(pie, tema, evidencia, publicaciones_antes)` con `estado` confirmado por aviso de subida y contador del perfil. El código vigente está en ese commit y en la segunda corrección que lo sigue (scrcpy con `power_on=false`, `confirmado` solo con los dos conteos, `fallido` y `error_tras_pulsar`, teclado ilegible sin pulsar Atrás y pruebas con teléfono simulado); lo de abajo es la versión inicial.
 
 **Files:**
 - Create: `experiments/media-lab/labkit/telefono.py`
@@ -1794,6 +1794,8 @@ def cmd_ig(a) -> int:
         elif a.paso == "pie":
             res = {"captura": ig.escribir_pie(leer_pie(), ev)}
         else:  # compartir: sale con 5 si el envío no queda confirmado, para conciliar antes de nada
+            if not a.tema or a.publicaciones_antes is None:
+                raise SystemExit("compartir exige --tema y --publicaciones-antes")
             res = ig.compartir(leer_pie(), a.tema, ev, a.publicaciones_antes)
             confirmado = res["estado"] == "confirmado"
             emitir({"ok": confirmado, **res})
@@ -2073,7 +2075,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
       API: `lab.py manifiesto-api --run-group LAB-…-API --asset <máster> --caption facebook=<archivo> …`; commit y push del máster y el manifiesto (sección C de la spec) para que asset_url exista; la vista previa para QA es el máster con el pie.
    c. QA: lanza un agente independiente con las rutas de captura final, máster, pie y visual-qa-gate.md, y exige «VERDICT: PASS». Si FAIL, corrige una vez y repite. Si vuelve a FAIL, abandona la celda (en teléfono: `lab.py telefono-atras` hasta salir, mirando capturas; nunca descartes a ciegas) y regístralo: pon la celda en `"status": "blocked"` con `reason_if_blocked_or_unsupported` en coverage.json para que la siguiente ventana no la vuelva a elegir.
    d. `lab.py preflight` y anota `espera` (producción cercana) en el run. No frena la publicación.
-   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo> --tema <tema> --publicaciones-antes <n>`. Si sale con código 5 (`estado` distinto de `confirmado`), el envío es dudoso: no repitas nada; mira `captura` y `captura_antes`, comprueba el perfil con `lab.py telefono-captura` y concilia antes de registrar. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`. Con los post_id del resultado: `lab.py manifiesto-verificacion --run-group <el mismo> --post facebook=<id> …` (solo feed: si la celda es solo de historias, sáltate este paso de verificación), commit y push de ese manifiesto, y `gh workflow run media-lab-verify -f manifest=<ruta>`.
+   e. Publica. Teléfono: `lab.py ig compartir --run RUN --pie <archivo> --tema <tema> --publicaciones-antes <n>`. Si sale con código 5 (`estado` distinto de `confirmado`: `confirmado_sin_conteo`, `conteo_no_cuadra`, `sin_banner`, `timeout`, `fallido` o `error_tras_pulsar`), el envío es dudoso: no repitas nada; mira `captura` y `captura_antes`, comprueba el perfil con `lab.py telefono-captura` y concilia antes de registrar. API: `gh workflow run media-lab -f manifest=<ruta>`, sigue el run con `gh run watch`, descarga el resultado con `gh run download`. Con los post_id del resultado: `lab.py manifiesto-verificacion --run-group <el mismo> --post facebook=<id> …` (solo feed: si la celda es solo de historias, sáltate este paso de verificación), commit y push de ese manifiesto, y `gh workflow run media-lab-verify -f manifest=<ruta>`.
    f. Verifica la publicación en directo (URL/ID, identidad, audiencia, música). En Instagram por teléfono, la copia automática en Facebook va en `publication.cross_posting` del run.
    g. Actualiza el run, la celda de coverage.json, `lab.py encargo-usado --encargo ID --run RUN` y experiments/media-lab/progress.md.
 8. Métricas: captura las instantáneas vencidas (24 h, 72 h, 7 d; Stories unas 6 h y antes de caducar) de los runs publicados y guárdalas en sus runs.
