@@ -1099,17 +1099,49 @@ def seccion_interfaz() -> None:
     mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} ty=BASE_APPLICATION fmt=TRANSPARENT wanim=0x10302f6
     isVisible=true
 """
-    check(T.ventanas_emergentes_de(dumpsys_popup, PAQUETE_IG)
-          == [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}],
-          "(10f) el lector puro extrae la PopupWindow visible del paquete, con su frame")
+    popup_esperado = {"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205), "ancho_padre": 1080}
+    check(T.ventanas_emergentes_de(dumpsys_popup, PAQUETE_IG) == [popup_esperado],
+          "(10f) el lector puro extrae la PopupWindow visible del paquete, con su frame y el ancho del padre")
     sin_popup = dumpsys_popup[dumpsys_popup.index("  Window #12"):]
     check(T.ventanas_emergentes_de(sin_popup, PAQUETE_IG) == [],
           "(10f) sin el bloque PopupWindow no hay emergentes")
     check(T.ventanas_emergentes_de(dumpsys_popup, "com.other.app") == [],
-          "(10f) una PopupWindow de otro paquete no cuenta")
+          "(I-1) pedir otro paquete (que no aparece en el texto) no cuenta")
+    otro_paquete_en_ambos = dumpsys_popup.replace("com.instagram.android", "com.other.app")
+    check(T.ventanas_emergentes_de(otro_paquete_en_ambos, PAQUETE_IG) == [],
+          "(I-1) otro paquete tanto en package= como en mParentWindow: no cuenta")
+    padre_de_otra_subventana = dumpsys_popup.replace(
+        "mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=true",
+        "mParentWindow=Window{e654062 u0 com.android.systemui/com.android.systemui.SomeDialog} mLayoutAttached=true", 1)
+    check(T.ventanas_emergentes_de(padre_de_otra_subventana, PAQUETE_IG) == [popup_esperado],
+          "(I-1) mParentWindow de otra subventana pero package=com.instagram.android propio: cuenta igual")
     check(T.ventanas_emergentes_de(dumpsys_popup.replace("isVisible=true", "isVisible=false", 1), PAQUETE_IG) == [],
-          "(10f) isVisible=false no cuenta")
+          "(I-1) isVisible=false explícito: no cuenta")
+    sin_isvisible = dumpsys_popup.replace("    isVisible=true\n", "", 1)
+    check(T.ventanas_emergentes_de(sin_isvisible, PAQUETE_IG) == [popup_esperado],
+          "(I-1) sin isVisible pero con mHasSurface=true: cuenta (falla cerrado)")
     check(T.ventanas_emergentes_de("", PAQUETE_IG) == [], "(10f) texto vacío: lista vacía")
+
+    dumpsys_formato_antiguo = """  Window #7 Window{1a2b3c4 u0 PopupWindow:abc123}:
+    mOwnerUid=10234 showForAllUsers=false package=com.instagram.android appop=NONE
+    mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=true
+    mHasSurface=true
+    mFrame=[10,1500][1070,2100]
+    isVisible=true
+"""
+    check(T.ventanas_emergentes_de(dumpsys_formato_antiguo, PAQUETE_IG)
+          == [{"nombre": "PopupWindow:abc123", "frame": (10, 1500, 1070, 2100), "ancho_padre": None}],
+          "(I-1) formato antiguo mFrame=[..][..] (sin línea Frames:): se lee igual, sin ancho de padre")
+
+    dumpsys_sin_frame = """  Window #8 Window{9f8e7d6 u0 PopupWindow:sinframe}:
+    mOwnerUid=10234 showForAllUsers=false package=com.instagram.android appop=NONE
+    mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=true
+    mHasSurface=true
+    isVisible=true
+"""
+    emergente_sin_frame = T.ventanas_emergentes_de(dumpsys_sin_frame, PAQUETE_IG)
+    check(emergente_sin_frame == [{"nombre": "PopupWindow:sinframe", "frame": None, "ancho_padre": None}],
+          "(I-1) sin frame legible: la entrada lleva frame None en vez de descartarse")
 
     shell_original = T.shell
     try:
@@ -1122,9 +1154,30 @@ def seccion_interfaz() -> None:
         fallo = lanza(lambda: T.ventanas_emergentes(PAQUETE_IG), T.TelefonoError)
     finally:
         T.shell = shell_original
-    check(via_shell == [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}],
+    check(via_shell == [popup_esperado],
           "(10f) ventanas_emergentes aplica el lector a la salida de dumpsys")
     check(fallo is not None, "(10f) si dumpsys falla, ventanas_emergentes falla cerrado con TelefonoError")
+
+    print("   · (Task 10f) emergente_desplegable / hay_desplegable_por_ventana: solape con la fila de música o «Partager»")
+    check(IG.hay_desplegable_por_ventana(comp, emergente_sin_frame) is True,
+          "(I-1) una emergente con frame None cuenta como desplegable abierto, sin importar el solape")
+    sin_referencias = jerarquia()  # ni «Partager» ni fila de música: nada con qué descartar la emergente
+    cualquier_emergente = [{"nombre": "PopupWindow:x", "frame": (0, 0, 10, 10), "ancho_padre": None}]
+    check(IG.hay_desplegable_por_ventana(sin_referencias, cualquier_emergente) is True,
+          "(I-2) sin «Partager» ni fila de música en el volcado, cualquier emergente del paquete cuenta (falla cerrado)")
+    sin_solape = [{"nombre": "PopupWindow:lejos", "frame": (0, 0, 1080, 500), "ancho_padre": 1080}]
+    check(IG.hay_desplegable_por_ventana(comp, sin_solape) is False,
+          "(m-4) con «Partager» en el volcado, una emergente que no se solapa no cuenta")
+    bordes_que_se_tocan = [{"nombre": "PopupWindow:toca", "frame": (0, 2000, 1080, 2115), "ancho_padre": 1080}]
+    check(IG.hay_desplegable_por_ventana(comp, bordes_que_se_tocan) is False,
+          "(m-4) bordes que se tocan (y2 de la emergente == y1 de «Partager») no cuenta como solape")
+
+    print("   · (m-2) diagnóstico: el problema y el mensaje nombran la emergente culpable")
+    emergente_diagnostico = [popup_esperado]
+    problemas_diag = IG.compositor_listo(comp, PIE_PRUEBA, tema, emergente_diagnostico)
+    check(len(problemas_diag) == 1 and "PopupWindow:de536c5" in problemas_diag[0]
+          and "(0, 1448, 1080, 2205)" in problemas_diag[0],
+          f"(m-2) compositor_listo nombra la emergente y su frame en el problema ({problemas_diag})")
 
     print("   · teléfono simulado")
     import time as reloj
@@ -1331,38 +1384,76 @@ def seccion_interfaz() -> None:
           f"(M-7-iv) en el camino feliz de abrir, cerrar_cortina se llama antes de todo lo demás ({sim.orden})")
 
     print("   · (Task 10f) el desplegable de hashtags como ventana emergente (uiautomator dump no la ve)")
-    emergente_abierta = [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205)}]
-    check(IG.compositor_listo(comp, PIE_PRUEBA, tema, emergente_abierta)
-          == ["desplegable de hashtags abierto (ventana emergente)"],
-          "(10f) compositor_listo con una emergente que se solapa con «Partager» añade el problema")
+    # ancha (ocupa el 100% del padre): parece_desplegable la trata como el desplegable de verdad.
+    emergente_abierta = [{"nombre": "PopupWindow:de536c5", "frame": (0, 1448, 1080, 2205), "ancho_padre": 1080}]
+    # estrecha (menos del 90% del padre) pero se solapa con «Partager»: un tooltip no enfocable,
+    # no el desplegable; escribir_pie debe pararse sin pulsar «atrás» y compartir sin tocar.
+    emergente_estrecha = [{"nombre": "PopupWindow:tooltip1", "frame": (400, 2100, 500, 2180), "ancho_padre": 1080}]
+    problema_ancha = IG.compositor_listo(comp, PIE_PRUEBA, tema, emergente_abierta)
+    check(len(problema_ancha) == 1 and problema_ancha[0].startswith("desplegable de hashtags abierto (")
+          and "PopupWindow:de536c5" in problema_ancha[0] and "(0, 1448, 1080, 2205)" in problema_ancha[0],
+          f"(10f, m-2) compositor_listo con una emergente que se solapa con «Partager» añade el problema, "
+          f"con nombre y frame ({problema_ancha})")
     check(IG.compositor_listo(comp, PIE_PRUEBA, tema) == [],
           "(10f) sin el parámetro emergentes, compositor_listo se comporta como antes")
     check(IG.compositor_listo(comp, PIE_PRUEBA, tema, []) == [],
           "(10f) con una lista de emergentes vacía, compositor_listo se comporta como antes")
+    check(IG.compositor_listo(comp, PIE_PRUEBA, tema, emergente_estrecha) != [],
+          "(m-1) compartir/compositor_listo no filtra por ancho: una emergente estrecha que se solapa también cuenta")
 
+    # 1ª llamada (comprobación inicial) y 2ª (confirmación tras «no teclado y desplegable»): abierta;
+    # 3ª en adelante (tras el «atrás»): cerrada.
     sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta, emergente_abierta, ()))
     res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
     check(err is None and sim.teclas == [IG.ATRAS] and sim.capturas == ["ig-04-compositor.png"],
           f"(10f) la emergente se ve en dos volcados (incluida la confirmación) y luego se cierra tras el «atrás»: "
           f"exactamente un «atrás» y captura ({err!r}, {sim.teclas}, {sim.capturas})")
 
+    # todas las llamadas devuelven la misma emergente abierta: nunca se cierra.
     sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta,))
     res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
     check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [IG.ATRAS, IG.ATRAS]
-          and "ig-04-compositor.png" not in sim.capturas,
-          f"(10f) la emergente persiste: PantallaInesperada, exactamente 2 «atrás» y sin captura "
-          f"({err!r}, {sim.teclas}, {sim.capturas})")
+          and "ig-04-compositor.png" not in sim.capturas
+          and "PopupWindow:de536c5" in str(err) and "(0, 1448, 1080, 2205)" in str(err),
+          f"(10f, m-2) la emergente persiste: PantallaInesperada con nombre y frame, exactamente 2 «atrás» "
+          f"y sin captura ({err!r}, {sim.teclas}, {sim.capturas})")
 
+    # todas las llamadas devuelven la misma emergente abierta.
     sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_abierta,))
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
     check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, IntentoDeES) and sim.toques == [],
           f"(10f) compartir con volcados limpios pero una emergente abierta: PantallaInesperada y ningún toque "
           f"({err!r}, {sim.toques})")
 
+    print("   · (m-1) una emergente estrecha que se solapa no es el desplegable: no se pulsa «atrás»")
+    # todas las llamadas devuelven la misma emergente estrecha: nunca «parece» el desplegable.
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_estrecha,))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, IG.PantallaInesperada) and sim.teclas == [] and sim.capturas == []
+          and "PopupWindow:tooltip1" in str(err),
+          f"(m-1) escribir_pie con una emergente estrecha que se solapa: PantallaInesperada sin «atrás» "
+          f"({err!r}, {sim.teclas}, {sim.capturas})")
+
+    # todas las llamadas devuelven la misma emergente estrecha.
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(emergente_estrecha,))
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
+    check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, IntentoDeES) and sim.toques == [],
+          f"(m-1) compartir con una emergente estrecha que se solapa: PantallaInesperada igual, sin tocar "
+          f"({err!r}, {sim.toques})")
+
+    # única entrada: TelefonoError en cada llamada a ventanas_emergentes.
     sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(T.TelefonoError("dumpsys no responde"),))
     res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3711))
     check(isinstance(err, T.TelefonoError) and not isinstance(err, IntentoDeES) and sim.toques == [],
           f"(10f) si ventanas_emergentes falla dentro de compartir, falla cerrado sin tocar ({err!r}, {sim.toques})")
+
+    # única entrada: TelefonoError en cada llamada a ventanas_emergentes dentro de _estado_cierre.
+    sim = TelefonoSimulado([comp], teclado=(False,), emergentes=(T.TelefonoError("dumpsys no responde"),))
+    res, err = con_telefono_simulado(sim, lambda: IG.escribir_pie(PIE_PRUEBA, evid))
+    check(isinstance(err, T.TelefonoError) and not isinstance(err, IntentoDeES) and sim.teclas == []
+          and sim.capturas == [],
+          f"(m-4) si ventanas_emergentes falla dentro de escribir_pie, se propaga sin pulsar «atrás» "
+          f"({err!r}, {sim.teclas}, {sim.capturas})")
 
     print("   · seguimiento de la revisión (10b): captura sin disco y parada del portapapeles")
     import io

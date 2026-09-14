@@ -27,10 +27,11 @@ from labkit.instagram_pantallas import *  # noqa: F401,F403 — reexporta `insta
 from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _campos, _coincidencias,
                                         _exigir_compositor_con_pie, _nodo, _suivant, _tiene_pie,
                                         banners_de_volcado, campo_pie,
-                                        compositor_listo, evaluar_envio, hay_desplegable_hashtags,
-                                        hay_desplegable_por_ventana,
-                                        miniatura_coincide, observacion_de_volcado, perfil_activo,
-                                        publicaciones_de_perfil, punto_mas, seleccion_unica, tema_de_chip)
+                                        compositor_listo, describe_emergente, emergente_desplegable,
+                                        evaluar_envio, hay_desplegable_hashtags,
+                                        miniatura_coincide, observacion_de_volcado, parece_desplegable,
+                                        perfil_activo, publicaciones_de_perfil, punto_mas, seleccion_unica,
+                                        tema_de_chip)
 
 ATRAS, CTRL_IZQ, TECLA_A = 4, 113, 29
 ESPERA_S = 25
@@ -166,23 +167,47 @@ def detalles(evidencia: Path) -> Path:
     return telefono.captura(evidencia / "ig-03b-detalles.png")
 
 
-def _hay_que_cerrar(xml: str, emergentes: list[dict]) -> bool:
+def _desplegable_abierto(xml: str, emergentes: list[dict]) -> bool:
     """El desplegable de hashtags está abierto: por nodos (`hay_desplegable_hashtags`) o
-    por una ventana emergente que el volcado no incluye pero se solapa con la fila de
-    música o con «Partager» (`hay_desplegable_por_ventana`; ver Task 10f)."""
-    return hay_desplegable_hashtags(xml, paquete=PAQUETE) or hay_desplegable_por_ventana(xml, emergentes)
+    por una ventana emergente ancha (`parece_desplegable`) que el volcado no incluye pero
+    se solapa con la fila de música o con «Partager» (`emergente_desplegable`; ver Task
+    10f). Una emergente que se solapa pero es estrecha no cuenta aquí: la trata
+    `_emergente_anomala`, que para con PantallaInesperada antes de llegar a este punto."""
+    if hay_desplegable_hashtags(xml, paquete=PAQUETE):
+        return True
+    culpable = emergente_desplegable(xml, emergentes)
+    return culpable is not None and parece_desplegable(culpable)
 
 
-def _estado_cierre(xml: str) -> tuple[bool, bool]:
-    """(teclado abierto, desplegable de Instagram abierto). Si no se sabe si el teclado
-    está abierto, se para sin pulsar atrás: un «atrás» con todo cerrado sacaría del
-    compositor. Un TelefonoError de `telefono.ventanas_emergentes` no se atrapa aquí: se
-    propaga y no se pulsa nada (falla cerrado)."""
+def _emergente_anomala(xml: str, emergentes: list[dict]) -> dict | None:
+    """Una emergente que se solapa con la fila de música o «Partager» pero no parece el
+    desplegable (`parece_desplegable` es False: demasiado estrecha, un tooltip no enfocable
+    por ejemplo). Pulsar «atrás» sobre ella es arriesgado —puede no cerrarla y en cambio
+    sacar de la actividad—, así que no se trata como un desplegable normal. None si no hay
+    ninguna así."""
+    culpable = emergente_desplegable(xml, emergentes)
+    if culpable is not None and not parece_desplegable(culpable):
+        return culpable
+    return None
+
+
+def _estado_cierre(xml: str) -> tuple[bool, bool, list[dict]]:
+    """(teclado abierto, desplegable de Instagram abierto, emergentes vistas). Si no se
+    sabe si el teclado está abierto, se para sin pulsar atrás: un «atrás» con todo cerrado
+    sacaría del compositor. Un TelefonoError de `telefono.ventanas_emergentes` no se atrapa
+    aquí: se propaga y no se pulsa nada (falla cerrado). Una emergente anómala (ver
+    `_emergente_anomala`) también para con PantallaInesperada sin pulsar «atrás»: no parece
+    el desplegable, así que cerrarla a ciegas es más arriesgado que pararse."""
     teclado = telefono.teclado_estado()
     if teclado is None:
         raise PantallaInesperada("no se puede leer si el teclado está abierto")
     emergentes = telefono.ventanas_emergentes(PAQUETE)
-    return teclado, _hay_que_cerrar(xml, emergentes)
+    anomala = _emergente_anomala(xml, emergentes)
+    if anomala is not None:
+        raise PantallaInesperada(
+            f"una ventana emergente se solapa pero no parece el desplegable de hashtags "
+            f"({describe_emergente(anomala)}): no se pulsa «atrás»")
+    return teclado, _desplegable_abierto(xml, emergentes), emergentes
 
 
 def escribir_pie(pie: str, evidencia: Path) -> Path:
@@ -195,7 +220,11 @@ def escribir_pie(pie: str, evidencia: Path) -> Path:
     antes de pulsar «atrás»: puede cerrarse solo, y entonces no se pulsa y se sigue contando.
     Cada «atrás» de verdad reinicia la cuenta de limpios, con un tope total de
     `INTENTOS_ATRAS_PIE`. Un tope total de `ESTABILIZACION_TIMEOUT_S` evita un bucle sin fin
-    si la pantalla nunca llega a estabilizarse."""
+    si la pantalla nunca llega a estabilizarse.
+
+    Una ventana emergente que se solapa con la fila de música o «Partager» pero no parece
+    el desplegable (`parece_desplegable`, Task 10f) para con PantallaInesperada sin pulsar
+    «atrás»: puede no ser el desplegable, y pulsar a ciegas es más arriesgado que pararse."""
     _exigir_listo()
     xml = _esperar_que(lambda x: campo_pie(x) is not None, "el campo del pie")
     telefono.tocar(*campo_pie(xml)["centro"])
@@ -219,18 +248,20 @@ def escribir_pie(pie: str, evidencia: Path) -> Path:
             raise PantallaInesperada(
                 f"el compositor no se estabilizó tras {ESTABILIZACION_TIMEOUT_S} s pegando el pie")
         _exigir_compositor_con_pie(xml, pie)
-        teclado, desplegable = _estado_cierre(xml)
+        teclado, desplegable, emergentes = _estado_cierre(xml)
         if not teclado and desplegable:
             # el desplegable puede cerrarse solo unos segundos después de pegar: se confirma
             # con un volcado fresco antes de gastar un «atrás».
             xml = _volcado_fresco()
             _exigir_compositor_con_pie(xml, pie)
-            teclado, desplegable = _estado_cierre(xml)
+            teclado, desplegable, emergentes = _estado_cierre(xml)
         if teclado or desplegable:
             atras_usados += 1
             if atras_usados > INTENTOS_ATRAS_PIE:
+                culpable = emergente_desplegable(xml, emergentes)
+                detalle = f" ({describe_emergente(culpable)})" if culpable is not None else ""
                 raise PantallaInesperada(
-                    f"el teclado o el desplegable siguen abiertos tras {INTENTOS_ATRAS_PIE} «atrás»")
+                    f"el teclado o el desplegable siguen abiertos tras {INTENTOS_ATRAS_PIE} «atrás»{detalle}")
             telefono.tecla(ATRAS)
             time.sleep(2)
             xml = _volcado_fresco()

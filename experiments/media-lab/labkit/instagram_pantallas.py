@@ -21,8 +21,8 @@ __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
     "LARGO_AVISO_CORTO", "PantallaInesperada", "banners_de_volcado",
     "perfil_activo", "publicaciones_de_perfil", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
-    "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "punto_mas", "tema_de_chip", "campo_pie",
-    "partager_pulsable",
+    "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "emergente_desplegable", "parece_desplegable",
+    "describe_emergente", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
     "compositor_listo", "observacion_de_volcado", "evaluar_envio",
     "_es_textview", "_dice", "_area", "_campos", "_elegir", "_coincidencias", "_nodo", "_suivant",
     "_tiene_pie", "_exigir_compositor_con_pie",
@@ -133,10 +133,11 @@ def hay_desplegable_hashtags(xml: str, paquete: str | None = None) -> bool:
 
 # Sufijo del resource-id de la fila de música en el compositor (Task 10f, medido el
 # 2026-09-14). El desplegable de hashtags es una ventana aparte que uiautomator dump no
-# incluye: `hay_desplegable_por_ventana` la reconoce por su solape con esta fila o con
+# incluye: `emergente_desplegable` la reconoce por su solape con esta fila o con
 # «Partager», que sí están en el volcado.
 RESOURCE_ID_MUSICA = "music_track_title"
-ALTURA_PANTALLA_PX = 2340  # medida del Samsung del laboratorio (serie R5CXB1AWYNF)
+UMBRAL_ANCHO_DESPLEGABLE = 0.9  # fracción del ancho del padre que ocupa un desplegable real
+ANCHO_PANTALLA_PX = 1080  # medida del Samsung del laboratorio (serie R5CXB1AWYNF), si no hay ancho_padre
 
 
 def _fila_musica_o_partager(xml: str, paquete: str) -> list[tuple[int, int, int, int]]:
@@ -153,26 +154,57 @@ def _se_solapan_verticalmente(a: tuple[int, int, int, int], b: tuple[int, int, i
     return ay1 < by2 and by1 < ay2
 
 
-def hay_desplegable_por_ventana(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> bool:
-    """Alguna de `emergentes` (ver `telefono.ventanas_emergentes_de`, ya filtradas a
-    `paquete`) se solapa verticalmente con la fila de música o con «Partager»; si ninguno
-    de los dos aparece en el volcado, cuenta cualquier emergente con el frame en la mitad
-    inferior de la pantalla (ver Task 10f: el desplegable es una `PopupWindow` que
-    `uiautomator dump` no incluye, así que aquí solo se compara contra lo que sí trae el
-    volcado)."""
+def emergente_desplegable(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> dict | None:
+    """La primera de `emergentes` (ver `telefono.ventanas_emergentes_de`, ya filtradas a su
+    paquete) que cuenta como el desplegable de hashtags abierto, o None si ninguna cuenta.
+    `paquete` no filtra `emergentes` (ya vienen filtradas): solo se usa para localizar las
+    referencias (fila de música o «Partager») en `xml`.
+
+    Sin frame legible (`"frame": None`) no se puede descartar: cuenta siempre (falla
+    cerrado). Con frame, cuenta si se solapa verticalmente con la fila de música o con
+    «Partager»; si ninguno de los dos aparece en el volcado, cuenta cualquier emergente del
+    paquete (Task 10f: el desplegable es una `PopupWindow` que `uiautomator dump` no
+    incluye, así que sin referencias en el volcado no hay con qué descartarla)."""
     if not emergentes:
-        return False
+        return None
     referencias = _fila_musica_o_partager(xml, paquete)
     for e in emergentes:
         frame = e.get("frame")
         if frame is None:
-            continue
+            return e
         if referencias:
             if any(_se_solapan_verticalmente(frame, r) for r in referencias):
-                return True
-        elif frame[1] >= ALTURA_PANTALLA_PX // 2:
-            return True
-    return False
+                return e
+        else:
+            return e
+    return None
+
+
+def hay_desplegable_por_ventana(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> bool:
+    """Atajo de `emergente_desplegable(xml, emergentes, paquete) is not None`. `paquete` no
+    filtra `emergentes` (ya vienen filtradas): solo se usa para localizar las referencias
+    (fila de música o «Partager») en `xml`."""
+    return emergente_desplegable(xml, emergentes, paquete) is not None
+
+
+def parece_desplegable(e: dict) -> bool:
+    """El frame de `e` ocupa al menos `UMBRAL_ANCHO_DESPLEGABLE` del ancho de su ventana
+    padre (`"ancho_padre"`, o ANCHO_PANTALLA_PX si no se conoce): el desplegable de
+    hashtags ocupa casi todo el ancho, a diferencia de una emergente estrecha (un tooltip
+    no enfocable, por ejemplo). Sin frame no se puede medir: cuenta como desplegable
+    (falla cerrado)."""
+    frame = e.get("frame")
+    if frame is None:
+        return True
+    ancho_padre = e.get("ancho_padre") or ANCHO_PANTALLA_PX
+    return (frame[2] - frame[0]) >= UMBRAL_ANCHO_DESPLEGABLE * ancho_padre
+
+
+def describe_emergente(e: dict) -> str:
+    """«ventana emergente <nombre> en <frame>», para mensajes de diagnóstico."""
+    frame = e.get("frame")
+    lugar = frame if frame is not None else "sin frame legible"
+    return f"ventana emergente {e['nombre']} en {lugar}"
 
 
 def punto_mas(bounds: tuple[int, int, int, int]) -> tuple[int, int]:
@@ -249,10 +281,11 @@ def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict
             problemas.append("«Partager» está tapado")
         if not partager_pulsable(xml):
             problemas.append("Partager no pulsable")
-    if hay_desplegable_hashtags(xml):
+    if hay_desplegable_hashtags(xml, paquete=PAQUETE):
         problemas.append("desplegable de hashtags abierto")
-    if hay_desplegable_por_ventana(xml, emergentes or []):
-        problemas.append("desplegable de hashtags abierto (ventana emergente)")
+    culpable = emergente_desplegable(xml, emergentes or [])
+    if culpable is not None:
+        problemas.append(f"desplegable de hashtags abierto ({describe_emergente(culpable)})")
     return problemas
 
 

@@ -172,20 +172,37 @@ def tapado(xml: str, nodo: dict) -> bool:
 
 _VENTANA_DUMPSYS = re.compile(r"Window #\d+ Window\{[0-9a-f]+ u\d+ (?P<nombre>[^}]+)\}:")
 _VENTANA_PADRE = re.compile(r"mParentWindow=Window\{[0-9a-f]+ u\d+ (?P<padre>[^}]+)\}")
-_VENTANA_VISIBLE = re.compile(r"isVisible=(true|false)")
+_VENTANA_PAQUETE_PROPIO = re.compile(r"\bpackage=(\S+)")
+_VENTANA_VISIBLE = re.compile(r"\bisVisible=(true|false)\b")
+_VENTANA_SURFACE = re.compile(r"\bmHasSurface=(true|false)\b")
 _VENTANA_FRAME = re.compile(r"\bframe=\[(-?\d+),(-?\d+)\]\[(-?\d+),(-?\d+)\]")
+_VENTANA_FRAME_ANTIGUO = re.compile(r"\bmFrame=\[(-?\d+),(-?\d+)\]\[(-?\d+),(-?\d+)\]")
+_VENTANA_FRAME_PADRE = re.compile(r"\bparent=\[(-?\d+),(-?\d+)\]\[(-?\d+),(-?\d+)\]")
 
 
 def ventanas_emergentes_de(texto: str, paquete: str) -> list[dict]:
-    """Ventanas `PopupWindow:*` visibles de `paquete` en `dumpsys window windows`.
+    """Ventanas `PopupWindow:*` de `paquete` en `dumpsys window windows` que cuentan como
+    visibles: con frame legible o sin él (`"frame": None`, que `hay_desplegable_por_ventana`
+    trata como abierta).
 
     El desplegable de sugerencias de hashtags de Instagram es una ventana aparte que
-    `uiautomator dump` no incluye (ver Task 10f): esta lectura complementa al volcado.
+    `uiautomator dump` no incluye (ver Task 10f): esta lectura complementa al volcado. El
+    formato de `dumpsys` varía entre builds de Android, así que ante la duda cada
+    comprobación falla cerrado (cuenta la ventana) en vez de descartarla:
+
+    - Paquete: basta con que el bloque sea del paquete dado por su propio `package=` o por
+      el `mParentWindow` (comparado como `"<paquete>/"`); con uno de los dos alcanza.
+    - Visibilidad: cuenta salvo `isVisible=false` explícito; si falta `isVisible`, cuenta
+      salvo `mHasSurface=false` explícito; si faltan ambos, cuenta.
+    - Frame: se lee de `frame=[x1,y1][x2,y2]` (formato moderno, dentro de la línea
+      `Frames: parent=… display=… frame=… last=…`) o de `mFrame=[x1,y1][x2,y2]` (formato
+      antiguo); si no se encuentra ninguno, la entrada lleva `"frame": None` en vez de
+      descartarse. `"ancho_padre"` es el ancho de `parent=[x1,y1][x2,y2]` si aparece, o
+      `None` si no.
+
     Cada bloque `Window #N Window{… <nombre>}:` se extiende hasta el siguiente bloque (o
-    el final del texto); solo cuentan los que empiezan por «PopupWindow:», cuyo
-    `mParentWindow` es del paquete dado (comparado como `"<paquete>/"`) y con
-    `isVisible=true`. Un bloque sin `frame=[x1,y1][x2,y2]` se ignora. Texto vacío da lista
-    vacía."""
+    el final del texto); solo cuentan los que empiezan por «PopupWindow:». Texto vacío da
+    lista vacía."""
     encabezados = list(_VENTANA_DUMPSYS.finditer(texto))
     emergentes = []
     for i, m in enumerate(encabezados):
@@ -194,17 +211,29 @@ def ventanas_emergentes_de(texto: str, paquete: str) -> list[dict]:
             continue
         fin = encabezados[i + 1].start() if i + 1 < len(encabezados) else len(texto)
         bloque = texto[m.end():fin]
+
         padre = _VENTANA_PADRE.search(bloque)
-        if not padre or not padre.group("padre").startswith(f"{paquete}/"):
+        del_padre = bool(padre and padre.group("padre").startswith(f"{paquete}/"))
+        propio = _VENTANA_PAQUETE_PROPIO.search(bloque)
+        es_propio = bool(propio and propio.group(1) == paquete)
+        if not (del_padre or es_propio):
             continue
+
         visible = _VENTANA_VISIBLE.search(bloque)
-        if not visible or visible.group(1) != "true":
-            continue
-        frame = _VENTANA_FRAME.search(bloque)
-        if not frame:
-            continue
-        x1, y1, x2, y2 = map(int, frame.groups())
-        emergentes.append({"nombre": nombre, "frame": (x1, y1, x2, y2)})
+        if visible is not None:
+            if visible.group(1) != "true":
+                continue
+        else:
+            surface = _VENTANA_SURFACE.search(bloque)
+            if surface is not None and surface.group(1) != "true":
+                continue
+
+        frame_m = _VENTANA_FRAME.search(bloque) or _VENTANA_FRAME_ANTIGUO.search(bloque)
+        frame = tuple(map(int, frame_m.groups())) if frame_m else None
+        padre_frame = _VENTANA_FRAME_PADRE.search(bloque)
+        ancho_padre = int(padre_frame.group(3)) - int(padre_frame.group(1)) if padre_frame else None
+
+        emergentes.append({"nombre": nombre, "frame": frame, "ancho_padre": ancho_padre})
     return emergentes
 
 
@@ -327,9 +356,10 @@ def estado() -> dict:
 
 
 def ventanas_emergentes(paquete: str, timeout: int = 15) -> list[dict]:
-    """Ventanas `PopupWindow:*` de `paquete` (por ejemplo el desplegable de hashtags de
-    Instagram, invisible para `uiautomator dump`; ver Task 10f). Si `dumpsys` falla se
-    propaga TelefonoError: quien llama falla cerrado."""
+    """Las ventanas `PopupWindow:*` de `paquete` que cuentan como visibles (ver
+    `ventanas_emergentes_de`: con frame legible o con `"frame": None`), por ejemplo el
+    desplegable de hashtags de Instagram, invisible para `uiautomator dump` (Task 10f).
+    Si `dumpsys` falla se propaga TelefonoError: quien llama falla cerrado."""
     return ventanas_emergentes_de(shell("dumpsys window windows", timeout=timeout), paquete)
 
 
