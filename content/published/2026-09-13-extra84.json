@@ -2,7 +2,7 @@
   "id": "2026-09-13-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Sojourner Truth y el discurso de Akron de 1851",
     "hook": "La frase por la que se recuerda este discurso no está en la única transcripción hecha por alguien que estuvo en la sala. La escribió otra persona doce años después, en un habla que Sojourner Truth no tenía.",
@@ -85,5 +85,21 @@
     "threads"
   ],
   "publish_at": "2026-09-14T03:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1094625536695439",
+      "url": "https://www.facebook.com/874327782058550/posts/1094625536695439",
+      "published_at": "2026-09-14T06:33:30.950330+00:00"
+    },
+    "instagram": {
+      "post_id": "18142608607572566",
+      "url": "https://www.instagram.com/p/DdQgG3ED17L/",
+      "published_at": "2026-09-14T06:33:45.294696+00:00"
+    },
+    "threads": {
+      "post_id": "17985139827118208",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17985139827118208",
+      "published_at": "2026-09-14T06:33:59.270871+00:00"
+    }
+  }
 }
