@@ -279,6 +279,25 @@ def seccion_seleccion() -> None:
     check([c["cell_id"] for c in S.elegir(celdas, [{"estado": "generado", "coverage_cell_ids": ["C1"]}])] == [],
           "sin encargo aprobado no hay celda")
     check(len(S.elegir(celdas, todos, max_celdas=1)) == 1, "respeta max_celdas")
+    ids = lambda sel: [c["cell_id"] for c in sel]  # noqa: E731
+    check(ids(S.elegir([celda("C9", "instagram", "feed_single_image", "manual")], [aprobado("C9")])) == [],
+          "una ruta desconocida no es elegible")
+    check(ids(S.elegir([celda("C8", "threads", "feed_single_image", "api", estado="ready")], [aprobado("C8")])) == ["C8"],
+          "una celda ready es elegible")
+    check(ids(S.elegir([celda("C8", "threads", "feed_single_image", "api", estado="blocked")], [aprobado("C8")])) == [],
+          "una celda blocked no es elegible")
+    check(ids(S.elegir([celdas[1], celdas[0], celdas[3]], todos)) == ["C2", "C4"],
+          "Facebook primero también excluye Instagram por teléfono")
+    ig_api = celda("C10", "instagram", "feed_single_image", "api")
+    check(ids(S.elegir([celdas[0], ig_api], [aprobado("C1", "C10")])) == ["C1", "C10"],
+          "la misma red por rutas distintas sí es compatible")
+    check(ids(S.elegir([celda("C11", "instagram", "feed_carousel", "api")], [aprobado("C11")])) == [],
+          "la API solo publica imágenes sueltas en la fase 1 (carrusel fuera)")
+    check(ids(S.elegir(celdas, [{"estado": "usado", "coverage_cell_ids": ["C1", "C4"]}])) == ["C1", "C4"],
+          "un encargo ya usado sigue sirviendo para sus celdas sin publicar")
+    check(ids(S.elegir(celdas, todos, telefono_listo=False)) == ["C2", "C4"],
+          "sin teléfono listo no se elige ninguna celda de teléfono y Facebook vuelve a ser posible")
+    check(S.elegir(celdas, todos, max_celdas=0) == [], "max_celdas=0 no devuelve nada")
 
 
 SECCIONES = [
