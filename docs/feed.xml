@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 14 Sep 2026 08:47:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 16:49:04 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hay golpes en la vida, tan fuertes... Yo no sé." — César Vallejo, poema inicial de Los heraldos negros</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-14-re56-reel</guid>
+      <pubDate>Mon, 14 Sep 2026 15:26:00 +0000</pubDate>
+      <description><![CDATA["Hay golpes en la vida, tan fuertes... Yo no sé."
+— César Vallejo, Los heraldos negros (1918)
+
+El libro que abre ese verso lleva 1918 en la portada. Entró a la Imprenta Souza Ferreyra de Lima a mediados de ese año y no llegó a las librerías hasta mediados de julio de 1919. Doce meses detenido, esperando un prólogo que Abraham Valdelomar había prometido y que nunca escribió. El libro salió sin él, con un epígrafe del Evangelio en su lugar: quien pueda entender, que entienda.
+
+Vallejo no esperó quieto: durante ese año volvía a la imprenta a corregir sus propios poemas. De aquella primera edición se han localizado diez ejemplares con variantes entre sí, y el investigador que los cotejó concluyó que hubo al menos media docena de primeras ediciones distintas. Valdelomar murió cuatro meses después de que el libro llegara a las tiendas, a los treinta y un años.
+
+El verso más repetido de la poesía peruana no afirma nada. Nombra el golpe y se detiene. En la misma estrofa, dos veces, el poeta admite que no sabe explicarlo.
+
+¿Qué golpe de los tuyos todavía no sabes explicar?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un maestro de tiro con arco le prohíbe al aprendiz llevar dos flechas. No porque la segunda estorbe: porque existiendo ya arruina la primera. El texto es japonés y tiene cerca de setecientos años.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -490,25 +510,6 @@ En 2010 aparecieron dos fragmentos de tablilla con ese mismo texto, copiado para
 #SabiduriaDeBolsillo #Persia #Babilonia #Arqueologia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-09-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>En 2016 la UNESCO lo inscribió en la Lista del Patrimonio Mundial y en la Lista del Patrimonio en Peligro el mismo día. Lo que lo está destruyendo no es el saqueo: son los manglares.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-08-extra94</guid>
-      <pubDate>Tue, 08 Sep 2026 22:19:27 +0000</pubDate>
-      <description><![CDATA[En 2016 la UNESCO lo inscribió en la Lista del Patrimonio Mundial y en la Lista del Patrimonio en Peligro el mismo día. Lo que lo está destruyendo no es el saqueo: son los manglares.
-
-Frente a la costa sureste de Pohnpei, en Micronesia, hay casi un centenar de islotes artificiales levantados sobre el arrecife y separados por canales de marea. Los muros son columnas de basalto de varias toneladas, extraídas de afloramientos del otro lado de la isla principal y llevadas hasta el arrecife. La ocupación empieza hacia el año 900, pero la construcción megalítica —la que define el sitio— arranca en torno al 1200, con la dinastía Saudeleur, y se detiene cuando esa dinastía se derrumba a comienzos del siglo XVII.
-
-En 2016 un equipo dirigido por el arqueólogo Mark McCoy fechó por series de uranio la tumba monumental de Nandauwas, de ochenta por sesenta metros y muros de más de ocho de alto. El resultado acotó su construcción a una ventana de veinte años, entre 1180 y 1200: un siglo antes de lo que se suponía. Eso convierte a Pohnpei en la primera isla del Pacífico gobernada por un jefe único, y la prueba no es un documento. Es el peso de las piedras: para mover eso hace falta alguien capaz de ordenarlo.
-
-Los canales eran la ciudad. Por ahí se entraba, por ahí se separaban los recintos, y esa era la idea. Hoy los canales se están azolvando, y en el sedimento crecen manglares cuyas raíces empujan los muros desde dentro. Ese es el motivo exacto por el que el sitio entró en la lista de peligro el mismo día que en la de honor. Lo que sostenía la obra dejó de mantenerse, y la obra empezó a comérsela lo que crece cuando nadie limpia.
-
-¿Qué se te está cerrando por falta de mantenimiento y no de valor?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-08-extra94.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-08-extra94.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
