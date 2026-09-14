@@ -1065,6 +1065,55 @@ def seccion_codex() -> None:
     check(_rechaza_familia(E, t), "family_id con espacios o ; se rechaza")
 
 
+def seccion_cli() -> None:
+    print("\n8. CLI lab.py: encargos de extremo a extremo en una carpeta temporal")
+    import json
+    import os
+    import subprocess
+    import tempfile
+    from PIL import Image
+
+    lab = ROOT / "experiments" / "media-lab" / "lab.py"
+    with tempfile.TemporaryDirectory() as d:
+        env = {**os.environ, "LAB_ENCARGOS_DIR": d}
+
+        def lab_cmd(*args):
+            r = subprocess.run([sys.executable, str(lab), *args], cwd=ROOT, env=env,
+                               capture_output=True, text=True)
+            return r.returncode, r.stdout, r.stderr
+
+        prompt = pathlib.Path(d) / "prompt.txt"
+        prompt.write_text("Un astrolabio de latón", encoding="utf-8")
+        codigo, out, err = lab_cmd("encargo-nuevo", "--cell", "CELL-900", "--family", "LAB-TEST-001",
+                                   "--brief", "b.md", "--formato", '{"ancho":1080,"alto":1350}',
+                                   "--prompt-file", str(prompt), "--restriccion", "sin texto")
+        check(codigo == 0, f"encargo-nuevo funciona {err[-200:]}")
+        eid = json.loads(out)["encargo_id"]
+        codigo, out, _ = lab_cmd("codex-tomar", "--owner", "codex-heartbeat", "--max", "2")
+        tomados = json.loads(out)
+        check(codigo == 0 and [t["encargo_id"] for t in tomados] == [eid], "codex-tomar devuelve el encargo con sus rutas")
+        imagen = ROOT / tomados[0]["rutas"][0]
+        imagen.parent.mkdir(parents=True, exist_ok=True)
+        try:
+            Image.new("RGB", (64, 80), (200, 180, 120)).save(imagen)
+            codigo, out, err = lab_cmd("codex-generado", "--encargo", eid, "--owner", "codex-heartbeat",
+                                       "--imagen", tomados[0]["rutas"][0])
+            check(codigo == 0 and json.loads(out)[0]["ancho"] == 64, f"codex-generado mide la imagen {err[-200:]}")
+            codigo, _, _ = lab_cmd("encargo-revisar", "--encargo", eid, "--aprobado", "--motivo", "prueba")
+            check(codigo == 0, "encargo-revisar aprueba")
+            enc = json.loads((pathlib.Path(d) / f"{eid}.json").read_text(encoding="utf-8"))
+            check(enc["estado"] == "aprobado", "el archivo del encargo queda aprobado")
+            codigo, _, err = lab_cmd("codex-generado", "--encargo", eid, "--owner", "codex-heartbeat",
+                                     "--imagen", "/etc/hosts")
+            check(codigo != 0, "codex-generado rechaza una imagen fuera de destino_assets")
+        finally:
+            imagen.unlink(missing_ok=True)
+            try:
+                imagen.parent.rmdir()
+            except OSError:
+                pass
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -1073,6 +1122,7 @@ SECCIONES = [
     seccion_manifiesto_y_cerrojo,
     seccion_interfaz,
     seccion_codex,
+    seccion_cli,
 ]
 
 

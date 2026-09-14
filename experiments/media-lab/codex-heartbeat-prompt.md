@@ -10,9 +10,9 @@ Prohibido, sin excepciones: publicar en cualquier red, usar adb o el teléfono, 
    .venv/bin/python experiments/media-lab/lab.py codex-generado --encargo <encargo_id> --owner codex-heartbeat --imagen <ruta1> [--imagen <ruta2>]
    Si la generación falló o no puedes cumplir las restricciones, ejecuta:
    .venv/bin/python experiments/media-lab/lab.py codex-fallo --encargo <encargo_id> --owner codex-heartbeat --nota "<motivo breve>"
-5. Comitea SOLO experiments/media-lab/encargos/<encargo_id>.json y las imágenes de ese encargo:
-   git add <esas rutas exactas>
-   git commit -m "media lab codex: encargo <encargo_id> <generado|fallo>"
+5. Cuando hayas terminado con TODOS los encargos devueltos en el paso 2, comitea juntos, en un único commit, sus JSON y sus imágenes:
+   git add <cada experiments/media-lab/encargos/<encargo_id>.json devuelto> <cada imagen guardada>
+   git commit -m "media lab codex: encargos <id1> [<id2>] <generado|fallo>"
    git fetch origin main && git rebase origin/main && git push origin HEAD:main
    Si el rebase entra en conflicto: git rebase --abort, deja el commit local y termina informando del conflicto. Nunca uses git reset --hard ni git add -A.
 6. Mantente en silencio salvo fallo, conflicto o encargo imposible.
