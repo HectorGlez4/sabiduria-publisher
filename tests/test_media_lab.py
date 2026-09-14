@@ -1047,7 +1047,22 @@ def seccion_codex() -> None:
         vacio = dict(e_ok, imagenes=[])
         check("sin imágenes registradas" in R.validar(vacio, raiz), "un generado sin imágenes no valida")
 
-    check(E.EncargoError is not None and _rechaza_familia(E, t), "family_id con espacios o ; se rechaza")
+        enlace = raiz / (base + "ENC-20260915-003-v1.png")
+        enlace.unlink(missing_ok=True)
+        destino_fuera = raiz / "fuera" / "valida.png"
+        sha_fuera = png(destino_fuera, 768, 1152)
+        enlace.symlink_to(destino_fuera)
+        e_enlace = generado(raiz, [{"ruta": base + "ENC-20260915-003-v1.png", "sha256": sha_fuera,
+                                    "ancho": 768, "alto": 1152}])
+        check(any("enlace simbólico" in x for x in R.validar(e_enlace, raiz)),
+              "rechaza un enlace simbólico en la ruta pedida aunque apunte a un PNG válido")
+
+        cuadrada = raiz / (base + "ENC-20260915-003-v2.png")
+        e_cuad = generado(raiz, [{"ruta": base + "ENC-20260915-003-v2.png", "sha256": png(cuadrada, 1024, 1024),
+                                  "ancho": 1024, "alto": 1024}])
+        check(R.validar(e_cuad, raiz) == [], "acepta una imagen cuadrada para un formato vertical 1080x1350")
+
+    check(_rechaza_familia(E, t), "family_id con espacios o ; se rechaza")
 
 
 SECCIONES = [

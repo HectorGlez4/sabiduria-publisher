@@ -64,6 +64,9 @@ def validar(enc: dict, raiz: Path = ROOT) -> list[str]:
             errores.append(f"ruta no pedida {im['ruta']}")
             continue
         p = raiz / im["ruta"]
+        if p.is_symlink():
+            errores.append(f"{im['ruta']} es un enlace simbólico")
+            continue
         if not p.is_file():
             errores.append(f"no existe {im['ruta']}")
             continue
@@ -79,7 +82,7 @@ def _validar_imagen(p: Path, im: dict, formato: dict) -> list[str]:
     try:
         with Image.open(p) as img:
             tipo, (ancho, alto) = img.format, img.size
-    except (OSError, UnidentifiedImageError):
+    except (OSError, UnidentifiedImageError, Image.DecompressionBombError):
         return [f"{im['ruta']} no es una imagen legible"]
     errores = []
     if tipo != "PNG":
@@ -89,8 +92,9 @@ def _validar_imagen(p: Path, im: dict, formato: dict) -> list[str]:
     if min(ancho, alto) < LADO_MINIMO:
         errores.append(f"{im['ruta']} es demasiado pequeña ({ancho}x{alto})")
     # La generación integrada da tamaños fijos (p. ej. 1024x1536): no se exige la proporción
-    # exacta del formato porque el recorte llega después, pero sí la orientación.
+    # exacta del formato porque el recorte llega después, pero sí la orientación. Una imagen
+    # cuadrada vale para cualquier formato rectangular: se recorta bien después.
     fa, fh = formato.get("ancho"), formato.get("alto")
-    if fa and fh and fa != fh and (fh > fa) != (alto > ancho):
+    if fa and fh and fa != fh and ancho != alto and (fh > fa) != (alto > ancho):
         errores.append(f"{im['ruta']} tiene la orientación equivocada ({ancho}x{alto} para {fa}x{fh})")
     return errores
