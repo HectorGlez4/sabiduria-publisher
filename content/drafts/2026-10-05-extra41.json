@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-05-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Kant y el sapere aude de 1784",
+    "hook": "El lema de la Ilustración no lo inventó Kant. Lo tomó de un poeta romano que lo escribió dieciocho siglos antes, en un pasaje que no hablaba de razón, sino de dejar de aplazar.",
+    "quote": {
+      "text": "Sapere aude. Ten el valor de servirte de tu propio entendimiento: ese es el lema de la Ilustración.",
+      "author": "Immanuel Kant",
+      "work": "¿Qué es la Ilustración? (Berlinische Monatsschrift, diciembre de 1784)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Kant firmó el artículo en Königsberg el 30 de septiembre de 1784, y salió en diciembre en la Berlinische Monatsschrift, páginas 481 a 494. Respondía a una pregunta lanzada en la misma revista. Su definición es la más citada de la época: la Ilustración es la salida del ser humano de una minoría de edad de la que él mismo es culpable. Minoría de edad es no poder usar el propio entendimiento sin la guía de otro. Y la culpa, dice, no es la falta de inteligencia, sino la falta de decisión y de valor.",
+      "Kant nombra las causas sin rodeos: pereza y cobardía. Es cómodo ser menor de edad. Si tengo un libro que piensa por mí, un pastor que tiene conciencia por mí y un médico que decide mi dieta, no necesito esforzarme. Por eso el lema no dice «aprende» ni «infórmate». Dice «atrévete». El obstáculo que Kant describe no es la ignorancia: es lo bien que se vive delegando.",
+      "Las dos palabras latinas son de Horacio, Epístolas I, 2, verso 40, hacia el año 20 antes de nuestra era. En su contexto dicen: quien empezó ya tiene hecha la mitad; atrévete a saber, empieza. Y enseguida Horacio compara al que aplaza vivir bien con un campesino que espera a que el río termine de pasar para cruzarlo, mientras el río sigue corriendo y correrá siempre. Antes de ser un lema sobre la razón, fue una advertencia contra la espera."
+    ],
+    "question": "¿Qué decisión estás dejando en manos de otro solo porque es más cómodo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kant",
+      "#Ilustracion",
+      "#Citas"
+    ],
+    "extended": [
+      "#SapereAude",
+      "#Filosofia",
+      "#Horacio",
+      "#PensamientoCritico",
+      "#SigloXVIII",
+      "#Clasicos",
+      "#Razon",
+      "#Reflexion"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de Kant, «Beantwortung der Frage: Was ist Aufklärung?», Berlinische Monatsschrift, tomo 4, Zwölftes Stück (diciembre), pp. 481-494, Berlín, Haude und Spener, fechado ‘Königsberg in Preußen, den 30. Septemb. 1784’. Comienza: ‘Aufklärung ist der Ausgang des Menschen aus seiner selbst verschuldeten Unmündigkeit. Unmündigkeit ist das Unvermögen, sich seines Verstandes ohne Leitung eines anderen zu bedienen.’ Sigue: ‘Faulheit und Feigheit sind die Ursachen, warum ein so großer Theil der Menschen [...] dennoch gerne Zeitlebens unmündig bleiben’ y ‘Habe ich ein Buch, das für mich Verstand hat, einen Seelsorger, der für mich Gewissen hat, einen Arzt der für mich die Diät beurtheilt [...] so brauche ich mich ja nicht selbst zu bemühen.’",
+      "source": "Wikisource en alemán, transcripción de la edición original de la Berlinische Monatsschrift (1784)",
+      "url": "https://de.wikisource.org/wiki/Beantwortung_der_Frage:_Was_ist_Aufkl%C3%A4rung"
+    },
+    {
+      "claim": "Transcripción del primer párrafo con la frase del lema: ‘Sapere aude! Habe Mut, dich deines eigenen Verstandes zu bedienen! ist also der Wahlspruch der Aufklärung.’ Referencia: Berlinische Monatsschrift, diciembre de 1784, 481-494, citado según Immanuel Kant, «Was ist Aufklärung? Ausgewählte kleine Schriften», ed. Horst D. Brandt, Hamburgo, 1999, pp. 20-22.",
+      "source": "Universität Wien, Frühe Neuzeit Online (fnz-online), fuente «Immanuel Kant, Beantwortung der Frage: Was ist Aufklärung? 1784»",
+      "url": "https://fnz-online.univie.ac.at/themen/wissenskultur-und-kommunikation/3-aufklaerung-kommunikationsformen-medien-inhalte/quellen/quelle-immanuel-kant-beantwortung-der-frage-was-ist-aufklaerung-1784/"
+    },
+    {
+      "claim": "Horacio, Epístolas I, 2, versos 40-43: ‘sapere aude; incipe! qui recte vivendi prorogat horam, rusticus exspectat dum defluat amnis; at ille labitur et labitur in omne volubilis aevum’. Edición: H. Rushton Fairclough, Londres, William Heinemann, y Cambridge (Massachusetts), Harvard University Press, 1929.",
+      "source": "Perseus Digital Library (Tufts University), Q. Horatius Flaccus, Epistles, libro 1, poema 2",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2008.01.0539%3Abook%3D1%3Apoem%3D2"
+    },
+    {
+      "claim": "Texto latino independiente del mismo pasaje: ‘Dimidium facti, qui coepit, habet; sapere aude, / incipe. Viuendi qui recte prorogat horam, / rusticus expectat dum defluat amnis; at ille / labitur et labetur in omne uolubilis aeuum.’",
+      "source": "The Latin Library, Horacio, Epistularum liber primus, epístola 2",
+      "url": "https://www.thelatinlibrary.com/horace/epist1.shtml"
+    },
+    {
+      "claim": "La expresión procede del primer libro de Epístolas de Horacio (20 a.C.), carta segunda a Lolio, verso 40: ‘He who has begun is half done; dare to know, begin!’, en un pasaje que ilustra la lección con el necio que espera a que el río deje de correr antes de cruzarlo. Kant la usó como lema de la Ilustración en 1784.",
+      "source": "Wikipedia en inglés, «Sapere aude»",
+      "url": "https://en.wikipedia.org/wiki/Sapere_aude"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir la expresión «sapere aude» a Kant como invención suya. Es de Horacio, Epístolas I, 2, 40; Kant la toma como lema y la traduce al alemán.",
+    "No traducir «sapere aude» como «atrévete a pensar» diciendo que es literal. La traducción corriente es «atrévete a saber»; «sapere» también significa ser sensato o juicioso. En la tarjeta se deja en latín y se da la glosa del propio Kant.",
+    "No dar el verso de Horacio como 1.2.41 o 42. En la numeración estándar «sapere aude» está en el verso 40 y el campesino junto al río en el 42.",
+    "No confundir la fecha de redacción con la de publicación. El texto está fechado el 30 de septiembre de 1784 y apareció en el número de diciembre de 1784.",
+    "No afirmar sin verificar que la sociedad de los Alétofilos usó el lema en una medalla de 1736. Circula como antecedente alemán de Kant, pero no se pudo comprobar en ninguna fuente abierta durante esta investigación.",
+    "No mencionar la respuesta de Moses Mendelssohn a la misma pregunta de ese año sin cotejarla; no se verificó en esta investigación.",
+    "No citar la versión modernizada «Habe Mut» como si fuera la grafía de 1784. La edición original imprime «Muth», «Theil» y «beurtheilt»."
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Hillel y las tres preguntas de Avot 1:14",
+    "hook": "Casi siempre se cita solo la última de las tres preguntas. Pero la tercera no tiene sentido sin las dos primeras, que se contradicen a propósito. Las formuló un maestro judío hace unos dos mil años.",
+    "quote": {
+      "text": "Si yo no soy para mí, ¿quién será para mí? Y si soy solo para mí, ¿qué soy? Y si no es ahora, ¿cuándo?",
+      "author": "Hillel el Viejo",
+      "work": "Pirkei Avot (Mishná), capítulo 1, 14",
+      "attribution_verified": true
+    },
+    "body": [
+      "Hillel nació en Babilonia hacia el año 110 antes de nuestra era y murió en Jerusalén hacia el 10. Fue uno de los grandes maestros de la ley judía de su tiempo. Sus dichos se transmitieron de palabra durante unos dos siglos, hasta que Judá ha-Nasí reunió la Mishná, hacia el año 200. Uno de sus tratados, Pirkei Avot, los Dichos de los Padres, recoge máximas de los sabios en cadena de maestro a discípulo. En el primer capítulo, sentencia 14, están estas tres preguntas.",
+      "La primera defiende el cuidado propio: nadie ocupará tu lugar si tú no lo ocupas. La segunda la corrige de inmediato: quien solo vive para sí deja de ser alguien. Hillel no elige entre las dos. Las deja juntas, en tensión, y entonces llega la tercera. «Si no es ahora, ¿cuándo?» no es un grito de impaciencia. Es la salida al dilema: el equilibrio entre uno mismo y los demás no se resuelve pensándolo, se resuelve actuando hoy. Sacada de ahí, la frase se vuelve un lema de productividad.",
+      "En 1982 Primo Levi tomó la tercera pregunta como título de una novela, «Se non ora, quando?», sobre partisanos judíos que cruzan Europa entre 1943 y 1945. El libro ganó ese año los premios Viareggio y Campiello. Levi sabía de dónde venía la frase, y la eligió entera: la historia de un grupo que tiene que salvarse a sí mismo sin dejar de ser un grupo. Las dos primeras preguntas son las que le dan peso a la tercera."
+    ],
+    "question": "¿En qué parte de tu vida estás siendo demasiado para ti, o demasiado poco?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hillel",
+      "#PirkeiAvot",
+      "#Citas"
+    ],
+    "extended": [
+      "#Mishna",
+      "#Judaismo",
+      "#Sabiduria",
+      "#PrimoLevi",
+      "#Etica",
+      "#Clasicos",
+      "#Filosofia",
+      "#Reflexion"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto hebreo de Avot 1:14, edición Torat Emet 357: «הוּא הָיָה אוֹמֵר, אִם אֵין אֲנִי לִי, מִי לִי. וּכְשֶׁאֲנִי לְעַצְמִי, מָה אֲנִי. וְאִם לֹא עַכְשָׁיו, אֵימָתָי:». La sentencia pertenece al bloque de dichos de Hillel del capítulo 1.",
+      "source": "Sefaria, API de textos, Pirkei Avot 1:14, versión hebrea Torat Emet 357 (la página HTML se renderiza por JavaScript; se consultó la API)",
+      "url": "https://www.sefaria.org/api/v3/texts/Pirkei_Avot.1.14"
+    },
+    {
+      "claim": "Traducción inglesa impresa de la sentencia 14 del capítulo I: ‘If I am not for myself, who will be for me? But if I care for myself only, what am I? And if not now, when?’ Joseph I. Gorfinkle, «The Sayings of the Jewish Fathers (Pirke Abot)», Library of Jewish Classics III, Nueva York, Bloch Publishing Company, 1913 (reproducida por Project Gutenberg, eBook 8548).",
+      "source": "Project Gutenberg, edición de Joseph I. Gorfinkle (1913)",
+      "url": "https://www.gutenberg.org/cache/epub/8548/pg8548.txt"
+    },
+    {
+      "claim": "Ética de los Padres, capítulo primero, mishná 14, de Hillel: ‘If I am not for myself, who is for me? And if I am only for myself, what am I? And if not now, when?’ Las mishnayot 12 y 13 recogen otros dichos de Hillel (ser discípulo de Aarón, amante y perseguidor de la paz).",
+      "source": "Chabad.org, Ethics of the Fathers, Chapter One (texto hebreo vocalizado de Kehot Publication Society)",
+      "url": "https://www.chabad.org/library/article_cdo/aid/682498/jewish/Chapter-One.htm"
+    },
+    {
+      "claim": "Hillel nació hacia el 110 a.C. en Babilonia y murió hacia el 10 d.C. en Jerusalén. La Mishná fue compilada y redactada por Judá ha-Nasí hacia el año 200, unos dos siglos después de su muerte.",
+      "source": "Wikipedia en inglés, «Hillel the Elder» (fechas aproximadas, así las da la propia entrada)",
+      "url": "https://en.wikipedia.org/wiki/Hillel_the_Elder"
+    },
+    {
+      "claim": "El título de «Se non ora, quando?» procede del Pirkè Avot: ‘If I am not for myself, who will be for me? And even if I think of myself, what am I? And if not now, when?’. La novela salió en 1982 en la colección Supercoralli de Einaudi y ‘won the Viareggio and Campiello prizes in 1982’. La acción va de julio de 1943 a agosto de 1945.",
+      "source": "Centro Internazionale di Studi Primo Levi, ficha de «Se non ora, quando?»",
+      "url": "https://www.primolevi.it/en/se-non-ora-quando"
+    }
+  ],
+  "do_not_use": [
+    "No traducir la segunda pregunta como si el hebreo dijera literalmente «solo». «וּכְשֶׁאֲנִי לְעַצְמִי» es, palabra por palabra, «y cuando yo soy para mí mismo»; el «solo» es la interpretación corriente de las traducciones (Gorfinkle 1913: ‘if I care for myself only’; Chabad: ‘if I am only for myself’). La versión de la tarjeta sigue esa lectura establecida.",
+    "No atribuir la frase «si no es ahora, ¿cuándo?» a Primo Levi, a John F. Kennedy, a Ronald Reagan ni a ningún político moderno que la haya usado en discursos. Es de Hillel, en la Mishná.",
+    "No citar la tercera pregunta sola ni presentarla como lema de productividad. La sentencia son tres preguntas y la tercera responde a la tensión entre las dos primeras.",
+    "No decir que Hillel escribió Pirkei Avot. Sus dichos se transmitieron oralmente y quedaron fijados en la Mishná, compilada hacia el año 200 por Judá ha-Nasí.",
+    "No dar las fechas de Hillel como exactas. Las de nacimiento y muerte (hacia 110 a.C. y hacia 10 d.C.) son tradicionales y aproximadas.",
+    "No mezclar esta sentencia con la anécdota de la Torá «sobre un pie» y la regla de oro («lo que te es odioso no se lo hagas a tu prójimo»). Esa historia es del Talmud de Babilonia, Shabat 31a, no de Avot 1:14.",
+    "No numerar la sentencia como 1:13 o 1:15. En las ediciones consultadas (Sefaria, Gorfinkle, Chabad) es la 14 del capítulo 1."
+  ]
+}

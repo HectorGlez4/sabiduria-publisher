@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-05-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el código de Hammurabi y el botín de Susa",
+    "hook": "La ley escrita más famosa de la Antigüedad llegó hasta nosotros porque un rey enemigo se la llevó como trofeo. Mandó borrar una parte para poner su propio texto, y ese texto nunca se grabó.",
+    "body": [
+      "Hammurabi reinó en Babilonia entre 1792 y 1750 antes de nuestra era. Mandó grabar en un bloque de basalto de dos metros y veinticinco centímetros cerca de trescientas decisiones legales, bajo un relieve en el que recibe el encargo del dios Shamash. La piedra se levantó en un templo, probablemente en Sippar. Unos seiscientos años después, el rey elamita Shutruk-Nahhunte saqueó Babilonia y se llevó el monumento a Susa, en el actual Irán, como botín de guerra.",
+      "Allí sus canteros pulieron varias columnas del texto para grabar encima una inscripción del vencedor. La inscripción no se hizo nunca. Esa franja lisa sigue a la vista en el Louvre, y las leyes que ocupaban ese espacio no se han reconstruido del todo. La expedición francesa de Jacques de Morgan encontró la piedra en Susa entre diciembre de 1901 y enero de 1902, y Jean-Vincent Scheil publicó la traducción ese mismo año. Durante décadas se la tuvo por la ley escrita más antigua del mundo.",
+      "No lo era. En 1947 apareció el código de Lipit-Ishtar, en 1948 las leyes de Eshnunna y en 1952 Samuel Noah Kramer tradujo el de Ur-Nammu, unos tres siglos anterior. Ur-Nammu castigaba con multas en plata lo que Hammurabi castigaba con ojo por ojo. Y ningún documento judicial babilonio conocido cita la piedra de Hammurabi: fue un monumento del rey justo, no necesariamente el reglamento de los tribunales."
+    ],
+    "question": "¿Cuánto de lo que llamamos «el primero» es solo lo primero que encontramos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El código de Hammurabi y el botín de Susa",
+    "subtitle": "Una ley robada, una inscripción que nunca se grabó y tres códigos más antiguos",
+    "body": "Un rey elamita se llevó la piedra a Susa hacia el siglo XII a.C. y mandó pulir parte del texto para grabar el suyo. Nunca lo hizo. Hallada en 1902, pasó por la ley más antigua hasta que en 1952 se tradujo el código de Ur-Nammu."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hammurabi",
+      "#Mesopotamia",
+      "#HistoriaAntigua"
+    ],
+    "extended": [
+      "#Babilonia",
+      "#Louvre",
+      "#Arqueologia",
+      "#HistoriaDelDerecho",
+      "#UrNammu",
+      "#Susa",
+      "#Civilizaciones",
+      "#Cuneiforme"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Ficha de la pieza: «Code de Hammurabi», número de inventario Sb 8 (también AS 6064); basalto; 225 cm de alto, 79 cm de ancho, 47 cm de fondo; 1792-1750 a.C., primera dinastía de Babilonia; hallado en Susa por Jacques de Morgan, 1901-1902; adquirido por reparto de hallazgos de excavación; texto de leyes en cuneiforme, lengua paleobabilónica.",
+      "source": "Musée du Louvre, Collections, ficha de la estela Sb 8",
+      "url": "https://collections.louvre.fr/en/ark:/53355/cl010174436"
+    },
+    {
+      "claim": "La estela fue descubierta en 1902 en las excavaciones francesas de Susa, adonde ‘had been brought there as a spoil of war by the Elamite king Shutruk-Nahhunte (reigned around 1185–1160 BC)’. Contiene ‘282 legal judgements’. El relieve muestra a ‘Hammurabi standing before the sun god Shamash’, reconocible por las llamas que le salen de los hombros.",
+      "source": "Musée du Louvre, «The Code of Hammurabi»",
+      "url": "https://www.louvre.fr/en/the-code-of-hammurabi"
+    },
+    {
+      "claim": "‘Part of the Louvre stela was erased ready for an inscription, which was never made. The damaged portion of Hammurabi's code has never been fully reconstructed.’ El lugar original es incierto: ‘likely candidates include the temple of Marduk (the god of Babylon) or the temple of Shamash (the god of justice) in Sippar’. ‘We have no evidence that these were the rules of Babylonian society or that they had a governing role’; otros textos legislativos sí se citan en documentos de práctica jurídica.",
+      "source": "J. Caleb Howard, «The ‘Law Code’ of Hammurabi», Tyndale House, Cambridge, 22 de noviembre de 2023",
+      "url": "https://tyndalehouse.com/2023/11/22/hammurabi/"
+    },
+    {
+      "claim": "La expedición de Jacques de Morgan desenterró la estela en Susa entre diciembre de 1901 y enero de 1902; Jean-Vincent Scheil publicó el informe inicial y la traducción en 1902. Se la creyó la colección legal más antigua de Mesopotamia hasta que aparecieron ‘the Code of Lipit-Ishtar in 1947, the Laws of Eshnunna in 1948, and the Code of Ur-Nammu in 1952’. Ley 196: si un awīlum ciega el ojo de otro awīlum, se le cegará el ojo.",
+      "source": "Wikipedia en inglés, «Code of Hammurabi»",
+      "url": "https://en.wikipedia.org/wiki/Code_of_Hammurabi"
+    },
+    {
+      "claim": "‘The Code of Ur-Nammu (circa 2100-2050 BCE) is the oldest extant law code in the world.’ Ur-Nammu reinó hacia 2112-2094 a.C.; el código es unos tres siglos anterior al de Hammurabi; Samuel Noah Kramer lo tradujo en 1952; imponía ‘fines in silver’ para la mayoría de las faltas.",
+      "source": "Joshua J. Mark, «Code of Ur-Nammu: The Oldest Law Code in the World», World History Encyclopedia",
+      "url": "https://www.worldhistory.org/Code_of_Ur-Nammu/"
+    },
+    {
+      "claim": "La tablilla principal (Ni. 3191), procedente de Nippur, está en los Museos Arqueológicos de Estambul; Kramer la identificó y tradujo en 1952. Por sacar un ojo, la multa era ‘half a mina of silver’. La autoría se discute entre Ur-Nammu y su hijo Shulgi.",
+      "source": "Wikipedia en inglés, «Code of Ur-Nammu»",
+      "url": "https://en.wikipedia.org/wiki/Code_of_Ur-Nammu"
+    }
+  ],
+  "do_not_use": [
+    "No llamarlo «el primer código de leyes de la historia». Los códigos de Ur-Nammu (hacia 2100 a.C.) y de Lipit-Ishtar, y las leyes de Eshnunna, son anteriores; se descubrieron después, entre 1947 y 1952.",
+    "No decir que Shutruk-Nahhunte grabó su nombre sobre la estela. Muchas páginas lo afirman, pero Tyndale House (2023) precisa que la parte borrada se preparó para una inscripción que nunca se hizo.",
+    "No dar un número exacto de columnas borradas. Wikipedia habla de siete columnas pulidas; otras fuentes recogen la estimación de Scheil (1902) de cinco columnas y 34 leyes perdidas. El cuerpo dice «varias columnas».",
+    "No afirmar como seguro que la estela estaba en Sippar ni que estaba en Babilonia. El lugar original es incierto: el templo de Shamash en Sippar o el de Marduk en Babilonia.",
+    "No presentar las 282 leyes como una cifra del original. Es una numeración moderna convencional; parte del texto se perdió con la erosión intencionada.",
+    "No afirmar que los tribunales babilonios aplicaban este código. No hay documentos de práctica judicial que lo citen; su función pudo ser monumental y propagandística.",
+    "No atribuir sin matiz el código de Ur-Nammu a Ur-Nammu: parte de los especialistas lo atribuyen a su hijo Shulgi.",
+    "No presentar las fechas de reinado como exactas. Siguen la cronología media habitual (Hammurabi 1792-1750 a.C.); otras cronologías las desplazan varias décadas."
+  ]
+}

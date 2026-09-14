@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-05-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Tu Youyou y la receta de Ge Hong",
+    "hook": "El fármaco contra la malaria que le dio a China su primer Nobel de Medicina salió de una receta de hace más de dieciséis siglos. La pista no estaba en la planta: estaba en que la receta no mandaba hervirla.",
+    "body": [
+      "El 23 de mayo de 1967 se creó en China un programa militar secreto para buscar un tratamiento contra la malaria. Por la fecha se llamó Proyecto 523. En enero de 1969 incorporaron a Tu Youyou, investigadora del Instituto de Materia Médica China de Pekín. Su equipo revisó recetarios antiguos y probó extractos de plantas uno tras otro. El de qinghao, una artemisa, daba resultados irregulares: a veces funcionaba y a veces no.",
+      "La respuesta estaba en un manual de urgencias escrito por el médico Ge Hong en el siglo IV. Su receta decía: tomar un manojo de qinghao, dejarlo en remojo en dos sheng de agua, exprimirlo y beber todo el jugo. Tu Youyou reparó en lo que faltaba. No había cocción. Supuso que el calor destruía el principio activo y cambió de método: extraer con disolventes de bajo punto de ebullición. El 4 de octubre de 1971, el extracto número 191 eliminó por completo el parásito en ratones y en monos.",
+      "Antes de probarlo en pacientes, ella y dos miembros de su equipo tomaron las primeras dosis. La sustancia pura, la artemisinina, se aisló en 1972. Tu Youyou recibió el premio Lasker en 2011 y el Nobel de Medicina en 2015. El texto antiguo no contenía la molécula ni la dosis. Contenía una instrucción tan sencilla que durante años nadie la leyó como un dato: agua, sin fuego."
+    ],
+    "question": "¿Qué detalle obvio de un problema viejo podría estar esperando a que alguien lo lea de otra manera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Tu Youyou y la receta de Ge Hong",
+    "subtitle": "Un manual del siglo IV, una muestra número 191 y el Nobel de 2015",
+    "body": "La receta antigua mandaba remojar la planta en agua, no hervirla. Esa ausencia de fuego le indicó a Tu Youyou que el calor destruía el principio activo. En 1971, el extracto 191 curó por completo la malaria en ratones y monos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#TuYouyou",
+      "#Artemisinina",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Malaria",
+      "#MedicinaChina",
+      "#PremioNobel",
+      "#MujeresEnLaCiencia",
+      "#China",
+      "#Farmacologia",
+      "#Ciencia",
+      "#GeHong"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "‘A clandestine venture, named Project 523 for the day it was established — May 23, 1967 — set out to develop antimalarial therapies.’ La receta de Ge Hong, en la traducción que reproduce el artículo: ‘Another recipe: qinghao, one bunch, take two sheng [2.2 liters] of water for soaking it, wring it out, take the juice, ingest it in its entirety’ (Handbook of Prescriptions for Emergencies). Declaraciones de Tu Youyou: rediseñó la extracción ‘using solvents with a low boiling point’; ‘We finally obtained extract number 191 [...] which was found to be 100% effective against parasitemia in both P. berghei–infected mice and P. cynomolgi–infected monkeys on October 4th, 1971’; ‘three of my team members including myself pioneered in taking the first doses of the extract’. Premio Lasker~DeBakey 2011.",
+      "source": "Ushma S. Neill, «From branch to bedside: Youyou Tu is awarded the 2011 Lasker~DeBakey Clinical Medical Research Award for discovering artemisinin as a treatment for malaria», The Journal of Clinical Investigation, 2011 (texto completo en PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3195493/"
+    },
+    {
+      "claim": "El 23 de mayo de 1967 una reunión en el Hotel Pekín lanzó oficialmente el proyecto. ‘Professor Tu was brought into the project in January, 1969 when the 523 directors visited the Institute of Chinese Materia Medica.’ El extracto con éter a baja temperatura inhibió la malaria de roedores y monos ‘with 100% activity’ (4 de octubre de 1971). ‘The 2015 Nobel Prize in Physiology or Medicine was awarded to Professor Youyou Tu for her key contributions to the discovery of artemisinin.’",
+      "source": "Xin-zhuan Su y Louis H. Miller, «The discovery of artemisinin and Nobel Prize in Physiology or Medicine», Science China Life Sciences, 2015 (texto completo en PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4966551/"
+    },
+    {
+      "claim": "El manual de Ge Hong, ‘A Handbook of Prescriptions for Emergencies’, se sitúa en la dinastía Jin (284-346 d.C. según este artículo); la qinghaosu (artemisinina) se aisló en 1972 y los primeros ensayos clínicos se hicieron en Hainan con pacientes de P. vivax y P. falciparum.",
+      "source": "Fulong Liao, «Discovery of Artemisinin (Qinghaosu)», Molecules, vol. 14, n.º 12, 2009, pp. 5362-5366 (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6254926/"
+    }
+  ],
+  "do_not_use": [
+    "No dar fechas exactas de vida de Ge Hong. Las fuentes no coinciden: el artículo de Liao (Molecules, 2009) da 284-346 y la entrevista del JCI (2011) da 284-363. Por eso el cuerpo dice solo «siglo IV».",
+    "No escribir que la receta de Ge Hong dice «agua fría». La traducción reproducida en el JCI dice solo «two sheng of water» para remojar; «agua fría» aparece en paráfrasis posteriores (por ejemplo Su y Miller, 2015). El dato verificable es que la receta no manda hervir.",
+    "No afirmar que Tu Youyou descubrió la artemisinina sola. El Proyecto 523 reunió a muchos equipos e instituciones, y el reparto del mérito fue objeto de discusión en China; la pieza atribuye a su equipo el extracto 191 y la idea de la extracción a baja temperatura, que es lo que acreditan el Lasker y el Nobel.",
+    "No citar la cifra de «más de 2000 preparados y 640 candidatos» que circula en resúmenes del artículo de Nature Medicine (2011): nature.com bloquea la descarga y no se pudo cotejar con el texto.",
+    "No decir que el extracto 191 era artemisinina pura. Era un extracto neutro obtenido con éter; la sustancia pura se aisló en 1972.",
+    "No decir que el Nobel de 2015 fue solo para ella sin matizar: nobelprize.org bloquea la descarga y no se comprobó con quién lo compartió. La pieza dice solo que lo recibió, que es lo acreditado por Su y Miller."
+  ]
+}
