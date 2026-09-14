@@ -484,15 +484,19 @@
       "treatment": "single image with caption",
       "publishing_route": "api",
       "variant_id": "A",
-      "capability_evidence": null,
-      "status": "planned",
+      "capability_evidence": "media-lab workflow 34910294382 (manifest LAB-PERSON-002-A-FACEBOOK-API), agent visual QA PASS",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "planned_publish_at": "2026-09-14T23:45:48+00:00",
+      "run_record": "experiments/media-lab/runs/LAB-PERSON-002-A-FACEBOOK.json",
+      "post_id": "100618132774413_1095270896630903",
+      "post_url": "https://www.facebook.com/874327782058550/posts/1095270896630903",
+      "playback_or_display_verified_at": "2026-09-14T23:46:50+00:00",
+      "measurement_due_at": [
+        "2026-09-15T23:45:52+00:00",
+        "2026-09-17T23:45:52+00:00",
+        "2026-09-21T23:45:52+00:00"
+      ],
       "measurement_completed_at": []
     },
     {

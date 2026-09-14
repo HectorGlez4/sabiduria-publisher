@@ -187,7 +187,7 @@
     "snapshots": []
   },
   "missing_data_reasons": {
-    "audience_metrics": "Available only after publication and scheduled post age thresholds."
+    "audience_metrics": "24 h snapshot due 2026-09-14T20:02:20Z is overdue (checked 2026-09-14T23:48Z, out-of-turn test window): no allowed lab command reads insights (verify_api.py only reads post fields). 72 h due 2026-09-16T20:02:20Z, 7 d due 2026-09-20T20:02:20Z."
   },
   "decision": "Accepted and publicly verified; retain as API side of PAIR-SINGLE-01. Use a distinct factual variant B for the Android matched route.",
   "next_action": "Collect Threads views/replies/reposts/quotes at 24h, 72h and 7d; account for the hourly normal Threads lane."

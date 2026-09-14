@@ -29,7 +29,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PERSON-002",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -55,6 +55,8 @@
     "motivo": "Gemela casi exacta de la generación aceptada de CELL-018 (hedy-patent-fictional-presenter-original.png): misma presentadora ficticia en el taller de radio, manos y cara verosímiles, rollo perforado esquemático, sin letras ni números legibles (esferas, mapa y hoja sin texto), hueco en el tercio superior para el titular; cumple brief y do_not_use.",
     "revisado_en": "2026-09-14T22:37:22+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-PERSON-002-A-FACEBOOK"
+  ],
   "no_lanzados": 0
 }
