@@ -207,9 +207,52 @@ def seccion_encargos() -> None:
               "un JSON válido pero sin campos da un error que nombra el archivo")
 
 
+def seccion_colision() -> None:
+    print("\n3. Colisión con producción")
+    import json
+    import tempfile
+    from datetime import datetime, timedelta, timezone
+    from labkit import colision as C
+
+    t = datetime(2026, 9, 15, 8, 40, tzinfo=timezone.utc)
+    m = lambda n: timedelta(minutes=n)  # noqa: E731
+    check(C.motivo_espera(t, programadas=[], publicadas=[], en_curso=[]) is None, "sin nada cerca se publica")
+    check("publicar" in (C.motivo_espera(t, programadas=[], publicadas=[], en_curso=["publicar"]) or ""),
+          "si publicar está en curso se espera")
+    check(C.motivo_espera(t, programadas=[], publicadas=[], en_curso=["pages build and deployment"]) is None,
+          "otros workflows no bloquean")
+    check(C.motivo_espera(t, programadas=[], publicadas=[t - m(20)], en_curso=[]) is not None,
+          "una publicación de hace 20 min bloquea")
+    check(C.motivo_espera(t, programadas=[], publicadas=[t - m(22)], en_curso=[]) is None,
+          "una de hace 22 min no bloquea")
+    check(C.motivo_espera(t, programadas=[t + m(15)], publicadas=[], en_curso=[]) is not None,
+          "una programada dentro de 15 min bloquea")
+    check(C.motivo_espera(t, programadas=[t + m(40)], publicadas=[], en_curso=[]) is None,
+          "una programada dentro de 40 min no bloquea")
+    check("atrasada" in (C.motivo_espera(t, programadas=[t - m(90)], publicadas=[], en_curso=[]) or ""),
+          "una pieza atrasada en la cola puede salir en cualquier momento: bloquea")
+
+    with tempfile.TemporaryDirectory() as d:
+        cola = pathlib.Path(d) / "queue"
+        pub = pathlib.Path(d) / "published"
+        cola.mkdir()
+        pub.mkdir()
+        (cola / "a.json").write_text(json.dumps({"status": "ready", "publish_at": "2026-09-15T08:50:00Z"}))
+        (cola / "b.json").write_text(json.dumps({"status": "draft", "publish_at": "2026-09-15T08:45:00Z"}))
+        (pub / "c.json").write_text(json.dumps({"results": {
+            "facebook": {"published_at": "2026-09-15T08:30:00+00:00"},
+            "threads": {"published_at": "2026-09-15T08:35:00+00:00"}}}))
+        progs = C.programadas_de_cola(cola)
+        check(progs == [datetime(2026, 9, 15, 8, 50, tzinfo=timezone.utc)], "solo cuentan las piezas ready de la cola")
+        pubs = C.publicadas_recientes(pub, t)
+        check(datetime(2026, 9, 15, 8, 30, tzinfo=timezone.utc) in pubs, "lee published_at de results")
+        check(all(p <= t for p in pubs), "no devuelve publicaciones futuras")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
+    seccion_colision,
 ]
 
 
