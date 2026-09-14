@@ -9,6 +9,6 @@ Before any API or Android-native public submission, including TikTok:
 3. Assign an independent visual-verification agent. It must return an explicit `PASS` for that exact asset, platform, route and preview.
 4. Record the preview path, agent verdict and checklist results in the run record before submission.
 
-The agent checks that the audience sees an autonomous editorial item (never lab metacontent), all text is readable at phone size and inside the frame/safe area, spelling and accents are correct, contrast is sufficient, no text or essential image is covered, and stickers/polls sit wholly in intentional empty space. For video it also checks the final cover and audible preview when applicable.
+The agent checks that the audience sees an autonomous editorial item (never lab metacontent), all text is readable at phone size and inside the frame/safe area, spelling and accents are correct, contrast is sufficient, no text or essential image is covered, and stickers/polls sit wholly in intentional empty space. Every Android-native photo, and every Android-native video without its own soundtrack, must include music selected in the destination app. The review must see the actual music label/placement and verify that it does not cover editorial text or the image; for video it also checks the final cover and audible preview.
 
 `FAIL`, absent evidence, a draft without native elements, or a preview that omits any final overlay blocks publication. Correct and rerun the independent review; do not substitute a self-review.
