@@ -2247,6 +2247,15 @@ Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe
 - Prompt de Codex: si `codex-generado` falla, `codex-fallo`; solo se comitean imágenes de encargos generados. El usuario debe volver a pegarlo después de este commit.
 - Pruebas en proceso de todos los comandos sin teléfono y de `generar` con un Codex falso (éxito, cambios ajenos → 6, tiempo agotado).
 
+### Task 10d: Menores de la revisión de 10b
+
+- [ ] `observacion_de_volcado(xml, boton_bounds, banners_previos)`: conservar los bounds del aviso «Publication sur…» vistos en volcados anteriores y contar un texto de fallo junto a ellos; contar también un texto de fallo corto (≤ 80 caracteres) en cualquier parte de la pantalla de Instagram. Actualizar la prueba que hoy da por bueno no detectar un aviso bajo 600 px.
+- [ ] `generar`: si Codex no llegó a lanzarse (fallo de `Popen` o señal antes del lanzamiento), liberar el encargo sin sumar intento ni bloquear, aunque haya `ajenos` (se informan y sale con 6). Prueba del caso «no lanzado con ajenos».
+- [ ] `generar`: si salta una excepción después del lanzamiento, pasar la guardia y `_deshacer(bloquear=bool(ajenos))` antes de relanzar.
+- [ ] G-2: los errores de `_liberar` salen por stderr o en la nota de la excepción.
+- [ ] `compartir`: la captura de error best-effort usa un tiempo de espera corto (≤ 10 s).
+- [ ] `phone_clipboard._parar`: `server.wait(timeout=1)` protegido tras cerrar stdout.
+
 ### Task 10b: Seguimiento de la revisión de la tarea 8 (antes de las sondas)
 
 > **Hecha en `ab9779d`** (M-1…M-8, G-1, G-2; los lectores puros viven en `labkit/instagram_pantallas.py`, reexportados desde `instagram_feed.py`).
