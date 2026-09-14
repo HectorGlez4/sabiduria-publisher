@@ -1,0 +1,114 @@
+{
+  "run_id": "LAB-QUOTE-001-INSTAGRAM",
+  "cohort": "diagnostic_experiment",
+  "coverage_cell_id": null,
+  "family_id": "LAB-QUOTE-001",
+  "parent_run_id": null,
+  "campaign_day": 2,
+  "platform": "instagram",
+  "actual_native_format": "feed_single_image_with_native_music",
+  "adaptation_notes": "Brand quote_card (1080x1350) transferred by ADB; Instagram crop toggled back to full 4:5; native suggested audio added; caption pasted as exact Unicode through experiments/media-lab/phone_clipboard.py (scrcpy SET_CLIPBOARD).",
+  "audio_treatment": "native_instagram_music: Autumn Days — Morunas (Instagram suggested audio, default 30 s clip)",
+  "status": "completed",
+  "tool_option_id": null,
+  "format_id": "quote_card",
+  "seed_source_path": "sitio-sdb corpus/citas/baltasar-gracian--contentese-con-hacer-y-deje-para-otros.md",
+  "site_quote_slug": "baltasar-gracian-contentese-con-hacer-y-deje-para-otros",
+  "site_quote_url": "https://sabiduriadebolsillo.net/cita/baltasar-gracian-contentese-con-hacer-y-deje-para-otros/",
+  "selection": "User request: any unused site quote published through the phone. Unused = not in content/hilos_sitio.json, not in content/published|queue|drafts, not in lab records; skipped the next three hilos.py site candidates to avoid a near-term Threads duplicate.",
+  "hypothesis": "A deterministic brand quote card can be released end-to-end through the connected Android phone with exact Unicode caption and native music.",
+  "changed_variable": "publishing route (Android native) for a brand quote card",
+  "facts": {
+    "quote": "Conténtese con hacer, y deje para otros el decir.",
+    "author": "Baltasar Gracián (1601-1658)",
+    "work": "Oráculo manual y arte de prudencia (1647), aforismo 295 «No hazañero, sino hazañoso»",
+    "verified_against": "https://es.wikisource.org/wiki/Or%C3%A1culo_manual_y_arte_de_prudencia/Aforismos_(276-300)",
+    "verified_at": "2026-09-14T08:36:00Z"
+  },
+  "timing": {
+    "started_at": "2026-09-14T08:31:00Z",
+    "finished_at": null,
+    "human_active_seconds": 0,
+    "stages": [
+      {"name": "quote selection and source verification", "started_at": "2026-09-14T08:31:00Z", "finished_at": "2026-09-14T08:37:00Z", "overlaps_another_stage": false},
+      {"name": "card render and phone transfer", "started_at": "2026-09-14T08:37:00Z", "finished_at": "2026-09-14T08:39:30Z", "overlaps_another_stage": false},
+      {"name": "native composer: crop, music, caption", "started_at": "2026-09-14T08:40:00Z", "finished_at": null, "overlaps_another_stage": false}
+    ]
+  },
+  "attempts": [],
+  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "local_compute_seconds": 1},
+  "artifacts": [
+    {"path": "experiments/media-lab/assets/LAB-QUOTE-001/gracian-hacer-decir-4x5.png", "sha256": "a7a11f4aaa4750d7789ad36d1ebadca42b98bdbf58afc636209c9a2bebb6fa74", "media_type": "image/png", "dimensions": "1080x1350", "source_license": "Deterministic render with src/render/quote_card.py and bundled fonts; quote in public domain", "role": "publishable_master"},
+    {"path": "experiments/media-lab/assets/LAB-QUOTE-001/caption-instagram.txt", "role": "caption"}
+  ],
+  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": null, "usable_export": true, "within_budget": true},
+  "visual_qa": {
+    "reviews": [
+      {
+        "number": 1,
+        "reviewed_at": "2026-09-14T08:50:00Z",
+        "preview_paths": ["experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-edit-music.png", "experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-composer.png"],
+        "agent_verdict": "FAIL",
+        "blocking_issues": ["Final composer capture was taken with Instagram's hashtag suggestion dropdown open, hiding the music row and Share button: no final-step music evidence."],
+        "non_blocking_notes": ["Inconsistent guillemet punctuation in caption (period inside first «», outside second): corrected to RAE style.", "Caption link is not clickable on Instagram.", "Opening quote ornament in image is decorative English-style mark."],
+        "fix": "Replaced caption with corrected text (period outside first «»); recaptured composer."
+      },
+      {
+        "number": 2,
+        "reviewed_at": "2026-09-14T08:51:00Z",
+        "preview_paths": ["experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-edit-music.png", "experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-composer-v2.png"],
+        "agent_verdict": "FAIL",
+        "blocking_issues": ["composer-v2 still had the hashtag suggestion dropdown open (re-triggered by pasting a caption ending in a hashtag); music row and Share button hidden."],
+        "non_blocking_notes": ["Caption text and punctuation confirmed correct and consistent."],
+        "fix": "One extra Back closed the dropdown; composer-v3 captured showing caption ending #Citas, music row Autumn Days · Morunas and Share button. Lesson: uiautomator dumps lagged the screen; trust screencap for final-state evidence."
+      },
+      {
+        "number": 3,
+        "reviewed_at": "2026-09-14T08:54:00Z",
+        "preview_paths": ["experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-edit-music.png", "experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-composer-v3.png"],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": ["Do not tap suggested location chips before Share.", "Decorative English-style opening quote ornament differs from caption «».", "Hyphen in 1601-1658 follows brand convention."]
+      }
+    ]
+  },
+  "production_collision": {
+    "checked_at": "2026-09-14T08:50:28Z",
+    "result": "HOLD: publicar run 34824405888 and hilos run 34824410776 in progress (extra85 → facebook, instagram, threads). Share withheld until publicar completes and a spacing gap is observed.",
+    "override": "2026-09-14T08:55Z user instructed: don't wait, publish now. Shared while publicar 34824405888 was still in progress; record extra85 as a nearby-production confounder."
+  },
+  "publication": {
+    "route_id": "ANDROID-MASTER",
+    "comparison_pair_id": null,
+    "publishing_transport": "ADB transfer + Instagram Android native composer + scrcpy-server clipboard paste",
+    "native_app_and_version": "Instagram 446.0.0.49.77 on Samsung SM-S721B Android 16",
+    "phone_transfer_seconds": 1,
+    "native_changes_from_master": ["native music: Autumn Days — Morunas"],
+    "human_interventions": [],
+    "fidelity_checks": {"caption": "exact match read back from composer (499 chars)", "cover": null, "media_order": "not_applicable", "aspect_ratio": "4:5 restored in picker", "audio": null},
+    "destination": "Instagram @sabiduriabolsillo",
+    "requested_audience": "public",
+    "actual_audience": null,
+    "nearby_production_posts": [
+      {"id": "2026-09-13-extra85", "subject": "Kenkō quote card", "workflow_run": 34824405888, "workflow_completed_at": "2026-09-14T09:09:33Z",
+       "instagram": {"published_at": "2026-09-14T08:47:13Z", "url": "https://www.instagram.com/p/DdQvYeNDu1I/", "gap_to_this_post_minutes": 8.5},
+       "facebook": {"published_at": "2026-09-14T08:46:59Z", "url": "https://www.facebook.com/874327782058550/posts/1094703613354298", "gap_to_auto_crosspost_minutes": 9},
+       "threads": {"published_at": "2026-09-14T08:47:24Z", "url": "https://www.threads.net/@sabiduriabolsillo/post/18352700872170022"},
+       "note": "Adjacent in the Instagram grid; both are cream quote cards. Strong confounder for early metrics."}
+    ],
+    "submitted_at": "2026-09-14T08:55:42Z",
+    "processing_completed_at": "2026-09-14T08:56:25Z",
+    "playback_verified_at": "2026-09-14T08:57:30Z",
+    "cross_posting": "Instagram post menu shows 'Partagé sur Facebook': the account's Accounts Center auto-share cross-posted this feed photo to the Facebook Page. Confirmed 2026-09-14T09:01Z in the Facebook app: Page post '5 min', music 'Morunas · Autumn Days', caption «Conténtese…». Not visible or controllable in the Android composer. Threads auto-share status pending check. Treat as an unplanned additional Facebook publication, not a lab cell.",
+    "live_verification":"Brand profile grid position 1 (posts 3712 → 3714 incl. extra85); live post header shows 'Morunas · Autumn Days'; caption opens «Conténtese con hacer, y deje para otros el decir».; evidence experiments/media-lab/evidence/android/LAB-QUOTE-001-instagram-live.png",
+    "post_id": "DdQwYO6gR1V",
+    "post_url": "https://www.instagram.com/p/DdQwYO6gR1V/",
+    "actual_audience": "public",
+    "master_sha256": "a7a11f4aaa4750d7789ad36d1ebadca42b98bdbf58afc636209c9a2bebb6fa74",
+    "snapshots": []
+  },
+  "threads_check": "2026-09-14T08:59Z Threads app brand profile showed no Gracián thread (top slot 'Publication non disponible', then an 11 h old post). No confirmed Threads auto-share.",
+  "missing_data_reasons": {"audience_metrics": "Capture 24 h / 72 h / 7 d Instagram insights from 2026-09-15T08:56Z.", "facebook_crosspost_url": "Auto-shared by Instagram; permalink not captured from the Android app."},
+  "decision": "Android-native end-to-end route works for a brand quote card: ADB transfer, native crop/music, exact Unicode caption via phone_clipboard.py, Share, live verification. Two process lessons: uiautomator dumps can lag the screen (use screencap as final evidence), and pasting a caption ending in a hashtag reopens the suggestion dropdown (needs an extra Back).",
+  "next_action": "Capture 24 h metrics; decide whether Instagram→Facebook auto-share should stay on for lab posts."
+}
