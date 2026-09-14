@@ -30,8 +30,22 @@ def seccion_portapapeles() -> None:
     check(obtenido == esperado, "mensaje idéntico al de test_control_msg_serialize.c")
     msg = phone_clipboard.set_clipboard_message("¿Qué?", paste=False)
     check(msg[9] == 0, "paste=False va como 0")
-    check(int.from_bytes(msg[10:14], "big") == len("¿Qué?".encode("utf-8")),
-          "la longitud cuenta bytes UTF-8, no caracteres")
+    check(int.from_bytes(msg[10:14], "big") == 7,
+          "la longitud cuenta bytes UTF-8 (7), no caracteres (5)")
+
+    import shutil
+    import subprocess
+    if shutil.which("scrcpy"):
+        partes = subprocess.run(["scrcpy", "--version"], capture_output=True, text=True,
+                                timeout=30).stdout.split()
+        instalada = partes[1] if len(partes) > 1 else "?"
+        check(instalada == phone_clipboard.SCRCPY_VERSION,
+              f"scrcpy instalado ({instalada}) coincide con el protocolo fijado "
+              f"({phone_clipboard.SCRCPY_VERSION})")
+        check(pathlib.Path(phone_clipboard.SERVER_LOCAL).is_file(),
+              "existe el scrcpy-server que se sube al teléfono")
+    else:
+        print("  · scrcpy no está instalado: se omite la comprobación de versión")
 
 
 SECCIONES = [

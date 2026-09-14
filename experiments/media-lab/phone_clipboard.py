@@ -30,10 +30,15 @@ SCRCPY_VERSION = "4.1"
 SERVER_LOCAL = "/opt/homebrew/share/scrcpy/scrcpy-server"
 SERVER_REMOTE = "/data/local/tmp/scrcpy-server-lab.jar"
 TYPE_SET_CLIPBOARD = 9  # ControlMessage.TYPE_SET_CLIPBOARD en scrcpy 4.1
+ADB_TIMEOUT_PUSH = 60
+ADB_TIMEOUT_CORTO = 15
 
 
-def adb(*args: str, **kw) -> subprocess.CompletedProcess:
-    return subprocess.run(["adb", "-s", SERIAL, *args], capture_output=True, text=True, **kw)
+def adb(*args: str, timeout: int = ADB_TIMEOUT_CORTO) -> subprocess.CompletedProcess:
+    try:
+        return subprocess.run(["adb", "-s", SERIAL, *args], capture_output=True, text=True, timeout=timeout)
+    except subprocess.TimeoutExpired as e:
+        raise RuntimeError(f"adb {' '.join(args)} no respondió en {timeout} s") from e
 
 
 def set_clipboard_message(text: str, paste: bool, sequence: int = 0) -> bytes:
@@ -41,9 +46,21 @@ def set_clipboard_message(text: str, paste: bool, sequence: int = 0) -> bytes:
     return struct.pack(">BQBI", TYPE_SET_CLIPBOARD, sequence, 1 if paste else 0, len(data)) + data
 
 
+def _parar(server: subprocess.Popen) -> str:
+    """Termina el servidor, espera a que salga y devuelve lo que escribió."""
+    if server.poll() is None:
+        server.terminate()
+    try:
+        out, _ = server.communicate(timeout=5)
+    except subprocess.TimeoutExpired:
+        server.kill()
+        out, _ = server.communicate()
+    return out or ""
+
+
 def pegar(text: str, paste: bool = True) -> None:
     """Pone `text` en el portapapeles del teléfono y, si `paste`, lo pega en el campo enfocado."""
-    push = adb("push", SERVER_LOCAL, SERVER_REMOTE)
+    push = adb("push", SERVER_LOCAL, SERVER_REMOTE, timeout=ADB_TIMEOUT_PUSH)
     if push.returncode != 0:
         raise RuntimeError(f"push del servidor falló: {push.stderr.strip()}")
 
@@ -53,38 +70,43 @@ def pegar(text: str, paste: bool = True) -> None:
     if fwd.returncode != 0:
         raise RuntimeError(f"adb forward falló: {fwd.stderr.strip()}")
 
-    server = subprocess.Popen(
-        ["adb", "-s", SERIAL, "shell",
-         f"CLASSPATH={SERVER_REMOTE}", "app_process", "/", "com.genymobile.scrcpy.Server",
-         SCRCPY_VERSION, f"scid={scid:08x}", "log_level=info", "tunnel_forward=true",
-         "video=false", "audio=false", "control=true", "send_dummy_byte=false",
-         "send_device_meta=false", "clipboard_autosync=false", "cleanup=false"],
-        stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    server: subprocess.Popen | None = None
     try:
+        server = subprocess.Popen(
+            ["adb", "-s", SERIAL, "shell",
+             f"CLASSPATH={SERVER_REMOTE}", "app_process", "/", "com.genymobile.scrcpy.Server",
+             SCRCPY_VERSION, f"scid={scid:08x}", "log_level=info", "tunnel_forward=true",
+             "video=false", "audio=false", "control=true", "send_dummy_byte=false",
+             "send_device_meta=false", "clipboard_autosync=false", "cleanup=false"],
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         # Con túnel forward, connect() funciona aunque nadie escuche todavía: el
         # socket se cierra al primer uso. Se reintenta hasta que el envío aguanta.
         deadline = time.time() + 15
         while True:
             try:
-                s = socket.create_connection(("127.0.0.1", port), timeout=3)
-                s.sendall(set_clipboard_message(text, paste=paste))
-                time.sleep(1.5)
-                s.settimeout(0.2)
-                try:
-                    if s.recv(1) == b"":
-                        raise ConnectionResetError("servidor aún no escuchaba")
-                except socket.timeout:
-                    pass  # conexión viva: el mensaje llegó
-                s.close()
+                with socket.create_connection(("127.0.0.1", port), timeout=3) as s:
+                    s.sendall(set_clipboard_message(text, paste=paste))
+                    time.sleep(1.5)
+                    s.settimeout(0.2)
+                    try:
+                        if s.recv(1) == b"":
+                            raise ConnectionResetError("servidor aún no escuchaba")
+                    except socket.timeout:
+                        pass  # conexión viva: el mensaje llegó
                 return
             except OSError:
                 if time.time() > deadline or server.poll() is not None:
-                    out = server.stdout.read() if server.poll() is not None else ""
-                    raise RuntimeError(f"no se pudo hablar con scrcpy-server:\n{out}")
+                    salida = _parar(server)
+                    server = None
+                    raise RuntimeError(f"no se pudo hablar con scrcpy-server:\n{salida}")
                 time.sleep(0.5)
     finally:
-        server.terminate()
-        adb("forward", "--remove", f"tcp:{port}")
+        if server is not None:
+            _parar(server)
+        try:
+            adb("forward", "--remove", f"tcp:{port}")
+        except RuntimeError:
+            pass  # un forward colgado no debe tapar el error original
 
 
 def main() -> int:
