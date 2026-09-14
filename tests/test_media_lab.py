@@ -390,26 +390,270 @@ XML_SELECTOR = """<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 </hierarchy>"""
 
 
+PAQUETE_IG = "com.instagram.android"
+SELECTOR_IG = XML_SELECTOR.replace("<node ", f'<node package="{PAQUETE_IG}" ')
+VOLCADO_OK = "UI hierchary dumped to: /sdcard/lab-ui.xml\n"
+
+
+def nodo_xml(bounds: str, texto: str = "", desc: str = "", clase: str = "android.widget.TextView",
+             paquete: str = PAQUETE_IG, hijos: str = "", extra: str = "") -> str:
+    """Un <node> sintético con los atributos que escribe uiautomator."""
+    from xml.sax.saxutils import quoteattr
+    abre = (f"<node text={quoteattr(texto)} content-desc={quoteattr(desc)} class={quoteattr(clase)} "
+            f"package={quoteattr(paquete)} bounds={quoteattr(bounds)} {extra}")
+    return f"{abre}>{hijos}</node>" if hijos else f"{abre}/>"
+
+
+def jerarquia(*hijos: str) -> str:
+    raiz = nodo_xml("[0,0][1080,2340]", clase="android.widget.FrameLayout", hijos="".join(hijos))
+    return f"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><hierarchy rotation=\"0\">{raiz}</hierarchy>"
+
+
+PIE_PRUEBA = "«Conténtese con hacer».\n\n#citasdiarias #sabiduria"
+BOTON_PARTAGER = nodo_xml("[45,2081][1035,2205]", clase="android.widget.Button", extra='clickable="true"',
+                          hijos=nodo_xml("[480,2115][600,2170]", texto="Partager"))
+LISTA_HASHTAGS = nodo_xml("[0,1000][1080,1400]", clase="android.widget.ListView",
+                          hijos=nodo_xml("[0,1000][1080,1150]", texto="#citasdiarias")
+                          + nodo_xml("[0,1150][1080,1300]", texto="10 208 publications publiques"))
+
+
+def xml_compositor(*, titulo: bool = True, pie: str = PIE_PRUEBA, tema: bool = True,
+                   partager: bool = True, despues: str = "") -> str:
+    return jerarquia(
+        nodo_xml("[158,92][922,249]", texto="Nouvelle publication") if titulo else "",
+        nodo_xml("[45,300][1035,700]", texto=pie, clase="android.widget.AutoCompleteTextView"),
+        nodo_xml("[200,900][600,960]", texto="Autumn Days") if tema else "",
+        nodo_xml("[200,960][600,1020]", texto="Morunas") if tema else "",
+        BOTON_PARTAGER if partager else "",
+        despues)
+
+
+def xml_perfil(titulo: str = "sabiduriabolsillo", publicaciones: str = "3 712publications",
+               abajo: str = "") -> str:
+    return jerarquia(
+        nodo_xml("[316,92][693,250]", texto=titulo),
+        nodo_xml("[960,92][1080,250]", desc="Créer", clase="android.widget.Button"),
+        nodo_xml("[40,400][330,560]", desc=publicaciones, clase="android.widget.LinearLayout"),
+        nodo_xml("[40,900][520,1000]", texto="Modifier le profil", clase="android.widget.Button"),
+        abajo,
+        nodo_xml("[864,2200][1080,2340]", desc="Profil", clase="android.widget.FrameLayout"))
+
+
 def seccion_interfaz() -> None:
     print("\n6. Lectura de la interfaz del teléfono")
-    from labkit import instagram_feed, telefono
+    from datetime import datetime, timezone
+    import shlex
+    from labkit import instagram_feed as IG, telefono as T
 
-    nodos = telefono.nodos(XML_SELECTOR)
+    def lanza(accion, error) -> str | None:
+        """Mensaje del error esperado, o None si no se lanzó."""
+        try:
+            accion()
+        except error as e:
+            return str(e) or type(e).__name__
+        return None
+
+    nodos = T.nodos(XML_SELECTOR)
     check(all(n["bounds"] != (0, 0, 0, 0) for n in nodos), "descarta nodos invisibles de tamaño cero")
-    s = telefono.buscar(XML_SELECTOR, texto="Suivant")
+    s = T.buscar(XML_SELECTOR, texto="Suivant")
     check(s is not None and s["centro"] == (963, 170), "busca por texto exacto y calcula el centro")
-    check(telefono.buscar(XML_SELECTOR, texto="Modifier le rognage") is not None, "también busca en content-desc")
-    check(telefono.buscar(XML_SELECTOR, texto="Publier uniquement sur le profil") is None,
+    check(T.buscar(XML_SELECTOR, texto="Modifier le rognage") is not None, "también busca en content-desc")
+    check(T.buscar(XML_SELECTOR, texto="Publier uniquement sur le profil") is None,
           "no devuelve un nodo invisible aunque coincida")
-    check(telefono.buscar(XML_SELECTOR, empieza="Sélectionné Miniature") is not None, "busca por prefijo")
-    check(telefono.textos(XML_SELECTOR).count("«Conténtese con hacer».") == 1,
+    check(T.buscar(XML_SELECTOR, empieza="Sélectionné Miniature") is not None, "busca por prefijo")
+    check(T.textos(XML_SELECTOR).count("«Conténtese con hacer».") == 1,
           "textos() decodifica entidades y conserva «»")
-    check(instagram_feed.primera_miniatura_seleccionada(XML_SELECTOR),
-          "reconoce que la primera miniatura de la cuadrícula es la seleccionada")
-    otro = XML_SELECTOR.replace('"Sélectionné Miniature', '"Désélectionné Miniature', 1).replace(
-        'Désélectionné Miniature de la photo du 14 septembre 2026 9:29', 'Sélectionné Miniature de la photo du 14 septembre 2026 9:29')
-    check(not instagram_feed.primera_miniatura_seleccionada(otro),
-          "detecta cuando la seleccionada no es la primera")
+
+    print("   · nodos y búsqueda")
+    fino = jerarquia(nodo_xml("[5,5][5,9]", texto="línea"), nodo_xml(
+        "[10,10][110,60]", texto="Partager", clase="android.widget.Button",
+        extra='clickable="true" enabled="false" resource-id="com.instagram.android:id/share"'))
+    ns = T.nodos(fino)
+    check(all(n["texto"] != "línea" for n in ns), "descarta un nodo de ancho cero [5,5][5,9]")
+    boton = T.buscar(fino, texto="Partager")
+    check(boton is not None and boton["package"] == PAQUETE_IG and boton["clickable"] is True
+          and boton["enabled"] is False and boton["resource_id"] == "com.instagram.android:id/share"
+          and boton["clase"] == "android.widget.Button",
+          "nodos() da package, clickable, enabled y resource_id")
+    check(lanza(lambda: T.nodos("<hierarchy><node"), T.TelefonoError) is not None,
+          "un XML roto da TelefonoError, no ParseError")
+    mezcla = jerarquia(nodo_xml("[0,0][100,100]", texto="Suivant", paquete="com.android.systemui"),
+                       nodo_xml("[0,200][100,300]", texto="Suivant"),
+                       nodo_xml("[0,400][100,500]", texto="Suivant", clase="android.widget.Button"))
+    check(len(T.buscar_todos(mezcla, texto="Suivant")) == 3, "buscar_todos devuelve todas las coincidencias")
+    check([n["bounds"][1] for n in T.buscar_todos(mezcla, texto="Suivant", paquete=PAQUETE_IG)] == [200, 400],
+          "buscar_todos filtra por paquete y respeta el orden del documento")
+    check([n["bounds"][1] for n in T.buscar_todos(mezcla, paquete=PAQUETE_IG, clase="android.widget.Button")] == [400],
+          "buscar_todos filtra por clase sin criterio de texto")
+    check(T.buscar(mezcla, texto="Suivant", paquete=PAQUETE_IG)["bounds"][1] == 200,
+          "buscar acepta paquete y devuelve la primera")
+
+    print("   · volcados, estado y teclado")
+    check(T.volcado_valido(VOLCADO_OK, XML_SELECTOR), "un volcado con «dumped to» y XML legible es válido")
+    check(T.volcado_valido(VOLCADO_OK, "\n  " + XML_SELECTOR), "tolera espacios antes de <?xml")
+    check(not T.volcado_valido("ERROR: could not get idle state.\n", XML_SELECTOR),
+          "«could not get idle state» invalida aunque quede un archivo viejo")
+    check(not T.volcado_valido(VOLCADO_OK, ""), "un archivo vacío no es válido")
+    check(not T.volcado_valido(VOLCADO_OK, "cat: /sdcard/lab-ui.xml: No such file or directory"),
+          "un cat fallido no es válido")
+    check(not T.volcado_valido(VOLCADO_OK, "<?xml version='1.0' ?><hierarchy><node"),
+          "un XML truncado no es válido")
+    e = T.estado_desde_dumpsys("Power\n  mWakefulness=Awake\n", "  isKeyguardShowing=false\n")
+    check(e == {"despierto": True, "bloqueado": False, "listo": True}, "despierto y sin bloqueo: listo")
+    check(T.estado_desde_dumpsys("  mWakefulness=Asleep\n", "  isKeyguardShowing=false\n")["listo"] is False,
+          "dormido: no listo")
+    e = T.estado_desde_dumpsys("  mWakefulness=Awake\n", "  isKeyguardShowing=true\n")
+    check(e["bloqueado"] is True and e["listo"] is False, "con la pantalla de bloqueo: no listo")
+    e = T.estado_desde_dumpsys("  mWakefulness=Awake\n", "WINDOW MANAGER POLICY STATE\n")
+    check(e["bloqueado"] is None and e["listo"] is False, "sin isKeyguardShowing no se sabe: no listo")
+    check(T.teclado_desde_dumpsys("  mInputShown=true\n") is True, "teclado visible")
+    check(T.teclado_desde_dumpsys("  mInputShown=false\n") is False, "teclado oculto")
+    check(T.teclado_desde_dumpsys("INPUT METHOD MANAGER\n") is None, "sin mInputShown no se sabe")
+
+    print("   · tapado")
+    comp = xml_compositor()
+    partager_boton = T.buscar_todos(comp, texto="Partager", paquete=PAQUETE_IG)[0]
+    boton_padre = [n for n in T.nodos(comp) if n["clase"] == "android.widget.Button"][0]
+    check(not T.tapado(comp, boton_padre), "el hijo TextView de un botón no lo tapa")
+    check(not T.tapado(comp, partager_boton), "un nodo sin nada encima no está tapado")
+    cubierto = xml_compositor(despues=nodo_xml("[0,1900][1080,2340]", clase="android.widget.ListView"))
+    check(T.tapado(cubierto, T.buscar(cubierto, texto="Partager")), "una lista posterior encima sí lo tapa")
+    check(T.tapado(cubierto, dict(boton_padre, bounds=(1, 2, 3, 4))), "un nodo que no está en el volcado cuenta como tapado")
+
+    print("   · subida y MediaStore")
+    fila = "Row: 0 _display_name=lab-20260914.jpg, date_added=1757839140\n"
+    check(T.fila_mediastore_presente(fila, "lab-20260914.jpg"), "reconoce la fila de MediaStore")
+    check(not T.fila_mediastore_presente("No result found.\n", "lab-20260914.jpg"), "sin resultado no hay fila")
+    check(not T.fila_mediastore_presente(fila.replace(".jpg,", ".jpg.bak,"), "lab-20260914.jpg"),
+          "otro nombre parecido no cuenta")
+    check(not T.fila_mediastore_presente("", "lab-20260914.jpg"), "salida vacía no cuenta")
+    consulta = shlex.split(T.consulta_mediastore("lab-20260914.jpg"))
+    check(consulta[:2] == ["content", "query"] and "_display_name='lab-20260914.jpg'" in consulta
+          and "content://media/external/images/media" in consulta, "la consulta de MediaStore se cita bien")
+    check(lanza(lambda: T.consulta_mediastore("a'b.jpg"), T.TelefonoError) is not None,
+          "un nombre con comillas se rechaza")
+    h = "ab" * 32
+    check(T.sha256_de_salida(f"{h}  /sdcard/Pictures/x.jpg\n") == h, "lee el sha256 de sha256sum")
+    check(lanza(lambda: T.sha256_de_salida(""), T.TelefonoError) is not None, "salida vacía de sha256sum: TelefonoError")
+    check(lanza(lambda: T.sha256_de_salida("sha256sum: /sdcard/x.jpg: No such file or directory"), T.TelefonoError)
+          is not None, "un error de sha256sum: TelefonoError")
+
+    print("   · perfil y selector de Instagram")
+    check(IG.perfil_activo(xml_perfil()) == "sabiduriabolsillo", "lee el perfil activo de la barra superior")
+    personal = xml_perfil(titulo="cuenta.personal",
+                          abajo=nodo_xml("[316,1200][693,1260]", texto="sabiduriabolsillo"))
+    check(IG.perfil_activo(personal) == "cuenta.personal",
+          "la marca más abajo en pantalla no hace pasar por bueno otro perfil")
+    doble = jerarquia(nodo_xml("[316,92][693,250]", texto="uno"), nodo_xml("[400,100][700,240]", texto="dos"))
+    check(IG.perfil_activo(doble) is None, "dos títulos distintos arriba: ambiguo")
+    check(IG.perfil_activo(jerarquia(nodo_xml("[316,1000][693,1100]", texto="sabiduriabolsillo"))) is None,
+          "sin título arriba: None")
+    check(IG.publicaciones_de_perfil(xml_perfil()) == 3712, "publicaciones con espacio normal")
+    check(IG.publicaciones_de_perfil(xml_perfil(publicaciones="3\u00a0712 publications")) == 3712,
+          "publicaciones con espacio duro")
+    check(IG.publicaciones_de_perfil(xml_perfil(publicaciones="3\u202f712publications")) == 3712,
+          "publicaciones con espacio fino")
+    check(IG.publicaciones_de_perfil(xml_perfil(publicaciones="Publications")) is None, "sin número: None")
+
+    madrid = "Sélectionné Miniature de la photo du 14 septembre 2026 10:39"
+    check(IG.fecha_miniatura(madrid) == datetime(2026, 9, 14, 8, 39, tzinfo=timezone.utc),
+          "la hora de la miniatura es de Madrid (10:39 CEST = 08:39 UTC)")
+    check(IG.fecha_miniatura("Miniature de la photo du 5 janvier 2026 9:05")
+          == datetime(2026, 1, 5, 8, 5, tzinfo=timezone.utc), "en invierno Madrid es UTC+1")
+    check(IG.fecha_miniatura("Désélectionné Miniature de la photo du 1er aout 2026 0:15")
+          == datetime(2026, 7, 31, 22, 15, tzinfo=timezone.utc), "acepta «1er» y meses sin tilde")
+    check(IG.fecha_miniatura("Miniature de la photo") is None, "sin fecha: None")
+    check(IG.fecha_miniatura("Miniature de la photo du 14 septembrr 2026 10:39") is None, "mes desconocido: None")
+    check(IG.fecha_miniatura("Miniature de la photo du 31 fevrier 2026 10:39") is None, "fecha imposible: None")
+
+    sel = IG.seleccion_unica(SELECTOR_IG)
+    check(sel is not None and sel["desc"] == madrid, "seleccion_unica encuentra la única seleccionada")
+    ninguna = SELECTOR_IG.replace('"Sélectionné Miniature', '"Désélectionné Miniature')
+    check(IG.seleccion_unica(ninguna) is None, "sin seleccionada: None")
+    dos = SELECTOR_IG.replace('"Désélectionné Miniature', '"Sélectionné Miniature')
+    check(IG.seleccion_unica(dos) is None, "dos seleccionadas: None")
+    check(IG.seleccion_unica(XML_SELECTOR) is None, "una selección fuera de Instagram no cuenta")
+    subido = datetime(2026, 9, 14, 8, 40, 30, tzinfo=timezone.utc)
+    check(IG.miniatura_coincide(madrid, subido), "la miniatura coincide con la subida dentro de la tolerancia")
+    check(not IG.miniatura_coincide(madrid, datetime(2026, 9, 14, 8, 43, 30, tzinfo=timezone.utc)),
+          "4,5 min de diferencia no coinciden")
+    check(not IG.miniatura_coincide(madrid, datetime(2026, 9, 14, 10, 39)), "una hora sin zona no coincide")
+    check(not IG.miniatura_coincide("Sélectionné Miniature", subido), "una miniatura sin fecha no coincide")
+
+    print("   · editor y compositor")
+    chip = "Audio suggéré. Autumn Days par Morunas. Appuyez pour accéder à plus d’options …"
+    check(IG.tema_de_chip(chip) == "Autumn Days par Morunas", "extrae el tema del chip de audio")
+    check(IG.tema_de_chip("Audio. Autumn Days par Morunas") is None, "sin el prefijo del chip: None")
+    check(IG.punto_mas((258, 103, 821, 315)) == (762, 173), "el «+» del chip medido el 2026-09-14")
+    check(lanza(lambda: IG.punto_mas((0, 0, 50, 10)), IG.PantallaInesperada) is not None,
+          "un chip demasiado pequeño no se toca")
+    check(not IG.hay_desplegable_hashtags(comp), "un pie con # dentro del campo no es el desplegable")
+    check(IG.hay_desplegable_hashtags(xml_compositor(despues=LISTA_HASHTAGS)), "detecta el desplegable de hashtags")
+    campo = IG.campo_pie(comp)
+    check(campo is not None and campo["texto"] == PIE_PRUEBA, "encuentra el campo del pie por su clase")
+    check(IG.campo_pie(XML_SELECTOR) is None, "un campo fuera de Instagram no cuenta")
+    tema = "Autumn Days par Morunas"
+    check(IG.compositor_listo(comp, PIE_PRUEBA, tema) == [], "compositor listo: sin problemas")
+    check(IG.compositor_listo(comp, PIE_PRUEBA, None) == [], "sin tema no se exige canción")
+    casos = (
+        (xml_compositor(titulo=False), PIE_PRUEBA, "Nouvelle publication"),
+        (xml_compositor(pie="«Conténtese con hacer»."), PIE_PRUEBA, "pie"),
+        (xml_compositor(tema=False), PIE_PRUEBA, "Autumn Days"),
+        (xml_compositor(partager=False), PIE_PRUEBA, "Partager"),
+        (cubierto, PIE_PRUEBA, "tapado"),
+        (xml_compositor(despues=LISTA_HASHTAGS), PIE_PRUEBA, "desplegable"),
+    )
+    for xml, pie, clave in casos:
+        problemas = IG.compositor_listo(xml, pie, tema)
+        check(len(problemas) == 1 and clave in problemas[0], f"compositor_listo detecta: {clave} ({problemas})")
+    ajeno = xml_compositor(partager=False, despues=nodo_xml("[45,2081][1035,2205]", texto="Partager",
+                                                           paquete="com.android.systemui"))
+    check(any("Partager" in p for p in IG.compositor_listo(ajeno, PIE_PRUEBA, tema)),
+          "un «Partager» de otro paquete no cuenta")
+
+    print("   · elección de controles")
+    dos_suivant = jerarquia(nodo_xml("[847,92][1080,249]", texto="Suivant"),
+                            nodo_xml("[700,2100][1040,2250]", texto="Suivant"))
+    check(IG._nodo(dos_suivant, zona="arriba", texto="Suivant")["bounds"][1] == 92, "zona arriba elige el de arriba")
+    check(IG._nodo(dos_suivant, zona="abajo", texto="Suivant")["bounds"][1] == 2100, "zona abajo elige el de abajo")
+    check("ambiguo" in (lanza(lambda: IG._nodo(dos_suivant, texto="Suivant"), IG.PantallaInesperada) or ""),
+          "dos controles iguales en sitios distintos: ambiguo")
+    anidado = jerarquia(nodo_xml("[45,2081][1035,2205]", texto="Partager", clase="android.widget.Button",
+                                 hijos=nodo_xml("[480,2115][600,2170]", texto="Partager")))
+    check(IG._nodo(anidado, texto="Partager")["clase"] == "android.widget.Button",
+          "un botón y su etiqueta con el mismo texto no son ambiguos")
+    solo_ajeno = jerarquia(nodo_xml("[847,92][1080,249]", texto="Suivant", paquete="com.android.systemui"))
+    check(lanza(lambda: IG._nodo(solo_ajeno, zona="arriba", texto="Suivant"), IG.PantallaInesperada) is not None,
+          "un control de otro paquete no se toca")
+    check(issubclass(IG.BorradorPendiente, IG.PantallaInesperada)
+          and issubclass(IG.TelefonoNoListo, IG.PantallaInesperada), "las excepciones nuevas son PantallaInesperada")
+
+    print("   · confirmación del envío")
+
+    def v(compositor: bool, banner: bool) -> dict:
+        return {"valido": True, "compositor": compositor, "banner": banner}
+
+    inval = {"valido": False, "compositor": False, "banner": False}
+    check(IG.evaluar_envio([v(True, False), v(False, True), v(False, False), v(False, False)]) == "confirmado",
+          "banner y luego dos volcados limpios: confirmado")
+    check(IG.evaluar_envio([v(True, False), v(False, True), v(False, False), inval, v(False, False), inval])
+          == "confirmado", "los volcados fallidos se ignoran")
+    check(IG.evaluar_envio([v(False, True), inval, inval]) == "timeout", "banner sin volcados válidos después: timeout")
+    check(IG.evaluar_envio([v(False, True), v(False, False)]) == "timeout", "un solo volcado limpio no basta")
+    check(IG.evaluar_envio([v(False, True), v(False, False), v(True, False)]) == "timeout",
+          "si vuelve el compositor: timeout")
+    check(IG.evaluar_envio([v(True, False), v(False, False), v(False, False)]) == "sin_banner",
+          "sin compositor pero sin banner visto: sin_banner")
+    check(IG.evaluar_envio([dict(inval, banner=True), v(False, False), v(False, False)]) == "sin_banner",
+          "el banner de un volcado inválido no cuenta")
+    check(IG.evaluar_envio([]) == "timeout", "sin observaciones: timeout")
+    inicio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Publication sur sabiduriabolsillo…"))
+    check(IG.observacion_de_volcado(inicio) == {"valido": True, "compositor": False, "banner": True},
+          "observa el banner en el inicio")
+    check(IG.observacion_de_volcado(comp) == {"valido": True, "compositor": True, "banner": False},
+          "observa el compositor")
+    check(IG.observacion_de_volcado(jerarquia().replace(PAQUETE_IG, "com.sec.android.app.launcher"))["valido"] is False,
+          "un volcado sin Instagram en primer plano no es válido")
 
 
 SECCIONES = [
