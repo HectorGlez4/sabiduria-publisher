@@ -2254,6 +2254,11 @@ Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe
 - [x] `abrir`: con la cortina de notificaciones desplegada no ve Instagram y sale con 4 (bien, falla cerrado). Valorar `cmd statusbar collapse` antes de buscar Instagram (no despierta ni desbloquea).
 - [x] `generar`: contador aparte `no_lanzados` en el encargo; cada fallo de `Popen` o señal antes del lanzamiento lo incrementa y, al llegar a 3, el encargo pasa a `bloqueado` con nota (evita bucles infinitos si `Popen` falla siempre igual, p. ej. E2BIG por un prompt demasiado largo en argv).
 
+> **Hecha en `8df33f3` y `6da5b38`** la tarea 10e (revisión de spec ✅; calidad aprobada con menores). Menores pendientes, no bloquean:
+> - m-1: en `escribir_pie`, si el desplegable se cierra solo, el volcado de confirmación cuenta como limpio sin reiniciar la cuenta; con un desplegable intermitente se aceptan 3 limpios no seguidos. Reiniciar la cuenta sin pulsar (el plazo de 60 s acota el bucle) o corregir el docstring. Prueba `[comp, comp] + [D, comp]*N` con el reloj rápido.
+> - m-2: la prueba e16 no discrimina (`nuevo()` ya crea `no_lanzados: 0`): liberar antes de `marcar_generado` y comprobar también que se borra `nota_no_lanzado`.
+> - m-3: el plazo solo se comprueba al empezar cada vuelta; una vuelta con 3 volcados lentos puede pasar de 60 s. Decirlo en el docstring, como `_esperar_que`.
+
 > **Hecha en `a93094f` y `cb0220a`** la tarea 10d (incluye `marcar_fallo(bloquear=)`: un encargo `generando` con cambios ajenos queda `bloqueado`).
 
 ### Task 10d: Menores de la revisión de 10b
