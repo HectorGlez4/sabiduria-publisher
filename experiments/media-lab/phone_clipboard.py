@@ -36,27 +36,22 @@ def adb(*args: str, **kw) -> subprocess.CompletedProcess:
     return subprocess.run(["adb", "-s", SERIAL, *args], capture_output=True, text=True, **kw)
 
 
-def set_clipboard_message(text: str, paste: bool) -> bytes:
+def set_clipboard_message(text: str, paste: bool, sequence: int = 0) -> bytes:
     data = text.encode("utf-8")
-    return struct.pack(">BQBI", TYPE_SET_CLIPBOARD, 0, 1 if paste else 0, len(data)) + data
+    return struct.pack(">BQBI", TYPE_SET_CLIPBOARD, sequence, 1 if paste else 0, len(data)) + data
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--file", required=True, type=pathlib.Path)
-    ap.add_argument("--no-paste", action="store_true", help="solo copiar, sin pegar")
-    a = ap.parse_args()
-    text = a.file.read_text(encoding="utf-8").rstrip("\n")
-
+def pegar(text: str, paste: bool = True) -> None:
+    """Pone `text` en el portapapeles del teléfono y, si `paste`, lo pega en el campo enfocado."""
     push = adb("push", SERVER_LOCAL, SERVER_REMOTE)
     if push.returncode != 0:
-        raise SystemExit(f"push del servidor falló: {push.stderr.strip()}")
+        raise RuntimeError(f"push del servidor falló: {push.stderr.strip()}")
 
     scid = random.randrange(1, 0x7FFFFFFF)
     port = 27200 + scid % 500
     fwd = adb("forward", f"tcp:{port}", f"localabstract:scrcpy_{scid:08x}")
     if fwd.returncode != 0:
-        raise SystemExit(f"adb forward falló: {fwd.stderr.strip()}")
+        raise RuntimeError(f"adb forward falló: {fwd.stderr.strip()}")
 
     server = subprocess.Popen(
         ["adb", "-s", SERIAL, "shell",
@@ -72,7 +67,7 @@ def main() -> int:
         while True:
             try:
                 s = socket.create_connection(("127.0.0.1", port), timeout=3)
-                s.sendall(set_clipboard_message(text, paste=not a.no_paste))
+                s.sendall(set_clipboard_message(text, paste=paste))
                 time.sleep(1.5)
                 s.settimeout(0.2)
                 try:
@@ -81,18 +76,27 @@ def main() -> int:
                 except socket.timeout:
                     pass  # conexión viva: el mensaje llegó
                 s.close()
-                break
+                return
             except OSError:
                 if time.time() > deadline or server.poll() is not None:
                     out = server.stdout.read() if server.poll() is not None else ""
-                    raise SystemExit(f"no se pudo hablar con scrcpy-server:\n{out}")
+                    raise RuntimeError(f"no se pudo hablar con scrcpy-server:\n{out}")
                 time.sleep(0.5)
-        print(f"✓ {len(text)} caracteres enviados al portapapeles"
-              f"{'' if a.no_paste else ' y pegados'}")
-        return 0
     finally:
         server.terminate()
         adb("forward", "--remove", f"tcp:{port}")
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--file", required=True, type=pathlib.Path)
+    ap.add_argument("--no-paste", action="store_true", help="solo copiar, sin pegar")
+    a = ap.parse_args()
+    text = a.file.read_text(encoding="utf-8").rstrip("\n")
+    pegar(text, paste=not a.no_paste)
+    print(f"✓ {len(text)} caracteres enviados al portapapeles"
+          f"{'' if a.no_paste else ' y pegados'}")
+    return 0
 
 
 if __name__ == "__main__":
