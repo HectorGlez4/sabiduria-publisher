@@ -2307,7 +2307,7 @@ Menores aprobados sin bloquear en la re-revisión de `98f7c77`. Hacerlos despué
 
 ## Estado de la fase 1 (2026-09-14 22:20)
 
-Tareas 1–14 hechas, con 10b–10f. Sondas en `findings.md`; primera ventana supervisada publicó CELL-018 (https://www.instagram.com/p/DdR54JEgxHN/); tarea programada `sabiduria-media-lab` creada (10:40, 15:40, 20:40). Pendiente del usuario: volver a pegar `codex-heartbeat-prompt.md` en la automatización de Codex (el archivo local seguía con la versión anterior a las 22:20).
+Tareas 1–14 hechas, con 10b–10f. Sondas en `findings.md`; primera ventana supervisada publicó CELL-018 (https://www.instagram.com/p/DdR54JEgxHN/); tarea programada `sabiduria-media-lab` creada (10:40, 15:40, 20:40). Prompt de Codex actualizado por el usuario (automation.toml modificado 2026-09-14 23:41): coincide con `codex-heartbeat-prompt.md` salvo las comillas invertidas de `codex-generado`/`codex-fallo` en el paso 4, sin cambio de instrucciones; horario 10:10, 15:10 y 20:10 hasta el 2026-10-01, activo.
 
 ## Fase 2 (plan aparte)
 
