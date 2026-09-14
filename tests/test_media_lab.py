@@ -1442,6 +1442,13 @@ def seccion_cli_en_proceso() -> None:
                                                   ("lock-tomar", "--dueno", "claude"))]
             check(codigos == [0, 3, 3, 0, 3, 2],
                   f"manual no suelta ni pisa el de programada; soltar sin cerrojo da 3; dueño desconocido 2 ({codigos})")
+            codigo, datos, _ = lab("lock-tomar", "--dueno", "claude")
+            check(codigo == 2 and campo(datos, "ok") is False and campo(datos, "tipo") == "ArgumentoNoValido"
+                  and "--dueno" in error(datos),
+                  f"un error de argparse (--dueno desconocido) sale con 2 y JSON en stdout ({codigo}, {datos})")
+            codigo, datos, _ = lab()
+            check(codigo == 2 and campo(datos, "tipo") == "ArgumentoNoValido",
+                  f"sin subcomando también sale con 2 y JSON ({codigo}, {datos})")
 
         print("   · seleccionar")
         with entorno() as (lab, raiz):
@@ -1543,6 +1550,20 @@ def seccion_cli_en_proceso() -> None:
             check(codigo == 0 and campo(datos, "ok") is True and str(campo(datos, "captura")).endswith("RUN-1/ig-02-recorte.png"),
                   f"un paso correcto sale con 0 y su captura ({codigo}, {datos})")
 
+            def disco(*args, **kwargs):
+                raise OSError(28, "No space left on device")
+
+            instagram_feed.detalles = disco
+            telefono.captura = lambda destino: destino
+            codigo, datos, _ = lab("ig", "detalles", "--run", "RUN-1")
+            check(codigo == 4 and campo(datos, "tipo") == "OSError"
+                  and str(campo(datos, "captura")).endswith("RUN-1/ig-inesperada-detalles.png"),
+                  f"un OSError dentro del paso sale con 4, captura y JSON ({codigo}, {datos})")
+            telefono.captura = disco
+            codigo, datos, _ = lab("ig", "detalles", "--run", "RUN-1")
+            check(codigo == 4 and campo(datos, "tipo") == "OSError" and campo(datos, "captura") is None,
+                  f"si la captura del fallo también da OSError sigue saliendo con 4 ({codigo}, {datos})")
+
         print("   · codex-generado y encargo-revisar")
         with entorno() as (lab, raiz):
             eid, _ = guardar_encargo(raiz, 1, ["C-FB-API"])
@@ -1605,6 +1626,13 @@ def seccion_cli_en_proceso() -> None:
                 codex_rescate.CODEX = codex_original
             check(codigo == 2 and campo(datos, "tipo") == "EncargoError",
                   f"generar sobre un encargo aprobado sale con 2 antes de buscar Codex ({codigo}, {datos})")
+
+            pendiente, _ = guardar_encargo(raiz, 3, ["C-TH-API"])
+            ruta_pendiente = raiz / "encargos" / f"{pendiente}.json"
+            antes = ruta_pendiente.read_bytes()
+            check(lab.lab._deshacer(ruta_pendiente, "interrumpido por señal 15", True) == []
+                  and ruta_pendiente.read_bytes() == antes,
+                  "_deshacer no toca un encargo que sigue en pedido (señal antes de tomarlo)")
     finally:
         for obj, n, f in originales:
             setattr(obj, n, f)
@@ -1630,12 +1658,17 @@ prompt = args[-1]
 salida = Path(args[args.index("-o") + 1])
 eid = re.search(r"--encargo (ENC-\d{8}-\d{3,})", prompt).group(1)
 rutas = re.findall(r"--imagen (\S+)", prompt)
-if modo == "colgado":
+if modo in ("ajeno", "ajeno-colgado"):
+    Path(os.environ["CODEX_FALSO_AJENO"]).write_text("Codex no debería escribir aquí", encoding="utf-8")
+if modo in ("colgado", "ajeno-colgado"):
     nieto = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(120)"])
     (marcas / "nieto.pid").write_text(str(nieto.pid))
     (marcas / "arrancado").write_text("1")
     time.sleep(120)
     sys.exit(0)
+# un hijo en segundo plano que sobrevive a Codex: podría escribir tras la segunda foto
+fondo = subprocess.Popen(["sleep", "30"])
+(marcas / f"fondo-{eid}.pid").write_text(str(fondo.pid))
 from PIL import Image
 for ruta in rutas:
     p = Path(ruta)
@@ -1644,8 +1677,9 @@ for ruta in rutas:
 imagenes = [x for ruta in rutas for x in ("--imagen", ruta)]
 r = subprocess.run([sys.executable, "experiments/media-lab/lab.py", "codex-generado", "--encargo", eid,
                     "--owner", "codex-exec", *imagenes])
-if modo == "ajeno":
-    Path(os.environ["CODEX_FALSO_AJENO"]).write_text("Codex no debería escribir aquí", encoding="utf-8")
+if modo == "tmp":
+    # lo que dejaría un corte a mitad de encargos.guardar (después de codex-generado, que usa ese nombre)
+    (Path(os.environ["LAB_ENCARGOS_DIR"]) / f".{eid}.json.tmp").write_text("{", encoding="utf-8")
 salida.write_text(json.dumps({"estado": "generado", "encargo_id": eid}), encoding="utf-8")
 sys.exit(r.returncode)
 '''
@@ -1667,7 +1701,13 @@ def seccion_generar() -> None:
     lab = ROOT / "experiments" / "media-lab" / "lab.py"
     familia = f"LAB-TEST-GEN-{uuid.uuid4().hex[:8].upper()}"
     carpeta_assets = ROOT / "experiments" / "media-lab" / "assets" / familia
-    ajeno = ROOT / "experiments" / "media-lab" / "results" / f"codex-falso-{uuid.uuid4().hex}.txt"
+    resultados = ROOT / "experiments" / "media-lab" / "results"
+    unico = uuid.uuid4().hex
+    ajeno = resultados / f"codex-falso-{unico}-b.txt"
+    ajeno_senal = resultados / f"codex-falso-{unico}-e.txt"
+    encargos_en_repo = resultados / f"encargos-prueba-{unico}"
+    temporal = pathlib.Path(tempfile.gettempdir())
+    salidas_antes = set(temporal.glob("codex-exec-*"))
     t = datetime.now(timezone.utc)
     with tempfile.TemporaryDirectory() as d:
         base = pathlib.Path(d)
@@ -1679,17 +1719,18 @@ def seccion_generar() -> None:
         falso.write_text(CODEX_FALSO.replace("__PYTHON__", sys.executable), encoding="utf-8")
         falso.chmod(0o755)
 
-        def encargo(n: int) -> str:
+        def encargo(n: int, carpeta: pathlib.Path = encs) -> str:
             eid = f"ENC-{t:%Y%m%d}-{n:03d}"
-            E.guardar(encs / f"{eid}.json", E.nuevo(
+            E.guardar(carpeta / f"{eid}.json", E.nuevo(
                 eid, coverage_cell_ids=["C1"], family_id=familia, brief_path="b.md", do_not_use=[],
                 formato={"ancho": 1080, "alto": 1350}, prompt="Un astrolabio", restricciones=["sin texto"],
                 destino_assets=f"experiments/media-lab/assets/{familia}", ahora=t))
             return eid
 
-        def generar(eid: str, modo: str, *extra: str, senal: bool = False):
-            env = {**os.environ, "MEDIA_LAB_CODEX": str(falso), "LAB_ENCARGOS_DIR": str(encs),
-                   "CODEX_FALSO_MODO": modo, "CODEX_FALSO_MARCAS": str(marcas), "CODEX_FALSO_AJENO": str(ajeno)}
+        def generar(eid: str, modo: str, *extra: str, senal: bool = False, carpeta: pathlib.Path = encs,
+                    fuera: pathlib.Path = ajeno):
+            env = {**os.environ, "MEDIA_LAB_CODEX": str(falso), "LAB_ENCARGOS_DIR": str(carpeta),
+                   "CODEX_FALSO_MODO": modo, "CODEX_FALSO_MARCAS": str(marcas), "CODEX_FALSO_AJENO": str(fuera)}
             proc = subprocess.Popen([sys.executable, str(lab), "generar", "--encargo", eid, *extra], cwd=ROOT,
                                     env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             if senal:
@@ -1729,8 +1770,8 @@ def seccion_generar() -> None:
                   and enc["imagenes"][0]["ancho"] == 768
                   and campo(datos, "respuesta") == {"estado": "generado", "encargo_id": eid},
                   f"(a) Codex genera y registra: exit 0, generado y respuesta leída ({codigo}, {datos or cola})")
-            check(not (pathlib.Path(tempfile.gettempdir()) / f"codex-exec-{eid}.json").exists(),
-                  "(a) el archivo -o de Codex se borra al terminar")
+            check(muerto(marcas / f"fondo-{eid}.pid"),
+                  "(a) tras una salida normal de Codex no sobrevive su hijo en segundo plano")
 
             eid = encargo(2)
             codigo, datos, cola = generar(eid, "ajeno")
@@ -1753,13 +1794,37 @@ def seccion_generar() -> None:
             eid = encargo(4)
             codigo, datos, cola = generar(eid, "colgado", "--timeout", "60", senal=True)
             enc = E.cargar(encs / f"{eid}.json")
-            check(codigo == 1 and datos == {"ok": False, "errores": [f"interrumpido por señal {int(signal.SIGTERM)}"]}
+            check(codigo == 1 and datos == {"ok": False, "errores": [f"interrumpido por señal {int(signal.SIGTERM)}"],
+                                            "ajenos": []}
                   and enc["estado"] == "pedido",
-                  f"(d) SIGTERM a generar: mata a Codex, deja el encargo en pedido y sale con 1 ({codigo}, {datos or cola})")
+                  f"(d) SIGTERM a generar: mata a Codex, pasa la guardia, deja el encargo en pedido y sale con 1 ({codigo}, {datos or cola})")
             check(muerto(marcas / "nieto.pid"), "(d) tras la señal no queda ningún proceso de Codex")
+
+            for marca in marcas.iterdir():
+                marca.unlink()
+            eid = encargo(5)
+            codigo, datos, cola = generar(eid, "ajeno-colgado", "--timeout", "60", senal=True, fuera=ajeno_senal)
+            enc = E.cargar(encs / f"{eid}.json")
+            errores = campo(datos, "errores") or [""]
+            check(codigo == 6 and enc["estado"] != "generado" and enc["imagenes"] == []
+                  and str(ajeno_senal.relative_to(ROOT)) in (campo(datos, "ajenos") or [])
+                  and errores[0].startswith(f"interrumpido por señal {int(signal.SIGTERM)}; cambió: "),
+                  f"(e) Codex escribe fuera y llega SIGTERM: exit 6 con los ajenos y el encargo no queda generado ({codigo}, {datos or cola})")
+            check(muerto(marcas / "nieto.pid"), "(e) tras la señal no queda ningún proceso de Codex")
+
+            encargos_en_repo.mkdir(parents=True)
+            eid = encargo(6, carpeta=encargos_en_repo)
+            codigo, datos, cola = generar(eid, "tmp", carpeta=encargos_en_repo)
+            check(codigo == 0 and (encargos_en_repo / f".{eid}.json.tmp").exists()
+                  and E.cargar(encargos_en_repo / f"{eid}.json")["estado"] == "generado",
+                  f"(f) encargos dentro del repo: el JSON y su temporal de escritura no cuentan como ajenos ({codigo}, {datos or cola})")
+            check(set(temporal.glob("codex-exec-*")) == salidas_antes,
+                  "ningún generar deja carpetas ni archivos codex-exec-* en el temporal")
         finally:
             shutil.rmtree(carpeta_assets, ignore_errors=True)
+            shutil.rmtree(encargos_en_repo, ignore_errors=True)
             ajeno.unlink(missing_ok=True)
+            ajeno_senal.unlink(missing_ok=True)
 
 
 SECCIONES = [

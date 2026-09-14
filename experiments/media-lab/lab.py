@@ -22,6 +22,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import signal
 import subprocess
 import sys
@@ -276,12 +277,21 @@ def cmd_codex_fallo(a) -> int:
 
 
 def _matar_grupo(proc: subprocess.Popen | None) -> None:
-    """SIGKILL a todo el grupo de Codex. Si ya se recogió su código no se toca: el pid
-    podría ser de otro proceso."""
+    """SIGKILL a todo el grupo de Codex mientras su líder sigue sin recoger. Si ya se recogió
+    no se toca aquí: eso lo hace `_matar_restos` justo después de la espera."""
     if proc is None or proc.returncode is not None:
         return
     try:
         os.killpg(proc.pid, signal.SIGKILL)
+    except (ProcessLookupError, PermissionError):
+        pass
+
+
+def _matar_restos(pgid: int) -> None:
+    """SIGKILL a lo que quede del grupo de Codex tras recoger al líder: un hijo en segundo
+    plano no puede escribir después de la segunda foto de la guardia."""
+    try:
+        os.killpg(pgid, signal.SIGKILL)
     except (ProcessLookupError, PermissionError):
         pass
 
@@ -302,7 +312,9 @@ def _leer_respuesta(salida: Path):
 def _ejecutar_codex(enc: dict, salida: Path, timeout: int, vivo: dict) -> tuple[int | None, str]:
     """Lanza codex exec en su propio grupo, espera como mucho `timeout` s y devuelve
     (código o None, cola de su salida). `vivo["proc"]` es el proceso mientras corre, para
-    que el manejador de señales pueda matarlo."""
+    que el manejador de señales pueda matarlo. Al volver no queda nada vivo en su grupo."""
+    if vivo["senal"] is not None:
+        return None, "codex exec no se lanzó: llegó una señal antes"
     with tempfile.TemporaryFile() as registro:
         try:
             proc = subprocess.Popen(codex_rescate.comando(codex_rescate.prompt_para(enc), salida), cwd=ROOT,
@@ -326,11 +338,32 @@ def _ejecutar_codex(enc: dict, salida: Path, timeout: int, vivo: dict) -> tuple[
                     aviso += "codex exec no terminó 10 s después de SIGKILL\n"
         finally:
             vivo["proc"] = None
+            _matar_restos(proc.pid)
         return codigo, aviso + _cola(registro)
 
 
+def _permitidas(enc: dict, ruta: Path) -> set[str]:
+    """Lo que Codex puede cambiar: sus imágenes, el JSON del encargo y el temporal de su
+    escritura atómica (un corte a mitad de `encargos.guardar` lo deja atrás)."""
+    permitidas = set(codex_rescate.rutas_imagen(enc))
+    for p in (ruta, ruta.parent / f".{ruta.name}.tmp"):
+        try:
+            permitidas.add(p.resolve().relative_to(ROOT).as_posix())
+        except ValueError:
+            pass  # LAB_ENCARGOS_DIR fuera del repo (pruebas)
+    return permitidas
+
+
+def _ajenos(antes: dict[str, str], permitidas: set[str]) -> list[str]:
+    try:
+        return guardia.cambios_ajenos(antes, guardia.estado_git(ROOT), permitidas)
+    except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
+        return [f"<no se pudo comprobar git: {e}>"]
+
+
 def _deshacer(ruta: Path, nota: str, bloquear: bool) -> list[str]:
-    """Deja el encargo como tras un fallo si codex-exec lo dejó generando o generado."""
+    """Deja el encargo como tras un fallo si codex-exec lo dejó generando o generado.
+    En cualquier otro estado (p. ej. aún en pedido) no hace nada."""
     try:
         enc = encargos.cargar(ruta)
         if enc["estado"] == "generando" and enc["lock_owner"] == "codex-exec":
@@ -364,15 +397,6 @@ def cmd_generar(a) -> int:
     except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
         emitir({"ok": False, "errores": [f"no se pudo tomar la foto de git: {e}"]})
         return 1
-    enc = encargos.tomar(enc, "codex-exec", ahora())
-    encargos.guardar(ruta, enc)
-    permitidas = set(codex_rescate.rutas_imagen(enc))
-    try:
-        permitidas.add(ruta.resolve().relative_to(ROOT).as_posix())
-    except ValueError:
-        pass  # LAB_ENCARGOS_DIR fuera del repo (pruebas)
-    salida = Path(tempfile.gettempdir()) / f"codex-exec-{a.encargo}.json"
-    salida.unlink(missing_ok=True)
     vivo: dict = {"proc": None, "senal": None}
 
     def al_recibir(numero, _marco) -> None:
@@ -380,19 +404,26 @@ def cmd_generar(a) -> int:
         vivo["senal"] = numero
         _matar_grupo(vivo["proc"])
 
+    # Los manejadores van antes de tomar el encargo: una señal a partir de aquí siempre acaba
+    # en la limpieza de abajo (y `_deshacer` no toca un encargo que siga en pedido).
     previos = {s: signal.signal(s, al_recibir) for s in SENALES}
+    carpeta_salida: Path | None = None
     try:
+        enc = encargos.tomar(enc, "codex-exec", ahora())
+        encargos.guardar(ruta, enc)
+        permitidas = _permitidas(enc, ruta)
+        carpeta_salida = Path(tempfile.mkdtemp(prefix="codex-exec-"))
+        salida = carpeta_salida / "respuesta.json"
         codigo, cola = _ejecutar_codex(enc, salida, a.timeout, vivo)
         respuesta = _leer_respuesta(salida)
+        ajenos = _ajenos(antes, permitidas)
         if vivo["senal"] is not None:
             nota = f"interrumpido por señal {vivo['senal']}"
-            _deshacer(ruta, nota, bloquear=False)
-            emitir({"ok": False, "errores": [nota]})
-            return 1
-        try:
-            ajenos = guardia.cambios_ajenos(antes, guardia.estado_git(ROOT), permitidas)
-        except (RuntimeError, OSError, subprocess.TimeoutExpired) as e:
-            ajenos = [f"<no se pudo comprobar git: {e}>"]
+            if ajenos:
+                nota += f"; cambió: {', '.join(ajenos)}"
+            _deshacer(ruta, nota, bloquear=bool(ajenos))
+            emitir({"ok": False, "errores": [nota], "ajenos": ajenos})
+            return 6 if ajenos else 1
         try:
             enc = encargos.cargar(ruta)
             errores = codex_rescate.validar(enc, ROOT)
@@ -410,7 +441,8 @@ def cmd_generar(a) -> int:
     finally:
         for s, manejador in previos.items():
             signal.signal(s, manejador)
-        salida.unlink(missing_ok=True)
+        if carpeta_salida is not None:
+            shutil.rmtree(carpeta_salida, ignore_errors=True)
 
 
 # ── API ─────────────────────────────────────────────────────────────────────
@@ -467,15 +499,15 @@ def _evidencia(run_id: str) -> Path:
 
 
 def _paso_telefono(ev: Path, nombre: str, fn, codigo_de=lambda res: 0) -> int:
-    """Ejecuta un paso de teléfono. Ante una pantalla inesperada o un error de adb intenta
-    una captura `nombre`.png, emite JSON y sale con 4; nunca reintenta nada."""
+    """Ejecuta un paso de teléfono. Ante una pantalla inesperada, un error de adb o de disco
+    intenta una captura `nombre`.png, emite JSON y sale con 4; nunca reintenta nada."""
     from labkit import instagram_feed, telefono
     try:
         res = fn()
-    except (instagram_feed.PantallaInesperada, telefono.TelefonoError) as e:
+    except (instagram_feed.PantallaInesperada, telefono.TelefonoError, OSError) as e:
         try:
             captura = telefono.captura(ev / f"{nombre}.png")
-        except telefono.TelefonoError:
+        except (telefono.TelefonoError, OSError):
             captura = None
         emitir({"ok": False, "tipo": type(e).__name__, "error": str(e), "captura": captura})
         return 4
@@ -535,8 +567,17 @@ def cmd_ig(a) -> int:
     return _paso_telefono(ev, f"ig-inesperada-{a.paso}", pasos[a.paso], codigo_de)
 
 
+class Analizador(argparse.ArgumentParser):
+    """argparse que, ante un error de argumentos, emite el mismo JSON que el resto de errores
+    (sale con 2). Los subanalizadores heredan la clase."""
+
+    def error(self, message: str):
+        emitir({"ok": False, "tipo": "ArgumentoNoValido", "error": message})
+        raise SystemExit(2)
+
+
 def construir() -> argparse.ArgumentParser:
-    ap = argparse.ArgumentParser(prog="lab.py")
+    ap = Analizador(prog="lab.py")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     sub.add_parser("preflight").set_defaults(func=cmd_preflight)
