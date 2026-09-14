@@ -1884,10 +1884,29 @@ Expected: secciones 1–8 con `✓` y `El laboratorio cumple sus contratos.`
 Run: `.venv/bin/python experiments/media-lab/lab.py --help`
 Expected: lista de subcomandos sin error de importación.
 
-- [ ] **Step 5: Commit y push**
+- [ ] **Step 5: Corregir el commit del prompt de Codex (hallazgo de la revisión de la tarea 4)**
+
+`codex-tomar --max 2` modifica dos encargos a la vez, pero el prompt vigente comitea uno y hace `git rebase` con el segundo aún modificado, y el rebase se niega a correr. En `experiments/media-lab/codex-heartbeat-prompt.md`, sustituir el paso 5 entero por:
+
+```
+5. Cuando hayas terminado con TODOS los encargos devueltos en el paso 2, comitea juntos, en un único commit, sus JSON y sus imágenes:
+   git add <cada experiments/media-lab/encargos/<encargo_id>.json devuelto> <cada imagen guardada>
+   git commit -m "media lab codex: encargos <id1> [<id2>] <generado|fallo>"
+   git fetch origin main && git rebase origin/main && git push origin HEAD:main
+   Si el rebase entra en conflicto: git rebase --abort, deja el commit local y termina informando del conflicto. Nunca uses git reset --hard ni git add -A.
+```
+
+Comitear el prompt con el resto de la tarea. Después pedir al usuario que vuelva a pegar el archivo completo en la automatización de Codex (mismo horario) y verificar sin editar el TOML:
+
+Run: `python3 -c "import tomllib,pathlib;t=tomllib.loads(pathlib.Path('~/.codex/automations/media-lab-hasta-1-octubre/automation.toml').expanduser().read_text());print(t['prompt'].strip()==pathlib.Path('experiments/media-lab/codex-heartbeat-prompt.md').read_text().strip(), t['status'])"`
+Expected: `True ACTIVE`
+
+Hasta que el usuario lo pegue, Codex puede quedarse con encargos modificados sin comitear; no crear encargos reales antes de esa verificación.
+
+- [ ] **Step 6: Commit y push**
 
 ```bash
-git add experiments/media-lab/lab.py tests/test_media_lab.py
+git add experiments/media-lab/lab.py experiments/media-lab/codex-heartbeat-prompt.md tests/test_media_lab.py
 git commit -m "media lab claude: CLI única lab.py
 
 Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
@@ -2005,7 +2024,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 1. `lab.py lock-tomar --dueno programada`. Si devuelve `cerrojo: false`, termina: hay otra ventana en curso.
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera.
-4. `lab.py encargos`. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
+4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
 5. Reposición: crea encargos con `lab.py encargo-nuevo` para las próximas celdas `planned` de experiments/media-lab/coverage.json con brief verificado, hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4.
 6. `lab.py seleccionar --max 2`. Si devuelve [] o `espera` no es null, salta al paso 10.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`):
