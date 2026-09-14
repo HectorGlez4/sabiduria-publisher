@@ -48,8 +48,96 @@ def seccion_portapapeles() -> None:
         print("  · scrcpy no está instalado: se omite la comprobación de versión")
 
 
+def seccion_encargos() -> None:
+    print("\n2. Encargos: estados, bloqueos y archivo")
+    import json
+    import tempfile
+    from datetime import datetime, timedelta, timezone
+    from labkit import encargos as E
+
+    t0 = datetime(2026, 9, 15, 8, 0, tzinfo=timezone.utc)
+
+    def base(encargo_id: str = "ENC-20260915-001") -> dict:
+        return E.nuevo(
+            encargo_id, coverage_cell_ids=["CELL-011"], family_id="LAB-F01-001",
+            brief_path="experiments/media-lab/briefs/LAB-F01-001.md", do_not_use=[],
+            formato={"nativo": "feed_single_image", "ancho": 1080, "alto": 1350},
+            prompt="Un astrolabio de latón sobre una mesa de madera", restricciones=["sin texto"],
+            destino_assets="experiments/media-lab/assets/LAB-F01-001", ahora=t0)
+
+    img = [{"ruta": "experiments/media-lab/assets/LAB-F01-001/ENC-20260915-001-v1.png",
+            "sha256": "ab", "ancho": 1024, "alto": 1536}]
+
+    e = base()
+    check(e["estado"] == "pedido" and E.tomable(e, t0), "un encargo nuevo está en pedido y se puede tomar")
+    E.tomar(e, "codex-heartbeat", t0)
+    check(e["estado"] == "generando" and not E.tomable(e, t0 + timedelta(minutes=29)),
+          "con el bloqueo vigente nadie más lo toma")
+    check(E.tomable(e, t0 + timedelta(minutes=31)), "un bloqueo vencido se puede retomar")
+    try:
+        E.marcar_generado(e, "codex-exec", img, t0)
+        ok = False
+    except E.EncargoError:
+        ok = True
+    check(ok, "solo el dueño del bloqueo marca generado")
+    E.marcar_generado(e, "codex-heartbeat", img, t0)
+    check(e["estado"] == "generado" and e["lock_owner"] is None
+          and e["imagenes"][0]["origen"] == "codex-heartbeat",
+          "generado limpia el bloqueo y anota el origen")
+    try:
+        E.revisar(e, aprobado=False, motivo="texto espurio", ahora=t0)
+        ok = False
+    except E.EncargoError:
+        ok = True
+    check(ok, "un rechazo exige la corrección")
+    E.revisar(e, aprobado=False, motivo="texto espurio", ahora=t0,
+              correccion="ninguna letra ni número en la imagen")
+    check(e["estado"] == "pedido" and "ninguna letra ni número en la imagen" in e["restricciones"]
+          and e["imagenes"] == []
+          and [i["ruta"] for i in e["intentos"][-1]["imagenes_rechazadas"]] == [img[0]["ruta"]],
+          "un rechazo con intentos restantes vuelve a pedido con la corrección")
+    E.tomar(e, "codex-exec", t0)
+    E.marcar_fallo(e, "codex-exec", "sin imagen", t0)
+    check(e["estado"] == "bloqueado", "al agotar 2 intentos queda bloqueado")
+
+    e2 = base()
+    E.tomar(e2, "codex-heartbeat", t0)
+    E.marcar_generado(e2, "codex-heartbeat", img, t0)
+    E.revisar(e2, aprobado=True, motivo="verosímil y sin texto", ahora=t0)
+    E.marcar_usado(e2, "LAB-F01-001-A-INSTAGRAM")
+    check(e2["estado"] == "usado" and e2["runs"] == ["LAB-F01-001-A-INSTAGRAM"],
+          "aprobado pasa a usado con su run")
+    check(E.en_cola([base(), e2, e]) == 1, "en_cola cuenta solo pedido y generando")
+
+    comunes = dict(coverage_cell_ids=["C"], family_id="F", brief_path="b", do_not_use=[],
+                   formato={}, prompt="p", restricciones=[],
+                   destino_assets="experiments/media-lab/assets/F", ahora=t0)
+    for eid, cambio, label in (("X-1", {}, "id sin ENC-"),
+                               ("ENC-20260915-009", {"variantes": 3}, "3 variantes"),
+                               ("ENC-20260915-009", {"destino_assets": "/tmp"}, "destino fuera de assets")):
+        try:
+            E.nuevo(eid, **{**comunes, **cambio})
+            ok = False
+        except E.EncargoError:
+            ok = True
+        check(ok, f"rechaza un encargo inválido: {label}")
+
+    with tempfile.TemporaryDirectory() as d:
+        carpeta = pathlib.Path(d)
+        check(E.siguiente_id(carpeta, t0) == "ENC-20260915-001", "el primer id del día es 001")
+        E.guardar(carpeta / "ENC-20260915-001.json", base())
+        check(E.siguiente_id(carpeta, t0) == "ENC-20260915-002", "el siguiente id incrementa")
+        leido = E.cargar(carpeta / "ENC-20260915-001.json")
+        check(leido["prompt"].startswith("Un astrolabio"), "guardar y cargar conservan el contenido")
+        check(json.loads((carpeta / "ENC-20260915-001.json").read_text(encoding="utf-8"))["estado"] == "pedido",
+              "el archivo es JSON legible")
+        check([e["encargo_id"] for _, e in E.listar(carpeta)] == ["ENC-20260915-001"],
+              "listar devuelve los encargos del directorio")
+
+
 SECCIONES = [
     seccion_portapapeles,
+    seccion_encargos,
 ]
 
 
