@@ -2138,6 +2138,7 @@ Expected: `32`, las 21 reglas existentes más 11.
 Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publicación del laboratorio Sabiduría de Bolsillo. El diseño completo está en docs/superpowers/specs/2026-09-14-media-lab-chatgpt-claude-design.md: léelo si dudas.
 
 ## Reglas que no se rompen
+- Códigos de salida de `lab.py`: 0 correcto; 1 fallo del paso; 2 argumentos o datos inválidos (JSON con `error`); 3 cerrojo no soltado; 4 pantalla inesperada o error del teléfono; 5 envío dudoso; 6 Codex cambió archivos no permitidos. Ante 2, corrige la llamada; ante 4 o 5, no toques más el teléfono en la ventana.
 - Solo usa estos comandos: `.venv/bin/python experiments/media-lab/lab.py …`, `.venv/bin/python tests/test_media_lab.py`, `gh run list …`, `gh run view …`, `gh run watch …`, `gh run download …`, `gh workflow run media-lab…`, `git add experiments/media-lab/…`, `git commit …`, `git fetch origin main`, `git rebase origin/main`, `git rebase --abort`, `git push origin HEAD:main`. Cualquier otro comando abre un permiso que nadie contesta y te deja colgada. Para leer archivos y capturas usa Read; para editar JSON, Edit o Write.
 - Nunca publiques sin PASS explícito de un agente independiente sobre la captura final (experiments/media-lab/visual-qa-gate.md).
 - `lab.py preflight` devuelve en `espera` la producción cercana. Es solo informativo: no esperes ni saltes celdas por ello (decisión del usuario, 2026-09-14). Cópialo en `exposure_context.nearby_production_posts` del run y repítelo justo antes de cada Compartir o workflow para registrarlo.
@@ -2150,7 +2151,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres la ventana de publica
 2. `git fetch origin main` y `git rebase origin/main`. Si falla: `git rebase --abort`, `lab.py lock-soltar --dueno programada` y termina informando.
 3. `lab.py preflight`. Anota teléfono, github y espera. Si `telefono.listo` es false (bloqueado, dormido o desconectado), no toques el teléfono en toda la ventana: no intentes despertarlo ni desbloquearlo, salta las celdas `android_native`, sigue con las de API y di en el informe que el teléfono no estaba disponible para que el usuario lo desbloquee.
 4. `lab.py encargos`. Si algún encargo está en `bloqueado` y no figura aún en experiments/media-lab/progress.md, anótalo allí (id, celdas, motivo del último intento) e inclúyelo en el informe: nadie más lo va a ver. Revisa cada encargo `generado`: abre sus imágenes con Read. Apruébalo (`lab.py encargo-revisar --encargo ID --aprobado --motivo "…"`) solo si la imagen es verosímil, respeta el brief y do_not_use y no tiene texto. Si no: `--rechazado --motivo "…" --correccion "…"`.
-5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, sin mezclar en un mismo encargo celdas de feed (4:5) y de story (9:16), hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez; si genera, revísalo como en el paso 4. Si sale con código 6 (Codex cambió archivos no permitidos), no generes más en esta ventana, no comitees esos cambios y enumera los archivos en el informe para el usuario.
+5. Reposición: crea encargos con `lab.py encargo-nuevo` (la carpeta de destino sale sola de `--family`: experiments/media-lab/assets/<family_id>) para las próximas celdas `planned` cuya red y formato estén implementados (`TELEFONO_FASE_1` y `API_FASE_1` en experiments/media-lab/labkit/seleccion.py) de experiments/media-lab/coverage.json con brief verificado, sin mezclar en un mismo encargo celdas de feed (4:5) y de story (9:16), hasta como máximo 6 en cola. El prompt de imagen va en un archivo temporal dentro de experiments/media-lab/results/. Si `lab.py seleccionar` devuelve [] y hay algún encargo en `pedido`, `lab.py generar --encargo <el más antiguo>` una sola vez, lanzándolo con el tiempo máximo de la herramienta Bash (`timeout: 600000`); si genera, revísalo como en el paso 4. Si sale con código 6 (Codex cambió archivos no permitidos), no generes más en esta ventana, no comitees esos cambios y enumera los archivos en el informe para el usuario.
 6. `lab.py seleccionar --max 2`, añadiendo `--sin-telefono` si `telefono.listo` era false. Si devuelve [], salta al paso 8.
 7. Para cada celda elegida, en orden, dejando al menos 21 min entre la primera publicación y la segunda (vuelve a pasar `lab.py preflight`). Antes de cada celda renueva el cerrojo con `lab.py lock-tomar --dueno programada`; si devuelve `cerrojo: false`, otra sesión tomó el relevo: no publiques más celdas y salta al paso 9:
    a. Crea el máster final con texto determinista (experiments/media-lab/render_overlay.py o src/render/quote_card.py), el pie (verificado contra el brief, ≤2200 en Instagram, ≤500 en Threads) y el run JSON copiando experiments/media-lab/run-template.json.
@@ -2230,6 +2231,21 @@ git fetch origin main && git rebase origin/main && git push origin HEAD:main
 ```
 
 ---
+
+### Task 10c: `lab.py` robusto para ventanas desatendidas
+
+Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe2`), implementado en un único commit posterior:
+
+- `generar` con `--timeout` 420 por defecto y manejadores de SIGTERM/SIGHUP/SIGINT que matan el grupo de Codex y dejan el encargo en `fallo` o invalidado; salida de Codex a archivo temporal, sin tuberías que puedan colgarse.
+- Guardia (`labkit/guardia.py`): además de `git status`, vigila `.claude/settings*.json`, `experiments/media-lab/.env*`, `.git/config`, `.git/hooks/`, los `.pyc` del laboratorio y todo `assets/`; ignora `.DS_Store`.
+- `codex-generado` solo acepta las rutas pedidas, rechaza enlaces y no imágenes y valida con `codex_rescate.validar` antes de guardar; `encargo-revisar --aprobado` también valida.
+- `encargos.invalidar` para encargos `generado` por `codex-exec` que fallan la guardia o la validación.
+- `manifiesto-api` valida la ruta antes de leer, no sobrescribe manifiestos y parsea `plataforma=valor` con error claro.
+- `--run`, `--nombre` y `--encargo` validados; todos los errores previsibles salen como JSON con código 2; los comandos de teléfono salen con 4 y captura.
+- `encargo-nuevo` valida las celdas contra `coverage.json` (existen, `planned`/`ready`, ruta implementada, un solo formato, sin encargo activo) y `encargos.nuevo` exige `formato` con `ancho`/`alto` y prompt no vacío.
+- `lock-tomar`/`lock-soltar` exigen `--dueno programada|manual`; `lock-soltar` sale con 3 si no suelta.
+- Prompt de Codex: si `codex-generado` falla, `codex-fallo`; solo se comitean imágenes de encargos generados. El usuario debe volver a pegarlo después de este commit.
+- Pruebas en proceso de todos los comandos sin teléfono y de `generar` con un Codex falso (éxito, cambios ajenos → 6, tiempo agotado).
 
 ### Task 10b: Seguimiento de la revisión de la tarea 8 (antes de las sondas)
 
