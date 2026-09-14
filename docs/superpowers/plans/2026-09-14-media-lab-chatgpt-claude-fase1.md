@@ -2256,6 +2256,18 @@ Resultado de la revisión de calidad de la tarea 10 (commits `75f2691` y `c7efbe
 
 ### Task 10f: El detector del desplegable de hashtags no lo ve (bloqueante antes de la tarea 14)
 
+> **Diagnóstico (sonda SONDA-10F, 2026-09-14 21:46, sin publicar):** el desplegable de sugerencias es una **ventana aparte** que `uiautomator dump` no incluye. Volcado fresco y captura tomados a la vez: el volcado muestra el compositor limpio (`caption_add_on_recyclerview` con «Sondage»/«Invite», `music_track_title`, `share_footer_button` pulsable y sin tapar), la captura muestra el desplegable encima. En `adb shell dumpsys window windows` aparece solo mientras está abierto:
+> ```
+> Window #11 Window{49fd424 u0 PopupWindow:de536c5}:
+>   mAttrs={(0,1448)(1080xwrap) … ty=APPLICATION_PANEL …}
+>   mParentWindow=Window{e654062 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity} mLayoutAttached=true
+>   Frames: … frame=[0,1448][1080,2205] …
+>   isVisible=true
+> ```
+> Al cerrarlo desaparece. Las ventanas `KHCD.*` (1 px de ancho, `APPLICATION_ATTACHED_DIALOG`) están en ambos estados y no cuentan. Consecuencia: `compositor_listo` también da el compositor por bueno y `compartir` pulsaría el centro de `share_footer_button`, que el desplegable tapa (inserta un hashtag en vez de publicar; no falla cerrado).
+>
+> **Arreglo:** `telefono.ventanas_emergentes(paquete)` lee `dumpsys window windows` y devuelve las ventanas `PopupWindow:*` con `isVisible=true` cuyo `mParentWindow` es de `paquete`, con su `frame`. Lector puro `ventanas_emergentes_de(texto_dumpsys, paquete)` probado con el fragmento real de arriba (y el mismo bloque sin la ventana). `_hay_que_cerrar` y `compositor_listo`/`compartir` las consultan: una emergente de Instagram cuyo `frame` se solapa con la fila de música o con «Partager» cuenta como desplegable abierto (cerrar con «atrás» en `escribir_pie`; en `compartir`, `PantallaInesperada` sin tocar). Si `dumpsys` falla, se falla cerrado. El detector por nodos `hay_desplegable_hashtags` se mantiene.
+
 - [ ] Ventana supervisada de CELL-018 (2026-09-14 21:35): con el arreglo de 10e, `ig pie` esperó sus volcados limpios y devolvió `ok`, pero la captura `ig-04-compositor.png` mostraba el desplegable de hashtags abierto sobre la música y «Partager» (filas «#historiadelatecnología … publications publiques»). No es solo un problema de tiempos: `hay_desplegable_hashtags(xml, paquete=PAQUETE)` no lo detecta en el volcado. Un `telefono-atras` manual lo cerró. Riesgo: `compartir` tampoco lo vería y podría pulsar sobre una fila del desplegable. Pasos: (1) sonda supervisada que vuelque la jerarquía CON el desplegable abierto (el intento de esta ventana falló por la sintaxis de zsh) y ver paquete, clase y texto de sus filas, o si el volcado sale sin ellas (ventana de sistema, volcado desfasado); (2) detector con volcados reales como fixture (podados); (3) si el volcado no lo muestra nunca, detección alternativa: comparar los bounds del botón «Partager» y de la fila de música con los esperados del compositor limpio (el desplegable los empuja o los oculta), o exigir que «Partager» y la fila de música estén en el volcado y visibles antes de dar el compositor por bueno; (4) prueba con teléfono simulado del fixture real.
 
 > **Hecha en `8df33f3` y `6da5b38`** la tarea 10e (revisión de spec ✅; calidad aprobada con menores). Menores pendientes, no bloquean:
