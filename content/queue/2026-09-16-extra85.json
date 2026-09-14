@@ -15,7 +15,7 @@
   },
   "card": {
     "renderer": "text_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "Un nombre dentro de tres palabras",
     "subtitle": "Bagdad, hacia el año 820",
     "body": "Al-Juarismi escribió en la Casa de la Sabiduría un libro cuyo título dio la palabra álgebra. Su nombre latinizado, «Algorizmi», dio guarismo y, según la lectura más difundida, algoritmo. La parte final de ese libro trata de repartos de herencias."
