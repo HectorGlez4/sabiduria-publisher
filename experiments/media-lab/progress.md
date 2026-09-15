@@ -63,8 +63,8 @@ Updated: 2026-09-14 00:42 Europe/Madrid
 
 - Resolve the Instagram permalink of `LAB-PERSON-002-B-INSTAGRAM` read-only and capture its 24 h metrics from 2026-09-15 21:38.
 - 2026-09-15: unattended master rendering unblocked with `lab.py render` / `lab.py tarjeta` (task 15); windows now run every 5 hours around the clock via `lab.py turno` (anchor 2026-09-15 00:40 Europe/Madrid).
-- **Facebook metrics (2026-09-15):** `verify_api.py --metricas` asks Graph for deprecated Facebook post metrics (`post_impressions`, `post_impressions_unique`) and gets nothing usable; every Facebook snapshot will be empty until that metric list is updated (needs a code change, outside the window's allowed commands).
-- **Metrics run_group per snapshot:** the task's `<run_group base>-M24H` convention collides when several networks share one base (Day 1 A, LAB-PERSON-002-A); windows use `<run_id>-M24H` instead until the task text is aligned.
+- **Facebook metrics (2026-09-15, needs the user):** `7db5736` dropped the retired `post_impressions*` and sends `period=lifetime`, but Facebook still returns empty data (media-lab-verify 34927899386). Cause: `SDB_PAGE_TOKEN` lacks the `read_insights` permission (the `diagnostico-meta` logs list `pages_read_engagement` and `instagram_manage_insights`, never `read_insights`). Every Facebook snapshot stays empty until the user regenerates the Page token with `read_insights` and stores it in GitHub Secrets. Windows: record the empty snapshot as usual; do not change the metric list.
+- **Metrics run_group per snapshot:** resolved in `3c9e799`: the task text now uses the full `run_id` (`<run_id>-M24H`), as windows already did.
 
 - Probe Instagram API account identity/insights and Threads insights without exposing secrets.
 - Verify Edits account association, licensed audio, publishable export and both API-EDITS / ANDROID-EDITS routes.
