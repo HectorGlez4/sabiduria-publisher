@@ -36,7 +36,7 @@ CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
 # `com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity`. Consta en el plan de la fase 1
 # (sonda SONDA-10F) como ventana padre del desplegable de hashtags y, en el teléfono el 2026-09-15, como foco con el
 # selector «Nouvelle publication» abierto.
-ACTIVIDAD_COMPOSITOR = "MediaCaptureActivity"
+ACTIVIDAD_CREACION = "MediaCaptureActivity"
 DESLIZAR_REFRESCO_MS = 400
 ESPERA_TRAS_REFRESCO_S = 3  # el perfil tarda en recargar: dos volcados seguidos antes de eso darían el recuento viejo
 VOLCADOS_RECUENTO = 2
@@ -99,7 +99,9 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     ningún borrador visto que proteger) se fuerza el cierre UNA vez, se relanza en frío y se vuelve a esperar
     con el mismo criterio; el resultado lo anota en `arranque_en_frio`. Si algún volcado se leyó, el error
     sale como siempre y la app no se toca. Todo `PantallaInesperada`, `TelefonoError` u `OSError` desde el intento
-    de `forzar_cierre` en adelante sale con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje.
+    de `forzar_cierre` en adelante sale con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje; si ese
+    tipo no se puede construir con un solo mensaje (p. ej. `urllib.error.HTTPError`), sale como `PantallaInesperada`
+    con el nombre del tipo delante, encadenado al original.
 
     `publicaciones_antes` sale de `_recuento_fresco`: Instagram puede tener el perfil en memoria con un recuento
     desfasado (medido el 2026-09-15). El resultado dice en `recuento_refrescado` si se recargó y estabilizó, y en
@@ -165,7 +167,11 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     except (PantallaInesperada, telefono.TelefonoError, OSError) as e:
         if not arranque_en_frio:
             raise
-        raise type(e)(f"{e} {AVISO_ARRANQUE_EN_FRIO}") from e
+        try:
+            nuevo = type(e)(f"{e} {AVISO_ARRANQUE_EN_FRIO}")
+        except TypeError:  # subclases con constructor de varios argumentos (p. ej. urllib.error.HTTPError)
+            raise PantallaInesperada(f"{type(e).__name__}: {e} {AVISO_ARRANQUE_EN_FRIO}") from e
+        raise nuevo from e
 
 
 def _exigir_arranque_en_frio_seguro(evidencia: Path, sin_volcado: pasos.SinVolcado) -> None:
@@ -184,10 +190,10 @@ def _exigir_arranque_en_frio_seguro(evidencia: Path, sin_volcado: pasos.SinVolca
     if not focos:
         raise no_se_cierra("no se pudo leer el foco de ventana (ni mCurrentFocus ni mFocusedApp en dumpsys window)") \
             from sin_volcado
-    en_compositor = [f for f in focos if ACTIVIDAD_COMPOSITOR in f]
-    if en_compositor:
+    en_creacion = [f for f in focos if ACTIVIDAD_CREACION in f]
+    if en_creacion:
         raise no_se_cierra(f"un foco está en el flujo de creación (selector, editor y compositor: "
-                           f"{', '.join(en_compositor)}): puede haber una publicación a medias") from sin_volcado
+                           f"{', '.join(en_creacion)}): puede haber una publicación a medias") from sin_volcado
 
 
 def alternar_recorte(evidencia: Path) -> Path:

@@ -5063,6 +5063,34 @@ def seccion_arranque_en_frio() -> None:
               f"un OSError al guardar la captura del selector tras el arranque en frío: sale 4 con el aviso "
               f"({res and res[:2]}, {sim.orden})")
 
+        # (m-2) HTTPError es subclase de OSError y su constructor pide cinco argumentos: type(e)(mensaje) daría TypeError.
+        import urllib.error
+        original_http = urllib.error.HTTPError("https://ejemplo.invalid/", 503, "Service Unavailable", None, None)
+        sim = TelefonoSimulado([colgado], focos=tuple(T.focos_de(real_main_tab)), tras_cierre=normal)
+        captura_simulada = sim.captura
+
+        def captura_selector_http(destino, timeout=None):
+            if destino.name == "ig-01-selector.png":
+                raise original_http
+            return captura_simulada(destino, timeout)
+
+        sim.captura = captura_selector_http
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(pathlib.Path("evidencia-simulada"), subida))
+        check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, TypeError)
+              and str(err).startswith("HTTPError: HTTP Error 503") and str(err).endswith(IG.AVISO_ARRANQUE_EN_FRIO)
+              and err.__cause__ is original_http,
+              f"(m-2) un OSError con constructor incompatible tras el arranque en frío sale como PantallaInesperada "
+              f"con el tipo, el mensaje y el aviso, encadenado al original ({err!r}, {err and err.__cause__!r})")
+        sim = TelefonoSimulado([colgado], focos=tuple(T.focos_de(real_main_tab)), tras_cierre=normal)
+        captura_simulada = sim.captura
+        sim.captura = captura_selector_http
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "PantallaInesperada"
+              and "HTTPError" in str(campo(res[1], "error")),
+              f"(m-2) por lab.py sale 4 con JSON, no con un TypeError sin capturar ({res and res[:2]}, {err!r})")
+        check(IG.ACTIVIDAD_CREACION == "MediaCaptureActivity" and not hasattr(IG, "ACTIVIDAD_COMPOSITOR"),
+              "(m-3) la actividad del flujo de creación se llama ACTIVIDAD_CREACION")
+
 
 def seccion_recuento_refrescado() -> None:
     print("\n19. Fase 2: recuento del perfil refrescado antes de leer publicaciones_antes y publicaciones_despues")
