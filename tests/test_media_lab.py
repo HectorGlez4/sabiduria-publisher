@@ -1443,8 +1443,10 @@ def seccion_interfaz() -> None:
           f"(M-6) un «#» de otra aplicación con el teclado cerrado: ningún «atrás» ({err!r}, {sim.teclas})")
     arranque = jerarquia(nodo_xml("[340,1000][740,1400]", desc="Instagram", clase="android.widget.ImageView"))
     menu_crear = jerarquia(nodo_xml("[100,1500][980,1650]", texto="Publication"))
-    # Tres volcados del perfil: el que se lee al llegar y los dos que `_recuento_fresco` exige iguales tras refrescar.
-    sim = TelefonoSimulado([arranque, xml_inicio(), xml_perfil(), xml_perfil(), xml_perfil(), menu_crear, SELECTOR_IG])
+    # Cuatro volcados del perfil: el que se lee al llegar y los tres (pasos.VOLCADOS_LIMPIOS) que `_recuento_fresco`
+    # exige iguales tras refrescar.
+    sim = TelefonoSimulado([arranque, xml_inicio(), xml_perfil(), xml_perfil(), xml_perfil(), xml_perfil(), menu_crear,
+                            SELECTOR_IG])
     res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
     check(err is None and sim.toques.count(perfil_centro) == 1 and sim.toques[:1] == [perfil_centro]
           and res["publicaciones_antes"] == 3712 and sim.capturas == ["ig-01-selector.png"],
@@ -2161,6 +2163,8 @@ def seccion_cli_en_proceso() -> None:
             casos = (
                 (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--publicaciones-antes", "3"), "compartir sin --tema"),
                 (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T"), "compartir sin --publicaciones-antes"),
+                (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T", "--publicaciones-antes", "abc"),
+                 "compartir con --publicaciones-antes abc"),
                 (("ig", "compartir", "--run", "RUN-1", "--tema", "T", "--publicaciones-antes", "3"), "compartir sin --pie"),
                 (("ig", "pie", "--run", "RUN-1"), "pie sin --pie"),
                 (("ig", "abrir", "--run", "RUN-1"), "abrir sin --subido-en"),
@@ -2201,6 +2205,12 @@ def seccion_cli_en_proceso() -> None:
             codigo, datos, _ = lab(*base_compartir)
             check(codigo == 0 and recibido.get("produccion_cercana") is False,
                   f"(M-1) sin --produccion-cercana compartir recibe False ({codigo}, {recibido})")
+            for valor in ("none", "NULL"):
+                recibido.clear()
+                codigo, datos, _ = lab("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T",
+                                       "--publicaciones-antes", valor)
+                check(codigo == 0 and "antes" in recibido and recibido["antes"] is None,
+                      f"--publicaciones-antes {valor} llega a compartir como None ({codigo}, {recibido})")
 
             def pantalla(*args, **kwargs):
                 raise instagram_feed.PantallaInesperada("no aparece «Modifier le rognage»")
@@ -4872,8 +4882,9 @@ def seccion_arranque_en_frio() -> None:
     colgado = T.TelefonoError("uiautomator dump sin respuesta en 5 s")
     arranque = jerarquia(nodo_xml("[340,1000][740,1400]", desc="Instagram", clase="android.widget.ImageView"))
     menu_crear = jerarquia(nodo_xml("[100,1500][980,1650]", texto="Publication"))
-    # Tres volcados del perfil: el que se lee al llegar y los dos que `_recuento_fresco` exige iguales tras refrescar.
-    normal = [arranque, xml_inicio(), xml_perfil(), xml_perfil(), xml_perfil(), menu_crear, SELECTOR_IG]
+    # Cuatro volcados del perfil: el que se lee al llegar y los tres (pasos.VOLCADOS_LIMPIOS) que `_recuento_fresco`
+    # exige iguales tras refrescar.
+    normal = [arranque, xml_inicio(), xml_perfil(), xml_perfil(), xml_perfil(), xml_perfil(), menu_crear, SELECTOR_IG]
     subida = datetime(2026, 9, 14, 8, 39, tzinfo=timezone.utc)
     cierre, lanzar = f"forzar_cierre:{IG.PAQUETE}", f"lanzar:{IG.PAQUETE}"
 
@@ -5149,13 +5160,13 @@ def seccion_recuento_refrescado() -> None:
     with tempfile.TemporaryDirectory() as dir_evidencia:
         evid = pathlib.Path(dir_evidencia)
 
-        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, menu_crear, SELECTOR_IG])
+        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, p3719, menu_crear, SELECTOR_IG])
         res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
         check(err is None and res["publicaciones_antes"] == 3719 and res["recuento_refrescado"] is True
               and len(sim.deslizamientos) == 1 and dentro_de_pantalla(sim.deslizamientos[0])
               and sim.deslizamientos[0][1] < sim.deslizamientos[0][3] and not sim.prohibidos
               and sim.capturas == ["ig-01-selector.png"] and res["avisos"] == [],
-              f"refresco: 3718 en caché y 3719, 3719 tras deslizar: publicaciones_antes 3719, recuento_refrescado True "
+              f"refresco: 3718 en caché y 3719 en 3 volcados tras deslizar: publicaciones_antes 3719, recuento_refrescado True "
               f"y un solo deslizamiento hacia abajo dentro de la pantalla ({err!r}, {res}, {sim.deslizamientos})")
         check(sim.toques.count(centro_crear) == 1, f"refresco: «Créer» se toca una vez tras refrescar ({sim.toques})")
 
@@ -5201,6 +5212,66 @@ def seccion_recuento_refrescado() -> None:
               and sim.toques.count(centro_crear) == 0 and len(sim.deslizamientos) == 1,
               f"el gesto falla y la pantalla ya no es el perfil: abrir no toca «Créer» a ciegas ({err!r}, {sim.toques})")
 
+    evid = pathlib.Path("evidencia-simulada")
+    perfil_centro = T.buscar(xml_inicio(), texto="Profil")["centro"]
+
+    def sin_refresco(label: str, sim: TelefonoSimulado, texto_aviso: str) -> None:
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(err is None and sim.deslizamientos == [] and res["publicaciones_antes"] == 3718
+              and res["recuento_refrescado"] is False and any(texto_aviso in a for a in res["avisos"])
+              and sim.capturas == ["ig-01-selector.png"],
+              f"{label}: no se desliza, se lee sin refresco, hay aviso y abrir sigue "
+              f"({err!r}, {res and res.get('avisos')}, {sim.deslizamientos})")
+
+    notificacion = nodo_xml("[0,650][1080,800]", texto="Nouveau message", paquete="com.android.systemui")
+    check(P.motivo_tapado(p3718, 280, 730, PAQUETE_IG) is None
+          and "com.android.systemui" in (P.motivo_tapado(perfil(3718, notificacion), 280, 730, PAQUETE_IG) or ""),
+          "motivo_tapado: nada encima en el perfil sintético; una notificación de systemui posterior lo tapa")
+    sin_refresco("tapado: una notificación de systemui encima del inicio del gesto",
+                 TelefonoSimulado([arranque, xml_inicio(), perfil(3718, notificacion), menu_crear, SELECTOR_IG],
+                                  tras_deslizar=[p3720]), "com.android.systemui")
+    emergente = [{"nombre": "PopupWindow:tooltip9", "frame": (0, 600, 1080, 900), "ancho_padre": 1080}]
+    sin_refresco("una ventana emergente se solapa con el inicio del gesto",
+                 TelefonoSimulado([arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], tras_deslizar=[p3720],
+                                  emergentes=(emergente,)), "PopupWindow:tooltip9")
+    sin_refresco("las ventanas emergentes no se pueden leer",
+                 TelefonoSimulado([arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], tras_deslizar=[p3720],
+                                  emergentes=(T.TelefonoError("dumpsys no responde"),)), "dumpsys no responde")
+
+    pegado = jerarquia(nodo_xml("[316,92][693,250]", texto="sabiduriabolsillo"),
+                       nodo_xml("[40,2160][330,2280]", desc="3 718publications", clase="android.widget.LinearLayout"),
+                       nodo_xml("[40,2300][520,2338]", texto="Modifier le profil", clase="android.widget.Button"))
+    try:
+        IG.gesto_de_refresco(pegado)
+        pegado_lanza = False
+    except IG.PantallaInesperada:
+        pegado_lanza = True
+    check(pegado_lanza and IG.DESLIZAR_MIN_PX == 300,
+          "gesto casi nulo: con el botón pegado al fondo, menos de DESLIZAR_MIN_PX (300) tras recortar da PantallaInesperada")
+    avisos_pegado: list[str] = []
+    sim = TelefonoSimulado([pegado], tras_deslizar=[p3720])
+    res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco(pegado, avisos_pegado))
+    check(err is None and sim.deslizamientos == [] and res["recuento"] == 3718 and res["refrescado"] is False
+          and any("DESLIZAR_MIN_PX" in a or "menos de 300" in a for a in avisos_pegado),
+          f"gesto casi nulo: no se desliza y queda el aviso ({err!r}, {res}, {avisos_pegado})")
+
+    avisos_ilegible: list[str] = []
+    sim = TelefonoSimulado([p3718], tras_deslizar=[p3720])
+    res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco("<hierarchy><node", avisos_ilegible))
+    check(err is None and res["recuento"] is None and res["deslizado"] is False and sim.deslizamientos == []
+          and any("TelefonoError" in a for a in avisos_ilegible),
+          f"volcado ilegible: _recuento_fresco no lanza, no desliza y deja aviso ({err!r}, {res}, {avisos_ilegible})")
+
+    with entorno_lab_fase2() as (lab, raiz):
+        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, p3719, menu_crear, SELECTOR_IG])
+        sim.estado = lambda: {"adb": True, "despierto": True, "bloqueado": perfil_centro in sim.toques,
+                              "listo": perfil_centro not in sim.toques}
+        res, err = con_telefono_simulado(sim, lambda: lab("ig", "abrir", "--run", "RUN-1", "--subido-en", subida.isoformat()))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "TelefonoNoListo"
+              and centro_crear not in sim.toques and sim.deslizamientos == [] and sim.toques == [perfil_centro],
+              f"(I1) el teléfono deja de estar listo durante el refresco en abrir: sale 4 con TelefonoNoListo y no toca "
+              f"«Créer» ({res and res[:2]}, {sim.toques})")
+
     comp = xml_compositor()
     tema = "Autumn Days par Morunas"
     feed = xml_inicio()
@@ -5231,11 +5302,31 @@ def seccion_recuento_refrescado() -> None:
 
     with entorno_lab_fase2() as (lab, raiz):
         args = ("ig", "abrir", "--run", "RUN-1", "--subido-en", subida.isoformat())
-        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, menu_crear, SELECTOR_IG])
+        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, p3719, menu_crear, SELECTOR_IG])
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 0 and campo(res[1], "recuento_refrescado") is True
               and campo(res[1], "publicaciones_antes") == 3719,
               f"ig abrir emite recuento_refrescado true y el recuento refrescado ({res and res[:2]}, {err!r})")
+
+        pie_archivo = raiz / "pie-recuento.txt"
+        pie_archivo.write_text(PIE_PRUEBA + "\n", encoding="utf-8")
+        sim = TelefonoSimulado(tras_publicar, tras_deslizar=[p3720])
+        res, err = con_telefono_simulado(sim, lambda: lab("ig", "compartir", "--run", "RUN-1", "--pie", str(pie_archivo),
+                                                          "--tema", tema, "--publicaciones-antes", "none"))
+        check(err is None and res[0] == 5 and campo(res[1], "estado") == "confirmado_sin_conteo"
+              and "publicaciones_antes" in res[1] and campo(res[1], "publicaciones_antes") is None
+              and sim.toques.count(centro_partager) == 1,
+              f"(I2) ig compartir --publicaciones-antes none: confirmado_sin_conteo con código 5 ({res and res[:2]}, {err!r})")
+
+    sim = TelefonoSimulado(tras_publicar, tras_deslizar=[p3720])
+    sim.estado = lambda: {"adb": True, "despierto": True, "bloqueado": perfil_centro in sim.toques,
+                          "listo": perfil_centro not in sim.toques}
+    res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3719))
+    check(err is None and res["estado"] == "confirmado_sin_conteo" and res["publicaciones_despues"] is None
+          and sim.deslizamientos == [] and sim.toques.count(centro_partager) == 1
+          and any("TelefonoNoListo" in a for a in res["avisos"]),
+          f"(I1) el teléfono deja de estar listo durante el refresco en compartir: aviso y confirmado_sin_conteo, sin "
+          f"excepción ({err!r}, {res and res['estado']}, {res and res['avisos']})")
 
 
 SECCIONES = [

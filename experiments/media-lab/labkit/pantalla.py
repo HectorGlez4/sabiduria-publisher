@@ -288,6 +288,28 @@ def punto_bloqueado(xml: str, x: int, y: int) -> dict | None:
             or _bajo_el_toque(todos, punto, _es_borrado))
 
 
+def motivo_tapado(xml: str, x: int, y: int, paquete: str) -> str | None:
+    """Por qué el punto (x, y) no está a la vista de `paquete`, o None si lo que se dibuja encima en ese punto es de
+    `paquete`. Cuenta como tapado si ningún nodo de `paquete` contiene el punto o si, detrás del último que lo contiene
+    en orden de documento, otro nodo lo contiene (siempre de otro paquete: una notificación de systemui, un diálogo).
+
+    Es la regla de `telefono.tapado` (lo dibujado después tapa) llevada a un punto. `telefono.tapado` no sirve tal
+    cual: un nodo sintético de 1×1 no está en el volcado y da siempre tapado, y con el nodo más profundo bajo el punto
+    también, porque en los perfiles reales `modal_container` y `overlay_layout_container` (pantalla completa, vacíos)
+    van después en el documento."""
+    lista = telefono.nodos(xml)
+    bajo = [(i, n) for i, n in enumerate(lista)
+            if n["bounds"][0] <= x < n["bounds"][2] and n["bounds"][1] <= y < n["bounds"][3]]
+    propios = [i for i, n in bajo if n["package"] == paquete]
+    if not propios:
+        return f"ningún nodo de {paquete} en ({x}, {y})"
+    encima = next((n for i, n in bajo if i > propios[-1]), None)
+    if encima is not None:
+        etiqueta = encima["texto"] or encima["desc"] or encima["resource_id"] or encima["clase"]
+        return f"un nodo de {encima['package']} ({etiqueta!r} en {encima['bounds']}) tapa ({x}, {y})"
+    return None
+
+
 def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | None = None,
                resource_id: str | None = None) -> dict:
     """El único nodo de `paquete` con ese texto, content-desc o resource-id (basta el final tras «/»), si pulsarlo

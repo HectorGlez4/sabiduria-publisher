@@ -1000,6 +1000,17 @@ def cmd_fixture_podar(a) -> int:
     return 0
 
 
+SIN_PUBLICACIONES_ANTES = object()  # centinela: --publicaciones-antes no se dio (None es un valor válido, «none»)
+
+
+def _publicaciones_antes(valor: str) -> int | None:
+    """`none` o `null` (sin distinguir mayúsculas) son None: `ig abrir` no pudo dar el recuento. Lo demás, `int`
+    (un ValueError sale por argparse con código 2)."""
+    if valor.strip().lower() in ("none", "null"):
+        return None
+    return int(valor)
+
+
 def cmd_ig(a) -> int:
     from labkit import instagram_feed as ig
     ev = _evidencia(a.run)
@@ -1016,7 +1027,8 @@ def cmd_ig(a) -> int:
         _exigir(subido.tzinfo is not None, "--subido-en necesita zona horaria")
     _exigir(not a.produccion_cercana or a.paso == "compartir", "--produccion-cercana solo vale en compartir")
     if a.paso == "compartir":
-        _exigir(bool(a.tema) and a.publicaciones_antes is not None, "compartir exige --tema y --publicaciones-antes")
+        _exigir(bool(a.tema) and a.publicaciones_antes is not SIN_PUBLICACIONES_ANTES,
+                "compartir exige --tema y --publicaciones-antes (none si ig abrir lo dio null)")
     pasos = {
         "abrir": lambda: ig.abrir_nueva_publicacion(ev, subido),
         "recorte": lambda: {"captura": ig.alternar_recorte(ev)},
@@ -1193,7 +1205,8 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--pie", help="archivo del pie (pie, compartir)")
     p.add_argument("--subido-en", help="subido_en que devolvió telefono-subir (abrir)")
     p.add_argument("--tema", help="tema que devolvió ig audio (compartir)")
-    p.add_argument("--publicaciones-antes", type=int, help="publicaciones_antes que devolvió ig abrir (compartir)")
+    p.add_argument("--publicaciones-antes", type=_publicaciones_antes, default=SIN_PUBLICACIONES_ANTES,
+                   help="número de ig abrir; none si ig abrir lo dio null (saldrá confirmado_sin_conteo)")
     p.add_argument("--produccion-cercana", action="store_true",
                    help="preflight trajo espera: un confirmado baja a confirmado_sin_conteo (compartir)")
     p.set_defaults(func=cmd_ig)

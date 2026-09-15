@@ -39,7 +39,7 @@ CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
 ACTIVIDAD_CREACION = "MediaCaptureActivity"
 DESLIZAR_REFRESCO_MS = 400
 ESPERA_TRAS_REFRESCO_S = 3  # el perfil tarda en recargar: dos volcados seguidos antes de eso darían el recuento viejo
-VOLCADOS_RECUENTO = 2
+VOLCADOS_RECUENTO = pasos.VOLCADOS_LIMPIOS  # la misma regla que antes de dar por buena cualquier lectura decisiva
 
 
 def _esperar(zona: str | None = None, **kw) -> str:
@@ -48,30 +48,45 @@ def _esperar(zona: str | None = None, **kw) -> str:
 
 def _recuento_fresco(xml: str, avisos: list[str]) -> dict:
     """Recuento de publicaciones con el perfil de la marca recargado. `xml` es el volcado del perfil ya verificado
-    (@marca con «Modifier le profil»); nunca lanza, todo lo que no sale bien va a `avisos`.
+    (@marca con «Modifier le profil»). Solo lanza `TelefonoNoListo`, sin tocar nada más; todo lo demás que no sale
+    bien va a `avisos`.
 
     Desliza UNA vez hacia abajo con `gesto_de_refresco` (pull-to-refresh), espera ESPERA_TRAS_REFRESCO_S y exige el
     mismo recuento en VOLCADOS_RECUENTO volcados frescos seguidos del perfil de la marca (`pasos.esperar_estable`).
     Si el gesto no se puede situar o su inicio o su final caen sobre un control que no se toca
-    (`pantalla.punto_bloqueado`), no desliza y devuelve la lectura de `xml` sin refrescar. Si el gesto o la espera
+    (`pantalla.punto_bloqueado`), algo de otro paquete tapa el inicio (`pantalla.motivo_tapado`), una ventana
+    emergente se solapa con él o el volcado o las emergentes no se pueden leer, no desliza y devuelve la lectura de
+    `xml` sin refrescar (None si ni eso se pudo leer). Si el gesto o la espera
     fallan (no se estabiliza, `TelefonoError`…), el recuento es None.
 
     Devuelve `{"recuento", "refrescado", "deslizado", "xml"}`: `refrescado` solo si se deslizó y el recuento se
     estabilizó; `deslizado` si se llegó a pedir el gesto (la pantalla puede haber cambiado); `xml`, el último volcado
     estable del perfil, o None si no lo hay."""
-    fuera = {"recuento": publicaciones_de_perfil(xml), "refrescado": False, "deslizado": False, "xml": None}
+    fuera = {"recuento": None, "refrescado": False, "deslizado": False, "xml": None}
     try:
+        fuera["recuento"] = publicaciones_de_perfil(xml)
         x1, y1, x2, y2 = gesto_de_refresco(xml)
-    except PantallaInesperada as e:
-        avisos.append(f"no se refrescó el perfil ({e}): recuento sin refrescar")
+        motivo = None
+        for extremo, (x, y) in (("empieza", (x1, y1)), ("acaba", (x2, y2))):
+            culpable = pantalla.punto_bloqueado(xml, x, y)
+            if culpable is not None:
+                etiqueta = culpable["texto"] or culpable["desc"] or culpable["resource_id"]
+                motivo = f"el gesto {extremo} en ({x}, {y}) sobre {etiqueta!r}, que no se toca"
+                break
+        if motivo is None:
+            motivo = pantalla.motivo_tapado(xml, x1, y1, PAQUETE)
+        if motivo is None:
+            emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(PAQUETE), [(x1, y1, x1 + 1, y1 + 1)])
+            if emergente is not None:
+                motivo = f"{pantalla.describe_emergente(emergente)} se solapa con el inicio del gesto"
+    except pasos.TelefonoNoListo:
+        raise
+    except (PantallaInesperada, telefono.TelefonoError) as e:
+        avisos.append(f"no se refrescó el perfil ({type(e).__name__}: {e}): recuento sin refrescar")
         return fuera
-    for extremo, (x, y) in (("empieza", (x1, y1)), ("acaba", (x2, y2))):
-        culpable = pantalla.punto_bloqueado(xml, x, y)
-        if culpable is not None:
-            etiqueta = culpable["texto"] or culpable["desc"] or culpable["resource_id"]
-            avisos.append(f"no se refrescó el perfil: el gesto {extremo} en ({x}, {y}) sobre {etiqueta!r}, "
-                          f"que no se toca: recuento sin refrescar")
-            return fuera
+    if motivo is not None:
+        avisos.append(f"no se refrescó el perfil: {motivo}: recuento sin refrescar")
+        return fuera
 
     def lectura(x: str) -> int | None:
         if perfil_activo(x) != MARCA or not _coincidencias(x, contiene="Modifier le profil"):
@@ -85,6 +100,9 @@ def _recuento_fresco(xml: str, avisos: list[str]) -> dict:
         telefono.deslizar(x1, y1, x2, y2, DESLIZAR_REFRESCO_MS)
         reloj.dormir(ESPERA_TRAS_REFRESCO_S)
         estable, recuento = pasos.esperar_estable(lectura, VOLCADOS_RECUENTO, "el recuento del perfil tras refrescar")
+        pasos.exigir_listo()
+    except pasos.TelefonoNoListo:
+        raise  # hereda de PantallaInesperada: sin esto `abrir` tocaría «Créer» con el teléfono ya no listo
     except (PantallaInesperada, telefono.TelefonoError, OSError) as e:
         avisos.append(f"el refresco del perfil falló, sin recuento: {type(e).__name__}: {e}")
         return fuera
