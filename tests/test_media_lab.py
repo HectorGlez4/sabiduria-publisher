@@ -4638,6 +4638,9 @@ def seccion_sonda_y_fixtures() -> None:
             ("instagram", "--resource-id", "com.instagram.android:id/boton_rojo", "un nodo elegido por id cuyo texto es «Retirer»",
              jerarquia(nodo_xml("[100,1100][980,1200]", texto="Retirer", clase=boton,
                                 extra='clickable="true" resource-id="com.instagram.android:id/boton_rojo"'))),
+            ("facebook", "--desc", "Opción", "una fila pulsable con «Mover a la papelera» lejos del centro del toque",
+             jerarquia(nodo_xml("[0,1500][1080,1600]", desc="Opción", clase="android.view.ViewGroup", paquete=fb, extra=pulsable,
+                                hijos=nodo_xml("[700,1520][1040,1580]", texto="Mover a la papelera", paquete=fb)))),
         )
         for app, opcion, criterio, label, xml in dialogos:
             sim = TelefonoSimulado([xml])
@@ -4704,6 +4707,13 @@ def seccion_sonda_y_fixtures() -> None:
                                                           "--resource-id", "com.facebook.katana:id/composer_post_button"))
         check(res is not None and res[0] == 4 and sim.toques == [],
               f"sonda tocar no pulsa composer_post_button de Facebook sin texto ({res and res[0]}, {res and campo(res[1], 'error')})")
+        con_etiqueta = jerarquia(nodo_xml("[0,150][1080,2000]", desc="Options", clase="android.widget.FrameLayout",
+                                          extra='clickable="true" resource-id="com.instagram.android:id/share_menu"',
+                                          hijos=nodo_xml("[847,1500][1080,1649]", texto="Suivant", extra=pulsable)))
+        sim = TelefonoSimulado([con_etiqueta])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        check(res is not None and res[0] == 0 and sim.toques == [(963, 1574)],
+              f"un contenedor pulsable CON etiqueta e id share_menu no bloquea el «Suivant» de dentro ({res and res[0]}, {sim.toques})")
 
         # I2: nada tapa el nodo (notificación de systemui, aviso de la app o ventana emergente).
         identificar = nodo_xml("[40,300][1040,500]", texto="Identifier des personnes", extra=pulsable)
@@ -4752,7 +4762,7 @@ def seccion_sonda_y_fixtures() -> None:
         nodo_xml("[0,1400][1080,1500]", texto="#citasdiarias",
                  extra='resource-id="com.instagram.android:id/caption_text" hint="#sabiduria"'),
         nodo_xml("[0,1600][1080,1700]", texto="3 min"),
-    ).replace("</hierarchy>", '<extra text="Juan Pérez"/></hierarchy>')
+    ).replace("</hierarchy>", '<extra package="com.instagram.android" text="Juan Pérez"/></hierarchy>')
     podado = FX.podar(fugas, "instagram")
     pares = [(n["texto"], n["desc"]) for n in T.nodos(podado)]
     quedan = [f for f in ("juanperez612345678", "Juan Pérez", "nota de voz", "story_tray_juan", "612345678",
@@ -4788,6 +4798,13 @@ def seccion_sonda_y_fixtures() -> None:
           and TX.es_id_envio("com.instagram.android:id/SUBMIT") and not TX.es_id_envio("com.instagram.android:id/poster_view")
           and not TX.es_id_envio("com.instagram.android:id/reshared_badge") and not TX.es_id_envio(""),
           "es_id_envio busca palabras enteras del final del id partido por «_»")
+    check(not TX.permitido("612345678 publications", "instagram"),
+          "un recuento con 6 o más cifras seguidas no se queda en un fixture aunque case el patrón de publicaciones")
+    check(FX.revisar(jerarquia(nodo_xml("[0,0][1080,100]", texto="Profil", paquete="com.android.systemui")), "instagram"),
+          "revisar señala un nodo de systemui aunque su texto sea de la tabla")
+    from labkit import pantalla as P
+    check(lanza(lambda: P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, desc="Icône"), P.PantallaInesperada),
+          "nodo_sonda rechaza un icono dentro de un botón de envío")
 
 
 SECCIONES = [
