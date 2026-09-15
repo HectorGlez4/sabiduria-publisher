@@ -3197,15 +3197,52 @@ def seccion_metricas() -> None:
         check(TOKEN not in crudo and TOKEN not in salida,
               "un token en la URL de paginación o en el error que levanta no llega ni al JSON ni a stdout")
 
+    print("   · _redactar: patrón (mayúsculas, %3D, JSON) y valor de los secretos del entorno")
+    from urllib.parse import quote
+
+    entorno_previo = dict(os.environ)
+    try:
+        os.environ.clear()
+        os.environ.update({"SDB_PAGE_TOKEN": TOKEN, "SDB_THREADS_TOKEN": "TT"})
+        casos = [
+            (f'{{"access_token": "{TOKEN}", "ok": true}}', "token en un JSON de error"),
+            (f"redirect%3Fto%3Dhttps%3A%2F%2Fx%3Faccess_token%3D{TOKEN}%26foo%3Dbar", "token con %3D"),
+            (f"ACCESS_TOKEN={TOKEN} rejected", "ACCESS_TOKEN= en mayúsculas"),
+            (f"credential rejected: {TOKEN}", "el token suelto, sin ningún patrón delante"),
+        ]
+        for texto, label in casos:
+            redactado = modulo._redactar(texto)
+            check(TOKEN not in redactado and "***" in redactado, f"_redactar quita el token: {label} ({redactado!r})")
+
+        os.environ["SDB_SHORT_TOKEN"] = "PT"  # 2 caracteres: el mismo valor corto que usan otras pruebas
+        check(modulo._redactar("PT aparece aquí como texto normal") == "PT aparece aquí como texto normal",
+              "un valor de menos de 8 caracteres no activa la redacción por valor (no destroza texto legítimo)")
+
+        os.environ["SDB_OTRA_TOKEN_COSA"] = "OTRASECRETALARGA"
+        check("OTRASECRETALARGA" not in modulo._redactar("x OTRASECRETALARGA y"),
+              "cualquier variable SDB_*TOKEN* del entorno se redacta por valor, no solo las dos conocidas")
+
+        token_especial = "EAA/SEC+RET=1?"  # más de 8 caracteres, con símbolos que cambian al codificar
+        os.environ["SDB_PAGE_TOKEN"] = token_especial
+        codificado = quote(token_especial, safe="")
+        check(codificado not in modulo._redactar(f"redirect?access_token={codificado}"),
+              "el valor de un secreto se redacta también ya percent-encoded (quote(v, safe=''))")
+
+        check(modulo._redactar("nada que redactar aquí") == "nada que redactar aquí",
+              "un texto sin secretos ni patrones sale igual")
+    finally:
+        os.environ.clear()
+        os.environ.update(entorno_previo)
+
     print("   · labkit.metricas.registrar: plataforma del run, cotejo de post_id/shortcode y fechas")
     from datetime import datetime, timezone
 
     run_base = {"run_id": "LAB-UNIT-FACEBOOK", "platform": "facebook",
-                "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+                "publication": {"post_id": "FBID-BASE", "submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
     resultado_multi = {
         "run_group_id": "LAB-UNIT-API", "observed_at": "2026-09-14T20:05:00+00:00",
         "results": {
-            "facebook": {"status": "verified", "metrics": {"post_impressions": 10}},
+            "facebook": {"status": "verified", "detail": {"id": "FBID-BASE"}, "metrics": {"post_impressions": 10}},
             "instagram": {"status": "verified", "metrics": {"reach": 500}},
         },
     }
@@ -3215,6 +3252,18 @@ def seccion_metricas() -> None:
     check(list(snap["metricas"]) == ["facebook"], f"solo se registra la red del run, no todas las de results ({snap})")
     check(snap["edad_horas"] == 24.08, f"edad_horas calculada desde submitted_at ({snap})")
     check(run_base["publication"]["snapshots"] == [], "registrar no muta el run que recibió")
+
+    run_sin_post_id = {"run_id": "LAB-UNIT-SIN-POST-ID-FACEBOOK", "platform": "facebook",
+                       "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+    resultado_sin_post_id = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                             "results": {"facebook": {"status": "verified", "detail": {"id": "CUALQUIERA"},
+                                         "metrics": {"post_impressions": 1}}}}
+    try:
+        ME.registrar(run_sin_post_id, resultado_sin_post_id, run_group="G", instantanea="24h",
+                     ahora=datetime.now(timezone.utc))
+        check(False, "debía rechazar un run sin publication.post_id")
+    except ME.MetricasError:
+        check(True, "un run sin publication.post_id se rechaza: no hay con qué cotejar el resultado")
 
     run_api_id = {"run_id": "LAB-UNIT-2-FACEBOOK", "platform": "facebook",
                   "publication": {"post_id": "FBID123", "snapshots": []}}
@@ -3259,9 +3308,10 @@ def seccion_metricas() -> None:
         check(True, "una plataforma failed en el resultado no consume la instantánea (código 2, sin escribir)")
 
     run_fecha_ingenua = {"run_id": "LAB-UNIT-3-FACEBOOK", "platform": "facebook",
-                        "publication": {"submitted_at": "2026-09-13T20:00:00", "snapshots": []}}  # sin zona
+                        "publication": {"post_id": "FB-NAIVE", "submitted_at": "2026-09-13T20:00:00",
+                                       "snapshots": []}}  # sin zona
     resultado_simple = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
-                        "results": {"facebook": {"status": "verified", "metrics": {}}}}
+                        "results": {"facebook": {"status": "verified", "detail": {"id": "FB-NAIVE"}, "metrics": {}}}}
     try:
         ME.registrar(run_fecha_ingenua, resultado_simple, run_group="G", instantanea="24h", ahora=datetime.now(timezone.utc))
         check(False, "debía rechazar un submitted_at sin zona horaria en vez de reventar con TypeError")
@@ -3269,9 +3319,10 @@ def seccion_metricas() -> None:
         check(True, "submitted_at sin zona horaria da MetricasError (código 2), no un TypeError sin capturar")
 
     run_desfase = {"run_id": "LAB-UNIT-4-FACEBOOK", "platform": "facebook",
-                   "publication": {"submitted_at": "2026-09-14T00:00:00+05:00", "snapshots": []}}
+                   "publication": {"post_id": "FB-DESFASE", "submitted_at": "2026-09-14T00:00:00+05:00",
+                                  "snapshots": []}}
     resultado_desfase = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
-                        "results": {"facebook": {"status": "verified", "metrics": {}}}}
+                        "results": {"facebook": {"status": "verified", "detail": {"id": "FB-DESFASE"}, "metrics": {}}}}
     snap_desfase = ME.registrar(run_desfase, resultado_desfase, run_group="G", instantanea="24h",
                                ahora=datetime.now(timezone.utc))["publication"]["snapshots"][0]
     # submitted_at es 2026-09-14T00:00+05:00 = 2026-09-13T19:00 UTC; observed_at es
@@ -3315,12 +3366,13 @@ def seccion_metricas() -> None:
             return f"experiments/media-lab/results/999/{nombre}"
 
         run = {"run_id": "LAB-CLI-MET-FACEBOOK", "coverage_cell_id": "CELL-MET", "platform": "facebook",
-               "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+               "publication": {"post_id": "FB-CLI-BASE", "submitted_at": "2026-09-13T20:00:00+00:00",
+                               "snapshots": []}}
         escribir_run("LAB-CLI-MET-FACEBOOK", run)
         resultado_rel = escribir_resultado("verification-result.json", {
             "run_group_id": "LAB-CLI-MET-API", "observed_at": "2026-09-14T20:05:00+00:00",
             "results": {
-                "facebook": {"status": "verified", "metrics": {"post_impressions": 10}},
+                "facebook": {"status": "verified", "detail": {"id": "FB-CLI-BASE"}, "metrics": {"post_impressions": 10}},
                 "instagram": {"status": "verified", "metrics": {"reach": 999}},
             }})
 
@@ -3381,11 +3433,12 @@ def seccion_metricas() -> None:
 
             # I-3: coverage.json no tiene la celda del run -> 2, ni el run ni coverage.json se tocan.
             run4 = {"run_id": "LAB-CLI-MET4-FACEBOOK", "coverage_cell_id": "CELL-NOPE", "platform": "facebook",
-                    "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+                    "publication": {"post_id": "FB-CLI-MET4", "submitted_at": "2026-09-13T20:00:00+00:00",
+                                    "snapshots": []}}
             escribir_run("LAB-CLI-MET4-FACEBOOK", run4)
             resultado_run4_rel = escribir_resultado("run4.json", {
                 "run_group_id": "LAB-CLI-MET4-API", "observed_at": "2026-09-14T20:05:00+00:00",
-                "results": {"facebook": {"status": "verified", "metrics": {}}}})
+                "results": {"facebook": {"status": "verified", "detail": {"id": "FB-CLI-MET4"}, "metrics": {}}}})
             cobertura_antes = json.loads((raiz / "coverage.json").read_text(encoding="utf-8"))
             codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET4-FACEBOOK",
                                    "--run-group", "LAB-CLI-MET4-API", "--resultado", resultado_run4_rel,
@@ -3403,6 +3456,14 @@ def seccion_metricas() -> None:
     check("manifest con .." in texto_workflow, "media-lab-verify.yml valida que --manifest no lleve ..")
     check("manifest fuera de manifests/" in texto_workflow,
           "media-lab-verify.yml exige que --manifest esté bajo experiments/media-lab/manifests/")
+    check("run-name:" in texto_workflow and "inputs.manifest" in texto_workflow,
+          "media-lab-verify.yml identifica el run por la ruta del manifiesto (run-name), no por la hora")
+
+    texto_publish = (ROOT / ".github" / "workflows" / "media-lab.yml").read_text(encoding="utf-8")
+    check("run-name:" in texto_publish and "inputs.manifest" in texto_publish,
+          "media-lab.yml también identifica el run por la ruta del manifiesto (run-name)")
+    check("media-lab-result-" in texto_publish, "media-lab.yml sube el artefacto media-lab-result-<id>")
+    check("live-result.json" in texto_publish, "media-lab.yml escribe live-result.json")
 
 
 SECCIONES = [
