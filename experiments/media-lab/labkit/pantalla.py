@@ -313,20 +313,22 @@ def boton_descarte(xml: str, app: str) -> dict:
     """El botón de descartar de `app`, solo si el volcado muestra su diálogo de descarte con los
     textos exactos de `textos.DESCARTE`. Nunca un control de envío.
 
-    Revisión B3: compara con `textos.normalizar` (NFKC, sin caracteres invisibles, espacios
-    colapsados, sin mayúsculas), para que un NBSP o un espacio fino antes del «?» no cuelen un
-    título de borrado como si fuera de descarte; y la detección de BORRADO mira cualquier
-    paquete del volcado, no solo el de `app` (falla cerrado también si el título de borrado
-    aparece bajo otro paquete)."""
+    Revisión B3: compara con `textos.normalizar_titulo` (NFKC, sin caracteres invisibles ni comillas,
+    espacios colapsados, sin espacio antes de «?», sin mayúsculas), para que un NBSP o un espacio fino
+    antes del «?», o unas comillas tipográficas distintas, no cuelen un título de borrado como si
+    fuera de descarte (menor 1 de la re-revisión de `95a421c`: «Supprimer la publication?»,
+    «Supprimer la « publication » ?» y «Delete "post"?» se reconocen igual); y la detección de
+    BORRADO mira cualquier paquete del volcado, no solo el de `app` (falla cerrado también si el
+    título de borrado aparece bajo otro paquete)."""
     paquete = textos.PAQUETES[app]
     tabla = textos.DESCARTE[app]
-    borrado_norm = {textos.normalizar(t) for t in textos.TITULOS_BORRADO}
+    borrado_norm = {textos.normalizar_titulo(t) for t in textos.TITULOS_BORRADO}
     borrado = next((n for n in telefono.nodos(xml)
-                    if any(v and textos.normalizar(v) in borrado_norm for v in (n["texto"], n["desc"]))), None)
+                    if any(v and textos.normalizar_titulo(v) in borrado_norm for v in (n["texto"], n["desc"]))), None)
     if borrado is not None:
         raise PantallaInesperada(f"el diálogo parece de borrado ({borrado['texto'] or borrado['desc']!r}), no de descarte: no se pulsa nada")
-    titulos_norm = {textos.normalizar(t) for t in tabla["titulos"]}
-    if not any(textos.normalizar(n["texto"]) in titulos_norm or textos.normalizar(n["desc"]) in titulos_norm
+    titulos_norm = {textos.normalizar_titulo(t) for t in tabla["titulos"]}
+    if not any(textos.normalizar_titulo(n["texto"]) in titulos_norm or textos.normalizar_titulo(n["desc"]) in titulos_norm
                for n in telefono.buscar_todos(xml, paquete=paquete)):
         raise PantallaInesperada(f"no se ve el diálogo de descarte de {app} {tabla['titulos']}: no se pulsa nada")
     for etiqueta in tabla["botones"]:

@@ -4185,6 +4185,34 @@ def seccion_textos_y_descarte() -> None:
         check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
               f"I-b: {variante!r} normalizado sigue bloqueando como NO_TOCAR ({err!r})")
 
+    # Menor 1: los títulos de borrado se detectan aunque cambien las comillas o lleven un espacio
+    # antes del «?»; «Recommencer ?» sigue siendo un descarte legítimo (no un borrado).
+    for titulo_borrado in ("Supprimer la publication?", "Supprimer la « publication » ?", 'Delete "post"?'):
+        borrado_variante = jerarquia(
+            nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
+            nodo_xml("[100,900][980,1000]", texto=titulo_borrado),
+            nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button", extra='clickable="true"'))
+        sim = TelefonoSimulado([borrado_variante])
+        res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+        check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
+              f"menor 1: {titulo_borrado!r} se detecta como borrado pese a comillas o espacio distintos ({err!r})")
+    descarte_mayus = jerarquia(
+        nodo_xml("[100,900][980,1000]", texto="RECOMMENCER ?"),
+        nodo_xml("[100,1100][980,1200]", texto="Recommencer", clase="android.widget.Button", extra='clickable="true"'))
+    sim = TelefonoSimulado([descarte_mayus])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(err is None and sim.toques == [(540, 1150)],
+          f"menor 1: «RECOMMENCER ?» en mayúsculas sigue siendo un descarte legítimo ({err!r})")
+
+    # Menor 2: un contenedor pulsable de pantalla completa sin etiqueta propia que envuelve un
+    # «Partager» bloquea cualquier toque dentro (falla cerrado a propósito).
+    xml_pantalla_completa = jerarquia(
+        nodo_xml("[0,0][1080,2340]", clase="android.widget.Button", extra='clickable="true"',
+                 hijos=nodo_xml("[480,2080][600,2120]", texto="Partager") + nodo_xml("[10,10][60,60]", texto="Lejos")))
+    lejos = T.buscar(xml_pantalla_completa, texto="Lejos")
+    check(P.es_envio(xml_pantalla_completa, lejos, PAQUETE_IG),
+          "menor 2: un contenedor pulsable de pantalla completa con un «Partager» dentro bloquea cualquier toque, aunque esté lejos (falla cerrado)")
+
 
 SECCIONES = [
     seccion_portapapeles,

@@ -133,6 +133,20 @@ def normalizar(valor: str) -> str:
     return " ".join(sin_invisibles.split()).casefold()
 
 
+_COMILLAS = "«»“”‘’\"'"
+
+
+def normalizar_titulo(valor: str) -> str:
+    """`normalizar` y, además, sin comillas (rectas, tipográficas o angulares: «» “” ‘’ "') ni espacio
+    antes de un «?» de cierre: para comparar títulos de diálogo, que pueden variar en el tipo de
+    comilla o llevar un espacio antes del interrogante sin dejar de ser el mismo título
+    («Supprimer la publication?», «Supprimer la « publication » ?», «Delete "post"?»)."""
+    forma = unicodedata.normalize("NFKC", valor or "")
+    limpio = "".join(c for c in forma if unicodedata.category(c) != "Cf" and c not in _COMILLAS)
+    colapsado = " ".join(limpio.split()).casefold()
+    return re.sub(r"\s+\?", "?", colapsado)
+
+
 def coincide_o_prefijo(valor: str, candidatos) -> bool:
     """`valor` coincide, tras `normalizar`, con alguno de `candidatos` (también normalizados): exacto, o
     por prefijo seguido de un separador no alfanumérico («Votre story, 2 nouvelles», «Amis proches (12)»,
