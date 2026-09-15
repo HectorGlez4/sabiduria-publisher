@@ -29,7 +29,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PLACE-003",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -55,6 +55,8 @@
     "motivo": "Recomposición nativa 9:16 de la misma escena de Nan Madol: muros de prismas de basalto con manglares, canal azolvado, selva y cresta volcánica; sin personas, barcas, carteles ni texto; 1080x1920 a sangre; franja del titular (y 250-680) es cielo y cresta sin detalle importante y los muros quedan en la banda central; respeta do_not_use.",
     "revisado_en": "2026-09-15T13:48:34+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-PLACE-003-A-FACEBOOK-STORY"
+  ],
   "no_lanzados": 0
 }

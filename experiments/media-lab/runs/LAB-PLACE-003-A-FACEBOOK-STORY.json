@@ -1,0 +1,183 @@
+{
+  "run_id": "LAB-PLACE-003-A-FACEBOOK-STORY",
+  "cohort": "experiment",
+  "coverage_cell_id": "CELL-022",
+  "baseline_match_ids": [],
+  "family_id": "LAB-PLACE-003",
+  "parent_run_id": null,
+  "campaign_day": 3,
+  "image_batch_id": "I04",
+  "platform": "facebook",
+  "actual_native_format": "story_image",
+  "adaptation_notes": "Manual session on 2026-09-15 (user: «Publica todo lo que se puede»). Encargo ENC-20260915-002; overlay and caption from experiments/media-lab/briefs/LAB-PLACE-003.md. Story with empty caption.",
+  "audio_treatment": "none",
+  "location_treatment": {
+    "visual_place": "generated editorial scene evoking Nan Madol canals and basalt walls",
+    "text_label": "Nan Madol, Pohnpei · 2016",
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": null,
+    "nearby_production_posts": [
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-15T22:15:05+00:00",
+        "espera": "producción subiendo: hilos",
+        "note": "Informational only (user decision 2026-09-14). Manual «publica todo» session: several lab cells spaced ~21 min apart on the same night."
+      }
+    ],
+    "matched_comparison_ids": []
+  },
+  "round": 1,
+  "status": "completed",
+  "tool_option_id": null,
+  "format_id": "place_led_image",
+  "seed_source_path": "content/published/2026-09-08-extra94.json",
+  "seed_source_sha256": null,
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-PLACE-003.md",
+  "hypothesis": "A recognisable place-led scene with an accurate place label in the overlay carries the place without a native location tag.",
+  "changed_variable": "publishing route (API) for the Nan Madol master",
+  "controls": [
+    "same headline, subtitle and disclosure across cells",
+    "same caption draft as briefs/LAB-PLACE-003.md",
+    "no audio",
+    "no native location tag",
+    "public organic audience"
+  ],
+  "tool": {
+    "name": "Codex heartbeat image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
+  "timing": {
+    "started_at": "2026-09-15T22:15:05.050258+00:00",
+    "first_acceptable_at": "2026-09-15T21:12:00Z",
+    "finished_at": "2026-09-15T22:15:37.732857+00:00",
+    "wall_elapsed_seconds": null,
+    "one_time_setup_active_seconds": null,
+    "human_active_seconds": 0,
+    "agent_active_seconds": null,
+    "approval_or_device_wait_seconds": 0,
+    "stages": []
+  },
+  "attempts": [],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
+  "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-9x16.jpg",
+      "sha256": "dfaa9edeafdd9f68fab2a12f62307d648521f3e1229866fab2592472228db9c0",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1920",
+      "role": "publishable_master"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PLACE-003/caption-story-empty.txt",
+      "role": "caption"
+    },
+    {
+      "path": "experiments/media-lab/manifests/LAB-PLACE-003-A-FACEBOOK-STORY-API.json",
+      "role": "api_manifest"
+    },
+    {
+      "path": "experiments/media-lab/results/35030007972/live-result.json",
+      "role": "publish_result"
+    }
+  ],
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
+  "visual_qa": {
+    "reviews": [
+      {
+        "number": 1,
+        "reviewed_at": "2026-09-15T21:12:00Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": [
+          "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-9x16.jpg",
+          "experiments/media-lab/assets/LAB-PLACE-003/caption-story-empty.txt"
+        ],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": [
+          "Headline panel from y≈250, text from y≈320; pills y≈1607–1660 inside the Story safe zone."
+        ]
+      }
+    ]
+  },
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
+  "publication": {
+    "route_id": "API-MASTER",
+    "comparison_pair_id": null,
+    "creation_origin": "built-in image generation (Codex heartbeat) plus deterministic overlay",
+    "publishing_transport": "Meta official API via isolated GitHub Actions lab workflow (media-lab)",
+    "native_app_and_version": null,
+    "api_version": null,
+    "route_assigned_at": "2026-09-15T22:15:05.050258+00:00",
+    "phone_transfer_seconds": null,
+    "publishing_active_seconds": 7.773,
+    "native_changes_from_master": [],
+    "human_interventions": [],
+    "fidelity_checks": {
+      "caption": "not_applicable (Story)",
+      "cover": "not_applicable",
+      "media_order": "not_applicable",
+      "aspect_ratio": "master 1080x1920 served from raw GitHub with sha256 checked by publish_api.py",
+      "audio": "not_applicable"
+    },
+    "destination": "facebook Page 874327782058550 (Sabiduria De Bolsillo) Story",
+    "agreed_batch_reference": null,
+    "requested_audience": "public",
+    "actual_audience": null,
+    "workflow_run": 35030007972,
+    "verification_workflow_run": null,
+    "result_path": "experiments/media-lab/results/35030007972/live-result.json",
+    "submitted_at": "2026-09-15T22:15:21.259788+00:00",
+    "processing_completed_at": "2026-09-15T22:15:29.032511+00:00",
+    "playback_verified_at": null,
+    "post_id": "1042183191973712",
+    "post_url": null,
+    "audio_verified": null,
+    "master_sha256": "dfaa9edeafdd9f68fab2a12f62307d648521f3e1229866fab2592472228db9c0",
+    "snapshots": []
+  },
+  "missing_data_reasons": {
+    "audience_metrics": "Facebook Story: no API metrics; read via Chrome (Business Suite) before expiry.",
+    "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
+    "post_url": "Stories have no permalink in the publish result."
+  },
+  "decision": "Published through the API; Story-only, no verification step.",
+  "next_action": "Facebook Story: no API metrics; read via Chrome (Business Suite) before expiry."
+}
