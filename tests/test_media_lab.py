@@ -596,8 +596,9 @@ class TelefonoSimulado:
     def __init__(self, volcados: list, *, teclado: tuple = (False,), emergentes: tuple = ((),),
                  listo: bool = True, falla_tocar: Exception | None = None,
                  falla_pegar: Exception | None = None, falla_cortina: Exception | None = None,
-                 tras_cierre: list | None = None):
+                 tras_cierre: list | None = None, falla_cierre: Exception | None = None):
         self.volcados = list(volcados)
+        self.falla_cierre = falla_cierre
         self.tras_cierre = tras_cierre  # si se da, `forzar_cierre` sustituye el guion de volcados por este
         self.teclado = list(teclado)
         self.emergentes = list(emergentes)
@@ -668,6 +669,8 @@ class TelefonoSimulado:
 
     def forzar_cierre(self, paquete: str, timeout: int = 15) -> None:
         self.orden.append(f"forzar_cierre:{paquete}")
+        if self.falla_cierre is not None:
+            raise self.falla_cierre
         if self.tras_cierre is not None:
             self.volcados = list(self.tras_cierre)
 
@@ -4907,9 +4910,42 @@ def seccion_arranque_en_frio() -> None:
         sim = TelefonoSimulado([colgado], tras_cierre=[colgado])
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 4 and campo(res[1], "tipo") == "SinVolcado"
-              and sim.orden == ["cortina", lanzar, cierre, lanzar],
+              and sim.orden == ["cortina", lanzar, cierre, lanzar]
+              and str(campo(res[1], "error")).endswith(IG.AVISO_ARRANQUE_EN_FRIO),
               f"los volcados fallan también tras el cierre: sale 4 con un solo forzar_cierre, sin bucle "
+              f"y el error menciona el arranque en frío ({res and res[:2]}, {sim.orden})")
+        check("am force-stop de com.instagram.android" in IG.AVISO_ARRANQUE_EN_FRIO,
+              f"el aviso nombra el force-stop de Instagram ({IG.AVISO_ARRANQUE_EN_FRIO!r})")
+
+        sim = TelefonoSimulado([colgado], tras_cierre=normal, falla_cierre=T.TelefonoError("adb: device offline"))
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "TelefonoError"
+              and sim.orden == ["cortina", lanzar, cierre]
+              and "device offline" in str(campo(res[1], "error"))
+              and IG.AVISO_ARRANQUE_EN_FRIO in str(campo(res[1], "error")),
+              f"forzar_cierre falla: sale 4, no relanza y el error menciona el arranque en frío "
               f"({res and res[:2]}, {sim.orden})")
+
+        sim = TelefonoSimulado([colgado], tras_cierre=normal)
+        listos = [True, False]  # listo al empezar; ya no lo está al ir a forzar el cierre
+        sim.estado = lambda: {"adb": True, "listo": listos.pop(0) if len(listos) > 1 else listos[0]}
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "TelefonoNoListo"
+              and cierre not in sim.orden and IG.AVISO_ARRANQUE_EN_FRIO not in str(campo(res[1], "error")),
+              f"el teléfono deja de estar listo antes del cierre: sale 4 sin forzar_cierre y sin el aviso "
+              f"({res and res[:2]}, {sim.orden})")
+
+        sim = TelefonoSimulado([colgado], tras_cierre=[xml_compositor()])
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "BorradorPendiente"
+              and sim.orden == ["cortina", lanzar, cierre, lanzar] and sim.toques == []
+              and IG.AVISO_ARRANQUE_EN_FRIO in str(campo(res[1], "error")),
+              f"BorradorPendiente tras el arranque en frío: sale 4 y el error lo menciona ({res and res[:2]}, {sim.orden})")
+        sim = TelefonoSimulado([xml_compositor()])
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "BorradorPendiente"
+              and IG.AVISO_ARRANQUE_EN_FRIO not in str(campo(res[1], "error")),
+              f"BorradorPendiente sin arranque en frío: el error no menciona el aviso ({res and res[:2]})")
         sim = TelefonoSimulado(normal)
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is False and cierre not in sim.orden,

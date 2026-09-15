@@ -40,7 +40,8 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     directo) ningún volcado llega a leerse. Solo en ese caso (`pasos.SinVolcado`: nada leído, así que no hay
     ningún borrador visto que proteger) se fuerza el cierre UNA vez, se relanza en frío y se vuelve a esperar
     con el mismo criterio; el resultado lo anota en `arranque_en_frio`. Si algún volcado se leyó, el error
-    sale como siempre y la app no se toca."""
+    sale como siempre y la app no se toca. Todo error desde el intento de `forzar_cierre` en adelante sale
+    con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje."""
     if isinstance(subido_en, str):
         subido_en = datetime.fromisoformat(subido_en)
     pasos.exigir_listo()
@@ -52,40 +53,49 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     def lanzar_y_esperar() -> str:
         telefono.lanzar(PAQUETE)
         reloj.dormir(4)
-        return pasos.esperar_que(
+        xml = pasos.esperar_que(
             lambda x: bool(_coincidencias(x, "abajo", texto="Profil"))
             or telefono.buscar(x, texto="Nouvelle publication", paquete=PAQUETE) is not None
             or bool(_campos(x)),
             "Instagram listo (Profil, «Nouvelle publication» o el campo del pie)")
+        if telefono.buscar(xml, texto="Nouvelle publication", paquete=PAQUETE) or _campos(xml):
+            raise BorradorPendiente("Instagram abrió con una publicación a medias: no se toca")
+        return xml
 
     arranque_en_frio = False
     try:
-        xml = lanzar_y_esperar()
-    except pasos.SinVolcado:
-        pasos.exigir_listo()
-        telefono.forzar_cierre(PAQUETE)
-        arranque_en_frio = True
-        xml = lanzar_y_esperar()  # si vuelve a fallar, el error sale tal cual: no hay otro cierre
-    if telefono.buscar(xml, texto="Nouvelle publication", paquete=PAQUETE) or _campos(xml):
-        raise BorradorPendiente("Instagram abrió con una publicación a medias: no se toca")
-    telefono.tocar(*_nodo(xml, "abajo", texto="Profil")["centro"])
-    xml = _esperar(contiene="Modifier le profil")
-    perfil = perfil_activo(xml)
-    if perfil != MARCA:
-        raise PantallaInesperada(f"el perfil activo es {perfil!r}, no @{MARCA}")
-    publicaciones_antes = publicaciones_de_perfil(xml)
-    telefono.tocar(*_nodo(xml, "arriba", texto="Créer")["centro"])
-    xml = _esperar(texto="Publication")
-    telefono.tocar(*_nodo(xml, texto="Publication")["centro"])
-    xml = _esperar(texto="Nouvelle publication")
-    sel = seleccion_unica(xml)
-    if sel is None:
-        raise PantallaInesperada("no hay exactamente una miniatura seleccionada")
-    if not miniatura_coincide(sel["desc"], subido_en):
-        raise PantallaInesperada(
-            f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
-    return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
-            "publicaciones_antes": publicaciones_antes, "arranque_en_frio": arranque_en_frio}
+        try:
+            xml = lanzar_y_esperar()
+        except pasos.SinVolcado:
+            pasos.exigir_listo()
+            arranque_en_frio = True  # desde aquí, cualquier error lleva el aviso (también si falla el cierre)
+            telefono.forzar_cierre(PAQUETE)
+            xml = lanzar_y_esperar()  # si vuelve a fallar, el error sale con el aviso: no hay otro cierre
+        telefono.tocar(*_nodo(xml, "abajo", texto="Profil")["centro"])
+        xml = _esperar(contiene="Modifier le profil")
+        perfil = perfil_activo(xml)
+        if perfil != MARCA:
+            raise PantallaInesperada(f"el perfil activo es {perfil!r}, no @{MARCA}")
+        publicaciones_antes = publicaciones_de_perfil(xml)
+        telefono.tocar(*_nodo(xml, "arriba", texto="Créer")["centro"])
+        xml = _esperar(texto="Publication")
+        telefono.tocar(*_nodo(xml, texto="Publication")["centro"])
+        xml = _esperar(texto="Nouvelle publication")
+        sel = seleccion_unica(xml)
+        if sel is None:
+            raise PantallaInesperada("no hay exactamente una miniatura seleccionada")
+        if not miniatura_coincide(sel["desc"], subido_en):
+            raise PantallaInesperada(
+                f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
+        return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
+                "publicaciones_antes": publicaciones_antes, "arranque_en_frio": arranque_en_frio}
+    except (PantallaInesperada, telefono.TelefonoError) as e:
+        if not arranque_en_frio:
+            raise
+        raise type(e)(f"{e} {AVISO_ARRANQUE_EN_FRIO}") from e
+
+
+AVISO_ARRANQUE_EN_FRIO = f"(tras un arranque en frío: am force-stop de {PAQUETE})"
 
 
 def alternar_recorte(evidencia: Path) -> Path:
