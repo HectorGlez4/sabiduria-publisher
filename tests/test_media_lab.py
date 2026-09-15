@@ -4813,6 +4813,20 @@ def seccion_sonda_y_fixtures() -> None:
     from labkit import pantalla as P
     check(lanza(lambda: P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, desc="Icône"), P.PantallaInesperada),
           "nodo_sonda rechaza un icono dentro de un botón de envío")
+    for patron in (r"[0-9]+ h", r"[0-9]* h", r"[0-9]{2,} h", r"[0-9a-z]+ h", r"\d* h"):
+        check(lanza(lambda: TX._edades_fixture({"x": ((patron, None),)}), ValueError),
+              f"_edades_fixture falla con una cifra sin acotar: {patron!r}")
+    check(TX._edades_fixture({"x": ((r"\d+ h", None), (r"[0-9]{1,3} min", None), (r"[0-9] s", None))})
+          == {"x": (r"\d{1,3} h", r"[0-9]{1,3} min", r"[0-9] s")},
+          "_edades_fixture acepta \\d+ (lo acota), [0-9]{1,3} y una sola [0-9]")
+    import types
+    with entorno_lab_fase2() as (lab, raiz):
+        desconocida = types.SimpleNamespace(supervisada=True, run="SONDA-F2-T", accion="pulsar", texto=None, desc=None,
+                                            resource_id=None, app="instagram", nombre="a")
+        sim = TelefonoSimulado([xml_perfil()], listo=False)
+        res, err = con_telefono_simulado(sim, lambda: lab.lab.cmd_sonda(desconocida))
+        check(isinstance(err, lab.lab.ArgumentoNoValido) and "desconocida" in str(err) and sim.volcados_leidos == 0,
+              f"cmd_sonda rechaza una acción desconocida antes de mirar si el teléfono está listo ({res}, {err!r})")
 
 
 def seccion_arranque_en_frio() -> None:

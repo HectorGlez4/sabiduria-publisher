@@ -268,9 +268,7 @@ def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     árbol que solape ese punto: un botón de pantalla completa sin etiqueta propia que envuelve un
     «Partager» bloquea cualquier toque dentro, a propósito). `ignorar` exime esa etiqueta, campo a
     campo, en cualquier nodo del volcado que la tenga (no solo en `n`), sin ocultar ningún otro
-    control de envío."""
-    if _bloquea_toque(n, ignorar):
-        return True
+    control de envío. `_bajo_el_toque` ya mira `n` antes que nada."""
     return _bajo_el_toque(telefono.nodos(xml), n, lambda m: _bloquea_toque(m, ignorar)) is not None
 
 

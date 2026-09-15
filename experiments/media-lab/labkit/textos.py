@@ -138,13 +138,15 @@ PATRONES_FIXTURE_TEXTO: dict[str, tuple[str, ...]] = {
     "instagram": (_HASHTAG,), "threads": (_HASHTAG,), "facebook": (_HASHTAG,)}
 
 
-def _edades_fixture() -> dict[str, tuple[str, ...]]:
+def _edades_fixture(edades: dict | None = None) -> dict[str, tuple[str, ...]]:
     """Las edades de `EDADES` con cada `\\d+` acotado a 1-3 cifras. Falla al importar si algún patrón de `EDADES`
-    lleva una cifra que no quede acotada así (p. ej. `\\d*` o `\\d{2,}`): la tabla de lectura no cambia."""
-    derivadas = {app: tuple(p.replace(r"\d+", r"\d{1,3}") for p, _ in tabla) for app, tabla in EDADES.items()}
+    lleva una cifra que no quede acotada así (p. ej. `\\d*`, `\\d{2,}` o una clase con `0-9` y cuantificador, como
+    `[0-9]+`): la tabla de lectura no cambia. `edades` sustituye a `EDADES` solo en las pruebas."""
+    edades = EDADES if edades is None else edades
+    derivadas = {app: tuple(p.replace(r"\d+", r"\d{1,3}") for p, _ in tabla) for app, tabla in edades.items()}
     for app, patrones in derivadas.items():
         for patron in patrones:
-            if re.search(r"\\d(?!\{1,3\})", patron):
+            if re.search(r"\\d(?!\{1,3\})|\[[^\]]*0-9[^\]]*\](?:[*+]|\{(?!1,3\}))", patron):
                 raise ValueError(f"EDADES[{app!r}] tiene una cifra sin acotar a 1-3 en un fixture: {patron!r}")
     return derivadas
 

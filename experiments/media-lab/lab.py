@@ -884,6 +884,7 @@ def cmd_telefono_descartar(a) -> int:
 # Esperas de la sonda: lo que tarda en abrirse la app tras lanzarla y en reaccionar la pantalla tras un toque.
 ESPERA_TRAS_LANZAR_S = 4
 ESPERA_TRAS_TOCAR_S = 2
+ACCIONES_SONDA = ("volcar", "lanzar", "tocar", "atras")
 
 
 def _clave(n: dict) -> tuple:
@@ -933,6 +934,7 @@ def cmd_sonda(a) -> int:
     from labkit import pasos, reloj, telefono
     _exigir(a.supervisada, "sonda solo con --supervisada: sesión de exploración dirigida, nunca desde la ventana desatendida")
     _exigir(a.run.startswith("SONDA-F2-"), "el --run de una sonda empieza por SONDA-F2-")
+    _exigir(a.accion in ACCIONES_SONDA, f"acción de sonda desconocida: {a.accion!r}")
     criterios = {k: v for k, v in (("texto", a.texto), ("desc", a.desc), ("resource_id", a.resource_id)) if v}
     if a.accion == "tocar":
         _exigir(len(criterios) == 1, "tocar exige uno de --texto, --desc o --resource-id")
@@ -957,9 +959,7 @@ def cmd_sonda(a) -> int:
             return _volcar_sonda(ev, a.nombre)
         if a.accion == "atras":
             return {"captura": str(pasos.atras(paquete, ev, a.nombre))}
-        if a.accion == "tocar":
-            return _tocar_sonda(paquete, criterios, ev, a.nombre)
-        raise ArgumentoNoValido(f"acción de sonda desconocida: {a.accion!r}")
+        return _tocar_sonda(paquete, criterios, ev, a.nombre)  # la única acción que queda: validada arriba
 
     return _paso_telefono(ev, f"{a.nombre}-inesperada", paso)
 
@@ -1170,7 +1170,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_telefono_descartar)
     p = sub.add_parser("sonda")
     p.add_argument("app", choices=textos.APPS_TELEFONO + ("edits",), help="app del teléfono")
-    p.add_argument("accion", choices=("volcar", "lanzar", "tocar", "atras"),
+    p.add_argument("accion", choices=ACCIONES_SONDA,
                    help="tocar exige un criterio; las demás no admiten ninguno")
     p.add_argument("--run", required=True)
     p.add_argument("--nombre", required=True)
