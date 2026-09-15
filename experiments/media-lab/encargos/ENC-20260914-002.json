@@ -57,7 +57,8 @@
   },
   "runs": [
     "LAB-PERSON-002-A-FACEBOOK",
-    "LAB-PERSON-002-A-INSTAGRAM"
+    "LAB-PERSON-002-A-INSTAGRAM",
+    "LAB-PERSON-002-A-THREADS"
   ],
   "no_lanzados": 0
 }

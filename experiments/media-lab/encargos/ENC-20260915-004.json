@@ -1,0 +1,40 @@
+{
+  "encargo_id": "ENC-20260915-004",
+  "creado_en": "2026-09-15T03:51:39+00:00",
+  "coverage_cell_ids": [
+    "CELL-032",
+    "CELL-034"
+  ],
+  "family_id": "LAB-TRIVIA-004",
+  "brief_path": "experiments/media-lab/briefs/LAB-TRIVIA-004.md",
+  "do_not_use": [
+    "Do not offer 1844 as a choice, and do not call 1844 the official adoption.",
+    "Do not say France passed a national law adopting braille in 1854.",
+    "Do not say Braille invented the system at twelve or at fifteen.",
+    "Do not say Barbier invented night writing for Napoleon's soldiers, or that Dufau burned braille books.",
+    "Do not call braille a language; it is a writing system.",
+    "Representation limits: no portrait or likeness of Louis Braille; no blind child with bandaged eyes, dark glasses or pity framing; no generated braille that could be read as real text; nothing that suggests death or mourning, a year, a calendar or a congress."
+  ],
+  "formato": {
+    "nativo": "story_image",
+    "ancho": 1080,
+    "alto": 1920
+  },
+  "variantes": 1,
+  "prompt": "Use case: historical-scene\nAsset type: Sabiduría de Bolsillo social editorial, full-bleed 9:16 Story master (final 1080x1920), used for both a question frame and a reveal frame\nPrimary request: Create an object-led editorial image for a four-option trivia Story about when the Paris school for blind youth officially adopted Louis Braille's raised-dot writing system. The image must set the scene without revealing or hinting at the answer. Compose it natively for a tall vertical frame rather than stretched or letterboxed.\nScene/backdrop: a quiet study room in a Paris school for blind youth in the 1830s-1840s, wooden desk by a tall window, plain plaster wall, a few bound books of heavy paper stacked at the side.\nSubject: no person and no hands; on the desk, a sheet of thick cream paper covered in neat rows of small raised dots in six-dot cells, a period hand writing frame (slate) with a small wooden-handled stylus resting beside it.\nStyle/medium: premium editorial photography with subtly cinematic historical atmosphere, tactile realism, documentary restraint rather than advertising gloss.\nComposition/framing: tall 9:16 vertical; the top 14% and bottom 18% of the frame are app interface zones, so keep the desk, paper and slate in the lower-middle area just above the bottom interface zone; a later Spanish headline panel covers roughly y 170-600 of 1920, so that upper band must be plain wall and soft window light with no important detail; keep the central band calm and free of important detail.\nLighting/mood: soft side daylight from the window raking across the paper so the dots cast tiny shadows; curious, respectful, thoughtful.\nColor palette: warm cream paper, walnut wood, muted slate blue-grey, restrained brass.\nText (verbatim): none.\nConstraints: no readable text of any kind, no numbers, no dates, no letters, no logos, no watermark; the raised dots are schematic texture and must not spell real braille words; historically plausible 19th-century objects; no human figure or body parts; full-bleed image with no borders or blurred padding.\nAvoid: portraits or likeness of Louis Braille, calendars, clocks showing dates, candles or flowers suggesting mourning, gravestones, banners, flags, crowds or congress halls, modern braille displays, plastic, eyeglasses, bandages, printed labels, garbled writing, fantasy machinery, letterboxing.",
+  "restricciones": [
+    "sin texto legible, números, fechas, letras, logos ni marcas de agua; los puntos en relieve son textura, no braille legible",
+    "sin personas ni manos; sin retrato de Louis Braille; nada que sugiera luto, calendarios o congresos",
+    "9:16 a sangre, sin bandas ni relleno; objetos fuera del 14 % superior y del 18 % inferior; franja y 170-600 y banda central tranquilas"
+  ],
+  "destino_assets": "experiments/media-lab/assets/LAB-TRIVIA-004",
+  "max_intentos": 2,
+  "estado": "pedido",
+  "lock_owner": null,
+  "lock_expira": null,
+  "imagenes": [],
+  "intentos": [],
+  "revision": null,
+  "runs": [],
+  "no_lanzados": 0
+}

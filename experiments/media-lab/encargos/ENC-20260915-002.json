@@ -1,0 +1,40 @@
+{
+  "encargo_id": "ENC-20260915-002",
+  "creado_en": "2026-09-15T03:51:02+00:00",
+  "coverage_cell_ids": [
+    "CELL-022",
+    "CELL-024"
+  ],
+  "family_id": "LAB-PLACE-003",
+  "brief_path": "experiments/media-lab/briefs/LAB-PLACE-003.md",
+  "do_not_use": [
+    "Do not give a closed number of islets (sources say 99, 98 and over 90); say casi un centenar.",
+    "Do not claim it is still on the Danger List today, or that it has left it; keep the fact dated to 2016.",
+    "Do not say nobody knows who built it or imply a mystery, aliens or a lost continent.",
+    "Do not say the basalt columns were carved: it is natural columnar basalt, quarried and moved.",
+    "Do not call it la Venecia del Pacifico or ciudad perdida.",
+    "Representation limits: the image is a generated editorial scene, not documentary evidence of the site's current condition; no invented signage, plaques or map labels inside the image; no native location tag."
+  ],
+  "formato": {
+    "nativo": "story_image",
+    "ancho": 1080,
+    "alto": 1920
+  },
+  "variantes": 1,
+  "prompt": "Use case: historical-scene\nAsset type: Sabiduría de Bolsillo social editorial, full-bleed 9:16 Story master (final 1080x1920)\nPrimary request: Create a place-led editorial scene evoking the present-day ruins of Nan Madol, a complex of artificial islets on the reef off the south-east coast of Pohnpei, Micronesia, inscribed as World Heritage and as World Heritage in Danger in 2016 because silted canals let mangroves grow over the walls. Compose it natively for a tall vertical frame rather than stretched or letterboxed.\nScene/backdrop: a shallow tidal canal at low water between two low artificial islets; walls built of long dark natural columnar basalt prisms stacked horizontally in alternating crisscross courses (header-and-stretcher, like a log cabin), with coral rubble fill; muddy silted water; young mangroves and tropical vegetation growing along and out of the wall bases; dense green rainforest and a hazy volcanic ridge in the far background.\nSubject: no people; the basalt wall and the encroaching mangroves are the subject.\nStyle/medium: premium documentary-style editorial photography, physically believable stone, water and vegetation, restrained and respectful rather than adventurous or mysterious.\nComposition/framing: tall 9:16 vertical; the top 14% and bottom 18% of the frame are app interface zones, so keep the walls, canal and mangroves inside the central band; a later Spanish headline panel covers roughly y 170-600 of 1920, so that upper band must be soft overcast sky and treetops with no important detail; canal leading the eye from the lower-middle foreground into the middle distance, basalt walls in the middle and lower-middle area, with a calm area just above the bottom interface zone for a small later label.\nLighting/mood: humid soft overcast tropical daylight with gentle haze, calm, slightly melancholic.\nColor palette: deep basalt charcoal, mangrove green, silt brown, muted teal water, pale grey sky.\nText (verbatim): none.\nConstraints: no readable text, no signs, plaques, map labels or numbers, no logos, no watermark; basalt must look like natural hexagonal-section columns, not carved or dressed blocks; no mortar; plausible scale (walls a few metres high); no human figures, boats or modern objects; full-bleed image with no borders or blurred padding.\nAvoid: tourists, guides, kayaks, drones, fantasy or \"lost city\" ruins, glowing effects, carved reliefs, Maya/Inca/Angkor/Egyptian stonework, pyramids, moai, Venetian imagery, dramatic storm skies, turquoise resort water, garbled writing, letterboxing.",
+  "restricciones": [
+    "sin texto legible, números, carteles, logos ni marcas de agua",
+    "sin personas, barcas ni objetos modernos; basalto columnar natural, no bloques tallados",
+    "9:16 a sangre, sin bandas ni relleno; muros y canal fuera del 14 % superior y del 18 % inferior; franja y 170-600 tranquila"
+  ],
+  "destino_assets": "experiments/media-lab/assets/LAB-PLACE-003",
+  "max_intentos": 2,
+  "estado": "pedido",
+  "lock_owner": null,
+  "lock_expira": null,
+  "imagenes": [],
+  "intentos": [],
+  "revision": null,
+  "runs": [],
+  "no_lanzados": 0
+}

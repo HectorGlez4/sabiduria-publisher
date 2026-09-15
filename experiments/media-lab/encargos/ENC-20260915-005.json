@@ -1,0 +1,40 @@
+{
+  "encargo_id": "ENC-20260915-005",
+  "creado_en": "2026-09-15T03:51:51+00:00",
+  "coverage_cell_ids": [
+    "CELL-121",
+    "CELL-122"
+  ],
+  "family_id": "LAB-LOCATION-011",
+  "brief_path": "experiments/media-lab/briefs/LAB-LOCATION-011.md",
+  "do_not_use": [
+    "Do not say it has worked without interruption for 2,000 years or that it never went dark; say only that it works today.",
+    "Do not give a single construction year or attribute it firmly to Trajan.",
+    "Do not call it the oldest lighthouse in the world without qualification.",
+    "Do not repeat the Hercules and Geryon, Breogan or Brigantia legends as fact.",
+    "No check-in, no phone GPS location, no near-you suggestions, no private or approximate places; a native tag only for the exact public place Torre de Hercules.",
+    "Do not present the generated image as a photograph of the tower; no invented signs, plaques, inscriptions or place labels inside the image; no unverified nearby elements (sculptures, compass roses, lawns, walkways, city buildings)."
+  ],
+  "formato": {
+    "nativo": "story_image",
+    "ancho": 1080,
+    "alto": 1920
+  },
+  "variantes": 1,
+  "prompt": "Use case: historical-scene\nAsset type: Sabiduría de Bolsillo social editorial, full-bleed 9:16 Story master (final 1080x1920)\nPrimary request: Create a place-led editorial scene of the Torre de Hércules, the Roman lighthouse still in service on a rocky headland at the entrance of A Coruña harbour, Galicia, Spain. Compose it natively for a tall vertical frame rather than stretched or letterboxed.\nScene/backdrop: a windswept Atlantic headland at blue hour; the tower stands on a high granite rise above the open ocean, with dark rocks, low coastal grass and a restless sea below; distant horizon only, no modern city in frame.\nSubject: the tower as a solid, sober stone lighthouse, square in plan, rising in three progressively smaller levels, with a restrained neoclassical granite exterior crossed by a subtle ascending diagonal band, topped by a small lantern emitting a single clear white beam across the sea.\nStyle/medium: premium editorial landscape photography with documentary restraint; physically plausible architecture, stone texture and light; not fantasy, not a postcard.\nComposition/framing: tall 9:16 vertical; the top 14% and bottom 18% of the frame are app interface zones; a later Spanish headline panel covers roughly y 170-600 of 1920, so that upper band must be quiet dusk sky with no important detail; the whole tower, lantern included, sits in the middle area slightly right of centre, below the headline band, with the beam crossing toward the left; the lower quarter stays calm (rocks and sea) so a native location sticker can sit there.\nLighting/mood: deep blue dusk with a last warm glow on the horizon; cool granite, bright white lamp; calm, enduring, curious.\nColor palette: deep Atlantic blue, slate granite, sea-foam white, restrained amber horizon.\nText (verbatim): none.\nConstraints: no readable text, no signs, no plaques, no inscriptions, no place names, no maps, no logos, no watermark; one tower only; plausible scale and proportions; no people; no boats close enough to show markings; full-bleed image with no borders or blurred padding.\nAvoid: round or striped modern lighthouse, candy-cane stripes, castle battlements, ruins, Greek temple features, fantasy glow, fireworks, modern buildings or cranes, sculptures, compass roses, walkways, tourists, drones, lens flare text artifacts, garbled writing, letterboxing.",
+  "restricciones": [
+    "sin texto legible, carteles, placas, inscripciones, nombres de lugar, logos ni marcas de agua",
+    "una sola torre cuadrada de tres cuerpos, no un faro moderno a rayas; sin personas ni ciudad moderna",
+    "9:16 a sangre, sin bandas ni relleno; franja y 170-600 de cielo tranquilo; cuarto inferior tranquilo para un sticker"
+  ],
+  "destino_assets": "experiments/media-lab/assets/LAB-LOCATION-011",
+  "max_intentos": 2,
+  "estado": "pedido",
+  "lock_owner": null,
+  "lock_expira": null,
+  "imagenes": [],
+  "intentos": [],
+  "revision": null,
+  "runs": [],
+  "no_lanzados": 0
+}
