@@ -26,11 +26,15 @@ API_FASE_1 = {("facebook", "feed_single_image"), ("facebook", "story_image"),
               ("threads", "feed_single_image")}
 
 
+def _es_telefono(c: dict) -> bool:
+    return c["publishing_route"] == "android_native"
+
+
 def _ruta_implementada(c: dict, borradores: bool = False) -> bool:
     clave = (c["platform"], c["native_format"])
     if c["publishing_route"] == "api":
         return clave in API_FASE_1
-    if c["publishing_route"] == "android_native":
+    if _es_telefono(c):
         return clave in TELEFONO_IMPLEMENTADO or (borradores and clave in recetas.BORRADORES)
     return False
 
@@ -40,22 +44,20 @@ def elegibles(celdas: list[dict], todos_encargos: list[dict], telefono_listo: bo
               for cid in e["coverage_cell_ids"]}
     return [c for c in celdas
             if c["status"] in ESTADOS_ELEGIBLES and c["cell_id"] in utiles and _ruta_implementada(c)
-            and (telefono_listo or c["publishing_route"] != "android_native")]
-
-
-def _es_telefono(c: dict) -> bool:
-    return c["publishing_route"] == "android_native"
+            and (telefono_listo or not _es_telefono(c))]
 
 
 def _es_ig_telefono(c: dict) -> bool:
     return c["platform"] == "instagram" and _es_telefono(c)
 
 
-def _copias(c: dict) -> set[str]:
+def _redes_copiadas(c: dict) -> set[str]:
+    """Redes que la receta de una celda de teléfono copia sola. Una receta sin `copias` falla
+    visible (KeyError) en vez de quitar la exclusión en silencio."""
     if not _es_telefono(c):
         return set()
-    receta = recetas.TODAS.get((c["platform"], c["native_format"]), {})
-    return {copia["red"] for copia in receta.get("copias", [])}
+    receta = recetas.TODAS.get((c["platform"], c["native_format"]))
+    return set() if receta is None else {copia["red"] for copia in receta["copias"]}
 
 
 def compatibles(a: dict, b: dict) -> bool:
@@ -65,7 +67,7 @@ def compatibles(a: dict, b: dict) -> bool:
         return False
     if _es_telefono(a) and _es_telefono(b):
         return False
-    if b["platform"] in _copias(a) or a["platform"] in _copias(b):
+    if b["platform"] in _redes_copiadas(a) or a["platform"] in _redes_copiadas(b):
         return False
     return True
 

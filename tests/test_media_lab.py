@@ -5,6 +5,7 @@ Pruebas del laboratorio de medios (experiments/media-lab/).
 """
 from __future__ import annotations
 
+import contextlib
 import pathlib
 import sys
 
@@ -4248,10 +4249,32 @@ def seccion_textos_y_descarte() -> None:
           f"importante 1: pasos.tocar(..., permitir='Votre story') lanza TypeError y no toca nada ({err!r})")
 
 
+_SIN_RECETA = object()
+
+
+@contextlib.contextmanager
+def receta_temporal(par: tuple[str, str], receta: dict):
+    """`receta` como borrador de `par` en `recetas.TODAS` y `recetas.BORRADORES` mientras dura el
+    bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop."""
+    from labkit import recetas as RC
+    registros = (RC.TODAS, RC.BORRADORES)
+    previos = [d.get(par, _SIN_RECETA) for d in registros]
+    try:
+        for d in registros:
+            d[par] = receta
+        yield receta
+    finally:
+        for d, previo in zip(registros, previos):
+            if previo is _SIN_RECETA:
+                d.pop(par, None)
+            else:
+                d[par] = previo
+
+
 def seccion_recetas_y_seleccion() -> None:
     print("\n15. Fase 2: recetas y selección (un teléfono por ventana, copias, borradores)")
     import argparse
-    from labkit import recetas as RC, seleccion as S
+    from labkit import recetas as RC, seleccion as S, textos as TX
 
     check(S.TELEFONO_FASE_1 == S.TELEFONO_IMPLEMENTADO == frozenset(RC.RECETAS),
           "TELEFONO_FASE_1 es alias de TELEFONO_IMPLEMENTADO, que sale de RECETAS")
@@ -4265,6 +4288,9 @@ def seccion_recetas_y_seleccion() -> None:
     for par, receta in RC.TODAS.items():
         check(all(k in receta for k in RC.CLAVES) and receta["publicar"] and receta["estados_ok"] == ["confirmado"],
               f"{par}: receta con todas sus claves, un paso de publicar y solo confirmado sale con 0")
+        check(all(set(cp) == {"red", "superficie", "nota"} and cp["red"] in set(TX.APPS_TELEFONO)
+                  for cp in receta["copias"]),
+              f"{par}: cada copia nombra una red conocida con superficie y nota")
 
     ap = modulo_lab().construir()
     subcomandos = next(a for a in ap._actions if isinstance(a, argparse._SubParsersAction)).choices
@@ -4279,6 +4305,16 @@ def seccion_recetas_y_seleccion() -> None:
     linea = RC.renderizar(RC.para("instagram", "feed_single_image"))["preparar"][1]["linea"]
     check(linea.startswith(".venv/bin/python experiments/media-lab/lab.py ig abrir --run <run>"),
           f"renderizar da la línea lista para ejecutar ({linea})")
+    render = RC.renderizar(RC.para("instagram", "feed_single_image"))
+    render["copias"][0]["red"] = "mutada"
+    render["formato_encargo"]["ancho"] = 1
+    render["preparar"][0]["args"][0] = "mutado"
+    render["preparar"][0]["anota"].append("mutado")
+    original = RC.TODAS[("instagram", "feed_single_image")]
+    check(original["copias"][0]["red"] == "facebook" and original["formato_encargo"]["ancho"] == 1080
+          and original["preparar"][0]["args"][0] == "telefono-subir" and original["preparar"][0]["anota"] == ["subido_en"]
+          and "linea" not in original["preparar"][0],
+          "mutar el resultado de renderizar no cambia RC.TODAS")
     try:
         RC.para("threads", "feed_video")
         ok = False
@@ -4297,19 +4333,25 @@ def seccion_recetas_y_seleccion() -> None:
           "nunca dos celdas android_native en la misma ventana")
     check(S.compatibles(th_tel, ig_api), "sin copias declaradas, Threads por teléfono e Instagram por API son compatibles")
     par_th = ("threads", "feed_video")
-    try:
-        RC.TODAS[par_th] = {**RC.TODAS[("instagram", "feed_single_image")],
-                            "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}
-        RC.BORRADORES[par_th] = RC.TODAS[par_th]
+    with receta_temporal(par_th, {**RC.TODAS[("instagram", "feed_single_image")],
+                                  "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}):
         check(not S.compatibles(th_tel, ig_api) and not S.compatibles(ig_api, th_tel),
               "una copia declarada en la receta excluye esa red en la misma ventana")
         check(S._ruta_implementada(th_tel, borradores=True) and not S._ruta_implementada(th_tel),
               "un borrador solo cuenta como implementado con borradores=True")
         check(S.elegir([th_tel], [{"estado": "aprobado", "coverage_cell_ids": ["B"]}]) == [],
               "seleccionar nunca elige una celda de un borrador")
-    finally:
-        RC.TODAS.pop(par_th, None)
-        RC.BORRADORES.pop(par_th, None)
+    check(par_th not in RC.TODAS and par_th not in RC.BORRADORES, "receta_temporal quita al salir un par que no existía")
+    sin_copias = {k: v for k, v in RC.TODAS[("instagram", "feed_single_image")].items() if k != "copias"}
+    with receta_temporal(par_th, sin_copias):
+        check(lanza(lambda: S.compatibles(th_tel, ig_api), KeyError),
+              "una receta sin clave copias falla visible en vez de quitar la exclusión en silencio")
+    par_ig = ("instagram", "feed_single_image")
+    original_ig = RC.TODAS[par_ig]
+    with receta_temporal(par_ig, sin_copias):
+        pass
+    check(RC.TODAS[par_ig] is original_ig and par_ig not in RC.BORRADORES,
+          "receta_temporal restaura el valor previo de TODAS y la ausencia en BORRADORES")
 
 
 SECCIONES = [

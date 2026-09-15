@@ -5,7 +5,7 @@ Registro único de flujos del teléfono.
 cuando está en `PROMOVIDAS`, con el run de su primera publicación `confirmado` en una ventana
 manual. `RECETAS` son las promovidas (de ahí sale `seleccion.TELEFONO_IMPLEMENTADO`) y
 `BORRADORES` las demás, que solo aceptan `lab.py encargo-nuevo --borrador` y
-`lab.py receta --borrador` para esa ventana manual.
+`lab.py receta --borrador` (tarea 5) para esa ventana manual.
 
 Cada receta dice a la ventana, en orden, qué comandos de `lab.py` ejecutar en cada fase
 (`preparar` hasta la captura de QA, `publicar` y `verificar`), qué valores anota cada uno para
@@ -14,6 +14,8 @@ cómo se concilia un 5 y qué copias automáticas produce (`copias`, que tambié
 en la misma ventana).
 """
 from __future__ import annotations
+
+import copy
 
 LAB = ".venv/bin/python experiments/media-lab/lab.py"
 CLAVES = ("subcomando", "superficie", "formato_encargo", "preparar", "publicar", "verificar",
@@ -74,11 +76,18 @@ TODAS: dict[tuple[str, str], dict] = {
 PROMOVIDAS: dict[tuple[str, str], str] = {
     ("instagram", "feed_single_image"): "CELL-018: primera ventana manual confirmada (2026-09-14)",
 }
+_faltan = set(PROMOVIDAS) - set(TODAS)
+if _faltan:
+    raise RuntimeError(f"PROMOVIDAS sin receta en TODAS: {sorted(_faltan)}")
 RECETAS = {par: TODAS[par] for par in PROMOVIDAS}
 BORRADORES = {par: receta for par, receta in TODAS.items() if par not in PROMOVIDAS}
 
 
 def para(red: str, formato: str, borrador: bool = False) -> dict:
+    """La promovida si existe; el borrador solo con `borrador=True`; si no, `RecetaNoDisponible`,
+    con pista cuando hay borrador y no se pidió.
+
+    Devuelve el objeto del propio registro: es de solo lectura (para una copia, `renderizar`)."""
     par = (red, formato)
     if par in RECETAS:
         return RECETAS[par]
@@ -89,8 +98,9 @@ def para(red: str, formato: str, borrador: bool = False) -> dict:
 
 
 def renderizar(receta: dict) -> dict:
-    """La receta con cada comando también como línea lista para ejecutar."""
-    fuera = {k: v for k, v in receta.items() if k not in FASES}
+    """Copia profunda de la receta con cada comando también como línea lista para ejecutar;
+    mutarla no cambia el registro."""
+    fuera = {k: copy.deepcopy(v) for k, v in receta.items() if k not in FASES}
     for fase in FASES:
-        fuera[fase] = [{**c, "linea": " ".join([LAB, *c["args"]])} for c in receta[fase]]
+        fuera[fase] = [{**copy.deepcopy(c), "linea": " ".join([LAB, *c["args"]])} for c in receta[fase]]
     return fuera

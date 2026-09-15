@@ -1670,21 +1670,51 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 
 Añadir antes de `SECCIONES` y registrar `seccion_recetas_y_seleccion,`:
 
+Con `import contextlib` entre las importaciones de cabecera del archivo, y `receta_temporal` fuera de la sección para que la tarea 5 la reutilice:
+
 ```python
+_SIN_RECETA = object()
+
+
+@contextlib.contextmanager
+def receta_temporal(par: tuple[str, str], receta: dict):
+    """`receta` como borrador de `par` en `recetas.TODAS` y `recetas.BORRADORES` mientras dura el
+    bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop."""
+    from labkit import recetas as RC
+    registros = (RC.TODAS, RC.BORRADORES)
+    previos = [d.get(par, _SIN_RECETA) for d in registros]
+    try:
+        for d in registros:
+            d[par] = receta
+        yield receta
+    finally:
+        for d, previo in zip(registros, previos):
+            if previo is _SIN_RECETA:
+                d.pop(par, None)
+            else:
+                d[par] = previo
+
+
 def seccion_recetas_y_seleccion() -> None:
     print("\n15. Fase 2: recetas y selección (un teléfono por ventana, copias, borradores)")
     import argparse
-    from labkit import recetas as RC, seleccion as S
+    from labkit import recetas as RC, seleccion as S, textos as TX
 
     check(S.TELEFONO_FASE_1 == S.TELEFONO_IMPLEMENTADO == frozenset(RC.RECETAS),
           "TELEFONO_FASE_1 es alias de TELEFONO_IMPLEMENTADO, que sale de RECETAS")
     check(("instagram", "feed_single_image") in S.TELEFONO_IMPLEMENTADO, "el feed de Instagram sigue implementado")
+    verificacion_ig = RC.TODAS[("instagram", "feed_single_image")]["verificacion"]
+    check("menú" not in verificacion_ig and "missing_data_reasons.post_url" in verificacion_ig,
+          "la receta del feed de Instagram no promete la URL desde el menú del teléfono: va a missing_data_reasons.post_url")
     check(set(RC.PROMOVIDAS) <= set(RC.TODAS) and not set(RC.RECETAS) & set(RC.BORRADORES)
           and set(RC.RECETAS) | set(RC.BORRADORES) == set(RC.TODAS),
           "PROMOVIDAS está en TODAS y RECETAS/BORRADORES la reparten")
     for par, receta in RC.TODAS.items():
         check(all(k in receta for k in RC.CLAVES) and receta["publicar"] and receta["estados_ok"] == ["confirmado"],
               f"{par}: receta con todas sus claves, un paso de publicar y solo confirmado sale con 0")
+        check(all(set(cp) == {"red", "superficie", "nota"} and cp["red"] in set(TX.APPS_TELEFONO)
+                  for cp in receta["copias"]),
+              f"{par}: cada copia nombra una red conocida con superficie y nota")
 
     ap = modulo_lab().construir()
     subcomandos = next(a for a in ap._actions if isinstance(a, argparse._SubParsersAction)).choices
@@ -1699,6 +1729,16 @@ def seccion_recetas_y_seleccion() -> None:
     linea = RC.renderizar(RC.para("instagram", "feed_single_image"))["preparar"][1]["linea"]
     check(linea.startswith(".venv/bin/python experiments/media-lab/lab.py ig abrir --run <run>"),
           f"renderizar da la línea lista para ejecutar ({linea})")
+    render = RC.renderizar(RC.para("instagram", "feed_single_image"))
+    render["copias"][0]["red"] = "mutada"
+    render["formato_encargo"]["ancho"] = 1
+    render["preparar"][0]["args"][0] = "mutado"
+    render["preparar"][0]["anota"].append("mutado")
+    original = RC.TODAS[("instagram", "feed_single_image")]
+    check(original["copias"][0]["red"] == "facebook" and original["formato_encargo"]["ancho"] == 1080
+          and original["preparar"][0]["args"][0] == "telefono-subir" and original["preparar"][0]["anota"] == ["subido_en"]
+          and "linea" not in original["preparar"][0],
+          "mutar el resultado de renderizar no cambia RC.TODAS")
     try:
         RC.para("threads", "feed_video")
         ok = False
@@ -1717,19 +1757,25 @@ def seccion_recetas_y_seleccion() -> None:
           "nunca dos celdas android_native en la misma ventana")
     check(S.compatibles(th_tel, ig_api), "sin copias declaradas, Threads por teléfono e Instagram por API son compatibles")
     par_th = ("threads", "feed_video")
-    RC.TODAS[par_th] = {**RC.TODAS[("instagram", "feed_single_image")],
-                        "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}
-    RC.BORRADORES[par_th] = RC.TODAS[par_th]
-    try:
+    with receta_temporal(par_th, {**RC.TODAS[("instagram", "feed_single_image")],
+                                  "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}):
         check(not S.compatibles(th_tel, ig_api) and not S.compatibles(ig_api, th_tel),
               "una copia declarada en la receta excluye esa red en la misma ventana")
         check(S._ruta_implementada(th_tel, borradores=True) and not S._ruta_implementada(th_tel),
               "un borrador solo cuenta como implementado con borradores=True")
         check(S.elegir([th_tel], [{"estado": "aprobado", "coverage_cell_ids": ["B"]}]) == [],
               "seleccionar nunca elige una celda de un borrador")
-    finally:
-        RC.TODAS.pop(par_th, None)
-        RC.BORRADORES.pop(par_th, None)
+    check(par_th not in RC.TODAS and par_th not in RC.BORRADORES, "receta_temporal quita al salir un par que no existía")
+    sin_copias = {k: v for k, v in RC.TODAS[("instagram", "feed_single_image")].items() if k != "copias"}
+    with receta_temporal(par_th, sin_copias):
+        check(lanza(lambda: S.compatibles(th_tel, ig_api), KeyError),
+              "una receta sin clave copias falla visible en vez de quitar la exclusión en silencio")
+    par_ig = ("instagram", "feed_single_image")
+    original_ig = RC.TODAS[par_ig]
+    with receta_temporal(par_ig, sin_copias):
+        pass
+    check(RC.TODAS[par_ig] is original_ig and par_ig not in RC.BORRADORES,
+          "receta_temporal restaura el valor previo de TODAS y la ausencia en BORRADORES")
 ```
 
 - [ ] **Step 2: Ver que falla**
@@ -1747,7 +1793,7 @@ Registro único de flujos del teléfono.
 cuando está en `PROMOVIDAS`, con el run de su primera publicación `confirmado` en una ventana
 manual. `RECETAS` son las promovidas (de ahí sale `seleccion.TELEFONO_IMPLEMENTADO`) y
 `BORRADORES` las demás, que solo aceptan `lab.py encargo-nuevo --borrador` y
-`lab.py receta --borrador` para esa ventana manual.
+`lab.py receta --borrador` (tarea 5) para esa ventana manual.
 
 Cada receta dice a la ventana, en orden, qué comandos de `lab.py` ejecutar en cada fase
 (`preparar` hasta la captura de QA, `publicar` y `verificar`), qué valores anota cada uno para
@@ -1756,6 +1802,8 @@ cómo se concilia un 5 y qué copias automáticas produce (`copias`, que tambié
 en la misma ventana).
 """
 from __future__ import annotations
+
+import copy
 
 LAB = ".venv/bin/python experiments/media-lab/lab.py"
 CLAVES = ("subcomando", "superficie", "formato_encargo", "preparar", "publicar", "verificar",
@@ -1816,11 +1864,18 @@ TODAS: dict[tuple[str, str], dict] = {
 PROMOVIDAS: dict[tuple[str, str], str] = {
     ("instagram", "feed_single_image"): "CELL-018: primera ventana manual confirmada (2026-09-14)",
 }
+_faltan = set(PROMOVIDAS) - set(TODAS)
+if _faltan:
+    raise RuntimeError(f"PROMOVIDAS sin receta en TODAS: {sorted(_faltan)}")
 RECETAS = {par: TODAS[par] for par in PROMOVIDAS}
 BORRADORES = {par: receta for par, receta in TODAS.items() if par not in PROMOVIDAS}
 
 
 def para(red: str, formato: str, borrador: bool = False) -> dict:
+    """La promovida si existe; el borrador solo con `borrador=True`; si no, `RecetaNoDisponible`,
+    con pista cuando hay borrador y no se pidió.
+
+    Devuelve el objeto del propio registro: es de solo lectura (para una copia, `renderizar`)."""
     par = (red, formato)
     if par in RECETAS:
         return RECETAS[par]
@@ -1831,10 +1886,11 @@ def para(red: str, formato: str, borrador: bool = False) -> dict:
 
 
 def renderizar(receta: dict) -> dict:
-    """La receta con cada comando también como línea lista para ejecutar."""
-    fuera = {k: v for k, v in receta.items() if k not in FASES}
+    """Copia profunda de la receta con cada comando también como línea lista para ejecutar;
+    mutarla no cambia el registro."""
+    fuera = {k: copy.deepcopy(v) for k, v in receta.items() if k not in FASES}
     for fase in FASES:
-        fuera[fase] = [{**c, "linea": " ".join([LAB, *c["args"]])} for c in receta[fase]]
+        fuera[fase] = [{**copy.deepcopy(c), "linea": " ".join([LAB, *c["args"]])} for c in receta[fase]]
     return fuera
 ```
 
@@ -1871,11 +1927,15 @@ API_FASE_1 = {("facebook", "feed_single_image"), ("facebook", "story_image"),
               ("threads", "feed_single_image")}
 
 
+def _es_telefono(c: dict) -> bool:
+    return c["publishing_route"] == "android_native"
+
+
 def _ruta_implementada(c: dict, borradores: bool = False) -> bool:
     clave = (c["platform"], c["native_format"])
     if c["publishing_route"] == "api":
         return clave in API_FASE_1
-    if c["publishing_route"] == "android_native":
+    if _es_telefono(c):
         return clave in TELEFONO_IMPLEMENTADO or (borradores and clave in recetas.BORRADORES)
     return False
 
@@ -1885,22 +1945,20 @@ def elegibles(celdas: list[dict], todos_encargos: list[dict], telefono_listo: bo
               for cid in e["coverage_cell_ids"]}
     return [c for c in celdas
             if c["status"] in ESTADOS_ELEGIBLES and c["cell_id"] in utiles and _ruta_implementada(c)
-            and (telefono_listo or c["publishing_route"] != "android_native")]
-
-
-def _es_telefono(c: dict) -> bool:
-    return c["publishing_route"] == "android_native"
+            and (telefono_listo or not _es_telefono(c))]
 
 
 def _es_ig_telefono(c: dict) -> bool:
     return c["platform"] == "instagram" and _es_telefono(c)
 
 
-def _copias(c: dict) -> set[str]:
+def _redes_copiadas(c: dict) -> set[str]:
+    """Redes que la receta de una celda de teléfono copia sola. Una receta sin `copias` falla
+    visible (KeyError) en vez de quitar la exclusión en silencio."""
     if not _es_telefono(c):
         return set()
-    receta = recetas.TODAS.get((c["platform"], c["native_format"]), {})
-    return {copia["red"] for copia in receta.get("copias", [])}
+    receta = recetas.TODAS.get((c["platform"], c["native_format"]))
+    return set() if receta is None else {copia["red"] for copia in receta["copias"]}
 
 
 def compatibles(a: dict, b: dict) -> bool:
@@ -1910,7 +1968,7 @@ def compatibles(a: dict, b: dict) -> bool:
         return False
     if _es_telefono(a) and _es_telefono(b):
         return False
-    if b["platform"] in _copias(a) or a["platform"] in _copias(b):
+    if b["platform"] in _redes_copiadas(a) or a["platform"] in _redes_copiadas(b):
         return False
     return True
 
@@ -1951,6 +2009,8 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - [ ] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` y registrar `seccion_cli_fase2,`:
+
+> **Nota (revisión de calidad de la tarea 4):** esta prueba debe usar `receta_temporal(par_th, RC.TODAS[("instagram", "feed_single_image")])` (definida en la tarea 4, fuera de la sección 15) alrededor de los pasos con `--borrador`, en vez de asignar a mano `RC.TODAS[par_th]`/`RC.BORRADORES[par_th]` y hacer `pop` en el `finally`: el gestor restaura lo que hubiera en vez de borrarlo. El código de abajo aún muestra la forma antigua; se adapta al implementar la tarea 5.
 
 ```python
 def rechazo(res, fragmento: str, tipo: str = "ArgumentoNoValido") -> bool:
