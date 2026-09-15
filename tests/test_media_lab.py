@@ -5557,6 +5557,52 @@ def seccion_preflight_fase2() -> None:
                 del modulo._agente_despierto
 
 
+def seccion_prompt_ventana() -> None:
+    print("\n21. Fase 2: el prompt de la ventana usa las recetas")
+    texto = (ROOT / "experiments" / "media-lab" / "claude-ventana-prompt.md").read_text(encoding="utf-8")
+    for fragmento in ("lab.py receta --celda", "`preparar`", "`publicar`", "`verificar`", "`conciliacion`",
+                      "`copias`", "`estados_ok`", "telefono-descartar", "BorradorPendiente", "--borrador",
+                      "location_not_automated_phase2", "missing_data_reasons.post_url", "lab.py turno",
+                      "entre 4 h y 20 h", "máximo 10 en cola", "turno --marcar",
+                      "lab.py render"):
+        check(fragmento in texto, f"el prompt de la ventana menciona {fragmento}")
+    check("TELEFONO_FASE_1" not in texto and "ig abrir --run RUN" not in texto,
+          "el prompt ya no lleva la secuencia fija del feed de Instagram")
+    # Resto de la fase 2 que la ventana necesita de la receta y del preflight.
+    for fragmento in ("`ver`", "`anota`", "`verificacion`", "`formato_encargo`", "telefono-atras --app",
+                      "fase2-design.md", "native_app_and_version", "2 encargos por pasada",
+                      "factor de confusión", "API_FASE_1", "Un borrador que no pudiste cerrar va al principio"):
+        check(fragmento in texto, f"el prompt de la ventana menciona {fragmento} (fase 2)")
+    # Reglas posteriores a d8ac308 que el texto del plan no traía: que nadie las vuelva a borrar.
+    for fragmento, motivo in (
+            ("nunca le añadas", "cada comando solo, sin componer (si no, la ventana se cuelga en un permiso)"),
+            ("displayTitle", "id del run por displayTitle con la ruta del manifiesto"),
+            ("gh run list --workflow", "id del run con gh run list --workflow"),
+            ("media-lab-result-", "artefacto de media-lab"),
+            ("live-result.json", "resultado de media-lab"),
+            ("media-lab-verification-", "artefacto de media-lab-verify"),
+            ("verification-result.json", "resultado de media-lab-verify"),
+            ("gh run download <id> -n", "descarga con -n y el nombre del artefacto"),
+            ("-M24H", "run_group propio por instantánea"),
+            ("-MSTORY", "run_group de la instantánea de Story"),
+            ("metricas=true", "media-lab-verify con métricas"),
+            ("metricas-registrar", "registro de métricas en el run"),
+            ("missing_data_reasons.audience_metrics", "métricas que no se pudieron leer"),
+            ("SinVolcado", "tipos del código 4"),
+            ("PantallaInesperada", "tipos del código 4"),
+            ("TelefonoNoListo", "tipos del código 4"),
+            ("arranque_en_frio", "arranque en frío anotado en capability_evidence"),
+            ("capability_evidence", "arranque en frío anotado en capability_evidence"),
+            ("`avisos`", "avisos de los pasos de teléfono copiados al run"),
+            ("`none`", "valor anotado null pasado como none"),
+            ("confirmado_sin_conteo", "none sale con confirmado_sin_conteo"),
+            ("nearby_production_posts", "producción cercana en exposure_context"),
+            ("publication.cross_posting", "copias automáticas"),
+            ("lab.py generar", "rescate de encargos"),
+            ("timeout: 600000", "rescate con el tiempo máximo de Bash")):
+        check(fragmento in texto, f"el prompt de la ventana conserva {fragmento}: {motivo}")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -5581,6 +5627,7 @@ SECCIONES = [
     seccion_arranque_en_frio,
     seccion_recuento_refrescado,
     seccion_preflight_fase2,
+    seccion_prompt_ventana,
 ]
 
 
