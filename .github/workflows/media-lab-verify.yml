@@ -1,4 +1,5 @@
 name: media-lab-verify
+run-name: media-lab-verify ${{ inputs.manifest }}
 
 on:
   workflow_dispatch:

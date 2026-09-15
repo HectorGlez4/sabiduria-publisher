@@ -23,6 +23,7 @@ import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -51,18 +52,48 @@ METRICAS = {
 INSIGHTS_BASE = {"facebook": GRAPH, "instagram": GRAPH, "threads": THREADS_GRAPH}
 
 _PAGINAS_MEDIA = 3
-_TOKEN_RE = re.compile(r"(access_token=)[^&\s'\"]+")
-_AUTH_RE = re.compile(r"Authorization: (OAuth|Bearer) \S+")
+# access_token= (query string normal), access_token%3D (la misma clave cuando toda la
+# URL viaja codificada dentro de otra, p. ej. un redirect) y "access_token": "…" (un
+# cuerpo JSON de error que Meta a veces hace eco de la petición). Insensible a
+# mayúsculas: un ACCESS_TOKEN= en un log no debería colarse por eso.
+_TOKEN_RE = re.compile(r"(access_token=)[^&\s'\"]+", re.IGNORECASE)
+_TOKEN_ENC_RE = re.compile(r"(access_token%3d)[^&%\s'\"]+", re.IGNORECASE)
+_TOKEN_JSON_RE = re.compile(r'("access_token"\s*:\s*")[^"]*(")', re.IGNORECASE)
+_AUTH_RE = re.compile(r"Authorization: (OAuth|Bearer) \S+", re.IGNORECASE)
+# Nombre completo o no: cualquier variable de entorno tipo SDB_*TOKEN* es un secreto.
+_SECRETO_ENV_RE = re.compile(r"SDB_.*TOKEN", re.IGNORECASE)
+_LARGO_MINIMO_SECRETO = 8
+
+
+def _secretos_del_entorno() -> list[str]:
+    """Valores de variables de entorno tipo SDB_*TOKEN* (SDB_PAGE_TOKEN, SDB_THREADS_TOKEN,
+    o cualquier credencial futura con ese patrón). Un mensaje de error puede traer el
+    token suelto, sin "access_token=" ni ninguna otra marca delante, así que redactar
+    solo por patrón no basta: hay que conocer el valor y quitarlo donde aparezca. Los
+    valores vacíos o de menos de _LARGO_MINIMO_SECRETO caracteres no cuentan, para que
+    un valor corto de prueba (o mal configurado) no empiece a borrar texto legítimo."""
+    return [v for n, v in os.environ.items()
+            if v and len(v) >= _LARGO_MINIMO_SECRETO and _SECRETO_ENV_RE.search(n)]
 
 
 def _redactar(texto: str) -> str:
-    """Ni un access_token de query string ni una cabecera Authorization sobreviven a
-    esto. Se aplica a todo texto de error y, como red de seguridad final, al JSON
-    completo antes de escribirlo o imprimirlo."""
+    """Ni un access_token (en cualquiera de sus formas) ni una cabecera Authorization
+    sobreviven a esto, y tampoco el valor en crudo de ningún secreto que esté en el
+    entorno ahora mismo (ni su forma percent-encoded, por si viajó dentro de una URL).
+    Se aplica a todo texto de error y, como red de seguridad final, al JSON completo
+    antes de escribirlo o imprimirlo."""
     if not isinstance(texto, str):
         return texto
     texto = _TOKEN_RE.sub(r"\1***", texto)
+    texto = _TOKEN_ENC_RE.sub(r"\1***", texto)
+    texto = _TOKEN_JSON_RE.sub(r"\1***\2", texto)
     texto = _AUTH_RE.sub("***", texto)
+    for valor in _secretos_del_entorno():
+        if valor in texto:
+            texto = texto.replace(valor, "***")
+        codificado = quote(valor, safe="")
+        if codificado != valor and codificado in texto:
+            texto = texto.replace(codificado, "***")
     return texto
 
 

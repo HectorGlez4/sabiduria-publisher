@@ -72,9 +72,9 @@ def registrar(run: dict, resultado: dict, *, run_group: str, instantanea: str, a
 
     Lanza MetricasError (código 2 en la CLI, sin escribir nada) si: el resultado es de
     otro run_group; la instantánea ya estaba registrada; el resultado no trae la
-    plataforma de este run, o esa plataforma no quedó "verified"; o el post_id del run
-    no corresponde al resultado (ni como id de Graph -ruta API- ni como shortcode
-    dentro del permalink -ruta teléfono-)."""
+    plataforma de este run, o esa plataforma no quedó "verified"; el run no tiene
+    publication.post_id; o el post_id del run no corresponde al resultado (ni como id
+    de Graph -ruta API- ni como shortcode dentro del permalink -ruta teléfono-)."""
     if instantanea not in INSTANTANEAS:
         raise MetricasError(f"--instantanea debe ser una de {INSTANTANEAS}: {instantanea!r}")
     resultado_grupo = resultado.get("run_group_id")
@@ -97,16 +97,20 @@ def registrar(run: dict, resultado: dict, *, run_group: str, instantanea: str, a
             f"{plataforma} no está verificado en el resultado (status={r.get('status')!r}): {r.get('error') or ''}")
 
     post_id = publicacion.get("post_id")
+    if not post_id:
+        # Sin post_id no hay con qué cotejar que el resultado es realmente el de este
+        # run: sin este cotejo, un manifiesto con el post_id equivocado (o el de otra
+        # celda) registraría métricas ajenas como si fueran las de este run.
+        raise MetricasError(f"el run no tiene publication.post_id: no se puede cotejar con el resultado de {plataforma!r}")
     detail = r.get("detail") or {}
-    if post_id:
-        permalink = detail.get("permalink") or detail.get("permalink_url") or ""
-        # Ruta API: post_id es el id de Graph y debe coincidir tal cual. Ruta teléfono
-        # (verify_api.py buscó por shortcode): post_id ES el shortcode, así que se
-        # comprueba contra el permalink, no contra el id de Graph que devolvió la búsqueda.
-        if str(detail.get("id")) != str(post_id) and f"/p/{post_id}/" not in permalink:
-            raise MetricasError(
-                f"el resultado de {plataforma} no corresponde a este run: post_id={post_id!r}, "
-                f"detail.id={detail.get('id')!r}, permalink={permalink!r}")
+    permalink = detail.get("permalink") or detail.get("permalink_url") or ""
+    # Ruta API: post_id es el id de Graph y debe coincidir tal cual. Ruta teléfono
+    # (verify_api.py buscó por shortcode): post_id ES el shortcode, así que se
+    # comprueba contra el permalink, no contra el id de Graph que devolvió la búsqueda.
+    if str(detail.get("id")) != str(post_id) and f"/p/{post_id}/" not in permalink:
+        raise MetricasError(
+            f"el resultado de {plataforma} no corresponde a este run: post_id={post_id!r}, "
+            f"detail.id={detail.get('id')!r}, permalink={permalink!r}")
 
     observed_at = resultado.get("observed_at") or ahora.isoformat()
     submitted = publicacion.get("submitted_at") or publicacion.get("processing_completed_at")

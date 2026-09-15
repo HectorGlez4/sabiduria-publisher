@@ -1,4 +1,5 @@
 name: media-lab
+run-name: media-lab ${{ inputs.manifest }}
 
 on:
   workflow_dispatch:
