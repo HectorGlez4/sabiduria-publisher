@@ -611,18 +611,24 @@ class TelefonoSimulado:
         self.prohibidos: list[str] = []
         self.orden: list[str] = []  # «cortina» y «lanzar:<paquete>», para comprobar el orden
         self.reloj = 1000.0
+        self.volcados_leidos = 0
+        self.ultimo = None  # el último volcado leído: lo que había en pantalla
+        self.toques_en: list[tuple] = []  # (x, y, volcado en pantalla al tocar)
 
     @staticmethod
     def _siguiente(lista: list):
         return lista.pop(0) if len(lista) > 1 else lista[0]
 
     def volcado(self, timeout: int = 30) -> str:
+        self.volcados_leidos += 1
         v = self._siguiente(self.volcados)
         if isinstance(v, BaseException):
             raise v
+        self.ultimo = v
         return v
 
     def tocar(self, x: int, y: int) -> None:
+        self.toques_en.append((x, y, self.ultimo))
         self.toques.append((x, y))
         if self.falla_tocar is not None:
             raise self.falla_tocar
@@ -681,7 +687,7 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
     sustituidos; lo restaura todo pase lo que pase. Devuelve (resultado, excepción)."""
     import subprocess
     import phone_clipboard
-    from labkit import instagram_feed, telefono
+    from labkit import instagram_feed, reloj, telefono
 
     cambios = [(telefono, "volcado", sim.volcado), (telefono, "tocar", sim.tocar),
                (telefono, "tecla", sim.tecla), (telefono, "combinacion", sim.combinacion),
@@ -694,7 +700,9 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
                (phone_clipboard, "adb", sim.prohibido), (subprocess, "run", sim.prohibido),
                (subprocess, "Popen", sim.prohibido),
                (instagram_feed.time, "sleep", lambda segundos: None),
-               (instagram_feed.time, "monotonic", sim.monotonic)]
+               (instagram_feed.time, "monotonic", sim.monotonic),
+               (reloj, "dormir", lambda segundos: None),
+               (reloj, "monotonic", sim.monotonic)]
     originales = [(obj, nombre, getattr(obj, nombre)) for obj, nombre, _ in cambios]
     try:
         for obj, nombre, nuevo in cambios:
@@ -3592,6 +3600,90 @@ def seccion_pantalla_comun() -> None:
         time.sleep, time.monotonic = sleep_original, monotonic_original
 
 
+def seccion_pasos_comunes() -> None:
+    print("\n13. Fase 2: pasos comunes del teléfono")
+    from labkit import instagram_feed as IG, pasos, reloj, telefono as T
+
+    check(IG.BorradorPendiente is pasos.BorradorPendiente and IG.TelefonoNoListo is pasos.TelefonoNoListo,
+          "instagram_feed reexporta las excepciones de pasos")
+    check(IG.ESTABILIZACION_TIMEOUT_S == pasos.ESTABILIZACION_TIMEOUT_S and IG.ATRAS == pasos.ATRAS,
+          "instagram_feed reexporta las constantes de pasos")
+    evid = pathlib.Path("evidencia-simulada")
+    lectura_profil = lambda x: (T.buscar(x, texto="Profil") or {}).get("bounds")  # noqa: E731
+    uno = jerarquia(nodo_xml("[864,2200][1080,2340]", desc="Profil"))
+    otro = jerarquia(nodo_xml("[0,2200][216,2340]", desc="Profil"))
+
+    sim = TelefonoSimulado([uno, otro, otro, otro])
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_estable(lectura_profil))
+    check(err is None and res[1] == (0, 2200, 216, 2340) and sim.volcados_leidos == 4,
+          f"esperar_estable devuelve la lectura tras 3 volcados seguidos iguales ({err!r}, {sim.volcados_leidos})")
+
+    sim = TelefonoSimulado([uno, otro] * 40)
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_estable(lectura_profil))
+    check(isinstance(err, pasos.PantallaInesperada) and str(pasos.ESTABILIZACION_TIMEOUT_S) in str(err),
+          f"una lectura que nunca se estabiliza agota el plazo ({err!r})")
+
+    th = jerarquia(nodo_xml("[0,0][1080,200]", texto="Fils", paquete="com.instagram.barcelona"))
+    sim = TelefonoSimulado([th])
+    res, err = con_telefono_simulado(sim, lambda: pasos.atras("com.instagram.barcelona", evid, "salida-1"))
+    check(err is None and sim.teclas == [pasos.ATRAS] and sim.capturas == ["salida-1.png"],
+          f"atras pulsa con la app pedida delante ({err!r}, {sim.teclas})")
+    sim = TelefonoSimulado([th])
+    res, err = con_telefono_simulado(sim, lambda: pasos.atras("com.facebook.katana", evid, "salida-1"))
+    check(isinstance(err, pasos.PantallaInesperada) and sim.teclas == [], "atras no pulsa con otra app delante")
+
+    boton = {"centro": (540, 2140), "bounds": (45, 2081, 1035, 2205)}
+    aviso = jerarquia(nodo_xml("[0,250][1080,330]", texto="ENVIANDO", paquete="com.facebook.katana"))
+    limpio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Inicio", paquete="com.facebook.katana"))
+
+    def observador(xml):
+        return {"valido": True, "compositor": False, "banner": T.buscar(xml, texto="ENVIANDO") is not None, "fallo": False}
+
+    sim = TelefonoSimulado([aviso, limpio, limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.observar_envio(boton, observador, 90))
+    check(err is None and res["estado"] == "confirmado" and sim.toques == [boton["centro"]]
+          and res["submitted_at"] and res["processing_completed_at"],
+          f"observar_envio pulsa una vez y confirma con aviso y dos volcados limpios ({err!r}, {res})")
+
+    sim = TelefonoSimulado([limpio], falla_tocar=T.TelefonoError("device offline"))
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        nombres=("fb-antes.png", "fb-final.png", "fb-error.png"), listo=lambda x, e: [],
+        botones=lambda x: [dict(boton, texto="Publicar", desc="", clickable=True)],
+        observador_nuevo=lambda b: observador, despues=lambda r, e: e))
+    check(err is None and res["estado"] == "error_tras_pulsar" and len(sim.toques) == 1
+          and sim.capturas == ["fb-antes.png", "fb-error.png"] and sim.plazos_captura[-1] == pasos.CAPTURA_ERROR_S,
+          f"enviar: si el toque falla, error_tras_pulsar con captura corta y nada se propaga ({err!r}, {res})")
+
+    sim = TelefonoSimulado([limpio], listo=False)
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: [], botones=lambda x: [],
+        observador_nuevo=lambda b: observador, despues=lambda r, e: e))
+    check(isinstance(err, pasos.TelefonoNoListo) and sim.toques == [] and sim.capturas == [],
+          "enviar con el teléfono no listo no captura ni toca")
+
+    sim = TelefonoSimulado([limpio], emergentes=(T.TelefonoError("dumpsys no responde"),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: [], botones=lambda x: [],
+        observador_nuevo=lambda b: observador, despues=lambda r, e: e))
+    check(isinstance(err, T.TelefonoError) and sim.toques == [],
+          "enviar: si ventanas_emergentes falla, falla cerrado sin tocar")
+    vistas: list = []
+    emergente_fb = [{"nombre": "PopupWindow:sug", "frame": (0, 900, 1080, 1500), "ancho_padre": 1080}]
+    sim = TelefonoSimulado([limpio], emergentes=(emergente_fb,))
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: vistas.append(e) or (["emergente"] if e else []),
+        botones=lambda x: [], observador_nuevo=lambda b: observador, despues=lambda r, e: e))
+    check(isinstance(err, pasos.PantallaInesperada) and vistas == [emergente_fb] and sim.toques == [],
+          "enviar pasa a listo las ventanas emergentes del paquete y no pulsa si hay problemas")
+
+    check(reloj.dormir.__name__ == "dormir" and reloj.monotonic.__name__ == "monotonic",
+          "con_telefono_simulado restaura el reloj")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -3608,6 +3700,7 @@ SECCIONES = [
     seccion_turno,
     seccion_metricas,
     seccion_pantalla_comun,
+    seccion_pasos_comunes,
 ]
 
 
