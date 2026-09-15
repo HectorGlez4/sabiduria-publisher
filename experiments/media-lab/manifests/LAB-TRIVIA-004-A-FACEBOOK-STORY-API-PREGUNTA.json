@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-TRIVIA-004-A-FACEBOOK-STORY-API-PREGUNTA",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-TRIVIA-004/LAB-TRIVIA-004-A-api-9x16-pregunta.jpg",
+  "asset_sha256": "97f9c39972acef5f927edd26bc49d745765fe6e1caf0de1dfa0c7025b1654bbe",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-TRIVIA-004/LAB-TRIVIA-004-A-api-9x16-pregunta.jpg",
+  "platforms": [
+    "facebook_story"
+  ],
+  "captions": {
+    "facebook_story": ""
+  }
+}
