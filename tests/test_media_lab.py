@@ -5858,6 +5858,197 @@ def seccion_zona_segura_story() -> None:
                   f"lab.py render de una story que no cabe sale con 2 y FueraDeZonaSegura sin escribir ({codigo}, {datos})")
 
 
+def seccion_excepciones_s1() -> None:
+    print("\n23. Excepciones medidas en S1: contenedor raíz del editor de Story y fast_scroll del selector del feed")
+    from labkit import pantalla as P, telefono as T
+
+    # Solo XML sintético con los ids, bounds y estructura medidos en la sonda S1 (nunca los volcados reales).
+    IG = PAQUETE_IG
+    RAIZ = "com.instagram.android:id/quick_capture_root_container"
+    FAST = "com.instagram.android:id/fast_scroll"
+    pulsable = 'clickable="true"'
+
+    def rid(valor: str) -> str:
+        return f'resource-id="{valor}"'
+
+    def editor(*, id_raiz: str = RAIZ, bounds_raiz: str = "[0,0][1080,2340]", paquete_raiz: str = IG,
+               desc_raiz: str = "", en_raiz: str = "", en_asset: str = "") -> str:
+        """Editor de Story: contenedor raíz pulsable con las herramientas («Stickers» dentro del pulsable
+        `asset_button`) y la barra de compartir («Vos stories» con un icono dentro y «Partager sur»)."""
+        herramientas = nodo_xml(
+            "[888,0][1080,1920]", clase="androidx.compose.ui.platform.ComposeView",
+            extra=rid("com.instagram.android:id/post_capture_compose_view"),
+            hijos=nodo_xml("[917,34][1052,595]", clase="android.view.View", hijos=nodo_xml(
+                "[917,176][1052,311]", clase="android.view.View",
+                extra=f'{pulsable} {rid("com.instagram.android:id/asset_button")}',
+                hijos=nodo_xml("[922,181][1046,305]", desc="Stickers", clase="android.view.View")
+                + nodo_xml("[922,181][1046,305]", clase="android.widget.Button") + en_asset)))
+        barra = nodo_xml(
+            "[34,2056][1046,2179]", clase="android.widget.Button",
+            extra=f'{pulsable} {rid("com.instagram.android:id/story_share_controls_action_bar")}',
+            hijos=nodo_xml("[34,2056][463,2179]", desc="Vos stories", clase="android.widget.Button",
+                           extra=f'{pulsable} {rid("com.instagram.android:id/your_story_share_shortcut_button")}',
+                           hijos=nodo_xml("[50,2080][110,2150]", desc="Icône", clase="android.widget.ImageView"))
+            + nodo_xml("[924,2057][1046,2179]", desc="Partager sur", clase="android.widget.Button", extra=pulsable))
+        contenedor = nodo_xml(bounds_raiz, desc=desc_raiz, clase="android.widget.FrameLayout", paquete=paquete_raiz,
+                              extra=f"{pulsable} {rid(id_raiz)}", hijos=herramientas + en_raiz + barra)
+        return jerarquia(nodo_xml("[0,0][1080,2340]", clase="android.view.ViewGroup",
+                                  extra=rid("com.instagram.android:id/layout_container_parent"), hijos=contenedor))
+
+    def mensaje_sonda(xml: str, **criterio) -> str | None:
+        try:
+            P.nodo_sonda(xml, IG, **criterio)
+        except P.PantallaInesperada as e:
+            return str(e)
+        return None
+
+    print("   · A. contenedor raíz de pantalla completa en la regla del centro")
+    xml = editor()
+    stickers = T.buscar(xml, texto="Stickers")
+    check(not P.es_envio(xml, stickers),
+          "A: «Stickers» dentro de quick_capture_root_container pulsable de pantalla completa ya no es envío")
+    check(mensaje_sonda(xml, desc="Stickers") is None and P.nodo_sonda(xml, IG, desc="Stickers") == stickers,
+          f"A: nodo_sonda devuelve «Stickers» ({mensaje_sonda(xml, desc='Stickers')})")
+    for etiqueta, label in (("Vos stories", "«Vos stories»"), ("Partager sur", "«Partager sur»"),
+                            ("Icône", "un nodo inocuo dentro del botón «Vos stories»")):
+        n = T.buscar(xml, texto=etiqueta)
+        check(P.es_envio(xml, n), f"A: {label} sigue siendo envío en es_envio dentro del contenedor exceptuado")
+        check(mensaje_sonda(xml, desc=etiqueta) is not None,
+              f"A: nodo_sonda sigue negándose a devolver {label} ({mensaje_sonda(xml, desc=etiqueta)})")
+
+    bloqueos = (
+        ("el contenedor raíz con otro id (otro_root)", editor(id_raiz="com.instagram.android:id/otro_root")),
+        ("un id que solo empieza por el de la lista (…_container_v2)",
+         editor(id_raiz="com.instagram.android:id/quick_capture_root_container_v2")),
+        ("un id que es prefijo del de la lista (quick_capture_root)",
+         editor(id_raiz="com.instagram.android:id/quick_capture_root")),
+        ("el mismo final de id en otro paquete (Threads)",
+         editor(id_raiz="com.instagram.barcelona:id/quick_capture_root_container", paquete_raiz="com.instagram.barcelona")),
+        ("el id completo de la lista en un nodo de otro paquete",
+         editor(paquete_raiz="com.android.systemui")),
+        ("el mismo id con bounds de media pantalla de alto", editor(bounds_raiz="[0,0][1080,1170]")),
+        ("el mismo id con bounds de algo más de media pantalla de ancho", editor(bounds_raiz="[500,0][1080,2340]")),
+        ("el contenedor exceptuado con etiqueta de envío propia («Partager»)", editor(desc_raiz="Partager")),
+        ("un nodo NO pulsable de envío cuyas bounds contienen el centro",
+         editor(en_raiz=nodo_xml("[900,150][1060,330]", desc="Partager", clase="android.view.View"))),
+        ("otro pulsable sin id bajo el centro con «Vos stories» dentro, lejos del centro",
+         editor(en_raiz=nodo_xml("[0,0][1080,1920]", clase="android.widget.FrameLayout", extra=pulsable,
+                                 hijos=nodo_xml("[100,1500][400,1600]", desc="Vos stories", clase="android.widget.Button")))),
+        ("«Partager» dentro del pulsable asset_button, lejos del centro",
+         editor(en_asset=nodo_xml("[1047,306][1051,310]", desc="Partager", clase="android.view.View"))),
+    )
+    for label, variante in bloqueos:
+        n = T.buscar(variante, texto="Stickers")
+        check(P.es_envio(variante, n) and mensaje_sonda(variante, desc="Stickers") is not None,
+              f"A: «Stickers» sigue bloqueado con {label}")
+    for label, variante in (("«Supprimer» no pulsable bajo el centro",
+                             editor(en_raiz=nodo_xml("[900,150][1060,330]", desc="Supprimer", clase="android.view.View"))),
+                            ("«Supprimer» dentro del pulsable asset_button, lejos del centro",
+                             editor(en_asset=nodo_xml("[1047,306][1051,310]", desc="Supprimer", clase="android.view.View")))):
+        motivo = mensaje_sonda(variante, desc="Stickers") or ""
+        check("borrado" in motivo, f"A: la guardia de borrado sigue bloqueando «Stickers» con {label} ({motivo!r})")
+    lejos = editor(en_raiz=nodo_xml("[100,1500][400,1600]", desc="Supprimer", clase="android.view.View"))
+    check(mensaje_sonda(lejos, desc="Stickers") is None,
+          "A: un «Supprimer» del editor lejos del centro no bloquea por ser descendiente del contenedor exceptuado "
+          "(la misma lista vale para la guardia de borrado)")
+    sin_etiqueta = editor(en_raiz=nodo_xml("[0,0][1080,1920]", clase="android.widget.FrameLayout",
+                                           extra=f'{pulsable} {rid("com.instagram.android:id/share_overlay")}'))
+    check("id de envío" in (mensaje_sonda(sin_etiqueta, desc="Stickers") or ""),
+          "A: un pulsable sin etiqueta con id de envío bajo el centro sigue bloqueando dentro del contenedor exceptuado")
+    # Pendiente de decidir (no es parte de la excepción A): en los volcados reales, tras las herramientas vienen un
+    # View hermano más ancho que «Stickers» y contenedores de cámara de pantalla completa, y `tapado` da el nodo por
+    # tapado, así que la sonda sigue fallando cerrado en el editor real.
+    con_camara = editor(en_asset=nodo_xml("[917,176][1052,311]", clase="android.view.View"),
+                        en_raiz=nodo_xml("[0,0][1080,1920]", clase="android.widget.FrameLayout",
+                                         extra=rid("com.instagram.android:id/capture_interactive_drawable_container")))
+    check(T.tapado(con_camara, T.buscar(con_camara, texto="Stickers")),
+          "A (pendiente): con el View hermano y el contenedor de cámara posteriores, «Stickers» sigue tapado")
+
+    with entorno_lab_fase2() as (lab, raiz):
+        supervisada = ("--run", "SONDA-F2-T", "--nombre", "a", "--supervisada")
+        sim = TelefonoSimulado([xml])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", "Stickers"))
+        check(res is not None and res[0] == 0 and sim.toques == [(984, 243)],
+              f"A: sonda tocar --desc Stickers sale con 0 y toca una vez su centro ({res and res[0]}, {sim.toques}, {err!r})")
+        for etiqueta in ("Vos stories", "Partager sur"):
+            sim = TelefonoSimulado([xml])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", etiqueta))
+            check(rechazo(res, "envío") and sim.volcados_leidos == 0 and sim.toques == [],
+                  f"A: sonda tocar --desc «{etiqueta}» se rechaza sin volcar ni tocar ({res and res[0]}, {err!r})")
+        for label, variante, criterio in (("el icono de dentro de «Vos stories»", xml, "Icône"),
+                                          ("«Stickers» con el contenedor otro_root",
+                                           editor(id_raiz="com.instagram.android:id/otro_root"), "Stickers"),
+                                          ("«Stickers» tapado por el contenedor de cámara", con_camara, "Stickers")):
+            sim = TelefonoSimulado([variante])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", criterio))
+            check(res is not None and res[0] == 4 and sim.toques == [],
+                  f"A: sonda tocar no pulsa {label} ({res and res[0]}, {res and campo(res[1], 'error')})")
+
+    print("   · B. fast_scroll en telefono.tapado")
+    MINIATURA = "Désélectionné Miniature de la photo du 2 janvier 2026 10:00"
+
+    def rejilla(encima: str = "") -> str:
+        """Selector del feed: una fila de miniaturas y, detrás en el documento, lo que se dibuje encima."""
+        celdas = "".join(
+            nodo_xml(bounds, clase="android.widget.FrameLayout", hijos=nodo_xml(
+                bounds, desc=desc, clase="android.widget.Button",
+                extra=f'{pulsable} {rid("com.instagram.android:id/gallery_grid_item_thumbnail")}'))
+            for bounds, desc in (("[273,1479][538,1744]", "Sélectionné Miniature de la photo du 1 janvier 2026 9:00"),
+                                 ("[542,1479][807,1744]", MINIATURA),
+                                 ("[811,1479][1076,1744]", "Désélectionné Miniature de la photo du 3 janvier 2026 11:00")))
+        grid = nodo_xml("[0,1479][1080,2205]", clase="androidx.recyclerview.widget.RecyclerView",
+                        extra=rid("com.instagram.android:id/gallery_recycler_view"), hijos=celdas)
+        return jerarquia(nodo_xml("[0,0][1080,2340]", clase="android.widget.FrameLayout", hijos=grid + encima))
+
+    def fast(*, id_: str = FAST, desc: str = "", hijos: str = "", paquete: str = IG, extra: str = "") -> str:
+        return nodo_xml("[662,1479][1080,1625]", desc=desc, clase="android.widget.LinearLayout", paquete=paquete,
+                        extra=f"{extra} {rid(id_)}", hijos=hijos)
+
+    def miniatura_tapada(xml_rejilla: str) -> bool:
+        return T.tapado(xml_rejilla, T.buscar(xml_rejilla, texto=MINIATURA))
+
+    check(not miniatura_tapada(rejilla()), "B: sin nada encima la miniatura no está tapada")
+    check(not miniatura_tapada(rejilla(fast())), "B: fast_scroll sin etiqueta ni hijos encima no tapa la miniatura")
+    tapan = (
+        ("fast_scroll con content-desc", fast(desc="Défilement rapide")),
+        ("fast_scroll con un hijo con texto", fast(hijos=nodo_xml("[700,1500][1000,1600]", texto="janvier"))),
+        ("fast_scroll con un nieto con content-desc", fast(hijos=nodo_xml(
+            "[662,1479][1080,1625]", clase="android.widget.FrameLayout",
+            hijos=nodo_xml("[1000,1490][1070,1560]", desc="Poignée", clase="android.widget.ImageView")))),
+        ("fast_scroll pulsable", fast(extra=pulsable)),
+        ("fast_scroll sin etiqueta con un hijo sin etiqueta de otro id sobre el centro", fast(hijos=nodo_xml(
+            "[662,1479][1080,1625]", clase="android.view.View", extra=rid("com.instagram.android:id/scroll_handle")))),
+        ("un nodo propio sin etiqueta de otro id", fast(id_="com.instagram.android:id/overlay_hint")),
+        ("un nodo propio sin etiqueta ni id", fast(id_="")),
+        ("un id que empieza por el de la lista (fast_scroll_bar)", fast(id_="com.instagram.android:id/fast_scroll_bar")),
+        ("un id que es prefijo del de la lista (fast)", fast(id_="com.instagram.android:id/fast")),
+        ("el mismo final de id en otro paquete (Threads)",
+         fast(id_="com.instagram.barcelona:id/fast_scroll", paquete="com.instagram.barcelona")),
+        ("el id completo de la lista en un nodo de com.android.systemui", fast(paquete="com.android.systemui")),
+        ("una notificación de com.android.systemui",
+         nodo_xml("[0,1400][1080,1700]", clase="android.widget.FrameLayout", paquete="com.android.systemui",
+                  hijos=nodo_xml("[40,1420][1040,1680]", texto="Nouveau message", paquete="com.android.systemui"))),
+    )
+    for label, encima in tapan:
+        check(miniatura_tapada(rejilla(encima)), f"B: {label} encima sigue tapando la miniatura")
+    check(miniatura_tapada(rejilla(fast() + nodo_xml("[0,1400][1080,1700]", clase="android.widget.FrameLayout",
+                                                     paquete="com.android.systemui"))),
+          "B: una notificación de systemui detrás de un fast_scroll exceptuado sigue tapando")
+
+    with entorno_lab_fase2() as (lab, raiz):
+        supervisada = ("--run", "SONDA-F2-T", "--nombre", "a", "--supervisada")
+        sim = TelefonoSimulado([rejilla(fast())])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", MINIATURA))
+        check(res is not None and res[0] == 0 and sim.toques == [(674, 1611)],
+              f"B: sonda tocar --desc <miniatura> bajo fast_scroll sale con 0 y toca una vez ({res and res[0]}, {sim.toques}, {err!r})")
+        for label, encima in (("fast_scroll con content-desc", fast(desc="Défilement rapide")),
+                              ("una notificación de com.android.systemui", tapan[-1][1])):
+            sim = TelefonoSimulado([rejilla(encima)])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", MINIATURA))
+            check(res is not None and res[0] == 4 and sim.toques == [],
+                  f"B: sonda tocar no pulsa la miniatura con {label} encima ({res and res[0]}, {res and campo(res[1], 'error')})")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -5884,6 +6075,7 @@ SECCIONES = [
     seccion_preflight_fase2,
     seccion_prompt_ventana,
     seccion_zona_segura_story,
+    seccion_excepciones_s1,
 ]
 
 

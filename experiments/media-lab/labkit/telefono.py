@@ -160,6 +160,32 @@ def teclado_desde_dumpsys(texto: str) -> bool | None:
     return None if m is None else m.group(1) == "true"
 
 
+# Nodos POSTERIORES que `tapado` no cuenta como tapando. Resource-id COMPLETO, comparado exacto (nunca por sufijo ni
+# prefijo), y solo si el nodo es del paquete de ese id, no es pulsable y ni él ni ningún descendiente tiene texto o
+# content-desc (`superpuesto_ignorado`).
+# - `fast_scroll`: selector del feed de Instagram 446.0.0.49.77, medido en la sonda S1 de la fase 2 (2026-09-15,
+#   volcado ig-14-feed-selector-multiple de SONDA-F2-S1-IG): LinearLayout no pulsable, sin etiqueta ni hijos, en
+#   [662,1479][1080,1625], después de la rejilla en el documento y encima del centro de la miniatura
+#   [542,1479][807,1744].
+NODOS_SUPERPUESTOS_IGNORADOS = frozenset({"com.instagram.android:id/fast_scroll"})
+
+
+def superpuesto_ignorado(lista: list[dict], k: int) -> bool:
+    """`lista[k]` es un nodo de `NODOS_SUPERPUESTOS_IGNORADOS` que no tapa: resource-id COMPLETO en la lista (igualdad
+    exacta), del paquete que nombra ese id, no pulsable y sin texto ni content-desc, ni él ni sus descendientes (los
+    siguientes en orden de documento con profundidad mayor)."""
+    otro = lista[k]
+    rid = otro["resource_id"]
+    if rid not in NODOS_SUPERPUESTOS_IGNORADOS or otro["package"] != rid.split(":", 1)[0] or otro["clickable"]:
+        return False
+    for n in lista[k:]:
+        if n is not otro and n["profundidad"] <= otro["profundidad"]:
+            break
+        if n["texto"] or n["desc"]:
+            return False
+    return True
+
+
 def tapado(xml: str, nodo: dict) -> bool:
     """Algo dibujado después cubre el centro del nodo.
 
@@ -170,7 +196,11 @@ def tapado(xml: str, nodo: dict) -> bool:
     primera aparición en el orden del documento, que es la que deja más nodos
     posteriores por revisar. Cuenta como tapado si un nodo POSTERIOR contiene el
     centro y no cabe entero dentro del nodo (sus propios hijos no lo tapan; una
-    lista superpuesta sí). Si el nodo no está en el volcado se devuelve True."""
+    lista superpuesta sí). Si el nodo no está en el volcado se devuelve True.
+
+    Única excepción: un nodo posterior de `NODOS_SUPERPUESTOS_IGNORADOS` sin etiqueta propia ni en sus descendientes
+    (`superpuesto_ignorado`) no tapa. Sus descendientes se miran por su cuenta como cualquier otro nodo posterior, y
+    lo de otro paquete (una notificación de systemui) tapa siempre."""
     clave = ("bounds", "texto", "desc", "clase", "package")
     lista = nodos(xml)
     indice = next((i for i, n in enumerate(lista)
@@ -179,11 +209,11 @@ def tapado(xml: str, nodo: dict) -> bool:
         return True
     x1, y1, x2, y2 = nodo["bounds"]
     cx, cy = nodo["centro"]
-    for otro in lista[indice + 1:]:
-        ox1, oy1, ox2, oy2 = otro["bounds"]
+    for k in range(indice + 1, len(lista)):
+        ox1, oy1, ox2, oy2 = lista[k]["bounds"]
         contiene_centro = ox1 <= cx < ox2 and oy1 <= cy < oy2
         dentro = ox1 >= x1 and oy1 >= y1 and ox2 <= x2 and oy2 <= y2
-        if contiene_centro and not dentro:
+        if contiene_centro and not dentro and not superpuesto_ignorado(lista, k):
             return True
     return False
 

@@ -47,7 +47,12 @@ def alto_volcado(xml: str) -> int:
     bajo que la pantalla tampoco es la pantalla completa. Ninguno de los dos debe usarse para
     escalar las zonas «arriba»/«abajo» (fallaría abierto: un nodo intermedio contaría como
     «abajo»)."""
-    completas = [n["bounds"][3] for n in telefono.nodos(xml)
+    return _alto_de_nodos(telefono.nodos(xml))
+
+
+def _alto_de_nodos(lista: list[dict]) -> int:
+    """`alto_volcado` sobre los nodos ya leídos de un volcado."""
+    completas = [n["bounds"][3] for n in lista
                  if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)
                  and n["bounds"][2] >= ANCHO_PANTALLA_PX and n["bounds"][3] > LIMITE_ABAJO_PX]
     return max(completas, default=ALTO_REFERENCIA)
@@ -235,23 +240,58 @@ def _bloquea_toque(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     return envio_texto or envio_desc or envio_rid or prohibido
 
 
+# Contenedores raíz PULSABLES de pantalla completa cuyos descendientes NO se miran en la regla del centro
+# (`_bajo_el_toque`): envuelven la pantalla entera, así que con ellos cualquier envío de la pantalla bloquearía
+# cualquier toque. Resource-id COMPLETO, comparado exacto (nunca por sufijo ni prefijo), y solo si el nodo es del
+# paquete de ese id y cubre la pantalla (`contenedor_raiz_ignorado`).
+# - `quick_capture_root_container`: editor de Story de Instagram 446.0.0.49.77, medido en la sonda S1 de la fase 2
+#   (2026-09-15, volcados ig-05b-sin-aviso-camara e ig-06-historia-editor-audio de SONDA-F2-S1-IG): FrameLayout
+#   pulsable sin etiqueta en [0,0][1080,2340] (la raíz del volcado) que contiene las herramientas («Stickers», dentro
+#   del pulsable `asset_button`) y la barra de compartir («Vos stories», «Partager sur»).
+CONTENEDORES_RAIZ_IGNORADOS = frozenset({"com.instagram.android:id/quick_capture_root_container"})
+FRACCION_PANTALLA_COMPLETA = 0.95  # del ancho (ANCHO_PANTALLA_PX) y del alto (`alto_volcado`) que debe cubrir
+
+
+def contenedor_raiz_ignorado(n: dict, alto: int) -> bool:
+    """`n` es un contenedor raíz de `CONTENEDORES_RAIZ_IGNORADOS`: pulsable, con resource-id COMPLETO en la lista
+    (igualdad exacta), del paquete que nombra ese id y de al menos FRACCION_PANTALLA_COMPLETA del ancho de la pantalla
+    y de `alto` (el alto del volcado). Un nodo con ese id pero más pequeño no cuenta."""
+    rid = n["resource_id"]
+    if not n["clickable"] or rid not in CONTENEDORES_RAIZ_IGNORADOS or n["package"] != rid.split(":", 1)[0]:
+        return False
+    x1, y1, x2, y2 = n["bounds"]
+    return (x2 - x1 >= FRACCION_PANTALLA_COMPLETA * ANCHO_PANTALLA_PX
+            and y2 - y1 >= FRACCION_PANTALLA_COMPLETA * alto)
+
+
 def _bajo_el_toque(lista: list[dict], n: dict, bloquea, *, descendientes: bool = True,
                    solo_pulsables: bool = False) -> dict | None:
     """La regla del centro, común a `es_envio` y a las guardias de `nodo_sonda`: el primer nodo que cumple
     `bloquea(nodo)` y recibiría el toque en el centro de `n`, o None. Mira, en este orden, `n` mismo y, para cada nodo
     de `lista` (de cualquier paquete, en orden de documento) cuyas bounds contienen el centro: el propio nodo (con
     `solo_pulsables`, solo si es pulsable) y, con `descendientes`, los descendientes de ese nodo si es PULSABLE (los
-    siguientes en orden de documento con profundidad mayor, hasta el primero que no lo sea)."""
+    siguientes en orden de documento con profundidad mayor, hasta el primero que no lo sea).
+
+    Excepción: los descendientes de un contenedor raíz de `CONTENEDORES_RAIZ_IGNORADOS` que cubre la pantalla
+    (`contenedor_raiz_ignorado`) no se miran por ser descendientes suyos. Solo se salta ESE recorrido: `n`, el propio
+    contenedor, cualquier nodo cuyas bounds contienen el centro (pulsable o no) y los descendientes de cualquier otro
+    pulsable bajo el centro se siguen mirando. Vale igual para las tres guardias que pasan por aquí (envío o
+    prohibido, id de envío sin etiqueta y borrado), y también para `punto_bloqueado`, porque el motivo es el mismo en
+    todas: ese contenedor envuelve la pantalla entera, así que su recorrido de descendientes mira TODOS los controles
+    de la pantalla y bloquearía cualquier toque del editor en cuanto haya uno de envío o de borrado en otra parte. La
+    de id de envío no recorre descendientes (`descendientes=False`), así que ahí la excepción no cambia nada. La lista
+    es solo para ese contenedor raíz medido: cualquier otro pulsable sigue bloqueando por sus descendientes."""
     if bloquea(n):
         return n
     cx, cy = n["centro"]
+    alto = _alto_de_nodos(lista)
     for k, m in enumerate(lista):
         x1, y1, x2, y2 = m["bounds"]
         if not (x1 <= cx < x2 and y1 <= cy < y2):
             continue
         if (m["clickable"] or not solo_pulsables) and bloquea(m):
             return m
-        if descendientes and m["clickable"]:
+        if descendientes and m["clickable"] and not contenedor_raiz_ignorado(m, alto):
             for hijo in lista[k + 1:]:
                 if hijo["profundidad"] <= m["profundidad"]:
                     break
@@ -266,7 +306,8 @@ def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     PULSABLE cuyas bounds contienen el centro tiene un descendiente que bloquea (cubre tanto el
     antecesor clickable que recibe el toque como cualquier otro contenedor pulsable de otra rama del
     árbol que solape ese punto: un botón de pantalla completa sin etiqueta propia que envuelve un
-    «Partager» bloquea cualquier toque dentro, a propósito). `ignorar` exime esa etiqueta, campo a
+    «Partager» bloquea cualquier toque dentro, a propósito, salvo el contenedor raíz medido de
+    `CONTENEDORES_RAIZ_IGNORADOS`, ver `_bajo_el_toque`). `ignorar` exime esa etiqueta, campo a
     campo, en cualquier nodo del volcado que la tenga (no solo en `n`), sin ocultar ningún otro
     control de envío. `_bajo_el_toque` ya mira `n` antes que nada."""
     return _bajo_el_toque(telefono.nodos(xml), n, lambda m: _bloquea_toque(m, ignorar)) is not None
