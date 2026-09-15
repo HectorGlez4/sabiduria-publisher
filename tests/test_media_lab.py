@@ -5734,6 +5734,25 @@ def seccion_zona_segura_story() -> None:
     error = error_de_zona(lambda: R.comprobar_story(elementos))
     check(error is not None and "no cabe en el panel" in str(error),
           f"un texto en x 51–1029 (dentro de la zona, fuera del panel): «no cabe en el panel» ({error})")
+    # Imposible con la geometría actual, pero fijado: una píldora sobre el panel (y 600–653), sin
+    # tocar ningún texto (el subtítulo acaba en x 762) y con su texto dentro, solo puede caer por
+    # la comprobación de píldora frente a panel.
+    try:
+        elementos = [dataclasses.replace(e, caja=(780, 600, 1030, 653), tinta=(780, 600, 1030, 653))
+                     if e.nombre == "marca" else e for e in R.disposicion_story(*persona)]
+        error = error_de_zona(lambda: R.comprobar_story(elementos))
+    except Exception as e:  # noqa: BLE001 — una mutación no aborta la batería
+        error = e
+    check(isinstance(error, R.FueraDeZonaSegura) and "se solapa con el panel" in str(error),
+          f"una píldora en y 600–653 sobre el panel: FueraDeZonaSegura «se solapa con el panel» ({error!r})")
+
+    print("   · el subtítulo de la story va en serif")
+    try:
+        subtitulo = next(e for e in R.disposicion_story(*persona) if e.nombre == "subtitulo")
+        ruta_fuente = pathlib.Path(subtitulo.fuente.path)
+    except Exception as e:  # noqa: BLE001 — una mutación no aborta la batería
+        ruta_fuente = e
+    check(ruta_fuente == R.FONT_SERIF, f"el subtítulo de disposicion_story usa FONT_SERIF ({ruta_fuente})")
 
     print("   · si no cabe, falla con un error claro y no dibuja")
     for motivo, args, pieza in (
