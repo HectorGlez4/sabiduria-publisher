@@ -31,10 +31,10 @@
     "follower_count": null,
     "nearby_production_posts": [
       {
-        "source": "lab.py preflight (right before workflow dispatch)",
+        "source": "lab.py preflight taken when resuming the record (~3 min after publish; the helper stopped on a GitHub network error before writing the run)",
         "at": "2026-09-15T21:33:44+00:00",
         "espera": "producción subiendo: hilos",
-        "note": "Informational only (user decision 2026-09-14). Manual «publica todo» session: several lab cells spaced ~21 min apart on the same night."
+        "note": "Informational only (user decision 2026-09-14). Manual «publica todo» session: several lab cells spaced ~21 min apart on the same night. At dispatch (21:30:39Z) the same session saw «producción subiendo: hilos, publicar»."
       }
     ],
     "matched_comparison_ids": []
@@ -63,7 +63,7 @@
     "access_checked_at": null
   },
   "timing": {
-    "started_at": "2026-09-15T21:33:44.253053+00:00",
+    "started_at": "2026-09-15T21:30:39Z",
     "first_acceptable_at": "2026-09-15T21:08:40Z",
     "finished_at": "2026-09-15T21:34:13.757453+00:00",
     "wall_elapsed_seconds": null,
@@ -154,7 +154,7 @@
     "publishing_transport": "Meta official API via isolated GitHub Actions lab workflow (media-lab)",
     "native_app_and_version": null,
     "api_version": null,
-    "route_assigned_at": "2026-09-15T21:33:44.253053+00:00",
+    "route_assigned_at": "2026-09-15T21:30:39Z",
     "phone_transfer_seconds": null,
     "publishing_active_seconds": 13.516,
     "native_changes_from_master": [],
