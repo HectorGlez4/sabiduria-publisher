@@ -60,6 +60,7 @@
 27. **Piezas de un solo commit.** 11b, 16b y 17b se parten en 11b-1/11b-2, 16b-1/16b-2 y 17b-1/17b-2.
 28. **Tarea 4: la receta no promete la URL desde el teléfono (revisión I-1 y M-1).** Ningún subcomando de `lab.py` abre el menú de la publicación, así que `verificacion` del feed de Instagram manda la URL a `manifiesto-verificacion --instagram-shortcode` si se conoce el shortcode y, si no, a `missing_data_reasons.post_url` (paso 7f del prompt); la sección 15 lo comprueba. El `ver` de `telefono-captura ig-06-perfil` avisa de que ese comando no navega: si la captura no muestra el perfil, se anota y se usa `ig-05-publicado`. **Pendiente (M-2, tarea posterior):** la prueba de existencia de comandos de la sección 15 solo mira subcomando y paso, no las opciones; hay que parsear cada comando con `ap.parse_args`, sustituyendo cada `<valor>` y quitando los corchetes de los opcionales.
 29. **Tarea 5: ajustes al código real.** La importación de `labkit` en `lab.py` conserva `metricas` y `turnos` (llegaron después de escribir el plan) y solo añade `recetas` y `textos`; la sección 16 envuelve los pasos con `--borrador` en `receta_temporal` en vez de asignar y hacer `pop` a mano; `receta_temporal` rechaza con `ValueError` un par promovido. `_paso_telefono` captura `pantalla.PantallaInesperada`, que es la misma clase que `instagram_feed.PantallaInesperada`. `telefono-atras` usa `pasos.atras` con el paquete de `textos.PAQUETES` para todas las apps (sin la rama de `instagram_feed.atras`, que era la misma llamada con el mismo paquete); el error de `lab.py receta` empieza por la celda.
+30. **Tarea 6: ajustes al código real.** `cmd_sonda` rechaza con `textos.es_no_tocar(valor)` (normalizado: mayúsculas, espacios y caracteres de ancho cero) en vez de `valor not in textos.NO_TOCAR`, y la sección 17 añade «partager», «Publicar», «ANULAR» y «\u200bPartager» a los rechazos (sin volcar, tocar ni capturar) y `volcar` con criterio. El toque pasa por `pasos.tocar(n, xml)` sobre el mismo volcado que `pantalla.nodo_sonda` (doble guardia con la regla del centro de `es_envio`), no por `telefono.tocar` directo; `nodo_sonda` conserva su parámetro `paquete` (solo para elegir el nodo), así que la llamada del plan cuadra. El mensaje de `--supervisada` dice «sesión de exploración dirigida, nunca desde la ventana desatendida»: el teléfono es dedicado y el usuario no tiene que estar presente, pero el flag sigue siendo obligatorio. La prueba de `_evidencia` compara con `raiz/evidence/sondas-f2/…` porque `LabAislado` redirige `EVIDENCIA` a `raiz/evidence`, y comprueba aparte que el `EVIDENCIA` real es `experiments/media-lab/evidence/android`. La regla que ignora `sondas-f2/` es `experiments/media-lab/evidence/.gitignore:1:android/*`.
 
 **Correspondencia con el orden de la sección 5 de la spec:**
 
@@ -2251,7 +2252,7 @@ Después, desde el árbol principal: `.venv/bin/python experiments/media-lab/lab
 - Modify: `experiments/media-lab/lab.py`
 - Test: `tests/test_media_lab.py`
 
-- [ ] **Step 1: Escribir la prueba**
+- [x] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` y registrar `seccion_sonda_y_fixtures,`:
 
@@ -2335,12 +2336,12 @@ def seccion_sonda_y_fixtures() -> None:
             check(rechazo(lab("fixture-podar", "--app", "instagram", *args), fragmento), f"fixture-podar rechaza {label}")
 ```
 
-- [ ] **Step 2: Ver que falla**
+- [x] **Step 2: Ver que falla**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: traceback con `ImportError: cannot import name 'fixtures' from 'labkit'` en la sección 17.
 
-- [ ] **Step 3: Implementar `fixtures.py`**
+- [x] **Step 3: Implementar `fixtures.py`**
 
 ```python
 """
@@ -2403,7 +2404,7 @@ def revisar(xml: str, app: str) -> list[str]:
     return problemas
 ```
 
-- [ ] **Step 4: Implementar `sonda` y `fixture-podar` en `lab.py`**
+- [x] **Step 4: Implementar `sonda` y `fixture-podar` en `lab.py`**
 
 Sustituir `_evidencia` por:
 
@@ -2496,17 +2497,17 @@ y en `construir`, tras `telefono-descartar`:
     p.set_defaults(func=cmd_fixture_podar)
 ```
 
-- [ ] **Step 5: Comprobar que los volcados crudos de las sondas quedan ignorados**
+- [x] **Step 5: Comprobar que los volcados crudos de las sondas quedan ignorados**
 
 Run: `git check-ignore -v experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-X/a.xml`
 Expected: una línea con la regla del `.gitignore` vigente que ya ignora `evidence/android/*`. No se añade ninguna regla; si no sale nada, parar y averiguar por qué antes de seguir.
 
-- [ ] **Step 6: Ver que pasa**
+- [x] **Step 6: Ver que pasa**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: la sección 17 en `✓` (el recorrido de fixtures no encuentra ninguno todavía) y `El laboratorio cumple sus contratos.`
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add experiments/media-lab/labkit/fixtures.py experiments/media-lab/lab.py tests/test_media_lab.py
