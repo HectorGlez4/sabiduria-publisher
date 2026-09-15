@@ -184,10 +184,28 @@
     "post_url": "https://www.instagram.com/p/DdPX1J9jwt1/",
     "audio_verified": null,
     "master_sha256": "32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-15T03:52:32.457222+00:00",
+        "edad_horas": 31.84,
+        "metricas": {
+          "instagram": {
+            "reach": 10,
+            "views": 15,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 3
+          }
+        },
+        "errores": {}
+      }
+    ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "24 h snapshot due 2026-09-14T20:02:07Z is overdue (checked 2026-09-14T23:48Z, out-of-turn test window): no allowed lab command reads insights (verify_api.py only reads post fields). 72 h due 2026-09-16T20:02:07Z, 7 d due 2026-09-20T20:02:07Z."
+    "audience_metrics": "24 h snapshot (due 2026-09-14T20:02:07Z) taken late, at 31.84 h, by media-lab-verify 34926632409 (run_group LAB-F12-001-A-INSTAGRAM-M24H): it is not a true 24 h age match. 72 h due 2026-09-16T20:02:07Z, 7 d due 2026-09-20T20:02:07Z."
   },
   "decision": "Accepted and publicly verified; retain as API side of PAIR-SINGLE-01. Use a distinct factual variant B for the Android matched route.",
   "next_action": "Collect Instagram views/reach/saves/shares at 24h, 72h and 7d; keep definitions separate from Facebook."

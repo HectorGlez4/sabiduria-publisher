@@ -184,10 +184,27 @@
     "post_url": "https://www.facebook.com/874327782058550/posts/1094273873397272",
     "audio_verified": null,
     "master_sha256": "32cae1642cdeb01e7b6194e7630f045f9d14c96a77527241785715884358d76b",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-15T03:52:34.667960+00:00",
+        "edad_horas": 31.85,
+        "metricas": {},
+        "errores": {
+          "facebook": {
+            "post_impressions_unique": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#100) The value must be a valid insights metric\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AK0c_Xs_MorX_oWRcixUE94\"}}",
+            "post_impressions": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#100) The value must be a valid insights metric\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"Au6n4G_bcw6SixST4rtj7D0\"}}",
+            "post_clicks": "sin datos",
+            "post_reactions_by_type_total": "sin datos",
+            "post_media_view": "sin datos",
+            "post_total_media_view_unique": "sin datos"
+          }
+        }
+      }
+    ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "24 h snapshot due 2026-09-14T20:01:52Z is overdue (checked 2026-09-14T23:48Z, out-of-turn test window): no allowed lab command reads insights (verify_api.py only reads post fields). 72 h due 2026-09-16T20:01:52Z, 7 d due 2026-09-20T20:01:52Z."
+    "audience_metrics": "24 h snapshot (due 2026-09-14T20:01:52Z) taken late, at 31.85 h, by media-lab-verify 34926630286 (run_group LAB-F12-001-A-FACEBOOK-M24H, one per network because the three Day 1 runs share base LAB-F12-001-A): post verified but no Facebook metric came back. post_impressions_unique and post_impressions are rejected by Graph (#100 'The value must be a valid insights metric', deprecated metrics); post_clicks, post_reactions_by_type_total, post_media_view and post_total_media_view_unique returned no data. verify_api.py needs its Facebook metric list updated before 72 h (due 2026-09-16T20:01:52Z) and 7 d (due 2026-09-20T20:01:52Z) can hold any data."
   },
   "decision": "Accepted and publicly verified; retain as API side of PAIR-SINGLE-01. Use a distinct factual variant B for the Android matched route.",
   "next_action": "Collect Facebook metrics at 24h, 72h and 7d; compare only against same-age Facebook image baselines."
