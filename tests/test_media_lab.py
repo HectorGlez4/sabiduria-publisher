@@ -4484,6 +4484,97 @@ def seccion_cli_fase2() -> None:
         telefono.captura = captura_original
 
 
+def seccion_sonda_y_fixtures() -> None:
+    print("\n17. Fase 2: sondas supervisadas y fixtures podados")
+    from labkit import fixtures as FX, telefono as T, textos as TX
+
+    crudo = jerarquia(
+        nodo_xml("[0,0][1080,100]", texto="12:04", paquete="com.android.systemui"),
+        nodo_xml("[0,200][1080,300]", texto="Profil", desc="Profil"),
+        nodo_xml("[0,400][1080,500]", texto="Hola Juan, ¿quedamos mañana?", extra='hint="Écrivez à Juan"'),
+        nodo_xml("[0,600][540,900]", desc="Sélectionné Miniature de la photo du 14 septembre 2026 10:39"),
+        nodo_xml("[0,1000][1080,1100]", texto="#citasdiarias"))
+    podado = FX.podar(crudo, "instagram")
+    pares = [(n["texto"], n["desc"]) for n in T.nodos(podado)]
+    check(all(n["package"] == PAQUETE_IG for n in T.nodos(podado)), "podar quita los nodos de com.android.systemui")
+    check(("Profil", "Profil") in pares and ("#citasdiarias", "") in pares
+          and ("", "Sélectionné Miniature de la photo du 14 septembre 2026 10:39") in pares,
+          f"podar conserva textos de la tabla, hashtags y fechas de miniatura ({pares})")
+    check("Juan" not in podado and "quedamos" not in podado, "podar vacía el texto y el hint personales")
+    check(FX.revisar(podado, "instagram") == [] and FX.revisar(crudo, "instagram"),
+          "revisar da limpio lo podado y señala lo crudo")
+
+    base = ROOT / "tests" / "fixtures" / "telefono"
+    for ruta in sorted(base.glob("*/*.xml")):
+        app = ruta.parent.name
+        problemas = (FX.revisar(ruta.read_text(encoding="utf-8"), app) if app in TX.APPS_TELEFONO
+                     else [f"carpeta de app desconocida: {app}"])
+        check(not problemas, f"{ruta.relative_to(ROOT)} está podado y sin com.android.systemui ({problemas[:3]})")
+
+    with entorno_lab_fase2() as (lab, raiz):
+        supervisada = ("--run", "SONDA-F2-T", "--nombre", "a", "--supervisada")
+        # LabAislado redirige EVIDENCIA a raiz/evidence; en el repo real es experiments/media-lab/evidence/android,
+        # así que las sondas quedan en evidence/android/sondas-f2/ (ignorada por evidence/.gitignore).
+        check(lab.viejos["EVIDENCIA"].parts[-3:] == ("media-lab", "evidence", "android"),
+              f"EVIDENCIA real es experiments/media-lab/evidence/android ({lab.viejos['EVIDENCIA']})")
+        check(lab.lab._evidencia("SONDA-F2-X") == raiz / "evidence" / "sondas-f2" / "SONDA-F2-X"
+              and lab.lab._evidencia("LAB-X") == raiz / "evidence" / "LAB-X"
+              and lab.lab._evidencia("SONDA-R") == raiz / "evidence" / "SONDA-R",
+              "las evidencias de las sondas SONDA-F2-* van a sondas-f2/ (ignorada por git) y las demás no")
+        for extra, label in ((("--texto", "Partager"), "«Partager»"),
+                             (("--texto", "partager"), "«partager» en minúsculas"),
+                             (("--texto", "\u200bPartager"), "«Partager» precedido de un carácter de ancho cero"),
+                             (("--texto", "Publicar"), "«Publicar»"),
+                             (("--desc", "Compartir historia"), "«Compartir historia»"),
+                             (("--resource-id", "com.instagram.barcelona:id/new_thread_screen_post_button"),
+                              "el id del botón de publicar de Threads"),
+                             (("--texto", "Anular"), "«Anular»"),
+                             (("--texto", "ANULAR"), "«ANULAR» en mayúsculas"),
+                             (("--desc", "Votre story"), "«Votre story» (publica la Story)")):
+            sim = TelefonoSimulado([xml_compositor()])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, *extra))
+            check(rechazo(res, "envío") and sim.toques == [] and sim.volcados_leidos == 0 and sim.capturas == [],
+                  f"sonda tocar se niega a pulsar {label} antes de tocar el teléfono ({res and res[0]}, {err!r})")
+        for args, fragmento, label in ((("sonda", "instagram", "volcar", "--run", "SONDA-F2-T", "--nombre", "a"), "--supervisada",
+                                        "sin --supervisada"),
+                                       (("sonda", "instagram", "volcar", "--run", "LAB-X", "--nombre", "a", "--supervisada"), "SONDA-F2-",
+                                        "--run que no empieza por SONDA-F2-"),
+                                       (("sonda", "instagram", "tocar", *supervisada), "--texto", "tocar sin criterio"),
+                                       (("sonda", "instagram", "volcar", *supervisada, "--texto", "Suivant"), "--texto",
+                                        "volcar con criterio")):
+            sim = TelefonoSimulado([xml_compositor()])
+            res, err = con_telefono_simulado(sim, lambda: lab(*args))
+            check(rechazo(res, fragmento) and sim.volcados_leidos == 0 and sim.toques == [],
+                  f"sonda rechaza {label} ({res and res[0]}, {err!r})")
+
+        sim = TelefonoSimulado([XML_BOTON_ENVIO_CON_ICONO])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", "Icône"))
+        check(res is not None and res[0] == 4 and sim.toques == [],
+              f"sonda tocar no pulsa un icono dentro del botón de envío ({res and res[0]}, {err!r})")
+        sim = TelefonoSimulado([XML_BOTON_ENVIO_CON_ICONO])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        volcado = raiz / "evidence" / "sondas-f2" / "SONDA-F2-T" / "a.xml"
+        check(res is not None and res[0] == 0 and sim.toques == [(963, 170)] and volcado.is_file()
+              and sim.capturas == ["a.png"],
+              f"sonda tocar pulsa un nodo único y deja volcado y captura ({res and res[0]}, {sim.toques})")
+        sim = TelefonoSimulado([xml_perfil()])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "threads", "lanzar", "--run", "SONDA-F2-T",
+                                                          "--nombre", "b", "--supervisada"))
+        check(res is not None and res[0] == 0 and sim.orden == ["lanzar:com.instagram.barcelona"] and sim.toques == [],
+              f"sonda lanzar abre la app y vuelca sin tocar ({res and res[0]}, {sim.orden})")
+
+        rel = "experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-T/crudo.xml"
+        (raiz / rel).parent.mkdir(parents=True, exist_ok=True)
+        (raiz / rel).write_text(crudo, encoding="utf-8")
+        codigo, datos, _ = lab("fixture-podar", "--app", "instagram", "--desde", rel, "--pantalla", "perfil")
+        destino = raiz / "tests" / "fixtures" / "telefono" / "instagram" / "perfil.xml"
+        check(codigo == 0 and destino.is_file() and "Juan" not in destino.read_text(encoding="utf-8"),
+              f"fixture-podar escribe el fixture podado ({codigo}, {datos})")
+        for args, fragmento, label in ((("--desde", "/etc/hosts", "--pantalla", "x"), "--desde", "un origen fuera de evidence"),
+                                       (("--desde", rel, "--pantalla", "../x"), "--pantalla", "una pantalla con ..")):
+            check(rechazo(lab("fixture-podar", "--app", "instagram", *args), fragmento), f"fixture-podar rechaza {label}")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -4504,6 +4595,7 @@ SECCIONES = [
     seccion_textos_y_descarte,
     seccion_recetas_y_seleccion,
     seccion_cli_fase2,
+    seccion_sonda_y_fixtures,
 ]
 
 

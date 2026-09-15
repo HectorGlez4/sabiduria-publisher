@@ -825,6 +825,10 @@ def cmd_metricas_registrar(a) -> int:
 # ── teléfono ────────────────────────────────────────────────────────────────
 
 def _evidencia(run_id: str) -> Path:
+    """Carpeta de evidencia de un run. Las sondas de la fase 2 (`SONDA-F2-…`) van a `sondas-f2/`, que está en
+    .gitignore: sus capturas y volcados pueden tener contenido ajeno."""
+    if run_id.startswith("SONDA-F2-"):
+        return EVIDENCIA / "sondas-f2" / run_id
     return EVIDENCIA / run_id
 
 
@@ -875,6 +879,65 @@ def cmd_telefono_descartar(a) -> int:
     ev = _evidencia(a.run)
     return _paso_telefono(ev, f"{a.nombre}-inesperada",
                           lambda: {"captura": str(pasos.descartar(a.app, ev, a.nombre))})
+
+
+def cmd_sonda(a) -> int:
+    """Solo sesiones de exploración dirigidas: vuelca, lanza la app, toca un nodo único o pulsa «atrás». Nunca
+    un control de envío ni prohibido. Todas las validaciones de argumentos van antes de hablar con el teléfono;
+    el toque pasa además por `pantalla.nodo_sonda` y `pasos.tocar` (regla del centro de `pantalla.es_envio`)."""
+    from labkit import pantalla, pasos, reloj, telefono
+    _exigir(a.supervisada, "sonda solo con --supervisada: sesión de exploración dirigida, nunca desde la ventana desatendida")
+    _exigir(a.run.startswith("SONDA-F2-"), "el --run de una sonda empieza por SONDA-F2-")
+    criterios = {k: v for k, v in (("texto", a.texto), ("desc", a.desc), ("resource_id", a.resource_id)) if v}
+    if a.accion == "tocar":
+        _exigir(len(criterios) == 1, "tocar exige uno de --texto, --desc o --resource-id")
+        valor = next(iter(criterios.values()))
+        _exigir(not textos.es_texto_envio(valor) and not textos.es_no_tocar(valor),
+                f"la sonda no pulsa controles de envío ni prohibidos: {valor!r}")
+    else:
+        _exigir(not criterios, f"{a.accion} no admite --texto, --desc ni --resource-id")
+    paquete = textos.PAQUETES[a.app]
+    ev = _evidencia(a.run)
+
+    def volcar(nombre: str) -> dict:
+        xml = pasos.volcado_fresco()
+        ev.mkdir(parents=True, exist_ok=True)
+        (ev / f"{nombre}.xml").write_text(xml, encoding="utf-8")
+        return {"volcado": str(ev / f"{nombre}.xml"), "captura": str(telefono.captura(ev / f"{nombre}.png"))}
+
+    def paso() -> dict:
+        pasos.exigir_listo()
+        if a.accion == "volcar":
+            return volcar(a.nombre)
+        if a.accion == "lanzar":
+            telefono.lanzar(paquete)
+            reloj.dormir(4)
+            return volcar(a.nombre)
+        if a.accion == "atras":
+            return {"captura": str(pasos.atras(paquete, ev, a.nombre))}
+        xml = pasos.volcado_fresco()
+        n = pantalla.nodo_sonda(xml, paquete, **criterios)
+        pasos.tocar(n, xml)
+        reloj.dormir(2)
+        return {"tocado": {k: n[k] for k in ("texto", "desc", "resource_id", "bounds")}, **volcar(a.nombre)}
+
+    return _paso_telefono(ev, f"{a.nombre}-inesperada", paso)
+
+
+def cmd_fixture_podar(a) -> int:
+    from labkit import fixtures
+    origen = _relativa_sin_salidas(a.desde, "experiments/media-lab/evidence/android/", "--desde")
+    _exigir(bool(_NOMBRE.fullmatch(a.pantalla)) and ".." not in a.pantalla,
+            f"--pantalla solo admite letras, dígitos, punto, guion y guion bajo: {a.pantalla!r}")
+    podado = fixtures.podar(origen.read_text(encoding="utf-8"), a.app)
+    problemas = fixtures.revisar(podado, a.app)
+    if problemas:
+        return _rechazo("FixtureNoPodado", problemas)
+    destino = ROOT / "tests" / "fixtures" / "telefono" / a.app / f"{a.pantalla}.xml"
+    destino.parent.mkdir(parents=True, exist_ok=True)
+    destino.write_text(podado, encoding="utf-8")
+    emitir({"fixture": destino.relative_to(ROOT).as_posix()})
+    return 0
 
 
 def cmd_ig(a) -> int:
@@ -1046,6 +1109,22 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--run", required=True)
     p.add_argument("--nombre", required=True)
     p.set_defaults(func=cmd_telefono_descartar)
+    p = sub.add_parser("sonda")
+    p.add_argument("app", choices=textos.APPS_TELEFONO + ("edits",))
+    p.add_argument("accion", choices=("volcar", "lanzar", "tocar", "atras"))
+    p.add_argument("--run", required=True)
+    p.add_argument("--nombre", required=True)
+    p.add_argument("--supervisada", action="store_true")
+    grupo = p.add_mutually_exclusive_group()
+    grupo.add_argument("--texto")
+    grupo.add_argument("--desc")
+    grupo.add_argument("--resource-id")
+    p.set_defaults(func=cmd_sonda)
+    p = sub.add_parser("fixture-podar")
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True)
+    p.add_argument("--desde", required=True, help="volcado crudo bajo experiments/media-lab/evidence/android/")
+    p.add_argument("--pantalla", required=True, help="nombre del fixture, sin .xml")
+    p.set_defaults(func=cmd_fixture_podar)
     p = sub.add_parser("ig")
     p.add_argument("paso", choices=("abrir", "recorte", "editor", "audio", "detalles", "pie", "compartir"))
     p.add_argument("--run", required=True)
