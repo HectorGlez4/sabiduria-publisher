@@ -27,9 +27,9 @@
 
 1. **Promoción en dos diccionarios.** `recetas.TODAS` guarda cada receta escrita; `recetas.RECETAS` solo las promovidas (`PROMOVIDAS`, con el run que las justifica) y `recetas.BORRADORES` el resto. `TELEFONO_IMPLEMENTADO` sale de `RECETAS`. Para la ventana manual de un flujo aún no promovido, `lab.py encargo-nuevo --borrador` y `lab.py receta --borrador` aceptan pares de `BORRADORES`; `seleccionar` nunca los elige.
 2. **Una ventana manual por flujo, no por par.** En B y C, `feed_text` y `feed_image_music` se promueven con la ventana manual de `feed_single_image`: usan un subconjunto de sus pasos o los mismos, con la misma confirmación.
-3. **Envío común.** `pasos.observar_envio(boton, observador, plazo, resultado)` recibe además el dict `resultado` que va rellenando, y `pasos.enviar(...)` envuelve la secuencia completa de `compartir` (doble volcado con `listo(xml, emergentes)`, un toque, observación, lectura posterior y capturas) para todas las apps.
-4. **Firma de `pasos.escribir_texto`.** La spec la da como `escribir_texto(campo, texto, paquete)`; aquí es `escribir_texto(texto, paquete, *, campo, exigir, desplegable_nodos, emergente)`, porque cada app aporta cómo localizar el campo, cómo exigir su compositor y cómo reconocer su desplegable por nodos y como ventana emergente.
-5. **`pasos.esperar_estable(lectura, n)`** recibe una lectura que devuelve un valor (bounds, texto…) y exige `n` volcados seguidos con el mismo valor no nulo; una función booleana también sirve.
+3. **Envío común.** `pasos.observar_envio(boton, observador, plazo=None, resultado=None)` (`plazo` resuelve a `OBSERVACION_S` si es `None`) devuelve `(estado, culpable)` en vez de escribir `fallo`/`estado` en el dict compartido; si se da `resultado`, solo recibe `submitted_at` y, si se confirma, `processing_completed_at` (los dos timestamps que dependen del instante de la observación). `pasos.enviar(*, paquete, nombre_app, etiqueta, evidencia, captura_antes, captura_final, captura_error, listo, botones, observador_nuevo, despues, extra=None, plazo=None)` envuelve la secuencia completa de `compartir` (doble volcado con `listo(xml, emergentes)`, un toque, observación, lectura posterior y capturas) para todas las apps; `captura_antes`/`captura_final`/`captura_error` sustituyen a la tupla `nombres` de la primera versión (revisión de la tarea 2). Rechaza con `ValueError` (antes de tocar nada) un `extra` que redefina una clave propia del resultado. `observador_nuevo(boton)` y una segunda `exigir_listo()` se llaman justo antes del toque pero fuera del `try` que lo envuelve: si fallan ahí, no se ha pulsado nada y no cuenta como `error_tras_pulsar`.
+4. **Firma de `pasos.escribir_texto`.** La spec la da como `escribir_texto(campo, texto, paquete)`; aquí es `escribir_texto(texto, paquete, *, campo, exigir, desplegable_nodos, emergente, volcados_limpios=None, intentos_atras=None, timeout=None, verificar=None)`, porque cada app aporta cómo localizar el campo, cómo exigir su compositor y cómo reconocer su desplegable por nodos y como ventana emergente; los tres primeros parámetros opcionales sustituyen a `VOLCADOS_LIMPIOS`/`INTENTOS_ATRAS`/`ESTABILIZACION_TIMEOUT_S` cuando no son `None`, y `verificar(xml, texto)` decide si el texto pegado quedó bien escrito (por defecto, `pantalla.tiene_texto` exacto, lo probado hoy en Instagram; Threads y Facebook pueden necesitar otra comparación, a confirmar en S1).
+5. **`pasos.esperar_estable(lectura, n=None, descripcion=...)`** recibe una lectura que devuelve un valor (bounds, texto…) y exige `n` (`VOLCADOS_LIMPIOS` si es `None`) volcados seguidos con el mismo valor no nulo; una función booleana también sirve.
 6. **Reloj.** Las pruebas nuevas sustituyen `labkit.reloj`, pero `con_telefono_simulado` sigue sustituyendo también `time.sleep` y `time.monotonic` globales (vía `instagram_feed.time`), porque las pruebas de la fase 1 dependen de ello; como `reloj` llama a `time` en cada uso, las dos sustituciones son coherentes. La spec pedía parchear solo `reloj`.
 7. **Zonas relativas exactas.** «arriba» es `y2 ≤ 300/2340` del alto y «abajo» `y1 ≥ 1900/2340` (≈12,8 % y 81,2 %, los 13 % y 81 % de la spec redondeados): sobre 2340 px dan los mismos límites de hoy y ninguna prueba existente cambia.
 8. **Desplegables como ventanas emergentes en todas las apps (novedad de la 10f).** `pasos.escribir_texto` y `pasos.enviar` consultan `telefono.ventanas_emergentes` igual que el feed de Instagram, y cada app define la emergente que cuenta (`emergente_desplegable` en Instagram, `emergente_compositor` en Threads y Facebook, con sus controles de referencia a confirmar en S1). La lógica genérica (`emergente_solapada`, `parece_desplegable`, `describe_emergente`) pasa a `pantalla.py`.
@@ -3885,7 +3885,7 @@ def compartir(evidencia: Path, produccion_cercana: bool = False) -> dict:
 
     return pasos.enviar(
         paquete=PAQUETE, nombre_app="Instagram", etiqueta=T["compartir_historia"], evidencia=evidencia,
-        nombres=("igh-05a-antes.png", "igh-07-final.png", "igh-05-error.png"),
+        captura_antes="igh-05a-antes.png", captura_final="igh-07-final.png", captura_error="igh-05-error.png",
         listo=lambda x, emergentes: destino_historia_correcto(x)["problemas"],
         botones=lambda x: telefono.buscar_todos(x, texto=T["compartir_historia"], paquete=PAQUETE),
         observador_nuevo=lambda boton: (lambda x: observacion_historia(x, boton["bounds"])),
@@ -4784,7 +4784,7 @@ def compartir(texto_: str, tema: str | None, con_imagen: bool, evidencia: Path, 
 
     return pasos.enviar(
         paquete=tp.PAQUETE, nombre_app="Threads", etiqueta=tp.ID_PUBLICAR, evidencia=evidencia,
-        nombres=("th-06a-antes.png", "th-07-perfil.png", "th-06-error.png"),
+        captura_antes="th-06a-antes.png", captura_final="th-07-perfil.png", captura_error="th-06-error.png",
         listo=lambda x, emergentes: tp.compositor_listo(x, texto_, con_imagen, tema, emergentes),
         botones=lambda x: tp.por_id(x, tp.ID_PUBLICAR),
         observador_nuevo=lambda boton: (lambda x: tp.observacion(x, boton["bounds"])),
@@ -6040,7 +6040,7 @@ def compartir(pie_: str, evidencia: Path) -> dict:
 
     return pasos.enviar(
         paquete=fp.PAQUETE, nombre_app="Facebook", etiqueta=T["publicar"], evidencia=evidencia,
-        nombres=("fb-07a-antes.png", "fb-08-perfil.png", "fb-07-error.png"),
+        captura_antes="fb-07a-antes.png", captura_final="fb-08-perfil.png", captura_error="fb-07-error.png",
         listo=fp.pantalla_final_lista,
         botones=lambda x: telefono.buscar_todos(x, texto=T["publicar"], paquete=fp.PAQUETE),
         observador_nuevo=lambda boton: (lambda x: fp.observacion(x, boton["bounds"])),
@@ -6696,7 +6696,7 @@ def compartir(evidencia: Path, produccion_cercana: bool = False) -> dict:
 
     return pasos.enviar(
         paquete=fp.PAQUETE, nombre_app="Facebook", etiqueta=T["compartir_historia"], evidencia=evidencia,
-        nombres=("fbh-05a-antes.png", "fbh-07-final.png", "fbh-05-error.png"),
+        captura_antes="fbh-05a-antes.png", captura_final="fbh-07-final.png", captura_error="fbh-05-error.png",
         listo=lambda x, emergentes: fp.destino_historia_fb(x)["problemas"],
         botones=lambda x: telefono.buscar_todos(x, texto=T["compartir_historia"], paquete=fp.PAQUETE),
         observador_nuevo=lambda boton: (lambda x: fp.observacion_historia_fb(x, boton["bounds"])),
