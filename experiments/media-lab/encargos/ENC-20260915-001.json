@@ -59,7 +59,8 @@
   },
   "runs": [
     "LAB-PLACE-003-A-FACEBOOK",
-    "LAB-PLACE-003-A-INSTAGRAM"
+    "LAB-PLACE-003-A-INSTAGRAM",
+    "LAB-PLACE-003-A-THREADS"
   ],
   "no_lanzados": 0
 }
