@@ -48,6 +48,7 @@ RUNS_DIR = Path(os.environ.get("LAB_RUNS_DIR", LAB / "runs"))
 ASSETS_DIR = Path(os.environ.get("LAB_ASSETS_DIR", ROOT))
 EVIDENCIA = LAB / "evidence" / "android"
 LOCK = LAB / ".ventana.lock"
+AGENTE_DESPIERTO = "com.sabiduria.medialab.phone-awake"
 TURNOS = Path(os.environ.get("LAB_TURNOS", LAB / "turnos.json"))
 TURNO_HECHO = Path(os.environ.get("LAB_TURNO_HECHO", LAB / ".turno-hecho"))
 
@@ -145,6 +146,18 @@ def _nombre_archivo_simple(nombre: str, extensiones: tuple[str, ...], que: str) 
 
 # ── comprobación previa ─────────────────────────────────────────────────────
 
+def _agente_despierto() -> bool | None:
+    """¿Sigue cargado el LaunchAgent que mantenía despierto el teléfono? La fase 2 lo retira: la
+    automatización nunca despierta el teléfono. Solo lee `launchctl list`; nunca carga ni descarga
+    nada (lo descarga el usuario). None si launchctl no se puede ejecutar o no responde."""
+    try:
+        r = subprocess.run(["launchctl", "list", AGENTE_DESPIERTO], capture_output=True, text=True,
+                           timeout=10, stdin=subprocess.DEVNULL)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    return r.returncode == 0
+
+
 def cmd_preflight(a) -> int:
     from labkit import telefono
     t = ahora()
@@ -152,6 +165,12 @@ def cmd_preflight(a) -> int:
         tel = telefono.estado()
     except Exception as e:  # noqa: BLE001 — preflight informa, nunca rompe
         tel = {"listo": False, "error": f"{type(e).__name__}: {e}"}
+    versiones: dict = {}
+    if tel.get("adb"):
+        try:
+            versiones = telefono.versiones(textos.PAQUETES)
+        except Exception as e:  # noqa: BLE001 — preflight informa, nunca rompe
+            versiones = {"error": f"{type(e).__name__}: {e}"}
     try:
         en_curso = colision.workflows_en_curso()
         espera = colision.motivo_espera(
@@ -161,7 +180,8 @@ def cmd_preflight(a) -> int:
         github = True
     except Exception as e:  # noqa: BLE001
         github, espera = False, f"GitHub no responde ({type(e).__name__}): sin datos de producción cercana"
-    emitir({"ahora": t.isoformat(timespec="seconds"), "telefono": tel, "github": github, "espera": espera})
+    emitir({"ahora": t.isoformat(timespec="seconds"), "telefono": tel, "versiones": versiones,
+            "agente_phone_awake": _agente_despierto(), "github": github, "espera": espera})
     return 0
 
 

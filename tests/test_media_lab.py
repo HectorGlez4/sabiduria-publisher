@@ -5405,6 +5405,135 @@ def seccion_recuento_refrescado() -> None:
               f"({err!r}, {res and res['estado']}, {res and res['avisos']})")
 
 
+def seccion_preflight_fase2() -> None:
+    print("\n20. Fase 2: preflight con versiones de las apps y el LaunchAgent")
+    import subprocess as SP
+    from labkit import telefono as T, textos as TX
+
+    salida = "Packages:\n  versionName=446.0.0.49.77\n  User 0: installed=true\n  versionName=446.0.0.49.77\n"
+    check(T.version_desde_dumpsys(salida) == "446.0.0.49.77", "versión única de dumpsys package")
+    check(T.version_desde_dumpsys("versionName=445.0.0.45.83\nversionName=446.0.0.49.77")
+          == "445.0.0.45.83 | 446.0.0.49.77", "dos versiones distintas (perfil de trabajo) salen las dos")
+    check(T.version_desde_dumpsys("Unable to find package") is None, "sin versionName no hay versión")
+
+    # telefono.versiones: solo `dumpsys package`, con timeout corto por app, y None si esa app falla.
+    ordenes: list[tuple[str, int]] = []
+
+    def shell_simulado(cmd, timeout=60):
+        ordenes.append((cmd, timeout))
+        if "com.facebook.katana" in cmd:
+            raise T.TelefonoError("adb shell dumpsys package: sin respuesta en 15 s")
+        return "versionName=9.9.9\n"
+
+    shell_original = T.shell
+    try:
+        T.shell = shell_simulado
+        vistas = T.versiones(TX.PAQUETES)
+    finally:
+        T.shell = shell_original
+    check(set(vistas) == set(TX.PAQUETES) and vistas["facebook"] is None
+          and all(v == "9.9.9" for app, v in vistas.items() if app != "facebook")
+          and [c for c, _ in ordenes] == [f"dumpsys package {p}" for p in TX.PAQUETES.values()]
+          and all(t == T.VERSIONES_TIMEOUT_S for _, t in ordenes) and T.VERSIONES_TIMEOUT_S <= 15,
+          f"versiones solo lee dumpsys package con timeout corto y da None si una app falla ({vistas}, {ordenes})")
+
+    llamadas: list[str] = []
+
+    def prohibido(nombre):
+        def f(*args, **kwargs):
+            llamadas.append(nombre)
+            raise IntentoDeES(nombre)
+        return f
+
+    with entorno_lab_fase2() as (lab, raiz):
+        modulo = lab.lab
+        viejos = {"estado": T.estado, "versiones": getattr(T, "versiones", None), "lanzar": T.lanzar, "tocar": T.tocar,
+                  "adb": T.adb, "shell": T.shell,
+                  "workflows": modulo.colision.workflows_en_curso,
+                  "agente": getattr(modulo, "_agente_despierto", None), "run": modulo.subprocess.run}
+        try:
+            T.lanzar, T.tocar = prohibido("lanzar"), prohibido("tocar")
+            T.adb, T.shell = prohibido("adb"), prohibido("shell")
+            T.estado = lambda: {"adb": True, "despierto": False, "bloqueado": True, "listo": False}
+            T.versiones = lambda paquetes: llamadas.append("versiones") or {app: "1.0" for app in paquetes}
+            modulo.colision.workflows_en_curso = lambda: []
+            modulo._agente_despierto = lambda: True
+            codigo, datos, _ = lab("preflight")
+            versiones = campo(datos, "versiones") or {}
+            check(codigo == 0 and set(versiones) == set(TX.PAQUETES) and versiones.get("threads") == "1.0"
+                  and campo(datos, "agente_phone_awake") is True and llamadas == ["versiones"],
+                  f"preflight informa versiones y LaunchAgent sin abrir apps ({codigo}, {datos}, {llamadas})")
+            check(isinstance(datos, dict) and {"ahora", "telefono", "github", "espera"} <= set(datos)
+                  and campo(datos, "telefono") == {"adb": True, "despierto": False, "bloqueado": True, "listo": False}
+                  and campo(datos, "github") is True,
+                  f"preflight conserva ahora, telefono, github y espera ({datos})")
+
+            llamadas.clear()
+            T.estado = lambda: {"adb": False, "despierto": False, "bloqueado": None, "listo": False}
+            codigo, datos, _ = lab("preflight")
+            check(codigo == 0 and campo(datos, "versiones") == {} and llamadas == [],
+                  f"sin adb no se piden versiones ({codigo}, {llamadas})")
+
+            def versiones_rotas(paquetes):
+                llamadas.append("versiones")
+                raise T.TelefonoError("adb se fue a mitad")
+            T.estado = lambda: {"adb": True, "despierto": True, "bloqueado": False, "listo": True}
+            T.versiones = versiones_rotas
+            modulo._agente_despierto = lambda: None
+            llamadas.clear()
+            codigo, datos, _ = lab("preflight")
+            check(codigo == 0 and "TelefonoError" in str((campo(datos, "versiones") or {}).get("error"))
+                  and campo(datos, "agente_phone_awake") is None and llamadas == ["versiones"]
+                  and campo(datos, "github") is True,
+                  f"un fallo de versiones no rompe preflight ({codigo}, {datos}, {llamadas})")
+
+            # _agente_despierto de verdad, con subprocess.run parcheado: nunca llama a launchctl real.
+            T.adb, T.shell = viejos["adb"], viejos["shell"]
+            modulo._agente_despierto = viejos["agente"]
+            recibidas: list[tuple] = []
+
+            def run_con(resultado):
+                def run(args, **kwargs):
+                    recibidas.append((list(args), kwargs))
+                    if isinstance(resultado, BaseException):
+                        raise resultado
+                    return SP.CompletedProcess(args, resultado, "", "")
+                return run
+
+            for resultado, esperado, nombre in (
+                    (0, True, "cargado"), (113, False, "no cargado"),
+                    (OSError("launchctl no existe"), None, "OSError"),
+                    (SP.TimeoutExpired(["launchctl"], 10), None, "TimeoutExpired")):
+                recibidas.clear()
+                modulo.subprocess.run = run_con(resultado)
+                try:
+                    obtenido = modulo._agente_despierto() if callable(modulo._agente_despierto) else "falta"
+                finally:
+                    modulo.subprocess.run = viejos["run"]
+                args, kwargs = recibidas[0] if recibidas else ([], {})
+                check(obtenido is esperado and len(recibidas) == 1
+                      and args == ["launchctl", "list", modulo.AGENTE_DESPIERTO]
+                      and kwargs.get("stdin") is SP.DEVNULL and isinstance(kwargs.get("timeout"), (int, float))
+                      and kwargs["timeout"] <= 10,
+                      f"_agente_despierto {nombre}: {esperado}, solo `launchctl list` con stdin cerrado y timeout "
+                      f"({obtenido!r}, {recibidas})")
+            check(getattr(modulo, "AGENTE_DESPIERTO", None) == "com.sabiduria.medialab.phone-awake",
+                  "la etiqueta del LaunchAgent es com.sabiduria.medialab.phone-awake")
+        finally:
+            T.estado, T.lanzar, T.tocar = viejos["estado"], viejos["lanzar"], viejos["tocar"]
+            T.adb, T.shell = viejos["adb"], viejos["shell"]
+            if viejos["versiones"] is not None:
+                T.versiones = viejos["versiones"]
+            elif hasattr(T, "versiones"):
+                del T.versiones
+            modulo.colision.workflows_en_curso = viejos["workflows"]
+            modulo.subprocess.run = viejos["run"]
+            if viejos["agente"] is not None:
+                modulo._agente_despierto = viejos["agente"]
+            elif hasattr(modulo, "_agente_despierto"):
+                del modulo._agente_despierto
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -5428,6 +5557,7 @@ SECCIONES = [
     seccion_sonda_y_fixtures,
     seccion_arranque_en_frio,
     seccion_recuento_refrescado,
+    seccion_preflight_fase2,
 ]
 
 

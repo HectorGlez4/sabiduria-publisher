@@ -28,6 +28,10 @@ ESPERA_MEDIASTORE_S = 20
 _BOUNDS = re.compile(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]")
 _NOMBRE_SEGURO = re.compile(r"[A-Za-z0-9._-]+")
 _SHA256 = re.compile(r"[0-9a-f]{64}")
+_VERSION = re.compile(r"versionName=(\S+)")
+# `dumpsys package` responde en 1-2 s; 15 s por app acota el peor caso de `versiones` a 60 s con
+# las cuatro apps de textos.PAQUETES (con 30 s eran 120 s en cada `lab.py preflight` de la ventana).
+VERSIONES_TIMEOUT_S = 15
 
 
 class TelefonoError(RuntimeError):
@@ -288,6 +292,13 @@ def sha256_de_salida(salida: str) -> str:
     return partes[0]
 
 
+def version_desde_dumpsys(salida: str) -> str | None:
+    """versionName de `dumpsys package`. Si hay varias distintas (p. ej. un perfil de trabajo de
+    MaaS360), todas en orden separadas por « | »; None si no aparece."""
+    vistas = list(dict.fromkeys(_VERSION.findall(salida)))
+    return " | ".join(vistas) if vistas else None
+
+
 # --- E/S contra el teléfono --------------------------------------------------
 
 def adb(*args: str, timeout: int = 60) -> subprocess.CompletedProcess:
@@ -409,6 +420,18 @@ def teclado_visible() -> bool:
     """Si no se puede saber, se da por visible."""
     visible = teclado_estado()
     return True if visible is None else visible
+
+
+def versiones(paquetes: dict[str, str]) -> dict[str, str | None]:
+    """Versión instalada de cada app (clave → paquete). Solo lee `dumpsys package`: no abre ninguna app.
+    Cada app espera como mucho `VERSIONES_TIMEOUT_S`; si esa lectura falla, su versión es None."""
+    fuera: dict[str, str | None] = {}
+    for app, paquete in paquetes.items():
+        try:
+            fuera[app] = version_desde_dumpsys(shell(f"dumpsys package {paquete}", timeout=VERSIONES_TIMEOUT_S))
+        except TelefonoError:
+            fuera[app] = None
+    return fuera
 
 
 def subir(local: Path, remoto: str) -> dict:
