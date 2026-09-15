@@ -32,6 +32,11 @@ jobs:
           MANIFEST: ${{ inputs.manifest }}
           METRICAS: ${{ inputs.metricas }}
         run: |
+          case "$MANIFEST" in
+            *..*) echo "manifest con .."; exit 1;;
+            experiments/media-lab/manifests/*.json) ;;
+            *) echo "manifest fuera de manifests/"; exit 1;;
+          esac
           ARGS=()
           if [ "$METRICAS" = "true" ]; then ARGS+=(--metricas); fi
           python3 experiments/media-lab/verify_api.py "$MANIFEST" --output experiments/media-lab/verification-result.json "${ARGS[@]}"

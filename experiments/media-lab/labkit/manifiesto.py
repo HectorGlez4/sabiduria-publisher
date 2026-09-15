@@ -90,6 +90,11 @@ def manifiesto_verificacion(run_group_id: str, post_ids: dict[str, str], *,
             raise ManifiestoError(f"verify_api.py no verifica {plataforma}")
         if superficie not in SUPERFICIES:
             raise ManifiestoError(f"--superficie de {plataforma} debe ser feed o story: {superficie!r}")
+    if "instagram" in instagram_shortcodes and surfaces.get("instagram") == "story":
+        # Una Story de Instagram publicada por teléfono no tiene permalink persistente
+        # que buscar por shortcode (y no tiene métricas por API de todos modos): no
+        # tiene sentido pedirle a verify_api.py que la busque así.
+        raise ManifiestoError("una Story de Instagram por teléfono no se busca por shortcode: no tiene métricas por API")
     m = {"run_group_id": run_group_id, "post_ids": dict(post_ids)}
     if instagram_shortcodes:
         m["instagram_shortcodes"] = dict(instagram_shortcodes)

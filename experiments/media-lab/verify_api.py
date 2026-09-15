@@ -7,6 +7,11 @@ plataforma. Una métrica no soportada o una superficie sin API de métricas (las
 Stories de Facebook) no marca la publicación como fallida: queda anotada en
 `results[plataforma]["metrics_errors"]`. El código de salida solo refleja si la
 propia publicación se pudo leer, nunca las métricas.
+
+Ningún token llega al JSON de salida ni a stdout: todo texto de error pasa por
+`_redactar` antes de guardarse o imprimirse (incluida la excepción que levante
+`requests` al pedir una página de `paging.next`, que lleva el access_token en
+la URL).
 """
 
 from __future__ import annotations
@@ -32,17 +37,37 @@ CONSULTAS = {
 
 # Los mismos nombres de plataforma que CONSULTAS, salvo instagram que se parte en
 # feed/story porque son dos superficies con métricas distintas en la misma API.
+# post_media_view y post_total_media_view_unique son el reemplazo moderno de
+# post_impressions*/post_impressions_unique para posts de una sola imagen; se piden
+# los seis a la vez y, si Meta ya retiró alguno de los antiguos, ese queda en
+# metrics_errors sin tirar a los demás (ver _fetch_metrics).
 METRICAS = {
-    "facebook": ["post_impressions_unique", "post_impressions", "post_clicks", "post_reactions_by_type_total"],
+    "facebook": ["post_impressions_unique", "post_impressions", "post_clicks",
+                 "post_reactions_by_type_total", "post_media_view", "post_total_media_view_unique"],
     "instagram_feed": ["reach", "views", "likes", "comments", "shares", "saved", "total_interactions"],
     "instagram_story": ["reach", "views", "replies", "navigation"],
     "threads": ["views", "likes", "replies", "reposts", "quotes", "shares"],
 }
-TOKEN_ENV = {"facebook": "SDB_PAGE_TOKEN", "instagram": "SDB_PAGE_TOKEN", "threads": "SDB_THREADS_TOKEN"}
 INSIGHTS_BASE = {"facebook": GRAPH, "instagram": GRAPH, "threads": THREADS_GRAPH}
 
-_SHORTCODE = re.compile(r"[A-Za-z0-9_-]{5,20}")
 _PAGINAS_MEDIA = 3
+_TOKEN_RE = re.compile(r"(access_token=)[^&\s'\"]+")
+_AUTH_RE = re.compile(r"Authorization: (OAuth|Bearer) \S+")
+
+
+def _redactar(texto: str) -> str:
+    """Ni un access_token de query string ni una cabecera Authorization sobreviven a
+    esto. Se aplica a todo texto de error y, como red de seguridad final, al JSON
+    completo antes de escribirlo o imprimirlo."""
+    if not isinstance(texto, str):
+        return texto
+    texto = _TOKEN_RE.sub(r"\1***", texto)
+    texto = _AUTH_RE.sub("***", texto)
+    return texto
+
+
+def _msg(exc: BaseException, limite: int = 500) -> str:
+    return _redactar(str(exc))[:limite]
 
 
 def _valor(item: dict):
@@ -83,7 +108,7 @@ def _fetch_metrics(base: str, object_id: str, token: str, metrics: list[str]) ->
             else:
                 errores[metric] = "sin datos"
         except Exception as exc:  # noqa: BLE001
-            errores[metric] = f"{type(exc).__name__}: {str(exc)[:300]}"
+            errores[metric] = f"{type(exc).__name__}: {_msg(exc, 300)}"
     return valores, errores
 
 
@@ -114,7 +139,12 @@ def _agregar_metricas(resultado: dict, platform: str, post_id: str, token: str, 
 def _buscar_media_por_shortcode(ig_user_id: str, shortcode: str, token: str) -> str | None:
     """El post_id de una publicación de Instagram hecha por teléfono es el shortcode
     de su permalink (p. ej. DdR54JEgxHN), no un id de Graph: hay que buscarlo en el
-    feed de medios de la cuenta y casarlo por "/p/<shortcode>/"."""
+    feed de medios de la cuenta y casarlo por "/p/<shortcode>/".
+
+    Solo casa publicaciones de imagen fija: el permalink de un Reel es
+    "/reel/<shortcode>/", no "/p/<shortcode>/", así que hoy no se encuentra (no hay
+    ruta de Reels por teléfono todavía; cuando la haya, esta función necesita casar
+    también ese patrón)."""
     marca = f"/p/{shortcode}/"
     url = f"{GRAPH}/{ig_user_id}/media"
     params = {"fields": "id,permalink,timestamp", "limit": 50, "access_token": token}
@@ -126,25 +156,31 @@ def _buscar_media_por_shortcode(ig_user_id: str, shortcode: str, token: str) -> 
         siguiente = (resp.get("paging") or {}).get("next")
         if not siguiente:
             return None
+        # El "next" de paging trae el access_token en la propia URL: nunca se guarda
+        # ni se imprime en crudo (ni siquiera en un mensaje de error), solo se usa
+        # para la siguiente petición.
         url, params = siguiente, {}
     return None
 
 
-def _resolver_shortcode_instagram(shortcode: str) -> tuple[str | None, str | None]:
-    """(graph_media_id, error). error es un texto listo para el campo "error" del
-    resultado; graph_media_id es None si no se encontró o falló la búsqueda."""
+def _resolver_shortcode_instagram(shortcode: str) -> tuple[str | None, str | None, str | None]:
+    """(graph_media_id, error_type, error). Los tres tipos de fallo se distinguen para
+    que el informe diga qué hacer: ConfiguracionIncompleta (falta una variable de
+    entorno: hay que configurarla), BusquedaFallida (la API o la red fallaron: hay que
+    reintentar) o ShortcodeNoEncontrado (se buscó bien y no está: no es un fallo
+    transitorio)."""
     try:
         ig_user_id = os.environ["SDB_IG_USER_ID"]
         token = os.environ["SDB_PAGE_TOKEN"]
     except KeyError as exc:
-        return None, f"falta la variable de entorno {exc}"
+        return None, "ConfiguracionIncompleta", f"falta la variable de entorno {exc}"
     try:
         media_id = _buscar_media_por_shortcode(ig_user_id, shortcode, token)
     except Exception as exc:  # noqa: BLE001
-        return None, f"{type(exc).__name__}: {str(exc)[:300]}"
+        return None, "BusquedaFallida", f"{type(exc).__name__}: {_msg(exc, 300)}"
     if media_id is None:
-        return None, f"ningún medio reciente de {ig_user_id} tiene el shortcode {shortcode!r} en su permalink"
-    return media_id, None
+        return None, "ShortcodeNoEncontrado", f"ningún medio reciente de {ig_user_id} tiene el shortcode {shortcode!r} en su permalink"
+    return media_id, None, None
 
 
 def main() -> int:
@@ -166,10 +202,10 @@ def main() -> int:
     graph_media_ids: dict[str, str] = {}
 
     if "instagram" in shortcodes and "instagram" not in post_ids:
-        media_id, error = _resolver_shortcode_instagram(shortcodes["instagram"])
+        media_id, error_type, error = _resolver_shortcode_instagram(shortcodes["instagram"])
         if media_id is None:
             output["results"]["instagram"] = {
-                "status": "failed", "error_type": "ShortcodeNoEncontrado", "error": error,
+                "status": "failed", "error_type": error_type, "error": error,
             }
         else:
             post_ids["instagram"] = media_id
@@ -192,12 +228,13 @@ def main() -> int:
             output["results"][platform] = {
                 "status": "failed",
                 "error_type": type(exc).__name__,
-                "error": str(exc)[:500],
+                "error": _msg(exc),
             }
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n")
-    print("MEDIA_LAB_VERIFY=" + json.dumps(output, ensure_ascii=False))
+    texto_indentado = _redactar(json.dumps(output, ensure_ascii=False, indent=2) + "\n")
+    args.output.write_text(texto_indentado)
+    print(_redactar("MEDIA_LAB_VERIFY=" + json.dumps(output, ensure_ascii=False)))
     return 1 if any(v["status"] == "failed" for v in output["results"].values()) else 0
 
 

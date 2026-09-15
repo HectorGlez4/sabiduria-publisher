@@ -11,3 +11,5 @@ experiments/media-lab/.turno-hecho.tmp
 experiments/media-lab/.turno-hecho.*.tmp
 experiments/media-lab/.turno.lock
 experiments/media-lab/assets/**/.*.tmp
+# gh run download <id> -D experiments/media-lab/results/<id>: descargas locales, no se comitean.
+experiments/media-lab/results/[0-9]*/

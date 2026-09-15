@@ -785,16 +785,20 @@ def cmd_metricas_registrar(a) -> int:
     _exigir(ruta_run.is_file(), f"no existe el run: {a.run}")
     run = json.loads(ruta_run.read_text(encoding="utf-8"))
     resultado = metricas.leer_resultado(_ruta_resultado(a.resultado))
+    # Todo se calcula (y puede fallar) antes de escribir nada: si falta coverage.json o
+    # la celda, este comando no deja el run a medio actualizar sin su coverage.
     actualizado = metricas.registrar(run, resultado, run_group=a.run_group,
                                      instantanea=a.instantanea, ahora=ahora())
-    metricas.guardar_json(ruta_run, actualizado)
-    reporte = {"ok": True, "run": a.run, "instantanea": a.instantanea}
     cell_id = run.get("coverage_cell_id")
+    coverage = None
     if cell_id:
         _exigir(COBERTURA.is_file(), f"no existe coverage.json para marcar {cell_id}")
-        coverage = json.loads(COBERTURA.read_text(encoding="utf-8"))
         fecha = actualizado["publication"]["snapshots"][-1]["observed_at"]
-        coverage = metricas.marcar_cobertura(coverage, cell_id, fecha)
+        coverage = metricas.marcar_cobertura(json.loads(COBERTURA.read_text(encoding="utf-8")), cell_id, fecha)
+
+    metricas.guardar_json(ruta_run, actualizado)
+    reporte = {"ok": True, "run": a.run, "instantanea": a.instantanea}
+    if coverage is not None:
         metricas.guardar_json(COBERTURA, coverage)
         reporte["coverage_cell_id"] = cell_id
     emitir(reporte)
