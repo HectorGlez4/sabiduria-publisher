@@ -67,6 +67,11 @@ ENVIO = frozenset({"Partager", "Publier", "Publicar", "Compartir", "Compartir hi
 # por prefijo (los contenedores `post_capture_*` del editor no son envío y bloquearían todos los toques).
 # `share_footer_button` es el «Partager» del compositor de Instagram (sonda SONDA-10F de la fase 1).
 ENVIO_IDS = frozenset({"new_thread_screen_post_button", "share_footer_button"})
+# Palabras que, en el final de un resource-id partido por «_», delatan un botón de envío SIN etiqueta
+# («composer_post_button» de Facebook). La sonda solo las mira en el nodo que toca y en los nodos PULSABLES bajo su
+# centro, nunca en cualquier contenedor: `followers_share_content` cubre todo el compositor de Instagram y
+# `post_capture_*` el editor.
+ENVIO_ID_PALABRAS = frozenset({"post", "share", "send", "publish", "submit", "publicar", "compartir", "enviar"})
 # Controles que publican una Story directamente desde el editor o el destino: son envío como los de
 # arriba (la sonda nunca los pulsa y `pasos.tocar` tampoco, salvo que la etiqueta esté en la lista
 # blanca del visor propio de la fase 2).
@@ -121,7 +126,8 @@ PATRONES: dict[str, tuple[str, ...]] = {
 # Estos patrones solo deciden qué queda en un fixture: ningún lector de pantallas los usa. Del chip de audio solo
 # vale el literal «Audio suggéré.» (en `TEXTOS`); con el tema detrás no, así que un fixture del editor pierde el
 # texto del chip entero (y con él el tema): lo que se pruebe sobre el tema usa un volcado sintético.
-_HASHTAG = r"#[^\W\d_]\w*"
+# Empieza por letra y no lleva 4 o más cifras seguidas (un teléfono o un id troceado en un hashtag).
+_HASHTAG = r"#[^\W\d_](?!\w*\d{4})\w*"
 # Solo en el atributo `text` (nunca en `hint`, `content-desc` ni otros): hashtags públicos del pie.
 PATRONES_TEXTO: dict[str, tuple[str, ...]] = {"instagram": (_HASHTAG,), "threads": (_HASHTAG,), "facebook": (_HASHTAG,)}
 # Edades en un fixture: las de `EDADES` con 1 a 3 cifras (la tabla de lectura no cambia).
@@ -236,6 +242,13 @@ def conocidos(app: str) -> set[str]:
     descarte = DESCARTE.get(app, {})
     return (set(TEXTOS.get(app, {}).values()) | set(descarte.get("titulos", ())) | set(descarte.get("botones", ()))
             | set(MARCAS.values()) | set(ENVIO) | set(ENVIO_HISTORIA) | set(NO_TOCAR))
+
+
+def es_id_envio(resource_id: str) -> bool:
+    """El final del resource-id (tras la última «/»), partido por «_», contiene una palabra de `ENVIO_ID_PALABRAS`
+    («composer_post_button», «direct_private_share_x»). No mira texto ni desc: quien llama decide cuándo cuenta."""
+    sufijo = (resource_id or "").rsplit("/", 1)[-1].casefold()
+    return bool(ENVIO_ID_PALABRAS.intersection(sufijo.split("_")))
 
 
 def es_texto_borrado(valor: str) -> bool:

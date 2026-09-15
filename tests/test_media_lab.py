@@ -4679,13 +4679,31 @@ def seccion_sonda_y_fixtures() -> None:
         res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", "Flèche"))
         check(res is not None and res[0] == 4 and sim.toques == [],
               f"sonda tocar no pulsa un nodo inocuo dentro de share_footer_button sin texto ({res and res[0]}, {sim.toques})")
-        contenedor = jerarquia(nodo_xml("[0,150][1080,2000]", clase="android.widget.FrameLayout",
-                                        extra='clickable="true" resource-id="com.instagram.android:id/post_capture_container"',
-                                        hijos=nodo_xml("[847,1500][1080,1649]", texto="Suivant", extra=pulsable)))
-        sim = TelefonoSimulado([contenedor])
-        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
-        check(res is not None and res[0] == 0 and sim.toques == [(963, 1574)],
-              f"un contenedor post_capture_* no bloquea: ENVIO_IDS compara el sufijo exacto ({res and res[0]}, {sim.toques})")
+        def en_contenedor(rid: str, extra_contenedor: str = "") -> str:
+            return jerarquia(nodo_xml("[0,150][1080,2000]", clase="android.widget.FrameLayout",
+                                      extra=f'{extra_contenedor} resource-id="{rid}"',
+                                      hijos=nodo_xml("[847,1500][1080,1649]", texto="Suivant", extra=pulsable)))
+
+        # Un contenedor NO pulsable con id de envío no bloquea (ENVIO_IDS compara el sufijo exacto y es_id_envio solo
+        # mira pulsables); uno PULSABLE sin etiqueta sí, aunque sea post_capture_* (falla cerrado).
+        for rid in ("com.instagram.android:id/post_capture_container", "com.instagram.android:id/followers_share_content"):
+            sim = TelefonoSimulado([en_contenedor(rid)])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+            check(res is not None and res[0] == 0 and sim.toques == [(963, 1574)],
+                  f"un contenedor NO pulsable {rid.rsplit('/', 1)[-1]} no bloquea el toque normal ({res and res[0]}, {sim.toques})")
+        for rid, label in (("com.instagram.android:id/direct_private_share_x", "direct_private_share_x"),
+                           ("com.instagram.android:id/post_capture_container", "post_capture_* pulsable (falla cerrado)")):
+            sim = TelefonoSimulado([en_contenedor(rid, pulsable)])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+            check(res is not None and res[0] == 4 and sim.toques == [],
+                  f"un nodo inocuo dentro de un contenedor pulsable sin etiqueta {label} no se pulsa ({res and res[0]}, {sim.toques})")
+        compositor_fb = jerarquia(nodo_xml("[900,100][1060,240]", clase="android.view.ViewGroup", paquete=fb,
+                                           extra='clickable="true" resource-id="com.facebook.katana:id/composer_post_button"'))
+        sim = TelefonoSimulado([compositor_fb])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "facebook", "tocar", *supervisada,
+                                                          "--resource-id", "com.facebook.katana:id/composer_post_button"))
+        check(res is not None and res[0] == 4 and sim.toques == [],
+              f"sonda tocar no pulsa composer_post_button de Facebook sin texto ({res and res[0]}, {res and campo(res[1], 'error')})")
 
         # I2: nada tapa el nodo (notificación de systemui, aviso de la app o ventana emergente).
         identificar = nodo_xml("[40,300][1040,500]", texto="Identifier des personnes", extra=pulsable)
@@ -4711,6 +4729,17 @@ def seccion_sonda_y_fixtures() -> None:
                                                           "--texto", "Identifier des personnes"))
         check(res is not None and res[0] == 0 and sim.toques == [(540, 400)],
               f"sin nada encima el mismo nodo sí se toca ({res and res[0]}, {sim.toques})")
+
+        # Carrera residual: el último volcado, tras mirar las ventanas emergentes, tiene que traer el mismo nodo.
+        for ultimo, label in ((movido, "el nodo se mueve"), (partager, "aparece «Partager» en su sitio")):
+            sim = TelefonoSimulado([suivant, suivant, suivant, ultimo])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+            check(res is not None and res[0] == 4 and sim.toques == [],
+                  f"si en el último volcado {label}, la sonda sale con 4 sin tocar ({res and res[0]}, {sim.toques})")
+
+        res = lab("fixture-podar", "--app", "instagram", "--desde", rel, "--pantalla", "perfil.xml")
+        check(rechazo(res, "sin la extensión .xml") and not (dir_ig / "perfil.xml.xml").exists(),
+              f"fixture-podar rechaza --pantalla con .xml ({res[0]}, {res[1]})")
 
     # I3: podar y revisar no dejan pasar datos personales.
     fugas = jerarquia(
@@ -4752,6 +4781,13 @@ def seccion_sonda_y_fixtures() -> None:
           and not TX.es_texto_envio("com.instagram.android:id/share_footer_button_container")
           and not TX.es_texto_envio("com.instagram.android:id/post_capture_container"),
           "ENVIO_IDS compara el sufijo exacto del resource-id, sin prefijos")
+    check(not TX.permitido("#juan61234", "instagram") and not TX.permitido("#ab1234", "instagram")
+          and TX.permitido("#citas123", "instagram") and TX.permitido("#citasdiarias", "instagram"),
+          "un hashtag de fixture no lleva 4 o más cifras seguidas")
+    check(TX.es_id_envio("com.facebook.katana:id/composer_post_button") and TX.es_id_envio("direct_private_share_x")
+          and TX.es_id_envio("com.instagram.android:id/SUBMIT") and not TX.es_id_envio("com.instagram.android:id/poster_view")
+          and not TX.es_id_envio("com.instagram.android:id/reshared_badge") and not TX.es_id_envio(""),
+          "es_id_envio busca palabras enteras del final del id partido por «_»")
 
 
 SECCIONES = [

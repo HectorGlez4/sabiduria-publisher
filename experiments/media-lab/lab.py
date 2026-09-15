@@ -924,14 +924,19 @@ def cmd_sonda(a) -> int:
 
         # Los volcados de uiautomator van con retraso: el nodo tiene que ser el mismo en VOLCADOS_LIMPIOS volcados
         # frescos seguidos, y se toca sobre el último («Siguiente» y «Publicar» salen en el mismo sitio).
-        xml, _ = pasos.esperar_estable(clave, descripcion="el mismo nodo de la sonda")
-        n = pantalla.nodo_sonda(xml, paquete, **criterios)
-        if telefono.tapado(xml, n):
-            raise pantalla.PantallaInesperada(f"algo tapa el nodo de la sonda en {n['bounds']}: no se toca")
-        emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(paquete), [n["bounds"]])
+        _, estable = pasos.esperar_estable(clave, descripcion="el mismo nodo de la sonda")
+        emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(paquete), [estable[0]])
         if emergente is not None:
             raise pantalla.PantallaInesperada(
                 f"una ventana emergente se solapa con el nodo de la sonda ({pantalla.describe_emergente(emergente)}): no se toca")
+        # Un último volcado tras mirar las ventanas: el nodo tiene que seguir igual, y todas las guardias y el toque van
+        # sobre ESE volcado.
+        xml = pasos.volcado_fresco()
+        if clave(xml) != estable:
+            raise pantalla.PantallaInesperada("el nodo de la sonda cambió en el último volcado antes de tocar: no se toca")
+        n = pantalla.nodo_sonda(xml, paquete, **criterios)
+        if telefono.tapado(xml, n):
+            raise pantalla.PantallaInesperada(f"algo tapa el nodo de la sonda en {n['bounds']}: no se toca")
         pasos.tocar(n, xml)
         reloj.dormir(2)
         return {"tocado": {k: n[k] for k in ("texto", "desc", "resource_id", "bounds")}, **volcar(a.nombre)}
@@ -945,6 +950,8 @@ def cmd_fixture_podar(a) -> int:
     origen = _relativa_sin_salidas(a.desde, "experiments/media-lab/evidence/android/", "--desde")
     _exigir(bool(_NOMBRE.fullmatch(a.pantalla)) and ".." not in a.pantalla,
             f"--pantalla solo admite letras, dígitos, punto, guion y guion bajo: {a.pantalla!r}")
+    _exigir(not a.pantalla.casefold().endswith(".xml"),
+            f"--pantalla es el nombre del fixture sin la extensión .xml (se añade sola): {a.pantalla!r}")
     base = ROOT / "tests" / "fixtures" / "telefono"
     destino = base / a.app / f"{a.pantalla}.xml"
 

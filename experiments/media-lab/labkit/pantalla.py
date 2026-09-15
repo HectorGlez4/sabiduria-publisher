@@ -293,10 +293,28 @@ def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | 
         raise PantallaInesperada(f"la sonda solo toca un nodo único: {len(lista)} coincidencias")
     if es_envio(xml, lista[0]):
         raise PantallaInesperada("la sonda no pulsa controles de envío ni prohibidos")
+    por_id = _envio_por_id_en_toque(todos, lista[0])
+    if por_id is not None:
+        raise PantallaInesperada(f"la sonda no pulsa un botón sin etiqueta con id de envío ({por_id['resource_id']!r})")
     borrado = _borrado_en_toque(todos, lista[0])
     if borrado is not None:
         raise PantallaInesperada(f"la sonda no pulsa controles de borrado ({borrado['texto'] or borrado['desc']!r})")
     return lista[0]
+
+
+def _envio_sin_etiqueta(n: dict) -> bool:
+    return not n["texto"] and not n["desc"] and textos.es_id_envio(n["resource_id"])
+
+
+def _envio_por_id_en_toque(lista: list[dict], n: dict) -> dict | None:
+    """El botón sin texto ni desc con id de envío (`textos.es_id_envio`) que recibiría el toque: `n` mismo o un nodo
+    PULSABLE cuyas bounds contienen su centro. No mira los no pulsables: `followers_share_content` y `post_capture_*`
+    son contenedores que cubren el compositor y el editor enteros. None si no hay ninguno."""
+    if _envio_sin_etiqueta(n):
+        return n
+    cx, cy = n["centro"]
+    return next((m for m in lista if m["clickable"] and _envio_sin_etiqueta(m)
+                 and m["bounds"][0] <= cx < m["bounds"][2] and m["bounds"][1] <= cy < m["bounds"][3]), None)
 
 
 def _es_borrado(n: dict) -> bool:
