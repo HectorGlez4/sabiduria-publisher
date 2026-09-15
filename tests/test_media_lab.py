@@ -5671,11 +5671,28 @@ def seccion_zona_segura_story() -> None:
     check(issubclass(R.FueraDeZonaSegura, ValueError),
           "FueraDeZonaSegura es un ValueError: lab.py render sale con código 2 y su tipo")
 
+    def cajas_o_fallo(nombre, *args):
+        """R.cajas_story sin abortar la batería: si lanza, marca ✗ y devuelve None."""
+        try:
+            return R.cajas_story(*args)
+        except R.FueraDeZonaSegura as e:
+            check(False, f"{nombre}: cajas_story no debería lanzar FueraDeZonaSegura ({e})")
+            return None
+
+    def error_de_zona(llamada):
+        try:
+            llamada()
+        except R.FueraDeZonaSegura as e:
+            return e
+        return None
+
     print("   · cajas puras: dentro de la zona y sin solapes")
     for nombre, (lineas, sub, aviso) in (("LAB-PERSON-002", persona),
                                           ("LAB-LOCATION-011 (titular y subtítulo largos)", faro),
                                           ("aviso que no cabe junto a la marca", aviso_largo)):
-        cajas = R.cajas_story(lineas, sub, aviso)
+        cajas = cajas_o_fallo(nombre, lineas, sub, aviso)
+        if cajas is None:
+            continue
         check(set(cajas) == {"panel", "titular_1", "titular_2", "titular_3", "subtitulo", "aviso", "marca"},
               f"{nombre}: cajas de panel, tres líneas de titular, subtítulo, aviso y marca ({sorted(cajas)})")
         fuera = {n: c for n, c in cajas.items() if not dentro(c, ZONA)}
@@ -5689,11 +5706,34 @@ def seccion_zona_segura_story() -> None:
         check(all(dentro(cajas[n], cajas["panel"]) for n in ("titular_1", "titular_2", "titular_3", "subtitulo"))
               and not any(solapan(cajas[n], cajas["panel"]) for n in ("aviso", "marca")),
               f"{nombre}: titular y subtítulo dentro del panel; aviso y marca fuera de él")
-    cajas = R.cajas_story(*persona)
-    check(cajas["aviso"][1] == cajas["marca"][1], "un aviso corto va en la misma fila que la marca")
-    cajas = R.cajas_story(*aviso_largo)
-    check(cajas["aviso"][3] <= cajas["marca"][1],
-          f"un aviso que no cabe junto a la marca sube a la fila de encima ({cajas['aviso']}, {cajas['marca']})")
+    cajas = cajas_o_fallo("aviso corto", *persona)
+    check(cajas is not None and cajas["aviso"][1] == cajas["marca"][1], "un aviso corto va en la misma fila que la marca")
+    cajas = cajas_o_fallo("aviso largo", *aviso_largo)
+    check(cajas is not None and cajas["aviso"][3] <= cajas["marca"][1],
+          f"un aviso que no cabe junto a la marca sube a la fila de encima ({cajas and (cajas['aviso'], cajas['marca'])})")
+
+    # Solo cabe entre 34 y 40 px; el corto, con los mismos descendentes, va a 42.
+    sub_ajustado = "Torre de Hércules · A Coruña · Galicia · siglos I–II"
+    sub_corto = "Galicia · siglos I–II"
+    ajustado = cajas_o_fallo("subtítulo que se reduce", faro[0], sub_ajustado, faro[2])
+    corto = cajas_o_fallo("subtítulo corto", faro[0], sub_corto, faro[2])
+    if ajustado is not None and corto is not None:
+        alto = lambda c: c["subtitulo"][3] - c["subtitulo"][1]  # noqa: E731
+        check(alto(ajustado) < alto(corto) and dentro(ajustado["subtitulo"], ajustado["panel"]),
+              f"un subtítulo que solo cabe entre 34 y 40 px se reduce y queda en el panel "
+              f"(alto {alto(ajustado)} < {alto(corto)}; {ajustado['subtitulo']})")
+
+    print("   · solapes y panel: comprobar_story no los deja pasar")
+    error = error_de_zona(lambda: R.cajas_story(["UN FARO", "ROMANO", "QUE SIGUE", "EN SERVICIO"], faro[1], faro[2]))
+    check(error is not None and "se solapa" in str(error),
+          f"un titular de 4 líneas pisa el subtítulo: FueraDeZonaSegura «se solapa» ({error})")
+    import dataclasses
+    elementos = R.disposicion_story(*persona)
+    elementos = [dataclasses.replace(e, caja=(51, e.caja[1], 1029, e.caja[3])) if e.nombre == "titular_1" else e
+                 for e in elementos]
+    error = error_de_zona(lambda: R.comprobar_story(elementos))
+    check(error is not None and "no cabe en el panel" in str(error),
+          f"un texto en x 51–1029 (dentro de la zona, fuera del panel): «no cabe en el panel» ({error})")
 
     print("   · si no cabe, falla con un error claro y no dibuja")
     for motivo, args, pieza in (

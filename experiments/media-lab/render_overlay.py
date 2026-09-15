@@ -32,7 +32,14 @@ ZONA_SEGURA_HISTORIA = (
     HISTORIA[1] - HISTORIA_LIBRE_ABAJO,
 )  # (50, 250, 1030, 1660)
 
-HISTORIA_PANEL = (54, HISTORIA_LIBRE_ARRIBA, 1026, HISTORIA_LIBRE_ARRIBA + 430)  # (54, 250, 1026, 680)
+HISTORIA_PANEL_MARGEN = 54
+HISTORIA_PANEL_ALTO = 430
+HISTORIA_PANEL = (
+    HISTORIA_PANEL_MARGEN,
+    HISTORIA_LIBRE_ARRIBA,
+    HISTORIA[0] - HISTORIA_PANEL_MARGEN,
+    HISTORIA_LIBRE_ARRIBA + HISTORIA_PANEL_ALTO,
+)  # (54, 250, 1026, 680)
 HISTORIA_TITULAR_Y = HISTORIA_PANEL[1] + 50  # 300: origen de la 1.ª línea
 HISTORIA_TITULAR_PASO = 86
 HISTORIA_TITULAR_ANCHO = 876
@@ -41,13 +48,19 @@ HISTORIA_SUBTITULO_Y = HISTORIA_PANEL[1] + 330  # 580
 HISTORIA_SUBTITULO_TAMANOS = (42, 34)  # máximo y mínimo legible
 HISTORIA_SUBTITULO_ANCHO = 876
 
+PANEL_RADIO = 24
+PANEL_ALFA = 224
 PILDORA_ALTO = 53
 PILDORA_PAD = 18
 PILDORA_RADIO = 14
+PILDORA_ALFA = 216
 PILDORA_SEPARACION = 16  # hueco mínimo entre aviso y marca en la misma fila
 PILDORA_INTERLINEA = 12  # hueco vertical si el aviso sube a la fila de encima
 MARCA_TAMANO = 23
+MARCA_TEXTO_DY = 10  # del borde superior de la píldora al origen del texto
 AVISO_TAMANO = 20
+AVISO_TEXTO_DY = 12
+TEXTO_RGBA = (249, 240, 211, 255)
 HISTORIA_PILDORA_ABAJO = ZONA_SEGURA_HISTORIA[3]  # borde inferior de la fila de píldoras: 1660
 
 
@@ -75,12 +88,13 @@ class Elemento:
     tinta: Caja | None = None
 
 
-def fit_font(draw: ImageDraw.ImageDraw, text: str, width: int, max_size: int, min_size: int) -> ImageFont.FreeTypeFont:
+def fit_font(draw: ImageDraw.ImageDraw, text: str, width: int, max_size: int, min_size: int,
+             fuente: Path = FONT_BOLD) -> ImageFont.FreeTypeFont:
     for size in range(max_size, min_size - 1, -2):
-        font = ImageFont.truetype(str(FONT_BOLD), size)
+        font = ImageFont.truetype(str(fuente), size)
         if draw.textbbox((0, 0), text, font=font)[2] <= width:
             return font
-    return ImageFont.truetype(str(FONT_BOLD), min_size)
+    return ImageFont.truetype(str(fuente), min_size)
 
 
 def parse_rgb(value: str) -> tuple[int, int, int]:
@@ -118,12 +132,8 @@ def disposicion_story(lines: list[str], sub: str, disclosure: str) -> list[Eleme
         elementos.append(Elemento(f"titular_{i}", "texto", tinta, line, (x, y), font, tinta))
         y += HISTORIA_TITULAR_PASO
 
-    sub_max, sub_min = HISTORIA_SUBTITULO_TAMANOS
-    for size in range(sub_max, sub_min - 1, -2):
-        sub_font = ImageFont.truetype(str(FONT_SERIF), size)
-        sub_box = draw.textbbox((0, 0), sub, font=sub_font)
-        if sub_box[2] - sub_box[0] <= HISTORIA_SUBTITULO_ANCHO:
-            break
+    sub_font = fit_font(draw, sub, HISTORIA_SUBTITULO_ANCHO, *HISTORIA_SUBTITULO_TAMANOS, fuente=FONT_SERIF)
+    sub_box = draw.textbbox((0, 0), sub, font=sub_font)
     sub_x = (HISTORIA[0] - (sub_box[2] - sub_box[0])) // 2
     sub_tinta = draw.textbbox((sub_x, HISTORIA_SUBTITULO_Y), sub, font=sub_font)
     elementos.append(Elemento("subtitulo", "texto", sub_tinta, sub, (sub_x, HISTORIA_SUBTITULO_Y), sub_font, sub_tinta))
@@ -134,7 +144,7 @@ def disposicion_story(lines: list[str], sub: str, disclosure: str) -> list[Eleme
     derecha = ZONA_SEGURA_HISTORIA[2]
     bx = derecha - (brand_box[2] - brand_box[0]) - 2 * PILDORA_PAD
     marca = (bx, fila_top, derecha, fila_top + PILDORA_ALTO)
-    marca_origen = (bx + PILDORA_PAD, fila_top + 10)
+    marca_origen = (bx + PILDORA_PAD, fila_top + MARCA_TEXTO_DY)
     elementos.append(Elemento("marca", "pildora", marca, MARCA, marca_origen, brand_font,
                               draw.textbbox(marca_origen, MARCA, font=brand_font)))
 
@@ -148,7 +158,7 @@ def disposicion_story(lines: list[str], sub: str, disclosure: str) -> list[Eleme
             # No cabe al lado de la marca: sube a la fila de encima, alineado a la izquierda.
             aviso_top = fila_top - PILDORA_INTERLINEA - PILDORA_ALTO
         aviso = (izquierda, aviso_top, aviso_derecha, aviso_top + PILDORA_ALTO)
-        aviso_origen = (izquierda + PILDORA_PAD, aviso_top + 12)
+        aviso_origen = (izquierda + PILDORA_PAD, aviso_top + AVISO_TEXTO_DY)
         elementos.append(Elemento("aviso", "pildora", aviso, disclosure, aviso_origen, aviso_font,
                                   draw.textbbox(aviso_origen, disclosure, font=aviso_font)))
     return elementos
@@ -192,14 +202,14 @@ def _pixeles(caja: Caja) -> Caja:
 def _dibujar_story(draw: ImageDraw.ImageDraw, elementos: list[Elemento], panel_rgb, accent_rgb) -> None:
     for e in elementos:
         if e.tipo == "panel":
-            draw.rounded_rectangle(_pixeles(e.caja), radius=24, fill=(*panel_rgb, 224))
+            draw.rounded_rectangle(_pixeles(e.caja), radius=PANEL_RADIO, fill=(*panel_rgb, PANEL_ALFA))
         elif e.tipo == "pildora":
-            draw.rounded_rectangle(_pixeles(e.caja), radius=PILDORA_RADIO, fill=(*panel_rgb, 216))
-            draw.text(e.origen, e.texto, font=e.fuente, fill=(249, 240, 211, 255))
+            draw.rounded_rectangle(_pixeles(e.caja), radius=PILDORA_RADIO, fill=(*panel_rgb, PILDORA_ALFA))
+            draw.text(e.origen, e.texto, font=e.fuente, fill=TEXTO_RGBA)
         elif e.nombre == "subtitulo":
             draw.text(e.origen, e.texto, font=e.fuente, fill=(*accent_rgb, 255))
         else:
-            draw.text(e.origen, e.texto, font=e.fuente, fill=(249, 240, 211, 255))
+            draw.text(e.origen, e.texto, font=e.fuente, fill=TEXTO_RGBA)
 
 
 def _dibujar_feed(draw: ImageDraw.ImageDraw, lines: list[str], sub: str, panel_rgb, accent_rgb, disclosure: str) -> None:
