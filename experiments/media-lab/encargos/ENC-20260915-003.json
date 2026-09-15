@@ -31,11 +31,27 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-TRIVIA-004",
   "max_intentos": 2,
-  "estado": "pedido",
+  "estado": "generado",
   "lock_owner": null,
   "lock_expira": null,
-  "imagenes": [],
-  "intentos": [],
+  "imagenes": [
+    {
+      "ruta": "experiments/media-lab/assets/LAB-TRIVIA-004/ENC-20260915-003-v1.png",
+      "sha256": "628008c55791eefff8237c1de6bcadde24e9454e1c05cf74cf6b6594331de120",
+      "ancho": 1080,
+      "alto": 1350,
+      "origen": "codex-heartbeat",
+      "generado_en": "2026-09-15T15:13:40+00:00"
+    }
+  ],
+  "intentos": [
+    {
+      "numero": 1,
+      "resultado": "generado",
+      "origen": "codex-heartbeat",
+      "en": "2026-09-15T15:13:40+00:00"
+    }
+  ],
   "revision": null,
   "runs": [],
   "no_lanzados": 0
