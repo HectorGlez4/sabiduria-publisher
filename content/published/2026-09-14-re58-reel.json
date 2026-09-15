@@ -68,11 +68,17 @@
     "«El monstruo se llama Frankenstein». Frankenstein es el apellido del científico. La criatura no tiene nombre en la novela.",
     "«1816 fue el año más frío de la historia». No verificado y muy improbable como superlativo. Lo documentado es un descenso de la temperatura media de entre 0,4 y 0,7 °C."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook_reel"
   ],
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "3275521525987850",
+      "url": "/reel/3275521525987850/",
+      "published_at": "2026-09-15T01:39:22.706789+00:00"
+    }
+  },
   "publish_at": "2026-09-14T20:26:00Z",
   "reemision_de": "2026-08-28-extra13"
 }
