@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-PERSON-002-A-INSTAGRAM-STORY-API-R2",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg",
+  "asset_sha256": "3aba56fe18606f0a2b6985980e25b938b699cc86126635836352973d49af85c8",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg",
+  "platforms": [
+    "instagram_story"
+  ],
+  "captions": {
+    "instagram_story": ""
+  },
+  "family_id": "LAB-PERSON-002"
+}
