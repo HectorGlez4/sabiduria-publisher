@@ -2,7 +2,7 @@
   "id": "2026-09-14-extra89",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Christine de Pizan y la Ciudad de las Damas",
     "hook": "En 1405, después de leer un libro que la dejó avergonzada de ser mujer, Christine de Pizan escribió la respuesta. Y después se ocupó ella misma de vigilar cómo la copiaban.",
@@ -78,5 +78,21 @@
     "threads"
   ],
   "publish_at": "2026-09-15T03:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1095546076603385",
+      "url": "https://www.facebook.com/874327782058550/posts/1095546076603385",
+      "published_at": "2026-09-15T07:54:36.845245+00:00"
+    },
+    "instagram": {
+      "post_id": "18132792340655899",
+      "url": "https://www.instagram.com/p/DdTOLvvG71f/",
+      "published_at": "2026-09-15T07:54:50.835627+00:00"
+    },
+    "threads": {
+      "post_id": "18106863356235641",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18106863356235641",
+      "published_at": "2026-09-15T07:55:04.865879+00:00"
+    }
+  }
 }
