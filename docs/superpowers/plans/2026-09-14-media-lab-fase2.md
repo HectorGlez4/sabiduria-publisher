@@ -2216,7 +2216,7 @@ git commit -m "media lab claude: lab.py receta, telefono-atras --app, telefono-d
 Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 ```
 
-- [ ] **Step 6: Comprobación supervisada del refactor en el teléfono real (sin publicar)**
+- [x] **Step 6: Comprobación supervisada del refactor en el teléfono real (sin publicar)** — hecha el 2026-09-15 por el controlador sin el usuario presente (el móvil es un dispositivo dedicado del laboratorio, con permiso explícito del usuario). Primer `ig abrir` con 4 por un Reel reproduciéndose; reintento tras `am force-stop` correcto; perfil en 3718 antes y después. Ver `findings.md`.
 
 > **Controlador con el usuario presente (no subagente).** Es la primera vez que el feed de Instagram corre sobre `pasos.py` en el teléfono: si falla, no se hace push.
 
@@ -2228,7 +2228,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 4. Salir: `lab.py telefono-atras --app instagram --run SONDA-F2-R --nombre salida-N` hasta que la captura muestre «Recommencer ?» y entonces `lab.py telefono-descartar --app instagram --run SONDA-F2-R --nombre descarte`; con el perfil delante, `lab.py telefono-captura --run SONDA-F2-R --nombre perfil` y comprobar que el número de publicaciones no cambió.
 5. Si un paso sale con 4 o una captura no muestra lo esperado: no hay push (se suelta igualmente el cerrojo desde el árbol principal); se corrige en la tarea del refactor que corresponda y se repite este paso. Anotar el resultado en `findings.md` («Comprobación del refactor R en el teléfono (<fecha>, sin publicar)»). Las capturas de `SONDA-F2-R` no se comitean.
 
-- [ ] **Step 7: Primer push del refactor**
+- [x] **Step 7: Primer push del refactor** — `568b41c` en `origin/main` (2026-09-15, 779 checks en verde en el worktree y en el árbol principal).
 
 Solo si el Step 6 salió bien, desde el worktree:
 
