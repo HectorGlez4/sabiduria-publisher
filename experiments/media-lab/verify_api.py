@@ -38,18 +38,20 @@ CONSULTAS = {
 
 # Los mismos nombres de plataforma que CONSULTAS, salvo instagram que se parte en
 # feed/story porque son dos superficies con métricas distintas en la misma API.
-# post_media_view y post_total_media_view_unique son el reemplazo moderno de
-# post_impressions*/post_impressions_unique para posts de una sola imagen; se piden
-# los seis a la vez y, si Meta ya retiró alguno de los antiguos, ese queda en
-# metrics_errors sin tirar a los demás (ver _fetch_metrics).
+# post_media_view y post_total_media_view_unique sustituyen a post_impressions*, que
+# Graph ya rechaza con (#100). Si alguna métrica deja de existir, queda en
+# metrics_errors sin tirar a las demás (ver _fetch_metrics).
 METRICAS = {
-    "facebook": ["post_impressions_unique", "post_impressions", "post_clicks",
-                 "post_reactions_by_type_total", "post_media_view", "post_total_media_view_unique"],
+    "facebook": ["post_clicks", "post_reactions_by_type_total", "post_media_view",
+                 "post_total_media_view_unique"],
     "instagram_feed": ["reach", "views", "likes", "comments", "shares", "saved", "total_interactions"],
     "instagram_story": ["reach", "views", "replies", "navigation"],
     "threads": ["views", "likes", "replies", "reposts", "quotes", "shares"],
 }
 INSIGHTS_BASE = {"facebook": GRAPH, "instagram": GRAPH, "threads": THREADS_GRAPH}
+# Las métricas de posts de Página solo traen datos con period=lifetime; sin él Graph
+# responde 200 con data vacía. Instagram y Threads no llevan period en sus posts.
+PERIODO = {"facebook": "lifetime"}
 
 _PAGINAS_MEDIA = 3
 # access_token= (query string normal), access_token%3D (la misma clave cuando toda la
@@ -114,16 +116,19 @@ def _valor(item: dict):
     return None
 
 
-def _fetch_metrics(base: str, object_id: str, token: str, metrics: list[str]) -> tuple[dict, dict]:
+def _fetch_metrics(base: str, object_id: str, token: str, metrics: list[str],
+                   periodo: str | None = None) -> tuple[dict, dict]:
     """Pide todas las métricas juntas; si el grupo entero falla (basta una métrica no
     soportada por ese tipo de objeto para tirar la respuesta completa), reintenta una
-    por una para no perder las que sí funcionan."""
+    por una para no perder las que sí funcionan. `periodo`, si se da, va en cada
+    petición."""
     valores: dict[str, object] = {}
     errores: dict[str, str] = {}
     faltan = list(metrics)
+    extra = {"period": periodo} if periodo else {}
     try:
         data = _get(f"{base}/{object_id}/insights",
-                    {"metric": ",".join(metrics), "access_token": token}).get("data", [])
+                    {"metric": ",".join(metrics), **extra, "access_token": token}).get("data", [])
         for item in data:
             if item.get("name") in metrics:
                 valores[item["name"]] = _valor(item)
@@ -133,7 +138,7 @@ def _fetch_metrics(base: str, object_id: str, token: str, metrics: list[str]) ->
     for metric in faltan:
         try:
             data = _get(f"{base}/{object_id}/insights",
-                        {"metric": metric, "access_token": token}).get("data", [])
+                        {"metric": metric, **extra, "access_token": token}).get("data", [])
             if data:
                 valores[metric] = _valor(data[0])
             else:
@@ -161,7 +166,8 @@ def _agregar_metricas(resultado: dict, platform: str, post_id: str, token: str, 
         resultado["metrics"] = {}
         resultado["metrics_errors"] = {"*": "not_available_via_api"}
         return
-    valores, errores = _fetch_metrics(INSIGHTS_BASE[platform], post_id, token, metrics)
+    valores, errores = _fetch_metrics(INSIGHTS_BASE[platform], post_id, token, metrics,
+                                      PERIODO.get(platform))
     resultado["metrics"] = valores
     if errores:
         resultado["metrics_errors"] = errores

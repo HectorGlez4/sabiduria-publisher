@@ -3032,11 +3032,15 @@ def seccion_metricas() -> None:
             (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1", "permalink_url": "https://fb/x"}),
             (lambda u, p, u_=f"{GRAPH}/IG1": u == u_, {"id": "IG1", "permalink": "https://instagram.com/p/IG1/"}),
             (lambda u, p, u_=f"{THREADS_GRAPH}/TH1": u == u_, {"id": "TH1", "permalink": "https://threads/x"}),
-            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_FB),
+            # Facebook solo trae datos con period=lifetime; Instagram y Threads no llevan period.
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_FB)
+             and p.get("period") == "lifetime",
              {"data": respuesta_fb}),
-            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_IG_FEED),
+            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_IG_FEED)
+             and "period" not in p,
              {"data": [valores(n, i) for i, n in enumerate(METRICAS_IG_FEED, start=1)]}),
-            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_TH),
+            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_TH)
+             and "period" not in p,
              {"data": [valores(n, i) for i, n in enumerate(METRICAS_TH, start=10)]}),
         ]
         codigo, datos, _, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
@@ -3061,6 +3065,8 @@ def seccion_metricas() -> None:
 
         def insights_individual(p):
             m = p["metric"]
+            if p.get("period") != "lifetime":
+                raise RuntimeError("el reintento de una en una perdió period=lifetime")
             if m == "post_clicks":
                 raise RuntimeError("(#100) el objeto no admite post_clicks")
             return {"data": [valores(m, len(m))]}
