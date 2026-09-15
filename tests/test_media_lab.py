@@ -3895,6 +3895,154 @@ def seccion_pasos_comunes() -> None:
           "con_telefono_simulado restaura el reloj")
 
 
+XML_BOTON_ENVIO_CON_ICONO = jerarquia(
+    nodo_xml("[45,2081][1035,2205]", clase="android.widget.Button", extra='clickable="true"',
+             hijos=nodo_xml("[60,2100][120,2180]", desc="Icône", clase="android.widget.ImageView")
+             + nodo_xml("[480,2115][600,2170]", texto="Partager")),
+    nodo_xml("[847,92][1080,249]", texto="Suivant", extra='clickable="true"'))
+
+
+def toques_sobre_envio(sim, paquete: str) -> list:
+    """Toques del simulador que cayeron dentro de un control de envío (`textos.es_texto_envio` en texto, descripción
+    o id) de `paquete` en el volcado que había en pantalla al tocar (`sim.toques_en`)."""
+    from labkit import telefono, textos
+    return [(x, y) for x, y, xml in sim.toques_en
+            if isinstance(xml, str) and any(
+                n["package"] == paquete
+                and any(textos.es_texto_envio(v) for v in (n["texto"], n["desc"], n["resource_id"]))
+                and n["bounds"][0] <= x < n["bounds"][2] and n["bounds"][1] <= y < n["bounds"][3]
+                for n in telefono.nodos(xml))]
+
+
+def seccion_textos_y_descarte() -> None:
+    print("\n14. Fase 2: textos, pista de idioma, envío prohibido y descarte")
+    from labkit import pantalla as P, pasos, telefono as T, textos as TX
+
+    check(set(TX.APPS_TELEFONO) <= set(TX.PAQUETES) and all(a in TX.TEXTOS for a in TX.APPS_TELEFONO),
+          "cada app de teléfono tiene paquete y tabla de textos")
+    check(TX.texto("instagram", "perfil") == "Profil" and TX.texto("facebook", "publico") == "Público",
+          "texto(app, clave) devuelve el texto exacto")
+    for valor in ("Partager", "publier", " Publicar ", "Compartir historia", "Post", "Share",
+                  "com.instagram.barcelona:id/new_thread_screen_post_button"):
+        check(TX.es_texto_envio(valor), f"es de envío: {valor!r}")
+    for valor in ("Vos stories", "Votre story", "Amis proches", "Envoyer à", "Tu historia", "Compartir en tu historia",
+                  "Your story", "Close friends"):
+        check(TX.es_texto_envio(valor), f"C1: publica una Story, cuenta como envío: {valor!r}")
+    for valor in ("Suivant", "Siguiente", "Compartir en Instagram", ""):
+        check(not TX.es_texto_envio(valor), f"no es de envío: {valor!r}")
+    for valor in ("Partager maintenant", "Publier le fil", "Compartir ahora mismo", "Share now", "Envoyer", "Ajouter à votre story"):
+        check(TX.es_texto_envio(valor), f"I-5: por prefijo, es de envío: {valor!r}")
+    for valor in ("Partager à", "partager  sur Facebook", "Compartir en Instagram"):
+        check(not TX.es_texto_envio(valor), f"I-5: excepción explícita NO_ENVIO, no es de envío: {valor!r}")
+    no_envio = TX.NO_ENVIO
+    try:
+        TX.NO_ENVIO = no_envio | {"partager", "vos stories", "publier le fil"}
+        exactos = TX.es_texto_envio("Partager") and TX.es_texto_envio("Vos stories")
+        prefijo_exceptuado = not TX.es_texto_envio("Publier le fil")
+    finally:
+        TX.NO_ENVIO = no_envio
+    check(exactos and prefijo_exceptuado,
+          "I-5: NO_ENVIO solo exceptúa de la regla de prefijos; nunca anula un envío exacto de ENVIO o ENVIO_HISTORIA")
+    check(TX.permitido("Profil", "instagram")
+          and TX.permitido("Sélectionné Miniature de la photo du 14 septembre 2026 10:39", "instagram")
+          and TX.permitido("#citasdiarias", "instagram") and TX.permitido("3 min", "instagram")
+          and not TX.permitido("Hola Juan, ¿quedamos mañana?", "instagram"),
+          "permitido acepta textos de la tabla, marca y patrones, y rechaza texto personal")
+    check(TX.permitido("sabiduriabolsillo", "instagram") and TX.permitido("Photo de profil de sabiduriabolsillo", "instagram")
+          and not TX.permitido("Juan ha comentado la foto de sabiduriabolsillo", "instagram")
+          and not TX.permitido("Mensaje de Juan para Sabiduria De Bolsillo", "facebook"),
+          "I4: la marca sola y sus formatos concretos se permiten; una frase personal que la menciona, no")
+
+    ingles = (xml_perfil().replace('"Profil"', '"Profile"').replace("Modifier le profil", "Edit profile")
+              .replace('"Créer"', '"Create"').replace("publications", "posts"))
+    check("idioma" in P.pista_idioma(ingles, "instagram") and P.pista_idioma(xml_perfil(), "instagram") == "",
+          "un perfil de Instagram en inglés da pista de idioma; en francés no")
+    check(P.pista_idioma(ingles, "facebook") == "", "sin nodos de la app no hay pista")
+    sim = TelefonoSimulado([ingles])
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_que(
+        lambda x: T.buscar(x, texto="Profil") is not None, "Profil", app="instagram"))
+    check(isinstance(err, P.PantallaInesperada) and "idioma" in str(err) and sim.toques == [],
+          f"volcado en inglés: esperar_que falla cerrado con un mensaje de idioma ({err!r})")
+
+    for criterio, label in (({"texto": "Partager"}, "la etiqueta de envío"),
+                            ({"desc": "Icône"}, "un icono dentro del botón de envío")):
+        try:
+            P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, **criterio)
+            ok = False
+        except P.PantallaInesperada:
+            ok = True
+        check(ok, f"nodo_sonda se niega a devolver {label}")
+    check(P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, texto="Suivant")["centro"] == (963, 170),
+          "nodo_sonda devuelve un nodo único que no es de envío")
+    th_publicar = jerarquia(nodo_xml("[800,100][1000,200]", desc="", clase="android.widget.Button",
+                                     paquete="com.instagram.barcelona",
+                                     extra='clickable="true" resource-id="com.instagram.barcelona:id/new_thread_screen_post_button"'))
+    try:
+        P.nodo_sonda(th_publicar, "com.instagram.barcelona", resource_id="new_thread_screen_post_button")
+        ok = False
+    except P.PantallaInesperada:
+        ok = True
+    check(ok, "nodo_sonda se niega a devolver el botón de publicar de Threads por resource-id")
+
+    icono = T.buscar(XML_BOTON_ENVIO_CON_ICONO, texto="Icône")
+    sim = TelefonoSimulado([XML_BOTON_ENVIO_CON_ICONO])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(icono, XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "C1: pasos.tocar no pulsa un icono dentro del botón de envío")
+    historia = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView", extra='clickable="true"'))
+    avatar = T.buscar(historia, texto="Votre story")
+    sim = TelefonoSimulado([historia])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia, PAQUETE_IG))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "C1: «Votre story» es envío si no está en la lista blanca")
+    sim = TelefonoSimulado([historia])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia, PAQUETE_IG, permitir=("Votre story",)))
+    check(err is None and sim.toques == [(170, 730)], "C1: con la lista blanca explícita, pasos.tocar abre el visor propio")
+    tapado_envio = jerarquia(nodo_xml("[0,500][1080,1000]", texto="Vos stories", clase="android.widget.Button", extra='clickable="true"'),
+                             nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView", extra='clickable="true"'))
+    avatar_tapado = T.buscar(tapado_envio, texto="Votre story")
+    sim = TelefonoSimulado([tapado_envio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar_tapado, tapado_envio, PAQUETE_IG, permitir=("Votre story",)))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          "permitir solo ignora «Votre story»: si su centro cae dentro de «Vos stories», no se toca")
+    solapado = jerarquia(nodo_xml("[0,2000][1080,2200]", texto="Vos stories", clase="android.widget.Button", extra='clickable="true"'),
+                         nodo_xml("[500,2050][600,2150]", desc="Flèche", clase="android.widget.ImageView"))
+    flecha = T.buscar(solapado, texto="Flèche")
+    check(P.es_envio(solapado, flecha, PAQUETE_IG), "C1: un nodo cuyo centro cae dentro de «Vos stories» cuenta como envío")
+    try:
+        P.nodo_sonda(solapado, PAQUETE_IG, texto="Vos stories")
+        ok = False
+    except P.PantallaInesperada:
+        ok = True
+    check(ok, "C1: nodo_sonda se niega a devolver «Vos stories»")
+
+    dialogo = jerarquia(nodo_xml("[100,900][980,1000]", texto="Recommencer ?"),
+                        nodo_xml("[100,1100][980,1200]", texto="Recommencer", clase="android.widget.Button",
+                                 extra='clickable="true"'),
+                        nodo_xml("[100,1250][980,1350]", texto="Annuler", clase="android.widget.Button",
+                                 extra='clickable="true"'))
+    check(P.boton_descarte(dialogo, "instagram")["texto"] == "Recommencer", "boton_descarte lee el diálogo exacto")
+    evid = pathlib.Path("evidencia-simulada")
+    sim = TelefonoSimulado([dialogo])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(err is None and sim.toques == [(540, 1150)] and sim.capturas == ["descarte.png"],
+          f"descartar pulsa solo el botón del diálogo y captura ({err!r}, {sim.toques})")
+    sim = TelefonoSimulado([xml_compositor()])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "sin diálogo de descarte no se pulsa nada")
+    borrar_th = jerarquia(nodo_xml("[100,900][980,1000]", texto="Supprimer le fil ?", paquete="com.instagram.barcelona"),
+                          nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button",
+                                   paquete="com.instagram.barcelona", extra='clickable="true"'))
+    sim = TelefonoSimulado([borrar_th])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("threads", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "I1: «Supprimer le fil ?» es un borrado: telefono-descartar no pulsa")
+    borrar_ig = jerarquia(nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
+                          nodo_xml("[100,900][980,1000]", texto="Supprimer la publication ?"),
+                          nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button", extra='clickable="true"'))
+    sim = TelefonoSimulado([borrar_ig])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
+          "I1: un título de borrado hace fallar cerrado aunque el diálogo tenga también un título de descarte")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -3912,6 +4060,7 @@ SECCIONES = [
     seccion_metricas,
     seccion_pantalla_comun,
     seccion_pasos_comunes,
+    seccion_textos_y_descarte,
 ]
 
 

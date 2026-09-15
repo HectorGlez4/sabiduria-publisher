@@ -45,25 +45,28 @@ def exigir_listo() -> None:
         raise TelefonoNoListo(f"el teléfono no está listo (no se despierta ni se desbloquea): {e}")
 
 
-def esperar_que(cumple, descripcion: str) -> str:
+def esperar_que(cumple, descripcion: str, app: str | None = None) -> str:
     """Primer volcado válido que cumple la condición.
 
     El plazo de ESPERA_S se comprueba entre volcados y cada volcado recibe el tiempo que
     queda (5 s como mínimo), así que la espera total puede pasar de ESPERA_S en lo que tarde
-    el último volcado."""
+    el último volcado. Con `app`, el error añade la pista de idioma del último volcado."""
     inicio = reloj.monotonic()
     ultimo_error = ""
+    ultimo_xml = None
     while True:
         restante = max(5, int(ESPERA_S - (reloj.monotonic() - inicio)))
         try:
             xml = telefono.volcado(timeout=restante)
+            ultimo_xml = xml
             if cumple(xml):
                 return xml
         except telefono.TelefonoError as e:
             ultimo_error = f" (último error: {e})"
         transcurrido = reloj.monotonic() - inicio
         if transcurrido >= ESPERA_S:
-            raise PantallaInesperada(f"no apareció {descripcion} tras {transcurrido:.1f} s{ultimo_error}")
+            pista = pantalla.pista_idioma(ultimo_xml, app) if app and ultimo_xml else ""
+            raise PantallaInesperada(f"no apareció {descripcion} tras {transcurrido:.1f} s{ultimo_error}{pista}")
         reloj.dormir(1.5)
 
 
@@ -198,6 +201,28 @@ def atras(paquete: str, evidencia: Path, nombre: str) -> Path:
     telefono.tecla(ATRAS)
     reloj.dormir(3)
     return telefono.captura(evidencia / f"{nombre}.png")
+
+
+def descartar(app: str, evidencia: Path, nombre: str) -> Path:
+    """Pulsa descartar solo si el volcado muestra el diálogo de descarte exacto de `app`."""
+    exigir_listo()
+    xml = volcado_fresco()
+    boton = pantalla.boton_descarte(xml, app)
+    telefono.tocar(*boton["centro"])
+    reloj.dormir(2)
+    return telefono.captura(evidencia / f"{nombre}.png")
+
+
+def tocar(n: dict, xml: str, paquete: str, permitir: tuple[str, ...] = ()) -> None:
+    """Toca `n`, leído de `xml`, solo si pulsarlo no puede enviar ni tocar un control prohibido
+    (`pantalla.es_envio`): los envíos solo salen de `enviar`. `permitir` es la lista blanca explícita de
+    etiquetas (texto exacto o principio de la content-desc) cuyos nodos dejan de contar como envío en este toque;
+    cualquier otro control de envío en ese punto sigue bloqueando. Solo la usa `_visor_propio` para abrir la
+    Story propia, tras verificar la pantalla."""
+    if pantalla.es_envio(xml, n, paquete, ignorar=permitir):
+        raise PantallaInesperada(f"no se toca un control que puede enviar o está prohibido fuera de compartir: "
+                                 f"{n['texto'] or n['desc'] or n['resource_id']!r} en {n['bounds']}")
+    telefono.tocar(*n["centro"])
 
 
 def observar_envio(boton: dict, observador: Callable[[str], dict], plazo: float | None = None,

@@ -10,7 +10,7 @@ del teléfono actual (≈12,8 % y 81,2 %), para que un volcado de otro alto no l
 """
 from __future__ import annotations
 
-from labkit import telefono
+from labkit import telefono, textos
 
 CLASES_CAMPO = ("android.widget.AutoCompleteTextView", "android.widget.EditText")
 _SUFIJOS_CAMPO = tuple(clase.rsplit(".", 1)[-1] for clase in CLASES_CAMPO)
@@ -202,3 +202,95 @@ def describe_emergente(e: dict) -> str:
     """«ventana emergente <nombre> en <frame>», para mensajes de diagnóstico."""
     frame = e.get("frame")
     return f"ventana emergente {e['nombre']} en {frame if frame is not None else 'sin frame legible'}"
+
+
+def pista_idioma(xml: str, app: str) -> str:
+    """« (ningún texto conocido…)» si el volcado tiene nodos de `app` pero ninguno de su tabla de
+    textos: la app ha podido cambiar de idioma. Cadena vacía en otro caso."""
+    propios = telefono.buscar_todos(xml, paquete=textos.PAQUETES[app])
+    if not propios:
+        return ""
+    conocidos = set(textos.TEXTOS.get(app, {}).values())
+    if any(n["texto"] in conocidos or n["desc"] in conocidos for n in propios):
+        return ""
+    return f" (ningún texto conocido de {app} en {textos.IDIOMAS.get(app, '?')}: ¿cambió el idioma de la app?)"
+
+
+def dentro(interior: tuple[int, int, int, int], exterior: tuple[int, int, int, int]) -> bool:
+    return (interior[0] >= exterior[0] and interior[1] >= exterior[1]
+            and interior[2] <= exterior[2] and interior[3] <= exterior[3])
+
+
+def _es_de_envio(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
+    if any(p and (n["texto"] == p or n["desc"].startswith(p)) for p in ignorar):
+        return False
+    return (textos.es_texto_envio(n["texto"]) or textos.es_texto_envio(n["desc"])
+            or textos.es_texto_envio(n["resource_id"]) or n["texto"] in textos.NO_TOCAR or n["desc"] in textos.NO_TOCAR)
+
+
+def es_envio(xml: str, n: dict, paquete: str, ignorar: tuple[str, ...] = ()) -> bool:
+    """Pulsar `n` podría enviar (o tocar un control prohibido): su texto, descripción o id son de envío; o hay un
+    control de envío dentro de sus bounds; o, si no es clickable, lo hay dentro de su antecesor clickable más
+    cercano, que es el que recibe el toque; o un control de envío del paquete contiene su centro. Los nodos cuya
+    etiqueta está en `ignorar` (texto exacto o principio de la content-desc) no cuentan: es la lista blanca de
+    `pasos.tocar`, que no oculta ningún otro control de envío."""
+    if _es_de_envio(n, ignorar):
+        return True
+    lista = telefono.nodos(xml)
+    clave = ("bounds", "texto", "desc", "resource_id", "clase")
+    i = next((k for k, m in enumerate(lista) if all(m[c] == n[c] for c in clave)), None)
+    zonas = [n["bounds"]]
+    if i is not None and not n["clickable"]:
+        nivel = n["profundidad"]
+        for anterior in reversed(lista[:i]):
+            if anterior["profundidad"] >= nivel:
+                continue
+            nivel = anterior["profundidad"]
+            if anterior["clickable"]:
+                if _es_de_envio(anterior, ignorar):
+                    return True
+                zonas.append(anterior["bounds"])
+                break
+    cx, cy = n["centro"]
+    return any(m["package"] == paquete and _es_de_envio(m, ignorar)
+               and (any(dentro(m["bounds"], z) for z in zonas)
+                    or (m["bounds"][0] <= cx < m["bounds"][2] and m["bounds"][1] <= cy < m["bounds"][3]))
+               for m in lista)
+
+
+def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | None = None,
+               resource_id: str | None = None) -> dict:
+    """El único nodo de `paquete` con ese texto, content-desc o resource-id (basta el final tras
+    «/»), si pulsarlo no puede enviar. Solo para sondas supervisadas."""
+    def rid(valor: str) -> str:
+        return valor.rsplit("/", 1)[-1]
+
+    lista = [n for n in telefono.nodos(xml) if n["package"] == paquete and (
+        (texto is not None and n["texto"] == texto) or (desc is not None and n["desc"] == desc)
+        or (resource_id is not None and n["resource_id"] and rid(n["resource_id"]) == rid(resource_id)))]
+    if len(lista) != 1:
+        raise PantallaInesperada(f"la sonda solo toca un nodo único: {len(lista)} coincidencias")
+    if es_envio(xml, lista[0], paquete):
+        raise PantallaInesperada("la sonda no pulsa controles de envío ni prohibidos")
+    return lista[0]
+
+
+def boton_descarte(xml: str, app: str) -> dict:
+    """El botón de descartar de `app`, solo si el volcado muestra su diálogo de descarte con los
+    textos exactos de `textos.DESCARTE`. Nunca un control de envío."""
+    paquete = textos.PAQUETES[app]
+    tabla = textos.DESCARTE[app]
+    borrado = next((n for n in telefono.buscar_todos(xml, paquete=paquete)
+                    if any(v.strip() in textos.TITULOS_BORRADO for v in (n["texto"], n["desc"]) if v)), None)
+    if borrado is not None:
+        raise PantallaInesperada(f"el diálogo parece de borrado ({borrado['texto'] or borrado['desc']!r}), no de descarte: no se pulsa nada")
+    if not any(telefono.buscar(xml, texto=t, paquete=paquete) for t in tabla["titulos"]):
+        raise PantallaInesperada(f"no se ve el diálogo de descarte de {app} {tabla['titulos']}: no se pulsa nada")
+    for etiqueta in tabla["botones"]:
+        candidatos = telefono.buscar_todos(xml, texto=etiqueta, paquete=paquete)
+        if candidatos:
+            boton = elegir(candidatos, etiqueta)
+            if es_envio(xml, boton, paquete):
+                raise PantallaInesperada(f"el botón {etiqueta!r} del diálogo parece de envío: no se pulsa")
+            return boton
+    raise PantallaInesperada(f"el diálogo de descarte de {app} no tiene {tabla['botones']}")
