@@ -111,8 +111,9 @@ def gesto_de_refresco(xml: str) -> tuple[int, int, int, int]:
 def hoja_abierta(xml: str) -> str | None:
     """Motivo si el volcado muestra una hoja o un modal de Instagram abierto encima de la pantalla, o None. Cuenta un
     nodo de Instagram cuyo resource-id completo es `com.instagram.android:id/<nombre>` con un nombre de IDS_HOJA, o de
-    IDS_CONTENEDOR_MODAL con algún descendiente. Medido en volcados reales del perfil: con la hoja «Créer» abierta aparecen `bottom_sheet_container`,
-    `background_dimmer` y `layout_container_bottom_sheet` (63 descendientes); en reposo `modal_container` y
+    IDS_CONTENEDOR_MODAL con algún descendiente. Medido en volcados reales del perfil: con la hoja «Créer» abierta
+    aparecen `bottom_sheet_container`, `background_dimmer` y `layout_container_bottom_sheet` (63 descendientes); en
+    reposo `modal_container` y
     `overlay_layout_container` están vacíos y no hay ninguno de los tres (`bottom_sheet_camera_container`, vacío, no
     cuenta)."""
     hojas = {f"{PAQUETE}:id/{nombre}": nombre for nombre in IDS_HOJA}

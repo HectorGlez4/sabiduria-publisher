@@ -48,7 +48,8 @@ def _esperar(zona: str | None = None, **kw) -> str:
 
 
 class RecuentoFresco(NamedTuple):
-    """Resultado de `_recuento_fresco`: `refrescado` solo si se deslizó y el recuento se estabilizó; `deslizado` si se
+    """Resultado de `_recuento_fresco`: `recuento`, el refrescado si `refrescado`; si no se deslizó, la lectura previa
+    (o None); si el gesto o la espera fallaron, None. `refrescado` solo si se deslizó y el recuento se estabilizó; `deslizado` si se
     llegó a pedir el gesto (la pantalla puede haber cambiado); `xml`, el último volcado estable del perfil, o None;
     `bloqueo_ajeno`, el motivo si algo de otra app o una emergente tapa el inicio del gesto, o None."""
     recuento: int | None
