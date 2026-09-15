@@ -165,6 +165,8 @@ Sin commit.
 - Test: `tests/test_media_lab.py`
 
 (ajustado en `fc4a830`: raíz en el origen; firmas con etiqueta/texto/prefijo por nombre; elegir vacío → PantallaInesperada)
+(ajustado en `5e9cc25`: alto_volcado exige además ancho completo y alto > LIMITE_ABAJO_PX en la raíz)
+(sincronizado con `fc4a830` y `5e9cc25`: todas las llamadas del plan a tiene_texto/pulsable/hay_desplegable, en esta tarea y en las pendientes, pasan a etiqueta=/texto=/prefijo= por nombre)
 
 - [ ] **Step 1: Escribir la prueba**
 
@@ -203,13 +205,13 @@ def seccion_pantalla_comun() -> None:
     check(ok, "una zona desconocida es ValueError")
 
     comp = xml_compositor()
-    check(P.pulsable(comp, "Partager", PAQUETE_IG) and IP.partager_pulsable(comp),
+    check(P.pulsable(comp, etiqueta="Partager", paquete=PAQUETE_IG) and IP.partager_pulsable(comp),
           "pulsable generaliza partager_pulsable (etiqueta dentro de un botón clickable)")
-    check(not P.pulsable(comp, "Partager", "com.facebook.katana"), "pulsable exige el paquete")
+    check(not P.pulsable(comp, etiqueta="Partager", paquete="com.facebook.katana"), "pulsable exige el paquete")
     check(P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG)
-          and not P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG, "@"),
+          and not P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG, prefijo="@"),
           "hay_desplegable mira el prefijo pedido fuera del campo de texto")
-    check(P.tiene_texto(comp, PIE_PRUEBA, PAQUETE_IG) and not P.tiene_texto(comp, "otro", PAQUETE_IG),
+    check(P.tiene_texto(comp, texto=PIE_PRUEBA, paquete=PAQUETE_IG) and not P.tiene_texto(comp, texto="otro", paquete=PAQUETE_IG),
           "tiene_texto compara el texto exacto dentro del paquete")
     check(P.nodo(comp, PAQUETE_IG, texto="Nouvelle publication")["texto"] == "Nouvelle publication",
           "nodo devuelve el control del paquete")
@@ -311,12 +313,18 @@ def area(n: dict) -> int:
 
 def alto_volcado(xml: str) -> int:
     """Alto de la pantalla según el volcado: el borde inferior del nodo raíz (profundidad 0)
-    cuya esquina superior izquierda está en el origen (0, 0). Un volcado de una ventana
-    emergente enfocable tiene la emergente como raíz, con un origen que no es (0, 0) y un alto
-    encogido que no debe usarse para escalar las zonas «arriba»/«abajo»: sin ningún nodo raíz
-    en el origen, el alto de referencia."""
+    que cuenta como la pantalla completa, o el alto de referencia si ninguno cuenta.
+
+    Cuenta un nodo raíz cuya esquina superior izquierda está en el origen (0, 0), que ocupa
+    todo el ancho de la pantalla (`x2 >= ANCHO_PANTALLA_PX`) y cuyo borde inferior pasa de
+    `LIMITE_ABAJO_PX`. Un volcado de una ventana emergente enfocable tiene la emergente como
+    raíz, con un origen que no es (0, 0); un contenedor en el origen pero más estrecho o más
+    bajo que la pantalla tampoco es la pantalla completa. Ninguno de los dos debe usarse para
+    escalar las zonas «arriba»/«abajo» (fallaría abierto: un nodo intermedio contaría como
+    «abajo»)."""
     completas = [n["bounds"][3] for n in telefono.nodos(xml)
-                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)]
+                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)
+                 and n["bounds"][2] >= ANCHO_PANTALLA_PX and n["bounds"][3] > LIMITE_ABAJO_PX]
     return max(completas, default=ALTO_REFERENCIA)
 
 
@@ -362,10 +370,11 @@ def nodo(xml: str, paquete: str | None, zona: str | None = None, **kw) -> dict:
     return elegir(encontrados, kw)
 
 
-def pulsable(xml: str, etiqueta: str, paquete: str) -> bool:
+def pulsable(xml: str, *, etiqueta: str, paquete: str) -> bool:
     """Algún control con `etiqueta` (texto o content-desc) de `paquete` se puede pulsar: el propio
     nodo es clickable y enabled o, si es una etiqueta, su antecesor clickable más cercano está
-    enabled y es del mismo paquete."""
+    enabled y es del mismo paquete. `etiqueta` y `paquete` son solo por nombre: los dos son
+    `str` y un intercambio no debe fallar en silencio."""
     lista = telefono.nodos(xml)
     for i, n in enumerate(lista):
         if n["package"] != paquete or not dice(n, etiqueta):
@@ -386,13 +395,17 @@ def pulsable(xml: str, etiqueta: str, paquete: str) -> bool:
     return False
 
 
-def tiene_texto(xml: str, texto: str, paquete: str) -> bool:
+def tiene_texto(xml: str, *, texto: str, paquete: str) -> bool:
+    """Algún nodo de `paquete` cuyo `text` (nunca `content-desc`) es exactamente `texto`.
+    `texto` y `paquete` son solo por nombre: los dos son `str` y un intercambio no debe fallar
+    en silencio."""
     return any(n["texto"] == texto for n in telefono.buscar_todos(xml, paquete=paquete))
 
 
-def hay_desplegable(xml: str, paquete: str | None = None, prefijo: str = "#") -> bool:
+def hay_desplegable(xml: str, paquete: str | None = None, *, prefijo: str = "#") -> bool:
     """Sugerencias abiertas: un texto que empieza por `prefijo` fuera de un campo de texto. Sin
-    `paquete` se miran todos los nodos (ante la duda, se da por abierto)."""
+    `paquete` se miran todos los nodos (ante la duda, se da por abierto). `prefijo` es solo por
+    nombre: es un `str` como `paquete` y un intercambio no debe fallar en silencio."""
     return any(n["texto"].startswith(prefijo) and not n["clase"].endswith(("AutoCompleteTextView", "EditText"))
                for n in telefono.buscar_todos(xml, paquete=paquete))
 
@@ -478,13 +491,13 @@ _area = pantalla.area
 3. Sustituir el cuerpo de `hay_desplegable_hashtags` (conservando su docstring) por:
 
 ```python
-    return pantalla.hay_desplegable(xml, paquete, "#")
+    return pantalla.hay_desplegable(xml, paquete, prefijo="#")
 ```
 
 4. Sustituir el cuerpo de `partager_pulsable` (conservando su docstring) por:
 
 ```python
-    return pantalla.pulsable(xml, "Partager", PAQUETE)
+    return pantalla.pulsable(xml, etiqueta="Partager", paquete=PAQUETE)
 ```
 
 5. Sustituir la función `evaluar_envio` completa por:
@@ -801,7 +814,7 @@ def escribir_texto(texto: str, paquete: str, *, campo, exigir, desplegable_nodos
         raise telefono.TelefonoError(f"portapapeles: {e}") from e
     reloj.dormir(2)
     xml = volcado_fresco()
-    if not pantalla.tiene_texto(xml, texto, paquete):
+    if not pantalla.tiene_texto(xml, texto=texto, paquete=paquete):
         raise PantallaInesperada("el texto leído del teléfono no coincide con el archivo")
 
     def estado_cierre(x: str) -> tuple[bool, bool, dict | None]:
@@ -3294,7 +3307,7 @@ def destino_historia_correcto(xml: str) -> dict:
         problemas.append(f"no hay botón «{_T['compartir_historia']}»")
     elif any(telefono.tapado(xml, b) for b in botones):
         problemas.append(f"«{_T['compartir_historia']}» está tapado")
-    elif not pantalla.pulsable(xml, _T["compartir_historia"], PAQUETE):
+    elif not pantalla.pulsable(xml, etiqueta=_T["compartir_historia"], paquete=PAQUETE):
         problemas.append(f"«{_T['compartir_historia']}» no se puede pulsar")
     return {"problemas": problemas, "copia_facebook": pantalla.marcado_en_fila(xml, PAQUETE, _T["partager_sur_facebook"])}
 
@@ -4456,7 +4469,7 @@ def compositor_listo(xml: str, texto: str | None, con_imagen: bool, tema: str | 
         problemas.append("no está el compositor de Threads")
     if identidad_compositor(xml) != MARCA:
         problemas.append(f"el compositor no publica como @{MARCA}")
-    if texto is not None and not pantalla.tiene_texto(xml, texto, PAQUETE):
+    if texto is not None and not pantalla.tiene_texto(xml, texto=texto, paquete=PAQUETE):
         problemas.append("el texto del teléfono no coincide con el archivo")
     if con_imagen and not adjunto_imagen(xml):
         problemas.append("no hay imagen adjunta")
@@ -4471,7 +4484,7 @@ def compositor_listo(xml: str, texto: str | None, con_imagen: bool, tema: str | 
         problemas.append("el botón de publicar está tapado")
     elif not all(b["enabled"] for b in botones):
         problemas.append("el botón de publicar no está activo")
-    if pantalla.hay_desplegable(xml, PAQUETE, "#") or pantalla.hay_desplegable(xml, PAQUETE, "@"):
+    if pantalla.hay_desplegable(xml, PAQUETE, prefijo="#") or pantalla.hay_desplegable(xml, PAQUETE, prefijo="@"):
         problemas.append("sugerencias abiertas")
     culpable = emergente_compositor(xml, emergentes or [])
     if culpable is not None:
@@ -4669,7 +4682,7 @@ def _exigir_compositor(xml: str, texto: str) -> None:
         faltan.append("compositor")
     if tp.identidad_compositor(xml) != tp.MARCA:
         faltan.append("identidad de marca")
-    if not pantalla.tiene_texto(xml, texto, tp.PAQUETE):
+    if not pantalla.tiene_texto(xml, texto=texto, paquete=tp.PAQUETE):
         faltan.append("texto exacto")
     if faltan:
         raise PantallaInesperada(f"tras pegar el texto falta: {faltan}")
@@ -4698,8 +4711,8 @@ def texto(texto_: str, evidencia: Path) -> dict:
         raise ValueError(f"el texto de Threads tiene {len(texto_)} caracteres (1–{tp.LIMITE_TEXTO})")
     pasos.escribir_texto(texto_, tp.PAQUETE, campo=lambda x: (tp.por_id(x, tp.ID_COMPOSITOR) or [None])[0],
                          exigir=lambda x: _exigir_compositor(x, texto_),
-                         desplegable_nodos=lambda x: pantalla.hay_desplegable(x, tp.PAQUETE, "#")
-                         or pantalla.hay_desplegable(x, tp.PAQUETE, "@"),
+                         desplegable_nodos=lambda x: pantalla.hay_desplegable(x, tp.PAQUETE, prefijo="#")
+                         or pantalla.hay_desplegable(x, tp.PAQUETE, prefijo="@"),
                          emergente=tp.emergente_compositor)
     return {"captura": str(telefono.captura(evidencia / "th-03-texto.png"))}
 
@@ -5668,7 +5681,7 @@ def adjunto_imagen(xml: str) -> bool:
 def compositor_con_pie(xml: str, pie: str | None, con_imagen: bool, tema: str | None,
                        emergentes: list[dict] | None = None) -> list[str]:
     problemas = identidad_y_audiencia(xml)
-    if pie is not None and not pantalla.tiene_texto(xml, pie, PAQUETE):
+    if pie is not None and not pantalla.tiene_texto(xml, texto=pie, paquete=PAQUETE):
         problemas.append("el pie del teléfono no coincide con el archivo")
     if con_imagen and not adjunto_imagen(xml):
         problemas.append("no hay imagen adjunta")
@@ -5678,7 +5691,7 @@ def compositor_con_pie(xml: str, pie: str | None, con_imagen: bool, tema: str | 
             problemas.append(f"no aparece el tema «{titulo}»")
     if telefono.buscar(xml, texto=T["siguiente"], paquete=PAQUETE) is None:
         problemas.append(f"no hay «{T['siguiente']}»")
-    if pantalla.hay_desplegable(xml, PAQUETE, "#"):
+    if pantalla.hay_desplegable(xml, PAQUETE, prefijo="#"):
         problemas.append("sugerencias abiertas")
     culpable = emergente_compositor(xml, emergentes or [])
     if culpable is not None:
@@ -5694,7 +5707,7 @@ def pantalla_final_lista(xml: str, emergentes: list[dict] | None = None) -> list
         problemas.append(f"no hay botón «{T['publicar']}»")
     elif any(telefono.tapado(xml, b) for b in botones):
         problemas.append(f"«{T['publicar']}» está tapado")
-    elif not pantalla.pulsable(xml, T["publicar"], PAQUETE):
+    elif not pantalla.pulsable(xml, etiqueta=T["publicar"], paquete=PAQUETE):
         problemas.append(f"«{T['publicar']}» no se puede pulsar")
     culpable = emergente_compositor(xml, emergentes or [])
     if culpable is not None:
@@ -5972,11 +5985,11 @@ def musica(evidencia: Path) -> dict:
 def pie(pie_: str, evidencia: Path) -> dict:
     def exigir(xml: str) -> None:
         _exigir_pagina(xml, "tras pegar el pie")
-        if not pantalla.tiene_texto(xml, pie_, fp.PAQUETE):
+        if not pantalla.tiene_texto(xml, texto=pie_, paquete=fp.PAQUETE):
             raise PantallaInesperada("tras pegar el pie falta el pie exacto")
 
     pasos.escribir_texto(pie_, fp.PAQUETE, campo=fp.campo_pie, exigir=exigir,
-                         desplegable_nodos=lambda x: pantalla.hay_desplegable(x, fp.PAQUETE, "#"),
+                         desplegable_nodos=lambda x: pantalla.hay_desplegable(x, fp.PAQUETE, prefijo="#"),
                          emergente=fp.emergente_compositor)
     return {"captura": str(telefono.captura(evidencia / "fb-05-pie.png"))}
 
@@ -6444,7 +6457,7 @@ def destino_historia_fb(xml: str) -> dict:
         problemas.append(f"no hay botón «{T['compartir_historia']}»")
     elif any(telefono.tapado(xml, b) for b in botones):
         problemas.append(f"«{T['compartir_historia']}» está tapado")
-    elif not pantalla.pulsable(xml, T["compartir_historia"], PAQUETE):
+    elif not pantalla.pulsable(xml, etiqueta=T["compartir_historia"], paquete=PAQUETE):
         problemas.append(f"«{T['compartir_historia']}» no se puede pulsar")
     return {"problemas": problemas}
 
@@ -7226,10 +7239,10 @@ def encuesta_escrita(xml: str, pregunta: str | None, opciones: list[str], app: s
     """Problemas de la encuesta leída: la pregunta (si se da) y cada opción deben estar con el texto exacto."""
     paquete = textos.PAQUETES[app]
     problemas = []
-    if pregunta is not None and not pantalla.tiene_texto(xml, pregunta, paquete):
+    if pregunta is not None and not pantalla.tiene_texto(xml, texto=pregunta, paquete=paquete):
         problemas.append("la pregunta de la encuesta no coincide")
     problemas += [f"la opción {k} de la encuesta no coincide" for k, opcion in enumerate(opciones, 1)
-                  if not pantalla.tiene_texto(xml, opcion, paquete)]
+                  if not pantalla.tiene_texto(xml, texto=opcion, paquete=paquete)]
     return problemas
 ```
 
@@ -7249,7 +7262,7 @@ def pegar_en(campo: dict, texto: str, paquete: str) -> str:
         raise telefono.TelefonoError(f"portapapeles: {e}") from e
     reloj.dormir(1.5)
     xml = volcado_fresco()
-    if not pantalla.tiene_texto(xml, texto, paquete):
+    if not pantalla.tiene_texto(xml, texto=texto, paquete=paquete):
         raise PantallaInesperada("el texto pegado no se lee en el campo")
     return xml
 
@@ -7433,7 +7446,7 @@ cambiar `from labkit import pantalla, pasos, reloj, telefono` por `from labkit i
 ```python
                 xml, _ = pasos.esperar_estable(
                     lambda x: tp.perfil_de_marca(x) and tp.thread_reciente(x, texto_)["ok"]
-                    and all(pantalla.tiene_texto(x, o, tp.PAQUETE) for o in (opciones or [])),
+                    and all(pantalla.tiene_texto(x, texto=o, paquete=tp.PAQUETE) for o in (opciones or [])),
                     descripcion="el thread nuevo en el perfil")
                 lectura = tp.thread_reciente(xml, texto_)
 ```
