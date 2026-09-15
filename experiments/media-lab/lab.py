@@ -37,10 +37,11 @@ ROOT = LAB.parents[1]
 sys.path.insert(0, str(LAB))
 sys.path.insert(0, str(ROOT / "src" / "render"))
 
-from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, seleccion, turnos  # noqa: E402
+from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, metricas, seleccion, turnos  # noqa: E402
 
 ENCARGOS = Path(os.environ.get("LAB_ENCARGOS_DIR", LAB / "encargos"))
 COBERTURA = Path(os.environ.get("LAB_COVERAGE", LAB / "coverage.json"))
+RUNS_DIR = Path(os.environ.get("LAB_RUNS_DIR", LAB / "runs"))
 # Solo para render/tarjeta: dónde escriben los másteres. Por defecto ROOT (el repo real);
 # las pruebas lo redirigen a una carpeta temporal para no ensuciar experiments/media-lab/assets/.
 ASSETS_DIR = Path(os.environ.get("LAB_ASSETS_DIR", ROOT))
@@ -752,9 +753,51 @@ def cmd_manifiesto_api(a) -> int:
 
 
 def cmd_manifiesto_verificacion(a) -> int:
-    m = manifiesto.manifiesto_verificacion(a.run_group, _pares(a.post, "--post"))
+    post_ids = _pares(a.post, "--post") if a.post else {}
+    superficies = _pares(a.superficie, "--superficie") if a.superficie else {}
+    shortcodes = {"instagram": a.instagram_shortcode} if a.instagram_shortcode else {}
+    m = manifiesto.manifiesto_verificacion(a.run_group, post_ids,
+                                           instagram_shortcodes=shortcodes, surfaces=superficies)
     _escribir_manifiesto(manifiesto.ruta_verificacion(a.run_group), m)
     emitir({"manifiesto": manifiesto.ruta_verificacion(a.run_group)})
+    return 0
+
+
+# ── métricas ────────────────────────────────────────────────────────────────
+
+def _ruta_resultado(rel: str) -> Path:
+    """ROOT/rel si rel es relativa, no tiene «..», no es un enlace, existe y, resuelta,
+    sigue dentro de ROOT. A diferencia de un máster o un asset, un resultado de
+    verificación puede vivir en cualquier punto del repo (incluida una descarga de
+    `gh run download` bajo experiments/media-lab/results/<run_id>/)."""
+    partes = PurePosixPath(rel)
+    _exigir(not partes.is_absolute() and ".." not in partes.parts,
+            f"--resultado debe ser una ruta relativa sin «..»: {rel}")
+    p = ROOT / rel
+    _exigir(not p.is_symlink(), f"--resultado es un enlace simbólico: {rel}")
+    _exigir(p.is_file(), f"--resultado no existe: {rel}")
+    _exigir(p.resolve().is_relative_to(ROOT.resolve()), f"--resultado sale del repo: {rel}")
+    return p
+
+
+def cmd_metricas_registrar(a) -> int:
+    ruta_run = RUNS_DIR / f"{a.run}.json"
+    _exigir(ruta_run.is_file(), f"no existe el run: {a.run}")
+    run = json.loads(ruta_run.read_text(encoding="utf-8"))
+    resultado = metricas.leer_resultado(_ruta_resultado(a.resultado))
+    actualizado = metricas.registrar(run, resultado, run_group=a.run_group,
+                                     instantanea=a.instantanea, ahora=ahora())
+    metricas.guardar_json(ruta_run, actualizado)
+    reporte = {"ok": True, "run": a.run, "instantanea": a.instantanea}
+    cell_id = run.get("coverage_cell_id")
+    if cell_id:
+        _exigir(COBERTURA.is_file(), f"no existe coverage.json para marcar {cell_id}")
+        coverage = json.loads(COBERTURA.read_text(encoding="utf-8"))
+        fecha = actualizado["publication"]["snapshots"][-1]["observed_at"]
+        coverage = metricas.marcar_cobertura(coverage, cell_id, fecha)
+        metricas.guardar_json(COBERTURA, coverage)
+        reporte["coverage_cell_id"] = cell_id
+    emitir(reporte)
     return 0
 
 
@@ -938,8 +981,17 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_manifiesto_api)
     p = sub.add_parser("manifiesto-verificacion")
     p.add_argument("--run-group", required=True)
-    p.add_argument("--post", action="append", required=True, help="plataforma=post_id")
+    p.add_argument("--post", action="append", default=[], help="plataforma=post_id")
+    p.add_argument("--instagram-shortcode", help="shortcode del permalink (publicaciones por teléfono)")
+    p.add_argument("--superficie", action="append", default=[], help="plataforma=story|feed")
     p.set_defaults(func=cmd_manifiesto_verificacion)
+
+    p = sub.add_parser("metricas-registrar")
+    p.add_argument("--run", required=True)
+    p.add_argument("--run-group", required=True, help="debe coincidir con run_group_id del resultado")
+    p.add_argument("--resultado", required=True, help="ruta del verification-result.json dentro del repo")
+    p.add_argument("--instantanea", required=True, choices=metricas.INSTANTANEAS)
+    p.set_defaults(func=cmd_metricas_registrar)
 
     p = sub.add_parser("telefono-subir")
     p.add_argument("--local", required=True, help="imagen bajo experiments/media-lab/ (.png, .jpg o .jpeg)")

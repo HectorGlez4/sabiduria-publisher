@@ -7,6 +7,11 @@ on:
         description: "Verification manifest under experiments/media-lab/manifests/"
         required: true
         default: "experiments/media-lab/manifests/LAB-F12-001-A-verify.json"
+      metricas:
+        description: "Además de comprobar el post, leer sus métricas de audiencia"
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   verify:
@@ -23,8 +28,13 @@ jobs:
         env:
           SDB_PAGE_TOKEN: ${{ secrets.SDB_PAGE_TOKEN }}
           SDB_THREADS_TOKEN: ${{ secrets.SDB_THREADS_TOKEN }}
+          SDB_IG_USER_ID: ${{ secrets.SDB_IG_USER_ID }}
           MANIFEST: ${{ inputs.manifest }}
-        run: python3 experiments/media-lab/verify_api.py "$MANIFEST" --output experiments/media-lab/verification-result.json
+          METRICAS: ${{ inputs.metricas }}
+        run: |
+          ARGS=()
+          if [ "$METRICAS" = "true" ]; then ARGS+=(--metricas); fi
+          python3 experiments/media-lab/verify_api.py "$MANIFEST" --output experiments/media-lab/verification-result.json "${ARGS[@]}"
       - name: Preserve verification result
         if: always()
         uses: actions/upload-artifact@v4

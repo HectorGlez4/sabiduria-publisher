@@ -16,8 +16,11 @@ SIN_PIE = STORIES
 # Los mismos topes que src/variants.py usa en producción.
 LIMITES = {"instagram": 2200, "threads": 500}
 VERIFICABLES = ("facebook", "instagram", "threads")
+SUPERFICIES = ("feed", "story")
 _RUN_GROUP = re.compile(r"LAB-[A-Z0-9][A-Z0-9-]*")
 _SHA256 = re.compile(r"[0-9a-f]{64}")
+# Shortcode del permalink de Instagram, p. ej. instagram.com/p/DdR54JEgxHN/.
+_SHORTCODE = re.compile(r"[A-Za-z0-9_-]{5,20}")
 
 
 class ManifiestoError(ValueError):
@@ -62,16 +65,37 @@ def manifiesto_api(run_group_id: str, asset_path: str, asset_sha256: str, captio
     return m
 
 
-def manifiesto_verificacion(run_group_id: str, post_ids: dict[str, str]) -> dict:
+def manifiesto_verificacion(run_group_id: str, post_ids: dict[str, str], *,
+                            instagram_shortcodes: dict[str, str] | None = None,
+                            surfaces: dict[str, str] | None = None) -> dict:
     _validar_run_group(run_group_id)
-    if not post_ids:
-        raise ManifiestoError("sin post_ids no hay nada que verificar")
+    instagram_shortcodes = instagram_shortcodes or {}
+    surfaces = surfaces or {}
+    if not post_ids and not instagram_shortcodes:
+        raise ManifiestoError("sin post_ids ni instagram_shortcodes no hay nada que verificar")
     for plataforma, post_id in post_ids.items():
         if plataforma not in VERIFICABLES:
             raise ManifiestoError(f"verify_api.py no verifica {plataforma}")
         if not str(post_id).strip():
             raise ManifiestoError(f"post_id vacío para {plataforma}")
-    return {"run_group_id": run_group_id, "post_ids": dict(post_ids)}
+    for plataforma, shortcode in instagram_shortcodes.items():
+        if plataforma != "instagram":
+            raise ManifiestoError(f"instagram_shortcodes solo admite instagram, no {plataforma}")
+        if plataforma in post_ids:
+            raise ManifiestoError("instagram no puede tener post_id y shortcode a la vez")
+        if not _SHORTCODE.fullmatch(str(shortcode)):
+            raise ManifiestoError(f"shortcode de Instagram no válido: {shortcode!r}")
+    for plataforma, superficie in surfaces.items():
+        if plataforma not in VERIFICABLES:
+            raise ManifiestoError(f"verify_api.py no verifica {plataforma}")
+        if superficie not in SUPERFICIES:
+            raise ManifiestoError(f"--superficie de {plataforma} debe ser feed o story: {superficie!r}")
+    m = {"run_group_id": run_group_id, "post_ids": dict(post_ids)}
+    if instagram_shortcodes:
+        m["instagram_shortcodes"] = dict(instagram_shortcodes)
+    if surfaces:
+        m["surfaces"] = dict(surfaces)
+    return m
 
 
 def ruta_manifiesto(run_group_id: str) -> str:
