@@ -526,15 +526,19 @@
       "treatment": "4:5 image with caption",
       "publishing_route": "api",
       "variant_id": "A",
-      "capability_evidence": null,
-      "status": "planned",
+      "capability_evidence": "media-lab workflow 34911885649 (manifest LAB-PERSON-002-A-INSTAGRAM-API), agent visual QA PASS",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
-      "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "planned_publish_at": "2026-09-15T00:08:05+00:00",
+      "run_record": "experiments/media-lab/runs/LAB-PERSON-002-A-INSTAGRAM.json",
+      "post_id": "18074035754439615",
+      "post_url": "https://www.instagram.com/p/DdSYyxfl4qZ/",
+      "playback_or_display_verified_at": "2026-09-15T00:09:07+00:00",
+      "measurement_due_at": [
+        "2026-09-16T00:08:18+00:00",
+        "2026-09-18T00:08:18+00:00",
+        "2026-09-22T00:08:18+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
