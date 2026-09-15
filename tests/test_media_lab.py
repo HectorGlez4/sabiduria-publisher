@@ -477,10 +477,11 @@ def seccion_manifiesto_y_cerrojo() -> None:
 
     con_shortcode = M.manifiesto_verificacion("LAB-X", {"facebook": "1"},
                                               instagram_shortcodes={"instagram": "DdR54JEgxHN"},
-                                              surfaces={"instagram": "story"})
+                                              surfaces={"facebook": "story"})
     check(con_shortcode.get("instagram_shortcodes") == {"instagram": "DdR54JEgxHN"},
           "manifiesto de verificación admite un shortcode de Instagram")
-    check(con_shortcode.get("surfaces") == {"instagram": "story"}, "y una superficie explícita")
+    check(con_shortcode.get("surfaces") == {"facebook": "story"},
+          "y una superficie explícita de otra red a la vez (una Story de Instagram por teléfono no admite shortcode+story)")
     check(M.manifiesto_verificacion("LAB-X", {}, instagram_shortcodes={"instagram": "DdR54JEgxHN"}) ==
           {"run_group_id": "LAB-X", "post_ids": {}, "instagram_shortcodes": {"instagram": "DdR54JEgxHN"}},
           "solo shortcode, sin post_ids, basta para tener algo que verificar")
@@ -492,7 +493,9 @@ def seccion_manifiesto_y_cerrojo() -> None:
             ({"instagram": "123"}, {"instagram_shortcodes": {"instagram": "DdR54JEgxHN"}},
              "instagram con post_id y shortcode a la vez"),
             ({"facebook": "1"}, {"surfaces": {"instagram": "carrusel"}}, "superficie que no es feed ni story"),
-            ({"facebook": "1"}, {"surfaces": {"tiktok": "story"}}, "superficie de una red no verificable")):
+            ({"facebook": "1"}, {"surfaces": {"tiktok": "story"}}, "superficie de una red no verificable"),
+            ({}, {"instagram_shortcodes": {"instagram": "DdR54JEgxHN"}, "surfaces": {"instagram": "story"}},
+             "shortcode de Instagram junto con superficie story (una Story por teléfono no se busca así)")):
         try:
             M.manifiesto_verificacion("LAB-X", post_ids, **kwargs)
             ok = False
@@ -2090,12 +2093,17 @@ def seccion_cli_en_proceso() -> None:
             check((codigo_1, codigo_2) == (0, 2), f"manifiesto-verificacion escribe una vez y no pisa ({codigo_1}, {codigo_2})")
 
             codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-002-API",
-                                   "--instagram-shortcode", "DdR54JEgxHN", "--superficie", "instagram=story")
+                                   "--instagram-shortcode", "DdR54JEgxHN", "--post", "facebook=1",
+                                   "--superficie", "facebook=story")
             escrito = manifiestos / "LAB-CLI-002-API-verify.json"
             m = json.loads(escrito.read_text(encoding="utf-8")) if escrito.exists() else {}
             check(codigo == 0 and m.get("instagram_shortcodes") == {"instagram": "DdR54JEgxHN"}
-                  and m.get("surfaces") == {"instagram": "story"} and m.get("post_ids") == {},
-                  f"manifiesto-verificacion admite --instagram-shortcode y --superficie ({codigo}, {m})")
+                  and m.get("surfaces") == {"facebook": "story"} and m.get("post_ids") == {"facebook": "1"},
+                  f"manifiesto-verificacion admite --instagram-shortcode y --superficie a la vez ({codigo}, {m})")
+            codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-002B-API",
+                                   "--instagram-shortcode", "DdR54JEgxHN", "--superficie", "instagram=story")
+            check(codigo == 2 and campo(datos, "tipo") == "ManifiestoError",
+                  f"--instagram-shortcode junto con --superficie instagram=story se rechaza: no se busca así ({datos})")
             codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-003-API",
                                    "--instagram-shortcode", "abc")
             check(codigo == 2 and campo(datos, "tipo") == "ManifiestoError",
@@ -2955,7 +2963,7 @@ def _enrutador(reglas):
 
 def _ejecutar_verify(modulo, manifest, tmp_path, *, metricas=False, get=None, env=None):
     """verify_api.main() en proceso: escribe el manifiesto, sustituye `_get` y el entorno,
-    y devuelve (código, verification-result.json, llamadas)."""
+    y devuelve (código, verification-result.json, llamadas, stdout)."""
     import contextlib
     import io
     import json
@@ -2987,7 +2995,7 @@ def _ejecutar_verify(modulo, manifest, tmp_path, *, metricas=False, get=None, en
         os.environ.clear()
         os.environ.update(environ_previo)
     datos = json.loads(output_path.read_text(encoding="utf-8")) if output_path.exists() else None
-    return codigo, datos, (get.llamadas if get is not None else [])
+    return codigo, datos, (get.llamadas if get is not None else []), out.getvalue()
 
 
 def seccion_metricas() -> None:
@@ -2995,62 +3003,67 @@ def seccion_metricas() -> None:
     import json
     import os
     import tempfile
+    from labkit import metricas as ME
 
     modulo = modulo_verify()
     GRAPH, THREADS_GRAPH = modulo.GRAPH, modulo.THREADS_GRAPH
     ENTORNO_META = {"SDB_PAGE_TOKEN": "PT", "SDB_THREADS_TOKEN": "TT", "SDB_IG_USER_ID": "IGUSER"}
+    METRICAS_FB = modulo.METRICAS["facebook"]
+    METRICAS_IG_FEED = modulo.METRICAS["instagram_feed"]
+    METRICAS_IG_STORY = modulo.METRICAS["instagram_story"]
+    METRICAS_TH = modulo.METRICAS["threads"]
 
     def valores(nombre, valor):
         return {"name": nombre, "values": [{"value": valor}]}
 
-    print("   · verify_api --metricas: por red, feed y story")
+    def total_value(nombre, valor):
+        return {"name": nombre, "total_value": {"value": valor}}
+
+    print("   · verify_api --metricas: por red, feed, story y la rama total_value de _valor")
     with tempfile.TemporaryDirectory() as d:
         tmp = pathlib.Path(d)
         manifest = {"run_group_id": "LAB-MET-001-API",
                     "post_ids": {"facebook": "FB1", "instagram": "IG1", "threads": "TH1"}}
-        metricas_fb = ["post_impressions_unique", "post_impressions", "post_clicks", "post_reactions_by_type_total"]
-        metricas_ig = ["reach", "views", "likes", "comments", "shares", "saved", "total_interactions"]
-        metricas_th = ["views", "likes", "replies", "reposts", "quotes", "shares"]
+        respuesta_fb = [valores(n, i) for i, n in enumerate(METRICAS_FB, start=100)]
+        # La primera llega en la forma total_value (métricas agregadas más recientes de
+        # Meta), no en values: _valor() tiene que saber leer las dos formas.
+        respuesta_fb[0] = total_value(METRICAS_FB[0], 999)
         reglas = [
             (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1", "permalink_url": "https://fb/x"}),
             (lambda u, p, u_=f"{GRAPH}/IG1": u == u_, {"id": "IG1", "permalink": "https://instagram.com/p/IG1/"}),
             (lambda u, p, u_=f"{THREADS_GRAPH}/TH1": u == u_, {"id": "TH1", "permalink": "https://threads/x"}),
-            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_fb),
-             {"data": [valores("post_impressions_unique", 111), valores("post_impressions", 222),
-                       valores("post_clicks", 7), valores("post_reactions_by_type_total", {"like": 5, "love": 2})]}),
-            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_ig),
-             {"data": [valores(n, i) for i, n in enumerate(metricas_ig, start=1)]}),
-            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_th),
-             {"data": [valores(n, i) for i, n in enumerate(metricas_th, start=10)]}),
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_FB),
+             {"data": respuesta_fb}),
+            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_IG_FEED),
+             {"data": [valores(n, i) for i, n in enumerate(METRICAS_IG_FEED, start=1)]}),
+            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_TH),
+             {"data": [valores(n, i) for i, n in enumerate(METRICAS_TH, start=10)]}),
         ]
-        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
-                                            get=_enrutador(reglas), env=ENTORNO_META)
+        codigo, datos, _, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                               get=_enrutador(reglas), env=ENTORNO_META)
         r = datos["results"] if datos else {}
+        esperado_fb = dict(zip(METRICAS_FB, range(100, 100 + len(METRICAS_FB))))
+        esperado_fb[METRICAS_FB[0]] = 999
         check(codigo == 0, f"todo verificado sale con 0 ({codigo})")
-        check(r.get("facebook", {}).get("metrics") ==
-              {"post_impressions_unique": 111, "post_impressions": 222, "post_clicks": 7,
-               "post_reactions_by_type_total": {"like": 5, "love": 2}},
-              f"facebook trae sus 4 métricas ({r.get('facebook')})")
+        check(r.get("facebook", {}).get("metrics") == esperado_fb,
+              f"facebook trae sus {len(METRICAS_FB)} métricas, una de ellas en forma total_value ({r.get('facebook')})")
         check("metrics_errors" not in r.get("facebook", {}), "sin errores, no se añade metrics_errors")
         check("metrics_observed_at" in r.get("facebook", {}), "metrics_observed_at queda registrado")
-        check(r.get("instagram", {}).get("metrics") == dict(zip(metricas_ig, range(1, 8))),
-              f"instagram feed trae sus 7 métricas ({r.get('instagram')})")
-        check(r.get("threads", {}).get("metrics") == dict(zip(metricas_th, range(10, 16))),
-              f"threads trae sus 6 métricas ({r.get('threads')})")
+        check(r.get("instagram", {}).get("metrics") == dict(zip(METRICAS_IG_FEED, range(1, 1 + len(METRICAS_IG_FEED)))),
+              f"instagram feed trae sus {len(METRICAS_IG_FEED)} métricas ({r.get('instagram')})")
+        check(r.get("threads", {}).get("metrics") == dict(zip(METRICAS_TH, range(10, 10 + len(METRICAS_TH)))),
+              f"threads trae sus {len(METRICAS_TH)} métricas ({r.get('threads')})")
 
     print("   · una métrica no soportada va a metrics_errors sin fallar la publicación")
     with tempfile.TemporaryDirectory() as d:
         tmp = pathlib.Path(d)
         manifest = {"run_group_id": "LAB-MET-002-API", "post_ids": {"facebook": "FB1"}}
-        metricas_fb = ["post_impressions_unique", "post_impressions", "post_clicks", "post_reactions_by_type_total"]
 
         def insights_individual(p):
             m = p["metric"]
             if m == "post_clicks":
                 raise RuntimeError("(#100) el objeto no admite post_clicks")
-            valor = {"post_impressions_unique": 111, "post_impressions": 222,
-                     "post_reactions_by_type_total": {"like": 1}}[m]
-            return {"data": [valores(m, valor)]}
+            return {"data": [valores(m, len(m))]}
 
         reglas = [
             (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1"}),
@@ -3058,14 +3071,14 @@ def seccion_metricas() -> None:
              RuntimeError("el grupo entero falla por una métrica no soportada")),
             (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and "," not in p["metric"], insights_individual),
         ]
-        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
-                                            get=_enrutador(reglas), env=ENTORNO_META)
+        codigo, datos, _, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                               get=_enrutador(reglas), env=ENTORNO_META)
         r = (datos or {})["results"]["facebook"]
+        esperado = {m: len(m) for m in METRICAS_FB if m != "post_clicks"}
         check(codigo == 0, f"una métrica no soportada no tira el código de salida ({codigo})")
         check(r["status"] == "verified", "la publicación sigue verificada")
-        check(r["metrics"] == {"post_impressions_unique": 111, "post_impressions": 222,
-                                "post_reactions_by_type_total": {"like": 1}},
-              f"las 3 métricas que sí funcionan quedan registradas ({r['metrics']})")
+        check(r["metrics"] == esperado,
+              f"las {len(esperado)} métricas que sí funcionan quedan registradas ({r['metrics']})")
         check(list(r.get("metrics_errors", {})) == ["post_clicks"],
               f"la que falla queda en metrics_errors, no revienta las demás ({r.get('metrics_errors')})")
 
@@ -3074,22 +3087,21 @@ def seccion_metricas() -> None:
         tmp = pathlib.Path(d)
         manifest = {"run_group_id": "LAB-MET-003-API", "post_ids": {"facebook": "FB1", "instagram": "IG1"},
                     "surfaces": {"facebook": "story", "instagram": "story"}}
-        metricas_story = ["reach", "views", "replies", "navigation"]
         reglas = [
             (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1"}),
             (lambda u, p, u_=f"{GRAPH}/IG1": u == u_, {"id": "IG1"}),
-            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_story),
-             {"data": [valores(n, i) for i, n in enumerate(metricas_story, start=1)]}),
+            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(METRICAS_IG_STORY),
+             {"data": [valores(n, i) for i, n in enumerate(METRICAS_IG_STORY, start=1)]}),
         ]
-        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
-                                                    get=_enrutador(reglas), env=ENTORNO_META)
+        codigo, datos, llamadas, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                                       get=_enrutador(reglas), env=ENTORNO_META)
         r = datos["results"]
         check(r["facebook"]["metrics"] == {} and r["facebook"]["metrics_errors"] == {"*": "not_available_via_api"},
               f"facebook story: sin métricas por API ({r['facebook']})")
         check(not any(u.endswith("FB1/insights") for u, _ in llamadas),
               "facebook story no llega a pedir insights: se sabe de antemano que no existen")
-        check(r["instagram"]["metrics"] == dict(zip(metricas_story, range(1, 5))),
-              f"instagram story pide reach/views/replies/navigation, no las de feed ({r['instagram']})")
+        check(r["instagram"]["metrics"] == dict(zip(METRICAS_IG_STORY, range(1, 1 + len(METRICAS_IG_STORY)))),
+              f"instagram story pide sus propias métricas, no las de feed ({r['instagram']})")
 
     print("   · búsqueda de Instagram por shortcode (publicaciones por teléfono)")
     with tempfile.TemporaryDirectory() as d:
@@ -3105,7 +3117,7 @@ def seccion_metricas() -> None:
               "paging": {}}),
             (lambda u, p, u_=f"{GRAPH}/17999": u == u_, {"id": "17999", "permalink": "https://www.instagram.com/p/DdR54JEgxHN/"}),
         ]
-        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas), env=ENTORNO_META)
+        codigo, datos, llamadas, _ = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas), env=ENTORNO_META)
         r = datos["results"]["instagram"]
         check(codigo == 0 and r["status"] == "verified", f"el shortcode que casa en la 2.ª página verifica ({codigo}, {r})")
         check(r.get("graph_media_id") == "17999", f"guarda el id de Graph resuelto, no el shortcode ({r})")
@@ -3121,47 +3133,208 @@ def seccion_metricas() -> None:
              {"data": [], "paging": {"next": f"{GRAPH}/IGUSER/media?after=B"}}),
             (lambda u, p, u_=f"{GRAPH}/IGUSER/media?after=B": u == u_, {"data": [], "paging": {}}),
         ]
-        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest_sin, tmp, get=_enrutador(reglas_sin), env=ENTORNO_META)
+        codigo, datos, llamadas, _ = _ejecutar_verify(modulo, manifest_sin, tmp, get=_enrutador(reglas_sin), env=ENTORNO_META)
         r = datos["results"]["instagram"]
         check(codigo == 1 and r["status"] == "failed" and r["error_type"] == "ShortcodeNoEncontrado",
               f"el shortcode que no casa en 3 páginas falla sin inventar un id ({codigo}, {r})")
         check(len(llamadas) == 3, f"se detiene a las 3 páginas ({len(llamadas)})")
 
-        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas),
-                                            env={"SDB_PAGE_TOKEN": "PT", "SDB_THREADS_TOKEN": "TT"})
+        codigo, datos, _, _ = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas),
+                                               env={"SDB_PAGE_TOKEN": "PT", "SDB_THREADS_TOKEN": "TT"})
         r = datos["results"]["instagram"]
-        check(r["status"] == "failed" and "SDB_IG_USER_ID" in r["error"],
-              f"sin SDB_IG_USER_ID falla con un mensaje claro, no una excepción críptica ({r})")
+        check(r["status"] == "failed" and r["error_type"] == "ConfiguracionIncompleta" and "SDB_IG_USER_ID" in r["error"],
+              f"sin SDB_IG_USER_ID falla con su propio error_type, no ShortcodeNoEncontrado ({r})")
 
-    print("   · manifiesto-verificacion, metricas-registrar y el workflow (labkit + lab.py CLI)")
+        def revienta_red(p):
+            raise ConnectionError("Name or service not known")
+
+        reglas_red = [(lambda u, p, u_=f"{GRAPH}/IGUSER/media": u == u_, revienta_red)]
+        codigo, datos, _, _ = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas_red), env=ENTORNO_META)
+        r = datos["results"]["instagram"]
+        check(r["status"] == "failed" and r["error_type"] == "BusquedaFallida",
+              f"un fallo de red o API al paginar es BusquedaFallida, no ShortcodeNoEncontrado ({r})")
+
+    print("   · nunca se guarda ni se imprime un access_token, aunque venga dentro de un mensaje de error")
+    TOKEN = "EAASECRETTOKEN"  # noqa: N806
+
+    def revienta_con_token(p):
+        raise RuntimeError(f"HTTP 400: fallo pidiendo https://graph.facebook.com/v24.0/FB1?access_token={TOKEN}")
+
+    with tempfile.TemporaryDirectory() as d:
+        tmp = pathlib.Path(d)
+
+        # en la lectura del post
+        manifest = {"run_group_id": "LAB-TOK-001-API", "post_ids": {"facebook": "FB1"}}
+        codigo, datos, _, salida = _ejecutar_verify(
+            modulo, manifest, tmp, metricas=True,
+            get=_enrutador([(lambda u, p: True, revienta_con_token)]), env=ENTORNO_META)
+        crudo = (tmp / "verification-result.json").read_text(encoding="utf-8")
+        check(TOKEN not in crudo and TOKEN not in salida,
+              "un token en el error de leer el post no llega ni al JSON ni a stdout")
+        check("***" in datos["results"]["facebook"]["error"], "el token queda como *** en su lugar")
+
+        # en métricas (el post se lee bien, insights revienta)
+        manifest2 = {"run_group_id": "LAB-TOK-002-API", "post_ids": {"facebook": "FB1"}}
+        reglas2 = [
+            (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1"}),
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_, revienta_con_token),
+        ]
+        codigo, datos, _, salida = _ejecutar_verify(modulo, manifest2, tmp, metricas=True,
+                                                    get=_enrutador(reglas2), env=ENTORNO_META)
+        crudo = (tmp / "verification-result.json").read_text(encoding="utf-8")
+        check(TOKEN not in crudo and TOKEN not in salida,
+              "un token en el error de métricas no llega ni al JSON ni a stdout")
+
+        # en la paginación del shortcode (paging.next lleva el access_token en la URL)
+        manifest3 = {"run_group_id": "LAB-TOK-003-API", "instagram_shortcodes": {"instagram": "DdR54JEgxHN"}}
+        siguiente_con_token = f"{GRAPH}/IGUSER/media?access_token={TOKEN}&after=X"
+        reglas3 = [
+            (lambda u, p, u_=f"{GRAPH}/IGUSER/media": u == u_, {"data": [], "paging": {"next": siguiente_con_token}}),
+            (lambda u, p, u_=siguiente_con_token: u == u_, revienta_con_token),
+        ]
+        codigo, datos, _, salida = _ejecutar_verify(modulo, manifest3, tmp, get=_enrutador(reglas3), env=ENTORNO_META)
+        crudo = (tmp / "verification-result.json").read_text(encoding="utf-8")
+        check(TOKEN not in crudo and TOKEN not in salida,
+              "un token en la URL de paginación o en el error que levanta no llega ni al JSON ni a stdout")
+
+    print("   · labkit.metricas.registrar: plataforma del run, cotejo de post_id/shortcode y fechas")
+    from datetime import datetime, timezone
+
+    run_base = {"run_id": "LAB-UNIT-FACEBOOK", "platform": "facebook",
+                "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+    resultado_multi = {
+        "run_group_id": "LAB-UNIT-API", "observed_at": "2026-09-14T20:05:00+00:00",
+        "results": {
+            "facebook": {"status": "verified", "metrics": {"post_impressions": 10}},
+            "instagram": {"status": "verified", "metrics": {"reach": 500}},
+        },
+    }
+    actualizado = ME.registrar(run_base, resultado_multi, run_group="LAB-UNIT-API",
+                               instantanea="24h", ahora=datetime(2026, 9, 14, 20, 6, tzinfo=timezone.utc))
+    snap = actualizado["publication"]["snapshots"][0]
+    check(list(snap["metricas"]) == ["facebook"], f"solo se registra la red del run, no todas las de results ({snap})")
+    check(snap["edad_horas"] == 24.08, f"edad_horas calculada desde submitted_at ({snap})")
+    check(run_base["publication"]["snapshots"] == [], "registrar no muta el run que recibió")
+
+    run_api_id = {"run_id": "LAB-UNIT-2-FACEBOOK", "platform": "facebook",
+                  "publication": {"post_id": "FBID123", "snapshots": []}}
+    resultado_id_ok = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                       "results": {"facebook": {"status": "verified", "detail": {"id": "FBID123"}, "metrics": {}}}}
+    ME.registrar(run_api_id, resultado_id_ok, run_group="G", instantanea="24h", ahora=datetime.now(timezone.utc))
+    resultado_id_mal = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                        "results": {"facebook": {"status": "verified", "detail": {"id": "OTRO_ID"}, "metrics": {}}}}
+    try:
+        ME.registrar(run_api_id, resultado_id_mal, run_group="G", instantanea="72h", ahora=datetime.now(timezone.utc))
+        check(False, "debía rechazar un id de Graph que no es el del run")
+    except ME.MetricasError:
+        check(True, "un id de Graph que no es el del run se rechaza (ruta API)")
+
+    run_shortcode = {"run_id": "LAB-UNIT-INSTAGRAM", "platform": "instagram",
+                     "publication": {"post_id": "DdR54JEgxHN", "snapshots": []}}
+    resultado_permalink_ok = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                              "results": {"instagram": {"status": "verified", "graph_media_id": "17999",
+                                          "detail": {"id": "17999", "permalink": "https://www.instagram.com/p/DdR54JEgxHN/"},
+                                          "metrics": {}}}}
+    con_shortcode = ME.registrar(run_shortcode, resultado_permalink_ok, run_group="G", instantanea="24h",
+                                 ahora=datetime.now(timezone.utc))
+    check(con_shortcode["publication"]["graph_media_id"] == "17999",
+          "el post_id del run de teléfono (el shortcode) se coteja contra el permalink, y cuadra")
+    resultado_permalink_mal = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                               "results": {"instagram": {"status": "verified",
+                                           "detail": {"id": "18000", "permalink": "https://www.instagram.com/p/OTROCODIGO/"},
+                                           "metrics": {}}}}
+    try:
+        ME.registrar(run_shortcode, resultado_permalink_mal, run_group="G", instantanea="72h",
+                     ahora=datetime.now(timezone.utc))
+        check(False, "debía rechazar un permalink que no lleva el shortcode del run")
+    except ME.MetricasError:
+        check(True, "un permalink que no lleva el shortcode del run se rechaza (ruta teléfono)")
+
+    resultado_no_verificado = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                              "results": {"facebook": {"status": "failed", "error": "HTTP 400"}}}
+    try:
+        ME.registrar(run_base, resultado_no_verificado, run_group="G", instantanea="7d", ahora=datetime.now(timezone.utc))
+        check(False, "debía rechazar una plataforma que no quedó verified")
+    except ME.MetricasError:
+        check(True, "una plataforma failed en el resultado no consume la instantánea (código 2, sin escribir)")
+
+    run_fecha_ingenua = {"run_id": "LAB-UNIT-3-FACEBOOK", "platform": "facebook",
+                        "publication": {"submitted_at": "2026-09-13T20:00:00", "snapshots": []}}  # sin zona
+    resultado_simple = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                        "results": {"facebook": {"status": "verified", "metrics": {}}}}
+    try:
+        ME.registrar(run_fecha_ingenua, resultado_simple, run_group="G", instantanea="24h", ahora=datetime.now(timezone.utc))
+        check(False, "debía rechazar un submitted_at sin zona horaria en vez de reventar con TypeError")
+    except ME.MetricasError:
+        check(True, "submitted_at sin zona horaria da MetricasError (código 2), no un TypeError sin capturar")
+
+    run_desfase = {"run_id": "LAB-UNIT-4-FACEBOOK", "platform": "facebook",
+                   "publication": {"submitted_at": "2026-09-14T00:00:00+05:00", "snapshots": []}}
+    resultado_desfase = {"run_group_id": "G", "observed_at": "2026-09-14T20:05:00+00:00",
+                        "results": {"facebook": {"status": "verified", "metrics": {}}}}
+    snap_desfase = ME.registrar(run_desfase, resultado_desfase, run_group="G", instantanea="24h",
+                               ahora=datetime.now(timezone.utc))["publication"]["snapshots"][0]
+    # submitted_at es 2026-09-14T00:00+05:00 = 2026-09-13T19:00 UTC; observed_at es
+    # 2026-09-14T20:05 UTC: 25 h 5 min de diferencia real, aunque las horas "de reloj"
+    # sean distintas.
+    check(snap_desfase["edad_horas"] == 25.08,
+          f"la edad se calcula en tiempo real, no restando horas de reloj con desfases distintos ({snap_desfase})")
+
+    print("   · manifiesto-verificacion (C-1: un run_group propio por instantánea) y metricas-registrar (lab.py CLI)")
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        with LabAislado(raiz) as lab:
+            base_grupo = "LAB-SEQ-001-API"
+            c0, _, _ = lab("manifiesto-verificacion", "--run-group", base_grupo, "--post", "facebook=1")
+            c24, _, _ = lab("manifiesto-verificacion", "--run-group", f"{base_grupo}-M24H", "--post", "facebook=1")
+            c72, _, _ = lab("manifiesto-verificacion", "--run-group", f"{base_grupo}-M72H", "--post", "facebook=1")
+            check((c0, c24, c72) == (0, 0, 0),
+                  f"el manifiesto de publicación (7e) y los de 24h/72h (paso 8) no chocan ({c0}, {c24}, {c72})")
+            rutas = [raiz / "experiments" / "media-lab" / "manifests" / f"{g}-verify.json"
+                     for g in (base_grupo, f"{base_grupo}-M24H", f"{base_grupo}-M72H")]
+            check(all(r.is_file() for r in rutas), f"los tres manifiestos quedan como archivos distintos ({rutas})")
+
     with tempfile.TemporaryDirectory() as d:
         raiz = pathlib.Path(d)
         (raiz / "runs").mkdir()
-        run = {
-            "run_id": "LAB-CLI-MET-FACEBOOK", "coverage_cell_id": "CELL-MET",
-            "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []},
-        }
-        (raiz / "runs" / "LAB-CLI-MET-FACEBOOK.json").write_text(json.dumps(run), encoding="utf-8")
         (raiz / "coverage.json").write_text(json.dumps(
-            {"cells": [{"cell_id": "CELL-MET", "measurement_completed_at": []}]}), encoding="utf-8")
+            {"cells": [{"cell_id": "CELL-MET", "measurement_completed_at": []},
+                       {"cell_id": "CELL-MET3", "measurement_completed_at": []}]}), encoding="utf-8")
         resultado_dir = raiz / "experiments" / "media-lab" / "results" / "999"
         resultado_dir.mkdir(parents=True)
-        resultado = {"run_group_id": "LAB-CLI-MET-API", "observed_at": "2026-09-14T20:05:00+00:00",
-                     "results": {"facebook": {"status": "verified", "metrics": {"post_impressions": 10}}}}
-        ruta_resultado_rel = "experiments/media-lab/results/999/verification-result.json"
-        (resultado_dir / "verification-result.json").write_text(json.dumps(resultado), encoding="utf-8")
+
+        def escribir_run(run_id, run):
+            (raiz / "runs" / f"{run_id}.json").write_text(json.dumps(run), encoding="utf-8")
+
+        def leer_run(run_id):
+            return json.loads((raiz / "runs" / f"{run_id}.json").read_text(encoding="utf-8"))
+
+        def escribir_resultado(nombre, resultado):
+            ruta = resultado_dir / nombre
+            ruta.write_text(json.dumps(resultado), encoding="utf-8")
+            return f"experiments/media-lab/results/999/{nombre}"
+
+        run = {"run_id": "LAB-CLI-MET-FACEBOOK", "coverage_cell_id": "CELL-MET", "platform": "facebook",
+               "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+        escribir_run("LAB-CLI-MET-FACEBOOK", run)
+        resultado_rel = escribir_resultado("verification-result.json", {
+            "run_group_id": "LAB-CLI-MET-API", "observed_at": "2026-09-14T20:05:00+00:00",
+            "results": {
+                "facebook": {"status": "verified", "metrics": {"post_impressions": 10}},
+                "instagram": {"status": "verified", "metrics": {"reach": 999}},
+            }})
 
         with LabAislado(raiz) as lab:
             base = ("metricas-registrar", "--run", "LAB-CLI-MET-FACEBOOK", "--run-group", "LAB-CLI-MET-API",
-                    "--resultado", ruta_resultado_rel, "--instantanea", "24h")
+                    "--resultado", resultado_rel, "--instantanea", "24h")
             codigo, datos, _ = lab(*base)
-            run_tras = json.loads((raiz / "runs" / "LAB-CLI-MET-FACEBOOK.json").read_text(encoding="utf-8"))
+            run_tras = leer_run("LAB-CLI-MET-FACEBOOK")
             cobertura_tras = json.loads((raiz / "coverage.json").read_text(encoding="utf-8"))
             check(codigo == 0, f"metricas-registrar ok sale con 0 ({codigo}, {datos})")
             check(run_tras["publication"]["snapshots"] ==
                   [{"instantanea": "24h", "observed_at": "2026-09-14T20:05:00+00:00", "edad_horas": 24.08,
                     "metricas": {"facebook": {"post_impressions": 10}}, "errores": {}}],
-                  f"la instantánea queda en el run con su edad ({run_tras['publication']['snapshots']})")
+                  f"la instantánea queda en el run con su edad, solo con la red del run ({run_tras['publication']['snapshots']})")
             check(cobertura_tras["cells"][0]["measurement_completed_at"] == ["2026-09-14T20:05:00+00:00"],
                   f"coverage.json marca la celda del run ({cobertura_tras})")
 
@@ -3169,7 +3342,7 @@ def seccion_metricas() -> None:
             check(codigo == 2, f"la misma instantánea otra vez sale con 2 ({codigo}, {datos})")
 
             codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET-FACEBOOK",
-                                   "--run-group", "LAB-OTRO-GRUPO-API", "--resultado", ruta_resultado_rel,
+                                   "--run-group", "LAB-OTRO-GRUPO-API", "--resultado", resultado_rel,
                                    "--instantanea", "72h")
             check(codigo == 2, f"un run_group que no es el del resultado sale con 2 ({codigo}, {datos})")
 
@@ -3179,12 +3352,57 @@ def seccion_metricas() -> None:
                                    "--instantanea", "72h")
             check(codigo == 2, f"un resultado que no existe sale con 2 ({codigo}, {datos})")
 
+            # I-2: la red del run no quedó verified en el resultado -> 2, sin consumir la instantánea.
+            run2 = {"run_id": "LAB-CLI-MET2-FACEBOOK", "coverage_cell_id": "CELL-MET", "platform": "facebook",
+                    "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+            escribir_run("LAB-CLI-MET2-FACEBOOK", run2)
+            resultado_fallido_rel = escribir_resultado("fallido.json", {
+                "run_group_id": "LAB-CLI-MET2-API", "observed_at": "2026-09-14T20:05:00+00:00",
+                "results": {"facebook": {"status": "failed", "error": "HTTP 400"}}})
+            codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET2-FACEBOOK",
+                                   "--run-group", "LAB-CLI-MET2-API", "--resultado", resultado_fallido_rel,
+                                   "--instantanea", "24h")
+            check(codigo == 2 and leer_run("LAB-CLI-MET2-FACEBOOK") == run2,
+                  f"facebook failed en el resultado: 2 y el run queda intacto ({codigo}, {datos})")
+
+            # I-1: post_id del run (ruta API) que no corresponde al del resultado -> 2, run intacto.
+            run3 = {"run_id": "LAB-CLI-MET3-FACEBOOK", "coverage_cell_id": "CELL-MET", "platform": "facebook",
+                    "publication": {"post_id": "FBID-DEL-RUN", "submitted_at": "2026-09-13T20:00:00+00:00",
+                                    "snapshots": []}}
+            escribir_run("LAB-CLI-MET3-FACEBOOK", run3)
+            resultado_otro_post_rel = escribir_resultado("otro-post.json", {
+                "run_group_id": "LAB-CLI-MET3-API", "observed_at": "2026-09-14T20:05:00+00:00",
+                "results": {"facebook": {"status": "verified", "detail": {"id": "FBID-DE-OTRO-POST"}, "metrics": {}}}})
+            codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET3-FACEBOOK",
+                                   "--run-group", "LAB-CLI-MET3-API", "--resultado", resultado_otro_post_rel,
+                                   "--instantanea", "24h")
+            check(codigo == 2 and leer_run("LAB-CLI-MET3-FACEBOOK") == run3,
+                  f"el post_id del run no es el del resultado: 2 y el run queda intacto ({codigo}, {datos})")
+
+            # I-3: coverage.json no tiene la celda del run -> 2, ni el run ni coverage.json se tocan.
+            run4 = {"run_id": "LAB-CLI-MET4-FACEBOOK", "coverage_cell_id": "CELL-NOPE", "platform": "facebook",
+                    "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []}}
+            escribir_run("LAB-CLI-MET4-FACEBOOK", run4)
+            resultado_run4_rel = escribir_resultado("run4.json", {
+                "run_group_id": "LAB-CLI-MET4-API", "observed_at": "2026-09-14T20:05:00+00:00",
+                "results": {"facebook": {"status": "verified", "metrics": {}}}})
+            cobertura_antes = json.loads((raiz / "coverage.json").read_text(encoding="utf-8"))
+            codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET4-FACEBOOK",
+                                   "--run-group", "LAB-CLI-MET4-API", "--resultado", resultado_run4_rel,
+                                   "--instantanea", "24h")
+            cobertura_despues = json.loads((raiz / "coverage.json").read_text(encoding="utf-8"))
+            check(codigo == 2 and leer_run("LAB-CLI-MET4-FACEBOOK") == run4 and cobertura_despues == cobertura_antes,
+                  f"celda inexistente en coverage.json: 2, sin tocar ni el run ni coverage.json ({codigo}, {datos})")
+
     texto_workflow = (ROOT / ".github" / "workflows" / "media-lab-verify.yml").read_text(encoding="utf-8")
     check("metricas:" in texto_workflow, "media-lab-verify.yml admite el input metricas")
     check("SDB_IG_USER_ID" in texto_workflow, "media-lab-verify.yml expone SDB_IG_USER_ID")
     check("permissions" in texto_workflow and "contents: read" in texto_workflow,
           "media-lab-verify.yml mantiene permissions: contents: read")
     check("upload-artifact" in texto_workflow, "media-lab-verify.yml sigue subiendo el artefacto de verificación")
+    check("manifest con .." in texto_workflow, "media-lab-verify.yml valida que --manifest no lleve ..")
+    check("manifest fuera de manifests/" in texto_workflow,
+          "media-lab-verify.yml exige que --manifest esté bajo experiments/media-lab/manifests/")
 
 
 SECCIONES = [
