@@ -28,12 +28,32 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PERSON-002",
   "max_intentos": 2,
-  "estado": "pedido",
+  "estado": "aprobado",
   "lock_owner": null,
   "lock_expira": null,
-  "imagenes": [],
-  "intentos": [],
-  "revision": null,
+  "imagenes": [
+    {
+      "ruta": "experiments/media-lab/assets/LAB-PERSON-002/ENC-20260914-003-v1.png",
+      "sha256": "3002b757c4dbe5ae615578ef25b897cf82ca74a9faf6472b3f8ead08da8afff8",
+      "ancho": 1080,
+      "alto": 1920,
+      "origen": "codex-exec",
+      "generado_en": "2026-09-15T08:53:39+00:00"
+    }
+  ],
+  "intentos": [
+    {
+      "numero": 1,
+      "resultado": "generado",
+      "origen": "codex-exec",
+      "en": "2026-09-15T08:53:39+00:00"
+    }
+  ],
+  "revision": {
+    "resultado": "aprobado",
+    "motivo": "Recomposición 9:16 verosímil del mismo mundo que la referencia aceptada (misma presentadora ficticia tipo, paleta teal/latón, luz de tungsteno); una sola persona, manos correctas, perforaciones genéricas, esferas y cajoneras sin texto ni números legibles; cara, manos y rollo fuera del 14 % superior y del 18 % inferior, franja superior limpia para el titular; cumple brief y do_not_use.",
+    "revisado_en": "2026-09-15T08:54:21+00:00"
+  },
   "runs": [],
   "no_lanzados": 0
 }

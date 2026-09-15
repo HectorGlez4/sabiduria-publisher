@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-PERSON-002-A-FACEBOOK-STORY-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg",
+  "asset_sha256": "1de4c8bc71f8998410b15f81e80ad8d9f6abb8f03dbb6f6fa1b608eea975c389",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg",
+  "platforms": [
+    "facebook_story"
+  ],
+  "captions": {
+    "facebook_story": ""
+  },
+  "family_id": "LAB-PERSON-002"
+}

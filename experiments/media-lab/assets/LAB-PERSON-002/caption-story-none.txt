@@ -1,0 +1,1 @@
+Historia sin pie: publish_story y publish_instagram_story ignoran el texto; manifiesto-api lo guarda vacío.
