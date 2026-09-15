@@ -71,7 +71,7 @@ Escena generada, no fotografía del sitio.
 
 ## Image-generation prompts
 
-Built-in image generation, `historical-scene` / `ads-marketing`. No text in-image; the Spanish overlay, place label and notice are applied deterministically with `lab.py render` (`render_overlay.py`). The overlay panel covers roughly the top 30 % of the feed crop (y 76–405 of 1350) and y 170–600 of 1920 in Story, so the upper third must be quiet.
+Built-in image generation, `historical-scene` / `ads-marketing`. No text in-image; the Spanish overlay, place label and notice are applied deterministically with `lab.py render` (`render_overlay.py`). The overlay panel covers roughly the top 30 % of the feed crop (y 76–405 of 1350) and y 250–680 of 1920 in Story, with the notice and brand pills at y 1542–1660 (the Story viewer covers the top 250 px and the bottom 260 px), so the upper third and that bottom band must be quiet.
 
 ### Direction A — place-led landscape (publishable direction)
 
