@@ -63,7 +63,10 @@ TEXTOS: dict[str, dict[str, str]] = {
 
 ENVIO = frozenset({"Partager", "Publier", "Publicar", "Compartir", "Compartir historia", "Compartir ahora",
                    "Post", "Share", "Publish"})
-ENVIO_IDS = frozenset({"new_thread_screen_post_button"})
+# Sufijos exactos (tras la última «/») de resource-id de botones de envío: se comparan por igualdad, nunca
+# por prefijo (los contenedores `post_capture_*` del editor no son envío y bloquearían todos los toques).
+# `share_footer_button` es el «Partager» del compositor de Instagram (sonda SONDA-10F de la fase 1).
+ENVIO_IDS = frozenset({"new_thread_screen_post_button", "share_footer_button"})
 # Controles que publican una Story directamente desde el editor o el destino: son envío como los de
 # arriba (la sonda nunca los pulsa y `pasos.tocar` tampoco, salvo que la etiqueta esté en la lista
 # blanca del visor propio de la fase 2).
@@ -87,6 +90,10 @@ NO_ENVIO = frozenset({
     "partager sur facebook", "partager aussi sur instagram", "compartir en instagram",  # conmutadores; confirmar contra el fixture de S1
 })
 NO_TOCAR = frozenset({"Anular"})  # «Cambiaste a…» de Facebook: deshace el cambio a la Página
+# Verbos de BORRAR: una etiqueta que empieza por uno de ellos (seguido de fin o de un separador no alfanumérico)
+# es un control de borrado; la sonda nunca lo pulsa.
+BORRADO_VERBOS = ("supprimer", "eliminar", "borrar", "delete", "remove", "retirer",
+                  "mover a la papelera", "move to trash", "placer dans la corbeille")
 
 DESCARTE = {
     "instagram": {"titulos": ("Recommencer ?",), "botones": ("Recommencer", "Supprimer")},
@@ -106,13 +113,22 @@ PATRONES: dict[str, tuple[str, ...]] = {
     "instagram": (r"(?:Sélectionné|Désélectionné) Miniature de la photo du \d{1,2}(?:er)? \S+ \d{4} \d{1,2}[:h]\d{2}",
                   r"\d[\d   ]*publications?",
                   r"[\d   ]+ publications publiques",
-                  r"#\S+",
-                  r"Audio suggéré\..*",
                   r"Photo de profil de sabiduriabolsillo",  # confirmar contra el fixture de S1
                   r"Story de sabiduriabolsillo"),  # confirmar contra el fixture de S1
-    "threads": (r"#\S+", r"Photo de profil de sabiduriabolsillo"),  # confirmar contra el fixture de S1
-    "facebook": (r"#\S+", r"Foto del perfil de Sabiduria De Bolsillo", r"Sabiduria De Bolsillo ?✓"),  # confirmar contra el fixture de S1
+    "threads": (r"Photo de profil de sabiduriabolsillo",),  # confirmar contra el fixture de S1
+    "facebook": (r"Foto del perfil de Sabiduria De Bolsillo", r"Sabiduria De Bolsillo ?✓"),  # confirmar contra el fixture de S1
 }
+# Estos patrones solo deciden qué queda en un fixture: ningún lector de pantallas los usa. Del chip de audio solo
+# vale el literal «Audio suggéré.» (en `TEXTOS`); con el tema detrás no, así que un fixture del editor pierde el
+# texto del chip entero (y con él el tema): lo que se pruebe sobre el tema usa un volcado sintético.
+_HASHTAG = r"#[^\W\d_]\w*"
+# Solo en el atributo `text` (nunca en `hint`, `content-desc` ni otros): hashtags públicos del pie.
+PATRONES_TEXTO: dict[str, tuple[str, ...]] = {"instagram": (_HASHTAG,), "threads": (_HASHTAG,), "facebook": (_HASHTAG,)}
+# Edades en un fixture: las de `EDADES` con 1 a 3 cifras (la tabla de lectura no cambia).
+EDADES_FIXTURE: dict[str, tuple[str, ...]] = {
+    app: tuple(p.replace(r"\d+", r"\d{1,3}") for p, _ in tabla) for app, tabla in EDADES.items()}
+# Ningún valor con 6 o más cifras seguidas (teléfonos, ids) se queda en un fixture salvo un texto exacto de la tabla.
+_CIFRAS_LARGAS = re.compile(r"\d{6,}")
 # La marca sola ya está en `MARCAS`; aquí solo formatos concretos que la contienen (fullmatch): una frase
 # personal que la mencione no se permite.
 
@@ -222,9 +238,19 @@ def conocidos(app: str) -> set[str]:
             | set(MARCAS.values()) | set(ENVIO) | set(ENVIO_HISTORIA) | set(NO_TOCAR))
 
 
-def permitido(valor: str, app: str) -> bool:
-    """El texto puede quedarse en un fixture de `app`."""
+def es_texto_borrado(valor: str) -> bool:
+    """Etiqueta (o sufijo de id) de un control de borrado: tras `normalizar`, empieza por uno de `BORRADO_VERBOS`
+    seguido de fin o de un separador no alfanumérico («Supprimer», «Eliminar publicación», «delete_button»)."""
+    return coincide_o_prefijo(valor, BORRADO_VERBOS)
+
+
+def permitido(valor: str, app: str, atributo: str = "text") -> bool:
+    """El valor del `atributo` (por defecto `text`) puede quedarse en un fixture de `app`. Los hashtags solo
+    valen en `text`; ningún valor con 6 o más cifras seguidas vale salvo un texto exacto de la tabla."""
     if valor in conocidos(app):
         return True
-    patrones = PATRONES.get(app, ()) + tuple(p for p, _ in EDADES.get(app, ()))
+    if _CIFRAS_LARGAS.search(valor):
+        return False
+    patrones = (PATRONES.get(app, ()) + EDADES_FIXTURE.get(app, ())
+                + (PATRONES_TEXTO.get(app, ()) if atributo == "text" else ()))
     return any(re.fullmatch(p, valor) for p in patrones)

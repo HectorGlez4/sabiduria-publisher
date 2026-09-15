@@ -281,14 +281,48 @@ def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | 
     def rid(valor: str) -> str:
         return valor.rsplit("/", 1)[-1]
 
-    lista = [n for n in telefono.nodos(xml) if n["package"] == paquete and (
+    todos = telefono.nodos(xml)
+    titulo = next((m for m in todos if any(v and textos.es_titulo_borrado(v) for v in (m["texto"], m["desc"]))), None)
+    if titulo is not None:
+        raise PantallaInesperada(f"hay un diálogo de borrado en pantalla ({titulo['texto'] or titulo['desc']!r}): "
+                                 "la sonda no toca nada")
+    lista = [n for n in todos if n["package"] == paquete and (
         (texto is not None and n["texto"] == texto) or (desc is not None and n["desc"] == desc)
         or (resource_id is not None and n["resource_id"] and rid(n["resource_id"]) == rid(resource_id)))]
     if len(lista) != 1:
         raise PantallaInesperada(f"la sonda solo toca un nodo único: {len(lista)} coincidencias")
     if es_envio(xml, lista[0]):
         raise PantallaInesperada("la sonda no pulsa controles de envío ni prohibidos")
+    borrado = _borrado_en_toque(todos, lista[0])
+    if borrado is not None:
+        raise PantallaInesperada(f"la sonda no pulsa controles de borrado ({borrado['texto'] or borrado['desc']!r})")
     return lista[0]
+
+
+def _es_borrado(n: dict) -> bool:
+    return any(v and textos.es_texto_borrado(v) for v in (n["texto"], n["desc"]))
+
+
+def _borrado_en_toque(lista: list[dict], n: dict) -> dict | None:
+    """El nodo de borrado (`textos.es_texto_borrado` en texto o desc) que recibiría el toque en el centro de `n`:
+    `n` mismo, cualquier nodo (de cualquier paquete) cuyas bounds contienen el centro, o un descendiente de un
+    nodo PULSABLE que lo contiene (la misma regla del centro que `es_envio`). None si no hay ninguno."""
+    if _es_borrado(n):
+        return n
+    cx, cy = n["centro"]
+    for k, m in enumerate(lista):
+        x1, y1, x2, y2 = m["bounds"]
+        if not (x1 <= cx < x2 and y1 <= cy < y2):
+            continue
+        if _es_borrado(m):
+            return m
+        if m["clickable"]:
+            for hijo in lista[k + 1:]:
+                if hijo["profundidad"] <= m["profundidad"]:
+                    break
+                if _es_borrado(hijo):
+                    return hijo
+    return None
 
 
 def boton_descarte(xml: str, app: str) -> dict:

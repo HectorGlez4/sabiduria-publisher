@@ -4574,6 +4574,185 @@ def seccion_sonda_y_fixtures() -> None:
                                        (("--desde", rel, "--pantalla", "../x"), "--pantalla", "una pantalla con ..")):
             check(rechazo(lab("fixture-podar", "--app", "instagram", *args), fragmento), f"fixture-podar rechaza {label}")
 
+        dir_ig = raiz / "tests" / "fixtures" / "telefono" / "instagram"
+        fuera = raiz / "fuera"
+        fuera.mkdir()
+        victima = fuera / "victima.xml"
+        victima.write_text("original", encoding="utf-8")
+        (dir_ig / "enlazado.xml").symlink_to(victima)
+        check(rechazo(lab("fixture-podar", "--app", "instagram", "--desde", rel, "--pantalla", "enlazado"), "enlace simbólico")
+              and victima.read_text(encoding="utf-8") == "original",
+              "fixture-podar no escribe a través de un destino que es un enlace simbólico")
+        (raiz / "tests" / "fixtures" / "telefono" / "threads").symlink_to(fuera, target_is_directory=True)
+        check(rechazo(lab("fixture-podar", "--app", "threads", "--desde", rel, "--pantalla", "perfil"),
+                      "sale de tests/fixtures/telefono") and not (fuera / "perfil.xml").exists(),
+              "fixture-podar no escribe en una carpeta de app enlazada fuera de tests/fixtures/telefono")
+        roto = "experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-T/roto.xml"
+        (raiz / roto).write_text("<hierarchy><node", encoding="utf-8")
+        res = lab("fixture-podar", "--app", "instagram", "--desde", roto, "--pantalla", "roto")
+        check(rechazo(res, "legible", tipo="VolcadoIlegible") and not (dir_ig / "roto.xml").exists(),
+              f"fixture-podar rechaza un volcado ilegible sin traceback ({res[0]}, {res[2][-80:]!r})")
+        de_facebook = "experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-T/fb.xml"
+        (raiz / de_facebook).write_text(jerarquia(nodo_xml("[0,0][100,100]", texto="Publicar", paquete="com.facebook.katana")),
+                                        encoding="utf-8")
+        res = lab("fixture-podar", "--app", "instagram", "--desde", de_facebook, "--pantalla", "vacio")
+        check(rechazo(res, "com.instagram.android", tipo="FixtureVacio") and not (dir_ig / "vacio.xml").exists(),
+              f"fixture-podar no escribe un fixture vacío de un volcado de otra app ({res[0]}, {res[1]})")
+
+        # B1: borrado. Un criterio que es un verbo de borrar se rechaza antes de volcar.
+        for extra, label in ((("--texto", "Supprimer"), "«Supprimer»"),
+                             (("--texto", "SUPPRIMER"), "«SUPPRIMER»"),
+                             (("--texto", "\u200bSupprimer"), "«Supprimer» con ancho cero"),
+                             (("--texto", "Eliminar"), "«Eliminar»"),
+                             (("--texto", "ELIMINAR\u200b"), "«ELIMINAR» con ancho cero"),
+                             (("--texto", "Mover a la papelera"), "«Mover a la papelera»"),
+                             (("--texto", "MOVER A LA\u00a0PAPELERA"), "«MOVER A LA PAPELERA» con NBSP"),
+                             (("--desc", "Delete post"), "«Delete post»"),
+                             (("--texto", "Borrar"), "«Borrar»"),
+                             (("--resource-id", "com.facebook.katana:id/delete_button"), "un resource-id delete_button")):
+            sim = TelefonoSimulado([xml_compositor()])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, *extra))
+            check(rechazo(res, "borrado") and sim.toques == [] and sim.volcados_leidos == 0,
+                  f"sonda tocar se niega a pulsar {label} antes de tocar el teléfono ({res and res[0]}, {err!r})")
+        th, fb, boton = "com.instagram.barcelona", "com.facebook.katana", "android.widget.Button"
+        pulsable = 'clickable="true"'
+        dialogos = (
+            ("instagram", "--texto", "Annuler", "el diálogo «Supprimer la publication ?» de Instagram",
+             jerarquia(nodo_xml("[100,800][980,880]", texto="Supprimer la publication ?"),
+                       nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase=boton, extra=pulsable),
+                       nodo_xml("[100,1250][980,1350]", texto="Annuler", clase=boton, extra=pulsable))),
+            ("threads", "--texto", "Annuler", "el diálogo «Supprimer le thread ?» de Threads",
+             jerarquia(nodo_xml("[100,800][980,880]", texto="Supprimer le thread ?", paquete=th),
+                       nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase=boton, paquete=th, extra=pulsable),
+                       nodo_xml("[100,1250][980,1350]", texto="Annuler", clase=boton, paquete=th, extra=pulsable))),
+            ("facebook", "--texto", "Cancelar", "el diálogo «¿Eliminar publicación?» de Facebook",
+             jerarquia(nodo_xml("[100,800][980,880]", texto="¿Eliminar publicación?", paquete=fb),
+                       nodo_xml("[100,1100][980,1200]", texto="Eliminar", clase=boton, paquete=fb, extra=pulsable),
+                       nodo_xml("[100,1250][980,1350]", texto="Cancelar", clase=boton, paquete=fb, extra=pulsable))),
+            ("instagram", "--texto", "Annuler", "un título de borrado en mayúsculas y con ancho cero de otro paquete",
+             jerarquia(nodo_xml("[100,800][980,880]", texto="\u200bSUPPRIMER LA PUBLICATION ?", paquete="com.android.systemui"),
+                       nodo_xml("[100,1250][980,1350]", texto="Annuler", clase=boton, extra=pulsable))),
+            ("facebook", "--desc", "Opción", "un menú con «Mover a la papelera» dentro del nodo pulsable",
+             jerarquia(nodo_xml("[0,1500][1080,1600]", desc="Opción", clase="android.view.ViewGroup", paquete=fb, extra=pulsable,
+                                hijos=nodo_xml("[40,1520][600,1580]", texto="Mover a la papelera", paquete=fb)))),
+            ("instagram", "--resource-id", "com.instagram.android:id/boton_rojo", "un nodo elegido por id cuyo texto es «Retirer»",
+             jerarquia(nodo_xml("[100,1100][980,1200]", texto="Retirer", clase=boton,
+                                extra='clickable="true" resource-id="com.instagram.android:id/boton_rojo"'))),
+        )
+        for app, opcion, criterio, label, xml in dialogos:
+            sim = TelefonoSimulado([xml])
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", app, "tocar", *supervisada, opcion, criterio))
+            check(res is not None and res[0] == 4 and campo(res[1], "tipo") == "PantallaInesperada" and sim.toques == [],
+                  f"sonda tocar no pulsa nada con {label} ({res and res[0]}, {res and campo(res[1], 'error')})")
+        sim = TelefonoSimulado([jerarquia(nodo_xml("[100,1100][980,1200]", texto="Recommencer", clase=boton, extra=pulsable))])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Recommencer"))
+        check(res is not None and res[0] == 0 and sim.toques == [(540, 1150)],
+              f"«Recommencer» sigue siendo tocable fuera de un diálogo de borrado ({res and res[0]}, {sim.toques})")
+
+        # B2: el nodo se elige sobre una pantalla estable y se toca sobre el último volcado.
+        suivant = jerarquia(nodo_xml("[880,120][1060,220]", texto="Suivant", extra=pulsable))
+        partager = jerarquia(nodo_xml("[880,120][1060,220]", texto="Partager", clase=boton, extra=pulsable))
+        sim = TelefonoSimulado([suivant, partager])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        check(res is not None and res[0] == 4 and sim.toques == [],
+              f"sonda tocar no pulsa si el volcado siguiente trae «Partager» donde estaba «Suivant» ({res and res[0]}, {sim.toques})")
+        sim = TelefonoSimulado([suivant, suivant])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        check(res is not None and res[0] == 0 and sim.toques == [(970, 170)],
+              f"con volcados iguales la sonda toca una sola vez ({res and res[0]}, {sim.toques})")
+        movido = jerarquia(nodo_xml("[880,320][1060,420]", texto="Suivant", extra=pulsable))
+        sim = TelefonoSimulado([suivant, movido])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        check(res is not None and res[0] == 0 and sim.toques == [(970, 370)] and sim.toques_en[0][2] == movido,
+              f"si el nodo se mueve, la sonda espera a que se estabilice y toca sobre el último volcado ({sim.toques})")
+
+        # I1: botón de envío identificado solo por resource-id.
+        sim = TelefonoSimulado([xml_compositor()])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada,
+                                                          "--resource-id", "com.instagram.android:id/share_footer_button"))
+        check(rechazo(res, "envío") and sim.volcados_leidos == 0 and sim.toques == [],
+              "sonda tocar rechaza --resource-id share_footer_button antes de volcar")
+        boton_rid = jerarquia(nodo_xml("[45,2081][1035,2205]", clase=boton,
+                                       extra='clickable="true" resource-id="com.instagram.android:id/share_footer_button"',
+                                       hijos=nodo_xml("[60,2100][120,2180]", desc="Flèche", clase="android.widget.ImageView")))
+        sim = TelefonoSimulado([boton_rid])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", "Flèche"))
+        check(res is not None and res[0] == 4 and sim.toques == [],
+              f"sonda tocar no pulsa un nodo inocuo dentro de share_footer_button sin texto ({res and res[0]}, {sim.toques})")
+        contenedor = jerarquia(nodo_xml("[0,150][1080,2000]", clase="android.widget.FrameLayout",
+                                        extra='clickable="true" resource-id="com.instagram.android:id/post_capture_container"',
+                                        hijos=nodo_xml("[847,1500][1080,1649]", texto="Suivant", extra=pulsable)))
+        sim = TelefonoSimulado([contenedor])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--texto", "Suivant"))
+        check(res is not None and res[0] == 0 and sim.toques == [(963, 1574)],
+              f"un contenedor post_capture_* no bloquea: ENVIO_IDS compara el sufijo exacto ({res and res[0]}, {sim.toques})")
+
+        # I2: nada tapa el nodo (notificación de systemui, aviso de la app o ventana emergente).
+        identificar = nodo_xml("[40,300][1040,500]", texto="Identifier des personnes", extra=pulsable)
+        tapas = (("una notificación flotante de com.android.systemui", ((),),
+                  jerarquia(identificar, nodo_xml("[0,250][1080,650]", clase="android.widget.FrameLayout",
+                                                  paquete="com.android.systemui", extra=pulsable,
+                                                  hijos=nodo_xml("[40,270][1040,400]", texto="Nouveau message",
+                                                                 paquete="com.android.systemui")))),
+                 ("un aviso de la propia app", ((),),
+                  jerarquia(identificar, nodo_xml("[0,250][1080,650]", desc="Nouveau message", clase="android.widget.FrameLayout",
+                                                  extra=pulsable))),
+                 ("una ventana emergente fuera del volcado",
+                  ([{"nombre": "PopupWindow:1", "frame": (0, 250, 1080, 650), "ancho_padre": 1080}],),
+                  jerarquia(identificar)))
+        for label, emergentes, xml in tapas:
+            sim = TelefonoSimulado([xml], emergentes=emergentes)
+            res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada,
+                                                              "--texto", "Identifier des personnes"))
+            check(res is not None and res[0] == 4 and sim.toques == [],
+                  f"sonda tocar no pulsa si {label} tapa el nodo ({res and res[0]}, {res and campo(res[1], 'error')})")
+        sim = TelefonoSimulado([jerarquia(identificar)])
+        res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada,
+                                                          "--texto", "Identifier des personnes"))
+        check(res is not None and res[0] == 0 and sim.toques == [(540, 400)],
+              f"sin nada encima el mismo nodo sí se toca ({res and res[0]}, {sim.toques})")
+
+    # I3: podar y revisar no dejan pasar datos personales.
+    fugas = jerarquia(
+        nodo_xml("[0,200][1080,300]", texto="#juanperez612345678", extra='hint="#juanperez612345678"'),
+        nodo_xml("[0,400][1080,500]", desc="Audio suggéré. Juan Pérez García · nota de voz privada"),
+        nodo_xml("[0,600][1080,700]", texto="Profil", extra='resource-id="com.instagram.android:id/story_tray_juan.perez"'),
+        nodo_xml("[0,800][1080,900]", texto="612345678 s"),
+        nodo_xml("[0,1000][1080,1100]", desc="#citasdiarias"),
+        nodo_xml("[0,1200][1080,1300]", texto="Profil", extra='resource-id="com.facebook.katana:id/next_button"'),
+        nodo_xml("[0,1400][1080,1500]", texto="#citasdiarias",
+                 extra='resource-id="com.instagram.android:id/caption_text" hint="#sabiduria"'),
+        nodo_xml("[0,1600][1080,1700]", texto="3 min"),
+    ).replace("</hierarchy>", '<extra text="Juan Pérez"/></hierarchy>')
+    podado = FX.podar(fugas, "instagram")
+    pares = [(n["texto"], n["desc"]) for n in T.nodos(podado)]
+    quedan = [f for f in ("juanperez612345678", "Juan Pérez", "nota de voz", "story_tray_juan", "612345678",
+                          "com.facebook.katana", "<extra", 'hint="#sabiduria"') if f in podado]
+    check(not quedan, f"podar no deja hashtags con cifras, audio con tema, ids ajenos, edades largas ni elementos extraños ({quedan})")
+    check('resource-id="com.instagram.android:id/caption_text"' in podado and ("#citasdiarias", "") in pares
+          and ("3 min", "") in pares and ("", "#citasdiarias") not in pares,
+          f"podar conserva un id limpio de la app, el hashtag en text y una edad corta, pero no un hashtag en desc ({pares})")
+    check(FX.revisar(podado, "instagram") == [], f"revisar da limpio el volcado podado ({FX.revisar(podado, 'instagram')[:3]})")
+    senalado = " | ".join(FX.revisar(fugas, "instagram"))
+    faltan = [f for f in ("text='#juanperez612345678'", "hint='#juanperez612345678'", "Audio suggéré. Juan", "story_tray_juan",
+                          "612345678 s", "com.facebook.katana:id/next_button", "content-desc='#citasdiarias'",
+                          "hint='#sabiduria'", "<extra>") if f not in senalado]
+    check(not faltan, f"revisar señala cada fuga del volcado crudo (faltan {faltan})")
+    check(TX.permitido("Audio suggéré.", "instagram") and not TX.permitido("Audio suggéré. Juan Pérez", "instagram")
+          and TX.permitido("#sabiduria", "instagram") and not TX.permitido("#sabiduria", "instagram", "hint")
+          and not TX.permitido("#juanperez612345678", "instagram") and not TX.permitido("#612", "instagram")
+          and TX.permitido("12 h", "instagram") and not TX.permitido("1234 h", "instagram")
+          and not TX.permitido("612345678 s", "instagram"),
+          "permitido: audio solo literal, hashtags solo en text y sin cifras largas, edades de 1 a 3 cifras")
+    check(TX.es_texto_borrado("Supprimer la publication ?") and TX.es_texto_borrado("\u200bELIMINAR")
+          and TX.es_texto_borrado("delete_button") and not TX.es_texto_borrado("Recommencer")
+          and not TX.es_texto_borrado("Removed") and not TX.es_texto_borrado("Supprimerx"),
+          "es_texto_borrado: verbo seguido de fin o separador, normalizado")
+    check(TX.es_texto_envio("share_footer_button")
+          and not TX.es_texto_envio("com.instagram.android:id/share_footer_button_container")
+          and not TX.es_texto_envio("com.instagram.android:id/post_capture_container"),
+          "ENVIO_IDS compara el sufijo exacto del resource-id, sin prefijos")
+
 
 SECCIONES = [
     seccion_portapapeles,

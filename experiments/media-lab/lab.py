@@ -892,8 +892,11 @@ def cmd_sonda(a) -> int:
     if a.accion == "tocar":
         _exigir(len(criterios) == 1, "tocar exige uno de --texto, --desc o --resource-id")
         valor = next(iter(criterios.values()))
-        _exigir(not textos.es_texto_envio(valor) and not textos.es_no_tocar(valor),
+        formas = (valor, valor.rsplit("/", 1)[-1])  # el valor y, si es un resource-id, su sufijo
+        _exigir(not any(textos.es_texto_envio(v) or textos.es_no_tocar(v) for v in formas),
                 f"la sonda no pulsa controles de envío ni prohibidos: {valor!r}")
+        _exigir(not any(textos.es_texto_borrado(v) for v in formas),
+                f"la sonda no pulsa controles de borrado: {valor!r}")
     else:
         _exigir(not criterios, f"{a.accion} no admite --texto, --desc ni --resource-id")
     paquete = textos.PAQUETES[a.app]
@@ -915,8 +918,20 @@ def cmd_sonda(a) -> int:
             return volcar(a.nombre)
         if a.accion == "atras":
             return {"captura": str(pasos.atras(paquete, ev, a.nombre))}
-        xml = pasos.volcado_fresco()
+        def clave(xml: str) -> tuple:
+            n = pantalla.nodo_sonda(xml, paquete, **criterios)
+            return n["bounds"], n["texto"], n["desc"], n["resource_id"]
+
+        # Los volcados de uiautomator van con retraso: el nodo tiene que ser el mismo en VOLCADOS_LIMPIOS volcados
+        # frescos seguidos, y se toca sobre el último («Siguiente» y «Publicar» salen en el mismo sitio).
+        xml, _ = pasos.esperar_estable(clave, descripcion="el mismo nodo de la sonda")
         n = pantalla.nodo_sonda(xml, paquete, **criterios)
+        if telefono.tapado(xml, n):
+            raise pantalla.PantallaInesperada(f"algo tapa el nodo de la sonda en {n['bounds']}: no se toca")
+        emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(paquete), [n["bounds"]])
+        if emergente is not None:
+            raise pantalla.PantallaInesperada(
+                f"una ventana emergente se solapa con el nodo de la sonda ({pantalla.describe_emergente(emergente)}): no se toca")
         pasos.tocar(n, xml)
         reloj.dormir(2)
         return {"tocado": {k: n[k] for k in ("texto", "desc", "resource_id", "bounds")}, **volcar(a.nombre)}
@@ -925,16 +940,33 @@ def cmd_sonda(a) -> int:
 
 
 def cmd_fixture_podar(a) -> int:
+    import xml.etree.ElementTree as ET
     from labkit import fixtures
     origen = _relativa_sin_salidas(a.desde, "experiments/media-lab/evidence/android/", "--desde")
     _exigir(bool(_NOMBRE.fullmatch(a.pantalla)) and ".." not in a.pantalla,
             f"--pantalla solo admite letras, dígitos, punto, guion y guion bajo: {a.pantalla!r}")
-    podado = fixtures.podar(origen.read_text(encoding="utf-8"), a.app)
+    base = ROOT / "tests" / "fixtures" / "telefono"
+    destino = base / a.app / f"{a.pantalla}.xml"
+
+    def exigir_destino() -> None:
+        _exigir(not destino.is_symlink(), f"el destino es un enlace simbólico: {destino.relative_to(ROOT)}")
+        _exigir(base.resolve().is_relative_to(ROOT.resolve())
+                and destino.parent.resolve().is_relative_to(base.resolve()),
+                f"el destino sale de tests/fixtures/telefono/: {destino.relative_to(ROOT)}")
+
+    exigir_destino()
+    try:
+        podado = fixtures.podar(origen.read_text(encoding="utf-8"), a.app)
+    except ET.ParseError as e:
+        return _rechazo("VolcadoIlegible", [f"--desde no es un volcado XML legible: {e}"])
     problemas = fixtures.revisar(podado, a.app)
     if problemas:
         return _rechazo("FixtureNoPodado", problemas)
-    destino = ROOT / "tests" / "fixtures" / "telefono" / a.app / f"{a.pantalla}.xml"
+    motivo = fixtures.vacio(podado, a.app)
+    if motivo:
+        return _rechazo("FixtureVacio", [motivo])
     destino.parent.mkdir(parents=True, exist_ok=True)
+    exigir_destino()
     destino.write_text(podado, encoding="utf-8")
     emitir({"fixture": destino.relative_to(ROOT).as_posix()})
     return 0
