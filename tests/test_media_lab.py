@@ -5227,13 +5227,63 @@ def seccion_recuento_refrescado() -> None:
     check(P.motivo_tapado(p3718, 280, 730, PAQUETE_IG) is None
           and "com.android.systemui" in (P.motivo_tapado(perfil(3718, notificacion), 280, 730, PAQUETE_IG) or ""),
           "motivo_tapado: nada encima en el perfil sintético; una notificación de systemui posterior lo tapa")
-    sin_refresco("tapado: una notificación de systemui encima del inicio del gesto",
-                 TelefonoSimulado([arranque, xml_inicio(), perfil(3718, notificacion), menu_crear, SELECTOR_IG],
-                                  tras_deslizar=[p3720]), "com.android.systemui")
+    def bloqueado_en_abrir(label: str, guion: list, texto_motivo: str, **kw) -> None:
+        sim = TelefonoSimulado(guion, tras_deslizar=[p3720], **kw)
+        with entorno_lab_fase2() as (lab, raiz):
+            res, err = con_telefono_simulado(sim, lambda: lab("ig", "abrir", "--run", "RUN-1", "--subido-en",
+                                                              subida.isoformat()))
+        error = str(campo(res[1], "error")) if res else ""
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "PantallaInesperada" and texto_motivo in error
+              and "Créer" in error and centro_crear not in sim.toques and sim.deslizamientos == [],
+              f"{label}: abrir sale con 4 sin deslizar ni tocar «Créer» ({res and res[:2]}, {sim.toques})")
+
+    # Sintéticos: solo paquete, clase y bounds de lo que tapa (sin textos de volcados reales).
+    dialogo_permisos = nodo_xml("[60,600][1020,1200]", texto="Permiso", paquete="com.google.android.permissioncontroller",
+                                clase="android.widget.FrameLayout", extra='clickable="true"')
+    bloqueado_en_abrir("tapado: una notificación de systemui encima del inicio del gesto",
+                       [arranque, xml_inicio(), perfil(3718, notificacion), menu_crear, SELECTOR_IG], "com.android.systemui")
+    bloqueado_en_abrir("tapado: un diálogo de permissioncontroller encima del inicio del gesto",
+                       [arranque, xml_inicio(), perfil(3718, dialogo_permisos), menu_crear, SELECTOR_IG],
+                       "com.google.android.permissioncontroller")
     emergente = [{"nombre": "PopupWindow:tooltip9", "frame": (0, 600, 1080, 900), "ancho_padre": 1080}]
-    sin_refresco("una ventana emergente se solapa con el inicio del gesto",
-                 TelefonoSimulado([arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], tras_deslizar=[p3720],
-                                  emergentes=(emergente,)), "PopupWindow:tooltip9")
+    bloqueado_en_abrir("una ventana emergente de Instagram se solapa con el inicio del gesto",
+                       [arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], "PopupWindow:tooltip9",
+                       emergentes=(emergente,))
+
+    # Hojas y modales de Instagram: la estructura y los ids de los volcados reales del perfil (ig-profile.xml en reposo,
+    # ig-create.xml con la hoja «Créer» abierta), sin sus textos.
+    def rid(nombre: str) -> str:
+        return f'resource-id="com.instagram.android:id/{nombre}"'
+
+    marco = "android.widget.FrameLayout"
+    reposo = (nodo_xml("[0,0][1080,2205]", clase=marco, extra=rid("bottom_sheet_camera_container"))
+              + nodo_xml("[0,0][1080,2205]", clase=marco, extra=rid("modal_container"))
+              + nodo_xml("[0,0][1080,2205]", clase=marco, extra=rid("overlay_layout_container")))
+    hoja = nodo_xml("[0,92][1080,2205]", clase=marco, extra=rid("bottom_sheet_container"), hijos=(
+        nodo_xml("[0,92][1080,2205]", clase="android.widget.Button", extra=rid("background_dimmer") + ' clickable="true"')
+        + nodo_xml("[0,491][1080,2205]", clase=marco, extra=rid("layout_container_bottom_sheet") + ' clickable="true"',
+                   hijos=nodo_xml("[0,685][1080,837]", clase="android.widget.Button", extra='clickable="true"'))))
+    modal_con_contenido = nodo_xml("[0,0][1080,2205]", clase=marco, extra=rid("modal_container"),
+                                   hijos=nodo_xml("[100,800][980,1200]", clase=marco))
+    check(IG.hoja_abierta(perfil(3718, reposo)) is None,
+          "hoja_abierta: en reposo (modal_container, overlay_layout_container y bottom_sheet_camera_container vacíos) no hay hoja")
+    check("bottom_sheet_container" in (IG.hoja_abierta(perfil(3718, hoja)) or ""),
+          f"hoja_abierta: la hoja «Créer» abierta cuenta ({IG.hoja_abierta(perfil(3718, hoja))})")
+    for nombre in sorted(IG.IDS_HOJA):
+        solo = nodo_xml("[0,491][1080,2205]", clase=marco, extra=rid(nombre))
+        check(nombre in (IG.hoja_abierta(perfil(3718, solo)) or ""), f"hoja_abierta reconoce {nombre}")
+    check("modal_container" in (IG.hoja_abierta(perfil(3718, modal_con_contenido)) or ""),
+          "hoja_abierta: modal_container con algún descendiente cuenta")
+
+    sim = TelefonoSimulado([arranque, xml_inicio(), perfil(3718, hoja), menu_crear, SELECTOR_IG], tras_deslizar=[p3720])
+    sin_refresco("hoja de Instagram abierta sobre el perfil", sim, "hoja de Instagram abierta")
+    check(centro_crear in sim.toques, f"hoja de Instagram abierta: abrir no falla y toca «Créer» después ({sim.toques})")
+    avisos_reposo: list[str] = []
+    sim = TelefonoSimulado([p3719], tras_deslizar=[p3719, p3719, p3719])
+    res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco(perfil(3718, reposo), avisos_reposo))
+    check(err is None and len(sim.deslizamientos) == 1 and res["refrescado"] is True and res["recuento"] == 3719
+          and res["bloqueo_ajeno"] is None and avisos_reposo == [],
+          f"perfil en reposo con los contenedores vacíos: sí desliza y refresca ({err!r}, {res}, {avisos_reposo})")
     sin_refresco("las ventanas emergentes no se pueden leer",
                  TelefonoSimulado([arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], tras_deslizar=[p3720],
                                   emergentes=(T.TelefonoError("dumpsys no responde"),)), "dumpsys no responde")
@@ -5327,6 +5377,17 @@ def seccion_recuento_refrescado() -> None:
           and any("TelefonoNoListo" in a for a in res["avisos"]),
           f"(I1) el teléfono deja de estar listo durante el refresco en compartir: aviso y confirmado_sin_conteo, sin "
           f"excepción ({err!r}, {res and res['estado']}, {res and res['avisos']})")
+
+    for label, encima, paquete in (("una notificación de systemui", notificacion, "com.android.systemui"),
+                                   ("un diálogo de permissioncontroller", dialogo_permisos,
+                                    "com.google.android.permissioncontroller")):
+        sim = TelefonoSimulado(tras_publicar[:-1] + [perfil(3719, encima)], tras_deslizar=[p3720])
+        res, err = con_telefono_simulado(sim, lambda: IG.compartir(PIE_PRUEBA, tema, evid, 3718))
+        check(err is None and res["error"] is None and res["estado"] == "confirmado" and res["publicaciones_despues"] == 3719
+              and sim.deslizamientos == [] and sim.toques.count(centro_partager) == 1
+              and any(paquete in a for a in res["avisos"]),
+              f"compartir con {label} encima del perfil: solo aviso, sin deslizar, con la lectura sin refrescar "
+              f"({err!r}, {res and res['estado']}, {res and res['avisos']})")
 
 
 SECCIONES = [

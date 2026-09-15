@@ -20,7 +20,7 @@ from labkit.instagram_pantallas import *  # noqa: F401,F403 — reexporta `insta
 from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _campos, _coincidencias,
                                         _exigir_compositor_con_pie, _nodo, _suivant, banners_de_volcado,
                                         campo_pie, compositor_listo, emergente_desplegable, gesto_de_refresco,
-                                        hay_desplegable_hashtags, miniatura_coincide, observacion_de_volcado,
+                                        hay_desplegable_hashtags, hoja_abierta, miniatura_coincide, observacion_de_volcado,
                                         perfil_activo, publicaciones_de_perfil, punto_mas, seleccion_unica,
                                         tema_de_chip)
 # ATRAS y ESTABILIZACION_TIMEOUT_S los usan los pasos de aquí (`atras`, docstrings); CTRL_IZQ y TECLA_A ya
@@ -48,37 +48,46 @@ def _esperar(zona: str | None = None, **kw) -> str:
 
 def _recuento_fresco(xml: str, avisos: list[str]) -> dict:
     """Recuento de publicaciones con el perfil de la marca recargado. `xml` es el volcado del perfil ya verificado
-    (@marca con «Modifier le profil»). Solo lanza `TelefonoNoListo`, sin tocar nada más; todo lo demás que no sale
-    bien va a `avisos`.
+    (@marca con «Modifier le profil»). Solo lanza `TelefonoNoListo`, sin tocar nada más, además de errores de
+    programación inesperados, que se propagan (falla cerrado); todo lo demás que no sale bien va a `avisos`.
 
     Desliza UNA vez hacia abajo con `gesto_de_refresco` (pull-to-refresh), espera ESPERA_TRAS_REFRESCO_S y exige el
     mismo recuento en VOLCADOS_RECUENTO volcados frescos seguidos del perfil de la marca (`pasos.esperar_estable`).
-    Si el gesto no se puede situar o su inicio o su final caen sobre un control que no se toca
-    (`pantalla.punto_bloqueado`), algo de otro paquete tapa el inicio (`pantalla.motivo_tapado`), una ventana
-    emergente se solapa con él o el volcado o las emergentes no se pueden leer, no desliza y devuelve la lectura de
-    `xml` sin refrescar (None si ni eso se pudo leer). Si el gesto o la espera
-    fallan (no se estabiliza, `TelefonoError`…), el recuento es None.
+    No desliza, deja aviso y devuelve la lectura de `xml` sin refrescar (None si ni eso se pudo leer) si:
+    - algo de otro paquete tapa el inicio del gesto (`pantalla.motivo_tapado`) o una ventana emergente de Instagram se
+      solapa con él; eso queda además en `bloqueo_ajeno`, para que `abrir` no toque nada más (en `compartir` es solo
+      aviso). Se mira lo primero, antes que los controles, para que un botón de envío dentro de lo ajeno no lo tape;
+    - el inicio o el final caen sobre un control que no se toca (`pantalla.punto_bloqueado`);
+    - hay una hoja o un modal de Instagram abierto (`hoja_abierta`): el gesto la movería a ella y el recuento de
+      debajo no se recargaría (`abrir` sigue: la hoja la gestiona su flujo);
+    - el gesto no se puede situar o el volcado o las emergentes no se pueden leer.
+    Una notificación flotante real no aparece en el volcado ni en `telefono.ventanas_emergentes(PAQUETE)`, así que no se
+    detecta: un deslizamiento que empiece sobre ella solo la desplegaría. Si el gesto o la espera fallan (no se
+    estabiliza, `TelefonoError`…), el recuento es None.
 
-    Devuelve `{"recuento", "refrescado", "deslizado", "xml"}`: `refrescado` solo si se deslizó y el recuento se
-    estabilizó; `deslizado` si se llegó a pedir el gesto (la pantalla puede haber cambiado); `xml`, el último volcado
-    estable del perfil, o None si no lo hay."""
-    fuera = {"recuento": None, "refrescado": False, "deslizado": False, "xml": None}
+    Devuelve `{"recuento", "refrescado", "deslizado", "xml", "bloqueo_ajeno"}`: `refrescado` solo si se deslizó y el
+    recuento se estabilizó; `deslizado` si se llegó a pedir el gesto (la pantalla puede haber cambiado); `xml`, el
+    último volcado estable del perfil, o None si no lo hay; `bloqueo_ajeno`, el motivo si algo ajeno o una emergente
+    tapa el inicio, o None."""
+    fuera = {"recuento": None, "refrescado": False, "deslizado": False, "xml": None, "bloqueo_ajeno": None}
     try:
         fuera["recuento"] = publicaciones_de_perfil(xml)
         x1, y1, x2, y2 = gesto_de_refresco(xml)
-        motivo = None
-        for extremo, (x, y) in (("empieza", (x1, y1)), ("acaba", (x2, y2))):
-            culpable = pantalla.punto_bloqueado(xml, x, y)
-            if culpable is not None:
-                etiqueta = culpable["texto"] or culpable["desc"] or culpable["resource_id"]
-                motivo = f"el gesto {extremo} en ({x}, {y}) sobre {etiqueta!r}, que no se toca"
-                break
-        if motivo is None:
-            motivo = pantalla.motivo_tapado(xml, x1, y1, PAQUETE)
-        if motivo is None:
+        ajeno = pantalla.motivo_tapado(xml, x1, y1, PAQUETE)
+        if ajeno is None:
             emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(PAQUETE), [(x1, y1, x1 + 1, y1 + 1)])
             if emergente is not None:
-                motivo = f"{pantalla.describe_emergente(emergente)} se solapa con el inicio del gesto"
+                ajeno = f"{pantalla.describe_emergente(emergente)} se solapa con el inicio del gesto"
+        motivo = ajeno
+        if motivo is None:
+            for extremo, (x, y) in (("empieza", (x1, y1)), ("acaba", (x2, y2))):
+                culpable = pantalla.punto_bloqueado(xml, x, y)
+                if culpable is not None:
+                    etiqueta = culpable["texto"] or culpable["desc"] or culpable["resource_id"]
+                    motivo = f"el gesto {extremo} en ({x}, {y}) sobre {etiqueta!r}, que no se toca"
+                    break
+        if motivo is None:
+            motivo = hoja_abierta(xml)
     except pasos.TelefonoNoListo:
         raise
     except (PantallaInesperada, telefono.TelefonoError) as e:
@@ -86,7 +95,7 @@ def _recuento_fresco(xml: str, avisos: list[str]) -> dict:
         return fuera
     if motivo is not None:
         avisos.append(f"no se refrescó el perfil: {motivo}: recuento sin refrescar")
-        return fuera
+        return {**fuera, "bloqueo_ajeno": ajeno}
 
     def lectura(x: str) -> int | None:
         if perfil_activo(x) != MARCA or not _coincidencias(x, contiene="Modifier le profil"):
@@ -161,6 +170,8 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
             raise PantallaInesperada(f"el perfil activo es {perfil!r}, no @{MARCA}")
         avisos: list[str] = []
         fresco = _recuento_fresco(xml, avisos)
+        if fresco["bloqueo_ajeno"] is not None:
+            raise PantallaInesperada(f"hay algo encima del perfil ({fresco['bloqueo_ajeno']}): no se toca «Créer»")
         publicaciones_antes = fresco["recuento"]
         if fresco["xml"] is not None:
             xml = fresco["xml"]  # ya es el perfil de la marca, leído tras el refresco

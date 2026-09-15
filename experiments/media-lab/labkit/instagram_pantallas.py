@@ -21,7 +21,7 @@ from labkit.pantalla import CLASES_CAMPO, PantallaInesperada
 __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
     "LARGO_AVISO_CORTO", "PantallaInesperada", "banners_de_volcado",
-    "perfil_activo", "publicaciones_de_perfil", "DESLIZAR_REFRESCO_PX", "DESLIZAR_MIN_PX", "gesto_de_refresco", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
+    "perfil_activo", "publicaciones_de_perfil", "DESLIZAR_REFRESCO_PX", "DESLIZAR_MIN_PX", "IDS_HOJA", "IDS_CONTENEDOR_MODAL", "gesto_de_refresco", "hoja_abierta", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
     "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "emergente_desplegable", "parece_desplegable",
     "describe_emergente", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
     "compositor_listo", "observacion_de_volcado", "evaluar_envio",
@@ -45,6 +45,9 @@ LARGO_FALLO_TEXTO_COPIADO = 100
 # Recorrido del «deslizar hacia abajo» que fuerza la recarga del perfil (pull-to-refresh).
 DESLIZAR_REFRESCO_PX = 600
 DESLIZAR_MIN_PX = 300  # tras recortar al alto del volcado, un gesto más corto no recarga: no se desliza
+# Hojas y modales de Instagram (ver `hoja_abierta`): ids medidos en volcados reales del perfil, 2026-09-15.
+IDS_HOJA = frozenset({"background_dimmer", "layout_container_bottom_sheet", "bottom_sheet_container"})
+IDS_CONTENEDOR_MODAL = frozenset({"modal_container", "overlay_layout_container"})
 _MESES = {"janvier": 1, "fevrier": 2, "février": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
           "juillet": 7, "aout": 8, "août": 8, "septembre": 9, "octobre": 10, "novembre": 11,
           "decembre": 12, "décembre": 12}
@@ -101,6 +104,25 @@ def gesto_de_refresco(xml: str) -> tuple[int, int, int, int]:
         raise PantallaInesperada(f"no hay sitio para deslizar el perfil hacia abajo desde y={y1}: {y2 - y1} px, "
                                  f"menos de {DESLIZAR_MIN_PX} (alto {alto})")
     return x, y1, x, y2
+
+
+def hoja_abierta(xml: str) -> str | None:
+    """Motivo si el volcado muestra una hoja o un modal de Instagram abierto encima de la pantalla, o None. Cuenta un
+    nodo de Instagram cuyo resource-id (tras la última «/») es uno de IDS_HOJA, o uno de IDS_CONTENEDOR_MODAL con algún
+    descendiente. Medido en volcados reales del perfil: con la hoja «Créer» abierta aparecen `bottom_sheet_container`,
+    `background_dimmer` y `layout_container_bottom_sheet` (63 descendientes); en reposo `modal_container` y
+    `overlay_layout_container` están vacíos y no hay ninguno de los tres (`bottom_sheet_camera_container`, vacío, no
+    cuenta)."""
+    lista = telefono.nodos(xml)
+    for i, n in enumerate(lista):
+        if n["package"] != PAQUETE:
+            continue
+        rid = n["resource_id"].rsplit("/", 1)[-1]
+        if rid in IDS_HOJA:
+            return f"hoja de Instagram abierta ({rid} en {n['bounds']})"
+        if rid in IDS_CONTENEDOR_MODAL and i + 1 < len(lista) and lista[i + 1]["profundidad"] > n["profundidad"]:
+            return f"modal de Instagram abierto ({rid} con contenido, en {n['bounds']})"
+    return None
 
 
 def fecha_miniatura(desc: str) -> datetime | None:
