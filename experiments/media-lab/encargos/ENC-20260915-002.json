@@ -29,11 +29,27 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PLACE-003",
   "max_intentos": 2,
-  "estado": "pedido",
+  "estado": "generado",
   "lock_owner": null,
   "lock_expira": null,
-  "imagenes": [],
-  "intentos": [],
+  "imagenes": [
+    {
+      "ruta": "experiments/media-lab/assets/LAB-PLACE-003/ENC-20260915-002-v1.png",
+      "sha256": "2a7bc5efc1b2419423a2b11744e971f669900b1fc5b224581f37c6fe783c5c97",
+      "ancho": 1080,
+      "alto": 1920,
+      "origen": "codex-heartbeat",
+      "generado_en": "2026-09-15T10:13:13+00:00"
+    }
+  ],
+  "intentos": [
+    {
+      "numero": 1,
+      "resultado": "generado",
+      "origen": "codex-heartbeat",
+      "en": "2026-09-15T10:13:13+00:00"
+    }
+  ],
   "revision": null,
   "runs": [],
   "no_lanzados": 0
