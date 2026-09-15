@@ -22,11 +22,11 @@ from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _cam
                                         campo_pie, compositor_listo, emergente_desplegable, hay_desplegable_hashtags,
                                         miniatura_coincide, observacion_de_volcado, perfil_activo,
                                         publicaciones_de_perfil, punto_mas, seleccion_unica, tema_de_chip)
-from labkit.pasos import (ATRAS, CAPTURA_ERROR_S, CTRL_IZQ, ESPERA_ENTRE_VOLCADOS_S, ESPERA_S,  # noqa: F401
-                          ESTABILIZACION_TIMEOUT_S, OBSERVACION_S, TECLA_A, BorradorPendiente, TelefonoNoListo)
-
-VOLCADOS_LIMPIOS_TRAS_PEGAR = pasos.VOLCADOS_LIMPIOS
-INTENTOS_ATRAS_PIE = pasos.INTENTOS_ATRAS
+# ATRAS y ESTABILIZACION_TIMEOUT_S los usan los pasos de aquí (`atras`, docstrings); CTRL_IZQ y TECLA_A ya
+# no (van dentro de `pasos.escribir_texto`): solo lectura, se quedan reexportados porque las pruebas de la
+# fase 1 los leen como IG.CTRL_IZQ/IG.TECLA_A.
+from labkit.pasos import (ATRAS, CTRL_IZQ, ESTABILIZACION_TIMEOUT_S, TECLA_A,  # noqa: F401
+                          BorradorPendiente, TelefonoNoListo)
 
 
 def _esperar(zona: str | None = None, **kw) -> str:
@@ -65,7 +65,8 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     if sel is None:
         raise PantallaInesperada("no hay exactamente una miniatura seleccionada")
     if not miniatura_coincide(sel["desc"], subido_en):
-        raise PantallaInesperada(f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
+        raise PantallaInesperada(
+            f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
     return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
             "publicaciones_antes": publicaciones_antes}
 
@@ -161,10 +162,10 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
         except (PantallaInesperada, telefono.TelefonoError) as e:
             avisos.append(f"no se pudo leer el perfil tras compartir: {e}")
         if estado == "confirmado":
-            despues_ = resultado["publicaciones_despues"]
-            if publicaciones_antes is None or despues_ is None:
+            publicaciones_despues = resultado["publicaciones_despues"]
+            if publicaciones_antes is None or publicaciones_despues is None:
                 estado = "confirmado_sin_conteo"
-            elif despues_ != publicaciones_antes + 1:
+            elif publicaciones_despues != publicaciones_antes + 1:
                 estado = "conteo_no_cuadra"
             elif produccion_cercana:
                 estado = "confirmado_sin_conteo"
@@ -173,7 +174,7 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
 
     return pasos.enviar(
         paquete=PAQUETE, nombre_app="Instagram", etiqueta="Partager", evidencia=evidencia,
-        nombres=("ig-05a-antes.png", "ig-05-publicado.png", "ig-05-error.png"),
+        captura_antes="ig-05a-antes.png", captura_final="ig-05-publicado.png", captura_error="ig-05-error.png",
         listo=lambda x, emergentes: compositor_listo(x, pie, tema, emergentes),
         botones=lambda x: telefono.buscar_todos(x, texto="Partager", paquete=PAQUETE),
         observador_nuevo=observador_nuevo, despues=despues,

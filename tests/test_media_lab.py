@@ -3602,13 +3602,18 @@ def seccion_pantalla_comun() -> None:
 
 def seccion_pasos_comunes() -> None:
     print("\n13. Fase 2: pasos comunes del teléfono")
-    from labkit import instagram_feed as IG, pasos, reloj, telefono as T
+    from labkit import instagram_feed as IG, pantalla as P, pasos, reloj, telefono as T
 
     check(IG.BorradorPendiente is pasos.BorradorPendiente and IG.TelefonoNoListo is pasos.TelefonoNoListo,
           "instagram_feed reexporta las excepciones de pasos")
-    check(IG.ESTABILIZACION_TIMEOUT_S == pasos.ESTABILIZACION_TIMEOUT_S and IG.ATRAS == pasos.ATRAS,
-          "instagram_feed reexporta las constantes de pasos")
+    check(IG.ATRAS == pasos.ATRAS and IG.CTRL_IZQ == pasos.CTRL_IZQ and IG.TECLA_A == pasos.TECLA_A
+          and IG.ESTABILIZACION_TIMEOUT_S == pasos.ESTABILIZACION_TIMEOUT_S,
+          "(M-1) instagram_feed reexporta las constantes de pasos que usa o que leen las pruebas de la fase 1")
+    check(not hasattr(IG, "VOLCADOS_LIMPIOS_TRAS_PEGAR") and not hasattr(IG, "INTENTOS_ATRAS_PIE"),
+          "(M-1) instagram_feed ya no expone los alias muertos de volcados limpios/intentos de «atrás»")
     evid = pathlib.Path("evidencia-simulada")
+    PAQ_FB = "com.facebook.katana"
+    TEXTO_FB = "Hola desde Facebook"
     lectura_profil = lambda x: (T.buscar(x, texto="Profil") or {}).get("bounds")  # noqa: E731
     uno = jerarquia(nodo_xml("[864,2200][1080,2340]", desc="Profil"))
     otro = jerarquia(nodo_xml("[0,2200][216,2340]", desc="Profil"))
@@ -3623,33 +3628,61 @@ def seccion_pasos_comunes() -> None:
     check(isinstance(err, pasos.PantallaInesperada) and str(pasos.ESTABILIZACION_TIMEOUT_S) in str(err),
           f"una lectura que nunca se estabiliza agota el plazo ({err!r})")
 
+    sim = TelefonoSimulado([uno, otro, otro])
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_estable(lectura_profil, n=2))
+    check(err is None and res[1] == (0, 2200, 216, 2340) and sim.volcados_leidos == 3,
+          f"(M-1) esperar_estable con n=2 se conforma con 2 volcados seguidos, no 3 ({err!r}, {sim.volcados_leidos})")
+
     th = jerarquia(nodo_xml("[0,0][1080,200]", texto="Fils", paquete="com.instagram.barcelona"))
     sim = TelefonoSimulado([th])
     res, err = con_telefono_simulado(sim, lambda: pasos.atras("com.instagram.barcelona", evid, "salida-1"))
     check(err is None and sim.teclas == [pasos.ATRAS] and sim.capturas == ["salida-1.png"],
           f"atras pulsa con la app pedida delante ({err!r}, {sim.teclas})")
     sim = TelefonoSimulado([th])
-    res, err = con_telefono_simulado(sim, lambda: pasos.atras("com.facebook.katana", evid, "salida-1"))
+    res, err = con_telefono_simulado(sim, lambda: pasos.atras(PAQ_FB, evid, "salida-1"))
     check(isinstance(err, pasos.PantallaInesperada) and sim.teclas == [], "atras no pulsa con otra app delante")
 
     boton = {"centro": (540, 2140), "bounds": (45, 2081, 1035, 2205)}
-    aviso = jerarquia(nodo_xml("[0,250][1080,330]", texto="ENVIANDO", paquete="com.facebook.katana"))
-    limpio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Inicio", paquete="com.facebook.katana"))
+    aviso = jerarquia(nodo_xml("[0,250][1080,330]", texto="ENVIANDO", paquete=PAQ_FB))
+    limpio = jerarquia(nodo_xml("[0,250][1080,330]", texto="Inicio", paquete=PAQ_FB))
 
     def observador(xml):
-        return {"valido": True, "compositor": False, "banner": T.buscar(xml, texto="ENVIANDO") is not None, "fallo": False}
+        return {"valido": True, "compositor": False, "banner": T.buscar(xml, texto="ENVIANDO") is not None,
+                "fallo": False}
 
     sim = TelefonoSimulado([aviso, limpio, limpio])
     res, err = con_telefono_simulado(sim, lambda: pasos.observar_envio(boton, observador, 90))
-    check(err is None and res["estado"] == "confirmado" and sim.toques == [boton["centro"]]
-          and res["submitted_at"] and res["processing_completed_at"],
-          f"observar_envio pulsa una vez y confirma con aviso y dos volcados limpios ({err!r}, {res})")
+    check(err is None and res == ("confirmado", None) and sim.toques == [boton["centro"]],
+          f"(M-6) observar_envio devuelve (estado, culpable) en vez de escribirlo en un dict compartido "
+          f"({err!r}, {res})")
+
+    def observador_fallo(xml):
+        return {"valido": True, "compositor": False, "banner": False, "fallo": True,
+                "fallo_texto": "Réessayer", "fallo_bounds": (0, 0, 10, 10)}
+
+    sim = TelefonoSimulado([limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.observar_envio(boton, observador_fallo, 90))
+    check(err is None and res[0] == "fallido" and res[1] is not None and res[1]["fallo_texto"] == "Réessayer",
+          f"observar_envio también devuelve la observación culpable cuando falla ({err!r}, {res})")
+
+    resultado_compartido: dict = {}
+    sim = TelefonoSimulado([aviso, limpio, limpio])
+    con_telefono_simulado(sim, lambda: pasos.observar_envio(boton, observador, 90, resultado_compartido))
+    check(bool(resultado_compartido.get("submitted_at")) and bool(resultado_compartido.get("processing_completed_at"))
+          and "estado" not in resultado_compartido and "fallo" not in resultado_compartido,
+          f"observar_envio solo añade los dos timestamps al `resultado` compartido, no estado ni fallo "
+          f"({resultado_compartido})")
+
+    sim = TelefonoSimulado([aviso, limpio, limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.observar_envio(boton, observador, 0))
+    check(err is None and res == ("timeout", None),
+          f"(M-1) plazo=0 no da tiempo a observar nada: timeout, no confirmado ({err!r}, {res})")
 
     sim = TelefonoSimulado([limpio], falla_tocar=T.TelefonoError("device offline"))
     res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
-        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
-        nombres=("fb-antes.png", "fb-final.png", "fb-error.png"), listo=lambda x, e: [],
-        botones=lambda x: [dict(boton, texto="Publicar", desc="", clickable=True)],
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="fb-antes.png", captura_final="fb-final.png", captura_error="fb-error.png",
+        listo=lambda x, e: [], botones=lambda x: [dict(boton, texto="Publicar", desc="", clickable=True)],
         observador_nuevo=lambda b: observador, despues=lambda r, e: e))
     check(err is None and res["estado"] == "error_tras_pulsar" and len(sim.toques) == 1
           and sim.capturas == ["fb-antes.png", "fb-error.png"] and sim.plazos_captura[-1] == pasos.CAPTURA_ERROR_S,
@@ -3657,16 +3690,18 @@ def seccion_pasos_comunes() -> None:
 
     sim = TelefonoSimulado([limpio], listo=False)
     res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
-        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
-        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: [], botones=lambda x: [],
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=lambda x: [],
         observador_nuevo=lambda b: observador, despues=lambda r, e: e))
     check(isinstance(err, pasos.TelefonoNoListo) and sim.toques == [] and sim.capturas == [],
           "enviar con el teléfono no listo no captura ni toca")
 
     sim = TelefonoSimulado([limpio], emergentes=(T.TelefonoError("dumpsys no responde"),))
     res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
-        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
-        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: [], botones=lambda x: [],
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=lambda x: [],
         observador_nuevo=lambda b: observador, despues=lambda r, e: e))
     check(isinstance(err, T.TelefonoError) and sim.toques == [],
           "enviar: si ventanas_emergentes falla, falla cerrado sin tocar")
@@ -3674,11 +3709,187 @@ def seccion_pasos_comunes() -> None:
     emergente_fb = [{"nombre": "PopupWindow:sug", "frame": (0, 900, 1080, 1500), "ancho_padre": 1080}]
     sim = TelefonoSimulado([limpio], emergentes=(emergente_fb,))
     res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
-        paquete="com.facebook.katana", nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
-        nombres=("a.png", "b.png", "c.png"), listo=lambda x, e: vistas.append(e) or (["emergente"] if e else []),
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: vistas.append(e) or (["emergente"] if e else []),
         botones=lambda x: [], observador_nuevo=lambda b: observador, despues=lambda r, e: e))
     check(isinstance(err, pasos.PantallaInesperada) and vistas == [emergente_fb] and sim.toques == [],
           "enviar pasa a listo las ventanas emergentes del paquete y no pulsa si hay problemas")
+
+    # --- M-5: `extra` no puede redefinir claves propias del resultado --------------------------
+    sim = TelefonoSimulado([limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=lambda x: [], observador_nuevo=lambda b: observador,
+        despues=lambda r, e: e, extra={"estado": "ya puesto"}))
+    check(isinstance(err, ValueError) and "estado" in str(err) and sim.toques == [],
+          f"(M-5) enviar rechaza un extra que redefine claves propias, antes de tocar nada ({err!r})")
+
+    # --- I-1 y M-2/M-3: la puerta de toque único de `enviar`, con otro paquete cualquiera -------
+    def xml_fb(*, mencion=False, boton_bounds="[800,2100][1000,2200]"):
+        hijos = [nodo_xml("[45,300][1035,700]", texto=TEXTO_FB, clase="android.widget.EditText", paquete=PAQ_FB),
+                 nodo_xml(boton_bounds, texto="Publicar", paquete=PAQ_FB, extra='clickable="true"')]
+        if mencion:
+            hijos.append(nodo_xml("[0,900][1080,1000]", texto="@alguien", paquete=PAQ_FB))
+        return jerarquia(*hijos)
+
+    def xml_fb_dos_botones():
+        return jerarquia(
+            nodo_xml("[45,300][1035,700]", texto=TEXTO_FB, clase="android.widget.EditText", paquete=PAQ_FB),
+            nodo_xml("[100,2100][400,2200]", texto="Publicar", paquete=PAQ_FB, extra='clickable="true"'),
+            nodo_xml("[600,2100][900,2200]", texto="Publicar", paquete=PAQ_FB, extra='clickable="true"'))
+
+    botones_fb = lambda x: T.buscar_todos(x, texto="Publicar", paquete=PAQ_FB)  # noqa: E731
+
+    def _listo_2a_falla():
+        llamadas: list = []
+
+        def listo(xml, emergentes):
+            llamadas.append(xml)
+            return [] if len(llamadas) == 1 else ["problema en el 2.º volcado"]
+        return listo
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb()])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=_listo_2a_falla(), botones=botones_fb, observador_nuevo=lambda b: observador,
+        despues=lambda r, e: e))
+    check(isinstance(err, pasos.PantallaInesperada) and "2.º volcado" in str(err) and sim.toques == [],
+          f"(I-1a) el 2.º volcado con problemas para sin tocar ({err!r})")
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb(boton_bounds="[800,2050][1000,2150]")])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=lambda b: observador,
+        despues=lambda r, e: e))
+    check(isinstance(err, pasos.PantallaInesperada) and "se ha movido entre volcados" in str(err) and sim.toques == [],
+          f"(I-1b) «Publicar» movido entre volcados para sin tocar ({err!r})")
+
+    sim = TelefonoSimulado([xml_fb_dos_botones(), xml_fb_dos_botones()])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=lambda b: observador,
+        despues=lambda r, e: e))
+    check(isinstance(err, pasos.PantallaInesperada) and "ambiguo" in str(err) and sim.toques == [],
+          f"(I-1c) dos «Publicar» sin relación entre sí es ambiguo y no toca ({err!r})")
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb(), aviso, limpio, limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="fb-antes.png", captura_final="fb-final.png", captura_error="fb-error.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=lambda b: observador,
+        despues=lambda r, e: f"hecho:{e}", extra={"canal": "feed"}))
+    check(err is None and len(sim.toques) == 1 and res["estado"] == "hecho:confirmado"
+          and res["captura"] == "evidencia-simulada/fb-final.png" and res["canal"] == "feed",
+          f"(I-1d) camino feliz genérico: un toque, `despues` decide el estado final y `extra` llega "
+          f"al resultado ({err!r}, {res})")
+
+    def despues_lanza(resultado, estado):
+        raise RuntimeError("fallo al leer tras compartir")
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb(), aviso, limpio, limpio])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="fb-antes.png", captura_final="fb-final.png", captura_error="fb-error.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=lambda b: observador, despues=despues_lanza))
+    check(err is None and res["estado"] == "error_tras_pulsar" and len(sim.toques) == 1
+          and res["captura_error"] == "evidencia-simulada/fb-error.png" and res["captura"] is None,
+          f"(I-1e) `despues` lanza tras el toque: error_tras_pulsar con la captura de error ({err!r}, {res})")
+
+    def observador_nuevo_falla(boton):
+        raise RuntimeError("no se pudo preparar el observador")
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb()])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=observador_nuevo_falla,
+        despues=lambda r, e: e))
+    check(isinstance(err, RuntimeError) and not isinstance(err, pasos.PantallaInesperada) and sim.toques == [],
+          f"(M-2) observador_nuevo que falla antes del toque se propaga y no cuenta como error_tras_pulsar "
+          f"({err!r})")
+
+    def observador_nuevo_desconecta(boton):
+        sim.listo = False
+        return observador
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb()])
+    res, err = con_telefono_simulado(sim, lambda: pasos.enviar(
+        paquete=PAQ_FB, nombre_app="Facebook", etiqueta="Publicar", evidencia=evid,
+        captura_antes="a.png", captura_final="b.png", captura_error="c.png",
+        listo=lambda x, e: [], botones=botones_fb, observador_nuevo=observador_nuevo_desconecta,
+        despues=lambda r, e: e))
+    check(isinstance(err, pasos.TelefonoNoListo) and sim.toques == [],
+          f"(M-3) el teléfono deja de estar listo justo antes de tocar: TelefonoNoListo sin tocar ({err!r})")
+
+    # --- I-2 y M-4/M-7: `escribir_texto` fuera de Instagram (otro campo, otro desplegable) ------
+    def campo_fb(xml):
+        return T.buscar(xml, clase="android.widget.EditText", paquete=PAQ_FB)
+
+    def exigir_fb(xml):
+        if T.buscar(xml, texto="Publicar", paquete=PAQ_FB) is None:
+            raise pasos.PantallaInesperada("falta «Publicar»")
+
+    def desplegable_fb(xml):
+        return P.hay_desplegable(xml, PAQ_FB, prefijo="@")
+
+    def emergente_fb(xml, emergentes):
+        return P.emergente_solapada(emergentes, [n["bounds"] for n in T.buscar_todos(xml, texto="Publicar",
+                                                                                      paquete=PAQ_FB)])
+
+    sim = TelefonoSimulado([xml_fb(), xml_fb(mencion=True), xml_fb(mencion=True), xml_fb(), xml_fb()],
+                           teclado=(False,), emergentes=((),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb))
+    check(err is None and sim.teclas == [pasos.ATRAS],
+          f"(I-2a) un desplegable por nodos (no de Instagram) cuesta un «atrás» y reinicia los limpios "
+          f"({err!r}, {sim.teclas})")
+
+    estrecha = {"nombre": "PopupWindow:x", "frame": (400, 2100, 500, 2180), "ancho_padre": 1080}
+    sim = TelefonoSimulado([xml_fb(), xml_fb()], teclado=(False,), emergentes=((estrecha,),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb))
+    check(isinstance(err, pasos.PantallaInesperada) and "no parece un desplegable" in str(err) and sim.teclas == [],
+          f"(I-2b) una emergente estrecha para con PantallaInesperada sin pulsar «atrás» ({err!r})")
+
+    xml_otro_paquete = jerarquia(
+        nodo_xml("[45,300][1035,700]", texto="", clase="android.widget.EditText", paquete=PAQ_FB),
+        nodo_xml("[45,300][1035,700]", texto=TEXTO_FB, clase="android.widget.EditText", paquete="com.other.app"))
+    sim = TelefonoSimulado([xml_otro_paquete], teclado=(False,), emergentes=((),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb))
+    check(isinstance(err, pasos.PantallaInesperada) and PAQ_FB in str(err) and "no coincide" in str(err),
+          f"(I-2c) el texto solo bajo otro paquete falla la relectura ({err!r})")
+
+    xml_sin_campo = jerarquia(nodo_xml("[0,0][10,10]", texto="nada", paquete=PAQ_FB))
+    sim = TelefonoSimulado([xml_sin_campo])
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb))
+    check(isinstance(err, pasos.PantallaInesperada) and f"el campo de texto de {PAQ_FB}" in str(err),
+          f"(M-4) el mensaje de campo ausente nombra el paquete ({err!r})")
+
+    sim = TelefonoSimulado([xml_fb()], teclado=(False,), emergentes=((),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb, volcados_limpios=1))
+    check(err is None and sim.volcados_leidos == 2,
+          f"(M-1) volcados_limpios=1 se conforma con un único volcado limpio ({err!r}, {sim.volcados_leidos})")
+
+    sim = TelefonoSimulado([xml_fb()], teclado=(False,), emergentes=((),))
+    res, err = con_telefono_simulado(sim, lambda: pasos.escribir_texto(
+        TEXTO_FB, PAQ_FB, campo=campo_fb, exigir=exigir_fb, desplegable_nodos=desplegable_fb,
+        emergente=emergente_fb))
+    check(err is None and sim.volcados_leidos == 4,
+          f"(M-1) por defecto (volcados_limpios=3) hacen falta más volcados limpios seguidos "
+          f"({err!r}, {sim.volcados_leidos})")
 
     check(reloj.dormir.__name__ == "dormir" and reloj.monotonic.__name__ == "monotonic",
           "con_telefono_simulado restaura el reloj")
