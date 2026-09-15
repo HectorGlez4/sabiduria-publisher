@@ -146,7 +146,21 @@
     "post_url": "https://www.facebook.com/874327782058550/posts/1095270896630903",
     "audio_verified": null,
     "master_sha256": "55c939fa434cd096b9a3ae117d6ad8d9a9bc42798c863ad2793a8102ca1c026f",
-    "snapshots": [],
+    "snapshots": [
+      {
+        "instantanea": "manual-chrome",
+        "observed_at": "2026-09-15T17:31:00+00:00",
+        "edad_horas": 17.75,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "metricas": {
+          "facebook": {
+            "visualizaciones": 77,
+            "alcance": 61,
+            "espectadores": 61
+          }
+        }
+      }
+    ],
     "cross_posting": "None from this run. Note: CELL-018 (Instagram phone, same family) was auto-shared to this Page on 2026-09-14T19:38Z."
   },
   "missing_data_reasons": {

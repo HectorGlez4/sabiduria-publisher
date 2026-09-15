@@ -200,6 +200,19 @@
             "post_total_media_view_unique": "sin datos"
           }
         }
+      },
+      {
+        "instantanea": "manual-chrome",
+        "observed_at": "2026-09-15T17:31:00+00:00",
+        "edad_horas": 45.49,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "metricas": {
+          "facebook": {
+            "visualizaciones": 59,
+            "alcance": 52,
+            "espectadores": 52
+          }
+        }
       }
     ]
   },
