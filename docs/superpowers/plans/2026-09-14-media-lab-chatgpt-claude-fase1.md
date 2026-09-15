@@ -2315,7 +2315,7 @@ Tareas 1–14 hechas, con 10b–10f. Sondas en `findings.md`; primera ventana su
 
 ### Task 16: métricas desatendidas (hecha)
 
-- [x] Modo `--metricas` en `verify_api.py` y `media-lab-verify.yml`, búsqueda del id de Graph de publicaciones por teléfono (shortcode) y `lab.py metricas-registrar`; diseño en el scratchpad de la sesión del 2026-09-15 (`metricas-diseno.md`), a volcar aquí al empezar. (hecha en `b10757b`, `a7952a7`; revisión de calidad con cambios en `9ca5c29` y `c8ef51d`: run_group propio por instantánea para no chocar con el manifiesto de publicación, `gh run download -n`, redacción de tokens en verify_api.py, metricas-registrar limitado a la red del run con cotejo de post_id/permalink y escritura solo al final, validación del manifest en el workflow, y menores)
+- [x] Modo `--metricas` en `verify_api.py` y `media-lab-verify.yml`, búsqueda del id de Graph de publicaciones por teléfono (shortcode) y `lab.py metricas-registrar`; diseño en el scratchpad de la sesión del 2026-09-15 (`metricas-diseno.md`), a volcar aquí al empezar. (hecha en `b10757b`, `a7952a7`; revisión de calidad en `9ca5c29`/`c8ef51d` — run_group propio por instantánea, `gh run download -n`, redacción de tokens, metricas-registrar limitado a la red del run con cotejo de post_id/permalink y escritura solo al final, validación del manifest en el workflow; re-revisión en `d04a670`/`2dcbd6d` — redacción también por valor de los secretos del entorno, `run-name` en los dos workflows para identificar el run sin `date`, run_group derivado del propio run_id, y `publication.post_id` obligatorio en `registrar()`)
 
 ## Fase 2 (plan aparte)
 
