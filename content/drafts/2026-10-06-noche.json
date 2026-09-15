@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-06-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el puente Q'eswachaka, que se rehace cada año",
+    "hook": "En los Andes del Perú hay un puente de técnica inca que sigue en pie porque cada año lo tiran y lo vuelven a tejer.",
+    "body": [
+      "El Q'eswachaka cruza un desfiladero del río Apurímac en el distrito de Quehue, en Cusco. Mide unos 28 metros de largo y poco más de uno de ancho, y está hecho de paja. Cada año, las comunidades quechuas de Huinchiri, Chaupibanda, Choccayhua y Ccollana Quehue lo renuevan entero con materiales y técnicas que la UNESCO data en la época incaica. Las familias trenzan sogas de unos setenta metros, que se unen en seis cables gruesos atados a las antiguas bases de piedra. El trabajo dura tres días.",
+      "La prueba de que el puente es la costumbre, y no la paja, llegó con la pandemia. En 2020 el confinamiento impidió la renovación. En marzo de 2021 las sogas cedieron y el puente cayó. Estuvo tres meses fuera de servicio, hasta que cerca de mil campesinos de Quehue lo tejieron de nuevo y quedó listo el 17 de junio.",
+      "La UNESCO inscribió estos saberes en 2013 como patrimonio inmaterial. En 2014 declaró patrimonio mundial el Qhapaq Ñan, la red de caminos andinos a la que pertenecían puentes como este, compartida hoy por seis países. Lo que se protege no es un objeto antiguo, sino un trabajo que hay que repetir."
+    ],
+    "question": "¿Qué de lo que heredamos existe solo mientras lo seguimos haciendo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El puente Q'eswachaka",
+    "subtitle": "Río Apurímac, Cusco: tres días de trabajo cada año",
+    "body": "Cuatro comunidades quechuas lo tejen de nuevo cada año con paja. En 2020 la pandemia impidió renovarlo, y en marzo de 2021 cayó al río."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Qeswachaka",
+      "#Incas",
+      "#Peru"
+    ],
+    "extended": [
+      "#QhapaqNan",
+      "#Cusco",
+      "#Andes",
+      "#PatrimonioInmaterial",
+      "#Quechua",
+      "#Historia",
+      "#Civilizaciones",
+      "#UNESCO"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«El puente colgante de cuerda Q'eswachaka une las dos laderas de un desfiladero del río Apurímac, situado en los Andes meridionales del Perú. Todos los años se renueva utilizando materias primas y técnicas tradicionales que datan de la época incaica.» Lo renuevan las comunidades quechuas de Huinchiri, Chaupibanda, Choccayhua y Ccollana Quehue; la renovación dura tres días; las familias trenzan sogas de unos setenta metros que forman seis cuerdas gruesas atadas a las antiguas bases de piedra. Inscrito en 2013 en la Lista Representativa del Patrimonio Cultural Inmaterial.",
+      "source": "UNESCO, Patrimonio Cultural Inmaterial, «Conocimientos, técnicas y rituales vinculados a la renovación anual del puente Q'eswachaka» (00594)",
+      "url": "https://ich.unesco.org/es/RL/conocimientos-tecnicas-y-rituales-vinculados-a-la-renovacion-anual-del-puente-q-eswachaka-00594"
+    },
+    {
+      "claim": "Cada junio las cuatro comunidades se reúnen para construir el Q'eswachaka con ichu trenzado; la estructura vieja se deja caer antes de tejer la nueva. Según la tradición oral de las comunidades, el puente se construyó en tiempos de los incas.",
+      "source": "Smithsonian Folklife Festival 2015, programa Perú, «Q'eswachaka Bridge»",
+      "url": "https://festival.si.edu/2015/peru/traditional-knowledge/qeswachaka-bridge/smithsonian"
+    },
+    {
+      "claim": "El puente, de 28 metros de largo y poco más de un metro de ancho, colapsó en Quehue porque los confinamientos por la pandemia impidieron la renovación de las sogas, que se hace cada año entre mayo y junio (AFP, 25 de marzo de 2021).",
+      "source": "Prensa Libre (despacho de AFP), «Colapsa el puente Q'eswachaka, que data del imperio inca, por falta de renovación de sogas por pandemia»",
+      "url": "https://www.prensalibre.com/internacional/colapsa-el-puente-qeswachaka-que-data-del-imperio-inca-por-falta-de-renovacion-de-sogas-por-pandemia/"
+    },
+    {
+      "claim": "La pasarela y la barandilla fueron sustituidas en su totalidad por «cerca de mil campesinos del aledaño distrito de Quehue», que «trabajaron incansablemente tres días», y desde el miércoles 17 de junio de 2021 quedó listo para su uso «luego de permanecer tres meses fuera de servicio».",
+      "source": "El Comercio (Perú), «Cusco: Restauraron Q'eswachaka, el último puente colgante inca en Perú que colapsó durante la pandemia del COVID-19»",
+      "url": "https://elcomercio.pe/peru/cusco-restauraron-qeswachaka-el-ultimo-puente-colgante-inca-en-peru-que-colapso-durante-la-pandemia-del-covid-19-nndc-noticia/"
+    },
+    {
+      "claim": "«El Qhapaq Ñan o Sistema Vial Andino fue inscrito en la Lista de Patrimonio Mundial de la UNESCO, en la categoría de Itinerario Cultural, el 21 de junio de 2014», en la 38.ª reunión del Comité, en Doha, con una postulación conjunta de Argentina, Bolivia, Chile, Colombia, Ecuador y Perú.",
+      "source": "Ministerio de Cultura del Perú, Proyecto Qhapaq Ñan, «Declaratoria del Qhapaq Ñan como Patrimonio Mundial»",
+      "url": "https://qhapaqnan.cultura.pe/procesoydeclaratoria/declaratoria"
+    }
+  ],
+  "do_not_use": [
+    "No dar un día exacto para la caída de 2021: El Comercio y Gestión dicen 23 de marzo; el despacho de AFP en Prensa Libre, 24 de marzo. Basta con «marzo de 2021».",
+    "No decir que el puente tiene 500 o 600 años como objeto: se rehace entero cada año. Lo antiguo es la técnica y la tradición; la cifra de 600 años del Smithsonian Folklife es tradición oral de las comunidades, no una datación.",
+    "No dar como cifra cerrada los kilómetros inscritos del Qhapaq Ñan: la UNESCO habla de 616 km y el Ministerio de Cultura del Perú de 780 km; tampoco usar los «más de 30.000 km» de la red sin fuente consultada directamente (la página de la UNESCO devolvió 403 y solo se vio en resultados de búsqueda).",
+    "No llamarlo «el último puente inca» como dato: es la fórmula periodística habitual, pero no aparece en la ficha de la UNESCO.",
+    "No mencionar como hecho consumado la renovación de 2026: en junio de ese año se suspendió por un desacuerdo sobre pago a la comunidad de Huinchiri y se reprogramó para el 2 de julio (Infobae); no se verificó que se realizara.",
+    "No decir que la renovación se hace siempre en junio: el Smithsonian Folklife recoge que hasta hace unas décadas se hacía en enero y se trasladó por el peligro de la temporada de lluvias."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

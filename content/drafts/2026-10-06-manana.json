@@ -1,0 +1,96 @@
+{
+  "id": "2026-10-06-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Rosalind Franklin y la Fotografía 51",
+    "hook": "La imagen que convirtió a Rosalind Franklin en símbolo de un robo no fue, según Crick, la pieza que confirmó la doble hélice.",
+    "body": [
+      "En mayo de 1952, en el King's College de Londres, Rosalind Franklin y su estudiante Raymond Gosling obtuvieron una imagen de difracción de rayos X del ADN. Pasó a la historia como la Fotografía 51. Maurice Wilkins, colega de Franklin, se la mostró a James Watson sin que ella lo supiera ni lo autorizara.",
+      "Durante décadas esa escena resumió su historia: la científica a la que le quitaron la foto y que no entendió sus propios datos. En abril de 2023, los historiadores Matthew Cobb y Nathaniel Comfort publicaron en Nature documentos que cuentan otra cosa. Uno es el borrador de un artículo para la revista Time, escrito por la periodista Joan Bruce con ayuda de Franklin y nunca publicado, que presentaba el hallazgo como obra de dos equipos a la par. Crick sostuvo toda su vida que lo decisivo fue un informe con los datos del grupo de King's, no la foto.",
+      "Franklin murió de cáncer de ovario en 1958, a los 37 años. En 1962, Watson, Crick y Wilkins recibieron el Nobel, que no se concede a título póstumo. Cobb y Comfort concluyen que no fue la víctima de la doble hélice, sino una de las cuatro personas que la resolvieron, en igualdad de condiciones."
+    ],
+    "question": "¿Qué perdemos cuando recordamos a alguien solo por lo que le quitaron?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Rosalind Franklin",
+    "subtitle": "Fotografía 51, King's College de Londres, mayo de 1952",
+    "body": "Un borrador para la revista Time, escrito con su ayuda y nunca publicado, presentaba el descubrimiento del ADN como obra de dos equipos a la par."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#RosalindFranklin",
+      "#ADN",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#DobleHelice",
+      "#Cristalografia",
+      "#Biologia",
+      "#Ciencia",
+      "#SigloXX",
+      "#Londres",
+      "#Fotografia51"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«‘Photograph 51’, an image she took in May 1952, demonstrated the helical structure of DNA» y «The photograph was one of a number of images taken by Rosalind and her research student, Raymond Gosling.»",
+      "source": "King's College London, perfil «Rosalind Franklin»",
+      "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+    },
+    {
+      "claim": "«The photograph was shown to James Watson by Rosalind's colleague Maurice Wilkins, without her agreement or knowledge.»",
+      "source": "King's College London, perfil «Rosalind Franklin»",
+      "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+    },
+    {
+      "claim": "Franklin murió de cáncer de ovario en 1958; Watson, Crick y Wilkins compartieron el Nobel de Fisiología o Medicina en 1962, y «Rosalind could not be awarded the Nobel as the committee does not consider posthumous nominations.»",
+      "source": "King's College London, perfil «Rosalind Franklin»",
+      "url": "https://www.kcl.ac.uk/people/rosalind-franklin"
+    },
+    {
+      "claim": "La imagen fue hecha por Rosalind Franklin y su estudiante Gosling en King's College London en 1952 y se publicó en su artículo de Nature de 1953 «Molecular Configuration in Sodium Thymonucleate», junto al de Watson y Crick.",
+      "source": "Science History Institute, colecciones digitales, «DNA X-ray diffraction image known as Photo 51, Annotated by Raymond Gosling»",
+      "url": "https://digital.sciencehistory.org/works/mjir8wn"
+    },
+    {
+      "claim": "El comentario de Matthew Cobb (Universidad de Manchester) y Nathaniel Comfort (Johns Hopkins) se publicó en Nature el 25 de abril de 2023; hallaron un borrador inédito escrito por la periodista Joan Bruce en consulta con Franklin y destinado a Time, y una carta pasada por alto de una colega de Franklin a Crick.",
+      "source": "Universidad de Manchester, nota de prensa «Rosalind Franklin's contribution to the discovery of DNA structure highlighted»",
+      "url": "https://www.manchester.ac.uk/about/news/rosalind-franklins-contribution-to-the-discovery-of-dna-structure-highlighted/"
+    },
+    {
+      "claim": "El borrador de Time presentaba el trabajo como el de ‘two teams’: Wilkins y Franklin con el análisis de rayos X, Watson y Crick con la teoría. Crick indicó toda su vida que el informe del MRC, y no la Fotografía 51, fue lo realmente significativo para confirmar la estructura. Conclusión de los autores: Franklin no dejó de entender la estructura del ADN; contribuyó a resolverla en igualdad.",
+      "source": "Chemistry World (Royal Society of Chemistry), «Overlooked documents shed new light on double helix discovery»",
+      "url": "https://www.chemistryworld.com/news/overlooked-documents-shed-new-light-on-double-helix-discovery/4017384.article"
+    },
+    {
+      "claim": "«At the age of 37, Franklin died from cancer in 1958» y los autores sostienen que «She deserves to be remembered not as the victim of the double helix, but as an equal contributor to the solution».",
+      "source": "Smithsonian Magazine, «What We're Still Learning About Rosalind Franklin's Unheralded Brilliance»",
+      "url": "https://www.smithsonianmag.com/smart-news/what-were-still-learning-about-rosalind-franklins-unheralded-brilliance-180982058/"
+    },
+    {
+      "claim": "Cobb y Comfort describen a Franklin como «an equal member of a quartet who solved the double helix» y a la Fotografía 51 como «the emblem of both Franklin's achievement and her mistreatment».",
+      "source": "Phys.org, reproducción de la nota de la Universidad de Manchester sobre el comentario de Nature (2023)",
+      "url": "https://phys.org/news/2023-04-rosalind-franklin-contributed-discovery-dna.html"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Franklin no entendió sus propios datos ni que no vio la hélice: es la versión que popularizó Watson en The Double Helix (1968) y que los documentos analizados por Cobb y Comfort contradicen.",
+    "No afirmar que la Fotografía 51 fue la prueba decisiva de la doble hélice. Crick atribuyó ese papel al informe del MRC con los datos de King's; la foto es el emblema, no necesariamente la clave.",
+    "No decir que a Franklin le negaron el Nobel por ser mujer. Murió en 1958 y el premio de 1962 no admite candidaturas póstumas; la discusión legítima es sobre el reconocimiento en vida y en el relato posterior, no sobre ese premio.",
+    "No dar como verificada la fecha exacta en que Wilkins mostró la foto a Watson (circula el 30 de enero de 1953) ni el dato de las 62 horas de exposición: solo aparecieron en resultados de búsqueda y fuentes de divulgación, no en las fuentes institucionales consultadas.",
+    "No decir que Franklin tomó la foto sola: King's College la atribuye a Franklin y a su estudiante Raymond Gosling, y la anotación del reverso en la copia del Science History Institute es de Gosling.",
+    "No presentar el borrador de Time como publicado: nunca salió en la revista."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

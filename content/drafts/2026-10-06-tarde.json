@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-06-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Rousseau y el Contrato social de 1762",
+    "hook": "La frase más revolucionaria de Rousseau va seguida de una confesión: no sabe cómo ocurrió, y su libro no promete romper las cadenas.",
+    "quote": {
+      "text": "El hombre ha nacido libre, y en todas partes está encadenado.",
+      "author": "Jean-Jacques Rousseau",
+      "work": "Del contrato social, libro I, cap. 1 (1762)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Del contrato social apareció en 1762 en Ámsterdam, en la imprenta de Marc-Michel Rey. La frase abre el primer capítulo del libro primero. En francés dice que el hombre está «dans les fers», en los grilletes. La línea siguiente es menos citada y más incómoda: hay quien se cree amo de los demás y no deja de ser más esclavo que ellos.",
+      "Luego Rousseau se pregunta cómo se produjo ese cambio y responde con dos palabras: «Lo ignoro». La pregunta que sí cree poder resolver es otra, qué puede volverlo legítimo. El libro no es un llamado a quitarse las cadenas, sino una investigación sobre cuáles serían justas: las que uno acepta al pactar con los demás bajo la voluntad general.",
+      "El 19 de junio de 1762, Ginebra, su ciudad natal, condenó el libro a ser quemado. Hoy la frase se lee como grito de rebeldía. En la página, es el planteamiento de un problema que su autor admite no saber explicar del todo."
+    ],
+    "question": "¿Qué obligación aceptaría usted libremente?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Rousseau",
+      "#ContratoSocial",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Ilustracion",
+      "#FilosofiaPolitica",
+      "#Libertad",
+      "#SigloXVIII",
+      "#Ginebra",
+      "#Clasicos",
+      "#Pensamiento"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Edición de 1762, libro I, «CHAPITRE I. Sujet de ce premier Livre»: «L'homme est né libre, & par-tout il est dans les fers. Tel se croit le maître des autres, qui ne laisse pas d'être plus esclave qu'eux. Comment ce changement s'est-il fait ? Je l'ignore. Qu'est-ce qui peut le rendre légitime ? Je crois pouvoir résoudre cette question.» Pie de imprenta: Amsterdam, Marc Michel Rey, 1762.",
+      "source": "Wikisource en francés, «Du contrat social», édition 1762, livre I, chapitre 1",
+      "url": "https://fr.wikisource.org/wiki/Du_contrat_social/Édition_1762/Livre_I/Chapitre_1"
+    },
+    {
+      "claim": "La apertura «Man is born free, but is everywhere in chains» va seguida de la afirmación de Rousseau de que puede hacer legítima esa sujeción; su objetivo declarado no es eliminar las cadenas sino explicar qué las justifica, conciliando libertad individual y autoridad mediante la voluntad general. El libro apareció en 1762 junto con Emilio y ambas obras fueron condenadas en Ginebra.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Jean Jacques Rousseau»",
+      "url": "https://plato.stanford.edu/entries/rousseau/"
+    },
+    {
+      "claim": "«L'édition originale du Contrat social est parue, en format in-octavo, [...] 1762 à Amsterdam chez Marc-Michel Rey» y «Le 19 juin, le Contrat social était brûlé à Genève!»; el 9 de junio de 1762 el Parlamento de París había condenado Emilio.",
+      "source": "Presses de l'Enssib (OpenEdition Books), «Un Lyonnais pris en flagrant délit d'impression du Contrat social (1762)»",
+      "url": "https://books.openedition.org/pressesenssib/12273?lang=en"
+    },
+    {
+      "claim": "El 19 de junio de 1762 el Petit Conseil de Ginebra, oídas las conclusiones del procurador general Jean-Robert Tronchin, condenó el Contrat social y el Emilio a ser lacerados y quemados, y ordenó arrestar a Rousseau si entraba en la ciudad.",
+      "source": "Archivos del Estado de Ginebra, «15. Condamnation de l'Emile et du Contrat social (1761-1762)» (dato tomado del resultado de búsqueda; la página no devolvió el contenido al consultarla)",
+      "url": "https://ge.ch/archives/15-condamnation-de-lemile-contrat-social-1761-1762"
+    }
+  ],
+  "do_not_use": [
+    "No traducir «dans les fers» como si Rousseau llamara a romper las cadenas: el capítulo dice expresamente que ignora cómo se produjo el cambio y que la cuestión que cree poder resolver es qué lo hace legítimo.",
+    "No añadir «sin embargo» ni «pero» a la cita como si fueran del original: el francés de 1762 une las dos mitades con «&», es decir, «y».",
+    "No dar un mes cerrado de publicación: la fuente de la Enssib habla de comienzos de 1762 y circulan abril y mayo en otras. Basta con el año, 1762.",
+    "No decir que el libro se quemó en París: allí el Parlamento condenó el Emilio (9 de junio de 1762); el Contrat social se quemó en Ginebra el 19 de junio, y en Francia se prohibió su entrada.",
+    "No atribuir la condena ginebrina solo a motivos políticos: la Stanford Encyclopedia menciona la heterodoxia religiosa como fundamento, y otras fuentes subrayan la soberanía popular. Si se menciona el motivo, dar ambos."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-06-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Fernando Pessoa y Mar Português",
+    "hook": "El verso de Pessoa que se usa como lema de superación responde a una pregunta hecha delante de madres que lloraron y novias que no se casaron.",
+    "quote": {
+      "text": "¿Valió la pena? Todo vale la pena si el alma no es pequeña.",
+      "author": "Fernando Pessoa",
+      "work": "«Mar Português», en Mensagem (1934)",
+      "attribution_verified": true
+    },
+    "body": [
+      "«Mar Português» apareció en 1922 en la revista Contemporânea y en 1934 pasó a Mensagem, el único libro en portugués que Pessoa publicó en vida. Da nombre a la segunda de sus tres partes. Son dos estrofas de seis versos. La primera empieza preguntándole al mar cuánto de su sal son lágrimas de Portugal, y enumera a las madres que lloraron, a los hijos que rezaron en vano y a las novias que se quedaron sin casar para que el mar fuera portugués.",
+      "La segunda estrofa pregunta si valió la pena. La respuesta es el verso famoso, y lo que sigue lo endurece: quien quiere pasar más allá del Bojador tiene que pasar más allá del dolor. El cabo Bojador era el límite que la navegación portuguesa tardó años en cruzar. Dios, cierra el poema, le dio al mar el peligro y el abismo, pero fue en él donde reflejó el cielo.",
+      "Mensagem se presentó ese año a un premio del régimen, y no pudo competir en la categoría principal por tener menos de cien páginas: terminaba en la 96. Pessoa murió al año siguiente."
+    ],
+    "question": "¿Qué costo estaría dispuesto a nombrar antes de decir que algo valió la pena?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#FernandoPessoa",
+      "#Poesia",
+      "#LiteraturaPortuguesa"
+    ],
+    "extended": [
+      "#Citas",
+      "#Mensagem",
+      "#Portugal",
+      "#Mar",
+      "#SigloXX",
+      "#Poemas",
+      "#Clasicos",
+      "#Lisboa"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto completo: «Ó mar salgado, quanto do teu sal / São lágrimas de Portugal! / Por te cruzarmos, quantas mães choraram, / Quantos filhos em vão rezaram! / Quantas noivas ficaram por casar / Para que fosses nosso, ó mar! // Valeu a pena? Tudo vale a pena / Se a alma não é pequena. / Quem quer passar além do Bojador / Tem que passar além da dor. / Deus ao mar o perigo e o abismo deu, / Mas nele é que espelhou o céu.» Publicado originalmente en la revista Contemporânea en 1922 e integrado en Mensagem (1934); dos estrofas de seis versos.",
+      "source": "Wikipedia en inglés, entrada «Mar Português» (fuente de menor rango, contrastada con las dos siguientes para el texto)",
+      "url": "https://en.wikipedia.org/wiki/Mar_Portugu%C3%AAs"
+    },
+    {
+      "claim": "La página reproduce «Mar Português» de Mensagem, con los versos «Valeu a pena? Tudo vale a pena / Se a alma não é pequena.»",
+      "source": "RTP Ensina (Radiotelevisão Portuguesa), «Fernando Pessoa: Mar Português»",
+      "url": "https://ensina.rtp.pt/artigo/fernando-pessoa-mar-portugues/"
+    },
+    {
+      "claim": "«Mensagem (1934), seu único livro em língua portuguesa publicado em vida», dividido en «Brasão, Mar Português e O Encoberto»; cita «Valeu a pena? Tudo vale a pena / Se a alma não é pequena. / Quem quer passar além do Bojador / Tem que passar além da dor.»",
+      "source": "Jornal da USP (Universidade de São Paulo), «Em ‘Mensagem’, poesia é arma para construir o futuro»",
+      "url": "https://jornal.usp.br/cultura/em-mensagem-poesia-e-arma-para-construir-o-futuro/"
+    },
+    {
+      "claim": "Edición de referencia: «Lisboa: Parceria Antonio Maria Pereira, 1934». Mensagem reúne 44 poemas en tres partes; la segunda parte, «Mar Portuguez», tiene doce poemas numerados, y «Mar Portuguez» es el X.",
+      "source": "Wikisource en portugués, «Mensagem (Fernando Pessoa)»",
+      "url": "https://pt.wikisource.org/wiki/Mensagem_(Fernando_Pessoa)"
+    },
+    {
+      "claim": "Registro del mecanoscrito de Mensagem: PESSOA, Fernando, 1888-1935; Lisboa, Parceria António Maria Pereira, 1934; el título anterior, «PORTUGAL», aparece tachado y sustituido por «Mensagem».",
+      "source": "Biblioteca Nacional de Portugal, Biblioteca Nacional Digital, «Mensagem / Fernando Pessoa»",
+      "url": "https://purl.pt/13965"
+    },
+    {
+      "claim": "El Premio Antero de Quental de 1934 tenía dos categorías: «ao melhor livro de versos, não inferior a 100 páginas» y «a um poema, ou poesia solta». Mensagem «não obedecia aos termos do regulamento, ‘por ser inferior a cem páginas’»: el libro terminaba en la página 96. Ganó la segunda categoría; la primera fue para A Romaria, de Vasco Reis.",
+      "source": "Fundação António Quadros, «Prémio Antero de Quental 1934»",
+      "url": "https://www.fundacaoantonioquadros.pt/index.php?option=com_content&task=view&id=171&Itemid=260"
+    }
+  ],
+  "do_not_use": [
+    "No escribir «Tudo vale a pena quando a alma não é pequena»: es la variante que circula en páginas de citas. El poema dice «Se a alma não é pequena».",
+    "No presentar el verso como afirmación aislada ni como lema motivacional: es la respuesta a «Valeu a pena?», tras una estrofa sobre el llanto de madres, hijos y novias, y va seguido de «Quem quer passar além do Bojador / Tem que passar além da dor».",
+    "No atribuirlo a un heterónimo (Álvaro de Campos, Ricardo Reis, Alberto Caeiro): Mensagem está firmado por Fernando Pessoa ortónimo.",
+    "No dar como verificados el número ni el mes de Contemporânea (circula «n.º 4, octubre de 1922, pp. 11-14»): solo se vio en resultados de búsqueda de la Edição Digital de Fernando Pessoa y de Bibliotecas de Lisboa, cuyas páginas no devolvieron contenido. Basta con «Contemporânea, 1922».",
+    "No decir que Pessoa rechazó el premio ni que el régimen lo censuró: la Fundação António Quadros recoge que ganó la segunda categoría y no asistió a la ceremonia; no se consultó una segunda fuente sobre sus motivos.",
+    "No confundir las 96 páginas del libro impreso con el mecanoscrito de la Biblioteca Nacional de Portugal, que se describe por folios."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
