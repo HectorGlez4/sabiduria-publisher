@@ -1004,11 +1004,15 @@ SIN_PUBLICACIONES_ANTES = object()  # centinela: --publicaciones-antes no se dio
 
 
 def _publicaciones_antes(valor: str) -> int | None:
-    """`none` o `null` (sin distinguir mayúsculas) son None: `ig abrir` no pudo dar el recuento. Lo demás, `int`
-    (un ValueError sale por argparse con código 2)."""
-    if valor.strip().lower() in ("none", "null"):
+    """`none` o `null` (sin distinguir mayúsculas) son None: `ig abrir` no pudo dar el recuento. Lo demás tiene que
+    ser un entero ASCII no negativo (`int` aceptaría «３７１９», «3_719» o «+5»); si no, ValueError, que argparse
+    convierte en código 2."""
+    v = valor.strip()
+    if v.lower() in ("none", "null"):
         return None
-    return int(valor)
+    if not (v.isascii() and v.isdecimal()):
+        raise ValueError(f"--publicaciones-antes: entero ASCII no negativo o none: {valor!r}")
+    return int(v)
 
 
 def cmd_ig(a) -> int:
@@ -1206,7 +1210,7 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--subido-en", help="subido_en que devolvió telefono-subir (abrir)")
     p.add_argument("--tema", help="tema que devolvió ig audio (compartir)")
     p.add_argument("--publicaciones-antes", type=_publicaciones_antes, default=SIN_PUBLICACIONES_ANTES,
-                   help="número de ig abrir; none si ig abrir lo dio null (saldrá confirmado_sin_conteo)")
+                   help="entero ≥ 0 de ig abrir; none o null si lo dio null")
     p.add_argument("--produccion-cercana", action="store_true",
                    help="preflight trajo espera: un confirmado baja a confirmado_sin_conteo (compartir)")
     p.set_defaults(func=cmd_ig)

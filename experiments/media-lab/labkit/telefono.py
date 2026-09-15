@@ -159,6 +159,9 @@ def teclado_desde_dumpsys(texto: str) -> bool | None:
 def tapado(xml: str, nodo: dict) -> bool:
     """Algo dibujado después cubre el centro del nodo.
 
+    Para un NODO del volcado que se va a tocar: cuenta cualquier nodo posterior que contenga el centro, también de la
+    propia app. Para un PUNTO que no es un nodo (el inicio de un gesto) está `pantalla.motivo_tapado`.
+
     El nodo se identifica por (bounds, texto, desc, clase, package): se toma su
     primera aparición en el orden del documento, que es la que deja más nodos
     posteriores por revisar. Cuenta como tapado si un nodo POSTERIOR contiene el

@@ -52,7 +52,8 @@ FEED_INSTAGRAM = {
         _cmd("ig", "compartir", "--run", "<run>", "--pie", "<pie>", "--tema", "<tema>",
              "--publicaciones-antes", "<publicaciones_antes>", "[--produccion-cercana]",
              ver="ig-05-publicado.png: perfil de @sabiduriabolsillo tras compartir; "
-                 "--produccion-cercana si el último preflight trajo espera"),
+                 "--produccion-cercana si el último preflight trajo espera; "
+                 "--publicaciones-antes none si ig abrir lo dio null"),
     ],
     "verificar": [
         _cmd("telefono-captura", "--run", "<run>", "--nombre", "ig-06-perfil",

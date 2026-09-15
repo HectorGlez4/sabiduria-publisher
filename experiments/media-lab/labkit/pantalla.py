@@ -293,6 +293,10 @@ def motivo_tapado(xml: str, x: int, y: int, paquete: str) -> str | None:
     `paquete`. Cuenta como tapado si ningún nodo de `paquete` contiene el punto o si, detrás del último que lo contiene
     en orden de documento, otro nodo lo contiene (siempre de otro paquete: una notificación de systemui, un diálogo).
 
+    Para un PUNTO que no es un nodo (el inicio de un gesto): solo cuenta lo de otro paquete dibujado después del último
+    nodo propio. Para un NODO del volcado que se va a tocar está `telefono.tapado`, que cuenta cualquier nodo posterior
+    que contenga su centro, también de la propia app.
+
     Es la regla de `telefono.tapado` (lo dibujado después tapa) llevada a un punto. `telefono.tapado` no sirve tal
     cual: un nodo sintético de 1×1 no está en el volcado y da siempre tapado, y con el nodo más profundo bajo el punto
     también, porque en los perfiles reales `modal_container` y `overlay_layout_container` (pantalla completa, vacíos)

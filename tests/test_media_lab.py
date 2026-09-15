@@ -2165,6 +2165,9 @@ def seccion_cli_en_proceso() -> None:
                 (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T"), "compartir sin --publicaciones-antes"),
                 (("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T", "--publicaciones-antes", "abc"),
                  "compartir con --publicaciones-antes abc"),
+                *((("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "T", f"--publicaciones-antes={valor}"),
+                   f"(m-6) compartir con --publicaciones-antes {valor!r} (no es un entero ASCII no negativo)")
+                  for valor in ("３７１９", "٣٧١٩", "3_719", "+5", "-1")),
                 (("ig", "compartir", "--run", "RUN-1", "--tema", "T", "--publicaciones-antes", "3"), "compartir sin --pie"),
                 (("ig", "pie", "--run", "RUN-1"), "pie sin --pie"),
                 (("ig", "abrir", "--run", "RUN-1"), "abrir sin --subido-en"),
@@ -5160,7 +5163,12 @@ def seccion_recuento_refrescado() -> None:
     with tempfile.TemporaryDirectory() as dir_evidencia:
         evid = pathlib.Path(dir_evidencia)
 
-        sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[p3719, p3719, p3719, menu_crear, SELECTOR_IG])
+        # (I-1) Tras el refresco «Créer» está en otros bounds: abrir tiene que tocarlo donde dice el volcado NUEVO.
+        crear_movido = p3719.replace('bounds="[960,92][1080,250]"', 'bounds="[800,92][920,250]"')
+        centro_crear_nuevo = T.buscar(crear_movido, texto="Créer")["centro"]
+        check(centro_crear_nuevo != centro_crear, f"(I-1) «Créer» se mueve en el perfil refrescado ({centro_crear_nuevo})")
+        sim = TelefonoSimulado([arranque, xml_inicio(), p3718],
+                               tras_deslizar=[crear_movido, crear_movido, crear_movido, menu_crear, SELECTOR_IG])
         res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
         check(err is None and res["publicaciones_antes"] == 3719 and res["recuento_refrescado"] is True
               and len(sim.deslizamientos) == 1 and dentro_de_pantalla(sim.deslizamientos[0])
@@ -5168,7 +5176,9 @@ def seccion_recuento_refrescado() -> None:
               and sim.capturas == ["ig-01-selector.png"] and res["avisos"] == [],
               f"refresco: 3718 en caché y 3719 en 3 volcados tras deslizar: publicaciones_antes 3719, recuento_refrescado True "
               f"y un solo deslizamiento hacia abajo dentro de la pantalla ({err!r}, {res}, {sim.deslizamientos})")
-        check(sim.toques.count(centro_crear) == 1, f"refresco: «Créer» se toca una vez tras refrescar ({sim.toques})")
+        check(sim.toques.count(centro_crear_nuevo) == 1 and centro_crear not in sim.toques,
+              f"(I-1) refresco: «Créer» se toca una vez, en los bounds del volcado refrescado y no en los de antes "
+              f"({sim.toques})")
 
         sim = TelefonoSimulado([arranque, xml_inicio(), p3718], tras_deslizar=[menu_crear, SELECTOR_IG])
         volcado_guion = sim.volcado
@@ -5274,6 +5284,11 @@ def seccion_recuento_refrescado() -> None:
         check(nombre in (IG.hoja_abierta(perfil(3718, solo)) or ""), f"hoja_abierta reconoce {nombre}")
     check("modal_container" in (IG.hoja_abierta(perfil(3718, modal_con_contenido)) or ""),
           "hoja_abierta: modal_container con algún descendiente cuenta")
+    ajena = nodo_xml("[0,491][1080,2205]", clase=marco, paquete="com.otra.app",
+                     extra='resource-id="com.otra.app:id/bottom_sheet_container"')
+    id_ajeno = nodo_xml("[0,491][1080,2205]", clase=marco, extra='resource-id="com.otra.app:id/bottom_sheet_container"')
+    check(IG.hoja_abierta(perfil(3718, ajena)) is None and IG.hoja_abierta(perfil(3718, id_ajeno)) is None,
+          "(m-5) hoja_abierta compara el id completo: bottom_sheet_container de otro paquete no cuenta")
 
     sim = TelefonoSimulado([arranque, xml_inicio(), perfil(3718, hoja), menu_crear, SELECTOR_IG], tras_deslizar=[p3720])
     sin_refresco("hoja de Instagram abierta sobre el perfil", sim, "hoja de Instagram abierta")
@@ -5281,8 +5296,8 @@ def seccion_recuento_refrescado() -> None:
     avisos_reposo: list[str] = []
     sim = TelefonoSimulado([p3719], tras_deslizar=[p3719, p3719, p3719])
     res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco(perfil(3718, reposo), avisos_reposo))
-    check(err is None and len(sim.deslizamientos) == 1 and res["refrescado"] is True and res["recuento"] == 3719
-          and res["bloqueo_ajeno"] is None and avisos_reposo == [],
+    check(err is None and len(sim.deslizamientos) == 1 and res.refrescado is True and res.recuento == 3719
+          and res.bloqueo_ajeno is None and avisos_reposo == [],
           f"perfil en reposo con los contenedores vacíos: sí desliza y refresca ({err!r}, {res}, {avisos_reposo})")
     sin_refresco("las ventanas emergentes no se pueden leer",
                  TelefonoSimulado([arranque, xml_inicio(), p3718, menu_crear, SELECTOR_IG], tras_deslizar=[p3720],
@@ -5301,14 +5316,14 @@ def seccion_recuento_refrescado() -> None:
     avisos_pegado: list[str] = []
     sim = TelefonoSimulado([pegado], tras_deslizar=[p3720])
     res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco(pegado, avisos_pegado))
-    check(err is None and sim.deslizamientos == [] and res["recuento"] == 3718 and res["refrescado"] is False
+    check(err is None and sim.deslizamientos == [] and res.recuento == 3718 and res.refrescado is False
           and any("DESLIZAR_MIN_PX" in a or "menos de 300" in a for a in avisos_pegado),
           f"gesto casi nulo: no se desliza y queda el aviso ({err!r}, {res}, {avisos_pegado})")
 
     avisos_ilegible: list[str] = []
     sim = TelefonoSimulado([p3718], tras_deslizar=[p3720])
     res, err = con_telefono_simulado(sim, lambda: IG._recuento_fresco("<hierarchy><node", avisos_ilegible))
-    check(err is None and res["recuento"] is None and res["deslizado"] is False and sim.deslizamientos == []
+    check(err is None and res.recuento is None and res.deslizado is False and sim.deslizamientos == []
           and any("TelefonoError" in a for a in avisos_ilegible),
           f"volcado ilegible: _recuento_fresco no lanza, no desliza y deja aviso ({err!r}, {res}, {avisos_ilegible})")
 
