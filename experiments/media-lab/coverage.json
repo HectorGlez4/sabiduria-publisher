@@ -566,7 +566,9 @@
       "measurement_due_at": [
         "2026-09-15T18:12:54+00:00"
       ],
-      "measurement_completed_at": []
+      "measurement_completed_at": [
+        "2026-09-15T18:50:08.786784+00:00"
+      ]
     },
     {
       "cell_id": "CELL-015",

@@ -11,18 +11,52 @@
   "actual_native_format": "story_image",
   "adaptation_notes": "Round 1 (scheduled window 2026-09-15 10:40 Europe/Madrid) was blocked by visual QA: the Story pills sat under the viewer's reply bar. Round 2 (scheduled window 2026-09-15 15:40 Europe/Madrid) used the same corrected Story master r2 as CELL-012 (encargo ENC-20260914-003, deterministic overlay from briefs/LAB-PERSON-002.md with the PRESENTADORA FICTICIA disclosure) and a new run group (LAB-PERSON-002-A-INSTAGRAM-STORY-API-R2), published 22 min 6 s after CELL-012. Stories are published without a caption.",
   "audio_treatment": "none",
-  "location_treatment": {"visual_place": null, "text_label": null, "native_place_id": null, "native_place_label": null},
-  "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
   "exposure_context": {
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (round 1 window start)", "at": "2026-09-15T08:48:01+00:00", "espera": "producción subiendo: hilos"},
-      {"source": "lab.py preflight (round 2 window start)", "at": "2026-09-15T13:47:54+00:00", "espera": null},
-      {"source": "lab run in the same window", "run_id": "LAB-PERSON-002-A-FACEBOOK-STORY", "published_at": "2026-09-15T13:50:48Z", "note": "Same family and Story master on the Facebook Page via API."},
-      {"source": "lab.py preflight (right before workflow dispatch)", "at": "2026-09-15T14:12:03+00:00", "espera": null, "note": "No nearby production reported; espera stayed null through the 21 min spacing."}
+      {
+        "source": "lab.py preflight (round 1 window start)",
+        "at": "2026-09-15T08:48:01+00:00",
+        "espera": "producción subiendo: hilos"
+      },
+      {
+        "source": "lab.py preflight (round 2 window start)",
+        "at": "2026-09-15T13:47:54+00:00",
+        "espera": null
+      },
+      {
+        "source": "lab run in the same window",
+        "run_id": "LAB-PERSON-002-A-FACEBOOK-STORY",
+        "published_at": "2026-09-15T13:50:48Z",
+        "note": "Same family and Story master on the Facebook Page via API."
+      },
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-15T14:12:03+00:00",
+        "espera": null,
+        "note": "No nearby production reported; espera stayed null through the 21 min spacing."
+      }
     ],
-    "matched_comparison_ids": ["LAB-PERSON-002-A-INSTAGRAM", "LAB-PERSON-002-A-FACEBOOK-STORY"]
+    "matched_comparison_ids": [
+      "LAB-PERSON-002-A-INSTAGRAM",
+      "LAB-PERSON-002-A-FACEBOOK-STORY"
+    ]
   },
   "round": 2,
   "status": "completed",
@@ -39,7 +73,13 @@
     "no audio, no caption",
     "public organic audience"
   ],
-  "tool": {"name": "codex exec image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
+  "tool": {
+    "name": "codex exec image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
   "timing": {
     "started_at": "2026-09-15T13:47:44Z",
     "first_acceptable_at": "2026-09-15T13:50:30Z",
@@ -50,17 +90,55 @@
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 1273,
     "stages": [
-      {"name": "round 1 (blocked): render, manifests, visual QA FAIL", "started_at": "2026-09-15T08:55:00Z", "finished_at": "2026-09-15T09:05:00Z", "overlaps_another_stage": false},
-      {"name": "round 2: render r2, manifests, visual QA PASS (shared with CELL-012)", "started_at": "2026-09-15T13:47:44Z", "finished_at": "2026-09-15T13:50:30Z", "overlaps_another_stage": true},
-      {"name": "mandatory 21 min spacing after CELL-012", "started_at": "2026-09-15T13:50:48Z", "finished_at": "2026-09-15T14:12:03Z", "overlaps_another_stage": false},
-      {"name": "lock renewal, media-lab workflow 34980072197, result download", "started_at": "2026-09-15T14:12:03Z", "finished_at": "2026-09-15T14:14:00Z", "overlaps_another_stage": false}
+      {
+        "name": "round 1 (blocked): render, manifests, visual QA FAIL",
+        "started_at": "2026-09-15T08:55:00Z",
+        "finished_at": "2026-09-15T09:05:00Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "round 2: render r2, manifests, visual QA PASS (shared with CELL-012)",
+        "started_at": "2026-09-15T13:47:44Z",
+        "finished_at": "2026-09-15T13:50:30Z",
+        "overlaps_another_stage": true
+      },
+      {
+        "name": "mandatory 21 min spacing after CELL-012",
+        "started_at": "2026-09-15T13:50:48Z",
+        "finished_at": "2026-09-15T14:12:03Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "lock renewal, media-lab workflow 34980072197, result download",
+        "started_at": "2026-09-15T14:12:03Z",
+        "finished_at": "2026-09-15T14:14:00Z",
+        "overlaps_another_stage": false
+      }
     ]
   },
   "attempts": [
-    {"number": 1, "result": "blocked_before_publishing", "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg", "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-INSTAGRAM-STORY-API.json", "note": "Visual QA FAIL; manifest committed but never dispatched."},
-    {"number": 2, "result": "published", "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg", "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-INSTAGRAM-STORY-API-R2.json", "workflow_run": 34980072197}
+    {
+      "number": 1,
+      "result": "blocked_before_publishing",
+      "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg",
+      "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-INSTAGRAM-STORY-API.json",
+      "note": "Visual QA FAIL; manifest committed but never dispatched."
+    },
+    {
+      "number": 2,
+      "result": "published",
+      "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg",
+      "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-INSTAGRAM-STORY-API-R2.json",
+      "workflow_run": 34980072197
+    }
   ],
-  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
   "artifacts": [
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg",
@@ -96,14 +174,22 @@
       "role": "publish_result"
     }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
   "visual_qa": {
     "reviews": [
       {
         "number": 1,
         "reviewed_at": "2026-09-15T09:02:00Z",
         "gate": "experiments/media-lab/visual-qa-gate.md",
-        "preview_paths": ["experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg"],
+        "preview_paths": [
+          "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg"
+        ],
         "agent_verdict": "FAIL",
         "blocking_issues": [
           "Both bottom pills (PRESENTADORA FICTICIA x≈50–327 and SABIDURÍA DE BOLSILLO x≈730–1031, y≈1775–1828) sit inside the ~220 px bottom band where the Story reply field and heart/share icons are overlaid on phones where Instagram reserves no bar below the media: the disclosure and the brand signature would be covered."
@@ -117,7 +203,9 @@
         "number": 2,
         "reviewed_at": "2026-09-15T13:50:30Z",
         "gate": "experiments/media-lab/visual-qa-gate.md",
-        "preview_paths": ["experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg"],
+        "preview_paths": [
+          "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg"
+        ],
         "agent_verdict": "PASS",
         "blocking_issues": [],
         "non_blocking_notes": [
@@ -129,7 +217,17 @@
     ],
     "correction": "Round 1 FAIL was fixed in render_overlay.py (ZONA_SEGURA_HISTORIA y 250–1660) outside the window; round 2 used a new master and new run group."
   },
-  "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
   "publication": {
     "route_id": "API-MASTER",
     "comparison_pair_id": null,
@@ -142,7 +240,13 @@
     "publishing_active_seconds": 11.994,
     "native_changes_from_master": [],
     "human_interventions": [],
-    "fidelity_checks": {"caption": "not_applicable", "cover": "not_applicable", "media_order": "not_applicable", "aspect_ratio": "master 1080x1920 served from raw GitHub (asset_url in live-result.json)", "audio": "not_applicable"},
+    "fidelity_checks": {
+      "caption": "not_applicable",
+      "cover": "not_applicable",
+      "media_order": "not_applicable",
+      "aspect_ratio": "master 1080x1920 served from raw GitHub (asset_url in live-result.json)",
+      "audio": "not_applicable"
+    },
     "destination": "Instagram @sabiduriabolsillo Story",
     "agreed_batch_reference": null,
     "requested_audience": "public",
@@ -157,7 +261,22 @@
     "expires": "24h",
     "audio_verified": null,
     "master_sha256": "3aba56fe18606f0a2b6985980e25b938b699cc86126635836352973d49af85c8",
-    "snapshots": [],
+    "snapshots": [
+      {
+        "instantanea": "story",
+        "observed_at": "2026-09-15T18:50:08.786784+00:00",
+        "edad_horas": 4.62,
+        "metricas": {
+          "instagram": {
+            "reach": 6,
+            "views": 7,
+            "replies": 0,
+            "navigation": 5
+          }
+        },
+        "errores": {}
+      }
+    ],
     "cross_posting": "Not expected: Accounts Center auto-share applies to posts made in the Instagram app, not Graph API publications. Not checked on device in this window."
   },
   "missing_data_reasons": {
