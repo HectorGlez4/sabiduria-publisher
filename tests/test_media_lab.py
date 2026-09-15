@@ -4257,7 +4257,8 @@ def receta_temporal(par: tuple[str, str], receta: dict):
     """`receta` como borrador de `par` en `recetas.TODAS` y `recetas.BORRADORES` mientras dura el
     bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop."""
     from labkit import recetas as RC
-    assert par not in RC.PROMOVIDAS, "receta_temporal es solo para borradores"
+    if par in RC.PROMOVIDAS:
+        raise ValueError("receta_temporal es solo para borradores")
     registros = (RC.TODAS, RC.BORRADORES)
     previos = [d.get(par, _SIN_RECETA) for d in registros]
     try:
@@ -4355,6 +4356,11 @@ def seccion_recetas_y_seleccion() -> None:
             pass
         check(RC.TODAS[par_th] is receta_a and RC.BORRADORES[par_th] is receta_a,
               "receta_temporal restaura el valor previo en TODAS y en BORRADORES")
+    par_ig = ("instagram", "feed_single_image")
+    original_ig = RC.TODAS[par_ig]
+    check(lanza(lambda: receta_temporal(par_ig, sin_copias).__enter__(), ValueError)
+          and RC.TODAS[par_ig] is original_ig and par_ig not in RC.BORRADORES,
+          "receta_temporal rechaza con ValueError un par promovido y no toca RC.TODAS")
 
 
 def rechazo(res, fragmento: str, tipo: str = "ArgumentoNoValido") -> bool:
@@ -4394,10 +4400,11 @@ def entorno_lab_fase2():
 
 def seccion_cli_fase2() -> None:
     print("\n16. Fase 2: lab.py receta, atrás por app, descarte y borradores")
-    from labkit import pasos, recetas as RC
+    from labkit import instagram_feed, pantalla, pasos, recetas as RC, telefono
 
     recibido: dict = {}
     atras_original, descartar_original = pasos.atras, pasos.descartar
+    atras_ig_original, captura_original = instagram_feed.atras, telefono.captura
     par_th = ("threads", "feed_video")
     try:
         pasos.atras = lambda paquete, ev, nombre: recibido.update(atras=paquete) or ev / f"{nombre}.png"
@@ -4428,6 +4435,26 @@ def seccion_cli_fase2() -> None:
             check(rechazo(lab("telefono-descartar", "--run", "RUN-1", "--nombre", "descarte"), "--app"),
                   "telefono-descartar exige --app")
 
+            instagram_feed.atras = lambda ev, nombre: recibido.update(atras_ig=True) or ev / f"{nombre}.png"
+            recibido.clear()
+            codigo, datos, _ = lab("telefono-atras", "--run", "RUN-1", "--nombre", "salida-ig")
+            check(codigo == 0 and recibido.get("atras_ig") is True and "atras" not in recibido
+                  and str(campo(datos, "captura")).endswith("RUN-1/salida-ig.png"),
+                  f"telefono-atras sin --app (forma de la ventana) usa instagram_feed.atras, no pasos.atras ({codigo}, {recibido})")
+
+            def descarte_inesperado(app, ev, nombre):
+                raise pantalla.PantallaInesperada("prueba")
+
+            descartar_doble = pasos.descartar
+            pasos.descartar = descarte_inesperado
+            telefono.captura = lambda destino: destino
+            codigo, datos, _ = lab("telefono-descartar", "--app", "instagram", "--run", "RUN-1", "--nombre", "descarte")
+            check(codigo == 4 and campo(datos, "tipo") == "PantallaInesperada"
+                  and str(campo(datos, "captura")).endswith("RUN-1/descarte-inesperada.png"),
+                  f"telefono-descartar ante una pantalla inesperada sale con 4 y su captura ({codigo}, {datos})")
+            pasos.descartar = descartar_doble
+            telefono.captura = captura_original
+
             nuevo = ("encargo-nuevo", "--cell", "C-TH-TEL", "--family", "LAB-CLI-002", "--brief", "b.md",
                      "--formato", '{"ancho":1080,"alto":1350}', "--prompt-file", raiz / "prompt.txt")
             codigo, datos, _ = lab(*nuevo)
@@ -4443,6 +4470,7 @@ def seccion_cli_fase2() -> None:
                       "sin --borrador la receta de un borrador no sale")
     finally:
         pasos.atras, pasos.descartar = atras_original, descartar_original
+        instagram_feed.atras, telefono.captura = atras_ig_original, captura_original
 
 
 SECCIONES = [
