@@ -475,6 +475,31 @@ def seccion_manifiesto_y_cerrojo() -> None:
             ok = True
         check(ok, f"verificación rechaza: {label}")
 
+    con_shortcode = M.manifiesto_verificacion("LAB-X", {"facebook": "1"},
+                                              instagram_shortcodes={"instagram": "DdR54JEgxHN"},
+                                              surfaces={"instagram": "story"})
+    check(con_shortcode.get("instagram_shortcodes") == {"instagram": "DdR54JEgxHN"},
+          "manifiesto de verificación admite un shortcode de Instagram")
+    check(con_shortcode.get("surfaces") == {"instagram": "story"}, "y una superficie explícita")
+    check(M.manifiesto_verificacion("LAB-X", {}, instagram_shortcodes={"instagram": "DdR54JEgxHN"}) ==
+          {"run_group_id": "LAB-X", "post_ids": {}, "instagram_shortcodes": {"instagram": "DdR54JEgxHN"}},
+          "solo shortcode, sin post_ids, basta para tener algo que verificar")
+    for post_ids, kwargs, label in (
+            ({"facebook": "1"}, {"instagram_shortcodes": {"instagram": "abc"}}, "shortcode demasiado corto"),
+            ({"facebook": "1"}, {"instagram_shortcodes": {"instagram": "x" * 21}}, "shortcode demasiado largo"),
+            ({"facebook": "1"}, {"instagram_shortcodes": {"instagram": "con espacio 12"}}, "shortcode con espacios"),
+            ({"facebook": "1"}, {"instagram_shortcodes": {"facebook": "DdR54JEgxHN"}}, "shortcode fuera de instagram"),
+            ({"instagram": "123"}, {"instagram_shortcodes": {"instagram": "DdR54JEgxHN"}},
+             "instagram con post_id y shortcode a la vez"),
+            ({"facebook": "1"}, {"surfaces": {"instagram": "carrusel"}}, "superficie que no es feed ni story"),
+            ({"facebook": "1"}, {"surfaces": {"tiktok": "story"}}, "superficie de una red no verificable")):
+        try:
+            M.manifiesto_verificacion("LAB-X", post_ids, **kwargs)
+            ok = False
+        except M.ManifiestoError:
+            ok = True
+        check(ok, f"verificación rechaza: {label}")
+
     with tempfile.TemporaryDirectory() as d:
         lock = pathlib.Path(d) / ".ventana.lock"
         for contenido, label in (("[1]", "lista"), ('{"desde": 5}', "desde no textual"), ("no json", "texto")):
@@ -1771,6 +1796,21 @@ def seccion_guardia() -> None:
 
 
 _LAB_CLI = None
+_VERIFY_CLI = None
+
+
+def modulo_verify():
+    """verify_api.py importado una sola vez como módulo, para llamar a main() en proceso
+    con `_get` sustituido por un doble sin red."""
+    global _VERIFY_CLI
+    if _VERIFY_CLI is None:
+        import importlib.util
+        ruta = ROOT / "experiments" / "media-lab" / "verify_api.py"
+        spec = importlib.util.spec_from_file_location("verify_api_cli", ruta)
+        modulo = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(modulo)
+        _VERIFY_CLI = modulo
+    return _VERIFY_CLI
 
 
 def modulo_lab():
@@ -1802,7 +1842,7 @@ class LabAislado:
         nuevos = {"ROOT": self.raiz, "ENCARGOS": self.raiz / "encargos", "LOCK": self.raiz / ".ventana.lock",
                   "EVIDENCIA": self.raiz / "evidence", "COBERTURA": self.raiz / "coverage.json",
                   "ASSETS_DIR": self.raiz, "TURNOS": self.raiz / "turnos.json",
-                  "TURNO_HECHO": self.raiz / ".turno-hecho"}
+                  "TURNO_HECHO": self.raiz / ".turno-hecho", "RUNS_DIR": self.raiz / "runs"}
         for nombre, valor in nuevos.items():
             self.viejos[nombre] = getattr(self.lab, nombre, self._FALTA)
             setattr(self.lab, nombre, valor)
@@ -2048,6 +2088,18 @@ def seccion_cli_en_proceso() -> None:
             verificar = ("manifiesto-verificacion", "--run-group", "LAB-CLI-001-API", "--post", "facebook=123_456")
             codigo_1, codigo_2 = lab(*verificar)[0], lab(*verificar)[0]
             check((codigo_1, codigo_2) == (0, 2), f"manifiesto-verificacion escribe una vez y no pisa ({codigo_1}, {codigo_2})")
+
+            codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-002-API",
+                                   "--instagram-shortcode", "DdR54JEgxHN", "--superficie", "instagram=story")
+            escrito = manifiestos / "LAB-CLI-002-API-verify.json"
+            m = json.loads(escrito.read_text(encoding="utf-8")) if escrito.exists() else {}
+            check(codigo == 0 and m.get("instagram_shortcodes") == {"instagram": "DdR54JEgxHN"}
+                  and m.get("surfaces") == {"instagram": "story"} and m.get("post_ids") == {},
+                  f"manifiesto-verificacion admite --instagram-shortcode y --superficie ({codigo}, {m})")
+            codigo, datos, _ = lab("manifiesto-verificacion", "--run-group", "LAB-CLI-003-API",
+                                   "--instagram-shortcode", "abc")
+            check(codigo == 2 and campo(datos, "tipo") == "ManifiestoError",
+                  f"un shortcode con formato inválido da ManifiestoError ({datos})")
 
         print("   · teléfono: argumentos antes de cualquier adb")
         with entorno() as (lab, raiz):
@@ -2882,6 +2934,259 @@ def seccion_turno() -> None:
         check(turno_hecho2.is_file(), "el turno queda marcado tras la carrera de dos procesos")
 
 
+def _enrutador(reglas):
+    """Doble de `_get` sin red. `reglas` es una lista de (predicado(url, params) -> bool,
+    respuesta); se usa la primera cuyo predicado casa. `respuesta` puede ser un dict, una
+    excepción (se levanta) o una función(params) -> dict."""
+    llamadas: list[tuple[str, dict]] = []
+
+    def _get(url, params):
+        llamadas.append((url, dict(params)))
+        for predicado, respuesta in reglas:
+            if predicado(url, params):
+                if isinstance(respuesta, BaseException):
+                    raise respuesta
+                return respuesta(params) if callable(respuesta) else respuesta
+        raise AssertionError(f"sin regla falsa para GET {url} {params}")
+
+    _get.llamadas = llamadas
+    return _get
+
+
+def _ejecutar_verify(modulo, manifest, tmp_path, *, metricas=False, get=None, env=None):
+    """verify_api.main() en proceso: escribe el manifiesto, sustituye `_get` y el entorno,
+    y devuelve (código, verification-result.json, llamadas)."""
+    import contextlib
+    import io
+    import json
+    import os
+
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
+    output_path = tmp_path / "verification-result.json"
+    argv = ["verify_api.py", str(manifest_path), "--output", str(output_path)]
+    if metricas:
+        argv.append("--metricas")
+
+    argv_previo, get_previo, environ_previo = sys.argv, modulo._get, dict(os.environ)
+    out, err = io.StringIO(), io.StringIO()
+    try:
+        sys.argv = argv
+        if get is not None:
+            modulo._get = get
+        if env is not None:
+            os.environ.update(env)
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            try:
+                codigo = modulo.main()
+            except SystemExit as e:
+                codigo = e.code if isinstance(e.code, int) else 1
+    finally:
+        sys.argv = argv_previo
+        modulo._get = get_previo
+        os.environ.clear()
+        os.environ.update(environ_previo)
+    datos = json.loads(output_path.read_text(encoding="utf-8")) if output_path.exists() else None
+    return codigo, datos, (get.llamadas if get is not None else [])
+
+
+def seccion_metricas() -> None:
+    print("\n14. Métricas desatendidas: verify_api --metricas, shortcode de Instagram y metricas-registrar")
+    import json
+    import os
+    import tempfile
+
+    modulo = modulo_verify()
+    GRAPH, THREADS_GRAPH = modulo.GRAPH, modulo.THREADS_GRAPH
+    ENTORNO_META = {"SDB_PAGE_TOKEN": "PT", "SDB_THREADS_TOKEN": "TT", "SDB_IG_USER_ID": "IGUSER"}
+
+    def valores(nombre, valor):
+        return {"name": nombre, "values": [{"value": valor}]}
+
+    print("   · verify_api --metricas: por red, feed y story")
+    with tempfile.TemporaryDirectory() as d:
+        tmp = pathlib.Path(d)
+        manifest = {"run_group_id": "LAB-MET-001-API",
+                    "post_ids": {"facebook": "FB1", "instagram": "IG1", "threads": "TH1"}}
+        metricas_fb = ["post_impressions_unique", "post_impressions", "post_clicks", "post_reactions_by_type_total"]
+        metricas_ig = ["reach", "views", "likes", "comments", "shares", "saved", "total_interactions"]
+        metricas_th = ["views", "likes", "replies", "reposts", "quotes", "shares"]
+        reglas = [
+            (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1", "permalink_url": "https://fb/x"}),
+            (lambda u, p, u_=f"{GRAPH}/IG1": u == u_, {"id": "IG1", "permalink": "https://instagram.com/p/IG1/"}),
+            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1": u == u_, {"id": "TH1", "permalink": "https://threads/x"}),
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_fb),
+             {"data": [valores("post_impressions_unique", 111), valores("post_impressions", 222),
+                       valores("post_clicks", 7), valores("post_reactions_by_type_total", {"like": 5, "love": 2})]}),
+            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_ig),
+             {"data": [valores(n, i) for i, n in enumerate(metricas_ig, start=1)]}),
+            (lambda u, p, u_=f"{THREADS_GRAPH}/TH1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_th),
+             {"data": [valores(n, i) for i, n in enumerate(metricas_th, start=10)]}),
+        ]
+        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                            get=_enrutador(reglas), env=ENTORNO_META)
+        r = datos["results"] if datos else {}
+        check(codigo == 0, f"todo verificado sale con 0 ({codigo})")
+        check(r.get("facebook", {}).get("metrics") ==
+              {"post_impressions_unique": 111, "post_impressions": 222, "post_clicks": 7,
+               "post_reactions_by_type_total": {"like": 5, "love": 2}},
+              f"facebook trae sus 4 métricas ({r.get('facebook')})")
+        check("metrics_errors" not in r.get("facebook", {}), "sin errores, no se añade metrics_errors")
+        check("metrics_observed_at" in r.get("facebook", {}), "metrics_observed_at queda registrado")
+        check(r.get("instagram", {}).get("metrics") == dict(zip(metricas_ig, range(1, 8))),
+              f"instagram feed trae sus 7 métricas ({r.get('instagram')})")
+        check(r.get("threads", {}).get("metrics") == dict(zip(metricas_th, range(10, 16))),
+              f"threads trae sus 6 métricas ({r.get('threads')})")
+
+    print("   · una métrica no soportada va a metrics_errors sin fallar la publicación")
+    with tempfile.TemporaryDirectory() as d:
+        tmp = pathlib.Path(d)
+        manifest = {"run_group_id": "LAB-MET-002-API", "post_ids": {"facebook": "FB1"}}
+        metricas_fb = ["post_impressions_unique", "post_impressions", "post_clicks", "post_reactions_by_type_total"]
+
+        def insights_individual(p):
+            m = p["metric"]
+            if m == "post_clicks":
+                raise RuntimeError("(#100) el objeto no admite post_clicks")
+            valor = {"post_impressions_unique": 111, "post_impressions": 222,
+                     "post_reactions_by_type_total": {"like": 1}}[m]
+            return {"data": [valores(m, valor)]}
+
+        reglas = [
+            (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1"}),
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and "," in p["metric"],
+             RuntimeError("el grupo entero falla por una métrica no soportada")),
+            (lambda u, p, u_=f"{GRAPH}/FB1/insights": u == u_ and "," not in p["metric"], insights_individual),
+        ]
+        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                            get=_enrutador(reglas), env=ENTORNO_META)
+        r = (datos or {})["results"]["facebook"]
+        check(codigo == 0, f"una métrica no soportada no tira el código de salida ({codigo})")
+        check(r["status"] == "verified", "la publicación sigue verificada")
+        check(r["metrics"] == {"post_impressions_unique": 111, "post_impressions": 222,
+                                "post_reactions_by_type_total": {"like": 1}},
+              f"las 3 métricas que sí funcionan quedan registradas ({r['metrics']})")
+        check(list(r.get("metrics_errors", {})) == ["post_clicks"],
+              f"la que falla queda en metrics_errors, no revienta las demás ({r.get('metrics_errors')})")
+
+    print("   · Instagram Story usa sus propias métricas; Facebook Story no tiene métricas por API")
+    with tempfile.TemporaryDirectory() as d:
+        tmp = pathlib.Path(d)
+        manifest = {"run_group_id": "LAB-MET-003-API", "post_ids": {"facebook": "FB1", "instagram": "IG1"},
+                    "surfaces": {"facebook": "story", "instagram": "story"}}
+        metricas_story = ["reach", "views", "replies", "navigation"]
+        reglas = [
+            (lambda u, p, u_=f"{GRAPH}/FB1": u == u_, {"id": "FB1"}),
+            (lambda u, p, u_=f"{GRAPH}/IG1": u == u_, {"id": "IG1"}),
+            (lambda u, p, u_=f"{GRAPH}/IG1/insights": u == u_ and set(p["metric"].split(",")) == set(metricas_story),
+             {"data": [valores(n, i) for i, n in enumerate(metricas_story, start=1)]}),
+        ]
+        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest, tmp, metricas=True,
+                                                    get=_enrutador(reglas), env=ENTORNO_META)
+        r = datos["results"]
+        check(r["facebook"]["metrics"] == {} and r["facebook"]["metrics_errors"] == {"*": "not_available_via_api"},
+              f"facebook story: sin métricas por API ({r['facebook']})")
+        check(not any(u.endswith("FB1/insights") for u, _ in llamadas),
+              "facebook story no llega a pedir insights: se sabe de antemano que no existen")
+        check(r["instagram"]["metrics"] == dict(zip(metricas_story, range(1, 5))),
+              f"instagram story pide reach/views/replies/navigation, no las de feed ({r['instagram']})")
+
+    print("   · búsqueda de Instagram por shortcode (publicaciones por teléfono)")
+    with tempfile.TemporaryDirectory() as d:
+        tmp = pathlib.Path(d)
+        manifest = {"run_group_id": "LAB-MET-004-API", "instagram_shortcodes": {"instagram": "DdR54JEgxHN"}}
+        pagina_2 = f"{GRAPH}/IGUSER/media?after=CURSOR1"
+        reglas = [
+            (lambda u, p, u_=f"{GRAPH}/IGUSER/media": u == u_,
+             {"data": [{"id": "1", "permalink": "https://www.instagram.com/p/OTRO1/", "timestamp": "t"}],
+              "paging": {"next": pagina_2}}),
+            (lambda u, p, u_=pagina_2: u == u_,
+             {"data": [{"id": "17999", "permalink": "https://www.instagram.com/p/DdR54JEgxHN/", "timestamp": "t2"}],
+              "paging": {}}),
+            (lambda u, p, u_=f"{GRAPH}/17999": u == u_, {"id": "17999", "permalink": "https://www.instagram.com/p/DdR54JEgxHN/"}),
+        ]
+        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas), env=ENTORNO_META)
+        r = datos["results"]["instagram"]
+        check(codigo == 0 and r["status"] == "verified", f"el shortcode que casa en la 2.ª página verifica ({codigo}, {r})")
+        check(r.get("graph_media_id") == "17999", f"guarda el id de Graph resuelto, no el shortcode ({r})")
+        check(sum(1 for u, _ in llamadas if u.endswith("/media") or "after=CURSOR1" in u) == 2,
+              "paginó exactamente hasta encontrarlo, ni una página de más")
+
+        manifest_sin = {"run_group_id": "LAB-MET-005-API", "instagram_shortcodes": {"instagram": "NOEXISTE1234"}}
+        reglas_sin = [
+            (lambda u, p, u_=f"{GRAPH}/IGUSER/media": u == u_,
+             {"data": [{"id": "1", "permalink": "https://www.instagram.com/p/OTRO1/", "timestamp": "t"}],
+              "paging": {"next": f"{GRAPH}/IGUSER/media?after=A"}}),
+            (lambda u, p, u_=f"{GRAPH}/IGUSER/media?after=A": u == u_,
+             {"data": [], "paging": {"next": f"{GRAPH}/IGUSER/media?after=B"}}),
+            (lambda u, p, u_=f"{GRAPH}/IGUSER/media?after=B": u == u_, {"data": [], "paging": {}}),
+        ]
+        codigo, datos, llamadas = _ejecutar_verify(modulo, manifest_sin, tmp, get=_enrutador(reglas_sin), env=ENTORNO_META)
+        r = datos["results"]["instagram"]
+        check(codigo == 1 and r["status"] == "failed" and r["error_type"] == "ShortcodeNoEncontrado",
+              f"el shortcode que no casa en 3 páginas falla sin inventar un id ({codigo}, {r})")
+        check(len(llamadas) == 3, f"se detiene a las 3 páginas ({len(llamadas)})")
+
+        codigo, datos, _ = _ejecutar_verify(modulo, manifest, tmp, get=_enrutador(reglas),
+                                            env={"SDB_PAGE_TOKEN": "PT", "SDB_THREADS_TOKEN": "TT"})
+        r = datos["results"]["instagram"]
+        check(r["status"] == "failed" and "SDB_IG_USER_ID" in r["error"],
+              f"sin SDB_IG_USER_ID falla con un mensaje claro, no una excepción críptica ({r})")
+
+    print("   · manifiesto-verificacion, metricas-registrar y el workflow (labkit + lab.py CLI)")
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        (raiz / "runs").mkdir()
+        run = {
+            "run_id": "LAB-CLI-MET-FACEBOOK", "coverage_cell_id": "CELL-MET",
+            "publication": {"submitted_at": "2026-09-13T20:00:00+00:00", "snapshots": []},
+        }
+        (raiz / "runs" / "LAB-CLI-MET-FACEBOOK.json").write_text(json.dumps(run), encoding="utf-8")
+        (raiz / "coverage.json").write_text(json.dumps(
+            {"cells": [{"cell_id": "CELL-MET", "measurement_completed_at": []}]}), encoding="utf-8")
+        resultado_dir = raiz / "experiments" / "media-lab" / "results" / "999"
+        resultado_dir.mkdir(parents=True)
+        resultado = {"run_group_id": "LAB-CLI-MET-API", "observed_at": "2026-09-14T20:05:00+00:00",
+                     "results": {"facebook": {"status": "verified", "metrics": {"post_impressions": 10}}}}
+        ruta_resultado_rel = "experiments/media-lab/results/999/verification-result.json"
+        (resultado_dir / "verification-result.json").write_text(json.dumps(resultado), encoding="utf-8")
+
+        with LabAislado(raiz) as lab:
+            base = ("metricas-registrar", "--run", "LAB-CLI-MET-FACEBOOK", "--run-group", "LAB-CLI-MET-API",
+                    "--resultado", ruta_resultado_rel, "--instantanea", "24h")
+            codigo, datos, _ = lab(*base)
+            run_tras = json.loads((raiz / "runs" / "LAB-CLI-MET-FACEBOOK.json").read_text(encoding="utf-8"))
+            cobertura_tras = json.loads((raiz / "coverage.json").read_text(encoding="utf-8"))
+            check(codigo == 0, f"metricas-registrar ok sale con 0 ({codigo}, {datos})")
+            check(run_tras["publication"]["snapshots"] ==
+                  [{"instantanea": "24h", "observed_at": "2026-09-14T20:05:00+00:00", "edad_horas": 24.08,
+                    "metricas": {"facebook": {"post_impressions": 10}}, "errores": {}}],
+                  f"la instantánea queda en el run con su edad ({run_tras['publication']['snapshots']})")
+            check(cobertura_tras["cells"][0]["measurement_completed_at"] == ["2026-09-14T20:05:00+00:00"],
+                  f"coverage.json marca la celda del run ({cobertura_tras})")
+
+            codigo, datos, _ = lab(*base)
+            check(codigo == 2, f"la misma instantánea otra vez sale con 2 ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET-FACEBOOK",
+                                   "--run-group", "LAB-OTRO-GRUPO-API", "--resultado", ruta_resultado_rel,
+                                   "--instantanea", "72h")
+            check(codigo == 2, f"un run_group que no es el del resultado sale con 2 ({codigo}, {datos})")
+
+            codigo, datos, _ = lab("metricas-registrar", "--run", "LAB-CLI-MET-FACEBOOK",
+                                   "--run-group", "LAB-CLI-MET-API",
+                                   "--resultado", "experiments/media-lab/results/999/no-existe.json",
+                                   "--instantanea", "72h")
+            check(codigo == 2, f"un resultado que no existe sale con 2 ({codigo}, {datos})")
+
+    texto_workflow = (ROOT / ".github" / "workflows" / "media-lab-verify.yml").read_text(encoding="utf-8")
+    check("metricas:" in texto_workflow, "media-lab-verify.yml admite el input metricas")
+    check("SDB_IG_USER_ID" in texto_workflow, "media-lab-verify.yml expone SDB_IG_USER_ID")
+    check("permissions" in texto_workflow and "contents: read" in texto_workflow,
+          "media-lab-verify.yml mantiene permissions: contents: read")
+    check("upload-artifact" in texto_workflow, "media-lab-verify.yml sigue subiendo el artefacto de verificación")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -2896,6 +3201,7 @@ SECCIONES = [
     seccion_generar,
     seccion_render,
     seccion_turno,
+    seccion_metricas,
 ]
 
 
