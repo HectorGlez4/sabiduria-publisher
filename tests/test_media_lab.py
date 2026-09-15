@@ -4042,6 +4042,95 @@ def seccion_textos_y_descarte() -> None:
     check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
           "I1: un título de borrado hace fallar cerrado aunque el diálogo tenga también un título de descarte")
 
+    # --- Revisión de especificación (B1-B3, I1-I3): huecos de seguridad encontrados tras el commit 1f51ed1 ---
+
+    # B1: un nodo pulsable SIN etiqueta propia de envío pero que CONTIENE un descendiente de envío cuenta
+    # como envío para cualquier toque cuyo centro caiga dentro de sus bounds, aunque el nodo tocado sea de
+    # otra rama del árbol (no descendiente ni antecesor del contenedor).
+    otra_rama = jerarquia(
+        nodo_xml("[0,2000][1080,2200]", clase="android.widget.Button", extra='clickable="true"',
+                 hijos=nodo_xml("[480,2080][600,2120]", texto="Partager")),
+        nodo_xml("[500,1980][580,2040]", texto="Suivant", clase="android.widget.Button", extra='clickable="true"'))
+    otro_nodo = T.buscar(otra_rama, texto="Suivant")
+    check(otro_nodo["centro"] == (540, 2010), f"B1: el nodo de prueba tiene el centro exacto del caso ({otro_nodo['centro']})")
+    sim = TelefonoSimulado([otra_rama])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(otro_nodo, otra_rama, PAQUETE_IG))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          f"B1: un nodo de otra rama cuyo centro cae dentro de un contenedor con un descendiente de envío es envío ({err!r})")
+
+    # B2: `permitir` solo salta el CAMPO cuyo valor coincide, no el nodo entero.
+    b2_texto_y_desc = jerarquia(nodo_xml("[40,600][300,860]", texto="Partager", desc="Votre story",
+                                         clase="android.widget.ImageView", extra='clickable="true"'))
+    n_b2a = T.buscar(b2_texto_y_desc, texto="Partager")
+    sim = TelefonoSimulado([b2_texto_y_desc])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2a, b2_texto_y_desc, PAQUETE_IG, permitir=("Votre story",)))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          "B2: permitir solo exime el campo desc; el texto «Partager» del mismo nodo sigue siendo envío")
+
+    b2_desc_y_rid = jerarquia(nodo_xml(
+        "[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView",
+        extra='clickable="true" resource-id="com.instagram.barcelona:id/new_thread_screen_post_button"'))
+    n_b2b = T.buscar(b2_desc_y_rid, texto="Votre story")
+    sim = TelefonoSimulado([b2_desc_y_rid])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2b, b2_desc_y_rid, PAQUETE_IG, permitir=("Votre story",)))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          "B2: permitir solo exime el campo desc; el resource-id de publicar del mismo nodo sigue siendo envío")
+
+    b2_solo_desc = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView",
+                                      extra='clickable="true"'))
+    n_b2c = T.buscar(b2_solo_desc, texto="Votre story")
+    sim = TelefonoSimulado([b2_solo_desc])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2c, b2_solo_desc, PAQUETE_IG, permitir=("Votre story",)))
+    check(err is None and sim.toques == [(170, 730)],
+          "B2: con permitir y solo el campo permitido en el nodo, sigue sin ser envío (caso legítimo del visor)")
+
+    # B3: `boton_descarte` normaliza antes de comparar con TITULOS_BORRADO (NBSP o espacio fino antes del
+    # «?» no deben colar un borrado como si fuera un descarte) y mira borrado en cualquier paquete.
+    borrado_nbsp = jerarquia(
+        nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
+        nodo_xml("[100,900][980,1000]", texto="Supprimer la publication ?"),
+        nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button", extra='clickable="true"'))
+    sim = TelefonoSimulado([borrado_nbsp])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
+          "B3: un NBSP antes del «?» en el título de borrado se sigue detectando (no se pulsa)")
+    borrado_espacio_fino = jerarquia(
+        nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
+        nodo_xml("[100,900][980,1000]", texto="Supprimer la publication ?"),
+        nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button", extra='clickable="true"'))
+    sim = TelefonoSimulado([borrado_espacio_fino])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
+          "B3: un espacio fino antes del «?» en el título de borrado se sigue detectando (no se pulsa)")
+    borrado_otro_paquete = jerarquia(
+        nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
+        nodo_xml("[100,900][980,1000]", texto="Supprimer la publication ?", paquete="com.android.systemui"),
+        nodo_xml("[100,1100][980,1200]", texto="Supprimer", clase="android.widget.Button", extra='clickable="true"'))
+    sim = TelefonoSimulado([borrado_otro_paquete])
+    res, err = con_telefono_simulado(sim, lambda: pasos.descartar("instagram", evid, "descarte"))
+    check(isinstance(err, P.PantallaInesperada) and "borrado" in str(err) and sim.toques == [],
+          "B3: un título de borrado bajo otro paquete también hace fallar cerrado")
+
+    # I1: ENVIO_HISTORIA también cuenta por prefijo (contador o coma añadidos al mismo control).
+    for valor in ("Votre story, 2 nouvelles", "Amis proches (12)", "Tu historia · alguien"):
+        check(TX.es_texto_envio(valor), f"I1: ENVIO_HISTORIA por prefijo con separador, es de envío: {valor!r}")
+    for valor in ("Votre storyX", "Amis prochesX"):
+        check(not TX.es_texto_envio(valor), f"I1: sin separador tras el prefijo, no cuenta como envío: {valor!r}")
+
+    # I2: una normalización común (NFKC, sin Cf, espacios colapsados, casefold) usada por es_texto_envio.
+    check(TX.es_texto_envio("​Partager"), "I2: un cero-ancho delante no esconde un envío exacto")
+    check(TX.normalizar("  Partager ") == "partager", f"I2: normalizar colapsa y quita NBSP ({TX.normalizar('  Partager ')!r})")
+
+    # I3: la regla del centro de es_envio no filtra por paquete: un envío de OTRO paquete que contiene el
+    # centro del toque también cuenta (falla cerrado).
+    otro_paquete_envio = jerarquia(
+        nodo_xml("[0,2000][1080,2200]", texto="Vos stories", clase="android.widget.Button",
+                 paquete="com.instagram.barcelona", extra='clickable="true"'),
+        nodo_xml("[500,2050][600,2150]", desc="Flèche", clase="android.widget.ImageView", paquete=PAQUETE_IG))
+    flecha_otro_paquete = T.buscar(otro_paquete_envio, texto="Flèche")
+    check(P.es_envio(otro_paquete_envio, flecha_otro_paquete, PAQUETE_IG),
+          "I3: un control de envío de otro paquete que contiene el centro del toque también cuenta")
+
 
 SECCIONES = [
     seccion_portapapeles,

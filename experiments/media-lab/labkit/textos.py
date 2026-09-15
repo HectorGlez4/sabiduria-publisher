@@ -12,6 +12,7 @@ cada flujo las sustituye por lo que la sonda anotó en findings.md.
 from __future__ import annotations
 
 import re
+import unicodedata
 
 PAQUETES = {"instagram": "com.instagram.android", "threads": "com.instagram.barcelona",
             "facebook": "com.facebook.katana", "edits": "com.instagram.basel"}
@@ -122,15 +123,33 @@ def texto(app: str, clave: str) -> str:
         raise KeyError(f"textos.py no tiene {app}.{clave}") from e
 
 
+def normalizar(valor: str) -> str:
+    """NFKC, sin caracteres de formato invisibles (categoría Unicode `Cf`: ancho cero, marcas de
+    dirección…), espacios colapsados (NBSP y espacio fino incluidos, que `str.split()` ya trata como
+    separador) y en minúsculas. Una sola normalización para comparar textos de envío, títulos de
+    borrado y de descarte contra lo que trae el volcado."""
+    forma = unicodedata.normalize("NFKC", valor or "")
+    sin_invisibles = "".join(c for c in forma if unicodedata.category(c) != "Cf")
+    return " ".join(sin_invisibles.split()).casefold()
+
+
 def es_texto_envio(valor: str) -> bool:
-    """Texto o id de un control que publica: texto exacto de `ENVIO` o `ENVIO_HISTORIA` o id del botón de publicar
-    de Threads (siempre, sin excepciones), o una etiqueta que empieza por uno de `PREFIJOS_ENVIO` y no está en
-    `NO_ENVIO`: las excepciones solo valen para la regla de prefijos. Sin mayúsculas ni espacios de más."""
-    limpio = " ".join((valor or "").split()).casefold()
+    """Texto o id de un control que publica: texto exacto de `ENVIO` o `ENVIO_HISTORIA`, una etiqueta que
+    EMPIEZA por un texto de `ENVIO_HISTORIA` seguido de un separador no alfanumérico («Votre story, 2
+    nouvelles», «Amis proches (12)»: sigue siendo el mismo control de envío con un contador o una coma
+    añadidos), el id del botón de publicar de Threads (siempre, sin excepciones), o una etiqueta que
+    empieza por uno de `PREFIJOS_ENVIO` y no está en `NO_ENVIO` (las excepciones solo valen para la
+    regla de prefijos, nunca para `ENVIO`/`ENVIO_HISTORIA`). Comparación con `normalizar`: NFKC, sin
+    caracteres invisibles, sin mayúsculas ni espacios de más."""
+    limpio = normalizar(valor)
     if not limpio:
         return False
-    if limpio in {e.casefold() for e in ENVIO | ENVIO_HISTORIA} or limpio.rsplit("/", 1)[-1] in ENVIO_IDS:
+    if limpio in {normalizar(e) for e in ENVIO} or limpio.rsplit("/", 1)[-1] in ENVIO_IDS:
         return True
+    for e in ENVIO_HISTORIA:
+        prefijo = normalizar(e)
+        if limpio == prefijo or (limpio.startswith(prefijo) and not limpio[len(prefijo)].isalnum()):
+            return True
     return limpio not in NO_ENVIO and limpio.startswith(PREFIJOS_ENVIO)
 
 

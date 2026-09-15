@@ -222,40 +222,52 @@ def dentro(interior: tuple[int, int, int, int], exterior: tuple[int, int, int, i
 
 
 def _es_de_envio(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
-    if any(p and (n["texto"] == p or n["desc"].startswith(p)) for p in ignorar):
-        return False
-    return (textos.es_texto_envio(n["texto"]) or textos.es_texto_envio(n["desc"])
-            or textos.es_texto_envio(n["resource_id"]) or n["texto"] in textos.NO_TOCAR or n["desc"] in textos.NO_TOCAR)
+    """El propio nodo (sin mirar descendientes) es de envío o está prohibido. `ignorar` (revisión B2) es
+    una lista blanca por CAMPO: solo deja de contar el campo (texto, desc o resource-id) cuyo valor exacto
+    coincide con una etiqueta de `ignorar`, nunca el nodo entero; los demás campos del mismo nodo se
+    siguen mirando (p. ej. un `desc` permitido no oculta un `texto` o un id de envío en el mismo nodo)."""
+    texto, desc, rid = n["texto"], n["desc"], n["resource_id"]
+    envio_texto = texto not in ignorar and textos.es_texto_envio(texto)
+    envio_desc = desc not in ignorar and textos.es_texto_envio(desc)
+    envio_rid = rid not in ignorar and textos.es_texto_envio(rid)
+    prohibido = (texto not in ignorar and texto in textos.NO_TOCAR) or (desc not in ignorar and desc in textos.NO_TOCAR)
+    return envio_texto or envio_desc or envio_rid or prohibido
+
+
+def _subarbol_tiene_envio(indice: int, lista: list[dict], ignorar: tuple[str, ...]) -> bool:
+    """`lista[indice]` o alguno de sus descendientes (los siguientes en el orden de documento con
+    profundidad mayor, hasta el primero que no lo sea) es de envío o está prohibido."""
+    m = lista[indice]
+    if _es_de_envio(m, ignorar):
+        return True
+    nivel = m["profundidad"]
+    for hijo in lista[indice + 1:]:
+        if hijo["profundidad"] <= nivel:
+            break
+        if _es_de_envio(hijo, ignorar):
+            return True
+    return False
 
 
 def es_envio(xml: str, n: dict, paquete: str, ignorar: tuple[str, ...] = ()) -> bool:
-    """Pulsar `n` podría enviar (o tocar un control prohibido): su texto, descripción o id son de envío; o hay un
-    control de envío dentro de sus bounds; o, si no es clickable, lo hay dentro de su antecesor clickable más
-    cercano, que es el que recibe el toque; o un control de envío del paquete contiene su centro. Los nodos cuya
-    etiqueta está en `ignorar` (texto exacto o principio de la content-desc) no cuentan: es la lista blanca de
-    `pasos.tocar`, que no oculta ningún otro control de envío."""
+    """Pulsar `n` podría enviar (o tocar un control prohibido): su texto, descripción o id son de envío; o
+    hay un nodo PULSABLE (de cualquier paquete: revisión I3, falla cerrado) cuyos bounds contienen el
+    centro del toque y que, él mismo o cualquiera de sus descendientes, es de envío (revisión B1: cubre
+    tanto el antecesor clickable que recibe el toque como cualquier otro control pulsable de otra rama del
+    árbol que solape ese punto). `paquete` se mantiene por compatibilidad de firma pero ya no filtra la
+    regla del centro. Los nodos cuya etiqueta está en `ignorar` (revisión B2: por campo, no por nodo
+    entero) no cuentan: es la lista blanca de `pasos.tocar`, que no oculta ningún otro control de envío."""
     if _es_de_envio(n, ignorar):
         return True
     lista = telefono.nodos(xml)
-    clave = ("bounds", "texto", "desc", "resource_id", "clase")
-    i = next((k for k, m in enumerate(lista) if all(m[c] == n[c] for c in clave)), None)
-    zonas = [n["bounds"]]
-    if i is not None and not n["clickable"]:
-        nivel = n["profundidad"]
-        for anterior in reversed(lista[:i]):
-            if anterior["profundidad"] >= nivel:
-                continue
-            nivel = anterior["profundidad"]
-            if anterior["clickable"]:
-                if _es_de_envio(anterior, ignorar):
-                    return True
-                zonas.append(anterior["bounds"])
-                break
     cx, cy = n["centro"]
-    return any(m["package"] == paquete and _es_de_envio(m, ignorar)
-               and (any(dentro(m["bounds"], z) for z in zonas)
-                    or (m["bounds"][0] <= cx < m["bounds"][2] and m["bounds"][1] <= cy < m["bounds"][3]))
-               for m in lista)
+    for k, m in enumerate(lista):
+        if not m["clickable"]:
+            continue
+        x1, y1, x2, y2 = m["bounds"]
+        if x1 <= cx < x2 and y1 <= cy < y2 and _subarbol_tiene_envio(k, lista, ignorar):
+            return True
+    return False
 
 
 def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | None = None,
@@ -277,17 +289,28 @@ def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | 
 
 def boton_descarte(xml: str, app: str) -> dict:
     """El botón de descartar de `app`, solo si el volcado muestra su diálogo de descarte con los
-    textos exactos de `textos.DESCARTE`. Nunca un control de envío."""
+    textos exactos de `textos.DESCARTE`. Nunca un control de envío.
+
+    Revisión B3: compara con `textos.normalizar` (NFKC, sin caracteres invisibles, espacios
+    colapsados, sin mayúsculas), para que un NBSP o un espacio fino antes del «?» no cuelen un
+    título de borrado como si fuera de descarte; y la detección de BORRADO mira cualquier
+    paquete del volcado, no solo el de `app` (falla cerrado también si el título de borrado
+    aparece bajo otro paquete)."""
     paquete = textos.PAQUETES[app]
     tabla = textos.DESCARTE[app]
-    borrado = next((n for n in telefono.buscar_todos(xml, paquete=paquete)
-                    if any(v.strip() in textos.TITULOS_BORRADO for v in (n["texto"], n["desc"]) if v)), None)
+    borrado_norm = {textos.normalizar(t) for t in textos.TITULOS_BORRADO}
+    borrado = next((n for n in telefono.nodos(xml)
+                    if any(v and textos.normalizar(v) in borrado_norm for v in (n["texto"], n["desc"]))), None)
     if borrado is not None:
         raise PantallaInesperada(f"el diálogo parece de borrado ({borrado['texto'] or borrado['desc']!r}), no de descarte: no se pulsa nada")
-    if not any(telefono.buscar(xml, texto=t, paquete=paquete) for t in tabla["titulos"]):
+    titulos_norm = {textos.normalizar(t) for t in tabla["titulos"]}
+    if not any(textos.normalizar(n["texto"]) in titulos_norm or textos.normalizar(n["desc"]) in titulos_norm
+               for n in telefono.buscar_todos(xml, paquete=paquete)):
         raise PantallaInesperada(f"no se ve el diálogo de descarte de {app} {tabla['titulos']}: no se pulsa nada")
     for etiqueta in tabla["botones"]:
-        candidatos = telefono.buscar_todos(xml, texto=etiqueta, paquete=paquete)
+        etiqueta_norm = textos.normalizar(etiqueta)
+        candidatos = [n for n in telefono.buscar_todos(xml, paquete=paquete)
+                      if textos.normalizar(n["texto"]) == etiqueta_norm]
         if candidatos:
             boton = elegir(candidatos, etiqueta)
             if es_envio(xml, boton, paquete):
