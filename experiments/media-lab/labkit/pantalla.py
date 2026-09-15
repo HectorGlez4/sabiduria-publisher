@@ -206,32 +206,24 @@ def describe_emergente(e: dict) -> str:
 
 def pista_idioma(xml: str, app: str) -> str:
     """« (ningún texto conocido…)» si el volcado tiene nodos de `app` pero ninguno de su tabla de
-    textos: la app ha podido cambiar de idioma. Cadena vacía en otro caso."""
+    textos: la app ha podido cambiar de idioma. Cadena vacía en otro caso, y también si `app` no
+    tiene tabla en `textos.TEXTOS` (p. ej. Edits): sin tabla no hay pista fiable que dar."""
+    if app not in textos.TEXTOS:
+        return ""
     propios = telefono.buscar_todos(xml, paquete=textos.PAQUETES[app])
     if not propios:
         return ""
-    conocidos = set(textos.TEXTOS.get(app, {}).values())
+    conocidos = set(textos.TEXTOS[app].values())
     if any(n["texto"] in conocidos or n["desc"] in conocidos for n in propios):
         return ""
     return f" (ningún texto conocido de {app} en {textos.IDIOMAS.get(app, '?')}: ¿cambió el idioma de la app?)"
 
 
-def dentro(interior: tuple[int, int, int, int], exterior: tuple[int, int, int, int]) -> bool:
-    return (interior[0] >= exterior[0] and interior[1] >= exterior[1]
-            and interior[2] <= exterior[2] and interior[3] <= exterior[3])
-
-
-def _es_de_envio(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
-    """El propio nodo (sin mirar descendientes) es de envío o está prohibido. `ignorar` (revisión B2, I-a)
-    es una lista blanca por CAMPO: solo deja de contar el campo (texto, desc o resource-id) cuyo valor
-    coincide con una etiqueta de `ignorar` vía `textos.coincide_o_prefijo` (exacto o por prefijo seguido
-    de separador, la misma regla que `ENVIO_HISTORIA`: exime «Tu historia, No vista» con solo «Tu
-    historia» en la lista blanca), nunca el nodo entero; los demás campos del mismo nodo se siguen
-    mirando (p. ej. un `desc` permitido no oculta un `texto` o un id de envío en el mismo nodo). La
-    etiqueta se exime en cualquier nodo cuyo campo coincida, no solo en el nodo tocado: `ignorar` no
-    oculta ningún OTRO control de envío, pero si esa misma etiqueta aparece en más de un nodo del
-    volcado, se exime en todos. `textos.es_no_tocar` (revisión I-b) también normaliza antes de comparar
-    con `NO_TOCAR`."""
+def _bloquea_toque(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
+    """El propio nodo (sin mirar descendientes) es de envío o está prohibido: su texto, descripción o
+    id son de envío, o coincide con `NO_TOCAR`. `ignorar` exime, CAMPO a campo (texto, desc,
+    resource-id), el valor que coincida con una etiqueta de la lista vía `textos.coincide_o_prefijo`
+    (exacto o por prefijo seguido de separador); los demás campos del mismo nodo se siguen mirando."""
     texto, desc, rid = n["texto"], n["desc"], n["resource_id"]
     permitido_texto = textos.coincide_o_prefijo(texto, ignorar)
     permitido_desc = textos.coincide_o_prefijo(desc, ignorar)
@@ -243,41 +235,31 @@ def _es_de_envio(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     return envio_texto or envio_desc or envio_rid or prohibido
 
 
-def _subarbol_tiene_envio(indice: int, lista: list[dict], ignorar: tuple[str, ...]) -> bool:
+def _subarbol_bloquea(indice: int, lista: list[dict], ignorar: tuple[str, ...]) -> bool:
     """`lista[indice]` o alguno de sus descendientes (los siguientes en el orden de documento con
-    profundidad mayor, hasta el primero que no lo sea) es de envío o está prohibido."""
+    profundidad mayor, hasta el primero que no lo sea) bloquea el toque."""
     m = lista[indice]
-    if _es_de_envio(m, ignorar):
+    if _bloquea_toque(m, ignorar):
         return True
     nivel = m["profundidad"]
     for hijo in lista[indice + 1:]:
         if hijo["profundidad"] <= nivel:
             break
-        if _es_de_envio(hijo, ignorar):
+        if _bloquea_toque(hijo, ignorar):
             return True
     return False
 
 
-def es_envio(xml: str, n: dict, paquete: str, ignorar: tuple[str, ...] = ()) -> bool:
-    """Pulsar `n` podría enviar (o tocar un control prohibido). Cuenta como envío CUALQUIERA de:
-
-    (a) el propio `n` es de envío (su texto, descripción o id, o está en `NO_TOCAR`);
-    (b) cualquier nodo del volcado (de cualquier paquete: revisión I3, falla cerrado; pulsable o no:
-        revisión R1, corrige un hueco de la revisión B1 que dejaba de bloquear un nodo de envío NO
-        pulsable cuyas bounds contenían el centro pero que no tenía ningún antecesor pulsable) cuyas
-        bounds contienen el centro del toque y que, ÉL MISMO, es de envío;
-    (c) cualquier nodo PULSABLE cuyas bounds contienen el centro del toque y que, alguno de sus
-        DESCENDIENTES (aunque el propio nodo pulsable no lo sea), es de envío (revisión B1: cubre tanto
-        el antecesor clickable que recibe el toque como cualquier otro contenedor pulsable de otra rama
-        del árbol que solape ese punto, p. ej. un botón de pantalla completa sin etiqueta propia que
-        envuelve un «Partager»: eso falla cerrado a propósito, es lo deseado).
-
-    `paquete` se mantiene por compatibilidad de firma pero ya no filtra ninguna de las dos reglas del
-    centro. Los nodos cuya etiqueta está en `ignorar` (revisión B2, I-a: por campo y con la misma regla
-    de prefijo que `ENVIO_HISTORIA`, no por nodo entero) no cuentan: es la lista blanca de `pasos.tocar`,
-    que no oculta ningún otro control de envío (aunque si esa etiqueta aparece en más de un nodo del
-    volcado, se exime en todos, no solo en el nodo tocado)."""
-    if _es_de_envio(n, ignorar):
+def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
+    """Pulsar `n` podría enviar (o tocar un control prohibido) si: `n` mismo bloquea; algún nodo del
+    volcado (de cualquier paquete) cuyas bounds contienen el centro del toque bloquea; o algún nodo
+    PULSABLE cuyas bounds contienen el centro tiene un descendiente que bloquea (cubre tanto el
+    antecesor clickable que recibe el toque como cualquier otro contenedor pulsable de otra rama del
+    árbol que solape ese punto: un botón de pantalla completa sin etiqueta propia que envuelve un
+    «Partager» bloquea cualquier toque dentro, a propósito). `ignorar` exime esa etiqueta, campo a
+    campo, en cualquier nodo del volcado que la tenga (no solo en `n`), sin ocultar ningún otro
+    control de envío."""
+    if _bloquea_toque(n, ignorar):
         return True
     lista = telefono.nodos(xml)
     cx, cy = n["centro"]
@@ -285,9 +267,9 @@ def es_envio(xml: str, n: dict, paquete: str, ignorar: tuple[str, ...] = ()) -> 
         x1, y1, x2, y2 = m["bounds"]
         if not (x1 <= cx < x2 and y1 <= cy < y2):
             continue
-        if _es_de_envio(m, ignorar):
+        if _bloquea_toque(m, ignorar):
             return True
-        if m["clickable"] and _subarbol_tiene_envio(k, lista, ignorar):
+        if m["clickable"] and _subarbol_bloquea(k, lista, ignorar):
             return True
     return False
 
@@ -304,40 +286,35 @@ def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | 
         or (resource_id is not None and n["resource_id"] and rid(n["resource_id"]) == rid(resource_id)))]
     if len(lista) != 1:
         raise PantallaInesperada(f"la sonda solo toca un nodo único: {len(lista)} coincidencias")
-    if es_envio(xml, lista[0], paquete):
+    if es_envio(xml, lista[0]):
         raise PantallaInesperada("la sonda no pulsa controles de envío ni prohibidos")
     return lista[0]
 
 
 def boton_descarte(xml: str, app: str) -> dict:
-    """El botón de descartar de `app`, solo si el volcado muestra su diálogo de descarte con los
-    textos exactos de `textos.DESCARTE`. Nunca un control de envío.
-
-    Revisión B3: compara con `textos.normalizar_titulo` (NFKC, sin caracteres invisibles ni comillas,
-    espacios colapsados, sin espacio antes de «?», sin mayúsculas), para que un NBSP o un espacio fino
-    antes del «?», o unas comillas tipográficas distintas, no cuelen un título de borrado como si
-    fuera de descarte (menor 1 de la re-revisión de `95a421c`: «Supprimer la publication?»,
-    «Supprimer la « publication » ?» y «Delete "post"?» se reconocen igual); y la detección de
-    BORRADO mira cualquier paquete del volcado, no solo el de `app` (falla cerrado también si el
-    título de borrado aparece bajo otro paquete)."""
+    """El botón de descartar de `app`, solo si el volcado muestra su diálogo de descarte exacto
+    (comparado con `textos.normalizar_titulo`, así que las comillas y el espacio antes de «?» no
+    importan) y ningún título de `textos.TITULOS_BORRADO` en CUALQUIER paquete del volcado, no solo
+    el de `app`. Nunca un control de envío. Los botones del diálogo se comparan solo por `texto`
+    (nunca `desc`) a propósito: los textos de `DESCARTE` son literales de botón, no descripciones."""
     paquete = textos.PAQUETES[app]
     tabla = textos.DESCARTE[app]
-    borrado_norm = {textos.normalizar_titulo(t) for t in textos.TITULOS_BORRADO}
+    nodos_paquete = telefono.buscar_todos(xml, paquete=paquete)
     borrado = next((n for n in telefono.nodos(xml)
-                    if any(v and textos.normalizar_titulo(v) in borrado_norm for v in (n["texto"], n["desc"]))), None)
+                    if any(v and textos.normalizar_titulo(v) in textos._TITULOS_BORRADO_NORM
+                           for v in (n["texto"], n["desc"]))), None)
     if borrado is not None:
         raise PantallaInesperada(f"el diálogo parece de borrado ({borrado['texto'] or borrado['desc']!r}), no de descarte: no se pulsa nada")
-    titulos_norm = {textos.normalizar_titulo(t) for t in tabla["titulos"]}
+    titulos_norm = textos._DESCARTE_TITULOS_NORM[app]
     if not any(textos.normalizar_titulo(n["texto"]) in titulos_norm or textos.normalizar_titulo(n["desc"]) in titulos_norm
-               for n in telefono.buscar_todos(xml, paquete=paquete)):
+               for n in nodos_paquete):
         raise PantallaInesperada(f"no se ve el diálogo de descarte de {app} {tabla['titulos']}: no se pulsa nada")
     for etiqueta in tabla["botones"]:
         etiqueta_norm = textos.normalizar(etiqueta)
-        candidatos = [n for n in telefono.buscar_todos(xml, paquete=paquete)
-                      if textos.normalizar(n["texto"]) == etiqueta_norm]
+        candidatos = [n for n in nodos_paquete if textos.normalizar(n["texto"]) == etiqueta_norm]
         if candidatos:
             boton = elegir(candidatos, etiqueta)
-            if es_envio(xml, boton, paquete):
+            if es_envio(xml, boton):
                 raise PantallaInesperada(f"el botón {etiqueta!r} del diálogo parece de envío: no se pulsa")
             return boton
     raise PantallaInesperada(f"el diálogo de descarte de {app} no tiene {tabla['botones']}")

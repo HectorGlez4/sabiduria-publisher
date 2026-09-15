@@ -3934,15 +3934,25 @@ def seccion_textos_y_descarte() -> None:
         check(TX.es_texto_envio(valor), f"I-5: por prefijo, es de envío: {valor!r}")
     for valor in ("Partager à", "partager  sur Facebook", "Compartir en Instagram"):
         check(not TX.es_texto_envio(valor), f"I-5: excepción explícita NO_ENVIO, no es de envío: {valor!r}")
-    no_envio = TX.NO_ENVIO
+    no_envio, no_envio_norm = TX.NO_ENVIO, TX._NO_ENVIO_NORM
     try:
         TX.NO_ENVIO = no_envio | {"partager", "vos stories", "publier le fil"}
+        TX._NO_ENVIO_NORM = frozenset(map(TX.normalizar, TX.NO_ENVIO))  # NO_ENVIO se lee ya normalizado
         exactos = TX.es_texto_envio("Partager") and TX.es_texto_envio("Vos stories")
         prefijo_exceptuado = not TX.es_texto_envio("Publier le fil")
     finally:
-        TX.NO_ENVIO = no_envio
+        TX.NO_ENVIO, TX._NO_ENVIO_NORM = no_envio, no_envio_norm
     check(exactos and prefijo_exceptuado,
           "I-5: NO_ENVIO solo exceptúa de la regla de prefijos; nunca anula un envío exacto de ENVIO o ENVIO_HISTORIA")
+    try:
+        TX.NO_ENVIO = no_envio - {"compartir en instagram"}
+        TX._NO_ENVIO_NORM = frozenset(map(TX.normalizar, TX.NO_ENVIO))
+        vuelve_a_bloquear = TX.es_texto_envio("Compartir en Instagram")
+    finally:
+        TX.NO_ENVIO, TX._NO_ENVIO_NORM = no_envio, no_envio_norm
+    check(vuelve_a_bloquear,
+          "quitar una excepción de NO_ENVIO (y su versión normalizada) vuelve a bloquear: confirma que "
+          "es_texto_envio lee el conjunto normalizado vigente, no uno obsoleto calculado una sola vez")
     check(TX.permitido("Profil", "instagram")
           and TX.permitido("Sélectionné Miniature de la photo du 14 septembre 2026 10:39", "instagram")
           and TX.permitido("#citasdiarias", "instagram") and TX.permitido("3 min", "instagram")
@@ -3958,6 +3968,9 @@ def seccion_textos_y_descarte() -> None:
     check("idioma" in P.pista_idioma(ingles, "instagram") and P.pista_idioma(xml_perfil(), "instagram") == "",
           "un perfil de Instagram en inglés da pista de idioma; en francés no")
     check(P.pista_idioma(ingles, "facebook") == "", "sin nodos de la app no hay pista")
+    xml_edits = jerarquia(nodo_xml("[0,0][200,100]", texto="Anything", paquete="com.instagram.basel"))
+    check(P.pista_idioma(xml_edits, "edits") == "",
+          "menor 6: sin tabla de textos en textos.TEXTOS (p. ej. edits) no hay pista falsa, aunque tenga nodos propios")
     sim = TelefonoSimulado([ingles])
     res, err = con_telefono_simulado(sim, lambda: pasos.esperar_que(
         lambda x: T.buscar(x, texto="Profil") is not None, "Profil", app="instagram"))
@@ -4006,7 +4019,7 @@ def seccion_textos_y_descarte() -> None:
     solapado = jerarquia(nodo_xml("[0,2000][1080,2200]", texto="Vos stories", clase="android.widget.Button", extra='clickable="true"'),
                          nodo_xml("[500,2050][600,2150]", desc="Flèche", clase="android.widget.ImageView"))
     flecha = T.buscar(solapado, texto="Flèche")
-    check(P.es_envio(solapado, flecha, PAQUETE_IG), "C1: un nodo cuyo centro cae dentro de «Vos stories» cuenta como envío")
+    check(P.es_envio(solapado, flecha), "C1: un nodo cuyo centro cae dentro de «Vos stories» cuenta como envío")
     try:
         P.nodo_sonda(solapado, PAQUETE_IG, texto="Vos stories")
         ok = False
@@ -4128,7 +4141,7 @@ def seccion_textos_y_descarte() -> None:
                  paquete="com.instagram.barcelona", extra='clickable="true"'),
         nodo_xml("[500,2050][600,2150]", desc="Flèche", clase="android.widget.ImageView", paquete=PAQUETE_IG))
     flecha_otro_paquete = T.buscar(otro_paquete_envio, texto="Flèche")
-    check(P.es_envio(otro_paquete_envio, flecha_otro_paquete, PAQUETE_IG),
+    check(P.es_envio(otro_paquete_envio, flecha_otro_paquete),
           "I3: un control de envío de otro paquete que contiene el centro del toque también cuenta")
 
     # --- Re-revisión de 95a421c: R1 (bloqueante), I-a e I-b ---
@@ -4141,7 +4154,7 @@ def seccion_textos_y_descarte() -> None:
     photo = T.buscar(sonda_photo_partager, texto="Photo")
     check(photo["centro"][1] == 2010 and 2000 <= photo["centro"][1] < 2200,
           f"R1: el centro de «Photo» cae dentro de las bounds de «Partager» ({photo['centro']})")
-    check(P.es_envio(sonda_photo_partager, photo, PAQUETE_IG),
+    check(P.es_envio(sonda_photo_partager, photo),
           "R1: «Partager» no pulsable sin antecesor pulsable, con el centro de «Photo» dentro de sus bounds, bloquea")
     sim = TelefonoSimulado([sonda_photo_partager])
     res, err = con_telefono_simulado(sim, lambda: pasos.tocar(photo, sonda_photo_partager, PAQUETE_IG))
@@ -4153,7 +4166,7 @@ def seccion_textos_y_descarte() -> None:
                  paquete="com.facebook.katana"),
         nodo_xml("[0,2000][1080,2200]", desc="Publicar", clase="android.widget.TextView", paquete="com.facebook.katana"))
     photo_fb = T.buscar(sonda_photo_publicar_fb, texto="Photo")
-    check(P.es_envio(sonda_photo_publicar_fb, photo_fb, "com.facebook.katana"),
+    check(P.es_envio(sonda_photo_publicar_fb, photo_fb),
           "R1: lo mismo con desc=«Publicar» de Facebook, no pulsable, bloquea el toque de «Photo»")
 
     # I-a: `ignorar`/`permitir` compara con la misma regla de prefijo que ENVIO_HISTORIA (I1), no exacto:
@@ -4210,8 +4223,24 @@ def seccion_textos_y_descarte() -> None:
         nodo_xml("[0,0][1080,2340]", clase="android.widget.Button", extra='clickable="true"',
                  hijos=nodo_xml("[480,2080][600,2120]", texto="Partager") + nodo_xml("[10,10][60,60]", texto="Lejos")))
     lejos = T.buscar(xml_pantalla_completa, texto="Lejos")
-    check(P.es_envio(xml_pantalla_completa, lejos, PAQUETE_IG),
+    check(P.es_envio(xml_pantalla_completa, lejos),
           "menor 2: un contenedor pulsable de pantalla completa con un «Partager» dentro bloquea cualquier toque, aunque esté lejos (falla cerrado)")
+
+    # Importante 1: `permitir`/`ignorar` como `str` se rechaza (cada carácter contaría como candidato).
+    try:
+        TX.coincide_o_prefijo("Votre story", "Votre story")
+        ok = False
+    except TypeError:
+        ok = True
+    check(ok, "importante 1: pantalla.es_envio (vía coincide_o_prefijo) rechaza `ignorar` como str")
+    votre_story = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView",
+                                     extra='clickable="true"'))
+    n_votre_story = T.buscar(votre_story, texto="Votre story")
+    sim = TelefonoSimulado([votre_story])
+    res, err = con_telefono_simulado(
+        sim, lambda: pasos.tocar(n_votre_story, votre_story, PAQUETE_IG, permitir="Votre story"))
+    check(isinstance(err, TypeError) and sim.toques == [],
+          f"importante 1: pasos.tocar(..., permitir='Votre story') lanza TypeError y no toca nada ({err!r})")
 
 
 SECCIONES = [

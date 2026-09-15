@@ -65,7 +65,8 @@ ENVIO = frozenset({"Partager", "Publier", "Publicar", "Compartir", "Compartir hi
                    "Post", "Share", "Publish"})
 ENVIO_IDS = frozenset({"new_thread_screen_post_button"})
 # Controles que publican una Story directamente desde el editor o el destino: son envío como los de
-# arriba (la sonda nunca los pulsa y `pasos.tocar` tampoco, salvo la lista blanca de `_visor_propio`).
+# arriba (la sonda nunca los pulsa y `pasos.tocar` tampoco, salvo que la etiqueta esté en la lista
+# blanca del visor propio de la fase 2).
 ENVIO_HISTORIA = frozenset({
     "Votre story", "Vos stories", "Amis proches", "Envoyer à", "Partager sur votre story",
     "Tu historia", "Tus historias", "Compartir en tu historia", "Mejores amigos", "Enviar a",
@@ -137,23 +138,31 @@ _COMILLAS = "«»“”‘’\"'"
 
 
 def normalizar_titulo(valor: str) -> str:
-    """`normalizar` y, además, sin comillas (rectas, tipográficas o angulares: «» “” ‘’ "') ni espacio
-    antes de un «?» de cierre: para comparar títulos de diálogo, que pueden variar en el tipo de
-    comilla o llevar un espacio antes del interrogante sin dejar de ser el mismo título
-    («Supprimer la publication?», «Supprimer la « publication » ?», «Delete "post"?»)."""
-    forma = unicodedata.normalize("NFKC", valor or "")
-    limpio = "".join(c for c in forma if unicodedata.category(c) != "Cf" and c not in _COMILLAS)
-    colapsado = " ".join(limpio.split()).casefold()
-    return re.sub(r"\s+\?", "?", colapsado)
+    """`normalizar`, y además sin comillas (rectas, tipográficas o angulares: «» “” ‘’ "') ni espacio
+    antes de un «?» de cierre: para comparar títulos de diálogo («Supprimer la publication?»,
+    «Supprimer la « publication » ?» y «Delete "post"?» son el mismo título)."""
+    sin_comillas = "".join(c for c in (valor or "") if c not in _COMILLAS)
+    return re.sub(r"\s+\?", "?", normalizar(sin_comillas))
+
+
+# Formas normalizadas de las constantes de arriba, precalculadas una vez al importar (no en cada
+# llamada). `permitir`/`ignorar`, al venir de fuera y cambiar en cada llamada, se normaliza siempre
+# en el momento, nunca aquí.
+_ENVIO_NORM = frozenset(normalizar(e) for e in ENVIO)
+_NO_TOCAR_NORM = frozenset(normalizar(t) for t in NO_TOCAR)
+_NO_ENVIO_NORM = frozenset(map(normalizar, NO_ENVIO))
+_TITULOS_BORRADO_NORM = frozenset(normalizar_titulo(t) for t in TITULOS_BORRADO)
+_DESCARTE_TITULOS_NORM = {app: frozenset(normalizar_titulo(t) for t in tabla["titulos"])
+                          for app, tabla in DESCARTE.items()}
 
 
 def coincide_o_prefijo(valor: str, candidatos) -> bool:
-    """`valor` coincide, tras `normalizar`, con alguno de `candidatos` (también normalizados): exacto, o
-    por prefijo seguido de un separador no alfanumérico («Votre story, 2 nouvelles», «Amis proches (12)»,
-    «Tu historia, No vista»: sigue siendo el mismo control con un contador, una coma o un «no vista»
-    añadidos). La misma regla la usan `es_texto_envio` para `ENVIO_HISTORIA` (I1) y `pantalla._es_de_envio`
-    para `ignorar`/`permitir` (revisión I-a: antes comparaba exacto y no exceptuaba «Tu historia, No
-    vista» con solo «Tu historia» en la lista blanca)."""
+    """`valor` coincide, tras `normalizar`, con alguno de `candidatos` (normalizados): exacto, o por
+    prefijo seguido de un separador no alfanumérico («Votre story, 2 nouvelles» coincide con «Votre
+    story»). `candidatos` debe ser una colección de etiquetas, nunca un `str` ni un `bytes`: si lo
+    fuera, cada carácter contaría como un candidato distinto."""
+    if isinstance(candidatos, (str, bytes)):
+        raise TypeError("candidatos debe ser una colección de etiquetas, no una cadena")
     limpio = normalizar(valor)
     if not limpio:
         return False
@@ -167,29 +176,26 @@ def coincide_o_prefijo(valor: str, candidatos) -> bool:
 
 
 def es_no_tocar(valor: str) -> bool:
-    """`valor` (normalizado) es exactamente uno de `NO_TOCAR` (revisión I-b: antes se comparaba sin
-    normalizar, así que «ANULAR», «Anular » o un «Anular» con un carácter invisible delante no se
-    bloqueaban)."""
+    """`valor` (normalizado) es exactamente uno de `NO_TOCAR`."""
     limpio = normalizar(valor)
-    return bool(limpio) and limpio in {normalizar(t) for t in NO_TOCAR}
+    return bool(limpio) and limpio in _NO_TOCAR_NORM
 
 
 def es_texto_envio(valor: str) -> bool:
-    """Texto o id de un control que publica: texto exacto de `ENVIO` o `ENVIO_HISTORIA`, una etiqueta que
-    EMPIEZA por un texto de `ENVIO_HISTORIA` seguido de un separador no alfanumérico («Votre story, 2
-    nouvelles», «Amis proches (12)»: sigue siendo el mismo control de envío con un contador o una coma
-    añadidos), el id del botón de publicar de Threads (siempre, sin excepciones), o una etiqueta que
-    empieza por uno de `PREFIJOS_ENVIO` y no está en `NO_ENVIO` (las excepciones solo valen para la
-    regla de prefijos, nunca para `ENVIO`/`ENVIO_HISTORIA`). Comparación con `normalizar`: NFKC, sin
-    caracteres invisibles, sin mayúsculas ni espacios de más."""
+    """Texto o id de un control que publica: texto exacto de `ENVIO` o `ENVIO_HISTORIA`, una etiqueta
+    que EMPIEZA por un texto de `ENVIO_HISTORIA` seguido de un separador no alfanumérico («Votre
+    story, 2 nouvelles»: sigue siendo el mismo control con un contador o una coma añadidos), el id del
+    botón de publicar de Threads (siempre, sin excepciones), o una etiqueta que empieza por uno de
+    `PREFIJOS_ENVIO` y no está en `NO_ENVIO` (las excepciones solo valen para la regla de prefijos,
+    nunca para `ENVIO`/`ENVIO_HISTORIA`). Comparación con `normalizar`."""
     limpio = normalizar(valor)
     if not limpio:
         return False
-    if limpio in {normalizar(e) for e in ENVIO} or limpio.rsplit("/", 1)[-1] in ENVIO_IDS:
+    if limpio in _ENVIO_NORM or limpio.rsplit("/", 1)[-1] in ENVIO_IDS:
         return True
     if coincide_o_prefijo(valor, ENVIO_HISTORIA):
         return True
-    return limpio not in NO_ENVIO and limpio.startswith(PREFIJOS_ENVIO)
+    return limpio not in _NO_ENVIO_NORM and limpio.startswith(PREFIJOS_ENVIO)
 
 
 def conocidos(app: str) -> set[str]:
