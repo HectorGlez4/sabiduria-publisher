@@ -4357,6 +4357,94 @@ def seccion_recetas_y_seleccion() -> None:
               "receta_temporal restaura el valor previo en TODAS y en BORRADORES")
 
 
+def rechazo(res, fragmento: str, tipo: str = "ArgumentoNoValido") -> bool:
+    """`res` = (código, datos, stderr) de lab.py: salió con 2, con `tipo` y un error que contiene `fragmento`."""
+    if res is None:
+        return False
+    codigo, datos, _ = res
+    return codigo == 2 and campo(datos, "tipo") == tipo and fragmento in str(campo(datos, "error") or "")
+
+
+CELDAS_FASE2 = [
+    {"cell_id": "C-IG-TEL", "platform": "instagram", "native_format": "feed_single_image",
+     "publishing_route": "android_native", "status": "planned"},
+    {"cell_id": "C-TH-TEL", "platform": "threads", "native_format": "feed_video",
+     "publishing_route": "android_native", "status": "planned"},
+    {"cell_id": "C-FB-API", "platform": "facebook", "native_format": "feed_single_image",
+     "publishing_route": "api", "status": "planned"},
+]
+
+
+def entorno_lab_fase2():
+    """Context manager: lab.py en proceso sobre una carpeta temporal con CELDAS_FASE2."""
+    import json
+    import tempfile
+
+    @contextlib.contextmanager
+    def gestor():
+        with tempfile.TemporaryDirectory() as d:
+            raiz = pathlib.Path(d)
+            (raiz / "encargos").mkdir()
+            (raiz / "coverage.json").write_text(json.dumps({"cells": CELDAS_FASE2}), encoding="utf-8")
+            (raiz / "prompt.txt").write_text("Un astrolabio de latón", encoding="utf-8")
+            with LabAislado(raiz) as lab:
+                yield lab, raiz
+    return gestor()
+
+
+def seccion_cli_fase2() -> None:
+    print("\n16. Fase 2: lab.py receta, atrás por app, descarte y borradores")
+    from labkit import pasos, recetas as RC
+
+    recibido: dict = {}
+    atras_original, descartar_original = pasos.atras, pasos.descartar
+    par_th = ("threads", "feed_video")
+    try:
+        pasos.atras = lambda paquete, ev, nombre: recibido.update(atras=paquete) or ev / f"{nombre}.png"
+        pasos.descartar = lambda app, ev, nombre: recibido.update(descartar=app) or ev / f"{nombre}.png"
+        with entorno_lab_fase2() as (lab, raiz):
+            codigo, datos, _ = lab("receta", "--celda", "C-IG-TEL")
+            preparar = campo(datos, "preparar") or []
+            check(codigo == 0 and campo(datos, "red") == "instagram" and campo(datos, "borrador") is False
+                  and preparar and preparar[0]["args"][0] == "telefono-subir",
+                  f"receta de una celda de teléfono implementada ({codigo}, {datos and list(datos)})")
+            codigo, datos, _ = lab("receta", "--celda", "C-FB-API")
+            check(rechazo((codigo, datos, _), "solo de teléfono"), f"receta rechaza una celda de API ({codigo}, {datos})")
+            codigo, datos, _ = lab("receta", "--celda", "C-TH-TEL")
+            check(rechazo((codigo, datos, _), "no está implementado"),
+                  f"receta rechaza un par sin receta ({codigo}, {datos})")
+            codigo, datos, _ = lab("receta", "--celda", "C-NADA")
+            check(rechazo((codigo, datos, _), "no está en coverage.json"), "receta rechaza una celda que no existe")
+
+            codigo, datos, _ = lab("telefono-atras", "--app", "threads", "--run", "RUN-1", "--nombre", "salida-1")
+            check(codigo == 0 and recibido.get("atras") == "com.instagram.barcelona"
+                  and str(campo(datos, "captura")).endswith("RUN-1/salida-1.png"),
+                  f"telefono-atras --app threads usa el paquete de Threads ({codigo}, {recibido})")
+            check(rechazo(lab("telefono-atras", "--app", "tiktok", "--run", "RUN-1", "--nombre", "s"), "--app"),
+                  "telefono-atras rechaza una app sin flujo")
+            codigo, datos, _ = lab("telefono-descartar", "--app", "facebook", "--run", "RUN-1", "--nombre", "descarte")
+            check(codigo == 0 and recibido.get("descartar") == "facebook",
+                  f"telefono-descartar pasa la app a pasos.descartar ({codigo}, {recibido})")
+            check(rechazo(lab("telefono-descartar", "--run", "RUN-1", "--nombre", "descarte"), "--app"),
+                  "telefono-descartar exige --app")
+
+            nuevo = ("encargo-nuevo", "--cell", "C-TH-TEL", "--family", "LAB-CLI-002", "--brief", "b.md",
+                     "--formato", '{"ancho":1080,"alto":1350}', "--prompt-file", raiz / "prompt.txt")
+            codigo, datos, _ = lab(*nuevo)
+            check(rechazo((codigo, datos, _), "no está implementado"),
+                  f"encargo-nuevo rechaza una celda de teléfono sin receta ({codigo})")
+            with receta_temporal(par_th, RC.TODAS[("instagram", "feed_single_image")]):
+                codigo, datos, _ = lab(*nuevo, "--borrador")
+                check(codigo == 0 and campo(datos, "coverage_cell_ids") == ["C-TH-TEL"],
+                      f"encargo-nuevo --borrador acepta una celda de un borrador ({codigo}, {datos})")
+                codigo, datos, _ = lab("receta", "--celda", "C-TH-TEL", "--borrador")
+                check(codigo == 0 and campo(datos, "borrador") is True, f"receta --borrador marca el borrador ({codigo})")
+                check(rechazo(lab("receta", "--celda", "C-TH-TEL"), "--borrador"),
+                      "sin --borrador la receta de un borrador no sale")
+    finally:
+        pasos.atras, pasos.descartar = atras_original, descartar_original
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -4376,6 +4464,7 @@ SECCIONES = [
     seccion_pasos_comunes,
     seccion_textos_y_descarte,
     seccion_recetas_y_seleccion,
+    seccion_cli_fase2,
 ]
 
 

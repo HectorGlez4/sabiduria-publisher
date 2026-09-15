@@ -37,7 +37,7 @@ ROOT = LAB.parents[1]
 sys.path.insert(0, str(LAB))
 sys.path.insert(0, str(ROOT / "src" / "render"))
 
-from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, metricas, seleccion, turnos  # noqa: E402
+from labkit import cerrojo, codex_rescate, colision, encargos, guardia, manifiesto, metricas, recetas, seleccion, textos, turnos  # noqa: E402
 
 ENCARGOS = Path(os.environ.get("LAB_ENCARGOS_DIR", LAB / "encargos"))
 COBERTURA = Path(os.environ.get("LAB_COVERAGE", LAB / "coverage.json"))
@@ -264,7 +264,7 @@ def cmd_turno(a) -> int:
 
 # ── encargos (Claude) ───────────────────────────────────────────────────────
 
-def _comprobar_celdas(ids: list[str], todos: list[dict]) -> None:
+def _comprobar_celdas(ids: list[str], todos: list[dict], borradores: bool = False) -> None:
     """Las celdas existen, se pueden publicar, comparten formato y no tienen ya un encargo en curso."""
     celdas = {c["cell_id"]: c for c in json.loads(COBERTURA.read_text(encoding="utf-8"))["cells"]}
     problemas = []
@@ -277,7 +277,7 @@ def _comprobar_celdas(ids: list[str], todos: list[dict]) -> None:
             continue
         if c["status"] not in seleccion.ESTADOS_ELEGIBLES:
             problemas.append(f"{cid} está en {c['status']}")
-        if not seleccion._ruta_implementada(c):
+        if not seleccion._ruta_implementada(c, borradores):
             problemas.append(f"{cid}: {c['platform']}/{c['native_format']} por {c['publishing_route']} no está implementado")
     formatos = sorted({celdas[cid]["native_format"] for cid in ids if cid in celdas})
     if len(formatos) > 1:
@@ -294,7 +294,7 @@ def cmd_encargo_nuevo(a) -> int:
     t = ahora()
     todos = [e for _, e in encargos.listar(ENCARGOS)]
     _exigir(encargos.en_cola(todos) < encargos.MAX_EN_COLA, f"ya hay {encargos.MAX_EN_COLA} encargos en cola")
-    _comprobar_celdas(a.cell, todos)
+    _comprobar_celdas(a.cell, todos, a.borrador)
     enc = encargos.nuevo(
         encargos.siguiente_id(ENCARGOS, t), coverage_cell_ids=a.cell, family_id=a.family,
         brief_path=a.brief, do_not_use=a.do_not_use or [], formato=json.loads(a.formato),
@@ -338,6 +338,22 @@ def cmd_seleccionar(a) -> int:
     cov = json.loads(COBERTURA.read_text(encoding="utf-8"))
     emitir(seleccion.elegir(cov["cells"], [e for _, e in encargos.listar(ENCARGOS)],
                             max_celdas=a.max, telefono_listo=not a.sin_telefono))
+    return 0
+
+
+def cmd_receta(a) -> int:
+    celdas = {c["cell_id"]: c for c in json.loads(COBERTURA.read_text(encoding="utf-8"))["cells"]}
+    c = celdas.get(a.celda)
+    _exigir(c is not None, f"{a.celda} no está en coverage.json")
+    _exigir(c["publishing_route"] == "android_native",
+            f"{a.celda} va por {c['publishing_route']}: las recetas son solo de teléfono")
+    try:
+        receta = recetas.para(c["platform"], c["native_format"], borrador=a.borrador)
+    except recetas.RecetaNoDisponible as e:
+        raise ArgumentoNoValido(str(e)) from e
+    emitir({"celda": a.celda, "red": c["platform"], "formato": c["native_format"],
+            "borrador": (c["platform"], c["native_format"]) not in recetas.RECETAS,
+            **recetas.renderizar(receta)})
     return 0
 
 
@@ -814,10 +830,10 @@ def _evidencia(run_id: str) -> Path:
 def _paso_telefono(ev: Path, nombre: str, fn, codigo_de=lambda res: 0) -> int:
     """Ejecuta un paso de teléfono. Ante una pantalla inesperada, un error de adb o de disco
     intenta una captura `nombre`.png, emite JSON y sale con 4; nunca reintenta nada."""
-    from labkit import instagram_feed, telefono
+    from labkit import pantalla, telefono
     try:
         res = fn()
-    except (instagram_feed.PantallaInesperada, telefono.TelefonoError, OSError) as e:
+    except (pantalla.PantallaInesperada, telefono.TelefonoError, OSError) as e:
         try:
             captura = telefono.captura(ev / f"{nombre}.png")
         except (telefono.TelefonoError, OSError):
@@ -847,10 +863,20 @@ def cmd_telefono_captura(a) -> int:
 
 
 def cmd_telefono_atras(a) -> int:
-    from labkit import instagram_feed
+    from labkit import instagram_feed, pasos
+    ev = _evidencia(a.run)
+    if a.app == "instagram":
+        return _paso_telefono(ev, f"{a.nombre}-inesperada",
+                              lambda: {"captura": str(instagram_feed.atras(ev, a.nombre))})
+    return _paso_telefono(ev, f"{a.nombre}-inesperada",
+                          lambda: {"captura": str(pasos.atras(textos.PAQUETES[a.app], ev, a.nombre))})
+
+
+def cmd_telefono_descartar(a) -> int:
+    from labkit import pasos
     ev = _evidencia(a.run)
     return _paso_telefono(ev, f"{a.nombre}-inesperada",
-                          lambda: {"captura": str(instagram_feed.atras(ev, a.nombre))})
+                          lambda: {"captura": str(pasos.descartar(a.app, ev, a.nombre))})
 
 
 def cmd_ig(a) -> int:
@@ -920,6 +946,8 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--prompt-file", required=True)
     p.add_argument("--restriccion", action="append")
     p.add_argument("--variantes", type=int, default=1)
+    p.add_argument("--borrador", action="store_true",
+                   help="admite celdas de recetas aún no promovidas (solo ventana manual)")
     p.set_defaults(func=cmd_encargo_nuevo)
     sub.add_parser("encargos").set_defaults(func=cmd_encargos)
     p = sub.add_parser("encargo-revisar")
@@ -938,6 +966,10 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--max", type=int, default=2)
     p.add_argument("--sin-telefono", action="store_true", help="descarta celdas android_native")
     p.set_defaults(func=cmd_seleccionar)
+    p = sub.add_parser("receta")
+    p.add_argument("--celda", required=True)
+    p.add_argument("--borrador", action="store_true", help="también recetas aún no promovidas (solo ventana manual)")
+    p.set_defaults(func=cmd_receta)
 
     p = sub.add_parser("render")
     p.add_argument("--encargo", required=True)
@@ -1000,11 +1032,20 @@ def construir() -> argparse.ArgumentParser:
     p = sub.add_parser("telefono-subir")
     p.add_argument("--local", required=True, help="imagen bajo experiments/media-lab/ (.png, .jpg o .jpeg)")
     p.set_defaults(func=cmd_telefono_subir)
-    for nombre, func in (("telefono-captura", cmd_telefono_captura), ("telefono-atras", cmd_telefono_atras)):
-        p = sub.add_parser(nombre)
-        p.add_argument("--run", required=True)
-        p.add_argument("--nombre", required=True)
-        p.set_defaults(func=func)
+    p = sub.add_parser("telefono-captura")
+    p.add_argument("--run", required=True)
+    p.add_argument("--nombre", required=True)
+    p.set_defaults(func=cmd_telefono_captura)
+    p = sub.add_parser("telefono-atras")
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, default="instagram")
+    p.add_argument("--run", required=True)
+    p.add_argument("--nombre", required=True)
+    p.set_defaults(func=cmd_telefono_atras)
+    p = sub.add_parser("telefono-descartar")
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True)
+    p.add_argument("--run", required=True)
+    p.add_argument("--nombre", required=True)
+    p.set_defaults(func=cmd_telefono_descartar)
     p = sub.add_parser("ig")
     p.add_argument("paso", choices=("abrir", "recorte", "editor", "audio", "detalles", "pie", "compartir"))
     p.add_argument("--run", required=True)
