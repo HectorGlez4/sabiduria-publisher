@@ -31,7 +31,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PLACE-003",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -57,6 +57,8 @@
     "motivo": "Escena verosímil de Nan Madol: canal azolvado entre muros de prismas de basalto apilados en hiladas cruzadas, manglares en la base, selva y cresta volcánica al fondo; sin personas, barcas, carteles ni texto; 1080x1350 a sangre; franja superior del titular (y 76-405) es cielo nublado y copas sin detalle importante; respeta do_not_use (sin misterio ni ciudad perdida).",
     "revisado_en": "2026-09-15T13:48:24+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-PLACE-003-A-FACEBOOK"
+  ],
   "no_lanzados": 0
 }
