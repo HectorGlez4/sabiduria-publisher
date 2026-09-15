@@ -59,7 +59,7 @@
 26. **La tarea 17 depende de 16a y 16b.** Usa `zona_reservada` (16a), `_encuesta` (16b-1) y la firma de `threads_feed.compartir` con `opciones` (16b-2), que 17c reescribe con fotogramas. Es lo más simple: el orden de la spec ya pone E antes que F.
 27. **Piezas de un solo commit.** 11b, 16b y 17b se parten en 11b-1/11b-2, 16b-1/16b-2 y 17b-1/17b-2.
 28. **Tarea 4: la receta no promete la URL desde el teléfono (revisión I-1 y M-1).** Ningún subcomando de `lab.py` abre el menú de la publicación, así que `verificacion` del feed de Instagram manda la URL a `manifiesto-verificacion --instagram-shortcode` si se conoce el shortcode y, si no, a `missing_data_reasons.post_url` (paso 7f del prompt); la sección 15 lo comprueba. El `ver` de `telefono-captura ig-06-perfil` avisa de que ese comando no navega: si la captura no muestra el perfil, se anota y se usa `ig-05-publicado`. **Pendiente (M-2, tarea posterior):** la prueba de existencia de comandos de la sección 15 solo mira subcomando y paso, no las opciones; hay que parsear cada comando con `ap.parse_args`, sustituyendo cada `<valor>` y quitando los corchetes de los opcionales.
-29. **Tarea 5: ajustes al código real.** La importación de `labkit` en `lab.py` conserva `metricas` y `turnos` (llegaron después de escribir el plan) y solo añade `recetas` y `textos`; la sección 16 envuelve los pasos con `--borrador` en `receta_temporal` en vez de asignar y hacer `pop` a mano; `receta_temporal` rechaza con `assert` un par promovido. `_paso_telefono` captura `pantalla.PantallaInesperada`, que es la misma clase que `instagram_feed.PantallaInesperada`.
+29. **Tarea 5: ajustes al código real.** La importación de `labkit` en `lab.py` conserva `metricas` y `turnos` (llegaron después de escribir el plan) y solo añade `recetas` y `textos`; la sección 16 envuelve los pasos con `--borrador` en `receta_temporal` en vez de asignar y hacer `pop` a mano; `receta_temporal` rechaza con `ValueError` un par promovido. `_paso_telefono` captura `pantalla.PantallaInesperada`, que es la misma clase que `instagram_feed.PantallaInesperada`. `telefono-atras` usa `pasos.atras` con el paquete de `textos.PAQUETES` para todas las apps (sin la rama de `instagram_feed.atras`, que era la misma llamada con el mismo paquete); el error de `lab.py receta` empieza por la celda.
 
 **Correspondencia con el orden de la sección 5 de la spec:**
 
@@ -2007,7 +2007,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - Modify: `experiments/media-lab/lab.py`
 - Test: `tests/test_media_lab.py`
 
-- [ ] **Step 1: Escribir la prueba**
+- [x] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` y registrar `seccion_cli_fase2,`:
 
@@ -2105,12 +2105,12 @@ def seccion_cli_fase2() -> None:
         RC.BORRADORES.pop(par_th, None)
 ```
 
-- [ ] **Step 2: Ver que falla**
+- [x] **Step 2: Ver que falla**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: `FALLARON` con, entre otros, `receta de una celda de teléfono implementada` y `telefono-descartar pasa la app a pasos.descartar` (argparse no conoce los subcomandos y sale con 2).
 
-- [ ] **Step 3: Implementar en `lab.py`**
+- [x] **Step 3: Implementar en `lab.py`**
 
 1. Cambiar la importación de `labkit` por:
 
@@ -2202,12 +2202,12 @@ y sustituir el bucle `for nombre, func in (("telefono-captura", cmd_telefono_cap
     p.set_defaults(func=cmd_telefono_descartar)
 ```
 
-- [ ] **Step 4: Ver que pasa**
+- [x] **Step 4: Ver que pasa**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: la sección 16 en `✓`, la 10 de la fase 1 sin cambios y `El laboratorio cumple sus contratos.`
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add experiments/media-lab/lab.py tests/test_media_lab.py

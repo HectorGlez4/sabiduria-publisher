@@ -4255,7 +4255,8 @@ _SIN_RECETA = object()
 @contextlib.contextmanager
 def receta_temporal(par: tuple[str, str], receta: dict):
     """`receta` como borrador de `par` en `recetas.TODAS` y `recetas.BORRADORES` mientras dura el
-    bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop."""
+    bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop.
+    Lanza `ValueError` con un par promovido."""
     from labkit import recetas as RC
     if par in RC.PROMOVIDAS:
         raise ValueError("receta_temporal es solo para borradores")
@@ -4400,11 +4401,11 @@ def entorno_lab_fase2():
 
 def seccion_cli_fase2() -> None:
     print("\n16. Fase 2: lab.py receta, atrás por app, descarte y borradores")
-    from labkit import instagram_feed, pantalla, pasos, recetas as RC, telefono
+    from labkit import pantalla, pasos, recetas as RC, telefono
 
     recibido: dict = {}
     atras_original, descartar_original = pasos.atras, pasos.descartar
-    atras_ig_original, captura_original = instagram_feed.atras, telefono.captura
+    captura_original = telefono.captura
     par_th = ("threads", "feed_video")
     try:
         pasos.atras = lambda paquete, ev, nombre: recibido.update(atras=paquete) or ev / f"{nombre}.png"
@@ -4413,8 +4414,10 @@ def seccion_cli_fase2() -> None:
             codigo, datos, _ = lab("receta", "--celda", "C-IG-TEL")
             preparar = campo(datos, "preparar") or []
             check(codigo == 0 and campo(datos, "red") == "instagram" and campo(datos, "borrador") is False
-                  and preparar and preparar[0]["args"][0] == "telefono-subir",
-                  f"receta de una celda de teléfono implementada ({codigo}, {datos and list(datos)})")
+                  and preparar and preparar[0]["args"][0] == "telefono-subir"
+                  and "linea" in preparar[0] and campo(datos, "celda") == "C-IG-TEL"
+                  and campo(datos, "formato") == "feed_single_image",
+                  f"receta de una celda de teléfono implementada, pasada por renderizar ({codigo}, {datos and list(datos)})")
             codigo, datos, _ = lab("receta", "--celda", "C-FB-API")
             check(rechazo((codigo, datos, _), "solo de teléfono"), f"receta rechaza una celda de API ({codigo}, {datos})")
             codigo, datos, _ = lab("receta", "--celda", "C-TH-TEL")
@@ -4423,24 +4426,30 @@ def seccion_cli_fase2() -> None:
             codigo, datos, _ = lab("receta", "--celda", "C-NADA")
             check(rechazo((codigo, datos, _), "no está en coverage.json"), "receta rechaza una celda que no existe")
 
+            recibido.clear()
             codigo, datos, _ = lab("telefono-atras", "--app", "threads", "--run", "RUN-1", "--nombre", "salida-1")
             check(codigo == 0 and recibido.get("atras") == "com.instagram.barcelona"
                   and str(campo(datos, "captura")).endswith("RUN-1/salida-1.png"),
                   f"telefono-atras --app threads usa el paquete de Threads ({codigo}, {recibido})")
             check(rechazo(lab("telefono-atras", "--app", "tiktok", "--run", "RUN-1", "--nombre", "s"), "--app"),
                   "telefono-atras rechaza una app sin flujo")
+            recibido.clear()
             codigo, datos, _ = lab("telefono-descartar", "--app", "facebook", "--run", "RUN-1", "--nombre", "descarte")
             check(codigo == 0 and recibido.get("descartar") == "facebook",
                   f"telefono-descartar pasa la app a pasos.descartar ({codigo}, {recibido})")
             check(rechazo(lab("telefono-descartar", "--run", "RUN-1", "--nombre", "descarte"), "--app"),
                   "telefono-descartar exige --app")
 
-            instagram_feed.atras = lambda ev, nombre: recibido.update(atras_ig=True) or ev / f"{nombre}.png"
             recibido.clear()
             codigo, datos, _ = lab("telefono-atras", "--run", "RUN-1", "--nombre", "salida-ig")
-            check(codigo == 0 and recibido.get("atras_ig") is True and "atras" not in recibido
+            check(codigo == 0 and recibido.get("atras") == "com.instagram.android"
                   and str(campo(datos, "captura")).endswith("RUN-1/salida-ig.png"),
-                  f"telefono-atras sin --app (forma de la ventana) usa instagram_feed.atras, no pasos.atras ({codigo}, {recibido})")
+                  f"telefono-atras sin --app (forma de la ventana) pasa el paquete de Instagram a pasos.atras ({codigo}, {recibido})")
+            recibido.clear()
+            codigo, datos, _ = lab("telefono-atras", "--app", "instagram", "--run", "RUN-1", "--nombre", "salida-ig2")
+            check(codigo == 0 and recibido.get("atras") == "com.instagram.android"
+                  and str(campo(datos, "captura")).endswith("RUN-1/salida-ig2.png"),
+                  f"telefono-atras --app instagram pasa el paquete de Instagram a pasos.atras ({codigo}, {recibido})")
 
             def descarte_inesperado(app, ev, nombre):
                 raise pantalla.PantallaInesperada("prueba")
@@ -4461,6 +4470,8 @@ def seccion_cli_fase2() -> None:
             check(rechazo((codigo, datos, _), "no está implementado"),
                   f"encargo-nuevo rechaza una celda de teléfono sin receta ({codigo})")
             with receta_temporal(par_th, RC.TODAS[("instagram", "feed_single_image")]):
+                check(rechazo(lab(*nuevo), "no está implementado"),
+                      "encargo-nuevo sin --borrador rechaza una celda de un borrador")
                 codigo, datos, _ = lab(*nuevo, "--borrador")
                 check(codigo == 0 and campo(datos, "coverage_cell_ids") == ["C-TH-TEL"],
                       f"encargo-nuevo --borrador acepta una celda de un borrador ({codigo}, {datos})")
@@ -4470,7 +4481,7 @@ def seccion_cli_fase2() -> None:
                       "sin --borrador la receta de un borrador no sale")
     finally:
         pasos.atras, pasos.descartar = atras_original, descartar_original
-        instagram_feed.atras, telefono.captura = atras_ig_original, captura_original
+        telefono.captura = captura_original
 
 
 SECCIONES = [

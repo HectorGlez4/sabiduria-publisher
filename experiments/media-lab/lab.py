@@ -265,7 +265,8 @@ def cmd_turno(a) -> int:
 # ── encargos (Claude) ───────────────────────────────────────────────────────
 
 def _comprobar_celdas(ids: list[str], todos: list[dict], borradores: bool = False) -> None:
-    """Las celdas existen, se pueden publicar, comparten formato y no tienen ya un encargo en curso."""
+    """Las celdas existen, se pueden publicar, comparten formato y no tienen ya un encargo en curso;
+    con `borradores`, también celdas de recetas no promovidas."""
     celdas = {c["cell_id"]: c for c in json.loads(COBERTURA.read_text(encoding="utf-8"))["cells"]}
     problemas = []
     if len(set(ids)) != len(ids):
@@ -350,7 +351,7 @@ def cmd_receta(a) -> int:
     try:
         receta = recetas.para(c["platform"], c["native_format"], borrador=a.borrador)
     except recetas.RecetaNoDisponible as e:
-        raise ArgumentoNoValido(str(e)) from e
+        raise ArgumentoNoValido(f"{a.celda}: {e}") from e
     emitir({"celda": a.celda, "red": c["platform"], "formato": c["native_format"],
             "borrador": (c["platform"], c["native_format"]) not in recetas.RECETAS,
             **recetas.renderizar(receta)})
@@ -863,11 +864,8 @@ def cmd_telefono_captura(a) -> int:
 
 
 def cmd_telefono_atras(a) -> int:
-    from labkit import instagram_feed, pasos
+    from labkit import pasos
     ev = _evidencia(a.run)
-    if a.app == "instagram":
-        return _paso_telefono(ev, f"{a.nombre}-inesperada",
-                              lambda: {"captura": str(instagram_feed.atras(ev, a.nombre))})
     return _paso_telefono(ev, f"{a.nombre}-inesperada",
                           lambda: {"captura": str(pasos.atras(textos.PAQUETES[a.app], ev, a.nombre))})
 
@@ -1037,12 +1035,14 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--nombre", required=True)
     p.set_defaults(func=cmd_telefono_captura)
     p = sub.add_parser("telefono-atras")
-    p.add_argument("--app", choices=textos.APPS_TELEFONO, default="instagram")
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, default="instagram",
+                   help="app que debe estar en primer plano (por defecto instagram, forma de la fase 1)")
     p.add_argument("--run", required=True)
     p.add_argument("--nombre", required=True)
     p.set_defaults(func=cmd_telefono_atras)
     p = sub.add_parser("telefono-descartar")
-    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True)
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True,
+                   help="app cuyo diálogo de descarte exacto se espera")
     p.add_argument("--run", required=True)
     p.add_argument("--nombre", required=True)
     p.set_defaults(func=cmd_telefono_descartar)
