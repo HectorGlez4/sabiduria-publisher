@@ -1,0 +1,62 @@
+{
+  "id": "2026-10-07-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Xunzi y el azul que sale del índigo",
+    "hook": "Hoy se usa para decir que el alumno superó al maestro. Xunzi lo escribió para decir otra cosa.",
+    "body": [
+      "Xun Kuang, llamado Xunzi, nació hacia el año 310 antes de Cristo y murió después del 238. En su tiempo lo llamaban el más venerado de los maestros. El libro que lleva su nombre se abre con un capítulo titulado Exhortación al estudio, y su primera imagen es la del tinte azul: se extrae de la planta del índigo y resulta más intenso que la planta.",
+      "Unas líneas después lo explica con madera. Un tronco recto como el cordel del carpintero, si se curva, se convierte en rueda; y aunque luego se seque al sol, ya no vuelve a enderezarse. Para Xunzi la naturaleza humana es mala de origen y lo bueno es obra del esfuerzo deliberado. La imagen no habla de discípulos que superan a nadie. Habla de alguien que, estudiando, deja atrás lo que era.",
+      "Con los siglos la frase se volvió proverbio, «el azul sale del índigo», y cambió de sentido. El diccionario de modismos del Ministerio de Educación de Taiwán registra las dos etapas: primero significaba que el estudio hace progresar a la persona; después, que el alumno supera al maestro. Las dos lecturas conviven. Solo una es de Xunzi."
+    ],
+    "question": "¿Qué aprendiste que te cambió hasta el punto de no poder volver atrás?",
+    "quote": {
+      "text": "El estudio no debe detenerse nunca. El azul se extrae del índigo, y es más azul que el índigo; el hielo lo forma el agua, y es más frío que el agua.",
+      "author": "Xun Kuang (Xunzi)",
+      "work": "Xunzi, cap. 1, «Exhortación al estudio»",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Xunzi", "#FilosofiaChina", "#Aprendizaje"],
+    "extended": ["#Confucianismo", "#Citas", "#Educacion", "#Proverbios", "#Filosofia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto original del comienzo del capítulo 1 (勸學): ‘君子曰：學不可以已。青、取之於藍，而青於藍；冰、水為之，而寒於水。木直中繩，輮以為輪，其曲中規，雖有槁暴，不復挺者，輮使之然也。故木受繩則直，金就礪則利，君子博學而日參省乎己，則知明而行無過矣。’ La traducción española de la cita y del cuerpo es de esta página, hecha sobre este texto; la traducción inglesa que ofrece la página se acredita a IA y usuarios del proyecto, y no se ha tomado como autoridad.",
+      "source": "Chinese Text Project (ctext.org), Xunzi, capítulo 勸學 (Exhortación al estudio)",
+      "url": "https://ctext.org/xunzi/quan-xue"
+    },
+    {
+      "claim": "Ficha del modismo 青出於藍. 典源: 《荀子．勸學》 ‘青，取之於藍，而青於藍；冰，水為之，而寒於水。’ 釋義: ‘青色是從蓼藍裡提煉出來的，但是顏色比蓼藍還深。比喻求學能使人進步。’ Uso posterior: ‘學生表現較老師出色，晚輩成就超過前輩’ (el alumno supera al maestro, los jóvenes superan a sus mayores).",
+      "source": "Ministerio de Educación de Taiwán, 《成語典》 (Diccionario de modismos chinos), edición 2020, entrada 青出於藍",
+      "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=15&webMd=2&la=1"
+    },
+    {
+      "claim": "Xun Kuang (荀況), conocido como Xunzi, nació hacia el 310 a.C. y murió después del 238 a.C., año del asesinato de su patrón, el señor Chunshen. Fue célebre en su época como ‘the most revered of teachers’. Sostuvo que ‘human xing is evil; what is good is artifice’: las inclinaciones innatas deben transformarse mediante el ritual y el esfuerzo consciente (wei). Traducciones de referencia citadas: Hutton 2014 (Princeton) y Knoblock 1988-1994 (Stanford).",
+      "source": "Stanford Encyclopedia of Philosophy, entrada ‘Xunzi’",
+      "url": "https://plato.stanford.edu/entries/xunzi/"
+    },
+    {
+      "claim": "Edición de referencia en inglés: Xunzi, Xunzi: The Complete Text, trad. Eric L. Hutton, Princeton University Press, 2014, xxxi + 397 pp., ISBN 9780691161044; ‘the first single-volume complete English translation of the Xunzi’. Reseña de Winnie Sung (Nanyang Technological University), 16 de marzo de 2015.",
+      "source": "Notre Dame Philosophical Reviews, reseña de Xunzi: The Complete Text",
+      "url": "https://ndpr.nd.edu/reviews/xunzi-the-complete-text/"
+    }
+  ],
+  "do_not_use": [
+    "‘青出於藍而勝於藍’ (‘el azul sale del índigo y lo supera’) como palabras literales de Xunzi. Es la forma proverbial posterior; el texto del capítulo 1 dice ‘青，取之於藍，而青於藍’, según el diccionario del Ministerio de Educación de Taiwán y el Chinese Text Project.",
+    "Atribuir a Xunzi el sentido de ‘el alumno supera al maestro’. El diccionario del Ministerio de Educación lo registra como uso posterior; en el capítulo la imagen ilustra que el estudio transforma a quien estudia.",
+    "La traducción inglesa del Chinese Text Project como fuente. La página la acredita a IA y usuarios; no es una traducción publicada.",
+    "Que Xunzi enseñara en la academia Jixia de Qi, o que fuera maestro de Han Fei y Li Si. Circula en muchas semblanzas, pero no se verificó en las fuentes consultadas para esta pieza.",
+    "Que Xun Kuang escribiera personalmente todos los capítulos del libro Xunzi, o quién y cuándo lo compiló. No verificado aquí; la pieza habla de ‘el libro que lleva su nombre’.",
+    "La traducción de Hutton de la primera frase (‘Learning must never stop’). Solo apareció resumida en una búsqueda, sin abrir la edición; no se cita."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

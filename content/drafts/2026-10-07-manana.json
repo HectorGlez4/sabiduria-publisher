@@ -1,0 +1,55 @@
+{
+  "id": "2026-10-07-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Cecilia Payne y la tesis de 1925",
+    "hook": "En 1925 una joven astrónoma descubrió de qué están hechas las estrellas, y tuvo que escribir en su propia tesis que el resultado casi con certeza no era real.",
+    "body": [
+      "Cecilia Payne había estudiado en Cambridge, una universidad que no concedió títulos a las mujeres hasta 1948. En 1923 se fue al observatorio de Harvard con una beca creada para atraer a mujeres a la astronomía. Dos años después presentó su tesis doctoral, Stellar Atmospheres. Su conclusión contradecía lo que se enseñaba entonces: las estrellas no tienen la composición de la Tierra. Están hechas, sobre todo, de hidrógeno y helio.",
+      "La autoridad indiscutida del momento, Henry Norris Russell, de la Universidad de Princeton, juzgó imposible ese resultado. Payne cedió a medias. Dejó sus cálculos en pie, pero añadió que la enorme abundancia obtenida para el hidrógeno y el helio «casi con certeza no es real». En julio de 1929, Russell publicó la misma conclusión por su cuenta, y reconoció en una línea que la determinación previa más importante era la de «la señorita Payne».",
+      "Radcliffe College le otorgó el doctorado en 1925, el primero salido del observatorio de Harvard. En 1956 fue la primera mujer ascendida a catedrática titular en Harvard, y poco después dirigió su departamento. Lo que tuvo que llamar irreal para que la dejaran publicarlo es hoy el punto de partida de la astrofísica."
+    ],
+    "question": "¿Cuántas ideas propias habrás rebajado porque alguien con más autoridad las llamó imposibles?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "CECILIA PAYNE",
+    "subtitle": "La tesis de 1925 que tuvo que desmentirse a sí misma",
+    "body": "En 1925 concluyó que las estrellas son sobre todo hidrógeno y helio. Russell, la gran autoridad de Princeton, lo juzgó imposible, y ella escribió que su resultado «casi con certeza no es real». En 1929 Russell publicó lo mismo.",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CeciliaPayne", "#Astronomia", "#HistoriaDeLaCiencia"],
+    "extended": ["#MujeresEnLaCiencia", "#Estrellas", "#Harvard", "#Astrofisica", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Payne estudió física en Newnham College, Cambridge; se reunió con Harlow Shapley, director del Harvard College Observatory, por una beca de astronomía y se trasladó a Estados Unidos en 1923. Determinó que las estrellas se componían principalmente de helio y, sobre todo, de hidrógeno, en contra de la teoría dominante. Russell ‘contradijo sus conclusiones sobre el hidrógeno y el helio durante la redacción’ y ella añadió la salvedad de que esa abundancia ‘almost certainly not real’; estudios posteriores corroboraron sus resultados. En 1956 fue la primera mujer ascendida a catedrática titular en Harvard y la primera en dirigir un departamento académico.",
+      "source": "Science History Institute, Scientific Biographies: Cecilia Payne-Gaposchkin",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/cecilia-payne-gaposchkin/"
+    },
+    {
+      "claim": "‘Radcliffe College awarded Payne a Ph.D. in 1925 — the first ever at the Harvard Observatory’. Sus cálculos indicaban que el hidrógeno y el helio eran mucho más abundantes en las atmósferas estelares; ‘her conclusions were dismissed by the reigning expert, Princeton University’s Henry Norris Russell, so Payne downplayed her own observations. A few years later, Russell realized Payne was correct and acknowledged her work’. En 1956 fue la primera mujer ascendida a catedrática titular en Harvard y poco después dirigió el departamento.",
+      "source": "Harvard Faculty of Arts and Sciences, Kermit Pattison, ‘Harvard astronomer, our heroine of the 20th century, memorialized in London’, 15 de junio de 2026",
+      "url": "https://current.fas.harvard.edu/stories/harvard-astronomer-our-heroine-20th-century-memorialized-london"
+    },
+    {
+      "claim": "Cambridge no concedió títulos a mujeres hasta 1948, y Payne no recibió título oficial. Llegó a Harvard con una beca creada para animar a las mujeres a estudiar en el observatorio (segunda becaria, tras Adelaide Ames en 1922). Título de la tesis de 1925: ‘Stellar Atmospheres; A Contribution to the Observational Study of High Temperature in the Reversing Layers of Stars’. Russell la presionó para suavizar sus conclusiones y ella incluyó que eran ‘almost certainly not real’. Russell publicó resultados similares en julio de 1929 y reconoció: ‘The most important previous determination of the abundance of the elements by astrophysical means is that by Miss Payne’.",
+      "source": "Wikipedia en inglés, Cecilia Payne-Gaposchkin",
+      "url": "https://en.wikipedia.org/wiki/Cecilia_Payne-Gaposchkin"
+    }
+  ],
+  "do_not_use": [
+    "‘La tesis más brillante jamás escrita en astronomía’, atribuida a Otto Struve. Circula en todas las biografías, pero en esta investigación no se pudo cotejar con el libro de donde procede (Struve y Zebergs, Astronomy of the 20th Century): no va en el cuerpo ni en la tarjeta.",
+    "‘Russell le robó el descubrimiento’ o ‘lo publicó sin citarla’. Falso tal cual: en su artículo de 1929 la menciona expresamente como la determinación previa más importante. Lo que sí es cierto es que el reconocimiento fue breve y que el mérito se le atribuyó a él durante años; la pieza se queda en lo documentado.",
+    "‘Primera mujer doctorada en astronomía’. Las fuentes dicen otra cosa: fue el primer doctorado salido del observatorio de Harvard, de cualquier sexo, y el título lo expidió Radcliffe College, no Harvard.",
+    "‘Un millón de veces más hidrógeno que en la Tierra’. La cifra aparece en Wikipedia, pero no en las fuentes institucionales consultadas; no se usa.",
+    "Que Russell formara parte de su tribunal de tesis. El Science History Institute lo dice; Wikipedia describe su intervención como revisión previa a la publicación. Discrepancia no resuelta: la pieza no precisa el papel formal de Russell.",
+    "La edad exacta de Payne al presentar la tesis (nació el 10 de mayo de 1900, pero no se verificó la fecha exacta de entrega): no se da la edad.",
+    "‘Le prohibieron publicar’. Nadie se lo prohibió: fue ella quien añadió la salvedad bajo la presión de Russell. No dramatizar más allá de eso."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

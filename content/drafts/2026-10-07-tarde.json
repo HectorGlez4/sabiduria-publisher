@@ -1,0 +1,73 @@
+{
+  "id": "2026-10-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Rilke y Franz Xaver Kappus (1903)",
+    "hook": "Un cadete le mandó sus poemas a Rilke para que los juzgara. Rilke le contestó que dejara de buscar respuestas.",
+    "body": [
+      "A finales de 1902, Franz Xaver Kappus, cadete de la academia militar de Wiener Neustadt, envió sus primeros versos a Rainer Maria Rilke. Tenía unos veinte años. Rilke había pasado años en la escuela militar de Sankt Pölten y la había dejado por motivos de salud. Contestó, y siguió contestando: diez cartas entre 1903 y 1908.",
+      "La del 16 de julio de 1903 la escribió en Worpswede, cerca de Bremen, con veintisiete años. Le pide paciencia con todo lo que no está resuelto en su corazón, y que intente amar las preguntas mismas, «como cuartos cerrados y como libros escritos en una lengua muy extraña». La frase termina con una promesa modesta: viviéndolas, quizá un día lejano, sin notarlo, llegue a vivir dentro de la respuesta.",
+      "Rilke murió en 1926. Tres años después, Kappus publicó las cartas en la editorial Insel. Él no fue poeta: fue oficial, y más tarde autor de novelas de entretenimiento, guiones y letras de canciones. Murió en Berlín en 1966. De sus novelas casi nadie se acuerda. Las diez cartas que recibió siguen traduciéndose."
+    ],
+    "question": "¿Qué pregunta llevas años intentando resolver que quizá solo toque vivir?",
+    "quote": {
+      "text": "No busque ahora las respuestas, que no se le pueden dar porque no podría vivirlas. Se trata de vivirlo todo. Viva ahora las preguntas.",
+      "author": "Rainer Maria Rilke",
+      "work": "carta a Franz Xaver Kappus, 16 de julio de 1903",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Rilke", "#CartasAUnJovenPoeta", "#Literatura"],
+    "extended": ["#Poesia", "#LiteraturaAlemana", "#Citas", "#Paciencia", "#Escritores"]
+  },
+  "sources": [
+    {
+      "claim": "Texto alemán de la carta, encabezada ‘z. Zt. Worpswede bei Bremen, am 16. Juli 1903’: ‘Sie sind so jung, so vor allem Anfang, und ich möchte Sie, so gut ich es kann, bitten, lieber Herr, Geduld zu haben gegen alles Ungelöste in Ihrem Herzen und zu versuchen, die Fragen selbst liebzuhaben wie verschlossene Stuben und wie Bücher, die in einer sehr fremden Sprache geschrieben sind. Forschen Sie jetzt nicht nach den Antworten, die Ihnen nicht gegeben werden können, weil Sie sie nicht leben könnten. Und es handelt sich darum, alles zu leben. Leben Sie jetzt die Fragen. Vielleicht leben Sie dann allmählich, ohne es zu merken, eines fernen Tages in die Antwort hinein.’ La traducción al español de la cita y del cuerpo es de esta página, hecha sobre este texto.",
+      "source": "rilke.de, Briefe an einen jungen Dichter, carta del 16 de julio de 1903",
+      "url": "https://www.rilke.de/briefe/160703.htm"
+    },
+    {
+      "claim": "Segunda transcripción independiente de la misma carta, fechada ‘Worpswede bei Bremen, am 16. Juli 1903’, con el mismo pasaje desde ‘Geduld zu haben gegen alles Ungelöste in Ihrem Herzen’ hasta ‘eines fernen Tages in die Antwort hinein’ (con variantes menores de grafía: ‘so gut ich kann’, ‘lieb zu haben’).",
+      "source": "marschler.at, ‘Rainer Maria Rilke: Brief an Franz Xaver Kappus, 16. Juli 1903’",
+      "url": "https://www.marschler.at/worte-rilke-briefe-kappus-2.htm"
+    },
+    {
+      "claim": "La colección reúne diez cartas escritas entre 1903 y 1908 a Franz Xaver Kappus, que había pedido ayuda a Rilke sobre sus primeros intentos literarios. Se publicó en 1929 en Insel Verlag, Leipzig, como número 406 de la Insel-Bücherei, tres años después de la muerte de Rilke. Los originales de Rilke se subastaron en 1953 y su paradero se desconoce; las cartas de Kappus se conservan, salvo la primera, en el archivo Rilke de Gernsbach.",
+      "source": "Wikipedia en alemán, Briefe an einen jungen Dichter",
+      "url": "https://de.wikipedia.org/wiki/Briefe_an_einen_jungen_Dichter"
+    },
+    {
+      "claim": "Kappus era un cadete de 19 años de la Academia Militar Teresiana de Wiener Neustadt cuando empezó la correspondencia; Rilke había estudiado en la escuela inferior de esa academia, en Sankt Pölten. Kappus reunió y publicó las cartas en 1929 en Insel Verlag, tres años después de la muerte de Rilke. Rilke escribió desde París, Viareggio, Worpswede, Roma y Suecia.",
+      "source": "Wikipedia en inglés, Letters to a Young Poet",
+      "url": "https://en.wikipedia.org/wiki/Letters_to_a_Young_Poet"
+    },
+    {
+      "claim": "Kappus nació en 1883 en Temeswar; ingresó en 1902 en la Academia Militar de Wiener Neustadt y salió teniente en 1905. Con unos veinte años empezó a escribir a Rilke a finales de 1902. Fue después un exitoso autor de entretenimiento en Berlín, con más de dos docenas de novelas, relatos, letras de canciones y guiones, entre ellas ‘Mamatschi, schenk mir ein Pferdchen’ (1938). Murió en Berlín en 1966.",
+      "source": "Walter Engel, ‘Ihr ewig dankschuldiger Franz Kappus’, Landsmannschaft der Banater Schwaben, 21 de septiembre de 2019",
+      "url": "https://www.banater-schwaben.org/nachrichten/kultur/details/2782-ihr-ewig-dankschuldiger-franz-kappus/?type=98"
+    },
+    {
+      "claim": "Rilke nació el 4 de diciembre de 1875 en Praga y murió el 29 de diciembre de 1926 en el sanatorio de Valmont, cerca de Montreux. Desde 1886 asistió a la escuela militar de Sankt Pölten y, tras años de formación militar contraria a su naturaleza, la dejó por motivos de salud.",
+      "source": "Wikipedia en alemán, Rainer Maria Rilke",
+      "url": "https://de.wikipedia.org/wiki/Rainer_Maria_Rilke"
+    }
+  ],
+  "do_not_use": [
+    "‘Be patient toward all that is unsolved in your heart… Live the questions now’ presentado como palabras de Rilke en inglés. Es la traducción de M. D. Herter Norton (W. W. Norton); si se usa, se dice que es traducción. La cita de esta pieza se tradujo directamente del alemán.",
+    "‘Cartas escritas desde Roma’. La Wikipedia alemana asocia la correspondencia al invierno de 1903-1904 en Roma, pero esta carta concreta está fechada en Worpswede, y la serie se escribió desde varias ciudades. No generalizar un lugar.",
+    "‘La cuarta carta’. Varias ediciones la numeran así, pero en esta investigación no se abrió una edición que lo muestre; se identifica por la fecha, no por el ordinal.",
+    "La edad exacta de Kappus: la Wikipedia inglesa dice 19 años y el artículo de la Landsmannschaft, ‘unos veinte’. Se usa ‘unos veinte años’.",
+    "Los años exactos de Rilke en Sankt Pölten: la Wikipedia alemana da 1886 como inicio y la inglesa habla de ‘los años 1890’. No se dan fechas.",
+    "‘Las cartas de Kappus se perdieron’. Falso: se conservan (salvo la primera) y se publicaron en alemán en 2019. Los que no se localizan son los originales de Rilke, subastados en 1953.",
+    "Variantes de transcripción del alemán (‘so gut ich es kann’ / ‘so gut ich kann’; ‘liebzuhaben’ / ‘lieb zu haben’; ‘zu versuchen’ / ‘versuchen’). No afectan a la traducción; si se cita el original, seguir la edición Insel."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

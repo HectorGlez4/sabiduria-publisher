@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-07-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Schliemann y el tesoro de Príamo (1873)",
+    "hook": "El tesoro que Schliemann bautizó con el nombre del rey Príamo es más de mil años anterior a la Troya de Homero.",
+    "body": [
+      "La familia de Frank Calvert, un inglés aficionado a la arqueología, poseía parte de la colina de Hisarlik, en la costa noroeste de la actual Turquía. Calvert no tenía dinero para excavarla y convenció a Heinrich Schliemann, que sí lo tenía. Schliemann abrió una zanja de unos catorce metros de profundidad y atravesó capas enteras sin mapas ni registros. En 1873 sacó diademas, pendientes, copas y miles de pequeños anillos de oro, y lo llamó el tesoro de Príamo.",
+      "Lo sacó de contrabando del Imperio otomano e hizo fotografiar a su esposa, Sophia, con las joyas puestas. Contó que ella las había escondido bajo el chal delante de los obreros, pero Sophia ni siquiera estaba en el país ese día. El error de fondo era otro. El tesoro pertenece a Troya II, hacia el 2400 antes de Cristo, y la ciudad que pudo conocer la guerra de la Ilíada está más de mil años por encima.",
+      "En 1881 pasó a los museos de Berlín. En 1945 estaba escondido bajo el zoológico de la ciudad, el Ejército Rojo se lo llevó y durante casi medio siglo nadie reconoció dónde estaba, hasta que reapareció en el Museo Pushkin de Moscú. Todavía se discute si fue un solo hallazgo o piezas de varios puntos reunidas. Lleva siglo y medio con el nombre de un rey al que no perteneció."
+    ],
+    "question": "¿Cuántas cosas conservan el nombre que les puso quien más deseaba encontrarlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL TESORO DE PRÍAMO",
+    "subtitle": "Mil años más antiguo que el rey cuyo nombre lleva",
+    "body": "Schliemann lo desenterró en Hisarlik en 1873 y lo atribuyó al rey de la Ilíada. Pertenece a Troya II, hacia el 2400 antes de Cristo: más de mil años antes de la ciudad que pudo conocer la guerra de Homero.",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Troya", "#Schliemann", "#Arqueologia"],
+    "extended": ["#HistoriaAntigua", "#Homero", "#Iliada", "#EdadDelBronce", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Schliemann sacó las piezas de Turquía de contrabando entre sus efectos personales e hizo fotografiar a su esposa con buena parte de las joyas. El tesoro ‘dates to Troy II, and therefore predates by a millenia the layer of the city that was most likely ruled by Priam’. Calvert, cónsul inglés y arqueólogo aficionado, hizo prospecciones en 1866. En 1945 los funcionarios alemanes lo escondieron bajo el zoológico de Berlín, el Ejército Rojo lo encontró, y se identificó en la colección del Museo Pushkin de Moscú en septiembre de 1993. Incluía 8.750 anillos de oro y decenas de objetos de oro, plata, cobre y electro, además de un par de diademas.",
+      "source": "Noah Charney, ‘Lost Art: Homer’s Troy and Priam’s Treasure’, The Art Newspaper, 6 de mayo de 2018",
+      "url": "https://www.theartnewspaper.com/2018/05/06/lost-art-homers-troy-and-priams-treasure"
+    },
+    {
+      "claim": "Frank Calvert, arqueólogo aficionado y expatriado inglés, era dueño de parte de la colina; sin medios económicos, convenció al rico Schliemann de concentrarse en ella. Schliemann ordenó abrir una zanja de 45 pies de profundidad (unos 13,7 m) y atravesó las capas ‘sin un registro adecuado: sin mapas de los hallazgos, pocas descripciones’. El tesoro data de hacia el 2400 a.C., de Troya II, no de la Troya homérica.",
+      "source": "Meilan Solly, ‘Amateur Archaeologist Heinrich Schliemann Discovered—and Nearly Destroyed—Troy’, Smithsonian Magazine, 17 de mayo de 2022",
+      "url": "https://www.smithsonianmag.com/smart-news/the-many-myths-of-the-man-who-discoveredand-nearly-destroyedtroy-180980102/"
+    },
+    {
+      "claim": "Schliemann contó que Sophia sacó los objetos del tesoro escondidos bajo su chal delante de los obreros; el relato era inventado: Sophia ‘wasn’t even in the country that day’. En Hisarlik hay once capas de ocupación, del 3500 a.C. al 1350 d.C.; la Troya de Homero no está cerca del fondo. El hermano de Calvert había comprado tierras que incluían la mitad de la colina.",
+      "source": "Sam Kean, ‘How Heinrich Schliemann rediscovered Troy—and then destroyed it’, National Geographic, 10 de agosto de 2026",
+      "url": "https://www.nationalgeographic.com/history/article/how-heinrich-schliemann-rediscovered-troyand-then-destroyed-it"
+    },
+    {
+      "claim": "Schliemann describió el hallazgo hacia el 27 de mayo de 1873, aunque su relato se considera poco fiable. Hay una fotografía de hacia 1874 de Sophia Schliemann con las ‘joyas de Helena’. El tesoro se asigna a Troya II, anterior a Príamo, que habría reinado en Troya VI o VII. Los Museos Estatales de Berlín adquirieron la colección en 1881; tras la toma de la torre del zoológico en 1945 pasó a Moscú, y el Museo Pushkin reveló que la tenía en 1994. Probablemente es ‘a composite of multiple finds across the site rather than one hoard’.",
+      "source": "Wikipedia en inglés, Priam’s Treasure",
+      "url": "https://en.wikipedia.org/wiki/Priam's_Treasure"
+    },
+    {
+      "claim": "Tras el informe inicial de Schliemann del 5 de agosto de 1873 se abrió un debate sobre las circunstancias del hallazgo, el contrabando y si el tesoro ‘was a hoard or was it compiled from various groups of Schliemann’s previous finds’. Conferencia de Rüstem Aslan, director de las excavaciones de Troya (Universidad Onsekiz Mart de Çanakkale), 12 de abril de 2018.",
+      "source": "Institute for the Study of Ancient Cultures, Universidad de Chicago, ‘The Turks and Troy: The Treasure of Priam according to Ottoman Documents’",
+      "url": "https://isac.uchicago.edu/article/lecture-r%C3%BCstem-aslan-turks-and-troy"
+    }
+  ],
+  "do_not_use": [
+    "‘Sophia sacó el tesoro escondido bajo su chal’. Es el relato del propio Schliemann, y National Geographic señala que Sophia no estaba en el país ese día. Solo se cuenta como invención suya.",
+    "La fecha exacta del hallazgo. Wikipedia da ‘hacia el 27 de mayo de 1873’ y advierte que el relato de Schliemann no es fiable; circula también el 31 de mayo; el informe inicial es del 5 de agosto de 1873. Se usa solo el año.",
+    "Qué capa es ‘la Troya de Homero’. Smithsonian dice Troya VI; National Geographic, VIIa; Dörpfeld defendió la VI y Blegen, la VII. No se nombra la capa: se dice ‘la ciudad que pudo conocer la guerra de la Ilíada’.",
+    "La distancia exacta en años. Smithsonian da unos 1.250; The Art Newspaper, ‘un milenio’. Se usa ‘más de mil años’.",
+    "El año en que Moscú reconoció tenerlo. The Art Newspaper dice septiembre de 1993; Wikipedia, 1994. Se evita la fecha y se dice ‘casi medio siglo’.",
+    "‘Schliemann descubrió Troya’. Calvert había identificado y prospectado Hisarlik antes y lo guió hasta allí. Tampoco hay acuerdo sobre si la colina era de Calvert o de su hermano: se dice ‘la familia de Calvert’.",
+    "El número total de piezas. The Art Newspaper da 8.750 anillos más decenas de objetos; National Geographic, unos 9.000 objetos; otras fuentes, 260 piezas catalogadas en el Pushkin. No se da un total.",
+    "La anchura de la zanja (‘87 yardas’, en National Geographic): no se corroboró. Solo se usa la profundidad de Smithsonian, convertida a unos catorce metros.",
+    "Que Schliemann soñara con Troya desde niño. Es autobiografía novelada: él mismo dio dos versiones distintas del origen de esa obsesión."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
