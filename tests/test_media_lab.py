@@ -5426,12 +5426,15 @@ def seccion_preflight_fase2() -> None:
         return "versionName=9.9.9\n"
 
     shell_original = T.shell
+    vistas: dict = {}
     try:
         T.shell = shell_simulado
         vistas = T.versiones(TX.PAQUETES)
+    except Exception as e:  # noqa: BLE001 — un fallo marca ✗ y deja seguir a las secciones siguientes
+        check(False, f"versiones no deja escapar el fallo de una app ({e!r})")
     finally:
         T.shell = shell_original
-    check(set(vistas) == set(TX.PAQUETES) and vistas["facebook"] is None
+    check(set(vistas) == set(TX.PAQUETES) and vistas.get("facebook") is None
           and all(v == "9.9.9" for app, v in vistas.items() if app != "facebook")
           and [c for c, _ in ordenes] == [f"dumpsys package {p}" for p in TX.PAQUETES.values()]
           and all(t == T.VERSIONES_TIMEOUT_S for _, t in ordenes) and T.VERSIONES_TIMEOUT_S <= 15,
@@ -5487,6 +5490,21 @@ def seccion_preflight_fase2() -> None:
                   and campo(datos, "github") is True,
                   f"un fallo de versiones no rompe preflight ({codigo}, {datos}, {llamadas})")
 
+            T.versiones = lambda paquetes: {app: "1.0" for app in paquetes}
+            for error in (RuntimeError("launchctl hizo algo raro"),
+                          UnicodeDecodeError("utf-8", b"\xff", 0, 1, "byte inválido")):
+                def agente_roto(error=error):
+                    raise error
+                modulo._agente_despierto = agente_roto
+                codigo, datos, _ = lab("preflight")
+                check(codigo == 0 and isinstance(datos, dict) and "agente_phone_awake" in datos
+                      and datos["agente_phone_awake"] is None
+                      and {"ahora", "telefono", "versiones", "github", "espera"} <= set(datos)
+                      and campo(datos, "versiones") == {app: "1.0" for app in TX.PAQUETES}
+                      and campo(datos, "github") is True,
+                      f"un {type(error).__name__} de _agente_despierto no rompe preflight: agente None y las "
+                      f"claves de siempre ({codigo}, {datos})")
+
             # _agente_despierto de verdad, con subprocess.run parcheado: nunca llama a launchctl real.
             T.adb, T.shell = viejos["adb"], viejos["shell"]
             modulo._agente_despierto = viejos["agente"]
@@ -5503,20 +5521,25 @@ def seccion_preflight_fase2() -> None:
             for resultado, esperado, nombre in (
                     (0, True, "cargado"), (113, False, "no cargado"),
                     (OSError("launchctl no existe"), None, "OSError"),
-                    (SP.TimeoutExpired(["launchctl"], 10), None, "TimeoutExpired")):
+                    (SP.TimeoutExpired(["launchctl"], 10), None, "TimeoutExpired"),
+                    (SP.SubprocessError("launchctl raro"), None, "SubprocessError")):
                 recibidas.clear()
                 modulo.subprocess.run = run_con(resultado)
                 try:
                     obtenido = modulo._agente_despierto() if callable(modulo._agente_despierto) else "falta"
+                except Exception as e:  # noqa: BLE001 — un fallo marca ✗ y deja seguir a las secciones siguientes
+                    obtenido = e
+                    check(False, f"_agente_despierto {nombre} no deja escapar la excepción ({e!r})")
                 finally:
                     modulo.subprocess.run = viejos["run"]
                 args, kwargs = recibidas[0] if recibidas else ([], {})
                 check(obtenido is esperado and len(recibidas) == 1
                       and args == ["launchctl", "list", modulo.AGENTE_DESPIERTO]
-                      and kwargs.get("stdin") is SP.DEVNULL and isinstance(kwargs.get("timeout"), (int, float))
-                      and kwargs["timeout"] <= 10,
-                      f"_agente_despierto {nombre}: {esperado}, solo `launchctl list` con stdin cerrado y timeout "
-                      f"({obtenido!r}, {recibidas})")
+                      and kwargs.get("stdin") is SP.DEVNULL and kwargs.get("stdout") is SP.DEVNULL
+                      and kwargs.get("stderr") is SP.DEVNULL and "capture_output" not in kwargs
+                      and isinstance(kwargs.get("timeout"), (int, float)) and kwargs["timeout"] <= 10,
+                      f"_agente_despierto {nombre}: {esperado}, solo `launchctl list` con stdin cerrado, salida "
+                      f"descartada y timeout ({obtenido!r}, {recibidas})")
             check(getattr(modulo, "AGENTE_DESPIERTO", None) == "com.sabiduria.medialab.phone-awake",
                   "la etiqueta del LaunchAgent es com.sabiduria.medialab.phone-awake")
         finally:

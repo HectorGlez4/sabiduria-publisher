@@ -149,11 +149,12 @@ def _nombre_archivo_simple(nombre: str, extensiones: tuple[str, ...], que: str) 
 def _agente_despierto() -> bool | None:
     """¿Sigue cargado el LaunchAgent que mantenía despierto el teléfono? La fase 2 lo retira: la
     automatización nunca despierta el teléfono. Solo lee `launchctl list`; nunca carga ni descarga
-    nada (lo descarga el usuario). None si launchctl no se puede ejecutar o no responde."""
+    nada (lo descarga el usuario). None si launchctl no se puede ejecutar o no responde. La salida
+    no se lee (solo cuenta el código), así que se descarta y no hay nada que decodificar."""
     try:
-        r = subprocess.run(["launchctl", "list", AGENTE_DESPIERTO], capture_output=True, text=True,
-                           timeout=10, stdin=subprocess.DEVNULL)
-    except (OSError, subprocess.TimeoutExpired):
+        r = subprocess.run(["launchctl", "list", AGENTE_DESPIERTO], stdout=subprocess.DEVNULL,
+                           stderr=subprocess.DEVNULL, timeout=10, stdin=subprocess.DEVNULL)
+    except (OSError, subprocess.SubprocessError):
         return None
     return r.returncode == 0
 
@@ -180,8 +181,12 @@ def cmd_preflight(a) -> int:
         github = True
     except Exception as e:  # noqa: BLE001
         github, espera = False, f"GitHub no responde ({type(e).__name__}): sin datos de producción cercana"
+    try:
+        agente = _agente_despierto()
+    except Exception:  # noqa: BLE001 — preflight informa, nunca rompe
+        agente = None
     emitir({"ahora": t.isoformat(timespec="seconds"), "telefono": tel, "versiones": versiones,
-            "agente_phone_awake": _agente_despierto(), "github": github, "espera": espera})
+            "agente_phone_awake": agente, "github": github, "espera": espera})
     return 0
 
 
