@@ -5638,6 +5638,167 @@ def seccion_prompt_ventana() -> None:
         check(fragmento in seccion, f"el prompt, en {nombre}, dice {fragmento}: {motivo}")
 
 
+def seccion_zona_segura_story() -> None:
+    print("\n22. zona segura de Story: el overlay 9:16 no queda bajo la barra de progreso ni la de respuesta")
+    import hashlib
+    import json
+    import tempfile
+    from datetime import datetime, timezone
+    from PIL import Image, ImageChops
+    import render_overlay as R
+    from labkit import encargos as E
+
+    # Literales, no las constantes de render_overlay: la prueba fija el contrato por su cuenta.
+    # Arriba tapan la barra de progreso, el avatar y cerrar; abajo, la barra de respuesta,
+    # el corazón y compartir (QA FAIL de CELL-012/014, píldoras en y 1775–1828).
+    ARRIBA, ABAJO = 250, 1660
+    ZONA = (0, ARRIBA, 1080, ABAJO)
+
+    def dentro(caja, zona):
+        return zona[0] <= caja[0] < caja[2] <= zona[2] and zona[1] <= caja[1] < caja[3] <= zona[3]
+
+    def solapan(a, b):
+        return a[0] < b[2] and b[0] < a[2] and a[1] < b[3] and b[1] < a[3]
+
+    persona = (["88 FILAS", "PARA CAMBIAR", "DE FRECUENCIA"], "Lamarr + Antheil · 1942", "PRESENTADORA FICTICIA")
+    faro = (["UN FARO ROMANO", "QUE SIGUE", "EN SERVICIO"], "Torre de Hércules · A Coruña · s. I–II",
+            "ESCENA GENERADA · NO ES UNA FOTOGRAFÍA")
+    aviso_largo = (faro[0], faro[1], "ESCENA GENERADA CON INTELIGENCIA ARTIFICIAL · NO ES UNA FOTOGRAFÍA REAL")
+
+    check(R.HISTORIA == (1080, 1920) and R.ZONA_SEGURA_HISTORIA[1] >= ARRIBA
+          and R.ZONA_SEGURA_HISTORIA[3] <= ABAJO,
+          f"la zona segura deja ≥250 px arriba y ≥260 px abajo en 1080×1920 ({R.ZONA_SEGURA_HISTORIA})")
+    check(issubclass(R.FueraDeZonaSegura, ValueError),
+          "FueraDeZonaSegura es un ValueError: lab.py render sale con código 2 y su tipo")
+
+    print("   · cajas puras: dentro de la zona y sin solapes")
+    for nombre, (lineas, sub, aviso) in (("LAB-PERSON-002", persona),
+                                          ("LAB-LOCATION-011 (titular y subtítulo largos)", faro),
+                                          ("aviso que no cabe junto a la marca", aviso_largo)):
+        cajas = R.cajas_story(lineas, sub, aviso)
+        check(set(cajas) == {"panel", "titular_1", "titular_2", "titular_3", "subtitulo", "aviso", "marca"},
+              f"{nombre}: cajas de panel, tres líneas de titular, subtítulo, aviso y marca ({sorted(cajas)})")
+        fuera = {n: c for n, c in cajas.items() if not dentro(c, ZONA)}
+        check(not fuera, f"{nombre}: todo el overlay queda entre y={ARRIBA} e y={ABAJO} ({fuera or cajas})")
+        check(cajas["titular_1"][1] >= ARRIBA and max(cajas["aviso"][3], cajas["marca"][3]) <= ABAJO,
+              f"{nombre}: el titular empieza en y≥{ARRIBA} y las píldoras acaban en y≤{ABAJO} "
+              f"(titular {cajas['titular_1']}, aviso {cajas['aviso']}, marca {cajas['marca']})")
+        piezas = sorted((n, c) for n, c in cajas.items() if n != "panel")
+        solapes = [(a, b) for i, (a, ca) in enumerate(piezas) for b, cb in piezas[i + 1:] if solapan(ca, cb)]
+        check(not solapes, f"{nombre}: ninguna pieza se solapa con otra ({solapes})")
+        check(all(dentro(cajas[n], cajas["panel"]) for n in ("titular_1", "titular_2", "titular_3", "subtitulo"))
+              and not any(solapan(cajas[n], cajas["panel"]) for n in ("aviso", "marca")),
+              f"{nombre}: titular y subtítulo dentro del panel; aviso y marca fuera de él")
+    cajas = R.cajas_story(*persona)
+    check(cajas["aviso"][1] == cajas["marca"][1], "un aviso corto va en la misma fila que la marca")
+    cajas = R.cajas_story(*aviso_largo)
+    check(cajas["aviso"][3] <= cajas["marca"][1],
+          f"un aviso que no cabe junto a la marca sube a la fila de encima ({cajas['aviso']}, {cajas['marca']})")
+
+    print("   · si no cabe, falla con un error claro y no dibuja")
+    for motivo, args, pieza in (
+            ("un subtítulo que no cabe ni a 34 px",
+             (faro[0], "Torre de Hércules · A Coruña · Galicia · España · siglos I y II d. C.", faro[2]), "subtitulo"),
+            ("una línea de titular que no cabe ni a 46 px",
+             (["UN FARO ROMANO QUE SIGUE EN SERVICIO DESDE EL SIGLO I", "QUE SIGUE", "EN SERVICIO"], faro[1], faro[2]),
+             "titular_1"),
+            ("un aviso más ancho que la zona segura",
+             (faro[0], faro[1], " · ".join(["ESCENA GENERADA · NO ES UNA FOTOGRAFÍA"] * 3)), "aviso")):
+        try:
+            R.cajas_story(*args)
+            error = None
+        except R.FueraDeZonaSegura as e:
+            error = e
+        check(error is not None and pieza in str(error), f"{motivo}: FueraDeZonaSegura que nombra {pieza} ({error})")
+
+    GRIS = (90, 96, 102)
+    with tempfile.TemporaryDirectory() as d:
+        raiz = pathlib.Path(d)
+        fuente = raiz / "fuente.png"
+        Image.new("RGB", (1080, 1920), GRIS).save(fuente, "PNG")
+        destino = raiz / "no-cabe.jpg"
+        try:
+            R.render(fuente, destino, faro[0], "Torre de Hércules · A Coruña · Galicia · España · siglos I y II d. C.",
+                     (5, 39, 73), (176, 220, 236), "story", faro[2])
+            lanzo = False
+        except R.FueraDeZonaSegura:
+            lanzo = True
+        check(lanzo and not destino.exists(), "render story que no cabe lanza FueraDeZonaSegura sin escribir la imagen")
+
+        print("   · el feed 4:5 no cambia")
+        sintetica = raiz / "sintetica.png"
+        Image.linear_gradient("L").resize((1000, 1400)).convert("RGB").save(sintetica, "PNG")
+        # sha256 de los píxeles del feed renderizado con el render_overlay.py de 73e2772 (antes de la
+        # zona segura de Story), en este .venv. Si una actualización de Pillow/FreeType/libjpeg los
+        # cambia, se regeneran con el código de ese commit, nunca con el actual.
+        for aviso, esperado in (("PRESENTADORA FICTICIA", "fc9d479e2cba10461a15d8ad366a3020dfebb17be31a88f5bb4f26ce9e77037a"),
+                                ("", "e52f17908558dc6544bb754244c93fdf0997b320a5a8c806cb0f62d1c63b7663")):
+            salida = raiz / f"feed-{'aviso' if aviso else 'sin-aviso'}.jpg"
+            R.render(sintetica, salida, faro[0], faro[1], (5, 39, 73), (176, 220, 236), "feed", aviso)
+            with Image.open(salida) as im:
+                tamano, huella = im.size, hashlib.sha256(im.convert("RGB").tobytes()).hexdigest()
+            check(tamano == (1080, 1350) and huella == esperado,
+                  f"el feed 4:5 da los mismos píxeles que antes de la zona segura (aviso {aviso!r}: {tamano}, {huella[:12]}…)")
+
+        print("   · lab.py render --formato story: las franjas tapadas quedan como la imagen de origen")
+        (raiz / "encargos").mkdir()
+        (raiz / "coverage.json").write_text(json.dumps({"cells": []}), encoding="utf-8")
+        t = datetime.now(timezone.utc)
+        familia, eid = "LAB-SAFE-001", "ENC-20260101-001"
+        ruta_img = f"experiments/media-lab/assets/{familia}/{eid}-v1.png"
+        p = raiz / ruta_img
+        p.parent.mkdir(parents=True, exist_ok=True)
+        Image.new("RGB", (1080, 1920), GRIS).save(p, "PNG")
+        enc = E.nuevo(eid, coverage_cell_ids=["X"], family_id=familia, brief_path="b.md", do_not_use=[],
+                      formato={"ancho": 1080, "alto": 1920}, prompt="Un dibujo de prueba", restricciones=["sin texto"],
+                      destino_assets=f"experiments/media-lab/assets/{familia}", ahora=t)
+        E.tomar(enc, "codex-heartbeat", t)
+        E.marcar_generado(enc, "codex-heartbeat", [{"ruta": ruta_img, "sha256": hashlib.sha256(p.read_bytes()).hexdigest(),
+                                                    "ancho": 1080, "alto": 1920}], t)
+        E.revisar(enc, aprobado=True, motivo="prueba", ahora=t)
+        E.guardar(raiz / "encargos" / f"{eid}.json", enc)
+
+        def diferencia_maxima(im, caja):
+            fondo = Image.new("RGB", (caja[2] - caja[0], caja[3] - caja[1]), GRIS)
+            return max(alto for _, alto in ImageChops.difference(im.crop(caja), fondo).getextrema())
+
+        # Sobre el gris, el panel y las píldoras (azul al 85 %) difieren ≥ 69 por canal; el eco del
+        # JPEG junto a su borde, ≤ 15 en la fila vecina. 30 separa «dibujado» de «eco».
+        TOLERANCIA_JPEG = 30
+        with LabAislado(raiz) as lab:
+            for nombre, (lineas, sub, aviso) in (("LAB-PERSON-002", persona), ("LAB-LOCATION-011", faro)):
+                salida = f"story-{nombre}.jpg"
+                codigo, datos, err = lab("render", "--encargo", eid, "--variante", "1", "--formato", "story",
+                                         "--titular", "|".join(lineas), "--subtitulo", sub, "--aviso", aviso,
+                                         "--salida", salida)
+                destino = raiz / "experiments/media-lab/assets" / familia / salida
+                check(codigo == 0 and destino.is_file(), f"{nombre}: render story sale con 0 ({codigo}, {datos or err})")
+                if not destino.is_file():
+                    continue
+                with Image.open(destino) as im:
+                    im = im.convert("RGB")
+                    arriba = diferencia_maxima(im, (0, 0, 1080, ARRIBA))
+                    abajo = diferencia_maxima(im, (0, ABAJO, 1080, 1920))
+                    zona = diferencia_maxima(im, ZONA)
+                    borde_arriba = diferencia_maxima(im, (0, ARRIBA, 1080, ARRIBA + 1))
+                    borde_abajo = diferencia_maxima(im, (0, ABAJO - 1, 1080, ABAJO))
+                check(arriba <= TOLERANCIA_JPEG and abajo <= TOLERANCIA_JPEG and zona > 100,
+                      f"{nombre}: nada dibujado en los {ARRIBA} px de arriba ni en los {1920 - ABAJO} de abajo, "
+                      f"y sí en la zona segura (diferencia máxima arriba {arriba}, abajo {abajo}, zona {zona})")
+                check(borde_arriba > 50 and borde_abajo > 50,
+                      f"{nombre}: el panel empieza en y={ARRIBA} y las píldoras llegan a y={ABAJO - 1}, así que la "
+                      f"prueba de las franjas detecta cualquier desplazamiento ({borde_arriba}, {borde_abajo})")
+
+            codigo, datos, _ = lab("render", "--encargo", eid, "--variante", "1", "--formato", "story",
+                                   "--titular", "|".join(faro[0]),
+                                   "--subtitulo", "Torre de Hércules · A Coruña · Galicia · España · siglos I y II d. C.",
+                                   "--aviso", faro[2], "--salida", "no-cabe.jpg")
+            check(codigo == 2 and campo(datos, "tipo") == "FueraDeZonaSegura"
+                  and "subtitulo" in (campo(datos, "error") or "")
+                  and not (raiz / "experiments/media-lab/assets" / familia / "no-cabe.jpg").exists(),
+                  f"lab.py render de una story que no cabe sale con 2 y FueraDeZonaSegura sin escribir ({codigo}, {datos})")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -5663,6 +5824,7 @@ SECCIONES = [
     seccion_recuento_refrescado,
     seccion_preflight_fase2,
     seccion_prompt_ventana,
+    seccion_zona_segura_story,
 ]
 
 
