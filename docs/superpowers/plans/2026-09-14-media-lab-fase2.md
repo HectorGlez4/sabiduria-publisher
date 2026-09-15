@@ -164,6 +164,8 @@ Sin commit.
 - Modify: `experiments/media-lab/labkit/instagram_pantallas.py`
 - Test: `tests/test_media_lab.py`
 
+(ajustado en `fc4a830`: raíz en el origen; firmas con etiqueta/texto/prefijo por nombre; elegir vacío → PantallaInesperada)
+
 - [ ] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` y registrar `seccion_pantalla_comun,` al final de la lista:
@@ -308,9 +310,14 @@ def area(n: dict) -> int:
 
 
 def alto_volcado(xml: str) -> int:
-    """Alto de la pantalla según el volcado: el borde inferior más bajo de los nodos raíz
-    (profundidad 0). Sin nodos, el alto de referencia."""
-    return max((n["bounds"][3] for n in telefono.nodos(xml) if n["profundidad"] == 0), default=ALTO_REFERENCIA)
+    """Alto de la pantalla según el volcado: el borde inferior del nodo raíz (profundidad 0)
+    cuya esquina superior izquierda está en el origen (0, 0). Un volcado de una ventana
+    emergente enfocable tiene la emergente como raíz, con un origen que no es (0, 0) y un alto
+    encogido que no debe usarse para escalar las zonas «arriba»/«abajo»: sin ningún nodo raíz
+    en el origen, el alto de referencia."""
+    completas = [n["bounds"][3] for n in telefono.nodos(xml)
+                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)]
+    return max(completas, default=ALTO_REFERENCIA)
 
 
 def elegir(coincidencias: list[dict], que: object) -> dict:
