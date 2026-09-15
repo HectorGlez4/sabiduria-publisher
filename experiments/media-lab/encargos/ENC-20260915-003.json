@@ -31,7 +31,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-TRIVIA-004",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -57,6 +57,8 @@
     "motivo": "4:5 verosímil: escritorio de época junto a ventana de París, hoja con puntos en relieve como textura ilegible, pizarra y punzón; sin texto, sin personas ni manos, sin retrato, luto, calendarios ni congresos; tercio superior tranquilo para el titular.",
     "revisado_en": "2026-09-15T18:48:23+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-TRIVIA-004-A-FACEBOOK"
+  ],
   "no_lanzados": 0
 }
