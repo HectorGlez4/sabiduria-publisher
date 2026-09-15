@@ -3519,6 +3519,29 @@ def seccion_pantalla_comun() -> None:
     check(P.volcado_de_emergente(emergente_xml) and not P.volcado_de_emergente(alto_2316),
           "volcado_de_emergente distingue la raíz de una emergente de la del árbol completo")
 
+    # Una raíz en el origen no basta: si no ocupa todo el ancho de la pantalla (aquí, un
+    # contenedor de 600 px) no es la pantalla completa, así que tampoco debe escalar «abajo».
+    raiz_estrecha = ('<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'yes\' ?>'
+                     '<hierarchy rotation="0">'
+                     + nodo_xml("[0,0][600,700]", clase="android.widget.FrameLayout",
+                                hijos=nodo_xml("[50,600][550,650]", texto="HijoBajo"))
+                     + '</hierarchy>')
+    check(P.alto_volcado(raiz_estrecha) == P.ALTO_REFERENCIA,
+          "una raíz en el origen más estrecha que la pantalla no cuenta como completa")
+    abajo_estrecha = [n["texto"] for n in P.coincidencias(raiz_estrecha, PAQUETE_IG, "abajo")]
+    check("HijoBajo" not in abajo_estrecha,
+          f"con el alto de referencia, y1=600 no llega a «abajo» (≥1900): {abajo_estrecha}")
+
+    # Ninguna raíz de profundidad 0 cumple las dos condiciones (ancho completo y más alta que
+    # LIMITE_ABAJO_PX): ni la del origen (demasiado baja) ni la otra (no está en el origen).
+    dos_raices = ('<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'yes\' ?>'
+                 '<hierarchy rotation="0">'
+                 + nodo_xml("[0,0][1080,500]", clase="android.widget.FrameLayout")
+                 + nodo_xml("[50,50][600,600]", clase="android.widget.FrameLayout")
+                 + '</hierarchy>')
+    check(P.alto_volcado(dos_raices) == P.ALTO_REFERENCIA,
+          "ninguna raíz de profundidad 0 es de ancho completo y más alta que LIMITE_ABAJO_PX")
+
     comp = xml_compositor()
     check(P.pulsable(comp, etiqueta="Partager", paquete=PAQUETE_IG) and IP.partager_pulsable(comp),
           "pulsable generaliza partager_pulsable (etiqueta dentro de un botón clickable)")

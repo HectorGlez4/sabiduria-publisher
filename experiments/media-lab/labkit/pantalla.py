@@ -38,12 +38,18 @@ def area(n: dict) -> int:
 
 def alto_volcado(xml: str) -> int:
     """Alto de la pantalla según el volcado: el borde inferior del nodo raíz (profundidad 0)
-    cuya esquina superior izquierda está en el origen (0, 0). Un volcado de una ventana
-    emergente enfocable tiene la emergente como raíz, con un origen que no es (0, 0) y un alto
-    encogido que no debe usarse para escalar las zonas «arriba»/«abajo»: sin ningún nodo raíz
-    en el origen, el alto de referencia."""
+    que cuenta como la pantalla completa, o el alto de referencia si ninguno cuenta.
+
+    Cuenta un nodo raíz cuya esquina superior izquierda está en el origen (0, 0), que ocupa
+    todo el ancho de la pantalla (`x2 >= ANCHO_PANTALLA_PX`) y cuyo borde inferior pasa de
+    `LIMITE_ABAJO_PX`. Un volcado de una ventana emergente enfocable tiene la emergente como
+    raíz, con un origen que no es (0, 0); un contenedor en el origen pero más estrecho o más
+    bajo que la pantalla tampoco es la pantalla completa. Ninguno de los dos debe usarse para
+    escalar las zonas «arriba»/«abajo» (fallaría abierto: un nodo intermedio contaría como
+    «abajo»)."""
     completas = [n["bounds"][3] for n in telefono.nodos(xml)
-                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)]
+                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)
+                 and n["bounds"][2] >= ANCHO_PANTALLA_PX and n["bounds"][3] > LIMITE_ABAJO_PX]
     return max(completas, default=ALTO_REFERENCIA)
 
 
