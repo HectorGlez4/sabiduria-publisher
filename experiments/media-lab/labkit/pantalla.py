@@ -264,6 +264,19 @@ def contenedor_raiz_ignorado(n: dict, alto: int) -> bool:
             and y2 - y1 >= FRACCION_PANTALLA_COMPLETA * alto)
 
 
+def _pulsable_intermedio(lista: list[dict], k: int, cx: int, cy: int) -> bool:
+    """Algún descendiente PULSABLE de `lista[k]` (los siguientes en orden de documento con profundidad mayor) contiene
+    el punto (cx, cy)."""
+    raiz = lista[k]
+    for hijo in lista[k + 1:]:
+        if hijo["profundidad"] <= raiz["profundidad"]:
+            break
+        x1, y1, x2, y2 = hijo["bounds"]
+        if hijo["clickable"] and x1 <= cx < x2 and y1 <= cy < y2:
+            return True
+    return False
+
+
 def _bajo_el_toque(lista: list[dict], n: dict, bloquea, *, descendientes: bool = True,
                    solo_pulsables: bool = False) -> dict | None:
     """La regla del centro, común a `es_envio` y a las guardias de `nodo_sonda`: el primer nodo que cumple
@@ -273,8 +286,11 @@ def _bajo_el_toque(lista: list[dict], n: dict, bloquea, *, descendientes: bool =
     siguientes en orden de documento con profundidad mayor, hasta el primero que no lo sea).
 
     Excepción: los descendientes de un contenedor raíz de `CONTENEDORES_RAIZ_IGNORADOS` que cubre la pantalla
-    (`contenedor_raiz_ignorado`) no se miran por ser descendientes suyos. Solo se salta ESE recorrido: `n`, el propio
-    contenedor, cualquier nodo cuyas bounds contienen el centro (pulsable o no) y los descendientes de cualquier otro
+    (`contenedor_raiz_ignorado`) no se miran por ser descendientes suyos, y solo si el centro cae ADEMÁS dentro de
+    otro pulsable descendiente de ese contenedor (`_pulsable_intermedio`: el `asset_button` que envuelve «Stickers»),
+    que es quien recibe el toque. Un toque en el lienzo vacío, sin pulsable intermedio, lo recibiría el propio
+    contenedor, así que ahí sus descendientes se miran como en cualquier pulsable. Solo se salta ESE recorrido: `n`, el
+    propio contenedor, cualquier nodo cuyas bounds contienen el centro (pulsable o no) y los descendientes de cualquier otro
     pulsable bajo el centro se siguen mirando. Vale igual para las tres guardias que pasan por aquí (envío o
     prohibido, id de envío sin etiqueta y borrado), y también para `punto_bloqueado`, porque el motivo es el mismo en
     todas: ese contenedor envuelve la pantalla entera, así que su recorrido de descendientes mira TODOS los controles
@@ -291,7 +307,8 @@ def _bajo_el_toque(lista: list[dict], n: dict, bloquea, *, descendientes: bool =
             continue
         if (m["clickable"] or not solo_pulsables) and bloquea(m):
             return m
-        if descendientes and m["clickable"] and not contenedor_raiz_ignorado(m, alto):
+        if descendientes and m["clickable"] and not (contenedor_raiz_ignorado(m, alto)
+                                                     and _pulsable_intermedio(lista, k, cx, cy)):
             for hijo in lista[k + 1:]:
                 if hijo["profundidad"] <= m["profundidad"]:
                     break

@@ -5872,9 +5872,9 @@ def seccion_excepciones_s1() -> None:
         return f'resource-id="{valor}"'
 
     def editor(*, id_raiz: str = RAIZ, bounds_raiz: str = "[0,0][1080,2340]", paquete_raiz: str = IG,
-               desc_raiz: str = "", en_raiz: str = "", en_asset: str = "") -> str:
+               desc_raiz: str = "", en_raiz: str = "", en_asset: str = "", barra: bool = True) -> str:
         """Editor de Story: contenedor raíz pulsable con las herramientas («Stickers» dentro del pulsable
-        `asset_button`) y la barra de compartir («Vos stories» con un icono dentro y «Partager sur»)."""
+        `asset_button`) y, con `barra`, la barra de compartir («Vos stories» con un icono dentro y «Partager sur»)."""
         herramientas = nodo_xml(
             "[888,0][1080,1920]", clase="androidx.compose.ui.platform.ComposeView",
             extra=rid("com.instagram.android:id/post_capture_compose_view"),
@@ -5883,7 +5883,7 @@ def seccion_excepciones_s1() -> None:
                 extra=f'{pulsable} {rid("com.instagram.android:id/asset_button")}',
                 hijos=nodo_xml("[922,181][1046,305]", desc="Stickers", clase="android.view.View")
                 + nodo_xml("[922,181][1046,305]", clase="android.widget.Button") + en_asset)))
-        barra = nodo_xml(
+        barra_xml = nodo_xml(
             "[34,2056][1046,2179]", clase="android.widget.Button",
             extra=f'{pulsable} {rid("com.instagram.android:id/story_share_controls_action_bar")}',
             hijos=nodo_xml("[34,2056][463,2179]", desc="Vos stories", clase="android.widget.Button",
@@ -5891,7 +5891,7 @@ def seccion_excepciones_s1() -> None:
                            hijos=nodo_xml("[50,2080][110,2150]", desc="Icône", clase="android.widget.ImageView"))
             + nodo_xml("[924,2057][1046,2179]", desc="Partager sur", clase="android.widget.Button", extra=pulsable))
         contenedor = nodo_xml(bounds_raiz, desc=desc_raiz, clase="android.widget.FrameLayout", paquete=paquete_raiz,
-                              extra=f"{pulsable} {rid(id_raiz)}", hijos=herramientas + en_raiz + barra)
+                              extra=f"{pulsable} {rid(id_raiz)}", hijos=herramientas + en_raiz + (barra_xml if barra else ""))
         return jerarquia(nodo_xml("[0,0][1080,2340]", clase="android.view.ViewGroup",
                                   extra=rid("com.instagram.android:id/layout_container_parent"), hijos=contenedor))
 
@@ -5915,6 +5915,30 @@ def seccion_excepciones_s1() -> None:
         check(P.es_envio(xml, n), f"A: {label} sigue siendo envío en es_envio dentro del contenedor exceptuado")
         check(mensaje_sonda(xml, desc=etiqueta) is not None,
               f"A: nodo_sonda sigue negándose a devolver {label} ({mensaje_sonda(xml, desc=etiqueta)})")
+
+    # I1 (revisión de seguridad): «Ami(e)s proches» es envío por sí mismo, sin depender de la barra pulsable.
+    from labkit import textos as TX
+    for valor, esperado in (("Ami(e)s proches", True), ("Ami(e)s proche", True), ("Ami(e)s proches, 3", True),
+                            ("Ami(e)s", False), ("Ami(e)s prochesX", False)):
+        check(TX.es_texto_envio(valor) is esperado, f"I1: es_texto_envio({valor!r}) es {esperado}")
+    suelto = editor(barra=False, en_raiz=nodo_xml("[479,2056][908,2179]", desc="Ami(e)s proches",
+                                                  clase="android.widget.Button", extra=pulsable))
+    check(P.es_envio(suelto, T.buscar(suelto, texto="Ami(e)s proches"))
+          and mensaje_sonda(suelto, desc="Ami(e)s proches") is not None,
+          "I1: «Ami(e)s proches» suelto (sin barra pulsable alrededor) en el contenedor exceptuado es envío en es_envio "
+          "y nodo_sonda no lo devuelve")
+
+    # Menor (revisión de seguridad): la excepción A exige un pulsable intermedio bajo el centro; en el lienzo vacío el
+    # toque lo recibe el propio contenedor y sus descendientes vuelven a mirarse.
+    lienzo = editor(en_raiz=nodo_xml("[300,800][500,1000]", desc="Lienzo", clase="android.view.View"))
+    check(not P.es_envio(lienzo, T.buscar(lienzo, texto="Stickers")),
+          "menor: «Stickers» dentro de asset_button sigue tocable con un nodo de lienzo en pantalla")
+    check(P.es_envio(lienzo, T.buscar(lienzo, texto="Lienzo")) and mensaje_sonda(lienzo, desc="Lienzo") is not None,
+          "menor: un nodo inocuo en el lienzo vacío, sin pulsable intermedio, vuelve a bloquear con «Vos stories» en pantalla")
+    check(not P.es_envio(editor(barra=False, en_raiz=nodo_xml("[300,800][500,1000]", desc="Lienzo",
+                                                              clase="android.view.View")),
+                         T.buscar(lienzo, texto="Lienzo")),
+          "menor: el mismo nodo de lienzo sin ningún envío en pantalla no bloquea (el bloqueo viene de «Vos stories»)")
 
     bloqueos = (
         ("el contenedor raíz con otro id (otro_root)", editor(id_raiz="com.instagram.android:id/otro_root")),
@@ -5970,8 +5994,8 @@ def seccion_excepciones_s1() -> None:
         res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", "Stickers"))
         check(res is not None and res[0] == 0 and sim.toques == [(984, 243)],
               f"A: sonda tocar --desc Stickers sale con 0 y toca una vez su centro ({res and res[0]}, {sim.toques}, {err!r})")
-        for etiqueta in ("Vos stories", "Partager sur"):
-            sim = TelefonoSimulado([xml])
+        for etiqueta in ("Vos stories", "Partager sur", "Ami(e)s proches"):
+            sim = TelefonoSimulado([suelto if etiqueta == "Ami(e)s proches" else xml])
             res, err = con_telefono_simulado(sim, lambda: lab("sonda", "instagram", "tocar", *supervisada, "--desc", etiqueta))
             check(rechazo(res, "envío") and sim.volcados_leidos == 0 and sim.toques == [],
                   f"A: sonda tocar --desc «{etiqueta}» se rechaza sin volcar ni tocar ({res and res[0]}, {err!r})")

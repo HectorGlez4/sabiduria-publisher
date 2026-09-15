@@ -77,6 +77,9 @@ ENVIO_ID_PALABRAS = frozenset({"post", "share", "send", "publish", "submit", "pu
 # blanca del visor propio de la fase 2).
 ENVIO_HISTORIA = frozenset({
     "Votre story", "Vos stories", "Amis proches", "Envoyer à", "Partager sur votre story",
+    # Botón de mejores amigos del editor de Story de Instagram 446.0.0.49.77 tal como sale en la sonda S1 de la
+    # fase 2 (2026-09-15): «Ami(e)s proches»; también en singular.
+    "Ami(e)s proches", "Ami(e)s proche",
     "Tu historia", "Tus historias", "Compartir en tu historia", "Mejores amigos", "Enviar a",
     "Your story", "Your stories", "Close friends", "Send to", "Share to your story",
 })
