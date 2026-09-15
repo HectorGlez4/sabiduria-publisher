@@ -949,14 +949,18 @@
       "publishing_route": "api",
       "variant_id": "A",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
       "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "run_record": "experiments/media-lab/runs/LAB-TRIVIA-004-A-INSTAGRAM.json",
+      "post_id": "17874995790567831",
+      "post_url": "https://www.instagram.com/p/DdU4K6zm64O/",
+      "playback_or_display_verified_at": "2026-09-15T23:21:21.751083+00:00",
+      "measurement_due_at": [
+        "2026-09-16T23:20:58.436363+00:00",
+        "2026-09-18T23:20:58.436363+00:00",
+        "2026-09-22T23:20:58.436363+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
