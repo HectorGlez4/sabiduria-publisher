@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-PLACE-003-A-INSTAGRAM-STORY-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-9x16.jpg",
+  "asset_sha256": "dfaa9edeafdd9f68fab2a12f62307d648521f3e1229866fab2592472228db9c0",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-9x16.jpg",
+  "platforms": [
+    "instagram_story"
+  ],
+  "captions": {
+    "instagram_story": ""
+  }
+}

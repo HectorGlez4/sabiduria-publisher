@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-LOCATION-011-A-THREADS-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-4x5.jpg",
+  "asset_sha256": "b5185c5ee2bc1c0c43552db4f4da251a1cc1055978e881e977532ca3dc3664e8",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-4x5.jpg",
+  "platforms": [
+    "threads"
+  ],
+  "captions": {
+    "threads": "En A Coruña, Roma levantó entre finales del siglo I y comienzos del II un faro que todavía funciona: la Torre de Hércules. Su inscripción nombra a Cayo Sevio Lupo, arquitecto de la actual Coímbra. En 1788 se restauró sin derribar el núcleo romano. Patrimonio Mundial desde 2009.\n\nImagen generada; no es una fotografía del monumento."
+  }
+}

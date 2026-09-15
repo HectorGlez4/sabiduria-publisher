@@ -29,7 +29,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-LOCATION-011",
   "max_intentos": 2,
-  "estado": "generado",
+  "estado": "aprobado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -50,7 +50,11 @@
       "en": "2026-09-15T20:13:48+00:00"
     }
   ],
-  "revision": null,
+  "revision": {
+    "resultado": "aprobado",
+    "motivo": "Torre de Hércules verosímil: torre cuadrada de tres cuerpos con banda diagonal, linterna con un haz blanco, promontorio rocoso y mar al anochecer; sin texto, personas, barcos ni edificios; cielo superior despejado para el titular y cuarto inferior tranquilo",
+    "revisado_en": "2026-09-15T21:08:29+00:00"
+  },
   "runs": [],
   "no_lanzados": 0
 }

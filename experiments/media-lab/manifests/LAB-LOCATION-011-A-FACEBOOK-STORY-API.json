@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-LOCATION-011-A-FACEBOOK-STORY-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-9x16.jpg",
+  "asset_sha256": "88537a6f72e2ebf9ff53911477e1dab4a461bdd52a88a037f6d0a0c30a17c8ee",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-9x16.jpg",
+  "platforms": [
+    "facebook_story"
+  ],
+  "captions": {
+    "facebook_story": ""
+  }
+}

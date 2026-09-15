@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-PLACE-003-A-THREADS-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-4x5.jpg",
+  "asset_sha256": "d5154741a2f1462c4908ca98558a9a5b02051f0a536dc0e16afa6ff5499efce0",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-A-api-4x5.jpg",
+  "platforms": [
+    "threads"
+  ],
+  "captions": {
+    "threads": "En julio de 2016, la UNESCO inscribió Nan Madol (Pohnpei, Micronesia) como Patrimonio Mundial y, a la vez, en la Lista en Peligro.\n\nCasi un centenar de islotes artificiales de basalto y coral sobre el arrecife, centro ceremonial de la dinastía Saudeleur. La amenaza: canales azolvados donde crecen manglares que debilitan los muros.\n\nEscena generada, no fotografía del sitio."
+  }
+}

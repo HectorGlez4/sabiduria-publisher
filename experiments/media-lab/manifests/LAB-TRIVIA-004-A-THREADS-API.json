@@ -1,0 +1,14 @@
+{
+  "run_group_id": "LAB-TRIVIA-004-A-THREADS-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-TRIVIA-004/LAB-TRIVIA-004-A-api-4x5.jpg",
+  "asset_sha256": "fe54a0943a3b59e0c63bbd7b9845ed5e8615f94ff1d8efc042e3710f4953fc90",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-TRIVIA-004/LAB-TRIVIA-004-A-api-4x5.jpg",
+  "platforms": [
+    "threads"
+  ],
+  "captions": {
+    "threads": "¿En qué año adoptó oficialmente el braille la escuela de París donde lo creó Louis Braille?\n\nA) 1829 B) 1840 C) 1854 D) 1878\n\nRespuesta: C) 1854, dos años después de su muerte. Lo publicó allí en 1829; en 1840 un director nuevo lo prohibió y los alumnos lo siguieron usando a escondidas. Volvió a usarse en 1844, pero no fue oficial hasta 1854.\n\nEscena generada, no foto histórica."
+  }
+}
