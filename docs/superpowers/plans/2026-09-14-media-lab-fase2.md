@@ -1169,7 +1169,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - Test: `tests/test_media_lab.py`
 - (ajustado en `95a421c`: una revisión de especificación tras el commit `1f51ed1` encontró tres huecos bloqueantes (B1-B3) y tres importantes (I1-I3) en el diseño de esta tarea, no en su copia del código. `pantalla._es_de_envio`/`es_envio` y `boton_descarte` (Step 4) y `textos.es_texto_envio` (Step 3) quedan como se describe abajo, ya corregidos; el código de los Steps 1-6 de este documento es el ORIGINAL con el hueco, útil como referencia histórica de por qué se corrigió, no para copiarlo literal. Ver la desviación 9 actualizada para el diseño vigente.)
 
-- [ ] **Step 1: Escribir la prueba**
+- [x] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` esta constante y la sección, y registrar `seccion_textos_y_descarte,`:
 
@@ -1322,12 +1322,12 @@ def seccion_textos_y_descarte() -> None:
           "I1: un título de borrado hace fallar cerrado aunque el diálogo tenga también un título de descarte")
 ```
 
-- [ ] **Step 2: Ver que falla**
+- [x] **Step 2: Ver que falla**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: traceback con `ImportError: cannot import name 'textos' from 'labkit'` en la sección 14.
 
-- [ ] **Step 3: Implementar `textos.py`**
+- [x] **Step 3: Implementar `textos.py`**
 
 ```python
 """
@@ -1480,7 +1480,7 @@ def permitido(valor: str, app: str) -> bool:
     return any(re.fullmatch(p, valor) for p in patrones)
 ```
 
-- [ ] **Step 4: Añadir a `pantalla.py` la pista de idioma, el envío prohibido y el descarte**
+- [x] **Step 4: Añadir a `pantalla.py` la pista de idioma, el envío prohibido y el descarte**
 
 Cambiar `from labkit import telefono` por `from labkit import telefono, textos` y añadir al final:
 
@@ -1588,7 +1588,7 @@ def boton_descarte(xml: str, app: str) -> dict:
 >
 > Ver `experiments/media-lab/labkit/pantalla.py` y `experiments/media-lab/labkit/textos.py` en el worktree para el código exacto, y `tests/test_media_lab.py` (bloque «Revisión de especificación (B1-B3, I1-I3)» dentro de `seccion_textos_y_descarte`) para las pruebas.
 
-- [ ] **Step 5: `pasos.py`: pista de idioma en las esperas, `descartar` y `tocar` con guardia de envío**
+- [x] **Step 5: `pasos.py`: pista de idioma en las esperas, `descartar` y `tocar` con guardia de envío**
 
 Sustituir `esperar_que` completa por:
 
@@ -1643,12 +1643,12 @@ def tocar(n: dict, xml: str, paquete: str, permitir: tuple[str, ...] = ()) -> No
     telefono.tocar(*n["centro"])
 ```
 
-- [ ] **Step 6: Ver que pasa**
+- [x] **Step 6: Ver que pasa**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: la sección 14 en `✓` y `El laboratorio cumple sus contratos.`
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add experiments/media-lab/labkit/textos.py experiments/media-lab/labkit/pantalla.py experiments/media-lab/labkit/pasos.py tests/test_media_lab.py
@@ -1666,7 +1666,7 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>"
 - Modify: `experiments/media-lab/labkit/seleccion.py`
 - Test: `tests/test_media_lab.py`
 
-- [ ] **Step 1: Escribir la prueba**
+- [x] **Step 1: Escribir la prueba**
 
 Añadir antes de `SECCIONES` y registrar `seccion_recetas_y_seleccion,`:
 
@@ -1778,12 +1778,12 @@ def seccion_recetas_y_seleccion() -> None:
           "receta_temporal restaura el valor previo de TODAS y la ausencia en BORRADORES")
 ```
 
-- [ ] **Step 2: Ver que falla**
+- [x] **Step 2: Ver que falla**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: traceback con `ImportError: cannot import name 'recetas' from 'labkit'` en la sección 15.
 
-- [ ] **Step 3: Implementar `recetas.py`**
+- [x] **Step 3: Implementar `recetas.py`**
 
 ```python
 """
@@ -1894,7 +1894,7 @@ def renderizar(receta: dict) -> dict:
     return fuera
 ```
 
-- [ ] **Step 4: `seleccion.py` de la fase 2**
+- [x] **Step 4: `seleccion.py` de la fase 2**
 
 Sustituir el archivo completo:
 
@@ -1984,12 +1984,12 @@ def elegir(celdas: list[dict], todos_encargos: list[dict], max_celdas: int = 2,
     return elegidas
 ```
 
-- [ ] **Step 5: Ver que pasa**
+- [x] **Step 5: Ver que pasa**
 
 Run: `/Users/hec/dev/sabiduriaPublisher/.venv/bin/python tests/test_media_lab.py`
 Expected: la sección 15 en `✓`, la sección 4 de la fase 1 sin cambios y `El laboratorio cumple sus contratos.`
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add experiments/media-lab/labkit/recetas.py experiments/media-lab/labkit/seleccion.py tests/test_media_lab.py

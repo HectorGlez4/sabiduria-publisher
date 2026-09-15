@@ -4257,6 +4257,7 @@ def receta_temporal(par: tuple[str, str], receta: dict):
     """`receta` como borrador de `par` en `recetas.TODAS` y `recetas.BORRADORES` mientras dura el
     bloque; al salir RESTAURA lo que hubiera en cada diccionario (o su ausencia), en vez de hacer pop."""
     from labkit import recetas as RC
+    assert par not in RC.PROMOVIDAS, "receta_temporal es solo para borradores"
     registros = (RC.TODAS, RC.BORRADORES)
     previos = [d.get(par, _SIN_RECETA) for d in registros]
     try:
@@ -4288,8 +4289,9 @@ def seccion_recetas_y_seleccion() -> None:
     for par, receta in RC.TODAS.items():
         check(all(k in receta for k in RC.CLAVES) and receta["publicar"] and receta["estados_ok"] == ["confirmado"],
               f"{par}: receta con todas sus claves, un paso de publicar y solo confirmado sale con 0")
-        check(all(set(cp) == {"red", "superficie", "nota"} and cp["red"] in set(TX.APPS_TELEFONO)
-                  for cp in receta["copias"]),
+        check(isinstance(receta.get("copias"), list)
+              and all(isinstance(cp, dict) and set(cp) == {"red", "superficie", "nota"}
+                      and cp["red"] in set(TX.APPS_TELEFONO) for cp in receta["copias"]),
               f"{par}: cada copia nombra una red conocida con superficie y nota")
 
     ap = modulo_lab().construir()
@@ -4346,12 +4348,13 @@ def seccion_recetas_y_seleccion() -> None:
     with receta_temporal(par_th, sin_copias):
         check(lanza(lambda: S.compatibles(th_tel, ig_api), KeyError),
               "una receta sin clave copias falla visible en vez de quitar la exclusión en silencio")
-    par_ig = ("instagram", "feed_single_image")
-    original_ig = RC.TODAS[par_ig]
-    with receta_temporal(par_ig, sin_copias):
-        pass
-    check(RC.TODAS[par_ig] is original_ig and par_ig not in RC.BORRADORES,
-          "receta_temporal restaura el valor previo de TODAS y la ausencia en BORRADORES")
+    receta_a = {**RC.TODAS[("instagram", "feed_single_image")], "nota_prueba": "a"}
+    receta_b = {**RC.TODAS[("instagram", "feed_single_image")], "nota_prueba": "b"}
+    with receta_temporal(par_th, receta_a):
+        with receta_temporal(par_th, receta_b):
+            pass
+        check(RC.TODAS[par_th] is receta_a and RC.BORRADORES[par_th] is receta_a,
+              "receta_temporal restaura el valor previo en TODAS y en BORRADORES")
 
 
 SECCIONES = [
