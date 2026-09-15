@@ -66,8 +66,9 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     try:
         try:
             xml = lanzar_y_esperar()
-        except pasos.SinVolcado:
+        except pasos.SinVolcado as sin_volcado:
             pasos.exigir_listo()
+            _exigir_arranque_en_frio_seguro(evidencia, sin_volcado)
             arranque_en_frio = True  # desde aquí, cualquier error lleva el aviso (también si falla el cierre)
             telefono.forzar_cierre(PAQUETE)
             xml = lanzar_y_esperar()  # si vuelve a fallar, el error sale con el aviso: no hay otro cierre
@@ -96,6 +97,30 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
 
 
 AVISO_ARRANQUE_EN_FRIO = f"(tras un arranque en frío: am force-stop de {PAQUETE})"
+CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
+# El compositor de Instagram: consta en el plan de la fase 1 (sonda SONDA-10F) como ventana padre del desplegable
+# de hashtags, `com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity`.
+ACTIVIDAD_COMPOSITOR = "MediaCaptureActivity"
+
+
+def _exigir_arranque_en_frio_seguro(evidencia: Path, sin_volcado: pasos.SinVolcado) -> None:
+    """Defensa barata antes de `forzar_cierre`: una captura (`screencap` no depende de uiautomator) y el foco de
+    ventana. Si la captura falla, el foco no se puede leer o está en el compositor de Instagram, NO se fuerza el
+    cierre: sale un `SinVolcado` con el mensaje original y el motivo."""
+    def no_se_cierra(motivo: str) -> pasos.SinVolcado:
+        return pasos.SinVolcado(f"{sin_volcado}; no se forzó el cierre de Instagram: {motivo}")
+
+    try:
+        telefono.captura(evidencia / CAPTURA_ANTES_DE_ARRANQUE)
+    except (telefono.TelefonoError, OSError) as e:
+        raise no_se_cierra(f"falló la captura previa ({e})") from sin_volcado
+    foco = telefono.foco()
+    if foco is None:
+        raise no_se_cierra("no se pudo leer el foco de ventana (dumpsys window)") from sin_volcado
+    paquete, _, actividad = foco.partition("/")
+    if paquete == PAQUETE and ACTIVIDAD_COMPOSITOR in actividad:
+        raise no_se_cierra(f"el foco está en el compositor ({foco}): puede haber una publicación a medias") \
+            from sin_volcado
 
 
 def alternar_recorte(evidencia: Path) -> Path:
