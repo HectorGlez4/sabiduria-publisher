@@ -3914,6 +3914,16 @@ def toques_sobre_envio(sim, paquete: str) -> list:
                 for n in telefono.nodos(xml))]
 
 
+def lanza(fn, exc: type[BaseException] = Exception) -> bool:
+    """`fn()` lanza `exc` (o una subclase) y nada más: para los bloques try/ok repetidos de las
+    pruebas que solo comprueban que una llamada falla con el tipo de error esperado."""
+    try:
+        fn()
+    except exc:
+        return True
+    return False
+
+
 def seccion_textos_y_descarte() -> None:
     print("\n14. Fase 2: textos, pista de idioma, envío prohibido y descarte")
     from labkit import pantalla as P, pasos, telefono as T, textos as TX
@@ -3979,23 +3989,17 @@ def seccion_textos_y_descarte() -> None:
 
     for criterio, label in (({"texto": "Partager"}, "la etiqueta de envío"),
                             ({"desc": "Icône"}, "un icono dentro del botón de envío")):
-        try:
-            P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, **criterio)
-            ok = False
-        except P.PantallaInesperada:
-            ok = True
-        check(ok, f"nodo_sonda se niega a devolver {label}")
+        check(lanza(lambda criterio=criterio: P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, **criterio),
+                    P.PantallaInesperada),
+              f"nodo_sonda se niega a devolver {label}")
     check(P.nodo_sonda(XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG, texto="Suivant")["centro"] == (963, 170),
           "nodo_sonda devuelve un nodo único que no es de envío")
     th_publicar = jerarquia(nodo_xml("[800,100][1000,200]", desc="", clase="android.widget.Button",
                                      paquete="com.instagram.barcelona",
                                      extra='clickable="true" resource-id="com.instagram.barcelona:id/new_thread_screen_post_button"'))
-    try:
-        P.nodo_sonda(th_publicar, "com.instagram.barcelona", resource_id="new_thread_screen_post_button")
-        ok = False
-    except P.PantallaInesperada:
-        ok = True
-    check(ok, "nodo_sonda se niega a devolver el botón de publicar de Threads por resource-id")
+    check(lanza(lambda: P.nodo_sonda(th_publicar, "com.instagram.barcelona",
+                                     resource_id="new_thread_screen_post_button"), P.PantallaInesperada),
+          "nodo_sonda se niega a devolver el botón de publicar de Threads por resource-id")
 
     icono = T.buscar(XML_BOTON_ENVIO_CON_ICONO, texto="Icône")
     sim = TelefonoSimulado([XML_BOTON_ENVIO_CON_ICONO])
@@ -4020,12 +4024,8 @@ def seccion_textos_y_descarte() -> None:
                          nodo_xml("[500,2050][600,2150]", desc="Flèche", clase="android.widget.ImageView"))
     flecha = T.buscar(solapado, texto="Flèche")
     check(P.es_envio(solapado, flecha), "C1: un nodo cuyo centro cae dentro de «Vos stories» cuenta como envío")
-    try:
-        P.nodo_sonda(solapado, PAQUETE_IG, texto="Vos stories")
-        ok = False
-    except P.PantallaInesperada:
-        ok = True
-    check(ok, "C1: nodo_sonda se niega a devolver «Vos stories»")
+    check(lanza(lambda: P.nodo_sonda(solapado, PAQUETE_IG, texto="Vos stories"), P.PantallaInesperada),
+          "C1: nodo_sonda se niega a devolver «Vos stories»")
 
     dialogo = jerarquia(nodo_xml("[100,900][980,1000]", texto="Recommencer ?"),
                         nodo_xml("[100,1100][980,1200]", texto="Recommencer", clase="android.widget.Button",
@@ -4227,12 +4227,8 @@ def seccion_textos_y_descarte() -> None:
           "menor 2: un contenedor pulsable de pantalla completa con un «Partager» dentro bloquea cualquier toque, aunque esté lejos (falla cerrado)")
 
     # Importante 1: `permitir`/`ignorar` como `str` se rechaza (cada carácter contaría como candidato).
-    try:
-        TX.coincide_o_prefijo("Votre story", "Votre story")
-        ok = False
-    except TypeError:
-        ok = True
-    check(ok, "importante 1: pantalla.es_envio (vía coincide_o_prefijo) rechaza `ignorar` como str")
+    check(lanza(lambda: TX.coincide_o_prefijo("Votre story", "Votre story"), TypeError),
+          "importante 1: pantalla.es_envio (vía coincide_o_prefijo) rechaza `ignorar` como str")
     votre_story = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView",
                                      extra='clickable="true"'))
     n_votre_story = T.buscar(votre_story, texto="Votre story")
