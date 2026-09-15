@@ -9,7 +9,7 @@
   "image_batch_id": "I01",
   "platform": "facebook",
   "actual_native_format": "story_image",
-  "adaptation_notes": "Scheduled window 2026-09-15 10:40 Europe/Madrid. Native 9:16 recomposition (encargo ENC-20260914-003, Codex rescue generation in this window, approved) of the accepted fictional-presenter world; deterministic Story master rendered with lab.py render --formato story from the Overlay section of briefs/LAB-PERSON-002.md, including the PRESENTADORA FICTICIA disclosure. Stories are published without a caption.",
+  "adaptation_notes": "Round 1 (scheduled window 2026-09-15 10:40 Europe/Madrid) was blocked by visual QA: the Story pills sat under the viewer's reply bar. After the render_overlay.py safe-zone fix, round 2 (scheduled window 2026-09-15 15:40 Europe/Madrid) re-rendered a new deterministic Story master (LAB-PERSON-002-A-api-9x16-r2.jpg) from the same approved encargo ENC-20260914-003 with lab.py render --formato story and the Overlay section of briefs/LAB-PERSON-002.md, including the PRESENTADORA FICTICIA disclosure, and published it with a new run group (LAB-PERSON-002-A-FACEBOOK-STORY-API-R2). Stories are published without a caption.",
   "audio_treatment": "none",
   "location_treatment": {"visual_place": null, "text_label": null, "native_place_id": null, "native_place_label": null},
   "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
@@ -17,12 +17,14 @@
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (window start)", "at": "2026-09-15T08:48:01+00:00", "espera": "producción subiendo: hilos"}
+      {"source": "lab.py preflight (round 1 window start)", "at": "2026-09-15T08:48:01+00:00", "espera": "producción subiendo: hilos"},
+      {"source": "lab.py preflight (round 2 window start)", "at": "2026-09-15T13:47:54+00:00", "espera": null},
+      {"source": "lab.py preflight (right before workflow dispatch)", "at": "2026-09-15T13:50:21+00:00", "espera": null, "note": "No nearby production reported."}
     ],
     "matched_comparison_ids": ["LAB-PERSON-002-A-FACEBOOK", "LAB-PERSON-002-A-INSTAGRAM-STORY"]
   },
-  "round": 1,
-  "status": "blocked",
+  "round": 2,
+  "status": "completed",
   "tool_option_id": null,
   "format_id": "image_overlay_story",
   "seed_source_path": "content/published/2026-09-07-extra88.json",
@@ -38,28 +40,39 @@
   ],
   "tool": {"name": "codex exec image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
   "timing": {
-    "started_at": "2026-09-15T08:47:45Z",
-    "first_acceptable_at": null,
-    "finished_at": null,
-    "wall_elapsed_seconds": null,
+    "started_at": "2026-09-15T13:47:44Z",
+    "first_acceptable_at": "2026-09-15T13:50:30Z",
+    "finished_at": "2026-09-15T13:52:00Z",
+    "wall_elapsed_seconds": 256,
     "one_time_setup_active_seconds": null,
     "human_active_seconds": 0,
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 0,
     "stages": [
-      {"name": "turn, lock, rebase, preflight, encargos, rescue generation ENC-20260914-003 and review", "started_at": "2026-09-15T08:47:45Z", "finished_at": "2026-09-15T08:55:00Z", "overlaps_another_stage": false},
-      {"name": "render Story master, manifests, visual QA (agent), commit and push", "started_at": "2026-09-15T08:55:00Z", "finished_at": null, "overlaps_another_stage": true}
+      {"name": "round 1 (blocked): rescue generation, render, manifests, visual QA FAIL", "started_at": "2026-09-15T08:47:45Z", "finished_at": "2026-09-15T09:05:00Z", "overlaps_another_stage": false},
+      {"name": "round 2: turn, lock, rebase, preflight, encargo reviews, render r2, manifests, visual QA PASS, commit and push", "started_at": "2026-09-15T13:47:44Z", "finished_at": "2026-09-15T13:50:30Z", "overlaps_another_stage": true},
+      {"name": "preflight, media-lab workflow 34977630174, result download", "started_at": "2026-09-15T13:50:21Z", "finished_at": "2026-09-15T13:52:00Z", "overlaps_another_stage": false}
     ]
   },
-  "attempts": [],
+  "attempts": [
+    {"number": 1, "result": "blocked_before_publishing", "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg", "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-FACEBOOK-STORY-API.json", "note": "Visual QA FAIL; manifest committed but never dispatched."},
+    {"number": 2, "result": "published", "master": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg", "manifest": "experiments/media-lab/manifests/LAB-PERSON-002-A-FACEBOOK-STORY-API-R2.json", "workflow_run": 34977630174}
+  ],
   "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
   "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg",
+      "sha256": "3aba56fe18606f0a2b6985980e25b938b699cc86126635836352973d49af85c8",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1920",
+      "role": "publishable_master"
+    },
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16.jpg",
       "sha256": "1de4c8bc71f8998410b15f81e80ad8d9f6abb8f03dbb6f6fa1b608eea975c389",
       "media_type": "image/jpeg",
       "dimensions": "1080x1920",
-      "role": "publishable_master"
+      "role": "rejected_master_round_1"
     },
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/ENC-20260914-003-v1.png",
@@ -69,11 +82,19 @@
       "role": "generation_source"
     },
     {
-      "path": "experiments/media-lab/manifests/LAB-PERSON-002-A-FACEBOOK-STORY-API.json",
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/caption-story-empty.txt",
+      "role": "caption"
+    },
+    {
+      "path": "experiments/media-lab/manifests/LAB-PERSON-002-A-FACEBOOK-STORY-API-R2.json",
       "role": "api_manifest"
+    },
+    {
+      "path": "experiments/media-lab/results/34977630174/live-result.json",
+      "role": "publish_result"
     }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": null, "usable_export": true, "within_budget": true},
+  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
   "visual_qa": {
     "reviews": [
       {
@@ -89,9 +110,23 @@
           "No text is cut or out of frame; headline panel y 170–600, text y≈242–548.",
           "First headline line starts at y≈242, ~8 px inside the ~250 px top header band; centred, so no real overlap with avatar/name expected."
         ]
+      },
+      {
+        "number": 2,
+        "reviewed_at": "2026-09-15T13:50:30Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": ["experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-9x16-r2.jpg"],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": [
+          "Headline panel y≈252–680; headline text y≈320–552; subtitle y≈588–630: complete and ~70 px below the covered top band.",
+          "PRESENTADORA FICTICIA and SABIDURÍA DE BOLSILLO pills y≈1607–1660 (text y≈1622–1647): complete, above y 1660; moved up from y≈1775–1828 in round 1.",
+          "Bottom pills sit exactly at the 1660 limit (~13 px of text margin); raising them 40–60 px would give more headroom on devices whose reply bar starts higher.",
+          "Panel top edge (y≈252) is right at the 250 limit; only the panel background, not text, could touch the progress bar/account name."
+        ]
       }
     ],
-    "correction": "Not possible in this window: the Story pill position is hard-coded (brand_top = 1775 for story) in experiments/media-lab/render_overlay.py and lab.py render exposes no position option; the unattended window may not edit code. Cell abandoned without publishing."
+    "correction": "Round 1 FAIL was fixed in render_overlay.py (ZONA_SEGURA_HISTORIA y 250–1660) outside the window; round 2 used a new master and new run group."
   },
   "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
   "publication": {
@@ -101,28 +136,35 @@
     "publishing_transport": "Meta official API via isolated GitHub Actions lab workflow (media-lab), publish_story",
     "native_app_and_version": null,
     "api_version": null,
-    "route_assigned_at": "2026-09-15T08:55:00Z",
+    "route_assigned_at": "2026-09-15T13:48:30Z",
     "phone_transfer_seconds": null,
-    "publishing_active_seconds": null,
+    "publishing_active_seconds": 5.347,
     "native_changes_from_master": [],
     "human_interventions": [],
-    "fidelity_checks": {"caption": "not_applicable", "cover": "not_applicable", "media_order": "not_applicable", "aspect_ratio": null, "audio": "not_applicable"},
+    "fidelity_checks": {"caption": "not_applicable", "cover": "not_applicable", "media_order": "not_applicable", "aspect_ratio": "master 1080x1920 served from raw GitHub (asset_url in live-result.json)", "audio": "not_applicable"},
     "destination": "facebook Page 874327782058550 (Sabiduria De Bolsillo) Story",
     "agreed_batch_reference": null,
     "requested_audience": "public",
-    "actual_audience": null,
-    "submitted_at": null,
-    "processing_completed_at": null,
+    "actual_audience": "public Page Story (expires 24 h after publication)",
+    "workflow_run": 34977630174,
+    "result_path": "experiments/media-lab/results/34977630174/live-result.json",
+    "submitted_at": "2026-09-15T13:50:42.789234+00:00",
+    "processing_completed_at": "2026-09-15T13:50:48.136282+00:00",
     "playback_verified_at": null,
-    "post_id": null,
+    "post_id": "1566793071859401",
+    "photo_id": "1095771879914138",
     "post_url": null,
+    "expires": "24h",
     "audio_verified": null,
-    "master_sha256": "1de4c8bc71f8998410b15f81e80ad8d9f6abb8f03dbb6f6fa1b608eea975c389",
+    "master_sha256": "3aba56fe18606f0a2b6985980e25b938b699cc86126635836352973d49af85c8",
     "snapshots": []
   },
   "missing_data_reasons": {
-    "publication": "Not published: independent visual QA FAIL (bottom pills under Story viewer controls) and no correction available through lab.py render."
+    "post_url": "Facebook Page Stories have no durable public permalink; the API result returned url null.",
+    "verification": "Story-only cell: the window's recipe skips media-lab-verify for Stories; live-result.json status submitted with post_id and photo_id.",
+    "visual_display_on_device": "API cell: no native app screenshot taken in this window.",
+    "audience_metrics": "Facebook Stories have no metrics through the lab's API route (and the Page token lacks read_insights); no snapshot will be taken."
   },
-  "decision": "Blocked before publishing; nothing was submitted. Manifest LAB-PERSON-002-A-FACEBOOK-STORY-API.json was committed but never dispatched; a later attempt needs a new run-group name (manifiesto-api does not overwrite) and a new --salida.",
-  "next_action": "User decision: move the Story pills in render_overlay.py above y≈1680 (bottom edge) and ideally start the headline text at y≥260, then set CELL-012 back to planned; ENC-20260914-003 stays aprobado and can be re-rendered."
+  "decision": "Round 2 published through the Meta API as a Facebook Page Story after an independent visual QA PASS on the corrected safe-zone master.",
+  "next_action": "None for metrics (not available for Facebook Stories). Story expires about 2026-09-16T13:50Z."
 }

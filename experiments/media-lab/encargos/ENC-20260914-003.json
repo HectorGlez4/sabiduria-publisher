@@ -28,7 +28,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-PERSON-002",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -54,6 +54,8 @@
     "motivo": "Recomposición 9:16 verosímil del mismo mundo que la referencia aceptada (misma presentadora ficticia tipo, paleta teal/latón, luz de tungsteno); una sola persona, manos correctas, perforaciones genéricas, esferas y cajoneras sin texto ni números legibles; cara, manos y rollo fuera del 14 % superior y del 18 % inferior, franja superior limpia para el titular; cumple brief y do_not_use.",
     "revisado_en": "2026-09-15T08:54:21+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-PERSON-002-A-FACEBOOK-STORY"
+  ],
   "no_lanzados": 0
 }
