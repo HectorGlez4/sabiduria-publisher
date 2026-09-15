@@ -139,15 +139,15 @@ def estado_desde_dumpsys(power: str, window: str) -> dict:
     return {"despierto": despierto, "bloqueado": bloqueado, "listo": despierto and bloqueado is False}
 
 
-def foco_de(texto_dumpsys: str) -> str | None:
-    """Componente `paquete/actividad` con el foco según `dumpsys window`: el de `mCurrentFocus` o, si no
-    trae componente (p. ej. `null` o una ventana sin «/»), el de `mFocusedApp`. None si ninguno lo trae."""
+def focos_de(texto_dumpsys: str) -> list[str]:
+    """Componentes `paquete/actividad` de las líneas `mCurrentFocus` y `mFocusedApp` de `dumpsys window`, en ese
+    orden (primero todas las de `mCurrentFocus`). Sin `null` ni ventanas sin «/» (p. ej. `PopupWindow:…`); la forma
+    corta `paquete/.actividad.Clase` se deja tal cual. Lista vacía si ninguna línea trae componente."""
+    focos: list[str] = []
     for clave in ("mCurrentFocus", "mFocusedApp"):
         for m in re.finditer(rf"{clave}=\S*?\{{([^}}]*)\}}", texto_dumpsys):
-            componente = next((t for t in m.group(1).split() if "/" in t), None)
-            if componente:
-                return componente
-    return None
+            focos += [t for t in m.group(1).split() if "/" in t][:1]
+    return focos
 
 
 def teclado_desde_dumpsys(texto: str) -> bool | None:
@@ -345,12 +345,12 @@ def lanzar(paquete: str) -> None:
     shell(f"monkey -p {paquete} -c android.intent.category.LAUNCHER 1")
 
 
-def foco(timeout: int = 15) -> str | None:
-    """`foco_de` sobre `dumpsys window` (el mismo comando que lee `estado`); None si no se puede leer."""
+def focos(timeout: int = 15) -> list[str]:
+    """`focos_de` sobre `dumpsys window` (el mismo comando que lee `estado`); lista vacía si no se puede leer."""
     try:
-        return foco_de(shell("dumpsys window", timeout=timeout))
+        return focos_de(shell("dumpsys window", timeout=timeout))
     except TelefonoError:
-        return None
+        return []
 
 
 def forzar_cierre(paquete: str, timeout: int = 15) -> None:

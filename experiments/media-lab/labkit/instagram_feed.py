@@ -29,6 +29,15 @@ from labkit.pasos import (ATRAS, CTRL_IZQ, ESTABILIZACION_TIMEOUT_S, TECLA_A,  #
                           BorradorPendiente, TelefonoNoListo)
 
 
+AVISO_ARRANQUE_EN_FRIO = f"(tras un arranque en frío: am force-stop de {PAQUETE})"
+CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
+# Actividad de todo el flujo de creación de Instagram (selector, editor y compositor):
+# `com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity`. Consta en el plan de la fase 1
+# (sonda SONDA-10F) como ventana padre del desplegable de hashtags y, en el teléfono el 2026-09-15, como foco con el
+# selector «Nouvelle publication» abierto.
+ACTIVIDAD_COMPOSITOR = "MediaCaptureActivity"
+
+
 def _esperar(zona: str | None = None, **kw) -> str:
     return pasos.esperar_que(lambda xml: bool(_coincidencias(xml, zona, **kw)), f"{kw}")
 
@@ -40,8 +49,8 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     directo) ningún volcado llega a leerse. Solo en ese caso (`pasos.SinVolcado`: nada leído, así que no hay
     ningún borrador visto que proteger) se fuerza el cierre UNA vez, se relanza en frío y se vuelve a esperar
     con el mismo criterio; el resultado lo anota en `arranque_en_frio`. Si algún volcado se leyó, el error
-    sale como siempre y la app no se toca. Todo error desde el intento de `forzar_cierre` en adelante sale
-    con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje."""
+    sale como siempre y la app no se toca. Todo `PantallaInesperada`, `TelefonoError` u `OSError` desde el intento
+    de `forzar_cierre` en adelante sale con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje."""
     if isinstance(subido_en, str):
         subido_en = datetime.fromisoformat(subido_en)
     pasos.exigir_listo()
@@ -90,23 +99,17 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
                 f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
         return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
                 "publicaciones_antes": publicaciones_antes, "arranque_en_frio": arranque_en_frio}
-    except (PantallaInesperada, telefono.TelefonoError) as e:
+    except (PantallaInesperada, telefono.TelefonoError, OSError) as e:
         if not arranque_en_frio:
             raise
         raise type(e)(f"{e} {AVISO_ARRANQUE_EN_FRIO}") from e
 
 
-AVISO_ARRANQUE_EN_FRIO = f"(tras un arranque en frío: am force-stop de {PAQUETE})"
-CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
-# El compositor de Instagram: consta en el plan de la fase 1 (sonda SONDA-10F) como ventana padre del desplegable
-# de hashtags, `com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity`.
-ACTIVIDAD_COMPOSITOR = "MediaCaptureActivity"
-
-
 def _exigir_arranque_en_frio_seguro(evidencia: Path, sin_volcado: pasos.SinVolcado) -> None:
-    """Defensa barata antes de `forzar_cierre`: una captura (`screencap` no depende de uiautomator) y el foco de
-    ventana. Si la captura falla, el foco no se puede leer o está en el compositor de Instagram, NO se fuerza el
-    cierre: sale un `SinVolcado` con el mensaje original y el motivo."""
+    """Defensa barata antes de `forzar_cierre`: una captura (`screencap` no depende de uiautomator) y los focos de
+    ventana (`mCurrentFocus` y `mFocusedApp`). Si la captura falla, no se puede leer ningún foco o CUALQUIERA de los
+    dos está en `MediaCaptureActivity`, el flujo de creación (selector, editor y compositor), aunque el otro sea un
+    diálogo de permisos encima, NO se fuerza el cierre: sale un `SinVolcado` con el mensaje original y el motivo."""
     def no_se_cierra(motivo: str) -> pasos.SinVolcado:
         return pasos.SinVolcado(f"{sin_volcado}; no se forzó el cierre de Instagram: {motivo}")
 
@@ -114,13 +117,14 @@ def _exigir_arranque_en_frio_seguro(evidencia: Path, sin_volcado: pasos.SinVolca
         telefono.captura(evidencia / CAPTURA_ANTES_DE_ARRANQUE)
     except (telefono.TelefonoError, OSError) as e:
         raise no_se_cierra(f"falló la captura previa ({e})") from sin_volcado
-    foco = telefono.foco()
-    if foco is None:
-        raise no_se_cierra("no se pudo leer el foco de ventana (dumpsys window)") from sin_volcado
-    paquete, _, actividad = foco.partition("/")
-    if paquete == PAQUETE and ACTIVIDAD_COMPOSITOR in actividad:
-        raise no_se_cierra(f"el foco está en el compositor ({foco}): puede haber una publicación a medias") \
+    focos = telefono.focos()
+    if not focos:
+        raise no_se_cierra("no se pudo leer el foco de ventana (ni mCurrentFocus ni mFocusedApp en dumpsys window)") \
             from sin_volcado
+    en_compositor = [f for f in focos if ACTIVIDAD_COMPOSITOR in f]
+    if en_compositor:
+        raise no_se_cierra(f"un foco está en el flujo de creación (selector, editor y compositor: "
+                           f"{', '.join(en_compositor)}): puede haber una publicación a medias") from sin_volcado
 
 
 def alternar_recorte(evidencia: Path) -> Path:

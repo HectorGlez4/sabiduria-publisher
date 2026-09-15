@@ -597,10 +597,10 @@ class TelefonoSimulado:
                  listo: bool = True, falla_tocar: Exception | None = None,
                  falla_pegar: Exception | None = None, falla_cortina: Exception | None = None,
                  tras_cierre: list | None = None, falla_cierre: Exception | None = None,
-                 foco: str | None = None, falla_captura: Exception | None = None):
+                 focos: tuple = (), falla_captura: Exception | None = None):
         self.volcados = list(volcados)
         self.falla_cierre = falla_cierre
-        self.foco_actual = foco  # lo que devuelve `foco()`: componente con el foco, o None si no se puede leer
+        self.focos_actuales = list(focos)  # lo que devuelve `focos()`: vacío es «no se puede leer»
         self.falla_captura = falla_captura
         self.tras_cierre = tras_cierre  # si se da, `forzar_cierre` sustituye el guion de volcados por este
         self.teclado = list(teclado)
@@ -669,8 +669,8 @@ class TelefonoSimulado:
             raise self.falla_captura
         return destino
 
-    def foco(self, timeout: int = 15) -> str | None:
-        return self.foco_actual
+    def focos(self, timeout: int = 15) -> list[str]:
+        return list(self.focos_actuales)
 
     def lanzar(self, paquete: str) -> None:
         self.orden.append(f"lanzar:{paquete}")
@@ -714,7 +714,7 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
                (telefono, "teclado_estado", sim.teclado_estado),
                (telefono, "ventanas_emergentes", sim.ventanas_emergentes), (telefono, "captura", sim.captura),
                (telefono, "lanzar", sim.lanzar), (telefono, "cerrar_cortina", sim.cerrar_cortina),
-               (telefono, "forzar_cierre", sim.forzar_cierre), (telefono, "foco", sim.foco),
+               (telefono, "forzar_cierre", sim.forzar_cierre), (telefono, "focos", sim.focos),
                (telefono, "shell", sim.prohibido),
                (telefono, "adb", sim.prohibido), (phone_clipboard, "pegar", sim.pegar),
                (phone_clipboard, "adb", sim.prohibido), (subprocess, "run", sim.prohibido),
@@ -4863,26 +4863,45 @@ def seccion_arranque_en_frio() -> None:
     subida = datetime(2026, 9, 14, 8, 39, tzinfo=timezone.utc)
     cierre, lanzar = f"forzar_cierre:{IG.PAQUETE}", f"lanzar:{IG.PAQUETE}"
 
-    # Salidas de `dumpsys window` SINTÉTICAS (solo las líneas de foco) con nombres de actividad plausibles. Del teléfono
-    # real solo consta MediaCaptureActivity (plan de la fase 1, sonda SONDA-10F); las demás son inventadas.
+    # Salidas de `dumpsys window` SINTÉTICAS (solo las líneas de foco) con nombres de actividad plausibles, salvo las
+    # marcadas como dato real. Del teléfono constan MediaCaptureActivity (todo el flujo de creación: selector, editor
+    # y compositor; fase 1 y 2026-09-15) y MainTabActivity (perfil, 2026-09-15); las demás actividades son inventadas.
     foco_compositor = "com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity"
     foco_principal = "com.instagram.android/com.instagram.mainactivity.InstagramMainActivity"
     foco_reel = "com.instagram.android/com.instagram.clips.viewer.ClipsViewerActivity"
     foco_directo = "com.instagram.android/com.instagram.direct.DirectThreadActivity"
+    foco_compositor_corto = "com.instagram.android/.activity.MediaCaptureActivity"  # forma corta, sintética
+    dialogo = "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity"
+    # Dato REAL del teléfono (`adb shell dumpsys window` con Instagram en el perfil, 2026-09-15): forma larga en
+    # mCurrentFocus y corta en mFocusedApp.
+    real_main_tab = ("  mCurrentFocus=Window{84f3924 u0 com.instagram.android/com.instagram.android.activity.MainTabActivity}\n"
+                     "  mFocusedApp=ActivityRecord{234413417 u0 com.instagram.android/.activity.MainTabActivity t2500}\n")
+    texto_dialogo = (f"  mCurrentFocus=Window{{5a6b7c u0 {dialogo}}}\n"
+                     f"  mFocusedApp=ActivityRecord{{1a2b3c u0 {foco_compositor} t4242}}\n")
     for texto, esperado, label in (
             (f"  mCurrentFocus=Window{{e654062 u0 {foco_compositor}}}\n"
-             f"  mFocusedApp=ActivityRecord{{1a2b3c u0 {foco_compositor} t4242}}\n", foco_compositor, "el compositor"),
-            (f"  mCurrentFocus=Window{{7f00a1 u0 {foco_principal}}}\n", foco_principal, "la actividad principal"),
+             f"  mFocusedApp=ActivityRecord{{1a2b3c u0 {foco_compositor} t4242}}\n", [foco_compositor, foco_compositor],
+             "el compositor"),
+            (f"  mCurrentFocus=Window{{7f00a1 u0 {foco_principal}}}\n", [foco_principal], "la actividad principal"),
             (f"  mCurrentFocus=Window{{7f00a2 u0 {foco_reel}}}\n"
-             f"  mFocusedApp=ActivityRecord{{2b3c4d u0 {foco_reel} t77}}\n", foco_reel, "el Reel"),
-            (f"  mCurrentFocus=null\n  mFocusedApp=ActivityRecord{{3c4d5e u0 {foco_directo} t78}}\n", foco_directo,
+             f"  mFocusedApp=ActivityRecord{{2b3c4d u0 {foco_reel} t77}}\n", [foco_reel, foco_reel], "el Reel"),
+            (f"  mCurrentFocus=null\n  mFocusedApp=ActivityRecord{{3c4d5e u0 {foco_directo} t78}}\n", [foco_directo],
              "el visor de mensajes solo en mFocusedApp"),
             (f"  mCurrentFocus=Window{{49fd424 u0 PopupWindow:de536c5}}\n"
-             f"  mFocusedApp=ActivityRecord{{1a2b3c u0 {foco_compositor} t4242}}\n", foco_compositor,
-             "una ventana sin componente en mCurrentFocus (se usa mFocusedApp)"),
-            ("  mCurrentFocus=null\n  mFocusedApp=null\n", None, "un texto sin foco"),
-            ("", None, "un texto vacío")):
-        check(T.foco_de(texto) == esperado, f"foco_de con {label}: {T.foco_de(texto)!r}")
+             f"  mFocusedApp=ActivityRecord{{1a2b3c u0 {foco_compositor} t4242}}\n", [foco_compositor],
+             "una ventana sin componente en mCurrentFocus (solo cuenta mFocusedApp)"),
+            (real_main_tab, ["com.instagram.android/com.instagram.android.activity.MainTabActivity",
+                             "com.instagram.android/.activity.MainTabActivity"],
+             "el dato real del perfil (forma larga y corta)"),
+            ("  mCurrentFocus=null\n  mFocusedApp=ActivityRecord{1 u0 com.instagram.android/.activity.MediaCaptureActivity t2500}\n",
+             [foco_compositor_corto], "el compositor en forma corta solo en mFocusedApp"),
+            (texto_dialogo, [dialogo, foco_compositor], "un diálogo de permissioncontroller encima del compositor"),
+            # Dato REAL (2026-09-15, selector «Nouvelle publication» abierto); el id de ventana es inventado.
+            ("  mCurrentFocus=Window{9d8e7f6 u0 com.instagram.android/instagram.features.creation.activity.MediaCaptureActivity}\n",
+             [foco_compositor], "el dato real del selector «Nouvelle publication» (flujo de creación)"),
+            ("  mCurrentFocus=null\n  mFocusedApp=null\n", [], "un texto sin foco"),
+            ("", [], "un texto vacío")):
+        check(T.focos_de(texto) == esperado, f"focos_de con {label}: {T.focos_de(texto)!r}")
 
     sim = TelefonoSimulado([colgado])
     res, err = con_telefono_simulado(sim, lambda: pasos.esperar_que(lambda x: True, "algo"))
@@ -4896,7 +4915,7 @@ def seccion_arranque_en_frio() -> None:
     with tempfile.TemporaryDirectory() as d:
         evid = pathlib.Path(d)
 
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=normal)
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=normal)
         res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
         check(err is None and sim.orden == ["cortina", lanzar, cierre, lanzar] and res["arranque_en_frio"] is True
               and res["publicaciones_antes"] == 3712 and not sim.prohibidos
@@ -4932,12 +4951,12 @@ def seccion_arranque_en_frio() -> None:
 
     with entorno_lab_fase2() as (lab, raiz):
         args = ("ig", "abrir", "--run", "RUN-1", "--subido-en", subida.isoformat())
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=normal)
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=normal)
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is True
               and sim.orden.count(cierre) == 1 and sim.orden.count(lanzar) == 2,
               f"ig abrir emite arranque_en_frio true en su JSON tras el cierre forzado ({res and res[:2]}, {err!r})")
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=[colgado])
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=[colgado])
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 4 and campo(res[1], "tipo") == "SinVolcado"
               and sim.orden == ["cortina", lanzar, cierre, lanzar]
@@ -4947,7 +4966,7 @@ def seccion_arranque_en_frio() -> None:
         check("am force-stop de com.instagram.android" in IG.AVISO_ARRANQUE_EN_FRIO,
               f"el aviso nombra el force-stop de Instagram ({IG.AVISO_ARRANQUE_EN_FRIO!r})")
 
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=normal, falla_cierre=T.TelefonoError("adb: device offline"))
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=normal, falla_cierre=T.TelefonoError("adb: device offline"))
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 4 and campo(res[1], "tipo") == "TelefonoError"
               and sim.orden == ["cortina", lanzar, cierre]
@@ -4956,7 +4975,7 @@ def seccion_arranque_en_frio() -> None:
               f"forzar_cierre falla: sale 4, no relanza y el error menciona el arranque en frío "
               f"({res and res[:2]}, {sim.orden})")
 
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=normal)
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=normal)
         listos = [True, False]  # listo al empezar; ya no lo está al ir a forzar el cierre
         sim.estado = lambda: {"adb": True, "listo": listos.pop(0) if len(listos) > 1 else listos[0]}
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
@@ -4965,7 +4984,7 @@ def seccion_arranque_en_frio() -> None:
               f"el teléfono deja de estar listo antes del cierre: sale 4 sin forzar_cierre y sin el aviso "
               f"({res and res[:2]}, {sim.orden})")
 
-        sim = TelefonoSimulado([colgado], foco=foco_reel, tras_cierre=[xml_compositor()])
+        sim = TelefonoSimulado([colgado], focos=(foco_reel,), tras_cierre=[xml_compositor()])
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 4 and campo(res[1], "tipo") == "BorradorPendiente"
               and sim.orden == ["cortina", lanzar, cierre, lanzar] and sim.toques == []
@@ -4982,12 +5001,16 @@ def seccion_arranque_en_frio() -> None:
               f"ig abrir en el flujo normal emite arranque_en_frio false ({res and res[:2]}, {err!r})")
         check(IG.CAPTURA_ANTES_DE_ARRANQUE not in sim.capturas, f"el flujo normal no hace la captura previa ({sim.capturas})")
 
-        for foco, falla, motivo, label in (
-                (foco_compositor, None, "MediaCaptureActivity", "foco en el compositor (MediaCaptureActivity)"),
-                (None, None, "foco de ventana", "foco ilegible"),
-                (foco_reel, T.TelefonoError("screencap no devolvió un PNG (0 bytes)"), "captura previa",
+        for focos, falla, motivo, label in (
+                ((foco_compositor,), None, "MediaCaptureActivity", "foco en el compositor (MediaCaptureActivity)"),
+                ((foco_compositor_corto,), None, "MediaCaptureActivity",
+                 "foco del compositor en forma corta (/.activity.MediaCaptureActivity)"),
+                (tuple(T.focos_de(texto_dialogo)), None, "MediaCaptureActivity",
+                 "diálogo de permissioncontroller en mCurrentFocus con el compositor en mFocusedApp"),
+                ((), None, "foco de ventana", "foco ilegible (ni mCurrentFocus ni mFocusedApp)"),
+                ((foco_reel,), T.TelefonoError("screencap no devolvió un PNG (0 bytes)"), "captura previa",
                  "captura previa que falla")):
-            sim = TelefonoSimulado([colgado], foco=foco, falla_captura=falla, tras_cierre=normal)
+            sim = TelefonoSimulado([colgado], focos=focos, falla_captura=falla, tras_cierre=normal)
             res, err = con_telefono_simulado(sim, lambda: lab(*args))
             error = str(campo(res[1], "error")) if res else ""
             check(err is None and res[0] == 4 and campo(res[1], "tipo") == "SinVolcado"
@@ -4995,13 +5018,36 @@ def seccion_arranque_en_frio() -> None:
                   and "no se forzó el cierre" in error and motivo in error and IG.AVISO_ARRANQUE_EN_FRIO not in error,
                   f"{label}: sale 4 con SinVolcado, sin forzar_cierre y diciendo por qué ({res and res[:2]}, {sim.orden})")
 
-        sim = TelefonoSimulado([colgado], foco=foco_principal, tras_cierre=normal)
+        sim = TelefonoSimulado([colgado], focos=(foco_principal,), tras_cierre=normal)
         res, err = con_telefono_simulado(sim, lambda: lab(*args))
         check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is True
               and sim.orden == ["cortina", lanzar, cierre, lanzar]
               and sim.capturas[:1] == [IG.CAPTURA_ANTES_DE_ARRANQUE],
               f"foco en la actividad principal de Instagram: arranque en frío con la captura previa hecha "
               f"({res and res[:2]}, {sim.capturas})")
+
+        sim = TelefonoSimulado([colgado], focos=tuple(T.focos_de(real_main_tab)), tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is True
+              and sim.orden == ["cortina", lanzar, cierre, lanzar],
+              f"los dos focos en MainTabActivity (dato real): cierre permitido ({res and res[:2]}, {sim.orden})")
+
+        sim = TelefonoSimulado([colgado], focos=tuple(T.focos_de(real_main_tab)), tras_cierre=normal)
+        captura_simulada = sim.captura
+
+        def captura_selector_sin_disco(destino, timeout=None):
+            if destino.name == "ig-01-selector.png":
+                sim.capturas.append(destino.name)
+                raise OSError(28, "No space left on device")
+            return captura_simulada(destino, timeout)
+
+        sim.captura = captura_selector_sin_disco
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        error = str(campo(res[1], "error")) if res else ""
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "OSError" and cierre in sim.orden
+              and "No space left on device" in error and error.endswith(IG.AVISO_ARRANQUE_EN_FRIO),
+              f"un OSError al guardar la captura del selector tras el arranque en frío: sale 4 con el aviso "
+              f"({res and res[:2]}, {sim.orden})")
 
 
 SECCIONES = [
