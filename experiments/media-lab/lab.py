@@ -881,11 +881,56 @@ def cmd_telefono_descartar(a) -> int:
                           lambda: {"captura": str(pasos.descartar(a.app, ev, a.nombre))})
 
 
+# Esperas de la sonda: lo que tarda en abrirse la app tras lanzarla y en reaccionar la pantalla tras un toque.
+ESPERA_TRAS_LANZAR_S = 4
+ESPERA_TRAS_TOCAR_S = 2
+
+
+def _clave(n: dict) -> tuple:
+    """Lo que tiene que repetirse, volcado a volcado, para dar por estable el nodo de la sonda."""
+    return n["bounds"], n["texto"], n["desc"], n["resource_id"]
+
+
+def _volcar_sonda(ev: Path, nombre: str) -> dict:
+    """Un volcado fresco y una captura de la sonda con ese nombre en su carpeta de evidencia."""
+    from labkit import pasos, telefono
+    xml = pasos.volcado_fresco()
+    ev.mkdir(parents=True, exist_ok=True)
+    (ev / f"{nombre}.xml").write_text(xml, encoding="utf-8")
+    return {"volcado": str(ev / f"{nombre}.xml"), "captura": str(telefono.captura(ev / f"{nombre}.png"))}
+
+
+def _tocar_sonda(paquete: str, criterios: dict, ev: Path, nombre: str) -> dict:
+    """El toque de `sonda tocar`. Falla cerrado (PantallaInesperada, sin tocar) si no se cumple, en este orden:
+    1. `pantalla.nodo_sonda` da el mismo nodo (`_clave`) en VOLCADOS_LIMPIOS volcados frescos seguidos: los volcados
+       de uiautomator van con retraso y «Siguiente» y «Publicar» salen en el mismo sitio;
+    2. ninguna ventana emergente se solapa con él;
+    3. un último volcado, pedido tras mirar las ventanas, trae el mismo nodo, y todo lo que sigue va sobre ESE
+       volcado: nada lo tapa y `pasos.tocar` (regla del centro de `pantalla.es_envio`) lo pulsa.
+    Después espera ESPERA_TRAS_TOCAR_S y vuelca `nombre`."""
+    from labkit import pantalla, pasos, reloj, telefono
+    _, estable = pasos.esperar_estable(lambda x: _clave(pantalla.nodo_sonda(x, paquete, **criterios)),
+                                       descripcion="el mismo nodo de la sonda")
+    emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(paquete), [estable[0]])
+    if emergente is not None:
+        raise pantalla.PantallaInesperada(
+            f"una ventana emergente se solapa con el nodo de la sonda ({pantalla.describe_emergente(emergente)}): no se toca")
+    xml = pasos.volcado_fresco()
+    n = pantalla.nodo_sonda(xml, paquete, **criterios)
+    if _clave(n) != estable:
+        raise pantalla.PantallaInesperada("el nodo de la sonda cambió en el último volcado antes de tocar: no se toca")
+    if telefono.tapado(xml, n):
+        raise pantalla.PantallaInesperada(f"algo tapa el nodo de la sonda en {n['bounds']}: no se toca")
+    pasos.tocar(n, xml)
+    reloj.dormir(ESPERA_TRAS_TOCAR_S)
+    return {"tocado": {k: n[k] for k in ("texto", "desc", "resource_id", "bounds")}, **_volcar_sonda(ev, nombre)}
+
+
 def cmd_sonda(a) -> int:
     """Solo sesiones de exploración dirigidas: vuelca, lanza la app, toca un nodo único o pulsa «atrás». Nunca
-    un control de envío ni prohibido. Todas las validaciones de argumentos van antes de hablar con el teléfono;
-    el toque pasa además por `pantalla.nodo_sonda` y `pasos.tocar` (regla del centro de `pantalla.es_envio`)."""
-    from labkit import pantalla, pasos, reloj, telefono
+    un control de envío, de borrado ni prohibido. Todas las validaciones de argumentos van antes de hablar con el
+    teléfono; el toque lo hace `_tocar_sonda`."""
+    from labkit import pasos, reloj, telefono
     _exigir(a.supervisada, "sonda solo con --supervisada: sesión de exploración dirigida, nunca desde la ventana desatendida")
     _exigir(a.run.startswith("SONDA-F2-"), "el --run de una sonda empieza por SONDA-F2-")
     criterios = {k: v for k, v in (("texto", a.texto), ("desc", a.desc), ("resource_id", a.resource_id)) if v}
@@ -902,44 +947,19 @@ def cmd_sonda(a) -> int:
     paquete = textos.PAQUETES[a.app]
     ev = _evidencia(a.run)
 
-    def volcar(nombre: str) -> dict:
-        xml = pasos.volcado_fresco()
-        ev.mkdir(parents=True, exist_ok=True)
-        (ev / f"{nombre}.xml").write_text(xml, encoding="utf-8")
-        return {"volcado": str(ev / f"{nombre}.xml"), "captura": str(telefono.captura(ev / f"{nombre}.png"))}
-
     def paso() -> dict:
         pasos.exigir_listo()
         if a.accion == "volcar":
-            return volcar(a.nombre)
+            return _volcar_sonda(ev, a.nombre)
         if a.accion == "lanzar":
             telefono.lanzar(paquete)
-            reloj.dormir(4)
-            return volcar(a.nombre)
+            reloj.dormir(ESPERA_TRAS_LANZAR_S)
+            return _volcar_sonda(ev, a.nombre)
         if a.accion == "atras":
             return {"captura": str(pasos.atras(paquete, ev, a.nombre))}
-        def clave(xml: str) -> tuple:
-            n = pantalla.nodo_sonda(xml, paquete, **criterios)
-            return n["bounds"], n["texto"], n["desc"], n["resource_id"]
-
-        # Los volcados de uiautomator van con retraso: el nodo tiene que ser el mismo en VOLCADOS_LIMPIOS volcados
-        # frescos seguidos, y se toca sobre el último («Siguiente» y «Publicar» salen en el mismo sitio).
-        _, estable = pasos.esperar_estable(clave, descripcion="el mismo nodo de la sonda")
-        emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(paquete), [estable[0]])
-        if emergente is not None:
-            raise pantalla.PantallaInesperada(
-                f"una ventana emergente se solapa con el nodo de la sonda ({pantalla.describe_emergente(emergente)}): no se toca")
-        # Un último volcado tras mirar las ventanas: el nodo tiene que seguir igual, y todas las guardias y el toque van
-        # sobre ESE volcado.
-        xml = pasos.volcado_fresco()
-        if clave(xml) != estable:
-            raise pantalla.PantallaInesperada("el nodo de la sonda cambió en el último volcado antes de tocar: no se toca")
-        n = pantalla.nodo_sonda(xml, paquete, **criterios)
-        if telefono.tapado(xml, n):
-            raise pantalla.PantallaInesperada(f"algo tapa el nodo de la sonda en {n['bounds']}: no se toca")
-        pasos.tocar(n, xml)
-        reloj.dormir(2)
-        return {"tocado": {k: n[k] for k in ("texto", "desc", "resource_id", "bounds")}, **volcar(a.nombre)}
+        if a.accion == "tocar":
+            return _tocar_sonda(paquete, criterios, ev, a.nombre)
+        raise ArgumentoNoValido(f"acción de sonda desconocida: {a.accion!r}")
 
     return _paso_telefono(ev, f"{a.nombre}-inesperada", paso)
 
@@ -1149,18 +1169,20 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--nombre", required=True)
     p.set_defaults(func=cmd_telefono_descartar)
     p = sub.add_parser("sonda")
-    p.add_argument("app", choices=textos.APPS_TELEFONO + ("edits",))
-    p.add_argument("accion", choices=("volcar", "lanzar", "tocar", "atras"))
+    p.add_argument("app", choices=textos.APPS_TELEFONO + ("edits",), help="app del teléfono")
+    p.add_argument("accion", choices=("volcar", "lanzar", "tocar", "atras"),
+                   help="tocar exige un criterio; las demás no admiten ninguno")
     p.add_argument("--run", required=True)
     p.add_argument("--nombre", required=True)
-    p.add_argument("--supervisada", action="store_true")
+    p.add_argument("--supervisada", action="store_true",
+                   help="obligatorio: sesión de exploración dirigida, nunca desde la ventana desatendida")
     grupo = p.add_mutually_exclusive_group()
-    grupo.add_argument("--texto")
-    grupo.add_argument("--desc")
-    grupo.add_argument("--resource-id")
+    grupo.add_argument("--texto", help="etiqueta exacta del nodo")
+    grupo.add_argument("--desc", help="etiqueta exacta del nodo")
+    grupo.add_argument("--resource-id", help="id del nodo; basta el final tras /")
     p.set_defaults(func=cmd_sonda)
     p = sub.add_parser("fixture-podar")
-    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True)
+    p.add_argument("--app", choices=textos.APPS_TELEFONO, required=True, help="app del teléfono")
     p.add_argument("--desde", required=True, help="volcado crudo bajo experiments/media-lab/evidence/android/")
     p.add_argument("--pantalla", required=True, help="nombre del fixture, sin .xml")
     p.set_defaults(func=cmd_fixture_podar)

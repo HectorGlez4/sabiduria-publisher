@@ -235,19 +235,29 @@ def _bloquea_toque(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     return envio_texto or envio_desc or envio_rid or prohibido
 
 
-def _subarbol_bloquea(indice: int, lista: list[dict], ignorar: tuple[str, ...]) -> bool:
-    """`lista[indice]` o alguno de sus descendientes (los siguientes en el orden de documento con
-    profundidad mayor, hasta el primero que no lo sea) bloquea el toque."""
-    m = lista[indice]
-    if _bloquea_toque(m, ignorar):
-        return True
-    nivel = m["profundidad"]
-    for hijo in lista[indice + 1:]:
-        if hijo["profundidad"] <= nivel:
-            break
-        if _bloquea_toque(hijo, ignorar):
-            return True
-    return False
+def _bajo_el_toque(lista: list[dict], n: dict, bloquea, *, descendientes: bool = True,
+                   solo_pulsables: bool = False) -> dict | None:
+    """La regla del centro, común a `es_envio` y a las guardias de `nodo_sonda`: el primer nodo que cumple
+    `bloquea(nodo)` y recibiría el toque en el centro de `n`, o None. Mira, en este orden, `n` mismo y, para cada nodo
+    de `lista` (de cualquier paquete, en orden de documento) cuyas bounds contienen el centro: el propio nodo (con
+    `solo_pulsables`, solo si es pulsable) y, con `descendientes`, los descendientes de ese nodo si es PULSABLE (los
+    siguientes en orden de documento con profundidad mayor, hasta el primero que no lo sea)."""
+    if bloquea(n):
+        return n
+    cx, cy = n["centro"]
+    for k, m in enumerate(lista):
+        x1, y1, x2, y2 = m["bounds"]
+        if not (x1 <= cx < x2 and y1 <= cy < y2):
+            continue
+        if (m["clickable"] or not solo_pulsables) and bloquea(m):
+            return m
+        if descendientes and m["clickable"]:
+            for hijo in lista[k + 1:]:
+                if hijo["profundidad"] <= m["profundidad"]:
+                    break
+                if bloquea(hijo):
+                    return hijo
+    return None
 
 
 def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
@@ -261,23 +271,21 @@ def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     control de envío."""
     if _bloquea_toque(n, ignorar):
         return True
-    lista = telefono.nodos(xml)
-    cx, cy = n["centro"]
-    for k, m in enumerate(lista):
-        x1, y1, x2, y2 = m["bounds"]
-        if not (x1 <= cx < x2 and y1 <= cy < y2):
-            continue
-        if _bloquea_toque(m, ignorar):
-            return True
-        if m["clickable"] and _subarbol_bloquea(k, lista, ignorar):
-            return True
-    return False
+    return _bajo_el_toque(telefono.nodos(xml), n, lambda m: _bloquea_toque(m, ignorar)) is not None
 
 
 def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | None = None,
                resource_id: str | None = None) -> dict:
-    """El único nodo de `paquete` con ese texto, content-desc o resource-id (basta el final tras
-    «/»), si pulsarlo no puede enviar. Solo para sondas supervisadas."""
+    """El único nodo de `paquete` con ese texto, content-desc o resource-id (basta el final tras «/»), si pulsarlo
+    no puede enviar, borrar ni tocar un control prohibido. Solo para sondas supervisadas. Lanza PantallaInesperada,
+    en este orden:
+    1. si cualquier nodo del volcado, de cualquier paquete, es un título de borrado (`textos.es_titulo_borrado`);
+    2. si no hay exactamente un nodo de `paquete` que case con el criterio;
+    3. si pulsarlo podría enviar o tocar un control prohibido (`es_envio`);
+    4. si el propio nodo, o un nodo PULSABLE bajo su centro, es un botón sin texto ni desc con id de envío
+       (`textos.es_id_envio`);
+    5. si el propio nodo, un nodo bajo su centro o un descendiente de un pulsable bajo su centro es un control de
+       borrado (`textos.es_texto_borrado`)."""
     def rid(valor: str) -> str:
         return valor.rsplit("/", 1)[-1]
 
@@ -293,54 +301,25 @@ def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | 
         raise PantallaInesperada(f"la sonda solo toca un nodo único: {len(lista)} coincidencias")
     if es_envio(xml, lista[0]):
         raise PantallaInesperada("la sonda no pulsa controles de envío ni prohibidos")
-    por_id = _envio_por_id_en_toque(todos, lista[0])
+    # Solo el nodo y los PULSABLES bajo el centro, sin descendientes: `followers_share_content` y `post_capture_*` son
+    # contenedores no pulsables que cubren el compositor y el editor enteros.
+    por_id = _bajo_el_toque(todos, lista[0], _envio_sin_etiqueta, descendientes=False, solo_pulsables=True)
     if por_id is not None:
         raise PantallaInesperada(f"la sonda no pulsa un botón sin etiqueta con id de envío ({por_id['resource_id']!r})")
-    borrado = _borrado_en_toque(todos, lista[0])
+    borrado = _bajo_el_toque(todos, lista[0], _es_borrado)
     if borrado is not None:
         raise PantallaInesperada(f"la sonda no pulsa controles de borrado ({borrado['texto'] or borrado['desc']!r})")
     return lista[0]
 
 
 def _envio_sin_etiqueta(n: dict) -> bool:
+    """Botón sin texto ni desc cuyo id tiene una palabra de envío (`textos.es_id_envio`)."""
     return not n["texto"] and not n["desc"] and textos.es_id_envio(n["resource_id"])
 
 
-def _envio_por_id_en_toque(lista: list[dict], n: dict) -> dict | None:
-    """El botón sin texto ni desc con id de envío (`textos.es_id_envio`) que recibiría el toque: `n` mismo o un nodo
-    PULSABLE cuyas bounds contienen su centro. No mira los no pulsables: `followers_share_content` y `post_capture_*`
-    son contenedores que cubren el compositor y el editor enteros. None si no hay ninguno."""
-    if _envio_sin_etiqueta(n):
-        return n
-    cx, cy = n["centro"]
-    return next((m for m in lista if m["clickable"] and _envio_sin_etiqueta(m)
-                 and m["bounds"][0] <= cx < m["bounds"][2] and m["bounds"][1] <= cy < m["bounds"][3]), None)
-
-
 def _es_borrado(n: dict) -> bool:
+    """Control de borrado por su texto o su desc (`textos.es_texto_borrado`)."""
     return any(v and textos.es_texto_borrado(v) for v in (n["texto"], n["desc"]))
-
-
-def _borrado_en_toque(lista: list[dict], n: dict) -> dict | None:
-    """El nodo de borrado (`textos.es_texto_borrado` en texto o desc) que recibiría el toque en el centro de `n`:
-    `n` mismo, cualquier nodo (de cualquier paquete) cuyas bounds contienen el centro, o un descendiente de un
-    nodo PULSABLE que lo contiene (la misma regla del centro que `es_envio`). None si no hay ninguno."""
-    if _es_borrado(n):
-        return n
-    cx, cy = n["centro"]
-    for k, m in enumerate(lista):
-        x1, y1, x2, y2 = m["bounds"]
-        if not (x1 <= cx < x2 and y1 <= cy < y2):
-            continue
-        if _es_borrado(m):
-            return m
-        if m["clickable"]:
-            for hijo in lista[k + 1:]:
-                if hijo["profundidad"] <= m["profundidad"]:
-                    break
-                if _es_borrado(hijo):
-                    return hijo
-    return None
 
 
 def boton_descarte(xml: str, app: str) -> dict:

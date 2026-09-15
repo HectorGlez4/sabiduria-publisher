@@ -113,8 +113,17 @@ EDADES: dict[str, tuple[tuple[str, int], ...]] = {
     "facebook": ((r"Ahora", 0), (r"(\d+)\s*min", 60), (r"(\d+)\s*h", 3600)),
 }  # confirmar contra el fixture de S1
 
-# Textos variables que pueden quedarse en un fixture: fechas de miniatura, recuentos, hashtags públicos.
-PATRONES: dict[str, tuple[str, ...]] = {
+# ── Lo que puede quedarse en un fixture ──────────────────────────────────────────────────────────────────────
+# Estos patrones solo deciden qué queda en un fixture (`fixtures.podar`/`revisar` vía `permitido`): ningún lector de
+# pantallas los usa. Son textos variables: fechas de miniatura, recuentos, formatos concretos que contienen la marca y,
+# solo en `text`, hashtags. La marca sola ya está en `MARCAS`; aquí solo formatos concretos que la contienen
+# (fullmatch): una frase personal que la mencione no se permite. Del chip de audio solo vale el literal «Audio
+# suggéré.» (en `TEXTOS`); con el tema detrás no, así que un fixture del editor pierde el texto del chip entero (y con
+# él el tema): lo que se pruebe sobre el tema usa un volcado sintético.
+#
+# Umbrales de cifras seguidas: una edad lleva de 1 a 3 (`EDADES_FIXTURE`), un hashtag menos de 4 (`_HASHTAG`) y
+# ningún valor 6 o más (`_CIFRAS_LARGAS`), salvo un texto exacto de la tabla.
+PATRONES_FIXTURE: dict[str, tuple[str, ...]] = {
     "instagram": (r"(?:Sélectionné|Désélectionné) Miniature de la photo du \d{1,2}(?:er)? \S+ \d{4} \d{1,2}[:h]\d{2}",
                   r"\d[\d   ]*publications?",
                   r"[\d   ]+ publications publiques",
@@ -123,20 +132,25 @@ PATRONES: dict[str, tuple[str, ...]] = {
     "threads": (r"Photo de profil de sabiduriabolsillo",),  # confirmar contra el fixture de S1
     "facebook": (r"Foto del perfil de Sabiduria De Bolsillo", r"Sabiduria De Bolsillo ?✓"),  # confirmar contra el fixture de S1
 }
-# Estos patrones solo deciden qué queda en un fixture: ningún lector de pantallas los usa. Del chip de audio solo
-# vale el literal «Audio suggéré.» (en `TEXTOS`); con el tema detrás no, así que un fixture del editor pierde el
-# texto del chip entero (y con él el tema): lo que se pruebe sobre el tema usa un volcado sintético.
-# Empieza por letra y no lleva 4 o más cifras seguidas (un teléfono o un id troceado en un hashtag).
-_HASHTAG = r"#[^\W\d_](?!\w*\d{4})\w*"
+_HASHTAG = r"#[^\W\d_](?!\w*\d{4})\w*"  # empieza por letra y sin 4 o más cifras seguidas
 # Solo en el atributo `text` (nunca en `hint`, `content-desc` ni otros): hashtags públicos del pie.
-PATRONES_TEXTO: dict[str, tuple[str, ...]] = {"instagram": (_HASHTAG,), "threads": (_HASHTAG,), "facebook": (_HASHTAG,)}
-# Edades en un fixture: las de `EDADES` con 1 a 3 cifras (la tabla de lectura no cambia).
-EDADES_FIXTURE: dict[str, tuple[str, ...]] = {
-    app: tuple(p.replace(r"\d+", r"\d{1,3}") for p, _ in tabla) for app, tabla in EDADES.items()}
-# Ningún valor con 6 o más cifras seguidas (teléfonos, ids) se queda en un fixture salvo un texto exacto de la tabla.
+PATRONES_FIXTURE_TEXTO: dict[str, tuple[str, ...]] = {
+    "instagram": (_HASHTAG,), "threads": (_HASHTAG,), "facebook": (_HASHTAG,)}
+
+
+def _edades_fixture() -> dict[str, tuple[str, ...]]:
+    """Las edades de `EDADES` con cada `\\d+` acotado a 1-3 cifras. Falla al importar si algún patrón de `EDADES`
+    lleva una cifra que no quede acotada así (p. ej. `\\d*` o `\\d{2,}`): la tabla de lectura no cambia."""
+    derivadas = {app: tuple(p.replace(r"\d+", r"\d{1,3}") for p, _ in tabla) for app, tabla in EDADES.items()}
+    for app, patrones in derivadas.items():
+        for patron in patrones:
+            if re.search(r"\\d(?!\{1,3\})", patron):
+                raise ValueError(f"EDADES[{app!r}] tiene una cifra sin acotar a 1-3 en un fixture: {patron!r}")
+    return derivadas
+
+
+EDADES_FIXTURE: dict[str, tuple[str, ...]] = _edades_fixture()
 _CIFRAS_LARGAS = re.compile(r"\d{6,}")
-# La marca sola ya está en `MARCAS`; aquí solo formatos concretos que la contienen (fullmatch): una frase
-# personal que la mencione no se permite.
 
 
 def texto(app: str, clave: str) -> str:
@@ -264,6 +278,6 @@ def permitido(valor: str, app: str, atributo: str = "text") -> bool:
         return True
     if _CIFRAS_LARGAS.search(valor):
         return False
-    patrones = (PATRONES.get(app, ()) + EDADES_FIXTURE.get(app, ())
-                + (PATRONES_TEXTO.get(app, ()) if atributo == "text" else ()))
+    patrones = (PATRONES_FIXTURE.get(app, ()) + EDADES_FIXTURE.get(app, ())
+                + (PATRONES_FIXTURE_TEXTO.get(app, ()) if atributo == "text" else ()))
     return any(re.fullmatch(p, valor) for p in patrones)

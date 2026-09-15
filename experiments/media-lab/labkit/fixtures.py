@@ -19,7 +19,6 @@ ESTRUCTURALES = frozenset({"index", "class", "package", "checkable", "checked", 
                            "enabled", "focusable", "focused", "scrollable", "long-clickable", "password",
                            "selected", "bounds", "drawing-order", "display-id", "visible-to-user",
                            "important-for-accessibility"})
-SIEMPRE_AJENOS = ("com.android.systemui",)
 CABECERA = "<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>"
 _RID = re.compile(r"[a-z0-9_.]+:id/[a-z0-9_]+")
 
@@ -72,7 +71,7 @@ def revisar(xml: str, app: str) -> list[str]:
             problemas.append(f"elemento <{el.tag}> que uiautomator no escribe")
             continue
         pkg = el.get("package", "")
-        if pkg in SIEMPRE_AJENOS or pkg != paquete:
+        if pkg != paquete:
             problemas.append(f"nodo de {pkg or 'sin paquete'} en un fixture de {app} ({el.get('bounds')})")
             continue
         for atributo, valor in el.attrib.items():
