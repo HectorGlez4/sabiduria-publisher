@@ -272,6 +272,22 @@ def es_envio(xml: str, n: dict, ignorar: tuple[str, ...] = ()) -> bool:
     return _bajo_el_toque(telefono.nodos(xml), n, lambda m: _bloquea_toque(m, ignorar)) is not None
 
 
+def punto_bloqueado(xml: str, x: int, y: int) -> dict | None:
+    """El nodo que impide empezar o acabar un gesto (un deslizamiento) en (x, y), o None si el punto es seguro. Mismas
+    reglas que un toque de `nodo_sonda` en ese punto: un título de borrado en cualquier parte del volcado; un nodo bajo
+    el punto, o un descendiente de un pulsable bajo el punto, que es de envío o prohibido (`es_envio`) o de borrado; o
+    un pulsable bajo el punto sin texto ni desc con id de envío."""
+    todos = telefono.nodos(xml)
+    titulo = next((m for m in todos if any(v and textos.es_titulo_borrado(v) for v in (m["texto"], m["desc"]))), None)
+    if titulo is not None:
+        return titulo
+    punto = {"texto": "", "desc": "", "resource_id": "", "clase": "", "package": "", "clickable": False,
+             "enabled": True, "profundidad": -1, "bounds": (x, y, x + 1, y + 1), "centro": (x, y)}
+    return (_bajo_el_toque(todos, punto, _bloquea_toque)
+            or _bajo_el_toque(todos, punto, _envio_sin_etiqueta, descendientes=False, solo_pulsables=True)
+            or _bajo_el_toque(todos, punto, _es_borrado))
+
+
 def nodo_sonda(xml: str, paquete: str, *, texto: str | None = None, desc: str | None = None,
                resource_id: str | None = None) -> dict:
     """El único nodo de `paquete` con ese texto, content-desc o resource-id (basta el final tras «/»), si pulsarlo

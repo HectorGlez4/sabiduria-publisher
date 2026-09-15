@@ -21,7 +21,7 @@ from labkit.pantalla import CLASES_CAMPO, PantallaInesperada
 __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
     "LARGO_AVISO_CORTO", "PantallaInesperada", "banners_de_volcado",
-    "perfil_activo", "publicaciones_de_perfil", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
+    "perfil_activo", "publicaciones_de_perfil", "DESLIZAR_REFRESCO_PX", "gesto_de_refresco", "fecha_miniatura", "seleccion_unica", "miniatura_coincide",
     "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "emergente_desplegable", "parece_desplegable",
     "describe_emergente", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
     "compositor_listo", "observacion_de_volcado", "evaluar_envio",
@@ -42,6 +42,8 @@ LARGO_AVISO_CORTO = 80
 # Tope de fallo_texto (y de lo que compartir copia a avisos): puede ser el pie de otra
 # cuenta y acaba en un run de git, así que no vale la pena guardarlo entero.
 LARGO_FALLO_TEXTO_COPIADO = 100
+# Recorrido del «deslizar hacia abajo» que fuerza la recarga del perfil (pull-to-refresh).
+DESLIZAR_REFRESCO_PX = 600
 _MESES = {"janvier": 1, "fevrier": 2, "février": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6,
           "juillet": 7, "aout": 8, "août": 8, "septembre": 9, "octobre": 10, "novembre": 11,
           "decembre": 12, "décembre": 12}
@@ -79,6 +81,24 @@ def publicaciones_de_perfil(xml: str) -> int | None:
         if m:
             cifras.add(int(re.sub(r"\D", "", m.group(1))))
     return cifras.pop() if len(cifras) == 1 else None
+
+
+def gesto_de_refresco(xml: str) -> tuple[int, int, int, int]:
+    """(x1, y1, x2, y2) del «deslizar hacia abajo» que recarga el perfil, relativo a nodos reales del volcado: x es
+    el centro horizontal de «Modifier le profil»; y1, el punto medio entre el borde inferior del recuento de
+    publicaciones más bajo que quede por encima del botón y el borde superior del botón (sin recuento, un alto de
+    botón por encima de él); y2 baja DESLIZAR_REFRESCO_PX, sin salir del alto del volcado. Lanza
+    PantallaInesperada si no hay un único «Modifier le profil» o si no queda sitio para bajar."""
+    bx1, by1, bx2, by2 = _nodo(xml, contiene="Modifier le profil")["bounds"]
+    filas = [n["bounds"][3] for n in telefono.buscar_todos(xml, paquete=PAQUETE)
+             if _PUBLICACIONES.fullmatch(n["desc"]) and n["bounds"][3] <= by1]
+    arriba = max(filas) if filas else max(0, by1 - (by2 - by1))
+    alto = pantalla.alto_volcado(xml)
+    x, y1 = (bx1 + bx2) // 2, (arriba + by1) // 2
+    y2 = min(y1 + DESLIZAR_REFRESCO_PX, alto - 1)
+    if y2 <= y1:
+        raise PantallaInesperada(f"no hay sitio para deslizar el perfil hacia abajo desde y={y1} (alto {alto})")
+    return x, y1, x, y2
 
 
 def fecha_miniatura(desc: str) -> datetime | None:

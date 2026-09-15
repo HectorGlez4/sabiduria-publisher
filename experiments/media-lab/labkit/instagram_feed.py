@@ -15,13 +15,14 @@ import time  # noqa: F401 — las pruebas de la fase 1 sustituyen instagram_feed
 from datetime import datetime
 from pathlib import Path
 
-from labkit import pasos, reloj, telefono
+from labkit import pantalla, pasos, reloj, telefono
 from labkit.instagram_pantallas import *  # noqa: F401,F403 — reexporta `instagram_pantallas.__all__`
 from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _campos, _coincidencias,
                                         _exigir_compositor_con_pie, _nodo, _suivant, banners_de_volcado,
-                                        campo_pie, compositor_listo, emergente_desplegable, hay_desplegable_hashtags,
-                                        miniatura_coincide, observacion_de_volcado, perfil_activo,
-                                        publicaciones_de_perfil, punto_mas, seleccion_unica, tema_de_chip)
+                                        campo_pie, compositor_listo, emergente_desplegable, gesto_de_refresco,
+                                        hay_desplegable_hashtags, miniatura_coincide, observacion_de_volcado,
+                                        perfil_activo, publicaciones_de_perfil, punto_mas, seleccion_unica,
+                                        tema_de_chip)
 # ATRAS y ESTABILIZACION_TIMEOUT_S los usan los pasos de aquí (`atras`, docstrings); CTRL_IZQ y TECLA_A ya
 # no (van dentro de `pasos.escribir_texto`): solo lectura, se quedan reexportados porque las pruebas de la
 # fase 1 los leen como IG.CTRL_IZQ/IG.TECLA_A.
@@ -36,10 +37,58 @@ CAPTURA_ANTES_DE_ARRANQUE = "ig-00-antes-de-arranque-en-frio.png"
 # (sonda SONDA-10F) como ventana padre del desplegable de hashtags y, en el teléfono el 2026-09-15, como foco con el
 # selector «Nouvelle publication» abierto.
 ACTIVIDAD_COMPOSITOR = "MediaCaptureActivity"
+DESLIZAR_REFRESCO_MS = 400
+ESPERA_TRAS_REFRESCO_S = 3  # el perfil tarda en recargar: dos volcados seguidos antes de eso darían el recuento viejo
+VOLCADOS_RECUENTO = 2
 
 
 def _esperar(zona: str | None = None, **kw) -> str:
     return pasos.esperar_que(lambda xml: bool(_coincidencias(xml, zona, **kw)), f"{kw}")
+
+
+def _recuento_fresco(xml: str, avisos: list[str]) -> dict:
+    """Recuento de publicaciones con el perfil de la marca recargado. `xml` es el volcado del perfil ya verificado
+    (@marca con «Modifier le profil»); nunca lanza, todo lo que no sale bien va a `avisos`.
+
+    Desliza UNA vez hacia abajo con `gesto_de_refresco` (pull-to-refresh), espera ESPERA_TRAS_REFRESCO_S y exige el
+    mismo recuento en VOLCADOS_RECUENTO volcados frescos seguidos del perfil de la marca (`pasos.esperar_estable`).
+    Si el gesto no se puede situar o su inicio o su final caen sobre un control que no se toca
+    (`pantalla.punto_bloqueado`), no desliza y devuelve la lectura de `xml` sin refrescar. Si el gesto o la espera
+    fallan (no se estabiliza, `TelefonoError`…), el recuento es None.
+
+    Devuelve `{"recuento", "refrescado", "deslizado", "xml"}`: `refrescado` solo si se deslizó y el recuento se
+    estabilizó; `deslizado` si se llegó a pedir el gesto (la pantalla puede haber cambiado); `xml`, el último volcado
+    estable del perfil, o None si no lo hay."""
+    fuera = {"recuento": publicaciones_de_perfil(xml), "refrescado": False, "deslizado": False, "xml": None}
+    try:
+        x1, y1, x2, y2 = gesto_de_refresco(xml)
+    except PantallaInesperada as e:
+        avisos.append(f"no se refrescó el perfil ({e}): recuento sin refrescar")
+        return fuera
+    for extremo, (x, y) in (("empieza", (x1, y1)), ("acaba", (x2, y2))):
+        culpable = pantalla.punto_bloqueado(xml, x, y)
+        if culpable is not None:
+            etiqueta = culpable["texto"] or culpable["desc"] or culpable["resource_id"]
+            avisos.append(f"no se refrescó el perfil: el gesto {extremo} en ({x}, {y}) sobre {etiqueta!r}, "
+                          f"que no se toca: recuento sin refrescar")
+            return fuera
+
+    def lectura(x: str) -> int | None:
+        if perfil_activo(x) != MARCA or not _coincidencias(x, contiene="Modifier le profil"):
+            return None
+        return publicaciones_de_perfil(x)
+
+    fuera.update(recuento=None)
+    try:
+        pasos.exigir_listo()
+        fuera["deslizado"] = True
+        telefono.deslizar(x1, y1, x2, y2, DESLIZAR_REFRESCO_MS)
+        reloj.dormir(ESPERA_TRAS_REFRESCO_S)
+        estable, recuento = pasos.esperar_estable(lectura, VOLCADOS_RECUENTO, "el recuento del perfil tras refrescar")
+    except (PantallaInesperada, telefono.TelefonoError, OSError) as e:
+        avisos.append(f"el refresco del perfil falló, sin recuento: {type(e).__name__}: {e}")
+        return fuera
+    return {**fuera, "recuento": recuento, "refrescado": True, "xml": estable}
 
 
 def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
@@ -50,7 +99,11 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
     ningún borrador visto que proteger) se fuerza el cierre UNA vez, se relanza en frío y se vuelve a esperar
     con el mismo criterio; el resultado lo anota en `arranque_en_frio`. Si algún volcado se leyó, el error
     sale como siempre y la app no se toca. Todo `PantallaInesperada`, `TelefonoError` u `OSError` desde el intento
-    de `forzar_cierre` en adelante sale con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje."""
+    de `forzar_cierre` en adelante sale con el mismo tipo y `AVISO_ARRANQUE_EN_FRIO` al final del mensaje.
+
+    `publicaciones_antes` sale de `_recuento_fresco`: Instagram puede tener el perfil en memoria con un recuento
+    desfasado (medido el 2026-09-15). El resultado dice en `recuento_refrescado` si se recargó y estabilizó, y en
+    `avisos` por qué no; si el refresco falla, `publicaciones_antes` es None y el paso sigue."""
     if isinstance(subido_en, str):
         subido_en = datetime.fromisoformat(subido_en)
     pasos.exigir_listo()
@@ -86,7 +139,16 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
         perfil = perfil_activo(xml)
         if perfil != MARCA:
             raise PantallaInesperada(f"el perfil activo es {perfil!r}, no @{MARCA}")
-        publicaciones_antes = publicaciones_de_perfil(xml)
+        avisos: list[str] = []
+        fresco = _recuento_fresco(xml, avisos)
+        publicaciones_antes = fresco["recuento"]
+        if fresco["xml"] is not None:
+            xml = fresco["xml"]  # ya es el perfil de la marca, leído tras el refresco
+        elif fresco["deslizado"]:
+            xml = _esperar(contiene="Modifier le profil")  # el gesto pudo mover la pantalla: se vuelve a verificar
+            perfil = perfil_activo(xml)
+            if perfil != MARCA:
+                raise PantallaInesperada(f"tras refrescar el perfil activo es {perfil!r}, no @{MARCA}")
         telefono.tocar(*_nodo(xml, "arriba", texto="Créer")["centro"])
         xml = _esperar(texto="Publication")
         telefono.tocar(*_nodo(xml, texto="Publication")["centro"])
@@ -98,7 +160,8 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
             raise PantallaInesperada(
                 f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
         return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
-                "publicaciones_antes": publicaciones_antes, "arranque_en_frio": arranque_en_frio}
+                "publicaciones_antes": publicaciones_antes, "recuento_refrescado": fresco["refrescado"],
+                "arranque_en_frio": arranque_en_frio, "avisos": avisos}
     except (PantallaInesperada, telefono.TelefonoError, OSError) as e:
         if not arranque_en_frio:
             raise
@@ -190,7 +253,10 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
     Estados: «confirmado» (banner, compositor cerrado y el perfil suma una publicación),
     «confirmado_sin_conteo» (igual, pero falta uno de los dos conteos, o `produccion_cercana`:
     el publicador de producción pudo sumar la suya), «conteo_no_cuadra», «fallido»,
-    «sin_banner», «timeout» y «error_tras_pulsar». Desde la pulsación nada se propaga."""
+    «sin_banner», «timeout» y «error_tras_pulsar». Desde la pulsación nada se propaga.
+
+    `publicaciones_despues` sale de `_recuento_fresco` (perfil recargado y recuento estable); si el refresco
+    falla, queda None con el motivo en `avisos`."""
 
     def observador_nuevo(boton: dict):
         banners_vistos: list[tuple[int, int, int, int]] = []  # el error puede salir cuando el banner ya se fue
@@ -210,7 +276,10 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
                 xml = _esperar(contiene="Modifier le profil")
                 perfil = perfil_activo(xml)
                 if perfil == MARCA:
-                    resultado["publicaciones_despues"] = publicaciones_de_perfil(xml)
+                    try:  # tras pulsar: el refresco es best-effort y nunca cambia el estado por lanzar
+                        resultado["publicaciones_despues"] = _recuento_fresco(xml, avisos)["recuento"]
+                    except Exception as e:  # noqa: BLE001
+                        avisos.append(f"el refresco del perfil tras compartir falló: {type(e).__name__}: {e}")
                 else:
                     avisos.append(f"tras compartir el perfil activo es {perfil!r}")
             else:

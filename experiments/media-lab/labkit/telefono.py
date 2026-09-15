@@ -333,6 +333,12 @@ def tocar(x: int, y: int) -> None:
     shell(f"input tap {x} {y}")
 
 
+def deslizar(x1: int, y1: int, x2: int, y2: int, ms: int = 400) -> None:
+    """`input swipe` de (x1, y1) a (x2, y2) en `ms` milisegundos. No comprueba nada: quien llama se asegura de que
+    ni el inicio ni el final del gesto caen sobre un control que no se puede tocar (`pantalla.punto_bloqueado`)."""
+    shell(f"input swipe {x1} {y1} {x2} {y2} {ms}")
+
+
 def tecla(codigo: int) -> None:
     shell(f"input keyevent {codigo}")
 
