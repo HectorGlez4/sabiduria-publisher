@@ -4256,6 +4256,9 @@ def seccion_recetas_y_seleccion() -> None:
     check(S.TELEFONO_FASE_1 == S.TELEFONO_IMPLEMENTADO == frozenset(RC.RECETAS),
           "TELEFONO_FASE_1 es alias de TELEFONO_IMPLEMENTADO, que sale de RECETAS")
     check(("instagram", "feed_single_image") in S.TELEFONO_IMPLEMENTADO, "el feed de Instagram sigue implementado")
+    verificacion_ig = RC.TODAS[("instagram", "feed_single_image")]["verificacion"]
+    check("menú" not in verificacion_ig and "missing_data_reasons.post_url" in verificacion_ig,
+          "la receta del feed de Instagram no promete la URL desde el menú del teléfono: va a missing_data_reasons.post_url")
     check(set(RC.PROMOVIDAS) <= set(RC.TODAS) and not set(RC.RECETAS) & set(RC.BORRADORES)
           and set(RC.RECETAS) | set(RC.BORRADORES) == set(RC.TODAS),
           "PROMOVIDAS está en TODAS y RECETAS/BORRADORES la reparten")
@@ -4294,10 +4297,10 @@ def seccion_recetas_y_seleccion() -> None:
           "nunca dos celdas android_native en la misma ventana")
     check(S.compatibles(th_tel, ig_api), "sin copias declaradas, Threads por teléfono e Instagram por API son compatibles")
     par_th = ("threads", "feed_video")
-    RC.TODAS[par_th] = {**RC.TODAS[("instagram", "feed_single_image")],
-                        "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}
-    RC.BORRADORES[par_th] = RC.TODAS[par_th]
     try:
+        RC.TODAS[par_th] = {**RC.TODAS[("instagram", "feed_single_image")],
+                            "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}
+        RC.BORRADORES[par_th] = RC.TODAS[par_th]
         check(not S.compatibles(th_tel, ig_api) and not S.compatibles(ig_api, th_tel),
               "una copia declarada en la receta excluye esa red en la misma ventana")
         check(S._ruta_implementada(th_tel, borradores=True) and not S._ruta_implementada(th_tel),

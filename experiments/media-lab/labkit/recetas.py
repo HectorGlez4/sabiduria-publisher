@@ -54,14 +54,17 @@ FEED_INSTAGRAM = {
     ],
     "verificar": [
         _cmd("telefono-captura", "--run", "<run>", "--nombre", "ig-06-perfil",
-             ver="ig-06-perfil.png: la publicación nueva arriba en la cuadrícula del perfil"),
+             ver="ig-06-perfil.png: la publicación nueva arriba en la cuadrícula del perfil; "
+                 "si no muestra el perfil, no navegues a ciegas: anótalo y usa ig-05-publicado"),
     ],
     "estados_ok": ["confirmado"],
     "conciliacion": ("Con 5 no repitas nada: mira captura y captura_antes, captura el perfil con telefono-captura y "
                      "compara la primera publicación con el máster y el pie antes de registrar; nunca por la otra ruta."),
     "copias": [{"red": "facebook", "superficie": "feed",
                 "nota": "Instagram comparte la foto en la Página: va en publication.cross_posting del run"}],
-    "verificacion": "Identidad, imagen, pie y música en la captura del perfil; URL desde el menú de la publicación.",
+    "verificacion": ("Identidad, imagen, pie y música en la captura del perfil. La URL no se lee en el teléfono: "
+                     "por `manifiesto-verificacion --instagram-shortcode` si se conoce el shortcode; "
+                     "si no, en `missing_data_reasons.post_url`."),
     "nota": "",
 }
 

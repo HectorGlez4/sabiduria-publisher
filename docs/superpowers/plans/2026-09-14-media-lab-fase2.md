@@ -58,6 +58,7 @@
 25. **Cerrojo manual en toda sesión con el teléfono o en el árbol principal.** Tareas 5 (Step 6), 9, 16c, 17e, 18 (Step 5), 19, 20 y las ventanas manuales 11d, 12d, 14d, 15d, 16e y 17f empiezan mirando el turno y con `lab.py lock-tomar --dueno manual`, renuevan antes de 90 min y terminan con `lab.py lock-soltar --dueno manual`.
 26. **La tarea 17 depende de 16a y 16b.** Usa `zona_reservada` (16a), `_encuesta` (16b-1) y la firma de `threads_feed.compartir` con `opciones` (16b-2), que 17c reescribe con fotogramas. Es lo más simple: el orden de la spec ya pone E antes que F.
 27. **Piezas de un solo commit.** 11b, 16b y 17b se parten en 11b-1/11b-2, 16b-1/16b-2 y 17b-1/17b-2.
+28. **Tarea 4: la receta no promete la URL desde el teléfono (revisión I-1 y M-1).** Ningún subcomando de `lab.py` abre el menú de la publicación, así que `verificacion` del feed de Instagram manda la URL a `manifiesto-verificacion --instagram-shortcode` si se conoce el shortcode y, si no, a `missing_data_reasons.post_url` (paso 7f del prompt); la sección 15 lo comprueba. El `ver` de `telefono-captura ig-06-perfil` avisa de que ese comando no navega: si la captura no muestra el perfil, se anota y se usa `ig-05-publicado`. **Pendiente (M-2, tarea posterior):** la prueba de existencia de comandos de la sección 15 solo mira subcomando y paso, no las opciones; hay que parsear cada comando con `ap.parse_args`, sustituyendo cada `<valor>` y quitando los corchetes de los opcionales.
 
 **Correspondencia con el orden de la sección 5 de la spec:**
 
@@ -1795,14 +1796,17 @@ FEED_INSTAGRAM = {
     ],
     "verificar": [
         _cmd("telefono-captura", "--run", "<run>", "--nombre", "ig-06-perfil",
-             ver="ig-06-perfil.png: la publicación nueva arriba en la cuadrícula del perfil"),
+             ver="ig-06-perfil.png: la publicación nueva arriba en la cuadrícula del perfil; "
+                 "si no muestra el perfil, no navegues a ciegas: anótalo y usa ig-05-publicado"),
     ],
     "estados_ok": ["confirmado"],
     "conciliacion": ("Con 5 no repitas nada: mira captura y captura_antes, captura el perfil con telefono-captura y "
                      "compara la primera publicación con el máster y el pie antes de registrar; nunca por la otra ruta."),
     "copias": [{"red": "facebook", "superficie": "feed",
                 "nota": "Instagram comparte la foto en la Página: va en publication.cross_posting del run"}],
-    "verificacion": "Identidad, imagen, pie y música en la captura del perfil; URL desde el menú de la publicación.",
+    "verificacion": ("Identidad, imagen, pie y música en la captura del perfil. La URL no se lee en el teléfono: "
+                     "por `manifiesto-verificacion --instagram-shortcode` si se conoce el shortcode; "
+                     "si no, en `missing_data_reasons.post_url`."),
     "nota": "",
 }
 
