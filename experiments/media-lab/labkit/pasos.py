@@ -213,7 +213,7 @@ def descartar(app: str, evidencia: Path, nombre: str) -> Path:
     return telefono.captura(evidencia / f"{nombre}.png")
 
 
-def tocar(n: dict, xml: str, paquete: str, permitir: tuple[str, ...] = ()) -> None:
+def tocar(n: dict, xml: str, permitir: tuple[str, ...] = ()) -> None:
     """Toca `n`, leído de `xml`, solo si pulsarlo no puede enviar ni tocar un control prohibido: ver
     `pantalla.es_envio`, que decide (los envíos solo salen de `enviar`). `permitir` es la lista blanca
     explícita que se le pasa tal cual como `ignorar`. La usará el visor propio de la fase 2 para abrir

@@ -3962,7 +3962,15 @@ def seccion_textos_y_descarte() -> None:
         TX.NO_ENVIO, TX._NO_ENVIO_NORM = no_envio, no_envio_norm
     check(vuelve_a_bloquear,
           "quitar una excepción de NO_ENVIO (y su versión normalizada) vuelve a bloquear: confirma que "
-          "es_texto_envio lee el conjunto normalizado vigente, no uno obsoleto calculado una sola vez")
+          "es_texto_envio lee la global _NO_ENVIO_NORM en cada llamada, no un valor capturado una sola vez")
+    check(TX._ENVIO_NORM == frozenset(map(TX.normalizar, TX.ENVIO))
+          and TX._NO_TOCAR_NORM == frozenset(map(TX.normalizar, TX.NO_TOCAR))
+          and TX._NO_ENVIO_NORM == frozenset(map(TX.normalizar, TX.NO_ENVIO))
+          and TX._TITULOS_BORRADO_NORM == frozenset(map(TX.normalizar_titulo, TX.TITULOS_BORRADO))
+          and TX._DESCARTE_TITULOS_NORM == {app: frozenset(map(TX.normalizar_titulo, tabla["titulos"]))
+                                            for app, tabla in TX.DESCARTE.items()},
+          "invariante: las constantes _..._NORM precalculadas coinciden con normalizar/normalizar_titulo "
+          "aplicado a sus fuentes (ENVIO, NO_TOCAR, NO_ENVIO, TITULOS_BORRADO, DESCARTE)")
     check(TX.permitido("Profil", "instagram")
           and TX.permitido("Sélectionné Miniature de la photo du 14 septembre 2026 10:39", "instagram")
           and TX.permitido("#citasdiarias", "instagram") and TX.permitido("3 min", "instagram")
@@ -4003,21 +4011,21 @@ def seccion_textos_y_descarte() -> None:
 
     icono = T.buscar(XML_BOTON_ENVIO_CON_ICONO, texto="Icône")
     sim = TelefonoSimulado([XML_BOTON_ENVIO_CON_ICONO])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(icono, XML_BOTON_ENVIO_CON_ICONO, PAQUETE_IG))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(icono, XML_BOTON_ENVIO_CON_ICONO))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "C1: pasos.tocar no pulsa un icono dentro del botón de envío")
     historia = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView", extra='clickable="true"'))
     avatar = T.buscar(historia, texto="Votre story")
     sim = TelefonoSimulado([historia])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia, PAQUETE_IG))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [], "C1: «Votre story» es envío si no está en la lista blanca")
     sim = TelefonoSimulado([historia])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia, PAQUETE_IG, permitir=("Votre story",)))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar, historia, permitir=("Votre story",)))
     check(err is None and sim.toques == [(170, 730)], "C1: con la lista blanca explícita, pasos.tocar abre el visor propio")
     tapado_envio = jerarquia(nodo_xml("[0,500][1080,1000]", texto="Vos stories", clase="android.widget.Button", extra='clickable="true"'),
                              nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView", extra='clickable="true"'))
     avatar_tapado = T.buscar(tapado_envio, texto="Votre story")
     sim = TelefonoSimulado([tapado_envio])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar_tapado, tapado_envio, PAQUETE_IG, permitir=("Votre story",)))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(avatar_tapado, tapado_envio, permitir=("Votre story",)))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           "permitir solo ignora «Votre story»: si su centro cae dentro de «Vos stories», no se toca")
     solapado = jerarquia(nodo_xml("[0,2000][1080,2200]", texto="Vos stories", clase="android.widget.Button", extra='clickable="true"'),
@@ -4067,7 +4075,7 @@ def seccion_textos_y_descarte() -> None:
     otro_nodo = T.buscar(otra_rama, texto="Suivant")
     check(otro_nodo["centro"] == (540, 2010), f"B1: el nodo de prueba tiene el centro exacto del caso ({otro_nodo['centro']})")
     sim = TelefonoSimulado([otra_rama])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(otro_nodo, otra_rama, PAQUETE_IG))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(otro_nodo, otra_rama))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           f"B1: un nodo de otra rama cuyo centro cae dentro de un contenedor con un descendiente de envío es envío ({err!r})")
 
@@ -4076,7 +4084,7 @@ def seccion_textos_y_descarte() -> None:
                                          clase="android.widget.ImageView", extra='clickable="true"'))
     n_b2a = T.buscar(b2_texto_y_desc, texto="Partager")
     sim = TelefonoSimulado([b2_texto_y_desc])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2a, b2_texto_y_desc, PAQUETE_IG, permitir=("Votre story",)))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2a, b2_texto_y_desc, permitir=("Votre story",)))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           "B2: permitir solo exime el campo desc; el texto «Partager» del mismo nodo sigue siendo envío")
 
@@ -4085,7 +4093,7 @@ def seccion_textos_y_descarte() -> None:
         extra='clickable="true" resource-id="com.instagram.barcelona:id/new_thread_screen_post_button"'))
     n_b2b = T.buscar(b2_desc_y_rid, texto="Votre story")
     sim = TelefonoSimulado([b2_desc_y_rid])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2b, b2_desc_y_rid, PAQUETE_IG, permitir=("Votre story",)))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2b, b2_desc_y_rid, permitir=("Votre story",)))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           "B2: permitir solo exime el campo desc; el resource-id de publicar del mismo nodo sigue siendo envío")
 
@@ -4093,7 +4101,7 @@ def seccion_textos_y_descarte() -> None:
                                       extra='clickable="true"'))
     n_b2c = T.buscar(b2_solo_desc, texto="Votre story")
     sim = TelefonoSimulado([b2_solo_desc])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2c, b2_solo_desc, PAQUETE_IG, permitir=("Votre story",)))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_b2c, b2_solo_desc, permitir=("Votre story",)))
     check(err is None and sim.toques == [(170, 730)],
           "B2: con permitir y solo el campo permitido en el nodo, sigue sin ser envío (caso legítimo del visor)")
 
@@ -4157,7 +4165,7 @@ def seccion_textos_y_descarte() -> None:
     check(P.es_envio(sonda_photo_partager, photo),
           "R1: «Partager» no pulsable sin antecesor pulsable, con el centro de «Photo» dentro de sus bounds, bloquea")
     sim = TelefonoSimulado([sonda_photo_partager])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(photo, sonda_photo_partager, PAQUETE_IG))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(photo, sonda_photo_partager))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           f"R1: pasos.tocar tampoco pulsa «Photo» por el «Partager» no pulsable que solapa su centro ({err!r})")
 
@@ -4179,11 +4187,11 @@ def seccion_textos_y_descarte() -> None:
     n_no_vista = T.buscar(no_vista, contiene="Tu historia")
     sim = TelefonoSimulado([no_vista])
     res, err = con_telefono_simulado(
-        sim, lambda: pasos.tocar(n_no_vista, no_vista, "com.facebook.katana", permitir=("Tu historia",)))
+        sim, lambda: pasos.tocar(n_no_vista, no_vista, permitir=("Tu historia",)))
     check(err is None and sim.toques == [(170, 730)],
           f"I-a: permitir=(«Tu historia»,) exime «Tu historia, No vista» por prefijo con separador ({err!r})")
     sim = TelefonoSimulado([no_vista])
-    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_no_vista, no_vista, "com.facebook.katana"))
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_no_vista, no_vista))
     check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
           "I-a: sin permitir, «Tu historia, No vista» sigue siendo envío (por prefijo, I1)")
 
@@ -4194,13 +4202,14 @@ def seccion_textos_y_descarte() -> None:
                                     extra='clickable="true"'))
         n_anular = T.buscar(anular, contiene="nular") or T.buscar(anular, texto=variante)
         sim = TelefonoSimulado([anular])
-        res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_anular, anular, PAQUETE_IG))
+        res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_anular, anular))
         check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
               f"I-b: {variante!r} normalizado sigue bloqueando como NO_TOCAR ({err!r})")
 
     # Menor 1: los títulos de borrado se detectan aunque cambien las comillas o lleven un espacio
     # antes del «?»; «Recommencer ?» sigue siendo un descarte legítimo (no un borrado).
-    for titulo_borrado in ("Supprimer la publication?", "Supprimer la « publication » ?", 'Delete "post"?'):
+    for titulo_borrado in ("Supprimer la publication?", "Supprimer la « publication » ?", 'Delete "post"?',
+                           "Supprimer la ＂publication＂ ?", "Supprimer la ＇publication＇ ?"):
         borrado_variante = jerarquia(
             nodo_xml("[100,800][980,880]", texto="Recommencer ?"),
             nodo_xml("[100,900][980,1000]", texto=titulo_borrado),
@@ -4228,13 +4237,13 @@ def seccion_textos_y_descarte() -> None:
 
     # Importante 1: `permitir`/`ignorar` como `str` se rechaza (cada carácter contaría como candidato).
     check(lanza(lambda: TX.coincide_o_prefijo("Votre story", "Votre story"), TypeError),
-          "importante 1: pantalla.es_envio (vía coincide_o_prefijo) rechaza `ignorar` como str")
+          "importante 1: textos.coincide_o_prefijo rechaza candidatos como str")
     votre_story = jerarquia(nodo_xml("[40,600][300,860]", desc="Votre story", clase="android.widget.ImageView",
                                      extra='clickable="true"'))
     n_votre_story = T.buscar(votre_story, texto="Votre story")
     sim = TelefonoSimulado([votre_story])
     res, err = con_telefono_simulado(
-        sim, lambda: pasos.tocar(n_votre_story, votre_story, PAQUETE_IG, permitir="Votre story"))
+        sim, lambda: pasos.tocar(n_votre_story, votre_story, permitir="Votre story"))
     check(isinstance(err, TypeError) and sim.toques == [],
           f"importante 1: pasos.tocar(..., permitir='Votre story') lanza TypeError y no toca nada ({err!r})")
 

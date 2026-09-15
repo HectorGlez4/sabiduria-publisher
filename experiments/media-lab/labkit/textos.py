@@ -138,11 +138,15 @@ _COMILLAS = "«»“”‘’\"'"
 
 
 def normalizar_titulo(valor: str) -> str:
-    """`normalizar`, y además sin comillas (rectas, tipográficas o angulares: «» “” ‘’ "') ni espacio
-    antes de un «?» de cierre: para comparar títulos de diálogo («Supprimer la publication?»,
-    «Supprimer la « publication » ?» y «Delete "post"?» son el mismo título)."""
-    sin_comillas = "".join(c for c in (valor or "") if c not in _COMILLAS)
-    return re.sub(r"\s+\?", "?", normalizar(sin_comillas))
+    """`normalizar`, y además sin comillas (rectas, tipográficas, angulares o de ancho completo: «»
+    “” ‘’ "' ＂＇) ni espacio antes de un «?» de cierre: para comparar títulos de diálogo («Supprimer
+    la publication?», «Supprimer la « publication » ?» y «Delete "post"?» son el mismo título).
+
+    Las comillas se quitan DESPUÉS de `normalizar`, no antes: NFKC convierte una comilla de ancho
+    completo (＂ U+FF02, ＇ U+FF07) en la recta correspondiente, así que quitarlas antes de NFKC las
+    dejaría pasar sin quitar."""
+    sin_comillas = "".join(c for c in normalizar(valor) if c not in _COMILLAS)
+    return re.sub(r"\s+\?", "?", " ".join(sin_comillas.split()))
 
 
 # Formas normalizadas de las constantes de arriba, precalculadas una vez al importar (no en cada
@@ -154,6 +158,20 @@ _NO_ENVIO_NORM = frozenset(map(normalizar, NO_ENVIO))
 _TITULOS_BORRADO_NORM = frozenset(normalizar_titulo(t) for t in TITULOS_BORRADO)
 _DESCARTE_TITULOS_NORM = {app: frozenset(normalizar_titulo(t) for t in tabla["titulos"])
                           for app, tabla in DESCARTE.items()}
+
+
+def es_titulo_borrado(valor: str) -> bool:
+    """`valor` (comparado con `normalizar_titulo`) es uno de los títulos de `TITULOS_BORRADO`: un
+    diálogo de BORRADO de algo ya publicado, no de descarte de un borrador."""
+    limpio = normalizar_titulo(valor)
+    return bool(limpio) and limpio in _TITULOS_BORRADO_NORM
+
+
+def es_titulo_descarte(valor: str, app: str) -> bool:
+    """`valor` (comparado con `normalizar_titulo`) es uno de los títulos de descarte de `app` en
+    `DESCARTE`."""
+    limpio = normalizar_titulo(valor)
+    return bool(limpio) and limpio in _DESCARTE_TITULOS_NORM.get(app, frozenset())
 
 
 def coincide_o_prefijo(valor: str, candidatos) -> bool:

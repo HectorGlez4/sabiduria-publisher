@@ -301,12 +301,10 @@ def boton_descarte(xml: str, app: str) -> dict:
     tabla = textos.DESCARTE[app]
     nodos_paquete = telefono.buscar_todos(xml, paquete=paquete)
     borrado = next((n for n in telefono.nodos(xml)
-                    if any(v and textos.normalizar_titulo(v) in textos._TITULOS_BORRADO_NORM
-                           for v in (n["texto"], n["desc"]))), None)
+                    if any(v and textos.es_titulo_borrado(v) for v in (n["texto"], n["desc"]))), None)
     if borrado is not None:
         raise PantallaInesperada(f"el diálogo parece de borrado ({borrado['texto'] or borrado['desc']!r}), no de descarte: no se pulsa nada")
-    titulos_norm = textos._DESCARTE_TITULOS_NORM[app]
-    if not any(textos.normalizar_titulo(n["texto"]) in titulos_norm or textos.normalizar_titulo(n["desc"]) in titulos_norm
+    if not any(textos.es_titulo_descarte(n["texto"], app) or textos.es_titulo_descarte(n["desc"], app)
                for n in nodos_paquete):
         raise PantallaInesperada(f"no se ve el diálogo de descarte de {app} {tabla['titulos']}: no se pulsa nada")
     for etiqueta in tabla["botones"]:
