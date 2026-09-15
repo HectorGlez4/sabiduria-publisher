@@ -118,7 +118,7 @@ def hay_desplegable_hashtags(xml: str, paquete: str | None = None) -> bool:
     """Sugerencias de hashtags abiertas: un texto que empieza por # fuera del campo del
     pie. Sin `paquete` se miran todos los nodos (ante la duda, se da por abierto); con
     `paquete`, solo los de esa aplicación."""
-    return pantalla.hay_desplegable(xml, paquete, "#")
+    return pantalla.hay_desplegable(xml, paquete, prefijo="#")
 
 
 # Sufijo del resource-id de la fila de música en el compositor (Task 10f, medido el
@@ -152,6 +152,8 @@ def emergente_desplegable(xml: str, emergentes: list[dict], paquete: str = PAQUE
     «Partager»; si ninguno de los dos aparece en el volcado, cuenta cualquier emergente del
     paquete (Task 10f: el desplegable es una `PopupWindow` que `uiautomator dump` no
     incluye, así que sin referencias en el volcado no hay con qué descartarla)."""
+    if not emergentes:
+        return None
     return pantalla.emergente_solapada(emergentes, _fila_musica_o_partager(xml, paquete))
 
 
@@ -197,7 +199,7 @@ def campo_pie(xml: str) -> dict | None:
 def partager_pulsable(xml: str) -> bool:
     """Algún «Partager» de Instagram se puede pulsar: el propio nodo es clickable y
     enabled o, si es una etiqueta, su antecesor clickable más cercano está enabled."""
-    return pantalla.pulsable(xml, "Partager", PAQUETE)
+    return pantalla.pulsable(xml, etiqueta="Partager", paquete=PAQUETE)
 
 
 def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict] | None = None) -> list[str]:

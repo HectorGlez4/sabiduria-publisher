@@ -13,6 +13,11 @@ from __future__ import annotations
 from labkit import telefono
 
 CLASES_CAMPO = ("android.widget.AutoCompleteTextView", "android.widget.EditText")
+_SUFIJOS_CAMPO = tuple(clase.rsplit(".", 1)[-1] for clase in CLASES_CAMPO)
+# El teléfono actual (Samsung SM-S721B, serie R5CXB1AWYNF) mide 1080×2340 (`adb shell wm size`:
+# «Physical size: 1080x2340») y la raíz de sus volcados reales del 2026-09-14 es
+# «[0,0][1080,2340]» (medido 2026-09-15); los volcados de alto 2316 en evidence/ son del
+# teléfono anterior.
 ALTO_REFERENCIA = 2340
 LIMITE_ARRIBA_PX = 300
 LIMITE_ABAJO_PX = 1900
@@ -32,9 +37,21 @@ def area(n: dict) -> int:
 
 
 def alto_volcado(xml: str) -> int:
-    """Alto de la pantalla según el volcado: el borde inferior más bajo de los nodos raíz
-    (profundidad 0). Sin nodos, el alto de referencia."""
-    return max((n["bounds"][3] for n in telefono.nodos(xml) if n["profundidad"] == 0), default=ALTO_REFERENCIA)
+    """Alto de la pantalla según el volcado: el borde inferior del nodo raíz (profundidad 0)
+    cuya esquina superior izquierda está en el origen (0, 0). Un volcado de una ventana
+    emergente enfocable tiene la emergente como raíz, con un origen que no es (0, 0) y un alto
+    encogido que no debe usarse para escalar las zonas «arriba»/«abajo»: sin ningún nodo raíz
+    en el origen, el alto de referencia."""
+    completas = [n["bounds"][3] for n in telefono.nodos(xml)
+                 if n["profundidad"] == 0 and n["bounds"][:2] == (0, 0)]
+    return max(completas, default=ALTO_REFERENCIA)
+
+
+def volcado_de_emergente(xml: str) -> bool:
+    """El volcado tiene como raíz una ventana emergente enfocable, no el árbol completo de la
+    pantalla: hay algún nodo raíz (profundidad 0) y ninguno empieza en el origen (0, 0)."""
+    raices = [n["bounds"][:2] for n in telefono.nodos(xml) if n["profundidad"] == 0]
+    return bool(raices) and (0, 0) not in raices
 
 
 def elegir(coincidencias: list[dict], que: object) -> dict:
@@ -43,6 +60,8 @@ def elegir(coincidencias: list[dict], que: object) -> dict:
     Varias valen si comparten centro o si todas caben en la primera (un contenedor y su
     botón, un botón y su etiqueta); si no, es ambiguo. Entre las válidas se devuelve la
     única clickable si hay exactamente una y, si no, la de menor área."""
+    if not coincidencias:
+        raise PantallaInesperada(f"no aparece {que}")
     if len(coincidencias) == 1:
         return coincidencias[0]
     primera = coincidencias[0]
@@ -79,10 +98,11 @@ def nodo(xml: str, paquete: str | None, zona: str | None = None, **kw) -> dict:
     return elegir(encontrados, kw)
 
 
-def pulsable(xml: str, etiqueta: str, paquete: str) -> bool:
+def pulsable(xml: str, *, etiqueta: str, paquete: str) -> bool:
     """Algún control con `etiqueta` (texto o content-desc) de `paquete` se puede pulsar: el propio
     nodo es clickable y enabled o, si es una etiqueta, su antecesor clickable más cercano está
-    enabled y es del mismo paquete."""
+    enabled y es del mismo paquete. `etiqueta` y `paquete` son solo por nombre: los dos son
+    `str` y un intercambio no debe fallar en silencio."""
     lista = telefono.nodos(xml)
     for i, n in enumerate(lista):
         if n["package"] != paquete or not dice(n, etiqueta):
@@ -103,14 +123,18 @@ def pulsable(xml: str, etiqueta: str, paquete: str) -> bool:
     return False
 
 
-def tiene_texto(xml: str, texto: str, paquete: str) -> bool:
+def tiene_texto(xml: str, *, texto: str, paquete: str) -> bool:
+    """Algún nodo de `paquete` cuyo `text` (nunca `content-desc`) es exactamente `texto`.
+    `texto` y `paquete` son solo por nombre: los dos son `str` y un intercambio no debe fallar
+    en silencio."""
     return any(n["texto"] == texto for n in telefono.buscar_todos(xml, paquete=paquete))
 
 
-def hay_desplegable(xml: str, paquete: str | None = None, prefijo: str = "#") -> bool:
+def hay_desplegable(xml: str, paquete: str | None = None, *, prefijo: str = "#") -> bool:
     """Sugerencias abiertas: un texto que empieza por `prefijo` fuera de un campo de texto. Sin
-    `paquete` se miran todos los nodos (ante la duda, se da por abierto)."""
-    return any(n["texto"].startswith(prefijo) and not n["clase"].endswith(("AutoCompleteTextView", "EditText"))
+    `paquete` se miran todos los nodos (ante la duda, se da por abierto). `prefijo` es solo por
+    nombre: es un `str` como `paquete` y un intercambio no debe fallar en silencio."""
+    return any(n["texto"].startswith(prefijo) and not n["clase"].endswith(_SUFIJOS_CAMPO)
                for n in telefono.buscar_todos(xml, paquete=paquete))
 
 

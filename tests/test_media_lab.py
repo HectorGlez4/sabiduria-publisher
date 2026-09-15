@@ -546,8 +546,8 @@ def nodo_xml(bounds: str, texto: str = "", desc: str = "", clase: str = "android
     return f"{abre}>{hijos}</node>" if hijos else f"{abre}/>"
 
 
-def jerarquia(*hijos: str) -> str:
-    raiz = nodo_xml("[0,0][1080,2340]", clase="android.widget.FrameLayout", hijos="".join(hijos))
+def jerarquia(*hijos: str, alto: int = 2340) -> str:
+    raiz = nodo_xml(f"[0,0][1080,{alto}]", clase="android.widget.FrameLayout", hijos="".join(hijos))
     return f"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><hierarchy rotation=\"0\">{raiz}</hierarchy>"
 
 
@@ -3490,8 +3490,8 @@ def seccion_pantalla_comun() -> None:
     check("Profil" in abajo and "Alto" not in abajo, f"sobre 2340 px «abajo» sigue siendo y1 ≥ 1900 ({abajo})")
 
     alto_2316 = jerarquia(nodo_xml("[0,0][1080,296]", texto="Créer"), nodo_xml("[0,0][1080,297]", texto="Justo"),
-                          nodo_xml("[0,1881][1080,1990]", texto="Profil"), nodo_xml("[0,1880][1080,1990]", texto="Casi"))
-    alto_2316 = alto_2316.replace('bounds="[0,0][1080,2340]"', 'bounds="[0,0][1080,2316]"', 1)
+                          nodo_xml("[0,1881][1080,1990]", texto="Profil"), nodo_xml("[0,1880][1080,1990]", texto="Casi"),
+                          alto=2316)
     arriba = [n["texto"] for n in P.coincidencias(alto_2316, PAQUETE_IG, "arriba")]
     abajo = [n["texto"] for n in P.coincidencias(alto_2316, PAQUETE_IG, "abajo")]
     check(P.alto_volcado(alto_2316) == 2316 and arriba == ["Créer"] and abajo == ["Profil"],
@@ -3503,15 +3503,31 @@ def seccion_pantalla_comun() -> None:
         ok = True
     check(ok, "una zona desconocida es ValueError")
 
+    # Un volcado de una ventana emergente enfocable tiene la emergente como raíz, con un origen
+    # que no es (0, 0): alto_volcado no debe escalar las zonas con ese alto encogido (fallaría
+    # abierto: un nodo intermedio contaría como «abajo»).
+    emergente_xml = ('<?xml version=\'1.0\' encoding=\'UTF-8\' standalone=\'yes\' ?>'
+                     '<hierarchy rotation="0">'
+                     + nodo_xml("[517,553][1080,1052]", clase="android.widget.FrameLayout",
+                                hijos=nodo_xml("[562,966][725,1015]", texto="Dentro"))
+                     + '</hierarchy>')
+    check(P.alto_volcado(emergente_xml) == P.ALTO_REFERENCIA,
+          "una raíz que no empieza en el origen (ventana emergente) no cuenta: alto de referencia")
+    abajo_emergente = [n["texto"] for n in P.coincidencias(emergente_xml, PAQUETE_IG, "abajo")]
+    check("Dentro" not in abajo_emergente,
+          f"con el alto de referencia, y1=966 no llega a «abajo» (≥1900): {abajo_emergente}")
+    check(P.volcado_de_emergente(emergente_xml) and not P.volcado_de_emergente(alto_2316),
+          "volcado_de_emergente distingue la raíz de una emergente de la del árbol completo")
+
     comp = xml_compositor()
-    check(P.pulsable(comp, "Partager", PAQUETE_IG) and IP.partager_pulsable(comp),
+    check(P.pulsable(comp, etiqueta="Partager", paquete=PAQUETE_IG) and IP.partager_pulsable(comp),
           "pulsable generaliza partager_pulsable (etiqueta dentro de un botón clickable)")
-    check(not P.pulsable(comp, "Partager", "com.facebook.katana"), "pulsable exige el paquete")
+    check(not P.pulsable(comp, etiqueta="Partager", paquete="com.facebook.katana"), "pulsable exige el paquete")
     check(P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG)
-          and not P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG, "@"),
+          and not P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG, prefijo="@"),
           "hay_desplegable mira el prefijo pedido fuera del campo de texto")
-    check(P.tiene_texto(comp, PIE_PRUEBA, PAQUETE_IG) and not P.tiene_texto(comp, "otro", PAQUETE_IG),
-          "tiene_texto compara el texto exacto dentro del paquete")
+    check(P.tiene_texto(comp, texto=PIE_PRUEBA, paquete=PAQUETE_IG) and not P.tiene_texto(comp, texto="otro", paquete=PAQUETE_IG),
+          "tiene_texto compara el text exacto (no content-desc) dentro del paquete")
     check(P.nodo(comp, PAQUETE_IG, texto="Nouvelle publication")["texto"] == "Nouvelle publication",
           "nodo devuelve el control del paquete")
     try:
@@ -3520,6 +3536,12 @@ def seccion_pantalla_comun() -> None:
     except P.PantallaInesperada:
         ok = True
     check(ok, "nodo sin coincidencias lanza PantallaInesperada")
+    try:
+        P.elegir([], "algo")
+        ok = False
+    except P.PantallaInesperada:
+        ok = True
+    check(ok, "elegir sin coincidencias lanza PantallaInesperada, no IndexError")
 
     ancha = {"nombre": "PopupWindow:a", "frame": (0, 1448, 1080, 2205), "ancho_padre": 1080}
     estrecha = {"nombre": "PopupWindow:b", "frame": (400, 100, 500, 180), "ancho_padre": 1080}
