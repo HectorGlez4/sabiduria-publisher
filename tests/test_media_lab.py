@@ -4248,6 +4248,67 @@ def seccion_textos_y_descarte() -> None:
           f"importante 1: pasos.tocar(..., permitir='Votre story') lanza TypeError y no toca nada ({err!r})")
 
 
+def seccion_recetas_y_seleccion() -> None:
+    print("\n15. Fase 2: recetas y selección (un teléfono por ventana, copias, borradores)")
+    import argparse
+    from labkit import recetas as RC, seleccion as S
+
+    check(S.TELEFONO_FASE_1 == S.TELEFONO_IMPLEMENTADO == frozenset(RC.RECETAS),
+          "TELEFONO_FASE_1 es alias de TELEFONO_IMPLEMENTADO, que sale de RECETAS")
+    check(("instagram", "feed_single_image") in S.TELEFONO_IMPLEMENTADO, "el feed de Instagram sigue implementado")
+    check(set(RC.PROMOVIDAS) <= set(RC.TODAS) and not set(RC.RECETAS) & set(RC.BORRADORES)
+          and set(RC.RECETAS) | set(RC.BORRADORES) == set(RC.TODAS),
+          "PROMOVIDAS está en TODAS y RECETAS/BORRADORES la reparten")
+    for par, receta in RC.TODAS.items():
+        check(all(k in receta for k in RC.CLAVES) and receta["publicar"] and receta["estados_ok"] == ["confirmado"],
+              f"{par}: receta con todas sus claves, un paso de publicar y solo confirmado sale con 0")
+
+    ap = modulo_lab().construir()
+    subcomandos = next(a for a in ap._actions if isinstance(a, argparse._SubParsersAction)).choices
+    for par, receta in RC.TODAS.items():
+        check(receta["subcomando"] in subcomandos, f"{par}: el subcomando {receta['subcomando']} existe en lab.construir()")
+        for fase in RC.FASES:
+            for c in receta[fase]:
+                sub = subcomandos.get(c["args"][0])
+                paso = next((x for x in sub._actions if x.dest == "paso"), None) if sub else None
+                check(sub is not None and (paso is None or c["args"][1] in paso.choices),
+                      f"{par}/{fase}: «{' '.join(c['args'][:2])}» existe en lab.py")
+    linea = RC.renderizar(RC.para("instagram", "feed_single_image"))["preparar"][1]["linea"]
+    check(linea.startswith(".venv/bin/python experiments/media-lab/lab.py ig abrir --run <run>"),
+          f"renderizar da la línea lista para ejecutar ({linea})")
+    try:
+        RC.para("threads", "feed_video")
+        ok = False
+    except RC.RecetaNoDisponible:
+        ok = True
+    check(ok, "para() rechaza un par sin receta promovida")
+
+    def celda(cid, plataforma, formato, ruta):
+        return {"cell_id": cid, "platform": plataforma, "native_format": formato,
+                "publishing_route": ruta, "status": "planned"}
+
+    ig_tel = celda("A", "instagram", "feed_single_image", "android_native")
+    th_tel = celda("B", "threads", "feed_video", "android_native")
+    ig_api = celda("C", "instagram", "feed_single_image", "api")
+    check(not S.compatibles(ig_tel, th_tel) and not S.compatibles(th_tel, ig_tel),
+          "nunca dos celdas android_native en la misma ventana")
+    check(S.compatibles(th_tel, ig_api), "sin copias declaradas, Threads por teléfono e Instagram por API son compatibles")
+    par_th = ("threads", "feed_video")
+    RC.TODAS[par_th] = {**RC.TODAS[("instagram", "feed_single_image")],
+                        "copias": [{"red": "instagram", "superficie": "feed", "nota": "prueba"}]}
+    RC.BORRADORES[par_th] = RC.TODAS[par_th]
+    try:
+        check(not S.compatibles(th_tel, ig_api) and not S.compatibles(ig_api, th_tel),
+              "una copia declarada en la receta excluye esa red en la misma ventana")
+        check(S._ruta_implementada(th_tel, borradores=True) and not S._ruta_implementada(th_tel),
+              "un borrador solo cuenta como implementado con borradores=True")
+        check(S.elegir([th_tel], [{"estado": "aprobado", "coverage_cell_ids": ["B"]}]) == [],
+              "seleccionar nunca elige una celda de un borrador")
+    finally:
+        RC.TODAS.pop(par_th, None)
+        RC.BORRADORES.pop(par_th, None)
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -4266,6 +4327,7 @@ SECCIONES = [
     seccion_pantalla_comun,
     seccion_pasos_comunes,
     seccion_textos_y_descarte,
+    seccion_recetas_y_seleccion,
 ]
 
 
