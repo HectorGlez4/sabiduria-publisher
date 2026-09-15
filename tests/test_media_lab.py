@@ -595,8 +595,10 @@ class TelefonoSimulado:
 
     def __init__(self, volcados: list, *, teclado: tuple = (False,), emergentes: tuple = ((),),
                  listo: bool = True, falla_tocar: Exception | None = None,
-                 falla_pegar: Exception | None = None, falla_cortina: Exception | None = None):
+                 falla_pegar: Exception | None = None, falla_cortina: Exception | None = None,
+                 tras_cierre: list | None = None):
         self.volcados = list(volcados)
+        self.tras_cierre = tras_cierre  # si se da, `forzar_cierre` sustituye el guion de volcados por este
         self.teclado = list(teclado)
         self.emergentes = list(emergentes)
         self.listo = listo
@@ -664,6 +666,11 @@ class TelefonoSimulado:
     def lanzar(self, paquete: str) -> None:
         self.orden.append(f"lanzar:{paquete}")
 
+    def forzar_cierre(self, paquete: str, timeout: int = 15) -> None:
+        self.orden.append(f"forzar_cierre:{paquete}")
+        if self.tras_cierre is not None:
+            self.volcados = list(self.tras_cierre)
+
     def cerrar_cortina(self) -> None:
         self.orden.append("cortina")
         if self.falla_cortina is not None:
@@ -696,6 +703,7 @@ def con_telefono_simulado(sim: TelefonoSimulado, accion):
                (telefono, "teclado_estado", sim.teclado_estado),
                (telefono, "ventanas_emergentes", sim.ventanas_emergentes), (telefono, "captura", sim.captura),
                (telefono, "lanzar", sim.lanzar), (telefono, "cerrar_cortina", sim.cerrar_cortina),
+               (telefono, "forzar_cierre", sim.forzar_cierre),
                (telefono, "shell", sim.prohibido),
                (telefono, "adb", sim.prohibido), (phone_clipboard, "pegar", sim.pegar),
                (phone_clipboard, "adb", sim.prohibido), (subprocess, "run", sim.prohibido),
@@ -4807,6 +4815,93 @@ def seccion_sonda_y_fixtures() -> None:
           "nodo_sonda rechaza un icono dentro de un botón de envío")
 
 
+def seccion_arranque_en_frio() -> None:
+    print("\n18. Fase 2: arranque en frío de Instagram en ig abrir si ningún volcado es legible")
+    import tempfile
+    from datetime import datetime, timezone
+    from labkit import instagram_feed as IG, pasos, telefono as T
+
+    llamadas: list = []
+    original_shell = T.shell
+    T.shell = lambda cmd, timeout=60: llamadas.append((cmd, timeout)) or ""
+    try:
+        T.forzar_cierre(PAQUETE_IG)
+    finally:
+        T.shell = original_shell
+    check(llamadas == [(f"am force-stop {PAQUETE_IG}", 15)],
+          f"forzar_cierre ejecuta am force-stop con timeout corto ({llamadas})")
+
+    colgado = T.TelefonoError("uiautomator dump sin respuesta en 5 s")
+    arranque = jerarquia(nodo_xml("[340,1000][740,1400]", desc="Instagram", clase="android.widget.ImageView"))
+    menu_crear = jerarquia(nodo_xml("[100,1500][980,1650]", texto="Publication"))
+    normal = [arranque, xml_inicio(), xml_perfil(), menu_crear, SELECTOR_IG]
+    subida = datetime(2026, 9, 14, 8, 39, tzinfo=timezone.utc)
+    cierre, lanzar = f"forzar_cierre:{IG.PAQUETE}", f"lanzar:{IG.PAQUETE}"
+
+    sim = TelefonoSimulado([colgado])
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_que(lambda x: True, "algo"))
+    check(isinstance(err, pasos.SinVolcado) and isinstance(err, IG.PantallaInesperada) and "último error" in str(err),
+          f"esperar_que sin ningún volcado legible lanza SinVolcado, que sigue siendo PantallaInesperada ({err!r})")
+    sim = TelefonoSimulado([arranque, colgado])
+    res, err = con_telefono_simulado(sim, lambda: pasos.esperar_que(lambda x: False, "algo"))
+    check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, pasos.SinVolcado),
+          f"esperar_que con un volcado leído que no cuadra (y luego errores) no es SinVolcado ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        evid = pathlib.Path(d)
+
+        sim = TelefonoSimulado([colgado], tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(err is None and sim.orden == ["cortina", lanzar, cierre, lanzar] and res["arranque_en_frio"] is True
+              and res["publicaciones_antes"] == 3712 and sim.capturas == ["ig-01-selector.png"] and not sim.prohibidos,
+              f"ningún volcado legible: un forzar_cierre, dos lanzar y arranque_en_frio True ({err!r}, {sim.orden})")
+
+        sim = TelefonoSimulado([xml_compositor()], tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(isinstance(err, IG.BorradorPendiente) and cierre not in sim.orden and sim.toques == [],
+              f"un borrador pendiente en el primer volcado: BorradorPendiente sin forzar_cierre ({err!r}, {sim.orden})")
+        sim = TelefonoSimulado([colgado, colgado, xml_compositor()], tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(isinstance(err, IG.BorradorPendiente) and cierre not in sim.orden and sim.toques == [],
+              f"volcados colgados y luego un borrador legible: BorradorPendiente sin forzar_cierre ({err!r}, {sim.orden})")
+
+        for guion, label in (([arranque], "los volcados se leen pero no aparece «Profil»"),
+                             ([arranque, colgado], "un volcado leído sin «Profil» y después solo errores")):
+            sim = TelefonoSimulado(guion, tras_cierre=normal)
+            res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+            check(isinstance(err, IG.PantallaInesperada) and not isinstance(err, pasos.SinVolcado)
+                  and "Instagram listo" in str(err) and sim.orden == ["cortina", lanzar] and sim.toques == [],
+                  f"{label}: el error de siempre, sin forzar_cierre ({err!r}, {sim.orden})")
+
+        sim = TelefonoSimulado([colgado], listo=False, tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(isinstance(err, IG.TelefonoNoListo) and sim.orden == [],
+              f"teléfono no listo: ni lanzar ni forzar_cierre ({err!r}, {sim.orden})")
+
+        sim = TelefonoSimulado(normal, tras_cierre=[colgado])
+        res, err = con_telefono_simulado(sim, lambda: IG.abrir_nueva_publicacion(evid, subida))
+        check(err is None and sim.orden == ["cortina", lanzar] and res.get("arranque_en_frio", False) is False,
+              f"flujo normal: sin forzar_cierre y arranque_en_frio False ({err!r}, {sim.orden})")
+
+    with entorno_lab_fase2() as (lab, raiz):
+        args = ("ig", "abrir", "--run", "RUN-1", "--subido-en", subida.isoformat())
+        sim = TelefonoSimulado([colgado], tras_cierre=normal)
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is True
+              and sim.orden.count(cierre) == 1 and sim.orden.count(lanzar) == 2,
+              f"ig abrir emite arranque_en_frio true en su JSON tras el cierre forzado ({res and res[:2]}, {err!r})")
+        sim = TelefonoSimulado([colgado], tras_cierre=[colgado])
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 4 and campo(res[1], "tipo") == "SinVolcado"
+              and sim.orden == ["cortina", lanzar, cierre, lanzar],
+              f"los volcados fallan también tras el cierre: sale 4 con un solo forzar_cierre, sin bucle "
+              f"({res and res[:2]}, {sim.orden})")
+        sim = TelefonoSimulado(normal)
+        res, err = con_telefono_simulado(sim, lambda: lab(*args))
+        check(err is None and res[0] == 0 and campo(res[1], "arranque_en_frio") is False and cierre not in sim.orden,
+              f"ig abrir en el flujo normal emite arranque_en_frio false ({res and res[:2]}, {err!r})")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -4828,6 +4923,7 @@ SECCIONES = [
     seccion_recetas_y_seleccion,
     seccion_cli_fase2,
     seccion_sonda_y_fixtures,
+    seccion_arranque_en_frio,
 ]
 
 

@@ -35,6 +35,11 @@ class BorradorPendiente(PantallaInesperada):
     """La app abrió con una publicación a medias: la resuelve una persona."""
 
 
+class SinVolcado(PantallaInesperada):
+    """`esperar_que` agotó el plazo sin leer ningún volcado: todos fallaron con TelefonoError.
+    Una pantalla leída que no cuadra es PantallaInesperada a secas, nunca esta."""
+
+
 class TelefonoNoListo(PantallaInesperada):
     """Dormido, bloqueado o sin adb. No se intenta arreglar."""
 
@@ -50,7 +55,8 @@ def esperar_que(cumple, descripcion: str, app: str | None = None) -> str:
 
     El plazo de ESPERA_S se comprueba entre volcados y cada volcado recibe el tiempo que
     queda (5 s como mínimo), así que la espera total puede pasar de ESPERA_S en lo que tarde
-    el último volcado. Con `app`, el error añade la pista de idioma del último volcado."""
+    el último volcado. Con `app`, el error añade la pista de idioma del último volcado. Si no se
+    pudo leer ningún volcado (todos dieron TelefonoError), el error es `SinVolcado`."""
     inicio = reloj.monotonic()
     ultimo_error = ""
     ultimo_xml = None
@@ -66,7 +72,8 @@ def esperar_que(cumple, descripcion: str, app: str | None = None) -> str:
         transcurrido = reloj.monotonic() - inicio
         if transcurrido >= ESPERA_S:
             pista = pantalla.pista_idioma(ultimo_xml, app) if app and ultimo_xml else ""
-            raise PantallaInesperada(f"no apareció {descripcion} tras {transcurrido:.1f} s{ultimo_error}{pista}")
+            error = PantallaInesperada if ultimo_xml is not None else SinVolcado
+            raise error(f"no apareció {descripcion} tras {transcurrido:.1f} s{ultimo_error}{pista}")
         reloj.dormir(1.5)
 
 

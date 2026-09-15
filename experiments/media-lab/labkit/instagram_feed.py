@@ -34,7 +34,13 @@ def _esperar(zona: str | None = None, **kw) -> str:
 
 
 def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
-    """Desde el perfil de la marca hasta el selector con la foto recién subida marcada."""
+    """Desde el perfil de la marca hasta el selector con la foto recién subida marcada.
+
+    `lanzar` reanuda Instagram donde se quedó; con un vídeo en marcha (un Reel abierto desde un mensaje
+    directo) ningún volcado llega a leerse. Solo en ese caso (`pasos.SinVolcado`: nada leído, así que no hay
+    ningún borrador visto que proteger) se fuerza el cierre UNA vez, se relanza en frío y se vuelve a esperar
+    con el mismo criterio; el resultado lo anota en `arranque_en_frio`. Si algún volcado se leyó, el error
+    sale como siempre y la app no se toca."""
     if isinstance(subido_en, str):
         subido_en = datetime.fromisoformat(subido_en)
     pasos.exigir_listo()
@@ -42,13 +48,24 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
         telefono.cerrar_cortina()
     except telefono.TelefonoError:
         pass  # best-effort: si no se puede replegar, se sigue e Instagram decide si hay bloqueo
-    telefono.lanzar(PAQUETE)
-    reloj.dormir(4)
-    xml = pasos.esperar_que(
-        lambda x: bool(_coincidencias(x, "abajo", texto="Profil"))
-        or telefono.buscar(x, texto="Nouvelle publication", paquete=PAQUETE) is not None
-        or bool(_campos(x)),
-        "Instagram listo (Profil, «Nouvelle publication» o el campo del pie)")
+
+    def lanzar_y_esperar() -> str:
+        telefono.lanzar(PAQUETE)
+        reloj.dormir(4)
+        return pasos.esperar_que(
+            lambda x: bool(_coincidencias(x, "abajo", texto="Profil"))
+            or telefono.buscar(x, texto="Nouvelle publication", paquete=PAQUETE) is not None
+            or bool(_campos(x)),
+            "Instagram listo (Profil, «Nouvelle publication» o el campo del pie)")
+
+    arranque_en_frio = False
+    try:
+        xml = lanzar_y_esperar()
+    except pasos.SinVolcado:
+        pasos.exigir_listo()
+        telefono.forzar_cierre(PAQUETE)
+        arranque_en_frio = True
+        xml = lanzar_y_esperar()  # si vuelve a fallar, el error sale tal cual: no hay otro cierre
     if telefono.buscar(xml, texto="Nouvelle publication", paquete=PAQUETE) or _campos(xml):
         raise BorradorPendiente("Instagram abrió con una publicación a medias: no se toca")
     telefono.tocar(*_nodo(xml, "abajo", texto="Profil")["centro"])
@@ -68,7 +85,7 @@ def abrir_nueva_publicacion(evidencia: Path, subido_en: datetime | str) -> dict:
         raise PantallaInesperada(
             f"la miniatura seleccionada no es la subida a las {subido_en.isoformat()}: {sel['desc']}")
     return {"captura": str(telefono.captura(evidencia / "ig-01-selector.png")),
-            "publicaciones_antes": publicaciones_antes}
+            "publicaciones_antes": publicaciones_antes, "arranque_en_frio": arranque_en_frio}
 
 
 def alternar_recorte(evidencia: Path) -> Path:

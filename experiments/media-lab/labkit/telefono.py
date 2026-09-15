@@ -334,6 +334,12 @@ def lanzar(paquete: str) -> None:
     shell(f"monkey -p {paquete} -c android.intent.category.LAUNCHER 1")
 
 
+def forzar_cierre(paquete: str, timeout: int = 15) -> None:
+    """`am force-stop`: el siguiente `lanzar` arranca la app en frío en vez de reanudarla donde se quedó.
+    Descarta lo que la app tenga en memoria: solo para quien ya sabe que no hay nada a medias que proteger."""
+    shell(f"am force-stop {paquete}", timeout=timeout)
+
+
 def cerrar_cortina(timeout: int = 15) -> None:
     """Repliega la cortina de notificaciones si está desplegada (no despierta ni desbloquea).
     Timeout corto: quien llama la usa como best-effort y no debe quedarse bloqueado en ella."""
