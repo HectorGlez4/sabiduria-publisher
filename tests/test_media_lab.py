@@ -5595,12 +5595,47 @@ def seccion_prompt_ventana() -> None:
             ("capability_evidence", "arranque en frío anotado en capability_evidence"),
             ("`avisos`", "avisos de los pasos de teléfono copiados al run"),
             ("`none`", "valor anotado null pasado como none"),
-            ("confirmado_sin_conteo", "none sale con confirmado_sin_conteo"),
+            ("confirmado_sin_conteo", "estados dudosos del código 5"),
             ("nearby_production_posts", "producción cercana en exposure_context"),
             ("publication.cross_posting", "copias automáticas"),
             ("lab.py generar", "rescate de encargos"),
-            ("timeout: 600000", "rescate con el tiempo máximo de Bash")):
+            ("timeout: 600000", "rescate con el tiempo máximo de Bash"),
+            ("2026-10-02", "fecha a partir de la que no se publica"),
+            ("--sin-telefono", "selección sin teléfono si no está listo")):
         check(fragmento in texto, f"el prompt de la ventana conserva {fragmento}: {motivo}")
+
+    def tramo(inicio: str, fin: str) -> str:
+        """El texto desde `inicio` hasta `fin` (vacío si falta alguno): cada fragmento se busca
+        en su regla o paso, no en todo el prompt, para que no pase por casualidad."""
+        desde = texto.find(inicio)
+        hasta = texto.find(fin, desde + len(inicio)) if desde >= 0 else -1
+        return texto[desde:hasta] if hasta >= 0 else ""
+
+    codigos = tramo("- Códigos de salida", "\n- Solo usa estos comandos")
+    borrador = tramo("- Borrador abierto", "\n- Ubicación nativa")
+    paso_b = tramo("   b. Teléfono", "\n      API:")
+    paso_e = tramo("   e. Publica.", "\n   f. ")
+    paso_f = tramo("   f. Verifica", "\n   g. ")
+    for seccion, nombre, fragmento, motivo in (
+            (codigos, "códigos de salida", "`lab.py telefono-captura`", "tras un 5 solo telefono-captura"),
+            (codigos, "códigos de salida", "nunca `telefono-atras`", "tras un 5 no se sale del borrador"),
+            (codigos, "códigos de salida", "`telefono-descartar`", "tras un 5 no se descarta"),
+            (borrador, "borrador abierto", "nunca tras un 5", "la regla no vale tras un envío dudoso"),
+            (borrador, "borrador abierto", "Nunca descartes a ciegas", "descarte solo con el diálogo a la vista"),
+            (borrador, "borrador abierto", "telefono-atras --app", "salida por atrás con la app"),
+            (paso_b, "7b", "--publicaciones-antes none", "null de publicaciones_antes como none"),
+            (paso_b, "7b", "confirmado_sin_conteo", "none sale con confirmado_sin_conteo"),
+            (paso_b, "7b", "trata el paso como un 4", "otro valor null es un 4"),
+            (paso_b, "7b", "comillas dobles", "valores con espacios entre comillas"),
+            (paso_b, "7b", "ni corchetes", "sin marcadores en la línea"),
+            (paso_b, "7b", "SinVolcado", "tipos del código 4"),
+            (paso_e, "7e", "sin los corchetes", "opcionales sin corchetes"),
+            (paso_e, "7e", "comillas dobles", "valores con espacios entre comillas"),
+            (paso_e, "7e", "no reintentes", "un 4 antes de pulsar no se reintenta"),
+            (paso_e, "7e", "solo `telefono-captura`", "conciliación del 5 solo con telefono-captura"),
+            (paso_e, "7e", "nunca la regla del borrador abierto", "tras un 5 no se sale del borrador"),
+            (paso_f, "7f", "sigue su `verificacion`", "verificación de la receta")):
+        check(fragmento in seccion, f"el prompt, en {nombre}, dice {fragmento}: {motivo}")
 
 
 SECCIONES = [
