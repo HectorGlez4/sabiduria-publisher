@@ -11,16 +11,40 @@
   "actual_native_format": "feed_single_image",
   "adaptation_notes": "Out-of-turn test window requested by the user on 2026-09-15 (no lab.py turno). API variant A of the fictional-presenter family: encargo ENC-20260914-002 (Codex rescue generation, near-exact twin of the accepted original), deterministic 4:5 master rendered with lab.py render from the Overlay section of briefs/LAB-PERSON-002.md, full Facebook/Instagram caption draft from the brief.",
   "audio_treatment": "none",
-  "location_treatment": {"visual_place": null, "text_label": null, "native_place_id": null, "native_place_label": null},
-  "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
   "exposure_context": {
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (window start)", "at": "2026-09-14T23:43:01+00:00", "espera": "producción subiendo: hilos"},
-      {"source": "lab.py preflight (right before workflow dispatch)", "at": "2026-09-14T23:45:32+00:00", "espera": "producción subiendo: hilos", "note": "Informational only (user decision 2026-09-14). Instagram CELL-018 of the same family auto-shared to the Page on 2026-09-14T19:38Z, so this API post is a near-duplicate on the Page ~4 h later."}
+      {
+        "source": "lab.py preflight (window start)",
+        "at": "2026-09-14T23:43:01+00:00",
+        "espera": "producción subiendo: hilos"
+      },
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-14T23:45:32+00:00",
+        "espera": "producción subiendo: hilos",
+        "note": "Informational only (user decision 2026-09-14). Instagram CELL-018 of the same family auto-shared to the Page on 2026-09-14T19:38Z, so this API post is a near-duplicate on the Page ~4 h later."
+      }
     ],
-    "matched_comparison_ids": ["LAB-PERSON-002-B-INSTAGRAM"]
+    "matched_comparison_ids": [
+      "LAB-PERSON-002-B-INSTAGRAM"
+    ]
   },
   "round": 1,
   "status": "completed",
@@ -37,7 +61,13 @@
     "no audio",
     "public organic audience"
   ],
-  "tool": {"name": "codex exec image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
+  "tool": {
+    "name": "codex exec image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
   "timing": {
     "started_at": "2026-09-14T23:42:30Z",
     "first_acceptable_at": "2026-09-14T23:44:40Z",
@@ -48,13 +78,34 @@
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 0,
     "stages": [
-      {"name": "lock, rebase, preflight, encargos, selection, render", "started_at": "2026-09-14T23:42:30Z", "finished_at": "2026-09-14T23:43:30Z", "overlaps_another_stage": false},
-      {"name": "manifests, visual QA (agent), commit and push", "started_at": "2026-09-14T23:43:30Z", "finished_at": "2026-09-14T23:45:20Z", "overlaps_another_stage": true},
-      {"name": "preflight, media-lab workflow, verification manifest, media-lab-verify", "started_at": "2026-09-14T23:45:32Z", "finished_at": "2026-09-14T23:47:10Z", "overlaps_another_stage": false}
+      {
+        "name": "lock, rebase, preflight, encargos, selection, render",
+        "started_at": "2026-09-14T23:42:30Z",
+        "finished_at": "2026-09-14T23:43:30Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "manifests, visual QA (agent), commit and push",
+        "started_at": "2026-09-14T23:43:30Z",
+        "finished_at": "2026-09-14T23:45:20Z",
+        "overlaps_another_stage": true
+      },
+      {
+        "name": "preflight, media-lab workflow, verification manifest, media-lab-verify",
+        "started_at": "2026-09-14T23:45:32Z",
+        "finished_at": "2026-09-14T23:47:10Z",
+        "overlaps_another_stage": false
+      }
     ]
   },
   "attempts": [],
-  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
   "artifacts": [
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
@@ -91,7 +142,13 @@
       "role": "verification_result"
     }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
   "visual_qa": {
     "reviews": [
       {
@@ -112,7 +169,17 @@
       }
     ]
   },
-  "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
   "publication": {
     "route_id": "API-MASTER",
     "comparison_pair_id": null,
@@ -159,6 +226,19 @@
             "espectadores": 61
           }
         }
+      },
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-15T23:52:00+00:00",
+        "edad_horas": 24.1,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "metricas": {
+          "facebook": {
+            "visualizaciones": 87,
+            "alcance": 69,
+            "espectadores": 69
+          }
+        }
       }
     ],
     "cross_posting": "None from this run. Note: CELL-018 (Instagram phone, same family) was auto-shared to this Page on 2026-09-14T19:38Z."
@@ -168,5 +248,5 @@
     "visual_display_on_device": "Out-of-turn API cell: verified read-only through Graph (caption, published, not hidden, permalink); no native app screenshot taken."
   },
   "decision": "Published through the API and verified read-only (exact caption, is_published=true, is_hidden=false, canonical permalink).",
-  "next_action": "Capture 24 h metrics from 2026-09-15T23:45:52Z."
+  "next_action": "Capturar 72 h (2026-09-17T23:45:52Z) y 7 d por Chrome."
 }
