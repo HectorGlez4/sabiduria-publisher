@@ -1,0 +1,15 @@
+{
+  "run_group_id": "LAB-PERSON-002-A-THREADS-API",
+  "route": "api",
+  "audience": "public",
+  "asset_path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
+  "asset_sha256": "55c939fa434cd096b9a3ae117d6ad8d9a9bc42798c863ad2793a8102ca1c026f",
+  "asset_url": "https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
+  "platforms": [
+    "threads"
+  ],
+  "captions": {
+    "threads": "En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente para que transmisor y receptor cambiaran de frecuencia de forma sincronizada. El mecanismo mencionaba un rollo perforado con 88 filas y 88 frecuencias portadoras.\n\nNo inventaron el wifi: fue un antecedente técnico.\n\nPresentadora ficticia generada; no representa a Hedy Lamarr. Escena editorial, no foto histórica."
+  },
+  "family_id": "LAB-PERSON-002"
+}
