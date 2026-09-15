@@ -59,7 +59,8 @@
   },
   "runs": [
     "LAB-TRIVIA-004-A-FACEBOOK",
-    "LAB-TRIVIA-004-A-INSTAGRAM"
+    "LAB-TRIVIA-004-A-INSTAGRAM",
+    "LAB-TRIVIA-004-A-THREADS"
   ],
   "no_lanzados": 0
 }
