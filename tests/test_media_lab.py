@@ -4131,6 +4131,60 @@ def seccion_textos_y_descarte() -> None:
     check(P.es_envio(otro_paquete_envio, flecha_otro_paquete, PAQUETE_IG),
           "I3: un control de envío de otro paquete que contiene el centro del toque también cuenta")
 
+    # --- Re-revisión de 95a421c: R1 (bloqueante), I-a e I-b ---
+
+    # R1: un nodo de envío NO pulsable, sin antecesor pulsable en su propia rama, cuyas bounds contienen
+    # el centro de un toque en OTRO nodo pulsable de otra rama («Photo») también debe bloquear.
+    sonda_photo_partager = jerarquia(
+        nodo_xml("[0,1960][1080,2060]", desc="Photo", clase="android.widget.ImageView", extra='clickable="true"'),
+        nodo_xml("[0,2000][1080,2200]", texto="Partager", clase="android.widget.TextView"))
+    photo = T.buscar(sonda_photo_partager, texto="Photo")
+    check(photo["centro"][1] == 2010 and 2000 <= photo["centro"][1] < 2200,
+          f"R1: el centro de «Photo» cae dentro de las bounds de «Partager» ({photo['centro']})")
+    check(P.es_envio(sonda_photo_partager, photo, PAQUETE_IG),
+          "R1: «Partager» no pulsable sin antecesor pulsable, con el centro de «Photo» dentro de sus bounds, bloquea")
+    sim = TelefonoSimulado([sonda_photo_partager])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(photo, sonda_photo_partager, PAQUETE_IG))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          f"R1: pasos.tocar tampoco pulsa «Photo» por el «Partager» no pulsable que solapa su centro ({err!r})")
+
+    sonda_photo_publicar_fb = jerarquia(
+        nodo_xml("[0,1960][1080,2060]", desc="Photo", clase="android.widget.ImageView", extra='clickable="true"',
+                 paquete="com.facebook.katana"),
+        nodo_xml("[0,2000][1080,2200]", desc="Publicar", clase="android.widget.TextView", paquete="com.facebook.katana"))
+    photo_fb = T.buscar(sonda_photo_publicar_fb, texto="Photo")
+    check(P.es_envio(sonda_photo_publicar_fb, photo_fb, "com.facebook.katana"),
+          "R1: lo mismo con desc=«Publicar» de Facebook, no pulsable, bloquea el toque de «Photo»")
+
+    # I-a: `ignorar`/`permitir` compara con la misma regla de prefijo que ENVIO_HISTORIA (I1), no exacto:
+    # `permitir=("Tu historia",)` exime también `desc="Tu historia, No vista"` (fb-launch.xml real).
+    no_vista = jerarquia(nodo_xml("[40,600][300,860]", desc="Tu historia, No vista",
+                                  clase="android.widget.ImageView", extra='clickable="true"',
+                                  paquete="com.facebook.katana"))
+    n_no_vista = T.buscar(no_vista, texto="Tu historia")
+    check(n_no_vista is None, "sanity: buscar exacto no encuentra «Tu historia, No vista»")
+    n_no_vista = T.buscar(no_vista, contiene="Tu historia")
+    sim = TelefonoSimulado([no_vista])
+    res, err = con_telefono_simulado(
+        sim, lambda: pasos.tocar(n_no_vista, no_vista, "com.facebook.katana", permitir=("Tu historia",)))
+    check(err is None and sim.toques == [(170, 730)],
+          f"I-a: permitir=(«Tu historia»,) exime «Tu historia, No vista» por prefijo con separador ({err!r})")
+    sim = TelefonoSimulado([no_vista])
+    res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_no_vista, no_vista, "com.facebook.katana"))
+    check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+          "I-a: sin permitir, «Tu historia, No vista» sigue siendo envío (por prefijo, I1)")
+
+    # I-b: NO_TOCAR compara con `textos.normalizar`: mayúsculas, espacios de más y un carácter invisible
+    # delante tampoco deben esquivar el bloqueo de «Anular».
+    for variante in ("ANULAR", "Anular ", "​Anular"):
+        anular = jerarquia(nodo_xml("[400,2000][680,2100]", texto=variante, clase="android.widget.Button",
+                                    extra='clickable="true"'))
+        n_anular = T.buscar(anular, contiene="nular") or T.buscar(anular, texto=variante)
+        sim = TelefonoSimulado([anular])
+        res, err = con_telefono_simulado(sim, lambda: pasos.tocar(n_anular, anular, PAQUETE_IG))
+        check(isinstance(err, P.PantallaInesperada) and sim.toques == [],
+              f"I-b: {variante!r} normalizado sigue bloqueando como NO_TOCAR ({err!r})")
+
 
 SECCIONES = [
     seccion_portapapeles,

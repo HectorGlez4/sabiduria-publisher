@@ -216,8 +216,11 @@ def descartar(app: str, evidencia: Path, nombre: str) -> Path:
 def tocar(n: dict, xml: str, paquete: str, permitir: tuple[str, ...] = ()) -> None:
     """Toca `n`, leído de `xml`, solo si pulsarlo no puede enviar ni tocar un control prohibido
     (`pantalla.es_envio`): los envíos solo salen de `enviar`. `permitir` es la lista blanca explícita de
-    etiquetas (texto exacto o principio de la content-desc) cuyos nodos dejan de contar como envío en este toque;
-    cualquier otro control de envío en ese punto sigue bloqueando. Solo la usa `_visor_propio` para abrir la
+    etiquetas (`textos.coincide_o_prefijo`: exacto o por prefijo seguido de separador no alfanumérico,
+    la misma regla que `ENVIO_HISTORIA`; no «texto exacto o principio de la content-desc», que era la
+    comparación anterior a la revisión I-a) por CAMPO (texto, desc o resource-id) que dejan de contar
+    como envío en cualquier nodo que las tenga; cualquier otro control de envío en ese punto, o esa misma
+    etiqueta en otro campo del mismo nodo, sigue bloqueando. Solo la usa `_visor_propio` para abrir la
     Story propia, tras verificar la pantalla."""
     if pantalla.es_envio(xml, n, paquete, ignorar=permitir):
         raise PantallaInesperada(f"no se toca un control que puede enviar o está prohibido fuera de compartir: "

@@ -133,6 +133,33 @@ def normalizar(valor: str) -> str:
     return " ".join(sin_invisibles.split()).casefold()
 
 
+def coincide_o_prefijo(valor: str, candidatos) -> bool:
+    """`valor` coincide, tras `normalizar`, con alguno de `candidatos` (también normalizados): exacto, o
+    por prefijo seguido de un separador no alfanumérico («Votre story, 2 nouvelles», «Amis proches (12)»,
+    «Tu historia, No vista»: sigue siendo el mismo control con un contador, una coma o un «no vista»
+    añadidos). La misma regla la usan `es_texto_envio` para `ENVIO_HISTORIA` (I1) y `pantalla._es_de_envio`
+    para `ignorar`/`permitir` (revisión I-a: antes comparaba exacto y no exceptuaba «Tu historia, No
+    vista» con solo «Tu historia» en la lista blanca)."""
+    limpio = normalizar(valor)
+    if not limpio:
+        return False
+    for c in candidatos:
+        if not c:
+            continue
+        prefijo = normalizar(c)
+        if prefijo and (limpio == prefijo or (limpio.startswith(prefijo) and not limpio[len(prefijo)].isalnum())):
+            return True
+    return False
+
+
+def es_no_tocar(valor: str) -> bool:
+    """`valor` (normalizado) es exactamente uno de `NO_TOCAR` (revisión I-b: antes se comparaba sin
+    normalizar, así que «ANULAR», «Anular » o un «Anular» con un carácter invisible delante no se
+    bloqueaban)."""
+    limpio = normalizar(valor)
+    return bool(limpio) and limpio in {normalizar(t) for t in NO_TOCAR}
+
+
 def es_texto_envio(valor: str) -> bool:
     """Texto o id de un control que publica: texto exacto de `ENVIO` o `ENVIO_HISTORIA`, una etiqueta que
     EMPIEZA por un texto de `ENVIO_HISTORIA` seguido de un separador no alfanumérico («Votre story, 2
@@ -146,10 +173,8 @@ def es_texto_envio(valor: str) -> bool:
         return False
     if limpio in {normalizar(e) for e in ENVIO} or limpio.rsplit("/", 1)[-1] in ENVIO_IDS:
         return True
-    for e in ENVIO_HISTORIA:
-        prefijo = normalizar(e)
-        if limpio == prefijo or (limpio.startswith(prefijo) and not limpio[len(prefijo)].isalnum()):
-            return True
+    if coincide_o_prefijo(valor, ENVIO_HISTORIA):
+        return True
     return limpio not in NO_ENVIO and limpio.startswith(PREFIJOS_ENVIO)
 
 

@@ -222,15 +222,24 @@ def dentro(interior: tuple[int, int, int, int], exterior: tuple[int, int, int, i
 
 
 def _es_de_envio(n: dict, ignorar: tuple[str, ...] = ()) -> bool:
-    """El propio nodo (sin mirar descendientes) es de envío o está prohibido. `ignorar` (revisión B2) es
-    una lista blanca por CAMPO: solo deja de contar el campo (texto, desc o resource-id) cuyo valor exacto
-    coincide con una etiqueta de `ignorar`, nunca el nodo entero; los demás campos del mismo nodo se
-    siguen mirando (p. ej. un `desc` permitido no oculta un `texto` o un id de envío en el mismo nodo)."""
+    """El propio nodo (sin mirar descendientes) es de envío o está prohibido. `ignorar` (revisión B2, I-a)
+    es una lista blanca por CAMPO: solo deja de contar el campo (texto, desc o resource-id) cuyo valor
+    coincide con una etiqueta de `ignorar` vía `textos.coincide_o_prefijo` (exacto o por prefijo seguido
+    de separador, la misma regla que `ENVIO_HISTORIA`: exime «Tu historia, No vista» con solo «Tu
+    historia» en la lista blanca), nunca el nodo entero; los demás campos del mismo nodo se siguen
+    mirando (p. ej. un `desc` permitido no oculta un `texto` o un id de envío en el mismo nodo). La
+    etiqueta se exime en cualquier nodo cuyo campo coincida, no solo en el nodo tocado: `ignorar` no
+    oculta ningún OTRO control de envío, pero si esa misma etiqueta aparece en más de un nodo del
+    volcado, se exime en todos. `textos.es_no_tocar` (revisión I-b) también normaliza antes de comparar
+    con `NO_TOCAR`."""
     texto, desc, rid = n["texto"], n["desc"], n["resource_id"]
-    envio_texto = texto not in ignorar and textos.es_texto_envio(texto)
-    envio_desc = desc not in ignorar and textos.es_texto_envio(desc)
-    envio_rid = rid not in ignorar and textos.es_texto_envio(rid)
-    prohibido = (texto not in ignorar and texto in textos.NO_TOCAR) or (desc not in ignorar and desc in textos.NO_TOCAR)
+    permitido_texto = textos.coincide_o_prefijo(texto, ignorar)
+    permitido_desc = textos.coincide_o_prefijo(desc, ignorar)
+    permitido_rid = textos.coincide_o_prefijo(rid, ignorar)
+    envio_texto = not permitido_texto and textos.es_texto_envio(texto)
+    envio_desc = not permitido_desc and textos.es_texto_envio(desc)
+    envio_rid = not permitido_rid and textos.es_texto_envio(rid)
+    prohibido = (not permitido_texto and textos.es_no_tocar(texto)) or (not permitido_desc and textos.es_no_tocar(desc))
     return envio_texto or envio_desc or envio_rid or prohibido
 
 
@@ -250,22 +259,35 @@ def _subarbol_tiene_envio(indice: int, lista: list[dict], ignorar: tuple[str, ..
 
 
 def es_envio(xml: str, n: dict, paquete: str, ignorar: tuple[str, ...] = ()) -> bool:
-    """Pulsar `n` podría enviar (o tocar un control prohibido): su texto, descripción o id son de envío; o
-    hay un nodo PULSABLE (de cualquier paquete: revisión I3, falla cerrado) cuyos bounds contienen el
-    centro del toque y que, él mismo o cualquiera de sus descendientes, es de envío (revisión B1: cubre
-    tanto el antecesor clickable que recibe el toque como cualquier otro control pulsable de otra rama del
-    árbol que solape ese punto). `paquete` se mantiene por compatibilidad de firma pero ya no filtra la
-    regla del centro. Los nodos cuya etiqueta está en `ignorar` (revisión B2: por campo, no por nodo
-    entero) no cuentan: es la lista blanca de `pasos.tocar`, que no oculta ningún otro control de envío."""
+    """Pulsar `n` podría enviar (o tocar un control prohibido). Cuenta como envío CUALQUIERA de:
+
+    (a) el propio `n` es de envío (su texto, descripción o id, o está en `NO_TOCAR`);
+    (b) cualquier nodo del volcado (de cualquier paquete: revisión I3, falla cerrado; pulsable o no:
+        revisión R1, corrige un hueco de la revisión B1 que dejaba de bloquear un nodo de envío NO
+        pulsable cuyas bounds contenían el centro pero que no tenía ningún antecesor pulsable) cuyas
+        bounds contienen el centro del toque y que, ÉL MISMO, es de envío;
+    (c) cualquier nodo PULSABLE cuyas bounds contienen el centro del toque y que, alguno de sus
+        DESCENDIENTES (aunque el propio nodo pulsable no lo sea), es de envío (revisión B1: cubre tanto
+        el antecesor clickable que recibe el toque como cualquier otro contenedor pulsable de otra rama
+        del árbol que solape ese punto, p. ej. un botón de pantalla completa sin etiqueta propia que
+        envuelve un «Partager»: eso falla cerrado a propósito, es lo deseado).
+
+    `paquete` se mantiene por compatibilidad de firma pero ya no filtra ninguna de las dos reglas del
+    centro. Los nodos cuya etiqueta está en `ignorar` (revisión B2, I-a: por campo y con la misma regla
+    de prefijo que `ENVIO_HISTORIA`, no por nodo entero) no cuentan: es la lista blanca de `pasos.tocar`,
+    que no oculta ningún otro control de envío (aunque si esa etiqueta aparece en más de un nodo del
+    volcado, se exime en todos, no solo en el nodo tocado)."""
     if _es_de_envio(n, ignorar):
         return True
     lista = telefono.nodos(xml)
     cx, cy = n["centro"]
     for k, m in enumerate(lista):
-        if not m["clickable"]:
-            continue
         x1, y1, x2, y2 = m["bounds"]
-        if x1 <= cx < x2 and y1 <= cy < y2 and _subarbol_tiene_envio(k, lista, ignorar):
+        if not (x1 <= cx < x2 and y1 <= cy < y2):
+            continue
+        if _es_de_envio(m, ignorar):
+            return True
+        if m["clickable"] and _subarbol_tiene_envio(k, lista, ignorar):
             return True
     return False
 
