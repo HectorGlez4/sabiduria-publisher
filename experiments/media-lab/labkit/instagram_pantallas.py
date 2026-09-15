@@ -15,7 +15,8 @@ import re
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from labkit import telefono
+from labkit import pantalla, telefono
+from labkit.pantalla import CLASES_CAMPO, PantallaInesperada
 
 __all__ = [
     "PAQUETE", "MARCA", "ZONA_LOCAL", "CLASES_CAMPO", "MARCAS_FALLO", "ZONA_AVISO_PX", "MARGEN_BANNER_PX",
@@ -31,7 +32,6 @@ __all__ = [
 PAQUETE = "com.instagram.android"
 MARCA = "sabiduriabolsillo"
 ZONA_LOCAL = ZoneInfo("Europe/Madrid")
-CLASES_CAMPO = ("android.widget.AutoCompleteTextView", "android.widget.EditText")
 MARCAS_FALLO = ("Réessayer", "Impossible de publier", "n’a pas pu", "n'a pas pu")
 # El aviso de subida sale arriba del inicio: un texto de fallo solo cuenta con el borde
 # inferior a esta altura o menos, o cerca del propio banner «Publication sur…».
@@ -49,21 +49,12 @@ _FECHA = re.compile(r"\bdu\s+(\d{1,2})(?:er)?\s+(\S+)\s+(\d{4})\s+(\d{1,2})[:h](
 _PUBLICACIONES = re.compile(r"\s*(\d[\d \u00a0\u202f]*?)[\s\u00a0\u202f]*publications?\s*")
 
 
-class PantallaInesperada(RuntimeError):
-    pass
-
-
 def _es_textview(n: dict) -> bool:
     return n["clase"].endswith("TextView") and n["clase"] not in CLASES_CAMPO
 
 
-def _dice(n: dict, valor: str) -> bool:
-    return valor in (n["texto"], n["desc"])
-
-
-def _area(n: dict) -> int:
-    x1, y1, x2, y2 = n["bounds"]
-    return (x2 - x1) * (y2 - y1)
+_dice = pantalla.dice
+_area = pantalla.area
 
 
 # --- Perfil y selector ---------------------------------------------------------
@@ -127,8 +118,7 @@ def hay_desplegable_hashtags(xml: str, paquete: str | None = None) -> bool:
     """Sugerencias de hashtags abiertas: un texto que empieza por # fuera del campo del
     pie. Sin `paquete` se miran todos los nodos (ante la duda, se da por abierto); con
     `paquete`, solo los de esa aplicación."""
-    return any(n["texto"].startswith("#") and not n["clase"].endswith(("AutoCompleteTextView", "EditText"))
-               for n in telefono.buscar_todos(xml, paquete=paquete))
+    return pantalla.hay_desplegable(xml, paquete, "#")
 
 
 # Sufijo del resource-id de la fila de música en el compositor (Task 10f, medido el
@@ -136,8 +126,8 @@ def hay_desplegable_hashtags(xml: str, paquete: str | None = None) -> bool:
 # incluye: `emergente_desplegable` la reconoce por su solape con esta fila o con
 # «Partager», que sí están en el volcado.
 RESOURCE_ID_MUSICA = "music_track_title"
-UMBRAL_ANCHO_DESPLEGABLE = 0.9  # fracción del ancho del padre que ocupa un desplegable real
-ANCHO_PANTALLA_PX = 1080  # medida del Samsung del laboratorio (serie R5CXB1AWYNF), si no hay ancho_padre
+UMBRAL_ANCHO_DESPLEGABLE = pantalla.UMBRAL_ANCHO_DESPLEGABLE
+ANCHO_PANTALLA_PX = pantalla.ANCHO_PANTALLA_PX
 
 
 def _fila_musica_o_partager(xml: str, paquete: str) -> list[tuple[int, int, int, int]]:
@@ -148,10 +138,7 @@ def _fila_musica_o_partager(xml: str, paquete: str) -> list[tuple[int, int, int,
             + [n["bounds"] for n in nodos if _dice(n, "Partager")])
 
 
-def _se_solapan_verticalmente(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> bool:
-    _, ay1, _, ay2 = a
-    _, by1, _, by2 = b
-    return ay1 < by2 and by1 < ay2
+_se_solapan_verticalmente = pantalla.se_solapan_verticalmente
 
 
 def emergente_desplegable(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> dict | None:
@@ -165,19 +152,7 @@ def emergente_desplegable(xml: str, emergentes: list[dict], paquete: str = PAQUE
     «Partager»; si ninguno de los dos aparece en el volcado, cuenta cualquier emergente del
     paquete (Task 10f: el desplegable es una `PopupWindow` que `uiautomator dump` no
     incluye, así que sin referencias en el volcado no hay con qué descartarla)."""
-    if not emergentes:
-        return None
-    referencias = _fila_musica_o_partager(xml, paquete)
-    for e in emergentes:
-        frame = e.get("frame")
-        if frame is None:
-            return e
-        if referencias:
-            if any(_se_solapan_verticalmente(frame, r) for r in referencias):
-                return e
-        else:
-            return e
-    return None
+    return pantalla.emergente_solapada(emergentes, _fila_musica_o_partager(xml, paquete))
 
 
 def hay_desplegable_por_ventana(xml: str, emergentes: list[dict], paquete: str = PAQUETE) -> bool:
@@ -187,24 +162,8 @@ def hay_desplegable_por_ventana(xml: str, emergentes: list[dict], paquete: str =
     return emergente_desplegable(xml, emergentes, paquete) is not None
 
 
-def parece_desplegable(e: dict) -> bool:
-    """El frame de `e` ocupa al menos `UMBRAL_ANCHO_DESPLEGABLE` del ancho de su ventana
-    padre (`"ancho_padre"`, o ANCHO_PANTALLA_PX si no se conoce): el desplegable de
-    hashtags ocupa casi todo el ancho, a diferencia de una emergente estrecha (un tooltip
-    no enfocable, por ejemplo). Sin frame no se puede medir: cuenta como desplegable
-    (falla cerrado)."""
-    frame = e.get("frame")
-    if frame is None:
-        return True
-    ancho_padre = e.get("ancho_padre") or ANCHO_PANTALLA_PX
-    return (frame[2] - frame[0]) >= UMBRAL_ANCHO_DESPLEGABLE * ancho_padre
-
-
-def describe_emergente(e: dict) -> str:
-    """«ventana emergente <nombre> en <frame>», para mensajes de diagnóstico."""
-    frame = e.get("frame")
-    lugar = frame if frame is not None else "sin frame legible"
-    return f"ventana emergente {e['nombre']} en {lugar}"
+parece_desplegable = pantalla.parece_desplegable
+describe_emergente = pantalla.describe_emergente
 
 
 def punto_mas(bounds: tuple[int, int, int, int]) -> tuple[int, int]:
@@ -238,24 +197,7 @@ def campo_pie(xml: str) -> dict | None:
 def partager_pulsable(xml: str) -> bool:
     """Algún «Partager» de Instagram se puede pulsar: el propio nodo es clickable y
     enabled o, si es una etiqueta, su antecesor clickable más cercano está enabled."""
-    lista = telefono.nodos(xml)
-    for i, n in enumerate(lista):
-        if n["package"] != PAQUETE or not _dice(n, "Partager"):
-            continue
-        if n["clickable"]:
-            if n["enabled"]:
-                return True
-            continue
-        nivel = n["profundidad"]
-        for anterior in reversed(lista[:i]):
-            if anterior["profundidad"] >= nivel:
-                continue
-            nivel = anterior["profundidad"]
-            if anterior["clickable"]:
-                if anterior["enabled"] and anterior["package"] == PAQUETE:
-                    return True
-                break
-    return False
+    return pantalla.pulsable(xml, "Partager", PAQUETE)
 
 
 def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict] | None = None) -> list[str]:
@@ -379,67 +321,21 @@ def observacion_de_volcado(xml: str, boton_bounds: tuple[int, int, int, int] | N
             "fallo_bounds": culpable["bounds"] if culpable else None}
 
 
-def evaluar_envio(observaciones: list[dict]) -> str:
-    """Resultado de las observaciones tomadas tras pulsar, en orden. Los volcados no
-    válidos no cuentan.
-
-    - «fallido»: algún volcado válido muestra un aviso de error (manda sobre lo demás).
-    - «confirmado»: se vio el banner y los dos últimos válidos no tienen ni banner ni
-      compositor.
-    - «sin_banner»: los dos últimos válidos no tienen compositor pero el banner no se vio.
-    - «timeout» en otro caso."""
-    validas = [o for o in observaciones if o["valido"]]
-    if any(o.get("fallo") for o in validas):
-        return "fallido"
-    ultimas = validas[-2:]
-    limpias = len(ultimas) == 2 and not any(o["compositor"] or o["banner"] for o in ultimas)
-    if limpias and any(o["banner"] for o in validas):
-        return "confirmado"
-    if limpias:
-        return "sin_banner"
-    return "timeout"
+evaluar_envio = pantalla.evaluar_envio
 
 
 # --- Elección de controles -------------------------------------------------------
 
-def _elegir(coincidencias: list[dict], que: object) -> dict:
-    """Una sola coincidencia útil.
-
-    Varias valen si comparten centro o si todas caben en la primera (un contenedor y su
-    botón, un botón y su etiqueta); si no, es ambiguo. Entre las válidas se devuelve la
-    única clickable si hay exactamente una y, si no, la de menor área."""
-    if len(coincidencias) == 1:
-        return coincidencias[0]
-    primera = coincidencias[0]
-    x1, y1, x2, y2 = primera["bounds"]
-    for n in coincidencias[1:]:
-        ox1, oy1, ox2, oy2 = n["bounds"]
-        dentro = ox1 >= x1 and oy1 >= y1 and ox2 <= x2 and oy2 <= y2
-        if n["centro"] != primera["centro"] and not dentro:
-            raise PantallaInesperada(f"ambiguo: {que} en {[c['bounds'] for c in coincidencias]}")
-    pulsables = [n for n in coincidencias if n["clickable"]]
-    if len(pulsables) == 1:
-        return pulsables[0]
-    return min(coincidencias, key=_area)
+_elegir = pantalla.elegir
 
 
 def _coincidencias(xml: str, zona: str | None = None, **kw) -> list[dict]:
-    todos = telefono.buscar_todos(xml, paquete=PAQUETE, **kw)
-    if zona == "arriba":
-        return [n for n in todos if n["bounds"][3] <= 300]
-    if zona == "abajo":
-        return [n for n in todos if n["bounds"][1] >= 1900]
-    if zona is not None:
-        raise ValueError(f"zona desconocida: {zona}")
-    return todos
+    return pantalla.coincidencias(xml, PAQUETE, zona, **kw)
 
 
 def _nodo(xml: str, zona: str | None = None, **kw) -> dict:
     """El control de Instagram que coincide (en la zona, si se da). Puro: no toca el teléfono."""
-    encontrados = _coincidencias(xml, zona, **kw)
-    if not encontrados:
-        raise PantallaInesperada(f"no aparece {kw}" + (f" en zona {zona}" if zona else ""))
-    return _elegir(encontrados, kw)
+    return pantalla.nodo(xml, PAQUETE, zona, **kw)
 
 
 def _suivant(xml: str) -> dict:

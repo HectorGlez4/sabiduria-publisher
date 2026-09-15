@@ -3472,6 +3472,81 @@ def seccion_metricas() -> None:
     check("live-result.json" in texto_publish, "media-lab.yml escribe live-result.json")
 
 
+def seccion_pantalla_comun() -> None:
+    print("\n12. Fase 2: lectura común de pantallas y reloj")
+    import time
+    from labkit import instagram_pantallas as IP, pantalla as P, reloj
+
+    check(P.PantallaInesperada is IP.PantallaInesperada, "PantallaInesperada es la misma clase en pantalla e instagram_pantallas")
+    check(IP._elegir is P.elegir and IP.evaluar_envio is P.evaluar_envio and IP.CLASES_CAMPO == P.CLASES_CAMPO,
+          "instagram_pantallas reexporta elegir, evaluar_envio y CLASES_CAMPO de pantalla")
+
+    alto_2340 = jerarquia(nodo_xml("[0,0][1080,300]", texto="Créer"), nodo_xml("[0,301][1080,400]", texto="Bajo"),
+                          nodo_xml("[0,1900][1080,2000]", texto="Profil"), nodo_xml("[0,1899][1080,1950]", texto="Alto"))
+    check(P.alto_volcado(alto_2340) == 2340, "el alto del volcado sale del nodo raíz")
+    arriba = [n["texto"] for n in P.coincidencias(alto_2340, PAQUETE_IG, "arriba")]
+    abajo = [n["texto"] for n in P.coincidencias(alto_2340, PAQUETE_IG, "abajo")]
+    check("Créer" in arriba and "Bajo" not in arriba, f"sobre 2340 px «arriba» sigue siendo y2 ≤ 300 ({arriba})")
+    check("Profil" in abajo and "Alto" not in abajo, f"sobre 2340 px «abajo» sigue siendo y1 ≥ 1900 ({abajo})")
+
+    alto_2316 = jerarquia(nodo_xml("[0,0][1080,296]", texto="Créer"), nodo_xml("[0,0][1080,297]", texto="Justo"),
+                          nodo_xml("[0,1881][1080,1990]", texto="Profil"), nodo_xml("[0,1880][1080,1990]", texto="Casi"))
+    alto_2316 = alto_2316.replace('bounds="[0,0][1080,2340]"', 'bounds="[0,0][1080,2316]"', 1)
+    arriba = [n["texto"] for n in P.coincidencias(alto_2316, PAQUETE_IG, "arriba")]
+    abajo = [n["texto"] for n in P.coincidencias(alto_2316, PAQUETE_IG, "abajo")]
+    check(P.alto_volcado(alto_2316) == 2316 and arriba == ["Créer"] and abajo == ["Profil"],
+          f"sobre 2316 px las zonas escalan (arriba ≤ 296,9; abajo ≥ 1880,5): {arriba}, {abajo}")
+    try:
+        P.coincidencias(alto_2340, PAQUETE_IG, "centro")
+        ok = False
+    except ValueError:
+        ok = True
+    check(ok, "una zona desconocida es ValueError")
+
+    comp = xml_compositor()
+    check(P.pulsable(comp, "Partager", PAQUETE_IG) and IP.partager_pulsable(comp),
+          "pulsable generaliza partager_pulsable (etiqueta dentro de un botón clickable)")
+    check(not P.pulsable(comp, "Partager", "com.facebook.katana"), "pulsable exige el paquete")
+    check(P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG)
+          and not P.hay_desplegable(xml_compositor(despues=LISTA_HASHTAGS), PAQUETE_IG, "@"),
+          "hay_desplegable mira el prefijo pedido fuera del campo de texto")
+    check(P.tiene_texto(comp, PIE_PRUEBA, PAQUETE_IG) and not P.tiene_texto(comp, "otro", PAQUETE_IG),
+          "tiene_texto compara el texto exacto dentro del paquete")
+    check(P.nodo(comp, PAQUETE_IG, texto="Nouvelle publication")["texto"] == "Nouvelle publication",
+          "nodo devuelve el control del paquete")
+    try:
+        P.nodo(comp, PAQUETE_IG, texto="No existe")
+        ok = False
+    except P.PantallaInesperada:
+        ok = True
+    check(ok, "nodo sin coincidencias lanza PantallaInesperada")
+
+    ancha = {"nombre": "PopupWindow:a", "frame": (0, 1448, 1080, 2205), "ancho_padre": 1080}
+    estrecha = {"nombre": "PopupWindow:b", "frame": (400, 100, 500, 180), "ancho_padre": 1080}
+    sin_frame = {"nombre": "PopupWindow:c", "frame": None, "ancho_padre": None}
+    check(IP.parece_desplegable is P.parece_desplegable and IP.describe_emergente is P.describe_emergente,
+          "instagram_pantallas reexporta parece_desplegable y describe_emergente de pantalla")
+    boton = (45, 2081, 1035, 2205)
+    check(P.emergente_solapada([estrecha, ancha], [boton]) is ancha and P.emergente_solapada([estrecha], [boton]) is None
+          and P.emergente_solapada([estrecha], []) is estrecha and P.emergente_solapada([sin_frame], [boton]) is sin_frame
+          and P.emergente_solapada([], [boton]) is None,
+          "emergente_solapada: solape vertical con las referencias; sin referencias o sin frame cuenta (falla cerrado)")
+    check(P.parece_desplegable(ancha) and not P.parece_desplegable(estrecha) and P.parece_desplegable(sin_frame)
+          and "PopupWindow:a" in P.describe_emergente(ancha),
+          "parece_desplegable mide el ancho y describe_emergente nombra la ventana")
+
+    dormidos: list = []
+    sleep_original, monotonic_original = time.sleep, time.monotonic
+    try:
+        time.sleep = dormidos.append
+        time.monotonic = lambda: 42.0
+        reloj.dormir(3)
+        check(dormidos == [3] and reloj.monotonic() == 42.0,
+              "reloj llama a time en cada uso (las sustituciones de la fase 1 siguen valiendo)")
+    finally:
+        time.sleep, time.monotonic = sleep_original, monotonic_original
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -3487,6 +3562,7 @@ SECCIONES = [
     seccion_render,
     seccion_turno,
     seccion_metricas,
+    seccion_pantalla_comun,
 ]
 
 
