@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Martín Fierro y los consejos del canto XXXII",
+    "hook": "La estrofa más repetida de la literatura argentina es un consejo de despedida, dicho justo antes de que la familia se disuelva.",
+    "body": [
+      "José Hernández publicó El gaucho Martín Fierro en 1872 y la segunda parte, La vuelta de Martín Fierro, en Buenos Aires en 1879, con ilustraciones de Carlos Clérice. La estrofa está en el canto XXXII, el penúltimo de los treinta y tres. Fierro, ya viejo, reúne a sus dos hijos y al hijo de Cruz y les deja una tanda de consejos. El de la unión cae entre uno sobre respetar a los ancianos y otro sobre desconfiar de una ofensa perdonada.",
+      "No es el cierre de un reencuentro. Es el cierre de una dispersión. En el canto siguiente los cuatro se van «a los cuatro vientos», se hacen una promesa que el narrador dice no poder contar, y acuerdan cambiarse el nombre. La frase sobre estar unidos se pronuncia en el momento exacto en que dejan de estarlo.",
+      "En la edición de 1879 el último verso dice «los devoran los de ajuera», con jota. Hernández escribía el habla del gaucho que retrataba, y la ortografía formaba parte del retrato. Hoy la estrofa se cita suelta, como lema de concordia, sin los versos que la rodean y sin la escena en la que se dice."
+    ],
+    "question": "¿Cuándo se dice en voz alta que hay que estar unidos?",
+    "quote": {
+      "text": "Los hermanos sean unidos, / porque esa es la ley primera; / tengan unión verdadera / en cualquier tiempo que sea, / porque si entre ellos pelean / los devoran los de ajuera.",
+      "author": "José Hernández",
+      "work": "La vuelta de Martín Fierro, canto XXXII (1879)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MartinFierro", "#JoseHernandez", "#Argentina"],
+    "extended": ["#Literatura", "#Gauchesca", "#Citas", "#Poesia", "#Historia", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la estrofa en la edición original: ‘Los hermanos sean unidos, / Porque esa es la ley primera— / Tengan union verdadera / En cualquier tiempo que sea— / Porque si entre ellos pelean / Los devoran los de ajuera.’ La estrofa anterior empieza ‘Respeten á los ancianos, / El burlarlos no es hazaña…’ y la siguiente ‘Si les hacen una ofensa, / Aunque la echen en olvido, / Vivan siempre prevenidos…’. El canto pertenece a La vuelta de Martín Fierro (1879), de José Hernández, ilustrada por Carlos Clérice y publicada por Pablo E. Coni en Buenos Aires; la transcripción conserva la ortografía de 1879. En la cita de esta pieza se actualizaron acentos y puntuación y se conservó ‘ajuera’.",
+      "source": "Wikisource en español, La vuelta de Martín Fierro (1879), canto 32",
+      "url": "https://es.wikisource.org/wiki/La_vuelta_de_Mart%C3%ADn_Fierro_(1879)/32"
+    },
+    {
+      "claim": "En el canto 33, el último del poema, los cuatro se separan y cambian de nombre: ‘Despues á los cuatro vientos / Los cuatro se dirijieron— / Una promesa se hicieron / Que todos debian cumplir— / Mas no la puedo decir / Pues secreto prometieron.’ y ‘Convinieron entre todos / En mudar allí de nombre.’ El propio texto declara ‘Estos son treinta y tres cantos’ y cierra con ‘FIN’, de modo que el canto XXXII es el penúltimo.",
+      "source": "Wikisource en español, La vuelta de Martín Fierro (1879), canto 33",
+      "url": "https://es.wikisource.org/wiki/La_vuelta_de_Mart%C3%ADn_Fierro_(1879)/33"
+    },
+    {
+      "claim": "El poema se publicó en dos partes: El Gaucho Martín Fierro (1872) y La vuelta de Martín Fierro (1879). La primera parte se imprimió en la Imprenta de la Pampa; La vuelta apareció el 1 de marzo de 1879, mejor presentada que la de 1872 y con ilustraciones de Carlos Clérice.",
+      "source": "Wikipedia en inglés, Martín Fierro",
+      "url": "https://en.wikipedia.org/wiki/Mart%C3%ADn_Fierro"
+    }
+  ],
+  "do_not_use": [
+    "‘Los devoran los de afuera’, con efe. La edición de 1879 escribe ‘ajuera’. La forma modernizada es la que circula en manuales y carteles, pero no es la que se imprimió.",
+    "Atribuir la estrofa a El gaucho Martín Fierro (1872). Está en la segunda parte, La vuelta de Martín Fierro (1879), canto XXXII. Es la confusión más frecuente sobre esta cita.",
+    "Presentar los consejos como el final del poema. El canto XXXII es el penúltimo: el XXXIII es la despedida, donde los cuatro se separan y cambian de nombre.",
+    "Leerla como una proclama patriótica sobre la unión nacional. En el texto es un consejo doméstico de un padre a sus hijos antes de dispersarse. El uso posterior como lema institucional no está en el poema.",
+    "Dar la cifra de ejemplares de las ediciones. Circula que la segunda edición de La vuelta tuvo veinte mil ejemplares; no se verificó contra una fuente institucional en esta investigación y no se usa.",
+    "Entrar en la discusión sobre el propósito político del libro —si defiende al gaucho, si lo llora o si lo entierra—. Es objeto de debate académico y esta pieza no lo resuelve.",
+    "Modernizar la cita del todo. Se actualizaron acentos y puntuación y se conservó ‘ajuera’; el original escribe ‘union’ sin tilde y separa los versos con rayas.",
+    "Atribuir a Hernández la invención de la poesía gauchesca. Lo precedieron Bartolomé Hidalgo, Hilario Ascasubi y Estanislao del Campo, y esa filiación no se verificó aquí en detalle."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

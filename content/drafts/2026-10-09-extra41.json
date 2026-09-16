@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-09-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Gandhi y el espejo del mundo (Indian Opinion, 1913)",
+    "hook": "La frase de Gandhi más repetida del mundo no aparece en ninguno de los volúmenes de sus obras completas.",
+    "body": [
+      "«Sé el cambio que quieres ver en el mundo» está en camisetas, discursos de graduación y paredes de oficina. No está en Gandhi. La formulación breve se rastrea hasta 1974, a un texto de Arleen Lorrance, educadora de una secundaria de Brooklyn, publicado en un volumen de lecturas para maestros y padres: «Be the change you want to see happen».",
+      "Lo que Gandhi sí escribió es más largo y menos cómodo. Apareció el 9 de agosto de 1913, en guyaratí, en Indian Opinion, el semanario que él mismo había fundado en la provincia de Natal el 4 de junio de 1903 y del que llegó a decir que sin él la satyagraha habría sido imposible. No era un discurso ni un manifiesto: era una entrega de una serie divulgativa sobre salud, y ese capítulo trataba de accidentes y mordeduras de serpiente. La traducción inglesa está en el volumen 12 de sus obras completas, en la página 158.",
+      "La diferencia no es de estilo. El eslogan da una orden y cabe en una camiseta. El párrafo describe una relación de causa y efecto y la deja en condicional: si pudiéramos. Uno se lleva puesto. El otro obliga a admitir primero que lo que molesta del mundo también está adentro."
+    ],
+    "question": "¿Qué frase repites sin haber leído nunca de dónde salió?",
+    "quote": {
+      "text": "No somos más que un espejo del mundo. Todas las tendencias que existen en el mundo exterior se encuentran en el mundo de nuestro cuerpo. Si pudiéramos cambiarnos a nosotros mismos, las tendencias del mundo también cambiarían.",
+      "author": "Mohandas K. Gandhi",
+      "work": "Indian Opinion, 9 de agosto de 1913",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Gandhi", "#Citas", "#India"],
+    "extended": ["#IndianOpinion", "#Historia", "#Atribuciones", "#Sudafrica", "#Reflexiones", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Pasaje verificado, publicado en la edición en guyaratí de Indian Opinion el 9 de agosto de 1913: ‘We but mirror the world. All the tendencies present in the outer world are to be found in the world of our body.’ Traducción inglesa en Collected Works of Mahatma Gandhi, vol. 12 (abril de 1913 - diciembre de 1914), p. 158. Wikiquote señala que diversas fuentes ven este pasaje como parecido a la versión condensada ‘We need to be the change we wish to see in the world’, ‘even if Gandhi did not say those exact words’.",
+      "source": "Wikiquote en inglés, Mahatma Gandhi",
+      "url": "https://en.wikiquote.org/wiki/Mahatma_Gandhi"
+    },
+    {
+      "claim": "El texto de 1913 aparece en Collected Works of Mahatma Gandhi, volumen XII, capítulo ‘General Knowledge About Health XXXII: Accidents Snake-Bite’, páginas 156-158, y continúa: ‘If we could change ourselves, the tendencies in the world would also change…’. La forma breve ‘Be the change you want to see happen’ fue difundida por Arleen Lorrance, educadora de una secundaria de Brooklyn, en un capítulo de 1974 titulado ‘The Love Project’, publicado en ‘Developing Priorities and a Style: Selected Readings in Education for Teachers and Parents’. No existe evidencia documental de la frase condensada en los escritos publicados de Gandhi.",
+      "source": "Quote Investigator, ‘Quote Origin: Be the Change You Wish To See in the World’",
+      "url": "https://quoteinvestigator.com/2017/10/23/be-change/"
+    },
+    {
+      "claim": "Indian Opinion se lanzó el 4 de junio de 1903 en la provincia de Natal, Sudáfrica, fundado por Gandhi con apoyo del Natal Indian Congress. Se publicaba en guyaratí, hindi, tamil e inglés. En 1904 la imprenta se trasladó al asentamiento de Phoenix, cerca de Durban. Gandhi declaró: ‘Satyagraha would have been impossible without Indian Opinion.’ El periódico se publicó hasta 1961.",
+      "source": "Wikipedia en inglés, Indian Opinion",
+      "url": "https://en.wikipedia.org/wiki/Indian_Opinion"
+    }
+  ],
+  "do_not_use": [
+    "‘Sé el cambio que quieres ver en el mundo’ como cita de Gandhi. No consta en sus escritos publicados. Su forma breve en inglés se documenta por primera vez en 1974, en Arleen Lorrance.",
+    "Presentar el pasaje de 1913 como ‘la versión original’ del eslogan. Son dos textos distintos, con sesenta años entre ellos; el segundo no es una abreviación del primero, aunque la idea se parezca.",
+    "Dar el texto en español como palabras literales de Gandhi. El original es guyaratí y esta versión se hizo sobre la traducción inglesa de las obras completas: es una traducción de una traducción, y así debe decirse si alguien pregunta.",
+    "Citar la página sin el volumen. La referencia completa es Collected Works of Mahatma Gandhi, volumen 12 (abril de 1913 - diciembre de 1914), capítulo ‘General Knowledge About Health XXXII: Accidents Snake-Bite’, páginas 156-158.",
+    "El argumento de que la familia de Gandhi sostiene que él pronunció la frase. Se menciona en algunas fuentes, pero no hay evidencia documental publicada y no sirve de respaldo.",
+    "La cifra de volúmenes de las obras completas. Circula que son cien; no se verificó en esta sesión y no se usa.",
+    "Llamar libro a Indian Opinion. Era un semanario, y el texto era una columna divulgativa sobre salud, no un ensayo político.",
+    "Usar la variante ‘We need to be the change we wish to see in the world’ como cita textual. Es una reformulación de prensa, no una frase de Gandhi."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

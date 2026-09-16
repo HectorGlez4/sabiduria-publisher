@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-09-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "John Harrison y el premio de longitud de 1714",
+    "hook": "El Parlamento británico ofreció veinte mil libras por resolver el problema de la longitud, y nadie llegó a cobrarlas.",
+    "body": [
+      "El 8 de julio de 1714 el Parlamento británico aprobó la Ley de la Longitud. Ofrecía veinte mil libras a quien supiera determinar la longitud en el mar con un error menor de medio grado, quince mil por cuarenta minutos y diez mil por un grado. Ese año John Harrison tenía veintiún años, vivía en Barrow upon Humber y trabajaba la madera, como su padre. No había estudiado relojería: aprendió solo.",
+      "Le dedicó el resto de la vida. Llevó a Londres su primer reloj marino, el H1, en 1735; el H2 estuvo listo en 1741; el H3 le costó diecisiete años. El cuarto, terminado en 1759, no era un armatoste: era un reloj grande de bolsillo. El 18 de noviembre de 1761 el H4 zarpó de Portsmouth en el HMS Deptford rumbo a Kingston, en Jamaica. Después de ochenta y un días y cinco horas de travesía, el error era de unos cinco segundos: un minuto y cuarto de longitud, cerca de una milla náutica. El Consejo de la Longitud contestó que podía haber sido suerte y pidió otra prueba.",
+      "Nunca cobró el premio. Cobró plazos, y cada plazo llegó con una condición nueva: ceder los planos, entregar el diseño, demostrar que otros relojeros podían reproducirlo. La última cantidad, ocho mil setecientas cincuenta libras, se la concedió en 1773 una ley del Parlamento, no el Consejo; tenía ochenta años. Murió en Londres el 24 de marzo de 1776. Las veinte mil libras del premio no se entregaron nunca, ni a él ni a nadie."
+    ],
+    "question": "¿Quién decide cuándo un trabajo está terminado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "LA LONGITUD",
+    "subtitle": "Un carpintero resolvió el problema y el premio quedó sin dueño",
+    "body": "En 1714 el Parlamento británico ofreció veinte mil libras a quien supiera medir la longitud en el mar. John Harrison, carpintero sin formación de relojero, tardó cuarenta años y cuatro relojes. El último falló cinco segundos en ochenta y un días. Cobró a plazos; el premio no se entregó nunca."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Longitud", "#Relojes", "#HistoriaDeLaCiencia"],
+    "extended": ["#JohnHarrison", "#Navegacion", "#Cronometro", "#Ciencia", "#Historia", "#Mar"]
+  },
+  "sources": [
+    {
+      "claim": "La Ley de la Longitud de 1714 fijó tres premios según la precisión: 20.000 libras por medio grado (30 minutos), 15.000 por 40 minutos y 10.000 por un grado. Pagos recibidos por Harrison: 250 libras en 1737, 2.000 entre 1741 y 1755, 2.865 entre 1760 y 1765, 7.500 en 1765 y 8.750 en 1773; un total de 23.065 libras en treinta y seis años. ‘The £20,000 reward was not awarded to anyone in a lump sum.’",
+      "source": "Wikipedia en inglés, Longitude rewards",
+      "url": "https://en.wikipedia.org/wiki/Longitude_rewards"
+    },
+    {
+      "claim": "John Harrison nació el 3 de abril de 1693 en Foulby (West Riding of Yorkshire) y murió en Londres el 24 de marzo de 1776. Siguió el oficio de carpintero de su padre y aprendió relojería por su cuenta; hacia 1700 la familia se mudó a Barrow upon Humber. H4 terminado en 1759. El HMS Deptford zarpó de Portsmouth el 18 de noviembre de 1761 rumbo a Kingston; tras 81 días y 5 horas el reloj mostraba un error de unos 5 segundos, ‘corresponding to an error in longitude of 1.25 minutes, or approximately one nautical mile’. El Consejo dudó de que la precisión no fuera azar y exigió otra prueba. En 1773, a los ochenta años, recibió 8.750 libras del Parlamento. Nunca recibió el premio oficial de la longitud, que no fue para nadie.",
+      "source": "Wikipedia en inglés, John Harrison",
+      "url": "https://en.wikipedia.org/wiki/John_Harrison"
+    },
+    {
+      "claim": "La Ley de 1714 ‘offered money in return for the solution to the problem of finding a ship’s precise longitude at sea’. Harrison era horólogo autodidacta y trabajó en Barrow upon Humber en el reloj hoy conocido como H1, que llevó a Londres en 1735. En 1761 los comisionados autorizaron a su hijo William a preparar el viaje a Jamaica para probar el H4. La recomendación del Consejo fue que se le pagaran 10.000 libras al demostrar los principios del H4 y las otras 10.000 solo cuando se probara que otros relojeros podían fabricar instrumentos semejantes; los Harrison sostenían que el premio completo ya les correspondía por la ley de 1714.",
+      "source": "Royal Museums Greenwich, ‘Longitude found — the story of Harrison’s timekeepers’",
+      "url": "https://www.rmg.co.uk/stories/time/harrisons-clocks-longitude-problem"
+    },
+    {
+      "claim": "La Ley de la Longitud se aprobó el 8 de julio de 1714 y fijaba el premio máximo de 20.000 libras por determinar la longitud dentro de medio grado, equivalente a dos minutos de tiempo.",
+      "source": "Wikipedia en inglés, Longitude Act",
+      "url": "https://en.wikipedia.org/wiki/Longitude_Act"
+    }
+  ],
+  "do_not_use": [
+    "‘Harrison ganó el premio de la longitud’. Falso, y es el error más repetido del tema. El premio de 20.000 libras no se entregó jamás a nadie. Lo que recibió fueron pagos sucesivos del Consejo y, al final, una ley del Parlamento.",
+    "Cerrar la cifra del pago de 1765. Unas fuentes hablan de 10.000 libras ofrecidas por el Parlamento y otras de 7.500 efectivas contra la entrega del diseño. La pieza no da esa cifra; solo la de 1773, que coincide en las fuentes consultadas.",
+    "Dar el error del H4 en Jamaica como una cifra exacta. Las fuentes dicen ‘unos cinco segundos’ tras 81 días y 5 horas, equivalentes a 1,25 minutos de longitud. No decir ‘cinco segundos exactos’.",
+    "‘Murió pobre y olvidado’. No. Murió en Londres el 24 de marzo de 1776 y fue quien más dinero recibió de todos los solicitantes: 23.065 libras en total según el recuento de los pagos.",
+    "‘Harrison inventó el reloj’ o ‘inventó el cronómetro’. Lo que resolvió fue mantener la hora a bordo, con temperatura, humedad y balanceo cambiantes. La palabra cronómetro es posterior y la paternidad del instrumento no es de uno solo.",
+    "Presentar al Consejo de la Longitud como un tribunal simplemente corrupto. Exigió una segunda prueba porque dudaba de que la precisión fuera reproducible y no fruto del azar, y porque seis años de construcción por unidad no parecían practicables para una flota.",
+    "El papel del astrónomo real Nevil Maskelyne y del método de las distancias lunares. Circula como una intriga personal contra Harrison. No se verificó en esta investigación y no se afirma nada al respecto.",
+    "La edad de Harrison al morir. Nació el 3 de abril de 1693 y murió el 24 de marzo de 1776; según la fuente se lee 82 u 83 años por el cambio de calendario. No se da la edad exacta, solo las fechas."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
