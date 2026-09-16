@@ -29,7 +29,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-TRIVIA-004",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -55,6 +55,8 @@
     "motivo": "9:16 nativo verosímil: escritorio de época, hoja con puntos en relieve como textura ilegible, pizarra y punzón en la franja media-baja; sin texto, sin personas ni manos, sin retrato, luto, calendarios ni congresos; banda superior de pared y ventana libre para el titular.",
     "revisado_en": "2026-09-15T18:48:25+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-TRIVIA-004-A-FACEBOOK-STORY"
+  ],
   "no_lanzados": 0
 }
