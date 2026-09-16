@@ -237,7 +237,7 @@
     ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "Facebook Story: no API metrics; read via Chrome (Business Suite) before expiry.",
+    "audience_metrics": "Facebook Story: no API metrics (the Page token still lacks read_insights). The 24 h snapshot fell due at 2026-09-16T06:05Z and no scheduled window can take it: checked again in the 14:40Z window and left unmeasured. Both frames expire at 2026-09-17T00:05Z (question) and 00:05Z+28s (reveal), so a Chrome (Business Suite) read by the user before that hour is the only way this cell ever gets audience numbers.",
     "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
     "post_url": "Stories have no permalink in the publish result."
   },
