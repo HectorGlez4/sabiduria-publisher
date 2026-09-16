@@ -14,7 +14,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from datetime import datetime, timezone  # noqa: E402
+from datetime import datetime, timedelta, timezone  # noqa: E402
 
 import json  # noqa: E402
 import shutil  # noqa: E402
@@ -109,6 +109,34 @@ def main() -> int:
     forzada = datetime(2026, 9, 1, 19, 30, tzinfo=timezone.utc)
     check(tiene(variants.preflight(tarde, hist, forzada), f"minimo son {variants.HORAS_MINIMAS} horas"),
           "forzada 30 min despues de la anterior se bloquea")
+
+    print(f"\n3c. Recuperación: con más de {variants.HORAS_DE_ATRASO} h de atraso "
+          f"bastan {variants.HORAS_MINIMAS_ATRASO:g} h de espaciado")
+    anterior = datetime(2026, 9, 1, 19, 0, tzinfo=timezone.utc)
+    hist = [publicada("2026-09-01-tarde", "2026-09-01T19:00:00Z")]
+
+    def iso(t: datetime) -> str:
+        return t.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # Prevista mucho antes que la anterior: cuando le toque salir lleva de sobra
+    # el umbral de atraso.
+    muy_atrasada = pieza("2026-09-01-noche",
+                         iso(anterior - timedelta(hours=variants.HORAS_DE_ATRASO * 2 + 1)),
+                         variante="gold")
+    con_hueco = anterior + timedelta(hours=variants.HORAS_MINIMAS_ATRASO, minutes=1)
+    check(not tiene(variants.preflight(muy_atrasada, hist, con_hueco), "minimo son"),
+          f"atrasada y a {variants.HORAS_MINIMAS_ATRASO:g} h de la anterior: pasa")
+    check(tiene(variants.preflight(muy_atrasada, hist, anterior + timedelta(minutes=5)),
+                f"minimo son {variants.HORAS_MINIMAS_ATRASO:g} horas"),
+          "atrasada pero a 5 min: la bloquea el espaciado de recuperacion")
+    # Con menos atraso que el umbral sigue mandando el mínimo normal, que es lo
+    # que impide que el espaciado corto se convierta en el de todos los días.
+    poco_atrasada = pieza("2026-09-01-noche-2",
+                          iso(anterior - timedelta(hours=variants.HORAS_DE_ATRASO / 2)),
+                          variante="gold")
+    check(tiene(variants.preflight(poco_atrasada, hist, con_hueco),
+                f"minimo son {variants.HORAS_MINIMAS} horas"),
+          f"con menos de {variants.HORAS_DE_ATRASO} h de atraso manda el minimo normal")
 
     print("\n4. Sin repetir tema ni cita en 90 días")
     hist = [publicada("2026-08-01-tarde", "2026-08-01T19:00:00Z",

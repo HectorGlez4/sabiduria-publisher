@@ -48,7 +48,20 @@ HORAS_MINIMAS = 1
 # un espaciado menor, el justo para drenar el atraso sin amontonar. Veinte
 # minutos entre dos piezas atrasadas no es una ráfaga; publicar ocho seguidas en
 # diez minutos sí lo sería, y el tope diario lo sigue impidiendo.
-HORAS_DE_ATRASO = 3
+#
+# Bajado de 3 h a 1 h el 16 de septiembre de 2026, por decisión explícita del
+# usuario («haz lo necesario para ponerse al día»). Con el umbral en 3 h el
+# atraso no se recuperaba nunca: la cola vence a razón de una pieza por hora y,
+# mientras una pieza lleva menos de 3 h esperando, se le aplica el mínimo normal
+# de 1 h, así que el publicador drena como mucho a la misma velocidad a la que
+# entra y cualquier hueco del cron queda fijo. El 15 de septiembre se quedó
+# estable en dos piezas vencidas: `extra91`, a 1,7 h de atraso, se aplazó con
+# «a 0.4 h de otra publicacion: el minimo son 1 horas». Con el umbral en 1 h una
+# pieza que ya perdió su hora sale 21 min después de la anterior y el atraso se
+# drena; en cuanto la cola está al día nadie supera el umbral y vuelve a mandar
+# el espaciado normal de 1 h. El dial anti-spam sigue siendo el de siempre:
+# HORAS_MINIMAS y MAX_POR_DIA no se tocan.
+HORAS_DE_ATRASO = 1
 HORAS_MINIMAS_ATRASO = 0.35
 DIAS_SIN_REPETIR = 90
 
