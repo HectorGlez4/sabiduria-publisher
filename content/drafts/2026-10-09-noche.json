@@ -7,7 +7,7 @@
     "hook": "La ciudad de tierra más grande del mundo antiguo sigue en pie por una sola razón: allí casi nunca llueve.",
     "body": [
       "Chan Chan fue la capital del reino chimú, en el valle de Moche, en la costa norte del Perú. El reino llegó a dominar más de mil kilómetros de litoral hasta que cayó, hacia 1470. La ciudad ocupó unos veinte kilómetros cuadrados, con un núcleo monumental de alrededor de seis y, dentro de él, una decena de grandes recintos amurallados con muros dobles de hasta diez metros, interiores laberínticos y una sola entrada. Todo está hecho de tierra: adobe sin cocer.",
-      "Está levantada en un desierto. El agua no venía del cielo, y los chimú no la esperaron de ahí: abrieron pozos a los que se bajaba caminando, excavaron huertas hundidas —los huachaques— hasta alcanzar la napa, y movieron el agua de los ríos por canales que unían valles enteros, como el que enlaza el Chicama con el Moche. Hacia 1470 el inca Túpac Yupanqui capturó a Minchançaman, el último soberano chimú, se lo llevó a Cusco y trasladó allí a los orfebres.",
+      "Está levantada en un desierto. El agua no venía del cielo, y los chimú no la esperaron de ahí: abrieron pozos a los que se bajaba caminando, excavaron huertas hundidas —los huachaques— hasta alcanzar la napa, y movieron el agua de los ríos por canales que unían valles enteros, como el que enlaza el Chicama con el Moche. Hacia 1470 el inca Túpac Yupanqui capturó a Minchançaman, el último soberano chimú, se lo llevó a Cusco y desvió allí el oro y la plata del reino, al Qorikancha.",
       "La Unesco la inscribió en 1986 y ese mismo año la puso en la lista de patrimonio en peligro. Lo que la amenaza es lo que nunca tuvo: la lluvia. Las crecidas de El Niño, cada vez más frecuentes, disuelven el adobe, suben la napa y cristalizan sales dentro de los muros. Quinientos años de pie, sostenidos por la ausencia de algo."
     ],
     "question": "¿Qué cosa tuya sigue entera solo porque nada la ha puesto a prueba?"
@@ -44,11 +44,16 @@
       "claim": "Los incas conquistaron Chan Chan, capital del reino chimú, y saquearon las tumbas reales y los almacenes; los orfebres fueron llevados a Cusco, donde produjeron obras de escala sin precedentes en estilo inca.",
       "source": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History — ‘Central and Southern Andes, 1400–1600 A.D.’",
       "url": "https://www.metmuseum.org/toah/ht/08/sanc"
+    },
+    {
+      "claim": "La ciudad abarcó ‘20 square kilometers’ con ‘a dense urban center of six square kilometers’, y contenía diez ciudadelas, de las que solo cuatro se han recuperado. Está en ‘a particularly arid section of the coastal desert of northern Peru’ y se abastecía de los ríos que traían el agua de deshielo de los Andes y de pozos de unos quince metros de profundidad. Estimaciones de población en su apogeo: entre cuarenta mil y sesenta mil habitantes. Declarada Patrimonio de la Humanidad el 28 de noviembre de 1986 e incluida simultáneamente en la Lista del Patrimonio Mundial en Peligro. Amenazas actuales: ‘storms from El Niño, which causes increased precipitation and flooding’, con ascenso de la napa freática, contaminación salina de los cimientos de adobe y crecimiento de vegetación.",
+      "source": "Wikipedia en inglés, Chan Chan",
+      "url": "https://en.wikipedia.org/wiki/Chan_Chan"
     }
   ],
   "do_not_use": [
     "Una cifra cerrada de población. Las estimaciones consultadas van de treinta mil a sesenta mil habitantes según la fuente, y World History Encyclopedia da ‘hasta cuarenta mil’. La pieza no da ninguna.",
-    "‘Nueve ciudadelas’ o ‘diez ciudadelas’ como dato firme. La ficha de la Unesco dice nueve; World History Encyclopedia cuenta diez palacios reales construidos a lo largo de la historia de la ciudad. Por eso se escribe ‘una decena’.",
+    "‘Nueve ciudadelas’ o ‘diez ciudadelas’ como dato firme. La ficha de la Unesco dice nueve; World History Encyclopedia cuenta diez palacios reales construidos a lo largo de la historia de la ciudad, y la Wikipedia en inglés también diez, de las que solo cuatro se han recuperado. Por eso se escribe ‘una decena’.",
     "‘La ciudad de adobe más grande del mundo’, sin más. Las fuentes dicen la mayor ciudad de arquitectura en tierra del mundo y la mayor ciudad precolombina de América del Sur; alguna página divulgativa añade ‘la segunda del mundo’. Se evita el superlativo absoluto a secas.",
     "‘Los incas rindieron Chan Chan cortándole el agua de los canales’. Es una versión muy repetida y ninguna de las fuentes consultadas la sostiene. No se afirma.",
     "La fecha de inicio del reino chimú como dato cerrado. Wikipedia da ‘c. 900’ y World History Encyclopedia ‘entre los siglos XII y XV’. La pieza solo fija la caída, hacia 1470, en la que las fuentes coinciden.",
@@ -56,7 +61,7 @@
     "Un año exacto para la conquista inca. Las fuentes dicen ‘hacia 1470’ o ‘en la década de 1470’.",
     "Confundir chimú con mochica. Son culturas distintas del mismo valle y esta investigación no fijó las fechas de la segunda. No mezclarlas.",
     "Atribuir el deterioro actual al saqueo colonial o a los huaqueros como causa principal. Hubo saqueo, pero lo que documentan las fuentes hoy es el agua: lluvias de El Niño, ascenso de la napa freática y cristalización de sales.",
-    "Nota de método: la ficha de la Unesco (whc.unesco.org/en/list/366) devolvió 403 a la descarga directa en esta sesión. Sus datos se tomaron de las citas textuales que devolvió la búsqueda y se contrastaron con las demás fuentes; lo que no aparece corroborado no se usó."
+    "Nota de método: dos de las cinco fuentes no se pudieron abrir en esta sesión. La ficha de la Unesco (whc.unesco.org/en/list/366) devolvió 403 y la cronología del Metropolitan (metmuseum.org/toah/ht/08/sanc) devolvió 429; de ambas se tomaron las citas textuales que devolvió la búsqueda. Todas las cifras y fechas que aparecen en core.body proceden de las tres fuentes que sí se abrieron enteras —Wikipedia en inglés (Chimor y Chan Chan) y World History Encyclopedia—, y la ficha de la Unesco solo se usa como corroboración. El traslado de los orfebres chimú a Cusco, que afirma el Metropolitan, se dejó fuera del cuerpo por ese motivo."
   ],
   "status": "draft",
   "targets": ["facebook", "instagram", "threads"]
