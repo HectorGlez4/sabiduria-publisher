@@ -2675,14 +2675,18 @@
       "publishing_route": "api",
       "variant_id": "A",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
       "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
-      "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "run_record": "experiments/media-lab/runs/LAB-LOCATION-011-A-THREADS.json",
+      "post_id": "17986734444075130",
+      "post_url": "https://www.threads.com/@sabiduriabolsillo/post/DdVHQM-EZev",
+      "playback_or_display_verified_at": "2026-09-16T01:33:09.101023+00:00",
+      "measurement_due_at": [
+        "2026-09-17T01:32:47.949673+00:00",
+        "2026-09-19T01:32:47.949673+00:00",
+        "2026-09-23T01:32:47.949673+00:00"
+      ],
       "measurement_completed_at": []
     },
     {

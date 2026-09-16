@@ -28,7 +28,7 @@
   ],
   "destino_assets": "experiments/media-lab/assets/LAB-LOCATION-011",
   "max_intentos": 2,
-  "estado": "aprobado",
+  "estado": "usado",
   "lock_owner": null,
   "lock_expira": null,
   "imagenes": [
@@ -54,6 +54,8 @@
     "motivo": "Mismo encuadre en 4:5: torre cuadrada de tres cuerpos con banda diagonal y haz blanco sobre promontorio al anochecer; sin texto, personas ni elementos no verificados; tercio superior libre para el titular",
     "revisado_en": "2026-09-15T21:08:29+00:00"
   },
-  "runs": [],
+  "runs": [
+    "LAB-LOCATION-011-A-THREADS"
+  ],
   "no_lanzados": 0
 }
