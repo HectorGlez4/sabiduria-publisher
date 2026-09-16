@@ -2,7 +2,7 @@
   "id": "2026-09-15-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Ana Frank y la entrada del 15 de julio de 1944",
     "hook": "La frase que se cita como consuelo no cierra el párrafo: lo abre. Lo que viene después dice que ve el mundo convertirse en un desierto y que oye acercarse el trueno que también los destruirá a ellos.",
@@ -101,5 +101,21 @@
     "threads"
   ],
   "publish_at": "2026-09-16T02:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1096355409855785",
+      "url": "https://www.facebook.com/874327782058550/posts/1096355409855785",
+      "published_at": "2026-09-16T06:14:56.225500+00:00"
+    },
+    "instagram": {
+      "post_id": "18090082241441999",
+      "url": "https://www.instagram.com/p/DdVnkiIGzJu/",
+      "published_at": "2026-09-16T06:15:09.867041+00:00"
+    },
+    "threads": {
+      "post_id": "18623895262024023",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18623895262024023",
+      "published_at": "2026-09-16T06:15:23.771268+00:00"
+    }
+  }
 }
