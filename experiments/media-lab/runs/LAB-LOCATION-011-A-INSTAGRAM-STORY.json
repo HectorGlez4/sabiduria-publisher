@@ -1,0 +1,185 @@
+{
+  "run_id": "LAB-LOCATION-011-A-INSTAGRAM-STORY",
+  "cohort": "experiment",
+  "coverage_cell_id": "CELL-122",
+  "baseline_match_ids": [],
+  "family_id": "LAB-LOCATION-011",
+  "parent_run_id": null,
+  "campaign_day": 11,
+  "image_batch_id": "I01",
+  "platform": "instagram",
+  "actual_native_format": "story_image",
+  "adaptation_notes": "Manual session on 2026-09-15 (user: «Publica todo lo que se puede»). Encargo ENC-20260915-005; overlay and caption from experiments/media-lab/briefs/LAB-LOCATION-011.md. Story with empty caption.",
+  "audio_treatment": "none",
+  "location_treatment": {
+    "visual_place": "generated editorial scene of the Torre de Hércules headland",
+    "text_label": "TORRE DE HÉRCULES · A CORUÑA",
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
+  "exposure_context": {
+    "timezone": "Europe/Madrid",
+    "follower_count": null,
+    "nearby_production_posts": [
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-16T01:10:38+00:00",
+        "espera": "producción subiendo: hilos",
+        "note": "Informational only (user decision 2026-09-14). Manual «publica todo» session: several lab cells spaced ~21 min apart on the same night."
+      }
+    ],
+    "matched_comparison_ids": []
+  },
+  "round": 1,
+  "status": "completed",
+  "tool_option_id": null,
+  "format_id": "location_story",
+  "seed_source_path": null,
+  "seed_source_sha256": null,
+  "reference_brief_path": "experiments/media-lab/briefs/LAB-LOCATION-011.md",
+  "hypothesis": "A place-led story with an accurate printed place label; variant A carries no native tag.",
+  "changed_variable": "publishing route (API) for the Torre de Hércules master",
+  "controls": [
+    "same headline, subtitle and disclosure across cells",
+    "same caption draft as briefs/LAB-PLACE-003.md",
+    "no audio",
+    "no native location tag",
+    "public organic audience"
+  ],
+  "tool": {
+    "name": "Codex heartbeat image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
+  "timing": {
+    "started_at": "2026-09-16T01:10:38.122666+00:00",
+    "first_acceptable_at": "2026-09-15T21:12:00Z",
+    "finished_at": "2026-09-16T01:11:14.118345+00:00",
+    "wall_elapsed_seconds": null,
+    "one_time_setup_active_seconds": null,
+    "human_active_seconds": 0,
+    "agent_active_seconds": null,
+    "approval_or_device_wait_seconds": 0,
+    "stages": []
+  },
+  "attempts": [],
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
+  "artifacts": [
+    {
+      "path": "experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-9x16.jpg",
+      "sha256": "88537a6f72e2ebf9ff53911477e1dab4a461bdd52a88a037f6d0a0c30a17c8ee",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1920",
+      "role": "publishable_master"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-LOCATION-011/caption-story-empty.txt",
+      "role": "caption"
+    },
+    {
+      "path": "experiments/media-lab/manifests/LAB-LOCATION-011-A-INSTAGRAM-STORY-API.json",
+      "role": "api_manifest"
+    },
+    {
+      "path": "experiments/media-lab/results/35043043227/live-result.json",
+      "role": "publish_result"
+    }
+  ],
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
+  "visual_qa": {
+    "reviews": [
+      {
+        "number": 1,
+        "reviewed_at": "2026-09-15T21:12:00Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": [
+          "experiments/media-lab/assets/LAB-LOCATION-011/LAB-LOCATION-011-A-api-9x16.jpg",
+          "experiments/media-lab/assets/LAB-LOCATION-011/caption-story-empty.txt"
+        ],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": [
+          "Text inside the Story safe zone.",
+          "Editorial note: the headline panel covers the lantern top (tower body, base and headland visible); not a gate failure."
+        ]
+      }
+    ]
+  },
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
+  "publication": {
+    "route_id": "API-MASTER",
+    "comparison_pair_id": null,
+    "creation_origin": "built-in image generation (Codex heartbeat) plus deterministic overlay",
+    "publishing_transport": "Meta official API via isolated GitHub Actions lab workflow (media-lab)",
+    "native_app_and_version": null,
+    "api_version": null,
+    "route_assigned_at": "2026-09-16T01:10:38.122666+00:00",
+    "phone_transfer_seconds": null,
+    "publishing_active_seconds": 11.831,
+    "native_changes_from_master": [],
+    "human_interventions": [],
+    "fidelity_checks": {
+      "caption": "not_applicable (Story)",
+      "cover": "not_applicable",
+      "media_order": "not_applicable",
+      "aspect_ratio": "master 1080x1920 served from raw GitHub with sha256 checked by publish_api.py",
+      "audio": "not_applicable"
+    },
+    "destination": "instagram business account of Sabiduría de Bolsillo (API) Story",
+    "agreed_batch_reference": null,
+    "requested_audience": "public",
+    "actual_audience": null,
+    "workflow_run": 35043043227,
+    "verification_workflow_run": null,
+    "result_path": "experiments/media-lab/results/35043043227/live-result.json",
+    "submitted_at": "2026-09-16T01:10:52.914730+00:00",
+    "processing_completed_at": "2026-09-16T01:11:04.746114+00:00",
+    "playback_verified_at": null,
+    "post_id": "18089483336675518",
+    "post_url": null,
+    "audio_verified": null,
+    "master_sha256": "88537a6f72e2ebf9ff53911477e1dab4a461bdd52a88a037f6d0a0c30a17c8ee",
+    "snapshots": []
+  },
+  "missing_data_reasons": {
+    "audience_metrics": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story).",
+    "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
+    "post_url": "Stories have no permalink in the publish result.",
+    "location_native_tag": "Variant A (API): no native location_id sent; place carried by the printed overlay label."
+  },
+  "decision": "Published through the API; Story-only, no verification step.",
+  "next_action": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story)."
+}
