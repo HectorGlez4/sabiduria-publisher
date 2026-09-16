@@ -2633,14 +2633,16 @@
       "publishing_route": "api",
       "variant_id": "A",
       "capability_evidence": null,
-      "status": "planned",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
       "planned_publish_at": null,
-      "run_record": null,
-      "post_id": null,
+      "run_record": "experiments/media-lab/runs/LAB-LOCATION-011-A-FACEBOOK-STORY.json",
+      "post_id": "1817645276318277",
       "post_url": null,
       "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "measurement_due_at": [
+        "2026-09-16T06:49:23.982642+00:00"
+      ],
       "measurement_completed_at": []
     },
     {
