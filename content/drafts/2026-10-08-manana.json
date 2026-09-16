@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-08-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el mapa de Waldseemüller de 1507",
+    "hook": "El mapa que puso por primera vez la palabra América sobre el papel es el único que sobrevivió de unos mil ejemplares, y su autor borró el nombre seis años después.",
+    "body": [
+      "En abril de 1507, en el pueblo de Saint-Dié, en los Vosgos, un grupo de eruditos imprimió un mapa del mundo en doce hojas grabadas en madera. Montado medía alrededor de 128 por 233 centímetros. Lo firmaba Martin Waldseemüller, y lo acompañaba un libro, la Cosmographiae Introductio, que escribió junto a Matthias Ringmann. En una de aquellas hojas, sobre la tierra larga y estrecha al otro lado del Atlántico, aparecía una palabra que nadie había impreso antes: América.",
+      "El libro explicaba la elección. Las otras tres partes del mundo llevaban nombre de mujer, así que latinizaron y feminizaron el de Amerigo Vespucci, el florentino que había sostenido que aquello no era Asia sino un continente aparte. Se imprimieron alrededor de mil ejemplares. Sobrevive uno. Lo encontró el jesuita Joseph Fischer en 1901, en el castillo de Wolfegg, en el sur de Alemania, y en 2001 se vendió a la Biblioteca del Congreso de Estados Unidos por diez millones de dólares.",
+      "Lo que casi nunca se cuenta es que Waldseemüller se desdijo. En su edición de la Geografía de Ptolomeo, de 1513, el nombre ya no está: donde antes decía América dice Terra Incognita. En la Carta Marina de 1516 tampoco aparece, y la tierra del norte vuelve a estar pegada a Asia. Daba igual. Otros cartógrafos habían copiado su mapa, y el nombre siguió caminando sin él."
+    ],
+    "question": "¿Cuántos nombres damos hoy sin sospechar que van a durar más que nuestra opinión sobre ellos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "EL MAPA QUE BAUTIZÓ AMÉRICA",
+    "subtitle": "Su propio autor retiró el nombre seis años después",
+    "body": "Waldseemüller imprimió en 1507 unos mil ejemplares de un mapa donde aparecía por primera vez la palabra América. Sobrevive uno solo. En 1513 el mismo autor la sustituyó por Terra Incognita, pero ya era tarde: otros cartógrafos lo habían copiado.",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Waldseemuller", "#Cartografia", "#HistoriaDeAmerica"],
+    "extended": ["#Mapas", "#AmerigoVespucci", "#Renacimiento", "#Historia", "#SaintDie"]
+  },
+  "sources": [
+    {
+      "claim": "El mapa se publicó en abril de 1507; Waldseemüller lo creó y Matthias Ringmann escribió probablemente la Cosmographiae Introductio que lo acompaña, en el Gymnasium Vosagense de Saint-Dié-des-Vosges, en Lorena. Fue el primer mapa en usar el nombre América, en honor de Amerigo Vespucci, y el primero en representar con claridad un hemisferio occidental separado, con el Pacífico como océano aparte. ‘Of the one thousand copies that were printed, only one complete copy of the original is known to exist today.’ La Biblioteca del Congreso ‘purchased it from Waldburg-Wolfegg-Waldsee for ten million dollars’. En la Carta Marina de 1516 Waldseemüller ‘identified the land he had called Parias on his 1507 map as Terra de Cuba and said it was part of Asia’.",
+      "source": "Wikipedia en inglés, Waldseemüller map",
+      "url": "https://en.wikipedia.org/wiki/Waldseem%C3%BCller_map"
+    },
+    {
+      "claim": "‘Von der Karte wurden ungefähr 1000 Exemplare gedruckt’; solo se conserva un original. El jesuita y cartógrafo Joseph Fischer localizó el único ejemplar en 1901 en el castillo de Wolfegg, en la Alta Suabia. Se vendió el 27 de junio de 2001 por diez millones de dólares, el precio más alto pagado nunca por material cartográfico; la entrega formal la hizo Angela Merkel el 30 de abril de 2007. El mapa se compone de doce secciones rectangulares de hasta 46 cm de ancho por 62 cm de largo, con unas medidas totales de 128 cm × 233 cm. Waldseemüller y Ringmann llamaron América al nuevo continente en honor de Amerigo Vespucci, feminizando su nombre de pila para que concordara con las terminaciones femeninas de Europa, Asia y África. En sus mapas de 1513 y 1516 abandonó la denominación América y volvió a Terra incognita, reconectando Norteamérica con Asia.",
+      "source": "Wikipedia en alemán, Waldseemüller-Karte",
+      "url": "https://de.wikipedia.org/wiki/Waldseem%C3%BCller-Karte"
+    },
+    {
+      "claim": "‘His later maps — the edition of Ptolemy of 1513, for example — showed «Terra Incognita» where he had formerly placed the name «America».’ Y: ‘The name «America» does not appear on Waldseemüller’s Carta Marina of 1516.’ Sobre por qué no prosperó la rectificación: ‘it was too late. The use of the name «America» proliferated in maps made on Waldseemüller’s model.’ La página no da ninguna explicación del motivo del cambio.",
+      "source": "James Ford Bell Library, University of Minnesota — Waldseemüller: the later maps and the name America",
+      "url": "https://apps.lib.umn.edu/bell/map/WALD/AMER/late.html"
+    },
+    {
+      "claim": "La Cosmographiae Introductio se publicó en Saint-Dié el 25 de abril de 1507, con una segunda salida el 29 de agosto del mismo año. ‘It is widely held to have been written by Matthias Ringmann although some historians attribute it to Waldseemüller himself.’ El libro y el mapa juntos contienen la primera mención del término América, y el libro incluye la razón para usar ese nombre.",
+      "source": "Wikipedia en inglés, Cosmographiae Introductio",
+      "url": "https://en.wikipedia.org/wiki/Cosmographiae_Introductio"
+    },
+    {
+      "claim": "El mapa se publicó en abril de 1507; fue el primero en usar el nombre América, en honor del explorador italiano Amerigo Vespucci. ‘This map is incredibly large, originally made out of 12 sectioned wood block plates measuring at 18 by 24 inches each, making the fully assembled map more than 4 feet by 8 feet.’",
+      "source": "Teaching with Primary Sources, Western Region — Metropolitan State University of Denver, ‘Waldseemüller Map Activity’",
+      "url": "https://sites.msudenver.edu/tpswesternregion/waldseemuller-map-activity-americas-birth-certificate/"
+    }
+  ],
+  "do_not_use": [
+    "Quién escribió exactamente el pasaje que propone el nombre. Se atribuye a Ringmann o al propio Waldseemüller y no hay acuerdo; por eso la pieza dice que el libro lo escribieron los dos y no se lo adjudica a uno solo.",
+    "El motivo por el que Waldseemüller retiró el nombre. No hay documento que lo explique: la Bell Library lo constata sin dar razón. No se afirma que fuera un desagravio a Colón ni un arrepentimiento moral.",
+    "La fecha exacta de la compra. La venta se cerró el 27 de junio de 2001, la Biblioteca del Congreso anunció la compra completada en 2003 y la entrega formal fue el 30 de abril de 2007. Se usa 2001, el año de la venta.",
+    "El número exacto de ejemplares. Las fuentes dicen ‘ungefähr 1000’ y ‘it is believed, consisted of 1,000 copies’: es una estimación. Se dice ‘alrededor de mil’.",
+    "Los rótulos exactos de la Carta Marina de 1516. La Wikipedia inglesa dice Terra de Cuba para el norte; otras referencias hablan de Terra Nova para el sur. Solo se afirma lo que coincide en todas: que el nombre América no aparece y que el norte vuelve a figurar como parte de Asia.",
+    "‘El acta de nacimiento de América’. Es un apodo de divulgación popularizado por la Biblioteca del Congreso, no una descripción histórica. No se usa.",
+    "‘Vespucci descubrió América’. Lo que sostuvo, y lo que Waldseemüller y Ringmann premiaron con el nombre, fue que las tierras halladas no eran Asia sino una cuarta parte del mundo. Es otra afirmación.",
+    "La atribución del nombre a un supuesto mecenas galés llamado Richard Amerike. Circula desde el siglo XX y no la sostiene ninguna fuente institucional; la Cosmographiae Introductio dice expresamente que el nombre viene de Americus."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

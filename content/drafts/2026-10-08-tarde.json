@@ -1,0 +1,69 @@
+{
+  "id": "2026-10-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sejong y el prefacio del Hunminjeongeum (1446)",
+    "hook": "Un rey del siglo XV diseñó un alfabeto entero porque le dolía que su pueblo no pudiera poner por escrito lo que sentía.",
+    "body": [
+      "En el duodécimo mes lunar de 1443, Sejong, cuarto rey de la dinastía Joseon, terminó un sistema de escritura para el coreano. Hasta entonces el coreano se escribía con caracteres chinos, un sistema pensado para una lengua de estructura completamente distinta y, por eso mismo, difícil de aprender y de usar. Lo que Sejong diseñó eran veintiocho letras. Hoy se siguen usando veinticuatro de ellas.",
+      "En el noveno mes lunar de 1446 se promulgó el libro que lo explicaba, el Hunminjeongeum: «los sonidos correctos para instruir al pueblo». Se abre con un prefacio brevísimo del propio rey, el texto del que sale esta frase. Detrás vienen los comentarios, la Haerye, redactados por los eruditos del Salón de los Dignos encabezados por Chŏng Inji, donde se explica el principio de invención de cada consonante y de cada vocal.",
+      "Es el único alfabeto del mundo cuyo creador, cuyo propósito y cuyos principios de diseño constan por escrito. El ejemplar con los comentarios estuvo perdido durante siglos y apareció por casualidad en 1940, en una casa vieja de Andong. Se conserva en el Museo de Arte Kansong de Seúl, el Estado coreano lo declaró tesoro nacional y la Unesco lo inscribió en 1997 en el registro Memoria del Mundo."
+    ],
+    "question": "¿Cuánto de lo que sabes decir depende de haber tenido a mano con qué escribirlo?",
+    "quote": {
+      "text": "Entre la gente sencilla hay muchos que, teniendo algo que decir, no logran al final expresar lo que sienten. Me compadezco de ellos, y he creado veintiocho letras nuevas.",
+      "author": "Sejong el Grande",
+      "work": "Hunminjeongeum, prefacio (1446)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Sejong", "#Hangul", "#Corea"],
+    "extended": ["#Hunminjeongeum", "#Escritura", "#Alfabeto", "#Citas", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto original del prefacio en chino clásico: ‘國之語音，異乎中國，與文字不相流通，故愚民有所欲言，而終不得伸其情者多矣。予爲此憫然，新制二十八字，欲使人人易習，便於日用耳。’ La traducción al español de la cita es de esta página, hecha sobre este texto.",
+      "source": "Wikipedia en chino clásico (維基大典), 訓民正音",
+      "url": "https://zh-classical.wikipedia.org/wiki/%E8%A8%93%E6%B0%91%E6%AD%A3%E9%9F%B3"
+    },
+    {
+      "claim": "Traducción al inglés del prefacio: ‘The sounds of our country’s language are different from those of the Middle Kingdom and are not confluent with the sounds of characters. Therefore, among the ignorant people, there have been many who, having something they want to put into words, have in the end been unable to express their feelings. I have been distressed because of this, and have newly designed twenty-eight letters, which I wish to have everyone practice at their ease and make convenient for their daily use.’ El alfabeto se presentó en la corte de Sejong en el duodécimo mes de 1443 y el libro se publicó hacia octubre de 1446; eran 17 consonantes y 11 vocales. Los comentarios los escribieron eruditos encabezados por Chŏng Inji y estuvieron perdidos hasta su redescubrimiento en 1940 (el ejemplar Kansong). Unesco Memoria del Mundo, 1997.",
+      "source": "Wikipedia en inglés, Hunminjeongeum",
+      "url": "https://en.wikipedia.org/wiki/Hunminjeongeum"
+    },
+    {
+      "claim": "Inscrito en el registro Memoria del Mundo en 1997. Promulgado ‘the ninth lunar month of 1446’. El alfabeto de Sejong (que reinó entre 1418 y 1450) se completó en 1443 y hoy se llama han-gul. Los comentarios son ‘the Haerye, or Commentaries, later explanations and examples’, obra de ‘scholars of the Hall of Worthies, including Chong In-J’is So, or Postface’. ‘It is kept by the Kansong Art Museum.’",
+      "source": "Unesco, Memory of the World — Hunminjeongum Manuscript",
+      "url": "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript"
+    },
+    {
+      "claim": "‘In the twelfth lunar month of 1443, he completed development of a writing system suitable for representing Korean, which he called Hunminjeongeum, «Proper sounds to instruct the people».’ Publicado ‘in the ninth lunar month of 1446’. ‘Hunminjeongeum was an alphabet formed of 28 letters. Today’s hangeul uses only 24 of these, having dropped four.’ Motivo: ‘Sejong was concerned that Chinese characters, until that time used to write Korean, were a writing system for representing Chinese, a language completely different in structure from Korean, and were therefore hard for Koreans to learn and use.’ La edición Haerye ‘was found by chance in 1940 in an old house in Andong, Gyeongsangbuk-do, and is presently preserved in Kansong Art Museum in Seoul. In 1958 the government designated it a national treasure.’",
+      "source": "Korea Heritage Service (Gobierno de Corea del Sur), Memory of the World — Hunminjeongeum",
+      "url": "https://english.khs.go.kr/cop/bbs/selectBoardArticle.do?bbsId=BBSMSTR_1205&ctgryLrcls=CTGRY168&mn=EN_03_03&nttId=57977"
+    },
+    {
+      "claim": "En 1443 el rey Sejong creó el sistema de escritura llamado Hunminjeongeum y en 1446 publicó el libro homónimo que explicaba su propósito y sus principios. El libro consta del prefacio escrito por el rey para anunciar el propósito de la invención, la parte ‘yeui’ sobre el sonido de cada carácter y su principio de funcionamiento, y la parte ‘haerye’ sobre el principio de invención de consonantes y vocales.",
+      "source": "Museo Nacional del Hangeul (국립한글박물관), Seúl — sección educativa sobre el hangeul",
+      "url": "https://www.hangeul.go.kr/lang/en/html/education/Hangeul.do"
+    }
+  ],
+  "do_not_use": [
+    "La fecha en calendario gregoriano. El 9 de octubre (Corea del Sur) y el 15 de enero (Corea del Norte) son conmemoraciones modernas derivadas de los meses lunares. Se usan los meses lunares, que es lo que dicen las fuentes.",
+    "‘El hangul se inventó en 1446’. No: la invención se fecha en el duodécimo mes lunar de 1443 y 1446 es la promulgación del libro que lo explica. Confundirlas es el error más repetido sobre este tema.",
+    "El año de la declaración como tesoro nacional. El Korea Heritage Service dice 1958 y la Wikipedia inglesa, el 20 de diciembre de 1962. No se da el año: solo que está declarado.",
+    "‘Sejong lo inventó él solo’. Los Anales de la dinastía se lo atribuyen a él y las fuentes institucionales lo presentan así, pero hay discusión académica sobre el papel de los eruditos del Salón de los Dignos. La pieza dice que él lo diseñó y que los comentarios son de ellos, que es lo que está documentado.",
+    "La traducción inglesa que circula como si fueran las palabras de Sejong (‘I have been distressed because of this…’). Es una traducción más, no el original. La cita de esta pieza se tradujo directamente del chino clásico del prefacio.",
+    "El número exacto de caracteres del prefacio original. Circulan cuentas distintas según se cuente la puntuación. Se dice ‘brevísimo’.",
+    "Que el hangul se adoptara de inmediato. Se repite que la élite letrada lo despreció durante siglos, pero en esta investigación no se abrió una fuente institucional que lo sostenga. No se afirma nada sobre su recepción posterior.",
+    "El precio o las circunstancias del hallazgo de 1940 en Andong. Circulan versiones novelescas sobre cuánto se pagó por el ejemplar. Las fuentes consultadas solo dicen que se encontró por casualidad."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

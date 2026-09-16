@@ -1,0 +1,56 @@
+{
+  "id": "2026-10-08-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Çatalhöyük, el asentamiento sin calles",
+    "hook": "En uno de los asentamientos urbanos más antiguos que se conocen no había una sola calle: se circulaba por los tejados y se entraba a las casas por el techo.",
+    "body": [
+      "Çatalhöyük está en la llanura de Konya, en el centro de Anatolia. Se habitó desde alrededor del 7400 antes de Cristo y siguió ocupado más de mil años. En el montículo oriental se han distinguido dieciocho niveles superpuestos: cada generación levantaba su casa sobre los restos allanados de la anterior, en el mismo sitio. Las cifras de población no concuerdan —el proyecto de excavación habla de entre 3.500 y 8.000 personas en el apogeo y los cálculos recientes rebajan mucho esa horquilla para la fase media—, pero para el Neolítico era una concentración enorme.",
+      "Las casas eran rectangulares y compartían pared, pegadas unas a otras sin un solo pasaje entre ellas. Se entraba por un hueco abierto en el techo, bajando por una escalera de madera; ese mismo hueco dejaba salir el humo del hogar y entrar la luz. La circulación de la ciudad ocurría arriba, sobre las azoteas. Y los muertos no salían del edificio: se enterraban bajo el piso de la propia vivienda, debajo de las plataformas donde se dormía.",
+      "No ha aparecido ningún templo separado ni ningún edificio que parezca de gobierno. Las pinturas murales, los cuernos de toro empotrados en las paredes y las tumbas están todos dentro de casas corrientes. James Mellaart excavó el sitio entre 1961 y 1965; Ian Hodder volvió en 1993 con otros métodos y desmontó varias de sus interpretaciones. La Unesco lo inscribió en la lista del Patrimonio Mundial en 2012."
+    ],
+    "question": "¿Qué cambia en una casa cuando debajo del suelo están enterrados los que vivieron antes en ella?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "title": "ÇATALHÖYÜK",
+    "subtitle": "Un asentamiento entero sin una sola calle",
+    "body": "Habitado desde alrededor del 7400 antes de Cristo, en la llanura de Konya. Las casas compartían pared, sin pasajes entre ellas: se circulaba por los tejados y se bajaba al interior por un hueco en el techo. Los muertos se enterraban bajo el piso de la propia vivienda.",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Catalhoyuk", "#Neolitico", "#Anatolia"],
+    "extended": ["#Arqueologia", "#HistoriaAntigua", "#Turquia", "#PatrimonioMundial", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "‘Let’s take a journey back 9,000 years to 7,400BCE when people first settled at Çatalhöyük.’ ‘At its peak 3500-8000 people lived, worked and died here.’ ‘Houses were roughly rectangular and closely built together with no streets in-between’ y ‘people moved around on roofs and accessed their homes down a wooden ladder via an opening in the ceiling’. ‘houses were continually infilled, often burnt and rebuilt throughout the site’s occupation’. ‘Remarkably, upon their death, people were buried under the floors of houses.’ ‘elaborate paintings were made depicting hunting scenes and geometric patterns’.",
+      "source": "Çatalhöyük Research Project — The Site",
+      "url": "https://www.catalhoyuk.com/book/export/html/54"
+    },
+    {
+      "claim": "Ocupación aproximada del 7100 al 5600 a.C. El montículo oriental cubre unas 12,5 hectáreas. Las excavaciones revelaron dieciocho niveles sucesivos de ocupación, con casas ‘renewed by partial demolition and rebuilding on a foundation of rubble’. Sin calles convencionales: ‘most were accessed by holes in the ceiling and doors on the side of the houses, with doors reached by ladders and stairs. The rooftops were effectively streets.’ Enterramientos ‘beneath the floors and especially beneath hearths, the platforms within the main rooms, and beds’. Estimaciones recientes: ‘between 600 and 800 people would have lived at Çatalhöyük East during an average year during the Middle phase (6700–6500 BC)’. Mellaart dirigió las excavaciones de 1961 a 1965; Hodder, de 1993 a 2018. Mellaart ‘was banned from Turkey for his involvement in the Dorak affair’. Patrimonio Mundial en 2012. El mural del monte Hasan ‘is frequently cited as the world’s oldest map’, interpretación discutida; sobre la diosa madre, el trabajo de Hodder sostiene que ‘there is very little evidence of a mother goddess’.",
+      "source": "Wikipedia en inglés, Çatalhöyük",
+      "url": "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+    },
+    {
+      "claim": "Ocupación ‘c. 7400-5600 BCE’. Población estimada ‘3500 to 8000’. Casas de adobe con paredes enlucidas, pisos de tierra batida y vigas de madera. ‘There were no streets or passageways, instead, every rooftop had a big opening, usually above the oven-hearth of the room in its southern side, to let out the smoke, take in the sunlight and fresh air, and allow people to move in and out.’ Enterramientos bajo el piso de las casas. Pinturas murales con animales salvajes, aves y figuras humanas, algunas sin cabeza, además de bucráneos. James Mellaart descubrió el sitio en 1958 y excavó entre 1961 y 1965; Ian Hodder retomó el trabajo en 1993 con metodologías modernas. Patrimonio Mundial de la Unesco en 2012.",
+      "source": "World History Encyclopedia, ‘Ҫatalhöyük’",
+      "url": "https://www.worldhistory.org/Catalhoyuk/"
+    }
+  ],
+  "do_not_use": [
+    "‘La ciudad más antigua del mundo’ o ‘la primera ciudad de la historia’. Se discute si Çatalhöyük es una ciudad o un poblado muy grande, y hay asentamientos anteriores. Se dice ‘uno de los asentamientos urbanos más antiguos que se conocen’.",
+    "Una cifra única de población. Conviven 3.500-8.000 (apogeo, según el proyecto de excavación y World History Encyclopedia), 600-800 (fase media, estimaciones recientes) y hasta 10.000 en divulgación. Se dan las dos horquillas documentadas y se dice que no concuerdan.",
+    "La ‘diosa madre’. Mellaart interpretó las figurillas femeninas como una deidad de la fertilidad; el trabajo posterior de Hodder sostiene que hay muy poca evidencia de ello. No se afirma.",
+    "El mural del volcán Hasan Dağı como ‘el mapa más antiguo del mundo’. Es la cita más repetida sobre el sitio y la interpretación está discutida. No se usa.",
+    "‘Una sociedad igualitaria y sin jerarquías’. Se repite mucho en divulgación, y el propio Hodder distingue casas con muchos más enterramientos y símbolos que otras. No se afirma igualdad.",
+    "Los veintiún metros de altura del montículo. Solo lo da World History Encyclopedia y no se corroboró en otra fuente. No se usa.",
+    "La fecha final de ocupación. Se dan 5600 a.C. y 5950 a.C., y para el montículo occidental 5900-5600 a.C. Se dice ‘más de mil años’, que es lo que sostienen todas.",
+    "Las interpretaciones de James Mellaart sin confirmación posterior. Fue expulsado de Turquía por el asunto Dorak y se le atribuyen materiales fabricados; nada suyo se usa aquí salvo las fechas de excavación."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

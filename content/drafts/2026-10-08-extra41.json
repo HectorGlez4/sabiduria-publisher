@@ -1,0 +1,62 @@
+{
+  "id": "2026-10-08-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Andrés Bello y el discurso inaugural de 1843",
+    "hook": "La frase más repetida de la universidad pública chilena se cita casi siempre sola, y lo que viene detrás la convierte en otra cosa.",
+    "body": [
+      "Andrés Bello nació en Caracas el 29 de noviembre de 1781 y murió en Santiago el 15 de octubre de 1865. Vivió diecinueve años en Londres, donde estudió en el Museo Británico, y desembarcó en Valparaíso el 25 de junio de 1829. En Chile trabajó en el Código Civil, que entró en vigor en 1857 y acabó adoptándose en otros países del continente, y escribió una Gramática de la lengua castellana destinada al uso de los americanos. La ley orgánica que creó la Universidad de Chile se dictó el 19 de noviembre de 1842.",
+      "Diez meses después, el 17 de septiembre de 1843, la universidad se instaló y Bello, su primer rector, leyó el discurso de apertura. Ahí está la frase. Y a continuación, sin respirar, la enumeración que la sostiene: desde las verdades que formulan el rumbo de los mundos en el espacio hasta las que dirigen y fecundan las artes, pasando por la estructura del animal y de la planta, los fenómenos íntimos del alma, las acciones de las fuerzas políticas y las bases de la moral.",
+      "El discurso se publicó en los Anales de la Universidad de Chile, en las páginas 139 a 152. Ciento ochenta y tres años después la universidad lo relee cada aniversario. Citada sola, la frase suena a buen deseo. Con la lista detrás es otra cosa: un argumento contra la idea de que cada saber se estudia en su casillero y no le debe nada a los demás."
+    ],
+    "question": "¿Qué dos cosas que estudias por separado llevan tiempo pidiéndote que las juntes?",
+    "quote": {
+      "text": "Lo sabéis, señores: todas las verdades se tocan.",
+      "author": "Andrés Bello",
+      "work": "discurso de instalación de la Universidad de Chile, 1843",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AndresBello", "#UniversidadDeChile", "#Educacion"],
+    "extended": ["#Chile", "#Venezuela", "#AmericaLatina", "#Citas", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del pasaje, en el discurso pronunciado el 17 de septiembre de 1843 en la instalación de la Universidad de Chile y publicado en el primer número de los Anales de la Universidad de Chile: ‘Lo sabeis, señores: todas las verdades se tocan, desde las que formulan el rumbo de los mundos en el piélago del espacio; desde las que determinan las agendas maravillosas de que dependen el movimiento y la vida en el universo de la materia; desde las que resumen la estructura del animal, de la planta, de la masa inorgánica que pisamos; desde las que revelan los fenómenos íntimos del alma en el teatro misterioso de la conciencia, hasta las que expresan las acciones y reacciones de las fuerzas políticas; hasta las que sientan las bases inconmovibles de la moral; hasta las que determinan las condiciones precisas para el desenvolvimiento de los gérmenes industriales; hasta las que dirigen y fecundan las artes.’ También: ‘la instrucción literaria y científica es la fuente de donde la instrucción elemental se nutre y se vivifica’.",
+      "source": "Universidad de Chile, ‘Discurso inaugural de Andrés Bello’",
+      "url": "https://uchile.cl/presentacion/historia/discurso-inaugural"
+    },
+    {
+      "claim": "Ficha bibliográfica: ‘Discurso pronunciado por el Sr. Rector de la Universidad, D. Andrés Bello, en la instalación de este cuerpo el día 17 de setiembre de 1843’, de Bello, Andrés, 1781-1865, en Anales de la Universidad de Chile, 1843, páginas 139-152, ISSN 0365-7779, licencia CC0.",
+      "source": "Repositorio Académico de la Universidad de Chile, handle 2250/124486",
+      "url": "https://repositorio.uchile.cl/handle/2250/124486"
+    },
+    {
+      "claim": "Bello ‘nace en Caracas el 29 de noviembre de 1781’ y ‘muere el 15 de octubre de 1865’. Residió en Inglaterra entre 1810 y 1829, donde estudió en el Museo Británico; llegó a Valparaíso el 25 de junio de 1829. ‘En 1840 se nombró por ley una comisión de parlamentarios para la elaboración del Código Civil’, que entró en vigor en 1857 y fue adoptado en otros países de América Latina. Preparó su ‘Gramática de la Lengua Castellana destinada al uso de los americanos’. ‘El 19 de noviembre de 1842 se dicta la ley orgánica que crea la Universidad de Chile.’ Fue su primer rector desde 1843 hasta su muerte, y el discurso de instalación es del 17 de septiembre de 1843.",
+      "source": "Universidad de Chile, ‘Andrés Bello López (1843-1865)’, serie Rectores de la U. de Chile",
+      "url": "https://uchile.cl/presentacion/historia/rectores-de-la-u-de-chile/andres-bello-lopez-1843-1865"
+    },
+    {
+      "claim": "La frase articuladora de todo el discurso es ‘todas las verdades se tocan’, entendida como idea filosófica integradora: que las verdades no se oponen entre sí y que la realidad es integrada y tiene carácter sistemático. El discurso expone los lineamientos fundacionales de la institución y el papel de la educación en la República naciente; la instalación ocurrió diez meses después de la creación de la universidad por ley. Aniversario 183 en 2026.",
+      "source": "Universidad de Chile, cobertura institucional del aniversario del discurso de instalación",
+      "url": "https://uchile.cl/noticias/244631/u-de-chile-releva-la-vigencia-del-discurso-de-instalacion-de-andres-bello"
+    }
+  ],
+  "do_not_use": [
+    "La ortografía del impreso original. El texto de 1843 escribe ‘Lo sabeis, señores’, sin tilde, y usa formas como ‘setiembre’. La cita se moderniza en la acentuación y se deja constancia aquí; si alguna vez se reproduce en facsímil, seguir el original.",
+    "El año de imprenta de los Anales. El repositorio de la Universidad de Chile fecha el discurso en 1843, pp. 139-152, mientras otras referencias citan el tomo 1843-1844 impreso por la Imprenta del Siglo en 1846. Se dice ‘los Anales de la Universidad de Chile’ con las páginas, sin año de imprenta.",
+    "‘Bello fundó la Universidad de Chile’. La creó la ley orgánica del 19 de noviembre de 1842; Bello fue su primer rector y pronunció el discurso de instalación en 1843. Son cosas distintas.",
+    "‘Bello fue maestro de Simón Bolívar’. Es la afirmación más repetida sobre su biografía y no se abrió en esta investigación ninguna fuente institucional que la documente. No se usa.",
+    "La frase ‘la palabra es el medio de la civilización’ y otras que circulan a nombre de Bello sin referencia a obra. Solo se cita lo que está en el texto del discurso.",
+    "Presentar la frase como un lema de superación personal o de armonía general. En el discurso es una tesis sobre la unidad del conocimiento y sobre qué debe enseñar una universidad; la enumeración que la sigue lo deja claro."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
