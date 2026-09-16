@@ -169,17 +169,32 @@
     "processing_completed_at": "2026-09-16T01:11:04.746114+00:00",
     "playback_verified_at": null,
     "post_id": "18089483336675518",
-    "post_url": null,
+    "post_url": "https://www.instagram.com/stories/sabiduriabolsillo/3987114041558773917",
     "audio_verified": null,
     "master_sha256": "88537a6f72e2ebf9ff53911477e1dab4a461bdd52a88a037f6d0a0c30a17c8ee",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "story",
+        "observed_at": "2026-09-16T09:50:11.430590+00:00",
+        "edad_horas": 8.66,
+        "metricas": {},
+        "errores": {
+          "instagram": {
+            "reach": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AjFc2bg0VYgN3g7kqDFbdYz\"}}",
+            "views": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AlK5j7bN-rXXtIPqzIh_g4W\"}}",
+            "replies": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AeaGXs3NE2Cchd7o476bCl0\"}}",
+            "navigation": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AWeRnfkEjwnzvt5NjQhLmR5\"}}"
+          }
+        }
+      }
+    ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story).",
-    "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
-    "post_url": "Stories have no permalink in the publish result.",
+    "audience_metrics": "Story snapshot taken at 8.66 h (media-lab-verify 35081624790, run_group -MSTORY): verified but empty. Every Instagram Story metric (reach, views, replies, navigation) failed with «(#10) Not enough viewers for the media to show insights», Meta's minimum-audience threshold, as for CELL-024 and CELL-034. No retry is possible before the 24 h expiry at 2026-09-17T01:11Z.",
+    "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014). The metrics run did return the media object: IMAGE, timestamp 2026-09-16T01:11:02Z, matching post_id.",
+    "post_url": "Resolved on 2026-09-16 from the metrics verification (permalink field): https://www.instagram.com/stories/sabiduriabolsillo/3987114041558773917 — it stops working once the Story expires.",
     "location_native_tag": "Variant A (API): no native location_id sent; place carried by the printed overlay label."
   },
   "decision": "Published through the API; Story-only, no verification step.",
-  "next_action": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story)."
+  "next_action": "Nothing left: the only snapshot this cell can take was taken and came back empty; the Story expires at 2026-09-17T01:11Z."
 }

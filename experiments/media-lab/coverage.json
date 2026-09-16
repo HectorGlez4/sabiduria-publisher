@@ -503,7 +503,9 @@
         "2026-09-17T23:45:52+00:00",
         "2026-09-21T23:45:52+00:00"
       ],
-      "measurement_completed_at": []
+      "measurement_completed_at": [
+        "2026-09-15T23:52:00+00:00"
+      ]
     },
     {
       "cell_id": "CELL-012",
@@ -2669,12 +2671,14 @@
       "planned_publish_at": null,
       "run_record": "experiments/media-lab/runs/LAB-LOCATION-011-A-INSTAGRAM-STORY.json",
       "post_id": "18089483336675518",
-      "post_url": null,
+      "post_url": "https://www.instagram.com/stories/sabiduriabolsillo/3987114041558773917",
       "playback_or_display_verified_at": null,
       "measurement_due_at": [
         "2026-09-16T07:11:04.746114+00:00"
       ],
-      "measurement_completed_at": []
+      "measurement_completed_at": [
+        "2026-09-16T09:50:11.430590+00:00"
+      ]
     },
     {
       "cell_id": "CELL-123",

@@ -175,7 +175,7 @@
     "snapshots": []
   },
   "missing_data_reasons": {
-    "audience_metrics": "Facebook Story: no API metrics; read via Chrome (Business Suite) before expiry.",
+    "audience_metrics": "Snapshot due at 2026-09-16T06:49:23Z and not taken in the 09:40 window: Facebook Stories have no API metrics (and SDB_PAGE_TOKEN still lacks read_insights), so no allowed command can read them. It needs the user's Chrome read in Business Suite before the Story expires at 2026-09-17T00:49Z. Same standing gap as CELL-022 and CELL-032.",
     "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
     "post_url": "Stories have no permalink in the publish result.",
     "location_native_tag": "Variant A (API): no native location_id sent; place carried by the printed overlay label."
