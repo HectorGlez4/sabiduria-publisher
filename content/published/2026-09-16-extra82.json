@@ -2,7 +2,7 @@
   "id": "2026-09-16-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Erasmo y el adagio Dulce bellum inexpertis",
     "hook": "El proverbio no era suyo: lo encontró hecho. Lo que hizo Erasmo fue ponerle mil líneas de comentario detrás, y esas veinte páginas se convirtieron en el panfleto más reimpreso de Europa.",
@@ -79,5 +79,21 @@
     "threads"
   ],
   "publish_at": "2026-09-16T15:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1096771196480873",
+      "url": "https://www.facebook.com/874327782058550/posts/1096771196480873",
+      "published_at": "2026-09-16T16:46:57.379781+00:00"
+    },
+    "instagram": {
+      "post_id": "17975901713925224",
+      "url": "https://www.instagram.com/p/DdWv5kumwUw/",
+      "published_at": "2026-09-16T16:47:09.964771+00:00"
+    },
+    "threads": {
+      "post_id": "17914157736461412",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17914157736461412",
+      "published_at": "2026-09-16T16:47:25.438198+00:00"
+    }
+  }
 }
