@@ -209,7 +209,25 @@
     "post_url": "https://www.instagram.com/p/DdR54JEgxHN/",
     "audio_verified": true,
     "master_sha256": "5ca7bfcbb9a376388ada1b9fcb0919484928cfe334765f0bad218c7cf15e90f6",
-    "snapshots": [],
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-16T04:53:09.963769+00:00",
+        "edad_horas": 33.25,
+        "metricas": {
+          "instagram": {
+            "reach": 10,
+            "views": 20,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 1
+          }
+        },
+        "errores": {}
+      }
+    ],
     "subido_en": "2026-09-14T19:31:46.653080+00:00",
     "publicaciones_antes": 3714,
     "evidence": [
@@ -240,11 +258,12 @@
       ]
     },
     "live_verification": "Brand profile grid position 1 (posts 3714 -> 3715); live post header 'sabiduriabolsillo' with 'Florian Christl · Natural'; caption opens «En 1941, Hedy Kiesler Markey y George Antheil presentaron una patente…»; 'il y a 2 minutes'; full 4:5 image with PRESENTADORA FICTICIA and brand badge (Instagram mute control overlays the badge corner in-app only). Evidence experiments/media-lab/evidence/android/LAB-PERSON-002-B-INSTAGRAM/ig-06-publicacion-en-directo.png",
-    "post_url_source": "2026-09-14T19:52Z: decoded locally (macOS Core Image CIDetector) from the post's own Instagram 'Code QR' screen on the phone; tracking query parameters removed."
+    "post_url_source": "2026-09-14T19:52Z: decoded locally (macOS Core Image CIDetector) from the post's own Instagram 'Code QR' screen on the phone; tracking query parameters removed.",
+    "graph_media_id": "18011566943873350"
   },
   "missing_data_reasons": {
     "facebook_crosspost_url": "Auto-shared by Instagram; permalink not captured.",
-    "audience_metrics": "Capture 24 h / 72 h / 7 d Instagram insights from 2026-09-15T19:38Z."
+    "audience_metrics": "24 h snapshot taken at 33.3 h (due 2026-09-15T19:38Z, media-lab-verify 35057313212, run_group LAB-PERSON-002-B-INSTAGRAM-M24H, resolved by --instagram-shortcode DdR54JEgxHN): reach 10, views 20, likes 1. Overdue because the phone route stores the shortcode as post_id and no earlier window took it; it is not a true 24 h age match, and its API twin CELL-013 was read 4.5 h younger, so the pair is not yet age-comparable. 72 h due 2026-09-17T19:38Z, 7 d due 2026-09-21T19:38Z."
   },
   "decision": "First supervised Claude window published CELL-018 end-to-end through lab.py on the phone with agent visual QA and no human confirmation. Share reconciled as confirmed. Two process findings: lab.py ig pie accepted a composer with the hashtag dropdown still open (task 10f, blocking before the scheduled task), and the encargo owner choices do not include a reuse owner (codex-exec used).",
   "next_action": "Capture 24 h metrics from 2026-09-15T19:38Z."

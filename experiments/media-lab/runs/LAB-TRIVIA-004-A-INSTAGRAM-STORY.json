@@ -212,7 +212,22 @@
     "post_url": null,
     "audio_verified": null,
     "master_sha256": "97f9c39972acef5f927edd26bc49d745765fe6e1caf0de1dfa0c7025b1654bbe",
-    "snapshots": [],
+    "snapshots": [
+      {
+        "instantanea": "story",
+        "observed_at": "2026-09-16T04:55:42.204303+00:00",
+        "edad_horas": 4.48,
+        "metricas": {},
+        "errores": {
+          "instagram": {
+            "reach": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AfHZ4VSLu6pjI3e2Flb7O1u\"}}",
+            "views": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AzKu-7peBSXyHbWow8XLy_0\"}}",
+            "replies": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AhOX8LwNHMDyron7lnTdKCK\"}}",
+            "navigation": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"ANlSwr64j1YydXn3nlac1G0\"}}"
+          }
+        }
+      }
+    ],
     "frames": [
       {
         "frame": 1,
@@ -237,10 +252,10 @@
     ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story).",
+    "audience_metrics": "Story snapshot taken in time on the question frame (run_group LAB-TRIVIA-004-A-INSTAGRAM-STORY-MSTORY, media-lab-verify 35057483103, at 4.5 h) but Instagram returned no numbers: reach, views, replies and navigation all failed with «(#10) Not enough viewers for the media to show insights», exactly as CELL-024. The reveal frame (post_id 18336890287251845) was not measured: `metricas-registrar` checks the result against the run's own post_id, so a second frame needs its own run_group and a decision on how a two-frame Story is counted. The Story expires at 00:27Z on 2026-09-17.",
     "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
     "post_url": "Stories have no permalink in the publish result."
   },
   "decision": "Published through the API; Story-only, no verification step.",
-  "next_action": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story)."
+  "next_action": "None for the question frame. Open question for the user: whether the reveal frame of a two-frame Story gets its own measurement, and how the pair is reported."
 }

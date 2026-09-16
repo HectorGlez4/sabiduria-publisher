@@ -11,17 +11,48 @@
   "actual_native_format": "feed_single_image",
   "adaptation_notes": "Scheduled window 2026-09-15 05:40 Europe/Madrid. API variant A of the fictional-presenter family on Threads, the last implemented cell of encargo ENC-20260914-002. Same deterministic 4:5 master as CELL-011/013, reused rather than re-rendered: it was rendered from this same encargo, so the controlled variables stay identical. Threads caption taken verbatim from the brief's Threads draft.",
   "audio_treatment": "none",
-  "location_treatment": {"visual_place": null, "text_label": null, "native_place_id": null, "native_place_label": null},
-  "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
   "exposure_context": {
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (window start)", "at": "2026-09-15T03:47:52+00:00", "espera": "producción atrasada desde 23:26 UTC: puede salir en cualquier momento"},
-      {"source": "lab.py preflight (right before workflow dispatch)", "at": "2026-09-15T03:52:08+00:00", "espera": "producción atrasada desde 23:26 UTC: puede salir en cualquier momento", "note": "Informational only (user decision 2026-09-14). A late production item could land on Threads close to this post."},
-      {"source": "lab runs in the same family", "run_ids": ["LAB-PERSON-002-A-FACEBOOK", "LAB-PERSON-002-A-INSTAGRAM"], "note": "Same master published via API on Facebook (2026-09-14T23:45:52Z) and Instagram (2026-09-15T00:08:18Z)."}
+      {
+        "source": "lab.py preflight (window start)",
+        "at": "2026-09-15T03:47:52+00:00",
+        "espera": "producción atrasada desde 23:26 UTC: puede salir en cualquier momento"
+      },
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-15T03:52:08+00:00",
+        "espera": "producción atrasada desde 23:26 UTC: puede salir en cualquier momento",
+        "note": "Informational only (user decision 2026-09-14). A late production item could land on Threads close to this post."
+      },
+      {
+        "source": "lab runs in the same family",
+        "run_ids": [
+          "LAB-PERSON-002-A-FACEBOOK",
+          "LAB-PERSON-002-A-INSTAGRAM"
+        ],
+        "note": "Same master published via API on Facebook (2026-09-14T23:45:52Z) and Instagram (2026-09-15T00:08:18Z)."
+      }
     ],
-    "matched_comparison_ids": ["LAB-PERSON-002-B-THREADS"]
+    "matched_comparison_ids": [
+      "LAB-PERSON-002-B-THREADS"
+    ]
   },
   "round": 1,
   "status": "completed",
@@ -38,7 +69,13 @@
     "no audio",
     "public organic audience"
   ],
-  "tool": {"name": "codex exec image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
+  "tool": {
+    "name": "codex exec image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
   "timing": {
     "started_at": "2026-09-15T03:47:43Z",
     "first_acceptable_at": "2026-09-15T03:51:45Z",
@@ -49,13 +86,34 @@
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 0,
     "stages": [
-      {"name": "caption, API manifest and independent visual QA (overlapped with encargo replenishment)", "started_at": "2026-09-15T03:49:30Z", "finished_at": "2026-09-15T03:51:45Z", "overlaps_another_stage": true},
-      {"name": "push, preflight, media-lab workflow", "started_at": "2026-09-15T03:51:50Z", "finished_at": "2026-09-15T03:52:43Z", "overlaps_another_stage": false},
-      {"name": "verification manifest, media-lab-verify, download", "started_at": "2026-09-15T03:53:00Z", "finished_at": "2026-09-15T03:56:30Z", "overlaps_another_stage": true}
+      {
+        "name": "caption, API manifest and independent visual QA (overlapped with encargo replenishment)",
+        "started_at": "2026-09-15T03:49:30Z",
+        "finished_at": "2026-09-15T03:51:45Z",
+        "overlaps_another_stage": true
+      },
+      {
+        "name": "push, preflight, media-lab workflow",
+        "started_at": "2026-09-15T03:51:50Z",
+        "finished_at": "2026-09-15T03:52:43Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "verification manifest, media-lab-verify, download",
+        "started_at": "2026-09-15T03:53:00Z",
+        "finished_at": "2026-09-15T03:56:30Z",
+        "overlaps_another_stage": true
+      }
     ]
   },
   "attempts": [],
-  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
   "artifacts": [
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
@@ -71,13 +129,34 @@
       "dimensions": "1080x1350",
       "role": "generation_source"
     },
-    {"path": "experiments/media-lab/assets/LAB-PERSON-002/caption-threads.txt", "role": "caption"},
-    {"path": "experiments/media-lab/manifests/LAB-PERSON-002-A-THREADS-API.json", "role": "api_manifest"},
-    {"path": "experiments/media-lab/manifests/LAB-PERSON-002-A-THREADS-API-verify.json", "role": "verification_manifest"},
-    {"path": "experiments/media-lab/results/34926628377/live-result.json", "role": "publish_result"},
-    {"path": "experiments/media-lab/results/34926824316/verification-result.json", "role": "verification_result"}
+    {
+      "path": "experiments/media-lab/assets/LAB-PERSON-002/caption-threads.txt",
+      "role": "caption"
+    },
+    {
+      "path": "experiments/media-lab/manifests/LAB-PERSON-002-A-THREADS-API.json",
+      "role": "api_manifest"
+    },
+    {
+      "path": "experiments/media-lab/manifests/LAB-PERSON-002-A-THREADS-API-verify.json",
+      "role": "verification_manifest"
+    },
+    {
+      "path": "experiments/media-lab/results/34926628377/live-result.json",
+      "role": "publish_result"
+    },
+    {
+      "path": "experiments/media-lab/results/34926824316/verification-result.json",
+      "role": "verification_result"
+    }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
   "visual_qa": {
     "reviews": [
       {
@@ -98,7 +177,17 @@
       }
     ]
   },
-  "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
   "publication": {
     "route_id": "API-MASTER",
     "comparison_pair_id": null,
@@ -132,10 +221,27 @@
     "post_url": "https://www.threads.com/@sabiduriabolsillo/post/DdSyeWsDcUL",
     "audio_verified": null,
     "master_sha256": "55c939fa434cd096b9a3ae117d6ad8d9a9bc42798c863ad2793a8102ca1c026f",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-16T04:54:21.176120+00:00",
+        "edad_horas": 25.03,
+        "metricas": {
+          "threads": {
+            "views": 1,
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0,
+            "shares": 0
+          }
+        },
+        "errores": {}
+      }
+    ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "Capture 24 h / 72 h / 7 d Threads insights from 2026-09-16T03:52:43Z.",
+    "audience_metrics": "24 h snapshot taken on time at 25.0 h (due 2026-09-16T03:52:43Z, media-lab-verify 35057405544, run_group LAB-PERSON-002-A-THREADS-M24H): views 1, no likes, replies, reposts, quotes or shares. Threads returns numbers where Instagram Stories refuse them, so the 1 view is a real reading, not a gap. 72 h due 2026-09-18T03:52:43Z, 7 d due 2026-09-22T03:52:43Z.",
     "visual_display_on_device": "API cell: verified read-only through the Threads API (exact text, IMAGE, canonical permalink); no native app screenshot taken."
   },
   "decision": "Published through the Threads API and verified read-only (exact text, IMAGE, canonical permalink). Completes the API side of LAB-PERSON-002 feed cells (CELL-011/013/015).",

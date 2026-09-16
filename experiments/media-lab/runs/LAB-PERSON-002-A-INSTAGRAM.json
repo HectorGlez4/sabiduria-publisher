@@ -11,18 +11,54 @@
   "actual_native_format": "feed_single_image",
   "adaptation_notes": "Out-of-turn test window requested by the user on 2026-09-15 (no lab.py turno). API variant A of the fictional-presenter family, second cell of the window after CELL-011 (Facebook API), published 22 min 26 s later. Same encargo ENC-20260914-002, same deterministic 4:5 master and same Facebook/Instagram caption draft from briefs/LAB-PERSON-002.md.",
   "audio_treatment": "none",
-  "location_treatment": {"visual_place": null, "text_label": null, "native_place_id": null, "native_place_label": null},
-  "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
+  "location_treatment": {
+    "visual_place": null,
+    "text_label": null,
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
   "exposure_context": {
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (window start)", "at": "2026-09-14T23:43:01+00:00", "espera": "producción subiendo: hilos"},
-      {"source": "lab run in the same window", "run_id": "LAB-PERSON-002-A-FACEBOOK", "published_at": "2026-09-14T23:45:52Z", "note": "Same family and master on the Facebook Page via API."},
-      {"source": "lab.py preflight (right before workflow dispatch)", "at": "2026-09-15T00:07:47+00:00", "espera": "producción subiendo: hilos", "workflow": "hilos", "workflow_run": 34905489927, "note": "Informational only (user decision 2026-09-14). Threads lane; does not publish to Instagram feed."},
-      {"source": "earlier lab run, same account", "run_id": "LAB-PERSON-002-B-INSTAGRAM", "published_at": "2026-09-14T19:38:17Z", "note": "Android-native publication of the same family on @sabiduriabolsillo ~4.5 h earlier: near-duplicate content in the grid."}
+      {
+        "source": "lab.py preflight (window start)",
+        "at": "2026-09-14T23:43:01+00:00",
+        "espera": "producción subiendo: hilos"
+      },
+      {
+        "source": "lab run in the same window",
+        "run_id": "LAB-PERSON-002-A-FACEBOOK",
+        "published_at": "2026-09-14T23:45:52Z",
+        "note": "Same family and master on the Facebook Page via API."
+      },
+      {
+        "source": "lab.py preflight (right before workflow dispatch)",
+        "at": "2026-09-15T00:07:47+00:00",
+        "espera": "producción subiendo: hilos",
+        "workflow": "hilos",
+        "workflow_run": 34905489927,
+        "note": "Informational only (user decision 2026-09-14). Threads lane; does not publish to Instagram feed."
+      },
+      {
+        "source": "earlier lab run, same account",
+        "run_id": "LAB-PERSON-002-B-INSTAGRAM",
+        "published_at": "2026-09-14T19:38:17Z",
+        "note": "Android-native publication of the same family on @sabiduriabolsillo ~4.5 h earlier: near-duplicate content in the grid."
+      }
     ],
-    "matched_comparison_ids": ["LAB-PERSON-002-B-INSTAGRAM"]
+    "matched_comparison_ids": [
+      "LAB-PERSON-002-B-INSTAGRAM"
+    ]
   },
   "round": 1,
   "status": "completed",
@@ -39,7 +75,13 @@
     "no audio (API cannot add native music)",
     "public organic audience"
   ],
-  "tool": {"name": "codex exec image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
+  "tool": {
+    "name": "codex exec image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
   "timing": {
     "started_at": "2026-09-14T23:42:30Z",
     "first_acceptable_at": "2026-09-14T23:44:40Z",
@@ -50,13 +92,34 @@
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 1315,
     "stages": [
-      {"name": "render, manifest, visual QA (shared with CELL-011)", "started_at": "2026-09-14T23:42:30Z", "finished_at": "2026-09-14T23:45:20Z", "overlaps_another_stage": true},
-      {"name": "mandatory 21 min spacing after CELL-011", "started_at": "2026-09-14T23:45:52Z", "finished_at": "2026-09-15T00:07:47Z", "overlaps_another_stage": false},
-      {"name": "preflight, media-lab workflow, verification manifest, media-lab-verify", "started_at": "2026-09-15T00:07:47Z", "finished_at": "2026-09-15T00:09:30Z", "overlaps_another_stage": false}
+      {
+        "name": "render, manifest, visual QA (shared with CELL-011)",
+        "started_at": "2026-09-14T23:42:30Z",
+        "finished_at": "2026-09-14T23:45:20Z",
+        "overlaps_another_stage": true
+      },
+      {
+        "name": "mandatory 21 min spacing after CELL-011",
+        "started_at": "2026-09-14T23:45:52Z",
+        "finished_at": "2026-09-15T00:07:47Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "preflight, media-lab workflow, verification manifest, media-lab-verify",
+        "started_at": "2026-09-15T00:07:47Z",
+        "finished_at": "2026-09-15T00:09:30Z",
+        "overlaps_another_stage": false
+      }
     ]
   },
   "attempts": [],
-  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
   "artifacts": [
     {
       "path": "experiments/media-lab/assets/LAB-PERSON-002/LAB-PERSON-002-A-api-4x5.jpg",
@@ -93,7 +156,13 @@
       "role": "verification_result"
     }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
   "visual_qa": {
     "reviews": [
       {
@@ -113,7 +182,17 @@
       }
     ]
   },
-  "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
   "publication": {
     "route_id": "API-MASTER",
     "comparison_pair_id": null,
@@ -147,11 +226,29 @@
     "post_url": "https://www.instagram.com/p/DdSYyxfl4qZ/",
     "audio_verified": null,
     "master_sha256": "55c939fa434cd096b9a3ae117d6ad8d9a9bc42798c863ad2793a8102ca1c026f",
-    "snapshots": [],
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-16T04:53:46.875648+00:00",
+        "edad_horas": 28.76,
+        "metricas": {
+          "instagram": {
+            "reach": 7,
+            "views": 15,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 1
+          }
+        },
+        "errores": {}
+      }
+    ],
     "cross_posting": "Not expected: Accounts Center auto-share to Facebook applies to posts made in the Instagram app, not Graph API publications. Not checked on device in this window."
   },
   "missing_data_reasons": {
-    "audience_metrics": "Capture 24 h / 72 h / 7 d Instagram insights from 2026-09-16T00:08:18Z; no allowed lab command reads insights yet.",
+    "audience_metrics": "24 h snapshot taken at 28.8 h (due 2026-09-16T00:08:18Z, media-lab-verify 35057367023, run_group LAB-PERSON-002-A-INSTAGRAM-M24H): reach 7, views 15, likes 1. Late because the 20:40 window hung and the manual session did not register it; it is not a true 24 h age match. 72 h due 2026-09-18T00:08:18Z, 7 d due 2026-09-22T00:08:18Z.",
     "visual_display_on_device": "Out-of-turn API cell: verified read-only through Graph (caption, media type, permalink); no native app screenshot taken."
   },
   "decision": "Published through the Instagram Graph API and verified read-only (exact caption, IMAGE, canonical permalink). Forms the API side of the route comparison with CELL-018 (Android native with music).",

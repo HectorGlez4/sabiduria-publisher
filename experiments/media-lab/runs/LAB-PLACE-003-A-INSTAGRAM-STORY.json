@@ -171,13 +171,28 @@
     "post_url": null,
     "audio_verified": null,
     "master_sha256": "dfaa9edeafdd9f68fab2a12f62307d648521f3e1229866fab2592472228db9c0",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "story",
+        "observed_at": "2026-09-16T04:54:56.591788+00:00",
+        "edad_horas": 6.3,
+        "metricas": {},
+        "errores": {
+          "instagram": {
+            "reach": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"Af7nRdl4OdTYuzX31v5Ga89\"}}",
+            "views": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"A-jF5i0EQnkUe-iTdJpip6e\"}}",
+            "replies": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AcUeL7dno5sbISDqfvTzcUL\"}}",
+            "navigation": "MetaError: HTTP 400: {\"error\":{\"message\":\"(#10) Not enough viewers for the media to show insights\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AHBod4EDuNexUjvY6Yiijmy\"}}"
+          }
+        }
+      }
+    ]
   },
   "missing_data_reasons": {
-    "audience_metrics": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story).",
+    "audience_metrics": "Story snapshot taken in time (run_group LAB-PLACE-003-A-INSTAGRAM-STORY-MSTORY, media-lab-verify 35057440366, at 6.3 h) but Instagram returned no numbers: every metric (reach, views, replies, navigation) failed with «(#10) Not enough viewers for the media to show insights». The media itself is verified and the Story permalink came back (https://www.instagram.com/stories/sabiduriabolsillo/3987036570272004519), so this is Meta's minimum-audience threshold, not a token or a manifest problem. No later retry is possible: the Story expires at 22:37Z on 2026-09-16.",
     "verification": "Story-only cell: no media-lab-verify step (as CELL-012/014).",
     "post_url": "Stories have no permalink in the publish result."
   },
   "decision": "Published through the API; Story-only, no verification step.",
-  "next_action": "Story snapshot between 4 h and 20 h after publish (-MSTORY, --superficie instagram=story)."
+  "next_action": "None: the Story snapshot was taken at 6.3 h and Instagram withheld insights for too few viewers. Story audience for this account is below Meta's insights threshold; compare with CELL-014 (reach 6, views 7 at 4.6 h), which was just above it."
 }
