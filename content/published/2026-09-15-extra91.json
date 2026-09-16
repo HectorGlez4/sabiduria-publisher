@@ -2,7 +2,7 @@
   "id": "2026-09-15-extra91",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "La Boétie y la servidumbre voluntaria",
     "hook": "Un estudiante de derecho escribió que para acabar con un tirano no hace falta empujarlo. Basta con dejar de sostenerlo. El texto tardó más de veinte años en imprimirse y lo estrenaron sus adversarios políticos.",
@@ -79,5 +79,21 @@
     "threads"
   ],
   "publish_at": "2026-09-15T22:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1096187643205895",
+      "url": "https://www.facebook.com/874327782058550/posts/1096187643205895",
+      "published_at": "2026-09-16T01:14:58.484686+00:00"
+    },
+    "instagram": {
+      "post_id": "18405571300091950",
+      "url": "https://www.instagram.com/p/DdVFPgsjsuy/",
+      "published_at": "2026-09-16T01:15:11.748069+00:00"
+    },
+    "threads": {
+      "post_id": "18116866754053025",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18116866754053025",
+      "published_at": "2026-09-16T01:15:25.728728+00:00"
+    }
+  }
 }
