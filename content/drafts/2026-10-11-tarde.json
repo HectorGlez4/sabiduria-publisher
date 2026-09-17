@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Plutarco y la mente que se enciende",
+    "hook": "La frase más repetida sobre educación —no es llenar un cubo, es encender un fuego— no es de Yeats, y en el original no termina ahí.",
+    "body": [
+      "Plutarco escribió un opúsculo breve titulado «Perì toû akoúein», que se traduce como «Sobre el arte de escuchar». Se conserva dentro de los Moralia. En el capítulo 18, en la página 48C de la numeración de Stephanus, está el pasaje: la mente no es una vasija que haya que llenar, sino leña que solo necesita que la enciendan. La edición griega de Bernardakis, publicada por Teubner en Leipzig en 1888, lo trae así: «ou gàr hos angeîon ho noûs apoplerôseos all' hypekkaúmatos mónon hósper hýle deîtai».",
+      "La versión que circula es otra: «Education is not the filling of a pail, but the lighting of a fire». Se atribuye casi siempre a William Butler Yeats, y a veces a Sócrates. No aparece en la obra de ninguno de los dos. El rastro documentado va al revés de lo que se supone: en 1966 una revista de educación malaya se la adjudicó a Sócrates; en 1968 un libro de James Johnson Sweeney la daba como de Plutarco; y en 1987 el «Barnes & Noble Book of Quotations» se la pasó a Yeats, probablemente por contagio de una cita vecina en la página.",
+      "La mitad que se cae al abreviar es la que explica para qué sirve el fuego. La frase de Plutarco no se detiene en la leña: sigue «ormèn empoioûntos heuretikèn kaì órexin epì tèn alétheian», el impulso de buscar por cuenta propia y el deseo de la verdad. Y el tratado no va sobre cómo enseñar. Va sobre cómo escuchar: qué tiene que hacer quien está sentado oyendo para que aquello le sirva de algo."
+    ],
+    "question": "¿De quién depende que una clase encienda algo?",
+    "quote": {
+      "text": "La mente no necesita que la llenen, como a una vasija, sino solo que la enciendan, como a la leña: eso le infunde el impulso de buscar y el deseo de la verdad.",
+      "author": "Plutarco",
+      "work": "Sobre el arte de escuchar 18 (Moralia 48C); ed. Bernardakis, Teubner, 1888",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Plutarco", "#Educacion", "#FilosofiaAntigua"],
+    "extended": ["#Moralia", "#Grecia", "#Citas", "#Aprender", "#Escuchar", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego del pasaje en la página 48C: «οὐ γὰρ ὡς ἀγγεῖον ὁ νοῦς ἀποπληρώσεως ἀλλ᾽ ὑπεκκαύματος μόνον ὥσπερ ὕλη δεῖται, ὁρμὴν ἐμποιοῦντος εὑρετικὴν καὶ ὄρεξιν ἐπὶ τὴν ἀλήθειαν». La obra es «De recta ratione audiendi» y el texto servido procede de la edición de Gregorius N. Bernardakis, Leipzig, Teubner, 1888.",
+      "source": "Perseus Digital Library (Tufts University), Plutarch, De Recta Ratione Audiendi, stephpage 48c",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0144:stephpage%3D48c"
+    },
+    {
+      "claim": "El pasaje está en el capítulo 18, página 48C, del tratado «On Listening to Lectures» (De auditu), y la traducción de la Loeb Classical Library, volumen I de los Moralia, de F. C. Babbitt, 1927, dice: «For the mind does not require filling like a bottle, but rather, like wood, it only requires kindling to create in it an impulse to think independently and an ardent desire for the truth».",
+      "source": "LacusCurtius (Bill Thayer, University of Chicago), Plutarch, Moralia, De auditu, texto de la Loeb Classical Library",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/De_auditu*.html"
+    },
+    {
+      "claim": "La versión moderna «Education is not the filling of a pail, but the lighting of a fire» se atribuye habitualmente a William Butler Yeats y a veces a Sócrates. El rastreo concluye que «no substantive evidence that Socrates or William Butler Yeats produced one of these sayings. These two attributions apparently are incorrect». Citas más antiguas localizadas: 1966, Malaysian Journal of Education, atribuida a Sócrates; 1968, libro de James Johnson Sweeney, atribuida a Plutarco; 1987, Barnes & Noble Book of Quotations, reasignada a Yeats, por traslado accidental desde una cita contigua.",
+      "source": "Quote Investigator, «The Mind Is Not a Vessel That Needs Filling, But Wood That Needs Igniting»",
+      "url": "https://quoteinvestigator.com/2013/03/28/mind-fire/"
+    },
+    {
+      "claim": "El título del opúsculo en la Loeb es «On Listening to Lectures», es decir, un tratado sobre cómo escuchar, no sobre cómo enseñar.",
+      "source": "Loeb Classical Library, Plutarch, Moralia, «On Listening to Lectures» (LCL 197)",
+      "url": "https://www.loebclassics.com/view/plutarch-moralia_listening_lectures/1927/pb_LCL197.199.xml"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir a William Butler Yeats la frase del cubo y el fuego. No se ha encontrado en su obra y el rastreo sitúa la atribución en 1987, casi cincuenta años después de su muerte.",
+    "Atribuirla a Sócrates. Tampoco aparece en ninguna fuente socrática; la atribución localizada más antigua es de 1966.",
+    "Citar la versión «la mente no es un vaso que llenar sino una lámpara que encender». La lámpara no está en Plutarco: el griego dice leña (hýle) y encendido (hypekkaúmatos). La lámpara es un añadido posterior.",
+    "Presentar la frase como una máxima sobre la enseñanza. El tratado se dirige a quien escucha, no a quien habla. Usarla como lema pedagógico invierte a quién le está pidiendo algo.",
+    "Citar solo la primera mitad. La oración continúa y esa continuación es la que dice qué enciende el fuego: el impulso de buscar por cuenta propia y el deseo de la verdad.",
+    "Dar una fecha concreta de composición del opúsculo. No se verificó y la pieza no la da; solo se fecha la edición del texto griego (Teubner, 1888) y la traducción de la Loeb (1927).",
+    "Decir que Plutarco escribía sobre niños o sobre escuelas. El texto es un tratado dirigido a un joven sobre cómo asistir a lecciones filosóficas.",
+    "Usar la transcripción latina del griego que aparece en el cuerpo como si fuera el texto original. El texto original, en alfabeto griego, está en la primera fuente; en el cuerpo se transcribe para que se pueda leer en voz alta."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

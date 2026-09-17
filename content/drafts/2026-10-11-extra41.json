@@ -1,0 +1,60 @@
+{
+  "id": "2026-10-11-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Dante y el discurso de Ulises en Infierno XXVI",
+    "hook": "El verso que más se repite en los discursos de graduación lo pronuncia, dentro del poema, un condenado envuelto en llamas.",
+    "body": [
+      "Está en el canto XXVI del Infierno, versos 118 a 120: «Considerate la vostra semenza: / fatti non foste a viver come bruti, / ma per seguir virtute e canoscenza». Quien habla no es Dante. Es Ulises, y habla desde la octava bolsa del octavo círculo, la de los consejeros fraudulentos, donde las almas van envueltas en una llama que se mueve. Comparte la suya con Diomedes. Están ahí por el mal uso del ingenio: el caballo de Troya, el robo del Paladio.",
+      "Y el terceto no es una lección. Es una arenga. Ulises la usa para convencer a sus compañeros, ya viejos, de cruzar las columnas de Hércules y seguir hacia el océano abierto. Dante la llama «orazion picciola», oración pequeña, y al viaje lo llama «folle volo»: vuelo loco. Cinco lunas después ven a lo lejos una montaña oscura. Se alegran, y la alegría dura tres versos: de la tierra nueva sale un torbellino que hace girar la nave tres veces y a la cuarta la hunde. El canto se cierra en el verso 142, «infin che 'l mar fu sovra noi richiuso»: hasta que el mar se cerró sobre nosotros.",
+      "Las dos cosas son ciertas a la vez. El terceto dice algo que Dante no desmiente en ninguna parte, y lo dice alguien a quien Dante colocó entre los fraudulentos, convenciendo a otros de un viaje del que no volvió ninguno. Lo que la frase suelta no dice es adónde llevaba."
+    ],
+    "question": "¿Cambia lo que vale una frase según quién la dice?",
+    "quote": {
+      "text": "Considerad vuestra simiente: no fuisteis hechos para vivir como brutos, sino para seguir virtud y conocimiento.",
+      "author": "Dante Alighieri",
+      "work": "Divina Comedia, Infierno XXVI, vv. 118-120 (compuesta hacia 1308-1320)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Dante", "#DivinaComedia", "#Literatura"],
+    "extended": ["#Infierno", "#Ulises", "#Citas", "#EdadMedia", "#Italia", "#Poesia", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de los versos 112 a 142 del canto XXVI del Infierno. Versos 118-120: «Considerate la vostra semenza: / fatti non foste a viver come bruti, / ma per seguir virtute e canoscenza». Verso 122: «con questa orazion picciola, al cammino». Verso 125: «de' remi facemmo ali al folle volo». Versos 130-131: «Cinque volte racceso e tante casso / lo lume era di sotto da la luna». Versos 133-134: «quando n'apparve una montagna, bruna / per la distanza». Versos 136-141: «Noi ci allegrammo, e tosto tornò in pianto; / ché de la nova terra un turbo nacque / e percosse del legno il primo canto. / Tre volte il fé girar con tutte l'acque; / a la quarta levar la poppa in suso / e la prora ire in giù». Verso 142: «infin che 'l mar fu sovra noi richiuso».",
+      "source": "Wikisource en italiano, Divina Commedia, Inferno, Canto XXVI",
+      "url": "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_XXVI"
+    },
+    {
+      "claim": "Ulises aparece en el canto XXVI del Infierno, en la octava bolsa del octavo círculo, reservada a los consejeros fraudulentos. El pecado castigado es el «malo uso dell'ingegno». Las almas van «avvolti dentro mobile fiamma». Diomedes comparte la llama con Ulises. Entre los engaños que se le imputan figuran un «stratagemma militare» (el caballo de Troya), un «inganno a fine politico» y un «furto sacrilego» (el Paladio). Al final del canto, tras cinco meses de navegación, la tripulación avista una montaña sin cartografiar y una tormenta repentina hunde el barco: «la nave s'inabissa».",
+      "source": "Treccani, Enciclopedia Dantesca, entrada «Ulisse»",
+      "url": "https://www.treccani.it/enciclopedia/ulisse_(Enciclopedia-Dantesca)/"
+    },
+    {
+      "claim": "El terceto de los versos 118-120 es la conclusión del discurso que Ulises dirige a sus compañeros para empujarlos a continuar el viaje más allá de las columnas de Hércules, la frontera última del mundo entonces conocido. Ulises está castigado en el círculo de los consejeros fraudulentos por sus iniciativas astutas y engañosas, principalmente las relacionadas con el robo del Paladio y el caballo de Troya.",
+      "source": "Accademia della Crusca, documento «Fatti non foste a viver come bruti. Contestualizzazione» (resumen accesible desde el buscador; el PDF no pudo convertirse a texto en esta sesión)",
+      "url": "https://accademiadellacrusca.it/Media?c=2767f614-9e19-4c62-9717-91bfe0a447a8"
+    }
+  ],
+  "do_not_use": [
+    "Citar el terceto como consejo dado por Dante en primera persona. Lo pronuncia Ulises, personaje y condenado, dentro de la bolsa de los consejeros fraudulentos.",
+    "Decir que Ulises está en el infierno por haber emprendido el viaje. No es eso: está entre los consejeros fraudulentos por el mal uso del ingenio —el caballo de Troya, el robo del Paladio—, y el viaje es algo que él mismo relata una vez ya condenado.",
+    "Escribir «conoscenza». El texto dice «canoscenza», forma antigua. La modernización del verso ha dado lugar a polémicas públicas en Italia; aquí se respeta la forma del texto.",
+    "Presentar la traducción castellana del terceto como si procediera de una edición concreta. Es una versión literal hecha para esta pieza a partir del texto italiano; no es la de Mitre, ni la de Crespo, ni ninguna otra.",
+    "Afirmar que es «el verso más citado de toda la Comedia». La afirmación circula apoyada en un estudio que no se identificó ni se leyó en esta sesión. No se sostiene aquí.",
+    "Decir que la montaña que avistan es el Purgatorio. Dante escribe «una montagna, bruna per la distanza» y no la nombra; la identificación con la montaña del Purgatorio es lectura de los comentaristas, no dato del texto.",
+    "Presentar el episodio como parte de la Odisea. Este último viaje de Ulises no está en Homero. Cuál fue la fuente de Dante no se verificó aquí y la pieza no lo afirma.",
+    "Citar el PDF de la Accademia della Crusca como si se hubiera leído. Se descargó pero no pudo convertirse a texto en esta sesión; lo que se recoge de él procede del resumen indexado, y el mismo contenido está respaldado por la Enciclopedia Dantesca.",
+    "Usar el terceto como lema motivacional sin más. La pieza no niega lo que dice el verso; señala que en el poema sirve para persuadir a unos hombres de un viaje del que ninguno regresó."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

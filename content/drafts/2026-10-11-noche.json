@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-11-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "las Cartas Antiguas sogdianas de Dunhuang",
+    "hook": "La bolsa de correo más antigua de la Ruta de la Seda no llegó nunca. Por eso se conserva.",
+    "body": [
+      "En 1907, Aurel Stein encontró en una torre de vigilancia arruinada al oeste de Dunhuang, en la frontera occidental de China, un puñado de cartas escritas en papel. Cinco están casi completas. Están en sogdiano, la lengua que se hablaba alrededor de Samarcanda y que funcionaba como lengua franca del comercio en la ruta. Son los textos sogdianos más antiguos que se conservan y se fechan a principios del siglo IV: la segunda, en 312 o 313. Hoy están en la British Library, con las signaturas Or. 8212/92 y Or. 8212/95.",
+      "La carta 2 la escribe un comerciante, Nanai-vandak, a dos socios suyos en Samarcanda, a más de tres mil kilómetros al oeste. Cuenta lo que está pasando en China: el emperador huyó de Luoyang por el hambre y prendieron fuego al palacio. «Luoyang ya no existe, Ye ya no existe». Dice que hace tres años que no llega ningún sogdiano del interior. Y deja instrucciones de herencia: que administren su dinero para un huérfano, Takhsich-vandak, y que le busquen esposa cuando tenga edad. Escribe como quien no cuenta con volver.",
+      "En el mismo fardo viaja la carta 3. La firma una mujer, Miwnay, abandonada en Dunhuang con su hija Shayn; vive de la caridad del sacerdote del templo zoroástrico. Se la dirige a su marido, Nanai-dhat, y termina así: «Preferiría ser la mujer de un perro o de un cerdo antes que la tuya». Ninguna de las dos cartas llegó a su destino. El fardo se perdió, o lo confiscaron en el camino, y se quedó mil seiscientos años en aquella torre. De ese comercio suelen sobrevivir contratos y monedas; aquí lo que sobrevivió fue el correo que falló."
+    ],
+    "question": "¿Qué queda de una vida cuando lo único que se conserva es lo que no llegó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "OR. 8212/95",
+    "subtitle": "Una bolsa de correo detenida hacia el año 313",
+    "body": "Aurel Stein encontró en 1907, en una torre al oeste de Dunhuang, cartas en sogdiano de principios del siglo IV. Un comerciante deja instrucciones de herencia; una mujer abandonada escribe a su marido. Ninguna llegó: el fardo se perdió o lo confiscaron en el camino."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Sogdiana", "#RutaDeLaSeda", "#Dunhuang"],
+    "extended": ["#CartasAntiguas", "#Samarcanda", "#BritishLibrary", "#Arqueologia", "#Historia", "#SigloIV", "#AsiaCentral"]
+  },
+  "sources": [
+    {
+      "claim": "«Discovered by Sir Aurel Stein in 1907 at a watch-tower to the west of Dunhuang». Se conservan en «The British Library, Or. 8212/92 and Or. 8212/95». Están «written on paper in the early 4th century CE» y la carta 2 se fecha en «312 or 313 CE». «The letters appear to be the contents of a mailbag lost or confiscated in transit.» La carta 2 la escribe un comerciante «addressed to two of his partners in Samarkand, the capital of Sogdiana, more than 2,000 miles to the west». En la carta 1, Miwnay escribe a su madre sobre haber sido abandonada en Dunhuang por su marido, Nanai-dhat; la carta 3 cuenta lo mismo con más detalle y expresa su enojo. La página la firma Nicholas Sims-Williams.",
+      "source": "Smithsonian, «The Sogdians: Influencers on the Silk Roads», sección Ancient Letters, por Nicholas Sims-Williams",
+      "url": "https://sogdians.si.edu/ancient-letters/"
+    },
+    {
+      "claim": "Cinco cartas casi completas, halladas en 1907 por Aurel Stein en una torre de vigilancia china justo al oeste de la Puerta de Jade, a unos 90 km al oeste de Dunhuang. La datación más persuasiva es 313-314 d.C. La lengua es el sogdiano, «the commercial lingua franca of the Silk Road». Traducción de Nicholas Sims-Williams (School of Oriental and African Studies, University of London). De la carta 2: «the last emperor... fled from Luoyang because of the famine, and fire was set to his palace», «Luoyang (is) no more, Ye (is) no more!», y «it is three years since a Sogdian came from inside». De la carta 3, de Miwnay: «I would rather be a dog's or a pig's wife than yours!». Las cartas «were confiscated by a Chinese garrison», es decir, no llegaron a su destino.",
+      "source": "University of Washington, Silk Road Seattle, «The Sogdian Ancient Letters», traducción de Nicholas Sims-Williams",
+      "url": "https://depts.washington.edu/silkroad/texts/sogdlet.html"
+    },
+    {
+      "claim": "Nanai-vandak, agente sogdiano destacado en Gansu, dirige la carta 2 a sus socios de Samarcanda; ante los conflictos en China da instrucciones testamentarias y pide que administren una suma importante para un huérfano, Takhsich-vandak, y que le busquen esposa cuando llegue a la edad. Las cartas «are the earliest substantial examples of Sogdian writing and thus provide extremely important information about the early history of the Sogdian diaspora along the eastern end of the silk route» (Sims-Williams, 2004).",
+      "source": "International Dunhuang Programme, referencias bibliográficas, Sims-Williams 2004, «The Sogdian Letters 1, 2, 3, 5»",
+      "url": "https://idp.bl.uk/references/Sims-Williams_2004/"
+    },
+    {
+      "claim": "En la carta 1, Miwnay escribe a su madre, Chatis, y explica que ella y su hija Shayn dependen de la caridad del sacerdote del templo zoroástrico local tras ser abandonadas en Dunhuang por Nanai-dhat.",
+      "source": "Smithsonian, «The Sogdians: Influencers on the Silk Roads», ficha de la Sogdian Ancient Letter I",
+      "url": "https://sogdians.si.edu/ancient-letters/"
+    }
+  ],
+  "do_not_use": [
+    "Dar un número cerrado de cartas. Las fuentes consultadas hablan de cinco casi completas dentro de un conjunto mayor de fragmentos; circula también la cifra de ocho. La pieza dice «cinco están casi completas» y no fija el total.",
+    "Fechar el hallazgo en la Cueva de los Manuscritos de Dunhuang. Es otro sitio: estas cartas aparecieron en una torre de vigilancia al oeste de la ciudad, no en la cueva de la biblioteca que Stein también visitó.",
+    "Fijar una sola fecha para las cartas. El Smithsonian da 312 o 313 para la carta 2; la Universidad de Washington sitúa el conjunto en 313-314. La pieza usa «principios del siglo IV» y «312 o 313».",
+    "Afirmar con certeza por qué no llegaron. Las fuentes ofrecen dos posibilidades —extravío o confiscación— y no se decantan. La pieza las da como alternativa, no como hecho.",
+    "Contar qué fue de Miwnay o de Nanai-dhat. No se sabe. Cualquier desenlace que circule es invención.",
+    "Citar la ficha de catálogo del International Dunhuang Programme para la signatura Or.8212/95. La URL del registro devolvió error 403 en esta sesión; la signatura se toma de la página del Smithsonian, que sí pudo leerse.",
+    "Llamarlas «las cartas más antiguas del mundo». No lo son. Son los textos sogdianos sustanciales más antiguos que se conservan, que es otra cosa.",
+    "Traducir «Preferiría ser la mujer de un perro o de un cerdo antes que la tuya» como una maldición ritual o una fórmula legal de divorcio. En las fuentes consultadas aparece como expresión de enojo dentro de una carta personal; no se verificó ningún valor jurídico."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

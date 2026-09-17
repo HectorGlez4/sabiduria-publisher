@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-11-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Humboldt y el Naturgemälde del Chimborazo",
+    "hook": "Humboldt no llegó a la cumbre del Chimborazo. Lo que trajo de allí fue una lámina que cambió la manera de mirar una montaña.",
+    "body": [
+      "El 23 de junio de 1802, Alexander von Humboldt subió el Chimborazo con el botánico Aimé Bonpland y con Carlos de Montúfar, un quiteño de veintiún años. Los cargadores se negaron a seguir más allá de la línea de nieve. Una grieta infranqueable detuvo a los tres antes de la cima. La altura que alcanzaron no la superó nadie hasta 1838, y de esa subida salió la primera descripción del mal de altura: Humboldt anotó las hemorragias nasales y los vómitos, los suyos y los de sus compañeros. A la cumbre no llegó nadie hasta 1880, con Edward Whymper.",
+      "Lo que hizo después con esas anotaciones es otra cosa. En el «Essai sur la géographie des plantes», impreso en París y Tubinga con pie de 1805 y difundido en 1807, lo que importa no es el ensayo de veintitrés páginas ni el comentario de ciento ocho: es una lámina grabada y coloreada, el «Tableau physique des Andes et pays voisins». Es un corte vertical del Chimborazo con los nombres de las plantas escritos a la altura exacta en que crecen, y a los lados, columnas con la temperatura, la presión, la humedad y el color del cielo a cada altitud. Humboldt la llamó Naturgemälde: cuadro de la naturaleza.",
+      "De ese dibujo sale su ley de la distribución vegetal: lo que cambia al subir una montaña equivale a lo que cambia al alejarse del ecuador. Una ladera contiene, comprimido en seis mil metros, lo mismo que un continente entero de norte a sur. Treinta años después, cuando el Beagle zarpó, llevaba a bordo dos ejemplares de la «Relación histórica» de Humboldt; Darwin leyó uno de ellos durante la travesía."
+    ],
+    "question": "¿Qué se entiende de un lugar solo cuando se lo dibuja entero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "NATURGEMÄLDE",
+    "subtitle": "Un corte del Chimborazo, dibujado en 1807",
+    "body": "El 23 de junio de 1802 Humboldt subió el Chimborazo y no llegó a la cumbre. Con lo anotado en esa subida grabó una lámina: el perfil de la montaña con cada planta escrita a la altura en que crece. De ahí nació la idea de que subir equivale a alejarse del ecuador."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Humboldt", "#Chimborazo", "#HistoriaDeLaCiencia"],
+    "extended": ["#Naturgemalde", "#Ecuador", "#Botanica", "#Geografia", "#Andes", "#Ciencia", "#SigloXIX"]
+  },
+  "sources": [
+    {
+      "claim": "«On 23 June 1802, with the help of an Indigenous guide, the two companions, alongside their new friend, Carlos Montufár (1780-1816), climbed Chimborazo, which at the time was considered to be the highest peak. Though they did not reach its summit, they achieved a record that was not surpassed until 1838.» La misma entrada describe el Tableau physique como la representación de «the zone occurrence of plant life at different altitudes» y afirma que «served as the foundation for Humboldt's law of vegetational distribution, which claims that changes in plants in relation to latitude match those by altitude».",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Alexander von Humboldt»",
+      "url": "https://plato.stanford.edu/entries/alexander-humboldt/"
+    },
+    {
+      "claim": "El «Essai sur la géographie des plantes accompagné d'un tableau physique des régions équinoxiales» se publicó en París y Tubinga, por Schoell y Cotta, con fecha de 1805, y se difundió en francés en 1807. Consta, además de un prefacio breve, de tres elementos: un ensayo teórico corto sobre geografía de las plantas (23 páginas), un texto explicativo extenso titulado «Tableau physique des Régions équatoriales» (108 páginas) y una gran lámina grabada y coloreada. La lámina es un corte a través del Chimborazo y del continente sudamericano que muestra la distribución de las plantas por zonas climáticas y presenta al mismo tiempo mediciones físicas y químicas en tablas por altura.",
+      "source": "Alexander von Humboldt-Forschungsstelle, «Alexander von Humboldts Naturgemälde der Tropen: das Tableau physique des Andes et pays voisins (1807)»",
+      "url": "https://www.avhumboldt.de/?p=11781"
+    },
+    {
+      "claim": "La ascensión fue el 23 de junio de 1802; iban Humboldt, Bonpland y Carlos de Montúfar, de veintiún años, y los porteadores indígenas se negaron a continuar más allá de la línea de nieve. Una grieta infranqueable («insurmountable crevice») los obligó a descender. Humboldt fue «the first person to describe altitude sickness» tras observar hemorragias nasales y vómitos en sus compañeros y en sí mismo. La primera ascensión a la cumbre la logró Edward Whymper en 1880, setenta y ocho años después.",
+      "source": "Deutsches Historisches Museum, blog, «Alexander von Humboldt and the ascent of Chimborazo»",
+      "url": "https://www.dhm.de/blog/2016/11/17/humboldt-and-the-ascent-of-chimborazo/"
+    },
+    {
+      "claim": "«Alexander von Humboldt's Personal narrative was Darwin's most inspiring model for a scientific traveller, and one of his favourite books.» «There were in fact two copies of Humboldt's Personal narrative on board the Beagle.»",
+      "source": "Darwin Online (University of Cambridge), introducción editorial de Gordon Chancellor, «Humboldt's Personal narrative and its influence on Darwin»",
+      "url": "https://darwin-online.org.uk/EditorialIntroductions/Chancellor_Humboldt.html"
+    }
+  ],
+  "do_not_use": [
+    "Dar una cifra concreta de la altura alcanzada en el Chimborazo. Las fuentes consultadas no coinciden: circulan 5.878 m y 5.917 m, y esta pieza no zanja cuál es la buena. Lo que sí está documentado es que no llegaron a la cumbre y que el registro no se superó hasta 1838.",
+    "«Humboldt coronó el Chimborazo». Falso. Una grieta los detuvo antes de la cima. La primera ascensión documentada es la de Edward Whymper, en 1880.",
+    "«El Chimborazo era la montaña más alta del mundo». Lo era en la creencia de la época, no en los hechos. La pieza no repite la afirmación como dato.",
+    "Afirmar que la edición alemana, «Ideen zu einer Geographie der Pflanzen» (1807), está dedicada a Goethe, y que la dedicatoria estaba prevista para Schiller antes de su muerte. Circula en varias reseñas y probablemente sea cierto, pero no se pudo confirmar contra una fuente institucional en esta sesión: la página de la Forschungsstelle consultada no menciona la dedicatoria. La pieza no lo afirma.",
+    "Citar el artículo de PNAS «Humboldt's Tableau Physique revisited» (2019) sobre los nombres latinos de la lámina que no son identificables. El sitio de PNAS devolvió error 403 al consultarlo y no se leyó el texto. Nada de ese contenido se afirma aquí.",
+    "«Humboldt inventó la ecología». Es una simplificación de divulgación. Lo documentado es su ley de la distribución vegetal y el Naturgemälde como forma de representarla.",
+    "Fechar el Essai en un solo año sin matiz. El pie de imprenta dice 1805 y la difusión en francés es de 1807; las fuentes usan las dos fechas según a qué se refieran.",
+    "Decir que Darwin llevaba el Tableau physique a bordo del Beagle. Lo que había a bordo eran dos ejemplares de la «Relación histórica» (Personal narrative), que es otra obra."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
