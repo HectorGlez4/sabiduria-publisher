@@ -7,7 +7,7 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 17 Sep 2026 20:47:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 21:39:19 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>El mapa más famoso de la salud pública no descubrió nada. Se dibujó después, cuando el brote ya bajaba, y el organismo que debía leerlo concluyó al año siguiente que la culpa había sido del aire.</title>
@@ -27,6 +27,25 @@ Quien cerró el caso fue un hombre que había salido a refutarlo. Henry Whitehea
 #SabiduriaDeBolsillo #JohnSnow #Epidemiologia #Londres]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-extra87.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-extra87.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>Un pueblo convirtió el agua escondida en su única muralla: quien no sabía dónde estaba, moría de sed.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-17-re60-reel</guid>
+      <pubDate>Thu, 17 Sep 2026 20:26:00 +0000</pubDate>
+      <description><![CDATA[Un pueblo convirtió el agua escondida en su única muralla: quien no sabía dónde estaba, moría de sed.
+
+Diodoro de Sicilia, que escribió sobre ellos en el siglo I a.C., dejó anotada su ley: no sembrar grano, no plantar árboles frutales, no beber vino y no construir casas, bajo pena de muerte. La razón era militar. Un pueblo que no posee nada no puede ser sitiado. Su reserva era el agua: excavaban depósitos en el desierto, los revestían por dentro, los llenaban con agua de lluvia, sellaban la boca a ras del suelo y dejaban encima señales que solo ellos sabían leer. En el 312 a.C., Antígono, general de Alejandro Magno, intentó someterlos y fracasó.
+
+Tres siglos después el mismo pueblo había roto su propia ley. Levantó Petra: una ciudad de piedra, con casas, presas y tuberías de terracota unidas con mortero, tramos de treinta y cinco centímetros ensamblados uno tras otro. Para que las crecidas repentinas del wadi no arrasaran el desfiladero de entrada, cortaron en la roca un túnel de 88 metros que desviaba el agua por otro barranco. Roma anexó el reino en el año 106.
+
+En 1963 esa defensa ya no estaba operativa. Una crecida entró por el desfiladero y mató a veintidós turistas franceses y a un guía local. Al año siguiente Jordania levantó una presa nueva sobre los cimientos nabateos, y sigue ahí. La obra se entendió cuando faltó.
+
+¿Qué te está protegiendo hoy sin que lo notes?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-re60-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-re60-reel.png" medium="image" type="image/png"/>
     </item>
     <item>
       <title>La primera fotografía de un ser humano se hizo sin que el fotógrafo lo buscara, y la placa original ya no existe.</title>
@@ -483,26 +502,6 @@ Medio grado de temperatura media. Bastó para arruinar las cosechas de un contin
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re58-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re58-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Hay golpes en la vida, tan fuertes... Yo no sé." — César Vallejo, poema inicial de Los heraldos negros</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-14-re56-reel</guid>
-      <pubDate>Mon, 14 Sep 2026 15:26:00 +0000</pubDate>
-      <description><![CDATA["Hay golpes en la vida, tan fuertes... Yo no sé."
-— César Vallejo, Los heraldos negros (1918)
-
-El libro que abre ese verso lleva 1918 en la portada. Entró a la Imprenta Souza Ferreyra de Lima a mediados de ese año y no llegó a las librerías hasta mediados de julio de 1919. Doce meses detenido, esperando un prólogo que Abraham Valdelomar había prometido y que nunca escribió. El libro salió sin él, con un epígrafe del Evangelio en su lugar: quien pueda entender, que entienda.
-
-Vallejo no esperó quieto: durante ese año volvía a la imprenta a corregir sus propios poemas. De aquella primera edición se han localizado diez ejemplares con variantes entre sí, y el investigador que los cotejó concluyó que hubo al menos media docena de primeras ediciones distintas. Valdelomar murió cuatro meses después de que el libro llegara a las tiendas, a los treinta y un años.
-
-El verso más repetido de la poesía peruana no afirma nada. Nombra el golpe y se detiene. En la misma estrofa, dos veces, el poeta admite que no sabe explicarlo.
-
-¿Qué golpe de los tuyos todavía no sabes explicar?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re56-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-14-re56-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
