@@ -1,0 +1,61 @@
+{
+  "id": "2026-10-10-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Derinkuyu, la ciudad subterránea de Capadocia",
+    "hook": "La ciudad más honda de Capadocia estuvo debajo de sus propios vecinos hasta 1963, y todavía no se sabe dónde termina.",
+    "body": [
+      "Derinkuyu está en la provincia de Nevşehir, en el centro de Turquía, excavada en toba volcánica. Se descubrió por casualidad en 1963. Hoy se visita alrededor del diez por ciento: ocho pisos que bajan unos cincuenta metros. La administración turca calcula que, si se despejaran todos los niveles, el complejo llegaría a ochenta y cinco metros y a doce o trece pisos. Un pozo vertical de cincuenta y cinco metros ventila el conjunto y además saca agua. Dentro hay establos, bodegas, comedores, iglesias y una escuela en el segundo piso; las cocinas están arriba, para que la comida baje y no suba.",
+      "Sobre estas ciudades se repite siempre la misma cita: que Jenofonte las describió en la Anábasis, cuatro siglos antes de Cristo. El pasaje existe y es exacto en lo que cuenta —«las casas eran subterráneas, con una abertura como la boca de un pozo por la que entrar, pero anchas y espaciosas abajo», y dentro guardaban cabras, ovejas, vacas y gallinas—, pero no ocurre en Capadocia. Ocurre en Armenia: cuando los griegos preguntan al jefe de la aldea en qué país están, contesta «Armenia», y el territorio vecino es el de los cálibes.",
+      "Capadocia tiene entre ciento cincuenta y doscientos asentamientos subterráneos censados, y solo unos pocos excavados. De Derinkuyu se conoce el uso —la administración turca lo documenta desde el siglo II, con comunidades cristianas—, pero no la fecha en que se empezó a cavar. Eso sigue en discusión."
+    ],
+    "question": "¿Qué hace falta para que un pueblo decida vivir bajo tierra?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "DERINKUYU",
+    "subtitle": "Ocho pisos abiertos y un fondo todavía sin medir",
+    "body": "Bajo un pueblo de Nevşehir, en Turquía, hay una ciudad excavada en roca volcánica. Se encontró por casualidad en 1963. Se visita el diez por ciento: ocho pisos, cincuenta metros. Si se despejaran todos los niveles, se calculan ochenta y cinco metros y doce o trece pisos. Nadie sabe cuándo se cavó."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Derinkuyu", "#Capadocia", "#Arqueologia"],
+    "extended": ["#Turquia", "#CiudadSubterranea", "#Historia", "#Nevsehir", "#Jenofonte", "#Civilizaciones"]
+  },
+  "sources": [
+    {
+      "claim": "Ocho niveles abiertos a los visitantes, con una profundidad accesible de 50 metros; si se limpiaran todos los niveles se llegaría a 85 metros y a 12-13 niveles. Descubierta en 1963. El complejo incluye establos, bodegas, comedores, iglesias y una escuela; la ciudad se asocia a cristianos que huían de la persecución romana en el siglo II.",
+      "source": "Valiliği de Nevşehir (Gobernación provincial), ficha «Derinkuyu Yeraltı Şehri»",
+      "url": "https://www.nevsehir.gov.tr/derinkuyu-yeralti-sehri"
+    },
+    {
+      "claim": "El conjunto alcanza unos 85 metros de profundidad y hoy solo es visitable alrededor del 10 %. Un pozo de ventilación de 55 metros conecta los espacios subterráneos con la superficie y sirve además de pozo de agua. Las cocinas y las zonas de procesado están en los pisos altos para facilitar el transporte de alimentos hacia abajo. En Capadocia se calculan entre 150 y 200 asentamientos subterráneos de distinto tamaño, excavados en toba volcánica blanda.",
+      "source": "T.C. Kültür ve Turizm Bakanlığı, Dirección General de Museos, ficha del museo Derinkuyu Yeraltı Şehri",
+      "url": "https://muze.gov.tr/muze-detay?DistId=DKY&SectionId=DKY01"
+    },
+    {
+      "claim": "Ficha oficial: ciudad subterránea de ocho pisos, abierta a visitas en 1965, con depósitos de provisiones, bodegas de vino, iglesias, monasterios, pozos de agua, sanitarios, salas de reuniones, una escuela misionera, confesionarios y pila bautismal. Uso documentado desde el siglo II d.C. por cristianos que huían del Imperio romano. Solo el diez por ciento del sitio es visitable.",
+      "source": "Kültür Portalı, Ministerio de Cultura y Turismo de Turquía, «Derinkuyu Yeraltı Şehri»",
+      "url": "https://www.kulturportali.gov.tr/turkiye/nevsehir/gezilecekyer/derinkuyu-yeralti-sehri"
+    },
+    {
+      "claim": "Texto de la Anábasis, libro IV, capítulo 5: «The houses were underground structures with an aperture like the mouth of a well by which to enter, but they were broad and spacious below»; la entrada de las bestias estaba excavada y las personas bajaban por una escalera, y dentro había cabras, ovejas, vacas y aves con sus crías. La región del capítulo es Armenia: al preguntar al jefe de la aldea por el país, «he replied, ‘Armenia’», y el territorio vecino se identifica como el de los cálibes.",
+      "source": "Wikisource, Anabasis (traducción de H. G. Dakyns), libro 4, capítulo 5",
+      "url": "https://en.wikisource.org/wiki/Anabasis_(Dakyns)/Book_4/Chapter_5"
+    }
+  ],
+  "do_not_use": [
+    "«Jenofonte describió las ciudades subterráneas de Capadocia». Es el error más repetido del tema. El pasaje de la Anábasis (libro IV, cap. 5) describe aldeas de Armenia, no de Capadocia: el propio texto nombra la región y sitúa al lado el país de los cálibes.",
+    "Dar el año de apertura al público. Las fuentes oficiales turcas no coinciden: el Kültür Portalı y la ficha del museo dicen 1965; la Gobernación de Nevşehir dice 1967. La pieza no da esa fecha.",
+    "Dar la capacidad en número de personas. Circula «20.000 habitantes» en artículos de divulgación y la Gobernación de Nevşehir menciona 50.000. Ninguna de las dos cifras se sostiene en una excavación publicada, y la pieza no da ninguna.",
+    "La anécdota del vecino que tiró una pared de su casa y encontró las salas, o la de las gallinas que desaparecían por una grieta. Es el relato más difundido del hallazgo, pero las fichas oficiales solo dicen que se descubrió por casualidad en 1963.",
+    "Fechar la excavación en los hititas o en los frigios. Se propone en divulgación y en parte de la bibliografía, sin consenso. Las fuentes oficiales turcas documentan el uso desde el siglo II d.C.; el inicio de la excavación no está resuelto.",
+    "El origen del nombre. «Derin kuyu» significa «pozo hondo» en turco, pero la Gobernación lo hace derivar de los 52 pozos de agua de 60 a 70 metros del complejo. La pieza no explica el nombre.",
+    "Presentar Derinkuyu como la ciudad subterránea más antigua o más grande del mundo. Es la más profunda de las excavadas en Capadocia; sobre lo demás no hay dato comprobado aquí.",
+    "El túnel de nueve kilómetros que uniría Derinkuyu con Kaymaklı. Aparece en muchos artículos y no se verificó contra una fuente oficial ni arqueológica en esta investigación."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

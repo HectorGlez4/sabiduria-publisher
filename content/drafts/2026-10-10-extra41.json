@@ -1,0 +1,59 @@
+{
+  "id": "2026-10-10-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Maquiavelo y el capítulo XVIII de El príncipe",
+    "hook": "La frase más citada de Maquiavelo no aparece en ninguna página de Maquiavelo.",
+    "body": [
+      "Nicolás Maquiavelo escribió El príncipe entre la segunda mitad de 1513 y el principio de 1514, con el título latino De principatibus. El libro circuló copiado a mano durante años y se imprimió en Roma en enero de 1532, en el taller de Antonio Blado, cuando el autor ya había muerto. La frase está en el capítulo XVIII, el que discute si un príncipe debe mantener la palabra dada.",
+      "«El fin justifica los medios» no está ahí, ni en ningún otro capítulo. El vocabulario de la Treccani lo dice con todas las letras: la locución se empleó para expresar la actitud del maquiavelismo, «aunque ni Maquiavelo ni ningún escritor jesuita la formularon de esa forma». Lo que el texto dice es «si guarda al fine»: se mira al resultado.",
+      "No es lo mismo. La frase original describe cómo juzgan los demás, no lo que le está permitido a quien manda. Maquiavelo continúa: los medios «serán siempre juzgados honorables y alabados por todos». Es una observación sobre el tribunal del mundo, escrita por alguien que acababa de perder su cargo en Florencia. Cinco siglos de reputación se sostienen en una frase que el libro no contiene."
+    ],
+    "question": "¿Se juzga lo que alguien hizo, o cómo terminó?",
+    "quote": {
+      "text": "En las acciones de todos los hombres, y sobre todo de los príncipes, donde no hay tribunal al que recurrir, se mira al resultado.",
+      "author": "Nicolás Maquiavelo",
+      "work": "El príncipe, cap. XVIII (escrito en 1513; primera edición, Roma, 1532)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Maquiavelo", "#ElPrincipe", "#Filosofia"],
+    "extended": ["#Renacimiento", "#Florencia", "#Citas", "#Politica", "#Historia", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del capítulo XVIII: «nelle azioni di tutti gli uomini, e massime de' Principi, dove non è giudizio a chi reclamare, si guarda al fine» y «Facci adunque un Principe conto di vivere e mantenere lo Stato; i mezzi saranno sempre giudicati onorevoli». La expresión «il fine giustifica i mezzi» no aparece en el capítulo. La traducción al español de esta pieza es propia y respeta el original: «se guarda al fin» se vierte como «se mira al resultado».",
+      "source": "Wikisource en italiano, Il Principe, Capitolo XVIII",
+      "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVIII"
+    },
+    {
+      "claim": "Entrada del vocabulario: la locución se usó para expresar la actitud característica del maquiavelismo, «sebbene né il Machiavelli né alcuno scrittore gesuita l'abbiano formulata in questa forma». Lo que Maquiavelo escribió en el capítulo XVIII de El príncipe es «nelle azioni di tutti gli uomini, e massime de' Principi ... si guarda al fine ... I mezzi saranno sempre iudicati onorevoli».",
+      "source": "Vocabolario Treccani, entrada «Il fine giustìfica i mèżżi»",
+      "url": "https://www.treccani.it/vocabolario/il-fine-giustifica-i-mezzi/"
+    },
+    {
+      "claim": "El príncipe se escribió «probabilmente tra la seconda metà del 1513 e l'inizio del 1514»; el título latino original es De Principatibus. La primera edición impresa es de 1532, publicada por Antonio Blado, póstuma. El capítulo XVIII, «Quomodo fides a principibus sit servanda», trata de la lealtad del príncipe y de la palabra dada.",
+      "source": "Wikipedia en italiano, Il principe",
+      "url": "https://it.wikipedia.org/wiki/Il_principe"
+    }
+  ],
+  "do_not_use": [
+    "«El fin justifica los medios» como cita de Maquiavelo. No está en El príncipe ni en ninguna obra suya; la Treccani señala expresamente que ni él ni ningún escritor jesuita la formularon así. Es el error más extendido sobre este autor.",
+    "Traducir «si guarda al fine» como «el fin justifica los medios» en una versión moderna. Cambia una observación sobre cómo juzga la gente por un permiso moral, que es justamente lo que el texto no dice.",
+    "Atribuir la fórmula a un autor concreto. Circula que la acuñó el crítico Francesco de Sanctis en el siglo XIX; no se verificó aquí y no se afirma.",
+    "Fechar la publicación en vida del autor. El príncipe circuló manuscrito y se imprimió en enero de 1532, ya muerto Maquiavelo. Esta pieza no da el año de su muerte, que no se verificó contra una fuente en esta investigación.",
+    "Dar 1513 como la fecha cerrada de redacción. Las fuentes dicen «probablemente entre la segunda mitad de 1513 y el principio de 1514».",
+    "«Maquiavelo era maquiavélico». El adjetivo lo acuñó la posteridad sobre la lectura de este capítulo. Qué defendía realmente el autor es objeto de discusión académica y esta pieza no la resuelve.",
+    "Presentar El príncipe como su obra principal sin más. Escribió también los Discursos sobre la primera década de Tito Livio y una Historia de Florencia, que en parte dicen cosas distintas. Esa comparación no se hace aquí.",
+    "Citar la edición florentina de Bernardo Giunta de 1532 como la primera. Ese mismo año aparecieron ediciones en Roma y en Florencia; la de Blado, en enero, es la que las fuentes consultadas dan como primera."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

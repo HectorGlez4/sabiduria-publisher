@@ -1,0 +1,66 @@
+{
+  "id": "2026-10-10-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Fanny Hensel y las seis canciones firmadas por Felix",
+    "hook": "La reina Victoria le cantó a Mendelssohn su canción preferida de él, y al terminar él tuvo que decirle quién la había escrito.",
+    "body": [
+      "Fanny Mendelssohn, cuatro años mayor que su hermano Felix, dejó un catálogo de 466 obras, de las cuales 249 son lieder. En vida solo doce salieron impresos con su nombre: los opus 1 y 7, en 1846 y 1847, cuando ya tenía cuarenta y un años. Antes de eso seis canciones suyas ya estaban publicadas, pero con el nombre de su hermano: tres en el opus 8 de Felix, que el editor Schlesinger sacó en Berlín en dos entregas, 1826 y 1827, y otras tres en el opus 9, de 1830. Su nombre no aparece en ninguna de las dos portadas.",
+      "En julio de 1842 Felix visitó a la reina Victoria en el palacio de Buckingham. Ella quiso cantarle la que tenía por su canción favorita de él: «Italien», el número 3 de aquel opus 8, sobre unos versos de Grillparzer. Al terminar, él le dijo que la había compuesto su hermana, y le pidió que cantara otra que sí fuera suya.",
+      "Fanny publicó por fin con su propio nombre en 1846, después de que dos editores berlineses se lo propusieran. Duró poco: el 14 de mayo de 1847 sufrió un derrame mientras ensayaba y murió esa noche, a los cuarenta y un años. Felix murió seis meses después. De las 466 obras del catálogo, doce llevaban su firma y seis llevaban la de otro."
+    ],
+    "question": "¿Quién decide qué nombre lleva una obra terminada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "ITALIEN",
+    "subtitle": "Una canción impresa con el nombre del hermano",
+    "body": "Fanny Mendelssohn dejó 466 obras. En vida publicó doce con su nombre, en 1846 y 1847. Seis habían salido antes bajo el de su hermano Felix: tres en el opus 8 y tres en el opus 9. Cuando la reina Victoria le cantó a Felix «Italien», él confesó que la había escrito ella."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#FannyMendelssohn", "#MusicaClasica", "#HistoriaDeLaMusica"],
+    "extended": ["#FannyHensel", "#Mendelssohn", "#Lied", "#Compositoras", "#SigloXIX", "#Musica", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Las primeras composiciones publicadas de Fanny fueron tres lieder aparecidos bajo la autoría de su hermano en el opus 8 de Felix (Zwölf Gesänge), editado por Schlesinger en dos entregas, 1826 y 1827; otros tres siguieron en el opus 9 (1830). En cada colección de doce, tres son de Fanny, y su nombre no aparece. En 1842 Felix visitó a la reina Victoria en el palacio de Buckingham; ella eligió cantar «Italien», una de las canciones de Fanny, y después él confesó que «Fanny was actually the composer of this song» y pidió a la reina que cantara otra realmente suya. La exposición señala además que a Fanny no se le permitió ejercer como música profesional: ni publicar con su nombre, ni actuar en público, ni cobrar por su trabajo.",
+      "source": "Yale University Library, exposición sobre Mendelssohn, ficha de Zwölf Gesänge op. 8",
+      "url": "https://musiclib-exhibits.library.yale.edu/exhibits/mendelssohn/zwoelf_gesaenge.htm"
+    },
+    {
+      "claim": "«Some of her songs were published under Felix's name: three each in his Op. 8 (1824-27) and Op. 9 (1827, 1829-30).» Sus intentos de publicar con nombre propio fueron desalentados incluso por Felix. Sus Sechs Lieder op. 1 se publicaron en 1846. El 14 de mayo de 1847, mientras ensayaba una cantata de su hermano, sufrió un derrame y murió a los cuarenta y un años; ambos padres habían muerto de derrame y Felix murió seis meses después.",
+      "source": "Chamber Music Society of Lincoln Center, ficha de compositora: Fanny Mendelssohn",
+      "url": "https://www.chambermusicsociety.org/about-the-music/composers/fanny-mendelssohn"
+    },
+    {
+      "claim": "El catálogo de Fanny Hensel comprende 466 obras, de las cuales 249 son lieder. En vida solo se publicaron doce lieder, en 1846 y 1847, como opus 1 y opus 7: «Thus, at the age of 41, Fanny Hensel had finally introduced herself to a wider audience».",
+      "source": "G. Henle Verlag, blog editorial, «Fanny Hensel's Lieder on the Rise»",
+      "url": "https://blog.henle.de/en/2026/05/11/fanny-hensels-lieder-on-the-rise/"
+    },
+    {
+      "claim": "«Italien» es el número 3 de los Zwölf Gesänge op. 8 publicados como de Felix Mendelssohn, y su texto es de Franz Grillparzer; la obra figura catalogada como de Fanny Mendelssohn.",
+      "source": "Presto Music, catálogo de obras: «Mendelssohn, Fanny: Italien, Felix Mendelssohn's Op. 8 No. 3 (Grillparzer)»",
+      "url": "https://www.prestomusic.com/classical/works/36148--mendelssohn-fanny-italien-felix-mendelssohns-op-8-no-3-grillparzer/browse"
+    },
+    {
+      "claim": "Biografía: la publicación de su música empezó en la década de 1840 y «she suffered a stroke in May 1847 and died the following night». El catálogo de canciones incluye «Warum sind denn die Rosen so blass» (1846), op. 1 n.º 3.",
+      "source": "Oxford Song, ficha de compositora: Fanny Mendelssohn-Hensel",
+      "url": "https://oxfordsong.org/composer/fanny-mendelssohn-hensel"
+    }
+  ],
+  "do_not_use": [
+    "«Fanny publicó toda su obra bajo el nombre de Felix». Falso. Lo documentado son seis canciones: tres en el opus 8 y tres en el opus 9. El resto del catálogo —466 obras— quedó casi entero inédito en vida.",
+    "«Felix le prohibió publicar». Las fuentes consultadas dicen que sus intentos fueron desalentados, también por Felix, pero no documentan una prohibición. La pieza no afirma que se lo prohibiera nadie.",
+    "Citar la carta de Felix a su madre del 19 de julio de 1842 como si se conociera aquí su texto. No se pudo consultar: la web del Royal Collection Trust y la hemeroteca galesa que la reproduce devolvieron error 403. Hay relatos que mencionan otra canción cantada en esa misma visita, «Leave off those vain regrets»; la escena de «Italien» se toma de la exposición de Yale, no de la carta.",
+    "«Fue la primera mujer en publicar música». No lo fue, y la afirmación circula en artículos de divulgación. Hubo compositoras publicadas siglos antes.",
+    "Atribuir a Fanny obras de Felix, como la Marcha nupcial. No hay prueba documental de eso y no se sostiene en ninguna fuente consultada.",
+    "Dar la cifra de doce canciones publicadas en vida como si incluyera el opus 8 y el opus 9. Son doce con su nombre, opus 1 y 7; las seis anteriores salieron con el de su hermano.",
+    "Decir que murió «olvidada». Murió en Berlín, en activo, dos meses después de haber visto publicado su segundo opus, y su muerte golpeó a Felix hasta el punto de que él murió seis meses más tarde. Lo que quedó sin publicar fue la obra, no su reputación entre los músicos de su círculo.",
+    "Fechar el opus 8 en un solo año. Schlesinger lo sacó en dos entregas: los números 1 a 6 en 1826 y los doce en 1827. La ficha del Chamber Music Society da un rango algo distinto (1824-27), que tampoco se cierra aquí."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

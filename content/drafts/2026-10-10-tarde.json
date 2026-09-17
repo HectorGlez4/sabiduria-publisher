@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "José Rizal y la conclusión de El filibusterismo",
+    "hook": "La advertencia más dura sobre la independencia filipina la escribió el hombre al que España fusiló por querer la independencia.",
+    "body": [
+      "El filibusterismo, la segunda novela de José Rizal, se imprimió en Gante en 1891, en la imprenta de F. Meyer-Van Loo. La frase está en el capítulo XXXIX, el último, titulado «Conclusión». Quien la dice no es Rizal: es el padre Florentino, y se la dice a Simoun, el joyero que ha preparado un atentado para desencadenar la revolución y que agoniza envenenado en su casa. La pregunta no se cita entera casi nunca. Sigue así: «Y lo serán sin duda porque ama la tiranía quien se somete a ella».",
+      "Cinco años después, el 30 de diciembre de 1896, Rizal fue fusilado en Bagumbayan, en Manila. El juicio se había abierto y cerrado el día 26, con tres cargos: fundar una sociedad ilegal, ser responsable de la rebelión en curso y traición. Preso, había escrito un texto dirigido a los alzados pidiéndoles que depusieran las armas. Las autoridades no lo hicieron público; lo sumaron a la causa.",
+      "En el mismo pasaje, el sacerdote explica de qué depende su reserva: «mientras nuestro pueblo no esté preparado, mientras vaya a la lucha engañado o empujado, sin clara conciencia de lo que ha de hacer, fracasarán las más sabias tentativas». No es una objeción a la libertad. Es una objeción a llegar a ella sin saber qué se hace con ella."
+    ],
+    "question": "¿Qué hay que aprender antes de ser libre?",
+    "quote": {
+      "text": "¿A qué la independencia si los esclavos de hoy serán los tiranos de mañana?",
+      "author": "José Rizal",
+      "work": "El filibusterismo, cap. XXXIX «Conclusión» (Gante, 1891)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JoseRizal", "#Filipinas", "#Literatura"],
+    "extended": ["#ElFilibusterismo", "#SigloXIX", "#Citas", "#Historia", "#Libertad", "#Novela"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del pasaje en el capítulo 39, «Conclucion», del original español: «¿A qué la independencia si los esclavos de hoy serán los tiranos de mañana? Y lo serán sin duda porque ama la tiranía quien se somete á ella! Señor Simoun, mientras nuestro pueblo no esté preparado, mientras vaya á la lucha engañado ó empujado, sin clara conciencia de lo que ha de hacer, fracasarán las más sabias tentativas». En la cita de esta pieza se actualizó la acentuación de «á» y «ó», sin cambiar ninguna palabra.",
+      "source": "KapitBisig.com, El Filibusterismo por José Rizal y Alonso, texto original completo en español, capítulo 39 «Conclucion»",
+      "url": "https://www.kapitbisig.com/philippines/el-filibusterismo-por-jose-rizal-y-alonso-a-complete-original-text-in-spanish-capitulo-39-conclucion_1336.html/page/0/6"
+    },
+    {
+      "claim": "La edición de la que procede el texto digitalizado es la de Gante: en la portada figuran «GENT», la «Boekdrukkerij F. MEYER-VAN LOO, Vlaanderenstraat, 66» y el año 1891.",
+      "source": "Project Gutenberg, El Filibusterismo (Continuación del Noli me tángere), edición de Gante, 1891",
+      "url": "https://www.gutenberg.org/ebooks/30903"
+    },
+    {
+      "claim": "Rizal fue fusilado el 30 de diciembre de 1896 en el campo de Bagumbayan, en Manila; la procesión salió a las 6:30 de la mañana. El juicio se abrió y se cerró el 26 de diciembre de 1896, con veredicto de culpabilidad y pena de muerte. Los cargos fueron tres: formar una sociedad ilegal (La Liga Filipina), ser responsable de la rebelión existente y traición. Estando preso escribió un escrito dirigido a los filipinos alzados pidiéndoles «lay down their arms» por considerar el alzamiento sin esperanza; ese escrito no se hizo público y después se añadió a los cargos contra él.",
+      "source": "Wikipedia en inglés, Trial and execution of José Rizal",
+      "url": "https://en.wikipedia.org/wiki/Trial_and_execution_of_Jos%C3%A9_Rizal"
+    },
+    {
+      "claim": "Contexto del capítulo XXXIX: Simoun, herido y agotado, se refugia en casa del padre Florentino para esconderse de la guardia civil que va a detenerlo, toma veneno y revela su verdadera identidad —que el joyero Simoun es Juan Crisóstomo Ibarra—. El capítulo se titula «Conclusión» y es el último de la novela.",
+      "source": "Standard Ebooks, El Filibusterismo, traducción de Charles E. Derbyshire, capítulo XXXIX «Conclusion»",
+      "url": "https://standardebooks.org/ebooks/jose-rizal/el-filibusterismo/charles-e-derbyshire/text/chapter-39"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como una declaración del propio Rizal. La dice el padre Florentino, un personaje, a Simoun moribundo, en el último capítulo. Rizal la escribió; no la firmó en primera persona.",
+    "Citar solo «los esclavos de hoy serán los tiranos de mañana». Descabezada pierde la condicional y el razonamiento: la frase es una pregunta y va seguida de la explicación —«ama la tiranía quien se somete a ella»— y de la condición sobre un pueblo no preparado.",
+    "«Rizal se opuso a la independencia de Filipinas». Es una simplificación disputada entre historiadores. Lo documentado: en diciembre de 1896, preso, pidió a los alzados deponer las armas porque juzgaba el alzamiento sin esperanza. Esta pieza no resuelve la discusión sobre su posición última.",
+    "«Rizal fundó el Katipunan». Falso. La sociedad que se le imputó en el juicio fue La Liga Filipina. El Katipunan lo fundó Andrés Bonifacio.",
+    "Dar el 15 de diciembre de 1896 como fecha del manifiesto. La página de la Comisión Histórica Nacional de Filipinas que la sostiene devolvió error 403 al consultarla, y la fuente que sí pudo leerse no fecha el escrito. La pieza dice solo «preso», sin fecha.",
+    "Atribuir a Rizal la frase «el que no sabe mirar atrás de donde viene nunca llegará a donde va». Circula como suya en carteles y discursos; su origen es un proverbio tagalo y no se verificó en ninguna obra suya.",
+    "Citar la versión inglesa «Why independence, if the slaves of today will be the tyrants of tomorrow?» como si fuera el original. Rizal escribió la novela en español; esa forma viene de las traducciones.",
+    "El relato de que Rizal se quedó sin dinero a mitad de la impresión y que Valentín Ventura pagó el resto. Circula en casi todas las semblanzas, pero no se verificó aquí contra una fuente de archivo y no se afirma."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
