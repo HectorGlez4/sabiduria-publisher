@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 16 Sep 2026 23:35:36 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 01:33:33 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El experimento se hizo en Berlín, la explicación se escribió en un hotel de Suecia, y el Nobel lo recibió uno solo de los cuatro.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-16-extra84</guid>
+      <pubDate>Thu, 17 Sep 2026 01:33:08 +0000</pubDate>
+      <description><![CDATA[El experimento se hizo en Berlín, la explicación se escribió en un hotel de Suecia, y el Nobel lo recibió uno solo de los cuatro.
+
+En julio de 1938 Lise Meitner salió de Berlín con dos maletas pequeñas y muy poco dinero. Llevaba treinta años trabajando con el químico Otto Hahn; su ascendencia judía la había dejado sin protección. Pasó por el instituto de Niels Bohr en Copenhague y se estableció en Estocolmo. En diciembre, Hahn le escribió desde Berlín: al bombardear uranio con neutrones les aparecía bario, un elemento con poco más de la mitad de la masa del uranio, y no sabía explicarlo.
+
+Meitner pasó la Navidad de 1938 en un hotel cerca de Gotemburgo. Allí la visitó su sobrino Otto Frisch, físico en Copenhague, y entre los dos hicieron las cuentas: el núcleo de uranio se partía en dos. Frisch le preguntó a un biólogo del instituto de Bohr cómo se llamaba la división de una bacteria; le dijeron «fission», y así quedó bautizada. La explicación salió en Nature el 11 de febrero de 1939, volumen 143, páginas 239 y 240. El artículo experimental de Hahn y Strassmann se había enviado el 22 de diciembre y se publicó el 6 de enero en Naturwissenschaften, sin el nombre de Meitner: firmar con una judía en el exilio era políticamente imposible en la Alemania de 1939.
+
+El Nobel de Química de 1944 se concedió a Otto Hahn en solitario, por el descubrimiento de la fisión de los núcleos pesados; la ceremonia se celebró en diciembre de 1945. Meitner fue candidata 48 veces —diecinueve en química y veintinueve en física, entre 1924 y 1965— y no lo recibió nunca. En 1997 la Unión Internacional de Química Pura y Aplicada le puso su nombre al elemento 109: meitnerio.
+
+¿Cuántas explicaciones que hoy usamos llevan el nombre de quien pudo firmarlas?
+
+#SabiduriaDeBolsillo #LiseMeitner #HistoriaDeLaCiencia #MujeresEnLaCiencia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra84.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra84.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un texto chino del siglo IV a.C. ordena tres cosas por su valor y deja al gobernante en último lugar. Mil setecientos años después, un emperador lo mandó recortar.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -486,26 +505,6 @@ La cadena termina de un modo que Favorino no buscaba. Perdió su estatua y perdi
 #SabiduriaDeBolsillo #Safo #PoesiaGriega #Memoria]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-13-extra82.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-13-extra82.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>No tenemos poco tiempo: hemos perdido mucho.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-13-re53-reel</guid>
-      <pubDate>Sun, 13 Sep 2026 22:26:00 +0000</pubDate>
-      <description><![CDATA["No tenemos poco tiempo: hemos perdido mucho."
-— Séneca, Sobre la brevedad de la vida, 1.3 (hacia el año 49)
-
-Séneca no escribió eso para consolar a nadie. Lo escribió como un reproche, dirigido a un funcionario romano que administraba el abasto de trigo de la ciudad y se quejaba de no tener horas.
-
-El original latino usa un tiempo pasado: hemos perdido. No es un problema de agenda. Es una cuenta ya cerrada, de la que no se recupera nada.
-
-Casi dos mil años después seguimos diciendo la misma frase, palabra por palabra: que no nos alcanza el día.
-
-¿En qué se te fue el tiempo que hoy dirías que no tuviste?
-
-#SabiduriaDeBolsillo #Seneca #Estoicismo #Reflexiones]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-13-re53-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-13-re53-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
