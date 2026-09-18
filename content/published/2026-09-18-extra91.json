@@ -2,7 +2,7 @@
   "id": "2026-09-18-extra91",
   "slot": "manana",
   "pillar": "figura",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el diario de guerra de Yi Sun-sin",
     "hook": "Anotó casi todos los días de siete años de guerra. El último asiento es del día 17 del undécimo mes de 1598. Dos días después, una bala lo mató en el estrecho de Noryang.",
@@ -86,5 +86,21 @@
     "threads"
   ],
   "publish_at": "2026-09-18T17:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1098528809638445",
+      "url": "https://www.facebook.com/874327782058550/posts/1098528809638445",
+      "published_at": "2026-09-18T18:46:57.580878+00:00"
+    },
+    "instagram": {
+      "post_id": "18413351383154226",
+      "url": "https://www.instagram.com/p/DdcHOQ3F-ba/",
+      "published_at": "2026-09-18T18:47:09.015979+00:00"
+    },
+    "threads": {
+      "post_id": "18331688509302994",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18331688509302994",
+      "published_at": "2026-09-18T18:47:22.649697+00:00"
+    }
+  }
 }
