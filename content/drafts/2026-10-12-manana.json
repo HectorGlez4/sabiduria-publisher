@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-12-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Marie Tharp y el valle del rift del Atlántico",
+    "hook": "El valle que parte en dos el fondo del Atlántico lo vio ella en 1952, dibujando perfiles de sondeo sobre una mesa. Su jefe lo llamó «charla de chicas» y le mandó repetir los cálculos.",
+    "body": [
+      "Marie Tharp entró en Columbia en 1948 y pasó al recién creado Observatorio Geológico Lamont. El reparto del trabajo no lo eligió ella: las mujeres no podían embarcar en los buques de investigación, así que Bruce Heezen recogía los ecosondeos en el mar y ella los convertía en dibujo en tierra. En 1952, trazando seis perfiles de este a oeste del Atlántico Norte, encontró lo mismo en los seis: una muesca en forma de V justo en la cresta de la dorsal. Propuso que era un valle de rift, una fosa como las que ya se conocían en los continentes.",
+      "Heezen llamó a la idea «charla de chicas» y le pidió que recalculara y volviera a dibujar. El valle seguía ahí. Lo que zanjó la discusión fueron dos hojas sobre una mesa de luz: un estudiante de posgrado había marcado los epicentros de los terremotos submarinos en un mapa de la misma escala, y al superponerlos los epicentros caían en fila por el centro de la V de Tharp. El reconocimiento fue otra historia. El resumen que anunció el valle de rift se publicó en 1955 sin su nombre en la lista de autores. Desde 1959 firmó varias publicaciones, nunca como primera autora. Y no subió a una campaña de recogida de datos hasta 1965, diecisiete años después de haber llegado.",
+      "De aquella mesa salieron los mapas: el Atlántico Norte en 1957, el Atlántico Sur en 1961, el Índico en 1964 y, en 1977, el panorama del fondo oceánico mundial pintado con Heinrich Berann. La dorsal que ese valle recorre mide unas cuarenta mil millas y fue la prueba visible de que el fondo del mar se abre. En 1969, en un artículo de Tectonophysics, Heezen escribió que Tharp había sido la primera en reconocer la existencia de esos valles de rift continuos y tectónicamente activos. Ella murió el 23 de agosto de 2006, a los ochenta y seis años."
+    ],
+    "question": "¿Cuántas veces hay que repetir un cálculo para que lo den por bueno?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "CHARLA DE CHICAS",
+    "subtitle": "El valle del Atlántico, visto en 1952",
+    "body": "En 1952 Marie Tharp trazó seis perfiles del Atlántico Norte y encontró en los seis la misma muesca en la cresta de la dorsal: un valle de rift. Su jefe lo llamó «charla de chicas» y le mandó repetir los cálculos. El valle seguía ahí. El resumen que lo anunció, en 1955, salió sin su nombre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MarieTharp", "#Oceanografia", "#HistoriaDeLaCiencia"],
+    "extended": ["#Cartografia", "#TectonicaDePlacas", "#Atlantico", "#Mapas", "#Geologia", "#MujeresEnLaCiencia", "#SigloXX"]
+  },
+  "sources": [
+    {
+      "claim": "Tharp se incorporó a Columbia en 1948 y pasó al nuevo campus del Observatorio Geológico Lamont. Las mujeres no podían participar en las campañas oceanográficas y ella no embarcó en una expedición de recogida de datos hasta 1965. En 1952, examinando los perfiles de sondeo del Atlántico, identificó una estructura en forma de V en el centro de la dorsal y propuso que era un valle de rift. El resumen que anunciaba el hallazgo se publicó en 1955 «without the name of Marie Tharp in the authors list»; desde 1959 firmó varias publicaciones, aunque nunca como primera autora. En un artículo de Tectonophysics de 1969, Heezen reconoció que Tharp fue «the first to recognize the existence of essentially continuous tectonically active median rift valleys along mid-ocean ridges». En 1977 se publicó el «World Ocean Floor Panorama».",
+      "source": "European Geosciences Union (EGU), Awards & Medals, semblanza de Marie Tharp",
+      "url": "https://www.egu.eu/awards-medals/portrait/marie-tharp/"
+    },
+    {
+      "claim": "En 1948 Tharp buscó trabajo de geología en el Observatorio Lamont de Columbia; las mujeres tenían prohibido subir a los buques de investigación y se la contrató para dibujar perfiles del fondo marino. El trazado de seis perfiles de este a oeste del Atlántico Norte reveló una hendidura central. Heezen desechó la interpretación llamándola «girl talk» y le pidió recalcular y volver a dibujar, pero el accidente seguía ahí. En 1957 Heezen presentó los resultados en Princeton, con el valle de rift y los epicentros sísmicos. En 1959 la Geological Society of America publicó «The Floors of the Oceans: I. The North Atlantic», con los perfiles y los mapas fisiográficos de Tharp. En 1977 se publicó el mapa del fondo oceánico mundial de Heezen y Tharp.",
+      "source": "The Conversation, artículo de Suzanne O'Connell, catedrática Harold T. Stearns de Ciencias de la Tierra, Wesleyan University",
+      "url": "https://theconversation.com/marie-tharp-pioneered-mapping-the-bottom-of-the-ocean-6-decades-ago-scientists-are-still-learning-about-earths-last-frontier-142451"
+    },
+    {
+      "claim": "Tharp obtuvo el máster en Geología en 1944 y entró como asistente de investigación en Columbia. «Women at this time were not allowed on boats». El mapa del fondo del Atlántico Norte se publicó en 1957; siguieron el del Atlántico Sur en 1961 y el del Índico en 1964, y después «The World Ocean Floor». Sus mapas mostraron «40,000 miles of an underwater ridge that runs along the globe». Murió de cáncer el 23 de agosto de 2006, a los 86 años.",
+      "source": "The Mariners' Museum and Park, Ages of Exploration, ficha de Marie Tharp",
+      "url": "https://exploration.marinersmuseum.org/subject/marie-tharp/"
+    },
+    {
+      "claim": "Tharp propuso que la hendidura era un valle de rift; Heezen llamó a la idea «girl talk» y le dijo que recalculara y volviera a dibujar, y al hacerlo el valle seguía ahí. Heezen encargó a un estudiante de posgrado marcar los epicentros de los terremotos submarinos en un mapa de la misma escala que el de Tharp: con las dos hojas superpuestas en una mesa de luz, los epicentros caían justo por el valle en forma de V. A partir de 1957 Tharp y Heezen empezaron a publicar los primeros mapas completos de los rasgos del fondo oceánico.",
+      "source": "Smithsonian Magazine, «Seeing Is Believing: How Marie Tharp Changed Geology Forever»",
+      "url": "https://www.smithsonianmag.com/history/seeing-believing-how-marie-tharp-changed-geology-forever-180960192/"
+    },
+    {
+      "claim": "Fuente que discrepa en dos fechas y que por eso se registra: sitúa la contratación en Lamont en 1949 y la detección de las muescas «hacia 1950-1951», con cerca de un año hasta convencer a Heezen. Coincide en el primer mapa fisiográfico del Atlántico Norte en 1957, en el mapa mundial de 1977 con Berann —terminado semanas antes de la muerte de Heezen—, en las ilustraciones para National Geographic entre 1967 y 1971, y en que la Biblioteca del Congreso la incluyó entre los cuatro grandes cartógrafos del siglo XX.",
+      "source": "Science News, «Marie Tharp's groundbreaking maps brought the seafloor to the world»",
+      "url": "https://www.sciencenews.org/article/marie-tharp-maps-plate-tectonics-seafloor-cartography"
+    }
+  ],
+  "do_not_use": [
+    "Decir que Tharp descubrió la dorsal mesoatlántica. La dorsal se conocía desde los sondeos del siglo XIX. Lo que ella reconoció fue el valle de rift continuo que corre por su eje, que es otra cosa y es lo que importaba.",
+    "Dar 1949 como año de entrada en Lamont. Las fuentes discrepan: la EGU y Suzanne O'Connell dan 1948; Science News, 1949. La pieza usa 1948 y no afirma más.",
+    "Fechar el hallazgo en 1950 o 1951. Science News lo sitúa «hacia 1950-1951»; la EGU y la mayoría de las fuentes institucionales dan 1952, que es lo que usa la pieza.",
+    "Decir que su nombre no apareció en los mapas. Sí aparece: el diagrama fisiográfico de 1957 y el panorama mundial de 1977 se publicaron a nombre de Heezen y Tharp. Lo que salió sin su nombre fue el resumen de 1955.",
+    "Atribuir a Tharp la teoría de la deriva continental o la de la expansión del fondo oceánico. No las formuló. Aportó la prueba cartográfica sobre la que otros las sostuvieron.",
+    "Decir que fue Heezen quien le prohibió embarcar. La prohibición era una norma del observatorio, no una decisión suya; la pieza no se la atribuye a nadie en particular.",
+    "Citar «girl talk» como si constara en un escrito de Heezen. Es lo que Tharp contó que le dijo, recogido en las semblanzas como cita oral, no como texto publicado.",
+    "Convertir las cuarenta mil millas de dorsal en una cifra en kilómetros dándola por verificada. La cifra que dan las fuentes está en millas; cualquier conversión es cálculo propio, no dato de fuente.",
+    "Decir que Heezen y Tharp trabajaron juntos hasta la muerte de ella. Heezen murió en 1977, poco antes de publicarse el mapa mundial; Tharp vivió casi treinta años más."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

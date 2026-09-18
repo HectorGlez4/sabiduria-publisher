@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-12-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la cultura Nok y las terracotas saqueadas",
+    "hook": "En 1995 dos comerciantes nigerianos empleaban a unos mil excavadores cada uno, y salían diez terracotas al día. Por eso todavía no se sabe para qué servían.",
+    "body": [
+      "Las terracotas Nok son la escultura figurativa más antigua al sur del Sáhara. Las primeras salieron en 1928 de una mina de estaño junto a la aldea de Nok, en Nigeria central, y de ahí el nombre: es el topónimo del yacimiento, no el de un pueblo. En 1943 aparecieron más durante la extracción, entre ellas la cabeza de Jemaa. El arqueólogo Bernard Fagg sospechó que los mineros encontraban piezas y las descartaban, y empezó a recogerlas en serio: reunió casi doscientas. Cerca de Taruga halló trece hornos de hierro, con carbón fechado hasta el 280 a.C.",
+      "Nigeria prohibió la venta no autorizada de antigüedades en 1979, por el Decreto 77 de la Comisión Nacional de Museos y Monumentos, y la norma no se hizo cumplir. En 1993 un consorcio de marchantes europeos organizó el saqueo sistemático. Para 1995, dos comerciantes locales empleaban cada uno a unos mil excavadores y se calcula que se desenterraban diez terracotas al día. Lo que se perdió no fueron solo las piezas: la inmensa mayoría salió arrancada de su contexto, y por eso su función en la sociedad Nok se desconoce. Una figura sin contexto no dice para qué servía.",
+      "Desde 2005, un proyecto conjunto de la Universidad Goethe de Fráncfort y la Comisión Nacional de Museos y Monumentos de Nigeria, planteado para doce años y dirigido por Peter Breunig y Katharina Neumann, excavó lo que quedaba. La secuencia quedó así: el poblamiento arranca hacia el 1500 a.C., las terracotas aparecen hacia el 900 a.C., el declive empieza hacia el 400 a.C. y las figuras desaparecen a más tardar en el cambio de era. Y apareció una hipótesis de uso: un papel funerario, una efigie de barro del difunto notable puesta sobre su tumba. El trabajo se cortó en febrero de 2017, cuando Breunig y un miembro de su equipo fueron secuestrados. Desde entonces volvió una sola vez, sin salir de la capital."
+    ],
+    "question": "¿Qué se queda en el hueco de donde se saca una pieza?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "NOK",
+    "subtitle": "La escultura más antigua al sur del Sáhara",
+    "body": "Las primeras salieron en 1928 de una mina de estaño. En 1993 un consorcio de marchantes europeos organizó el saqueo sistemático, y para 1995 dos comerciantes empleaban mil excavadores cada uno. La inmensa mayoría de las terracotas Nok salió sin contexto, y por eso su función se desconoce."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CulturaNok", "#Nigeria", "#Arqueologia"],
+    "extended": ["#Terracota", "#AfricaOccidental", "#Patrimonio", "#Saqueo", "#Escultura", "#Historia", "#EdadDelHierro"]
+  },
+  "sources": [
+    {
+      "claim": "Las primeras terracotas Nok conocidas se encontraron en 1928 durante la minería de estaño cerca de la aldea de Nok; en 1943 aparecieron más durante la extracción, entre ellas la cabeza de Jemaa, y Bernard Fagg sospechó que los mineros hallaban piezas y las descartaban, lo que lo llevó a recogerlas sistemáticamente. Nigeria prohibió la venta no autorizada de antigüedades con el Decreto 77 de 1979 de la Comisión Nacional de Museos y Monumentos, que exigía permisos de exportación, y su aplicación resultó insuficiente. En 1993 «a consortium of European dealers organized systematic looting»; para 1995 dos grandes comerciantes locales empleaban cada uno a unos mil excavadores y «an estimated ten terracottas a day were being uncovered». «The vast majority of Nok terracottas have been looted from their archaeological contexts, their function in Nok society is unknown».",
+      "source": "Trafficking Culture (proyecto de investigación de la Universidad de Glasgow), estudio de caso «Nok Terracottas»",
+      "url": "https://traffickingculture.org/encyclopedia/case-studies/nok-terracottas/"
+    },
+    {
+      "claim": "En 1943, en Jos, un visitante llevó al arqueólogo británico Bernard Fagg una cabeza de terracota que había servido de adorno espantapájaros en un campo de ñame. Fagg reunió «nearly 200 terracottas» de la región Nok comprando, convenciendo y excavando él mismo. Descubrió trece hornos de hierro cerca de la aldea de Taruga, y el carbón de su interior dio «dates as far back as 280 B.C.». El radiocarbono de materia vegetal incrustada dio fechas «from 440 B.C. to A.D. 200», y la cabeza de Jemaa se fechó hacia el 500 a.C. por termoluminiscencia. Un «almost 40-year campaign of looting» destruyó los contextos arqueológicos.",
+      "source": "Archaeology Magazine (Archaeological Institute of America), «The Nok of Nigeria»",
+      "url": "https://archaeology.org/issues/online/features/the-nok-of-nigeria/"
+    },
+    {
+      "claim": "El proyecto de la Universidad Goethe de Fráncfort sobre la cultura Nok, dirigido por los profesores Peter Breunig (arqueología africana) y Katharina Neumann (arqueobotánica africana), está «designed to take a total of twelve years» y examina todos los aspectos principales de la cultura Nok. La secuencia: la fase inicial «emerged around 1500 BC», las figuras de terracota aparecieron «around 900 BC», el declive «began around 400 BC» y las terracotas y la cerámica Nok «finally disappeared at the latest by the birth of Christ». Sobre la función: los investigadores «presumed that the figures played a role in burial rites», con indicios de una efigie de barro del difunto notable colocada sobre la tumba. «After Breunig and a member of his team were kidnapped in February 2017, the team has returned to Africa only once and did not venture beyond the capital».",
+      "source": "Goethe-Universität Frankfurt, nota de prensa «Nok research project enters final phase»",
+      "url": "https://aktuelles.uni-frankfurt.de/en/english/nok-research-project-enters-final-phase/"
+    },
+    {
+      "claim": "El proyecto es conjunto entre la Universidad Goethe de Fráncfort y la Comisión Nacional de Museos y Monumentos de Nigeria y está en marcha desde 2005; desde 2009 examina todos los aspectos principales de la cultura Nok. La datación por radiocarbono distingue tres fases: inicial 1500-900 a.C., media 900-300 a.C. y tardía 300-1 a.C., y la fase principal, en la que aparecen las figuras de terracota y la producción de hierro, empieza en el siglo IX a.C. y termina en el siglo IV a.C.",
+      "source": "Goethe-Universität Frankfurt, página del proyecto de investigación Nok",
+      "url": "https://www.goethe-university-frankfurt.de/74990848/Nok_research_project_enters_final_phase"
+    },
+    {
+      "claim": "El museo titula su ensayo sobre el tema «Nok Terracottas (500 B.C.–200 A.D.)», es decir, sostiene un rango de fechas más estrecho que el del proyecto de Fráncfort. Se registra por la discrepancia.",
+      "source": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History, ensayo «Nok Terracottas (500 B.C.–200 A.D.)»",
+      "url": "https://www.metmuseum.org/essays/nok-terracottas-500-b-c-200-a-d"
+    }
+  ],
+  "do_not_use": [
+    "Llamar «Nok» al pueblo que hizo las figuras. Nok es el nombre de la aldea junto a la que salieron las primeras piezas, no un etnónimo. No se sabe cómo se llamaban.",
+    "Dar el 500 a.C. como fecha de la cultura Nok. Ese es el resultado de termoluminiscencia de una sola pieza, la cabeza de Jemaa, y coincide con el rango estrecho que usa el Met. La secuencia del proyecto de Fráncfort, que es la que usa la pieza, sitúa las terracotas desde el 900 a.C. y el poblamiento desde el 1500 a.C.",
+    "Decir que Nok es la metalurgia del hierro más antigua de África. No se verificó y la pieza no lo afirma: solo da el carbón de los trece hornos de Taruga, con fechas que llegan al 280 a.C.",
+    "Presentar el uso funerario como un hecho. Los propios investigadores lo dan como suposición, y la pieza lo dice como hipótesis.",
+    "Contar que Bernard Fagg descubrió la cultura Nok excavando. La primera cabeza le llegó de fuera, ya sacada de su sitio; sus excavaciones vinieron después.",
+    "Fechar en 1943 el primer hallazgo. El primero conocido es de 1928, también en la minería de estaño; en 1943 aparecieron más piezas, entre ellas la cabeza de Jemaa, y es cuando empieza el estudio sistemático.",
+    "Decir que el proyecto de Fráncfort se canceló tras el secuestro de febrero de 2017. La fuente dice que el equipo volvió a África una sola vez y no salió de la capital, no que se cancelara.",
+    "Confundir 2005, cuando arranca el proyecto conjunto, con 2009, cuando empieza a examinar todos los aspectos de la cultura. Son dos datos distintos de la misma institución.",
+    "Tratar una terracota Nok sin procedencia documentada como material de estudio. Desde 1993 el saqueo organizado sacó piezas en masa y desde los años setenta circulan además falsificaciones; sin procedencia, una pieza no aporta cronología ni función."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

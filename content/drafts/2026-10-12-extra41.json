@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-12-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kautilya y la felicidad del rey en el Arthaśāstra",
+    "hook": "El tratado de gobierno más antiguo de la India estuvo perdido siete siglos. La frase suya que sí tiene procedencia es la que casi nadie comparte.",
+    "body": [
+      "El Arthaśāstra se daba por perdido desde el siglo XII. En 1905, un brahmán tamil entregó a la Biblioteca Oriental de Mysore un manuscrito completo en hoja de palma, escrito en grafía grantha. El bibliotecario, R. Shamasastri, lo identificó, lo editó y publicó el sánscrito en 1909; la traducción inglesa salió en 1915. El verso está en el libro I, capítulo 19, el de los deberes del rey, con el número 1.19.34: «prajāsukhe sukhaṃ rājñaḥ prajānāṃ ca hite hitam / nātmapriyaṃ hitaṃ rājñaḥ prajānāṃ tu priyaṃ hitam».",
+      "El libro no es un tratado de bondad. En los mismos capítulos hay instrucciones sobre espías, venenos y guerra, y su asunto declarado es cómo se conserva un Estado. Lo que hace raro al verso 34 no es el sentimiento: es que pone la legitimidad del gobernante fuera del gobernante. El rey no decide qué es el bien público. Lo decide el estado en que esté el gobernado. Del autor, en cambio, se sabe menos de lo que se repite: la tradición lo llama Kauṭilya y lo identifica con Chanakya, ministro de Chandragupta Maurya en el siglo IV a.C., pero sobre la datación y la autoría hay un debate considerable. Mark McClish sitúa el origen en los últimos siglos antes de nuestra era y la forma final hacia los siglos III o IV.",
+      "Eso tiene una consecuencia práctica. Las listas de «citas de Chanakya» que circulan —sobre enemigos, dinero, amigos— no vienen del Arthaśāstra: pertenecen al Cāṇakya-nīti, un cuerpo distinto de máximas breves recogido en antologías posteriores. La frase con procedencia comprobable es la que menos se copia, y es la que más pide. No enseña a un gobernante a conservar el poder. Le dice dónde mirar para saber si lo está usando bien."
+    ],
+    "question": "¿Dónde se mira para saber si un poder está bien usado?",
+    "quote": {
+      "text": "En la felicidad de sus súbditos está la felicidad del rey; en su bienestar, su bienestar. No ha de tener por bueno lo que le agrada a él, sino lo que agrada a sus súbditos.",
+      "author": "Kauṭilya",
+      "work": "Arthaśāstra I 19 (verso 1.19.34); trad. Shamasastry, 1915",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Arthashastra", "#Kautilya", "#IndiaAntigua"],
+    "extended": ["#Citas", "#Sanscrito", "#Politica", "#Manuscritos", "#Mysore", "#Chanakya", "#HistoriaDelPensamiento"]
+  },
+  "sources": [
+    {
+      "claim": "Traducción inglesa de R. Shamasastry, 1915, Arthashastra, libro I, capítulo XIX, «The Duties of a King»: «In the happiness of his subjects lies his happiness; in their welfare his welfare; whatever pleases himself he shall not consider as good, but whatever pleases his subjects he shall consider as good». La página identifica al traductor y el año de la traducción.",
+      "source": "Wikisource, Arthashastra, libro I, traducción de R. Shamasastry (1915)",
+      "url": "https://en.wikisource.org/wiki/Arthashastra/Book_I"
+    },
+    {
+      "claim": "Digitalización institucional de la traducción de R. Shamasastry, «Kautilya's Arthasastra», que permite comprobar la traducción de 1915 en su edición impresa.",
+      "source": "Internet Archive, ejemplar del Indira Gandhi National Centre for the Arts (IGNCA), «Kautilya's Arthasastra», R. Shamasastry",
+      "url": "https://archive.org/details/in.gov.ignca.900"
+    },
+    {
+      "claim": "El manuscrito completo del Arthaśāstra de Kauṭilya en grafía grantha, en hoja de palma, fue descubierto y editado por primera vez por el doctor R. Shamashastri, bibliotecario del Instituto de Investigación Oriental; un brahmán tamil entregó el manuscrito a la Biblioteca Oriental de Mysore en 1905, y la obra se publicó en 1909. Se trataba del redescubrimiento de un texto que se daba por perdido a partir del siglo XII. Advertencia de método: la página no se pudo abrir con WebFetch (fallo de certificado); su contenido se leyó a través de la extracción del buscador.",
+      "source": "University of Mysore, Oriental Research Institute, página de manuscritos en hoja de palma",
+      "url": "http://uni-mysore.ac.in/english-version/oriental_research.php?ids=132"
+    },
+    {
+      "claim": "Sobre la datación y la autoría del Arthaśāstra hay «considerable debate». Mark McClish sostiene que el origen del texto está en los últimos siglos del primer milenio a.C. y que su forma final pudo fijarse hacia los siglos III o IV de nuestra era.",
+      "source": "World History Encyclopedia, artículo de Disha Ray, «Social, Political & Economic Landscapes in Kautilya's Arthashastra»",
+      "url": "https://www.worldhistory.org/article/1561/social-political--economic-landscapes-in-kautilyas/"
+    },
+    {
+      "claim": "Texto sánscrito del capítulo 1.19 con la numeración estándar: KAZ_01.19.34ab «prajāsukhe sukhaṃ rājñaḥ prajānāṃ ca hite hitam» y KAZ_01.19.34cd «nātmapriyaṃ hitaṃ rājñaḥ prajānāṃ tu priyaṃ hitam». Advertencia de método: la página devolvió 403 a WebFetch; las dos mitades del verso se leyeron en el contenido indexado de esa misma página, no en un ejemplar de la edición crítica de Kangle.",
+      "source": "Wisdomlib, Kautilya Arthashastra, texto sánscrito, capítulo 1.19",
+      "url": "https://www.wisdomlib.org/hinduism/book/kautilya-arthashastra-sanskrit/d/doc905520.html"
+    },
+    {
+      "claim": "El Cāṇakya-nīti es un cuerpo distinto del Arthaśāstra: versos epigramáticos de observación y consejo, citados con frecuencia en obras y antologías sánscritas posteriores y recogidos en numerosas compilaciones a lo largo del tiempo.",
+      "source": "Wisdomlib, entrada del Cāṇakyanīti",
+      "url": "https://www.wisdomlib.org/sanskrit/book/30/canakyaniti"
+    },
+    {
+      "claim": "Referencia bibliográfica de la traducción académica moderna del tratado, útil para contrastar la de 1915: Patrick Olivelle, «King, Governance, and Law in Ancient India: Kautilya's Arthasastra», Oxford University Press, Nueva York, 2013.",
+      "source": "Oxford University Press / Oxford Academic, ficha del libro",
+      "url": "https://academic.oup.com/book/8486"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir el Arthaśāstra a Chanakya como si fuera un hecho establecido. La tradición identifica a Kauṭilya con Chanakya, pero sobre la datación y la autoría hay un debate considerable. La pieza da la identificación como tradición, no como dato.",
+    "Fechar el tratado en el siglo IV a.C. sin matiz. McClish sitúa el origen en los últimos siglos antes de nuestra era y la forma final hacia los siglos III o IV; la pieza lo dice así.",
+    "Decir que Thomas Trautmann y Patrick Olivelle rechazan expresamente la identificación de Kauṭilya con Chanakya. Es lo que afirman resúmenes secundarios, pero no se pudo comprobar en una fuente de primera mano y la pieza no lo afirma.",
+    "Citar como del Arthaśāstra cualquier máxima de las listas de «citas de Chanakya». Esas pertenecen al Cāṇakya-nīti, un corpus distinto de versos breves recogido en antologías posteriores.",
+    "Dar fechas a los manuscritos del Cāṇakya-nīti. Se leyó que las versiones sánscritas conservadas van de los siglos X al XVIII, pero no se verificó con fuente de calidad y la pieza no lo dice.",
+    "Presentar el Arthaśāstra como un tratado de gobierno benévolo. En sus mismos libros hay instrucciones sobre espionaje, veneno y guerra. El verso 1.19.34 destaca por contraste, no por representar el conjunto.",
+    "Contar que Shamasastri encontró el manuscrito buscándolo. Se lo entregaron: un brahmán tamil lo llevó a la biblioteca en 1905.",
+    "Confundir 1909, año de la edición sánscrita, con 1915, año de la traducción inglesa. Son dos publicaciones distintas de la misma persona.",
+    "Dar el texto sánscrito como comprobado en una edición crítica de primera mano. Las dos mitades del verso se cotejaron con el contenido indexado de una edición sánscrita en línea que usa la numeración KAZ_01.19.34; no se consultó un ejemplar de la edición de Kangle.",
+    "Traducir «prajā» por «pueblo» en sentido moderno. En el tratado son los súbditos de un rey, y la frase no habla de soberanía popular ni de consulta: habla de en qué debe fijarse el gobernante para juzgarse."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}

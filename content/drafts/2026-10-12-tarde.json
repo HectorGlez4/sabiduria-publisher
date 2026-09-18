@@ -1,0 +1,64 @@
+{
+  "id": "2026-10-12-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tácito y las leyes contra hombres concretos",
+    "hook": "La frase que se usa para decir que hay demasiadas leyes no dice eso. En Tácito la mitad que se cae es la que aclara contra quién estaban escritas.",
+    "body": [
+      "El texto latino es «iamque non modo in commune sed in singulos homines latae quaestiones, et corruptissima re publica plurimae leges». Está al final del capítulo 27 del libro III de los Anales. La edición que sirve Perseus es la de Charles Dennis Fisher, Clarendon Press, Oxford, 1906; la traducción de referencia es la de John Jackson para la Loeb, volumen III, 1931. Y el capítulo no es un aforismo: es el cierre de un excurso sobre la historia de la legislación romana que va de III 25 a III 28. Empieza con las Doce Tablas, que Tácito llama «finis aequi iuris», el último caso de derecho equitativo, y luego narra la caída: los Gracos, Saturnino, Druso, la guerra de Italia, la guerra civil, Sila.",
+      "Lo que se pierde al citarla suelta son dos cosas. La primera es gramatical: el latín no lleva verbo ni comparativo. «Corruptissima re publica plurimae leges» son dos superlativos contiguos que describen un tramo concreto, el de la república tardía después de Sila; la proporción de las versiones modernas —cuanto más corrupto el Estado, más numerosas las leyes— la añaden los traductores. La segunda es de contenido y pesa más: la oración empieza con «non modo in commune sed in singulos homines», ya no para el bien común, sino contra hombres concretos. El escándalo que Tácito señala no es la cantidad. Es que la ley llevara nombre y apellido.",
+      "Arduino Maiuri, de la Sapienza de Roma, lee el excurso como un círculo vicioso: la degradación de las costumbres multiplica las disposiciones legales, los delitos crecen en paralelo y hacen falta más instrumentos de coacción; y bajo un autócrata como Tiberio, la ley deja de servir para ejercer justicia y pasa a imponer violencia. Contado así, la frase no denuncia que haya muchas leyes. Denuncia que se legisle contra alguien."
+    ],
+    "question": "¿Contra quién está escrita una ley que lleva un nombre propio?",
+    "quote": {
+      "text": "Y ya se aprobaban causas no solo de alcance general, sino contra hombres concretos; y cuando la república estaba más corrompida, las leyes fueron más numerosas.",
+      "author": "Tácito",
+      "work": "Anales III 27; texto latino ed. Fisher, Clarendon, 1906",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Tacito", "#Roma", "#HistoriaDelDerecho"],
+    "extended": ["#Anales", "#Citas", "#Leyes", "#Latin", "#Tiberio", "#Republica", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino del final de Anales III 27 es: «Iamque non modo in commune sed in singulos homines latae quaestiones, et corruptissima re publica plurimae leges». El texto latino servido procede de la edición de Charles Dennis Fisher, Clarendon Press, Oxford, 1906.",
+      "source": "Perseus Digital Library (Tufts University), Cornelius Tacitus, Annales, Liber III, capítulo 27",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0077:book%3D3:chapter%3D27"
+    },
+    {
+      "claim": "Traducción del capítulo completo en la Loeb Classical Library, volumen III de Tácito, 1931 (John Jackson): el capítulo arranca con la expulsión de Tarquinio y las Doce Tablas, «the final instance of equitable legislation», recorre a los Gracos, Saturnino, Druso, la guerra de Italia, la guerra civil y la dictadura de Sila, y cierra: «And now bills began to pass, not only of national but of purely individual application, and when the state was most corrupt, laws were most abundant».",
+      "source": "LacusCurtius (Bill Thayer, University of Chicago), Tacitus, Annals, Book III, texto de la Loeb Classical Library, vol. III, 1931",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/3B*.html"
+    },
+    {
+      "claim": "El pasaje es el cierre de un excurso tacitiano sobre la historia de las leyes que abarca Anales 3, 25-28. La lectura del estudio: «the degradation of customs has made legislative provisions proliferate in a vicious circle, with the parallel increase of crimes and the consequent need for further coercive instruments», y bajo gobernantes autocráticos como Tiberio la ley se vuelve «an organ of oppression, a weapon used not so much to exercise justice, but to impose violence».",
+      "source": "Arduino Maiuri (Sapienza Università di Roma), «Corruptissima re publica plurimae leges. L'excursus tacitiano sulla storia delle leggi (ann. 3, 25-28)», Codex vol. 3, L'Erma di Bretschneider, 2022, DOI 10.48255/J.Codex.03.2022.06",
+      "url": "https://en.lerma.it/toc/6511"
+    },
+    {
+      "claim": "Texto latino íntegro del capítulo 27 del libro III, que permite comprobar que la frase es la última oración del capítulo y que el capítulo empieza con «Pulso Tarquinio» y con las Doce Tablas como «finis aequi iuris».",
+      "source": "The Latin Library, Tacitus, Annales, Liber III",
+      "url": "https://www.thelatinlibrary.com/tacitus/tac.ann3.shtml"
+    }
+  ],
+  "do_not_use": [
+    "Citar «Plurimae leges corruptissima republica». El orden está invertido respecto al latín, que dice «corruptissima re publica plurimae leges». La inversión pone las leyes delante y convierte una observación histórica en una acusación contra el hecho de legislar.",
+    "Traducirla como «cuanto más corrupto el Estado, más numerosas las leyes». El latín no lleva verbo ni comparativo: son dos superlativos contiguos que describen un tramo determinado. La proporción la añaden las traducciones modernas.",
+    "Atribuirla a Cicerón. Circula así en recopilaciones. Es de Tácito y está en Anales III 27.",
+    "Usarla como máxima universal contra el exceso de regulación. Es el cierre de un excurso histórico sobre la legislación romana, de las Doce Tablas a Sila, no una ley general sobre los Estados.",
+    "Citarla sin el «in singulos homines». Lo que Tácito señala no es la cantidad de leyes, sino que se legislara contra personas concretas. Sin esa mitad la frase dice otra cosa.",
+    "Dar una fecha de composición de los Anales o del libro III. No se verificó ninguna y la pieza no la da: solo fecha las ediciones, Fisher 1906 y Loeb 1931.",
+    "Presentar las Doce Tablas como el elogio de Tácito a la buena legislación en general. Las llama el último caso de derecho equitativo, y lo dice como bisagra de lo que va a contar: todo lo posterior es decadencia.",
+    "Atribuir a Tácito la idea de que la corrupción causa las leyes. La oración pone las dos cosas juntas, no una detrás de la otra; la relación causal es de la interpretación posterior."
+  ],
+  "status": "draft",
+  "targets": ["facebook", "instagram", "threads"]
+}
