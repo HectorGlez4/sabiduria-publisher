@@ -239,6 +239,20 @@
             "espectadores": 69
           }
         }
+      },
+      {
+        "instantanea": "72h",
+        "observed_at": "2026-09-18T14:10:00+00:00",
+        "edad_horas": 86.4,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "nota": "Instantánea tomada tarde: la tarea programada del laboratorio quedó colgada desde 2026-09-16T19:47Z y ninguna ventana corrió entre medias.",
+        "metricas": {
+          "facebook": {
+            "visualizaciones": 92,
+            "alcance": 72,
+            "espectadores": 72
+          }
+        }
       }
     ],
     "cross_posting": "None from this run. Note: CELL-018 (Instagram phone, same family) was auto-shared to this Page on 2026-09-14T19:38Z."

@@ -204,7 +204,22 @@
     "post_url": "https://www.facebook.com/874327782058550/posts/1096118733212786",
     "audio_verified": null,
     "master_sha256": "fe54a0943a3b59e0c63bbd7b9845ed5e8615f94ff1d8efc042e3710f4953fc90",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-18T14:10:00+00:00",
+        "edad_horas": 63.1,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "nota": "Instantánea tomada tarde: la tarea programada del laboratorio quedó colgada desde 2026-09-16T19:47Z y ninguna ventana corrió entre medias.",
+        "metricas": {
+          "facebook": {
+            "visualizaciones": 11,
+            "alcance": 10,
+            "espectadores": 10
+          }
+        }
+      }
+    ]
   },
   "missing_data_reasons": {
     "audience_metrics": "Capture 24 h / 72 h / 7 d from 2026-09-16T22:58:47.496592+00:00; Facebook via Chrome (SDB_PAGE_TOKEN lacks read_insights)."
