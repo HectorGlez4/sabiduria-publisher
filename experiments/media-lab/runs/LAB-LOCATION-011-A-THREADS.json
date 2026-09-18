@@ -180,7 +180,24 @@
     "post_url": "https://www.threads.com/@sabiduriabolsillo/post/DdVHQM-EZev",
     "audio_verified": null,
     "master_sha256": "b5185c5ee2bc1c0c43552db4f4da251a1cc1055978e881e977532ca3dc3664e8",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-18T14:00:19.803992+00:00",
+        "edad_horas": 60.46,
+        "metricas": {
+          "threads": {
+            "views": 8,
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0,
+            "shares": 0
+          }
+        },
+        "errores": {}
+      }
+    ]
   },
   "missing_data_reasons": {
     "audience_metrics": "Capture 24 h / 72 h / 7 d from 2026-09-17T01:32:47.949673+00:00.",
