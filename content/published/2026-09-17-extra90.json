@@ -2,7 +2,7 @@
   "id": "2026-09-17-extra90",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el Códice de Dresde y Ernst Förstemann",
     "hook": "De todos los libros mayas quedan cuatro. El más completo empezó a descifrarlo un bibliotecario de Dresde que no conocía la lengua ni había pisado nunca Yucatán.",
@@ -84,5 +84,21 @@
     "threads"
   ],
   "publish_at": "2026-09-18T03:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1098049193019740",
+      "url": "https://www.facebook.com/874327782058550/posts/1098049193019740",
+      "published_at": "2026-09-18T06:28:51.368597+00:00"
+    },
+    "instagram": {
+      "post_id": "17994973263010115",
+      "url": "https://www.instagram.com/p/DdaywR5lIBX/",
+      "published_at": "2026-09-18T06:29:02.511995+00:00"
+    },
+    "threads": {
+      "post_id": "18423078196144936",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18423078196144936",
+      "published_at": "2026-09-18T06:29:14.577868+00:00"
+    }
+  }
 }
