@@ -180,7 +180,25 @@
     "post_url": "https://www.instagram.com/p/DdUrmvOjwrH/",
     "audio_verified": null,
     "master_sha256": "d5154741a2f1462c4908ca98558a9a5b02051f0a536dc0e16afa6ff5499efce0",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-18T13:58:27.483205+00:00",
+        "edad_horas": 64.46,
+        "metricas": {
+          "instagram": {
+            "reach": 19,
+            "views": 29,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 1
+          }
+        },
+        "errores": {}
+      }
+    ]
   },
   "missing_data_reasons": {
     "audience_metrics": "Capture 24 h / 72 h / 7 d from 2026-09-16T21:31:10.740554+00:00."
