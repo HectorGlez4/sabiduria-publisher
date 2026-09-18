@@ -201,6 +201,23 @@
           }
         },
         "errores": {}
+      },
+      {
+        "instantanea": "72h",
+        "observed_at": "2026-09-18T14:01:56.260894+00:00",
+        "edad_horas": 114.0,
+        "metricas": {
+          "instagram": {
+            "reach": 11,
+            "views": 16,
+            "likes": 3,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 3
+          }
+        },
+        "errores": {}
       }
     ]
   },
