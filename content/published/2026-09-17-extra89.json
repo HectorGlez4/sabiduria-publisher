@@ -2,7 +2,7 @@
   "id": "2026-09-17-extra89",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Henrietta Leavitt y las cefeidas",
     "hook": "En 1912, la mujer que medía estrellas a treinta centavos la hora dejó escrita la regla con la que hoy se mide el universo.",
@@ -80,5 +80,21 @@
     "threads"
   ],
   "publish_at": "2026-09-17T23:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1097869916371001",
+      "url": "https://www.facebook.com/874327782058550/posts/1097869916371001",
+      "published_at": "2026-09-18T00:53:48.666860+00:00"
+    },
+    "instagram": {
+      "post_id": "18249204385309590",
+      "url": "https://www.instagram.com/p/DdaMaRnHaTh/",
+      "published_at": "2026-09-18T00:54:01.173447+00:00"
+    },
+    "threads": {
+      "post_id": "18117108640942485",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18117108640942485",
+      "published_at": "2026-09-18T00:54:12.794500+00:00"
+    }
+  }
 }
