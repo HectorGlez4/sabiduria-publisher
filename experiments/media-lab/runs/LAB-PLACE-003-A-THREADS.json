@@ -180,7 +180,24 @@
     "post_url": "https://www.threads.com/@sabiduriabolsillo/post/DdUuI_wlHLj",
     "audio_verified": null,
     "master_sha256": "d5154741a2f1462c4908ca98558a9a5b02051f0a536dc0e16afa6ff5499efce0",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-18T13:58:57.828561+00:00",
+        "edad_horas": 64.1,
+        "metricas": {
+          "threads": {
+            "views": 1,
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0,
+            "shares": 0
+          }
+        },
+        "errores": {}
+      }
+    ]
   },
   "missing_data_reasons": {
     "audience_metrics": "Capture 24 h / 72 h / 7 d from 2026-09-16T21:53:18.024626+00:00."
