@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-13-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Thoreau y la desesperación callada de Walden",
+    "hook": "LA FRASE MÁS CITADA DE THOREAU TIENE UNA SEGUNDA MITAD QUE CASI NADIE REPITE",
+    "quote": {
+      "text": "La masa de los hombres lleva vidas de callada desesperación. Lo que se llama resignación es desesperación confirmada.",
+      "author": "Henry David Thoreau",
+      "work": "Walden, «Economía» (1854)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Walden se publicó el 9 de agosto de 1854, en Boston. Las dos oraciones están juntas en el primer capítulo, «Economía». En el original: The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation. La primera se repite en todas partes. La segunda casi nunca.",
+      "Y la segunda es la que muerde. No dice que la gente sufra: dice que le ha puesto el nombre de paz a haberse rendido. El párrafo sigue: del campo desesperado se pasa a la ciudad desesperada, y una desesperación estereotipada, aunque inconsciente, se esconde incluso bajo lo que llamamos juegos y diversiones.",
+      "Lo escribió alguien que no era un ermitaño. La cabaña quedaba a menos de un kilómetro del camino principal de Concord y de la vía del tren, bajaba al pueblo cada día o cada dos, recibía visitas y daba fiestas. Vivió allí dos años, dos meses y dos días. No se había ido lejos: se había puesto a mirar de cerca aquello de lo que hablaba."
+    ],
+    "question": "¿Cuánto de lo que llamas conformidad es en realidad cansancio?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "THOREAU",
+    "subtitle": "La mitad de la frase que nadie repite",
+    "body": "La frase se cita siempre sola: la masa de los hombres lleva vidas de callada desesperación. La oración siguiente es la que muerde: lo que se llama resignación es desesperación confirmada. Y quien lo escribió no era un ermitaño; bajaba al pueblo cada día o cada dos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Thoreau",
+      "#Walden",
+      "#Citas"
+    ],
+    "extended": [
+      "#HenryDavidThoreau",
+      "#Literatura",
+      "#Filosofia",
+      "#VidaSencilla",
+      "#Clasicos",
+      "#Lectura",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En el capítulo «Economy» de Walden, Thoreau escribe: «The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation. From the desperate city you go into the desperate country, and have to console yourself with the bravery of minks and muskrats»",
+      "source": "Walden, cap. I «Economy», texto íntegro (American Literature)",
+      "url": "https://americanliterature.com/author/henry-david-thoreau/book/walden/chapter-i-economy"
+    },
+    {
+      "claim": "El mismo párrafo continúa: «A stereotyped but unconscious despair is concealed even under what are called the games and amusements of mankind»",
+      "source": "Henry David Thoreau, Walden (1854), «Economy», edición en PDF alojada por la Universidad de La Laguna",
+      "url": "https://pdcrodas.webs.ull.es/fundamentos/ThoreauWalden.pdf"
+    },
+    {
+      "claim": "Walden se publicó el 9 de agosto de 1854; ese día Thoreau anotó en su diario «'Walden' published»",
+      "source": "Library of America, «Henry David Thoreau: August 9, 1854»",
+      "url": "https://blog.loa.org/2010/08/henry-david-thoreau-august-9-1854.html"
+    },
+    {
+      "claim": "La cabaña no estaba aislada: quedaba a menos de media milla del ferrocarril o del camino principal a Concord, Thoreau iba al pueblo «cada día o cada dos», recibía visitas y daba fiestas; vivió allí dos años, dos meses y dos días",
+      "source": "The Walden Woods Project, «Myths and Misconceptions» y «Thoreau»",
+      "url": "https://www.walden.org/education/for-students/myths-and-misconceptions/"
+    },
+    {
+      "claim": "La imagen del ermitaño es un tópico: Thoreau escribió «I think that I love society as much as most», llegó a reunir bajo su techo a veinticinco o treinta personas, circulaba peticiones por vecinos necesitados y estaba atento a la vida de la comunidad",
+      "source": "National Endowment for the Humanities, «Not Exactly a Hermit: Henry David Thoreau» (2012)",
+      "url": "https://www.neh.gov/humanities/2012/septemberoctober/feature/not-exactly-hermit"
+    },
+    {
+      "claim": "La versión castellana de la cita es traducción propia hecha desde el original inglés verificado; no procede de ninguna edición española concreta",
+      "source": "Nota editorial de esta pieza; el original inglés está en las dos primeras fuentes",
+      "url": "https://americanliterature.com/author/henry-david-thoreau/book/walden/chapter-i-economy"
+    }
+  ],
+  "do_not_use": [
+    "citar solo «la masa de los hombres lleva vidas de callada desesperación»: sin la oración siguiente la frase se lee como lamento, y con ella es una acusación a la resignación. Cortarla ahí es justo el error del que trata la pieza",
+    "la coletilla «y van a la tumba con la canción todavía dentro», que circula pegada a la frase: no está en Walden. Se atribuye habitualmente a Oliver Wendell Holmes y su procedencia exacta no está establecida",
+    "presentar la versión castellana como cita de una edición española: es traducción propia desde el original, y así consta en las fuentes",
+    "llamar ermitaño a Thoreau o decir que vivió aislado en plena naturaleza: la cabaña estaba a menos de media milla del camino a Concord y bajaba al pueblo cada día o cada dos",
+    "dar cifras de venta de la primera edición: las fuentes discrepan —una habla de 1.744 ejemplares vendidos antes de acabar 1854 sobre una tirada de 2.000, y otras de un primer tiraje que tardó años en agotarse—, así que el dato no se usa",
+    "decir que Walden narra un año: comprime en las cuatro estaciones de un año los dos años, dos meses y dos días que realmente vivió allí"
+  ],
+  "_verificacion_prosa": "**Henry David Thoreau**, 12 de julio de 1817 – 6 de mayo de 1862 (The Walden Woods Project). **La cita:** en el capítulo I de Walden, «Economy», el párrafo dice literalmente: «The mass of men lead lives of quiet desperation. What is called resignation is confirmed desperation. From the desperate city you go into the desperate country, and have to console yourself with the bravery of minks and muskrats. A stereotyped but unconscious despair is concealed even under what are called the games and amusements of mankind». Verificado en el texto íntegro de American Literature y en el PDF de Walden alojado por la Universidad de La Laguna. **Publicación:** 9 de agosto de 1854, Ticknor and Fields, Boston; la Library of America recoge la anotación del propio diario de Thoreau ese día: «'Walden' published». **La versión castellana** de esta pieza es traducción propia desde ese original: no se toma de ninguna edición española, y se dice. **El tópico del ermitaño:** The Walden Woods Project lo desmonta — la casa «no estaba aislada en el desierto, sino a menos de media milla del ferrocarril o del camino principal a Concord», iba al pueblo «cada día o cada dos», recibía visitas, y su fiesta anual de las sandías era conocida entre los vecinos; el experimento era «de vida sencilla y deliberada y para escribir su primer libro», no de aislamiento. El National Endowment for the Humanities añade su propia frase, «I think that I love society as much as most», y que llegó a caber bajo su techo «veinticinco o treinta almas, con sus cuerpos, a la vez». **Duración:** «dos años, dos meses y dos días» (The Walden Woods Project). **No usar:** la frase cortada por la mitad; la coletilla de la canción en la tumba (no está en Walden; se suele atribuir a Oliver Wendell Holmes y no tiene procedencia establecida); la versión castellana como si fuera de una edición publicada; el retrato de ermitaño; ninguna cifra de ventas de la primera edición, porque las fuentes discrepan; ni la idea de que el libro narra un año real.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sófocles y el primer estásimo de Antígona",
+    "hook": "EL ELOGIO MÁS FAMOSO DEL SER HUMANO ESTÁ ESCRITO CON UNA PALABRA QUE TAMBIÉN SIGNIFICA TERRIBLE",
+    "quote": {
+      "text": "Muchas cosas asombrosas existen y, con todo, nada más asombroso que el hombre.",
+      "author": "Sófocles",
+      "work": "Antígona, primer estásimo, v. 332 (trad. Gredos, 1981)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El verso abre el primer canto del coro en Antígona, estrenada en Atenas hacia el 441 a. C. En griego dice: pollà tà deinà koudèn anthrópou deinóteron pélei. La palabra que aquí se traduce por «asombroso» es deinós, y deinós significa a la vez admirable y temible. No hay forma de quedarse con uno de los dos sentidos sin perder el otro.",
+      "El coro sigue enumerando lo que el hombre sabe hacer: cruzar el mar aunque el viento del sur lo levante blanco, gastar la tierra con el arado año tras año, el habla, el pensamiento rápido como el viento, el temple que ordena las ciudades, el refugio contra la helada y la lluvia. «Tiene recurso para todo», dice. Y añade: contra la muerte, ninguno.",
+      "Entonces gira. Esa misma destreza, «una sutileza mayor de lo que cabe esperar», lo lleva «unas veces al mal, otras veces al bien»; quien honra las leyes de la tierra engrandece su ciudad, y quien no, se queda sin ciudad. El verso se cita casi siempre solo, como himno al progreso. En la obra, el coro lo canta justo antes de que traigan detenida a Antígona."
+    ],
+    "question": "¿Qué destreza tuya admiras sin haber mirado hacia dónde te lleva?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "SÓFOCLES",
+    "subtitle": "El verso que se lee como elogio y en la obra es una advertencia",
+    "body": "El canto del coro en Antígona empieza diciendo que nada hay más asombroso que el hombre. La palabra griega, deinós, significa a la vez admirable y temible, y el mismo canto termina advirtiendo que esa destreza lleva unas veces al bien y otras al mal."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Sofocles",
+      "#Antigona",
+      "#Tragedia"
+    ],
+    "extended": [
+      "#GreciaAntigua",
+      "#Filosofia",
+      "#Literatura",
+      "#Teatro",
+      "#Clasicos",
+      "#Historia",
+      "#Citas",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto griego del v. 332 es «πολλὰ τὰ δεινὰ κοὐδὲν ἀνθρώπου δεινότερον πέλει», puesto en boca del coro",
+      "source": "Perseus Digital Library — Sófocles, edición de F. Storr, Loeb Classical Library 20 (1912)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0185:card=332"
+    },
+    {
+      "claim": "Jebb traduce el v. 332 como «Wonders are many, and none is more wonderful than man», y los vv. 333-341 describen el cruce del mar con el viento del sur y el desgaste de la tierra con el arado",
+      "source": "Perseus Digital Library — Sófocles, traducción de Sir Richard Jebb, Cambridge University Press (1891)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0186%3Acard%3D332"
+    },
+    {
+      "claim": "En los vv. 354-364 el coro atribuye al hombre el habla, el pensamiento veloz como el viento, el temple que ordena las ciudades y el refugio contra la helada y la lluvia, y dice que tiene recurso para todo salvo para la muerte",
+      "source": "Perseus Digital Library — Sófocles, traducción de Sir Richard Jebb (1891)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0186%3Acard%3D354"
+    },
+    {
+      "claim": "En los vv. 365-375 el coro dice que esa destreza, «una sutileza mayor de lo esperable», lo mueve «unas veces al mal, otras veces al bien», y que queda desterrado de su ciudad quien se une a la infamia",
+      "source": "Perseus Digital Library — Sófocles, traducción de Sir Richard Jebb (1891)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0186%3Acard%3D365"
+    },
+    {
+      "claim": "La palabra deinós del v. 332 tiene un doble sentido paradójico, «maravilloso» y «terrible», y de esa ambigüedad depende la lectura del canto entero",
+      "source": "Kosmos Society, Center for Hellenic Studies (Harvard University): «Deinos in Antigone»",
+      "url": "https://kosmossociety.org/deinos-in-antigone/"
+    },
+    {
+      "claim": "La traducción castellana «Muchas cosas asombrosas existen y, con todo, nada más asombroso que el hombre» es la de Assela Alamillo para Sófocles, Tragedias, Biblioteca Clásica Gredos (1981)",
+      "source": "Sófocles, Tragedias, trad. y notas de Assela Alamillo, Biblioteca Clásica Gredos (Madrid, 1981); edición reimpresa en Biblioteca Básica Gredos (2000)",
+      "url": "https://www.agapea.com/Sofocles/ANTIGONA-9788424926403-i.htm"
+    }
+  ],
+  "do_not_use": [
+    "traducir deinós por «maravilloso» a secas y presentar el canto como un elogio sin reservas: el sentido «terrible» está en la misma palabra y la tragedia lo activa. Tampoco al revés: quedarse solo con «terrible» borra la admiración que el canto sí expresa",
+    "citar el verso como prueba de que los griegos creían en el progreso: el canto entero termina en una advertencia y en la palabra ápolis, sin ciudad",
+    "la versión «de todas las maravillas, ninguna mayor que el hombre» atribuida a Sófocles sin más: es una de las muchas traducciones posibles y ninguna es «la» frase original, que está en griego",
+    "dar el 441 a. C. como fecha cerrada del estreno: es la datación habitual, deducida de que Sófocles fue elegido estratego en 440, pero no hay testimonio directo",
+    "afirmar que el coro se refiere a Antígona o a Creonte en este canto: el sujeto es el hombre en general, y la aplicación a los personajes es lectura posterior, no texto"
+  ],
+  "_verificacion_prosa": "**Texto griego:** Perseus Digital Library, Sófocles ed. F. Storr, Loeb Classical Library 20, William Heinemann / The Macmillan Company, 1912 — v. 332, Coro: «πολλὰ τὰ δεινὰ κοὐδὲν ἀνθρώπου δεινότερον πέλει». **Traducción inglesa de referencia:** Sir Richard Jebb, Cambridge University Press, 1891 (Perseus): «Wonders are many, and none is more wonderful than man. This power spans the sea, even when it surges white before the gales of the south-wind... Earth, too, the eldest of the gods... he wears away to his own ends, turning the soil with the offspring of horses as the plows weave to and fro year after year» (vv. 332-341). **Continuación (vv. 354-364, Jebb):** «Speech and thought fast as the wind and the moods that give order to a city he has taught himself, and how to flee the arrows of the inhospitable frost under clear skies and the arrows of the storming rain... He has resource for everything. Lacking resource in nothing he strides towards what must come. From Death alone he shall procure no escape». **Cierre del estásimo (vv. 365-375, Jebb):** «Possessing resourceful skill, a subtlety beyond expectation he moves now to evil, now to good. When he honors the laws of the land and the justice of the gods to which he is bound by oath, his city prospers. But banned from his city is he who, thanks to his rashness, couples with disgrace». **La ambigüedad de deinós:** la Kosmos Society del Center for Hellenic Studies de Harvard trata el doble sentido —«wonderful» y «terrible»— como el problema interpretativo central del verso, y señala que sugiere a la vez el logro humano y algo ominoso en esa capacidad. **Traducción castellana usada:** Assela Alamillo, Sófocles, Tragedias, Biblioteca Clásica Gredos, Madrid, 1981: «Muchas cosas asombrosas existen y, con todo, nada más asombroso que el hombre». **Fecha de estreno:** hacia el 441 a. C., datación habitual y no documentada directamente; se deduce de la elección de Sófocles como estratego en 440. **No usar:** una sola de las dos mitades de deinós; el verso como prueba de fe griega en el progreso; ninguna traducción castellana como «la original»; el 441 a. C. como dato cerrado; ni aplicar el canto a Antígona o a Creonte como si el texto lo dijera.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "2026-10-13-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Nicolás Steno y los dientes de tiburón de 1666",
+    "hook": "LE MANDARON LA CABEZA DE UN TIBURÓN Y DE AHÍ SALIÓ LA MANERA DE LEER EL TIEMPO EN LA PIEDRA",
+    "body": [
+      "En octubre de 1666 apareció en la costa de Livorno un tiburón enorme. Fernando II de Médici, gran duque de Toscana, mandó la cabeza a Florencia para que la abriera un anatomista danés de veintiocho años: Niels Stensen, latinizado Nicolás Steno. Contó trece hileras de dientes en cada mandíbula y las dibujó una por una.",
+      "Esos dientes eran idénticos a las glosopetras, unas piedras triangulares que aparecían dentro de las rocas de las montañas. Se explicaban como lenguas de serpiente petrificadas o como objetos caídos del cielo. Steno publicó la disección en 1667 y sostuvo lo evidente y lo incómodo: eran dientes. Y si un diente de mar estaba metido dentro de una roca de montaña, esa roca había sido blanda alguna vez.",
+      "De esa pregunta salió en 1669 un opúsculo de setenta y ocho páginas. Decía que los estratos se depositan en orden y que el de abajo es anterior al de arriba. Es el principio de superposición: la primera manera de leer el tiempo en la piedra, doscientos cincuenta años antes de que existiera la datación radiactiva. Steno dejó la ciencia poco después. Se hizo católico en 1667, sacerdote en 1675 y obispo en 1677."
+    ],
+    "question": "¿Qué explicación cómoda estás dando por buena sin haberla mirado de cerca?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "STENO",
+    "subtitle": "La cabeza de un tiburón que obligó a alargar la edad del mundo",
+    "body": "En 1666 diseccionó en Florencia la cabeza de un tiburón y vio que sus dientes eran idénticos a unas piedras que salían dentro de las rocas de las montañas. Si un diente de mar estaba dentro de una roca de montaña, la roca había sido blanda alguna vez. De ahí salió el principio de superposición."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Steno",
+      "#Geologia",
+      "#Fosiles"
+    ],
+    "extended": [
+      "#NicolasSteno",
+      "#HistoriaDeLaCiencia",
+      "#Ciencia",
+      "#Paleontologia",
+      "#Tiburones",
+      "#Florencia",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En octubre de 1666 la cabeza de un tiburón capturado cerca de Livorno llegó a Steno por orden de Fernando II de Médici; contó trece hileras de dientes en cada mandíbula y los relacionó con las glosopetras",
+      "source": "NASA Earth Observatory / NASA Science, «Nicolaus Steno»",
+      "url": "https://science.nasa.gov/earth/earth-observatory/nicolaus-steno"
+    },
+    {
+      "claim": "Steno publicó la disección en 1667 como «Canis carchariae dissectum caput» y sostuvo que las glosopetras eran dientes de tiburón; antes se explicaban como lenguas de serpiente petrificadas o como objetos caídos del cielo",
+      "source": "University of Reading, Special Collections: «Stones, Sharks and Steno's De Solido»",
+      "url": "https://collections.reading.ac.uk/special-collections/2021/01/07/stones-sharks-and-stenos-de-solido/"
+    },
+    {
+      "claim": "La disección de 1667 fue un apéndice de una obra anatómica escrita para Fernando II de Médici, y la imagen de la cabeza del tiburón se volvió el icono del origen orgánico de los fósiles",
+      "source": "University of Oklahoma, exposición «Galileo's World»: «Dissection of the Head of a Shark»",
+      "url": "https://galileo.ou.edu/exhibits/dissection-head-shark"
+    },
+    {
+      "claim": "«De solido intra solidum naturaliter contento dissertationis prodromus» (1669) tiene setenta y ocho páginas y establece el principio de superposición: los estratos se depositan en secuencia, los más antiguos abajo",
+      "source": "NASA Earth Observatory / NASA Science, «Nicolaus Steno»",
+      "url": "https://science.nasa.gov/earth/earth-observatory/nicolaus-steno"
+    },
+    {
+      "claim": "Steno se convirtió al catolicismo en 1667, fue ordenado sacerdote el 13 de abril de 1675, consagrado obispo el 19 de septiembre de 1677 y murió el 25 de noviembre de 1686",
+      "source": "Wikipedia en inglés, «Nicolas Steno» (corroboración de fechas biográficas)",
+      "url": "https://en.wikipedia.org/wiki/Nicolas_Steno"
+    }
+  ],
+  "do_not_use": [
+    "decir que Steno fue el primero en proponer que las glosopetras eran dientes: Fabio Colonna ya lo había sostenido en 1616 y el propio Steno escribe que quienes lo afirman «no andan lejos de la verdad». Lo suyo fue demostrarlo anatómicamente y sacar de ahí la consecuencia geológica",
+    "dar por cerrado cómo llegó el tiburón: la Universidad de Reading dice que lo capturaron pescadores frente a Toscana, la exposición de Oklahoma dice que quedó varado. Coinciden en la fecha y en que Fernando II mandó la cabeza a Steno; el resto no",
+    "dar el peso del animal como dato firme (Reading habla de unas 3.500 libras; otras fuentes no dan cifra)",
+    "decir que Steno calculó la edad de la Tierra: no dató nada en años, estableció un orden relativo entre capas",
+    "presentar su conversión como una renuncia impuesta por la Iglesia: fue decisión propia, y «De solido», su obra geológica mayor, es de 1669, es decir, posterior a la conversión de 1667",
+    "llamarlo «el padre de la geología» como título oficial: es un apodo divulgativo, no una atribución de las instituciones que conservan su obra"
+  ],
+  "_verificacion_prosa": "**Niels Stensen / Nicolás Steno**, 1 de enero de 1638 – 25 de noviembre de 1686. **El tiburón:** la NASA fecha en octubre de 1666 la llegada de la cabeza a Steno por orden de los Médici, cerca de Livorno, y recoge las «13 hileras de dientes» en cada mandíbula. La Universidad de Reading fecha la captura en el otoño de 1666 frente a la costa toscana y describe la disección como acto público en Florencia; la exposición Galileo's World de la Universidad de Oklahoma dice que el animal quedó varado. Las tres coinciden en el año, en el destinatario (Fernando II de Médici) y en el resultado. **La publicación:** «Canis carchariae dissectum caput», 1667, apéndice de una obra anatómica escrita para el gran duque (Oklahoma). **Las glosopetras:** piedras triangulares halladas dentro de rocas; se explicaban como lenguas de serpiente petrificadas por san Pablo o como caídas del cielo (Reading y NASA). Steno escribe que quienes las tienen por dientes de tiburón «no andan lejos de la verdad» (Reading). **De solido:** 1669, setenta y ocho páginas sobre la geología toscana, pensado como introducción de una obra mayor que nunca escribió; establece la superposición —«los estratos se depositan en secuencia, los más antiguos abajo y los más nuevos arriba»— y la NASA subraya que «distaba mucho de ser obvio en su momento» y que permitió ordenar el tiempo antes de que existiera la datación radiactiva. **Biografía posterior:** conversión al catolicismo el día de Difuntos de 1667; ordenación sacerdotal el 13 de abril de 1675; vicario apostólico de las Misiones Nórdicas el 21 de agosto de 1677 y consagración episcopal el 19 de septiembre de 1677; muerte en Schwerin el 25 de noviembre de 1686; beatificado por Juan Pablo II el 23 de octubre de 1988 (Wikipedia en inglés, usada solo para fechas biográficas). **No usar:** la primacía de la hipótesis (es de Colonna, 1616); el modo de captura como dato cerrado (las fuentes discrepan); el peso; cualquier cifra en años para la edad de la Tierra; y la idea de que la Iglesia lo apartó de la ciencia.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

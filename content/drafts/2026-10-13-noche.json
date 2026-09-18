@@ -1,0 +1,82 @@
+{
+  "id": "2026-10-13-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "al-Ghazali y la cátedra que abandonó en 1095",
+    "hook": "EL PROFESOR MÁS IMPORTANTE DE BAGDAD ABRIÓ LA BOCA PARA DAR CLASE Y NO LE SALIÓ LA VOZ",
+    "body": [
+      "Abu Hamid al-Ghazali dirigía desde 1091 la Nizamiyya de Bagdad, la escuela más prestigiosa del islam de su tiempo. No había cumplido los cuarenta y tenía cientos de alumnos. En julio de 1095 se quedó sin habla delante de ellos. Lo examinaron los médicos y dictaminaron que el cuerpo no tenía nada.",
+      "Él lo contó después, en el libro que suele traducirse como La liberación del error. Llevaba meses con una pregunta que no se atrevía a responder: si enseñaba por Dios o por el prestigio. En noviembre de 1095 salió de Bagdad anunciando que peregrinaba a La Meca. Repartió su fortuna, se reservó lo justo para sus hijos y se fue a Siria. Estuvo once años sin dar clase.",
+      "Volvió a enseñar en 1106, en Nishapur, y murió en diciembre de 1111. Lo que se sigue leyendo novecientos años después —los cuarenta libros del Ihya, entre otras cosas— lo escribió en esos once años sin cátedra. De la cátedra no quedó nada."
+    ],
+    "question": "¿Qué pregunta llevas tiempo sin hacerte para no tener que contestarla?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "AL-GHAZALI",
+    "subtitle": "Se quedó sin voz delante de sus alumnos y tardó once años en volver",
+    "body": "En 1091 dirigía la escuela más prestigiosa de Bagdad. En julio de 1095 abrió la boca para dar clase y no le salió la voz; los médicos dijeron que el cuerpo no tenía nada. Repartió su fortuna y se marchó. Volvió a enseñar once años después, y lo que aún se lee lo escribió en ese silencio."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlGhazali",
+      "#Filosofia",
+      "#Bagdad"
+    ],
+    "extended": [
+      "#FilosofiaIslamica",
+      "#Sufismo",
+      "#EdadMedia",
+      "#Historia",
+      "#Pensamiento",
+      "#Vocacion",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "al-Ghazali fue nombrado en 1091 profesor de la madrasa Nizamiyya de Bagdad, dejó de enseñar en 1095, volvió a la enseñanza en 1106 en la Nizamiyya de Nishapur y murió en diciembre de 1111",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Al-Ghazali» (Frank Griffel)",
+      "url": "https://plato.stanford.edu/entries/al-ghazali/"
+    },
+    {
+      "claim": "Antes de irse, al-Ghazali concluyó que servir a las autoridades políticas era incompatible con una vida religiosa virtuosa y ponía en riesgo su salvación; el Ihya ulum al-din, escrito tras dejar Bagdad, consta de cuarenta libros repartidos en cuatro secciones",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Al-Ghazali» (Frank Griffel)",
+      "url": "https://plato.stanford.edu/entries/al-ghazali/"
+    },
+    {
+      "claim": "La crisis le impidió hablar, comer y le afectó la salud; se tomó primero por una dolencia médica y los médicos concluyeron que era de origen psicológico y sin cura médica. La cronología sitúa el impedimento del habla en julio de 1095 y la salida de Bagdad en noviembre de 1095",
+      "source": "ghazali.org, «Al-Ghazali's Turning Point» (con la tabla cronológica de la biografía de Kojiro Nakamura)",
+      "url": "https://www.ghazali.org/articles/crisis.htm"
+    },
+    {
+      "claim": "En al-Munqidh min al-Dalal al-Ghazali escribe que Dios encadenó su lengua y le impidió dar clase: «God caused an impediment to chain my tongue and prevented me from lecturing. Vainly I desired, in the interest of my pupils, to go on with my teaching, but my mouth became dumb»",
+      "source": "al-Ghazali, al-Munqidh min al-Dalal, traducción inglesa de Claud Field, reimpresa en Charles F. Horne (ed.), 1917; texto alojado en ghazali.org",
+      "url": "https://ghazali.org/books/md/gz101.htm"
+    },
+    {
+      "claim": "En el mismo texto declara que anunció públicamente que iba a peregrinar a La Meca mientras en secreto resolvía ir a Siria, y que salió de Bagdad renunciando a su fortuna, reservando por autorización legal solo lo necesario para su sostén y el de sus hijos",
+      "source": "al-Ghazali, al-Munqidh min al-Dalal, trad. Claud Field; texto alojado en ghazali.org",
+      "url": "https://ghazali.org/books/md/gz101.htm"
+    }
+  ],
+  "do_not_use": [
+    "dar «diez años» o «once años» como si fueran el mismo dato: al-Munqidh dice «diez años» —cifra redonda del propio autor— y la cronología académica va de 1095 a 1106, que son once. Se usa once y se dice de dónde sale",
+    "llamar «depresión» o «crisis nerviosa» al episodio con vocabulario clínico moderno: las fuentes dicen que los médicos descartaron causa corporal, no que diagnosticaran nada que hoy tenga ese nombre",
+    "presentar la traducción de Claud Field como edición crítica: es una versión inglesa antigua y libre; la traducción anotada de referencia es la de Richard J. McCarthy (Twayne, 1980). Aquí se cita a Field porque es el texto consultable, no porque sea la mejor",
+    "decir que al-Ghazali abandonó la filosofía o la prohibió: escribió contra ciertas tesis de los filósofos, y su propia obra posterior es filosófica y teológica",
+    "atribuirle el cierre de la ciencia en el islam: es una tesis divulgativa muy discutida y no se sostiene con estas fuentes",
+    "dar su año de nacimiento como dato firme: las fuentes dan «hacia 1058», por eso aquí se dice que no había cumplido los cuarenta y no una edad exacta"
+  ],
+  "_verificacion_prosa": "**Abu Hamid Muhammad al-Ghazali**, nacido hacia 1058 en Tus, muerto en diciembre de 1111. **Cátedra:** la Stanford Encyclopedia of Philosophy (entrada de Frank Griffel) fecha en 1091 su nombramiento en la madrasa Nizamiyya de Bagdad y en 1095 su marcha. **La crisis:** la cronología de la biografía de Kojiro Nakamura, alojada en ghazali.org, sitúa el «impediment in speech» en julio de 1095 y la salida de Bagdad en noviembre de 1095; el mismo material describe una crisis personal «tan severa que afectó a su habla, a su alimentación y a su salud», tomada primero por dolencia médica y descartada como tal por los médicos. **Su propio relato:** en al-Munqidh min al-Dalal, según la traducción inglesa de Claud Field alojada en ghazali.org, «God caused an impediment to chain my tongue and prevented me from lecturing. Vainly I desired, in the interest of my pupils, to go on with my teaching, but my mouth became dumb»; y sobre la salida: «I gave out publicly that I intended to make the pilgrimage to Mecca, while I secretly resolved to go to Syria... I left Baghdad, giving up all my fortune», reservando por autorización legal lo necesario para su sostén y el de sus hijos. **Motivo de fondo, según la SEP:** había empezado a cambiar de vida dos años antes bajo influencia de la literatura sufí, y concluyó que servir a las autoridades políticas era incompatible con la vida religiosa virtuosa y comprometía su salvación. **Duración:** la SEP da once años sin enseñar (1095-1106) y el regreso a la docencia en 1106 en la Nizamiyya de Nishapur; al-Munqidh, en cambio, dice «ten years passed in this manner». **Obra del periodo:** Ihya ulum al-din, «la revivificación de las ciencias religiosas», cuarenta libros en cuatro secciones, escrito tras dejar Bagdad. **No usar:** confundir los diez años de su relato con los once de la cronología sin decirlo; vocabulario clínico moderno; presentar a Field como edición crítica (la de referencia es McCarthy, Twayne, 1980); la idea de que abandonó o prohibió la filosofía; la tesis de que cerró la ciencia en el islam; ni una edad exacta a partir de un nacimiento que las fuentes dan solo como «hacia 1058».",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
