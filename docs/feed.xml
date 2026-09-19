@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 19 Sep 2026 06:10:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 16:47:33 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El aparato más complejo que dejó la Antigüedad griega salió del mar en 1901 y pasó medio siglo catalogado como un bulto de bronce corroído.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-19-extra95</guid>
+      <pubDate>Sat, 19 Sep 2026 16:47:04 +0000</pubDate>
+      <description><![CDATA[El aparato más complejo que dejó la Antigüedad griega salió del mar en 1901 y pasó medio siglo catalogado como un bulto de bronce corroído.
+
+En la primavera de 1900, unos buzos de esponjas de la isla de Symi se refugiaron de un temporal frente a Anticitera, entre Creta y el Peloponeso. Debajo encontraron un naufragio del siglo I a.C. El rescate se prolongó durante 1901 y llevó al Museo Arqueológico Nacional de Atenas estatuas de bronce, mármoles, vidrio y joyas. Entre todo aquello viajaba un bloque de bronce corroído del tamaño de un libro, sin ningún atractivo evidente.
+
+El 17 de mayo de 1902 el arqueólogo Valerios Stais vio en ese bloque algo que no encajaba: una rueda dentada. Fue la primera vez que alguien reconoció que aquello era un mecanismo. El dato no llevó a ninguna parte durante décadas. Recién en 1959 Derek de Solla Price publicó en Scientific American un artículo titulado «An Ancient Greek Computer»; en 1971 radiografió los fragmentos con el físico griego Charalampos Karakalos, y en 1974 sacó «Gears from the Greeks», la primera reconstrucción sistemática del aparato.
+
+En 2006, un equipo encabezado por Tony Freeth publicó en Nature, volumen 444, páginas 587 a 591, una tomografía de rayos X de alta resolución de los fragmentos. Dentro había miles de caracteres de texto que nadie había leído en dos mil años. El aparato predecía eclipses mediante el ciclo de Saros, de 223 lunaciones, y reproducía la velocidad variable de la Luna con un pasador que corría por una ranura. Sobreviven ochenta y dos fragmentos y treinta ruedas dentadas de bronce, expuestos todos en Atenas desde 2013. Ningún otro objeto conocido alcanza esa complejidad de engranajes hasta los relojes astronómicos europeos, más de mil años después.
+
+¿Qué se necesita para reconocer algo que todavía no tiene nombre?
+
+#SabiduriaDeBolsillo #Anticitera #GreciaAntigua #HistoriaDeLaCiencia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-extra95.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-extra95.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>La mayor ciudad al norte de México antes de 1492 llegó entera hasta nosotros. Todo menos su nombre.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -483,27 +502,6 @@ Después empezó la carrera de la frase por su cuenta. La obra de teatro de Fran
 #SabiduriaDeBolsillo #AnaFrank #Diario #SegundaGuerraMundial]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-15-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-15-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EL HORMIGÓN ROMANO SE REPARA SOLO, Y DURANTE DÉCADAS ESO SE TOMÓ POR UN DEFECTO</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-15-re51-reel</guid>
-      <pubDate>Wed, 16 Sep 2026 03:26:00 +0000</pubDate>
-      <description><![CDATA[EL HORMIGÓN ROMANO SE REPARA SOLO, Y DURANTE DÉCADAS ESO SE TOMÓ POR UN DEFECTO
-
-En los muros romanos aparecen grumos blancos de cal, del tamaño de un grano de arroz. Se leyeron mucho tiempo como prueba de una mezcla mal hecha: obra descuidada, material barato.
-
-En enero de 2023 un equipo del MIT publicó lo contrario en Science Advances. Esos grumos son depósitos de calcio. Cuando se abre una grieta y entra agua, el calcio se disuelve, vuelve a cristalizar y sella la fisura desde dentro. Lo repitieron en laboratorio: la probeta hecha a la romana se cerró sola en dos semanas; la de control siguió agrietada.
-
-Plinio el Viejo ya lo había escrito hacia el año 77: el hormigón de los puertos se vuelve "una sola masa de piedra, inexpugnable a las olas y más fuerte cada día". Sonaba a exageración.
-
-La cúpula del Panteón mide 43 metros y sigue siendo la mayor del mundo en hormigón sin armar. Casi mil novecientos años sin una varilla de acero.
-
-¿Cuántas cosas llamamos defecto solo porque no entendemos para qué sirven?
-
-#SabiduriaDeBolsillo #Roma #Historia #Ciencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-15-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-15-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
