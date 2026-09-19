@@ -2,7 +2,7 @@
   "id": "2026-09-18-extra93",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "los puquios de Nazca y sus ojos en espiral",
     "hook": "En el desierto de Nazca hay una obra de la misma gente que trazó las líneas. No se ve desde el aire, no representa nada y sigue funcionando: de los cuarenta y dos acueductos registrados, veintinueve todavía llevan agua.",
@@ -87,5 +87,21 @@
     "threads"
   ],
   "publish_at": "2026-09-18T22:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1098717372952922",
+      "url": "https://www.facebook.com/874327782058550/posts/1098717372952922",
+      "published_at": "2026-09-19T00:47:00.837775+00:00"
+    },
+    "instagram": {
+      "post_id": "18332693713259873",
+      "url": "https://www.instagram.com/p/DdcwbWWnYAH/",
+      "published_at": "2026-09-19T00:47:13.160440+00:00"
+    },
+    "threads": {
+      "post_id": "18217177108345366",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18217177108345366",
+      "published_at": "2026-09-19T00:47:26.056240+00:00"
+    }
+  }
 }
