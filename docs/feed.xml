@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 19 Sep 2026 21:33:09 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 23:18:44 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Yo fui el arquitecto de mi propio destino.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-19-re71-reel</guid>
+      <pubDate>Sat, 19 Sep 2026 22:26:00 +0000</pubDate>
+      <description><![CDATA["Yo fui el arquitecto de mi propio destino."
+— Amado Nervo (1870-1919)
+
+Este verso se ha vuelto un eslogan de superación personal. En el poema no lo es. El verso anterior dice desde dónde habla: muy cerca de mi ocaso. No es alguien celebrando lo que consiguió, es un hombre haciendo cuentas al final.
+
+Y las cuentas salen raras. Agradece que la vida nunca le prometiera nada: ni mayo eterno, ni solo noches buenas. Por eso no termina en victoria, termina en empate. La última línea dice que la vida no le debe nada y que quedan en paz.
+
+Nervo lo escribió después de perder a la mujer con la que vivió diez años, muerta en 1912. Él murió en Montevideo en mayo de 1919, a los cuarenta y ocho.
+
+¿Con quién o con qué te falta quedar en paz?
+
+#SabiduriaDeBolsillo #AmadoNervo #Poesia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-re71-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-re71-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>La ciudad más grande de América en su tiempo tuvo cien mil habitantes y no sabemos cómo la llamaban ellos.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -478,27 +498,6 @@ El texto íntegro se restituyó en 1415, cuarenta y tres años después de aquel
 #SabiduriaDeBolsillo #Mencio #Confucianismo #China]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra83.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra83.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-16-re55-reel</guid>
-      <pubDate>Wed, 16 Sep 2026 22:26:00 +0000</pubDate>
-      <description><![CDATA[HOMERO NUNCA LLAMÓ AZUL AL MAR NI AL CIELO, Y EL PRIMERO EN CONTARLO FUE UN PRIMER MINISTRO BRITÁNICO
-
-En 1858 William Gladstone publicó Studies on Homer and the Homeric Age, tres volúmenes sobre el mundo de la Ilíada y la Odisea. En una sección del tercero se puso a contar: anotó cada palabra de color del texto griego, registró cómo se usaba y la clasificó. Negro aparece unas ciento setenta veces. Blanco, cerca de cien. Rojo, amarillo y violeta, apenas unas decenas entre los tres. Azul no aparece ninguna vez.
-
-El mar de Homero es oînops, color de vino. Gladstone concluyó que el ojo griego todavía no separaba bien los colores. Una década después, el filólogo Lazarus Geiger llevó la búsqueda a los himnos védicos, la Biblia hebrea, las sagas islandesas y el Corán, y encontró el mismo hueco en todos. Su observación: de esos textos antiguos nadie aprendería que el cielo es azul.
-
-No era el ojo. En 1969 Brent Berlin y Paul Kay publicaron Basic Color Terms en la University of California Press y describieron un orden fijo en el que las lenguas van adquiriendo sus nombres de color: primero oscuro y claro, luego rojo, después verde y amarillo, y el azul en quinto lugar, antes solo del marrón y de los últimos matices. En 2017, un estudio publicado en PNAS sobre las lenguas del World Color Survey encontró una razón: en todas ellas los colores cálidos se comunican con más precisión que los fríos, y los objetos de los que se habla suelen ser cálidos mientras que los fondos son fríos.
-
-Se nombra lo que hay que separar de un fondo. El cielo y el mar no se separan de nada: son el fondo.
-
-¿Cuántas cosas dejamos de distinguir porque nadie nos dio la palabra?
-
-#SabiduriaDeBolsillo #Homero #Lenguaje #HistoriaDeLaCiencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-re55-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-re55-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
