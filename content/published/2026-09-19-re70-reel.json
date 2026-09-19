@@ -64,12 +64,18 @@
     "Atribuir la tradición oral a un etnógrafo concreto (Routledge en 1919, Métraux en 1940): no se pudo confirmar quién la registró primero. Se acredita como tradición oral rapanui, sin nombre propio.",
     "«Los europeos derribaron los moái»: no verificado en esta sesión. El derribo (huri moái) suele atribuirse a conflictos internos entre los siglos XVIII y XIX, pero no se comprobó con fuente. No usar sin verificar antes."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-19T17:26:00Z",
   "targets": [
     "facebook_reel"
   ],
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1060832200201853",
+      "url": "https://www.facebook.com/reel/1060832200201853",
+      "published_at": "2026-09-19T18:10:30.764640+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
