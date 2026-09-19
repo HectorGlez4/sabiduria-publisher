@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-12-extra41",
+  "id": "2026-09-21-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Arthashastra", "#Kautilya", "#IndiaAntigua"],
-    "extended": ["#Citas", "#Sanscrito", "#Politica", "#Manuscritos", "#Mysore", "#Chanakya", "#HistoriaDelPensamiento"]
+    "topic": [
+      "#Arthashastra",
+      "#Kautilya",
+      "#IndiaAntigua"
+    ],
+    "extended": [
+      "#Citas",
+      "#Sanscrito",
+      "#Politica",
+      "#Manuscritos",
+      "#Mysore",
+      "#Chanakya",
+      "#HistoriaDelPensamiento"
+    ]
   },
   "sources": [
     {
@@ -76,6 +88,12 @@
     "Dar el texto sánscrito como comprobado en una edición crítica de primera mano. Las dos mitades del verso se cotejaron con el contenido indexado de una edición sánscrita en línea que usa la numeración KAZ_01.19.34; no se consultó un ejemplar de la edición de Kangle.",
     "Traducir «prajā» por «pueblo» en sentido moderno. En el tratado son los súbditos de un rey, y la frase no habla de soberanía popular ni de consulta: habla de en qué debe fijarse el gobernante para juzgarse."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-09-21T15:26:00Z",
+  "results": {}
 }
