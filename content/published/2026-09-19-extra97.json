@@ -2,7 +2,7 @@
   "id": "2026-09-19-extra97",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Teotihuacán: la ciudad que llegó sin su nombre",
     "hook": "La ciudad más grande de América en su tiempo tuvo cien mil habitantes y no sabemos cómo la llamaban ellos.",
@@ -73,5 +73,21 @@
     "threads"
   ],
   "publish_at": "2026-09-19T20:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1099476452877014",
+      "url": "https://www.facebook.com/874327782058550/posts/1099476452877014",
+      "published_at": "2026-09-19T21:32:45.856666+00:00"
+    },
+    "instagram": {
+      "post_id": "18031400618891064",
+      "url": "https://www.instagram.com/p/Dde-_gMmpIz/",
+      "published_at": "2026-09-19T21:32:58.086337+00:00"
+    },
+    "threads": {
+      "post_id": "17888299968621420",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17888299968621420",
+      "published_at": "2026-09-19T21:33:09.331905+00:00"
+    }
+  }
 }
