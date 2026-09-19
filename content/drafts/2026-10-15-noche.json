@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-15-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el templo de Yahu en Elefantina",
+    "hook": "PIDIERON PERMISO PARA LEVANTAR SU TEMPLO OTRA VEZ Y LLEGÓ RECORTADO, SIN UNA PALABRA DE EXPLICACIÓN",
+    "body": [
+      "En la isla de Elefantina, en la primera catarata del Nilo, vivió bajo el imperio persa una guarnición de soldados judíos. Sus papeles en arameo —cartas, contratos, documentos de matrimonio— cubren de 495 a 399 a.C. Salieron a la luz por dos vías. En 1893 el coleccionista Charles Edwin Wilbour compró un lote en Asuán que acabó en el Brooklyn Museum y no se publicó hasta 1953. Entre 1906 y 1908 la expedición alemana de Otto Rubensohn y Friedrich Zucker excavó el barrio arameo y encontró el archivo de Yedaniah, el jefe de la comunidad.",
+      "Tenían allí un templo propio dedicado a Yahu. En el año catorce de Darío II, el 410 a.C., los sacerdotes del dios egipcio Jnum se pusieron de acuerdo con Vidranga, el mando persa de la zona, y el hijo de este entró con tropas y lo quemó. Guardaron tres años de duelo: sayal, ayuno, sin vino ni aceite en el cuerpo. El 20 de Marhesván del año diecisiete de Darío —25 de noviembre de 407 a.C.— escribieron al gobernador de Judá, Bagohi. Dicen en ella que el templo lo levantaron sus antepasados antes de que Cambises llegara a Egipto, que cuando el persa derribó los templos egipcios a ese no lo tocó nadie, y que ya habían escrito a Yehohanán, sumo sacerdote de Jerusalén: nunca les contestaron.",
+      "El permiso llegó como memorándum de Bagohi y de Delaías, hijo del gobernador de Samaría: que se reconstruya en su sitio y que se ofrezcan allí la oblación de harina y el incienso, como antes se hacía. Ellos habían pedido tres cosas: harina, incienso y holocausto. La respuesta concede dos. El sacrificio de animales no se menciona, y el documento no explica por qué. De los papeles de una guarnición de frontera salió el retrato de una comunidad judía con templo propio fuera de Jerusalén, que en 419 a.C. recibía por carta instrucciones sobre los panes sin levadura y que firmaba contratos donde la mujer podía pedir el divorcio."
+    ],
+    "question": "¿Cuánto de lo que das por sabido depende de lo que alguien decidió guardar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "ELEFANTINA",
+    "subtitle": "Un templo judío en el Nilo, quemado en el 410 a.C.",
+    "body": "Pidieron permiso para reconstruirlo y enumeraron lo que volverían a ofrecer: harina, incienso y holocausto. El memorándum que autoriza las obras nombra la harina y el incienso. El animal desaparece del texto y nadie explica por qué. La carta es del 25 de noviembre del 407 a.C."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Elefantina",
+      "#Arqueologia",
+      "#EgiptoAntiguo"
+    ],
+    "extended": [
+      "#ImperioPersa",
+      "#HistoriaJudia",
+      "#Papiros",
+      "#Arameo",
+      "#Nilo",
+      "#Historia",
+      "#Civilizaciones",
+      "#SigloVaC"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La carta de Yedaniah y sus colegas sacerdotes al gobernador Bagohi de Judá es el papiro TAD A4.7 (Cowley 30), fechado el 20 de Marhesván del año 17 del rey Darío, 25 de noviembre de 407 a.C., y se conserva en los Staatliche Museen de Berlín (P. 13495). En ella: Vidranga ordenó a su hijo la demolición y entraron y quemaron el templo; la comunidad vistió sayal, ayunó, no se ungió con aceite ni bebió vino; sus antepasados habían construido el templo y Cambises lo encontró ya en pie; los persas derribaron todos los templos de los dioses egipcios y ese nadie lo dañó; y ya habían escrito al sumo sacerdote Yehohanán y a sus colegas los sacerdotes de Jerusalén, que nunca les mandaron carta",
+      "source": "K. C. Hanson, Ancient Documents — Petition to Authorize Elephantine Temple Reconstruction (traducción cotejada de Cowley, Ginsberg y Porten)",
+      "url": "https://www.kchanson.com/ANCDOCS/westsem/templeauth.html"
+    },
+    {
+      "claim": "El memorándum de respuesta (TAD A4.9) dice: lo que Bagohi y Delaías me dijeron. Memorándum. Puedes decir en Egipto ante Arsames, sobre la casa-altar del Dios del Cielo que se construyó en la fortaleza de Elefantina antes de Cambises y que Vidranga, ese malvado, demolió en el año 14 del rey Darío, que se reconstruya en su sitio como estaba antes y que ofrezcan sobre ese altar la oblación de harina y el incienso, tal como se hacía antes",
+      "source": "Textbook of Aramaic Documents from Ancient Egypt (TAD), A4.9, citado en la entrada de referencia sobre los papiros de Elefantina",
+      "url": "https://en.wikipedia.org/wiki/Elephantine_papyri_and_ostraca"
+    },
+    {
+      "claim": "El templo fue destruido en 410 a.C. por instigación de los sacerdotes de Jnum y de Vidranga; el gobernador persa de Judá y un hijo del gobernador persa de Samaría apoyaron la petición, pero limitaron la autorización al incienso y a las ofrendas de grano, excluyendo los sacrificios de animales que los judíos de Elefantina habían pedido; se trata del texto históricamente más significativo del archivo",
+      "source": "The Posen Library of Jewish Culture and Civilization — Request about the Rebuilding of the Elephantine Temple",
+      "url": "https://www.posenlibrary.com/entry/request-about-rebuilding-elephantine-temple"
+    },
+    {
+      "claim": "Yedaniah ben Gemariah, líder de la comunidad, pidió permiso para reconstruir el templo destruido por sacerdotes egipcios aliados con el administrador persa local, y sostuvo que la comunidad y el templo de Elefantina existían mucho antes de que Cambises impusiera la hegemonía persa sobre Egipto en 525 a.C.; el documento posterior concede ofrendas de grano e incienso, y la mención del sacrificio animal está llamativamente ausente",
+      "source": "Center for Online Judaic Studies — The Elephantine Temple, 407 BCE",
+      "url": "https://cojs.org/the_elephantine_temple-_407_bce/"
+    },
+    {
+      "claim": "Los documentos arameos de Elefantina cubren del 495 al 399 a.C.; Charles Edwin Wilbour compró documentos en 1893 y su familia los cedió al Brooklyn Museum, donde se publicaron en 1953 a cargo de Emil G. Kraeling; la expedición alemana de Otto Rubensohn y Friedrich Zucker excavó entre 1906 y 1908 y localizó el barrio arameo y el archivo comunal de Yedaniah; el conjunto se reparte hoy entre Berlín, el Brooklyn Museum, El Cairo, Londres, Múnich y París",
+      "source": "Elephantine papyri and ostraca — recopilación de referencia sobre el hallazgo y la dispersión del archivo",
+      "url": "https://en.wikipedia.org/wiki/Elephantine_papyri_and_ostraca"
+    },
+    {
+      "claim": "El papiro llamado de la Pascua (TAD A4.1), de 419 a.C., es el testimonio extrabíblico más antiguo de la fiesta de los panes sin levadura: Hananías escribe a Yedaniah y a la guarnición judía de Elefantina transmitiendo una orden de Darío II al sátrapa Arsames sobre la observancia del 15 al 21 de Nisán",
+      "source": "Center for Online Judaic Studies — The Passover Papyrus from Elephantine, 419 BCE",
+      "url": "https://cojs.org/the_passover_papyrus_from_elephantine-_419_bce/"
+    },
+    {
+      "claim": "Se conservan tres contratos matrimoniales arameos de Elefantina con cláusulas de divorcio a iniciativa tanto del marido como de la esposa, y las mujeres de la comunidad podían heredar y quedarse con parte de los bienes del marido si decidían divorciarse; el documento de matrimonio de Ananías se conserva en el Brooklyn Museum y se ha expuesto como pieza destacada",
+      "source": "Institute for the Study of the Ancient World (NYU) — Marriage Document from Ananiah to Meshullam (Aramaic)",
+      "url": "https://isaw.nyu.edu/exhibitions/wgre/highlights/marriage-document-from-ananiah-to-meshullam-aramaic"
+    }
+  ],
+  "do_not_use": [
+    "contar el castigo de Vidranga con el detalle de los perros y la ajorca de sus pies: la línea es de lectura discutida y las traducciones no coinciden —unas leen perros, otras hachas, y varias marcan el pasaje con interrogante—. Lo que sí dicen todas es que perdió lo que había adquirido",
+    "afirmar que Jerusalén prohibió el sacrificio animal en Elefantina por la ley de centralización del culto: el memorándum no da ningún motivo. La omisión es un hecho; la explicación es una hipótesis de los estudiosos y debe presentarse como tal, o no presentarse",
+    "decir que los papiros se descubrieron en una excavación: una parte grande salió del comercio de antigüedades antes de cualquier excavación científica, y eso es precisamente lo que dificulta reconstruir los archivos completos",
+    "fechar el papiro de la Pascua en 418 a.C. sin matizar: circulan las dos fechas, 419 y 418, según cómo se reconstruya el año de reinado y el calendario. La pieza usa 419, que es la que dan las fichas de referencia",
+    "llamar sinagoga al edificio de Elefantina: los textos lo llaman casa-altar y describen ofrendas y holocaustos, es decir, un templo con culto sacrificial, no una casa de oración",
+    "presentar a esta comunidad como una secta desgajada del judaísmo: los propios textos muestran que escribían a Jerusalén y a Samaría como autoridades y esperaban su respuesta",
+    "dar por hecho que el templo llegó a reconstruirse: hay un documento que parece registrar una contribución para las obras, pero el archivo se interrumpe hacia 399 a.C. y no consta el final de la historia"
+  ],
+  "_verificacion_prosa": "**La carta.** La traducción anotada de K. C. Hanson (cotejada sobre Cowley, Ginsberg y Porten) identifica el documento como TAD A4.7 / Cowley 30, del 20 de Marhesván del año 17 de Darío II —25 de noviembre de 407 a.C.—, hoy en los Staatliche Museen de Berlín, P. 13495. De ahí salen, verbatim en la fuente: la orden de Vidranga a su hijo y el incendio del templo; el sayal, el ayuno, la abstención de vino y de aceite; la construcción por los antepasados antes de Cambises y el hecho de que los persas derribaran los templos egipcios sin tocar este; y la carta previa al sumo sacerdote Yehohanán y a los sacerdotes de Jerusalén, que nunca contestaron. **La respuesta.** El memorándum TAD A4.9 de Bagohi y Delaías autoriza reconstruir en el sitio y ofrecer la oblación de harina y el incienso sobre el altar, sin mencionar el holocausto que la petición sí enumeraba. La Posen Library lo dice explícitamente: la autorización se limitó al incienso y a las ofrendas de grano, excluyendo los sacrificios animales que se habían pedido. El Center for Online Judaic Studies coincide en la ausencia llamativa del sacrificio animal y en la antigüedad del templo respecto a 525 a.C. **El archivo.** Fechas 495-399 a.C.; compra de Wilbour en 1893 y publicación de Kraeling para el Brooklyn Museum en 1953; excavación alemana de Rubensohn y Zucker en 1906-1908 con el hallazgo del barrio arameo y del archivo de Yedaniah; dispersión actual entre Berlín, Brooklyn, El Cairo, Londres, Múnich y París. **Pascua y matrimonio.** El papiro TAD A4.1 de 419 a.C. transmite instrucciones sobre los panes sin levadura del 15 al 21 de Nisán. El ISAW (NYU) documenta el contrato de matrimonio de Ananías conservado en el Brooklyn Museum, y la bibliografía sobre los tres contratos matrimoniales arameos recoge la cláusula de divorcio a iniciativa de cualquiera de los dos cónyuges. **Lo que NO se verificó:** el motivo de la omisión del sacrificio animal (ninguna fuente primaria lo da), la lectura exacta del castigo de Vidranga, y si el templo llegó efectivamente a reconstruirse. Ninguna de las tres cosas se afirma en el cuerpo.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

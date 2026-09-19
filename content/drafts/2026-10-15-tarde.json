@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-15-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Du Fu y el techo de paja de Chengdu",
+    "hook": "PASÓ LA NOCHE BAJO LA LLUVIA, EN UNA CASA SIN TECHO, Y EL POEMA QUE ESCRIBIÓ PIDE UNA CASA PARA OTROS",
+    "quote": {
+      "text": "Ojalá tuviera una mansión de mil y diez mil estancias para cobijar a todos los letrados pobres del mundo y verlos sonreír. Aunque mi choza se derrumbara y yo muriera de frío, me bastaría.",
+      "author": "Du Fu",
+      "work": "«Canción: mi choza deshecha por el viento de otoño» (761), Quan Tang shi, juan 219",
+      "attribution_verified": true
+    },
+    "body": [
+      "Du Fu llegó a Chengdu a finales de 759, huyendo de la guerra que había empezado en 755 con la rebelión de An Lushan. En la primavera de 760 levantó una choza con techo de paja a la orilla del arroyo Huanhua, con ayuda de parientes y amigos. Vivió allí tres años y nueve meses, y de esa etapa se conservan más de doscientos cuarenta poemas. En el octavo mes lunar de 761 un vendaval le arrancó tres capas de paja del techo. La paja cruzó el río. Unos niños de la aldea del sur se la llevaron delante de él, y él volvió apoyado en su bastón, sin voz de tanto gritar.",
+      "Llovió toda la noche. Su manta, de años, estaba fría como el hierro y rota por dentro. Escribe que desde la guerra duerme poco, y pregunta cómo va a llegar el amanecer. El poema podría terminar ahí, en la queja. No termina ahí: las últimas líneas piden una casa que no es para él. Y la palabra que usa, hanshi, no dice pobres a secas: nombra al letrado sin recursos, al que estudió y no tiene con qué, su propia clase. Con el tiempo la lengua la extendió a los pobres en general. La guerra que lo había llevado hasta ese techo no terminó hasta 763.",
+      "Du Fu murió en 770, sin haber recuperado un cargo estable. La choza no se conservó: un poeta de la generación siguiente, Wei Zhuang, encontró el sitio y volvió a levantar una cabaña de paja. Lo que hoy se visita en Chengdu conserva la traza de las reformas de 1500 y de 1811. El hombre que pidió diez mil estancias para otros pasó esa noche sin un metro seco donde acostarse."
+    ],
+    "question": "¿Qué pedirías si lo que pidieras no pudiera ser para ti?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "DU FU",
+    "subtitle": "Escrito la noche en que se quedó sin techo",
+    "body": "En el otoño de 761 el viento le arrancó el techo de paja y pasó la noche entera bajo la lluvia. El poema que salió de ahí no pide una casa para él: pide una de diez mil estancias para todos los letrados pobres del mundo, y acepta morir de frío con tal de verla."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#DuFu",
+      "#PoesiaChina",
+      "#DinastiaTang"
+    ],
+    "extended": [
+      "#Poesia",
+      "#China",
+      "#Chengdu",
+      "#SigloVIII",
+      "#Literatura",
+      "#Citas",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto del poema 茅屋為秋風所破歌 termina con los versos 安得廣廈千萬間，大庇天下寒士俱歡顏，風雨不動安如山！嗚呼！何時眼前突兀見此屋，吾廬獨破受凍死亦足！ y contiene también 布衾多年冷似鐵 (la manta de años fría como el hierro) y 自經喪亂少睡眠，長夜霑溼何由徹 (desde la guerra duerme poco y se pregunta cómo pasará la larga noche empapada). El poema figura en Quan Tang shi, juan 219",
+      "source": "Wikisource en chino — 茅屋為秋風所破歌, según el 全唐詩 (Quan Tang shi), juan 219",
+      "url": "https://zh.wikisource.org/wiki/%E8%8C%85%E5%B1%8B%E7%82%BA%E7%A7%8B%E9%A2%A8%E6%89%80%E7%A0%B4%E6%AD%8C"
+    },
+    {
+      "claim": "En la primavera de 760 Du Fu buscó ayuda de parientes y amigos y levantó una choza de paja a la orilla del arroyo Huanhua, en Chengdu; en el octavo mes de 761 el viento le rompió el techo y llegó la lluvia, y de esa noche salió el poema",
+      "source": "China Writer (中国作家网, portal de la Asociación de Escritores de China) — 杜甫与蜀中草堂",
+      "url": "http://www.chinawriter.com.cn/n1/2020/0604/c404063-31734760.html"
+    },
+    {
+      "claim": "Du Fu residió en el lugar entre 759 y 765, tres años y nueve meses, y de esa estancia se conservan más de 240 poemas; el poeta Wei Zhuang, en el periodo de las Cinco Dinastías, localizó las ruinas y volvió a levantar la choza; la traza que hoy se conserva procede de las reformas de 1500 (Ming) y 1811 (Qing)",
+      "source": "Museo de la Choza de Paja de Du Fu, Chengdu (成都杜甫草堂博物馆) — sitio oficial",
+      "url": "https://www.cddfct.cn/"
+    },
+    {
+      "claim": "La palabra 寒士 designa al letrado de familia pobre y condición humilde; su uso más conocido procede precisamente del verso 大庇天下寒士俱歡顏 de este poema, y de ahí se extendió a los pobres en general",
+      "source": "Zdic (漢典), diccionario de referencia de chino clásico — entrada 寒士",
+      "url": "https://www.zdic.net/hant/%E5%AF%92%E5%A3%AB"
+    },
+    {
+      "claim": "El poema fue compuesto en el octavo mes lunar de 761, segundo año de la era Shangyuan, mientras Du Fu vivía en su choza junto al arroyo Huanhua en Chengdu, con la rebelión de An Lushan aún sin sofocar",
+      "source": "Gushiwen (古诗文网) — 茅屋为秋风所破歌, ficha de creación y anotación",
+      "url": "https://m.gushiwen.cn/shiwenv_8e9ecc95d6a4.aspx"
+    },
+    {
+      "claim": "El poema circula en inglés con varios títulos y traducciones; la Academy of American Poets publicó en 2025 la versión de Marilyn Chin, que abre con el vendaval del octavo mes de otoño y cierra aceptando morir de frío en la casa rota",
+      "source": "Academy of American Poets — Song of My House Being Battered by the Autumn Winds, traducción de Marilyn Chin",
+      "url": "https://poets.org/poem/song-my-house-being-battered-autumn-winds"
+    }
+  ],
+  "do_not_use": [
+    "fechar el poema en 760: la nota de la traducción de Marilyn Chin en poets.org lo sitúa en ese año, pero confunde la construcción de la choza (primavera de 760) con el vendaval. Las fuentes chinas coinciden en el octavo mes lunar de 761, segundo año de la era Shangyuan",
+    "traducir 寒士 como «los pobres del mundo» sin matiz: la palabra nombra al letrado sin recursos, no a cualquier pobre. La ampliación del sentido es posterior, y borrarla quita el punto de que Du Fu pide primero por los de su propia clase",
+    "decir que la choza que se visita hoy en Chengdu es la de Du Fu: se perdió. Lo que hay es una reconstrucción sobre el sitio, con la traza de las reformas de 1500 y 1811",
+    "afirmar que murió de hambre en un bote, o de un atracón tras días sin comer: son relatos tardíos y discutidos sobre su muerte en 770. La pieza no necesita la causa",
+    "presentar el poema como una denuncia social escrita para el público: es un poema personal sobre una noche concreta, y lo notable es precisamente que el final se desplace del yo a los demás",
+    "citar el verso final como si prometiera una casa construida: el original pregunta cuándo la verá, no dice que exista"
+  ],
+  "_verificacion_prosa": "**El texto.** Wikisource en chino reproduce el poema según el Quan Tang shi, juan 219. Verso a verso se confirman los detalles usados: 卷我屋上三重茅 (tres capas de paja arrancadas), 茅飛度江 (la paja cruza el río), 南村羣童欺我老無力 (los niños de la aldea del sur), 脣焦口燥呼不得，歸來倚杖自歎息 (vuelve apoyado en el bastón, sin voz), 布衾多年冷似鐵 (la manta fría como el hierro), 自經喪亂少睡眠，長夜霑溼何由徹 (desde la guerra duerme poco), y el cierre 安得廣廈千萬間，大庇天下寒士俱歡顏 … 吾廬獨破受凍死亦足. **La fecha.** China Writer, portal de la Asociación de Escritores de China, sitúa la construcción de la choza en la primavera de 760 junto al arroyo Huanhua y el vendaval con lluvia en el octavo mes de 761. Gushiwen coincide: octavo mes lunar de 761, segundo año de Shangyuan. **El lugar.** El sitio oficial del Museo de la Choza de Paja de Du Fu (Chengdu) da la residencia de 759 a 765, tres años y nueve meses, más de 240 poemas conservados de esa etapa, la reconstrucción de Wei Zhuang en las Cinco Dinastías y la traza procedente de las reformas de 1500 y 1811. **La palabra clave.** Zdic define 寒士 como el letrado de familia pobre y condición humilde, y señala este mismo verso como su locus classicus. **La traducción.** La cita en español es traducción propia del original chino, no de una versión intermedia; se cotejó con la de Marilyn Chin publicada por la Academy of American Poets en 2025. **Lo que NO se verificó:** no se consultó la edición crítica de Stephen Owen (The Poetry of Du Fu, De Gruyter, 2016), que habría permitido citar número de poema en su ordenación; tampoco las circunstancias de la muerte de Du Fu en 770, que por eso no aparecen en la pieza.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

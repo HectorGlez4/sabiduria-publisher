@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-15-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Sophie Germain y la medalla de 1816",
+    "hook": "ENTREGABA SUS TRABAJOS DE MATEMÁTICAS FIRMADOS CON EL NOMBRE DE UN ALUMNO QUE YA NO ESTABA EN LA ESCUELA",
+    "body": [
+      "Sophie Germain nació en París el 1 de abril de 1776. Empezó a estudiar de noche, en la biblioteca de su padre, y sus padres trataron de impedirlo: le retiraban el fuego, las velas y hasta la ropa al acostarse, para que no se levantara. La École Polytechnique abrió en 1794 y no admitía mujeres. Ella consiguió los apuntes de las clases por su cuenta y empezó a entregar trabajos firmados con el nombre de Antoine-Auguste Le Blanc, un alumno que ya había dejado la escuela.",
+      "Lagrange, que corregía esos trabajos, pidió conocer al autor. Encontró a una mujer y, en vez de retirarle el trato, se volvió su maestro. Con el mismo nombre falso le escribió a Gauss a partir de 1804; él supo quién era en 1807. En 1809 el Institut de France convocó un premio para explicar con matemáticas la vibración de las superficies elásticas, el fenómeno que Chladni había mostrado en París con placas de metal y arena. Hubo tres convocatorias. En las tres ella fue la única persona que se presentó. La primera vez no hubo premio; la segunda, mención honorífica; en enero de 1816 se lo dieron: una medalla de un kilogramo de oro, tres mil francos.",
+      "A la ceremonia no apareció. Más tarde, gracias a Fourier, obtuvo permiso para asistir a las sesiones de la Academia de Ciencias: fue la primera mujer que entró allí sin ser esposa de un miembro. Gauss convenció a la Universidad de Gotinga de concederle un doctorado honorario, y ella murió antes de recibirlo, el 27 de junio de 1831. Su acta de defunción no dice matemática: dice rentista. La torre Eiffel lleva grabados los nombres de setenta y dos sabios franceses. El suyo no está."
+    ],
+    "question": "¿Qué harías distinto si tu trabajo se juzgara sin tu nombre encima?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "SOPHIE GERMAIN",
+    "subtitle": "Ganó el premio y no fue a recogerlo",
+    "body": "Tres veces se presentó al premio del Institut sobre las superficies elásticas. Las tres fue la única concursante. En enero de 1816 se lo dieron: una medalla de un kilogramo de oro. No apareció en la ceremonia. Su acta de defunción la registra como rentista, no como matemática."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SophieGermain",
+      "#Matematicas",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Paris",
+      "#SigloXIX",
+      "#Elasticidad",
+      "#Gauss",
+      "#Ciencia",
+      "#Historia",
+      "#Biografias"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Sophie Germain nació el 1 de abril de 1776 en París y murió allí el 27 de junio de 1831; usó el nombre de «M. LeBlanc» al tratar con Lagrange y con Gauss; fue la única concursante del certamen de 1811, volvió a serlo cuando el plazo se prorrogó dos años y ganó en el certamen reabierto; Lagrange y Poisson estuvieron entre los jueces; el premio fue una medalla de un kilogramo de oro; no se presentó en la ceremonia de entrega; su acta de defunción la registra como «rentier», no como matemática, y su nombre no figura entre los setenta y dos sabios grabados en la torre Eiffel",
+      "source": "MacTutor History of Mathematics, University of St Andrews — Sophie Germain",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Germain/"
+    },
+    {
+      "claim": "Sus padres le quitaban la ropa una vez acostada y la dejaban sin calor ni luz para que no estudiara de noche; usó el seudónimo de M. LeBlanc, antiguo alumno de Lagrange, al enviarle trabajos; se carteó con Gauss desde 1804 sobre teoría de números y él descubrió en 1807 quién era; en 1811 presentó la única propuesta y no hubo premio, en 1813 obtuvo mención honorífica y en 1816 ganó con su memoria sobre las vibraciones de las placas elásticas; Fourier le facilitó asistir a las sesiones de la Academia de Ciencias, siendo la primera mujer no esposa de un miembro en hacerlo; Gauss consiguió que la Universidad de Gotinga le otorgara un doctorado honorario que ella no llegó a recibir",
+      "source": "Agnes Scott College — Biographies of Women Mathematicians: Sophie Germain",
+      "url": "https://mathwomen.agnesscott.org/women/germain.htm"
+    },
+    {
+      "claim": "La École Polytechnique estaba reservada a alumnos varones; Germain adoptó la identidad de Antoine Auguste Leblanc para recibir por correo las lecciones de matemáticas, y cuando Lagrange convocó al supuesto alumno y descubrió el engaño se convirtió en su amigo y mentor; su trabajo sobre la elasticidad le valió en 1816 un premio de la Academia de Ciencias",
+      "source": "École Polytechnique — 225 Stories: Sophie Germain, First Woman in l'X (1776-1831)",
+      "url": "https://225.polytechnique.fr/en/225-stories/sophie-germain.html"
+    },
+    {
+      "claim": "El premio de 1816 fue el Prix Extraordinaire del Institut de France, una medalla de oro de un kilogramo valorada en 3.000 francos, y la ceremonia pública se celebró en enero de 1816 sin que ella asistiera",
+      "source": "Encyclopedia.com — Sophie Germain (Dictionary of Scientific Biography y Encyclopedia of World Biography)",
+      "url": "https://www.encyclopedia.com/people/science-and-technology/mathematics-biographies/sophie-germain"
+    },
+    {
+      "claim": "El certamen del Institut nació de las demostraciones de Chladni en París con placas elásticas vibrantes y sus figuras nodales, y en los tres certámenes celebrados entre 1811 y 1816 sobre acústica y elasticidad nunca hubo más de una propuesta: la de ella",
+      "source": "arXiv — «Sophie Germain, mathématicienne extraordinaire: A story stranger than fiction» (repaso de la historiografía del premio)",
+      "url": "https://arxiv.org/abs/2605.15046"
+    }
+  ],
+  "do_not_use": [
+    "afirmar que la torre Eiffel no habría podido construirse sin la teoría de Germain: es una frase de divulgación. Lo documentado es que su nombre no figura entre los setenta y dos grabados, no que la torre dependa de su memoria de 1816",
+    "dar por cierto el motivo de su ausencia en la ceremonia de enero de 1816: unas versiones dicen que se negó a asistir por temor al escándalo y otras que la invitación no le llegó. Las fuentes no coinciden, así que basta con decir que no apareció",
+    "presentar la memoria premiada como una solución completa y correcta: los propios jueces señalaron que seguía teniendo lagunas, y Poisson, rival suyo en el tema, formó parte del tribunal",
+    "decir que fue la primera mujer en entrar a la Academia de Ciencias: no fue miembro ni lo fue ninguna mujer hasta el siglo XX. Lo que obtuvo fue el permiso de asistir a las sesiones, siendo la primera que no era esposa de un académico",
+    "fechar el certamen ganador en 1815 o en 1816 como si fueran cosas distintas: el plazo se cerró en 1815 y el premio se falló en enero de 1816",
+    "atribuirle el descubrimiento de las figuras de Chladni: las mostró Ernst Chladni. Lo que ella aportó fue la teoría matemática que intentaba explicarlas",
+    "llamarla «la primera mujer matemática»: hubo otras antes. Lo verificable es que fue la primera mujer en ganar un premio de matemáticas del Institut de France"
+  ],
+  "_verificacion_prosa": "**Fechas y seudónimo.** MacTutor (University of St Andrews) da 1 de abril de 1776 y 27 de junio de 1831, ambos en París, y confirma el uso de «M. LeBlanc» con Lagrange y Gauss. Agnes Scott College precisa que LeBlanc era un antiguo alumno de Lagrange, que la correspondencia con Gauss empezó en 1804 y que él supo la verdad en 1807. La École Polytechnique, en su propia serie conmemorativa, da el nombre completo del seudónimo, Antoine Auguste Leblanc, y describe cómo recibió las lecciones por correo y cómo Lagrange, al descubrir el engaño, se volvió su mentor. **El certamen.** MacTutor: única concursante en 1811, de nuevo única cuando se prorrogó dos años, y ganadora en el certamen reabierto; Lagrange y Poisson entre los jueces; medalla de un kilogramo de oro; no apareció en la ceremonia. Agnes Scott ordena los tres intentos: 1811 sin premio, 1813 mención honorífica, 1816 el premio con la memoria sobre vibraciones de placas elásticas. Encyclopedia.com añade el nombre del galardón, Prix Extraordinaire, y su valor de 3.000 francos. **Origen del certamen.** Las demostraciones de Chladni en París con placas y arena están en la reseña historiográfica de arXiv, que también recoge que los tres certámenes de 1811 a 1816 nunca tuvieron más de una propuesta. **Final de su vida.** Agnes Scott: Fourier le facilita la entrada a las sesiones de la Academia, primera mujer que no era esposa de un miembro; Gauss consigue el doctorado honorario de Gotinga y ella muere antes de recibirlo. MacTutor: el acta de defunción la registra como «rentier», y los setenta y dos sabios de la torre Eiffel no la incluyen. **Lo que NO se verificó:** el motivo de su ausencia en la ceremonia (las fuentes se contradicen) y el año exacto en que se le permitió asistir a las sesiones de la Academia; por eso ni uno ni otro aparecen en el cuerpo de la pieza.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
