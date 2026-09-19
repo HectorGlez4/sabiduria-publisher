@@ -2,7 +2,7 @@
   "id": "2026-09-19-extra96",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "los bronces de Benín y el latón de las manillas",
     "hook": "Se llaman bronces de Benín, pero son de latón. Y el latón llegó en forma de moneda: las pulseras con las que Europa pagaba en la costa africana.",
@@ -80,5 +80,21 @@
     "threads"
   ],
   "publish_at": "2026-09-19T19:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1099453002879359",
+      "url": "https://www.facebook.com/874327782058550/posts/1099453002879359",
+      "published_at": "2026-09-19T20:47:06.855296+00:00"
+    },
+    "instagram": {
+      "post_id": "18098083820377768",
+      "url": "https://www.instagram.com/p/Dde5xJrmmbL/",
+      "published_at": "2026-09-19T20:47:19.305113+00:00"
+    },
+    "threads": {
+      "post_id": "18006232728004092",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18006232728004092",
+      "published_at": "2026-09-19T20:47:33.361727+00:00"
+    }
+  }
 }
