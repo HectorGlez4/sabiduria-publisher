@@ -1,0 +1,99 @@
+{
+  "id": "2026-10-14-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ferdowsi y el palacio de versos del Shahnameh",
+    "hook": "EL VERSO PERSA MÁS FAMOSO SOBRE LA POESÍA QUE VENCE A LA PIEDRA ESTÁ DENTRO DE UN ELOGIO AL REY",
+    "quote": {
+      "text": "Los edificios prósperos acaban en ruina por la lluvia y por el golpe del sol. Yo he cimentado con mis versos un palacio alto al que no dañan ni el viento ni la lluvia.",
+      "author": "Ferdowsi",
+      "work": "Shahnameh, Elogio del sultán Mahmud (hacia 1010)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Abul Qasim Ferdowsi nació hacia el 940 en Tus, en el Jorasán, y murió hacia 1025. El Fitzwilliam Museum de Cambridge calcula que dedicó treinta y cinco años al Shahnameh, el libro de los reyes: unos cincuenta mil pareados, la memoria entera de la Persia anterior al islam puesta en verso. Los dos versos dicen así en persa: banāhā-ye ābād gardad kharāb / ze bārān-o az tābesh-e āftāb; pey afgandam az nazm kākhi boland / ke az bād-o bārānash nāyad gazand.",
+      "No cierran el poema. Están dentro de la sección titulada «Elogio del sultán Mahmud», la dedicatoria al rey de Gazni a quien Ferdowsi ofreció la obra. Y unos versos más abajo, en el mismo elogio, escribe que ha pasado sesenta y cinco años en la pobreza y en una vida de penalidades. La jactancia de lo imperecedero y la queja de un hombre sin dinero están en el mismo pasaje y dirigidas a la misma persona.",
+      "De lo que ocurrió después casi todo es leyenda. La historia de que el sultán le pagó en plata lo prometido en oro y de que él rechazó la bolsa viene del Chahar Maqala de Nezami Aruzi, escrito hacia 1156, más de un siglo después de su muerte; el museo la trata como leyenda, no como dato. Lo que sí está en el texto es lo que el poeta dice de sí mismo al final: no moriré después de esto, porque estoy vivo, pues he esparcido la semilla de la palabra. Mil años después, el Shahnameh se sigue recitando en persa."
+    ],
+    "question": "¿Qué estás construyendo que no dependa de quien hoy te paga?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "FERDOWSI",
+    "subtitle": "La jactancia y la queja están en el mismo pasaje",
+    "body": "Escribió que los edificios caen con la lluvia y el sol, y que él había cimentado con versos un palacio que ni el viento ni la lluvia dañan. Esas líneas no cierran el Shahnameh: están dentro del elogio al sultán, y unos versos más abajo dice que ha pasado sesenta y cinco años en la pobreza."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Ferdowsi",
+      "#Shahnameh",
+      "#Persia"
+    ],
+    "extended": [
+      "#PoesiaPersa",
+      "#Literatura",
+      "#Iran",
+      "#EdadMedia",
+      "#Historia",
+      "#Citas",
+      "#Poesia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Los pareados «بناهای آباد گردد خراب / ز باران وز تابش آفتاب» y «پی افگندم از نظم کاخی بلند / که از باد و بارانش نآید گزند» figuran en la sección del Shahnameh titulada «اندر ستایش سلطان محمود» (Elogio del sultán Mahmud), y unos versos más abajo aparece «چنین سال بگذاشتم شست و پنج / به درویشی و زندگانی به رنج»",
+      "source": "Ganjoor — Ferdowsi, Shahnameh, «اندر ستایش سلطان محمود», bajsh 1 (texto persa)",
+      "url": "https://ganjoor.net/ferdousi/shahname/mahmood/sh1"
+    },
+    {
+      "claim": "Ferdowsi vivió entre 940 y 1025, nació en Tus (provincia de Jorasán, noreste de Irán) en una familia de terratenientes acomodados, trabajó treinta y cinco años en el Shahnameh y dedicó la versión final al sultán Mahmud de Gazni",
+      "source": "The Fitzwilliam Museum, University of Cambridge — The Shahnameh: a Persian Cultural Emblem. Ferdowsi: the Poet and the Legend",
+      "url": "https://shahnameh.fitzmuseum.cam.ac.uk/ferdowsi"
+    },
+    {
+      "claim": "El Fitzwilliam Museum trata el rechazo del sultán como leyenda y no como hecho: «The paradoxical situation of the Shahnameh's dedication to Sultan Mahmud of Ghazni gave rise to numerous legends»",
+      "source": "The Fitzwilliam Museum, University of Cambridge — Ferdowsi: the Poet and the Legend",
+      "url": "https://shahnameh.fitzmuseum.cam.ac.uk/ferdowsi"
+    },
+    {
+      "claim": "El relato del pago en plata en lugar de oro procede del Chahar Maqala de Nezami Aruzi, escrito hacia 1155-1157, y los estudiosos lo consideran legendario porque su autor recogió la historia más de un siglo después de la muerte de Ferdowsi",
+      "source": "World History Encyclopedia — Shahnameh",
+      "url": "https://www.worldhistory.org/shahnameh/"
+    },
+    {
+      "claim": "El Shahnameh se compuso entre aproximadamente 977 y 1010, y el número de versos varía según la tradición manuscrita: la edición de Moscú tiene 48.617 y la de Calcuta 55.204, con versiones de hasta unos 58.000 pareados",
+      "source": "Columbia University — World Epics: Ferdowsi, Shahnameh",
+      "url": "https://edblogs.columbia.edu/worldepics/project/ferdowsi-shahnameh/"
+    },
+    {
+      "claim": "El cierre del poema, en la sección final del reinado de Yazdegerd, dice «از آن پس نمیرم که من زنده‌ام / که تخم سخن من پراکنده‌ام», que Dick Davis traduce como «I shall not die, these seeds I've sown will save / My name and reputation from the grave»",
+      "source": "Ganjoor — Ferdowsi, Shahnameh, «پادشاهی یزدگرد», bajsh 17 (texto persa); traducción de Dick Davis citada en World History Encyclopedia (Davis, p. 962)",
+      "url": "https://ganjoor.net/ferdousi/shahname/yazdgerd3/sh17"
+    },
+    {
+      "claim": "La traducción inglesa clásica de Arthur y Edmond Warner vierte el pasaje como «The homes that are the dwellings of to-day / Will sink 'neath shower and sunshine to decay, / But storm and rain shall never mar what I / Have built — the palace of my poetry»",
+      "source": "The Sháhnáma of Firdausí, trad. Arthur George Warner y Edmond Warner, Kegan Paul (Londres, 1905-1925), en Internet Archive",
+      "url": "https://archive.org/stream/shahnama01firduoft/shahnama01firduoft_djvu.txt"
+    }
+  ],
+  "do_not_use": [
+    "presentar estos versos como el final del Shahnameh: están en la sección «Elogio del sultán Mahmud», que precede a la gran guerra de Key Josrow con Afrasiab. El cierre del poema es otro pasaje, el del reinado de Yazdegerd",
+    "contar como hecho que Mahmud le pagó en plata lo prometido en oro y que Ferdowsi rechazó el pago: es el relato del Chahar Maqala de Nezami Aruzi, de hacia 1156, y las instituciones que lo estudian lo dan por leyenda",
+    "citar como de Ferdowsi el pareado «بسی رنج بردم در این سال سی / عجم زنده کردم بدین پارسی»: es el verso suyo más repetido en Irán, pero su presencia en los manuscritos autorizados está discutida y se le ha atribuido también a la Hajvnama. Antes de usarlo hay que comprobarlo en una edición crítica, la de Djalal Khaleghi-Motlagh por ejemplo",
+    "dar una cifra cerrada de versos: la edición de Moscú tiene 48.617 y la de Calcuta 55.204; «unos cincuenta mil pareados» es la forma honesta de decirlo",
+    "fijar la fecha de muerte: se dan 1019, 1020 y 1025 según la fuente, y el Fitzwilliam usa 1025",
+    "presentar una traducción castellana como «la» cita: el texto original es persa y toda versión en español, incluida la de esta pieza, es una traducción entre varias posibles",
+    "decir que Ferdowsi inventó las historias que cuenta: trabajaba sobre tradiciones y sobre compilaciones en prosa anteriores, y él mismo lo declara"
+  ],
+  "_verificacion_prosa": "**Texto persa.** Ganjoor, repositorio de referencia de la poesía clásica persa, sitúa los dos pareados en «اندر ستایش سلطان محمود» (Elogio del sultán Mahmud), bajsh 1, sección que precede a «جنگ بزرگ کیخسرو با افراسیاب»: «بناهای آباد گردد خراب / ز باران وز تابش آفتاب» y «پی افگندم از نظم کاخی بلند / که از باد و بارانش نآید گزند». En el mismo pasaje aparece «چنین سال بگذاشتم شست و پنج / به درویشی و زندگانی به رنج» (así pasé sesenta y cinco años, en pobreza y en una vida de penalidades). **Cierre del poema.** Ganjoor, «پادشاهی یزدگرد», bajsh 17: «از آن پس نمیرم که من زنده‌ام / که تخم سخن من پراکنده‌ام». Dick Davis lo traduce «I shall not die, these seeds I've sown will save / My name and reputation from the grave» (citado por World History Encyclopedia como Davis, p. 962). **Biografía.** The Fitzwilliam Museum (Universidad de Cambridge), portal The Shahnameh: a Persian Cultural Emblem: 940-1025, nacido en Tus, Jorasán, familia de terratenientes acomodados; treinta y cinco años de trabajo; dedicatoria de la versión final a Mahmud de Gazni; y las historias sobre el rechazo del sultán tratadas expresamente como leyendas. **Leyenda del pago.** World History Encyclopedia señala que el relato procede de Nezami Aruzi, que reunió su información más de cien años después de la muerte del poeta, y lo califica de legendario. **Extensión.** Columbia University, World Epics: composición hacia 977-1010; edición de Moscú 48.617 versos, edición de Calcuta 55.204, versiones de hasta unos 58.000. **Traducción inglesa clásica.** Arthur y Edmond Warner, The Sháhnáma of Firdausí (Londres, 1905-1925): «But storm and rain shall never mar what I / Have built — the palace of my poetry». **Lo que NO se verificó:** la autenticidad del pareado «بسی رنج بردم در این سال سی»; por eso no aparece en la pieza y queda anotado en do_not_use como pendiente de comprobar en la edición crítica de Khaleghi-Motlagh.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

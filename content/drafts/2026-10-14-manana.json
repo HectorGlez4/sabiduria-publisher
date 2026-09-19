@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-14-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Wang Zhenyi y el eclipse montado en un pabellón",
+    "hook": "PARA ENTENDER UN ECLIPSE NO LO CALCULÓ: LO MONTÓ CON UNA MESA, UNA LÁMPARA Y UN ESPEJO",
+    "body": [
+      "Wang Zhenyi nació en 1768 en Nanjing, en una familia de letrados, y murió en 1797, a los veintinueve años. Su abuelo, Wang Zhefu, guardaba setenta y cinco armarios de libros y la dejó entrar en ellos; también fue quien le enseñó astronomía. A los once años viajó a Jilin, en Manchuria, para el funeral del abuelo. A los dieciséis recorrió con su padre Shaanxi, Hubei y Guangdong. A los veinticuatro publicó un manual de aritmética escrito con un propósito declarado: que quien empieza entienda antes la multiplicación y la división.",
+      "Su ensayo sobre los eclipses de Luna, 月食解, explica el fenómeno con diagramas dibujados por ella. Pero antes lo construyó. En el pabellón del jardín de su casa usó la mesa redonda como la Tierra, colgó de las vigas una lámpara de cristal que hacía de Sol y puso a un lado un espejo redondo grande que hacía de Luna. Después movió las tres cosas como decía el cálculo que se mueven. Su conclusión coincide con la astronomía moderna: el eclipse ocurre cuando la sombra de la Tierra cae sobre la Luna, y no sucede en cada luna llena porque las órbitas no están en el mismo plano.",
+      "De su obra científica se perdió casi todo. Lo que sobrevivió está recogido en la Primera colección del pabellón Defeng, cuatro volúmenes en los que conviven prefacios, biografías de otras mujeres, relatos de viaje, poemas y sus escritos de matemáticas y astronomía. De ella quedó también una frase: que en capacidad e inteligencia no hay diferencia entre mujeres y hombres. Y otra, recogida por sus biógrafos: hubo veces en que tuve que dejar la pluma y suspirar, pero amo esta materia y no la abandono. La maqueta no se conservó. El método sí."
+    ],
+    "question": "¿Qué das por cierto sin haberlo comprobado nunca por tu cuenta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "WANG ZHENYI",
+    "subtitle": "Montó un eclipse en el jardín de su casa para entenderlo",
+    "body": "En el pabellón de su jardín, en Nanjing, usó la mesa redonda como la Tierra, colgó de las vigas una lámpara de cristal que hacía de Sol y puso un espejo grande de Luna. Movió las tres cosas como decía el cálculo. Murió a los veintinueve y casi toda su obra científica se perdió."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WangZhenyi",
+      "#Astronomia",
+      "#China"
+    ],
+    "extended": [
+      "#HistoriaDeLaCiencia",
+      "#MujeresEnLaCiencia",
+      "#DinastiaQing",
+      "#Eclipses",
+      "#Matematicas",
+      "#Historia",
+      "#Ciencia",
+      "#SigloXVIII"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Wang Zhenyi vivió entre 1768 y 1797, murió a los 29 años y escribió el ensayo 月食解 (Yue Shi Jie), «La explicación de los eclipses de Luna», ilustrado con diagramas dibujados por ella para explicar las fases de la Luna y los eclipses",
+      "source": "Hong Kong Space Museum — Curator's Blog: Wang Zhenyi, An Extraordinary Woman Astronomer from the Qing Dynasty (marzo de 2021)",
+      "url": "https://hk.space.museum/en/web/spm/resources/curators-blog/2021/03/wang-zhenyi-an-extraordinary-woman-astronomer-from-the-qing-dynasty.html"
+    },
+    {
+      "claim": "Entre sus obras figuran La explicación del teorema de Pitágoras y la trigonometría, Disputa sobre la precesión de los equinoccios y la Teoría de la Tierra redonda, y la mayor parte de sus escritos se perdió; lo que se conserva está en la Primera colección del pabellón Defeng. Sostuvo que mujeres y hombres no se diferencian en capacidad ni en inteligencia",
+      "source": "Hong Kong Space Museum — Curator's Blog: Wang Zhenyi",
+      "url": "https://hk.space.museum/en/web/spm/resources/curators-blog/2021/03/wang-zhenyi-an-extraordinary-woman-astronomer-from-the-qing-dynasty.html"
+    },
+    {
+      "claim": "El montaje del eclipse se hizo en el pabellón del jardín de su casa en la actual Nanjing, con una mesa redonda como Tierra, una lámpara de cristal colgada de las vigas como Sol y un gran espejo redondo a un lado como Luna",
+      "source": "Wellesley College — The Mirror: Wang Zhenyi (王贞仪)",
+      "url": "https://blogs.wellesley.edu/mirror/wang-zhenyi-%E7%8E%8B%E8%B4%9E%E4%BB%AA/"
+    },
+    {
+      "claim": "El ensayo 月食解 figura en el volumen 7 de sus obras reunidas y razona que el eclipse ocurre cuando la Tierra bloquea la luz del Sol y proyecta su sombra sobre la Luna, y que no hay eclipse en cada luna llena por la inclinación de las órbitas",
+      "source": "Wellesley College — The Mirror: Wang Zhenyi",
+      "url": "https://blogs.wellesley.edu/mirror/wang-zhenyi-%E7%8E%8B%E8%B4%9E%E4%BB%AA/"
+    },
+    {
+      "claim": "Su abuelo Wang Zhefu conservaba setenta y cinco armarios de libros a los que ella tuvo acceso; a los once años viajó a Jilin, en Manchuria, para el funeral del abuelo, y a los dieciséis recorrió con su padre Shaanxi, Hubei y Guangdong. Su manual de aritmética Shusuan jiancun se publicó cuando ella tenía 24 años y buscaba que los principiantes entendieran antes la multiplicación y la división. Su colección Defengting, en cuatro volúmenes, es lo principal que sobrevivió",
+      "source": "EBSCO Research Starters — Wang Zhenyi",
+      "url": "https://www.ebsco.com/research-starters/history/wang-zhenyi"
+    },
+    {
+      "claim": "La Escuela de Matemáticas de la Universidad de Edimburgo sitúa el experimento del eclipse con mesa, lámpara de cristal y espejo, señala que cerca del 70 % de sus escritos científicos se destruyó tras su muerte y cita el verso suyo «It's made to believe, / Women are the same as Men; / Are you not convinced, / Daughters can also be heroic?»",
+      "source": "University of Edinburgh, School of Mathematics — Astronomy Week 2025: Honouring the life and legacy of Wang Zhenyi",
+      "url": "https://blogs.ed.ac.uk/mathematics/2025/02/04/astronomy-week-2025-honouring-the-life-and-legacy-of-wang-zhenyi/"
+    },
+    {
+      "claim": "La frase «There were times when I had to put down my pen and sighed. But I love the subject, I do not give up» se le atribuye a Wang Zhenyi a través de Barbara Bennett Peterson, Notable Women of China (2000), p. 344",
+      "source": "Numbers and Narratives — A Feminist Genealogy of Automathographies: Wang Zhenyi, The Scientific Archive (cita a Peterson, 2000, 344)",
+      "url": "https://sites.google.com/view/numbersandnarratives/a-feminist-genealogy-of-automathographies/wang-zhenyi/the-scientific-archive"
+    }
+  ],
+  "do_not_use": [
+    "dar 1764 como año de nacimiento: aparece en algunas fichas de consulta, pero la datación mayoritaria y la que usan el Hong Kong Space Museum y la Universidad de Edimburgo es 1768-1797",
+    "presentar el montaje del eclipse como si estuviera descrito con esos detalles en su propio ensayo: la escena con la mesa, la lámpara de cristal y el espejo procede de relatos biográficos posteriores, sobre todo de Notable Women of China de Barbara Bennett Peterson (2000), y no de una traducción del 月食解",
+    "añadir que lo hizo durante la Fiesta de los Faroles: el dato circula en divulgación y no tiene respaldo primario localizable",
+    "afirmar que fue la única o la primera astrónoma china, o que ningún colega suyo experimentaba: son comparaciones que las fuentes consultadas no sostienen; lo documentado es que ella construyó el modelo",
+    "confundir el ensayo sobre eclipses de Luna (月食解) con uno sobre eclipses de Sol: algunas reseñas los intercambian",
+    "atribuirle el descubrimiento de que la Tierra es redonda o de la causa de los eclipses: ambas cosas eran conocidas; su aportación fue explicarlas con un modelo físico y con diagramas propios, y escribirlas para que se entendieran",
+    "citar cifras de obras «publicadas» sin matizar: se le atribuyen varios títulos, pero la mayor parte de los manuscritos científicos se perdió y lo conservado llega a través de la colección del pabellón Defeng"
+  ],
+  "_verificacion_prosa": "**Fechas y obra.** El Hong Kong Space Museum (blog del conservador, marzo de 2021) da 1768-1797, el ensayo 月食解 / Yue Shi Jie, «The Explanation of Lunar Eclipses», ilustrado con diagramas propios, y enumera La explicación del teorema de Pitágoras y la trigonometría, la Disputa sobre la precesión de los equinoccios y la Teoría de la Tierra redonda; señala que la mayoría de sus escritos se perdió y que lo conservado está en «The First Volume of the Pavilion of Virtuous Demeanor» (Defengting chuji). Recoge además su posición: «women and men are of no difference in ability and intelligence». **El montaje.** El blog The Mirror de Wellesley College describe el experimento en el pabellón del jardín: mesa redonda como Tierra, lámpara de cristal colgada del techo como Sol, gran espejo redondo al lado como Luna, y sitúa el ensayo en el volumen 7 de sus obras reunidas, con el razonamiento de que el eclipse se produce por la sombra de la Tierra y de que no ocurre en cada luna llena por la inclinación orbital. La Escuela de Matemáticas de la Universidad de Edimburgo repite el montaje, añade que se destruyó cerca del 70 % de sus escritos científicos y cita su verso «It's made to believe, / Women are the same as Men; / Are you not convinced, / Daughters can also be heroic?». **Biografía.** EBSCO Research Starters aporta los setenta y cinco armarios de libros del abuelo Wang Zhefu, el viaje a Jilin a los once años para su funeral, el recorrido por Shaanxi, Hubei y Guangdong a los dieciséis, el manual Shusuan jiancun publicado a los 24 con el fin de que los principiantes entendieran antes la multiplicación y la división, y los cuatro volúmenes de la colección Defengting como lo principal que sobrevivió. EBSCO da 1764 como año de nacimiento, discrepando de las demás fuentes: queda anotado en do_not_use. **Cita personal.** «There were times when I had to put down my pen and sighed. But I love the subject, I do not give up», atribuida vía Peterson, Notable Women of China (2000), p. 344. **Lo que NO se verificó:** no se consultó una traducción directa del 月食解, de modo que los detalles del montaje se apoyan en relatos biográficos, no en el texto de ella; tampoco se verificó el episodio de la Fiesta de los Faroles ni ninguna comparación con otros astrónomos de su tiempo.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "2026-10-14-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Virginia Woolf y las quinientas libras al año",
+    "hook": "DE LA FRASE MÁS CITADA DE WOOLF SE REPITE SIEMPRE LA HABITACIÓN Y CASI NUNCA EL DINERO",
+    "quote": {
+      "text": "Una mujer debe tener dinero y una habitación propia si va a escribir ficción.",
+      "author": "Virginia Woolf",
+      "work": "Una habitación propia, capítulo 1 (1929)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El libro nació de dos conferencias que Woolf dio en octubre de 1928 en Newnham y en Girton, las dos sociedades de mujeres de Cambridge. Se publicó al año siguiente, en una primera edición limitada de 492 ejemplares numerados y firmados, repartida entre Fountain Press de Nueva York y la Hogarth Press, la imprenta de los propios Woolf. La frase está en la página 4 del capítulo primero. En el original: a woman must have money and a room of her own if she is to write fiction. El dinero va primero.",
+      "En el capítulo segundo explica de dónde salió el suyo. Una tía a la que apenas conocía, Mary Beton, murió al caerse del caballo cuando salía a tomar el aire en Bombay y le dejó quinientas libras al año, para siempre. La noticia llegó, escribe, más o menos al mismo tiempo que la ley que dio el voto a las mujeres. Y entonces suelta la línea que casi nadie repite: de las dos cosas, el voto y el dinero, el dinero me pareció, lo confieso, infinitamente más importante.",
+      "El resto del libro explica por qué. En el capítulo primero un señor cortés la aparta de la puerta de una biblioteca: las damas solo entran acompañadas de un miembro del colegio o con una carta de presentación. Las dos sociedades donde dio la conferencia no fueron colegios de pleno derecho de la Universidad de Cambridge hasta mayo de 1948, diecinueve años después de publicar el libro. La habitación que pide no es una metáfora sobre la inspiración. Es una puerta que se cierra por dentro."
+    ],
+    "question": "¿Qué necesitarías tener asegurado para ponerte a hacer lo que postergas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "VIRGINIA WOOLF",
+    "subtitle": "La mitad de la frase que nadie recuerda es la del dinero",
+    "body": "Woolf pedía dinero y una habitación. De la frase sobrevivió la habitación. En el capítulo siguiente cuenta que una tía le dejó quinientas libras al año, y escribe que entre el voto y el dinero, el dinero le pareció infinitamente más importante."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#VirginiaWoolf",
+      "#UnaHabitacionPropia",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Escritura",
+      "#Libros",
+      "#HistoriaDeLasMujeres",
+      "#Cambridge",
+      "#SigloXX",
+      "#Citas",
+      "#Ensayo",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La frase del capítulo 1 es, en el original, «a woman must have money and a room of her own if she is to write fiction», y el capítulo abre con «But, you may say, we asked you to speak about women and fiction—what, has that got to do with a room of one's own?»",
+      "source": "Project Gutenberg Australia — Virginia Woolf, A Room of One's Own, texto completo",
+      "url": "https://gutenberg.net.au/ebooks02/0200791h.html"
+    },
+    {
+      "claim": "En el capítulo 2 Woolf escribe que su tía Mary Beton murió al caerse del caballo cuando salía a tomar el aire en Bombay, que le dejó «five hundred pounds a year for ever», y que «Of the two—the vote and the money—the money, I own, seemed infinitely the more important»",
+      "source": "Project Gutenberg Australia — Virginia Woolf, A Room of One's Own, capítulo 2",
+      "url": "https://gutenberg.net.au/ebooks02/0200791h.html"
+    },
+    {
+      "claim": "En el capítulo 1 un caballero la aparta de la biblioteca explicando que «ladies are only admitted to the library if accompanied by a Fellow of the College or furnished with a letter of introduction»",
+      "source": "Project Gutenberg Australia — Virginia Woolf, A Room of One's Own, capítulo 1",
+      "url": "https://gutenberg.net.au/ebooks02/0200791h.html"
+    },
+    {
+      "claim": "La primera edición fue limitada, de 492 ejemplares numerados y firmados, repartida entre Fountain Press de Nueva York y la Hogarth Press; la frase se localiza en la página 4 de la edición de 1929",
+      "source": "The New York Society Library — Special Collections Highlight: A Room of One's Own (ejemplar n.º 395)",
+      "url": "https://www.nysoclib.org/blog/special-collections-highlight-room-ones-own"
+    },
+    {
+      "claim": "El libro nació de dos conferencias dictadas en octubre de 1928 ante la Newnham Arts Society y la sociedad ODTAA de Girton, y ninguna de las dos instituciones fue colegio de pleno derecho de la universidad hasta 1948",
+      "source": "The New York Society Library — Special Collections Highlight: A Room of One's Own",
+      "url": "https://www.nysoclib.org/blog/special-collections-highlight-room-ones-own"
+    },
+    {
+      "claim": "Newnham y Girton se convirtieron en colegios de pleno derecho de la Universidad de Cambridge en mayo de 1948, más de 75 años después de la llegada de las primeras estudiantes",
+      "source": "Newnham College, University of Cambridge — 75th anniversary celebration of degrees for women at Cambridge",
+      "url": "https://newn.cam.ac.uk/newnham-news/75th-anniversary-celebrations-of-degrees-for-women-at-cambridge"
+    },
+    {
+      "claim": "El texto de Wikisource reproduce la edición Hogarth de 1929 y confirma el mismo tenor del capítulo 1",
+      "source": "Wikisource — A Room of One's Own (Hogarth 1929), capítulo 1",
+      "url": "https://en.wikisource.org/wiki/A_Room_of_One%27s_Own_(Hogarth_1929)/Chapter_1"
+    }
+  ],
+  "do_not_use": [
+    "citar la frase solo como «una habitación propia»: el sujeto de la oración pide dos cosas, dinero y habitación, y el dinero aparece primero. Recortarla invierte el argumento del libro",
+    "dar un día exacto de publicación: las fuentes discrepan entre finales de septiembre y el 24 de octubre de 1929, porque la edición limitada estadounidense salió unos días antes que la tirada británica. Basta con decir 1929",
+    "presentar a Mary Beton como una tía real de Woolf: en el libro es parte de la ficción con la que la narradora se presenta, junto a Mary Seton y Mary Carmichael. La propia Woolf advierte que el nombre no importa",
+    "atribuirle a Woolf la frase «una mujer necesita una habitación propia para escribir» como si fuera cita literal: es una paráfrasis extendida, no el texto",
+    "dar por hecho que en 1928 las mujeres no podían estudiar en Cambridge: podían examinarse y residir en Newnham y Girton desde el siglo XIX; lo que no tenían era pertenencia plena a la universidad, y eso no llegó hasta 1948",
+    "sostener que Woolf dice que el dinero importa más que el voto en general: lo dice de su caso y para escribir, y lo marca con «I own», lo confieso"
+  ],
+  "_verificacion_prosa": "**Texto.** Project Gutenberg Australia reproduce A Room of One's Own completo. Capítulo 1, apertura: «But, you may say, we asked you to speak about women and fiction—what, has that got to do with a room of one's own?». Tesis: «a woman must have money and a room of her own if she is to write fiction». Escena de la biblioteca: «a deprecating, silvery, kindly gentleman, who regretted in a low voice as he waved me back that ladies are only admitted to the library if accompanied by a Fellow of the College or furnished with a letter of introduction». **Capítulo 2.** «My aunt, Mary Beton, I must tell you, died by a fall from her horse when she was riding out to take the air in Bombay»; «she had left me five hundred pounds a year for ever»; y la línea clave: «Of the two—the vote and the money—the money, I own, seemed infinitely the more important». **Edición.** The New York Society Library describe su ejemplar (n.º 395) de la primera edición limitada de 492 ejemplares numerados y firmados, repartida entre Fountain Press de Nueva York y la Hogarth Press de Leonard y Virginia Woolf, y localiza la frase en la página 4 (1929: 4). La misma ficha señala que las conferencias fueron de octubre de 1928, ante la Newnham Arts Society y la sociedad ODTAA de Girton, y que ninguna de las dos fue colegio oficial de la universidad hasta 1948. **Cambridge.** Newnham College confirma que Newnham y Girton pasaron a ser colegios de pleno derecho en mayo de 1948. **Fecha exacta de publicación:** no la fijo. Las fuentes discrepan (finales de septiembre frente al 24 de octubre de 1929) porque la edición limitada estadounidense se imprimió unos días antes que la británica; el dato no es necesario para la pieza. **No usar:** la cita recortada a la habitación; un día exacto de publicación; Mary Beton como tía real; paráfrasis presentadas como cita; la idea de que las mujeres no podían estudiar en Cambridge en 1928.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

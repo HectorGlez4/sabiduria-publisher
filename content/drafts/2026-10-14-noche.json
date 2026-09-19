@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-14-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Ebla y los archivos del palacio de Tell Mardikh",
+    "hook": "EL ARCHIVO MEJOR ORDENADO DE LA EDAD DEL BRONCE LLEGÓ HASTA NOSOTROS PORQUE LA CIUDAD SE QUEMÓ",
+    "body": [
+      "En 1975, en Tell Mardikh, a unos 55 kilómetros al sur de Alepo, la misión italiana que dirigía Paolo Matthiae abrió dos salas del palacio real de Ebla. En la mayor, catalogada como L.2769, aparecieron más de quince mil tablillas, fragmentos y esquirlas de arcilla; los cálculos hablan de entre cuatro mil y cinco mil tablillas enteras en origen. La ciudad ardió en algún momento entre el 2367 y el 2293 a. C., según el radiocarbono. Las tablillas estaban donde habían caído.",
+      "Y habían caído de estanterías de madera, apoyadas de canto y en dos o tres alturas, como libros. El orden era deliberado: los textos económicos contra una pared, los léxicos contra otra, agrupados por materia y dentro de cada materia por fecha. No había índice ni catálogo. El sistema entero se sostenía sobre la memoria de los escribas y sobre el sitio que ocupaba cada pieza. El fuego que destruyó el palacio coció la arcilla y volcó los estantes casi en bloque, así que el incendio conservó a la vez los documentos y su clasificación.",
+      "Entre los textos léxicos hay listas bilingües: palabras sumerias con su equivalente en eblaíta, la lengua semítica que allí se hablaba. Las fuentes principales suman entre mil cuatrocientas y mil cuatrocientas cincuenta entradas, y una sola lista, conservada en dieciocho copias, traduce cerca de mil términos. Se las llama los diccionarios más antiguos del mundo. Importan por algo más: el eblaíta se escribe con signos silábicos, de modo que esas listas anotan cómo sonaba el sumerio para quien lo estudiaba como lengua ajena. Nadie las hizo para la posteridad. Las hizo un escriba que necesitaba entender lo que copiaba."
+    ],
+    "question": "¿Qué parte de tu trabajo se sostiene solo en tu memoria?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EBLA",
+    "subtitle": "Un incendio de hace 4.300 años conservó el archivo y también su orden",
+    "body": "En 1975 aparecieron en el palacio de Ebla más de quince mil tablillas y fragmentos. Estaban ordenados por materia: los económicos contra una pared, los léxicos contra otra. No había catálogo. El fuego coció la arcilla y volcó los estantes casi en bloque: se salvó el archivo y su clasificación."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Ebla",
+      "#Arqueologia",
+      "#Siria"
+    ],
+    "extended": [
+      "#Mesopotamia",
+      "#Historia",
+      "#Cuneiforme",
+      "#Sumerio",
+      "#EdadDelBronce",
+      "#Archivos",
+      "#Civilizaciones",
+      "#Escritura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Paolo Matthiae inició los trabajos en Tell Mardikh en 1964 y el yacimiento se identificó como Ebla en 1968; en 1975 se descubrieron el Gran Archivo L.2769, con más de 15.000 tablillas, fragmentos y esquirlas y una estimación de 4.000 a 5.000 tablillas originales, y el Pequeño Archivo L.2712, con unas 211 tablillas completas",
+      "source": "International Association for Assyriology — The Archives of Ebla: A Primer",
+      "url": "https://iaassyriology.com/the-archives-of-ebla-a-primer/"
+    },
+    {
+      "claim": "El análisis de radiocarbono sitúa la destrucción del palacio entre el 2367 y el 2293 a. C., y la autoría se discute entre Sargón o Naram-Sin de Acad y Mari",
+      "source": "International Association for Assyriology — The Archives of Ebla: A Primer",
+      "url": "https://iaassyriology.com/the-archives-of-ebla-a-primer/"
+    },
+    {
+      "claim": "Los archivos contienen sobre todo registros administrativos de entregas mensuales de tejidos y balances anuales de metales, además de textos léxicos, literarios y unos 60 documentos diplomáticos",
+      "source": "International Association for Assyriology — The Archives of Ebla: A Primer",
+      "url": "https://iaassyriology.com/the-archives-of-ebla-a-primer/"
+    },
+    {
+      "claim": "Las tablillas se guardaban de canto sobre estanterías de madera, en dos y tres alturas, ordenadas por materia y cronológicamente dentro de cada materia; los textos económicos iban contra una pared y los léxicos contra otra, no había instrumentos de descripción escritos y la consulta dependía de la memoria y del esquema de colocación; las estanterías se derrumbaron en el incendio que destruyó la ciudad",
+      "source": "U.S. National Archives — The Text Message: The Royal Archives of Ebla, Reference and Processing Archivists 4,000 Years Ago",
+      "url": "https://text-message.blogs.archives.gov/2020/07/07/the-royal-archives-of-ebla-reference-and-processing-archivists-4000-years-ago/"
+    },
+    {
+      "claim": "Un texto léxico de Ebla recoge cerca de mil palabras eblaítas en columnas con su significado en sumerio en columnas paralelas",
+      "source": "U.S. National Archives — The Text Message: The Royal Archives of Ebla",
+      "url": "https://text-message.blogs.archives.gov/2020/07/07/the-royal-archives-of-ebla-reference-and-processing-archivists-4000-years-ago/"
+    },
+    {
+      "claim": "Las fuentes principales de la lista léxica bilingüe de Ebla suman en torno a 1.400-1.450 entradas (VE 1 a VE 1457 aproximadamente), repartidas en varios manuscritos que el autor atribuye al menos a tres círculos de escribas; las entradas sumerias se glosan en eblaíta con escritura silábica, y las variantes de grafía revelan interpretaciones fonéticas distintas del sumerio",
+      "source": "Cuneiform Digital Library Journal 2016:2 — Remarks on the Putative Source A2 of the Ebla Bilingual Lexical List",
+      "url": "https://cdli.earth/articles/cdlj/2016-2"
+    },
+    {
+      "claim": "Las listas bilingües de Ebla están consideradas los diccionarios bilingües más antiguos conocidos, y una de ellas, conservada con dieciocho duplicados, traduce cerca de mil palabras; antes de este corpus no existían diccionarios bilingües de sumerio, lo que dejaba a oscuras su pronunciación",
+      "source": "Wikipedia — Ebla tablets (síntesis de G. Pettinato y de la bibliografía de la misión italiana)",
+      "url": "https://en.wikipedia.org/wiki/Ebla_tablets"
+    }
+  ],
+  "do_not_use": [
+    "dar una fecha cerrada para la destrucción de Ebla: el radiocarbono da una horquilla de 2367 a 2293 a. C., algunas divulgaciones dicen «hacia 2220 a. C.» y otras «hacia 2300 a. C.», y quién la destruyó (Sargón, Naram-Sin o Mari) sigue en discusión",
+    "repetir la cifra de «17.000 tablillas» como si fueran documentos enteros: las más de quince mil piezas del Gran Archivo incluyen fragmentos y esquirlas; las tablillas completas estimadas son entre cuatro mil y cinco mil",
+    "llamar «paleocananeo» al eblaíta: fue el nombre que propuso Giovanni Pettinato al anunciar el hallazgo en 1975 y no es el término que hoy se usa; se trata de una lengua semítica oriental",
+    "usar Ebla para confirmar nombres o episodios de la Biblia: las lecturas bíblicas de los archivos que circularon a finales de los años setenta fueron retiradas o corregidas por los propios epigrafistas y no se sostienen",
+    "decir que el sumerio era la lengua hablada en Ebla: se usaba como lengua de escuela y de administración, con logogramas sumerios dentro de textos eblaítas, y es muy probable que allí nadie lo hablara",
+    "presentar las listas léxicas como diccionarios de uso general: son listas de escuela, hechas para que un escriba pudiera resolver los logogramas sumerios de sus propios documentos"
+  ],
+  "_verificacion_prosa": "**Descubrimiento.** La International Association for Assyriology sitúa el inicio de los trabajos de Paolo Matthiae (Universidad de Roma La Sapienza) en 1964 y la identificación del yacimiento como Ebla en 1968. Las primeras 42 tablillas lenticulares salieron en 1974; en 1975 aparecieron el Gran Archivo L.2769 —más de 15.000 tablillas, fragmentos y esquirlas, con una estimación de 4.000-5.000 tablillas originales— y el Pequeño Archivo L.2712, con unas 211 tablillas completas. Otras salas: el vestíbulo L.2875, el Archivo Trapezoidal L.2764 y el Patio de Audiencias L.2752. **Destrucción.** Radiocarbono: entre 2367 y 2293 a. C. Autoría discutida entre Sargón o Naram-Sin de Acad y Mari. **Disposición física.** El blog The Text Message del U.S. National Archives describe las tablillas de canto sobre estanterías de madera, en dos y tres alturas, agrupadas por materia y ordenadas cronológicamente dentro de cada materia, con los textos económicos contra una pared y los léxicos contra otra; sin instrumentos de descripción escritos, la consulta se apoyaba en «memory and the arrangement scheme». Las estanterías se derrumbaron en el incendio. **Listas bilingües.** El artículo del Cuneiform Digital Library Journal 2016:2 sobre la fuente A2 de la lista léxica bilingüe cifra las fuentes principales en torno a 1.400-1.450 entradas (de VE 1 a VE 1457 aproximadamente), identifica varios manuscritos (A, C, A2, b, a, D) y los atribuye al menos a tres círculos de escribas; las glosas eblaítas son silábicas y sus variantes revelan lecturas fonéticas distintas del sumerio. El blog del National Archives describe un texto con cerca de mil palabras eblaítas en columnas y su equivalente sumerio en columnas paralelas. **Contenido general.** Sobre todo administración: entregas mensuales de tejidos y balances anuales de metales, más textos léxicos, literarios y unos 60 documentos diplomáticos. **No usar:** una fecha cerrada de destrucción; «17.000 tablillas» como documentos enteros; el término «paleocananeo» de Pettinato; las lecturas bíblicas de los años setenta; la idea de que el sumerio se hablaba en Ebla; ni presentar las listas como diccionarios de uso general.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
