@@ -71,13 +71,27 @@
     "Presentar la frase como consuelo sobre la muerte o como lema de superación personal. En Voces es una observación seca sobre para qué vive la gente, sin promesa ninguna.",
     "Dar por buena la etiqueta de \"poeta maldito\" o \"ermitaño\" que arrastran algunas semblanzas: recibía visitas, trató con el grupo de artistas que lo empujó a publicar y colaboró con la revista Sur por mediación de Caillois."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-19T04:26:00Z",
   "targets": [
     "facebook_story",
     "instagram_story"
   ],
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1556468722376535",
+      "photo_id": "1098902556267737",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-09-19T06:09:59.484210+00:00"
+    },
+    "instagram_story": {
+      "post_id": "18103792886256823",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-09-19T06:10:13.334116+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
