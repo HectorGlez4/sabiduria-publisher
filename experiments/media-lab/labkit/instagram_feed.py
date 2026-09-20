@@ -23,7 +23,7 @@ from labkit.instagram_pantallas import (MARCA, PAQUETE, PantallaInesperada, _cam
                                         campo_pie, compositor_listo, emergente_desplegable, gesto_de_refresco,
                                         hay_desplegable_hashtags, hoja_abierta, miniatura_coincide, observacion_de_volcado,
                                         perfil_activo, publicaciones_de_perfil, punto_mas, seleccion_unica,
-                                        tema_de_chip)
+                                        tema_de_chip, tema_visible)
 # ATRAS y ESTABILIZACION_TIMEOUT_S los usan los pasos de aquí (`atras`, docstrings); CTRL_IZQ y TECLA_A ya
 # no (van dentro de `pasos.escribir_texto`): solo lectura, se quedan reexportados porque las pruebas de la
 # fase 1 los leen como IG.CTRL_IZQ/IG.TECLA_A.
@@ -274,13 +274,21 @@ def anadir_audio_sugerido(evidencia: Path) -> dict:
     return {"tema": tema, "captura": str(telefono.captura(evidencia / "ig-03-audio.png"))}
 
 
-def detalles(evidencia: Path) -> Path:
-    """Del editor a la pantalla de detalles; quien dirige la mira antes de escribir el pie."""
+def detalles(evidencia: Path, tema: str | None = None) -> dict:
+    """Del editor a la pantalla de detalles; quien dirige la mira antes de escribir el pie.
+
+    Con `tema`, aquí se confirma la fila de música, que es donde se ve: el campo del pie está
+    vacío y nada la ha desplazado todavía. Si no aparece, se para en este paso (código 4) en vez
+    de dejar el borrador escrito y caerse al ir a compartir (CELL-028, 2026-09-16)."""
     pasos.exigir_listo()
     xml = _esperar(texto="Suivant")
     telefono.tocar(*_suivant(xml)["centro"])
-    pasos.esperar_que(lambda x: campo_pie(x) is not None, "el campo del pie")
-    return telefono.captura(evidencia / "ig-03b-detalles.png")
+    xml = pasos.esperar_que(lambda x: campo_pie(x) is not None, "el campo del pie")
+    captura = telefono.captura(evidencia / "ig-03b-detalles.png")
+    if tema and not tema_visible(xml, tema):
+        raise PantallaInesperada(
+            f"la pantalla de detalles no muestra la fila de música «{tema}»: no se escribe el pie")
+    return {"captura": captura, "tema_confirmado": bool(tema)}
 
 
 def escribir_pie(pie: str, evidencia: Path) -> Path:
@@ -299,7 +307,7 @@ def atras(evidencia: Path, nombre: str) -> Path:
 
 
 def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: int | None,
-              produccion_cercana: bool = False) -> dict:
+              produccion_cercana: bool = False, tema_confirmado: bool = False) -> dict:
     """Pulsa Partager una sola vez (nunca se reintenta) y observa el resultado.
 
     Estados: «confirmado» (banner, compositor cerrado y el perfil suma una publicación),
@@ -319,8 +327,18 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
             return obs
         return observar
 
+    fuera_del_volcado: list[bool] = []  # la fila de música desplazada por un pie largo, no ausente
+
+    def listo(xml: str, emergentes: list[dict]) -> list[str]:
+        if tema and tema_confirmado and not tema_visible(xml, tema):
+            fuera_del_volcado.append(True)
+        return compositor_listo(xml, pie, tema, emergentes, tema_confirmado=tema_confirmado)
+
     def despues(resultado: dict, estado: str) -> str:
         avisos = resultado["avisos"]
+        if fuera_del_volcado:
+            avisos.append(f"el volcado del compositor no mostraba la fila de música «{tema}» (el pie la"
+                          " desplaza); se compartió con la confirmación de «detalles»")
         try:
             if telefono.estado()["listo"]:
                 xml = _esperar("abajo", texto="Profil")
@@ -352,7 +370,7 @@ def compartir(pie: str, tema: str | None, evidencia: Path, publicaciones_antes: 
     return pasos.enviar(
         paquete=PAQUETE, nombre_app="Instagram", etiqueta="Partager", evidencia=evidencia,
         captura_antes="ig-05a-antes.png", captura_final="ig-05-publicado.png", captura_error="ig-05-error.png",
-        listo=lambda x, emergentes: compositor_listo(x, pie, tema, emergentes),
+        listo=listo,
         botones=lambda x: telefono.buscar_todos(x, texto="Partager", paquete=PAQUETE),
         observador_nuevo=observador_nuevo, despues=despues,
         extra={"publicaciones_antes": publicaciones_antes, "publicaciones_despues": None})

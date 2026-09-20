@@ -915,6 +915,16 @@ def seccion_interfaz() -> None:
     tema = "Autumn Days par Morunas"
     check(IG.compositor_listo(comp, PIE_PRUEBA, tema) == [], "compositor listo: sin problemas")
     check(IG.compositor_listo(comp, PIE_PRUEBA, None) == [], "sin tema no se exige canción")
+    # El volcado solo trae lo que está en pantalla: con un pie largo la fila de música se va
+    # arriba y deja de aparecer, aunque siga puesta (CELL-028, 2026-09-16). Por eso se confirma
+    # en «detalles», antes de escribir el pie, y aquí solo se exige si no venía confirmada.
+    sin_fila = xml_compositor(tema=False)
+    check(IG.tema_visible(comp, tema) and not IG.tema_visible(sin_fila, tema),
+          "tema_visible mira la fila de música en el volcado")
+    check(IG.compositor_listo(sin_fila, PIE_PRUEBA, tema, tema_confirmado=True) == [],
+          "confirmado en detalles: que el pie desplace la fila no bloquea el envío")
+    check(any("tema" in p for p in IG.compositor_listo(sin_fila, PIE_PRUEBA, tema)),
+          "sin confirmar, la falta de la fila de música sigue bloqueando")
     casos = (
         (xml_compositor(titulo=False), PIE_PRUEBA, "Nouvelle publication"),
         (xml_compositor(pie="«Conténtese con hacer»."), PIE_PRUEBA, "pie"),
@@ -2193,8 +2203,9 @@ def seccion_cli_en_proceso() -> None:
 
             recibido: dict = {}
 
-            def compartir_falso(pie_, tema_, ev_, antes_, produccion_cercana=False):
-                recibido.update(produccion_cercana=produccion_cercana, antes=antes_)
+            def compartir_falso(pie_, tema_, ev_, antes_, produccion_cercana=False, tema_confirmado=False):
+                recibido.update(produccion_cercana=produccion_cercana, antes=antes_,
+                                tema_confirmado=tema_confirmado)
                 return {"estado": "confirmado_sin_conteo" if produccion_cercana else "confirmado"}
 
             instagram_feed.compartir = compartir_falso
@@ -2214,6 +2225,28 @@ def seccion_cli_en_proceso() -> None:
                                        "--publicaciones-antes", valor)
                 check(codigo == 0 and "antes" in recibido and recibido["antes"] is None,
                       f"--publicaciones-antes {valor} llega a compartir como None ({codigo}, {recibido})")
+
+            # El tema se confirma en «detalles», donde la fila de música se ve, y `compartir` lo
+            # lee de la marca: con un pie largo el volcado del compositor ya no la trae (CELL-028).
+            recibido.clear()
+            codigo, datos, _ = lab(*base_compartir)
+            check(codigo == 0 and recibido.get("tema_confirmado") is False,
+                  f"sin pasar por detalles, compartir recibe tema_confirmado False ({codigo}, {recibido})")
+            vistos: dict = {}
+            instagram_feed.detalles = lambda ev_, tema_=None: vistos.update(tema=tema_) or {
+                "captura": ev_ / "ig-03b-detalles.png", "tema_confirmado": bool(tema_)}
+            codigo, datos, _ = lab("ig", "detalles", "--run", "RUN-1", "--tema", "T")
+            check(codigo == 0 and vistos.get("tema") == "T" and campo(datos, "tema_confirmado") is True,
+                  f"ig detalles --tema comprueba la fila de música ({codigo}, {datos})")
+            recibido.clear()
+            codigo, datos, _ = lab(*base_compartir)
+            check(codigo == 0 and recibido.get("tema_confirmado") is True,
+                  f"tras detalles, compartir recibe tema_confirmado True ({codigo}, {recibido})")
+            recibido.clear()
+            codigo, datos, _ = lab("ig", "compartir", "--run", "RUN-1", "--pie", pie, "--tema", "OTRO",
+                                   "--publicaciones-antes", "3")
+            check(codigo == 0 and recibido.get("tema_confirmado") is False,
+                  f"la marca no vale para otro tema ({codigo}, {recibido})")
 
             def pantalla(*args, **kwargs):
                 raise instagram_feed.PantallaInesperada("no aparece «Modifier le rognage»")

@@ -1040,6 +1040,33 @@ def _publicaciones_antes(valor: str) -> int | None:
     return int(v)
 
 
+MARCA_TEMA = ".tema-confirmado.json"
+
+
+def _confirmar_tema(ig, ev: Path, tema: str | None) -> dict:
+    """`ig detalles`: mira la fila de música y, si estaba, lo deja escrito para `compartir`.
+
+    La marca vive en la carpeta de evidencia del run porque los pasos son procesos distintos y
+    el volcado del compositor ya no sirve para comprobarlo: el pie desplaza la fila."""
+    res = ig.detalles(ev, tema)
+    if tema:
+        ev.mkdir(parents=True, exist_ok=True)
+        (ev / MARCA_TEMA).write_text(json.dumps(
+            {"tema": tema, "confirmado_en": "detalles", "cuando": datetime.now(timezone.utc).isoformat()},
+            ensure_ascii=False), encoding="utf-8")
+    return res
+
+
+def _tema_confirmado(ev: Path, tema: str | None) -> bool:
+    if not tema:
+        return False
+    try:
+        marca = json.loads((ev / MARCA_TEMA).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    return marca.get("tema") == tema
+
+
 def cmd_ig(a) -> int:
     from labkit import instagram_feed as ig
     ev = _evidencia(a.run)
@@ -1063,11 +1090,12 @@ def cmd_ig(a) -> int:
         "recorte": lambda: {"captura": ig.alternar_recorte(ev)},
         "editor": lambda: {"captura": ig.siguiente(ev, "ig-02b-editor")},
         "audio": lambda: ig.anadir_audio_sugerido(ev),
-        "detalles": lambda: {"captura": ig.detalles(ev)},
+        "detalles": lambda: _confirmar_tema(ig, ev, a.tema),
         "pie": lambda: {"captura": ig.escribir_pie(pie, ev)},
         # compartir sale con 5 si el envío no queda confirmado, para conciliar antes de nada
         "compartir": lambda: ig.compartir(pie, a.tema, ev, a.publicaciones_antes,
-                                          produccion_cercana=a.produccion_cercana),
+                                          produccion_cercana=a.produccion_cercana,
+                                          tema_confirmado=_tema_confirmado(ev, a.tema)),
     }
     codigo_de = (lambda res: 0 if res["estado"] == "confirmado" else 5) if a.paso == "compartir" else (lambda res: 0)
     return _paso_telefono(ev, f"ig-inesperada-{a.paso}", pasos[a.paso], codigo_de)
@@ -1233,7 +1261,7 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--run", required=True)
     p.add_argument("--pie", help="archivo del pie (pie, compartir)")
     p.add_argument("--subido-en", help="subido_en que devolvió telefono-subir (abrir)")
-    p.add_argument("--tema", help="tema que devolvió ig audio (compartir)")
+    p.add_argument("--tema", help="tema que devolvió ig audio (detalles, compartir)")
     p.add_argument("--publicaciones-antes", type=_publicaciones_antes, default=SIN_PUBLICACIONES_ANTES,
                    help="entero ≥ 0 de ig abrir; none o null si lo dio null")
     p.add_argument("--produccion-cercana", action="store_true",

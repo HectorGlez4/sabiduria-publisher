@@ -26,7 +26,7 @@ __all__ = [
     "hoja_abierta",
     "hay_desplegable_hashtags", "hay_desplegable_por_ventana", "emergente_desplegable", "parece_desplegable",
     "describe_emergente", "punto_mas", "tema_de_chip", "campo_pie", "partager_pulsable",
-    "compositor_listo", "observacion_de_volcado", "evaluar_envio",
+    "tema_visible", "compositor_listo", "observacion_de_volcado", "evaluar_envio",
     "_es_textview", "_dice", "_area", "_campos", "_elegir", "_coincidencias", "_nodo", "_suivant",
     "_tiene_pie", "_exigir_compositor_con_pie",
 ]
@@ -251,21 +251,36 @@ def partager_pulsable(xml: str) -> bool:
     return pantalla.pulsable(xml, etiqueta="Partager", paquete=PAQUETE)
 
 
-def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict] | None = None) -> list[str]:
+def tema_visible(xml: str, tema: str) -> bool:
+    """La fila de música del compositor, tal y como la ve este volcado.
+
+    Ojo: el volcado solo trae lo que está en pantalla. La fila de música va encima del campo
+    del pie, así que con un pie largo la pantalla de detalles se desplaza y la fila desaparece
+    del volcado aunque la música siga puesta."""
+    titulo = tema.split(" par ")[0]
+    return any(_es_textview(n) and n["texto"] == titulo for n in telefono.buscar_todos(xml, paquete=PAQUETE))
+
+
+def compositor_listo(xml: str, pie: str, tema: str | None, emergentes: list[dict] | None = None,
+                     tema_confirmado: bool = False) -> list[str]:
     """Problemas que impiden compartir; lista vacía = listo.
 
     `emergentes` (ver `telefono.ventanas_emergentes`) detecta el desplegable de hashtags
     cuando es una ventana aparte que el volcado no muestra (Task 10f); sin él, solo se mira
-    el volcado, como antes."""
+    el volcado, como antes.
+
+    `tema_confirmado` viene de haber visto la fila de música en la pantalla de detalles, antes
+    de escribir el pie (`instagram_feed.detalles`). Sin él, un pie largo bastaba para tumbar el
+    envío: el 2026-09-16 `ig compartir` se negó con «no aparece el tema «Natural»» en CELL-028
+    con un pie de ~1140 caracteres, con la música puesta y visible un «atrás» después. La
+    comprobación sigue siendo obligatoria; lo que cambia es dónde se hace, que es donde se ve."""
     problemas = []
     if telefono.buscar(xml, texto="Nouvelle publication", paquete=PAQUETE) is None:
         problemas.append("falta «Nouvelle publication»")
     if not any(n["texto"] == pie for n in telefono.buscar_todos(xml, paquete=PAQUETE)):
         problemas.append("el pie del teléfono no coincide con el archivo")
-    if tema:
-        titulo = tema.split(" par ")[0]
-        if not any(_es_textview(n) and n["texto"] == titulo for n in telefono.buscar_todos(xml, paquete=PAQUETE)):
-            problemas.append(f"no aparece el tema «{titulo}»")
+    if tema and not tema_visible(xml, tema) and not tema_confirmado:
+        problemas.append(f"no aparece el tema «{tema.split(' par ')[0]}»")
     botones = telefono.buscar_todos(xml, texto="Partager", paquete=PAQUETE)
     if not botones:
         problemas.append("no hay botón «Partager» de Instagram")

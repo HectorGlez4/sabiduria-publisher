@@ -44,9 +44,12 @@ FEED_INSTAGRAM = {
         _cmd("ig", "recorte", "--run", "<run>", ver="ig-02-recorte.png: la imagen completa en 4:5 (el volcado no lo muestra)"),
         _cmd("ig", "editor", "--run", "<run>", ver="ig-02b-editor.png: editor con la imagen y el chip «Audio suggéré»"),
         _cmd("ig", "audio", "--run", "<run>", ver="ig-03-audio.png: chip de música añadido", anota=("tema",)),
-        _cmd("ig", "detalles", "--run", "<run>", ver="ig-03b-detalles.png: detalles con la fila de música"),
+        _cmd("ig", "detalles", "--run", "<run>", "--tema", "<tema>",
+             ver="ig-03b-detalles.png: detalles con la fila de música «<tema>»; aquí se confirma, "
+                 "porque después el pie la desplaza fuera del volcado"),
         _cmd("ig", "pie", "--run", "<run>", "--pie", "<pie>",
-             ver="ig-04-compositor.png: pie, música y «Partager» sin teclado ni desplegable (captura de la QA)"),
+             ver="ig-04-compositor.png: pie y «Partager» sin teclado ni desplegable (captura de la QA); "
+                 "la fila de música puede quedar fuera de pantalla con un pie largo"),
     ],
     "publicar": [
         _cmd("ig", "compartir", "--run", "<run>", "--pie", "<pie>", "--tema", "<tema>",
