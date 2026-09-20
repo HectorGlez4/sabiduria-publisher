@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-17-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Alice Kober y las fichas del Lineal B",
+    "hook": "HIZO A MANO 180.000 FICHAS PARA ABRIR UNA ESCRITURA MUERTA, Y MURIÓ VEINTICINCO MESES ANTES DE QUE SE ABRIERA",
+    "body": [
+      "El 5 de abril de 1900, en las excavaciones de Cnosos, apareció el primer gran depósito de tablillas en Lineal B. Durante medio siglo nadie pudo leerlas. Alice Elizabeth Kober nació en Nueva York el 23 de diciembre de 1906, entró en 1930 en el claustro fundador del Brooklyn College y fue profesora asistente desde 1935. Ese mismo año empezó a trabajar sobre las tablillas. Hizo a mano unas 180.000 fichas con papel de desecho, porque después de la guerra el papel escaseaba, y las archivó en cajas de cartón de cigarrillos. El archivo que las custodia, en la Universidad de Texas en Austin, las sigue llamando los cigarette carton files.",
+      "Los demás intentaban adivinar qué significaban los signos. Kober no. Contó. Si una lengua tiene flexión, ciertos signos aparecen por fuerza en ciertas posiciones: unos en la raíz, otros en la terminación. Publicó tres artículos en cuatro años, el segundo de ellos titulado «Inflection in Linear Class B: I – Declension», de 1946. Su método agrupaba palabras de tres en tres, con la misma raíz y terminaciones distintas, y aislaba la sílaba puente: el signo intermedio que pertenece a la vez al final de la raíz y al principio del sufijo. Con eso estableció relaciones entre signos sin asignar un solo sonido a ninguno. No una traducción: una rejilla.",
+      "Murió en Brooklyn el 16 de mayo de 1950, a los cuarenta y tres años. El 1 de julio de 1952, veinticinco meses más tarde, Michael Ventris anunció por la radio de la BBC que el Lineal B era griego: griego micénico, la forma escrita más antigua de la lengua. Se había apoyado en las tablas de clasificación de Kober, y John Chadwick, que trabajó con él, consideró su aportación la más valiosa de cuantas precedieron a la solución. Kober no dejó una respuesta. Dejó el instrumento con el que se encontró, y esa es la parte del trabajo que casi nunca lleva nombre."
+    ],
+    "question": "¿Cuánto de lo que hoy se sabe lo terminó alguien que no llegó a verlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "ALICE KOBER",
+    "subtitle": "Brooklyn College, 1935-1950: la rejilla antes de la lectura",
+    "body": "Hizo a mano unas 180.000 fichas de papel de desecho y las archivó en cajas de cartón de cigarrillos. Con ellas demostró que el Lineal B registraba una lengua con flexión y estableció relaciones entre signos sin asignar un sonido a ninguno. Murió en 1950; el desciframiento se anunció en 1952."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AliceKober",
+      "#LinealB",
+      "#Cnosos"
+    ],
+    "extended": [
+      "#Micenas",
+      "#Arqueologia",
+      "#Filologia",
+      "#MujeresEnLaCiencia",
+      "#Escritura",
+      "#Historia",
+      "#SigloXX",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Alice Kober nació el 23 de diciembre de 1906 en Nueva York y murió el 16 de mayo de 1950 en Brooklyn, a los 43 años; enseñó clásicas en el Brooklyn College desde 1930 hasta su muerte y fue ascendida a associate professor en 1950; elaboró unas 180.000 fichas hechas de papel de desecho porque la Segunda Guerra Mundial había vuelto escaso el papel; identificó las «bridging syllables», donde el comienzo de la sílaba pertenece a la raíz de la palabra y el final al sufijo flexivo, lo que permitió deducir relaciones fonéticas entre signos; publicó «Evidence of Inflection in the Chariot Tablets from Knossos» (1945), «Inflection in Linear Class B: I – Declension» (1946) y «The Minoan Scripts: Fact and Theory» (1948); John Chadwick calificó su aportación como la más valiosa de las anteriores a la solución de Ventris; sus papeles están en la Universidad de Texas en Austin, donados por Emmett L. Bennett Jr.",
+      "source": "Wikipedia en inglés — «Alice Kober» (usada como corroboración biográfica y bibliográfica)",
+      "url": "https://en.wikipedia.org/wiki/Alice_Kober"
+    },
+    {
+      "claim": "Alice Elizabeth Kober nació el 23 de diciembre de 1906 en Nueva York y murió el 16 de mayo de 1950 en Brooklyn; se incorporó en 1930 al claustro fundador del Brooklyn College y fue ascendida a profesora asistente en 1935; ese mismo año, 1935, empezó a dedicar su tiempo de investigación a las tablillas llamadas «Linear B»; su investigación condujo finalmente al desciframiento de las tablillas por Michael Ventris",
+      "source": "Encyclopedia.com — entrada «Kober, Alice Elizabeth (1906-1950)», procedente de Dictionary of Women Worldwide: 25.000 Women Through the Ages",
+      "url": "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/kober-alice-elizabeth-1906-1950"
+    },
+    {
+      "claim": "El archivo de Alice E. Kober en el Program in Aegean Scripts and Prehistory (PASP) contiene más de 180.000 elementos, organizados en cajas de cigarrillos y otros contenedores; PASP conserva además correspondencia digitalizada entre Kober y Michael Ventris desde 2012",
+      "source": "Universidad de Texas en Austin — página de Thomas G. Palaima, director del Departamento de Clásicas, sobre los archivos de PASP y Alice E. Kober",
+      "url": "https://sites.utexas.edu/tpalaima/margalit-fox-alice-e-kober-pasp-archives/"
+    },
+    {
+      "claim": "El archivo de Kober en PASP incluye las llamadas «cigarette carton files», donde catalogó los signos y grupos de signos del Lineal B, además de expedientes académicos del Hunter College, correspondencia con John Franklin Daniel, una monografía inédita y cuadernos de estudiante de la Universidad de Pensilvania",
+      "source": "Universidad de Texas en Austin — Program in Aegean Scripts and Prehistory, informe de visita de investigación al archivo Kober",
+      "url": "https://sites.utexas.edu/scripts/2012/06/19/report-on-visit-alison-fell/"
+    },
+    {
+      "claim": "El primer gran depósito de tablillas en Lineal B se descubrió el 5 de abril de 1900, en las excavaciones de Cnosos iniciadas ese año; el Lineal B fue descifrado en 1952 por Michael Ventris, que anunció el resultado públicamente el 1 de julio de 1952 por la radio de la BBC; la lengua subyacente resultó ser griego micénico, la forma más antigua atestiguada del griego; Kober construyó rejillas que vinculaban signos en grupos de tres y Ventris se apoyó en sus tablas de clasificación; Ventris y John Chadwick publicaron Documents in Mycenaean Greek en 1956, poco después de la muerte de Ventris en accidente de automóvil",
+      "source": "Wikipedia en inglés — «Linear B» (usada como corroboración de cronología y desciframiento)",
+      "url": "https://en.wikipedia.org/wiki/Linear_B"
+    }
+  ],
+  "do_not_use": [
+    "decir que Alice Kober descifró el Lineal B: no lo descifró ni lo intentó por esa vía. Estableció relaciones entre signos sin asignar valores fonéticos. El desciframiento lo anunció Michael Ventris el 1 de julio de 1952, dos años después de la muerte de Kober",
+    "dar por cierta la causa de su muerte: la ficha consultada dice que oficialmente se desconoce y que en la familia se hablaba de cáncer de estómago. La pieza solo da fecha y edad",
+    "decir que las fichas estaban hechas con cartones de cigarrillos: el material de las fichas era papel de desecho; los cartones de cigarrillos eran las cajas en que las archivaba. PASP llama al conjunto «cigarette carton files», y ese nombre se refiere al continente, no a la ficha",
+    "llamar «triplets de Kober» a su hallazgo como si fuera término establecido: circula en divulgación, pero las fuentes consultadas describen grupos de tres y «bridging syllables» sin acuñar ese nombre. La pieza describe el método y no lo bautiza",
+    "afirmar que Kober y Ventris nunca se escribieron: PASP conserva correspondencia digitalizada entre ambos. Lo que la pieza dice es otra cosa: que Ventris se apoyó en sus tablas de clasificación",
+    "atribuir a Arthur Evans el descubrimiento de las tablillas en esta pieza: su papel no se verificó en las fuentes consultadas, y por eso el cuerpo habla solo de las excavaciones de Cnosos",
+    "dar un número exacto de tablillas conocidas: las fuentes dan «unas 6.058 inscripciones» y «más de 6.500 fragmentos», cifras que no coinciden. La pieza no da número",
+    "fechar el desciframiento en 1953, año de la publicación del artículo de Ventris y Chadwick en el Journal of Hellenic Studies: el anuncio radiofónico es del 1 de julio de 1952, y ese dato sí está verificado. La fecha del artículo no se comprobó y no aparece en la pieza"
+  ],
+  "_verificacion_prosa": "**La biografía.** Fecha y lugar de nacimiento (23 de diciembre de 1906, Nueva York), muerte (16 de mayo de 1950, Brooklyn, a los 43 años), el Brooklyn College desde 1930 y el ascenso de 1935 coinciden en dos fuentes independientes: la ficha de Wikipedia en inglés y la entrada de Encyclopedia.com procedente del Dictionary of Women Worldwide. El inicio de su trabajo sobre el Lineal B en 1935 lo da Encyclopedia.com. El ascenso a associate professor en 1950 lo da Wikipedia. **Las fichas.** Las 180.000 fichas están confirmadas por dos vías: Wikipedia habla de unas 180.000 hechas de papel de desecho por la escasez de posguerra, y Thomas G. Palaima, director del Departamento de Clásicas de la Universidad de Texas en Austin, escribe que el archivo de PASP contiene «over 180.000 items» organizados en cajas de cigarrillos. La expresión cigarette carton files y la descripción del contenido del archivo proceden del informe de visita publicado por PASP, también en el sitio de la Universidad de Texas. **El método.** Las bridging syllables y las rejillas de signos en grupos de tres constan en las fichas de Wikipedia sobre Kober y sobre el Lineal B; los tres artículos, con año, en la primera. **La cronología del desciframiento.** El depósito de tablillas del 5 de abril de 1900, el anuncio de Ventris del 1 de julio de 1952 por la BBC, el griego micénico como lengua y el apoyo de Ventris en las tablas de clasificación de Kober vienen de la ficha de Linear B. El juicio de John Chadwick sobre el valor de su aportación viene de la ficha de Kober. **Lo que NO se verificó:** no se pudo leer ningún PDF. El instrumento de descripción del archivo Kober alojado en sites.utexas.edu, el artículo de eScholarship de la Universidad de California sobre su tabla fonética y la ficha del repositorio institucional de la Universidad de Texas quedaron fuera de alcance: los dos primeros llegaron como PDF ilegible y repositories.lib.utexas.edu devolvió 403. Tampoco se consultaron los artículos originales de Kober en el American Journal of Archaeology, de modo que los títulos y años proceden de la ficha de Wikipedia y no de la revista. Por eso la pieza no cita ni una línea de ellos.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

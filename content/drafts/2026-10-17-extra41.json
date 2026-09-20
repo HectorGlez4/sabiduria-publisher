@@ -1,0 +1,91 @@
+{
+  "id": "2026-10-17-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Averroes y el Discurso decisivo de Córdoba",
+    "hook": "LA FRASE QUE HOY SIRVE PARA DECIR QUE FE Y RAZÓN CABEN JUNTAS DECÍA TAMBIÉN CUÁL DE LAS DOS CEDE",
+    "quote": {
+      "text": "Sabemos con certeza que el estudio demostrativo no conduce a conclusiones que contradigan lo que la Escritura nos ha dado, porque la verdad no se opone a la verdad, sino que concuerda con ella y da testimonio de ella.",
+      "author": "Averroes",
+      "work": "Discurso decisivo (Faṣl al-maqāl), cap. II; trad. de G. F. Hourani, Luzac, 1961",
+      "attribution_verified": true
+    },
+    "body": [
+      "Ibn Rushd, Averroes en su forma latina, nació en Córdoba en 1126. Fue cadí y llegó a médico jefe del califa en Marrakech. Hacia 1178 escribió el Faṣl al-maqāl, el Discurso decisivo, un tratado breve que plantea una pregunta jurídica, no filosófica: si la ley religiosa permite, prohíbe u ordena el estudio de la filosofía. La frase que hoy se cita está en su capítulo segundo, titulado «La filosofía no contiene nada opuesto al islam», y va precedida de una premisa: que la comunidad musulmana lo sabe con certeza.",
+      "La frase se cita sola, y se cita como un empate cortés entre dos maneras de saber. En el tratado no es un empate. Unas líneas después Averroes dice qué hacer cuando el sentido aparente de la Escritura no concuerda con la demostración: entonces hay que interpretarlo alegóricamente. El que cede es el texto, no la prueba. La demostración no se revisa; se revisa la lectura literal. Eso vuelve la armonía bastante más incómoda que una declaración de buena voluntad: es una regla de prioridad, y establece quién pierde cuando los dos no coinciden.",
+      "En 1195 Averroes cayó en desgracia con los almohades. Fue desterrado a Lucena, a sesenta kilómetros de Córdoba; sus escritos fueron prohibidos y sus libros, quemados. Volvió a Córdoba dos años más tarde y murió en 1198, probablemente confinado en Marrakech. Sus comentarios a Aristóteles se leyeron después en latín y en hebreo durante siglos, y en Europa se lo conoció sobre todo por ellos. De todo el Discurso decisivo sobrevive hoy una línea. La regla que la acompaña —cuando la prueba y la lectura chocan, se relee el texto— es la parte que casi nunca se cita, y es la que le costó el destierro."
+    ],
+    "question": "¿Qué estarías dispuesto a releer si la prueba no te diera la razón?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "AVERROES",
+    "subtitle": "Del Discurso decisivo, escrito en Córdoba hacia 1178",
+    "body": "La frase se cita hoy como un empate cortés entre fe y razón. En el capítulo segundo del Discurso decisivo no lo es: unas líneas después, Averroes dice que si el sentido aparente de la Escritura choca con la demostración, hay que interpretarlo alegóricamente. El que cede es el texto."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Averroes",
+      "#IbnRushd",
+      "#AlAndalus"
+    ],
+    "extended": [
+      "#Cordoba",
+      "#Filosofia",
+      "#SigloXII",
+      "#Aristoteles",
+      "#Citas",
+      "#Historia",
+      "#Razon",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En el capítulo segundo del Discurso decisivo, titulado «[PHILOSOPHY CONTAINS NOTHING OPPOSED TO ISLAM]», figura «for truth does not oppose truth but accords with it and bears witness to it», precedido inmediatamente por «Now since this religion is true and summons to the study which leads to knowledge of the Truth, we the Muslim community know definitely that demonstrative study does not lead to [conclusions] conflicting with what Scripture has given us»; y en el mismo capítulo figura «If this [apparent meaning] accords there is no argument. If it conflicts there is a call for allegorical interpretation of it»",
+      "source": "Copia en línea de la traducción de George F. Hourani del Faṣl al-maqāl de Ibn Rushd, publicada por Luzac & Co., alojada en muslimphilosophy.com",
+      "url": "https://www.muslimphilosophy.com/ir/fasl.htm"
+    },
+    {
+      "claim": "Segundo testimonio independiente del mismo pasaje, en otra traducción: «Since the law is true, … we, the Muslim community, know firmly that demonstrative reasoning does not lead to disagreement with what the law sets down. For truth does not oppose truth, but rather agrees with and bears witness to it». La entrada fecha el Faṣl al-maqāl en 1178/9, sitúa el nacimiento de Ibn Rushd en Córdoba en 1126 y su muerte en 1198 probablemente confinado en Marrakech, lo describe como juez destacado y médico jefe del califa en Marrakech, dice que por razones que siguen sin estar claras cayó en desgracia con los almohades y fue desterrado a Lucena, a 60 km al sureste de Córdoba, y cita como traducción inglesa de referencia la de Charles E. Butterworth, The Book of the Decisive Treatise Determining the Connection Between the Law and Wisdom, Brigham Young University Press, 2001",
+      "source": "Stanford Encyclopedia of Philosophy, Universidad de Stanford — entrada «Ibn Rushd [Averroes]»",
+      "url": "https://plato.stanford.edu/entries/ibn-rushd/"
+    },
+    {
+      "claim": "Ibn Rushd nació en 1126 y murió en 1198; fue juez supremo y luego médico jefe; en 1195 fue desterrado a Lucena, sus escritos fueron prohibidos y sus libros quemados; regresó a Córdoba dos años después y murió al año siguiente; el Faṣl al-maqāl se escribió antes de su exilio; y según esta entrada, si la filosofía y la Escritura discrepan sobre la existencia de algún ser determinado, la Escritura debe interpretarse alegóricamente",
+      "source": "Internet Encyclopedia of Philosophy — entrada «Ibn Rushd (Averroes)», enciclopedia académica revisada por pares",
+      "url": "https://iep.utm.edu/ibn-rushd-averroes/"
+    },
+    {
+      "claim": "La fórmula «Truth Does Not Contradict Truth» es el título de un artículo académico sobre Averroes y la unidad de la verdad publicado en la revista Topoi en 2000, lo que confirma que el pasaje es una tesis reconocida de Averroes en la literatura especializada y no una frase de circulación popular",
+      "source": "Springer, revista Topoi — ficha del artículo «Truth Does Not Contradict Truth: Averroes and the Unity of Truth» (solo se pudo ver la ficha; el texto exige autenticación)",
+      "url": "https://link.springer.com/article/10.1023/A:1006343305914"
+    },
+    {
+      "claim": "La primera edición de la traducción de Hourani es Averroes on the harmony of religion and philosophy, traducción con introducción y notas del Kitāb faṣl al-maqāl de Ibn Rushd, con su apéndice (Ḍamīma) y un extracto del Kitāb al-kashf ʿan manāhij al-adilla, E. J. W. Gibb Memorial Series, New Series XXI, Unesco Collection of Great Works, Arabic Series, xi + 128 pp., Londres, Luzac and Co. para el Gibb Memorial, 1961",
+      "source": "Cambridge Core — reseña de la traducción de Hourani en el Bulletin of the School of Oriental and African Studies (SOAS, Universidad de Londres)",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/49477EB4BEAC74B444F78808A017FF82/S0041977X00056949a.pdf/"
+    }
+  ],
+  "do_not_use": [
+    "citar «la verdad no se opone a la verdad» como declaración simétrica de armonía entre fe y razón: en el capítulo segundo del Discurso decisivo va seguida de la regla de que, si el sentido aparente de la Escritura choca con la demostración, hay que interpretarlo alegóricamente. Sin esa continuación la frase dice bastante menos de lo que sostiene el tratado. Es el punto que la pieza viene a restituir, y quitarlo la anula",
+    "traducir la frase como «la verdad no puede contradecir a la verdad»: circula así, y en esa forma es el título de un artículo en Topoi (2000), pero la traducción de Hourani dice «does not oppose truth but accords with it and bears witness to it». La pieza traduce esa redacción",
+    "presentar la cita como traducción del árabe: es traducción propia del inglés de George F. Hourani. No se cotejó el original árabe ni ninguna edición crítica del texto",
+    "dar 1976 como año de la traducción de Hourani: la copia consultada en línea lo indica así, mientras que la reseña del Bulletin of SOAS registra la primera edición en Londres, Luzac and Co. para el Gibb Memorial, 1961. Probablemente 1976 sea una reimpresión, pero no se pudo comprobar en un catálogo institucional",
+    "fechar el Discurso decisivo con un año exacto: la Stanford Encyclopedia of Philosophy da 1178/9 y la Internet Encyclopedia of Philosophy solo dice que se escribió antes del exilio. La pieza dice «hacia 1178»",
+    "decir que Averroes murió en el destierro de Lucena: volvió a Córdoba dos años después de 1195 y murió en 1198, probablemente confinado en Marrakech",
+    "afirmar que la caída en desgracia de 1195 se debió a su filosofía: la Stanford Encyclopedia of Philosophy dice expresamente que las razones siguen sin estar claras. La última frase del cuerpo, que liga el destierro a la regla de interpretación, es una figura de estilo sobre un texto que sí le fue prohibido, no una afirmación causal, y no debe convertirse en una",
+    "atribuir a Averroes la doctrina de la doble verdad: es una tesis latina posterior asociada al averroísmo, y el Discurso decisivo afirma lo contrario, una sola verdad con dos vías de acceso. La historia de esa atribución no se verificó y la pieza no entra en ella",
+    "llamar «Comentador» a Averroes sin más o detallar la recepción latina y hebrea de sus comentarios con nombres y fechas: la pieza solo dice que se leyeron en latín y en hebreo durante siglos, y de esa recepción no se verificó ningún dato concreto"
+  ],
+  "_verificacion_prosa": "**La cita.** Se comprobó en dos traducciones independientes. La copia en línea de la traducción de George F. Hourani da el pasaje literal —«for truth does not oppose truth but accords with it and bears witness to it»—, la frase que lo precede, el capítulo (segundo) y su título («Philosophy contains nothing opposed to Islam»). La Stanford Encyclopedia of Philosophy, en su entrada sobre Ibn Rushd, cita el mismo pasaje con otra redacción («For truth does not oppose truth, but rather agrees with and bears witness to it») y en el mismo contexto argumental. Que dos traducciones distintas coincidan en el sentido y en el lugar es lo que sostiene el attribution_verified. La versión española es traducción propia del inglés de Hourani, y así consta en do_not_use. **El giro.** No es una lectura propia: la continuación —«If this [apparent meaning] accords there is no argument. If it conflicts there is a call for allegorical interpretation of it»— está en el mismo capítulo, en la copia de Hourani, y la Internet Encyclopedia of Philosophy formula la misma regla con sus palabras. **La biografía.** Nacimiento en Córdoba en 1126, cargos de cadí y de médico jefe del califa en Marrakech, destierro a Lucena a 60 km al sureste de Córdoba y muerte en 1198 probablemente confinado en Marrakech vienen de la Stanford Encyclopedia of Philosophy. El año del destierro (1195), la prohibición de sus escritos, la quema de sus libros, el regreso a Córdoba dos años después y la muerte al año siguiente vienen de la Internet Encyclopedia of Philosophy. Las dos entradas son independientes y coinciden en las fechas que comparten. **La bibliografía.** La primera edición de Hourani —Londres, Luzac and Co. para el Gibb Memorial, 1961, xi + 128 pp., en la Gibb Memorial Series y la Unesco Collection of Great Works— se tomó del título de una reseña publicada en el Bulletin of the School of Oriental and African Studies, alojada en Cambridge Core. **Lo que NO se verificó:** no se leyó ninguna edición impresa ni el original árabe. El PDF de la reseña de SOAS no se abrió: solo se leyó su ficha bibliográfica. El texto del artículo de Topoi está tras un muro de autenticación en link.springer.com y solo se usó su título. No se consultó la traducción de Charles E. Butterworth (Brigham Young University Press, 2001), que la Stanford Encyclopedia of Philosophy cita como referencia: la conocemos por esa mención, no por haberla abierto. Y no se verificó ningún dato concreto de la recepción latina y hebrea de sus comentarios, por lo que el cuerpo la menciona sin nombres ni fechas.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

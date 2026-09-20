@@ -1,0 +1,85 @@
+{
+  "id": "2026-10-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Jenné-jenó y el urbanismo sin reyes del Níger",
+    "hook": "EXCAVARON UNA CIUDAD DE VEINTE MIL HABITANTES Y NO ENCONTRARON NI UN PALACIO NI UNA TUMBA DE REY",
+    "body": [
+      "Jenné-jenó está a tres kilómetros del Djenné actual, en el delta interior del río Níger, en Malí. Roderick J. McIntosh y Susan Keech McIntosh, de la Universidad Rice, la excavaron de forma sistemática entre 1977 y 1981. Se fundó hacia el 250 a.C. En su apogeo, entre los siglos VI y IX, ocupaba trescientos mil metros cuadrados y unos veinte mil habitantes. Hacia el año 800 se levantó a su alrededor una muralla de ladrillo de barro. Por allí pasaban cereales, arroz africano, pescado seco, cerámica local, hierro, cobre y oro, y llegaban cuentas de vidrio de la India y sal del desierto. El conjunto está inscrito por la UNESCO desde 1988 como Old Towns of Djenné.",
+      "Lo notable de Jenné-jenó es lo que no apareció. Ningún edificio grande que pudiera haber sido palacio o templo. Ninguna tumba monumental. Ningún centro administrativo. Ninguna prueba de aparato estatal ni de una estructura de poder jerárquica. Durante buena parte del siglo XX el supuesto había sido otro: que las ciudades al sur del Sáhara eran colonias del urbanismo del norte —grecorromano, púnico, egipcio— o habían nacido por su estímulo. Jenné-jenó fue la primera ciudad indígena reconocida en África al sur del Sáhara, y es anterior al comercio transahariano que debía explicarla.",
+      "Roderick McIntosh describe en el capítulo 17 de The Cambridge World History, de Cambridge University Press, ciudades agrupadas que muestran poca jerarquía política o económica. Entre africanistas, Jenné-jenó se ha vuelto el yacimiento de referencia de la heterarquía: una autoridad repartida en esferas que se solapan y compiten, sin que ninguna domine. Es un argumento por ausencia, y como tal sigue discutiéndose. Pero la ausencia aguantó cinco años de excavación y medio siglo de revisión. Y el supuesto que rompió no era un supuesto sobre Malí: era un supuesto sobre qué hace falta para que exista una ciudad."
+    ],
+    "question": "¿Qué crees que necesita una ciudad para existir?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "JENNÉ-JENÓ",
+    "subtitle": "Malí: lo que no apareció en el montículo del delta del Níger",
+    "body": "Excavada entre 1977 y 1981 en el delta interior del Níger: veinte mil habitantes hacia el siglo VII, una muralla de barro hacia el año 800, oro, hierro y cuentas de vidrio de la India. Ni un palacio. Ni un templo. Ni una tumba de rey. Fue la primera ciudad indígena reconocida al sur del Sáhara."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JenneJeno",
+      "#Mali",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#AfricaOccidental",
+      "#RioNiger",
+      "#Djenne",
+      "#Urbanismo",
+      "#PatrimonioMundial",
+      "#Historia",
+      "#Civilizaciones",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Las excavaciones sistemáticas de Jenné-jenó las llevaron a cabo Roderick J. McIntosh y Susan Keech McIntosh, de la Universidad Rice, entre 1977 y 1981; el asentamiento abarcó unos dieciséis siglos, de hacia el 200 a.C. al 1400 d.C.; hacia el siglo V d.C. se extendía por más de sesenta acres; se documentó un centro comercial extenso con arroz, sorgo y mijo domesticados y diversas gramíneas de pantano, prueba de cultivo intensivo en la región",
+      "source": "Archaeology Magazine Archive, publicación del Archaeological Institute of America — «Crossroads of Culture: Djenne and Djenne-Jeno»",
+      "url": "https://archive.archaeology.org/online/features/mali/djenne.html"
+    },
+    {
+      "claim": "Djenné-Djenno estuvo ocupada de hacia el 250 a.C. al 1100 d.C.; está a tres kilómetros del asentamiento medieval posterior; en su apogeo, entre los siglos VI y IX, cubría trescientos mil metros cuadrados y alcanzó unos veinte mil habitantes; hacia el año 800 d.C. se construyó una muralla de ladrillos de barro; los investigadores no hallaron edificios grandes que hubieran podido funcionar como palacios o templos, aunque sí talleres especializados de alfareros y metalúrgicos repartidos en asentamientos satélite; se comerciaba con cereales, arroz africano, pescado seco, aceite de pescado, cerámica local, hierro, cobre y oro, y se importaban cuentas de vidrio de la India y sal; el bien fue inscrito por la UNESCO en 1988 con el nombre de Old Towns of Djenné",
+      "source": "World History Encyclopedia — entrada «Djenne-Djenno»",
+      "url": "https://www.worldhistory.org/Djenne-Djenno/"
+    },
+    {
+      "claim": "Roderick J. McIntosh firma el capítulo 17, «Different cities: Jenne-jeno and African urbanism», en la parte IV de The Cambridge World History, dedicada a las primeras ciudades y la distribución del poder, publicado por Cambridge University Press en 2015; en él sostiene que el urbanismo africano abarca muchas clases de ciudades y muchas clases de poder, y que algunas fueron ciudades agrupadas que muestran poca jerarquía política o económica",
+      "source": "Cambridge University Press — The Cambridge World History, ficha del capítulo 17",
+      "url": "https://www.cambridge.org/core/books/abs/cambridge-world-history/different-cities-jennejeno-and-african-urbanism/4CDCE74CCE3A6D89C52A283B518F579F"
+    },
+    {
+      "claim": "La heterarquía es una organización en la que ninguna parte domina y no hay rangos fijos; Roderick McIntosh estudió las ciudades agrupadas y dispersas del Níger medio antiguo —Dia y Jenne-Jeno, en el actual Malí— como ejemplo de sistemas heterárquicos complejos, y sostiene que esas sociedades mostraron una resistencia sostenida a la centralización mediante agencias múltiples, superpuestas y en competencia, sin reyes ni estado",
+      "source": "Universidad de Copenhague, Facultad de Humanidades — entrada «Heterarchy» del glosario de humanidades ambientales, por Bruno De Meulder y Kelly Shannon",
+      "url": "https://artsandculturalstudies.ku.dk/research/art-and-earth/environmental-humanities-glossary/heterarchy/"
+    },
+    {
+      "claim": "En Jenne-jeno es notable la falta de pruebas, hasta la fecha, de reyes, de aparato estatal y de una estructura de poder jerárquica; no se hallaron palacios ni centros administrativos en el yacimiento; entre africanistas, Jenne-jeno funciona como yacimiento de referencia de la autoridad heterárquica, no jerárquica, en una ciudad temprana; fue la primera ciudad indígena reconocida en África al sur del Sáhara, lo que contradijo el supuesto asentado de que las ciudades africanas habían sido en origen colonias del urbanismo grecorromano, púnico o egipcio, o resultado de su estímulo",
+      "source": "Springer — entrada «Jenne-Jeno, Archaeology of» de la Encyclopedia of Global Archaeology; solo se pudo leer el fragmento indexado públicamente, porque la ficha completa exige autenticación",
+      "url": "https://link.springer.com/rwe/10.1007/978-1-4419-0465-2_986"
+    }
+  ],
+  "do_not_use": [
+    "dar una fecha cerrada para el abandono de Jenné-jenó: el Archaeological Institute of America habla de dieciséis siglos, de hacia el 200 a.C. al 1400 d.C., y World History Encyclopedia da del 250 a.C. al 1100 d.C. Las dos no coinciden, y por eso la pieza fija solo la fundación y no el final",
+    "afirmar que en Jenné-jenó no hubo ninguna forma de organización ni de desigualdad: lo verificado es que no se hallaron palacios, templos, tumbas monumentales ni centro administrativo, y que no hay pruebas de aparato estatal. Es un argumento por ausencia. World History Encyclopedia señala además talleres especializados de alfareros y metalúrgicos en asentamientos satélite, que suponen alguna coordinación",
+    "llamar a Jenné-jenó «la ciudad más antigua de África»: lo documentado es que fue la primera ciudad indígena reconocida en África al sur del Sáhara, que es un hecho de historia de la disciplina y no un récord de antigüedad. Al norte del Sáhara hay ciudades milenios más antiguas",
+    "confundir Jenné-jenó con el Djenné actual: son dos asentamientos distintos separados por tres kilómetros, y la Gran Mezquita de barro que ilustra casi siempre el tema pertenece al Djenné moderno, no al yacimiento",
+    "explicar el auge de Jenné-jenó por el comercio transahariano del oro medieval: el asentamiento es anterior, y ese orden causal es precisamente el supuesto que el yacimiento desmintió",
+    "presentar la muralla del año 800 como fortificación defensiva probada: lo verificado es que era de ladrillo de barro y de esa fecha. Su función no se verificó",
+    "citar la ficha de la UNESCO como fuente: whc.unesco.org devolvió 403. La inscripción de 1988 con el nombre Old Towns of Djenné procede de World History Encyclopedia",
+    "citar la entrada «Jenne-Jeno, Archaeology of» de la Encyclopedia of Global Archaeology como si se hubiera leído entera: link.springer.com redirige a un muro de autenticación y solo se pudo ver el fragmento indexado públicamente",
+    "decir que los enterramientos de Jenné-jenó apenas muestran diferencias de ajuar: el dato circula y apunta en el mismo sentido que el resto, pero no se pudo abrir ninguna de las fuentes citadas que lo sostenga. Se retiró del cuerpo por eso, y no debe volver sin un informe de excavación a la vista"
+  ],
+  "_verificacion_prosa": "**Los excavadores y las fechas.** Que las excavaciones sistemáticas fueron de Roderick J. McIntosh y Susan Keech McIntosh, de la Universidad Rice, y que se hicieron entre 1977 y 1981, lo da el Archaeology Magazine Archive del Archaeological Institute of America, que sitúa además la ocupación entre hacia el 200 a.C. y el 1400 d.C. World History Encyclopedia coincide en la fundación —hacia el 250 a.C.— pero cierra la ocupación en el 1100 d.C. La discrepancia queda anotada en do_not_use y el cuerpo no da fecha de abandono. **Las cifras.** Trescientos mil metros cuadrados y unos veinte mil habitantes entre los siglos VI y IX, la muralla de ladrillo de barro de hacia el año 800, los tres kilómetros hasta el Djenné actual, los productos comerciados y la inscripción de la UNESCO de 1988 proceden de World History Encyclopedia. El dato de más de sesenta acres hacia el siglo V del Archaeological Institute of America es compatible con la superficie máxima posterior, y por eso el cuerpo usa solo la cifra de apogeo. **La ausencia de poder centralizado.** Es el eje de la pieza y se apoya en tres fuentes de distinta naturaleza. World History Encyclopedia dice que no se hallaron edificios grandes que hubieran podido ser palacios o templos. El fragmento públicamente indexado de la entrada «Jenne-Jeno, Archaeology of» de la Encyclopedia of Global Archaeology de Springer añade la falta de pruebas de reyes, aparato estatal y estructura jerárquica, la ausencia de centros administrativos, y la condición de yacimiento de referencia de la heterarquía. Y el glosario de humanidades ambientales de la Universidad de Copenhague, firmado por Bruno De Meulder y Kelly Shannon, recoge el argumento de McIntosh sobre la resistencia sostenida a la centralización en el Níger medio. **El capítulo de Cambridge.** Autor, título, número de capítulo, parte del volumen, editorial y año de The Cambridge World History se leyeron en la ficha del propio Cambridge University Press, junto con la formulación de las ciudades agrupadas con poca jerarquía política o económica. **Lo que NO se verificó:** la ficha de la UNESCO (whc.unesco.org devolvió 403), el texto completo de la entrada de Springer (muro de autenticación), y el informe de excavación de la Universidad Rice, que está en PDF y no se pudo leer en este entorno. Tampoco se verificó la escasez de diferencias en los ajuares funerarios: apareció en resultados de búsqueda pero en ninguna de las fuentes que se pudieron abrir, de modo que se escribió primero en el cuerpo y luego se retiró de él, y queda anotado en do_not_use.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "2026-10-17-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Calderón y el obrar bien de Segismundo",
+    "hook": "LA FRASE QUE SE CITA PARA DECIR QUE NADA IMPORTA ES, EN LA OBRA, LA PREMISA DE QUE ALGO SÍ IMPORTA",
+    "quote": {
+      "text": "Sea verdad o sueño, obrar bien es lo que importa; si fuere verdad, por serlo; si no, por ganar amigos para cuando despertemos.",
+      "author": "Pedro Calderón de la Barca",
+      "work": "La vida es sueño, jornada III; ed. de Fausta Antonucci, Crítica, 2008",
+      "attribution_verified": true
+    },
+    "body": [
+      "La vida es sueño se estrenó en 1635 y se imprimió al año siguiente, en la Primera parte de comedias de Calderón. Son 3.319 versos en tres jornadas: 985, 1.202 y 1.132. El monólogo que todo el mundo reconoce no está en medio de la obra: termina en el verso 2.187, el último de la jornada segunda. Ahí Segismundo acaba de ser devuelto a la torre donde lo encerraron al nacer, después de que lo drogaran, lo llevaran a palacio y le dijeran que nada de aquello había ocurrido. Pregunta qué es la vida, responde que un frenesí, una ilusión, una sombra, y cierra: que toda la vida es sueño, y los sueños, sueños son.",
+      "Esas seis palabras se citan solas, y se citan como si fueran la tesis de la obra. No lo son: son el punto más bajo del personaje, y quedan 1.132 versos después de ellas. En la jornada tercera, hacia el verso 2.424, Segismundo vuelve sobre la misma duda sin haberla resuelto, y de ella saca lo contrario de lo que se le atribuye: sea verdad o sueño, obrar bien es lo que importa; si fuere verdad, por serlo; si no, por ganar amigos para cuando despertemos. No decide que el mundo sea real. Decide que la pregunta no lo exime de nada.",
+      "Poco antes se lo ha dicho a Clotaldo con otras palabras: no se pierde el hacer bien, aun en sueños. Y más adelante insiste: acudamos a lo eterno, que es la fama vividora. El monólogo de la jornada segunda se recita de memoria; el pasaje de la jornada tercera casi no se cita, y es el que cierra el argumento. Calderón no escribió una obra sobre la irrealidad del mundo, sino sobre qué hacer cuando no se puede comprobar si el mundo es real. La respuesta que puso en boca de su protagonista fue una apuesta práctica: la incertidumbre no cancela la obligación, la deja intacta."
+    ],
+    "question": "¿Qué obligación tuya no depende de estar seguro?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "CALDERÓN DE LA BARCA",
+    "subtitle": "De la jornada tercera, cuando Segismundo ya no sabe qué es real",
+    "body": "«Los sueños, sueños son» cierra la jornada segunda y desde entonces se cita sola. En la jornada tercera, Segismundo saca de la misma duda la conclusión contraria a la que se le atribuye: si igual estoy soñando, obrar bien sigue conviniendo, aunque solo sea por ganar amigos para cuando despierte."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Calderon",
+      "#LaVidaEsSueno",
+      "#SigloDeOro"
+    ],
+    "extended": [
+      "#TeatroClasico",
+      "#Barroco",
+      "#Segismundo",
+      "#Citas",
+      "#Literatura",
+      "#Filosofia",
+      "#Etica",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En la jornada tercera de La vida es sueño, en boca de Segismundo, figura «sea verdad ó sueño, / Obrar bien es lo que importa»; en la misma jornada figuran también «pues no se pierde el hacer bien, aun en sueños» y «Acudamos á lo eterno, que es la fama vividora»",
+      "source": "Wikisource en español — La vida es sueño, jornada III; texto establecido sobre la edición escaneada de Leipzig, Pandora, 1900",
+      "url": "https://es.wikisource.org/wiki/La_vida_es_sue%C3%B1o/III"
+    },
+    {
+      "claim": "El monólogo que termina en «Que toda la vida es sueño, / Y los sueños sueño son» lo pronuncia Segismundo en la última escena de la jornada segunda, y va precedido de «¿Qué es la vida? — Un frenesí»",
+      "source": "Wikisource en español — La vida es sueño, jornada II; texto establecido sobre la edición escaneada de Leipzig, Pandora, 1900",
+      "url": "https://es.wikisource.org/wiki/La_vida_es_sue%C3%B1o/II"
+    },
+    {
+      "claim": "Segundo testimonio independiente del mismo texto, con numeración de versos: «obrar bien es lo que importa: / si fuere verdad, por serlo / si no, por ganar amigos / para cuando despertemos» en la jornada III hacia los versos 2424-2425; «¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño; / que toda la vida es sueño, / y los sueños, sueños son» en los versos 2181-2187; y «acudamos a lo eterno, / que es la fama vividora / donde ni duermen las dichas, / ni las grandezas reposan» en los versos 2982-2985",
+      "source": "EMOTHE, biblioteca digital de literatura teatral, Universitat de València — ficha EMOTHE0020, texto basado en la edición crítica de Fausta Antonucci (Barcelona, Crítica, 2008)",
+      "url": "https://emothe.uv.es/biblioteca/textosEMOTHE/EMOTHE0020_LaVidaEsSueno.php"
+    },
+    {
+      "claim": "La obra consta de 3.319 versos repartidos en tres jornadas, de 985, 1.202 y 1.132 versos respectivamente; se estrenó en 1635 y se publicó en la Primera parte de las comedias de don Pedro Calderón de la Barca",
+      "source": "Wikipedia en español — «La vida es sueño» (usada solo como corroboración de datos de estructura y transmisión)",
+      "url": "https://es.wikipedia.org/wiki/La_vida_es_sue%C3%B1o"
+    }
+  ],
+  "do_not_use": [
+    "citar «la vida es sueño, y los sueños, sueños son» como la tesis o la conclusión de la obra: es el verso 2.187 de 3.319, el último de la jornada segunda, y el punto más bajo de Segismundo. Quedan 1.132 versos después. Es el error que la pieza viene a corregir, y reintroducirlo la anula",
+    "llamar «soliloquio final» o «últimas palabras de la obra» a ese monólogo: la obra termina en la jornada tercera, con Segismundo ya en el trono",
+    "atribuir a Calderón la forma proverbial suelta «la vida es sueño» como sentencia: el verso es «que toda la vida es sueño, / y los sueños, sueños son», dicho por un personaje dentro de un monólogo, no por el autor en su nombre",
+    "fechar la primera edición impresa en 1635: 1635 es el año del estreno según la fuente consultada, y la impresión es de 1636, en la Primera parte de comedias",
+    "afirmar que hubo dos versiones impresas de 1636, una en Madrid y otra en Zaragoza en la Parte XXX de comedias famosas de varios autores, ni que José M.ª Ruano de la Haza editó en 1992 la de Zaragoza como primera versión: ese dato apareció en resultados de búsqueda pero no se pudo comprobar en ninguna fuente abierta. El PDF de rae.es llegó ilegible y aix1.uottawa.ca rechazó la conexión. La pieza no lo afirma",
+    "dar la ortografía de la cita como original: Wikisource la transcribe «sea verdad ó sueño» sobre la edición de Leipzig, Pandora, 1900. La tarjeta moderniza la ortografía y la puntuación",
+    "citar a la vez el número de escena y el número de verso como si vinieran de la misma edición: la división en escenas procede del texto de 1900 y la numeración de versos de la edición de Fausta Antonucci (Crítica, 2008)",
+    "relacionar el verso con «we are such stuff as dreams are made on» de La tempestad de Shakespeare: son frases distintas de autores distintos y no se cotejó ninguna relación entre ellas"
+  ],
+  "_verificacion_prosa": "**La cita.** Los tres pasajes se comprobaron en dos testimonios independientes del texto, con bases editoriales separadas por más de un siglo. Wikisource en español establece su texto sobre la edición escaneada de Leipzig, Pandora, 1900, y en su jornada III figuran «sea verdad ó sueño, / Obrar bien es lo que importa», «pues no se pierde el hacer bien, aun en sueños» y «Acudamos á lo eterno, que es la fama vividora». EMOTHE, la biblioteca digital de literatura teatral de la Universitat de València, basa su texto en la edición crítica de Fausta Antonucci (Barcelona, Crítica, 2008) y da además numeración de versos: la continuación de la cita («si fuere verdad, por serlo / si no, por ganar amigos / para cuando despertemos») hacia los versos 2424-2425, el monólogo en 2181-2187 y «acudamos a lo eterno» en 2982-2985. La versión de la tarjeta moderniza la ortografía; las formas originales constan en las fuentes. **La posición en la obra.** Wikisource sitúa el monólogo en la última escena de la jornada segunda y lo atribuye a Segismundo. Eso encaja con la estructura que da Wikipedia en español —985, 1.202 y 1.132 versos por jornada, 3.319 en total—: la jornada segunda acaba en el verso 2.187, que es precisamente donde EMOTHE cierra el monólogo. Las dos fuentes son independientes y el dato cuadra, que es la única razón por la que la pieza afirma que el monólogo es el final exacto de la jornada. **El estreno y la impresión.** 1635 para el estreno y la Primera parte de comedias para la publicación vienen de Wikipedia en español, y se usan solo como corroboración. **Lo que NO se verificó:** no se consultó ninguna edición crítica en un catálogo institucional. cervantesvirtual.com no se intentó porque devuelve 403 de forma conocida; el PDF alojado en rae.es se descargó pero llegó en un formato que no se pudo leer, y el servidor aix1.uottawa.ca rechazó la conexión. Por eso quedan fuera del cuerpo la cuestión de las dos versiones de 1636 (Madrid y Zaragoza), los datos de imprenta de la edición de 1636 y las fechas de nacimiento y muerte de Calderón: nada de eso aparece en la pieza.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
