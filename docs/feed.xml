@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 20 Sep 2026 05:56:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 16:56:22 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Amarás la belleza, que es la sombra de Dios sobre el Universo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-20-re75-reel</guid>
+      <pubDate>Sun, 20 Sep 2026 15:26:00 +0000</pubDate>
+      <description><![CDATA["Amarás la belleza, que es la sombra de Dios sobre el Universo."
+— Gabriela Mistral, Decálogo del artista (Desolación, 1922)
+
+Es el primero de diez mandamientos que Gabriela Mistral escribió para quien hace una obra. Aparecieron en Desolación, el libro que la dio a conocer y que ella no publicó: lo editó en Nueva York, en 1922, el Instituto de las Españas de la Universidad de Columbia, después de que el profesor Federico de Onís diera una conferencia sobre sus poemas en 1921. A los profesores de español que la escucharon les impresionó que aquella poeta fuera además maestra de escuela. Lo era desde los quince años. El Nobel llegaría en 1945: la primera persona de América Latina en recibirlo en Literatura.
+
+El decálogo no consuela a nadie. Prohíbe dar la belleza como cebo para los sentidos y ordena darla como alimento del alma. Prohíbe llevar la obra a las ferias. Manda entregarla "como se da un hijo: restando sangre de tu corazón". Y el mandamiento décimo cierra sin premio ninguno: de toda creación saldrás con vergüenza, porque fue inferior a tu sueño. Diez reglas, y la última quita la satisfacción de haber terminado.
+
+El original mecanografiado de ese decálogo se conserva hoy en la Biblioteca Nacional de Chile: una hoja de veintiocho centímetros, con manchas de óxido. Llegó dentro del legado de la escritora, 18.497 piezas manuscritas y unas 120.000 hojas que volvieron al país en 2007, medio siglo después de su muerte. La mujer que la memoria escolar guarda como pura ternura dejó escrito, para sí misma, el pliego de condiciones más duro que se le puede poner a un trabajo.
+
+¿Cuándo fue la última vez que algo tuyo se pareció a lo que habías imaginado?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re75-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re75-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Los Principia de Newton se han traducido al francés una sola vez por entero. Quien lo hizo dejó el manuscrito en la biblioteca del rey el 9 de septiembre de 1749 y murió al día siguiente.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -476,25 +496,6 @@ Y hay una tablilla que complica el cuadro. En 1988 apareció en Ras Shamra la RS
 #SabiduriaDeBolsillo #Ugarit #RasShamra #HistoriaDelAlfabeto]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra86.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra86.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-16-extra85</guid>
-      <pubDate>Thu, 17 Sep 2026 04:46:52 +0000</pubDate>
-      <description><![CDATA[Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.
-
-Muhammad ibn Musa al-Juarismi vivió aproximadamente entre el 780 y el 850 y trabajó en la Casa de la Sabiduría de Bagdad, la academia que fundó el califa al-Mamún. Allí escribió el «Kitab al-mujtasar fi hisab al-yabr wa-l-muqabala». Las dos palabras del título son dos operaciones: «al-yabr» es completar, quitar de una ecuación los términos negativos; «al-muqabala» es equilibrar, reducir los términos iguales de ambos lados. De la primera salió «álgebra». La sección final del libro no es teoría: son repartos de testamentos y legados según el derecho islámico de sucesiones. El álgebra empezó como herramienta de notario.
-
-Con «algoritmo» la cosa se complica. Su aritmética llegó a Europa en una traducción latina cuyo único manuscrito conocido está en la Universidad de Cambridge, con la signatura Ms. Ii.6.5, y que empieza con dos palabras: «Dixit Algorizmi», dijo al-Juarismi. De ese nombre latinizado sale «algorismus». El título por el que se cita el manuscrito, «Algoritmi de numero Indorum», no es medieval: lo puso Baldassarre Boncompagni al editarlo en 1857. Y el Diccionario de la lengua española no suscribe esa etimología: para «algoritmo» propone «quizá del lat. tardío *algobarismus». La derivación desde el nombre propio se la reserva a «guarismo».
-
-El diccionario tiene además un tropiezo peor, y está documentado. Antonio J. Durán, del Instituto de Matemáticas de la Universidad de Sevilla, revisó siglo y medio de ediciones: la de 1956 atribuyó a al-Juarismi la invención de los logaritmos, y el error siguió impreso en 1970 y en 1984. Los logaritmos los publicó John Napier en Edimburgo en 1614: unos ocho siglos más tarde. Un nombre puede sobrevivir mil doscientos años dentro de una palabra de uso diario y seguir sin que se sepa bien de quién es.
-
-¿Cuántas palabras que usas a diario son el nombre de alguien?
-
-#SabiduriaDeBolsillo #AlJuarismi #Algebra #HistoriaDeLasMatematicas]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra85.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-16-extra85.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
