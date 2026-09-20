@@ -117,3 +117,10 @@ After mature measurements exist, a paid proposal should name the exact failed fr
 - La receta de `instagram/feed_single_image` ya pasa `--tema <tema>` en el paso `detalles`.
 - Pruebas: `tema_visible` con y sin fila; `compositor_listo` con y sin confirmación; y en el CLI, que `ig detalles --tema` escribe la marca, que `compartir` la lee, que sin pasar por detalles llega `False` y que la marca de un tema no sirve para otro.
 - CELL-028 y CELL-038 vuelven a `planned`. La música sigue siendo obligatoria y sigue comprobándose en el teléfono: lo único que cambia es que se mira donde se ve.
+
+## El agente de QA también cuelga la ventana si ejecuta comandos (2026-09-20)
+
+- La primera ventana del relevo (`sabiduria-media-lab-b`, 20:42 Madrid) llegó bien hasta el compositor con el arreglo de la música: selector, recorte, editor, audio, **detalles con la fila de música confirmada** y pie escrito (capturas `ig-01` … `ig-04` de `LAB-PLACE-003-B-INSTAGRAM`, 20:44–20:46). Es decir, la ruta de teléfono vuelve a funcionar.
+- A las 20:46:46 lanzó el agente de QA en primer plano, como manda el prompt, y ahí se quedó: más de una hora sin un solo mensaje nuevo. El revisor suele contar los caracteres del pie con `python3 -c`, que no está en la lista de permisos del proyecto, y en una sesión desatendida ese permiso no lo contesta nadie.
+- Es el mismo cuelgue de siempre ([[tareas-programadas-se-cuelgan-con-comandos-compuestos]]) un nivel más abajo: no basta con exigir el agente en primer plano, hay que prohibirle ejecutar nada. El paso 7c del prompt (repo y las dos tareas) ahora se lo dice con todas las letras y manda pasarle el recuento de caracteres ya hecho.
+- Efecto colateral mientras alguien no pare esa sesión: el cerrojo sigue tomado (caduca a los 90 min), el teléfono se queda con el borrador escrito sin compartir, y el programador no arranca otra ejecución de esa tarea. El borrador no se toca desde fuera: si la sesión se reanuda, pulsaría Compartir.
