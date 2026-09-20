@@ -2,7 +2,7 @@
   "id": "2026-09-19-extra98",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el palimpsesto de Arquímedes",
     "hook": "En 1229 un sacerdote raspó un libro de Arquímedes para escribir oraciones encima. El daño peor llegó setecientos años después, y venía cubierto de pan de oro.",
@@ -76,5 +76,21 @@
     "threads"
   ],
   "publish_at": "2026-09-20T01:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1099702389521087",
+      "url": "https://www.facebook.com/874327782058550/posts/1099702389521087",
+      "published_at": "2026-09-20T04:46:55.301151+00:00"
+    },
+    "instagram": {
+      "post_id": "18182843893423812",
+      "url": "https://www.instagram.com/p/DdfwrWTjHFI/",
+      "published_at": "2026-09-20T04:47:07.009725+00:00"
+    },
+    "threads": {
+      "post_id": "18116734999769207",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18116734999769207",
+      "published_at": "2026-09-20T04:47:23.000126+00:00"
+    }
+  }
 }
