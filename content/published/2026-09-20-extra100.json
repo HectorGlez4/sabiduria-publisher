@@ -2,7 +2,7 @@
   "id": "2026-09-20-extra100",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el Liber Linteus, el único libro de lino etrusco",
     "hook": "El texto más largo que queda de la lengua etrusca sobrevivió porque alguien lo cortó en tiras y lo usó para envolver a una muerta en Egipto. Nadie se dio cuenta durante más de cuarenta años.",
@@ -76,5 +76,21 @@
     "threads"
   ],
   "publish_at": "2026-09-20T17:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1100274032797256",
+      "url": "https://www.facebook.com/874327782058550/posts/1100274032797256",
+      "published_at": "2026-09-20T19:34:38.872419+00:00"
+    },
+    "instagram": {
+      "post_id": "18134851204641152",
+      "url": "https://www.instagram.com/p/DdhWRS3Da3f/",
+      "published_at": "2026-09-20T19:34:50.947885+00:00"
+    },
+    "threads": {
+      "post_id": "18124036967511617",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18124036967511617",
+      "published_at": "2026-09-20T19:35:03.413157+00:00"
+    }
+  }
 }
