@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-16-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ana Comnena y el prólogo de la Alexiada",
+    "hook": "ESCRIBIÓ QUINCE LIBROS DE HISTORIA ENCERRADA EN UN CONVENTO, Y EMPEZÓ EXPLICANDO CONTRA QUÉ ESCRIBÍA",
+    "quote": {
+      "text": "El tiempo, en su curso irresistible e incesante, arrastra en su crecida todas las cosas creadas y las hunde en las profundidades de la oscuridad. Pero el relato de la historia forma un baluarte muy fuerte contra la corriente del tiempo.",
+      "author": "Ana Comnena",
+      "work": "Alexiada, prólogo (mediados del siglo XII); trad. de E. A. S. Dawes, Londres, 1928",
+      "attribution_verified": true
+    },
+    "body": [
+      "Ana Comnena nació el 1 de diciembre de 1083 en la Cámara Púrpura del Gran Palacio de Constantinopla, hija del emperador Alejo I Comneno y de Irene Ducas. De sí misma escribe en el prólogo que llevó el estudio del griego hasta el grado más alto, que no era inexperta en retórica y que leyó con cuidado a Aristóteles y los diálogos de Platón. Su marido, Nicéforo Brienio, había empezado una historia del reinado de Alejo y no la terminó: volvió de campaña con el manuscrito a medias y con la enfermedad que lo mató. Ella no continuó aquel libro. Escribió otro, de quince libros, sobre el reinado de su padre, de 1081 a 1118.",
+      "La Alexiada no empieza por el emperador. Empieza por el tiempo. Y lo que dice de él no es un adorno retórico: es la razón de que el libro exista. El tiempo arrastra todo lo creado y lo hunde en la oscuridad; contra esa corriente, el relato de la historia es un dique. Ana no presenta su obra como un elogio a su padre ni como un ajuste de cuentas con la corte que la apartó. La presenta como una obra de contención. Escribía en el monasterio de Kecharitomene, fundado por su propia madre hacia 1110 y regido por un typikon de clausura estricta. Allí murió, en 1153.",
+      "Su libro es la única narración bizantina de primera mano de la Primera Cruzada, y se la cita habitualmente como la primera mujer historiadora de la que se conserva una obra completa. Lo escribió alguien que ya lo había perdido casi todo: la sucesión, la corte, el marido. Lo que hizo con eso fue levantar el dique del que hablaba en la primera página. Ocho siglos y medio después seguimos leyendo por él lo que el tiempo se habría llevado."
+    ],
+    "question": "¿Qué de lo que vives hoy no quedará escrito en ninguna parte?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "ANA COMNENA",
+    "subtitle": "Primera página de una historia escrita en clausura",
+    "body": "La Alexiada no empieza por el emperador: empieza por el tiempo. Ana Comnena abre quince libros de historia diciendo que el tiempo arrastra todo lo creado y lo hunde en la oscuridad, y que el relato es lo único que le hace de dique. Escribía apartada de la corte, en el convento que fundó su madre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AnaComnena",
+      "#Bizancio",
+      "#Alexiada"
+    ],
+    "extended": [
+      "#Constantinopla",
+      "#SigloXII",
+      "#Historia",
+      "#MujeresEnLaHistoria",
+      "#EdadMedia",
+      "#Citas",
+      "#Memoria",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El prefacio de la Alexiada empieza con «Time in its irresistible and ceaseless flow carries along on its flood all created things, and drowns them in the depths of obscurity» y continúa con «the tale of history forms a very strong bulwark against the stream of time, and to some extent checks its irresistible flow». En ese mismo prefacio Ana Comnena dice de sí misma «I was not ignorant of letters, for I carried my study of Greek to the highest pitch, and was also not unpractised in rhetoric» y que leyó con cuidado las obras de Aristóteles y los diálogos de Platón; y cuenta que su marido, Nicéforo Brienio, trajo del extranjero su historia a medio hacer junto con la enfermedad que lo mató",
+      "source": "Fordham University — Internet Medieval Sourcebook, Anna Comnena, The Alexiad, prefacio, traducción de Elizabeth A. S. Dawes sobre el texto griego de la edición Teubner de Aug. Reifferscheid (1884)",
+      "url": "https://sourcebooks.fordham.edu/basis/AnnaComnena-Alexiad00.asp"
+    },
+    {
+      "claim": "La Alexiada consta de quince libros, del acceso de Alejo I hasta su muerte, e incluye el relato de la Primera Cruzada en los libros X y XI; la traducción en línea es la de Elizabeth A. Dawes, Londres, Routledge / Kegan Paul, 1928",
+      "source": "Fordham University — Internet Medieval Sourcebook, índice completo de The Alexiad",
+      "url": "https://sourcebooks.fordham.edu/basis/AnnaComnena-Alexiad.asp"
+    },
+    {
+      "claim": "Las dos frases de apertura del prefacio se confirman en un segundo testimonio del mismo texto en inglés, con idéntica redacción",
+      "source": "Wikisource — The Alexiad, Preface, traducción de Elizabeth A. S. Dawes",
+      "url": "https://en.wikisource.org/wiki/The_Alexiad/Preface"
+    },
+    {
+      "claim": "Ana Comnena nació el 1 de diciembre de 1083 en la Cámara Púrpura del Gran Palacio de Constantinopla, hija de Alejo I Comneno y de Irene Ducas; se casó con Nicéforo Brienio el Joven hacia 1097; murió en 1153 en el monasterio de Kecharitomene; escribió la Alexiada en griego ático, sobre el reinado de su padre (1081-1118), y es la única narración bizantina de testigo presencial de la Primera Cruzada",
+      "source": "Wikipedia en inglés — «Anna Komnene» (usada como corroboración biográfica)",
+      "url": "https://en.wikipedia.org/wiki/Anna_Komnene"
+    },
+    {
+      "claim": "El monasterio femenino de Kecharitomene fue fundado por la emperatriz Irene Ducas a principios del siglo XII en el norte de Constantinopla; se conoce sobre todo por su typikon, emitido por la fundadora hacia 1110, que imponía clausura estricta; Irene mandó construir allí dependencias para sí misma y para otras mujeres de la familia imperial, y su hija Ana Comnena hubo de retirarse al monasterio tras la muerte de su marido y allí escribió la Alexiada",
+      "source": "Wikipedia en inglés — «Kecharitomene Monastery» (usada como corroboración)",
+      "url": "https://en.wikipedia.org/wiki/Kecharitomene_Monastery"
+    }
+  ],
+  "do_not_use": [
+    "decir que la Alexiada tiene trece libros: el índice de la traducción de Dawes en el Internet Medieval Sourcebook de Fordham enumera quince, uno a uno. La cifra de trece circula en reseñas y fichas de catálogo",
+    "afirmar a secas que Ana Comnena es «la primera historiadora de la historia»: la fórmula habitual y defendible es que es la primera mujer historiadora de la que se conserva una obra completa. Una prioridad absoluta no es comprobable y la pieza no la afirma",
+    "fechar la Alexiada en un año exacto: las fuentes consultadas la sitúan a mediados de la década de 1140 o en los años cincuenta del siglo XII. La pieza dice «mediados del siglo XII»",
+    "dar por probado que Ana conspiró contra su hermano Juan II y que por eso la recluyeron: es el relato tradicional, apoyado sobre todo en Nicetas Coniates, y está discutido entre bizantinistas. La pieza solo dice que quedó apartada de la corte",
+    "presentar la cita en español como traducción del griego: es traducción de la versión inglesa de Elizabeth A. S. Dawes (1928), hecha a su vez sobre la edición Teubner de Reifferscheid (1884). No se cotejó con el original griego",
+    "fechar su nacimiento el 2 de diciembre: las fuentes consultadas dan el 1 de diciembre de 1083",
+    "llamar «crónica» a la obra o decir que fue escrita durante los hechos: se escribió unos treinta años después de la muerte de Alejo I"
+  ],
+  "_verificacion_prosa": "**La cita.** Las dos frases se comprobaron en dos testimonios del mismo texto inglés: el Internet Medieval Sourcebook de la Universidad de Fordham y Wikisource, ambos con la traducción de Elizabeth A. S. Dawes. La página de Fordham declara además el texto de partida: la edición Teubner de Aug. Reifferscheid, 1884. La versión española es traducción propia del inglés de Dawes, y así consta en do_not_use. Un tercer testimonio independiente —la traducción de E. R. A. Sewter para Penguin— circula con la misma imagen («a great bulwark against this stream of Time»), lo que confirma que la metáfora está en el original y no es un giro de una sola traducción. **La autodescripción y el marido.** Proceden del mismo prefacio en Fordham, citadas en inglés en las fuentes. **La estructura.** El índice de Fordham enumera los quince libros con su contenido; los libros X y XI son los de la Primera Cruzada. **La biografía y el monasterio.** Fecha y lugar de nacimiento, matrimonio hacia 1097, muerte en 1153, lengua (griego ático), periodo cubierto (1081-1118) y la fundación de Kecharitomene por Irene Ducas con typikon de hacia 1110 vienen de Wikipedia en inglés y se marcan como corroboración, no como fuente primaria. **Lo que NO se verificó:** no se pudo abrir la ficha del Prosopography of the Byzantine World (King's College London) ni la traducción del typikon de Kecharitomene publicada por Dumbarton Oaks en Byzantine Monastic Foundation Documents; doaks.org y monasticmatrix.osu.edu no devolvieron contenido. Tampoco se verificó la fecha de muerte de Nicéforo Brienio en una fuente institucional, y por eso el cuerpo no da año para ella.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

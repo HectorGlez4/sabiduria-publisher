@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-16-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Su Song y el reloj astronómico de Kaifeng",
+    "hook": "LA MÁQUINA SE PERDIÓ EN 1127 Y EL MANUAL SE SALVÓ, PERO NI SU PROPIO HIJO CONSIGUIÓ REHACERLA CON ÉL",
+    "body": [
+      "Su Song (1020-1101) era un alto funcionario de la dinastía Song del Norte; llegó a presidir el Ministerio de Personal. En 1086 el emperador le encargó rehacer la esfera armilar de la capital, Kaifeng, y lo que levantó fue otra cosa. Una torre de casi doce metros y tres niveles, diseñada junto con el ingeniero Han Gonglian: arriba una esfera armilar para observar el cielo, en medio un globo celeste que reproducía el movimiento de los astros, abajo una fachada de cinco pisos por la que salían figurillas de madera a marcar la hora. La movía el agua. Una rueda de treinta y seis cangilones se llenaba, volcaba y avanzaba un paso cada vez, contenida por un mecanismo que hace exactamente lo que el escape de un reloj mecánico: repartir la fuerza en golpes iguales. El escape europeo equivalente aparece unos seis siglos después.",
+      "Terminada la torre, Su Song escribió el Xin Yi Xiang Fa Yao: un tratado con decenas de láminas que dan la forma, el material y la medida de cada pieza, más un atlas celeste con mapas de más de mil cuatrocientas estrellas. Es un manual de montaje, y es la razón por la que hoy sabemos cómo funcionaba una máquina que ya no existe. En 1127, treinta y nueve años después de que la torre estuviera en pie, el ejército jin saqueó la capital. La desmontaron entera y se la llevaron a la suya. Allí quedó. Nunca volvió a andar.",
+      "Su Xie, hijo de Su Song, intentó reconstruirla y no pudo. Sospechó que el tratado de su padre no lo decía todo, y algo de razón tenía: el libro deja huecos en las dimensiones de varias partes. La técnica se perdió durante siglos. En 1996, el Museo Nacional de Ciencias Naturales de Taichung terminó, a partir de ese mismo libro, la primera réplica del mundo a tamaño real y en funcionamiento. El manual tardó nueve siglos en bastar, y bastó."
+    ],
+    "question": "¿Qué sabes hacer que no le has dejado explicado a nadie?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "SU SONG",
+    "subtitle": "Kaifeng, finales del siglo XI",
+    "body": "Su torre de casi doce metros daba la hora, movía un globo celeste y una esfera armilar, y funcionaba con agua. En 1127 el ejército jin la desmontó y se la llevó: nunca volvió a andar. Quedó el manual que Su Song había escrito, y ni su propio hijo consiguió rehacerla con él."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SuSong",
+      "#DinastiaSong",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#China",
+      "#Kaifeng",
+      "#Relojes",
+      "#Astronomia",
+      "#Ingenieria",
+      "#SigloXI",
+      "#Inventos",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Su Song (1020-1101) fue un polímata chino que alcanzó el rango de presidente del Ministerio de Personal en Kaifeng; el emperador le ordenó en 1086 rehacer la esfera armilar para una nueva torre de reloj en la capital; el modelo de madera se completó en 1088, las piezas de bronce en 1090 y la obra en 1094, bajo el emperador Zhezong; la torre medía unos 12 metros (40 pies); empleaba una rueda hidráulica de 11 pies de diámetro con 36 cangilones, un mecanismo de escape y la transmisión de cadena más antigua conocida, llamada «escalera celestial»; su tratado Xinyi Xiangfayao fue escrito en 1092 e impreso en 1094, con 47 ilustraciones detalladas del funcionamiento mecánico y un atlas celeste de cinco mapas estelares; al trasladarse la capital desde Kaifeng la torre fue desmontada y nunca se reconstruyó con éxito; su hijo Su Xie lo intentó y fracasó, sospechando que su padre había omitido componentes en los textos",
+      "source": "Wikipedia en inglés — «Su Song»",
+      "url": "https://en.wikipedia.org/wiki/Su_Song"
+    },
+    {
+      "claim": "La torre fue diseñada y producida por Su Song y Han Gonglian durante la dinastía Song del Norte; consta de tres niveles —esfera armilar arriba, globo celeste en medio y un sistema de marcación de la hora en forma de pagoda de cinco pisos abajo— y funcionaba con energía hidráulica que movía los engranajes de ambos instrumentos; el Museo Nacional de Ciencias Naturales reprodujo el aparato a partir de la investigación sobre el libro de Su Song, y fue la primera maqueta funcional a escala real de esta torre en el mundo",
+      "source": "National Museum of Natural Science (Taichung, Taiwán) — sala de Culturas Humanas, «Water-powered Armillary Sphere and Celestial Globe Tower»",
+      "url": "https://www.nmns.edu.tw/en/exhibitions/galleries/human-cultures-hall/water-powered/index.html"
+    },
+    {
+      "claim": "La torre se completó en 1088; treinta y nueve años después el ejército jin saqueó la capital Song de Bianjing, desmontó la torre por completo y se la llevó a su capital, Yanjing, donde quedó abandonada; Su Song documentó su obra en el Xin Yi Xiang Fa Yao describiendo forma, materiales y dimensiones de cada componente con más de sesenta dibujos, pero con lagunas significativas en las dimensiones de otras partes; la réplica de Taichung se empezó hacia 1993, con estructura de madera y esfera armilar y globo celeste de resina reforzada en vez de bronce, y sus piezas de aluminio anodizado se instalaron en junio de 1996",
+      "source": "Taiwan Panorama (publicación del Ministerio de Asuntos Exteriores de Taiwán) — «Taiwan's Biggest Cuckoo Clock? Recreating an Astronomical Timepiece»",
+      "url": "https://www.taiwan-panorama.com/en/Articles/Details?Guid=afaaecaa-eea3-4511-b6df-745ca92d44a1&CatId=9&postname=Taiwan%27s+Biggest+Cuckoo+Clock%3F--Recreating+an+Astronomical+Timepiece"
+    },
+    {
+      "claim": "La torre medía casi doce metros, se movía con energía hidráulica y contaba con un mecanismo de escape innovador que regulaba la liberación de energía, precursor del escape europeo que aparece seis siglos después; su esfera armilar cartografiaba más de 1.400 estrellas, por delante de los mapas estelares europeos producidos tres siglos más tarde; el original se perdió y hoy existen réplicas en museos de varios países",
+      "source": "Science and Technology Daily (科技日报, edición en inglés) — «Su Song: Awe-inspiring Scientist in Ancient China», 19 de diciembre de 2024",
+      "url": "https://www.stdaily.com/web/English/2024-12/19/content_273892.html"
+    }
+  ],
+  "do_not_use": [
+    "dar un año único para la construcción de la torre: las fuentes no coinciden. Wikipedia en inglés distingue modelo de madera en 1088, bronces en 1090 y obra terminada en 1094; Taiwan Panorama la da por completada en 1088. La pieza dice solo que la torre estaba en pie treinta y nueve años antes de 1127, que es lo que las fuentes sí comparten",
+    "fijar el número de láminas del tratado: Wikipedia habla de 47 ilustraciones y Taiwan Panorama de más de sesenta dibujos. La pieza dice «decenas de láminas»",
+    "decir que Su Song inventó el reloj mecánico: su torre es hidráulica. Lo notable es que su regulador cumple la función de un escape, seis siglos antes del escape europeo",
+    "atribuirle la torre en solitario: el Museo Nacional de Ciencias Naturales acredita el diseño a Su Song junto con Han Gonglian",
+    "decir que el tratado se perdió: lo que se perdió fue la máquina. El libro se conserva, y con él se levantó la réplica de Taichung",
+    "afirmar que Su Song omitió datos a propósito para que nadie lo copiara: lo documentado es que su hijo Su Xie lo sospechó y que el libro tiene lagunas en las dimensiones de algunas partes. La intención no consta en ninguna fuente consultada",
+    "llamarla «el primer reloj astronómico del mundo»: circulan precedentes chinos anteriores, como la torre de Zhang Sixun, que no se verificaron en esta investigación. El único superlativo que la pieza usa —la transmisión de cadena más antigua conocida— sí consta en la fuente",
+    "dar la cifra exacta de 1.464 estrellas para los mapas del tratado: la fuente consultada dice «más de 1.400» y la cifra precisa no se cotejó"
+  ],
+  "_verificacion_prosa": "**La máquina.** Los tres niveles (esfera armilar arriba, globo celeste en medio, marcador horario abajo), la tracción hidráulica y la coautoría con Han Gonglian constan en la ficha del National Museum of Natural Science de Taichung, que además declara que su réplica se levantó a partir del libro de Su Song y fue la primera a escala real en funcionamiento del mundo. La altura de casi doce metros, la rueda de treinta y seis cangilones, el escape y la transmisión de cadena («escalera celestial», la más antigua conocida) proceden de Wikipedia en inglés; la altura y el escape los corrobora Science and Technology Daily, que añade la comparación con el escape europeo seis siglos posterior. **El tratado.** Xin Yi Xiang Fa Yao, escrito en 1092 e impreso en 1094 según Wikipedia; Taiwan Panorama describe su contenido —forma, materiales y dimensiones de cada componente— y señala expresamente sus lagunas en las dimensiones de algunas partes, que es el dato que sostiene el tercer párrafo. **1127.** Taiwan Panorama data el saqueo de Bianjing por el ejército jin treinta y nueve años después de terminada la torre, el desmontaje completo y el traslado a Yanjing. Wikipedia coincide en que nunca se reconstruyó con éxito y en el intento fallido de Su Xie y su sospecha sobre los textos de su padre. **La réplica.** Taiwan Panorama data las piezas de aluminio anodizado en junio de 1996 y la obra iniciada unos tres años antes; el museo confirma la primacía mundial del modelo funcional a escala real. **Lo que NO se verificó:** la entrada enciclopédica de Springer sobre la torre está tras muro de pago y no se pudo leer; no se consultó a Joseph Needham, Science and Civilisation in China, vol. 4, que es la referencia de fondo; no se cotejó el texto chino del tratado; y no se comprobó el precedente de Zhang Sixun (979), razón por la cual la pieza no llama a esta torre la primera de su clase.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

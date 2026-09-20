@@ -1,0 +1,94 @@
+{
+  "id": "2026-10-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Jorge Manrique y la copla I de 1476",
+    "hook": "LA FRASE CON LA QUE SE AÑORA EL PASADO EMPIEZA, EN EL ORIGINAL, DICIENDO QUE ES UN ESPEJISMO",
+    "quote": {
+      "text": "Cómo, a nuestro parecer, cualquiera tiempo pasado fue mejor.",
+      "author": "Jorge Manrique",
+      "work": "Coplas a la muerte de su padre, copla I (1476-1479); ed. de Foulché-Delbosc, 1902",
+      "attribution_verified": true
+    },
+    "body": [
+      "Don Rodrigo Manrique, maestre de la Orden de Santiago, murió en noviembre de 1476. Su hijo Jorge escribió entonces cuarenta coplas de pie quebrado: sextillas de versos de ocho sílabas cortados cada tres por uno de cuatro. No se conserva ningún manuscrito de su mano. La copia completa más antigua está en el Cancionero de Egerton de la British Library, con la signatura Eg. 939, copiado entre 1470 y 1480. Jorge Manrique murió el 24 de abril de 1479, herido en combate, a los treinta y nueve años. Escribió sobre la muerte de su padre y no le sobrevivió tres años.",
+      "La copla I termina con seis palabras que hoy se dicen solas: cualquiera tiempo pasado fue mejor. En el poema no van solas. El verso que las sostiene es «cómo, a nuestro parescer». A nuestro parecer: así nos lo parece. Manrique no está afirmando que el pasado fuera mejor. Está enumerando los engaños del alma dormida a la que el poema, en su primera línea, le pide que despierte. Antes ha dicho cuán presto se va el placer y cómo, una vez recordado, da dolor. La añoranza no es la conclusión de la copla: es el tercer ejemplo de una lista de espejismos.",
+      "El filólogo César Augusto Ayuso lo dice sin rodeos: en esa copla el pasado se ve de manera subjetiva, y el poeta lo señala como tal. Dos coplas después llega la imagen por la que se recuerda todo el poema, la de las vidas que son ríos yendo a dar en la mar, y esa sí es una afirmación. Manrique escribía en duelo, con el mejor motivo del mundo para creer que cualquier tiempo pasado había sido mejor. Escribió que solo lo parece."
+    ],
+    "question": "¿Cuánto de lo que añoras ocurrió de verdad así?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "JORGE MANRIQUE",
+    "subtitle": "De la copla I, escrita tras la muerte de su padre",
+    "body": "La copla I acaba en «cualquiera tiempo pasado fue mejor», y esas palabras se citan solas desde hace cinco siglos. El verso que va justo antes dice «cómo, a nuestro parescer»: así nos lo parece. No es una sentencia sobre el pasado, es el tercero de una lista de engaños del alma dormida."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JorgeManrique",
+      "#Coplas",
+      "#LiteraturaEspanola"
+    ],
+    "extended": [
+      "#SigloXV",
+      "#Castilla",
+      "#PoesiaMedieval",
+      "#Citas",
+      "#Memoria",
+      "#Nostalgia",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La copla I de las Coplas de Jorge Manrique contiene, en este orden, los versos «como, a nuestro paresçer, / qualquiera tiempo passado / fue mejor», precedidos inmediatamente por «como después de acordado / da dolor», y la copla abre con «Recuerde el alma dormida, / abiue el seso y despierte, / contemplando»",
+      "source": "Wikisource — Coplas por la muerte de su padre, copla 1, texto establecido sobre la primera edición crítica de R. Foulché-Delbosc (Barcelona, L'Avenç; Madrid, Librería de M. Murillo, 1902)",
+      "url": "https://es.wikisource.org/wiki/Coplas_por_la_muerte_de_su_padre/1"
+    },
+    {
+      "claim": "La copla III contiene, en este orden, los versos «Nuestras vidas son los rios / que van a dar en la mar / que es el morir» y termina con «los que biuen por sus manos / y los ricos»",
+      "source": "Wikisource — Coplas por la muerte de su padre, copla 3, texto establecido sobre la edición crítica de R. Foulché-Delbosc (1902)",
+      "url": "https://es.wikisource.org/wiki/Coplas_por_la_muerte_de_su_padre/3"
+    },
+    {
+      "claim": "El texto de las Coplas que reproduce Wikisource procede de la primera edición crítica de la obra, la de R. Foulché-Delbosc, Barcelona, L'Avenç, y Madrid, Librería de M. Murillo, 1902",
+      "source": "Wikisource — página índice de la edición escaneada usada para establecer el texto",
+      "url": "https://es.wikisource.org/wiki/Coplas_por_la_muerte_de_su_padre"
+    },
+    {
+      "claim": "Jorge Manrique nació hacia 1440, probablemente en Paredes de la Nava (Palencia), y murió el 24 de abril de 1479 en Santa María del Campo (Cuenca), a los treinta y nueve años, tras ser herido en combate; su padre, don Rodrigo Manrique, fue el último maestre elegido por la Orden de Santiago y murió en noviembre de 1476",
+      "source": "Washington and Lee University — Literatura Medieval, ficha «Jorge Manrique»",
+      "url": "https://literaturamedieval.academic.wlu.edu/jorge-manrique/"
+    },
+    {
+      "claim": "Las Coplas constan de cuarenta estrofas en la llamada copla manriqueña, doble sextilla de versos octosílabos y tetrasílabos; no se conserva autógrafo, y el testimonio completo más antiguo es el Cancionero de Egerton (h. 1470-1480), conservado en la British Library con la signatura Eg. 939; la composición es posterior al 11 de noviembre de 1476, fecha de la muerte de Rodrigo Manrique",
+      "source": "Wikipedia en español — «Coplas por la muerte de su padre» (usada solo como corroboración de datos de transmisión textual)",
+      "url": "https://es.wikipedia.org/wiki/Coplas_por_la_muerte_de_su_padre"
+    },
+    {
+      "claim": "Un estudio del filólogo César Augusto Ayuso Picado sobre el tiempo en las Coplas interpreta el pasaje así: el placer, «después de acordado», produce dolor, y el pasado se ve de manera subjetiva, «cómo, a nuestro parescer / cualquiera tiempo pasado / fue mejor»; Manrique adopta ahí una concepción del tiempo como realidad psíquica",
+      "source": "César Augusto Ayuso Picado, «El tiempo y más allá del tiempo. Las coplas de Jorge Manrique II» (artículo indexado en Dialnet, Universidad de La Rioja), versión en HTML",
+      "url": "https://www.almudi.org/articulos/15568-el-tiempo-y-mas-alla-del-tiempo-las-coplas-de-jorge-manrique-ii"
+    }
+  ],
+  "do_not_use": [
+    "citar «cualquiera tiempo pasado fue mejor» como sentencia de Manrique sobre el pasado: en la copla I es el remate de «cómo, a nuestro parescer», y sin ese verso el sentido se invierte. Es el error que la pieza viene a corregir, y reintroducirlo la anula",
+    "usar la forma proverbial «todo tiempo pasado fue mejor»: el poema dice «qualquiera tiempo passado». La variante con «todo» es del habla, no del texto",
+    "fechar la muerte de don Rodrigo Manrique el 2 de noviembre de 1476: esa fecha aparece en la ficha de Washington and Lee University, pero los estudios sobre la datación de las Coplas dan el 11 de noviembre de 1476. Como el dato no está cerrado, la pieza dice solo «noviembre de 1476»",
+    "dar una fecha concreta para la primera edición impresa: las fuentes consultadas oscilan entre 1482 y 1483, y no se pudo cotejar en un catálogo institucional porque bdh.bne.es (Biblioteca Digital Hispánica) devolvió 403",
+    "presentar la copla III, la de las vidas que son ríos, como el cierre del poema: es la tercera de cuarenta, y el poema termina con la muerte del maestre",
+    "hablar de un manuscrito autógrafo de las Coplas: no se conserva ninguno de mano de Jorge Manrique",
+    "llamar «soneto» o «elegía en tercetos» a la forma: son cuarenta coplas de pie quebrado, la estrofa que desde entonces lleva su nombre"
+  ],
+  "_verificacion_prosa": "**El texto.** Los dos versos que sostienen la pieza se comprobaron uno a uno contra Wikisource, que establece su texto sobre la primera edición crítica de las Coplas, la de R. Foulché-Delbosc (Barcelona, L'Avenç; Madrid, M. Murillo, 1902). En la copla 1 figuran, en ese orden, «como, a nuestro paresçer, / qualquiera tiempo passado / fue mejor», precedidos de «como después de acordado / da dolor». En la copla 3 figuran «Nuestras vidas son los rios / que van a dar en la mar / que es el morir» y el cierre «los que biuen por sus manos / y los ricos». La cita de la tarjeta va modernizada en la ortografía; la forma original consta en la fuente. **La biografía.** La ficha de Literatura Medieval de Washington and Lee University da el nacimiento hacia 1440 en Paredes de la Nava, la muerte el 24 de abril de 1479 en Santa María del Campo (Cuenca) por herida de combate a los treinta y nueve años, y a don Rodrigo como último maestre elegido por la Orden de Santiago. **La transmisión.** Cuarenta coplas, copla manriqueña, ausencia de autógrafo y Cancionero de Egerton (British Library, Eg. 939, h. 1470-1480) proceden de Wikipedia en español y se usan solo como corroboración: no se pudo abrir el catálogo de la British Library, que devolvió 404 en la ruta consultada. **La lectura.** El sentido de «a nuestro parescer» no es una interpretación propia: César Augusto Ayuso Picado, en un artículo indexado en Dialnet, escribe que ahí «el pasado se ve de manera subjetiva». **Lo que NO se verificó:** no se consultó la edición crítica de referencia actual (Jorge Manrique, Poesía, ed. Vicenç Beltrán, Biblioteca Clásica de la RAE, 2013), porque rae.es devolvió 403; tampoco la fecha exacta de la muerte de don Rodrigo en un repertorio institucional, ni la historia de las primeras ediciones impresas, y por eso ninguna de las dos cosas aparece con fecha cerrada en el cuerpo.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

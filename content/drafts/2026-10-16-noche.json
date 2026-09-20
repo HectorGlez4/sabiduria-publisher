@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-16-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la circunnavegación de África de Heródoto IV 42",
+    "hook": "EL ÚNICO DETALLE QUE HERÓDOTO SE NEGÓ A CREER ES EL QUE NADIE PODÍA HABER INVENTADO",
+    "body": [
+      "Necao II, faraón de Egipto entre el 610 y el 595 a.C., dejó de excavar el canal que iba del Nilo al golfo Arábigo y mandó unas naves tripuladas por fenicios. Heródoto lo cuenta en el libro IV, capítulo 42 de sus Historias, escrito unos ciento setenta años después. Los fenicios salieron del mar Eritreo y navegaron por el mar del Sur. Cada otoño tocaban tierra en cualquier punto de Libia —el nombre griego de África—, sembraban y esperaban la cosecha. Recogido el grano, seguían. Pasados dos años completos, en el tercero doblaron las Columnas de Heracles y llegaron de nuevo a Egipto.",
+      "Al final del capítulo Heródoto añade un dato y lo rechaza en la misma frase: contaron que, navegando alrededor de Libia, tuvieron el sol a la mano derecha. «Refirieron algo que yo no puedo creer», escribe. No podía creerlo porque en el Mediterráneo, yendo hacia el oeste, el sol queda a la izquierda. Al sur del ecuador queda a la derecha. Es lo que ve cualquiera que rodee el extremo meridional de África con rumbo al oeste, y es lo que nadie en el siglo V a.C. tenía cómo deducir sin haber estado allí. El historiador descartó por increíble el único dato de su relato que un invento no produce.",
+      "No está zanjado. Polibio y Estrabón dudaron, y cuando Ptolomeo declaró imposible rodear África el relato se dio por falso hasta que Bartolomeu Dias alcanzó el cabo de Buena Esperanza en 1488. El pasaje no da un solo topónimo ni describe una costa, y de aquel viaje no quedó conocimiento que nadie volviera a usar. El sitio de revisión de afirmaciones históricas Bad Ancient lo califica de mayormente cierto, y sigue ahí el argumento que lo sostiene: a veces un testimonio se reconoce verdadero por la parte que quien lo transmite no entiende."
+    ],
+    "question": "¿Qué has descartado por increíble sin haber ido a comprobarlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "EL SOL A LA DERECHA",
+    "subtitle": "Heródoto, Historias, libro IV, capítulo 42",
+    "body": "Necao II mandó a unos marineros fenicios rodear África. Volvieron al tercer año diciendo que, navegando hacia el oeste, habían tenido el sol a la mano derecha. Heródoto escribió que eso no podía creerlo. Al sur del ecuador es exactamente lo que se ve."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Herodoto",
+      "#Fenicios",
+      "#Africa"
+    ],
+    "extended": [
+      "#EgiptoAntiguo",
+      "#NecaoII",
+      "#Navegacion",
+      "#HistoriaAntigua",
+      "#Exploracion",
+      "#Mediterraneo",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Heródoto IV 42 dice que Necós, tras dejar de excavar el canal que va del Nilo al golfo Arábigo, envió fenicios con naves; que los fenicios partieron del mar Eritreo y navegaron por el mar del Sur; que al llegar el otoño tocaban tierra y sembraban donde quiera que estuviesen en Libia, esperaban la cosecha y, segado el grano, seguían navegando; que pasados dos años, en el tercero doblaron las Columnas de Heracles y llegaron de nuevo a Egipto; y que refirieron «algo que yo no puedo creer», a saber, que al navegar alrededor de Libia tuvieron el sol a la mano derecha",
+      "source": "Wikisource — The History of Herodotus, traducción de G. C. Macaulay, libro IV, cap. 42",
+      "url": "https://en.wikisource.org/wiki/The_History_of_Herodotus_(Macaulay)/Book_IV"
+    },
+    {
+      "claim": "Heródoto expresó escepticismo personal solo respecto a la afirmación de que tenían el sol a su derecha al navegar hacia el oeste rodeando el sur de Libia; el relato fue generalmente cuestionado después de que Ptolomeo declarase imposible circunnavegar África, y no se consideró vindicado hasta que Bartolomeu Dias alcanzó el cabo de Buena Esperanza en 1488",
+      "source": "Livius.org — «Herodotus on the First Circumnavigation of Africa» (con la traducción de Aubrey de Sélincourt y comentario sobre corrientes y vientos estacionales)",
+      "url": "https://www.livius.org/sources/content/herodotus/herodotus-on-the-first-circumnavigation-of-africa/"
+    },
+    {
+      "claim": "Necao II reinó de 610 a 595 a.C. como faraón de la dinastía saíta; empezó a construir un canal entre el Nilo y el mar Rojo, que terminó Darío I; y a él se atribuye, según Heródoto, la primera circunnavegación de África",
+      "source": "Livius.org — ficha «Necho II»",
+      "url": "https://www.livius.org/articles/person/necho-ii/"
+    },
+    {
+      "claim": "Una revisión de la afirmación califica el relato de «mostly true»: a favor pesa el detalle de la posición del sol, considerado la mejor evidencia de que el viaje ocurrió, porque habría exigido cruzar el trópico y navegar largamente hacia el oeste; en contra, que el relato carece de topónimos y detalles geográficos, que Polibio y Estrabón fueron muy escépticos, que se creía que el Atlántico no conectaba con el Índico, y que el conocimiento no se conservó ni fue repetido por exploradores posteriores",
+      "source": "Bad Ancient — «Did the Phoenicians circumnavigate Africa?», artículo firmado por Owen Rees",
+      "url": "https://www.badancient.com/claims/phoenicians-africa/"
+    }
+  ],
+  "do_not_use": [
+    "presentar la circunnavegación como un hecho establecido: Polibio, Estrabón y Ptolomeo la rechazaron, el pasaje no da un solo topónimo y el debate sigue abierto entre historiadores. La pieza expone el argumento y dice expresamente que no está zanjado",
+    "decir que Heródoto dudaba de todo el relato: solo escribe que no puede creer el detalle del sol. El resto lo transmite sin objeción, y confundirlo invierte el sentido de la pieza",
+    "afirmar que el detalle del sol prueba el viaje: es el mejor indicio disponible, no una prueba. Un relato compuesto a partir de noticias indirectas del hemisferio sur también podría contenerlo, y esa objeción está en la literatura",
+    "dar una fecha concreta al viaje: Heródoto no la da. Solo cabe situarlo en el reinado de Necao II, entre el 610 y el 595 a.C.",
+    "atribuir a Necao II la apertura del canal entre el Nilo y el mar Rojo: lo empezó, y quien lo terminó fue Darío I",
+    "leer «Libia» como el país actual: en Heródoto es el nombre del continente africano",
+    "llamar a este viaje «la primera vuelta al mundo»: es una circunnavegación de África, no del globo, y la del globo es la de Magallanes y Elcano, 1519-1522",
+    "citar el pasaje como si Heródoto hubiera hablado con los marineros: escribe unos ciento setenta años después de los hechos que narra"
+  ],
+  "_verificacion_prosa": "**El texto de Heródoto.** Cada elemento del primer párrafo se comprobó frase a frase contra la traducción de G. C. Macaulay en Wikisource: el abandono del canal que va del Nilo al golfo Arábigo, el envío de fenicios con naves, la salida del mar Eritreo por el mar del Sur, la siembra en tierra cada otoño «wherever in Libya they might happen to be», la espera de la cosecha, los dos años transcurridos y el regreso por las Columnas de Heracles en el tercero, y la frase de rechazo «And they reported a thing which I cannot believe», referida a haber tenido «the sun on their right hand». La versión española del cuerpo es traducción del inglés de Macaulay; no se cotejó con el griego, y Perseus (Tufts), que ofrece el texto de Godley, no llegó a servir el capítulo. **El faraón.** Livius.org da el reinado de Necao II entre 610 y 595 a.C. y el canal empezado por él y terminado por Darío I. **La recepción posterior.** Livius.org documenta el rechazo generalizado tras Ptolomeo y la vindicación con Dias en 1488; Bad Ancient, sitio de revisión de afirmaciones sobre la Antigüedad, añade el escepticismo de Polibio y Estrabón y la ausencia de topónimos, y resume el veredicto como «mostly true». **El razonamiento astronómico.** Que al sur del ecuador el sol se vea al norte —a la derecha de quien navega hacia el oeste— es una consecuencia geométrica de la posición del observador, no un dato tomado de una fuente. **Lo que NO se verificó:** no se consultó ninguna edición crítica del texto griego, ni bibliografía académica reciente sobre el debate (por ejemplo, los trabajos que discuten si el detalle solar pudo inferirse sin el viaje); por eso la pieza no cierra la cuestión y lo dice.",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
