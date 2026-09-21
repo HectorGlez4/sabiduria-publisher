@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 21 Sep 2026 18:41:27 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 20:05:51 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>RAMÓN Y CAJAL: le dieron el Nobel a medias con el hombre que negaba lo que él había demostrado</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-21-re81-reel</guid>
+      <pubDate>Mon, 21 Sep 2026 19:26:00 +0000</pubDate>
+      <description><![CDATA[RAMÓN Y CAJAL: le dieron el Nobel a medias con el hombre que negaba lo que él había demostrado
+
+Estocolmo, 11 de diciembre de 1906. El premio de Medicina se reparte en partes iguales entre Santiago Ramón y Cajal y el italiano Camillo Golgi, por sus trabajos sobre la estructura del sistema nervioso.
+
+Golgi habló primero. Tituló su conferencia "La doctrina de la neurona: teoría y hechos" y la usó para defender que el sistema nervioso era una red continua, atacando de frente la tesis que Cajal iba a exponer justo después: que las neuronas son células separadas. Cajal escuchó desde la sala. Después describió el reparto diciendo que quedaba unido a su rival como hermanos siameses pegados por los hombros.
+
+El detalle final es casi cruel: la técnica que Cajal usó para demostrar que Golgi se equivocaba era la tinción de plata que había inventado Golgi.
+
+Golgi murió sin aceptarlo nunca. La razón la dio el microscopio electrónico, cincuenta años más tarde.
+
+¿Se puede tener razón y no vivir para verlo reconocido?
+
+#SabiduriaDeBolsillo #RamonYCajal #Ciencia #Nobel]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-21-re81-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-21-re81-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El tratado de gobierno más antiguo de la India estuvo perdido siete siglos. La frase suya que sí tiene procedencia es la que casi nadie comparte.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -473,25 +494,6 @@ El día 19 de ese undécimo mes —el 16 de diciembre de 1598 en nuestro calenda
 #SabiduriaDeBolsillo #YiSunsin #Corea #NanjungIlgi]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra91.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra91.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>De todos los libros mayas quedan cuatro. El más completo empezó a descifrarlo un bibliotecario de Dresde que no conocía la lengua ni había pisado nunca Yucatán.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-17-extra90</guid>
-      <pubDate>Fri, 18 Sep 2026 06:28:51 +0000</pubDate>
-      <description><![CDATA[De todos los libros mayas quedan cuatro. El más completo empezó a descifrarlo un bibliotecario de Dresde que no conocía la lengua ni había pisado nunca Yucatán.
-
-El Códice de Dresde son treinta y nueve hojas de papel de corteza, plegadas en acordeón y escritas por las dos caras, hechas en la península de Yucatán en el posclásico tardío, entre 1300 y 1521. Contiene calendarios adivinatorios, tablas astronómicas y meteorológicas, y unas cuatrocientas figuras de dioses. Es el más rico de los cuatro manuscritos mayas que se conservan en el mundo. Cómo llegó a Europa no se sabe. En 1739 Johann Christian Götze, inspector jefe de la biblioteca de la corte sajona, se lo compró en Viena a un particular, casi de balde y sin saber qué tenía delante. En 1740 aparece registrado como un libro mexicano de valor incalculable.
-
-Ernst Wilhelm Förstemann dirigía la Biblioteca Real de Dresde y tenía afición por las matemáticas. Desde 1880 trabajó sobre el códice que custodiaba. Reconstruyó el sistema de numeración vigesimal maya, el signo del cero, la rueda calendárica de cincuenta y dos años y el funcionamiento de las tablas de Venus, que sirvieron para fijar fechas de guerra. Publicó su análisis en 1886; el comentario completo salió en alemán en 1901 y el Museo Peabody de Harvard lo editó en inglés en 1906. No sabía maya. Nadie sabía leer los glifos. Lo que hizo fue aritmética: aislar las columnas de puntos y barras y comprobar que los intervalos cerraban solos.
-
-Los glifos no empezaron a leerse como escritura fonética hasta 1952, cuando el lingüista Yuri Knórosov sostuvo que representaban sonidos y no ideas. El códice está hoy en la Cámara del Tesoro del Museo del Libro de la SLUB, abierto en dos tiras que suman 3,56 metros entre cristales. Sus tres primeras páginas están dañadas por agua y en partes apenas se reconocen. Se puede reconstruir la aritmética de un pueblo mucho antes de poder leer una sola de sus palabras.
-
-¿Qué se puede entender de un pueblo antes de entender su lengua?
-
-#SabiduriaDeBolsillo #CodiceDeDresde #Mayas #Mesoamerica]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-extra90.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-17-extra90.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
