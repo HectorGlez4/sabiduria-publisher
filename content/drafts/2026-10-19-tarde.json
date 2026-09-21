@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-19-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Hildegarda de Bingen y el interdicto de 1178",
+    "hook": "A los ochenta años la castigaron con el silencio: a sus monjas se les prohibió cantar. Respondió con una carta en la que no alega compasión ni obediencia. Alega música.",
+    "body": [
+      "Hildegarda nació hacia 1098 y fue abadesa del monasterio de Rupertsberg, junto al Rin. Escribió tres libros de visiones, un tratado de medicina, una obra de teatro con música y hasta una lengua inventada con su propio alfabeto. En 1178 permitió enterrar en el cementerio del monasterio a un noble que había sido excomulgado: sostenía que se había reconciliado con la Iglesia antes de morir y había recibido los últimos sacramentos. Los prelados de Maguncia exigieron desenterrar el cuerpo. Ella se negó. El monasterio quedó bajo interdicto: sin sacramentos y sin canto.",
+      "Contra ese castigo escribió la carta que en su correspondencia lleva el número 23. El argumento no es disciplinario, es musical. Recuerda que los salmos mandan alabar con instrumentos, y que la forma de los instrumentos y el sentido de las palabras enseñan juntos a quien escucha. En su obra médica había dejado escrito que Adán, antes de la culpa, conocía el canto de los ángeles y tenía una voz que sonaba como la del monocordio. Prohibir el canto en una iglesia no era para ella una sanción menor: era devolver al mundo a la sordera de después de la caída.",
+      "El interdicto se levantó en marzo de 1179 y Hildegarda murió el 17 de septiembre de ese mismo año. La carta se conserva en su Epistolarium latino y se lee hoy en la traducción de Joseph L. Baird y Radd K. Ehrman, publicada por Oxford University Press en 1994. Ahí queda, en sus páginas 78 y 79: una mujer de ochenta años a la que acaban de prohibir cantar argumentando que la música no es el adorno de la liturgia, sino su materia."
+    ],
+    "question": "¿Qué se le quita a una comunidad cuando se le quita su manera de cantar?",
+    "quote": {
+      "text": "Cuídense de cerrar con un interdicto la boca de cualquier iglesia de cantores de Dios […] no sea que Satán los enrede en sus juicios, él que apartó al hombre de la armonía celestial.",
+      "author": "Hildegarda de Bingen",
+      "work": "Cartas, 23, a los prelados de Maguncia (1178-1179)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HildegardaDeBingen",
+      "#Musica",
+      "#EdadMedia"
+    ],
+    "extended": [
+      "#Rupertsberg",
+      "#Maguncia",
+      "#Canto",
+      "#Monasterios",
+      "#SigloXII",
+      "#Liturgia",
+      "#MujeresQuePensaron",
+      "#Cartas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La carta a los prelados de Maguncia es la carta 23 de su correspondencia y se cita por «The Letters of Hildegard of Bingen», vol. 1, traducción de Joseph L. Baird y Radd K. Ehrman, Oxford University Press, 1994, p. 78. De ella procede el pasaje sobre la función didáctica de la música: «tanto por la forma y la cualidad de los instrumentos como por el sentido de las palabras que los acompañan, quienes escuchan puedan ser enseñados». La idea de que Adán conocía antes de su transgresión el canto angélico y tenía «una voz que sonaba como la voz del monocordio» está en «Causae et curae»; la del alma que tiene armonía en sí misma y es como una sinfonía, en el «Liber vitae meritorum».",
+      "source": "International Society of Hildegard von Bingen Studies, página sobre su música",
+      "url": "https://www.hildegard-society.org/p/music.html"
+    },
+    {
+      "claim": "Hildegarda nació en 1098 y murió el 17 de septiembre de 1179. Entre sus obras están «Symphonia», «Scivias» (visiones y exégesis, escrito hasta 1151), el drama musical «Ordo virtutum», el «Liber vitae meritorum» (1158-1163), los escritos médicos «Physica» y «Causae et curae», la lengua y el alfabeto inventados («Lingua ignota», «Litterae ignotae») y «De operatione Dei» (1163-1174). El monasterio quedó bajo interdicto en 1178 porque «habían enterrado a un excomulgado», y el interdicto se levantó en marzo de 1179.",
+      "source": "Washington State University, página docente sobre Hildegarda de Bingen (archivo público)",
+      "url": "https://public.archive.wsu.edu/delahoyd/public_html/medieval/hildegard.html"
+    },
+    {
+      "claim": "Texto del pasaje citado: Hildegarda advierte a los prelados que se guarden («beware») antes de «usar un interdicto para cerrar la boca de cualquier iglesia de cantores de Dios», no sea que queden «atrapados en» sus «juicios por Satán, que apartó al hombre de la armonía celestial y de las delicias del paraíso». El artículo cita la traducción de Baird y Ehrman, «The Letters of Hildegard of Bingen» vol. I, Oxford University Press, p. 79. El contexto es el interdicto impuesto por los prelados de Maguncia tras su negativa a exhumar el cuerpo de un excomulgado del cementerio del monasterio, que prohibía a sus monjas cantar el oficio divino.",
+      "source": "«The Celestial Harmony of Hildegard von Bingen», en Say Something Theological, revista de la Loyola Marymount University (Digital Commons)",
+      "url": "https://digitalcommons.lmu.edu/cgi/viewcontent.cgi?article=1059&context=saysomethingtheological"
+    },
+    {
+      "claim": "El interdicto se sitúa en 1178-79 y se levantó pocos meses antes de la muerte de Hildegarda, el 17 de septiembre de 1179. En su escrito a los prelados describió el hecho de limitarse a leer el oficio divino —en lugar de cantar las oraciones— como celebrarlo «incorrectamente».",
+      "source": "Catholic World Report, «The life and music of St. Hildegard von Bingen, Doctor of the Church»",
+      "url": "https://www.catholicworldreport.com/2023/09/16/catholic-composers-hildegard-von-bingen/"
+    }
+  ],
+  "do_not_use": [
+    "No presentar la cita como traducción del latín. La versión española se hizo sobre la traducción inglesa de Baird y Ehrman de la carta 23; el texto latino está en el «Epistolarium» editado por L. Van Acker (Corpus Christianorum Continuatio Mediaevalis 91, Brepols, 1991), que no se consultó directamente en esta investigación.",
+    "No atribuirle como cita localizable «soy una pluma en el aliento de Dios». La imagen de la pluma aparece en su correspondencia, pero la frase se popularizó como título de un disco de Gothic Voices y no tiene un locus citable comparable al de esta carta.",
+    "No decir que Hildegarda fue excomulgada. El castigo fue un interdicto sobre el monasterio —sin sacramentos y sin canto—; algunas fuentes de divulgación lo llaman excomunión y no es lo mismo.",
+    "No decir que enterró a sabiendas a un excomulgado impenitente. Ella sostenía que el noble se había reconciliado con la Iglesia y había recibido los últimos sacramentos antes de morir.",
+    "No fechar la carta con un día concreto. Se sitúa en 1178-1179, en el último año y medio de su vida, y las fuentes discrepan entre 1178 y 1179.",
+    "No atribuir a esta carta la frase «el alma es sinfónica». La imagen del alma que tiene armonía en sí misma y es como una sinfonía está en el «Liber vitae meritorum», no aquí.",
+    "No atribuir a esta carta lo que dice de Adán y el monocordio: eso está en «Causae et curae».",
+    "No añadir que en 2012 fue declarada doctora de la Iglesia como dato verificado en esta investigación. El título aparece en la fuente periodística consultada, pero la fecha y el orden («la cuarta mujer») no se comprobaron en fuente institucional."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-19-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "status": "draft",
+  "core": {
+    "subject": "Wang Yangming y la unidad de saber y obrar",
+    "hook": "En 1506 un funcionario chino denunció por escrito al eunuco que mandaba en la corte. Lo apalearon en público y lo desterraron a un puesto sin importancia. Allí formuló la idea por la que se lo recuerda: saber y obrar no son dos cosas.",
+    "body": [
+      "Wang Yangming vivió entre 1472 y 1529. En 1506 escribió un memorial contra el poder de un eunuco en la corte Ming; fue apaleado en público y enviado a un cargo menor en Guizhou, en el suroeste, donde permaneció hasta 1510. La ortodoxia de su tiempo era la de Zhu Xi: para alcanzar los principios había que investigar las cosas una por una, fuera de uno mismo. En el destierro llegó a la conclusión contraria, y la dejó en verso: cada uno lleva dentro una brújula que no se equivoca, y la raíz de las diez mil transformaciones está en la mente.",
+      "De ahí sale la unidad de saber y obrar. Su discípulo Xu Ai le objetó lo evidente: hay gente que sabe que debe honrar a sus padres y no lo hace. La respuesta quedó registrada en el «Chuanxilu», el registro para la práctica: «Nunca ha habido gente que sepa y no obre. Los que saben y no obran simplemente no saben todavía». Para Wang, el saber que no mueve a nada ya viene partido por el deseo egoísta y ha dejado de ser saber. Y lo ilustra sin metafísica: si quieres conocer el amargor, tienes que comerte tú mismo el melón amargo.",
+      "No fue un hombre de gabinete. Dirigió campañas militares y sofocó una rebelión en 1527; murió dos años después. Se le atribuye una última frase: esta mente está luminosa y clara, ¿qué más hay que decir? Después vino el castigo. Le revocaron los privilegios hereditarios, se lo acusó de difundir doctrinas falsas y su enseñanza quedó proscrita. Treinta y ocho años más tarde, en 1567, un emperador nuevo le concedió el título de marqués de Xinjian y el nombre póstumo de Wencheng, cumplimiento de la cultura. Desde 1584 se le ofrecieron sacrificios en el templo de Confucio."
+    ],
+    "question": "¿Qué de lo que crees saber no ha cambiado todavía nada de lo que haces?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Saber y obrar no son dos cosas",
+    "subtitle": "Guizhou, 1508",
+    "body": "Desterrado por protestar contra un eunuco de la corte Ming, Wang Yangming concluyó que los principios no se buscan fuera, en las cosas, sino en la propia mente. De ahí su doctrina: nunca ha habido gente que sepa y no obre; quien sabe y no obra, todavía no sabe."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WangYangming",
+      "#Confucianismo",
+      "#FilosofiaAplicada"
+    ],
+    "extended": [
+      "#China",
+      "#DinastiaMing",
+      "#Guizhou",
+      "#ZhuXi",
+      "#Neoconfucianismo",
+      "#Etica",
+      "#Destierro",
+      "#Chuanxilu"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Wang Yangming vivió entre 1472 y 1529. En 1506, tras escribir un memorial en protesta por la influencia de un eunuco en la corte, fue «públicamente apaleado y desterrado a un puesto insignificante» en la provincia de Guizhou; su destierro terminó en 1510, cuando el eunuco fue ejecutado. Durante el destierro, hacia 1508, tuvo su despertar filosófico, que expresó después en verso: «Todos llevan dentro una brújula que no se equivoca; la raíz y la fuente de las diez mil transformaciones está en la mente». Su doctrina central: «Nunca ha habido gente que sepa y no obre. Los que 'saben' pero no obran simplemente no saben todavía», del «Chuanxilu». Dirigió campañas militares, entre ellas la represión de una rebelión en 1527, y murió en 1529; se le atribuye como última frase: «Esta mente está luminosa y clara. ¿Qué más hay que decir?».",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Wang Yangming»",
+      "url": "https://plato.stanford.edu/entries/wang-yangming/"
+    },
+    {
+      "claim": "Wang Yangming (1472-1529) fue «un administrador y militar capaz y de principios», estuvo «desterrado entre 1507 y 1510 por su protesta contra la corrupción política» y la unidad de saber y obrar es «probablemente el aspecto más conocido de su filosofía»: el saber conduce necesariamente a la acción y solo mediante la acción simultánea se obtiene el saber. Del «Chuanxi lu», sección 4: «Si quieres conocer el amargor, tienes que comerte el melón amargo tú mismo». Sostuvo además que todos poseen un saber moral innato (liangzhi), intuitivo y perfecto, con frecuencia oscurecido por los deseos egoístas.",
+      "source": "Internet Encyclopedia of Philosophy, entrada «Wang Yangming (Wang Shou-Jen)»",
+      "url": "https://iep.utm.edu/wangyang/"
+    },
+    {
+      "claim": "En el destierro de Kweichow (Guizhou), en 1508, Wang llegó a la conclusión de que «investigar el principio de las cosas no es buscarlo externamente en los objetos reales, como había enseñado Chu Hsi, sino buscarlo en la propia mente». «Un año después formuló la teoría que marcó época: que el saber y la acción son uno.» Tras su misión de 1527 en Kwangsi contrajo una enfermedad y murió dos años más tarde. «Solo en 1567 fue honrado con el título de marqués y el nombre póstumo de Wen-ch'eng.»",
+      "source": "Encyclopedia of World Biography, entrada «Wang Yang-ming» (en Encyclopedia.com)",
+      "url": "https://www.encyclopedia.com/people/history/chinese-and-taiwanese-history-biographies/wang-yang-ming"
+    },
+    {
+      "claim": "Tras la muerte de Wang Yangming en 1529 le fueron revocados el título nobiliario y los privilegios hereditarios, se lo acusó de difundir doctrinas falsas y su enseñanza quedó severamente proscrita. Treinta y ocho años después, en 1567, un nuevo emperador lo honró con el título de marqués de Xinjian y el nombre póstumo de Wencheng, «cumplimiento de la cultura». A partir de 1584 se le ofreció sacrificio en el templo de Confucio, el honor más alto.",
+      "source": "Encyclopædia Britannica, entrada «Wang Yangming» (contenido recogido a través de resultados de búsqueda: el sitio devuelve 403 a la herramienta de descarga y no se pudo abrir la página directamente)",
+      "url": "https://www.britannica.com/biography/Wang-Yangming"
+    }
+  ],
+  "do_not_use": [
+    "No dar las fechas del destierro como si fueran únicas. Las fuentes consultadas dan 1506 para el memorial y el castigo, y sitúan la estancia en Guizhou entre 1507 y 1510; la Stanford Encyclopedia fecha el despertar hacia 1508 y la Encyclopedia of World Biography lo pone en 1508 con la formulación de la doctrina un año después.",
+    "No contar como hecho documentado que meditó junto a un ataúd de piedra en una cueva. Ese relato circula en versiones de divulgación sobre el «despertar de Longchang» y no se pudo verificar en las fuentes académicas consultadas.",
+    "No traducir la unidad de saber y obrar como «la teoría y la práctica deben ir juntas». En Wang no son dos cosas que haya que unir: sostiene que un saber que no obra nunca fue saber.",
+    "No confundir su doctrina con la de Zhu Xi ni presentarla como su continuación. Wang la formuló contra la ortodoxia de Zhu Xi, que buscaba los principios investigando las cosas externas.",
+    "No convertirlo en un maestro retirado del mundo. Fue administrador y militar: dirigió campañas y sofocó una rebelión en 1527, dos años antes de morir.",
+    "No dar la frase final como transcripción segura. Se le atribuye y así la presenta la Stanford Encyclopedia of Philosophy, pero es una atribución de tradición.",
+    "No dar la fecha de 1584 como comprobada en fuente institucional abierta. Procede de la entrada de Britannica, que no se pudo descargar; se recogió a través de resultados de búsqueda y conviene verificarla antes de repetirla.",
+    "No escribir su nombre como si Yangming fuera apellido. Wang es el apellido; Yangming es el nombre por el que se lo conoce, y su nombre personal era Shouren (Wang Shou-jen en transcripciones antiguas)."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

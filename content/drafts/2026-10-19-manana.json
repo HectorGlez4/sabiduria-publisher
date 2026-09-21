@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-19-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Onesimus y la inoculación en Boston (1721)",
+    "hook": "Un hombre esclavizado explicó a su dueño, hacia 1706, cómo se evitaba la viruela donde él nació. Quince años después ese método atravesó la peor epidemia de Boston. De él no se conserva ni el nombre.",
+    "body": [
+      "Hacia 1706 la congregación de la Iglesia del Norte de Boston regaló a su pastor, Cotton Mather, un hombre africano esclavizado. Lo llamaron Onesimus; del nombre con el que nació no queda registro. Mather le preguntó si había tenido viruela y la respuesta fue «sí y no»: había pasado por una operación que le dio algo de la enfermedad y lo protegería de ella para siempre. Le describió el procedimiento —se toma el líquido de las pústulas, se corta la piel y se pone una gota— y le mostró la cicatriz. Era una práctica corriente, dijo, entre los guramantes.",
+      "En 1716 Mather escribió a la Royal Society de Londres contando lo que había aprendido de su criado, y anotó que lo supo «muchos meses antes de encontrar el menor indicio del método en Europa». En 1721 un barco trajo la viruela a Boston. La epidemia infectó a más de la mitad de los once mil habitantes y mató a unas 844. De todos los médicos de la ciudad, solo Zabdiel Boylston aceptó probarlo: empezó por su propio hijo y por las personas esclavizadas de su casa. Inoculó a 247 en total; murieron seis, un 2,4 por ciento. Alguien lanzó un artefacto explosivo por la ventana de la casa de Mather. No estalló.",
+      "Buena parte del rechazo no era médico. La objeción más repetida fue que el procedimiento venía de África y de Asia, de pueblos a los que no se les reconocía saber alguno. Boylston dejó su recuento por escrito, en «An Account of the Smallpox Inoculated in New England», y por ahí entró la inoculación en América del Norte. Onesimus llegó a comprar una parte de su libertad y siguió al servicio de Mather; de su vida posterior no se sabe casi nada. El dato que abrió el camino fue suyo. El apellido que quedó en los libros es el de los otros dos."
+    ],
+    "question": "¿Cuánto de lo que hoy damos por saber propio llegó por boca de alguien a quien no se le dejó firmarlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El método llegó por su boca",
+    "subtitle": "Boston, 1721",
+    "body": "Hacia 1706 Cotton Mather recibió como esclavo a un africano al que llamó Onesimus. Este le describió la inoculación contra la viruela y le mostró la cicatriz. En la epidemia de 1721, Zabdiel Boylston inoculó a 247 personas y murieron seis, frente a las 844 muertes de la ciudad."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Onesimus",
+      "#Viruela",
+      "#HistoriaDeLaMedicina"
+    ],
+    "extended": [
+      "#Boston",
+      "#CottonMather",
+      "#Inoculacion",
+      "#SigloXVIII",
+      "#Epidemias",
+      "#Africa",
+      "#Esclavitud",
+      "#SaberesNegados"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Cotton Mather recibió a Onesimus como regalo de su congregación de la Iglesia del Norte de Boston en 1707. Al recibirlo, Mather le preguntó «si el hombre era inmune a la viruela». Onesimus respondió que había pasado por «una operación que le había dado algo de la viruela y que lo preservaría de ella para siempre» y precisó que se usaba «a menudo entre los guramantes» («often used among the Guramantese»). En su carta de 1716 Mather dejó escrito que lo supo «muchos meses antes de encontrar cualquier indicio de tratar la viruela con el método de la inoculación, en ningún lugar de Europa», y que Onesimus le mostró «la cicatriz que le había dejado». En su diario de agosto de 1716 Mather anotó que Onesimus «se vuelve malvado y se hace inútil». Onesimus obtuvo su libertad entregando «una suma para la compra de un muchacho negro», con un contrato que le obligaba a seguir trabajando sin paga.",
+      "source": "Paul Revere House, «Onesimus, Mather and the Origins of Inoculation in Boston»",
+      "url": "https://www.paulreverehouse.org/onesimus-mather-and-the-origins-of-inoculation-in-boston/"
+    },
+    {
+      "claim": "«The 1721 epidemic killed around 844 of Boston's 11,000 residents, or about 7.6% of the total citizenry.» «Of Boylston's 247 inoculants, however, only 6 died for a 2.4% fatality rate.» Boylston dejó su recuento en «An Account of the Smallpox Inoculated in New England» y trató sobre todo a personas de entre 15 y 40 años. Sobre el rechazo: alguien lanzó un «grenado» por una de las ventanas de la casa de Mather y el artefacto no llegó a estallar.",
+      "source": "Paul Revere House, «Smallpox in Boston: Inoculation and the Revere Family»",
+      "url": "https://www.paulreverehouse.org/inoculation-and-the-revere-family/"
+    },
+    {
+      "claim": "Mather esclavizó a Onesimus en 1706. Onesimus le describió la variolización, práctica africana consistente en aplicar material infeccioso de las pústulas de viruela mediante cortes controlados en la piel para producir una enfermedad más leve e inmunidad. La epidemia de 1721 infectó a la mitad de los 11.000 habitantes de Boston. En las inoculaciones de Boylston murió uno de cada cuarenta, frente a uno de cada siete entre quienes contraían la enfermedad de forma natural. Sobre el rechazo se conserva la nota que acompañaba la bomba lanzada a la casa de Mather. Onesimus «compraría parcialmente su libertad, pero siguió al servicio de Cotton Mather».",
+      "source": "History of Vaccines, College of Physicians of Philadelphia, «Onesimus Spreads Wisdom That Saves Lives of Bostonians During a Smallpox Epidemic»",
+      "url": "https://historyofvaccines.org/blog/black-history-month-onesimus-spreads-wisdom-that-saves-lives-of-bostonians-during-a-smallpox-epidemic-2/"
+    },
+    {
+      "claim": "«No hay registros que indiquen su nombre de nacimiento; lo que sí sabemos es que Onesimus no era el nombre con el que nació.» Preguntado por Mather si había tenido viruela, respondió con un «sí y no» y reveló haber pasado por «una operación que le proporcionó una forma de inmunidad». Mather escribió en 1716 a la Royal Society documentando el relato de Onesimus sobre la variolización. Muchos críticos rechazaron la idea «simplemente porque la practicaban culturas de África y Asia». Onesimus «logró comprar una libertad parcial pero siguió sirviendo a Mather», y de su vida posterior se sabe muy poco.",
+      "source": "EPIC: Emerging Pathogens and Infectious Diseases Consortium, Universidad de Toronto, «Onesimus: the enslaved man that helped save Bostonians during a smallpox epidemic»",
+      "url": "https://epic.utoronto.ca/onesimus-the-enslaved-man-that-helped-save-bostonians-during-a-smallpox-epidemic/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que murió el 14 por ciento de la población de Boston. Ese porcentaje circula en varias fuentes de divulgación y está mal aplicado: corresponde a la letalidad entre los enfermos, no a la ciudad entera. Las 844 muertes sobre unos 11.000 habitantes son cerca del 7,6 por ciento.",
+    "No decir que Onesimus inventó, descubrió o creó la inoculación. La variolización se practicaba en África y en Asia desde antes; lo que hizo fue transmitir un saber de su lugar de origen a quien lo tenía esclavizado.",
+    "No llamar vacuna al procedimiento. Era variolización: inoculación con viruela humana, con riesgo real de muerte. La vacuna de Jenner, con viruela vacuna, es muy posterior.",
+    "No fijar el año en que Onesimus llegó a casa de Mather. Las fuentes consultadas dan 1706 y 1707 y no coinciden.",
+    "No dar por firme el número de inoculados. Circulan 242 y 247 según la fuente; 247 es la cifra del recuento de Boylston tal como la recoge la Paul Revere House, con seis muertes.",
+    "No decir que Onesimus fue liberado. Compró una parte de su libertad, con un contrato que le obligaba a seguir trabajando sin paga, y continuó al servicio de Mather.",
+    "No presentar a Mather como el primero en proponer la inoculación en Occidente sin comprobarlo. La Royal Society había publicado antes el relato de Emanuel Timoni sobre la práctica en Constantinopla, y Mather lo había leído; ese punto no quedó verificado en fuente institucional en esta investigación.",
+    "No usar «Guramantese» como si fuera un gentilicio establecido. Es la forma que Mather escribió en su carta y no hay acuerdo sobre a qué pueblo remite exactamente.",
+    "No convertir a Onesimus en héroe voluntario de la ciencia. Estaba esclavizado, no consintió el uso de lo que contó, y las fuentes no registran su opinión sobre la campaña de inoculación."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-19-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Mandela y el final del discurso de Rivonia",
+    "hook": "El final del discurso más citado del siglo XX lleva tres palabras que casi nadie repite. Las propuso su abogado horas antes, y es probable que le salvaran la vida.",
+    "body": [
+      "El 20 de abril de 1964, en el Tribunal Supremo de Pretoria, se abrió el turno de la defensa en el juicio de Rivonia. Nelson Mandela era el acusado número uno. En lugar de declarar como testigo, eligió leer una declaración desde el banquillo. Habló 176 minutos, según la medición hecha sobre las grabaciones originales. La fiscalía pedía la pena de muerte. El texto se cierra con el párrafo que hoy se cita en todo el mundo, y que en el original termina así: «Es un ideal por el que espero vivir y que espero alcanzar. Pero, si es necesario, es un ideal por el que estoy preparado a morir».",
+      "George Bizos, uno de sus abogados, había leído ese final y no le gustó. Le advirtió que decirlo sin ningún matiz lo expondría a la acusación de desafiar a la autoridad y de buscar el martirio. Mandela se mantuvo firme en la frase. Bizos propuso entonces una corrección mínima, y él mismo la contó después con estas palabras: «Propuse que Nelson dijera que esperaba vivir para alcanzar sus ideales pero que, si era necesario, estaba preparado a morir». Mandela aceptó el añadido. La Fundación Nelson Mandela lo registra sin rodeos: fue Bizos quien le aconsejó incorporar esas tres palabras.",
+      "El 12 de junio de 1964, un viernes, ocho de los acusados fueron condenados a cadena perpetua por sabotaje. Todos esperaban la muerte. Mandela recordó que la voz del juez apenas se oía al dictar sentencia y que salió rápido de la sala. Las Naciones Unidas y la propia Fundación conservan el texto íntegro con la condicional intacta. La versión que circula suele suprimirla: queda «un ideal por el que estoy preparado a morir», sin el «si es necesario» que convertía la frase en una advertencia y no en una despedida."
+    ],
+    "question": "¿Qué cambia en una frase cuando se le quita la condición que la sostenía?",
+    "quote": {
+      "text": "Es un ideal por el que espero vivir y que espero alcanzar. Pero, si es necesario, es un ideal por el que estoy preparado a morir.",
+      "author": "Nelson Mandela",
+      "work": "Declaración desde el banquillo, juicio de Rivonia, 20 de abril de 1964",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#NelsonMandela",
+      "#JuicioDeRivonia",
+      "#Sudafrica"
+    ],
+    "extended": [
+      "#Apartheid",
+      "#GeorgeBizos",
+      "#Pretoria",
+      "#DerechosHumanos",
+      "#1964",
+      "#Discursos",
+      "#Atribucion",
+      "#HistoriaDelSigloXX"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del párrafo final, verbatim: «During my lifetime I have dedicated myself to this struggle of the African people. I have fought against white domination, and I have fought against black domination. I have cherished the ideal of a democratic and free society in which all persons live together in harmony and with equal opportunities. It is an ideal which I hope to live for and to achieve. But if needs be, it is an ideal for which I am prepared to die.» El documento se presenta como «Nelson Mandela's Statement from the Dock at the Opening of the Defence Case in the Rivonia Trial», Pretoria Supreme Court, 20 de abril de 1964.",
+      "source": "Naciones Unidas, texto del discurso ante el tribunal de 1964 (sitio del Día de Nelson Mandela)",
+      "url": "https://static.un.org/en/events/mandeladay/court_statement_1964.shtml"
+    },
+    {
+      "claim": "«It was Bizos who advised Mandela to add the words 'if needs be' to his famous speech from the dock at the opening of the defence case in the Rivonia Trial.» La página reproduce la declaración terminando con «But if needs be, it is an ideal for which I am prepared to die».",
+      "source": "Fundación Nelson Mandela, página dedicada a George Bizos (1927-2020)",
+      "url": "https://www.nelsonmandela.org/george-bizos"
+    },
+    {
+      "claim": "Relato de Bizos en primera persona sobre el cambio propuesto: «I proposed that Nelson say he hoped to live for and achieve his ideals but if needs be was prepared to die». Ante la advertencia, «Nelson remained adamant» respecto a mantener el cierre. El discurso se pronunció el 20 de abril de 1964 y duró 176 minutos, según la reconstrucción hecha a partir de las grabaciones originales.",
+      "source": "Al Jazeera, «'I am prepared to die': Mandela's speech which shook apartheid» (20 de abril de 2024)",
+      "url": "https://www.aljazeera.com/features/2024/4/20/i-am-prepared-to-die-when-mandela-shook-apartheid-changed-south-africa"
+    },
+    {
+      "claim": "La sentencia se dictó el viernes 12 de junio de 1964: ocho hombres fueron condenados a cadena perpetua por cargos de sabotaje. «Todos esperaban ser condenados a muerte» por su papel en la lucha armada del ANC, y el juez impuso en cambio la cadena perpetua. Mandela describió el momento: «The judge's voice was barely audible as he pronounced sentence of life imprisonment and quickly left the court».",
+      "source": "Fundación Nelson Mandela, «50th anniversary of the sentencing of the Rivonia trialists»",
+      "url": "https://www.nelsonmandela.org/news/entry/12-june-1964-50th-anniversary-of-the-sentencing-of-the-rivonia-trialists"
+    },
+    {
+      "claim": "Ficha de archivo del documento: «I am prepared to die: Nelson Mandela's statement from the dock at the opening of the defence case in the Rivonia Trial», Tribunal Supremo de Pretoria, 20 de abril de 1964, referencia de archivo R-0086248.",
+      "source": "South African History Online, ficha de archivo de la declaración desde el banquillo",
+      "url": "https://sahistory.org.za/archive/i-am-prepared-die-nelson-mandelas-statement-dock-opening-defence-case-rivonia-trial"
+    }
+  ],
+  "do_not_use": [
+    "No citar el final sin «si es necesario». Es la forma en que circula y suprime justamente la condición que Mandela aceptó añadir; sin ella la frase dice algo distinto de lo que se leyó en la sala.",
+    "No decir que el discurso duró más de cuatro horas. Una página de la Fundación Nelson Mandela lo afirma, pero la medición hecha sobre las grabaciones originales da 176 minutos, es decir menos de tres horas. Las fuentes no coinciden.",
+    "No afirmar que Mandela marcó el añadido a pluma en el mecanoscrito. Ese detalle circula en versiones periodísticas y no se pudo verificar en las fuentes institucionales consultadas.",
+    "No decir que fue condenado a muerte ni que la salvó el discurso. La condena fue cadena perpetua el 12 de junio de 1964; que el matiz evitara la pena capital es una atribución razonable de sus defensores, no un hecho establecido.",
+    "No presentarlo como testimonio ante el tribunal. Mandela renunció a declarar como testigo, lo que le habría expuesto al interrogatorio de la fiscalía, y eligió una declaración desde el banquillo.",
+    "No decir que fue el único condenado. Fueron ocho los sentenciados a cadena perpetua en ese juicio.",
+    "No atribuir la frase a su discurso de investidura de 1994 ni a «El largo camino hacia la libertad». Pertenece a la declaración del 20 de abril de 1964.",
+    "No atribuir a Mandela el pasaje «nuestro miedo más profundo no es que seamos incapaces». Circula como suyo desde los años noventa y es de Marianne Williamson; no aparece en ningún discurso suyo."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
