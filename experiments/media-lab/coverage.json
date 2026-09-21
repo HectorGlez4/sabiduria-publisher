@@ -868,15 +868,17 @@
       "treatment": "4:5 image with caption",
       "publishing_route": "android_native",
       "variant_id": "B",
-      "capability_evidence": null,
-      "status": "planned",
+      "capability_evidence": "publicada por la app nativa con música propia; conciliada por captura del feed (sin permalink)",
+      "status": "published",
       "reason_if_blocked_or_unsupported": null,
       "planned_publish_at": null,
-      "run_record": null,
+      "run_record": "experiments/media-lab/runs/LAB-PLACE-003-B-INSTAGRAM.json",
       "post_id": null,
       "post_url": null,
-      "playback_or_display_verified_at": null,
-      "measurement_due_at": [],
+      "playback_or_display_verified_at": "2026-09-21T05:59:10Z",
+      "measurement_due_at": [
+        "2026-09-22T05:58:00Z"
+      ],
       "measurement_completed_at": []
     },
     {
