@@ -1,0 +1,76 @@
+{
+  "id": "2026-10-18-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Tiwanaku y la Puerta del Sol como calendario",
+    "hook": "En 1903 un ingeniero austriaco llegó a las ruinas de Tiwanaku, en el altiplano boliviano, y las midió con instrumentos astronómicos. Concluyó que la ciudad tenía más de doce mil años y que el relieve de la Puerta del Sol era un calendario.",
+    "body": [
+      "Tiwanaku está junto al lago Titicaca, en Bolivia. La civilización que lleva su nombre se desarrolló entre los años 200 y 1100 de nuestra era, y su centro urbano llegó a tener entre 25.000 y 40.000 habitantes. La Puerta del Sol es un portal tallado en un solo bloque de andesita: 2,8 metros de alto por 3,8 de ancho, con un vano de 1,4 metros. En el dintel, cuarenta y ocho figuras aladas en tres filas rodean a una deidad central con dos báculos. Estuvo pintado de colores e incrustado de oro.",
+      "Arthur Posnansky llegó al sitio el 16 de noviembre de 1903 y dedicó cuatro décadas a sostener que era mucho más antiguo: más de doce mil años, y hasta diecisiete mil en algunas de sus publicaciones. Fechaba por alineaciones astronómicas, uno de los pocos métodos disponibles antes del radiocarbono, y entre 1926 y 1928 trabajó con el astrónomo Rolf Müller para leer el dintel como calendario. En los años treinta, mientras el Movimiento del Calendario Mundial discutía cómo racionalizar el gregoriano, Posnansky ofreció el calendario de Tiwanaku como respuesta boliviana a ese debate internacional.",
+      "Wendell Bennett escribió en 1948 que ni las pruebas ni las conclusiones se presentaban de un modo aceptable para la arqueología científica. La cronología de Posnansky se descartó poco después de su muerte, con las primeras dataciones por radiocarbono del yacimiento: la distancia con las fechas que hoy se manejan es de unos diez mil años. La lectura del dintel como calendario tampoco se sostiene. Y sigue siendo lo primero que se cuenta allí: la antropóloga Clare Sammells documentó en 2012 que a quien visita Tiwanaku se le presentan calendarios antiguos, y el de la Puerta del Sol es el principal."
+    ],
+    "question": "¿Cuánto de lo que se cuenta en unas ruinas viene de quien las midió primero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El calendario que se leyó en la piedra",
+    "subtitle": "Tiwanaku, altiplano boliviano",
+    "body": "La Puerta del Sol es un portal de andesita de 2,8 por 3,8 metros, con cuarenta y ocho figuras aladas talladas en el dintel. En 1903 Arthur Posnansky lo leyó como un calendario y fechó la ciudad en más de doce mil años. El radiocarbono lo desmintió; la lectura sigue en las visitas."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tiwanaku",
+      "#Bolivia",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#PuertaDelSol",
+      "#Titicaca",
+      "#Andes",
+      "#Altiplano",
+      "#HistoriaAndina",
+      "#Radiocarbono",
+      "#Civilizaciones",
+      "#Calendarios"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«The Tiwanaku civilization (200-1100 C.E.) was centered in the Lake Titicaca region of present-day southern Peru and western Bolivia.» «Tiwanaku's main city center boasted a population of 25,000-40,000 at its peak.» La Puerta del Sol es «a monolithic portal carved out of a single block of andesite», fue hallada «in the city's main courtyard» y «may have originally served as the portal to the Puma Punku, one of the city's most important public shrines»; «the doorway was originally brightly painted and inlaid with gold».",
+      "source": "Smarthistory, «Tiwanaku, an introduction» (edición abierta en LibreTexts Humanities)",
+      "url": "https://human.libretexts.org/Bookshelves/Art/SmartHistory_of_Art_2e/SmartHistory_of_Art_XIa_-_The_Americas_before_1500/04%3A_South_America_before_c._1500/4.02%3A_Peru_and_Bolivia/4.2.09%3A_Tiwanaku/4.2.9.01%3A_Tiiwanaku_an_introduction"
+    },
+    {
+      "claim": "«Carved from a single massive block of andesite stone, the Gateway is 2.8 metres high and 3.8 metres wide. The opening in the gate is 1.4 metres wide.» «The top portion has relief carvings of 48 winged demons or angels wearing feathered headdresses set in three rows. The central figure is known as the Staff Deity.»",
+      "source": "World History Encyclopedia, «Gateway of the Sun, Tiwanaku»",
+      "url": "https://www.worldhistory.org/image/2374/gateway-of-the-sun-tiwanaku/"
+    },
+    {
+      "claim": "Arthur Posnansky visitó Tiwanaku por primera vez el 16 de noviembre de 1903, completó su teoría en 1911 y la promovió durante cuatro décadas. Sostuvo que el sitio había sido ocupado «over 12,000 years ago (the date varies and is as old as 17,000 years ago in some publications)». Fechaba con mediciones astronómicas, porque «in the days before radiocarbon dating, astronomical measurements were among the few potential dating methods», y colaboró con el astrónomo alemán Rolf Müller entre 1926 y 1928 para interpretar el Portón del Sol como calendario. Bennett (1948) escribió que «neither the evidence nor the conclusions are presented in a manner acceptable to scientific archaeology». «Posnansky's chronology was discarded shortly after his death with the site's first radiocarbon dates.»",
+      "source": "Marsh, E. J. (2019), «Arthur Posnansky, the Czar of Tiwanaku Archaeology», Bulletin of the History of Archaeology 29(1):1",
+      "url": "https://archaeologybulletin.org/articles/bha-605"
+    },
+    {
+      "claim": "«Tourists to the archaeological site of Tiwanaku are presented with ancient calendars, of which the Gateway of the Sun is the most important, famous, and beautiful.» «Posnansky presented his interpretation of Tiwanaku's calendars as a response to the debates of the World Calendar Movement, which in the 1930s was attempting to rationalize the Gregorian calendar.»",
+      "source": "Sammells, C. A. (2012), «Ancient Calendars and Bolivian Modernity: Tiwanaku's Gateway of the Sun, Arthur Posnansky, and the World Calendar Movement of the 1930s», The Journal of Latin American and Caribbean Anthropology 17(2):299-319 (repositorio de Bucknell University)",
+      "url": "https://digitalcommons.bucknell.edu/fac_journ/479/"
+    }
+  ],
+  "do_not_use": [
+    "No repetir que Tiwanaku tiene quince mil o diecisiete mil años. Esa es la cronología de Arthur Posnansky, obtenida por alineaciones astronómicas y descartada poco después de su muerte con las primeras dataciones por radiocarbono del yacimiento.",
+    "No presentar el relieve de la Puerta del Sol como un calendario descifrado. Es la lectura que Posnansky hizo con Rolf Müller entre 1926 y 1928, no un hecho establecido, y es también la que todavía se ofrece en las visitas al sitio.",
+    "No atribuir la construcción a extraterrestres, a gigantes ni a una civilización anterior desaparecida. Es lo que más circula sobre Tiwanaku y Puma Punku y no lo sostiene ninguna fuente arqueológica.",
+    "No afirmar que la Puerta del Sol está en su emplazamiento original. Se encontró en el patio principal del sitio y hay hipótesis de que sirviera de portal al Puma Punku; su ubicación original no está establecida.",
+    "No confundir Tiwanaku con los incas ni llamarla ciudad inca. La civilización de Tiwanaku se desarrolló entre los años 200 y 1100 y la ciudad ya estaba abandonada siglos antes del imperio incaico.",
+    "No dar por buena la fecha de 1580 a.C. como primera ocupación. Procede de una datación antigua que desde los años ochenta se considera poco fiable."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

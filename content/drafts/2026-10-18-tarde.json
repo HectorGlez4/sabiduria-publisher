@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-18-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Nezahualcóyotl y el canto del cenzontle",
+    "hook": "De Nezahualcóyotl se conservan treinta y seis cantos en dos manuscritos del siglo XVI. El verso que el billete de cien pesos llevó impreso con su nombre no está en ninguno de los dos.",
+    "body": [
+      "Nezahualcóyotl gobernó Tetzcoco en el siglo XV. Las fuentes nahuas lo llaman cuicapicqui: forjador de cantos. Sus poemas llegaron hasta hoy copiados en dos manuscritos del siglo XVI. Los Cantares Mexicanos se guardan en la Biblioteca Nacional de México; los Romances de los señores de la Nueva España, en la Colección Latinoamericana de la Universidad de Texas en Austin. Entre ambos suman treinta y seis cantos que se le atribuyen expresamente. La versión en español de estos versos es de Miguel León-Portilla, publicada por la UNAM en 1967.",
+      "Hay otro poema que no aparece en ninguno de los dos. «Amo el canto del cenzontle, pájaro de cuatrocientas voces» se imprimió con su nombre en el billete de cien pesos que el Banco de México puso a circular el 9 de agosto de 2010, y antes circuló en libros de texto. Patrick Johansson, nahuatlato del Instituto de Investigaciones Históricas de la UNAM, ha señalado que ese texto no corresponde al náhuatl de la época: formas como nictlazotla, «yo amo», y la idea del amor al prójimo pertenecen a un molde posterior. Es, dice, una composición moderna.",
+      "Los propios manuscritos avisan de la dificultad. Son copias hechas después de la conquista: junto a los cantos de tradición prehispánica llevan añadidos cristianos y composiciones de autores coloniales. Saber qué es suyo exige trabajo filológico, no memoria. Desde el 12 de noviembre de 2020 el billete de cien pesos lleva a Sor Juana. El verso del cenzontle sigue circulando con la firma de Nezahualcóyotl."
+    ],
+    "question": "¿Cuántas frases queridas se sostienen solo en la costumbre de repetirlas?",
+    "quote": {
+      "text": "No acabarán mis flores, no cesarán mis cantos. Yo cantor los elevo, se reparten, se esparcen.",
+      "author": "Nezahualcóyotl",
+      "work": "Trece poetas del mundo azteca, trad. León-Portilla",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Nezahualcoyotl",
+      "#Nahuatl",
+      "#PoesiaNahuatl"
+    ],
+    "extended": [
+      "#Texcoco",
+      "#MexicoAntiguo",
+      "#LeonPortilla",
+      "#Manuscritos",
+      "#Mesoamerica",
+      "#Poesia",
+      "#Atribucion",
+      "#UNAM"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto en español del canto: «No acabarán mis flores, / no cesarán mis cantos. / Yo cantor los elevo, / se reparten, se esparcen. / Aun cuando las flores / se marchitan y amarillecen, / serán llevadas allá, / al interior de la casa / del ave de plumas de oro.» Referencia dada por el artículo: Miguel León-Portilla, «Trece poetas del mundo azteca», UNAM, 1967; segunda reimpresión, 1978.",
+      "source": "Nexos, «Poetas aztecas. 13 fragmentos de los 13» (Cultura y vida cotidiana)",
+      "url": "https://cultura.nexos.com.mx/poetas-aztecas-13-fragmentos-de-los-13/"
+    },
+    {
+      "claim": "A Nezahualcóyotl se le llama «cuicapicqui, forjador de cantos», y «se conservan 36 cantos del señor de Tetzcoco» que le son expresamente atribuidos en manuscritos como «Cantares Mexicanos» y «Romances de los Señores de la Nueva España». Su personalidad y su vida pueden documentarse mediante códices y crónicas.",
+      "source": "Arqueología Mexicana (Editorial Raíces / INAH), «Nezahualcóyotl, el gobernante poeta»",
+      "url": "https://arqueologiamexicana.mx/mexico-antiguo/nezahualcoyotl-el-gobernante-poeta"
+    },
+    {
+      "claim": "Los «Cantares Mexicanos» se conservan en la Biblioteca Nacional de México y los «Romances de los Señores de la Nueva España» en la Colección Latinoamericana de la Universidad de Texas en Austin. Ambas fuentes incluyen cantos de tradición prehispánica, con frecuencia con añadidos cristianos, además de composiciones de autores del periodo colonial. El artículo cita composiciones en Romances, f. 18v y f. 34r, y en Cantares Mexicanos, f. 19r.",
+      "source": "Arqueología Mexicana (Editorial Raíces / INAH), «Poesía de Nezahualcóyotl»",
+      "url": "https://arqueologiamexicana.mx/mexico-antiguo/poesia-de-nezahualcoyotl"
+    },
+    {
+      "claim": "El poema del cenzontle impreso en el billete de cien pesos —«Amo el canto del zenzontle, pájaro de cuatrocientas voces…»— no es de Nezahualcóyotl. Patrick Johansson, académico de la UNAM y especialista en lengua náhuatl, sostiene que se trata de una composición moderna: señala anacronismos lingüísticos como la forma «nictlazotla» («yo amo»), ajena a los textos antiguos, y observa que el amor al prójimo «es una idea cristiana que no corresponde a la epistemología indígena prehispánica». El poema se difundió a partir de los libros de texto gratuitos de la SEP.",
+      "source": "México Desconocido, «El poema del cenzontle no es de Nezahualcóyotl»",
+      "url": "https://www.mexicodesconocido.com.mx/poema-cenzontle-nezahualcoyotl-apocrifo.html"
+    },
+    {
+      "claim": "El billete de cien pesos de la familia F, con la imagen de Nezahualcóyotl y la representación alegórica de su poema más conocido, fue puesto en circulación por el Banco de México el 9 de agosto de 2010. El billete de cien pesos de la familia G, con Sor Juana Inés de la Cruz, entró en circulación el 12 de noviembre de 2020.",
+      "source": "Banco de México, fichas de los billetes de 100 pesos de las familias F y G",
+      "url": "https://www.banxico.org.mx/billetes-y-monedas/billete-100-pesos-familia-g.html"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir a Nezahualcóyotl el poema del cenzontle («Amo el canto del cenzontle, pájaro de cuatrocientas voces… pero amo más a mi hermano el hombre»). Es la frase suya más repetida y no aparece en los manuscritos que recogen sus cantos; el nahuatlato Patrick Johansson (UNAM) la considera una composición moderna por sus anacronismos lingüísticos y por su contenido cristiano.",
+    "No atribuirle tampoco el poema «Nonantzin» («Madrecita mía»), que circula con su nombre y es una composición muy posterior.",
+    "No presentar los cantos conservados como transcripción directa de lo que él dijo. Los dos manuscritos son copias del siglo XVI, posteriores a la conquista, con añadidos cristianos y composiciones coloniales mezcladas.",
+    "No dar la autoría de estos cantos por cerrada. La atribución descansa en los propios manuscritos y en la filología de Garibay y León-Portilla; otros investigadores, como John Bierhorst, han discutido que los textos sean composiciones prehispánicas. Decir «se le atribuyen», no «escribió».",
+    "No llamarlo azteca sin matiz ni confundir Tetzcoco con Tenochtitlán: gobernó Tetzcoco, ciudad aliada y distinta.",
+    "No decir que el billete de cien pesos lleva hoy su poema: desde el 12 de noviembre de 2020 la familia G del billete de cien pesos corresponde a Sor Juana Inés de la Cruz."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

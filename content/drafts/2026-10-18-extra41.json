@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-18-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Śāntideva y el Bodhicaryāvatāra VI, 10",
+    "hook": "La frase se repite firmada por Buda. Es de un monje indio que vivió más de mil años después, y en su libro no es un consuelo: es el primer paso de un método contra la ira.",
+    "body": [
+      "Śāntideva fue un monje budista indio de finales del siglo VII y comienzos del VIII, formado en la universidad monástica de Nalanda. Su Bodhicaryāvatāra, la guía del modo de vida del bodhisattva, es un poema de cerca de mil versos. El que se lee arriba está en el capítulo sexto, dedicado entero a la paciencia. Allí Śāntideva sostiene que la ira causa un daño espiritual y psicológico grave, y dedica el capítulo a desarmarla con ejercicios, uno detrás de otro. El verso 10 no es una conclusión: es el primer eslabón.",
+      "Hoy circula en otra forma: «si el problema tiene solución, no te preocupes; y si no la tiene, preocuparte no sirve de nada», casi siempre atribuida a Buda. No es suya. Entre Buda y Śāntideva median más de mil años. La versión corta se difundió sobre todo a través de las enseñanzas del decimocuarto Dalái Lama, que cita y parafrasea a Śāntideva con frecuencia, y de la película Siete años en el Tíbet, de 1997.",
+      "La diferencia entre las dos versiones no es solo de autoría. La paráfrasis sugiere que basta razonar una vez para dejar de sufrir. El texto dice algo más exigente: la paciencia se entrena, y este verso sirve para detener la ira antes de que se instale, no para negar el dolor. Sigue leyéndose en las traducciones de Kate Crosby y Andrew Skilton (Oxford, 1995), de Vesna y Alan Wallace (1997) y del Padmakara Translation Group (Shambhala, 2006)."
+    ],
+    "question": "¿Cuál de tus preocupaciones de esta semana tiene remedio?",
+    "quote": {
+      "text": "Si hay remedio, ¿qué razón hay para el abatimiento? Y si no lo hay, ¿de qué sirve estar triste?",
+      "author": "Śāntideva",
+      "work": "Bodhicaryāvatāra, VI, 10",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Shantideva",
+      "#Bodhicaryavatara",
+      "#Paciencia"
+    ],
+    "extended": [
+      "#Budismo",
+      "#Nalanda",
+      "#India",
+      "#FilosofiaOriental",
+      "#Atribucion",
+      "#Serenidad",
+      "#Traduccion",
+      "#Sanscrito"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Śāntideva fue un monje, filósofo y poeta budista indio situado entre finales del siglo VII y mediados del VIII («late 7th to mid-8th century CE»), estudiante de la gran universidad monástica de Nalanda. Su obra principal es el Bodhicaryāvatāra, «his great philosophical poem», organizado en capítulos y versos, con cerca de mil versos en su versión canónica. El capítulo VI trata de la paciencia y la resistencia: Śāntideva argumenta que «anger is gravely spiritually and psychologically damaging» y que debe eliminarse mediante ejercicios meditativos. Entre las traducciones inglesas de referencia se citan la de Crosby y Skilton (1995), por su belleza, y la de Wallace y Wallace (1997), por su precisión.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Śāntideva»",
+      "url": "https://plato.stanford.edu/entries/shantideva/"
+    },
+    {
+      "claim": "Texto del verso 6.10. Sánscrito: «yady asty eva pratīkāro daurmanasyena tatra kim / atha nāsti pratīkāro daurmanasyena tatra kim». Traducción publicada: «If there's a remedy when trouble strikes, / What reason is there for dejection? / And if there is no help for it, / What use is there in being glum?», en Śāntideva, «The Way of the Bodhisattva: A Translation of the Bodhicharyāvatāra», trad. Helena Blankleder y Wulstan Fletcher (Padmakara Translation Group), Shambhala Classics, Boston, 2006.",
+      "source": "Tsadra Foundation, proyecto Bodhicitta, ficha del verso BCA 6.10",
+      "url": "https://bodhicitta.tsadra.org/index.php/Texts/Bodhicary%C4%81vat%C4%81ra/Verses/6.10"
+    },
+    {
+      "claim": "La frase «si el problema tiene solución, ¿por qué preocuparse?; y si no tiene solución, preocuparse no sirve de nada» se atribuye popularmente a Buda sin ninguna evidencia. El autor real es Śāntideva, maestro indio del siglo VIII y monje de la universidad de Nalanda, y procede del Bodhicaryāvatāra, capítulo 6, verso 10. El decimocuarto Dalái Lama, estudioso de Śāntideva, ha parafraseado la idea en sus enseñanzas, y apariciones posteriores como la de la película «Siete años en el Tíbet» ampliaron su difusión, con frecuencia atribuida por error a Buda.",
+      "source": "Fake Buddha Quotes (Bodhipaksa), «If the problem can be solved why worry?»",
+      "url": "https://fakebuddhaquotes.com/if-the-problem-can-be-solved-why-worry/"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir esta frase a Buda. Es la atribución que más circula y es falsa: Śāntideva vivió más de mil años después del Buda histórico.",
+    "No atribuirla al Dalái Lama. Él la cita y la parafrasea en sus enseñanzas, y por ahí se popularizó, pero el texto es de Śāntideva.",
+    "No presentar la versión corta («si el problema tiene solución, no te preocupes…») como traducción del verso. Es una paráfrasis de circulación popular; las traducciones publicadas dicen otra cosa y hablan de abatimiento, no de preocupación.",
+    "No dar fechas exactas de nacimiento y muerte de Śāntideva. Solo se le sitúa entre finales del siglo VII y mediados del VIII.",
+    "No usar como biografía los relatos legendarios sobre su paso por Nalanda —que solo comía, dormía y defecaba hasta que le tocó recitar en un festival—: son tradición hagiográfica, no documentación.",
+    "No traducir la paciencia de este capítulo por resignación. En el texto es un entrenamiento activo contra la ira, no la aceptación pasiva de lo que ocurre."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

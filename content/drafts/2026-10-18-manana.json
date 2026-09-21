@@ -1,0 +1,81 @@
+{
+  "id": "2026-10-18-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Ibn al-Haytham y el Kitab al-Manazir",
+    "hook": "El tratado que explicó que vemos porque la luz entra en el ojo se escribió en árabe, en El Cairo, hacia 1015. Europa lo imprimió en Basilea en 1572 con la fórmula «editados ahora por primera vez». El original árabe esperó cuatro siglos más.",
+    "body": [
+      "Ibn al-Haytham nació en Basora en 965 y murió en El Cairo hacia 1040. Su «Kitab al-Manazir», el Libro de la óptica, está compuesto en siete libros. Contra Euclides y Ptolomeo, que hacían salir del ojo unos rayos visuales, sostuvo lo contrario: la luz viaja en línea recta desde los objetos y entra en el ojo. No lo dejó en argumento. Lo apoyó en cámaras oscuras, aberturas y observaciones repetibles, y dejó escrito que el método consistía en criticar las premisas y ser cauto al sacar conclusiones. La UNESCO hizo coincidir el Año Internacional de la Luz, en 2015, con el milenio de ese libro, y lo llama padre de la óptica moderna.",
+      "A Europa llegó por el latín. Se tradujo como «De aspectibus» y circuló copiado a mano. En 1572, en Basilea, Friedrich Risner lo llevó a la imprenta con el título «Opticae thesaurus. Alhazeni Arabis libri septem, nunc primum editi»: los siete libros de Alhazén el árabe, editados ahora por primera vez. En el mismo volumen encuadernó los diez libros de óptica de Witelo. Aquella fue la edición príncipe, hecha a partir de dos manuscritos, y la que tuvo delante la física europea del siglo siguiente: Kepler tituló su propio tratado de óptica de 1604 «Complementos a Witelo».",
+      "Y ahí está lo que falta. La primera edición crítica del texto árabe de los libros I a III no apareció hasta 1983, preparada por A. I. Sabra y publicada en Kuwait; la traducción inglesa salió en 1989 en el Instituto Warburg de Londres, en dos volúmenes y 735 páginas. Entre la impresión latina que anunciaba «por primera vez» y la primera edición crítica del original pasaron cuatrocientos once años. Durante cinco siglos, el libro que fundó la óptica fue influyente en una lengua que no era la suya y bajo un nombre que no era el suyo."
+    ],
+    "question": "¿Cuántas ideas seguimos conociendo solo por la copia?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El libro que Europa leyó traducido",
+    "subtitle": "El Cairo, hacia 1015",
+    "body": "Ibn al-Haytham escribió en árabe los siete libros del Kitab al-Manazir: vemos porque la luz entra en el ojo, no porque el ojo emita rayos. Basilea lo imprimió en latín en 1572 como «editados ahora por primera vez». La primera edición crítica del árabe es de 1983."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#IbnAlHaytham",
+      "#Optica",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Alhazen",
+      "#ElCairo",
+      "#Luz",
+      "#Manuscritos",
+      "#Basilea",
+      "#Traduccion",
+      "#Ciencia",
+      "#EdadMedia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Ibn al-Haytham nació en Basora en 965 y murió en El Cairo en 1039/1040. El «Kitab al-Manazir» es una obra en siete volúmenes sobre óptica, visión y luz. Dio la primera explicación correcta de la visión, con la luz reflejándose hacia el ojo, frente a las teorías de emisión de Euclides y Ptolomeo; propuso la cámara oscura y demostró experimentalmente las leyes de la reflexión. Su método consistía en «criticar las premisas y ser cauto al sacar conclusiones». Escribió unas 92 obras, de las que se conservan más de 55. Sobre el episodio del Nilo y el califa al-Hakim se cuentan versiones en conflicto.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, biografía de Ibn al-Haytham",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Al-Haytham/"
+    },
+    {
+      "claim": "«La celebración del Año Internacional de la Luz coincide con el milenio de la publicación de su Kitab al-Manazir (Libro de la óptica).» «Considerado el padre de la óptica moderna, al-Hasan Ibn al-Haytham [...] fue pionero de la metodología científica experimental.» Era un erudito del siglo X originario de Basora, en el actual Irak.",
+      "source": "UNESCO, «International Year of Light: Ibn al Haytham, pioneer of modern optics, celebrated at UNESCO»",
+      "url": "https://www.unesco.org/en/articles/international-year-light-ibn-al-haytham-pioneer-modern-optics-celebrated-unesco"
+    },
+    {
+      "claim": "Ejemplar digitalizado de la edición de Basilea de 1572, con el título «Opticae thesaurus: Alhazeni Arabis libri septem, nunc primùm editi; eiusdem liber De crepusculis & nubium ascensionibus; item Vitellonis Thuringopoloni libri X», es decir, los siete libros de Alhazén junto a los diez de Witelo en un mismo volumen.",
+      "source": "Osler Library of the History of Medicine, Universidad McGill (ejemplar digitalizado en Internet Archive)",
+      "url": "https://archive.org/details/McGillLibrary-osl_opticae-thesaurus_folioH153o1572-22043"
+    },
+    {
+      "claim": "Friedrich Risner editó «Opticae thesaurus Alhazeni Arabis libri septem, nunc primum editi» (Basilea, 1572) y produjo así la editio princeps de la Óptica de Ibn al-Haytham, a partir de dos manuscritos localizados por Petrus Ramus; la edición influyó después en Snell.",
+      "source": "Complete Dictionary of Scientific Biography, entrada «Risner, Friedrich»",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/risner-friedrich"
+    },
+    {
+      "claim": "«The optics of Ibn al-Haytham: Books I-III, on direct vision», traducción con introducción y comentario de A. I. Sabra, publicada por el Warburg Institute de Londres en 1989 en dos volúmenes (735 páginas). La traducción sigue la edición del texto árabe correspondiente preparada por el propio Sabra y publicada en 1983 en la serie de Patrimonio Árabe del Consejo Nacional de Cultura, Artes y Letras de Kuwait. Los libros I, II y III corresponden a la visión directa dentro del «Kitab al-Manazir» original, compuesto en siete libros.",
+      "source": "Wellcome Collection (ficha de la edición del Warburg Institute) y reseña en The British Journal for the History of Science",
+      "url": "https://wellcomecollection.org/works/qvsvmks4"
+    }
+  ],
+  "do_not_use": [
+    "No contar como hecho establecido que Ibn al-Haytham fingió locura ante el califa al-Hakim tras fracasar en un plan para regular el Nilo. Sobre ese episodio se transmiten versiones en conflicto —prisión, ocultamiento o locura fingida— procedentes de biógrafos muy posteriores, entre ellos Ibn al-Qifti (m. 1248). No se puede presentar como la causa documentada de que escribiera la Óptica.",
+    "No decir que inventó la cámara oscura. El fenómeno se había descrito antes; lo suyo fue estudiarlo de forma sistemática y usarlo como prueba de la propagación rectilínea de la luz.",
+    "No afirmar que fue el primero en proponer que la luz entra en el ojo. La idea de intromisión existía antes; lo que cambió con él fue unir la geometría de los rayos, la física de la luz y la anatomía del ojo en una sola explicación sostenida con experimentos.",
+    "No fechar la traducción latina con precisión ni atribuirla a un traductor concreto: «De aspectibus» circuló en manuscrito desde el siglo XIII y su autor no está identificado.",
+    "No decir que el texto árabe estuvo perdido. Se conservaban manuscritos; lo que no hubo hasta 1983 fue una edición crítica moderna de los libros I a III.",
+    "No llamarlo persa ni presentar Basora como ciudad persa: nació en Basora, en el actual Irak, y trabajó en El Cairo."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
