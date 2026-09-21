@@ -88,12 +88,28 @@
     "Dar el texto sánscrito como comprobado en una edición crítica de primera mano. Las dos mitades del verso se cotejaron con el contenido indexado de una edición sánscrita en línea que usa la numeración KAZ_01.19.34; no se consultó un ejemplar de la edición de Kangle.",
     "Traducir «prajā» por «pueblo» en sentido moderno. En el tratado son los súbditos de un rey, y la frase no habla de soberanía popular ni de consulta: habla de en qué debe fijarse el gobernante para juzgarse."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-09-21T15:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1100999276058065",
+      "url": "https://www.facebook.com/874327782058550/posts/1100999276058065",
+      "published_at": "2026-09-21T16:41:47.874247+00:00"
+    },
+    "instagram": {
+      "post_id": "18053736506585224",
+      "url": "https://www.instagram.com/p/DdjnSMDkVVp/",
+      "published_at": "2026-09-21T16:42:02.799165+00:00"
+    },
+    "threads": {
+      "post_id": "17907864402508891",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17907864402508891",
+      "published_at": "2026-09-21T16:42:14.544758+00:00"
+    }
+  }
 }
