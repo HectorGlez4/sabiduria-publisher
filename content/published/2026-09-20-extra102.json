@@ -2,7 +2,7 @@
   "id": "2026-09-20-extra102",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Sanxingdui y los pozos sin escritura",
     "hook": "En 1986, unos obreros que sacaban arcilla para un tejar en Sichuan abrieron dos fosas con más de mil objetos de bronce, oro y jade. En cuarenta años de excavación no ha aparecido en el yacimiento un solo signo escrito.",
@@ -76,5 +76,21 @@
     "threads"
   ],
   "publish_at": "2026-09-20T23:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1100434772781182",
+      "url": "https://www.facebook.com/874327782058550/posts/1100434772781182",
+      "published_at": "2026-09-21T01:09:41.771255+00:00"
+    },
+    "instagram": {
+      "post_id": "17967769308175272",
+      "url": "https://www.instagram.com/p/Ddh8nQ-mO-5/",
+      "published_at": "2026-09-21T01:09:54.150084+00:00"
+    },
+    "threads": {
+      "post_id": "18160139362493710",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18160139362493710",
+      "published_at": "2026-09-21T01:10:08.255141+00:00"
+    }
+  }
 }
