@@ -56,8 +56,14 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "4579084992347116",
+      "url": "/reel/4579084992347116/",
+      "published_at": "2026-09-22T03:08:00.524193+00:00"
+    }
+  },
   "reemision_de": "2026-08-21-tarde",
   "cita_slug": "miguel-de-cervantes-el-que-lee-mucho-y-anda-mucho"
 }
