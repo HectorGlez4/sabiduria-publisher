@@ -11,16 +11,40 @@
   "actual_native_format": "feed_single_image",
   "adaptation_notes": "Variante B (Android nativo) de Nan Madol, pareja de CELL-023 (misma imagen y mismo pie por API). La preparó la ventana programada de relevo el 2026-09-20 de 20:44 a 20:46 (Madrid) y se quedó esperando a su agente de QA, que se colgó pidiendo un permiso que nadie contesta en una sesión desatendida. El compositor quedó intacto 11 h. La sesión interactiva del 2026-09-21 (usuario: «hazlo tú») retomó desde ahí: QA nueva sobre el estado real del teléfono y envío, sin rehacer la preparación.",
   "audio_treatment": "música nativa elegida en la app: «Little Dark Age», de MGMT (chip de audio sugerido)",
-  "location_treatment": {"visual_place": "escena editorial generada de los canales y muros de basalto de Nan Madol", "text_label": "Nan Madol, Pohnpei · 2016", "native_place_id": null, "native_place_label": null},
-  "trivia": {"response_mode": null, "question": null, "choices": [], "correct_choice_ids": [], "explanation": null, "sources": [], "reveal_placement": null},
+  "location_treatment": {
+    "visual_place": "escena editorial generada de los canales y muros de basalto de Nan Madol",
+    "text_label": "Nan Madol, Pohnpei · 2016",
+    "native_place_id": null,
+    "native_place_label": null
+  },
+  "trivia": {
+    "response_mode": null,
+    "question": null,
+    "choices": [],
+    "correct_choice_ids": [],
+    "explanation": null,
+    "sources": [],
+    "reveal_placement": null
+  },
   "exposure_context": {
     "timezone": "Europe/Madrid",
     "follower_count": null,
     "nearby_production_posts": [
-      {"source": "lab.py preflight (ventana de relevo, preparación)", "at": "2026-09-20T18:42:40+00:00", "espera": "(recogido por la ventana; ver su transcripción)"},
-      {"source": "lab.py preflight (justo antes de compartir)", "at": "2026-09-21T05:57:56+00:00", "espera": "producción subiendo: publicar", "note": "Informativo (decisión del usuario 2026-09-14). Se pasó --produccion-cercana: el +1 del perfil no probaría que sea esta publicación."}
+      {
+        "source": "lab.py preflight (ventana de relevo, preparación)",
+        "at": "2026-09-20T18:42:40+00:00",
+        "espera": "(recogido por la ventana; ver su transcripción)"
+      },
+      {
+        "source": "lab.py preflight (justo antes de compartir)",
+        "at": "2026-09-21T05:57:56+00:00",
+        "espera": "producción subiendo: publicar",
+        "note": "Informativo (decisión del usuario 2026-09-14). Se pasó --produccion-cercana: el +1 del perfil no probaría que sea esta publicación."
+      }
     ],
-    "matched_comparison_ids": ["LAB-PLACE-003-A-INSTAGRAM"]
+    "matched_comparison_ids": [
+      "LAB-PLACE-003-A-INSTAGRAM"
+    ]
   },
   "round": 1,
   "status": "completed",
@@ -31,8 +55,19 @@
   "reference_brief_path": "experiments/media-lab/briefs/LAB-PLACE-003.md",
   "hypothesis": "La ruta nativa con música propia no rinde peor que la API para la misma pieza; en LAB-PERSON-002 el teléfono hizo 21 visualizaciones frente a 15 de la API.",
   "changed_variable": "ruta de publicación (Android nativo) para el máster place-led",
-  "controls": ["mismo titular, subtítulo y aviso que CELL-021/023", "mismo pie que la variante A", "sin etiqueta nativa de ubicación", "audiencia pública orgánica"],
-  "tool": {"name": "Codex heartbeat image generation + lab.py render", "version": null, "model": null, "plan": "included allowance; zero incremental spend", "access_checked_at": null},
+  "controls": [
+    "mismo titular, subtítulo y aviso que CELL-021/023",
+    "mismo pie que la variante A",
+    "sin etiqueta nativa de ubicación",
+    "audiencia pública orgánica"
+  ],
+  "tool": {
+    "name": "Codex heartbeat image generation + lab.py render",
+    "version": null,
+    "model": null,
+    "plan": "included allowance; zero incremental spend",
+    "access_checked_at": null
+  },
   "timing": {
     "started_at": "2026-09-20T18:42:32Z",
     "first_acceptable_at": "2026-09-21T05:57:30Z",
@@ -43,38 +78,109 @@
     "agent_active_seconds": null,
     "approval_or_device_wait_seconds": 40000,
     "stages": [
-      {"name": "preparación en la ventana de relevo (subir, abrir, recorte, editor, audio, detalles, pie)", "started_at": "2026-09-20T18:44:00Z", "finished_at": "2026-09-20T18:46:36Z", "overlaps_another_stage": false},
-      {"name": "espera por el agente de QA colgado (sin actividad)", "started_at": "2026-09-20T18:46:46Z", "finished_at": "2026-09-21T05:53:18Z", "overlaps_another_stage": false},
-      {"name": "QA nueva y envío desde la sesión interactiva", "started_at": "2026-09-21T05:53:30Z", "finished_at": "2026-09-21T05:59:30Z", "overlaps_another_stage": false}
+      {
+        "name": "preparación en la ventana de relevo (subir, abrir, recorte, editor, audio, detalles, pie)",
+        "started_at": "2026-09-20T18:44:00Z",
+        "finished_at": "2026-09-20T18:46:36Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "espera por el agente de QA colgado (sin actividad)",
+        "started_at": "2026-09-20T18:46:46Z",
+        "finished_at": "2026-09-21T05:53:18Z",
+        "overlaps_another_stage": false
+      },
+      {
+        "name": "QA nueva y envío desde la sesión interactiva",
+        "started_at": "2026-09-21T05:53:30Z",
+        "finished_at": "2026-09-21T05:59:30Z",
+        "overlaps_another_stage": false
+      }
     ]
   },
   "attempts": [],
-  "cost": {"currency": "EUR", "incremental_spend": 0, "included_credits_used": 0, "subscription_allocation": null, "local_compute_seconds": null},
+  "cost": {
+    "currency": "EUR",
+    "incremental_spend": 0,
+    "included_credits_used": 0,
+    "subscription_allocation": null,
+    "local_compute_seconds": null
+  },
   "artifacts": [
-    {"path": "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-B-android-4x5.jpg", "media_type": "image/jpeg", "dimensions": "1080x1350", "role": "publishable_master"},
-    {"path": "experiments/media-lab/assets/LAB-PLACE-003/ENC-20260915-001-v1.png", "sha256": "7ccb4d0a24220a34e2305f7da42a44937bed02915825d6aebc10a177e581efbd", "media_type": "image/png", "dimensions": "1080x1350", "role": "generation_source"},
-    {"path": "experiments/media-lab/assets/LAB-PLACE-003/caption-instagram.txt", "role": "caption (1138 caracteres)"},
-    {"path": "experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/", "role": "evidencia del teléfono (ignorada por git): ig-01 … ig-06, estado-21sep, estado-21sep-b/c"}
+    {
+      "path": "experiments/media-lab/assets/LAB-PLACE-003/LAB-PLACE-003-B-android-4x5.jpg",
+      "media_type": "image/jpeg",
+      "dimensions": "1080x1350",
+      "role": "publishable_master"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PLACE-003/ENC-20260915-001-v1.png",
+      "sha256": "7ccb4d0a24220a34e2305f7da42a44937bed02915825d6aebc10a177e581efbd",
+      "media_type": "image/png",
+      "dimensions": "1080x1350",
+      "role": "generation_source"
+    },
+    {
+      "path": "experiments/media-lab/assets/LAB-PLACE-003/caption-instagram.txt",
+      "role": "caption (1138 caracteres)"
+    },
+    {
+      "path": "experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/",
+      "role": "evidencia del teléfono (ignorada por git): ig-01 … ig-06, estado-21sep, estado-21sep-b/c"
+    }
   ],
-  "gates": {"facts_verified": true, "rights_suitable": true, "no_critical_defects": true, "usable_export": true, "within_budget": true},
+  "gates": {
+    "facts_verified": true,
+    "rights_suitable": true,
+    "no_critical_defects": true,
+    "usable_export": true,
+    "within_budget": true
+  },
   "visual_qa": {
     "reviews": [
-      {"number": 1, "reviewed_at": "2026-09-21T05:55:00Z", "gate": "experiments/media-lab/visual-qa-gate.md",
-       "preview_paths": ["experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/estado-21sep.png"],
-       "agent_verdict": "FAIL",
-       "blocking_issues": ["La vista previa del compositor parecía una franja apaisada sin titular ni subtítulo, y el revisor la leyó como un recorte distinto del máster."],
-       "non_blocking_notes": ["Pie íntegro y fiel al archivo; nada tapaba texto ni imagen."]},
-      {"number": 2, "reviewed_at": "2026-09-21T05:57:20Z", "gate": "experiments/media-lab/visual-qa-gate.md",
-       "preview_paths": ["experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/estado-21sep-c.png", "experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-CELL028-SCROLL/compositor.png"],
-       "agent_verdict": "PASS",
-       "blocking_issues": [],
-       "non_blocking_notes": [
-         "El mismo revisor se corrigió con la geometría: la miniatura mide 522x191 px visibles dentro de un scroll_view que empieza en y=249; a 4:5 le tocarían ~652 px de alto, así que la corta el borde superior del área desplazable, no un recorte. La píldora del aviso ocupa el 40,0 % del ancho de la miniatura y el 40,7 % del máster, y queda a ~28 px del borde inferior, donde tocaría.",
-         "Salvedad del revisor: el titular y el subtítulo se validaron por medición indirecta, no a la vista, porque quedan fuera del área visible. Propone que la captura de esta compuerta se tome con la vista desplazada arriba del todo."
-       ]}
+      {
+        "number": 1,
+        "reviewed_at": "2026-09-21T05:55:00Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": [
+          "experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/estado-21sep.png"
+        ],
+        "agent_verdict": "FAIL",
+        "blocking_issues": [
+          "La vista previa del compositor parecía una franja apaisada sin titular ni subtítulo, y el revisor la leyó como un recorte distinto del máster."
+        ],
+        "non_blocking_notes": [
+          "Pie íntegro y fiel al archivo; nada tapaba texto ni imagen."
+        ]
+      },
+      {
+        "number": 2,
+        "reviewed_at": "2026-09-21T05:57:20Z",
+        "gate": "experiments/media-lab/visual-qa-gate.md",
+        "preview_paths": [
+          "experiments/media-lab/evidence/android/LAB-PLACE-003-B-INSTAGRAM/estado-21sep-c.png",
+          "experiments/media-lab/evidence/android/sondas-f2/SONDA-F2-CELL028-SCROLL/compositor.png"
+        ],
+        "agent_verdict": "PASS",
+        "blocking_issues": [],
+        "non_blocking_notes": [
+          "El mismo revisor se corrigió con la geometría: la miniatura mide 522x191 px visibles dentro de un scroll_view que empieza en y=249; a 4:5 le tocarían ~652 px de alto, así que la corta el borde superior del área desplazable, no un recorte. La píldora del aviso ocupa el 40,0 % del ancho de la miniatura y el 40,7 % del máster, y queda a ~28 px del borde inferior, donde tocaría.",
+          "Salvedad del revisor: el titular y el subtítulo se validaron por medición indirecta, no a la vista, porque quedan fuera del área visible. Propone que la captura de esta compuerta se tome con la vista desplazada arriba del todo."
+        ]
+      }
     ]
   },
-  "review": {"evaluator": null, "visual": null, "clarity": null, "voice": null, "pacing": null, "brand": null, "hook": null, "not_applicable": [], "notes": null},
+  "review": {
+    "evaluator": null,
+    "visual": null,
+    "clarity": null,
+    "voice": null,
+    "pacing": null,
+    "brand": null,
+    "hook": null,
+    "not_applicable": [],
+    "notes": null
+  },
   "publication": {
     "route_id": "ANDROID-NATIVE",
     "comparison_pair_id": "PAIR-PLACE-003-FEED-IG",
@@ -85,7 +191,9 @@
     "route_assigned_at": "2026-09-20T18:42:32Z",
     "phone_transfer_seconds": null,
     "publishing_active_seconds": 22.0,
-    "native_changes_from_master": ["música nativa «Little Dark Age» de MGMT añadida en el editor (obligatoria en las fotos por teléfono)"],
+    "native_changes_from_master": [
+      "música nativa «Little Dark Age» de MGMT añadida en el editor (obligatoria en las fotos por teléfono)"
+    ],
     "human_interventions": [],
     "fidelity_checks": {
       "caption": "el compositor mostraba el pie íntegro y fiel al archivo (QA 2)",
@@ -112,7 +220,22 @@
     ],
     "conciliacion": "Con código 5 no se repitió nada. La captura posterior (ig-05-publicado.png, 07:59 Madrid) muestra la publicación nueva arriba del feed: cuenta «sabiduriabolsillo», etiqueta de audio «MGMT · Little Dark Age» y la imagen de Nan Madol con sus dos píldoras. No se pudo llegar al perfil porque Instagram abrió encima un diálogo modal («Donner une note à Instagram»), que no se tocó: tras un 5 solo está permitido capturar. `publicaciones_antes` se pasó como `none` a propósito: el recuento lo leyó la ventana 11 h antes y producción publicó en Instagram entre medias, así que un +1 no habría probado nada.",
     "cross_posting": "Instagram comparte sola la foto en la Página de Facebook (ver memoria del proyecto): cuenta como publicación extra, no como celda. No verificada en esta sesión.",
-    "snapshots": []
+    "snapshots": [
+      {
+        "instantanea": "24h",
+        "observed_at": "2026-09-22T09:05:00+00:00",
+        "edad_horas": 27.1,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "nota": "Fila «Publicación cruzada» del 21 sep 7:58: Instagram compartió sola la foto en la Página, así que Business Suite suma las dos redes en una sola fila y no las separa. No comparable sin más con CELL-023 (36 visualizaciones y 25 de alcance a 7 d), que es solo Instagram.",
+        "metricas": {
+          "instagram+facebook": {
+            "visualizaciones": 93,
+            "alcance": 49,
+            "espectadores": 49
+          }
+        }
+      }
+    ]
   },
   "missing_data_reasons": {
     "post_url": "La URL no se lee desde el teléfono con los comandos permitidos; el diálogo modal de Instagram impidió además llegar al perfil. Se puede resolver más adelante en solo lectura y, con el shortcode, medir por `manifiesto-verificacion --instagram-shortcode`.",
