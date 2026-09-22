@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 22 Sep 2026 03:54:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 05:36:40 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-21-re85-reel</guid>
+      <pubDate>Tue, 22 Sep 2026 03:26:00 +0000</pubDate>
+      <description><![CDATA[AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar
+
+En 1960 un explorador noruego siguió las indicaciones de unos vecinos de Terranova hasta unos montículos cubiertos de hierba. Debajo había ocho edificios de madera y turba, clavos de reparación de barcos y un horno pequeño para fundir hierro. Se llama L'Anse aux Meadows y es el único asentamiento nórdico confirmado en América del Norte.
+
+Durante sesenta años se supo que era de alrededor del año 1000. En octubre de 2021, un equipo de la Universidad de Groninga publicó en Nature una fecha exacta, y el método es lo mejor de la historia.
+
+Entre el 992 y el 993 una tormenta solar enorme dejó un pico de radiocarbono idéntico en los anillos de los árboles de todo el planeta. En tres troncos cortados con filo metálico en Terranova, ese pico aparece 29 anillos antes de la corteza. La cuenta da un año: 1021.
+
+Cuatrocientos setenta y un años antes de Colón, fechados por el Sol.
+
+¿Qué otra cosa estará esperando su tormenta solar para dejar de ser aproximada?
+
+#SabiduriaDeBolsillo #Vikingos #Historia #Arqueologia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-21-re85-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-21-re85-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Del acuerdo de paz más antiguo del que se conservan las dos copias, ninguna de las dos es el documento que se firmó.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -472,29 +493,6 @@ El contraste con el vecino es difícil de ignorar. Las líneas de Nazca, que sol
 #SabiduriaDeBolsillo #Nazca #Puquios #Peru]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra93.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra93.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EPICURO: la palabra que lleva su nombre significa hoy lo contrario de lo que él enseñó</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-18-re66-reel</guid>
-      <pubDate>Fri, 18 Sep 2026 23:26:00 +0000</pubDate>
-      <description><![CDATA[EPICURO: la palabra que lleva su nombre significa hoy lo contrario de lo que él enseñó
-
-Nació en Samos en el 341 antes de Cristo y hacia el 306 compró un huerto a las afueras de Atenas. Ahí abrió su escuela. No era un aula: era una casa con jardín, y entraban mujeres y esclavos.
-
-Escribió unos trescientos rollos. Sobrevivieron tres cartas y dos colecciones de máximas. En una de ellas pide: "Mándame un tarrito de queso, para poder darme un banquete cuando quiera". Vivía de pan y agua. Ese era su lujo.
-
-No enseñó el goce, sino su administración. Por placer entendía la ausencia de dolor en el cuerpo y de inquietud en el alma, y advertía que eso no lo dan las borracheras ni las mesas espléndidas, sino el razonamiento sereno.
-
-Murió en el 270, a los setenta y dos, de una obstrucción urinaria. Ese último día escribió una carta: los dolores no admitían aumento, y frente a ellos ponía la alegría de recordar sus conversaciones.
-
-Hoy llamamos epicúreo al que se entrega al placer.
-
-¿Cuánto de lo que llamas placer te deja en paz después?
-
-#SabiduriaDeBolsillo #Epicuro #Filosofia #Grecia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-re66-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-re66-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
