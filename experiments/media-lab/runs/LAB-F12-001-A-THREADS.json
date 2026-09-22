@@ -216,6 +216,22 @@
           }
         },
         "errores": {}
+      },
+      {
+        "instantanea": "7d",
+        "observed_at": "2026-09-22T08:59:17.261146+00:00",
+        "edad_horas": 204.95,
+        "metricas": {
+          "threads": {
+            "views": 3,
+            "likes": 0,
+            "replies": 0,
+            "reposts": 0,
+            "quotes": 0,
+            "shares": 0
+          }
+        },
+        "errores": {}
       }
     ]
   },
