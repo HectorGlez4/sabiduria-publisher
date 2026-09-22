@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 22 Sep 2026 05:36:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 19:05:51 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-22-re86-reel</guid>
+      <pubDate>Tue, 22 Sep 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE
+
+Viene del latín oriens: el sol que sale. Durante siglos, orientar algo fue alinearlo hacia el este, como se alineaban las iglesias. Que la palabra sirva para situarse respecto a cualquier punto cardinal es reciente: ese uso se documenta hacia 1842.
+
+La costumbre está dibujada en los mapas. En las mappae mundi cristianas, arriba no iba el norte: iba el este. En el mapa de Hereford, de alrededor del año 1300, pintado sobre una sola piel de becerro de metro y medio, el borde superior lo ocupa el Paraíso terrenal y el centro exacto lo ocupa Jerusalén. La lógica no era geográfica, era narrativa: arriba estaba el principio de la historia.
+
+Y el norte arriba no lo trajo la brújula, como se repite: lo trajo Ptolomeo, que hacia el año 150 lo puso así en su Geografía por comodidad de dibujo. Europa lo adoptó cuando lo redescubrió, más de mil doscientos años después.
+
+Cada vez que alguien dice que necesita orientarse, está mirando al amanecer sin saberlo.
+
+¿Qué otras palabras usamos a diario sin ver lo que llevan dentro?
+
+#SabiduriaDeBolsillo #Mapas #Etimologia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-22-re86-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-22-re86-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>AÑO 1021: los vikingos ya estaban en América, y lo sabemos por una tormenta solar</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -474,25 +495,6 @@ El cierre lo confirma: cuidar el final igual que el principio, y no habrá obra 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-re68-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-re68-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>En el desierto de Nazca hay una obra de la misma gente que trazó las líneas. No se ve desde el aire, no representa nada y sigue funcionando: de los cuarenta y dos acueductos registrados, veintinueve todavía llevan agua.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-18-extra93</guid>
-      <pubDate>Sat, 19 Sep 2026 01:34:28 +0000</pubDate>
-      <description><![CDATA[En el desierto de Nazca hay una obra de la misma gente que trazó las líneas. No se ve desde el aire, no representa nada y sigue funcionando: de los cuarenta y dos acueductos registrados, veintinueve todavía llevan agua.
-
-La cuenca del río Grande recibe la lluvia arriba, en los Andes, y la baja en cauces que corren tres o cuatro meses al año. Abajo, donde vivía la gente, el año es sequía. La respuesta fueron los puquios: galerías que van a buscar el agua del subsuelo y la conducen por gravedad hasta reservorios y campos de cultivo. Tramos a cielo abierto y tramos en túnel, forrados con lajas de piedra y techados con troncos de huarango. Cada diez o treinta metros se abre un pozo en espiral —los llaman ojos— por el que se baja caminando en círculos hasta el canal. No son adornos ni miradores: son la puerta de mantenimiento. Un sistema enterrado que nadie pudiera limpiar habría durado una generación.
-
-Fecharlas fue un problema, y el motivo dice algo sobre cómo se escribe la historia. Los documentos coloniales no las mencionan: ni confirman que ya existieran ni dicen que las trajeran los españoles. El archivo calla. Por eso se sostuvo durante décadas que la técnica era europea, parecida a la de desaguar minas: Potosí ya se drenaba con canales subterráneos en 1556. La respuesta no vino de un papel. Persis Clarkson y Ronald Dorn dataron el material orgánico atrapado en el barniz de roca de los dinteles de dos puquios y publicaron las fechas en 1995: en torno al 560 y al 640 de nuestra era. Precolombinos.
-
-El contraste con el vecino es difícil de ignorar. Las líneas de Nazca, que solo se leen desde el aire y no riegan nada, entraron en la lista del Patrimonio Mundial en 1994. Los acueductos, que siguen dando de beber al valle mil quinientos años después, se presentaron a esa misma lista el 5 de agosto de 2019 y ahí siguen, en la lista indicativa. Una civilización se juzga casi siempre por lo que dejó para mirar, y casi nunca por lo que dejó funcionando.
-
-¿Qué de lo que usas hoy fue construido por alguien cuyo nombre no sabes?
-
-#SabiduriaDeBolsillo #Nazca #Puquios #Peru]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra93.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra93.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

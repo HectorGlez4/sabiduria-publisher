@@ -2,7 +2,7 @@
   "id": "2026-09-22-re52-story",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Dōgen y el Genjōkōan",
     "hook": "El texto más citado del zen no se predicó a una comunidad de monjes. Se escribió en otoño de 1233 para un solo hombre, laico, que vivía en el otro extremo del país.",
@@ -90,6 +90,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-09-22T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "2064495077765129",
+      "photo_id": "1101923922632267",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-09-22T18:41:13.902863+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17990720469027110",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-09-22T18:41:29.119644+00:00"
+    }
+  },
   "reemision_de": "2026-09-10-extra84"
 }
