@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-20-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "William Smith y el subsuelo de Inglaterra (1815)",
+    "hook": "El primer mapa geológico de un país entero no salió de una universidad. Lo dibujó un agrimensor de canales, y la sociedad científica que fue a verlo trabajar publicó después el suyo.",
+    "body": [
+      "William Smith nació en 1769 y se ganaba la vida midiendo minas y trazando canales. El 1 de agosto de 1815 apareció con su firma «A delineation of the Strata of England and Wales, with part of Scotland»: el primer mapa geológico de un país entero. Medía unos 2,60 por 1,80 metros, se grabó en quince planchas de cobre a escala de cinco millas por pulgada y cada ejemplar se coloreaba a mano en el taller de John Cary. Un solo ejemplar llevaba siete u ocho días de coloreado. Se tiraron unos cientos a lo largo de cuatro años.",
+      "Siete años antes, en la primavera de 1808, una delegación de la Geological Society de Londres —con su primer presidente, George Bellas Greenough, entre ellos— había ido a ver sus fósiles y sus borradores. No quedaron convencidos y resolvieron que la sociedad hiciera su propio mapa. Greenough recibió un ejemplar del primer lote de Smith y publicó el suyo en 1820, a seis millas por pulgada. Cuando le reprocharon el uso del ajeno, se defendió así: «En la creencia de que el trabajo había sido prácticamente abandonado por Smith, lo emprendí yo».",
+      "Smith, mientras tanto, vendió su colección de fósiles por setecientas libras y en 1819 entró igual en la cárcel de deudores. El mapa tampoco se había hecho en una biblioteca: su propio título anuncia que las capas van «ilustradas con los nombres más descriptivos», los que usaban canteros, mineros y peones de canal mientras él medía. En 1831, la misma sociedad que había encargado el mapa rival le entregó la primera medalla Wollaston de su historia. Smith tenía sesenta y dos años y dieciséis desde la publicación."
+    ],
+    "question": "¿Cuánto de lo que damos por conocimiento científico se aprendió primero dentro de un oficio?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El agrimensor que dibujó el subsuelo",
+    "subtitle": "Inglaterra, 1 de agosto de 1815",
+    "body": "Quince planchas de cobre, siete u ocho días de color a mano por ejemplar y el primer mapa geológico de un país entero. Su autor medía canales para vivir. Cuatro años después estaba en la cárcel de deudores; en 1831 recibió la primera medalla Wollaston."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WilliamSmith",
+      "#Geologia",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Cartografia",
+      "#Estratos",
+      "#Inglaterra",
+      "#SigloXIX",
+      "#GeologicalSociety",
+      "#Fosiles",
+      "#Canales",
+      "#Mapas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Título completo del mapa: ‘A DELINEATION of the STRATA of ENGLAND and WALES with part of SCOTLAND; exhibiting the COLLIERIES and MINES; the MARSHES and FEN LANDS ORIGINALLY OVERFLOWED BY THE SEA; and the VARIETIES of Soil according to the Variations in the Substrata; ILLUSTRATED by the MOST DESCRIPTIVE NAMES’. Mide 8,5 por 6 pies (unos 2,60 por 1,80 m). Cada ejemplar tardaba ‘siete u ocho días’ en colorearse. Smith ‘quebró y acabó una temporada en la cárcel de deudores’, y en 1831 ‘fue la primera persona en recibir la medalla más prestigiosa de la sociedad, la medalla Wollaston’.",
+      "source": "University of Cambridge, «The Magna Carta of scientific maps» (Sedgwick Museum of Earth Sciences)",
+      "url": "https://www.cam.ac.uk/research/news/the-magna-carta-of-scientific-maps"
+    },
+    {
+      "claim": "El mapa base se grabó en quince planchas de cobre separadas; todos los ejemplares llevan fecha de 1 de agosto de 1815; la primera distribución a suscriptores fue a mediados de septiembre de 1815 y la tirada principal empezó el 2 de noviembre de 1815. Cada mapa fue coloreado a mano por los coloristas de Cary, con colores elegidos por Smith para imitar el tono natural de cada roca. William Smith (1769-1839) fue un agrimensor inglés de minas y canales.",
+      "source": "The Geological Society of London, ficha «A delineation of the strata of England and Wales with part of Scotland»",
+      "url": "https://www.geolsoc.org.uk/about-us/history/visiting-the-william-smith-map/a-delineation-of-the-strata-of-england-and-wales-with-part-of-scotland/"
+    },
+    {
+      "claim": "El mapa de Smith es de escala cinco millas por pulgada y el de Greenough, seis millas por pulgada. ‘En 1808 una delegación de miembros de la Sociedad, incluido George Bellas Greenough (1778-1855), su primer presidente, visitó a Smith para ver su colección de fósiles y sus mapas’; no quedaron convencidos y decidieron que la Sociedad hiciera su propia versión. El mapa de Greenough, «A Geological Map of England and Wales», se fechó en noviembre de 1819 y se emitió en mayo de 1820. Greenough se defendió del reproche de plagio diciendo: ‘En la creencia de que el trabajo había sido prácticamente abandonado por Smith, lo emprendí yo’.",
+      "source": "The Geological Society of London, exposición en línea «William Strata Smith», página sobre el mapa de George Bellas Greenough",
+      "url": "https://www.geolsoc.org.uk/the-library/online-exhibitions/William-Strata-Smith/The-Map/George-Bellas-Greenoughs-Map"
+    },
+    {
+      "claim": "‘Se vio forzado a vender su preciada colección geológica por 700 libras’ y ‘en 1819 llegó a pasar una temporada en una cárcel de deudores’. ‘El reconocimiento justo no llegó hasta 1831, cuando la Geological Society de Londres le concedió la medalla Wollaston inaugural’.",
+      "source": "Yorkshire Philosophical Society, «William Smith (1769-1839), the Father of English Geology»",
+      "url": "https://www.ypsyork.org/resources/yorkshire-scientists-and-innovators/william-smith/"
+    },
+    {
+      "claim": "Smith trabajaba como agrimensor de canales y recorría el país haciendo su investigación geológica. La medalla Wollaston de 1831 se la entregó Adam Sedgwick.",
+      "source": "The Open University, OpenLearn, «The first geological map of the UK»",
+      "url": "https://www.open.edu/openlearn/history-the-arts/history-science-technology-medicine/the-first-geological-map-the-uk"
+    }
+  ],
+  "do_not_use": [
+    "No dar una cifra cerrada de ejemplares. La Universidad de Cambridge habla de 400 producidos y unos 70 supervivientes; la propia Geological Society estima 330-350 producidos y 130-150 conservados. Las fuentes no coinciden: decir «unos cientos».",
+    "No fijar la duración de la cárcel. La Yorkshire Philosophical Society dice ocho semanas; otras versiones de divulgación dicen diez. El año, 1819, sí está sostenido.",
+    "No decir que la Geological Society le robó el mapa. La disputa por el uso no acreditado está documentada, pero la propia Sociedad escribe que hasta qué punto Greenough lo aprovechó ‘no está claro’.",
+    "No llamarlo «el mapa que cambió el mundo» como si fuera un nombre de época: es el título del libro de Simon Winchester (2001), no una denominación histórica.",
+    "No atribuir en el cuerpo el principio de sucesión faunística —identificar cada estrato por los fósiles que contiene—. Se le asocia habitualmente a Smith, pero no se verificó en fuente institucional en esta investigación.",
+    "No decir que vendió la colección de fósiles al British Museum como dato verificado. La fuente consultada da las setecientas libras pero no nombra al comprador; la cifra y el plazo de los pagos varían entre relatos.",
+    "No fechar la publicación solo en septiembre ni solo en noviembre de 1815. Todos los ejemplares llevan fecha de 1 de agosto; septiembre es la primera entrega a suscriptores y noviembre el inicio de la tirada principal.",
+    "No presentar las citas de Greenough como traducción de una edición crítica: se vertieron al español desde el texto inglés que reproduce la Geological Society en su exposición en línea."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

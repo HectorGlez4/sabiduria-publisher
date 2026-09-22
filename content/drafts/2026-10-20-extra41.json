@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-20-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Flora Tristán y el capítulo III de Unión obrera",
+    "hook": "En 1843 escribió un manifiesto para organizar a los obreros franceses. Le dedicó un capítulo entero a explicar por qué hablaba de mujeres en un libro sobre trabajo.",
+    "body": [
+      "Flora Tristán nació en París el 7 de abril de 1803, hija de un aristócrata arequipeño y de una francesa. En 1833 viajó al Perú a reclamar la herencia de su padre: estuvo en Arequipa y luego en Lima, donde permaneció hasta julio de 1834. No consiguió la herencia, pero de ese viaje salió «Peregrinaciones de una paria», publicado en 1838 en París por el librero Arthus Bertrand. En 2023 la Biblioteca Nacional del Perú declaró Patrimonio Cultural de la Nación dos ejemplares de aquella primera edición.",
+      "En 1843 publicó «Unión obrera», un manifiesto que llamaba a los trabajadores y trabajadoras de Francia a organizarse por su cuenta. El capítulo III se titula «El porqué menciono a las mujeres», y ahí no argumenta desde la compasión. Argumenta desde la consecuencia: «Sostengo que la emancipación de los obreros es imposible mientras las mujeres sigan en ese estado de embrutecimiento». Antes ha escrito la frase que resume el diagnóstico: la mitad de la humanidad quedó fuera de la Iglesia, de la ley y de la sociedad.",
+      "Era 1843. Cinco años antes de las revoluciones europeas del 48, una mujer de cuarenta años sostenía en letra impresa que la cuestión obrera y la cuestión de las mujeres eran la misma cuestión, y que dejar una fuera bloqueaba la otra. Después salió a recorrer ciudades francesas repartiendo el libro y hablando en talleres: fue la primera en Francia en emprender una gira de conferencias por el país. Murió en Burdeos en 1844, de tifus, a los cuarenta y uno, con esa gira a medias."
+    ],
+    "question": "¿Qué parte de un problema seguimos tratando como si fuera un asunto aparte?",
+    "quote": {
+      "text": "La mujer —que es la mitad de la humanidad— ha sido puesta fuera de la Iglesia, fuera de la ley, fuera de la sociedad.",
+      "author": "Flora Tristán",
+      "work": "Unión obrera, cap. III (1843)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#FloraTristan",
+      "#UnionObrera",
+      "#SigloXIX"
+    ],
+    "extended": [
+      "#Peru",
+      "#Francia",
+      "#Arequipa",
+      "#HistoriaObrera",
+      "#MujeresQuePensaron",
+      "#1843",
+      "#Burdeos",
+      "#Manifiestos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El capítulo III de «Union ouvrière» se titula, tal como está impreso, ‘Chap. III. — Le pourquoi je mentionne les femmes’. De él proceden las frases: ‘La femme (c’est la moitié de l’humanité) a été mise hors l’Église, hors la loi, hors la société’ y ‘Je soutiens que l’émancipation des ouvriers est impossible tant que les femmes resteront dans cet état d’abrutissement’. También: ‘Dans la vie des ouvriers la femme est tout’. El texto transcrito corresponde a la segunda edición, de 1844, publicada ‘chez tous les libraires’.",
+      "source": "Wikisource (fr), transcripción de Flora Tristan, «Union ouvrière», 2.ª edición (1844), capítulo III",
+      "url": "https://fr.wikisource.org/wiki/Union_ouvri%C3%A8re/Chapitre_3"
+    },
+    {
+      "claim": "‘Flora Célestine Thérèse Henriette Tristán y Moscoso (1803-1844)’ ‘nació en París el 7 de abril de 1803’ y ‘falleció en 1844, víctima del tifus a la temprana edad de 41 años’. ‘En 1833, Tristán emprendió un viaje a Perú con el objetivo de reclamar la herencia paterna’. Más tarde ‘emprendió una gira por diversas ciudades francesas difundiendo su manifiesto Unión obrera, convocando a mujeres y obreros a la unidad’.",
+      "source": "Universidad Carlos III de Madrid, Humanidades Digitales, colección «Autoras imprescindibles», ficha de Flora Tristán",
+      "url": "https://humanidadesdigitales.uc3m.es/s/autoras_imprescindibles/page/flora-tristan"
+    },
+    {
+      "claim": "«Peregrinaciones de una paria» fue ‘publicada en 1838 por el librero y editor parisino Arthus Bertrand’. ‘Flora Tristán llega al Perú en el año 1833. Estuvo en Arequipa y de allí se trasladó a Lima, donde permaneció hasta julio de 1834’. Dos unidades bibliográficas de la primera edición conservadas por la Biblioteca fueron declaradas Patrimonio Cultural de la Nación mediante la Resolución Viceministerial 000342-2023-VMPCIC/MC. La Biblioteca la describe como ‘una de las precursoras del feminismo y las luchas por la emancipación de la mujer’.",
+      "source": "Biblioteca Nacional del Perú, nota «Obra de Flora Tristán es declarada Patrimonio Cultural de la Nación»",
+      "url": "https://www.bnp.gob.pe/bnp-obra-de-flora-tristan-es-declarada-patrimonio-cultural-de-la-nacion/"
+    },
+    {
+      "claim": "Flora Tristán fue ‘la primera en Francia en constituirse apóstol de la unión obrera’ y ‘la primera también en emprender a través del país una gira de conferencias’. Artículo de Alexandre Zévaès, «Flora Tristan et l'Union ouvrière», en «La Révolution de 1848 et les révolutions du XIXe siècle», tomo 31, n.º 151 (diciembre de 1934 - febrero de 1935), pp. 213-222.",
+      "source": "Persée (archivo científico francés), Alexandre Zévaès en «La Révolution de 1848 et les révolutions du XIXe siècle» (1934-1935)",
+      "url": "https://www.persee.fr/doc/r1848_1155-8806_1934_num_31_151_1254"
+    }
+  ],
+  "do_not_use": [
+    "No atribuirle entrecomillada «la mujer es la proletaria del proletario». Es la fórmula que más se le asocia, pero no aparece en el texto del capítulo III consultado (2.ª edición de 1844 transcrita en Wikisource). Circula como resumen de su tesis, no como cita localizada.",
+    "No presentar la cita como traducción de una edición crítica. Se vertió del francés de la segunda edición (1844); la primera es de 1843 y no se cotejó con ella en esta investigación.",
+    "No fechar «Peregrinaciones de una paria» en 1833 ni en 1834. Esas son las fechas de su estancia en el Perú; el libro se publicó en 1838, en París, con el librero Arthus Bertrand.",
+    "No decir que la obra entera fue declarada Patrimonio Cultural de la Nación. La resolución alcanza a dos unidades bibliográficas de la primera edición que conserva la Biblioteca Nacional del Perú.",
+    "No atribuirle como cita localizable «Todas las desgracias del mundo provienen del olvido y el desprecio»: la reproduce la Biblioteca Nacional del Perú sin obra, capítulo ni edición.",
+    "No llamarla peruana sin matiz: nació en París en 1803, de padre arequipeño y madre francesa, y pisó el Perú por primera vez en 1833.",
+    "No dar por verificado que su libro fue quemado en Arequipa ni que perdió la nacionalidad. Circulan ambas versiones y no se comprobaron en fuente institucional aquí.",
+    "No detallar el itinerario ni el número de ciudades de la gira: las fuentes consultadas hablan de «diversas ciudades francesas» sin enumerarlas.",
+    "No decir que murió asesinada. Las fuentes consultadas dan el tifus como causa de su muerte en Burdeos en 1844. Circula además el relato de un atentado anterior a manos de su marido: no se verificó aquí y, en cualquier caso, no es la causa de su muerte.",
+    "No presentar «Unión obrera» como el primer manifiesto obrero de Europa. Lo verificado es que fue la primera en Francia en hacer del llamado a la unión obrera su causa y en recorrer el país dando conferencias."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

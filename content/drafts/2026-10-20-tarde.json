@@ -1,0 +1,82 @@
+{
+  "id": "2026-10-20-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Hobbes y el lobo que ya estaba en Plauto",
+    "hook": "La frase más citada sobre la naturaleza humana no es de Hobbes, no está en el Leviatán y nunca se escribió sola: venía emparejada con su contraria.",
+    "body": [
+      "«El hombre es un lobo para el hombre» circula como el resumen de Hobbes. El origen es una comedia. Está en «Asinaria», de Plauto, del siglo II a.C., donde un mercader desconfiado dice: «lupus est homo homini, non homo, quom qualis sit non novit» —el hombre es un lobo para el hombre, no un hombre, cuando no sabe qué clase de hombre tiene delante—. Tampoco aparece en el «Leviatán», que es el libro al que suele adjudicarse. Hobbes la usó nueve años antes, en otro sitio y con otro propósito.",
+      "Está en la dedicatoria de «De Cive», publicado en 1642 y dirigido a Guillermo, conde de Devonshire. Y ahí va en pareja: Hobbes sostiene que las dos sentencias son verdaderas y precisa cuál rige dónde. Entre ciudadanos de una misma comunidad hay, escribe, «alguna analogía de semejanza con la divinidad, a saber, la justicia y la caridad, las hermanas gemelas de la paz». Entre ciudades, en cambio, los hombres de bien han de refugiarse en «las dos hijas de la guerra, el engaño y la violencia».",
+      "El recorte cambia el sentido. La mitad que se cita describe lo que pasa donde no hay autoridad común; la mitad que se cae describe lo que pasa donde sí la hay. Hobbes llevó ese diagnóstico a los Estados: todos los soberanos están, unos frente a otros, en ese estado sin árbitro, y por eso se le tiene por el ejemplo de manual del realismo en relaciones internacionales. Citada a medias, la frase dice que somos lobos. Entera dice algo menos cómodo: que depende de bajo qué reglas nos toque encontrarnos."
+    ],
+    "question": "¿Cuánto de lo que llamamos naturaleza humana depende de las reglas bajo las que vivimos?",
+    "quote": {
+      "text": "Que el hombre es una especie de dios para el hombre, y que el hombre es un lobo rapaz para el hombre. Lo primero es cierto si comparamos a los ciudadanos entre sí; lo segundo, si comparamos ciudades.",
+      "author": "Thomas Hobbes",
+      "work": "De Cive, epístola dedicatoria (1642; inglés, 1651)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hobbes",
+      "#Filosofia",
+      "#DeCive"
+    ],
+    "extended": [
+      "#Plauto",
+      "#FilosofiaPolitica",
+      "#SigloXVII",
+      "#CitasMalAtribuidas",
+      "#Latin",
+      "#Leviatan",
+      "#Ciudadania",
+      "#HistoriaDeLasIdeas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la epístola dedicatoria, dirigida a ‘William, Earl of Devonshire’: ‘That Man to Man is a kind of God; and that Man to Man is an arrant Wolfe. The first is true, if we compare Citizens amongst themselves; and the second, if we compare Cities. In the one, there’s some analogie of similitude with the Deity, to wit, Justice and Charity, the twin-sisters of peace: But in the other, Good men must defend themselves by taking to them for a Sanctuary the two daughters of War, Deceipt and Violence.’ El texto reproducido es la traducción inglesa contemporánea, ‘Philosophicall Rudiments Concerning Government and Society’, impresa en Londres por J.G. para R. Royston en 1651. La epístola no lleva fecha de firma.",
+      "source": "Wikisource, transcripción de «De Cive / Philosophicall Rudiments Concerning Government and Society» (Londres, 1651), Epistle Dedicatory",
+      "url": "https://en.wikisource.org/wiki/De_Cive"
+    },
+    {
+      "claim": "«De Cive» se publicó en 1642 y su versión inglesa, «Philosophical Rudiments Concerning Government and Society», en 1651; el «Leviatán» se publicó en inglés en 1651, con revisión latina en 1668. Sobre las relaciones entre Estados, la entrada explica que Hobbes extendió su análisis más allá de los individuos: ‘todos los soberanos están en este estado unos respecto de otros’, y que ‘esta afirmación ha hecho de Hobbes el ejemplo representativo de un realista en relaciones internacionales’.",
+      "source": "Stanford Encyclopedia of Philosophy, «Hobbes's Moral and Political Philosophy»",
+      "url": "https://plato.stanford.edu/entries/hobbes-moral/"
+    },
+    {
+      "claim": "En el texto latino de «Asinaria» de Plauto, acto II, escena 4, aparece el verso 495: ‘lupus est homo homini, non homo, quom qualis sit non novit’. Lo dice el mercader, que desconfía de a quién tiene delante.",
+      "source": "Perseus Digital Library (Tufts University), T. Maccius Plautus, «Asinaria», acto 2, escena 4 (texto latino)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0031%3Aact%3D2%3Ascene%3D4"
+    },
+    {
+      "claim": "‘«De Cive» (1642) fue el primer libro de filosofía política publicado por Hobbes’; sus tres secciones principales se titulan ‘Libertad’, ‘Imperio’ y ‘Religión’, y la obra estaba concebida como parte de un conjunto mayor, los «Elements of Philosophy».",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Thomas Hobbes»",
+      "url": "https://plato.stanford.edu/entries/hobbes/"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir la frase al «Leviatán» (1651). El pasaje está en la dedicatoria de «De Cive», nueve años anterior.",
+    "No presentar la cita como traducción del latín de 1642. La versión española se hizo sobre el texto inglés de 1651, «Philosophicall Rudiments Concerning Government and Society»; el latín original no se consultó en edición crítica en esta investigación.",
+    "No decir que Plauto escribió «homo homini lupus». Su verso es «lupus est homo homini, non homo, quom qualis sit non novit»; la forma breve y simétrica que hoy se repite es una condensación posterior.",
+    "No traducir «arrant Wolfe» por «lobo» a secas presentándolo como literal: «arrant» es un intensificador —lobo redomado, rapaz— y sin él la frase pierde el tono del original.",
+    "No atribuir a Séneca, como dato verificado, la sentencia contraria «homo sacra res homini». Se le adjudica a las «Epístolas a Lucilio», pero el locus no se comprobó en esta investigación.",
+    "No fechar la dedicatoria con día ni mes: el texto consultado no lleva fecha de firma.",
+    "No decir que «De Cive» fue el primer libro de Hobbes. La Stanford Encyclopedia of Philosophy dice «su primer libro publicado de filosofía política», y la obra formaba parte de un proyecto mayor, los «Elements of Philosophy».",
+    "No afirmar que la edición de 1642 fue una impresión privada de unos cien ejemplares en París. Circula así, pero no se verificó en fuente institucional aquí.",
+    "No presentar a Hobbes como pesimista sobre la naturaleza humana a partir de esta cita. En este pasaje el lobo describe la relación entre ciudades sin árbitro común, no la condición del ser humano en sí."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

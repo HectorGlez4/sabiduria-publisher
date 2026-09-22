@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-20-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "las calzadas rectas de Chaco y el camino del norte",
+    "hook": "Trazaron más de seiscientos kilómetros de calzadas que no esquivan nada: cuando aparece un risco, el camino sube por él. No tenían rueda ni animales de carga.",
+    "body": [
+      "El cañón del Chaco está en el noroeste de Nuevo México. Entre el 850 y el 1250 de nuestra era fue el centro de un sistema de «grandes casas» de piedra. La mayor, Pueblo Bonito, llegó a tener cuatro o cinco pisos, cubría 1,2 hectáreas y contenía más de seiscientas habitaciones, cuarenta kivas y dos plazas. Alrededor quedan más de seiscientos cuarenta kilómetros de calzadas prehistóricas que unían decenas de grandes casas entre sí. Las de dentro del cañón miden unos cuatro metros y medio de ancho; las que salen hacia afuera, cerca del doble.",
+      "Lo raro no es su extensión: es que no se doblan. Están alineadas con precisión y siguen kilómetros sin curvarse ni adaptarse al terreno. Cuando una calzada llega a una mesa o a un paredón, en vez de rodearlo sube de frente por escalones tallados en la roca o por rampas macizas de tierra y mampostería. El mejor documentado de los caminos largos, el del Norte, arranca justo al este de Pueblo Alto, corre hacia el septentrión y termina de golpe en el borde del cañón de Kutz, sin edificio ni destino visible al final.",
+      "Quienes lo hicieron no disponían de animales de carga ni de vehículos con ruedas, y aun así llegaron al cañón unas doscientas mil vigas de madera. En 1924 se desenterró en la plaza de Pueblo Bonito un tronco de pino ponderosa que durante décadas se dio por crecido allí mismo. En 2020, isótopos de estroncio y anillos de crecimiento lo situaron en las montañas Chuska, a más de cincuenta kilómetros, y fecharon su traslado entre 1100 y 1130. Los descendientes de quienes cargaron esa madera siguen ahí: hopis, pueblos de Nuevo México, Nación Navajo."
+    ],
+    "question": "¿Por qué una comunidad construiría en línea recta lo que el terreno le pide torcer?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Caminos que no esquivan nada",
+    "subtitle": "Cañón del Chaco, 850-1250 d.C.",
+    "body": "Más de seiscientos cuarenta kilómetros de calzadas alineadas con precisión. Cuando aparece un paredón, el camino sube de frente por escalones tallados en la roca. Sin rueda y sin animales de carga entraron al cañón unas doscientas mil vigas de madera."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#CanonDelChaco",
+      "#PuebloBonito",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#NuevoMexico",
+      "#Puebloanos",
+      "#CaminoDelNorte",
+      "#Chuska",
+      "#Kivas",
+      "#Astronomia",
+      "#PueblosOriginarios",
+      "#Ingenieria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "‘Desde el 850 d.C. hasta aproximadamente el 1250 d.C.’ fue el periodo mayor de los ancestrales puebloanos en el cañón. Pueblo Bonito ‘tuvo de cuatro a cinco pisos de altura, cubría 3 acres y contenía más de 600 habitaciones, 40 kivas y dos plazas’. Existen ‘más de 400 millas de calzadas prehistóricas. Estos caminos, algunos de hasta 30 pies de ancho, enlazaban decenas de las grandes casas del cañón del Chaco’. ‘Sus descendientes son los nativos americanos modernos del suroeste, entre ellos los hopi, los pueblos de Nuevo México y la Nación Navajo’.",
+      "source": "U.S. National Park Service, «New Mexico: Chaco Culture National Historical Park»",
+      "url": "https://home.nps.gov/articles/chaco.htm"
+    },
+    {
+      "claim": "‘Los de dentro del cañón promedian unos 15 pies de ancho, mientras que los que salen hacia los asentamientos exteriores tienden a ser el doble de anchos’. ‘Los caminos están alineados por lo general con mucha precisión, y continúan distancias considerables con la misma alineación sin curvarse ni adaptarse al paisaje’. ‘Cuando un camino llega a una mesa o a una pared de acantilado, en vez de curvarse o girar a menudo sube en línea recta con escalones tallados en la roca’; también se levantaron ‘rampas macizas de tierra y mampostería’. ‘El Camino del Norte, que arranca justo al este de Pueblo Alto y corre hacia el norte hasta el cañón de Kutz, donde se detiene de forma más bien abrupta en el borde del cañón’, es el ejemplo mejor documentado de camino largo. El NPS expone como discusión abierta si los caminos fueron ‘más simbólicos que prácticos’ o tuvieron ‘al menos algunas funciones prácticas’, y señala que se trataba de ‘una sociedad que no tenía ni animales de carga ni vehículos con ruedas’ y que llevó al cañón unas 200.000 vigas de madera.",
+      "source": "U.S. National Park Service, Chaco Culture National Historical Park, «Chacoan Roads»",
+      "url": "https://www.nps.gov/chcu/learn/historyculture/chacoan-roads.htm"
+    },
+    {
+      "claim": "El tronco de pino ponderosa desenterrado en la plaza de Pueblo Bonito en 1924 se creyó durante mucho tiempo crecido en el propio cañón. El estudio concluye que procede de las montañas Chuska, a más de 50 kilómetros al oeste; el árbol germinó antes del año 732, vivió más de 250 años y fue trasladado a Pueblo Bonito entre 1100 y 1130. Métodos: análisis documental, isótopos de estroncio (87Sr/86Sr) y correlación dendrocronológica. Cita: Guiterman, Baisan, English, Quade, Dean y Swetnam, «Convergence of Evidence Supports a Chuska Mountains Origin for the Plaza Tree of Pueblo Bonito, Chaco Canyon», American Antiquity 85(2), abril de 2020, pp. 331-346.",
+      "source": "American Antiquity (Cambridge University Press), vol. 85, n.º 2 (2020)",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/convergence-of-evidence-supports-a-chuska-mountains-origin-for-the-plaza-tree-of-pueblo-bonito-chaco-canyon/230471D17D5297FB835D2B4CDFE15B83"
+    },
+    {
+      "claim": "Las sierras de origen de la madera ‘están al menos a más de 70 kilómetros de las grandes casas del cañón del Chaco’. Resumiendo a English et al. (2001): compararon los valores de estroncio con ‘52 especímenes arqueológicos de picea y abeto de seis grandes casas y concluyeron que la madera arqueológica venía de las montañas San Mateo (a más de 80 km al sur) y de las montañas Chuska (a más de 75 km al oeste)’. El mismo trabajo calcula que ‘las diez ruinas mayores del Chaco habrían requerido unos 45.000 árboles de altura’.",
+      "source": "PLOS ONE, «Strontium Isotopes and the Reconstruction of the Chaco Regional System: Evaluating Uncertainty with Bayesian Mixing Models» (texto completo en PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4031078/"
+    }
+  ],
+  "do_not_use": [
+    "No mezclar las dos cuentas de madera. El NPS habla de ‘unas 200.000 vigas de madera’ llevadas al cañón; el trabajo de PLOS ONE calcula unos 45.000 árboles de gran altitud para las diez ruinas mayores. Son magnitudes distintas (vigas frente a árboles de cumbre) y sumarlas o intercambiarlas es un error.",
+    "No usar la cifra de PNAS de que ‘más de una quinta parte’ de los troncos eran picea o abeto acarreados a mano desde 75-100 km. El artículo de PNAS (English et al., 2001) devolvió 403 y solo se leyó un resumen de buscador; la distancia sí está sostenida por el texto de PLOS ONE, que cita ese estudio.",
+    "No afirmar que los caminos eran solo ceremoniales ni solo utilitarios. El propio NPS presenta las dos lecturas como debate abierto.",
+    "No decir que el Camino del Norte llega a Aztec Ruins ni a ningún edificio: se corta de forma abrupta en el borde del cañón de Kutz.",
+    "No dar nueve metros como ancho general de las calzadas. Las de dentro del cañón promedian unos cuatro metros y medio; los treinta pies corresponden a los tramos más anchos que salen hacia afuera.",
+    "No llamar «anasazi» sin matiz a quienes construyeron Chaco. El NPS los llama ancestrales puebloanos, y el término anasazi es de origen navajo y hoy lo rechazan comunidades puebloanas descendientes.",
+    "No decir que Chaco fue abandonado y su gente desapareció. Sus descendientes son comunidades vivas: hopi, los pueblos de Nuevo México y la Nación Navajo.",
+    "No fechar la presencia humana en la zona solo entre 850 y 1250. El NPS indica ocupación de ese paisaje desde hace más de 10.000 años; 850-1250 es el auge de las grandes casas.",
+    "No atribuir el tronco de la plaza de Pueblo Bonito a las montañas La Plata o San Juan: el estudio de 2020 lo sitúa en las Chuska.",
+    "No decir que todos los edificios de Chaco están orientados astronómicamente. El NPS escribe que ‘muchos’ de los edificios del sistema se orientaron según direcciones solares, lunares y cardinales."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
