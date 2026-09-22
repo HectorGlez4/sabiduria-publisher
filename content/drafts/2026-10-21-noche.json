@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-21-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el capítulo 125 del Libro de los Muertos egipcio",
+    "hook": "El juicio egipcio no pedía méritos. Pedía una lista de lo que uno no había hecho, dicha en voz alta, de una en una, ante cuarenta y dos dioses.",
+    "body": [
+      "El «Libro de los Muertos» ni es un libro ni se llamaba así. Es un conjunto de fórmulas copiadas en rollos de papiro, distinto en cada ejemplar según lo que el difunto quisiera llevarse. En el exterior de algunos rollos aparece la designación egipcia: «Salir al día». No hablaba de morir, sino de volver de día al mundo conocido. La fórmula más larga es la 125, y también la decisiva: en ella se juzga la vida entera. El difunto comparece ante Osiris y otros cuarenta y dos dioses, y a cada uno le dirige una declaración con la misma estructura: «Oh [nombre del dios]… yo no he…». Una del papiro de Ramose, en el Fitzwilliam Museum, dice: «Oh Devorador de Sangre, que sales del lugar de ejecución: yo no he matado un toro sagrado».",
+      "Mientras habla, le pesan el corazón. En un platillo de la balanza va el órgano; en el otro, una pluma, que representa «maat», el orden justo de las cosas. Y aquí está lo que pocas veces se cuenta: el mismo equipo funerario que llevaba esa declaración de inocencia llevaba también un seguro contra ella. Entre las vendas del difunto se colocaba un escarabajo de corazón, un amuleto grabado con otra fórmula dirigida al propio órgano: «Oh corazón mío que tuve de mi madre, no te levantes como testigo contra mí». Servía, según la ficha de museo, para impedir que el corazón revelara a los jueces las malas acciones de su dueño.",
+      "Las dos piezas juntas dicen algo más honesto que cada una por separado. Una civilización que llevaba tres mil años pensando en esto no construyó su examen final sobre logros, sino sobre daños no cometidos: la balanza no mide lo que se consiguió, mide lo que se estropeó. Y a la vez sabía que nadie llega limpio a esa sala, y por eso metía en el ataúd un amuleto para callar al único testigo que lo había visto todo desde dentro."
+    ],
+    "question": "¿Qué diría de una vida un balance hecho solo con lo que no se hizo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El examen de los daños no cometidos",
+    "subtitle": "Egipto, fórmula 125",
+    "body": "Ante Osiris y otros cuarenta y dos dioses, el difunto no enumeraba méritos: decía, uno por uno, lo que no había hecho. Mientras tanto le pesaban el corazón contra una pluma. En las vendas llevaba un amuleto para que ese corazón no declarara en su contra."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AntiguoEgipto",
+      "#LibroDeLosMuertos",
+      "#Maat"
+    ],
+    "extended": [
+      "#Egiptologia",
+      "#Osiris",
+      "#Papiro",
+      "#Mitologia",
+      "#FitzwilliamMuseum",
+      "#Escarabajo",
+      "#Arqueologia",
+      "#HistoriaAntigua"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "‘La fórmula 125 es normalmente la más larga del Libro de los Muertos. Es uno de los puntos clave del viaje de una persona al más allá, porque representa el momento en que su vida y sus actos eran juzgados’. ‘El corazón de Ramose fue pesado contra una pluma, que representaba el concepto de «maat», el orden divino’. La confesión negativa se dispone como ‘una serie de columnas divididas en dos por una pequeña imagen de un dios sentado’, y cada declaración sigue la forma ‘Oh [nombre de la divinidad]… yo no he [cometido tal acto]’. Ejemplo textual de la página: ‘Oh Devorador de sangre, que sales del lugar de ejecución, yo no he matado un toro sagrado’.",
+      "source": "Fitzwilliam Museum, Universidad de Cambridge, proyecto «Passport to the Egyptian Afterlife: The Book of the Dead of Ramose», página «Spell 125: Osiris and the judgement of the dead»",
+      "url": "https://book-of-the-dead.fitzmuseum.cam.ac.uk/explore/the-book-of-the-dead/spell-125"
+    },
+    {
+      "claim": "‘Salir al día’ («Going Forth by Day») es ‘la designación egipcia que se encuentra en el exterior de algunos rollos’, y ‘ese título antiguo subrayaba el anhelo y la esperanza de volver de día desde donde quiera que estuviese el más allá’. Ficha de la edición: Thomas George Allen, «The Book of the Dead or Going Forth by Day: Ideas of the Ancient Egyptians Concerning the Hereafter as Expressed in Their Own Terms», preparada para la imprenta por Elizabeth Blaisdell Hauser, Studies in Ancient Oriental Civilization 37, Oriental Institute, Chicago, 1974, x + 306 pp.",
+      "source": "Institute for the Study of Ancient Cultures (antes Oriental Institute), Universidad de Chicago, ficha de SAOC 37",
+      "url": "https://isac.uchicago.edu/research/publications/saoc/saoc-37-book-dead-or-going-forth-day-ideas-ancient-egyptians-concerning"
+    },
+    {
+      "claim": "El Libro de los Muertos es ‘una colección de rollos de papiro’ cuyo título se traduce oficialmente como ‘Los capítulos / El libro de salir al día’. En el juicio ‘cuarenta y dos dioses adicionales comparecen para juzgar y poner a prueba al recién fallecido’, y entre las escenas más conocidas figura ‘una balanza que pesa el corazón del difunto contra una pluma’.",
+      "source": "American Research Center in Egypt (ARCE), «Book of the Dead: A Guidebook to the Afterlife»",
+      "url": "https://arce.org/resource/book-dead-guidebook-afterlife/"
+    },
+    {
+      "claim": "Sobre el papiro de Reri: ‘A la izquierda está el escarabajo amulético que impedía que el corazón revelara las malas acciones de su dueño a los dioses de la sala del juicio’. La fórmula grabada en esos amuletos empieza: ‘Oh corazón mío que tuve de mi madre, oh corazón mío de mis distintas edades: no te levantes como testigo contra mí…’.",
+      "source": "Western Australian Museum, introducción del curador a la exposición «Afterlife», «The Papyrus of Reri»",
+      "url": "https://museum.wa.gov.au/whats-on/afterlife/curators-introduction/papyrus-of-reri"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el Libro de los Muertos es un libro único y cerrado. Es un conjunto de fórmulas copiadas en rollos, distinto en cada ejemplar.",
+    "No atribuir a los egipcios el título «Libro de los Muertos». La designación que consta en el exterior de algunos rollos es «Salir al día».",
+    "No dar por verificado que Karl Richard Lepsius acuñó el nombre «Totenbuch» en 1842 y fijó la numeración en 165 capítulos. El dato circula ampliamente, pero aquí solo se encontró en enciclopedias generales, no en fuente institucional; las páginas de la UCL y del British Museum que podrían sostenerlo devolvieron 403.",
+    "No citar la declaración «no he represado el agua en su estación» ni ninguna otra del bloque sobre canales y aguas como texto verificado. Aparece atribuida a la traducción de Faulkner en páginas divulgativas, y no se pudo comprobar en edición crítica ni en fuente de museo.",
+    "No decir que el corazón debía pesar exactamente lo mismo que la pluma ni dar cifras de peso. Las fuentes de museo describen el pesaje contra la pluma de maat sin cuantificarlo.",
+    "No describir a Ammit con una anatomía concreta como dato firme. Circulan dos versiones incompatibles —cabeza de cocodrilo o de hipopótamo— y ninguna se verificó aquí en fuente institucional; por eso no aparece en el cuerpo.",
+    "No fechar la fórmula 125 en el papiro de Ani (hacia 1250 a.C.) como su origen. El ejemplar de Ani es un testimonio célebre, no el primero; la datación más temprana de la escena tampoco se verificó aquí.",
+    "No traducir «maat» solo como «verdad». Las fuentes citadas la presentan como orden divino, lo justo, lo que corresponde; reducirla a verdad empobrece el término.",
+    "No presentar la confesión negativa como un antecedente directo de los diez mandamientos ni de ninguna tradición posterior. Es una comparación frecuente y no está sostenida por las fuentes consultadas.",
+    "No decir que el escarabajo de corazón era un engaño a los dioses. Las fuentes describen su función protectora; interpretarlo como fraude es lectura moderna y no debe darse como dato."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-21-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Harry Beck y el diagrama del Underground de 1933",
+    "hook": "Un delineante en paro dibujó en un cuaderno cuadriculado el plano que hoy copian las redes de medio mundo. Su empresa se lo devolvió por «demasiado revolucionario».",
+    "body": [
+      "Henry Charles Beck entró en 1925 en la Oficina del Ingeniero de Señales del metro de Londres como delineante subalterno: su trabajo era dibujar circuitos eléctricos de señalización. En 1931, en un paréntesis sin empleo, dibujó a lápiz y tinta de color, sobre el papel cuadriculado de un cuaderno, una hoja de 240 por 190 milímetros. Ahí estaba todo: las líneas corriendo solo en horizontal, en vertical o a cuarenta y cinco grados, el centro agrandado, el Támesis indicado y hasta el hueco de la leyenda, como si ya pensara en la edición de bolsillo. Esa hoja se conserva en el Victoria and Albert Museum con la signatura E.814-1979.",
+      "El Departamento de Publicidad lo rechazó por demasiado revolucionario. Beck lo rehízo un año después y la empresa aceptó probarlo. En enero de 1933 salió la edición de bolsillo con una tirada de 750.000 ejemplares, y al dorso llevaba impresa una frase que hoy sería impensable en un servicio público: «Un diseño nuevo para un plano viejo. Agradecemos sus comentarios». En febrero se imprimieron 100.000 más: unos 850.000 ejemplares del «diagrama» —así lo llamaba la casa, nunca «mapa»— en dos meses.",
+      "Lo que Beck hizo fue renunciar a la verdad que no servía. Su hoja miente sobre las distancias y sobre la forma de la ciudad, porque aplicó al plano el criterio del circuito eléctrico que dibujaba a diario: mostrar las relaciones, no las medidas. Bajo tierra nadie necesita saber cuántos metros hay entre dos estaciones; necesita saber cuál va después de cuál y dónde se cambia de línea. English Heritage calcula que por aquel encargo le pagaron unas cinco guineas. Murió en 1974 casi desconocido; el reconocimiento llegó cuando ya no podía discutir los cambios que otros hicieron sobre su diseño."
+    ],
+    "question": "¿Qué información de un mapa es la que de verdad se usa, y cuánta precisión sobra?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El plano que decidió mentir",
+    "subtitle": "Londres, 1931-1933",
+    "body": "Un delineante de circuitos eléctricos dibujó el metro de Londres en papel cuadriculado: solo horizontales, verticales y 45 grados. Se lo devolvieron por demasiado revolucionario. En enero de 1933 se imprimieron 750.000 ejemplares."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HarryBeck",
+      "#Diseno",
+      "#Londres"
+    ],
+    "extended": [
+      "#Cartografia",
+      "#Metro",
+      "#DisenoGrafico",
+      "#HistoriaDelDiseno",
+      "#VictoriaAndAlbert",
+      "#Underground",
+      "#Infografia",
+      "#SigloXX"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El boceto original del plano del metro de Londres es de 1931, está hecho ‘a lápiz y tinta de color sobre papel cuadriculado de un cuaderno de ejercicios’, mide 240 × 190 mm y se conserva en el V&A con la signatura E.814-1979. El museo describe que ‘incorpora los principios básicos de su diseño e indica la ubicación del río Támesis, así como los espacios para la leyenda y el logotipo del Underground, como si estuviera pensado para una edición de bolsillo’, y que Beck, ‘ingeniero eléctrico y delineante, aplicó a la cartografía los principios del dibujo de circuitos eléctricos complejos como diagrama idealizado, mostrando solo las relaciones y no las distancias entre los puntos’.",
+      "source": "Victoria and Albert Museum, «Original sketch for the London Underground Railways Map», Henry C. Beck, E.814-1979",
+      "url": "https://collections.vam.ac.uk/item/O1103477/original-sketch-for-the-london-drawing-beck-harry/"
+    },
+    {
+      "claim": "Beck vivió de 1902 a 1974 y nació en Leyton. ‘Tomó el plano existente, de base geográfica, y enderezó las características líneas de colores […] hasta dejarlas en verticales, horizontales o diagonales de 45 grados’. El diseño ‘fue rechazado por la dirección del Underground por demasiado revolucionario’. ‘Unos 850.000 ejemplares de bolsillo del «diagrama» se imprimieron en los dos primeros meses de 1933’. ‘Se cree que solo le pagaron cinco guineas (5,25 libras) por el diseño original’. La placa azul se colocó en 2013 en el 14 de Wesley Road, Leyton.",
+      "source": "English Heritage, Blue Plaques, «Harry Beck (1902-1974)»",
+      "url": "https://www.english-heritage.org.uk/visit/blue-plaques/harry-beck/"
+    },
+    {
+      "claim": "Beck empezó en 1925 como delineante en la Oficina del Ingeniero de Señales y pasó los años veinte con empleos intermitentes. Hizo el primer boceto en 1931, estando sin trabajo. Lo presentó al Departamento de Publicidad, que lo rechazó por ‘demasiado revolucionario’; lo revisó un año después. Enero de 1933: primera tirada de 750.000 ejemplares; febrero de 1933: 100.000 más. Al dorso figuraba el mensaje: ‘A new design for an old map. We welcome your comments’.",
+      "source": "Sebastian Gießmann, «Henry Charles Beck, Material Culture and the London Tube Map of 1933», revista académica Amodern",
+      "url": "https://amodern.net/article/henry-c-beck-material-culture-and-the-london-tube-map-of-1933/"
+    },
+    {
+      "claim": "Beck trabajaba como delineante subalterno para el metro de Londres desde 1925, dibujando planos técnicos para los ingenieros de señales. Completó su diseño en 1931 y lo presentó; tras el rechazo inicial por ‘radical’, la empresa aceptó una prueba en 1932 y el diseño entró en imprenta en 1933. Empleó líneas horizontales, verticales y a 45 grados ‘como las de los diagramas de circuitos eléctricos’, agrandó el centro de Londres y eliminó el detalle innecesario. Beck siguió siendo poco conocido hasta después de su muerte en 1974; el libro «Mr Beck's Underground Map», de Ken Garland, y un documental posterior impulsaron su reconocimiento.",
+      "source": "London Museum, «How Harry Beck revolutionised the Tube map»",
+      "url": "https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/"
+    }
+  ],
+  "do_not_use": [
+    "No dar las cinco guineas como cifra firme. English Heritage la introduce con un ‘se cree’, y otra fuente académica habla de ‘unos nueve dólares’ sin detallar guineas por versión. Decirlo con hedge o no decirlo.",
+    "No fechar el diagrama en 1931. El boceto es de 1931; la edición de bolsillo que la gente usó salió en enero de 1933. Son dos hechos distintos.",
+    "No sumar 750.000 y 850.000. Son 750.000 en enero más 100.000 en febrero; los 850.000 de English Heritage son el total de esos dos meses.",
+    "No afirmar que las tiradas habituales de la época eran de 10.000 a 20.000 ejemplares. El dato apareció en un resumen de buscador atribuido a un artículo de The Cartographic Journal cuyo texto devolvió 403 y no se pudo leer.",
+    "No atribuir a Frank Pick el rechazo personal de 1931. Lo documentado es que el Departamento de Publicidad, a su cargo, lo devolvió; la misma fuente que lo cuenta recoge también un elogio posterior de Pick al diseño.",
+    "No decir que Beck eliminó el Támesis. El boceto de 1931 del V&A lo indica expresamente. La retirada del río corresponde a una versión posterior que no se verificó en esta investigación.",
+    "No presentar a Beck como el inventor del plano esquemático de transporte. Circulan precedentes anteriores —los diagramas de George Dow para el LNER, hacia 1929— que no se verificaron aquí en fuente institucional; por eso no se afirma primacía.",
+    "No decir que la empresa lo llamaba «mapa». La casa lo llamaba «diagrama», y esa distinción es parte del asunto.",
+    "No afirmar que Beck cobró derechos por el uso posterior del diseño. Cedió el copyright a London Transport; lo que le dolió, según las fuentes, fue que lo modificaran sin consultarle.",
+    "No decir que murió en la pobreza ni en el olvido total. Lo sostenido es que fue poco conocido hasta después de 1974, no que quedara indigente."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

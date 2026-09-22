@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-21-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Shota Rustaveli y la coronación de Tinatin",
+    "hook": "En un poema georgiano de finales del siglo XII, un rey sin hijo varón corona a su hija. La corte no protesta: responde con una sola línea sobre los cachorros del león.",
+    "body": [
+      "«El caballero de la piel de pantera», de Shota Rustaveli, es el poema épico de Georgia. La UNESCO inscribió su colección de manuscritos en el Registro de la Memoria del Mundo en 2013 —repartida entre el Centro Nacional de Manuscritos de Georgia y las Bibliotecas Bodleianas de Oxford— y lo describe como «un himno a la naturaleza humana, la amistad, el amor, la igualdad y la lucha por la libertad». La acción empieza así: el rey Rostevan, de los árabes, no tiene heredero varón y decide entregar el trono a su hija Tinatin. La respuesta de los visires está en la estrofa 39 de la traducción de Marjory Wardrop, publicada en 1912 por la Royal Asiatic Society.",
+      "La escena continúa, y de ella sale la otra línea que hoy circula suelta, como proverbio de calendario: «Lo que das es tuyo; lo que guardas está perdido», estrofa 50. No es una sentencia general sobre la generosidad. Es lo que un padre le está diciendo a la hija que acaba de coronar, sobre cómo se gobierna. Fuera del poema pasaba lo mismo: Georgia estaba gobernada desde 1184 por Tamar, y la enciclopedia de la Academia Nacional de Ciencias georgiana cita exactamente esa estrofa 39 al explicar cómo rompió con la tradición de género de su tiempo. Según el prólogo de Wardrop, Rustaveli escribió odas en su honor y obtuvo a cambio un puesto de tesorero en su corte.",
+      "La frase no es una declaración abstracta de igualdad. Es un argumento de ocasión, dicho por cortesanos para justificar una decisión concreta que ya estaba tomada. Y sobrevivió así: sin manuscrito del autor, copiada a mano durante siglos por escribas hasta llegar a las colecciones que la UNESCO protege hoy. Ocho siglos después, la línea sigue teniendo que decirse."
+    ],
+    "question": "¿Qué distingue a una idea que se enuncia de una que de verdad se aplica?",
+    "quote": {
+      "text": "Los cachorros del león son iguales, sean hembras o machos.",
+      "author": "Shota Rustaveli",
+      "work": "El caballero de la piel de pantera, estrofa 39 (trad. Marjory Wardrop, 1912)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Rustaveli",
+      "#Georgia",
+      "#Poesia"
+    ],
+    "extended": [
+      "#LiteraturaMedieval",
+      "#ReinaTamar",
+      "#Unesco",
+      "#MemoriaDelMundo",
+      "#Caucaso",
+      "#SigloXII",
+      "#Manuscritos",
+      "#Igualdad"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Verificación en el texto de la traducción de Marjory Scott Wardrop, «The Man in the Panther's Skin», Royal Asiatic Society, Oriental Translation Fund, nueva serie, vol. XXI, Londres, 1912. Estrofa 39: ‘The lion's whelps are equal (alike lions), be they male or female’. Estrofa 50: ‘What thou givest away is thine; what thou keepest is lost’. Ambas están en la sección «Story of Rostevan, King of the Arabians», que empieza en la estrofa 32. La estrofa 39 la pronuncian los visires respondiendo al rey Rostevan, que, sin heredero varón, ha decidido nombrar soberana a su hija T'hinat'hin; el consejo de la estrofa 50 va dirigido a ella. El prólogo del traductor indica que Rustaveli escribió odas en honor de la reina T'hamara y recibió como recompensa un puesto de tesorero en su corte, y sitúa su reinado hacia 1184-1212.",
+      "source": "Marjory Scott Wardrop (trad.), «The Man in the Panther's Skin», Royal Asiatic Society, 1912 (texto completo en Internet Archive)",
+      "url": "https://archive.org/stream/WardropMps/Wardrop_Mps_djvu.txt"
+    },
+    {
+      "claim": "La «Colección de manuscritos del poema de Shota Rustaveli «El caballero de la piel de pantera»» está inscrita en el Registro de la Memoria del Mundo desde 2013. Se conserva en el Centro Nacional de Manuscritos (Georgia) y en las Bibliotecas Bodleianas (Reino Unido). La UNESCO describe la obra como ‘la cumbre del desarrollo del pensamiento neoplatónico y un himno a la naturaleza humana, la amistad, el amor, la igualdad y la lucha por la libertad’.",
+      "source": "UNESCO, Memoria del Mundo, «Manuscript Collection of Shota Rustaveli's Poem “Knight in the Panther's Skin”»",
+      "url": "https://www.unesco.org/en/memory-world/manuscript-collection-shota-rustavelis-poem-knight-panthers-skin"
+    },
+    {
+      "claim": "La obra ‘data de finales del siglo XII’ y es ‘el poema épico de Georgia’. Marjory Wardrop y su hermano Oliver protagonizaron ‘probablemente el mayor intento de dar a conocer el Caballero de la piel de pantera a las comunidades de habla inglesa’ a comienzos del siglo XX. La colección ‘aporta información única sobre el modo de vida, las tradiciones y la caracterización de distintos grupos sociales en la Edad Media’.",
+      "source": "UNESCO Reino Unido, Memoria del Mundo, ficha «Knight in the Panther's Skin»",
+      "url": "https://unesco.org.uk/our-network/memory-of-the-world/knight-in-the-panthers-skin"
+    },
+    {
+      "claim": "Entrada «Tamar» de la Enciclopedia Georgiana, publicada por la Academia Nacional de Ciencias de Georgia (Oficina Editorial Científica Principal I. Abashidze): ‘Tamar (aprox. 1160-1213, según otras fuentes 1207 o 1210) fue monarca georgiana desde 1184’, con el título de ‘Soberana Reina de los abjasios y los kartvelos, ranos, kajetios y armenios’. La entrada cita ‘The lions whelps are equal, be they male or female’ de Rustaveli al tratar la ruptura de Tamar con las tradiciones de género, y señala que ‘el humanismo pasó a ocupar un lugar importante en la cosmovisión georgiana, reflejado poética y filosóficamente en El caballero de la piel de pantera de Shota Rustaveli’.",
+      "source": "Enciclopedia Georgiana, Academia Nacional de Ciencias de Georgia, entrada «Queen Tamar»",
+      "url": "https://georgianencyclopedia.ge/en/form_eng/309"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir la estrofa 39 al rey Rostevan. La pronuncian los visires, respondiendo a la decisión ya tomada por el rey.",
+    "No presentar «lo que das es tuyo; lo que guardas está perdido» como sentencia suelta sobre la generosidad. Es el consejo de un padre a la hija que acaba de coronar, sobre cómo gobernar.",
+    "No decir que Rustaveli dedicó el poema a la reina Tamar. La enciclopedia de la Academia Nacional de Ciencias georgiana no lo afirma; el prólogo de Wardrop habla de odas escritas en su honor y de un puesto de tesorero. La lectura del poema como alegoría del reinado de Tamar circula mucho, pero aquí solo se encontró en enciclopedias generales.",
+    "No citar la traducción española como si viniera de una edición crítica en georgiano. El texto de partida es el inglés de Wardrop (1912); la versión castellana se hizo aquí. En georgiano la fórmula es un dicho breve cuya literalidad no se comprobó.",
+    "No dar 1646 ni el nombre del escriba Mamuka Tavakarashvili como datos verificados del manuscrito ilustrado más antiguo. Aparecieron en resúmenes de buscador y la ficha de la UNESCO consultada no los recoge.",
+    "No fechar el poema en un año concreto. Las fuentes institucionales dicen ‘finales del siglo XII’; otras hablan de los siglos XII o XIII.",
+    "No llamar a Tamar ‘rey’ como dato verificado. La enciclopedia de la Academia georgiana la titula reina soberana; la afirmación de que el término «mepe» es neutro y se la estilaba «rey de reyes» solo se halló en enciclopedias generales.",
+    "No situar la acción del poema en Georgia. Transcurre en escenarios llamados «Arabia» e «India»; Rostevan es rey de los árabes en el texto.",
+    "No decir que la estrofa 39 es una defensa de la igualdad entre hombres y mujeres en general. En el poema es el argumento con el que unos cortesanos respaldan una sucesión concreta.",
+    "No afirmar que Rustaveli fue tesorero de la corte como hecho documentado. Es lo que recoge el prólogo de Wardrop de 1912, y su biografía está mal establecida."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "2026-10-21-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Darwin y los límites de la ciencia verdadera (1857)",
+    "hook": "La cita de Darwin que se graba en el suelo de los museos y se repite en los cursos de empresa la escribió un profesor de administración de Luisiana en 1963.",
+    "body": [
+      "«No sobrevive la especie más fuerte, ni la más inteligente, sino la que mejor se adapta al cambio». Se atribuye a «El origen de las especies». No está ahí ni en ningún otro texto de Charles Darwin. El rastro llega a un artículo de 1963 de Leon C. Megginson, profesor de administración de la Universidad Estatal de Luisiana, publicado en la «Southwestern Social Science Quarterly». Ahí escribió, como paráfrasis del «Origen» y sin comillas, que la especie que sobrevive no es la más intelectual ni la más fuerte, sino la que mejor se adapta al entorno cambiante. Alguien puso las comillas después. Llegó a estar grabada en letras de un pie de altura en el suelo de la Academia de Ciencias de California; al advertírselo, la institución retiró la atribución a Darwin.",
+      "Tampoco «la supervivencia del más apto» es suya. La acuñó Herbert Spencer en «Principios de biología», 1864, cinco años después de la primera edición del «Origen». Alfred Russel Wallace le rogó en 1866 que la adoptara para evitar malentendidos con «selección natural», y Darwin la incorporó recién en la quinta edición del «Origen», de 1869. Nunca abandonó «selección natural»: la de Spencer fue siempre un sinónimo auxiliar.",
+      "Lo que Darwin sí escribió, en una carta a Asa Gray del 18 de junio de 1857 —dos años antes del «Origen»—, va contra la seguridad con que hoy se lo cita. Discutía con el botánico de Harvard por qué ciertos géneros con pocas especies ocupan áreas estrechas o separadas, y sospechaba que la causa era la extinción local. En medio de ese razonamiento se detuvo a advertir que iba más lejos de lo que sus datos permitían. No era una duda sobre la evolución: era la línea que un investigador se traza a sí mismo."
+    ],
+    "question": "¿Dónde termina lo que se puede sostener con datos y empieza lo que uno quisiera que fuera cierto?",
+    "quote": {
+      "text": "Soy muy consciente de que mis especulaciones van bastante más allá de los límites de la verdadera ciencia.",
+      "author": "Charles Darwin",
+      "work": "Carta a Asa Gray, 18 de junio de 1857 (Darwin Correspondence Project, carta 2109)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Darwin",
+      "#Ciencia",
+      "#CitasMalAtribuidas"
+    ],
+    "extended": [
+      "#HistoriaDeLaCiencia",
+      "#Evolucion",
+      "#AsaGray",
+      "#HerbertSpencer",
+      "#SeleccionNatural",
+      "#SigloXIX",
+      "#Epistemologia",
+      "#Cambridge"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Darwin Correspondence Project (Universidad de Cambridge) reúne seis frases que se atribuyen a Darwin y que no son suyas, entre ellas «No sobrevive la especie más fuerte…» —adjudicada al «Origen de las especies» y procedente en realidad de un texto de estudios de administración— y la del Dr. Dawkins sobre las propiedades del universo. Frente a ellas, la página presenta como genuina: ‘I am quite conscious that my speculations run quite beyond the bounds of true science’, de la carta a Asa Gray del 18 de junio de 1857, y precisa que se refiere a cuestiones concretas sobre la distribución de especies vegetales, no a dudas sobre la teoría evolutiva.",
+      "source": "Darwin Correspondence Project, Universidad de Cambridge, «Six things Darwin never said – and one he did»",
+      "url": "https://www.darwinproject.ac.uk/people/about-darwin/six-things-darwin-never-said"
+    },
+    {
+      "claim": "La cita falsa nace de Leon C. Megginson, profesor de estudios de administración de la Universidad Estatal de Luisiana. En su artículo de 1963 en «Southwestern Social Science Quarterly» 44(1), pp. 3-13, en la p. 4, escribió: ‘According to Darwin's Origin of Species, it is not the most intellectual of the species that survives; it is not the strongest that survives; but the species that survives is the one that is able best to adapt and adjust to the changing environment’. No lo presentó como cita directa de Darwin; la paráfrasis fue convertida después en cita entrecomillada. Una paráfrasis semejante reapareció en un artículo suyo de 1964 en «Petroleum Management». La frase espuria llegó a estar inscrita en el suelo de piedra de la sede de la Academia de Ciencias de California, de donde se retiró la atribución a Darwin.",
+      "source": "Darwin Correspondence Project, Universidad de Cambridge, «The evolution of a misquotation»",
+      "url": "https://www.darwinproject.ac.uk/people/about-darwin/six-things-darwin-never-said/evolution-misquotation"
+    },
+    {
+      "claim": "Carta n.º DCP-LETT-2109, de Charles Darwin a Asa Gray, fechada el 18 de junio de 1857, escrita desde Moor Park. Contiene la frase ‘I am quite conscious that my speculations run quite beyond the bounds of true science’. El asunto de la carta son las especies de distribución disjunta, su relación con la extinción y la fecundación cruzada en plantas: Darwin sostiene que los géneros con pocas especies tienden a tener áreas estrechas o separadas y conjetura que la causa común es la extinción local.",
+      "source": "Darwin Correspondence Project, Universidad de Cambridge, carta DCP-LETT-2109",
+      "url": "https://www.darwinproject.ac.uk/letter/DCP-LETT-2109.xml"
+    },
+    {
+      "claim": "‘La supervivencia del más apto’ ‘fue acuñada por el filósofo Herbert Spencer en respuesta a la lectura del «Origen de las especies», cinco años después de publicarse la primera edición’. ‘Alfred Russel Wallace […] escribió a Darwin en 1866 con una larga crítica del término «selección natural» y le rogó que minimizara la confusión adoptando «supervivencia del más apto»’. ‘Darwin introdujo la frase en unos pocos lugares de su obra a partir de la 5.ª edición del «Origen», en 1869’, y ‘nunca abandonó el término «selección natural»: solo veía «la supervivencia del más apto» como un sinónimo o frase auxiliar para dejar claro su sentido a los lectores’.",
+      "source": "Darwin Correspondence Project, Universidad de Cambridge, comentario «Survival of the fittest»",
+      "url": "https://www.darwinproject.ac.uk/commentary/survival-fittest"
+    },
+    {
+      "claim": "Introducción editorial a la quinta edición del «Origen de las especies», publicada en julio o agosto de 1869: ‘It is in chapter three that Darwin famously first uses Herbert Spencer's phrase «survival of the fittest» for natural selection in the Origin’. El editor añade que la expresión resultó contraproducente por ser una definición circular sin valor explicativo. Autor de la introducción: Gordon Chancellor.",
+      "source": "Darwin Online (darwin-online.org.uk), Gordon Chancellor, «Darwin's Origin of species, fifth edition (1869)»",
+      "url": "https://darwin-online.org.uk/EditorialIntroductions/Chancellor_Origin5th.html"
+    },
+    {
+      "claim": "Glenn Branch, director adjunto del National Center for Science Education, en un texto publicado el 26 de agosto de 2015, documenta que Nick Matzke identificó el artículo de Megginson de 1963 como origen de la cita, que la frase figura ‘en letras de un pie de altura’ en el suelo de la Academia de Ciencias de California en San Francisco y que ‘la academia retiró su atribución errónea a Darwin cuando se le informó de ella’.",
+      "source": "National Center for Science Education, Glenn Branch, «Megginson in the Field» (26 de agosto de 2015)",
+      "url": "https://ncse.ngo/megginson-field"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir a Darwin «no sobrevive la especie más fuerte, sino la que mejor se adapta al cambio». No está en el «Origen» ni en ninguna obra suya: es una paráfrasis de Leon C. Megginson, 1963.",
+    "No presentar a Megginson como falsificador. Escribió una paráfrasis sin comillas y atribuyéndola explícitamente al sentido del «Origen»; el entrecomillado y la conversión en cita literal son obra de terceros posteriores.",
+    "No decir que Darwin acuñó «la supervivencia del más apto». Es de Herbert Spencer, «Principios de biología», 1864, y Darwin solo la incorporó a partir de la quinta edición de 1869.",
+    "No decir que Darwin sustituyó «selección natural» por la fórmula de Spencer. Nunca la abandonó; usó la otra como sinónimo auxiliar.",
+    "No precisar el capítulo de la quinta edición donde aparece por primera vez la frase de Spencer. Darwin Online (Chancellor) dice capítulo tercero y otros resúmenes hablan del encabezado del capítulo cuarto; la discrepancia no se resolvió aquí.",
+    "No usar la carta a Asa Gray como confesión de dudas sobre la evolución. El propio Darwin Correspondence Project advierte que se refiere a cuestiones concretas de distribución de especies vegetales. Los textos creacionistas la citan recortada con el sentido contrario.",
+    "No citar la traducción española como si procediera de una edición crítica en español. El texto de partida es el inglés del Darwin Correspondence Project; la versión castellana se hizo aquí.",
+    "No dar la cifra de 1963 como fecha de la inscripción del suelo de la Academia de Ciencias de California. 1963 es el artículo de Megginson; la inscripción es muy posterior y su fecha no se verificó.",
+    "No atribuir a Darwin la frase sobre el universo con ‘exactamente las propiedades que cabría esperar’: es de Richard Dawkins, según el propio Darwin Correspondence Project.",
+    "No usar el relato de lady Hope sobre una conversión religiosa de Darwin en su lecho de muerte: el Darwin Correspondence Project lo da por fabricado."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
