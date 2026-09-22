@@ -243,6 +243,23 @@
           }
         },
         "errores": {}
+      },
+      {
+        "instantanea": "7d",
+        "observed_at": "2026-09-22T08:59:46.229853+00:00",
+        "edad_horas": 181.36,
+        "metricas": {
+          "instagram": {
+            "reach": 11,
+            "views": 21,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 1
+          }
+        },
+        "errores": {}
       }
     ],
     "subido_en": "2026-09-14T19:31:46.653080+00:00",
