@@ -260,6 +260,23 @@
           }
         },
         "errores": {}
+      },
+      {
+        "instantanea": "7d",
+        "observed_at": "2026-09-22T09:00:13.468953+00:00",
+        "edad_horas": 176.87,
+        "metricas": {
+          "instagram": {
+            "reach": 7,
+            "views": 15,
+            "likes": 1,
+            "comments": 0,
+            "shares": 0,
+            "saved": 0,
+            "total_interactions": 1
+          }
+        },
+        "errores": {}
       }
     ],
     "cross_posting": "Not expected: Accounts Center auto-share to Facebook applies to posts made in the Instagram app, not Graph API publications. Not checked on device in this window."
