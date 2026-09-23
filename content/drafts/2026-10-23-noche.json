@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-23-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Palmira y la ley fiscal grabada en el ágora en 137",
+    "hook": "En el año 137, una ciudad del desierto sirio decidió grabar en piedra sus impuestos. El motivo que da el propio texto no es recaudar más: es que nadie sabía cuánto se debía.",
+    "body": [
+      "Palmira era un cruce de caravanas entre el imperio romano y el persa, y su momento de mayor riqueza fue mediados del siglo II. En el año 137 el consejo de la ciudad se reunió y aprobó un decreto: se redactaría de nuevo el arancel de aduanas y se grabaría en piedra, en las dos lenguas que allí se usaban, el griego y el palmireno —un dialecto arameo—. La losa se levantó en el ágora. Regulaba lo que entraba y salía por las puertas y los oficios que se ejercían dentro, y distinguía las cargas según fueran en camello, en burro o en carro. De las casi tres mil inscripciones palmirenas del yacimiento, solo unos cientos son bilingües.",
+      "El preámbulo explica por qué hizo falta. Antes, dice el texto, la mayoría de las tasas no estaban recogidas en la ley fiscal sino que se cobraban por costumbre, y en el contrato del arrendatario del impuesto se escribía que cobrara conforme a la ley y a la costumbre. Es una instrucción circular: la costumbre no estaba escrita en ninguna parte, así que quien cobraba decidía cuánto. El resultado, admite el preámbulo, es que surgían disputas continuas entre los comerciantes y los recaudadores. Y el consejo tomó una decisión poco habitual: mandó grabar no solo las normas nuevas, sino también las viejas a las que sustituían, una al lado de la otra, a la vista de todos.",
+      "La piedra ya no está en Palmira. La encontró en 1881 el príncipe ruso-armenio Semión Abamélik-Lazarev, y en 1901 el sultán Abdul Hamid II la cedió como regalo diplomático al zar Nicolás II; desde entonces está en el Museo del Ermitage de San Petersburgo. Lo que aquel consejo entendió hace mil novecientos años sigue vigente: mientras una regla viva solo en la costumbre, la interpreta quien tiene la mano en la balanza."
+    ],
+    "question": "¿Cuántas de las reglas que lo rigen a usted están escritas en algún sitio donde pueda leerlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Palmira, año 137",
+    "subtitle": "El impuesto que se cobraba «según la costumbre»",
+    "body": "Las tasas no estaban en la ley: se cobraban por costumbre, y la costumbre no estaba escrita. Quien cobraba decidía cuánto. El consejo mandó grabarlo todo en piedra, en el ágora, en dos lenguas."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Palmira",
+      "#Siria",
+      "#HistoriaAntigua"
+    ],
+    "extended": [
+      "#ImperioRomano",
+      "#Arameo",
+      "#Epigrafia",
+      "#RutaDeLaSeda",
+      "#Arqueologia",
+      "#Ermitage",
+      "#SigloII",
+      "#OrienteProximo"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La estela del arancel se erigió en el ágora de Palmira en el año 137 d.C. y hoy se conserva en el Museo Estatal del Ermitage de San Petersburgo. Está inscrita en palmireno y en griego, y enumera, entre otros servicios, el impuesto sobre determinadas mercancías introducidas en la ciudad y sacadas de ella, distinguiendo según el medio de transporte: camello, burro o carro de burro. El palmireno es una lengua aramea, emparentada con el hebreo y el nabateo, usada desde el siglo I a.C. hasta la decadencia de la ciudad a fines del siglo III. Se han hallado unas tres mil inscripciones en esa escritura en el yacimiento, de las cuales unos pocos cientos son bilingües, palmireno y griego, en contextos tanto cívicos como funerarios. Palmira alcanzó su apogeo a mediados del siglo II gracias al comercio de larga distancia entre los territorios romano y persa.",
+      "source": "Getty Research Institute, exposición «The Legacy of Ancient Palmyra», sección «Ancient Palmyra»",
+      "url": "https://www.getty.edu/research/exhibitions_events/exhibitions/palmyra/ancient_palmyra.html"
+    },
+    {
+      "claim": "El arancel fiscal palmireno (CIS II 3913; PAT 0259) es un texto bilingüe en arameo y griego promulgado en el año 137 d.C. para regularizar la tributación local: los impuestos sobre los bienes que entraban y salían de la ciudad y que se originaban en su entorno inmediato, y sobre los oficios que se ejercían dentro de ella. No se refiere al comercio caravanero de larga distancia. El capítulo examina el papel respectivo del griego y del arameo, incluida la cuestión de qué lengua tuvo prioridad en la redacción, la intervención de autoridades romanas anteriores en la composición del texto y la posición social de los recaudadores. Recoge además la edición monográfica de Ilia Sholeimovich Shifman (1980, en ruso; reedición en inglés en 2014) y los trabajos de Michał Gawlikowski, que identificó la ubicación original de la piedra del arancel junto a un santuario de Rab-Asīrē y al ágora.",
+      "source": "John F. Healey, «Language, Law and Religion», cap. 7 de «Palmyra, the Mediterranean and Beyond», Cambridge University Press",
+      "url": "https://www.cambridge.org/core/books/abs/palmyra-the-mediterranean-and-beyond/language-law-and-religion/D5A35DE307EAD2CE9ED96D7F32928A50"
+    },
+    {
+      "claim": "Traducción académica del preámbulo del decreto: «Puesto que en tiempos anteriores la mayoría de las tasas no estaban recogidas en la ley fiscal, sino que se exigían por convención, estando escrito en el contrato que el recaudador hiciera sus exacciones conforme a la ley y a la costumbre, ocurría con frecuencia que surgían disputas sobre este asunto entre los comerciantes y los recaudadores». El consejo de la ciudad acordó en el año 137 d.C. revisar y publicar el arancel y las normas conforme a las cuales se gravaban las mercancías traídas a la ciudad y exportadas desde ella, con el fin de evitar en el futuro las disputas que habían surgido entre recaudadores y comerciantes, y ordenó que se inscribieran y expusieran en lugar público tanto las nuevas normas como las antiguas a las que sustituían. El decreto se emitió el 18 de Nisán del año 448 de la era seléucida, equivalente al 18 de abril del 137 d.C., estando reunidos en sesión ordinaria los arcontes y el consejo.",
+      "source": "J. F. Matthews, «The Tax Law of Palmyra: Evidence for Economic History in a City of the Roman East», Journal of Roman Studies 74 (1984); traducción del texto alojada en Ostia-Antica.org, sección portorium",
+      "url": "https://www.ostia-antica.org/dict/topics/portorium/images/palmyrene-tariff.pdf"
+    },
+    {
+      "claim": "«En 1881, el príncipe ruso-armenio Semión Semiónovich Abamélik-Lazarev, arqueólogo y geólogo, descubrió el Arancel Palmireno, hoy conservado en el Museo del Ermitage de San Petersburgo»: un monumento con una inscripción en griego y palmireno que detalla los derechos de aduana sobre importaciones y exportaciones.",
+      "source": "Ministère de la Culture (Francia), sitio «Palmyre», sección «Rediscovery in the 17th century»",
+      "url": "https://archeologie.culture.gouv.fr/palmyre/en/rediscovery-17th-century"
+    },
+    {
+      "claim": "Traslado de la estela. Abamélik-Lazarev inició las negociaciones entre los representantes de la embajada rusa en Jerusalén y el gobierno turco —Siria era entonces provincia del Imperio otomano— para llevar la estela inscrita al Ermitage imperial y poder estudiarla. El sultán Abdul Hamid II (1876-1909) dio su consentimiento al traslado como regalo diplomático del Imperio otomano al emperador ruso. El transporte se hizo posible en 1901. El «Arancel Palmireno» es un documento de época del emperador Adriano (137 d.C.) que fijaba la cuantía de los aranceles sobre la importación y exportación de determinados tipos de mercancías.",
+      "source": "State Hermitage Museum, página temática «Palmyrian Tariff»",
+      "url": "https://hermitagemuseum.org/learn/interesting_themes/palmira_tarif?lng=en"
+    }
+  ],
+  "do_not_use": [
+    "No decir que el arancel gravaba el comercio caravanero de larga distancia entre Roma y Persia. Es un impuesto municipal: grava lo que entra y sale del entorno inmediato de la ciudad y los oficios ejercidos dentro de ella. Confundirlo con el comercio de la seda es el error más repetido sobre este texto.",
+    "No dar las dimensiones de la losa. Circula la cifra «4,80» sin unidad legible en las fuentes consultadas; no se pudo confirmar si son metros y en qué medida. Mejor no citar tamaño.",
+    "No afirmar que es «la inscripción aramea más larga jamás hallada» sin matizar. La afirmación circula en repertorios en línea; las fuentes institucionales consultadas solo permiten decir que es la más extensa de las inscripciones bilingües palmirenas conocidas.",
+    "No enumerar mercancías concretas —sal, aceite, esclavos, perfumes— como si estuvieran verificadas. Las fuentes consultadas documentan las categorías de transporte (camello, burro, carro de burro) y las categorías generales (mercancías que entran y salen, oficios ejercidos en la ciudad), no la lista de artículos.",
+    "No presentar la cesión de la estela de 1901 como un expolio ni como una compra. Las fuentes la describen como un regalo diplomático del sultán Abdul Hamid II al zar Nicolás II, gestionado a través de la embajada rusa en Jerusalén.",
+    "No atribuir el decreto al emperador Adriano. Adriano reinaba en 137, y por eso se fecha el texto en su época, pero quien lo aprobó fue el consejo de la ciudad de Palmira en sesión ordinaria.",
+    "No enlazar la pieza con la destrucción de Palmira en 2015. Es un hecho distinto, no se verificó en esta investigación y arrastra la pieza a un terreno de actualidad que no le corresponde.",
+    "No dar por consultada directamente la página del Museo del Ermitage ni el PDF de Ostia-Antica: ambos se leyeron a través del texto indexado por el buscador, porque el sitio del Ermitage falla en la verificación del certificado y el PDF no se pudo abrir. Los datos que sostienen son los citados en `sources`, y no conviene ampliarlos sin volver a verificarlos.",
+    "No escribir «Palmyra» ni «Tadmor» como nombre principal en castellano. La forma establecida es Palmira."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-23-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "al-Kindi y la verdad que viene de fuera",
+    "hook": "La frase se repite como elogio de la mente abierta. La escribió un hombre que defendía, ante un califa, el derecho a leer a los griegos.",
+    "body": [
+      "Al-Kindi vivió en Bagdad entre el 800 y el 870. Dirigió uno de los dos grandes círculos de traducción del siglo IX, el que vertió al árabe a Aristóteles y a los neoplatónicos. Él no traducía: mediaba entre los mecenas de la corte y los eruditos cristianos de Siria que hacían el trabajo. El texto por el que se le conoce, «Sobre la filosofía primera», está dedicado al califa al-Mutásim, que reinó entre 833 y 842. La frase famosa abre el tratado y funciona como defensa: importar el pensamiento griego a la lengua del Corán no era pacífico, y al-Kindi empieza argumentando por qué está permitido.",
+      "El argumento tiene dos mitades y la segunda casi nunca se cita. La primera dice que no hay que avergonzarse de tomar la verdad venga de donde venga. La segunda dice por qué: la verdad no queda rebajada por quien la enuncia o la transmite. El mérito no viaja con el mensajero. Al-Kindi no pide tolerancia hacia los extranjeros; separa dos cosas que solemos pegar, el valor de una idea y el prestigio de quien la trae.",
+      "La historia del texto es el mejor comentario a la frase. Casi toda la obra filosófica de al-Kindi se habría perdido si no fuera por un solo manuscrito de Estambul: el códice Ayasofya 4832, copiado hacia el siglo XI, doscientos años después de su muerte. Doscientas treinta y dos hojas con más de cincuenta tratados. Los de al-Kindi no están solos: comparten volumen con obras de Thabit ibn Qurra y de Ibn al-Haytham. Quien escribió que la verdad no pertenece a quien la trae sobrevivió porque alguien cosió sus páginas junto a las de otros."
+    ],
+    "question": "¿Cuántas veces ha descartado usted una idea por quién se la estaba diciendo?",
+    "quote": {
+      "text": "No debemos avergonzarnos de admirar la verdad ni de adquirirla, venga de donde venga. Aunque venga de naciones lejanas y de pueblos extranjeros, para quien busca la verdad no hay nada de mayor valor que la verdad misma: no la rebaja ni la disminuye quien la enuncia o la transmite; a nadie rebaja la verdad, antes bien a todos ennoblece.",
+      "author": "al-Kindi",
+      "work": "«Sobre la filosofía primera», sección I, dedicada al califa al-Mutásim (h. 833-842)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "al-Kindi, Bagdad, siglo IX",
+    "subtitle": "El comienzo de un tratado dedicado a un califa",
+    "body": "No debemos avergonzarnos de admirar la verdad ni de adquirirla, venga de donde venga. A nadie rebaja la verdad; antes bien, a todos ennoblece."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlKindi",
+      "#Citas",
+      "#Bagdad"
+    ],
+    "extended": [
+      "#FilosofiaIslamica",
+      "#Traduccion",
+      "#Manuscritos",
+      "#Estambul",
+      "#SigloIX",
+      "#Aristoteles"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cita en «Sobre la filosofía primera», sección 1: «We must not be ashamed to admire the truth or to acquire it, from wherever it comes. Even if it should come from far-flung nations and foreign peoples, there is for the student of truth nothing more important than the truth, nor is the truth demeaned or diminished by the one who states or conveys it; no one is demeaned by the truth, rather all are ennobled by it». Datos del autor y de la obra: al-Kindi vivió hacia 800-870; «Sobre la filosofía primera» está dedicado al califa al-Mutásim, que reinó entre 833 y 842; la versión conservada del tratado es incompleta y comprende solo la primera parte, dividida en cuatro secciones, cuya primera sección es una exhortación al lector a honrar la sabiduría filosófica griega. Al-Kindi dirigió uno de los dos grandes grupos de traducción del siglo IX: su círculo vertió al árabe numerosas obras filosóficas y científicas griegas —Aristóteles, neoplatónicos, matemáticos y científicos— y él actuó como intermediario entre los mecenas califales y los eruditos cristianos sirios que realizaban materialmente las traducciones. La mayor parte de sus escritos filosóficos conservados se preserva en un único manuscrito de Estambul, editado por Abu Rida (1950 y 1953) y traducido por Adamson y Pormann (2012).",
+      "source": "Peter Adamson, «al-Kindi», Stanford Encyclopedia of Philosophy, Universidad de Stanford",
+      "url": "https://plato.stanford.edu/entries/al-kindi/"
+    },
+    {
+      "claim": "Ficha del manuscrito Estambul, Süleymaniye Kütüphanesi, Ayasofya 4832: siglo V de la hégira / XI d.C., con adiciones del siglo VIII/XIV. Papel pardo, II+232 folios, 22×12,5 cm, 32 líneas por página, escritura nasjí cuidada en tinta negra con correcciones marginales y diagramas geométricos. Estado de conservación deficiente: corrosión severa del papel por la tinta, manchas de humedad, cubierta ligeramente dañada. Reúne más de cincuenta obras matemáticas, astronómicas, astrológicas, filosóficas, meteorológicas y médicas en tres secciones: ff. 1-116, obras de Thabit ibn Qurra; ff. 121-144, tratados de Abu Sahl al-Kuhi; ff. 153 hasta el final, escritos de al-Kindi sobre filosofía, física y astronomía, junto con obras de Ibn al-Haytham, los Banu Musa y otros. Procedencia posiblemente de Jorasán; notas de propiedad documentadas desde 1173, y sellos de los sultanes Bayaceto II y Mahmud I.",
+      "source": "Ptolemaeus Arabus et Latinus, proyecto de la Bayerische Akademie der Wissenschaften (Academia de Ciencias de Baviera), ficha del manuscrito Ayasofya 4832",
+      "url": "https://ptolemaeus.badw.de/ms/963"
+    },
+    {
+      "claim": "Edición y traducción de referencia del corpus filosófico: Peter Adamson y Peter E. Pormann, «The Philosophical Works of al-Kindī», Oxford University Press, 2012, registrada en el repositorio institucional de investigación del King's College de Londres.",
+      "source": "King's College London, KCL Pure Research Portal, registro de la publicación «The Philosophical Works of al-Kindī»",
+      "url": "https://kclpure.kcl.ac.uk/portal/en/publications/the-philosophical-works-of-al-kind%C4%AB"
+    },
+    {
+      "claim": "El manuscrito Ayasofya 4832 es una colección de tratados matemáticos, filosóficos, meteorológicos y astronómicos de Thabit ibn Qurra, Abu Yusuf Yaqub al-Kindi y otros autores. Contiene además una de las pocas copias de «Sobre el intelecto» de al-Kindi que sobreviven en árabe, e incluye la obra por la que es más conocido, «Sobre la filosofía primera». Sin este manuscrito, muchas de sus obras filosóficas se habrían perdido.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «al-Kindi», sección sobre las obras conservadas, y ficha del manuscrito en Ptolemaeus Arabus et Latinus",
+      "url": "https://plato.stanford.edu/archives/spr2024/entries/al-kindi/"
+    }
+  ],
+  "do_not_use": [
+    "No atribuir la frase a Averroes, a Avicena ni a un proverbio árabe anónimo. Es el arranque de «Sobre la filosofía primera» de al-Kindi, y circula mal atribuida con frecuencia.",
+    "No presentarla como una declaración de tolerancia religiosa ni de convivencia entre pueblos. Es un argumento sobre las fuentes legítimas del conocimiento, dentro de un tratado de metafísica dedicado a un califa, y su función es justificar la incorporación de la filosofía griega al árabe.",
+    "No citar solo la primera mitad. Sin «no la rebaja ni la disminuye quien la enuncia o la transmite», la frase se queda en un elogio de la curiosidad; con esa mitad, separa el valor de la idea del prestigio de quien la trae, que es lo que al-Kindi estaba argumentando.",
+    "No dar «Rasa'il al-Kindi al-Falsafiyya» como título árabe del tratado. Ese es el título de la colección de epístolas filosóficas editada por Abu Rida; el tratado es «Fi al-Falsafa al-Ula», «Sobre la filosofía primera».",
+    "No decir que el tratado se conserva completo. La versión que ha llegado es incompleta: solo la primera parte, dividida en cuatro secciones.",
+    "No fechar el manuscrito Ayasofya 4832 en vida de al-Kindi. El códice es del siglo V de la hégira / XI d.C., unos doscientos años posterior a su muerte.",
+    "No afirmar que el orientalista alemán Hellmut Ritter descubrió el manuscrito en 1932. El dato circula en repertorios y en bibliografía secundaria, pero no se pudo confirmar en ninguna fuente institucional accesible en esta investigación: la entrada de Encyclopaedia Iranica devuelve error 403 y el artículo de la Universidad de Granada está en PDF, que no se pudo abrir.",
+    "No decir que al-Kindi tradujo del griego. No traducía: dirigía un círculo y mediaba entre los mecenas de la corte y los eruditos cristianos sirios que hacían las traducciones.",
+    "No vincular la pieza a la Casa de la Sabiduría de Bagdad. Es un relato muy difundido y discutido entre especialistas, y no se verificó aquí la relación concreta de al-Kindi con esa institución."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

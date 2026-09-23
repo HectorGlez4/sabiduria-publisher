@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-23-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Václav Havel y el interrogatorio a distancia de 1986",
+    "hook": "La frase se reparte como consuelo. Es la respuesta de un hombre vigilado a una pregunta incómoda, y la mitad que casi siempre se recorta es la última.",
+    "body": [
+      "Entre 1985 y 1986, el periodista checo Karel Hvížďala vivía exiliado en Alemania Occidental y quería entrevistar a Václav Havel, que seguía en Praga bajo vigilancia. No podían verse. Hvížďala hizo llegar las preguntas a Praga por valija diplomática y le envió además un magnetófono. Havel se encerró con el aparato en un piso prestado del barrio de Vinohrady y grabó catorce horas de respuestas. Hvížďala pasó las cintas a papel; Havel leyó la transcripción en Hrádeček, su casa de campo, y tachó tanto que acabó reescribiendo el libro entero a máquina. Olga Havlová leyó el borrador y dijo que aquello no parecía una entrevista sino un interrogatorio. Él añadió «a distancia» y ese quedó como título.",
+      "La frase famosa está en las páginas 156 y 157, y no es una reflexión suelta: es el comienzo de una respuesta larga a una pregunta concreta de Hvížďala, «¿ve usted ya en algún sitio, en los años ochenta, una pizca de esperanza?». Preguntársela a alguien en aquel país y en aquel momento era casi una provocación. Havel no contesta que sí ni que no. Rechaza la pregunta entera: separa la esperanza del pronóstico. No es una lectura del mundo, dice, es un estado del espíritu. Y remata con la condición que hace el trabajo: «sin importar cómo termine».",
+      "Esas cinco palabras son las que se caen casi siempre. Sin ellas, la frase promete que las cosas saldrán bien, que es exactamente lo que Havel se negó a decir. Con ellas, deja de ser un consuelo y se convierte en una exigencia: sostener algo porque tiene sentido, no porque vaya a salir. El libro se publicó en checo en Londres, en 1986, para su cincuenta cumpleaños. Se ha traducido a más de veinte lenguas."
+    ],
+    "question": "¿Qué sostendría usted aunque supiera de antemano que no va a salir?",
+    "quote": {
+      "text": "La esperanza, sencillamente, no es optimismo. No es la convicción de que algo va a salir bien, sino la certeza de que algo tiene sentido, sin importar cómo termine.",
+      "author": "Václav Havel",
+      "work": "«Dálkový výslech», conversación con Karel Hvížďala, 1986 (ed. Melantrich, 1989, pp. 156-157)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Václav Havel, 1986",
+    "subtitle": "Dictado en una cinta, en un piso prestado de Praga",
+    "body": "No es la convicción de que algo va a salir bien, sino la certeza de que algo tiene sentido, sin importar cómo termine."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#VaclavHavel",
+      "#Citas",
+      "#Praga"
+    ],
+    "extended": [
+      "#Checoslovaquia",
+      "#Disidencia",
+      "#Esperanza",
+      "#Literatura",
+      "#SigloXX",
+      "#EuropaCentral",
+      "#KarelHvizdala",
+      "#Samizdat"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Origen y texto exacto de la cita. El servicio de referencia de la Biblioteca Nacional de la República Checa documenta que la frase procede de «Dálkový výslech (rozhovor s Karlem Hvížďalou)», de Václav Havel y Karel Hvížďala, edición de Melantrich, Praga, 1989, ISBN 80-7023-038-X, páginas 156-157. Texto checo registrado: «Naděje prostě není optimismus. Není to přesvědčení, že něco dobře dopadne, ale jistota, že má něco smysl - bez ohledu, jak to dopadne». Es un fragmento de una respuesta extensa a la pregunta «Spatřujete v osmdesátých letech už někde špetku naděje?» («¿Ve usted ya en algún sitio, en los años ochenta, una pizca de esperanza?»). La conversación se hizo en 1985 y 1986, a distancia entre Checoslovaquia y Alemania Occidental.",
+      "source": "Ptejte se knihovny — servicio de referencia bibliográfica de la Národní knihovna ČR (Biblioteca Nacional de la República Checa), consulta sobre el origen de la cita",
+      "url": "https://www.ptejteseknihovny.cz/dotazy/puvod-citatu-nadeje-neni-to-presvedceni-ze-neco-dobre-dopadne-ale-jistota-ze-ma-neco-smysl-bez-ohledu-na-to-jak-to-dopadne"
+    },
+    {
+      "claim": "Cómo se hizo el libro, contado por Karel Hvížďala. Hvížďala envió las preguntas a Praga por valija diplomática y le hizo llegar a Havel un magnetófono. Havel se aisló en un piso prestado del barrio praguense de Vinohrady y grabó catorce horas de respuestas. Hvížďala pasó el material hablado a forma escrita. Havel revisó la transcripción en Hrádeček, su casa de campo, y recortó tanto que reescribió él mismo el manuscrito entero. El título lo originó Olga Havlová, que tras leer el borrador dijo que aquello se parecía más a un interrogatorio que a una entrevista; Havel añadió «na dálku» («a distancia») y resultó «Dálkový výslech». El libro apareció por primera vez en 1986, cuando Hvížďala estaba exiliado en Alemania.",
+      "source": "Český rozhlas Dvojka (Radio Checa), «Václav Havel namluvil ke knize Dálkový výslech 14 hodin. Potom v ní tak škrtal, že ji sám přepisoval, vzpomíná Karel Hvížďala»",
+      "url": "https://dvojka.rozhlas.cz/vaclav-havel-namluvil-ke-knize-dalkovy-vyslech-14-hodin-potom-v-ni-tak-skrtal-ze-7504436"
+    },
+    {
+      "claim": "Primera edición checa. «Dálkový výslech vyšel poprvé česky v Londýně v roce 1986»: el libro se publicó por primera vez en checo en Londres, en 1986. Una edición actualizada, con fotografías inéditas y prólogo de Petr Pithart, se presentó con ocasión del 85.º aniversario del nacimiento de Havel.",
+      "source": "Knihovna Václava Havla / Biblioteca Presidencial Václav Havel, ficha de «Dálkový výslech»",
+      "url": "https://www.vaclavhavel.cz/cs/index/videa/1519/dalkovy-vyslech"
+    },
+    {
+      "claim": "Edición inglesa del libro, que es la vía por la que la frase se difundió en el mundo: «Disturbing the Peace: A Conversation with Karel Hvížďala», Václav Havel, traducción de Paul Wilson, Alfred A. Knopf, Nueva York, primera edición estadounidense, 1990, 266 páginas, ISBN 0394584414.",
+      "source": "Ficha catalográfica del ejemplar en Internet Archive (ed. Knopf, 1990)",
+      "url": "https://archive.org/details/disturbingpeacec00have"
+    },
+    {
+      "claim": "Difusión del libro: la conversación se ha traducido a más de veinte lenguas, entre ellas el japonés y el chino, y es considerada la obra más personal de Havel: una confesión de su relación con las personas, el arte y la política, además de su biografía.",
+      "source": "Ficha editorial de «Dálkový výslech» en el catálogo Knihy Dobrovský",
+      "url": "https://www.knihydobrovsky.cz/kniha/dalkovy-vyslech-656318"
+    }
+  ],
+  "do_not_use": [
+    "No citar la frase recortada en «la esperanza no es la convicción de que algo va a salir bien, sino la certeza de que algo tiene sentido». Sin el cierre «sin importar cómo termine» la frase dice lo contrario de lo que Havel respondió: promete un desenlace favorable, que es justo lo que él se negó a prometer.",
+    "No rematar la pieza contando que tres años después Havel fue elegido presidente. Convierte la frase en una profecía cumplida, es decir, en la lectura que ella misma rechaza: el valor de la respuesta está en que no dependía del desenlace.",
+    "No presentar la cita como un texto escrito por Havel para ser publicado como aforismo. Es parte de una respuesta hablada, grabada en cinta, a una pregunta concreta de Karel Hvížďala, y después reescrita por él.",
+    "No atribuirla a un discurso presidencial, a un ensayo suelto ni a «El poder de los sin poder» (1978), que es otro texto y otro año.",
+    "No dar el castellano como traducción publicada. Aquí se traduce del texto checo tal como lo registra el servicio de referencia de la Biblioteca Nacional checa; la versión que circula en el mundo procede de la traducción inglesa de Paul Wilson (1990), que no se cotejó directamente en esta investigación.",
+    "No fijar el capítulo de la edición inglesa. Circula la referencia «Disturbing the Peace, cap. 5», pero no se pudo verificar el índice de la edición de Knopf en ninguna fuente accesible; la referencia verificada es a las páginas 156-157 de la edición checa de Melantrich (1989).",
+    "No decir que la entrevista fue por correspondencia escrita. Havel iba a responder por escrito, pero Hvížďala calculó que así tardarían años; por eso se recurrió al magnetófono.",
+    "No situar la grabación en Hrádeček. Havel grabó en un piso prestado de Vinohrady, en Praga; en Hrádeček revisó y reescribió la transcripción."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

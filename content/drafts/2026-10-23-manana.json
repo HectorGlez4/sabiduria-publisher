@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-23-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Torres Quevedo y el autómata ajedrecista de 1912",
+    "hook": "Cuarenta años antes de que existiera la expresión «inteligencia artificial», una máquina española jugaba al ajedrez sola. Lo que casi nadie cuenta es lo que hacía cuando el rival hacía trampa.",
+    "body": [
+      "En 1912 el ingeniero Leonardo Torres Quevedo terminó una máquina que jugaba al ajedrez sin nadie detrás. No jugaba una partida entera: jugaba un final, rey y torre contra rey. El humano llevaba el rey negro y se defendía como quisiera. Movía sus piezas con un brazo mecánico, leía las del rival con contactos eléctricos bajo el tablero y daba mate siempre, en menos de cincuenta movimientos. Un disco de fonógrafo anunciaba el jaque mate. No había nadie dentro ni nadie accionándola desde fuera.",
+      "La regla más extraña del aparato no tiene que ver con ganar. Si el contrario hacía una jugada ilegal, se encendía una luz y la máquina no respondía. A la tercera, dejaba de jugar del todo. Torres Quevedo no había construido aquello para vencer a nadie. Lo construyó como demostración de una tesis que publicó en 1914 en la Revista de la Real Academia de Ciencias Exactas, Físicas y Naturales, los «Ensayos sobre Automática»: veintinueve páginas en las que sostiene que pueden fabricarse autómatas dotados de órganos de sentido, capaces de modificar su conducta según lo que reciban del exterior. El ajedrez era el banco de pruebas, no el objetivo.",
+      "En 1951, en el congreso de París «Les machines à calculer et la pensée humaine», Gonzalo Torres Quevedo llevó la segunda versión del aparato, la de hacia 1920. Norbert Wiener, el hombre que dio nombre a la cibernética, se sentó a jugar contra ella con el rey negro: el bando que no puede salvarse. La máquina tenía casi cuarenta años. Se conserva en el Museo Torres Quevedo de la Escuela de Ingenieros de Caminos de Madrid, en la colección que su autor donó en 1928. Lo que aquel artefacto demostró no fue que una máquina pudiera calcular más rápido. Fue que podía decidir, y que podía negarse."
+    ],
+    "question": "¿Qué le pedimos hoy a una máquina: que acierte, o que sepa cuándo detenerse?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El ajedrecista, 1912",
+    "subtitle": "La máquina que se negaba a seguir jugando",
+    "body": "Rey y torre contra rey. Movía sus piezas sola y daba mate siempre. Si el rival hacía una jugada ilegal, se encendía una luz y no respondía. A la tercera, dejaba de jugar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#TorresQuevedo",
+      "#HistoriaDeLaTecnologia",
+      "#Ajedrez"
+    ],
+    "extended": [
+      "#Automatas",
+      "#InteligenciaArtificial",
+      "#Cibernetica",
+      "#NorbertWiener",
+      "#Ingenieria",
+      "#SigloXX",
+      "#Espana",
+      "#HistoriaDeLaCiencia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El autómata ajedrecista fue construido por Leonardo Torres Quevedo en 1912 y presentado en París en 1914. Juega el final de rey y torre contra rey: la máquina observa la jugada del contrario y responde en consecuencia, sin operador humano. La segunda versión, de hacia 1920, sustituyó el mecanismo de ejes y tambores por electroimanes situados bajo el tablero, de modo que las piezas parecían moverse solas; no supuso un avance mecánico esencial sobre la primera. Torres Quevedo diseñó el aparato para que «jugara sabiendo lo que hace», no para que repitiera partidas memorizadas. El Museo Torres Quevedo conserva la colección completa de aparatos y accesorios que Leonardo Torres Quevedo donó a la Escuela de Ingenieros de Caminos en 1928.",
+      "source": "Museo Torres Quevedo, Escuela Técnica Superior de Ingenieros de Caminos, Canales y Puertos, Universidad Politécnica de Madrid — ficha «Autómata ajedrecista»",
+      "url": "https://blogs.upm.es/museotorresquevedocaminos/automata-ajedrecista/"
+    },
+    {
+      "claim": "Funcionamiento y reglas del aparato. Jugaba el final KRK (rey y torre contra rey) mediante un conjunto de seis operaciones condicionadas a la posición de las piezas; el algoritmo era subóptimo, pero ganaba en menos de cincuenta movimientos contra cualquier defensa. Ante una jugada ilegal del contrario «se enciende una luz y el autómata se niega a mover; una vez hechas tres jugadas ilegales, el autómata deja de jugar por completo» (según el análisis de Henri Vigneron). Al producirse el mate, «el disco pronuncia la frase correspondiente y se enciende una luz que indica el mate». La segunda versión fue presentada a un público amplio y explicada a Norbert Wiener en el congreso cibernético de París de 1951.",
+      "source": "Chess Programming Wiki, entrada «El Ajedrecista», con la bibliografía de Henri Vigneron («Les automates», La Nature, 1914) y de la historia del ajedrez por computadora",
+      "url": "https://www.chessprogramming.org/El_Ajedrecista"
+    },
+    {
+      "claim": "El Ajedrecista fue terminado en 1912 y jugaba un final simplificado de tres piezas —rey y torre blancos contra rey negro— en un tablero propio y sin operador humano: usaba un brazo mecánico para mover y sensores eléctricos para detectar las respuestas del contrario. Fue mencionado en Scientific American como «Electric Automaton» el 16 de mayo de 1914 y como «Torres and His Remarkable Automatic Devices» el 6 de noviembre de 1915. Una segunda versión electromecánica, más compacta, se completó hacia 1920.",
+      "source": "History of Information (Jeremy Norman), entrada «Torres y Quevedo Invents El Ajedrecista, the First Decision-Making Automaton», con las referencias de Scientific American de 1914 y 1915",
+      "url": "https://historyofinformation.com/detail.php?entryid=678"
+    },
+    {
+      "claim": "En 1951, en el congreso de París «Les machines à calculer et la pensée humaine», Gonzalo Torres Quevedo —hijo de Leonardo, que había participado en el desarrollo de la segunda versión del ajedrecista— expuso la máquina y se la demostró a Norbert Wiener, que jugó contra ella. Aun jugando solo el final de rey y torre contra rey, el ajedrecista puede considerarse la primera computadora ajedrecística del mundo, e incluso un robot capaz de mover sus propias piezas.",
+      "source": "Chess Programming Wiki, entrada «Leonardo Torres y Quevedo»",
+      "url": "https://www.chessprogramming.org/Leonardo_Torres_y_Quevedo"
+    },
+    {
+      "claim": "«Ensayos sobre Automática. Su definición. Extensión teórica de sus aplicaciones» se publicó en enero de 1914 en la Revista de la Real Academia de Ciencias Exactas, Físicas y Naturales, con tirada aparte de la Imprenta del Renacimiento (Madrid, 1914), de veintinueve páginas. En él Torres Quevedo estudia las posibilidades prácticas de aplicar automatismos y expone que pueden construirse autómatas dotados de órganos de sentido, capaces de recibir impresiones del exterior y de modificar su conducta en función de ellas.",
+      "source": "Real Academia Europea de Doctores, «Torres Quevedo, desde sus inventos», y ficha del académico Leonardo Torres Quevedo en la Real Academia Española",
+      "url": "https://raed.academy/torres-quevedo-desde-sus-inventos/"
+    },
+    {
+      "claim": "Ficha biográfica institucional de Leonardo Torres Quevedo (Molledo, Cantabria, 1852 – Madrid, 1936), ingeniero de caminos, académico de la Real Academia de Ciencias Exactas, Físicas y Naturales y de la Real Academia Española.",
+      "source": "Real Academia Española, ficha del académico Leonardo Torres Quevedo",
+      "url": "https://www.rae.es/academico/leonardo-torres-quevedo"
+    }
+  ],
+  "do_not_use": [
+    "No llamar al ajedrecista «el primer ordenador». Es un autómata de propósito único que resuelve un final de ajedrez; no es una máquina programable de propósito general. La atribución de «primer ordenador» que algunos autores hacen se refiere al aritmómetro electromecánico de 1920, es un asunto discutido, y no procede mezclarla con el ajedrecista.",
+    "No decir que jugaba al ajedrez completo ni que jugaba partidas. Solo resolvía el final de rey y torre contra rey, con el humano llevando el rey negro.",
+    "No decir que daba mate en el mínimo número de jugadas. El algoritmo era subóptimo: garantizaba el mate en menos de cincuenta movimientos, no el mate más corto.",
+    "No presentarlo como la primera máquina de ajedrez de la historia sin matizar. El Turco de Wolfgang von Kempelen (1770) fue anterior y célebre, pero era un fraude: ocultaba a un jugador humano dentro del mueble. El mérito del ajedrecista es ser el primero que de verdad funcionaba solo.",
+    "No dar por buena la primera exhibición en Valladolid en 1913, dato que circula en repertorios en línea. La ficha del Museo Torres Quevedo solo documenta la presentación de París en 1914, y no se localizó fuente institucional para la de Valladolid.",
+    "No fijar la segunda versión en 1922. La ficha del museo la sitúa hacia 1920; otras fuentes dan 1920 o 1922, así que conviene escribir «hacia 1920».",
+    "No afirmar que Torres Quevedo anticipó la inteligencia artificial «sabiendo lo que hacía» ni atribuirle la expresión. La expresión «inteligencia artificial» es de 1955-1956, casi veinte años posterior a su muerte; lo que él escribió es una teoría de los autómatas con órganos de sentido.",
+    "No describir el resultado de la partida de Norbert Wiener en 1951 con detalle de jugadas ni afirmar que fue una partida completa: las fuentes consultadas registran que jugó contra la máquina en el congreso, no la transcripción del encuentro."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
