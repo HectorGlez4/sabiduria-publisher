@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-22-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Ovidio y la gota que horada la piedra",
+    "hook": "La frase latina que se cuelga en las aulas para enseñar constancia tiene cuatro palabras que Ovidio no escribió, y en el poema original dice justo lo contrario.",
+    "body": [
+      "«Gutta cavat lapidem»: la gota horada la piedra. Está en el verso 5 de la décima carta del libro cuarto de las «Cartas desde el Ponto», dirigida al poeta Albinovano. Ovidio la escribe en Tomis, en el sexto verano de su destierro: el poema empieza contando eso, seis veranos entre los getas vestidos de pieles. Luego pregunta a su amigo qué pedernal, qué hierro puede compararse a su dureza. Y enumera: la gota, el anillo que se gasta con el uso, la reja del arado que se desgasta contra la tierra. La conclusión llega en el verso siguiente: el tiempo voraz lo destruirá todo menos a él; hasta la muerte se detiene, vencida por su resistencia. No es un elogio de la constancia. Es la queja de un hombre al que ni siquiera el desgaste alcanza.",
+      "Los tres ejemplos no son suyos. Medio siglo antes, Lucrecio los había puesto juntos en «De la naturaleza de las cosas», libro I: el anillo que adelgaza en el dedo, la caída de la gota que ahueca la piedra, la reja de hierro que mengua sin que se note en los campos. Lucrecio los usaba para demostrar que existen partículas invisibles: vemos el efecto sin ver la causa. Ovidio tomó la serie entera y la volvió contra sí mismo. Él mismo ya había usado la imagen en clave alegre, años antes, en el «Arte de amar»: qué hay más duro que la roca, qué más blando que el agua; y sin embargo el agua ahueca la roca, así que insiste.",
+      "La versión que circula, «gutta cavat lapidem non vi sed saepe cadendo» —no por la fuerza, sino por caer a menudo—, añade una explicación que Ovidio no escribió: un remate medieval, con variante escolar incluida, «non vi sed saepe legendo». La moraleja está en la parte añadida. Sin ella, la piedra solo se gasta."
+    ],
+    "question": "¿Cuántas frases que repetimos como consejo las escribió alguien que se estaba quejando?",
+    "quote": {
+      "text": "La gota horada la piedra, el anillo se gasta con el uso, la reja curva se desgasta contra la tierra apretada. El tiempo voraz lo destruirá todo salvo a mí: hasta la muerte se detiene, vencida por mi dureza.",
+      "author": "Ovidio",
+      "work": "«Cartas desde el Ponto» IV, 10, 5-8",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Ovidio en el destierro",
+    "subtitle": "La gota, el anillo y la reja del arado",
+    "body": "El tiempo voraz lo destruirá todo salvo a mí: hasta la muerte se detiene, vencida por mi dureza."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Ovidio",
+      "#Latin",
+      "#CitasMalAtribuidas"
+    ],
+    "extended": [
+      "#Lucrecio",
+      "#PoesiaLatina",
+      "#RomaAntigua",
+      "#Destierro",
+      "#Filologia",
+      "#ArteDeAmar",
+      "#Literatura",
+      "#Clasicos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de Ovidio, «Epistulae ex Ponto» IV, 10, versos 1-10, dirigidos a Albinovano: ‘Haec mihi Cimmerio bis tertia ducitur aestas / litore pellitos inter agenda Getas. / Ecquos tu silices, ecquod, carissime, ferrum / duritiae confers, Albinouane, meae? / Gutta cauat lapidem, consumitur anulus usu, / atteritur pressa uomer aduncus humo. / Tempus edax igitur praeter nos omnia perdet: / cessat duritia mors quoque uicta mea. / Exemplum est animi nimium patientis Vlixes / iactatus dubio per duo lustra mari…’. El poema se abre declarando que es el sexto verano que pasa en la orilla cimeria entre los getas vestidos de pieles. La frase célebre es el verso 5; el verso 8 dice que incluso la muerte cede, vencida por su dureza. En ninguno de estos versos aparece la fórmula ‘non vi sed saepe cadendo’.",
+      "source": "The Latin Library, texto de Ovidio, «Epistulae ex Ponto», libro IV (edición en línea con grafía en u/v antigua)",
+      "url": "https://www.thelatinlibrary.com/ovid/ovid.ponto4.shtml"
+    },
+    {
+      "claim": "Lucrecio, «De rerum natura» I, en torno al verso 313: ‘quin etiam multis solis redeuntibus annis / anulus in digito subter tenuatur habendo, / stilicidi casus lapidem cavat, uncus aratri / ferreus occulte decrescit vomer in arvis’. Es decir: el anillo adelgaza en el dedo con los años, la caída de la gota ahueca la piedra y la reja de hierro del arado mengua sin verse en los campos. Lucrecio emplea los tres ejemplos para sostener que existen partículas materiales imperceptibles, ya que observamos sus efectos sin percibirlas. Son los mismos tres ejemplos —anillo, gota, reja— que Ovidio reúne en «Ex Ponto» IV, 10, 5-6.",
+      "source": "The Latin Library, Lucrecio, «De rerum natura», libro I",
+      "url": "https://www.thelatinlibrary.com/lucretius/lucretius1.shtml"
+    },
+    {
+      "claim": "Ovidio, «Ars amatoria» I, versos 475-476: ‘Quid magis est saxo durum, quid mollius unda? / Dura tamen molli saxa cavantur aqua’. ¿Qué hay más duro que la roca, qué más blando que el agua? Y sin embargo las duras rocas se ahuecan con el agua blanda. El pasaje continúa: ‘Penelopen ipsam, persta modo, tempore vinces’, insiste y con el tiempo vencerás incluso a Penélope. Aquí la imagen sí funciona como consejo de insistencia, en un poema anterior al destierro.",
+      "source": "The Latin Library, Ovidio, «Ars amatoria», libro I",
+      "url": "https://www.thelatinlibrary.com/ovid/ovid.artis1.shtml"
+    },
+    {
+      "claim": "«Gutta cavat lapidem» procede de Ovidio, «Epistulae ex Ponto» IV, 10, 5, con la continuación ‘consumitur anulus usu’. El añadido ‘non vi, sed saepe cadendo’ —no por la fuerza, sino por caer a menudo— data de la Edad Media, y circuló también con la variante escolar ‘non vi, sed saepe legendo’, no por la fuerza sino por leer a menudo. Se señala además como precedente griego una sentencia de Quérilo de Samos (siglo V a. C.), ‘πέτρην κοιλαίνει ῥανὶς ὕδατος ἐνδελεχείῃ’, y como paralelo latino anterior Lucrecio, «De rerum natura» I, 313, ‘stillicidii casus lapidem cavat’; el propio Ovidio retoma la imagen en «Ars amatoria» I, 475-476.",
+      "source": "Dick Wursten, «A water drop hollows a stone…», recopilación filológica que sigue una columna de Bart Mesotten en «De Standaard» (28 de junio de 2002)",
+      "url": "https://culture.wursten.be/a-water-drop-hollows-a-stone/"
+    }
+  ],
+  "do_not_use": [
+    "No citar «gutta cavat lapidem non vi sed saepe cadendo» como frase de Ovidio. Las cuatro palabras finales no están en «Ex Ponto» IV, 10, comprobado contra el texto del poema. Son un remate medieval.",
+    "No presentar el origen medieval concreto del añadido como establecido. Que no es de Ovidio se verifica directamente contra el texto latino; quién y cuándo lo añadió no se determinó en esta sesión y la fuente que lo afirma no es una edición crítica.",
+    "No decir que Ovidio inventó la imagen. Lucrecio reúne los mismos tres ejemplos —anillo, gota, reja de arado— en «De rerum natura» I, medio siglo antes, y con otro propósito: demostrar la existencia de partículas imperceptibles.",
+    "No usar el pasaje de «Ex Ponto» como elogio de la perseverancia. En su contexto es lo contrario: todo se desgasta menos el desterrado, y por eso se queja. El uso motivacional cabe en «Ars amatoria» I, 475-476, que es otro poema y otro tono.",
+    "No fechar la carta en un año concreto. El texto dice que es el sexto verano en el destierro; convertir eso en una fecha exacta exige fijar el año del inicio de la relegación, que no se verificó aquí.",
+    "No confundir las «Cartas desde el Ponto» con las «Tristes»: son dos colecciones distintas del mismo destierro.",
+    "No atribuir a Ovidio la variante escolar «non vi sed saepe legendo».",
+    "No dar por verificado el fragmento griego de Quérilo de Samos. Se recoge aquí como precedente citado por la bibliografía divulgativa, sin edición crítica consultada; no usarlo como cita atribuida.",
+    "No traducir «consumitur anulus usu» como si el anillo desapareciera. Se gasta, adelgaza con el uso; es un desgaste gradual, que es justo el punto.",
+    "No presentar The Latin Library como edición crítica. Es un repositorio de textos latinos en línea, útil para verificar la letra del pasaje; para variantes textuales hace falta una edición científica."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

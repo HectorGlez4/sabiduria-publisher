@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-22-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "la presa de Marib y el reino de Saba",
+    "hook": "Una obra hidráulica sostuvo un reino durante mil trescientos años. Cuando por fin cedió, la historia no la recordó como una falla de ingeniería, sino como un castigo.",
+    "body": [
+      "En el wadi Dhana, al este de lo que hoy es Saná, los sabeos levantaron un muro de tierra y piedra de quince metros de alto y seiscientos cincuenta de largo: casi el doble de largo que la presa Hoover. No servía para embalsar agua todo el año. Servía para desviar las crecidas del monzón hacia un sistema de compuertas y canales que podía regar hasta diez mil hectáreas. Se empezó a construir en el siglo VIII antes de nuestra era y siguió funcionando, con reparaciones sucesivas, hasta los siglos V o VI de la nuestra. La UNESCO lo describe como un logro técnico sin paralelo en la Arabia meridional antigua, que dio lugar a uno de los mayores oasis artificiales de la antigüedad. De ese oasis vivía Marib, capital de Saba, que controlaba buena parte de la ruta del incienso.",
+      "Entre mediados del siglo VI y el año 632 la presa se rompió por última vez y no volvió a repararse. La gente se fue. El episodio quedó registrado en el Corán, en la sura 34, que lleva el nombre de Saba: los dos huertos, el de la derecha y el de la izquierda, y la inundación que los borra. Mil trescientos años de mantenimiento continuo se comprimieron en una lección moral. Es un patrón que se repite: cuando una infraestructura falla, lo que sobrevive en la memoria colectiva casi nunca es el informe técnico.",
+      "El 25 de enero de 2023, en una sesión de urgencia, el Comité del Patrimonio Mundial inscribió los siete sitios de Marib y Sirwah en la lista del Patrimonio Mundial y, el mismo día, en la de patrimonio en peligro. La candidatura la acompañó el Instituto Arqueológico Alemán, que trabaja allí desde hace décadas. La urgencia tenía motivo: en junio de 2015, un ataque aéreo de la coalición encabezada por Arabia Saudí dañó la torre de la compuerta norte. Esa pieza había resistido quince siglos a la intemperie."
+    ],
+    "question": "¿Cuánto de lo que damos por permanente depende de un mantenimiento que nadie ve?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La presa de Marib",
+    "subtitle": "Mil trescientos años de mantenimiento",
+    "body": "Quince metros de alto, seiscientos cincuenta de largo, diez mil hectáreas de regadío en el desierto. Cuando cedió, el recuerdo que quedó no fue el de una obra de ingeniería, sino el de un castigo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Saba",
+      "#Yemen",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Marib",
+      "#PatrimonioMundial",
+      "#UNESCO",
+      "#Ingenieria",
+      "#RutaDelIncienso",
+      "#ArabiaAntigua",
+      "#HistoriaAntigua",
+      "#Sabeos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Comité del Patrimonio Mundial inscribió el 25 de enero de 2023, mediante procedimiento de urgencia, el bien en serie «Landmarks of the Ancient Kingdom of Saba, Marib» (Yemen), compuesto por siete sitios arqueológicos, y lo incluyó simultáneamente en la Lista del Patrimonio Mundial en Peligro por las amenazas de destrucción derivadas del conflicto en curso. Los sitios atestiguan los logros arquitectónicos, estéticos y tecnológicos del reino de Saba desde el I milenio a. C. hasta la llegada del islam, hacia 630, así como el control sabeo de buena parte de la ruta del incienso en la península arábiga y los intercambios con el Mediterráneo y África oriental. La infraestructura de regadío de Marib demuestra una «capacidad técnica en ingeniería hidrológica y agricultura a una escala sin paralelo en la Arabia meridional antigua», y creó «el mayor oasis artificial de la antigüedad».",
+      "source": "UNESCO, «Landmarks of Ancient Kingdom of Saba, Marib (Yemen) added to UNESCO's World Heritage List»",
+      "url": "https://www.unesco.org/en/articles/landmarks-ancient-kingdom-saba-marib-yemen-added-unescos-world-heritage-list"
+    },
+    {
+      "claim": "Nota del Instituto Arqueológico Alemán (DAI) sobre la inscripción: el 25 de enero de 2023, en una sesión de urgencia, el Comité del Patrimonio Mundial de la UNESCO inscribió tres bienes, entre ellos los sitios arqueológicos sabeos de Marib y Sirwah, en Yemen. La UNESCO destacó la antigua infraestructura de regadío de Marib como «un logro técnico sin parangón en la Arabia meridional antigua» en manejo del agua y agricultura, que dio lugar a «uno de los mayores oasis artificiales de la antigüedad». El DAI asesoró y acompañó la candidatura y mantiene allí varios proyectos de investigación aplicada a la conservación, en un contexto en que los monumentos surarábigos sufren destrucciones masivas desde el estallido del conflicto.",
+      "source": "Deutsches Archäologisches Institut, sala de prensa, «Landmarks of Ancient Kingdom of Saba, Marib (Yemen) zum Welterbe erklärt»",
+      "url": "https://www.dainst.org/en/newsroom/landmarks-of-ancient-kingdom-of-saba-marib-yemen-zum-welterbe-erklaert/63"
+    },
+    {
+      "claim": "La Gran Presa de Marib medía quince metros de alto (50 pies) y seiscientos cincuenta metros de largo (2.100 pies), «casi el doble de larga que la presa Hoover». Se construyó desde el siglo VIII a. C. y estuvo en uso hasta los siglos V o VI d. C. Su sistema de compuertas encauzaba la escorrentía del monzón hacia canales de riego y podía cubrir hasta diez mil hectáreas (25.000 acres) de tierra de cultivo. Entre mediados del siglo VI y el año 632 d. C. la presa se rompió por última vez, episodio que el Corán menciona como castigo divino. En junio de 2015 un ataque aéreo de la coalición encabezada por Arabia Saudí dañó la torre de la compuerta norte. El reportaje cita a Iris Gerlach, de la sede en Saná del Instituto Arqueológico Alemán, a Alessandra Avanzini, de la Universidad de Pisa, y a la Autoridad General de Antigüedades y Museos de Yemen.",
+      "source": "National Geographic, «'Engineering Marvel' of Queen of Sheba's City Damaged in Airstrike» (3 de junio de 2015)",
+      "url": "https://www.nationalgeographic.com/science/article/150603-Yemen-ancient-Sheba-dam-heritage-destruction-Middle-East-archaeology"
+    },
+    {
+      "claim": "Corán, sura 34, titulada «Sabaʾ» (Saba), versículo 15: «Ciertamente había un signo para [la tribu de] Saba en su propia tierra: dos huertos, uno a la derecha y otro a la izquierda». Los versículos siguientes narran la inundación que destruye los huertos y la dispersión del pueblo.",
+      "source": "Texto coránico, sura 34 (Sabaʾ), en Quran.com",
+      "url": "https://quran.com/34/15-17"
+    }
+  ],
+  "do_not_use": [
+    "No decir que la presa de Marib era un embalse de almacenamiento. Era una obra de desviación: retenía y encauzaba las crecidas estacionales del monzón hacia compuertas y canales. Llamarla «el embalse más antiguo del mundo» falsea su función.",
+    "No dar una única fecha de construcción. Se levantó y rehízo en fases a lo largo de más de un milenio; el siglo VIII a. C. es el inicio, no la obra terminada.",
+    "No fechar la rotura final en un año concreto. Las fuentes consultadas la sitúan entre mediados del siglo VI y el año 632; circulan cifras como 570 o 575 que no se verificaron aquí.",
+    "No vincular la rotura final con el nacimiento de Mahoma ni con el «año del elefante». Esa asociación es tradicional y no está establecida arqueológicamente.",
+    "No presentar el relato coránico como crónica histórica ni como su desmentido. La sura 34 registra el hecho en clave moral; el dato arqueológico y el texto religioso son dos registros distintos.",
+    "No usar la reina de Saba como personaje histórico documentado de Marib. Es figura bíblica y coránica; no hay inscripción sabea que la nombre, y National Geographic la menciona solo como referencia popular al sitio.",
+    "No afirmar que el ataque aéreo de 2015 destruyó la presa antigua. Dañó la torre de la compuerta norte; la presa moderna de Marib, construida en los años ochenta, es una obra distinta y está aguas arriba.",
+    "Dato prometedor pero NO verificado aquí, no usarlo hasta comprobarlo en la fuente original: según Ueli Brunner (1983), los sedimentos depositados por el riego elevaron el suelo del oasis de Marib más de treinta metros, a un ritmo medio de unos 1,1 cm al año, y el oasis se dividía en el sur, Yasrán (5.300 ha), y el norte, Abyan (3.750 ha). Estas cifras aparecen en la entrada «Maʾrib» del proyecto Ancient Arabia (ancientarabia.huma-num.fr), que en esta sesión devolvió error 403 y no pudo leerse directamente.",
+    "Dato NO verificado aquí: la inscripción sabea CIH 541, atribuida a Abraha y fechada en 548, con 136 líneas, sería el último testimonio epigráfico de una reparación de la presa y detalla los suministros empleados. No se consiguió una fuente académica legible en esta sesión: la bibliografía especializada (Norbert Nebes, «A new Abraha inscription from the Great Dam of Mārib», PSAS 34, 2004, pp. 221-230) solo estaba disponible en PDF."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

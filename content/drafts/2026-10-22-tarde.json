@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-22-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Amílcar Cabral y las palabras de orden de 1965",
+    "hook": "La frase se repite hoy como una máxima sobre la honestidad. En el documento original es la última instrucción de una lista, y va dirigida a los propios cuadros de un partido en guerra.",
+    "body": [
+      "En noviembre de 1965, en plena guerra contra el ejército portugués, Amílcar Cabral hizo circular entre los responsables del PAIGC un folleto de treinta y cinco páginas: «Palavras de Ordem Gerais». Lo distribuyó la Comisión de Organización, Formación Política e Ideología del partido. Se conserva en el Arquivo de História Social de la Universidad de Lisboa, con la signatura PT-AHS-ICS-CAHS-MNA-025. El texto no empieza con una consigna. Empieza recordando para qué pelea la gente —«no luchan por ideas, por las cosas que alguien tiene en la cabeza», sino por vivir mejor y en paz— y sigue con una confesión: hay que reconocer en conciencia que ha habido muchas faltas y errores en la acción del partido, política y militar.",
+      "Lo que viene después son catorce bloques de instrucciones concretas: la movilización política deficiente, los fallos de coordinación militar, las escuelas en las zonas liberadas, la emigración de los jóvenes, el trabajo clandestino en el territorio ocupado, el estudio serio que se exige a los dirigentes. La frase famosa no abre el documento: lo cierra. Es el final del último punto, el de la democracia revolucionaria, y no habla de decirle la verdad al enemigo ni al mundo. Habla de no mentirle al propio pueblo ni a los propios militantes sobre las derrotas.",
+      "Al inglés llegó en extractos que publicó el historiador Basil Davidson en 1969, y de ahí a la traducción de Richard Handyside que la volvió lema. Convertida en lema, perdió lo que la sostenía: la lista de errores admitidos antes de exigir nada. Una organización que prohíbe anunciar victorias fáciles se está prohibiendo el consuelo más barato que tiene."
+    ],
+    "question": "¿Qué cambia en una organización cuando se obliga a contar también lo que salió mal?",
+    "quote": {
+      "text": "No le oculten nada a las masas de nuestro pueblo. No cuenten mentiras. Desenmascaren las mentiras cada vez que se digan. No disimulen las dificultades, los errores, los fracasos. No reclamen victorias fáciles.",
+      "author": "Amílcar Cabral",
+      "work": "«Palavras de Ordem Gerais», directiva del PAIGC, noviembre de 1965",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Amílcar Cabral, 1965",
+    "subtitle": "La última línea de una directiva de guerra",
+    "body": "No disimulen las dificultades, los errores, los fracasos. No reclamen victorias fáciles."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AmilcarCabral",
+      "#GuineaBisau",
+      "#Citas"
+    ],
+    "extended": [
+      "#CaboVerde",
+      "#PAIGC",
+      "#Africa",
+      "#HistoriaDeAfrica",
+      "#Descolonizacion",
+      "#SigloXX",
+      "#BasilDavidson",
+      "#Honestidad"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Ficha archivística de «Palavras de Ordem Gerais: do camarada Amílcar Cabral aos responsáveis do Partido». Fecha: noviembre de 1965. Autor: Amílcar Cabral. Fondo productor: PAIGC (Partido Africano da Independência da Guiné e Cabo Verde). Descripción física: 1 documento, 35 páginas, en papel. Signatura: PT-AHS-ICS-CAHS-MNA-025 (caja 1, antigua referencia B25). Contenido: folleto distribuido por la Comisión de Organización, Formación Política e Ideología del PAIGC con directivas generales de Cabral a los responsables del partido. Institución depositaria: Arquivo de História Social, Instituto de Ciências Sociais, Universidade de Lisboa.",
+      "source": "Arquivo de História Social, Instituto de Ciências Sociais da Universidade de Lisboa, ficha del documento PT-AHS-ICS-CAHS-MNA-025",
+      "url": "https://www.ahsocial.ics.ulisboa.pt/atom/index.php/palavras-de-ordem-gerais-do-camarada-amilcar-cabral-aos-responsaveis-do-partido"
+    },
+    {
+      "claim": "Texto inglés de la directiva de 1965. Pasaje final: ‘We must practise revolutionary democracy in every aspect of our Party life. Every responsible member must have the courage of his responsibilities… Hide nothing from the masses of our people. Tell no lies. Expose lies whenever they are told. Mask no difficulties, mistakes, failures. Claim no easy victories.’ La nota bibliográfica del archivo indica: escrito en 1965, publicado por primera vez en 1969, tomado de Amilcar Cabral, «Revolution in Guinea» (Stage 1, Londres, 1974, pp. 70-72), traducción de Richard Handyside; se trata de extractos de una directiva de la dirección del partido de 1965 dirigida a los cuadros militares y civiles del movimiento de liberación.",
+      "source": "Marxists Internet Archive, sección África, «Tell no lies, claim no easy victories…» (Amilcar Cabral, 1965)",
+      "url": "https://www.marxists.org/subject/africa/cabral/1965/tnlcnev.htm"
+    },
+    {
+      "claim": "Estructura del documento. Abre con el principio de que ‘el pueblo no lucha por ideas, por las cosas que alguien tiene en la cabeza; lucha por conquistar beneficios materiales, por vivir mejor y en paz’, y sigue de inmediato con el reconocimiento de los propios errores: ‘debemos reconocer en conciencia que ha habido muchas faltas y errores en nuestra acción, sea política o militar’. A continuación desarrolla catorce bloques: errores políticos y militares, deficiencias de movilización política, fallos de coordinación militar, el combate contra el militarismo entre los combatientes, la eliminación de la complacencia, la educación y las escuelas en las zonas liberadas, la emigración de la juventud, la normalización de la vida política en el territorio liberado, el trabajo clandestino en la zona ocupada, la formación política de las fuerzas armadas, el combate al miedo y a la ignorancia, la exigencia de estudio serio a los dirigentes, la propaganda dirigida a las tropas enemigas y, por último, la democracia revolucionaria. El pasaje ‘Tell no lies… Claim no easy victories’ aparece al final del documento, como principio de cierre.",
+      "source": "Marxists Internet Archive, sección África, texto íntegro de la directiva de 1965",
+      "url": "https://www.marxists.org/subject/africa/cabral/1965/tnlcnev.htm"
+    },
+    {
+      "claim": "Contexto y difusión. La directiva se emitió en 1965, en el momento álgido de la lucha armada del PAIGC, y señalaba las debilidades del partido: ‘ha habido muchas faltas y errores en nuestra acción, sea política o militar: un número importante de cosas que deberíamos haber hecho no las hemos hecho a tiempo, o no las hemos hecho en absoluto’. Cabral recuerda a los cuadros que son militantes políticos armados y no simplemente soldados. Los extractos se publicaron por primera vez en inglés en «The Liberation of Guiné: Aspects of an African Revolution», del historiador británico Basil Davidson (1969), quien describió a Cabral como ‘no solo el inspirador del PAIGC, sino su dirigente y su crítico implacable’.",
+      "source": "Liberation School, «Amílcar Cabral: liberator, theorist, educator» (reseña académica del cincuentenario, con citas del directorio de 1965 y de Basil Davidson)",
+      "url": "https://liberationschool.org/amilcar-cabral-liberator-theorist-educator/"
+    },
+    {
+      "claim": "Existencia y catalogación de la edición original portuguesa: «Palavras de ordem gerais do camarada Amílcar Cabral aos responsáveis do partido, novembro de 1965», editada por la Comissão de Organização, Formação Política e Ideológica del PAIGC.",
+      "source": "Registro bibliográfico del folleto original en Google Books",
+      "url": "https://books.google.com/books/about/Palavras_de_ordem_gerais_do_camarada_Ami.html?id=Dqy8HAAACAAJ"
+    }
+  ],
+  "do_not_use": [
+    "No presentar la frase como una máxima general sobre la honestidad personal. En el documento es una instrucción interna a los responsables del PAIGC sobre qué contarle al propio pueblo y a los propios militantes durante una guerra.",
+    "No decir que la frase abre la directiva ni que es su título original. El título es «Palavras de Ordem Gerais»; la frase cierra el texto, dentro del punto sobre democracia revolucionaria. «Tell no lies, claim no easy victories» es el rótulo que le pusieron las ediciones inglesas.",
+    "No citar el español como si fuera el original ni como traducción publicada. El original es portugués de noviembre de 1965; la versión que circula en el mundo es la traducción inglesa de Richard Handyside publicada en 1969. La versión castellana que aquí se usa se tradujo del inglés de Handyside y no se cotejó con el folleto portugués, al que no se accedió.",
+    "No dar por verificado el texto portugués literal de las consignas. El folleto de 35 páginas está digitalizado en el archivo de Lisboa y en la sección portuguesa del Marxists Internet Archive, pero ambos en PDF, que no se pudo consultar en esta sesión.",
+    "No confundir esta directiva de noviembre de 1965 con las «Palavras de Ordem» de 1962, un texto distinto y anterior, de veinte puntos numerados.",
+    "No atribuir la frase a un discurso público de Cabral ni a las Naciones Unidas. Es un documento interno de partido.",
+    "No usar la fórmula abreviada «no digas mentiras, no reclames victorias fáciles» en segunda persona del singular como si fuera la cita: el original se dirige en plural a un colectivo de responsables.",
+    "No presentar el número de páginas o la signatura como datos de la edición inglesa: 35 páginas y PT-AHS-ICS-CAHS-MNA-025 corresponden al ejemplar portugués depositado en Lisboa."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

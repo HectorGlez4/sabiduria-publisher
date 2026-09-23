@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-22-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Jagadish Chandra Bose y las ondas de 60 GHz",
+    "hook": "En 1895, en Calcuta, un físico atravesó dos paredes con una onda de radio, encendió pólvora al otro lado y decidió no patentar nada de lo que había construido.",
+    "body": [
+      "La placa que el IEEE descubrió en Calcuta el 15 de septiembre de 2012 lo dice sin adornos: Jagadish Chandra Bose demostró en 1895, en el Presidency College, la emisión y recepción de ondas electromagnéticas de 60 gigahercios a 23 metros de distancia, a través de dos paredes, haciendo sonar un timbre y detonando pólvora. Trabajaba con longitudes de onda de 2,5 centímetros a 5 milímetros. No existía nada que comprar para hacerlo: se fabricó el transmisor de chispa, el cohesor, la lente dieléctrica, el polarizador, la rejilla de difracción y la antena de bocina piramidal. Esa antena sigue en uso.",
+      "El 29 de enero de 1897, invitado por lord Rayleigh, dio una conferencia del viernes en la Royal Institution de Londres y enseñó el aparato por dentro. La revista «The Electric Engineer» anotó su sorpresa: no se hizo secreto de cómo estaba construido. En mayo de 1901 le escribió a Rabindranath Tagore que el dueño de una compañía de telegrafía había ido a rogarle que no revelara los detalles y le dejara sacar la patente a su nombre para repartir las ganancias. Bose se negó. El 12 de diciembre de 1901, Marconi recibió la primera señal transatlántica con un cohesor de hierro y mercurio del tipo que Bose había publicado en 1899, sin mencionarlo.",
+      "Una sola patente lleva su nombre, y la presentó el 30 de septiembre de 1901 empujado por Sara Chapman Bull, que financiaba su trabajo y recibió la mitad: la estadounidense 755.840, «Detector para perturbaciones eléctricas», concedida el 29 de marzo de 1904. Describe un cristal de galena tocado por una punta metálica. Es el primer detector de estado sólido patentado, el abuelo del diodo. Bose no volvió a patentar. El reconocimiento tardó ciento diecisiete años en llegar a la pared de su propio colegio."
+    ],
+    "question": "¿Qué se pierde y qué se gana cuando alguien decide no poner su nombre en lo que descubre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Bose, 1895",
+    "subtitle": "Sesenta gigahercios y ninguna patente",
+    "body": "Atravesó dos paredes con una onda de radio, detonó pólvora a veintitrés metros y se negó a registrar el invento. Ciento diecisiete años después, el IEEE puso una placa en el pasillo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JagadishChandraBose",
+      "#HistoriaDeLaCiencia",
+      "#Radio"
+    ],
+    "extended": [
+      "#India",
+      "#Calcuta",
+      "#Microondas",
+      "#Marconi",
+      "#Patentes",
+      "#Semiconductores",
+      "#RoyalInstitution",
+      "#SigloXIX"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto literal de la placa del Hito IEEE «First Millimeter-wave Communication Experiments by J.C. Bose, 1894-96»: «Sir Jagadish Chandra Bose, in 1895, first demonstrated at Presidency College, Calcutta, India, transmission and reception of electromagnetic waves at 60 GHz, over a distance of 23 meters, through two intervening walls by remotely ringing a bell and detonating gunpowder». La misma ficha enumera los componentes que Bose construyó —«spark transmitter, coherer, dielectric lens, polarizer, horn antenna and cylindrical diffraction grating»—, las longitudes de onda empleadas (de 2,5 cm a 5 mm), y registra que el hito se dedicó el 15 de septiembre de 2012 (dedicatoria n.º 128) y que la placa está en el corredor principal del auditorio A.J.C. Bose del Presidency College de Calcuta.",
+      "source": "IEEE, Engineering and Technology History Wiki, ficha del hito «First Millimeter-wave Communication Experiments by J.C. Bose, 1894-96»",
+      "url": "https://ethw.org/Milestones:First_Millimeter-wave_Communication_Experiments_by_J.C._Bose,_1894-96"
+    },
+    {
+      "claim": "D. T. Emerson, del National Radio Astronomy Observatory (Tucson), en «The work of Jagadis Chandra Bose: 100 years of mm-wave research», publicado en «IEEE Transactions on Microwave Theory and Techniques» en diciembre de 1997: Bose trabajó en la década de 1890 con longitudes de onda de 2,5 cm a 5 mm, es decir hasta 60 GHz; fue pionero de la antena de bocina piramidal y empleó guías de onda, lentes dieléctricas de vidrio o azufre, rejillas polarizadoras y detectores semiconductores de contacto puntual con cristales de galena y uniones de hierro. Invitado por lord Rayleigh, en 1897 expuso sus experimentos de microondas ante la Royal Institution y otras sociedades inglesas.",
+      "source": "National Radio Astronomy Observatory, D. T. Emerson, «J.C. Bose: 60 GHz in the 1890s»",
+      "url": "https://www.cv.nrao.edu/~demerson/bose/bose.html"
+    },
+    {
+      "claim": "La British Library documenta que Bose presentó su trabajo en la Royal Institution el 29 de enero de 1897 y no intentó ocultar la construcción del aparato: la revista «The Electric Engineer» comentó con sorpresa «que no se hizo secreto en ningún momento de cómo estaba construido». Bose optó por no patentar su cohesor; su biógrafo Patrick Geddes anotó que se le criticaba por poco práctico al no sacar provecho de sus inventos. El 12 de diciembre de 1901 Marconi recibió la primera señal inalámbrica transatlántica empleando el diseño mejorado de cohesor que Bose había dado a conocer en 1899, sin acreditarlo ni mencionarlo en su posterior solicitud de patente británica.",
+      "source": "British Library, «Sir Jagadis Chandra Bose: the man who (almost) invented the radio»",
+      "url": "https://www.bl.uk/stories/blogs/posts/sir-jagadis-chandra-bose-the-man-who-almost-invented-the-radio"
+    },
+    {
+      "claim": "Patente estadounidense 755.840, «Detector for electrical disturbances», inventor «Jagadis Chunder Bose, of Calcutta, India», con cesión de la mitad a «Sara Chapman Bull, of Cambridge, Massachusetts». Solicitud presentada el 30 de septiembre de 1901; concesión el 29 de marzo de 1904. La reivindicación segunda identifica la galena (sulfuro de plomo) como sustancia sensible del detector de perturbaciones eléctricas y ondas hertzianas.",
+      "source": "Documento primario: patente US 755.840 A (United States Patent Office), reproducida en Google Patents",
+      "url": "https://patents.google.com/patent/US755840"
+    },
+    {
+      "claim": "El Computer History Museum, en su exposición «The Silicon Engine», sitúa a Bose —profesor de física del Presidency College de Calcuta— como quien «demostró el uso de cristales de galena (sulfuro de plomo) en contacto con una punta metálica para detectar ondas electromagnéticas milimétricas» y precisa: «En 1901 presentó una patente estadounidense de un rectificador semiconductor de contacto puntual para detectar señales de radio». El museo lo coloca al inicio de la historia de los detectores semiconductores, antes de la patente de silicio de Greenleaf W. Pickard del 20 de agosto de 1906.",
+      "source": "Computer History Museum, «The Silicon Engine»: «Semiconductor Rectifiers Patented as Cat's Whisker Detectors»",
+      "url": "https://www.computerhistory.org/siliconengine/semiconductor-rectifiers-patented-as-cats-whisker-detectors/"
+    },
+    {
+      "claim": "En mayo de 1901, una semana después de su conferencia en la Royal Institution, Bose escribió a Rabindranath Tagore que el propietario de una acreditada compañía de telegrafía le había enviado un cable y se había reunido con él para suplicarle que no revelara en la conferencia los detalles de su trabajo y le permitiera en cambio sacar una patente en su nombre para repartir el beneficio. En la misma carta Bose se queja del «terrible apego a la ganancia» que veía en aquel país.",
+      "source": "The Print, «J.C. Bose — 'Father of Radio Science' who was forgotten by West due to his aversion to patents» (resumen de la correspondencia Bose-Tagore)",
+      "url": "https://theprint.in/feature/j-c-bose-father-of-radio-science-who-was-forgotten-by-west-due-to-his-aversion-to-patents/552556/"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Bose «inventó la radio». Demostró comunicación por ondas milimétricas antes que Marconi y construyó componentes que siguen en uso, pero no desarrolló un sistema de telegrafía sin hilos comercial ni lo pretendió.",
+    "No decir que Bose nunca patentó nada. Existe la patente estadounidense 755.840, solicitada el 30 de septiembre de 1901 y concedida el 29 de marzo de 1904. Lo cierto es que fue la única y que la presentó a instancias de Sara Chapman Bull.",
+    "No afirmar que Marconi robó la patente de Bose ni que supiera que el cohesor de hierro y mercurio era de diseño de Bose. Lo documentado es que el receptor del 12 de diciembre de 1901 usaba ese tipo de cohesor, publicado por Bose en 1899, y que Marconi no lo acreditó. La intención no está establecida.",
+    "No dar por resuelto el lugar exacto de la demostración de 1895. La placa del IEEE dice Presidency College; varios relatos divulgativos la sitúan en el Town Hall de Calcuta ante el vicegobernador de Bengala, Alexander Mackenzie, con la onda atravesando tres paredes y el cuerpo del propio vicegobernador. No se resolvió aquí; usar la formulación de la placa.",
+    "No presentar como ciencia establecida las investigaciones posteriores de Bose sobre la sensibilidad de las plantas ni el crescógrafo. Esa parte de su obra fue y sigue siendo discutida, y no es lo que reconoce el hito del IEEE.",
+    "No decir que el IEEE le dio el hito por ser el inventor del radar o de las microondas. El hito se titula «primeros experimentos de comunicación por ondas milimétricas» y cubre 1894-1896.",
+    "No citar la carta a Tagore de mayo de 1901 como si estuviera consultada en el original bengalí. Aquí se toma de una síntesis periodística de la correspondencia; si se quiere el texto exacto hay que ir a la edición de las cartas.",
+    "No atribuir a Bose la frase «el conocimiento debe ser un bien público» como cita literal: es una caracterización de su postura, no una frase documentada suya."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
