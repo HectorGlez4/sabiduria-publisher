@@ -7,8 +7,30 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 22 Sep 2026 22:45:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 01:06:11 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A quienes entran en los mismos ríos les fluyen aguas siempre distintas.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-22-re88-reel</guid>
+      <pubDate>Tue, 22 Sep 2026 22:26:00 +0000</pubDate>
+      <description><![CDATA["A quienes entran en los mismos ríos les fluyen aguas siempre distintas."
+— Heráclito (fragmento B12)
+
+Este es el único fragmento del río que los especialistas dan por auténtico. Y dice justo lo contrario de lo que todos repetimos.
+
+La versión conocida, "nadie se baña dos veces en el mismo río", no es de Heráclito: es el resumen que hizo Platón un siglo después, y le da la vuelta al sentido. Platón lo lee como imposibilidad: nada se repite, nada permanece.
+
+Heráclito estaba diciendo algo más raro y más útil. El río es el mismo. Precisamente por eso el agua tiene que ser distinta. Lo que le da identidad no es quedarse quieto: es no dejar de correr.
+
+Aplicado a una persona, cambia todo. No eres el mismo porque no hayas cambiado. Eres el mismo porque no has parado.
+
+¿Qué parte de ti se ha mantenido igual solo porque siguió moviéndose?
+
+#SabiduriaDeBolsillo #Heraclito #Filosofia #Grecia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-22-re88-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-22-re88-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>TRESCIENTOS MIL MANUSCRITOS SALIERON DE TOMBUCTÚ EN SACOS DE ARROZ Y CARRETAS DE BURRO, Y EN 2025 EMPEZARON A VOLVER</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -477,25 +499,6 @@ En 2006, un equipo encabezado por Tony Freeth publicó en Nature, volumen 444, p
 #SabiduriaDeBolsillo #Anticitera #GreciaAntigua #HistoriaDeLaCiencia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-extra95.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-19-extra95.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La mayor ciudad al norte de México antes de 1492 llegó entera hasta nosotros. Todo menos su nombre.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-18-extra94</guid>
-      <pubDate>Sat, 19 Sep 2026 05:09:33 +0000</pubDate>
-      <description><![CDATA[La mayor ciudad al norte de México antes de 1492 llegó entera hasta nosotros. Todo menos su nombre.
-
-Hacia 1100, en la llanura del Misisipi frente a la desembocadura del Misuri, había una ciudad de entre diez mil y veinte mil habitantes repartidos por unas 1.600 hectáreas, con alrededor de ciento veinte montículos de tierra. El mayor se levantó en catorce etapas: cubre seis hectáreas y sube en cuatro terrazas hasta los treinta metros. Es la mayor estructura de tierra construida en América antes de la llegada europea.
-
-Nada de eso conserva el nombre que tuvo. Al montículo mayor se le llama «de los Monjes» por unos trapenses franceses que se instalaron en el terreno en el otoño de 1809 —se lo había cedido un vecino de la zona, Nicholas Jarrot— y que se marcharon tres años después. A la ciudad se la llama Cahokia por un pueblo que vivía en el valle cuando llegaron los franceses en el siglo XVII, cuando la ciudad llevaba siglos vacía. Cómo la llamaban quienes la levantaron no se sabe.
-
-La ciudad se despobló en el siglo XIV, antes de que ningún europeo llegara al valle. Es Patrimonio Mundial de la UNESCO desde 1982, y hoy el estado de Illinois protege setenta y dos de los cerca de ochenta montículos que quedan en pie. Se conservó la forma completa de un lugar del que no ha sobrevivido cómo se llamaba.
-
-¿Qué se conserva mejor de un lugar: lo que se construyó o cómo se llamaba?
-
-#SabiduriaDeBolsillo #Cahokia #Misisipi #ArqueologiaAmericana]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra94.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-18-extra94.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
