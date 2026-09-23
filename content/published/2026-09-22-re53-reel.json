@@ -2,7 +2,7 @@
   "id": "2026-09-22-re53-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Rosario Castellanos y el umbral",
     "hook": "Se cita como una afirmación luminosa. En el poema es lo que queda al final de una resta: once nombres de mujer examinados y descartados uno por uno, empezando por el suicidio.",
@@ -89,6 +89,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-09-23T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1097804622822703",
+      "url": "/reel/1097804622822703/",
+      "published_at": "2026-09-23T05:30:18.427871+00:00"
+    }
+  },
   "reemision_de": "2026-09-10-extra85"
 }
