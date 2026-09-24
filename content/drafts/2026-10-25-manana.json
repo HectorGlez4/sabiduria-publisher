@@ -1,0 +1,77 @@
+{
+  "id": "2026-10-25-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Zhang Heng y el sismoscopio del año 132",
+    "hook": "El aparato avisó de un terremoto que nadie había sentido en la capital, a seiscientos kilómetros de allí. De esa máquina no queda ni una pieza.",
+    "body": [
+      "En el año 132, en la corte Han, el astrónomo y funcionario Zhang Heng presentó un instrumento para detectar terremotos. Era una vasija de bronce del tamaño de una tinaja de vino, unos dos metros de diámetro. Por fuera tenía ocho cabezas de dragón orientadas a los ocho rumbos de la brújula, y cada dragón sostenía una bola en la boca. Debajo de cada dragón, un sapo de bronce esperaba con la boca abierta. Cuando la tierra se movía, un solo dragón soltaba su bola. El ruido avisaba, y el sapo que la había recibido indicaba de qué lado venía el temblor.",
+      "La crónica cuenta que un día cayó una bola sin que en la capital se sintiera nada. Los funcionarios lo tomaron por una avería. Días después llegó un mensajero con la noticia de un terremoto a unos seiscientos kilómetros de distancia, en la dirección que el aparato había marcado. Ese episodio es casi todo lo que sabemos. No se conserva ninguna pieza del instrumento. Lo que hay es una biografía escrita siglos más tarde que le dedica menos de doscientos caracteres: describe el exterior y no dice una palabra del mecanismo de dentro.",
+      "La imagen que aparece en cualquier libro sobre el tema —la urna con los ocho dragones— no es un dibujo antiguo. Es una maqueta que el historiador Wang Zhenduo construyó en 1951 a partir de esas mismas líneas, y entró en los manuales escolares casi siempre sin una nota que aclarara que era una interpretación. En el otoño de 2018 esas ilustraciones se retiraron de los libros de historia de la secundaria china. La discusión técnica sigue: una revisión publicada en 2009 en el «Journal of Japan Association for Earthquake Engineering» agrupa las reconstrucciones propuestas en familias según el mecanismo que cada autor le supone. Cada generación vuelve a construir el aparato con la física que tiene a mano."
+    ],
+    "question": "¿Cuánto de lo que usted da por visto es en realidad la reconstrucción de alguien?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El sismoscopio de 132",
+    "subtitle": "Lo que se conserva no es la máquina",
+    "body": "Una vasija de bronce con ocho dragones: cuando temblaba, una bola caía y marcaba la dirección. No queda ni una pieza del aparato. Todo lo que se sabe de él cabe en menos de doscientos caracteres de una crónica posterior."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ZhangHeng",
+      "#HistoriaDeLaCiencia",
+      "#Sismologia"
+    ],
+    "extended": [
+      "#China",
+      "#DinastiaHan",
+      "#Terremotos",
+      "#Inventos",
+      "#Arqueologia",
+      "#Bronce",
+      "#Ciencia",
+      "#HistoriaAntigua"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El primer sismoscopio conocido lo inventó Zhang Heng en China en el año 132 d.C. Era una gran urna con ocho cabezas de dragón en el exterior, orientadas a las ocho direcciones principales de la brújula; debajo de cada cabeza había un sapo con la boca abierta hacia el dragón. Al ocurrir un terremoto, una de las ocho bocas de dragón soltaba una bola en la boca del sapo situado debajo, y la dirección del movimiento determinaba cuál dragón la soltaba. Se informó de que el instrumento detectó un terremoto a 400 millas de distancia que no se sintió en el lugar donde estaba el sismoscopio. El mecanismo interno se desconoce.",
+      "source": "U.S. Geological Survey (USGS), sección de preguntas frecuentes sobre sismometría histórica",
+      "url": "https://www.usgs.gov/faqs/what-was-first-instrument-actually-recorded-earthquake"
+    },
+    {
+      "claim": "No se ha recuperado ningún ejemplar físico del aparato. Todo lo que se sabe procede de una biografía de Zhang Heng escrita siglos después de su muerte, que en menos de doscientos caracteres describe el aspecto del sismoscopio y afirma que detectó un terremoto en el noroeste de China; no hay información sobre la estructura interna en los textos antiguos, según el profesor Jiang Xiaoyuan. La imagen popular del aparato procede de una maqueta que el historiador Wang Zhenduo hizo en 1951 a partir de esa descripción; se incorporó a los libros de texto chinos casi siempre sin una nota que aclarara que era la interpretación de un estudioso, y fue criticada por sismólogos. Las imágenes se retiraron de los libros de historia de la escuela media pública china en el otoño de 2018.",
+      "source": "Sixth Tone (Shanghai United Media Group), «Pictures of Iconic Seismograph Removed From Chinese Textbooks»",
+      "url": "https://www.sixthtone.com/news/1003050"
+    },
+    {
+      "claim": "Las reconstrucciones modernas del sismoscopio de Zhang Heng se revisan y clasifican en familias de diseño —forma exterior, péndulo suspendido, contacto directo, péndulo invertido y la propuesta de los propios autores—, en la idea de que pueden recrearse todos los conceptos de diseño compatibles con la ciencia y la técnica de la época del sujeto. Artículo de K.-H. Hsiao y H.-S. Yan, «The Review of Reconstruction Designs of Zhang Heng's Seismoscope», Journal of Japan Association for Earthquake Engineering, vol. 9, núm. 4, 2009, pp. 4_1-4_10.",
+      "source": "J-STAGE (plataforma de revistas científicas de la Japan Science and Technology Agency), Journal of Japan Association for Earthquake Engineering",
+      "url": "https://www.jstage.jst.go.jp/article/jaee/9/4/9_4_4_1/_article/-char/en"
+    },
+    {
+      "claim": "El instrumento se llamó houfeng didong yi, «instrumento para medir los vientos estacionales y los movimientos de la Tierra», y la descripción conservada procede del Hou Han Shu (Historia de la dinastía Han posterior), compilado por Fan Ye. La reconstrucción de 2005 dirigida por Feng Rui, de la Administración Sismológica de China, sustituyó el péndulo invertido de Wang Zhenduo por un péndulo suspendido.",
+      "source": "South China Morning Post, «Chinese scientists seek to recreate lost wonder of antiquity: Zhang Heng's quake sensor». AVISO: este dato procede de prensa y de resúmenes de resultados de búsqueda; el capítulo de Springer y el PDF de la revista japonesa que lo desarrollan no se pudieron abrir (redirección de autenticación y PDF ilegible)",
+      "url": "https://www.scmp.com/news/china/science/article/3318318/chinese-scientists-seek-recreate-lost-wonder-antiquity-zhang-hengs-quake-sensor"
+    }
+  ],
+  "do_not_use": [
+    "No llamarlo sismógrafo. No registraba nada: no dejaba traza ni medía magnitud. Indicaba que había temblado y por qué lado. La palabra correcta es sismoscopio.",
+    "No decir que predecía terremotos. Reaccionaba a un movimiento ya ocurrido y lejano. La confusión entre detectar y predecir es el error más repetido sobre este aparato.",
+    "No fechar el terremoto detectado como dato firme. La fecha tradicional que circula es el año 138, y hay literatura sismológica que lo sitúa en el 134; ninguna de las dos se pudo verificar en el texto completo durante esta investigación.",
+    "No presentar la urna con dragones como una imagen antigua ni como una reproducción del objeto. Es una maqueta de Wang Zhenduo de 1951, hecha a partir de una descripción que no menciona el mecanismo interno.",
+    "No afirmar que la reconstrucción de 1951 funcionaba. Recibió críticas de sismólogos y las ilustraciones salieron de los manuales escolares chinos en 2018; presentarla como un aparato probado es justamente lo que se corrigió.",
+    "No dar por cierto que el mecanismo interno era un péndulo invertido, ni suspendido, ni ninguna otra cosa. Los textos antiguos no lo dicen; todo lo demás son hipótesis modernas en discusión.",
+    "No decir que el aparato se perdió en un incendio, un saqueo o una fecha concreta. No se conoce cuándo ni cómo desapareció: simplemente no se conserva."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

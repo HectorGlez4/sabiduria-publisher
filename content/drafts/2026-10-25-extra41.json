@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-25-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Paulo Freire y la Pedagogía del oprimido (1970)",
+    "hook": "La frase se repite para decir que el maestro sobra. En el libro, el párrafo siguiente dice lo contrario, y el final que se recorta es la parte decisiva.",
+    "body": [
+      "Paulo Freire terminó el manuscrito en Chile, en el exilio, en 1968. El libro salió primero fuera de Brasil: en inglés y en español en 1970, y recién en 1974 en portugués, cuatro años después, en su propio país. La frase está en el capítulo segundo, el que opone dos maneras de entender la enseñanza. A una la llama concepción bancaria: el conocimiento se deposita en una cabeza como quien mete dinero en una cuenta, y el alumno guarda, archiva, repite. A la otra, educación problematizadora. Es ahí donde escribe que nadie educa a nadie y que nadie se educa a sí mismo.",
+      "La cita casi siempre se corta en la mitad, y así parece un anuncio del fin del profesor. No lo es. En ese mismo capítulo el educador sigue en su puesto: enseña y, al enseñar en diálogo, aprende. Lo que Freire sustituye no es la figura del maestro, es la dirección única del depósito. Y el cierre de la frase —«mediatizados por el mundo»— es lo primero que se cae al citarla, siendo lo que la sostiene: no se educan entre sí en el vacío, sino con el mundo puesto en medio, como aquello sobre lo que hablan.",
+      "En mayo de 2016, un recuento de las publicaciones más citadas de las ciencias sociales según Google Scholar, hecho por Elliott Green en la London School of Economics, situó «Pedagogía del oprimido» en el tercer lugar de los libros, detrás de Thomas Kuhn y Everett Rogers. El libro que en su país tardó cuatro años en imprimirse es hoy uno de los más citados del mundo. Y la frase por la que se le conoce sigue circulando sin su segunda mitad."
+    ],
+    "question": "¿Cuándo fue la última vez que aprendió algo de alguien a quien usted estaba enseñando?",
+    "quote": {
+      "text": "Nadie educa a nadie, nadie se educa a sí mismo: los hombres se educan entre sí, mediatizados por el mundo.",
+      "author": "Paulo Freire",
+      "work": "«Pedagogía del oprimido», capítulo II (manuscrito de 1968; primeras ediciones, 1970)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Paulo Freire, 1970",
+    "subtitle": "La frase con el final que suele recortarse",
+    "body": "«Nadie educa a nadie, nadie se educa a sí mismo: los hombres se educan entre sí, mediatizados por el mundo.» Sin esas tres últimas palabras la frase parece un elogio del aprendizaje en grupo. Con ellas, exige un asunto del que hablar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PauloFreire",
+      "#Citas",
+      "#Educacion"
+    ],
+    "extended": [
+      "#PedagogiaDelOprimido",
+      "#Brasil",
+      "#AmericaLatina",
+      "#Pedagogia",
+      "#Filosofia",
+      "#Exilio",
+      "#Libros",
+      "#HistoriaDeLasIdeas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La frase pertenece al capítulo segundo de «Pedagogía del oprimido», en la sección sobre la educación bancaria frente a la educación problematizadora. El artículo la cita así: «(…) nadie educa a nadie, como que nadie se educa así mismo: los hombres se educan en comunión, mediatizados por el mundo» (Freire, 1979, p. 79). El libro se escribió en Chile, con el manuscrito terminado en 1968, y se publicó primero en Estados Unidos, en inglés, en 1970; la introducción la firmó Ernani Maria Fiori en diciembre de 1967.",
+      "source": "Iván Nelson Angues Bambarén, «Paulo Freire y los cincuenta años de la Pedagogía del oprimido», Horizonte de la Ciencia, vol. 11, núm. 20, 2021, pp. 329-339, Universidad Nacional del Centro del Perú (vía Redalyc)",
+      "url": "https://www.redalyc.org/journal/5709/570965027024/html/"
+    },
+    {
+      "claim": "Freire completó el manuscrito en Chile, durante su exilio, en 1968. El libro se publicó primero en Estados Unidos en 1970 y solo cuatro años después llegó a Brasil. Está traducido a más de treinta idiomas, va por la sexagésima quinta edición en portugués de Brasil, y es el único libro brasileño de la lista de los cien títulos más indicados por profesores en universidades de Estados Unidos, Reino Unido, Australia y Nueva Zelanda.",
+      "source": "Instituto Paulo Freire, «Para além da alfabetização: cultura do silêncio e os 50 anos da Pedagogia do Oprimido»",
+      "url": "https://www.paulofreire.org/9-noticias/165-para-alem-da-alfabetizacao"
+    },
+    {
+      "claim": "Ficha del acervo sobre la edición en portugués: se publicó en 1974, cuatro años después de las ediciones en inglés y español de 1970, pese a que el manuscrito databa de 1968. La obra fue prologada por Ernani Maria Fiori. El acervo lo mantiene el Instituto Paulo Freire, está reconocido por la UNESCO y se gestiona con la Universidade Federal do Agreste de Pernambuco.",
+      "source": "Acervo Paulo Freire (Instituto Paulo Freire / UFAPE), ficha de la publicación en portugués de «Pedagogia do oprimido»",
+      "url": "https://acervo.paulofreire.org/items/c936ce1b-46b5-4241-8f0e-94f36faa2474"
+    },
+    {
+      "claim": "En el recuento de las publicaciones más citadas de las ciencias sociales según Google Scholar publicado el 12 de mayo de 2016 por Elliott Green, profesor asociado de Estudios del Desarrollo de la London School of Economics, «Pedagogy of the Oppressed» de Paulo Freire ocupa el tercer lugar entre los libros, por detrás de «The Structure of Scientific Revolutions» de Thomas Kuhn y «Diffusion of Innovations» de Everett Rogers.",
+      "source": "LSE Impact of Social Sciences Blog, London School of Economics and Political Science",
+      "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2016/05/12/what-are-the-most-cited-publications-in-the-social-sciences-according-to-google-scholar/"
+    },
+    {
+      "claim": "Redacción portuguesa de la frase: «Ninguém educa ninguém, ninguém educa a si mesmo, os homens se educam entre si, mediatizados pelo mundo», en el capítulo 2 de «Pedagogia do Oprimido», en la subsección sobre la educación problematizadora. La frase no suprime al profesor: el párrafo siguiente mantiene al educador en el proceso y sostiene que también aprende mientras enseña; Freire sustituye la relación vertical por una relación dialógica sin borrar las diferencias de función. En el libro conviven dos formulaciones del mismo núcleo: «entre si» y «em comunhão, mediatizados pelo mundo».",
+      "source": "Olhar Digital, «Paulo Freire: ‘Ninguém educa ninguém’, a frase que não dispensava professores, mas criticava a ideia de despejar conhecimento de uma cabeça para outra»",
+      "url": "https://olhardigital.com.br/curiosidades/2026/09/08/paulo-freire-ninguem-educa-ninguem-a-frase-que-nao-dispensava-professores-mas-criticava-a-ideia-de-despejar-conhecimento-de-uma-cabeca-para-outra/"
+    }
+  ],
+  "do_not_use": [
+    "No cortar la frase en «se educan entre sí». El complemento «mediatizados por el mundo» es parte de la tesis; sin él queda un elogio genérico del aprendizaje en grupo, que es justo lo que Freire no estaba diciendo.",
+    "No usarla para sostener que el profesor sobra o que la escuela es prescindible. En el mismo capítulo el educador permanece: enseña y aprende en el diálogo. Lo que se sustituye es la dirección única, no la función.",
+    "No presentar una sola redacción castellana como la oficial. Las traducciones difieren: unas dicen «se educan entre sí» y otras «se educan en comunión», y el original portugués usa las dos formulaciones en el mismo pasaje. Citar siempre con el cierre «mediatizados por el mundo».",
+    "No fechar el libro solo en 1968 ni solo en 1970. El manuscrito se terminó en Chile en 1968, las primeras ediciones en inglés y español son de 1970 y la brasileña es de 1974.",
+    "No nombrar la editorial de la primera edición sin comprobarlo. Las fuentes consultadas dan sellos distintos para la edición estadounidense de 1970 (Herder and Herder, The Seabury Press) y para la brasileña de 1974 (Paz e Terra, Cortez). La única fecha coincidente es 1974.",
+    "No decir que escribió el libro en la cárcel. Lo terminó en Chile, en el exilio.",
+    "Tratar con reserva la frase «la educación no cambia el mundo, cambia a las personas que van a cambiar el mundo». Se le atribuye por todas partes sin obra, capítulo ni edición, y no se verificó durante esta investigación."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

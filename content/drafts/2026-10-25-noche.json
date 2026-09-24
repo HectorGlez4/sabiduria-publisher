@@ -1,0 +1,82 @@
+{
+  "id": "2026-10-25-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Srivijaya y la identificación de Cœdès en 1918",
+    "hook": "Un reino que dominó los estrechos del sudeste asiático durante siglos y que en 1920 todavía no aparecía en ningún manual de geografía ni de historia.",
+    "body": [
+      "En 1918, el estudioso francés George Cœdès publicó en el «Bulletin de l'École française d'Extrême-Orient» un artículo de treinta y seis páginas titulado «Le royaume de Çrīvijaya». Trabajaba sobre una inscripción hallada en la isla de Bangka, la de Kota Kapur, fechada en el año 608 de la era çaka —el 686 de la nuestra—, donde un nombre se repetía: Çrīvijaya. Hasta entonces se había leído como el nombre de un rey. Cœdès mostró que designaba un reino, y que ese reino ejercía autoridad sobre territorios tan lejanos como Java. Veintidós años después, otro historiador escribía en la misma revista que antes de aquel artículo el nombre se buscaba en vano en los diccionarios y en los manuales: era desconocido.",
+      "Lo desconcertante es que había un testigo presencial, y llevaba doce siglos disponible. El monje chino Yijing se detuvo en la capital de ese reino en 671, camino de la India, para estudiar sánscrito. Volvió a vivir allí entre 685 y 695, traduciendo textos al chino y escribiendo sus memorias de viaje. Esas memorias se tradujeron al inglés y las publicó la Clarendon Press de Oxford en 1896, veintidós años antes del artículo de Cœdès. El relato estaba impreso y leído. Lo que faltaba era el nombre que lo ataba a las piedras escritas de Sumatra.",
+      "Hoy no se discute si existió, sino qué fue exactamente. En 1993, en ese mismo boletín, Hermann Kulke revisó la evidencia epigráfica bajo una pregunta incómoda: ¿imperio o kraton, es decir, corte y reino? Recordaba además una hipótesis de 1973, la de Bronson, según la cual pudo haber sido un reino menor desaparecido cien años después de su fundación. Un siglo largo de investigación y el asunto sigue abierto, porque la discusión no se dirime con ruinas sino con textos: inscripciones en piedra, crónicas chinas y lo que se sepa leer en ellas."
+    ],
+    "question": "¿Qué tiene usted ya a la vista y aún no ha relacionado con nada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Srivijaya, devuelto al mapa",
+    "subtitle": "Un reino que no estaba en los manuales",
+    "body": "Dominó los estrechos del sudeste asiático durante siglos, y hasta 1918 su nombre no figuraba en los diccionarios de geografía ni de historia. Lo identificó un estudioso leyendo inscripciones, una de ellas fechada en el año 686."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Srivijaya",
+      "#Sumatra",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Indonesia",
+      "#SudesteAsiatico",
+      "#Epigrafia",
+      "#HistoriaAntigua",
+      "#RutaMaritima",
+      "#Budismo",
+      "#Palembang",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "George Cœdès, «Le royaume de Çrīvijaya», Bulletin de l'École française d'Extrême-Orient, tomo 18, 1918, pp. 1-36. El artículo examina una inscripción hallada en Kota Kapur, isla de Bangka, fechada hacia el 608 çaka, en la que el término «Çrīvijaya» aparece repetidamente referido a un reino cuya autoridad se extendía sobre territorios como Java; Cœdès cuestiona la lectura anterior, según la cual «Çrīvijaya» sería solamente un nombre real, por resultar gramaticalmente problemática.",
+      "source": "Persée (portal de revistas científicas francesas), Bulletin de l'École française d'Extrême-Orient",
+      "url": "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5894"
+    },
+    {
+      "claim": "K. A. Nilakanta Sastri (Universidad de Madrás), «Sri Vijaya», Bulletin de l'École française d'Extrême-Orient, tomo 40, núm. 2, 1940, pp. 239-313. Sostiene que el estudio de Cœdès de 1918 estableció a Sri Vijaya-Palembang como la gran potencia del archipiélago desde el siglo VII, y describe así el estado previo del conocimiento: se buscaba en vano el nombre del antiguo imperio de Sri Vijaya en los diccionarios y manuales de geografía e historia; era desconocido. Señala también al peregrino chino I-tsing (Yijing) como fuente contemporánea de primera mano.",
+      "source": "Persée, Bulletin de l'École française d'Extrême-Orient",
+      "url": "https://www.persee.fr/doc/befeo_0336-1519_1940_num_40_2_4796"
+    },
+    {
+      "claim": "Hermann Kulke, «Kadātuan Śrīvijaya — Empire or kraton of Śrīvijaya? A Reassessment of the Epigraphical Evidence», Bulletin de l'École française d'Extrême-Orient, tomo 80, 1993, pp. 159-180. Cuestiona la interpretación tradicional del reino como imperio centralizado de larga duración y recuerda que Bronson (1973) sostuvo que Śrīvijaya pudo ser un reino menor desaparecido dentro de los cien años siguientes a su fundación hacia el 650.",
+      "source": "Persée, Bulletin de l'École française d'Extrême-Orient",
+      "url": "https://www.persee.fr/doc/befeo_0336-1519_1993_num_80_1_2193"
+    },
+    {
+      "claim": "El monje Yijing (635-713) se detuvo en la capital de Srivijaya en 671, camino de la India, para estudiar sánscrito, y tras diez años en la India volvió a Palembang para vivir en Srivijaya entre 685 y 695, donde tradujo textos indios al chino y escribió sus memorias. Srivijaya fue un centro budista de importancia y, entre los siglos VII y XIII, los estrechos de Malaca y de la Sonda bajo su dominio fueron una ruta principal de la Ruta Marítima de la Seda. AVISO: las fichas del banco de conocimiento del Programa Rutas de la Seda redirigen ahora a la portada del sitio y no se pudieron abrir directamente; el dato procede del resumen que devuelven los resultados de búsqueda sobre esas páginas.",
+      "source": "UNESCO, Programa Rutas de la Seda, banco de conocimiento: «Traces of Buddhism in Sumatra: an archaeological perspective» y «The role of several major harbours in Sumatra on the Maritime Silk Route between the seventh and sixteenth centuries»",
+      "url": "https://en.unesco.org/silkroad/knowledge-bank/traces-buddhism-sumatra-archaeological-perspective"
+    },
+    {
+      "claim": "El relato de viaje de Yijing se publicó en inglés como «A Record of the Buddhist Religion as Practised in India and the Malay Archipelago (A.D. 671-695)», traducido por J. Takakusu, Clarendon Press, Oxford, 1896. El propio título fija el arco de años que cubre el testimonio.",
+      "source": "Internet Archive, ejemplar digitalizado de la edición de la Clarendon Press (Oxford, 1896)",
+      "url": "https://archive.org/details/arecordbuddhist00takagoog"
+    }
+  ],
+  "do_not_use": [
+    "No decir que Cœdès descubrió Srivijaya. Las inscripciones estaban halladas y las crónicas chinas publicadas: lo que hizo en 1918 fue identificar el nombre y unir las fuentes. Descubrimiento y lectura no son lo mismo.",
+    "No llamarlo imperio sin matiz. Kulke replanteó en 1993 si fue un imperio o un kraton, y recogió la hipótesis de Bronson (1973) de un reino mucho menor y más breve. La palabra «imperio» es parte de lo que se discute.",
+    "No dar una fecha cerrada para la inscripción de Kedukan Bukit, la otra pieza célebre del expediente. Circulan el 682 y el 683, e incluso días concretos distintos; no se verificó en fuente institucional durante esta investigación.",
+    "No situar la capital en Palembang como hecho zanjado. Es la identificación más aceptada desde Cœdès, pero la localización del centro del reino ha sido objeto de discusión académica continuada.",
+    "No decir que de Srivijaya «no quedó nada» ni que «desapareció sin rastro». Quedaron inscripciones en piedra, las crónicas chinas y yacimientos en Sumatra; lo que faltaba era relacionarlos con un nombre.",
+    "No presentar a Yijing como descubridor ni explorador. Era un monje budista que viajaba a estudiar y a traducir, y su testimonio se leía en Europa desde 1896 sin que nadie lo conectara con el reino de las inscripciones.",
+    "No atribuir a Srivijaya monumentos que no son suyos. Borobudur y Prambanan están en Java y se asocian a otras dinastías; mezclarlos con Srivijaya es un error frecuente de divulgación."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

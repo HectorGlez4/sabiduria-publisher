@@ -1,0 +1,98 @@
+{
+  "id": "2026-10-25-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Virgilio y la fortuna que ayuda a los que se atreven",
+    "hook": "La frase más citada sobre la audacia es medio verso. La otra mitad no existe: Virgilio murió sin escribirla, y el personaje que la pronuncia acaba muerto.",
+    "body": [
+      "Está en la «Eneida», libro X, verso 284. Turno arenga a los suyos mientras los troyanos desembarcan: salgamos a su encuentro ahora, mientras están desconcertados y les fallan los primeros pasos en la arena. Y entonces dice «audentis Fortuna iuvat», la fortuna ayuda a los que se atreven. El verso está incompleto. Es uno de los cerca de sesenta hexámetros que quedaron a la mitad cuando Virgilio murió en el 19 a.C. sin terminar el poema. El «timidosque repellit» —«y rechaza a los cobardes»— que suele añadirse es un remiendo posterior.",
+      "Turno pierde. En el libro XII, en los últimos versos del poema, Eneas le hunde la espada en el pecho y la vida se le va gimiendo, indignada, hacia las sombras. La frase tampoco era suya. Terencio ya la tenía en el «Formión», donde el esclavo Geta se la dice a Antifón para que no se venga abajo ante su padre. Y Cicerón, en las «Tusculanas» II, la cita como «viejo proverbio» y le añade una enmienda que nadie repite: a los fuertes los ayuda la fortuna, sí, pero mucho más los ayuda la razón.",
+      "En el año 79, Plinio el Viejo navegaba hacia el Vesubio en erupción. El timonel le propuso dar media vuelta. Según la carta VI 16 de su sobrino a Tácito, respondió: «la fortuna ayuda a los fuertes; busca a Pomponiano». Siguió adelante para socorrer a un amigo y murió en aquella costa. La sentencia que hoy se usa como garantía de éxito la dicen, en los dos textos que mejor la conservan, un guerrero que cae derrotado y un hombre que no vuelve del viaje. No promete que salga bien. Solo empuja a ir."
+    ],
+    "question": "¿Qué está llamando usted valentía y podría ser prisa?",
+    "quote": {
+      "text": "La fortuna ayuda a los que se atreven.",
+      "author": "Virgilio",
+      "work": "«Eneida», libro X, verso 284 (h. 29-19 a.C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Virgilio, «Eneida» X, 284",
+    "subtitle": "Medio verso que quedó sin terminar",
+    "body": "«La fortuna ayuda a los que se atreven.» Lo dice Turno, que muere a manos de Eneas al final del poema. El verso quedó a la mitad: Virgilio murió sin completarlo, y el «y rechaza a los cobardes» se le añadió después."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Virgilio",
+      "#Citas",
+      "#Eneida"
+    ],
+    "extended": [
+      "#RomaAntigua",
+      "#Latin",
+      "#Literatura",
+      "#Ciceron",
+      "#PlinioElViejo",
+      "#Terencio",
+      "#HistoriaDeLasIdeas",
+      "#Clasicos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino del libro X de la «Eneida»: la expresión «audentis Fortuna iuvat» aparece en el verso 284, dentro de la arenga de Turno a sus tropas mientras los troyanos desembarcan («ultro occurramus ad undam / dum trepidi egressisque labant vestigia prima. / audentis Fortuna iuvat»). El verso queda ahí, a la mitad: la línea siguiente arranca ya otra frase.",
+      "source": "The Latin Library, Virgilio, «Aeneis», libro X",
+      "url": "https://www.thelatinlibrary.com/vergil/aen10.shtml"
+    },
+    {
+      "claim": "Localización canónica del pasaje: «Eneida», libro X, sección de los versos 276-286, que comienza «Haud tamen audaci Turno fiducia cessit»; el verso 284 con «audentis Fortuna iuvat» está en boca de Turno dirigiéndose a sus guerreros. Identificadores: Perseus:text:1999.02.0055, urn:cts:latinLit:phi0690.phi003.perseus-lat1.",
+      "source": "Perseus Digital Library, Tufts University — Vergil, «Aeneid», libro X",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0055%3Abook%3D10%3Acard%3D276"
+    },
+    {
+      "claim": "El libro XII de la «Eneida» tiene 952 versos y termina con la muerte de Turno a manos de Eneas: «hoc dicens ferrum adverso sub pectore condit / fervidus; ast illi solvuntur frigore membra / vitaque cum gemitu fugit indignata sub umbras» (vv. 950-952).",
+      "source": "The Latin Library, Virgilio, «Aeneis», libro XII",
+      "url": "https://www.thelatinlibrary.com/vergil/aen12.shtml"
+    },
+    {
+      "claim": "La fórmula es anterior a Virgilio: en el «Formión» de Terencio, el esclavo Geta se la dice a Antifón para que se sobreponga al miedo ante la llegada de su padre: «ergo istaec quom ita sunt, Antipho, tanto mage te advigilare aequomst: fortis fortuna adiuvat». La numeración del verso varía entre ediciones: aparece citada como verso 203 y localizada en las líneas 201-202 del texto del acto II.",
+      "source": "The Latin Library, Terencio, «Phormio»",
+      "url": "https://www.thelatinlibrary.com/ter.phormio.html"
+    },
+    {
+      "claim": "Cicerón cita el dicho como proverbio antiguo y lo corrige: «Fortes enim non modo fortuna adiuvat, ut est in vetere proverbio, sed multo magis ratio» — a los fuertes no solo los ayuda la fortuna, como dice el viejo proverbio, sino mucho más la razón. «Tusculanae disputationes», libro II, sección 11.",
+      "source": "The Latin Library, Cicerón, «Tusculanae disputationes», libro II",
+      "url": "https://www.thelatinlibrary.com/cicero/tusc2.shtml"
+    },
+    {
+      "claim": "Plinio el Joven, en la carta VI 16 dirigida a Tácito, cuenta que su tío Plinio el Viejo, navegando hacia la zona del Vesubio, rechazó la propuesta del timonel de volver atrás con estas palabras: «Fortes inquit fortuna iuvat: Pomponianum pete». Siguió hacia Estabias para socorrer a Pomponiano.",
+      "source": "The Latin Library, Plinio el Joven, «Epistulae», libro VI",
+      "url": "https://www.thelatinlibrary.com/pliny.ep6.html"
+    },
+    {
+      "claim": "La «Eneida» quedó inacabada a la muerte de Virgilio en el 19 a.C.: el poema conserva del orden de 57 a 60 versos métricamente incompletos, repartidos por los doce libros y concentrados sobre todo en los libros 2-5, 7 y 9-10, y el verso X 284 es uno de ellos. Si esos hemistiquios son accidente o recurso deliberado sigue discutiéndose. AVISO: el estudio de referencia sobre el asunto (J. Sparrow, «Half-lines and Repetitions in Virgil») y el artículo «Incomplete Lines in the Aeneid» de JSTOR no se pudieron abrir; la cifra procede de resúmenes de fuentes secundarias y por eso se da como horquilla.",
+      "source": "Resúmenes de literatura secundaria sobre los hemistiquios de la «Eneida» (Sparrow, «Half-lines and Repetitions in Virgil»; «Incomplete Lines in the Aeneid», JSTOR 3286850)",
+      "url": "https://www.jstor.org/stable/3286850"
+    }
+  ],
+  "do_not_use": [
+    "No escribir «audaces fortuna iuvat». Virgilio escribió «audentis», acusativo plural arcaico del participio de audere: los que se atreven, no los audaces. Las dos formas circulan; la del poema es «audentis Fortuna iuvat».",
+    "No añadir «timidosque repellit» («y rechaza a los cobardes»). Es un complemento posterior puesto para cerrar el hexámetro que Virgilio dejó a medias. No está en el texto.",
+    "No presentar la frase como consejo del poeta. La dice Turno arengando a sus tropas, y Turno muere a manos de Eneas en los últimos versos del libro XII.",
+    "No atribuirla a Séneca ni darla por invención de Virgilio. Terencio ya la usa en el «Formión» y Cicerón la llama «viejo proverbio» en las «Tusculanas» II, 11.",
+    "No decir que Plinio el Viejo citaba a Virgilio. La carta VI 16 no indica procedencia y la forma que emplea —«fortes fortuna iuvat»— es la del proverbio, no la del verso.",
+    "No dar por resuelto si los versos incompletos de la «Eneida» son descuido o efecto buscado. Es una discusión abierta entre filólogos, y el número exacto de hemistiquios varía según la edición que se cuente.",
+    "No repetir sin fuente que Virgilio pidió en su lecho de muerte que se quemara la «Eneida». Procede de la tradición biográfica antigua y no se verificó en esta investigación."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
