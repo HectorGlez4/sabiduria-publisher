@@ -59,12 +59,18 @@
     "'Klaus Schmidt descubrió el sitio'. El montículo ya figuraba en un sondeo de las universidades de Chicago y Estambul de los años sesenta, que lo tomó por un cementerio medieval. Schmidt leyó ese informe y fue quien reconoció qué era, en 1994.",
     "'Göbekli Tepe inventó la agricultura' o 'el templo creó la civilización'. Es la hipótesis de Schmidt sobre la causalidad, discutida y no demostrada. El orden temporal sí es afirmable; la causa, no."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-24T01:26:00Z",
   "targets": [
     "facebook_reel"
   ],
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "4542670972644117",
+      "url": "/reel/4542670972644117/",
+      "published_at": "2026-09-24T03:06:02.864823+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
