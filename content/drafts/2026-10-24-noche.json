@@ -1,0 +1,89 @@
+{
+  "id": "2026-10-24-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Kuélap y los entierros en la muralla",
+    "hook": "Una muralla de veinte metros con pasillos por los que solo cabe una persona. Dentro del muro se han encontrado más de cien enterramientos.",
+    "body": [
+      "Kuélap está en la provincia de Luya, región Amazonas, sobre una cresta caliza por encima de los tres mil metros. El recinto mide unos seiscientos metros de largo por ciento diez de ancho medio. La muralla perimetral alcanza los veinte metros en su tramo más alto. Dentro hay más de cuatrocientas estructuras, casi todas de planta circular, de cuatro a ocho metros de diámetro. Los accesos son corredores que se estrechan hasta que solo pasa una persona a la vez. Las puertas de las casas miden entre cuarenta y noventa centímetros: hay que entrar de lado.",
+      "Y sin embargo, dentro de esa muralla se han documentado más de cien entierros. El muro que parece una defensa es también un cementerio. Los arqueólogos tampoco se ponen de acuerdo sobre qué eran las construcciones del interior: unos las leen como viviendas y otros como graneros de un centro administrativo. La palabra «fortaleza», con la que se conoce el sitio desde el siglo XIX, es una hipótesis que se volvió nombre propio. Lo inequívoco es de quién era: la planta circular y los frisos de rombos y zigzags en la base de los muros son la firma chachapoya. Las pocas construcciones rectangulares son añadidos incas y de los primeros años coloniales.",
+      "El 31 de enero de 1843, el juez de primera instancia de Chachapoyas, Juan Crisóstomo Nieto, subió hasta allí guiado por campesinos de la zona que conocían el lugar de sobra. De esa visita arranca la documentación científica del sitio; no el sitio. Hoy lo administra el Ministerio de Cultura del Perú, que lo presentó a la lista indicativa de la UNESCO junto con Yalape, Macro, Revash y Karajía. Casi doscientos años después seguimos llamándolo fortaleza porque eso es lo que nos parece cuando vemos un muro alto y una puerta estrecha."
+    ],
+    "question": "¿Cuántas cosas llama usted defensa sin haber comprobado de qué protegen?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Kuélap, Amazonas",
+    "subtitle": "Lo que llamamos fortaleza",
+    "body": "Muralla de veinte metros, corredores por los que solo pasa una persona, puertas de cuarenta centímetros. Dentro del muro se han documentado más de cien entierros. Los arqueólogos discuten si las construcciones del interior eran casas o graneros."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kuelap",
+      "#Chachapoyas",
+      "#Peru"
+    ],
+    "extended": [
+      "#Arqueologia",
+      "#Amazonas",
+      "#CulturasAndinas",
+      "#PatrimonioCultural",
+      "#Historia",
+      "#AmericaPrecolombina",
+      "#Utcubamba",
+      "#Incas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Datos arquitectónicos del sector fortaleza de Kuélap: unos 600 metros de longitud por unos 110 metros de ancho promedio; muralla perimétrica que alcanza los 20 metros de altura; 420 estructuras en el interior, en su gran mayoría de planta circular, con diámetros de 4 a 8 metros, muros de unos 50 centímetros de espesor y 4 metros de altura, y vanos de puerta de entre 40 y 90 centímetros de ancho. La torre llamada El Castillo o La Atalaya mide 7 metros de alto y tiene planta en forma de D. El acceso principal estaba diseñado de forma restrictiva, «por donde podía pasar solamente una persona a la vez». La secuencia cerámica documentada abarca el Intermedio Temprano, el Intermedio Tardío y el Horizonte Tardío. Sobre la función hay desacuerdo: unos investigadores interpretan las estructuras como residencias y otros como graneros de un centro administrativo. La muralla perimétrica cumplió además función de cementerio: contiene más de cien entierros.",
+      "source": "«Diversidad natural y cultural del Complejo Arqueológico Kuélap (provincia Luya, región Amazonas): la fortaleza de los hombres de las nubes», artículo en revista arbitrada, SciELO Perú",
+      "url": "http://www.scielo.org.pe/scielo.php?script=sci_arttext&pid=S2413-32992019000300004"
+    },
+    {
+      "claim": "Kuélap es el monumento arqueológico más importante del nororiente peruano y símbolo de la región Amazonas, y uno de los principales referentes del legado cultural chachapoya. Se ubica en el distrito de El Tingo, provincia de Luya, departamento de Amazonas. El Estado peruano lo administra como Complejo Arqueológico Monumental Kuélap. La documentación científica del sitio comienza el 31 de enero de 1843 con Juan Crisóstomo Nieto.",
+      "source": "Ministerio de Cultura del Perú, sitio oficial del Complejo Arqueológico Monumental Kuélap",
+      "url": "https://kuelap.cultura.pe/"
+    },
+    {
+      "claim": "Descripción del sitio y de sus accesos: la meseta mide unos seiscientos metros de largo por unos ciento cincuenta de ancho, estrechándose a menos de treinta; la muralla alcanza unos veinte metros en su tramo más alto; el recinto contiene más de quinientas estructuras densamente agrupadas. Las entradas principales son pasajes trapezoidales de unos sesenta metros de largo y tres de ancho en la boca, que se van estrechando hasta permitir el paso de una sola persona. El arqueólogo Narváez documentó más de un centenar de entierros. La construcción monumental y las tumbas comenzaron, según la asociación establecida por Ruiz en 1972, hacia el año 900. Los chachapoya fueron conquistados por Túpac Inca Yupanqui a mediados del siglo XV.",
+      "source": "Popular Archaeology, «Warriors of the Clouds: Kuélap, a Chachapoya Citadel»",
+      "url": "https://popular-archaeology.com/article/warriors-of-the-clouds-kuelap-a-chachapoya-citadel/"
+    },
+    {
+      "claim": "Los complejos chachapoya se caracterizan por grandes edificios circulares con frisos de mampostería de zigzags y rombos, distintivos de esa arquitectura. Las pocas construcciones cuadradas o rectangulares de Kuélap fueron añadidas por los incas o en los primeros años coloniales. La planta circular y los frisos romboidales en la base de los edificios identifican sin ambigüedad el asentamiento como chachapoya, frente a la vivienda rectangular común en otras culturas sudamericanas.",
+      "source": "History Today, «The Story of Peru's Cloud Warriors», y ficha de la cultura chachapoya y sus sitios (Kuélap, Revash, Karajía)",
+      "url": "https://www.historytoday.com/archive/history-matters/story-perus-cloud-warriors"
+    },
+    {
+      "claim": "Kuélap figura en la lista indicativa del Patrimonio Mundial de la UNESCO dentro de la candidatura «Chachapoyas sites of the Utcubamba Valley», presentada por el Estado peruano junto con los sitios de Yalape, Macro, Revash y Karajía. La lista indicativa es el paso previo a una eventual inscripción como Patrimonio Mundial; Kuélap no está inscrito.",
+      "source": "UNESCO World Heritage Centre, lista indicativa, «Chachapoyas sites of the Utcubamba Valley» (ref. 6411)",
+      "url": "https://whc.unesco.org/en/tentativelists/6411/"
+    },
+    {
+      "claim": "El 31 de enero de 1843, el juez de primera instancia de la provincia de Chachapoyas Juan Crisóstomo Nieto llegó a Kuélap en el ejercicio de sus funciones, guiado por pobladores locales que ya conocían el sitio arqueológico. A partir de esa visita, lo que los campesinos llamaban «las ruinas grandiosas» empezó a recibir a científicos y viajeros.",
+      "source": "PromPerú / peru.info, «Fortaleza de Kuélap: descubre la joya arquitectónica de Perú», y Agencia Andina (agencia estatal de noticias del Perú), «Kuélap monumental»",
+      "url": "https://andina.pe/agencia/noticia-kuelap-monumental-conoce-importancia-esta-joya-cultural-y-turistica-amazonas-878670.aspx"
+    }
+  ],
+  "do_not_use": [
+    "No dar una cifra cerrada de estructuras. El artículo arbitrado cuenta 420, otras descripciones hablan de más de quinientas y el Ministerio de Cultura publica conteos por sector. Escribir «más de cuatrocientas».",
+    "No afirmar que Kuélap fue una fortaleza. La función está en discusión: hay lecturas residenciales y lecturas de centro administrativo con graneros, y la muralla contiene más de cien entierros. «Fortaleza» es el nombre heredado del siglo XIX, no una conclusión arqueológica.",
+    "No repetir que Kuélap contiene tres veces el volumen de material constructivo de la Gran Pirámide de Guiza. Es una comparación que circula mucho y no se encontró en ninguna fuente institucional ni arbitrada durante esta investigación.",
+    "No decir que Juan Crisóstomo Nieto descubrió Kuélap. Subió guiado por campesinos de la zona que ya conocían el lugar; lo que empieza en 1843 es la documentación científica.",
+    "No fijar el número de accesos sin matizar. El sitio oficial del Ministerio de Cultura numera tres accesos; el artículo arbitrado describe dos vanos en el lado este y otras descripciones añaden un corredor occidental cuyo uso se discute.",
+    "No dar una cronología radiocarbónica como establecida. El artículo arbitrado consultado ofrece secuencia cerámica (Intermedio Temprano, Intermedio Tardío y Horizonte Tardío) y no fechas de carbono 14; las fechas de construcción en el siglo VI o hacia el año 900 que circulan proceden de fuentes de distinta calidad y no se verificaron institucionalmente.",
+    "No llamar a Kuélap Patrimonio Mundial de la UNESCO. Está en la lista indicativa, que es el paso previo, dentro de la candidatura conjunta de los sitios chachapoya del valle del Utcubamba.",
+    "No llamarlo «el Machu Picchu del norte». Es una etiqueta de promoción turística, no una descripción arqueológica, y borra justamente lo que distingue a la arquitectura chachapoya de la inca.",
+    "No decir que los incas exterminaron a los chachapoya. Fueron conquistados por Túpac Inca Yupanqui a mediados del siglo XV y el sitio siguió ocupado durante el Horizonte Tardío y hasta los primeros años coloniales."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

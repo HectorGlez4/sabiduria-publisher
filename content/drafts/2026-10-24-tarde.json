@@ -1,0 +1,94 @@
+{
+  "id": "2026-10-24-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Lucrecio y el naufragio que se mira desde la orilla",
+    "hook": "Se cita como prueba de que al ser humano le gusta ver el desastre ajeno desde lugar seguro. Lucrecio lo desmiente en el verso siguiente, y ese verso casi nunca se copia.",
+    "body": [
+      "El libro II de «De rerum natura» empieza con una escena marina. Hay tormenta, un hombre en apuros mar adentro y alguien que lo mira desde la playa. Son cuatro versos, y las dos primeras palabras latinas —«suave, mari magno»— se volvieron proverbiales solas. El poema entero son unos siete mil cuatrocientos hexámetros en seis libros, escritos hacia mediados del siglo I a.C. para explicar en verso la física de Epicuro: todo está hecho de átomos y vacío, y no hay nada que temer después de la muerte.",
+      "El tercer verso es el que cambia el sentido de los dos primeros: «non quia vexari quemquamst iucunda voluptas». No porque ver a nadie en apuros sea un gozo agradable. El placer no está en el naufragio; está en caer en la cuenta de qué males no le están tocando a uno. Y Lucrecio tampoco se queda en la orilla. Ocho versos más abajo escribe que nada es más dulce que habitar las alturas serenas, fortificadas por la doctrina de los sabios. La playa no es el destino del pasaje. Es el escalón bajo.",
+      "En 1625, Francis Bacon abrió su ensayo «De la verdad» con esta misma imagen: el placer de mirar los barcos sacudidos desde la costa, el de ver una batalla desde la ventana de un castillo, y por encima de ambos el de estar en la altura de la verdad y ver desde allí los errores y las tempestades del valle. Y le añadió una condición que no está en el latín: que esa mirada sea con compasión y no con soberbia. El texto llegó hasta él por poco: los dos manuscritos más antiguos que lo conservan, el Códice Oblongus y el Códice Quadratus, están en Leiden y son del siglo IX; el primero se copió en la escuela palatina de Carlomagno poco después del año 800."
+    ],
+    "question": "¿Desde dónde está mirando usted lo que les pasa a los demás?",
+    "quote": {
+      "text": "Dulce es, cuando en el vasto mar los vientos revuelven las aguas, contemplar desde tierra el duro trabajo de otro; no porque ver a nadie en apuros sea un gozo agradable, sino porque es dulce advertir de qué males estás libre.",
+      "author": "Lucrecio",
+      "work": "«De rerum natura», libro II, versos 1-4 (h. mediados del siglo I a.C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Lucrecio, siglo I a.C.",
+    "subtitle": "El comienzo del libro II, con el verso que suele recortarse",
+    "body": "Dulce es contemplar desde tierra el duro trabajo de otro cuando los vientos revuelven el mar; no porque ver a nadie en apuros sea un gozo, sino porque es dulce advertir de qué males estás libre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Lucrecio",
+      "#Citas",
+      "#Epicureismo"
+    ],
+    "extended": [
+      "#DeRerumNatura",
+      "#Filosofia",
+      "#RomaAntigua",
+      "#Latin",
+      "#Epicuro",
+      "#FrancisBacon",
+      "#Literatura",
+      "#HistoriaDeLasIdeas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de los versos 1 a 13 del libro II de «De rerum natura», verbatim: «Suave, mari magno turbantibus aequora ventis / e terra magnum alterius spectare laborem; / non quia vexari quemquamst iucunda voluptas, / sed quibus ipse malis careas quia cernere suavest. / suave etiam belli certamina magna tueri / per campos instructa tua sine parte pericli; / sed nihil dulcius est, bene quam munita tenere / edita doctrina sapientum templa serena, / despicere unde queas alios passimque videre / errare atque viam palantis quaerere vitae...». Los versos 3 y 4 son los que niegan expresamente que el placer esté en el apuro ajeno.",
+      "source": "The Latin Library, texto de Lucrecio, «De rerum natura», libro II",
+      "url": "https://www.thelatinlibrary.com/lucretius/lucretius2.shtml"
+    },
+    {
+      "claim": "Localización canónica del pasaje: «De rerum natura», libro II, verso 1 y siguientes, en el texto latino de la Perseus Digital Library (identificador Perseus:text:1999.02.0130, urn:cts:latinLit:phi0550.phi001). El pasaje abre el libro II del poema.",
+      "source": "Perseus Digital Library, Tufts University — Lucretius, «De Rerum Natura», Liber Secundus",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0130:book%3D2:card%3D1"
+    },
+    {
+      "claim": "Edición bilingüe de referencia y traducción inglesa del pasaje: Lucretius, «De Rerum Natura», Loeb Classical Library 181, traducción de W. H. D. Rouse revisada por Martin Ferguson Smith, Harvard University Press, 1924. La traducción del pasaje deja explícito el sentido: el agrado no procede de que alguien sufra, sino de percibir de qué males está uno mismo libre.",
+      "source": "Loeb Classical Library (Harvard University Press), LUCRETIUS, «De Rerum Natura», LCL 181",
+      "url": "https://www.loebclassics.com/view/lucretius-de_rerum_natura/1924/pb_LCL181.95.xml"
+    },
+    {
+      "claim": "Francis Bacon reelabora el pasaje en el ensayo «Of Truth», primero de los «Essays» de 1625: el placer de mirar desde la costa los barcos sacudidos por el mar, el de ver una batalla desde la ventana de un castillo, y por encima de los dos el de estar sobre la altura de la verdad y ver desde ahí los errores, extravíos, nieblas y tempestades del valle; con la condición explícita de que esa vista sea con compasión y no con hinchazón ni soberbia. Bacon toma el pensamiento, no la letra, del comienzo del libro II de Lucrecio.",
+      "source": "Wikisource — «The Essays of Francis Bacon», I: «Of Truth» (edición de 1625), con la nota editorial que identifica la fuente en el libro II de Lucrecio",
+      "url": "https://en.wikisource.org/wiki/The_Essays_of_Francis_Bacon/I_Of_Truth"
+    },
+    {
+      "claim": "Transmisión del texto. Los dos manuscritos capitales de «De rerum natura» son el Codex Oblongus (Leiden, Voss. Lat. F. 30) y el Codex Quadratus (Leiden, Voss. Lat. Q. 94), ambos del siglo IX y conservados en la Universidad de Leiden. El Oblongus se escribió poco después del año 800 en la escuela palatina de Carlomagno, y un corrector contemporáneo de mano insular enmendó el texto y rellenó las lagunas dejadas por el copista original.",
+      "source": "History of Information (Jeremy Norman), «The Codex Vossianus Oblongus: Earliest and Best Surviving Text of Lucretius's De rerum natura»",
+      "url": "https://www.historyofinformation.com/detail.php?id=3217"
+    },
+    {
+      "claim": "Redescubrimiento renacentista: en 1417 Poggio Bracciolini halló en una biblioteca monástica alemana un volumen con el poema de Lucrecio, escrito casi mil quinientos años antes, y ese hallazgo marcó el punto de inflexión en la transmisión moderna del texto.",
+      "source": "Antigone Journal, «The Italian Job: Lucretius in the Renaissance»",
+      "url": "https://antigonejournal.com/2023/05/lucretius-in-the-renaissance/"
+    }
+  ],
+  "do_not_use": [
+    "No citar los dos primeros versos sueltos. Sin el tercero —«non quia vexari quemquamst iucunda voluptas»— el pasaje dice lo contrario de lo que dice Lucrecio: parece celebrar el gusto por la desgracia ajena, que es justo lo que él niega en la línea siguiente.",
+    "No presentar el pasaje como un elogio del espectador indiferente. El propio texto coloca la orilla por debajo de las alturas serenas de la doctrina de los sabios, ocho versos más abajo: la playa es el escalón bajo del pasaje, no su conclusión.",
+    "No atribuir la frase a Cicerón, a Séneca ni a un proverbio latino anónimo. Es de Lucrecio, «De rerum natura» II, 1-2.",
+    "No repetir la biografía de san Jerónimo: que Lucrecio enloqueció por un filtro de amor, escribió el poema en los intervalos de lucidez y se suicidó a los cuarenta y cuatro años. Procede de la «Crónica» de Jerónimo, más de cuatro siglos posterior, y no se considera un testimonio fiable.",
+    "No dar por verificada la abadía de Fulda como lugar del hallazgo de Poggio Bracciolini en 1417. Las fuentes consultadas hablan de una biblioteca monástica alemana; la identificación concreta es una conjetura muy repetida.",
+    "No decir que se conserva el manuscrito que encontró Poggio. Ese códice se perdió; el texto llegó por la copia que se sacó de él y por los dos manuscritos carolingios de Leiden.",
+    "No atribuir a Lucrecio las palabras de Francis Bacon. La condición de mirar «con compasión y no con soberbia» es un añadido de Bacon en 1625, no está en el latín.",
+    "No traducir «laborem» por «sufrimiento» sin matiz. En el verso significa el esfuerzo penoso, la brega del que está en apuros; la traducción por «sufrimiento» empuja el pasaje hacia la lectura cruel que el propio Lucrecio descarta."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

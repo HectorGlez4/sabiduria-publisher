@@ -1,0 +1,94 @@
+{
+  "id": "2026-10-24-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Nguyễn Du y el cierre del Truyện Kiều",
+    "hook": "Tres mil doscientos versos contando cómo el talento de una mujer la fue destruyendo. Y al final, el poeta pone el talento en tercer lugar.",
+    "body": [
+      "«Truyện Kiều» tiene tres mil doscientos cincuenta y cuatro versos y lo escribió Nguyễn Du, un mandarín vietnamita que vivió entre 1765 y 1820. Está compuesto en lục bát, la forma popular que alterna un verso de seis sílabas con uno de ocho, y en chữ Nôm, la escritura del vietnamita anterior al alfabeto latino. El argumento no es suyo: lo tomó de una novela china del siglo XVII, «Jin Yun Qiao», firmada con el seudónimo Qingxin Cairen por un autor sin identificar. Kiều es hermosa, toca, escribe versos. Se vende para salvar a su padre y pasa quince años de desgracia.",
+      "El poema empieza diciendo que el talento y el destino suelen enemistarse, y luego se dedica a demostrarlo: cada don de Kiều es la puerta por la que entra una desgracia nueva. Por eso desconcierta el balance del final. En los versos 3251 y 3252, Nguyễn Du no salva el talento ni lo maldice. Lo pesa. Escribe que la raíz del bien está en nuestro propio corazón, y que esa palabra, tâm —corazón, conciencia—, vale tres veces la palabra tài, talento.",
+      "El libro dejó de pertenecer a la literatura y pasó a la vida diaria. En vietnamita hay verbos propios para lo que se hace con él: ngâm Kiều es recitarlo salmodiado, vịnh Kiều componer a partir de una escena suya, bình Kiều comentarlo, lẩy Kiều cambiarle una palabra para que diga lo que uno necesita, y bói Kiều abrirlo al azar —sobre todo en el Tết, el año nuevo— y leer el verso que salga como respuesta a lo que se estaba preguntando. La UNESCO se asoció en 2013 a la conmemoración del 250.º aniversario del nacimiento del poeta, celebrada en 2015. Un argumento prestado de una novela china olvidada terminó siendo el libro que un país abre cuando no sabe qué hacer."
+    ],
+    "question": "¿Qué pesa más cuando juzga a alguien: lo que sabe hacer o desde dónde lo hace?",
+    "quote": {
+      "text": "La raíz del bien está en nuestro propio corazón; esa palabra, corazón, vale tres veces la palabra talento.",
+      "author": "Nguyễn Du",
+      "work": "«Truyện Kiều» (Đoạn trường tân thanh), versos 3251-3252, principios del siglo XIX",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Nguyễn Du, Vietnam",
+    "subtitle": "Los versos 3251 y 3252 de un poema de 3.254",
+    "body": "La raíz del bien está en nuestro propio corazón; esa palabra, corazón, vale tres veces la palabra talento."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#NguyenDu",
+      "#Citas",
+      "#Vietnam"
+    ],
+    "extended": [
+      "#TruyenKieu",
+      "#Poesia",
+      "#LiteraturaAsiatica",
+      "#SigloXIX",
+      "#Asia",
+      "#ChuNom",
+      "#Clasicos",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto y localización de la cita. Versos 3251-3252 del «Truyện Kiều»: original vietnamita «Thiện căn ở tại lòng ta, / Chữ tâm kia mới bằng ba chữ tài». Traducción inglesa de referencia de Huỳnh Sanh Thông: Inside ourselves there lies the root of good; the heart outweighs all talents on this earth. Edición citada: «The Tale of Kiều», traducción de Huỳnh Sanh Thông, Yale University Press, New Haven, 1983, ISBN 978-0300028737.",
+      "source": "Wikiquote, «The Tale of Kieu», con la traducción de Huỳnh Sanh Thông (Yale University Press, 1983) y el original vietnamita, numerados como versos 3251-3252",
+      "url": "https://en.wikiquote.org/wiki/The_Tale_of_Kieu"
+    },
+    {
+      "claim": "Posición exacta del verso dentro del poema: en los 3.254 versos del «Truyện Kiều», la línea «Chữ tâm kia mới bằng ba chữ tài» ocupa el lugar 3252, en la sección final de la obra, precedida por «Thiện căn ở tại lòng ta».",
+      "source": "Quân đội nhân dân (diario nacional de Vietnam), artículo «Chữ tâm kia mới bằng ba chữ tài»",
+      "url": "https://www.qdnd.vn/van-hoa/van-hoc-nghe-thuat/chu-tam-kia-moi-bang-ba-chu-tai-636605"
+    },
+    {
+      "claim": "Edición crítica bilingüe y estatus de la obra: «The Tale of Kiều. A Bilingual Edition of Truyện Kiều», de Nguyễn Du, traducción y anotación de Huỳnh Sanh Thông, con ensayo histórico de Alexander B. Woodside, Yale University Press, New Haven, 1983. Poema narrativo de 3.254 versos, considerado la obra maestra suprema de la literatura vietnamita desde su aparición a comienzos del siglo XIX; se ha leído, cantado y enseñado en las escuelas de todo el país.",
+      "source": "Yale University Press, ficha editorial de «The Tale of Kieu»",
+      "url": "https://yalebooks.yale.edu/book/9780300040517/the-tale-of-kieu/"
+    },
+    {
+      "claim": "Origen del argumento y lengua de escritura. Nguyễn Du (1765-1820) tomó la trama de una novela china del siglo XVII, «Jin Yun Qiao» —en vietnamita «Kim Vân Kiều»—, escrita por un autor desconocido bajo el seudónimo Qingxin Cairen, y la transformó para expresar las convulsiones sociales y políticas del Vietnam de finales del siglo XVIII. El poema está escrito en vietnamita con la escritura chữ Nôm y en la forma métrica lục bát, que alterna versos de seis y de ocho sílabas.",
+      "source": "Wikipedia en inglés, entradas «The Tale of Kieu» y «Jin Yun Qiao», que recogen la filiación textual y la forma métrica",
+      "url": "https://en.wikipedia.org/wiki/The_Tale_of_Kieu"
+    },
+    {
+      "claim": "Usos culturales del poema en Vietnam, con sus nombres propios: ngâm Kiều (recitación salmodiada de los versos), vịnh Kiều (componer poesía a partir de una situación o un personaje del Kiều), bình Kiều (escribir comentarios), lẩy Kiều (cambiar una palabra o una frase de los versos para un fin personal) y bói Kiều (adivinación consistente en señalar al azar un verso del libro). La práctica de bói Kiều se realiza sobre todo durante el Tết, el año nuevo lunar, y en momentos de incertidumbre.",
+      "source": "De Anza College, materiales docentes de John Swensson sobre «The Tale of Kieu — Truyen Kieu»",
+      "url": "https://www.deanza.edu/faculty/swenssonjohn/kieu/index.html"
+    },
+    {
+      "claim": "Reconocimiento internacional: Nguyễn Du fue distinguido por la UNESCO en la 37.ª sesión de su Conferencia General, celebrada en París en 2013, dentro de la resolución sobre personalidades y aniversarios con los que la organización se asocia; el 250.º aniversario de su nacimiento se conmemoró en 2015, con un acto central el 5 de diciembre de 2015 en la ciudad de Hà Tĩnh.",
+      "source": "VietnamPlus (Agencia Vietnamita de Noticias), «Nguyen Du, who brings Vietnamese poem to new high»",
+      "url": "https://en.vietnamplus.vn/nguyen-du-who-brings-vietnamese-poem-to-new-high-post85260.vnp"
+    }
+  ],
+  "do_not_use": [
+    "No presentar el argumento como invención de Nguyễn Du. La trama procede de la novela china del siglo XVII «Jin Yun Qiao», firmada con el seudónimo Qingxin Cairen. Lo propio de Nguyễn Du es el verso, la lengua y la penetración psicológica, no el asunto.",
+    "No decir que el poema se escribió en el alfabeto vietnamita actual. Se escribió en chữ Nôm, la escritura de base china con la que se anotaba el vietnamita; el alfabeto latino quốc ngữ se generalizó mucho después.",
+    "No fijar un año exacto de composición. La fecha de escritura no está documentada con certeza y suele situarse a comienzos del siglo XIX; 1820 es el año de la muerte de Nguyễn Du, no una fecha de redacción verificada.",
+    "No llamar a estos dos versos «el último verso del poema». El texto tiene 3.254 versos y estos son el 3251 y el 3252.",
+    "No decir que la UNESCO declaró el «Truyện Kiều» patrimonio de la humanidad. Lo que hubo fue la asociación de la UNESCO, decidida en su 37.ª Conferencia General de 2013, a la conmemoración del 250.º aniversario del nacimiento de Nguyễn Du, celebrada en 2015. Son cosas distintas.",
+    "No repetir como dato comprobado que hay campesinos analfabetos capaces de recitar el poema entero sin un error. Circula desde hace un siglo como lugar común y las fuentes consultadas lo dan en condicional, no como hecho documentado.",
+    "No traducir «tâm» simplemente por «corazón» sin matiz. La palabra cubre a la vez el corazón, la conciencia moral y la intención con que se obra; el contraste del verso es con «tài», el talento o la habilidad.",
+    "No convertir el verso en un lema de superación personal ni en un elogio de la bondad ingenua. En el poema llega después de tres mil doscientos versos en los que el talento de la protagonista es justamente lo que la arruina: es un balance, no un consejo."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}

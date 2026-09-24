@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-24-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "al-Idrisi y el planisferio de plata de Roger II",
+    "hook": "Un rey mandó grabar el mapa del mundo en un disco de plata de dos metros. Seis años después lo fundieron. Lo que llegó hasta nosotros fue el objeto barato que iba al lado.",
+    "body": [
+      "Hacia 1138, el geógrafo Muhammad al-Idrisi llegó a la corte de Roger II en Palermo. Trabajó quince años. El método no era leer mapas viejos: se interrogaba en el puerto a tripulaciones y pasajeros, y se enviaban agentes a comprobar. En 1154 entregó dos cosas a la vez. Una era un planisferio grabado en un disco de plata de unos dos metros de diámetro y más de cien kilos de peso. La otra era un libro, «Nuzhat al-mushtaq fi ijtiraq al-afaq», el solaz de quien desea recorrer los horizontes: el mundo conocido dividido en siete climas, cada clima partido en diez secciones, setenta mapas parciales más un mapa general.",
+      "En 1160 Palermo se levantó contra Guillermo, el hijo de Roger. Saquearon el palacio. El disco de plata lo desmontaron y lo fundieron por lo que valía el metal. Lo que sobrevivió fue el libro, porque el libro se podía copiar a mano y el disco no. Hoy se conservan unas diez copias manuscritas. La más antigua está en París, en la Biblioteca Nacional de Francia: el manuscrito Arabe 2221, trescientas cincuenta y dos hojas de papel con un planisferio y sesenta y ocho mapas. La de la Biblioteca Bodleiana de Oxford se copió en El Cairo en 1553 y se compró en 1692.",
+      "Los mapas de al-Idrisi tienen el sur arriba. No es un error ni una inversión: era la convención de la cartografía árabe de su tiempo. Para leerlos hay que darles la vuelta, y al darles la vuelta Europa deja de estar donde uno la espera. Entre 2017 y 2019, la Factum Foundation rehízo el planisferio de plata fresando el metal con control numérico, a partir de la copia manuscrita de Oxford, la de 1553. El objeto se reconstruyó desde la copia. Durante ochocientos años fue al revés: la copia se sostuvo sola, sin el objeto."
+    ],
+    "question": "¿Qué de lo que usted guarda sobreviviría solo si alguien más lo copiara?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El mapa de plata, 1154",
+    "subtitle": "Lo que se funde y lo que se copia",
+    "body": "El mapa del mundo se grabó en un disco de plata de dos metros para el rey de Sicilia. En 1160 saquearon el palacio y lo fundieron por su metal. Sobrevivió el libro que lo acompañaba: se podía copiar a mano."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlIdrisi",
+      "#HistoriaDeLosMapas",
+      "#Cartografia"
+    ],
+    "extended": [
+      "#Sicilia",
+      "#Palermo",
+      "#EdadMedia",
+      "#Geografia",
+      "#Manuscritos",
+      "#SigloXII",
+      "#RogerII",
+      "#HistoriaDeLaCiencia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Al-Idrisi llegó a la corte de Roger II hacia 1138. Primero se completó el mapa de plata y después el libro, fechado en 548 de la hégira, equivalente a 1153 de la era cristiana. El título completo es «Nuzhat al-mushtāq fi'khtirāq al-āfāq», conocido también como Tabula Rogeriana o Libro de Roger. Contiene setenta mapas regionales, organizados en siete zonas climáticas longitudinales siguiendo el modelo de Ptolomeo, y está orientado con el sur arriba. Al-Idrisi dedicó quince años a examinar los mapas existentes y a entrevistar viajeros. El mapa de plata y todos los ejemplares originales del libro se han perdido: la obra se conoce por diez copias posteriores.",
+      "source": "Factum Foundation, «Al-Idrisi and Roger II: Mapping the World in the Twelfth Century»",
+      "url": "https://factumfoundation.org/our-projects/digital-restorations/re-creating-the-lost-map-of-al-idrisi/al-idrisi-and-roger-ii-mapping-the-world-in-the-twelfth-century/"
+    },
+    {
+      "claim": "El planisferio de plata medía unas ochenta pulgadas de diámetro —alrededor de dos metros— y pesaba cerca de trescientas libras. Al-Idrisi terminó el mapa en 1154, tras quince años de trabajo con Roger II, recopilando información mediante el interrogatorio de tripulaciones y pasajeros de barcos y el envío de agentes para comprobar los datos. El disco de plata desapareció en las convulsiones políticas de Sicilia hacia 1160. La obra comprendía setenta mapas parciales de itinerario más un mapa del mundo, correspondientes a siete zonas climáticas divididas cada una en diez partes longitudinales; unidos, los mapas superarían los dos metros y medio de longitud. La orientación es con el sur arriba, y la obra estuvo entre los mapas más exactos disponibles en Europa hasta la era de los descubrimientos. Hoy existen diez copias manuscritas.",
+      "source": "The Ohio State University, «Wind Rose — Maps to Know»: ficha del mapa del mundo de Muhammad al-Idrisi, 1154",
+      "url": "https://u.osu.edu/wagner.19/maps-to-know/809-2/"
+    },
+    {
+      "claim": "El manuscrito Arabe 2221 de la Bibliothèque nationale de France contiene el «Nuzhat al-muštāq fī iḫtirāq al-āfāq» de al-Idrisi, tratado de geografía compuesto hacia mediados del siglo XII en la corte de Roger II de Sicilia. Consta de trescientas cincuenta y dos hojas de papel de 26 por 21 centímetros e incluye un planisferio y sesenta y ocho mapas, cada uno correspondiente a la décima sección de un clima. Es la copia manuscrita más antigua que se conserva de la obra. Procede de la biblioteca de Asselin de Cherville, adquirida en 1833.",
+      "source": "Bibliothèque nationale de France / Gallica, manuscrito Arabe 2221, «Nuzhat al-muštāq fī iḫtirāq al-āfāq» de Muḥammad ibn Muḥammad al-Idrīsī",
+      "url": "https://gallica.bnf.fr/ark:/12148/btv1b6000547t"
+    },
+    {
+      "claim": "El ejemplar de la Biblioteca Bodleiana de Oxford, signatura MS. Pococke 375, se copió en El Cairo en 1553 y la Bodleiana lo adquirió en 1692. Contiene la descripción del mundo compuesta por al-Idrisi, desde el ecuador hasta la latitud del Báltico y desde el Atlántico hasta Siberia, con mapas del mundo y regionales.",
+      "source": "Bodleian Libraries, University of Oxford — Digital Bodleian, MS. Pococke 375, y guía de manuscritos de Oriente Medio de la Bodleian",
+      "url": "https://digital.bodleian.ox.ac.uk/objects/ced0d8bd-1019-4af2-9086-e411115f1507/"
+    },
+    {
+      "claim": "Entre 2017 y 2019, la Factum Foundation rehizo materialmente el mapa de plata perdido de al-Idrisi a partir de la copia manuscrita conservada en la Bodleian Libraries de Oxford, hecha en El Cairo en 1553, que contiene sesenta y nueve de los setenta mapas regionales además del mapa circular del mundo. La rematerialización se ejecutó en plata mediante fresado por control numérico.",
+      "source": "Factum Foundation, proyecto «Re-creating the Lost Map of al-Idrisi»",
+      "url": "https://factumfoundation.org/our-projects/digital-restorations/re-creating-the-lost-map-of-al-idrisi/"
+    }
+  ],
+  "do_not_use": [
+    "No dar una cifra exacta del peso del disco de plata. Las fuentes consultadas oscilan entre unas trescientas libras (cerca de ciento cuarenta kilos) y cuatrocientos ratl, que se convierten en unos ciento cincuenta kilos. Escribir «más de cien kilos» o «alrededor de ciento cuarenta kilos», nunca una cifra cerrada.",
+    "No zanjar la fecha del libro. El año 548 de la hégira abarca 1153 y 1154 de la era cristiana; unas fuentes dan 1153 y otras 1154. La fecha que se repite habitualmente para el conjunto de la obra es 1154.",
+    "No describir el sur arriba como un error, una inversión o una rareza del autor. Era la convención de la cartografía árabe del periodo; darlo como curiosidad pintoresca invierte el sentido del dato.",
+    "No llamarlo «el primer mapamundi». Hay mapas ptolemaicos anteriores y una tradición islámica previa, la escuela de al-Balji e Ibn Hawqal, con la que al-Idrisi dialoga.",
+    "No decir que al-Idrisi representó América ni que tuvo noticia de ella. Su mundo llega del Atlántico a Siberia y del ecuador a la latitud del Báltico.",
+    "No presentar el manuscrito de Oxford como el más antiguo. El más antiguo conservado es el Arabe 2221 de la Biblioteca Nacional de Francia; el de Oxford se copió en El Cairo en 1553.",
+    "No decir que el disco ardió en un incendio. Las fuentes describen que, en el saqueo del palacio de Palermo hacia 1160, el disco fue desmontado y fundido por el valor de su plata.",
+    "No afirmar que Roger II no llegó a ver la obra terminada. Murió en febrero de 1154 y esa coincidencia se repite mucho, pero no se verificó en ninguna fuente institucional durante esta investigación.",
+    "No atribuir a al-Idrisi el nombre «Tabula Rogeriana». Es la denominación latina posterior con la que se conoció la obra en Europa; el título del autor es «Nuzhat al-mushtaq fi ijtiraq al-afaq»."
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
+}
