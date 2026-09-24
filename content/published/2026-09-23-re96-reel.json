@@ -64,8 +64,14 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "1714385802967625",
+      "url": "/reel/1714385802967625/",
+      "published_at": "2026-09-24T05:30:58.059749+00:00"
+    }
+  },
   "reemision_de": "2026-08-29-tarde",
   "cita_slug": "baltasar-gracian-lo-bueno-si-breve-dos-veces-bueno"
 }

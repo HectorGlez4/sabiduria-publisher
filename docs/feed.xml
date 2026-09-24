@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 24 Sep 2026 03:30:25 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 05:30:58 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Lo bueno, si breve, dos veces bueno; y aun lo malo, si poco, no tan malo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-23-re96-reel</guid>
+      <pubDate>Thu, 24 Sep 2026 04:26:00 +0000</pubDate>
+      <description><![CDATA["Lo bueno, si breve, dos veces bueno; y aun lo malo, si poco, no tan malo."
+— Baltasar Gracián (1601-1658)
+
+El aforismo se titula "No cansar" y está en un libro de trescientas máximas, cada una del tamaño de un párrafo. Gracián era jesuita y lo publicó bajo seudónimo, sin permiso de sus superiores. Escribía corto por una razón que él mismo da: lo que se gana en cortesía se pierde en palabras.
+
+La mitad que casi nunca se cita es la segunda, y es la más honesta. La brevedad no vuelve bueno lo que no lo es: solo abrevia el daño. Sirve igual para una reunión, para un reclamo o para una mala noticia que hay que dar.
+
+El propio aforismo termina con cuatro palabras que se cumplen a sí mismas: lo bien dicho se dice presto. En enero de 1658 desterraron a Gracián a un pueblo del Pirineo por publicar sin licencia; murió en diciembre.
+
+¿Qué de lo que dijiste esta semana habría ganado con la mitad de las palabras?
+
+#SabiduriaDeBolsillo #BaltasarGracian #Aforismos #SigloDeOro]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-23-re96-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-23-re96-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>SE ENROLÓ COMO CRIADO EN 1766 Y DIO LA VUELTA AL MUNDO ANTES QUE NINGUNA OTRA MUJER</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -481,26 +501,6 @@ Fue el egiptólogo Jakob Krall quien reconoció que aquella escritura no era egi
 #SabiduriaDeBolsillo #LiberLinteus #Etruscos #Zagreb]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-extra100.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-extra100.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Amarás la belleza, que es la sombra de Dios sobre el Universo.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-20-re75-reel</guid>
-      <pubDate>Sun, 20 Sep 2026 15:26:00 +0000</pubDate>
-      <description><![CDATA["Amarás la belleza, que es la sombra de Dios sobre el Universo."
-— Gabriela Mistral, Decálogo del artista (Desolación, 1922)
-
-Es el primero de diez mandamientos que Gabriela Mistral escribió para quien hace una obra. Aparecieron en Desolación, el libro que la dio a conocer y que ella no publicó: lo editó en Nueva York, en 1922, el Instituto de las Españas de la Universidad de Columbia, después de que el profesor Federico de Onís diera una conferencia sobre sus poemas en 1921. A los profesores de español que la escucharon les impresionó que aquella poeta fuera además maestra de escuela. Lo era desde los quince años. El Nobel llegaría en 1945: la primera persona de América Latina en recibirlo en Literatura.
-
-El decálogo no consuela a nadie. Prohíbe dar la belleza como cebo para los sentidos y ordena darla como alimento del alma. Prohíbe llevar la obra a las ferias. Manda entregarla "como se da un hijo: restando sangre de tu corazón". Y el mandamiento décimo cierra sin premio ninguno: de toda creación saldrás con vergüenza, porque fue inferior a tu sueño. Diez reglas, y la última quita la satisfacción de haber terminado.
-
-El original mecanografiado de ese decálogo se conserva hoy en la Biblioteca Nacional de Chile: una hoja de veintiocho centímetros, con manchas de óxido. Llegó dentro del legado de la escritora, 18.497 piezas manuscritas y unas 120.000 hojas que volvieron al país en 2007, medio siglo después de su muerte. La mujer que la memoria escolar guarda como pura ternura dejó escrito, para sí misma, el pliego de condiciones más duro que se le puede poner a un trabajo.
-
-¿Cuándo fue la última vez que algo tuyo se pareció a lo que habías imaginado?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re75-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re75-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
