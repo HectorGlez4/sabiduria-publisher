@@ -70,17 +70,17 @@
   "status": "published",
   "results": {
     "facebook_story": {
-      "post_id": "1094158219999311",
-      "photo_id": "1103724939118832",
+      "post_id": "919154527638811",
+      "photo_id": "1103755872449072",
       "url": null,
       "caduca": "24h",
-      "published_at": "2026-09-24T18:41:31.126570+00:00"
+      "published_at": "2026-09-24T19:27:10.080017+00:00"
     },
     "instagram_story": {
-      "post_id": "18105293462258681",
+      "post_id": "17907192066487714",
       "url": null,
       "caduca": "24h",
-      "published_at": "2026-09-24T18:41:45.381740+00:00"
+      "published_at": "2026-09-24T19:27:22.946822+00:00"
     }
   },
   "publish_at": "2026-09-24T15:26:00Z",
