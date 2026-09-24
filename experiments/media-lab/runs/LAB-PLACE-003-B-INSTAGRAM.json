@@ -234,6 +234,20 @@
             "espectadores": 49
           }
         }
+      },
+      {
+        "instantanea": "72h",
+        "observed_at": "2026-09-24T19:12:00+00:00",
+        "edad_horas": 85.2,
+        "fuente": "Meta Business Suite > Estadísticas > Contenido, leído con el Chrome MCP en la sesión del usuario (no por API: SDB_PAGE_TOKEN sin read_insights)",
+        "nota": "Fila «Publicación cruzada» del 21 sep 7:58: Instagram la compartió sola en la Página y Business Suite suma las dos redes. A 24 h iban 93 y 49.",
+        "metricas": {
+          "instagram+facebook": {
+            "visualizaciones": 106,
+            "alcance": 51,
+            "espectadores": 51
+          }
+        }
       }
     ]
   },
