@@ -7,8 +7,24 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 24 Sep 2026 05:30:58 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 19:04:20 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>A la vocación que fracasa puede suceder otra vocación; al amor que perece, puede sustituirse un amor nuevo; a la felicidad desvanecida puede hallarse el reparo de otra manera de felicidad...</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-09-24-extra83</guid>
+      <pubDate>Thu, 24 Sep 2026 19:03:50 +0000</pubDate>
+      <description><![CDATA["A la vocación que fracasa puede suceder otra vocación; al amor que perece, puede sustituirse un amor nuevo; a la felicidad desvanecida puede hallarse el reparo de otra manera de felicidad..."
+— José Enrique Rodó (1871-1917), Motivos de Proteo
+
+Ensayista uruguayo. Escribió para los jóvenes de su siglo un ideal de vida interior frente a la prisa y al provecho.
+
+¿Qué virtud admiras y no practicas?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-24-extra83.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-24-extra83.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Lo bueno, si breve, dos veces bueno; y aun lo malo, si poco, no tan malo.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -482,25 +498,6 @@ Murió al año siguiente. El diario se publicó en facsímil cuarenta años desp
 #SabiduriaDeBolsillo #FridaKahlo #Arte #Mexico]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re76-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-re76-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El texto más largo que queda de la lengua etrusca sobrevivió porque alguien lo cortó en tiras y lo usó para envolver a una muerta en Egipto. Nadie se dio cuenta durante más de cuarenta años.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-09-20-extra100</guid>
-      <pubDate>Sun, 20 Sep 2026 19:34:38 +0000</pubDate>
-      <description><![CDATA[El texto más largo que queda de la lengua etrusca sobrevivió porque alguien lo cortó en tiras y lo usó para envolver a una muerta en Egipto. Nadie se dio cuenta durante más de cuarenta años.
-
-El Liber Linteus Zagrabiensis es el único libro de lino que ha llegado desde la Antigüedad. Medía unos 340 por 44 centímetros y estaba escrito en doce columnas, de derecha a izquierda, en tinta negra con líneas y signos en rojo. Conserva alrededor de mil trescientos vocablos, que se reducen a unas quinientas palabras o raíces distintas: es, con diferencia, el texto etrusco más extenso que existe. Se data entre finales del siglo III y el siglo II a.C. No es literatura ni historia. Es un calendario ritual: ceremonias ordenadas por meses, con libaciones y sacrificios, y nombres de dioses como Tinia, Nethuns y Thesan.
-
-En algún momento el rollo llegó a Egipto, quizá a Alejandría, y allí un taller de embalsamadores lo cortó en once bandas para vendar a una mujer de treinta o cuarenta años. Casi con seguridad no había ninguna relación entre el libro y la difunta: era el lino que había a mano. En 1848 o 1849, Mihail Barić, exfuncionario de la Cancillería Real Húngara en Viena, compró esa momia en Egipto como recuerdo de viaje y la puso en su casa. Murió en 1859 y su hermano la cedió a la institución estatal de Zagreb en la década siguiente. Durante todo ese tiempo el texto estuvo a la vista y se tomó por decoración egipcia.
-
-Fue el egiptólogo Jakob Krall quien reconoció que aquella escritura no era egipcia sino etrusca, a principios de la década de 1890, y quien reordenó las tiras hasta devolverles la forma de libro. Hoy se guarda en una sala refrigerada del Museo Arqueológico de Zagreb. Los etruscos vivieron junto a Roma durante siglos, escribieron con un alfabeto derivado del griego que cualquiera puede pronunciar, y de toda su literatura no queda un solo libro que alguien decidiera conservar. Queda este, que se salvó por ser tela.
-
-¿Cuánto de lo que hoy llamamos patrimonio se salvó por accidente?
-
-#SabiduriaDeBolsillo #LiberLinteus #Etruscos #Zagreb]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-extra100.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-09-20-extra100.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

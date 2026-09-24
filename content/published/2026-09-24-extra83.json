@@ -36,7 +36,23 @@
     "instagram",
     "threads"
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-24T17:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1103740695783923",
+      "url": "https://www.facebook.com/874327782058550/posts/1103740695783923",
+      "published_at": "2026-09-24T19:03:50.487245+00:00"
+    },
+    "instagram": {
+      "post_id": "18125415292879681",
+      "url": "https://www.instagram.com/p/Ddrl7KMjZ23/",
+      "published_at": "2026-09-24T19:04:05.694426+00:00"
+    },
+    "threads": {
+      "post_id": "17982397974089492",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17982397974089492",
+      "published_at": "2026-09-24T19:04:20.539578+00:00"
+    }
+  }
 }
