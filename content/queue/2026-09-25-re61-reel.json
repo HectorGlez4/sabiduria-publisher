@@ -66,7 +66,13 @@
     "facebook_reel"
   ],
   "status": "ready",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+    }
+  },
   "publish_at": "2026-09-25T15:26:00Z",
-  "reemision_de": "2026-09-08-extra93"
+  "reemision_de": "2026-09-08-extra93",
+  "attempts": 1,
+  "last_attempt": "2026-09-25T16:43:47.032203+00:00"
 }
