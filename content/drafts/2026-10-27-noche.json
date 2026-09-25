@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-27-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los garamantes y las foggaras del Fezzan",
+    "hook": "Levantaron ciudades en el corazón del Sáhara sin una gota de lluvia. El agua la sacaron de abajo, y no se repone.",
+    "body": [
+      "Los garamantes ocuparon el Fezzan, en el suroeste de la actual Libia, entre el 400 a.C. y el 400 d.C. Su capital, Garama, está bajo la aldea de Germa, en el Wadi al-Ajal. No tenían río ni lluvia: tenían foggaras, galerías subterráneas ligeramente inclinadas que traen el agua por gravedad desde el pie de la meseta hasta los campos. Los arqueólogos Andrew Wilson y David Mattingly han documentado unas 550 solo en ese valle, y unas 600 en total, alimentadas por cerca de cien mil pozos verticales de unos nueve metros de profundidad media, algunos de cuarenta. Las galerías miden menos de sesenta centímetros de ancho. Se cavaron a mano, y suman unos 750 kilómetros.",
+      "El sistema funcionó durante un milenio, del 400 a.C. al 700 d.C. según las dataciones por radiocarbono, y sostuvo hasta cincuenta mil personas en un valle sin agua de superficie: cuatro mil en la capital, seis mil en las aldeas cercanas, el resto repartido. El problema estaba en el origen. Ese agua era fósil: quedó atrapada en la arenisca cuando el Sáhara era verde, y no se rellena. Mattingly calcula que en seis siglos extrajeron unos treinta mil millones de galones, más de cien mil millones de litros. El nivel freático fue bajando hasta quedar por debajo de las galerías. Para retrasarlo había que cavar más y más hondo, y eso exigía mano de obra en cantidades que se cubrieron con esclavos.",
+      "Los autores romanos los despacharon como nómadas saqueadores. La arqueología del Fazzan Project y del Desert Migrations Project describe lo contrario: ciudades planificadas, agricultura intensiva, comercio transahariano. Lo que acabó con ellos no fue un ejército. Fue una contabilidad: un recurso que solo se gasta, administrado como si se renovara. El acuífero sigue ahí, sigue siendo de los mayores del mundo, y sigue sin llenarse."
+    ],
+    "question": "¿Qué estás gastando hoy como si volviera solo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los garamantes",
+    "subtitle": "Mil años de ciudades en el Sáhara, sostenidas por agua prestada",
+    "body": "Cavaron a mano unos 750 kilómetros de galerías y cien mil pozos para traer agua fósil hasta sus campos del Fezzan. Funcionó mil años. No cayeron por una invasión: se quedaron sin lo único que los sostenía."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Garamantes",
+      "#Sahara",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Libia",
+      "#Fezzan",
+      "#AfricaAntigua",
+      "#Civilizaciones",
+      "#Agua",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Andrew Wilson y David Mattingly han establecido la existencia de unas 550 foggaras o qanats en el Wadi al-Ajal, en el Fezzan, y muchas otras en distintas partes de la cuenca del Fezzan, en Libia.",
+      "source": "Wilson y Mattingly, «Foggara irrigation, early state formation and Saharan trade: the Garamantes of Fazzan», y Wilson, «The Garamantes, groundwater, and an early Saharan civilization» (World Archaeology, 2006)",
+      "url": "https://www.researchgate.net/publication/236157680_Foggara_irrigation_early_state_formation_and_Saharan_trade_the_Garamantes_of_Fazzan"
+    },
+    {
+      "claim": "El reportaje de David Mattingly, catedrático de arqueología romana en la Universidad de Leicester, cifra en unas 600 las foggaras, en unos cien mil los pozos verticales con una profundidad media de treinta pies y máximos de ciento treinta, y en menos de dos pies el ancho de los canales; sitúa la capital Garama bajo la actual Germa, con unos cuatro mil habitantes en la ciudad, seis mil en las aldeas satélite y hasta cincuenta mil personas en el Wadi al-Ajal; y estima que en seis siglos los garamantes extrajeron treinta mil millones de galones de agua fósil no renovable, hasta que el nivel freático cayó por debajo de las foggaras.",
+      "source": "World Archaeology, «Garama: an ancient civilisation in the Central Sahara», por David Mattingly",
+      "url": "https://www.world-archaeology.com/features/garamantes-libya/"
+    },
+    {
+      "claim": "Los garamantes vivieron en el desierto del suroeste de Libia entre el 400 a.C. y el 400 d.C., excavaron unos 750 kilómetros de túneles subterráneos y pozos de acceso vertical —con el máximo de actividad constructiva entre el 100 a.C. y el 100 d.C.— y explotaron un gran acuífero de arenisca, potencialmente uno de los mayores del mundo.",
+      "source": "Estudio de Frank Schwartz (Escuela de Ciencias de la Tierra, Universidad Estatal de Ohio) presentado el 16 de octubre de 2023 en GSA Connects 2023, reunión de la Geological Society of America",
+      "url": "https://phys.org/news/2023-10-ancient-society-sahara-rose-fell.html"
+    },
+    {
+      "claim": "Las dataciones por radiocarbono sitúan el uso de estas foggaras entre aproximadamente el 400 a.C. y el 700 d.C., y el agotamiento del agua fósil contribuyó al final del reino garamante hacia finales del siglo VII.",
+      "source": "EBSCO Research Starters, ficha «Libyan Garamantes» (antropología)",
+      "url": "https://www.ebsco.com/research-starters/anthropology/libyan-garamantes"
+    },
+    {
+      "claim": "El Fazzan Project se desarrolló entre 1997 y 2001 bajo el auspicio conjunto de la Society for Libyan Studies, con sede en Londres, y el Departamento de Antigüedades de Libia; el posterior Desert Migrations Project continuó el trabajo de campo en el Sáhara libio y documentó un comercio con el mundo romano mucho mayor de lo que se suponía.",
+      "source": "Libyan Studies (Cambridge University Press), «Desert Migrations Project XVIII: The archaeology of the northern Fazzan. A preliminary report»",
+      "url": "https://www.cambridge.org/core/journals/libyan-studies/article/abs/desert-migrations-project-xviii-the-archaeology-of-the-northern-fazzan-a-preliminary-report/094F8AC3E32B5BAA130065E458E462E1"
+    }
+  ],
+  "do_not_use": [
+    "la cifra de 4.840 kilómetros (tres mil millas) de canales que circula en divulgación: las publicaciones arqueológicas hablan de unos 750 kilómetros de galerías y pozos",
+    "presentarlos como nómadas saqueadores del desierto: es la descripción despectiva de los autores romanos, corregida por la arqueología del Fezzan",
+    "atribuir su final únicamente a la conquista árabe del siglo VII: el descenso del nivel freático por extracción de agua fósil venía de antes y es la causa que señalan las publicaciones",
+    "afirmar sin matices que inventaron la técnica: las fuentes la identifican con el qanat, un tipo de galería drenante conocido también fuera del Sáhara; lo que documenta la arqueología como excepcional es su escala en el Fezzan",
+    "dar una única fecha de inicio y final: la ocupación se sitúa entre el 400 a.C. y el 400 d.C., mientras que el uso de las foggaras se data por radiocarbono hasta el 700 d.C.",
+    "hablar de un imperio con fronteras definidas: las fuentes describen un reino oasítico articulado en torno al Wadi al-Ajal, no un Estado territorial cerrado"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

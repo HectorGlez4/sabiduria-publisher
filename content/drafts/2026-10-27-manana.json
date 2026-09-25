@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-27-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Van Leeuwenhoek y el secreto de sus lentes",
+    "hook": "Se llevó su método a la tumba en 1723. Tres siglos después lo leyeron sin abrir el instrumento, y no era suyo.",
+    "body": [
+      "Antoni van Leeuwenhoek era pañero en Delft. No tenía título universitario ni leía latín, la lengua de la ciencia de su tiempo. Con lentes que él mismo fabricaba describió en una carta del 9 de octubre de 1676 unos seres que nadie había visto: la Royal Society tradujo un extracto y lo publicó en Philosophical Transactions, y en 1680 lo eligió miembro. Construyó cientos de microscopios de una sola lente. De ellos sobrevive una minoría; el más potente que se conserva, en el Museo de la Universidad de Utrecht, aumenta 267 veces, cuando los suyos solían quedarse entre 70 y unas 150.",
+      "Nunca dijo cómo hacía las lentes. Lo escribió sin rodeos: su modo de ver los animalillos más pequeños no lo comunicaba a nadie, se lo guardaba para sí solo. El secreto resistió trescientos años porque averiguarlo exigía desmontar piezas de museo. En 2021, un equipo del Museo Boerhaave y del Instituto del Reactor de Delft publicó en Science Advances la solución: metieron los microscopios enteros en un haz de neutrones y reconstruyeron por tomografía la lente que había dentro, sin tocar un tornillo. En sus mejores instrumentos apareció un procedimiento de fabricación que Robert Hooke había popularizado en 1678.",
+      "En febrero de 2026 el mismo grupo dio el trabajo por cerrado: unas lentes estaban esmeriladas y otras obtenidas por goteo, y ambas técnicas ya existían. Es decir, el secreto no guardaba un método propio. Guardaba una deuda. Lo que Van Leeuwenhoek tenía de excepcional no era la receta, sino la paciencia de ejecutarla mejor que nadie y de mirar por ella durante cincuenta años."
+    ],
+    "question": "¿Qué protege realmente quien no explica cómo lo hizo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El secreto de Delft",
+    "subtitle": "Un pañero sin latín y una lente que nadie supo copiar",
+    "body": "Van Leeuwenhoek no reveló jamás cómo hacía sus lentes. En 2021 un haz de neutrones lo leyó sin abrir el microscopio: la técnica ya existía y la había publicado Hooke en 1678."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Leeuwenhoek",
+      "#HistoriaDeLaCiencia",
+      "#Microscopio"
+    ],
+    "extended": [
+      "#Delft",
+      "#SigloXVII",
+      "#Ciencia",
+      "#Microbiologia",
+      "#RoyalSociety",
+      "#Curiosidades",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En la carta del 9 de octubre de 1676 a Henry Oldenburg, Van Leeuwenhoek describe los «animalillos» de sus infusiones; la Royal Society publicó un extracto traducido en Philosophical Transactions, vol. 12, n.º 133, y ese texto contiene las primeras descripciones detalladas de protistas y bacterias.",
+      "source": "Philosophical Transactions of the Royal Society B, «The unseen world: reflections on Leeuwenhoek (1677) Concerning little animals», Lane (2015)",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rstb.2014.0344"
+    },
+    {
+      "claim": "Van Leeuwenhoek hizo cientos de microscopios, de los que solo se ha conservado una minoría; el ejemplar del Museo de la Universidad de Utrecht alcanza 267 aumentos, mientras que sus instrumentos partían de unos 70 y promediaban alrededor de 150. Sobre su método escribió que no lo comunicaba a otros y que lo guardaba solo para sí.",
+      "source": "FEMS Microbiology Letters, «Positioning Van Leeuwenhoek's microscopes in 17th-century microscopic practice», vol. 369, n.º 1 (2022)",
+      "url": "https://academic.oup.com/femsle/article/369/1/fnac031/6552955"
+    },
+    {
+      "claim": "El estudio «Neutron tomography of Van Leeuwenhoek's microscopes» (Cocquyt, Zhou, Plomp y Van Eijck, Science Advances, 2021) examinó los microscopios mediante tomografía de neutrones en el Instituto del Reactor de Delft, sin abrirlos ni dañarlos, y halló que para sus microscopios de mejor rendimiento empleó un procedimiento de fabricación de lentes popularizado por Robert Hooke en 1678.",
+      "source": "Science Advances, vol. 7 (2021), DOI 10.1126/sciadv.abf2402",
+      "url": "https://www.science.org/doi/10.1126/sciadv.abf2402"
+    },
+    {
+      "claim": "El 23 de febrero de 2026 la TU Delft dio por completa la investigación: las lentes de Van Leeuwenhoek estaban unas veces esmeriladas y otras obtenidas por goteo, y en ambos casos se trataba de técnicas ya existentes y no de invenciones suyas.",
+      "source": "TU Delft, nota «Insight into Van Leeuwenhoek's lenses now complete» (23 de febrero de 2026)",
+      "url": "https://www.tudelft.nl/en/2026/tnw/insight-into-van-leeuwenhoeks-lenses-now-complete"
+    },
+    {
+      "claim": "Van Leeuwenhoek no tuvo formación científica formal ni título universitario, no leía latín y fue elegido miembro de la Royal Society en 1680.",
+      "source": "Philosophical Transactions of the Royal Society B (2015) y ficha biográfica de EBSCO Research Starters",
+      "url": "https://www.ebsco.com/research-starters/history/antoni-van-leeuwenhoek"
+    }
+  ],
+  "do_not_use": [
+    "decir que inventó el microscopio: los microscopios compuestos ya existían; lo suyo fue el microscopio de una sola lente llevado a una calidad que nadie igualó",
+    "atribuirle el descubrimiento de la célula: la palabra la acuñó Robert Hooke en Micrographia, en 1665",
+    "dar una cifra exacta de microscopios suyos conservados: las publicaciones revisadas solo afirman que sobrevive una minoría de los cientos que construyó",
+    "presentar los 267 aumentos como su potencia habitual: es el máximo de un ejemplar concreto, el de Utrecht, y sus instrumentos solían quedarse bastante por debajo",
+    "leer el hallazgo de 2021 como que fuera un impostor: el estudio discute su secretismo y su deuda con Hooke, no la calidad ni la autenticidad de sus observaciones",
+    "repetir que fue un sabio aislado que trabajaba al margen de todos: es precisamente la imagen que los autores del estudio de 2021 corrigen"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

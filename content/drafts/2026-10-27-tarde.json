@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-27-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Esquilo y el aprender por el sufrimiento en Agamenón",
+    "hook": "«Zeus puso a los mortales en el camino del entendimiento y fijó como ley firme que el saber llegue por el sufrimiento.»\n— Esquilo, Agamenón, vv. 176-178",
+    "body": [
+      "El Agamenón abre la Orestíada, la trilogía que Esquilo estrenó en las Dionisias de Atenas en 458 a.C. y con la que ganó el primer premio. Es la única trilogía trágica griega que ha llegado completa. Las tres líneas están en el himno a Zeus del canto de entrada del coro, y en el original la fórmula cabe en dos palabras: pathei mathos, «por el padecer, el aprender». Lo que sigue en el texto no es una promesa amable: el coro habla del dolor que cae gota a gota sobre el corazón, y que vuelve incluso durante el sueño.",
+      "En español se cita poco. En inglés se conoce por una noche concreta. El 4 de abril de 1968, en un mitin de Indianápolis, Robert F. Kennedy tuvo que anunciar a la multitud que Martin Luther King acababa de ser asesinado. Sin notas, recitó de memoria estos versos de Esquilo y los cerró con una imagen que se hizo célebre: la sabiduría que llega por «la terrible gracia de Dios». Esa imagen no está en el griego. Procede de la traducción de Edith Hamilton en The Greek Way, y Kennedy incluso se apartó algo de ella al citarla de memoria. Donde Hamilton pone gracia divina, Esquilo pone ley: Zeus lo estableció con autoridad, y de ahí no se sale.",
+      "La diferencia cambia la frase entera. La versión consoladora sugiere que el dolor viene a enseñarnos algo, casi como un regalo mal envuelto. La versión de Esquilo dice otra cosa, más seca: que ese es el único camino que quedó abierto para los mortales, y que se recorre sin querer. Nadie elige el precio. Lo que queda por decidir es si se aprende o solo se paga."
+    ],
+    "question": "¿Aprendiste algo de aquello, o simplemente lo sobreviviste?",
+    "quote": {
+      "text": "Zeus puso a los mortales en el camino del entendimiento y fijó como ley firme que el saber llegue por el sufrimiento.",
+      "author": "Esquilo",
+      "work": "Agamenón, vv. 176-178 (Orestíada, 458 a.C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Esquilo",
+      "#Tragedia",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Orestiada",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Literatura",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto griego del Agamenón contiene en los versos 176-178 la fórmula «τὸν φρονεῖν βροτοὺς ὁδώσαντα, τὸν πάθει μάθος θέντα κυρίως ἔχειν», con πάθει μάθος en el verso 177.",
+      "source": "Perseus Digital Library, Esquilo, Agamenón, texto griego de la edición de Herbert Weir Smyth (Harvard University Press, 1926), líneas 176-183",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0003%3Acard%3D176"
+    },
+    {
+      "claim": "La traducción inglesa de referencia de ese pasaje dice que Zeus pone a los mortales en el camino del entendimiento y que ha establecido como ley fija que la sabiduría llega por el sufrimiento; el contexto inmediato habla del dolor que permanece en la memoria incluso durante el sueño.",
+      "source": "Perseus Digital Library, Esquilo, Agamenón, traducción de Herbert Weir Smyth (Harvard University Press, 1926), líneas 176-183",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0004%3Acard%3D176"
+    },
+    {
+      "claim": "La Orestíada, formada por Agamenón, Coéforas y Euménides, se estrenó en las Dionisias de Atenas en 458 a.C., obtuvo el primer premio y es la única trilogía trágica griega conservada completa.",
+      "source": "Mythology Unbound: An Online Textbook for Classical Mythology, capítulo «The Oresteia – An Introduction» (Utah Education Network / Pressbooks)",
+      "url": "https://uen.pressbooks.pub/mythologyunbound/chapter/the-oresteia/"
+    },
+    {
+      "claim": "El 4 de abril de 1968, en Indianápolis, Robert F. Kennedy anunció a la multitud el asesinato de Martin Luther King y recitó de memoria el pasaje de Esquilo en la traducción de Edith Hamilton (The Greek Way), apartándose ligeramente de ella; la fórmula «comes wisdom through the awful grace of God» pertenece a esa traducción.",
+      "source": "Wikipedia en inglés, artículo sobre el discurso de Robert F. Kennedy tras el asesinato de Martin Luther King Jr.",
+      "url": "https://en.wikipedia.org/wiki/Robert_F._Kennedy%27s_speech_on_the_assassination_of_Martin_Luther_King_Jr."
+    },
+    {
+      "claim": "El discurso de Indianápolis del 4 de abril de 1968 fue improvisado, duró unos seis minutos y se pronunció ante un público que aún no conocía la muerte de King.",
+      "source": "Indiana Historical Society, «The Speech — Robert F. Kennedy, Indianapolis, and the Death of Martin Luther King Jr.»",
+      "url": "https://indianahistory.org/blog/the-speech-robert-f-kennedy-indianapolis-and-the-death-of-martin-luther-king-jr/"
+    }
+  ],
+  "do_not_use": [
+    "atribuir a Esquilo la fórmula «la terrible gracia de Dios»: es de la traducción de Edith Hamilton en The Greek Way, y no corresponde a nada del texto griego",
+    "citar el pasaje tal como lo dijo Kennedy como si fuera el original: lo recitó de memoria y se apartó incluso de la versión de Hamilton",
+    "dar un número de verso único y cerrado: las ediciones numeran de forma distinta, y en la de Smyth (1926) la fórmula cae entre los versos 176 y 178",
+    "presentar la frase como promesa consoladora de que todo dolor enseña: en el original es una ley impuesta, no un premio",
+    "atribuirla a Sófocles, a Sócrates o a los estoicos: circula así en recopilaciones y es de Esquilo",
+    "fechar la Orestíada por el año de muerte de Esquilo (456 a.C.): el estreno fue dos años antes, en 458 a.C."
+  ],
+  "cita_slug": "esquilo-el-saber-llega-por-el-sufrimiento",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

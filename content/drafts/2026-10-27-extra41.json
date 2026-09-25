@@ -1,0 +1,79 @@
+{
+  "id": "2026-10-27-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Machado de Assis y el defunto autor de Brás Cubas",
+    "hook": "«No tuve hijos, no transmití a ninguna criatura el legado de nuestra miseria.»\n— Machado de Assis, Memórias Póstumas de Brás Cubas, cap. CLX (1881)",
+    "body": [
+      "Es la última línea del libro, y el libro entero la venía preparando. Machado de Assis publicó las Memórias Póstumas de Brás Cubas por entregas en la Revista Brasileira, entre el 15 de marzo y el 15 de diciembre de 1880; en volumen salió al año siguiente, en la Tipografia Nacional de Río de Janeiro. Son ciento sesenta capítulos, algunos de media página. El narrador es un muerto: Brás Cubas escribe su autobiografía desde después de la tumba, y Machado lo llama «defunto autor». La edición de 1881 añadió algo que la revista no traía: la dedicatoria, dirigida al gusano que le royó las carnes.",
+      "El capítulo final se titula «Das negativas», de las negaciones, y es un inventario de lo que no ocurrió. No alcanzó la celebridad del emplasto que quiso inventar. No fue ministro. No fue califa. No conoció el matrimonio. Después de esa lista de fracasos, el balance se cierra con la frase, que en la ortografía de 1881 se lee «não transmitti a nenhuma creatura o legado da nossa miseria». Parece una queja más. Es lo contrario: es la única partida que Brás Cubas apunta a su favor.",
+      "La palabra que elige es «legado», la del testamento. Toda la contabilidad de la novela —los honores que no tuvo, el amor que no sostuvo, la obra que no dejó— se salda con un pequeño superávit hecho de algo que no hizo. No es un elogio de no tener hijos. Es una idea más incómoda: que en un balance honesto puede pesar más lo que uno se abstuvo de transmitir que todo lo que alcanzó a acumular."
+    ],
+    "question": "¿Qué cosas tuyas preferirías que no heredara nadie?",
+    "quote": {
+      "text": "No tuve hijos, no transmití a ninguna criatura el legado de nuestra miseria.",
+      "author": "Machado de Assis",
+      "work": "Memórias Póstumas de Brás Cubas, cap. CLX (1881)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MachadoDeAssis",
+      "#BrasCubas",
+      "#LiteraturaBrasilena"
+    ],
+    "extended": [
+      "#Brasil",
+      "#SigloXIX",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Literatura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El capítulo CLX, titulado «Das negativas», es el último de las Memórias Póstumas de Brás Cubas; enumera «Não alcancei a celebridade do emplasto, não fui ministro, não fui califa, não conheci o casamento» y cierra con «Não tive filhos, não transmitti a nenhuma creatura o legado da nossa miseria», en la ortografía de la primera edición.",
+      "source": "Wikisource en portugués, texto de Memórias Póstumas de Brás Cubas, capítulo CLX (edición de Río de Janeiro, Typographia Nacional, 1881, pp. 388-389)",
+      "url": "https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/CLX"
+    },
+    {
+      "claim": "La novela se publicó por entregas en la Revista Brasileira entre marzo y diciembre de 1880 y en libro en 1881, en la Tipografia Nacional; consta de ciento sesenta capítulos y el narrador es un «defunto autor», un hombre que ya murió y escribe su autobiografía desde la tumba.",
+      "source": "Wikipedia en portugués, artículo «Memórias Póstumas de Brás Cubas»",
+      "url": "https://pt.wikipedia.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas"
+    },
+    {
+      "claim": "Las entregas en la Revista Brasileira aparecieron entre el 15 de marzo y el 15 de diciembre de 1880; aquella versión no incluía la dedicatoria «Ao verme» ni la nota «Ao leitor», que se añadieron en la edición en libro de 1881, y entre ambas hubo pocos cortes y fusiones de capítulos.",
+      "source": "Revista serrote, «As Memórias póstumas de Brás Cubas na Revista Brasileira», ensayo de Samuel Titan Jr., profesor de literatura comparada en la Universidad de São Paulo",
+      "url": "https://revistaserrote.com.br/2011/06/as-memorias-postumas-de-bras-cubas-na-revista-brasileira/"
+    },
+    {
+      "claim": "Se publicaron tres ediciones en libro en vida del autor —1881, 1896 y 1899—, y la mayor parte de las alteraciones y cortes se produjo entre la versión de la Revista Brasileira y la primera edición en volumen.",
+      "source": "Wikipedia en portugués, artículo «Memórias Póstumas de Brás Cubas», sección sobre la historia editorial del texto",
+      "url": "https://pt.wikipedia.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas"
+    }
+  ],
+  "do_not_use": [
+    "leer la frase como un lamento por no haber tenido hijos: en el capítulo es la única partida que el narrador anota a su favor tras un inventario de fracasos",
+    "dar 1880 como año del libro: 1880 es la publicación por entregas en la Revista Brasileira, y el volumen es de 1881",
+    "citar la frase con la ortografía moderna como si fuera la de la primera edición: en 1881 se imprimió «não transmitti a nenhuma creatura o legado da nossa miseria»",
+    "atribuir el pasaje a Dom Casmurro o a Quincas Borba: es el cierre de las Memórias Póstumas de Brás Cubas",
+    "llamar epílogo al capítulo o numerarlo como el 161: es el CLX, el último de los ciento sesenta, y se titula «Das negativas»",
+    "citar la dedicatoria «Ao verme» como parte de la versión de la Revista Brasileira: se añadió en la edición en libro"
+  ],
+  "cita_slug": "machado-de-assis-el-legado-de-nuestra-miseria",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
