@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-26-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Han Fei y el tocón de Las cinco plagas",
+    "hook": "«Pretender gobernar al pueblo de hoy con la política de los antiguos reyes es lo mismo que montar guardia junto al tocón.»\n— Han Fei, Han Feizi, capítulo «Las cinco plagas» (siglo III a.C.)",
+    "body": [
+      "La frase remata una parábola de tres líneas. Un labrador del país de Song tenía un tocón en medio de su campo. Una liebre echó a correr, chocó contra el tocón, se partió el cuello y murió. El hombre soltó el arado y se quedó vigilando el tocón, esperando otra liebre. No volvió ninguna, y él acabó siendo el hazmerreír de Song.",
+      "Han Fei no la cuenta por el labrador. La cuenta por los consejeros que proponían gobernar el siglo III antes de Cristo con las recetas de reyes muertos mil años atrás. Su tesis es que las medidas se ajustan a la época, y no la época a las medidas. Murió en 233 a.C., preso en el estado de Qin, adonde había ido a ofrecer sus servicios. De los cincuenta y cinco capítulos del Han Feizi no se ha perdido ninguno.",
+      "La parábola se volvió idioma. En chino de hoy, shou zhu dai tu —«guardar el tocón esperando la liebre»— se dice de quien repite lo que una vez le salió bien y aguarda el mismo resultado, y también del que se niega a cambiar. Dos mil doscientos años después, el tocón sigue teniendo quien lo vigile."
+    ],
+    "question": "¿Qué tocón sigues vigilando porque una vez te funcionó?",
+    "quote": {
+      "text": "Pretender gobernar al pueblo de hoy con la política de los antiguos reyes es lo mismo que montar guardia junto al tocón.",
+      "author": "Han Fei (m. 233 a.C.)",
+      "work": "Han Feizi, «Las cinco plagas»",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HanFei",
+      "#FilosofiaChina",
+      "#Parabolas"
+    ],
+    "extended": [
+      "#ChinaAntigua",
+      "#Legismo",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El capítulo «Wu du» (五蠹, Las cinco plagas) del Han Feizi contiene la parábola del labrador de Song, el tocón y la liebre («宋人有耕田者，田中有株，兔走觸株，折頸而死，因釋其耒而守株，冀復得兔，兔不可復得，而身爲宋國笑») y la frase «今欲以先王之政，治當世之民，皆守株之類也», verificadas palabra por palabra en el texto chino.",
+      "source": "Wikisource en chino, texto del 韓非子, capítulo 五蠹",
+      "url": "https://zh.wikisource.org/wiki/%E9%9F%93%E9%9D%9E%E5%AD%90/%E4%BA%94%E8%A0%B9"
+    },
+    {
+      "claim": "Han Fei murió en 233 a.C., en custodia del rey de Qin, a quien había querido servir; el Han Feizi conserva íntegros sus cincuenta y cinco capítulos, tal como figuran en el catálogo Han.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Legalism in Chinese Philosophy» (Yuri Pines)",
+      "url": "https://plato.stanford.edu/entries/chinese-legalism/"
+    },
+    {
+      "claim": "El chengyu 守株待兔 (shou zhu dai tu) procede de la historia del Han Feizi y sigue en uso en chino moderno, tanto para quien se sienta a esperar sin tomar la iniciativa como para el conservadurismo que se resiste al cambio.",
+      "source": "Wiktionary en inglés, entrada «守株待兔»",
+      "url": "https://en.wiktionary.org/wiki/%E5%AE%88%E6%A0%AA%E5%BE%85%E5%85%94"
+    },
+    {
+      "claim": "La corriente a la que se adscribe el Han Feizi sostiene que las instituciones deben cambiar con la época y que para beneficiar al Estado no hace falta imitar a la antigüedad.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Legalism in Chinese Philosophy», sección sobre el cambio histórico",
+      "url": "https://plato.stanford.edu/entries/chinese-legalism/"
+    }
+  ],
+  "do_not_use": [
+    "presentar la parábola como un elogio de la paciencia: en el Han Feizi es una burla a quien espera que la suerte se repita",
+    "atribuirla a Confucio o al taoísmo: el Han Feizi argumenta precisamente contra el gobierno por imitación de los reyes antiguos",
+    "dar una fecha de nacimiento de Han Fei como segura: las obras de referencia solo fijan su muerte, en 233 a.C.",
+    "contar como hecho establecido que Li Si lo hizo envenenar: procede del relato de Sima Qian y se recoge con reservas",
+    "traducir shou zhu dai tu solo como «esperar sentado»: en chino de hoy sirve además para el que se resiste a cambiar"
+  ],
+  "cita_slug": "han-fei-montar-guardia-junto-al-tocon",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

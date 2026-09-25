@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-26-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Mary Somerville y la reseña de Whewell (1834)",
+    "hook": "La palabra «científico» se estrenó en 1834, en la reseña de un libro escrito por una mujer. A ella nadie se lo llamó nunca.",
+    "body": [
+      "En marzo de 1834 la Quarterly Review publicó una reseña anónima de On the Connexion of the Physical Sciences, de Mary Somerville. El reseñista lamentaba que faltara un nombre para designar en conjunto a quienes estudian el mundo material, y contaba que en una reunión de la asociación británica de las ciencias «un caballero ingenioso propuso que, por analogía con artist, podría formarse scientist». El caballero era él: William Whewell. En el mismo texto estrenó también physicist.",
+      "El libro merecía la reseña. Vendió unos 15.000 ejemplares y llegó a diez ediciones. En él Somerville sostuvo que las perturbaciones de Urano delataban un cuerpo todavía invisible; John Couch Adams siguió esa pista y Neptuno apareció en 1846.",
+      "La palabra tardó decenios en aceptarse, y a ella no llegó a tocarle. En toda su vida nadie llamó científica a Mary Somerville: Whewell la elogió como filósofa y como escritora. En 1835, junto a Caroline Herschel, fue una de las dos primeras mujeres nombradas miembros honorarios de la Royal Astronomical Society. Murió en 1872, a los 91 años."
+    ],
+    "question": "¿Cuántas de las cosas que se hacen hoy siguen sin tener nombre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Científico, 1834",
+    "subtitle": "Mary Somerville y la reseña anónima de Whewell",
+    "body": "La palabra «científico» apareció por primera vez en 1834, en una reseña anónima del libro de Mary Somerville. La escribió William Whewell, que buscaba un nombre colectivo por analogía con «artista». En toda su vida, nadie llamó científica a Somerville."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MarySomerville",
+      "#HistoriaDeLaCiencia",
+      "#MujeresEnLaCiencia"
+    ],
+    "extended": [
+      "#Astronomia",
+      "#Neptuno",
+      "#SigloXIX",
+      "#Ciencia",
+      "#Etimologia",
+      "#Divulgacion",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La palabra «scientist» apareció por primera vez impresa en marzo de 1834, en una reseña anónima de William Whewell del libro de Mary Somerville publicada en la Quarterly Review, donde se propone por analogía con «artist»; en el mismo texto aparece también «physicist».",
+      "source": "Linda Hall Library, Scientist of the Day: William Whewell",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/william-whewell/"
+    },
+    {
+      "claim": "La reseña de Whewell apareció en la Quarterly Review vol. LI, n.º CI, de marzo de 1834, pp. 54-68, y en ella el reseñista habla de la falta de un nombre para designar en conjunto a los estudiosos del mundo material y atribuye la propuesta a «un caballero ingenioso» de una reunión de la British Association.",
+      "source": "Science Comma, Universidad de Kent: «Whewell and the coining of scientist in the Quarterly Review»",
+      "url": "https://blogs.kent.ac.uk/sciencecomma/2015/04/09/whewell-and-the-coining-of-scientist-in-the-quarterly-review/"
+    },
+    {
+      "claim": "Ni Whewell ni nadie llamó nunca «scientist» a Mary Somerville en vida de ella; en la reseña la elogia como poseedora de los talentos de una filósofa y una escritora. John Couch Adams calculó la órbita de Neptuno siguiendo una predicción contenida en Connexion.",
+      "source": "Physics Today (American Institute of Physics): «Mary Somerville's vision of science»",
+      "url": "https://physicstoday.aip.org/features/mary-somervilles-vision-of-science"
+    },
+    {
+      "claim": "Mary Somerville nació el 26 de diciembre de 1780 y murió el 29 de noviembre de 1872, a los 91 años; en 1835 ella y Caroline Herschel fueron elegidas las primeras mujeres miembros honorarios de la Royal Astronomical Society; On the Connexion of the Physical Sciences vendió unos 15.000 ejemplares y llegó a diez ediciones.",
+      "source": "Wikipedia en inglés, artículos «Mary Somerville» y «On the Connexion of the Physical Sciences»",
+      "url": "https://en.wikipedia.org/wiki/Mary_Somerville"
+    }
+  ],
+  "do_not_use": [
+    "decir que Whewell llamó «científica» a Mary Somerville: en toda su vida nadie la llamó así, y en la reseña la elogia como filósofa y escritora",
+    "afirmar que la palabra se acuñó porque Somerville era mujer y no cabía en «man of science»: la reseña no dice eso, sino que faltaba un nombre colectivo",
+    "dar la reseña por firmada: se publicó anónima y la autoría de Whewell se estableció después; él usó la palabra bajo su nombre en 1840, en The Philosophy of the Inductive Sciences",
+    "presentar «scientist» como aceptada de inmediato: el propio texto la da por poco apetecible y tardó decenios en imponerse",
+    "atribuir a Somerville el descubrimiento de Neptuno: escribió la pista, el cálculo y la observación fueron de otros"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

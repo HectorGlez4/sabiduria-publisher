@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-26-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Avicena y el hombre volador del Kitab al-Shifa",
+    "hook": "Imagine a alguien recién creado, suspendido en el aire, con la vista velada y sin tocar nada, ni siquiera su propio cuerpo. Avicena sostuvo que aun así sabría que existe.",
+    "body": [
+      "El planteamiento está en el Kitab al-Shifa, «el libro de la curación», la enciclopedia filosófica de Ibn Sina, a quien el latín llamó Avicena (980-1037). En el tratado sobre el alma propone el caso: un hombre creado de golpe, adulto y entero, flotando en el vacío, con los ojos cubiertos y los miembros separados para que no se rocen entre sí. Ni un dato de los sentidos. Ni memoria. Ni nombre.",
+      "Suele contarse como una demostración de la propia existencia. No lo es. Avicena no argumenta que ese hombre sepa que existe: lo da por evidente. Lo que quiere mostrar es que la conciencia de uno mismo no entra por los sentidos ni depende del cuerpo, porque sigue ahí cuando se le quitan los dos. De ahí pasa a sostener que el alma es una sustancia distinta del cuerpo.",
+      "El argumento viajó. En la segunda mitad del siglo XII, en Toledo, Avendauth y Dominicus Gundissalinus tradujeron al latín el tratado del alma del Shifa, y desde alrededor de 1220 el reparto de facultades de Avicena es moneda corriente en los manuales europeos. Lo que dejó no es una prueba, sino un señalamiento: uno se sabe a sí mismo antes de saber ninguna otra cosa, y no necesita mirarse para eso."
+    ],
+    "question": "¿Qué sabes de ti que no te haya dicho ningún sentido?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El hombre volador",
+    "subtitle": "Avicena y el tratado del alma del Kitab al-Shifa",
+    "body": "Avicena pidió imaginar a un hombre creado de golpe, suspendido en el aire, con la vista velada y sin tocar nada: ni el mundo ni su propio cuerpo. Sostuvo que aun así sabría que existe. No lo usó para probar la existencia, sino para mostrar que la conciencia de uno no viene de los sentidos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Avicena",
+      "#IbnSina",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#FilosofiaIslamica",
+      "#Conciencia",
+      "#HistoriaDeLasIdeas",
+      "#Pensamiento",
+      "#EdadMedia",
+      "#Reflexiones",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Avicena plantea en el Kitab al-Shifa un experimento mental con una persona suspendida en el aire, en aislamiento total de toda experiencia física o sensorial, para mostrar la existencia del alma sin ayuda de las facultades sensoriales o imaginativas, y concluir que el alma es una sustancia inteligente independiente.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Arabic and Islamic Psychology and Philosophy of Mind»",
+      "url": "https://plato.stanford.edu/entries/arabic-islamic-mind/"
+    },
+    {
+      "claim": "Avicena no intenta argumentar que el hombre volador sabría que existe, sino que lo da por obvio; el experimento apunta a una autoconciencia que ya poseemos siempre. Avicena vivió entre 980 y 1037.",
+      "source": "Peter Adamson (Universidad Ludwig Maximilian de Múnich), «What can Avicenna teach us about the mind-body problem?», Aeon, 9 de septiembre de 2016",
+      "url": "https://aeon.co/ideas/what-can-avicenna-teach-us-about-the-mind-body-problem"
+    },
+    {
+      "claim": "Avicena vivió entre 980 y 1037 y es conocido en el Occidente latino como Avicenna; entre sus obras están al-Shifa (La curación), al-Najat (La salvación) y al-Isharat wa-l-tanbihat (Indicaciones y advertencias).",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Ibn Sina's Natural Philosophy»",
+      "url": "https://plato.stanford.edu/entries/ibn-sina-natural/"
+    },
+    {
+      "claim": "Dominicus Gundissalinus tradujo al latín el De anima de Avicena junto al erudito judío Avendauth durante el movimiento de traducciones de Toledo de la segunda mitad del siglo XII, y a partir de alrededor de 1220 el repertorio completo de facultades avicenianas aparece en los tratados latinos, quedando como norma en los manuales durante mucho tiempo.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Influence of Arabic and Islamic Philosophy on the Latin West»",
+      "url": "https://plato.stanford.edu/entries/arabic-islamic-influence/"
+    }
+  ],
+  "do_not_use": [
+    "presentarlo como «el cogito de Descartes seiscientos años antes»: Avicena no prueba la existencia por el pensamiento, la da por evidente y la usa para argumentar sobre el alma",
+    "decir que el hombre volador no tiene cuerpo: el planteamiento es que lo tiene y no lo percibe, con los miembros separados para que no se toquen",
+    "dar por única la versión del Kitab al-Shifa: el argumento reaparece con variantes en otras obras de Avicena",
+    "confundir el Kitab al-Shifa, que es filosofía, con el Canon de medicina: son dos obras distintas del mismo autor",
+    "usarlo como prueba de la inmortalidad del alma sin más: en el Shifa sirve para sostener que el alma es una sustancia distinta del cuerpo"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-26-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Agustín de Hipona y las Confesiones XI, 14",
+    "hook": "«¿Qué es, pues, el tiempo? Si nadie me lo pregunta, lo sé; si quiero explicárselo a quien me lo pregunta, no lo sé.»\n— Agustín de Hipona, Confesiones XI, 14, 17 (ca. 396-400)",
+    "body": [
+      "Agustín escribió las Confesiones hacia el año 400, siendo ya obispo de Hipona Regia, en la costa de la actual Argelia. El libro XI no es autobiografía: es un comentario del primer versículo del Génesis. La pregunta por el tiempo nace ahí, de querer entender qué significa que algo empiece.",
+      "La frase se cita como un encogimiento de hombros elegante. Pero abre la investigación, no la cierra. Unos capítulos más adelante Agustín responde: no hay tres tiempos, hay tres presentes. El presente de lo pasado es la memoria; el de lo presente, la atención; el de lo futuro, la espera. El tiempo se mide en el alma. «Mi vida es distensión», escribe casi al final del libro.",
+      "En esas mismas páginas alguien se burla preguntando qué hacía Dios antes de crear el mundo, y ofrece la respuesta ingeniosa: preparaba el infierno para los que husmean en lo alto. Agustín la rechaza. Prefiere contestar que no sabe lo que no sabe. Mil seiscientos años después, esa sigue siendo la parte difícil: sostener la pregunta sin taparla con una respuesta cómoda."
+    ],
+    "question": "¿Qué usas todos los días y no sabrías explicar si te lo preguntaran?",
+    "quote": {
+      "text": "¿Qué es, pues, el tiempo? Si nadie me lo pregunta, lo sé; si quiero explicárselo a quien me lo pregunta, no lo sé.",
+      "author": "Agustín de Hipona (354-430)",
+      "work": "Confesiones XI, 14, 17",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SanAgustin",
+      "#Confesiones",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#AgustinDeHipona",
+      "#ElTiempo",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Pensamiento",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino de Confesiones XI, 14, 17 dice literalmente «Quid est ergo tempus? Si nemo ex me quaerat, scio; si quaerenti explicare velim, nescio», verificado palabra por palabra en la edición latina en línea.",
+      "source": "Augustinus.it (Nuova Biblioteca Agostiniana, Agostiniani dell'Ordine di Sant'Agostino), texto latino de Confessiones, libro XI",
+      "url": "https://www.augustinus.it/latino/confessioni/conf_11_libro.htm"
+    },
+    {
+      "claim": "En el mismo libro XI, Agustín formula los tres presentes en XI, 20, 26 («tempora sunt tria, praesens de praeteritis memoria, praesens de praesentibus contuitus, praesens de futuris exspectatio») y cierra con «ecce distentio est vita mea» en XI, 29, 39. El libro comenta el «In principio fecit Deus caelum et terram» del Génesis desde XI, 3, 5, y Agustín rechaza la respuesta burlona sobre preparar el infierno para quienes investigan lo alto, prefiriendo decir «nescio quod nescio».",
+      "source": "Augustinus.it (Nuova Biblioteca Agostiniana), texto latino de Confessiones, libro XI, capítulos 3, 10-12, 20 y 29",
+      "url": "https://www.augustinus.it/latino/confessioni/conf_11_libro.htm"
+    },
+    {
+      "claim": "Agustín vivió del 13 de noviembre de 354 al 28 de agosto de 430; fue ordenado presbítero en Hipona Regia en 391 y sucedió al obispo local hacia 396; las Confesiones se escribieron hacia 396-400.",
+      "source": "Stanford Encyclopedia of Philosophy, entrada «Saint Augustine»",
+      "url": "https://plato.stanford.edu/entries/augustine/"
+    },
+    {
+      "claim": "El capítulo 14 del libro XI es el lugar canónico de la pregunta por el tiempo en las Confesiones, y su numeración es XI, 14, 17 en la edición castellana de referencia.",
+      "source": "Augustinus.it, traducción castellana de las Confesiones de Ángel Custodio Vega, revisada por José Rodríguez Díez, libro XI",
+      "url": "https://www.augustinus.it/spagnolo/confessioni/conf_11_libro.htm"
+    }
+  ],
+  "do_not_use": [
+    "citar la frase como conclusión de Agustín sobre el tiempo: es el arranque de un análisis que sigue quince capítulos más y desemboca en el tiempo como distensión del alma",
+    "dar por suya la definición del tiempo como medida del movimiento: esa es aristotélica, no agustiniana",
+    "presentarla como un aforismo suelto: las Confesiones están escritas en segunda persona, dirigidas a Dios, no a un lector",
+    "fechar las Confesiones en su juventud: las escribió ya obispo, pasados los cuarenta años",
+    "atribuirle la frase «ama y haz lo que quieras» tal cual: procede de un sermón sobre la primera carta de Juan y circula recortada de su contexto"
+  ],
+  "cita_slug": "agustin-de-hipona-que-es-pues-el-tiempo",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
