@@ -1,0 +1,90 @@
+{
+  "id": "2026-10-28-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Olaudah Equiano y el capítulo II de su relato",
+    "hook": "«¡Oh, cristianos de nombre! ¿No podría un africano preguntarles si aprendieron esto de su Dios, que les manda hacer con todos los hombres lo que quieran que los hombres hagan con ustedes?»\n— Olaudah Equiano, 1789",
+    "body": [
+      "Está en el capítulo II, justo después de la venta. Equiano acaba de describir la travesía del Atlántico y el remate en el que a los recién llegados se los reparte por lotes, separando a hermanos, a padres de hijos, a maridos de mujeres. Y entonces se detiene y hace una pregunta que no es un lamento, sino una objeción lógica: ¿de dónde sacaron ustedes esto, si su propio libro les ordena lo contrario? Sigue apretando. ¿No basta con arrancarnos de nuestra tierra para que trabajemos en su lujo y su codicia? ¿También hay que sacrificar todo sentimiento? Y lo llama por su nombre: un nuevo refinamiento de la crueldad, que ni siquiera tiene una ventaja que lo compense.",
+      "Quien escribe eso había comprado su propia libertad. Nacido hacia 1745, secuestrado de niño junto a su hermana, vendido varias veces y embarcado hacia Barbados, un amo suyo le puso el nombre de un rey sueco del siglo XVI, Gustavus Vassa, y con ese nombre firmó toda su vida los documentos. En 1766, con unos veintiún años, reunió las cuarenta libras que le pedían por sí mismo y las pagó. Veintitrés años después publicó el libro por su cuenta, «impreso para el autor y vendido por él», financiado con una lista de suscriptores que él mismo recorrió Gran Bretaña para juntar. Conoció nueve ediciones en vida.",
+      "Murió el 31 de marzo de 1797. La ley que prohibió la trata en el imperio británico se aprobó en 1807: diez años tarde para que él la viera, y con su libro entre las causas de que se aprobara. La frase se sostiene sola porque no pide compasión. Pide coherencia, que es más difícil de negar y más incómodo de conceder."
+    ],
+    "question": "¿Qué regla repites en voz alta y no te aplicas?",
+    "quote": {
+      "text": "¡Oh, cristianos de nombre! ¿No podría un africano preguntarles si aprendieron esto de su Dios, que les manda hacer con todos los hombres lo que quieran que los hombres hagan con ustedes?",
+      "author": "Olaudah Equiano",
+      "work": "The Interesting Narrative of the Life of Olaudah Equiano, cap. II (Londres, 1789)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Equiano",
+      "#Abolicion",
+      "#SigloXVIII"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Historia",
+      "#Literatura",
+      "#DerechosHumanos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El pasaje del capítulo II dice literalmente: «O, ye nominal Christians! might not an African ask you, learned you this from your God, who says unto you, Do unto all men as you would men should do unto you? Is it not enough that we are torn from our country and friends to toil for your luxury and lust of gain? Must every tender feeling be likewise sacrificed to your avarice? […] Why are parents to lose their children, brothers their sisters, or husbands their wives? Surely this is a new refinement in cruelty, which, while it has no advantage to atone for it, thus aggravates distress, and adds fresh horrors even to the wretchedness of slavery.»",
+      "source": "Dickinson College, House Divided / Knowledge for Freedom Seminar, texto de «Olaudah Equiano, Interesting Narrative (1789)», capítulo 2",
+      "url": "https://housedivided.dickinson.edu/sites/teagle/texts/olaudah-equiano-interesting-narrative-1789/"
+    },
+    {
+      "claim": "El pasaje figura en el capítulo II de The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African, Written by Himself, cuyo texto completo está disponible en la edición electrónica de Project Gutenberg (eBook n.º 15399).",
+      "source": "Project Gutenberg, «The Interesting Narrative of the Life of Olaudah Equiano», eBook n.º 15399",
+      "url": "https://www.gutenberg.org/cache/epub/15399/pg15399.txt"
+    },
+    {
+      "claim": "Según su memoria, Equiano nació hacia 1745 en la aldea de Essaka, en el actual sur de Nigeria; fue secuestrado con unos once años junto a su hermana y trasladado por el Atlántico hasta Barbados y después Virginia. Su amo Michael Henry Pascal lo rebautizó Gustavus Vassa, por el rey sueco del siglo XVI, y con ese nombre firmó los documentos oficiales toda su vida.",
+      "source": "Wikipedia en inglés, artículo «Olaudah Equiano»",
+      "url": "https://en.wikipedia.org/wiki/Olaudah_Equiano"
+    },
+    {
+      "claim": "Robert King le fijó como precio de su manumisión cuarenta libras, y Equiano compró su libertad en 1766, con unos veintiún años. Publicó el relato en 1789, impreso para el autor y vendido por él, y la obra conoció nueve ediciones en vida del autor.",
+      "source": "Wikipedia en inglés, artículo «Olaudah Equiano»",
+      "url": "https://en.wikipedia.org/wiki/Olaudah_Equiano"
+    },
+    {
+      "claim": "Equiano murió el 31 de marzo de 1797 en Westminster, a los 52 años; su libro contribuyó a la aprobación de la Slave Trade Act británica de 1807, que abolió la trata en el imperio británico.",
+      "source": "Wikipedia en inglés, artículo «Olaudah Equiano»",
+      "url": "https://en.wikipedia.org/wiki/Olaudah_Equiano"
+    },
+    {
+      "claim": "Equiano compró su manumisión en 1766, se casó con Susanna Cullen en 1792 y murió el 31 de marzo de 1797; el especialista Vincent Carretta sostuvo en su biografía de 2005, a partir de una partida de bautismo de 1759 y de un rol de tripulación de 1773 que sitúan su nacimiento en Carolina del Sur, que pudo no haber nacido en África, tesis que otros estudiosos discuten.",
+      "source": "New World Encyclopedia, entrada «Olaudah Equiano»",
+      "url": "https://www.newworldencyclopedia.org/entry/Olaudah_Equiano"
+    }
+  ],
+  "do_not_use": [
+    "presentar su origen africano como un hecho fuera de discusión: Vincent Carretta encontró en 2005 una partida de bautismo de 1759 y un rol de tripulación de 1773 que indican Carolina del Sur, y aunque muchos especialistas siguen dando por buena la versión del propio Equiano, la cuestión sigue abierta",
+    "decir que la frase es una exhortación religiosa: es una objeción dirigida contra quienes se llaman cristianos, y usa su propia regla de oro en contra de ellos",
+    "afirmar que Equiano vio abolida la esclavitud: lo que se prohibió en 1807, diez años después de su muerte, fue la trata, no la esclavitud como institución, que siguió vigente después",
+    "atribuirle el nombre Gustavus Vassa como un seudónimo elegido por él: se lo impuso su amo Michael Henry Pascal y al principio se negó a aceptarlo",
+    "confundir la fecha de la compra de su libertad: el precio de cuarenta libras se acordó en 1765 y el pago se completó en 1766",
+    "citar el pasaje sin el capítulo: está en el capítulo II, inmediatamente después del relato de la travesía y de la venta en Barbados",
+    "llamarlo «el primer esclavo que escribió su historia»: hubo relatos autobiográficos de africanos esclavizados anteriores a 1789, y lo excepcional de Equiano es el alcance comercial y político que alcanzó su libro, no la primacía"
+  ],
+  "cita_slug": "olaudah-equiano-cristianos-de-nombre",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

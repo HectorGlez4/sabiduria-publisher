@@ -1,0 +1,80 @@
+{
+  "id": "2026-10-28-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Jan Ingenhousz y los experimentos de 1779",
+    "hook": "En un solo verano hizo más de quinientos experimentos con hojas metidas en agua. Averiguó de qué vive el aire que respiramos.",
+    "body": [
+      "Jan Ingenhousz nació en Breda en 1730 y se hizo famoso por algo que no tiene que ver con las plantas. Era médico y defendía la inoculación contra la viruela cuando todavía era una práctica discutida. En 1768 el rey Jorge III lo envió a Viena a inocular a la familia imperial: salió bien, María Teresa de Austria lo nombró médico de la corte y le asignó una renta vitalicia de cinco mil florines al año. Con ese dinero se pagó lo que de verdad le interesaba. En el verano de 1779, alojado en la finca inglesa de Bowood, hizo más de quinientos experimentos, de la mañana a la noche, casi todos con hojas sueltas sumergidas en agua.",
+      "El resultado se publicó ese mismo año en Londres con un título que ya lo dice todo: Experimentos sobre vegetales, que descubren su gran poder de purificar el aire común a la luz del sol, y de dañarlo en la sombra y de noche. Tres hallazgos. Solo las partes verdes limpian el aire. Solo lo hacen mientras les da la luz, y es la luz la que trabaja, no el calor: lo comprobó calentando plantas junto al fuego, a oscuras, sin obtener nada. Y en la oscuridad esas mismas plantas hacen lo contrario, como los animales. Joseph Priestley había visto antes que una planta podía restaurar el aire de una campana de vidrio, pero no sabía por qué, ni cuándo, ni con qué parte. Ingenhousz puso las tres condiciones.",
+      "Murió en 1799 en Bowood Park, la misma finca donde veinte años antes había pasado aquel verano midiendo burbujas. Su nombre no entró en el vocabulario común: la palabra fotosíntesis se acuñó mucho después, y el crédito popular se le quedó a Priestley. Queda el método. Ingenhousz no descubrió algo mirando; descubrió algo apagando la luz y volviéndola a encender, quinientas veces, para ver qué variable era la que mandaba."
+    ],
+    "question": "¿Cuántas veces hay que repetir algo antes de saber qué parte importa?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El verano de las quinientas pruebas",
+    "subtitle": "Un médico de corte y las hojas sumergidas de 1779",
+    "body": "Ingenhousz demostró en 1779 que las plantas solo purifican el aire con luz, solo por sus partes verdes, y que a oscuras lo estropean. Cinco años antes, Priestley lo había rozado sin entenderlo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Ingenhousz",
+      "#HistoriaDeLaCiencia",
+      "#Fotosintesis"
+    ],
+    "extended": [
+      "#SigloXVIII",
+      "#Botanica",
+      "#Ciencia",
+      "#Priestley",
+      "#Curiosidades",
+      "#Historia",
+      "#Divulgacion"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Jan Ingenhousz nació en Breda el 8 de diciembre de 1730 y murió el 7 de septiembre de 1799 en Bowood Park, cerca de Calne, Wiltshire; en 1768 Jorge III lo envió a la corte austriaca a inocular contra la viruela a los archiduques Fernando y Maximiliano y a la archiduquesa Teresa, y María Teresa lo nombró médico de corte con una renta vitalicia de 5.000 florines anuales que destinó a financiar su investigación.",
+      "source": "Complete Dictionary of Scientific Biography, entrada «Ingen-Housz, Jan» (Charles Scribner's Sons), reproducida en Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/ingen-housz-jan"
+    },
+    {
+      "claim": "En Experiments upon Vegetables (1779) Ingenhousz estableció que solo las partes verdes de la planta restauran el aire, que lo hacen únicamente iluminadas por la luz solar, que la radiación activa está en la luz visible y no en la radiación térmica, y que a oscuras las plantas empeoran el aire; ni Priestley ni ningún otro investigador tenía antes de ese libro una comprensión siquiera vaga del proceso.",
+      "source": "Complete Dictionary of Scientific Biography, entrada «Ingen-Housz, Jan» (Charles Scribner's Sons), reproducida en Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/ingen-housz-jan"
+    },
+    {
+      "claim": "El libro se publicó en Londres en 1779, impreso para P. Elmsly y H. Payne, con el título «Experiments upon vegetables, discovering their great power of purifying the common air in the sun-shine, and of injuring it in the shade and at night», y es la obra en la que Ingenhousz anunció su descubrimiento y la limitación del fenómeno a las partes verdes de la planta.",
+      "source": "Smithsonian Libraries, ficha del ejemplar digitalizado de «Experiments upon vegetables» de Jan Ingenhousz",
+      "url": "https://library.si.edu/digital-library/book/experimentsuponv00inge"
+    },
+    {
+      "claim": "Ingenhousz realizó más de quinientos experimentos durante los meses de verano de 1779, trabajando de la mañana a la noche, y demostró con calor de fuego en ausencia de sol que lo necesario es la luz y no el calor; antes de dedicarse a las plantas era conocido por su dominio de la inoculación contra la viruela, que lo llevó a ser llamado a Viena para tratar a la familia de la emperatriz María Teresa.",
+      "source": "Linda Hall Library of Science, Engineering & Technology, «Scientist of the Day — Jan Ingenhousz»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/jan-ingenhousz/"
+    },
+    {
+      "claim": "Los experimentos del verano de 1779 se hicieron en Bowood House, en Wiltshire, con numerosas pruebas sobre hojas sueltas sumergidas en agua, y ampliaban el trabajo previo de Joseph Priestley sobre la restauración del aire por las plantas.",
+      "source": "EBSCO Research Starters, «Ingenhousz Discovers Photosynthesis»",
+      "url": "https://www.ebsco.com/research-starters/history/ingenhousz-discovers-photosynthesis"
+    }
+  ],
+  "do_not_use": [
+    "decir que Ingenhousz «inventó» o «acuñó» la palabra fotosíntesis: el término es muy posterior a 1779 y él nunca lo empleó",
+    "atribuir a Priestley el descubrimiento de la fotosíntesis: Priestley observó en 1771-1772 que una planta restauraba el aire viciado de una campana, pero no identificó ni el papel de la luz, ni el de las partes verdes, ni la respiración vegetal nocturna",
+    "afirmar que Ingenhousz descubrió el oxígeno: el aire «puro» de sus experimentos se interpretaba todavía en el marco de la química neumática de su tiempo",
+    "repetir que las plantas en el dormitorio son peligrosas de noche: el consumo nocturno de una planta doméstica es ínfimo frente al de una persona, y ese miedo decimonónico es una mala lectura del hallazgo de 1779",
+    "dar una cifra exacta y cerrada de experimentos: las fuentes revisadas dicen «más de quinientos» en los meses de verano de 1779, no un número concreto",
+    "situar los experimentos en Viena: Ingenhousz era médico de la corte austriaca, pero el verano de 1779 lo pasó en Inglaterra, en la finca de Bowood"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

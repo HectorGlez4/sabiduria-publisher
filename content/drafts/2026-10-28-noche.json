@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-28-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la balsa muisca hallada en una cueva de Pasca",
+    "hook": "Cuatro siglos buscando una ciudad de oro. La única imagen antigua de la escena mide diecinueve centímetros y apareció en 1969 dentro de una olla.",
+    "body": [
+      "El Dorado nunca fue un lugar. Era una persona: el hombre dorado. Juan Rodríguez Freyle lo escribió en 1636, de oídas, y la escena es esta: al heredero lo cubrían de polvo de oro, lo llevaban en una balsa hasta el centro de la laguna de Guatavita y allí se sumergía, mientras los suyos echaban al agua oro y esmeraldas. Salía limpio y salía cacique. Los europeos entendieron un tesoro en el fondo. Hacia 1580 Antonio de Sepúlveda cortó el borde del cráter para vaciar la laguna: bajó el nivel unos metros y un derrumbe le tapó la obra. En 1898 una empresa londinense, Contractors Limited, perforó un túnel, la secó hacia 1904 y encontró un lodo que el sol coció hasta dejarlo como cemento. Entre las dos, un puñado de piezas pequeñas del borde.",
+      "La imagen que buscaban no estaba en la laguna. Salió en 1969, en una cueva del cerro La Campana, en el municipio de Pasca, cuando un campesino, Cruz María Dimaté, encontró una vasija de cerámica con varias piezas de oro adentro. La entregó al párroco del pueblo, y el Banco de la República la adquirió ese mismo año. Dentro iba una balsa de 19,5 por 10,2 por 10,1 centímetros, fundida a la cera perdida en tumbaga de más de ochenta por ciento de oro, con un personaje sentado en el centro y diez figuras menores alrededor. Se fabricó entre 1200 y 1500. Y no iba sola: la acompañaban un ofrendatario sentado, fragmentos de cráneos de dos animales y unas andas, también de oro.",
+      "Ese conjunto explica el malentendido entero. No era un tesoro escondido para volver a buscarlo: era una ofrenda depositada para quedarse. Los muiscas no acumulaban el oro, lo entregaban. Durante cuatrocientos años se drenó una laguna buscando un depósito que nadie había hecho nunca, y la pieza que hoy resume esa civilización cabe en una mano y llegó al museo por un campesino y un cura de pueblo."
+    ],
+    "question": "¿Qué se te escapa por buscarlo donde tú lo habrías guardado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El Dorado era un hombre",
+    "subtitle": "Una balsa de diecinueve centímetros y una laguna vaciada en vano",
+    "body": "Para los muiscas, el oro se entregaba, no se guardaba. Cuatro siglos de excavaciones buscaron en Guatavita un tesoro que nadie había depositado nunca."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Muiscas",
+      "#ElDorado",
+      "#Colombia"
+    ],
+    "extended": [
+      "#MuseoDelOro",
+      "#Guatavita",
+      "#Arqueologia",
+      "#Historia",
+      "#AmericaPrecolombina",
+      "#Curiosidades",
+      "#Civilizaciones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La balsa muisca mide 19,5 cm de largo por 10,1 de ancho y 10,2 de alto, es de oro de alta ley (más del 80 %) aleado con plata nativa y cobre, se fundió a la cera perdida y se fabricó entre 1200 y 1500 d.C.; representa a un cacique sentado en el centro acompañado de diez figuras menores.",
+      "source": "Enciclopedia del Banco de la República (Banrepcultural), entrada «Balsa muisca»",
+      "url": "https://enciclopedia.banrepcultural.org/index.php/Balsa_muisca"
+    },
+    {
+      "claim": "En 1969 el campesino Cruz María Dimaté halló la pieza dentro de una vasija de cerámica en una cueva del páramo del municipio de Pasca, Cundinamarca; la entregó a Jaime Hincapié Santamaría, párroco de Pasca, que contactó al Banco de la República, entidad que la adquirió para el Museo del Oro. La ofrenda incluía además un ofrendatario en forma de personaje sentado, un recipiente de cerámica, fragmentos de cráneos de dos animales y andas también de oro.",
+      "source": "Enciclopedia del Banco de la República (Banrepcultural), entrada «Balsa muisca»",
+      "url": "https://enciclopedia.banrepcultural.org/index.php/Balsa_muisca"
+    },
+    {
+      "claim": "El hallazgo de 1969 se produjo en una cueva del cerro La Campana, en Pasca (Cundinamarca); la vasija contenía una figurilla sentada, fragmentos de cráneos de animales, un recipiente cerámico y andas de oro, y el Banco Central adquirió el conjunto ese mismo año. La balsa está fundida con la técnica de la cera perdida.",
+      "source": "The City Paper Bogotá, «The Muisca Raft returns with offering to care for the world» (nueva sala del Museo del Oro, inaugurada el 19 de diciembre de 2024)",
+      "url": "https://thecitypaperbogota.com/culture/the-muisca-raft-returns-with-offering-to-care-for-the-world/"
+    },
+    {
+      "claim": "«El Dorado» designaba originalmente a una persona —el hombre dorado—, no a una ciudad: en el rito de coronación muisca el nuevo gobernante era cubierto de polvo de oro, llevado en una balsa hasta el centro de la laguna de Guatavita y sumergido, mientras los asistentes arrojaban oro y esmeraldas al agua. Juan Rodríguez Freyle dejó escrita la descripción en 1636, afirmando haberla recibido del sobrino del último gobernante de Guatavita.",
+      "source": "World History Encyclopedia, entrada «El Dorado»",
+      "url": "https://www.worldhistory.org/El_Dorado/"
+    },
+    {
+      "claim": "Hacia 1580 Antonio de Sepúlveda cortó el borde del cráter de la laguna de Guatavita para vaciarla y bajó el nivel varios metros, pero un derrumbe bloqueó el corte; entre 1898 y 1912 la empresa londinense Contractors Limited excavó un túnel y llegó a secarla hacia 1904, encontrando un fondo de lodo que el sol endureció como cemento. Ambas empresas solo recuperaron un puñado de piezas pequeñas del borde de la laguna.",
+      "source": "World History Encyclopedia, entrada «El Dorado»",
+      "url": "https://www.worldhistory.org/El_Dorado/"
+    },
+    {
+      "claim": "La balsa muisca se conserva en el Museo del Oro del Banco de la República en Bogotá, mide 19,5 × 10,2 × 10,1 cm, está hecha de tumbaga con más del ochenta por ciento de oro y fue fundida a la cera perdida; fue hallada en 1969 en Pasca y desde entonces se ha convertido en emblema nacional de Colombia.",
+      "source": "Wikipedia en inglés, artículo «Muisca raft»",
+      "url": "https://en.wikipedia.org/wiki/Muisca_raft"
+    }
+  ],
+  "do_not_use": [
+    "decir que la balsa muisca se encontró en la laguna de Guatavita: apareció en 1969 en una cueva del municipio de Pasca, y de Guatavita nunca se extrajo nada semejante",
+    "presentar El Dorado como una ciudad perdida de oro: el nombre designaba al gobernante cubierto de polvo de oro, y la ciudad es una invención posterior de los buscadores europeos",
+    "afirmar que la balsa representa con certeza la ceremonia de Guatavita: el Museo del Oro la relaciona con el rito de investidura, pero se trata de una interpretación iconográfica, no de una identificación documentada",
+    "dar por probada al pie de la letra la descripción de Juan Rodríguez Freyle: la escribió en 1636, casi un siglo después de la conquista del altiplano, y de oídas",
+    "decir que los drenajes de Guatavita no encontraron absolutamente nada: recuperaron algunas piezas pequeñas del borde, muy lejos del tesoro que se buscaba",
+    "llamar «oro puro» a la balsa: es tumbaga, una aleación de oro con plata nativa y cobre, aunque con más del ochenta por ciento de oro",
+    "atribuir el hallazgo a una excavación arqueológica: lo encontró un campesino, Cruz María Dimaté, y llegó al museo por medio del párroco del pueblo"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,90 @@
+{
+  "id": "2026-10-28-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Nâzım Hikmet y el poema Sobre el vivir",
+    "hook": "«Vivir no es cosa de broma: has de vivir con toda seriedad, como una ardilla, por ejemplo; es decir, sin esperar nada fuera y más allá del vivir.»\n— Nâzım Hikmet, Sobre el vivir",
+    "body": [
+      "Lo escribió encerrado. En 1938 un tribunal militar turco condenó a Nâzım Hikmet a veintiocho años y cuatro meses de cárcel por incitar al ejército a la rebelión: la prueba fue que unos cadetes leían sus poemas. Cumplió unos trece años, repartidos entre Estambul, Ankara, Çankırı y Bursa, hasta que una amnistía lo liberó en 1950. En Bursa pasó la mayor parte. Allí, en una celda, escribió que vivir hay que tomárselo en serio, como una ardilla: sin esperar nada fuera ni más allá del propio vivir.",
+      "El poema tiene tres partes y sigue adelante con esa calma que no consuela. En la segunda dice: supongamos que estamos en la cárcel y cerca de los cincuenta, y que faltan todavía dieciocho años para que se abra la puerta de hierro. Aun así, escribe, hay que seguir viviendo con lo de afuera, con su gente y sus animales. No era una hipótesis literaria; era su aritmética. El texto quedó recogido en Yatar Bursa Kalesinde, un volumen que él nunca planeó: lo armaron sus editores y se publicó en 1988, veinticinco años después de su muerte, dentro de la primera edición turca de sus obras completas.",
+      "Hikmet no volvió. En 1951 Turquía le retiró la nacionalidad; murió en Moscú en 1963 y está enterrado allí. El Estado que lo expulsó le devolvió la ciudadanía en 2009, cuarenta y seis años después de enterrarlo en otro país. La frase de la ardilla se lee hoy en tazas y en carteles, como un elogio de la vida sencilla. En su sitio dice algo más difícil: tomarse el vivir en serio es el trabajo que queda cuando ya no queda ninguna otra cosa que esperar."
+    ],
+    "question": "¿Qué parte de tu vida estás viviendo como una espera?",
+    "quote": {
+      "text": "Vivir no es cosa de broma: has de vivir con toda seriedad, como una ardilla, por ejemplo; es decir, sin esperar nada fuera y más allá del vivir.",
+      "author": "Nâzım Hikmet",
+      "work": "Sobre el vivir (Yaşamaya Dair), I — Poems of Nazim Hikmet, Persea Books, 1994",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#NazimHikmet",
+      "#Poesia",
+      "#Turquia"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Literatura",
+      "#SigloXX",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El poema turco «Yaşamaya Dair» comienza «Yaşamak şakaya gelmez, / büyük bir ciddiyetle yaşayacaksın / bir sincap gibi mesela, / yani, yaşamanın dışında ve ötesinde hiçbir şey beklemeden, / yani bütün işin gücün yaşamak olacak.»",
+      "source": "Milliyet, sección de poemas de Nâzım Hikmet Ran, texto de «Yaşamaya dair»",
+      "url": "https://www.milliyet.com.tr/siirler/nazim-hikmet-ran-siirleri/yasamaya-dair-siiri-nazim-hikmet-ran-6397275"
+    },
+    {
+      "claim": "La traducción inglesa de referencia abre «Living is no laughing matter: / you must live with great seriousness / like a squirrel, for example— / I mean without looking for something beyond and above living, / I mean living must be your whole occupation», y está acreditada a Randy Blasing y Mutlu Konuk, de Poems of Nazim Hikmet (Persea Books, 1994).",
+      "source": "Academy of American Poets (poets.org), «On Living» de Nâzım Hikmet",
+      "url": "https://poets.org/poem/living"
+    },
+    {
+      "claim": "En 1938 Hikmet fue detenido acusado de incitar al ejército a la rebelión y condenado a 28 años y 4 meses; pasó cerca de 13 años en las cárceles de Estambul, Ankara, Çankırı y Bursa —la mayor parte en Bursa— hasta ser liberado por una ley de amnistía en 1950. «Yaşamaya Dair» figura entre los poemas de ese periodo de madurez.",
+      "source": "Nâzım Hikmet Kültür ve Sanat Vakfı (Fundación Nâzım Hikmet), sección «Cezaevi Yılları» (Los años de cárcel)",
+      "url": "https://www.nazimhikmet.org.tr/nazim-hikmet/tum-yonleri/siiri/cezaevi-yillari/"
+    },
+    {
+      "claim": "«Yatar Bursa Kalesinde» no fue un libro planeado por el poeta: lo compusieron sus editores y se publicó en 1988, en la primera edición turca de sus obras completas; reúne poemas escritos entre 1929 y 1951, la mayoría fechados entre 1948 y 1951.",
+      "source": "Nâzım Hikmet Kültür ve Sanat Vakfı (Fundación Nâzım Hikmet), sección «Cezaevi Yılları»",
+      "url": "https://www.nazimhikmet.org.tr/nazim-hikmet/tum-yonleri/siiri/cezaevi-yillari/"
+    },
+    {
+      "claim": "Nâzım Hikmet nació en Salónica el 15 de enero de 1902, pasó cerca de quince años de su vida en prisión por sus ideas políticas, se le retiró la nacionalidad turca, murió en Moscú el 3 de junio de 1963 y su ciudadanía le fue restituida de forma póstuma en 2009.",
+      "source": "Routledge Encyclopedia of Modernism, entrada «Hikmet, Nâzım (1902-1963)»",
+      "url": "https://www.rem.routledge.com/articles/hikmet-naz-m-1902-1963"
+    },
+    {
+      "claim": "A Hikmet se le retiró la nacionalidad turca en 1951 por sus ideas marxistas, murió en Moscú en 1963 a los 61 años, está enterrado en el cementerio Novodévichi de Moscú y el Estado turco le devolvió la ciudadanía en 2009.",
+      "source": "Hürriyet Daily News, «Turkey's poet of hope: Nazım Hikmet»",
+      "url": "https://www.hurriyetdailynews.com/turkeys-poet-of-hope-nazim-hikmet-155280"
+    }
+  ],
+  "do_not_use": [
+    "fechar el poema en un día o mes concretos: circula como «1948», pero la Fundación Nâzım Hikmet no da fecha de escritura para esta pieza y solo sitúa el grueso del volumen entre 1948 y 1951",
+    "presentar «Yatar Bursa Kalesinde» como un libro que Hikmet publicó: es una recopilación póstuma de sus editores, aparecida en 1988",
+    "confundir la condena con el tiempo cumplido: fue sentenciado a 28 años y 4 meses y estuvo preso unos 13, hasta la amnistía de 1950",
+    "decir que lo encarcelaron por escribir este poema: la causa de 1938 se basó en que cadetes de la academia militar leían obra suya anterior, y el poema es posterior a la condena",
+    "citar la versión española como si fuera traducción oficial única: circulan varias, y la referencia documentada en inglés es la de Randy Blasing y Mutlu Konuk (Persea Books, 1994)",
+    "usar la frase de la ardilla como elogio de la vida sencilla o del desapego: en el poema es una exigencia de seriedad escrita desde la cárcel, no una invitación a la ligereza",
+    "atribuirle el verso «el más hermoso de los mares es el que no hemos navegado» sin señalar que pertenece a otro poema suyo distinto de este"
+  ],
+  "cita_slug": "nazim-hikmet-vivir-no-es-cosa-de-broma",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
