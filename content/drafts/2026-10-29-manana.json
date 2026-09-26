@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-29-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Le Gentil y los dos tránsitos de Venus que no vio",
+    "hook": "Once años y medio de viaje para cronometrar dos veces el paso de Venus por delante del Sol. No consiguió ni una medición, y al volver lo daban por muerto.",
+    "body": [
+      "En 1716 Edmond Halley propuso un método: si observadores repartidos por el mundo cronometraban el paso de Venus por delante del Sol en 1761 y en 1769, comparar sus medidas daría la distancia de la Tierra al Sol. Francia y Gran Bretaña armaron expediciones a los dos hemisferios. Guillaume Le Gentil salió de París en marzo de 1760 hacia Pondicherry, en la India francesa. Llegó a Isla de Francia en julio. De allí zarpó, el barco se desvió cinco semanas por vientos contrarios y, ya cerca de la costa, supieron que los británicos habían tomado Pondicherry. Hubo que volver. El 6 de junio de 1761 vio el tránsito desde la cubierta de un barco en movimiento: así no se mide nada.",
+      "No volvió a casa. Se quedó ocho años más en el Índico esperando el segundo tránsito, el último del siglo: los tránsitos de Venus vienen en parejas separadas por ocho años y después pasan más de cien. Cartografió Madagascar y llegó hasta Manila, donde las autoridades españolas lo recibieron con hostilidad. La Academia le ordenó observar desde Pondicherry. Llegó en marzo de 1768, con observatorio levantado y quince meses de margen. El 3 de junio de 1769 el cielo se cubrió exactamente durante el tránsito. Ese mismo día, en Manila, de donde venía, estuvo despejado.",
+      "El regreso le costó dos años más: enfermó y una tormenta frente al Cabo de Buena Esperanza lo obligó a retroceder. Llegó a París en octubre de 1771, once años y medio después de salir. Lo daban por muerto. Sus parientes repartían la herencia y la Academia lo había pasado a la condición de veterano. Fue a los tribunales, recuperó sus bienes y su plaza en 1772, se casó, tuvo una hija y publicó el relato del viaje en dos volúmenes, en 1779 y 1781. Once años y medio de trabajo impecable y ni un dato utilizable: eso también es la ciencia, y es la parte que no se cuenta."
+    ],
+    "question": "¿Cuánto de lo que haces bien depende de algo que no controlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Once años y medio para no ver nada",
+    "subtitle": "Una guerra le quitó el primer tránsito y una nube el segundo",
+    "body": "Le Gentil salió de París en 1760 para medir la distancia al Sol. Volvió en 1771 sin una sola observación válida, y encontró a sus parientes repartiendo su herencia."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#TransitoDeVenus",
+      "#Astronomia",
+      "#SigloXVIII"
+    ],
+    "extended": [
+      "#LeGentil",
+      "#HistoriaDeLaCiencia",
+      "#Curiosidades",
+      "#Venus",
+      "#Halley",
+      "#Ciencia",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Guillaume-Joseph-Hyacinthe-Jean-Baptiste Le Gentil de la Galaisière nació en Coutances el 12 de septiembre de 1725 y murió en París el 22 de octubre de 1792. Fue enviado a Pondicherry para el tránsito de 1761; como los ingleses habían capturado ese establecimiento justo cuando él llegaba (en 1760), se vio obligado a presenciar el tránsito desde un barco. Decidió quedarse en Oriente para el siguiente tránsito y realizó numerosas excursiones, de Madagascar a Manila.",
+      "source": "Dictionary of Scientific Biography, entrada «Le Gentil de la Galaisière, Guillaume-Joseph-Hyacinthe-Jean-Baptiste», reproducida en Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/le-gentil-de-la-galaisiere-guillaume-joseph-hyacinthe-jean-baptiste"
+    },
+    {
+      "claim": "Por orden de la Academia observó el tránsito del 3 de junio de 1769 desde Pondicherry: ese día Manila estuvo muy despejada, mientras que en Pondicherry una nube ocultó el Sol precisamente durante el periodo crucial. Regresó dos años después, tras una ausencia total de once años y medio; sus parientes lo creían muerto y habían iniciado la división de su herencia, y la Academia lo había relegado a la condición de veterano. Resolvió ambos asuntos por vía legal, aunque sin recuperar el dinero ya gastado, y fue reinstalado en 1772. Después se casó y tuvo una hija.",
+      "source": "Dictionary of Scientific Biography, entrada «Le Gentil de la Galaisière», reproducida en Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/le-gentil-de-la-galaisiere-guillaume-joseph-hyacinthe-jean-baptiste"
+    },
+    {
+      "claim": "Le Gentil salió de París en marzo de 1760 con destino a Pondicherry y llegó a Isla de Francia en julio. El barco se desvió de su rumbo por vientos desfavorables y pasó cinco semanas en el mar; al aproximarse a Pondicherry descubrieron que los británicos la habían ocupado y el barco tuvo que retroceder. Para 1769 pensó observar desde Manila, pero por la hostilidad de las autoridades españolas volvió a Pondicherry, donde llegó en marzo de 1768 y construyó un observatorio; el 3 de junio de 1769 el cielo se cubrió y no vio nada. Llegó a París en octubre de 1771. Publicó «Voyage dans les mers de l'Inde» en dos volúmenes, en 1779 y 1781.",
+      "source": "Wikipedia en inglés, artículo «Guillaume Le Gentil»",
+      "url": "https://en.wikipedia.org/wiki/Guillaume_Le_Gentil"
+    },
+    {
+      "claim": "Tras tres meses en el mar llegó a Mauricio, con la intención de seguir a Pondicherry, pero el territorio estaba sitiado por buques de guerra ingleses y no obtuvo permiso, de modo que perdió el tránsito de 1761. Decidió permanecer cinco años más en Mauricio preparando la observación siguiente y cartografiando Madagascar. En mayo de 1766 embarcó hacia Manila en un buque español, fue acusado de espía y se trasladó a Pondicherry. La noche anterior al tránsito el tiempo en Pondicherry era claro y todo estaba listo, pero después de nueve años de espera el viento cambió y el tránsito quedó tapado por las nubes. El regreso a París le tomó más de un año, con enfermedades y un huracán.",
+      "source": "The Conversation, «Transit of Venus: a tale of two expeditions», por David Coward, ARC Future Fellow, University of Western Australia",
+      "url": "https://theconversation.com/transit-of-venus-a-tale-of-two-expeditions-7246"
+    },
+    {
+      "claim": "Halley propuso usar los tránsitos de Venus de 1761 y 1769 para medir con precisión la unidad astronómica mediante el método de las paralajes; tanto Francia como el Reino Unido organizaron expediciones por todo el mundo para observarlos.",
+      "source": "«Transits of Venus and the astronomical unit: four centuries of increasing precision», versión HTML en ar5iv (arXiv:1301.0296)",
+      "url": "https://ar5iv.arxiv.org/html/1301.0296"
+    },
+    {
+      "claim": "En 1716 Edmond Halley sugirió emplear un tránsito de Venus para calcular la unidad astronómica por paralaje: observadores situados en los hemisferios norte y sur verían el tránsito en posiciones ligeramente distintas, y con el ángulo de ese desplazamiento aparente se podía calcular la distancia Tierra-Sol. Los tránsitos ocurren en parejas separadas por ocho años, y entre pareja y pareja transcurre más de un siglo.",
+      "source": "Wikipedia en inglés, artículo «1769 transit of Venus observed from Tahiti»",
+      "url": "https://en.wikipedia.org/wiki/1769_transit_of_Venus_observed_from_Tahiti"
+    },
+    {
+      "claim": "El libro del viaje se publicó como «Voyage dans les mers de l'Inde, fait par ordre du Roi, à l'occasion du passage de Vénus, sur le disque du soleil, le 6 juin 1761, & le 3 du même mois 1769», con el título indicando las dos fechas de los tránsitos que motivaron la expedición.",
+      "source": "Librairie Clavreuil, ficha bibliográfica de la obra de Le Gentil de la Galaisière",
+      "url": "https://www.librairieclavreuil.com/en/le-gentil-de-la-galaisiere-guillaume-voyage-dans-les-mers-de-linde-fait-par-ordre-du-roi-a-loccasion-du-passage-de-venus-sur-le-disque-du-soleil-le-6-juin-1761-le-3-du-meme-mois-1769/"
+    }
+  ],
+  "do_not_use": [
+    "decir que su esposa se había vuelto a casar durante la ausencia: circula en resúmenes divulgativos, pero el Dictionary of Scientific Biography dice que Le Gentil se casó después de regresar, lo que contradice esa versión; el dato no está verificado",
+    "afirmar que en 1761 no vio absolutamente nada: presenció el tránsito desde la cubierta de un barco, y eso es lo que invalidaba la medición, porque el método exige una posición geográfica fija y estable",
+    "decir que la Academia lo expulsó: lo relegó a la condición de veterano, y recuperó su plaza por vía legal en 1772",
+    "presentarlo como alguien que lo perdió todo: recuperó sus bienes y su rango en los tribunales, aunque no el dinero ya gastado por sus parientes",
+    "decir que el 3 de junio de 1769 estuvo nublado todo el día en Pondicherry: la nube tapó el Sol precisamente durante el periodo crucial del tránsito, y ese mismo día el cielo de Manila estuvo despejado",
+    "atribuir el fracaso a mala preparación o a impuntualidad: llegó con margen las dos veces, y lo que se lo quitó fue una guerra la primera y el clima la segunda",
+    "decir que los tránsitos de Venus ocurren cada ocho años: vienen en parejas separadas por ocho años, y entre una pareja y la siguiente pasa más de un siglo",
+    "dar una cifra concreta de estaciones u observadores de 1769 (se citan cifras como 110 estaciones o más de 150 observaciones): no se pudo comprobar en una fuente institucional de primera mano"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

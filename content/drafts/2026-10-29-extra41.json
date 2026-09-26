@@ -1,0 +1,85 @@
+{
+  "id": "2026-10-29-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Szymborska y las dos palabras no lo sé",
+    "hook": "«La inspiración, sea lo que sea, nace de un incesante “no lo sé”.»\n— Wisława Szymborska, conferencia Nobel, 1996",
+    "body": [
+      "Lo dijo en Estocolmo, el 7 de diciembre de 1996, ante la Academia Sueca y en polaco. La conferencia se llama «Poeta i świat», el poeta y el mundo, y empieza confesando que la primera frase es siempre la más difícil. Unos párrafos después llega la tesis: la inspiración, sea lo que sea, nace de un incesante no lo sé. Y añade que valora mucho esas dos palabras pequeñas. El premio se le había anunciado el 3 de octubre de ese año y la ceremonia fue el 10 de diciembre, en la Filarmónica de Estocolmo. Entre las dos fechas, Szymborska dedicó su intervención más larga en público a defender la ignorancia como método de trabajo.",
+      "No hablaba de resignarse. El ejemplo que pone a continuación es concreto: si Isaac Newton no se hubiera dicho nunca no lo sé, las manzanas de su huerto habrían caído al suelo como granizo, y él, con suerte, se habría inclinado a recogerlas para comérselas. Son dos palabras pequeñas, dice, pero vuelan con alas poderosas. El argumento no es que no saber sea cómodo, sino que la frase obliga a volver a mirar. Quien la pronuncia se queda con una tarea entre manos; quien la evita se queda con una respuesta que ya no va a revisar.",
+      "La frase hizo carrera por su cuenta. La revista The New Republic publicó la conferencia el 30 de diciembre de 1996 con otro título: «No lo sé». La Biblioteca Nacional de Polonia sigue citando esas dos líneas como el centro de lo que dejó dicho. Szymborska había nacido el 2 de julio de 1923 y murió el 1 de febrero de 2012. Son dos palabras que cualquiera puede decir, y de las más difíciles de decir en voz alta cuando es el turno de uno."
+    ],
+    "question": "¿En qué asunto te cuesta más admitir que no lo sabes?",
+    "quote": {
+      "text": "La inspiración, sea lo que sea, nace de un incesante “no lo sé”.",
+      "author": "Wisława Szymborska",
+      "work": "Poeta i świat, conferencia Nobel, 7 de diciembre de 1996",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Szymborska",
+      "#Poesia",
+      "#Nobel"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Polonia",
+      "#Literatura",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#SigloXX"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto polaco de la conferencia Nobel dice literalmente: «Natchnienie, czymkolwiek ono jest, rodzi się z bezustannego »nie wiem«. (…) wysoko sobie cenię dwa małe słowa: »nie wiem«.» La misma conferencia contiene la frase «Wygląda na to, że poeci będą mieli zawsze dużo do roboty». Szymborska nació el 2 de julio de 1923 y murió el 1 de febrero de 2012.",
+      "source": "Biblioteca Nacional de Polonia (Biblioteka Narodowa), nota «Dziesięć lat temu zmarła Wisława Szymborska»",
+      "url": "https://www.bn.org.pl/aktualnosci/4519-dziesiec-lat-temu-zmarla-wislawa-szymborska.html"
+    },
+    {
+      "claim": "El Premio Nobel de Literatura se anunció el 3 de octubre de 1996; la conferencia Nobel, titulada «Poeta i świat», se pronunció el 7 de diciembre de 1996, y la ceremonia de entrega fue el 10 de diciembre de 1996 en la Filarmónica de Estocolmo, con el rey Carlos XVI Gustavo. En la conferencia Szymborska subrayó el rango de la frase «nie wiem», que impulsa la curiosidad humana y los descubrimientos científicos.",
+      "source": "Fundación Wisława Szymborska (Fundacja Wisławy Szymborskiej), «30. rocznica przyznania Nagrody Nobla Wisławie Szymborskiej»",
+      "url": "https://www.szymborska.org.pl/30-rocznica-przyznania-nagrody-nobla-wislawie-szymborskiej/"
+    },
+    {
+      "claim": "Szymborska pronunció su conferencia Nobel el 7 de diciembre de 1996 en la Academia Sueca, en polaco, bajo el título traducido al inglés como «The Poet and the World». La conferencia se publicó en The New Republic el 30 de diciembre de 1996 con el título «I Don't Know: The Nobel lecture».",
+      "source": "Wikipedia en inglés, artículo «1996 Nobel Prize in Literature»",
+      "url": "https://en.wikipedia.org/wiki/1996_Nobel_Prize_in_Literature"
+    },
+    {
+      "claim": "La versión inglesa oficial de la conferencia, traducida del polaco por Stanisław Barańczak y Clare Cavanagh, dice: «Whatever inspiration is, it's born from a continuous “I don't know.”» y, a continuación: «This is why I value that little phrase “I don't know” so highly. It's small, but it flies on mighty wings... If Isaac Newton had never said to himself “I don't know,” the apples in his little orchard might have dropped to the ground like hailstones...»",
+      "source": "DailyGood, reproducción del texto oficial de la conferencia Nobel de Szymborska «The Poet and the World», con crédito de traducción a Stanisław Barańczak y Clare Cavanagh",
+      "url": "https://www.dailygood.org/story/1838/wislawa-szymborska-the-poet-and-the-world-wislawa-szymborska/"
+    },
+    {
+      "claim": "La conferencia Nobel de Szymborska se titula «Poeta i świat», y la motivación del comité fue «za poezję, która z ironiczną precyzją pozwala historycznemu i biologicznemu kontekstowi ukazać się we fragmentach ludzkiej rzeczywistości». El anuncio del premio está fechado el 3 de octubre de 1996.",
+      "source": "Museo de Historia de Polonia (Muzeum Historii Polski), entrada de calendario «Literacka Nagroda Nobla dla Wisławy Szymborskiej»",
+      "url": "https://muzhp.pl/kalendarium/literacka-nagroda-nobla-dla-wislawy-szymborskiej"
+    }
+  ],
+  "do_not_use": [
+    "fechar la conferencia el 10 de diciembre de 1996: ese día fue la ceremonia de entrega en la Filarmónica de Estocolmo, y la conferencia Nobel se pronunció el 7 de diciembre ante la Academia Sueca",
+    "presentar «No lo sé» como el título que le dio Szymborska: la conferencia se llama «Poeta i świat» (el poeta y el mundo), y el título «I Don't Know» lo puso The New Republic al publicarla el 30 de diciembre de 1996",
+    "leer la frase como un elogio de la ignorancia o de la duda cómoda: el ejemplo que da a continuación es Newton, y el argumento es que la frase obliga a seguir trabajando, no a detenerse",
+    "citar la versión española como traducción publicada de referencia: la fuente documentada es el texto polaco de la Biblioteca Nacional de Polonia y la traducción inglesa oficial de Stanisław Barańczak y Clare Cavanagh",
+    "atribuirle la frase «no hay preguntas más urgentes que las preguntas ingenuas» ni otras sentencias que circulan a su nombre sin obra ni fecha: la conferencia Nobel es un texto corto y verificable, y conviene ceñirse a él",
+    "decir que la pronunció en inglés o en sueco: la pronunció en polaco",
+    "escribir su nombre como «Wislawa Szymborska» en el cuerpo de la pieza sin los signos diacríticos polacos: la forma correcta es Wisława Szymborska"
+  ],
+  "cita_slug": "szymborska-la-inspiracion-nace-de-un-no-lo-se",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

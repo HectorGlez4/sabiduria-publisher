@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-29-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Monte Albán y los Danzantes del Edificio L",
+    "hook": "Más de trescientas lápidas con figuras contorsionadas. Durante generaciones se las llamó Danzantes por las posturas. No están bailando.",
+    "body": [
+      "Monte Albán se fundó hacia el 500 antes de Cristo en la cresta de un cerro que se levanta unos 400 metros sobre el fondo del valle de Oaxaca, donde se juntan sus tres brazos. El emplazamiento no estaba así: lo hicieron. El centro ceremonial ocupa una cresta nivelada a mano, y el INAH describe sus terrazas, presas, canales, pirámides y montículos como literalmente tallados en la montaña. La Gran Plaza mide unos trescientos metros y cabía en ella toda la población. Arriba no había agua: se recogía la lluvia en drenajes y cisternas. El sitio estuvo habitado unos mil quinientos años.",
+      "En el flanco oeste de la plaza está el Edificio L, con más de trescientas lápidas grabadas. Se las llamó Danzantes por las posturas: cuerpos retorcidos, piernas dobladas, brazos en el aire. No bailan. Las figuras están desnudas, algunas mutiladas, con los ojos cerrados y la boca abierta, y de varios cuerpos salen volutas que representan sangre. Hoy se leen como enemigos capturados, torturados y sacrificados, y los glifos que los acompañan probablemente dan sus nombres y los de los pueblos vencidos. La más antigua de esta clase, el Monumento 3 de San José Mogote, muestra un cautivo ensangrentado con dos signos entre las piernas: posiblemente su nombre.",
+      "No era el único registro a la vista. El Edificio J, con forma de punta de flecha y orientado distinto a todo lo demás, lleva más de cuarenta piedras escritas: provincias sometidas, con cabezas boca abajo para los gobernantes muertos y hacia arriba para los que no resistieron. La plaza central de la capital zapoteca era, en buena parte, un archivo de conquistas puesto donde todos lo vieran. En los años noventa el INAH llevó las lápidas originales al museo de sitio, porque la cantera gris se deshace con la lluvia y los temblores. Lo que hoy se ve en el cerro son copias de una advertencia."
+    ],
+    "question": "¿Qué cosa entendiste mal durante años por el nombre que le pusieron?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "No son danzantes",
+    "subtitle": "Lo que un nombre equivocado convirtió en baile",
+    "body": "En el Edificio L de Monte Albán hay más de trescientas figuras contorsionadas. Se las llamó Danzantes por las posturas. Se interpretan como cautivos de guerra torturados y sacrificados."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MonteAlban",
+      "#Zapotecas",
+      "#Oaxaca"
+    ],
+    "extended": [
+      "#Arqueologia",
+      "#Mesoamerica",
+      "#Mexico",
+      "#INAH",
+      "#Historia",
+      "#Civilizaciones",
+      "#AmericaPrecolombina"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Monte Albán fue fundado en el 500 a.C. y abandonado hacia el 900 d.C., y fue el sitio ocupado durante más tiempo en Mesoamérica. Se ubica en la cima del Cerro del Jaguar, con el alisamiento artificial de la plataforma principal. La Gran Plaza mide 328 yardas de largo por 197 de ancho y podía albergar hasta 15 000 visitantes. El sitio cubre más de ocho millas cuadradas, con la población concentrada en 2,5 millas cuadradas, y se calculan unos 35 000 habitantes en su apogeo. Los Danzantes se encuentran en el Edificio L. El Edificio J, orientado hacia el noreste a diferencia de las demás estructuras y con forma de punta de flecha, tuvo probable función de observatorio astronómico. El agua se resolvía con un sistema de drenajes y cisternas que recogían la lluvia.",
+      "source": "INAH, portal Lugares INAH, ficha de la Zona Arqueológica de Monte Albán",
+      "url": "https://lugares.inah.gob.mx/en/node/4351"
+    },
+    {
+      "claim": "Monte Albán fue inscrito en la Lista del Patrimonio Mundial el 11 de diciembre de 1987. El sitio estuvo habitado durante unos 1500 años por una sucesión de pueblos, y fue la capital zapoteca desde el año 500 a.C. hasta el 850 d.C. Las terrazas, presas, canales, pirámides y montículos artificiales de Monte Albán fueron literalmente tallados en la montaña. El elemento central es una explanada de 300 metros orientada norte-sur con una plataforma en cada extremo.",
+      "source": "INAH, portal Lugares INAH, ficha «Centro histórico de Oaxaca y Zona Arqueológica de Monte Albán» (Patrimonio Mundial)",
+      "url": "https://lugares.inah.gob.mx/en/node/6128"
+    },
+    {
+      "claim": "Monte Albán fue fundado hacia el 500 a.C., al final del Formativo Medio. El sitio se encuentra a unos 1940 m sobre el nivel del mar y se eleva unos 400 m sobre el fondo del valle. El centro cívico-ceremonial se sitúa sobre una cresta nivelada artificialmente. La Gran Plaza mide aproximadamente 300 por 150 metros y tenía capacidad para reunir a toda la población de la ciudad en los rituales de Estado. Al inicio del Formativo Terminal (fase Monte Albán II, c. 100 a.C. - 200 d.C.) se estima una población de 17 200 habitantes. Hacia el 900-1000 d.C. la antigua capital estaba en buena parte abandonada. Se han registrado más de 300 lápidas de Danzantes, hoy interpretadas como prisioneros de guerra torturados y sacrificados, reinterpretación asociada a los trabajos de Joyce Marcus y Kent Flannery. El Edificio J tiene una orientación astronómica particular.",
+      "source": "Wikipedia en inglés, artículo «Monte Albán»",
+      "url": "https://en.wikipedia.org/wiki/Monte_Alb%C3%A1n"
+    },
+    {
+      "claim": "El artefacto más antiguo conocido con escritura zapoteca es una lápida de tipo Danzante, oficialmente el Monumento 3, hallada en San José Mogote (Oaxaca): muestra en relieve lo que parece un cautivo muerto y ensangrentado, con dos signos glíficos entre las piernas, posiblemente su nombre. El Edificio J de Monte Albán tiene forma de punta de flecha, a diferencia de los otros edificios monumentales, y exhibe más de 40 piedras talladas con escritura jeroglífica; los glifos se han interpretado como provincias controladas, con cabezas que representan gobernantes, algunas boca abajo (posiblemente muertos) y otras hacia arriba (los que no resistieron).",
+      "source": "Wikipedia en inglés, artículo «Zapotec civilization»",
+      "url": "https://en.wikipedia.org/wiki/Zapotec_civilization"
+    },
+    {
+      "claim": "El nombre Danzantes, «bailarines» en español, refleja la interpretación inicial de estas figuras como personas en movimiento; las cerca de trescientas figuras talladas muestran hombres en posturas contorsionadas, con los ojos cerrados, la boca abierta y, en muchos casos, volutas que salen del cuerpo y parecen representar sangre o vísceras. Muchas llevan glifos de nombre, lo que sugiere que representan individuos concretos, quizá dirigentes de entidades políticas conquistadas por Monte Albán. Debido a que la cantera gris es muy susceptible al desgaste y a la actividad sísmica, el INAH ordenó el retiro de los monumentos originales en los años noventa, y las piezas originales —incluidas las Estelas 12 y 13— se conservan en el Museo de Sitio de Monte Albán.",
+      "source": "Monte Albán Heritage Center, fichas «Los Danzantes (Galería del Edificio L)» y «Building L»",
+      "url": "https://montealbanoaxaca.com/wiki/monte-alban-danzantes/"
+    }
+  ],
+  "do_not_use": [
+    "dar la fundación de Monte Albán como un dato único y cerrado: el INAH y la bibliografía de referencia dan hacia el 500 a.C., pero también circula el 700 a.C.; conviene decir «hacia el 500 a.C.» y no una fecha exacta",
+    "dar una cifra única de población: el INAH calcula unos 35 000 habitantes en el apogeo, mientras que las estimaciones por fases dan 17 200 al inicio del Formativo Terminal; son cifras de momentos distintos y no deben mezclarse",
+    "dar la altitud sobre el nivel del mar sin comprobar: las fuentes consultadas dan cifras incompatibles (4921 pies en la ficha del INAH, 1940 metros en la bibliografía), de modo que el dato seguro es la elevación de unos 400 metros sobre el fondo del valle",
+    "decir que las figuras del Edificio L son danzantes: el nombre viene de la interpretación de los primeros observadores por las posturas contorsionadas, y hoy se leen como cautivos torturados y sacrificados",
+    "afirmar que la lectura como cautivos está probada de forma definitiva: es la interpretación aceptada hoy, sostenida por los glifos de nombre y las señales de mutilación, pero sigue siendo lectura iconográfica",
+    "decir que los Danzantes son de estilo olmeca o que los hicieron los olmecas: la ficha del INAH señala rasgos semejantes a los de la cultura olmeca, lo que no es lo mismo que autoría olmeca",
+    "presentar el Monumento 3 de San José Mogote como la escritura más antigua de Mesoamérica sin matiz: se sostuvo así durante años, pero su datación ha sido cuestionada",
+    "decir que las lápidas que se ven hoy en el cerro son las originales: el INAH las retiró en los años noventa al Museo de Sitio por el deterioro de la cantera, y en su lugar hay reproducciones",
+    "llamar a Monte Albán una ciudad mixteca: fue la capital zapoteca, y los mixtecos ocuparon el sitio y reutilizaron sus tumbas mucho después del abandono"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

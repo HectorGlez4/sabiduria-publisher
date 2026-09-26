@@ -1,0 +1,96 @@
+{
+  "id": "2026-10-29-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Cavafis e Ítaca, escrita en 1910",
+    "hook": "«Ítaca te dio el bello viaje. Sin ella no habrías salido al camino. Ya no tiene otra cosa que darte.»\n— Constantino Cavafis, Ítaca, 1911",
+    "body": [
+      "El poema no habla de llegar. Cavafis lo escribió en octubre de 1910, a los cuarenta y siete años, y lo publicó en 1911 en la revista Γράμματα de Alejandría, en el número 9-10, páginas 286 y 287. Son consejos en segunda persona a alguien que se pone en camino: que el camino sea largo, que no tenga prisa. Y cerca del final aparece el balance de cuentas: Ítaca te dio el bello viaje, sin ella no habrías salido al camino, ya no tiene otra cosa que darte. El destino no es el premio. Es el pretexto que hizo falta para salir.",
+      "Dieciséis años antes había escrito lo contrario. En 1894 compuso «Segunda Odisea», un poema que no publicó nunca: allí Ulises ya ha llegado a Ítaca y la abandona por su propia voluntad, en busca de nuevas aventuras. En 1910 dio la vuelta a la idea y la escribió desde el otro lado. Ya no hace falta volver a partir, porque la isla nunca fue el objeto del viaje. Por eso el poema puede añadir, sin consolar a nadie, que si la encuentras pobre Ítaca no te ha engañado: nunca prometió ser rica.",
+      "Quien escribió el poema más conocido de la literatura griega moderna no publicó un libro en toda su vida. Cavafis nació y murió en Alejandría, el 29 de abril, con setenta años de diferencia. Fue treinta años empleado temporal del Ministerio de Obras Públicas, renovando el contrato cada año por ser extranjero, e imprimía sus poemas en hojas y folletos que repartía entre amigos. El primer libro salió en 1935, dos años después de su muerte. Hoy la frase se cita como elogio del camino, y la mitad que suele caerse es la más severa: al final no espera nada, y eso no le quita valor a ninguno de los años que costó llegar."
+    ],
+    "question": "¿Qué lugar te sirvió más para salir de él que para llegar?",
+    "quote": {
+      "text": "Ítaca te dio el bello viaje. Sin ella no habrías salido al camino. Ya no tiene otra cosa que darte.",
+      "author": "Constantino Cavafis",
+      "work": "Ítaca (Ιθάκη), revista Γράμματα, Alejandría, 1911",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Cavafis",
+      "#Itaca",
+      "#Poesia"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Grecia",
+      "#Alejandria",
+      "#Literatura",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En el texto griego del poema «Ιθάκη» figuran los versos «Η Ιθάκη σ' έδωσε τ' ωραίο ταξίδι», «Χωρίς αυτήν δεν θα 'βγαινες στον δρόμο» y «Άλλα δεν έχει να σε δώσει πια», con esa ortografía exacta. La ficha del poema lleva la anotación [1910, 1911], es decir, escritura en 1910 y publicación en 1911.",
+      "source": "Centro de la Lengua Griega (Κέντρο Ελληνικής Γλώσσας), recursos digitales de literatura, concordancia del poema «Ιθάκη» de K. P. Kavafis",
+      "url": "https://www.greek-language.gr/digitalResources/literature/tools/concordance/browse.html?cnd_id=9&text_id=658"
+    },
+    {
+      "claim": "El poema fue escrito en octubre de 1910, cuando Cavafis tenía cuarenta y siete años, y se publicó por primera vez en la revista Γράμματα de Alejandría, en el número de octubre-noviembre de 1911. En 1894 Cavafis había escrito un poema precursor titulado «Δεύτερη Οδύσσεια» (Segunda Odisea), que quedó inédito y en el que Ulises, tras encontrar Ítaca, la abandona voluntariamente en busca de nuevas aventuras. El poema está en segunda persona del singular, con tono aconsejador y didáctico, se enseña en la secundaria griega y se tradujo al inglés por primera vez en 1924.",
+      "source": "Βικιπαίδεια (Wikipedia en griego), artículo «Ιθάκη (Καβάφης)»",
+      "url": "https://el.wikipedia.org/wiki/%CE%99%CE%B8%CE%AC%CE%BA%CE%B7_(%CE%9A%CE%B1%CE%B2%CE%AC%CF%86%CE%B7%CF%82)"
+    },
+    {
+      "claim": "La primera publicación del poema «Ithaka» (Ιθάκη) se produjo en la revista Γράμματα, volumen 9-10, año 1911, páginas 286-287. El facsímil procede de la Cosmopolis Digital Collection of Greek Magazines de la Universidad de Patras.",
+      "source": "Wikimedia Commons, ficha del archivo «Ithaka by Kavafis, Grammata magazine vol 9-10, 1911.pdf», digitalizado por la Universidad de Patras",
+      "url": "https://commons.wikimedia.org/wiki/File:Ithaka_by_Kavafis,_Grammata_magazine_vol_9-10,_1911.pdf"
+    },
+    {
+      "claim": "Una versión temprana del poema se escribió en 1894 con el título «A Second Odyssey»; el texto fue revisado a su forma final en octubre de 1910 y publicado en noviembre de 1911 en la revista Grammata. El poema quedó incluido como el noveno de cuarenta poemas en «Poems 1905-1915» de Cavafis. El estudioso Daniel Mendelsohn interpreta que el destino del poema es la muerte.",
+      "source": "Wikipedia en inglés, artículo «Ithaca (poem)»",
+      "url": "https://en.wikipedia.org/wiki/Ithaca_(poem)"
+    },
+    {
+      "claim": "La revista Γράμματα (Grammata) se publicó en Alejandría (Egipto) de 1911 a 1919 y de 1920 a 1921, con periodicidad variable (mensual, bimestral, trimestral).",
+      "source": "Onassis Cavafy Archive (Fundación Onassis), ficha de la revista «Grammata»",
+      "url": "https://cavafy.onassis.org/creator/grammata-journal/"
+    },
+    {
+      "claim": "El poema «Ítaca» de Constantino Cavafis, en la traducción al español de Ramón Irigoyen, fue leído en la Fundación Juan March por el actor y director José María Pou el 29 de octubre de 2015: existe una traducción española de referencia publicada y atribuida.",
+      "source": "Fundación Juan March, ficha de la lectura dramatizada de «Ítaca» de Constantino Cavafis",
+      "url": "https://canal.march.es/es/coleccion/itaca-constantino-cavafis-1166"
+    },
+    {
+      "claim": "Cavafis nació en Alejandría el 29 de abril de 1863 y murió allí el 29 de abril de 1933, a los setenta años. Volvió a Alejandría en 1885 y vivió allí el resto de su vida. Trabajó treinta años como empleado temporal del Ministerio de Obras Públicas dirigido por los británicos, renovando su puesto cada año por su ciudadanía extranjera, y renunció en 1922. No publicó libros comerciales en vida: entre 1891 y 1904 difundió su poesía en hojas impresas y folletos destinados solo a sus amigos cercanos, además de periódicos y revistas locales. Su primer libro, «Ποιήματα», apareció póstumamente en 1935.",
+      "source": "Wikipedia en inglés, artículo «Constantine P. Cavafy»",
+      "url": "https://en.wikipedia.org/wiki/Constantine_P._Cavafy"
+    }
+  ],
+  "do_not_use": [
+    "atribuir la versión española de estos tres versos a un traductor concreto: es una traducción literal del griego documentado en las fuentes, no la versión publicada de Ramón Irigoyen ni de ningún otro traductor, cuya redacción exacta no se ha podido comprobar",
+    "fechar el poema en 1911 sin matiz: se escribió en octubre de 1910 y se publicó al año siguiente; el Centro de la Lengua Griega lo registra como [1910, 1911]",
+    "presentar estos versos como los últimos del poema: van cerca del final, pero después vienen otros tres, los que dicen que si la encuentras pobre Ítaca no te ha engañado y que ya habrás comprendido qué significan las Ítacas",
+    "citar «Segunda Odisea» (1894) como si fuera una versión anterior publicada del mismo poema: quedó inédito y su Ulises hace lo contrario, abandonar Ítaca después de encontrarla",
+    "usar el poema como elogio del viaje turístico o del camino por el camino: el poema es un consejo en segunda persona sobre el valor de la experiencia acumulada, y cierra diciendo que el destino no tiene ya nada que darte",
+    "dar por cierta sin matiz la lectura de que el destino del poema es la muerte: es la interpretación de Daniel Mendelsohn, no un dato del texto",
+    "decir que Cavafis escribió el poema durante un viaje o de vuelta a Grecia: vivió casi toda su vida en Alejandría, empleado del gobierno egipcio, y el poema es una meditación, no un diario de viaje",
+    "confundir este poema con «La ciudad» o con «El dios abandona a Antonio», también suyos y también de esos años"
+  ],
+  "cita_slug": "cavafis-itaca-te-dio-el-bello-viaje",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
