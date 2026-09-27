@@ -2,7 +2,7 @@
   "id": "2026-09-25-re63-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Simone de Beauvoir: no se nace mujer",
     "hook": "La frase más citada del feminismo del siglo XX no abre el libro del que viene. Abre el segundo tomo, a mitad de obra, y es la primera línea de un razonamiento que casi nunca se cita entero.",
@@ -100,6 +100,9 @@
     }
   },
   "reemision_de": "2026-09-09-extra81",
-  "attempts": 2,
-  "last_attempt": "2026-09-27T14:46:17.064552+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-09-27T18:40:44.420905+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: facebook_reel: HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+  ]
 }
