@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-31-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Dura-Europos y el terraplén que salvó la sinagoga",
+    "hook": "Los soldados romanos que enterraron la sinagoga de Dura-Europos para reforzar la muralla no salvaron la ciudad. Salvaron las pinturas.",
+    "body": [
+      "Dura-Europos se levantó hacia el 300 a. C. junto al Éufrates, fundada por el imperio seléucida. Los partos la tomaron en el siglo II a. C. y la convirtieron en plaza fronteriza; los romanos la conquistaron en el siglo II de nuestra era y pusieron allí guarnición. En 1932 y 1933, en la sexta campaña de la excavación conjunta de la Universidad de Yale y la Academia de Inscripciones y Bellas Letras de Francia, el equipo encontró una sinagoga dentro del terraplén que corría junto a la muralla oeste. Una inscripción aramea en tres tejas del techo fecha la reforma en 244; otra, en griego, nombra fundador a Samuel hijo de Yedaya, anciano de los judíos.",
+      "Las paredes estaban cubiertas de pintura figurativa. Sobreviven cincuenta y ocho escenas del Antiguo Testamento, alrededor del sesenta por ciento de las que hubo. El hallazgo desmintió una idea muy extendida: que el judaísmo antiguo era una religión sin imágenes. Y la contención está a la vista en el detalle. En el paso del mar, la presencia divina no tiene cuerpo: son dos manos extendidas. En la misma ciudad los arqueólogos hallaron además una casa particular convertida en iglesia hacia 240, la más antigua identificada, y un mitreo. Tres cultos en la misma calle.",
+      "Hacia 256 los sasánidas sitiaron la plaza. Los romanos amontonaron tierra contra la cara interior del muro oeste para sostenerlo y enterraron los edificios que había allí, la sinagoga y la iglesia entre ellos. El muro cayó igual y la ciudad quedó abandonada. Ese terraplén, hecho para una defensa que fracasó, es lo que conservó el color. La sinagoga se desmontó y se volvió a montar en el Museo Nacional de Damasco. Las pinturas de la iglesia y más de doce mil objetos del yacimiento están en la Galería de Arte de la Universidad de Yale."
+    ],
+    "question": "¿Qué cosa tuya se conservó por un motivo que no tenía nada que ver con ella?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La sinagoga que enterró un asedio",
+    "subtitle": "Dura-Europos, 244-256",
+    "body": "En 1932 una misión de Yale halló dentro de la muralla de Dura-Europos una sinagoga fechada en 244, con cincuenta y ocho escenas bíblicas pintadas. Se conservó porque los romanos la rellenaron de tierra para reforzar el muro ante el asedio sasánida. El muro cayó igual."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#DuraEuropos",
+      "#Arqueologia",
+      "#Siria"
+    ],
+    "extended": [
+      "#Historia",
+      "#MundoAntiguo",
+      "#Roma",
+      "#Sasanidas",
+      "#ArteAntiguo",
+      "#Civilizaciones",
+      "#Museos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En la sexta campaña del proyecto de excavación, en 1932-33, el equipo halló dentro de la tierra del terraplén levantado junto a la muralla occidental de la ciudad una sinagoga con una elaborada decoración pintada en muros y techo. Durante un asedio sasánida los soldados romanos construyeron un gran terraplén de tierra a lo largo del muro occidental y enterraron los edificios situados allí, incluida la sinagoga, lo que preservó casi entera la pared oeste con sus pinturas. Las pinturas originales se trasladaron al Museo Nacional de Damasco; las copias hechas por Herbert Gute quedaron en Yale. Cuando se ejecutaron las pinturas, en el siglo III, los judíos no eran perseguidos en el Imperio romano.",
+      "source": "Yale University Art Gallery, proyecto digital «Dura-Europos», sección «Synagogue»",
+      "url": "https://duraeuropos.artgallery.yale.edu/Synagogue"
+    },
+    {
+      "claim": "Dura-Europos fue fundada por el imperio seléucida hacia el 300 a. C.; los partos la capturaron en el siglo II a. C. y la convirtieron en fortaleza fronteriza, y en el siglo II d. C. los romanos la conquistaron y establecieron allí una guarnición importante. A mediados del siglo III los sasánidas la sitiaron: los romanos intentaron reforzar las murallas y los atacantes recurrieron a minas de asedio e incluso a quemar nafta y azufre. La ciudad fue conquistada hacia el 256 d. C. y después abandonada. Los excavadores hallaron una sinagoga con escenas bíblicas pintadas, una de las primeras iglesias domésticas cristianas con baptisterio, un mitreo y templos de dioses grecorromanos y palmirenos. Yale conserva más de 12.000 artefactos de la vida cotidiana excavados en el yacimiento.",
+      "source": "Yale University Art Gallery, proyecto digital «Dura-Europos», página principal",
+      "url": "https://duraeuropos.artgallery.yale.edu/"
+    },
+    {
+      "claim": "La sinagoga se data en 244-245 d. C. a partir de una inscripción aramea dedicatoria hallada en tres tejas del techo. Se conservan tres inscripciones: una en arameo, en escritura cuadrada judía, que menciona a los patrocinadores y a los obreros, y dos en griego. En la escena del paso del mar la presencia divina se comunica mediante manos extendidas, sin representación antropomórfica de Dios. La sinagoga fue deliberadamente rellenada de tierra y escombros por los soldados romanos durante las fortificaciones contra los sasánidas en 256, lo que la preservó casi intacta al quedar abandonada la ciudad. La estructura fue desmontada y reensamblada en el Museo Nacional de Damasco.",
+      "source": "Museo Nacional de Damasco, museo virtual de Siria, ficha «The Synagogue of Dura Europos»",
+      "url": "https://virtual-museum-syria.org/damascus/the-synagogue-of-dura-europos/"
+    },
+    {
+      "claim": "La fase constructiva final está fechada por una inscripción aramea en 244 d. C.; una inscripción griega en una teja del techo nombra a Samuel hijo de Yedaya, anciano de los judíos, como fundador en 245. La sinagoga se descubrió en 1932 en Dura-Europos, Siria; Robert du Mesnil du Buisson, subdirector de las excavaciones, la identificó y publicó en 1939 Les peintures de la synagogue de Doura-Europos. Antes de la destrucción persa de 256-257 el edificio, que se apoyaba en la muralla principal, fue requisado y rellenado de arena como medida defensiva, lo que lo preservó casi intacto. Los murales comprenden 58 escenas en total, probablemente cerca del 60 % del número original. Los restos se conservan hoy en el Museo Nacional de Damasco. El descubrimiento disipa las interpretaciones estrechas de la prohibición histórica de imágenes en el judaísmo. En la misma ciudad existió una iglesia de Dura-Europos, que parece haberse inaugurado poco antes de las pinturas conservadas de la sinagoga.",
+      "source": "Wikipedia en inglés, artículo «Dura-Europos synagogue»",
+      "url": "https://en.wikipedia.org/wiki/Dura-Europos_synagogue"
+    },
+    {
+      "claim": "El edificio se construyó hacia 232/233 d. C., según una inscripción sobre el enlucido con esa fecha, y se convirtió de casa particular en espacio de culto cristiano hacia 240/241, lo que lo convierte en la iglesia doméstica cristiana más antigua identificada. Cuando la ciudad cayó ante los persas en 256, los romanos levantaron una rampa desde la muralla que enterró el edificio de la iglesia y permitió la conservación de sus muros hasta que los arqueólogos la excavaron en 1933. Las pinturas se retiraron tras la excavación y se conservan en la Yale University Art Gallery.",
+      "source": "Wikipedia en inglés, artículo «Dura-Europos church»",
+      "url": "https://en.wikipedia.org/wiki/Dura-Europos_church"
+    },
+    {
+      "claim": "La colaboración entre la Academia Francesa de Inscripciones y Bellas Letras y Yale empezó oficialmente el 15 de enero de 1928 y duró diez campañas de excavación, dirigidas sobre el terreno primero por el francés Maurice Pillet (1928-31), después por Clark Hopkins, de Yale (1932-35), y por último por Frank E. Brown, también de Yale (1936-37).",
+      "source": "Yale University Art Gallery, «Digital Archives» y proyecto «Dura-Europos», historia de las excavaciones de 1928-1937",
+      "url": "https://artgallery.yale.edu/research-and-learning/resources/digital-archives"
+    }
+  ],
+  "do_not_use": [
+    "afirmar que el judaísmo antiguo prohibía toda imagen: las pinturas de Dura-Europos lo desmienten; lo que sí se observa es la contención de no representar a Dios con forma humana, que en la escena del paso del mar aparece como dos manos extendidas",
+    "dar 256 como fecha exacta y cerrada de la caída: las fuentes consultadas dicen hacia 256, o 256-257",
+    "decir que las pinturas de la sinagoga están en Yale: están en el Museo Nacional de Damasco; en Yale se conservan las copias de Herbert Gute, las pinturas de la casa-iglesia cristiana y más de doce mil objetos del yacimiento",
+    "llamar a esta la sinagoga más antigua conocida: es la mejor conservada y la de mayor programa pictórico; el edificio empezó como sinagoga doméstica a principios del siglo III y la fase pintada es la reforma de 244-245",
+    "decir que se conserva el ciclo completo: sobreviven 58 escenas, alrededor del 60 % de las originales",
+    "decir que los romanos enterraron la sinagoga para protegerla: la enterraron para levantar un terraplén defensivo, y la conservación fue un efecto no buscado",
+    "atribuir la excavación a una sola institución o persona: fue conjunta de la Universidad de Yale y la Academia de Inscripciones y Bellas Letras de Francia entre 1928 y 1937, con tres directores de campo sucesivos, y la sinagoga la identificó y publicó Robert du Mesnil du Buisson",
+    "dar por probado que la comunidad judía de Dura fue destruida o expulsada: las fuentes consultadas solo constatan que la ciudad quedó abandonada tras la conquista",
+    "presentar a Dura-Europos como una ciudad de un solo pueblo o culto: en el mismo yacimiento aparecieron una sinagoga, una casa-iglesia cristiana, un mitreo y templos grecorromanos y palmirenos"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

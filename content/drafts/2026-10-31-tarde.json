@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-31-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Goethe, el Fausto y el pareado de Anster (1835)",
+    "hook": "«Lo que hoy no se hace, mañana no está hecho, y no hay que dejar pasar un solo día.»\n— Johann Wolfgang von Goethe, Fausto I, Preludio en el teatro, versos 225-226 (1808)",
+    "body": [
+      "Fausto. Primera parte de la tragedia se publicó en 1808. Antes de que empiece la obra hay dos prólogos, y el primero no ocurre en el cielo ni en el gabinete del doctor: ocurre entre bastidores. En el Preludio en el teatro discuten tres personas sobre qué debe darse al público: el Director, el Poeta y el Actor cómico. Cerca del final, el Director corta la discusión con estos dos versos y sigue diciendo que a lo posible hay que agarrarlo enseguida por el copete, con decisión. La edición crítica digital Faustedition los numera 225 y 226.",
+      "En 1835, el poeta irlandés John Anster publicó en inglés esa primera parte. Su versión era muy libre, más paráfrasis que traducción. En el mismo parlamento del Director escribió dos líneas que en el alemán no están: lo que puedas hacer, o soñar que puedes, empiézalo; la audacia tiene genio, poder y magia. En 1951, el montañista escocés W. H. Murray cerró con ese pareado un pasaje de La expedición escocesa al Himalaya y se lo atribuyó a Goethe. De ahí salió al mundo, y hace unos veinte años volvió al alemán traducido del inglés.",
+      "En 1998, la Goethe Society of North America aclaró la procedencia: la prosa es de Murray, el pareado es de Anster, y de Goethe no es ninguno de los dos. Lo interesante es la distancia entre las dos versiones. Anster promete que la audacia tiene magia. El Director de Goethe dice algo más seco y más incómodo: el día que no se usa no se recupera. Y quien lo dice no es un sabio ni un guía, es un empresario de teatro apurando a su poeta para estrenar. La frase no ofrece poderes. Ofrece un calendario."
+    ],
+    "question": "¿Qué esperas que mañana haga por ti?",
+    "quote": {
+      "text": "Lo que hoy no se hace, mañana no está hecho, y no hay que dejar pasar un solo día.",
+      "author": "Johann Wolfgang von Goethe",
+      "work": "Fausto I, «Preludio en el teatro», vv. 225-226 (1808)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Goethe",
+      "#Fausto",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Alemania",
+      "#Teatro",
+      "#Traduccion",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En la escena «Vorspiel auf dem Theater» del Fausto, el verso 225, pronunciado por el Direktor, dice «Was heute nicht geschieht, ist Morgen nicht gethan». Le siguen «Und keinen Tag soll man verpassen» (226) y «Das Mögliche soll der Entschluß / Beherzt sogleich beym Schopfe fassen» (227-228).",
+      "source": "Faustedition, edición crítica digital del Fausto de Goethe (Freies Deutsches Hochstift, Klassik Stiftung Weimar y Universidad de Wurzburgo), texto impreso de la escena «Vorspiel auf dem Theater»",
+      "url": "https://www.faustedition.net/print/faust.2"
+    },
+    {
+      "claim": "Texto de la escena «Vorspiel auf dem Theater» del Fausto de Goethe, con el parlamento del Director donde figuran los versos «Was heute nicht geschieht, ist morgen nicht getan, / Und keinen Tag soll man verpassen, / Das Mögliche soll der Entschluß / Beherzt sogleich beim Schopfe fassen».",
+      "source": "Zeno.org, biblioteca digital alemana, Goethe, Dramen, «Faust. Eine Tragödie», escena «Vorspiel auf dem Theater»",
+      "url": "http://www.zeno.org/Literatur/M/Goethe,+Johann+Wolfgang/Dramen/Faust.+Eine+Trag%C3%B6die/Vorspiel+auf+dem+Theater"
+    },
+    {
+      "claim": "La frase alemana «Was immer du tun kannst oder erträumst zu können, beginne es» no es de Goethe: es una retraducción al alemán, hecha hace unos veinte años, de la versión inglesa muy libre que el poeta irlandés John Anster publicó en 1835 («What you can do, or dream you can, begin it, / Boldness has genius, power, and magic in it»). Los versos auténticos pertenecen al parlamento del Director en el «Vorspiel auf dem Theater» del Fausto, versos 214-242, que incluye «Was heute nicht geschieht, ist morgen nicht getan, / Und keinen Tag soll man verpassen, / Das Mögliche soll der Entschluß / Beherzt sogleich beim Schopfe fassen».",
+      "source": "Zitatforschung, investigación de citas falsas de Gerald Krieghofer, entrada «‘Was immer du tun kannst oder erträumst zu können, beginne es.’ Johann Wolfgang Goethe (angeblich)»",
+      "url": "https://falschzitate.blogspot.com/2018/09/was-immer-du-tun-kannst-oder-ertraumst.html"
+    },
+    {
+      "claim": "El pareado ‘What you can do, or dream you can, begin it, / Boldness has genius, power, and magic in it’ procede de la traducción inglesa muy libre de la primera parte del Fausto publicada por John Anster en 1835, y fue popularizado por el montañista y escritor William Hutchison Murray, que lo citó atribuyéndoselo a Goethe al cerrar un pasaje de su libro The Scottish Himalayan Expedition (1951). La Goethe Society of North America publicó el 5 de marzo de 1998 una exposición de la procedencia de la cita, en la que la investigadora Meredith Lee señalaba la traducción de Anster y observaba que es muy libre, en realidad una paráfrasis. Las citas que usan las palabras de Murray de 1951 no deben atribuirse a Goethe.",
+      "source": "Quote Investigator, entrada «Quote Origin: What You Can Do, or Dream You Can, Begin It; Boldness Has Genius, Power, and Magic in It»",
+      "url": "https://quoteinvestigator.com/2016/02/09/boldness/"
+    },
+    {
+      "claim": "John Anster fue un poeta y profesor irlandés, nacido en 1793 y muerto el 9 de junio de 1867. Publicó su traducción de la primera parte del Fausto en 1835, con el título Faust: A Dramatic Mystery; la segunda parte apareció en 1864.",
+      "source": "Wikipedia en inglés, artículo «John Anster»",
+      "url": "https://en.wikipedia.org/wiki/John_Anster"
+    },
+    {
+      "claim": "Faust. Der Tragödie erster Teil se publicó en 1808; Goethe terminó la segunda parte en 1831 y se publicó póstumamente en 1832. Las formas más antiguas de la obra, el llamado Urfaust, se desarrollaron entre 1772 y 1775, y la primera impresión parcial fue Faust, ein Fragment en 1790: Goethe trabajó en la obra durante más de cinco décadas.",
+      "source": "Wikipedia en inglés, artículo «Goethe's Faust»",
+      "url": "https://en.wikipedia.org/wiki/Goethe%27s_Faust"
+    }
+  ],
+  "do_not_use": [
+    "atribuir a Goethe el pareado «Whatever you can do, or dream you can, begin it. Boldness has genius, power, and magic in it», ni su retraducción alemana «Was immer du tun kannst oder erträumst zu können, beginne es»: el pareado es de John Anster (1835) y la prosa que suele acompañarlo es de W. H. Murray (1951)",
+    "atribuir a Goethe el pasaje que empieza «Until one is committed, there is hesitancy…»: lo escribió W. H. Murray en The Scottish Himalayan Expedition, 1951",
+    "decir que Anster tradujo mal los versos 225-226: su pareado no es una traducción de esos dos versos, sino una paráfrasis libre del parlamento del Director, que abarca los versos 214-242",
+    "fechar con precisión la retraducción al alemán: la investigación de Zitatforschung la sitúa hace unos veinte años, sin dar año exacto",
+    "llamar a la escena «Prólogo en el cielo»: son dos prólogos distintos y consecutivos; el Preludio en el teatro (Vorspiel auf dem Theater) precede al Prólogo en el cielo (Prolog im Himmel)",
+    "confundir la primera parte con el conjunto de la obra: Fausto I se publicó en 1808, y la segunda parte, terminada en 1831, se publicó póstumamente en 1832",
+    "citar el verso en ortografía moderna como si fuera la del original: la edición de 1808 imprime «ist Morgen nicht gethan»",
+    "hacer hablar al Director en nombre de Goethe: es un personaje del preludio y su argumento es comercial, no una máxima del autor",
+    "presentar la traducción de Anster como la primera al inglés: es una de las primeras versiones completas, pero él mismo había publicado fragmentos en Blackwood's Magazine en junio de 1820"
+  ],
+  "cita_slug": "goethe-lo-que-hoy-no-se-hace-manana-no-esta-hecho",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-31-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Li Bai y el agua que no se corta",
+    "hook": "«Saco el cuchillo para cortar el agua, y el agua corre más; alzo la copa para ahogar la pena, y la pena crece más.»\n— Li Bai, «Despedida en la torre de Xie Tiao, en Xuanzhou», hacia 753",
+    "body": [
+      "El poema se escribió hacia 753. Li Bai ofreció un banquete de despedida a Li Yun, amigo suyo al que llamaba tío, que partía a la capital a trabajar como colacionador de la biblioteca imperial. Se despidieron en lo alto de una torre de Xuanzhou levantada en 495 por Xie Tiao, poeta de los Qi del Sur, cuando fue gobernador de aquella comarca. Li Bai lo admiraba: en el poema lo llama el pequeño Xie. Son doce versos de estilo antiguo, casi todos de siete caracteres, salvo los dos primeros, más largos de lo que la forma pide.",
+      "Empieza arriba. El viento largo trae los gansos de otoño desde diez mil li, y hay con qué beber en la torre alta; los dos quieren volar al cielo azul y alcanzar la luna clara. Y entonces cae. Sacar el cuchillo, cortar el agua, y el agua corre más. Alzar la copa contra la pena, y la pena crece. En chino el sonido hace parte del argumento: chōu, el cuchillo que se saca; shuǐ, el agua; chóu, la pena. Son casi la misma sílaba dando vueltas, como el gesto que no sirve y se repite.",
+      "El poema no resuelve nada. Termina diciendo que, ya que la vida en el mundo no sale como uno quiere, mañana se soltará el pelo y se irá en una barca pequeña. Nada de consuelo: un cambio de sitio. El texto llegó por tres caminos distintos, el Wenyuan Yinghua, la edición anotada de los poemas de Li Taibai y el Quan Tangshi imperial, y con variantes entre ellos. La torre no tuvo esa suerte: se reconstruyó varias veces, la destruyó por completo la guerra en 1937 y la que hoy se visita se levantó en 1997."
+    ],
+    "question": "¿Contra qué sigues sacando el cuchillo?",
+    "quote": {
+      "text": "Saco el cuchillo para cortar el agua, y el agua corre más; alzo la copa para ahogar la pena, y la pena crece más.",
+      "author": "Li Bai",
+      "work": "«Despedida en la torre de Xie Tiao, en Xuanzhou», hacia 753",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#LiBai",
+      "#PoesiaChina",
+      "#DinastiaTang"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Poesia",
+      "#China",
+      "#Literatura",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El poema 宣州謝朓樓餞別校書叔雲 de Li Bai contiene los versos 抽刀斷水水更流，舉杯銷愁愁更愁, y termina 人生在世不稱意，明朝散髮弄扁舟. El texto completo transcrito es: 棄我去者，昨日之日不可留。亂我心者，今日之日多煩憂。長風萬里送秋雁，對此可以酣高樓。蓬萊文章建安骨，中間小謝又清發。俱懷逸興壯思飛，欲上青天覽明月。抽刀斷水水更流，舉杯銷愁愁更愁。人生在世不稱意，明朝散髮弄扁舟。 Wikisource declara como fuentes tres colecciones: 分類補註李太白詩, volumen 18, edición 四部叢刊; 文苑英華, volumen 343, edición 四庫全書; y 御定全唐詩, volumen 177, edición 四庫全書.",
+      "source": "Wikisource en chino, 《宣州謝朓樓餞別校書叔雲》, con indicación de las ediciones de procedencia",
+      "url": "https://zh.wikisource.org/wiki/%E5%AE%A3%E5%B7%9E%E8%AC%9D%E6%9C%93%E6%A8%93%E9%A4%9E%E5%88%A5%E6%A0%A1%E6%9B%B8%E5%8F%94%E9%9B%B2"
+    },
+    {
+      "claim": "El poema fue escrito hacia 753 y se recogió después en la colección Chüan Tang Shi. Li Bai ofreció un banquete de despedida en honor de Li Yün, amigo suyo al que trataba de ‘Shu’, tío, que partía hacia la capital para trabajar en la biblioteca imperial. El banquete tuvo lugar en una torre construida por el poeta Hsieh T’iao (464-499), de la dinastía Ch’i del Sur, cuando fue gobernador de Hsüan-chou. El pareado se describe como emocionalmente depresivo: ‘Draw a sword to cut up the water—the water flows on as usual; / Raise a cup to get rid of sorrow—the sorrow continues to be sorrow’, y refleja el vaivén del poeta entre la euforia y la melancolía. Es un poema de estilo antiguo, de doce versos, mayormente de siete caracteres, con los dos primeros alargados en cuatro caracteres, una irregularidad deliberada.",
+      "source": "EBSCO Research Starters, ficha «A Farewell to Li Yun in the Xie Tiao Pavilion by Li Bo»",
+      "url": "https://www.ebsco.com/research-starters/literature-and-writing/farewell-li-yun-xie-tiao-pavilion-li-bo"
+    },
+    {
+      "claim": "En 495, durante los Qi del Sur (479-502), Xie Tiao fue nombrado gobernador de la comandancia de Xuancheng y construyó una torre en el monte Yangling, a la que llamó Gaozhai. Bajo los Tang los habitantes la reconstruyeron como torre Beiwang en memoria de Xie Tiao, y pasó a conocerse comúnmente como torre de Xie Tiao; se hizo célebre a partir de los poemas de Li Bai. Fue reconstruida en distintas dinastías —Tang, Ming y Qing—, quedó completamente destruida en 1937 durante la segunda guerra sino-japonesa y se reconstruyó en 1997, con una superficie de 1.500 metros cuadrados.",
+      "source": "Wikipedia en inglés, artículo «Xie Tiao Tower»",
+      "url": "https://en.wikipedia.org/wiki/Xie_Tiao_Tower"
+    },
+    {
+      "claim": "El verso 人生在世不称意，明朝散发弄扁舟 pertenece al poema 宣州谢朓楼饯别校书叔云, de Li Bai (701-762), poeta de la dinastía Tang. El texto que ofrece esta ficha es: 弃我去者，昨日之日不可留；乱我心者，今日之日多烦忧。长风万里送秋雁，对此可以酣高楼。蓬莱文章建安骨，中间小谢又清发。俱怀逸兴壮思飞，欲上青天览明月。抽刀断水水更流，举杯消愁愁更愁。人生在世不称意，明朝散发弄扁舟。",
+      "source": "Gushiwen (古诗文网), ficha del verso «人生在世不称意，明朝散发弄扁舟»",
+      "url": "https://www.gushiwen.cn/mingju_73.aspx"
+    },
+    {
+      "claim": "El poema se sitúa hacia el otoño del año 12 de la era Tianbao (753). Li Bai llevaba cerca de diez años fuera de Chang’an y recorría la zona de Xuancheng; coincidió allí con Li Yun, colacionador del departamento de la biblioteca imperial, y ambos subieron a la torre construida por el poeta Xie Tiao, de los Qi del Sur, para el banquete de despedida. Los versos 抽刀断水水更流，举杯消愁愁更愁 marcan la caída del ánimo tras el impulso eufórico del poema.",
+      "source": "Xinhua / Sina, serie «学诗计划», entrega sobre 《宣州谢朓楼饯别校书叔云》",
+      "url": "https://news.sina.cn/2017-12-05/detail-ifyphtze4385747.d.html"
+    }
+  ],
+  "do_not_use": [
+    "dar por fijada la lectura de un solo carácter: las ediciones difieren. Wikisource, sobre el 御定全唐詩 y el 文苑英華, trae 銷愁; las versiones corrientes en China traen 消愁. Lo mismo ocurre con 覽明月, que en otras versiones difundidas aparece como 覽日月",
+    "dar por segura la identidad de 叔雲: se le identifica con Li Yun, colacionador de la biblioteca imperial, pero circula una variante del título, 陪侍御叔華登樓歌, que apuntaría a Li Hua; las fuentes consultadas no resuelven el punto",
+    "fechar el poema con exactitud: se sitúa hacia 753, otoño del año 12 de la era Tianbao, sin documento que lo fije",
+    "decir que la torre que hoy se visita es la que construyó Xie Tiao: aquella, de 495, se llamó Gaozhai; la torre se rehízo bajo los Tang, los Ming y los Qing, quedó destruida por completo en 1937 y la actual es de 1997",
+    "presentar «soltarse el pelo» como un simple gesto de desenfado: las anotaciones al uso lo leen como dejar el tocado y, con él, el cargo de funcionario, pero eso es una lectura del comentario, no algo que el poema diga",
+    "llamar al poema un shi regulado: es de estilo antiguo (gu ti), doce versos, mayormente de siete caracteres, con los dos primeros alargados a propósito",
+    "traducir 刀 por espada: es una hoja de un solo filo, más cerca del cuchillo o del sable que de la espada de doble filo, que en chino es 劍",
+    "atribuir el verso a un proverbio chino anónimo: es de Li Bai y consta en las tres ediciones citadas",
+    "dar por hecho que Li Bai se retiró de verdad después de escribirlo: el retiro es lo que el poema anuncia, no un hecho biográfico documentado en las fuentes consultadas",
+    "traducir 萬里 por una distancia literal: es una expresión de inmensidad, no una medida"
+  ],
+  "cita_slug": "li-bai-el-agua-que-no-se-corta",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

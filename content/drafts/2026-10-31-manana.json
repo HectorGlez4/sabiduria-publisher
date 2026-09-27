@@ -1,0 +1,103 @@
+{
+  "id": "2026-10-31-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "el Kaitai Shinsho y la firma que Maeno Ryōtaku rehusó",
+    "hook": "El 4 de marzo de 1771, cuatro médicos japoneses llevaron un atlas anatómico holandés a una ejecución para comprobar si decía la verdad. Ninguno de los cuatro leía holandés con soltura.",
+    "body": [
+      "En el campo de ejecuciones de Kozukappara, a las afueras de Edo, Sugita Genpaku, Maeno Ryōtaku y Nakagawa Jun'an asistieron a la disección del cuerpo de una mujer ajusticiada. Llevaban un ejemplar de las Ontleedkundige Tafelen, la edición neerlandesa de 1734 de las Anatomische Tabellen que Johann Adam Kulmus había publicado en alemán en 1732. Órgano por órgano, el atlas coincidía con lo que tenían delante. Los textos chinos que habían estudiado, no. Al día siguiente empezaron a traducirlo. Tardaron tres años. Maeno manejaba unas seiscientas palabras de neerlandés; Sugita y Nakagawa no lo leían en absoluto.",
+      "El Kaitai Shinsho salió en 1774, impreso en Edo por Suharaya Ichibee: cuatro volúmenes de texto y uno de láminas, que Odano Naotake, pintor del dominio de Akita, dibujó en medio año. El nombre de Maeno Ryōtaku no aparece en el libro. Era quien mejor leía la lengua y quien dirigió el trabajo, y pidió que se le omitiera. Un monumento erigido en 1804 dice que había jurado no estudiar para ganar renombre; también se ha dicho que consideraba la traducción demasiado imperfecta para firmarla. Su nombre solo consta en la dedicatoria que escribió el intérprete Yoshio Kōsaku.",
+      "La escena más repetida de aquel trabajo cabe en una palabra. En sus memorias, el Rangaku kotohajime, que redactó en 1815 a los ochenta y tres años, Sugita cuenta que pasaron un día entero atascados en un término del capítulo de la nariz hasta deducir que significaba montículo. Esas memorias no se imprimieron hasta 1869. En 1982, cuando Sakai Shizu tradujo el original neerlandés, la palabra no estaba donde Sugita la recordaba. El libro, en cambio, sigue ahí: fijó en japonés términos médicos que aún se usan, y lo conservan bibliotecas de Keio a Cornell."
+    ],
+    "question": "¿Cuánto de lo que recuerdas con más nitidez podrías comprobar hoy?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El traductor que se borró",
+    "subtitle": "Edo, 1771-1774",
+    "body": "En 1771 cuatro médicos japoneses compararon un atlas anatómico neerlandés con un cuerpo real y vieron que coincidía. Tardaron tres años en traducirlo. El que mejor leía la lengua, Maeno Ryōtaku, pidió que su nombre no figurara en el libro."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#KaitaiShinsho",
+      "#Rangaku",
+      "#HistoriaDeLaMedicina"
+    ],
+    "extended": [
+      "#Japon",
+      "#Edo",
+      "#Anatomia",
+      "#Traduccion",
+      "#Ciencia",
+      "#HistoriaDeLaCiencia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Kaitai shinsho se publicó en 1774. Sus traductores fueron Sugita Genpaku, Maeno Ryotaku, Nakagawa Jun'an y Katsuragawa Hoshu. Es la traducción de las Ontleedkundige tafelen (1734), versión neerlandesa de las Anatomische Tabellen (1732) de J. A. Kulmus. El proceso completo duró de 1771 a 1774 y la dificultad de la traducción se describe en el Rangaku kotohajime de Genpaku. Las ilustraciones las rehízo Odano Naotake a partir de los originales occidentales.",
+      "source": "Biblioteca Nacional de la Dieta de Japón (NDL), exposición digital «Japan-Netherlands Exchange in the Edo Period», ficha del Kaitai shinsho",
+      "url": "https://www.ndl.go.jp/nichiran/e/data/R/042/042-001r.html"
+    },
+    {
+      "claim": "La traducción y publicación del Kaitai shinsho en 1774, a cargo de Maeno Ryotaku, Sugita Genpaku, Nakagawa Jun'an y otros, fue una innovación mayor del auge de los estudios holandeses. Maeno Ryotaku desempeñó el papel principal porque su dominio del neerlandés era el mejor, y rehusó que su nombre se incluyera como traductor cuando la obra se publicó. Sugita Genpaku completó en 1815 el Rangaku kotohajime, donde describe los años iniciales de los estudios holandeses, incluidas las dificultades de traducir y publicar el Kaitai shinsho.",
+      "source": "Biblioteca Nacional de la Dieta de Japón (NDL), «Japan-Netherlands Exchange in the Edo Period», parte 2, sección «Activities of Dutch Studies»",
+      "url": "https://www.ndl.go.jp/nichiran/e/s2/s2_2.html"
+    },
+    {
+      "claim": "El 4 de marzo de 1771 tuvo lugar en el campo de ejecuciones de Kozukappara la disección que impulsó la traducción; los trabajos empezaron el 5 de marzo de 1771 y la publicación es de 1774. Al principio Sugita y Nakagawa no sabían leer neerlandés, y aun con Maeno, que sí, el vocabulario del grupo era insuficiente. El nombre de Maeno Ryotaku figura solo en la dedicatoria del intérprete Yoshio Kosaku, no como autor principal; se ofrecen dos explicaciones: que había jurado no buscar fama, o que consideraba la obra imperfecta. Las figuras las hizo Odano Naotake, samurái y pintor de Kakunodate, en unos seis meses. La obra consta de cuatro volúmenes de texto más uno de ilustraciones y la editó Suharaya Ichibee en 1774, tercer año de la era An'ei.",
+      "source": "Wikipedia en inglés, artículo «Kaitai Shinsho»",
+      "url": "https://en.wikipedia.org/wiki/Kaitai_Shinsho"
+    },
+    {
+      "claim": "Sugita Genpaku nació el 20 de octubre de 1733 y murió el 1 de junio de 1817. El 4 de marzo de 1771 presenció con sus colegas la disección de una mujer ejecutada y les impresionó la exactitud anatómica del texto neerlandés al compararlo con lo que observaban. Maeno Ryotaku disponía de unas 600 palabras de vocabulario neerlandés para llevar adelante la traducción. El Rangaku kotohajime, sus memorias sobre los comienzos de los estudios holandeses, se imprimió por primera vez en 1869.",
+      "source": "Wikipedia en inglés, artículo «Sugita Genpaku»",
+      "url": "https://en.wikipedia.org/wiki/Sugita_Genpaku"
+    },
+    {
+      "claim": "El 解体新書 consta de 本文4巻、付図1巻 (cuatro volúmenes de texto y uno de figuras), se publicó en 安永3年 (1774) y lo editó 須原屋市兵衛. Las ilustraciones son de 小田野直武, pintor del dominio de Akita, hechas 半年という短期間に (en el plazo breve de medio año). 前野良沢 es la figura central del trabajo de traducción, pero su nombre no aparece en el texto: según una inscripción monumental de 1804, Ryotaku declinó la autoría por haber jurado no estudiar en busca de reconocimiento personal.",
+      "source": "Wikipedia en japonés, artículo «解体新書»",
+      "url": "https://ja.wikipedia.org/wiki/%E8%A7%A3%E4%BD%93%E6%96%B0%E6%9B%B8"
+    },
+    {
+      "claim": "Sugita Genpaku escribió el 蘭学事始 en 1815 (文化12), a los 83 años, completando lo que había empezado el año anterior; murió dos años después, a los 85. La obra se imprimió por primera vez en 1869 (明治2) por iniciativa de Fukuzawa Yukichi y otros, después de que Kanda Kohei encontrara una copia en un puesto de libros usados de Yushima. Sobre la célebre palabra フルヘッヘンド, que según el relato aparecía en el pasaje de la nariz: 1982年に酒井シヅが『ターヘルアナトミア』を原典訳を行うも、この単語はその中にないことが判明した — al traducir Sakai Shizu el original en 1982 se comprobó que esa palabra no estaba en él. El estudioso Katagiri Ikuo propuso después que el término correspondiente sería verhevene, ‘elevado’ o ‘saliente’.",
+      "source": "Wikipedia en japonés, artículo «蘭学事始»",
+      "url": "https://ja.wikipedia.org/wiki/%E8%98%AD%E5%AD%A6%E4%BA%8B%E5%A7%8B"
+    },
+    {
+      "claim": "La palabra verheffen no se encuentra en la sección de la nariz de las Ontleedkundige Tafelen, el original del Kaitai Shinsho, sino en el capítulo del pecho, donde se explica la forma de la mama. Se han propuesto varias explicaciones: que Sugita inventara la anécdota para hacer más comprensible la descripción, que se emplearan otros libros neerlandeses además de las Ontleedkundige Tafelen, o que Sugita confundiera el recuerdo con el pasaje del pecho.",
+      "source": "Japanese Wiki Corpus, artículo «Rangaku Kotohajime (The Beginning of Dutch Studies)», traducción del artículo japonés de referencia",
+      "url": "https://www.japanesewiki.com/literature/Rangaku%20Kotohajime%20(The%20Beginning%20of%20Dutch%20Studies).html"
+    },
+    {
+      "claim": "El Kaitai shinsho, traducido por Sugita Genpaku y otros, fue publicado en Edo por Suharaya Ichibee en 1774 y se conserva en las colecciones de Asia de la Biblioteca de la Universidad de Cornell.",
+      "source": "Cornell University Library, exposición en línea «Treasures of the Asia Collections», ficha «Kaitai shinsho [New Book of Anatomy]»",
+      "url": "https://exhibits.library.cornell.edu/asiaTreasures/catalog/161-10744"
+    },
+    {
+      "claim": "La Biblioteca Nacional de Medicina de Estados Unidos conserva en sus colecciones digitales el Kaitai shinsho, edición de 1774 publicada en Edo por Suharaya Ichibee.",
+      "source": "National Library of Medicine (Estados Unidos), Digital Collections, registro «Kaitai shinsho»",
+      "url": "https://resource.nlm.nih.gov/101147255"
+    }
+  ],
+  "do_not_use": [
+    "contar la anécdota de フルヘッヘンド (verheffen) como hecho comprobado: Sugita la escribió en 1815, a los ochenta y tres años, y en 1982 Sakai Shizu tradujo el original neerlandés y la palabra no aparece en el capítulo de la nariz; se ha señalado que sí figura en el del pecho, y Katagiri Ikuo propone que el término era verhevene",
+    "decir que el Kaitai Shinsho fue la primera obra occidental traducida al japonés, sin más: fue la primera traducción completa de un libro occidental de anatomía y la primera obra de medicina o ciencia occidental publicada en japonés",
+    "llamar holandés al original: el original es alemán, las Anatomische Tabellen de Johann Adam Kulmus (1732); lo que tradujeron fue la versión neerlandesa, las Ontleedkundige Tafelen (1734)",
+    "dar por segura una única razón de la ausencia de Maeno Ryōtaku: circulan dos, el juramento de no buscar renombre que recoge la inscripción de 1804 y su insatisfacción con la calidad de la traducción",
+    "atribuir la traducción a Sugita Genpaku en solitario: el trabajo fue colectivo, la dirección lingüística fue de Maeno Ryōtaku y participaron también Nakagawa Jun'an y Katsuragawa Hoshū",
+    "dar una cifra cerrada de borradores: circula la de once manuscritos, pero no aparece en ninguna de las fichas institucionales consultadas",
+    "decir que el Rangaku kotohajime se publicó en vida de Sugita: lo escribió en 1815 y murió en 1817; la primera impresión es de 1869",
+    "tomar «Tafel Anatomia» (ターヘル・アナトミア) por el título del original: es la forma japonesa con que Sugita se refería al libro, no el título neerlandés, que es Ontleedkundige Tafelen",
+    "decir que la mujer diseccionada fue identificada: las fuentes consultadas la describen como una criminal ejecutada, sin nombre"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
