@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-30-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el kilogramo y el cilindro de Sèvres",
+    "hook": "Durante 130 años el kilogramo fue un cilindro de metal guardado en una caja fuerte a las afueras de París. Pesaba exactamente un kilo por definición, incluso mientras adelgazaba.",
+    "body": [
+      "El 22 de junio de 1799 Francia depositó en sus Archivos un cilindro de platino y lo llamó kilogramo de los Archivos. Noventa años después, en 1889, la primera Conferencia General de Pesas y Medidas sancionó a su sucesor: un cilindro de platino con diez por ciento de iridio, de unos 39 milímetros de alto y otros 39 de diámetro, y declaró que ese prototipo se consideraría en adelante la unidad de masa. Desde entonces vive en la Oficina Internacional de Pesas y Medidas, en Sèvres, con el acceso bajo supervisión estricta del comité internacional.",
+      "El problema de una unidad hecha de materia es que no hay con qué compararla. La tercera verificación periódica de los prototipos nacionales, hecha entre 1988 y 1992, encontró que las copias repartidas por el mundo se estaban separando unas de otras: la mediana de las diferencias con los prototipos originales quedó cerca de 25 microgramos. Se suele resumir diciendo que el cilindro perdió unos 50 microgramos en un siglo. Lo único medible, en rigor, era la distancia entre él y sus copias. Quién se había movido no había forma de averiguarlo, porque el patrón era exacto por definición.",
+      "El 20 de mayo de 2019 el kilogramo dejó de ser un objeto. Ahora se define fijando el valor de la constante de Planck en 6,62607015 por diez elevado a menos treinta y cuatro julios por segundo, y se realiza con una balanza de Kibble, que enfrenta el peso contra una fuerza electromagnética. El arreglo no fue solo teórico: la propia oficina de Sèvres tuvo que corregir después las calibraciones que había emitido, unos 4 microgramos en las de 2003 y unos 35 en las de 2013. Medir con una cosa obliga a cuidar la cosa, y a no saber nunca cuánto ha cambiado."
+    ],
+    "question": "¿Cuántas cosas damos por exactas solo porque no tenemos con qué compararlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El kilogramo que adelgazaba",
+    "subtitle": "Sèvres, de 1889 a 2019",
+    "body": "Durante 130 años el kilogramo fue un cilindro de platino e iridio guardado en Sèvres. Pesaba un kilo exacto por definición, así que su desgaste solo podía medirse como distancia respecto a sus copias. Desde 2019 lo define la constante de Planck."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kilogramo",
+      "#Metrologia",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Medidas",
+      "#SistemaInternacional",
+      "#Fisica",
+      "#Curiosidades",
+      "#Sevres",
+      "#ConstanteDePlanck"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En 1889 la 1.ª Conferencia General de Pesas y Medidas sancionó el prototipo internacional del kilogramo y declaró que «este prototipo se considerará en lo sucesivo la unidad de masa». En 1901 la 3.ª CGPM aclaró que el kilogramo es la unidad de masa y es igual a la masa del prototipo internacional. Las verificaciones posteriores mostraron inestabilidad: ya en 1946 las masas de los prototipos nacionales divergían del patrón internacional, y la tercera verificación confirmó esa deriva con una diferencia mediana cercana a 25 microgramos entre los prototipos originales. La 26.ª CGPM adoptó la Resolución 1 (2018) para redefinir la unidad a partir de la constante de Planck.",
+      "source": "Oficina Internacional de Pesas y Medidas (BIPM), «Historia del SI — kilogram»",
+      "url": "https://www.bipm.org/en/history-si/kilogram"
+    },
+    {
+      "claim": "El prototipo internacional del kilogramo es un cilindro de unos 39 mm de diámetro y 39 mm de altura, hecho de una aleación de 90 % de platino y 10 % de iridio. Se conserva en el BIPM desde 1889, cuando fue sancionado por la 1.ª CGPM, y el acceso a él y a sus copias oficiales está bajo la supervisión estricta del CIPM. El 20 de mayo de 2019 dejó de ser el patrón que define la unidad y pasó a ser un artefacto de referencia.",
+      "source": "Oficina Internacional de Pesas y Medidas (BIPM), ficha «International Prototype of the Kilogram (IPK)»",
+      "url": "https://www.bipm.org/en/mass-metrology/ipk"
+    },
+    {
+      "claim": "El 22 de junio de 1799 Francia adoptó un nuevo patrón de masa forjado en platino, llamado kilogramo de los Archivos por el edificio donde se guardaba. La Convención del Metro de 1875 dio lugar a un artefacto nuevo, hecho de una aleación de platino (90 %) e iridio (10 %) y llamado Prototipo Internacional del Kilogramo, descrito como un cilindro muy pulido del tamaño de una pelota de golf y guardado en una cámara acorazada con triple cerradura a las afueras de París. Las copias se enviaron a los países firmantes; en 1890 Estados Unidos recibió las copias K4 y K20.",
+      "source": "National Institute of Standards and Technology (NIST), «Kilogram: The Past» y «Kilogram: Introduction»",
+      "url": "https://www.nist.gov/si-redefinition/kilogram-past"
+    },
+    {
+      "claim": "El SI se revisó el 20 de mayo de 2019 y el kilogramo quedó definido fijando el valor numérico de la constante de Planck h en 6,626 070 15 × 10⁻³⁴ julios por segundo. La realización práctica usa la balanza de Kibble, desarrollada en el NPL por Bryan Kibble, que equilibra la fuerza gravitatoria con una fuerza electromagnética. El valor del prototipo internacional pudo haber cambiado desde su fabricación: la contaminación, la limpieza o el simple paso del tiempo pueden haber aumentado o disminuido su masa.",
+      "source": "National Physical Laboratory (NPL, Reino Unido), página «SI units — kilogram»",
+      "url": "https://www.npl.co.uk/si-units/kilogram"
+    },
+    {
+      "claim": "El BIPM constató una disminución significativa de la masa de sus patrones de trabajo desde la verificación de 1988-1992, lo que introdujo desviaciones sistemáticas en la diseminación de la unidad de masa. Las correcciones aplicadas dependen de la fecha: aproximadamente −4 microgramos para las calibraciones hechas en 2003 y alrededor de −35 microgramos para las de 2013.",
+      "source": "Physikalisch-Technische Bundesanstalt (PTB, Alemania), nota sobre la corrección de los valores de medida de los prototipos nacionales del kilogramo por el BIPM",
+      "url": "https://www.ptb.de/cms/en/ptb/fachabteilungen/abt1/fb-11/ag-111/information-on-the-correction-of-measurement-values-of-national-prototypes-of-the-kilogram-by-the-international-bureau-of-weights-and-measures-bipm-and-their-impacts-on-the-dissemination-of-the-unit-of-mass.html"
+    },
+    {
+      "claim": "La tercera verificación periódica de los prototipos nacionales del kilogramo, realizada entre 1988 y 1992, se publicó como informe internacional de G. Girard en la revista Metrologia, volumen 31, número 4 (1994), páginas 317-336.",
+      "source": "Metrologia 31 (1994) 317, G. Girard, «The Third Periodic Verification of National Prototypes of the Kilogram (1988-1992)», IOPscience",
+      "url": "https://iopscience.iop.org/article/10.1088/0026-1394/31/4/007"
+    }
+  ],
+  "do_not_use": [
+    "afirmar sin matiz que el prototipo internacional «perdió 50 microgramos»: era la unidad por definición, así que ninguna medición podía decir que él cambiara; lo medible era la divergencia entre el prototipo y sus copias, y el NPL admite que la contaminación, la limpieza o el tiempo pudieron aumentar o disminuir su masa",
+    "dar por cierta una fecha de fabricación del cilindro: las fuentes consultadas la sitúan en 1878 o en 1879 según cuál se lea, y lo que sí está documentado es la sanción de 1889 por la 1.ª CGPM",
+    "fechar la redefinición en 2018 a secas: la 26.ª CGPM aprobó la Resolución 1 en noviembre de 2018, pero la nueva definición entró en vigor el 20 de mayo de 2019",
+    "llamar «Le Grand K» al prototipo como si fuera su nombre oficial: es un apodo de prensa, no la denominación del BIPM, que lo llama prototipo internacional del kilogramo",
+    "decir que la balanza de Kibble «pesa» la constante de Planck: lo que hace es equilibrar una fuerza mecánica contra una electromagnética para relacionar la masa con constantes fijadas",
+    "situar el prototipo en el centro de París o en un museo abierto al público: está en la sede del BIPM, en Sèvres, a las afueras, y el acceso lo controla el CIPM",
+    "atribuir la deriva a una única causa, sea el desgaste por manipulación, la limpieza o la absorción de mercurio: son hipótesis que circulan, y ninguna de las fuentes institucionales consultadas la da por probada"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

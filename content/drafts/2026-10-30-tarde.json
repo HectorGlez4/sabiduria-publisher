@@ -1,0 +1,91 @@
+{
+  "id": "2026-10-30-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ki no Tsurayuki y el prefacio en kana del Kokinshū",
+    "hook": "«La poesía japonesa tiene el corazón humano por semilla, y de ahí brotan las diez mil hojas de las palabras.»\n— Ki no Tsurayuki, prefacio en kana del Kokin Wakashū, hacia 905",
+    "body": [
+      "El emperador Daigo mandó reunir la antología. El Kokin Wakashū, colección de poemas japoneses antiguos y modernos, se presentó en la corte el día 18 del cuarto mes del año quinto de Engi, 905. Son unos mil ciento once poemas repartidos en veinte libros, elegidos por cuatro poetas: Ki no Tomonori, que murió antes de que se terminara; Ōshikōchi no Mitsune; Mibu no Tadamine; y Ki no Tsurayuki, que dirigió el trabajo. El libro lleva dos prólogos. Uno está en chino y se atribuye a Ki no Yoshimochi. El otro está en japonés, escrito en kana, y es de Tsurayuki.",
+      "Ese detalle era el atrevimiento. En la corte Heian la prosa seria se escribía en chino, la lengua de la administración y de la erudición, y el kana quedaba para lo doméstico. Tsurayuki usó el kana para discutir qué es la poesía, y con eso abrió una crítica literaria japonesa separada de la poética china. Su primera frase no define nada: planta una semilla. El corazón humano es el grano, y lo que brota son hojas de palabras. En japonés antiguo «hojas de palabras», koto no ha, es literalmente la palabra que significa palabras. El poema no se construye. Crece.",
+      "Unos renglones después, el prefacio dice que al oír al uguisu cantar entre las flores y a la rana que vive en el agua se entiende que ningún ser vivo deja de cantar. El Kokinshū quedó como el primero de los veintiún repertorios imperiales y fijó la forma del poema japonés hasta finales del siglo XIX. Tsurayuki, nacido en 872 y muerto en 945, volvió al kana en el Diario de Tosa, hacia 935, donde narra un viaje de cincuenta y cinco días por boca de una mujer. Lo que abre el libro no es una definición de la poesía: es una descripción de dónde empieza."
+    ],
+    "question": "¿Qué sentiste primero, antes de encontrar cómo decirlo?",
+    "quote": {
+      "text": "La poesía japonesa tiene el corazón humano por semilla, y de ahí brotan las diez mil hojas de las palabras.",
+      "author": "Ki no Tsurayuki",
+      "work": "Prefacio en kana del Kokin Wakashū, hacia 905",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#KiNoTsurayuki",
+      "#Kokinshu",
+      "#PoesiaJaponesa"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Japon",
+      "#Literatura",
+      "#Waka",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto del prefacio en kana empieza así: «やまとうたは、人のこゝろをたねとして、よろづのことのはとぞなれりける。よの中にあるひとことわざしげきものなれば、心におもふ事を、みるものきくものにつけていひいだせるなり。はなになくうぐひす、みづにすむかはづのこゑをきけば、いきとしいけるものいづれかうたをよまざりける。» Es decir: la poesía de Yamato tiene el corazón de las personas por semilla y se convierte en las diez mil hojas de las palabras; y quien oye al uguisu cantar entre las flores y a la rana que vive en el agua entiende que ningún ser vivo deja de cantar.",
+      "source": "Wikisource en japonés, «古今和歌集仮名序», transcripción cuya base declarada es 『日本歌学大系第一巻』, 7.ª edición, 1991",
+      "url": "https://ja.wikisource.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86%E4%BB%AE%E5%90%8D%E5%BA%8F"
+    },
+    {
+      "claim": "El Kokin Wakashū fue concebido por el emperador Uda y publicado por orden de su hijo, el emperador Daigo, hacia 905; su forma final se fecha alrededor de 920. Una edición estándar contiene 1111 poemas en veinte secciones temáticas. Lo compilaron cuatro poetas encabezados por Ki no Tsurayuki, con Ki no Tomonori —que murió antes de que se completara—, Ōshikōchi no Mitsune y Mibu no Tadamine. Lleva un prefacio en japonés de Tsurayuki y otro en chino clásico de Ki no Yoshimochi. El prefacio en kana marca el comienzo de la crítica japonesa como algo distinto de la poética china, mucho más extendida entonces. Laurel Rasplica Rodd publicó una traducción completa al inglés premiada en 1982.",
+      "source": "Wikipedia en inglés, artículo «Kokin Wakashū»",
+      "url": "https://en.wikipedia.org/wiki/Kokin_Wakash%C5%AB"
+    },
+    {
+      "claim": "La presentación del Kokin Wakashū se registra el día 18 del cuarto mes del año 5 de Engi (905), por decreto imperial del emperador Daigo. La obra reúne unos mil poemas en veinte volúmenes; el manuscrito de Teika suma 1111 contando las anotaciones marginales. Los cuatro compiladores son 紀友則, 紀貫之, 凡河内躬恒 y 壬生忠岑.",
+      "source": "Wikipedia en japonés, artículo «古今和歌集»",
+      "url": "https://ja.wikipedia.org/wiki/%E5%8F%A4%E4%BB%8A%E5%92%8C%E6%AD%8C%E9%9B%86"
+    },
+    {
+      "claim": "Ki no Tsurayuki vivió de 872 al 30 de junio de 945. En 905, por orden del emperador Daigo, fue uno de los cuatro poetas elegidos para compilar el Kokin Wakashū; actuó como editor jefe y escribió el prefacio japonés, que es el primer ensayo crítico sobre el waka. Fue vicegobernador de la provincia de Kaga (917-923) y gobernador de Tosa (930-935), y alcanzó el quinto rango menor, grado superior, en 943. Después de 935 escribió en kana el Diario de Tosa, relato de un viaje de regreso a la capital de cincuenta y cinco días, redactado desde la perspectiva de una mujer, lo que ha dado lugar a debate entre los estudiosos sobre género y estatus social. Usar kana para la prosa era notable porque la literatura formal de la corte Heian estaba dominada por el chino.",
+      "source": "Wikipedia en inglés, artículo «Ki no Tsurayuki»",
+      "url": "https://en.wikipedia.org/wiki/Ki_no_Tsurayuki"
+    },
+    {
+      "claim": "El Kokin waka shu se compiló hacia 905 por orden del emperador Daigo, con Ki no Tsurayuki, Ki no Tomonori, Ōshikōchi no Mitsune y Mibu no Tadamine; reúne unos 1100 poemas en veinte volúmenes e incluye dos prefacios, uno en japonés escrito por Ki no Tsurayuki y otro en chino que se dice escrito por Ki no Yoshimochi. Ambos tratan la esencia de la poesía japonesa, su historia y el proceso de compilación.",
+      "source": "Japan Search (Biblioteca Nacional de la Dieta de Japón), ficha «Kokin waka shu (Collection of Ancient and Modern Japanese Poetry)»",
+      "url": "https://jpsearch.go.jp/en/gallery/ndl-RrwnPGRpxWq"
+    },
+    {
+      "claim": "El prefacio en kana (仮名序) del Kokin Wakashū se atribuye a 紀貫之 (Ki no Tsurayuki) y la antología se completó a principios del siglo X; el prefacio se describe como una elocuente apología de la tradición poética japonesa.",
+      "source": "Center for Japanese Studies, Universidad Estatal de Ohio, recurso digital «古今和歌集 Kanajo»",
+      "url": "https://cjp.asc.ohio-state.edu/books/kanajo/about"
+    }
+  ],
+  "do_not_use": [
+    "atribuir esta versión española a un traductor concreto: es una traducción literal del japonés documentado en las fuentes, no la versión publicada de Laurel Rasplica Rodd ni de ningún otro traductor, cuya redacción exacta no se ha podido comprobar",
+    "fechar la redacción del prefacio en 905 sin matiz: la antología se presentó en la corte en 905, la forma final del Kokinshū se suele fechar hacia 920, y el propio prefacio en kana se sitúa entre el segundo mes de Engi 6 (906) y el primer mes de 907, de modo que pudo escribirse después del libro que encabeza",
+    "dar 1111 poemas como cifra cerrada: es el recuento de una edición estándar y del manuscrito de Teika contando anotaciones marginales; otras descripciones hablan de unos mil poemas en veinte volúmenes",
+    "traducir うぐひす (uguisu) por ruiseñor sin matiz: es el ruiseñor japonés, Horornis diphone, un ave distinta del ruiseñor europeo",
+    "dar por segura la autoría del prefacio en chino: las fichas consultadas dicen que se atribuye a Ki no Yoshimochi, no que esté probado",
+    "afirmar que el kana era escritura reservada a las mujeres y que por eso Tsurayuki finge ser una en el Diario de Tosa: la elección de la voz femenina existe y está documentada, pero su motivo es materia de debate académico",
+    "presentar a Tsurayuki como un poeta ajeno a la administración: fue vicegobernador de Kaga y gobernador de Tosa, y su carrera cortesana está fechada",
+    "confundir el Kokinshū con el Man'yōshū, anterior y compilado sin encargo imperial de este tipo, ni llamar al Kokinshū la primera antología de poesía japonesa: es la primera de las veintiuna reunidas por orden imperial"
+  ],
+  "cita_slug": "ki-no-tsurayuki-el-corazon-humano-por-semilla",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

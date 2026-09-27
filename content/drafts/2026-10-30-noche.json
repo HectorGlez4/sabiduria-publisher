@@ -1,0 +1,87 @@
+{
+  "id": "2026-10-30-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Sutton Hoo y la nave que solo dejó su hueco",
+    "hook": "La tumba mejor conservada de la Europa altomedieval no contenía la nave ni el cuerpo. Solo el hueco que habían dejado en la arena.",
+    "body": [
+      "Edith Pretty, dueña de una finca en Suffolk, quiso saber qué había bajo los montículos de su terreno y en 1938 contrató a Basil Brown, autodidacta que había dejado la escuela a los doce años y se formó en clases nocturnas y cursos por correspondencia. Esa temporada cobraba treinta chelines a la semana. El 14 de junio de 1939 llegó a la cámara funeraria, en el centro de una nave de 27 metros de largo y 4,4 de ancho, con nueve tablas por banda y apoyos para cuarenta remeros. De la madera no quedaba nada: la habían sustituido manchas en la arena, con los remaches de hierro aún en su sitio.",
+      "Cuerpo tampoco había. Un análisis de suelo de 1967 encontró fosfatos, lo que sostiene que hubo un cadáver y que la tierra ácida lo disolvió. Lo que sí estaba era una bolsa con treinta y siete monedas de oro francas, cada una de una ceca distinta, tres discos sin acuñar y dos lingotes pequeños: por ellas el enterramiento se fecha entre 610 y 635. Y una bandeja de plata fabricada en el Imperio de Oriente hacia el año 500, con los sellos de control del emperador Anastasio. El casco salió en cientos de fragmentos oxidados y se armó dos veces: en 1945, con errores, y de nuevo en 1971.",
+      "El hallazgo cambió lo que se creía de la Inglaterra del siglo VII. Los herrajes del escudo tienen paralelos directos en Vendel, en Suecia; la plata venía de Bizancio; y el ajuar permitió ilustrar, objeto por objeto, el mundo que describe el poema Beowulf. El 14 de agosto de 1939 un jurado dictaminó que aquello no se había enterrado con intención de recuperarlo, así que pertenecía a la propietaria del terreno, y Edith Pretty lo donó entero al Estado. Brown siguió en la obra por contrato, pero quedó fuera de la excavación de la cámara que él había encontrado."
+    ],
+    "question": "¿Cuánto se puede reconstruir de algo que ya no está?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La nave que era un hueco",
+    "subtitle": "Suffolk, 14 de junio de 1939",
+    "body": "Basil Brown encontró una nave de 27 metros de la que no quedaba madera: solo manchas en la arena y los remaches de hierro en su sitio. Dentro, plata bizantina y treinta y siete monedas francas. Del cuerpo enterrado solo quedaban fosfatos en la tierra."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SuttonHoo",
+      "#Arqueologia",
+      "#Anglosajones"
+    ],
+    "extended": [
+      "#Historia",
+      "#Suffolk",
+      "#Beowulf",
+      "#EdadMedia",
+      "#Inglaterra",
+      "#Civilizaciones",
+      "#Museos"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Basil Brown empezó a trabajar en el Montículo 1 en mayo de 1939 con los peones de la finca de Pretty; horas después de encontrar el primer remache de hierro aparecieron otros aún en posición. Charles Phillips, de la Universidad de Cambridge, se hizo cargo poco después. La nave medía 27 metros de largo y 4,4 de manga, con construcción a tingladillo de nueve tablas por banda unidas con remaches, y los apoyos de remo indicaban cuarenta remeros. Prácticamente no sobrevivió madera original, pero las manchas en la arena habían reemplazado a la madera y casi todos los remaches seguían en su lugar original. La bolsa contenía treinta y siete chelines de oro o tremises, cada uno de una ceca franca distinta, tres discos en blanco y dos lingotes pequeños, y el análisis fijó la fecha del enterramiento entre 610 y 635, a favor de Rædwald, muerto hacia 624. No se encontró cuerpo, pero los análisis de suelo de 1967 hallaron rastros de fosfato que apoyan la idea de que un cadáver desapareció en el suelo ácido. La gran bandeja de plata se hizo en el Imperio de Oriente hacia el 500 y lleva los sellos de control del emperador Anastasio I (491-518); los herrajes del escudo están directamente vinculados por troquel a ejemplares del cementerio antiguo de Vendel, en Suecia. La investigación judicial de tesoro oculto, celebrada ese otoño en el salón del pueblo de Sutton, resolvió que al haberse enterrado sin intención de recuperarlo, el hallazgo era propiedad de Pretty como dueña del terreno; ella decidió legarlo como regalo a la nación. El enterramiento en barco ha motivado comparaciones con el mundo del poema en inglés antiguo Beowulf.",
+      "source": "Wikipedia en inglés, artículo «Sutton Hoo»",
+      "url": "https://en.wikipedia.org/wiki/Sutton_Hoo"
+    },
+    {
+      "claim": "Edith Pretty contrató al arqueólogo local Basil Brown para las primeras excavaciones en 1938. Brown llegó a la cámara funeraria, situada en el centro de la nave, el 14 de junio de 1939; al encontrar remaches detuvo el trabajo de inmediato y siguió con una paleta pequeña hasta revelar «el fantasma de un barco» a partir de las impresiones dejadas en la arena por la madera podrida. La acidez del suelo de la zona explica que se disolvieran tanto las maderas como los restos humanos. Charles Phillips identificó el enterramiento como anglosajón y no vikingo, confirmando la conclusión de Brown, y los montículos se fechan hacia el 625.",
+      "source": "National Trust, «History of archaeology at Sutton Hoo»",
+      "url": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/history-of-archaeology-at-sutton-hoo"
+    },
+    {
+      "claim": "La investigación de tesoro oculto se celebró el 14 de agosto y determinó que las piezas eran propiedad de Edith Pretty, tras el testimonio de Pretty, Phillips y otros. Pretty, nacida en 1883, había puesto su atención en los montículos de su finca en 1937 y recurrió al Museo de Ipswich. En un acto de generosidad extraordinaria decidió regalar la colección entera a la nación. Charles Phillips elogió el cuidado con que Basil Brown había excavado la nave.",
+      "source": "National Trust, «Digging the dirt at Sutton Hoo: the true story behind The Dig»",
+      "url": "https://www.nationaltrust.org.uk/visit/suffolk/sutton-hoo/digging-the-dirt-at-sutton-hoo-the-true-story-behind-the-dig"
+    },
+    {
+      "claim": "Basil Brown nació el 22 de enero de 1888 en Bucklesham, Suffolk, hijo de un granjero y carretero; dejó la escuela a los doce años para trabajar en la granja de su padre y obtuvo certificados en dibujo, astronomía, geografía y geología mediante clases nocturnas y cursos por correspondencia. En la temporada de 1938 Pretty le pagaba treinta chelines a la semana, aproximadamente el salario mínimo agrícola de la época. Cuando Charles Phillips tomó el control en julio de 1939, Brown continuó en el yacimiento conforme a su contrato con Pretty, pero quedó excluido de excavar la cámara funeraria que él había localizado el 14 de junio. En 1966 recibió una pensión de la Lista Civil de 250 libras, gestionada por el estudioso de Sutton Hoo Rupert Bruce-Mitford. Murió el 12 de marzo de 1977.",
+      "source": "Wikipedia en inglés, artículo «Basil Brown»",
+      "url": "https://en.wikipedia.org/wiki/Basil_Brown"
+    },
+    {
+      "claim": "El casco se excavó en 1939 en forma de cientos de fragmentos oxidados. Herbert Maryon dirigió la primera reconstrucción entre 1945 y 1946, publicada en 1947, que estableció los cinco motivos decorativos pero contenía errores importantes de colocación e interpretación. Una segunda reconstrucción, más exacta, se montó entre 1970 y 1971 aprovechando tres décadas de estudios y la comparación con los cascos suecos de Valsgärde. El casco se expone de forma permanente en el British Museum, en la sala 41.",
+      "source": "Wikipedia en inglés, artículo «Sutton Hoo helmet»",
+      "url": "https://en.wikipedia.org/wiki/Sutton_Hoo_helmet"
+    },
+    {
+      "claim": "La Sutton Hoo Society es una organización benéfica registrada, fundada en 1984, que apoya el trabajo académico sobre el yacimiento real anglosajón de Suffolk, hoy gestionado por el National Trust, y menciona las excavaciones del profesor Martin Carver.",
+      "source": "Sutton Hoo Society, página institucional",
+      "url": "https://www.suttonhoo.org/"
+    }
+  ],
+  "do_not_use": [
+    "dar por seguro que el enterrado es Rædwald: es el candidato más aceptado desde 1940, pero la atribución se ha defendido «con más fuerza que convicción» y las pruebas son casi inexistentes; lo fechado son las monedas, entre 610 y 635, no la identidad",
+    "decir que se encontró un cuerpo: no se encontró ninguno; lo que hay son rastros de fosfato hallados en análisis de suelo de 1967, compatibles con un cadáver disuelto por la acidez del terreno",
+    "llamar vikingo al enterramiento: Charles Phillips lo identificó como anglosajón en 1939, confirmando lo que ya había concluido Basil Brown, y los vikingos llegan a Inglaterra siglo y medio después",
+    "afirmar que los granates del ajuar proceden de Sri Lanka o de la India: es una hipótesis muy repetida, pero la ficha consultada describe el trabajo de cloisonné sin precisar el origen de las piedras",
+    "presentar el casco expuesto como la pieza tal cual se encontró: es una reconstrucción, y la primera, de 1945-1946, se rehízo entre 1970 y 1971 por contener errores de colocación",
+    "decir que Basil Brown fue despedido o expulsado del yacimiento: siguió trabajando allí conforme a su contrato con Pretty, pero se le excluyó de excavar la cámara que había localizado",
+    "afirmar que el hallazgo fue declarado tesoro oculto y pasó a la Corona: el jurado resolvió lo contrario, que al no haberse enterrado con intención de recuperarlo pertenecía a la propietaria del terreno, y fue Edith Pretty quien lo donó",
+    "sostener que Sutton Hoo prueba que Beowulf narra hechos históricos: lo que permite es ilustrar la cultura material que el poema describe, no verificar su relato"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

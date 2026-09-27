@@ -1,0 +1,86 @@
+{
+  "id": "2026-10-30-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Heine y los libros quemados en Almansor",
+    "hook": "«Eso fue solo un preludio: allí donde se queman libros, se acaba quemando también a las personas.»\n— Heinrich Heine, Almansor, tragedia, 1823",
+    "body": [
+      "La frase no habla de Alemania. Está en Almansor, la tragedia que Heinrich Heine empezó en el otoño de 1820, publicó incompleta en noviembre de 1821 en la revista Der Gesellschafter y terminó en 1823. La dice Hassan, un criado musulmán, justo después de que Almansor cuente que el temible Jiménez —el cardenal Cisneros— arrojó el Corán a las llamas de una hoguera, en pleno mercado de Granada. Hassan contesta con dos versos que no consuelan a nadie: eso fue solo un preludio; allí donde se queman libros, se acaba quemando también a las personas.",
+      "La hoguera existió. Entre 1499 y 1500, sin fecha exacta conocida, Cisneros mandó destruir en la plaza de Bib-Rambla más de cuatro mil manuscritos nazaríes: coranes, poesía, códices de historia. Solo se salvaron los de medicina, que fueron a la universidad de Alcalá de Henares. La obra de Heine, en cambio, se hundió. El estreno del 20 de agosto de 1823 en el Teatro Nacional de Brunswick acabó en tumulto y hubo que interrumpirlo. Fue la única puesta en escena de Almansor y, por lo que se sabe, del único drama de Heine que llegó a un escenario.",
+      "El 10 de mayo de 1933, en la plaza de Berlín que hoy se llama Bebelplatz, la Unión Alemana de Estudiantes quemó más de veinte mil libros. Heine estaba entre los autores prohibidos. Desde el 20 de mayo de 1995 el lugar lo marca una obra de Micha Ullman: una sala bajo el suelo con estanterías blancas vacías, que se mira a través de una placa de vidrio en el pavimento. Al lado, una tabla de bronce lleva los dos versos. La única diferencia con el texto de 1823 es el orden de dos palabras en alemán."
+    ],
+    "question": "¿Qué advertencias se leen como literatura hasta que se cumplen?",
+    "quote": {
+      "text": "Eso fue solo un preludio: allí donde se queman libros, se acaba quemando también a las personas.",
+      "author": "Heinrich Heine",
+      "work": "Almansor, tragedia, 1823",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Heine",
+      "#Almansor",
+      "#Libros"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Literatura",
+      "#Historia",
+      "#Granada",
+      "#Berlin",
+      "#Memoria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En el texto de la obra los versos son «Das war ein Vorspiel nur, dort wo man Bücher / Verbrennt, verbrennt man auch am Ende Menschen» y los pronuncia Hassan. Los versos inmediatamente anteriores son de Almansor: «Wir hörten daß der furchtbare Ximenes, / Inmitten auf dem Markte, zu Granada – / Mir starrt die Zung' im Munde – den Koran / In eines Scheiterhaufens Flamme warf!». La página transcribe la edición de Dümmler, Berlín, 1823, «Tragödien nebst einem lyrischen Intermezzo».",
+      "source": "Wikisource en alemán, «Almansor (Heine)», transcripción de la edición Dümmler, Berlín, 1823",
+      "url": "https://de.wikisource.org/wiki/Almansor_(Heine)"
+    },
+    {
+      "claim": "Hassan, el antiguo criado de la familia, pronuncia esos versos como respuesta a la quema de unos cinco mil textos islámicos, entre ellos el Corán, ordenada en 1499 en Granada por Francisco Jiménez de Cisneros. Heine empezó la obra en el otoño de 1820 y trabajó en ella entre 1820 y 1822; se publicó incompleta y por entregas en noviembre de 1821 en Der Gesellschafter, y completa en 1823. El estreno fue el 20 de agosto de 1823 en el Teatro Nacional de Brunswick: la representación resultó un fiasco y hubo que interrumpirla tras escenas tumultuosas en la sala. No existen reseñas de prensa inmediatas del suceso; se conjetura que la causa fue el antisemitismo unido a una confusión de nombres, al suponerse que la tragedia la había escrito un cambista israelita homónimo de Brunswick. Aquel estreno fallido fue, por lo que se sabe, la única puesta en escena de la obra y de cualquier drama de Heine.",
+      "source": "Wikipedia en alemán, artículo «Almansor (Heine)»",
+      "url": "https://de.wikipedia.org/wiki/Almansor_(Heine)"
+    },
+    {
+      "claim": "El memorial «La biblioteca vacía» (1995) de Micha Ullman está empotrado en el pavimento de la Bebelplatz de Berlín y consiste en una sala subterránea de 530 por 706 por 706 centímetros forrada de estanterías blancas vacías, bajo una placa de vidrio; se inauguró el 20 de mayo de 1995 y recuerda la quema nazi de más de veinte mil libros en ese lugar el 10 de mayo de 1933. Una placa de bronce lleva la cita de Heine en la forma «Das war ein Vorspiel nur, dort wo man Bücher verbrennt, verbrennt man am Ende auch Menschen».",
+      "source": "Wikipedia en inglés, artículo «The Empty Library»",
+      "url": "https://en.wikipedia.org/wiki/The_Empty_Library"
+    },
+    {
+      "claim": "La quema de libros del 10 de mayo de 1933 en la Opernplatz —hoy Bebelplatz— de Berlín fue organizada por la Deutsche Studentenschaft, la Unión Alemana de Estudiantes, y afectó a treinta y cuatro ciudades universitarias de Alemania. Heine figuraba entre los autores prohibidos: el catálogo llegaba atrás lo suficiente para incluir a Heine y a Marx junto a Kafka. Dos placas de bronce en la Bebelplatz reproducen la advertencia de Heine.",
+      "source": "Wikipedia en inglés, artículo «Nazi book burnings»",
+      "url": "https://en.wikipedia.org/wiki/Nazi_book_burnings"
+    },
+    {
+      "claim": "La quema de los manuscritos granadinos la ordenó el cardenal Cisneros, arzobispo de Granada, entre 1499 y 1500, sin que se conozca la fecha con exactitud, en la plaza de Bib-Rambla, el principal espacio público de la ciudad. Se destruyeron más de cuatro mil manuscritos —la relación de Juan de Vallejo habla de cerca de cinco mil volúmenes—: coranes, obras religiosas islámicas, poesía y códices históricos. Se salvaron los textos de medicina, que pasaron a la universidad de Alcalá de Henares.",
+      "source": "Wikipedia en español, artículo «Quema de los manuscritos granadinos»",
+      "url": "https://es.wikipedia.org/wiki/Quema_de_los_manuscritos_granadinos"
+    }
+  ],
+  "do_not_use": [
+    "atribuir esta versión española a un traductor concreto: es una traducción literal del alemán documentado en las fuentes, no la versión publicada de ningún traductor, cuya redacción exacta no se ha podido comprobar",
+    "fechar la obra en 1821 a secas o en 1820: Heine la empezó en el otoño de 1820, publicó una versión incompleta por entregas en noviembre de 1821 y la completó en 1823, que es la edición transcrita",
+    "presentar los versos como una profecía de Heine sobre el nazismo o sobre Alemania: los pronuncia un personaje musulmán a propósito de la quema de coranes en Granada por orden de Cisneros, y la lectura profética es posterior a 1933",
+    "afirmar que el cambio de orden de palabras en la placa del Bebelplatz fue deliberado: el texto de 1823 dice «verbrennt man auch am Ende Menschen» y la placa dice «verbrennt man am Ende auch Menschen», pero ninguna de las fuentes consultadas explica el motivo del cambio",
+    "dar por probado que los libros de Heine ardieron en la hoguera del Bebelplatz: lo documentado es que figuraba en las listas negras de autores prohibidos, y la ficha del memorial dice que sus ejemplares probablemente fueron destruidos allí",
+    "dar una cifra cerrada de libros quemados el 10 de mayo de 1933 en Berlín: las fuentes consultadas dicen más de veinte mil y más de veinticinco mil",
+    "dar una cifra cerrada de manuscritos quemados en Granada: la horquilla de las fuentes va de más de cuatro mil a cerca de cinco mil, y la fecha exacta no se conoce",
+    "atribuir el fracaso del estreno de Brunswick al contenido político o religioso de la obra: no hay reseñas de prensa inmediatas y la causa que se conjetura es el antisemitismo unido a una confusión de nombres con un cambista de la ciudad"
+  ],
+  "cita_slug": "heine-donde-se-queman-libros-se-acaba-quemando-personas",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
