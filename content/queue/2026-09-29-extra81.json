@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-14-extra41",
+  "id": "2026-09-29-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "FERDOWSI",
     "subtitle": "La jactancia y la queja están en el mismo pasaje",
     "body": "Escribió que los edificios caen con la lluvia y el sol, y que él había cimentado con versos un palacio que ni el viento ni la lluvia dañan. Esas líneas no cierran el Shahnameh: están dentro del elogio al sultán, y unos versos más abajo dice que ha pasado sesenta y cinco años en la pobreza."
@@ -95,5 +95,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-09-30T02:26:00Z",
+  "results": {}
 }
