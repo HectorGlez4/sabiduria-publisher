@@ -38,5 +38,19 @@
   ],
   "status": "ready",
   "publish_at": "2026-09-25T23:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+    },
+    "instagram": {
+      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+    },
+    "threads": {
+      "post_id": "18407585764091087",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18407585764091087",
+      "published_at": "2026-09-27T04:40:40.825291+00:00"
+    }
+  },
+  "attempts": 1,
+  "last_attempt": "2026-09-27T04:40:40.825910+00:00"
 }
