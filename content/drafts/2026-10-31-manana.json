@@ -8,7 +8,7 @@
     "body": [
       "En el campo de ejecuciones de Kozukappara, a las afueras de Edo, Sugita Genpaku, Maeno Ryōtaku y Nakagawa Jun'an asistieron a la disección del cuerpo de una mujer ajusticiada. Llevaban un ejemplar de las Ontleedkundige Tafelen, la edición neerlandesa de 1734 de las Anatomische Tabellen que Johann Adam Kulmus había publicado en alemán en 1732. Órgano por órgano, el atlas coincidía con lo que tenían delante. Los textos chinos que habían estudiado, no. Al día siguiente empezaron a traducirlo. Tardaron tres años. Maeno manejaba unas seiscientas palabras de neerlandés; Sugita y Nakagawa no lo leían en absoluto.",
       "El Kaitai Shinsho salió en 1774, impreso en Edo por Suharaya Ichibee: cuatro volúmenes de texto y uno de láminas, que Odano Naotake, pintor del dominio de Akita, dibujó en medio año. El nombre de Maeno Ryōtaku no aparece en el libro. Era quien mejor leía la lengua y quien dirigió el trabajo, y pidió que se le omitiera. Un monumento erigido en 1804 dice que había jurado no estudiar para ganar renombre; también se ha dicho que consideraba la traducción demasiado imperfecta para firmarla. Su nombre solo consta en la dedicatoria que escribió el intérprete Yoshio Kōsaku.",
-      "La escena más repetida de aquel trabajo cabe en una palabra. En sus memorias, el Rangaku kotohajime, que redactó en 1815 a los ochenta y tres años, Sugita cuenta que pasaron un día entero atascados en un término del capítulo de la nariz hasta deducir que significaba montículo. Esas memorias no se imprimieron hasta 1869. En 1982, cuando Sakai Shizu tradujo el original neerlandés, la palabra no estaba donde Sugita la recordaba. El libro, en cambio, sigue ahí: fijó en japonés términos médicos que aún se usan, y lo conservan bibliotecas de Keio a Cornell."
+      "La escena más repetida de aquel trabajo cabe en una palabra. En sus memorias, el Rangaku kotohajime, que redactó en 1815 a los ochenta y tres años, Sugita cuenta que pasaron un día entero atascados en un término del capítulo de la nariz hasta deducir que significaba montículo. Esas memorias no se imprimieron hasta 1869. En 1982, cuando Sakai Shizu tradujo el original neerlandés, la palabra no estaba donde Sugita la recordaba. El libro, en cambio, sigue ahí: fijó en japonés términos médicos que aún se usan, y de él se guardan ejemplares hasta en la biblioteca de Cornell."
     ],
     "question": "¿Cuánto de lo que recuerdas con más nitidez podrías comprobar hoy?"
   },
@@ -68,23 +68,14 @@
       "url": "https://ja.wikipedia.org/wiki/%E8%98%AD%E5%AD%A6%E4%BA%8B%E5%A7%8B"
     },
     {
-      "claim": "La palabra verheffen no se encuentra en la sección de la nariz de las Ontleedkundige Tafelen, el original del Kaitai Shinsho, sino en el capítulo del pecho, donde se explica la forma de la mama. Se han propuesto varias explicaciones: que Sugita inventara la anécdota para hacer más comprensible la descripción, que se emplearan otros libros neerlandeses además de las Ontleedkundige Tafelen, o que Sugita confundiera el recuerdo con el pasaje del pecho.",
-      "source": "Japanese Wiki Corpus, artículo «Rangaku Kotohajime (The Beginning of Dutch Studies)», traducción del artículo japonés de referencia",
-      "url": "https://www.japanesewiki.com/literature/Rangaku%20Kotohajime%20(The%20Beginning%20of%20Dutch%20Studies).html"
-    },
-    {
-      "claim": "El Kaitai shinsho, traducido por Sugita Genpaku y otros, fue publicado en Edo por Suharaya Ichibee en 1774 y se conserva en las colecciones de Asia de la Biblioteca de la Universidad de Cornell.",
+      "claim": "El Kaitai shinsho, traducido por Sugita Genpaku y otros, fue publicado en Edo por Suharaya Ichibe en 1774. Es la traducción de una obra del erudito neerlandés Johann Adam Kulmus (1689-1745), cuyo original latino se titulaba Tabulæ Anatomicæ y contenía explicaciones breves sobre la estructura y la función de todas las partes del cuerpo humano. El ejemplar forma parte de la Colección William Elliot Griffis de la Universidad de Cornell.",
       "source": "Cornell University Library, exposición en línea «Treasures of the Asia Collections», ficha «Kaitai shinsho [New Book of Anatomy]»",
       "url": "https://exhibits.library.cornell.edu/asiaTreasures/catalog/161-10744"
-    },
-    {
-      "claim": "La Biblioteca Nacional de Medicina de Estados Unidos conserva en sus colecciones digitales el Kaitai shinsho, edición de 1774 publicada en Edo por Suharaya Ichibee.",
-      "source": "National Library of Medicine (Estados Unidos), Digital Collections, registro «Kaitai shinsho»",
-      "url": "https://resource.nlm.nih.gov/101147255"
     }
   ],
   "do_not_use": [
-    "contar la anécdota de フルヘッヘンド (verheffen) como hecho comprobado: Sugita la escribió en 1815, a los ochenta y tres años, y en 1982 Sakai Shizu tradujo el original neerlandés y la palabra no aparece en el capítulo de la nariz; se ha señalado que sí figura en el del pecho, y Katagiri Ikuo propone que el término era verhevene",
+    "contar la anécdota de フルヘッヘンド (verheffen) como hecho comprobado: Sugita la escribió en 1815, a los ochenta y tres años, y en 1982 Sakai Shizu tradujo el original neerlandés y comprobó que esa palabra no está en él; Katagiri Ikuo propone que el término era verhevene",
+    "dar por fijo el título del original de Kulmus: la ficha de Cornell llama al original latino Tabulæ Anatomicæ, mientras que las fichas de la Biblioteca de la Dieta y las enciclopedias citan las Anatomische Tabellen alemanas de 1732 como punto de partida; lo que sí coincide en todas es que lo traducido fueron las Ontleedkundige Tafelen neerlandesas de 1734",
     "decir que el Kaitai Shinsho fue la primera obra occidental traducida al japonés, sin más: fue la primera traducción completa de un libro occidental de anatomía y la primera obra de medicina o ciencia occidental publicada en japonés",
     "llamar holandés al original: el original es alemán, las Anatomische Tabellen de Johann Adam Kulmus (1732); lo que tradujeron fue la versión neerlandesa, las Ontleedkundige Tafelen (1734)",
     "dar por segura una única razón de la ausencia de Maeno Ryōtaku: circulan dos, el juramento de no buscar renombre que recoge la inscripción de 1804 y su insatisfacción con la calidad de la traducción",
