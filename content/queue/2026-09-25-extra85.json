@@ -36,7 +36,7 @@
     "instagram",
     "threads"
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-09-25T23:26:00Z",
   "results": {
     "facebook": {
@@ -51,6 +51,9 @@
       "published_at": "2026-09-27T04:40:40.825291+00:00"
     }
   },
-  "attempts": 2,
-  "last_attempt": "2026-09-27T08:24:41.081271+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-09-27T10:40:20.798589+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: facebook: HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given.; instagram: HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+  ]
 }
