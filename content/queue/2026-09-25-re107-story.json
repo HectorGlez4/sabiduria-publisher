@@ -63,7 +63,16 @@
     "instagram_story"
   ],
   "status": "ready",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+    },
+    "instagram_story": {
+      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+    }
+  },
   "publish_at": "2026-09-26T03:26:00Z",
-  "reemision_de": "2026-09-05-extra65"
+  "reemision_de": "2026-09-05-extra65",
+  "attempts": 1,
+  "last_attempt": "2026-09-28T01:48:35.667992+00:00"
 }
