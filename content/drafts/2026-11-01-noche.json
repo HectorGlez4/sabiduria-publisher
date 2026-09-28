@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-01-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el reino del Kongo y las cartas de Afonso I",
+    "hook": "Casi todo lo que se sabe del reino del Kongo en el siglo XVI lo escribió su propio rey. Son cartas en portugués, y siguen en los archivos de Lisboa y del Vaticano.",
+    "body": [
+      "Mvemba a Nzinga, bautizado Afonso, reinó en el Kongo desde 1509 hasta 1542 o 1543. Portugal comerciaba con aquel reino desde la década de 1480. Afonso montó una iglesia sostenida con impuestos propios y, sobre todo, escuelas: en 1516 la escuela real tenía más de mil alumnos, había otras en las provincias, y de ahí salió una clase noble enteramente alfabetizada. Su hijo Henrique fue nombrado obispo en 1518 y ejerció en el Kongo desde comienzos de los años veinte hasta su muerte, en 1531. Prácticamente todo lo que hoy se sabe de aquel reinado procede de las cartas del propio rey.",
+      "En 1526 empezó una serie de veinticuatro cartas dirigidas al rey Juan III de Portugal. En ellas escribe que cada día los tratantes secuestran a su gente —hijos de este país, hijos de sus nobles y vasallos, incluso miembros de su propia familia— y que la tierra está quedando por completo despoblada. Son de los poquísimos documentos escritos por un africano en el siglo XVI que han llegado hasta nosotros. Las traducciones que circulan vienen de la Monumenta Missionaria Africana, la colección documental que António Brásio empezó a editar en 1952.",
+      "Lo que pedía no era abolir la esclavitud. El Kongo exportaba cautivos y Afonso compartía con la corona portuguesa el monopolio de ese comercio exterior. Lo que reclamaba era el control: creó una junta para regular el tráfico y un comité de mercaderes kongo y portugueses que dictaminara si cada persona vendida había sido esclavizada legalmente. La venta de baKongo nacidos libres estuvo prohibida durante buena parte de los siglos XVI y XVII. Las cartas no registran una conversión moral. Registran a un soberano perdiendo la facultad de decidir quién podía ser vendido dentro de su propio reino. A finales de siglo el reino había perdido la soberanía."
+    ],
+    "question": "¿Qué se pierde primero cuando se pierde el mando: el territorio o las reglas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Las cartas del rey del Kongo",
+    "subtitle": "1526",
+    "body": "En 1526 Mvemba a Nzinga, rey del Kongo y bautizado Afonso, empezó a escribir al rey de Portugal: los tratantes se llevaban a su gente y el país quedaba despoblado. No pedía abolir la esclavitud. Pedía decidir él quién podía ser vendido."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kongo",
+      "#HistoriaDeAfrica",
+      "#AfonsoI"
+    ],
+    "extended": [
+      "#Africa",
+      "#SigloXVI",
+      "#Portugal",
+      "#Archivos",
+      "#Civilizaciones",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En 1526 el rey del Kongo Nzinga Mbemba, que para entonces había adoptado el nombre cristiano de Afonso I, empezó a escribir una serie de veinticuatro cartas al rey portugués Juan III pidiendo el fin del tráfico de esclavos. En ellas se queja de que el comercio ha provocado una despoblación generalizada, porque su gente, incluidos nobles y parientes suyos, está siendo secuestrada y vendida como esclava. Las cartas están entre los poquísimos documentos escritos por un africano en el siglo XVI que se conservan. La traducción procede de la Monumenta Missionaria Africana (1952), editada por António Brásio. Portugal y el Kongo mantenían relaciones comerciales desde la década de 1480.",
+      "source": "World History Commons (Roy Rosenzweig Center for History and New Media, George Mason University), «Excerpt of letter from Nzinga Mbemba to Portuguese King João III»",
+      "url": "https://worldhistorycommons.org/excerpt-letter-nzinga-mbemba-portuguese-king-joao-iii"
+    },
+    {
+      "claim": "El nombre kikongo de Afonso I era Mvemba a Nzinga. Reinó de 1509 hasta finales de 1542 o 1543. En 1516 había más de mil alumnos en la escuela real, y otras escuelas en las provincias, lo que acabó dando una clase noble enteramente alfabetizada. Prácticamente todo lo que se sabe del Kongo en tiempos de su reinado procede de su larga serie de cartas, escritas en portugués, dirigidas sobre todo a los reyes Manuel I y Juan III de Portugal. En la carta de 1526 protesta porque cada día los tratantes secuestran a su gente: hijos de este país, hijos de sus nobles y vasallos, incluso personas de su propia familia. Estableció la Iglesia católica en el Kongo financiada con ingresos fiscales. Su hijo Henrique Kinu a Mvemba fue elevado a obispo en 1518 y ejerció en el Kongo desde comienzos de la década de 1520 hasta su muerte en 1531. Afonso no abolió la esclavitud: creó una junta para regular mejor el tráfico y un comité especial, formado por mercaderes kongo y portugueses, que determinara la legalidad de la esclavización de quienes eran vendidos.",
+      "source": "Wikipedia en inglés, artículo «Afonso I of Kongo»",
+      "url": "https://en.wikipedia.org/wiki/Afonso_I_of_Kongo"
+    },
+    {
+      "claim": "Afonso I reguló el comercio de esclavos en lugar de oponerse a él: estableció una junta para regularlo mejor y un comité especial que determinara la legalidad de la esclavización de los vendidos, y reclamó junto a los reyes portugueses un monopolio conjunto del comercio exterior de esclavos, tratándolo como una institución económica controlada. El Kongo tenía escuelas y maestros de la nobleza llamados mestres (en kikongo, alongi a aleke). Los primeros nobles kongo enviados a Portugal permanecieron en Europa casi cuatro años estudiando cristianismo y aprendiendo a leer y escribir.",
+      "source": "Wikipedia en inglés, artículo «Kingdom of Kongo»",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo"
+    },
+    {
+      "claim": "La carta de queja de Afonso I al rey Juan III denuncia que los mercaderes portugueses socavaban su autoridad central comerciando directamente con sus vasallos y que se apoderaban de hijos de nobles y vasallos; no fue una iniciativa abolicionista. La venta de baKongo nacidos libres estuvo estrictamente prohibida durante buena parte de los siglos XVI y XVII, y también se prohibieron la exportación y la compra local de mujeres esclavizadas. El grueso de la actividad eclesiástica, la enseñanza escolar y la predicación en el Kongo la hacían los propios baKongo, y escribas locales copiaban y redactaban documentos; un sistema de correos oficiales llevaba las cartas entre capitales. Los manuscritos kongo que se conservan son en su mayoría cartas, porque algunas iban dirigidas a Portugal y al Vaticano, donde hoy se guardan decenas de ellas.",
+      "source": "African History Extra, «The kingdom of Kongo and the Portuguese: diplomacy, trade, warfare and early Afro-European interactions (1483-1670)»",
+      "url": "https://www.africanhistoryextra.com/p/the-kingdom-of-kongo-and-the-portuguese"
+    }
+  ],
+  "do_not_use": [
+    "presentar a Afonso I como abolicionista: el Kongo exportaba cautivos, él compartía con la corona portuguesa el monopolio de ese comercio, y lo que pidió fue regularlo mediante una junta y un comité que verificara la legalidad de cada venta",
+    "decir que las cartas están escritas en kikongo: están escritas en portugués",
+    "citar el pasaje de 1526 como transcripción literal del original: lo que circula en español son traducciones de la versión recogida en la Monumenta Missionaria Africana de António Brásio, a partir de 1952",
+    "confundir a Nzinga Mbemba con Njinga de Ndongo y Matamba: son personas distintas, de reinos distintos y de siglos distintos, el XVI y el XVII",
+    "dar las veinticuatro cartas como el total conservado de su correspondencia: veinticuatro son las que dirigió a Juan III a partir de 1526, y también escribió a Manuel I",
+    "fechar su muerte con precisión: las fuentes la sitúan a finales de 1542 o en 1543",
+    "decir que el Kongo fue cristianizado por misioneros extranjeros: el grueso de la enseñanza, la predicación y la copia de documentos lo hacían los propios baKongo",
+    "afirmar que Portugal atendió las cartas: el comercio siguió, la autoridad del rey se erosionó y a finales del siglo XVI el reino había perdido la soberanía",
+    "llamar analfabeta a la corte del Kongo: en 1516 la escuela real tenía más de mil alumnos y el reino llegó a tener una clase noble enteramente alfabetizada"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

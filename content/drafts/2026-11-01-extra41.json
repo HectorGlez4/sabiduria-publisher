@@ -1,0 +1,87 @@
+{
+  "id": "2026-11-01-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tomás Moro y las ovejas del libro I (1516)",
+    "hook": "«Vuestras ovejas, que solían ser tan mansas y alimentarse con tan poco, se han vuelto ahora tan voraces e indómitas que devoran a los hombres mismos, y devastan y despueblan campos, casas y pueblos.»\n— Tomás Moro, Utopía, libro I (1516)",
+    "body": [
+      "Utopía se imprimió en latín en Lovaina, en 1516, bajo un título largo que promete un librito de oro sobre el mejor estado de la república y sobre la nueva isla de Utopía. Moro empezó a escribirlo en mayo de 1515, mientras servía de enviado en los Países Bajos, lo terminó en septiembre de 1516 y se lo pasó a Erasmo para que lo corrigiera. La obra tiene dos libros. El segundo describe la isla. El primero, donde está esta frase, es una conversación sobre la Inglaterra real, y quien la pronuncia es Rafael Hitlodeo, contando lo que él mismo respondió una noche en la mesa del cardenal Morton.",
+      "La palabra utopía la formó Moro con dos voces griegas, ou y topos: ningún lugar. Antes había pensado llamar a la isla Nusquama, que es lo mismo en latín. Lo que hoy se entiende por utopía —un ideal hermoso e inalcanzable— no describe lo que hace el libro primero. Ahí se denuncian cosas concretas y fechadas: los cercamientos, es decir, propietarios que cerraban tierras comunales para criar ovejas y expulsaban a los campesinos que vivían de ellas, y la horca como pena por robo. La imagen de las ovejas es la de ese despojo: el animal más manso convertido en el que se come a los hombres.",
+      "Lo que sigue en el texto es el argumento incómodo. Si primero se echa a la gente de la tierra y después se la ahorca por robar, la justicia no está castigando el delito: lo está fabricando. De nada sirve, dice Hitlodeo, ejecutar ladrones mientras no se remedien esas enormidades. Moro fue decapitado en Tower Hill el 6 de julio de 1535, veinte años después de escribir el libro. La primera traducción al inglés, la de Ralph Robynson, salió en 1551. La palabra que acuñó ha sobrevivido mucho mejor que el diagnóstico al que iba pegada."
+    ],
+    "question": "¿A qué le llamamos delito sin preguntar de dónde viene?",
+    "quote": {
+      "text": "Vuestras ovejas, que solían ser tan mansas y alimentarse con tan poco, se han vuelto ahora tan voraces e indómitas que devoran a los hombres mismos, y devastan y despueblan campos, casas y pueblos.",
+      "author": "Tomás Moro",
+      "work": "Utopía, libro I (1516)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#TomasMoro",
+      "#Utopia",
+      "#Historia"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Renacimiento",
+      "#Inglaterra",
+      "#Literatura",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino de Utopía dice, en el libro I: «oues inquam uestrae, quae tam mites esse, tamque exiguo solent ali, nunc uti fertur tam edaces atque indomitae esse coeperunt, ut homines deuorent ipsos, agros, domos, oppida uastent ac depopulentur». El pasaje aparece en la escena del banquete del cardenal, donde se critica la política inglesa de cercamientos y sus consecuencias sociales.",
+      "source": "The Latin Library, texto latino de «De optimo statu reipublicae deque nova insula Utopia», de Thomas More",
+      "url": "https://www.thelatinlibrary.com/more.html"
+    },
+    {
+      "claim": "Utopía se escribió en latín. Moro empezó a redactarla mientras servía como enviado en los Países Bajos en mayo de 1515, la terminó en septiembre de 1516 y se la pasó a Erasmo para que la revisara. La primera edición se publicó en 1516 en los Países Bajos de los Habsburgo (Lovaina), y una edición revisada apareció en Basilea en 1518. La obra consta de dos libros: el primero es un diálogo sobre el consejo político y el segundo el relato de Rafael sobre la isla. El libro primero ataca males contemporáneos: el movimiento de cercamientos y el desplazamiento de campesinos, la pena capital por robo y la propensión de los monarcas a la guerra. El nombre Utopía viene del griego ou (no) y topos (lugar), literalmente «ningún lugar»; Moro pensó antes en llamarla Nusquama, el equivalente latino. La primera traducción al inglés la hizo Ralph Robinson y se publicó en 1551, dieciséis años después de la ejecución de Moro.",
+      "source": "Wikipedia en inglés, artículo «Utopia (book)»",
+      "url": "https://en.wikipedia.org/wiki/Utopia_(book)"
+    },
+    {
+      "claim": "En el libro I de Utopía, en la traducción inglesa de Gilbert Burnet de 1684, quien habla es Rafael Hitlodeo, que relata una conversación mantenida en la mesa del cardenal Morton en Inglaterra. Describe cómo la nobleza inglesa convirtió tierra de labranza en pasto para la cría rentable de ovejas, desplazando a los arrendatarios y alimentando la pobreza y el robo, y sostiene que esa práctica crea el delito que después la nación castiga con dureza. Sobre el castigo de los ladrones se dice que eran ahorcados tan deprisa que a veces había veinte en una sola horca.",
+      "source": "Project Gutenberg, «Utopia» de Thomas More, traducción de Gilbert Burnet (1684)",
+      "url": "https://www.gutenberg.org/cache/epub/2130/pg2130.txt"
+    },
+    {
+      "claim": "El pasaje sobre los cercamientos del libro I de Utopía, recogido en la antología English Prose editada por Henry Craik (Nueva York, The Macmillan Company, 1916, vol. I, pp. 162-164), denuncia que los propietarios cercaban tierras comunales para pastoreo de ovejas: desplazaban a los trabajadores agrícolas y sus familias, generaban pobreza y empujaban al robo y la mendicidad, concentraban la producción de lana en pocas manos y encarecían los alimentos. El pasaje concluye que, si no se pone remedio a esas enormidades, en vano se jactará nadie de ejecutar la justicia sobre los delincuentes.",
+      "source": "Luminarium, «Sir Thomas More: Excerpt from Utopia (1516) [On Enclosures]», según Henry Craik (ed.), English Prose, vol. I, Macmillan, 1916",
+      "url": "https://www.luminarium.org/renlit/utopiaenclosures.htm"
+    },
+    {
+      "claim": "Tomás Moro nació el 7 de febrero de 1478 en la City de Londres y fue decapitado el 6 de julio de 1535 en Tower Hill. Fue lord canciller de Inglaterra entre el 26 de octubre de 1529 y el 16 de mayo de 1532. Publicó Utopía en 1516, obra que describe el sistema político de un estado insular imaginario. Pío XI lo canonizó como mártir en 1935 y Juan Pablo II lo declaró patrono de los gobernantes y los políticos en el año 2000.",
+      "source": "Wikipedia en inglés, artículo «Thomas More»",
+      "url": "https://en.wikipedia.org/wiki/Thomas_More"
+    }
+  ],
+  "do_not_use": [
+    "usar «utopía» como elogio de un ideal sin más: Moro formó la palabra con el griego ou-topos, ningún lugar, y antes había pensado en Nusquama, su equivalente latino",
+    "atribuir la frase a Moro como opinión propia expresada en primera persona: la pronuncia el personaje Rafael Hitlodeo, que refiere lo que él mismo respondió en la mesa del cardenal Morton",
+    "situar la frase en el libro II: está en el libro I, que trata de la Inglaterra real; la isla se describe en el segundo",
+    "citar la versión inglesa como si fuera el original: Utopía se escribió y se imprimió en latín, y la primera traducción inglesa, la de Ralph Robynson, es de 1551",
+    "dar Basilea como lugar de la primera edición: la príncipe es de Lovaina, 1516; la revisada, de Basilea, 1518",
+    "decir que Moro vio publicada su obra en inglés: fue ejecutado en 1535, dieciséis años antes de la traducción de Robynson",
+    "traducir oppida por «ciudades» sin matiz: en el latín de Moro designa poblaciones menores, pueblos o villas",
+    "presentar los cercamientos como un fenómeno inventado por Moro para la ficción: el libro I los denuncia como práctica corriente de la Inglaterra de su tiempo, junto con la horca por robo",
+    "mezclar las traducciones: la de Gilbert Burnet es de 1684 y la primera inglesa, la de Ralph Robynson, de 1551"
+  ],
+  "cita_slug": "tomas-moro-vuestras-ovejas-devoran-a-los-hombres",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

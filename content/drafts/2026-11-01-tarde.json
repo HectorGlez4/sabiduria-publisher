@@ -1,0 +1,92 @@
+{
+  "id": "2026-11-01-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Zeami y el shoshin del Kakyō (1424)",
+    "hook": "«No hay que olvidar el ánimo del principiante.»\n— Zeami Motokiyo, Kakyō, «Okudan» (1424)",
+    "body": [
+      "Zeami Motokiyo (c. 1363 - c. 1443) fue actor, dramaturgo y teórico del teatro nō, e hijo de Kan'ami, que dirigía la compañía familiar. El Kakyō, un solo volumen, se fue componiendo hasta 1424 y lo entregó como transmisión secreta a su hijo Motomasa, que murió en 1432. La frase cierra el Okudan, la sección final, considerada el núcleo de su pensamiento sobre el oficio. No era un libro para el público: los tratados de Zeami quedaron dentro de la familia y de un círculo de guerreros de alto rango. Varios reaparecieron en un puesto de libros usados en 1908, y el conjunto completo no se publicó hasta 1940.",
+      "Shoshin, la palabra traducida como ánimo del principiante, no significa aquí conservar el entusiasmo del primer día ni mantenerse fiel al propósito inicial. Zeami distingue tres. El primero es el shoshin del acierto y el error: no olvidar el arte torpe de la juventud, porque solo recordando lo inexperto que se era puede medirse con exactitud lo que se hace ahora. El segundo es el shoshin de cada momento: en cada etapa, de la plenitud a la vejez, se aprende un arte propio de esa edad, y recordar cada uno de esos estrenos es lo que ensancha el repertorio. El tercero es el shoshin de la vejez, porque incluso entonces hay algo que se empieza.",
+      "Lo que viajó fue otra cosa. En Occidente la palabra se hizo célebre por Mente zen, mente de principiante, el libro de Shunryū Suzuki de 1970, donde nombra la apertura y la ausencia de ideas previas. En el uso corriente japonés se deslizó hacia perseverar en el propósito con que se empezó. Las dos versiones halagan. La de Zeami no: le está diciendo a un profesional que tenga a mano el recuerdo de su propia torpeza, porque es la única regla fiable que tiene para medirse. El principiante no es una llama que se conserva. Es un patrón de medida."
+    ],
+    "question": "¿Recuerdas todavía lo mal que lo hacías al empezar?",
+    "quote": {
+      "text": "No hay que olvidar el ánimo del principiante.",
+      "author": "Zeami Motokiyo",
+      "work": "Kakyō, «Okudan» (1424)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Zeami",
+      "#TeatroNoh",
+      "#Japon"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Shoshin",
+      "#Teatro",
+      "#Aprendizaje",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El Kakyō (花鏡) es un tratado de teoría artística del nō en un solo volumen, de carácter esotérico, que trata la vocalización, la actuación, la puesta en escena, el entrenamiento y el arte. Quedó establecido con el título de Kakyō en 1424 (Ōei 31), tras haberse llamado antes Kashū. Lo compuso Zeami (1363-1443) y lo transmitió a su hijo Motomasa, que murió en 1432 (Eikyō 4). Contiene dos enseñanzas célebres: no olvidar el ánimo del principiante y la mirada desde fuera de uno mismo.",
+      "source": "the-noh.com, base de datos de terminología del teatro nō, entrada «Kakyō»",
+      "url": "https://db2.the-noh.com/edic/2022/10/kakyo.html"
+    },
+    {
+      "claim": "El 花鏡 se fue componiendo por etapas hasta 応永31年 (1424). Su sección final, llamada 奥段, recoge como esencia del arte la fórmula 初心忘るべからず y está considerada la médula de la teoría artística de Zeami. La obra reúne unos veinte años de escritos posteriores al Fūshikaden.",
+      "source": "Wikipedia en japonés, artículo «花鏡»",
+      "url": "https://ja.wikipedia.org/wiki/%E8%8A%B1%E9%8F%A1"
+    },
+    {
+      "claim": "Las tres transmisiones orales de 初心忘るべからず son: 是非の初心を忘るべからず, es decir, que si no se olvida el arte inmaduro de la juventud puede reconocerse correctamente el arte mejorado de ahora; 時々の初心を忘るべからず, que al recordar el estado inicial de cada etapa aprendida, de la plenitud a la vejez, se hace posible un arte más amplio; y 老後の初心を忘るべからず, que incluso en la vejez hay un shoshin, un arte apropiado a esa edad que se empieza a aprender, y no olvidarlo permite aspirar a una mejora sin límite.",
+      "source": "Japan Arts Council, 文化デジタルライブラリー (Biblioteca Digital de Cultura), sección «能・世阿弥», ficha del 花鏡",
+      "url": "https://www2.ntj.jac.go.jp/dglib/contents/learn/edc9/zeami/gyouseki/kakyou_details.html"
+    },
+    {
+      "claim": "El sentido original de shoshin en Zeami difiere del uso actual de no olvidar la ambición inicial. Para Zeami, shoshin designaba la estrategia con que se afrontó un desafío nuevo, la idea con que se superaron las dificultades; recordar el shoshin significa aprovechar lo aprendido al salir de aquellas pruebas cuando llegan otras. En el Hana kagami, escrito cuando Zeami tenía poco más de sesenta años, distingue tres: el de la juventud, el de cada momento y el de la vejez.",
+      "source": "the-noh.com, sección «The Words of Zeami», entrada sobre 初心忘るべからず",
+      "url": "https://www.the-noh.com/en/zeami/words.html"
+    },
+    {
+      "claim": "Zeami Motokiyo (c. 1363 - c. 1443) fue hijo de Kan'ami Kiyotsugu, que dirigía la compañía familiar de nō. Escribió veintiún textos críticos a lo largo de unas cuatro décadas, entre ellos el Fūshikaden, el primer tratado de teoría teatral conocido en Japón, y el Kakyō. Su hijo Motomasa empezó a dirigir la compañía en 1429. Los tratados no circularon ampliamente tras la muerte de Zeami: solo los guerreros de clase alta tuvieron acceso a ellos; varios se descubrieron en un puesto de libros usados en 1908 y el conjunto completo no se publicó hasta 1940. En 1434 el shōgun Ashikaga Yoshinori desterró a Zeami a la isla de Sado.",
+      "source": "Wikipedia en inglés, artículo «Zeami Motokiyo»",
+      "url": "https://en.wikipedia.org/wiki/Zeami_Motokiyo"
+    },
+    {
+      "claim": "Shoshin wasuru bekarazu es un proverbio japonés acuñado por el dramaturgo Zeami en 1424, traducido habitualmente como no olvidar nunca el ánimo del principiante o no olvidar nunca la intención original. El concepto de shoshin se difundió ampliamente en Occidente a través del libro de Shunryū Suzuki Zen Mind, Beginner's Mind, publicado en 1970, que lo presenta como apertura y ausencia de ideas preconcebidas incluso en un nivel avanzado.",
+      "source": "Wikipedia en inglés, artículo «Shoshin»",
+      "url": "https://en.wikipedia.org/wiki/Shoshin"
+    }
+  ],
+  "do_not_use": [
+    "presentar la frase como un dicho del budismo zen: es una fórmula del tratado de teatro nō de Zeami de 1424; la difusión de shoshin como concepto zen en Occidente viene del libro de Shunryū Suzuki de 1970",
+    "atribuir la frase a Shunryū Suzuki: su libro de 1970 popularizó la idea de mente de principiante, no la fórmula de Zeami",
+    "traducir shoshin aquí por perseverar en el propósito inicial: es la deriva del uso corriente japonés, y las tres transmisiones del Kakyō dicen otra cosa",
+    "situar la frase en el Fūshikaden sin matiz: la ficha de terminología y la entrada japonesa del 花鏡 la sitúan en el Okudan del Kakyō (1424), y las tres transmisiones están ahí; una página divulgativa del propio the-noh.com la menciona también junto al Fūshikaden",
+    "dar una fecha exacta dentro de 1424: el Kakyō se compuso por etapas y quedó establecido con ese título en el año 31 de la era Ōei",
+    "decir que Zeami publicó sus tratados: eran transmisiones secretas de familia; varios reaparecieron en un puesto de libros usados en 1908 y el conjunto completo no se imprimió hasta 1940",
+    "llamar monje a Zeami: fue actor, dramaturgo y director de la compañía familiar de nō, desterrado a Sado en 1434 por el shōgun Ashikaga Yoshinori",
+    "confundir a Motomasa con Kan'ami: Kan'ami fue el padre de Zeami, y Motomasa el hijo que recibió el Kakyō y murió en 1432",
+    "usar la fórmula como consejo de conservar el entusiasmo del primer día: en el primero de los tres shoshin lo que se pide recordar es el arte torpe de la juventud, como término de comparación"
+  ],
+  "cita_slug": "zeami-no-hay-que-olvidar-el-animo-del-principiante",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

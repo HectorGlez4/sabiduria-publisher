@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-01-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Vavílov y el banco de semillas de Leningrado",
+    "hook": "Reunió la mayor colección de semillas del planeta y murió de hambre en una celda. A ochocientos kilómetros, su equipo también moría de hambre montando guardia sobre ella.",
+    "body": [
+      "Nikolái Vavílov nació en Moscú en 1887. Hizo ciento quince expediciones a sesenta y cuatro países buscando las variedades silvestres y campesinas de las plantas cultivadas, y con ese material formuló su teoría de los centros de origen: las regiones del mundo donde nació la agricultura y donde sigue concentrada la diversidad genética que la sostiene. Su instituto de Leningrado, en la plaza de San Isaac, guardaba al empezar la guerra alrededor de un cuarto de millón de muestras. No era una despensa. Era un archivo de cosechas todavía no sembradas.",
+      "En 1936, Trofim Lysenko —que negaba la genética mendeliana y contaba con el respaldo de Stalin— lo apartó de la dirección del instituto. El NKVD lo detuvo en Ucrania en agosto de 1940. Lo condenaron a muerte en 1941 y en 1942 la pena se conmutó por veinte años. Murió el 26 de enero de 1943 en la prisión de Sarátov, a los cincuenta y cinco años; el certificado decía neumonía, y varios autores sostienen que la causa real fue la inanición. Para entonces Leningrado llevaba más de un año sitiada: ochocientos setenta y dos días de cerco y unas setecientas mil personas muertas de hambre.",
+      "Dentro de la ciudad cercada, el personal del instituto se turnó para custodiar la colección. Aleksandr Shchukin, especialista en cacahuete, de cincuenta y ocho años, apareció muerto en su mesa el día de Navidad de 1941 con unas almendras sin comer en la mano. Una placa junto a la entrada lleva los nombres de nueve empleados que murieron de inanición antes que tocar el archivo; una investigación reciente eleva a diecinueve los botánicos muertos dentro del edificio. No estaban guardando comida. Estaban guardando las siembras de después. El instituto lleva el nombre de Vavílov desde 1969."
+    ],
+    "question": "¿Qué cuidarías sin esperar a verlo dar fruto?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El archivo que nadie se comió",
+    "subtitle": "Leningrado, 1941-1943",
+    "body": "Vavílov reunió un cuarto de millón de muestras de semillas y murió de hambre en una prisión soviética en 1943. En Leningrado sitiada, su equipo montó guardia sobre la colección. Una placa en la entrada lleva los nombres de nueve que murieron sin tocarla."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Vavilov",
+      "#HistoriaDeLaCiencia",
+      "#Semillas"
+    ],
+    "extended": [
+      "#Botanica",
+      "#Leningrado",
+      "#SegundaGuerraMundial",
+      "#Genetica",
+      "#Agricultura",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Vavílov hizo 115 expediciones a 64 países recogiendo 380.000 muestras de semillas, granos, frutos, frutos secos y tubérculos; en 1939 dirigía una red de 25.000 trabajadores. Fue detenido en Ucrania en 1940 por agentes de seguridad soviéticos y murió de hambre en enero de 1943, a los 55 años. El sitio nazi de Leningrado duró 872 días y terminó en enero de 1944; unas 700.000 personas murieron de hambre durante el cerco. Nueve científicos del instituto murieron antes que consumir la colección de semillas, entre ellos especialistas en arroz, patata y cacahuete. Lysenko llegó a dirigir la agricultura soviética, proscribió la investigación genética y denunció a los genetistas como espías y traidores.",
+      "source": "Science History Institute, «The Tragedy of the World's First Seed Bank»",
+      "url": "https://www.sciencehistory.org/stories/magazine/the-tragedy-of-the-worlds-first-seed-bank/"
+    },
+    {
+      "claim": "Nikolái Ivánovich Vavílov nació el 25 de noviembre de 1887 en Moscú y murió el 26 de enero de 1943 en Sarátov, a los 55 años. Identificó ocho centros primarios de origen de las plantas cultivadas y formuló la ley de las series homólogas en la variación. En 1933 su Instituto de Industria Vegetal de Leningrado reunía más de 148.000 ejemplares. Lysenko, partidario de tesis lamarckianas y respaldado por Stalin, lo hizo apartar de la dirección del instituto en 1936. El NKVD lo detuvo en Ucrania en agosto de 1940; fue condenado a muerte en 1941 y la pena se conmutó por veinte años de prisión en 1942. Murió en la cárcel de Sarátov en 1943 y algunos autores sostienen que la causa real de la muerte fue la inanición.",
+      "source": "Wikipedia en inglés, artículo «Nikolai Vavilov»",
+      "url": "https://en.wikipedia.org/wiki/Nikolai_Vavilov"
+    },
+    {
+      "claim": "El Instituto de Investigación de Industria Vegetal N. I. Vavílov, en San Petersburgo, ocupa un edificio de la plaza de San Isaac y conserva una colección de germoplasma de 250.000 ejemplares vegetales. La colección sobrevivió al sitio de Leningrado (1941-1944), durante el cual hubo que custodiarla porque era un objetivo posible para una población hambrienta. Junto a la entrada hay una placa con los nombres de los 9 empleados que murieron de hambre durante el sitio antes que comerse la colección. Vavílov fue detenido en agosto de 1940, condenado a muerte por cargos poco claros y murió de hambre en prisión a principios de 1943; fue rehabilitado tras la muerte de Stalin y el instituto recibió oficialmente su nombre en 1969.",
+      "source": "John Innes Centre (Norwich), entrada de blog institucional «A Visit to Vavilov»",
+      "url": "https://www.jic.ac.uk/blog/a-visit-to-vavilov/"
+    },
+    {
+      "claim": "Al comenzar el sitio el instituto guardaba un cuarto de millón de accesiones; unas 40.000 se perdieron porque las comieron los roedores o porque se les pasó la ventana de germinación, y el grueso de la colección central quedó intacto. Aleksandr Shchukin, botánico de 58 años especialista en cacahuete, murió el día de Navidad de 1941 y fue hallado en su escritorio con unas almendras sin comer. Al menos diecinueve botánicos murieron dentro del instituto teniendo a su alcance semillas, frutos secos y tubérculos. El instituto estaba en la calle Herzen, en un antiguo palacio del centro de la ciudad. Vavílov fue detenido en agosto de 1940 por el NKVD bajo acusación de espionaje y murió el 26 de enero de 1943 en el hospital de la prisión: oficialmente de neumonía bronquial, en realidad de hambre.",
+      "source": "London Review of Books, Jessie Childs, «Resident Bean Expert: Leningrad under Siege», vol. 47 n.º 2",
+      "url": "https://www.lrb.co.uk/the-paper/v47/n02/jessie-childs/resident-bean-expert"
+    }
+  ],
+  "do_not_use": [
+    "decir que Vavílov murió en el sitio de Leningrado: murió el 26 de enero de 1943 en la prisión de Sarátov, a cientos de kilómetros de la ciudad cercada",
+    "dar por cerrada la cifra de nueve muertos: nueve son los nombres de la placa del instituto, pero la investigación recogida por la London Review of Books cuenta al menos diecinueve botánicos muertos dentro del edificio",
+    "afirmar que no se perdió ni una semilla: unas 40.000 accesiones se perdieron durante el cerco por roedores o por pasárseles la ventana de germinación; lo que no ocurrió es que el personal se las comiera",
+    "mezclar las cifras de la colección como si fueran la misma: más de 148.000 ejemplares en 1933, alrededor de un cuarto de millón de accesiones al empezar el sitio, y 380.000 muestras recogidas en el conjunto de las expediciones",
+    "dar la inanición como causa oficial de la muerte de Vavílov: el certificado dice neumonía bronquial y la inanición es lo que sostienen los investigadores, no el documento",
+    "decir que Lysenko ordenó su ejecución: lo que consta es que lo apartó de la dirección en 1936 y que la campaña contra los genetistas precedió a la detención del NKVD en agosto de 1940",
+    "presentar la sentencia de muerte como cumplida: se dictó en 1941 y en 1942 se conmutó por veinte años de prisión",
+    "llamar al edificio «el instituto Vavílov» al hablar de 1941: recibió oficialmente su nombre en 1969, después de su rehabilitación",
+    "atribuir a Shchukin la especialidad equivocada: era especialista en cacahuete, y lo que se halló junto a él fueron almendras sin comer"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
