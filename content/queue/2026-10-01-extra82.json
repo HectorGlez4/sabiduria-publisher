@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-03-extra41",
+  "id": "2026-10-01-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Primo Levi y el Shemà de 1946",
     "hook": "El poema que abre el libro no es un lamento. Es una orden calcada de una oración judía, y no acaba donde suele citarse: acaba en una maldición.",
@@ -21,12 +21,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#PrimoLevi", "#SiEstoEsUnHombre", "#Memoria"],
-    "extended": ["#Citas", "#Literatura", "#Italia", "#Poesia", "#Historia", "#SigloXX", "#Libros"]
+    "topic": [
+      "#PrimoLevi",
+      "#SiEstoEsUnHombre",
+      "#Memoria"
+    ],
+    "extended": [
+      "#Citas",
+      "#Literatura",
+      "#Italia",
+      "#Poesia",
+      "#Historia",
+      "#SigloXX",
+      "#Libros"
+    ]
   },
   "sources": [
     {
@@ -71,5 +83,11 @@
     "No traducir «Meditate che questo è stato» como «pensad que esto pudo pasar». El verbo va en pasado y es afirmativo: esto ha sido. El poema no plantea una hipótesis.",
     "No reproducir el poema completo. Sigue en derechos de autor; aquí se cita un fragmento breve con atribución de obra y fecha, y el resto se describe."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-02T03:26:00Z",
+  "results": {}
 }
