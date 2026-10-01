@@ -72,13 +72,16 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
+  "status": "blocked",
   "results": {
     "facebook_reel": {
       "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
     }
   },
   "reemision_de": "2026-08-26-noche",
-  "attempts": 2,
-  "last_attempt": "2026-10-01T14:41:37.315922+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-10-01T20:28:57.489487+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: facebook_reel: HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+  ]
 }
