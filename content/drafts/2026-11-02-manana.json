@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-02-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Inge Lehmann y el núcleo interno de la Tierra",
+    "hook": "El artículo que descubrió el centro sólido de la Tierra tiene un título de dos caracteres: una letra y un apóstrofo.",
+    "body": [
+      "El 17 de junio de 1929, a las 10:17 de la mañana, un terremoto de magnitud 7,8 sacudió Murchison, en la Isla Sur de Nueva Zelanda. Sus ondas atravesaron el planeta y quedaron registradas en sismógrafos de medio mundo. En Copenhague las estudió Inge Lehmann, jefa del departamento de sismología del Instituto Geodésico danés desde 1928. Anotaba cada llegada en tarjetas de cartón y las clasificaba en cajas de avena, porque no había otra máquina que su cabeza.",
+      "Entonces se creía que el núcleo de la Tierra era una sola esfera fundida. Pero algunas ondas aparecían donde, según ese modelo, no debían llegar. En 1936 Lehmann propuso la explicación: dentro del núcleo líquido hay otro, sólido, que las devuelve. Lo publicó en un trabajo titulado P', el nombre de la onda que estudiaba. Gutenberg y Richter aceptaron la idea en pocos años; en 1938 calcularon para ese núcleo interno un radio de unos 1.200 kilómetros.",
+      "La confirmación por cálculo llegó en 1971. Ese mismo año recibió la Medalla William Bowie, la mayor distinción de la Unión Geofísica Americana, y fue la primera mujer en obtenerla. Había nacido en Copenhague en 1888 y murió allí en 1993, a los ciento cuatro años. Su conclusión de 1936 no proclamaba nada: decía esperar que otros investigadores consideraran sus sugerencias."
+    ],
+    "question": "¿Cuántos descubrimientos esperan todavía en una caja de cartón?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La mujer que vio el centro de la Tierra",
+    "subtitle": "Copenhague, 1936",
+    "body": "Con las ondas de un terremoto de Nueva Zelanda, fichas de cartón y cajas de avena, Inge Lehmann dedujo que el núcleo de la Tierra tiene dentro otro, sólido. Lo publicó en un artículo titulado P'. El cálculo le dio la razón en 1971."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#IngeLehmann",
+      "#Sismologia",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Geofisica",
+      "#NucleoTerrestre",
+      "#Terremotos",
+      "#Ciencia",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El terremoto de Murchison ocurrió el 17 de junio de 1929 a las 10:17, con magnitud Ms 7,8 (Mw 7,3), y causó 17 muertes, sobre todo por deslizamientos. Lehmann, analizando las ondas de este terremoto que aparecían en la zona de sombra, demostró que debía haber un núcleo interno sólido que reflejaba las ondas P.",
+      "source": "Wikipedia en inglés, artículo «1929 Murchison earthquake»",
+      "url": "https://en.wikipedia.org/wiki/1929_Murchison_earthquake"
+    },
+    {
+      "claim": "Lehmann estudió las ondas del terremoto de Nueva Zelanda de 1929 y publicó en 1936 el trabajo titulado P'. Gutenberg lo aprobó de inmediato; Jeffreys dudó al principio y terminó aceptándolo. En 1938 Gutenberg y Richter fijaron el radio del núcleo interno en unos 1.200 km. La conclusión de P' expresa la esperanza de que otros investigadores consideren las sugerencias hechas. Recibió la Medalla Bowie, la máxima distinción de la Unión Geofísica Americana.",
+      "source": "Instituto Niels Bohr, Universidad de Copenhague, «'P' eller opdagelsen af Jordens kerne»",
+      "url": "https://nbi.ku.dk/english/www/inge/lehmann/jordens-kerne/"
+    },
+    {
+      "claim": "Inge Lehmann nació el 13 de mayo de 1888 en Copenhague y murió el 21 de febrero de 1993, a los 104 años. Fue jefa del departamento de sismología del Geodætisk Institut de 1928 a 1953. Su trabajo P' apareció en 1936 en las Publications du Bureau Central Séismologique International. Los cálculos por computadora confirmaron su interpretación en 1971, año en que recibió la Medalla William Bowie, primera mujer en obtenerla.",
+      "source": "Wikipedia en inglés, artículo «Inge Lehmann»",
+      "url": "https://en.wikipedia.org/wiki/Inge_Lehmann"
+    },
+    {
+      "claim": "El trabajo P' se publicó en 1936 en Bureau Central Seismologique International, Travaux Scientifiques (A), páginas 14-88. Tras su maestría de 1928, Lehmann fue jefa del departamento de sismología del Real Instituto Geodésico danés, donde siguió hasta su retiro. Vivió 104 años (1888-1993).",
+      "source": "European Geosciences Union, blog de la División de Sismología, Katinka Tuinstra (adaptado de Matthew Kemp)",
+      "url": "https://blogs.egu.eu/divisions/sm/?p=10703"
+    },
+    {
+      "claim": "Lehmann anotaba sus observaciones en tarjetas de cartón y las clasificaba colocándolas en distintas cajas de avena. Tras estudiar los registros de un gran terremoto de Nueva Zelanda de 1929, concluyó que la Tierra tiene un núcleo interno sólido rodeado de un núcleo externo líquido. En 1971 fue la primera mujer en recibir la Medalla William Bowie.",
+      "source": "The Christian Science Monitor, «How Inge Lehmann discovered the truth about the Earth's core», 13 de mayo de 2015",
+      "url": "https://proof.csmonitor.com/Science/Science-Notebook/2015/0513/How-Inge-Lehmann-discovered-the-truth-about-the-Earth-s-core"
+    }
+  ],
+  "do_not_use": [
+    "decir que P' es «el título más corto de la historia de la ciencia»: circula en divulgación, pero no se pudo abrir ninguna fuente que lo sostenga más allá de la sismología, y aun ahí es una ponderación, no un dato",
+    "poner entre comillas la frase sobre «cuántos hombres incompetentes» tuvo que competir: aparece en blogs de divulgación sin fuente primaria localizada en esta ejecución",
+    "dar 7,3 o 7,8 sin precisar la escala: la magnitud es Ms 7,8 y Mw 7,3; el cuerpo usa 7,8",
+    "decir que el núcleo interno quedó demostrado en 1936: en 1936 fue una hipótesis; la aceptaron Gutenberg y Richter en dos o tres años y la confirmación por cálculo es de 1971",
+    "confundir el núcleo interno con la discontinuidad de Lehmann: esta es otro hallazgo suyo, posterior, a entre 190 y 250 km de profundidad",
+    "fechar su jefatura en 1925: en 1925 empezó como ayudante de Nørlund; jefa del departamento de sismología lo fue desde 1928"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

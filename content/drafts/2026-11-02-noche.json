@@ -1,0 +1,75 @@
+{
+  "id": "2026-11-02-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Vindolanda y la invitación de Claudia Severa",
+    "hook": "La letra de mujer más antigua que se conserva en latín no está en un templo ni en un decreto. Está en una invitación de cumpleaños.",
+    "body": [
+      "Vindolanda era un fuerte romano en el norte de Inglaterra, en la frontera del Imperio. En marzo de 1973 el arqueólogo Robin Birley encontró allí las primeras tablillas: hojas de madera de abedul, aliso y roble, finas como una postal, escritas con tinta de carbono. El suelo sin oxígeno las había conservado durante diecinueve siglos. Hoy pasan de mil setecientas, casi todas de entre los años 95 y 105, y casi todas en el Museo Británico.",
+      "Una de ellas la mandó Claudia Severa, esposa de Elio Broco, comandante de otro fuerte cercano, a Sulpicia Lepidina, esposa del prefecto de Vindolanda. La invita a su cumpleaños, el 11 de septiembre, para que el día le resulte más agradable con su llegada, y le manda saludos de su marido y de su hijo pequeño. Un escriba redactó el cuerpo de la carta. Las últimas líneas las añadió Severa de su puño y letra.",
+      "Esas líneas dicen: «Te esperaré, hermana. Adiós, hermana, alma mía queridísima». No eran hermanas: los nombres indican familias distintas, y la palabra era la de una amistad. Son, hasta donde se sabe, el ejemplo más antiguo conocido de latín escrito por una mujer. Del Imperio que dejó códigos, calzadas y anales, lo primero que conservamos de mano femenina es una despedida entre dos amigas en la frontera."
+    ],
+    "question": "¿Qué dirían de nosotros las notas que nadie pensó guardar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Te esperaré, hermana",
+    "subtitle": "Vindolanda, hacia el año 100",
+    "body": "En una tablilla de madera hallada en un fuerte romano del norte de Inglaterra, Claudia Severa invita a su amiga Lepidina a su cumpleaños. Las últimas líneas las escribió ella misma: son el latín escrito por una mujer más antiguo que se conoce."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Vindolanda",
+      "#AntiguaRoma",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#ImperioRomano",
+      "#Britania",
+      "#MujeresEnLaHistoria",
+      "#Latin",
+      "#MuseoBritanico",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Tab. Vindol. 291, carta de Claudia Severa a Sulpicia Lepidina, fechada en 97-105 d.C.: «Claudia Severa a su Lepidina, saludos. El 11 de septiembre (III Idus Septembres), hermana, para el día de la celebración de mi cumpleaños, te invito de corazón a que procures venir a nosotros, para hacerme el día más agradable con tu llegada… Saluda a tu Cerial. Mi Elio y mi hijito le mandan saludos. Te esperaré, hermana. Adiós, hermana, alma mía queridísima, así prospere yo, y salve.» El saludo final está en la mano de Severa y es uno de los ejemplos más antiguos conocidos de latín escrito por una mujer. Museo Británico 1986,1001.64.",
+      "source": "Roman Inscriptions of Britain online, Tab. Vindol. 291, «Birthday Invitation of Sulpicia Lepidina»",
+      "url": "https://romaninscriptionsofbritain.org/inscriptions/TabVindol291"
+    },
+    {
+      "claim": "Robin Birley descubrió las tablillas en marzo de 1973 en el fuerte romano de Vindolanda; se conservaron por las condiciones anaeróbicas del suelo. Son fragmentos de tablillas de hoja de madera fina, del tamaño de una postal, de abedul, aliso y roble local, escritas con tinta de carbono. A 2023 se han hallado más de 1.700, casi todas de 95-105 d.C. La mayoría están en el Museo Británico. La invitación de Claudia Severa es quizá el documento más antiguo conservado escrito en latín por una mujer.",
+      "source": "Wikipedia en inglés, artículo «Vindolanda tablets»",
+      "url": "https://en.wikipedia.org/wiki/Vindolanda_tablets"
+    },
+    {
+      "claim": "La tablilla, del tamaño de una postal y escrita con tinta de carbono sobre madera local, data de hacia el año 100. La mayor parte de la carta está escrita con letra profesional; Claudia añadió de su mano un saludo personal, el ejemplo más antiguo conocido de latín escrito por una mujer.",
+      "source": "Archaeology (Archaeological Institute of America), «Roman Writing Tablet», sección Artifacts, septiembre-octubre de 2013",
+      "url": "https://archaeology.org/issues/online/collection/writing-tablet-roman-fort-northumberland/"
+    },
+    {
+      "claim": "Claudia Severa era esposa de Elio Broco, comandante de un fuerte no identificado cerca de Vindolanda. Su nombre indica que probablemente no estaba emparentada con Sulpicia Lepidina, aunque la llama a menudo hermana. Se conserva un fragmento de otra carta suya. La invitación la adquirió el Museo Británico en 1986.",
+      "source": "Wikipedia en inglés, artículo «Claudia Severa»",
+      "url": "https://en.wikipedia.org/wiki/Claudia_Severa"
+    }
+  ],
+  "do_not_use": [
+    "decir que Severa y Lepidina eran hermanas: «soror» es tratamiento de amistad; sus nombres apuntan a familias distintas (algunas divulgaciones, incluida la revista Archaeology, dicen «su hermana» por error)",
+    "afirmar sin matiz que es la escritura femenina más antigua «del mundo»: lo que se sostiene es que es el ejemplo más antiguo conocido de latín escrito por una mujer, y las propias fuentes lo formulan con cautela",
+    "decir que Severa escribió toda la carta: el cuerpo es de un escriba; de su mano son solo las líneas finales",
+    "presentar las tablillas como documentos del Muro de Adriano: son en su mayoría de 95-105 d.C.; la relación cronológica con la construcción del muro no se verificó en esta ejecución",
+    "dar 1973 como fecha de hallazgo de esta tablilla concreta: 1973 es el primer hallazgo de tablillas en Vindolanda; la fecha de excavación de la 291 no se verificó",
+    "dar el nombre del fuerte que mandaba Elio Broco: no está identificado con seguridad"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

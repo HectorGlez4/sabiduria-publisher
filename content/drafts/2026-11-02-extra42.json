@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-02-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Martin Luther King y la carta desde la cárcel de Birmingham",
+    "hook": "«La injusticia en cualquier lugar es una amenaza para la justicia en todas partes.»\n— Martin Luther King Jr., Carta desde la cárcel de Birmingham (1963)",
+    "body": [
+      "King fue detenido el 12 de abril de 1963, Viernes Santo, en Birmingham, Alabama, por desafiar la prohibición de manifestarse. En la celda le llegó un periódico con un texto de ocho clérigos blancos de la ciudad. Admitían que había injusticias, pero pedían que la lucha contra la segregación se librara en los tribunales y no en la calle, y presentaban a King y a los suyos como gente de fuera que venía a causar problemas.",
+      "La respuesta, fechada el 16 de abril, empieza por ahí. King vivía en Atlanta, y contesta que está en Birmingham porque la injusticia está allí, que no puede quedarse sentado en Atlanta sin que le importe lo que pasa en Birmingham. Luego viene la frase, y la que la explica: estamos atrapados en una red ineludible de reciprocidad, atados en una sola prenda del destino. La acusación de ser forastero se le vuelve en contra a quien la hace.",
+      "No tenía papel. Empezó en los márgenes del periódico, siguió en recortes que le pasó un preso de confianza y terminó en blocs que le dejaron sus abogados. Escribió que nunca había escrito una carta tan larga, y se preguntó qué otra cosa puede hacer uno solo en una celda estrecha. Circuló en copias mimeografiadas, la reprodujeron revistas y folletos, y en 1964 la revisó para su libro Por qué no podemos esperar."
+    ],
+    "question": "¿Hasta dónde llega lo que no nos pasa a nosotros?",
+    "quote": {
+      "text": "La injusticia en cualquier lugar es una amenaza para la justicia en todas partes.",
+      "author": "Martin Luther King Jr.",
+      "work": "Carta desde la cárcel de Birmingham (16 de abril de 1963)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MartinLutherKing",
+      "#DerechosCiviles",
+      "#Justicia"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Historia",
+      "#Birmingham",
+      "#NoViolencia",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La carta está fechada el 16 de abril de 1963, tras la detención de King el 12 de abril (Viernes Santo) por violar la ley de Alabama contra las manifestaciones. Respondía a ocho clérigos de Birmingham que habían publicado su crítica en el Birmingham News. King la empezó en los márgenes del periódico, la continuó en recortes que le dio un preso de confianza negro y la terminó en blocs que le dejaron sus abogados. En ella escribe que nunca había escrito una carta tan larga y se pregunta qué otra cosa puede hacer uno cuando está solo en una celda estrecha. Circuló primero en copia mimeografiada, luego como folleto del American Friends Service Committee y en revistas como Christian Century, el New York Post y Ebony; King la revisó para su libro Why We Can't Wait (1964).",
+      "source": "The Martin Luther King, Jr. Research and Education Institute, Universidad de Stanford, King Encyclopedia, «Letter from Birmingham Jail»",
+      "url": "https://kinginstitute.stanford.edu/encyclopedia/letter-birmingham-jail"
+    },
+    {
+      "claim": "King fue detenido el 12 de abril de 1963. Ocho clérigos blancos de Alabama publicaron «A Call for Unity»: admitían que existían injusticias sociales, pero sostenían que la segregación debía combatirse solo en los tribunales y no en las calles, y describían a King y a los suyos como «forasteros». En la carta, King escribe: «Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality, tied in a single garment of destiny». La carta completa se incluyó, con retoques menores, en Why We Can't Wait (1964).",
+      "source": "Wikipedia en inglés, artículo «Letter from Birmingham Jail»",
+      "url": "https://en.wikipedia.org/wiki/Letter_from_Birmingham_Jail"
+    },
+    {
+      "claim": "Texto de la carta: «I am in Birmingham because injustice is here. I cannot sit idly by in Atlanta and not be concerned about what happens in Birmingham. Injustice anywhere is a threat to justice everywhere.»",
+      "source": "American Heritage, «I am in Birmingham Because Injustice is Here»",
+      "url": "https://www.americanheritage.com/i-am-birmingham-because-injustice-here"
+    },
+    {
+      "claim": "La carta de King desde la cárcel de Birmingham dice: «Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality, tied in a single garment of destiny.»",
+      "source": "Michigan State University, College of Communication Arts and Sciences, «Modern Lessons from the Letter from Birmingham Jail»",
+      "url": "https://comartsci.msu.edu/about/newsroom/news/modern-lessons-letter-birmingham-jail"
+    }
+  ],
+  "do_not_use": [
+    "fechar la frase en el discurso «I Have a Dream» o en otra intervención pública: está en la carta del 16 de abril de 1963; el discurso de Washington es de agosto de ese año",
+    "decir que la carta se escribió en papel higiénico: las fuentes institucionales hablan de márgenes de periódico, recortes de papel y blocs de los abogados",
+    "decir que la carta se envió a los ocho clérigos y que estos respondieron: King la dirigió a ellos, pero lo verificado es su difusión pública en copias, folletos y revistas",
+    "citar la versión de Why We Can't Wait (1964) como texto de la cárcel sin advertir que King la revisó para el libro",
+    "presentar la traducción española como texto de King: es traducción del inglés; las versiones publicadas varían («en cualquier parte», «dondequiera que sea»)",
+    "afirmar que el comunicado de los clérigos se publicó el 12 de abril: la fecha de su publicación no quedó fijada con seguridad en esta ejecución (el King Institute la sitúa en el Birmingham News, sin que se pudiera confirmar el día exacto)"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

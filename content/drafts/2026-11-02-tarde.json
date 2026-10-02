@@ -1,0 +1,83 @@
+{
+  "id": "2026-11-02-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Camus y el discurso del banquete Nobel de 1957",
+    "hook": "«Cada generación, sin duda, se cree destinada a rehacer el mundo. La mía sabe, sin embargo, que no lo rehará. Pero su tarea es quizá mayor. Consiste en impedir que el mundo se deshaga.»\n— Albert Camus, discurso del banquete Nobel, Estocolmo (1957)",
+    "body": [
+      "Camus lo dijo el 10 de diciembre de 1957 en el ayuntamiento de Estocolmo, en el banquete de los premios Nobel. Tenía cuarenta y cuatro años. No habló en nombre propio sino de una generación concreta: la de los nacidos al empezar la Primera Guerra Mundial, que tenían veinte años cuando Hitler llegó al poder y que completaron su educación con la guerra de España, la Segunda Guerra Mundial, los campos de concentración y una Europa de tortura y cárceles.",
+      "Esos hombres, dijo, tenían que criar ahora a sus hijos y hacer su obra en un mundo amenazado por la destrucción nuclear. Por eso no prometió rehacer nada. Redujo el oficio del escritor a dos compromisos difíciles de cumplir: no mentir sobre lo que uno sabe y resistir a la opresión. Y añadió que el escritor no puede ponerse al servicio de quienes hacen la historia, sino de quienes la padecen.",
+      "La frase empezó a circular enseguida, y a deformarse. Un periódico de Iowa la citaba en 1958; ese mismo año el novelista Bernard Malamud la adaptó a su propio oficio y la convirtió en la misión del escritor de impedir que la civilización se destruya. En el original no hay heroísmo. Hay una generación que renuncia a la utopía y se queda con una tarea más modesta y más urgente: que lo que existe no se venga abajo."
+    ],
+    "question": "¿Qué te toca a ti impedir que se deshaga?",
+    "quote": {
+      "text": "Cada generación, sin duda, se cree destinada a rehacer el mundo. La mía sabe, sin embargo, que no lo rehará. Pero su tarea es quizá mayor. Consiste en impedir que el mundo se deshaga.",
+      "author": "Albert Camus",
+      "work": "Discurso del banquete Nobel, Estocolmo (1957)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlbertCamus",
+      "#PremioNobel",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Filosofia",
+      "#SigloXX",
+      "#Reflexiones",
+      "#Escritores",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés del discurso del banquete Nobel de Camus, 10 de diciembre de 1957, ayuntamiento de Estocolmo: «Chaque génération, sans doute, se croit vouée à refaire le monde. La mienne sait pourtant qu'elle ne le refera pas. Mais sa tâche est peut-être plus grande. Elle consiste à empêcher que le monde se défasse.»",
+      "source": "aphelis.net, «Albert Camus, banquet speech» (transcripción del texto francés)",
+      "url": "https://aphelis.net/albert-camus-banquet-speech/"
+    },
+    {
+      "claim": "La frase procede del discurso del banquete Nobel del 10 de diciembre de 1957 en el ayuntamiento de Estocolmo; las versiones francesa e inglesa son las de la Fundación Nobel. Un periódico de Des Moines la citó en febrero de 1958 como «keeping the world from destroying itself»; Bernard Malamud la adaptó a los escritores en una entrevista de septiembre de 1958 con el New York Post: «keep civilization from destroying itself». A continuación, Camus describe a su generación como heredera de una historia corrompida, con revoluciones caídas, técnica enloquecida y dioses muertos.",
+      "source": "Quote Investigator (Garson O'Toole), «The Task of My Generation Consists in Preventing the World from Destroying Itself», 7 de noviembre de 2019",
+      "url": "https://quoteinvestigator.com/2019/11/07/preventing/"
+    },
+    {
+      "claim": "En el discurso del banquete Nobel de 1957, Camus dice que cada generación se cree llamada a reformar el mundo y que la suya sabe que no lo hará; describe a los hombres nacidos al comienzo de la Primera Guerra Mundial, que tenían veinte años cuando Hitler llegó al poder, que conocieron la guerra civil española, la Segunda Guerra Mundial, el mundo de los campos de concentración y una Europa de tortura y cárceles, y que deben criar a sus hijos en un mundo amenazado por la destrucción nuclear. El escritor no puede ponerse al servicio de quienes hacen la historia, sino de quienes la sufren; la nobleza de su oficio se apoya en dos compromisos: negarse a mentir sobre lo que sabe y resistir a la opresión.",
+      "source": "Encyclopedia.com, «Camus: Banquet Speech» (texto inglés de la Fundación Nobel)",
+      "url": "https://www.encyclopedia.com/arts/culture-magazines/camus-banquet-speech"
+    },
+    {
+      "claim": "Camus supo el 16 de octubre de 1957 que había ganado el Nobel de Literatura y pronunció su discurso el 10 de diciembre de 1957 en Estocolmo, a los 44 años.",
+      "source": "ActuaLitté, «Albert Camus, prix Nobel : les vrais artistes ne méprisent rien», 10 de enero de 2020",
+      "url": "https://actualitte.com/article/9595/vie-litteraire/albert-camus-prix-nobel-les-vrais-artistes-ne-meprisent-rien"
+    },
+    {
+      "claim": "Gallimard publicó en 1958 los Discours de Suède, que reúnen el discurso del banquete del 10 de diciembre de 1957 en el ayuntamiento de Estocolmo y la conferencia «L'artiste et son temps» del 14 de diciembre de 1957 en la Universidad de Upsala.",
+      "source": "LibraryThing, ficha de «Discours de Suède» (Albert Camus)",
+      "url": "https://www.librarything.com/work/5631344"
+    }
+  ],
+  "do_not_use": [
+    "atribuir a esta pieza la frase «En medio del invierno descubrí que había en mí un verano invencible»: es de Camus, pero del ensayo «Retour à Tipasa» (L'Été, 1954), no del discurso; y no se pudo abrir en esta ejecución una edición fiable con el texto francés",
+    "usar la carta «Querido…: en medio del odio descubrí que había en mí un amor invencible…» que circula firmada por Camus: es una amplificación apócrifa; solo la frase del verano invencible es suya (servicio de consulta de bibliotecas públicas de Finlandia, kirjastot.fi)",
+    "presentar la versión de Malamud («el escritor debe impedir que la civilización se destruya») como palabras de Camus: es una adaptación de 1958",
+    "confundir el discurso del banquete (10 de diciembre, Estocolmo) con la conferencia «El artista y su tiempo» (14 de diciembre, Upsala); los dos se publicaron juntos en Discours de Suède (Gallimard, 1958)",
+    "dar la traducción española como texto de Camus: es traducción del francés; las versiones publicadas varían («rehacer», «reformar»; «se deshaga», «se destruya»)",
+    "decir que Camus habló de sí mismo como héroe o de su generación como víctima: el discurso se presenta expresamente como un compromiso, no como un mérito"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
