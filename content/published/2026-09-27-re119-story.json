@@ -68,17 +68,23 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
+  "status": "published",
   "results": {
     "facebook_story": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "2026100031439455",
+      "photo_id": "1111307485027244",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-02T12:52:27.220660+00:00"
     },
     "instagram_story": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "18137470885712456",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-02T12:52:39.351832+00:00"
     }
   },
   "publish_at": "2026-09-28T04:26:00Z",
   "reemision_de": "2026-09-06-extra77",
-  "attempts": 1,
   "last_attempt": "2026-10-02T07:33:12.221823+00:00"
 }
