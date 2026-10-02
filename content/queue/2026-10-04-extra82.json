@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-24-tarde",
+  "id": "2026-10-04-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Lucrecio y el naufragio que se mira desde la orilla",
     "hook": "Se cita como prueba de que al ser humano le gusta ver el desastre ajeno desde lugar seguro. Lucrecio lo desmiente en el verso siguiente, y ese verso casi nunca se copia.",
@@ -90,5 +90,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-05T02:26:00Z",
+  "results": {}
 }

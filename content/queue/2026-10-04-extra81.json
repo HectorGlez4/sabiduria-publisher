@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-24-extra41",
+  "id": "2026-10-04-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Nguyễn Du y el cierre del Truyện Kiều",
     "hook": "Tres mil doscientos versos contando cómo el talento de una mujer la fue destruyendo. Y al final, el poeta pone el talento en tercer lugar.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "Nguyễn Du, Vietnam",
     "subtitle": "Los versos 3251 y 3252 de un poema de 3.254",
     "body": "La raíz del bien está en nuestro propio corazón; esa palabra, corazón, vale tres veces la palabra talento."
@@ -90,5 +90,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-04T22:26:00Z",
+  "results": {}
 }
