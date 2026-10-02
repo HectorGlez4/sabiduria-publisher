@@ -1,0 +1,75 @@
+{
+  "id": "2026-11-03-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Chien-Shiung Wu y el cobalto 60 de 1956",
+    "hook": "En 1957 el Nobel de Física premió una predicción. La mujer que la comprobó no estaba en la lista.",
+    "body": [
+      "En junio de 1956 dos físicos teóricos, Tsung-Dao Lee y Chen-Ning Yang, enviaron a la Physical Review una pregunta incómoda: nadie había comprobado si la naturaleza distingue la izquierda de la derecha en las desintegraciones radiactivas. Se daba por hecho que no. A la idea se la llamaba conservación de la paridad, y llevaba treinta años sin discutirse. Richard Feynman apostó cincuenta dólares a que no se violaba.",
+      "La que se puso a comprobarlo fue Chien-Shiung Wu, profesora de Columbia, nacida en China en 1912 y llegada a Estados Unidos en 1936. Con cuatro investigadores del National Bureau of Standards de Washington enfrió núcleos de cobalto 60 casi hasta el cero absoluto y los alineó con un imán. Entre Navidad de 1956 y Año Nuevo vio el resultado: los electrones salían más en la dirección contraria al giro de los núcleos. La naturaleza no era simétrica. Columbia lo anunció en conferencia de prensa el 15 de enero de 1957.",
+      "Ese mismo año Lee y Yang recibieron el Nobel de Física por su predicción. Wu no. Ella recibió en 1975 la Medalla Nacional de Ciencia y en 1978 fue la primera galardonada del Premio Wolf de Física. Feynman perdió su apuesta. La paridad, que se tenía por ley, resultó ser una costumbre que nadie había puesto a prueba."
+    ],
+    "question": "¿Qué das por hecho solo porque nadie lo ha comprobado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La física que comprobó lo que otros predijeron",
+    "subtitle": "Washington, Navidad de 1956",
+    "body": "Chien-Shiung Wu enfrió cobalto 60 casi hasta el cero absoluto y demostró que la naturaleza distingue la izquierda de la derecha. En 1957 el Nobel fue para los dos teóricos que lo habían propuesto. Ella no estaba en la lista."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ChienShiungWu",
+      "#Fisica",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#PremioNobel",
+      "#FisicaNuclear",
+      "#Columbia",
+      "#Ciencia",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Lee y Yang enviaron su artículo a Physical Review en junio de 1956 y se publicó en octubre de 1956; planteaba si la paridad se conserva en las interacciones débiles. El experimento de Wu en el National Bureau of Standards se realizó entre Navidad de 1956 y Año Nuevo y mostró que la emisión de partículas beta es mayor en la dirección opuesta al espín nuclear. Echó abajo un supuesto de treinta años. Feynman apostó 50 dólares a que la paridad no se violaba, y perdió.",
+      "source": "American Physical Society, APS News, «This Month in Physics History: December 1956 / January 1957: Fall of parity conservation», diciembre de 2001",
+      "url": "https://www.aps.org/apsnews/2001/12/fall-parity-conservation-1956"
+    },
+    {
+      "claim": "El experimento lo dirigió C.-S. Wu, de Columbia, con Ernest Ambler, Raymond Hayward, Dale Hoppes y Ralph Hudson, del NBS, en sus laboratorios de bajas temperaturas, con la muestra de cobalto 60 enfriada entre los polos de un imán; demostró la violación de la paridad en la interacción débil. Lee y Yang recibieron el Nobel de Física de 1957 por predecir el efecto.",
+      "source": "NIST (antes National Bureau of Standards), página histórica sobre el experimento de paridad de 1956",
+      "url": "https://www.nist.gov/node/425931"
+    },
+    {
+      "claim": "Wu nació en China en 1912, llegó a Estados Unidos en 1936 y se doctoró en Berkeley en 1940; entró en Columbia en 1944. Columbia anunció el resultado sobre la paridad en una conferencia de prensa el 15 de enero de 1957. Lee y Yang ganaron el Nobel de 1957; Wu recibió la Medalla Nacional de Ciencia en 1975 y el primer Premio Wolf de Física en 1978.",
+      "source": "Columbia University, C250, «Columbians Ahead of Their Time: Chien-Shiung Wu»",
+      "url": "https://c250.columbia.edu/c250_celebrates/remarkable_columbians/chien-shiung_wu.html"
+    },
+    {
+      "claim": "Wu (1912-1997) nació el 31 de mayo de 1912 en Taicang, Jiangsu, y murió en Nueva York el 16 de febrero de 1997; ganó el Premio Wolf de Física en 1978 y la Medalla Nacional de Ciencia.",
+      "source": "Atomic Heritage Foundation / National Museum of Nuclear Science & History, perfil de Chien-Shiung Wu",
+      "url": "https://ahf.nuclearmuseum.org/ahf/profile/chien-shiung-wu/"
+    }
+  ],
+  "do_not_use": [
+    "dar el año en que Wu presidió la American Physical Society: las fuentes discrepan (1973 en Columbia C250, 1975 en otras)",
+    "decir que Wu «fue excluida» del Nobel por ser mujer o por ser china como hecho probado: es una lectura extendida, pero los archivos de nominaciones no se consultaron en esta ejecución",
+    "decir que Wu demostró la violación de la paridad sola: el experimento fue con cuatro investigadores del NBS (Ambler, Hayward, Hoppes, Hudson)",
+    "dar una temperatura exacta del experimento: no se verificó en las fuentes abiertas; basta «casi el cero absoluto»",
+    "citar la cancelación del viaje de Wu a Ginebra y Asia como dato: aparece en resúmenes, no se abrió fuente que lo confirmara",
+    "usar el blog «Headlines & Heroes» de la Biblioteca del Congreso como fuente: la entrada sobre Wu fue retirada por problemas de citación"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

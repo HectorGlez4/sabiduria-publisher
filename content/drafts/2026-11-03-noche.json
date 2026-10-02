@@ -1,0 +1,70 @@
+{
+  "id": "2026-11-03-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Lalibela y las iglesias excavadas hacia abajo",
+    "hook": "La tradición dice que un rey talló once iglesias en la roca con ayuda de ángeles. Las piedras cuentan una historia más larga.",
+    "body": [
+      "Lalibela está en las tierras altas del norte de Etiopía, a unos quinientos kilómetros de Addis Abeba. Allí hay once iglesias medievales que no se construyeron: se excavaron. Los canteros cavaron zanjas en la roca y dejaron en medio un bloque que luego vaciaron por dentro hasta obtener muros, columnas y ventanas. La más conocida, Bete Giyorgis, tiene planta de cruz y se alza desde un pozo de unos once metros de profundidad. La Unesco la declaró patrimonio de la humanidad en 1978.",
+      "La tradición de la Iglesia etíope atribuye todo el conjunto al reinado del rey que da nombre al lugar, a finales del siglo XII o comienzos del XIII, y explica la rapidez de la obra por la ayuda de los ángeles. Hasta los ríos y colinas tienen nombres de Tierra Santa: un arroyo se llama Yordanos, el Jordán. El arqueólogo David Phillipson ha propuesto que el rey quiso hacer de Lalibela una Jerusalén alternativa, quizá después de que Saladino tomara la ciudad en 1187.",
+      "Las excavaciones dicen otra cosa sobre los plazos. Phillipson sitúa las estructuras más antiguas hacia los siglos VII u VIII, y no eran iglesias. Un equipo franco-etíope encontró bajo el conjunto restos de vida doméstica, hogares y cerámica anteriores al siglo XIII, y leyó en los cortes de la roca varias fases de obra. El rey no partió de cero: convirtió en santuario un lugar habitado desde mucho antes. Y el conjunto sigue cambiando, porque sigue en uso."
+    ],
+    "question": "¿Cuántas obras que atribuimos a una sola persona son en realidad de muchas generaciones?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Las iglesias que se excavaron hacia abajo",
+    "subtitle": "Lalibela, Etiopía",
+    "body": "Once iglesias talladas en un solo bloque de roca. La tradición las atribuye a un rey del siglo XII ayudado por ángeles. La arqueología ha encontrado debajo un lugar habitado siglos antes y varias fases de obra."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Lalibela",
+      "#Etiopia",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#HistoriaDeAfrica",
+      "#EdadMedia",
+      "#PatrimonioMundial",
+      "#Arquitectura",
+      "#Civilizaciones",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Lalibela tiene 11 iglesias medievales, todas talladas en la roca. La tradición atribuye su construcción al reinado del rey Lalibela, con ayuda de ángeles; Phillipson propone tres fases: estructuras más antiguas de los siglos VII-VIII, que no eran iglesias; basílicas de tres o cinco naves de los siglos XI-XII con rasgos heredados de Aksum; y una fase final bajo el rey Lalibela a finales del siglo XII. Bete Giyorgis, de planta cruciforme, se alza en un pozo de 11 metros. El rey habría convertido el sitio en un destino de peregrinación sustitutivo de Jerusalén, con nombres como Yordanos (Jordán) y Debra Zeit (monte de los Olivos), quizá a raíz de la toma de Jerusalén por Saladino en 1187.",
+      "source": "David W. Phillipson (Universidad de Cambridge), «Lalibela, Ethiopia: Rock-hewn churches», World Archaeology, 7 de julio de 2006",
+      "url": "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches"
+    },
+    {
+      "claim": "Lalibela, a unos 500 km al norte de Addis Abeba, es un conjunto de iglesias monolíticas talladas en la roca, patrimonio mundial de la Unesco desde 1978. Las excavaciones encontraron bajo el conjunto restos anteriores al siglo XIII con huesos de animales, hogares y cerámica de habitación doméstica; una élite ocupaba el sitio hacia los siglos X-XI y el rey Lalibela lo transformó en centro religioso en el siglo XIII. Según Bosc-Tiessé, el sitio siguió evolucionando hasta fechas muy recientes.",
+      "source": "Francis Lecompte, «In Ethiopia, Lalibela's Mysteries», CNRS News, 3 de diciembre de 2019",
+      "url": "https://news.cnrs.fr/node/1425"
+    },
+    {
+      "claim": "El análisis estratigráfico de los cortes, aberturas y escombreras de las iglesias de Lalibela indica que no responden a un plan único, sino a un centro ritual de larga vida rehecho continuamente a lo largo del tiempo.",
+      "source": "F.-X. Fauvelle-Aymar, L. Bruxelles, R. Mensan, C. Bosc-Tiessé, M.-L. Derat y E. Fritsch, «Rock-cut stratigraphy: sequencing the Lalibela churches», Antiquity 84 (326), 2010",
+      "url": "https://www.cambridge.org/core/journals/antiquity/article/rockcut-stratigraphy-sequencing-the-lalibela-churches/B53C45E7808B62840E6C5BF3F6380B88/share/f928b9832cd109d2b18726e245d437690e23c4c9"
+    }
+  ],
+  "do_not_use": [
+    "dar fechas exactas del reinado de Lalibela (p. ej. 1181-1221): circulan, pero no se abrió una fuente que las confirmara; las abiertas difieren entre finales del siglo XII (Phillipson) y el siglo XIII (CNRS)",
+    "afirmar que la hagiografía habla de 24 años de obra: no se verificó en una fuente abierta (Phillipson menciona el reinado del rey, de unos 25 años)",
+    "decir que las once iglesias se tallaron todas en el mismo momento o por un solo rey como hecho histórico: es la tradición; la arqueología muestra varias fases",
+    "presentar como seguro que la «Nueva Jerusalén» respondió a la caída de Jerusalén en 1187: Phillipson lo propone como probable",
+    "decir que las iglesias las construyeron los templarios o artesanos extranjeros: es una leyenda sin respaldo en las fuentes consultadas",
+    "dar la cronología de Phillipson (siglos VII-VIII) como consenso: el equipo franco-etíope fecha la ocupación de élite hacia los siglos X-XI; hay debate"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

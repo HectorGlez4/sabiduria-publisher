@@ -1,0 +1,84 @@
+{
+  "id": "2026-11-03-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Juvenal y la mente sana de la Sátira X",
+    "hook": "«Hay que rogar que haya una mente sana en un cuerpo sano.»\n— Juvenal, Sátiras, X, 356",
+    "body": [
+      "La frase está en el verso 356 de la Sátira X de Juvenal, un poeta romano que publicó sus dieciséis sátiras, en cinco libros, entre los años 100 y 130 aproximadamente. En latín dice «orandum est ut sit mens sana in corpore sano». Empieza con un verbo que casi nunca se cita: orandum, hay que rezar. No es un consejo de gimnasio. Es la respuesta a una pregunta sobre qué conviene pedirles a los dioses.",
+      "Toda la sátira repasa lo que la gente pide y cómo cada deseo cumplido la arruina: riqueza, poder, elocuencia, gloria militar, una vida larga, belleza. Ahí mismo, unos trescientos versos antes, aparece la otra expresión famosa del poema, el pueblo que ya solo desea «pan y circo». Al final Juvenal concluye que lo mejor es dejar que los dioses decidan lo que nos conviene. Y si hay que pedir algo, que sea una mente sana en un cuerpo sano, un ánimo que no tema a la muerte, que soporte cualquier trabajo, que no conozca la ira ni desee nada.",
+      "Luego añade lo que más pesa: «te muestro lo que tú mismo puedes darte». Para él, el único camino a una vida tranquila pasa por la virtud. La frase terminó grabada en gimnasios escolares y en 1977 dio nombre, en la variante anima sana, a la marca japonesa ASICS. En el poema no habla de deporte. Habla de desear menos."
+    ],
+    "question": "¿Qué pedirías si supieras que se va a cumplir?",
+    "quote": {
+      "text": "Hay que rogar que haya una mente sana en un cuerpo sano.",
+      "author": "Juvenal",
+      "work": "Sátiras, X, 356 (h. 100-130 d. C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Juvenal",
+      "#Roma",
+      "#Latin"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Clasicos",
+      "#Poesia",
+      "#Reflexiones",
+      "#HistoriaAntigua",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de la Sátira X: «orandum est ut sit mens sana in corpore sano»; más arriba, el pueblo que antes daba mandos y legiones ahora solo desea ansioso dos cosas, «panem et circenses»; al final, «permittes ipsis expendere numinibus quid conveniat nobis», la lista de lo que conviene pedir (fortem animum mortis terrore carentem, que cuente el final de la vida entre los dones de la naturaleza, que soporte cualquier trabajo, que no conozca la ira ni desee nada, que prefiera los trabajos de Hércules a los banquetes de Sardanápalo), «monstro quod ipse tibi possis dare» y «semita certe tranquillae per virtutem patet unica vitae».",
+      "source": "The Latin Library, Iuvenalis, Saturae, X",
+      "url": "https://www.thelatinlibrary.com/juvenal/10.shtml"
+    },
+    {
+      "claim": "La expresión procede de la Sátira X de Juvenal, verso 356, «orandum est, ut sit mens sana in corpore sano»: se debe rezar para obtener una mente sana en un cuerpo sano. Ha sido especialmente popular en el ámbito escolar, por ejemplo como inscripción en gimnasios.",
+      "source": "Den Store Danske / lex.dk, «mens sana in corpore sano»",
+      "url": "https://lex.dk/mens_sana_in_corpore_sano"
+    },
+    {
+      "claim": "Juvenal nació entre 50 y 60 d. C. y murió después de 130; escribió 16 sátiras en 5 libros, 3.869 hexámetros, publicadas gradualmente entre 100 y 130 aproximadamente (el dato más temprano, el proceso de Mario Prisco en 100; el más tardío, el consulado de Lucio Emilio Junco en 127).",
+      "source": "Den Store Danske / lex.dk, «Juvenal»",
+      "url": "https://lex.dk/Juvenal"
+    },
+    {
+      "claim": "ASICS es un acrónimo de la frase latina «Anima Sana In Corpore Sano»; la marca se creó oficialmente en 1977 al fusionarse Onitsuka Co. Ltd. con otras dos empresas.",
+      "source": "ASICS, «ASICS brand: sound mind, sound body» (página oficial de la marca)",
+      "url": "https://www.asics.com/vn/en-vn/mk/blog/article/asics-brand-sound-mind-sound-body"
+    },
+    {
+      "claim": "Samuel Johnson publicó en 1749 (R. Dodsley, Londres) «The vanity of human wishes. The tenth satire of Juvenal, imitated»: la Sátira X se ha leído durante siglos como un poema sobre la vanidad de los deseos humanos.",
+      "source": "The Grub Street Project, ficha T54333",
+      "url": "https://www.grubstreetproject.net/publications/T54333"
+    }
+  ],
+  "do_not_use": [
+    "presentar la frase como consejo de Juvenal para hacer ejercicio o como lema deportivo: en el poema es lo que conviene pedir a los dioses, dentro de una sátira contra los deseos humanos",
+    "citar «mens sana in corpore sano» sin el «orandum est» y decir que es la frase completa: el verso empieza con «hay que rezar»",
+    "atribuir el lema de ASICS a Juvenal tal cual: la marca usa «anima sana», no «mens sana»",
+    "decir que «pan y circo» y «mente sana» están en sátiras distintas: las dos están en la Sátira X (vv. 81 y 356)",
+    "dar una fecha exacta para la Sátira X: solo hay un intervalo para el conjunto (h. 100-130); no se verificó la datación del libro IV",
+    "dar la traducción española como texto literal de Juvenal: es traducción propia del latín",
+    "atribuir la frase a Tales de Mileto o a otros griegos: la formulación latina es la de Juvenal; no se verificaron antecedentes griegos en esta ejecución"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

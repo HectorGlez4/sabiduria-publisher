@@ -1,0 +1,78 @@
+{
+  "id": "2026-11-03-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Bécquer y las golondrinas del libro perdido",
+    "hook": "«Pero mudo y absorto y de rodillas, / como se adora a Dios ante su altar, / como yo te he querido..., desengáñate, / así no te querrán.»\n— Gustavo Adolfo Bécquer, Rimas, LIII",
+    "body": [
+      "Es la última estrofa de la rima que empieza «Volverán las oscuras golondrinas». Bécquer no la vio impresa en libro. En 1868 había confiado sus poemas a su protector, el ministro Luis González Bravo, para publicarlos. Ese mismo año estalló la revolución, la casa del ministro fue asaltada y el manuscrito desapareció.",
+      "Bécquer rehízo lo que pudo de memoria. Lo escribió en un grueso libro de contabilidad que tituló «Libro de los gorriones» y encabezó las poesías con una frase sencilla: «Poesías que recuerdo del libro perdido». Reunió setenta y nueve. Murió el 22 de diciembre de 1870 sin publicarlas en volumen.",
+      "Las publicaron sus amigos en 1871: Narciso Campillo, Augusto Ferrán y Ramón Rodríguez Correa. Eligieron setenta y seis, cambiaron el orden en que él las había copiado y corrigieron versos. La numeración que hoy citamos, y ese LIII, es obra de ellos. El poema sobrevivió dos veces: a un saqueo y a la memoria de su autor. Habla de lo que no vuelve, y él mismo tuvo que reconstruirlo después de perderlo."
+    ],
+    "question": "¿Qué escribirías de nuevo si lo perdieras?",
+    "quote": {
+      "text": "Pero mudo y absorto y de rodillas, / como se adora a Dios ante su altar, / como yo te he querido..., desengáñate, / así no te querrán.",
+      "author": "Gustavo Adolfo Bécquer",
+      "work": "Rimas, LIII (Obras, edición póstuma de 1871)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Becquer",
+      "#Poesia",
+      "#LiteraturaEspanola"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Rimas",
+      "#Romanticismo",
+      "#SigloXIX",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la Rima LIII, «Volverán las oscuras golondrinas», cuya última estrofa dice: «Pero mudo y absorto y de rodillas, / Como se adora á Dios ante su altar, / Como yo te he querido... desengáñate, / Así no te querrán!» (ortografía de la edición de 1885).",
+      "source": "Wikisource, «Rima LIII», según Obras de Gustavo A. Bécquer, tomo III (Madrid, 1885)",
+      "url": "https://es.wikisource.org/wiki/Rima_LIII"
+    },
+    {
+      "claim": "Bécquer confió sus poemas a González Bravo y se perdieron en la revolución de 1868; entre 1868 y su muerte, el 22 de diciembre de 1870, los reconstruyó en el Libro de los gorriones, que contiene setenta y nueve poesías «que recuerdo del libro perdido». La edición de 1871, a cargo de sus amigos Narciso Campillo, Augusto Ferrán y Ramón Rodríguez Correa, publicó 76; el manuscrito muestra que los amigos alteraron el orden e introdujeron correcciones.",
+      "source": "Ignacio Ceballos Viro, «Los misterios de Bécquer (2). El manuscrito perdido», El Rinconete, Centro Virtual Cervantes (Instituto Cervantes), 10 de enero de 2012",
+      "url": "https://cvc.cervantes.es/el_rinconete/anteriores/enero_12/10012012_02.htm"
+    },
+    {
+      "claim": "El Libro de los gorriones es el manuscrito autógrafo de Bécquer conservado en la Biblioteca Nacional de España (Mss. 13216); el original preparado para el ministro Luis González Bravo desapareció en el saqueo de su palacio durante la revolución de 1868, y Bécquer reescribió las rimas de memoria encabezándolas con la frase «poesías que recuerdo del libro perdido».",
+      "source": "Biblioteca Universitaria de la Universidad de Alicante, «Bécquer y el Libro de los gorriones. La edición de las Rimas por Russell P. Sebold», 21 de marzo de 2017",
+      "url": "https://blogs.ua.es/bibliotecauniversitaria/2017/03/21/becquer-y-el-libro-de-los-gorriones-la-edicion-de-las-rimas-de-gustavo-adolfo-becquer-por-russell-p-sebold/"
+    },
+    {
+      "claim": "La edición de 1871 se publicó en dos volúmenes con prólogo de Rodríguez Correa e incluyó 76 poemas.",
+      "source": "Wikipedia en español, «Rimas (Bécquer)»",
+      "url": "https://es.wikipedia.org/wiki/Rimas_(B%C3%A9cquer)"
+    }
+  ],
+  "do_not_use": [
+    "dar el número que tiene esta rima dentro del Libro de los gorriones: circula una cifra pero no se verificó en esta ejecución",
+    "decir que el manuscrito de González Bravo se quemó en un incendio o que se perdió en el saqueo del palacio de Bécquer: las fuentes dicen que se perdió en el asalto a la casa del ministro durante la revolución de 1868; el «incendio» aparece solo en una fuente y no se pudo contrastar, y «palacio de Bécquer» es una confusión de una fuente secundaria",
+    "afirmar que el Libro de los gorriones lo compró la BNE en 1896 por 25 pesetas o que lo descubrió Franz Schneider en 1914: aparece en resúmenes de buscador pero no se abrió ninguna fuente primaria que lo confirmara",
+    "presentar la numeración y el orden de las Rimas como decisión de Bécquer: son de los editores de 1871",
+    "atribuirle a Bécquer el epígrafe largo del Libro de los gorriones con distintas redacciones; si se cita, solo «Poesías que recuerdo del libro perdido»",
+    "decir que la Rima LIII está dedicada a una mujer concreta (Julia Espín, Elisa Guillén): es especulación biográfica sin respaldo en las fuentes consultadas"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
