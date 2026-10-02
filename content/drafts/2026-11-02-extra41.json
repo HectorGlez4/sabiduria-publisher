@@ -1,0 +1,89 @@
+{
+  "id": "2026-11-02-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tolstói y la primera frase de Anna Karénina",
+    "hook": "«Todas las familias felices se parecen entre sí; cada familia infeliz es infeliz a su manera.»\n— León Tolstói, Anna Karénina, parte I, capítulo 1 (1875)",
+    "body": [
+      "Es la primera frase de la novela. Apareció en enero de 1875 en El Mensajero Ruso, la revista de Mijaíl Katkov, donde Anna Karénina salió por entregas hasta 1877. El libro completo se publicó en 1878, y tuvo que ser así: Katkov se negó a imprimir la octava y última parte porque no le gustaba lo que decía sobre los voluntarios rusos en la guerra de los Balcanes. Antes de la frase, Tolstói puso un epígrafe bíblico: «Mía es la venganza; yo daré el pago».",
+      "La frase se cita como una ley. En 1997, el biólogo Jared Diamond la convirtió en principio: abrió un capítulo de Armas, gérmenes y acero con una parodia —los animales domesticables se parecen entre sí, cada uno que no lo es falla a su manera— para explicar por qué el éxito exige que todo salga bien y el fracaso puede venir de cualquier parte. Aristóteles había dicho algo parecido en la Ética a Nicómaco: se acierta de un solo modo y se yerra de muchos.",
+      "Pero la novela no confirma su primera línea. El crítico Mijaíl Epstein ha señalado que las familias desdichadas del libro, los Karenin y los Oblonski, siguen el mismo patrón de engaño y ruptura, mientras que la única feliz, la de Levin y Kitty, es la más singular de todas: de la felicidad de Levin dice el narrador que se volvía cada vez más particular, sin nada parecido. Tolstói empieza con una sentencia y dedica ochocientas páginas a desmentirla."
+    ],
+    "question": "¿Se parecen de verdad todas las familias felices?",
+    "quote": {
+      "text": "Todas las familias felices se parecen entre sí; cada familia infeliz es infeliz a su manera.",
+      "author": "León Tolstói",
+      "work": "Anna Karénina, parte I, capítulo 1 (1875)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tolstoi",
+      "#AnnaKarenina",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#LiteraturaRusa",
+      "#Clasicos",
+      "#Familia",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La primera frase de la parte I, capítulo 1 de Anna Karénina en ruso es «Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему», y la segunda, «Все смешалось в доме Облонских».",
+      "source": "Transparent Language, Russian Language Blog, «Read Famous Opening Lines in Russian – Part I»",
+      "url": "https://blogs.transparent.com/russian/read-famous-opening-lines-in-russian-part-i/"
+    },
+    {
+      "claim": "La frase es la primera de la parte 1, capítulo 1, de la novela Anna Karénina (1875) de L. N. Tolstói; se cita como consejo para examinar las causas concretas de los problemas de cada familia.",
+      "source": "V. Serov, Энциклопедический словарь крылатых слов и выражений (Diccionario enciclopédico de frases célebres), Lokid-Press, Moscú, 2003",
+      "url": "https://dic.academic.ru/dic.nsf/dic_wingwords/494/%D0%92%D1%81%D0%B5"
+    },
+    {
+      "claim": "En la traducción inglesa de Constance Garnett, el capítulo 1 de la parte primera empieza: «Happy families are all alike; every unhappy family is unhappy in its own way. Everything was in confusion in the Oblonskys' house.»",
+      "source": "Project Gutenberg, «Anna Karenina» de León Tolstói, traducción de Constance Garnett, ebook n.º 1399",
+      "url": "https://www.gutenberg.org/files/1399/1399-h/1399-h.htm"
+    },
+    {
+      "claim": "Anna Karénina se publicó por entregas entre 1875 y 1877 en la revista El Mensajero Ruso (Russkiy Vestnik) y como libro en 1878. El editor, Katkov, se negó a publicar la octava parte por su contenido sobre el paneslavismo ruso. El epígrafe es «Mía es la venganza; yo daré el pago», de Romanos 12:19, que a su vez cita Deuteronomio 32:35.",
+      "source": "Wikipedia en inglés, artículo «Anna Karenina»",
+      "url": "https://en.wikipedia.org/wiki/Anna_Karenina"
+    },
+    {
+      "claim": "Jared Diamond popularizó el «principio de Anna Karénina» en Guns, Germs and Steel (1997) para explicar por qué tan pocos animales salvajes se domesticaron: la carencia en uno solo de varios factores (dieta, ritmo de crecimiento, cría en cautividad, temperamento, tendencia al pánico, estructura social) basta para impedirlo. El capítulo empieza con una parodia de la primera frase de Tolstói. Aristóteles, en el libro II de la Ética a Nicómaco, expresa una idea análoga: acertar solo es posible de un modo, fallar de muchos.",
+      "source": "Wikipedia en inglés, artículo «Anna Karenina principle»",
+      "url": "https://en.wikipedia.org/wiki/Anna_Karenina_principle"
+    },
+    {
+      "claim": "Mijaíl Epstein sostiene que la primera frase de Anna Karénina es irónica y que la novela la desmiente: la única familia feliz, la de Levin y Kitty, es singular, mientras que las desdichadas (Karenin, Oblonski) siguen patrones paralelos de traición y ruptura. Cita el pasaje sobre la felicidad de Levin, que «solo aumentaba y se volvía más y más particular, sin nada parecido».",
+      "source": "Mijaíl Epstein, «О смысле первой фразы „Анны Карениной“» (Sobre el sentido de la primera frase de Anna Karénina), revista Gostinaya",
+      "url": "https://gostinaya.net/?p=21121"
+    }
+  ],
+  "do_not_use": [
+    "fechar la frase en 1877 o 1878 como fecha de escritura: apareció en la primera entrega de El Mensajero Ruso, en 1875; 1877 es el fin de la serie y 1878 la edición en libro",
+    "decir que la frase es la primera línea impresa del libro: antes va el epígrafe bíblico «Mía es la venganza; yo daré el pago» (Romanos 12:19)",
+    "presentar la traducción española como texto de Tolstói: la versión de la tarjeta es una traducción del ruso, y las ediciones españolas varían («a su manera», «a su modo», «por su propio estilo»)",
+    "atribuir a Tolstói el «principio de Anna Karénina»: el nombre y la formulación como principio son de Jared Diamond, en 1997",
+    "dar por hecho que la frase es la tesis de la novela: es una lectura discutida; Epstein, entre otros, sostiene que el libro la contradice",
+    "afirmar que Katkov censuró la novela entera: solo se negó a publicar la octava parte, que salió en la edición en libro"
+  ],
+  "cita_slug": "tolstoi-todas-las-familias-felices-se-parecen",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-03-tarde",
+  "id": "2026-10-02-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Wangari Maathai y la conferencia de Oslo de 2004",
     "hook": "La frase circula sola, como un cartel de oficina. En la conferencia de donde sale, lo que se estaba pidiendo era leña, agua limpia y tierra que no se fuera con la lluvia.",
@@ -25,8 +25,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#WangariMaathai", "#Kenia", "#GreenBeltMovement"],
-    "extended": ["#Citas", "#Africa", "#Nobel", "#Historia", "#Arboles", "#Mujeres", "#Oslo"]
+    "topic": [
+      "#WangariMaathai",
+      "#Kenia",
+      "#GreenBeltMovement"
+    ],
+    "extended": [
+      "#Citas",
+      "#Africa",
+      "#Nobel",
+      "#Historia",
+      "#Arboles",
+      "#Mujeres",
+      "#Oslo"
+    ]
   },
   "sources": [
     {
@@ -70,5 +82,11 @@
     "No convertir la cifra de árboles en un dato cerrado. Las fuentes dicen «más de 51 millones», no una cantidad exacta, y siguen plantando.",
     "No llamarla «la mujer árbol» ni usar apodos de prensa. Fue bióloga, catedrática de anatomía veterinaria y diputada; reducirla al apodo borra eso."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-02T17:26:00Z",
+  "results": {}
 }

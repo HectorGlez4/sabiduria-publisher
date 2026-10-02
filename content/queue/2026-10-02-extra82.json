@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-06-extra41",
+  "id": "2026-10-02-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Fernando Pessoa y Mar Português",
     "hook": "El verso de Pessoa que se usa como lema de superación responde a una pregunta hecha delante de madres que lloraron y novias que no se casaron.",
@@ -85,5 +85,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-03T02:26:00Z",
+  "results": {}
 }

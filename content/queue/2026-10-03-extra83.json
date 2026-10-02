@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-07-tarde",
+  "id": "2026-10-03-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Rilke", "#CartasAUnJovenPoeta", "#Literatura"],
-    "extended": ["#Poesia", "#LiteraturaAlemana", "#Citas", "#Paciencia", "#Escritores"]
+    "topic": [
+      "#Rilke",
+      "#CartasAUnJovenPoeta",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Poesia",
+      "#LiteraturaAlemana",
+      "#Citas",
+      "#Paciencia",
+      "#Escritores"
+    ]
   },
   "sources": [
     {
@@ -68,6 +78,12 @@
     "‘Las cartas de Kappus se perdieron’. Falso: se conservan (salvo la primera) y se publicaron en alemán en 2019. Los que no se localizan son los originales de Rilke, subastados en 1953.",
     "Variantes de transcripción del alemán (‘so gut ich es kann’ / ‘so gut ich kann’; ‘liebzuhaben’ / ‘lieb zu haben’; ‘zu versuchen’ / ‘versuchen’). No afectan a la traducción; si se cita el original, seguir la edición Insel."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-03T19:26:00Z",
+  "results": {}
 }

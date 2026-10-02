@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-21-tarde",
+  "id": "2026-10-04-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Darwin y los límites de la ciencia verdadera (1857)",
     "hook": "La cita de Darwin que se graba en el suelo de los museos y se repite en los cursos de empresa la escribió un profesor de administración de Luisiana en 1963.",
@@ -89,5 +89,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-04T20:26:00Z",
+  "results": {}
 }
