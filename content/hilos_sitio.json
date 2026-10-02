@@ -1811,7 +1811,8 @@
   },
   "seneca-mal-discurre-el-que-dice-esto-es": {
     "post_id": "18120612539317870",
-    "published_at": "2026-10-02T19:27:46.497167+00:00",
-    "autor": "seneca"
+    "published_at": "2026-10-02T19:28:09+00:00",
+    "autor": "seneca",
+    "conciliado": true
   }
 }
