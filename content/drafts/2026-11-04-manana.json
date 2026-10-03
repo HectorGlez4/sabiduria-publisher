@@ -1,0 +1,74 @@
+{
+  "id": "2026-11-04-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Emmy Noether y el teorema de 1918",
+    "hook": "En 1918 publicó uno de los teoremas más importantes de la física. Sus clases se anunciaban con el nombre de otro.",
+    "body": [
+      "Emmy Noether nació en Erlangen en 1882. Cuando empezó a estudiar, la universidad no admitía mujeres como alumnas: entre 1900 y 1902 asistió a las clases como oyente, una de las dos únicas a las que se les permitía. Se doctoró en 1907 y trabajó años en el instituto de matemáticas de Erlangen sin ningún cargo.",
+      "En 1915 David Hilbert y Felix Klein la llamaron a Göttingen para ayudarles con la teoría de la relatividad. Las normas le impedían habilitarse para enseñar, así que Hilbert anunciaba los cursos con su propio nombre: «Seminario de física matemática: profesor Hilbert, con la ayuda de la doctora E. Noether». En 1918 publicó en las actas de la Sociedad de Ciencias de Göttingen el trabajo que hoy se llama teorema de Noether: a cada simetría de las leyes físicas le corresponde una magnitud que se conserva. De ahí sale, por ejemplo, que la energía se conserve. Einstein elogió por carta su «pensamiento matemático penetrante».",
+      "Pudo habilitarse en 1919, cuando la guerra terminó y cambió el régimen político. Hasta 1923 no tuvo un sueldo fijo, y pequeño. En 1933 el gobierno nazi la expulsó de la universidad, sin pensión, por ser judía. Murió en Bryn Mawr, Pensilvania, en abril de 1935. Tres semanas después Einstein escribió al New York Times que, a juicio de los matemáticos más competentes, había sido el genio matemático creativo más importante desde que las mujeres accedieron a la educación superior."
+    ],
+    "question": "¿Cuánto trabajo firmado por otros sostiene lo que damos por sabido?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La matemática que enseñaba con nombre ajeno",
+    "subtitle": "Göttingen, 1918",
+    "body": "Emmy Noether demostró que cada simetría de la naturaleza corresponde a algo que se conserva. Ese año aún no podía dar clases con su propio nombre, y no tuvo sueldo fijo hasta 1923."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EmmyNoether",
+      "#Matematicas",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Fisica",
+      "#Einstein",
+      "#Gotinga",
+      "#Ciencia",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Noether nació en Erlangen el 23 de marzo de 1882 y murió en Bryn Mawr el 14 de abril de 1935. Entre 1900 y 1902 asistió como oyente en Erlangen, una de solo dos mujeres autorizadas, porque las mujeres no podían matricularse. En 1915 Hilbert y Klein la invitaron a Göttingen por cuestiones de relatividad. Hilbert anunciaba sus cursos con su nombre («Mathematical Physics Seminar: Professor Hilbert, with the assistance of Dr E Noether», invierno 1916-17). En 1918 demostró que a cada transformación infinitesimal corresponde un teorema de conservación. Einstein elogió su «penetrating mathematical thinking» en una carta a Hilbert. Se habilitó en 1919. En 1933 perdió su puesto sin pensión por su origen judío.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, biografía de Emmy Noether",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/"
+    },
+    {
+      "claim": "Tras doctorarse trabajó sin nombramiento en Erlangen hasta que en 1915 Klein y Hilbert la llamaron a Göttingen para trabajar en relatividad; la habilitación se produjo en 1919, tras el fin de la guerra y el cambio de las condiciones políticas; solo en 1923 recibió un Lehrauftrag y con él un pequeño ingreso fijo; bajo el nazismo fue de las primeras en perder su puesto.",
+      "source": "Georg-August-Universität Göttingen, página institucional sobre Emmy Noether",
+      "url": "https://uni-goettingen.de/de/681225.html"
+    },
+    {
+      "claim": "«Invariante Variationsprobleme», de E. Noether, se publicó en Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse, 1918, pp. 235-257.",
+      "source": "EuDML, registro bibliográfico de «Invariante Variationsprobleme»",
+      "url": "https://eudml.org/doc/59024"
+    },
+    {
+      "claim": "Einstein escribió al New York Times, en carta publicada el 4 de mayo de 1935, tres semanas después de la muerte de Noether: «In the judgement of the most competent living mathematicians, Fraulein Noether was the most significant creative mathematical genius thus far produced since the higher education of women began».",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, efeméride del 4 de mayo",
+      "url": "https://mathshistory.st-andrews.ac.uk/Miscellaneous/messages/05-04"
+    }
+  ],
+  "do_not_use": [
+    "la frase de Hilbert «la facultad no es una casa de baños» («we are a university, not a bathhouse»): circula en todas partes pero no aparece en la biografía de MacTutor ni en la página de Göttingen; no se encontró fuente de la época que la documente",
+    "decir que Noether «inventó» la conservación de la energía o que la descubrió: el teorema vincula simetrías y leyes de conservación ya conocidas; basta decir que de él se deduce la conservación de la energía",
+    "dar el 26 de julio de 1918 como fecha de presentación del artículo por Klein: aparece en resúmenes de búsqueda, pero no se abrió una fuente que lo mostrara",
+    "afirmar que en 1922 recibió el título de profesora extraordinaria: la página de Göttingen menciona el título sin sueldo pero sin dar el año",
+    "decir que Einstein la llamó «la mujer más importante de la historia de las matemáticas»: la carta dice «el genio matemático creativo más importante desde que comenzó la educación superior de las mujeres», con la salvedad de «a juicio de los matemáticos más competentes»"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

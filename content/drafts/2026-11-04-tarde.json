@@ -1,0 +1,79 @@
+{
+  "id": "2026-11-04-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Fray Luis de León y la Vida retirada",
+    "hook": "«¡Qué descansada vida / la del que huye el mundanal ruido, / y sigue la escondida / senda por donde han ido / los pocos sabios que en el mundo han sido!»\n— Fray Luis de León, «Vida retirada»",
+    "body": [
+      "Es la primera estrofa de una oda de dieciséis. Imita un tema de Horacio, el elogio de la vida apartada del campo. Su autor, agustino y catedrático en Salamanca, no tuvo esa vida. En marzo de 1572 la Inquisición lo encarceló en Valladolid. La acusación principal era haber traducido al castellano el Cantar de los Cantares. Pasó más de cuatro años preso y salió absuelto.",
+      "Fray Luis no publicó sus poemas. Circularon copiados a mano, y se conservan decenas de esos manuscritos. Murió en 1591 en Madrigal de las Altas Torres. La primera edición la preparó Francisco de Quevedo, en Madrid, en 1631: cuarenta años después.",
+      "Quevedo estaba entonces en plena polémica contra la poesía culterana de Góngora y sus seguidores, y la edición formó parte de esa pelea: los versos claros de fray Luis servían de contraste con la oscuridad que él combatía. Un poema que alaba al que huye del ruido llegó a la imprenta en medio de una disputa."
+    ],
+    "question": "¿De qué ruido te apartarías si pudieras?",
+    "quote": {
+      "text": "¡Qué descansada vida / la del que huye el mundanal ruido, / y sigue la escondida / senda por donde han ido / los pocos sabios que en el mundo han sido!",
+      "author": "Fray Luis de León",
+      "work": "«Vida retirada», estrofa 1 (primera edición, Madrid, 1631, al cuidado de Quevedo)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#FrayLuisDeLeon",
+      "#Poesia",
+      "#SigloDeOro"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#LiteraturaEspanola",
+      "#Quevedo",
+      "#Salamanca",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de «Vida retirada», de fray Luis de León, dieciséis estrofas, que empieza: «¡Qué descansada vida / la del que huye el mundanal ruido / y sigue la escondida / senda por donde han ido / los pocos sabios que en el mundo han sido!».",
+      "source": "Wikisource en español, «Vida retirada»",
+      "url": "https://es.wikisource.org/wiki/Vida_retirada"
+    },
+    {
+      "claim": "Quevedo fue el editor de los poemas de fray Luis en 1631, y su edición se inscribe en la polémica anticulteranista del Barroco.",
+      "source": "Cristóbal Cuevas García, «La poética imposible de Quevedo (Don Francisco, editor de fray Luis)», La Perinola. Revista de investigación quevediana, 7 (2003); ficha en el Portal de la Investigación de la Universidad de Málaga",
+      "url": "https://portaldelainvestigacion.uma.es/documentos/6631371238b3d85bb144bec1"
+    },
+    {
+      "claim": "Fray Luis nació en Belmonte en 1527 o 1528 y murió el 23 de agosto de 1591 en Madrigal de las Altas Torres. Estuvo preso desde el 27 de marzo de 1572 hasta diciembre de 1576, sobre todo por traducir al castellano el Cantar de los Cantares. Sus poemas no se publicaron en vida, aunque circularon en manuscritos (se conservan 87); la editio princeps es la de Quevedo de 1631. «Vida retirada» desarrolla el tópico horaciano del beatus ille. La anécdota del «decíamos ayer» se considera probablemente una invención posterior.",
+      "source": "Wikipedia en español, «Fray Luis de León»",
+      "url": "https://es.wikipedia.org/wiki/Fray_Luis_de_Le%C3%B3n"
+    },
+    {
+      "claim": "Fray Luis nació en Belmonte en 1527, fue encarcelado en Valladolid, en la calle que hoy lleva su nombre, y luego absuelto; murió en Madrigal de las Altas Torres en 1591.",
+      "source": "Junta de Castilla y León, Turismo Castilla y León, «Fray Luis de León»",
+      "url": "https://www.turismocastillayleon.com/es/conocelo/fray-luis-leon"
+    }
+  ],
+  "do_not_use": [
+    "la anécdota de que al volver a su cátedra empezó la clase con «Decíamos ayer...» (Dicebamus hesterna die): se considera una invención posterior, probablemente de Nicolás Crusenio",
+    "dar fechas exactas de salida de la cárcel o de la sentencia: unas fuentes dicen 7 u 11 de diciembre de 1576 y un trabajo del repositorio de la Universidad de Salamanca habla de sentencia absolutoria el 13 de agosto de 1577 y de cinco años de prisión; basta «más de cuatro años»",
+    "decir que la Inquisición lo condenó: fue absuelto",
+    "afirmar que escribió «Vida retirada» en la cárcel: no se verificó cuándo la compuso",
+    "dar la versión con «ruïdo» con diéresis o con variantes de puntuación como texto único: las ediciones difieren en grafía; se usa la de Wikisource modernizada",
+    "dar el título completo de la edición de 1631 con una redacción concreta: las fuentes lo transcriben de forma distinta",
+    "decir que Quevedo publicó los versos con una dedicatoria al conde-duque de Olivares fechada en 1629: aparece en resúmenes de búsqueda, pero el artículo que lo documenta no se pudo abrir en esta ejecución"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

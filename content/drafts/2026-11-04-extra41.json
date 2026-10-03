@@ -1,0 +1,93 @@
+{
+  "id": "2026-11-04-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tucídides y el discurso fúnebre de Pericles",
+    "hook": "«Juzgando que la felicidad es la libertad, y la libertad, el valor, no rehúyan los peligros de la guerra.»\n— Tucídides, Historia de la guerra del Peloponeso, II 43",
+    "body": [
+      "La frase circula sola, a menudo como «el secreto de la felicidad es la libertad». En el original no hay ningún secreto, y la frase no termina en el valor. Es una exhortación a los vivos para que no esquiven la guerra. La pronuncia Pericles, hijo de Jantipo, en el invierno de 431 a 430 antes de Cristo, en el funeral público que Atenas dedicó a los primeros caídos de la guerra contra Esparta.",
+      "Tampoco son, palabra por palabra, de Pericles. Tucídides lo advierte al principio de su obra: los discursos eran difíciles de recordar con exactitud, y él hacía decir a cada orador lo que la ocasión exigía, ateniéndose lo más posible al sentido general de lo que de verdad se dijo.",
+      "Con ese funeral, escribe Tucídides, terminó el primer año de la guerra. Pocos días después de empezar el verano siguiente apareció la peste en Atenas. Pericles sobrevivió dos años y seis meses al comienzo de la guerra. El elogio de la libertad que hoy se graba en monumentos se escribió como despedida de los muertos, a las puertas de una catástrofe."
+    ],
+    "question": "¿Qué estarías dispuesto a arriesgar por tu libertad?",
+    "quote": {
+      "text": "Juzgando que la felicidad es la libertad, y la libertad, el valor, no rehúyan los peligros de la guerra.",
+      "author": "Tucídides",
+      "work": "Historia de la guerra del Peloponeso, II 43 (ed. de H. S. Jones, 1910)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tucidides",
+      "#Pericles",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Atenas",
+      "#Libertad",
+      "#Historia",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego de Tucídides II 43, 4: «οὓς νῦν ὑμεῖς ζηλώσαντες καὶ τὸ εὔδαιμον τὸ ἐλεύθερον, τὸ δ' ἐλεύθερον τὸ εὔψυχον κρίναντες» (la frase continúa con la exhortación a no rehuir los peligros de la guerra), según la edición de Henry Stuart Jones, Thucydidis Historiae (Oxford, 1910; reimpr. 1942).",
+      "source": "Perseids / Perseus Digital Library, Tucídides, Historiae, texto griego, II 43",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0003/tlg001/perseus-grc2/2.43.3-2.43.6"
+    },
+    {
+      "claim": "Traducción de Richard Crawley de II 43, 4: «These take as your model, and judging happiness to be the fruit of freedom and freedom of valor, never decline the dangers of war».",
+      "source": "Perseids / Perseus Digital Library, Tucídides, traducción de Richard Crawley, II 43",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0003/tlg001/perseus-eng6/2.43.3-2.43.6"
+    },
+    {
+      "claim": "Traducción de Benjamin Jowett (1881) de II 43, 4: «Make them your examples, and, esteeming courage to be freedom and freedom to be happiness, do not weigh too nicely the perils of war». La versión «The secret of happiness is freedom, and the secret of freedom...» circula en muchas formas en internet y no está claro de dónde sale el «secreto», quizá de los libros de autoayuda.",
+      "source": "Universidad de Bristol, Departamento de Clásicas e Historia Antigua, «Thinking Through Thucydides», II.43: Text and Translation",
+      "url": "https://bristol.ac.uk/classics/research/thucydides/ttt/text"
+    },
+    {
+      "claim": "Pericles pronunció el discurso fúnebre en el invierno de 431/430 a. C., tras el primer año de la guerra del Peloponeso; los discursos de Tucídides no son registros exactos sino los puntos principales y lo apropiado a la situación (I 22); el pasaje se ha citado en monumentos y ceremonias de la Primera Guerra Mundial y en la retórica política posterior.",
+      "source": "Universidad de Bristol, «Thinking Through Thucydides», II.43: Context and Meaning",
+      "url": "https://www.bristol.ac.uk/classics/research/thucydides/ttt/context/"
+    },
+    {
+      "claim": "Tucídides I 22, 1 (trad. Crawley): los discursos eran difíciles de recordar palabra por palabra, así que su costumbre fue hacer decir a los oradores lo que en su opinión exigía cada ocasión, ateniéndose lo más posible al sentido general de lo que realmente dijeron.",
+      "source": "Perseids / Perseus Digital Library, Tucídides, trad. Crawley, I 22",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0003/tlg001/perseus-eng6/1.22.1-1.22.4"
+    },
+    {
+      "claim": "Tucídides II 34 (trad. Crawley): en el mismo invierno los atenienses celebraron un funeral público por los primeros caídos de la guerra, y Pericles, hijo de Jantipo, fue elegido para pronunciar el elogio.",
+      "source": "Perseids / Perseus Digital Library, Tucídides, trad. Crawley, II 34",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0003/tlg001/perseus-eng6/2.34.1-2.34.8"
+    },
+    {
+      "claim": "Tucídides II 47 (trad. Crawley): con ese funeral terminó el primer año de la guerra; al empezar el verano los lacedemonios invadieron el Ática y, pocos días después de su llegada, la peste empezó a manifestarse entre los atenienses. II 65, 6: Pericles sobrevivió dos años y seis meses al comienzo de la guerra.",
+      "source": "Perseids / Perseus Digital Library, Tucídides, trad. Crawley, II 47 y II 65",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0003/tlg001/perseus-eng6/2.47.1-2.47.4"
+    }
+  ],
+  "do_not_use": [
+    "«El secreto de la felicidad es la libertad, y el secreto de la libertad es el valor»: no está en el texto; el «secreto» es un añadido moderno (Universidad de Bristol)",
+    "presentar la frase como palabras textuales de Pericles: Tucídides reconoce (I 22) que reconstruía los discursos según su sentido general",
+    "atribuir la frase a Pericles sin mencionar a Tucídides: la única fuente del discurso es la obra de Tucídides",
+    "decir que Pericles murió de la peste como hecho: Tucídides da cuánto sobrevivió, no la causa en el pasaje consultado; no se verificó en esta ejecución",
+    "invertir el orden de la frase como hace Jowett («el valor es libertad y la libertad, felicidad») y presentarlo como el original: el griego dice que la felicidad es lo libre y lo libre es lo valeroso",
+    "la traducción al español es propia, hecha sobre el griego de la edición de Jones; no citar una traducción publicada concreta sin haberla consultado"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

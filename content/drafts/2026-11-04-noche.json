@@ -1,0 +1,72 @@
+{
+  "id": "2026-11-04-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Cnosos y el hormigón de Arthur Evans",
+    "hook": "Las columnas rojas del palacio de Cnosos, en Creta, son de hormigón armado. Las pusieron en el siglo XX.",
+    "body": [
+      "El primero en excavar Cnosos no fue un arqueólogo británico, sino un comerciante cretense que, por casualidad, se llamaba Minos: Minos Kalokairinos. En 1878 abrió el terreno durante unas tres semanas y sacó a la luz parte de las alas oeste y sur, con grandes vasijas de almacenaje. Lo dejó en 1879: Creta seguía bajo dominio otomano y temía que los hallazgos acabaran en Estambul. En 1898, durante los disturbios de Heraclión, su casa fue destruida y con ella buena parte de lo que había reunido.",
+      "Arthur Evans visitó la isla en 1894 y compró una cuarta parte de la colina. Empezó a excavar el 23 de marzo de 1900 y siguió hasta 1931. Llamó «minoica» a la civilización, por el rey Minos del mito. Con los años sus arquitectos fueron sustituyendo lo que encontraban: primero refuerzos de acero y ladrillo, luego columnas de cemento hechas sobre las huellas de las de madera y, desde los años veinte, hormigón armado. El resultado fue uno de los primeros edificios de hormigón armado levantados en la isla.",
+      "Con las pinturas pasó algo parecido. El famoso «Príncipe de los lirios» lo compuso en 1905 el restaurador suizo Émile Gilliéron a partir de un trozo de la cabeza y la corona, sin la cara, parte del torso y un pedazo de muslo. No es seguro que fueran de la misma figura. Lo que hoy se recorre en Cnosos es, en buena medida, la idea que Evans se hizo de los minoicos."
+    ],
+    "question": "¿Cuánto de lo que llamamos antiguo es una reconstrucción de alguien?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El palacio que se reconstruyó con hormigón",
+    "subtitle": "Creta, 1900-1931",
+    "body": "Un comerciante cretense llamado Minos excavó Cnosos en 1878. Arthur Evans compró la colina, excavó tres décadas y rehízo el palacio con hormigón armado. Una de sus pinturas más famosas se armó con tres fragmentos sueltos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Cnosos",
+      "#Creta",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Minoicos",
+      "#ArthurEvans",
+      "#HistoriaAntigua",
+      "#Grecia",
+      "#EdadDelBronce",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Evans empezó a excavar Cnosos en 1900 y siguió hasta 1931. Theodore Fyfe diseñó un primer refugio de piedra y madera; Christian Doll, en 1904-1905, restauró la Gran Escalera con vigas de acero y bóvedas de ladrillo y sustituyó columnas de madera por otras de cemento a partir de las huellas excavadas; desde los años veinte Piet de Jong introdujo el hormigón armado. Los frescos fueron completados por artistas al servicio de Evans. Hoy el Eforato de Antigüedades de Heraclión repara esas restauraciones.",
+      "source": "Ashmolean Museum, Universidad de Oxford, «Rebuilding the Palace of Minos at Knossos»",
+      "url": "https://www.ashmolean.org/node/3039631"
+    },
+    {
+      "claim": "El «Príncipe de los lirios» es una restauración de 1905 de Émile Gilliéron hecha con un trozo de la cabeza y la corona (sin la cara), parte del torso y un pedazo de muslo, cuya asociación original es incierta; el palacio fue uno de los primeros edificios de hormigón armado levantados en la isla; Evans acuñó el término «minoico» por el rey Minos.",
+      "source": "Mary Beard, «Knossos: Fakes, Facts, and Mystery», The New York Review of Books, 13 de agosto de 2009",
+      "url": "https://www.nybooks.com/articles/2009/08/13/knossos-fakes-facts-and-mystery/"
+    },
+    {
+      "claim": "Minos Kalokairinos hizo en 1878 las primeras excavaciones sistemáticas en Cnosos; la principal duró tres semanas y se centró en las alas oeste y sur, con hallazgo de grandes vasijas. Las detuvo para que los hallazgos no fueran trasladados a Estambul, pues Creta seguía bajo dominio otomano. El 25 de agosto de 1898 su casa fue destruida y con ella la colección. Evans visitó Creta en 1894, compró un cuarto de la colina de Kefala por 6.000 dracmas y comenzó a excavar el 23 de marzo de 1900.",
+      "source": "Greek News Agenda (Secretaría General de Comunicación e Información del Gobierno griego), «Minos Kalokairinos: the man who discovered Knossos», 18 de noviembre de 2019",
+      "url": "https://www.greeknewsagenda.gr/minos-kalokairinos-the-man-who-discovered-knossos/"
+    }
+  ],
+  "do_not_use": [
+    "decir que Evans «descubrió» Cnosos: la primera excavación fue de Minos Kalokairinos en 1878",
+    "decir que Evans compró toda la colina: Mary Beard habla de compra del sitio «al por mayor», pero Greek News Agenda precisa una cuarta parte de la colina de Kefala por 6.000 dracmas; se usa la cifra concreta",
+    "dar diciembre de 1878 como mes exacto de la excavación de Kalokairinos: aparece en resúmenes, no en las fuentes abiertas",
+    "decir que el «Príncipe de los lirios» es una falsificación: es una restauración discutible hecha con fragmentos auténticos de asociación incierta",
+    "afirmar como hecho que los Gilliéron fabricaron falsificaciones minoicas: Mary Beard lo plantea como sospecha, no como hecho probado",
+    "llamar a Cnosos «el laberinto del Minotauro» como dato: es interpretación mítica, no arqueológica",
+    "dar fechas exactas del palacio (1700-1450 a. C., etc.): no se contrastaron en esta ejecución",
+    "atribuir la parada de 1879 al parlamento cretense: una fuente lo dice así y otra a una orden del comandante Fotiadis Pajá con acuerdo de los eruditos locales; basta decir que se detuvo por miedo a que los hallazgos acabaran en Estambul"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
