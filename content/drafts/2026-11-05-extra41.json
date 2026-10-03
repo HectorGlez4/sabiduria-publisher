@@ -1,0 +1,96 @@
+{
+  "id": "2026-11-05-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Delmira Agustini y el soneto Lo inefable",
+    "hook": "«Yo muero extrañamente... No me mata la Vida, / No me mata la Muerte, no me mata el Amor; / Muero de un pensamiento mudo como una herida...»\n— Delmira Agustini, «Lo inefable»",
+    "body": [
+      "Son los tres primeros versos de un soneto en alejandrinos de Cantos de la mañana, el segundo libro de Delmira Agustini, impreso en Montevideo por el editor Orsini Bertani en 1910. Tenía veintitrés años. El poema pregunta si el lector ha llevado dentro «una estrella dormida» que lo abrasaba sin dar luz, y termina diciendo que arrancársela en una flor sería más grande que «tener entre las manos la cabeza de Dios».",
+      "Agustini nació en Montevideo el 24 de octubre de 1886, en una familia acomodada: su padre fue uno de los fundadores de la Bolsa de la ciudad. Publicaba en revistas desde 1902. A los veinte años sacó su primer libro. Rubén Darío la visitó en 1912 y escribió el prólogo del tercero, Los cálices vacíos, en 1913: de todas las mujeres que entonces escribían en verso, dijo, ninguna había impresionado su ánimo como ella.",
+      "Ese mismo año, el 14 de agosto de 1913, se casó con Enrique Job Reyes, rematador de ganado. A los cincuenta y tres días volvió a casa de sus padres. El divorcio se firmó el 5 de junio de 1914. El 6 de julio, Reyes la citó en una habitación alquilada de la calle Andes, le disparó dos veces en la cabeza y se mató. Tenía veintisiete años. El soneto sobre el pensamiento que mata lo había publicado cuatro años antes."
+    ],
+    "question": "¿Qué pensamiento llevas que no alcanza a dar flor?",
+    "quote": {
+      "text": "Yo muero extrañamente... No me mata la Vida, / No me mata la Muerte, no me mata el Amor; / Muero de un pensamiento mudo como una herida...",
+      "author": "Delmira Agustini",
+      "work": "«Lo inefable», en Cantos de la mañana (Montevideo, O. M. Bertani, 1910)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#DelmiraAgustini",
+      "#Poesia",
+      "#LiteraturaUruguaya"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Modernismo",
+      "#Montevideo",
+      "#RubenDario",
+      "#PoesiaLatinoamericana",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La edición de Los cálices vacíos (Montevideo, O. M. Bertani, 1913) reimprime «Lo inefable» bajo el epígrafe «De Cantos de la mañana». El texto empieza: «Yo muero extrañamente... No me mata la Vida, / No me mata la Muerte, no me mata el Amor; / Muero de un pensamiento mudo como una herida... / ¿No habéis sentido nunca el extraño dolor».",
+      "source": "Internet Archive, Delmira Agustini, «Los cálices vacíos; poesías», Montevideo, O. M. Bertani, 1913 (texto completo)",
+      "url": "https://archive.org/stream/losclicesvac00agusuoft/losclicesvac00agusuoft_djvu.txt"
+    },
+    {
+      "claim": "Texto de «Lo inefable» en la Antología de Delmira Agustini preparada por Esther de Cáceres, Biblioteca Artigas, vol. 69, Montevideo, 1965: coincide en los tres primeros versos con la versión usada, incluidas las mayúsculas de Vida, Muerte y Amor.",
+      "source": "Internet Archive, Delmira Agustini, «Antología», Biblioteca Artigas, Montevideo, 1965 (texto completo)",
+      "url": "https://archive.org/stream/AgustiniDAntologia/AgustiniD_Antologia_djvu.txt"
+    },
+    {
+      "claim": "Texto completo del soneto «Lo inefable», catorce versos, que empieza «Yo muero extrañamente... No me mata la vida» y termina «tener entre las manos la cabeza de Dios!...»; incluye los versos sobre «una estrella dormida» y «no alcanza a dar flor».",
+      "source": "Wikisource en español, «Lo inefable»",
+      "url": "https://es.wikisource.org/wiki/Lo_inefable"
+    },
+    {
+      "claim": "Nació en Montevideo el 24 de octubre de 1886 en una familia acomodada; su padre fue uno de los fundadores de la Bolsa de Montevideo. Sus poemas aparecen en revistas desde 1902. Publicó El libro blanco (1907), Cantos de la mañana (1910) y Los cálices vacíos (1913), este último con prólogo de Rubén Darío. Conoció a Enrique Job Reyes, rematador de ganado; se casaron en 1913 y se separaron a los dos meses. El 6 de julio de 1914, en una habitación alquilada de la calle Andes, Reyes mató a Delmira, de 27 años, de dos balazos en la cabeza y se suicidó.",
+      "source": "Academia Nacional de Letras del Uruguay, Ministerio de Educación y Cultura, «Delmira Agustini»",
+      "url": "https://www.gub.uy/ministerio-educacion-cultura/academia-letras/delmira-agustini"
+    },
+    {
+      "claim": "Nació el 24 de octubre de 1886 y murió el 6 de julio de 1914, a los 27 años. Se casó con Enrique Job Reyes el 14 de agosto de 1913, se separó a los 53 días y el divorcio se concretó el 5 de junio de 1914. Darío la visitó en 1912 y prologó Los cálices vacíos; escribió: «De todas las mujeres que hoy escriben en verso ninguna ha impresionado mi ánimo como Delmira Agustini».",
+      "source": "Wikipedia en español, «Delmira Agustini»",
+      "url": "https://es.wikipedia.org/wiki/Delmira_Agustini"
+    },
+    {
+      "claim": "Cantos de la mañana se publicó en Montevideo por Orsini Bertani en 1910; El libro blanco por el mismo editor en 1907.",
+      "source": "Academy of American Poets, Poets.org, «Delmira Agustini»",
+      "url": "https://poets.org/poet/delmira-agustini"
+    },
+    {
+      "claim": "Cantos de la mañana (1910) cuenta con 19 composiciones en verso.",
+      "source": "Wikipedia en español, «Cantos de la mañana»",
+      "url": "https://es.wikipedia.org/wiki/Cantos_de_la_mañana"
+    }
+  ],
+  "do_not_use": [
+    "escribir «vida», «muerte» y «amor» en minúscula como si fuera el texto único: Wikisource lo trae así, pero la edición de Bertani de 1913 y la antología de la Biblioteca Artigas de 1965 llevan mayúsculas; se sigue la edición de época",
+    "citar el verso 7 como «¿No habéis llevado dentro una estrella dormida»: las ediciones consultadas dicen «¿Nunca llevasteis dentro una estrella dormida»",
+    "citar el verso 8 con «abrazaba»: Wikisource trae «abrazaba» y la antología de 1965 «abrasaba»; no se citó ese verso literalmente por esa discrepancia",
+    "decir que el divorcio de Agustini fue el primero de Uruguay bajo la ley de divorcio por sola voluntad de la mujer: circula pero no se verificó",
+    "decir que se separaron «a las pocas semanas» con cifra distinta de 53 días: la Academia habla de dos meses y Wikipedia de 53 días; no dar ambas",
+    "afirmar que escribió «Lo inefable» a los veintitrés años: lo que se sabe es que el libro salió en 1910, cuando tenía veintitrés; la fecha de composición no se verificó",
+    "citar la frase de Unamuno sobre que «ha ahondado en la forma, del ropaje pasó a la encarnadura» sin contexto: la Academia la recoge, pero no se vio la carta original",
+    "usar la edición de 1910 como consultada: no se encontró digitalizada; la pertenencia del soneto a Cantos de la mañana se comprobó en la edición de 1913 de Los cálices vacíos, que lo reimprime bajo ese epígrafe"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

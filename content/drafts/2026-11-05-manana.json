@@ -1,0 +1,76 @@
+{
+  "id": "2026-11-05-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Agnes Pockels y la cubeta de hojalata de 1891",
+    "hook": "Descubrió la física de las superficies líquidas en el agua de fregar los platos. Nunca pudo matricularse en una universidad.",
+    "body": [
+      "Agnes Pockels nació en Venecia el 14 de febrero de 1862 y creció en Braunschweig, en Alemania. Fue a la escuela secundaria para muchachas y ahí terminó su educación formal: las universidades alemanas no admitían mujeres. Hacia 1880, con dieciocho años, observó en el agua de fregar que la superficie se comportaba de forma extraña cuando había jabón o grasa. En 1882 construyó un aparato para medirlo: una cubeta de hojalata de 70 centímetros de largo, 5 de ancho y 2 de alto, llena hasta el borde, con una lámina móvil para ensanchar o estrechar la superficie y un botón colgado de una balanza para medir la fuerza con que el agua lo retenía.",
+      "Su hermano Friedrich, tres años menor, estudiaba física en Gotinga y le llevaba libros. Por él supo en 1890 que lord Rayleigh publicaba sobre capas de aceite en el agua. El 10 de enero de 1891 le escribió doce páginas en alemán con sus resultados. La esposa de Rayleigh las tradujo. Rayleigh envió la carta a la revista Nature con una nota: una «dama alemana» había llegado «con aparatos muy caseros» a «resultados valiosos». Se publicó el 12 de marzo de 1891 con el título «Surface Tension».",
+      "Pockels siguió publicando mientras cuidaba a sus padres enfermos, y por eso no aceptó la invitación de un laboratorio de Gotinga. Su último artículo salió en 1926. En 1932, con setenta años, la Escuela Técnica Superior de Braunschweig le dio el doctorado honoris causa: era la primera mujer que lo recibía. Ese mismo año Irving Langmuir ganó el Nobel de Química por trabajos hechos con una versión mejorada de su cubeta. Murió en Braunschweig en noviembre de 1935."
+    ],
+    "question": "¿Cuánto conocimiento se produce lejos de los lugares donde se reconoce?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La física que empezó en un fregadero",
+    "subtitle": "Braunschweig, 1891",
+    "body": "Agnes Pockels midió la tensión superficial del agua con una cubeta de hojalata hecha en casa. Lord Rayleigh hizo traducir su carta y la publicó en Nature. Cuarenta años después, un Nobel se ganó con su instrumento."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AgnesPockels",
+      "#HistoriaDeLaCiencia",
+      "#Fisica"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Quimica",
+      "#Nature",
+      "#Rayleigh",
+      "#Langmuir",
+      "#Ciencia",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Pockels nació el 14 de febrero de 1862 en Venecia. Fue a la escuela secundaria municipal para muchachas de Braunschweig y no cursó estudios universitarios porque las mujeres no eran admitidas. Su hermano Friedrich, tres años menor, fue profesor de física en Gotinga. En 1880-81 descubrió el comportamiento anómalo de la superficie del agua; en 1882 desarrolló la cubeta deslizante (Schieberinne). En 1890 leyó un artículo de Rayleigh y le escribió una carta de doce páginas. Dos meses después su trabajo salió en Nature con el respaldo de Rayleigh. En 1931 recibió el premio Laura R. Leonard de la Sociedad Coloidal y en 1932 el doctorado honoris causa en ingeniería de la Technische Hochschule Braunschweig.",
+      "source": "Technische Universität Braunschweig, Agnes-Pockels-Labor, «Who was Agnes Pockels»",
+      "url": "https://tu-braunschweig.de/en/agnes-pockels-labor/who-was-agnes-pockels"
+    },
+    {
+      "claim": "Nació el 14 de febrero de 1862 en Venecia y murió el 21 de noviembre de 1935 en Braunschweig. Hacia los dieciocho años empezó experimentos en casa con agua y agua jabonosa; hacia los veinte ideó la cubeta deslizante, una cubeta metálica rectangular de unos 70 cm de largo, 5 de ancho y 2 de profundidad, con una lámina metálica y una regla, y después un pequeño disco para medir la fuerza. Escribió a Rayleigh el 10 de enero de 1891, en alemán; la tradujo la esposa de Rayleigh, Evelyn. La carta de presentación de Rayleigh a Nature es del 2 de marzo de 1891 y dice que una «German lady, who with very homely appliances has arrived at valuable results respecting the behaviour of contaminated water surfaces». Se publicó el 12 de marzo de 1891 en Nature 43, p. 437, con el título «Surface Tension». Publicó catorce artículos; el último en Science en 1926. Su padre murió en 1906 y su madre en 1914. En 1931 compartió el premio Laura R. Leonard con Henri Devaux; en 1932 fue la primera mujer en recibir el doctorado honoris causa de la universidad técnica de Braunschweig. Irving Langmuir, Nobel de Química en 1932, usó una versión mejorada de su cubeta.",
+      "source": "Wikipedia en inglés, «Agnes Pockels»",
+      "url": "https://en.wikipedia.org/wiki/Agnes_Pockels"
+    },
+    {
+      "claim": "La cubeta de Pockels era «a rectangular tin trough, 70 cm long, 5 cm wide, 2 cm high», llena de agua hasta el borde, con una partición móvil para variar el área de la superficie. El 10 de enero de 1891 escribió a lord Rayleigh; tras leer la carta traducida, Rayleigh pidió a Nature que publicara los resultados, lo que ocurrió el 12 de marzo de 1891. Langmuir y Blodgett ampliaron su trabajo con una versión actualizada de su cubeta.",
+      "source": "J. E. Greene, «Organic thin films: from monolayers on liquids to multilayers on solids», Physics Today, 1 de junio de 2014",
+      "url": "https://physicstoday.aip.org/features/organic-thin-films-from-monolayers-on-liquids-to-multilayers-on-solids"
+    },
+    {
+      "claim": "La familia se mudó de Venecia a Braunschweig. Su hermano menor estudiaba física en Gotinga y le llevaba textos a casa. No pudo aceptar una invitación de un laboratorio de Gotinga porque cuidaba a sus padres ancianos. Recibió el doctorado honoris causa en 1932, a los setenta años; ese mismo año Irving Langmuir ganó el Nobel con métodos basados en su trabajo.",
+      "source": "Elhuyar Fundazioa, Zientzia.eus, «Physics of the water in the sink»",
+      "url": "https://zientzia.eus/artikuluak/harraskako-uraren-fisika/en/"
+    }
+  ],
+  "do_not_use": [
+    "dar una fecha única para la primera observación: la página de la TU Braunschweig dice 1880-81, Wikipedia «hacia los dieciocho años» y Zientzia 1881; basta «hacia 1880, con dieciocho años»",
+    "decir que el instrumento actual se llama «cubeta de Langmuir» o «cubeta de Langmuir-Blodgett» por el aparato de Pockels: es un dato conocido pero no se abrió en esta ejecución una fuente que lo documente",
+    "citar textualmente la frase de Pockels a Rayleigh sobre no ocultarle los resultados aunque no fuera física profesional: Zientzia la traduce de forma distinta a como circula en inglés y no se vio el original",
+    "afirmar que fue «la primera mujer doctora honoris causa de Alemania»: la fuente solo dice la primera de la Technische Hochschule Braunschweig",
+    "decir que Rayleigh «tradujo» la carta: la tradujo su esposa, Evelyn; Rayleigh la envió a Nature con una nota",
+    "decir que el artículo original de Nature se consultó: la página de nature.com redirige a un acceso con cookies y no se pudo abrir; los datos de volumen, página y fecha vienen de Wikipedia y Physics Today"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

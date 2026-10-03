@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Hipócrates y el aforismo I, 1",
+    "hook": "«La vida es breve; el arte, largo; la ocasión, fugaz; la experiencia, engañosa; el juicio, difícil.»\n— Hipócrates, Aforismos, I, 1",
+    "body": [
+      "Es la primera línea de los Aforismos, la colección de sentencias médicas atribuida a Hipócrates. La versión latina que todos repiten, «ars longa, vita brevis», invierte el orden del original: el griego empieza por la vida, no por el arte. Y «arte» traduce tékhne, que significa oficio o técnica. El oficio del que habla es la medicina. No dice nada de la pintura ni de la poesía: dice que un oficio tarda en aprenderse más de lo que dura quien lo aprende.",
+      "El aforismo no termina ahí. Tiene una segunda frase que casi nunca se cita: el médico no solo debe hacer él lo que corresponde, sino conseguir que colaboren el enfermo, los que lo asisten y las circunstancias externas. Leído entero, no es un elogio del arte. Es un inventario de todo lo que no depende de uno.",
+      "La traducción latina es antigua. Séneca, en «Sobre la brevedad de la vida», la llama «la exclamación del más grande de los médicos»: «que la vida es breve y largo el arte». De Séneca pasó al latín escolar, y de ahí a los lemas de facultades y academias, ya sin la segunda frase y con el arte por delante."
+    ],
+    "question": "¿Qué oficio te parece más largo que una vida?",
+    "quote": {
+      "text": "La vida es breve; el arte, largo; la ocasión, fugaz; la experiencia, engañosa; el juicio, difícil.",
+      "author": "Hipócrates",
+      "work": "Aforismos, sección I, 1 (texto griego; versión inglesa de Francis Adams, 1849)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hipocrates",
+      "#Filosofia",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Medicina",
+      "#ArsLongaVitaBrevis",
+      "#Seneca",
+      "#Reflexiones",
+      "#Sabiduria",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego del aforismo I, 1: «Ὁ βίος βραχὺς, ἡ δὲ τέχνη μακρὴ, ὁ δὲ καιρὸς ὀξὺς, ἡ δὲ πεῖρα σφαλερὴ, ἡ δὲ κρίσις χαλεπή. Δεῖ δὲ οὐ μόνον ἑωυτὸν παρέχειν τὰ δέοντα ποιεῦντα, ἀλλὰ καὶ τὸν νοσέοντα, καὶ τοὺς παρεόντας, καὶ τὰ ἔξωθεν.»",
+      "source": "Wikisource en griego, «Αφορισμοί», sección Α, aforismo 1",
+      "url": "https://el.wikisource.org/wiki/Αφορισμοί/Α"
+    },
+    {
+      "claim": "Traducción de Francis Adams (1849) del aforismo I, 1: «Life is short, and Art long; the crisis fleeting; experience perilous, and decision difficult. The physician must not only be prepared to do what is right himself, but also to make the patient, the attendants, and externals cooperate».",
+      "source": "Wikisource en inglés, Hippocrates, «Aphorisms», traducción de Francis Adams",
+      "url": "https://en.wikisource.org/wiki/Aphorisms"
+    },
+    {
+      "claim": "El aforismo procede de los Aforismos de Hipócrates; la traducción latina «ars longa, vita brevis» invierte el orden de las líneas originales; la palabra griega tékhne significa técnica u oficio y se vertió al latín como ars; el sentido original se refiere al tiempo que exige aprender la medicina, no a las bellas artes.",
+      "source": "Wikipedia en inglés, «Ars longa, vita brevis»",
+      "url": "https://en.wikipedia.org/wiki/Ars_longa,_vita_brevis"
+    },
+    {
+      "claim": "Séneca, De brevitate vitae, capítulo 1: «Inde illa maximi medicorum exclamatio est: vitam brevem esse, longam artem».",
+      "source": "The Latin Library, Seneca, «De brevitate vitae»",
+      "url": "https://www.thelatinlibrary.com/sen/sen.brevita.shtml"
+    }
+  ],
+  "do_not_use": [
+    "presentar la frase como «el arte es largo, la vida breve» como si fuera el orden original: el griego empieza por la vida",
+    "interpretar «arte» como bellas artes o como la obra que sobrevive al artista: tékhne es el oficio, y en el contexto, la medicina",
+    "afirmar que Hipócrates escribió personalmente los Aforismos: la colección se le atribuye dentro del corpus hipocrático y la autoría individual de cada tratado no está establecida",
+    "dar fechas de nacimiento y muerte de Hipócrates (460-375 a. C. o similares): circulan en páginas de citas y no se verificaron en una fuente de calidad en esta ejecución",
+    "atribuir la traducción española usada a la edición de Gredos u otra edición concreta: no se abrió ninguna; la versión en español es traducción propia hecha sobre el griego y cotejada con la inglesa de Adams",
+    "decir que la frase griega original diga «ars longa» o que Séneca cite a Hipócrates por su nombre: Séneca dice «el más grande de los médicos» sin nombrarlo",
+    "citar la versión de Chaucer («The lyf so short, the craft so long to lerne») con fecha u obra concretas: Wikipedia la menciona, pero no se abrió una edición del texto"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

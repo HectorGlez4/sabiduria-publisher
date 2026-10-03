@@ -1,0 +1,90 @@
+{
+  "id": "2026-11-05-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la Dama de Elche y la cavidad de su espalda",
+    "hook": "Salió de Elche a los veintiséis días de aparecer, por 4.000 francos. Volvió cuarenta y tres años después, a cambio de un Velázquez, y no volvió a Elche.",
+    "body": [
+      "El 4 de agosto de 1897, en la loma de La Alcudia, a dos kilómetros de Elche, unos trabajos agrícolas sacaron a la luz un busto de piedra caliza de 56 centímetros. Lo encontró Manuel Campello Esclapez, un muchacho que ayudaba a su familia en la finca. El hispanista francés Pierre Paris la vio y avisó al Louvre, que ofreció 4.000 francos. El contrato se firmó el 18 de agosto y la pieza salió de Elche el 30. En diciembre ya estaba expuesta en París, donde le pusieron el nombre con que se la conoce.",
+      "Regresó el 8 de febrero de 1941, en plena guerra mundial, cruzando la frontera en un vagón especial. Fue parte de un canje negociado entre el gobierno de Franco y la Francia de Vichy: España entregó el retrato de Mariana de Austria de Velázquez, un Greco y otras piezas, y recibió la Dama, la Inmaculada de Murillo y decenas de esculturas ibéricas. No fue a Elche. Fue al Museo del Prado, y en 1971, por orden ministerial, al Museo Arqueológico Nacional, donde sigue. Ha visitado su ciudad dos veces, en 1965 y en 2006.",
+      "En la espalda tiene un hueco. En 2011, un equipo dirigido por María Pilar Luxán publicó en Journal of Cultural Heritage el análisis de las micropartículas recogidas en esa cavidad: contenían fragmentos ricos en fósforo y calcio en la proporción de los huesos. Eran cenizas de huesos humanos. La figura, datada entre los siglos V y IV a. C., era una urna cineraria. Durante más de un siglo se discutió quién era la dama. Lo que guardaba dentro era a alguien."
+    ],
+    "question": "¿A quién pertenece un objeto que ha pasado por tantas manos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La dama que guardaba cenizas",
+    "subtitle": "La Alcudia, Elche, 1897",
+    "body": "Un busto ibérico de 56 centímetros, vendido al Louvre a las tres semanas de aparecer y recuperado en 1941 a cambio de un Velázquez. En 2011 se confirmó que la cavidad de su espalda contuvo cenizas de huesos humanos: era una urna."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#DamaDeElche",
+      "#Iberos",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Elche",
+      "#Louvre",
+      "#MuseoArqueologicoNacional",
+      "#HistoriaAntigua",
+      "#Patrimonio",
+      "#Historia",
+      "#Civilizaciones",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El 4 de agosto de 1897, en la loma de La Alcudia, Elche, durante labores agrícolas, Manuel Campello Esclápez, que ayudaba a su familia, descubrió la pieza. Se vendió al Louvre a través del hispanista Pierre Paris por 4.000 francos; el contrato se firmó el 18 de agosto y la escultura salió de Elche el 30 de agosto. El Louvre la presentó en diciembre de 1897. En el canje de 1941 España entregó el Retrato de Mariana de Austria de Velázquez y obras de El Greco y Goya. Estuvo en el Prado hasta 1971, año en que por Orden Ministerial del 29 de enero se incorporó al Museo Arqueológico Nacional. Mide 56 cm y pesa 65,08 kg. El análisis halló cenizas de huesos humanos, lo que confirma su uso como urna cineraria, de los siglos V-IV a. C.",
+      "source": "Wikipedia en español, «Dama de Elche»",
+      "url": "https://es.wikipedia.org/wiki/Dama_de_Elche"
+    },
+    {
+      "claim": "Hallada el 4 de agosto de 1897 por el joven trabajador Manuel Campello Esclapez en La Alcudia, en una finca privada a dos kilómetros al sur de Elche. Pierre Paris avisó al Louvre, que ofreció 4.000 francos; la compra se cerró el 30 de agosto de 1897. En la guerra el Louvre la trasladó a Montauban. El gobierno de Vichy negoció su devolución a la España de Franco en un intercambio cultural de 1941 que incluyó un retrato de Mariana de Austria de Velázquez y un Greco. Desde 1941 estuvo en el Prado hasta su traslado en 1971 al Museo Arqueológico Nacional. Mide 56 cm. Apareció en un billete de una peseta de 1948 y volvió brevemente a Elche en 1965 y 2006. Una cavidad trasera sugiere su uso como urna funeraria.",
+      "source": "Wikipedia en inglés, «Lady of Elche»",
+      "url": "https://en.wikipedia.org/wiki/Lady_of_Elche"
+    },
+    {
+      "claim": "El 8 de febrero de 1941 se cumplían 80 años del regreso a España del busto, fruto de un intercambio de arte con Francia. Ese día cruzó la frontera por Portbou en un vagón especial, escoltada hasta Barcelona y al día siguiente hasta Madrid. Antes de terminar agosto de 1897 partió hacia el Louvre por 4.000 francos. Tras su vuelta no fue a Elche sino al Museo del Prado; treinta años después pasó al Museo Arqueológico Nacional.",
+      "source": "elDiario.es, «Elche no olvida a su Dama: 80 aniversario de su regreso a España» (febrero de 2021)",
+      "url": "https://www.eldiario.es/cultura/elche-no-olvida-dama-80-aniversario-regreso-espana_1_7198598.html"
+    },
+    {
+      "claim": "El canje fue negociado entre el régimen de Franco y el gobierno de Vichy en plena Segunda Guerra Mundial. España aceptó entregar el retrato de Mariana de Austria de Velázquez, un lienzo de El Greco elegido entre varios y parte del botín de la tienda del rey Francisco I. En octubre de 1940 llegó la Inmaculada de Murillo con unas sesenta cajas de obras; en febrero de 1941 regresó la Dama de Elche acompañada de numerosas esculturas ibéricas.",
+      "source": "El Español (edición de Alicante), «Los años en que la Dama de Elche volvió a España a cambio de obras de Goya, Greco y Velázquez» (febrero de 2026)",
+      "url": "https://www.elespanol.com/alacant/elx/20260212/anos-dama-elche-volvio-espana-cambio-obras-goya-greco-velazquez/1003744126908_0.html"
+    },
+    {
+      "claim": "Hallada el 4 de agosto de 1897 por Manuel Campello Esclapez en el yacimiento de La Alcudia; datada entre los siglos V y IV a. C.; caliza, originalmente policromada; bautizada «Dama de Elche» en el Louvre; en 1941 cruzó los Pirineos para instalarse en el Prado; visitó Elche en 1965, durante el VII Centenario del Misteri, y en 2006.",
+      "source": "Cátedra UNESCO Forum Universidad y Patrimonio, Universitat Politècnica de València, «125 aniversario del descubrimiento de la Dama de Elche»",
+      "url": "https://catunescoforum.upv.es/?p=6721"
+    },
+    {
+      "claim": "M. P. Luxán, J. L. Prada, F. Dorrego y J. F. Dorrego, «Human bone ashes found in the Dama de Elche (V–IV century B.C.) reveal its use as an ancient cinerary urn», Journal of Cultural Heritage, vol. 12, n.º 3, julio de 2011, pp. 310-316. El uso del busto como urna cineraria se verificó con la detección de micropartículas carbonosas con fragmentos ricos en fósforo y calcio, en proporciones propias del hueso, en la cavidad trasera.",
+      "source": "EM-consulte (Elsevier Masson), ficha del artículo en Journal of Cultural Heritage",
+      "url": "https://www.em-consulte.com/article/307946"
+    }
+  ],
+  "do_not_use": [
+    "afirmar que Antonio Maciá fue el descubridor: es la versión del archivero Pere Ibarra recogida en Wikipedia en inglés; la mayoría de las fuentes nombran a Manuel Campello Esclapez",
+    "dar la edad de Campello (catorce años) o el detalle del golpe de azada: circulan pero no se verificaron en esta ejecución",
+    "decir que España recibió las coronas visigodas de Guarrazar o los papeles de Simancas en el canje: las fuentes abiertas hablan de «objetos visigodos» y de que se quiso recuperar más; no se confirmó qué llegó",
+    "precisar que la Dama cruzó por Irún: elDiario.es dice Portbou; Wikipedia menciona Irún para «más piezas del intercambio»; no mezclar",
+    "decir que entró al MAN en 1972: la Cátedra UNESCO de la UPV lo dice, pero Wikipedia cita la Orden Ministerial del 29 de enero de 1971",
+    "dar el precio en pesetas con cifra exacta: elDiario.es dice 5.200 pesetas y El Español «unas 5.000»; basta 4.000 francos",
+    "presentar la tesis de John F. Moffitt (1995) de que es una falsificación como abierta: la analítica posterior, incluida la de 2011, la descarta",
+    "datarla solo en el siglo IV a. C.: Wikipedia en inglés dice «hacia el siglo IV»; el artículo de 2011 y las fuentes españolas dicen siglos V-IV",
+    "citar la ficha del Museo Arqueológico Nacional: las URL de man.es probadas devolvieron 404 o solo menús; no se abrió",
+    "decir que Goya figuró en el canje con una obra concreta: Wikipedia habla de «obras de Goya» y un resumen de búsqueda de «un tapiz»; no se verificó cuál"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
