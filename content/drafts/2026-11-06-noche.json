@@ -1,0 +1,85 @@
+{
+  "id": "2026-11-06-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Borobudur y los doscientos hombres de 1814",
+    "hook": "En 1814 hicieron falta doscientos hombres y semanas de trabajo para sacar de la tierra el mayor templo budista del mundo. Sus vecinos siempre supieron que estaba ahí.",
+    "body": [
+      "Borobudur se levanta en el centro de Java, en la actual Indonesia. Lo construyó la dinastía Sailendra en el siglo IX; las obras terminaron hacia 800-825. Su base es un cuadrado de unos 118 metros de lado y el conjunto sube 35 metros: seis plataformas cuadradas coronadas por tres circulares. Lleva 2.672 paneles de relieve, 1.460 de ellos narrativos, y 504 estatuas de Buda. En las terrazas superiores hay 72 estupas caladas, con un Buda sentado dentro de cada una.",
+      "Entre 928 y 1006, después de una serie de erupciones volcánicas, la capital del reino se trasladó al este de Java. El monumento todavía se menciona hacia 1365. Después quedó cubierto de tierra, ceniza volcánica y vegetación. En 1814, Thomas Stamford Raffles, gobernador británico de la isla, supo por informantes locales que existía un gran monumento y envió al ingeniero holandés Hermanus Christiaan Cornelius. Con doscientos hombres cortaron árboles, quemaron la maleza y retiraron tierra durante semanas. Raffles no fue en persona: lo describió en su Historia de Java de 1817 a partir de los dibujos e informes de Cornelius. El desenterramiento completo llegó en 1835.",
+      "La palabra «descubrimiento» es la parte colonial del relato. Un investigador de la Universidad de Sheffield, Panggah Ardiyansyah, muestra que las comunidades javanesas, ya musulmanas, siguieron visitando y reinterpretando los templos antiguos: un manuscrito javanés de 1815 describe a estudiantes islámicos que recorren templos y leen sus inscripciones. Cornelius llegó a Borobudur porque un funcionario local lo guió. Entre 1975 y 1982, Indonesia y la UNESCO desmontaron más de un millón de piedras para restaurarlo, con un coste de 6.901.243 dólares. En 1991 entró en la lista del Patrimonio Mundial."
+    ],
+    "question": "¿Quién descubre un lugar que sus vecinos nunca dejaron de visitar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Doscientos hombres y una montaña de piedra",
+    "subtitle": "Java central, 1814",
+    "body": "Borobudur, del siglo IX, tiene 2.672 relieves y 504 budas. En 1814 un ingeniero holandés y doscientos hombres lo sacaron de la tierra y la maleza. Un funcionario local los guió: la isla nunca lo había olvidado."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Borobudur",
+      "#Civilizaciones",
+      "#Indonesia"
+    ],
+    "extended": [
+      "#Java",
+      "#Budismo",
+      "#Arqueologia",
+      "#PatrimonioMundial",
+      "#Raffles",
+      "#HistoriaAntigua",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Construido en el siglo IX bajo la dinastía Sailendra; etapas de construcción desde c. 780 hasta c. 833. La base es un cuadrado de unos 118 metros de lado; se alza 35 metros sobre el suelo. Tiene 2.672 paneles de relieve (1.460 narrativos y 1.212 decorativos) y originalmente 504 estatuas de Buda; la cúpula central está rodeada de 72 budas, cada uno dentro de una estupa calada. Entre 928 y 1006 el rey Mpu Sindok trasladó la capital tras una serie de erupciones volcánicas; el monumento se menciona vagamente hacia 1365. En 1814 Raffles fue informado de un gran monumento; Cornelius y sus 200 hombres cortaron árboles, quemaron vegetación y retiraron tierra durante dos meses; en 1835 el conjunto quedó desenterrado del todo bajo Hartmann. En 1896 el rey Chulalongkorn de Siam pidió y obtuvo permiso para llevarse ocho carretadas de esculturas. La restauración de 1975-1982 desmontó más de un millón de piedras y costó 6.901.243 dólares. La UNESCO lo inscribió como Patrimonio Mundial en 1991.",
+      "source": "Wikipedia en inglés, «Borobudur»",
+      "url": "https://en.wikipedia.org/wiki/Borobudur"
+    },
+    {
+      "claim": "Fue construido entre los años 750 y 850 por los soberanos de la dinastía Sailendra. Consta de seis plataformas cuadradas coronadas por tres circulares, decorado con 2.672 paneles de relieve y 504 estatuas de Buda; las plataformas circulares tienen 32, 24 y 16 estupas, 72 en total. En 1814 Raffles fue informado de un gran monumento llamado Chandi Borobudur; en 1835 quedó completamente desenterrado. La restauración de 1975-1982, del Gobierno de Indonesia y la Unesco, costó 6.901.243 dólares; en 1991 la Unesco lo declaró Patrimonio de la Humanidad. Los niveles se dividen en Kamadhatu, Rupadhatu y Arupadhatu.",
+      "source": "Wikipedia en español, «Borobudur»",
+      "url": "https://es.wikipedia.org/wiki/Borobudur"
+    },
+    {
+      "claim": "Construido durante la dinastía Sailendra, Borobudur sigue siendo el templo budista más grande del mundo; el consenso arqueológico sitúa el final de su construcción hacia 800-825. En el siglo X u XI la capital del reino de Mataram se desplazó al este por erupciones volcánicas. Los peregrinos budistas siguieron acudiendo hasta su abandono en algún momento del siglo XV. 72 estupas, cada una con un Buda dentro, rodean las plataformas circulares. En 1814 el teniente gobernador Thomas Stamford Raffles permitió al explorador holandés Hermann Cornelius organizar una expedición. La UNESCO lo designó Patrimonio Mundial en 1991 tras una restauración en los años 70 y 80.",
+      "source": "James Blake Wiener, «Borobudur», World History Encyclopedia, 21 de septiembre de 2018",
+      "url": "https://www.worldhistory.org/Borobudur/"
+    },
+    {
+      "claim": "El artículo rechaza la narrativa colonial de «abandono y descubrimiento» de templos como Borobudur: comunidades locales musulmanas siguieron reinterpretando los monumentos hindú-budistas después del siglo XVI. El manuscrito Centhini Kadipaten, de 1815, registra viajes de estudiosos islámicos (santri) que visitan templos antiguos y leen sus inscripciones. Raffles no fue personalmente a ver el templo en 1814; los dibujos los hizo el ingeniero holandés Hermanus Christiaan Cornelius, enviado por Raffles tras el aviso de un funcionario local. Autor: Panggah Ardiyansyah, Research Associate del Digital Humanities Institute, University of Sheffield, doctor por SOAS.",
+      "source": "Panggah Ardiyansyah, «Javanese candhi beyond abandonment and discovery», New Mandala (Australian National University)",
+      "url": "https://www.newmandala.org/javanese-candhi-beyond-abandonment-and-discovery/"
+    },
+    {
+      "claim": "Cornelius fue guiado por un grupo de javaneses hasta una estructura piramidal tan inmensa que 200 hombres tardaron más de seis semanas en despejarla. Raffles publicó The History of Java en dos volúmenes en 1817 y quedó cautivado por la descripción del ingeniero. Cifras: 1.460 paneles de relieves narrativos, 504 estatuas de Buda, 72 estatuas dentro de estupas caladas.",
+      "source": "Current World Archaeology, n.º 93, «Travel: Raffles and Java»",
+      "url": "https://www.world-archaeology.com/issues/issue-93/travel-raffles-and-java/"
+    }
+  ],
+  "do_not_use": [
+    "decir que el desbroce duró «dos meses»: Wikipedia dice dos meses y Current World Archaeology «más de seis semanas»; el cuerpo dice «semanas»",
+    "dar número de bloques de piedra: Wikipedia habla de 55.000 metros cúbicos de andesita, World History Encyclopedia de más de 1,6 millones de bloques y Current World Archaeology de más de 2 millones; no se concilian",
+    "nombrar el volcán Merapi como causa del enterramiento: las fuentes consultadas hablan de «erupciones volcánicas» y «ceniza volcánica» sin nombrarlo; el nombre solo apareció en resúmenes de búsqueda",
+    "dar una fecha de abandono: Wikipedia dice que se menciona hacia 1365 y World History Encyclopedia que se abandonó en el siglo XV; el cuerpo evita fijarla",
+    "decir que Raffles «descubrió» o «visitó» Borobudur en 1814: no fue en persona; envió a Cornelius",
+    "escribir «Hermann Cornelius»: World History Encyclopedia lo llama así, New Mandala Hermanus Christiaan Cornelius; se usa la forma completa holandesa",
+    "atribuir el desenterramiento de 1835 a Hartmann por su nombre en el cuerpo: solo lo nombra Wikipedia; el cuerpo da la fecha sin el nombre",
+    "citar la página de la UNESCO como consultada: whc.unesco.org devolvió 403 en inglés y en español; la fecha de inscripción de 1991 y la restauración vienen de Wikipedia y de World History Encyclopedia",
+    "decir que Borobudur estuvo «perdido» u «olvidado»: New Mandala documenta visitas y lecturas de inscripciones por comunidades javanesas antes de 1814",
+    "decir que «3.000 relieves»: World History Encyclopedia redondea «roughly 3,000»; la cifra de las ediciones consultadas es 2.672"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "2026-11-06-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "al-Nafis y la circulación pulmonar",
+    "hook": "Describió en el siglo XIII cómo la sangre pasa por los pulmones. Nadie leyó ese manuscrito con atención hasta 1924, en una biblioteca de Berlín.",
+    "body": [
+      "Ibn al-Nafis nació en Damasco, o en una aldea cercana, hacia 1210. Estudió medicina en el hospital Nuri de esa ciudad. En 1236 se trasladó a Egipto, ejerció en el hospital al-Nasiri y después en el al-Mansuri de El Cairo, donde llegó a ser médico jefe. Murió en El Cairo en 1288. Entre sus obras hay un Comentario sobre la anatomía del Canon de Avicena. En él escribe que el tabique que separa las dos cámaras del corazón no tiene poros, ni visibles ni invisibles. La sangre de la cámara derecha, dice, tiene que ir a los pulmones por la vena arteriosa, mezclarse allí con el aire y volver a la cámara izquierda por la arteria venosa. Eso contradecía a Galeno, cuya anatomía se enseñaba desde hacía mil años y hacía pasar la sangre a través del tabique.",
+      "En Europa, la circulación pulmonar la describió Miguel Servet en 1553 y Realdo Colombo en 1559. William Harvey publicó la circulación general en 1628. Durante siglos nadie relacionó esos textos con el médico de El Cairo. En 1924, un médico egipcio que estudiaba en Alemania, Muhyi al-Din al-Tatawi, encontró el manuscrito en la Biblioteca Estatal Prusiana de Berlín. Lo tradujo al alemán en su tesis doctoral de Friburgo, de la que se hicieron cinco copias. En 1935 el orientalista Max Meyerhof publicó el texto árabe, veintinueve páginas, por primera vez en imprenta.",
+      "Ibn al-Nafis había planeado además una enciclopedia médica de trescientos volúmenes, al-Shamil, y escribió ochenta. Hoy se le reconoce como el primero en describir la circulación pulmonar. Su hallazgo estuvo escrito, copiado y catalogado durante casi siete siglos. Lo que faltó no fue el texto: fue alguien que lo leyera."
+    ],
+    "question": "¿Cuánto de lo que llamamos descubrir es solo leer por fin lo que ya estaba escrito?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La sangre que pasa por los pulmones",
+    "subtitle": "El Cairo, siglo XIII",
+    "body": "Ibn al-Nafis escribió que el tabique del corazón no tiene poros y que la sangre va de la cámara derecha a los pulmones y vuelve a la izquierda. Europa lo describió tres siglos después. Su manuscrito se leyó en Berlín en 1924."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#IbnAlNafis",
+      "#HistoriaDeLaMedicina",
+      "#Ciencia"
+    ],
+    "extended": [
+      "#Medicina",
+      "#ElCairo",
+      "#Damasco",
+      "#Anatomia",
+      "#Avicena",
+      "#Harvey",
+      "#Historia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Nació en Siria en 1213, estudió medicina en Damasco, se trasladó a Egipto en 1236, trabajó en el hospital al-Mansuri y fue médico jefe y médico del sultán. Publicó su Comentario sobre la anatomía del Canon de Avicena (Sharah al Tashreeh al Qanoon). Rechazó la doctrina de Galeno de que la sangre pasaba por el tabique interventricular: no había poros en el tabique, sino que la sangre seguía el camino de la vasculatura pulmonar. Describió también la circulación coronaria, los nervios craneales y la anatomía de la vesícula y del ojo. El manuscrito fue redescubierto en 1924 por M. Altatawi en una biblioteca de Berlín.",
+      "source": "Hektoen International, «Ibn al-Nafis and the pulmonary circulation», 20 de diciembre de 2017",
+      "url": "https://hekint.org/2017/12/20/ibn-al-nafis-pulmonary-circulation/"
+    },
+    {
+      "claim": "Nació en Qarsh, pueblo cercano a Damasco; vivió entre 1210 y 1288. En 1236 se trasladó a Egipto; trabajó en el hospital al-Mansuri y fue médico jefe y médico personal del sultán. Escribió que «el tabique interventricular no tiene poros visibles o invisibles» y que la sangre de la cámara derecha del corazón va por la vena arteriosa (arteria pulmonar) a los pulmones y vuelve por la arteria venosa (vena pulmonar) a la cámara izquierda. El manuscrito n.º 62243 fue descubierto en 1924 por el Dr. M. Altatawi en la Biblioteca Estatal Prusiana de Berlín. Fechas comparativas: Servet 1553, Colombo 1559, Harvey 1628.",
+      "source": "PubMed Central, «Ibn Nafis – a forgotten genius in the discovery of pulmonary blood circulation» (PMC2964710)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2964710/"
+    },
+    {
+      "claim": "Nació entre 1210 y 1213 en Damasco y murió en 1288 en El Cairo. Estudió en el hospital Nuri de Damasco; en 1236 se trasladó a Egipto, fue médico jefe del hospital al-Nasiri y después fue nombrado para el recién fundado hospital al-Mansuri. Su obra más famosa, el Comentario sobre la anatomía del Canon de Ibn Sina, describe la circulación pulmonar: «the blood from the right chamber must flow through the vena arteriosa to the lungs... then pass through the arteria venosa to reach the left chamber». Planeó al-Shamil fi al-Tibb como una enciclopedia de 300 volúmenes y completó 80. En 1924 el médico egipcio Muhyo al-Deen Altawi descubrió el manuscrito del Comentario en la Biblioteca Estatal Prusiana de Berlín; en 1935 Max Meyerhof tradujo y analizó la obra; Andrea Alpago publicó una traducción latina en Venecia en 1547. Sus teorías precedieron a la obra de Harvey de 1628.",
+      "source": "Wikipedia en inglés, «Ibn al-Nafis»",
+      "url": "https://en.wikipedia.org/wiki/Ibn_al-Nafis"
+    },
+    {
+      "claim": "Nombre completo Ala al-Din Abu al-Hasan Ali ibn Abi Hazm al-Qarshi al-Dimashqi. Nació entre 1210 y 1213 en Damasco y murió en 1288 en El Cairo. Hospitales: al-Nuri en Damasco, al-Nasiri y al-Mansuri en Egipto. Escribió que la sangre de la cámara derecha debe llegar a la cámara izquierda pero no hay un camino directo entre ellas; rechazó los poros invisibles de Galeno y propuso que la sangre va por la arteria pulmonar a los pulmones, se mezcla con el aire y vuelve por la vena pulmonar. En 1924 el médico egipcio Muhyi al-Din al-Tatawi descubrió su manuscrito en la Biblioteca Estatal Prusiana de Berlín mientras estudiaba en Alemania. El mérito suele atribuirse a Miguel Servet o a William Harvey.",
+      "source": "Wikipedia en español, «Ibn al-Nafis»",
+      "url": "https://es.wikipedia.org/wiki/Ibn_al-Nafis"
+    },
+    {
+      "claim": "Entrada 1873 de la bibliografía Garrison-Morton: Ibn an-Nafis y Max Meyerhof, «Ibn an Nafis und seine Theorie des Lungenkreislaufs», Quellen und Studien zur Geschichte der Medizin, 4, 37-88, 1935. Ibn al-Nafis, médico sirio, describió la circulación menor en su comentario sobre la anatomía del Canon de Avicena. Mohyi el Din el Tatawi halló manuscritos árabes y los tradujo en su tesis inaugural «Der Lungenkreislauf nach el-Koraschi» (Friburgo, 1924), de la que se hicieron solo 5 copias. Meyerhof incluyó 29 páginas de texto árabe, la primera aparición impresa del texto de Ibn al-Nafis.",
+      "source": "Garrison-Morton-Norman, HistoryofMedicine.com, entrada 1873",
+      "url": "https://historyofmedicine.com/id/1873"
+    }
+  ],
+  "do_not_use": [
+    "dar fecha al Comentario sobre la anatomía del Canon: Hektoen y Wikipedia dicen que lo escribió a los veintinueve años (hacia 1242); la bibliografía Garrison-Morton lo fecha en 1268; no se resolvió la discrepancia y el cuerpo no da fecha",
+    "dar un año de nacimiento único: Hektoen dice 1213, PubMed Central 1210, Wikipedia «entre 1210 y 1213»; basta «hacia 1210»",
+    "decir que nació en Damasco sin matiz: PubMed Central lo sitúa en Qarsh, aldea cercana; Wikipedia en Damasco",
+    "decir que «descubrió la circulación de la sangre»: describió la circulación pulmonar o menor; la circulación general es de Harvey (1628)",
+    "afirmar que Servet o Colombo conocieron el texto de Ibn al-Nafis a través de la traducción latina de Andrea Alpago (1547): Wikipedia menciona la traducción, pero no se verificó que incluyera el pasaje ni que Servet la leyera",
+    "usar el número de manuscrito 62243: lo da una sola fuente (PubMed Central) y no se cotejó",
+    "decir que Tatawi encontró «un» manuscrito o «tres»: Garrison-Morton habla de manuscritos árabes en plural y las demás fuentes de uno en Berlín; el cuerpo dice solo «el manuscrito» de Berlín",
+    "nombrar al sultán al que atendió (Baibars u otro): Hektoen dice solo «médico del sultán»",
+    "citar a Meyerhof como autor del artículo de Isis de 1935 en inglés con número de páginas: se verificó la referencia alemana en Quellen und Studien, 4, 37-88; la de Isis solo apareció en un resumen de búsqueda",
+    "decir que la Enciclopedia Iranica o Britannica se consultaron: ambas devolvieron 403",
+    "atribuir a Galeno la cifra de «mil años» como dato exacto: Galeno escribió en el siglo II y el comentario es del XIII; es un redondeo, no una cifra de fuente"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

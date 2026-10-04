@@ -1,0 +1,82 @@
+{
+  "id": "2026-11-06-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kierkegaard y la vida que se vive hacia adelante",
+    "hook": "«Es muy cierto lo que dice la filosofía: que la vida debe comprenderse hacia atrás. Pero con eso se olvida la otra proposición: que debe vivirse hacia adelante.»\n— Søren Kierkegaard, diario, 1843",
+    "body": [
+      "No está en ninguno de sus libros. Es una anotación de su diario privado, en el cuaderno que los editores llaman JJ, escrita en 1843. Kierkegaard tenía treinta años. Ese año publicó O lo uno o lo otro, el 20 de febrero, y el 16 de octubre sacó el mismo día Temor y temblor y La repetición. Dos años antes, el 11 de agosto de 1841, había roto su compromiso con Regine Olsen.",
+      "La versión que circula, «la vida solo puede entenderse hacia atrás, pero debe vivirse hacia adelante», es una condensación. La anotación tiene tres oraciones, y la tercera casi nunca se cita: esa proposición, cuanto más se piensa, termina en que la vida en el tiempo nunca llega a entenderse del todo, porque en ningún instante consigo la calma suficiente para colocarme en la posición de mirar hacia atrás. Leída entera, no es un consejo. Es la descripción de una imposibilidad: no se puede detener la vida para entenderla, y mientras se vive, no se entiende.",
+      "Kierkegaard nació en Copenhague el 5 de mayo de 1813 y murió en la misma ciudad el 11 de noviembre de 1855, a los cuarenta y dos años. Sus diarios se publicaron después de su muerte. La edición crítica danesa de sus escritos, a cargo del Centro de Investigación Søren Kierkegaard de la Universidad de Copenhague, numera la anotación como JJ:167, y es ese centro el que hoy la recoge en su página de citas, con las dos primeras oraciones."
+    ],
+    "question": "¿Qué parte de tu vida entendiste solo cuando ya había pasado?",
+    "quote": {
+      "text": "Es muy cierto lo que dice la filosofía: que la vida debe comprenderse hacia atrás. Pero con eso se olvida la otra proposición: que debe vivirse hacia adelante.",
+      "author": "Søren Kierkegaard",
+      "work": "Diario, cuaderno JJ, anotación 167 (1843; Søren Kierkegaards Skrifter, vol. 18)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kierkegaard",
+      "#Filosofia",
+      "#Existencialismo"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Copenhague",
+      "#Dinamarca",
+      "#FilosofiaDeVida",
+      "#Diarios",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto danés en la página de citas del Søren Kierkegaard Forskningscenteret (Universidad de Copenhague): «Det er ganske sandt, hvad Philosophien siger, at Livet maa forstaaes baglænds. Men derover glemmer man den anden Sætning, at det maa leves forlænds.» Referencia: Journalen JJ:167 (1843), SKS bd. 18, s. 194 / SKS-E.",
+      "source": "Søren Kierkegaard Forskningscenteret, Universidad de Copenhague, «Søren Kierkegaard citater»",
+      "url": "https://teol.ku.dk/skc/om-soeren-kierkegaard/soeren-kierkegaard-citater/"
+    },
+    {
+      "claim": "Texto danés completo de la anotación, en tres oraciones: «Det er ganske sandt, hvad Philosophien siger, at Livet maa forstaaes baglænds. Men derover glemmer man den anden Sætning, at det maa leves forlænds. Hvilken Sætning, jo meer den gjennemtænkes, netop ender med, at Livet i Timeligheden aldrig ret bliver forstaaeligt, netop fordi jeg intet Øieblik kan faae fuldelig Ro til at indtage Stillingen: baglænds.» Referencia: Journalen JJ:167 (1843), Søren Kierkegaards Skrifter, Søren Kierkegaard Research Center, Copenhague, vol. 18. Texto danés acreditado a Karsten Kynde.",
+      "source": "Universidad de Iowa, página «Kierkegaard quote source» (homepage.divms.uiowa.edu/~jorgen)",
+      "url": "https://homepage.divms.uiowa.edu/~jorgen/kierkegaardquotesource.html"
+    },
+    {
+      "claim": "El portal de textos de la Biblioteca Real danesa publica «Journalen JJ : 1843» dentro de Søren Kierkegaards Skrifter, Bd. 18; la anotación JJ:167 empieza «Det er ganske sandt, hvad Philosophien siger, at Livet maa forstaaes baglænds». Entradas vecinas con fecha: JJ:109 «Berlin d. 10. Mai 1843» y JJ:115 «d. 17 Mai».",
+      "source": "Det Kgl. Biblioteks tekstportal, «Journalen JJ : 1843», Søren Kierkegaards Skrifter, Bd. 18",
+      "url": "https://tekster.kb.dk/text/sks-jj-txt-shoot-n65"
+    },
+    {
+      "claim": "Kierkegaard nació el 5 de mayo de 1813 y murió el 11 de noviembre de 1855, en Copenhague. Either/Or se publicó el 20 de febrero de 1843; Fear and Trembling y Repetition, el 16 de octubre de 1843. Rompió su compromiso con Regine Olsen el 11 de agosto de 1841.",
+      "source": "Wikipedia en inglés, «Søren Kierkegaard»",
+      "url": "https://en.wikipedia.org/wiki/Søren_Kierkegaard"
+    }
+  ],
+  "do_not_use": [
+    "citar la versión «la vida solo puede entenderse hacia atrás» como texto de Kierkegaard: el original dice «debe comprenderse» (maa forstaaes), sin «solo»",
+    "dar número de página de la edición SKS: la página del centro de Copenhague dice 194 y la de la Universidad de Iowa 306; no se resolvió la discrepancia",
+    "usar la numeración «Papirer IV A 164» o decir que la edición SKS es de 2000 o de 1997: esos datos aparecieron solo en resúmenes de búsqueda y en una cita secundaria, no en una página consultada de la edición",
+    "decir que «la filosofía» a la que alude es Hegel o un autor concreto: la anotación no lo nombra y no se verificó ninguna interpretación",
+    "presentar la anotación como fechada: la edición la sitúa en 1843 dentro del cuaderno JJ; las entradas vecinas con fecha explícita son de mayo de 1843 y la anotación misma no lleva fecha",
+    "citar la traducción inglesa de Howard y Edna Hong (Journals and Papers) con número de entrada: no se consultó",
+    "decir que la frase está en Temor y temblor, O lo uno o lo otro u otra obra publicada: es una anotación de diario",
+    "atribuir la traducción española a una edición concreta: es traducción propia sobre el danés, cotejada con la inglesa de la página de la Universidad de Iowa",
+    "decir que el portal de la Biblioteca Real mostró la anotación completa: la página consultada solo confirma el cuaderno, el volumen y el inicio de la entrada; el texto completo se verificó en la página de la Universidad de Iowa y las dos primeras oraciones en la del centro de Copenhague"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

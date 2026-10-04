@@ -1,0 +1,87 @@
+{
+  "id": "2026-11-06-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Dostoievski y la belleza que salvará al mundo",
+    "hook": "«¿Es verdad, príncipe, que usted dijo una vez que al mundo lo salvará “la belleza”? [...] ¡Qué belleza va a salvar al mundo!»\n— Fiódor Dostoievski, El idiota, parte III, capítulo V",
+    "body": [
+      "«La belleza salvará al mundo» circula como sentencia de Dostoievski. En El idiota, publicada por entregas en la revista El Mensajero Ruso en 1868 y 1869, no la dice el autor ni la dice el príncipe Myshkin. La primera vez la pronuncia Ippolit, un muchacho tísico, en la parte tercera, capítulo V, y la pronuncia como pregunta: si es verdad que el príncipe dijo una vez que al mundo lo salvará «la belleza». Añade que se lo contó Kolya, y remata con una burla: qué belleza va a salvar al mundo. El príncipe lo mira con atención y no le contesta.",
+      "La segunda vez la dice Aglaya, en la parte cuarta, capítulo VI, antes de una velada en casa de sus padres. Le advierte al príncipe que si se pone a hablar de la pena de muerte, del estado económico de Rusia o de que «el mundo lo salvará la belleza», ella se lo habrá avisado. Las dos veces la frase va entre comillas en el original y en boca de otros: es algo que el príncipe habría dicho, pasado de mano en mano, y que él nunca confirma. Lo que sí dice Myshkin sobre la belleza, ante el retrato de Nastasia Filíppovna en la parte primera, es otra cosa: «La belleza es difícil de juzgar; todavía no estoy preparado. La belleza es un enigma».",
+      "Dostoievski empezó la novela en septiembre de 1867, en Suiza, y la terminó en enero de 1869, después de pasar por cuatro ciudades de Suiza e Italia. A Apollon Maikov le escribió que quería representar a un ser humano completamente bello. Quien convirtió la frase en lema fue Solzhenitsyn: en su discurso del Nobel de 1970, que no pudo leer en Estocolmo, confesó que durante mucho tiempo le pareció palabras vacías, y terminó llamándola profecía."
+    ],
+    "question": "¿Qué frase te atribuyen que nunca dijiste así?",
+    "quote": {
+      "text": "¿Es verdad, príncipe, que usted dijo una vez que al mundo lo salvará “la belleza”? [...] ¡Qué belleza va a salvar al mundo!",
+      "author": "Fiódor Dostoievski",
+      "work": "El idiota, parte III, capítulo V (El Mensajero Ruso, 1868-1869)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Dostoievski",
+      "#Literatura",
+      "#ElIdiota"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#LiteraturaRusa",
+      "#Belleza",
+      "#Solzhenitsyn",
+      "#Novela",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Parte III, capítulo V: Ippolit pregunta «Правда, князь, что вы раз говорили, что мир спасет «красота»?», dice «Мне это Коля пересказал…» y exclama «Какая красота спасет мир!». La reacción del príncipe: «Князь рассматривал его внимательно и не ответил ему». La escena ocurre cuando Ippolit despierta tras dormirse durante la disertación de Lébedev.",
+      "source": "Wikisource en ruso, «Идиот (Достоевский)/Часть III/Глава V»",
+      "url": "https://ru.wikisource.org/wiki/Идиот_(Достоевский)/Часть_III/Глава_V"
+    },
+    {
+      "claim": "Parte IV, capítulo VI: Aglaya advierte al príncipe «если вы заговорите о чем-нибудь в роде смертной казни, или об экономическом состоянии России, или о том, что «мир спасет красота»», sobre lo que no debe decir en la velada.",
+      "source": "Wikisource en ruso, «Идиот (Достоевский)/Часть IV/Глава VI»",
+      "url": "https://ru.wikisource.org/wiki/Идиот_(Достоевский)/Часть_IV/Глава_VI"
+    },
+    {
+      "claim": "Parte I, capítulo VII: ante el retrato de Nastasia Filíppovna, el príncipe dice «Красоту трудно судить; я еще не приготовился. Красота — загадка», y Adelaida exclama «Такая красота — сила, с этакою красотой можно мир перевернуть!».",
+      "source": "Wikisource en ruso, «Идиот (Достоевский)/Часть I/Глава VII»",
+      "url": "https://ru.wikisource.org/wiki/Идиот_(Достоевский)/Часть_I/Глава_VII"
+    },
+    {
+      "claim": "La novela se publicó por entregas en The Russian Messenger en 1868-1869. En septiembre de 1867, cuando Dostoievski empezó a trabajar en El idiota, vivía en Suiza con su esposa Anna Grigórievna; cuando la terminó, en enero de 1869, habían pasado por cuatro ciudades de Suiza e Italia. A Apollon Maikov le explicó su intención de «depict a completely beautiful human being».",
+      "source": "Wikipedia en inglés, «The Idiot»",
+      "url": "https://en.wikipedia.org/wiki/The_Idiot"
+    },
+    {
+      "claim": "Discurso del Nobel de Solzhenitsyn, 1970: «One day Dostoevsky threw out the enigmatic remark: ‘Beauty will save the world.’ What sort of a statement is that?»; durante mucho tiempo le pareció meras palabras, y concluye que no fue un lapsus sino una profecía. No estuvo en la ceremonia de Estocolmo; el texto llegó a la Academia Sueca en 1972 a través de un corresponsal sueco.",
+      "source": "Encyclopedia.com, «Solzhenitsyn: Nobel Lecture, 1970»",
+      "url": "https://www.encyclopedia.com/arts/culture-magazines/solzhenitsyn-nobel-lecture-1970"
+    }
+  ],
+  "do_not_use": [
+    "afirmar que la frase no aparece en ningún otro lugar de la novela o que Myshkin «nunca» la dice en todo el libro: se verificaron las dos escenas donde otros se la atribuyen (III, V y IV, VI) y que en ellas no la pronuncia; no se leyó la novela entera y las páginas que lo afirman son divulgativas, no académicas",
+    "dar la edad de Ippolit: un resumen de búsqueda dice diecisiete años y no se verificó en el texto; el cuerpo dice solo «muchacho tísico»",
+    "poner la frase en boca de Myshkin como cita directa («como dijo el príncipe Myshkin»): en el texto va entre comillas y la citan Ippolit y Aglaya",
+    "usar la versión «el mundo se salvará por la belleza» (мир красотой спасется) como si estuviera en El idiota: un resumen de búsqueda la menciona, pero no se localizó en los capítulos consultados; puede proceder de otra obra o de borradores",
+    "atribuir la traducción española a una edición concreta (Alianza, Cátedra u otra): la versión es traducción propia hecha sobre el ruso de Wikisource",
+    "decir que Solzhenitsyn pronunció el discurso en Estocolmo en 1970: no asistió; el texto se entregó a la Academia Sueca en 1972",
+    "decir que la página de nobelprize.org se consultó: devolvió 403; el texto del discurso se verificó en Encyclopedia.com",
+    "citar artículos académicos rusos (Sharakov, Kasatkina, Universidad de Tomsk) como consultados: están en PDF y no se pudieron leer",
+    "decir que El Mensajero Ruso publicó la novela en 1868 a secas: las entregas van de 1868 a 1869"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
