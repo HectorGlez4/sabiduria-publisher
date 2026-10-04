@@ -1,0 +1,88 @@
+{
+  "id": "2026-11-07-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ibn Arabi y el corazón capaz de toda forma",
+    "hook": "«Mi corazón se ha vuelto capaz de toda forma: es pradera para las gacelas y convento para los monjes, templo para los ídolos y Kaaba del peregrino, tablas de la Torá y libro del Corán.»\n— Ibn Arabi, Tarjuman al-Ashwaq, poema XI",
+    "body": [
+      "Ibn Arabi nació en Murcia el 28 de julio de 1165. Tenía siete años cuando su familia se trasladó a Sevilla, y treinta y cinco cuando dejó al-Ándalus para siempre. Llegó a La Meca para la peregrinación de 1202. Allí conoció a Nizam, hija del jeque Makinuddin, un sabio de Isfahán: una joven de gran belleza, conocida por su ascetismo y por la elocuencia de su predicación. Para ella escribió los sesenta y un poemas del Tarjuman al-Ashwaq, «El intérprete de los deseos», en la forma de la casida preislámica: camellos, gacelas, la amada que se aleja.",
+      "Los teólogos de Alepo leyeron el libro como lo que parecía, poesía amorosa, y dudaron de que un maestro sufí la escribiera por otra cosa que por deseo. Ibn Arabi respondió con un comentario, los Dhakha'ir al-a'laq, redactado en Alepo a petición de dos discípulos y terminado en 1215, donde explica verso a verso el sentido místico de cada imagen. En él, los versos 13 a 15 del poema XI dicen que el corazón cambia según las influencias divinas que recibe, y que el amante sigue la religión del Amor: adonde vayan sus camellos, esa es su fe. En 1223 se instaló en Damasco. Murió allí el 16 de noviembre de 1240 y está enterrado en la ladera del monte Qasiún.",
+      "Los tres versos son hoy los más citados de toda su obra, y casi siempre sin el comentario que él mismo escribió para que no se leyeran a la ligera. La traducción es nuestra, hecha sobre la versión inglesa de Reynold A. Nicholson, publicada en Londres en 1911 y todavía la referencia en Occidente. El poema no dice que todas las religiones sean iguales. Dice algo más difícil: que un corazón puede hacerse lo bastante ancho para que quepan todas."
+    ],
+    "question": "¿Qué forma tendría que adoptar tu corazón para entender a quien piensa distinto?",
+    "quote": {
+      "text": "Mi corazón se ha vuelto capaz de toda forma: es pradera para las gacelas y convento para los monjes, templo para los ídolos y Kaaba del peregrino, tablas de la Torá y libro del Corán.",
+      "author": "Ibn Arabi",
+      "work": "Tarjuman al-Ashwaq, poema XI, versos 13-14 (trad. R. A. Nicholson, Londres, 1911)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#IbnArabi",
+      "#Sufismo",
+      "#Murcia"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#AlAndalus",
+      "#Poesia",
+      "#Mistica",
+      "#Filosofia",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Poema XI, versos 13-15 en la traducción de Nicholson: «My heart has become capable of every form: it is a pasture for gazelles and a convent for Christian monks, / And a temple for idols and the pilgrim's Ka'ba and the tables of the Tora and the book of the Koran. / I follow the religion of Love: whatever way Love's camels take, that is my religion and my faith.» El comentario de Ibn Arabi explica que el corazón cambia según las influencias divinas que recibe y que la religión del amor es prerrogativa de los seguidores del Profeta.",
+      "source": "R. A. Nicholson, The Tarjumán al-Ashwáq (Londres, 1911), poema XI, copia en espejo de sacred-texts.com",
+      "url": "https://neonvagabond.xyz/mirrors/sacred-texts/isl/taa/taa14.htm"
+    },
+    {
+      "claim": "Introducción de Nicholson: Nizam era hija del jeque Makinuddin, de origen persa, de Isfahán, «exceedingly beautiful and was renowned for her asceticism and eloquent preaching». Los teólogos de Alepo cuestionaron la sinceridad de Ibn Arabi sugiriendo que la interpretación mística era un recurso para protegerse de la crítica por componer poesía erótica; el comentario fue su respuesta. Según Nicholson los poemas se completaron en Ramadán de 611 H y el comentario, empezado meses después en Alepo, se terminó en Rabí II de 612 H (agosto de 1215). Nicholson estableció el texto árabe con tres manuscritos.",
+      "source": "R. A. Nicholson, The Tarjumán al-Ashwáq (Londres, 1911), introducción, copia en espejo de sacred-texts.com",
+      "url": "https://neonvagabond.xyz/mirrors/sacred-texts/isl/taa/taa03.htm"
+    },
+    {
+      "claim": "El Tarjuman al-ashwaq se compuso en La Meca en honor de la dama Nizam y consta de 61 poemas en el estilo de la casida preislámica. En 611/1215, en Alepo, a petición de sus discípulos Ibn Sawdakin y al-Habashi, el autor escribió un comentario (al-Dhakha'ir al-a'laq) para explicar el sentido esotérico de los versos. Se citan las traducciones de Michael Sells y la edición de Princeton «The Translator of Desires».",
+      "source": "Anqa Publishing / Muhyiddin Ibn Arabi Society, «Tarjumān al-ashwāq», ficha de la obra",
+      "url": "https://anqa.co.uk/about-ibn-arabi/writings/tarjuman-al-ashwaq"
+    },
+    {
+      "claim": "Nació en Murcia el 28 de julio de 1165; tras la conquista almohade de 1172 la familia se trasladó a Sevilla cuando él tenía siete años. Dejó al-Ándalus definitivamente en 1200 y llegó para la peregrinación en 1202; pasó tres años en La Meca, donde empezó las Futuhat al-Makkiyya. En 1223, a los 58 años, eligió Damasco como residencia final. Murió el 22 de Rabí II de 638 H (16 de noviembre de 1240), a los 75 años, y fue enterrado en el cementerio de los Banu Zaki en el monte Qasiún. Se le atribuyen unas 850 obras, de las que unas 700 se consideran auténticas y 400 se conservan.",
+      "source": "Wikipedia en inglés, «Ibn Arabi»",
+      "url": "https://en.wikipedia.org/wiki/Ibn_Arabi"
+    },
+    {
+      "claim": "Nació en Murcia el 28 de julio de 1165, de padre árabe y madre bereber; en 1172 la familia se trasladó a Sevilla. Viajó por el norte de África, Egipto, Jerusalén, La Meca, Bagdad, Mosul y Konya, y se estableció en Damasco diecisiete años, hasta su muerte el 16 de noviembre de 1240. Se le conoce como al-Shaykh al-Akbar, «el más grande de los maestros».",
+      "source": "Wikipedia en español, «Ibn Arabi»",
+      "url": "https://es.wikipedia.org/wiki/Ibn_Arabi"
+    }
+  ],
+  "do_not_use": [
+    "fechar la composición de los poemas en 1202-1204 o en 598 H como dato seguro: Nicholson sostiene en su introducción que se completaron en Ramadán de 611 H (comienzos de 1215) y no en 598 H como se había supuesto; el prefacio del propio Ibn Arabi, según la Ibn Arabi Society, habla de su estancia en La Meca en 598 H; el cuerpo dice solo que los escribió en La Meca para Nizam y que el comentario se terminó en 1215",
+    "decir que Nizam se llamaba «Ayn al-Shams» como dato leído: el nombre completo apareció solo en un resumen de búsqueda; Nicholson la llama la hija del jeque Makinuddin",
+    "decir que el comentario responde a una «acusación formal» o a un proceso: Nicholson habla de teólogos de Alepo que dudaron de su sinceridad; Anqa dice que lo escribió a petición de dos discípulos; el cuerpo combina las dos versiones sin hablar de juicio",
+    "presentar la traducción española como la de una edición concreta (Sells, Sabih Sadiq, Hiperión u otra): la versión del cuerpo es traducción propia sobre el inglés de Nicholson; no se consultó el árabe",
+    "traducir «convent for Christian monks» como «monasterio cristiano» con adjetivo en la tarjeta: la tarjeta recorta a «convento para los monjes» por espacio; el verso original dice monjes cristianos",
+    "decir que Ibn Arabi predica que «todas las religiones son iguales» o que el poema es un manifiesto de tolerancia moderna: su propio comentario reserva la «religión del Amor» a los seguidores del Profeta; el cuerpo lo deja en que el corazón puede ensancharse",
+    "usar el título «Doctor Maximus» o «Vivificador de la religión» (Muhyi al-Din) como títulos oficiales: son sobrenombres; el cuerpo no los usa",
+    "decir que la mezquita de su tumba la construyó Selim I en 1516-1518: no se verificó en las páginas leídas",
+    "citar sacred-texts.com directamente como consultado: devolvió 403; se usó una copia en espejo del mismo texto de Nicholson",
+    "citar el PDF de Jane Clark (Ibn Arabi Society) o la biografía de la Universidad de Chicago como leídos: son PDF y no se pudieron abrir"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

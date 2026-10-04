@@ -1,0 +1,92 @@
+{
+  "id": "2026-11-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sarmiento y el epígrafe escrito con carbón en 1840",
+    "hook": "«A los hombres se degüella: a las ideas no.»\n— Domingo Faustino Sarmiento, Facundo, «Advertencia del autor», 1845",
+    "body": [
+      "«Las ideas no se matan» se repite en Argentina como frase de Sarmiento. Él nunca la escribió así. A fines de 1840, desterrado, lleno de cardenales por una golpiza del día anterior, pasó por los baños de Zonda, en San Juan. Bajo el escudo de armas que había pintado en una sala en tiempos mejores, escribió con carbón cinco palabras en francés: «On ne tue point les idées». El gobierno provincial mandó una comisión a descifrar el jeroglífico, que se decía lleno de insultos y amenazas. Oída la traducción, la respuesta fue: «¡y bien! ¿qué significa esto?».",
+      "Lo contó él mismo en la «Advertencia del autor» que abre Facundo, publicado por entregas en el diario El Progreso de Santiago de Chile entre el 2 de mayo y el 21 de junio de 1845, veinticinco folletines, y ese mismo año como libro. Puso la frase como epígrafe, la atribuyó a Fortoul y la tradujo a su manera: «A los hombres se degüella: a las ideas no». Donde el francés dice que no se mata, él puso degollar, el verbo de las guerras civiles del Río de la Plata. Fue la única cita que tradujo al castellano en todo el libro.",
+      "La atribución también falla. El crítico Paul Groussac señaló que la frase no era de Fortoul sino del conde de Volney. Críticos posteriores, entre ellos Ricardo Piglia, la remiten a Diderot, y hay quien la considera invención del propio Sarmiento. La versión que hoy circula, «Bárbaros, las ideas no se matan», tampoco está en Facundo. Queda lo que escribió de verdad: una frase en francés en una pared, para que sus perseguidores no la entendieran, y una traducción con sangre."
+    ],
+    "question": "¿Qué pierde una frase cuando se la memoriza sin su historia?",
+    "quote": {
+      "text": "A los hombres se degüella: a las ideas no.",
+      "author": "Domingo Faustino Sarmiento",
+      "work": "Facundo, «Advertencia del autor» (El Progreso, Santiago de Chile, 1845)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Sarmiento",
+      "#Facundo",
+      "#Argentina"
+    ],
+    "extended": [
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Literatura",
+      "#HistoriaArgentina",
+      "#Exilio",
+      "#LiteraturaLatinoamericana",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la «Advertencia del autor» de Facundo: epígrafe «On ne tue point les idées», atribuido a FORTOUL. «A fines del año 1840, salía yo de mi patria, desterrado por lástima, estropeado, lleno de cardenales, puntazos y golpes recibidos el día anterior en una de esas bacanales sangrientas de soldadesca y mazorqueros. Al pasar por los baños de Zonda, bajo las armas de la patria que en días más alegres había pintado en una sala, escribí con carbón estas palabras». «El Gobierno, a quien se comunicó el hecho, mandó una comisión encargada de descifrar el jeroglífico, que se decía contener desahogos innobles, insultos y amenazas. Oída la traducción, “¡y bien! —dijeron—, ¿qué significa esto?…”». Significaba que venía a Chile, donde la libertad brillaba aún, para proyectar los rayos de las luces de su prensa hasta el otro lado de los Andes.",
+      "source": "textos.info, Domingo Faustino Sarmiento, «Facundo», texto completo en línea",
+      "url": "https://www.textos.info/domingo-faustino-sarmiento/facundo/ebook"
+    },
+    {
+      "claim": "Facundo se publicó como folletín en El Progreso de Santiago entre el 2 de mayo y el 21 de junio de 1845, en veinticinco entregas, y ese mismo año como libro en la Imprenta del Progreso con el título «Civilización i barbarie: vida de Juan Facundo Quiroga». El texto incluía el epígrafe francés con su versión en español: «A los ombres se degüella: a las ideas no».",
+      "source": "Memoria Chilena (Biblioteca Nacional de Chile), ficha «Facundo (1845)»",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-93845.html"
+    },
+    {
+      "claim": "Sarmiento escribió la frase en los baños de Zonda huyendo del gobernador Nazario Benavides, en francés para que fuera incomprensible para los federales. Al publicar Facundo en 1845 la tradujo «A los hombres se degüella; a las ideas, no». La atribuyó a Fortoul; Paul Groussac (1924) señaló que pertenecía a Volney.",
+      "source": "Página/12, José Pablo Feinmann, contratapa del 20 de agosto de 2006",
+      "url": "https://www.pagina12.com.ar/diario/contratapa/13-71700-2006-08-20.html?mobile=1"
+    },
+    {
+      "claim": "Sarmiento atribuye la cita a Fortoul en la «Advertencia»; Paul Groussac la remitía al conde Volney; críticos recientes la consideran invención del propio Sarmiento, y Ricardo Piglia, en el prólogo a la edición comentada, la atribuye a Diderot.",
+      "source": "SciELO Brasil, Laura Janina Hosiasson, «O prazer da leitura em Facundo», Novos Estudos CEBRAP, n.º 89, marzo de 2011",
+      "url": "https://www.scielo.br/j/nec/a/gy9dnCbVySTyv9h39FLBskQ/?lang=pt"
+    },
+    {
+      "claim": "Sarmiento atribuyó la frase a Fortoul y la tradujo «A los hombres se degüella, a las ideas no», con una licencia deliberada que la hace más visceral que el original («las ideas no se matan»). Fue la única cita traducida al castellano en todo el Facundo.",
+      "source": "La Capital (Mar del Plata), Fabrizio Zotta, «Tres epígrafes sobre Sarmiento», 12 de septiembre de 2016",
+      "url": "https://www.lacapitalmdp.com/tres-epigrafes-sobre-sarmiento/"
+    },
+    {
+      "claim": "Hacia fines de 1840 Sarmiento fue desterrado por sus ideas políticas; cubierto de golpes recibidos el día anterior, escribió en francés «On ne tue point les idées». La primera edición de Facundo se publicó por entregas en 1845 en el suplemento literario del diario chileno El Progreso.",
+      "source": "Wikipedia en inglés, «Facundo»",
+      "url": "https://en.wikipedia.org/wiki/Facundo"
+    }
+  ],
+  "do_not_use": [
+    "poner «Bárbaros, las ideas no se matan» o «Las ideas no se matan» como cita literal de Sarmiento: lo que escribió en la pared fue «On ne tue point les idées» y lo que imprimió en 1845 fue «A los ombres se degüella: a las ideas no»; la palabra «bárbaros» no está en la Advertencia",
+    "dar la frase francesa original de Diderot («On ne tue pas de coups de fusil aux idées» o variantes) ni decir que Sarmiento la leyó en la Revue Encyclopédique hacia 1832 en un artículo de Charles Didier: la tesis (Diana Sorensen Goodrich; Paul Verdevoye) apareció solo en resúmenes de búsqueda y no se verificó en ninguna página leída; el cuerpo dice solo que críticos posteriores la remiten a Diderot, apoyado en Hosiasson (Piglia)",
+    "fechar el episodio el 19 de noviembre de 1840: la fecha procede de Recuerdos de provincia según un resumen de búsqueda y no se leyó en el texto; la Advertencia dice «a fines del año 1840»",
+    "escribir «Fartuol»: es una errata del artículo de La Capital; Sarmiento escribe FORTOUL",
+    "decir que Groussac lo corrigió en 1924 como fecha segura: la da Feinmann y no se cotejó con la obra de Groussac",
+    "decir que Volney o Diderot son el origen cierto: Groussac dijo Volney, Piglia y otros dicen Diderot, otros la creen invención de Sarmiento; nadie ha encontrado la frase tal cual en Fortoul",
+    "decir que «degüella» es traducción literal: el francés dice tuer (matar); degollar es elección de Sarmiento, y así lo señalan Zotta y los demás comentaristas",
+    "usar la ortografía moderna «hombres» como si fuera la de 1845: la primera edición, con la ortografía reformada de Sarmiento, imprime «ombres»; la cita del cuerpo moderniza la grafía",
+    "citar la Biblioteca Virtual Miguel de Cervantes, Wikisource o el PDF de aacademica.org como consultados: Cervantes Virtual bloquea el acceso, las páginas de Wikisource halladas son índices sin el texto, y los PDF no se pudieron leer"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

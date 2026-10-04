@@ -1,0 +1,93 @@
+{
+  "id": "2026-11-07-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "las cabezas colosales olmecas y la tesis etíope de 1869",
+    "hook": "Diecisiete cabezas de basalto, de hasta 40 toneladas, talladas hace tres mil años. Cuando se publicó la primera, en 1869, se pensó que eran retratos de africanos.",
+    "body": [
+      "En el sur de Veracruz y el norte de Tabasco, entre 1500 y 1000 a.C., la cultura que hoy llamamos olmeca talló cabezas humanas de tamaño descomunal. Se conocen diecisiete: diez en San Lorenzo, cuatro en La Venta, dos en Tres Zapotes y una en La Cobata. Miden entre 1,17 y 3,4 metros de altura. La más pequeña pesa unas 6 toneladas; la mayor, la de La Cobata, cerca de 40. Todas son de roca volcánica de la sierra de los Tuxtlas, movida a más de cien kilómetros de las canteras. Cada rostro es distinto, con su propio tocado. Se las entiende como retratos de gobernantes, y dos de las de San Lorenzo conservan huellas de nichos: antes fueron tronos, vueltos a tallar.",
+      "La primera salió a la luz en la hacienda de Hueyapan, hoy Tres Zapotes. José María Melgar y Serrano la vio en 1862 y publicó la noticia en 1869 en el Boletín de la Sociedad Mexicana de Geografía y Estadística. Nadie sabía entonces que había existido una cultura olmeca. Melgar se fijó en los rasgos del rostro y escribió que la cabeza era de tipo etíope: para él, prueba de que hubo gente de África en el México antiguo. La idea volvió a aparecer en 1960 y todavía circula.",
+      "La arqueología la descarta. No se ha hallado ni un objeto africano en las excavaciones olmecas, y el ADN mitocondrial de los restos pertenece al haplogrupo A, uno de los más comunes entre los pueblos fundadores de América, no al L propio de África. Las cabezas son, sencillamente, retratos de la gente que vivía allí. Las excavaciones empezaron en serio con Matthew Stirling en 1938, en Tres Zapotes, con la misma cabeza de Melgar: setenta y seis años después de que alguien la mirara por primera vez y viera lo que esperaba ver."
+    ],
+    "question": "¿Cuántas veces miramos un rostro y vemos solo lo que ya traíamos en la cabeza?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Diecisiete cabezas de basalto",
+    "subtitle": "Veracruz y Tabasco, 1500-1000 a.C.",
+    "body": "Los olmecas tallaron diecisiete cabezas colosales de hasta 40 toneladas y las movieron a más de cien kilómetros de la cantera. La primera se publicó en 1869 como retrato de un «tipo etíope». Hoy se leen como retratos de sus gobernantes."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Olmecas",
+      "#Mesoamerica",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Historia",
+      "#Veracruz",
+      "#Tabasco",
+      "#CabezasOlmecas",
+      "#SanLorenzo",
+      "#LaVenta",
+      "#CulturasAntiguas",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Diecisiete ejemplos confirmados: San Lorenzo 10, La Venta 4, Tres Zapotes 2, La Cobata 1. Alturas entre 1,17 y 3,4 metros; pesos desde 6 toneladas (cabeza 4 de San Lorenzo, la más pequeña) hasta unas 40 toneladas (La Cobata, 3,4 metros, la mayor). Basalto de grano grueso Cerro Cintepec, de la sierra de los Tuxtlas; los bloques se transportaron más de 150 kilómetros. Datación principal en el Preclásico Temprano (1500-1000 a.C.), algunas en el Preclásico Medio (1000-400 a.C.). Melgar y Serrano halló la primera en Tres Zapotes a mediados del siglo XIX y la describió como de rasgos «etíopes»; las especulaciones sobre un origen africano resurgieron en 1960 y no las toman en serio los especialistas. Dos cabezas de San Lorenzo tienen restos de nichos característicos de los tronos olmecas y fueron retalladas a partir de monumentos anteriores. La excavación de esa misma cabeza por Matthew Stirling en 1938 impulsó las primeras investigaciones arqueológicas sobre la cultura olmeca.",
+      "source": "Wikipedia en inglés, «Olmec colossal heads»",
+      "url": "https://en.wikipedia.org/wiki/Olmec_colossal_heads"
+    },
+    {
+      "claim": "Se conocen 17 cabezas colosales: «diez proceden de San Lorenzo, cuatro de La Venta, dos de Tres Zapotes y una de Cobata». «Los enormes bloques de roca proceden de canteras que quedan a 100 y 150 Km de distancia». Desde 1950 el radiocarbono permitió establecer que las tallas olmecas se remontan al primer milenio a.C. «El primer hallazgo de una cabeza colosal fue el que hizo José Melgar en 1862». «Las cabezas colosales fueron las representaciones de los jefes o señores con los atributos del poder».",
+      "source": "Fundación Proa, textos de José Antonio Pérez Gollán para la exposición de arte olmeca del Museo de Antropología de Xalapa",
+      "url": "https://www.proa.org/exhibiciones/pasadas/-xalapa/texts.html"
+    },
+    {
+      "claim": "Ann Cyphers (Instituto de Investigaciones Antropológicas, UNAM): la tesis del origen africano procede de 1869, cuando Melgar y Serrano propuso que los rasgos de las esculturas correspondían a personajes de Etiopía, gente de raza negra, por las características faciales. Se descarta porque no se han encontrado artefactos africanos en las excavaciones olmecas y porque el ADN mitocondrial de los individuos pertenece al haplogrupo A, uno de los más abundantes entre las poblaciones fundadoras e indígenas de América; si fueran africanos mostrarían el haplogrupo L. Se conocen 17 cabezas; dataciones de 1200 a.C. (Loma del Zapote) y 1000 a.C. (San Lorenzo); varias se tallaron en piedra reciclada de tronos de gobernantes.",
+      "source": "Gaceta UNAM, Patricia López, «Las cabezas olmecas son mesoamericanas», 10 de febrero de 2020",
+      "url": "https://www.gaceta.unam.mx/las-cabezas-olmecas-son-mesoamericanas/"
+    },
+    {
+      "claim": "De las 17 cabezas colosales conocidas de los tres sitios olmecas, siete están en el Museo de Antropología de Xalapa. Vinieron de zonas volcánicas de los Tuxtlas. La más pesada del museo, «El Rey», ronda las 20 toneladas; la más pesada de todas, de unas 40 toneladas, está en la plaza principal de Santiago Tuxtla. Representan jerarcas; «ninguna otra cultura tuvo la idea o intención de hacer retratos de estas dimensiones».",
+      "source": "Universo, periódico de la Universidad Veracruzana, n.º 248, 27 de noviembre de 2006, páginas centrales sobre el MAX",
+      "url": "https://www.uv.mx/universo-hemeroteca/248/centrales/centrales01.htm"
+    },
+    {
+      "claim": "San Lorenzo fue la mayor ciudad de Mesoamérica entre 1200 y 900 a.C. aproximadamente; cabezas de hasta 28 toneladas y 3 metros; el basalto procede del volcán de la sierra de los Tuxtlas. Matthew Stirling inició las primeras excavaciones en 1938; el proyecto de Yale de Michael Coe y Richard Diehl trabajó entre 1966 y 1968, y las excavaciones se reanudaron en 1990.",
+      "source": "Wikipedia en inglés, «San Lorenzo Tenochtitlán»",
+      "url": "https://en.wikipedia.org/wiki/San_Lorenzo_Tenochtitlán"
+    },
+    {
+      "claim": "Melgar y Serrano reportó en 1869 la primera cabeza colosal (la de Hueyapan, hoy Tres Zapotes); campesinos de la hacienda de Hueyapan la habían descubierto en 1853, Melgar supo de ella en 1862, la observó y publicó sobre ella en 1869 y 1871; propuso que los rasgos correspondían a gente de Etiopía. Stirling publicó «Discovering the New World's Oldest Dated Work of Man» en National Geographic en 1939. La cabeza es el Monumento A de Tres Zapotes. Las referencias a Melgar (1869, 1871) y a Stirling (1939-1943) aparecen también en la bibliografía de Heizer, Smith y Williams, «Notes on Colossal Head No. 2 from Tres Zapotes», American Antiquity, julio de 1965.",
+      "source": "Cambridge Core, American Antiquity, vol. 31, n.º 1, 1965 (resumen y referencias), más resúmenes de búsqueda sobre Melgar",
+      "url": "https://www.cambridge.org/core/journals/american-antiquity/article/abs/notes-on-colossal-head-no-2-from-tres-zapotes/D85BDF2761E6007964DCA876E0939B45"
+    }
+  ],
+  "do_not_use": [
+    "dar una distancia exacta de transporte: Wikipedia dice más de 150 km, Pérez Gollán entre 100 y 150 km y Discover Magazine más de 30 millas; además la distancia es distinta para San Lorenzo y para La Venta; el cuerpo dice «más de cien kilómetros»",
+    "decir que todas son de basalto: Pérez Gollán anota que las de San Lorenzo son de andesita y las de La Venta, Tres Zapotes y Cobata de basalto; el cuerpo dice «roca volcánica de la sierra de los Tuxtlas» y el hook simplifica con «basalto»",
+    "decir que la de Hueyapan se descubrió en 1862: ese es el año en que Melgar la vio; el hallazgo por campesinos de la hacienda se sitúa en 1853 según un resumen de búsqueda, y no se verificó en página leída",
+    "afirmar que Melgar publicó en el Boletín de la Sociedad Mexicana de Geografía y Estadística como dato leído: el nombre de la revista aparece en resúmenes de búsqueda y en la bibliografía de los artículos citados; el ejemplar de 1869 no se consultó",
+    "incluir la posible cabeza de Takalik Abaj (Guatemala) en el recuento: Wikipedia la menciona como dudosa; las fuentes mexicanas cuentan 17 sin ella",
+    "dar «8 toneladas» como peso típico: lo dice Discover Magazine y no coincide con el rango de 6 a 40 toneladas de las demás fuentes",
+    "decir que las cabezas de San Lorenzo datan de 1200 a.C. como fecha de talla: Cyphers da 1200 a.C. para Loma del Zapote y 1000 a.C. para San Lorenzo; Wikipedia da el rango 1500-1000 a.C. para la mayoría; el cuerpo usa el rango",
+    "decir que los olmecas movieron las piedras «sin rueda ni animales de carga»: es un dato general que ninguna de las fuentes de esta pieza sostiene; Wikipedia dice solo que el método de transporte se desconoce",
+    "describir los rasgos que llamaron la atención de Melgar (labios gruesos, nariz ancha): Cyphers habla de «características faciales» sin detallar; el cuerpo dice «rasgos del rostro»",
+    "decir que Stirling «redescubrió» la cabeza en 1938: era conocida desde Melgar; Stirling la excavó y su trabajo abrió la arqueología olmeca",
+    "afirmar que la hipótesis africana fue de Melgar en 1862: la publicó en 1869",
+    "decir que la cabeza n.º 10 de San Lorenzo se halló en 1994: no se verificó en ninguna página leída",
+    "citar la guía del INAH de Tres Zapotes o el artículo de Anales del IIE (UNAM) como consultados: están en PDF y no se pudieron leer; es.wikipedia «Cabezas colosales olmecas» devolvió 404"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "2026-11-07-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Barbara McClintock y los genes que cambian de sitio",
+    "hook": "Presentó su descubrimiento en 1951 y la sala no lo entendió. Dejó de publicar en 1953. El Nobel llegó en 1983, a los 81 años.",
+    "body": [
+      "Barbara McClintock nació en Hartford, Connecticut, el 16 de junio de 1902. Se doctoró en Cornell en 1927 y en 1931, con su alumna Harriet Creighton, demostró con el microscopio que los cromosomas intercambian fragmentos, la base física de la herencia que hasta entonces solo se infería. En 1944 entró en la Academia Nacional de Ciencias, la tercera mujer en conseguirlo. Ese mismo verano empezó, en Cold Spring Harbor, el experimento con maíz que iba a cambiar su vida. Siguiendo manchas de color en los granos, encontró dos elementos, uno al que llamó Disociador y otro Activador, que no se quedaban quietos: a comienzos de 1948 comprobó que los dos cambiaban de posición dentro del cromosoma.",
+      "Publicó los resultados en 1950 en las actas de la Academia y los presentó en el simposio de Cold Spring Harbor del verano de 1951. La genética de entonces entendía los genes como cuentas fijas en un collar. Lo que ella describía, genes que saltan y que encienden o apagan a otros, resultó oscuro para la mayoría y hostil para algunos. En 1953 dejó de publicar informes detallados. Veinte años después, en 1973, se lo explicó por carta al genetista J. R. S. Fincham: había percibido, y de forma aguda, el desinterés y la falta de confianza en las conclusiones que sacaba de sus estudios. Entre 1957 y 1981 se dedicó a otra cosa: las razas de maíz de América Latina.",
+      "Los elementos móviles aparecieron después en bacterias y en levaduras, con herramientas moleculares que en 1951 no existían. En 1983 recibió el Nobel de Fisiología o Medicina, sola, la primera mujer en obtener ese premio sin compartirlo. Tenía 81 años. Murió el 2 de septiembre de 1992 en Huntington, Nueva York. Su hallazgo no había cambiado en treinta años. Lo que cambió fue la capacidad de los demás para verlo."
+    ],
+    "question": "¿Cuánto tiempo sostendrías una idea que nadie a tu alrededor quiere escuchar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los genes que saltan",
+    "subtitle": "Cold Spring Harbor, 1951",
+    "body": "Barbara McClintock demostró en el maíz que hay genes que cambian de sitio en el cromosoma. Lo publicó en 1950, lo presentó en 1951 y dejó de publicar en 1953 ante el desinterés general. El Nobel llegó en 1983, a los 81 años, sin compartir."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#BarbaraMcClintock",
+      "#Genetica",
+      "#Ciencia"
+    ],
+    "extended": [
+      "#Historia",
+      "#MujeresEnLaCiencia",
+      "#PremioNobel",
+      "#Maiz",
+      "#Biologia",
+      "#ADN",
+      "#HistoriaDeLaCiencia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Nació el 16 de junio de 1902 en Hartford, Connecticut. Cornell: licenciatura 1923, maestría 1925, doctorado 1927. En 1941 se trasladó a Cold Spring Harbor (Carnegie Institution of Washington), donde siguió el resto de su vida. En un experimento iniciado en 1944 descubrió que ciertos genes se movían físicamente en el cromosoma (transposición). Publicó «The origin and behavior of mutable loci in maize» en PNAS en 1950 y presentó los resultados en el simposio anual de Cold Spring Harbor de 1951; la recepción fue lenta. Nobel en 1983. Murió el 2 de septiembre de 1992 en Huntington, Nueva York.",
+      "source": "Embryo Project Encyclopedia (Arizona State University), «Barbara McClintock (1902-1992)»",
+      "url": "https://embryo.asu.edu/pages/barbara-mcclintock-1902-1992"
+    },
+    {
+      "claim": "En 1931, en Cornell, con su estudiante Harriet Baldwin Creighton, publicó en PNAS la correlación entre el entrecruzamiento citológico y el genético en Zea mays. Describió los elementos Disociador (Ds) y Activador (Ac). En 1950 publicó en PNAS «The Origin and Behavior of Mutable Loci in Maize»; en el simposio de Cold Spring Harbor de 1951 presentó «Chromosome organization and genic expression». La audiencia consideró sus hallazgos oscuros y difíciles de entender; el material genético se concebía como entidad estática. Nobel de Fisiología o Medicina en 1983, más de treinta años después, primera mujer en ganarlo sin compartirlo.",
+      "source": "Embryo Project Encyclopedia (Arizona State University), «Barbara McClintock's Transposon Experiments in Maize (1931–1951)»",
+      "url": "https://embryo.asu.edu/pages/barbara-mcclintocks-transposon-experiments-maize-1931-1951"
+    },
+    {
+      "claim": "En 1944 ingresó en la Academia Nacional de Ciencias, tercera mujer en lograrlo; al año siguiente fue la primera presidenta de la Sociedad Americana de Genética. El seminario sobre transposones en el simposio de Cold Spring Harbor de 1951 fue ampliamente rechazado; sus colegas, en su mayoría hombres, fueron escépticos u hostiles. Dejó de publicar sobre transposones en 1953, cuando percibió «acutely, the extent of disinterest and lack of confidence in the conclusions» que estaba sacando (carta a J. R. S. Fincham, 1973). No recibió el Nobel hasta 1983.",
+      "source": "AAAS, Steven A. Edwards, «Barbara McClintock was years away from her colleagues», 27 de febrero de 2012",
+      "url": "https://www.aaas.org/membership/scientia/barbara-mcclintock-was-years-away-her-colleagues"
+    },
+    {
+      "claim": "Llegó a Cold Spring Harbor con un puesto temporal en diciembre de 1941 y pasó a la plantilla permanente en 1943. El descubrimiento empezó en el verano de 1944; a comienzos de 1948 comprobó que tanto Disociación como Activador podían transponerse, o cambiar de posición, en el cromosoma. Artículo en PNAS en 1950; presentación en el simposio del verano de 1951; dejó de publicar informes detallados en 1953; investigación sobre los orígenes del maíz entre 1957 y 1981. Describió la recepción de su trabajo como «puzzlement and, in some instances, hostility». Premio Lasker en 1981. Nobel de Fisiología o Medicina en 1983, a los 81 años, primera mujer en recibirlo sin compartir. Murió el 2 de septiembre de 1992.",
+      "source": "Wikipedia en inglés, «Barbara McClintock»",
+      "url": "https://en.wikipedia.org/wiki/Barbara_McClintock"
+    },
+    {
+      "claim": "Publicaciones clave: 1950 (PNAS) «The origin and behavior of mutable loci in maize»; 1951 (Cold Spring Harbor Symposium) «Chromosome organization and genic expression»; 1953 (Genetics) «Induction of Instability at Selected Loci in Maize». Recibió el Nobel en 1983 como única ganadora, por los elementos genéticos móviles.",
+      "source": "PubMed Central, Marnie E. Halpern, «Barbara McClintock on Defining the Unstable Genome», Genetics, 2016 (PMC5012394)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5012394"
+    }
+  ],
+  "do_not_use": [
+    "dar el año de la National Medal of Science: Wikipedia dice 1970 y la Embryo Project Encyclopedia dice 1971; no se resolvió y el cuerpo no la menciona",
+    "decir que «descubrió los transposones en 1948» como fecha única: el experimento empezó en 1944, la transposición de Ac y Ds se confirmó a comienzos de 1948 y la publicación es de 1950; el artículo de AAAS da 1948 a secas",
+    "atribuir el retraso del reconocimiento solo a discriminación de género: Evelyn Fox Keller lo sostuvo y Nathaniel Comfort lo discute (sus conclusiones eran difíciles de seguir y faltaban herramientas moleculares); el cuerpo no toma partido",
+    "decir que la sala «se rio» o «la abuchearon» en 1951: las fuentes hablan de silencio, perplejidad, escepticismo y en algunos casos hostilidad, no de burla pública",
+    "decir que dejó de publicar del todo en 1953: dejó de publicar informes detallados sobre los elementos de control; siguió investigando y publicando sobre el maíz de América Latina",
+    "traducir la carta a Fincham como cita literal en español entre comillas: la versión del cuerpo es paráfrasis de la cita inglesa recogida por AAAS; el texto completo de la carta en el archivo de la Biblioteca Nacional de Medicina (profiles.nlm.nih.gov) devolvió error 405 y no se leyó",
+    "decir que Jacob y Monod «confirmaron» los transposones en 1960: la Embryo Project Encyclopedia dice que describieron fenómenos similares de regulación en bacterias; los elementos transponibles bacterianos se identificaron después, en los años sesenta y setenta, y el cuerpo lo deja en «aparecieron después en bacterias y levaduras»",
+    "decir que fue «la primera mujer con un Nobel de ciencias sin compartir»: Marie Curie recibió el de Química de 1911 sola; McClintock fue la primera en Fisiología o Medicina",
+    "dar el día exacto del anuncio del Nobel (10 de octubre de 1983 circula): no se verificó en nobelprize.org ni en las páginas leídas; el cuerpo dice solo 1983",
+    "decir que la sala «respondió con silencio» en 1951: la frase «silence and derision» apareció solo en resúmenes de búsqueda; las páginas leídas hablan de perplejidad, escepticismo y hostilidad en algunos casos"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
