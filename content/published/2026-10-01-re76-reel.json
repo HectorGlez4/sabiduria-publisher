@@ -60,7 +60,13 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "1094288919671285",
+      "url": "/reel/1094288919671285/",
+      "published_at": "2026-10-04T09:05:54.583280+00:00"
+    }
+  },
   "reemision_de": "2026-08-23-tarde"
 }
