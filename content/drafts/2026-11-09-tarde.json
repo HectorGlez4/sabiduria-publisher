@@ -1,0 +1,105 @@
+{
+  "id": "2026-11-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kazantzakis y el epitafio del baluarte Martinengo",
+    "hook": "«No espero nada. No temo nada. Soy libre.»\n— Nikos Kazantzakis, Ascética (Salvatores Dei), 1927. Es también su epitafio, y en la tumba la frase está recortada.",
+    "body": [
+      "Nikos Kazantzakis escribió la Ascética en Berlín entre diciembre de 1922 y marzo de 1923, y la publicó en 1927 en la revista ateniense Anagénnisi. Es un texto breve y violento, con título latino, Salvatores Dei, los salvadores de Dios. Su primera parte, «Preparación», impone tres deberes: aceptar que la mente no alcanza, aceptar que el corazón tampoco, y por último renunciar a la esperanza. El tercer deber termina así: «Ahora lo sé. No espero nada, no temo nada, me he liberado de la mente y del corazón, he subido más alto, soy libre». La lápida conserva el principio y el final. Lo que queda fuera es el precio.",
+      "Murió el 26 de octubre de 1957 en un hospital de Friburgo, en Alemania. El arzobispo de Atenas, Teócleto, se opuso a que la Iglesia lo honrara y no permitió exponer el cuerpo en la capital. El avión aterrizó en Heraclión, su ciudad, la tarde del 4 de noviembre. El cuerpo se veló en la catedral de San Minas y el 5 de noviembre el arzobispo de Creta, Eugenio, ofició el funeral. Miles de cretenses lo acompañaron hasta el baluarte Martinengo, el punto más alto de las murallas venecianas. Una cruz de madera y una placa con la frase, sin nombre de iglesia ni de cementerio.",
+      "La frase se repite como una declaración de orgullo, y en el libro es el final de una renuncia. Kazantzakis no dice que haya vencido al miedo: dice que se ha desprendido también de la esperanza, que para él era la otra cara de ese miedo. Fue propuesto al Nobel de Literatura en nueve años distintos, en 1947 y cada año entre 1950 y 1957, y murió sin recibirlo. En la tumba no hay títulos. La libertad que anuncia la placa es la de alguien que ya no espera nada de nadie, ni siquiera de quienes van a leerla."
+    ],
+    "question": "¿Qué quedaría de tu libertad si le quitaras la esperanza?",
+    "quote": {
+      "text": "No espero nada. No temo nada. Soy libre.",
+      "author": "Nikos Kazantzakis",
+      "work": "Ascética (Salvatores Dei), «Preparación», tercer deber, 1927",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Kazantzakis",
+      "#Grecia",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Frases",
+      "#Literatura",
+      "#Creta",
+      "#Libertad",
+      "#SigloXX",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La Ascética «γράφτηκε στο Βερολίνο από τον Δεκέμβριο του 1922 ως τον Μάρτιο του 1923» (se escribió en Berlín de diciembre de 1922 a marzo de 1923) y «πρωτοδημοσιεύτηκε το 1927 στο περιοδικό ‘Αναγέννηση’ του Δημήτρη Γληνού» (se publicó por primera vez en 1927 en la revista Anagénnisi de Dimitris Glinós). Los cinco círculos del texto: yo, humanidad, tierra, universo, Dios. Pasaje de la «Preparación»: «Ξέρω τώρα, δεν ελπίζω τίποτε, δε φοβούμαι τίποτα, λυτρώθηκα από το νου κι από την καρδιά».",
+      "source": "Protothema (Atenas), «Ασκητική: Το έργο σταθμός του Νίκου Καζαντζάκη»",
+      "url": "https://www.protothema.gr/culture/article/762120/askitiki-to-ergo-stathmos-tou-nikou-kazadzaki/"
+    },
+    {
+      "claim": "La Ascética se estructura con una «Προετοιμασία» (Preparación) de tres deberes y una «Πορεία» (Marcha). Texto del pasaje: «Ξέρω τώρα. Δεν ελπίζω τίποτα, δε φοβούμαι τίποτα, λυτρώθηκα από το νου και από την καρδιά, ανέβηκα πιο πάνω, είμαι λεύτερος» (Ahora lo sé. No espero nada, no temo nada, me he liberado de la mente y del corazón, he subido más alto, soy libre).",
+      "source": "Hartis, revista literaria (Atenas), Irini Koutroumbá, «Η νιτσεϊκή επιρροή στην ‘Ασκητική’ του Καζαντζάκη», n.º 84",
+      "url": "https://www.hartismag.gr/hartis-84/diereynhseis/i-nitseiki-epirroi-stin-askitiki-toi-kazantzaki"
+    },
+    {
+      "claim": "La Ascética se compuso en 1922-1923 en Viena y Berlín; se publicó por primera vez en otoño de 1927 en la revista Anagénnisi; la edición definitiva es de diciembre de 1945, con un capítulo nuevo, «Η Σιγή». El título original era «Salvatores Dei» y «Ασκητική» el subtítulo. La frase «δεν ελπίζω τίποτα, δε φοβούμαι τίποτα, [...] είμαι λεύτερος» «αναγράφεται και στον τάφο του» (está inscrita también en su tumba).",
+      "source": "Wikipedia en griego, «Ασκητική»",
+      "url": "https://el.wikipedia.org/wiki/%CE%91%CF%83%CE%BA%CE%B7%CF%84%CE%B9%CE%BA%CE%AE"
+    },
+    {
+      "claim": "Nació el 2 de marzo de 1883 (18 de febrero del calendario juliano) en Heraclión, Creta, entonces otomana. Murió el 26 de octubre de 1957 en Friburgo de Brisgovia, Alemania Occidental, a los 74 años. Está enterrado en el baluarte Martinengo de las murallas venecianas de Heraclión, el punto más alto. Epitafio en griego: «Δεν ελπίζω τίποτα. Δε φοβούμαι τίποτα. Είμαι λέφτερος.»; en inglés: «I hope for nothing. I fear nothing. I am free.» Fue propuesto al Nobel en nueve años distintos. El clero ortodoxo inició una campaña de excomunión que la dirección de la Iglesia rechazó.",
+      "source": "Wikipedia en inglés, «Nikos Kazantzakis»",
+      "url": "https://en.wikipedia.org/wiki/Nikos_Kazantzakis"
+    },
+    {
+      "claim": "Kazantzakis murió el 26 de octubre de 1957 «στο νοσοκομείο του Φράιμπουργκ στην Γερμανία» (en el hospital de Friburgo, Alemania). «Ο αρχιεπίσκοπος Θεόκλητος είναι σαφής ότι δεν πρέπει να τιμηθεί από την εκκλησία» (el arzobispo Teócleto fue claro en que la Iglesia no debía honrarlo). «Το αεροπλάνο προσγειώνεται στο Ηράκλειο το απόγευμα της 4ης Νοεμβρίου» (el avión aterriza en Heraclión la tarde del 4 de noviembre). El metropolita Eugenio de Creta «ψάλλει την νεκρώσιμη ακολουθία στις 5 Νοεμβρίου» (canta el oficio funerario el 5 de noviembre). Epitafio: «Δεν ελπίζω τίποτα, δεν φοβούμαι τίποτα, είμαι ελεύθερος».",
+      "source": "iefimerida.gr, «Συγκλονιστικές φωτό από την κηδεία του Νίκου Καζαντζάκη πριν 65 χρόνια»",
+      "url": "https://www.iefimerida.gr/kosmos/kideia-nikos-kazantzakis-eikones"
+    },
+    {
+      "claim": "«His funeral took place on 5 November 1957». «Although Kazantzakis was denied church ceremonies in Athens [...] a priest officiated at the burial, giving lie to the popular claim that Kazantzakis had died an excommunicate». La tumba está en el baluarte Martinengo de Heraclión. Epitafio: «Δεν ελπίζω τίποτα. Δε φοβούμαι τίποτα. Είμαι λέφτερος» («I hope for nothing, I fear nothing, I am free»).",
+      "source": "Patrick Comerford, «Art for Lent (38): the tomb of Nikos Kazantzakis», 11 de abril de 2014",
+      "url": "https://www.patrickcomerford.com/2014/04/art-for-lent-38-tomb-of-nikos.html"
+    },
+    {
+      "claim": "«Nikos Kazantzakis died of leukemia on October 26, 1957 in Germany». El arzobispo no permitió exponer el cuerpo en Atenas el 4 de noviembre. El cuerpo llegó a Creta y se expuso en la catedral de San Minas; el arzobispo de Creta Eugenio ofició el funeral. La tumba, en el baluarte Martinengo, el punto más alto de las murallas, es austera: «a wooden cross and a plaque» con la frase «I hope for nothing. I fear nothing. I'm free». Sus libros fueron tachados de anticristianos y estuvo cerca de la excomunión en 1955.",
+      "source": "Cretan Beaches, «Nikos Kazantzakis Grave (Martinengo)»",
+      "url": "https://www.cretanbeaches.com/en/cities-and-towns-in-crete/heraklion-city/historical-monuments-of-heraklion/nikos-kazantzakis-grave-martinengo"
+    },
+    {
+      "claim": "Kazantzakis «was nominated nine times for the Nobel prize (in 1947, and every year from 1950 to 1957)».",
+      "source": "Greek News Agenda (Secretaría General de Información y Comunicación de Grecia), artículo sobre Nikos Kazantzakis",
+      "url": "https://www.greeknewsagenda.gr/?p=14417"
+    }
+  ],
+  "do_not_use": [
+    "presentar la cita en español como traducción publicada: la versión del cuerpo es traducción propia del griego recogido en las fuentes; no se consultó ninguna traducción castellana de la Ascética ni de la lápida",
+    "decir que «perdió el Nobel de 1957 frente a Camus por un solo voto» o que Camus dijo que Kazantzakis lo merecía «cien veces más»: las dos cosas están en Wikipedia en inglés, pero no se verificaron en el archivo de nominaciones del Nobel (la página devolvió 404) ni en ninguna otra fuente leída; el cuerpo da solo los años de nominación",
+    "dar «catorce nominaciones» o «tres nominaciones» como cifra: la primera salió de un resumen de búsqueda del archivo Nobel que no se pudo leer, y la segunda es de la lista de nominados griegos en Wikipedia, que solo recoge 1947, 1950 y 1951; el cuerpo usa «nueve años distintos» (Wikipedia en inglés y Greek News Agenda)",
+    "decir que la Iglesia ortodoxa lo excomulgó: Wikipedia en inglés dice que la campaña de excomunión fue rechazada por la dirección de la Iglesia, y Comerford que un sacerdote ofició el entierro «giving lie to the popular claim»; el cuerpo dice solo que el arzobispo de Atenas se opuso a honrarlo",
+    "decir que «la Iglesia le negó un cementerio» y por eso está en la muralla: lo dicen páginas turísticas y resúmenes de búsqueda; la página leída de Visit Heraklion dice que fue «at the request of Kazantzakis himself» y Comerford habla de dificultades de la viuda sin precisar; el cuerpo describe el lugar sin dar la causa",
+    "fechar el funeral el 6 de noviembre: lo dice Cretan Beaches; iefimerida y Comerford dan el 5 de noviembre y el cuerpo sigue a estos dos",
+    "decir que «Aristóteles Onassis pagó el avión» que trajo el cuerpo: lo dice solo Comerford y no se verificó en otra página",
+    "decir que quemaron libros fuera de la iglesia durante el funeral o que asistió el ministro de Educación Gerokostópoulos: apareció en un resumen de búsqueda y no en una página leída",
+    "citar La última tentación, el Índice vaticano o el proceso de 1955 en el cuerpo: Cretan Beaches menciona que estuvo cerca de la excomunión en 1955 pero el detalle no se verificó en otra fuente, y el cuerpo no lo usa",
+    "escribir que la lápida dice «No tengo esperanza» o «Nada espero»: la traducción del cuerpo es «No espero nada»; el griego de la placa es «Δεν ελπίζω τίποτα. Δε φοβούμαι τίποτα. Είμαι λέφτερος.»",
+    "decir que la frase completa está en «La Marcha» o en otra sección: Hartis y el resumen de búsqueda la sitúan al final del tercer deber de la «Preparación»; Protothema también la da dentro de la Preparación",
+    "citar el Museo Kazantzakis de Myrtiá, el Museo Histórico de Creta, el ensayo del embajador Chatzópoulos (mfa.gr), Neos Kosmos o el archivo Nobel como consultados: devolvieron 403 o 404 o no contenían el dato; la biografía breve del museo se leyó y no menciona el epitafio ni el funeral"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

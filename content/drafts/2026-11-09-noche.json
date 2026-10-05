@@ -1,0 +1,93 @@
+{
+  "id": "2026-11-09-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Chavín de Huántar y los pututus de 2001",
+    "hook": "Un templo andino de hace tres mil años se construyó para que sonaran dentro de él unas trompetas de caracol marino. En 2001 aparecieron veinte, enterradas juntas, con la boquilla pulida por generaciones de labios.",
+    "body": [
+      "Chavín de Huántar está en Áncash, en la sierra norte del Perú, a 3.180 metros, donde se juntan los ríos Mosna y Huachecsa. Su construcción monumental se ha fechado entre el 1200 y el 500 antes de nuestra era. Julio C. Tello empezó a estudiarlo en 1919 y lo llamó la cuna de la cultura sudamericana. En 1945 un aluvión lo sepultó bajo cuatro metros de sedimento. Es Patrimonio de la Humanidad desde 1985. Lo raro de Chavín no es su tamaño sino su interior: kilómetros de galerías y canales dentro de las plataformas, y en el centro del Templo Viejo un monolito de granito de cuatro metros y medio, el Lanzón, una divinidad con cabeza de felino y cuerpo humano.",
+      "En 2001 el equipo de John Rick, de la Universidad de Stanford, desenterró veinte trompetas hechas con caracolas Strombus galeatus, un molusco marino que no vive en la sierra. Allí se llaman pututus. Estaban decoradas, con la boquilla cortada en el ápice y pulida por el uso. Son los únicos instrumentos sonoros excavados en Chavín, y los únicos que aparecen en su arte en piedra: en la Plaza Circular hay figuras talladas que las tocan. Las mediciones dieron tonos entre 272 y 340 hercios, y tres conductos del edificio amplifican justo esas frecuencias entre 10 y 20 decibelios, enlazando la galería del Lanzón con la plaza.",
+      "Tocadas a la vez, en tonos casi iguales, producen un batido, una vibración que parece venir de las paredes. En la piedra hay una figura que sostiene un cactus San Pedro, planta psicoactiva de la región. Rick sostiene que Chavín fue un centro donde la autoridad se fabricaba con experiencia ritual: oscuridad, sonido y un ídolo al fondo de un laberinto. No hay inscripciones. Lo que queda es la arquitectura, y la arquitectura estaba afinada."
+    ],
+    "question": "¿Qué espacios de hoy están diseñados para que una voz suene más grande de lo que es?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El templo afinado",
+    "subtitle": "Chavín de Huántar, Áncash, 1200-500 a. C.",
+    "body": "A 3.180 metros, en los Andes peruanos, un templo con kilómetros de galerías y un ídolo de granito de 4,5 metros, el Lanzón. En 2001 aparecieron veinte trompetas de caracol marino con la boquilla gastada. Sus tonos los amplifican tres conductos del edificio. Patrimonio de la Humanidad desde 1985."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Chavin",
+      "#Peru",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#ChavinDeHuantar",
+      "#Andes",
+      "#Historia",
+      "#PatrimonioMundial",
+      "#Civilizaciones",
+      "#HistoriaAntigua",
+      "#Musica",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El sitio está a «3,180 meters (10,430 ft)» en la región de Áncash, en «the angle formed by the confluence of the Mosna and Huachejsa rivers». La actividad ceremonial principal ocurrió «primarily toward the end of the second millennium, and through the middle of the first millennium BC»; el sitio estuvo ocupado hasta c. 400-500 a. C. El Lanzón está en «the Lanzón Gallery, located at the very center» del Templo Viejo y representa una deidad «with a feline head and human body». Inscrito en la lista del Patrimonio Mundial en 1985 (9.ª sesión). Julio C. Tello lo describió como «the birthplace of South American culture».",
+      "source": "Wikipedia en inglés, «Chavín de Huántar»",
+      "url": "https://en.wikipedia.org/wiki/Chav%C3%ADn_de_Hu%C3%A1ntar"
+    },
+    {
+      "claim": "Situado en el departamento de Áncash, en la confluencia de los ríos Mosna y Huachecsa, a unos 462 km de Lima. «Construido y ocupado aproximadamente entre los años 1500 y 300 a. C.». El Lanzón mide 4,53 metros y está en las galerías subterráneas; representa una deidad antropomorfa con rasgos felinos. Los canales de agua del complejo producen efectos acústicos. «Declarado como Patrimonio de la Humanidad en 1985», tercer sitio peruano tras Machu Picchu y Cuzco. Julio C. Tello inició las investigaciones sistemáticas en 1919. Un aluvión en 1945 sepultó las estructuras bajo cuatro metros de sedimento, excavadas después entre 1955 y 1965.",
+      "source": "Wikipedia en español, «Chavín de Huántar»",
+      "url": "https://es.wikipedia.org/wiki/Chav%C3%ADn_de_Hu%C3%A1ntar"
+    },
+    {
+      "claim": "Chavín está en «the site of multiple landslides and the convergence of two powerful rivers at 3180 meters above sea level». La construcción monumental fue «recently dated by Silvia Kembel and Herbert Haas from around 1200 to 500 B.C.». «Twenty decorated Strombus galeatus conch shell ‘trumpets’» se excavaron en 2001 en Chavín y fueron «the first ceremonially associated sound-producing instruments to be excavated at Chavín». El Lanzón es «the 4.5 meter-tall engraved granite monolith». Los tonos de los pututus «measure between 272 Hz to 340 Hz» y «these specific sonic frequencies are amplified by 10-20 dB [...] by three architectural ducts». Hay «a figure holding an object resembling the so-called ‘San Pedro’ cactus, a psychoactive plant that grows in the region». John Rick defiende «an evolved Shamanism» dentro de «a tradition-based convincing system» como explicación de la función religiosa y la influencia social del sitio.",
+      "source": "The Appendix, Miriam A. Kolar, «Tuned to the Senses: An Archaeoacoustic Perspective on Ancient Chavín», julio de 2013",
+      "url": "https://theappendix.net/issues/2013/7/tuned-to-the-senses-an-archaeoacoustic-perspective-on-ancient-chavin"
+    },
+    {
+      "claim": "«Twenty Strombus galeatus marine shell trumpets were excavated at the 3,000 year-old ceremonial center at Chavín de Huántar, Perú» en 2001 por los equipos de John Rick, asociadas al medio del primer milenio a. C. y a la Plaza Circular. Las caracolas son «playable», con «well-formed mouthpieces created by cutting the small end (spire) off», «use-polished», con «a v-shaped cut to the outer apical lip», «decorated and crafted for musical use». El proyecto es una colaboración arqueoacústica del Center for Computer Research in Music and Acoustics (CCRMA) de Stanford, con Miriam A. Kolar como investigadora principal.",
+      "source": "Stanford University, CCRMA, Chavín de Huántar Archaeological Acoustics Project, «Pututus»",
+      "url": "https://ccrma.stanford.edu/groups/chavin/pututus.html"
+    },
+    {
+      "claim": "«Nineteen use-worn Strombus galeatus pututus were unearthed at Chavín in 2001 by Stanford University's Rick and teams». El centro ceremonial tiene «kilometers of labyrinthine corridors, room, and canals». Rango de tonos «from about 272 Hz to 340 Hz». Al tocarse varias a la vez se documenta un batido descrito como «warbling» o «throbbing». Jonathan Abel dirigió el procesamiento de señal para cartografiar «their strong directionality». Uso monumental durante «several centuries during the first millennium B.C.E.». Mediciones en 2001 y 2008; presentación en octubre de 2014.",
+      "source": "Stanford University, CCRMA, Chavín de Huántar Archaeological Acoustics Project, resumen para la Acoustical Society of America, 2014",
+      "url": "https://ccrma.stanford.edu/groups/chavin/ASA2014.html"
+    },
+    {
+      "claim": "«The Chavin civilization flourished between 900 and 200 BCE in the northern and central Andes». «The most important Chavin religious site was Chavin de Huantar in the Mosna Valley». El Templo Viejo data de c. 750 a. C. y forma una U; el Templo Nuevo (c. 500 a. C.) medía 100 metros de largo y 16 de alto. «The 4.5-metre tall Lanzón monolith» está «deep within the labyrinthine interior of the Old Temple».",
+      "source": "World History Encyclopedia, Mark Cartwright, «Chavin Civilization»",
+      "url": "https://www.worldhistory.org/Chavin_Civilization/"
+    }
+  ],
+  "do_not_use": [
+    "dar «diecinueve» pututus: la página de 2014 del proyecto de Stanford dice «nineteen use-worn»; la página del proyecto sobre los pututus y el artículo de Kolar en The Appendix dicen veinte excavadas; el cuerpo usa veinte y entiende que diecinueve es el número de las que muestran desgaste, aunque ninguna página leída lo explica",
+    "decir que las caracolas estaban en la «Galería de las Caracolas» o en una «galería diminuta junto a la Plaza Circular»: la localización precisa apareció solo en un resumen de búsqueda; las páginas leídas las asocian a la Plaza Circular sin nombrar la galería, y el cuerpo dice solo «enterradas juntas»",
+    "dar la altitud como 3.177 m: lo dice Wikipedia en español; Wikipedia en inglés y Kolar dan 3.180, y el cuerpo sigue a estas dos",
+    "fechar el sitio «entre 1500 y 300 a. C.» (Wikipedia en español) o la cultura «entre 900 y 200 a. C.» (World History Encyclopedia) como cronología del templo: el cuerpo usa la datación de la construcción monumental de Kembel y Haas, 1200-500 a. C., citada por Kolar",
+    "decir que los canales de agua «rugen como un jaguar»: Wikipedia en español habla de efectos acústicos de los canales parecidos a rugidos felinos, pero es hipótesis sin medición en las páginas leídas; el cuerpo habla solo del batido de las caracolas, que sí está medido",
+    "decir que los sacerdotes «drogaban» a los peregrinos con San Pedro: lo verificado es una figura en piedra que sostiene un objeto parecido al cactus (Kolar); el consumo ritual es interpretación y el cuerpo lo deja como parte de la hipótesis de Rick",
+    "atribuir a Rick la frase «fabricar autoridad»: es paráfrasis del cuerpo; Kolar recoge que Rick habla de «an evolved Shamanism» y de «a tradition-based convincing system»",
+    "decir que Tello excavó «desde 1919» como fecha de la primera excavación: Wikipedia en español dice que inició las investigaciones sistemáticas en 1919; el cuerpo dice que empezó a estudiarlo",
+    "nombrar la Estela Raimondi o el Obelisco Tello en el cuerpo: están verificados en Wikipedia en español pero no se usan por espacio",
+    "decir que en 2018 robots hallaron treinta túneles o tumbas: está en Wikipedia en inglés pero no se verificó en otra fuente y el cuerpo no lo usa",
+    "citar la página de la UNESCO (ficha 330) como consultada: devolvió 403; la inscripción de 1985 se verificó en Wikipedia en inglés y en español",
+    "decir que el pueblo actual se llama Chavín de Huántar y que el sitio está «junto a él»: no se verificó en las páginas leídas; el cuerpo habla solo del sitio",
+    "decir que el Strombus galeatus es «del Pacífico tropical»: es lo habitual en la bibliografía pero ninguna página leída lo dice; el cuerpo dice solo «molusco marino que no vive en la sierra»"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

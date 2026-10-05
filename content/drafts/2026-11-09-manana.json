@@ -1,0 +1,93 @@
+{
+  "id": "2026-11-09-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Carlos Finlay y el mosquito de 1881",
+    "hook": "En 1881 un médico cubano explicó ante la Academia de La Habana que la fiebre amarilla la transmitía un mosquito. Sus colegas lo llamaron «el hombre de los mosquitos». Tardaron casi veinte años en darle la razón.",
+    "body": [
+      "Carlos Juan Finlay nació el 3 de diciembre de 1833 en Puerto Príncipe, hoy Camagüey. Se graduó en el Jefferson Medical College de Filadelfia en 1855. La fiebre amarilla mataba cada año en La Habana y nadie sabía cómo pasaba de un enfermo a otro. En febrero de 1881 Finlay sostuvo en la Conferencia Sanitaria Internacional de Washington que hacía falta un agente intermedio entre el enfermo y el sano. El 14 de agosto de ese año leyó ante la Real Academia de Ciencias de La Habana el trabajo que lo nombra: «El mosquito hipotéticamente considerado como agente de transmisión de la fiebre amarilla».",
+      "La respuesta fue incredulidad y burla. En los diecinueve años siguientes hizo más de cien inoculaciones experimentales con mosquitos, en voluntarios y en sí mismo, y la medicina siguió sin aceptarlo. En 1900 el Ejército de Estados Unidos, que ocupaba Cuba, envió una comisión dirigida por Walter Reed. Sus miembros visitaron a Finlay, escucharon la teoría y recibieron de él huevos de mosquito. Jesse Lazear los incubó. El 27 de agosto un mosquito picó a James Carroll y días después a un soldado voluntario: los dos enfermaron. Lazear murió de fiebre amarilla el 25 de septiembre de 1900.",
+      "Reed confirmó el hallazgo de Finlay en su informe a la conferencia sanitaria reunida en La Habana en 1901. William Gorgas dirigió la campaña contra el mosquito y la ciudad quedó libre de fiebre amarilla por primera vez en ciento cincuenta años. En 1902 Finlay fue nombrado jefe de Sanidad de la nueva República, hasta 1909. Fue propuesto siete veces al Nobel de Medicina y nunca lo recibió. Murió en La Habana el 20 de agosto de 1915. En buena parte de América Latina el Día del Médico se celebra el 3 de diciembre, el día en que él nació."
+    ],
+    "question": "¿Cuánto tiempo puede estar alguien en lo cierto sin que nadie lo escuche?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El hombre de los mosquitos",
+    "subtitle": "La Habana, 14 de agosto de 1881",
+    "body": "Carlos Finlay propuso en 1881 que un mosquito transmitía la fiebre amarilla. Lo recibieron con burla. Hizo más de cien inoculaciones experimentales. En 1900 la comisión de Walter Reed confirmó la teoría con huevos de mosquito que él les dio. La Habana quedó libre del mal por primera vez en 150 años."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#CarlosFinlay",
+      "#Cuba",
+      "#HistoriaDeLaMedicina"
+    ],
+    "extended": [
+      "#FiebreAmarilla",
+      "#Ciencia",
+      "#Medicina",
+      "#LaHabana",
+      "#SigloXIX",
+      "#Historia",
+      "#AmericaLatina",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Nació el 3 de diciembre de 1833 en Puerto Príncipe (hoy Camagüey), Cuba. Se graduó en el Jefferson Medical College en 1855. «He was the first to theorize, in 1881, that a mosquito was a carrier» del agente de la fiebre amarilla. «His hypothesis and exhaustive proofs were confirmed nearly twenty years later by the Walter Reed Commission of 1900». Fue jefe de Sanidad de Cuba de 1902 a 1909. «Finlay was nominated seven times for the Nobel Prize in Physiology or Medicine, although he was never awarded the prize». Legión de Honor de Francia en 1908. Murió el 20 de agosto de 1915 en La Habana.",
+      "source": "Wikipedia en inglés, «Carlos Finlay»",
+      "url": "https://en.wikipedia.org/wiki/Carlos_Finlay"
+    },
+    {
+      "claim": "Nació el 3 de diciembre de 1833 en Puerto Príncipe. Se inscribió en el Jefferson Medical College en 1853, se graduó en 1855 y revalidó el título de médico en La Habana en 1857. El 18 de febrero de 1881 presentó su teoría en la V Conferencia Sanitaria Internacional en Washington, donde «su propuesta fue vista con desdén, incredulidad y burla». El 14 de agosto de 1881 presentó ante la Real Academia de Ciencias de La Habana su trabajo sobre la transmisión de la fiebre amarilla. Sus teorías fueron ignoradas por casi veinte años hasta la Comisión Reed de 1900. Nominado siete veces al Nobel de Medicina. Murió el 20 de agosto de 1915 en La Habana. El 3 de diciembre es el Día de la Medicina Latinoamericana.",
+      "source": "Wikipedia en español, «Carlos Finlay»",
+      "url": "https://es.wikipedia.org/wiki/Carlos_Finlay"
+    },
+    {
+      "claim": "Nació en Puerto Príncipe el 3 de diciembre de 1833; estudios en el Jefferson Medical College de Filadelfia completados en 1855; autorización para ejercer en Cuba en 1857. El 14 de agosto de 1881 presentó ante la Real Academia el trabajo titulado ‘The Mosquito Hypothetically Considered as the Agent of Transmission of Yellow Fever’. «The audience responded with incredulity and ridicule. His colleagues called him derisively ‘the mosquito man’». Entre 1881 y 1900 hizo inoculaciones «in more than 100 experimental subjects, including himself». En 1900 el Surgeon General Sternberg envió una comisión dirigida por Walter Reed que probó la hipótesis con mosquitos que Finlay proporcionó. Lazear fue picado por un mosquito en el hospital Las Ánimas y murió. Tras la campaña contra el mosquito «the city became free of yellow fever for the first time in 150 years». Finlay fue jefe del Departamento de Sanidad cubano tras la salida de Gorgas en 1902. Fue propuesto al Nobel por Alphonse Laveran y Ronald Ross, por separado. Murió el 20 de agosto de 1915 a los ochenta y dos años.",
+      "source": "Hektoen International, «Carlos J. Finlay: the mosquito man», 2 de noviembre de 2020",
+      "url": "https://hekint.org/2020/11/02/carlos-j-finlay-the-mosquito-man/"
+    },
+    {
+      "claim": "Hacia 1881 Finlay había teorizado que los mosquitos causaban la fiebre amarilla, pero «his theory was largely dismissed». Cuando la United States Army Yellow Fever Board llegó a Cuba en 1900, sus miembros «visited Finlay and heard his theory of mosquito transmission». Jesse Lazear «hatched Finlay's mosquito eggs for the experiments» y los llevó al hospital Las Ánimas para infectarlos con sangre de enfermos. El 27 de agosto Lazear puso un mosquito sobre James Carroll y cuatro días después sobre un soldado voluntario; los dos contrajeron fiebre amarilla. Lazear «died from yellow fever on September 25, 1900». En noviembre de 1900 Reed estableció un lugar aislado en las afueras de La Habana donde voluntarios en un edificio esterilizado fueron picados por mosquitos infectados; varios enfermaron y todos se recuperaron. Los esfuerzos posteriores por eliminar los mosquitos en La Habana produjeron «the near immediate cessation of the disease».",
+      "source": "PBS, American Experience, «Fever: Yellow Fever and the Scientific Method»",
+      "url": "https://www.pbs.org/wgbh/americanexperience/features/fever-yellow-fever-and-scientific-method/"
+    },
+    {
+      "claim": "«Born in Camagüey Province on Dec. 3, 1833, of a Scottish father and a French mother». Título de medicina en el Jefferson Medical College de Filadelfia en 1855. «At the International Sanitary Conference held in Washington in February 1881, he explained his theory». En agosto de 1881 presentó su trabajo ante la Academia de Ciencias de La Habana. «His theory was not accepted by the scientific world for almost 2 decades». Realizó más de cien inoculaciones experimentales con mosquitos infectados en voluntarios. Cuando la Yellow Fever Board llegó a La Habana en 1900, Finlay les proporcionó huevos de mosquito. Walter Reed confirmó el descubrimiento de Finlay en un informe a la Conferencia Sanitaria Internacional celebrada en La Habana en 1901; Gorgas aplicó después las campañas de erradicación del mosquito. Tras el establecimiento de la República en 1902 Finlay fue nombrado jefe de Sanidad. «Finlay died in Havana on Aug. 20, 1915».",
+      "source": "Encyclopedia.com, Encyclopedia of World Biography, «Carlos Juan Finlay»",
+      "url": "https://www.encyclopedia.com/people/medicine/medicine-biographies/carlos-juan-finlay"
+    },
+    {
+      "claim": "El Día del Médico «coincide con el nacimiento del médico cubano Carlos Finlay, nacido el 3 de diciembre de 1833», quien «descubrió el mosquito transmisor de la fiebre amarilla, el Aedes Aegypti». «El 3 de diciembre, Día Nacional del Médico y Día Panamericano del Médico, fecha establecida por la Organización Panamericana de la Salud (OPS)». En Argentina se celebra desde 1956 por iniciativa del Colegio Médico de Córdoba.",
+      "source": "La Capital (Rosario), especial «Día del Médico»",
+      "url": "https://www.lacapital.com.ar/especiales1/dia-del-medico-n10232697.html"
+    }
+  ],
+  "do_not_use": [
+    "decir que leyó el trabajo «a las ocho de la noche ante once académicos»: la escena aparece en resúmenes de búsqueda de revistas médicas cubanas en PDF que no se pudieron leer; el cuerpo dice solo que lo leyó ante la Academia el 14 de agosto de 1881",
+    "decir que Finlay «descubrió» o «identificó el Aedes aegypti» en 1881 con ese nombre: en 1881 habló de un mosquito; Wikipedia en inglés dice que un año después identificó un mosquito del género Aedes, y el nombre de la especie es posterior; el cuerpo habla de «un mosquito»",
+    "dar un número exacto de inoculaciones (circulan 102 y 104): Hektoen y Encyclopedia.com dicen «más de cien»; el cuerpo repite esa cifra",
+    "decir que Reed «robó» el mérito a Finlay o que nunca lo reconoció: Encyclopedia.com dice que Reed confirmó el descubrimiento de Finlay en su informe de 1901; la disputa de prioridad existe pero el cuerpo no la convierte en acusación",
+    "decir que la Comisión Reed fue «enviada para probar la teoría de Finlay»: fue enviada a investigar la fiebre amarilla; la visita a Finlay y la adopción de su hipótesis vinieron después (PBS, Hektoen)",
+    "fechar la desaparición de la fiebre amarilla de La Habana en 1901 o 1902 con fecha precisa: Hektoen dice que la ciudad quedó libre por primera vez en 150 años y PBS habla de cese casi inmediato tras la campaña; ninguna página leída da el día del último caso",
+    "decir que el Día del Médico lo instituyó la OPS «en 1953 a propuesta de la Federación Médica Argentina» o que nació en «el Congreso de Dallas de 1933»: las dos versiones aparecieron solo en resúmenes de búsqueda; la página leída de La Capital atribuye la fecha a la OPS sin año y da 1956 para Argentina; el cuerpo dice solo que en buena parte de América Latina se celebra el 3 de diciembre",
+    "decir que fue «el primer latinoamericano propuesto al Nobel»: no se verificó en ninguna página leída",
+    "atribuir la nominación al Nobel a Laveran y Ross como dato seguro de las siete: Hektoen los nombra como proponentes independientes pero no dice cuántas de las siete nominaciones son suyas; el cuerpo da solo el total de siete (Wikipedia en inglés y en español)",
+    "citar la página de la OPS sobre Finlay, Ecured, Jefferson University, UVA Today o temas.sld.cu como consultadas: devolvieron 404, conexión rechazada o no existían; las fuentes leídas son las seis listadas",
+    "escribir «Carlos Juan Finlay Barrés» con el segundo apellido como dato verificado: aparece solo en títulos de PDF cubanos no leídos; el cuerpo usa Carlos Juan Finlay",
+    "decir que la medalla Walter Reed de 1942 o la Legión de Honor de 1908 figuran en el cuerpo: están verificadas en Wikipedia en inglés pero no se usan por espacio",
+    "decir que Finlay revalidó el título en La Habana en 1857, que era de padre escocés y madre francesa, o que Reed bautizó el campamento de noviembre de 1900 como Camp Lazear: los tres datos están verificados (Wikipedia en español, Encyclopedia.com, PBS) pero se sacaron del cuerpo por el tope de Instagram"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

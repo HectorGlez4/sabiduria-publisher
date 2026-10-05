@@ -1,0 +1,84 @@
+{
+  "id": "2026-11-09-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Mary Shelley y la amenaza de la criatura",
+    "hook": "«Ten cuidado, porque no tengo miedo y por eso soy poderoso.»\n— Mary Shelley, Frankenstein, 1818. La frase se repite como lema de coraje. En la novela la dice la criatura, y es una amenaza.",
+    "body": [
+      "Mary Shelley empezó Frankenstein en el verano de 1816, a los dieciocho años, en Villa Diodati, junto al lago de Ginebra, cuando Byron propuso que cada uno escribiera una historia de fantasmas. La novela salió el 1 de enero de 1818 en Londres, sin nombre de autora, en tres volúmenes y quinientos ejemplares, con un prólogo escrito por Percy Shelley. La segunda edición, de 1823, ya llevaba su nombre. En 1831 publicó una versión revisada con una introducción nueva. Un crítico la llamó un tejido de absurdos horribles y repugnantes. Walter Scott la elogió como un relato extraordinario.",
+      "La frase está en el tercer volumen. Victor había prometido fabricarle una compañera a la criatura, y en su laboratorio, al verla asomarse a la ventana, destroza lo que tenía a medias, «temblando de pasión». Ella entra y habla: «Esclavo, antes razoné contigo. [...] Tú eres mi creador, pero yo soy tu amo: obedece». Pregunta si cada hombre tendrá esposa y cada animal su pareja, y ella estará sola. Dice que la venganza le es ya más querida que la luz o el alimento. Y entonces: «Ten cuidado, porque no tengo miedo y por eso soy poderoso». La última línea del discurso es la que Victor no olvida: «Estaré contigo en tu noche de bodas».",
+      "Shelley nunca le dio nombre a la criatura. En la novela es «el desdichado», «el monstruo», «el ser». Y le dio la frase sobre el poder a quien ya lo ha perdido todo: no teme porque no tiene nada que proteger. En la obra la ausencia de miedo no es virtud, es desesperación, y quien la escucha no se siente inspirado sino amenazado. La cita circula hoy sin esa escena, y gana en brillo lo que pierde en verdad."
+    ],
+    "question": "¿Cuánto de lo que llamamos valentía es solo no tener ya nada que perder?",
+    "quote": {
+      "text": "Ten cuidado, porque no tengo miedo y por eso soy poderoso.",
+      "author": "Mary Shelley",
+      "work": "Frankenstein, vol. III, cap. III (Lackington, Hughes, Harding, Mavor & Jones, Londres, 1818)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MaryShelley",
+      "#Frankenstein",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#LiteraturaInglesa",
+      "#Novela",
+      "#SigloXIX",
+      "#Romanticismo",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del capítulo XX (texto revisado de 1831). Discurso de la criatura: «Slave, I before reasoned with you, but you have proved yourself unworthy of my condescension. Remember that I have power; you believe yourself miserable, but I can make you so wretched that the light of day will be hateful to you. You are my creator, but I am your master;—obey!» [...] «Shall each man find a wife for his bosom, and each beast have his mate, and I be alone? [...] You can blast my other passions; but revenge remains—revenge, henceforth dearer than light or food! I may die; but first you, my tyrant and tormentor, shall curse the sun that gazes on your misery. Beware; for I am fearless, and therefore powerful. I will watch with the wiliness of a snake, that I may sting with its venom. Man, you shall repent of the injuries you inflict. [...] It is well. I go; but remember, I shall be with you on your wedding night». Victor, antes: «trembling with passion, tore to pieces the thing on which I was engaged». La ficha de la edición dice: «This edition is based on Shelley's revised 1831 edition».",
+      "source": "Standard Ebooks, Mary Shelley, «Frankenstein», capítulo XX, y ficha de la edición",
+      "url": "https://standardebooks.org/ebooks/mary-shelley/frankenstein/text/chapter-20"
+    },
+    {
+      "claim": "Capítulo 20 de Frankenstein, con metadatos «Year Published: 1818». Victor, «trembling with passion, tore to pieces the thing on which I was engaged». La criatura: «Revenge remains—revenge, henceforth dearer than light or food!»; «Beware, for I am fearless and therefore powerful»; «I WILL BE WITH YOU ON YOUR WEDDING-NIGHT». La criatura llama a Victor «Slave» y le dice que lo hará tan desdichado que la luz del día le resultará odiosa.",
+      "source": "Lit2Go, Universidad del Sur de Florida, «Frankenstein, or the Modern Prometheus», capítulo 20",
+      "url": "https://etc.usf.edu/lit2go/128/frankenstein-or-the-modern-prometheus/2310/chapter-20/"
+    },
+    {
+      "claim": "Portada de la primera edición: «PRINTED FOR LACKINGTON, HUGHES, HARDING, MAVOR, & JONES, FINSBURY SQUARE. 1818».",
+      "source": "Project Gutenberg, n.º 41445, «Frankenstein; Or, The Modern Prometheus» (texto de 1818)",
+      "url": "https://www.gutenberg.org/files/41445/41445-h/41445-h.htm"
+    },
+    {
+      "claim": "Publicada anónimamente el 1 de enero de 1818 en Londres por Lackington, Hughes, Harding, Mavor & Jones, en tres volúmenes y 500 ejemplares, con prefacio de Percy Bysshe Shelley. Segunda edición el 11 de agosto de 1823, por G. and W. B. Whittaker, en dos volúmenes y con el nombre de Mary Shelley. Edición revisada en un volumen el 31 de octubre de 1831, por Henry Colburn y Richard Bentley, con una introducción nueva. Mary Shelley tenía 18 años cuando empezó a escribirla en el verano de 1816 en Villa Diodati, tras la propuesta de Byron de que cada uno escribiera una historia de fantasmas; tenía 20 al publicarse. Walter Scott la elogió como «an extraordinary tale»; John Wilson Croker la llamó «a tissue of horrible and disgusting absurdity». La criatura no recibe nombre en la novela: se la llama «wretch», «monster» o «creature».",
+      "source": "Wikipedia en inglés, «Frankenstein»",
+      "url": "https://en.wikipedia.org/wiki/Frankenstein"
+    }
+  ],
+  "do_not_use": [
+    "presentar la cita en español como traducción publicada: la versión del cuerpo es traducción propia del original inglés recogido en las fuentes; no se consultó ninguna traducción castellana",
+    "afirmar que la puntuación exacta de 1818 se leyó en el texto de 1818: el pasaje se verificó en Standard Ebooks, que sigue el texto revisado de 1831, y en Lit2Go, que lo etiqueta como de 1818 pero normaliza la puntuación («Beware, for I am fearless and therefore powerful»); la edición de 1818 en Gutenberg se cortó al leerla antes del tercer volumen, y la edición electrónica de Pensilvania (knarf.english.upenn.edu) devolvió 403; un resumen de búsqueda de esa edición daba «Beware; for I am fearless, and therefore powerful» en vol. III, cap. III, que coincide con el texto de 1831",
+    "decir que la escena ocurre «en el glaciar» o en Montanvert: lo decía un resumen de búsqueda; en el texto leído la criatura aparece en la ventana del laboratorio de Victor, en las islas Orcadas, después de que él destruya la compañera a medias; el encuentro del glaciar es anterior",
+    "atribuir la frase a Victor Frankenstein o «al doctor Frankenstein»: la dice la criatura",
+    "llamar «Frankenstein» a la criatura: Wikipedia confirma que no tiene nombre en la novela",
+    "decir que la novela se escribió «en una noche» o «en una apuesta»: fue una propuesta de Byron de escribir historias de fantasmas, y la escritura duró hasta 1817 (Wikipedia: la completó a los 19)",
+    "decir que la frase es idéntica en 1818 y 1831 como dato leído: lo probable es que sí, y las dos transcripciones consultadas la dan con la misma redacción, pero el cuerpo no afirma la identidad de las ediciones; cita la obra por la primera edición y el texto por las transcripciones leídas",
+    "decir que «Frankenstein es la primera novela de ciencia ficción»: no se verificó en ninguna página leída",
+    "decir que el prólogo de 1818 lo firmó Mary Shelley: lo escribió Percy Shelley (Wikipedia)",
+    "decir que la reseña de Croker salió en la Quarterly Review o la de Scott en Blackwood's: los medios no se verificaron en las páginas leídas; el cuerpo dice «un crítico» y «Walter Scott»",
+    "citar Wikisource para el texto de 1818: las dos rutas probadas devolvieron 404"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
