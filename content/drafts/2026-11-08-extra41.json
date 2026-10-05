@@ -1,0 +1,89 @@
+{
+  "id": "2026-11-08-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Steve Biko y el arma más potente del opresor",
+    "hook": "«El arma más potente en manos del opresor es la mente del oprimido.»\n— Steve Biko, I Write What I Like, 1978 (texto de 1973)",
+    "body": [
+      "Bantu Stephen Biko nació el 18 de diciembre de 1946 en Tarkastad, en el Cabo Oriental sudafricano. En 1966 entró a estudiar medicina en la Universidad de Natal, en la sección reservada a los no europeos. En julio de 1969 fundó la Organización de Estudiantes Sudafricanos, SASO, y fue su primer presidente. Escribía en el boletín de la organización bajo el seudónimo Frank Talk, en una columna titulada «I Write What I Like». Tenía veinticuatro años cuando, según South African History Online, pronunció en Ciudad del Cabo, en 1971, la frase que lo sobrevive.",
+      "La frase está escrita en su ensayo «Black Consciousness and the Quest for a True Humanity», de 1973. Ahí define la Conciencia Negra como una actitud de la mente y una forma de vida. La idea no es nueva, pero el orden sí: antes de pedir derechos, hay que recuperar la cabeza que el sistema ocupó. En agosto de 1972 la universidad lo expulsó. El 3 de marzo de 1973 el gobierno le impuso una orden de proscripción: confinado al distrito de King William's Town, sin poder hablar en público ni ser citado. Un hombre que había escrito sobre la mente como arma fue callado por ley a los veintiséis años.",
+      "El 18 de agosto de 1977 lo detuvieron en un control de carretera por violar la orden. Murió el 12 de septiembre en Pretoria, de lesiones cerebrales sufridas bajo custodia policial. El ministro de Justicia, Jimmy Kruger, declaró que estaba en huelga de hambre desde el 5 de septiembre. La investigación judicial concluyó que no había prueba positiva de que su muerte se debiera al acto u omisión de persona alguna. Al funeral, el 25 de septiembre, acudieron unas veinte mil personas. Sus escritos se reunieron en 1978, con el título de su columna, en un libro que él no llegó a ver."
+    ],
+    "question": "¿Qué idea sobre ti mismo aceptaste sin preguntar de dónde venía?",
+    "quote": {
+      "text": "El arma más potente en manos del opresor es la mente del oprimido.",
+      "author": "Steve Biko",
+      "work": "«Black Consciousness and the Quest for a True Humanity» (1973), en I Write What I Like (1978)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SteveBiko",
+      "#Sudafrica",
+      "#Historia"
+    ],
+    "extended": [
+      "#Frases",
+      "#Apartheid",
+      "#DerechosHumanos",
+      "#Africa",
+      "#Libertad",
+      "#Pensamiento",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del ensayo de Steve Biko «Black Consciousness and the Quest for a True Humanity» (1973), recogido en I Write What I Like: Selected Writings, ed. Aelred Stubbs (Harper & Row, 1979): «...the most potent weapon in the hands of the oppressor is the mind of the oppressed. If one is...».",
+      "source": "Oxford University Press, Learning Link (recursos de Von Sivers, Patterns of World History, 3.ª ed.), «Document: Steve Biko, Black Consciousness and the Quest for a True Humanity (1973)»",
+      "url": "https://learninglink.oup.com/access/content/von-sivers-3e-dashboard-resources/document-steve-biko-black-consciousness-and-the-quest-for-a-true-humanity-1973"
+    },
+    {
+      "claim": "«The most potent weapon in the hands of the oppressor is the mind of the oppressed», atribuida a un discurso en Ciudad del Cabo en 1971. «Black Consciousness is an attitude of the mind and a way of life...», de «The Quest for a True Humanity», I Write What I Like, 1978. La mayoría de las citas proceden del libro recopilatorio I Write What I Like: Selected Writings, publicado en 1978.",
+      "source": "South African History Online, «Quotes: Steve Biko»",
+      "url": "https://sahistory.org.za/archive/quotes-steve-biko"
+    },
+    {
+      "claim": "Nació el 18 de diciembre de 1946 en Tarkastad, Cabo Oriental. Ingresó en 1966 en la Universidad de Natal (sección no europea, Wentworth) para estudiar medicina; expulsado en agosto de 1972. SASO se fundó en julio de 1969 en Turfloop y Biko fue elegido primer presidente; presidió las publicaciones de SASO y escribió bajo el seudónimo «Frank Talk» la columna «I Write What I Like». Proscrito el 3 de marzo de 1973 y confinado al distrito de King William's Town. Detenido el 18 de agosto de 1977. Murió el 12 de septiembre de 1977 en Pretoria por hemorragia cerebral tras una agresión policial. El ministro de Justicia Jimmy Kruger declaró que Biko estaba «on a hunger strike since 5 September». Funeral el 25 de septiembre de 1977 con unas 20.000 personas pese a los controles policiales. La investigación judicial concluyó que no había «positive evidence that the deceased's death was caused by an act or omission of any person».",
+      "source": "South African History Online, «Stephen Bantu Biko»",
+      "url": "https://www.sahistory.org.za/people/stephen-bantu-biko"
+    },
+    {
+      "claim": "Nació el 18 de diciembre de 1946 en Tarkastad. Ingresó en la Universidad de Natal en 1966. SASO se fundó en julio de 1969 y Biko fue su primer presidente. Orden de proscripción en marzo de 1973, que le prohibía salir del distrito de King William's Town y hablar en público. Detenido el 18 de agosto de 1977 en un control de carretera por violar la orden. Murió el 12 de septiembre de 1977 en Pretoria por lesiones cerebrales graves sufridas durante el interrogatorio. «The most potent weapon in the hands of the oppressor is the mind of the oppressed» aparece en sus textos de principios de los años setenta. I Write What I Like (1978), editado por Aelred Stubbs, recopiló sus artículos firmados como Frank Talk en el boletín de SASO.",
+      "source": "Wikipedia en inglés, «Steve Biko»",
+      "url": "https://en.wikipedia.org/wiki/Steve_Biko"
+    },
+    {
+      "claim": "«The most potent weapon in the hands of the oppressor is the mind of the oppressed.» Fuente: discurso en la Cape Town Conference on Inter-Racial Studies (1971), reimpreso en I Write What I Like (1978) en el ensayo «White Racism and Black Consciousness».",
+      "source": "WIST (Wish I'd Said That), ficha «Biko, Steve - Speech, Cape Town Conference on Inter-Racial Studies (1971)»",
+      "url": "https://wist.info/biko-steven/16754/"
+    }
+  ],
+  "do_not_use": [
+    "presentar la cita en español como traducción publicada: la versión del cuerpo es traducción propia del original inglés recogido en las fuentes",
+    "afirmar que la frase está literalmente en el ensayo «White Racism and Black Consciousness» (discurso de Ciudad del Cabo, enero de 1971): lo dicen South African History Online, WIST y un resumen de búsqueda del fact-check de Africa Check, pero el texto de ese ensayo no se leyó; el único texto primario leído es el de «Black Consciousness and the Quest for a True Humanity» (1973), y por eso el campo work remite a ese ensayo y el cuerpo atribuye la fecha de 1971 a SAHO",
+    "decir que el discurso de 1971 fue en el Abe Bailey Institute de la Universidad de Ciudad del Cabo, en enero, en un taller interuniversitario: apareció en resúmenes de búsqueda (archivos AIM25 e Institute of Commonwealth Studies) y no se leyó en ninguna página; el cuerpo dice solo «Ciudad del Cabo, 1971»",
+    "citar el fact-check de Africa Check («Yes, 'mind of oppressed' quote by South Africa's Steve Biko») o la página de Facing History como consultados: devolvieron 403 y 402 respectivamente",
+    "decir dónde fue detenido el 18 de agosto de 1977: SAHO dice cerca de Ciudad del Cabo y Wikipedia cerca de Grahamstown; el cuerpo dice solo «en un control de carretera»",
+    "decir que nació en King William's Town o en Ginsberg: SAHO y Wikipedia dicen Tarkastad; King William's Town es donde creció y donde quedó confinado",
+    "decir que «Black Consciousness and the Quest for a True Humanity» fue un discurso o que se escribió para un libro de teología negra: solo se verificó que es un ensayo de 1973 recogido en I Write What I Like",
+    "dar la edición de I Write What I Like como de 1979: la de Harper & Row que cita el documento de Oxford es de 1979, pero la primera edición, que es la que da el campo work, es de 1978 (SAHO, Wikipedia)",
+    "decir que murió «a golpes» como causa textual: SAHO habla de hemorragia cerebral tras agresión policial y Wikipedia de lesiones cerebrales graves durante el interrogatorio; el cuerpo dice «lesiones cerebrales sufridas bajo custodia policial»",
+    "afirmar que la autopsia o la investigación «culparon a la policía»: la investigación de 1977 concluyó lo contrario, según SAHO; la responsabilidad policial se estableció después (Comisión de la Verdad, años noventa), y eso no se verificó aquí",
+    "decir que tenía veinticuatro años en el discurso de 1971 como dato de fuente: es cálculo propio a partir de la fecha de nacimiento (diciembre de 1946); en enero de 1971 tenía 24; los veintiséis de la proscripción de marzo de 1973 también son cálculo"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

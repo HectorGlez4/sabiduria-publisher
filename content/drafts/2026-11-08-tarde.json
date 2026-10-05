@@ -1,0 +1,93 @@
+{
+  "id": "2026-11-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "George Eliot y las tumbas sin visitar de Middlemarch",
+    "hook": "«El bien creciente del mundo depende en parte de actos sin historia; y que las cosas no nos vayan tan mal como podrían se debe, a medias, al número de quienes vivieron fielmente una vida oculta y descansan en tumbas que nadie visita.»\n— George Eliot, Middlemarch, «Finale», 1872",
+    "body": [
+      "Mary Ann Evans, que firmaba como George Eliot, publicó Middlemarch en ocho entregas entre diciembre de 1871 y diciembre de 1872, con la editorial Blackwood. La protagonista, Dorothea Brooke, quiere hacer algo grande con su vida y acaba haciendo algo pequeño: un primer matrimonio equivocado, un segundo feliz y sin gloria, una existencia sin rastro público. La novela se cierra con un «Finale» que cuenta qué fue de cada personaje, y el último párrafo es para ella. Eliot la compara con un río al que Ciro le quebró la fuerza: una naturaleza plena que se gastó en canales sin nombre.",
+      "La frase que hoy se cita como consuelo está escrita como balance. El párrafo anterior dice que los actos decisivos de la vida de Dorothea «no fueron idealmente bellos»: fueron el resultado mixto de un impulso noble luchando en un estado social imperfecto, donde los grandes sentimientos toman el aspecto del error. Una nueva Teresa, escribe Eliot, ya no tendrá ocasión de reformar un convento, ni una nueva Antígona de enterrar a su hermano. Y luego, la cuenta: que las cosas no nos vayan tan mal se debe «a medias» a gente que vivió una vida oculta. No a toda. A la mitad.",
+      "Eliot anotó en su diario el 1 de enero de 1873 que ningún libro suyo había sido recibido con más entusiasmo. Después vinieron décadas de indiferencia. El 20 de noviembre de 1919 Virginia Woolf escribió en el Times Literary Supplement que Middlemarch era, con todas sus imperfecciones, una de las pocas novelas inglesas escritas para gente adulta. El último párrafo es la razón: pone la medida de una vida en lo que nadie cuenta."
+    ],
+    "question": "¿Cuánto de lo que te va bien se lo debes a alguien cuyo nombre no conoces?",
+    "quote": {
+      "text": "El bien creciente del mundo depende en parte de actos sin historia; y que las cosas no nos vayan tan mal como podrían se debe, a medias, al número de quienes vivieron fielmente una vida oculta y descansan en tumbas que nadie visita.",
+      "author": "George Eliot",
+      "work": "Middlemarch, «Finale» (William Blackwood and Sons, 1871-1872)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#GeorgeEliot",
+      "#Middlemarch",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#LiteraturaInglesa",
+      "#Novela",
+      "#SigloXIX",
+      "#VirginiaWoolf",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del «Finale» de Middlemarch. Primera frase: «Every limit is a beginning as well as an ending». Párrafo penúltimo: «Certainly those determining acts of her life were not ideally beautiful. They were the mixed result of young and noble impulse struggling amidst the conditions of an imperfect social state, in which great feelings will often take the aspect of error, and great faith the aspect of illusion. [...] A new Theresa will hardly have the opportunity of reforming a conventual life, any more than a new Antigone will spend her heroic piety in daring all for the sake of a brother's burial: the medium in which their ardent deeds took shape is forever gone. But we insignificant people with our daily words and acts are preparing the lives of many Dorotheas». Párrafo final: «Her finely touched spirit had still its fine issues, though they were not widely visible. Her full nature, like that river of which Cyrus broke the strength, spent itself in channels which had no great name on the earth. But the effect of her being on those around her was incalculably diffusive: for the growing good of the world is partly dependent on unhistoric acts; and that things are not so ill with you and me as they might have been, is half owing to the number who lived faithfully a hidden life, and rest in unvisited tombs».",
+      "source": "Standard Ebooks, George Eliot, «Middlemarch», Finale (texto completo en línea)",
+      "url": "https://standardebooks.org/ebooks/george-eliot/middlemarch/text/epilogue"
+    },
+    {
+      "claim": "Middlemarch apareció en ocho entregas en rústica entre diciembre de 1871 y diciembre de 1872, con William Blackwood and Sons, y en paralelo en cuatro volúmenes (el primero fechado en 1871, el resto en 1872). George Eliot (Mary Ann Evans) empezó a escribir las dos piezas que formaron la novela en 1869-1870 y la terminó en 1871. El método de publicación por entregas se tomó de Los miserables de Victor Hugo para evitar la división en pequeñas partes mensuales a la que Eliot se oponía. Virginia Woolf la describió como «one of the few English novels written for grown-up people».",
+      "source": "Wikipedia en inglés, «Middlemarch»",
+      "url": "https://en.wikipedia.org/wiki/Middlemarch"
+    },
+    {
+      "claim": "Middlemarch apareció en ocho entregas entre diciembre de 1871 y diciembre de 1872 y en edición completa revisada en 1874. George Eliot era el seudónimo de Mary Ann Evans (1819-1880). Eliot anotó en su diario el 1 de enero de 1873: «No former book of mine has been received with more enthusiasm». Henry James consideró un fracaso el personaje de Will Ladislaw.",
+      "source": "Encyclopedia.com, Novels for Students, «Middlemarch»",
+      "url": "https://www.encyclopedia.com/arts/educational-magazines/middlemarch"
+    },
+    {
+      "claim": "Texto del ensayo «George Eliot» de Virginia Woolf, recogido en The Common Reader (Nueva York, Harcourt, Brace and Company, pp. 229-242): Middlemarch es «the magnificent book which with all its imperfections is one of the few English novels written for grown-up people».",
+      "source": "Wikisource en inglés, Virginia Woolf, «The Common Reader / George Eliot»",
+      "url": "https://en.wikisource.org/wiki/The_Common_Reader/George_Eliot"
+    },
+    {
+      "claim": "El ensayo «George Eliot» de Virginia Woolf se publicó en el Times Literary Supplement el 20 de noviembre de 1919, páginas 657-658.",
+      "source": "George Eliot Archive, ficha «George Eliot [Essay]» de Virginia Woolf",
+      "url": "https://georgeeliotarchive.org/items/show/52443"
+    },
+    {
+      "claim": "El ensayo de Woolf sobre George Eliot apareció en el Times Literary Supplement en noviembre de 1919; en él llamó a Middlemarch «magnificent in many ways» y «one of the few English novels written for grown-up people».",
+      "source": "Rohan Maitzen (Dalhousie University), «Woolf on the Victorians: I'm a good deal impressed», 20 de noviembre de 2009",
+      "url": "https://rohanmaitzen.com/2009/11/20/woolf-on-the-victorians-im-a-good-deal-impressed-2/"
+    }
+  ],
+  "do_not_use": [
+    "presentar la cita en español como traducción publicada: la versión del cuerpo es traducción propia del original inglés recogido en las fuentes; no se consultó ninguna traducción castellana",
+    "escribir «el río cuya fuerza quebró Alejandro»: un resumen de búsqueda daba «Alexander», pero el texto de Standard Ebooks dice «Cyrus» (Ciro), y así lo recoge el cuerpo",
+    "explicar que el río es el Gindes y que Heródoto lo cuenta en el libro I: es la referencia habitual de los comentaristas pero no se verificó en ninguna página leída; el cuerpo dice solo «un río al que Ciro le quebró la fuerza»",
+    "decir que Eliot suprimió en la edición de 1874 un pasaje del Finale que culpaba a la sociedad y a los «modes of education» de los errores de Dorothea: la revisión de 1874 se verificó (Encyclopedia.com), pero el contenido del pasaje eliminado apareció solo en resúmenes de búsqueda y no se leyó en ninguna página",
+    "decir que Woolf escribió el ensayo «por el centenario de Eliot» como dato tomado de Woolf: el ensayo salió el 20 de noviembre de 1919, dos días antes del centenario del nacimiento de Eliot (22 de noviembre de 1819), y el blog de Maitzen no lo llama centenario y el cuerpo no menciona el centenario, solo la fecha verificada en la ficha del George Eliot Archive",
+    "decir que la novela se publicó «en Blackwood's Magazine»: Encyclopedia.com lo formula así, pero Wikipedia precisa que fueron ocho entregas en rústica de William Blackwood and Sons, no la revista; el cuerpo dice «con la editorial Blackwood»",
+    "decir que las entregas fueron «bimestrales» o «mensuales»: el ritmo exacto (seis bimestrales y dos mensuales circula) no se verificó en las páginas leídas; el cuerpo dice solo «ocho entregas»",
+    "citar la encuesta de The Guardian que la coloca como mejor novela en inglés: Wikipedia la menciona pero no se leyó la encuesta y el cuerpo no la usa",
+    "citar la página de Project Gutenberg o de Wikisource de Middlemarch como consultadas para el Finale: el fichero de Gutenberg se cortó en el capítulo V al leerlo y la página de Wikisource del Finale devolvió 404; el texto se verificó en Standard Ebooks",
+    "usar la frase de Woolf sin «con todas sus imperfecciones»: en el original va «which with all its imperfections is one of the few English novels written for grown-up people»"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

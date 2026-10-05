@@ -1,0 +1,87 @@
+{
+  "id": "2026-11-08-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Hertha Ayrton y el dictamen legal de 1902",
+    "hook": "En 1902 nueve miembros de la Royal Society la propusieron como colega. Un abogado dictaminó que una mujer casada no podía ser elegida. En 1906 la misma sociedad le dio su medalla.",
+    "body": [
+      "Phoebe Sarah Marks nació el 28 de abril de 1854 en Portsea, junto a Portsmouth. Entró en Girton, el colegio femenino de Cambridge, en 1876 y en 1880 aprobó el Tripos de matemáticas; Cambridge no daba títulos a las mujeres, y se licenció por la Universidad de Londres en 1881. En 1884 patentó un divisor de líneas. En 1885 se casó con el físico William Ayrton y, ya como Hertha Ayrton, se dedicó al arco eléctrico, la lámpara que alumbraba calles y faros. En 1899 fue la primera mujer que leyó su propio trabajo ante la Institución de Ingenieros Eléctricos, y la primera que esa institución admitió. La siguiente tardó sesenta años.",
+      "La Royal Society fue otra cosa. En 1901 su estudio sobre el arco tuvo que leerlo en su nombre el ingeniero John Perry. En enero de 1902 Perry la propuso como Fellow, con un certificado firmado por nueve miembros. El Consejo pidió opinión jurídica. El abogado W. O. Danckwerts respondió que las mujeres casadas no eran elegibles, y que ni siquiera estaba claro que las solteras lo fueran: en el derecho común inglés, una mujer casada no tenía personalidad jurídica propia. En 1904 le permitieron leer ella misma un trabajo sobre las ondulaciones de la arena, la primera mujer que lo hizo allí. En 1906 la sociedad le dio la medalla Hughes por el arco eléctrico y las ondas de arena. Pasaron ciento dos años hasta que esa medalla volvió a dársele a una mujer.",
+      "En la Primera Guerra Mundial diseñó un abanico manual para desalojar los gases de las trincheras; se repartieron 104.000 en el frente occidental. Registró veintiséis patentes. Murió el 26 de agosto de 1923. La Royal Society no admitió a su primera mujer hasta 1945. El dictamen de 1902 nunca discutió la calidad de su trabajo. Solo discutió si ella contaba como persona."
+    ],
+    "question": "¿Cuántas reglas que hoy parecen neutrales deciden, en la práctica, quién puede entrar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La candidata inelegible",
+    "subtitle": "Royal Society, Londres, 1902",
+    "body": "Hertha Ayrton estudió el arco eléctrico y las ondas de arena. En 1902 nueve miembros de la Royal Society la propusieron como Fellow; un dictamen legal la declaró inelegible por ser mujer casada. En 1906 la misma sociedad le dio la medalla Hughes. Admitió a su primera mujer en 1945."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HerthaAyrton",
+      "#MujeresEnLaCiencia",
+      "#Historia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Fisica",
+      "#Ingenieria",
+      "#RoyalSociety",
+      "#HistoriaDeLaCiencia",
+      "#Sufragismo",
+      "#Inventoras",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Nació el 28 de abril de 1854 en Portsea, Portsmouth, como Phoebe Sarah Marks; murió el 26 de agosto de 1923 en North Lancing, Sussex. Estudió en Girton con Richard Glazebrook; en 1880 aprobó el Mathematical Tripos pero Cambridge no le concedió título; licenciatura en Ciencias por la Universidad de Londres en 1881. Patente del divisor de líneas en 1884. Matrimonio con William Edward Ayrton el 6 de mayo de 1885. The Electric Arc, 1902. En 1899 fue la primera mujer en leer su propio trabajo ante la Institution of Electrical Engineers. En 1901 «The Mechanism of the Electric Arc» lo leyó John Perry en la Royal Society. En 1902 fue propuesta como Fellow y rechazada porque las mujeres casadas no eran elegibles. En 1904 fue la primera mujer en leer un trabajo ante la Royal Society («The Origin and Growth of Ripple Marks»). Medalla Hughes en 1906 por el arco eléctrico y las ondas de arena. Se unió a la WSPU en 1907; en 1911 boicoteó el censo acogiendo a unas 40 resistentes en su casa. 104.000 abanicos Ayrton se repartieron a los soldados en el frente occidental. Registró 26 patentes.",
+      "source": "Wikipedia en inglés, «Hertha Ayrton»",
+      "url": "https://en.wikipedia.org/wiki/Hertha_Ayrton"
+    },
+    {
+      "claim": "Patentó el divisor de líneas en 1884. Publicó doce artículos sobre el arco eléctrico en The Electrician en 1895-1896. En 1899 fue elegida miembro de la Institution of Electrical Engineers, la primera mujer; la siguiente fue elegida sesenta años después. En 1901 su trabajo sobre el mecanismo del arco eléctrico fue leído por un colega en la Royal Society. Propuesta como Fellow en 1902 y rechazada con el dictamen «We are of the opinion that married women are not eligible as Fellows of the Royal Society». En 1904 leyó el primer trabajo presentado por una mujer ante la Royal Society. Medalla Hughes en 1906, la primera concedida a una mujer. El abanico Ayrton se desarrolló en la Primera Guerra Mundial y se fabricaron más de 100.000 unidades.",
+      "source": "MacTutor History of Mathematics (Universidad de St Andrews), «Hertha Marks Ayrton»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Ayrton/"
+    },
+    {
+      "claim": "En enero de 1902 John Perry FRS presentó la candidatura de Hertha Ayrton a Fellow; nueve Fellows firmaron el certificado «from personal knowledge». El Consejo pidió opinión legal antes de proceder. El abogado W. O. Danckwerts KC dictaminó que «married women are not eligible as Fellows of the Royal Society» y puso en duda que las solteras pudieran ser admitidas sin reforma estatutaria: bajo el derecho común inglés las mujeres casadas carecían de estatus legal como personas. Recibió la medalla Hughes en 1906 por «the electric arc and on sand ripples»; pasaron 102 años antes de que la medalla volviera a concederse a una mujer. La Royal Society no admitió mujeres hasta 1945, aunque la Sex Disqualification (Removal) Act de 1919 había eliminado la barrera legal.",
+      "source": "Royal Society, blog de la biblioteca, Felicity Henderson, «Almost a Fellow: Hertha Ayrton and the Royal Society», marzo de 2012",
+      "url": "https://royalsociety.org/blog/2012/03/almost-a-fellow/"
+    },
+    {
+      "claim": "Nació el 28 de abril de 1854 en Portsea. Entró en Girton en 1876 tras aprobar en 1874 el examen de Cambridge para mujeres con honores en inglés y matemáticas. Las mujeres no podían recibir título de Cambridge. Divisor de líneas en 1884. Se casó el 6 de mayo de 1885 con William Edward Ayrton. The Electric Arc (1902) fue un estudio completo basado en sus artículos. En mayo de 1899 fue elegida la primera mujer miembro de la IEE y se le permitió leer su propio trabajo. En 1904 fue aparentemente la primera mujer en leer su propio trabajo ante la Royal Society. Medalla Hughes en 1906. Diseñó el abanico Ayrton en la Primera Guerra Mundial para dispersar gases tóxicos. Murió el 26 de agosto de 1923 en North Lancing, Sussex.",
+      "source": "Encyclopedia.com, Complete Dictionary of Scientific Biography, «Ayrton, Hertha»",
+      "url": "https://www.encyclopedia.com/science/dictionaries-thesauruses-pictures-and-press-releases/ayrton-hertha"
+    },
+    {
+      "claim": "Estudió matemáticas en Girton entre 1876 y 1881, preparada por el físico Richard Glazebrook. Primera mujer elegida en la Institution of Electrical Engineers. En 1902 su estado civil le impidió entrar en la Royal Society. En 1906 ganó la medalla Hughes de la Royal Society, primera mujer en recibirla. Patentó 26 inventos. El abanico Ayrton, inspirado en sus estudios de vórtices, despejaba gases en las trincheras de la Primera Guerra Mundial. Apoyó a las sufragistas y prestó su casa como refugio bajo la Cat and Mouse Act de 1913. Murió en 1923.",
+      "source": "Girton College, Universidad de Cambridge, «Hertha Ayrton: Engineer, inventor, trailblazer»",
+      "url": "https://www.girton.cam.ac.uk/news/hertha-ayrton-trailblazer"
+    }
+  ],
+  "do_not_use": [
+    "fechar la muerte el 23 de agosto de 1923: lo dice MacTutor; Wikipedia y el Dictionary of Scientific Biography (Encyclopedia.com) dan el 26 de agosto, y el cuerpo sigue a estos dos",
+    "decir que entró en Girton en 1877: lo dice MacTutor; Girton College y el Dictionary of Scientific Biography dicen 1876, y el cuerpo sigue a la propia institución",
+    "fechar el Tripos en 1881: Encyclopedia.com dice que completó los estudios en 1881; Wikipedia dice que aprobó el Tripos en 1880 y se licenció por Londres en 1881; el cuerpo usa 1880 para el Tripos y 1881 para Londres",
+    "decir que «le negaron el título» como castigo personal: Cambridge no concedía títulos a ninguna mujer en esa época; fue una regla general, no una decisión sobre ella",
+    "atribuir el dictamen de 1902 al Consejo de la Royal Society como opinión propia: el Consejo pidió opinión jurídica y el dictamen lo firmó el abogado W. O. Danckwerts KC",
+    "decir que la Royal Society la rechazó «por ser mujer» a secas: el dictamen la declaró inelegible por ser mujer casada y dejó en duda a las solteras; el matiz importa porque la razón era la falta de personalidad jurídica de la mujer casada en el derecho común",
+    "dar el nombre de las primeras mujeres admitidas en la Royal Society en 1945 (circulan Kathleen Lonsdale y Marjory Stephenson): el blog de la Royal Society leído no las nombra y no se verificó en otra página",
+    "decir que la medalla Hughes volvió a darse a una mujer «en 2008» o nombrar a quién: el blog de la Royal Society dice solo que pasaron 102 años; el cuerpo repite esa cifra sin nombrar a nadie",
+    "dar «más de 100.000 abanicos fabricados» como cifra: MacTutor dice más de 100.000 fabricados y Wikipedia dice 104.000 repartidos en el frente occidental; el cuerpo usa la cifra de Wikipedia y la acción de repartir, no de fabricar",
+    "decir que fue «la primera mujer ingeniera eléctrica de Gran Bretaña» o «primera ingeniera del mundo»: ninguna fuente leída lo afirma; lo verificado es primera mujer miembro de la IEE (1899)",
+    "citar el artículo del Science Museum Journal («The life and material culture of Hertha Marks Ayrton») o el de la Jewish Women's Archive como consultados: el primero redirigió a una URL que no se pudo leer y el segundo devolvió 403",
+    "decir que explicó el silbido del arco eléctrico «en 1895»: las fuentes leídas dan los artículos de The Electrician en 1895-1896 y el trabajo ante la IEE en 1899 sin fechar el hallazgo; el cuerpo solo dice que el arco silbaba sin que se supiera por qué"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

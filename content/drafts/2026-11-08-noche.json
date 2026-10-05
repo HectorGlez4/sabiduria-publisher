@@ -1,0 +1,87 @@
+{
+  "id": "2026-11-08-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Skara Brae y la tormenta de 1850",
+    "hook": "Una tormenta de invierno arrancó la hierba de una loma en Orkney en 1850. Debajo había un pueblo de hace 5.000 años con los muebles de piedra todavía en su sitio.",
+    "body": [
+      "La bahía de Skaill está en la costa oeste de Orkney, al norte de Escocia. En el invierno de 1850 una tormenta despojó de hierba una loma junto a la playa que los vecinos llamaban Skerrabra. El terrateniente, William Watt, vio muros de piedra y excavó cuatro casas antes de dejarlo en 1868. En 1913 el sitio fue saqueado en un fin de semana. En 1924 otra tormenta lo dañó, el Estado asumió su custodia y se levantó un muro contra el mar. Entre 1928 y 1930 excavó Vere Gordon Childe, recién llegado a la cátedra de arqueología de Edimburgo, que publicó en 1931 y se equivocó en lo esencial: lo tomó por un poblado de la Edad del Hierro. El radiocarbono, en 1972 y 1973, lo situó entre el 3180 y el 2500 antes de nuestra era. Es más antiguo que Stonehenge y que las pirámides.",
+      "Lo que la tormenta destapó no eran ruinas sino casas. Cada una tiene una sola habitación de unos cuarenta metros cuadrados, hecha con lajas de piedra, y todas se comunican por pasadizos cubiertos. Dentro, el mobiliario sigue donde se dejó hace cinco milenios: un aparador de piedra frente a la puerta, dos camas en forma de cajón a los lados del hogar, pequeños tanques en el suelo, tal vez para cebo de pesca. Una estructura sin camas y con muros de más de dos metros parece un taller. Hay drenaje. No se han encontrado armas, y el lugar no era fácil de defender.",
+      "Hacia el 2500 antes de nuestra era la vida en el pueblo terminó. Nadie sabe por qué. Durante años se contó que sus habitantes huyeron de golpe; la arqueóloga Anna Ritchie sostiene que el poblado ya estaba abandonado cuando la arena lo cubrió, despacio. En 1999 la UNESCO lo inscribió en el Corazón Neolítico de Orkney. Es el asentamiento neolítico mejor conservado de Europa occidental, y el mismo mar que lo sacó a la luz sigue siendo su mayor amenaza."
+    ],
+    "question": "¿Qué objeto de tu casa diría más de ti dentro de cinco mil años?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El pueblo bajo la loma",
+    "subtitle": "Bahía de Skaill, Orkney, 1850",
+    "body": "Una tormenta destapó en 1850 un poblado neolítico en Orkney, habitado entre el 3180 y el 2500 a. C. Casas de piedra de una sola habitación, unidas por pasadizos cubiertos, con aparadores, camas y hogar en su sitio. Más antiguo que Stonehenge. Patrimonio Mundial desde 1999."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#SkaraBrae",
+      "#Neolitico",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Orkney",
+      "#Escocia",
+      "#Historia",
+      "#PatrimonioMundial",
+      "#Prehistoria",
+      "#Civilizaciones",
+      "#HistoriaAntigua",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El sitio fue habitado aproximadamente entre el 3100 y el 2500 a. C.; «No one knows why village life seems to have ended around 2500 BC». Cada casa tiene una sola habitación de unos 40 m² («Each house has a single room, its floor space roughly 40sq m»), bien construida con lajas planas de piedra, y las casas se conectan por pasadizos cubiertos. Mobiliario: «a 'dresser' – perhaps to store and display special objects, two box-beds, a central hearth, small tanks set into the floor – possibly for preparing fish bait». «No weapons have been found and the village was not in a readily defended location». Patrimonio Mundial de la UNESCO desde 1999 como parte del Heart of Neolithic Orkney.",
+      "source": "Historic Environment Scotland, «Skara Brae: History»",
+      "url": "https://www.historicenvironment.scot/visit-a-place/places/skara-brae/history/"
+    },
+    {
+      "claim": "«Long before Stonehenge or even the Egyptian pyramids were built, Skara Brae was a thriving village». «Step back 5,000 years in time to explore the best-preserved Neolithic settlement in Western Europe». «First uncovered by a storm in 1850, Skara Brae remains a place of discovery today». Nueve viviendas neolíticas conservadas; «The prehistoric houses still contain stone 'dressers' and box-beds». Forma parte del Heart of Neolithic Orkney World Heritage Site.",
+      "source": "Historic Environment Scotland, «Skara Brae» (página principal del sitio)",
+      "url": "https://www.historicenvironment.scot/visit-a-place/places/skara-brae/"
+    },
+    {
+      "claim": "Ocupado c. 3180-2500 a. C., unos 600 años. En el invierno de 1850 una tormenta severa expuso el sitio; el nombre Skara Brae es corrupción de Skerrabra, nombre de la loma. William Graham Watt excavó cuatro casas hasta que los trabajos cesaron en 1868. En 1913 el sitio fue saqueado en un fin de semana. En 1924 otra tormenta dañó las estructuras. V. Gordon Childe dirigió las excavaciones profesionales desde 1927. La datación por radiocarbono de 1972-1973 fijó la cronología. Diez estructuras visibles con cuatro pasadizos. Casas de unos 40 m². La casa 8, sin camas, con muros de más de dos metros de grosor y un porche, era un taller. Aparadores, camas a los lados del hogar y cajas de piedra impermeabilizadas. Evan Hadingham propuso una evacuación repentina; Anna Ritchie responde que «its burial was gradual and that it had already been abandoned». Patrimonio Mundial en 1999.",
+      "source": "Wikipedia en inglés, «Skara Brae»",
+      "url": "https://en.wikipedia.org/wiki/Skara_Brae"
+    },
+    {
+      "claim": "Tradicionalmente se dice que Skara Brae fue descubierto en 1850 cuando una enorme tormenta expuso el sitio; William Watt, propietario, excavó cuatro casas de piedra. George Petrie documentó los hallazgos en 1867-1868. En 1913 hubo saqueo de artefactos. En 1924 el sitio pasó a la custodia de los Commissioners of Works y en 1925-1926 se construyó un muro marino. Desde 1927 Vere Gordon Childe y J. Wilson Paterson iniciaron el trabajo serio. Ocupación c. 3100-2500 a. C. Todo el mobiliario, de aparadores a camas, era de piedra; había sistema de drenaje. La teoría del abandono catastrófico fue refutada por las excavaciones de los Ritchie; el poblado fue abandonado por razones desconocidas y quedó enterrado gradualmente. UNESCO 1999.",
+      "source": "World History Encyclopedia, Joshua J. Mark, «Skara Brae», 18 de octubre de 2012",
+      "url": "https://www.worldhistory.org/Skara_Brae/"
+    },
+    {
+      "claim": "Childe excavó en Skara Brae de 1928 a 1930. En 1927 la Universidad de Edimburgo le ofreció la cátedra Abercromby de Arqueología, que aceptó trasladándose a Edimburgo en septiembre de ese año. En 1931 publicó los resultados en el libro Skara Brae. «He made an error of interpretation, erroneously attributing the site to the Iron Age».",
+      "source": "Wikipedia en inglés, «V. Gordon Childe»",
+      "url": "https://en.wikipedia.org/wiki/V._Gordon_Childe"
+    }
+  ],
+  "do_not_use": [
+    "dar un número cerrado de casas: Historic Environment Scotland habla de nueve viviendas conservadas y Wikipedia de diez estructuras visibles (una es taller); el cuerpo evita la cifra",
+    "fechar el inicio de la ocupación en 3100 a. C. como dato único: Historic Environment Scotland y World History Encyclopedia dicen c. 3100 y Wikipedia c. 3180 (radiocarbono); el cuerpo usa 3180 citando la datación de 1972-1973, y el resto de las fuentes lo redondean",
+    "decir que Childe empezó en 1927: Wikipedia (Skara Brae) y World History Encyclopedia dicen desde 1927; la biografía de Childe en Wikipedia dice 1928-1930; en 1927 Childe llegó a la cátedra de Edimburgo y el cuerpo sigue la biografía",
+    "titular el libro de Childe «Skara Brae: A Pictish Village in Orkney» ni decir que lo llamó «picto»: el subtítulo circula pero no se verificó en las páginas leídas; lo verificado es que lo atribuyó a la Edad del Hierro",
+    "llamarlo «la Pompeya escocesa»: el apodo circula pero no apareció en ninguna de las páginas leídas",
+    "decir que la tormenta de 1850 causó «más de 200 muertos» en Escocia: apareció solo en un resumen de búsqueda y no en una página leída",
+    "decir que había «letrinas interiores» o «el primer inodoro»: solo World History Encyclopedia habla de «indoor toilets»; Historic Environment Scotland y Wikipedia hablan de sistema de drenaje, y el cuerpo se queda en eso",
+    "decir que la cama grande era del marido y la pequeña de la mujer: Wikipedia lo recoge como conjetura basada en costumbres de las Hébridas, no como dato arqueológico",
+    "decir que los habitantes «huyeron de golpe dejando collares en el pasillo»: es la teoría de Hadingham, discutida por Anna Ritchie y refutada según World History Encyclopedia; el cuerpo la presenta como relato superado",
+    "citar la página de la UNESCO (Heart of Neolithic Orkney, ref. 514), Canmore/Trove, Orkneyjar u Orkney.com como consultadas: devolvieron 403 o 404; la inscripción de 1999 se verificó en Historic Environment Scotland, Wikipedia y World History Encyclopedia",
+    "decir que la muralla marina se construyó «en los años veinte» como dato de Historic Environment Scotland: lo da World History Encyclopedia (1925-1926) y el cuerpo lo liga a la custodia estatal de 1924",
+    "escribir «Orcadas» a secas sin «Orkney»: el nombre castellano tradicional es islas Orcadas, pero el sitio, la bahía y la loma se buscan por su nombre en inglés; el cuerpo usa Orkney"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
