@@ -1,0 +1,75 @@
+{
+  "id": "2026-11-11-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "al-Jazari y su libro de ingeniosos dispositivos mecánicos",
+    "hook": "Al-Jazari terminó su libro de máquinas el 16 de enero de 1206. Cuando se acabó la primera copia que conservamos, en abril, ya había muerto.",
+    "body": [
+      "Ismail ibn al-Razzaz al-Jazari sirvió como ingeniero en la corte de los artúquidas, una dinastía turca del norte de Mesopotamia, en el actual sureste de Turquía. Según su propio relato, llevaba veinticinco años al servicio del padre y del hermano del príncipe Nasir al-Din Mahmud cuando este le pidió que pusiera por escrito lo que sabía. El resultado fue el Libro del conocimiento de ingeniosos dispositivos mecánicos: cincuenta máquinas repartidas en seis categorías, entre relojes de agua, fuentes, vasijas para servir bebidas y aparatos para elevar el agua.",
+      "Lo raro no son las máquinas, sino la manera de contarlas. Al-Jazari las describe con texto, dibujos y medidas, de modo que un artesano hábil pueda construirlas a partir de la página. Una copia de Oxford dice que terminó de escribir el 16 de enero de 1206. La copia más antigua que existe, hoy en la Biblioteca del Palacio de Topkapı, en Estambul, la cerró el copista al-Haskafi el 10 de abril de 1206. En su colofón, al-Jazari ya figura como fallecido.",
+      "El libro sobrevivió a su autor por tres meses y luego por ocho siglos. No se conserva ninguna de las máquinas originales. Lo que queda de ellas es exactamente lo que al-Jazari quiso dejar: instrucciones suficientes para volver a hacerlas."
+    ],
+    "question": "¿Qué sabes hacer que nadie podría reconstruir si no lo dejaras escrito?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El libro que sobrevivió a su autor",
+    "subtitle": "Al-Jazari, corte artúquida, 1206",
+    "body": "Cincuenta máquinas descritas con texto, dibujos y medidas para que un artesano pudiera construirlas. Al-Jazari terminó el libro el 16 de enero de 1206. La copia más antigua se cerró el 10 de abril, y su colofón ya lo da por muerto. Ninguna máquina original se conserva."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlJazari",
+      "#HistoriaDeLaCiencia",
+      "#Ingenieria"
+    ],
+    "extended": [
+      "#Automatas",
+      "#Manuscritos",
+      "#EdadMedia",
+      "#MundoIslamico",
+      "#Tecnologia",
+      "#Inventos",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«Ismail ibn al-Razzaz al-Jazari 1136 - 1206»; sirvió «as chief engineer and adviser at the Artuklu Palace, the residence of the Mardin branch of the Turkish Artuqid dynasty»; «In 1206 he presented his sultan with the Book of Knowledge of Ingenious Mechanical Devices».",
+      "source": "Science Museum Group (Reino Unido), ficha de persona «Ismail ibn al-Razzaz al-Jazari»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp52302"
+    },
+    {
+      "claim": "La copia más antigua conservada (Topkapı Sarayı, Ahmet III, MS 3472) la completó Muhammad ibn Yusuf ibn 'Uthman al-Haskafi «at the end of Sha'ban 602 H/ 10 April 1206»; «From al-Haskafi's colophon we learn that al-Jazari was not living at this date». Por la copia de Oxford, «al-Jazari finished writing his book on 4 Jumada the Second, 602 H/ 16 January 1206». Escribió el libro a petición de Nasir al-Din Mahmud tras «twenty five years» al servicio de su padre Nur al-Din Muhammad y su hermano Qutb al-Din Sukman. Las máquinas se presentan «with text, illustrations and dimensions so that a skilled craftsman is able to construct any device».",
+      "source": "Salim Al-Hassani, «800 Years Later: In Memory of Al-Jazari, A Genius Mechanical Engineer», Muslim Heritage (FSTC)",
+      "url": "https://muslimheritage.com/800-years-later-in-memory-of-al-jazari-a-genius-mechanical-engineer/"
+    },
+    {
+      "claim": "El Kitab fi ma'rifat al-hiyal al-handasiyya se completó en 1206; contiene seis categorías y cincuenta dispositivos: relojes de agua, vasijas para beber, dispensadores de agua, fuentes, máquinas para elevar agua y aparatos varios.",
+      "source": "Gunalan Nadarajan, «Islamic Automation: Al-Jazari's Book of Knowledge of Ingenious Mechanical Devices», Muslim Heritage",
+      "url": "https://muslimheritage.com/islamic-automation-al-jazaris-book-of-knowledge-of-ingenious-mechanical-devices/"
+    },
+    {
+      "claim": "Al-Jazari (1136–1206) «described 50 mechanical devices, along with instructions on how to construct them»; el manuscrito Ahmet III 3472 está «now in the Topkapı Sarayı Library»; Nasr al-Din Mahmud (r. 1201–1222) encargó la obra.",
+      "source": "Wikipedia en inglés, «Ismail al-Jazari»",
+      "url": "https://en.wikipedia.org/wiki/Ismail_al-Jazari"
+    }
+  ],
+  "do_not_use": [
+    "llamar a al-Jazari «padre de la robótica» o inventor del cigüeñal, del árbol de levas o del engranaje segmentado: son afirmaciones de divulgación que Wikipedia recoge sin respaldo verificado en esta investigación",
+    "dar detalles del reloj del elefante (el pájaro que silba cada media hora, el conductor que golpea al elefante): salieron solo en resúmenes de búsqueda; las fichas del Met y del Smithsonian no se pudieron leer (429 y 403)",
+    "citar el Met, la Freer Gallery o la Bodleian como fuente leída: sus páginas bloquearon la descarga; lo que se sabe de la copia de 1315 (Farrukh ibn 'Abd al-Latif, Siria) viene solo de resúmenes de búsqueda",
+    "situar la corte en Diyarbakır sin matiz: Science Museum y Wikipedia hablan del palacio de Artuklu de la rama de Mardin; Nadarajan escribe «Diyar Bakr», que es el nombre de la región",
+    "dar la fecha de nacimiento 1136 como segura: aparece en Wikipedia y Science Museum, pero no se leyó la base documental"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

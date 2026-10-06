@@ -1,0 +1,79 @@
+{
+  "id": "2026-11-11-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "La Rochefoucauld y la máxima 218 sobre la hipocresía",
+    "hook": "«La hipocresía es un homenaje que el vicio rinde a la virtud.»\n— François de La Rochefoucauld, Reflexiones o sentencias y máximas morales, máxima 218. Es menos cínica de lo que parece: el vicio tiene que disfrazarse porque la virtud sigue mandando.",
+    "body": [
+      "François de La Rochefoucauld nació en París el 15 de septiembre de 1613 y fue frondista, es decir, tomó parte en la Fronda, la rebelión de la nobleza contra la corona. En 1652, en la batalla del faubourg Saint-Antoine, una bala le atravesó la cabeza. Sobrevivió. Años después frecuentó el salón de la marquesa de Sablé, donde escribir sentencias y máximas era un ejercicio de conversación. De ahí salió su libro, que se terminó de imprimir el 27 de octubre de 1664 y salió en París con fecha de 1665, en casa de Claude Barbin, sin su nombre en la portada.",
+      "En vida del autor hubo cinco ediciones: 1665, 1666, 1671, 1675 y 1678. La última, según su propio prefacio, añadía más de cien máximas nuevas. La 218 dice que la hipocresía es un homenaje que el vicio rinde a la virtud. Leída rápido, parece una burla de los falsos virtuosos. Leída despacio, dice otra cosa: quien finge ser bueno reconoce que lo bueno es lo que hay que aparentar. Si la virtud no valiera nada, nadie se tomaría el trabajo de imitarla.",
+      "Es una observación incómoda para cualquier época. El día que la hipocresía ya no haga falta, cuando el vicio pueda mostrarse sin disfraz y sin costo, no habremos ganado sinceridad. Habremos perdido la medida contra la que se finge."
+    ],
+    "question": "¿Qué virtud se sigue fingiendo hoy porque todavía nadie se atreve a despreciarla?",
+    "quote": {
+      "text": "La hipocresía es un homenaje que el vicio rinde a la virtud.",
+      "author": "François de La Rochefoucauld",
+      "work": "Reflexiones o sentencias y máximas morales, máxima 218 (ed. de 1678)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#LaRochefoucauld",
+      "#Maximas",
+      "#LiteraturaFrancesa"
+    ],
+    "extended": [
+      "#Frases",
+      "#Hipocresia",
+      "#Virtud",
+      "#SigloXVII",
+      "#Moralistas",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Máxima CCXVIII: «L'hypocrisie est un hommage que le vice rend à la vertu.» Texto establecido por D. L. Gilbert, Hachette, 1868. Incluye el prefacio de la primera edición (1665) y el de la quinta (1678), que la anuncia «augmentée de plus de cent nouvelles maximes, et plus exacte que les quatre premières».",
+      "source": "Wikisource en francés, La Rochefoucauld, «Maximes» (ed. D. L. Gilbert, Hachette, 1868)",
+      "url": "https://fr.wikisource.org/wiki/Maximes"
+    },
+    {
+      "claim": "Ejemplar BnF Rothschild 150: «Reflexions ou sentences et maximes morales», París, Claude Barbin, 1665; privilegio del 14 de enero de 1664; acabado de imprimir el 27 de octubre de 1664; edición original de las Maximes.",
+      "source": "Bibliothèque nationale de France, Département des manuscrits, Rothschild 150, ficha en Biblissima",
+      "url": "https://biblissima.demo.logilab.fr/en/ark:/43093/idata0ba656ff7342d0951ef6d61a1829ad607a5a8171"
+    },
+    {
+      "claim": "Nacido el «15 September 1613», muerto el «17 March 1680»; «in 1665, he anonymously published the Maximes»; ediciones en vida: «1665 (editio princeps), 1666, 1671, 1675, 1678»; frondista, fue «shot through the head» en la batalla del faubourg Saint-Antoine (1652); frecuentó el salón de la marquesa de Sablé, donde se cultivaba la escritura de «Sentences» y «Maximes».",
+      "source": "Wikipedia en inglés, «François de La Rochefoucauld (writer)»",
+      "url": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_de_La_Rochefoucauld_(writer)"
+    },
+    {
+      "claim": "La cita «L'hypocrisie est un hommage que le vice rend à la vertu» figura como máxima 218, p. 56, en La Rochefoucauld, Maximes, Garnier, 1967.",
+      "source": "Bribes en ligne, ficha de cita con referencia a la edición Garnier de 1967",
+      "url": "https://bribes.org/hypocris.htm"
+    }
+  ],
+  "do_not_use": [
+    "decir en qué edición apareció por primera vez la máxima 218: Wikisource la marca «éd. 2», pero no se leyó la clave de esa notación; no afirmar que es de 1666",
+    "afirmar que hubo una edición pirata holandesa de las Maximes en 1664: apareció en resúmenes de búsqueda sin página leída que lo sostuviera; Wikipedia habla de unas memorias espurias de Elzevir en 1662, que son otra cosa",
+    "atribuir el «Discurso» preliminar de 1665 a La Rochefoucauld o a Segrais: la ficha de la BnF dice que se atribuía a Segrais y que probablemente es de Henri de Bessé, sieur de La Chapelle-Milon",
+    "presentar la traducción española como edición publicada: es traducción propia del francés",
+    "decir que el libro tiene 504 máximas en la edición de 1678: Wikipedia dice que se suelen publicar «en su totalidad» 504, no es el número de la edición de 1678 y no se verificó cuántas tenía esa edición",
+    "confundir la máxima con otras frases sobre la hipocresía atribuidas a Molière que circulan en las mismas páginas de citas: no se verificó su procedencia"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

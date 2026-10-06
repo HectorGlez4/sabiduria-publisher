@@ -1,0 +1,72 @@
+{
+  "id": "2026-11-11-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Hipatia de Alejandría y su muerte en marzo de 415",
+    "hook": "Hipatia de Alejandría no murió defendiendo una biblioteca. La biblioteca ya no existía. La mataron por una disputa entre el gobernador y el obispo, y por estar del lado equivocado.",
+    "body": [
+      "Hipatia era hija del matemático Teón de Alejandría y enseñaba filosofía en la tradición de Platón y Plotino. El historiador Sócrates Escolástico, que escribió pocas décadas después, cuenta que superaba a todos los filósofos de su tiempo y que venían alumnos de lejos a escucharla. Uno de ellos, Sinesio de Cirene, le escribía para pedirle consejo sobre cómo construir un astrolabio, y con los años llegó a ser obispo. De sus propios escritos no se conserva nada con seguridad: se saben títulos de comentarios a Diofanto, a Apolonio y a Ptolomeo, y poco más.",
+      "Hacia el final de su vida, Hipatia aconsejaba a Orestes, el prefecto romano de Alejandría, enfrentado con el obispo Cirilo. Corrió el rumor de que ella impedía que se reconciliaran. En marzo de 415, en Cuaresma, un grupo encabezado por un lector llamado Pedro la sacó de su carruaje, la llevó a la iglesia llamada Cesareo y la mató. Sócrates Escolástico, un autor cristiano, escribió que aquello fue un oprobio para Cirilo y para toda la Iglesia de Alejandría.",
+      "Desde el siglo XIX su muerte se ha contado como el final de la ciencia antigua a manos de la fe, y se la ha unido al incendio de la biblioteca. Pero el Serapeo había sido destruido en 391, y la gran biblioteca ya no existía en vida de ella. Lo que muestran las fuentes es más incómodo: una profesora respetada por cristianos y paganos, destruida por una pelea de poder local en la que la usaron como pieza."
+    ],
+    "question": "¿Cuántas veces se recuerda a alguien por un símbolo que esconde la causa real de lo que le pasó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Alejandría, marzo de 415",
+    "subtitle": "Hipatia y la disputa entre Orestes y Cirilo",
+    "body": "Hija del matemático Teón, enseñaba filosofía platónica a alumnos paganos y cristianos. Aconsejaba al prefecto Orestes, enfrentado con el obispo Cirilo. Un rumor la culpó de impedir la paz entre ellos, y una turba la mató en Cuaresma. La gran biblioteca ya no existía."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hipatia",
+      "#Alejandria",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Antiguedad",
+      "#Matematicas",
+      "#Neoplatonismo",
+      "#MujeresEnLaHistoria",
+      "#Historia",
+      "#Egipto",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Hipatia, «daughter of the philosopher Theon», «made such attainments in literature and science, as to far surpass all the philosophers of her own time»; «Having succeeded to the school of Plato and Plotinus, she explained the principles of philosophy to her auditors, many of whom came from a distance»; por sus frecuentes entrevistas con Orestes se la calumnió; una turba encabezada por un lector llamado Pedro la sacó de su carruaje, la llevó a «the church called Cæsareum» y la mató; ocurrió «in the month of March during Lent, in the fourth year of Cyril's episcopate, under the tenth consulate of Honorius, and the sixth of Theodosius»; el hecho trajo «opprobrium» sobre Cirilo y toda la Iglesia de Alejandría.",
+      "source": "Sócrates Escolástico, Historia eclesiástica, libro VII, capítulo 15, trad. inglesa en Nicene and Post-Nicene Fathers, serie II, vol. 2 (New Advent)",
+      "url": "https://www.newadvent.org/fathers/26017.htm"
+    },
+    {
+      "claim": "Hipatia era hija de Teón de Alejandría; murió en «March 415 Alexandria»; según la Suda escribió comentarios a la Arithmetica de Diofanto, a las Cónicas de Apolonio y a la obra astronómica de Ptolomeo; «All Hypatia's work is lost except for its titles and some references to it»; las cartas conservadas de Sinesio le piden consejo «on the construction of an astrolabe and a hydroscope».",
+      "source": "J. J. O'Connor y E. F. Robertson, «Hypatia of Alexandria», MacTutor History of Mathematics, Universidad de St Andrews",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Hypatia/"
+    },
+    {
+      "claim": "Su fecha de nacimiento se discute, entre 350 y 370; aconsejó a Orestes, prefecto de Alejandría, en plena disputa con el obispo Cirilo, y un rumor la culpó de impedir la reconciliación; la asociación de su muerte con la destrucción de la Biblioteca de Alejandría es errónea porque la biblioteca ya no existía en su vida; el Serapeo fue demolido en 391; enseñaba a cristianos y paganos y su alumno Sinesio de Cirene llegó a obispo; la novela de Charles Kingsley de 1853 fijó una versión romántica.",
+      "source": "Wikipedia en inglés, «Hypatia»",
+      "url": "https://en.wikipedia.org/wiki/Hypatia"
+    }
+  ],
+  "do_not_use": [
+    "vincular su muerte con el incendio o la destrucción de la Biblioteca de Alejandría: la biblioteca ya no existía en su vida y el Serapeo cayó en 391",
+    "presentarla como joven al morir: la fecha de nacimiento se discute entre 350 y 370; MacTutor da hacia 370, otros autores la sitúan antes; no dar edad concreta",
+    "atribuirle descubrimientos matemáticos o inventos (el astrolabio, el hidrómetro): Sinesio le pide consejo sobre construirlos, no consta que los inventara; Wikipedia dice que no se le conocen obras filosóficas independientes",
+    "dar como seguro el detalle de las conchas de ostra: la traducción de New Advent dice «tiles»; la palabra griega admite las dos lecturas y no se verificó",
+    "afirmar que Cirilo ordenó el asesinato: Sócrates Escolástico habla de oprobio para Cirilo, no de una orden; no se verificó ninguna fuente que lo sostenga",
+    "tomar como histórica la película Ágora (2009) ni la novela de Kingsley (1853)",
+    "decir que «todos» sus alumnos eran cristianos: lo afirma Wikipedia sobre los alumnos conocidos, pero no se contrastó con otra fuente"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

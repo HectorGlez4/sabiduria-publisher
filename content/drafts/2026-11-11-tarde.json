@@ -1,0 +1,84 @@
+{
+  "id": "2026-11-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Galileo y el libro del universo en Il Saggiatore",
+    "hook": "«La filosofía está escrita en este grandísimo libro que continuamente tenemos abierto ante los ojos (digo el universo).»\n— Galileo Galilei, Il Saggiatore, capítulo VI, 1623. La frase más citada sobre las matemáticas y la naturaleza está en un libro que se equivocaba en su tema principal.",
+    "body": [
+      "Entre finales de 1618 y comienzos de 1619 cruzaron el cielo de Europa varios cometas. En 1619 el jesuita Orazio Grassi, matemático del Colegio Romano, publicó la Libra astronomica con el seudónimo de Lotario Sarsi. Siguiendo a Tycho Brahe, sostenía que los cometas eran cuerpos celestes que viajaban más allá de la Luna. Galileo le respondió con Il Saggiatore, impreso en Roma en octubre de 1623 bajo el sello de la Academia de los Linces y ofrecido al recién elegido papa Urbano VIII.",
+      "En el capítulo VI, Galileo le reprocha a Sarsi que busque apoyo en la autoridad de otros autores. Ahí escribe que el universo no se puede entender si antes no se aprende su lengua y sus caracteres, y que está escrito en lengua matemática, con triángulos, círculos y otras figuras geométricas. Sin ellos, añade, uno da vueltas en vano por un oscuro laberinto. Pero en el mismo libro Galileo planteaba que los cometas podían ser un fenómeno óptico de la atmósfera. En eso tenía razón Grassi.",
+      "La frase sobrevivió al error que la rodeaba. Es una buena advertencia doble: el método que Galileo defendía era el correcto, y aun así no lo libró de equivocarse cuando discutía contra un rival. Escribir bien sobre cómo se conoce no garantiza conocer bien."
+    ],
+    "question": "¿Qué idea tuya sigue siendo verdadera aunque la hayas defendido con un mal ejemplo?",
+    "quote": {
+      "text": "La filosofía está escrita en este grandísimo libro que continuamente tenemos abierto ante los ojos (digo el universo), pero no se puede entender si antes no se aprende a entender la lengua y a conocer los caracteres en que está escrito.",
+      "author": "Galileo Galilei",
+      "work": "Il Saggiatore, capítulo VI, Roma, 1623",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Galileo",
+      "#HistoriaDeLaCiencia",
+      "#Matematicas"
+    ],
+    "extended": [
+      "#Frases",
+      "#Ciencia",
+      "#Astronomia",
+      "#SigloXVII",
+      "#Cometas",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del capítulo VI de Il Saggiatore, en respuesta a Sarsi: «La filosofia è scritta in questo grandissimo libro che continuamente ci sta aperto innanzi a gli occhi (io dico l'universo), ma non si può intendere se prima non s'impara a intender la lingua, e conoscer i caratteri, ne' quali è scritto. Egli è scritto in lingua matematica, e i caratteri son triangoli, cerchi, ed altre figure geometriche, senza i quali mezi è impossibile a intenderne umanamente parola; senza questi è un aggirarsi vanamente per un oscuro laberinto.» Galileo rebate ahí que la filosofía deba apoyarse en la opinión de autores célebres.",
+      "source": "Wikisource en italiano, Galileo Galilei, Il Saggiatore, capítulo 6",
+      "url": "https://it.wikisource.org/wiki/Il_Saggiatore/6"
+    },
+    {
+      "claim": "Il Saggiatore salió en 1623 «under the banner of the academic lynx», dedicado al vicepríncipe de los Linces Virginio Cesarini y «offered as an augural gift to the newly elected new pope Urban VIII»; fue respuesta a la Libra astronomica (1619) del jesuita Orazio Grassi, que siguiendo a Tycho Brahe interpretó los cometas que cruzaron Europa «between 1618 and 1619» como confirmación de la estructura geocéntrica.",
+      "source": "Museo Galileo (Florencia), «Il Saggiatore di Galileo a 400 anni dalla sua pubblicazione», 2023",
+      "url": "https://www2.museogalileo.it/en/news-archive/167-news-archive-2023/2529-il-saggiatore-di-galileo-a-400-anni-dalla-sua-pubblicazione-eng.html"
+    },
+    {
+      "claim": "«In 1623, Galileo published The Assayer, which deals with the nature of comets and argues they are sublunary phenomena»; Galileo «ridicules the notion that comets are celestial objects, instead insisting that they are sublunary phenomena produced by optical refraction in the atmosphere», frente a la evidencia de Tycho Brahe. Traducción inglesa del pasaje: «Philosophy is written in this grand book—I mean the Universe…».",
+      "source": "Stanford Encyclopedia of Philosophy, «Galileo Galilei»",
+      "url": "https://plato.stanford.edu/entries/galileo/"
+    },
+    {
+      "claim": "The Assayer se publicó en Roma «in October 1623»; la conjetura del libro de que los cometas son producto de fenómenos ópticos «is incorrect»; el enfoque correcto lo había propuesto Tycho Brahe.",
+      "source": "Wikipedia en inglés, «The Assayer»",
+      "url": "https://en.wikipedia.org/wiki/The_Assayer"
+    },
+    {
+      "claim": "Orazio Grassi (1583-1654), jesuita y matemático del Colegio Romano, publicó contra Galileo con el seudónimo Lotario Sarsi Sigensano, anagrama de su nombre latino; su obra fue la Libra astronomica.",
+      "source": "Wikipedia en inglés, «Orazio Grassi»",
+      "url": "https://en.wikipedia.org/wiki/Orazio_Grassi"
+    }
+  ],
+  "do_not_use": [
+    "atribuirle a Galileo «Eppur si muove» en este contexto ni en ningún otro como frase documentada: no aparece en sus escritos ni en las actas del proceso de 1633 y es de transmisión posterior; no se verificó en esta investigación",
+    "decir que el libro está dedicado formalmente a Urbano VIII: el Museo Galileo dice que la dedicatoria es a Virginio Cesarini y que se ofreció al papa como regalo augural; otras fuentes simplifican y lo dan como dedicado al papa",
+    "afirmar que Galileo sostuvo con rotundidad que los cometas son una ilusión: según Wikipedia, se preguntaba si eran reales o efecto óptico, sin afirmarlo explícitamente; por eso el cuerpo dice «planteaba que podían ser»",
+    "dar un día exacto de publicación (21 de octubre): apareció solo en un resumen de búsqueda, no en una página leída",
+    "presentar la traducción española como edición publicada: es traducción propia del texto italiano de Wikisource",
+    "citar la versión abreviada «el libro de la naturaleza está escrito en lenguaje matemático»: Galileo no usa la palabra «naturaleza» en la frase; dice «filosofía» y «universo»"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
