@@ -1,0 +1,82 @@
+{
+  "id": "2026-11-10-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Diógenes y Alejandro en el Craneo de Corinto",
+    "hook": "Alejandro le ofreció a Diógenes lo que quisiera. Diógenes le pidió que se apartara un poco del sol. Lo cuentan cuatro autores antiguos, y ninguno lo vio.",
+    "body": [
+      "Plutarco sitúa la escena en Corinto, después de que una asamblea de griegos reunida en el Istmo votara la guerra contra Persia y nombrara jefe a Alejandro. Robin Lane Fox la fecha en el 336 antes de nuestra era, cuando el rey tenía veinte años y aún no había conquistado nada. Políticos y filósofos acudieron a felicitarlo. Diógenes de Sinope no fue: siguió descansando en el Craneo, un suburbio de la ciudad. Alejandro fue a verlo con su séquito. Diógenes se incorporó apenas, lo miró, y cuando el rey le preguntó si necesitaba algo, contestó: «Sí, apártate un poco de mi sol».",
+      "Los acompañantes se burlaron. Alejandro, según Plutarco, dijo: «Si no fuera Alejandro, sería Diógenes». Diógenes Laercio, que escribió su vida siglos después, da la frase del rey y la respuesta del filósofo en dos pasajes separados, VI 32 y VI 38. Cicerón la recoge en las Tusculanas. Arriano la pone en el libro VII de la Anábasis, justo después de otra escena: unos sabios indios que dan golpes en el suelo al ver pasar al rey y le explican que cada hombre posee solo la tierra que pisa, y al morir, la que basta para enterrarlo. Arriano concluye que Alejandro no carecía de buenos sentimientos, pero era esclavo de su ambición insaciable.",
+      "Hay estudiosos que piden sacar el episodio del dominio de la historia, y hay quien sospecha que nació de los encuentros de Alejandro con aquellos sabios de la India. Todas las versiones son tardías. Diógenes Laercio cuenta incluso que los dos murieron el mismo día, uno en Babilonia y otro en Corinto, en el 323. Quizá no ocurrió. Pero la Antigüedad no dejó de contarla, porque decía algo que importaba: que hay una cosa que ni el hombre más poderoso puede dar, y es lo que ya se tiene."
+    ],
+    "question": "¿Qué te ofrecen a menudo que en realidad te tapa el sol?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Apártate de mi sol",
+    "subtitle": "Diógenes de Sinope y Alejandro, Corinto, 336 a. C.",
+    "body": "El rey de veinte años, recién nombrado jefe de los griegos contra Persia, ofrece al filósofo lo que pida. Diógenes, tumbado en el Craneo, pide solo que no le quite el sol. Lo cuentan Plutarco, Cicerón, Arriano y Diógenes Laercio. Ninguno estuvo allí."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Diogenes",
+      "#AlejandroMagno",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Cinicos",
+      "#GreciaAntigua",
+      "#Historia",
+      "#Plutarco",
+      "#FilosofiaGriega",
+      "#Reflexiones",
+      "#HistoriaAntigua",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«A general assembly of the Greeks was held at the Isthmus, where a vote was passed to make an expedition against Persia with Alexander, and he was proclaimed their leader». Diogenes «took not the slightest notice of Alexander, and continued to enjoy his leisure in the suburb Craneion». «Diogenes raised himself up a little when he saw so many persons coming towards him, and fixed his eyes upon Alexander». Respuesta: «Yes, stand a little out of my sun». Alejandro: «But verily, if I were not Alexander, I would be Diogenes».",
+      "source": "Plutarco, Vida de Alejandro, 14, trad. Bernadotte Perrin (Loeb), Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Plut.+Alex.+14&fromdoc=Perseus%3Atext%3A2008.01.0243"
+    },
+    {
+      "claim": "VI 32: «Alexander is reported to have said, 'Had I not been Alexander, I should have liked to be Diogenes.'» VI 38: «When he was sunning himself in the Craneum, Alexander came and stood over him and said, 'Ask of me any boon you like.' To which he replied, 'Stand out of my light.'» VI 79: «Demetrius in his work On Men of the Same Name asserts that on the same day on which Alexander died in Babylon Diogenes died in Corinth.»",
+      "source": "Diógenes Laercio, Vidas de los filósofos ilustres, libro VI, trad. R. D. Hicks (Loeb, 1925), Wikisource",
+      "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_VI"
+    },
+    {
+      "claim": "VII 1: los sabios indios golpean el suelo y dicen: «Every man possesses as much of the earth as this upon which we have stepped [...] thou also wilt soon die, and possess only as much of the earth as is sufficient for thy body to be buried in.» VII 2: «When also in the Isthmus he met Diogenes of Sinope, lying in the sun [...] he asked if he wanted anything». Conclusión: «Alexander was not entirely destitute of better feelings; but he was the slave of his insatiable ambition.»",
+      "source": "Arriano, Anábasis de Alejandro, VII 1-2, trad. E. J. Chinnock (1884), Wikisource",
+      "url": "https://en.wikisource.org/wiki/The_Anabasis_of_Alexander/Book_VII/Chapter_II"
+    },
+    {
+      "claim": "Según la biografía de Robin Lane Fox, el encuentro fue en el 336 a. C. en Corinto, cuando Alejandro tenía 20 años. G. E. Lynch, en el Dictionary of Greek and Roman Biography and Mythology, pide «banish[ed] from the domain of history» el relato; A. M. Pizzagalli sugiere que procede de los encuentros de Alejandro con filósofos indios. Cicerón (Tusculanas V 32, 92) da otra versión de la respuesta.",
+      "source": "Wikipedia en inglés, «Diogenes and Alexander»",
+      "url": "https://en.wikipedia.org/wiki/Diogenes_and_Alexander"
+    },
+    {
+      "claim": "«Diogenes of Sinope (c. 404—323 B.C.E.)». «He was a citizen of Sinope who either fled or was exiled because of a problem involving the defacing of currency.» En Atenas vivió en un pithos.",
+      "source": "Julie Piering (University of Arkansas at Little Rock), «Diogenes of Sinope», Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/diogenes-of-sinope/"
+    }
+  ],
+  "do_not_use": [
+    "presentar el encuentro como hecho histórico comprobado: todas las fuentes son de siglos después (Cicerón, Plutarco, Arriano, Diógenes Laercio) y el diccionario de Smith y otros lo ponen en duda; el cuerpo lo deja como relato",
+    "decir que Diógenes vivía en un «tonel» de madera: era un pithos, una tinaja de barro (IEP); y en las fuentes leídas el tonel está en el Metroon de Atenas, no en Corinto; el cuerpo no lo usa",
+    "afirmar como hecho que Diógenes y Alejandro murieron el mismo día: Diógenes Laercio lo atribuye a Demetrio de Magnesia; el cuerpo lo presenta como algo que «cuenta» Diógenes Laercio",
+    "atribuir la autoría de la duda a «G. E. Lynch» dentro del cuerpo: el nombre viene solo de Wikipedia y no se comprobó en el Dictionary of Greek and Roman Biography and Mythology; tampoco se verificó su fecha ni su editor, así que el cuerpo habla solo de «estudiosos»",
+    "dar la versión «quítate de mi luz» como la única: Plutarco dice «sol», Diógenes Laercio «luz» (light) y Cicerón otra variante; la cita del cuerpo sigue a Plutarco",
+    "decir que Alejandro era ya «Magno» o conquistador en el encuentro: tenía unos veinte años y la campaña persa no había empezado",
+    "hablar de Pizzagalli por su nombre o desarrollar la hipótesis budista: viene solo de Wikipedia y no se leyó el trabajo original"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

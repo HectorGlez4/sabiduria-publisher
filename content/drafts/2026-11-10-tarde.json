@@ -1,0 +1,85 @@
+{
+  "id": "2026-11-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lu Xun y el camino del cuento Mi pueblo (1921)",
+    "hook": "«En realidad, en la tierra no había caminos; cuando mucha gente pasa, se hace el camino.»\n— Lu Xun, «Mi pueblo», 1921. Es la última línea del cuento, y la escribe alguien que no está seguro de tener esperanza.",
+    "body": [
+      "Lu Xun se llamaba Zhou Zhangshou y nació en 1881 en Shaoxing, en el este de China. En 1919 la casa familiar cambió de dueño. Volvió para cerrar el asunto y se llevó a toda la familia a Pekín, a una casa en Badaowan. No regresó nunca más a su ciudad. Con ese viaje escribió «Mi pueblo», fechado en enero de 1921 y publicado el 1 de mayo de ese año en la revista Nueva Juventud. En 1923 lo recogió en su primer libro de cuentos, Grito de llamada.",
+      "El narrador vuelve tras más de veinte años y a más de dos mil li para vender la casa. Busca a Runtu, el amigo campesino de su infancia, y siente que entre los dos se ha levantado un muro grueso y lamentable. Al marcharse, Runtu pide para sí un incensario y unos candelabros, y el narrador se ríe por dentro de su fe en los ídolos. Luego, en el barco, se corrige: su propia esperanza es también un ídolo hecho con sus manos. Por eso el párrafo final empieza con una duda, que la esperanza no puede decirse que exista ni que no exista. Y solo entonces llega el camino.",
+      "La frase se lee hoy como un lema de emprendimiento, y en el cuento es lo contrario de una certeza. El narrador no promete que el camino exista. Dice que no existía y que solo aparece si mucha gente pasa por el mismo sitio. El modelo real de Runtu fue Zhang Yunshui, amigo de infancia de Lu Xun. La frase no habla de un pionero que abre paso solo, sino de una multitud que todavía no ha llegado."
+    ],
+    "question": "¿Qué camino de los que hoy usas existe solo porque otros pasaron antes?",
+    "quote": {
+      "text": "En realidad, en la tierra no había caminos; cuando mucha gente pasa, se hace el camino.",
+      "author": "Lu Xun",
+      "work": "«Mi pueblo» (故鄉), párrafo final, Nueva Juventud, vol. 9, n.º 1, 1921",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#LuXun",
+      "#China",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Frases",
+      "#LiteraturaChina",
+      "#SigloXX",
+      "#Esperanza",
+      "#Cuentos",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto final de «故鄉»: «希望是本無所謂有，無所謂無的。這正如地上的路；其實地上本沒有路，走的人多了，也便成了路。». Fechado «一九二一年一月»; publicado en «《新青年》第九卷第一號» (1 de mayo de 1921) y recogido en «吶喊». El narrador vuelve tras «二十餘年» y desde «二千餘里». En el penúltimo párrafo compara su propia esperanza con el incensario y los candelabros que pide Runtu: un ídolo hecho por él mismo.",
+      "source": "Wikisource en chino, Lu Xun, «故鄉»",
+      "url": "https://zh.wikisource.org/wiki/%E6%95%85%E9%84%89"
+    },
+    {
+      "claim": "«鲁迅发表于一百年前的小说《故乡》» con la frase «其实地上本没有路，走的人多了，也便成了路»; a finales de 1919 «鲁迅侍母携妻，率领弟侄，乘船离开绍兴，到南京乘火车赶往北京». Autor: Huang Qiaosheng, director ejecutivo adjunto e investigador del Museo Lu Xun de Pekín.",
+      "source": "Huang Qiaosheng, «鲁迅的路», Wenyibao, reproducido en Zhongguo Zuojia Wang (Asociación de Escritores de China), 27 de septiembre de 2021",
+      "url": "https://www.chinawriter.com.cn/n1/2021/0927/c404064-32237857.html"
+    },
+    {
+      "claim": "«1919年故居易主、返乡处理完相关事宜后，鲁迅举家告别绍兴去了北京八道湾，此后再也没有回过故乡». El modelo real de Runtu fue «章运水», amigo de infancia de Lu Xun.",
+      "source": "Liu Huan, «百年《故乡》和鲁迅故乡百年», Xinhua Meiri Dianxun, reproducido en Chinanews, 31 de diciembre de 2021",
+      "url": "https://www.chinanews.com.cn/cul/2021/12-31/9641567.shtml"
+    },
+    {
+      "claim": "Nombre de nacimiento «Zhou Zhangshou», nacido el «25 September 1881» en «Shaoxing, Zhejiang»; murió el «19 October 1936» en Shanghái. Call to Arms (Nahan) es la colección de 1923; «故鄉» figura como de 1921.",
+      "source": "Wikipedia en inglés, «Lu Xun»",
+      "url": "https://en.wikipedia.org/wiki/Lu_Xun"
+    },
+    {
+      "claim": "«My Old Home» (故鄉), fechado en enero de 1921 y recogido en Call to Arms (吶喊); el protagonista descubre que entre él y sus antiguos conocidos se ha levantado «a lamentably thick wall».",
+      "source": "Wikipedia en inglés, «Selected Stories of Lu Hsun» (redirección desde «My Old Home»)",
+      "url": "https://en.wikipedia.org/wiki/My_Old_Home"
+    }
+  ],
+  "do_not_use": [
+    "presentar la cita en español como traducción publicada: es traducción propia del chino de Wikisource; no se consultó ninguna edición castellana de Grito de llamada",
+    "relacionar la frase con «Caminante, no hay camino, se hace camino al andar» de Antonio Machado ni sugerir influencia o paralelo: no se verificó nada al respecto y Machado ya tuvo pieza propia",
+    "decir que «Mi pueblo» se publicó en 1923: el cuento salió en Nueva Juventud en mayo de 1921; 1923 es el año del libro Grito de llamada",
+    "dar el mes exacto del viaje de 1919 (diciembre) o la venta de la casa como fecha concreta: las fuentes leídas dicen «1919» y «finales de 1919» sin día; el resumen de búsqueda que hablaba de la compra de Badaowan antes del 4 de mayo no se verificó en página leída",
+    "decir que Lu Xun se llamaba Zhou Shuren al nacer: Wikipedia en inglés da Zhou Zhangshou como nombre de nacimiento; Zhou Shuren fue un nombre posterior y no se verificó cuándo lo adoptó",
+    "citar el Museo Lu Xun de Pekín como fuente institucional directa: se leyó un artículo de su director ejecutivo adjunto publicado en la prensa, no una página del museo",
+    "afirmar que Zhang Yunshui era de Shangyu u otros datos de su vida: solo se verificó que fue el modelo de Runtu"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

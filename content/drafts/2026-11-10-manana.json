@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-10-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Mendel, Nägeli y el Hieracium",
+    "hook": "Gregor Mendel quiso confirmar sus leyes de la herencia con una segunda planta. Eligió una que se reproduce sin fecundación, y sus leyes dejaron de cumplirse.",
+    "body": [
+      "Mendel cruzó guisantes en el huerto del monasterio agustino de Brno entre 1856 y 1863. Presentó los resultados en dos conferencias ante la Sociedad de Ciencias Naturales de la ciudad, el 8 de febrero y el 8 de marzo de 1865, y el texto se imprimió en las actas de la sociedad en 1866. Mandó hacer cuarenta separatas y las envió a científicos de renombre. Solo uno mostró un interés real: Carl von Nägeli, uno de los botánicos más influyentes de su tiempo, con quien mantuvo correspondencia durante años.",
+      "Nägeli no entendió el alcance del trabajo, pero influyó en lo que vino después. Mendel quería verificar con otras plantas lo obtenido con el guisante y eligió el Hieracium, un género de flores silvestres. Trabajó con él los veranos de 1866 a 1873, y castró más de cinco mil flores diminutas. El resultado contradecía todo: los híbridos daban descendencia uniforme, idéntica entre sí. Leyó un segundo artículo el 9 de junio de 1869. Ese abril había escrito que sentía un cansancio peculiar en los ojos. En 1868 lo habían elegido abad, y la administración del monasterio le fue quitando el tiempo.",
+      "Murió el 6 de enero de 1884 sin saber qué había fallado. Hoy se sabe: muchos Hieracium forman semillas sin fecundación, por apomixis, y su descendencia son copias de la madre. Ostenfeld y Rosenberg lo describieron en publicaciones entre 1904 y 1910. Para entonces Hugo de Vries, Carl Correns y Erich von Tschermak ya habían redescubierto el artículo de los guisantes, en 1900. Aun así, en 1902 se hablaba todavía de una herencia «tipo Pisum» y otra «tipo Hieracium». La planta elegida para confirmar la ley era justamente la excepción."
+    ],
+    "question": "¿Cuántas ideas correctas se abandonan porque la segunda prueba estaba mal elegida?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La planta equivocada",
+    "subtitle": "Gregor Mendel, Brno, 1866-1873",
+    "body": "Tras los guisantes, Mendel buscó confirmar sus leyes con el Hieracium. Durante ocho veranos castró más de cinco mil flores. Los híbridos no se comportaban como esperaba: esa planta forma semillas sin fecundación. Lo explicaron entre 1904 y 1910. Mendel había muerto en 1884."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Mendel",
+      "#Genetica",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Botanica",
+      "#SigloXIX",
+      "#Herencia",
+      "#Brno",
+      "#Curiosidades",
+      "#Biologia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Mendel estudió más de 10.000 plantas de guisante entre 1856 y 1863; conferencia en 1865 y artículo en 1866; produjo 40 separatas para científicos destacados. Nägeli fue el único destinatario que mostró interés real y probablemente influyó en la elección de Cirsium y Hieracium. Experimentos con Hieracium en los veranos de 1866-1873; segundo artículo en 1869; castró «in excess of 5000 Hieracium florets»; los híbridos autofecundados daban progenie uniforme, en contradicción con el guisante. Carta del 15 de abril de 1869: «a peculiar fatigue and exhaustion of the eyes appeared». Abad del monasterio de Santo Tomás de Brno en 1868. Ostenfeld y Rosenberg atribuyeron el patrón a «a mixture of sexual hybridization and apomixis» en publicaciones de 1904-1910. Redescubrimiento por de Vries, Correns y von Tschermak en 1900; Bateson y Saunders (1902) aún hablaban del «'Pisum type' and the 'Hieracium type' of inheritance».",
+      "source": "Ross Bicknell, Andrew Catanach, Melanie Hand y Anna Koltunow, «Seeds of doubt: Mendel's choice of Hieracium to study inheritance, a case of right plant, wrong trait», Theoretical and Applied Genetics 129(12):2253-2266, 2016 (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5121183/"
+    },
+    {
+      "claim": "Los experimentos de hibridación con guisantes se hicieron en el huerto del monasterio agustino de Brno; Mendel los expuso «in two lectures which were read before the Natural Sciences Society of Brünn on February 8th and March 8th, 1865», y se publicaron en las actas de la sociedad en 1866. El artículo sobre Hieracium se leyó «on June 9th 1869» y se publicó en las actas de 1869.",
+      "source": "Villanova University, Falvey Library, exposición «Life and Scientific Contributions» (Gregor Mendel)",
+      "url": "https://exhibits.library.villanova.edu/archive/mendel/science"
+    },
+    {
+      "claim": "«born on 20 July 1822 into a German-speaking family in Hynčice». «In 1843 Johann Mendel entered the Augustinian Order at the monastery in Old Brno and took the monastic name of Gregor.» Experimentó también con «hawkweed (Hieracium)». «In 1868 Mendel was elected head of the Augustinian abbey in Old Brno, which left him with little time for experiments.» «Gregor Johann Mendel died on 6 January 1884.» «He did not receive recognition until 1900».",
+      "source": "Mendel Museum, Universidad Masaryk (Brno), «Gregor Johann Mendel»",
+      "url": "https://mendelmuseum.muni.cz/en/about-the-museum/gregor-johann-mendel"
+    },
+    {
+      "claim": "Murió el 6 de enero de 1884 en Brno de nefritis crónica. Correspondió con Carl Nägeli, que «failed to appreciate Mendel's discoveries»; los experimentos con Hieracium mostraron otros patrones por la apomixis. El artículo de 1866 «was cited only about three times over the next thirty-five years».",
+      "source": "Wikipedia en inglés, «Gregor Mendel»",
+      "url": "https://en.wikipedia.org/wiki/Gregor_Mendel"
+    }
+  ],
+  "do_not_use": [
+    "dar una cifra de plantas de guisante: Wikipedia dice «some 28,000» y el artículo de Theoretical and Applied Genetics «more than 10,000»; el cuerpo no da número",
+    "decir que Nägeli le «ordenó» o le «propuso» expresamente usar Hieracium: el artículo de 2016 dice que «likely influenced» la elección y el Museo Mendel (resumen de búsqueda) que lo animó; el cuerpo dice que influyó",
+    "atribuir a Mendel la frase «Mi tiempo llegará»: Wikipedia la da como «reportedly», atribuida a Gustav von Niessl, y no se verificó en fuente primaria",
+    "decir que el artículo de 1866 no lo leyó nadie o que se perdió: se envió a sociedades y bibliotecas y Wikipedia habla de unas tres citas en treinta y cinco años",
+    "decir que Mendel fue elegido abad en 1867: Wikipedia menciona 1867 y 1868 de forma ambigua; el Museo Mendel y el artículo de 2016 dan 1868",
+    "decir que «44 años» separaron la publicación del redescubrimiento, como dice el artículo de 2016: de 1866 a 1900 son 34; ese número no se usa",
+    "presentar la apomixis como desconocida en vida de Mendel: el artículo de 2016 cita observaciones de partenogénesis vegetal desde 1841; lo que se explicó en 1904-1910 fue su papel en Hieracium",
+    "decir que todas las especies de Hieracium son apomícticas: el cuerpo dice «muchos»",
+    "dar nombres comunes en español (vellosilla, pelosilla) o la familia botánica del Hieracium: no se verificaron en ninguna fuente leída; Mendel trabajó con el subgénero Pilosella según el resumen de búsqueda, sin comprobar en página leída",
+    "decir que Mendel escribió a Nägeli por primera vez en 1866 o que Nägeli estaba en Múnich: aparece solo en un resumen de búsqueda del Museo Mendel, no en la página leída"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

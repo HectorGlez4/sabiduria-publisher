@@ -1,0 +1,86 @@
+{
+  "id": "2026-11-10-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Victor Hugo y la invasión de las ideas (1877)",
+    "hook": "«Se resiste a la invasión de los ejércitos; no se resiste a la invasión de las ideas.»\n— Victor Hugo, Historia de un crimen, conclusión «La caída», 1878. Es la frase original detrás de la que hoy circula con otras palabras.",
+    "body": [
+      "Victor Hugo empezó Historia de un crimen en Bruselas el 11 de diciembre de 1851, nueve días después del golpe de Estado de Luis Napoleón Bonaparte, y lo dejó en mayo de 1852 para escribir Napoleón el Pequeño. El manuscrito esperó veinticinco años. Lo sacó en 1877, durante la crisis política del 16 de mayo, con una nota de cuatro frases: «Este libro es más que actual; es urgente. Lo publico». El primer tomo salió el 1 de octubre de 1877 y el segundo el 15 de marzo de 1878.",
+      "La frase está en la sección X de la conclusión, «La caída», que no pudo escribirse en 1852. Empieza con Hugo de regreso de un exilio en los últimos días de septiembre de 1871, recorriendo el valle de Sedán, donde el ejército del emperador se había rendido un año antes. Desde ahí pasa a Francia y a Europa, y llega a la línea: se resiste a la invasión de los ejércitos, no a la de las ideas. Justo antes se pregunta qué hacer contra una revolución que tiene tanta razón.",
+      "La versión que se repite, «nada es más poderoso que una idea cuyo tiempo ha llegado», no aparece en el libro. Expresiones parecidas ya estaban en Émile Souvestre en 1848 y en Gustave Aimard en 1861, y en el siglo XX se le pegaron a Hugo. La suya es menos optimista de lo que parece: la escribió alguien que había visto ganar al ejército en 1851 y que esperó diecinueve años de destierro a que la idea llegara."
+    ],
+    "question": "¿Qué idea de tu época crees que ningún ejército podría detener?",
+    "quote": {
+      "text": "Se resiste a la invasión de los ejércitos; no se resiste a la invasión de las ideas.",
+      "author": "Victor Hugo",
+      "work": "Historia de un crimen, conclusión «La caída», sección X, 1878",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#VictorHugo",
+      "#Francia",
+      "#Historia"
+    ],
+    "extended": [
+      "#Frases",
+      "#Literatura",
+      "#SigloXIX",
+      "#Ideas",
+      "#LiteraturaFrancesa",
+      "#Reflexiones",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto original en la sección X de la conclusión: «On résiste à l'invasion des armées ; on ne résiste pas à l'invasion des idées. La gloire des barbares est d'être conquis par l'humanité». Inmediatamente antes: «Le juste, c'est le fond de l'homme ; le vrai, c'est le fond de Dieu. Que faire contre une révolution qui a tellement raison ?». La conclusión empieza: «Je revenais de mon quatrième exil (un exil belge, peu de chose). C'était dans les derniers jours de septembre 1871» y trata extensamente de Sedán (1 de septiembre de 1870).",
+      "source": "Wikisource en francés, Victor Hugo, Histoire d'un crime, «Conclusion — La Chute» (Œuvres complètes, Histoire, Ollendorf, París, 1907)",
+      "url": "https://fr.wikisource.org/wiki/Histoire_d%E2%80%99un_crime/Conclusion"
+    },
+    {
+      "claim": "La frase original francesa de 1877 es «On résiste à l'invasion des armées; on ne résiste pas à l'invasion des idées.», en Histoire d'un crime, «Conclusion: La Chute», sección 10. La versión moderna «Nothing is more powerful than an idea whose time has come» no es de Hugo; la expresión más antigua localizada es de Émile Souvestre (1848, Revue des deux mondes: «c'est l'idée dont le temps est venu»), con variantes en Gustave Aimard (1861), y se atribuyó a Hugo en el siglo XX.",
+      "source": "Quote Investigator (Garson O'Toole), «Nothing Is More Powerful Than an Idea Whose Time Has Come», 5 de noviembre de 2023",
+      "url": "https://quoteinvestigator.com/2023/11/05/powerful-idea/"
+    },
+    {
+      "claim": "Hugo escribió 42 capítulos en 1851-1852 que quedaron inéditos y añadió otros 23 tras volver del exilio. El tomo I salió el 1 de octubre de 1877 en Calmann-Lévy y el tomo II el 15 de marzo de 1878. La publicación respondía a la crisis del 16 de mayo de 1877; prefacio: «Ce livre est plus qu'actuel ; il est urgent. Je le publie.». El tomo II contiene la tercera y cuarta jornadas y la conclusión «La chute».",
+      "source": "Wikipedia en francés, «Histoire d'un crime»",
+      "url": "https://fr.wikipedia.org/wiki/Histoire_d%27un_crime"
+    },
+    {
+      "claim": "Edición original Calmann-Lévy, París, 1877-1878, dos tomos. Hugo empezó la redacción el 11 de diciembre de 1851 y la interrumpió en mayo de 1852 para escribir Napoléon le Petit. Retomó el manuscrito el 26 de mayo de 1877, tras la crisis del 16 de mayo. Nota preliminar: «Ce livre est plus qu'actuel ; il est urgent. Je le publie. V. H. Paris, 1er octobre 1877.»",
+      "source": "Livre Rare Book, ficha de la edición original de Histoire d'un crime (Calmann-Lévy, 1877-1878)",
+      "url": "https://www.livre-rare-book.com/book/12648455/75906"
+    },
+    {
+      "claim": "Traducción inglesa de T. H. Joyce y Arthur Locker, The History of a Crime, en el Proyecto Gutenberg (ebook 10381).",
+      "source": "Project Gutenberg, Victor Hugo, The History of a Crime",
+      "url": "https://www.gutenberg.org/ebooks/10381"
+    }
+  ],
+  "do_not_use": [
+    "atribuir a Hugo «Nada es más poderoso que una idea cuyo tiempo ha llegado» ni «No hay nada más poderoso que una idea a la que le ha llegado su hora»: no está en Histoire d'un crime ni en ninguna obra localizada de Hugo; Quote Investigator la remonta a Émile Souvestre (1848)",
+    "presentar la cita en español como traducción publicada: es traducción propia del francés de Wikisource; no se consultó ninguna edición castellana",
+    "fechar la frase en 1852 o decir que la escribió en el exilio de Bruselas: la conclusión arranca en septiembre de 1871 y habla de Sedán (1870), así que es posterior; se publicó en el tomo II, 15 de marzo de 1878",
+    "decir que todo el libro se publicó en 1877: el tomo I es del 1 de octubre de 1877 y el tomo II, donde está la frase, del 15 de marzo de 1878 (Wikipedia en francés)",
+    "describir la conclusión como el relato de los días 5 y 6 de diciembre de 1851: así la resume la ficha de Livre Rare Book, pero el texto de Wikisource abre en 1871 y trata de Sedán; ese resumen no se usa",
+    "dar como seguro de qué «revolución» habla Hugo en la pregunta anterior a la frase: no se leyó el párrafo completo con el contexto suficiente; el cuerpo solo reproduce la pregunta",
+    "decir que la escritura de 1851-1852 se interrumpió por la documentación excesiva: lo dice solo la ficha de Livre Rare Book",
+    "citar el número de página (p. 334) como verificado: viene de Quote Investigator y no se comprobó en la edición"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
