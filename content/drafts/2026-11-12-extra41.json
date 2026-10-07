@@ -1,0 +1,84 @@
+{
+  "id": "2026-11-12-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Neruda y el Poema 20 de 1924",
+    "hook": "«Es tan corto el amor, y es tan largo el olvido.»\n— Pablo Neruda, Poema 20, 1924. El verso que se cita como sentencia lo dice alguien que, una línea antes, admite que no sabe si sigue enamorado.",
+    "body": [
+      "Veinte poemas de amor y una canción desesperada salió en junio de 1924 en la editorial Nascimento, en Chile. Neruda tenía diecinueve años y era su segundo libro. Parte de la crítica lo atacó con argumentos morales por su erotismo; los lectores jóvenes lo adoptaron de inmediato. Hoy es la obra suya más editada.",
+      "El Poema 20 empieza con «Puedo escribir los versos más tristes esta noche», una línea que vuelve tres veces. El hablante repite que ya no la quiere, primero con certeza: «Ya no la quiero, es cierto, pero cuánto la quise». Hacia el final se corrige: «Ya no la quiero, es cierto, pero tal vez la quiero». Justo después, en la penúltima estrofa, llega el verso famoso.",
+      "Leído solo, parece una ley general sobre el desamor. En su sitio es otra cosa: la frase de alguien que todavía no ha terminado de olvidar y lo sabe. El olvido es largo porque está ocurriendo mientras escribe. El poema cierra con la esperanza de que ese sea el último dolor y esos los últimos versos, y la propia duda que lo precede deja ver que no hay garantía de eso."
+    ],
+    "question": "¿Cómo distingues un olvido terminado de uno que solo se ha callado?",
+    "quote": {
+      "text": "Es tan corto el amor, y es tan largo el olvido.",
+      "author": "Pablo Neruda",
+      "work": "Veinte poemas de amor y una canción desesperada, Poema 20 (Nascimento, 1924)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PabloNeruda",
+      "#Poesia",
+      "#LiteraturaLatinoamericana"
+    ],
+    "extended": [
+      "#Frases",
+      "#Chile",
+      "#Amor",
+      "#Desamor",
+      "#VeintePoemasDeAmor",
+      "#Versos",
+      "#Lectura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«Al alero de la editorial Nascimento, en junio de 1924 Pablo Neruda publicó la primera edición» de Veinte poemas de amor y una canción desesperada; la crítica «solapadamente argumentó razones de orden moral para denostar la obra», que tuvo amplia recepción entre los jóvenes; es hoy la obra más editada y probablemente la más leída de Neruda. La página incluye el registro sonoro del Poema 20.",
+      "source": "Memoria Chilena, Biblioteca Nacional de Chile, «Veinte poemas de amor y una canción desesperada»",
+      "url": "https://www.memoriachilena.gob.cl/wiki/portadaui_veintepoemasdeamoryunacanciondesesperada.php"
+    },
+    {
+      "claim": "Ficha de la obra en Memoria Chilena: editorial Nascimento, junio de 1924; obra «cargada de un marcado erotismo».",
+      "source": "Memoria Chilena, Biblioteca Nacional de Chile, ficha de la primera edición",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-98108.html"
+    },
+    {
+      "claim": "Publicado en junio de 1924 por la editorial Nascimento, el libro «lanzó a su autor a la fama con apenas 19 años de edad».",
+      "source": "Wikipedia en español, «Veinte poemas de amor y una canción desesperada»",
+      "url": "https://es.wikipedia.org/wiki/Veinte_poemas_de_amor_y_una_canci%C3%B3n_desesperada"
+    },
+    {
+      "claim": "Texto del Poema 20 con el verso «Es tan corto el amor, y es tan largo el olvido.» en la penúltima estrofa, inmediatamente después de «Ya no la quiero, es cierto, pero tal vez la quiero.»; antes aparece «Ya no la quiero, es cierto, pero cuánto la quise.»; «Puedo escribir los versos más tristes esta noche» aparece tres veces.",
+      "source": "Cultura Genial, «Poema 20 de Pablo Neruda: un análisis de sus versos más tristes»",
+      "url": "https://www.culturagenial.com/es/poema-20-de-pablo-neruda/"
+    },
+    {
+      "claim": "Traducción inglesa del Poema 20 por Stephen Tapscott: «Love is so short and oblivion so long» en la penúltima estrofa; el poema cierra con «and these may be the last verses I write for her».",
+      "source": "Smith College, Virtual International Poetry Day, Pablo Neruda, «Poema 20»",
+      "url": "https://sites.smith.edu/virtual-international-poetry-day/?p=95"
+    }
+  ],
+  "do_not_use": [
+    "citar la versión invertida «El amor es tan corto y el olvido tan largo», que circula en prensa y páginas de frases: el verso es «Es tan corto el amor, y es tan largo el olvido»",
+    "decir que Neruda tenía veinte años al publicar: nació en julio de 1904 y el libro salió en junio de 1924; Memoria Chilena dice veinte en su ficha, Wikipedia diecinueve",
+    "identificar a la destinataria del Poema 20 con una mujer concreta (Teresa Vázquez, Albertina Azócar): no se verificó; según Wikipedia, la amada del libro es una figura compuesta",
+    "afirmar que el texto de la primera edición de 1924 es idéntico letra por letra al que se lee hoy: no se consultó la edición príncipe",
+    "atribuir a Neruda «Podrán cortar todas las flores, pero no podrán detener la primavera»: frase de atribución dudosa, no verificada en esta investigación",
+    "dar cifras de ejemplares vendidos (un millón, veinte millones): aparecen solo en resúmenes de búsqueda y no coinciden entre sí"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

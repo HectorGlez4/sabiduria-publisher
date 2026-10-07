@@ -1,0 +1,81 @@
+{
+  "id": "2026-11-12-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Champollion y Thomas Young en la Académie (1822)",
+    "hook": "El 27 de septiembre de 1822, Champollion explicó en París cómo leer los jeroglíficos. En la sala estaba sentado el hombre que había intentado hacerlo antes que él.",
+    "body": [
+      "El 14 de septiembre de 1822, Jean-François Champollion le anunció a su hermano que tenía la clave de los jeroglíficos. Terminó su memoria el día 22 y cinco días después la leyó ante la Académie des Inscriptions et Belles-Lettres, con la sala llena. A fines de octubre se imprimió como Lettre à M. Dacier, un folleto de 44 páginas con cuatro láminas. Su tesis era que la escritura egipcia es figurativa, simbólica y fonética a la vez, en un mismo texto y en una misma frase.",
+      "Entre el público estaba Thomas Young, médico y físico inglés, de visita en París. Tres años antes había publicado en la Encyclopaedia Britannica un desciframiento parcial de los jeroglíficos. Sabían el uno del otro desde 1814, pero era la primera vez que se veían. Al leer la carta impresa, a Young le dolió que lo nombrara solo dos veces, y una de ellas para señalar un error suyo. En 1823 publicó un libro cuyo subtítulo hablaba del «alfabeto original del autor, ampliado por el señor Champollion». Champollion respondió que nunca reconocería otro alfabeto original que el suyo.",
+      "El sistema de Champollion se impuso. La disputa sobre qué le debía a Young duró décadas y se tiñó de rivalidad entre ingleses y franceses. Champollion entró en el Collège de France en 1831 como profesor de una disciplina recién nacida, la egiptología, y murió al año siguiente. La pregunta de quién llegó primero sigue apareciendo en cada historia del desciframiento."
+    ],
+    "question": "¿Cuánto de lo que llamas tuyo empezó en el trabajo de otro?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Dos hombres y una misma piedra",
+    "subtitle": "París, Académie des Inscriptions, 1822",
+    "body": "Champollion leyó su método para descifrar los jeroglíficos el 27 de septiembre de 1822. Thomas Young, que había publicado un desciframiento parcial en 1819, estaba en la sala. Era su primer encuentro. La disputa por el mérito duró décadas."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Champollion",
+      "#Jeroglificos",
+      "#Egiptologia"
+    ],
+    "extended": [
+      "#PiedraDeRosetta",
+      "#ThomasYoung",
+      "#AntiguoEgipto",
+      "#HistoriaDeLaCiencia",
+      "#Escritura",
+      "#SigloXIX",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Champollion anunció a su hermano el 14 de septiembre de 1822 que tenía la clave de los jeroglíficos («I've got the case!»); terminó la Lettre à M. Dacier el 22 de septiembre y la presentó en la Académie des inscriptions et belles-lettres cinco días después, el 27; el Collège de France lo recibió como profesor en 1831 para enseñar la nueva disciplina de la egiptología.",
+      "source": "Collège de France, exposición «Champollion 1822»",
+      "url": "https://www.college-de-france.fr/en/news/champollion-1822-exhibition"
+    },
+    {
+      "claim": "Título completo «Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques»; el 27 de septiembre de 1822 Champollion presentó un borrador de ocho páginas ante una sala llena; la versión final la publicó Firmin-Didot a fines de octubre de 1822, en un folleto de 44 páginas con cuatro láminas; describe la escritura como «figurative, symbolic, and phonetic all at once, in the same text, the same phrase».",
+      "source": "Wikipedia en inglés, «Lettre à M. Dacier»",
+      "url": "https://en.wikipedia.org/wiki/Lettre_%C3%A0_M._Dacier"
+    },
+    {
+      "claim": "«Champollion's famous Lettre à Dacier unveiled his system in the very presence of Thomas Young at a meeting of the Académie des Inscriptions et Belles-Lettres on Friday, September 27»; la prioridad de los descubrimientos «remains a central (and on occasion still controversial) element in every history of the subject», con matices nacionalistas de ingleses y franceses.",
+      "source": "Max Planck Institute for the History of Science (Berlín), presentación de Jed Buchwald, «Thomas Young and the Decipherment of Egyptian Hieroglyphs», 2018",
+      "url": "https://www.mpiwg-berlin.mpg.de/event/thomas-young-and-decipherment-egyptian-hieroglyphs"
+    },
+    {
+      "claim": "Young había publicado un desciframiento parcial de los jeroglíficos en la Encyclopaedia Britannica tres años antes de 1822; en 1823 publicó An Account of Some Recent Discoveries in Hieroglyphical Literature and Egyptian Antiquities, con el subtítulo Including the Author's Original Alphabet, As Extended by Mr Champollion; Champollion respondió: «I shall never consent to recognise any other original alphabet than my own, where it is a matter of the hieroglyphic alphabet properly called».",
+      "source": "Andrew Robinson, «Deciphering the decipherers: Young versus Champollion», The Past (a partir de sus libros The Last Man Who Knew Everything, 2006, y Cracking the Egyptian Code, 2012)",
+      "url": "https://the-past.com/feature/deciphering-the-decipherers-young-versus-champollion"
+    },
+    {
+      "claim": "«All his main rivals and supporters were present at the reading, including Young who happened to be visiting Paris. This was the first meeting between the two.» Ambos supieron del trabajo del otro en 1814, cuando Champollion escribió a la Royal Society pidiendo mejores transcripciones de la piedra de Rosetta. En la carta publicada Young aparece mencionado solo dos veces, una de ellas criticando que no descifrara «Berenice». Champollion murió en París el 4 de marzo de 1832.",
+      "source": "Wikipedia en inglés, «Jean-François Champollion»",
+      "url": "https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Champollion"
+    }
+  ],
+  "do_not_use": [
+    "contar que Champollion se desmayó tras gritar «Je tiens l'affaire!»: lo recoge Wikipedia, pero la anécdota procede de relatos familiares posteriores y no se verificó en una fuente primaria",
+    "presentar la Lettre à M. Dacier como desciframiento completo: trataba del alfabeto de los jeroglíficos fonéticos; el sistema completo se expuso en el Précis du système hiéroglyphique (1824), que no se verificó en esta investigación",
+    "afirmar que Young copió o que Champollion plagió: la prioridad sigue discutida según el MPIWG",
+    "citar el artículo del British Museum sobre la piedra de Rosetta: la página devolvió 403 y no se leyó",
+    "decir que Young y Champollion se carteaban desde 1814: Wikipedia solo dice que en 1814 supieron uno del otro, cuando Champollion escribió a la Royal Society",
+    "citar el PDF de Buchwald en el MPIWG: no se pudo abrir (falta lector de PDF)"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

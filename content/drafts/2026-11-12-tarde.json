@@ -1,0 +1,84 @@
+{
+  "id": "2026-11-12-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Plinio el Viejo y la línea diaria de Apeles",
+    "hook": "«Ningún día sin una línea.» La frase no está escrita así en ningún autor antiguo. Lo que Plinio el Viejo contó, en el libro XXXV de su Historia natural, es la costumbre de un pintor.",
+    "body": [
+      "Apeles fue el pintor más celebrado de la Grecia del siglo IV a.C. y trabajó en la corte de Filipo II y de Alejandro Magno. No se conserva ninguna de sus obras. Lo que sabemos de él viene sobre todo de Plinio el Viejo, que murió en el año 79 durante la erupción del Vesubio. Había publicado los diez primeros libros de su Historia natural en el 77; el resto, entre ellos el XXXV, dedicado a la pintura, salió después de su muerte.",
+      "En la sección 84 de ese libro, Plinio escribe que Apeles tenía la costumbre constante de no pasar ningún día, por ocupado que estuviera, sin ejercitar su arte trazando una línea, y que de él la costumbre pasó a proverbio. No da la fórmula latina «nulla dies sine linea». Esa forma breve aparece documentada por primera vez como proverbio en el Proverbiorum libellus del humanista Polidoro Virgilio, impreso en Venecia en 1498, catorce siglos después.",
+      "La línea de Apeles era un trazo de dibujo, no un renglón escrito. Los escritores la hicieron suya más tarde. En el párrafo siguiente, Plinio cuenta otra anécdota del mismo pintor que también se volvió refrán: el zapatero que, tras corregirle una sandalia, quiso opinar sobre la pierna. Del mismo taller salieron la disciplina diaria y el límite de la opinión ajena."
+    ],
+    "question": "¿Qué práctica tuya sostendrías aun en el día más ocupado?",
+    "quote": {
+      "text": "Apeles tenía la costumbre constante de no pasar ningún día, por ocupado que estuviera, sin ejercitar su arte trazando una línea; de él pasó a proverbio.",
+      "author": "Plinio el Viejo",
+      "work": "Historia natural, libro XXXV, 84 (edición póstuma, después del 79 d.C.)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PlinioElViejo",
+      "#Apeles",
+      "#Disciplina"
+    ],
+    "extended": [
+      "#Frases",
+      "#Latin",
+      "#Pintura",
+      "#GreciaAntigua",
+      "#RomaAntigua",
+      "#Proverbios",
+      "#Escritura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de Historia natural XXXV, 84: «Apelli fuit alioqui perpetua consuetudo numquam tam occupatum diem agendi, ut non lineam ducendo exerceret artem, quod ab eo in proverbium venit.» Y XXXV, 85, la anécdota del zapatero: «ne supra crepidam sutor iudicaret, quod et ipsum in proverbium abiit».",
+      "source": "LacusCurtius (Universidad de Chicago, Bill Thayer), Plinio el Viejo, Naturalis Historia, libro XXXV, texto latino",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Pliny_the_Elder/35*.html"
+    },
+    {
+      "claim": "La frase exacta «nulla dies sine linea» no aparece en el texto de Plinio; procede de su anécdota de Apeles (XXXV, 84) y se atestigua por primera vez en el Proverbiorum libellus de Polidoro Virgilio (Venecia, 1498). En latín clásico «linea» designa un trazo, no un renglón de texto; los escritores la reinterpretaron después.",
+      "source": "Wikipedia en inglés, «Nulla dies sine linea»",
+      "url": "https://en.wikipedia.org/wiki/Nulla_dies_sine_linea"
+    },
+    {
+      "claim": "Polidoro Virgilio, Proverbiorum libellus, «Venice: Christophorus de Pensis, de Mandello, 10 Apr. 1498».",
+      "source": "Universidad de Glasgow, Glasgow Incunabula Project, ficha de Polydore Vergil, Proverbiorum libellus",
+      "url": "https://www.gla.ac.uk/myglasgow/incunabula/a-zofauthorsa-j/v18"
+    },
+    {
+      "claim": "Apeles practicaba el dibujo sin dejar pasar un día, de donde el proverbio Nulla dies sine linea; anécdota del zapatero y el proverbio Ne supra crepidam sutor; pasó buena parte de su vida en la corte de Filipo y Alejandro; Plinio sitúa su apogeo en la olimpiada 112 (332 a.C.).",
+      "source": "William Smith (ed.), A Dictionary of Greek and Roman Biography and Mythology, entrada «Apelles» (Perseus/Perseids, Universidad Tufts)",
+      "url": "https://fgh.perseids.org/read/pdlrefwk/viaf88890045/003/perseus-eng1/A.apelles_4"
+    },
+    {
+      "claim": "Plinio publicó los diez primeros libros de la Historia natural en el año 77, dedicados a Tito; el resto se publicó póstumamente por su sobrino. Plinio murió en el 79 durante la erupción del Vesubio. La obra tiene 37 libros.",
+      "source": "Wikipedia en inglés, «Natural History (Pliny)»",
+      "url": "https://en.wikipedia.org/wiki/Natural_History_(Pliny)"
+    }
+  ],
+  "do_not_use": [
+    "poner «Nulla dies sine linea» entre comillas como frase literal de Plinio o de Apeles: no está en el texto latino; es una forma proverbial documentada en 1498",
+    "afirmar que Erasmo recoge el proverbio en sus Adagia con un número concreto: solo se vio una página de una edición de 1559 que no da número; no verificado",
+    "citar la traducción de Rackham para Loeb con su redacción inglesa: apareció solo en un resumen de búsqueda, no en una página leída",
+    "decir que Apeles se refería a escribir: «linea» es un trazo de dibujo; la lectura literaria es posterior",
+    "atribuir a Plinio el año 77 para el libro XXXV: en el 77 salieron los diez primeros libros; el resto es póstumo",
+    "presentar la traducción española de la cita como edición publicada: es traducción propia del latín"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

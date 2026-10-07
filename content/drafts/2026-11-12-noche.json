@@ -1,0 +1,81 @@
+{
+  "id": "2026-11-12-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "la nave de Teseo, de Plutarco a Hobbes",
+    "hook": "Plutarco contó que los filósofos discutían si un barco con todas las tablas cambiadas seguía siendo el mismo. Quince siglos después, Thomas Hobbes recogió las tablas viejas y armó con ellas un segundo barco.",
+    "body": [
+      "En su Vida de Teseo, Plutarco escribe que los atenienses conservaron la galera de treinta remos en la que, según la leyenda, Teseo volvió de Creta con los jóvenes rescatados. La guardaron hasta la época de Demetrio de Falero. Cada vez que una tabla se pudría, la quitaban y ponían otra nueva y sana. Así el barco se volvió, dice Plutarco, un ejemplo permanente para los filósofos en la discusión sobre las cosas que crecen: unos sostenían que seguía siendo el mismo, otros que no.",
+      "Thomas Hobbes retomó el caso en De Corpore, publicado en latín en 1655. Le añadió una vuelta que Plutarco no había planteado. Supongamos, escribe, que alguien hubiera guardado las tablas viejas a medida que se sacaban y las hubiera vuelto a juntar en el mismo orden. Ese barco también sería, sin duda, el mismo que el del principio. Y entonces habría dos barcos numéricamente idénticos, lo cual es absurdo.",
+      "Con Plutarco la pregunta era si algo sobrevive al cambio de todas sus partes. Con Hobbes se vuelve más incómoda: hay dos candidatos y cada uno tiene una buena razón para llamarse original. Uno conserva la continuidad; el otro, la materia. La pregunta sirve también para una persona, una institución o una amistad que ha cambiado tanto que ya no se parece a lo que fue."
+    ],
+    "question": "Si todo en ti ha cambiado, ¿qué es lo que sigue siendo tuyo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La nave de Teseo",
+    "subtitle": "Plutarco la contó, Hobbes la duplicó",
+    "body": "Los atenienses cambiaban cada tabla podrida de la galera de Teseo y los filósofos discutían si seguía siendo la misma. En 1655, Hobbes imaginó a alguien que guarda las tablas viejas y arma otro barco. Dos naves con derecho a ser la original."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#NaveDeTeseo",
+      "#Filosofia",
+      "#Identidad"
+    ],
+    "extended": [
+      "#Plutarco",
+      "#Hobbes",
+      "#Paradojas",
+      "#GreciaAntigua",
+      "#Metafisica",
+      "#PensamientoCritico",
+      "#Reflexiones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Plutarco, Vida de Teseo 23.1: «The ship on which Theseus sailed with the youths and returned in safety, the thirty-oared galley, was preserved by the Athenians down to the time of Demetrius Phalereus. They took away the old timbers from time to time, and put new and sound ones in their places, so that the vessel became a standing illustration for the philosophers in the mooted question of growth, some declaring that it remained the same, others that it was not the same vessel.»",
+      "source": "LacusCurtius (Universidad de Chicago), Plutarco, Vidas paralelas, Teseo, traducción de la Loeb Classical Library, vol. I, 1914",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Theseus*.html"
+    },
+    {
+      "claim": "Texto de Hobbes: «For if, for example, that ship of Theseus, concerning the difference whereof made by continual reparation in taking out the old planks and putting in the new, the sophisters of Athens were wont to dispute, were, after all the planks were changed, the same numerical ship it were at the beginning; and if some man had kept the old planks as they were taken out, and by afterwards putting them together in the same order, had again made a ship of them, this without doubt, had also been the same numerical ship with that which was in the beginning; and so there would have been two ships numerically the same, which is absurd.» Citado de De Corpore, The English Works of Thomas Hobbes, ed. Molesworth, vol. 1, 1839, p. 136.",
+      "source": "William Uzgalis (Oregon State University), ponencia en el 20th World Congress of Philosophy, Boston University",
+      "url": "https://www.bu.edu/wcp/Papers/Mode/ModeUzga.htm"
+    },
+    {
+      "claim": "«The ancient historian Plutarch describes the famous ship of Theseus whose parts were all gradually replaced over time.» «In the modern era, Thomas Hobbes imagined a scenario in which a custodian collects the original planks and puts them back in the original arrangement.»",
+      "source": "Stanford Encyclopedia of Philosophy, «Material Constitution»",
+      "url": "https://plato.stanford.edu/entries/material-constitution/"
+    },
+    {
+      "claim": "«De Corpore (1655), which is discussed below, covers issues of logic, language, method, metaphysics, mathematics, and physics.»",
+      "source": "Stanford Encyclopedia of Philosophy, «Thomas Hobbes»",
+      "url": "https://plato.stanford.edu/entries/hobbes/"
+    },
+    {
+      "claim": "Formulación del problema: un principio lleva a decir que el barco reparado con tablas nuevas es el de Teseo; otro, que lo es el barco rearmado con las tablas viejas; «Yet an individual ship cannot be in two places at once».",
+      "source": "John C. Bigelow, «Particulars as aggregates», Routledge Encyclopedia of Philosophy, 1998",
+      "url": "https://www.rep.routledge.com/articles/thematic/particulars/v-1/sections/particulars-as-aggregates"
+    }
+  ],
+  "do_not_use": [
+    "presentar la nave como un barco histórico de Teseo: Teseo es una figura legendaria; Plutarco habla del barco que los atenienses conservaban como suyo",
+    "atribuir a Plutarco la variante de las tablas viejas rearmadas: es aportación de Hobbes",
+    "citar el capítulo y la sección exactos de De Corpore (parte II, cap. 11, §7): aparecen en resúmenes de búsqueda, no en una página leída; la cita verificada es Molesworth, vol. 1, 1839, p. 136",
+    "dar fechas exactas del gobierno de Demetrio de Falero o de la redacción de las Vidas paralelas: no se verificaron",
+    "usar ejemplos modernos como el USS Constitution o el santuario de Ise con porcentajes de material original: aparecen en Wikipedia sin verificar aquí",
+    "atribuir el problema a Heráclito o a Platón: no se encontró en ellos en esta investigación"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
