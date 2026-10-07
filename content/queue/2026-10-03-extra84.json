@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "THOREAU",
     "subtitle": "La mitad de la frase que nadie repite",
     "body": "La frase se cita siempre sola: la masa de los hombres lleva vidas de callada desesperación. La oración siguiente es la que muerde: lo que se llama resignación es desesperación confirmada. Y quien lo escribió no era un ermitaño; bajaba al pueblo cada día o cada dos."

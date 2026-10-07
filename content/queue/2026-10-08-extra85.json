@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-02-extra41",
+  "id": "2026-10-08-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -85,5 +85,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-08T17:26:00Z",
+  "results": {}
 }

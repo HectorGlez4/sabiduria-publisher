@@ -1,8 +1,8 @@
 {
-  "id": "2026-09-17-extra41",
+  "id": "2026-10-08-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Chinua Achebe y el aceite de palma de las palabras",
     "hook": "La novela africana más leída del mundo estuvo meses arrumbada en un rincón de una agencia de mecanografía de Londres. Solo existía una copia, escrita a mano, y el autor ya había pagado por adelantado.",
@@ -21,12 +21,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#ChinuaAchebe", "#Nigeria", "#Literatura"],
-    "extended": ["#Citas", "#Africa", "#Igbo", "#Colonialismo", "#Novela", "#Historia", "#SigloXX", "#Libros"]
+    "topic": [
+      "#ChinuaAchebe",
+      "#Nigeria",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Citas",
+      "#Africa",
+      "#Igbo",
+      "#Colonialismo",
+      "#Novela",
+      "#Historia",
+      "#SigloXX",
+      "#Libros"
+    ]
   },
   "sources": [
     {
@@ -67,5 +80,11 @@
     "No traducir el título del libro del comisario suavizándolo. En la novela se llama «The Pacification of the Primitive Tribes of the Lower Niger», y el efecto del final depende de que esas palabras suenen tal cual.",
     "No dar la cifra de ventas como exacta ni actualizada al día de hoy. «Más de diez millones de ejemplares» y «más de cincuenta lenguas» son los órdenes de magnitud que dan las fuentes consultadas."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-09T04:26:00Z",
+  "results": {}
 }
