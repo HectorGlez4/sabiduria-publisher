@@ -1,0 +1,105 @@
+{
+  "id": "2026-11-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Epicteto y el Enquiridión 5",
+    "hook": "«No son las cosas las que perturban a los hombres, sino las opiniones sobre las cosas.» Lo dijo un hombre que había nacido esclavo, y no lo escribió él.",
+    "body": [
+      "Epicteto nació hacia el año 50 o 55 en Hierápolis, en Frigia, y fue esclavo de Epafrodito, un liberto de Nerón. Ya libre, enseñó filosofía en Roma hasta que Domiciano expulsó a los filósofos, y abrió una escuela en Nicópolis, en el Epiro. Murió hacia el 135. No dejó nada escrito. Su alumno Flavio Arriano reunió sus enseñanzas en las Disertaciones y en un manual breve, el Enquiridión.",
+      "La frase abre el capítulo 5 de ese manual. Sigue con un ejemplo: la muerte no es terrible, porque a Sócrates no se lo pareció; lo terrible es la opinión de que la muerte es terrible. Y termina con tres grados. El que no se ha educado culpa a otros de lo que le va mal; el que empieza a educarse se culpa a sí mismo; el que ya está educado no culpa ni a otros ni a sí mismo.",
+      "La frase griega viajó lejos. Laurence Sterne la puso sin traducir ni atribuir como epígrafe del primer volumen de Tristram Shandy, en 1759. En el siglo XX, el psicólogo Albert Ellis la citó como antecedente de su terapia: reconoció que el principio ya lo habían formulado los estoicos. La versión que circula hoy, «no importa lo que te pasa sino cómo reaccionas», no está en Epicteto."
+    ],
+    "question": "¿Qué opinión tuya pesa hoy más que el hecho que la causó?",
+    "quote": {
+      "text": "No son las cosas las que perturban a los hombres, sino las opiniones sobre las cosas.",
+      "author": "Epicteto",
+      "work": "Enquiridión, 5 (compilado por Arriano, siglo II; ed. Schenkl, Teubner, 1916)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Epicteto",
+      "#Estoicismo",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Frases",
+      "#Enquiridion",
+      "#GreciaAntigua",
+      "#RomaAntigua",
+      "#Citas",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego del Enquiridión, sección 5: «Ταράσσει τοὺς ἀνθρώπους οὐ τὰ πράγματα, ἀλλὰ τὰ περὶ τῶν πραγμάτων δόγματα· οἷον ὁ θάνατος οὐδὲν δεινόν (ἐπεὶ καὶ Σωκράτει ἂν ἐφαίνετο)…», con el cierre sobre el ἀπαίδευτος que culpa a otros, el que empieza a educarse que se culpa a sí mismo y el educado que no culpa a nadie.",
+      "source": "Wikisource en griego, «Εγχειρίδιον» de Epicteto",
+      "url": "https://el.wikisource.org/wiki/Εγχειρίδιον"
+    },
+    {
+      "claim": "Mismo texto griego como Encheiridion 5.1, en edición digital basada en H. Schenkl, Leipzig, Teubner, 1916.",
+      "source": "Furman University, edición digital del Encheiridion de Epicteto (texto de Schenkl, 1916)",
+      "url": "https://folio3.furman.edu/dramaturg/Philosophy/Epictetus_Encheiridion/pages/chunk_006.html"
+    },
+    {
+      "claim": "Traducción de Elizabeth Carter, sección 5: «Men are disturbed, not by things, but by the principles and notions which they form concerning things. Death, for instance, is not terrible, else it would have appeared so to Socrates…».",
+      "source": "MIT Internet Classics Archive, Epictetus, The Enchiridion (trad. Elizabeth Carter)",
+      "url": "https://classics.mit.edu/Epictetus/epicench.html"
+    },
+    {
+      "claim": "Epicteto nació hacia el 55 en Hierápolis de Frigia; fue esclavo de Epafrodito, liberto de Nerón; hacia el 89 Domiciano lo desterró y abrió escuela en Nicópolis del Epiro; no escribió nada; sus obras las redactó su alumno Flavio Arriano.",
+      "source": "Internet Encyclopedia of Philosophy, «Epictetus»",
+      "url": "https://iep.utm.edu/epictetu/"
+    },
+    {
+      "claim": "Nació en los años 50 en Hierápolis; esclavo de Epafrodito; dejó Roma por el edicto de Domiciano y enseñó en Nicópolis; murió hacia el 135; Arriano de Nicomedia puso por escrito sus enseñanzas; edición griega de referencia de Schenkl (1916).",
+      "source": "Stanford Encyclopedia of Philosophy, «Epictetus»",
+      "url": "https://plato.stanford.edu/entries/epictetus/"
+    },
+    {
+      "claim": "El Enquiridión lo compiló Arriano a partir de las enseñanzas de Epicteto; Elizabeth Carter lo tradujo al inglés en 1758.",
+      "source": "Wikipedia en inglés, «Enchiridion of Epictetus»",
+      "url": "https://en.wikipedia.org/wiki/Enchiridion_of_Epictetus"
+    },
+    {
+      "claim": "La portada del primer volumen de Tristram Shandy lleva un epígrafe griego de Epicteto sin traducir ni atribuir; los volúmenes 1 y 2 salieron a fines de diciembre de 1759, impresos en York.",
+      "source": "Project Gutenberg, Laurence Sterne, Tristram Shandy (texto con el epígrafe), y Wikipedia en inglés, «The Life and Opinions of Tristram Shandy, Gentleman»",
+      "url": "https://www.gutenberg.org/files/1079/1079-h/1079-h.htm"
+    },
+    {
+      "claim": "Albert Ellis citó «Men are disturbed not by things, but by the views which they take of them» y escribió que el principio lo habían descubierto y formulado los antiguos estoicos.",
+      "source": "Wikipedia en inglés, «Rational emotive behavior therapy»",
+      "url": "https://en.wikipedia.org/wiki/Rational_emotive_behavior_therapy"
+    },
+    {
+      "claim": "La frase «It's not what happens to you, but how you react to it that matters» no tiene correspondencia en los textos de Epicteto; muchas frases modernas atribuidas a él proceden de la paráfrasis de Sharon Lebell (1995).",
+      "source": "Wikiquote en inglés, «Epictetus»",
+      "url": "https://en.wikiquote.org/wiki/Epictetus"
+    }
+  ],
+  "do_not_use": [
+    "atribuir a Epicteto «no importa lo que te pasa sino cómo reaccionas»: no está en sus textos; es paráfrasis moderna",
+    "atribuir la frase a Marco Aurelio: Meditaciones VIII, 47 tiene una idea parecida, pero esta formulación es del Enquiridión 5",
+    "decir que Epicteto escribió el Enquiridión: lo compiló Arriano",
+    "dar un año exacto para la expulsión de Domiciano: IEP y SEP dicen 89, Wikipedia hacia el 93",
+    "fechar el Enquiridión en el 125: solo lo da Wikipedia; basta «siglo II»",
+    "citar la división 5a y 5b: la edición de Schenkl lo trata como un solo capítulo 5",
+    "nombrar el libro y el año concretos en que Ellis citó la frase: no se verificaron",
+    "presentar la traducción española de la cita como edición publicada: es traducción propia del griego"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

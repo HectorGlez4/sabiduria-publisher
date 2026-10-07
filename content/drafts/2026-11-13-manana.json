@@ -1,0 +1,102 @@
+{
+  "id": "2026-11-13-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Eratóstenes y la circunferencia de la Tierra",
+    "hook": "Eratóstenes midió la Tierra con una sombra y una distancia. Su libro se perdió, y lo que sabemos del método lo contó otro autor, siglos después.",
+    "body": [
+      "Eratóstenes nació en Cirene, en la actual Libia, hacia el 276 a.C., y hacia el 240 a.C. se convirtió en el tercer bibliotecario de Alejandría. Escribió un tratado Sobre la medida de la Tierra que no se conserva. El relato más conocido del método está en Cleomedes, un astrónomo griego al que se fecha entre el siglo I a.C. y el siglo IV d.C.",
+      "Según Cleomedes, en Siena, la actual Asuán, los gnomones de los relojes de sol no daban sombra a mediodía en el solsticio de verano. A la misma hora, en Alejandría, la sombra en un cuenco graduado marcaba un arco de la quincuagésima parte del círculo. Si entre las dos ciudades había 5000 estadios, la Tierra entera medía cincuenta veces eso: 250 000. Estrabón, en cambio, atribuye a Eratóstenes la cifra de 252 000.",
+      "Nadie sabe con certeza cuánto medía su estadio. Con uno de unos 157 metros el resultado queda muy cerca del real; con el estadio ático, de unos 185, se aleja en torno a un 15 por ciento. Siena tampoco estaba exactamente sobre el trópico ni en el meridiano de Alejandría. Lo que no se discute es el razonamiento: con dos observaciones y una proporción, un hombre midió algo que nunca podría recorrer."
+    ],
+    "question": "¿Qué medirías hoy si solo tuvieras una sombra y una regla?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Tierra medida con una sombra",
+    "subtitle": "Alejandría, hacia el 240 a.C.",
+    "body": "En Siena el sol de mediodía no daba sombra en el solsticio. En Alejandría la sombra marcaba un cincuentavo del círculo. Con 5000 estadios entre las dos ciudades, Eratóstenes obtuvo 250 000 estadios para toda la Tierra."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Eratostenes",
+      "#Alejandria",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Astronomia",
+      "#Geografia",
+      "#GreciaAntigua",
+      "#Matematicas",
+      "#Ciencia",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Eratóstenes nació hacia el 276 a.C. en Cirene; a la muerte de Calímaco, hacia el 240 a.C., fue el tercer bibliotecario de Alejandría; los detalles de su medición proceden de autores como Cleomedes, Teón de Esmirna y Estrabón; con un estadio de 157,2 m el resultado es notable, con otros valores menos.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, biografía de Eratosthenes",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Eratosthenes/"
+    },
+    {
+      "claim": "Su tratado Sobre la medida de la Tierra no se ha conservado; ángulo de 1/50 del círculo y 5000 estadios entre Siena y Alejandría.",
+      "source": "Wikipedia en inglés, «Eratosthenes»",
+      "url": "https://en.wikipedia.org/wiki/Eratosthenes"
+    },
+    {
+      "claim": "El libro de Cleomedes es la fuente original del relato conocido; Cleomedes se fecha entre mediados del siglo I a.C. y el 400 d.C.",
+      "source": "Wikipedia en inglés, «Cleomedes»",
+      "url": "https://en.wikipedia.org/wiki/Cleomedes"
+    },
+    {
+      "claim": "Texto de Cleomedes (trad. Heath, Greek Astronomy, 1932): en Siena en el solsticio de verano los gnomones de los relojes de sol no arrojan sombra; en Alejandría el arco en el cuenco (skaphe) es una quincuagésima parte del círculo; 5000 estadios por 50 dan 250 000.",
+      "source": "Roger Pearse, «Cleomedes: how big is the Earth?», con la traducción de T. L. Heath",
+      "url": "https://www.roger-pearse.com/weblog/2017/04/15/cleomedes-how-big-is-the-earth/"
+    },
+    {
+      "claim": "Estrabón, Geografía II, 5, 7: según Eratóstenes, el ecuador mide 252 000 estadios.",
+      "source": "LacusCurtius (Universidad de Chicago), Estrabón, Geografía, libro II, cap. 5",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/2E1*.html"
+    },
+    {
+      "claim": "El ángulo de 1/50 está a menos del 1% del real; con un estadio de unos 185 m la circunferencia resulta errada en torno a un 15%; 5000 estadios y 1/50 son cifras redondeadas.",
+      "source": "Ohio State University, Departamento de Astronomía, notas de Astronomy 161 (R. Pogge)",
+      "url": "https://www.astronomy.ohio-state.edu/pogge.1/Ast161/Unit2/notes.html"
+    },
+    {
+      "claim": "La longitud del estadio se discute desde hace siglos: el estadio de unos 157 m lo propuso Letronne en 1816; el ático de unos 185 m, Cuntz en 1923.",
+      "source": "Wikipedia en inglés, «Stadion (unit)»",
+      "url": "https://en.wikipedia.org/wiki/Stadion_(unit)"
+    },
+    {
+      "claim": "Siena no estaba exactamente sobre el trópico de Cáncer y está unos 3 grados de longitud al este de Alejandría.",
+      "source": "Wikipedia en inglés, «Earth's circumference»",
+      "url": "https://en.wikipedia.org/wiki/Earth%27s_circumference"
+    },
+    {
+      "claim": "Eratóstenes fue nombrado bibliotecario por Ptolomeo III hacia el 240 a.C.; con estadios de 500 a 600 pies el resultado va de unas 24 000 a 29 000 millas.",
+      "source": "American Physical Society, APS News, «This Month in Physics History: Eratosthenes», junio de 2006",
+      "url": "https://www.aps.org/publications/apsnews/200606/history.cfm"
+    }
+  ],
+  "do_not_use": [
+    "decir que Eratóstenes miró el fondo de un pozo en Siena: Cleomedes solo habla de los gnomones de los relojes de sol; el pozo aparece en Estrabón XVII, 1, 48 sin relación con Eratóstenes",
+    "afirmar que contrató bematistas para medir a pasos la distancia: no está en Cleomedes ni en Estrabón; es un adorno moderno o una tradición tardía no verificada",
+    "decir que antes de él se creía que la Tierra era plana: la esfericidad la aceptaban los griegos desde el siglo V a.C. y Aristóteles dio argumentos un siglo antes",
+    "afirmar que acertó con un error del 1 o 2 por ciento: depende del estadio que se suponga y está discutido",
+    "fechar el libro de Cleomedes hacia el 240 a.C. como hace la página «Earth's circumference»: es un error; Cleomedes es muy posterior",
+    "citar a Plinio como fuente de los 252 000 estadios: no se leyó el texto de Plinio; solo se verificó Estrabón",
+    "dar el capítulo de Cleomedes como I, 7 o I, 10 sin precisar edición: la numeración cambia entre ediciones",
+    "presentar como hecho que pasó a 252 000 para que fuera divisible por 60: es una hipótesis de los historiadores"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "2026-11-13-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "las tablillas de Amarna y el acadio diplomático",
+    "hook": "Los faraones se carteaban con los reyes de Babilonia en una lengua que no era la suya. Lo sabemos por unas tablillas de barro que en 1887 se vendían en el mercado de antigüedades.",
+    "body": [
+      "Hacia 1887, vecinos de Amarna, en el Medio Egipto, sacaron de las ruinas de la capital de Akenatón un lote de tablillas de barro escritas en cuneiforme y las vendieron a anticuarios. Se conocen unas 382, entre tablillas y fragmentos. Más de doscientas están hoy en Berlín; las demás se reparten entre el Museo Británico, El Cairo, el Louvre y Moscú. La mayoría son cartas.",
+      "No están escritas en egipcio. Casi todas usan el acadio, la lengua de Babilonia, que era entonces la lengua de la diplomacia. En ella escribían al faraón los reyes de Babilonia, Mitanni, Asiria y el país de los hititas, que se llamaban entre sí «hermano». Los gobernantes vasallos de Canaán escribían en un acadio teñido de su propia lengua. Rib-Hadda, rey de Biblos, envió más de cincuenta cartas pidiendo ayuda militar.",
+      "El archivo abarca unos 25 o 30 años, a mediados del siglo XIV a.C., desde el final del reinado de Amenhotep III hasta el comienzo del de Tutankamón. Entre cortesías hay quejas muy humanas: Tushratta, rey de Mitanni, reprochó al faraón que le mandara estatuas de madera chapadas en oro en lugar de las de oro macizo prometidas. Las relaciones internacionales más antiguas que podemos leer ya regateaban el peso del oro."
+    ],
+    "question": "¿Qué dirían de nosotros las cartas que hoy escribimos sin pensar en quién las leerá?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Cartas de barro al faraón",
+    "subtitle": "Amarna, siglo XIV a.C.",
+    "body": "Unas 382 tablillas halladas hacia 1887 conservan la correspondencia del faraón con Babilonia, Mitanni, Asiria, los hititas y Canaán. Casi todas están en acadio, la lengua diplomática de la época, no en egipcio."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Amarna",
+      "#AntiguoEgipto",
+      "#Cuneiforme"
+    ],
+    "extended": [
+      "#Akenaton",
+      "#Mesopotamia",
+      "#Arqueologia",
+      "#Diplomacia",
+      "#Historia",
+      "#EdadDelBronce",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Descubiertas hacia 1887 por egipcios del lugar que las excavaron en secreto en Amarna y las vendieron en el mercado de antigüedades; aproximadamente 382 tablillas; reparto: Berlín 202-203, Museo Británico 99, El Cairo 49-50, Louvre 7, Museo Pushkin 3; la mayoría en acadio, teñido en Canaán por la lengua materna de los escribas; Rib-Hadda de Biblos escribió más de 58 cartas pidiendo ayuda militar; el archivo cubre no más de treinta años a mediados del siglo XIV a.C., desde el final de Amenhotep III hasta el segundo año de Tutankamón; queja de Tushratta por las estatuas de madera chapadas en lugar de oro macizo.",
+      "source": "Wikipedia en inglés, «Amarna letters»",
+      "url": "https://en.wikipedia.org/wiki/Amarna_letters"
+    },
+    {
+      "claim": "Campesinos egipcios encontraron tablillas y las vendieron a anticuarios; 382 tablillas, de ellas 350 cartas; escritas en acadio, la lengua de Babilonia y lingua franca diplomática de la época; el archivo abarca probablemente no mucho más de 25 años.",
+      "source": "University of Southern California, West Semitic Research Project, «El-Amarna Tablets»",
+      "url": "https://dornsife.usc.edu/wsrp/el-amarna-tablets/"
+    },
+    {
+      "claim": "Se conocen 382 tablillas, ordenadas con la numeración EA por Knudtzon en 1907; Tushratta se presenta como «Gran Rey, rey de Mitanni… tu hermano».",
+      "source": "World History Encyclopedia, «Amarna Letters»",
+      "url": "https://www.worldhistory.org/Amarna_Letters/"
+    },
+    {
+      "claim": "El museo de Berlín conserva más de doscientas cartas de Amarna.",
+      "source": "Biblical Archaeology Society, «German Museum Puts Amarna Letters Online»",
+      "url": "https://www.biblicalarchaeology.org/daily/news/german-museum-puts-amarna-letters-online/"
+    },
+    {
+      "claim": "Burna-Buriash II de Babilonia llama a menudo «hermano» al faraón.",
+      "source": "Wikipedia en inglés, «Burna-Buriash II»",
+      "url": "https://en.wikipedia.org/wiki/Burna-Buriash_II"
+    },
+    {
+      "claim": "Kadashman-Enlil I de Babilonia se queja ante Amenhotep III de que retuvieran a sus mensajeros y de un oro que parecía plata.",
+      "source": "Alice Mandell (Johns Hopkins University), «Kadashman-Enlil I of Babylon Feels Disrespected by Amunhotep III», TheTorah.com",
+      "url": "https://thetorah.com/article/kadashman-enlil-i-of-babylon-feels-disrespected-by-amunhotep-iii"
+    },
+    {
+      "claim": "Las cartas EA 31 y EA 32, entre Amenhotep III y el rey de Arzawa, están escritas en hitita.",
+      "source": "Wikipedia en inglés, «Arzawa»",
+      "url": "https://en.wikipedia.org/wiki/Arzawa"
+    }
+  ],
+  "do_not_use": [
+    "contar que las encontró una campesina que excavaba sebaj: lo recoge una exposición de Harvard, pero Eric Cline (2024) sugiere que la historia pudo inventarse para encubrir compras ilícitas; como mucho, «según la tradición»",
+    "afirmar que los especialistas las tomaron primero por falsificaciones: solo lo sostiene una fuente leída; no verificado con suficiente solidez",
+    "dar una cifra exacta del Museo Británico: las fuentes dan 99, 82 y otras; basta «el Museo Británico»",
+    "decir que el archivo abarca solo los reinados de Amenhotep III y Akenatón: llega al comienzo del de Tutankamón",
+    "hablar de «una carta en hitita»: son dos, EA 31 y EA 32, vinculadas a Arzawa y no a Hatti",
+    "decir que todas las 382 son cartas: unas 350 lo son; el resto son otros textos",
+    "presentar a Asiria como igual aceptado por todos: Burna-Buriash protestó por ese trato (no verificado en el texto de la carta)",
+    "citar la cifra de «20 minas al horno y no salieron 5»: solo apareció en un resumen de búsqueda"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

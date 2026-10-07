@@ -1,0 +1,96 @@
+{
+  "id": "2026-11-13-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Voltaire y el jardín final de Cándido (1759)",
+    "hook": "«Hay que cultivar nuestro jardín.» No es un consejo de Voltaire en primera persona. Es la última frase de una novela, y la dice un personaje que acaba de escuchar demasiados razonamientos.",
+    "body": [
+      "Cándido, o el optimismo apareció en enero de 1759, impreso por Cramer en Ginebra y casi a la vez en otras ciudades, sin el nombre de su autor: la portada decía que era una traducción del alemán del doctor Ralph. Voltaire negó haberlo escrito, aunque nadie lo dudó. Antes de terminar febrero, las autoridades de Ginebra y de París lo habían prohibido. Voltaire vivía entonces en Les Délices, su finca junto a Ginebra.",
+      "La novela se burla del optimismo de Leibniz, la idea de que vivimos en el mejor de los mundos posibles, después del terremoto de Lisboa de 1755. En el capítulo XXX, Cándido y sus compañeros, tras guerras, naufragios y la Inquisición, conocen a un viejo turco que cultiva veinte arpendes con sus hijos y dice que el trabajo aleja el aburrimiento, el vicio y la necesidad.",
+      "Pangloss, el maestro, repasa entonces toda la cadena de desgracias para demostrar que condujo a algo bueno. Cándido le contesta con la línea que cierra el libro: «Bien dicho, pero hay que cultivar nuestro jardín». Dice «nuestro», no «su». Qué significa ese jardín, si el campo, el trabajo o el espíritu, se discute desde entonces."
+    ],
+    "question": "¿Cuál es el jardín que te toca cultivar a ti?",
+    "quote": {
+      "text": "Eso está bien dicho, respondió Cándido, pero hay que cultivar nuestro jardín.",
+      "author": "Voltaire",
+      "work": "Cándido, o el optimismo, capítulo XXX (Ginebra, Cramer, 1759)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Voltaire",
+      "#Candido",
+      "#Ilustracion"
+    ],
+    "extended": [
+      "#Frases",
+      "#LiteraturaFrancesa",
+      "#Filosofia",
+      "#SigloXVIII",
+      "#Citas",
+      "#Libros",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Última frase del capítulo 30 de Candide: «Cela est bien dit, répondit Candide, mais il faut cultiver notre jardin.»; la precede el discurso de Pangloss «Tous les événements sont enchaînés dans le meilleur des mondes possibles…»; el viejo turco cultiva veinte arpents con sus hijos y dice que el trabajo aleja «l'ennui, le vice et le besoin».",
+      "source": "Wikisource en francés, Candide, ou l'Optimisme, edición Garnier 1877, capítulo 30",
+      "url": "https://fr.wikisource.org/wiki/Candide,_ou_l%E2%80%99Optimisme/Garnier_1877/Chapitre_30"
+    },
+    {
+      "claim": "Publicado en enero de 1759 en cinco países a más tardar el 15 de enero; impresores Cramer (Ginebra), Rey (Ámsterdam), Nourse (Londres) y Lambert (París); Voltaire negó la autoría, que apenas se discutió; a fines de febrero de 1759 el Gran Consejo de Ginebra y las autoridades de París lo habían prohibido; termina con «il faut cultiver notre jardin»; sátira del optimismo de Leibniz tras el terremoto de Lisboa.",
+      "source": "Wikipedia en inglés, «Candide»",
+      "url": "https://en.wikipedia.org/wiki/Candide"
+    },
+    {
+      "claim": "Publicación en Ginebra por Cramer en enero de 1759; Voltaire lo escribió en Les Délices; contexto del terremoto de Lisboa y del optimismo de Leibniz.",
+      "source": "Wikipedia en francés, «Candide»",
+      "url": "https://fr.wikipedia.org/wiki/Candide"
+    },
+    {
+      "claim": "Portada: «Traduit de l'allemand de M. le docteur Ralph».",
+      "source": "Project Gutenberg, Voltaire, Candide (ebook 4650)",
+      "url": "https://www.gutenberg.org/cache/epub/4650/pg4650-images.html"
+    },
+    {
+      "claim": "La Voltaire Foundation (Universidad de Oxford) publica el estudio de G. Murray, Voltaire's Candide: the Protean gardener, 1755-1762 (SVEC 69, 1970), con un capítulo titulado «Il faut cultiver notre jardin».",
+      "source": "Voltaire Foundation, Universidad de Oxford",
+      "url": "https://voltaire.ox.ac.uk/publication/voltaires-candide/"
+    },
+    {
+      "claim": "Voltaire (1694-1778) vivió en Les Délices, junto a Ginebra, de 1755 a 1760, y luego se trasladó a Ferney.",
+      "source": "Wikipedia en inglés, «Les Délices»",
+      "url": "https://en.wikipedia.org/wiki/Les_D%C3%A9lices"
+    },
+    {
+      "claim": "El sentido de «cultiver» se discute: Burton Raffel lo traduce como trabajo agrícola; P. N. Furbank responde que el propio Voltaire usó «cultiver» en el sentido de ilustrar.",
+      "source": "The New York Review of Books, cartas «Lost in Translation», 16 de noviembre de 2006",
+      "url": "https://www.nybooks.com/articles/2006/11/16/lost-in-translation/"
+    }
+  ],
+  "do_not_use": [
+    "citar «il faut cultiver son jardin» o «cada uno debe cultivar su jardín»: el texto dice «notre», nuestro",
+    "atribuir la frase a Pangloss, a Martin o al viejo turco: la dice Cándido",
+    "presentarla como máxima personal de Voltaire sin decir que la pronuncia un personaje",
+    "dar cifras de ejemplares vendidos: las fuentes discrepan (6000 en el primer mes según Wikipedia en francés, 20 000 a 30 000 en el año según la inglesa)",
+    "dar fechas exactas de las prohibiciones (23 y 24 de febrero de 1759) o de la inclusión en el Índice: no verificadas en fuentes de calidad",
+    "imponer una lectura única del jardín («ocúpate de lo tuyo», trabajo agrícola o cultivo del espíritu): es interpretación discutida",
+    "decir que la portada de 1759 ya mencionaba las adiciones halladas en el bolsillo del doctor Ralph: eso es de ediciones posteriores",
+    "atribuir la frase a Rousseau o presentarla como respuesta comprobada a Rousseau: no verificado",
+    "presentar la traducción española de la cita como edición publicada: es traducción propia del francés"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
