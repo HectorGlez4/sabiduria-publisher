@@ -2396,8 +2396,9 @@
   },
   "jose-marti-el-primer-trabajo-del-hombre-es-reconquistarse": {
     "post_id": "18101166011625985",
-    "published_at": "2026-10-08T09:36:45.191861+00:00",
-    "autor": "jose-marti"
+    "published_at": "2026-10-08T09:36:53+00:00",
+    "autor": "jose-marti",
+    "conciliado": true
   },
   "miguel-de-unamuno-hay-algo-que-a-falta-de-otro": {
     "post_id": "18145369081576121",
