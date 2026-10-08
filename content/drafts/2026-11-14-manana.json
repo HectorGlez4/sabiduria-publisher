@@ -1,0 +1,63 @@
+{
+  "id": "2026-11-14-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Josef Čapek y la palabra robot",
+    "hook": "La palabra «robot» se le atribuye a Karel Čapek. Él mismo explicó, en 1933, que no era suya.",
+    "body": [
+      "El 24 de diciembre de 1933, Karel Čapek publicó en el diario praguense Lidové noviny una nota breve sobre el origen de la palabra. Contó que, mientras escribía su obra de teatro R.U.R., no sabía cómo llamar a sus trabajadores artificiales. Había pensado en «laboři», del latín, pero le sonaba a papel.",
+      "Fue a preguntarle a su hermano Josef, pintor, que estaba frente al caballete. Josef le contestó con el pincel en la boca: «Pues llámalos robots». Y siguió pintando. La palabra viene del checo «robota», el trabajo forzado que los siervos debían a su señor.",
+      "R.U.R. se estrenó en enero de 1921. La primera función no fue en el Teatro Nacional de Praga, que había aplazado la fecha, sino en Hradec Králové, el día 2, a cargo de aficionados que no se enteraron del aplazamiento. Josef Čapek fue detenido por la Gestapo el 1 de septiembre de 1939 y murió en abril de 1945, días antes del final de la guerra. Su tumba en Praga es simbólica."
+    ],
+    "question": "¿Qué otras palabras usamos a diario sin saber quién las inventó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El hermano que inventó «robot»",
+    "subtitle": "Praga, 1920-1933",
+    "body": "Karel Čapek pensaba llamar «laboři» a los obreros artificiales de su obra R.U.R. Su hermano Josef, pintor, le sugirió otra palabra sin dejar de pintar. Karel lo contó en 1933: «robot» venía de «robota», el trabajo forzado de los siervos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Robot", "#Capek", "#Etimologia"],
+    "extended": ["#Literatura", "#Teatro", "#Praga", "#CienciaFiccion", "#Palabras", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Karel Čapek publicó la nota sobre el origen de la palabra en Lidové noviny el 24 de diciembre de 1933, atribuyéndola a su hermano Josef. Pensó en «laboři», pero le parecía «papírové» (de papel). Josef, pintor, frente al caballete: «Tak jim řekni roboti», murmuró con el pincel en la boca, y siguió pintando. La palabra apareció por primera vez en R.U.R. en 1921.",
+      "source": "Novinky.cz, «Před 130 lety se narodil literární velikán, který dal světu robota. Toto slovo však nevymyslel»",
+      "url": "https://www.novinky.cz/historie/clanek/pred-130-lety-se-narodil-literarni-velikan-ktery-dal-svetu-robota-toto-slovo-vsak-nevymyslel-40309280"
+    },
+    {
+      "claim": "La nota «O slove robot» salió en la sección Kultúrna kronika de Lidové noviny en Nochebuena de 1933; Čapek admitió que no inventó la palabra; «labori» le parecía de papel; Josef le dijo «llámalos robots»; la palabra remite al eslavo «robota», trabajo forzado y servil, derivado de «rab» (esclavo).",
+      "source": "TASR (agencia de prensa de la República Eslovaca), teraz.sk, artículo de Marián Gladiš",
+      "url": "https://www.teraz.sk/kultura/slovo/508386-clanek.html"
+    },
+    {
+      "claim": "R.U.R. se estrenó en el Teatro Nacional de Praga el 25 de enero de 1921, fecha aplazada; el estreno mundial fue el 2 de enero de 1921 en Hradec Králové por la compañía aficionada Klicpera, que no se enteró del aplazamiento. Karel propuso primero «laboři»; la palabra la inventó en realidad su hermano Josef.",
+      "source": "ČT24, Televisión Checa, «Před sto lety svět poprvé uslyšel slovo robot»",
+      "url": "https://ct24.ceskatelevize.cz/clanek/veda/pred-sto-lety-svet-poprve-uslysel-slovo-robot-karel-capek-inspiroval-ke-vzniku-stroju-ktere-vladnou-39198"
+    },
+    {
+      "claim": "La primera puesta en escena fue de aficionados en Hradec Králové el 2 de enero de 1921; en el Teatro Nacional de Praga se estrenó el 25 de enero de 1921.",
+      "source": "Ministerio de Asuntos Exteriores de la República Checa, embajada en Copenhague, «České slovo robot slaví v letošním roce»",
+      "url": "https://mzv.gov.cz/copenhagen/cz/novinky/x2021/ceske_slovo_robot_slavi_v_letosnim_roce.html"
+    },
+    {
+      "claim": "Josef Čapek fue detenido el 1 de septiembre de 1939, pasó por Dachau, Buchenwald, Sachsenhausen y Bergen-Belsen, y murió el 10 de abril de 1945 de tifus, pocos días antes del fin de la guerra; su tumba en Vyšehrad es simbólica.",
+      "source": "ČT24, Televisión Checa, «Josef Čapek se konce války nedočkal jen o pár dní»",
+      "url": "https://ct24.ceskatelevize.cz/clanek/kultura/josef-capek-se-konce-valky-nedockal-jen-o-par-dni-203995"
+    }
+  ],
+  "do_not_use": [
+    "Fecha exacta de la muerte de Josef Čapek: ČT24 da el 10 de abril de 1945 durante una marcha de la muerte; Artnet da el 12 de abril en Bergen-Belsen; un tribunal fijó en 1948 una fecha oficial distinta. El copy dice solo «abril de 1945».",
+    "Decir que Karel Čapek inventó la palabra «robot»: él mismo la atribuyó a Josef en 1933.",
+    "Que «robot» significa sin más «trabajo» en checo: la «robota» histórica es el trabajo forzado de la servidumbre; el checo moderno usa «práce» para trabajo.",
+    "Que los robots de R.U.R. eran máquinas metálicas: en la obra son seres artificiales de materia orgánica, no mecanismos. El copy dice «trabajadores artificiales».",
+    "Fechar la obra solo en 1920 o solo en 1921 sin matiz: el libro se publicó en 1920 y el estreno fue en enero de 1921. El copy da el estreno.",
+    "La cita de Josef es traducción propia del checo «Tak jim řekni roboti»."
+  ],
+  "status": "draft"
+}

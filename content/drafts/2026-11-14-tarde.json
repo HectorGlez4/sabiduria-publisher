@@ -1,0 +1,67 @@
+{
+  "id": "2026-11-14-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Goya y el sueño de la razón (Capricho 43)",
+    "hook": "La frase más famosa de Goya se cita como un elogio de la razón. El comentario que la acompañaba en su época dice algo distinto: defiende también a la fantasía.",
+    "body": [
+      "La frase está grabada en la estampa 43 de Los Caprichos, la serie de ochenta aguafuertes que Goya puso a la venta en Madrid en febrero de 1799. Un hombre duerme sobre una mesa de trabajo. Detrás de él se acercan búhos y murciélagos.",
+      "El dibujo preparatorio, que guarda el Museo del Prado, llevaba otro título: «Idioma universal». Y uno de los manuscritos de la época que explican la serie, conservado también en el Prado, comenta la estampa así: «La fantasía abandonada de la razón produce monstruos imposibles: unida con ella es madre de las artes y origen de las maravillas».",
+      "Esa segunda mitad casi nunca se cita. Con ella, la frase deja de enfrentar la razón a la imaginación. Lo que engendra monstruos es la fantasía sola. La misma fantasía, acompañada, engendra las artes."
+    ],
+    "question": "¿Dónde termina la imaginación que crea y empieza la que inventa monstruos?",
+    "quote": {
+      "text": "El sueño de la razón produce monstruos.",
+      "author": "Francisco de Goya",
+      "work": "Los Caprichos, estampa 43 (Madrid, 1799)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Goya", "#Citas", "#Arte"],
+    "extended": ["#LosCaprichos", "#MuseoDelPrado", "#Grabado", "#Ilustracion", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "La estampa lleva grabada la inscripción «el sueño de la razon produce monstruos» en el ángulo inferior izquierdo y el número «43.» en el superior derecho; aguafuerte y aguatinta, ca. 1797-1799. El comentario del manuscrito del Museo Nacional del Prado dice: «La fantasía abandonada de la razón produce monstruos imposibles: unida con ella es madre de las artes y origen de las maravillas». El de Ayala: «La fantasía abandonada de la razón produce monstruos, y unida con ella es la madre de las artes». El de la Biblioteca Nacional: «cuando los hombres no oyen el grito de la razón, todo se vuelve visiones».",
+      "source": "Fundación Goya en Aragón, catálogo razonado, ficha de la estampa «El sueño de la razón produce monstruos»",
+      "url": "https://fundaciongoyaenaragon.es/obra/el-sueno-de-la-razon-produce-monstruos/913"
+    },
+    {
+      "claim": "El dibujo preparatorio (lápiz negro y tinta ferrogálica sobre papel verjurado, 230 x 155 mm, ca. 1796-1797) está en el Museo Nacional del Prado, inventario D. 4162, procedente de Javier y Mariano Goya y de Carderera, ingresado en 1886; se basa en el Sueño 1, «Idioma universal».",
+      "source": "Fundación Goya en Aragón, catálogo razonado, ficha del dibujo preparatorio",
+      "url": "https://fundaciongoyaenaragon.es/obra/el-sueno-de-la-razon-produce-monstruos-1/1060"
+    },
+    {
+      "claim": "Ficha del dibujo en el Prado con el título «Ydioma universal. El Autor soñando», estudio preparatorio para el Capricho 43, 1797.",
+      "source": "Utpictura18, Université d'Aix-Marseille, noticia 12954",
+      "url": "https://utpictura18.univ-amu.fr/en/notice/12954-the-sleep-of-reason-produces-monsters-preparatory-study-2-goya"
+    },
+    {
+      "claim": "Los Caprichos se anunciaron el 6 de febrero de 1799; eran 80 estampas y se vendían por 320 reales. Existen tres comentarios manuscritos (Museo del Prado, Biblioteca Nacional y colección Ayala). Por el temor a la Inquisición, Goya retiró la serie de la venta y ofreció las planchas al rey; figuran en el inventario real en 1803.",
+      "source": "InfoGoya, Universidad de Zaragoza, «The Caprichos»",
+      "url": "https://goya.unizar.es/InfoGoya/Work/Caprichos.html"
+    },
+    {
+      "claim": "Ficha de museo con el texto completo del comentario en español («La fantasía abandonada de la razón produce monstruos imposibles: unida con ella, es madre de las artes y origen de sus marabillas») y su traducción inglesa.",
+      "source": "Wichita Art Museum, colección, «The Sleep of Reason Produces Monsters»",
+      "url": "https://wam.org/our-collection/collection/the-sleep-of-reason-produces-monsters-el-sueсo-do-la-razon-produce-monstruos/"
+    }
+  ],
+  "do_not_use": [
+    "Que la estampa 43 se concibió como frontispicio o portada de la serie: lo afirma el Metropolitan Museum según un resumen de búsqueda, pero su página dio error 429 y no se pudo leer; las fichas de la Fundación Goya consultadas no lo dicen. No se afirma.",
+    "El periódico del anuncio: InfoGoya (Universidad de Zaragoza) dice Gaceta de Madrid; otras referencias dicen Diario de Madrid. El copy dice solo «febrero de 1799».",
+    "Atribuir el comentario del manuscrito del Prado directamente a la mano de Goya: InfoGoya dice que dos de los tres comentarios están escritos por él, sin precisar cuáles en las fuentes consultadas. El copy dice «uno de los manuscritos de la época».",
+    "Variantes que circulan del comentario («la fantasía, aislada de la razón, sólo produce monstruos imposibles... fuente de sus deseos»): no coinciden con el texto del manuscrito.",
+    "Que solo se vendieron 27 juegos: cifra que aparece en resúmenes de búsqueda, no verificada en una ficha leída.",
+    "Interpretaciones sobre la influencia de Rousseau o la lectura de Salman Rushdie: son lecturas de comentaristas, no hechos.",
+    "Decidir si «sueño» significa aquí 'dormir' o 'soñar': la ambigüedad existe en español y el copy no la resuelve."
+  ],
+  "status": "draft"
+}

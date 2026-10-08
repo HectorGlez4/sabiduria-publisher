@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-14-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "John Donne y la Meditación XVII (1624)",
+    "hook": "«Ningún hombre es una isla» no es un verso. Es prosa, y la escribió un enfermo que oía doblar una campana y no sabía si era por él.",
+    "body": [
+      "En noviembre de 1623, John Donne cayó gravemente enfermo en Londres. Nunca nombró la enfermedad. Al recuperarse, en diciembre, escribió en pocas semanas un libro de veintitrés partes, una por cada etapa de su mal: Devociones para ocasiones emergentes. Se publicó en 1624.",
+      "La meditación diecisiete empieza en la cama. Fuera suena una campana que dobla por alguien que agoniza. Donne piensa que quizá el moribundo está tan mal que no sabe que es por él, y que quizá los que lo rodean la han tocado por el propio Donne sin decírselo.",
+      "De ahí sale la frase. En el mismo pasaje compara a la humanidad con un único libro de un solo autor: cuando alguien muere, dice, no se arranca su capítulo, se traduce. La isla, la campana y el libro dicen lo mismo: ninguna muerte le es ajena a nadie."
+    ],
+    "question": "¿Por qué cuesta tanto sentir como propia la pérdida de un desconocido?",
+    "quote": {
+      "text": "Ningún hombre es una isla, completo en sí mismo. La muerte de cualquier hombre me disminuye, porque estoy ligado a la humanidad. Por eso nunca preguntes por quién doblan las campanas: doblan por ti.",
+      "author": "John Donne",
+      "work": "Devociones para ocasiones emergentes, Meditación XVII (Londres, 1624)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JohnDonne", "#Citas", "#Literatura"],
+    "extended": ["#NingunHombreEsUnaIsla", "#SigloXVII", "#Inglaterra", "#Humanidad", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la Meditación XVII, encabezada «Nunc lento sonitu dicunt, morieris»: contiene «No man is an island, entire of itself», «any man's death diminishes me, because I am involved in mankind» y «never send to know for whom the bell tolls; it tolls for thee» (la transcripción digital pone «bells tolls»). Empieza suponiendo que aquel por quien dobla la campana puede estar tan enfermo que no sabe que dobla por él, y que los que rodean al propio autor pueden haberla hecho tocar por él. Compara a la humanidad con un solo volumen de un único autor: cuando un hombre muere, su capítulo no se arranca, se traduce a una lengua mejor. Edición: University of Michigan Press (Ann Arbor Paperbacks), 1959, sobre la impresión de Londres de 1624. La traducción al español es propia.",
+      "source": "John Donne, Devotions upon Emergent Occasions, Project Gutenberg n.º 23772 (texto de la edición de Ann Arbor, 1959)",
+      "url": "https://www.gutenberg.org/files/23772/23772-h/23772-h.htm"
+    },
+    {
+      "claim": "Donne enfermó gravemente en noviembre de 1623; la enfermedad no está identificada (se proponen tifus o fiebre recurrente). Escribió la obra al recuperarse, en diciembre, con gran rapidez (Post 2006); se registró en el Stationers' Company hacia el 9 de enero de 1624 y se publicó ese año; reediciones en 1634 y 1638. Son 23 partes, cada una con meditación, expostulación y oración. La grafía original es «No man is an Iland, intire of it selfe».",
+      "source": "Wikipedia, «Devotions upon Emergent Occasions» (cita a Post 2006, Carey 2008, Guibbory 2006 y la edición de 1923)",
+      "url": "https://en.wikipedia.org/wiki/Devotions_upon_Emergent_Occasions"
+    },
+    {
+      "claim": "Las Devociones se escribieron durante una grave enfermedad en 1623.",
+      "source": "University of Michigan Press, ficha editorial de «Devotions Upon Emergent Occasions»",
+      "url": "https://press.umich.edu/Books/D/Devotions-Upon-Emergent-Occasions2"
+    },
+    {
+      "claim": "La biblioteca de la Universidad de Carolina del Norte describe su ejemplar de la cuarta edición (1634) de las Devotions, obra conocida sobre todo por el pasaje «No man is an island». (Leído a través del resumen de búsqueda; la URL del blog no se abrió directamente.)",
+      "source": "UNC Libraries, Rare Book Collection, «John Donne's Devotions Upon Emergent Occasions»",
+      "url": "https://blogs.lib.unc.edu/rbc/"
+    }
+  ],
+  "do_not_use": [
+    "Presentar el pasaje como poema: es prosa, parte de una meditación más larga. Se reproduce a menudo en verso, pero no lo es.",
+    "Diagnosticar la enfermedad (tifus, fiebre recurrente): Donne no la nombra y las fuentes discrepan. El copy no la nombra.",
+    "Hemingway tomó el título de Por quién doblan las campanas (1940) de esta meditación: es cierto según las fuentes encontradas en búsqueda (Wikipedia, John Donne Journal), pero no se leyó directamente en esta ejecución, así que no entra en el copy.",
+    "Que las campanas que oía eran las de la catedral de San Pablo, de la que era deán, o las de una iglesia concreta junto a su casa: no se verificó.",
+    "La versión «por quién doblan las campanas, doblan por ti» con signo de pregunta: en el original no es una pregunta, es una orden de no enviar a preguntar."
+  ],
+  "status": "draft"
+}

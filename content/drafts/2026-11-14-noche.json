@@ -1,0 +1,64 @@
+{
+  "id": "2026-11-14-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la biblioteca de Asurbanipal en Nínive",
+    "hook": "De la biblioteca de Asurbanipal se conservan más de treinta mil piezas de barro. Lo que no llegó hasta nosotros es, probablemente, una buena parte de lo que contenía.",
+    "body": [
+      "Asurbanipal reinó en Asiria en el siglo VII a.C. y quiso reunir en Nínive todo el saber escrito de su tiempo. Dos tablillas del Museo Británico conservan cómo recibieron su exigencia de textos los habitantes de Babilonia y los sabios de la vecina Borsippa. Parte de lo que llegó a Nínive fue botín de guerra.",
+      "En 612 a.C., babilonios y medos tomaron la ciudad y la incendiaron. Se cree que el fuego coció en parte las tablillas de barro y ayudó a conservarlas. Austen Henry Layard empezó a encontrarlas a partir de 1849, y Hormuzd Rassam halló otro depósito unos tres años después. Nadie anotó dónde apareció cada una, y en Londres se mezclaron. El Museo Británico cuenta hoy 30 943 piezas, que corresponderían a unos diez mil textos.",
+      "Pero no todo se escribía en barro. Una parte importante de la colección eran tablillas de madera para escribir, probablemente cubiertas de cera, y la materia orgánica no resistió. Lo que hoy leemos de Nínive es un recordatorio de que se conserva lo que aguanta el fuego, no siempre lo que más importaba."
+    ],
+    "question": "¿Qué parte de lo que hoy escribimos sobrevivirá a su soporte?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La biblioteca que coció el fuego",
+    "subtitle": "Nínive, 612 a.C.",
+    "body": "El incendio de Nínive pudo endurecer las tablillas de barro de Asurbanipal: el Museo Británico guarda 30 943 piezas. Las tablillas de madera y cera, que eran una parte importante de la colección, no resistieron."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Asurbanipal", "#Nínive", "#Mesopotamia"],
+    "extended": ["#Asiria", "#Cuneiforme", "#Bibliotecas", "#Arqueologia", "#MuseoBritanico", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "La primera parte se halló a fines de 1849 en el Palacio Sudoeste; Rassam halló tres años después una biblioteca similar en el palacio de Asurbanipal, sin registro de hallazgos, y las tablillas se mezclaron después; la base del Museo Británico cuenta 30 943 «tablillas», que restando fragmentos del mismo texto serían unos 10 000 textos; Nínive fue destruida en 612 a.C. por babilonios, escitas y medos; se cree que el fuego coció parcialmente las tablillas y ayudó a preservarlas; una gran parte de las bibliotecas de Asurbanipal eran tablillas de escribir (writing-boards) y no tablillas de barro, y los textos en tablillas de cera se perdieron por su naturaleza orgánica (cita a Parpola 1983, JNES 42; Fincke 2004, Iraq 66).",
+      "source": "Wikipedia en inglés, «Library of Ashurbanipal»",
+      "url": "https://en.wikipedia.org/wiki/Library_of_Ashurbanipal"
+    },
+    {
+      "claim": "Nínive fue incendiada en 612 a.C. y el fuego pudo cocer las tablillas; el equipo de Layard las halló en las salas 40 y 41 del Palacio Sudoeste de Senaquerib en la primavera de 1850 y Rassam halló un depósito similar en el Palacio Norte de Asurbanipal unos tres años después; más de 30 000 tablillas y fragmentos están en el Museo Británico; las fuerzas de Asurbanipal saquearon tablillas eruditas babilónicas.",
+      "source": "National Geographic, «Ancient Assyria library Nineveh»",
+      "url": "https://www.nationalgeographic.com/history/article/ancient-assyria-library-nineveh"
+    },
+    {
+      "claim": "Edición de dos tablillas del Museo Británico (BM 28825 y BM 45642) sobre el afán de Asurbanipal por adquirir saber escrito: una trata de cómo recibieron los ciudadanos de Babilonia la exigencia de tablillas del rey; la otra, de la respuesta colectiva de los eruditos de Borsippa a un mensaje real similar.",
+      "source": "Grant Frame y A. R. George, «The Royal Libraries of Nineveh: New Evidence for King Ashurbanipal's Tablet Collecting», Iraq 67 (2005), 265-284, Cambridge University Press",
+      "url": "https://www.cambridge.org/core/journals/iraq/article/royal-libraries-of-nineveh-new-evidence-for-king-ashurbanipals-tablet-collecting/187B5A4416CCEF50F507BE8B4CE44CE3"
+    },
+    {
+      "claim": "Los agujeros de las tablillas de la biblioteca de Asurbanipal podrían ser un eco visual de los de las tablillas de escribir de madera, que posiblemente sirvieron de modelo para las de barro.",
+      "source": "Paola Corò y Stefania Ermidoro, «Copying from Wooden Originals?», KASKAL, nueva serie, vol. 1 (2024), Edizioni Ca' Foscari",
+      "url": "http://edizionicafoscari.it/v4/en/edizioni4/riviste/kaskal/2024/1/copying-from-wooden-originals-investigating-the-ma/"
+    },
+    {
+      "claim": "El proyecto de la Biblioteca de Asurbanipal del Museo Británico creó una copia digital y un catálogo mejorado, y estableció por primera vez cuántas tablillas de Nínive llevan una marca de biblioteca o colofón. (Leído a través de resumen de búsqueda: la página devolvió 403.)",
+      "source": "British Museum, «What was Ashurbanipal's Library?»",
+      "url": "https://www.britishmuseum.org/research/projects/what-was-ashurbanipals-library"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar como hecho que el incendio de 612 a.C. coció las tablillas y por eso se salvaron: las fuentes lo presentan como creencia o posibilidad, y el barro sin cocer también se conserva. El copy dice «se cree».",
+    "Dar una proporción concreta de tablillas de madera frente a las de barro: no se leyó el artículo de Parpola (1983); solo se afirma que eran «una parte importante».",
+    "«Treinta mil libros» o «treinta mil textos»: 30 943 es el número de piezas, muchas fragmentos del mismo texto; los textos serían unos diez mil.",
+    "Atribuir el saqueo de Nínive solo a los babilonios: participaron también medos (y escitas, según algunas fuentes).",
+    "Fecha de Rassam: Wikipedia dice «tres años después» de 1849; National Geographic, unos tres años después de 1850; otras referencias dan 1853. El copy dice «unos tres años después».",
+    "Maldiciones en los colofones contra quien robe la tablilla: circulan en divulgación, pero no se verificaron en esta ejecución (Oracc no abrió por certificado).",
+    "Llamarla «la primera biblioteca del mundo» o «la mayor de la Antigüedad»: hubo colecciones de tablillas anteriores y no se verificó ningún superlativo. El copy no usa ninguno."
+  ],
+  "status": "draft"
+}
