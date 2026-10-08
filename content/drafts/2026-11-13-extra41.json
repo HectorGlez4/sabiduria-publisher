@@ -1,0 +1,66 @@
+{
+  "id": "2026-11-13-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Alexander Pope y el Ensayo sobre la crítica (1711)",
+    "hook": "La frase más repetida sobre el perdón no se escribió para los pecadores. Se escribió para los críticos literarios.",
+    "body": [
+      "En mayo de 1711, Alexander Pope publicó en Londres un poema largo en pareados titulado Ensayo sobre la crítica. Tenía veintitrés años. El poema es un manual en verso para quienes juzgan libros ajenos: qué saber antes de opinar, qué defectos vigilar, cómo no confundir ingenio con criterio.",
+      "La frase cierra la segunda parte, en el verso 525. Los versos que la preceden hablan de los críticos que destrozan a un mal autor por sed de gloria, y piden que en el crítico no se pierda la persona: el buen carácter y el buen juicio deben ir siempre juntos. El perdón que Pope reclama es, en primer lugar, el del lector severo ante los versos torpes de otro.",
+      "Del mismo poema salieron otras dos frases que hoy circulan sueltas: «Un poco de saber es cosa peligrosa» y «Los necios se lanzan donde los ángeles temen pisar». Las tres nacieron como consejos sobre cómo leer. Se han quedado como consejos sobre cómo vivir, y quizá no sea un desvío tan grande."
+    ],
+    "question": "¿Qué es más difícil de perdonar, un error ajeno o uno que habríamos sabido evitar?",
+    "quote": {
+      "text": "Errar es humano; perdonar, divino.",
+      "author": "Alexander Pope",
+      "work": "Ensayo sobre la crítica, parte II (1711)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AlexanderPope", "#Citas", "#Literatura"],
+    "extended": ["#PoesiaInglesa", "#Perdon", "#Critica", "#Siglo18", "#Lectura"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema: en la parte II, los versos «Ah, ne'er so dire a thirst of glory boast, / Nor in the critic let the man be lost / Good-nature and good sense must ever join; / To err is human, to forgive, divine» siguen a un pasaje sobre los fines bajos a los que empuja la sed de alabanza.",
+      "source": "Project Gutenberg, Alexander Pope, «An Essay on Criticism», eBook #7409",
+      "url": "https://www.gutenberg.org/files/7409/7409-h/7409-h.htm"
+    },
+    {
+      "claim": "El poema se publicó por primera vez en mayo de 1711. «To Err is Human; to Forgive, Divine» es el verso 525, al final de la parte II; «A little Learning is a dangerous thing» es de la parte II (vv. 215-216) y «Fools rush in where angels fear to tread» de la parte III (v. 625).",
+      "source": "Wikipedia en inglés, «An Essay on Criticism»",
+      "url": "https://en.wikipedia.org/wiki/An_Essay_on_Criticism"
+    },
+    {
+      "claim": "La frase procede de An Essay on Criticism, parte II (1711); en la edición original se escribe «To err is Humane; to Forgive, Divine», porque «humane» era la grafía corriente de «human» a principios del siglo XVIII.",
+      "source": "The Phrase Finder, «To err is human»",
+      "url": "https://www.phrases.org.uk/meanings/to-err-is-human.html"
+    },
+    {
+      "claim": "La frase cierra la sección del poema en que Pope aconseja a los críticos, y por extensión a todos los escritores; Pope tenía 23 años cuando se publicó en 1711.",
+      "source": "Oliver Tearle (Loughborough University), Interesting Literature, «The Meaning and Origin of 'To Err is Human, to Forgive Divine'»",
+      "url": "https://interestingliterature.com/2023/04/to-err-is-human-to-forgive-divine-meaning-origin/"
+    },
+    {
+      "claim": "Fecha exacta de primera publicación: 15 de mayo de 1711; existe un facsímil de la edición de 1711 (1928) y el texto se reimprimió en The Works of Alexander Pope (1717).",
+      "source": "Wikisource en inglés, «An Essay on Criticism» (página de versiones)",
+      "url": "https://en.wikisource.org/wiki/An_Essay_on_Criticism"
+    }
+  ],
+  "do_not_use": [
+    "«Errare humanum est» como frase de Séneca o de otro autor latino concreto: circula con varias atribuciones (Séneca, san Jerónimo, san Agustín) y no se verificó ninguna en esta investigación. No se menciona precedente latino en el copy.",
+    "Un uso inglés anterior a Pope (se cita uno de 1678 atribuido a Merriam-Webster): no se pudo comprobar en la fuente. Descartado.",
+    "Decir que Pope era un poeta religioso y que «divino» tiene sentido doctrinal: la lectura habitual es que «divine» designa lo supremamente admirable. El copy no interpreta la teología del verso.",
+    "Afirmar que el poema se publicó anónimo: es probable, pero las fuentes consultadas no lo dicen. No se usa.",
+    "Corregir a quien cita la frase con «humano»: «humane» era solo la grafía de la época, no otra palabra con otro sentido.",
+    "«Un poco de conocimiento es algo peligroso»: es la forma mal citada; Pope escribió «learning» (saber, instrucción). En el copy se traduce como «un poco de saber»."
+  ],
+  "status": "draft"
+}

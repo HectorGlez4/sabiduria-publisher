@@ -1,0 +1,61 @@
+{
+  "id": "2026-11-13-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Bertrand Russell y El triunfo de la estupidez (1933)",
+    "hook": "La frase de Bertrand Russell sobre los necios seguros de sí mismos no es una ocurrencia sobre el mundo en general. Tiene fecha y tiene país.",
+    "body": [
+      "El artículo está fechado el 10 de mayo de 1933. Russell lo escribió para los periódicos de Hearst en Estados Unidos, y se tituló «El triunfo de la estupidez». Ese mismo día empezaban en Alemania las quemas públicas de libros.",
+      "El texto habla de Alemania. Russell recuerda que durante ciento cincuenta años ese país había hecho por el saber más que ningún otro, y que en pocas semanas buena parte de sus intelectuales estaban exiliados, escondidos o desaparecidos. Lo explica con la frase de hoy. Y advierte que lo mismo podía ocurrir en otros países, incluido el suyo.",
+      "Con los años la frase se recortó hasta parecer un chiste sobre los tontos. En el original es un diagnóstico político: el peligro no era solo la certeza de unos, sino la duda paralizante de los otros, que dudaban demasiado para organizarse a tiempo."
+    ],
+    "question": "¿Cuándo la duda es prudencia y cuándo empieza a ser una forma de ausentarse?",
+    "quote": {
+      "text": "La causa fundamental del problema es que, en el mundo moderno, los estúpidos están seguros de todo y los inteligentes están llenos de dudas.",
+      "author": "Bertrand Russell",
+      "work": "«El triunfo de la estupidez» (1933)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BertrandRussell", "#Citas", "#Historia"],
+    "extended": ["#Filosofia", "#1933", "#Pensamiento", "#Duda", "#SigloXX"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del ensayo «The Triumph of Stupidity», 10 de mayo de 1933, recogido en Mortals and Others, vol. 2, p. 28: «The fundamental cause of the trouble is that in the modern world the stupid are cocksure while the intelligent are full of doubt». Trata de Alemania: durante unos 150 años los alemanes hicieron más que ninguna otra nación por el saber; muchos de sus intelectuales están exiliados, escondidos o desaparecidos; advierte que lo mismo podría pasar en otros lugares, y menciona a los fascistas británicos. La frase siguiente dice que incluso los inteligentes que creen tener un remedio son demasiado individualistas. La traducción al español es propia.",
+      "source": "Bertrand Russell, «The Triumph of Stupidity», en el portal de la Russell Society japonesa (russell-j.com, Akiyoshi Matsushita)",
+      "url": "https://www.russell-j.com/0583TS.HTM"
+    },
+    {
+      "claim": "El ensayo, fechado el 10 de mayo de 1933, lamentaba el ascenso del movimiento nazi en Alemania; apareció en el San Francisco Examiner con el título «Stupidity Rules» y se reimprimió como «The Triumph of Stupidity» en Mortals and Others. La versión «The trouble with the world is that the stupid are cocksure and the intelligent full of doubt» es una paráfrasis posterior (Evan Esar, 1949), y la variante con «fools and fanatics» es de 2001 y de origen incierto.",
+      "source": "Quote Investigator, «The Best Lack All Conviction While the Worst Are Full of Passionate Intensity» (2015)",
+      "url": "https://quoteinvestigator.com/2015/03/04/self-doubt/"
+    },
+    {
+      "claim": "Mortals and Others, Volume II: American Essays 1931-1935, ed. Harry Ruja, Routledge, 1998. Reúne los artículos que Russell publicó en los periódicos de Hearst entre marzo de 1933 y abril de 1935.",
+      "source": "Routledge, ficha editorial de «Mortals and Others, Volume II»",
+      "url": "https://www.routledge.com/Mortals-and-Others-Volume-II-American-Essays-1931-1935/Ruja-Russell/p/book/9780415178679"
+    },
+    {
+      "claim": "Las quemas rituales de libros en Alemania comenzaron el 10 de mayo de 1933; algunas se aplazaron por la lluvia y otras se celebraron a finales de junio.",
+      "source": "United States Holocaust Memorial Museum, Holocaust Encyclopedia, «Book Burning»",
+      "url": "https://encyclopedia.ushmm.org/content/en/article/book-burning"
+    }
+  ],
+  "do_not_use": [
+    "«The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts»: variante que circula desde 2001, de origen incierto según Quote Investigator. No es el texto de 1933.",
+    "Decir que Russell escribió el artículo como reacción a la quema de libros: coinciden en la fecha, pero ninguna fuente dice que la conociera al escribirlo. El copy solo afirma la coincidencia.",
+    "El periódico exacto de primera publicación: Quote Investigator da el San Francisco Examiner («Stupidity Rules»); otras referencias, el New York American. Era una columna sindicada en la prensa de Hearst. El copy dice solo «la prensa de Hearst».",
+    "Presentar la frase como reformulación de Yeats («The best lack all conviction, while the worst / Are full of passionate intensity», 1920): la idea es próxima, pero no hay prueba de que Russell la tomara de ahí.",
+    "Relacionarla con el efecto Dunning-Kruger como si Russell lo hubiera anticipado científicamente: es una asociación de divulgación, no algo que diga el texto.",
+    "«Columna semanal»: la frecuencia exacta no se verificó en las fuentes. Solo se afirma que los artículos salieron en periódicos de Hearst entre 1933 y 1935."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,65 @@
+{
+  "id": "2026-11-13-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Francis Bacon y el aforismo 3 del Novum Organum",
+    "hook": "Francis Bacon sí escribió que el saber es poder. La primera vez estaba hablando de Dios.",
+    "body": [
+      "En 1597, Bacon publicó en latín unas Meditaciones sagradas. En la dedicada a las herejías discute con quienes separan lo que Dios sabe de lo que Dios puede. En medio del argumento abre un paréntesis: «pues también el saber mismo es poder». Es una precisión teológica sobre los atributos divinos, no un lema.",
+      "Veintitrés años después, en 1620, volvió a la idea en el Novum Organum, su programa para reformar las ciencias, y esta vez hablaba del ser humano. El aforismo 3 es la cita de hoy. Y sigue así: a la naturaleza solo se la vence obedeciéndola. El poder del que habla Bacon no es mandar sobre otros, sino entender causas.",
+      "En 1668, Thomas Hobbes, que de joven había trabajado como secretario de Bacon, dejó escrita en latín la fórmula que hoy se repite, scientia potentia est. Pero añadió dos palabras que casi nadie cita: sed parva. El saber es poder, pero poco."
+    ],
+    "question": "¿Qué sabes hoy que te haya dado más poder del que esperabas?",
+    "quote": {
+      "text": "La ciencia y el poder del hombre coinciden, porque donde se ignora la causa no se puede producir el efecto.",
+      "author": "Francis Bacon",
+      "work": "Novum Organum, libro I, aforismo 3 (1620)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#FrancisBacon", "#Citas", "#Filosofia"],
+    "extended": ["#NovumOrganum", "#HistoriaDeLaCiencia", "#Conocimiento", "#Hobbes", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino del aforismo 3 del libro I del Novum Organum: «Scientia et potentia humana in idem coincidunt, quia ignoratio causae destituit effectum. Natura enim non nisi parendo vincitur». La traducción al español de la cita es propia, hecha sobre este texto.",
+      "source": "The Latin Library, Francis Bacon, Novum Organum, liber I",
+      "url": "https://www.thelatinlibrary.com/bacon/bacon.liber1.shtml"
+    },
+    {
+      "claim": "Traducción inglesa canónica de Spedding: «Human knowledge and human power meet in one; for where the cause is not known the effect cannot be produced. Nature to be commanded must be obeyed».",
+      "source": "Wikisource en inglés, Novum Organum, libro I (trad. James Spedding et al.)",
+      "url": "https://en.wikisource.org/wiki/Novum_Organum/Book_I_(Spedding)"
+    },
+    {
+      "claim": "Bacon afirmó que el conocimiento humano y el poder humano vienen a ser lo mismo (NO I: 3; OFB XI: 65). Los dos libros del Novum Organum se publicaron en el volumen de la Instauratio magna de octubre de 1620. Las Meditaciones religiosas salieron en febrero de 1597 junto con la primera edición de los Ensayos.",
+      "source": "Stanford Encyclopedia of Philosophy, «Francis Bacon»",
+      "url": "https://plato.stanford.edu/entries/francis-bacon/"
+    },
+    {
+      "claim": "En Meditationes Sacrae (1597), «De Haeresibus», la expresión «ipsa scientia potestas est» aparece en un pasaje sobre las herejías que distingue el poder de Dios de saber y su poder de obrar: «statuuntque latiores terminos scientiae Dei quam potestatis, vel potius ejus partis potestatis Dei (nam et ipsa scientia potestas est) qua scit». La fórmula exacta «scientia potentia est» aparece por primera vez en la versión latina del Leviatán de Hobbes (1668), parte I, cap. X: «Scientia potentia est, sed parva». Hobbes fue de joven secretario de Bacon.",
+      "source": "Wikipedia en inglés, «Scientia potentia est»",
+      "url": "https://en.wikipedia.org/wiki/Scientia_potentia_est"
+    },
+    {
+      "claim": "Meditationes Sacrae (1597), «De Hæresibus»: «Nam et ipsa scientia potestas est» («For knowledge itself is power»).",
+      "source": "Wikiquote en inglés, «Francis Bacon»",
+      "url": "https://en.wikiquote.org/wiki/Francis_Bacon"
+    }
+  ],
+  "do_not_use": [
+    "«Bacon nunca escribió que el saber es poder»: exagerado. Escribió «nam et ipsa scientia potestas est» en 1597, aunque sobre Dios. Lo que no escribió es la fórmula exacta «scientia potentia est», que es de Hobbes (1668).",
+    "Poner «El conocimiento es poder» entre comillas atribuido a Bacon como frase literal: la cita de la pieza es el aforismo 3 del Novum Organum, con su texto latino.",
+    "«Sed parva» traducido como «pero pequeño poder» con interpretación cerrada: en el Leviatán latino aparece en una lista de los atributos que componen el poder humano, donde la ciencia ocupa un lugar menor. Se traduce «pero poco» sin más glosa.",
+    "Atribuir el origen de la idea a Ali ibn Abi Talib o al Nahj al-Balagha: circula en internet y no se verificó en esta investigación.",
+    "Fechar la versión inglesa del Leviatán (1651) como la de «scientia potentia est»: la frase latina es de la edición latina de 1668."
+  ],
+  "status": "draft"
+}

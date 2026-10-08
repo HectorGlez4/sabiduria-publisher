@@ -1,0 +1,66 @@
+{
+  "id": "2026-11-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sima Qian y la carta a Ren An",
+    "hook": "La frase china más citada sobre morir con sentido la escribió un hombre para explicar por qué había decidido no morir.",
+    "body": [
+      "En el año 99 a.C., Sima Qian, historiador de la corte del emperador Wu de Han, defendió en público a un general derrotado por los xiongnu. El emperador lo condenó a muerte. La pena podía conmutarse pagando o aceptando la castración. Sima Qian no tenía el dinero. Eligió la castración, la forma de castigo más humillante de su tiempo, cuando lo honorable era quitarse la vida.",
+      "Años después lo explicó en una carta a Ren An. Ahí está la frase del peso de la muerte. Y ahí dice por qué la soportó: porque le quedaba algo sin terminar, y no quería irse sin que su obra llegara a las generaciones futuras. Esa obra eran las Memorias históricas, el Shiji, la primera historia general de China. La terminó.",
+      "En 1944, Mao Zedong citó la misma frase en un funeral para honrar a un soldado muerto. Así es como suele circular: como elogio de quien da la vida. En la carta dice otra cosa. Para Sima Qian, la muerte que pesa poco era la que él tenía al alcance, y la que pesaba era seguir vivo para acabar el trabajo."
+    ],
+    "question": "¿Qué cosa terminarías aunque te costara el orgullo?",
+    "quote": {
+      "text": "Todo hombre tiene una sola muerte. Una pesa más que el monte Tai; otra, menos que una pluma de ganso salvaje. La diferencia está en aquello a lo que se destina.",
+      "author": "Sima Qian",
+      "work": "Carta a Ren An (Hanshu, cap. 62)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SimaQian", "#HistoriaDeChina", "#Citas"],
+    "extended": ["#Shiji", "#DinastiaHan", "#Filosofia", "#Historia", "#Literatura"]
+  },
+  "sources": [
+    {
+      "claim": "El texto chino de la carta (報任少卿書) dice: «人固有一死，死或重於泰山，或輕於鴻毛，用之所趣異也». Más adelante: «所以隱忍苟活，幽于糞土之中而不辭者，恨私心有所不盡，鄙陋沒世，而文采不表於後世也» (soportó la vida en la humillación porque le quedaba algo sin cumplir y no quería que su obra dejara de llegar a la posteridad). El texto se recoge en el Wenxuan (cap. 41) y en el Guwen guanzhi (cap. 5). La traducción al español de la cita es propia, hecha sobre este texto.",
+      "source": "Wikisource en chino, «報任少卿書»",
+      "url": "https://zh.wikisource.org/wiki/報任安書"
+    },
+    {
+      "claim": "La frase «死有重於泰山，或輕於鴻毛» procede del Hanshu, capítulo 62, biografía de Sima Qian (漢書．卷六二．司馬遷傳).",
+      "source": "Ministerio de Educación de Taiwán, Diccionario de modismos, entrada «重於泰山»",
+      "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=13159"
+    },
+    {
+      "claim": "En el 99 a.C. Sima Qian defendió al general Li Ling, derrotado y capturado por los xiongnu; el emperador Wu lo condenó a muerte; sin dinero para conmutar la pena, eligió la castración. En la carta a Ren An explica que siguió vivo para terminar su obra histórica. El Shiji estaba terminado antes del 91 a.C.",
+      "source": "Wikipedia en inglés, «Sima Qian»",
+      "url": "https://en.wikipedia.org/wiki/Sima_Qian"
+    },
+    {
+      "claim": "La carta se conserva dentro de la biografía de Sima Qian en el Hanshu de Ban Gu (32-92 d.C.); su autenticidad se discute desde hace siglos: unos la tienen por carta genuina a un compañero preso, otros por una suplantación literaria temprana. Monografía con texto chino y traducción completa: Durrant, Li, Nylan y Van Ess, University of Washington Press, 2016.",
+      "source": "WorldCat, «The letter to Ren An & Sima Qian's legacy» (University of Washington Press, 2016)",
+      "url": "https://search.worldcat.org/oclc/946359303"
+    },
+    {
+      "claim": "Mao Zedong citó la frase en «Servir al pueblo», discurso del 8 de septiembre de 1944 en el acto en memoria del soldado Zhang Side: «Though death befalls all men alike, it may be weightier than Mount Tai or lighter than a feather».",
+      "source": "Marxists Internet Archive, Obras escogidas de Mao Tse-tung, vol. III, «Serve the People»",
+      "url": "https://www.marxists.org/reference/archive/mao/selected-works/volume-3/mswv3_19.htm"
+    }
+  ],
+  "do_not_use": [
+    "Un año cerrado para la carta: Burton Watson la data en el 96 a.C., pero Ren An se relaciona también con la rebelión del príncipe heredero del 91 a.C. Las fechas no casan entre sí. No se da año en el copy.",
+    "Presentar la autenticidad de la carta como indiscutida en las fuentes: se conserva solo dentro del Hanshu de Ban Gu y hay especialistas que la consideran una composición literaria temprana. Se atribuye a Sima Qian porque así la transmite la tradición y la monografía de referencia la estudia como suya, pero no debe afirmarse en el copy que esté probada.",
+    "«Pluma de cisne»: algunas versiones traducen 鴻毛 así. 鴻 es el ganso salvaje (o cisne silvestre según el diccionario); se usa «ganso salvaje» y no se corrige a quien diga otra cosa.",
+    "«Prefirió la castración a la muerte por cobardía»: lectura moralizante sin base. La carta da su razón: terminar la obra.",
+    "Fechas de nacimiento y muerte de Sima Qian como datos cerrados: hacia 145 o 135 a.C. el nacimiento, hacia 86 a.C. la muerte. No se dan en el copy.",
+    "El nombre de Li Ling no se usa en el copy por espacio; si se añade, no decir que «se pasó al enemigo» sin matiz: lo que las fuentes dicen es que fue derrotado y capturado."
+  ],
+  "status": "draft"
+}
