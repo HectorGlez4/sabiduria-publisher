@@ -2,7 +2,7 @@
   "id": "2026-09-30-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Virgilio y la fortuna que ayuda a los que se atreven",
     "hook": "La frase más citada sobre la audacia es medio verso. La otra mitad no existe: Virgilio murió sin escribirla, y el personaje que la pronuncia acaba muerto.",
@@ -96,5 +96,8 @@
     "threads"
   ],
   "publish_at": "2026-10-01T03:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-09-29-extra81) tambien salio gold"
+  ]
 }
