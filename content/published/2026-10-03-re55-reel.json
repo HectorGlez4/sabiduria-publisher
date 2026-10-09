@@ -2,7 +2,7 @@
   "id": "2026-10-03-re55-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Saadi de Shiraz y los hijos de Adán",
     "hook": "Los versos persas que cuelgan en la ONU no se escribieron para conmover a nadie. Saadi se los dijo a la cara a un rey injusto que había ido a pedirle oraciones, y después le ordenó hacer justicia.",
@@ -76,6 +76,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-03T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1803928970747640",
+      "url": "/reel/1803928970747640/",
+      "published_at": "2026-10-09T21:50:14.431268+00:00"
+    }
+  },
   "reemision_de": "2026-09-15-extra90"
 }
