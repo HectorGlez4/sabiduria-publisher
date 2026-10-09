@@ -2,7 +2,7 @@
   "id": "2026-10-02-re52-story",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Horacio y el carpe diem de la Oda I 11",
     "hook": "«Carpe» no es un verbo de conquista. Es un verbo de huerta: se usa para recoger fruta madura. Y el verso que va justo antes manda podar la esperanza.",
@@ -83,6 +83,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-03T01:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "2188514392097664",
+      "photo_id": "1117825021042157",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-09T17:29:57.000345+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17914164552494668",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-09T17:30:10.709250+00:00"
+    }
+  },
   "reemision_de": "2026-09-14-extra87"
 }
