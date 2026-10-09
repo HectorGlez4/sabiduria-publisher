@@ -2,7 +2,7 @@
   "id": "2026-10-02-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Wangari Maathai y la conferencia de Oslo de 2004",
     "hook": "La frase circula sola, como un cartel de oficina. En la conferencia de donde sale, lo que se estaba pidiendo era leña, agua limpia y tierra que no se fuera con la lluvia.",
@@ -88,5 +88,8 @@
     "threads"
   ],
   "publish_at": "2026-10-02T17:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-09-29-extra81) tambien salio gold"
+  ]
 }
