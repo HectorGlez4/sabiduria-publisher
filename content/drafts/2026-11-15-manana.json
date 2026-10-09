@@ -1,0 +1,58 @@
+{
+  "id": "2026-11-15-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Hokusai y el azul de Berlín de la Gran Ola",
+    "hook": "El azul de la imagen más japonesa del mundo salió de un error en un laboratorio de Berlín.",
+    "body": [
+      "Hacia 1706, en Berlín, el fabricante de pigmentos Johann Jacob Diesbach intentaba obtener un rojo a partir de cochinilla. Usó una potasa contaminada, y lo que salió de la mezcla fue un azul intenso. Se le considera el primer pigmento sintético moderno. Lo llamaron azul de Prusia, o azul de Berlín.",
+      "Los grabadores japoneses no tenían un azul brillante que durara. El de Berlín, que en Japón se llamó «bero», empezó a llegar hacia 1830 en cantidad suficiente y, de pronto, a un precio que la estampa popular podía pagar. Ese mismo año Hokusai, con setenta años, comenzó la serie Treinta y seis vistas del monte Fuji. Su editor la anunció en enero de 1831 presentando el nuevo color como reclamo.",
+      "La Gran Ola de Kanagawa pertenece a esa serie. Se calcula que de ella se tiraron unas ocho mil impresiones, y hoy se conocen poco más de cien de la primera edición. El mar que el mundo identifica con Japón está pintado con un color nacido en Prusia por accidente."
+    ],
+    "question": "¿Cuántas cosas que llamamos tradicionales nacieron de algo que llegó de fuera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El azul prusiano de Hokusai",
+    "subtitle": "Berlín, hacia 1706; Edo, 1830",
+    "body": "Un fabricante de pigmentos de Berlín buscaba un rojo y obtuvo un azul. Más de un siglo después ese azul, el «bero», se abarató en Japón. Hokusai lo usó en las Treinta y seis vistas del monte Fuji, la serie de la Gran Ola."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Hokusai", "#GranOla", "#AzulDePrusia"],
+    "extended": ["#Arte", "#Japon", "#Ukiyoe", "#Pigmentos", "#Quimica", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "El azul de Prusia fue probablemente sintetizado por primera vez por el fabricante de pinturas Johann Jacob Diesbach en Berlín hacia 1706, cuando intentaba hacer un tinte rojo de cochinilla con potasa contaminada; Frisch lo llamó Preußisch blau y Berlinisch Blau en 1709. Los pintores y grabadores japoneses carecían de un azul duradero hasta que empezaron a importarlo; Hokusai lo usó en las Treinta y seis vistas del monte Fuji, incluida la Gran Ola.",
+      "source": "Wikipedia, «Prussian blue»",
+      "url": "https://en.wikipedia.org/wiki/Prussian_blue"
+    },
+    {
+      "claim": "El azul de Prusia o de Berlín, «el primer pigmento sintético moderno», llegó a Japón a partir de 1830 en cantidad suficiente para obras populares; antes los artistas japoneses carecían de un azul brillante y duradero; el nombre japonés «bero» deriva de Berlín; se volvió de pronto lo bastante barato para la estampa. La Gran Ola se imprimió hacia 1830-1833. (Resume a Timon Screech, «Maritime Disasters and Auspicious Images», Japan Review 36, 2021.)",
+      "source": "JSTOR Daily, «Under Hokusai's Great Wave»",
+      "url": "https://daily.jstor.org/under-hokusais-great-wave"
+    },
+    {
+      "claim": "Fecha 1830/33. Hokusai empezó la serie en 1830, a los 70 años; la serie destaca por el azul de Berlín recién asequible, usado para cielo y agua.",
+      "source": "Art Institute of Chicago, ficha de «Under the Wave off Kanagawa», API de colecciones",
+      "url": "https://api.artic.edu/api/v1/artworks/24645"
+    },
+    {
+      "claim": "El editor Nishimuraya Yohachi (Eijudō) anunció la novedad del azul de Prusia en enero de 1831 (Bayou 2008). Se imprimieron inicialmente unas mil copias y en total unas ocho mil (Korenberg, British Museum); en 2022 se conocían 113 impresiones de la primera edición (otra cuenta de Korenberg da 111).",
+      "source": "Wikipedia, «The Great Wave off Kanagawa» (cita a Bayou 2008 y Korenberg 2020)",
+      "url": "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa"
+    }
+  ],
+  "do_not_use": [
+    "Que el pigmento lo descubrió Diesbach junto a Dippel con la sangre del aceite animal de este: Wikipedia advierte que ninguna otra fuente histórica menciona a Dippel en este contexto. El copy dice solo «potasa contaminada».",
+    "Fecha exacta de llegada: las fuentes dan 1820 (importación holandesa, según el Museo Guimet), 1829 (grandes cantidades, Bayou) o 1830 (Screech). El copy dice «hacia 1830» y «empezó a llegar en cantidad suficiente».",
+    "Que llegó barato desde China: lo afirma el Museo de Denver según un resumen de búsqueda, pero no se leyó directamente. No entra en el copy.",
+    "Que la Gran Ola usa solo azul de Prusia: el análisis del Met encontró azul de Prusia mezclado y superpuesto con índigo (leído solo en resumen de búsqueda; el Met devolvió 429). No se afirma en el copy que sea exclusivamente prusiano.",
+    "Número exacto de impresiones supervivientes: varía entre 111 y 113 según el recuento. El copy dice «poco más de cien».",
+    "Edad de Hokusai: nació en 1760; el Instituto de Arte de Chicago dice 70 años en 1830. No precisar meses."
+  ],
+  "status": "draft"
+}

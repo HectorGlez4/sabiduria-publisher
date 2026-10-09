@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-15-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Pirrón de Élide y los gimnosofistas de la India",
+    "hook": "Un filósofo griego llegó a la India con el ejército de Alejandro y volvió diciendo que no se puede afirmar nada. Nadie sabe del todo qué oyó allí.",
+    "body": [
+      "Pirrón de Élide vivió aproximadamente entre el 365 y el 270 antes de nuestra era. Acompañó a su maestro Anaxarco en la expedición de Alejandro Magno hasta la India. Allí, según Diógenes Laercio, trató con los gimnosofistas, los «sabios desnudos». No escribió nada; lo que sabemos llega por su discípulo Timón.",
+      "Según el resumen de Timón, las cosas son indiferentes, inestables e indeterminadas, y ni los sentidos ni las opiniones son verdaderos o falsos. Lo sensato es quedarse sin opinión. El fruto, primero, es el silencio; después, la imperturbabilidad. Diógenes cuenta que, en una tormenta en el mar, mientras los pasajeros se aterraban, Pirrón señaló a un cerdo que seguía comiendo a bordo: así, dijo, debía estar el sabio.",
+      "Diógenes atribuye esa filosofía al encuentro en la India. Los especialistas no se ponen de acuerdo. Unos ven en ella huella jainista o budista. Richard Bett recuerda que, según un cronista de la expedición, hablar con aquellos sabios exigía tres intérpretes, ninguno de los cuales entendía de filosofía. Lo que cruzó esa frontera, si algo cruzó, sigue en duda."
+    ],
+    "question": "¿Puede una idea pasar de una cultura a otra a través de tres traductores?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Pirrón en la India",
+    "subtitle": "Élide, siglo IV a.C.",
+    "body": "Pirrón acompañó la expedición de Alejandro y conoció a los gimnosofistas, los sabios desnudos de la India. Volvió enseñando que lo sensato es no opinar. Si aprendió eso allí es una discusión que sigue abierta."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pirron", "#Escepticismo", "#Filosofia"],
+    "extended": ["#Grecia", "#India", "#Alejandro", "#Ataraxia", "#FilosofiaAntigua", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Pirrón vivió probablemente de c. 365-360 a c. 275-270 a.C., era de Élide; acompañó la expedición de Alejandro a la India junto con Anaxarco y conoció a los «sabios desnudos» (gumnosophistai). Diógenes Laercio afirma que su filosofía nació de ese encuentro, aunque no está claro en qué se basa. No escribió nada (salvo, quizá, un poema perdido). Timón de Fliunte es la fuente principal. El resumen de Aristocles conservado por Eusebio describe las cosas como adiaphora, astathmêta y anepikrita; la actitud recomendada es no opinar y el resultado es aphasia y luego ataraxia. Beckwith (2015) sostiene que Pirrón fue un representante del budismo temprano; otros lo discuten por la barrera lingüística.",
+      "source": "Richard Bett, «Pyrrho», Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/pyrrho/"
+    },
+    {
+      "claim": "IX, 61: Pirrón se unió a Anaxarco y lo acompañó en sus viajes hasta los gimnosofistas de la India y los magos, lo que le llevó a una filosofía de suspensión del juicio. IX, 68: según Posidonio, en una tormenta, con los pasajeros asustados, permaneció tranquilo y señaló a un cerdo que seguía comiendo a bordo, diciendo que así debía estar el sabio. IX, 64: Élide lo hizo sumo sacerdote y eximió de impuestos a los filósofos.",
+      "source": "Diógenes Laercio, Vidas de los filósofos ilustres, libro IX, trad. R. D. Hicks (Loeb), Wikisource",
+      "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_IX#Pyrrho"
+    },
+    {
+      "claim": "El pasaje de Aristocles que cita a Timón dice que las cosas son igualmente indiferentes, inestables e indeterminadas y que, por tanto, ni sensaciones ni opiniones son verdaderas o falsas. Barua (1921), Jayatilleke (1963) y Flintoff (1980) proponen influencia de jainistas o ajñānins. Bett descarta influencia sustantiva apoyándose en el informe de Onesícrito de que conversar con los gimnosofistas exigía tres intérpretes, «ninguno de los cuales entendía de filosofía»; Bronkhorst niega toda conexión con el budismo temprano.",
+      "source": "Wikipedia, «Pyrrho» (cita a Bett, Flintoff, Bronkhorst)",
+      "url": "https://en.wikipedia.org/wiki/Pyrrho"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar que Pirrón aprendió el escepticismo de budistas indios: es una hipótesis (Beckwith, Flintoff, Kuzminski) discutida por Bett y Bronkhorst. El copy la presenta como debate abierto.",
+    "Identificar a los gimnosofistas con un grupo concreto (jainistas, ajñānins, budistas): no hay acuerdo.",
+    "Que Élide lo hizo sumo sacerdote y eximió de impuestos a los filósofos: lo dice Diógenes Laercio (IX, 64), pero Bett lo considera menos fiable que lo que cuenta Pausanias. No entra en el copy.",
+    "Las anécdotas de que sus amigos tenían que apartarlo de carros y precipicios (Diógenes IX, 62): proceden de Antígono de Caristo y suelen considerarse caricatura. No entran.",
+    "Que fue pintor antes de filósofo: lo dice Diógenes Laercio, pero no se comprobó en esta ejecución. No entra.",
+    "Que Pirrón dejó obra escrita: no escribió nada, salvo quizá un poema a Alejandro que no se conserva."
+  ],
+  "status": "draft"
+}

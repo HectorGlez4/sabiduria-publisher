@@ -1,0 +1,61 @@
+{
+  "id": "2026-11-15-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Proust y el septeto de Vinteuil en La prisionera",
+    "hook": "La frase de Proust sobre «tener nuevos ojos» que acompaña fotos de viajes no habla de viajar. Habla de escuchar música, y dice algo más difícil: mirar con los ojos de otro.",
+    "body": [
+      "La prisionera es el quinto volumen de En busca del tiempo perdido. Proust murió en noviembre de 1922 sin haberlo visto impreso. Salió en 1923 en la Nouvelle Revue Française; su hermano Robert y el editor Jacques Rivière se ocuparon de los últimos volúmenes, y las pruebas de este llevan el visto bueno de Rivière.",
+      "En el capítulo segundo, el narrador escucha en casa de los Verdurin un septeto inédito del compositor Vinteuil, un personaje de ficción. Mientras suena, piensa que cada gran artista guarda un mundo interior que el lenguaje corriente no alcanza a comunicar. Ahí aparece la frase.",
+      "La versión que circula la recorta: «el verdadero viaje de descubrimiento no consiste en buscar nuevos paisajes, sino en tener nuevos ojos». El original no pide ojos nuevos, sino ajenos, y cierra diciendo que eso solo es posible con un Elstir, con un Vinteuil: con el arte de otros. No es un consejo de turismo; es una defensa de la obra ajena como único modo de salir de uno mismo."
+    ],
+    "question": "¿Qué obra le ha permitido ver el mundo con los ojos de otra persona?",
+    "quote": {
+      "text": "El único verdadero viaje, el único baño de juventud, no sería ir hacia nuevos paisajes, sino tener otros ojos, ver el universo con los ojos de otro, de otros cien, ver los cien universos que cada uno de ellos ve, que cada uno de ellos es.",
+      "author": "Marcel Proust",
+      "work": "En busca del tiempo perdido, V: La prisionera, capítulo II (París, NRF, 1923)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Proust", "#Citas", "#Literatura"],
+    "extended": ["#EnBuscaDelTiempoPerdido", "#Francia", "#Musica", "#Arte", "#Lectura", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés comprobado palabra por palabra: «Le seul véritable voyage, le seul bain de Jouvence, ce ne serait pas d'aller vers de nouveaux paysages, mais d'avoir d'autres yeux, de voir l'univers avec les yeux d'un autre, de cent autres, de voir les cent univers que chacun d'eux voit, que chacun d'eux est ; et cela, nous le pouvons avec un Elstir, avec un Vinteuil ; avec leurs pareils, nous volons vraiment d'étoiles en étoiles.» Está en el capítulo segundo («Les Verdurin se brouillent avec M. de Charlus»), mientras el narrador escucha el septeto inédito de Vinteuil en casa de los Verdurin y reflexiona sobre el mundo interior incomunicable de cada artista. Edición de Gallimard (NRF); la nota del editor dice que Proust entregó la dactilografía poco antes de morir y que la revisaron el doctor Robert Proust y Jacques Rivière. La traducción al español es propia.",
+      "source": "Marcel Proust, La Prisonnière, Wikisource en francés (edición Gallimard, NRF)",
+      "url": "https://fr.wikisource.org/wiki/La_Prisonni%C3%A8re/Chapitre_2"
+    },
+    {
+      "claim": "La Prisonnière se publicó en 1923; Proust murió en noviembre de 1922; fue el primero de sus libros publicados tras su muerte. Robert Proust supervisó la edición de los últimos volúmenes, con ayuda de Jacques Rivière. Es el quinto volumen de la obra.",
+      "source": "Wikipedia, «In Search of Lost Time»",
+      "url": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time"
+    },
+    {
+      "claim": "Fondo Marcel Proust de la Biblioteca Nacional de Francia, NAF 16770: pruebas de La Prisonnière (N.R.F., 1923); uno de los juegos completos de pruebas lleva el bon à tirer de Jacques Rivière.",
+      "source": "Bibliothèque nationale de France, Département des Manuscrits, NAF 16770, vía Europeana",
+      "url": "https://www.europeana.eu/item/9200519/ark__12148_btv1b53084137t"
+    },
+    {
+      "claim": "La primera edición de La Prisonnière (1923) apareció con una advertencia del editor, a diferencia de la de Albertine disparue (1925).",
+      "source": "Maya Lavault, «L'Albertine disparue de J. Milly : ni tout à fait la même, ni tout à fait une autre», Acta fabula, vol. 4, n.º 2 (2003)",
+      "url": "https://www.fabula.org/acta/document11481.php"
+    }
+  ],
+  "do_not_use": [
+    "La versión «El verdadero viaje de descubrimiento no consiste en buscar nuevos paisajes, sino en tener nuevos ojos»: es un recorte parafraseado de una traducción inglesa. El original dice «otros ojos» y habla del arte ajeno, no de viajar. Si se cita, como versión que circula, no como texto de Proust.",
+    "Situar la frase en Por el camino de Swann o en otro volumen: está en La prisionera, capítulo II.",
+    "Decir que Proust la escribió en 1923: el libro salió ese año, póstumo; la redacción es anterior a su muerte en noviembre de 1922.",
+    "Que La prisionera se publicó con el texto definitivo de Proust: los últimos volúmenes salieron sin sus correcciones finales. El copy no lo afirma.",
+    "Que Vinteuil es un compositor real: es un personaje de la novela. Se discuten sus posibles modelos (Franck, Saint-Saëns, Fauré y otros); no se verificaron y no entran.",
+    "Fecha exacta de publicación (noviembre de 1923): no se verificó el mes. El copy dice solo 1923."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "2026-11-15-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Omar Jayam y la cuarteta LI de FitzGerald (1859)",
+    "hook": "El verso más citado de Omar Jayam en Occidente tiene un coautor que salió anónimo: un inglés que admitió que su traducción era «muy poco literal».",
+    "body": [
+      "En enero de 1859, Edward FitzGerald hizo imprimir en Londres, a su costa y sin su nombre, un folleto de setenta y cinco cuartetas: el Rubáiyát de Omar Jayam. Se vendió tan mal que acabó saldado. Esta es la cuarteta cincuenta y uno.",
+      "FitzGerald trabajó sobre la copia de un manuscrito persa de la Biblioteca Bodleiana de Oxford, de 158 cuartetas, que le pasó Edward Cowell en 1856. Tradujo con rima y metro propios, fundió a veces dos cuartetas en una y, en sus cartas, reconoció que su versión era muy poco literal.",
+      "Detrás hay otra incertidumbre. En vida, Jayam era conocido como matemático y astrónomo, y su poesía no se menciona hasta 43 años después de su muerte. Los especialistas no se ponen de acuerdo sobre cuántas de las cuartetas que se le atribuyen son suyas: unos aceptan 178; el más severo, catorce. La frase que se repite como sabiduría persa es, al menos, también poesía victoriana."
+    ],
+    "question": "¿Una traducción muy libre sigue siendo del autor original?",
+    "quote": {
+      "text": "El dedo que se mueve escribe y, una vez escrito, sigue: ni toda tu piedad ni tu ingenio lo harán volver para tachar media línea, ni todas tus lágrimas borrarán una sola palabra.",
+      "author": "Omar Jayam, en la versión de Edward FitzGerald",
+      "work": "Rubáiyát of Omar Khayyám, cuarteta LI (Londres, 1859)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#OmarJayam", "#Citas", "#Poesia"],
+    "extended": ["#Rubaiyat", "#FitzGerald", "#Persia", "#Traduccion", "#Literatura", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cuarteta LI de la primera edición: «The Moving Finger writes; and, having writ, / Moves on: nor all thy Piety nor Wit / Shall lure it back to cancel half a Line, / Nor all thy Tears wash out a Word of it.» Es la LXXI de la quinta edición. La primera edición tiene 75 cuartetas numeradas. La traducción al español es propia.",
+      "source": "Rubáiyát of Omar Khayyám, trad. Edward FitzGerald, primera y quinta ediciones, Project Gutenberg n.º 246",
+      "url": "https://www.gutenberg.org/files/246/246-h/246-h.htm"
+    },
+    {
+      "claim": "FitzGerald imprimió privadamente 250 ejemplares en enero de 1859 (editor: Bernard Quaritch). Cuartetas por edición: 75 (1859), 110 (1868), 101 (1872, 1879, 1889). Fuente principal: transcripción del manuscrito de la Bodleiana que le dio Cowell en 1856, con 158 cuartetas; segunda fuente: manuscrito de Calcuta (1857). Traducción libre; Arberry halló que unas 40 de las 75 cuartetas traducen libremente una sola estrofa y otras funden dos; FitzGerald admitió en cartas que era «very un-literal». Jayam era conocido en vida como astrónomo y matemático; la primera referencia a su poesía es una biografía escrita 43 años después de su muerte. Estimaciones de cuartetas auténticas: Christensen 121, Foroughi 178, Dashti 36, Hedayat 14.",
+      "source": "Wikipedia, «Rubáiyát of Omar Khayyám» (cita a Arberry, Christensen, Foroughi, Dashti y Hedayat)",
+      "url": "https://en.wikipedia.org/wiki/Rub%C3%A1iy%C3%A1t_of_Omar_Khayy%C3%A1m"
+    },
+    {
+      "claim": "FitzGerald usó un manuscrito de 158 rubaiyat conservado en la Biblioteca Bodleiana de Oxford; la obra se publicó anónimamente en 1859 y tuvo poco impacto al salir; las ediciones posteriores fueron muy populares.",
+      "source": "Humanists UK, Humanist Heritage, «Rubáiyát» (objeto 158 de 100 Objects)",
+      "url": "https://heritage.humanists.uk/object/158-rubaiyat"
+    },
+    {
+      "claim": "La primera edición, anónima, de 75 cuartetas, se saldó a un penique el ejemplar. Cowell encontró el manuscrito Ouseley en la Bodleiana en 1856 (fechado en 1460/61, 158 cuartetas) y en 1857 envió a FitzGerald copia del manuscrito de Calcuta (516 cuartetas). El relato de que Rossetti lo descubrió en 1861 y de ahí vino la fama es «a bit of an exaggeration».",
+      "source": "Bob Forrest, «The Rubaiyat of Omar Khayyam», ensayo principal (2010)",
+      "url": "https://www.bobforrestweb.co.uk/The_Rubaiyat/main_essay.htm"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar que la cuarteta del dedo que escribe tiene un original persa concreto, o que no lo tiene: no se verificó en ninguna fuente leída. El copy no lo dice.",
+    "Que Rossetti descubrió el libro en 1861 en la caja de saldos y lo hizo famoso: es el relato popular, pero Forrest lo califica de exageración (la segunda edición no salió hasta 1868). El copy dice solo que acabó saldado.",
+    "Precio original del folleto (un chelín o cinco chelines según las fuentes) y reparto de los 250 ejemplares (200 a Quaritch y 50 para amigos, según una reminiscencia): disputados. No entran.",
+    "Fechas de vida de Jayam: Humanists UK da 1048-1131; otras fuentes dan años distintos. No se fechan en el copy.",
+    "Presentar la frase como cita literal de Jayam sin mencionar a FitzGerald: la redacción inglesa es suya y la traducción fue libre.",
+    "Fecha del manuscrito Ouseley: 1460/61 según Forrest; la fuente de Humanists UK dice 1460. El copy no la da."
+  ],
+  "status": "draft"
+}
