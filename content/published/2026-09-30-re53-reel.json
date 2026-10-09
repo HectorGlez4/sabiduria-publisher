@@ -2,7 +2,7 @@
   "id": "2026-09-30-re53-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Ptahhotep y el papiro que la BnF llama el libro más antiguo",
     "hook": "El texto que la Biblioteca Nacional de Francia presenta como el libro más antiguo del mundo lo escribió, supuestamente, un funcionario de hace cuarenta y cuatro siglos. Su consejo de apertura es que hables con el ignorante igual que con el sabio.",
@@ -82,6 +82,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-01T04:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1126084843706451",
+      "url": "/reel/1126084843706451/",
+      "published_at": "2026-10-09T09:54:44.644748+00:00"
+    }
+  },
   "reemision_de": "2026-09-13-extra83"
 }
