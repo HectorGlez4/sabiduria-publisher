@@ -1,0 +1,59 @@
+{
+  "id": "2026-11-16-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el trentino de Ragusa y el origen de la cuarentena",
+    "hook": "La ley de la que salió la palabra cuarentena no fijaba cuarenta días de aislamiento, sino treinta.",
+    "body": [
+      "El 27 de julio de 1377, el Gran Consejo de Ragusa, la actual Dubrovnik, aprobó un decreto que empezaba así: «Quien venga de lugares apestados no entre en Ragusa ni en su distrito». Mercaderes, marinos y mercancías de tierras sospechosas debían pasar un mes aislados en islotes deshabitados antes de entrar en la ciudad. La ciudad había sufrido varias oleadas de peste desde 1348, y la primera mató a unos miles de sus habitantes.",
+      "Aquel aislamiento de treinta días se llamó trentino. En las décadas siguientes el plazo se alargó a cuarenta, y el nuevo nombre, del italiano quaranta, es el que ha llegado hasta nosotros. Nadie sabe con certeza por qué se eligió el cuarenta: quizá porque treinta días no bastaban, quizá por el peso del número en la Biblia, de los cuarenta días del Diluvio a los del ayuno en el desierto.",
+      "La idea se copió. Venecia montó en 1423 uno de los primeros lazaretos conocidos en una isla cercana a la ciudad, y en los cien años siguientes llegaron leyes parecidas a Pisa y a Marsella. Ragusa terminó en 1642 su propio lazareto, diez edificios junto a la muralla. La palabra que usamos para la medida conserva el número de su segunda versión, no el de la primera."
+    ],
+    "question": "¿Cuántas palabras guardan la cifra de una versión posterior y no la original?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Antes de la cuarentena, el trentino",
+    "subtitle": "Ragusa, 27 de julio de 1377",
+    "body": "El Gran Consejo de Ragusa, hoy Dubrovnik, ordenó aislar un mes a quien llegara de tierras con peste. Se llamó trentino, por los treinta días. Cuando el plazo se alargó a cuarenta, nació la palabra cuarentena."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Cuarentena", "#Dubrovnik", "#Historia"],
+    "extended": ["#Ragusa", "#Peste", "#EdadMedia", "#SaludPublica", "#Etimologia", "#Venecia"]
+  },
+  "sources": [
+    {
+      "claim": "En 1377 el Gran Consejo de Ragusa (Dubrovnik) estableció un periodo de separación de 30 días (trentino) para los visitantes de zonas con peste; en las décadas siguientes el periodo se extendió de 30 a 40 días (quarantino). «Quarantine» viene del italiano quaranta (cuarenta). Los 40 días pudieron ser más eficaces o un guiño a la duración de episodios bíblicos como el Diluvio o el ayuno de Jesús en el desierto.",
+      "source": "Centers for Disease Control and Prevention, Emerging Infectious Diseases 19 (2), 2013, «Etymologia: Quarantine»",
+      "url": "https://wwwnc.cdc.gov/eid/article/19/2/ET-1902"
+    },
+    {
+      "claim": "El Gran Consejo de la República adoptó el decreto el 27 de julio de 1377: mercaderes, marinos y mercancías de tierras sospechosas debían pasar un mes en cuarentena en islas deshabitadas (Mrkan, Bobara y Supetar) antes de entrar en la ciudad. Texto latino: «Veniens de locis pestiferis non intret Ragusium nel districtum», registrado en el Liber viridis. Un brote de peste en 1348 había matado a unos miles de ciudadanos. El lazareto de Ploče se empezó en 1590 y se terminó en 1642, con diez edificios de varias plantas unidos por cinco patios.",
+      "source": "Wikipedia, «Lazzarettos of Dubrovnik» (cita a Sanitat Dubrovnik, a T. Ladišić 2004 y a R. Roter 1950)",
+      "url": "https://en.wikipedia.org/wiki/Lazzarettos_of_Dubrovnik"
+    },
+    {
+      "claim": "El Gran Consejo de Dubrovnik (Ragusa) instauró el sistema de cuarentena el 27 de julio de 1377, tras varias oleadas de peste entre 1348 y 1374; fue la primera trentina, treinta días de aislamiento obligatorio, más tarde ampliados a cuarenta. Cita el arranque del decreto según el Liber viridis.",
+      "source": "Massey University (Nueva Zelanda), noticias, «Plagues, pandemics and quarantines»",
+      "url": "https://www.massey.ac.nz/about/news/plagues-pandemics-and-quarantines"
+    },
+    {
+      "claim": "La medida de 1377 se llamó «trentina»: los barcos debían esperar treinta días antes de atracar; el periodo pasó luego a cuarenta días. En 1423 Venecia estableció uno de los primeros lazaretos conocidos en una isla cercana a la ciudad. En los cien años siguientes se introdujeron leyes semejantes en puertos italianos (Pisa) y franceses (Marsella).",
+      "source": "G. F. Gensini, M. H. Yacoub y A. A. Conti, «The concept of quarantine in history: from plague to SARS», Journal of Infection 49 (4), 2004, pp. 257-261 (reedición en Brewminate)",
+      "url": "https://brewminate.com/the-concept-of-quarantine-in-history/"
+    }
+  ],
+  "do_not_use": [
+    "Que en 1377 Ragusa pertenecía a la República de Venecia: lo dice el resumen de Gensini et al. (2004), pero choca con la historia de la ciudad, que había dejado la soberanía veneciana a mediados del siglo XIV. No se contrastó en fuente leída; el copy no dice a quién pertenecía Ragusa.",
+    "Año exacto del paso de 30 a 40 días: una fuente secundaria habla de 1397, otras de «décadas después» sin año. El copy dice «en las décadas siguientes», como el CDC.",
+    "Que los cuarenta días eran para viajeros por tierra y los treinta para barcos: lo afirma Gensini et al., pero el CDC no lo distingue. No entra.",
+    "Los lugares exactos de aislamiento: Wikipedia da Mrkan, Bobara y Supetar; otros relatos, Mrkan y Cavtat. El copy dice «islotes deshabitados».",
+    "La grafía del decreto latino varía entre fuentes («intret/intrect», «nel/vel districtum»). El copy da solo la traducción.",
+    "Trentino o trentina: el CDC usa «trentino» y Gensini et al. «trentina». El copy usa trentino.",
+    "Que Ragusa fue «la primera cuarentena del mundo» sin matices: Massey lo dice, pero Venecia restringía ya la entrada a su puerto en 1374. El copy no dice que fuera la primera del mundo: solo que de ella sale la palabra, como afirman el CDC y Gensini et al."
+  ],
+  "status": "draft"
+}

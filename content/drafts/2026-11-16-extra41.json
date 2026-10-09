@@ -1,0 +1,61 @@
+{
+  "id": "2026-11-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Qohélet y el verso 1:9 del Eclesiastés",
+    "hook": "«Nada nuevo bajo el sol» lo firma un rey de Jerusalén que, según su propio vocabulario, vivió siglos después de Salomón.",
+    "body": [
+      "El libro del Eclesiastés se abre con las palabras de Qohélet, «hijo de David, rey en Jerusalén». La tradición rabínica leyó ahí a Salomón, escribiendo en su vejez. Qohélet no es un nombre propio: es un título, algo así como «el que convoca la asamblea». En griego se tradujo ekklesiastés, y de ahí viene el nombre del libro.",
+      "El idioma delata otra época. El texto usa préstamos del persa, como pardés, «huerto», y abundantes giros arameos: eso impide fecharlo antes de mediados del siglo V a.C., mucho después del exilio en Babilonia. Y no puede ser posterior al 180 a.C., porque para entonces Ben Sira ya lo cita. La mayoría de los especialistas lo sitúa entre los siglos IV y III a.C., y tratan al rey narrador como una ficción literaria.",
+      "La expresión «bajo el sol» aparece veintinueve veces en el libro. Y el libro mismo estuvo a punto de no entrar en la Biblia: el Talmud recuerda que los sabios quisieron retirarlo porque sus palabras se contradecían. Se quedó. La frase sobre lo que siempre vuelve fue, ella misma, algo nuevo que casi no se conserva."
+    ],
+    "question": "¿Qué de lo que hoy parece nuevo ya pasó antes?",
+    "quote": {
+      "text": "¿Qué es lo que fue? Lo mismo que será. ¿Qué es lo que ha sido hecho? Lo mismo que se hará: y nada hay nuevo debajo del sol.",
+      "author": "Qohélet",
+      "work": "Eclesiastés 1, 9 (Reina-Valera, revisión de 1909)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Eclesiastes", "#Citas", "#Biblia"],
+    "extended": ["#Qohelet", "#Salomon", "#Sabiduria", "#Historia", "#Literatura", "#Antiguedad"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de Eclesiastés 1, 9 en la Reina-Valera Antigua: «¿Qué es lo que fué? Lo mismo que será. ¿Qué es lo que ha sido hecho? Lo mismo que se hará: y nada hay nuevo debajo del sol.» (La cita moderniza la tilde de «fué».)",
+      "source": "Reina-Valera Antigua, Eclesiastés 1:9-10, BibleGateway",
+      "url": "https://www.biblegateway.com/passage/?search=Eclesiast%C3%A9s%201%3A9-10&version=RVA"
+    },
+    {
+      "claim": "En El libro del Pueblo de Dios, el verso 9 del capítulo 1 termina «no hay nada nuevo bajo el sol», y el verso 1 dice «Palabras de Cohélet, hijo de David, rey en Jerusalén».",
+      "source": "La Santa Sede, Biblia (El libro del Pueblo de Dios), Eclesiastés, capítulo 1",
+      "url": "https://www.vatican.va/archive/ESL0506/_PMQ.HTM"
+    },
+    {
+      "claim": "Qohelet no es nombre propio sino un título, «el que actúa en la asamblea» (Ginsberg y Fox, Encyclopaedia Judaica); se relaciona con qāhal, «reunir», y los traductores griegos lo vertieron como ekklēsiastēs (Newsom, Encyclopedia of Religion). La autoría salomónica queda descartada por la lengua y el contenido (Encyclopaedia Judaica); los estudiosos reconocen al rey narrador como ficción literaria y la fecha más probable es el siglo IV o III a.C. (Newsom). El Talmud (b. Shabbat 30b) recuerda que los sabios quisieron retirar el libro porque sus palabras se contradicen.",
+      "source": "Encyclopedia.com, «Ecclesiastes» (reúne las entradas de la Encyclopedia of Religion, C. A. Newsom, 2005; Encyclopaedia Judaica, 2.ª ed., H. L. Ginsberg y M. V. Fox; Concise Oxford Dictionary of World Religions)",
+      "url": "https://www.encyclopedia.com/philosophy-and-religion/bible/old-testament/ecclesiastes"
+    },
+    {
+      "claim": "La tradición rabínica atribuye el libro a Salomón en su vejez; el texto nunca nombra a Salomón. Los préstamos persas (pardes, «huerto»; pitgam, «sentencia») y los arameísmos impiden fecharlo antes de c. 450 a.C.; la fecha más tardía posible es 180 a.C., cuando Ben Sira lo cita. La expresión «bajo el sol» aparece veintinueve veces.",
+      "source": "Wikipedia, «Ecclesiastes»",
+      "url": "https://en.wikipedia.org/wiki/Ecclesiastes"
+    }
+  ],
+  "do_not_use": [
+    "Que lo escribió Salomón: es la atribución tradicional; la lengua y el contenido la descartan según la Encyclopaedia Judaica.",
+    "Una fecha exacta de composición: las propuestas van de c. 450 a 180 a.C., con debate entre época persa y helenística. El copy da el rango y la opinión mayoritaria (siglos IV-III a.C.).",
+    "La tradición talmúdica de que «Ezequías y sus compañeros» escribieron el libro: probablemente significa que lo editaron; no entra.",
+    "Que el epílogo (12, 9-14) es con seguridad un añadido posterior: es la opinión de la mayoría, no de todos. No entra.",
+    "Usar la traducción de El libro del Pueblo de Dios en la tarjeta: tiene derechos de la Libreria Editrice Vaticana. La cita usa la Reina-Valera de 1909, de dominio público.",
+    "Cuántos siglos separan el libro de Salomón: la fecha del reinado de Salomón no se verificó en fuente leída para esta pieza. El copy dice solo que el texto es posterior al exilio, como afirma la World Encyclopedia de Oxford recogida en Encyclopedia.com («after the Babylonian Captivity»)."
+  ],
+  "status": "draft"
+}

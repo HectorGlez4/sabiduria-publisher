@@ -1,0 +1,59 @@
+{
+  "id": "2026-11-16-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "la navaja de Ockham",
+    "hook": "La regla de pensamiento más famosa de la Edad Media no aparece, con esas palabras, en ninguna obra de Guillermo de Ockham.",
+    "body": [
+      "«No hay que multiplicar los entes sin necesidad.» Así se enseña la navaja de Ockham: entre dos explicaciones, quédate con la que necesita menos supuestos. La Enciclopedia de Filosofía de Stanford lo dice sin rodeos: esa formulación no se encuentra en ninguno de sus textos.",
+      "Lo que Ockham escribió, en su comentario a las Sentencias de Pedro Lombardo, es otra frase: «nunca hay que poner la pluralidad sin necesidad». Y ni siquiera esa idea era nueva. Aristóteles, Tomás de Aquino y Duns Escoto ya la habían usado. Ockham no la defendió como un descubrimiento: la aplicó, sobre todo para negar que existan los universales fuera de las cosas singulares.",
+      "La versión famosa aparece en 1639, en un comentario a Duns Escoto del franciscano irlandés John Ponce, casi tres siglos después de la muerte de Ockham, en 1347. El nombre de «navaja» llegó todavía más tarde. En 1918, el lógico William Thorburn publicó un artículo con un título que lo resume todo: «El mito de la navaja de Occam». La regla de la economía terminó cargando con un autor que no le correspondía, que es justo el tipo de supuesto innecesario que ella misma recomienda recortar."
+    ],
+    "question": "¿Cuántas ideas recordamos por un nombre que no es el de quien las tuvo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La navaja que Ockham no afiló",
+    "subtitle": "Una regla del siglo XIV redactada en 1639",
+    "body": "«No multiplicar los entes sin necesidad» no está en ninguna obra de Ockham. Él escribió que no hay que poner la pluralidad sin necesidad, una idea que ya usaban Aristóteles y Duns Escoto. La fórmula famosa es de 1639."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ockham", "#Filosofia", "#NavajaDeOckham"],
+    "extended": ["#EdadMedia", "#Logica", "#Escolastica", "#Pensamiento", "#Historia", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "La formulación popular «no hay que multiplicar los entes más allá de la necesidad» «no se encuentra en ninguna parte de sus textos»; la navaja es un principio metodológico cautelar. Ockham nació probablemente a fines de 1287 o inicios de 1288 y murió la noche del 9 al 10 de abril de 1347. Huyó de Aviñón el 26 de mayo de 1328 y fue excomulgado el 6 de junio de 1328.",
+      "source": "Stanford Encyclopedia of Philosophy, «William of Ockham», §1 y §4.1",
+      "url": "https://plato.stanford.edu/entries/ockham/"
+    },
+    {
+      "claim": "Ockham no usa la frase «Entities should not be multiplied beyond necessity»; prefiere «es inútil hacer con más lo que puede hacerse con menos». El principio no fue invención suya: aparece en Aristóteles, Aquino y otros autores que leyó. Nunca lo llamó «navaja». No argumenta su validez; lo aplica.",
+      "source": "Internet Encyclopedia of Philosophy, «William of Ockham»",
+      "url": "https://iep.utm.edu/ockham/"
+    },
+    {
+      "claim": "Thorburn no halla «Entia non sunt multiplicanda praeter necessitatem» en las obras impresas de Ockham; su fórmula característica es «Pluralitas non est ponenda sine necessitate»; su aplicación típica es a los universales. Duns Escoto ya había enunciado el principio. La redacción aparece por primera vez en el comentario de John Ponce de Cork publicado en la edición de Wadding de 1639. Tennemann (1812) fue el primero en atribuirle la regla a Ockham; Hamilton acuñó la etiqueta «Occam's Razor» en 1852.",
+      "source": "William M. Thorburn, «The Myth of Occam's Razor», Mind 27 (107): 345-353, 1918 (texto en Wikisource)",
+      "url": "https://en.wikisource.org/wiki/The_Myth_of_Occam%27s_Razor"
+    },
+    {
+      "claim": "En sus Quaestiones in quattuor libros Sententiarum (i, dist. 27, q. 2) Ockham escribe «Numquam ponenda est pluralitas sine necessitate». La versión más conocida, «Non sunt multiplicanda entia sine necessitate», la formuló el franciscano irlandés John Punch (Ponce) en su comentario a Duns Escoto de 1639. Antecedentes: Aristóteles (Analíticos posteriores), Grosseteste, Tomás de Aquino (Suma teológica) y Duns Escoto («Pluralitas non est ponenda sine necessitate»).",
+      "source": "Wikipedia, «Occam's razor»",
+      "url": "https://en.wikipedia.org/wiki/Occam%27s_razor"
+    }
+  ],
+  "do_not_use": [
+    "Que Ockham escribió «Entia non sunt multiplicanda praeter necessitatem»: no está en sus obras (SEP, IEP, Thorburn).",
+    "Quién acuñó el nombre «navaja»: la IEP y Thorburn dicen que Hamilton en 1852; Wikipedia recoge que Libert Froidmont afirmó haber acuñado «novacula occami» en 1649. Disputado; el copy dice solo que el nombre llegó «todavía más tarde».",
+    "La fecha del emplazamiento a Aviñón: la IEP da 1323, otras fuentes 1324. No entra.",
+    "La fecha de nacimiento exacta de Ockham: la SEP da fines de 1287 o inicios de 1288; otras fuentes dan 1285. No entra.",
+    "Que la navaja dice que «la explicación más simple suele ser la correcta»: es una paráfrasis moderna; el principio de Ockham es metodológico (no postular sin razón, experiencia o autoridad), no una garantía de verdad.",
+    "Que Duns Escoto fue maestro de Ockham: lo da el resumen de Thorburn, pero no se contrastó en otra fuente. El copy no lo dice.",
+    "Grafía del nombre del franciscano de 1639: John Punch o John Ponce (de Cork), según la fuente. El copy usa Ponce, como Thorburn."
+  ],
+  "status": "draft"
+}

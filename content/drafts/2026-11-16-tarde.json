@@ -1,0 +1,76 @@
+{
+  "id": "2026-11-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Franklin, la muerte y los impuestos (1789)",
+    "hook": "La frase más famosa sobre los impuestos la escribió Franklin cinco meses antes de morir, y ya era vieja cuando la escribió.",
+    "body": [
+      "El 13 de noviembre de 1789, Benjamin Franklin escribió al científico francés Jean-Baptiste Le Roy. Hacía tiempo que no sabía de él: en Francia había empezado la Revolución. En la carta le cuenta que la nueva Constitución de los Estados Unidos ya está en marcha y parece hecha para durar. Y añade la salvedad que se haría proverbio.",
+      "La frase no era suya. Setenta y tres años antes, en 1716, un personaje de una farsa de Christopher Bullock, El zapatero de Preston, ya le gritaba a una mujer que es imposible estar seguro de nada salvo de la muerte y los impuestos. En 1724, Edward Ward repitió la idea en otra pieza cómica. Franklin la recogió de un dicho que corría por la escena inglesa.",
+      "Lo que la hizo célebre fue el contexto. Franklin murió el 17 de abril de 1790. La carta se publicó décadas después, con su correspondencia, y la broma de taberna quedó asociada para siempre a uno de los firmantes de la Constitución, escrita justo al lado de su esperanza en ella."
+    ],
+    "question": "¿Qué otras certezas de este mundo resisten mejor que las instituciones?",
+    "quote": {
+      "text": "Nuestra nueva Constitución ya está establecida y tiene apariencia de permanencia; pero en este mundo no puede decirse que nada sea seguro, salvo la muerte y los impuestos.",
+      "author": "Benjamin Franklin",
+      "work": "Carta a Jean-Baptiste Le Roy, 13 de noviembre de 1789 (ed. Sparks, vol. X, 1856)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BenjaminFranklin", "#Citas", "#Historia"],
+    "extended": ["#Impuestos", "#Constitucion", "#1789", "#Teatro", "#FrasesCelebres", "#Cartas"]
+  },
+  "sources": [
+    {
+      "claim": "Franklin escribió en una carta de 1789 que «in this world nothing can be said to be certain, except death and taxes»; antes, Christopher Bullock, The Cobler of Preston (1716): «'Tis impossible to be sure of any thing but Death and Taxes»; y Edward Ward, The Dancing Devils (1724): «Death and Taxes, they are certain». La traducción al español es propia.",
+      "source": "Fred R. Shapiro (editor de The Yale Book of Quotations), «Quotes Uncovered: Death and Taxes», Freakonomics, febrero de 2011",
+      "url": "https://freakonomics.com/2011/02/quotes-uncovered-death-and-taxes/"
+    },
+    {
+      "claim": "La carta va dirigida a Jean-Baptiste Le Roy y se cita por Sparks (1856), The Writings of Benjamin Franklin, vol. X (1789-1790), p. 410. La iteración más antigua conocida es la farsa de Bullock The Cobbler of Preston (1716), representada en Lincoln's Inn Fields, donde la dice el personaje Toby Guzzle a una mujer.",
+      "source": "Wikipedia, «Death and taxes (idiom)» (cita a Sparks 1856 y a la 5.ª ed. de The Cobler of Preston, 1767, p. 21)",
+      "url": "https://en.wikipedia.org/wiki/Death_and_taxes_(idiom)"
+    },
+    {
+      "claim": "Ocurrencias tempranas localizadas en Literature Online: Bullock, The Cobler of Preston (1716), escena 2; Ward, The Dancing Devils (1724); Joseph Reed, Tom Jones (1769); Samuel Bishop, epigrama (1796).",
+      "source": "Barry Popik, lista ADS-L de la American Dialect Society, «Death and Taxes (1716, 1724, 1769, 1789)», marzo de 2003",
+      "url": "https://listserv.linguistlist.org/pipermail/ads-l/2003-March/030299.html"
+    },
+    {
+      "claim": "Franklin escribió la carta a Le Roy en noviembre de 1789; le preocupaba no tener noticias de él desde el inicio de la Revolución francesa; en la carta habla de la Constitución recién ratificada y de su salud; la carta se publicó en 1817 con su correspondencia privada.",
+      "source": "National Constitution Center, Constitution Daily, «Benjamin Franklin's last great quote and the Constitution»",
+      "url": "https://constitutioncenter.org/blog/benjamin-franklins-last-great-quote-and-the-constitution"
+    },
+    {
+      "claim": "La carta a Jean-Baptiste Le Roy, científico francés, fue escrita un viernes 13 de noviembre de 1789.",
+      "source": "University of Pennsylvania, Penn Almanac, «Friday the 13th»",
+      "url": "https://almanac.upenn.edu/articles/friday-the-13th"
+    },
+    {
+      "claim": "Franklin murió el 17 de abril de 1790; al saberlo, la Asamblea Nacional francesa decretó tres días de luto.",
+      "source": "National Archives (EE. UU.), dosier de prensa sobre Benjamin Franklin",
+      "url": "https://www.archives.gov/press/press-kits/franklin/images.html"
+    },
+    {
+      "claim": "Franklin fue delegado de Pensilvania en la Convención Constitucional de 1787 y firmante de la Constitución.",
+      "source": "Teaching American History (Ashland University), «Delegates to the Constitutional Convention: Benjamin Franklin»",
+      "url": "https://teachingamericanhistory.org/resource/convention/delegates/franklin"
+    }
+  ],
+  "do_not_use": [
+    "Que Franklin escribió la carta en francés y que el texto inglés es una traducción: lo dicen el National Constitution Center y el Penn Almanac, pero no se pudo leer el original ni la edición de 1817. El copy no menciona el idioma.",
+    "La variante inglesa «everything seems to promise it will be durable; but, in this world, nothing is certain except death and taxes»: circula junto a la de Sparks («has an appearance that promises permanency... nothing can be said to be certain»). La cita usa la redacción de Sparks, la que da The Yale Book of Quotations.",
+    "Que Franklin inventó la frase: Bullock la usó en 1716 y Ward en 1724.",
+    "Que Daniel Defoe la usó en 1726 en The Political History of the Devil (o en 1717 en otro panfleto): lo cita Wikipedia sin transcribir la frase y las fechas varían entre fuentes. No entra.",
+    "Que la publicación de 1817 la hizo su nieto William Temple Franklin: lo da un resumen de búsqueda, sin fuente leída directamente. El copy dice solo «décadas después, con su correspondencia».",
+    "Página exacta de Sparks (p. 410): procede de Wikipedia; no se consultó el volumen. La tarjeta cita volumen y año, no página."
+  ],
+  "status": "draft"
+}
