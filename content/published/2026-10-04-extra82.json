@@ -2,7 +2,7 @@
   "id": "2026-10-04-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Lucrecio y el naufragio que se mira desde la orilla",
     "hook": "Se cita como prueba de que al ser humano le gusta ver el desastre ajeno desde lugar seguro. Lucrecio lo desmiente en el verso siguiente, y ese verso casi nunca se copia.",
@@ -92,5 +92,21 @@
     "threads"
   ],
   "publish_at": "2026-10-05T02:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1118432737648052",
+      "url": "https://www.facebook.com/874327782058550/posts/1118432737648052",
+      "published_at": "2026-10-10T10:54:34.170190+00:00"
+    },
+    "instagram": {
+      "post_id": "18110582576129298",
+      "url": "https://www.instagram.com/p/DeT6pqMl-4J/",
+      "published_at": "2026-10-10T10:54:46.497895+00:00"
+    },
+    "threads": {
+      "post_id": "18120163232473390",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18120163232473390",
+      "published_at": "2026-10-10T10:54:58.753103+00:00"
+    }
+  }
 }

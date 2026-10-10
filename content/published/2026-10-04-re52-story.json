@@ -2,7 +2,7 @@
   "id": "2026-10-04-re52-story",
   "slot": "manana",
   "pillar": "curiosidad",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "al-Juarismi y las palabras álgebra, guarismo y algoritmo",
     "hook": "Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.",
@@ -90,6 +90,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-05T01:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "2627584874353235",
+      "photo_id": "1118418154316177",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-10T10:32:15.993172+00:00"
+    },
+    "instagram_story": {
+      "post_id": "18116053726795285",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-10T10:32:28.563346+00:00"
+    }
+  },
   "reemision_de": "2026-09-16-extra85"
 }

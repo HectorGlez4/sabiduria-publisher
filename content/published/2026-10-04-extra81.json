@@ -2,7 +2,7 @@
   "id": "2026-10-04-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Nguyễn Du y el cierre del Truyện Kiều",
     "hook": "Tres mil doscientos versos contando cómo el talento de una mujer la fue destruyendo. Y al final, el poeta pone el talento en tercer lugar.",
@@ -92,5 +92,21 @@
     "threads"
   ],
   "publish_at": "2026-10-04T22:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1118388274319165",
+      "url": "https://www.facebook.com/874327782058550/posts/1118388274319165",
+      "published_at": "2026-10-10T09:45:24.771248+00:00"
+    },
+    "instagram": {
+      "post_id": "18411728560090161",
+      "url": "https://www.instagram.com/p/DeTyvFwl_lF/",
+      "published_at": "2026-10-10T09:45:37.439084+00:00"
+    },
+    "threads": {
+      "post_id": "18130142122703937",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18130142122703937",
+      "published_at": "2026-10-10T09:45:49.006875+00:00"
+    }
+  }
 }

@@ -2,7 +2,7 @@
   "id": "2026-10-04-re51-reel",
   "slot": "manana",
   "pillar": "figura",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Lise Meitner y la fisión explicada en el exilio",
     "hook": "El experimento se hizo en Berlín, la explicación se escribió en un hotel de Suecia, y el Nobel lo recibió uno solo de los cuatro.",
@@ -91,6 +91,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-04T23:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1870221751090368",
+      "url": "/reel/1870221751090368/",
+      "published_at": "2026-10-10T10:10:09.369881+00:00"
+    }
+  },
   "reemision_de": "2026-09-16-extra84"
 }
