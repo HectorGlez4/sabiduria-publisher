@@ -1,0 +1,71 @@
+{
+  "id": "2026-11-18-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Píndaro y la Pítica II para Hierón",
+    "hook": "«Llega a ser el que eres» suele atribuirse a Nietzsche. Es de un poeta griego que escribía para un tirano, y en el camino perdió su palabra más exigente.",
+    "body": [
+      "Píndaro compuso la segunda Pítica para Hierón de Siracusa, vencedor en una carrera de carros. Hacia el verso 72 aparece la frase, en griego: génoi' hoîos essì mathón. La última palabra significa habiendo aprendido. La traducción inglesa de Diane Svarlien, de 1990, la pone delante de todo: aprende, y llega a ser quien eres.",
+      "El contexto tampoco es un elogio fácil. Justo después, Píndaro dice que el mono les parece bonito a los niños, siempre bonito, y alaba a Radamantis porque no se deleita con engaños. La oda habla de aduladores. Siglos más tarde, Nietzsche hizo suya la fórmula: en La gaya ciencia, de 1882, el aforismo 270 dice que la conciencia ordena llegar a ser el que se es, y Ecce homo, escrito en 1888, lleva por subtítulo Cómo se llega a ser lo que se es. En el viaje se cayó el aprendizaje.",
+      "Leída entera, la frase no invita a ser como uno ya se siente. Pide primero averiguar qué es uno, y no dejar que lo decidan quienes aplauden."
+    ],
+    "question": "¿Cuánto de lo que creemos ser lo hemos aprendido, y cuánto nos lo han dicho otros?",
+    "quote": {
+      "text": "Llega a ser el que eres, habiéndolo aprendido.",
+      "author": "Píndaro",
+      "work": "Píticas II, v. 72, oda para Hierón de Siracusa (texto griego ed. Sandys, 1937; trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pindaro", "#Citas", "#GreciaAntigua"],
+    "extended": ["#Nietzsche", "#Poesia", "#Filosofia", "#FrasesCelebres", "#Clasicos", "#Autoconocimiento"]
+  },
+  "sources": [
+    {
+      "claim": "El texto griego de la Pítica II, dedicada a Hierón de Siracusa (encabezado ΙΕΡΩΝΙ ΣΥΡΑΚΟΣΙΩι ΑΡΜΑΤΙ, carrera de carros), contiene «γένοι᾽ οἷος ἐσσὶ μαθών· καλός τοι πίθων παρὰ παισίν, αἰεὶ καλός», seguido de «ὁ δὲ Ῥαδάμανθυς εὖ πέπραγεν… οὐδ᾽ ἀπάταισι θυμὸν τέρπεται ἔνδοθεν». La traducción al español de la cita es propia; μαθών es participio aoristo de μανθάνω, «habiendo aprendido».",
+      "source": "Pindar, The Odes of Pindar including the Principal Fragments, ed. y trad. Sir John Sandys, Harvard University Press / Heinemann, 1937 (Perseus Digital Library, Tufts)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0161:book=P.:poem=2"
+    },
+    {
+      "claim": "La traducción de Diane Arnson Svarlien (1990) da, hacia el verso 71-72: «Learn and become who you are. To children, you know, an ape is pretty, always pretty», y sigue con Radamantis, que no se deleita con engaños. La oda celebra la victoria de Hierón, hijo de Dinómenes, en la carrera de cuadrigas.",
+      "source": "Pindar, Odes, trad. Diane Arnson Svarlien, 1990 (Perseus Digital Library, Tufts)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0162:book=P.:poem=2"
+    },
+    {
+      "claim": "La frase «Γένοι' οἷος ἐσσὶ μαθών» es un posible punto culminante del mensaje ético, religioso y poético de la Pítica 2, dedicada a Hierón de Siracusa, y su traducción es objeto de especial discusión.",
+      "source": "Ricardo Pedroza Vieira y Glória Braga Onelley, «Γένοι' οἷος ἐσσὶ μαθών na Pítica 2 de Píndaro: uma proposta de tradução e análise», Calíope: Presença Clássica, n.º 45 (2023), UFRJ",
+      "url": "https://revistas.ufrj.br/index.php/caliope/article/view/60607"
+    },
+    {
+      "claim": "Die fröhliche Wissenschaft, Drittes Buch, aforismo 270: «Was sagt dein Gewissen? – 'Du sollst der werden, der du bist.'»",
+      "source": "Friedrich Nietzsche, Die fröhliche Wissenschaft, Drittes Buch (Projekt Gutenberg-DE)",
+      "url": "https://projekt-gutenberg.org/authors/friedrich-wilhelm-nietzsche/books/die-froehliche-wissenschaft/chapter/6"
+    },
+    {
+      "claim": "El título completo de la obra es «Ecce homo, Wie man wird, was man ist»; fue escrita en 1888.",
+      "source": "Project Gutenberg, eBook n.º 7202, Friedrich Wilhelm Nietzsche, Ecce homo, Wie man wird, was man ist",
+      "url": "https://gutenberg.org/ebooks/7202"
+    },
+    {
+      "claim": "El artículo estudia «cómo traduce el filósofo alemán la idea de Píndaro sobre llegar a ser quien se es».",
+      "source": "Iván Caja Hernández-Ranera, Daimon. Revista Internacional de Filosofía, n.º 97 (2026), Universidad de Murcia, pp. 39-54",
+      "url": "https://revistas.um.es/daimon/article/view/553561"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir «llega a ser el que eres» a Nietzsche como frase original suya: él la tomó de Píndaro.",
+    "Dar una fecha exacta a la Pítica II: la datación de la oda es discutida y no se verificó ninguna.",
+    "Fijar el número de verso como indiscutible: unas fuentes dicen 72 y otras 73 según la edición. Por eso el cuerpo dice «hacia el verso 72».",
+    "Que Nietzsche citó el verso en una carta a Erwin Rohde de 1867: circula, pero no se encontró la carta. No entra.",
+    "Decir que Píndaro relacionaba la frase con el «conócete a ti mismo» délfico: es una interpretación de un artículo secundario, no del texto.",
+    "Afirmar que Ecce homo se publicó en 1908: lo dice una fuente secundaria en resultados de búsqueda; no se leyó en fuente primaria. El cuerpo solo dice que se escribió en 1888."
+  ],
+  "status": "draft"
+}

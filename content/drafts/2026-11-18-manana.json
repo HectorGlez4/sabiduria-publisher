@@ -1,0 +1,59 @@
+{
+  "id": "2026-11-18-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Muybridge y la yegua Sallie Gardner (1878)",
+    "hook": "Durante generaciones los pintores dibujaron mal el galope del caballo. Los corrigieron doce cámaras alineadas junto a una pista de California en junio de 1878.",
+    "body": [
+      "El 19 de junio de 1878, en la pista de Palo Alto de Leland Stanford, la yegua Sallie Gardner pasó al galope frente a una batería de doce cámaras que se disparaban a su paso. El fotógrafo era Eadweard Muybridge. La Biblioteca del Congreso de Estados Unidos conserva la serie con su título original: doce cuadros de una yegua de carreras sobre la pista de Palo Alto.",
+      "Las fotos confirmaron lo que Stanford sostenía: hay un instante del paso en que el caballo no toca el suelo. Pero ese instante no se parecía al que se pintaba. En la Carrera de caballos de 1821, el Derby de Epsom de Géricault que hoy guarda el Louvre, los caballos vuelan con las patas estiradas hacia adelante y hacia atrás. En las fotos, el animal está en el aire con las patas recogidas bajo el cuerpo.",
+      "Scientific American publicó grabados de la serie en octubre de 1878 y La Nature la llevó a Europa en diciembre. Degas y Thomas Eakins consultaron las fotos para corregir su trabajo. Rodin respondió que la fotografía miente. Las dos posturas tenían algo de razón: la cámara mostraba lo que ocurre, y el pintor buscaba lo que se siente."
+    ],
+    "question": "¿Qué imagen damos por cierta solo porque siempre la hemos visto representada así?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El caballo que no volaba así",
+    "subtitle": "Palo Alto, 19 de junio de 1878",
+    "body": "Doce cámaras fotografiaron a la yegua Sallie Gardner al galope. Sí había un instante sin apoyo en el suelo, pero con las patas recogidas bajo el cuerpo, no estiradas como en los cuadros de Géricault."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Muybridge", "#HistoriaDeLaFotografia", "#ArteYCiencia"],
+    "extended": ["#Fotografia", "#Caballos", "#1878", "#Gericault", "#Cine", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Registro de catálogo: «‘Sallie Gardner,’ owned by Leland Stanford; running at a 1:40 gait over the Palo Alto track, 19th June 1878 / Muybridge», fotografía de doce cuadros de un caballo de carreras, fotógrafo Eadweard Muybridge (1830-1904). Consultado mediante resultados de búsqueda: la página devolvió 403 al leerla directamente.",
+      "source": "Library of Congress, Prints and Photographs Division, item 97502309",
+      "url": "https://www.loc.gov/item/97502309/"
+    },
+    {
+      "claim": "La demostración se hizo en junio de 1878 en la Palo Alto Stock Farm con doce cámaras; las fotos mostraron que a mitad de la zancada las cuatro patas se levantan a la vez, lo que confirmaba la tesis de Stanford de la «unsupported transit»; los pintores solían representar al caballo en postura de caballito de balancín, con las patas delanteras y traseras extendidas; la apuesta de 25.000 dólares es una leyenda que casi todos los historiadores serios descartan; Scientific American publicó dibujos de las fotos en octubre de 1878 y La Nature las presentó en Europa en diciembre de 1878; Degas y Thomas Eakins consultaron las fotos; Rodin objetó que la fotografía miente.",
+      "source": "Mitchell Leslie, «The Man Who Stopped Time», Stanford Magazine, mayo-junio de 2001",
+      "url": "https://stanfordmag.org/contents/the-man-who-stopped-time/"
+    },
+    {
+      "claim": "«Course de chevaux, dit traditionnellement le derby de 1821 à Epsom», de Théodore Géricault, 1821, inventario MI 708, Musée du Louvre, Département des Peintures.",
+      "source": "Base Joconde, Ministère de la Culture (POP)",
+      "url": "https://www.pop.culture.gouv.fr/notice/joconde/000PE001278"
+    },
+    {
+      "claim": "Las fotos mostraron que en el galope el caballo está a veces con las cuatro patas en el aire, recogidas bajo el cuerpo y no extendidas como en la pintura anterior; Scientific American llevó grabados de dos tarjetas en la portada del 19 de octubre de 1878; el historiador Phillip Prodger considera apócrifa la historia de la apuesta; los experimentos de junio de 1878 usaron doce cámaras y los de 1879, veinticuatro.",
+      "source": "Wikipedia, «The Horse in Motion» (fuente secundaria; remite a registros de la Library of Congress y a Prodger, Time Stands Still, 2003)",
+      "url": "https://en.wikipedia.org/wiki/The_Horse_in_Motion"
+    }
+  ],
+  "do_not_use": [
+    "La apuesta de 25.000 dólares de Stanford: Stanford Magazine y Phillip Prodger la consideran una leyenda sin fuente primaria.",
+    "Que Muybridge usó 24 cámaras en 1878: fueron doce; las 24 corresponden a los estudios de 1879. El Met describe una batería de veinticuatro en otra serie.",
+    "La foto de Occident de 1877 como primera prueba: era una fotografía retocada a partir de una pintura, según la reconstrucción histórica; no se usa.",
+    "Que el 15 de junio de 1878 es la fecha de Sallie Gardner: ese día se fotografió a Abe Edgington, un trotón. La serie de Sallie Gardner es del 19 de junio.",
+    "Decir que se disparaban con hilos que rompía la yegua: las fuentes varían entre hilos, alambres activados por la rueda del sulky (para los trotones) y disparadores eléctricos. El cuerpo dice solo que se disparaban a su paso.",
+    "Que fue «la primera película»: es una simplificación de divulgación; la serie son fotografías fijas, y su animación posterior es otra historia.",
+    "Detalle de la velocidad (unos 64 km/h) y la exposición de 1/1000 de segundo: aparecen solo en divulgación sin fuente primaria leída."
+  ],
+  "status": "draft"
+}

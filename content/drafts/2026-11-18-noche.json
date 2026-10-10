@@ -1,0 +1,64 @@
+{
+  "id": "2026-11-18-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el Juego Real de Ur y el aasha de Kochi",
+    "hook": "Un juego de mesa de Mesopotamia perdió sus reglas durante siglos. Las rescató una tablilla copiada en 177 a.C., y una familia judía de la India seguía jugando a algo muy parecido en el siglo XX.",
+    "body": [
+      "En los años veinte, Leonard Woolley excavó el Cementerio Real de Ur, en el sur de Irak, y encontró cinco tableros de veinte casillas. El más fino, de hacia 2600 a.C., está en el Museo Británico. Las piezas y los tableros habían sobrevivido. Las reglas, no.",
+      "En 177 a.C., en Babilonia, un escriba llamado Itti-Marduk-balāṭu copió en una tablilla de arcilla una descripción del juego hecha antes por otro erudito, Iddin-Bēl. Esa tablilla llegó al Museo Británico, y a principios de los años ochenta el curador Irving Finkel la identificó como un reglamento: dados de taba de oveja y de buey, tiradas necesarias para meter una pieza en el tablero, una carrera entre dos jugadores.",
+      "Lo más raro vino después. Una foto en la revista de un museo israelí mostraba un tablero de veinte casillas usado por una familia judía de Cochin, en la India. Esa comunidad jugó una versión llamada aasha hasta que emigró a Israel en los años cincuenta, y Finkel la consideró descendiente del juego de Ur. Un juego enterrado en las tumbas reales de Ur había llegado, por la memoria de otras familias, hasta el siglo XX."
+    ],
+    "question": "¿Qué juego de nuestra infancia nos parece nuestro y viene, sin saberlo, de mucho más lejos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Las reglas de un juego de 4.500 años",
+    "subtitle": "Ur, Babilonia y Cochin",
+    "body": "Los tableros salieron de las tumbas reales de Ur. Las reglas, de una tablilla copiada en Babilonia en 177 a.C. Y una versión del juego siguió viva entre los judíos de Cochin, en la India, hasta los años cincuenta."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JuegoRealDeUr", "#Mesopotamia", "#Arqueologia"],
+    "extended": ["#Sumer", "#Babilonia", "#JuegosDeMesa", "#Cuneiforme", "#MuseoBritanico", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Leonard Woolley excavó las tumbas reales de Ur, en el actual sur de Irak, en los años veinte y halló cinco tableros; el más fino, de hacia 2600 a.C., se expone en el Museo Británico. Finkel encontró una tablilla cuneiforme fechada en 177 a.C., escrita por un escriba babilonio que copiaba un documento anterior, y la identificó a principios de los años ochenta como un tratado sobre el juego. La tablilla describe dados de taba de oveja y de buey y qué tiradas hacían falta para meter las piezas en el tablero. Una foto en la revista de un museo israelí mostraba un tablero de veinte casillas usado por una familia judía de Cochin; Finkel consideró ese juego descendiente del de Ur.",
+      "source": "Time, «Ancient Wisdom» (sobre Irving Finkel y el Juego Real de Ur), 2007",
+      "url": "https://content.time.com/time/specials/2007/article/0,28804,1815747_1815707_1815665,00.html"
+    },
+    {
+      "claim": "El Juego Real de Ur, popular en Mesopotamia desde hacia 2600 a.C.; sus reglas proceden de una tablilla escrita por el escriba babilonio Itti-Marduk-balāṭu en 177 a.C., a partir de una tablilla anterior de Iddin-Bēl; Irving Finkel, curador del Museo Británico, reconstruyó las reglas en los años ochenta.",
+      "source": "Guinness World Records, «First board game with surviving rules»",
+      "url": "https://www.guinnessworldrecords.com/world-records/776335-first-board-game-with-surviving-rules"
+    },
+    {
+      "claim": "Las reglas de este juego para dos jugadores se perdieron hasta que el curador Irving Finkel descifró a principios de los años ochenta una tablilla cuneiforme con las instrucciones. Otra ficha del catálogo describe una tablilla con un diagrama explicativo y reglas del juego de veinte casillas. Consultado mediante resultados de búsqueda: el sitio devolvió 403 al leerlo directamente.",
+      "source": "British Museum, «Twelve objects to see with children» y ficha de colección W_Rm-III-6-b",
+      "url": "https://www.britishmuseum.org/visit/object-trails/twelve-objects-see-children"
+    },
+    {
+      "claim": "Tablero de juego fragmentario de Ur, hacia 2450 a.C., de concha, caliza y lapislázuli; procede de la expedición conjunta del Museo Británico y el Museo de la Universidad de Pensilvania a Ur, 1928. Consultado mediante resultados de búsqueda: la ficha devolvió 403.",
+      "source": "Penn Museum, objeto B16742",
+      "url": "https://penn.museum/collections/object/22759"
+    },
+    {
+      "claim": "Woolley halló cinco tableros en el Cementerio Real de Ur entre 1922 y 1934, de hacia 2600-2400 a.C.; la tablilla de Itti-Marduk-balāṭu se escribió hacia 177 a.C.; los judíos de Kochi jugaron una forma reconocible del juego llamada aasha, de veinte casillas, hasta que empezaron a emigrar a Israel en los años cincuenta (cita a The Hindu, 2015, y a Finkel, 2007).",
+      "source": "Wikipedia, «Royal Game of Ur» (fuente secundaria; remite a Finkel, Ancient Board Games in Perspective, British Museum Press, 2007)",
+      "url": "https://en.wikipedia.org/wiki/Royal_Game_of_Ur"
+    }
+  ],
+  "do_not_use": [
+    "Cuántas piezas tenía cada jugador según la tablilla: Time dice cinco, los tableros de Ur tenían siete y el aasha de Kochi doce. No entra para no fijar una cifra discutida.",
+    "Que la tablilla se catalogó primero como presagios del vuelo de las aves o de caracteres astrales: aparece solo en resultados de búsqueda que resumen el artículo de Finkel, cuyo PDF no se pudo leer.",
+    "Que la tablilla se fechó el 3 de noviembre de 177-176 a.C.: dato del artículo de Finkel, no leído directamente. El cuerpo usa solo el año que dan Time y Guinness.",
+    "Que el juego evolucionó hasta convertirse en el backgammon: es una hipótesis, no un hecho.",
+    "Los nombres propios de la familia de Cochin (Ruby Daniel): aparecen en Time, pero no aportan y no se contrastaron.",
+    "El tablero de Woolley «enterrado con una princesa»: lo dice Time sin más detalle; no se verificó en la ficha del Museo Británico.",
+    "Los artículos de The Hindu (2015) sobre el aasha no se pudieron abrir; el dato de Kochi se sostiene en Time y en la Wikipedia, que los cita."
+  ],
+  "status": "draft"
+}

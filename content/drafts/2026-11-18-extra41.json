@@ -1,0 +1,66 @@
+{
+  "id": "2026-11-18-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Mariátegui y el editorial Aniversario y balance (1928)",
+    "hook": "La frase más repetida de Mariátegui está en un editorial de cumpleaños, y la línea que la sigue, casi nunca citada, explica cómo cumplirla.",
+    "body": [
+      "Amauta salió en Lima en septiembre de 1926, dirigida por José Carlos Mariátegui. Dos años después, en el número 17, él escribió el editorial Aniversario y balance. Allí recordaba por qué la revista llevaba ese nombre: habían tomado una palabra incaica para crearla de nuevo. Y anunciaba que la primera jornada había concluido: en adelante, le bastaba ser una revista socialista.",
+      "La frase célebre no es un portazo a Europa. Llega justo después de afirmar que el socialismo está en la tradición americana, y la sigue otra que la completa: hay que darle vida con nuestra propia realidad, en nuestro propio lenguaje. Lo que Mariátegui rechazaba no eran las ideas de fuera, sino trasplantarlas sin traducirlas.",
+      "Ese mismo 1928 publicó los Siete ensayos de interpretación de la realidad peruana. Murió en Lima el 16 de abril de 1930, a los 35 años. La advertencia sirve para cualquier idea que viaja: la que se copia tal cual rara vez echa raíces."
+    ],
+    "question": "¿Qué idea adoptamos de otro lugar sin haberla traducido a nuestra propia realidad?",
+    "quote": {
+      "text": "No queremos, ciertamente, que el socialismo sea en América calco y copia. Debe ser creación heroica.",
+      "author": "José Carlos Mariátegui",
+      "work": "«Aniversario y balance», editorial de Amauta, n.º 17 (Lima, septiembre de 1928)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mariategui", "#Citas", "#Peru"],
+    "extended": ["#Amauta", "#PensamientoLatinoamericano", "#1928", "#FrasesCelebres", "#Historia", "#Ensayo"]
+  },
+  "sources": [
+    {
+      "claim": "El editorial «Aniversario y balance» contiene: «No queremos, ciertamente, que el socialismo sea en América calco y copia. Debe ser creación heroica.» La frase anterior es «El socialismo, en fin, está en la tradición americana» y la siguiente «Tenemos que dar vida, con nuestra propia realidad, en nuestro propio lenguaje, al socialismo indoamericano». El texto dice además «Tomábamos una palabra incaica, para crearla de nuevo», que la revista «llega con este número a su segundo cumpleaños», que «La primera jornada de Amauta ha concluido» y que «le basta ser una revista socialista». Primera edición: Amauta, n.º 17, Lima, septiembre de 1928.",
+      "source": "José Carlos Mariátegui, «Aniversario y balance», Archivo Mariátegui, Marxists Internet Archive (texto corregido en 2015)",
+      "url": "https://www.marxists.org/espanol/mariateg/1928/sep/aniv.htm"
+    },
+    {
+      "claim": "El primer número de Amauta es el Año I, n.º 1, Lima, septiembre de 1926; la presentación vincula el título con la herencia incaica y dice que la palabra adquiere con la revista una nueva acepción.",
+      "source": "José Carlos Mariátegui, «Presentación de Amauta», Archivo Mariátegui, Marxists Internet Archive",
+      "url": "https://www.marxists.org/espanol/mariateg/1926/sep/amauta.htm"
+    },
+    {
+      "claim": "Mariátegui nació el 14 de junio de 1894 y murió en Lima el 16 de abril de 1930; publicó los Siete ensayos de interpretación de la realidad peruana en 1928 y fundó Amauta en 1926, que dirigió hasta su muerte.",
+      "source": "Encyclopaedia Britannica, «José Carlos Mariátegui» (consultado a través de resultados de búsqueda; la página bloquea la lectura directa)",
+      "url": "https://www.britannica.com/biography/Jose-Carlos-Mariategui"
+    },
+    {
+      "claim": "El primer número de Amauta salió en septiembre de 1926; Mariátegui la dirigió hasta su muerte, el 16 de abril de 1930, en Lima; el artículo «Aniversario y balance» sostiene que el socialismo en América no será calco ni copia sino creación heroica.",
+      "source": "Izquierda Diario, «José Carlos Mariátegui: la creación heroica»",
+      "url": "https://www.izquierdadiario.es/Jose-Carlos-Mariategui-la-creacion-heroica"
+    },
+    {
+      "claim": "Trabajos académicos citan el pasaje con la referencia «Aniversario y balance», Amauta (Lima), núm. 17, septiembre de 1928, entre ellos Sara Beatriz Guardia en Cuadernos Americanos 165 (UNAM, 2018). Solo se vio la referencia en resultados de búsqueda; el PDF no se leyó.",
+      "source": "Cuadernos Americanos, n.º 165, CIALC-UNAM",
+      "url": "https://rilzea.cialc.unam.mx/jspui/bitstream/CIALC-UNAM/A_CA14/1/CA_165_2.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Fechar la frase en 1927: un artículo de Rebelión habla de una «editorial de 1927», pero el texto es del número 17, septiembre de 1928.",
+    "La forma «ni calco ni copia»: es paráfrasis. El original dice «calco y copia» precedido de «No queremos, ciertamente, que...».",
+    "Decir que el número 17 celebró el tercer aniversario: el encabezado de Marxists.org dice «3er aniversario» y «Año III», pero el propio editorial habla del «segundo cumpleaños», coherente con la fundación en septiembre de 1926. Una reedición en Redalyc da «Año II». Por eso el cuerpo no menciona el número de año.",
+    "Que fue José Sabogal quien propuso el nombre Amauta: aparece en resultados de búsqueda, no en una fuente leída. No entra.",
+    "Presentar la frase como rechazo de toda influencia europea: el editorial pide adaptar el socialismo a la realidad americana, no rechazar ideas de fuera.",
+    "Los PDF de Redalyc y Cuadernos Americanos no se pudieron leer; la cita está verificada en el texto completo del editorial en Marxists.org."
+  ],
+  "status": "draft"
+}
