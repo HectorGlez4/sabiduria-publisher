@@ -1,0 +1,59 @@
+{
+  "id": "2026-11-17-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Alfred Russel Wallace y el ensayo de Ternate (1858)",
+    "hook": "La teoría de la selección natural se presentó en público por primera vez sin que ninguno de sus dos autores estuviera en la sala. Uno estaba de luto en Kent; el otro, en las Molucas, al otro lado del mundo.",
+    "body": [
+      "En febrero de 1858, Alfred Russel Wallace vivía en Ternate, una isla de las Molucas, y sufría ataques de fiebre intermitente que lo tumbaban dos o tres horas al día. Durante uno de ellos, contó después, pensando en cómo surgen las especies, le vino de golpe la idea de la supervivencia del más apto. Esa misma noche la esbozó, en las dos siguientes la escribió entera y la envió a Charles Darwin en el siguiente correo.",
+      "Darwin llevaba unos veinte años trabajando en la misma idea sin publicarla. El 18 de junio escribió a Charles Lyell: sus palabras se habían cumplido con creces, alguien se le había adelantado. Nunca había visto una coincidencia tan notable. Lyell y Joseph Hooker decidieron presentar juntos el ensayo de Wallace y extractos de Darwin.",
+      "Se leyeron el 1 de julio de 1858 en la Sociedad Linneana de Londres. Darwin no fue: estaba de duelo por la muerte de su hijo. Wallace seguía en las Molucas. Casi nadie reaccionó, y en mayo de 1859 el presidente de la Sociedad resumió el año diciendo que no había traído ninguno de esos descubrimientos que revolucionan una ciencia."
+    ],
+    "question": "¿Qué ideas importantes de nuestro tiempo estarán pasando hoy sin que nadie levante la vista?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Una idea con fiebre",
+    "subtitle": "Ternate, febrero de 1858",
+    "body": "Wallace concibió la selección natural en un ataque de fiebre, la escribió en tres noches y se la mandó a Darwin. Se leyó en Londres sin ninguno de los dos presentes, y casi nadie se dio cuenta."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AlfredRusselWallace", "#Darwin", "#HistoriaDeLaCiencia"],
+    "extended": ["#Evolucion", "#SeleccionNatural", "#1858", "#Molucas", "#Biologia", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Wallace: «In February, 1858, I was living at Ternate, one of the Moluccas Islands», «suffering from a sharp attack of intermittent fever», con ataques de dos o tres horas; durante uno de ellos, pensando en el origen de las especies, «there suddenly flashed upon me the idea of the survival of the fittest»; «the very same evening I sketched its outlines, and in the two succeeding evenings wrote it out in full», y lo envió «by the next post to Mr. Darwin».",
+      "source": "A. R. Wallace, «The Dawn of a Great Discovery», Black and White, vol. 25, 17 de enero de 1903, p. 78 (Darwin Online, ed. John van Wyhe)",
+      "url": "https://darwin-online.org.uk/converted/Ancillary/1903_Wallace_A273.html"
+    },
+    {
+      "claim": "Carta de Darwin a Lyell fechada «18 [June 1858]»: «Your words have come true with a vengeance that I shd. be forestalled»; «I never saw a more striking coincidence»; si Wallace hubiera tenido su esbozo de 1842 «he could not have made a better short abstract!».",
+      "source": "Darwin Correspondence Project (Universidad de Cambridge), DCP-LETT-2285",
+      "url": "https://www.darwinproject.ac.uk/letter/DCP-LETT-2285.xml"
+    },
+    {
+      "claim": "Los papeles se leyeron el 1 de julio de 1858 en una reunión extraordinaria de la Linnean Society; Darwin no asistió, enfermo y de duelo por la muerte de su hijo; Wallace estaba en las Molucas; Darwin había desarrollado la hipótesis durante unos veinte años sin publicarla; Lyell y Hooker organizaron la presentación conjunta; hubo poca discusión; en su discurso presidencial de mayo de 1859, Thomas Bell dijo que el año no había estado «marked by any of those striking discoveries».",
+      "source": "The Linnean Society of London, «1st July 2018: 160th anniversary of the presentation of On the tendency of Species to form Varieties»",
+      "url": "https://www.linnean.org/the-society/news/2018/07/01/1st-july-2018-160th-anniversary-of-the-presentation-of-on-the-tendency-of-species-to-form-varieties"
+    },
+    {
+      "claim": "El artículo conjunto se publicó en Journal of the Proceedings of the Linnean Society, Zoology, 20 de agosto de 1858, vol. 3, pp. 45-62; el ensayo de Wallace se escribió en Ternate en febrero de 1858.",
+      "source": "Memorial University of Newfoundland, Departamento de Biología (S. Carr), «Darwin & Wallace 1858»",
+      "url": "https://www.mun.ca/biology/scarr/Darwin_&_Wallace_1858.html"
+    }
+  ],
+  "do_not_use": [
+    "Que Wallace estaba en Borneo en julio de 1858: lo dice un resultado de búsqueda, pero la Linnean Society lo sitúa en las Molucas.",
+    "Que el ensayo se escribió con seguridad en Ternate: George Beccaloni (Museo de Historia Natural de Londres) señala que no está resuelto si la idea le llegó en Ternate o en la vecina Halmahera (Gilolo). El copy se apoya en el relato del propio Wallace, que dice Ternate; no afirma más.",
+    "La fecha en que Darwin recibió el ensayo: el Darwin Correspondence Project dice que probablemente llegó en mayo o principios de junio; Van Wyhe y Rookmaaker (2012) defienden el 18 de junio. El copy solo usa la fecha de la carta a Lyell.",
+    "Que Darwin retrasó o manipuló la recepción para apropiarse de ideas de Wallace: tesis conspirativa sin respaldo en las fuentes consultadas.",
+    "Si Wallace sabía o consintió de antemano la presentación conjunta: se suele afirmar que se enteró después, pero ninguna fuente leída en esta ejecución lo dice. El copy no lo menciona.",
+    "Que la carta original de Wallace y su manuscrito se conservan: el Darwin Correspondence Project indica que el manuscrito no se ha localizado.",
+    "Que la frase de Bell se dijo en la reunión del 1 de julio: es de su discurso presidencial de mayo de 1859."
+  ],
+  "status": "draft"
+}

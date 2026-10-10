@@ -1,0 +1,55 @@
+{
+  "id": "2026-11-17-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Samuel Johnson y el último refugio del canalla",
+    "hook": "La frase de Samuel Johnson que se cita contra el patriotismo venía, según quien la anotó, con una aclaración que casi nunca la acompaña.",
+    "body": [
+      "El viernes 7 de abril de 1775, Samuel Johnson cenaba en una taberna de Londres con un grupo numeroso. Entre los presentes estaba James Boswell, que lo anotaba todo. La conversación pasó al patriotismo y Johnson, dice Boswell, soltó de pronto y en tono firme una sentencia que iba a sobresaltar a muchos.",
+      "Boswell la publicó en 1791, en su Vida de Samuel Johnson, e inmediatamente añadió una advertencia: Johnson no se refería al amor real y generoso por el propio país, sino al patriotismo fingido que tantos, en todas las épocas y países, han usado como capa para su propio interés. Johnson había publicado meses antes un panfleto electoral titulado precisamente El patriota.",
+      "La frase sobrevivió sin la aclaración. Hoy se cita como un ataque al patriotismo en sí. Lo que Johnson señalaba era otra cosa: que la bandera es el último recurso de quien ya no tiene otro argumento."
+    ],
+    "question": "¿Cómo se distingue a quien ama un lugar de quien solo lo usa como escudo?",
+    "quote": {
+      "text": "El patriotismo es el último refugio de un canalla.",
+      "author": "Samuel Johnson",
+      "work": "Recogido por James Boswell, Vida de Samuel Johnson (1791), entrada del 7 de abril de 1775",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SamuelJohnson", "#Citas", "#Historia"],
+    "extended": ["#Patriotismo", "#Boswell", "#1775", "#LiteraturaInglesa", "#FrasesCelebres", "#Londres"]
+  },
+  "sources": [
+    {
+      "claim": "Bajo la fecha «Friday, April 7» (1775), Boswell escribe que cenó con Johnson en una taberna con un grupo numeroso; «Patriotism having become one of our topicks, Johnson suddenly uttered, in a strong determined tone, an apophthegm, at which many will start: 'Patriotism is the last refuge of a scoundrel.'» Y a continuación: Johnson «did not mean a real and generous love of our country, but that pretended patriotism which so many, in all ages and countries, have made a cloak for self-interest». Una nota de la misma edición cita a Johnson sobre su panfleto The Patriot, fechado en noviembre de 1774. La traducción al español es propia.",
+      "source": "James Boswell, Life of Johnson, ed. George Birkbeck Hill, vol. II (1765-1776), Project Gutenberg n.º 9072",
+      "url": "https://www.gutenberg.org/ebooks/9072"
+    },
+    {
+      "claim": "La entrada del diario de Boswell del 7 de abril de 1775 registra «Patriotism is the last refuge of a scoundrel», con la aclaración de que Johnson se refería al «pretended patriotism»; la cita procede de The Life of Samuel Johnson, LL.D., 1791. Las variantes «the first refuge» o «Pretended patriotism is the last refuge» son posteriores.",
+      "source": "Garson O'Toole, Quote Investigator, «Patriotism is the Last Refuge of a Scoundrel», 14 de junio de 2020",
+      "url": "https://quoteinvestigator.com/2020/06/14/scoundrel/"
+    },
+    {
+      "claim": "La frase no apuntaba al patriotismo en general sino al uso de la palabra «patriota» por Pitt, conde de Chatham, y sus partidarios; Johnson valoraba lo que consideraba patriotismo verdadero. En 1774 publicó The Patriot como crítica de lo que veía como falso patriotismo.",
+      "source": "Wikipedia, «Political views of Samuel Johnson» (cita a Boswell 1986, p. 182, y a Dustin Griffin, Patriotism and Poetry in Eighteenth-Century Britain, 2005, p. 21)",
+      "url": "https://en.wikipedia.org/wiki/Political_views_of_Samuel_Johnson"
+    }
+  ],
+  "do_not_use": [
+    "«El patriotismo es el primer refugio de un canalla»: variante posterior, no está en Boswell.",
+    "Que la frase está en el Diccionario de Johnson: no. Lo que circula es que la 4.ª edición (1773) añadió a «patriot» la acepción «factious disturber of the government»; solo se encontró en un blog y en una nota de Boswell vista a través de Bookrags, sin consultar el diccionario. No entra.",
+    "Que la cena fue en el Club Literario o en la taberna Turk's Head: el texto de Boswell dice solo «a Tavern, with a numerous company», sin nombrarla.",
+    "Que iba dirigida específicamente a Edmund Burke: en la misma conversación Boswell menciona a un personaje eminente (identificado como Burke) y Johnson matiza que no lo llama deshonesto. La frase no se dijo contra él.",
+    "Que iba dirigida contra los colonos americanos: es una inferencia de comentaristas, no lo dice Boswell."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-17-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Montesquieu y el poder que frena al poder (1748)",
+    "hook": "La frase que funda la división de poderes no está en el capítulo célebre de Montesquieu, sino dos capítulos antes, y va precedida de una advertencia sobre la virtud.",
+    "body": [
+      "Del espíritu de las leyes salió en Ginebra en 1748, impreso por Barrillot. El libro XI trata de la libertad política, y su capítulo 6, sobre la constitución de Inglaterra, es el que se estudia como texto de la separación de poderes. La frase que todos repiten está antes, en el capítulo 4, que lleva un título modesto: Continuación del mismo tema.",
+      "El razonamiento es corto. Montesquieu llama experiencia eterna a que todo hombre con poder se incline a abusar de él, y a que avance hasta topar con límites. Luego escribe: quién lo diría, hasta la virtud necesita límites. Y de ahí saca la conclusión: no basta con buenos gobernantes, hace falta que la disposición de las cosas obligue al poder a detener al poder.",
+      "Cuarenta años después, el 1 de febrero de 1788, James Madison lo llamó en El Federalista 47 el oráculo al que siempre se consulta y se cita en esta materia. La idea no exige desconfiar de las personas. Exige no depender de que sean buenas."
+    ],
+    "question": "¿Qué límites aceptaríamos de buena gana si supiéramos que también alcanzan a quienes admiramos?",
+    "quote": {
+      "text": "Para que no se pueda abusar del poder, es preciso que, por la disposición de las cosas, el poder frene al poder.",
+      "author": "Montesquieu",
+      "work": "Del espíritu de las leyes, libro XI, capítulo 4 (Ginebra, 1748)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Montesquieu", "#Citas", "#Filosofia"],
+    "extended": ["#DivisionDePoderes", "#Ilustracion", "#1748", "#Libertad", "#FrasesCelebres", "#Politica"]
+  },
+  "sources": [
+    {
+      "claim": "Libro XI, capítulo IV, titulado «Continuation du même sujet», contiene: «c'est une expérience éternelle, que tout homme qui a du pouvoir est porté à en abuser ; il va jusqu'à ce qu'il trouve des limites», «Qui le diroit ! la vertu même a besoin de limites» y «Pour qu'on ne puisse abuser du pouvoir, il faut que, par la disposition des choses, le pouvoir arrête le pouvoir». El capítulo III se titula «Ce que c'est que la liberté» y el VI «De la constitution d'Angleterre». La traducción al español es propia.",
+      "source": "Montesquieu, De l'esprit des lois, éd. Nourse, Londres, 1772, t. 1, libro XI (Wikisource, facsímil djvu)",
+      "url": "https://fr.wikisource.org/wiki/De_l%E2%80%99esprit_des_lois_(%C3%A9d._Nourse)/Livre_11"
+    },
+    {
+      "claim": "La edición original fue publicada por Barrillot en Ginebra en 1748; el estudio de la constitución inglesa es el que se convertiría en el capítulo 6 del libro XI; el libro XI forma parte del sistema sobre la libertad, que incluye la separación de poderes.",
+      "source": "Georges Benrekassa, «The Spirit of Law», A Montesquieu Dictionary, ENS de Lyon / IHRIM-CNRS",
+      "url": "https://dictionnaire-montesquieu.ens-lyon.fr/en/article/1376478016/en/"
+    },
+    {
+      "claim": "El Federalista 47, de Madison, publicado en The New York Packet el viernes 1 de febrero de 1788, dice: «The oracle who is always consulted and cited on this subject is the celebrated Montesquieu».",
+      "source": "The Avalon Project, Yale Law School, The Federalist No. 47",
+      "url": "https://avalon.law.yale.edu/18th_century/fed47.asp"
+    },
+    {
+      "claim": "La cita del pasaje sobre el poder se sitúa en el libro XI, capítulo 4; el capítulo VI, «De la Constitution d'Angleterre», es el texto que suele analizarse como exposición de la separación de poderes.",
+      "source": "Université numérique juridique francophone (UNJF), curso de derecho constitucional, y resultados académicos franceses que citan el pasaje como (XI, 4)",
+      "url": "https://cours.unjf.fr/repository/coursefilearea/file.php/64/Cours/401_item/support401.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Que la frase está en el capítulo 6 («De la constitution d'Angleterre»): está en el 4. El 6 es el de la separación de los tres poderes.",
+    "La versión «el poder corrompe, y el poder absoluto corrompe absolutamente»: es de Lord Acton (1887), no de Montesquieu.",
+    "Que el libro salió anónimo, que se agotó en dos meses y que entró en el Índice en 1751: lo dicen catálogos de librerías anticuarias y casas de subastas, no una fuente académica leída. No entra.",
+    "Que Montesquieu inventó la separación de poderes: el propio Madison, en El Federalista 47, dice que si no es el autor del principio tiene al menos el mérito de haberlo expuesto mejor.",
+    "La fuente de la UNJF (PDF) no se leyó directamente; su contenido procede de un resumen de búsqueda. La localización XI, 4 está verificada en el texto de Wikisource."
+  ],
+  "status": "draft"
+}

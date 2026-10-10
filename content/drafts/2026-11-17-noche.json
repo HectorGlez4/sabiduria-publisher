@@ -1,0 +1,58 @@
+{
+  "id": "2026-11-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los rollos carbonizados de Herculano",
+    "hook": "Durante más de dos siglos, leer los rollos de Herculano exigía destruirlos. En 2025 se leyó el título de uno que nadie ha abierto.",
+    "body": [
+      "En el año 79, la erupción del Vesubio sepultó una villa junto al mar en Herculano. En 1750 la hallaron unos poceros, y el ingeniero Karl Weber la excavó por túneles. Entre las estatuas aparecían bultos negros que parecían carbón. En 1752, el dibujante Camillo Paderni se dio cuenta de que tenían letras: eran rollos de papiro carbonizados. Se rescataron unas 1.800 piezas.",
+      "Abrirlos era el problema. Los primeros intentos los cortaban por la mitad para raspar el interior. En 1753, Antonio Piaggio, llegado de la Biblioteca Vaticana, inventó una máquina que separaba las capas poco a poco; en años de trabajo desenrolló unos cincuenta. Muchos textos resultaron ser de Filodemo de Gádara, un filósofo epicúreo del siglo I a.C.",
+      "El 5 de febrero de 2024, tres jóvenes investigadores ganaron el Vesuvius Challenge: con escaneos y aprendizaje automático leyeron más de 2.000 caracteres de un rollo cerrado, un texto sobre el placer, alrededor del cinco por ciento del total. En mayo de 2025, otro rollo de la Biblioteca Bodleiana, el PHerc. 172, reveló su título sin desenrollarse: Sobre los vicios, de Filodemo."
+    ],
+    "question": "¿Cuántas cosas se pierden por la prisa de querer verlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los rollos de Herculano",
+    "subtitle": "Carbón con letras, 1752",
+    "body": "El Vesubio carbonizó una biblioteca en el año 79. Para leerla, en el siglo XVIII se cortaban los rollos. En 2025 se leyó el título de uno sin abrirlo: Sobre los vicios, de Filodemo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Herculano", "#Arqueologia", "#Historia"],
+    "extended": ["#Vesubio", "#Papiros", "#Filodemo", "#Epicureismo", "#RomaAntigua", "#Patrimonio"]
+  },
+  "sources": [
+    {
+      "claim": "Unos poceros hallaron en 1750 la villa junto al mar llamada Villa dei Papiri; Karl Weber la excavó de 1750 a 1761; los bultos negros parecían carbón; en 1752 Camillo Paderni se dio cuenta de que tenían escritura; en 1753 Antonio Piaggio, de la Biblioteca Vaticana, inventó una máquina para separar lentamente las hojas y con los años desenrolló unos 50 rollos; se rescataron unas 1.800 piezas, llevadas al Museo Real de Portici; muchos se destruyeron en los primeros intentos; Filodemo de Gádara (c. 110 – c. 35 a.C.), filósofo epicúreo, es autor de muchas de las obras recuperadas.",
+      "source": "Dee L. Clayman (CUNY Graduate Center), «Herculaneum papyrus scrolls», OUPblog, Oxford University Press, 14 de diciembre de 2015",
+      "url": "https://blog.oup.com/2015/12/herculaneum-papyrus-scrolls/"
+    },
+    {
+      "claim": "Los primeros estudiosos cortaban los rollos en mitades y vaciaban el interior hasta llegar a texto legible; Piaggio inventó su máquina en 1753; se recuperaron unas 1.800 piezas entre 1752 y 1754.",
+      "source": "Wikipedia, «Herculaneum papyri»",
+      "url": "https://en.wikipedia.org/wiki/Herculaneum_papyri"
+    },
+    {
+      "claim": "El 5 de febrero de 2024 se anunció que Youssef Nader, Luke Farritor y Julian Schilliger ganaban el Gran Premio de 700.000 dólares; leyeron más de 2.000 caracteres; se ha leído alrededor del 5 % del primer rollo; el texto trata del placer y de si la escasez o abundancia de bienes como la comida afecta al placer que dan; Richard Janko considera muy probable que el autor sea Filodemo.",
+      "source": "Vesuvius Challenge, anuncio oficial del Gran Premio 2023",
+      "url": "https://scrollprize.org/grandprize"
+    },
+    {
+      "claim": "El rollo PHerc. 172, de las Bodleian Libraries (Universidad de Oxford), escaneado en el sincrotrón Diamond en julio de 2024, fue identificado mediante desenrollado virtual como Sobre los vicios, de Filodemo; lo hallaron Sean Johnson y, por separado, Marcel Roth y Micha Nowak (Universidad de Würzburg); el rollo sigue sellado.",
+      "source": "Fine Books & Collections, «Title of work deciphered in sealed Herculaneum scroll via digital unwrapping», 6 de mayo de 2025",
+      "url": "https://www.finebooksmagazine.com/news/title-work-deciphered-sealed-herculaneum-scroll-digital-unwrapping"
+    }
+  ],
+  "do_not_use": [
+    "Que los obreros tiraron o quemaron rollos creyéndolos carbón: circula en divulgación, pero la fuente académica leída solo dice que se pasaron por alto. No entra.",
+    "Que el texto leído en 2024 es con certeza de Filodemo: Janko lo considera «muy probable», no seguro. El copy no le atribuye ese texto.",
+    "Que la biblioteca de la villa era la de Filodemo: es una hipótesis.",
+    "Que con IA ya se han leído rollos completos o que la biblioteca entera es legible: en 2024 se leyó alrededor del 5 % de un rollo.",
+    "La cifra exacta de rollos (1.800, 1.100, más de 1.800): las fuentes hablan de unas 1.800 piezas, enteras o fragmentarias, no de 1.800 libros.",
+    "Que el PHerc. 172 es el libro primero de Sobre los vicios: la Bodleiana dice que la cifra puede leerse como alfa o como delta."
+  ],
+  "status": "draft"
+}
