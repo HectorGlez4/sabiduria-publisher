@@ -2,7 +2,7 @@
   "id": "2026-10-05-re51-reel",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Ugarit y los abecedarios de Ras Shamra",
     "hook": "El orden en que decimos las letras aparece por primera vez en unas tablillas de barro de una ciudad siria desaparecida hace treinta y dos siglos. Los signos de esas tablillas no se parecen a los nuestros.",
@@ -89,6 +89,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-05T17:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1618505829921491",
+      "url": "https://www.facebook.com/reel/1618505829921491",
+      "published_at": "2026-10-11T07:15:20.554859+00:00"
+    }
+  },
   "reemision_de": "2026-09-16-extra86"
 }

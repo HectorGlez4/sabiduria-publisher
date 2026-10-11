@@ -2,7 +2,7 @@
   "id": "2026-10-05-re54-story",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "John Snow y el mapa del cólera de 1854",
     "hook": "El mapa más famoso de la salud pública no descubrió nada. Se dibujó después, cuando el brote ya bajaba, y el organismo que debía leerlo concluyó al año siguiente que la culpa había sido del aire.",
@@ -92,6 +92,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-05T23:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1434150508903771",
+      "photo_id": "1119262147565111",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-11T08:46:52.433256+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17968924938187119",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-11T08:47:06.678834+00:00"
+    }
+  },
   "reemision_de": "2026-09-17-extra87"
 }
