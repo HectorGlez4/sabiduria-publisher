@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-19-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Florence Nightingale y la gráfica de Crimea (1858)",
+    "hook": "A Florence Nightingale se la recuerda con una lámpara en la mano. Su arma más eficaz fue un gráfico circular dibujado para quien no iba a leer una tabla.",
+    "body": [
+      "En 1858 Nightingale publicó en Londres sus Notes on Matters Affecting the Health, Efficiency and Hospital Administration of the British Army. Allí incluyó el Diagrama de las causas de mortalidad en el ejército de Oriente: un círculo dividido en doce porciones, una por mes de la guerra de Crimea.",
+      "Cada porción tenía tres colores. El azul eran las muertes por enfermedades infecciosas prevenibles o mitigables, como el cólera o la disentería. El rojo, las muertes por heridas. El negro, todas las demás. El azul dominaba el dibujo: en su primer invierno en Scutari, murieron diez veces más soldados por infección que por heridas de batalla.",
+      "Nightingale añadió gráficos porque temía que las cifras parecieran áridas. Ese mismo año, a propuesta del estadístico William Farr, fue la primera mujer elegida en la Statistical Society of London. Un dato solo cambia algo cuando alguien que no lo buscaba es capaz de verlo."
+    ],
+    "question": "¿Qué verdad conocemos de sobra y nunca hemos sabido mostrar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La rosa de Nightingale",
+    "subtitle": "Londres, 1858",
+    "body": "Doce porciones, una por mes de la guerra de Crimea. Azul para las muertes por enfermedades prevenibles, rojo para las heridas, negro para el resto. El azul llenaba casi todo el círculo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#FlorenceNightingale", "#Estadistica", "#ArteYCiencia"],
+    "extended": ["#HistoriaDeLaMedicina", "#Crimea", "#1858", "#Datos", "#Enfermeria", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "El diagrama, titulado «Diagram of the Causes of Mortality in the Army in the East», procede de Notes on Matters Affecting the Health, Efficiency, and Hospital Administration of the British Army (Londres, Harrison, 1858); tiene doce secciones, una por mes, y tres colores, uno por causa de muerte; Nightingale fue la primera mujer miembro de la Royal Statistical Society.",
+      "source": "Lehigh University Libraries, exposición «Data Visualization», ficha «Nightingale's Rose Diagram»",
+      "url": "https://exhibits.lib.lehigh.edu/exhibits/show/data_visualization/science/nightingale"
+    },
+    {
+      "claim": "Publicó las Notes en 1858; añadió gráficos porque temía que las estadísticas parecieran áridas; azul = «preventible or mitigable zymotic diseases» (cólera, disentería), rojo = «wounds», negro = «all other causes»; en su primer invierno en Scutari murieron diez veces más soldados por enfermedad infecciosa que por heridas de batalla; comparó los registros del ejército con las tablas de mortalidad de William Farr; fue la primera mujer elegida en la Royal Statistical Society en 1858, el año de las Notes.",
+      "source": "Anne-Marie Conway, «Lady with the diagram», Eye Magazine, invierno de 2011",
+      "url": "https://www.eyemagazine.com/feature/article/lady-with-the-diagram"
+    },
+    {
+      "claim": "Diagrama de área polar: doce ángulos iguales, uno por mes; cuñas azules exteriores = enfermedades contagiosas como el cólera y el tifus; rojas centrales = heridas; negras = otras causas; el área de cada cuña es proporcional al número de muertes; en 1858 William Farr la propuso y fue «the first woman to be elected a Fellow of the Statistical Society of London».",
+      "source": "Wild Maths, «The compassionate statistician» (Universidad de Cambridge, proyecto NRICH)",
+      "url": "https://wild.maths.org/node/2022"
+    }
+  ],
+  "do_not_use": [
+    "Fechar su ingreso en la Statistical Society en 1859: algunas páginas lo dicen, pero Eye Magazine y Wild Maths dan 1858, el año de las Notes. El cuerpo dice «ese mismo año», apoyado en esas dos.",
+    "Que el diagrama apareció por primera vez en 1859: la versión de 1859 está en A Contribution to the Sanitary History of the British Army, una publicación posterior; el diagrama ya estaba en las Notes de 1858.",
+    "Llamarlo «el primer gráfico circular» o «el primer gráfico de área polar»: no está verificado y hay precedentes de gráficos circulares (Playfair, 1801). El cuerpo no dice que lo inventara.",
+    "Que se lo envió a la reina Victoria: aparece en páginas de divulgación, no en una fuente leída. No entra.",
+    "La reducción del 75 % de la mortalidad del ejército en la India tras diez años de reforma sanitaria: Eye la menciona, pero sin fuente primaria leída y fuera del foco. No entra.",
+    "La fecha de la comisión sanitaria de marzo de 1855: no se confirmó en ninguna fuente leída."
+  ],
+  "status": "draft"
+}

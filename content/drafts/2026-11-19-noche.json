@@ -1,0 +1,52 @@
+{
+  "id": "2026-11-19-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Tales de Mileto y las prensas de olivo",
+    "hook": "De Tales de Mileto no queda una sola línea escrita. Quedan dos historias opuestas: en una cae en un hoyo por mirar el cielo; en la otra se hace rico.",
+    "body": [
+      "Platón, en el Teeteto, cuenta que Tales miraba las estrellas, cayó en un hoyo y una criada tracia se burló de él: quería saber lo que pasaba en el cielo y no veía lo que tenía a sus pies. Es la imagen del sabio inútil que ha durado veinticinco siglos.",
+      "Aristóteles cuenta la otra, en el libro I de la Política. A Tales le reprochaban su pobreza como prueba de que la filosofía no servía para nada. Por su conocimiento de los astros previó, todavía en invierno, una gran cosecha de aceitunas. Con poco dinero dejó señal por todas las prensas de Mileto y de Quíos, que alquiló baratas porque nadie más pujaba. Al llegar la cosecha las realquiló al precio que quiso.",
+      "Aristóteles saca la moraleja: a los filósofos les es fácil enriquecerse si quieren, pero no es eso lo que les interesa. Y añade con cautela que el truco se le atribuye a Tales por su sabiduría, aunque es un principio general de los negocios: hacerse con el monopolio. Las dos historias llegaron sin el testimonio del propio Tales, y cada época elige la que le conviene."
+    ],
+    "question": "¿Qué separa al que sabe de verdad del que solo sabe hacer dinero con lo que sabe?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El filósofo que alquiló las prensas",
+    "subtitle": "Aristóteles, Política, libro I",
+    "body": "Le reprochaban que la filosofía no daba de comer. Tales previó una gran cosecha de aceitunas y alquiló en invierno todas las prensas de Mileto y Quíos. Cuando llegó la cosecha, puso el precio."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TalesDeMileto", "#Filosofia", "#Aristoteles"],
+    "extended": ["#GreciaAntigua", "#Presocraticos", "#Platon", "#FilosofiaAplicada", "#Historia", "#Pensamiento"]
+  },
+  "sources": [
+    {
+      "claim": "Política 1259a: «Thales, so the story goes, because of his poverty was taunted with the uselessness of philosophy»; por su astronomía observó «while it was still winter that there was going to be a large crop of olives»; «paid round deposits for the whole of the olive-presses in Miletus and Chios», alquiladas baratas porque nadie pujaba; al llegar la cosecha las alquiló en las condiciones que quiso; «it is easy for philosophers to be rich if they choose, but this is not what they care about»; el plan «though it is attributed to him because of his wisdom, is really of universal application»: hacerse con un monopolio.",
+      "source": "Aristóteles, Política, I, 1259a, trad. H. Rackham (Aristotle in 23 Volumes, vol. 21, Harvard University Press, 1944), Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0058%3Abook%3D1%3Asection%3D1259a"
+    },
+    {
+      "claim": "Teeteto 174a: Tales, mientras estudiaba las estrellas y miraba hacia arriba, cayó en un hoyo, y una criada tracia ingeniosa se burló de él porque ansiaba saber lo que había en el cielo y no veía lo que tenía delante y a sus pies.",
+      "source": "Platón, Teeteto, 174a, trad. Harold N. Fowler, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0172%3Atext%3DTheaet.%3Asection%3D174a"
+    },
+    {
+      "claim": "Tales vivió hacia 620-546 a.C.; la sección «Corner in Oil» recoge la historia de las prensas de Mileto y Quíos según Política 1259a 6-23; el artículo trata también la caída en el pozo del Teeteto 174 A; siempre ha habido dudas de que Tales escribiera algo, y no hay prueba directa de que Platón o Aristóteles tuvieran escritos suyos.",
+      "source": "Internet Encyclopedia of Philosophy, «Thales of Miletus»",
+      "url": "https://iep.utm.edu/thales/"
+    }
+  ],
+  "do_not_use": [
+    "Que Tales predijo el eclipse del 585 a.C.: es una tradición que procede de Heródoto y está discutida; no tiene que ver con esta pieza y no se verificó aquí.",
+    "Contar la historia de las prensas como hecho probado: Aristóteles la introduce con «según se cuenta» y dice que se le atribuye por su sabiduría. El cuerpo conserva esa cautela.",
+    "Decir que Tales «escribió» algo sobre astronomía o sobre el agua: la IEP recoge que siempre se ha dudado de que escribiera, y Diógenes Laercio ya ponía en duda las obras que se le atribuían.",
+    "Que cayó en un pozo: la traducción de Fowler dice «pit» (hoyo), aunque la IEP habla de «well». La pieza usa «hoyo», lo que dice la traducción leída.",
+    "Afirmar sin matiz que Tales no escribió nada: la IEP dice que siempre ha habido dudas y que no hay prueba de que Platón o Aristóteles tuvieran escritos suyos; lo seguro es que no se conserva ninguno."
+  ],
+  "status": "draft"
+}

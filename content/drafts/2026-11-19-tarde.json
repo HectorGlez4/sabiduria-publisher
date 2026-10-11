@@ -1,0 +1,55 @@
+{
+  "id": "2026-11-19-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Shakespeare y la prisión de Hamlet (II, 2)",
+    "hook": "La frase de Hamlet que hoy se usa como consejo de calma la dice un hombre que acaba de llamar cárcel a su país, y no aparece en la edición de 1604.",
+    "body": [
+      "En el acto II, escena 2, Rosencrantz y Guildenstern llegan a Elsinor. Hamlet les dice que Dinamarca es una prisión. Ellos responden que no lo ven así. Entonces Hamlet contesta: para ustedes no lo es, porque nada es bueno ni malo sino que el pensamiento lo hace así. Y remata: para mí es una prisión.",
+      "No es una lección de serenidad. Es la respuesta de alguien atrapado que constata que los demás no ven los mismos barrotes. Rosencrantz le replica que será su ambición la que hace estrecho el reino, y Hamlet dice que podría vivir encerrado en una cáscara de nuez y sentirse rey del espacio infinito, si no fuera por sus malos sueños.",
+      "Todo el pasaje falta en el segundo cuarto de 1604, que se anunciaba en portada como ampliado casi al doble. Solo aparece en el Primer Folio de 1623. La frase que más se repite de la escena estuvo a punto de no llegarnos."
+    ],
+    "question": "¿Cuántas veces el mismo lugar es cárcel para uno y casa para otro?",
+    "quote": {
+      "text": "No hay nada bueno ni malo; es el pensamiento el que lo hace así.",
+      "author": "William Shakespeare",
+      "work": "Hamlet, acto II, escena 2 (texto del Primer Folio, 1623)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Shakespeare", "#Hamlet", "#Citas"],
+    "extended": ["#Teatro", "#LiteraturaInglesa", "#1623", "#FrasesCelebres", "#Literatura", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Hamlet 2.2, líneas 1325-1339 de la edición Folger: Guildenstern: «Prison, my lord?» Hamlet: «Denmark's a prison.» Rosencrantz: «Then is the world one.» [...] Rosencrantz: «We think not so, my lord.» Hamlet: «Why, then, 'tis none to you, for there is nothing either good or bad but thinking makes it so. To me, it is a prison.» Rosencrantz: «Why, then, your ambition makes it one. 'Tis too narrow for your mind.» Hamlet: «O God, I could be bounded in a nutshell and count myself a king of infinite space, were it not that I have bad dreams.» Todo el tramo de «Let me question more in particular» a «I am most dreadfully attended» va entre corchetes angulares ⟨ ⟩. La traducción al español de la cita es propia.",
+      "source": "Folger Shakespeare Library, Hamlet, ed. Barbara Mowat y Paul Werstine, acto 2, escena 2",
+      "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/read/2/2/"
+    },
+    {
+      "claim": "El segundo cuarto (Q2) está fechado en 1604 en unos ejemplares y 1605 en otros, y su portada dice «Newly imprinted and enlarged to almost as much againe as it was»; el Primer Folio es de 1623 y tiene unas 85 líneas que Q2 no trae; en la edición Folger, las palabras que solo están en el Folio van entre corchetes angulares ⟨ ⟩.",
+      "source": "Folger Shakespeare Library, «Hamlet: An Introduction to This Text»",
+      "url": "https://www.folger.edu/explore/shakespeares-works/hamlet/an-introduction-to-this-text/"
+    },
+    {
+      "claim": "Texto del Folio de 1623: «Why then 'tis none to you; for there is nothing either good or bad, but thinking makes it so: to me it is a prison.» Nota al margen: el pasaje que empieza en «Let me question» y termina en «dreadfully attended» no está en el Quarto.",
+      "source": "George MacDonald, The Tragedie of Hamlet, Prince of Denmarke: A Study with the Text of the Folio of 1623 (Londres, 1885), Project Gutenberg n.º 10606",
+      "url": "https://www.gutenberg.org/cache/epub/10606/pg10606.html"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como máxima estoica o consejo de pensamiento positivo sin el contexto: Hamlet la dice para explicar por qué Dinamarca les parece bien a otros y a él le parece una cárcel, y termina «para mí es una prisión».",
+    "Que el pasaje se suprimió en 1604 para no ofender a la reina Ana, esposa danesa de Jacobo I: es una conjetura editorial sin prueba. El cuerpo no da ningún motivo de la ausencia.",
+    "Que el segundo cuarto es de 1605 sin más: los ejemplares conservados llevan 1604 o 1605 en la portada. El cuerpo usa 1604, la fecha más citada.",
+    "Decir que la frase no está en ninguna edición anterior al Folio: no se comprobó el primer cuarto de 1603 (Q1). El cuerpo solo habla del segundo cuarto.",
+    "Las cifras de líneas propias de cada texto varían según el editor (unas 70 u 85 del Folio, unas 200 o 230 de Q2). No entran."
+  ],
+  "status": "draft"
+}

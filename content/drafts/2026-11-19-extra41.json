@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-19-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Quiroga y el Decálogo del perfecto cuentista",
+    "hook": "El maestro del cuento latinoamericano escribió diez reglas para escribir cuentos. La novena no habla de técnica, sino de qué hacer con lo que uno siente.",
+    "body": [
+      "Horacio Quiroga, uruguayo, publicó su Decálogo del perfecto cuentista en la revista Babel de Buenos Aires en 1927. Son diez preceptos breves. El primero pide creer en un maestro, y nombra cuatro: Poe, Maupassant, Kipling y Chéjov.",
+      "El noveno es el que más pesa. No prohíbe la emoción: le pide tiempo. Primero hay que dejarla morir. Después, evocarla. Solo si uno es capaz de revivirla tal como fue, dice Quiroga, ha llegado a la mitad del camino del arte. La otra mitad no la explica.",
+      "El décimo cierra en la misma línea: contar como si el relato solo importara al pequeño mundo de sus personajes. El consejo vale fuera de la literatura. Lo que se escribe, se dice o se decide en caliente casi nunca dice lo que uno quería."
+    ],
+    "question": "¿Qué decisión tomaríamos distinto si esperáramos a que se enfriara la emoción?",
+    "quote": {
+      "text": "No escribas bajo el imperio de la emoción. Déjala morir, y evócala luego.",
+      "author": "Horacio Quiroga",
+      "work": "Decálogo del perfecto cuentista, precepto IX (revista Babel, Buenos Aires, 1927)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#HoracioQuiroga", "#Citas", "#Uruguay"],
+    "extended": ["#Cuento", "#Escritura", "#LiteraturaLatinoamericana", "#FrasesCelebres", "#1927", "#Literatura"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del Decálogo, precepto IX: «No escribas bajo el imperio de la emoción. Déjala morir, y evócala luego. Si eres capaz entonces de revivirla tal cual fue, has llegado en arte a la mitad del camino.» El precepto I nombra a Poe, Maupassant, Kipling y Chéjov; el X pide contar como si el relato no tuviera interés más que para el pequeño ambiente de los personajes. La página está clasificada en «Literatura uruguaya».",
+      "source": "Wikisource en español, «Decálogo del perfecto cuentista» (comprobado palabra por palabra)",
+      "url": "https://es.wikisource.org/wiki/Dec%C3%A1logo_del_perfecto_cuentista"
+    },
+    {
+      "claim": "El mismo texto del precepto IX, con una única diferencia de puntuación (sin punto final); precepto X: «Cuenta como si tu relato no tuviera interés más que para el pequeño ambiente de tus personajes».",
+      "source": "Ciudad Seva (biblioteca digital de Luis López Nieves), «Decálogo del perfecto cuentista»",
+      "url": "https://ciudadseva.com/texto/decalogo-del-perfecto-cuentista/"
+    },
+    {
+      "claim": "El ensayo se publicó por primera vez en la revista bonaerense Babel en julio de 1927; la referencia es la edición crítica de Horacio Quiroga, Todos los cuentos, ed. Napoleón Baccino Ponce de León (Colección Archivos, 1993). La edición crítica no se consultó directamente.",
+      "source": "Wikipedia en español, «Decálogo del perfecto cuentista»",
+      "url": "https://es.wikipedia.org/wiki/Dec%C3%A1logo_del_perfecto_cuentista"
+    },
+    {
+      "claim": "Babel nació en abril de 1921 en Buenos Aires, dirigida por Samuel Glusberg, que firmaba como Enrique Espinoza; reapareció en Santiago de Chile en mayo de 1939; su n.º 38 (1947) estuvo dedicado a Horacio Quiroga.",
+      "source": "Memoria Chilena, Biblioteca Nacional de Chile, «Babel (1921-1951)»",
+      "url": "https://www.memoriachilena.gob.cl/602/w3-article-3312.html"
+    }
+  ],
+  "do_not_use": [
+    "Fecharlo el 6 de enero de 1928: es lo que da la página de autor de Wikisource, sin fuente. Wikipedia, apoyada en la edición crítica de Colección Archivos, y una edición brasileña dan 1927. La pieza usa 1927.",
+    "Que se publicó en la revista El Hogar: lo dice un blog (El Espejo Gótico) y un artículo académico no leído; las demás fuentes coinciden en Babel.",
+    "Que el Decálogo se incluyó en Cuentos de amor, de locura y de muerte: ese libro es de 1917, anterior al Decálogo. Un resumen de búsqueda lo mezcló.",
+    "Atribuir a Quiroga reglas que circulan en versiones ampliadas o reescritas del Decálogo; solo se cita el precepto IX tal como figura en Wikisource y Ciudad Seva.",
+    "El precepto IX se ha citado a veces con «no escribas bajo el imperio de las emociones», en plural: el texto dice «de la emoción»."
+  ],
+  "status": "draft"
+}
