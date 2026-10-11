@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-20-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Jocelyn Bell y la señal de los pulsares (1967)",
+    "hook": "Una estudiante de veinticuatro años encontró una señal en un kilómetro de gráficas de papel. Nadie la buscaba, y casi nadie la habría notado.",
+    "body": [
+      "En 1967 Jocelyn Bell, estudiante de doctorado en Cambridge, ayudó a construir un radiotelescopio cerca de la ciudad para estudiar cuásares. El instrumento escribía su registro en rollos de papel. El 6 de agosto de 1967 quedó anotada una señal rara, que ocupaba una parte minúscula de todas las gráficas: una entre diez millones.",
+      "Bell la marcó con un interrogante. Cuando volvió a aparecer, el 28 de noviembre, resultó ser una serie de pulsos separados por poco más de un segundo y tercio. En su cuaderno, medio en broma, la apuntó como LGM, «hombrecillos verdes». Poco después halló una segunda fuente pulsante en otra región del cielo, y eso descartó la hipótesis de que alguien las estuviera emitiendo. Eran estrellas de neutrones que giraban.",
+      "En 1974 el Nobel de Física se dio a Antony Hewish y Martin Ryle. Ella no fue incluida. Bell ha dicho que entonces las estudiantes y los estudiantes no recibían ese reconocimiento. En 2018 le dieron el Premio Especial Breakthrough en Física Fundamental, y destinó los tres millones de dólares a becas de posgrado para personas poco representadas en la física."
+    ],
+    "question": "¿Cuántos descubrimientos han empezado como un ruido que alguien se negó a descartar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "LGM-1",
+    "subtitle": "Cambridge, 1967",
+    "body": "Una estudiante de doctorado revisó rollos de papel y marcó con un interrogante una señal que ocupaba una parte en diez millones. Eran pulsos cada segundo y tercio. Había descubierto los púlsares."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JocelynBell", "#Pulsares", "#ArteYCiencia"],
+    "extended": ["#Astronomia", "#Cambridge", "#1967", "#EstrellasDeNeutrones", "#MujeresEnLaCiencia", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Bell, a sus 24 años, ayudó a construir el radiotelescopio de Cambridge, pensado para estudiar cuásares; la señal ocupaba una parte en diez millones de sus gráficas; fue registrada por primera vez el 6 de agosto de 1967 sin sospechar su carácter pulsante; el 28 de noviembre de 1967 volvió como «una serie de pulsos separados por un segundo y un tercio»; marcaba las interferencias sin identificar con un interrogante o, en broma, «LGM»; el Nobel de Física de 1974 lo compartieron Hewish y Ryle y Bell no fue incluida; en 2018 recibió el Special Breakthrough Prize y destinó el dinero a becas de posgrado.",
+      "source": "Universidad de Cambridge, «Journeys of discovery: pulsars»",
+      "url": "https://www.cam.ac.uk/stories/journeysofdiscovery-pulsars"
+    },
+    {
+      "claim": "Bell detectó una señal pulsante irregular en los datos del radiotelescopio construido con su supervisor Hewish, que sugirió que era interferencia artificial; ella discrepó porque la señal se movía con las estrellas, es decir, venía del espacio; sobre el Nobel dijo que «en aquellos tiempos los estudiantes no eran reconocidos por el comité»; destinó el Breakthrough Prize a becas del Institute of Physics para grupos infrarrepresentados.",
+      "source": "NPR / MPR News, «In 1974, they gave the Nobel to her supervisor. Now she's won a $3 million prize» (7 de septiembre de 2018)",
+      "url": "https://mprnews.org/story/2018/09/07/npr-in-1974-they-gave-the-nobel-to-her-supervisor-now-shes-won-3-million-prize"
+    },
+    {
+      "claim": "Comunicado de prensa del Nobel de Física 1974 (15 de octubre de 1974): Ryle por sus observaciones e invenciones, en particular la síntesis de apertura, y Hewish por su papel decisivo en el descubrimiento de los púlsares. Consultado solo a través del resumen de un buscador: la página de nobelprize.org devolvió 403 al abrirla directamente.",
+      "source": "NobelPrize.org, «Press release: The Nobel Prize in Physics 1974»",
+      "url": "https://www.nobelprize.org/prizes/physics/1974/press-release/"
+    }
+  ],
+  "do_not_use": [
+    "Decir que el Nobel de 1974 se dio «a Hewish solo»: lo dice la nota de NPR/MPR, pero el comunicado y Cambridge dan que se compartió con Martin Ryle (por otro trabajo, la síntesis de apertura). La pieza usa «Hewish y Ryle».",
+    "La fecha de primera detección: algunas páginas dicen julio de 1967 y otras agosto. Cambridge da el 6 de agosto de 1967; la pieza usa esa.",
+    "Que el nombre LGM fue una hipótesis seria del equipo: Cambridge lo da como broma en el cuaderno de Bell. El cuerpo lo presenta así.",
+    "El intervalo exacto de 1,337 segundos: aparece en un resumen de buscador, pero la fuente leída (Cambridge) dice «un segundo y un tercio». La pieza usa esta fórmula.",
+    "Atribuir a Fred Hoyle, la fecha de publicación en Nature (febrero de 1968) o la cifra de cuatro fuentes: no se comprobaron en fuente leída. No entran.",
+    "La cifra del Breakthrough Prize: Cambridge habla de 2,3 millones de libras y NPR de 3 millones de dólares. La pieza dice «tres millones de dólares», como NPR, la fuente del dato en dólares."
+  ],
+  "status": "draft"
+}

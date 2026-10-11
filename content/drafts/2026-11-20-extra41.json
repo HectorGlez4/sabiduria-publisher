@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-20-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Hesíodo y el sudor ante la virtud (Trabajos y días)",
+    "hook": "Un poeta griego le explicó a su hermano por qué el mal es fácil y el bien cuesta. El camino, dice, empieza áspero y se allana al final.",
+    "body": [
+      "Hesíodo, poeta griego, dirige a su hermano Perses el poema Trabajos y días. En los versos 286 a 292 le habla del vicio y de la virtud. El vicio se consigue con facilidad y en abundancia: el camino es liso y vive muy cerca. Entre nosotros y la virtud, en cambio, los dioses pusieron el sudor.",
+      "La línea griega es τῆς δ’ ἀρετῆς ἱδρῶτα θεοὶ προπάροιθεν ἔθηκαν (versos 289 y 290). Evelyn-White la tradujo en 1914 para la colección Loeb; en español sería: ante la virtud, los dioses pusieron el sudor.",
+      "El pasaje sigue con una promesa que casi nunca se cita. El sendero es largo, empinado y áspero al principio, pero una vez en la cima resulta fácil, aunque siga siendo duro. Hesíodo no promete que el esfuerzo se acabe. Promete que deja de ser cuesta arriba."
+    ],
+    "question": "¿Qué hábito te costó al principio y hoy ya no sientes como una cuesta?",
+    "quote": {
+      "text": "Ante la virtud, los dioses pusieron el sudor.",
+      "author": "Hesíodo",
+      "work": "Trabajos y días, vv. 289-290 (traducción propia del griego)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Hesiodo", "#Citas", "#TrabajosYDias"],
+    "extended": ["#Grecia", "#PoesiaGriega", "#Virtud", "#FrasesCelebres", "#Esfuerzo", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Trabajos y días 286-292, traducción de Hugh G. Evelyn-White (Loeb Classical Library, 1914): el vicio se obtiene fácil y en abundancia, el camino es liso y vive cerca; «entre nosotros y la Bondad los dioses han puesto el sudor de nuestra frente»; el camino hacia ella es largo, empinado y áspero al principio, y fácil una vez alcanzada la cima. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts), Hesiod, Works and Days, trad. Evelyn-White",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Hes.+WD+286"
+    },
+    {
+      "claim": "La misma traducción de Evelyn-White del pasaje, con el mismo sentido: la maldad se consigue fácil y en abundancia; la senda de la virtud es áspera al principio y fácil en la cima. Lectura directa de la página (no da el año).",
+      "source": "Elpenor, Hesiod, Works and Days, trad. Evelyn-White",
+      "url": "https://www.ellopos.net/elpenor/greek-texts/ancient-greece/hesiod/works-days.asp?pg=10"
+    },
+    {
+      "claim": "El verso griego τῆς δ’ ἀρετῆς ἱδρῶτα θεοὶ προπάροιθεν ἔθηκαν / ἀθάνατοι, citado como Trabajos y días 289-290, y su glosa inglesa «The gods made sweat the price for virtue». Esta fuente no ofrece contexto ni es una edición crítica; el griego no se contrastó con la edición de West.",
+      "source": "Sententiae Antiquae, «Sweat is The Price of Virtue: Some Greek Quotes for Labor Day» (31 de agosto de 2014)",
+      "url": "https://sententiaeantiquae.com/tag/euripides/page/9/"
+    }
+  ],
+  "do_not_use": [
+    "La fecha de Hesíodo (se le sitúa hacia el 700 a.C.) y su origen en Beocia: no se verificaron en fuente leída. Ni el hook ni el cuerpo los afirman.",
+    "El texto español es traducción propia del griego, a partir de la versión de Evelyn-White y la línea citada por Sententiae Antiquae. No es cita de una edición española.",
+    "La numeración de versos: Perseus y Elpenor titulan el pasaje 286-292, la línea de la virtud se cita como 289-290. Otras ediciones pueden numerar distinto; no se afirma más.",
+    "Presentar a Hesíodo como campesino o hablar de su biografía: depende de su propio relato en el poema y la discusión sobre si es autobiográfico no se leyó. La pieza solo lo llama poeta griego.",
+    "Que el pasaje diga que el esfuerzo «se acaba» en la cima: el texto dice que es fácil (aunque siga siendo duro) en la cima; así lo recoge el cuerpo.",
+    "La frase circula como «el sudor es el precio de la virtud» sin cita al texto: usar solo con Trabajos y días 289-290."
+  ],
+  "status": "draft"
+}

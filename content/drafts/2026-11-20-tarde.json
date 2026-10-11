@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-20-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Confucio y el aprender sin pensar (Analectas 2.15)",
+    "hook": "Las Analectas de Confucio anotan que estudiar sin pensar es esfuerzo perdido. La segunda mitad de la frase es la que advierte del peligro contrario.",
+    "body": [
+      "El capítulo 15 del libro segundo de las Analectas, la colección de dichos y conversaciones de Confucio y sus discípulos, dice en chino: 學而不思則罔，思而不學則殆. Son dos frases paralelas, de ocho caracteres cada una.",
+      "James Legge lo tradujo al inglés así: «Aprender sin pensar es trabajo perdido; pensar sin aprender es peligroso». Casi siempre se cita solo la primera mitad, como un elogio de la reflexión. La segunda dice lo contrario: quien piensa sin haber aprendido tampoco va seguro.",
+      "Hay más de una manera de traducir el segundo verbo. Waley, por ejemplo, habla de quien se queda «perdido» y de quien corre «gran peligro». Con todo, el contraste es el mismo en todas: ni memorizar sin entender ni opinar sin conocer."
+    ],
+    "question": "¿Cuál de las dos mitades nos cuesta más reconocer en nosotros?",
+    "quote": {
+      "text": "Aprender sin pensar es trabajo perdido; pensar sin aprender es peligroso.",
+      "author": "Confucio",
+      "work": "Analectas, II, 15 (trad. James Legge)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Confucio", "#Citas", "#Analectas"],
+    "extended": ["#China", "#Filosofia", "#Aprendizaje", "#FrasesCelebres", "#PensamientoCritico", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Analectas II, 15, en la traducción de James Legge (edición de 1893 según la página): «The Master said, 'Learning without thought is labour lost; thought without learning is perilous.'» Lectura directa de la página.",
+      "source": "Monadnock.net, «The Analects, Book 2» (trad. James Legge)",
+      "url": "https://monadnock.net/confucius/analects-2.html"
+    },
+    {
+      "claim": "Texto chino de Analectas 2.15: 學而不思則罔、思而不學則殆, y la traducción de Legge con el mismo texto inglés. Lectura directa.",
+      "source": "Wikibooks, «Lun Yu / Book 2»",
+      "url": "https://en.wikibooks.org/wiki/Lun_Yu/Book_2"
+    },
+    {
+      "claim": "Otras traducciones del mismo pasaje: Soothill (1910) «inútil» y «peligroso»; Waley (1938) «perdido» y «gran peligro»; Leys (1997). Se conoció solo por el resumen de un buscador sobre Wikiquote y wist.info: no se abrieron esas páginas.",
+      "source": "Wikiquote, «Confucius» (vía resumen de buscador)",
+      "url": "https://en.wikiquote.org/wiki/Confucius"
+    }
+  ],
+  "do_not_use": [
+    "La fecha de la traducción de Legge: una fuente da 1893 (la página de Monadnock) y otra 1861, que corresponde a la primera edición de The Chinese Classics. La pieza no fecha la traducción, solo la nombra.",
+    "El texto español es traducción propia de la versión de Legge, no cita de una edición española. Los datos del cuerpo no dependen de ella.",
+    "La lectura moderna de «estudio y reflexión» como oposición entre estudiar y pensar: varios traductores proponen que «aprender» (學) aquí se refiere al estudio de la tradición. La pieza no afirma una interpretación única.",
+    "Que sea una frase «de Confucio» en sentido estricto: las Analectas las compilaron discípulos; la pieza dice que recogen sus dichos.",
+    "La cita circula como «Si estudias y no piensas, estás perdido…» con variantes y sin capítulo: no usar ninguna sin el II, 15.",
+    "La edición crítica china de Analectas (Yang Bojun, Zhu Xi) no se consultó directamente."
+  ],
+  "status": "draft"
+}
