@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-22-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Machu Picchu y la firma de Lizárraga de 1902",
+    "hook": "Hiram Bingham subió a Machu Picchu el 24 de julio de 1911 y tres familias ya vivían en la montaña. Una foto suya muestra, además, una firma de nueve años antes.",
+    "body": [
+      "Cuando Bingham, explorador de la Universidad de Yale, llegó a la cresta donde está Machu Picchu, la encontró habitada. Según National Geographic, tres familias vivían en ella, y algunas terrazas seguían cultivándose. Un niño de una de esas familias lo guio por el último tramo, hasta la primera vista completa de la ciudad. Bingham lo anotó con sorpresa. No era un lugar perdido: era un lugar donde se vivía.",
+      "En 2011, cuando se cumplían cien años de aquel ascenso, Fernando Astete, director del parque arqueológico de Machu Picchu, presentó ampliaciones de una fotografía del propio Bingham. En el fondo se ve el Templo de las Tres Ventanas, y en una de sus ventanas aparece una inscripción con el nombre de Agustín Lizárraga y la fecha de julio de 1902. Lizárraga era un poblador de la región de Cusco. Su firma es nueve años anterior a la visita de Bingham.",
+      "Eso no resta mérito a lo que Bingham sí hizo: dar a conocer el sitio al mundo con una expedición científica. Pero desmonta la palabra «descubrimiento». Hacia 1911 el lugar lo conocían los vecinos, y al menos otros visitantes habían pasado antes. Lo que Bingham descubrió, en rigor, fue una audiencia."
+    ],
+    "question": "¿A quién le debe la historia un lugar: a quien lo conoce primero o a quien consigue que el mundo lo conozca?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Machu Picchu no estaba perdida",
+    "subtitle": "La firma de Lizárraga, 1902",
+    "body": "En julio de 1911 tres familias vivían en la cresta. Una foto de Bingham muestra una firma fechada nueve años antes."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MachuPicchu", "#Inca", "#HiramBingham"],
+    "extended": ["#Peru", "#Cusco", "#Arqueologia", "#Historia", "#Siglo20", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Fernando Astete, director del parque arqueológico de Machu Picchu, presentó en 2011 ampliaciones de una fotografía de Bingham en la que, en una ventana del Templo de las Tres Ventanas, se lee «julio 1902» y el nombre de Agustín Lizárraga; la nota dice que corrobora que llegó antes que Bingham; Astete afirma que Machu Picchu nunca estuvo perdida y reconoce el mérito de Bingham de darla a conocer con una misión científica. Lectura directa de la agencia oficial de noticias del Perú, con la cautela de que la imagen se citó en una exposición y no se vio.",
+      "source": "Agencia Andina, «Fotografía de Hiram Bingham evidencia escrito de Agustín Lizárraga en 1902 en Machu Picchu» (23/7/2011)",
+      "url": "https://andina.pe/agencia/noticia-fotografia-hiram-bingham-evidencia-escrito-agustin-lizarraga-1902-machu-picchu-370573.aspx"
+    },
+    {
+      "claim": "Tres familias vivían en la cresta donde se levanta Machu Picchu; algunas terrazas aún se cultivaban; un niño de una de ellas guio a Bingham en el último tramo; Bingham subió el 24 de julio de 1911; la cita «very much a living site, not something lost and dead» es de Heaney. Lectura directa.",
+      "source": "National Geographic, «Pictures: Machu Picchu, Before and After Excavation»",
+      "url": "https://www.nationalgeographic.com/history/article/110722-machu-picchu-before-after-excavation-peru-inca"
+    },
+    {
+      "claim": "Lizárraga dejó su nombre y el año en 1902; Bingham lo anotó en su diario y lo fotografió, sin hacerlo público; los pobladores siempre conocieron el sitio; Melchor Arteaga, arrendatario de la tierra, ofreció guiar a la expedición. Fuente secundaria divulgativa: la versión de que Bingham ordenó borrar la inscripción no se recoge en la pieza. Lectura directa.",
+      "source": "The Collector, «Machu Picchu Unveiled: Why Hiram Bingham Didn’t Discover It»",
+      "url": "https://www.thecollector.com/machu-picchu-unveiled-hiram-bingham-discover/"
+    }
+  ],
+  "do_not_use": [
+    "Que Bingham «ordenó borrar» la inscripción de Lizárraga: lo afirma The Collector; Andina solo dice que se sabe que lo escrito fue borrado, por testimonio de un maestro de obras, sin atribuirlo a Bingham. No se verificó.",
+    "Qué decía exactamente la inscripción y cómo estaba hecha: Andina da «julio 1902» y Lizárraga; otras fuentes dicen «A. Lizárraga 14 de julio de 1902», a carbón o grabada. Las fuentes leídas discrepan; la pieza dice «el nombre de Agustín Lizárraga y la fecha de julio de 1902».",
+    "Que la foto ya la haya visto este equipo: lo que se leyó es la descripción de Andina de una exposición en Lima (ICPNA, 2011), no la imagen. Una foto de Bingham con la firma tampoco se ha localizado en un archivo de Yale en la verificación.",
+    "Que Lizárraga se ahogó en el río Vilcanota en febrero de 1912: se ofreció en una sola fuente de resultados de búsqueda, no leída. Fuera de la pieza.",
+    "Que Bingham mintió sobre su «descubrimiento»: las fuentes leídas dicen que no corrigió su fama de descubridor, no que la inventara. Que Berns saqueara el sitio en el siglo XIX: lo afirma The Collector con documentos de 1867 no verificados; fuera de la pieza.",
+    "Quién guio a Bingham: Melchor Arteaga según Britannica y Andina; un niño según National Geographic. La pieza dice solo que un niño lo guio por el último tramo, que es lo que cuenta National Geographic.",
+    "Que Machu Picchu fuera «la ciudad perdida de los incas»: Bingham la identificó con Vilcabamba, error posterior corregido (Espíritu Pampa). Fuera de la pieza; solo de una búsqueda."
+  ],
+  "status": "draft"
+}

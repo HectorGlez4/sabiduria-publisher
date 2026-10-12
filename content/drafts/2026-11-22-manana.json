@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-22-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Leonardo de Pisa y la sucesión que no inventó",
+    "hook": "Fibonacci no inventó la sucesión que lleva su nombre, y en vida nadie lo llamó Fibonacci.",
+    "body": [
+      "Leonardo de Pisa nació hacia 1170. Su padre trabajaba en Bugía, hoy Béjaïa, en Argelia, como notario de la aduana al servicio de los mercaderes pisanos. Allí el muchacho aprendió «el arte de los nueve signos de los indios», que, según escribió, le gustó muy pronto por encima de todo lo demás. En 1202 los llevó a un libro: el Liber abaci, que introdujo en Europa la numeración decimal con valor de posición, con cifras indoarábigas.",
+      "En ese libro hay un problema sobre una población de conejos que se reproducen bajo reglas idealizadas. Su solución, mes a mes, produce 1, 2, 3, 5, 8, 13 y así hasta 233. Cada número es la suma de los dos anteriores. Leonardo no dice que haya descubierto nada, y no habla de la proporción áurea.",
+      "La misma regla estaba ya en tratados de métrica sánscrita: cuántas maneras hay de combinar sílabas largas y cortas. Las fuentes secundarias la atribuyen al prosodista Virahanka, conservado en una cita de Gopala hacia 1135, y a Hemacandra hacia 1150, y la ven implícita en Pingala siglos antes. El nombre de «Fibonacci», abreviatura de filius Bonacci, hijo de Bonaccio, aparece en un texto moderno de 1838; él mismo se firmaba Leonardo Bigollo."
+    ],
+    "question": "¿Qué otros nombres propios hemos puesto a hallazgos que otros hicieron antes, en otra lengua?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Fibonacci no inventó la sucesión",
+    "subtitle": "Leonardo de Pisa y el Liber abaci, 1202",
+    "body": "La regla de sumar los dos anteriores ya estaba en la métrica sánscrita. A Leonardo de Pisa lo llamaron Fibonacci en 1838."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Fibonacci", "#LiberAbaci", "#HistoriaDeLasMatematicas"],
+    "extended": ["#Matematicas", "#EdadMedia", "#India", "#Ciencia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Fibonacci (Leonardo Pisano) nació hacia 1170; su padre Guilielmo era notario de la aduana en Bugía; se educó allí y escribió que el arte de los nueve signos de los indios le agradó pronto por encima de todo; el Liber abaci de 1202 introdujo en Europa el sistema decimal posicional y las cifras arábigas (segunda edición, 1228); el problema de los conejos está en la tercera sección y produce 1, 1, 2, 3, 5, 8, 13…, con el primer término omitido en el libro; a veces se llamó Bigollo. Lectura directa.",
+      "source": "MacTutor, Universidad de St Andrews, «Fibonacci»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/"
+    },
+    {
+      "claim": "El nombre «Fibonacci» aparece por primera vez en una fuente moderna en un texto de 1838 de Guglielmo Libri, abreviatura de filius Bonacci; Perizolo lo llama «Lionardo Fibonacci» en 1506; en Flos aparece como «Leonardi bigolli pisani»; el manuscrito original del Liber abaci no se conserva y se conoce una copia de 1228; Fibonacci empezó la sucesión en 1, 2, 3 y llegó a 233, y no habló de la proporción áurea. Lectura directa de Wikipedia; fuente secundaria.",
+      "source": "Wikipedia, «Fibonacci»",
+      "url": "https://en.wikipedia.org/wiki/Fibonacci"
+    },
+    {
+      "claim": "Historia de la sucesión en la India: Pingala (implícita), Bharata Muni, Virahanka (obra perdida, conservada en una cita de Gopala hacia 1135) y Hemacandra (hacia 1150); Édouard Lucas la llamó «sucesión de Fibonacci» en el siglo XIX. Lectura directa de Wikipedia; fuente secundaria que resume el artículo de Parmanand Singh, Historia Mathematica (1985), que no se pudo abrir.",
+      "source": "Wikipedia, «Fibonacci sequence»",
+      "url": "https://en.wikipedia.org/wiki/Fibonacci_sequence"
+    }
+  ],
+  "do_not_use": [
+    "Que Fibonacci «descubrió» o «inventó» la sucesión: el Liber abaci la usa en un problema de conejos, pero la regla está en la métrica sánscrita siglos antes (Virahanka vía Gopala hacia 1135, Hemacandra hacia 1150).",
+    "Que Fibonacci copió directamente a autores indios: las fuentes leídas no muestran transmisión directa; solo que su libro trae matemática de origen indio llegada por intermediarios árabes.",
+    "Relacionar la sucesión con la proporción áurea, la naturaleza o los conejos reales en la pieza: Fibonacci no menciona la proporción áurea, y la relación con girasoles o conchas no se verificó.",
+    "La fecha de Virahanka: las fuentes discrepan (siglo VI al VIII); el cuerpo no la da. Las fechas de Gopala (hacia 1135) y Hemacandra (hacia 1150) salen de Wikipedia, que a su vez resume a Singh; el artículo de Singh (PDF) no se pudo leer.",
+    "Fechas exactas de nacimiento y muerte de Leonardo: MacTutor da 1170 y 1250 como aproximadas; la pieza dice «hacia 1170».",
+    "Que el nombre «Fibonacci» lo acuñara Lucas: Lucas bautizó la sucesión, no al hombre; el nombre del hombre aparece en Libri (1838). Que el decreto de Pisa de 1240 sea de 1241 o de otra fecha: no entra en la pieza.",
+    "Que se conserve el manuscrito original del Liber abaci: según Wikipedia, no se conoce; solo copias, la más antigua datada en 1228 en la fuente leída. MacTutor no lo discute."
+  ],
+  "status": "draft"
+}

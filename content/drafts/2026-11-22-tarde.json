@@ -1,0 +1,55 @@
+{
+  "id": "2026-11-22-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Emerson y la consistencia necia de Self-Reliance",
+    "hook": "Emerson no escribió que la coherencia sea cosa de mentes pequeñas. Escribió que lo es una coherencia necia, y la palabra que se cae lo cambia todo.",
+    "body": [
+      "La frase está en «Self-Reliance», el ensayo de Ralph Waldo Emerson que apareció en 1841 en su primer volumen de Essays. El texto dice: «Una consistencia necia es el duende de las mentes pequeñas, adorada por pequeños estadistas, filósofos y predicadores». Con el adjetivo, la crítica apunta a un tipo concreto de coherencia: la que se mantiene por no desdecirse, no porque siga siendo verdad.",
+      "Lo que viene después lo confirma. «Con la coherencia, un alma grande no tiene nada que ver», sigue Emerson, y aconseja decir hoy lo que se piensa hoy, con palabras duras, y mañana lo que se piense mañana, aunque contradiga todo lo dicho antes. Prevé la objeción: «Ah, entonces seguro que te malinterpretarán». Y responde con una lista: Pitágoras fue malinterpretado, y Sócrates, y Jesús, y Lutero, y Copérnico, y Galileo, y Newton, y todo espíritu puro y sabio que tomó carne.",
+      "Es allí, al final de esa lista, donde aparece la otra frase famosa: «Ser grande es ser malinterpretado». No pretende que todo el que no se entiende sea grande. Dice que a quien cambia de parecer ante la evidencia, la incomprensión le sale al paso, y que vale pagarla."
+    ],
+    "question": "¿Cuántas veces hemos mantenido una opinión solo por no tener que reconocer que ya no la creemos?",
+    "quote": {
+      "text": "Una consistencia necia es el duende de las mentes pequeñas, adorada por pequeños estadistas, filósofos y predicadores.",
+      "author": "Ralph Waldo Emerson",
+      "work": "«Self-Reliance», en Essays (1841; texto de la edición de 1847) (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Emerson", "#Citas", "#SelfReliance"],
+    "extended": ["#Filosofia", "#Trascendentalismo", "#Siglo19", "#FrasesCelebres", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de «Self-Reliance» en Essays, First Series: «A foolish consistency is the hobgoblin of little minds, adored by little statesmen and philosophers and divines»; «With consistency a great soul has simply nothing to do»; «Ah, so you shall be sure to be misunderstood»; la lista Pitágoras, Sócrates, Jesús, Lutero, Copérnico, Galileo, Newton; «To be great is to be misunderstood». Lectura directa, en ese orden.",
+      "source": "Project Gutenberg, Ralph Waldo Emerson, Essays, First Series (eBook 2944)",
+      "url": "https://www.gutenberg.org/files/2944/2944-h/2944-h.htm"
+    },
+    {
+      "claim": "Mismo pasaje, idéntico en las diez frases, en una transcripción basada en la edición de 1847 de Essays: First Series. Lectura directa.",
+      "source": "Wikisource, Essays: First Series / Self-Reliance (ed. 1847)",
+      "url": "https://en.wikisource.org/wiki/Essays:_First_Series/Self-Reliance"
+    },
+    {
+      "claim": "El ensayo se publicó en 1841 en el primer volumen de ensayos; la página recoge «Pythagoras was misunderstood, and Socrates, and Jesus, and Luther, and Copernicus, and Galileo, and Newton» y «To be great is to be misunderstood». La fecha de 1841 y la reedición de 1847 como Essays: First Series salen de esta página. Lectura directa.",
+      "source": "Emerson Central, «Self-Reliance»",
+      "url": "https://emersoncentral.com/texts/essays-first-series/self-reliance/"
+    }
+  ],
+  "do_not_use": [
+    "La versión «La coherencia es el duende de las mentes pequeñas»: omite «foolish» y atribuye a Emerson lo contrario de lo que escribió. El original critica la consistencia necia, no la consistencia.",
+    "Presentar «To be great is to be misunderstood» como regla general (todo incomprendido es grande): es la conclusión de una lista de casos concretos, no un criterio.",
+    "Traducir «hobgoblin» como «tontería» o «obsesión»: es un duende o trasgo; la traducción al español es propia y no cita edición española.",
+    "El año del texto: Gutenberg no fecha la edición que reproduce; se leyó una transcripción de la edición de 1847 y la fecha de primera publicación (1841) sale de Emerson Central. La pieza fecha el ensayo en 1841 y no afirma que cada palabra sea de esa primera impresión.",
+    "La edición crítica de Harvard (Collected Works, 1979) y la primera edición escaneada no se abrieron; no se cita la paginación de ninguna."
+  ],
+  "status": "draft"
+}

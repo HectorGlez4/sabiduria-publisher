@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-22-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Thomas Paine y La crisis americana nº 1 (1776)",
+    "hook": "«Estos son los tiempos que ponen a prueba el alma de los hombres» abre un panfleto de diciembre de 1776. Que Washington lo mandara leer a sus soldados es una historia que nadie ha podido rastrear a un testigo.",
+    "body": [
+      "Thomas Paine escribió «La crisis» nº 1 en diciembre de 1776, con el ejército continental en retirada y las enlistaciones a punto de vencer. Lo firmó «Common Sense», el título de su panfleto anterior. Empieza así: «Estos son los tiempos que ponen a prueba el alma de los hombres». Enseguida separa al soldado de verano y al patriota de buen tiempo, que se encogerán ante el servicio a su país, de quien resiste ahora y merece «el amor y el agradecimiento de hombres y mujeres».",
+      "Más adelante viene la frase que se cita menos: «La tiranía, como el infierno, no se conquista con facilidad; pero tenemos este consuelo: cuanto más duro es el conflicto, más glorioso el triunfo». Y la siguiente es una advertencia sobre el precio: lo que se obtiene demasiado barato, se estima demasiado poco.",
+      "La tradición añade que Washington hizo leer el texto a sus tropas antes de cruzar el Delaware. La fuente más antigua es la biografía de Paine que James Cheetham publicó en 1809, sin citar de dónde la sacaba. Ni Paine ni Washington lo mencionan en lo que escribieron, y no se conoce el diario de ningún soldado que lo cuente. Lo que sí consta es que el panfleto circuló impreso en esos días. El resto es leyenda que se fue agrandando al repetirse."
+    ],
+    "question": "¿Qué diferencia hay entre una frase que animó a un ejército y una frase a la que se le atribuye haberlo hecho?",
+    "quote": {
+      "text": "La tiranía, como el infierno, no se conquista con facilidad; pero tenemos este consuelo: cuanto más duro es el conflicto, más glorioso el triunfo.",
+      "author": "Thomas Paine",
+      "work": "La crisis americana, nº 1 (diciembre de 1776) (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ThomasPaine", "#Citas", "#Revolucion"],
+    "extended": ["#Historia", "#Siglo18", "#FrasesCelebres", "#Libertad", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de «The Crisis No. I» (The American Crisis) en la edición de Moncure Conway, The Writings of Thomas Paine, vol. I (1774-1779): «These are the times that try men's souls»; el soldado de verano y el patriota de buen tiempo; «Tyranny, like hell, is not easily conquered; yet we have this consolation with us, that the harder the conflict, the more glorious the triumph»; «What we obtain too cheap, we esteem too lightly»; fechado el 23 de diciembre de 1776 y firmado «Common Sense». Lectura directa.",
+      "source": "Project Gutenberg, The Writings of Thomas Paine, vol. I, ed. M. D. Conway",
+      "url": "https://www.gutenberg.org/cache/epub/3741/pg3741.txt"
+    },
+    {
+      "claim": "Mismo arranque y la frase de la tiranía en la transcripción de ushistory.org; la página fecha el texto el 23 de diciembre de 1776; la lectura a las tropas es una tradición cuya fuente más antigua es la biografía de Cheetham de 1809, sin fuente citada, y ni Paine ni Washington la mencionan, ni hay relato de soldado que la corrobore. Lectura directa.",
+      "source": "ushistory.org, Thomas Paine, «The Crisis» No. 1",
+      "url": "http://ushistory.org/historic-personages/paine/crisis/c-01.htm"
+    },
+    {
+      "claim": "La fecha de publicación es discutida (19 de diciembre en panfleto según este artículo; 23 en otros autores), sin prueba de la aparición en el Pennsylvania Journal; la lectura a las tropas viene de Cheetham (1809), sin fuente; sin testigos, diarios de soldados ni cartas de Washington, Greene, Hamilton o Knox que la mencionen; el panfleto circulaba impreso antes del cruce. Lectura directa.",
+      "source": "All Things Liberty, «The American Crisis Before Crossing the Delaware?» (2015)",
+      "url": "https://allthingsliberty.com/2015/02/american-crisis-before-crossing-the-delaware/"
+    }
+  ],
+  "do_not_use": [
+    "Que Washington ordenó leer La crisis a sus tropas antes de cruzar el Delaware: la fuente más antigua es Cheetham (1809), sin cita; no hay testigo, diario ni carta que lo corrobore. Si se menciona, solo como tradición sin comprobar.",
+    "Una fecha exacta de publicación (19 o 23 de diciembre de 1776) como hecho: las fuentes leídas discrepan, y la que fecha el 23 es la firma del texto en las ediciones. El cuerpo dice solo «diciembre de 1776».",
+    "Que apareciera primero en el Pennsylvania Journal el 19 de diciembre: la afirmación se apoya en una fuente que quien la revisó no pudo localizar; según All Things Liberty, ese periódico había suspendido su publicación a principios de diciembre.",
+    "Atribuir a Paine «Estos son los tiempos que ponen a prueba las almas» como frase de todo su pensamiento: es la primera línea de un panfleto de ocasión.",
+    "La traducción al español es propia; no cita edición española. La paginación de la edición Conway no se verificó.",
+    "Presentar la frase de la tiranía como la más famosa del texto: la más citada es la primera línea y la del soldado de verano; esta es la que sigue."
+  ],
+  "status": "draft"
+}
