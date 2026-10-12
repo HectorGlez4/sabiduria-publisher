@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-21-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Caroline Herschel y los ocho cometas",
+    "hook": "Caroline Herschel descubrió ocho cometas entre 1786 y 1797. La medalla de oro de 1828 se la dieron por otra cosa: por ordenar las observaciones de su hermano.",
+    "body": [
+      "El 1 de agosto de 1786, Caroline Herschel descubrió su primer cometa, mientras barría el cielo en busca de objetos nuevos. Su obituario en la Sociedad Astronómica lista las ocho ocasiones: la última fue el 6 de agosto de 1797. En cinco de ellas se le reconoció la prioridad del hallazgo, según consta en las Philosophical Transactions. En 1787, Jorge III le asignó un sueldo de cincuenta libras al año como ayudante de su hermano William, y fue la primera mujer en Inglaterra pagada por trabajo astronómico.",
+      "Cuando William murió, en 1822, ella regresó a Hannover. Allí hizo el trabajo más largo y menos vistoso: reducir y ordenar en un catálogo por zonas todas las nebulosas y cúmulos que su hermano había observado. En 1828 la Sociedad Astronómica de Londres le concedió su medalla de oro por ese catálogo, no por los cometas. En 1835 la nombró socia honoraria, junto con Mary Somerville.",
+      "Murió en Hannover el 9 de enero de 1848, a los noventa y siete años. Su lista de nebulosas, ampliada después por su sobrino John, acabó siendo la base del Nuevo Catálogo General que los astrónomos usan todavía."
+    ],
+    "question": "¿Cuánto trabajo decisivo de la ciencia se parece más a un catálogo que a un descubrimiento?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Ocho cometas",
+    "subtitle": "Slough y Hannover, 1786-1828",
+    "body": "Caroline Herschel halló su primer cometa el 1 de agosto de 1786 y el último en 1797. Su medalla de oro de 1828 fue por otra cosa: ordenar en un catálogo las nebulosas que su hermano había observado."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CarolineHerschel", "#Cometas", "#ArteYCiencia"],
+    "extended": ["#Astronomia", "#MujeresEnLaCiencia", "#Nebulosas", "#Siglo18", "#HistoriaDeLaCiencia", "#Ciencia"]
+  },
+  "sources": [
+    {
+      "claim": "Obituario de la Royal Astronomical Society (1849): descubrió cometas en ocho ocasiones (1 ago 1786; 21 dic 1788; 9 ene 1790; 17 abr 1790; 15 dic 1791; 7 oct 1793; 7 nov 1795; 6 ago 1797); en cinco se admitió su prioridad según las Philosophical Transactions; medalla de oro de la Astronomical Society of London en 1828 por completar el Zone Catalogue de nebulosas y cúmulos observados por su hermano; nombrada socia honoraria. Lectura directa.",
+      "source": "MacTutor (Universidad de St Andrews), obituario de Caroline Herschel en Monthly Notices of the RAS",
+      "url": "https://mathshistory.st-andrews.ac.uk/Obituaries/Herschel_Caroline_RAS/"
+    },
+    {
+      "claim": "Ocho cometas en total, el primero en 1786 (C/1786 P1) y el último en 1797; en 1787 Jorge III le concedió un sueldo de 50 libras, primera mujer en Gran Bretaña con ingresos por ciencia; medalla de oro de la RAS en 1828 tras completar su catálogo de 2.500 nebulosas; socia honoraria en 1835 junto a Mary Somerville. Lectura directa.",
+      "source": "Royal Museums Greenwich, «Caroline Herschel, first paid female astronomer»",
+      "url": "https://www.rmg.co.uk/stories/space-astronomy/caroline-herschel-first-paid-female-astronomer"
+    },
+    {
+      "claim": "Ocho cometas entre el 1 de agosto de 1786 y el 6 de agosto de 1797; salario de 50 libras otorgado por Jorge III; medalla de oro de la RAS en 1828 y socia honoraria en 1835; muerte en Hannover el 9 de enero de 1848 a los 97 años. Lectura directa; su lista de referencias incluye a Hoskin, Brock y Olson & Pasachoff.",
+      "source": "Wikipedia, «Caroline Herschel»",
+      "url": "https://en.wikipedia.org/wiki/Caroline_Herschel"
+    }
+  ],
+  "do_not_use": [
+    "Que la medalla de 1828 fuera por sus cometas: fue por reducir y ordenar las observaciones de nebulosas de su hermano. El cuerpo lo dice así.",
+    "Que fuera «la primera mujer en recibir la medalla de oro» o «la última hasta Vera Rubin en 1996»: las fuentes difieren en cómo formulan los primeros y los últimos, y no se comprobó en la RAS. No entran.",
+    "Que la medalla fuera de la «Royal Society»: una página de la Universidad de Alabama lo dice, pero la entrega fue de la Astronomical Society of London (hoy Royal Astronomical Society).",
+    "Las cifras de su catálogo: el obituario habla de un catálogo por zonas de las nebulosas y cúmulos de su hermano; RMG y Wikipedia hablan de unas 2.500 nebulosas para John Herschel. La pieza no da cifra de nebulosas. La relación de su lista con el NGC (ampliada por John Herschel) viene de Wikipedia; no se comprobó en una fuente independiente.",
+    "El lugar del primer cometa (Slough): no se comprobó en fuente leída; la pieza no lo nombra.",
+    "El sueldo de cincuenta libras: RMG y Wikipedia lo dan; el obituario de la RAS no da cifra. Se usa la cifra de las dos fuentes modernas.",
+    "El PDF/obituario original y el Oxford DNB no se consultaron directamente (la Real Irish Academy devolvió 403)."
+  ],
+  "status": "draft"
+}

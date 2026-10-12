@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-21-noche",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Mill y el adversario estudiado en Sobre la libertad",
+    "hook": "John Stuart Mill sostuvo en 1859 que quien conoce solo su lado de un argumento conoce poco incluso de ese lado.",
+    "body": [
+      "La frase está en el capítulo II de Sobre la libertad, «De la libertad de pensamiento y de discusión», publicado en 1859. Mill pone allí un modelo: el mayor orador de la antigüedad, tras de sí mismo, dejó escrito que estudiaba el caso de su adversario con tanta intensidad, o con más, que el propio. Se refiere a Cicerón.",
+      "De ahí saca la conclusión: «Quien conoce solo su propio lado del caso, conoce poco de ese». Sus razones pueden ser buenas, y nadie haberlas refutado. Pero si tampoco sabe refutar las razones contrarias, ni siquiera conocerlas, no tiene motivo para preferir una opinión a otra.",
+      "Mill añade una exigencia más dura: no basta oír a los adversarios por boca de los propios maestros, con sus refutaciones incluidas. Hay que escucharlos de quienes de verdad creen en ellos y los defienden con todas sus fuerzas. Si no, la posición racional es suspender el juicio; y quien no lo hace obedece a una autoridad o adopta el lado hacia el que siente más inclinación."
+    ],
+    "question": "¿Qué opinión nuestra no ha oído nunca a su mejor adversario?",
+    "quote": {
+      "text": "Quien conoce solo su propio lado del caso, conoce poco de ese.",
+      "author": "John Stuart Mill",
+      "work": "Sobre la libertad (1859), cap. II (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JohnStuartMill", "#Citas", "#SobreLaLibertad"],
+    "extended": ["#Filosofia", "#PensamientoCritico", "#Siglo19", "#LibertadDeExpresion", "#Debate", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo II de On Liberty, «Of the Liberty of Thought and Discussion»: «He who knows only his own side of the case, knows little of that», precedido por la referencia a «the greatest orator, save one, of antiquity» que estudiaba el caso del adversario; siguen la suspensión del juicio y la exigencia de oír a los adversarios de quienes de verdad los creen. Lectura directa; la edición del Proyecto Gutenberg (eBook 34901) lleva introducción de 1901 y recuerda la primera publicación de 1859.",
+      "source": "Project Gutenberg, John Stuart Mill, On Liberty (eBook 34901)",
+      "url": "https://www.gutenberg.org/files/34901/34901-h/34901-h.htm"
+    },
+    {
+      "claim": "Mismo pasaje, con las frases previas y posteriores: Cicerón estudiaba el caso del adversario con tanta o más intensidad que el suyo; «he has no ground for preferring either opinion»; «suspension of judgment»; «led by authority». Lectura directa de una transcripción de la 4.ª edición (escaneada).",
+      "source": "Wikisource, On Liberty, Chapter 2 (4th Edition)",
+      "url": "https://en.wikisource.org/wiki/On_Liberty/Chapter_2"
+    },
+    {
+      "claim": "El pasaje corresponde al capítulo 2, «Of the Liberty of Thought and Discussion», de On Liberty (1859): quien no puede refutar las razones contrarias no tiene base para preferir su opinión; la posición racional es suspender el juicio. Solo a través de resúmenes de buscador de páginas de citas (thedailyidea.org, wist.info); no se abrieron. Sirve solo de apoyo a la ubicación del capítulo.",
+      "source": "The Daily Idea / wist.info (vía resumen de buscador)",
+      "url": "https://wist.info/mill-john-stuart/2820/"
+    }
+  ],
+  "do_not_use": [
+    "Citar la frase sola como un elogio del debate en general: en Mill sostiene una exigencia concreta (conocer los argumentos contrarios de boca de quienes los creen) y una consecuencia (suspender el juicio si no se cumple).",
+    "La traducción al español es propia: no hay una edición española concreta detrás. El cuerpo no depende de ella más que en el vocabulario.",
+    "Atribuir a Mill la frase «quien no conoce más que su propio lado, no sabe nada»: es una paráfrasis. El texto es «knows little of that».",
+    "El nombre «Cicerón»: el texto de Mill dice «the greatest orator, save one, of antiquity» sin nombrarlo en esa frase; que se refiera a Cicerón lo dice el contexto del pasaje y la edición leída por el resumen, no la frase misma. El cuerpo lo afirma con esa cautela implícita; revisar si se quiere más firmeza.",
+    "El año de la edición: Gutenberg da introducción de 1901 y primera publicación de 1859; Wikisource usa la 4.ª edición sin fecha. La pieza fecha la obra en 1859, no la edición consultada.",
+    "La tercera fuente (resúmenes de páginas de citas) no cuenta como verificación independiente; solo las dos transcripciones del texto de Mill se abrieron y leyeron. La edición de Oxford (Online Library of Liberty) devolvió 403 o no se localizó."
+  ],
+  "status": "draft"
+}

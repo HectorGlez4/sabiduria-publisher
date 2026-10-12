@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-21-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lord Acton y la carta a Creighton de 1887",
+    "hook": "«El poder tiende a corromper» no es un aforismo suelto. Lord Acton lo escribió en una carta para discutir cómo debe juzgar un historiador a los papas y a los reyes.",
+    "body": [
+      "El 5 de abril de 1887, Lord Acton escribió una carta a Mandell Creighton, historiador y clérigo anglicano, que había publicado una historia del papado. Acton había reseñado el libro con dureza en la revista que Creighton dirigía, y Creighton le contestó en privado defendiendo que a papas y reyes se les juzgara con una presunción favorable: que se les supusiera inocentes mientras no se probara lo contrario.",
+      "Acton rechazó ese criterio. Escribió que, si existe alguna presunción, es la contraria: contra quienes tienen poder, y creciente a medida que crece el poder. Añadió que la responsabilidad histórica tiene que compensar la falta de responsabilidad legal. Y entonces: «El poder tiende a corromper, y el poder absoluto corrompe absolutamente». Cerró el argumento diciendo que no hay peor herejía que la de creer que el cargo santifica a quien lo ocupa.",
+      "Es decir, la frase no habla de la naturaleza humana en general, sino del método de un historiador: no concederle a nadie una indulgencia especial por el puesto que ocupó. Cuando se corta y se cita sola, esa condición desaparece."
+    ],
+    "question": "¿Qué cambia cuando una frase sobre el poder se lee como una regla para juzgar, no como un lamento?",
+    "quote": {
+      "text": "El poder tiende a corromper, y el poder absoluto corrompe absolutamente.",
+      "author": "Lord Acton (John Dalberg-Acton)",
+      "work": "Carta a Mandell Creighton, 5 de abril de 1887 (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LordActon", "#Citas", "#Poder"],
+    "extended": ["#Historia", "#Siglo19", "#FrasesCelebres", "#Etica", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Carta de Acton a Creighton fechada el 5 de abril de 1887; Creighton sostenía que a papas y reyes se les juzgara «con una presunción favorable»; Acton responde que si hay alguna presunción «es la contraria, contra los titulares del poder, creciente a medida que crece el poder»; «Power tends to corrupt and absolute power corrupts absolutely»; «Great men are almost always bad men». Lectura directa.",
+      "source": "Econlib / Liberty Fund, «The Acton-Creighton Correspondence»",
+      "url": "https://www.econlib.org/the-acton-creighton-correspondence"
+    },
+    {
+      "claim": "La carta es del 5 de abril de 1887 a Mandell Creighton; Acton había reseñado críticamente su historia del papado en una revista que el propio Creighton dirigía; la frase exacta con coma («Power tends to corrupt, and absolute power corrupts absolutely»); la cierra con «no hay peor herejía que la de que el cargo santifica a quien lo ocupa»; el contexto es menos conocido que la frase. Lectura directa.",
+      "source": "First Things, «Power and Corruption»",
+      "url": "https://firstthings.com/power-and-corruption/"
+    },
+    {
+      "claim": "Cita de la carta del 5 de abril de 1887, publicada en Historical Essays and Studies (1907, eds. Figgis y Laurence), Apéndice, p. 504, y reimpresa en Essays on Freedom and Power (1972); recoge la variante parafraseada «All power tends to corrupt…». Lectura directa; es una página de citas, útil como localización pero no como edición crítica.",
+      "source": "Wikiquote, «John Dalberg-Acton, 1st Baron Acton»",
+      "url": "https://en.wikiquote.org/wiki/John_Dalberg-Acton,_1st_Baron_Acton"
+    }
+  ],
+  "do_not_use": [
+    "La versión «All power corrupts; absolute power corrupts absolutely» o «El poder corrompe»: es una paráfrasis sin fuente; el original dice «tends to corrupt» («tiende a corromper»).",
+    "Atribuir la frase a una obra o ensayo de Acton: sale de una carta privada, no de un libro suyo. Historical Essays and Studies es donde se publicó años después.",
+    "Que sea una cita «sobre el poder en abstracto»: la carta trata de cómo un historiador debe juzgar a papas y reyes, no de política en general.",
+    "La cifra de página (504) y el volumen de 1907 vienen de Wikiquote, no de una edición abierta; en la pieza se cita solo carta y fecha.",
+    "Llamar «obispo» a Creighton en 1887: las fuentes leídas lo llaman «Bishop» por su cargo posterior; no se comprobó en fuente leída cuándo lo fue, así que el cuerpo dice «historiador y clérigo anglicano».",
+    "Frases anteriores parecidas (Pitt, 1770, u otras): no se verificaron en fuente leída. No entran.",
+    "La traducción al español es propia; no cita edición española."
+  ],
+  "status": "draft"
+}
