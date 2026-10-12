@@ -2,7 +2,7 @@
   "id": "2026-10-07-re51-reel",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "los jardines colgantes y la ciudad equivocada",
     "hook": "Es la única de las siete maravillas que nadie ha localizado. Ningún texto babilonio la menciona, y Heródoto describió Babilonia entera sin nombrarla una sola vez.",
@@ -91,6 +91,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-07T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1802971964070698",
+      "url": "/reel/1802971964070698/",
+      "published_at": "2026-10-12T09:05:28.187904+00:00"
+    }
+  },
   "reemision_de": "2026-09-17-extra88"
 }

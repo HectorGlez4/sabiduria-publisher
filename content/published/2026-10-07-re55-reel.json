@@ -2,7 +2,7 @@
   "id": "2026-10-07-re55-reel",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el Códice de Dresde y Ernst Förstemann",
     "hook": "De todos los libros mayas quedan cuatro. El más completo empezó a descifrarlo un bibliotecario de Dresde que no conocía la lengua ni había pisado nunca Yucatán.",
@@ -82,6 +82,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-08T04:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1834171087775972",
+      "url": "/reel/1834171087775972/",
+      "published_at": "2026-10-12T11:23:53.461666+00:00"
+    }
+  },
   "reemision_de": "2026-09-17-extra90"
 }

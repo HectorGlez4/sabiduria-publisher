@@ -68,13 +68,27 @@
     "«Balmis inventó la vacuna». No: la vacuna contra la viruela es de Edward Jenner (1796). Balmis dirigió su distribución.",
     "Presentar la expedición como gesto puramente humanitario sin más. Fue una orden de la Corona española sobre sus territorios de ultramar; el mérito sanitario es real, el marco es colonial. Este post no entra en el debate, pero no debe negarlo."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-08T20:26:00Z",
   "targets": [
     "facebook_story",
     "instagram_story"
   ],
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1361064889201926",
+      "photo_id": "1120426534115339",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-12T12:55:20.940029+00:00"
+    },
+    "instagram_story": {
+      "post_id": "18496796905099097",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-12T12:55:33.951603+00:00"
+    }
+  },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
     "topic": [],
