@@ -2,7 +2,7 @@
   "id": "2026-10-08-re60-reel",
   "slot": "manana",
   "pillar": "figura",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Semmelweis y el cloruro de cal de 1847",
     "hook": "En 1823 el Hospital General de Viena mejoró la enseñanza: los estudiantes empezarían a aprender haciendo autopsias. La mortalidad de las parturientas pasó de cerca del uno por ciento al siete y medio. Nadie ató los dos hechos durante veinticuatro años.",
@@ -85,6 +85,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-09T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1096907009650145",
+      "url": "/reel/1096907009650145/",
+      "published_at": "2026-10-13T10:15:06.193197+00:00"
+    }
+  },
   "reemision_de": "2026-09-18-extra92"
 }

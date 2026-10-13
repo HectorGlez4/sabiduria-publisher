@@ -2,7 +2,7 @@
   "id": "2026-10-08-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Chinua Achebe y el aceite de palma de las palabras",
     "hook": "La novela africana más leída del mundo estuvo meses arrumbada en un rincón de una agencia de mecanografía de Londres. Solo existía una copia, escrita a mano, y el autor ya había pagado por adelantado.",
@@ -86,5 +86,21 @@
     "threads"
   ],
   "publish_at": "2026-10-09T04:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1121303194027673",
+      "url": "https://www.facebook.com/874327782058550/posts/1121303194027673",
+      "published_at": "2026-10-13T10:37:13.584729+00:00"
+    },
+    "instagram": {
+      "post_id": "18126635446853526",
+      "url": "https://www.instagram.com/p/DebnDN9GIBr/",
+      "published_at": "2026-10-13T10:37:27.630468+00:00"
+    },
+    "threads": {
+      "post_id": "18460725547190169",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18460725547190169",
+      "published_at": "2026-10-13T10:37:40.179723+00:00"
+    }
+  }
 }
