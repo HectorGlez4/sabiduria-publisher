@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-23-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Artemisia Gentileschi y la Susana de 1610",
+    "hook": "La primera pintura firmada y fechada de Artemisia Gentileschi viajó en 1714 con el nombre de su padre.",
+    "body": [
+      "«Susana y los viejos», óleo sobre lienzo de 170 por 119 centímetros, lleva la firma de Artemisia Gentileschi y la fecha de 1610. Una radiografía de 1970 confirmó ese año. Como los registros fijan su nacimiento en 1593, tenía unos diecisiete años. Es la primera obra suya que conservamos con firma y fecha.",
+      "En 1714 el pintor Benedetto Luti tenía el cuadro y gestionaba su copia para el conde Lothar Franz von Schönborn. En una carta de ese año lo llamó obra de Orazio Gentileschi, el padre. En 1719 ya estaba en la colección Schönborn, en el castillo de Pommersfelden, donde sigue. La guía de esa colección que publicó Joseph Heller en 1845 es la primera atribución impresa a Artemisia.",
+      "Las dudas no acabaron ahí. Durante buena parte del siglo XX se sospechó que un desnudo tan seguro no podía ser de alguien tan joven. Ese razonamiento descansaba en un dato mal calculado: hasta 1968, cuando Ward Bissell corrigió la fecha de su nacimiento, se la creía cuatro años más joven. Hoy la mayoría de los especialistas acepta la firma y la fecha, aunque se discute cuánto debe la pintura al estilo de Orazio."
+    ],
+    "question": "¿Cuántas obras de mujeres habrán cruzado un siglo con el nombre de un hombre en la etiqueta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Susana que viajó con el nombre de su padre",
+    "subtitle": "Artemisia Gentileschi, 1610",
+    "body": "En 1714 una carta llamó a este cuadro obra de Orazio Gentileschi. Lo había firmado su hija Artemisia en 1610, a los diecisiete años. La primera atribución impresa a ella es de 1845."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ArtemisiaGentileschi", "#Barroco", "#SusanaYLosViejos"],
+    "extended": ["#Arte", "#HistoriaDelArte", "#Pintoras", "#Siglo17", "#Italia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El cuadro es de hacia 1610; una radiografía de 1970 de Susanna P. Sack confirmó la fecha 1610 (publicado por Mary D. Garrard en 1982); mide 170 × 119 cm; Luti lo tenía en el verano de 1714 y en una carta lo llamó obra de Orazio; en 1719 estaba en la colección Schönborn; la guía de Heller de 1845 contiene la primera atribución publicada a Artemisia; Bissell corrigió su año de nacimiento en 1968; hoy está en Schloss Weißenstein, Pommersfelden. Lectura directa de Wikipedia; fuente secundaria que remite a Treves (National Gallery, 2020), Christiansen y Mann (2001), Garrard y Maffeis (2017), ninguno de los cuales se pudo abrir.",
+      "source": "Wikipedia, «Susanna and the Elders (Artemisia Gentileschi, Pommersfelden)»",
+      "url": "https://en.wikipedia.org/wiki/Susanna_and_the_Elders_(Artemisia_Gentileschi,_Pommersfelden)"
+    },
+    {
+      "claim": "Es su primera pintura conservada firmada y fechada, de 1610; si la inscripción y la fecha son genuinas, como sugiere la evidencia técnica, tenía diecisiete años; la obra ha suscitado controversia entre especialistas modernos y la galería rechaza que Orazio la diseñara y pintara en lo esencial, aunque admite una dependencia visible del estilo paterno. Lectura directa.",
+      "source": "Matthiesen Gallery, «Artemisia Gentileschi»",
+      "url": "https://www.matthiesengallery.com/artist/gentileschi-artemisia"
+    },
+    {
+      "claim": "Resumen de resultados de búsqueda (no abierto el texto completo): el nacimiento en 1593 y no en 1597, establecido por Bissell en 1968, desmontó la tesis de que a los 13 años no pudo pintarlo; en 1714 el cuadro viajó a Pommersfelden como obra de Orazio pese a la firma de Artemisia (Maffeis, 2017). Es una fuente de divulgación universitaria, no una edición crítica.",
+      "source": "Universidad de Kent, blog «Artistry», «What Women Can Do»: Artemisia Gentileschi and the Issue of a Legacy",
+      "url": "https://blogs.kent.ac.uk/artistry/2021/01/25/what-women-can-do-artemisia-gentileschi-and-the-issue-of-a-legacy/"
+    }
+  ],
+  "do_not_use": [
+    "Dar por cerrado el debate de la autoría: la mayoría acepta firma y fecha, pero hay estudiosos que ven colaboración del padre. El cuerpo dice «se discute cuánto debe al estilo de Orazio» y no más.",
+    "La fecha del cuadro: una lectura antigua leyó 1616 o 1619; la radiografía de 1970 confirmó 1610. La edad de «diecisiete años» depende de que la fecha sea auténtica y de un nacimiento en 1593; por eso el cuerpo dice «unos diecisiete».",
+    "Atribuir a Roberto Longhi (1943) la tesis de que lo pintó Orazio y firmó Artemisia: solo consta en un blog universitario de estudiantes; el texto de Longhi no se abrió. No entra en la pieza.",
+    "Relacionar el cuadro con la violación y el juicio de Agostino Tassi (1612) como explicación de la escena: el cuadro es dos años anterior; Matthiesen rechaza esa lectura.",
+    "El texto exacto de la inscripción: las fuentes dan transcripciones distintas (ARTIMITIA/GENTILESCHI F/1610) y la ortografía de su apellido varía; no se cita.",
+    "Que la guía de Heller de 1845 «corrigió» una atribución a Orazio: el artículo leído solo dice que contiene la primera atribución publicada a Artemisia. Verificar en Treves (2020) o Christiansen y Mann (2001) antes de ampliar."
+  ],
+  "status": "draft"
+}

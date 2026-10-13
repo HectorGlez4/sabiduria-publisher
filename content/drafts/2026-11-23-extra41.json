@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-23-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Keats y las comillas de la Oda a una urna griega",
+    "hook": "El verso de Keats que dice que la belleza es verdad no llevaba comillas cuando se imprimió por primera vez; en el libro de 1820 sí, y nadie sabe quién las puso.",
+    "body": [
+      "Keats escribió la «Oda a una urna griega» en mayo de 1819. Se imprimió sin firma en la revista Annals of the Fine Arts, entre finales de 1819 y enero de 1820, y la reeditó con cambios menores en Lamia, Isabella, The Eve of St. Agnes, and Other Poems, en 1820. Termina con la urna hablándole al hombre: «La belleza es verdad, la verdad belleza: eso es todo lo que sabéis en la tierra, y todo lo que necesitáis saber».",
+      "En la primera impresión esos dos versos iban sin comillas, así que podía leerse como el poeta hablando. En el volumen de 1820 aparecen entre comillas, como palabras de la urna. La edición de la Universidad de Toronto señala que Keats estaba enfermo mientras se preparaba el libro y que no sabemos quién introdujo las comillas. Las ediciones modernas no se ponen de acuerdo en cuánto del pareado encierran: unas cierran tras «belleza» y dejan «eso es todo...» al poeta, y otras comillan los dos versos.",
+      "No es un detalle de imprenta. Si habla la urna, la identidad de belleza y verdad es lo que el objeto le dice a la gente. Si habla el poeta, es una conclusión suya, y la urna solo calla. Lo que una cita en un cartel presenta como sentencia suelta es, en el poema, un final con dueño disputado."
+    ],
+    "question": "¿Cambia lo que significa una frase saber quién la dice?",
+    "quote": {
+      "text": "La belleza es verdad, la verdad belleza: eso es todo lo que sabéis en la tierra, y todo lo que necesitáis saber.",
+      "author": "John Keats",
+      "work": "«Ode on a Grecian Urn», estrofa V (Lamia…, 1820) (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Keats", "#OdaAUnaUrnaGriega", "#Citas"],
+    "extended": ["#Poesia", "#Romanticismo", "#Siglo19", "#LiteraturaInglesa", "#FrasesCelebres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la estrofa V: «Beauty is truth, truth beauty,--that is all / Ye know on earth, and all ye need to know»; la primera impresión en Annals of the Fine Arts (dic.(?) 1819) llevaba los dos últimos versos sin comillas; el volumen de 1820 los puso entre comillas como palabras de la urna; no se sabe quién las introdujo, pues Keats estaba enfermo; esta edición sigue la Riverside (Douglas Bush) y comilla ambos versos. Lectura directa.",
+      "source": "Representative Poetry Online, Universidad de Toronto, «Ode on a Grecian Urn»",
+      "url": "https://rpo.library.utoronto.ca/poems/ode-grecian-urn"
+    },
+    {
+      "claim": "El poema se escribió en mayo de 1819, se imprimió anónimo en Annals of the Fine Arts y se incluyó en Lamia, Isabella, The Eve of St Agnes, and Other Poems (1820); el texto moderno comilla solo «Beauty is truth, truth beauty»; la voz que habla en los versos finales es objeto de discusión (Hugh Kenner, entre otros). Lectura directa de Wikipedia; fuente secundaria. El artículo da la primera impresión como 1819 o enero de 1820 según la parte leída.",
+      "source": "Wikipedia, «Ode on a Grecian Urn»",
+      "url": "https://en.wikipedia.org/wiki/Ode_on_a_Grecian_Urn"
+    },
+    {
+      "claim": "Resumen de resultados de búsqueda (la página, que reproduce imágenes de la edición de 1820, llegó vacía al leerla): la edición de la Universidad de Virginia da el texto con las comillas de 1820 y afirma que ninguna de las dos versiones es más auténtica; Keats nunca explicó las comillas. Sin lectura directa; se cita solo como ruta para quien amplíe.",
+      "source": "University of Virginia, Keats Anthology, «Ode on a Grecian Urn»",
+      "url": "https://anthology.lib.virginia.edu/work/Keats/keats-grecian"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar quién habla en los dos últimos versos: es una discusión abierta. La pieza dice qué muestran las impresiones, no qué quiso Keats.",
+    "Que Keats puso o quitó las comillas: no se sabe quién las introdujo en 1820 (RPO); estaba enfermo durante la preparación del volumen.",
+    "La fecha de la primera impresión: RPO la da como «Dic.(?) 1819», otras fuentes como enero de 1820; el cuerpo dice «entre finales de 1819 y enero de 1820».",
+    "Cuánto del pareado se comilla en 1820: las notas leídas se contradicen (una dice que solo «Beauty is truth, truth beauty», el texto de RPO comilla los dos versos). La pieza no afirma una extensión en el volumen de 1820; solo que las ediciones modernas difieren. No se abrió el facsímil de 1820.",
+    "Las transcripciones de Woodhouse y Brown y el argumento del cambio de «thou» a «ye»: salen de resultados de búsqueda y no se abrieron; no entran en la pieza.",
+    "La traducción es propia (ye = «vosotros»/«ustedes»; aquí «sabéis», registro literario). No se atribuye a una edición en español.",
+    "Presentar «belleza es verdad» como tesis personal de Keats sin matiz: es justo lo que la discusión de las comillas deja abierto."
+  ],
+  "status": "draft"
+}

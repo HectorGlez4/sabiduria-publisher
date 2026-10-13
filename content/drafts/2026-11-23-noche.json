@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-23-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Elias Lönnrot y el Kalevala de 1835",
+    "hook": "El poema nacional de Finlandia no existía como poema: lo armó un médico a partir de unos cuarenta mil versos sueltos.",
+    "body": [
+      "Elias Lönnrot era médico, y entre 1828 y 1844 hizo once viajes de recolección por Finlandia y la Carelia rusa. Anotó más de 3.500 textos de tradición oral. En 1834, en Latvajärvi, en la Carelia de Arcángel, conoció a Arhippa Perttunen, uno de los mejores cantores que encontró. Terminó el manuscrito en febrero de 1835.",
+      "El libro que salió, el Viejo Kalevala, tenía 32 cantos y 12.078 versos, y se imprimió en dos partes, en diciembre de 1835 y marzo de 1836, con solo 500 ejemplares. En 1849 apareció la edición definitiva: 50 cantos y 22.795 versos. El historiador Väinö Kaukonen estimó que Lönnrot conocía y usó unos 40.000 versos de poesía popular.",
+      "Lo que hizo con ellos fue editar: unió variantes, descartó versos que no cabían en su plan y escribió algunos de enlace. Según el análisis de Kaukonen, un 3 % de los versos del Kalevala son suyos o no tienen equivalente en la poesía popular, y otro 14 % están hechos con giros del folclor, pero no aparecen en ningún canto recogido. El Kalevala es, así, tradición oral y obra de un editor del siglo XIX a la vez. Hoy el 28 de febrero, fecha de aquel prólogo, se celebra el Día del Kalevala."
+    ],
+    "question": "Si una tradición se reúne y se ordena en un libro, ¿sigue siendo de quienes la cantaban o pasa a ser de quien la compiló?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El poema que armó un médico",
+    "subtitle": "Elias Lönnrot y el Kalevala, 1835",
+    "body": "Lönnrot recogió unos 40.000 versos orales en once viajes. El Viejo Kalevala de 1835 tuvo 12.078 versos y 500 ejemplares; el de 1849, 22.795. Según Kaukonen, un 3 % de los versos son suyos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Kalevala", "#Finlandia", "#EliasLonnrot"],
+    "extended": ["#Mitologia", "#Epopeya", "#TradicionOral", "#Siglo19", "#Folclore", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Once viajes entre 1828 y 1844 y más de 3.500 textos; encuentro con Arhippa Perttunen en Latvajärvi en 1834; Viejo Kalevala con manuscrito terminado en febrero de 1835 (prólogo del 28 de febrero), 32 cantos, 12.078 versos, publicado en diciembre de 1835 y marzo de 1836, 500 ejemplares; 1849: 50 cantos y 22.795 versos; Kaukonen estimó unos 40.000 versos de poesía popular conocidos por Lönnrot y el reparto 33 % / 50 % / 14 % / 3 %. La página advierte que los porcentajes no recogen toda su intervención en la estructura. Lectura directa.",
+      "source": "Kalevalaseura (Sociedad del Kalevala), «Elias Lönnrot's Kalevala process»",
+      "url": "https://kalevalaseura.fi/en/elias-lonnrots-kalevala-process/"
+    },
+    {
+      "claim": "Viejo Kalevala 1835: 12.078 versos en 32 poemas; Nuevo Kalevala 1849: 22.795 versos en 50 poemas; Lönnrot, médico, hizo once viajes, fusionó variantes, descartó versos y escribió versos de enlace; la estimación de Kaukonen del 3 % propio y 14 % de variantes reelaboradas; el Día del Kalevala el 28 de febrero. Lectura directa de Wikipedia (primeros 100.000 caracteres); fuente secundaria.",
+      "source": "Wikipedia, «Kalevala»",
+      "url": "https://en.wikipedia.org/wiki/Kalevala"
+    },
+    {
+      "claim": "Resumen de resultados de búsqueda (página no abierta): las dos ediciones son en su mayor parte poesía popular preexistente, con 12.078 versos en 32 poemas (1835) y 22.795 en 50 (1849). Un edición enciclopédica de 1920 dice que Lönnrot compuso a veces unos versos para tender puentes entre pasajes discordantes.",
+      "source": "Project Runeberg, Kalevala",
+      "url": "https://runeberg.org/kalevala"
+    }
+  ],
+  "do_not_use": [
+    "Que Lönnrot «escribió» el Kalevala o que es «pura invención» del siglo XIX: la gran mayoría de los versos viene de la poesía oral; lo que es suyo es la selección, la ordenación y los versos de enlace.",
+    "Que el Kalevala sea un mito finlandés antiguo y único, transmitido íntegro durante siglos: como poema continuo es una construcción de Lönnrot; los cantos sueltos sí son tradición oral, y la mitad del material venía de la Carelia de Arcángel.",
+    "5.052 versos para el Viejo Kalevala: lo da una fuente en español; las fuentes en inglés y la Sociedad del Kalevala dan 12.078. No se usa la cifra menor.",
+    "El 3 % es una estimación de Kaukonen y la propia Sociedad avisa de que los porcentajes no recogen todo (estructura, personajes). Se presenta como «según Kaukonen».",
+    "Que Perttunen «cantó el Kalevala» a Lönnrot: le dictó cantos; el poema como tal no existía. No se afirma más.",
+    "Influencia en Tolkien y en la independencia finlandesa de 1917: aparece en Wikipedia pero no se verificó en fuente directa; no entra en la pieza.",
+    "La cifra «unos cuarenta mil versos» es la estimación de Kaukonen de lo que Lönnrot conoció y usó; no es el total de lo recogido, que el archivo cifra en medio millón de páginas con otros recolectores."
+  ],
+  "status": "draft"
+}

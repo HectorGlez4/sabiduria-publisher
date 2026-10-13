@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-23-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Jane Austen y la verdad universalmente reconocida",
+    "hook": "La frase más famosa de Jane Austen presenta como verdad universal lo que, dos líneas después, resulta ser la opinión de unas cuantas familias.",
+    "body": [
+      "Orgullo y prejuicio empieza así: «Es una verdad universalmente reconocida que un hombre soltero, poseedor de una buena fortuna, ha de estar necesitado de esposa». Se publicó en Londres el 28 de enero de 1813, en tres volúmenes, a cargo de T. Egerton, y la portada no llevaba el nombre de Austen: decía «Por la autora de Sentido y sensibilidad».",
+      "La segunda frase del capítulo corrige a la primera. Dice que, por poco que se sepa de los sentimientos de ese hombre cuando llega a un vecindario, la verdad está tan fija en la mente de las familias de alrededor que lo consideran propiedad legítima de alguna de sus hijas. Lo que se enunciaba como ley general es, en realidad, lo que piensan quienes tienen hijas por casar.",
+      "Por eso la crítica ha leído la frase como ironía desde sus primeros lectores. Kenneth Moler observa que Austen imita el tono de la prosa filosófica del siglo XVIII, con su apelación a reglas generales, para aplicarlo a un asunto de mercado matrimonial. Hoy la primera frase suele citarse suelta, y entonces se pierde el movimiento entero."
+    ],
+    "question": "¿Cuántas «verdades universales» que damos por sabidas son, en realidad, lo que conviene a un grupo?",
+    "quote": {
+      "text": "Es una verdad universalmente reconocida que un hombre soltero, poseedor de una buena fortuna, ha de estar necesitado de esposa.",
+      "author": "Jane Austen",
+      "work": "«Orgullo y prejuicio», cap. I (1813) (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JaneAusten", "#OrgulloYPrejuicio", "#Citas"],
+    "extended": ["#Literatura", "#Novela", "#Siglo19", "#LiteraturaInglesa", "#FrasesCelebres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del capítulo I: «It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife»; la segunda frase: «However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters»; el prefacio sitúa la publicación en 1813. Lectura directa de la edición ilustrada de Hugh Thomson con prefacio de Saintsbury (el sitio no precisa el año de esa edición).",
+      "source": "Project Gutenberg, Jane Austen, Pride and Prejudice (eBook 1342)",
+      "url": "https://www.gutenberg.org/files/1342/1342-h/1342-h.htm"
+    },
+    {
+      "claim": "Resumen de resultados de búsqueda: publicada por Egerton el 28 de enero de 1813 (anuncio del Morning Chronicle), tres volúmenes, sin nombre de autora, «By the Author of Sense and Sensibility»; el registro del Grolier Club da «Printed for T. Egerton, Military Library, Whitehall». No se abrió la página completa de ninguno; el blog de la Newberry Library da 18 de enero, que parece un error.",
+      "source": "Jane Austen's House / Grolier Club, registro de la primera edición",
+      "url": "https://grolierclub.omeka.net/items/show/6243"
+    },
+    {
+      "claim": "Kenneth L. Moler sostiene que la ironía de la frase nace de su eco del lenguaje filosófico del siglo XVIII y de su aplicación al mercado matrimonial. Lectura parcial: el PDF llegó con el texto codificado y truncado, así que se confirma el argumento general y no las páginas concretas.",
+      "source": "Kenneth L. Moler, Persuasions nº 8, JASNA",
+      "url": "https://jasna.org/persuasions/printed/number8/moler.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como opinión sincera de Austen sobre los hombres ricos o sobre el matrimonio: la segunda frase del capítulo la atribuye al parecer de las familias del vecindario.",
+    "Que la novela salió con el nombre de Austen: salió anónima, «por la autora de Sentido y sensibilidad».",
+    "La fecha del 18 de enero de 1813 que da el blog de la Newberry Library: los demás registros dan el 28 de enero.",
+    "El título original provisional «First Impressions» y las cifras de venta o tirada (hacia 1.500 ejemplares, £110 por el copyright): salen de resúmenes de búsqueda y no se verificaron en fuente directa; no entran en la pieza.",
+    "Frases sueltas que circulan como «de Austen» sobre el matrimonio o la riqueza sin capítulo: no se han verificado; la cita usa solo la primera frase del capítulo I.",
+    "La traducción es propia. Sabemos que las ediciones en español varían («tiene que estar buscando esposa», «necesita una esposa»); no se atribuye a ninguna edición concreta."
+  ],
+  "status": "draft"
+}
