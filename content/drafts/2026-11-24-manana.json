@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-24-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Maria Mitchell y la medalla de oro de Dinamarca (1847)",
+    "hook": "Maria Mitchell vio el cometa el 1 de octubre de 1847, pero otro astrónomo avisó antes a Europa, y el premio se decidió por quién lo había visto primero.",
+    "body": [
+      "La noche del 1 de octubre de 1847, desde Nantucket, Maria Mitchell descubrió un cometa telescópico. Tenía veintinueve años. Su padre avisó a la Universidad de Harvard el 3 de octubre. Dos días después de Mitchell, el astrónomo italiano Francesco de Vico vio el mismo cometa y lo comunicó antes a las autoridades europeas.",
+      "Había un premio en juego. Federico VI de Dinamarca había instituido una medalla de oro para el primer descubridor de cada cometa telescópico. Con el aviso de De Vico por delante, la medalla podía ir a Europa. Mitchell fue declarada primera descubridora y recibió el premio: el rey Cristián VIII lo concedió el 6 de octubre de 1848 y la medalla llegó a Nantucket en marzo de 1849. Fue la primera estadounidense en recibirla.",
+      "El cometa se llamó durante años «el cometa de la señorita Mitchell». En 1865 Matthew Vassar la nombró profesora de astronomía en su colegio, el primer puesto de ese tipo ocupado por una mujer en Estados Unidos. Dirigió el observatorio hasta 1888."
+    ],
+    "question": "¿Cuántos descubrimientos se decidieron por quien avisó primero y no por quien miró primero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El cometa de la señorita Mitchell",
+    "subtitle": "Nantucket, 1847",
+    "body": "Francesco de Vico avisó antes a Europa. Maria Mitchell había visto el cometa dos días antes que él. El premio de Dinamarca, una medalla de oro, fue para ella."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MariaMitchell", "#Astronomia", "#MujeresEnLaCiencia"],
+    "extended": ["#Cometas", "#Siglo19", "#HistoriaDeLaCiencia", "#Nantucket", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Descubrió el cometa el 1 de octubre de 1847; De Vico lo encontró dos días después pero lo comunicó antes a las autoridades europeas; Mitchell fue declarada primera descubridora; la medalla fue creada por Federico VI y concedida por Cristián VIII el 6 de octubre de 1848; la recibió físicamente en Nantucket en marzo de 1849 y fue la primera estadounidense; Vassar la nombró profesora de astronomía en 1865 y se retiró en 1888. Lectura directa.",
+      "source": "Wikipedia, «Maria Mitchell»",
+      "url": "https://en.wikipedia.org/wiki/Maria_Mitchell"
+    },
+    {
+      "claim": "Descubrió el cometa el 1 de octubre de 1847; su padre avisó a la Universidad de Harvard el 3 de octubre; recibió una medalla de oro del rey Cristián VIII de Dinamarca; primera estadounidense en descubrir un cometa. Lectura directa.",
+      "source": "Astronomy, «Oct. 1, 1847: Miss Mitchell's Comet»",
+      "url": "https://www.astronomy.com/today-in-the-history-of-astronomy/oct-1-1847-miss-mitchell-comet"
+    },
+    {
+      "claim": "Descubrió un cometa en 1847, calculó su órbita y recibió una medalla de oro internacional del gobierno danés, la primera concedida a una mujer estadounidense. Lectura directa; no nombra al rey ni da fecha.",
+      "source": "Linda Hall Library, «Scientist of the Day: Maria Mitchell»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/maria-mitchell/"
+    }
+  ],
+  "do_not_use": [
+    "Qué rey de Dinamarca entregó la medalla: Wikipedia y Astronomy dicen Cristián VIII; resúmenes de búsqueda de otras páginas dicen Federico VII. El cuerpo dice Cristián VIII solo en la frase de la concesión; si se amplía, verificar con el Maria Mitchell Association.",
+    "El tipo de telescopio: Wikipedia dice un refractor Dollond; un resumen de búsqueda hablaba de un reflector de dos pulgadas de la familia. No entra en la pieza.",
+    "Que descubrió el cometa desde el tejado del banco de Main Street: salió en un resumen de búsqueda y no se verificó en fuente directa.",
+    "El lema latino de la medalla (Virgilio, Geórgicas) y la anécdota de la intervención de amigos y de Harvard: salen de resúmenes de búsqueda; no se abrió una fuente directa.",
+    "Que De Vico recibió primero la medalla: un resumen de búsqueda lo afirmaba; ninguna fuente leída lo dice.",
+    "«Primera mujer elegida a la Academia Americana de Artes y Ciencias»: Wikipedia lo afirma sin año en lo leído; no entra."
+  ],
+  "status": "draft"
+}

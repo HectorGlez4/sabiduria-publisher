@@ -1,0 +1,55 @@
+{
+  "id": "2026-11-24-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "William Blake y el grano de arena de Auguries of Innocence",
+    "hook": "Los versos del grano de arena de Blake no se imprimieron mientras vivió: se leyeron por primera vez treinta y seis años después de su muerte.",
+    "body": [
+      "«Ver un mundo en un grano de arena / y un cielo en una flor silvestre, / sostener el infinito en la palma de la mano / y la eternidad en una hora». Son los cuatro primeros versos de «Auguries of Innocence», un poema de más de cien versos que William Blake copió en un cuaderno hacia los primeros años del siglo XIX.",
+      "Ese cuaderno se conoce como el Manuscrito Pickering, por uno de sus dueños posteriores. Blake murió en 1827 sin imprimir el poema. Se publicó por primera vez en 1863, en el segundo volumen de la Life of William Blake de Alexander Gilchrist, entre los poemas hasta entonces inéditos.",
+      "La estrofa suele citarse suelta, como una invitación a mirar de cerca. En el original es solo el comienzo de un poema de más de cien versos, y el título no habla de consuelo sino de «augurios»."
+    ],
+    "question": "¿Qué cosa pequeña ha mirado hoy el tiempo suficiente para que le diga algo?",
+    "quote": {
+      "text": "Ver un mundo en un grano de arena\ny un cielo en una flor silvestre,\nsostener el infinito en la palma de la mano\ny la eternidad en una hora.",
+      "author": "William Blake",
+      "work": "«Auguries of Innocence», Manuscrito Pickering (hacia 1801-1803) (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#WilliamBlake", "#AuguriesOfInnocence", "#Citas"],
+    "extended": ["#Poesia", "#Romanticismo", "#LiteraturaInglesa", "#Siglo19", "#FrasesCelebres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Los cuatro primeros versos de «Auguries of Innocence» («To see a World in a Grain of Sand / And a Heaven in a Wild Flower / Hold Infinity in the palm of your hand / And Eternity in an hour»); procede del Manuscrito Pickering; se supone escrito en 1803; se publicó por primera vez en 1863 junto a la biografía de Gilchrist; el poema pasa de 133 versos. Lectura directa de Wikipedia, fuente secundaria.",
+      "source": "Wikipedia, «Auguries of Innocence»",
+      "url": "https://en.wikipedia.org/wiki/Auguries_of_Innocence"
+    },
+    {
+      "claim": "El poema aparece en el Manuscrito Pickering (hacia 1801-1803) y su primera versión impresa registrada es la Life of William Blake (1863), vol. 2, «Poems Hitherto Unpublished»; reimpreso en la segunda edición de 1880. Lectura directa del listado; el sitio no dice que sea la primera publicación, y el texto del poema no está en esa página.",
+      "source": "Wikisource, «Auguries of Innocence»",
+      "url": "https://en.wikisource.org/wiki/Auguries_of_Innocence"
+    },
+    {
+      "claim": "El Manuscrito Pickering (MA 2879) contiene diez poemas de mano de Blake, es la única fuente de siete de ellos incluido «Auguries of Innocence», y Blake lo conservó hasta su muerte en 1827. Solo se vio el resumen del buscador: la página devolvió 403 y no se pudo abrir.",
+      "source": "Morgan Library & Museum, «The Pickering Manuscript»",
+      "url": "https://www.themorgan.org/collection/william-blake/pickering-manuscript"
+    }
+  ],
+  "do_not_use": [
+    "Que el poema empieza con un «mensaje de consuelo»: el título es «Augurios de inocencia» y el cuerpo lo remite al resto del poema solo en términos generales. No se afirma el contenido de versos concretos porque no se leyó el poema completo.",
+    "Fecha exacta de composición: Wikipedia dice 1803, Wikisource 1801-3, el Morgan (resumen de búsqueda) compuesto entre 1800 y 1804 y copiado hacia 1807. El cuerpo dice «los primeros años del siglo XIX».",
+    "Que el Manuscrito Pickering se publicó en 1864 o 1866 con el título de Songs of Innocence and Experience, and Other Poems: las fuentes disienten (1865-1866) y no se abrió ninguna; no entra.",
+    "Versiones en prosa o «adaptadas» del cuarteto (Hold infinity in the palm of your hand): el texto de Wikipedia es el que se lee en las ediciones modernas; la traducción es propia.",
+    "Cifra exacta de versos del poema (133 o 132): las fuentes leídas dan 133 versos sin cotejar; el cuerpo dice «más de cien»."
+  ],
+  "status": "draft"
+}

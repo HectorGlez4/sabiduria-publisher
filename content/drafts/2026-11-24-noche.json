@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-24-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "las cartas de varillas de las islas Marshall",
+    "hook": "Los navegantes marshaleses hacían mapas de las olas con nervaduras de palma y conchas, y no los llevaban a bordo.",
+    "body": [
+      "En las islas Marshall, en el Pacífico central, los navegantes trazaban el océano con nervaduras de hoja de palma atadas con fibra de coco. Las varillas curvas y diagonales marcan el rumbo de las olas de fondo; las conchas, del tamaño de una uña, marcan las islas.",
+      "Hay tres tipos. El mattang es un modelo de enseñanza: no representa ninguna isla concreta, sino cómo se desvían las olas al chocar con tierra. El meddo muestra islas determinadas. El rebbelib abarca un área mayor, a veces una cadena entera. Los nombres varían según las fuentes.",
+      "La paradoja es que el mapa no era para el mar. El navegante lo aprendía en tierra, lo memorizaba y lo dejaba en casa. En la travesía leía el balanceo de la canoa bajo las olas, junto con las estrellas y el vuelo de las aves, para dar con atolones bajos que no se ven de lejos. Hoy quedan ejemplares en el Museo Británico y en el Museo de la Ciencia de Londres."
+    ],
+    "question": "¿Qué sabemos tan bien que ya no necesitamos escribirlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El mapa que se dejaba en casa",
+    "subtitle": "Islas Marshall, Pacífico central",
+    "body": "Nervaduras de palma, fibra de coco y conchas pequeñas. Los navegantes marshaleses aprendían las olas en este mapa y lo memorizaban. A bordo no lo llevaban."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#IslasMarshall", "#NavegacionPolinesia", "#CartasDeVarillas"],
+    "extended": ["#Oceania", "#Navegacion", "#Pacifico", "#Cartografia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Hechas con nervaduras de palma atadas con fibra de coco; las varillas curvas y diagonales muestran patrones de oleaje y las conchas del tamaño de una uña marcan islas; mattang (principios generales), rebbelib (mapas de islas y oleaje) y un tercer tipo, medo; los navegantes memorizaban las cartas en casa y no las llevaban en el viaje; usaban astros, aves y la lectura del oleaje bajo la canoa para hallar atolones bajos; el Museo de la Ciencia del Reino Unido conserva un ejemplar. Lectura directa.",
+      "source": "Hakai Magazine, Amorina Kingdon, «Navigating a Sticky Situation»",
+      "url": "https://hakaimagazine.com/article-short/navigating-sticky-situation/"
+    },
+    {
+      "claim": "Tres tipos: mattang (cómo se refractan las olas ante las islas), meddo (islas y corrientes concretas) y rebbelith (área más amplia con menos detalle hidrográfico); son «principalmente herramientas de enseñanza» y no se usaban normalmente para planear o guiar el viaje; el ejemplar mostrado pertenece al Museo Británico (E_Oc1941-01-4), de fines del siglo XIX o principios del XX. Lectura directa.",
+      "source": "World History Commons, «Marshall Islands stick chart»",
+      "url": "https://worldhistorycommons.org/marshall-islands-stick-chart"
+    },
+    {
+      "claim": "Registro de un meddo recogido por Robert Louis Stevenson en 1890 y de un mattang de Ebon en el Penn Museum. Solo se vio el resumen del buscador: la página devolvió 403 y no se pudo abrir. No se usa ninguna cifra que dependa de ella.",
+      "source": "Penn Museum, «Navigational Chart»",
+      "url": "https://www.penn.museum/collections/object/60518"
+    }
+  ],
+  "do_not_use": [
+    "Que los marshaleses llevaban las cartas a bordo para orientarse en altamar: las dos fuentes leídas dicen que se memorizaban y no se usaban en la travesía.",
+    "Que son «mapas precisos» al modo occidental: hay fuentes que dicen que el rebbelib coincide con mapas modernos y otras que ven influencia occidental; la discusión (Lewis, 1994) no se resolvió aquí y no entra.",
+    "La ortografía y el número de tipos: mattang/matang/wapepe, meddo/medo, rebbelib/rebbilib/rebbelith; algunas fuentes consideran el meddo subtipo del rebbelib. Se avisa en el cuerpo de que los nombres varían.",
+    "Que el declive se debió a las pruebas nucleares de 1946-1958 y que hubo un resurgimiento en los años ochenta: viene de un resumen de búsqueda; Hakai solo habla de declive tras la Segunda Guerra Mundial. No entra.",
+    "Que hoy se hagan solo como recuerdo turístico: Hakai lo dice, pero generaliza; no entra.",
+    "Datos del Museo de Friburgo (rebbilib de los años 1890) y del Museo de la Ciencia (69 cm): salen de resúmenes de búsqueda; no entran."
+  ],
+  "status": "draft"
+}

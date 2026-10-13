@@ -1,0 +1,55 @@
+{
+  "id": "2026-11-24-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Newton y los hombros de gigantes (carta a Hooke, 1676)",
+    "hook": "Newton escribió la frase de los gigantes en una carta de reconciliación a su rival, y la frase ya tenía más de quinientos años.",
+    "body": [
+      "El 5 de febrero de 1675, según el calendario inglés de entonces, 1676 según el continental, Isaac Newton escribió a Robert Hooke tras una disputa en la Royal Society sobre su teoría de la luz. La carta es conciliadora: elogia a Hooke y acepta que las controversias filosóficas no deben librarse en público. En ella está la frase: «Si he visto más lejos, es subido a hombros de gigantes».",
+      "No la inventó Newton. John of Salisbury, en su Metalogicon de 1159, la atribuye a Bernard de Chartres: los modernos son enanos subidos a hombros de gigantes y ven más lejos no por mejor vista, sino porque los eleva la talla de los antiguos. El sociólogo Robert K. Merton rastreó el recorrido de la imagen hasta Newton en un libro entero.",
+      "Algunos autores recientes leen la frase como una pulla a Hooke, de cuerpo menudo y espalda encorvada. Es una lectura minoritaria. El texto de la carta, que antes de esa frase elogia a Descartes y reconoce lo que Hooke había hecho sobre los colores de las láminas delgadas, no la exige."
+    ],
+    "question": "¿Quiénes son los gigantes sobre los que está subido lo que usted sabe?",
+    "quote": {
+      "text": "Si he visto más lejos, es subido a hombros de gigantes.",
+      "author": "Isaac Newton",
+      "work": "Carta a Robert Hooke, 5 de febrero de 1675/76 (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#IsaacNewton", "#HombrosDeGigantes", "#Citas"],
+    "extended": ["#Ciencia", "#HistoriaDeLaCiencia", "#Siglo17", "#RoyalSociety", "#FrasesCelebres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Newton escribió a Hooke el 5 de febrero de 1675; la frase dice «If I have seen further it is by standing on the shoulders of Giants»; la carta elogia a Descartes y reconoce a Hooke sobre los colores de las láminas delgadas; John of Salisbury, Metalogicon (1159), atribuye la imagen a Bernard de Chartres; el libro de Merton (On the Shoulders of Giants, ed. 1993) la rastrea; Crease (2008) y otros la leen como pulla a Hooke. Lectura directa de Wikipedia, fuente secundaria.",
+      "source": "Wikipedia, «Standing on the shoulders of giants»",
+      "url": "https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants"
+    },
+    {
+      "claim": "Carta del 5 de febrero de 1675/76 a Hooke tras la disputa por la teoría de la luz; elogia a Hooke, acepta que los debates no se hagan en público y contiene la frase; la imagen «remonta a tiempos medievales» (Merton). Lectura directa; no da el texto completo de la carta.",
+      "source": "Linda Hall Library, «Scientist of the Day: Isaac Newton»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/isaac-newton-3/"
+    },
+    {
+      "claim": "Registro de la carta original de Newton a Hooke de 1675 en el Historical Society of Pennsylvania, con la frase a unos dos tercios de la primera página. Solo se vio el resumen del buscador: la página devolvió 403 y no se pudo abrir. No se cita ninguna palabra que dependa de ella.",
+      "source": "Historical Society of Pennsylvania, «Isaac Newton letter to Robert Hooke, 1675»",
+      "url": "https://digitallibrary.hsp.org/Detail/objects/9792"
+    }
+  ],
+  "do_not_use": [
+    "Que Newton inventó la imagen: la atribuye Juan de Salisbury a Bernard de Chartres en 1159.",
+    "Presentar la frase como una burla a la estatura de Hooke: es una interpretación minoritaria reciente (Crease, 2008) y no está en el texto.",
+    "La grafía del manuscrito («ye shoulders of giants», «standing on ye shoulders»): varía entre transcripciones; la cita va modernizada y traducida, sin atribuirla a una transcripción concreta.",
+    "Que la carta se publicó en 1855: lo dice Wikipedia, sin fuente directa abierta; no entra.",
+    "Que Newton hablaba de Descartes y no de Hooke: un blog lo sostiene; los demás textos leídos recogen el elogio a ambos."
+  ],
+  "status": "draft"
+}
