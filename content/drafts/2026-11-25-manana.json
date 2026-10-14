@@ -1,0 +1,63 @@
+{
+  "id": "2026-11-25-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Cleopatra, la Gran Pirámide y el alunizaje",
+    "hook": "Cleopatra vivió más cerca en el tiempo del alunizaje de 1969 que de la construcción de la Gran Pirámide.",
+    "body": [
+      "La Gran Pirámide de Guiza se levantó hacia el 2600-2560 a.C., en el reinado de Khufu. Cleopatra VII nació hacia el 69 a.C. y reinó desde el 51 hasta su muerte en el 30 a.C. Entre la pirámide y el comienzo de su reinado hay unos 2.500 años. Entre ese mismo punto y el 20 de julio de 1969, cuando Neil Armstrong pisó la Luna, hay unos 2.000.",
+      "Para ella, la pirámide ya era un monumento de hace dos milenios y medio. La Gran Pirámide fue además el edificio más alto del mundo durante más de tres mil años, y seguía en pie cuando reinó la última soberana de la dinastía ptolemaica.",
+      "No es que su mundo se pareciera al nuestro: es que el Egipto faraónico duró tanto que dos de sus momentos más famosos quedan separados por más tiempo del que nos separa de uno de ellos. El cálculo no depende de la fecha exacta de la pirámide: cualquier datación aceptada da el mismo resultado."
+    ],
+    "question": "¿Qué parte de lo que llamamos «antiguo» es en realidad más reciente de lo que parece?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Cleopatra y la Pirámide",
+    "subtitle": "Una cuenta de años",
+    "body": "Pirámide a Cleopatra: unos 2.500 años. Cleopatra al alunizaje de 1969: unos 2.000. La Gran Pirámide ya era antigua cuando ella nació."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Cleopatra", "#GranPiramide", "#EgiptoAntiguo"],
+    "extended": ["#Historia", "#Curiosidades", "#Khufu", "#Apolo11", "#Cronologia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Cleopatra VII: nacida hacia 70/69 a.C., reinó del 51 al 30 a.C., murió el 10 o el 12 de agosto del 30 a.C. Lectura directa.",
+      "source": "Wikipedia, «Cleopatra»",
+      "url": "https://en.wikipedia.org/wiki/Cleopatra"
+    },
+    {
+      "claim": "La Gran Pirámide se construyó hacia el 2600 a.C. en el reinado de Khufu, en unos 26 años; las estimaciones cronológicas recientes sitúan a Khufu y su pirámide entre 2700 y 2500 a.C.; fue la estructura humana más alta del mundo durante más de 3.700 años. Lectura directa.",
+      "source": "Wikipedia, «Great Pyramid of Giza»",
+      "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
+    },
+    {
+      "claim": "Gran Pirámide hacia 2560 a.C. (reconstrucción 2584-2561 a.C.), reinado de Khufu 2589-2566 a.C. Lectura directa; esta página sostiene que fue la más alta más de 3.000 años (hasta 1889), cifra que difiere de la de Wikipedia y por eso el texto dice «más de tres mil».",
+      "source": "World History Encyclopedia, «Great Pyramid of Giza»",
+      "url": "https://www.worldhistory.org/Great_Pyramid_of_Giza/"
+    },
+    {
+      "claim": "Cleopatra VII nació en 69 a.C., reinó del 51 al 30 a.C. Lectura directa; esta página es internamente inconsistente sobre el día de su muerte (1 o 12 de agosto), por lo que el texto solo dice «30 a.C.».",
+      "source": "World History Encyclopedia, «Cleopatra VII»",
+      "url": "https://www.worldhistory.org/Cleopatra_VII/"
+    },
+    {
+      "claim": "El alunizaje del Apolo 11 y el primer paso de Armstrong fueron el 20 de julio de 1969. Lectura directa.",
+      "source": "NASA, «Apollo 11»",
+      "url": "https://www.nasa.gov/mission/apollo-11/"
+    }
+  ],
+  "do_not_use": [
+    "Cifras exactas de «años entre la pirámide y Cleopatra»: la datación de Khufu varía unos cien años según la fuente; el texto solo dice «unos 2.500» y «unos 2.000».",
+    "El día exacto de la muerte de Cleopatra: las fuentes dan 1, 10 o 12 de agosto del 30 a.C.; no entra.",
+    "«La pirámide fue la más alta del mundo durante 3.800 años» y variantes: Wikipedia da más de 3.700 y World History Encyclopedia más de 3.000 (hasta 1889); el texto dice «más de tres mil».",
+    "Que el cálculo sirva con la fecha de nacimiento «70 o 69»: sí sirve, pero el texto parte del inicio del reinado, el 51 a.C., para no depender de esa duda.",
+    "Versiones de trivia que añaden que Cleopatra vivió «más cerca del iPhone» o de la actualidad: no se verificó ninguna y se salen de la cuenta que sí se comprobó.",
+    "Que la pirámide estuviera «intacta» tal como la ve hoy un visitante: no se verificó el estado del revestimiento en época ptolemaica."
+  ],
+  "status": "draft"
+}

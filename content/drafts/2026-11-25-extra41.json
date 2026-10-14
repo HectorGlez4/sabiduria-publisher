@@ -1,0 +1,62 @@
+{
+  "id": "2026-11-25-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Pico della Mirandola y el discurso que nunca pronunció",
+    "hook": "El «Discurso sobre la dignidad del hombre» no tenía ese título, no lo pronunció nadie y se publicó dos años después de morir su autor.",
+    "body": [
+      "Giovanni Pico della Mirandola escribió el texto hacia 1486 como introducción a sus novecientas tesis, que hizo imprimir en Roma a finales de ese año para defenderlas en un debate público. El papa Inocencio VIII lo suspendió, nombró una comisión y, tras la Apología de Pico, condenó el conjunto de las novecientas proposiciones. El discurso no llegó a darse.",
+      "Pico murió en 1494. El discurso se imprimió en 1496, por su sobrino Gianfrancesco, bajo el título Oratio quaedam elegantissima. La fórmula «sobre la dignidad del hombre» llegó después. El propio Pico nunca le puso título.",
+      "La frase más citada es lo que el Creador le dice a Adán: «Ni un lugar fijo, ni un rostro propio, ni un don particular te hemos dado». Lo que sigue es que Adán puede formarse a sí mismo y descender a lo bruto o ascender a lo divino. Quien lo lee como un elogio sin condiciones se salta el final: el discurso concluye pidiendo al hombre que se eleve."
+    ],
+    "question": "¿Es libertad que nadie te haya dado un lugar, o es una tarea?",
+    "quote": {
+      "text": "Ni un lugar fijo, ni un rostro propio, ni un don particular te hemos dado, Adán.",
+      "author": "Giovanni Pico della Mirandola",
+      "work": "Oratio (Oratio de hominis dignitate), 1486; impresa en 1496 (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PicoDellaMirandola", "#Humanismo", "#Citas"],
+    "extended": ["#Renacimiento", "#Filosofia", "#Siglo15", "#LibertadHumana", "#FrasesCelebres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El texto se escribió como introducción a las 900 Conclusiones, impresas en Roma a finales de 1486; Pico nunca le puso título; tras su muerte en 1494 otros lo llamaron Oration on the Dignity of Man; nunca lo pronunció; lo imprimió póstumamente su sobrino Gianfrancesco en 1496 como Oratio quaedam elegantissima; Inocencio VIII acusó 13 tesis, una comisión declaró 6 sospechosas y condenó 7, y tras la Apología del autor denunció las 900; la lectura habitual como elogio sin condiciones omite que el discurso concluye con que el hombre debe volverse ángel. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Giovanni Pico della Mirandola»",
+      "url": "https://plato.stanford.edu/entries/pico-della-mirandola/"
+    },
+    {
+      "claim": "Texto latino de la frase «Nec certam sedem, nec propriam faciem, nec munus ullum peculiare tibi dedimus, o Adam», en el § 18 de la Oratio de hominis dignitate, 1496. Lectura directa; la página indica «editio: incognita», así que no identifica la edición de base.",
+      "source": "Wikisource latín, «Oratio de hominis dignitate»",
+      "url": "https://la.wikisource.org/wiki/Oratio_de_hominis_dignitate"
+    },
+    {
+      "claim": "Traducción inglesa del mismo pasaje: «We have given you, O Adam, no visage proper to yourself, nor endowment properly your own»; Adán puede descender a las formas inferiores y brutas o ascender a las superiores, divinas. Lectura directa; la página no nombra al traductor y remite a un texto electrónico de Cosma Shalizi.",
+      "source": "Hanover College, Pico della Mirandola (extracto de la Oration)",
+      "url": "https://history.hanover.edu/courses/excerpts/111pico.htm"
+    },
+    {
+      "claim": "Compuesta en 1486, sin publicar hasta 1496; escrita como discurso inaugural de un debate público sobre las tesis, previsto para principios de 1487 y suspendido por Inocencio VIII. Lectura directa.",
+      "source": "Wikipedia, «Oration on the Dignity of Man»",
+      "url": "https://en.wikipedia.org/wiki/Oration_on_the_Dignity_of_Man"
+    }
+  ],
+  "do_not_use": [
+    "Presentar «Discurso sobre la dignidad del hombre» como título de Pico: es posterior; él nunca le puso título.",
+    "Decir que Pico pronunció el discurso ante el papa o ante el público: no llegó a darse.",
+    "Que sea el «manifiesto del Renacimiento»: etiqueta moderna, no de la época; no entra.",
+    "La traducción al español de otro autor: la cita va traducida por esta página del latín y contrastada con la versión inglesa; no se atribuye a ninguna traducción publicada.",
+    "La cita completa en inglés más allá de «no visage proper to yourself, nor endowment properly your own»: no se pudo abrir el texto electrónico de origen ni leer un PDF; el resto del pasaje no se transcribe.",
+    "La idea de que Brian Copenhaver sostiene que el texto «no trata de la dignidad humana»: salió en un resumen de búsqueda; no se leyó el libro. La interpretación de la SEP (el discurso concluye con el hombre que debe hacerse ángel) es la que se usa.",
+    "El número de páginas, la edición crítica y la fecha exacta de la composición: la SEP y Wikipedia dicen «hacia 1486»; no se afirma más."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-25-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Las momias del Tarim y el cementerio de Xiaohe",
+    "hook": "Durante décadas se creyó que las momias del desierto del Tarim eran emigrantes de Europa o de la estepa; el ADN de 2021 dijo otra cosa.",
+    "body": [
+      "En el cementerio de Xiaohe, en el desierto del Tarim, en el actual Xinjiang, los muertos se enterraron hace unos 3.800 años en ataúdes con forma de barca, entre tejidos de lana, ganado, cereales y queso. El lugar lo descubrió un cazador local en 1911; Folke Bergman excavó doce tumbas en 1934, y el sitio se perdió durante más de sesenta años hasta que un equipo chino lo volvió a localizar en el año 2000.",
+      "La hipótesis más repetida desde 1995 decía que los primeros habitantes habían llegado de lejos: pastores de la estepa, agricultores de oasis de Asia Central, quizá ligados a las lenguas tocarias. En 2021, un equipo dirigido por Fan Zhang publicó en Nature los genomas de trece individuos del Tarim, de entre 2100 y 1700 a.C. No encontró ninguna de esas ascendencias. Eran descendientes de una población local, aislada desde hacía milenios.",
+      "El aislamiento genético no fue aislamiento cultural. En Xiaohe convivían el trigo y los lácteos de Asia occidental, el mijo de Asia oriental y plantas medicinales de Asia Central. Una población que no se mezcló con sus vecinos tomó prestado casi todo de ellos."
+    ],
+    "question": "¿Qué dice una persona sobre su origen cuando lo que come, viste y cree vino de otros lugares?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Las momias del Tarim",
+    "subtitle": "Xiaohe, hace unos 3.800 años",
+    "body": "Se creyó que habían llegado de Europa o de la estepa. En 2021 el ADN de trece individuos mostró una población local aislada, con una cultura tomada de muchos lugares."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MomiasDelTarim", "#Xiaohe", "#EdadDelBronce"],
+    "extended": ["#Arqueologia", "#Xinjiang", "#ADNAntiguo", "#Historia", "#RutaDeLaSeda", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Descubrimiento del cementerio por Ördek en 1911; Bergman excavó doce tumbas en 1934 y lo llamó Xiaohe; sitio perdido más de 60 años y relocalizado en 2000; ataúdes con forma de barca; dataciones de las primeras momias de Xiaohe hacia 1884-1736 a.C.; Zhang et al. 2021 estudiaron 13 momias sin ascendencia detectable de la estepa occidental; hipótesis del origen europeo de Mair (1995) y reservas de Barber sobre atribuirles el tocario. Lectura directa.",
+      "source": "Wikipedia, «Tarim mummies»",
+      "url": "https://en.wikipedia.org/wiki/Tarim_mummies"
+    },
+    {
+      "claim": "Zhang et al., Nature 599: 256-261 (2021): genomas de 13 individuos del Tarim (hacia 2100-1700 a.C.) y cinco de Dzungaria (hacia 3000-2800 a.C.); los del Tarim tienen solo ascendencia local; no se sostienen los orígenes afanásievo, Bactria-Margiana ni el corredor de las montañas de Asia Interior; proteínas lácteas en el sarro dental de Xiaohe. Solo se vio el resumen que devolvió el buscador y la página de la revista pidió autenticación: no se leyó el artículo.",
+      "source": "Nature, «The genomic origins of the Bronze Age Tarim Basin mummies»",
+      "url": "https://www.nature.com/articles/s41586-021-04052-7"
+    },
+    {
+      "claim": "Cementerios de Xiaohe con ataúdes en forma de barca y ajuares de tejidos de lana, bronce, ganado, cultivos y queso; la población descendía de una población local aislada de cazadores-recolectores; Christina Warinner la describe como culturalmente cosmopolita, con trigo y lácteos de Asia occidental, mijo de Asia oriental y plantas medicinales de Asia Central. Lectura directa de una nota de prensa científica.",
+      "source": "ScienceAlert, «Bronze Age Chinese mummies revealed unexpectedly ancient origins»",
+      "url": "https://www.sciencealert.com/bronze-age-chinese-mummies-revealed-unexpectedly-ancient-origins"
+    }
+  ],
+  "do_not_use": [
+    "Que las momias eran «europeas» o «caucásicas» y llegaron de Occidente: es la hipótesis de Mair (1995) que el ADN de 2021 no sostiene, y su marco racial ha sido criticado.",
+    "Que hablaban tocario: Barber advierte de un hueco de unos mil años entre las momias y los textos tocarios; no se afirma ninguna lengua.",
+    "El porcentaje de ascendencia (72% norteuroasiática antigua, 28% del noreste asiático): lo da Wikipedia, pero no se pudo contrastar con el artículo de Nature; no entra.",
+    "La fecha exacta de enterramiento de la «Bella de Xiaohe»: Wikipedia la sitúa hacia 1800 a.C. y no se verificó en otra fuente; la pieza dice «unos 3.800 años».",
+    "Que el queso hallado fuera kéfir: lo repite la prensa; Wikipedia no lo menciona y no se leyó una fuente directa. La pieza solo dice «queso».",
+    "Que el ADN del Tarim derive de «los primeros asiáticos» o sea ancestro directo de poblaciones actuales: es una interpretación de prensa; en la pieza solo figura «población local aislada».",
+    "Que China impide el estudio por extranjeros hoy: lo cita Wikipedia desde un artículo de 2008 y no se actualizó; no entra."
+  ],
+  "status": "draft"
+}

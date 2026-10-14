@@ -1,0 +1,60 @@
+{
+  "id": "2026-11-25-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Burke y el «triunfo del mal» que no escribió",
+    "hook": "La frase del mal que triunfa cuando los buenos no hacen nada no la escribió Burke; la que sí escribió trata de algo más concreto: organizarse.",
+    "body": [
+      "«Lo único necesario para el triunfo del mal es que los hombres buenos no hagan nada» se atribuye a Edmund Burke desde la década de 1920. No aparece en ninguna de sus obras. El primer parecido cercano que se ha localizado es de un pastor, Charles F. Aked, en un periódico de California en octubre de 1916, y ni siquiera él lo presentó como propio: lo introdujo con un «se ha dicho».",
+      "Lo que Burke sí escribió está en su panfleto Thoughts on the Cause of the Present Discontents, publicado el 23 de abril de 1770. Allí sostiene que nadie, por íntegro que sea, puede derrotar solo a una facción organizada, y defiende los partidos como cuerpos de hombres unidos por un principio común.",
+      "Su frase no habla de la pasividad de los buenos, sino de su dispersión. No dice que el mal triunfe si uno se queda quieto; dice que quien actúa aislado cae sin que nadie lo recuerde. La diferencia importa: lo que pide Burke no es indignación, es asociación."
+    ],
+    "question": "¿Qué cambia cuando la pregunta deja de ser «qué hice yo» y pasa a ser «con quién»?",
+    "quote": {
+      "text": "Cuando los malos se coaligan, los buenos deben asociarse; de lo contrario caerán uno a uno, sacrificio sin lástima en una lucha despreciable.",
+      "author": "Edmund Burke",
+      "work": "Thoughts on the Cause of the Present Discontents, 1770 (trad. propia)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#EdmundBurke", "#Citas", "#CitasFalsas"],
+    "extended": ["#Siglo18", "#PensamientoPolitico", "#FrasesCelebres", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El texto «When bad men combine, the good must associate; else they will fall, one by one, an unpitied sacrifice in a contemptible struggle» figura en Thoughts on the Cause of the Present Discontents, 3.ª ed., Londres, J. Dodsley, 1770. Lectura directa del texto; el pasaje anterior habla de que el hombre aislado no puede vencer a las cábalas unidas de ciudadanos ambiciosos.",
+      "source": "Wikisource, Thoughts on the Cause of the Present Discontents (3.ª ed., 1770)",
+      "url": "https://en.wikisource.org/wiki/Thoughts_on_the_Cause_of_the_Present_Discontents"
+    },
+    {
+      "claim": "La frase de Burke está en la p. 106 de la tercera edición de 1770; la versión «triunfo del mal» no es rastreable a Burke; Bartlett (14.ª ed., 1968) citaba una carta a William Smith de 1795 que Safire cuestionó en 1980; el primer parecido cercano es de Charles F. Aked, San Jose Mercury Herald, 31 de octubre de 1916, introducido con «It has been said»; la primera atribución a Burke es de Sir R. Murray Hyslop, discurso del 5 de julio de 1920. Lectura directa.",
+      "source": "Quote Investigator, «The Only Thing Necessary for the Triumph of Evil is that Good Men Do Nothing»",
+      "url": "https://quoteinvestigator.com/2010/12/04/good-men-do/"
+    },
+    {
+      "claim": "La carta citada por Bartlett es del 29 de enero de 1795, no del 9, y no dice nada sobre el triunfo del mal; las dos frases solo comparten las palabras «men» y «good»; la genuina trata de formar grupos políticos. Lectura directa. El ensayo llama «discurso en el Parlamento» al texto, lo cual es erróneo: es un panfleto.",
+      "source": "Martin Porter, «Four Principles of Quotation»",
+      "url": "https://tartarus.org/martin/essays/burkequote2.html"
+    },
+    {
+      "claim": "Panfleto publicado por primera vez el 23 de abril de 1770; Burke define el partido como cuerpo de hombres unidos para promover el interés nacional sobre un principio común. Lectura directa de fuente secundaria.",
+      "source": "Wikipedia, «Thoughts on the Cause of the Present Discontents»",
+      "url": "https://en.wikipedia.org/wiki/Thoughts_on_the_Cause_of_the_Present_Discontents"
+    }
+  ],
+  "do_not_use": [
+    "«Lo único necesario para el triunfo del mal es que los hombres buenos no hagan nada» como cita de Burke: no está en sus obras; la versión moderna no tiene autor identificado.",
+    "Presentar a Aked como inventor de la frase: Quote Investigator solo dice que es la primera aparición cercana localizada y que él mismo la introdujo con «se ha dicho».",
+    "La carta de Burke a William Smith del 9 de enero de 1795: es la fuente que citó Bartlett en 1968 y está mal fechada (es del 29) y no contiene la frase.",
+    "Llamar «discurso en el Parlamento» al texto: lo hace un ensayo secundario; es un panfleto publicado el 23 de abril de 1770.",
+    "Una paginación concreta de la frase fuera de la tercera edición: Quote Investigator da p. 106 de esa edición; otras ediciones modernas paginan distinto y no se abrieron."
+  ],
+  "status": "draft"
+}
