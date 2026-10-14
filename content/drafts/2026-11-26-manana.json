@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-26-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Cecilia Grierson, primera médica argentina (1889)",
+    "hook": "Cecilia Grierson fue la primera mujer en obtener el título de médica en Argentina, y nunca pudo ejercer como cirujana.",
+    "body": [
+      "Ingresó a la Facultad de Ciencias Médicas de Buenos Aires en 1883. El 2 de julio de 1889, a los 30 años, se graduó en la Universidad de Buenos Aires. Su tesis versó sobre las operaciones ginecológicas realizadas en el Hospital de Mujeres entre 1883 y 1889.",
+      "El título no abrió las puertas que prometía. Dos fuentes coinciden en que, aun siendo la primera mujer con título de cirujana, nunca pudo ejercer esa profesión: trabajó sobre todo como obstetra y kinesióloga. En 1894 se presentó al concurso para profesora sustituta de Obstetricia para Parteras. Se declaró desierto, porque entonces las mujeres no podían aspirar a la docencia universitaria.",
+      "Lo que la universidad no le dio, lo construyó fuera de ella. Fundó una escuela de enfermeras que, según la UBA, funcionó desde 1886 y fue oficializada en 1891. Fue cofundadora de la Asociación Médica Argentina en 1891 y en 1892 creó la Sociedad Argentina de Primeros Auxilios. Murió el 10 de abril de 1934."
+    ],
+    "question": "¿Cuántas instituciones existen hoy porque a alguien le cerraron la puerta de otra?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Cecilia Grierson",
+    "subtitle": "Médica en 1889, sin cátedra en 1894",
+    "body": "Se graduó el 2 de julio de 1889. En 1894 el concurso al que se presentó se declaró desierto porque las mujeres no podían ser docentes universitarias. Fundó la escuela de enfermeras y la Asociación Médica Argentina."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CeciliaGrierson", "#Argentina", "#MujeresEnLaCiencia"],
+    "extended": ["#Historia", "#Medicina", "#UBA", "#Enfermeria", "#Siglo19", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Se graduó de médica en la UBA el 2 de julio de 1889, a los 30 años; su tesis fue sobre las histerio-ovarotomías ejecutadas en el Hospital de Mujeres entre 1883 y 1889. Lectura directa.",
+      "source": "Universidad de Buenos Aires, UBA Noticias",
+      "url": "https://www.uba.ar/ubanoticias/noticias/194"
+    },
+    {
+      "claim": "En 1894 se presentó al concurso de profesora sustituta de la Cátedra de Obstetricia para Parteras; quedó desierto porque las mujeres no podían aspirar a la docencia universitaria. Fundaciones: escuela de enfermeras (1886, oficializada en 1891), Asociación Médica Argentina (1891), Sociedad Argentina de Primeros Auxilios (1892). Muerte el 10 de abril de 1934. Lectura directa.",
+      "source": "Universidad de Buenos Aires, UBA Ciencia",
+      "url": "https://www.uba.ar/ubaciencia/noticias/672"
+    },
+    {
+      "claim": "Ingresó a la Facultad en 1883 y se graduó seis años después; primera mujer con título de cirujana, 'nunca pudo ejercer dicha profesión'; trabajó como obstetra y kinesióloga; murió el 10 de abril de 1934. Lectura directa.",
+      "source": "La Nación, «¿Quién fue Cecilia Grierson?»",
+      "url": "https://lanacion.com.ar/sociedad/quien-fue-cecilia-grierson-primera-medica-argentina-nid2366149"
+    }
+  ],
+  "do_not_use": [
+    "El título exacto de la tesis: las fuentes lo escriben distinto («Histerio-ovarotomías», «Histero-ovariotomías», «Histero-ovarotomías»); el texto lo describe sin citarlo literal.",
+    "«desde 1883 a 1886» como periodo de la tesis: aparece en un artículo académico y es un error tipográfico frente al resto, que dice 1889.",
+    "La fecha de la escuela de enfermeras: la UBA da 1886 (oficializada en 1891), La Nación dice solo que la creó en el Círculo Médico y la dirigió hasta 1913, y otras fuentes la sitúan en 1890 en el Hospital Británico; el texto atribuye 1886 y 1891 a la UBA.",
+    "Que La Nación confirme el concurso de 1894 o la Asociación Médica Argentina: no los menciona; sostienen esos datos las dos páginas de la UBA, que son de la misma institución y no independientes entre sí.",
+    "Su participación en el Congreso de Mujeres de Londres: La Nación la sitúa en 1889 y la UBA en 1899; no entra por esa discrepancia.",
+    "Verificación pendiente: la Revista AMA 1/2025 (PDF) no se pudo leer; ninguna cifra procede de ella."
+  ],
+  "status": "draft"
+}

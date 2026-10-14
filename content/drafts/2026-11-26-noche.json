@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-26-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la biblioteca de Alexandria y el incendio que no fue uno",
+    "hook": "La biblioteca de Alexandria no desapareció en una sola noche: los historiadores hablan más de abandono que de incendio.",
+    "body": [
+      "El relato popular necesita un culpable. Plutarco, escribiendo más de un siglo después, cuenta que el fuego que César provocó en Alexandria en el 48 a.C. quemó la biblioteca. Séneca, en cambio, cita una obra perdida que habla de 40.000 rollos destruidos. Dion Casio menciona solo «libros», quizá en almacenes: no queda claro que fuera la biblioteca principal.",
+      "El historiador Roger Bagnall, en un artículo de 2002 publicado en las Proceedings of the American Philosophical Society, sostiene que el descuido y el deterioro graduales hicieron tanto daño como cualquier destrucción puntual, y que los edificios pudieron sufrir su mayor pérdida a comienzos de la década de 270, bajo Aureliano. Ninguna fuente contemporánea registra que la biblioteca ardiera.",
+      "La historia de que los árabes la quemaron en el 641 o 642 aparece unos seis siglos después de los hechos, y los historiadores la tratan como leyenda. Lo que se perdió allí, con los siglos, fue sobre todo una forma de sostener la lectura: sin dinero, copistas y reyes que la pagaran, un archivo se apaga sin que nadie encienda nada."
+    ],
+    "question": "¿Qué preferimos: un incendio que explique la pérdida o un abandono del que todos fuimos parte?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Alexandria",
+    "subtitle": "La biblioteca sin una noche final",
+    "body": "César, Aureliano, el Serapeo, los árabes: cada época tiene su culpable. Bagnall propone otra cosa: «un asesinato con varios sospechosos», y sobre todo siglos de descuido."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BibliotecaDeAlejandria", "#Alexandria", "#EgiptoAntiguo"],
+    "extended": ["#Historia", "#Libros", "#Mitos", "#Ptolomeos", "#Bagnall", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Plutarco (Vida de César, 49) atribuye la pérdida a un fuego de César, escribiendo más de un siglo después; Dion Casio habla solo de «libros», posiblemente en almacenes; Ammiano Marcelino liga el Serapeo al fuego de César; la leyenda de la conquista árabe aparece unos seis siglos después y se considera ficción; Bagnall: el descuido y el deterioro graduales fueron tan dañinos como cualquier destrucción puntual, con la mayor pérdida probable de edificios hacia los años 270 bajo Aureliano, y ninguna fuente contemporánea menciona su destrucción. Lectura directa.",
+      "source": "The Open University, OpenLearn, «Library of Alexandria», sección 3",
+      "url": "https://www.open.edu/openlearn/history-the-arts/library-alexandria/content-section-3"
+    },
+    {
+      "claim": "El fuego de César en el 48 a.C. alcanzó el Mouseion; Plutarco dijo que ardió toda la biblioteca y Séneca cita 40.000 rollos; Bagnall: «This is a murder mystery with a number of suspects»; la historia del califa Umar quemando los libros en el 642 es un texto del siglo XIII y los historiadores modernos la consideran mito. Lectura directa.",
+      "source": "National Geographic, Erin Blakemore, 16 de octubre de 2025",
+      "url": "https://www.nationalgeographic.com/history/article/who-burned-library-of-alexandria-egypt"
+    },
+    {
+      "claim": "Artículo original de Bagnall, «Alexandria: Library of Dreams», Proceedings of the American Philosophical Society 146 (2002). NO se pudo leer directamente (la obra se conoce aquí solo a través de las dos páginas anteriores).",
+      "source": "Roger S. Bagnall, Proceedings of the American Philosophical Society, 2002",
+      "url": "https://www.open.edu/openlearn/history-the-arts/library-alexandria/content-section-3"
+    }
+  ],
+  "do_not_use": [
+    "«Los cristianos destruyeron la biblioteca en el 391»: OpenLearn advierte que es engañoso imaginar a los cristianos arrasando una biblioteca universal, porque no sabemos qué contenía la «biblioteca hija» del Serapeo; National Geographic resume los hechos de otro modo, así que no entra ningún detalle del 391.",
+    "«César quemó toda la biblioteca»: es la afirmación de Plutarco; Dion Casio habla solo de libros y las fuentes modernas dudan de que se perdiera todo.",
+    "«Los árabes la quemaron en el 642 para calentar los baños»: relato muy posterior, tratado como leyenda.",
+    "Cifras de «400.000» o «700.000 rollos»: no se verificó ninguna fuente primaria; la única cifra del texto es la de 40.000 atribuida a Séneca.",
+    "La fecha exacta de Aureliano y su responsabilidad: Bagnall la presenta como la hipótesis más probable para la destrucción de los edificios, no como hecho probado; el texto la formula como hipótesis.",
+    "Verificación incompleta: la fuente tercera (el artículo de Bagnall) no se leyó de primera mano; las dos fuentes leídas coinciden en lo que se atribuye a él."
+  ],
+  "status": "draft"
+}
