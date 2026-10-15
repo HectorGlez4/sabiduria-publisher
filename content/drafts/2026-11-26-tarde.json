@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-26-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Heródoto y el discurso de Creso sobre la guerra",
+    "hook": "Un rey vencido, que acaba de escapar de su propia hoguera, le explica a su conquistador por qué la guerra es una locura. Y trae preparada una excusa.",
+    "quote": {
+      "text": "Nadie es tan insensato como para preferir la guerra a la paz: en la paz los hijos entierran a sus padres; en la guerra los padres entierran a sus hijos.",
+      "author": "Creso, en las Historias de Heródoto",
+      "work": "Heródoto, Historias, I, 87 (Creso a Ciro)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Heródoto cuenta que Ciro había capturado a Creso, rey de Lidia, y lo había puesto sobre una pira. Según los lidios, Creso invocó a Apolo, estalló una tormenta repentina y apagó el fuego. Ciro lo reconoció entonces como un hombre querido por un dios y le preguntó quién lo había convencido de invadir su país.",
+      "Creso responde que fue el dios de los griegos, que lo empujó a la guerra, y añade la frase: nadie, por su propia voluntad, elige la guerra antes que la paz. En la paz los hijos entierran a los padres; en la guerra, los padres a los hijos. La frase es de Creso. Heródoto la pone en su boca, y no es una sentencia suya.",
+      "Creso queda bien parado en su propio discurso: la culpa es de un dios, no suya. Pero la frase se sostiene sin él. Es una verdad dicha por quien la descubrió tarde y a un precio alto."
+    ],
+    "question": "¿Pesa más una verdad por quién la dice o por lo que cuesta decirla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Heródoto", "#Creso", "#GreciaAntigua"],
+    "extended": ["#Citas", "#Historia", "#Guerra", "#Paz", "#Lidia", "#Ciro", "#Clasicos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "En Heródoto I, 87, Creso, salvado de la pira, responde a la pregunta de Ciro sobre quién lo llevó a la guerra: nadie es tan necio como para elegir la guerra antes que la paz; en la paz los hijos entierran a sus padres, en la guerra los padres a sus hijos. Traducción de A. D. Godley (Harvard University Press / Heinemann, 1920-1925), en la edición inglesa de Perseus. Lectura directa.",
+      "source": "Perseids / Perseus Digital Library, Herodotus, Histories 1.87, trad. A. D. Godley",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/1.87.1-1.87.4"
+    },
+    {
+      "claim": "Segunda traducción independiente (Macaulay), con el mismo sentido: «in peace the sons bury their fathers, but in war the fathers bury their sons». Lectura directa; la página no numera las subsecciones, así que la cita I, 87 se fija con la edición Godley.",
+      "source": "Lexundria, Herodotus, Histories 1.87, trad. G. C. Macaulay",
+      "url": "https://lexundria.com/hdt/1.87/mcly"
+    },
+    {
+      "claim": "Comentario académico de Arieti: Creso afirma que no habría hecho la guerra sin el impulso de una divinidad, pero eso no concuerda con lo que se sabe de su reinado, y los padres que enterraban a sus hijos ya existían en sus guerras anteriores. NO se pudo leer directamente (la página devolvió 403): se conoce aquí solo por el resumen de un buscador. Se usa con esa cautela.",
+      "source": "James A. Arieti, comentario a Heródoto, Viva Pressbooks",
+      "url": "https://viva.pressbooks.pub/arieti-herodotus/?p=48"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como opinión de Heródoto: la dice Creso, que la usa para repartir culpas, y Heródoto no la ofrece como sentencia propia.",
+    "Dar el año de la caída de Sardes o de la pira: no se verificó en las fuentes leídas, así que no entra ninguna fecha.",
+    "Afirmar que la pira de Creso es un hecho histórico comprobado: Heródoto lo cuenta con «dicen los lidios», y hay otras versiones antiguas del episodio que no se consultaron aquí.",
+    "Dar como literal la versión castellana: es una traducción propia de Godley y Macaulay, no de una edición española concreta.",
+    "Atribuir la frase a Heródoto sin más, ni a Ciro: el que habla es Creso, y habla con Ciro delante.",
+    "Citar el comentario de Arieti como leído en directo: solo se conoce por resumen, ver nota en la fuente."
+  ],
+  "status": "draft"
+}

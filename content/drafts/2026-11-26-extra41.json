@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-26-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Rabí Tarfón y la obra que no te toca terminar",
+    "hook": "Una de las frases más citadas de la tradición judía se dice en dos mitades. La segunda nos quita la excusa que la primera parece dar.",
+    "quote": {
+      "text": "No te corresponde a ti terminar la obra, pero tampoco eres libre de abandonarla.",
+      "author": "Rabí Tarfón",
+      "work": "Mishná, Pirkei Avot 2:16",
+      "attribution_verified": true
+    },
+    "body": [
+      "La frase está en la Mishná, en el tratado Avot, «Dichos de los Padres», y se atribuye a Rabí Tarfón. En hebreo, «lo aleja ha-melajá ligmor, ve-lo atá ben jorín le-bitel mimena»: la tarea no recae en ti para completarla, y no eres un hombre libre para desentenderte de ella. Según la edición, la numeración varía: aparece como 2:15, 2:16 o 2:21.",
+      "Hoy se cita para consolar a quien se enfrenta a una tarea enorme, y por eso ha pasado a ser lema de quienes se dedican a causas sociales. Pero la mishná no habla de causas: el contexto inmediato es el estudio de la Torá, y la frase sigue con una promesa de recompensa para quien se dedica a él. Un ensayo del Jewish Theological Seminary advierte, además, que no todos están de acuerdo en que «la obra» sea el estudio.",
+      "Hay algo que sí está en el texto, y es que la frase no concede reposo. Leída entera, la primera mitad quita la carga de terminar; la segunda impide usar esa carga como pretexto. No pide acabar. Pide no irse."
+    ],
+    "question": "¿Qué obra sabes que no vas a terminar y, aun así, no puedes dejar?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PirkeiAvot", "#Mishna", "#TradicionJudia"],
+    "extended": ["#Citas", "#Talmud", "#Sabiduria", "#RabiTarfon", "#Hebreo", "#Filosofia", "#Perseverancia", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de Avot 2:16 en hebreo (לֹא עָלֶיךָ הַמְּלָאכָה לִגְמֹר, וְלֹא אַתָּה בֶן חוֹרִין לִבָּטֵל מִמֶּנָּה) y en inglés («It is not your duty to finish the work, but neither are you at liberty to neglect it»), versión Mishnah Yomit de Joshua Kulp; versión hebrea Torat Emet 357. Lectura directa de la API de Sefaria; la mishná continúa tras ese punto, que no se leyó entero.",
+      "source": "Sefaria, Pirkei Avot 2:16 (Mishnah Yomit, Joshua Kulp)",
+      "url": "https://www.sefaria.org/api/texts/Pirkei_Avot.2.16?context=0"
+    },
+    {
+      "claim": "La numeración de la frase varía entre 2:15, 2:16 y 2:21 según la edición; el contexto es el estudio de la Torá y la mishná sigue con una cláusula sobre la recompensa; un ensayo del JTS indica que no todos coinciden en que «la obra» sea el estudio de la Torá; se usa hoy como lema de activismo. NO leído directamente (la página del JTS dio 404): conocido solo por resúmenes de una búsqueda.",
+      "source": "Jewish Theological Seminary, «A Meaningful Quote from Pirkei Avot»",
+      "url": "https://jtsa.edu/?p=28189"
+    },
+    {
+      "claim": "Hoja de estudio en Sefaria con la mishná 2:16 en hebreo y traducción. NO leída directamente, solo en el listado de resultados.",
+      "source": "Sefaria, hoja «Pirkei Avot: In the Image Mishnah 2:16»",
+      "url": "https://voices.sefaria.org/sheets/247438"
+    }
+  ],
+  "do_not_use": [
+    "Presentarla como un lema de activismo desde su origen: el contexto de la mishná es el estudio de la Torá; el uso para causas sociales es posterior.",
+    "Citar solo la primera mitad: la frase completa tiene dos partes y la segunda cambia el sentido.",
+    "Dar fecha o biografía de Rabí Tarfón: no se verificó en las fuentes leídas.",
+    "Dar la numeración como única: depende de la edición (2:15, 2:16, 2:21).",
+    "Atribuirla al Talmud en general ni a la Torá: es una mishná del tratado Avot.",
+    "Dar el texto castellano como de una traducción concreta: es traducción propia a partir de la versión hebrea y de la inglesa de Kulp.",
+    "Verificación incompleta: solo una fuente leída de primera mano (Sefaria); las otras dos, por resumen."
+  ],
+  "status": "draft"
+}

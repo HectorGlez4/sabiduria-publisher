@@ -1,0 +1,56 @@
+{
+  "id": "2026-11-26-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Oscar Wilde y las estrellas de Lord Darlington",
+    "hook": "La frase de Wilde que más se cuelga en las paredes empieza con un «no». Es una réplica a alguien que acaba de decir que todos somos buenos.",
+    "quote": {
+      "text": "Todos estamos en la cuneta, pero algunos de nosotros miramos las estrellas.",
+      "author": "Oscar Wilde",
+      "work": "El abanico de Lady Windermere, acto III (dicho por Lord Darlington)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Es una línea de teatro y la dice un personaje. En el acto III de «El abanico de Lady Windermere», comedia estrenada en Londres en 1892 y publicada en 1893, Dumby sostiene que todos los hombres que conoce son buenos, salvo uno, el pobre Tuppy. Lord Darlington le contesta: «No, todos estamos en la cuneta, pero algunos miramos las estrellas».",
+      "Ese «no» importa. La frase se dice contra una complacencia, no a favor de una esperanza. Dumby, que no es un moralista, responde que Darlington está muy romántico esta noche. Un artículo de la web Interesting Literature recuerda que suele leerse como una frase sobre la humanidad entera, pero que dentro de la obra Darlington habla de los hombres: la mayoría se porta mal con las mujeres y unos pocos son lo bastante cultos para apreciar la belleza.",
+      "La que hoy se cita como sentencia de Wilde fue, en origen, la respuesta de un personaje en una comedia de salón."
+    ],
+    "question": "¿Qué te mantiene mirando hacia arriba cuando todo lo demás tira hacia abajo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#OscarWilde", "#LadyWindermere", "#Teatro"],
+    "extended": ["#Citas", "#Literatura", "#SigloXIX", "#Londres", "#Sabiduria", "#Estrellas", "#Comedia", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "En el acto III, Dumby dice «I think we are all good, except Tuppy»; Lord Darlington responde «No, we are all in the gutter, but some of us are looking at the stars»; Dumby: «you are very romantic to-night, Darlington». Texto de la edición Methuen de 1908 en Project Gutenberg. Lectura directa del texto completo.",
+      "source": "Project Gutenberg, Oscar Wilde, «Lady Windermere's Fan» (texto de la edición Methuen, 1908)",
+      "url": "https://www.gutenberg.org/ebooks/790"
+    },
+    {
+      "claim": "La frase la dice Lord Darlington en el acto III, en respuesta a Dumby, tras comentarios de Cecil Graham; suele leerse sobre toda la humanidad, pero Oliver Tearle argumenta que en la obra Darlington habla de los hombres y su trato a las mujeres. Lectura directa.",
+      "source": "Interesting Literature, Oliver Tearle, «We Are All in the Gutter, But Some of Us Are Looking at the Stars»",
+      "url": "https://interestingliterature.com/2021/07/we-are-all-gutter-but-some-looking-stars-wilde-meaning-analysis/"
+    },
+    {
+      "claim": "La obra se estrenó en el St James's Theatre de Londres en febrero de 1892 y se publicó en 1893 (primera edición de The Bodley Head); la frase figura como inscripción en el monumento a Wilde en Londres. Lectura directa. La fecha exacta del estreno discrepa entre fuentes (20 y 22 de febrero), por eso solo se da el año.",
+      "source": "Wikipedia en inglés, «Lady Windermere's Fan»",
+      "url": "https://en.wikipedia.org/wiki/Lady_Windermere%27s_Fan"
+    }
+  ],
+  "do_not_use": [
+    "Dar el día del estreno: Gutenberg lo da como 22 de febrero de 1892 y Wikipedia como 20 de febrero; solo se usa el año.",
+    "Decir que Wilde pensaba así en su propio nombre: es una línea de Lord Darlington dentro de una comedia, y se ha leído de varias formas.",
+    "Presentar la frase como máxima optimista sin el «No» inicial, que es una réplica.",
+    "Afirmar que está inscrita en el monumento a Wilde sin matiz: lo dice Wikipedia y no se confirmó con una fuente del monumento.",
+    "Citar cualquier opinión de Wilde sobre Darlington: aparece en una búsqueda sin fuente leída en directo.",
+    "Dar el texto castellano como de una traducción concreta: es traducción propia del original inglés."
+  ],
+  "status": "draft"
+}
