@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-27-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Rebecca Lee Crumpler y su Libro de discursos médicos",
+    "hook": "En 1864 Rebecca Lee Crumpler recibió el título de Doctress of Medicine. En 1883 publicó un libro sobre la salud de los niños y de las mujeres.",
+    "body": [
+      "Antes de estudiar medicina trabajó ocho años como enfermera, de 1852 a 1860, en Charlestown, Massachusetts. Con la recomendación de los médicos a los que asistió, entró en el New England Female Medical College de Boston, donde cuatro años después recibió, en sus palabras, el título de «Doctress of Medicine». El Servicio de Parques Nacionales de Estados Unidos la presenta como la primera mujer negra en obtener un título de medicina en el país.",
+      "Terminada la guerra, escribió que su mente se centró en Richmond, Virginia, «como el campo propicio para el verdadero trabajo misionero». Allí, a través de la Oficina de Libertos, tuvo acceso cada día a una población de más de 30.000 personas de color. Volvió después a Boston y atendió a sus pacientes desde su casa de Joy Street, en Beacon Hill.",
+      "En 1883 imprimió en Boston «A Book of Medical Discourses», en dos partes, sobre la salud de los niños y de las mujeres. Fue su forma de dejar por escrito lo que había aprendido en años de consulta."
+    ],
+    "question": "¿Qué sabe hoy alguien a quien su profesión no quiso escuchar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Rebecca Lee Crumpler",
+    "subtitle": "Doctress of Medicine, Boston, 1864",
+    "body": "Fue enfermera ocho años antes de estudiar medicina. Después de la guerra atendió en Richmond a una población de más de 30.000 personas de color. En 1883 publicó un libro sobre la salud de niños y mujeres."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#RebeccaLeeCrumpler", "#HistoriaDeLaMedicina", "#MujeresEnLaCiencia"],
+    "extended": ["#Historia", "#Medicina", "#Boston", "#Siglo19", "#Sabiduria", "#Enfermeria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del libro de 1883: imprenta Cashman, Keating & Co., Boston; criada por una tía en Pensilvania; trabajó como enfermera ocho años («de '52 a '60»), sobre todo en Charlestown, Massachusetts; cartas de recomendación de los médicos al New England Female Medical College, «whence, four years afterward, I received the degree of Doctress of Medicine»; tras la guerra su mente se centró en Richmond «as the proper field for real missionary work»; acceso diario, vía la Oficina bajo el Gen. Brown, a una población de más de 30.000 personas de color. Lectura directa de las primeras 100.000 caracteres de la edición de Project Gutenberg; el resto del libro no se leyó.",
+      "source": "Rebecca Crumpler, A Book of Medical Discourses, in Two Parts (Boston, 1883), Project Gutenberg #65188",
+      "url": "https://gutenberg.org/cache/epub/65188/pg65188-images.html"
+    },
+    {
+      "claim": "Se graduó en 1864 en el New England Female Medical College (ingresó en 1860); título «Doctress of Medicine»; la presenta como la primera mujer negra con título de medicina en Estados Unidos; ejerció en Boston, en Richmond con la Oficina de Libertos y de nuevo en Boston desde su casa de Joy Street. Lectura directa.",
+      "source": "National Park Service, «Dr. Rebecca Lee Crumpler»",
+      "url": "https://www.nps.gov/people/dr-rebecca-lee-crumpler.htm"
+    },
+    {
+      "claim": "La Biblioteca Nacional de Medicina de EE. UU. conserva el libro digitalizado con el título «A book of medical discourses: in two parts». Solo se leyó el título; el registro no ofreció autor, editor ni fecha.",
+      "source": "National Library of Medicine, Digital Collections",
+      "url": "https://digirepo.nlm.nih.gov/catalog/nlm:nlmuid-67521160R-bk"
+    }
+  ],
+  "do_not_use": [
+    "«La primera mujer negra médica de Estados Unidos» sin matiz: el NPS y Harvard lo afirman sin reservas, pero Black Names Project lo formula como «se cree» y Historic New England advierte de que su historia se ha moldeado con anécdotas que no se rastrean hasta fuentes de la época. El texto lo atribuye al NPS.",
+    "«El primer libro de medicina de una autora negra» o «de un médico negro»: solo apareció en un resumen de búsqueda («probablemente el primer libro publicado por una médica negra»), no se verificó.",
+    "Cualquier cita textual del cuerpo del libro sobre enfermedades o tratamientos: no se leyó más allá de la introducción.",
+    "La dedicatoria («a madres, enfermeras y a todos los que deseen mitigar las aflicciones de la raza humana»): solo se vio en un resumen de búsqueda, no en la edición leída; el texto no la cita.",
+    "Fecha de nacimiento, matrimonio o muerte: no se verificaron en las fuentes leídas.",
+    "Que el NPS la sitúe en Richmond con el Freedmen's Bureau no cambia que el texto de 1883 hable de «the Bureau under Gen. Brown» y no use la expresión «libertos»: el texto reproduce lo que dice ella.",
+    "Verificación incompleta: solo dos fuentes leídas de primera mano (el libro y el NPS); la de la NLM aporta solo el título. Páginas de Harvard (Perspectives of Change) e Historic New England dieron 403 y se conocen solo por resúmenes de búsqueda."
+  ],
+  "status": "draft"
+}

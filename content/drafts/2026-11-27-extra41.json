@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-27-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Salustio y el consejo de Micipsa en Guerra de Yugurta",
+    "hook": "Una de las frases latinas más repetidas sobre la unión la dijo un rey en su lecho de muerte, a los hijos que iban a heredarlo.",
+    "quote": {
+      "text": "Con la concordia, las cosas pequeñas crecen; con la discordia, las más grandes se desmoronan.",
+      "author": "Salustio",
+      "work": "La guerra de Yugurta, cap. 10 (trad. propia del latín)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En latín: «nam concordia parvae res crescunt, discordia maxumae dilabuntur». No es una sentencia suelta de Salustio. Está en La guerra de Yugurta, capítulo 10, dentro del discurso de despedida del rey Micipsa a Yugurta y a sus hijos Aderbal y Hiempsal.",
+      "El contexto cambia el tono. Quien habla no teoriza sobre el Estado: es un hombre que se muere y deja un reino que tres personas deben compartir. La frase es un testamento. Y el libro, que lleva por título una guerra, cuenta después lo que pasó con ese consejo.",
+      "Las ediciones difieren en la ortografía («parvae» o «paruae», «maxumae» o «maximae») y las traducciones, en el matiz: la de Loeb (1921) dice que la concordia hace grandes a los pequeños Estados y la discordia socava a los imperios más poderosos; la de Watson, que hasta los Estados pequeños crecen con ella y los mayores se reducen a nada sin ella."
+    ],
+    "question": "¿Qué has visto crecer, o deshacerse, por falta de acuerdo entre quienes lo heredaban?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Salustio", "#Latin", "#GuerraDeYugurta"],
+    "extended": ["#Citas", "#Roma", "#Historia", "#Sabiduria", "#Concordia", "#Literatura", "#Clasicos", "#Filosofia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino «Nam concordia paruae res crescunt, discordia maximae dilabuntur» en el capítulo 10 del Bellum Iugurthinum, dentro del discurso de Micipsa a Yugurta (y a sus hijos Aderbal y Hiempsal). Lectura directa de las primeras 100.000 caracteres de la página; la ortografía de la edición es «paruae», «maximae». No indica editor del texto latino.",
+      "source": "Wikisource latino, Bellum Iugurthinum",
+      "url": "https://la.wikisource.org/wiki/Bellum_Iugurthinum"
+    },
+    {
+      "claim": "Traducción de John Selby Watson (1899): «for by concord even small states are increased, but by discord, even the greatest fall to nothing», cap. X, en el discurso de Micipsa en su lecho de muerte. Lectura directa de las primeras 100.000 caracteres.",
+      "source": "J. S. Watson, trad., Sallust, The Jugurthine War (Pomona College)",
+      "url": "https://pages.pomona.edu/~cmc24747/sources/sall_jug.htm"
+    },
+    {
+      "claim": "Latín «Nam concordia parvae res crescunt, discordia maxumae dilabuntur» y traducción de Loeb (1921): «For harmony makes small states great, while discord undermines the mightiest empires». La página no da capítulo ni sección.",
+      "source": "Wist.info, Sallust, The War with Jugurtha (Loeb, 1921)",
+      "url": "https://wist.info/sallust/25455/"
+    }
+  ],
+  "do_not_use": [
+    "Dar el apartado como 10.6: no se pudo comprobar el número de sección en un texto con numeración (Perseus y The Latin Library dieron error); solo se verificó el capítulo 10.",
+    "Atribuirla a Salustio hablando en primera persona: la dice Micipsa, personaje de su obra; Salustio la pone en su boca.",
+    "Fecha o biografía de Salustio, y detalles del argumento posterior (qué hace Yugurta con sus primos): no se verificaron en las fuentes leídas.",
+    "Presentarla como lema de un Estado o institución concreta: no se verificó.",
+    "Que Micipsa sea «rey de Numidia» o que adoptara a Yugurta: aparece en resúmenes de búsqueda, no en las fuentes leídas; el texto no lo afirma.",
+    "Dar la traducción castellana como de una edición concreta: es propia, comprobada contra Watson y Loeb.",
+    "Verificación incompleta: ninguna edición crítica latina se consultó; Wikisource latino no indica editor; la fuente de Loeb es un sitio de citas con atribución de edición, tratada con cautela."
+  ],
+  "status": "draft"
+}

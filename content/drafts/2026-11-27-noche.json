@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-27-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "El Sutra del Diamante impreso en 868",
+    "hook": "El libro impreso completo y fechado más antiguo que se conoce dice en su última línea que se hizo para repartirse sin cobrar.",
+    "body": [
+      "Es un rollo de siete hojas de papel pegadas, de unos cinco metros, con un grabado del Buda al frente. Al final, el colofón dice que Wang Jie lo hizo imprimir «por sus dos padres» para distribución universal, el día 15 del cuarto mes del noveno año de la era Xiantong: el 11 de mayo de 868.",
+      "Lo encontró hacia 1900 el monje taoísta Wang Yuanlu en la cueva 17 de Mogao, cerca de Dunhuang, una cámara tapiada que guardaba miles de manuscritos. En 1907 se lo vendió, con muchos otros, al arqueólogo Aurel Stein. Hoy está en la Biblioteca Británica.",
+      "No es el primer impreso. La xilografía china es anterior, y la Linda Hall Library recuerda que ya en el siglo VII se imprimían sutras con tacos de madera. Lo que distingue a este rollo es que está completo y que lleva fecha exacta. Es el primero que nos dice cuándo, quién y para qué."
+    ],
+    "question": "¿Qué imprimirías hoy, con tu nombre al pie, para que otros lo reciban gratis?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El Sutra del Diamante",
+    "subtitle": "Impreso el 11 de mayo de 868",
+    "body": "Siete hojas pegadas, cinco metros de rollo y un colofón: Wang Jie lo hizo imprimir por sus dos padres, para distribución universal. Es el libro impreso completo y fechado más antiguo que se conoce."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SutraDelDiamante", "#Dunhuang", "#HistoriaDeLaImprenta"],
+    "extended": ["#Historia", "#China", "#DinastiaTang", "#Libros", "#BibliotecaBritanica", "#Sabiduria", "#Budismo"]
+  },
+  "sources": [
+    {
+      "claim": "Fecha 11 de mayo de 868 (día 15 del cuarto mes del noveno año Xiantong), dada en el colofón; hecho por Wang Jie «en nombre de sus dos padres» para distribución universal; siete hojas pegadas en un rollo de unos 16 pies (≈5 m), con frontispicio grabado del Buda; hallazgo de Wang Yuanlu en la cueva 17 de Mogao hacia 1900; compra de Aurel Stein en 1907; «oldest complete dated printed book known in the world»; la xilografía china viene de la época Han y se imprimían sutras con tacos de madera en el siglo VII, lo que singulariza al rollo es que está completo y fechado. Lectura directa.",
+      "source": "Linda Hall Library, «The Diamond Sutra» (Scientist of the Day)",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/the-diamond-sutra/"
+    },
+    {
+      "claim": "Colofón con «universal free distribution» por Wang Jie para sus dos padres, 15.º día del 4.º mes del 9.º año Xiantong = 11 de mayo de 868; rollo de unos cinco metros; Wang Yuanlu lo halló en 1900 y se lo vendió a Stein en 1907; «no es el primer ejemplo de impresión con tacos, pero sí el primero con fecha»; existen impresos anteriores sobre papel. Lectura directa de las primeras 100.000 caracteres; el artículo es una enciclopedia abierta, de calidad desigual, y se usa solo por sus referencias (Mu Soeng 2000; Kornicki 2012; British Library).",
+      "source": "Wikipedia, «Diamond Sutra»",
+      "url": "https://en.wikipedia.org/wiki/Diamond_Sutra"
+    },
+    {
+      "claim": "La Biblioteca Británica y el International Dunhuang Programme dan la fecha de 11 de mayo de 868 y el colofón de Wang Jie, y describen la cueva 17. NO leído directamente (las páginas idp.bl.uk dieron 403 y bl.uk no ofreció el texto): conocido solo por resúmenes de una búsqueda.",
+      "source": "International Dunhuang Programme (British Library), «Buddhist texts: The Diamond Sūtra»",
+      "url": "https://idp.bl.uk/exhibition/buddhism-on-the-silk-roads/articles/buddhism-on-the-ground/buddhist-texts-the-diamond-sutra"
+    }
+  ],
+  "do_not_use": [
+    "«El primer libro impreso de la historia»: es el más antiguo impreso completo y con fecha conocido; hay impresos anteriores (xilografía desde los Han; el Hyakumantō Darani en Japón, siglo VIII; el Dharani de la Luz Pura en Corea). El texto lo matiza.",
+    "«La primera declaración de dominio público» o «de copyleft»: es una interpretación posterior de «distribución universal gratuita»; algún recurso museístico lo dice, pero no hay consenso académico.",
+    "Longitud exacta: las fuentes dan 16 pies, 18 pies o «cinco metros»; el texto dice «unos cinco metros».",
+    "Que el día del colofón sea el 13: una traducción lo transcribe así, las demás dicen 15; se descartó por error de transcripción probable.",
+    "Wang Jie como figura conocida: solo se sabe lo que dice el colofón (nombre, dedicación a sus padres, fecha); no hay biografía verificada.",
+    "Contenido del sutra y su doctrina: no se verificó en fuentes leídas y no entra en el texto.",
+    "Verificación incompleta: solo una fuente institucional leída de primera mano (Linda Hall) y un artículo de Wikipedia con referencias; las páginas de la British Library e IDP no se pudieron leer."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-27-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Epicuro, Carta a Meneceo y la muerte (X, 125)",
+    "hook": "Epicuro no dice que la muerte sea buena ni que haya otra vida. Dice algo más seco: que no hay nadie a quien le pase.",
+    "quote": {
+      "text": "Así pues, el más terrible de los males, la muerte, nada es para nosotros, porque mientras nosotros somos, la muerte no está presente, y cuando la muerte está presente, entonces nosotros no somos.",
+      "author": "Epicuro",
+      "work": "Carta a Meneceo, en Diógenes Laercio X, 125 (trad. propia del griego)",
+      "attribution_verified": true
+    },
+    "body": [
+      "La Carta a Meneceo se conserva completa porque Diógenes Laercio la copió en el libro X de sus «Vidas de los filósofos». El pasaje parte de una premisa: el bien y el mal existen solo donde hay sensación, y la muerte es la privación de toda sensación.",
+      "De ahí sale el argumento. Quien teme la muerte porque dolerá cuando llegue se equivoca, porque cuando llega no hay quien la sienta. Y lo que no molesta cuando está presente, dice la carta, solo causa un dolor infundado mientras se espera.",
+      "Lo que no promete es consuelo. En la traducción inglesa de Hicks, entender esto hace llevadera la mortalidad no añadiendo tiempo a la vida, sino quitando el anhelo de inmortalidad. La carta no pide aguantar el miedo. Pide mirar de qué está hecho."
+    ],
+    "question": "¿Cuánto de lo que temes existe solo mientras lo esperas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Epicuro", "#FilosofiaGriega", "#CartaAMeneceo"],
+    "extended": ["#Citas", "#Epicureismo", "#Muerte", "#Sabiduria", "#DiogenesLaercio", "#Grecia", "#Filosofia", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego de la Carta a Meneceo: «τὸ φρικωδέστατον οὖν τῶν κακῶν ὁ θάνατος οὐθὲν πρὸς ἡμᾶς, ἐπειδήπερ ὅταν μὲν ἡμεῖς ὦμεν, ὁ θάνατος οὐ πάρεστιν, ὅταν δὲ ὁ θάνατος παρῇ, τόθ’ ἡμεῖς οὐκ ἐσμέν». Lectura directa del pasaje; la página no indica traductor ni edición crítica del griego.",
+      "source": "Epicurus Wiki, Letter to Menoeceus",
+      "url": "https://wiki.epicurism.info/Letter_to_Menoeceus/"
+    },
+    {
+      "claim": "Traducción inglesa de R. D. Hicks (Loeb, 1925): «Death, therefore, the most awful of evils, is nothing to us, seeing that, when we are, death is not come, and, when death is come, we are not»; el pasaje sobre sensación y privación; «a groundless pain in the expectation»; «not by adding to life an illimitable time, but by taking away the yearning after immortality». Lectura directa de Wikisource (revisión 15804840), que reproduce a Hicks.",
+      "source": "Wikisource, Letter to Menoeceus (trad. R. D. Hicks)",
+      "url": "https://en.wikisource.org/wiki/Letter_to_Menoeceus"
+    },
+    {
+      "claim": "La carta se encuentra en Diógenes Laercio, Vidas de los filósofos, libro X; edición de Hicks, Harvard University Press / William Heinemann, 1925. Lectura directa del rango 10.121-10.140; la página no numera las secciones, así que el 125 se apoya en las otras fuentes y en una búsqueda que lo sitúa ahí (el «124» es el comienzo de la sección, el «125» lo que sigue).",
+      "source": "Perseus / Perseids, Diogenes Laertius, Vitae philosophorum X (Hicks)",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0004/tlg001/perseus-eng2/10.1.121-10.1.140"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir a Epicuro el resumen popular «cuando yo estoy, la muerte no está; cuando la muerte está, yo no estoy» como cita literal: es una paráfrasis; el texto griego dice «mientras nosotros somos…».",
+    "Dar una sola numeración: la sección arranca en X, 124 («acostúmbrate a pensar que la muerte nada es para nosotros») y la frase del griego citada se sitúa en X, 125, pero las ediciones y los sitios no coinciden al partir los parágrafos.",
+    "Presentar la traducción castellana como de una edición concreta: es propia, hecha a partir del griego y comprobada contra la inglesa de Hicks.",
+    "Datos biográficos de Epicuro (fechas, el Jardín): no se verificaron en las fuentes leídas.",
+    "Decir que Epicuro promete una vida después de la muerte o que la muerte sea «un bien»: la carta defiende lo contrario, que no hay nada que sentir.",
+    "Atribuirle el «tetrafármaco» u otras fórmulas posteriores a este pasaje.",
+    "Verificación incompleta: ninguna edición crítica del griego se consultó; las tres fuentes son una web de la escuela epicúrea, Wikisource (con Hicks) y la edición Hicks en Perseus. Páginas de epicurus.info y de Perseus clásico dieron error."
+  ],
+  "status": "draft"
+}
