@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-29-noche",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Zhuangzi y la nasa del pez (capítulo 26)",
+    "hook": "El libro que más desconfió de las palabras termina uno de sus capítulos con una pregunta que solo puede hacerse con palabras.",
+    "quote": {
+      "text": "La nasa existe por el pez: cuando tienes el pez, olvidas la nasa. El lazo existe por el conejo: cuando tienes el conejo, olvidas el lazo. Las palabras existen por el sentido: cuando tienes el sentido, olvidas las palabras. ¿Dónde hallaré a alguien que haya olvidado las palabras, para hablar con él?",
+      "author": "Zhuangzi",
+      "work": "Zhuangzi, cap. 26 «Waiwu» (trad. propia del chino)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El texto chino dice: «荃者所以在魚，得魚而忘荃。蹄者所以在兔，得兔而忘蹄。言者所以在意，得意而忘言。吾安得夫忘言之人而與之言哉？». La traducción al español es de la redacción.",
+      "Cierra el capítulo 26, «Waiwu» (外物), que Burton Watson traduce «External Things». Pertenece a los capítulos misceláneos, del 23 al 33. El libro actual tiene 33 capítulos porque Guo Xiang (m. 312) redujo una colección mayor. Solo los siete primeros se atribuyen a la época de Zhuang Zhou.",
+      "Son tres objetos con la misma estructura: la nasa, el lazo y las palabras sirven para atrapar algo, y se sueltan al lograrlo. La última frase cambia de tono: hablar con quien ha olvidado las palabras exigiría, justamente, usarlas."
+    ],
+    "question": "¿Qué palabra sigues sosteniendo cuando ya tienes lo que buscaba?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Zhuangzi", "#Taoismo", "#FilosofiaChina"],
+    "extended": ["#Citas", "#China", "#Lenguaje", "#Filosofia", "#Historia", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto chino del pasaje final del capítulo 外物: «荃者所以在魚，得魚而忘荃。蹄者所以在兔，得兔而忘蹄。言者所以在意，得意而忘言。吾安得夫忘言之人而與之言哉？». Lectura directa; esta edición escribe 荃 y no 筌.",
+      "source": "Wikisource en chino, 莊子/外物",
+      "url": "https://zh.wikisource.org/wiki/莊子/外物"
+    },
+    {
+      "claim": "La sección veintiséis de la traducción de Burton Watson se titula «External Things»; incluye el pasaje de la nasa, el lazo y las palabras y termina preguntando dónde hallar a quien haya olvidado las palabras para hablar con él. Se leyó el arranque del pasaje («Words exist because of meaning; once you've gotten the meaning, you can forget the words») y el resumen del final; no se leyó la página completa (corte a los 100.000 caracteres). Es la traducción de Watson, no la de Legge.",
+      "source": "Burton Watson, The Complete Works of Chuang Tzu (Columbia University Press), reproducida en Terebess Asia Online",
+      "url": "https://terebess.hu/english/chuangtzu3.html"
+    },
+    {
+      "claim": "El texto actual tiene 33 capítulos: Guo Xiang (m. 312) redujo una colección mayor; capítulos internos 1-7, externos 8-22 y misceláneos 23-33; Guo atribuyó solo los internos a la época de Zhuangzi y consideró el resto adiciones posteriores; cita Zhuangzi 26:13, «Where can I find a man who has forgotten language so I can talk with him». Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, Zhuangzi",
+      "url": "https://plato.stanford.edu/entries/zhuangzi/"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir el pasaje a Zhuang Zhou como autor: el capítulo 26 es de los misceláneos, que la tradición desde Guo Xiang no sitúa en la vida de Zhuangzi. La pieza dice «Zhuangzi» como el nombre del libro.",
+    "La grafía del carácter de la nasa: 荃 (Wikisource) o 筌 (ctext y diccionarios). Misma palabra; la pieza usa la de Wikisource.",
+    "La traducción de 蹄 («lazo» o «trampa») y de 兔 («conejo» o «liebre»): Watson usa «snare» y «rabbit». La traducción española es propia.",
+    "La traducción de Legge (1891): se buscó en ctext, que bloquea el acceso automático, y no se leyó. No se cita su formulación.",
+    "Que sea «una de las declaraciones más influyentes sobre el lenguaje en la historia intelectual china»: lo dice una página de estudio (Wudang Academy) sin autor claro. No se usa.",
+    "Que la última pregunta sea un chiste intencional del autor: se lee así en algunas notas de traducción (resumen de búsqueda); en la pieza se dice solo que el hecho de hablar exigiría palabras.",
+    "Verificación incompleta: ctext.org y la edición de Legge no se leyeron; Watson se leyó en parte; la cita 26:13 de la SEP corresponde al mismo pasaje pero la numeración no se comprobó contra la edición. Revisar antes de encolar."
+  ],
+  "status": "draft"
+}

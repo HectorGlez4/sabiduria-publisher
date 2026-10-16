@@ -1,0 +1,54 @@
+{
+  "id": "2026-11-29-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "La copa de Licurgo y su vidrio dicroico",
+    "hook": "Una copa romana de hacia el año 300 es verde si la luz le da de frente y roja si la atraviesa, y la causa no se entendió hasta 1990.",
+    "body": [
+      "La copa de Licurgo se conserva en el Museo Británico. Mide 15,9 cm de alto y 13,2 de ancho. El museo la fecha hacia el año 300 y la sitúa en Alejandría o en Roma, entre el 290 y el 325. Las figuras en relieve, separadas del cuerpo por una jaula de vidrio tallado, muestran al rey Licurgo de Tracia atado por una vid, castigado por Dioniso.",
+      "El vidrio cambia de color según desde dónde llegue la luz: verde por delante, rojo por detrás. La explicación llegó en 1990, cuando se examinaron fragmentos rotos con un microscopio potente. Contienen partículas de plata y oro tan pequeñas como 50 nanómetros de diámetro, según el museo. El oro da el rojo; la plata, el verde.",
+      "No se sabe si los vidrieros romanos entendían lo que habían hecho. Unas fuentes dicen que el efecto fue casi seguro un hallazgo accidental; otras, que las cantidades de oro y plata indican que sabían lo que buscaban. Es el único objeto romano completo con esta propiedad."
+    ],
+    "question": "¿Qué objeto antiguo sabe más de lo que sabía quien lo hizo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La copa de Licurgo",
+    "subtitle": "Museo Británico, hacia el año 300",
+    "body": "Verde con la luz por delante, roja con la luz por detrás. El vidrio lleva partículas de oro y plata de unos 50 nanómetros. Nadie lo explicó hasta 1990."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CopaDeLicurgo", "#VidrioRomano", "#Nanotecnologia"],
+    "extended": ["#MuseoBritanico", "#Roma", "#Arqueologia", "#Historia", "#Ciencia", "#SigloIV", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Fecha hacia el 300 (probablemente Alejandría o Roma, 290-325); medidas 15,9 por 13,2 cm; escena del rey Licurgo de Edonia (Tracia) atado por una vid y castigado por Dioniso; rojo con luz por detrás y verde con luz por delante; partículas de plata y oro «as small as 50 nanometers»; figuras hechas tallando y puliendo el vidrio para dejar una «jaula»; explicación en 1990 al examinar fragmentos rotos con microscopio potente. Texto del Museo Británico reproducido en Google Arts & Culture. Lectura directa de ese texto; la página del propio museo dio 403.",
+      "source": "Museo Británico, The Lycurgus Cup (300 AD), vía Google Arts & Culture",
+      "url": "https://artsandculture.google.com/story/mwWBqnUNwgBpLQ"
+    },
+    {
+      "claim": "Copa de jaula (diatretum) del siglo IV, la única pieza romana dicroica completa que se conoce; verde por reflexión y roja por transmisión; estudio de Barber y Freestone de 1990 con microscopio electrónico de transmisión; Freestone et al. 2007; el hallazgo del efecto fue probablemente accidental y quizá los artesanos no supieran que intervenía el oro. Lectura directa.",
+      "source": "Wikipedia, Lycurgus Cup",
+      "url": "https://en.wikipedia.org/wiki/Lycurgus_Cup"
+    },
+    {
+      "claim": "Copa romana del siglo IV, clasificada como copa de jaula; verde cuando observador y fuente de luz están del mismo lado y rojo intenso cuando están en lados opuestos (cita a Freestone et al., 2007); el efecto se atribuye a nanopartículas de plata (verde por reflexión) y de oro (rojo). Lectura directa de la introducción.",
+      "source": "Artículo en Nanoscale/PMC sobre impresión 3D de un nanocompuesto dicroico de oro y plata (Wageningen)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6964654/"
+    }
+  ],
+  "do_not_use": [
+    "Tamaño de partícula: las fuentes discrepan (el museo dice «tan pequeñas como 50 nm»; Wikipedia, unos 70 nm; resúmenes de búsqueda, 50-100 nm). La pieza dice «tan pequeñas como 50 nanómetros, según el museo» y «unos 50» en la tarjeta; «hasta 50» sería falso.",
+    "Composición exacta (66,2 % plata, 31,2 % oro, 2,6 % cobre; o 330 ppm de plata y 40 ppm de oro): cifras que difieren entre resúmenes y no se leyeron en el artículo de Freestone et al. (2007), al que no se pudo acceder. No se usan.",
+    "Que los romanos «sabían nanotecnología» o que fue deliberada: está disputado. La pieza lo presenta como disputado y no lo afirma.",
+    "Que 1990 se resolviera con un microscopio de fuerza atómica: un resumen de búsqueda lo dice; Wikipedia habla de microscopio electrónico de transmisión. No se menciona el tipo de microscopio.",
+    "Año y precio de la venta al Museo Británico (1957 o 1958; 20.000 libras): las fuentes discrepan. No se incluye; tampoco la historia de la familia Rothschild ni la montura de metal dorado añadida hacia 1800.",
+    "El número de inventario (1958,1202.1) y que se exhiba en la sala 41: solo por resumen de búsqueda; no se incluye.",
+    "Verificación incompleta: la página del Museo Británico y el artículo de Freestone et al. (Gold Bulletin, 2007) no se pudieron leer (403 y redirección a acceso); el texto del museo se leyó solo a través de Google Arts & Culture. Revisar antes de encolar."
+  ],
+  "status": "draft"
+}

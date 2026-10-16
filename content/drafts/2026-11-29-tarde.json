@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-29-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Nietzsche, Götzen-Dämmerung, Sprüche und Pfeile 8",
+    "hook": "Siete palabras en alemán que hoy se usan como consuelo salieron en 1888 bajo un título de cuartel: «De la escuela de guerra de la vida».",
+    "quote": {
+      "text": "Aus der Kriegsschule des Lebens. – Was mich nicht umbringt, macht mich stärker.",
+      "author": "Friedrich Nietzsche",
+      "work": "Götzen-Dämmerung, «Sprüche und Pfeile» 8 (1888-1889)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Traducido: «De la escuela de guerra de la vida. – Lo que no me mata me hace más fuerte».",
+      "Es la octava de las 44 máximas de «Sprüche und Pfeile» («Sentencias y flechas»), una sección de Götzen-Dämmerung («El ocaso de los ídolos»). Nietzsche escribió el libro entre el 26 de agosto y el 3 de septiembre de 1888, en Sils Maria, y firmó el prólogo en Turín el 30 de septiembre de ese año. Se publicó en 1889.",
+      "La frase no habla del sufrimiento en general, sino de lo que no mata. Y el título la pone en una escuela de guerra, donde no todos regresan. Leída entera es una máxima de quien sobrevivió, no una promesa para quien está pasando por algo."
+    ],
+    "question": "¿Qué te dejó más fuerte, y qué te dejó solo cansado?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Nietzsche", "#GotzenDammerung", "#Filosofia"],
+    "extended": ["#Citas", "#Alemania", "#Siglo19", "#ElOcasoDeLosIdolos", "#Historia", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto en alemán: «Aus der Kriegsschule des Lebens. - Was mich nicht umbringt, macht mich stärker.» como octavo aforismo de «Sprüche und Pfeile»; prólogo firmado en Turín el 30 de septiembre de 1888, «am Tage, da das Buch der Umwerthung aller Werthe zu Ende kam»; subtítulo «Wie man mit dem Hammer philosophirt». El ebook procede de Projekt Gutenberg-DE y no indica edición impresa. Lectura directa de los primeros 100.000 caracteres de 192.505; el resto solo se comprobó que no repite la frase.",
+      "source": "Project Gutenberg #7203, Friedrich Nietzsche, Götzen-Dämmerung",
+      "url": "https://www.gutenberg.org/cache/epub/7203/pg7203.txt"
+    },
+    {
+      "claim": "Escrito entre el 26 de agosto y el 3 de septiembre de 1888 en Sils Maria; prólogo del 30 de septiembre de 1888; publicado en 1889; «Maxims and Arrows» consta de 44 máximas; el aforismo 8 en inglés: «Out of life's school of war—What does not kill me makes me stronger». Lectura directa.",
+      "source": "Wikipedia, Twilight of the Idols",
+      "url": "https://en.wikipedia.org/wiki/Twilight_of_the_Idols"
+    },
+    {
+      "claim": "El aforismo es el número 8 de «Sprüche und Pfeile» con el encabezado «From the military school of life» (traducción de Daniel Fidel Ferrer). Solo por resumen de búsqueda: la página no se leyó entera.",
+      "source": "Internet Archive, Twilight of the Idols (trad. Daniel Fidel Ferrer)",
+      "url": "https://archive.org/details/TwilightOfTheIdolsOrHowToPhilosophizeWithAHammer"
+    }
+  ],
+  "do_not_use": [
+    "La paginación en la edición de Colli y Montinari (KSA 6): se buscó «p. 60» y no se pudo confirmar. El sitio nietzschesource.org no devolvió el texto. No se cita página.",
+    "Un borrador anterior del cuaderno de primavera de 1888 (15[118]) con otra redacción y una referencia al wagnerismo: se conoce solo por resumen de búsqueda de una traducción de Ferrer. No se incluye.",
+    "Que Nietzsche se refiera a «sufrimiento» o «adversidad» en general: el texto no lo dice. La lectura del cuerpo (condicional sobre lo que no mata, en una escuela de guerra) es interpretación de la redacción.",
+    "Las derivaciones pop (la canción de Kelly Clarkson, 2012, o el paráfrasis de G. Gordon Liddy): solo por resúmenes de búsqueda. No se incluyen.",
+    "La traducción al español es propia.",
+    "Que Nietzsche escribiera el libro «poco antes de su colapso» de enero de 1889: no se verificó con fuente y no se usa.",
+    "Verificación incompleta: la segunda mitad de Gutenberg no se leyó, no se consultó una edición crítica impresa ni se pudo comprobar la fecha de publicación (enero o febrero de 1889) y la tercera fuente es un resumen de búsqueda. Revisar antes de encolar."
+  ],
+  "status": "draft"
+}
