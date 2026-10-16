@@ -1,0 +1,46 @@
+{
+  "id": "2026-11-28-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Parménides y el poema de 160 versos que se salvó de 800",
+    "hook": "Del poema de Parménides sobreviven unos 160 versos de unos 800. Lo que sabemos de su idea central lo debemos a que otros decidieron citarlo.",
+    "body": [
+      "Parménides, de Elea, en el sur de Italia, escribió en el siglo V a.C. un poema que según los cálculos tendría unos 800 versos. Hoy se conservan unos 160, en fragmentos que van de una sola palabra a los 62 versos del fragmento 8.",
+      "Empieza con un viaje. Un joven va en un carro tirado por yeguas, guiado por las hijas de Helios, hasta las puertas de los caminos de la Noche y del Día. Las vigila la Justicia; las doncellas la persuaden de que abra, y allí lo recibe una diosa.",
+      "Casi todo lo que queda llegó por citas de otros. Sexto Empírico copió treinta de los treinta y dos versos del fragmento 1, tomándolos al parecer de un compendio helenístico. Simplicio, en el siglo VI d.C., tenía un buen ejemplar y transcribió el fragmento 8 casi entero: gracias a él conservamos su argumento sobre lo que es. La parte cosmológica, en cambio, se reconstruye con resúmenes de autores posteriores."
+    ],
+    "question": "¿Qué pensamiento nuestro depende hoy de que alguien decidiera copiarlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Parménides de Elea",
+    "subtitle": "El poema que sobrevive en citas",
+    "body": "Su poema tendría unos 800 versos; se conservan unos 160. Sexto Empírico copió treinta de los treinta y dos del proemio, y Simplicio, ya en el siglo VI, el núcleo del argumento. El resto lo conocemos por resúmenes."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Parmenides", "#FilosofiaGriega", "#Presocraticos"],
+    "extended": ["#Elea", "#Historia", "#Filosofia", "#Grecia", "#Antiguedad", "#Sabiduria", "#Metafisica"]
+  },
+  "sources": [
+    {
+      "claim": "El poema tendría unos 800 versos y sobreviven unos 160, en fragmentos de una palabra a 62 versos (fr. 8); Sexto Empírico cita 30 de los 32 versos del fr. 1, al parecer de un compendio helenístico; Simplicio (siglo VI) tenía un buen ejemplar y citó extensamente el fr. 8, que conserva el argumento central; la cosmología se apoya en testimonia; el proemio: carro de yeguas, hijas de Helios, puertas de los caminos de la Noche y el Día, la Justicia guardiana, acogida de la diosa; Elea, colonia griega del sur de Italia; nacimiento hacia el 515 a.C. según el Parménides de Platón. Lectura directa de los primeros 100.000 caracteres.",
+      "source": "Stanford Encyclopedia of Philosophy, Parmenides",
+      "url": "https://plato.stanford.edu/entries/parmenides/"
+    },
+    {
+      "claim": "Las mismas cifras (800/160 versos, 62 versos del fr. 8, Sexto 30 de 32, Simplicio) repetidas en una segunda búsqueda sobre la misma entrada; no es una fuente independiente.",
+      "source": "Stanford Encyclopedia of Philosophy, Parmenides (archivo)",
+      "url": "https://plato.stanford.edu/archives/sum2025/entries/parmenides/"
+    }
+  ],
+  "do_not_use": [
+    "Que el proemio sea una alegoría epistemológica de paso de la ignorancia al saber: la SEP defiende una lectura mística y topográfica; otros comentaristas, la contraria. La pieza solo describe el viaje.",
+    "Fechas de muerte y de actividad exactas de Parménides: la SEP no da fecha de muerte y el 515 a.C. depende del diálogo de Platón; no se afirma una fecha en el texto.",
+    "La numeración de Diels-Kranz (DK 28 B1, B8) y el papel de Simplicio en ella: no verificado en fuente de primera mano; el texto usa solo la numeración de la SEP (fr. 1, fr. 8).",
+    "Verificación incompleta: una sola fuente real (la SEP); no se leyó el final de la entrada (8.259 caracteres), ni una edición del texto griego ni otra fuente independiente (IEP, Cambridge). Revisar antes de encolar."
+  ],
+  "status": "draft"
+}

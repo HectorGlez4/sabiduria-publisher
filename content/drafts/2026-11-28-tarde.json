@@ -1,0 +1,58 @@
+{
+  "id": "2026-11-28-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Leopardi y el último verso de L'infinito",
+    "hook": "Leopardi escribió el poema del infinito mirando lo que le impedía ver: un seto que le tapaba el horizonte.",
+    "quote": {
+      "text": "E il naufragar m'è dolce in questo mare.",
+      "author": "Giacomo Leopardi",
+      "work": "L'infinito, en Canti (Nápoles, Starita, 1835), XII, verso 15",
+      "attribution_verified": true
+    },
+    "body": [
+      "«Y naufragar me es dulce en este mar» cierra un poema de quince endecasílabos sin rima. Leopardi lo escribió en Recanati en 1819, probablemente en otoño. Se imprimió por primera vez en Milán, en el Nuovo Ricoglitore, a fines de 1825; después entró en los Versi de 1826 y en los Canti de 1831.",
+      "El poema parte de una obstrucción. Desde una colina solitaria, un seto cierra la vista al horizonte. Lo que no ve le hace imaginar espacios sin límite y un silencio sobrehumano, y el pensamiento «se ahoga» en esa inmensidad.",
+      "Por eso el naufragio del último verso no es una caída. Los comentaristas lo leen como un abandono feliz de la pregunta, donde la razón se rinde y empieza algo parecido al descanso."
+    ],
+    "question": "¿Qué te hace ver mejor lo que no alcanzas a ver?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Leopardi", "#LInfinito", "#PoesiaItaliana"],
+    "extended": ["#Citas", "#Poesia", "#Romanticismo", "#Italia", "#Recanati", "#Sabiduria", "#Literatura", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del último verso, «E il naufragar m'è dolce in questo mare», en la edición de los Canti de Starita (Nápoles, 1835), p. 62, donde L'infinito es el número XII; poema de 15 versos. Lectura directa (la página se leyó resumida por el lector: el verso final se confirma, el resto del texto no se transcribe aquí).",
+      "source": "Wikisource, Canti (1835)/L'infinito",
+      "url": "https://it.wikisource.org/wiki/Canti_(1835)/L'infinito"
+    },
+    {
+      "claim": "Composición probable en otoño de 1819 y variante «e 'l naufragar» en la versión que reproduce esa página. Lectura directa.",
+      "source": "Wikipedia, L'infinito",
+      "url": "https://en.wikipedia.org/wiki/L%27infinito"
+    },
+    {
+      "claim": "Escrito en Recanati en 1819; primera impresión en el Nuovo Ricoglitore (Milán, diciembre de 1825), luego Versi (Bolonia, 1826) y Canti (Florencia, Piatti, 1831); idillio de 15 endecasílabos sueltos; autógrafo en la Biblioteca Nazionale de Nápoles; el seto limita la vista. Solo por resumen de búsqueda de varias páginas escolares (sololibri.net, studenti.it, sapere.it); no se leyó una edición crítica."
+      ,
+      "source": "sololibri.net, L'infinito, analisi del testo",
+      "url": "https://www.sololibri.net/L-infinito-Leopardi-analisi-testo.html"
+    }
+  ],
+  "do_not_use": [
+    "El texto «e 'l naufragar» con apóstrofo: figura en la versión que reproduce Wikipedia, pero la edición de 1835 en Wikisource trae «E il naufragar». Se usa la de 1835.",
+    "Citar los versos 13-14 («Così tra questa / immensità s'annega il pensier mio») como verificados: la lectura disponible solo confirmó el verso final. El texto de la pieza los parafrasea, no los cita.",
+    "La fecha exacta de composición: las fuentes dan «1819», una de ellas «otoño de 1819», otra entre primavera y otoño. La pieza dice «probablemente en otoño».",
+    "Pasajes del Zibaldone sobre el infinito y la teoría del placer: no se verificó ninguno; no se atribuye al poema una intención teórica concreta.",
+    "Que el seto fuera de un lugar concreto (el «colle dell'Infinito» en Monte Tabor): las fuentes lo dicen con distintos matices y no se verificó en una fuente de primera mano.",
+    "La traducción al español es propia, no de una edición concreta.",
+    "Verificación incompleta: ninguna edición crítica ni PDF consultado; los datos de publicación (1825, 1826, 1831) vienen de resúmenes de búsqueda. Revisar antes de encolar."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-28-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Milton y la virtud enclaustrada de Areopagitica (1644)",
+    "hook": "Milton no defendió la libertad de imprenta diciendo que los libros sean inofensivos. Dijo que una virtud que nunca ha visto el mal no vale nada.",
+    "quote": {
+      "text": "I cannot praise a fugitive and cloistered virtue, unexercised and unbreathed, that never sallies out and sees her adversary but slinks out of the race, where that immortal garland is to be run for, not without dust and heat.",
+      "author": "John Milton",
+      "work": "Areopagitica, discurso al Parlamento inglés (1644)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Traducido: «No puedo alabar una virtud fugitiva y enclaustrada, sin ejercicio ni aliento, que nunca sale a ver a su adversario y se escurre de la carrera donde se corre por aquella guirnalda inmortal, no sin polvo y calor».",
+      "La frase es de un discurso dirigido al Parlamento inglés. Milton lo publicó en 1644, sin licencia, contra la orden de 1643 que exigía aprobación previa para imprimir un libro. Justo antes de ella escribe que quien sale a la lucha es «el verdadero cristiano guerrero».",
+      "El argumento es sobre la virtud, no sobre los libros: se prueba contra lo que tienta. La orden no se derogó por el discurso. Esa censura previa siguió, con distintos nombres, bajo el Parlamento, el Protectorado y la Restauración."
+    ],
+    "question": "¿Qué virtud tuya no ha sido probada nunca?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JohnMilton", "#Areopagitica", "#LibertadDeExpresion"],
+    "extended": ["#Citas", "#Inglaterra", "#Siglo17", "#Censura", "#Literatura", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la frase: «I cannot praise a fugitive and cloistered virtue, unexercised and unbreathed,» y la continuación «that never sallies out and sees her adversary but slinks out of the race, where that immortal garland is to be run for, not without dust and heat», con la puntuación de esa edición; inmediatamente antes, «he is the true warfaring Christian»; título completo «A Speech for the Liberty of Unlicensed Printing to the Parliament of England». Lectura directa (primeros 100.000 caracteres de 123.096). El ebook no indica el año de la edición original.",
+      "source": "Project Gutenberg #608, John Milton, Areopagitica",
+      "url": "https://www.gutenberg.org/cache/epub/608/pg608.txt"
+    },
+    {
+      "claim": "Areopagitica es de 1644; esa página de índice enlaza la versión de 1644, la de The World's Famous Orations (1906) y la de Harvard Classics vol. 3 (1909). Lectura directa.",
+      "source": "Wikisource, Areopagitica",
+      "url": "https://en.wikisource.org/wiki/Areopagitica"
+    },
+    {
+      "claim": "Publicado hacia el 23-24 de noviembre de 1644, sin licencia, contra la Licensing Order de 1643; la frase sostiene que la virtud debe probarse contra el mal; la censura previa no se abolió ni bajo el Parlamento, el Protectorado ni la Restauración. Solo por resúmenes de búsqueda (Time, Aryan Path, un ensayo en Substack); ninguna se leyó entera.",
+      "source": "Resumen de búsqueda: Time y Aryan Path (noviembre de 1944)",
+      "url": "https://www.ultindia.org/s/ap/APNov1944.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Dar «virtue» como «vertue»: es la ortografía de 1644; la pieza usa la del texto de Gutenberg, que modernizó la grafía.",
+    "La puntuación: la edición de Gutenberg no lleva coma tras «adversary» y sí tras «race»; la pieza sigue esa edición. Otras ediciones puntúan distinto.",
+    "Decir que Milton defiende una libertad total: un resumen apunta que no lo era; no se verificó y el texto no lo afirma.",
+    "La fecha exacta (23 o 24 de noviembre de 1644): las fuentes difieren; el texto solo dice 1644.",
+    "Que Hartlib, el Parlamento o el Stationers' Company hayan respondido de algún modo concreto: no se verificó.",
+    "La traducción al español es propia.",
+    "Verificación incompleta: no se leyó una edición crítica ni los últimos 23.096 caracteres de Gutenberg; el contexto histórico (1643, 1644, censura posterior) se apoya en resúmenes de búsqueda y no en una fuente de primera mano, y la lectura de Gutenberg no se confirmó contra un facsímil de 1644. Revisar antes de encolar."
+  ],
+  "status": "draft"
+}

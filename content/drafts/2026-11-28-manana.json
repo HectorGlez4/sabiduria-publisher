@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-28-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Williamina Fleming y la Cabeza de Caballo de 1888",
+    "hook": "La Nebulosa Cabeza de Caballo la vio primero una mujer que había llegado a Harvard como criada, y el primer gran catálogo de nebulosas puso otro nombre.",
+    "body": [
+      "Williamina Fleming nació en Dundee en 1857 y emigró a Boston en 1878. Abandonada por su marido, trabajó como criada en casa de Edward C. Pickering, director del Observatorio de Harvard. En 1879 Pickering la contrató por horas para tareas de oficina, y en 1881 la incorporó al observatorio.",
+      "En 1888 examinó una placa fotográfica tomada por W. H. Pickering, hermano del director. En ella anotó una muesca en la nebulosa brillante hoy llamada IC 434. Su descripción, publicada después por Annie Cannon, decía: «una hendidura semicircular de 5 minutos de diámetro, 30 minutos al sur de Zeta Orionis». Era la Cabeza de Caballo.",
+      "Cuando el astrónomo J. L. E. Dreyer compiló el primer Index Catalogue, atribuyó los hallazgos de Harvard a «Pickering», sin su nombre. Casi todos los lectores entendieron que era el director. La segunda edición, de 1908, corrigió el crédito de otros objetos, pero no el de la Cabeza de Caballo."
+    ],
+    "question": "¿Cuántos descubrimientos conocidos llevan un nombre que no es de quien los vio?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Williamina Fleming",
+    "subtitle": "Harvard, placa de 1888",
+    "body": "Llegó a Harvard como criada del director. En 1888 anotó una «hendidura semicircular» en una placa fotográfica: era la Cabeza de Caballo. El catálogo de nebulosas atribuyó el hallazgo a «Pickering»."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#WilliaminaFleming", "#Astronomia", "#MujeresEnLaCiencia"],
+    "extended": ["#CabezaDeCaballo", "#Harvard", "#Nebulosa", "#Historia", "#Ciencia", "#Siglo19", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Nacimiento en Dundee (1857), emigración a Boston (1878), trabajo como criada en casa de E. C. Pickering, empleo por horas en 1879 y entrada formal al observatorio en 1881; descubrimiento de la Cabeza de Caballo en 1888 en una placa de W. H. Pickering; su descripción «a semicircular indentation 5 minutes in diameter 30 minutes south of Zeta Orionis» (Cannon, 1911); IC 434; el primer Index Catalogue omitió su nombre y la edición de 1908 la reconoció en otros casos. Lectura directa.",
+      "source": "Wikipedia, Williamina Fleming (cita a Cannon 1911 y a Sobel 2016)",
+      "url": "https://en.wikipedia.org/wiki/Williamina_Fleming"
+    },
+    {
+      "claim": "Fleming vio primero el objeto como una pequeña mancha gris tenue en una placa de vidrio; la nebulosa oscura aparece como silueta sobre el gas brillante. Solo conocido por resumen de búsqueda: la página dio 403 al leerla.",
+      "source": "Harvard Library / Center for Astrophysics, Williamina Fleming: Variable Stars and Nebula",
+      "url": "https://library.cfa.harvard.edu/williamina-fleming/variable-stars-and-nebula"
+    },
+    {
+      "claim": "Dreyer atribuyó a «Pickering» los hallazgos de Harvard en la edición de 1895 del Index Catalogue; la segunda edición (1908) reconoció a otros descubridores pero no a Fleming para IC 434; Pickering publicó en 1908 una tabla de descubrimientos y corrigió IC 434 sin nombrarla. Solo conocido por resumen de búsqueda: la página dio 403 al leerla.",
+      "source": "Sky & Telescope, agosto de 2023",
+      "url": "https://nxtbook.com/nxtbooks/aas/st_202308/index.php?startid=22"
+    }
+  ],
+  "do_not_use": [
+    "«Fleming descubrió la primera enana blanca»: el propio artículo de Wikipedia lo marca como dudoso. No se usa.",
+    "Cifras de sus descubrimientos (59 nebulosas, más de 310 variables, 10 novas frente a 222 variables en su publicación de 1907): las cifras no concuerdan entre las fuentes. No se citan.",
+    "Atribuirle en exclusiva el hallazgo: la placa la tomó W. H. Pickering, que además propuso que la mancha era materia oscura. Las fuentes discrepan sobre a quién corresponde el crédito; el texto dice que ella anotó la muesca, no que la fotografió.",
+    "Cualquier dato del Catálogo Henry Draper (1890) y de su clasificación espectral: no se verificó con fuente de primera mano y no se incluye.",
+    "Fecha de muerte (21 de mayo de 1911) y el resto de su biografía: solo leídas en Wikipedia; no se incluyen en el texto.",
+    "Verificación incompleta: una sola fuente leída de primera mano (Wikipedia); Harvard y Sky & Telescope dieron 403 y se conocen solo por resúmenes de búsqueda. Conviene revisar antes de encolar."
+  ],
+  "status": "draft"
+}
