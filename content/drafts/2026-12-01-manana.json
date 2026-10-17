@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-01-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "James Lind y el escorbuto en el Salisbury (1747)",
+    "hook": "En 1747 un cirujano naval vio a un marinero curarse del escorbuto en seis días con naranjas y limones. La Armada británica tardó casi medio siglo en hacerle caso.",
+    "body": [
+      "El 20 de mayo de 1747, a bordo del HMS Salisbury, el cirujano escocés James Lind tomó a doce marineros con escorbuto, todos en la misma parte del barco y con la misma dieta. Los dividió en seis parejas y dio a cada una un remedio de los que se usaban entonces: sidra, elixir de vitriolo, vinagre, agua de mar, una pasta de ajo y mostaza, o dos naranjas y un limón al día.",
+      "Solo la pareja de los cítricos mejoró de forma clara. Uno de ellos, escribió Lind, estaba al final de seis días apto para el servicio. Lo publicó en 1753, en su Tratado del escorbuto. Pero no sabía por qué funcionaba: creía que el escorbuto era una putrefacción del cuerpo, nunca defendió los cítricos como remedio único, y recomendó conservarlos en un concentrado hervido durante horas. El calor destruye justamente lo que curaba.",
+      "La Armada no ordenó repartir zumo de limón en toda la flota hasta 1795, un año después de la muerte de Lind, y por insistencia de otro médico, Gilbert Blane. El experimento era correcto. La explicación que lo acompañaba retrasó que se entendiera."
+    ],
+    "question": "¿Cuántas veces un resultado bien medido se pierde por una teoría equivocada sobre él?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "James Lind",
+    "subtitle": "HMS Salisbury, 20 de mayo de 1747",
+    "body": "Doce marineros con escorbuto, seis remedios, dos hombres por remedio. Solo mejoraron los que comieron naranjas y limones. La Armada británica no adoptó el zumo de limón hasta 1795."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JamesLind", "#Escorbuto", "#HistoriaDeLaMedicina"],
+    "extended": ["#Ciencia", "#Medicina", "#Siglo18", "#Marina", "#VitaminaC", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El ensayo comenzó a bordo del Salisbury el 20 de mayo de 1747, con 12 pacientes y seis tratamientos en uso; Lind publicó el Tratado del escorbuto en 1753; su método fue «controlled empiricism» sin fundamento fisiopatológico («He gave no reason for the choice of his possible treatments»); recomendó un «rob», concentrado evaporado durante horas casi a ebullición, y el calor destruye buena parte del ácido ascórbico; Gilbert Blane persuadió al Almirantazgo en 1795 de repartir zumo de limón a gran escala. Lectura directa.",
+      "source": "James Lind Library (Royal College of Physicians of Edinburgh), «James Lind and scurvy: 1747 to 1795»",
+      "url": "https://www.jameslindlibrary.org/articles/james-lind-and-scurvy-1747-to-1795/"
+    },
+    {
+      "claim": "Ficha bibliográfica: A treatise of the scurvy, Edimburgo, Sands, Murray and Cochran, 1753; resumen del ensayo de 1747 como comparación prospectiva de seis tratamientos. Lectura directa.",
+      "source": "James Lind Library, ficha de Lind J (1753)",
+      "url": "https://www.jameslindlibrary.org/lind-j-1753/"
+    },
+    {
+      "claim": "Texto de Lind citado: las seis parejas y sus dosis (un cuarto de galón de sidra, 25 gotas de elixir de vitriolo tres veces al día, dos cucharadas de vinagre, medio cuartillo de agua de mar, «two oranges and one lemon» al día, electuario de ajo, mostaza, rábano picante, bálsamo del Perú y mirra); uno de los de cítricos «fit for duty» al cabo de seis días; fechas de Lind 1716-1794. Lectura directa (Frank I. Katch).",
+      "source": "Sportscience, Frank I. Katch, «James Lind»",
+      "url": "https://sportsci.org/news/history/lind/lind_sp.html"
+    },
+    {
+      "claim": "Los doce pacientes compartían la parte del barco y la dieta; la cita de Lind «One of those who had taken them being at the end of six days fit for duty»; Lind creía que la putrefacción causada por la enfermedad se prevenía con ácidos de fruta. Lectura directa (Jim Kremidas, Clinical Researcher, mayo de 2019).",
+      "source": "Association of Clinical Research Professionals, «Thank You, James Lind»",
+      "url": "https://acrpnet.org/2019/05/thank-you-james-lind/"
+    },
+    {
+      "claim": "Nacido el 4 de octubre de 1716, muerto el 13 de julio de 1794; el Salisbury patrullaba el golfo de Vizcaya; Lind creía que el escorbuto tenía varias causas y «never advocated citrus juice as a single solution»; el rob hervido destruía la vitamina C; tras el Suffolk en 1794, el Almirantazgo aceptó la recomendación para toda la flota al año siguiente. Lectura directa.",
+      "source": "Wikipedia, James Lind",
+      "url": "https://en.wikipedia.org/wiki/James_Lind"
+    }
+  ],
+  "do_not_use": [
+    "«El primer ensayo clínico de la historia»: es la etiqueta habitual, pero hubo comparaciones anteriores y el de Lind no fue aleatorizado. La pieza no lo llama así.",
+    "Que los cítricos se acabaran a los seis días: lo dicen Wikipedia y divulgación, pero la cita de Lind leída solo dice que uno estaba apto al sexto día. No se usa.",
+    "Que el segundo marinero de los cítricos acabara de enfermero de los demás: solo en una fuente (Katch). No se usa.",
+    "El término «limey» para los marineros británicos: posterior y asociado a la lima, no al limón de Lind. No se mezcla.",
+    "Que Lind descubriera la vitamina C o la causa del escorbuto: la vitamina C se identificó en el siglo XX; Lind atribuía la enfermedad a la putrefacción.",
+    "Que la flota de 1793 a Madrás llegara sin escorbuto tras diecinueve semanas: solo en una fuente (James Lind Library); omitido por espacio, no por duda."
+  ],
+  "status": "draft"
+}

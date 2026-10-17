@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-01-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Platón y el anillo de Giges (República II)",
+    "hook": "Hace veinticuatro siglos, Platón hizo una pregunta que sigue sin respuesta cómoda: si nadie pudiera verte, ¿seguirías siendo justo?",
+    "body": [
+      "En el libro II de la República, Glaucón, hermano de Platón, cuenta una historia. Un pastor al servicio del rey de Lidia ve abrirse la tierra tras una tormenta y un terremoto. Baja a la grieta, encuentra un caballo de bronce hueco y, dentro, un cadáver de tamaño sobrehumano con un anillo de oro. Se lo lleva. Descubre que, si gira el engaste hacia la palma, se vuelve invisible. Se hace nombrar mensajero ante el rey, seduce a la reina, mata al rey y se queda con el reino.",
+      "La conclusión de Glaucón es incómoda: con un anillo así, nadie sería de un temple tan firme como para no tocar lo ajeno. Seríamos justos solo por miedo a que nos vean. Y un detalle del texto: Platón no habla de Giges, sino de un antepasado de Giges. Heródoto, que contó la subida al trono del Giges histórico en el libro I de sus Historias, no pone ningún anillo: allí Giges es un guardia al que el rey Candaules obliga a espiar a la reina desnuda, y ella le da a elegir entre matar al rey o morir.",
+      "Platón dedica el resto de la República a contestar. En el libro X, el último, vuelve al anillo para sostener que quien lo usa para el mal se esclaviza a sus deseos. Si convence o no, cada lector lo decide. La pregunta, en todo caso, sigue intacta."
+    ],
+    "question": "¿Qué harías distinto si supieras con certeza que nadie se iba a enterar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El anillo de Giges",
+    "subtitle": "Platón, República, libro II",
+    "body": "Un pastor encuentra un anillo que lo vuelve invisible, y con él seduce a la reina, mata al rey y se queda con el reino. La pregunta de Glaucón: ¿quién seguiría siendo justo sin que nadie lo viera?"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Platon", "#AnilloDeGiges", "#Filosofia"],
+    "extended": ["#Republica", "#Etica", "#Justicia", "#GreciaAntigua", "#Herodoto", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "República 359c: Glaucón propone dar al justo y al injusto licencia para hacer lo que quieran. 359d: el texto nombra a «the ancestor of Gyges the Lydian», pastor al servicio del soberano de Lidia; tras «a great deluge of rain and an earthquake» se abrió la tierra; bajó y vio «a hollow bronze horse with little doors» y un cadáver de estatura «more than mortal»; nota que remite a Heródoto I 8-13, historia parecida sin anillo mágico. Lectura directa (trad. Paul Shorey).",
+      "source": "Perseus Digital Library, Platón, República, libro II, 359c-359d",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0168:book=2:section=359d"
+    },
+    {
+      "claim": "República 360a: girar el engaste hacia dentro lo vuelve invisible y hacia fuera visible; se las arregla para ser «one of the messengers» enviados al rey. 360b: sedujo a la mujer del rey, lo mató y tomó el reino; con dos anillos así nadie sería «of such adamantine temper» como para mantenerse justo y no tocar lo ajeno. Lectura directa (trad. Shorey).",
+      "source": "Perseus Digital Library, Platón, República, libro II, 360a-360b",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0168:book=2:section=360b"
+    },
+    {
+      "claim": "Glaucón, hermano mayor de Platón, cuenta el mito en el libro II (359a-360d); el protagonista es «an unnamed ancestor of Gyges»; en el libro X (612b) Sócrates vuelve a «el anillo de Giges» y sostiene que quien abusó del anillo se esclavizó a sus apetitos; Cicerón lo retoma en De officiis III, 38. Lectura directa.",
+      "source": "Wikipedia, Ring of Gyges",
+      "url": "https://en.wikipedia.org/wiki/Ring_of_Gyges"
+    },
+    {
+      "claim": "Heródoto I 8-12: Giges, hijo de Dascilo, guardia de confianza de Candaules; el rey lo hace ver a la reina desnuda tras la puerta del dormitorio; ella lo descubre, al amanecer le da a elegir entre matar a Candaules y reinar con ella o morir; Giges mata al rey dormido y se casa con la reina. Sin anillo en 1.7-1.12. Lectura directa (trad. de Selincourt).",
+      "source": "Livius.org, «Herodotus on Candaules, his wife, and Gyges»",
+      "url": "https://livius.org/sources/content/herodotus/candaules-his-wife-and-gyges"
+    },
+    {
+      "claim": "Resumen de Heródoto I 8-12 coincidente (Candaules, Giges guardia favorito, ultimátum de la reina, asesinato del rey dormido) y nota de que el anillo de invisibilidad aparece en la República de Platón, no en Heródoto. Lectura directa.",
+      "source": "Wikipedia, Candaules",
+      "url": "https://en.wikipedia.org/wiki/Candaules"
+    }
+  ],
+  "do_not_use": [
+    "Que en Platón el protagonista sea Giges en persona: el texto transmitido dice «el antepasado de Giges el lidio» (359d); algunos editores lo enmiendan, pero la pieza sigue el texto.",
+    "Que Heródoto incluya el anillo mágico: no aparece en I 7-12.",
+    "El nombre de la reina (Nisia o Nyssia): Heródoto no la nombra; es de autores posteriores. No se usa.",
+    "Fechas de Giges y Candaules (c. 687 a.C., c. 680 a.C.): aproximadas y discordantes. No se usan.",
+    "Relación directa con el Anillo Único de Tolkien: se comenta a menudo, pero Tolkien no la declaró en lo consultado. No se afirma.",
+    "La doctrina platónica final (que el justo es siempre más feliz): la pieza solo dice que Platón dedica la obra a contestar y lo resume en una frase; no se presenta como demostrada."
+  ],
+  "status": "draft"
+}

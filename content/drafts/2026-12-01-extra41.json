@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-01-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Dickens y el mejor de los tiempos (1859)",
+    "hook": "La primera frase de Historia de dos ciudades se cita como un elogio de los contrastes. Leída hasta el final, es una burla de quienes creen vivir la época más extrema de la historia.",
+    "quote": {
+      "text": "Era el mejor de los tiempos, era el peor de los tiempos.",
+      "author": "Charles Dickens",
+      "work": "Historia de dos ciudades, libro I, capítulo 1 (All the Year Round, Londres, 1859)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Charles Dickens publicó Historia de dos ciudades por entregas semanales en All the Year Round, la revista que acababa de fundar, entre el 30 de abril y el 26 de noviembre de 1859. La frase abre el primer capítulo, titulado «La época», y la novela empieza en 1775, catorce años antes de la Revolución francesa.",
+      "Lo que casi nunca se cita es que la frase sigue. Es una sola oración larga, hecha de parejas opuestas: la edad de la sabiduría y la de la necedad, la estación de la luz y la de las tinieblas, la primavera de la esperanza y el invierno de la desesperación. Y termina así: aquella época se parecía tanto a la presente que algunas de sus autoridades más ruidosas insistían en que se la juzgara, para bien o para mal, solo en grado superlativo.",
+      "Dickens escribía en 1859 sobre 1775, y lo que encontró en común entre las dos épocas no fue un hecho. Fue la costumbre de exagerar la propia."
+    ],
+    "question": "¿Tu época es de verdad la mejor o la peor, o solo la única que te tocó vivir?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Dickens", "#HistoriaDeDosCiudades", "#Citas"],
+    "extended": ["#Literatura", "#LiteraturaInglesa", "#Siglo19", "#RevolucionFrancesa", "#Novela", "#Lectura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de A Tale of Two Cities, libro primero «Recalled to Life», capítulo I «The Period»: el primer párrafo empieza «It was the best of times, it was the worst of times» y la misma oración termina «in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only»; el capítulo sitúa la acción en «the year of Our Lord one thousand seven hundred and seventy-five». Lectura directa. quote.text y el resumen del cuerpo son traducción de la redacción.",
+      "source": "Project Gutenberg, Charles Dickens, A Tale of Two Cities (eBook #98)",
+      "url": "https://www.gutenberg.org/cache/epub/98/pg98.txt"
+    },
+    {
+      "claim": "La novela se publicó por entregas en All the Year Round del 30 de abril al 26 de noviembre de 1859; Chapman & Hall la editó a la vez en siete partes mensuales, de junio a diciembre de 1859; la parte 1 anunciaba el fin de Household Words y su fusión en All the Year Round. Lectura directa.",
+      "source": "Smith College Libraries, Mortimer Rare Book Collection, exposición sobre Dickens: A Tale of Two Cities",
+      "url": "https://www.smith.edu/libraries/libs/rarebook/exhibitions/dickens/11-tale-of-two-cities.htm"
+    },
+    {
+      "claim": "El 30 de abril de 1859 se publicó el primer capítulo de A Tale of Two Cities; Dickens cerró su publicación anterior en 1859 y lanzó All the Year Round, que incluía ese primer capítulo. Lectura directa.",
+      "source": "HISTORY.com, This Day in History, 30 de abril: «First installment of A Tale of Two Cities is published»",
+      "url": "https://www.history.com/this-day-in-history/April-30/first-installment-of-a-tale-of-two-cities-is-published"
+    }
+  ],
+  "do_not_use": [
+    "Que la novela se terminara de publicar el 5 de noviembre de 1859: lo da un catálogo de subastas; Smith College y libreros anticuarios dan el 26 de noviembre. Se usa el 26.",
+    "Cifras de ejemplares vendidos («la novela más vendida de la historia», «200 millones»): circulan sin fuente verificable. No se usan.",
+    "Que All the Year Round se fundara para publicar esta novela o por la ruptura con Bradbury and Evans: la ruptura no se verificó en lo leído. La pieza dice solo «la revista que acababa de fundar».",
+    "Las parejas de opuestos del cuerpo están resumidas y traducidas por la redacción, no citadas literalmente; no presentarlas entre comillas como texto de Dickens en español.",
+    "Mariano José de Larra, «Escribir en Madrid es llorar» (Horas de invierno, El Español, 25 de diciembre de 1836): se descartó en esta ejecución porque el texto no se pudo leer en fuente primaria (Cervantes Virtual da 403; Wikisource no lo tiene). Queda pendiente, no descartado como falso."
+  ],
+  "status": "draft"
+}

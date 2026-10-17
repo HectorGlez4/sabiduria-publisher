@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-01-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Descartes y el pienso, luego soy de 1637",
+    "hook": "La frase latina más famosa de la filosofía se escribió primero en francés, y en el libro donde todos la buscan no aparece.",
+    "quote": {
+      "text": "Esta verdad, pienso, luego soy, era tan firme y tan segura que las más extravagantes suposiciones de los escépticos no eran capaces de conmoverla.",
+      "author": "René Descartes",
+      "work": "Discurso del método, cuarta parte (Leiden, 1637)",
+      "attribution_verified": true
+    },
+    "body": [
+      "René Descartes publicó el Discurso del método en Leiden en 1637, como introducción a tres tratados científicos: la Dióptrica, los Meteoros y la Geometría. Lo escribió en francés, no en latín, para llegar a más lectores que los eruditos.",
+      "En la cuarta parte cuenta su procedimiento: rechazar como falso todo aquello en que pudiera imaginar la menor duda, y suponer incluso que nada de lo que había pasado por su mente era más verdadero que las ilusiones de sus sueños. Al final de esa limpieza quedó una sola cosa en pie: que él, que dudaba, tenía que ser algo. Lo escribió así, je pense, donc je suis.",
+      "En las Meditaciones de 1641, en latín, la fórmula no aparece: allí dice «soy, existo». El famoso cogito, ergo sum llega en 1644, en los Principios de la filosofía, primera parte, artículo 7. La certeza más firme que encontró no era sobre el mundo. Era sobre el acto mismo de dudar."
+    ],
+    "question": "¿Qué te queda en pie cuando dudas de todo lo demás?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Descartes", "#Filosofia", "#Citas"],
+    "extended": ["#Cogito", "#DiscursoDelMetodo", "#Racionalismo", "#Siglo17", "#Duda", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la cuarta parte del Discurso del método: la resolución de rechazar como falso «tout ce en quoi je pourrois imaginer le moindre doute»; suponer que nada era más verdadero que «les illusions de mes songes»; «il falloit nécessairement que moi qui le pensois fusse quelque chose ; et remarquant que cette vérité, je pense, donc je suis, étoit si ferme et si assurée, que toutes les plus extravagantes suppositions des sceptiques n'étoient pas capables de l'ébranler». Lectura directa (ed. Victor Cousin, Levrault, 1824, t. I, pp. 156-167). quote.text es traducción de la redacción.",
+      "source": "Wikisource, Discours de la méthode (éd. Cousin), Quatrième partie",
+      "url": "https://fr.wikisource.org/wiki/Discours_de_la_m%C3%A9thode_(%C3%A9d._Cousin)/Quatri%C3%A8me_partie"
+    },
+    {
+      "claim": "La fórmula «does not expressly appear in the Meditations»; en la Segunda Meditación la conclusión es que la proposición «I am, I exist» es necesariamente verdadera; cita de Principios 1:7 (AT 8a:7) sobre lo primero y más cierto para quien filosofa con orden. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Descartes' Epistemology», sección 4.1 Cogito Ergo Sum",
+      "url": "https://plato.stanford.edu/entries/descartes-epistemology/"
+    },
+    {
+      "claim": "1637, Discurso, en francés: «je pense, donc je suis», escrito en francés para un público más amplio; en la Meditación II no aparece «cogito, ergo sum» sino «Ego sum, ego existo»; «ego cogito, ergo sum» aparece en los Principios de la filosofía (1644), parte I, artículo 7. Lectura directa.",
+      "source": "Wikipedia, Cogito, ergo sum",
+      "url": "https://en.wikipedia.org/wiki/Cogito,_ergo_sum"
+    },
+    {
+      "claim": "Publicado en 1637 en Leiden; concebido como introducción a La Dioptrique, Les Météores y La Géométrie; escrito en francés «so as to reach a wider audience than Latin». Lectura directa.",
+      "source": "Wikipedia, Discourse on the Method",
+      "url": "https://en.wikipedia.org/wiki/Discourse_on_the_Method"
+    }
+  ],
+  "do_not_use": [
+    "«Cogito, ergo sum» atribuido al Discurso de 1637 o a las Meditaciones de 1641: el Discurso está en francés y las Meditaciones dicen «ego sum, ego existo».",
+    "El texto latino exacto de Principios I, 7 («Ac proinde haec cognitio, ego cogito, ergo sum, est omnium prima et certissima»): solo visto en resúmenes de búsqueda y páginas de citas, no en edición crítica. La pieza solo nombra la fórmula y el artículo.",
+    "La traducción latina del Discurso: Wikipedia da 1656 en Amsterdam en un artículo y menciona los Specimina de 1644 en otro. Fecha contradictoria; no se usa.",
+    "Que el Discurso se publicara anónimo y el nombre del impresor (Jan Maire): no confirmados en lo leído. No se usan.",
+    "«Dudo, luego pienso; pienso, luego existo» como frase de Descartes: es un resumen de Antoine-Léonard Thomas en su Éloge de Descartes, no texto cartesiano.",
+    "Que Descartes copiara a Agustín («si fallor, sum», Ciudad de Dios XI, 26): el parecido se discute desde el siglo XVII, pero la dependencia no está probada. No se afirma.",
+    "La traducción «pienso, luego existo» es la tradicional; el francés dice «je suis» (soy). La pieza usa «pienso, luego soy» en la cita, que es más literal."
+  ],
+  "status": "draft"
+}
