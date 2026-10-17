@@ -83,9 +83,25 @@
     "Que la publicación de 1817 la hizo su nieto William Temple Franklin: lo da un resumen de búsqueda, sin fuente leída directamente. El copy dice solo «décadas después, con su correspondencia».",
     "Página exacta de Sparks (p. 410): procede de Wikipedia; no se consultó el volumen. La tarjeta cita volumen y año, no página."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-17T19:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1125471836944142",
+      "url": "https://www.facebook.com/874327782058550/posts/1125471836944142",
+      "published_at": "2026-10-17T19:38:05.858196+00:00"
+    },
+    "instagram": {
+      "post_id": "18104058527002629",
+      "url": "https://www.instagram.com/p/Dem4IPPEt4N/",
+      "published_at": "2026-10-17T19:38:21.112866+00:00"
+    },
+    "threads": {
+      "post_id": "18127067932920677",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18127067932920677",
+      "published_at": "2026-10-17T19:38:34.051341+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
