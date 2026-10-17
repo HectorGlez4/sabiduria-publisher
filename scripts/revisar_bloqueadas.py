@@ -65,6 +65,15 @@ def main() -> int:
 
     for u, f in objetivo:
         perm, _ = variants.preflight_separado(u, historial)
+        # El color no es motivo para dejarla fuera: se cambia, como hace
+        # encolar.py. Sin esto, una pieza apartada por la alternancia solo
+        # volvía si la última publicada tenía justo el otro color, y nueve
+        # dorados seguidos quedaron fuera en octubre de 2026. La siguiente
+        # pasada de encolar reajusta la alternancia contra el orden real de la
+        # cola, y el publicador la vuelve a comprobar al publicar.
+        if perm and all("variante" in p for p in perm):
+            u["card"]["variant"] = "gold" if u["card"]["variant"] == "cream" else "cream"
+            perm, _ = variants.preflight_separado(u, historial)
         if perm:
             print(f"  ✗ {u['id']}: sigue sin pasar, no se reactiva")
             for r in perm:
