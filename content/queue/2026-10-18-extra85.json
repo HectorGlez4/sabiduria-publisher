@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-05-tarde",
+  "id": "2026-10-18-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Hillel y las tres preguntas de Avot 1:14",
     "hook": "Casi siempre se cita solo la última de las tres preguntas. Pero la tercera no tiene sentido sin las dos primeras, que se contradicen a propósito. Las formuló un maestro judío hace unos dos mil años.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -76,5 +76,12 @@
     "No dar las fechas de Hillel como exactas. Las de nacimiento y muerte (hacia 110 a.C. y hacia 10 d.C.) son tradicionales y aproximadas.",
     "No mezclar esta sentencia con la anécdota de la Torá «sobre un pie» y la regla de oro («lo que te es odioso no se lo hagas a tu prójimo»). Esa historia es del Talmud de Babilonia, Shabat 31a, no de Avot 1:14.",
     "No numerar la sentencia como 1:13 o 1:15. En las ediciones consultadas (Sefaria, Gorfinkle, Chabad) es la 14 del capítulo 1."
+  ],
+  "publish_at": "2026-10-18T17:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

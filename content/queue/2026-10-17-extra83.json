@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-04-tarde",
+  "id": "2026-10-17-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Blaise Pascal y las razones del corazón",
     "hook": "Se cita para disculpar un amor que no conviene. Pascal la escribió en una hoja de apuntes sobre cómo se llega a Dios, en el mismo legajo que la apuesta.",
@@ -25,8 +25,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Pascal", "#Pensamientos", "#Filosofia"],
-    "extended": ["#Citas", "#SigloXVII", "#Francia", "#Fe", "#Razon", "#Literatura", "#Historia"]
+    "topic": [
+      "#Pascal",
+      "#Pensamientos",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Citas",
+      "#SigloXVII",
+      "#Francia",
+      "#Fe",
+      "#Razon",
+      "#Literatura",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -63,5 +75,11 @@
     "No citar la versión cortada «el corazón tiene razones que la razón no entiende» como traducción literal. El original dice «ne connaît point» (no conoce) y sigue con «on le sait en mille choses».",
     "No dar la edad de Pascal a su muerte ni atribuirle un plan de obra concreto (una apología en tantos capítulos) sin fuente abierta: no se verificó en esta sesión."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-18T03:26:00Z",
+  "results": {}
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-08-tarde",
+  "id": "2026-10-18-extra86",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Sejong", "#Hangul", "#Corea"],
-    "extended": ["#Hunminjeongeum", "#Escritura", "#Alfabeto", "#Citas", "#Historia"]
+    "topic": [
+      "#Sejong",
+      "#Hangul",
+      "#Corea"
+    ],
+    "extended": [
+      "#Hunminjeongeum",
+      "#Escritura",
+      "#Alfabeto",
+      "#Citas",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -64,6 +74,12 @@
     "Que el hangul se adoptara de inmediato. Se repite que la élite letrada lo despreció durante siglos, pero en esta investigación no se abrió una fuente institucional que lo sostenga. No se afirma nada sobre su recepción posterior.",
     "El precio o las circunstancias del hallazgo de 1940 en Andong. Circulan versiones novelescas sobre cuánto se pagó por el ejemplar. Las fuentes consultadas solo dicen que se encontró por casualidad."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-18T22:26:00Z",
+  "results": {}
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-16-tarde",
+  "id": "2026-10-17-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#BenjaminFranklin", "#Citas", "#Historia"],
-    "extended": ["#Impuestos", "#Constitucion", "#1789", "#Teatro", "#FrasesCelebres", "#Cartas"]
+    "topic": [
+      "#BenjaminFranklin",
+      "#Citas",
+      "#Historia"
+    ],
+    "extended": [
+      "#Impuestos",
+      "#Constitucion",
+      "#1789",
+      "#Teatro",
+      "#FrasesCelebres",
+      "#Cartas"
+    ]
   },
   "sources": [
     {
@@ -72,5 +83,12 @@
     "Que la publicación de 1817 la hizo su nieto William Temple Franklin: lo da un resumen de búsqueda, sin fuente leída directamente. El copy dice solo «décadas después, con su correspondencia».",
     "Página exacta de Sparks (p. 410): procede de Wikipedia; no se consultó el volumen. La tarjeta cita volumen y año, no página."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-17T19:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

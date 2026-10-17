@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-16-extra41",
+  "id": "2026-10-18-extra88",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "ANA COMNENA",
     "subtitle": "Primera página de una historia escrita en clausura",
     "body": "La Alexiada no empieza por el emperador: empieza por el tiempo. Ana Comnena abre quince libros de historia diciendo que el tiempo arrastra todo lo creado y lo hunde en la oscuridad, y que el relato es lo único que le hace de dique. Escribía apartada de la corte, en el convento que fundó su madre."
@@ -85,5 +85,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-19T04:26:00Z",
+  "results": {}
 }

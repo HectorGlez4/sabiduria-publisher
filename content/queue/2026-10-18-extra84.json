@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-05-extra41",
+  "id": "2026-10-18-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Kant y el sapere aude de 1784",
     "hook": "El lema de la Ilustración no lo inventó Kant. Lo tomó de un poeta romano que lo escribió dieciocho siglos antes, en un pasaje que no hablaba de razón, sino de dejar de aplazar.",
@@ -76,5 +76,12 @@
     "No afirmar sin verificar que la sociedad de los Alétofilos usó el lema en una medalla de 1736. Circula como antecedente alemán de Kant, pero no se pudo comprobar en ninguna fuente abierta durante esta investigación.",
     "No mencionar la respuesta de Moses Mendelssohn a la misma pregunta de ese año sin cotejarla; no se verificó en esta investigación.",
     "No citar la versión modernizada «Habe Mut» como si fuera la grafía de 1784. La edición original imprime «Muth», «Theil» y «beurtheilt»."
+  ],
+  "publish_at": "2026-10-18T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

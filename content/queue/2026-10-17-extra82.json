@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-18-tarde",
+  "id": "2026-10-17-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Pindaro", "#Citas", "#GreciaAntigua"],
-    "extended": ["#Nietzsche", "#Poesia", "#Filosofia", "#FrasesCelebres", "#Clasicos", "#Autoconocimiento"]
+    "topic": [
+      "#Pindaro",
+      "#Citas",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Nietzsche",
+      "#Poesia",
+      "#Filosofia",
+      "#FrasesCelebres",
+      "#Clasicos",
+      "#Autoconocimiento"
+    ]
   },
   "sources": [
     {
@@ -67,5 +78,12 @@
     "Decir que Píndaro relacionaba la frase con el «conócete a ti mismo» délfico: es una interpretación de un artículo secundario, no del texto.",
     "Afirmar que Ecce homo se publicó en 1908: lo dice una fuente secundaria en resultados de búsqueda; no se leyó en fuente primaria. El cuerpo solo dice que se escribió en 1888."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-17T23:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
