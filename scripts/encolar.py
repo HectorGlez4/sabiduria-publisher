@@ -73,6 +73,12 @@ HORAS = [9, 11, 13, 14, 16, 17, 19, 20, 21, 22]
 # Días que una pieza tiene que llevar sin salir para poder reemitirse.
 DIAS_DE_REPOSO = 7
 
+# Problemas del preflight que arregla el paso del tiempo: la pieza valdrá
+# dentro de unas semanas. Cualquier otro fallo permanente (esquema, atribución,
+# límites de plataforma) sigue entrando en el plan para que la comprobación
+# final lo pare a la vista.
+TEMPORALES = ("tema repetido en menos de", "cita ya publicada en")
+
 
 def _leer(carpeta: pathlib.Path) -> list[tuple[pathlib.Path, dict]]:
     fuera = []
@@ -179,6 +185,19 @@ def reemision(original: dict, formato: str, cuando: datetime.datetime, n: int) -
     return u
 
 
+def en_espera(u: dict, historial: list[dict], ahora: datetime.datetime) -> list[str]:
+    """
+    Por qué una foto del banco aún no puede salir, si es cuestión de tiempo.
+
+    Se mide como si saliera ahora y no en su hueco: el hueco cae como mucho
+    unos días después, y la ventana de 90 días contada desde más tarde solo
+    deja fuera más historial, así que lo que pasa ahora pasa en su hueco.
+    """
+    prueba = dict(u, publish_at=ahora.strftime("%Y-%m-%dT%H:%M:00Z"), results={})
+    perm, _ = variants.preflight_separado(prueba, historial, None)
+    return [p for p in perm if p.startswith(TEMPORALES)]
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dias", type=int, default=2, help="cuántos días llenar")
@@ -208,10 +227,26 @@ def main() -> int:
         (b for b in banco
          if not any(x.startswith("REVISAR:") for x in b[1].get("do_not_use", []))),
         key=lambda b: (b[1]["pillar"] != "cita", -len(b[1].get("sources", []))))
+
+    # Fuera del plan lo que hoy no pasaría por tiempo. Si entra, la
+    # comprobación final tumba el plan entero, y como el orden del banco es
+    # fijo, la misma foto lo tumba en cada pasada: del 9 al 16 de octubre de
+    # 2026 una sola de Teresa de Jesús dejó la cola sin rellenar. Lo encolado
+    # cuenta como historial: chocar con una pieza que sale mañana es igual de
+    # repetición.
+    archivo_u = [u for _, u in archivo]
+    ya_dicho = archivo_u + [u for _, u in cola]
+    espera = {b[0]: en_espera(b[1], ya_dicho, ahora) for b in fotos}
+    aplazadas = [b for b in fotos if espera[b[0]]]
+    fotos = [b for b in fotos if not espera[b[0]]]
+    if aplazadas:
+        print(f"  {len(aplazadas)} foto(s) del banco esperan por tiempo:")
+        for ruta, _ in aplazadas:
+            print(f"    · {ruta.stem}: {espera[ruta][0][:70]}")
+
     if len(fotos) < cupo["foto"]:
         print(f"  ⚠ el banco da para {len(fotos)} fotos y hacen falta {cupo['foto']}")
 
-    archivo_u = [u for _, u in archivo]
     hoy_reemitibles = candidatas_reemision(archivo_u, ultima, ahora, a.reposo)
     print(f"  reemitibles hoy: {len(hoy_reemitibles)} "
           f"(más, según avanza la fecha de cada hueco)")
