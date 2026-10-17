@@ -1,0 +1,57 @@
+{
+  "id": "2026-11-30-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lincoln y la casa dividida de Springfield (1858)",
+    "hook": "La frase más célebre de Lincoln no era suya, y el discurso en que la dijo le costó la elección que estaba disputando.",
+    "quote": {
+      "text": "A house divided against itself cannot stand. I believe this government cannot endure, permanently half slave and half free.",
+      "author": "Abraham Lincoln",
+      "work": "Discurso ante la convención republicana de Illinois, Springfield, 16 de junio de 1858",
+      "attribution_verified": true
+    },
+    "body": [
+      "Traducido: «Una casa dividida contra sí misma no puede sostenerse. Creo que este gobierno no puede durar permanentemente mitad esclavo y mitad libre».",
+      "Lincoln lo dijo a las ocho de la noche del 16 de junio de 1858, en la Sala de Representantes del antiguo Capitolio de Illinois, horas después de que la convención republicana lo eligiera candidato al Senado contra Stephen A. Douglas. La primera frase es del Evangelio de Marcos, 3:25, y aparece también en Mateo y en Lucas. Él mismo la había usado antes, y en 1850 Sam Houston había dicho en el Senado que una nación dividida contra sí misma no puede sostenerse.",
+      "Lincoln perdió esa elección frente a Douglas. No inventó la imagen: la eligió porque todos la conocían, y la puso a decir algo que muchos no querían oír."
+    ],
+    "question": "¿Qué frase heredada dirías hoy para nombrar algo que nadie quiere oír?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AbrahamLincoln", "#CasaDividida", "#Citas"],
+    "extended": ["#EstadosUnidos", "#Esclavitud", "#Siglo19", "#Discursos", "#Historia", "#Springfield", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del discurso: «A house divided against itself cannot stand.» y «I believe this government cannot endure, permanently half slave and half free.»; Springfield, Illinois, 16 de junio de 1858, a las 8 de la noche en la Sala de Representantes, durante la convención republicana estatal. Lectura directa.",
+      "source": "Abraham Lincoln Online, House Divided Speech",
+      "url": "https://abrahamlincolnonline.abrahamlincolnonline.org/lincoln/speeches/house.htm"
+    },
+    {
+      "claim": "El discurso contiene ambas frases; 16 de junio de 1858, convención republicana de Illinois en Springfield, que lo había nombrado candidato al Senado; dirigido contra el senador Stephen A. Douglas, que no estaba presente. Lectura directa.",
+      "source": "National Park Service, Lincoln Home National Historic Site, House Divided Speech",
+      "url": "https://www.nps.gov/liho/learn/historyculture/housedivided.htm"
+    },
+    {
+      "claim": "La frase inicial cita Marcos 3:25, con paralelos en Mateo 12:25 y Lucas 11:17; la convención se reanudó a las 8 de la noche; Lincoln perdió frente a Douglas; Lincoln había usado la imagen en 1843 y en 1856; Sam Houston dijo en el debate del Compromiso de 1850 «A nation divided against itself cannot stand». Lectura directa.",
+      "source": "Wikipedia, Lincoln's House Divided Speech",
+      "url": "https://en.wikipedia.org/wiki/Lincoln%27s_House_Divided_Speech"
+    }
+  ],
+  "do_not_use": [
+    "Que el discurso fuera de aceptación formal de la candidatura: el NPS no lo dice así. La pieza dice que habló horas después de que lo eligieran.",
+    "Que Lincoln explicara que eligió la imagen por ser «universally known»: solo por resumen de búsqueda, sin fuente primaria leída. El último párrafo («la eligió porque todos la conocían») es una lectura razonable, no una cita; si se quiere endurecer, verificar antes con fuente primaria.",
+    "Que sus amigos consideraran el discurso demasiado radical: solo por resumen de búsqueda. No se usa.",
+    "El mecanismo de la derrota (la legislatura de Illinois eligió a Douglas en enero de 1859): no se leyó en fuente; la pieza dice solo que perdió.",
+    "Que la frase sea invento de Lincoln: falso, viene de los Evangelios y circulaba en la política de la época.",
+    "Que Lincoln ganara la presidencia en 1860 «gracias a este discurso»: no se afirma causalidad; la pieza solo dice que dos años después ganó.",
+    "La traducción al español es propia."
+  ],
+  "status": "draft"
+}

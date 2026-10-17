@@ -1,0 +1,58 @@
+{
+  "id": "2026-11-30-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Los moldes de yeso de Pompeya y el ADN de 2024",
+    "hook": "Durante décadas, uno de los moldes de Pompeya fue «la madre que abraza a su hijo». En 2024 el ADN dijo que era un hombre, y que el niño no era suyo.",
+    "body": [
+      "En el año 79, la erupción del Vesubio sepultó Pompeya. La ceniza endureció alrededor de los cuerpos, que con el tiempo se descompusieron y dejaron huecos. En 1863, el arqueólogo Giuseppe Fiorelli fue el primero en rellenar esos huecos con yeso líquido. Al retirar la ceniza aparecían las figuras, a menudo con los huesos dentro. Desde entonces se han hecho cerca de cien.",
+      "En noviembre de 2024, un equipo de la Universidad de Florencia y de Harvard publicó en Current Biology el análisis genético de 14 moldes que estaban en restauración. En la Casa del Brazalete de Oro, el adulto que lleva una pulsera y sostiene a un niño, leído siempre como madre e hijo, resultó ser un hombre sin parentesco con el niño. Otra pareja, tomada por hermanas o por madre e hija, incluía al menos un varón.",
+      "Los autores sugieren que los restauradores del pasado llegaron a modificar posturas y posiciones de los moldes para contar historias. Las figuras no mentían. Lo que mentía era la historia que se les puso encima."
+    ],
+    "question": "¿Qué historia damos por cierta solo porque encaja con lo que esperamos ver?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los moldes de Pompeya",
+    "subtitle": "Del yeso de 1863 al ADN de 2024",
+    "body": "Un adulto con brazalete de oro abraza a un niño. Se lo llamó madre durante décadas. El análisis genético de 2024 mostró que era un hombre, y que no era pariente del niño."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pompeya", "#Arqueologia", "#ADNAntiguo"],
+    "extended": ["#Vesubio", "#Roma", "#Italia", "#Historia", "#Ciencia", "#Antiguedad", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Giuseppe Fiorelli fue en 1863 el primero en conseguir reproducir las formas de las víctimas rellenando los huecos con yeso líquido (hubo intentos previos); desde el siglo XIX se han hecho «about a hundred plaster casts»; los cuerpos se descompusieron dejando huecos en la ceniza; las figuras contienen a menudo huesos. Lectura directa.",
+      "source": "Parque Arqueológico de Pompeya, The plaster casts of Pompeii: an itinerary through the eruption of AD 79",
+      "url": "https://pompeiisites.org/en/?p=69338"
+    },
+    {
+      "claim": "Pilli et al., «Ancient DNA challenges prevailing interpretations of the Pompeii plaster casts», Current Biology, 7 de noviembre de 2024; Harvard (Reich, Mittnik) y Università di Firenze (Caramelli); 14 de los 86 moldes en restauración; el adulto con brazalete de oro que sostiene a un niño era «an unrelated adult male and child»; una pareja tomada por hermanas o madre e hija incluía al menos un varón genético; ascendencia mayoritaria de inmigrantes recientes del Mediterráneo oriental. Lectura directa.",
+      "source": "Popular Archaeology, DNA evidence rewrites histories for people buried in volcanic eruption in ancient Pompeii",
+      "url": "https://popular-archaeology.com/article/dna-evidence-rewrites-histories-for-people-buried-in-volcanic-eruption-in-ancient-pompeii"
+    },
+    {
+      "claim": "Erupción del año 79; 14 moldes en restauración; relaciones, sexo, ascendencia y movilidad de cinco individuos; adulto y niño eran «an unrelated adult male and child»; los autores sugieren que el uso narrativo de los moldes llevó a «past restorers modifying their postures and placements»; moldes de la Casa del Brazalete de Oro hechos en 1974. Lectura directa.",
+      "source": "LabOnline, Ancient DNA rewrites the stories of those preserved at Pompeii",
+      "url": "https://labonline.com.au/content/life-scientist/article/ancient-dna-rewrites-the-stories-of-those-preserved-at-pompeii-919699756"
+    },
+    {
+      "claim": "Ficha del artículo: Current Biology 34, 5307-5318 (2024), DOI 10.1016/j.cub.2024.10.007, con lista completa de autores. Solo por resumen de búsqueda; el PDF del laboratorio Reich no se leyó.",
+      "source": "Reich Lab, Harvard Medical School, PDF del artículo",
+      "url": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/2024_CurrentBiology_Pompeii_2.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Que los cuatro individuos de la Casa del Brazalete de Oro fueran todos varones: parte de la prensa lo dice, otra no; la pieza solo afirma lo del adulto del brazalete y el niño.",
+    "Que el molde de la Casa del Brazalete de Oro sea de la época de Fiorelli: LabOnline fecha esos moldes en 1974. La pieza no le atribuye fecha.",
+    "Que los escaneos de 26 moldes en 2015 mostraran huesos retirados y elementos añadidos (estudio publicado por Cambridge en 2020): solo por resumen de búsqueda. No se usa.",
+    "Que Fiorelli inventara la idea de la nada: el Parque Arqueológico dice que hubo intentos previos; la pieza dice que fue «el primero en rellenar» con éxito, en la formulación del Parque («the first to succeed»). No escribir «inventó».",
+    "La fecha exacta de la erupción (24 de agosto u octubre del 79): disputada; la pieza dice solo «en el año 79».",
+    "Que se hayan hecho exactamente cien moldes: el Parque dice «about a hundred»; los moldes en restauración eran 86. La pieza dice «cerca de cien»."
+  ],
+  "status": "draft"
+}

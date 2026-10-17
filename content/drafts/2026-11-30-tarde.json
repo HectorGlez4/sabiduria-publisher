@@ -1,0 +1,63 @@
+{
+  "id": "2026-11-30-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Nebrija y la lengua compañera del imperio (1492)",
+    "hook": "La frase más famosa de la primera gramática del castellano no celebra una lengua: advierte que las lenguas caen junto con quien las impone.",
+    "quote": {
+      "text": "Siempre la lengua fue compañera del imperio.",
+      "author": "Antonio de Nebrija",
+      "work": "Gramática de la lengua castellana, prólogo a la reina Isabel (Salamanca, 1492)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Antonio de Nebrija la escribió en el prólogo de su Gramática de la lengua castellana, impresa en Salamanca el 18 de agosto de 1492 y dedicada a Isabel I de Castilla. Era la primera gramática sistemática de una lengua europea moderna.",
+      "La frase no termina ahí. Nebrija sigue: lengua e imperio empezaron juntos, crecieron y florecieron juntos, y juntos cayeron. Pensaba en el hebreo, el griego y el latín, y quería fijar el castellano con reglas para que no se perdiera como se habían perdido aquellos.",
+      "En el mismo prólogo cuenta una escena. Cuando presentó la obra a la reina en Salamanca, ella le preguntó para qué podía servir, y el obispo de Ávila le arrebató la respuesta: los pueblos sometidos tendrían que recibir las leyes del vencedor, y con ellas su lengua. Cinco siglos después, la frase se cita como elogio. En el original también es un aviso."
+    ],
+    "question": "¿Qué palabras de tu lengua llegaron con alguien que mandaba?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Nebrija", "#LenguaCastellana", "#Citas"],
+    "extended": ["#Gramatica", "#1492", "#Salamanca", "#Espanol", "#Historia", "#Humanismo", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Traducción del prólogo con aparato crítico: el pasaje «language was always the companion [compañera] of empire», seguido de que ambos se alzaron juntos y después cayeron juntos; la Gramática se imprimió en Salamanca el 18 de agosto de 1492, modelada sobre su gramática latina y dedicada a Isabel I de Castilla. Lectura directa de la página del artículo (Armillas-Tiseyra, PMLA 131.1, enero de 2016, pp. 197-208).",
+      "source": "PMLA, «On Language and Empire: The Prologue to Grammar of the Castilian Language (1492)», trad. Magalí Armillas-Tiseyra",
+      "url": "https://cambridge.org/core/journals/pmla/article/on-language-and-empire-the-prologue-to-grammar-of-the-castilian-language-1492/E080CD4593DBAE042EF1271A6B17EC2B"
+    },
+    {
+      "claim": "La línea del prólogo «siempre la lengua fue compañera del imperio»; obra de agosto de 1492 dedicada a Isabel la Católica; Nebrija admite que Isabel le preguntó «para qué podía aprovechar»; fechas de Nebrija, 1444-1522. Lectura directa (Luis Castellví Laukamp, 1 de mayo de 2022).",
+      "source": "The Objective, artículo sobre el centenario de Antonio de Nebrija",
+      "url": "https://theobjective.com/elsubjetivo/categoria/2022-05-01/antonio-nebrija-centenario/"
+    },
+    {
+      "claim": "Cita del prólogo según la edición de Antonio Quilis (Editora Nacional, 1980): la reina «me preguntó que para qué podía aprovechar, el mui reverendo padre Obispo de Ávila me arrebató la respuesta» (p. 101), y el papel de la lengua «como compañera del Imperio» (p. 97); la escena ocurre en Salamanca. Lectura directa (Juan Luis Monreal Pérez).",
+      "source": "Almudí, «Nebrija y su tiempo: la construcción de la lengua»",
+      "url": "https://www.almudi.org/articulos/16297-nebrija-y-su-tiempo-la-construccion-de-la-lengua"
+    },
+    {
+      "claim": "Texto en grafía original: «que siempre la lengua fue compañera del imperio; et de tal manera lo siguió, que junta mente començaron, crecieron et florecieron, et después junta fue la caida de entrambos». Solo por resumen de búsqueda: las ediciones en PDF (Biblioteca Antológica, RAE) no se pudieron leer.",
+      "source": "Resumen de búsqueda sobre el prólogo; edición de referencia: Antonio Quilis, Editora Nacional, 1980, p. 97",
+      "url": "https://www.biblioteca-antologica.org/es/wp-content/uploads/2017/10/NEBRIJA-Gramática.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Que la Gramática fuera un instrumento pensado para América: se imprimió en agosto de 1492, el mismo mes en que zarpó Colón; un comentarista sostiene que los «pueblos bárbaros» del obispo eran los de África. No se dice ni lo uno ni lo otro.",
+    "Que fuera símbolo lingüístico del imperio de Carlos V: un artículo de la UNAM lo llama mito difundido. No se usa.",
+    "Que el obispo de Ávila fuera Hernando de Talavera y que la escena fuera en 1486: solo por resúmenes de búsqueda. La pieza dice solo «el obispo de Ávila» y «en Salamanca».",
+    "Que la idea venga de Lorenzo Valla o de Gonzalo García de Santa María: solo por resumen de búsqueda (Eugenio Asensio). No se incluye.",
+    "Que se conserven 17 ejemplares de la primera edición: solo por resumen de búsqueda. No se usa.",
+    "«Primera gramática de una lengua europea moderna»: lo sostiene la presentación de PMLA como «systematization of a modern vernacular»; la pieza lo matiza como «sistemática». No ampliar a «primera gramática del mundo».",
+    "Que la frase sea una celebración del imperio: el prólogo la usa también como advertencia de caída conjunta; la lectura del último párrafo es interpretación de la redacción.",
+    "Verificación incompleta: el texto español completo del pasaje solo se vio en resúmenes de búsqueda; las ediciones en PDF no se pudieron leer. Lo citado en quote.text («Siempre la lengua fue compañera del imperio») sí está confirmado por tres fuentes leídas. Revisar contra la edición de Quilis o de Carmen Lozano (RAE) antes de encolar."
+  ],
+  "status": "draft"
+}

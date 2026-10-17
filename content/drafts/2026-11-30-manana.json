@@ -1,0 +1,53 @@
+{
+  "id": "2026-11-30-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Ibn Battuta y el dictado de la Rihla en Fez",
+    "hook": "El viajero más famoso del islam medieval no escribió su libro: lo dictó de memoria en Fez, casi treinta años después de salir de casa.",
+    "body": [
+      "Ibn Battuta nació en Tánger en 1304 y partió hacia La Meca en junio de 1325, a los 21 años. No volvió a Marruecos en 24 años. Recorrió el norte de África, Arabia, Persia, Anatolia, la India y, según su relato, China.",
+      "Al regresar a Fez en 1354, el sultán meriní Abu Inan le pidió que contara sus viajes, y encargó la redacción a Ibn Juzayy, un joven letrado que Ibn Battuta había conocido en Granada. El libro se terminó hacia 1355. No hay indicio de que Ibn Battuta llevara diario: habló de memoria. Y para llenar huecos, Ibn Juzayy copió sin decirlo las descripciones de Damasco, La Meca y Medina que otro viajero, Ibn Jubayr, había escrito más de un siglo antes.",
+      "Es la única fuente sobre sus viajes. Por eso los historiadores dudan de algunos tramos, como la visita a China o el viaje por el Volga. Y por eso es también un recordatorio: casi todo lo que sabemos de él nos llegó por la voz de otro."
+    ],
+    "question": "¿Cuánto de lo que recuerdas de un viaje es lo que viste, y cuánto lo que contaste después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Ibn Battuta",
+    "subtitle": "Fez, hacia 1355",
+    "body": "Viajó durante casi treinta años y no llevó diario. Contó sus viajes de memoria a un escriba, Ibn Juzayy, que completó los huecos con páginas de otro viajero de un siglo antes."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#IbnBattuta", "#Rihla", "#Viajeros"],
+    "extended": ["#Marruecos", "#Fez", "#EdadMedia", "#Islam", "#Historia", "#Siglo14", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Nacido el 24 de febrero de 1304 en Tánger; salida el 2 de rayab de 725 (14 de junio de 1325) a los 21 años; no volvió a Marruecos en 24 años; tras volver en 1354 dictó su relato a Ibn Juzayy, conocido en Granada, a sugerencia de Abu Inan Faris; obra terminada en 1355; Ibn Juzayy copió sin reconocerlo pasajes de Ibn Jubayr sobre Damasco, La Meca y Medina; «There is no indication that Ibn Battuta made any notes or had any journal»; el relato es la única fuente de sus viajes; dudas sobre el viaje a Bolghar en el Volga y sobre China. Lectura directa en dos tramos (0-200.000 caracteres).",
+      "source": "Wikipedia, Ibn Battuta",
+      "url": "https://en.wikipedia.org/wiki/Ibn_Battuta"
+    },
+    {
+      "claim": "Tras volver a Fez en 1354, el sultán le ordenó quedarse y dictar su relato; contrató a Ibn Juzayy, a quien Ibn Battuta había conocido en Granada tres años antes; Ibn Juzayy tomó de Ibn Jubayr, viajero del siglo XII, las descripciones de La Meca, Medina y Damasco. Lectura directa.",
+      "source": "ORIAS, Universidad de California en Berkeley, The Travels of Ibn Battuta: Writing the Rihla, 1355",
+      "url": "https://orias.berkeley.edu/resources-teachers/travels-ibn-battuta/journey/writing-rihla-1355"
+    },
+    {
+      "claim": "El sultán Abu Inan pidió que su historia se pusiera por escrito, con el escriba Ibn Juzay al-Kalbi; Ibn Battuta «kept no travel journal and relied wholly on his memory»; los pasajes de Damasco, La Meca y Medina son idénticos a los de Ibn Jubayr (1145-1217). Lectura directa (Joshua J. Mark, 2019).",
+      "source": "World History Encyclopedia, Ibn Battuta",
+      "url": "https://www.worldhistory.org/Ibn_Battuta/"
+    }
+  ],
+  "do_not_use": [
+    "La distancia total recorrida: Wikipedia da unos 117.000 km y World History Encyclopedia 120.000 km (75.000 millas). Cifra disputada y redondeada; no se usa.",
+    "La fecha exacta de terminación: Wikipedia (Abu Inan Faris) dice diciembre de 1355; World History Encyclopedia, «c. 1352-1355»; Berkeley solo fecha la introducción en 1354. La pieza dice «hacia 1355».",
+    "Que perdiera sus notas a manos de piratas: Wikipedia recoge en nota que mencionó un robo de notas, pero el texto principal dice que no hay indicio de diario. No se usa la historia del robo.",
+    "Que visitara China con certeza: disputado; la pieza dice «según su relato».",
+    "Comparaciones con Marco Polo (distancias, préstamos compartidos): solo en Wikipedia y discutidas; no se incluyen.",
+    "Que el sultán lo encargara «para entretener a su familia»: solo lo afirma la página de Berkeley; no se usa."
+  ],
+  "status": "draft"
+}
