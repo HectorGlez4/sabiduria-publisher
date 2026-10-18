@@ -1,0 +1,72 @@
+{
+  "id": "2026-12-03-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Saramago y el epígrafe del Ensayo sobre la ceguera",
+    "hook": "La frase que abre la novela más dura de Saramago dice venir de un libro antiguo de consejos. Ese libro, según quienes estudian su obra, nunca existió.",
+    "quote": {
+      "text": "Si puedes mirar, ve. Si puedes ver, repara.",
+      "author": "José Saramago",
+      "work": "Ensayo sobre la ceguera (1995), epígrafe atribuido al Libro de los Consejos",
+      "attribution_verified": true
+    },
+    "body": [
+      "José Saramago publicó Ensaio sobre a Cegueira en 1995, en la editorial Caminho de Lisboa. En la novela, una ceguera blanca se contagia de persona en persona y solo la mujer de un médico conserva la vista. Antes de la primera página puso una línea de tres verbos y la firmó con un título: Livro dos Conselhos, Libro de los Consejos.",
+      "Quien busque ese libro no lo encontrará. Los estudiosos de su obra lo consideran una invención del propio autor, una manera de presentar como sabiduría heredada una idea suya. Saramago repitió el recurso en otras novelas: varios de sus epígrafes salen de libros que solo existen en su firma.",
+      "Los verbos suben de grado. Mirar es poner los ojos. Ver es que algo llegue. Reparar es detenerse en lo que se vio. La novela entera cuenta lo que pasa cuando una sociedad mira sin ver. Tres años después de publicarla, en 1998, Saramago recibió el Nobel de Literatura."
+    ],
+    "question": "¿En qué te has detenido hoy de verdad, y qué solo miraste?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Saramago", "#EnsayoSobreLaCeguera", "#Citas"],
+    "extended": ["#Literatura", "#Portugal", "#Nobel", "#Siglo20", "#Lectura", "#LiteraturaPortuguesa", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Discurso de clausura del centenario (Carlos Reis, Teatro Nacional de São Carlos, Lisboa, 16 de noviembre de 2022): cita «Se podes olhar, vê. Se podes ver, repara» como «palavras inscritas no Livro dos Conselhos»; trayectoria «culminadas no Prémio Nobel da Literatura, em 1998». Lectura directa.",
+      "source": "Fundação José Saramago, «José Saramago: One Hundred Years Later»",
+      "url": "https://www.josesaramago.org/en/centenary-notebooks/jose-saramago-one-hundred-years-later/"
+    },
+    {
+      "claim": "«A frase é a epígrafe de Ensaio sobre a Cegueira, romance publicado em 1995, conforme a ficha da obra mantida pela Fundação José Saramago»; «No livro, o escritor atribui o conselho a um “Livro dos Conselhos”»; «Estudiosos da obra apontam que esse volume é imaginário, uma invenção do próprio autor»; solo la mujer de un médico sigue viendo. Lectura directa.",
+      "source": "O Antagonista, «José Saramago, Nobel de Literatura: “Se podes olhar, vê. Se podes ver, repara.”»",
+      "url": "https://oantagonista.com.br/ladooa/entretenimento/jose-saramago-nobel-de-literatura-se-podes-olhar-ve-se-podes-ver-repara-uma-reflexao-sobre-prestar-atencao-ao-que-realmente-importa/"
+    },
+    {
+      "claim": "Texto castellano del epígrafe: «Una cita encabeza el Ensayo sobre la ceguera: “Si puedes mirar, ve. Si puedes ver, repara”» (Antonio Fernández Vicente, Universidad de Castilla-La Mancha). Lectura directa.",
+      "source": "OnCubaNews, «El caos contado por José Saramago»",
+      "url": "https://oncubanews.com/ecos/el-caos-contado-por-jose-saramago"
+    },
+    {
+      "claim": "Primera edición: Editorial Caminho (Portugal), 1995. Lectura directa.",
+      "source": "Wikipedia en portugués, Ensaio sobre a Cegueira",
+      "url": "https://pt.wikipedia.org/wiki/Ensaio_sobre_a_Cegueira"
+    },
+    {
+      "claim": "Los epígrafes de Saramago salen de libros inventados por él (Livro dos Conselhos, Livro dos Itinerários, Livro das Visões); un librero lo llama «o truque narrativo do mestre, que inventava os livros de onde tiraria as epígrafes». Lectura directa.",
+      "source": "Diário do Nordeste, Socorro Acioli, «A mágica da literatura de Saramago»",
+      "url": "https://diariodonordeste.verdesmares.com.br/opiniao/colunistas/socorro-acioli/a-magica-da-literatura-de-saramago-1.3160098"
+    },
+    {
+      "claim": "Elsa Rita dos Santos: casi todos los epígrafes de Saramago «provêm do quimérico Livro dos Conselhos, da autoria do próprio Saramago». Solo visto en el extracto del buscador; el PDF no se pudo leer.",
+      "source": "Elsa Rita dos Santos, Roma TrE-Press (2026)",
+      "url": "https://romatrepress.uniroma3.it/wp-content/uploads/2026/01/16.-Elsa-Rita-dos-Santos.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Que el epígrafe venga del Livro dos Conselhos de El-Rei D. Duarte (el códice real del siglo XV): lo afirman páginas de citas sin comprobación; ninguna fuente académica leída lo sostiene, y las que se pronuncian hablan de un libro imaginario.",
+    "Que el epígrafe sea una frase de Saramago dicha en entrevistas o discursos: es la línea impresa al frente de la novela. No se presenta como declaración oral.",
+    "La otra frase que algún comentario da como epígrafe, «Só num mundo de cegos as coisas são o que verdadeiramente são»: no confirmada como epígrafe. No se usa.",
+    "Que todos los epígrafes de Saramago salgan del Livro dos Conselhos: hay otros libros inventados (Livro dos Itinerários, Livro das Visões). La pieza dice «varios de sus epígrafes salen de libros que solo existen en su firma».",
+    "El nombre del traductor al castellano y el año de la edición de Alfaguara: no verificados en esta ejecución. No se mencionan.",
+    "La frase «Creo que no nos quedamos ciegos, creo que estamos ciegos…»: es de la novela, no del epígrafe; ajena a esta pieza.",
+    "El doble sentido de «reparar» en castellano (arreglar y advertir): la RAE no se pudo consultar (403). La pieza usa solo el sentido de advertir, el del original portugués."
+  ],
+  "status": "draft"
+}

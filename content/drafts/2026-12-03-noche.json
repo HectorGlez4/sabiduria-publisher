@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-03-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "La Piedra del Sol y su hallazgo de 1790",
+    "hook": "La pieza más famosa de México pasó dos siglos boca abajo bajo la plaza mayor. Cuando salió, la colgaron casi cien años en la torre de una catedral.",
+    "body": [
+      "Después de la conquista, el gran disco de basalto mexica quedó a la vista en la plaza de la ciudad de México. En la segunda mitad del siglo XVI, el arzobispo Alonso de Montúfar ordenó voltearlo y enterrarlo. Mide unos 3,6 metros de diámetro y pesa cerca de veinticuatro toneladas.",
+      "El 17 de diciembre de 1790, unos obreros que nivelaban y empedraban la plaza lo encontraron por azar. Hubo quien quiso volver a enterrarlo. El erudito Antonio de León y Gama lo estudió, defendió su valor y en 1792 publicó el primer tratado sobre el monumento. Desde 1791 la piedra quedó empotrada en vertical en la torre poniente de la Catedral Metropolitana. Allí siguió hasta 1885, cuando pasó a la galería de monolitos del Museo Nacional. En 1964 llegó a su sala actual en Chapultepec.",
+      "Durante todo ese tiempo se la llamó Calendario Azteca. El Museo Nacional de Antropología, que la custodia, aclara que expresa la idea mexica del tiempo, pero que no funcionaba como calendario. El Getty la describe como un altar de sacrificios, un cuauhxicalli. El nombre más repetido de la pieza más conocida es, probablemente, el menos exacto."
+    ],
+    "question": "¿Cuántas cosas conoces mejor por su apodo que por lo que son?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Piedra del Sol",
+    "subtitle": "Enterrada, hallada en 1790, colgada en una catedral",
+    "body": "Un arzobispo del siglo XVI la mandó enterrar boca abajo. El 17 de diciembre de 1790 reapareció bajo la plaza mayor de México. Pasó casi un siglo en la torre de la catedral. El museo que la guarda dice que no funcionaba como calendario."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PiedraDelSol", "#Mexicas", "#Arqueologia"],
+    "extended": ["#Mexico", "#Tenochtitlan", "#HistoriaDeMexico", "#Siglo18", "#Mesoamerica", "#MuseoNacionalDeAntropologia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Ficha del Museo Nacional de Antropología: «On December 17th 1790, after 200 years buried, was found fortuitously under the floor of the Plaza de la Constitucion»; en la segunda mitad del siglo XVI el arzobispo Alonso de Montúfar «ordered to turn it face-down and to bury it»; «installed on vertical position at the west tower of the Catedral Metropolitana»; «On 1885 was transferred for its protection to the Galeria de Monolitos del Museo Nacional»; «on 1964 was transferred to the Bosque de Chapultepec»; «it did not work as a calendar». Lectura directa.",
+      "source": "Google Arts & Culture, Museo Nacional de Antropología, «Piedra del Sol»",
+      "url": "https://artsandculture.google.com/asset/piedra-del-sol-unknown/9QF3u2yNtD8ufQ"
+    },
+    {
+      "claim": "«was rediscovered in 1790 and mounted on one of the towers of the Catedral metropolitan, where it remained until 1885»; León y Gama encargó a Francisco de Agüera la primera imagen, que ilustró «the first treatise on the monument, published in 1792»; «it is not a calendar; rather, it is a sacrificial altar», llamado cuauhxicalli. Lectura directa.",
+      "source": "Getty Research Institute, exposición «Obsidian Mirror-Travels», «Aztec Calendar Stone»",
+      "url": "https://www.getty.edu/research/exhibitions_events/exhibitions/obsidian_mirror/aztec_calendar_stone.html"
+    },
+    {
+      "claim": "Hallada el 17 de diciembre de 1790 en el Zócalo durante obras de nivelación; Montúfar (arzobispo 1551-1572) ordenó enterrarla según Diego Durán; León y Gama ayudó a impedir que se volviera a enterrar y publicó en 1792; colocada en la torre oeste de la catedral en 1791 hasta agosto de 1885; en el Museo Nacional de Antropología desde 1964; unos 3,6 m de diámetro, 98 cm de grosor y 24.590 kg; no es un calendario funcional. Lectura directa.",
+      "source": "Wikipedia, Aztec sun stone",
+      "url": "https://en.wikipedia.org/wiki/Aztec_sun_stone"
+    },
+    {
+      "claim": "En diciembre de 1790 obreros que excavaban en la Plaza Mayor hallaron la piedra; en julio de 1791 se expuso en el costado occidental de la Catedral Metropolitana; es un calendario solo «in one sense», «ceremonial rather than practical». Contenido aportado por el Museo Nacional de Antropología. Lectura directa.",
+      "source": "Google Arts & Culture, «Decoding the Sun Stone»",
+      "url": "https://artsandculture.google.com/story/decoding-the-sun-stone/CwUBgE-UXSRhLw?hl=en"
+    }
+  ],
+  "do_not_use": [
+    "Medidas exactas del lugar del hallazgo (60 m o 66,8 m al oeste del palacio, 40 o 40,8 cm de profundidad): las cifras varían entre fuentes al convertir varas. No se usan.",
+    "Fechas del arzobispado de Montúfar: Chavero (Anales del Museo Nacional) da 1551-1559 para la orden; Wikipedia da su arzobispado 1551-1572. La pieza dice «segunda mitad del siglo XVI».",
+    "La identidad del rostro central: Tonatiuh según la ficha del museo y la mayoría; Tlaltecuhtli (Townsend), Yohualtecuhtli o Xiuhtecuhtli según otros. No se afirma ninguna.",
+    "La fecha de talla: entre 1502 y 1520 por el glifo de Moctezuma II según Wikipedia; otras fuentes la relacionan con 1479 o con Axayácatl. No se fecha la talla.",
+    "Que la piedra se trasladara al Museo Nacional de Antropología en 1885: en 1885 fue a la Galería de Monolitos del Museo Nacional de la calle de Moneda; Chapultepec es de 1964.",
+    "Que León y Gama fuera «antropólogo»: lo llaman así algunos medios; era astrónomo y matemático novohispano. La pieza dice «erudito».",
+    "El peso: 24.590 kg (Wikipedia) frente a 482 quintales (Chavero). La pieza dice «cerca de veinticuatro toneladas».",
+    "Que fuera una pieza de consulta pública del calendario: idea atribuida a Chavero, no confirmada."
+  ],
+  "status": "draft"
+}

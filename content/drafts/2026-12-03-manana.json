@@ -1,0 +1,64 @@
+{
+  "id": "2026-12-03-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Tycho Brahe y la estrella nueva de 1572",
+    "hook": "La noche del 11 de noviembre de 1572 apareció una estrella donde no había ninguna. Un danés de veinticinco años decidió medirla en lugar de explicarla.",
+    "body": [
+      "Tycho Brahe la vio en la constelación de Casiopea, casi encima de su cabeza. Llamó a su ayudante para confirmar que no era un error de sus ojos. Unos días después la estrella brillaba como Venus y podía verse incluso de día. Siguió a simple vista hasta comienzos de 1574.",
+      "La doctrina de Aristóteles decía que más allá de la Luna nada cambia: lo nuevo, como los cometas, tenía que ocurrir cerca de la Tierra. Brahe midió la posición de la estrella frente a sus vecinas noche tras noche. No se movía, ni mostraba el pequeño desplazamiento que delata a un objeto cercano. Estaba más lejos que la Luna, entre las estrellas fijas. El cielo inmutable había cambiado.",
+      "En 1573 publicó en Copenhague un librito con un título largo, De nova et nullius aevi memoria prius visa stella: sobre la estrella nueva, nunca vista antes en la memoria de ninguna época. De esa nova stella viene la palabra nova, y después supernova. Pocos años más tarde el rey Federico II le cedió la isla de Hven para que siguiera midiendo el cielo."
+    ],
+    "question": "¿Qué certeza heredada aguantaría si te pusieras a medirla con cuidado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Tycho Brahe y la estrella de 1572",
+    "subtitle": "Una medida que contradijo a Aristóteles",
+    "body": "El 11 de noviembre de 1572 apareció en Casiopea una estrella tan brillante como Venus. Tycho Brahe midió su posición noche tras noche: no se movía. Estaba más allá de la Luna, donde según Aristóteles nada cambiaba."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TychoBrahe", "#Supernova", "#HistoriaDeLaCiencia"],
+    "extended": ["#Astronomia", "#Casiopea", "#Siglo16", "#Aristoteles", "#Ciencia", "#Estrellas", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Brahe observó la estrella la noche del 11 de noviembre de 1572 en Casiopea; no encontró paralaje diaria frente a las estrellas fijas, así que estaba más lejos que la Luna, y no se movía respecto a ellas, así que no era un planeta; los astrónomos de su tiempo sostenían que debía estar en la esfera terrestre porque el firmamento debía ser inmutable; publicó su tratado al año siguiente, 1573; Federico II le concedió Hven, donde construyó Uraniborg. Lectura directa.",
+      "source": "APS News, «This Month in Physics History: November 11, 1572: Tycho Brahe spots a supernova» (noviembre de 2019)",
+      "url": "https://www.aps.org/apsnews/2019/11/tycho-brahe-spots-supernova"
+    },
+    {
+      "claim": "El 11 de noviembre de 1572 vio «an extra star in the constellation of Cassiopeia, almost directly overhead» e hizo llamar a su ayudante para confirmar que la estrella estaba allí; tras su regreso a fines de 1575 el rey le ofreció la isla de Hven. Lectura directa.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, «Tycho Brahe»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Brahe/"
+    },
+    {
+      "claim": "«En 1573, Tycho publie à Copenhague un ouvrage sur la nouvelle étoile», De nova et nullius aevi memoria prius visa stella; «Aussi brillante que Vénus, elle est visible même en plein jour»; «Aristote affirme que tout est immuable dans le monde des étoiles»; la estrella desapareció a fines de marzo de 1574. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Une étoile nouvelle jamais vue auparavant (T. Brahe)»",
+      "url": "https://www.universalis.fr/encyclopedie/une-etoile-nouvelle-jamais-vue-auparavant-t-brahe/"
+    },
+    {
+      "claim": "Brillo máximo cercano a magnitud −4, comparable a Venus, hacia el 16 de noviembre de 1572; visible a simple vista hasta comienzos de 1574; el libro De nova et nullius aevi memoria prius visa stella se publicó en 1573; la supernova desafió el dogma aristotélico de la inmutabilidad de las estrellas; fue descubierta de forma independiente por muchos observadores. Lectura directa.",
+      "source": "Wikipedia, SN 1572",
+      "url": "https://en.wikipedia.org/wiki/SN_1572"
+    },
+    {
+      "claim": "El rey Federico II de Dinamarca le ofreció la isla de Hven y los medios para construir residencia y observatorio; la primera piedra de Uraniborg se colocó el 8 de agosto de 1576. Resultado de búsqueda, no leído en página completa.",
+      "source": "World History Encyclopedia, «Tycho Brahe»",
+      "url": "https://www.worldhistory.org/trans/it/1-19615/tycho-brahe/"
+    }
+  ],
+  "do_not_use": [
+    "Que Tycho fuera el primero en ver la estrella: muchos europeos la observaron de forma independiente en noviembre de 1572 (Wikipedia, SN 1572). La pieza no dice que la descubriera.",
+    "Dónde estaba exactamente esa noche: unas fuentes lo sitúan volviendo a casa a cenar, otras en el laboratorio de la abadía de Herrevad. No se nombra el lugar.",
+    "El año del libro: MacTutor dice que sus observaciones se publicaron en 1574; APS, Universalis, Wikipedia y el pie de imprenta de Copenhague (Lorentz Benedicht) dan 1573. La pieza sigue 1573.",
+    "La designación SN 1574 que usa un texto de APS News: el objeto es SN 1572.",
+    "Que con esto Tycho apoyara a Copérnico: no lo hizo; rechazó el movimiento de la Tierra precisamente porque no detectaba paralaje estelar.",
+    "La nariz cortada en un duelo en Rostock (1566) y otras anécdotas: ciertas, pero ajenas a esta pieza.",
+    "La fecha exacta de la cesión de Hven: las fuentes leídas no la dan; solo la primera piedra de Uraniborg (1576). La pieza dice «pocos años más tarde»."
+  ],
+  "status": "draft"
+}

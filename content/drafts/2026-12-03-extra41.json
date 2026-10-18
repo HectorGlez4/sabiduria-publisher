@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-03-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Chéjov y la carta a su hermano Alexandr (1889)",
+    "hook": "La frase más citada sobre escribir corto viene de una carta entre hermanos. Justo antes, Chéjov le pide que no pula nada y que no tema escribir tonterías.",
+    "quote": {
+      "text": "La brevedad es hermana del talento.",
+      "author": "Antón Chéjov",
+      "work": "Carta a su hermano Alexandr, 11 de abril de 1889 (Cartas, t. 3, ed. Nauka, 1976)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 11 de abril de 1889, en Moscú, Antón Chéjov respondió a su hermano mayor, Alexandr, que había escrito una obra de teatro. Primero, consejos prácticos: que se la enseñara a alguien con experiencia, que con el editor Suvorin bastaba, y que corrigiera antes de mandarla a la censura. Después vino el consejo de oficio.",
+      "Que intentara ser original y, si podía, inteligente, pero sin miedo a parecer tonto. Que hacía falta libertad de pensamiento, y que solo es libre quien no teme escribir tonterías. Que no lamiera ni puliera el texto: que fuera torpe y atrevido. Y entonces, en cuatro palabras rusas: la brevedad es hermana del talento.",
+      "La línea siguiente le recordaba que las declaraciones de amor, las infidelidades y las lágrimas de viudas y huérfanos ya estaban escritas hacía mucho. Leída sola, la frase parece una regla de recorte. En la carta es parte de algo más incómodo: atreverse, decir lo nuevo y no adornarlo."
+    ],
+    "question": "¿Qué dejarías de pulir si no tuvieras miedo de parecer torpe?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Chejov", "#Escritura", "#Citas"],
+    "extended": ["#LiteraturaRusa", "#Cartas", "#Siglo19", "#Rusia", "#Teatro", "#Oficio", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la carta 632, «Ал. П. ЧЕХОВУ, 11 апреля 1889 г. Москва», en la edición académica (Полное собрание сочинений и писем в 30 т., Письма в 12 т., М., Наука, 1976, т. 3): «Одного Суворина совершенно достаточно»; «Не отдавай в цензуру, прежде чем не сделаешь поправок»; «Мой совет: в пьесе старайся быть оригинальным и по возможности умным, но не бойся показаться глупым; нужно вольнодумство, а только тот вольнодумец, кто не боится писать глупостей. Не зализывай, не шлифуй, а будь неуклюж и дерзок. Краткость — сестра таланта. Памятуй кстати, что любовные объяснения, измены жен и мужей, вдовьи, сиротские и всякие другие слезы давно уже описаны». Lectura directa.",
+      "source": "Викитека, «Письма. (Октябрь 1888 — декабрь 1889) (Чехов)», reproducción de la edición Nauka, 1976",
+      "url": "https://ru.wikisource.org/wiki/%D0%9F%D0%B8%D1%81%D1%8C%D0%BC%D0%B0._(%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C_1888_-_%D0%B4%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C_1889)_(%D0%A7%D0%B5%D1%85%D0%BE%D0%B2)"
+    },
+    {
+      "claim": "Carta número 632, Чехов — Чехову Ал. П., 11 de abril de 1889; referencia: Полное собрание сочинений и писем в 30 т., Письма, т. 3, Наука, 1976, pp. 188-189. Lectura directa del encabezado y la referencia (el cuerpo de la página tiene la codificación rota).",
+      "source": "chehov-lit.ru, «Чехов — Чехову Ал. П., 11 апреля 1889»",
+      "url": "https://chehov-lit.ru/chehov/letters/1888-1889/letter-632.htm"
+    },
+    {
+      "claim": "Origen de la expresión: carta de Chéjov a su hermano Alexandr del 11 de abril de 1889, con la cita «Не зализывай, не шлифуй, а будь неуклюж и дерзок»; referencia a Полн. собр. соч., т. XIV, М., 1949. Lectura directa.",
+      "source": "Энциклопедический словарь крылатых слов и выражений (Вадим Серов, Локид-Пресс, 2003), en dic.academic.ru",
+      "url": "https://dic.academic.ru/dic.nsf/dic_wingwords/1283/%D0%9A%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D1%81%D1%82%D1%8C"
+    },
+    {
+      "claim": "«В этот день в 1889-м году Антон Чехов в письме брату Александру впервые использовал фразу “Краткость — сестра таланта”» (artículo del 23 de abril de 2024: el 23 de abril del calendario gregoriano corresponde al 11 de abril del calendario juliano vigente en Rusia en 1889). Lectura directa.",
+      "source": "Родина (revista histórica), «135 лет назад Чехов придумал фразу “Краткость — сестра таланта”»",
+      "url": "https://rodina-history.ru/2024/04/23/135-let-nazad-chehov-pridumal-frazu-kratkost-sestra-talanta.html"
+    }
+  ],
+  "do_not_use": [
+    "La fecha del 23 de abril de 1889 (Rodina, un blog de LiveJournal): es la misma carta en calendario gregoriano; la edición académica la fecha el 11 de abril, estilo antiguo. La pieza usa la fecha de la edición.",
+    "La «continuación» de la frase que circula en internet («…y madrastra de los honorarios» y variantes): sin carta ni edición que la respalde. No se usa.",
+    "Que la frase sea un consejo de recortar por recortar: en la carta va unida a la petición de atrevimiento y originalidad. La pieza la presenta en contexto.",
+    "El título de la obra de Alexandr: la carta dice solo «твоя пьеса»; no se nombra.",
+    "Equipararla con «Brevity is the soul of wit» de Hamlet (II, 2): idea parecida, frase distinta, y en Shakespeare la dice Polonio, un charlatán. No se mezcla.",
+    "La traducción castellana de la cita es propia, literal desde el ruso de la edición Nauka; no se atribuye a ningún traductor publicado.",
+    "La página de chehov-lit.ru da en un extracto la fecha «11 января»: es un error de lectura de la codificación rota; el resto de fuentes y la edición en Wikisource dan 11 de abril."
+  ],
+  "status": "draft"
+}
