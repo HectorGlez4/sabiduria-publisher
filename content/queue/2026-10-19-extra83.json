@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-19-extra41",
+  "id": "2026-10-19-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Mandela y el final del discurso de Rivonia",
     "hook": "El final del discurso más citado del siglo XX lleva tres palabras que casi nadie repite. Las propuso su abogado horas antes, y es probable que le salvaran la vida.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -82,5 +82,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-20T01:26:00Z",
+  "results": {}
 }

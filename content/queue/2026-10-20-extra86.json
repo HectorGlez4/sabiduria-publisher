@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-25-extra41",
+  "id": "2026-10-20-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Paulo Freire y la Pedagogía del oprimido (1970)",
     "hook": "La frase se repite para decir que el maestro sobra. En el libro, el párrafo siguiente dice lo contrario, y el final que se recorta es la parte decisiva.",
@@ -84,5 +84,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-20T19:26:00Z",
+  "results": {}
 }

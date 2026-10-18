@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-23-tarde",
+  "id": "2026-10-19-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Václav Havel y el interrogatorio a distancia de 1986",
     "hook": "La frase se reparte como consuelo. Es la respuesta de un hombre vigilado a una pregunta incómoda, y la mitad que casi siempre se recorta es la última.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "Václav Havel, 1986",
     "subtitle": "Dictado en una cinta, en un piso prestado de Praga",
     "body": "No es la convicción de que algo va a salir bien, sino la certeza de que algo tiene sentido, sin importar cómo termine."
@@ -85,5 +85,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-10-20T04:26:00Z",
+  "results": {}
 }
