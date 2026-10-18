@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-02-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Vasconcelos y el lema del escudo universitario (1921)",
+    "hook": "El lema de la universidad más grande de México no salió de un discurso. Es la leyenda de un escudo, y el mapa que rodea no es el de México.",
+    "quote": {
+      "text": "Por mi raza hablará el espíritu.",
+      "author": "José Vasconcelos",
+      "work": "Lema del escudo de la Universidad Nacional (1921)",
+      "attribution_verified": true
+    },
+    "body": [
+      "José Vasconcelos fue rector de la Universidad Nacional de México entre junio de 1920 y octubre de 1921, cuando pasó a dirigir la nueva Secretaría de Educación Pública. En ese año y medio propuso cambiar el escudo de la institución. El Consejo de Educación lo aprobó en su sesión del 27 de abril de 1921, y el Boletín de la Universidad publicó la resolución en julio.",
+      "El texto describe el nuevo escudo: un mapa de la América Latina con la leyenda «Por mi raza hablará el espíritu», sostenido por un águila y un cóndor, sobre una alegoría de los volcanes y el nopal azteca. La raza del lema no era la mexicana sola. El cóndor es andino y el mapa es el de toda América Latina. La resolución lo explica así: la convicción de que la raza nuestra elaborará una cultura de tendencias nuevas, de esencia espiritual y libérrima.",
+      "Cuatro años después, en 1925, Vasconcelos publicó La raza cósmica, donde desarrolló esa idea del mestizaje. Un siglo más tarde la frase sigue grabada en la UNAM y sigue discutida dentro de ella: en 2026 la revista Diánoia, de la propia universidad, dedicó un dosier a preguntarse si raza y espíritu deben seguir en su centro."
+    ],
+    "question": "¿Qué frase de hace cien años sigue diciendo lo mismo cuando la lees hoy?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Vasconcelos", "#UNAM", "#Citas"],
+    "extended": ["#Mexico", "#AmericaLatina", "#Educacion", "#Siglo20", "#Universidad", "#HistoriaDeMexico", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del Boletín de la Universidad, IV época, t. II, núm. 5, julio de 1921: «El Consejo de Educación en sesión del 27 de abril 1921, aprobó el cambio de Escudo de la Universidad»; «se resuelve que el Escudo de la Universidad Nacional consistirá en un mapa de la América Latina con la leyenda» «POR MI RAZA HABLARÁ EL ESPÍRITU»; «se significa en este lema la convicción de que la raza nuestra elaborará una cultura de tendencias nuevas»; «Sostendrán el escudo un águila y un cóndor apoyado todo en una alegoría de los volcanes y el nopal azteca». Propuestos por José Vasconcelos como rector. Lectura directa (Leonardo Frías, 26 de abril de 2021).",
+      "source": "Gaceta UNAM, «Escudo y lema, un siglo de identidad»",
+      "url": "https://www.gaceta.unam.mx/escudo-y-lema-un-siglo-de-identidad/"
+    },
+    {
+      "claim": "Aprobados por el Consejo de Educación en 1921; el texto de aprobación leído por el secretario general Leonardo Lomelí en el centenario: «la convicción de que la raza nuestra elaborará una cultura de tendencias nuevas, de esencia espiritual y libérrima»; el lema sustituyó a uno anterior en latín (Javier Garciadiego). Lectura directa (Mirtha Hernández, 29 de abril de 2021).",
+      "source": "Gaceta UNAM, «Celebra la UNAM 100 años de escudo y lema»",
+      "url": "https://www.gaceta.unam.mx/celebra-la-unam-100-anos-de-escudo-y-lema/"
+    },
+    {
+      "claim": "Rector de la Universidad Nacional del 9 de junio de 1920 al 12 de octubre de 1921; secretario de Educación Pública desde el 1 de octubre de 1921; en abril de 1921 propuso el escudo con la leyenda «Por mi raza hablará el espíritu»; La raza cósmica se publicó en 1925. Lectura directa.",
+      "source": "Wikipedia, José Vasconcelos",
+      "url": "https://es.wikipedia.org/wiki/Jos%C3%A9_Vasconcelos"
+    },
+    {
+      "claim": "Escudo creado el 27 de abril de 1921 por orden de Vasconcelos, el octavo y último de la institución; un águila y un cóndor rodean el mapa de América Latina enmarcado por el lema; imaginería de las aves de origen prehispánico (Sabino Ignacio Gaínza Kawano, FAD). Lectura directa.",
+      "source": "UnoTV, «Escudo y lema de la UNAM cumplen 100 años, ésta es su historia» (27 de abril de 2021)",
+      "url": "https://www.unotv.com/nacional/escudo-y-lema-de-la-unam-cumplen-100-anos-esta-es-su-historia/"
+    },
+    {
+      "claim": "Olivia Gall, «“Por mi raza hablará el espíritu”: del México de 1920 a la UNAM de hoy», Diánoia, vol. 71, núm. 96 (2026), sección Discusiones, DOI 10.22201/iifs.18704913e.2026.96.2237: se pregunta si la propuesta de 1920 era antirracista y libertaria, si la raza cósmica de 1925 es la mestiza de los liberales del XIX, y si raza y espíritu deben seguir siendo el núcleo del lema. Lectura directa del resumen.",
+      "source": "Diánoia (Instituto de Investigaciones Filosóficas, UNAM), 2026",
+      "url": "https://dianoia.filosoficas.unam.mx/index.php/dianoia/article/view/2237"
+    }
+  ],
+  "do_not_use": [
+    "«Por mi raza hablará mi espíritu»: variante que circula en medios; la forma oficial y la del Boletín de 1921 es «el espíritu».",
+    "La cita de Vasconcelos «pretendiendo significar que despertamos de una larga noche de opresión»: aparece en resúmenes de búsqueda sin obra, año ni página verificados. No se usa.",
+    "Qué órgano aprobó el escudo: el Boletín citado por Gaceta UNAM dice Consejo de Educación; Wikipedia y otros medios dicen Consejo Universitario. La pieza sigue el Boletín.",
+    "Que el lema derive del Ariel de Rodó: es una lectura académica (dosier de Diánoia), no un dato de origen. No se afirma.",
+    "Que «raza» en el lema sea ya la «raza cósmica»: el concepto se publicó en 1925, cuatro años después. La pieza los presenta en orden cronológico, sin identificarlos.",
+    "El lema latino anterior: Gaceta UNAM menciona que el lema sustituyó a uno en latín, pero no lo transcribe. No se nombra.",
+    "El autor gráfico del escudo: no identificado en las fuentes leídas; solo se señala la influencia del Método de dibujo de Adolfo Best Maugard. No se atribuye."
+  ],
+  "status": "draft"
+}

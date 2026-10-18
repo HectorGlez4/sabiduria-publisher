@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-02-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Qumrán y el anuncio clasificado de 1954",
+    "hook": "Cuatro de los manuscritos del mar Muerto se pusieron a la venta en un anuncio clasificado del Wall Street Journal. Los compró, sin que el vendedor lo supiera, el hijo del hombre que había comprado los otros tres.",
+    "body": [
+      "Entre finales de 1946 y principios de 1947, unos pastores beduinos, entre ellos Muhammed edh-Dhib, encontraron siete rollos en una cueva junto al mar Muerto, cerca de Qumrán. Un comerciante de antigüedades de Belén, Kando, los vendió en dos lotes. Tres fueron a Eleazar Sukenik, de la Universidad Hebrea. Cuatro, entre ellos un libro de Isaías completo, al arzobispo Samuel, del monasterio sirio de San Marcos en Jerusalén.",
+      "En 1949 el arzobispo sacó sus cuatro rollos del país y los llevó a Estados Unidos. El 1 de junio de 1954, el Wall Street Journal publicó un anuncio: manuscritos bíblicos de al menos el año 200 antes de Cristo, en venta. Yigael Yadin, arqueólogo e hijo de Sukenik, estaba de gira en Estados Unidos. Compró los cuatro para el Estado de Israel a través de un intermediario estadounidense, por 250 000 dólares.",
+      "En 1955 Yadin reunió los siete rollos de la primera cueva, separados durante ocho años. Los hallazgos posteriores en otras diez cuevas sumaron restos de más de novecientos manuscritos. Los primeros siete, sin embargo, pasaron por un zapatero, un arzobispo y una página de anuncios."
+    ],
+    "question": "¿Cuánto de lo que hoy se guarda como tesoro estuvo a punto de perderse en una transacción cualquiera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los manuscritos del mar Muerto",
+    "subtitle": "Wall Street Journal, 1 de junio de 1954",
+    "body": "Siete rollos hallados por pastores beduinos hacia 1947. Tres se quedaron en Jerusalén. Cuatro viajaron a Estados Unidos y se ofrecieron en un anuncio clasificado. Los compró Yigael Yadin, hijo del profesor que tenía los otros tres."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ManuscritosDelMarMuerto", "#Qumran", "#Arqueologia"],
+    "extended": ["#Historia", "#Biblia", "#Jerusalen", "#Siglo20", "#Manuscritos", "#Antiguedad", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Hallazgo en 1947 por pastores beduinos (Jum'a y Muhammed ed-Dib); Kando, comerciante de antigüedades de Belén, compró cuatro de los siete primeros rollos y los revendió al arzobispo Samuel del monasterio de San Marcos en Jerusalén: un Isaías completo, la Regla de la Comunidad, el comentario de Habacuc y el Apócrifo del Génesis; Sukenik adquirió y publicó tres; en 1949 Samuel los sacó de la región a una iglesia siria de Nueva Jersey; anuncio del 1 de junio de 1954: «Biblical Manuscripts dating back to at least 200 BC, are for sale»; en 1954 Yadin los compró por medio de un intermediario estadounidense en nombre del Estado de Israel; en 1955 los reunió con los tres de la Universidad Hebrea; hallazgos en otras diez cuevas en los nueve años siguientes, restos de más de 900 manuscritos. Lectura directa.",
+      "source": "Israel Antiquities Authority, The Leon Levy Dead Sea Scrolls Digital Library, «Discovery and Publication»",
+      "url": "https://www.deadseascrolls.org.il/learn-about-the-scrolls/discovery-and-publication"
+    },
+    {
+      "claim": "Muhammed edh-Dhib, de la tribu Ta'amireh, buscando una oveja perdida en el invierno de 1947 (quizá otoño de 1946); Kando, Khalil Eskander Shahin, zapatero de Belén que también comerciaba con antigüedades; tres rollos para Sukenik (Isaías, Himnos de Acción de Gracias, Rollo de la Guerra) y cuatro para el metropolita; Yadin adquirió los cuatro en 1954; fragmentos de unos 850 rollos de Qumrán. Lectura directa (Lawrence H. Schiffman, Reclaiming the Dead Sea Scrolls, Jewish Publication Society, 1994).",
+      "source": "Center for Online Judaic Studies, «Discovery and Acquisition, 1947-1956» (Schiffman, 1994)",
+      "url": "https://cojs.org/discovery-and-acquisition-1947-1956-lawrence-h-schiffman-reclaiming-the-dead-sea-scrolls-jewish-publication-society-philadelphia-1994/"
+    },
+    {
+      "claim": "Descubrimiento inicial por Muhammed edh-Dhib, su primo Jum'a Muhammed y Khalil Musa entre noviembre de 1946 y febrero de 1947; casi todos los rollos están en el Santuario del Libro del Museo de Israel; cuatro rollos salieron a la venta en un anuncio del 1 de junio de 1954 y fueron comprados por Mazar y Yigael Yadin, hijo de Sukenik, por 250 000 dólares; los rollos llegaron al hotel Waldorf-Astoria de Nueva York el 1 de julio de 1954. Lectura directa.",
+      "source": "Wikipedia, Dead Sea Scrolls",
+      "url": "https://en.wikipedia.org/wiki/Dead_Sea_Scrolls"
+    },
+    {
+      "claim": "Mar Samuel puso un anuncio en The Wall Street Journal el 1 de junio de 1954 para vender los rollos, y los vendió sin saberlo («unwittingly») al Estado de Israel por medio de Yigael Yadin, que los devolvió a Jerusalén. Lectura directa (Brent Nongbri, historiador de la religión y papirólogo).",
+      "source": "Brent Nongbri, «The Dead Sea Scrolls of New Jersey» (2021)",
+      "url": "https://brentnongbri.com/2021/09/05/the-dead-sea-scrolls-of-new-jersey/"
+    }
+  ],
+  "do_not_use": [
+    "El animal que buscaba el pastor (oveja o cabra) y la piedra lanzada a la cueva: el relato varía según quién lo cuenta. No se usa.",
+    "La fecha exacta de la compra de Sukenik (29 de noviembre de 1947, según la versión más difundida): Schiffman da julio y 22 de diciembre de 1947 para distintas adquisiciones. La pieza no da fecha.",
+    "Los nombres del intermediario (Sydney Estridge) y de Harry Orlinsky como «Mr. Green» con una palabra clave por teléfono: solo en divulgación y prensa, no en las fuentes institucionales leídas. La pieza dice «un intermediario estadounidense».",
+    "Que la mayor parte de los 250 000 dólares acabara en impuestos del gobierno estadounidense: una sola fuente sin documento. No se usa.",
+    "La exposición en la Biblioteca del Congreso de octubre de 1949 y que ninguna institución quisiera comprar: solo en prensa comunitaria. No se usa.",
+    "El número total de manuscritos: la IAA dice más de 900, Schiffman unos 850, Wikipedia 981. La pieza dice «más de novecientos», como la IAA.",
+    "Que los rollos sean de los esenios: la identificación de la comunidad de Qumrán sigue discutida. La pieza no la menciona."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-02-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Mendeléyev, el eka-aluminio y el galio (1875)",
+    "hook": "En 1875 un químico francés pesó un metal nuevo que acababa de descubrir. Un ruso que nunca lo había visto le escribió para decirle que se había equivocado. Tenía razón el ruso.",
+    "body": [
+      "Dmitri Mendeléyev publicó su tabla periódica en 1869 y dejó huecos en ella. No los rellenó a la fuerza: dijo que correspondían a elementos aún desconocidos. En 1871 describió algunos con detalle. A uno, debajo del aluminio, lo llamó eka-aluminio, y le calculó un peso atómico cercano a 68 y una densidad de casi seis gramos por centímetro cúbico.",
+      "La madrugada del 27 de agosto de 1875, en Francia, Paul-Émile Lecoq de Boisbaudran vio una línea violeta desconocida en el espectro de un mineral de zinc de los Pirineos. En diciembre presentó el metal en la Academia de Ciencias y lo llamó galio, por Gallia, el nombre latino de Francia. Le dio una densidad de 4,7. Mendeléyev le escribió y le sugirió repetir la medida.",
+      "La repitió, y obtuvo 5,90 y 5,97. En su memoria de 1877 lo reconoció sin rodeos: la previsión de Mendeléyev quedaba exactamente verificada. Después llegaron el escandio, en 1879, y el germanio, en 1886, también donde la tabla los esperaba. Un hueco bien razonado había resultado ser información."
+    ],
+    "question": "¿Qué huecos de lo que sabes estás tratando como vacío en lugar de como pista?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Mendeléyev y el galio",
+    "subtitle": "Una densidad medida en París, corregida desde San Petersburgo",
+    "body": "En 1871 Mendeléyev describió un elemento que nadie había visto. En 1875 Lecoq de Boisbaudran lo descubrió y le midió una densidad de 4,7. Mendeléyev le pidió repetirla. Salió 5,9, la que la tabla predecía."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mendeleyev", "#TablaPeriodica", "#HistoriaDeLaCiencia"],
+    "extended": ["#Quimica", "#Galio", "#Ciencia", "#Siglo19", "#Elementos", "#Prediccion", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Mendeléyev publicó su tabla en 1869 con huecos para elementos desconocidos; las predicciones aparecieron en un artículo de 1871 en la revista de la Sociedad Química Rusa; eka-boro → escandio (Nilson, 1879), eka-aluminio → galio (Lecoq de Boisbaudran, 1875), eka-silicio → germanio (aislado en 1886); peso atómico predicho del eka-aluminio 68 frente a 69,723. Lectura directa.",
+      "source": "Wikipedia, Mendeleev's predicted elements",
+      "url": "https://en.wikipedia.org/wiki/Mendeleev%27s_predicted_elements"
+    },
+    {
+      "claim": "«He forecast that the missing element's atomic weight would be around 68 and its density would be 5.9 g/cm3»; descubierto en París por Lecoq de Boisbaudran en 1875 al ver una nueva línea violeta en el espectro del zinc extraído de una blenda de los Pirineos; aislado y purificado en noviembre de 1875; anunciado a la Academia de Ciencias en diciembre de 1875. Lectura directa.",
+      "source": "Royal Society of Chemistry, Periodic Table, Gallium (History)",
+      "url": "https://periodic-table.rsc.org/element/31/gallium"
+    },
+    {
+      "claim": "Mendeléyev llamó al elemento no descubierto eka-aluminio; línea violeta a 417 nm en una muestra de sulfuro de zinc de un mineral de los Pirineos; muestra de casi 600 mg presentada a la Academia; el nombre viene de Gallia, el nombre latino de Francia. Lectura directa.",
+      "source": "Royal Society of Chemistry, Chemistry in its element: gallium (podcast, transcripción)",
+      "url": "https://periodic-table.rsc.org/podcast/31/gallium"
+    },
+    {
+      "claim": "Texto de Lecoq de Boisbaudran, «Sur un nouveau métal, le gallium», Annales de Chimie (5), vol. 10 (1877), pp. 100-141, en traducción inglesa: primeras indicaciones espectroscópicas «On August 27, 1875, between three and four at night»; reducido al estado metálico por primera vez en noviembre de 1875; peso específico a 23° de 5,90 y 5,97; «The prevision of Mendeleev is thus exactly verified». Lectura directa.",
+      "source": "ChemTeam, «About a New Metal, Gallium» (traducción de Annales de Chimie, 1877)",
+      "url": "https://chemteam.info/Chem-History/Disc-of-Gallium.html"
+    },
+    {
+      "claim": "La primera densidad medida por Lecoq de Boisbaudran fue 4,7 g/cm³, la única propiedad que no coincidía con la predicción; Mendeléyev le escribió sugiriendo que la midiera de nuevo, y el valor corregido fue 5,9 g/cm³. Lectura directa.",
+      "source": "Wikipedia, Gallium (History)",
+      "url": "https://en.wikipedia.org/wiki/Gallium"
+    }
+  ],
+  "do_not_use": [
+    "La densidad exacta que predijo Mendeléyev: la RSC da 5,9 y la tabla de Wikipedia da 6,0. La pieza dice «casi seis».",
+    "Que Mendeléyev acusara a Lecoq de errores «sin pruebas» y que este publicara una «retractación embarazosa» (Slate, 2010): tono de divulgación, sin documento citado. La pieza solo dice que le escribió y le sugirió repetir la medida, como Wikipedia.",
+    "Que Mendeléyev predijera el eka-aluminio ya en 1869: la tabla de 1869 dejó el hueco; la descripción detallada de propiedades es de 1871.",
+    "Que Lecoq conociera la tabla de Mendeléyev y buscara el elemento a propósito: varias fuentes dicen que trabajó sin conocerla, pero ninguna institucional leída lo confirma. No se afirma ni lo uno ni lo otro.",
+    "Que el nombre galio sea un juego con su propio apellido (gallus, gallo, por Lecoq): se rumoreó en la época; la RSC solo da Gallia. No se usa.",
+    "Citas atribuidas a Eric Scerri sobre el episodio («had seen the properties of a new element more clearly than the chemist…»): solo en Slate y páginas de citas, sin libro ni página. No se usan."
+  ],
+  "status": "draft"
+}

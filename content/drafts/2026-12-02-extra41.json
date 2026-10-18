@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-02-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sei Shōnagon y el alba de Makura no sōshi",
+    "hook": "El pasaje más famoso de la literatura japonesa empieza con dos sustantivos y ningún verbo. Hace mil años que los lectores ponen el verbo que falta.",
+    "quote": {
+      "text": "La primavera, el alba. Poco a poco blanquea el borde de los montes, se aclara un poco, y unas nubes violáceas se tienden, finas, a lo largo.",
+      "author": "Sei Shōnagon",
+      "work": "El libro de la almohada, sección 1 (hacia 1002)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Sei Shōnagon fue dama de compañía de la emperatriz Teishi en la corte de Heian, en la década de 990. Allí escribió el Makura no sōshi, El libro de la almohada, que estaba terminado hacia el año 1002. Son casi trescientas secciones: recuerdos de palacio, observaciones y más de ciento sesenta listas de cosas agradables, odiosas o conmovedoras.",
+      "La primera sección asigna a cada estación su hora. La primavera, el alba. El verano, la noche. El otoño, el atardecer. El invierno, la primera mañana, cuando se llevan brasas de habitación en habitación. En el original la frase inicial es haru wa akebono, y no hay verbo: las versiones en japonés moderno añaden entre paréntesis «es lo mejor». La sección no termina en lo bello. Termina al mediodía, con el fuego del brasero convertido en ceniza blanca, y una sola palabra: feo.",
+      "En 2012 la investigadora Valerie Henitiuk reunió casi cincuenta traducciones de este pasaje, hechas a lo largo de ciento treinta y cinco años en dieciséis lenguas. Cada traductor tuvo que decidir qué poner donde Sei Shōnagon no puso nada."
+    ],
+    "question": "¿Cuál sería tu hora de cada estación?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SeiShonagon", "#LiteraturaJaponesa", "#Citas"],
+    "extended": ["#Japon", "#Heian", "#ElLibroDeLaAlmohada", "#Primavera", "#Clasicos", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto original de la primavera: 「春はあけぼの。やうやう白くなりゆく、山ぎはすこしあかりて、むらさきだちたる雲のほそくたなびきたる。」; el pasaje sigue con 「冬はつとめて」 (brasas, fuego) y termina 「白き灰がちになりてわろし」; el Makura no sōshi es una de las tres grandes colecciones de ensayos de Japón. Lectura directa (HugKum, Shogakukan). quote.text es traducción de la redacción.",
+      "source": "HugKum (Shogakukan), artículo sobre El libro de la almohada",
+      "url": "https://hugkum.sho.jp/169268"
+    },
+    {
+      "claim": "Original 「春は、あけぼの。やうやう白くなりゆく、山ぎは少し明かりて、紫だちたる雲の細くたなびきたる。」 y traducción al japonés moderno que añade entre paréntesis el predicado: 「春は、明け方(がいい)。」 y «(のがいい)» al final. Lectura directa.",
+      "source": "Mynavi News, explicación de 「春はあけぼの」 (29 de marzo de 2024)",
+      "url": "https://news.mynavi.jp/article/20240329-2829399/"
+    },
+    {
+      "claim": "Valerie Henitiuk, Worlding Sei Shônagon: The Pillow Book in Translation (University of Ottawa Press, 2012): reúne «almost fifty translations of the “spring, dawn” passage», que abarcan «one-hundred-and-thirty-five years and sixteen languages»; el pasaje es «arguably the single most famous passage in Japanese literature». Lectura directa de la descripción del editor.",
+      "source": "University of Ottawa Press, ficha de Worlding Sei Shônagon",
+      "url": "https://press.uottawa.ca/en/9780776607283/worlding-sei-shonagon/"
+    },
+    {
+      "claim": "Completado en 1002; Sei Shōnagon fue dama de la corte de la emperatriz consorte Fujiwara no Teishi en la década de 990 y principios de la de 1000, periodo Heian; el texto Sankanbon tiene 297 secciones más 29 suplementarias, y el libro contiene 164 listas; circuló manuscrito durante siglos y se imprimió en el siglo XVII. Lectura directa.",
+      "source": "Wikipedia, The Pillow Book",
+      "url": "https://en.wikipedia.org/wiki/The_Pillow_Book"
+    },
+    {
+      "claim": "Escrito mientras servía a la emperatriz Teishi (藤原定子), consorte del emperador Ichijō; en lo esencial terminado hacia 長保3年 (1001); el número de secciones varía según el manuscrito (328 en el segundo tipo del Sankanbon, 282 en el primero del Sakaibon); clasificación de Ikeda Kikan (1957) en secciones de listas, de observaciones y de recuerdos. Lectura directa.",
+      "source": "Wikipedia en japonés, 枕草子",
+      "url": "https://ja.wikipedia.org/wiki/%E6%9E%95%E8%8D%89%E5%AD%90"
+    }
+  ],
+  "do_not_use": [
+    "La anécdota del título (el papel regalado por Korechika y la respuesta «para almohada»): está en el epílogo, pero el sentido de «almohada» se discute desde hace siglos y Hagiya Boku la considera ficticia. No se usa.",
+    "Fecha exacta de composición: Wikipedia en inglés dice completado en 1002; la japonesa, en lo esencial terminado hacia 1001. La pieza dice «hacia 1002» y el work lo marca como aproximado.",
+    "Número exacto de secciones: varía entre 282 y más de 320 según el manuscrito. La pieza dice «casi trescientas».",
+    "Citar una traducción publicada (Morris 1967, McKinney 2006 u otras al español) como texto de la cita: no se pudo leer ninguna edición. quote.text es traducción propia a partir del original japonés verificado.",
+    "Que «haru wa akebono» signifique literalmente «la primavera es el alba»: el original no tiene verbo; la cópula y el «es lo mejor» los pone el traductor.",
+    "Traducir わろし como «malo» moralmente: en este contexto es feo, sin gracia, desagradable a la vista."
+  ],
+  "status": "draft"
+}
