@@ -78,9 +78,25 @@
     "Decir que Píndaro relacionaba la frase con el «conócete a ti mismo» délfico: es una interpretación de un artículo secundario, no del texto.",
     "Afirmar que Ecce homo se publicó en 1908: lo dice una fuente secundaria en resultados de búsqueda; no se leyó en fuente primaria. El cuerpo solo dice que se escribió en 1888."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-17T23:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1125653826925943",
+      "url": "https://www.facebook.com/874327782058550/posts/1125653826925943",
+      "published_at": "2026-10-18T01:03:19.244223+00:00"
+    },
+    "instagram": {
+      "post_id": "17949172461342763",
+      "url": "https://www.instagram.com/p/DendWKQFFFr/",
+      "published_at": "2026-10-18T01:03:29.393840+00:00"
+    },
+    "threads": {
+      "post_id": "18438703507183943",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18438703507183943",
+      "published_at": "2026-10-18T01:03:42.169038+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
