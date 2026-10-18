@@ -36,10 +36,7 @@
     "instagram",
     "threads"
   ],
-  "status": "blocked",
+  "status": "ready",
   "publish_at": "2026-09-27T03:26:00Z",
-  "results": {},
-  "blocked_reason": [
-    "variante 'cream' repetida: la ultima publicacion real (2026-09-24-extra84) tambien salio cream"
-  ]
+  "results": {}
 }

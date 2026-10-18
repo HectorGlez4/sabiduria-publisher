@@ -94,10 +94,7 @@
     "instagram",
     "threads"
   ],
-  "status": "blocked",
+  "status": "ready",
   "publish_at": "2026-09-30T15:26:00Z",
-  "results": {},
-  "blocked_reason": [
-    "variante 'gold' repetida: la ultima publicacion real (2026-09-29-extra81) tambien salio gold"
-  ]
+  "results": {}
 }
