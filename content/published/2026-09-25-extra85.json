@@ -36,14 +36,18 @@
     "instagram",
     "threads"
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-09-25T23:26:00Z",
   "results": {
     "facebook": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "100618132774413_1126291820195477",
+      "url": "https://www.facebook.com/874327782058550/posts/1126291820195477",
+      "published_at": "2026-10-18T16:38:45.344176+00:00"
     },
     "instagram": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "17894675496654751",
+      "url": "https://www.instagram.com/p/DepIZjLkcEx/",
+      "published_at": "2026-10-18T16:38:59.503890+00:00"
     },
     "threads": {
       "post_id": "18407585764091087",

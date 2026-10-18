@@ -62,10 +62,12 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
+  "status": "published",
   "results": {
     "facebook_reel": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "1643926780737606",
+      "url": "/reel/1643926780737606/",
+      "published_at": "2026-10-18T17:27:46.404221+00:00"
     }
   },
   "publish_at": "2026-09-26T02:26:00Z",
