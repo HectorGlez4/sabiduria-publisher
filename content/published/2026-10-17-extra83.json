@@ -2,7 +2,7 @@
   "id": "2026-10-17-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Blaise Pascal y las razones del corazón",
     "hook": "Se cita para disculpar un amor que no conviene. Pascal la escribió en una hoja de apuntes sobre cómo se llega a Dios, en el mismo legajo que la apuesta.",
@@ -81,5 +81,21 @@
     "threads"
   ],
   "publish_at": "2026-10-18T03:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1125816370243022",
+      "url": "https://www.facebook.com/874327782058550/posts/1125816370243022",
+      "published_at": "2026-10-18T05:27:39.985385+00:00"
+    },
+    "instagram": {
+      "post_id": "18060763118727040",
+      "url": "https://www.instagram.com/p/Den7mS3jl4T/",
+      "published_at": "2026-10-18T05:27:52.175687+00:00"
+    },
+    "threads": {
+      "post_id": "18005333585794117",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18005333585794117",
+      "published_at": "2026-10-18T05:28:03.874839+00:00"
+    }
+  }
 }

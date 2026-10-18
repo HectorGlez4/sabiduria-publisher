@@ -2,7 +2,7 @@
   "id": "2026-10-17-re54-story",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Cahokia y el montículo de los Monjes",
     "hook": "La mayor ciudad al norte de México antes de 1492 llegó entera hasta nosotros. Todo menos su nombre.",
@@ -78,6 +78,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-18T02:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1600934785114140",
+      "photo_id": "1125803216911004",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-18T05:05:22.588673+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17997862929013225",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-18T05:05:33.619498+00:00"
+    }
+  },
   "reemision_de": "2026-09-18-extra94"
 }
