@@ -1,0 +1,69 @@
+{
+  "id": "2026-12-04-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "el asno de Buridán, que no está en Buridán",
+    "hook": "El asno que muere de hambre entre dos montones de heno iguales lleva el nombre de un filósofo de París. En sus escritos no aparece ningún asno.",
+    "body": [
+      "Jean Buridan nació hacia 1300 en Picardía y fue dos veces rector de la Universidad de París, en 1328 y en 1340. Hoy se le recuerda por una imagen: un asno, a igual distancia de dos montones de heno idénticos, no tiene razón para preferir ninguno y muere de hambre. La Enciclopedia de Filosofía de Stanford es tajante: ese ejemplo no se encuentra en ninguna parte de sus escritos. Lo más probable es que naciera como parodia de su teoría de la elección, en boca de críticos posteriores.",
+      "La escena es mucho más vieja. Hacia el 350 a.C., en el libro II del tratado Sobre el cielo, Aristóteles se burla de quienes explicaban que la Tierra no se cae porque las fuerzas a su alrededor están igualadas. Sería, dice, como el hombre muy hambriento y muy sediento, en igual medida, que a igual distancia de la comida y la bebida tuviera que quedarse donde está. Hacia el año 1100, al-Ghazali puso a alguien ante dos dátiles idénticos y sostuvo que elegiría uno igual.",
+      "Lo que sí enseñaba Buridan era más fino: cuando no está claro cuál de dos bienes es mayor, la voluntad puede aplazar la elección y seguir pensando. Spinoza, en su Ética, publicada tras su muerte en 1677, aceptó el caso extremo. Un hombre en ese equilibrio perfecto moriría de hambre y de sed. Y si le preguntaban si había que tenerlo por un asno antes que por un hombre, respondía que no lo sabía."
+    ],
+    "question": "¿Cuándo dejaste de decidir algo porque las dos opciones te parecían iguales?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El asno de Buridán",
+    "subtitle": "Una parodia que se quedó con el nombre de su blanco",
+    "body": "El asno que muere de hambre entre dos montones de heno iguales no aparece en los escritos de Jean Buridan. La escena ya estaba en Aristóteles, con un hombre entre la comida y la bebida, y el asno se lo pusieron después sus críticos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AsnoDeBuridan", "#Filosofia", "#LibreAlbedrio"],
+    "extended": ["#Buridan", "#Aristoteles", "#Spinoza", "#AlGhazali", "#EdadMedia", "#Decisiones", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Sobre el asno: «This particular example is nowhere to be found in Buridan's writings»; versiones del ejemplo se remontan al menos a Aristóteles, De Caelo 295b32; probablemente «originated as a parody of his account of free choice by later critics»; nacido hacia 1300 en o cerca de Béthune (Picardía); rector de la Universidad de París en 1328 y 1340; la voluntad puede aplazar la elección cuando la bondad de las opciones no está clara, si el intelecto juzga bueno seguir considerando el asunto. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «John Buridan»",
+      "url": "https://plato.stanford.edu/entries/buridan/"
+    },
+    {
+      "claim": "Aristóteles, Sobre el cielo, libro II, parte 13, contra la explicación de la Tierra inmóvil por indiferencia: la analogía del cabello que no se rompe si la tensión está repartida por igual, o «of the men who, though exceedingly hungry and thirsty, and both equally, yet being equidistant from food and drink, is therefore bound to stay where he is». Traducción de J. L. Stocks. Lectura directa.",
+      "source": "MIT Internet Classics Archive, Aristóteles, On the Heavens, libro II",
+      "url": "https://classics.mit.edu/Aristotle/heavens.2.ii.html"
+    },
+    {
+      "claim": "Spinoza, Ética, parte II, nota a la proposición XLIX, cuarta objeción: «as in the case of Buridan's ass»; respuesta: «a man placed in the equilibrium described (namely, as perceiving nothing but hunger and thirst...)» «would die of hunger and thirst»; si se le pregunta si tal hombre debe tenerse por «an ass rather than a man», responde que no lo sabe, como no sabe cómo considerar a quien se ahorca, a los niños, a los necios y a los locos. Traducción de R. H. M. Elwes. Lectura directa.",
+      "source": "Project Gutenberg, Spinoza, The Ethics, trad. R. H. M. Elwes",
+      "url": "https://www.gutenberg.org/files/3800/3800-h/3800-h.htm"
+    },
+    {
+      "claim": "Spinoza murió en 1677 en La Haya; sus amigos publicaron sus escritos inéditos tras su muerte. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Baruch Spinoza»",
+      "url": "https://plato.stanford.edu/entries/spinoza/"
+    },
+    {
+      "claim": "Aristóteles, Sobre el cielo, hacia 350 a.C., usó la imagen para burlarse de la tesis de Anaximandro; al-Ghazali (hacia 1100), en La incoherencia de los filósofos, usó dos dátiles idénticos y sostuvo que la persona elegiría uno; Buridan «nowhere discusses this specific problem». Lectura directa.",
+      "source": "Wikipedia, Buridan's ass",
+      "url": "https://en.wikipedia.org/wiki/Buridan%27s_ass"
+    },
+    {
+      "claim": "Michael Clark, «Paradoxes (3): Buridan's Ass», Think 1, 3 (2003), pp. 69-70; cita a Spinoza (trad. Curley, 1985): «I grant entirely that a man placed in such an equilibrium … will perish of hunger and thirst». Lectura directa (resumen y bibliografía).",
+      "source": "Cambridge University Press, Think",
+      "url": "https://www.cambridge.org/core/journals/think/article/paradoxes-3-buridans-ass/B74956929D8993BBE5932A216BE235B7"
+    }
+  ],
+  "do_not_use": [
+    "Que Buridan escribiera el ejemplo del asno: la SEP y otras fuentes dicen que no aparece en sus escritos. La pieza lo dice así.",
+    "Que en el comentario de Buridan a Aristóteles aparezca un perro ante dos comidas: circula como explicación del origen, pero no se verificó en esta ejecución. No se menciona.",
+    "Los versos del inicio del Paraíso IV de Dante (el hombre libre que moriría de hambre entre dos manjares): la página de Digital Dante bloqueó la lectura. No se usan.",
+    "Atribuir la tesis de Aristóteles a Anaximandro sin matiz: Aristóteles critica una explicación de la Tierra en reposo por indiferencia que Wikipedia vincula con Anaximandro. La pieza dice «quienes explicaban» sin nombrarlo.",
+    "La fecha de composición de la Ética (Wikipedia da hacia 1661): fue escrita a lo largo de años. La pieza dice solo que se publicó tras su muerte, en 1677.",
+    "Que Spinoza fuera «el primero en hablar del asno de Buridán»: lo sugiere una fuente francesa sin prueba. No se usa.",
+    "La fecha de muerte de Buridan: la SEP dice que aparece vivo en un documento de 1358 y que probablemente murió poco después. No se da fecha."
+  ],
+  "status": "draft"
+}

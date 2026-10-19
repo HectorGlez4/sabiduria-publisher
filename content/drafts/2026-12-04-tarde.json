@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-04-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Jefferson y la carta a Benjamin Rush de 1800",
+    "hook": "La frase que Jefferson tiene grabada en su memorial de Washington empieza, en la carta original, con un «porque». Lo que va antes es una respuesta al clero que pedía no votarlo.",
+    "quote": {
+      "text": "He jurado sobre el altar de Dios hostilidad eterna contra toda forma de tiranía sobre la mente del hombre.",
+      "author": "Thomas Jefferson",
+      "work": "Carta a Benjamin Rush, Monticello, 23 de septiembre de 1800",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 23 de septiembre de 1800, desde Monticello, Thomas Jefferson contestó a su amigo el médico Benjamin Rush, que le había escrito en agosto pidiéndole que aclarara sus ideas religiosas. Faltaban semanas para una elección presidencial en la que sus adversarios lo presentaban como un enemigo de la fe.",
+      "En la carta, Jefferson explica por qué una parte del clero lo combatía. Escribe que muchos predicadores acariciaban la esperanza de obtener el establecimiento oficial de una forma particular de cristianismo en todo el país, y nombra a dos confesiones en especial: los episcopalianos y los congregacionalistas. Creían, dice, que cualquier poder que se le confiara se usaría contra ese proyecto. Y añade que creían bien: «porque he jurado sobre el altar de Dios hostilidad eterna contra toda forma de tiranía sobre la mente del hombre».",
+      "Hoy la frase está grabada sin ese «porque» en la rotonda del Memorial de Jefferson, en Washington. Leída sola parece un voto abstracto. En la carta es una posición concreta: ninguna iglesia, tampoco la mayoritaria, debía tener al Estado de su parte. Pese a esa campaña, Jefferson ganó aquella elección."
+    ],
+    "question": "¿Qué forma de tiranía sobre la mente te parece hoy más difícil de reconocer?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Jefferson", "#LibertadDeConciencia", "#Citas"],
+    "extended": ["#Historia", "#EstadosUnidos", "#Siglo18", "#LibertadReligiosa", "#Cartas", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Extracto de la carta: «Monticello Sep. 23. 1800», «for I have sworn upon the altar of god eternal hostility against every form of tyranny over the mind of man»; manuscrito en la Library of Congress (Benjamin Rush Papers); edición: The Papers of Thomas Jefferson, vol. 32, pp. 166-169. Lectura directa.",
+      "source": "Thomas Jefferson Foundation (Monticello), Thomas Jefferson Retirement Series / base de citas, extracto de la carta a Benjamin Rush",
+      "url": "https://tjrs.monticello.org/node/189"
+    },
+    {
+      "claim": "Inscripción en la rotonda del Memorial: «I have sworn upon the altar of God eternal hostility against every form of tyranny over the mind of man», atribuida a la carta al Dr. Benjamin Rush del 23 de septiembre de 1800. Lectura directa.",
+      "source": "National Park Service, Thomas Jefferson Memorial, «Quotations»",
+      "url": "https://www.nps.gov/thje/learn/photosmultimedia/quotations.htm"
+    },
+    {
+      "claim": "Contexto de la carta: el clero tenía «a very favorite hope of obtaining an establishment of a particular form of Christianity» en todo Estados Unidos; «the returning good sense of our country threatens abortion to their hopes»; creen con razón que cualquier poder que se le confíe se ejercerá contra sus planes, «for I have sworn upon the altar of God...». Lectura directa (extractos).",
+      "source": "Warren Throckmorton (Grove City College), «Note to Evangelical Culture Warriors... from Benjamin Rush» (27 de febrero de 2015)",
+      "url": "https://wthrockmorton.com/2015/02/27/note-to-evangelical-culture-warriors-from-benjamin-rush/"
+    },
+    {
+      "claim": "En la campaña de 1800 Jefferson fue acusado de ser «an infidel unworthy of the office» y llamado ateo; cita al historiador Eugene Sheridan: los federalistas lo presentaron como «an unbeliever who was unworthy to serve as chief magistrate of a Christian nation»; después habla del «President Thomas Jefferson» y de su primer discurso inaugural. Lectura directa.",
+      "source": "Liberty Magazine, «The Revolution of 1800»",
+      "url": "https://libertymagazine.org/article/the-revolution-of-1800"
+    },
+    {
+      "claim": "Rush escribió a Jefferson el 22 de agosto de 1800 pidiéndole aclarar sus ideas religiosas; Jefferson nombra «especially the Episcopalians & Congregationalists»; la carta se publica en PTJ 32:166-169. Solo visto en extractos del buscador: la página de Founders Online no se pudo leer completa.",
+      "source": "Founders Online (National Archives), «From Thomas Jefferson to Benjamin Rush, 23 September 1800»",
+      "url": "https://founders.archives.gov/documents/Jefferson/01-32-02-0102"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como una declaración contra la religión o contra Dios: en la carta se dirige contra el establecimiento oficial de una iglesia, y Jefferson invoca precisamente «el altar de Dios».",
+    "La versión con «God» en mayúscula como texto de la carta: el manuscrito, según la transcripción de Monticello, dice «god»; la mayúscula es del memorial y de muchas reproducciones. En castellano se escribe «Dios» por norma ortográfica, sin que eso diga nada del original.",
+    "Situar la inscripción «en el friso exterior» o en la fachada: el NPS la ubica en la rotonda; una página de Monticello habla del friso que rodea la cúpula. La pieza dice solo «en la rotonda».",
+    "La variante «any position of power» frente a «any portion of power» en la frase previa: las transcripciones difieren. La pieza parafrasea («cualquier poder que se le confiara») y no la cita literal.",
+    "Que Rush le pidiera a Jefferson leer a William Paley y el «credo religioso» prometido: aparecen en notas sobre esta correspondencia, pero no se verificaron en lectura directa. No se mencionan.",
+    "La fecha de inauguración del Memorial (1943): no verificada en esta ejecución. No se menciona."
+  ],
+  "status": "draft"
+}

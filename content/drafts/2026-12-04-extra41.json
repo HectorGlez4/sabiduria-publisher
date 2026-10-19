@@ -1,0 +1,71 @@
+{
+  "id": "2026-12-04-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Solzhenitsyn y el capítulo «El ascenso» de Archipiélago Gulag",
+    "hook": "Solzhenitsyn pasó ocho años en los campos de Stalin por unas cartas privadas. De ahí no sacó una lista de culpables, sino una frase que no deja fuera a nadie.",
+    "quote": {
+      "text": "La línea que separa el bien y el mal no pasa entre Estados, ni entre clases, ni entre partidos políticos, sino a través de cada corazón humano.",
+      "author": "Aleksandr Solzhenitsyn",
+      "work": "Archipiélago Gulag, parte IV, capítulo 1, «El ascenso» (vol. II, ed. inglesa de 1975)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En febrero de 1945, en el frente de Prusia Oriental, Aleksandr Solzhenitsyn fue detenido por unos comentarios sobre Stalin en cartas privadas a un amigo. Lo condenaron a ocho años de campos de trabajo. Entre 1950 y 1953 picó piedra y trabajó en la fundición del campo de Ekibastuz, en Kazajistán. Después lo desterraron de por vida a una aldea de la estepa.",
+      "Con lo vivido y con los testimonios de cientos de presos escribió Archipiélago Gulag, publicado en París desde diciembre de 1973. La frase está en la cuarta parte, «El alma y el alambre de púas», en el capítulo titulado «El ascenso». Allí cuenta que fue tendido sobre la paja podrida de la prisión cuando sintió en sí mismo los primeros movimientos del bien. Y que poco a poco comprendió dónde pasa de verdad la línea.",
+      "El texto sigue: esa línea se desplaza, oscila dentro de nosotros con los años, y aun en el corazón tomado por el mal queda una pequeña cabeza de puente del bien. Lo escribe alguien que tenía motivos de sobra para trazar la frontera entre él y sus carceleros. En febrero de 1974 la Unión Soviética lo despojó de la ciudadanía y lo expulsó del país."
+    ],
+    "question": "¿Hacia qué lado se ha movido esa línea en ti con los años?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Solzhenitsyn", "#ArchipielagoGulag", "#Citas"],
+    "extended": ["#LiteraturaRusa", "#Historia", "#Siglo20", "#Nobel", "#Conciencia", "#Lectura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "«The line separating good and evil passes not through states, nor between classes, nor between political parties either — but right through every human heart — and through all human hearts», ubicado en «(Part 4, 'The Ascent,' Chapter 1)»; continúa «This line shifts. Inside us, it oscillates with the years» y «even within hearts overwhelmed by evil, one small bridgehead of good is retained». La otra versión, «the line dividing good and evil cuts through the heart of every human being», la sitúa en la Parte I, capítulo 4. Lectura directa.",
+      "source": "The Living Church, artículo con el pasaje de Solzhenitsyn",
+      "url": "https://livingchurch.org/?p=31596"
+    },
+    {
+      "claim": "«It was only when I lay there on rotting prison straw that I sensed within myself the first stirrings of good» y «Gradually it was disclosed to me that the line separating good and evil passes … through all human hearts», en la Parte IV, «The Soul and Barbed Wire». Lectura directa.",
+      "source": "Christian Scholar's Review, ensayo sobre Solzhenitsyn",
+      "url": "https://christianscholars.com/14363-2/"
+    },
+    {
+      "claim": "Las dos formulaciones de la línea, y su ubicación en «The Soul and Barbed Wire», la cuarta y central de las siete partes; «The Ascent» es el capítulo donde aparece el «Bless you, prison»; edición citada: trad. Thomas P. Whitney y Harry Willetts, abreviada por Edward E. Ericson Jr. (Vintage, 2018). Lectura directa.",
+      "source": "Modern Age (Intercollegiate Studies Institute), ensayo sobre Archipiélago Gulag",
+      "url": "https://modernagejournal.com/?p=218091"
+    },
+    {
+      "claim": "Edición del volumen II (partes III y IV): The Gulag Archipelago 1918-1956, Volume II, trad. Thomas P. Whitney, Harper & Row, 1975, 712 páginas; reseña de Ira Robbins en Virginia Law Review (1976). Lectura directa.",
+      "source": "American University Washington College of Law, Digital Commons, «Book Review: Brothers of Gulag»",
+      "url": "https://digitalcommons.wcl.american.edu/facsch_bkrev/10"
+    },
+    {
+      "claim": "Detenido en febrero de 1945 por comentarios sobre Stalin en cartas privadas a un amigo; ocho años en campos del Gulag; 1950-1953 en Ekibastuz (noreste de Kazajistán), primero como cantero y luego en la fundición; destierro de por vida en Kok-Terek; Archipiélago Gulag publicado en París en diciembre de 1973; el 12 de febrero de 1974 detenido, despojado de la ciudadanía y expulsado a Fráncfort. Lectura directa.",
+      "source": "The Aleksandr Solzhenitsyn Center, «Timeline»",
+      "url": "https://www.solzhenitsyncenter.org/timeline"
+    },
+    {
+      "claim": "Primera edición rusa en YMCA-Press, París, a fines de 1973; tres volúmenes con siete partes (1-2, 3-4, 5-7); escrito entre 1958 y 1968. Lectura directa.",
+      "source": "Wikipedia, The Gulag Archipelago",
+      "url": "https://en.wikipedia.org/wiki/The_Gulag_Archipelago"
+    }
+  ],
+  "do_not_use": [
+    "Confundir los dos pasajes: «the line dividing good and evil cuts through the heart of every human being» (Parte I, capítulo 4, el que empieza «If only it were all so simple!») es distinto del de la Parte IV, capítulo 1, «El ascenso», que es el que cita esta pieza. No se mezclan en una sola frase.",
+    "El texto castellano de la cita es traducción propia desde la versión inglesa de Whitney; no se cotejó con el original ruso ni con una edición castellana publicada (Tusquets u otra), que no se pudieron leer en esta ejecución. No se presenta como traducción de ninguna editorial.",
+    "El año de la primera edición rusa del volumen II (1974, YMCA-Press): el catálogo consultado lo da con signos de duda. La pieza solo dice que la obra se publicó en París «desde diciembre de 1973» y da como edición verificada la inglesa de Harper & Row, 1975.",
+    "El título del capítulo en ruso («Восхождение») y de la parte («Душа и колючая проволока»): solo vistos en extractos del buscador. La pieza usa los títulos en castellano traducidos del inglés.",
+    "Que la frase «Bless you, prison» («Bendita seas, prisión») cierre el capítulo: lo dice Modern Age, pero no se verificó en una segunda fuente. No se usa.",
+    "Que lo condenara una troika sin juicio o en ausencia: las fuentes no coinciden en el procedimiento. La pieza dice solo «lo condenaron a ocho años»."
+  ],
+  "status": "draft"
+}

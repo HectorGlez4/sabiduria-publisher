@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-04-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Clair Patterson, la edad de la Tierra y el plomo",
+    "hook": "Para calcular la edad de la Tierra, Clair Patterson tuvo que limpiar su laboratorio de plomo. Al hacerlo descubrió que el plomo estaba en todas partes, y que lo habíamos puesto nosotros.",
+    "body": [
+      "Clair Patterson, nacido en 1922 en Mitchellville, Iowa, quería fechar la Tierra midiendo isótopos de plomo. El problema era que sus muestras salían con mucho más plomo del que la naturaleza podía explicar. Lo había en el aire, en los reactivos, en el polvo. En el Instituto Tecnológico de California construyó una de las primeras salas limpias, a prueba de contaminación. En 1953 analizó un fragmento del meteorito Canyon Diablo, el que abrió el Cráter del Meteoro en Arizona. La respuesta fue 4.500 millones de años, afinada después a 4.550. Sigue siendo la edad que dan los manuales.",
+      "Luego se preguntó de dónde salía tanto plomo. Con Mitsunobu Tatsumoto midió el océano frente a California: el agua profunda tenía de tres a diez veces menos plomo que la de superficie. La nieve moderna de Groenlandia tenía más de cien veces el plomo de la nieve preindustrial. El origen más probable era el tetraetilo de plomo que se añadía a la gasolina y salía por los tubos de escape.",
+      "En 1965 lo publicó en un artículo titulado «Ambientes de plomo contaminados y naturales del hombre». El toxicólogo R. A. Kehoe dijo que era más un fanático que un científico. En 1971 lo dejaron fuera del panel del Consejo Nacional de Investigación sobre el plomo en el aire. En diciembre de 1973 la Agencia de Protección Ambiental anunció que el plomo de la gasolina se reduciría por etapas. Fue el comienzo de su retirada."
+    ],
+    "question": "¿Qué cosa damos por normal hoy solo porque está en todas partes?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Clair Patterson y el plomo",
+    "subtitle": "La edad de la Tierra y un veneno en todas partes",
+    "body": "En 1953 Clair Patterson fechó la Tierra en 4.550 millones de años con un meteorito. Para lograrlo tuvo que limpiar su laboratorio de plomo, y descubrió que la gasolina lo había esparcido por el planeta."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ClairPatterson", "#EdadDeLaTierra", "#HistoriaDeLaCiencia"],
+    "extended": ["#Geoquimica", "#Plomo", "#Meteoritos", "#Siglo20", "#Ciencia", "#MedioAmbiente", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Nacido el 2 de junio de 1922 en Mitchellville, Iowa; muerto el 5 de diciembre de 1995; en 1953 la separación química se hizo en Caltech y la espectrometría en la Universidad de Chicago; «The answer turned out to be 4.5 billion years, later refined to 4.55 billion years»; con Tatsumoto (1963) el agua profunda tenía de 3 a 10 veces menos plomo que la de superficie; «Modern Greenland snow contained over 100 times the amount of lead in preindustrial snow»; artículo de 1965 «Contaminated and Natural Lead Environments of Man»; R. A. Kehoe lo llamó «more of a zealot than a scientist»; excluido del panel del NRC de 1971 sobre plomo en el aire; en diciembre de 1973 la EPA anunció reducir el plomo de la gasolina «60-65% in phased steps», «the beginning of the removal of lead from gasoline». Lectura directa.",
+      "source": "National Academy of Sciences, Biographical Memoirs, «Clair Cameron Patterson»",
+      "url": "https://www.nationalacademies.org/read/6201/chapter/16"
+    },
+    {
+      "claim": "Patterson «found lead all over the place», mucho más del que debía haber naturalmente; construyó una de las primeras «contamination-proof 'clean rooms'»; edad de unos 4.550 millones de años; con Tatsumoto halló plomo en la superficie del océano frente al sur de California que caía rápido con la profundidad; el culpable probable era el tetraetilo de plomo de la gasolina, que salía por los tubos de escape; su trabajo llevó a la retirada del plomo de la gasolina tras las medidas de la EPA en los años setenta. Lectura directa.",
+      "source": "Caltech Magazine, «This Caltech Scientist's Legacy Is a Less Toxic World»",
+      "url": "https://magazine.caltech.edu/post/clair-patterson-lead"
+    },
+    {
+      "claim": "Nacido el 2 de junio de 1922; usó fragmentos del meteorito Canyon Diablo, que formó el Cráter del Meteoro en Arizona; estimó 4.550 millones de años con un error de ±70 millones; «this is still the textbook age of the Earth»; después trabajó para limitar el plomo humano en el ambiente, sobre todo el de la gasolina. Lectura directa.",
+      "source": "Linda Hall Library, Scientist of the Day, «Clair Patterson» (2 de junio de 2016)",
+      "url": "https://www.lindahall.org/clair-patterson/"
+    },
+    {
+      "claim": "En 1953 usó la troilita (fase de sulfuro) del meteorito de hierro Canyon Diablo para medir el plomo primordial; publicó «Age of Meteorites and the Earth» en 1956 con 4,55 ± 0,07 mil millones de años. Solo visto en extractos del buscador.",
+      "source": "Wikipedia, Clair Patterson",
+      "url": "https://en.wikipedia.org/wiki/Clair_Patterson"
+    }
+  ],
+  "do_not_use": [
+    "Que las mediciones de 1953 se hicieran en el Argonne National Laboratory: lo dicen relatos divulgativos; la memoria de la NAS dice que la espectrometría se hizo en la Universidad de Chicago (laboratorio de Mark Inghram). La pieza no nombra dónde se midió.",
+    "El año exacto de la eliminación total del plomo en la gasolina de EE. UU.: la memoria de la NAS da 1987; otras fuentes dan 1986 o 1996 según se cuente la gasolina con plomo de bajo contenido o la prohibición total. La pieza se detiene en el anuncio de diciembre de 1973.",
+    "Que la Ley de Aire Limpio de 1970 prohibiera la gasolina con plomo: lo afirma una biografía del Premio Tyler, pero la reducción la anunció la EPA en 1973. No se usa.",
+    "Que la industria petrolera lo amenazara con retirarle la financiación tras su artículo de 1963 y que «se le secaran los fondos»: aparece en páginas divulgativas sin fuente primaria. No se usa.",
+    "Detalles dramáticos de páginas divulgativas (un «desvío de siete años», escenas del laboratorio): no verificados.",
+    "Que el error actual de la edad de la Tierra sea de unos 20 millones de años o la cifra 4.540 millones: hay estimaciones distintas; la pieza solo da 4.550, la de Patterson.",
+    "Que «Kehoe» fuera empleado de la Ethyl Corporation: lo dice una fuente divulgativa; la NAS lo identifica solo como toxicólogo. La pieza dice solo «el toxicólogo R. A. Kehoe»."
+  ],
+  "status": "draft"
+}
