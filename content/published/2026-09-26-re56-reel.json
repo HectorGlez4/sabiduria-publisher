@@ -2,7 +2,7 @@
   "id": "2026-09-26-re56-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Frederick Douglass y la exigencia al poder",
     "hook": "La frase más citada de Frederick Douglass se corta siempre por la mitad, y la mitad que se cae es la que mide algo.",
@@ -80,7 +80,9 @@
   "publish_at": "2026-09-26T19:26:00Z",
   "results": {
     "facebook_reel": {
-      "error": "HTTP 400 · code=190 subcode=459 · You cannot access the app till you log in to www.facebook.com and follow the instructions given."
+      "post_id": "1552325693321879",
+      "url": "/reel/1552325693321879/",
+      "published_at": "2026-10-19T09:05:51.958027+00:00"
     }
   },
   "reemision_de": "2026-09-10-extra86"
