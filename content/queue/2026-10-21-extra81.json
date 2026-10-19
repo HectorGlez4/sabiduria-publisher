@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-03-tarde",
+  "id": "2026-10-21-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Saramago", "#EnsayoSobreLaCeguera", "#Citas"],
-    "extended": ["#Literatura", "#Portugal", "#Nobel", "#Siglo20", "#Lectura", "#LiteraturaPortuguesa", "#Sabiduria"]
+    "topic": [
+      "#Saramago",
+      "#EnsayoSobreLaCeguera",
+      "#Citas"
+    ],
+    "extended": [
+      "#Literatura",
+      "#Portugal",
+      "#Nobel",
+      "#Siglo20",
+      "#Lectura",
+      "#LiteraturaPortuguesa",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -68,5 +80,12 @@
     "La frase «Creo que no nos quedamos ciegos, creo que estamos ciegos…»: es de la novela, no del epígrafe; ajena a esta pieza.",
     "El doble sentido de «reparar» en castellano (arreglar y advertir): la RAE no se pudo consultar (403). La pieza usa solo el sentido de advertir, el del original portugués."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-21T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

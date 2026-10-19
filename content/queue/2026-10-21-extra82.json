@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-04-extra41",
+  "id": "2026-10-21-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Solzhenitsyn", "#ArchipielagoGulag", "#Citas"],
-    "extended": ["#LiteraturaRusa", "#Historia", "#Siglo20", "#Nobel", "#Conciencia", "#Lectura", "#Sabiduria"]
+    "topic": [
+      "#Solzhenitsyn",
+      "#ArchipielagoGulag",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaRusa",
+      "#Historia",
+      "#Siglo20",
+      "#Nobel",
+      "#Conciencia",
+      "#Lectura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -67,5 +79,12 @@
     "Que la frase «Bless you, prison» («Bendita seas, prisión») cierre el capítulo: lo dice Modern Age, pero no se verificó en una segunda fuente. No se usa.",
     "Que lo condenara una troika sin juicio o en ausencia: las fuentes no coinciden en el procedimiento. La pieza dice solo «lo condenaron a ocho años»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-21T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
