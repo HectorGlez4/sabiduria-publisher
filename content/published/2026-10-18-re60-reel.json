@@ -2,7 +2,7 @@
   "id": "2026-10-18-re60-reel",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Teotihuacán: la ciudad que llegó sin su nombre",
     "hook": "La ciudad más grande de América en su tiempo tuvo cien mil habitantes y no sabemos cómo la llamaban ellos.",
@@ -71,6 +71,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-19T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1807873773869338",
+      "url": "https://www.facebook.com/reel/1807873773869338",
+      "published_at": "2026-10-20T13:45:12.896772+00:00"
+    }
+  },
   "reemision_de": "2026-09-19-extra97"
 }
