@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-tarde",
+  "id": "2026-10-22-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Larra", "#Escribir", "#Citas"],
-    "extended": ["#LiteraturaEspañola", "#Romanticismo", "#Periodismo", "#Siglo19", "#Madrid", "#Lectores", "#Sabiduria"]
+    "topic": [
+      "#Larra",
+      "#Escribir",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaEspañola",
+      "#Romanticismo",
+      "#Periodismo",
+      "#Siglo19",
+      "#Madrid",
+      "#Lectores",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -67,5 +79,12 @@
     "La frase de Cernuda «Escribir en España no es llorar, es morir» citada como de Larra: es del poema «A Larra, con unas violetas», no del artículo.",
     "La edad de Larra al escribir el artículo y calificarlo como «el periodista más leído de su tiempo»: no se verificaron en esta ejecución. No se usan."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-22T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

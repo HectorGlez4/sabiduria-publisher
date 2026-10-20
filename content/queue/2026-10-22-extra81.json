@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-extra41",
+  "id": "2026-10-22-extra81",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Beckett", "#FracasarMejor", "#Citas"],
-    "extended": ["#Literatura", "#Fracaso", "#CitasMalUsadas", "#Siglo20", "#Irlanda", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#Beckett",
+      "#FracasarMejor",
+      "#Citas"
+    ],
+    "extended": [
+      "#Literatura",
+      "#Fracaso",
+      "#CitasMalUsadas",
+      "#Siglo20",
+      "#Irlanda",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -69,5 +81,12 @@
     "Leer el pasaje como mensaje motivacional de mejora progresiva: el texto continúa hacia «mejor peor» y «fracasar peor otra vez».",
     "Qué edición de 1983 salió primero, la de Calder o la de Grove: los catálogos no lo aclaran. El campo work cita la de Calder sin decir que fuera la primera."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-22T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
