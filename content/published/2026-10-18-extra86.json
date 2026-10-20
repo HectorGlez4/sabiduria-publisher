@@ -74,12 +74,28 @@
     "Que el hangul se adoptara de inmediato. Se repite que la élite letrada lo despreció durante siglos, pero en esta investigación no se abrió una fuente institucional que lo sostenga. No se afirma nada sobre su recepción posterior.",
     "El precio o las circunstancias del hallazgo de 1940 en Andong. Circulan versiones novelescas sobre cuánto se pagó por el ejemplar. Las fuentes consultadas solo dicen que se encontró por casualidad."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-10-18T22:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1127917510032908",
+      "url": "https://www.facebook.com/874327782058550/posts/1127917510032908",
+      "published_at": "2026-10-20T11:27:44.948995+00:00"
+    },
+    "instagram": {
+      "post_id": "18177516817444323",
+      "url": "https://www.instagram.com/p/DetuZZGDOUD/",
+      "published_at": "2026-10-20T11:27:56.849446+00:00"
+    },
+    "threads": {
+      "post_id": "17880104637651930",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17880104637651930",
+      "published_at": "2026-10-20T11:28:08.365528+00:00"
+    }
+  }
 }

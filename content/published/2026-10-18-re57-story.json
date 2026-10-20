@@ -2,7 +2,7 @@
   "id": "2026-10-18-re57-story",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el mecanismo de Anticitera",
     "hook": "El aparato más complejo que dejó la Antigüedad griega salió del mar en 1901 y pasó medio siglo catalogado como un bulto de bronce corroído.",
@@ -77,6 +77,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-18T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1646059373575584",
+      "photo_id": "1127901983367794",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-20T11:05:25.931467+00:00"
+    },
+    "instagram_story": {
+      "post_id": "18386744152224152",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-20T11:05:39.919667+00:00"
+    }
+  },
   "reemision_de": "2026-09-19-extra95"
 }
