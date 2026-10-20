@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "Václav Havel, 1986",
     "subtitle": "Dictado en una cinta, en un piso prestado de Praga",
     "body": "No es la convicción de que algo va a salir bien, sino la certeza de que algo tiene sentido, sin importar cómo termine."
