@@ -2,7 +2,7 @@
   "id": "2026-10-19-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Mandela y el final del discurso de Rivonia",
     "hook": "El final del discurso más citado del siglo XX lleva tres palabras que casi nadie repite. Las propuso su abogado horas antes, y es probable que le salvaran la vida.",
@@ -84,5 +84,21 @@
     "threads"
   ],
   "publish_at": "2026-10-20T01:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1128313799993279",
+      "url": "https://www.facebook.com/874327782058550/posts/1128313799993279",
+      "published_at": "2026-10-20T20:30:47.338038+00:00"
+    },
+    "instagram": {
+      "post_id": "18372441202212557",
+      "url": "https://www.instagram.com/p/Deusiw7IDAr/",
+      "published_at": "2026-10-20T20:31:00.455820+00:00"
+    },
+    "threads": {
+      "post_id": "18126306794304034",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18126306794304034",
+      "published_at": "2026-10-20T20:31:14.391259+00:00"
+    }
+  }
 }

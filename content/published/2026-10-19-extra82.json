@@ -2,7 +2,7 @@
   "id": "2026-10-19-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Nezahualcóyotl y el canto del cenzontle",
     "hook": "De Nezahualcóyotl se conservan treinta y seis cantos en dos manuscritos del siglo XVI. El verso que el billete de cien pesos llevó impreso con su nombre no está en ninguno de los dos.",
@@ -82,5 +82,21 @@
     "threads"
   ],
   "publish_at": "2026-10-19T20:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1128273633330629",
+      "url": "https://www.facebook.com/874327782058550/posts/1128273633330629",
+      "published_at": "2026-10-20T19:21:15.240288+00:00"
+    },
+    "instagram": {
+      "post_id": "18097890932413302",
+      "url": "https://www.instagram.com/p/DeuklhJoB61/",
+      "published_at": "2026-10-20T19:21:30.949041+00:00"
+    },
+    "threads": {
+      "post_id": "18642347215035993",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18642347215035993",
+      "published_at": "2026-10-20T19:21:45.616838+00:00"
+    }
+  }
 }
