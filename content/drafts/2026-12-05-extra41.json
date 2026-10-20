@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-05-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kamo no Chōmei y el Hōjōki de 1212",
+    "hook": "La frase del río con la que empieza el clásico japonés de la impermanencia no habla, en realidad, de ríos. Dos líneas más abajo se ve de qué habla: de casas.",
+    "quote": {
+      "text": "La corriente del río no cesa nunca, y sin embargo su agua nunca es la misma.",
+      "author": "Kamo no Chōmei",
+      "work": "Hōjōki, apertura (1212)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En la primavera de 1212 Kamo no Chōmei tenía unos sesenta años y vivía como monje budista en las colinas de Hino, al sureste de Kioto. Venía de una familia de sacerdotes sintoístas de los santuarios Kamo y no había conseguido el puesto al que aspiraba en ellos. Escribía en una choza de un jō por lado, unos tres metros. De ahí el título: Hōjōki, el registro de la choza cuadrada.",
+      "Tras la frase del río vienen las burbujas que se forman y se deshacen en los remansos sin durar nunca. Y luego la clave: así son las personas y sus moradas en este mundo. El libro enumera lo que Chōmei vio caer en Kioto: el gran incendio de 1177, el torbellino y el traslado de la capital a Fukuhara en 1180, una hambruna de dos años con cadáveres en las calles, un gran terremoto.",
+      "Hoy una reconstrucción de su choza se muestra junto al santuario Kawai, dentro del recinto de Shimogamo, en Kioto, donde Chōmei pasó la infancia. La frase no consuela. Describe. De esa descripción sacó una decisión práctica: vivir en una casa tan pequeña que hubiera muy poco que perder."
+    ],
+    "question": "¿Qué tendría que medir tu casa para que perderla no te quitara el sueño?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Hojoki", "#KamoNoChomei", "#Citas"],
+    "extended": ["#Japon", "#Budismo", "#Impermanencia", "#Kioto", "#LiteraturaJaponesa", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto japonés: «ゆく河の流れは絶えずして、しかも、もとの水にあらず。よどみに浮かぶうたかたは、かつ消えかつ結びて、久しくとどまりたるためしなし。» y, poco después, «世の中にある人とすみかと、またかくのごとし»; la introducción sitúa la obra hacia 1212. Lectura directa.",
+      "source": "Wikilibros (japonés), «高等学校古典B/方丈記»",
+      "url": "https://ja.wikibooks.org/wiki/%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E5%8F%A4%E5%85%B8B/%E6%96%B9%E4%B8%88%E8%A8%98"
+    },
+    {
+      "claim": "Escrito en marzo de 1212; la choza medía «only ten feet square»; el título alude al jō como unidad; Chōmei venía de una respetada familia de sacerdotes sintoístas y no logró un puesto en los santuarios Kamo; vivió primero en Ōhara y después en el monte Hino; desastres: incendio del cuarto mes de Angen 3, torbellino del cuarto mes de Jishō 4, traslado de la capital a Fukuhara en el sexto mes de Jishō 4, hambruna de dos años en la era Yōwa con cuerpos en las calles, terremoto; la apertura expresa el mujō; hay un modelo de la choza en el Kawai Jinja de Shimogamo. Lectura directa.",
+      "source": "Wikipedia, «Hōjōki»",
+      "url": "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8Dki"
+    },
+    {
+      "claim": "Matthew Stavros, historiador de la Universidad de Sídney y antiguo director del Kyoto Consortium for Japanese Studies, publicó su traducción en abril de 2020; la obra se escribió en 1212, cuando Chōmei tenía unos sesenta años y vivía como monje retirado en las colinas de Hino; la choza era un hōjō, un jō por lado, unos diez pies; describe terremotos, incendios, torbellinos, hambrunas y cuerpos en las calles de Kioto. Lectura directa.",
+      "source": "Asian Review of Books, reseña de «Hōjōki: A Hermit's Hut as Metaphor», trad. Matthew Stavros (enero de 2021)",
+      "url": "https://asianreviewofbooks.com/hojoki-a-hermits-hut-as-metaphor-by-kamo-no-chomei-translated-by-matthew-stavros/"
+    },
+    {
+      "claim": "Kamo no Chōmei pasó su infancia en el santuario Kawai como hijo de un negi (sacerdote); en el bosque de Tadasu, al norte del santuario Kawai, se exhibe una reconstrucción del «方丈の庵», la choza del Hōjōki donde se dice que pasó sus últimos años, hecha tras un estudio académico. Lectura directa.",
+      "source": "Santuario de Shimogamo (sitio oficial), página del santuario Kawai",
+      "url": "https://www.shimogamo-jinja.or.jp/bireikigan"
+    }
+  ],
+  "do_not_use": [
+    "La traducción de la frase es propia, hecha sobre el texto japonés; las versiones publicadas difieren en la letra. No presentarla como la traducción de ningún editor concreto.",
+    "Los años occidentales de los desastres se convierten desde las eras japonesas que da la fuente (Angen 3 = 1177; Jishō 4 = 1180). El año del gran terremoto (habitualmente 1185, era Genryaku) no se verificó: Wikipedia lo mezcla con otro de la era Saikō. La pieza no le pone año.",
+    "Que Chōmei tomara los hábitos en 1204 y el lugar de su ordenación (Daikō-ji): solo en extractos de buscador y en una revista de viajes. La pieza dice solo que era monje.",
+    "Que el bloqueo de su carrera se debiera a la oposición de Kamo no Sukekane: solo en una revista de viajes. La pieza dice que no consiguió el puesto.",
+    "Que la choza se pudiera desmontar y transportar en carro: lo cuenta el propio Hōjōki según varias fuentes, pero no se leyó en directo en esta ejecución. No se menciona.",
+    "Que el manuscrito de Daifukkō-ji sea autógrafo de Chōmei: la nota antigua que lo afirma está discutida. No se usa.",
+    "Presentar la frase como préstamo o eco de Heráclito: la comparación es moderna; no hay relación textual."
+  ],
+  "status": "draft"
+}

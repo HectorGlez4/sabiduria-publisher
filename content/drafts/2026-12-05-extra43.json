@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-05-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Mary Oliver y el saltamontes de The Summer Day",
+    "hook": "La pregunta de Mary Oliver sobre tu única vida se cita como un llamado a hacer grandes cosas. En el poema llega al final de una tarde sin hacer nada, mirando a un saltamontes.",
+    "quote": {
+      "text": "Dime, ¿qué piensas hacer con tu única vida, salvaje y preciosa?",
+      "author": "Mary Oliver",
+      "work": "«The Summer Day», House of Light (1990)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Mary Oliver publicó «The Summer Day» en 1990, en el libro House of Light. Ya había ganado el Pulitzer en 1984 por American Primitive y vivía desde hacía años en Provincetown, en la costa de Massachusetts. Es un poema breve, de unos diecinueve versos, que empieza con una pregunta enorme: quién hizo el mundo.",
+      "Enseguida la pregunta se vuelve pequeña. Quién hizo este saltamontes, el que come azúcar de mi mano. La voz lo mira lavarse la cara, lo ve abrir las alas y alejarse. Dice que no sabe exactamente qué es una oración, pero que sí sabe prestar atención, arrodillarse en la hierba, estar ociosa y bendecida, pasear por los campos. Y pregunta si no muere todo al final, y demasiado pronto.",
+      "Solo entonces llega la línea famosa. Suelta, suena a exhortación a la ambición. En el poema la precede un día entero de no hacer nada útil. La pregunta no exige un plan: defiende ese día. Oliver murió en enero de 2019, en Florida, a los 83 años."
+    ],
+    "question": "¿Cuándo fue la última vez que pasaste una tarde entera solo mirando?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MaryOliver", "#Poesia", "#Citas"],
+    "extended": ["#PoesiaEstadounidense", "#Naturaleza", "#Atencion", "#Literatura", "#Lectura", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El poema empieza con «Who made the world?», pregunta quién hizo el saltamontes, «the one who is eating sugar out of my hand», describe cómo «snaps her wings open, and floats away»; contiene «I don't know exactly what a prayer is», «how to fall down / into the grass, how to kneel down in the grass, how to be idle and blessed, how to stroll through the fields», «Doesn't everything die at last, and too soon?» y termina con «Tell me, what is it you plan to do / with your one wild and precious life?»; unos 19 versos; derechos de 1990 de Mary Oliver. Comprobación directa.",
+      "source": "Academy of American Poets (poets.org), «The Summer Day», Mary Oliver",
+      "url": "https://poets.org/poem/summer-day"
+    },
+    {
+      "claim": "Mary Oliver nació el 10 de septiembre de 1935 en Maple Heights (Ohio) y murió el 17 de enero de 2019 en Hobe Sound (Florida); Pulitzer por American Primitive (1983); National Book Award por New and Selected Poems (1992); House of Light (1990) ganó el Christopher Award y el L. L. Winship/PEN New England Award; vivió más de cuarenta años en Provincetown (Massachusetts). Lectura directa.",
+      "source": "Academy of American Poets (poets.org), biografía de Mary Oliver",
+      "url": "https://poets.org/poet/mary-oliver"
+    },
+    {
+      "claim": "«The Summer Day» apareció por primera vez en House of Light (Beacon Press, 1990); muchos lo llaman «The Grasshopper»; empieza con «Who made the world?» y termina con la pregunta sobre «your one wild and precious life». Lectura directa.",
+      "source": "Beacon Broadside (blog de la editorial Beacon Press), «In Honor of the Solstice: Mary Oliver's \"The Summer Day\"» (20 de junio de 2012)",
+      "url": "https://beaconbroadside.com/2012/06/20/in-honor-of-the-solstice-mary-olivers-the-summer-day/"
+    },
+    {
+      "claim": "Murió el 17 de enero de 2019 en su casa de Hobe Sound (Florida), a los 83 años; Pulitzer en 1984 por American Primitive; el New York Times la llamó en 2007 «far and away, this country's best-selling poet». Lectura directa.",
+      "source": "Publishers Weekly, «Obituary: Mary Oliver» (2019)",
+      "url": "https://publishersweekly.com/pw/by-topic/industry-news/Obituary/article/79048-obituary-mary-oliver.html"
+    }
+  ],
+  "do_not_use": [
+    "La traducción del verso es propia. «Wild» se vierte como «salvaje»; otras versiones dicen «indómita» o «silvestre». No presentarla como la traducción publicada de nadie.",
+    "Que la pregunta sea un llamado a la productividad o al éxito: en el poema sigue a una tarde de ocio y atención. Es la lectura que la pieza corrige, no la que propone.",
+    "El año de nacimiento 1933: aparece en la página de homenaje del Pulitzer, que parece una errata; poets.org y Publishers Weekly dan 1935 y 83 años al morir.",
+    "Que «Wild Geese» sea menos conocido que «The Summer Day», o al revés: Publishers Weekly llama a «Wild Geese» su poema más famoso; la pieza no compara.",
+    "La causa de la muerte (linfoma): solo en extractos de buscador. No se menciona.",
+    "Que viviera en Provincetown cuando escribió el poema: poets.org dice que vivió allí más de cuarenta años, hasta 2005 aproximadamente; la pieza dice que en 1984 vivía allí desde hacía años, lo que encaja con ese dato, pero no da la fecha de llegada.",
+    "Afirmar que la línea se usa en tazas, carteles o discursos de graduación: es plausible, pero no se buscó fuente. No se menciona."
+  ],
+  "status": "draft"
+}

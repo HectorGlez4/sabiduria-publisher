@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-05-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Saint-Exupéry y el secreto del zorro",
+    "hook": "La frase más citada de El principito parece escrita de un tirón. En el manuscrito, Saint-Exupéry la probó de al menos once maneras distintas antes de dar con la definitiva.",
+    "quote": {
+      "text": "Solo se ve bien con el corazón. Lo esencial es invisible a los ojos.",
+      "author": "Antoine de Saint-Exupéry",
+      "work": "El principito, capítulo XXI (1943)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Saint-Exupéry escribió El principito en Nueva York, donde vivía exiliado desde la caída de Francia en 1940. Terminó el libro en octubre de 1942 y se publicó allí, en la editorial Reynal & Hitchcock, en abril de 1943. Para entonces el autor ya había dejado la ciudad para volver a su escuadrón.",
+      "El manuscrito, de 140 páginas, está en la Morgan Library de Nueva York desde 1968. Su conservadora, Christine Nelson, contó que la frase del zorro aparece allí ensayada de once formas antes de la final. Entre ellas, «Lo que cuenta es invisible», «Lo que es importante es siempre invisible», «Lo más importante sigue siendo invisible».",
+      "En el capítulo XXI el zorro se la regala al principito como un secreto muy simple, justo antes de decirle que uno se vuelve responsable para siempre de lo que ha domesticado. Saint-Exupéry no vio el éxito del libro: murió en 1944, en un vuelo de reconocimiento, semanas antes de la liberación de París."
+    ],
+    "question": "¿Qué es lo más importante en tu vida que nadie ve desde fuera?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ElPrincipito", "#SaintExupery", "#Citas"],
+    "extended": ["#LiteraturaFrancesa", "#Manuscritos", "#NuevaYork", "#Libros", "#Lectura", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo XXI: «Voici mon secret. Il est très simple: on ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.»; en el mismo capítulo, «Tu deviens responsable pour toujours de ce que tu as apprivoisé». Lectura directa.",
+      "source": "Wikiquote (inglés), «The Little Prince», capítulo XXI",
+      "url": "https://en.wikiquote.org/wiki/The_Little_Prince"
+    },
+    {
+      "claim": "Christine Nelson, conservadora de manuscritos literarios e históricos de la Morgan Library & Museum, explicó que Saint-Exupéry ensayó 11 formulaciones antes de «l'essentiel est invisible pour les yeux», entre ellas «Mais ce qui compte est invisible», «Ce qui est important est toujours invisible» y «Le plus important demeure invisible»; la Morgan adquirió el manuscrito en 1968; el libro se escribió en Nueva York durante el exilio y se terminó en octubre de 1942; salió en Estados Unidos a comienzos de 1943, cuando el autor partía hacia su escuadrón en Argel. Lectura directa (artículo de 2014 actualizado el 5 de agosto de 2021).",
+      "source": "Mental Floss, «11 Drafts of the Most Famous Phrase from The Little Prince»",
+      "url": "https://www.mentalfloss.com/article/57198/11-drafts-most-famous-phrase-little-prince"
+    },
+    {
+      "claim": "Exposición «The Little Prince: A New York Story» en la Morgan Library & Museum, del 24 de enero al 27 de abril de 2014; manuscrito de 140 páginas; Saint-Exupéry vivió unos dos años en Nueva York tras la caída de Francia en 1940; el libro salió en abril de 1943 con Reynal & Hitchcock; dejó la ciudad para reincorporarse a su escuadrón; murió en 1944 en un vuelo de reconocimiento en solitario, semanas antes de la liberación de París. Lectura directa.",
+      "source": "Fine Books & Collections, «The Little Prince Is the Subject of a Major Exhibit at the Morgan Library» (3 de diciembre de 2013)",
+      "url": "https://www.finebooksmagazine.com/fine-books-news/little-prince-subject-major-exhibit-morgan-library"
+    },
+    {
+      "claim": "El zorro revela al principito el secreto: «On ne voit bien qu'avec le cœur», «L'essentiel est invisible pour les yeux»; la obra aparece en Estados Unidos aproximadamente un año antes de la muerte del autor en 1944. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Le Petit Prince, Antoine de Saint-Exupéry — Fiche de lecture»",
+      "url": "https://www.universalis.fr/encyclopedie/le-petit-prince/"
+    }
+  ],
+  "do_not_use": [
+    "El número de versiones de la frase: la conservadora de la Morgan habla de 11 alternativas más la definitiva; otra fuente divulgativa dice que la revisó 15 veces. La pieza dice «al menos once».",
+    "Que la edición francesa saliera en Nueva York pocos días después de la inglesa: solo en páginas de librerías de libro raro. Fine Books dice que en Francia se publicó solo después de la guerra. La pieza no habla de la edición francesa.",
+    "La fecha exacta de publicación (6 de abril de 1943) y la tirada firmada de 525 ejemplares: solo en catálogos de librerías anticuarias. La pieza dice «abril de 1943».",
+    "La traducción de las variantes del manuscrito es propia, desde el francés citado por la conservadora.",
+    "La frase «C'est le temps que tu as perdu pour ta rose...»: no se verificó su redacción exacta en esta ejecución. No se usa.",
+    "Atribuir la frase o la imagen del corazón a fuentes anteriores (Pascal y sus razones del corazón): no hay relación demostrada. No se sugiere."
+  ],
+  "status": "draft"
+}

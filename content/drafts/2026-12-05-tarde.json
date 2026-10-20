@@ -1,0 +1,68 @@
+{
+  "id": "2026-12-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lorca y el medio pan de Fuente Vaqueros",
+    "hook": "La frase de Lorca sobre el pan y el libro suele leerse como un elogio amable de la lectura. La dijo en su pueblo, en 1931, contra quienes solo hablaban de reivindicaciones económicas.",
+    "quote": {
+      "text": "Si tuviera hambre y estuviera desvalido en la calle no pediría un pan; sino que pediría medio pan y un libro.",
+      "author": "Federico García Lorca",
+      "work": "Alocución al pueblo de Fuente Vaqueros, septiembre de 1931",
+      "attribution_verified": true
+    },
+    "body": [
+      "En septiembre de 1931, en los primeros meses de la Segunda República, Federico García Lorca volvió a Fuente Vaqueros, el pueblo de la vega de Granada donde había nacido, para inaugurar su biblioteca pública. Él mismo dijo en el discurso que era seguramente la primera de toda la provincia. No improvisó: leyó un texto escrito.",
+      "La frase del medio pan no está sola. Lorca la acompaña de una crítica directa a quienes hablaban solo de reivindicaciones económicas sin nombrar nunca las culturales, que según él eran las que los pueblos pedían a gritos. Y recuerda a Dostoievski preso en Siberia, escribiendo a su familia para pedir libros, muchos libros, para que su alma no muriera.",
+      "Hoy la frase circula sola, como un lema de biblioteca. En el discurso es una exigencia: que el libro se reclame como se reclama el pan. Lorca no oponía uno al otro. Pedía las dos mitades. Cinco años después, en agosto de 1936, fue asesinado en Granada."
+    ],
+    "question": "¿Qué necesidad que no se come te parece tan urgente como el pan?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#GarciaLorca", "#Bibliotecas", "#Citas"],
+    "extended": ["#Lectura", "#Granada", "#SegundaRepublica", "#Libros", "#LiteraturaEspañola", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto completo del discurso pronunciado en septiembre de 1931 en Fuente Vaqueros, en la inauguración de la biblioteca pública del pueblo natal de Lorca; contiene «Yo, si tuviera hambre y estuviera desvalido en la calle no pediría un pan, sino que pediría medio pan y un libro»; recuerda a Dostoievski preso en Siberia pidiendo libros «para que mi alma no muera»; menciona la República y la cultura. Lectura directa.",
+      "source": "Le Grand Continent (edición en español), «Medio pan y un libro», sección Archivos y discursos, 19 de agosto de 2024",
+      "url": "https://legrandcontinent.eu/es/2024/08/19/medio-pan-y-un-libro/"
+    },
+    {
+      "claim": "Transcripción del discurso de septiembre de 1931 en la inauguración de la biblioteca de Fuente Vaqueros: «la primera seguramente en toda la provincia de Granada»; la frase con punto y coma: «no pediría un pan; sino que pediría medio pan y un libro». Lectura directa.",
+      "source": "Quelibroleo, «Medio pan y un libro» (transcripción de la alocución)",
+      "url": "https://quelibroleo.com/noticias/autores/medio-pan-y-un-libro/"
+    },
+    {
+      "claim": "En el discurso de inauguración de la biblioteca de Fuente Vaqueros (septiembre de 1931) Lorca pide «medio pan y un libro» y critica a quienes solo hablan de reivindicaciones económicas y olvidan las culturales, que son las que los pueblos reclaman; la página conmemora los 87 años de su muerte (2023, es decir, 1936). Lectura directa.",
+      "source": "Presidencia de la Nación Argentina (Cultura), «A 87 años de su muerte, recordamos la figura del gran Federico García Lorca»",
+      "url": "https://www.argentina.gob.ar/noticias/87-anos-de-su-muerte-recordamos-la-figura-del-gran-federico-garcia-lorca"
+    },
+    {
+      "claim": "La conferencia «que Federico García Lorca leyó en la inauguración» de la biblioteca de Fuente Vaqueros, en septiembre de 1931. Lectura directa (artículo sin firma, 26 de agosto de 2014).",
+      "source": "Escritores.org, «Federico García Lorca y las bibliotecas»",
+      "url": "https://www.escritores.org/recursos-para-escritores/recursos-2/articulos-de-interes/11544-federico-garcia-lorca-y-las-bibliotecas"
+    },
+    {
+      "claim": "La «Alocución al pueblo de Fuente Vaqueros» se publicó en edición facsímil en Granada en 1986, con transcripción de Manuel Fernández-Montesinos y nota preliminar de Andrés Soria Olmedo, y figura en las Obras completas editadas por Miguel García-Posada (Galaxia Gutenberg, 1996). Solo visto en extractos del buscador: la página no se pudo abrir por un error de certificado.",
+      "source": "Universo Lorca (Diputación de Granada), ficha de la Alocución",
+      "url": "https://www.universolorca.com/en/?p=7875"
+    }
+  ],
+  "do_not_use": [
+    "Que el texto se publicara por primera vez en 1986, en el cincuentenario del asesinato: solo se vio en extractos del buscador (Universo Lorca), no en lectura directa. La pieza no da la fecha de publicación.",
+    "Que la biblioteca desapareciera con la guerra, que el pueblo recuperara una en 1988 y que desde 2008 se llame Biblioteca Pública Federico García Lorca: solo en un artículo sin firma de escritores.org. No se usa.",
+    "Que el acto coincidiera con el homenaje en que el ayuntamiento dio su nombre a la antigua calle de la Iglesia: aparece en extractos de una antología de Galaxia Gutenberg, no leída. No se menciona.",
+    "La fecha exacta del día de septiembre: ninguna fuente leída la da. La pieza dice solo «septiembre de 1931».",
+    "La puntuación de la frase varía entre transcripciones (coma o punto y coma antes de «sino»). La tarjeta usa el punto y coma de la transcripción de Quelibroleo y quita el «Yo» inicial; no se presenta como facsímil.",
+    "La cita de Dostoievski entre comillas como texto literal de una carta suya: en la pieza es lo que Lorca cuenta, en estilo indirecto; no se verificó la carta original.",
+    "Que Lorca fundara o financiara la biblioteca: las fuentes leídas dicen que la inauguró. Un extracto atribuye a Lorca haber recomendado su creación dos años antes, pero no se leyó en directo. No se usa.",
+    "El día exacto de su muerte (18 o 19 de agosto de 1936; las fuentes difieren): la pieza dice «agosto de 1936»."
+  ],
+  "status": "draft"
+}
