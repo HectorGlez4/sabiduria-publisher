@@ -2,7 +2,7 @@
   "id": "2026-10-18-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Kant y el sapere aude de 1784",
     "hook": "El lema de la Ilustración no lo inventó Kant. Lo tomó de un poeta romano que lo escribió dieciocho siglos antes, en un pasaje que no hablaba de razón, sino de dejar de aplazar.",
@@ -83,5 +83,8 @@
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'cream' repetida: la ultima publicacion real (2026-09-30-extra81) tambien salio cream"
   ]
 }
