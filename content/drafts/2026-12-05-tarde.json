@@ -1,0 +1,71 @@
+{
+  "id": "2026-12-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Larra y el artículo Horas de invierno (1836)",
+    "hook": "La frase más amarga de Larra sobre el oficio de escribir apareció en un artículo que, en principio, comentaba una colección de novelas traducidas. Era Navidad de 1836.",
+    "quote": {
+      "text": "Escribir en Madrid es llorar, es buscar voz sin encontrarla, como en una pesadilla abrumadora y violenta.",
+      "author": "Mariano José de Larra",
+      "work": "«Horas de invierno», El Español, n.º 420, 25 de diciembre de 1836",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 25 de diciembre de 1836 el diario madrileño El Español publicó, en su número 420, un artículo firmado por M. J. de Larra con el título «Horas de invierno». Era el nombre de una colección de traducciones de novelistas extranjeros, y el artículo empezaba como una reseña de ella.",
+      "Pronto se desvía. Larra compara escribir en París con escribir en Madrid. En París, dice, la palabra escrita resuena: se le habla a la humanidad. En Madrid, escribir es tomar apuntes, llevar un libro de memorias, un monólogo triste para uno solo. Ahí está la frase. Y enseguida dos preguntas: «¿Quiénes son los suyos? ¿Quién oye aquí?».",
+      "No es una queja sobre la dificultad de escribir, sino sobre la falta de alguien que lea. Larra, que firmaba como Fígaro, llevaba años escribiendo para la prensa de Madrid, y aun así sentía que hablaba al vacío. Murió en Madrid el 13 de febrero de 1837, siete semanas después. Un siglo más tarde, Luis Cernuda le dedicó un poema y le dio la vuelta a la frase: escribir en España, escribió, no es llorar, es morir."
+    ],
+    "question": "¿Para quién escribe uno cuando no sabe si alguien lo está leyendo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Larra", "#Escribir", "#Citas"],
+    "extended": ["#LiteraturaEspañola", "#Romanticismo", "#Periodismo", "#Siglo19", "#Madrid", "#Lectores", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del artículo «Horas de invierno», fechado el 25 de diciembre de 1836: contiene literalmente «Escribir en Madrid es llorar, es buscar voz sin encontrarla, como en una pesadilla abrumadora y violenta.», precedido de la comparación entre escribir en París (hablar a la humanidad) y en Madrid, y seguido de «¿Quiénes son los suyos? ¿Quién oye aquí?»; el artículo comenta una colección de traducciones y alude a su editor y a su traductor sin nombrarlos. En el mismo documento figura aparte el poema de Cernuda «A Larra, con unas violetas» con el verso «Escribir en España no es llorar, es morir». Lectura directa como comprobación.",
+      "source": "Universitat de València, textos de clase (Ricardo R.), «Larra», documento con el artículo completo",
+      "url": "https://www.uv.es/ricardor/Textos\\Larra.doc"
+    },
+    {
+      "claim": "La cita «Escribir en Madrid es llorar, es buscar voz sin encontrarla, como en una pesadilla abrumadora y violenta», con referencia: «Horas de invierno», El Español. Diario de las Doctrinas y los Intereses Sociales, n.º 420, 25 de diciembre de 1836. Lectura directa.",
+      "source": "Wikiquote en español, «Mariano José de Larra», nota 8",
+      "url": "https://es.wikiquote.org/wiki/Mariano_Jos%C3%A9_de_Larra"
+    },
+    {
+      "claim": "Francisco Umbral, «El calambre del escritor» (El Mundo, 24 de marzo de 2009), sitúa la frase en el artículo «Horas de invierno» y la lee como expresión de la desesperación final de Larra. Lectura directa.",
+      "source": "Fundación Francisco Umbral, artículo de Umbral reproducido",
+      "url": "https://www.fundacionfranciscoumbral.es/articulos/articulo.php?id=2"
+    },
+    {
+      "claim": "Edición digital del artículo «Horas de invierno» en la Biblioteca Virtual Miguel de Cervantes; el texto procede de El Español, n.º 420, 25 de diciembre de 1836, firmado M. J. de Larra; reproduce el pasaje «Escribir como escribimos en Madrid es tomar una apuntación...». Solo visto en extractos del buscador: la página devuelve 403 a WebFetch.",
+      "source": "Biblioteca Virtual Miguel de Cervantes, «Horas de invierno»",
+      "url": "https://www.cervantesvirtual.com/obra-visor/horas-de-invierno--0/html/ff84291a-82b1-11df-acc7-002185ce6064_2.html"
+    },
+    {
+      "claim": "Larra escribía para El Español en 1836; murió por suicidio el 13 de febrero de 1837 en su casa de la calle de Santa Clara, en Madrid. Lectura directa.",
+      "source": "Wikipedia en español, «Mariano José de Larra»",
+      "url": "https://es.wikipedia.org/wiki/Mariano_Jos%C3%A9_de_Larra"
+    },
+    {
+      "claim": "Eugenio de Ochoa publicó traducciones de autores europeos (Hugo, Sand, Soulié, Dumas, Scott) en la colección «Horas de invierno (1836-1837, 3 vols.)». Lectura directa.",
+      "source": "EcuRed, «Eugenio de Ochoa»",
+      "url": "https://www.ecured.cu/Eugenio_de_Ochoa"
+    }
+  ],
+  "do_not_use": [
+    "Nombrar a Eugenio de Ochoa como el editor o traductor reseñado en el artículo: es muy probable (la colección «Horas de invierno» de 1836-1837 era suya y el artículo alude a un editor conocido por El Artista), pero el texto de Larra no lo nombra y ninguna fuente leída lo dice explícitamente. La pieza dice solo «una colección de traducciones».",
+    "Fechar el poema de Cernuda: no se verificó el año en esta ejecución. La pieza dice «un siglo más tarde» de forma aproximada; no dar el año exacto ni el libro.",
+    "Que Larra fuera elegido diputado por Ávila en 1836 y que la elección se anulara: lo dicen fuentes divulgativas, pero Wikipedia no menciona la anulación. No se usa.",
+    "Atribuir el suicidio a una causa única (Dolores Armijo, el fracaso político): las fuentes presentan varias circunstancias. La pieza solo da la fecha de su muerte.",
+    "La frase de Cernuda «Escribir en España no es llorar, es morir» citada como de Larra: es del poema «A Larra, con unas violetas», no del artículo.",
+    "La edad de Larra al escribir el artículo y calificarlo como «el periodista más leído de su tiempo»: no se verificaron en esta ejecución. No se usan."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-05-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el disco celeste de Nebra",
+    "hook": "La representación concreta del cielo más antigua que se conoce la desenterraron dos saqueadores con un detector de metales. Aquel verano de 1999 sigue pesando sobre todo lo que se sabe de ella.",
+    "body": [
+      "Es un disco de bronce de unos treinta centímetros, con aplicaciones de oro: un círculo que se lee como sol o luna llena, una luna creciente y un campo de puntos que son estrellas. Más tarde se le añadieron dos arcos en los bordes, que marcan el horizonte, y un tercero curvo que el museo interpreta como una barca que navega de noche entre ambos horizontes. Fue enterrado hacia el 1600 a.C. en el Mittelberg, una colina cerca de Nebra, en el centro de Alemania, junto con espadas, hachas, brazaletes en espiral y un cincel.",
+      "En el verano de 1999 dos buscadores sin permiso lo sacaron de la tierra y lo vendieron. Pasó por varios intermediarios durante casi tres años. En febrero de 2002 la policía de Basilea, en Suiza, lo recuperó en una operación coordinada con las autoridades alemanas; el arqueólogo del estado de Sajonia-Anhalt, Harald Meller, participó en la operación. Los saqueadores acabaron llevando a los arqueólogos al lugar del hallazgo, y ese mismo año se excavó el sitio.",
+      "Desde 2013 el disco está en el registro Memoria del Mundo de la UNESCO. Pero como nadie lo vio salir de la tierra salvo quienes lo robaron, su contexto depende de su palabra. En 2020 dos arqueólogos, Rupert Gebhard y Rüdiger Krause, sostuvieron que el hallazgo no pudo ocurrir como se ha contado y que el disco sería unos mil años más reciente, de la Edad del Hierro. El museo de Halle y otros investigadores respondieron ese mismo año defendiendo la fecha de la Edad del Bronce, que hoy es la aceptada."
+    ],
+    "question": "¿Cuánto vale un objeto cuando se ha perdido la historia de cómo llegó hasta nosotros?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El disco celeste de Nebra",
+    "subtitle": "Un cielo de bronce sacado por saqueadores",
+    "body": "Hacia el 1600 a.C. alguien enterró en una colina de Alemania un disco con sol, luna y estrellas de oro. En 1999 lo desenterraron dos saqueadores. En 2002 la policía lo recuperó en Basilea, y aún se discute cómo fue el hallazgo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#DiscoDeNebra", "#EdadDelBronce", "#Arqueologia"],
+    "extended": ["#Astronomia", "#Prehistoria", "#Alemania", "#PatrimonioCultural", "#Expolio", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Buscadores con detector desenterraron ilegalmente el disco, parte de un tesoro de bronce, cerca de la cima del Mittelberg en el verano de 1999; se vendió y pasó por varios intermediarios; en febrero de 2002 la policía de Basilea lo aseguró en estrecha cooperación con las autoridades alemanas; expuesto en Halle desde el 23 de mayo de 2008; unos 3.600 años de antigüedad; muestra sol, luna y estrellas y una barca en viaje nocturno entre los horizontes; la representación concreta más antigua de fenómenos astronómicos; inscrito en Memoria del Mundo de la UNESCO en junio de 2013. Lectura directa.",
+      "source": "Landesmuseum für Vorgeschichte Halle, «Nebra Sky Disc»",
+      "url": "https://www.landesmuseum-vorgeschichte.de/en/nebra-sky-disc.html"
+    },
+    {
+      "claim": "Fases: primero 32 estrellas, luna llena y creciente; después arcos de borde que taparon dos estrellas (uno se perdió); luego un arco añadido distinto en color y decoración; después perforado el borde; enterrado hacia el 1600 a.C. con armas, herramientas y adornos. Lectura directa.",
+      "source": "Landesmuseum für Vorgeschichte Halle, «The phases of the Sky Disc»",
+      "url": "https://www.landesmuseum-vorgeschichte.de/en/nebra-sky-disc/the-phases-of-the-sky-disc.html"
+    },
+    {
+      "claim": "Inscrito en el registro Memoria del Mundo en 2013; unos 3.600 años; enterrado ritualmente con dos espadas, dos hachas, dos brazaletes en espiral y un cincel de bronce en el Mittelberg, cerca de Nebra (Sajonia-Anhalt); «the oldest concrete depiction of cosmic phenomena worldwide». Lectura directa.",
+      "source": "UNESCO, Memory of the World, «Nebra Sky Disc»",
+      "url": "https://www.unesco.org/en/memory-world/nebra-sky-disc"
+    },
+    {
+      "claim": "Gebhard (Archäologische Staatssammlung München) y Krause (Universidad Goethe de Fráncfort) publicaron en Archäologische Informationen 43 (2020) que el sitio y las circunstancias del hallazgo no pueden ser como se describen y que el disco sería probablemente de la Edad del Hierro, unos 1.000 años más joven; réplica de Pernicka et al. (con Meller) en Archaeologia Austriaca 104 (2020); el Landesmuseum publicó una rectificación el 3 de septiembre de 2020; en 2002 una excavación científica investigó el lugar del hallazgo. Lectura directa.",
+      "source": "Deutsche Gesellschaft für Ur- und Frühgeschichte (DGUF), página de prensa sobre el disco de Nebra",
+      "url": "https://dguf.de/nebraskydisk.html"
+    },
+    {
+      "claim": "Disco de unos 30 cm y 2,2 kg; Westphal y Renner lo hallaron con detectores, sin licencia; en febrero de 2002 Meller lo adquirió en una operación policial en Basilea; los saqueadores llevaron a policía y arqueólogos al sitio; la excavación encontró indicios que apoyaban su relato; las críticas de 2020 fueron rechazadas por Pernicka y otros, y otros análisis confirmaron la Edad del Bronce. Lectura directa.",
+      "source": "Wikipedia, «Nebra sky disc»",
+      "url": "https://en.wikipedia.org/wiki/Nebra_sky_disc"
+    }
+  ],
+  "do_not_use": [
+    "Las cifras de las ventas (31.000 marcos al día siguiente, 700.000 marcos pedidos en Basilea, «hasta un millón»): solo aparecen en Wikipedia y en páginas divulgativas, sin fuente institucional leída. No se usan.",
+    "La fecha exacta del hallazgo (4 de julio de 1999) y la del golpe de Basilea (23 de febrero de 2002): aparecen en una audioguía y en Grokipedia, no en el museo. La pieza dice «verano de 1999» y «febrero de 2002».",
+    "Los nombres de los vendedores de Basilea: solo en Grokipedia. No se usan.",
+    "Que Meller se hiciera pasar por comprador privado: solo en páginas divulgativas. La pieza dice que participó en la operación.",
+    "Que los arcos de horizonte abarquen 82 grados y marquen los solsticios en la latitud del Mittelberg: es la interpretación aceptada, pero solo se leyó en Wikipedia; el museo habla de «arcos de borde» y horizontes. La pieza no da el ángulo.",
+    "Que el oro de la primera fase y el estaño procedan de Cornualles: lo recoge Wikipedia citando un análisis posterior; no se contrastó. No se usa.",
+    "Presentar el disco como «calendario» o «reloj astronómico» con función demostrada: es una interpretación, repetida en divulgación como hecho. La pieza no le atribuye función.",
+    "Decir que el debate de 2020 está «cerrado»: la pieza dice que la fecha de la Edad del Bronce es la aceptada y que fue defendida, no que la crítica quedara zanjada para todos.",
+    "Las penas de los saqueadores (cuatro y diez meses, elevadas a seis y doce en apelación): solo en Wikipedia y divulgación. No se usan.",
+    "Que el disco sea una falsificación moderna: lo sostuvo algún arqueólogo en el juicio, según Grokipedia; los análisis lo rechazan y las fuentes institucionales no lo recogen. No se usa."
+  ],
+  "status": "draft"
+}

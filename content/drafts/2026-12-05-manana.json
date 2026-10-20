@@ -1,0 +1,75 @@
+{
+  "id": "2026-12-05-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "los hermanos Elhuyar y el wolframio (1783)",
+    "hook": "La W de la tabla periódica no viene del inglés ni del sueco. Viene del nombre que dos hermanos de Logroño le pusieron a un metal en un laboratorio de Bergara, en 1783.",
+    "body": [
+      "En 1781 los químicos suecos Carl Wilhelm Scheele y Torbern Bergman habían sospechado que en un mineral pesado se escondía un elemento nuevo. Obtuvieron su óxido, pero no el metal. Juan José de Elhuyar había estudiado en Uppsala, donde enseñaba Bergman, y volvió al País Vasco con el problema en la cabeza.",
+      "En el laboratorio del Real Seminario de Bergara, fundado por la Real Sociedad Bascongada de Amigos del País, Juan José y su hermano Fausto trabajaron con otro mineral, la wolframita. Sacaron de él un ácido igual al que habían descrito los suecos, y en 1783 lo redujeron con carbón hasta obtener el metal. Lo llamaron wolfram. Ese mismo año la Sociedad publicó su memoria, de cuarenta y dos páginas: «Análisis químico del wolfram, y examen de un nuevo metal que entra en su composición». En 1785 ya circulaba traducida al inglés en Londres.",
+      "Después los hermanos se separaron. Juan José fue a mejorar las minas de Nueva Granada y murió en Bogotá en 1796. Fausto pasó a México, donde estuvo al frente del Real Seminario de Minería. En octubre de 2018 la Sociedad Europea de Física colocó una placa en Bergara. El metal se llama hoy tungsteno en casi todas partes, pero su símbolo sigue siendo la W de aquel nombre."
+    ],
+    "question": "¿Cuántos descubrimientos conocemos por un nombre que no es el de quien los hizo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La W de los Elhuyar",
+    "subtitle": "Un metal aislado en Bergara en 1783",
+    "body": "Los suecos Scheele y Bergman obtuvieron el óxido en 1781, pero no el metal. En 1783 los hermanos Juan José y Fausto de Elhuyar lo aislaron en Bergara reduciendo con carbón el ácido de la wolframita. Lo llamaron wolfram: de ahí la W."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Elhuyar", "#Wolframio", "#HistoriaDeLaCiencia"],
+    "extended": ["#Quimica", "#TablaPeriodica", "#Bergara", "#Siglo18", "#Ilustracion", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la placa: «Here in Bergara, in 1783, the Elhuyar Brothers, Juan Jose and Fausto, succeeded in the isolation of Wolfram [Tungsten]»; la Real Sociedad Bascongada creó el Real Seminario con laboratorio químico; «The Royal Basque Society published their report in 1783»; referencia: «Analisis quimico del Wolfram, y examen de un nuevo metal, que entra en su composicion» (1783, pp. 46-88) y traducción inglesa «A Chemical Analysis of Wolfram...» (Londres, 1785); placa descubierta el 20 de octubre de 2018 por el presidente de la EPS, R. Voss. Lectura directa.",
+      "source": "European Physical Society, Historic Sites, «Bergara Laboratorium»",
+      "url": "https://ehphysg.eu/e11-p4bergara.html"
+    },
+    {
+      "claim": "«Tungsten used to be known as wolfram (from wolframite...)»; «The de Elhuyar brothers found an acid in wolframite in 1783... that they succeeded in reducing to the elemental metal with charcoal». Lectura directa.",
+      "source": "WebElements (Mark Winter, Universidad de Sheffield), «Tungsten: historical information»",
+      "url": "https://winter.group.shef.ac.uk/webelements/tungsten/history.html"
+    },
+    {
+      "claim": "Nacidos en Logroño; Juan José aprendió en Uppsala a analizar la wolframita; volvió a Bergara y los hermanos aislaron el wolfram en el laboratorio del Real Seminario; anunciado en una Junta General de la Real Sociedad Bascongada; Fausto fue a México, donde fundó el Real Seminario de Minas, y murió en Madrid en 1833; Juan José fue a Colombia a mejorar sus minas y murió en Bogotá el 20 de septiembre de 1796. Lectura directa.",
+      "source": "Zientzia.eus (Fundación Elhuyar), «Elhuyar anaiak»",
+      "url": "https://zientzia.eus/artikuluak/elhuyar-anaia1/en/"
+    },
+    {
+      "claim": "Descripción del proceso: el precipitado amarillo (óxido de wolframio) se mezcló con carbón en polvo sobre fuego vivo hora y media, y salió «una especie de botón gris»; la Academia de Ciencias de Tolosa publicó al año siguiente un informe del proceso. Lectura directa (traducción automática del euskera).",
+      "source": "Zientzia.eus (Fundación Elhuyar), «Brothers Elhuyar»",
+      "url": "https://zientzia.eus/artikuluak/elhuyar-anaiak/en/"
+    },
+    {
+      "claim": "En 1781 Scheele y Bergman sugirieron que podía obtenerse un elemento nuevo reduciendo el ácido de la scheelita; en 1783 los hermanos hallaron en la wolframita un ácido idéntico al túngstico y lo redujeron con carbón vegetal en el Real Seminario de Vergara; la IUPAC llama al elemento «tungsten». Lectura directa.",
+      "source": "Wikipedia en español, «Wolframio»",
+      "url": "https://es.wikipedia.org/wiki/Wolframio"
+    },
+    {
+      "claim": "Fausto de Elhuyar trabajó con su hermano en 1783 y aisló el metal «reducing it by carbon»; la Academia de Ciencias de Tolosa recibió noticia del descubrimiento el 4 de marzo de 1784; después fue a México. Lectura directa.",
+      "source": "Catholic Encyclopedia (1909), «Fausto de Elhuyar y de Suvisa», en New Advent",
+      "url": "https://www.newadvent.org/cathen/05381a.htm"
+    },
+    {
+      "claim": "La memoria tiene trece capítulos y abarca 42 páginas; presentada en las Juntas Generales de Vitoria y publicada en los Extractos de 1783. Solo visto en extractos del buscador (artículos de Munibe y de Anales de la Academia Nacional de Ciencias Exactas de Argentina, en PDF que no se pudieron leer).",
+      "source": "Resultados de búsqueda: Munibe (Aranzadi) y Anales ANCEFN, tomo 63",
+      "url": "https://www.aranzadi.eus/fileadmin/docs/Munibe/1962509531.pdf"
+    }
+  ],
+  "do_not_use": [
+    "Que el wolframio sea «el primer elemento aislado en el mundo» o «el único aislado en España»: son formulaciones promocionales de fuentes vascas y divulgativas, no consenso. No se usan.",
+    "La fecha del 28 de septiembre de 1783 como día del aislamiento: algunas fuentes la dan como fecha de la reducción y otras como fecha de presentación en las Juntas; un dossier habla del «otoño de 1783». La pieza dice solo «en 1783».",
+    "Las fechas de nacimiento: Zientzia.eus da 1754 para ambos, la EPS y la Catholic Encyclopedia dan 1755 para Fausto. No se mencionan.",
+    "El día de la muerte de Fausto (6 de enero o 6 de febrero de 1833, según la fuente). La pieza no da fecha de su muerte.",
+    "Que Fausto «fundó» el Real Seminario de Minería de México o que fue «la primera escuela de ingeniería de América»: Zientzia.eus lo dice, pero no se contrastó; la pieza dice solo que lo dirigió.",
+    "Que la IUPAC adoptara oficialmente «wolfram» en 1949: aparece en Wikipedia sin verificar; hoy la IUPAC usa «tungsten». No se usa.",
+    "Que Juan José estudiara directamente con Scheele: la fuente habla de Bergman en Uppsala. Tampoco se afirma que fuera alumno formal de Bergman; la pieza dice que estudió en Uppsala, «donde enseñaba Bergman».",
+    "La acusación de que los hermanos fueran enviados como espías industriales a Suecia: circula en divulgación (Zientzia.eus tiene un artículo sobre ello), no se verificó. No se usa."
+  ],
+  "status": "draft"
+}

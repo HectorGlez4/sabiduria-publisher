@@ -1,0 +1,73 @@
+{
+  "id": "2026-12-05-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Beckett y el fracasar mejor de Worstward Ho (1983)",
+    "hook": "El lema que se repite en charlas de emprendimiento y gimnasios viene de uno de los textos más oscuros de Samuel Beckett. Y no termina donde se suele cortar.",
+    "quote": {
+      "text": "Siempre intentado. Siempre fracasado. No importa. Intentar otra vez. Fracasar otra vez. Fracasar mejor.",
+      "author": "Samuel Beckett",
+      "work": "Worstward Ho (Londres, John Calder, 1983)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Worstward Ho es una prosa breve que Beckett escribió en inglés y publicó en 1983, en Londres con John Calder y en Nueva York con Grove Press. El título se puede leer como «rumbo a lo peor». En 1989 se reunió con Compañía y Mal visto mal dicho en el volumen Nohow On.",
+      "Las seis frases de la cita aparecen al principio. Lo que viene después rara vez se copia. El texto sigue: intentar otra vez, fracasar otra vez, mejor otra vez, «o mejor peor». Y enseguida: fracasar peor otra vez, todavía peor, hasta hartarse del todo, hasta vomitar del todo. El crítico Fintan O'Toole lo resumió en The New York Review of Books: no es un estímulo, es la exigencia de seguir fallando hasta que el fracaso sea completo.",
+      "Fuera de su contexto, la frase acabó en libros de autoayuda como La semana laboral de 4 horas, de Timothy Ferriss. En 2021 el Journal of Beckett Studies le dedicó un artículo entero a sus usos y abusos. Leída entera, no promete que el siguiente intento saldrá bien. Dice algo más raro: que fallar es lo que hay, y que aun así se sigue."
+    ],
+    "question": "¿Qué cambia en una frase cuando se le quita lo que viene después?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Beckett", "#FracasarMejor", "#Citas"],
+    "extended": ["#Literatura", "#Fracaso", "#CitasMalUsadas", "#Siglo20", "#Irlanda", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Según Fintan O'Toole, «Fail better» suele leerse como ánimo, pero Beckett quiso decir algo más sombrío: seguir fallando hasta que el fracaso sea total; las líneas que siguen escalan: «Fail again. Better again. Or better worse.» y terminan con «Till sick for good. Throw up for good.». Lectura directa.",
+      "source": "Fintan O'Toole, «Beckett in Love», The New York Review of Books, 2 de abril de 2015",
+      "url": "https://www.nybooks.com/articles/2015/04/02/beckett-in-love/"
+    },
+    {
+      "claim": "Las líneas «Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.» citadas desde un subrayado de The 4-Hour Workweek de Timothy Ferriss, como ejemplo de su uso fuera de contexto. Lectura directa.",
+      "source": "The New Inquiry, «Fail Worse»",
+      "url": "https://thenewinquiry.com/fail-worse"
+    },
+    {
+      "claim": "Jonathan Heron, «#failbetter», Journal of Beckett Studies 30.1 (2021), pp. 82-99, Edinburgh University Press: estudia el fracaso en Three Dialogues (1949) y Worstward Ho (1983) y la ética de las «(mis)appropriations» de «failing better». Lectura directa del registro.",
+      "source": "Warwick Research Archive Portal (WRAP), registro del artículo",
+      "url": "https://wrap.warwick.ac.uk/id/eprint/168801"
+    },
+    {
+      "claim": "Worstward Ho fue escrito en inglés en 1983 y se reunió en 1989 en Nohow On con Company y Ill Seen Ill Said; reproduce «Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.». Lectura directa.",
+      "source": "Wikipedia, «Worstward Ho»",
+      "url": "https://en.wikipedia.org/wiki/Worstward_Ho"
+    },
+    {
+      "claim": "Ediciones de 1983: Londres, John Calder (Calderbook 397, 47 páginas) y Nueva York, Grove Press (primera edición estadounidense). Solo visto en extractos del buscador de los catálogos (Biblioteca Nacional de Irlanda, Universidad de Pensilvania, WorldCat, Université de Nantes).",
+      "source": "Catálogo de la National Library of Ireland y WorldCat",
+      "url": "https://search.worldcat.org/title/Worstward-ho/oclc/11532801"
+    },
+    {
+      "claim": "«Fail worse again» aparece pocas líneas después de «Fail better», y «Till sick for good» a continuación. Solo visto en extractos del buscador (Goethe-Institut, «Samuel Beckett's Mantra»; la página devolvió 403).",
+      "source": "Goethe-Institut, «Samuel Beckett's Mantra»",
+      "url": "https://www.goethe.de/prj/mis/en/lei/21891928.html"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Murphy, a Esperando a Godot o a otra obra de Beckett: es de Worstward Ho. Hay al menos un libro académico que la sitúa en Murphy por error.",
+    "La traducción del texto de la cita es propia de la pieza; no se reproduce ninguna traducción publicada al español ni se nombra traductor.",
+    "Que el título de trabajo de Beckett fuera «Better worse»: lo afirma una reseña, sin verificar. No se usa.",
+    "Que «Fail better» fuera «el lema de Silicon Valley» o el tatuaje de un tenista concreto: circula en prensa y blogs, no se verificó en esta ejecución. La pieza habla solo del libro de Ferriss, documentado por The New Inquiry.",
+    "Que el título parodie Westward Ho!, la novela de Charles Kingsley: es la lectura habitual, pero solo se vio en extractos del buscador. La pieza no lo menciona.",
+    "Que la frase esté en tazas, camisetas y pósteres: lo dicen extractos de artículos académicos que no se leyeron completos. No se usa.",
+    "Leer el pasaje como mensaje motivacional de mejora progresiva: el texto continúa hacia «mejor peor» y «fracasar peor otra vez».",
+    "Qué edición de 1983 salió primero, la de Calder o la de Grove: los catálogos no lo aclaran. El campo work cita la de Calder sin decir que fuera la primera."
+  ],
+  "status": "draft"
+}
