@@ -2,7 +2,7 @@
   "id": "2026-10-18-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Hillel y las tres preguntas de Avot 1:14",
     "hook": "Casi siempre se cita solo la última de las tres preguntas. Pero la tercera no tiene sentido sin las dos primeras, que se contradicen a propósito. Las formuló un maestro judío hace unos dos mil años.",
@@ -83,5 +83,8 @@
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'cream' repetida: la ultima publicacion real (2026-09-30-extra81) tambien salio cream"
   ]
 }
