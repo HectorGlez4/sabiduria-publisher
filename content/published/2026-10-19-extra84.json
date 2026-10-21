@@ -2,7 +2,7 @@
   "id": "2026-10-19-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Amílcar Cabral y las palabras de orden de 1965",
     "hook": "La frase se repite hoy como una máxima sobre la honestidad. En el documento original es la última instrucción de una lista, y va dirigida a los propios cuadros de un partido en guerra.",
@@ -87,5 +87,21 @@
     "threads"
   ],
   "publish_at": "2026-10-20T03:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1128711263286866",
+      "url": "https://www.facebook.com/874327782058550/posts/1128711263286866",
+      "published_at": "2026-10-21T08:15:41.910693+00:00"
+    },
+    "instagram": {
+      "post_id": "17962860081248374",
+      "url": "https://www.instagram.com/p/Dev9NnzjbKs/",
+      "published_at": "2026-10-21T08:15:54.903659+00:00"
+    },
+    "threads": {
+      "post_id": "18133106378504041",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18133106378504041",
+      "published_at": "2026-10-21T08:16:07.644086+00:00"
+    }
+  }
 }

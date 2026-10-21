@@ -2,7 +2,7 @@
   "id": "2026-10-20-re58-reel",
   "slot": "noche",
   "pillar": "civilizacion",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "el Liber Linteus, el único libro de lino etrusco",
     "hook": "El texto más largo que queda de la lengua etrusca sobrevivió porque alguien lo cortó en tiras y lo usó para envolver a una muerta en Egipto. Nadie se dio cuenta durante más de cuarenta años.",
@@ -74,6 +74,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-20T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1450766630483341",
+      "url": "https://www.facebook.com/reel/1450766630483341",
+      "published_at": "2026-10-21T10:12:14.165555+00:00"
+    }
+  },
   "reemision_de": "2026-09-20-extra100"
 }

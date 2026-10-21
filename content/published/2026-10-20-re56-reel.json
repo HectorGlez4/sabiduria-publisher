@@ -2,7 +2,7 @@
   "id": "2026-10-20-re56-reel",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Émilie du Châtelet y los Principia en francés",
     "hook": "Los Principia de Newton se han traducido al francés una sola vez por entero. Quien lo hizo dejó el manuscrito en la biblioteca del rey el 9 de septiembre de 1749 y murió al día siguiente.",
@@ -73,6 +73,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-10-20T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "878282421981672",
+      "url": "/reel/878282421981672/",
+      "published_at": "2026-10-21T09:03:01.417324+00:00"
+    }
+  },
   "reemision_de": "2026-09-19-extra99"
 }

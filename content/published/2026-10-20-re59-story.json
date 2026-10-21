@@ -2,7 +2,7 @@
   "id": "2026-10-20-re59-story",
   "slot": "manana",
   "pillar": "arte-ciencia",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Beatrix Potter y su ponencia micológica de 1897",
     "hook": "El 1 de abril de 1897 se leyó en la Linnean Society de Londres un trabajo sobre germinación de esporas firmado por Helen B. Potter. Una semana después ella misma lo retiró, y no queda ninguna copia.",
@@ -75,6 +75,20 @@
     "instagram_story"
   ],
   "publish_at": "2026-10-20T22:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1758326428765503",
+      "photo_id": "1128805476610778",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-21T10:34:23.174211+00:00"
+    },
+    "instagram_story": {
+      "post_id": "18134385925730823",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-21T10:34:35.838056+00:00"
+    }
+  },
   "reemision_de": "2026-09-20-extra101"
 }

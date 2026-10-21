@@ -2,7 +2,7 @@
   "id": "2026-10-19-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Václav Havel y el interrogatorio a distancia de 1986",
     "hook": "La frase se reparte como consuelo. Es la respuesta de un hombre vigilado a una pregunta incómoda, y la mitad que casi siempre se recorta es la última.",
@@ -87,5 +87,21 @@
     "threads"
   ],
   "publish_at": "2026-10-20T04:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1128728243285168",
+      "url": "https://www.facebook.com/874327782058550/posts/1128728243285168",
+      "published_at": "2026-10-21T08:38:12.818244+00:00"
+    },
+    "instagram": {
+      "post_id": "18107098067623630",
+      "url": "https://www.instagram.com/p/Dev_yjhGou7/",
+      "published_at": "2026-10-21T08:38:26.400265+00:00"
+    },
+    "threads": {
+      "post_id": "17895094245432051",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17895094245432051",
+      "published_at": "2026-10-21T08:38:37.705987+00:00"
+    }
+  }
 }

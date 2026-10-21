@@ -2,7 +2,7 @@
   "id": "2026-10-20-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Paulo Freire y la Pedagogía del oprimido (1970)",
     "hook": "La frase se repite para decir que el maestro sobra. En el libro, el párrafo siguiente dice lo contrario, y el final que se recorta es la parte decisiva.",
@@ -86,5 +86,21 @@
     "threads"
   ],
   "publish_at": "2026-10-20T19:26:00Z",
-  "results": {}
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1128774996613826",
+      "url": "https://www.facebook.com/874327782058550/posts/1128774996613826",
+      "published_at": "2026-10-21T09:47:28.774642+00:00"
+    },
+    "instagram": {
+      "post_id": "18346870066255761",
+      "url": "https://www.instagram.com/p/DewHt4WDsFj/",
+      "published_at": "2026-10-21T09:47:43.026933+00:00"
+    },
+    "threads": {
+      "post_id": "18150313741717279",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18150313741717279",
+      "published_at": "2026-10-21T09:47:55.489773+00:00"
+    }
+  }
 }
