@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "La Fontaine y la liebre que salió tarde (1668)",
+    "hook": "La fábula de la liebre y la tortuga no termina con su moraleja. Empieza con ella, y la moraleja no dice lo que casi todos recuerdan.",
+    "quote": {
+      "text": "De nada sirve correr; hay que salir a tiempo.",
+      "author": "Jean de La Fontaine",
+      "work": "Fábulas, libro VI, fábula X, «Le Lièvre et la Tortue» (1668)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1668 el editor parisino Claude Barbin publicó los seis primeros libros de las Fábulas de La Fontaine, dedicados al Delfín, el hijo de Luis XIV. La décima fábula del libro VI abre con este verso. La moraleja va primero, y el resto del poema la demuestra.",
+      "El verso no elogia la lentitud. Dice que correr no basta si se sale tarde. La liebre pierde porque se confía. Cuando la tortuga la reta, le contesta que está loca y que debería purgarse con cuatro granos de eléboro, la planta con que los antiguos creían curar la locura. Luego pace, duerme y escucha de dónde sopla el viento, y arranca cuando ya no hay tiempo.",
+      "La historia era antigua. Se conserva en griego entre las fábulas atribuidas a Esopo, y allí el acento cae sobre el descuido de la liebre, no sobre el mérito de la tortuga. En La Fontaine la última palabra es de la tortuga: pregunta qué habría pasado si, además, la liebre hubiera tenido que cargar con una casa."
+    ],
+    "question": "¿Qué has perdido no por lento, sino por salir tarde?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LaFontaine", "#Fabulas", "#Citas"],
+    "extended": ["#LiteraturaFrancesa", "#Esopo", "#LaLiebreYLaTortuga", "#SigloXVII", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Fables choisies, mises en vers par M. de La Fontaine, París, Claude Barbin, 1668; la edición comprende la Epístola al Delfín, el prefacio, la Vida de Esopo y los seis primeros libros; los libros VII a XI salieron en 1678-1679 y el XII en 1694. Lectura directa.",
+      "source": "Bibliothèque nationale de France, catálogo general, ficha bibliográfica",
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb30715795f"
+    },
+    {
+      "claim": "«Le Lièvre et la Tortue» es la fábula X del libro VI; empieza «Rien ne sert de courir ; il faut partir à point»; la liebre dice que la tortuga debe purgarse con cuatro granos de eléboro (nota: los antiguos creían que curaba la locura); la liebre pace, duerme y escucha de dónde viene el viento; la tortuga termina preguntando «Si vous portiez une maison ?». Edición Bernardin-Béchet, París, 1874. Lectura directa.",
+      "source": "Wikisource (francés), Fables de La Fontaine (éd. 1874), «Le Lièvre et la Tortue»",
+      "url": "https://fr.wikisource.org/wiki/Fables_de_La_Fontaine_(éd._1874)/Le_Lièvre_et_la_Tortue"
+    },
+    {
+      "claim": "La fábula se conserva en griego entre las esópicas y no tiene versión latina antigua; en la Antigüedad el acento estaba en la confianza necia de la liebre, no en el valor de la tortuga; la versión de La Fontaine (VI, 10) difiere poco de la de Esopo. Lectura directa del resultado.",
+      "source": "Wikipedia, «The Tortoise and the Hare»",
+      "url": "https://en.wikipedia.org/wiki/The_Tortoise_and_the_Hare"
+    },
+    {
+      "claim": "Barbin publicó en marzo de 1668 los seis primeros libros de las Fábulas. Resumen del índice, lectura directa del resultado de búsqueda.",
+      "source": "Encyclopædia Universalis, «Fables, Jean de La Fontaine»",
+      "url": "https://www.universalis.fr/index/fables-imagination-et-pensee-au-xviie-siecle/"
+    }
+  ],
+  "do_not_use": [
+    "La traducción del verso es propia, sobre el texto francés. No presentarla como la de ningún traductor publicado.",
+    "«Lento pero seguro» o «el que persevera vence» como moraleja de La Fontaine: no está en su texto. Su moraleja es la de salir a tiempo.",
+    "El número de la fábula en el índice Perry: Wikipedia dice 226 en el artículo de la fábula y 227 en su lista del índice Perry. No se menciona.",
+    "La edad exacta del Delfín en 1668: no se da; basta con decir que era el hijo de Luis XIV.",
+    "Que el verso cierre el poema: abre la fábula. La primera línea termina en dos puntos en la edición de 1874; otras ediciones ponen punto.",
+    "Que la versión de Esopo tenga el final de la casa: ese remate es de La Fontaine según el texto francés; la fuente consultada solo dice que difiere poco en lo esencial. Si se duda, no atribuir a Esopo ningún detalle del diálogo."
+  ],
+  "status": "draft"
+}

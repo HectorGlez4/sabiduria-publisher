@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-07-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "James Baldwin y el ensayo de enero de 1962",
+    "hook": "Una de las frases más repetidas de James Baldwin no salió de un discurso. Es la primera línea de un artículo sobre lo que les toca hacer a los escritores.",
+    "quote": {
+      "text": "No todo lo que se enfrenta puede cambiarse; pero nada puede cambiarse hasta que se enfrenta.",
+      "author": "James Baldwin",
+      "work": "«As Much Truth As One Can Bear», The New York Times Book Review, 14 de enero de 1962",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 14 de enero de 1962 The New York Times Book Review publicó un ensayo de James Baldwin titulado «As Much Truth As One Can Bear», tanta verdad como uno pueda soportar. La frase abre el texto. Va con punto y coma en el original; casi todas las copias posteriores lo cambian por una coma o por un punto.",
+      "La oración que viene detrás aclara de qué habla. Lo que hay que enfrentar, escribe, es que ha llegado el momento de dar la espalda para siempre al «gran río de dos corazones», el título de un relato de Hemingway. Baldwin pedía a la literatura de su país que dejara atrás el tema de la inocencia perdida, el de Hemingway y Faulkner, y contara el país tal como era.",
+      "Desde 1970 la frase aparece en carteles, y en algún libro de citas se le ha añadido una palabra que Baldwin no escribió. El ensayo completo volvió a imprimirse en 2010, en The Cross of Redemption, la recopilación de sus textos dispersos que editó Randall Kenan."
+    ],
+    "question": "¿Qué llevas tiempo sin mirar de frente?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JamesBaldwin", "#Citas", "#Literatura"],
+    "extended": ["#LiteraturaEstadounidense", "#Ensayo", "#Hemingway", "#Faulkner", "#SigloXX", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "James Baldwin, «As Much Truth As One Can Bear», The New York Times Book Review, 14 de enero de 1962 (vía ProQuest); texto: «Not everything that is faced can be changed; but nothing can be changed until it is faced.», con punto y coma; reproducciones posteriores cambian la puntuación; Quote Investigator concluye que la atribución a Baldwin es correcta. Lectura directa.",
+      "source": "Quote Investigator (Garson O'Toole), «Not Everything That Is Faced Can Be Changed», 9 de octubre de 2021",
+      "url": "https://quoteinvestigator.com/2021/10/09/faced/"
+    },
+    {
+      "claim": "La frase abre el texto del artículo del 14 de enero de 1962 en The New York Times Book Review; la oración siguiente dice que ha llegado el momento de dar la espalda para siempre al «big two-hearted river»; aparece en carteles desde al menos 1970 (Evening News de Newburgh, 1970; Evening Star de Washington, 1971); el Treasury of Black Quotations (2004) le añade «at once», que no está en el texto de 1962. Lectura directa.",
+      "source": "Barry Popik, «Not everything that is faced can be changed», The Big Apple",
+      "url": "https://barrypopik.com/blog/not_everything_that_is_faced_can_be_changed"
+    },
+    {
+      "claim": "En «As Much Truth as One Can Bear» (1962) Baldwin pide a los escritores estadounidenses que abandonen los temas de la inocencia perdida que adoptaron Hemingway y Faulkner; The Cross of Redemption, editado por Randall Kenan, Pantheon, 2010. Lectura directa.",
+      "source": "Kirkus Reviews, reseña de The Cross of Redemption: Uncollected Writings",
+      "url": "https://kirkusreviews.com/book-reviews/james-baldwin/the-cross-of-redemption/print"
+    },
+    {
+      "claim": "«Big Two-Hearted River» es un relato en dos partes de Ernest Hemingway incluido en la edición de In Our Time de Boni & Liveright (1925). Lectura directa del resultado de búsqueda; dato secundario en la pieza.",
+      "source": "Wikipedia, «Big Two-Hearted River»",
+      "url": "https://en.wikipedia.org/wiki/Big_Two-Hearted_River"
+    }
+  ],
+  "do_not_use": [
+    "La traducción de la frase es propia. No presentarla como la de ningún traductor publicado.",
+    "La página del artículo: Popik da BR11 y Quote Investigator da inicio en BR1 y la frase en BR38. No se menciona la página.",
+    "La variante «Not everything that can be faced can be changed»: es un error de copia; el texto de 1962 dice «is faced».",
+    "La variante con «at once» añadido (Treasury of Black Quotations, 2004): no está en el original.",
+    "El año de The Cross of Redemption: Kirkus da Pantheon, 2010; otros resúmenes dicen 2011. La pieza dice 2010, el de la editorial según Kirkus.",
+    "Que la frase sea de un discurso o de una entrevista: es la primera línea de un ensayo impreso.",
+    "La reimpresión en Negro Digest (enero de 1963) se conoce solo por Popik; no se menciona."
+  ],
+  "status": "draft"
+}

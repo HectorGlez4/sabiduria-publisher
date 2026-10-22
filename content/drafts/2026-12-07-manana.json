@@ -1,0 +1,58 @@
+{
+  "id": "2026-12-07-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Palitzsch y el cometa de Halley en la Navidad de 1758",
+    "hook": "Halley anunció en 1705 el regreso de un cometa para finales de 1758. Murió dieciséis años antes, y quien lo vio primero fue un granjero de Sajonia.",
+    "body": [
+      "En 1705 Edmond Halley publicó en Londres su Sinopsis de la astronomía de los cometas. Aplicando la gravitación de Newton, concluyó que los cometas de 1531, 1607 y 1682 eran el mismo objeto, que volvía cada 76 años aproximadamente. Si tenía razón, regresaría a finales de 1758 o principios de 1759. Halley murió en 1742.",
+      "El 25 de diciembre de 1758 Johann Georg Palitzsch, un granjero de Prohlis, cerca de Dresde, que había aprendido astronomía por su cuenta, lo encontró con un telescopio modesto. En 1759 el astrónomo Nicolas-Louis de Lacaille le dio al cometa el nombre de Halley.",
+      "Mientras tanto, en París, Alexis Clairaut, Joseph Lalande y Nicole-Reine Lepaute habían pasado unos seis meses calculando, de la mañana a la noche, cuánto lo retrasarían Júpiter y Saturno. El 14 de noviembre de 1758 Clairaut anunció en la Academia de Ciencias que pasaría por el punto más cercano al Sol hacia mediados de abril de 1759, con un mes de margen. Lalande escribió que sin Lepaute nunca habría podido emprender aquel trabajo. Clairaut, en su Teoría de los cometas de 1760, nombró a sus ayudantes y la dejó fuera."
+    ],
+    "question": "¿Qué parte de un acierto se queda sin nombre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El cometa que volvió",
+    "subtitle": "Navidad de 1758, Prohlis, Sajonia",
+    "body": "Halley anunció su regreso en 1705 y murió en 1742. Lo vio primero un granjero autodidacta, Johann Georg Palitzsch, el 25 de diciembre de 1758."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CometaHalley", "#Astronomia", "#HistoriaDeLaCiencia"],
+    "extended": ["#EdmondHalley", "#Newton", "#NicoleReineLepaute", "#Ciencia", "#SigloXVIII", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "A synopsis of the astronomy of comets, de Edmond Halley, impreso para John Senex en 1705; identifica los cometas de 1531, 1607 y 1682 como uno mismo y predice su regreso en 1758. Lectura directa.",
+      "source": "Smithsonian Libraries, Digital Library, «A synopsis of the astronomy of comets»",
+      "url": "https://library.si.edu/digital-library/book/synopsisofastron00hall"
+    },
+    {
+      "claim": "Johann Georg Palitzsch, granjero alemán nacido el 11 de junio de 1723 en Prohlis (hoy parte de Dresde), astrónomo autodidacta, vio el cometa por primera vez el 25 de diciembre de 1758 con un telescopio no grande; Halley predijo el regreso para finales de 1758 o principios de 1759, sostuvo en 1705 que los cometas de 1531, 1607 y 1682 eran el mismo, y murió en 1742. Lectura directa.",
+      "source": "Linda Hall Library, Scientist of the Day, «Georg Palitzsch»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/georg-palitzsch/"
+    },
+    {
+      "claim": "Halley concluyó en la Sinopsis de 1705 que los tres cometas eran el mismo objeto que volvía cada 76 años aproximadamente; murió en 1742; Palitzsch lo vio el 25 de diciembre de 1758; Lacaille le dio el nombre de Halley en 1759; Clairaut, Lalande y Lepaute calcularon el retraso por Júpiter y Saturno. Lectura directa.",
+      "source": "Wikipedia, «Halley's Comet»",
+      "url": "https://en.wikipedia.org/wiki/Halley%27s_Comet"
+    },
+    {
+      "claim": "El 14 de noviembre de 1758 Clairaut anunció a la Academia de Ciencias el perihelio para mediados de abril de 1759, con un mes de margen; Lalande: «durante seis meses calculamos de la mañana a la noche» y sin ella nunca habría podido emprender el trabajo; la Théorie des comètes de Clairaut (1760) enumera a los ayudantes y omite a Lepaute. Lectura directa.",
+      "source": "MacTutor History of Mathematics, University of St Andrews, «Nicole-Reine Etable de Labrière Lepaute»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Lepaute/"
+    }
+  ],
+  "do_not_use": [
+    "La fecha real del perihelio de 1759: Wikipedia da el 13 de marzo de 1759 (un mes antes de lo previsto); MacTutor dice 13 de abril. No se da la fecha real, solo la anunciada y su margen.",
+    "La cifra de 618 días de retraso por Júpiter y Saturno: aparece en Wikipedia pero no se pudo cruzar con otra fuente. No se usa.",
+    "El motivo por el que Clairaut omitió a Lepaute (una supuesta rivalidad amorosa): MacTutor lo recoge como rumor y lo da por incierto. No se usa.",
+    "Que Halley fijara una fecha exacta: él mismo dio un margen (finales de 1758 o principios de 1759) porque sospechaba la perturbación de los planetas.",
+    "Que fuera el primer cometa periódico conocido en general: lo que se puede decir es que fue el primer regreso de un cometa predicho con éxito; esa formulación no se incluye en el cuerpo para no forzarla.",
+    "Que Palitzsch lo viera el 28 de diciembre: esa fecha corresponde a la confirmación por Christian Gotthold Hoffmann según otro resumen; Linda Hall da 25 y 27 de diciembre para Palitzsch."
+  ],
+  "status": "draft"
+}

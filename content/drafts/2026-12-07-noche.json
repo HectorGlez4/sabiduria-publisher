@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-07-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la Tabula Peutingeriana y los caminos de Roma",
+    "hook": "El único mapa de carreteras del Imperio romano que ha llegado hasta hoy mide casi siete metros de largo y poco más de treinta centímetros de alto. Y en él conviven Pompeya y Constantinopla.",
+    "body": [
+      "Lo que se conserva en la Biblioteca Nacional de Austria es una copia en pergamino hecha a finales del siglo XII, probablemente en el sur de Alemania. El original antiguo se perdió. La copia está en once tramos y le falta el extremo occidental. Marca caminos entre unos cuatro mil lugares, y llega por el este hasta la India y Sri Lanka, con ríos, montes y bosques. En la costa de Malabar señala un templo de Augusto.",
+      "No es un mapa geográfico. El eje norte-sur está tan aplastado que el Mediterráneo queda reducido a una franja. Sirve para lo que servía un plano de metro: saber por qué camino ir, cuántas etapas hay y qué parada viene después. Y mezcla siglos. Aparece Pompeya, sepultada en el año 79, y aparece Constantinopla, fundada en el 328.",
+      "Su nombre viene de Konrad Peutinger, un humanista de Augsburgo. El poeta Conrad Celtis se lo dejó en herencia en 1508. La familia lo guardó hasta 1714; luego lo compró Eugenio de Saboya, y desde 1738 está en Viena. En 2007 la UNESCO lo inscribió en el registro Memoria del Mundo, y para celebrarlo se expuso un solo día: la luz daña el pergamino."
+    ],
+    "question": "¿Qué cuenta un mapa sobre quien lo necesitaba?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El mapa de los caminos de Roma",
+    "subtitle": "Tabula Peutingeriana, Viena, cod. 324",
+    "body": "Casi siete metros de pergamino, unos cuatro mil lugares y un Mediterráneo reducido a una franja. Una copia del siglo XII de un original romano perdido."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TabulaPeutingeriana", "#ImperioRomano", "#Historia"],
+    "extended": ["#Cartografia", "#Mapas", "#Roma", "#Viena", "#PatrimonioDocumental", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Copia medieval de finales del siglo XII (cod. 324) de un rollo antiguo perdido, conservada en 11 tramos; único mapa conservado del cursus publicus; orientación oeste-este, sin océanos, muestra redes funcionales; abarca el Imperio y regiones hasta China, incluidas India y Sri Lanka; en la Biblioteca Nacional de Austria; inscrita en Memoria del Mundo en 2007. Lectura directa.",
+      "source": "Comisión Austriaca para la UNESCO, Memory of the World in Austria, «Tabula Peutingeriana»",
+      "url": "https://www.unesco.at/en/communication/documentary-heritage/memory-of-the-world-in-austria/tabula-peutingeriana"
+    },
+    {
+      "claim": "Casi 7 m de largo y poco más de 30 cm de alto, en 11 tramos de pergamino; caminos entre unos 4.000 asentamientos, con montañas, ríos y bosques; eje norte-sur muy comprimido, el Mediterráneo como una franja; copia hecha probablemente en el sur de Alemania a finales del siglo XII; en la Biblioteca Nacional desde 1738; expuesta un solo día en noviembre de 2007 tras recibir el estatus de la UNESCO porque la luz la daña; Andreas Fingernagel la comparó con un plano de metro. Reuters. Lectura directa.",
+      "source": "Dawn (Reuters), «800-year-old Roman map on display», 27 de noviembre de 2007",
+      "url": "https://dawn.com/news/277637"
+    },
+    {
+      "claim": "Conrad Celtes la encontró en Worms y la legó a Konrad Peutinger en 1508; la familia Peutinger la conservó hasta 1714; Eugenio de Saboya la compró y tras su muerte pasó a la Biblioteca de la Corte de Viena, donde está desde 1738; falta el extremo occidental; incluye Pompeya (destruida en 79) y Constantinopla (fundada en 328); marca un templo de Augusto en Muziris, en la costa de Malabar; incluye Sri Lanka (Taprobane). Lectura directa.",
+      "source": "Wikipedia, «Tabula Peutingeriana»",
+      "url": "https://en.wikipedia.org/wiki/Tabula_Peutingeriana"
+    },
+    {
+      "claim": "Hoy en la Biblioteca Nacional de Austria en Viena como Codex Vindobonensis 324. Lectura directa del resultado de búsqueda (reseña de la edición de Rathmann).",
+      "source": "Universität Heidelberg, Göttinger Forum für Altertumswissenschaft, reseña de la edición de M. Rathmann (2016)",
+      "url": "https://journals.ub.uni-heidelberg.de/index.php/gfa/article/view/74051/67739"
+    }
+  ],
+  "do_not_use": [
+    "Medidas exactas: Wikipedia da 6,75 m por 0,35 m (o 34 cm según otras versiones); Reuters da casi 7 m y poco más de 30 cm. La pieza usa las aproximaciones de Reuters.",
+    "El alcance occidental: Reuters dice que va de España y las islas británicas a China, pero Wikipedia dice que el extremo que cubría Britania y España se perdió y lo reconstruyó Konrad Miller en 1898. La pieza dice solo que falta el extremo occidental y no nombra España ni Britania.",
+    "Cuántos tramos tenía el original: la copia tiene 11; que fueran 12 es una inferencia común no verificada aquí.",
+    "Que Celtis lo encontrara en Worms en 1494: solo en Wikipedia; tampoco se pudo confirmar si la adquisición fue un robo, como sostienen algunos. No se usa.",
+    "La fecha del original antiguo (Agripa, época de Augusto, revisión del siglo IV o V): disputada; un estudio checo dice que no puede precisarse porque mezcla datos de épocas lejanas. No se da fecha.",
+    "Cifras de lugares: Wikipedia da al menos 555 ciudades y unos 3.500 topónimos más; Reuters y UNESCO dan unos 4.000. Se usa «unos cuatro mil».",
+    "Que el Registro Memoria del Mundo ya esté corregido: una reseña de 2018 señala que el registro listaba el fondo de la Biblioteca Nacional con el Atlas Blaeu-Van der Hem. No se toca."
+  ],
+  "status": "draft"
+}
