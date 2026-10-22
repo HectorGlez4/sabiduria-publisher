@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-06-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Su Shi y la canción del Medio Otoño de 1076",
+    "hook": "El poema chino más recitado en la fiesta de la luna lo escribió un funcionario borracho, al amanecer, pensando en un hermano al que no veía desde hacía años.",
+    "quote": {
+      "text": "Las personas tienen penas y alegrías, despedidas y reencuentros; la luna tiene sombra y claridad, se llena y se mengua. Desde antiguo, esto nunca ha estado completo.",
+      "author": "Su Shi",
+      "work": "Shuidiao getou, «¿Cuándo hubo luna brillante?», Medio Otoño de 1076",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1076 Su Shi era gobernador de Mizhou, en la actual Zhucheng, en la provincia de Shandong. Su hermano menor, Su Zhe, llamado Ziyou, estaba destinado en Jinan. Las reformas de la corte los habían mandado a puestos distintos. El prefacio del poema es de una sola línea: en el Medio Otoño del año bingchen bebió alegremente hasta el amanecer, se emborrachó, escribió esta pieza y pensó en Ziyou.",
+      "El poema empieza preguntándole a la luna desde cuándo existe. Termina con un deseo: que vivan mucho y que, a mil li de distancia, compartan la misma luna. Entre ambas cosas está esta frase, que no pide que la separación termine. Dice que estar incompleto es la condición de las personas y también de la luna.",
+      "Al año siguiente los hermanos se reunieron en Xuzhou y pasaron juntos el Medio Otoño. Después Su Zhe escribió su propio poema con la misma melodía. Empieza contando: qué larga la separación, siete veces ha pasado el Medio Otoño. En 1983 el último verso de Su Shi se convirtió en canción, y Teresa Teng la grabó."
+    ],
+    "question": "¿A quién miras de lejos cuando miras la luna?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SuShi", "#PoesiaChina", "#Citas"],
+    "extended": ["#SuDongpo", "#MedioOtono", "#China", "#DinastiaSong", "#Luna", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Prefacio: «丙辰中秋，歡飲達旦，大醉，作此篇，兼懷子由。»; el cuerpo del poema contiene «人有悲歡離合，月有陰晴圓缺，此事古難全» y termina con «但願人長久，千里共嬋娟». Lectura directa.",
+      "source": "Wikisource (chino), «水調歌頭 (明月幾時有)»",
+      "url": "https://zh.wikisource.org/wiki/水調歌頭_(明月幾時有)"
+    },
+    {
+      "claim": "Encabezado: «On the night of the Mid-Autumn Festival in 1076 CE» (丙辰); Ziyou era el hermano menor; escrito para expresar la nostalgia tras siete años de separación; el ci se compone sobre melodías preexistentes; traducción de Qian Jia sobre el texto del Quan Song Ci, ed. Tang Guizhang (Zhonghua shu ju, 1965). Lectura directa.",
+      "source": "Stanford University, Global Medieval Sourcebook, «How Long Will the Full Moon Appear?»",
+      "url": "https://sourcebook.stanford.edu/text/su_shi_how_long_full_moon/"
+    },
+    {
+      "claim": "Escrito en 1076, año bingchen, cuando Su Shi era magistrado de Mizhou (actual Zhucheng, Shandong); Su Zhe, de nombre de cortesía Ziyou, estaba en Jinan; en 1983 Liang Hongzhi le puso música como «Danyuan ren changjiu» y Teresa Teng lo grabó en el álbum Dandan youqing. Lectura directa.",
+      "source": "Wikipedia, «Shuidiao Getou»",
+      "url": "https://en.wikipedia.org/wiki/Shuidiao_Getou"
+    },
+    {
+      "claim": "Su Shi lo escribió en el Medio Otoño de 1076 (熙宁九年) en Mizhou; Su Zhe estaba en Qizhou; las reformas de Wang Anshi provocaron los traslados que separaron a los hermanos; en 1077 se reunieron en Xuzhou y pasaron juntos el Medio Otoño, y Su Zhe escribió su «水调歌头·徐州中秋». Lectura directa.",
+      "source": "Chinanews (中国新闻网), artículo cultural del 13 de septiembre de 2021",
+      "url": "https://www.chinanews.com.cn/cul/2021/09-13/9563939.shtml"
+    },
+    {
+      "claim": "Los hermanos se reunieron en Xuzhou el año siguiente al Medio Otoño de Mizhou; Su Zhe escribió entonces su Shuidiao getou, que empieza «离别一何久，七度过中秋». Artículo de Che Zhenhua, investigador asociado de la Academia de Ciencias Sociales de Shandong. Lectura directa.",
+      "source": "Chinese Social Sciences Net (中国社会科学网), 24 de septiembre de 2026",
+      "url": "https://www.cssn.cn/skgz/bwyc/202609/t20260924_6068791.shtml"
+    }
+  ],
+  "do_not_use": [
+    "La traducción de la frase es propia, hecha sobre el texto chino de Wikisource. No presentarla como la versión de ningún traductor publicado.",
+    "Cuánto tiempo llevaban sin verse: Stanford y Wikipedia dicen siete años; Chinanews, seis Medio Otoños sin pasarlos juntos; CGTN, cinco años. La pieza dice «desde hacía años» y cita el «siete veces» del propio Su Zhe, que es una cuenta poética.",
+    "Dónde estaba Su Zhe: Wikipedia dice Jinan y Chinanews Qizhou; en época Song, Qizhou tenía su sede en lo que hoy es Jinan. La pieza dice Jinan.",
+    "El lugar exacto donde bebió (la terraza Chaoran, que Su Zhe bautizó): lo dice Chinanews; el resumen de la CSSN da otro nombre. No se menciona.",
+    "Que Su Zhe se quedara cien días en Xuzhou y partiera el día 16 del octavo mes: solo en Chinanews. No se usa.",
+    "Presentar el poema como «el mejor sobre el Medio Otoño»: es un juicio de la crítica tradicional repetido en divulgación, no un dato. No se usa.",
+    "Que la canción de 1983 la compusiera otro autor que Liang Hongzhi o que la estrenara Faye Wong: Wikipedia da a Liang Hongzhi como compositor y a Teresa Teng como intérprete; Faye Wong la versionó después."
+  ],
+  "status": "draft"
+}

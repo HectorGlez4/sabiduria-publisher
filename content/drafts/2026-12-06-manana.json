@@ -1,0 +1,64 @@
+{
+  "id": "2026-12-06-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Ramanujan y la carta a Hardy de 1913",
+    "hook": "Antes de escribirle a Hardy, un oficinista de Madrás les escribió a otros dos matemáticos de Cambridge. Ninguno le contestó. Cinco años después, los dos firmaron su ingreso en la Royal Society.",
+    "body": [
+      "El 16 de enero de 1913 Srinivasa Ramanujan, de veinticinco años, trabajaba como oficinista de contabilidad en el puerto de Madrás. En su carta a G. H. Hardy, del Trinity College de Cambridge, decía ganar unas veinte libras al año. Detrás venían más de nueve páginas con más de ciento veinte resultados matemáticos, casi todos sin demostración.",
+      "Antes había intentado lo mismo con H. F. Baker y E. W. Hobson, también de Cambridge. Ninguno respondió. Hardy, en cambio, revisó las fórmulas con J. E. Littlewood y contestó el 8 de febrero. Algunas ya se conocían, otras eran erróneas y otras parecían nuevas e importantes. Ramanujan llegó a Londres el 14 de abril de 1914.",
+      "El certificado de candidatura que se entregó en la Royal Society el 18 de diciembre de 1917 lleva la firma de Hardy como proponente. Entre quienes firman por conocerlo personalmente están Hobson y Baker. Ramanujan fue elegido miembro el 2 de mayo de 1918. Murió en la India el 26 de abril de 1920, a los treinta y dos años."
+    ],
+    "question": "¿Cuántas cartas importantes se quedan sin abrir porque llegan de quien nadie espera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ramanujan y la carta de 1913",
+    "subtitle": "Dos silencios y una respuesta",
+    "body": "En enero de 1913 un oficinista de Madrás envió a Hardy más de ciento veinte fórmulas. Otros dos matemáticos de Cambridge no le habían respondido. En 1917 ambos firmaron su candidatura a la Royal Society."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ramanujan", "#Matematicas", "#Historia"],
+    "extended": ["#India", "#Cambridge", "#Hardy", "#RoyalSociety", "#HistoriaDeLaCiencia", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Ramanujan escribió a Hardy en enero de 1913; Hardy respondió el 8 de febrero con «I was exceedingly interested by your letter and by the theorems which you state» y pidió demostraciones; clasificó los resultados en grupos, uno de ellos los que «appear to be new and important»; antes había escrito a Hobson y Baker sin respuesta; zarpó el 17 de marzo y llegó a Londres el 14 de abril de 1914; elección a la Royal Society confirmada el 2 de mayo de 1918; nacido el 22 de diciembre de 1887 en Erode; murió el 26 de abril de 1920 en Kumbakonam. Lectura directa.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, «Srinivasa Ramanujan»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/"
+    },
+    {
+      "claim": "La carta se envió el jueves 16 de enero de 1913; tras la carta de presentación venían más de nueve páginas con más de 120 resultados; Ramanujan era desde marzo de 1912 oficinista de contabilidad en el puerto de Madrás y en la carta dice ganar 20 libras al año; Littlewood nombró a Baker y Hobson como los primeros a quienes escribió y ninguno respondió; Hardy y Littlewood revisaron las fórmulas; faltan al menos dos páginas del original. Lectura directa.",
+      "source": "Stephen Wolfram, «Who Was Ramanujan?» (2016), con facsímiles por permiso de la Biblioteca de la Universidad de Cambridge",
+      "url": "https://writings.stephenwolfram.com/2016/04/who-was-ramanujan/"
+    },
+    {
+      "claim": "«Ramanujan was made a Fellow of the Society on 2 May 1918»; siendo oficinista en Madrás en 1912-13 escribió a varios matemáticos eminentes y Hardy fue el primero en responder. Lectura directa.",
+      "source": "Royal Society, blog, «Revisiting Ramanujan» (octubre de 2018)",
+      "url": "https://royalsociety.org/blog/2018/10/revisiting-ramanujan"
+    },
+    {
+      "claim": "Transcripción del certificado de candidatura a la Royal Society: proponente G. H. Hardy, segundo P. A. MacMahon; entre los firmantes figuran E. W. Hobson, H. F. Baker y J. E. Littlewood; Whittaker, Forsyth y Whitehead firman aparte, por conocimiento general; «Delivered at the Apartments of the Society on the 18th day of Dec. 1917». Lectura directa.",
+      "source": "K. Srinivasa Rao, Institute of Mathematical Sciences (Chennai), «Ramanujan: Life and Work», página del certificado",
+      "url": "https://www.imsc.res.in/~rao/ramanujan/newnow/excerpt.htm"
+    },
+    {
+      "claim": "Hobson y Baker, que firmaron como conocedores personales de Ramanujan, no habían respondido a las cartas que les escribió desde la India. Lectura directa.",
+      "source": "K. Srinivasa Rao, Institute of Mathematical Sciences (Chennai), página «Hobson / Baker»",
+      "url": "https://www.imsc.res.in/~rao/ramanujan/newnow/Hobson.htm"
+    }
+  ],
+  "do_not_use": [
+    "Que Baker y Hobson «devolvieron los papeles sin comentarios»: lo dice un artículo de arXiv; las demás fuentes hablan de cartas sin respuesta. La pieza dice que no respondieron.",
+    "Decir que el certificado está «fechado» el 18 de diciembre de 1917: la transcripción dice «Delivered at the Apartments of the Society on the 18th day of Dec. 1917» y «Read to the Society on the 24th day January 1918». Es la fecha de entrega, no de redacción.",
+    "Que el ingreso fuera en febrero de 1918: el 18 de febrero fue la elección a la Cambridge Philosophical Society y la inclusión en la lista de la Royal Society; la elección se confirmó el 2 de mayo (Royal Society, MacTutor).",
+    "La frase de Hardy de que las fórmulas «tenían que ser ciertas, porque nadie tendría imaginación para inventarlas»: es auténtica según Wolfram, pero no se contrastó su procedencia exacta. No se usa.",
+    "La cifra exacta de teoremas («120», «exactamente 120»): Wolfram dice «más de 120». La pieza dice «más de ciento veinte».",
+    "La frase de Russell sobre «un segundo Newton»: aparece citada en Wolfram, sin contrastar con la carta original. No se usa.",
+    "Que Ramanujan fuera el primer indio en la Royal Society: circula, pero se le suele dar como el segundo, tras Ardaseer Cursetjee (1841); no se verificó en esta ejecución. No se afirma nada sobre el orden."
+  ],
+  "status": "draft"
+}

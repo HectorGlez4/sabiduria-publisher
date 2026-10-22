@@ -1,0 +1,65 @@
+{
+  "id": "2026-12-06-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Oxirrinco y los basureros de papiros",
+    "hook": "Lo mejor conservado de una ciudad del Egipto romano no estaba en sus templos ni en sus archivos. Estaba en sus basureros.",
+    "body": [
+      "Oxirrinco, la actual el-Bahnasa, era una ciudad del Egipto grecorromano. Entre 1896 y 1907 dos investigadores de Oxford, Bernard Grenfell y Arthur Hunt, excavaron allí para el Egypt Exploration Fund. No buscaban palacios. Cavaron en los montículos de desperdicios de la ciudad, donde el clima seco había conservado lo que sus habitantes tiraban: papel usado durante casi mil años, del siglo III a.C. al VII d.C.",
+      "Casi todo son documentos de la vida diaria: contratos, censos, impuestos, arriendos, cartas. Entre ellos aparecieron poemas de Safo y de Píndaro, comedias de Menandro y una obra de Sófocles que nadie conocía. Y una carta de un niño llamado Theon a su padre, también Theon, de los siglos II o III. El padre se había ido a la ciudad sin él. Si no lo llevaba a Alejandría, le advierte, no le escribiría, no le hablaría ni lo saludaría. Le pide una lira y amenaza con no comer ni beber.",
+      "Grenfell y Hunt publicaron esa carta en 1898, en el primer volumen de la serie. Hoy está en la Biblioteca Bodleiana de Oxford. La Egypt Exploration Society, custodia de la colección, cuenta más de quinientos mil fragmentos, y se han publicado unos seis mil textos. Más de un siglo después, casi todo lo que la ciudad tiró sigue sin leerse."
+    ],
+    "question": "¿Qué contaría de nosotros lo que tiramos a la basura?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Los basureros de Oxirrinco",
+    "subtitle": "Mil años de papel tirado en Egipto",
+    "body": "Entre 1896 y 1907 dos investigadores de Oxford cavaron en los basureros de una ciudad egipcia. Sacaron más de medio millón de fragmentos de papiro: contratos, versos de Safo y la carta de un niño que le exige a su padre que lo lleve a Alejandría."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Oxirrinco", "#Papiros", "#Arqueologia"],
+    "extended": ["#EgiptoRomano", "#Egipto", "#HistoriaAntigua", "#Safo", "#Sofocles", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "La colección de la Egypt Exploration Society tiene más de 500.000 fragmentos de textos literarios y documentales, del siglo III a.C. al VII d.C.; procede sobre todo de las excavaciones de Grenfell y Hunt para la rama grecorromana de la Sociedad entre 1896 y 1907, principalmente en Oxirrinco (Bahnasa); se han publicado 6.000 textos con traducción y comentario en inglés; se guarda en las salas de papirología de la Bodleian Art, Archaeology and Ancient World Library, en Oxford. Lectura directa.",
+      "source": "Egypt Exploration Society, «The Oxyrhynchus Papyri»",
+      "url": "https://www.ees.ac.uk/papyri"
+    },
+    {
+      "claim": "Los fragmentos se desenterraron «from the rubbish heaps of the ancient city of Oxyrhynchus in Egypt»; la mayoría fue a Oxford y el Fund regaló parte a otras instituciones; la serie The Oxyrhynchus Papyri, de Grenfell y Hunt, empezó a publicarse en 1898. Lectura directa.",
+      "source": "University of Glasgow Library, Special Collections, «Papyrus fragments: background»",
+      "url": "https://www.gla.ac.uk/myglasgow/library/files/special/teach/papyrus/background.html"
+    },
+    {
+      "claim": "Grenfell y Hunt excavaron el antiguo basurero de Oxirrinco, en el-Bahnasa; los textos van del periodo ptolemaico a la conquista musulmana de 640; la mayoría son documentos (registros legales, censos, impuestos, arriendos, cartas privadas); entre los literarios hay poemas de Píndaro, Safo, Alceo y otros, comedias de Menandro y los Ichneutae, obra satírica de Sófocles antes desconocida. Lectura directa.",
+      "source": "Wikipedia, «Oxyrhynchus Papyri»",
+      "url": "https://en.wikipedia.org/wiki/Oxyrhynchus_Papyri"
+    },
+    {
+      "claim": "Papiro CXIX: fechado en el «Second or third century»; carta de un hijo joven a su padre en mano tosca, con gramática y ortografía deficientes; empieza «Theon to his father Theon, greeting»; le reprocha no haberlo llevado a la ciudad; «If you won't take me with you to Alexandria I won't write you a letter»; amenaza con no hablarle ni saludarlo, pide una lira y dice que no comerá ni beberá. Lectura directa.",
+      "source": "B. P. Grenfell y A. S. Hunt, The Oxyrhynchus Papyri, Part I (Londres, Egypt Exploration Fund, 1898), n.º CXIX, en Internet Archive",
+      "url": "https://archive.org/details/oxyrhynchuspapyr01grenuoft"
+    },
+    {
+      "claim": "P.Oxy. I 119: descubierto en 1897 por Grenfell y Hunt, publicado en 1898; siglos II o III; hoy en la Bodleian Library, signatura Ms. Gr. Class. f 66; 100 por 135 mm. Lectura directa.",
+      "source": "Wikipedia, «Papyrus Oxyrhynchus 119»",
+      "url": "https://en.wikipedia.org/wiki/Papyrus_Oxyrhynchus_119"
+    }
+  ],
+  "do_not_use": [
+    "El número de volúmenes publicados: Wikipedia da a la vez 86 y 88, y UCL, 78 en una página antigua. No se da cifra de volúmenes; la pieza usa los seis mil textos de la EES.",
+    "Que solo un 10 % de los papiros sea literario: es una estimación que solo se leyó en Wikipedia. La pieza dice «casi todo son documentos».",
+    "Que se recuperaran «500.000 rollos» en cinco años: lo dicen páginas divulgativas; la EES habla de fragmentos, no de rollos. La pieza dice fragmentos.",
+    "Que los papiros sigan en la Sackler Library: es el nombre antiguo; la EES dice hoy Bodleian Art, Archaeology and Ancient World Library. La pieza dice Biblioteca Bodleiana.",
+    "Las versiones divulgativas de la carta de Theon que añaden frases (una cita del Eclesiastés en Aleteia, por ejemplo): no están en el papiro. Paráfrasis sobre la edición de 1898.",
+    "Que la petición de la lira y la amenaza de no comer vayan juntas como condición única: la traducción de Parsons que recogía la Bodleiana dice «si no mandas por mí»; la de 1898 menciona la lira. La pieza las enumera por separado.",
+    "El caso de los fragmentos de la EES vendidos al Museo de la Biblia y la investigación sobre un profesor de Oxford: es un asunto legal en curso sobre una persona concreta y no se contrastó. No se menciona.",
+    "Los Logia de Jesús (P.Oxy. 1) y el Evangelio de Tomás: son hallazgos reales de Oxirrinco, pero no se leyó una fuente que dé con precisión el año del hallazgo y la identificación. No se mencionan."
+  ],
+  "status": "draft"
+}

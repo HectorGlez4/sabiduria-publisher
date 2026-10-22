@@ -1,0 +1,77 @@
+{
+  "id": "2026-12-06-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lichtenberg y el espejo del cuaderno E",
+    "hook": "Un profesor de física de Gotinga anotó en un cuaderno de borradores una de las frases más justas sobre la lectura. No la publicó él: salió a la luz después de su muerte.",
+    "quote": {
+      "text": "Un libro es un espejo: si un mono se asoma a él, desde luego no puede asomarse desde dentro un apóstol.",
+      "author": "Georg Christoph Lichtenberg",
+      "work": "Sudelbücher, cuaderno E, n.º 215 (ed. Promies, Schriften und Briefe I, 1968)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Georg Christoph Lichtenberg fue profesor de física en Gotinga desde 1769 y titular desde 1775. Desde estudiante llevó cuadernos en los que lo apuntaba todo. Les tomó el nombre de los comerciantes: el waste book, el libro de borrador donde se anota cada operación antes de pasarla en limpio. En alemán, Sudelbuch. Los marcó con letras, de la A a la L, y los guardó en parte en secreto. Murió en febrero de 1799 y empezaron a publicarse en 1800.",
+      "La frase está en el cuaderno E, el anterior al que abrió el 4 de abril de 1776. No es un ataque a los libros, sino al lector. Lo que alguien saca de una página depende de lo que lleva cuando la abre. La versión que circula suele perder las palabras «desde luego», y con ellas el tono: Lichtenberg no lo presenta como un descubrimiento, sino como algo evidente.",
+      "Por esos años preparaba su ataque contra la fisiognomía de Lavater, la moda de leer el carácter en la cara de las personas. Lo publicó en 1778. Hoy se conservan unos dos tercios de sus cuadernos: el G y el H se perdieron enteros."
+    ],
+    "question": "¿Qué libro te devolvió una imagen que no esperabas de ti?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lichtenberg", "#Aforismos", "#Citas"],
+    "extended": ["#Lectura", "#Libros", "#Ilustracion", "#LiteraturaAlemana", "#Gotinga", "#Filosofia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "E 215: «Ein Buch ist ein Spiegel, wenn ein Affe hineinguckt, so kann freilich kein Apostel heraus sehen.»; selección de los Sudelbücher por cuadernos, sobre la edición de Wolfgang Promies, G. C. Lichtenberg, Schriften und Briefe, t. 1 (1968) y t. 2 (1971). Lectura directa.",
+      "source": "Lichtenberg-Gesellschaft e.V. (Darmstadt), «Sudelbücher – Auswahl»",
+      "url": "https://www.lichtenberg-gesellschaft.de/leben/l_wirk_sudel_02.html"
+    },
+    {
+      "claim": "Misma frase, con «freilich», bajo el número E 213 y en la página temática «Buch» de los aforismos de Lichtenberg. Lectura directa.",
+      "source": "textlog.de, Georg Christoph Lichtenberg, Aphorismen, «Buch»",
+      "url": "https://www.textlog.de/lichtenberg-buch.html"
+    },
+    {
+      "claim": "Recoge la frase como Sudelbücher, Heft E (215), en Schriften und Briefe, t. 1, Múnich 1967 ss., p. 393; también otra versión de la misma idea en «Über Physiognomik» (primera edición, Gotinga 1778), Schriften und Briefe, t. 3, p. 279. Lectura directa.",
+      "source": "Wikiquote (alemán), «Georg Christoph Lichtenberg»",
+      "url": "https://de.wikiquote.org/wiki/Georg_Christoph_Lichtenberg"
+    },
+    {
+      "claim": "Lichtenberg anotó con regularidad casi obsesiva sus ideas y las de otros entre 1765 y 1799; el nombre es autoirónico; los cuadernos llevan letras mayúsculas; los guardó en parte en secreto y se disfrutaron tras su muerte; de A y B quedan cuadernillos sueltos, G y H faltan por completo, de K quedan las tapas y pocas hojas, y llegó hasta la L; se conservan unos dos tercios. Lectura directa.",
+      "source": "Lichtenberg-Gesellschaft e.V., «Sudelbücher: Einführung»",
+      "url": "https://www.lichtenberg-gesellschaft.de/leben/l_wirk_sudel.html"
+    },
+    {
+      "claim": "El cuaderno F empieza el «grünen [Donnerstag] 4. April 1776» y se cierra el 28 de enero de 1779; entre sus planes recurrentes figura una polémica satírica contra Lavater y Zimmermann. Lectura directa.",
+      "source": "Lichtenberg-Gesellschaft e.V., página del Sudelbuch F",
+      "url": "https://www.lichtenberg-gesellschaft.de/leben/l_wirk_sudel_01.html"
+    },
+    {
+      "claim": "Entrada de Lichtenberg sobre el nombre: «Die Kaufleute haben ihr Waste book (Sudelbuch, Klitterbuch glaube ich im Deutschen)». Lectura directa.",
+      "source": "Projekt Gutenberg, Lichtenberg, «Aphorismen (Sudelbücher)»",
+      "url": "https://www.projekt-gutenberg.org/lichtenb/aphorism/chap006.html"
+    },
+    {
+      "claim": "Nació el 1 de julio de 1742 y murió el 24 de febrero de 1799; profesor extraordinario de física en Gotinga en 1769 y ordinario en 1775; los cuadernos se publicaron póstumamente a partir de 1800; en 1778 publicó «Über Physiognomik, wider die Physiognomen» contra Lavater. Lectura directa.",
+      "source": "Wikipedia, «Georg Christoph Lichtenberg»",
+      "url": "https://en.wikipedia.org/wiki/Georg_Christoph_Lichtenberg"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el texto de la edición Promies; el «heraus sehen» se vierte como «asomarse desde dentro» para conservar la imagen del espejo. No presentarla como versión publicada de nadie.",
+    "El número exacto: la Lichtenberg-Gesellschaft y Wikiquote dan E 215 (Promies); textlog.de, E 213. Un resultado de búsqueda la sitúa además en el cuaderno F (F 99 o F 100, agosto de 1776), sin lectura directa. La obra cita E 215 con la edición.",
+    "Las versiones de páginas de citas: «Ein Buch ist ein Spiegel, aus dem kein Apostel herausgucken kann, wenn ein Affe hineinguckt», «...hineinsieht, so kann kein Apostel heraus gucken», «...hineinblickt». Circulan sin «freilich» y con el orden cambiado. No usar ninguna.",
+    "La variante «Solche Werke sind Spiegel; wenn ein Affe hinein guckt, kann kein Apostel heraus sehen», que Wikiquote sitúa en Über Physiognomik (1778): solo se leyó en Wikiquote; no se encontró en el texto ni en una segunda fuente. La pieza no dice que Lichtenberg la publicara en vida.",
+    "Atribuir el aforismo a Schopenhauer o presentarlo como proverbio: es de Lichtenberg.",
+    "La fecha exacta del cuaderno E: no se leyó en directo. La pieza solo dice que es anterior al F, que empieza el 4 de abril de 1776.",
+    "Relacionar causalmente el aforismo con la polémica contra Lavater: la pieza solo dice que eran los mismos años."
+  ],
+  "status": "draft"
+}
