@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-06-extra41",
+  "id": "2026-10-23-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Lichtenberg", "#Aforismos", "#Citas"],
-    "extended": ["#Lectura", "#Libros", "#Ilustracion", "#LiteraturaAlemana", "#Gotinga", "#Filosofia", "#Sabiduria"]
+    "topic": [
+      "#Lichtenberg",
+      "#Aforismos",
+      "#Citas"
+    ],
+    "extended": [
+      "#Lectura",
+      "#Libros",
+      "#Ilustracion",
+      "#LiteraturaAlemana",
+      "#Gotinga",
+      "#Filosofia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -73,5 +85,12 @@
     "La fecha exacta del cuaderno E: no se leyó en directo. La pieza solo dice que es anterior al F, que empieza el 4 de abril de 1776.",
     "Relacionar causalmente el aforismo con la polémica contra Lavater: la pieza solo dice que eran los mismos años."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-23T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

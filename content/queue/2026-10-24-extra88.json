@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-13-extra41",
+  "id": "2026-10-24-extra88",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#AlexanderPope", "#Citas", "#Literatura"],
-    "extended": ["#PoesiaInglesa", "#Perdon", "#Critica", "#Siglo18", "#Lectura"]
+    "topic": [
+      "#AlexanderPope",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#PoesiaInglesa",
+      "#Perdon",
+      "#Critica",
+      "#Siglo18",
+      "#Lectura"
+    ]
   },
   "sources": [
     {
@@ -62,5 +72,12 @@
     "Corregir a quien cita la frase con «humano»: «humane» era solo la grafía de la época, no otra palabra con otro sentido.",
     "«Un poco de conocimiento es algo peligroso»: es la forma mal citada; Pope escribió «learning» (saber, instrucción). En el copy se traduce como «un poco de saber»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-25T02:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
