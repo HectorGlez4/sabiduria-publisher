@@ -81,9 +81,25 @@
     "Leer el pasaje como mensaje motivacional de mejora progresiva: el texto continúa hacia «mejor peor» y «fracasar peor otra vez».",
     "Qué edición de 1983 salió primero, la de Calder o la de Grove: los catálogos no lo aclaran. El campo work cita la de Calder sin decir que fuera la primera."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-22T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1129999273158065",
+      "url": "https://www.facebook.com/874327782058550/posts/1129999273158065",
+      "published_at": "2026-10-22T16:41:38.386987+00:00"
+    },
+    "instagram": {
+      "post_id": "17920852170448866",
+      "url": "https://www.instagram.com/p/Dezb6d8DRe1/",
+      "published_at": "2026-10-22T16:42:00.177169+00:00"
+    },
+    "threads": {
+      "post_id": "18143130265521098",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18143130265521098",
+      "published_at": "2026-10-22T16:42:15.265822+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
