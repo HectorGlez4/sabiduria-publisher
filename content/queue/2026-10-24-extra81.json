@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-13-extra42",
+  "id": "2026-10-24-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#FrancisBacon", "#Citas", "#Filosofia"],
-    "extended": ["#NovumOrganum", "#HistoriaDeLaCiencia", "#Conocimiento", "#Hobbes", "#Ciencia"]
+    "topic": [
+      "#FrancisBacon",
+      "#Citas",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#NovumOrganum",
+      "#HistoriaDeLaCiencia",
+      "#Conocimiento",
+      "#Hobbes",
+      "#Ciencia"
+    ]
   },
   "sources": [
     {
@@ -61,5 +71,12 @@
     "Atribuir el origen de la idea a Ali ibn Abi Talib o al Nahj al-Balagha: circula en internet y no se verificó en esta investigación.",
     "Fechar la versión inglesa del Leviatán (1651) como la de «scientia potentia est»: la frase latina es de la edición latina de 1668."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-25T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
