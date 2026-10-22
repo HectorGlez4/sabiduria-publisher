@@ -80,9 +80,25 @@
     "La frase «Creo que no nos quedamos ciegos, creo que estamos ciegos…»: es de la novela, no del epígrafe; ajena a esta pieza.",
     "El doble sentido de «reparar» en castellano (arreglar y advertir): la RAE no se pudo consultar (403). La pieza usa solo el sentido de advertir, el del original portugués."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-21T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1129588163199176",
+      "url": "https://www.facebook.com/874327782058550/posts/1129588163199176",
+      "published_at": "2026-10-22T07:07:26.225203+00:00"
+    },
+    "instagram": {
+      "post_id": "18012764774768042",
+      "url": "https://www.instagram.com/p/DeyaMmTgSlW/",
+      "published_at": "2026-10-22T07:07:40.501204+00:00"
+    },
+    "threads": {
+      "post_id": "18169180849473484",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18169180849473484",
+      "published_at": "2026-10-22T07:07:56.466983+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",

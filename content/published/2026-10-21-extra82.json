@@ -79,9 +79,25 @@
     "Que la frase «Bless you, prison» («Bendita seas, prisión») cierre el capítulo: lo dice Modern Age, pero no se verificó en una segunda fuente. No se usa.",
     "Que lo condenara una troika sin juicio o en ausencia: las fuentes no coinciden en el procedimiento. La pieza dice solo «lo condenaron a ocho años»."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-21T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1129629526528373",
+      "url": "https://www.facebook.com/874327782058550/posts/1129629526528373",
+      "published_at": "2026-10-22T08:16:48.300497+00:00"
+    },
+    "instagram": {
+      "post_id": "17991291024079720",
+      "url": "https://www.instagram.com/p/DeyiIo0gbNw/",
+      "published_at": "2026-10-22T08:17:02.952117+00:00"
+    },
+    "threads": {
+      "post_id": "18119126603098573",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18119126603098573",
+      "published_at": "2026-10-22T08:17:17.071403+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
