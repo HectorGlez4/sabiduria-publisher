@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-02-extra41",
+  "id": "2026-10-25-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SeiShonagon", "#LiteraturaJaponesa", "#Citas"],
-    "extended": ["#Japon", "#Heian", "#ElLibroDeLaAlmohada", "#Primavera", "#Clasicos", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#SeiShonagon",
+      "#LiteraturaJaponesa",
+      "#Citas"
+    ],
+    "extended": [
+      "#Japon",
+      "#Heian",
+      "#ElLibroDeLaAlmohada",
+      "#Primavera",
+      "#Clasicos",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -62,5 +74,12 @@
     "Que «haru wa akebono» signifique literalmente «la primavera es el alba»: el original no tiene verbo; la cópula y el «es lo mejor» los pone el traductor.",
     "Traducir わろし como «malo» moralmente: en este contexto es feo, sin gracia, desagradable a la vista."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-26T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

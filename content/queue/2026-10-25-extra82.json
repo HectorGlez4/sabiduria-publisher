@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-13-tarde",
+  "id": "2026-10-25-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SimaQian", "#HistoriaDeChina", "#Citas"],
-    "extended": ["#Shiji", "#DinastiaHan", "#Filosofia", "#Historia", "#Literatura"]
+    "topic": [
+      "#SimaQian",
+      "#HistoriaDeChina",
+      "#Citas"
+    ],
+    "extended": [
+      "#Shiji",
+      "#DinastiaHan",
+      "#Filosofia",
+      "#Historia",
+      "#Literatura"
+    ]
   },
   "sources": [
     {
@@ -62,5 +72,12 @@
     "Fechas de nacimiento y muerte de Sima Qian como datos cerrados: hacia 145 o 135 a.C. el nacimiento, hacia 86 a.C. la muerte. No se dan en el copy.",
     "El nombre de Li Ling no se usa en el copy por espacio; si se añade, no decir que «se pasó al enemigo» sin matiz: lo que las fuentes dicen es que fue derrotado y capturado."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-25T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

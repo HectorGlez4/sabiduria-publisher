@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-14-tarde",
+  "id": "2026-10-25-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Goya", "#Citas", "#Arte"],
-    "extended": ["#LosCaprichos", "#MuseoDelPrado", "#Grabado", "#Ilustracion", "#Historia"]
+    "topic": [
+      "#Goya",
+      "#Citas",
+      "#Arte"
+    ],
+    "extended": [
+      "#LosCaprichos",
+      "#MuseoDelPrado",
+      "#Grabado",
+      "#Ilustracion",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -63,5 +73,12 @@
     "Interpretaciones sobre la influencia de Rousseau o la lectura de Salman Rushdie: son lecturas de comentaristas, no hechos.",
     "Decidir si «sueño» significa aquí 'dormir' o 'soñar': la ambigüedad existe en español y el copy no la resuelve."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-26T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

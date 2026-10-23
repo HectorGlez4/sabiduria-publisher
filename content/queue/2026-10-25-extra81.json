@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-08-tarde",
+  "id": "2026-10-25-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Monterroso", "#Microrrelato", "#Citas"],
-    "extended": ["#LiteraturaLatinoamericana", "#Guatemala", "#ElDinosaurio", "#Cuento", "#ItaloCalvino", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#Monterroso",
+      "#Microrrelato",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaLatinoamericana",
+      "#Guatemala",
+      "#ElDinosaurio",
+      "#Cuento",
+      "#ItaloCalvino",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -67,5 +79,12 @@
     "La anécdota del lector que dijo «me encantó, pero voy por la mitad»: el propio Semanario Universidad la da como leyenda. No se usa.",
     "Que el cuento se escribiera como sátira del PRI: el uso político es posterior y de los comentaristas, no una intención declarada del autor. El cuerpo dice que se usó así, no que se escribió para eso."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-25T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-18-extra41",
+  "id": "2026-10-25-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Mariategui", "#Citas", "#Peru"],
-    "extended": ["#Amauta", "#PensamientoLatinoamericano", "#1928", "#FrasesCelebres", "#Historia", "#Ensayo"]
+    "topic": [
+      "#Mariategui",
+      "#Citas",
+      "#Peru"
+    ],
+    "extended": [
+      "#Amauta",
+      "#PensamientoLatinoamericano",
+      "#1928",
+      "#FrasesCelebres",
+      "#Historia",
+      "#Ensayo"
+    ]
   },
   "sources": [
     {
@@ -62,5 +73,12 @@
     "Presentar la frase como rechazo de toda influencia europea: el editorial pide adaptar el socialismo a la realidad americana, no rechazar ideas de fuera.",
     "Los PDF de Redalyc y Cuadernos Americanos no se pudieron leer; la cita está verificada en el texto completo del editorial en Marxists.org."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-26T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
