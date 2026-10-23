@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-08-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Röntgen y la radiografía de la mano de Bertha (1895)",
+    "hook": "La primera radiografía de un cuerpo humano es la mano de una mujer con su anillo de boda. Su marido se negó a patentar lo que la hizo posible.",
+    "body": [
+      "El 8 de noviembre de 1895, un viernes por la noche en Würzburg, Wilhelm Conrad Röntgen trabajaba con un tubo de rayos catódicos cubierto de cartón negro. Una pantalla fosforescente, al otro lado de la sala, se iluminó. Algo atravesaba el cartón. Como no sabía qué era, lo llamó rayos X.",
+      "El 22 de diciembre fotografió con esos rayos la mano de su esposa, Anna Bertha. En la placa se ven todos los huesos y, alrededor de uno de ellos, el anillo de boda. El 28 de diciembre dio a conocer su comunicación, «Sobre una nueva clase de rayos». En pocas semanas el hallazgo se conocía en todo el mundo.",
+      "Röntgen no pidió patente. Sostuvo que su uso debía quedar libre para la investigación y para la humanidad. En 1901 recibió el primer Nobel de Física y donó el premio entero, 50.000 coronas, a la Universidad de Würzburg para la investigación científica."
+    ],
+    "question": "¿Cuándo vale más un hallazgo que no tiene dueño?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La mano de Anna Bertha",
+    "subtitle": "Würzburg, 22 de diciembre de 1895",
+    "body": "Röntgen hizo con los rayos X la primera imagen de los huesos de una persona viva: la mano de su esposa. No patentó el hallazgo y donó su Nobel a la Universidad de Würzburg."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Rontgen", "#RayosX", "#HistoriaDeLaCiencia"],
+    "extended": ["#Fisica", "#PremioNobel", "#Radiografia", "#Wurzburgo", "#SigloXIX", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El 8 de noviembre de 1895 Röntgen estudiaba la radiación de tubos de rayos catódicos; una pantalla fosforescente al otro lado de la sala brillaba aunque los tubos estaban cubiertos de cartón negro; el 22 de diciembre de 1895 fotografió la mano de su esposa, en la que se veían todos los huesos y el anillo de boda; publicó «Über eine neue Art von Strahlen» antes de terminar 1895; el nombre rayos X es suyo; en pocas semanas fueron un fenómeno mundial; primer Nobel de Física en 1901. Lectura directa.",
+      "source": "Linda Hall Library, Scientist of the Day, «Wilhelm Röntgen»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/wilhelm-rontgen"
+    },
+    {
+      "claim": "Todo empezó un viernes por la noche en Würzburg, el 8 de noviembre de 1895; describió su descubrimiento el 28 de diciembre de 1895; fotografió los huesos de la mano de su esposa Anna; renunció a patentar la generación de rayos X porque su uso para la investigación y la humanidad debía ser libre; podía permitírselo porque era millonario por herencia; las acusaciones de Lenard fueron infundadas; primer Nobel de Física en 1901. Lectura directa.",
+      "source": "Deutsches Patent- und Markenamt (DPMA), «Röntgen's X-rays», serie Inventions that made history",
+      "url": "https://dpma.de/english/our_office/publications/milestones/inventionsthatmadehistory/roentgensx-rays/index.html"
+    },
+    {
+      "claim": "Donó el premio Nobel entero, 50.000 coronas, a la Universidad de Würzburg para apoyar la investigación científica; se negó a patentar su descubrimiento; pie de imagen: «la mano de la esposa de Röntgen, Bertha, diciembre de 1895»; murió en Múnich el 10 de febrero, a los 77 años. Lectura directa.",
+      "source": "Röntgen-Gedächtnisstätte Würzburg (memorial del laboratorio de Röntgen), «Wilhelm Röntgen»",
+      "url": "https://wilhelmconradroentgen.de/en/wilhelm-roentgen/"
+    }
+  ],
+  "do_not_use": [
+    "«He visto mi muerte» como frase de Anna Bertha al ver la radiografía: circula mucho, pero no se encontró en ninguna fuente primaria. Solo puede decirse, si acaso, que la imagen la impresionó. No se usa.",
+    "Los 15 minutos de exposición de la placa: aparecen en una divulgación (Elhuyar) sin cruzarse con otra fuente. No se usa.",
+    "Si el 28 de diciembre fue la fecha de entrega o de publicación de la comunicación: las fuentes lo formulan distinto («describió», «presentó»). El cuerpo dice «dio a conocer», que cubre ambas.",
+    "El nombre de la esposa: el DPMA la llama Anna y el memorial de Würzburg, Bertha. Se usa «Anna Bertha», que reúne ambos. No se da el apellido de soltera, que no se verificó aquí.",
+    "Que Röntgen renunciara a la patente por pura generosidad sin más: el DPMA añade que podía permitírselo porque era millonario por herencia. No contradice el cuerpo, pero no se presenta como sacrificio económico.",
+    "Que Röntgen muriera en la miseria por la inflación alemana: circula, pero no se verificó en estas fuentes. No se usa.",
+    "La reclamación de prioridad de Philipp Lenard: el DPMA la da por infundada. No se menciona."
+  ],
+  "status": "draft"
+}

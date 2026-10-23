@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-08-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el mapa babilónico del mundo de Sippar",
+    "hook": "Hace más de 2.500 años un escriba de Babilonia dibujó el mundo en una tablilla de doce centímetros. En el centro, su ciudad. En el borde, un río amargo.",
+    "body": [
+      "La tablilla es de arcilla y mide 12,2 por 8,2 centímetros. La desenterró Hormuzd Rassam en Sippar, a unos 60 kilómetros al norte de Babilonia, y el Museo Británico la adquirió en 1882. El mundo es un círculo. El Éufrates lo cruza de norte a sur, Babilonia está a su orilla, y alrededor se nombran Asiria, Elam y Urartu. Lo rodea todo un doble anillo: el río amargo, el mar salado.",
+      "Fuera de ese anillo asoman siete u ocho triángulos, regiones lejanas. El reverso, muy dañado, describe al menos ocho, y lo que se lee habla de bestias extrañas y de héroes. Al final el escriba anotó que la había copiado de un ejemplar antiguo. Ya entonces el dibujo era una copia.",
+      "No servía para viajar. Explicaba el orden del mundo tal como lo veían en Babilonia: su ciudad en medio, lo conocido dentro del agua y lo prodigioso al otro lado."
+    ],
+    "question": "¿Qué queda en el centro cuando cada uno dibuja su mundo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El mundo en una tablilla",
+    "subtitle": "Babilonia, siglos VIII a VI a.C.",
+    "body": "Un círculo de agua salada, el río amargo, rodea Babilonia, Asiria y Elam. Más allá, siete u ocho regiones de bestias y héroes. El escriba anotó que la copiaba de un ejemplar antiguo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Babilonia", "#Mesopotamia", "#HistoriaAntigua"],
+    "extended": ["#Cartografia", "#Cuneiforme", "#MuseoBritanico", "#Arqueologia", "#Mapas", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "BM 92687, registro 1882,0714.509; 12,2 cm de alto por 8,2 cm de ancho; arcilla con escritura cuneiforme; hallada en Sippar, unos 60 km al norte de Babilonia; excavador Hormuzd Rassam; adquirida por el Museo Británico en 1882; primera traducción en 1889; fecha no anterior al siglo IX a.C., más probablemente finales del VIII o el VII; el Éufrates corre de norte a sur, Babilonia sobre él, Susa (Elam) al sur, Urartu al noreste, Asiria, Der y Bit-Yakin rotulados; doble anillo del «río amargo» (marratum) rodea el mundo; siete u ocho triángulos exteriores (nagû); el reverso describe al menos ocho; colofón: «copiado de su antiguo ejemplar». Lectura directa.",
+      "source": "Wikipedia, «Babylonian Map of the World»",
+      "url": "https://en.wikipedia.org/wiki/Babylonian_Map_of_the_World"
+    },
+    {
+      "claim": "Descripción del Museo Británico reproducida con su permiso: babilonio, hacia 700-500 a.C., probablemente de Sippar; Babilonia en el centro, Asiria y Elam nombradas; un canal circular rotulado «Mar salado» rodea el área central; alrededor del borde, unas ocho regiones en forma de triángulo; el texto las describe como morada de criaturas míticas y héroes, aunque está incompleto. Lectura directa.",
+      "source": "World History Encyclopedia, «Babylonian Map of the World» (imagen y texto © Trustees of the British Museum)",
+      "url": "https://www.worldhistory.org/image/526/babylonian-map-of-the-world/"
+    },
+    {
+      "claim": "Tablilla babilonia tardía, hacia el siglo VI a.C., de Abu Habba (Sippar); aunque los lugares aparecen en posiciones aproximadamente correctas, el propósito real del mapa es explicar la visión babilonia del mundo mitológico; el texto describe regiones habitadas por bestias extrañas y míticas y por grandes héroes. Resumen del resultado de búsqueda: la página devolvió 403 al leerla directamente.",
+      "source": "Smarthistory, «Map of the World»",
+      "url": "https://smarthistory.org/map-of-the-world"
+    }
+  ],
+  "do_not_use": [
+    "«El mapa más antiguo del mundo»: lo dice la prensa y lo repitió Irving Finkel en un vídeo divulgativo, pero es una etiqueta discutible. Se evita cualquier superlativo de antigüedad.",
+    "Que el mapa señale el lugar del arca de Noé o el monte Ararat: es una lectura de Irving Finkel sobre un pasaje dañado (una medida que en la literatura babilonia solo se usa para el arca de Utnapishtim). La prensa la exagera como hallazgo. No se usa.",
+    "Fecha precisa: las fuentes van del siglo VIII al VI a.C. El hook dice «más de 2.500 años», que cubre todo el rango; el subtítulo de la tarjeta da el rango completo.",
+    "Si la tablilla se hizo en Sippar o en Borsippa: se halló en Sippar, pero Wikipedia recoge que suele pensarse que procede de Borsippa. El cuerpo solo dice dónde se desenterró.",
+    "Año del hallazgo: unas fuentes dicen 1881 y otras 1882. El cuerpo da 1882 como año de adquisición por el museo, que es lo que coincide.",
+    "El fragmento añadido en 1995: Wikipedia cita un artículo de Finkel de ese año, pero no aclara quién lo identificó. No se usa.",
+    "El pájaro dibujado como firma del autor: es una propuesta de Finkel. No se usa."
+  ],
+  "status": "draft"
+}

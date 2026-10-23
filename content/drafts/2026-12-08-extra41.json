@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-08-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Natsume Sōseki y el comienzo de Kusamakura (1906)",
+    "hook": "Una de las aperturas más conocidas de la novela japonesa es una queja: vivir entre la gente es difícil. Lo que viene después no es una queja.",
+    "quote": {
+      "text": "Si te guías por la razón, chocas con los demás. Si te dejas llevar por el sentimiento, te arrastra la corriente. Si te empeñas en tu voluntad, vives estrecho. Sea como sea, el mundo de los hombres es difícil de habitar.",
+      "author": "Natsume Sōseki",
+      "work": "Kusamakura (Almohada de hierba), capítulo 1, revista Shinshōsetsu, septiembre de 1906",
+      "attribution_verified": true
+    },
+    "body": [
+      "En septiembre de 1906 la revista Shinshōsetsu publicó Kusamakura, «almohada de hierba», de Natsume Sōseki. Un pintor de treinta años sube a pie por un camino de montaña hacia una posada de aguas termales. La novela empieza así: «Subiendo por el sendero de la montaña, pensé esto». Y lo que piensa son estas cuatro frases.",
+      "El pintor no se queda en el lamento. Unas líneas más abajo razona que, cuando vivir se vuelve demasiado difícil, uno quiere mudarse a un lugar más fácil, y que cuando comprende que en ningún lugar lo es, nacen la poesía y la pintura. Añade que el mundo de los hombres no lo hicieron dioses ni demonios, sino la gente corriente.",
+      "Sōseki había hecho ese viaje a finales de 1897, cuando enseñaba en Kumamoto. Se alojó en el pabellón de una casa de baños termales de la familia Maeda, que en la novela se convierte en la posada. El pabellón, de seis tatamis, y el baño se conservan."
+    ],
+    "question": "¿Qué haces tú con lo difícil que es vivir entre otros?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#NatsumeSoseki", "#LiteraturaJaponesa", "#Citas"],
+    "extended": ["#Kusamakura", "#Japon", "#Meiji", "#Novela", "#Kumamoto", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Ficha de Kusamakura (草枕), de Natsume Sōseki: primera publicación en la revista Shinshōsetsu (新小説), septiembre de 1906 (Meiji 39); texto base: Natsume Sōseki Zenshū 3, Chikuma Bunko, Chikuma Shobō, 1987. Lectura directa.",
+      "source": "Aozora Bunko, ficha de la obra «草枕»",
+      "url": "https://www.aozora.gr.jp/cards/000148/card776.html"
+    },
+    {
+      "claim": "El capítulo 1 empieza «山路を登りながら、こう考えた。» y siguen «智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。»; más adelante dice que, cuando la dificultad de vivir crece, uno quiere mudarse a un lugar más barato, y que al comprender que en cualquier lugar es difícil vivir nacen la poesía y la pintura; y que quienes hicieron el mundo de los hombres no fueron dioses ni demonios, sino la gente corriente. Comprobación directa sobre el texto.",
+      "source": "Aozora Bunko, texto de «草枕» (base: Chikuma Bunko, 1987)",
+      "url": "https://www.aozora.gr.jp/cards/000148/files/776_14941.html"
+    },
+    {
+      "claim": "Kusamakura apareció en Shinshōsetsu en septiembre de 1906 y se recogió en Uzura-kago (Shun'yōdō, enero de 1907); la posada se inspira en el balneario 小天温泉, en la prefectura de Kumamoto, que Sōseki visitó a finales de 1897; el protagonista es un pintor de estilo occidental de treinta años; el comienzo es «山路を登りながら、こう考えた。». Lectura directa.",
+      "source": "Wikipedia en japonés, «草枕»",
+      "url": "https://ja.wikipedia.org/wiki/草枕"
+    },
+    {
+      "claim": "El Maeda-ke Bettei (前田家別邸) es el escenario de Kusamakura; se construyó como retiro del político Maeda (前田案山子) y en parte funcionaba como posada termal; Sōseki, cuando enseñaba en el Quinto Colegio Superior, se alojó en su pabellón; se conservan el cuarto de seis tatamis y el baño; el pabellón se restauró en 1986 y el baño en 2004. Lectura directa.",
+      "source": "Kumamoto Guide (Federación de Turismo de la Prefectura de Kumamoto), «前田家別邸»",
+      "url": "https://kumamoto.guide/spots/detail/11020"
+    },
+    {
+      "claim": "Novela de 1906; un artista se retira a la montaña y se aloja en una posada remota; traducciones al inglés de Alan Turney (The Three-Cornered World, 1965) y Meredith McKinney (Kusamakura, 2008). Lectura directa.",
+      "source": "Wikipedia, «Kusamakura (novel)»",
+      "url": "https://en.wikipedia.org/wiki/Kusamakura_(novel)"
+    }
+  ],
+  "do_not_use": [
+    "La traducción de la cita y de la primera línea es propia, sobre el japonés de Aozora Bunko. No presentarla como la de ningún traductor publicado. «Chocas con los demás» traduce 角が立つ («se levantan esquinas», crear roces); «vives estrecho» traduce 窮屈だ.",
+    "El nombre del colega que acompañó a Sōseki (Yamakawa Shinjirō): aparece en guías locales leídas solo como resumen de búsqueda, y la página del ayuntamiento de Tamana llegó ilegible. No se nombra.",
+    "La fecha exacta del viaje: unas fuentes dicen fin de año y otras Nochevieja de 1897. Se dice «a finales de 1897».",
+    "La lectura romanizada del topónimo 小天: no se nombra en el cuerpo para no arriesgar una transcripción errónea; se habla de una casa de baños en Kumamoto.",
+    "Que el balneario esté en la ciudad de Kumamoto: está en Tamana (Tenmizu), en la prefectura. El cuerpo dice que Sōseki enseñaba en Kumamoto, no que la posada esté allí.",
+    "El concepto de 非人情 («desapego», «no-humanidad») y la escena final con Nami: son el centro de la novela pero no caben sin simplificarlos. No se usan."
+  ],
+  "status": "draft"
+}

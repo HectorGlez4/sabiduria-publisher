@@ -1,0 +1,71 @@
+{
+  "id": "2026-12-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Monterroso y El dinosaurio (1959)",
+    "hook": "Siete palabras. No dicen quién despertó, ni de qué sueño, ni qué es el dinosaurio. Eso lo pone cada lector.",
+    "quote": {
+      "text": "Cuando despertó, el dinosaurio todavía estaba allí.",
+      "author": "Augusto Monterroso",
+      "work": "«El dinosaurio», en Obras completas (y otros cuentos), 1959",
+      "attribution_verified": true
+    },
+    "body": [
+      "Augusto Monterroso nació en Tegucigalpa en 1921 y adoptó la nacionalidad guatemalteca. En 1944, por oponerse a la dictadura de Jorge Ubico, salió exiliado a la Ciudad de México. En 1959 publicó su primer libro con un título que ya era una broma: Obras completas (y otros cuentos). Entre esos cuentos venía «El dinosaurio», que ocupa una sola línea.",
+      "El cuento calla casi todo. No dice quién despierta, ni qué soñaba, ni qué clase de dinosaurio es. Lo que falta lo pone quien lee, y por eso cada época le encontró uno. En México, donde un mismo partido gobernó más de siete décadas, se usó para hablar del poder que no se va.",
+      "Italo Calvino, en Seis propuestas para el próximo milenio (1988), escribió que quería preparar una colección de cuentos de una sola frase, y destacó el de Monterroso. Monterroso murió en la Ciudad de México en 2003, con el Premio Príncipe de Asturias de las Letras recibido tres años antes."
+    ],
+    "question": "¿Qué sigue ahí cada vez que despiertas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Monterroso", "#Microrrelato", "#Citas"],
+    "extended": ["#LiteraturaLatinoamericana", "#Guatemala", "#ElDinosaurio", "#Cuento", "#ItaloCalvino", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "«El dinosaurio» es un microrrelato de Monterroso publicado en el libro Obras completas (y otros cuentos), de 1959; texto: «Cuando despertó, el dinosaurio todavía estaba allí.»; en México, donde el PRI gobernó más de siete décadas, los comentaristas compararon al partido con un dinosaurio y el cuento se usó para burlarse de él. Lectura directa.",
+      "source": "Wikipedia, «The Dinosaur (short story)»",
+      "url": "https://en.wikipedia.org/wiki/The_Dinosaur_(short_story)"
+    },
+    {
+      "claim": "Monterroso nació en Tegucigalpa en 1921 y murió en la Ciudad de México en 2003; Obras completas (y otros cuentos) fue su primera obra literaria; «El dinosaurio», de siete palabras, se consideró durante mucho tiempo el microrrelato más breve; texto: «Cuando despertó, el dinosaurio todavía estaba allí». Lectura directa.",
+      "source": "Gaceta UNAM, «Celebran los cien años de Augusto Tito Monterroso»",
+      "url": "https://www.gaceta.unam.mx/celebran-los-cien-anos-de-augusto-tito-monterroso/"
+    },
+    {
+      "claim": "Nacido el 21 de diciembre de 1921 en Tegucigalpa, adoptó la nacionalidad guatemalteca; en 1944 fue detenido y exiliado a la Ciudad de México por oponerse a la dictadura de Jorge Ubico; primer libro, Obras completas (y otros cuentos), 1959; Premio Príncipe de Asturias de las Letras en 2000; murió el 8 de febrero de 2003 en la Ciudad de México. Lectura directa.",
+      "source": "Wikipedia, «Augusto Monterroso»",
+      "url": "https://en.wikipedia.org/wiki/Augusto_Monterroso"
+    },
+    {
+      "claim": "Calvino, en Seis propuestas para el próximo milenio: «Yo quisiera preparar una colección de cuentos de una sola frase, o de una sola línea, si fuera posible»; Monterroso publicó Obras completas (y otros cuentos) en 1959 y «El dinosaurio» formaba parte del libro. Lectura directa.",
+      "source": "Semanario Universidad (Universidad de Costa Rica), «La hora del dinosaurio», 23 de julio de 2025",
+      "url": "https://semanariouniversidad.com/cultura/la-hora-del-dinosaurio/"
+    },
+    {
+      "claim": "Italo Calvino destacó el cuento en Seis propuestas para el próximo milenio (1988); Obras completas (y otros cuentos) fue el primer libro de Monterroso, de 1959, con un título lúdico; Monterroso (Tegucigalpa, 1921 – Ciudad de México, 2003). Lectura directa.",
+      "source": "Valencia Plaza, «Cuando despertó, Monterroso todavía brillaba allí»",
+      "url": "https://valenciaplaza.com/cuando-desperto-monterroso-todavia-brillaba-alli"
+    },
+    {
+      "claim": "Augusto Monterroso, Premio Príncipe de Asturias de las Letras 2000. Lectura directa.",
+      "source": "Fundación Princesa de Asturias, ficha del premiado",
+      "url": "https://www.fpa.es/es/premios-princesa-de-asturias/premiados/2000-augusto-monterroso.html"
+    }
+  ],
+  "do_not_use": [
+    "Que sea «el cuento más breve del mundo» o «de la literatura universal»: es una valoración crítica, no un dato, y Wikipedia recoge microrrelatos posteriores más breves (Lomelí 2005, Aparicio 2006, Gobbo 2015). Se evita el superlativo.",
+    "La editorial de la primera edición de 1959: una fuente académica de la UNAM la asocia a la Universidad Nacional, pero no se pudo leer (403). No se nombra la editorial.",
+    "La frase exacta de Calvino de que no encontró ningún cuento de una frase que superara al de Monterroso: aparece en resúmenes de búsqueda, pero no se leyó el texto de Calvino. Solo se dice que lo destacó.",
+    "En qué conferencia de Calvino aparece (se dice «Rapidez»): no se confirmó. No se nombra el capítulo.",
+    "La anécdota del lector que dijo «me encantó, pero voy por la mitad»: el propio Semanario Universidad la da como leyenda. No se usa.",
+    "Que el cuento se escribiera como sátira del PRI: el uso político es posterior y de los comentaristas, no una intención declarada del autor. El cuerpo dice que se usó así, no que se escribió para eso."
+  ],
+  "status": "draft"
+}
