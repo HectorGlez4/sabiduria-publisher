@@ -79,9 +79,25 @@
     "La frase de Cernuda «Escribir en España no es llorar, es morir» citada como de Larra: es del poema «A Larra, con unas violetas», no del artículo.",
     "La edad de Larra al escribir el artículo y calificarlo como «el periodista más leído de su tiempo»: no se verificaron en esta ejecución. No se usan."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-22T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1130517326439593",
+      "url": "https://www.facebook.com/874327782058550/posts/1130517326439593",
+      "published_at": "2026-10-23T07:27:40.014227+00:00"
+    },
+    "instagram": {
+      "post_id": "17962574187231616",
+      "url": "https://www.instagram.com/p/De1BTpcFmxv/",
+      "published_at": "2026-10-23T07:27:53.379515+00:00"
+    },
+    "threads": {
+      "post_id": "18113841866120881",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18113841866120881",
+      "published_at": "2026-10-23T07:28:04.528694+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
