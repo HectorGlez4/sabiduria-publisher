@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-09-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Ea-nasir y la queja de Nanni sobre el cobre",
+    "hook": "La reclamación de cliente más famosa de la historia tiene unos 3.750 años. Se encontró en casa del comerciante que la recibió.",
+    "body": [
+      "Hacia 1750 a.C., en la ciudad de Ur, en el sur del actual Irak, un hombre llamado Nanni hizo escribir una tablilla de arcilla de 11,6 centímetros. Empieza con la fórmula de las cartas de la época: «A Ea-nasir di: así habla Nanni». Lo que sigue es una queja. Había pagado por lingotes de cobre de buena calidad. Cuando su criado fue a recogerlos, le ofrecieron cobre malo y le dijeron que, si no lo quería, se fuera.",
+      "Ea-nasir compraba cobre en Dilmun, en el golfo Pérsico, en la isla que hoy es Baréin, y lo llevaba a Ur para venderlo. Leonard Woolley excavó Ur entre 1922 y 1934 para la Universidad de Pensilvania y el Museo Británico. En una casa que probablemente era la suya, entre su correspondencia, aparecieron la carta de Nanni y otras reclamaciones de otros clientes por cobre que no llegaba o que llegaba mal.",
+      "No sabemos qué contestó Ea-nasir. Solo se conserva una de las voces. El historiador W. F. Leemans propuso en 1960 que su negocio principal era abastecer de cobre al palacio, lo que explicaría el descuido con los particulares. Hoy la tablilla está en el Museo Británico, y su destinatario se volvió un personaje de internet hacia 2015."
+    ],
+    "question": "¿Qué pensaríamos de alguien si de él solo quedaran las quejas que recibió?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La queja de Nanni",
+    "subtitle": "Ur, hacia 1750 a.C.",
+    "body": "Nanni pagó por cobre bueno y le ofrecieron cobre malo. Su queja, en una tablilla de arcilla, apareció con otras reclamaciones en la casa que probablemente era del comerciante, Ea-nasir. Hoy está en el Museo Británico."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mesopotamia", "#EaNasir", "#Historia"],
+    "extended": ["#Ur", "#Cuneiforme", "#Arqueologia", "#Comercio", "#MuseoBritanico", "#EdadDelBronce", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Registro UET 5, 0081 (P414985): número de museo BM 131236, Museo Británico; procedencia Ur (Tell Muqayyar); periodo paleobabilónico; lengua acadia; tableta de arcilla, 11,6 × 5,0 × 2,6, algo dañada; «Complaint tablet to Ea-nāṣir»; transliteración del comienzo «a-na e2-a-na-s,i-ir / qi2-bi2-ma / um-ma na-an-ni-ma». Lectura directa.",
+      "source": "Cuneiform Digital Library Initiative (CDLI), artefacto P414985",
+      "url": "https://cdli.earth/artifacts/414985"
+    },
+    {
+      "claim": "Hacia 1750 a.C., acadio cuneiforme; 11,6 cm de alto y 5,0 de ancho; la halló Leonard Woolley en Ur durante la expedición conjunta de la Universidad de Pensilvania y el Museo Británico (1922-1934), en las ruinas que se cree eran la casa de Ea-nasir, entre cartas similares; Nanni dice que se le prometieron lingotes de cobre de Dilmun de buena calidad, que su criado recibió cobre malo y se le dijo que lo tomara o lo dejara; otras quejas en las mismas ruinas, como la de Arbituram, que no había recibido su cobre; traducciones de Oppenheim (1954, 1967) y Leemans (1960). Lectura directa.",
+      "source": "Wikipedia, «Complaint tablet to Ea-nāṣir»",
+      "url": "https://en.wikipedia.org/wiki/Complaint_tablet_to_Ea-nāṣir"
+    },
+    {
+      "claim": "Ea-nasir (hacia 1750 a.C.), comerciante de cobre de Ur, compraba lingotes en Dilmun y los llevaba por agua a Ur; Leemans (1960) lo describió como gran mayorista y consideró que su negocio principal era probablemente importar cobre para el palacio de Ur, lo que podría explicar que descuidara a los clientes particulares; los excavadores llamaron a la casa probable «Number 1 Old Street»; hacia 2015 sus intercambios con clientes se volvieron memes en internet. Lectura directa.",
+      "source": "Wikipedia, «Ea-nāṣir»",
+      "url": "https://en.wikipedia.org/wiki/Ea-nāṣir"
+    },
+    {
+      "claim": "La tablilla data de 1750 a.C., procede de Ur, en el sur del actual Irak, y está en el Museo Británico; Ea-nasir prometió lingotes de cobre de buena calidad y supuestamente entregó cobre de baja ley; según la traducción, respondió al mensajero «si no quieres tomarlos, vete»; los comerciantes de Ur buscaban cobre en Dilmun, la actual isla de Baréin; la halló una expedición dirigida por Leonard Woolley; el texto dice que la casa «puede ser» la de Ea-nasir. Lectura directa.",
+      "source": "National Geographic, «Think customer service is bad now? Read this 4,000-year-old complaint letter»",
+      "url": "https://www.nationalgeographic.com/premium/article/ea-nasir-copper-merchant-ur"
+    }
+  ],
+  "do_not_use": [
+    "«La queja de cliente más antigua del mundo» como hecho: es un récord Guinness, no una clasificación académica. El hook dice «la más famosa», no «la más antigua».",
+    "Que la mina fuera «una quinta parte de una onza»: lo dice National Geographic y es erróneo (una mina pesaba en torno a medio kilo). No se usan equivalencias de peso.",
+    "Las «1.080 libras de cobre» entregadas al palacio que menciona Nanni: solo en National Geographic entre las fuentes leídas. No se usan.",
+    "Que la casa fuera con certeza la de Ea-nasir: las fuentes dicen «probablemente» o «se cree». El cuerpo dice «una casa que probablemente era la suya».",
+    "Que Ea-nasir «guardara» las quejas a propósito o fuera un estafador: solo se conserva la versión de los clientes. No se afirma.",
+    "La estatua del tesoro de Tell Asmar que se usa en internet para representarlo: es unos mil años anterior y no tiene relación con él. No usar como imagen.",
+    "El préstamo de la tablilla al Museo Nacional Zayed de Abu Dabi: figura en la ficha de Wikipedia sin confirmación. El cuerpo dice que está en el Museo Británico, que es su propietario según CDLI.",
+    "La traducción de la fórmula inicial «A Ea-nasir di: así habla Nanni» es propia, sobre la transliteración de CDLI. La frase «si no lo quería, se fuera» parafrasea traducciones publicadas; no se presenta como cita literal.",
+    "La ficha del Museo Británico (W_1953-0411-71) devolvió 403 y no se leyó."
+  ],
+  "status": "draft"
+}

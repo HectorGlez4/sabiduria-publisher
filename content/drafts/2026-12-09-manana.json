@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-09-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Dorothy Hodgkin y la estructura de la insulina (1969)",
+    "hook": "Fotografió un cristal de insulina en 1935. Tardó treinta y cuatro años en saber qué había fotografiado, y en ese tiempo ganó un Nobel por otras cosas.",
+    "body": [
+      "En 1935, en Oxford, Dorothy Crowfoot Hodgkin tomó las primeras fotografías de difracción de rayos X de un cristal de insulina. La imagen era un patrón de puntos. De esos puntos a la forma tridimensional de la molécula había un camino muy largo.",
+      "Mientras tanto resolvió otras. En 1945, la estructura de la penicilina. Después, la de la vitamina B12. En 1964 recibió sola el Nobel de Química por determinar con rayos X la estructura de sustancias bioquímicas importantes. Desde 1938, cuando tenía veintiocho años, padecía artritis reumatoide. Llegó a no poder accionar el interruptor de su equipo de rayos X, y le fabricaron una palanca larga para seguir trabajando.",
+      "En agosto de 1969 su equipo publicó por fin la estructura de la insulina. Ese año tenía los tobillos tan hinchados que trabajaba en zapatillas. El modelo que construyeron se exhibe hoy en el Museo de Ciencias de Londres."
+    ],
+    "question": "¿Qué pregunta tuya está esperando una herramienta que todavía no existe?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Treinta y cuatro años con una molécula",
+    "subtitle": "Dorothy Hodgkin, Oxford, 1935-1969",
+    "body": "Fotografió la insulina con rayos X en 1935 y publicó su estructura en 1969. Entre medias resolvió la penicilina y la vitamina B12 y ganó el Nobel de Química, con las manos deformadas por la artritis."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#DorothyHodgkin", "#Insulina", "#HistoriaDeLaCiencia"],
+    "extended": ["#Cristalografia", "#PremioNobel", "#Quimica", "#MujeresEnLaCiencia", "#Oxford", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Modelo molecular de la insulina (objeto 1991-286/1), hecho por Dorothy Mary Crowfoot Hodgkin (1910-1994), química y cristalógrafa británica; publicó la primera fotografía de rayos X de la insulina en 1935; su equipo no pudo determinar la estructura tridimensional hasta 1969; el modelo muestra cristales de insulina porcina con dos átomos de zinc a 2,8 Å; se exhibe en la galería Making the Modern World del Science Museum. Lectura directa.",
+      "source": "Science Museum Group Collection, «Molecular model showing the structure of insulin»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8040655/molecular-model-showing-the-structure-of-insulin-molecular-model"
+    },
+    {
+      "claim": "Primeras fotografías de difracción de rayos X de la insulina en 1935; la estructura de la insulina 2Zn la comunicaron Hodgkin y sus colaboradores en agosto de 1969; Nobel de Química de 1964, en solitario; nacida en El Cairo; murió el 29 de julio de 1994 en Ilmington. Obituario de Jenny P. Glusker y Margaret J. Adams, reimpreso de Physics Today (mayo de 1995). Lectura directa.",
+      "source": "Universidad de Bristol, School of Chemistry, Molecule of the Month, «Professor Dorothy Hodgkin»",
+      "url": "https://www.chm.bris.ac.uk/motm/vitaminb12/hodgkin.htm"
+    },
+    {
+      "claim": "En 1934 un especialista le vio una desviación cubital en las manos; en 1938, a los 28 años, una infección desencadenó su primer ataque de artritis reumatoide; no podía accionar el interruptor principal de su equipo de rayos X y se le hizo una palanca larga; en 1969 tenía los tobillos tan hinchados que trabajaba en zapatillas; resolvió la penicilina en 1945; la insulina fue su primer objetivo en Oxford y tardó más de tres décadas en resolverla; Nobel de Química de 1964 «por sus determinaciones mediante técnicas de rayos X de las estructuras de importantes sustancias bioquímicas». Lectura directa.",
+      "source": "The Royal Society, «Dorothy Hodgkin FRS», serie Scientists with disabilities",
+      "url": "https://royalsociety.org/topics-policy/diversity-in-science/scientists-with-disabilities/dorothy-hodgkin"
+    }
+  ],
+  "do_not_use": [
+    "«Treinta y cinco años» de trabajo sobre la insulina: circula (Simple Wikipedia), pero de 1935 a 1969 son treinta y cuatro. Se usa treinta y cuatro.",
+    "Que empezara con la insulina en 1934 con cristales de Robert Robinson: no se encontró en las fuentes leídas. No se usa.",
+    "Que sea la única mujer británica con un Nobel de ciencias: se repite mucho, pero no se verificó aquí. No se usa.",
+    "Que fuera la tercera mujer en ganar el Nobel de Química: lo dice Britannica en un resumen de búsqueda, pero la página no se pudo leer (redirige). No se usa.",
+    "El año de la estructura de la vitamina B12 (1955-1956): ninguna fuente leída lo da. El cuerpo dice «después».",
+    "La fecha del modelo del Science Museum: el catálogo dice 1967 y la descripción dice 1969. El cuerpo no lo fecha.",
+    "El trabajo con la penicilina con Barbara Rogers-Low y el origen de los cristales: no se detalla para no cargar el texto."
+  ],
+  "status": "draft"
+}

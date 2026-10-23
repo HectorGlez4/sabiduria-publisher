@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Charlotte Brontë y el pájaro de Jane Eyre (1847)",
+    "hook": "La frase más citada de Jane Eyre es una respuesta. Él acababa de compararla con un pájaro que se debate en una red.",
+    "quote": {
+      "text": "No soy un pájaro, y ninguna red me atrapa. Soy un ser humano libre, con una voluntad independiente, que ahora ejerzo para dejarte.",
+      "author": "Charlotte Brontë",
+      "work": "Jane Eyre, capítulo XXIII, Smith, Elder and Co., Londres, 1847",
+      "attribution_verified": true
+    },
+    "body": [
+      "En octubre de 1847 apareció en Londres Jane Eyre. An Autobiography. La portada no decía quién la había escrito: decía «editada por Currer Bell». Detrás de ese nombre estaba Charlotte Brontë, que no lo reveló hasta 1848.",
+      "La frase se cita sola, como un lema. En la novela tiene un contexto preciso. Es un anochecer de verano en el huerto de Thornfield, bajo un castaño. Jane cree que Rochester va a casarse con otra mujer y le dice que se marcha. Él la sujeta y le pide que no luche así, como un pájaro desesperado. Ella contesta con estas palabras.",
+      "Lo que sigue no es la partida. Unas líneas después, Rochester le ofrece su mano. Esa misma noche, una tormenta parte en dos el castaño. Brontë no puso la frase al final de una huida. La puso en el momento en que Jane dice que se va sin saber todavía lo que va a oír."
+    ],
+    "question": "¿Qué cambia cuando una decisión se dice en voz alta antes de conocer la respuesta?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#CharlotteBronte", "#JaneEyre", "#Citas"],
+    "extended": ["#LiteraturaInglesa", "#Novela", "#SigloXIX", "#Literatura", "#Libertad", "#Lectura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo XXIII: Rochester le dice «Jane, be still; don't struggle so, like a wild frantic bird that is rending its own plumage in its desperation», y ella responde «I am no bird; and no net ensnares me; I am a free human being with an independent will, which I now exert to leave you.»; antes ella le ha dicho que él es «a married man—or as good as a married man», casado con alguien inferior (Miss Ingram); poco después él dice «I offer you my hand, my heart, and a share of all my possessions» y «Jane, will you marry me?»; la escena ocurre en el huerto, en el banco bajo el gran castaño de Indias; esa noche un rayo parte el castaño y a la mañana Adèle cuenta que se partió la mitad. Comprobación directa sobre el texto.",
+      "source": "Project Gutenberg, Charlotte Brontë, «Jane Eyre: An Autobiography», eBook #1260 (texto de la edición Service & Paton, Londres, 1897)",
+      "url": "https://www.gutenberg.org/files/1260/1260-h/1260-h.htm"
+    },
+    {
+      "claim": "Registro: «Jane Eyre. An Autobiography. Edited by Currer Bell. London: Smith, Elder and Co., 1847.» Lectura directa.",
+      "source": "Cornell University Library, exposición en línea sobre mujeres escritoras y el mercado literario, registro de Jane Eyre",
+      "url": "https://exhibits.library.cornell.edu/womenLit/catalog/136-8848"
+    },
+    {
+      "claim": "Smith, Elder & Co. publicó Jane Eyre en octubre de 1847; su lector pidió a la autora una obra más larga, acorde con el formato habitual de tres volúmenes; el manuscrito anterior, The Professor, se envió bajo el nombre Currer Bell; la novela fue un éxito inmediato. Lectura directa.",
+      "source": "Rare Book School (University of Virginia), exposición «Eyre Apparent: An Exhibition Celebrating Charlotte Brontë's Classic Novel»",
+      "url": "https://archive.rarebookschool.org/?p=262"
+    },
+    {
+      "claim": "Charlotte Brontë escribió bajo el seudónimo Currer Bell; Jane Eyre apareció en 1847 con ese nombre, publicada por Smith, Elder & Co.; reveló su identidad como Currer Bell en 1848. Lectura directa.",
+      "source": "Academy of American Poets (poets.org), «Charlotte Brontë»",
+      "url": "https://poets.org/poet/charlotte-bronte"
+    }
+  ],
+  "do_not_use": [
+    "La traducción de la cita es propia, sobre el inglés de Gutenberg. No presentarla como la de ningún traductor publicado.",
+    "El día exacto de publicación: unas fuentes dan el 16 de octubre de 1847 (librero Bauman) y otras el 19 (Wikipedia, History.com). El cuerpo dice «octubre de 1847».",
+    "Que la primera edición fuera en tres volúmenes: lo dicen libreros y Sotheby's, y la exposición de Rare Book School habla del formato habitual de tres volúmenes, pero ninguna fuente institucional leída lo afirma del ejemplar. No se usa.",
+    "Presentar la frase como un manifiesto feminista escrito por Brontë en su nombre: es un parlamento de la protagonista en una escena concreta. Se cuenta la escena.",
+    "La fecha exacta de la escena (víspera de San Juan): no se verificó en el texto. El cuerpo dice «una noche de verano».",
+    "«Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless?»: está en el mismo capítulo y se verificó, pero se reserva para otra pieza; no mezclar dos citas."
+  ],
+  "status": "draft"
+}

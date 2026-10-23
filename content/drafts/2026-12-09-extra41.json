@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-09-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tao Yuanming y el quinto poema de Bebiendo vino",
+    "hook": "Hace dieciséis siglos, un poeta chino explicó cómo vivir apartado sin irse a ningún sitio. Lo escribió borracho, según él mismo.",
+    "quote": {
+      "text": "Levanté mi choza donde vive la gente, y no oigo ruido de carros ni caballos. ¿Me preguntas cómo es posible? Si la mente está lejos, el lugar se aparta solo.",
+      "author": "Tao Yuanming",
+      "work": "Bebiendo vino (Yin jiu), poema 5 de 20, en Obras de Tao Yuanming (Tao Yuanming ji), siglo V",
+      "attribution_verified": true
+    },
+    "body": [
+      "Tao Yuanming vivió entre 365 y 427, en la China de la dinastía Jin. Fue funcionario varias veces. Su último cargo fue el de magistrado de Pengze, y lo dejó a los cuarenta y un años para volver a su casa de campo y cultivar la tierra.",
+      "Escribió veinte poemas con el título Bebiendo vino. En el prólogo cuenta cómo nacieron: vivía retirado y con pocas alegrías, las noches eran largas, le había llegado un buen vino y no pasaba noche sin beber, solo frente a su sombra. Ya borracho, escribía unos versos para entretenerse, y le pidió a un viejo amigo que los copiara.",
+      "El quinto empieza con estas líneas. Sigue con la imagen que lo hizo famoso: recoge crisantemos junto al seto del este y, sereno, mira a lo lejos la montaña del sur. El aire del monte es hermoso al atardecer y los pájaros vuelven juntos. Y termina así: en esto hay un sentido verdadero; quiero explicarlo y ya olvidé las palabras."
+    ],
+    "question": "¿Dónde está, para ti, la distancia que de verdad aparta?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TaoYuanming", "#PoesiaChina", "#Citas"],
+    "extended": ["#China", "#Poesia", "#DinastiaJin", "#Crisantemos", "#Retiro", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de «飲酒» de Tao Yuanming (Jin oriental): veinte poemas (其一 a 其二十); prólogo «余閒居寡歡，兼比夜已長，偶有名酒，無夕不飲，顧影獨盡，忽焉復醉。既醉之後，輒題數句自娛，紙墨遂多，辭無詮次，聊命故人書之，以為歡笑爾»; el poema 5 contiene «結廬在人境，而無車馬喧。問君何能爾？心遠地自偏。採菊東籬下，悠然見南山。山氣日夕佳，飛鳥相與還。此中有真意，欲辯已忘言»; la obra está recogida en el «陶淵明集». Comprobación directa sobre el texto.",
+      "source": "Wikisource en chino, «飲酒 (陶淵明)»",
+      "url": "https://zh.wikisource.org/wiki/飲酒_(陶淵明)"
+    },
+    {
+      "claim": "Tao Yuanming (365-427), poeta de la dinastía Jin y modelo del letrado recluso; se retiró a los 41 años de su cargo de gobernador de Pengze a su casa de campo; se le representa recogiendo un crisantemo amarillo del seto al este de su casa, tema pictórico 東籬採菊図; su gusto por los crisantemos aparece en «Bebiendo vino» y en «Regreso a casa». Lectura directa.",
+      "source": "JAANUS, Japanese Architecture and Art Net Users System (Media Center for Art History, Columbia University), «Tō Enmei 陶淵明»",
+      "url": "https://projects.mcah.columbia.edu/jaanus/node/579"
+    },
+    {
+      "claim": "Vivió hacia 365-427 (Yuan Xingpei propone 352 como año de nacimiento); su último cargo, magistrado de Pengze, duró unos ochenta días y terminó con su dimisión; la frase de las «cinco medidas de arroz» es simbólica, porque el sueldo era muy superior; recoge una traducción del poema quinto de Bebiendo vino con la escena de los crisantemos bajo el seto del este. Lectura directa.",
+      "source": "Wikipedia, «Tao Yuanming»",
+      "url": "https://en.wikipedia.org/wiki/Tao_Yuanming"
+    },
+    {
+      "claim": "En el viejo poema de Tao Yuan-ming, «recojo crisantemos en el seto del este y miro a lo lejos la Montaña del Sur»; aquí la Montaña del Sur es más bien nombre propio y alude al famoso monte Lushan. Lectura directa.",
+      "source": "Masatsugu Minami, CMO/OAA Cahier #04, Observatorio de Kwasan, Universidad de Kioto",
+      "url": "https://www.kwasan.kyoto-u.ac.jp/~cmo/cmomn2/Cahier04.htm"
+    }
+  ],
+  "do_not_use": [
+    "La traducción del poema y del prólogo es propia, sobre el chino de Wikisource. No presentarla como la de ningún traductor publicado. 心 se traduce «mente»; también admite «corazón».",
+    "El año de composición: Wikisource da 417, pero ninguna otra fuente leída lo confirma. No se fecha el poema; la cita dice «siglo V».",
+    "La anécdota de no «doblar la cintura por cinco medidas de arroz» como hecho literal: procede de biografías posteriores y Wikipedia la trata como símbolo. No se usa.",
+    "Las variantes textuales: 采/採 y 辨/辯 según ediciones, y en algunas 見 se lee 望. La traducción no depende de ellas.",
+    "Identificar la «montaña del sur» con el Lushan: lo dice una nota de la Universidad de Kioto, pero no se cruzó con otra fuente. El cuerpo dice «la montaña del sur».",
+    "El año de nacimiento 365 es el tradicional; Yuan Xingpei propone 352. El cuerpo usa 365-427, que es lo que dan JAANUS y la tradición.",
+    "Los ochenta días en Pengze: solo los da Wikipedia entre las fuentes leídas. No se usan."
+  ],
+  "status": "draft"
+}
