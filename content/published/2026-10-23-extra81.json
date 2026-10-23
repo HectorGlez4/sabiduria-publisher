@@ -85,9 +85,25 @@
     "La fecha exacta del cuaderno E: no se leyó en directo. La pieza solo dice que es anterior al F, que empieza el 4 de abril de 1776.",
     "Relacionar causalmente el aforismo con la polémica contra Lavater: la pieza solo dice que eran los mismos años."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-23T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1130936869730972",
+      "url": "https://www.facebook.com/874327782058550/posts/1130936869730972",
+      "published_at": "2026-10-23T17:08:01.556340+00:00"
+    },
+    "instagram": {
+      "post_id": "17992268730101318",
+      "url": "https://www.instagram.com/p/De2DuYOmDot/",
+      "published_at": "2026-10-23T17:08:16.128542+00:00"
+    },
+    "threads": {
+      "post_id": "18123652490321512",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18123652490321512",
+      "published_at": "2026-10-23T17:08:27.826031+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
