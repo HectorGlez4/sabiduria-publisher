@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-tarde",
+  "id": "2026-10-26-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#GarciaLorca", "#Bibliotecas", "#Citas"],
-    "extended": ["#Lectura", "#Granada", "#SegundaRepublica", "#Libros", "#LiteraturaEspañola", "#Historia", "#Sabiduria"]
+    "topic": [
+      "#GarciaLorca",
+      "#Bibliotecas",
+      "#Citas"
+    ],
+    "extended": [
+      "#Lectura",
+      "#Granada",
+      "#SegundaRepublica",
+      "#Libros",
+      "#LiteraturaEspañola",
+      "#Historia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -64,5 +76,12 @@
     "Que Lorca fundara o financiara la biblioteca: las fuentes leídas dicen que la inauguró. Un extracto atribuye a Lorca haber recomendado su creación dos años antes, pero no se leyó en directo. No se usa.",
     "El día exacto de su muerte (18 o 19 de agosto de 1936; las fuentes difieren): la pieza dice «agosto de 1936»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-27T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

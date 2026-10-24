@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-04-tarde",
+  "id": "2026-10-26-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Jefferson", "#LibertadDeConciencia", "#Citas"],
-    "extended": ["#Historia", "#EstadosUnidos", "#Siglo18", "#LibertadReligiosa", "#Cartas", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#Jefferson",
+      "#LibertadDeConciencia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Historia",
+      "#EstadosUnidos",
+      "#Siglo18",
+      "#LibertadReligiosa",
+      "#Cartas",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -62,5 +74,12 @@
     "Que Rush le pidiera a Jefferson leer a William Paley y el «credo religioso» prometido: aparecen en notas sobre esta correspondencia, pero no se verificaron en lectura directa. No se mencionan.",
     "La fecha de inauguración del Memorial (1943): no verificada en esta ejecución. No se menciona."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-26T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

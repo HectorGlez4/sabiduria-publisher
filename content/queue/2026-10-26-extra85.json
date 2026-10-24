@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-04-extra41",
+  "id": "2026-10-26-extra85",
   "slot": "noche",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "la Bhagavad Gita y el verso 2.47",
     "hook": "Se lee como un consejo para trabajar sin ansiedad. Krishna se lo dice a un guerrero que acaba de anunciar que no piensa pelear contra su propia familia.",
@@ -25,8 +25,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#BhagavadGita", "#Mahabharata", "#India"],
-    "extended": ["#Citas", "#Sanscrito", "#Filosofia", "#Krishna", "#Arjuna", "#Historia", "#Gandhi"]
+    "topic": [
+      "#BhagavadGita",
+      "#Mahabharata",
+      "#India"
+    ],
+    "extended": [
+      "#Citas",
+      "#Sanscrito",
+      "#Filosofia",
+      "#Krishna",
+      "#Arjuna",
+      "#Historia",
+      "#Gandhi"
+    ]
   },
   "sources": [
     {
@@ -59,5 +71,11 @@
     "No decir que Gandhi recitaba el verso 47. Lo que sostienen las fuentes es que se sabía de memoria los últimos diecinueve versos del capítulo 2, que no incluyen el 47.",
     "No presentar a Vyasa como autor histórico comprobado. La tradición le atribuye el Mahabharata; Wikisource lo pone como autor en la ficha, pero eso no es una atribución crítica."
   ],
-  "targets": ["facebook", "instagram", "threads"]
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-27T04:26:00Z",
+  "results": {}
 }

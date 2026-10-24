@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-02-tarde",
+  "id": "2026-10-26-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Vasconcelos", "#UNAM", "#Citas"],
-    "extended": ["#Mexico", "#AmericaLatina", "#Educacion", "#Siglo20", "#Universidad", "#HistoriaDeMexico", "#Sabiduria"]
+    "topic": [
+      "#Vasconcelos",
+      "#UNAM",
+      "#Citas"
+    ],
+    "extended": [
+      "#Mexico",
+      "#AmericaLatina",
+      "#Educacion",
+      "#Siglo20",
+      "#Universidad",
+      "#HistoriaDeMexico",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -63,5 +75,12 @@
     "El lema latino anterior: Gaceta UNAM menciona que el lema sustituyó a uno en latín, pero no lo transcribe. No se nombra.",
     "El autor gráfico del escudo: no identificado en las fuentes leídas; solo se señala la influencia del Método de dibujo de Adolfo Best Maugard. No se atribuye."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-26T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
