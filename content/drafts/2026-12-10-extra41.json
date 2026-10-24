@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-10-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tomás de Kempis y el hombre que propone",
+    "hook": "Parece un refrán sin autor. Está en un libro de devoción del siglo XV, en un capítulo sobre los buenos propósitos que no se cumplen.",
+    "quote": {
+      "text": "Porque el hombre propone, pero Dios dispone, y no está en el hombre su camino.",
+      "author": "Tomás de Kempis",
+      "work": "Imitación de Cristo, libro I, capítulo XIX (códice autógrafo de 1441)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Tomás de Kempis nació hacia 1380 en Kempen, cerca de Colonia, y vivió casi toda su vida como canónigo en el monasterio de Monte Santa Inés, junto a Zwolle, en los actuales Países Bajos. En 1441 terminó y firmó un códice con los cuatro libros de la Imitación de Cristo. Ese manuscrito se conserva hoy en la Biblioteca Real de Bélgica, en Bruselas.",
+      "La frase está en el libro I, capítulo XIX, dedicado a los ejercicios del buen religioso. El capítulo no habla del destino. Habla de los propósitos: de quien los hace firmes y aun así falla, de quien los hace flojos y falla más. Kempis concluye que el propósito de los justos depende más de la gracia que de su propia sabiduría. Y cierra con esta línea.",
+      "Casi siempre se cita solo la primera mitad. La segunda, «y no está en el hombre su camino», la toma de Jeremías. No es una frase de resignación. Es el final de un razonamiento sobre por qué conviene seguir proponiéndose cosas sabiendo que muchas no saldrán."
+    ],
+    "question": "¿Qué propósito sigues haciendo aunque sepas que no depende solo de ti?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#TomasDeKempis", "#ImitacionDeCristo", "#Citas"],
+    "extended": ["#EdadMedia", "#SigloXV", "#Espiritualidad", "#Refranes", "#Manuscritos", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "De Imitatione Christi, libro I, capítulo XIX «De exercitiis boni Religiosi», párrafo 2: el propósito de los justos depende más de la gracia de Dios que de su propia sabiduría, y en Él confían en todo lo que emprenden; termina con «Nam homo proponit, sed Deus disponit, nec est in homine via ejus.» El párrafo habla de quien falla aun proponiéndose firmemente y de quien se propone poco. Comprobación directa sobre el texto latino.",
+      "source": "The Latin Library, Thomas a Kempis, De Imitatione Christi, libro I",
+      "url": "https://www.thelatinlibrary.com/kempis/kempis1.shtml"
+    },
+    {
+      "claim": "Libro I, cap. XIX «Of the exercises of a religious man»: «According to our resolution so is the rate of our progress»; «The resolution of the righteous dependeth more upon the grace of God than upon their own wisdom»; «For man proposeth, but God disposeth; and the way of a man is not in himself», con nota a Jeremías 10, 23. Comprobación directa (traducción de William Benham).",
+      "source": "Project Gutenberg, Thomas à Kempis, «The Imitation of Christ», eBook #1653, traducción de William Benham",
+      "url": "https://www.gutenberg.org/files/1653/1653-h/1653-h.htm"
+    },
+    {
+      "claim": "Thomas à Kempis nació en 1379 o 1380 en Kempen (diócesis de Colonia); canónigo regular en Monte Santa Inés (Agnetenberg), cerca de Zwolle; novicio en 1406, sacerdote en 1413; murió el 25 de julio de 1471; en 1441 terminó y firmó un códice, conservado en la Biblioteca Real de Bruselas, con los cuatro libros de la Imitación y nueve tratados menores; la Imitación se atribuyó también a Gerson y otros, pero los testigos y el autógrafo apoyan a Tomás. Lectura directa.",
+      "source": "Catholic Encyclopedia (1912), «Thomas à Kempis», en New Advent",
+      "url": "https://www.newadvent.org/cathen/14661a.htm"
+    },
+    {
+      "claim": "La KBR (Biblioteca Real de Bélgica) expuso del 20 de noviembre al 20 de diciembre de 2024 el manuscrito autógrafo de la Imitatio Christi de Tomás de Kempis, 600 años después de su redacción en 1424; la KBR conserva más de 1.500 ejemplares de la obra, entre ellos 24 incunables. Lectura directa.",
+      "source": "BX1 (Bruselas), noticia del 14 de noviembre de 2024 sobre la exposición de la KBR",
+      "url": "https://bx1.be/?p=716093"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el latín. No presentarla como la de ninguna traducción española publicada.",
+    "Que la frase sea un refrán popular anterior a Kempis o que la inventara él: la idea está en Proverbios 16, 9 y la segunda mitad en Jeremías 10, 23; no se verificó si la fórmula «homo proponit, Deus disponit» circulaba antes. El cuerpo no dice que la inventara.",
+    "«El segundo libro más leído después de la Biblia»: lo dice la prensa (BX1), sin fuente. No se usa.",
+    "Fechas de composición: la Catholic Encyclopedia dice que apareció anónima en 1418; la KBR celebra 1424; el autógrafo es de 1441. El cuerpo solo fecha el autógrafo.",
+    "La autoría de Gerson u otros: se discutió durante siglos; las fuentes leídas la dan a Kempis. No se plantea la polémica en el cuerpo.",
+    "Lope de Vega, soneto «Desmayarse, atreverse, estar furioso»: se descartó en esta ejecución porque el número (126) solo aparece en material escolar y no se pudo leer ninguna edición crítica (RAE y UAM dan 403). Fecha 1602 (Casa Museo Lope de Vega) o 1604 (Rimas) sin resolver."
+  ],
+  "status": "draft"
+}

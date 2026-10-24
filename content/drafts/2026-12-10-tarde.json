@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "David Hume y la razón esclava de las pasiones (1739)",
+    "hook": "Un filósofo de veintitantos años escribió que la razón debe obedecer a las pasiones. Él mismo avisó, en la línea siguiente, que la idea iba a parecer extraordinaria.",
+    "quote": {
+      "text": "La razón es, y solo debe ser, esclava de las pasiones, y no puede aspirar a otro oficio que el de servirlas y obedecerlas.",
+      "author": "David Hume",
+      "work": "Tratado de la naturaleza humana, libro II, parte III, sección III, John Noon, Londres, 1739",
+      "attribution_verified": true
+    },
+    "body": [
+      "En enero de 1739 salieron en Londres los dos primeros volúmenes de A Treatise of Human Nature, sin nombre de autor. Los había escrito David Hume, un escocés que empezó la obra hacia los veintitrés años, sobre todo en La Flèche, en el Anjou francés. La frase está en el libro II, en la sección sobre los motivos que mueven la voluntad.",
+      "Se cita como un permiso para dejarse llevar. Hume decía otra cosa. Para él, la razón compara ideas y calcula consecuencias, pero no fija lo que queremos. Por eso escribe, dos párrafos después, que no es contrario a la razón preferir la destrucción del mundo entero a un rasguño en el dedo. No es una recomendación. Es la prueba de que la razón, sola, no elige fines.",
+      "El libro apenas tuvo lectores. Décadas después, en su breve autobiografía, Hume escribió que había nacido muerto de la imprenta, sin provocar siquiera un murmullo entre los fanáticos."
+    ],
+    "question": "¿Cuántas de tus razones llegaron después de lo que ya querías?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#DavidHume", "#Filosofia", "#Citas"],
+    "extended": ["#Ilustracion", "#IlustracionEscocesa", "#Etica", "#Razon", "#Pasiones", "#SigloXVIII", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Treatise 2.3.3.4 (sección «Of the influencing motives of the will», SBN 414-5): «Reason is, and ought only to be the slave of the passions, and can never pretend to any other office than to serve and obey them.»; la frase siguiente: «As this opinion may appear somewhat extraordinary, it may not be improper to confirm it by some other considerations.»; en 2.3.3.6: «'Tis not contrary to reason to prefer the destruction of the whole world to the scratching of my finger.» Comprobación directa sobre el texto.",
+      "source": "davidhume.org, texto electrónico de A Treatise of Human Nature, libro 2, parte 3, sección 3 (con paginación Selby-Bigge)",
+      "url": "https://davidhume.org/texts/t/2/3/3"
+    },
+    {
+      "claim": "Hume se trasladó a La Flèche en 1734 y empezó allí el Treatise hacia los 23 años; los libros 1 y 2 aparecieron anónimos en 1739 y el libro 3 en 1740; Hume dijo que nació «deadborn from the press», exageración según la entrada, aunque le fue mucho peor de lo que esperaba. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «David Hume» (William Edward Morris y Charlotte R. Brown)",
+      "url": "https://plato.stanford.edu/entries/hume/"
+    },
+    {
+      "claim": "My Own Life, 5-6: compuso el Treatise «chiefly at La Fleche, in Anjou»; «It fell dead-born from the press, without reaching such distinction, as even to excite a murmur among the zealots.» Lectura directa.",
+      "source": "davidhume.org, David Hume, «My Own Life» (1776)",
+      "url": "https://davidhume.org/texts/mol/"
+    },
+    {
+      "claim": "Registro ESTC T4002: A Treatise of Human Nature, Londres, impreso para John Noon (vols. 1-2) y Thomas Longman (vol. 3, 1740), 1739-1740, 3 vols. en 8º; nota «Anonymous. By David Hume.» Lectura directa.",
+      "source": "The Grub Street Project, registro bibliográfico T4002",
+      "url": "https://www.grubstreetproject.net/publications/T4002"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el inglés del Treatise. No presentarla como la de Félix Duque ni de ningún traductor publicado.",
+    "El año 1738: Hume lo da en My Own Life, pero el contrato con Noon es de septiembre de 1738 y los volúmenes llevan fecha de 1739 (MDCCXXXIX). Se usa 1739.",
+    "«Enero de 1739»: lo dan resúmenes de búsqueda y bibliografía de subastas; la SEP solo dice 1739. Si hay duda, decir «1739».",
+    "Leer la frase como elogio del impulso o del irracionalismo: en Hume «razón» es el entendimiento que demuestra o infiere, y la tesis es que por sí sola no mueve a la acción. El cuerpo lo explica.",
+    "Que la frase del dedo y el mundo sea una opinión moral de Hume: es un ejemplo de que la razón no juzga los fines; el propio Hume no lo aprueba. Se presenta así.",
+    "Las cifras del contrato (50 libras y mil ejemplares): aparecen en fuentes de subastas, no verificadas. No se usan.",
+    "Que su autobiografía sea de «décadas después»: My Own Life está fechada en abril de 1776, treinta y siete años después. Correcto, pero si se quiere el año exacto, verificarlo antes."
+  ],
+  "status": "draft"
+}

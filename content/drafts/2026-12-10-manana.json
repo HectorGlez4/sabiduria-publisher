@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-10-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Sofonisba Anguissola y la visita de Van Dyck (1624)",
+    "hook": "En 1624, un pintor de veinticinco años fue a ver a una pintora casi ciega. Ella le dio un consejo sobre la luz, y él lo apuntó.",
+    "body": [
+      "El 12 de julio de 1624, en Palermo, Anton van Dyck visitó a Sofonisba Anguissola. Él tenía veinticinco años y estaba retenido en la ciudad por una epidemia de peste. Ella había nacido en Cremona hacia 1532 y había pasado unos trece años en la corte de Felipe II, como dama de la reina Isabel de Valois y como retratista.",
+      "Van Dyck la dibujó a pluma en su cuaderno italiano y escribió al lado lo que vio. Anotó que tenía noventa y seis años, aunque probablemente rondaba los noventa y dos. Que apenas veía, pero que todavía disfrutaba acercando los cuadros a la cara. Que le aconsejó no poner la luz demasiado alta, para que las sombras no marcaran las arrugas de la vejez. Es la anotación más larga del cuaderno, y la única que lleva fecha.",
+      "Sofonisba murió al año siguiente. El retrato que salió de aquella visita pasó siglos en Inglaterra con otro nombre: se creyó que representaba a una condesa irlandesa. Hoy se reconoce de nuevo su rostro en la casa de Knole, en Kent."
+    ],
+    "question": "¿Qué consejo tuyo merecería que alguien lo apuntara?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La luz no tan alta",
+    "subtitle": "Sofonisba Anguissola y Van Dyck, Palermo, 1624",
+    "body": "Van Dyck visitó a la pintora casi ciega en julio de 1624 y anotó su consejo: no subir la luz, para no marcar las arrugas. Es la única entrada fechada de su cuaderno italiano."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SofonisbaAnguissola", "#VanDyck", "#HistoriaDelArte"],
+    "extended": ["#Renacimiento", "#MujeresArtistas", "#Pintura", "#Palermo", "#Retrato", "#Arte", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Van Dyck visitó a Anguissola el 12 de julio de 1624 en Palermo, donde estuvo unos dieciocho meses por un brote de peste; el relato está en su cuaderno italiano, en el British Museum, con un dibujo a pluma fechado el 12 de julio de 1624 que la rotula con 96 años; ella veía mal pero acercaba los cuadros a la cara para mirarlos; le aconsejó no subir demasiado la luz para que las sombras de las arrugas no se agrandaran; el retrato de Knole se conoció antes como Catherine Fitzgerald, condesa de Desmond (m. 1636); murió en Palermo en 1625. Lectura directa (extracto del libro de Jennifer Higgie).",
+      "source": "The Art Newspaper, «The day Anthony van Dyck received wise advice from the words of a blind woman», 7 de abril de 2021",
+      "url": "https://www.theartnewspaper.com/2021/04/07/extract-or-the-day-anthony-van-dyck-received-wise-advice-from-the-words-of-a-blind-womanthe-17th-century-artist-sofonisba-anguissola"
+    },
+    {
+      "claim": "En julio de 1624, en Palermo, durante un brote de peste, Van Dyck hizo un rápido dibujo a pluma de Sofonisba, «then apparently 96 years old and almost blind»; ella aún disfrutaba poniendo cuadros delante y acercando la nariz; le aconsejó no subir la luz «too high» para que las sombras no resaltaran las arrugas; es la única entrada fechada del cuaderno italiano; nacida hacia 1535 en Cremona; llegó para la boda de enero de 1560 en Guadalajara y pasó trece años en la corte; dama de la reina, y tras la muerte de Isabel en 1568 sirvió a las infantas. Reseña de Caroline Campbell. Lectura directa.",
+      "source": "London Review of Books, vol. 42, nº 17, Caroline Campbell, «Virtuosa» (reseña del catálogo del Prado «Historia de dos pintoras: Sofonisba Anguissola y Lavinia Fontana»)",
+      "url": "https://lrb.co.uk/the-paper/v42/n17/caroline-campbell/virtuosa"
+    },
+    {
+      "claim": "En la sala de billar de Knole hay un retrato de Sofonisba Anguissola atribuido a Van Dyck, que la visitó y pintó cuando tenía 92 años; Van Dyck estimó su edad en 96, cuatro más de los que tenía. Lectura directa.",
+      "source": "National Trust, Knole, «Knole's collections»",
+      "url": "https://nationaltrust.org.uk/visit/kent/knole/knoles-portrait-collection"
+    },
+    {
+      "claim": "La anotación de Van Dyck sobre Anguissola es la descripción más larga de una persona o pintura en el cuaderno italiano y la única fechada; Van Dyck la llama «pittora de natura». Resumen de búsqueda del capítulo; no se leyó el texto completo.",
+      "source": "Barbara Tramelli, «Sofonisba Anguissola, 'Pittora de Natura': A Page from Van Dyck's Italian Sketchbook», en Women Artists in Early Modern Italy, Brepols, 2016 (registro en el repositorio de la Universidad de Bolzano)",
+      "url": "https://bia.unibz.it/esploro/outputs/bookChapter/Sofonisba-Anguissola-Pittora-de-Natura-A/991006785595601241"
+    }
+  ],
+  "do_not_use": [
+    "La edad exacta: Van Dyck escribió 96; National Trust dice 92; The Art Newspaper dice 89; Brooklyn Museum «unos noventa». El año de nacimiento va de 1532 a 1535 según la fuente (Maidstone Museum incluso da «c. 1552»). El cuerpo dice que anotó 96 y que «probablemente rondaba los noventa y dos», y la fecha de nacimiento «hacia 1532».",
+    "Que Van Dyck la visitara «para pintar su retrato» en el palacio Lomellini: lo dice The Art Newspaper, pero no se contrastó. No se usa el palacio.",
+    "Que el retrato de Knole sea obra segura de Van Dyck: National Trust lo da como «atribuido». El cuerpo no lo afirma.",
+    "La identificación de Knole: The Art Newspaper la atribuye a la descripción del National Trust; no se leyó la ficha de colección. El cuerpo habla de «una condesa irlandesa» (condesa de Desmond) sin fechar la corrección.",
+    "La fecha exacta de llegada a la corte española (1559 o 1560): las fuentes difieren. El cuerpo dice «unos trece años en la corte».",
+    "El retrato de Felipe II del Prado atribuido durante siglos a Pantoja o Sánchez Coello: se encontró en fuentes secundarias, no en la ficha del Prado (403). Queda para otra pieza.",
+    "La muerte de su primer marido en un ataque pirata: circula, no se verificó."
+  ],
+  "status": "draft"
+}

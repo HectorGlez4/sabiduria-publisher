@@ -1,0 +1,64 @@
+{
+  "id": "2026-12-10-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "los óstraka de Temístocles hallados en un pozo (1937)",
+    "hook": "En 1937 apareció en un pozo de Atenas un lote de votos contra un solo hombre. Casi todos estaban escritos por las mismas pocas manos.",
+    "body": [
+      "En la Atenas del siglo V a.C. se podía votar el destierro de un ciudadano. Cada votante escribía un nombre en un trozo de cerámica, un óstrakon. Según Plutarco, si se reunían menos de seis mil, la votación no valía. El más votado se iba diez años, pero conservaba sus bienes. No era un castigo por un delito: era una forma de bajar a quien parecía demasiado grande.",
+      "En 1937, el arqueólogo Oscar Broneer excavaba la ladera norte de la Acrópolis y encontró en un pozo 191 óstraka. Casi todos decían lo mismo: Temístocles, hijo de Neocles. Al estudiarlos se vio que la letra se repetía. Los había escrito un grupo pequeño de personas, por adelantado, para repartirlos entre los votantes. Nunca se usaron.",
+      "Plutarco cuenta otra escena del mismo sistema. Un campesino que no sabía escribir le pidió a un desconocido que pusiera en su voto el nombre de Arístides. El desconocido era Arístides. Le preguntó qué mal le había hecho. Ninguno, dijo el hombre: estaba harto de oírlo llamar el Justo. Arístides escribió su propio nombre y le devolvió el óstrakon."
+    ],
+    "question": "¿Cuánto de una decisión colectiva viene ya escrito por otros?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Votos escritos de antemano",
+    "subtitle": "Atenas, el ostracismo y un pozo de la Acrópolis",
+    "body": "Broneer halló en 1937 un pozo con 191 óstraka, casi todos contra Temístocles. Unas pocas manos los escribieron por adelantado para repartirlos entre votantes. Nunca llegaron a usarse."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ostracismo", "#AntiguaGrecia", "#Atenas"],
+    "extended": ["#Temistocles", "#Democracia", "#Arqueologia", "#Acropolis", "#Plutarco", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El volumen XXV de The Athenian Agora (Mabel Lang, 1990) cataloga 1.145 óstraka por candidatos y aparte 191 óstraka, casi todos contra Temístocles, «found by Oscar Broneer in a well on the North Slope of the Acropolis». Lectura directa de la descripción editorial.",
+      "source": "Mabel Lang, The Athenian Agora XXV: Ostraka, American School of Classical Studies at Athens, Princeton, 1990 (descripción del libro en Schweitzer Fachinformationen)",
+      "url": "https://www.schweitzer-online.de/buch/Lang/Ostraka/9780876612255/A4288373/"
+    },
+    {
+      "claim": "Un lote de 190 óstraka con el nombre de Temístocles, escrito «in a small number of hands», «clearly prepared beforehand for distribution among potential voters but in the end not used». Lectura directa.",
+      "source": "M. I. Finley, Politics in the Ancient World, Cambridge University Press, 1983, cap. «Politics», pp. 50-69",
+      "url": "https://www.cambridge.org/core/books/politics-in-the-ancient-world/politics/05C9132DD7B86DC1B549E4DF092EC400"
+    },
+    {
+      "claim": "Registro AO 147: óstrakon de «Themistokles Neokleos», base de kylix; cuaderno de Oscar Broneer nº 4; 31 de mayo de 1937; publicado en Hesperia 7 (1938), p. 233, y Agora XXV, nº 1199 B. Lectura directa.",
+      "source": "American School of Classical Studies at Athens, Agora Excavations (agathe.gr), objeto AO 147",
+      "url": "https://agathe.gr/id/agora/object/ao%20147"
+    },
+    {
+      "claim": "Arístides 7.5: cada votante escribía un nombre en un óstrakon; los arcontes contaban primero el total, y si eran menos de seis mil el ostracismo no valía; el elegido se desterraba diez años y conservaba las rentas de sus bienes. 7.6: el anécdota del votante iletrado que pide a Arístides que escriba «Arístides», harto de oírlo llamar «el Justo»; Arístides escribe su nombre y le devuelve el óstrakon. Lectura directa (traducción de Bernadotte Perrin, Loeb, 1914).",
+      "source": "Plutarco, Vida de Arístides, cap. 7, en LacusCurtius (Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Aristides*.html"
+    },
+    {
+      "claim": "Temístocles 22.3: el ostracismo «was not a penalty, but a way of pacifying and alleviating that jealousy which delights to humble the eminent». Lectura directa.",
+      "source": "Plutarco, Vida de Temístocles, cap. 22, en LacusCurtius (Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Themistocles*.html"
+    }
+  ],
+  "do_not_use": [
+    "«Catorce manos»: circula en foros, sin estudio citado. No se usa ninguna cifra de escribas; el cuerpo dice «un grupo pequeño».",
+    "190 o 191: Finley da 190; Lang da 191. El cuerpo usa 191 (catálogo de la excavación).",
+    "Ladera oeste: Finley escribe «west slope»; el informe de Broneer y Agora XXV dicen «North Slope». Se usa la ladera norte.",
+    "Que «nunca se usaron» sea un hecho documentado: es la interpretación de Finley a partir de que aparecieron juntos y sin votar. Se presenta como lo que se vio al estudiarlos; si se quiere más cautela, decir «al parecer».",
+    "La fecha del lote (¿483/2 o la ostracización de Temístocles hacia 471?) está discutida. El cuerpo no fecha el lote.",
+    "El año exacto del ostracismo de Temístocles: no se verificó en las fuentes leídas. No se da.",
+    "Que los seis mil votos fueran un mínimo de votantes y no de votos contra uno: Plutarco habla del total; otras fuentes antiguas lo leen como seis mil contra una misma persona. El cuerpo sigue a Plutarco y lo dice."
+  ],
+  "status": "draft"
+}
