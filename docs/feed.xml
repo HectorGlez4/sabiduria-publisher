@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 24 Oct 2026 09:47:43 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 16:43:03 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-10-24-re56-reel</guid>
+      <pubDate>Sat, 24 Oct 2026 15:26:00 +0000</pubDate>
+      <description><![CDATA["ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE
+
+Viene del latín oriens: el sol que sale. Durante siglos, orientar algo fue alinearlo hacia el este, como se alineaban las iglesias. Que la palabra sirva para situarse respecto a cualquier punto cardinal es reciente: ese uso se documenta hacia 1842.
+
+La costumbre está dibujada en los mapas. En las mappae mundi cristianas, arriba no iba el norte: iba el este. En el mapa de Hereford, de alrededor del año 1300, pintado sobre una sola piel de becerro de metro y medio, el borde superior lo ocupa el Paraíso terrenal y el centro exacto lo ocupa Jerusalén. La lógica no era geográfica, era narrativa: arriba estaba el principio de la historia.
+
+Y el norte arriba no lo trajo la brújula, como se repite: lo trajo Ptolomeo, que hacia el año 150 lo puso así en su Geografía por comodidad de dibujo. Europa lo adoptó cuando lo redescubrió, más de mil doscientos años después.
+
+Cada vez que alguien dice que necesita orientarse, está mirando al amanecer sin saberlo.
+
+¿Qué otras palabras usamos a diario sin ver lo que llevan dentro?
+
+#SabiduriaDeBolsillo #Mapas #Etimologia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>«La filosofía está escrita en este grandísimo libro que continuamente tenemos abierto ante los ojos (digo el universo).»</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,26 +508,6 @@ Gazán, que gobernó el Ilkanato de 1295 a 1304, tuvo que rehacerlo entero: anul
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-21-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-21-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>«Eso fue solo un preludio: allí donde se queman libros, se acaba quemando también a las personas.»</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-20-extra81</guid>
-      <pubDate>Wed, 21 Oct 2026 12:06:07 +0000</pubDate>
-      <description><![CDATA["Eso fue solo un preludio: allí donde se queman libros, se acaba quemando también a las personas."
-— Heinrich Heine, Almansor, tragedia, 1823
-
-La frase no habla de Alemania. Está en Almansor, la tragedia que Heinrich Heine empezó en el otoño de 1820, publicó incompleta en noviembre de 1821 en la revista Der Gesellschafter y terminó en 1823. La dice Hassan, un criado musulmán, justo después de que Almansor cuente que el temible Jiménez —el cardenal Cisneros— arrojó el Corán a las llamas de una hoguera, en pleno mercado de Granada. Hassan contesta con dos versos que no consuelan a nadie: eso fue solo un preludio; allí donde se queman libros, se acaba quemando también a las personas.
-
-La hoguera existió. Entre 1499 y 1500, sin fecha exacta conocida, Cisneros mandó destruir en la plaza de Bib-Rambla más de cuatro mil manuscritos nazaríes: coranes, poesía, códices de historia. Solo se salvaron los de medicina, que fueron a la universidad de Alcalá de Henares. La obra de Heine, en cambio, se hundió. El estreno del 20 de agosto de 1823 en el Teatro Nacional de Brunswick acabó en tumulto y hubo que interrumpirlo. Fue la única puesta en escena de Almansor y, por lo que se sabe, del único drama de Heine que llegó a un escenario.
-
-El 10 de mayo de 1933, en la plaza de Berlín que hoy se llama Bebelplatz, la Unión Alemana de Estudiantes quemó más de veinte mil libros. Heine estaba entre los autores prohibidos. Desde el 20 de mayo de 1995 el lugar lo marca una obra de Micha Ullman: una sala bajo el suelo con estanterías blancas vacías, que se mira a través de una placa de vidrio en el pavimento. Al lado, una tabla de bronce lleva los dos versos. La única diferencia con el texto de 1823 es el orden de dos palabras en alemán.
-
-¿Qué advertencias se leen como literatura hasta que se cumplen?
-
-#SabiduriaDeBolsillo #Heine #Almansor #Libros]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-20-extra81.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-20-extra81.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
