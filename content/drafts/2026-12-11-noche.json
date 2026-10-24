@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-11-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Etemenanki, el zigurat de Babilonia",
+    "hook": "La torre que pudo inspirar el relato de Babel no cayó por un castigo. La terminaron de borrar quienes querían volver a levantarla.",
+    "body": [
+      "En Babilonia, junto al templo de Marduk, se alzaba un zigurat llamado Etemenanki, la casa del fundamento del cielo y de la tierra. Lo reconstruyó Nabucodonosor II en el siglo VI a.C. Hacia el 430 a.C., Heródoto lo describió como una torre maciza de un estadio de lado, unos 180 metros, con otra torre encima y otra más, hasta ocho, y una rampa que subía por fuera hasta un santuario sin estatua. Una tablilla copiada en Uruk en diciembre del 229 a.C. le da una base cuadrada de unos 91 metros.",
+      "Cuando Estrabón escribió, ya era una ruina; se decía que la había derribado Jerjes. Alejandro Magno quiso restaurarla. Antes había que retirar los escombros, y Estrabón calcula que solo eso pedía diez mil hombres durante dos meses. Alejandro murió en Babilonia en el 323 a.C. sin terminar.",
+      "Sus sucesores retomaron la limpieza. Una crónica babilónica del British Museum cuenta que un príncipe seléucida, probablemente Antíoco, retiró los escombros del santuario de Marduk con sus tropas, sus carros y elefantes, y que cayó de bruces sobre la ruina mientras hacía ofrendas: un mal augurio. No hubo reconstrucción. De la torre quedó, sobre todo, la planta."
+    ],
+    "question": "¿Cuántas cosas desaparecen mientras alguien prepara su regreso?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Diez mil hombres, dos meses",
+    "subtitle": "Etemenanki, el zigurat de Babilonia",
+    "body": "Heródoto contó ocho pisos. Alejandro quiso restaurarlo, y solo despejar sus escombros pedía diez mil hombres durante dos meses. Murió antes, y nadie lo volvió a levantar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Babilonia", "#TorreDeBabel", "#Mesopotamia"],
+    "extended": ["#Etemenanki", "#Zigurat", "#Herodoto", "#AlejandroMagno", "#Arqueologia", "#HistoriaAntigua", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Heródoto I, 181: en el centro del recinto, «a solid tower has been built, of one furlong's length and breadth»; «a second tower rises from this, and from it yet another, till at last there are eight»; la subida va en espiral por fuera; en la última torre hay un gran santuario con un lecho y una mesa de oro, «But no image has been set up in the shrine». Lectura directa (traducción Loeb, 1920).",
+      "source": "LacusCurtius (Universidad de Chicago), Heródoto, Historias, libro I, 178-216, Loeb Classical Library, vol. I, 1920",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/1d*.html"
+    },
+    {
+      "claim": "Estrabón XVI, 1, 5: «Here too is the tomb of Belus, now in ruins, having been demolished by Xerxes, as it is said»; pirámide cuadrangular de ladrillo cocido de un estadio de alto y un estadio de lado; «Alexander intended to repair this pyramid»; solo despejar el montículo era tarea «for ten thousand men for two months», y no pudo terminar porque lo sorprendieron la enfermedad y la muerte; ninguno de sus sucesores se ocupó. Lectura directa (Loeb, vol. VII, 1932).",
+      "source": "LacusCurtius (Universidad de Chicago), Estrabón, Geografía, libro XVI, Loeb Classical Library, vol. VII, 1932",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/16A*.html"
+    },
+    {
+      "claim": "BCHP 6 (Ruin of Esagila Chronicle), British Museum BM 32248 + 32456 + 32477 + 32543: el hijo del rey, con sus tropas, sus carros y elefantes, retiró los escombros de Esagila; «On the ruin of Esagila he fell» mientras hacía ofrendas, lo que el comentario lee como mal augurio; el príncipe es muy probablemente Antíoco, hijo de Seleuco I; fecha no conservada, probablemente entre c. 302 y 281 a.C.; el comentario recuerda que la torre estaba deteriorada desde la época persa y que Alejandro ordenó retirar sus restos para restaurarla. Lectura directa (edición de I. L. Finkel y R. J. van der Spek).",
+      "source": "Livius.org, «BCHP 6 (Ruin of Esagila Chronicle)», Babylonian Chronographic Texts from the Hellenistic Period",
+      "url": "https://livius.org/sources/content/mesopotamian-chronicles-content/bchp-6-ruin-of-esagila-chronicle"
+    },
+    {
+      "claim": "Las dimensiones del zigurat de Babilonia están en la llamada tablilla del Esagila, de la que se conserva una copia hecha en Uruk a partir de un original de Borsippa, fechada el 12 de diciembre del 229 a.C. Lectura directa del resumen.",
+      "source": "Marvin A. Powell, «Metrological Notes on the Esagila Tablet and Related Matters», Zeitschrift für Assyriologie 72 (1982), resumen en DeepDyve",
+      "url": "https://www.deepdyve.com/lp/de-gruyter/metrological-notes-on-the-esagila-tablet-and-related-matters-7WuNIchNMj"
+    },
+    {
+      "claim": "Etemenanki, «templo del fundamento del cielo y de la tierra», zigurat dedicado a Marduk; reconstruido por Nabucodonosor II; la tablilla del Esagila le da una base cuadrada de unos 91 m y siete pisos; la altura de 91 m se discute (propuestas de unos 54 m más 12 m de templo); algunos especialistas lo proponen como modelo del relato de la torre de Babel (cita a Stephen L. Harris, Understanding the Bible, 2002). Lectura directa.",
+      "source": "Wikipedia (inglés), «Etemenanki»",
+      "url": "https://en.wikipedia.org/wiki/Etemenanki"
+    }
+  ],
+  "do_not_use": [
+    "Que la destruyera Jerjes: Estrabón lo da como «se dice»; está discutido. El cuerpo lo presenta como rumor.",
+    "Que sea con seguridad la torre de Babel del Génesis: es una propuesta de especialistas, no un hecho. El hook dice «pudo inspirar».",
+    "La altura de 91 metros (siete pisos de la tablilla del Esagila): discutida por razones estructurales; hay propuestas de unos 66 m (Montero Fenollós) o 54 m más el templo. No se da altura.",
+    "El estadio de Heródoto como 180 metros: es una equivalencia aproximada; el estadio variaba. Si se quiere evitar, decir «un estadio».",
+    "Que la crónica BCHP 6 hable explícitamente del zigurat: habla de la ruina de Esagila, el santuario de Marduk; la identificación con la torre es contextual. El cuerpo dice «santuario de Marduk».",
+    "Que hoy quede un hoyo cuadrado lleno de agua o que los ladrillos los saquearan los vecinos de Hilla: circula, no se verificó en fuente de calidad. No se usa.",
+    "La estela de la colección Schøyen con la imagen de la torre y Nabucodonosor: colección privada, procedencia discutida. No se usa.",
+    "Que el escombro se usara para levantar el teatro griego de Babilonia: aparece en resúmenes de búsqueda, no se verificó. No se usa.",
+    "La fecha de Heródoto (hacia el 430 a.C.): es la fecha aproximada de composición de las Historias, no de una visita documentada; que visitara Babilonia está discutido."
+  ],
+  "status": "draft"
+}

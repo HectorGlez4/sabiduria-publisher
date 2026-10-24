@@ -1,0 +1,68 @@
+{
+  "id": "2026-12-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "La Bruyère y el todo está dicho de 1688",
+    "hook": "Un moralista francés abrió su libro diciendo que ya no quedaba nada por decir. Después pasó ocho años añadiéndole páginas.",
+    "quote": {
+      "text": "Todo está dicho, y se llega demasiado tarde, desde hace más de siete mil años que hay hombres, y que piensan.",
+      "author": "Jean de La Bruyère",
+      "work": "Los caracteres, «De las obras del espíritu», 1, Michallet, París, 1688",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1688 el librero Estienne Michallet publicó en París Los caracteres. Su autor, Jean de La Bruyère, era preceptor del nieto del Gran Condé desde 1684. El primer capítulo, sobre las obras del espíritu, empieza con esta frase. La línea siguiente la completa: en lo que toca a las costumbres, lo más bello y lo mejor ya se lo llevaron; solo queda espigar detrás de los antiguos y de los modernos más hábiles.",
+      "Espigar es recoger lo que la cosecha deja en el campo. La Bruyère no se quejaba de llegar tarde: describía su oficio. Y lo ejerció con constancia. Entre 1688 y 1694 el libro tuvo ocho ediciones, y pasó de unas 420 observaciones a 1.120. La frase que declara que todo está dicho encabeza un libro que casi triplicó su tamaño.",
+      "En 1693 entró en la Academia francesa. Murió en Versalles en mayo de 1696, con el libro todavía abierto a nuevas observaciones."
+    ],
+    "question": "¿Qué parte de lo que piensas la recogiste detrás de alguien?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#LaBruyere", "#Citas", "#LiteraturaFrancesa"],
+    "extended": ["#Moralistas", "#SigloXVII", "#LosCaracteres", "#Escritura", "#Originalidad", "#Francia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Remark 1 de «Des ouvrages de l'esprit»: «Tout est dit, et l'on vient trop tard depuis plus de sept mille ans qu'il y a des hommes et qui pensent. Sur ce qui concerne les moeurs, le plus beau et le meilleur est enlevé; l'on ne fait que glaner après les anciens et les habiles d'entre les modernes.» La observación lleva la marca (I), la de las observaciones presentes desde la primera edición (en el mismo capítulo hay marcas de (I) a (V) y otras de ediciones posteriores). El archivo reproduce la última edición revisada por el autor, Michallet, 1696. Lectura directa.",
+      "source": "Project Gutenberg, eBook #17980, La Bruyère, Les caractères (texto de la edición Michallet de 1696)",
+      "url": "https://www.gutenberg.org/ebooks/17980"
+    },
+    {
+      "claim": "Texto de la edición de 1696 (Estienne Michallet, París), capítulo «Des ouvrages de l'esprit», pp. 7-34: la observación 1 comienza «Tout eſt dit, & l'on vient trop tard depuis plus de ſept mille ans qu'il y a des hommes & qui penſent.» Comprobación directa.",
+      "source": "Wikisource (francés), Les Caractères/Édition 1696/Des ouvrages de l'esprit",
+      "url": "https://fr.wikisource.org/wiki/Les_Caract%C3%A8res/%C3%89dition_1696/Des_ouvrages_de_l%E2%80%99esprit"
+    },
+    {
+      "claim": "La Bruyère nació en París en 1645 y murió en Versalles en 1696; en 1684 fue preceptor de Louis de Bourbon, nieto del Gran Condé; Les Caractères apareció en 1688 y tuvo ocho ediciones entre 1688 y 1694, pasando de 420 a 1.120 observaciones; elegido a la Academia en 1693. Lectura directa.",
+      "source": "Encyclopédie Larousse, «Jean de La Bruyère»",
+      "url": "https://www.larousse.fr/encyclopedie/personnage/Jean_de_La_Bruy%C3%A8re/128303"
+    },
+    {
+      "claim": "Elegido el 16 de mayo de 1693 al sillón 36; muerto el 10 de mayo de 1696; la fecha de nacimiento (1645) es incierta. Lectura directa.",
+      "source": "Académie française, ficha de Jean de La Bruyère",
+      "url": "https://www.academie-francaise.fr/les-immortels/jean-de-la-bruyere"
+    },
+    {
+      "claim": "Copia del Wikisource que reproduce la edición Flammarion de 1880: la observación «Tout est dit» abre el capítulo, con nota sobre la construcción «des hommes, et qui pensent». Comprobación directa.",
+      "source": "Wikisource (francés), La Bruyère, Les Caractères, Flammarion, 1880, página 65",
+      "url": "https://fr.wikisource.org/wiki/Page:La_Bruy%C3%A8re_-_Les_Caract%C3%A8res,_Flammarion,_1880.djvu/65"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el francés. No presentarla como la de ningún traductor publicado.",
+    "Que la primera edición saliera anónima: se dice con frecuencia, pero en esta investigación no se verificó en una fuente de calidad. No se usa.",
+    "Llamarlo «su único libro»: tradujo además a Teofrasto (la traducción va al frente de Los caracteres). Se dice «su libro».",
+    "Que la edición de 1696 fuera la última revisada en vida: Gutenberg la llama así, pero otra fuente la da como póstuma. No se afirma ni lo uno ni lo otro.",
+    "La presencia de la frase en la edición de 1688 se apoya en la marca (I) del texto de Gutenberg y en resúmenes de búsqueda; no se pudo leer un facsímil de 1688 (los PDF no se pueden abrir). Las marcas de edición son la convención de esa edición y van de (I) a (VIII).",
+    "La Academia francesa da 1687 para Les Caractères (el privilegio es de octubre de 1687); la impresión lleva fecha de 1688. Se usa 1688.",
+    "El número de observaciones de la primera edición varía según la fuente (418 o 420). El cuerpo dice «unas 420».",
+    "Los «siete mil años» no son un cálculo de La Bruyère sobre la prehistoria: reflejan la cronología bíblica corriente en su época. No comentarlo como dato."
+  ],
+  "status": "draft"
+}

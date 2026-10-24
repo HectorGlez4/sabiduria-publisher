@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-11-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Annie Jump Cannon y la secuencia OBAFGKM",
+    "hook": "Una mujer casi sorda clasificó unas 350.000 estrellas a mano. Las siete letras con que las ordenó siguen clasificando el cielo.",
+    "body": [
+      "Annie Jump Cannon nació en Dover, Delaware, el 11 de diciembre de 1863. Se graduó en física en Wellesley en 1884. Una escarlatina la dejó casi sorda, y lo siguió siendo toda su carrera. En 1896 entró en el Observatorio del Harvard College, en el equipo que clasificaba los espectros de las estrellas fotografiadas en placas de vidrio.",
+      "Al principio necesitó tres años para sus primeras mil estrellas. Luego llegó a más de tres por minuto. Ordenó las clases de espectros en una secuencia de letras salteadas, O, B, A, F, G, K, M, que la Unión Astronómica Internacional adoptó como sistema oficial en 1922. Con ella se hizo el Catálogo Henry Draper, publicado entre 1918 y 1924: 225.300 estrellas. En toda su vida clasificó unas 350.000.",
+      "En 1925, Oxford le dio un doctorado honoris causa, el primero que concedía a una mujer. En 1938, cuando tenía más de setenta años y llevaba cuarenta y dos en el observatorio, la Corporación de Harvard la nombró William Cranch Bond Astronomer, uno de sus primeros nombramientos para una mujer. Se retiró en 1940 y murió en Cambridge, Massachusetts, el 13 de abril de 1941. Las estrellas se siguen clasificando con sus letras."
+    ],
+    "question": "¿Cuánto trabajo cabe antes de que alguien lo nombre?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "O, B, A, F, G, K, M",
+    "subtitle": "Annie Jump Cannon, Harvard, 1896-1940",
+    "body": "Clasificó unas 350.000 estrellas, a más de tres por minuto. Su secuencia de letras es oficial desde 1922. En 1938, tras cuarenta y dos años en Harvard, la Corporación le dio un cargo con nombre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AnnieJumpCannon", "#Astronomia", "#MujeresEnLaCiencia"],
+    "extended": ["#Harvard", "#Estrellas", "#HistoriaDeLaCiencia", "#Espectroscopia", "#SigloXX", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Nacida el 11 de diciembre de 1863 en Dover, Delaware; muerta el 13 de abril de 1941 en Cambridge, Massachusetts; graduada en Wellesley en 1884; sordera tras una escarlatina; entró en el Harvard College Observatory en 1896; tres años para sus primeras 1.000 estrellas; unas 350.000 estrellas en su vida; el Henry Draper Catalogue (1918-1924) lista 225.300; adopción de su esquema por la IAU el 9 de mayo de 1922; nombramiento en 1938; retiro en 1940. Lectura directa.",
+      "source": "MacTutor History of Mathematics, Universidad de St Andrews, biografía de Annie Jump Cannon",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Cannon/"
+    },
+    {
+      "claim": "Entró en el personal de Harvard en 1896; clasificaba a «a rate of more than three stars a minute»; el Henry Draper Catalogue, «a colossal enterprise embracing 225,300 stars», con volumen final en 1924; nombrada William Cranch Bond Astronomer en 1938, uno de los primeros nombramientos de la Harvard Corporation para una mujer; primer doctorado honoris causa de Oxford a una mujer; «almost completely deaf» sin audífono durante toda su carrera. Lectura directa.",
+      "source": "Owen Gingerich, «Cannon, Annie Jump», Complete Dictionary of Scientific Biography (en Encyclopedia.com)",
+      "url": "https://www.encyclopedia.com/people/science-and-technology/astronomy-biographies/annie-jump-cannon"
+    },
+    {
+      "claim": "B.S. por Wellesley en 1884; la IAU adoptó su método como sistema oficial en 1922; elegida a la American Philosophical Society en 1925; primera mujer en recibir un doctorado de Oxford; se le acreditan 350.000 estrellas catalogadas a mano; sordera, posiblemente por escarlatina. Lectura directa.",
+      "source": "American Philosophical Society, blog, «Annie Jump Cannon»",
+      "url": "https://www.amphilsoc.org/blog/annie-jump-cannon"
+    },
+    {
+      "claim": "El Smithsonian Institution Archives da sus cargos en Harvard como Curator of Astronomical Photographs (1911-1940) y William Cranch Bond Astronomer (1938-1940). Resumen de búsqueda; la página dio 403 y no se leyó directamente.",
+      "source": "Smithsonian Institution Archives, Annie Jump Cannon (1863-1941)",
+      "url": "https://siarchives.si.edu/collections/siris_arc_291024"
+    }
+  ],
+  "do_not_use": [
+    "Que el nombramiento de 1938 fuera una cátedra de profesora: MacTutor dice «William Cranch Bond Professor of Astronomy»; otras fuentes lo llaman «a nonfaculty appointment». Se usa el título «William Cranch Bond Astronomer» sin llamarlo cátedra.",
+    "Que el de 1938 fuera su primer cargo oficial en Harvard: desde 1911 era Curator of Astronomical Photographs (Smithsonian, no leído directamente). Lo verificado es que fue uno de los primeros nombramientos de la Harvard Corporation para una mujer (Gingerich). No decir que Harvard «tardó» 42 años en nombrarla.",
+    "Que inventara la clasificación desde cero: reordenó y simplificó esquemas anteriores del observatorio (Williamina Fleming, Antonia Maury). El cuerpo dice que «ordenó» las clases.",
+    "La regla mnemotécnica «Oh Be A Fine Girl, Kiss Me»: circula como suya, no se verificó su origen. No se usa.",
+    "Que la IAU la adoptara para espectros «solares»: error de algunas fuentes; es para espectros estelares.",
+    "Groningen y Oxford: MacTutor da Groningen (1922) como primer doctorado de una universidad europea a una mujer; Oxford sería poco después (1925). No llamar al de Oxford «el primero de Europa».",
+    "La fecha exacta de la sordera: las fuentes la sitúan entre los años de Wellesley y comienzos de la década de 1890. No se fecha.",
+    "Cifras de las clasificaciones de la Extensión del Henry Draper (unas 47.000): verificadas en Gingerich, pero sus fechas (1925-1936) no. No se usan."
+  ],
+  "status": "draft"
+}

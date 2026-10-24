@@ -1,0 +1,72 @@
+{
+  "id": "2026-12-11-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lessing y la mano izquierda de Dios (Eine Duplik, 1778)",
+    "hook": "Un bibliotecario alemán imaginó que Dios le ofrecía toda la verdad en una mano. Eligió la otra, la que traía el error asegurado.",
+    "quote": {
+      "text": "Si Dios tuviera encerrada en su derecha toda la verdad, y en su izquierda solo el impulso siempre vivo hacia la verdad, aunque con la condición de equivocarme siempre y para siempre, y me dijera: elige, yo me inclinaría con humildad ante su izquierda y diría: Padre, dámela; la verdad pura es solo para ti.",
+      "author": "Gotthold Ephraim Lessing",
+      "work": "Eine Duplik (Una réplica), pp. 10-11, Braunschweig, 1778",
+      "attribution_verified": true
+    },
+    "body": [
+      "Desde 1770, Gotthold Ephraim Lessing dirigía la biblioteca ducal de Wolfenbüttel. Entre 1774 y 1778 publicó allí, como fragmentos de un autor anónimo, partes de un manuscrito que atacaba la credibilidad de los relatos bíblicos. Su autor, cuyo nombre Lessing ocultó, era Hermann Samuel Reimarus. Los teólogos respondieron. Uno de ellos, Johann Heinrich Reß, defendió en 1777 la historia de la resurrección, y Lessing le contestó en enero de 1778 con un folleto de 157 páginas: Eine Duplik.",
+      "La frase está al principio. Antes, Lessing escribe que el valor de una persona no está en la verdad que posee o cree poseer, sino en el esfuerzo sincero por alcanzarla. Lo que sorprende es la condición que acepta: no solo buscar sin llegar, sino equivocarse siempre. Prefiere eso a recibir la verdad terminada.",
+      "Ese mismo año, el 6 de julio de 1778, una orden del duque le retiró la exención de censura y le prohibió seguir publicando sobre religión. Lessing siguió la discusión por otro camino: al año siguiente apareció Natán el sabio."
+    ],
+    "question": "¿Qué preferirías tener: una respuesta segura o la pregunta abierta?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lessing", "#Citas", "#Ilustracion"],
+    "extended": ["#Verdad", "#Filosofia", "#SigloXVIII", "#Alemania", "#LiteraturaAlemana", "#Tolerancia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto alemán del pasaje en Eine Duplik, Braunschweig, Buchhandlung des Fürstl. Waisenhauses, 1778, pp. 10-11: «Wenn Gott in seiner Rechten alle Wahrheit, und in seiner Linken den einzigen immer regen Trieb nach Wahrheit, obschon mit dem Zusatze, mich immer und ewig zu irren, verschlossen hielte, und spräche zu mir: wähle!» y la elección de la izquierda; la paráfrasis «la búsqueda de la verdad es más preciosa que su posesión» es de Einstein (Science, 1940) resumiendo a Lessing, no una cita literal. Lectura directa.",
+      "source": "Quote Investigator, «The Search for Truth Is More Precious Than Its Possession» (19 de noviembre de 2021)",
+      "url": "https://quoteinvestigator.com/2021/11/19/search-truth/"
+    },
+    {
+      "claim": "Cierre del pasaje de Eine Duplik (1778): «Vater gib! die reine Wahrheit ist ja doch nur für dich allein!»; Lessing, nacido el 22 de enero de 1729 en Kamenz y muerto el 15 de febrero de 1781 en Braunschweig, fue bibliotecario de la biblioteca ducal de Wolfenbüttel desde 1770. Lectura directa.",
+      "source": "Duden Learnattack / Lernhelfer, Schülerlexikon Deutsch Abitur, «Gotthold Ephraim Lessing»",
+      "url": "https://www.lernhelfer.de/schuelerlexikon/deutsch-abitur/artikel/gotthold-ephraim-lessing"
+    },
+    {
+      "claim": "Registro bibliográfico: Eine Duplik, Buchhandlung des Fürstl. Waisenhauses, 1778, 157 páginas. Lectura directa.",
+      "source": "Google Books, ejemplar digitalizado de Eine Duplik (1778)",
+      "url": "https://books.google.de/books/about/Eine_Duplik.html?hl=de&id=8A1bAAAAcAAJ"
+    },
+    {
+      "claim": "Lessing dirigía la biblioteca de Wolfenbüttel desde 1770; entre 1774 y 1778 publicó siete pasajes de la Apologie de Reimarus como Fragmente eines Ungenannten; Eine Duplik, respuesta a Johann Heinrich Reß, en enero de 1778; orden de gabinete del 6 de julio de 1778 que le retiró la exención de censura, con prohibición general de publicar sobre religión. Lectura directa.",
+      "source": "Wikipedia (alemán), «Fragmentenstreit»",
+      "url": "https://de.wikipedia.org/wiki/Fragmentenstreit"
+    },
+    {
+      "claim": "Reß publicó en 1777 una defensa de la historia de la resurrección contra el cuarto fragmento; la Duplik es la respuesta de Lessing; al comienzo de la Vorrede Lessing sostiene que importa la búsqueda sincera de la verdad más que su posesión (cita Werke und Briefe, vol. 9, ed. Wilfried Barner, Deutscher Klassiker Verlag, 1993, p. 510). Lectura directa.",
+      "source": "Wikipedia (alemán), «Eine Duplik»",
+      "url": "https://de.wikipedia.org/wiki/Eine_Duplik"
+    },
+    {
+      "claim": "Nathan der Weise, primera edición de 1779. Lectura directa del registro.",
+      "source": "Deutsches Textarchiv, Lessing, Nathan der Weise (1779)",
+      "url": "https://www.deutschestextarchiv.de/book/show/lessing_nathan_1779"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el alemán de 1778. No presentarla como la de ningún traductor publicado.",
+    "Atribuir a Lessing la frase «la búsqueda de la verdad es más valiosa que su posesión» entre comillas: es la paráfrasis que hizo Einstein en 1940. Tampoco atribuírsela a Einstein.",
+    "Situar el pasaje en el Anti-Goeze: lo hacen Hitchens (God Is Not Great) y otras fuentes, pero está en Eine Duplik, un escrito distinto de la misma polémica.",
+    "Que la Duplik fuera contra Goeze: responde a Johann Heinrich Reß, al que Lessing no nombra (su cargo no se verificó). Goeze es el adversario de los escritos Anti-Goeze.",
+    "Que la orden ducal prohibiera Natán el sabio o la confiscara: la orden retiró la exención de censura y prohibió publicar sobre religión; Natán apareció en 1779. No afirmar más.",
+    "El lugar de impresión: Google Books no lo da; Quote Investigator da Braunschweig. Se usa Braunschweig.",
+    "El texto alemán completo no se leyó en un facsímil ni en una edición crítica (Projekt Gutenberg y zeno.org no respondieron). Se reconstruye a partir de Quote Investigator, que cita las pp. 10-11 de 1778, y del Lernhelfer para la frase final."
+  ],
+  "status": "draft"
+}
