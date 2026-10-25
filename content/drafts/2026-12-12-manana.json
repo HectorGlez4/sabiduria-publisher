@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-12-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "la polilla del Harvard Mark II (1947)",
+    "hook": "En 1947 unos ingenieros pegaron una polilla muerta en el cuaderno de una computadora. La anotación prueba que la palabra bug ya existía.",
+    "body": [
+      "El 9 de septiembre de 1947, a las 15:45, el equipo que probaba la computadora Mark II en la Universidad de Harvard encontró una polilla atrapada en el relé 70 del panel F. La sacaron, la pegaron con cinta en el cuaderno de operaciones y alguien escribió al lado, en inglés: primer caso real de bug encontrado. La página, con el insecto todavía pegado, la conserva hoy el Museo Nacional de Historia Estadounidense del Smithsonian.",
+      "La broma está en la palabra real. Solo tiene gracia si bug, bicho, ya significaba avería. Y lo significaba desde hacía setenta años. Thomas Edison la usaba en sus cuadernos desde 1876. En marzo de 1878 le escribió al presidente de la Western Union que había encontrado un bug en su aparato. En noviembre de ese año explicó a su socio Theodore Puskas que los bugs eran las pequeñas fallas y dificultades que aparecen antes de que un invento funcione.",
+      "Grace Hopper estaba en ese equipo, pero no hay prueba de que escribiera la nota. Lo que hizo fue contar la historia en sus conferencias durante décadas. La polilla no inventó la palabra. La hizo famosa."
+    ],
+    "question": "¿Cuántas palabras que usas a diario se hicieron famosas por una broma?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Primer caso real de bug",
+    "subtitle": "Harvard Mark II, 9 de septiembre de 1947",
+    "body": "Una polilla en el relé 70, pegada con cinta en el cuaderno. La nota es una broma: bug ya significaba avería desde Edison, en la década de 1870. La polilla no inventó la palabra; la hizo famosa."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#HistoriaDeLaComputacion", "#GraceHopper", "#Curiosidades"],
+    "extended": ["#Edison", "#Etimologia", "#Harvard", "#Tecnologia", "#SigloXX", "#Informatica", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El 9 de septiembre de 1947 un equipo de la Harvard Mark II, en Cambridge, Massachusetts, encontró una polilla muerta en un relé; la pegaron en el cuaderno con la nota «First actual case of bug being found»; Grace Hopper estaba presente y popularizó el episodio en sus conferencias; el término bug para una falla técnica viene de Edison en el siglo XIX. Lectura directa.",
+      "source": "Computer History Museum, This Day in History, 9 de septiembre",
+      "url": "https://www.computerhistory.org/tdih/september/9/"
+    },
+    {
+      "claim": "Edison usó bug en sus cuadernos desde julio de 1876; en marzo de 1878 escribió a William Orton, presidente de la Western Union, que había encontrado un bug en su aparato; en noviembre de 1878 describió a Theodore Puskas los bugs como las pequeñas fallas y dificultades previas al éxito o fracaso de un invento; Hopper no acuñó el término; la polilla de la Mark II estaba en el relé 70. Lectura directa.",
+      "source": "Alexander B. Magoun y Paul Israel, «Did You Know? Edison Coined the Term Bug», IEEE Spectrum / IEEE History Center, 1 de agosto de 2013",
+      "url": "https://spectrum.ieee.org/the-institute/ieee-history/did-you-know-edison-coined-the-term-bug"
+    },
+    {
+      "claim": "9 de septiembre de 1947, anotado a las 15:45; uno de los ingenieros del equipo de la Mark II escribió la entrada; Hopper estaba en el equipo, pero según el Smithsonian el cuaderno probablemente no era suyo. Lectura directa.",
+      "source": "Centre for Computing History (Cambridge, Reino Unido), «First computer bug is found»",
+      "url": "https://www.computinghistory.org.uk/det/5927/First-computer-bug-is-found/"
+    },
+    {
+      "claim": "Relé 70 del panel F, 15:45; Hopper no hizo el hallazgo ni la anotación, según el artículo. Lectura directa (el artículo da por error el año 1945, ver do_not_use).",
+      "source": "Computerworld, «Moth in the machine: Debugging the origins of 'bug'», 3 de septiembre de 2011",
+      "url": "https://www.computerworld.com/article/2515435/moth-in-the-machine--debugging-the-origins-of--bug-.html"
+    },
+    {
+      "claim": "El Museo Nacional de Historia Estadounidense conserva el cuaderno con la polilla (registro nmah_334663); menciona el uso de bug por Edison en la década de 1870 y a Hopper entre quienes trabajaban en la Mark II en 1947. Resumen de búsqueda; la página dio 403 y no se leyó directamente.",
+      "source": "Smithsonian Institution, «Log Book With Computer Bug»",
+      "url": "https://www.si.edu/object/log-book-computer-bug:nmah_334663"
+    }
+  ],
+  "do_not_use": [
+    "Que Grace Hopper encontrara la polilla o escribiera la nota: el cuaderno no está firmado y el Smithsonian dice que probablemente no era suyo. Se dice que estaba en el equipo y que popularizó la historia.",
+    "Que la polilla diera origen a las palabras bug o debug: Edison ya la usaba en la década de 1870, y la propia nota («primer caso real») presupone el uso.",
+    "El año 1945: lo da Computerworld y lo daba la vitrina del museo de Dahlgren, según fuentes secundarias. El Computer History Museum y el Centre for Computing History dan 1947.",
+    "La frase exacta de la nota: unas fuentes la dan como «First actual case of bug being found» y otras con «a bug». Se traduce sin artículo, sin presentar el inglés entre comillas.",
+    "Que la anotación la hiciera William «Bill» Burke: aparece en fuentes secundarias atribuida al Computer History Museum, no se verificó. No se nombra autor.",
+    "Fechas del traslado del cuaderno al Smithsonian (1988, comienzos de los noventa) y el número de acceso 1994.0191.01: no verificados. No se usan.",
+    "El peso de la Mark II (cinco o veinticinco toneladas, según la fuente): no verificado. No se usa.",
+    "La fecha exacta de la carta a Puskas (18 de noviembre de 1878) y de la de Orton (3 o 13 de marzo): las fuentes discrepan. Se dice solo el mes.",
+    "Que Edison «acuñara» la palabra: el IEEE lo plantea así, pero otras fuentes recogen usos técnicos de 1875 en el OED. Se dice que Edison la usaba, no que la inventó."
+  ],
+  "status": "draft"
+}

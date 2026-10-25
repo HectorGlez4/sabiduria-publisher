@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-12-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Juan Ramón Jiménez y el poema III de Eternidades (1918)",
+    "hook": "Un poeta andaluz no le pidió nada a la inspiración. Le pidió a la inteligencia el nombre exacto de las cosas.",
+    "quote": {
+      "text": "¡Intelijencia, dame el nombre exacto de las cosas! Que mi palabra sea la cosa misma, creada por mi alma nuevamente.",
+      "author": "Juan Ramón Jiménez",
+      "work": "Eternidades, poema III, Madrid, 1918",
+      "attribution_verified": true
+    },
+    "body": [
+      "Eternidades salió en Madrid en 1918, con los años 1916-1917 en la portada. Son los años de su boda con Zenobia Camprubí, en Nueva York, el 2 de marzo de 1916. El poema es el tercero del libro: catorce versos en la página 19 de la primera edición. Escribía intelijencia con j, en la ortografía simplificada que usó buena parte de su vida.",
+      "El poema sigue. Pide que por su palabra vayan a las cosas los que no las conocen, los que ya las olvidan y los que las aman. Y cierra repitiendo la petición: el nombre exacto, y tuyo, y suyo, y mío, de las cosas. No busca adorno. Busca una palabra que no se interponga entre quien lee y lo que se nombra.",
+      "El 25 de octubre de 1956 la Academia Sueca le concedió el Nobel de Literatura. Zenobia murió tres días después, el 28. Él murió en San Juan de Puerto Rico el 29 de mayo de 1958."
+    ],
+    "question": "¿Qué cosa de tu vida todavía no tiene su nombre exacto?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JuanRamonJimenez", "#Citas", "#Poesia"],
+    "extended": ["#Eternidades", "#PoesiaEspanola", "#Nobel", "#Palabras", "#SigloXX", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Portada: Obras de Juan Ramón Jiménez, Eternidades, Verso (1916-1917), primera edición, Madrid, Tip.-Lit. A. de Ángel Alcoy, 1918. El poema III empieza «Intelijencia, dame / el nombre exacto de las cosas!», sigue «Que mi palabra sea / la cosa misma, / creada por mi alma nuevamente», contiene tres versos «que por mí vayan todos» (los que no las conocen, los que ya las olvidan, los mismos que las aman) «a las cosas» y termina «el nombre exacto, y tuyo, / y suyo, y mío, de las cosas!»; catorce versos, página 19. Comprobación directa del texto escaneado (OCR).",
+      "source": "Internet Archive, Eternidades: verso (1916-1917), Madrid, 1918 (ejemplar digitalizado)",
+      "url": "https://archive.org/details/eternidadesverso00jimn"
+    },
+    {
+      "claim": "Nacido el 23 de diciembre de 1881 en Moguer; boda con Zenobia Camprubí en la iglesia de Saint Stephen de Nueva York el 2 de marzo de 1916; Diario de un poeta recién casado escrito en 1916 y publicado en 1917; salida de España en agosto de 1936; Nobel concedido por la Academia Sueca el 25 de octubre de 1956; muerte de Zenobia el 28 de octubre de 1956; muerte de Juan Ramón el 29 de mayo de 1958. Lectura directa.",
+      "source": "Residencia de Estudiantes (CSIC), exposición «Juan Ramón Jiménez», cronología",
+      "url": "https://exposiciones.residencia.csic.es/jramon/en/cronologia/cronologia.htm"
+    },
+    {
+      "claim": "El artículo estudia los tres primeros poemas de Eternidades y sostiene que el ideal del poeta es que la palabra sea el nombre exacto de las cosas, la cosa misma. Resumen de búsqueda; el PDF dio 403 y no se leyó directamente.",
+      "source": "Antonio Gutiérrez-Pozo (Universidad de Sevilla), Revista de Estudios Hispánicos, Universidad de Puerto Rico, 2022",
+      "url": "https://revistas.upr.edu/index.php/reh/article/download/21273/18797/24133"
+    },
+    {
+      "claim": "Juan Ramón Jiménez y Zenobia Camprubí usaban una ortografía simplificada distinta de la norma académica; Eternidades, 1918; murió el 29 de mayo de 1958 en San Juan de Puerto Rico. Lectura directa.",
+      "source": "Wikipedia (inglés), «Juan Ramón Jiménez»",
+      "url": "https://en.wikipedia.org/wiki/Juan_Ram%C3%B3n_Jim%C3%A9nez"
+    },
+    {
+      "claim": "Motivación del Nobel de 1956: «for his lyrical poetry, which in Spanish language constitutes an example of high spirit and artistical purity». Resumen de búsqueda; la página dio 403.",
+      "source": "Nobel Prize Outreach, «Juan Ramón Jiménez – Facts»",
+      "url": "https://www.nobelprize.org/prizes/literature/1956/jimenez/facts/"
+    }
+  ],
+  "do_not_use": [
+    "La grafía «esacto»: la da una página de curso de Columbia (no leída, 403), probablemente de una antología posterior del autor. La primera edición de 1918, según el escaneo, dice «exacto». Se usa «exacto» con «Intelijencia».",
+    "Normalizar la cita a «Inteligencia»: el original de 1918 escribe «Intelijencia». Se conserva la j y se explica en el cuerpo.",
+    "La etiqueta «poesía desnuda» para Eternidades: es corriente en manuales, pero no se verificó en una fuente leída. No se usa.",
+    "Que Zenobia muriera «dos días» después del Nobel: lo dice Wikipedia; la cronología de la Residencia de Estudiantes da 25 y 28 de octubre, tres días. Wikipedia en inglés da además el 25 en otro lugar. Se usa la Residencia.",
+    "La fecha de nacimiento 24 de diciembre: la dan algunas fuentes (Nobel, Britannica Kids); la Residencia y otras dan el 23. No se menciona el día en el cuerpo.",
+    "Que en el momento de escribir el poema estuviera en Nueva York: los años de la portada coinciden con el viaje, pero no se verificó dónde se escribió el poema III. No se afirma.",
+    "La interpretación del poema como «realismo poético» (Gutiérrez-Pozo): no se leyó el artículo completo. No se cita como tesis."
+  ],
+  "status": "draft"
+}

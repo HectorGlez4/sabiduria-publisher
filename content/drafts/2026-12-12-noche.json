@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-12-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Hiparquía de Maronea, filósofa cínica",
+    "hook": "Hacia el año 300 a.C. una mujer rica de Tracia rechazó a todos sus pretendientes. Eligió a un filósofo que vivía en la calle.",
+    "body": [
+      "Hiparquía nació en Maronea, en Tracia, probablemente entre 340 y 330 a.C. Su familia tenía dinero y pretendientes no le faltaron. Pero se enamoró de los discursos y de la vida de Crates de Tebas, un cínico que había renunciado a su herencia. Según Diógenes Laercio, amenazó con matarse si no la dejaban casarse con él. Los padres le pidieron a Crates que la disuadiera. Él se desnudó delante de ella y le dijo que ese era el novio y esas sus posesiones: que eligiera.",
+      "Eligió. Se vistió como él y lo acompañó a todas partes, también a los banquetes. En uno, ofrecido por Lisímaco, el filósofo Teodoro, llamado el Ateo, le recitó un verso de Las bacantes de Eurípides: ¿es esta la que dejó la lanzadera y el telar? Ella respondió que sí. Y preguntó si le parecía que había decidido mal por dedicar a su educación el tiempo que habría gastado en el telar.",
+      "Diógenes Laercio dice que escribió cartas y refutaciones filosóficas. No se conserva ninguna. Lo que queda es su respuesta, contada unos cinco siglos después por un biógrafo que le dedicó un capítulo propio."
+    ],
+    "question": "¿A qué telar le has quitado tiempo para aprender algo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La que dejó el telar",
+    "subtitle": "Hiparquía de Maronea, hacia el 300 a.C.",
+    "body": "Rechazó a pretendientes ricos para casarse con Crates el cínico. En un banquete le reprocharon haber dejado el telar. Respondió que había dedicado ese tiempo a educarse, y preguntó si eso era decidir mal."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Hiparquia", "#Filosofia", "#MujeresEnLaHistoria"],
+    "extended": ["#Cinismo", "#GreciaAntigua", "#Crates", "#DiogenesLaercio", "#Filosofas", "#HistoriaAntigua", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Vidas VI, 96-98: Hiparquía, hermana de Metrocles, nacida en Maronea; se enamoró de los discursos y la vida de Crates, despreció a pretendientes ricos, nobles o hermosos, y amenazó con matarse si no la casaban con él; los padres pidieron a Crates que la disuadiera, él se desnudó y le dijo «este es el novio» y esas sus posesiones; ella adoptó su vestido y lo acompañó en público y a los banquetes; en el banquete de Lisímaco refutó a Teodoro el Ateo, que le recitó un verso sobre la que dejó el telar; ella respondió que había dedicado a la educación el tiempo del telar. Lectura directa (traducción de R. D. Hicks).",
+      "source": "Diógenes Laercio, Vidas de los filósofos ilustres, VI, 96-98, trad. R. D. Hicks, Loeb Classical Library (Wikisource)",
+      "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_VI"
+    },
+    {
+      "claim": "Libro VI, capítulo 7, dedicado a Hiparquía (c. 300 a.C.); el verso de Teodoro es Eurípides, Bacantes 1236 (nota de la edición); edición de Hicks, Harvard University Press, 1972, primera de 1925. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Diógenes Laercio VI, cap. 7",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258:book=6:chapter=7"
+    },
+    {
+      "claim": "Probablemente nacida entre 340 y 330 a.C., floreció hacia el 300 a.C.; de Maronea, en Tracia; el episodio del desnudo de Crates puede estar embellecido; Teodoro el Ateo era cirenaico; Diógenes Laercio le atribuye cartas, chanzas y refutaciones filosóficas, todas perdidas; escribió siglos después y pudo incluir anécdotas ilustrativas no exactas. Lectura directa.",
+      "source": "Laura Grams (University of Nebraska at Omaha), «Hipparchia», Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/hipparch/"
+    },
+    {
+      "claim": "Familia de clase alta de Maronea; Crates, heredero de una familia rica de Tebas, renunció a su herencia; vivieron sin posesiones en Atenas; la Suda le atribuye cartas a Teodoro; sus escritos se perdieron; hijo, Pasicles. Lectura directa.",
+      "source": "Joshua J. Mark, «Hipparchia of Maroneia», World History Encyclopedia, 27 de mayo de 2021",
+      "url": "https://www.worldhistory.org/Hipparchia_of_Maroneia/"
+    }
+  ],
+  "do_not_use": [
+    "Que fuera «la única mujer» con biografía en Diógenes Laercio: se repite, pero ninguna fuente leída lo dice. El cuerpo dice que le dedicó «un capítulo propio», que sí consta (VI, cap. 7).",
+    "La historia de que Hiparquía y Crates consumaron el matrimonio en público, en un pórtico: la cuentan autores tardíos (Apuleyo, Agustín) y la IEP la trata como dudosa. No se usa.",
+    "Detalles del episodio de Crates desnudo como hecho seguro: la IEP advierte que puede estar embellecido. Se presenta como relato de Diógenes Laercio.",
+    "Fechas exactas de nacimiento y muerte (c. 350-280 a.C. en World History Encyclopedia y Wikipedia): no constan en fuentes antiguas. Se usa el intervalo 340-330 a.C. de la IEP con «probablemente».",
+    "Títulos concretos de obras de Hiparquía atribuidos por la Suda: no se verificaron. Se dice solo que escribió cartas y refutaciones, según Diógenes Laercio.",
+    "Que influyera directamente en Zenón de Citio: lo sugiere World History Encyclopedia, pero lo documentado es la relación de Zenón con Crates. No se afirma.",
+    "La familia dedicada al vino: World History Encyclopedia dice «most likely». No se usa.",
+    "La traducción del verso de Las bacantes y de la respuesta es propia, a partir de Hicks. No presentarla como de un traductor publicado."
+  ],
+  "status": "draft"
+}

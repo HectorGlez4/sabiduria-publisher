@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-12-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Marie von Ebner-Eschenbach y sus Aphorismen",
+    "hook": "Una condesa morava fracasó catorce años seguidos como dramaturga. La recuerdan por una frase de seis palabras en alemán.",
+    "quote": {
+      "text": "Quien no sabe nada tiene que creerlo todo.",
+      "author": "Marie von Ebner-Eschenbach",
+      "work": "Aphorismen, segundo centenar, 6 (ed. de 1893)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Marie Dubsky nació el 13 de septiembre de 1830 en el castillo de Zdislawitz, en Moravia, hija de un conde. En 1848 se casó con su primo Moritz von Ebner-Eschenbach, quince años mayor, que apoyó su educación y su escritura. Quiso ser autora de teatro. Entre 1860 y 1874 estrenó y fracasó una y otra vez: María Estuardo en Escocia, Las violetas, Marie Roland, Fidelidad de hombre.",
+      "En 1880 publicó un libro de aforismos. En la edición de sus obras de 1893 esta frase es la sexta del segundo centenar. No se burla del ignorante. Describe su situación: quien no sabe nada no elige creer, no tiene con qué dudar. Saber es lo que permite decir que no.",
+      "En 1899 fue la primera mujer en recibir la condecoración austríaca de las artes y las ciencias. En 1900, la Universidad de Viena le dio su primer doctorado honoris causa concedido a una mujer, tres años después de admitir alumnas. Ella nunca estudió allí. Murió en Viena el 12 de marzo de 1916."
+    ],
+    "question": "¿Qué crees solo porque no sabes lo suficiente para dudarlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#EbnerEschenbach", "#Citas", "#Aforismos"],
+    "extended": ["#LiteraturaAustriaca", "#SigloXIX", "#Conocimiento", "#MujeresEscritoras", "#Viena", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Gesammelte Schriften, tomo I: Aphorismen. Parabeln, Märchen und Gedichte, Berlín, Gebrüder Paetel, 1893. Aforismo 6 del «Zweites Hundert»: «Wer nichts weiß, muß alles glauben.» Comprobación directa del texto.",
+      "source": "Project Gutenberg, eBook #77889, Marie von Ebner-Eschenbach, Gesammelte Schriften I (Paetel, 1893)",
+      "url": "https://www.gutenberg.org/ebooks/77889"
+    },
+    {
+      "claim": "Nacida el 13 de septiembre de 1830 en el castillo de Zdislawitz (Moravia), hija del conde Franz Dubsky; en 1848 se casa con su primo Moritz von Ebner-Eschenbach, quince años mayor, que apoyó su formación y su escritura; desde 1858 sus dramas fracasan en escena: Maria Stuart in Schottland (1860), Die Veilchen (1862), Marie Roland (1867), Das Waldfräulein (1873), Männertreue (1874); 1880, aparecen los Aphorismen; 1899, primera mujer con el Ehrenzeichen für Kunst und Wissenschaft; muerte en Viena el 12 de marzo de 1916. Lectura directa.",
+      "source": "Deutsches Historisches Museum, LeMO, biografía de Marie von Ebner-Eschenbach",
+      "url": "https://www.dhm.de/lemo/biografie/marie-von-ebner-eschenbach"
+    },
+    {
+      "claim": "Dr. phil. h.c. por la Facultad de Filosofía de la Universidad de Viena, primera mujer en recibir un doctorado honoris causa allí, en 1900 (la página da también 1899/00); tres años después de la admisión de mujeres como estudiantes ordinarias; nunca estudió ni enseñó en la universidad; placa en el Arkadenhof en 1925. Lectura directa.",
+      "source": "Universität Wien, 650 plus – Geschichte der Universität Wien, «Maria Freifrau von Ebner-Eschenbach»",
+      "url": "https://geschichte.univie.ac.at/de/personen/maria-freifrau-von-ebner-eschenbach"
+    },
+    {
+      "claim": "Primera edición de los Aphorismen con fecha de 1880 («Erstdruck 1880»), según la ficha editorial de una reedición. Resumen de búsqueda.",
+      "source": "ebook.de, ficha de Marie von Ebner-Eschenbach, Fünfhundert Aphorismen",
+      "url": "https://www.ebook.de/de/product/40173222/marie_von_ebner_eschenbach_fuenfhundert_aphorismen.html"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el alemán de 1893. No presentarla como la de ningún traductor publicado.",
+    "Que la frase estuviera ya en la primera edición de 1880: no se leyó un ejemplar de 1880. Por eso `work` cita la edición de 1893 y el cuerpo no dice que la frase sea de 1880.",
+    "La frase «Sé paciente con los de mente estrecha» y variantes que circulan en inglés («Be patient with the simple-minded»): no se encontró en la edición de 1893 con esa forma. No se usa.",
+    "La fecha exacta del doctorado honoris causa: la propia Universidad de Viena da 1899/00, 11 de octubre de 1900 y 1 de septiembre de 1900 en distintos lugares de la misma página. Se dice solo 1900.",
+    "Que en 1898 recibiera el Ehrenkreuz für Kunst und Literatur: lo da una ficha de librería; el Deutsches Historisches Museum habla del Ehrenzeichen für Kunst und Wissenschaft en 1899. Se usa el museo.",
+    "Que fuera autodidacta o que no pudiera ir a la universidad por ser mujer: no se verificó. Solo consta que nunca estudió en Viena.",
+    "Das Waldfräulein (1873) se omite en la lista del cuerpo por espacio, no por duda."
+  ],
+  "status": "draft"
+}
