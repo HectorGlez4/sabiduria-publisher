@@ -72,8 +72,14 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "4627457987574700",
+      "url": "https://www.facebook.com/reel/4627457987574700",
+      "published_at": "2026-10-25T19:43:11.876168+00:00"
+    }
+  },
   "cita_slug": "antonio-machado-caminante-no-hay-camino-se-hace-camino",
   "reemision_de": "2026-08-26-tarde"
 }

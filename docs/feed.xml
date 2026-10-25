@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 25 Oct 2026 15:41:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 19:43:11 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Caminante, no hay camino, se hace camino al andar.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-10-25-re51-reel</guid>
+      <pubDate>Sun, 25 Oct 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["Caminante, no hay camino, se hace camino al andar."
+— Antonio Machado (1875-1939)
+
+A esta frase se le suele pegar otra: "golpe a golpe, verso a verso". No es de Machado. La escribió Joan Manuel Serrat en 1969, en las estrofas propias que añadió al musicalizar el poema. El original tiene diez versos y no menciona ningún golpe.
+
+Y dice algo bastante menos alentador de lo que se supone. El camino no está delante: son las huellas que ya dejaste. Por eso el poema sigue con la senda que nunca se ha de volver a pisar, y termina con estelas en la mar, que es lo que dura una huella en el agua.
+
+Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruzó a Francia el 27 y murió en Collioure un mes después. En el bolsillo del abrigo le encontraron un papel arrugado con un último verso escrito a lápiz.
+
+¿Qué camino tuyo solo se entendió cuando ya lo habías andado?
+
+#SabiduriaDeBolsillo #Machado #Poesia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Siete palabras. No dicen quién despertó, ni de qué sueño, ni qué es el dinosaurio. Eso lo pone cada lector.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,26 +512,6 @@ Eso tiene una consecuencia práctica. Las listas de «citas de Chanakya» que ci
 #SabiduriaDeBolsillo #Arthashastra #Kautilya #IndiaAntigua]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El lema que se repite en charlas de emprendimiento y gimnasios viene de uno de los textos más oscuros de Samuel Beckett. Y no termina donde se suele cortar.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-22-extra81</guid>
-      <pubDate>Thu, 22 Oct 2026 16:41:38 +0000</pubDate>
-      <description><![CDATA["Siempre intentado. Siempre fracasado. No importa. Intentar otra vez. Fracasar otra vez. Fracasar mejor."
-— Samuel Beckett, Worstward Ho (Londres, John Calder, 1983)
-
-Worstward Ho es una prosa breve que Beckett escribió en inglés y publicó en 1983, en Londres con John Calder y en Nueva York con Grove Press. El título se puede leer como «rumbo a lo peor». En 1989 se reunió con Compañía y Mal visto mal dicho en el volumen Nohow On.
-
-Las seis frases de la cita aparecen al principio. Lo que viene después rara vez se copia. El texto sigue: intentar otra vez, fracasar otra vez, mejor otra vez, «o mejor peor». Y enseguida: fracasar peor otra vez, todavía peor, hasta hartarse del todo, hasta vomitar del todo. El crítico Fintan O'Toole lo resumió en The New York Review of Books: no es un estímulo, es la exigencia de seguir fallando hasta que el fracaso sea completo.
-
-Fuera de su contexto, la frase acabó en libros de autoayuda como La semana laboral de 4 horas, de Timothy Ferriss. En 2021 el Journal of Beckett Studies le dedicó un artículo entero a sus usos y abusos. Leída entera, no promete que el siguiente intento saldrá bien. Dice algo más raro: que fallar es lo que hay, y que aun así se sigue.
-
-¿Qué cambia en una frase cuando se le quita lo que viene después?
-
-#SabiduriaDeBolsillo #Beckett #FracasarMejor #Citas]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra81.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra81.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
