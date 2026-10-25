@@ -79,9 +79,25 @@
     "La anécdota del lector que dijo «me encantó, pero voy por la mitad»: el propio Semanario Universidad la da como leyenda. No se usa.",
     "Que el cuento se escribiera como sátira del PRI: el uso político es posterior y de los comentaristas, no una intención declarada del autor. El cuerpo dice que se usó así, no que se escribió para eso."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-25T15:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1132736692884323",
+      "url": "https://www.facebook.com/874327782058550/posts/1132736692884323",
+      "published_at": "2026-10-25T15:40:57.147073+00:00"
+    },
+    "instagram": {
+      "post_id": "18116719424039739",
+      "url": "https://www.instagram.com/p/De7DWVIDR8M/",
+      "published_at": "2026-10-25T15:41:12.300965+00:00"
+    },
+    "threads": {
+      "post_id": "18642806788061815",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18642806788061815",
+      "published_at": "2026-10-25T15:41:26.350390+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",

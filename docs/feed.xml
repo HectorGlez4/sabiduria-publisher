@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 25 Oct 2026 08:04:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 15:41:26 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Siete palabras. No dicen quién despertó, ni de qué sueño, ni qué es el dinosaurio. Eso lo pone cada lector.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-10-25-extra81</guid>
+      <pubDate>Sun, 25 Oct 2026 15:40:57 +0000</pubDate>
+      <description><![CDATA["Cuando despertó, el dinosaurio todavía estaba allí."
+— Augusto Monterroso, «El dinosaurio», en Obras completas (y otros cuentos), 1959
+
+Augusto Monterroso nació en Tegucigalpa en 1921 y adoptó la nacionalidad guatemalteca. En 1944, por oponerse a la dictadura de Jorge Ubico, salió exiliado a la Ciudad de México. En 1959 publicó su primer libro con un título que ya era una broma: Obras completas (y otros cuentos). Entre esos cuentos venía «El dinosaurio», que ocupa una sola línea.
+
+El cuento calla casi todo. No dice quién despierta, ni qué soñaba, ni qué clase de dinosaurio es. Lo que falta lo pone quien lee, y por eso cada época le encontró uno. En México, donde un mismo partido gobernó más de siete décadas, se usó para hablar del poder que no se va.
+
+Italo Calvino, en Seis propuestas para el próximo milenio (1988), escribió que quería preparar una colección de cuentos de una sola frase, y destacó el de Monterroso. Monterroso murió en la Ciudad de México en 2003, con el Premio Príncipe de Asturias de las Letras recibido tres años antes.
+
+¿Qué sigue ahí cada vez que despiertas?
+
+#SabiduriaDeBolsillo #Monterroso #Microrrelato #Citas]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra81.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra81.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Francis Bacon sí escribió que el saber es poder. La primera vez estaba hablando de Dios.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -492,26 +512,6 @@ Fuera de su contexto, la frase acabó en libros de autoayuda como La semana labo
 #SabiduriaDeBolsillo #Beckett #FracasarMejor #Citas]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>«Cada generación, sin duda, se cree destinada a rehacer el mundo. La mía sabe, sin embargo, que no lo rehará. Pero su tarea es quizá mayor. Consiste en impedir que el mundo se deshaga.»</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-21-extra85</guid>
-      <pubDate>Thu, 22 Oct 2026 10:35:41 +0000</pubDate>
-      <description><![CDATA["Cada generación, sin duda, se cree destinada a rehacer el mundo. La mía sabe, sin embargo, que no lo rehará. Pero su tarea es quizá mayor. Consiste en impedir que el mundo se deshaga."
-— Albert Camus, Discurso del banquete Nobel, Estocolmo (1957)
-
-Camus lo dijo el 10 de diciembre de 1957 en el ayuntamiento de Estocolmo, en el banquete de los premios Nobel. Tenía cuarenta y cuatro años. No habló en nombre propio sino de una generación concreta: la de los nacidos al empezar la Primera Guerra Mundial, que tenían veinte años cuando Hitler llegó al poder y que completaron su educación con la guerra de España, la Segunda Guerra Mundial, los campos de concentración y una Europa de tortura y cárceles.
-
-Esos hombres, dijo, tenían que criar ahora a sus hijos y hacer su obra en un mundo amenazado por la destrucción nuclear. Por eso no prometió rehacer nada. Redujo el oficio del escritor a dos compromisos difíciles de cumplir: no mentir sobre lo que uno sabe y resistir a la opresión. Y añadió que el escritor no puede ponerse al servicio de quienes hacen la historia, sino de quienes la padecen.
-
-La frase empezó a circular enseguida, y a deformarse. Un periódico de Iowa la citaba en 1958; ese mismo año el novelista Bernard Malamud la adaptó a su propio oficio y la convirtió en la misión del escritor de impedir que la civilización se destruya. En el original no hay heroísmo. Hay una generación que renuncia a la utopía y se queda con una tarea más modesta y más urgente: que lo que existe no se venga abajo.
-
-¿Qué te toca a ti impedir que se deshaga?
-
-#SabiduriaDeBolsillo #AlbertCamus #PremioNobel #Literatura]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-21-extra85.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-21-extra85.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
