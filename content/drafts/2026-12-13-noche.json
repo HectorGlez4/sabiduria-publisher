@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-13-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Copán y la escalinata jeroglífica",
+    "hook": "El texto maya más largo que se conoce está en una escalera de Copán. Lo desordenaron quienes la reconstruyeron.",
+    "body": [
+      "En la ciudad maya de Copán, en Honduras, una escalinata sube por el Templo 26. Sus bloques llevan unos 2.200 glifos: es el texto más largo que se conoce del mundo maya. Se terminó en el año 755 y cuenta la historia de los gobernantes de la ciudad.",
+      "Cuando el Museo Peabody de Harvard la excavó en la década de 1890, solo quince escalones seguían en su sitio. El resto había resbalado por la pirámide. Los arqueólogos limpiaron, fotografiaron y numeraron los bloques caídos y los bajaron a la plaza. Entre 1936 y 1942, la Institución Carnegie de Washington volvió a montar la escalera. Según el propio Peabody, lo que se ve hoy está fuera de orden en un sesenta y cinco por ciento.",
+      "El tiempo no borró el texto. Lo revolvió una restauración. Desde la década de 1980 los epigrafistas lo reordenan con ayuda de las placas fotográficas de vidrio de aquellas primeras excavaciones. Una crónica escrita en piedra se está leyendo gracias a unas fotos tomadas antes de que nadie pudiera leerla."
+    ],
+    "question": "¿Qué se pierde cuando se arregla algo sin entenderlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La escalera desordenada",
+    "subtitle": "Copán, Templo 26, año 755",
+    "body": "Unos 2.200 glifos, el texto maya más largo conocido. La reconstrucción de 1936 a 1942 dejó fuera de orden el 65 por ciento. Hoy se reordena con las fotos de vidrio tomadas en la década de 1890."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Copan", "#Mayas", "#Arqueologia"],
+    "extended": ["#Honduras", "#Mesoamerica", "#Escritura", "#Epigrafia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "La Escalinata Jeroglífica del Templo 26 de Copán se completó en el 755 d.C.; tiene 2.200 glifos en total, el texto maya más largo conocido; sus inscripciones cuentan la historia de los gobernantes de Copán; Maudslay la descubrió y nombró en 1885; el Peabody empezó las excavaciones en 1891 bajo John G. Owens y luego George Byron Gordon (1892, 1894-1895, 1900); Gordon encontró 15 escalones en su sitio; los bloques se limpiaron, fotografiaron, numeraron y bajaron a la plaza; la Institución Carnegie de Washington la reconstruyó en los años treinta. Lectura directa.",
+      "source": "Alessandro Pezzati, «The Excavation of the Hieroglyphic Stairway at Copan», Expedition Magazine 54, n.º 1, Penn Museum, abril de 2012",
+      "url": "https://www.penn.museum/sites/expedition/the-excavation-of-the-hieroglyphic-stairway-at-copan/"
+    },
+    {
+      "claim": "Al descubrirse en 1893 los escalones se habían hundido y desplazado; nunca se reordenaron del todo, y lo reconstruido por la Institución Carnegie de Washington entre 1936 y 1942 está en un 65 por ciento fuera de orden; el desorden ha hecho difícil descifrar el texto; las placas de vidrio de las primeras fotografías han sido cruciales para la reconstrucción correcta. Resumen de búsqueda: la página dio 403 y no se leyó directamente.",
+      "source": "Peabody Museum of Archaeology and Ethnology, Harvard University, exposición «Fragile Memories – Hieroglyphic Stairway»",
+      "url": "https://peabody.harvard.edu/galleries/fragile-memories-hieroglyphic-stairway"
+    },
+    {
+      "claim": "La Escalinata Jeroglífica es la inscripción más larga del mundo maya; la mayor parte del texto se halló en bloques caídos, fuera de su orden; desde la década de 1980 un esfuerzo colectivo conserva y reconstruye el texto revuelto con los registros fotográficos antiguos y la epigrafía maya; David Stuart participa desde 1986. Lectura directa.",
+      "source": "Pre-Columbian Society of Washington, D.C., resumen de la conferencia de David Stuart, mayo de 2022",
+      "url": "https://precolumbian.org/talk-may-2022/"
+    },
+    {
+      "claim": "Cuando se redescubrió y excavó la escalinata, solo los quince escalones inferiores estaban en su posición original. Resumen de búsqueda; la página no se pudo leer completa.",
+      "source": "Getty Conservation Institute, Maya Initiative, «Hieroglyphic Stairway at Copán»",
+      "url": "https://www.getty.edu/projects/maya-initiative/hieroglyphic-stairway-at-copan/"
+    }
+  ],
+  "do_not_use": [
+    "El número de escalones (60, 62 o 63 según la fuente) y de bloques (más de 1.250): las fuentes discrepan. No se usa.",
+    "Que la reconstrucción colocara los bloques al azar o dejara el texto casi ilegible: lo dicen sitios divulgativos; el Peabody da el 65 por ciento fuera de orden. Se usa solo la cifra del museo.",
+    "Que solo los bloques con fechas de cuenta larga se colocaran en secuencia: lo dice mayaruins.com, no verificado en fuente de calidad. No se usa.",
+    "El nombre y el número del gobernante que la terminó (Humo Concha, K'ahk' Yipyaj Chan K'awiil, decimoquinto o decimocuarto según la fuente): las fuentes discrepan en nombre, numeración y fechas de reinado. No se nombra.",
+    "Que la escalinata se hiciera para restaurar el prestigio de Copán tras la captura y ejecución de su rey Waxaklajuun Ub'aah K'awiil por Quiriguá en 738: es una lectura interpretativa de fuentes divulgativas. No se usa.",
+    "Que la colapsada fuera una sección que resbaló entera y en orden (Getty) o escalones hundidos y dispersos (Peabody): las fuentes describen la caída de forma distinta. El cuerpo dice solo que resbaló por la pirámide.",
+    "Que el Peabody se llevara la mitad de los hallazgos a Cambridge: solo en una tesis universitaria vista en resumen. No se usa.",
+    "El año de inscripción de Copán en la lista de la UNESCO (1980): la página de la UNESCO dio 403. No se usa."
+  ],
+  "status": "draft"
+}

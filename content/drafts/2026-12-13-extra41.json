@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-13-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Rabelais y la carta de Gargantúa a Pantagruel",
+    "hook": "La frase más seria de Rabelais está en una novela de gigantes que la Sorbona censuró por obscena.",
+    "quote": {
+      "text": "Ciencia sin conciencia no es más que ruina del alma.",
+      "author": "François Rabelais",
+      "work": "Pantagruel, cap. VIII, carta de Gargantúa (1532; ed. Marty-Laveaux, 1868)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1532, probablemente en la feria de Lyon, salió Pantagruel, firmado por un tal Alcofribas Nasier: un anagrama de François Rabelais, antiguo monje y médico. Es la historia de un gigante hijo de otro gigante, llena de bromas groseras. En el capítulo VIII, el padre, Gargantúa, le escribe una carta al hijo, que estudia en París.",
+      "La carta es un programa de estudios. Le pide que aprenda griego, latín, hebreo, caldeo y árabe. Celebra que en su tiempo la imprenta se inventara por inspiración divina, y lamenta que la artillería llegara por sugestión del diablo. Dice ver un abismo de ciencia. Y entonces, citando al sabio Salomón, le recuerda que la sabiduría no entra en un alma malévola, y que ciencia sin conciencia no es más que ruina del alma.",
+      "No es una advertencia contra el saber. Es la frase de un padre que acaba de pedirle al hijo que lo aprenda todo. Lo que advierte es que el saber, solo, no basta. Rabelais la puso en una carta fechada en Utopía, el 17 de marzo."
+    ],
+    "question": "¿De qué sirve saber mucho si no sabes para qué?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Rabelais", "#Citas", "#Renacimiento"],
+    "extended": ["#LiteraturaFrancesa", "#Humanismo", "#Conocimiento", "#SigloXVI", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Pantagruel, capítulo VIII («Comment Pantagruel estant a Paris receut letres de son pere Gargantua, et la copie d'icelles»), en Les Œuvres de François Rabelais, ed. Charles Marty-Laveaux, tomo I, París, Alphonse Lemerre, 1868, p. 252 y ss.: «selon le saige Salomon Sapience n'entre poinct en ame malivole, & science sans conscience n'est que ruine de l'ame»; la imprenta inventada «de mon eage par inspiration divine», la artillería «par suggestion diabolicque»; aprender griego, latín, hebreo, caldeo y árabe; «ie voy vn abysme de science»; fechada «De Utopie, ce dix septiesme iour du moys de mars» y firmada «Ton pere, Gargantua». Comprobación directa del texto.",
+      "source": "Wikisource (francés), Les Œuvres de François Rabelais (éditions Marty-Laveaux), Pantagruel, capítulo 8",
+      "url": "https://fr.wikisource.org/wiki/Les_%C5%92uvres_de_Fran%C3%A7ois_Rabelais_(%C3%89ditions_Marty-Laveaux)/Pantagruel/8"
+    },
+    {
+      "claim": "Rabelais nació hacia 1494 cerca de Chinon (fecha incierta) y murió en París en 1553; estudió medicina en Montpellier y fue médico del Hôtel-Dieu de Lyon; la primera versión de Pantagruel apareció en Lyon en 1532 bajo el seudónimo Alcofribas Nasier, anagrama de su nombre; Pantagruel y Gargantua incurrieron en la censura de la Sorbona. Lectura directa.",
+      "source": "Encyclopédie Larousse, «François Rabelais»",
+      "url": "https://www.larousse.fr/encyclopedie/personnage/Fran%C3%A7ois_Rabelais/140121"
+    },
+    {
+      "claim": "Pantagruel apareció probablemente en noviembre de 1532, en la feria de Lyon, impreso por Claude Nourry; Alcofribas Nasier es anagrama de Rabelais, antiguo monje benedictino convertido en médico; la carta de Gargantúa es un «véritable programme humaniste» sobre los deberes intelectuales y morales del hijo; el libro fue condenado al año siguiente por obscenidad. Lectura directa.",
+      "source": "Guy Belzane, «Pantagruel, François Rabelais. Fiche de lecture», Encyclopædia Universalis",
+      "url": "https://www.universalis.fr/encyclopedie/pantagruel/"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el francés de la edición Marty-Laveaux (1868). No presentarla como la de ningún traductor publicado.",
+    "Que la frase esté en Gargantua: circula así en páginas de citas. Está en Pantagruel, capítulo VIII, y la escribe el personaje Gargantúa.",
+    "La fecha exacta de la censura de la Sorbona (1532, 1533 o 1543 según la fuente): no se resolvió. El hook dice solo que la Sorbona la censuró por obscena, sin año.",
+    "Que conscience signifique aquí solo conciencia moral: en el francés del siglo XVI la palabra también se acercaba a conocimiento de sí o de Dios, y no se verificó un estudio que lo zanje. El cuerpo no la define.",
+    "Que la máxima de Salomón corresponda a Sabiduría 1, 4: no se verificó el versículo. El cuerpo dice solo que la carta cita al sabio Salomón.",
+    "La fecha de nacimiento de Rabelais (1483, 1494): incierta. No se usa.",
+    "Los detalles del ejemplar de Claude Nourry en la BnF (Rés. Y² 2146): vistos solo en un resumen de búsqueda. No se usan."
+  ],
+  "status": "draft"
+}

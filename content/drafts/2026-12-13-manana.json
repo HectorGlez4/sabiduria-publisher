@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-13-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Eugène Poubelle y el arrêté de 1883",
+    "hook": "En francés, el bote de basura lleva el apellido de un funcionario. Lo pusieron sus críticos, para burlarse de él.",
+    "body": [
+      "El 24 de noviembre de 1883, Eugène Poubelle, prefecto del Sena, firmó un decreto para París. Obligaba a los propietarios a dar a cada inquilino un recipiente con tapa para la basura de la casa. Y preveía tres: uno para lo que se pudre, otro para papeles y trapos, otro para vidrio, loza y conchas de ostra.",
+      "Casi nadie lo quiso. Los propietarios pagaban los recipientes. Los porteros cargaban con el trabajo. Unos cuarenta mil traperos, que vivían de revolver la basura en la calle, veían en peligro su oficio. Un periodista de Le Figaro llamó a los recipientes boîtes Poubelle, cajas Poubelle, y el nombre se quedó. En 1890 un diccionario ya registraba poubelle como nombre común.",
+      "La separación en tres se aplicó mal y se abandonó pronto. Lo que sobrevivió fue la burla. El hombre que quiso que los parisinos clasificaran su basura hace casi ciento cincuenta años es recordado por el recipiente, no por la idea."
+    ],
+    "question": "¿Cuántas buenas ideas se recuerdan solo por el nombre que les puso quien se reía de ellas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Las cajas Poubelle",
+    "subtitle": "París, 24 de noviembre de 1883",
+    "body": "Un prefecto ordenó recipientes con tapa y basura separada en tres. Le Figaro se burló llamándolos cajas Poubelle. La separación se abandonó; el apellido se volvió la palabra francesa para el bote de basura."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Etimologia", "#HistoriaDeParis", "#Curiosidades"],
+    "extended": ["#SigloXIX", "#Reciclaje", "#Palabras", "#Francia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El 24 de noviembre de 1883 Eugène Poubelle, prefecto del Sena, firma el arrêté; los propietarios deben proporcionar a cada inquilino un recipiente con tapa para los residuos domésticos; se prevén tres cajas: materias putrescibles, papeles y trapos, vidrio, loza y conchas de ostra; unos 40.000 traperos en París ven amenazado su sustento; Henri Rochefort pide su abandono en La Lanterne del 23 de enero de 1884; descontento de propietarios y porteras; la palabra poubelle entra en 1890 en el Grand dictionnaire universel du XIXe siècle. Lectura directa.",
+      "source": "RetroNews (BnF), «Le très impopulaire arrêté Poubelle», 1 de septiembre de 2020",
+      "url": "https://www.retronews.fr/societe/echo-de-presse/2020/09/01/le-tres-impopulaire-arrete-poubelle"
+    },
+    {
+      "claim": "24 de noviembre de 1883, Eugène René Poubelle, prefecto del Sena, impone recipientes cerrados para la basura doméstica y recogida diaria en carros de caballos; tres tipos de recipientes; el tri se aplicó mal y desapareció del segundo arrêté, del 7 de marzo de 1884; hostilidad de la prensa; un periodista de Le Figaro llamó a los recipientes «boîtes Poubelle» y el nombre se quedó. Lectura directa.",
+      "source": "Hérodote.net, almanaque, 24 de noviembre de 1883",
+      "url": "https://www.herodote.net/almanach-ID-445.php"
+    },
+    {
+      "claim": "Eugène-René Poubelle, prefecto del Sena de 1883 a 1896; tres recipientes por hogar (perecederos, papel y tela, loza y conchas); las cajas se llamaron «boîtes Poubelle» y la palabra la poubelle viene de su apellido. Lectura directa.",
+      "source": "Universidad de Oxford, Faculty of Medieval and Modern Languages, Bookshelf, «Great French Lives: Eugène Poubelle»",
+      "url": "https://bookshelf.mml.ox.ac.uk/?p=486"
+    },
+    {
+      "claim": "En 1883 se establece en París la llamada ley Poubelle, que impone recipientes cerrados para los residuos diarios; patentes de cajas de basura domésticas desde enero de 1884. Lectura directa.",
+      "source": "INPI (Institut national de la propriété industrielle), archivos, «Eugène Poubelle, the inventor of the trash can», Google Arts & Culture",
+      "url": "https://artsandculture.google.com/story/eug%C3%A8ne-poubelle-the-inventor-of-the-trash-can/bAVRFgJzbfSQJg"
+    }
+  ],
+  "do_not_use": [
+    "Que el decreto de 1883 fuera una ley: era un arrêté prefectoral. «Ley Poubelle» es un uso suelto. El cuerpo dice decreto en sentido amplio, sin llamarlo ley.",
+    "Que el arrêté del 7 de marzo de 1884 suprimiera la separación en tres: lo dice Hérodote; Wikipedia en inglés dice lo contrario (tres recipientes con tapa de 40 a 120 litros en 1884). Por eso el cuerpo dice solo que se aplicó mal y se abandonó pronto, sin fechar el abandono.",
+    "Las medidas del recipiente (madera forrada de hojalata, 40 a 120 litros): solo en fuentes divulgativas o en Wikipedia. No se usan.",
+    "El nombre del periodista de Le Figaro y la fecha del artículo: ninguna fuente leída los da. No se nombran.",
+    "Que Poubelle «inventara» el bote de basura: impuso su uso obligatorio; los recipientes existían y hay patentes de otros inventores desde 1884.",
+    "Su embajada ante el Vaticano desde 1896 y la orden de conexión al alcantarillado de 1894: solo en Wikipedia y fuentes secundarias; no se usan.",
+    "Fechas de nacimiento y muerte (Caen, 15 de abril de 1831; París, 15 de julio de 1907): solo Wikipedia. No se usan."
+  ],
+  "status": "draft"
+}

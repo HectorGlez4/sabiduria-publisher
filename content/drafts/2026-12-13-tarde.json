@@ -1,0 +1,66 @@
+{
+  "id": "2026-12-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Catulo y el poema 85, odi et amo",
+    "hook": "Un poeta de Verona describió el amor que duele en catorce palabras latinas. No usó ni un solo sustantivo.",
+    "quote": {
+      "text": "Odio y amo. Por qué lo hago, quizá preguntes. No lo sé, pero siento que pasa, y me atormento.",
+      "author": "Catulo",
+      "work": "Carmina, poema 85 (ed. de E. T. Merrill, 1893)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Cayo Valerio Catulo nació en Verona o cerca de ella hacia el 84 a.C., en una familia próspera. El poema 85 de su libro tiene dos versos y catorce palabras en latín. Ocho son verbos: odiar, amar, hacer, preguntar, no saber, ocurrir, sentir, atormentarse. No hay un solo sustantivo. Ni siquiera el nombre de la mujer.",
+      "Se suele leer como un poema a Lesbia, el nombre que Catulo da a su amada en otros versos. Dos siglos después, Apuleyo escribió que Lesbia era un nombre puesto en lugar del verdadero, Clodia. El poema no lo dice. Solo dice que dos cosas contrarias suceden a la vez en la misma persona, y que esa persona no las entiende.",
+      "No hay consejo ni salida. El que habla no decide odiar ni amar: lo siente pasar. Hace más de dos mil años alguien admitió que no sabía por qué sentía lo que sentía. Y lo dijo sin adornos."
+    ],
+    "question": "¿Has sentido algo que no podías explicar ni a ti mismo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Catulo", "#Citas", "#PoesiaLatina"],
+    "extended": ["#Roma", "#Antiguedad", "#Amor", "#Literatura", "#Clasicos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema 85 en la edición de E. T. Merrill: «Odi et amo. quare id faciam fortasse requiris. / nescio, sed fieri sentio et excrucior.» Comprobación directa del texto; dos versos, catorce palabras, ocho verbos y ningún sustantivo (recuento propio sobre este texto).",
+      "source": "Perseus Digital Library (Tufts University), Catulo, Carmina, poema 85, ed. E. T. Merrill",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0003:poem=85"
+    },
+    {
+      "claim": "Misma lectura del poema 85 en la edición de Merrill, con licencia CC BY 4.0. Comprobación directa del texto.",
+      "source": "Alpheios, Catullus, Carmina, ed. Elmer Truesdell Merrill, passage 85",
+      "url": "https://texts.alpheios.net/text/urn:cts:latinLit:phi0472.phi001.alpheios-text-lat1/passage/85"
+    },
+    {
+      "claim": "La edición de Merrill del texto de Catulo que usa Perseus (urn:cts:latinLit:phi0472.phi001.perseus-lat2) es Catullus, ed. Elmer Truesdell Merrill, Ginn and Company, 1893. Lectura directa.",
+      "source": "Digital Latin Library, catálogo, registro de la edición Merrill de Catulo",
+      "url": "https://catalog.digitallatin.org/dll-web-page/wp546"
+    },
+    {
+      "claim": "Apuleyo, Apología 10: Catulo es criticable por la misma razón porque «Lesbiam pro Clodia nominarit», es decir, llamó Lesbia a Clodia. Lectura directa.",
+      "source": "Living Poets, Durham University, «Apuleius, Apology 10»",
+      "url": "https://livingpoets.awh.durham.ac.uk/w/index.php/Apuleius,_Apology_10"
+    },
+    {
+      "claim": "Catulo nació en Verona o cerca de ella en el 84 a.C., en una familia próspera. Lectura directa.",
+      "source": "University at Buffalo, LitGloss, «About Catullus»",
+      "url": "https://litgloss.buffalo.edu/catullus/about.php"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el latín de Merrill (1893). No presentarla como la de ningún traductor publicado.",
+    "Que el poema 85 nombre a Lesbia o se dirija a ella: no lo hace. El cuerpo dice que se suele leer así.",
+    "Que Lesbia fuera con certeza Clodia Metelli, la esposa de Metelo Céler: Apuleyo dice solo Clodia, y Clodia Metelli tenía dos hermanas con el mismo nombre. No se identifica a cuál.",
+    "Fechas de muerte (54 a.C., 52 o 51 a.C.) y la edad de treinta años: son conjeturas discutidas (Jerónimo da 87-57 a.C.). El cuerpo no da fecha ni lugar de muerte.",
+    "Que excrucior derive de crux, cruz, como prueba de que el poeta habla de crucifixión: la etimología no se verificó en una fuente de calidad. No se usa.",
+    "La puntuación: Merrill no pone coma tras faciam; otras ediciones sí. No cambia el sentido."
+  ],
+  "status": "draft"
+}
