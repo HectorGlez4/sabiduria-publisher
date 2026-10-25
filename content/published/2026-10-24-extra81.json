@@ -71,9 +71,25 @@
     "Atribuir el origen de la idea a Ali ibn Abi Talib o al Nahj al-Balagha: circula en internet y no se verificó en esta investigación.",
     "Fechar la versión inglesa del Leviatán (1651) como la de «scientia potentia est»: la frase latina es de la edición latina de 1668."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-25T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1132386806252645",
+      "url": "https://www.facebook.com/874327782058550/posts/1132386806252645",
+      "published_at": "2026-10-25T07:40:00.878931+00:00"
+    },
+    "instagram": {
+      "post_id": "17951745870315584",
+      "url": "https://www.instagram.com/p/De6MT4vIN3G/",
+      "published_at": "2026-10-25T07:40:16.974485+00:00"
+    },
+    "threads": {
+      "post_id": "18136968757732292",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18136968757732292",
+      "published_at": "2026-10-25T07:40:31.224355+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",

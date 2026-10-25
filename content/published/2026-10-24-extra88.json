@@ -72,9 +72,25 @@
     "Corregir a quien cita la frase con «humano»: «humane» era solo la grafía de la época, no otra palabra con otro sentido.",
     "«Un poco de conocimiento es algo peligroso»: es la forma mal citada; Pope escribió «learning» (saber, instrucción). En el copy se traduce como «un poco de saber»."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-25T02:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1132372122920780",
+      "url": "https://www.facebook.com/874327782058550/posts/1132372122920780",
+      "published_at": "2026-10-25T07:17:25.172797+00:00"
+    },
+    "instagram": {
+      "post_id": "18120722774068164",
+      "url": "https://www.instagram.com/p/De6JuS0Di1F/",
+      "published_at": "2026-10-25T07:17:40.492051+00:00"
+    },
+    "threads": {
+      "post_id": "18116345843123426",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18116345843123426",
+      "published_at": "2026-10-25T07:17:53.618648+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
