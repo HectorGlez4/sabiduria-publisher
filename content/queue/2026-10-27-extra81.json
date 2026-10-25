@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-11-extra41",
+  "id": "2026-10-27-extra81",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Lessing", "#Citas", "#Ilustracion"],
-    "extended": ["#Verdad", "#Filosofia", "#SigloXVIII", "#Alemania", "#LiteraturaAlemana", "#Tolerancia", "#Sabiduria"]
+    "topic": [
+      "#Lessing",
+      "#Citas",
+      "#Ilustracion"
+    ],
+    "extended": [
+      "#Verdad",
+      "#Filosofia",
+      "#SigloXVIII",
+      "#Alemania",
+      "#LiteraturaAlemana",
+      "#Tolerancia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -68,5 +80,12 @@
     "El lugar de impresión: Google Books no lo da; Quote Investigator da Braunschweig. Se usa Braunschweig.",
     "El texto alemán completo no se leyó en un facsímil ni en una edición crítica (Projekt Gutenberg y zeno.org no respondieron). Se reconstruye a partir de Quote Investigator, que cita las pp. 10-11 de 1778, y del Lernhelfer para la frase final."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-27T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

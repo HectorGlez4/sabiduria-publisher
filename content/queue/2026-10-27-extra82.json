@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-11-tarde",
+  "id": "2026-10-27-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#LaBruyere", "#Citas", "#LiteraturaFrancesa"],
-    "extended": ["#Moralistas", "#SigloXVII", "#LosCaracteres", "#Escritura", "#Originalidad", "#Francia", "#Sabiduria"]
+    "topic": [
+      "#LaBruyere",
+      "#Citas",
+      "#LiteraturaFrancesa"
+    ],
+    "extended": [
+      "#Moralistas",
+      "#SigloXVII",
+      "#LosCaracteres",
+      "#Escritura",
+      "#Originalidad",
+      "#Francia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -64,5 +76,12 @@
     "El número de observaciones de la primera edición varía según la fuente (418 o 420). El cuerpo dice «unas 420».",
     "Los «siete mil años» no son un cálculo de La Bruyère sobre la prehistoria: reflejan la cronología bíblica corriente en su época. No comentarlo como dato."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-10-27T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

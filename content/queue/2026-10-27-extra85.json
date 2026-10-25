@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-07-extra41",
+  "id": "2026-10-27-extra85",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,18 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Xunzi", "#FilosofiaChina", "#Aprendizaje"],
-    "extended": ["#Confucianismo", "#Citas", "#Educacion", "#Proverbios", "#Filosofia"]
+    "topic": [
+      "#Xunzi",
+      "#FilosofiaChina",
+      "#Aprendizaje"
+    ],
+    "extended": [
+      "#Confucianismo",
+      "#Citas",
+      "#Educacion",
+      "#Proverbios",
+      "#Filosofia"
+    ]
   },
   "sources": [
     {
@@ -57,6 +67,12 @@
     "Que Xun Kuang escribiera personalmente todos los capítulos del libro Xunzi, o quién y cuándo lo compiló. No verificado aquí; la pieza habla de ‘el libro que lleva su nombre’.",
     "La traducción de Hutton de la primera frase (‘Learning must never stop’). Solo apareció resumida en una búsqueda, sin abrir la edición; no se cita."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-10-28T04:26:00Z",
+  "results": {}
 }
