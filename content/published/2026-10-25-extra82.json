@@ -72,9 +72,25 @@
     "Fechas de nacimiento y muerte de Sima Qian como datos cerrados: hacia 145 o 135 a.C. el nacimiento, hacia 86 a.C. la muerte. No se dan en el copy.",
     "El nombre de Li Ling no se usa en el copy por espacio; si se añade, no decir que «se pasó al enemigo» sin matiz: lo que las fuentes dicen es que fue derrotado y capturado."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-25T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1133019789522680",
+      "url": "https://www.facebook.com/874327782058550/posts/1133019789522680",
+      "published_at": "2026-10-25T22:41:18.481202+00:00"
+    },
+    "instagram": {
+      "post_id": "18116028380328647",
+      "url": "https://www.instagram.com/p/De7zdFJjbVZ/",
+      "published_at": "2026-10-25T22:41:33.562335+00:00"
+    },
+    "threads": {
+      "post_id": "18109611998185036",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18109611998185036",
+      "published_at": "2026-10-25T22:41:46.590463+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
