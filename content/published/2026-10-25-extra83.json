@@ -73,9 +73,25 @@
     "Interpretaciones sobre la influencia de Rousseau o la lectura de Salman Rushdie: son lecturas de comentaristas, no hechos.",
     "Decidir si «sueño» significa aquí 'dormir' o 'soñar': la ambigüedad existe en español y el copy no la resuelve."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-26T01:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1133373229487336",
+      "url": "https://www.facebook.com/874327782058550/posts/1133373229487336",
+      "published_at": "2026-10-26T08:22:58.873936+00:00"
+    },
+    "instagram": {
+      "post_id": "18121810199282192",
+      "url": "https://www.instagram.com/p/De82BXolG8w/",
+      "published_at": "2026-10-26T08:23:10.624150+00:00"
+    },
+    "threads": {
+      "post_id": "18099011282103682",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18099011282103682",
+      "published_at": "2026-10-26T08:23:22.697119+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",

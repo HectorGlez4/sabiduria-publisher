@@ -73,9 +73,25 @@
     "Presentar la frase como rechazo de toda influencia europea: el editorial pide adaptar el socialismo a la realidad americana, no rechazar ideas de fuera.",
     "Los PDF de Redalyc y Cuadernos Americanos no se pudieron leer; la cita está verificada en el texto completo del editorial en Marxists.org."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-26T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1133403342817658",
+      "url": "https://www.facebook.com/874327782058550/posts/1133403342817658",
+      "published_at": "2026-10-26T09:09:49.445052+00:00"
+    },
+    "instagram": {
+      "post_id": "18119476664077988",
+      "url": "https://www.instagram.com/p/De87YcsFMPb/",
+      "published_at": "2026-10-26T09:10:01.968991+00:00"
+    },
+    "threads": {
+      "post_id": "17912046729490426",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/17912046729490426",
+      "published_at": "2026-10-26T09:10:14.338410+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",

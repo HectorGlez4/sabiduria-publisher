@@ -74,9 +74,25 @@
     "Que «haru wa akebono» signifique literalmente «la primavera es el alba»: el original no tiene verbo; la cópula y el «es lo mejor» los pone el traductor.",
     "Traducir わろし como «malo» moralmente: en este contexto es feo, sin gracia, desagradable a la vista."
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-10-26T04:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1133417552816237",
+      "url": "https://www.facebook.com/874327782058550/posts/1133417552816237",
+      "published_at": "2026-10-26T09:32:20.341444+00:00"
+    },
+    "instagram": {
+      "post_id": "17866910826678793",
+      "url": "https://www.instagram.com/p/De899U_lF0z/",
+      "published_at": "2026-10-26T09:32:30.778025+00:00"
+    },
+    "threads": {
+      "post_id": "18171845791456949",
+      "url": "https://www.threads.net/@sabiduriabolsillo/post/18171845791456949",
+      "published_at": "2026-10-26T09:32:43.673695+00:00"
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
