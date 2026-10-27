@@ -74,12 +74,15 @@
     "Que Rush le pidiera a Jefferson leer a William Paley y el «credo religioso» prometido: aparecen en notas sobre esta correspondencia, pero no se verificaron en lectura directa. No se mencionan.",
     "La fecha de inauguración del Memorial (1943): no verificada en esta ejecución. No se menciona."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-10-26T20:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

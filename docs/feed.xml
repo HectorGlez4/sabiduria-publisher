@@ -7,8 +7,26 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 26 Oct 2026 09:32:43 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:49:32 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-10-26-re51-reel</guid>
+      <pubDate>Mon, 26 Oct 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["Yo soy yo y mi circunstancia, y si no la salvo a ella no me salvo yo."
+— José Ortega y Gasset (1883-1955)
+
+Casi siempre se cita a medias y en plural: "yo soy yo y mis circunstancias". Recortada así queda en un encogimiento de hombros, casi una excusa: esto es lo que hay, esto me tocó. La frase entera dice lo contrario, porque la segunda mitad es una obligación.
+
+Circunstancia, en singular, es lo que está alrededor: el barrio, el trabajo, la gente que a uno le tocó. Ortega no propone resignarse a eso ni escapar de eso, sino salvarlo, y advierte que no hay salvación propia por separado. Lo escribió a los treinta y un años, en su primer libro, siendo catedrático en Madrid; veintidós años después tuvo que salir del país, y esa también fue su circunstancia.
+
+¿Qué parte de lo que te rodea estás esperando cambiar en vez de atender?
+
+#SabiduriaDeBolsillo #OrtegaYGasset #Filosofia #Frases]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El pasaje más famoso de la literatura japonesa empieza con dos sustantivos y ningún verbo. Hace mil años que los lectores ponen el verbo que falta.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -489,26 +507,6 @@ Por esos años preparaba su ataque contra la fisiognomía de Lavater, la moda de
 #SabiduriaDeBolsillo #Lichtenberg #Aforismos #Citas]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>«Mi corazón se ha vuelto capaz de toda forma: es pradera para las gacelas y convento para los monjes, templo para los ídolos y Kaaba del peregrino, tablas de la Torá y libro del Corán.»</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-22-extra85</guid>
-      <pubDate>Fri, 23 Oct 2026 09:46:32 +0000</pubDate>
-      <description><![CDATA["Mi corazón se ha vuelto capaz de toda forma: es pradera para las gacelas y convento para los monjes, templo para los ídolos y Kaaba del peregrino, tablas de la Torá y libro del Corán."
-— Ibn Arabi, Tarjuman al-Ashwaq, poema XI, versos 13-14 (trad. R. A. Nicholson, Londres, 1911)
-
-Ibn Arabi nació en Murcia el 28 de julio de 1165. Tenía siete años cuando su familia se trasladó a Sevilla, y treinta y cinco cuando dejó al-Ándalus para siempre. Llegó a La Meca para la peregrinación de 1202. Allí conoció a Nizam, hija del jeque Makinuddin, un sabio de Isfahán: una joven de gran belleza, conocida por su ascetismo y por la elocuencia de su predicación. Para ella escribió los sesenta y un poemas del Tarjuman al-Ashwaq, «El intérprete de los deseos», en la forma de la casida preislámica: camellos, gacelas, la amada que se aleja.
-
-Los teólogos de Alepo leyeron el libro como lo que parecía, poesía amorosa, y dudaron de que un maestro sufí la escribiera por otra cosa que por deseo. Ibn Arabi respondió con un comentario, los Dhakha'ir al-a'laq, redactado en Alepo a petición de dos discípulos y terminado en 1215, donde explica verso a verso el sentido místico de cada imagen. En él, los versos 13 a 15 del poema XI dicen que el corazón cambia según las influencias divinas que recibe, y que el amante sigue la religión del Amor: adonde vayan sus camellos, esa es su fe. En 1223 se instaló en Damasco. Murió allí el 16 de noviembre de 1240 y está enterrado en la ladera del monte Qasiún.
-
-Los tres versos son hoy los más citados de toda su obra, y casi siempre sin el comentario que él mismo escribió para que no se leyeran a la ligera. La traducción es nuestra, hecha sobre la versión inglesa de Reynold A. Nicholson, publicada en Londres en 1911 y todavía la referencia en Occidente. El poema no dice que todas las religiones sean iguales. Dice algo más difícil: que un corazón puede hacerse lo bastante ancho para que quepan todas.
-
-¿Qué forma tendría que adoptar tu corazón para entender a quien piensa distinto?
-
-#SabiduriaDeBolsillo #IbnArabi #Sufismo #Murcia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra85.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-22-extra85.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
