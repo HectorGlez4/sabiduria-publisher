@@ -78,10 +78,26 @@
   ],
   "status": "ready",
   "publish_at": "2026-10-27T01:26:00Z",
-  "results": {},
+  "results": {
+    "facebook": {
+      "post_id": "100618132774413_1134840116007314",
+      "url": "https://www.facebook.com/874327782058550/posts/1134840116007314",
+      "published_at": "2026-10-27T20:17:26.535556+00:00"
+    },
+    "instagram": {
+      "post_id": "18147770440586729",
+      "url": "https://www.instagram.com/p/DfAslLcHQMI/",
+      "published_at": "2026-10-27T20:17:41.513148+00:00"
+    },
+    "threads": {
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 27-Oct-26 13:17:41 PDT."
+    }
+  },
   "targets": [
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "attempts": 1,
+  "last_attempt": "2026-10-27T20:17:41.788889+00:00"
 }
