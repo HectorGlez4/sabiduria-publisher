@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 27 Oct 2026 19:55:18 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 13:20:12 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-10-26-re55-reel</guid>
+      <pubDate>Tue, 27 Oct 2026 02:26:00 +0000</pubDate>
+      <description><![CDATA[MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA
+
+Vivía de vender fósiles en la playa de Lyme Regis, al sur de Inglaterra. En 1811 su hermano encontró el cráneo de un animal desconocido y ella desenterró el resto del esqueleto: el primer ictiosaurio que llegó a la ciencia londinense. En diciembre de 1823 sacó del acantilado el primer esqueleto completo de plesiosaurio. Cuvier, la mayor autoridad de Europa, lo dio por falso antes de rectificar.
+
+Los artículos que describieron esos animales casi nunca llevaban su nombre. La Sociedad Geológica de Londres discutió su plesiosaurio en una reunión a la que no la invitaron. Nunca fue socia: no admitían mujeres.
+
+Murió el 9 de marzo de 1847. Al año siguiente el presidente de esa misma sociedad leyó su elogio fúnebre ante los socios, rompiendo la norma por alguien de fuera. Las mujeres pudieron ingresar en mayo de 1919: setenta y dos años tarde.
+
+¿De quién es el mérito: de quien encuentra o de quien escribe?
+
+#SabiduriaDeBolsillo #MaryAnning #Paleontologia #MujeresEnLaCiencia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re55-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re55-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Tus hijos no son tus hijos: son hijos e hijas de la vida, deseosa de sí misma.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,26 +506,6 @@ Desde el 24 de septiembre de 1970 cuelga una réplica en cobre en el segundo pis
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El que lee mucho y anda mucho, ve mucho y sabe mucho.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-23-re51-reel</guid>
-      <pubDate>Fri, 23 Oct 2026 17:26:00 +0000</pubDate>
-      <description><![CDATA["El que lee mucho y anda mucho, ve mucho y sabe mucho."
-— Cervantes, Don Quijote II, 25 (1615)
-
-Conviene decir de entrada que esta sí es de Cervantes. La mayoría de las frases que circulan firmadas "Don Quijote" no están en el libro: son invenciones que el propio Centro de Estudios Cervantinos se dedica a desmentir una por una.
-
-Y la frase pone dos verbos juntos que solemos separar: leer y andar. No dice que leer baste. Dice que el que hace las dos cosas ve mucho, y solo después de ver, sabe.
-
-Cervantes tenía autoridad para afirmarlo. Estuvo cinco años cautivo en Argel, perdió el uso de la mano izquierda en Lepanto, recorrió Andalucía cobrando impuestos y pasó por la cárcel. Escribió la segunda parte del Quijote a los 68 años, un año antes de morir.
-
-¿De lo que sabes hoy, cuánto lo leíste y cuánto lo caminaste?
-
-#SabiduriaDeBolsillo #Cervantes #Quijote #Lectura]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

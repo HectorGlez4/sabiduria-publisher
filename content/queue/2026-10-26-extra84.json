@@ -74,12 +74,15 @@
     "Que el balneario esté en la ciudad de Kumamoto: está en Tamana (Tenmizu), en la prefectura. El cuerpo dice que Sōseki enseñaba en Kumamoto, no que la posada esté allí.",
     "El concepto de 非人情 («desapego», «no-humanidad») y la escena final con Nami: son el centro de la novela pero no caben sin simplificarlos. No se usan."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-10-27T03:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
