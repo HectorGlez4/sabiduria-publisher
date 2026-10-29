@@ -2,7 +2,7 @@
   "id": "2026-10-26-extra85",
   "slot": "noche",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "la Bhagavad Gita y el verso 2.47",
     "hook": "Se lee como un consejo para trabajar sin ansiedad. Krishna se lo dice a un guerrero que acaba de anunciar que no piensa pelear contra su propia familia.",
@@ -89,9 +89,12 @@
       "published_at": "2026-10-28T18:57:55.437723+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 28-Oct-26 16:21:49 PDT."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 28-Oct-26 19:38:13 PDT."
     }
   },
-  "attempts": 2,
-  "last_attempt": "2026-10-28T23:21:49.567316+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-10-29T02:38:13.484448+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 28-Oct-26 19:38:13 PDT."
+  ]
 }
