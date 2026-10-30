@@ -76,7 +76,7 @@
     "El número de observaciones de la primera edición varía según la fuente (418 o 420). El cuerpo dice «unas 420».",
     "Los «siete mil años» no son un cálculo de La Bruyère sobre la prehistoria: reflejan la cronología bíblica corriente en su época. No comentarlo como dato."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-10-27T20:26:00Z",
   "results": {
     "facebook": {
@@ -90,7 +90,7 @@
       "published_at": "2026-10-29T17:47:19.833470+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Thursday, 29-Oct-26 14:54:47 PDT."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Thursday, 29-Oct-26 19:03:12 PDT."
     }
   },
   "targets": [
@@ -98,6 +98,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-10-29T21:54:47.304729+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-10-30T02:03:12.509642+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Thursday, 29-Oct-26 19:03:12 PDT."
+  ]
 }
