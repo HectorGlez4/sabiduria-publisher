@@ -65,8 +65,22 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_story": {
+      "post_id": "1692745209076409",
+      "photo_id": "1137680899056569",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-30T16:29:54.464250+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17980399229920454",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-10-30T16:30:10.742539+00:00"
+    }
+  },
   "cita_slug": "baltasar-gracian-lo-bueno-si-breve-dos-veces-bueno",
   "reemision_de": "2026-08-29-tarde"
 }

@@ -75,12 +75,15 @@
     "Que en el momento de escribir el poema estuviera en Nueva York: los años de la portada coinciden con el viaje, pero no se verificó dónde se escribió el poema III. No se afirma.",
     "La interpretación del poema como «realismo poético» (Gutiérrez-Pozo): no se leyó el artículo completo. No se cita como tesis."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-10-28T01:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
