@@ -67,12 +67,15 @@
     "Que Xun Kuang escribiera personalmente todos los capítulos del libro Xunzi, o quién y cuándo lo compiló. No verificado aquí; la pieza habla de ‘el libro que lleva su nombre’.",
     "La traducción de Hutton de la primera frase (‘Learning must never stop’). Solo apareció resumida en una búsqueda, sin abrir la edición; no se cita."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-10-28T04:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
