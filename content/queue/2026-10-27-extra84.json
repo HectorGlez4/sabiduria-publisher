@@ -2,7 +2,7 @@
   "id": "2026-10-27-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Rousseau y el Contrato social de 1762",
     "hook": "La frase más revolucionaria de Rousseau va seguida de una confesión: no sabe cómo ocurrió, y su libro no promete romper las cadenas.",
@@ -88,9 +88,12 @@
       "published_at": "2026-10-30T21:20:57.259215+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Friday, 30-Oct-26 17:54:14 PDT."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 31-Oct-26 00:10:08 PDT."
     }
   },
-  "attempts": 2,
-  "last_attempt": "2026-10-31T00:54:14.716575+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-10-31T07:10:08.741717+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 31-Oct-26 00:10:08 PDT."
+  ]
 }
