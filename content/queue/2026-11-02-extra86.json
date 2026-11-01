@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-17-tarde",
+  "id": "2026-11-02-extra86",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "CALDERÓN DE LA BARCA",
     "subtitle": "De la jornada tercera, cuando Segismundo ya no sabe qué es real",
     "body": "«Los sueños, sueños son» cierra la jornada segunda y desde entonces se cita sola. En la jornada tercera, Segismundo saca de la misma duda la conclusión contraria a la que se le atribuye: si igual estoy soñando, obrar bien sigue conviniendo, aunque solo sea por ganar amigos para cuando despierte."
@@ -81,5 +81,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-03T01:26:00Z",
+  "results": {}
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-11-tarde",
+  "id": "2026-11-02-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Plutarco", "#Educacion", "#FilosofiaAntigua"],
-    "extended": ["#Moralia", "#Grecia", "#Citas", "#Aprender", "#Escuchar", "#Historia"]
+    "topic": [
+      "#Plutarco",
+      "#Educacion",
+      "#FilosofiaAntigua"
+    ],
+    "extended": [
+      "#Moralia",
+      "#Grecia",
+      "#Citas",
+      "#Aprender",
+      "#Escuchar",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -59,6 +70,12 @@
     "Decir que Plutarco escribía sobre niños o sobre escuelas. El texto es un tratado dirigido a un joven sobre cómo asistir a lecciones filosóficas.",
     "Usar la transcripción latina del griego que aparece en el cuerpo como si fuera el texto original. El texto original, en alfabeto griego, está en la primera fuente; en el cuerpo se transcribe para que se pueda leer en voz alta."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-11-02T19:26:00Z",
+  "results": {}
 }

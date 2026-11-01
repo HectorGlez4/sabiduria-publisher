@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-13-tarde",
+  "id": "2026-11-01-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Catulo", "#Citas", "#PoesiaLatina"],
-    "extended": ["#Roma", "#Antiguedad", "#Amor", "#Literatura", "#Clasicos", "#Sabiduria"]
+    "topic": [
+      "#Catulo",
+      "#Citas",
+      "#PoesiaLatina"
+    ],
+    "extended": [
+      "#Roma",
+      "#Antiguedad",
+      "#Amor",
+      "#Literatura",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -62,5 +73,12 @@
     "Que excrucior derive de crux, cruz, como prueba de que el poeta habla de crucifixión: la etimología no se verificó en una fuente de calidad. No se usa.",
     "La puntuación: Merrill no pone coma tras faciam; otras ediciones sí. No cambia el sentido."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-01T22:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

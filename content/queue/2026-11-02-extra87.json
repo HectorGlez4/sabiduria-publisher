@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-19-tarde",
+  "id": "2026-11-02-extra87",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Hildegarda de Bingen y el interdicto de 1178",
     "hook": "A los ochenta años la castigaron con el silencio: a sus monjas se les prohibió cantar. Respondió con una carta en la que no alega compasión ni obediencia. Alega música.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -77,5 +77,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-11-03T04:26:00Z",
+  "results": {}
 }

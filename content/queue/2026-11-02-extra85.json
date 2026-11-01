@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-12-tarde",
+  "id": "2026-11-02-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Tacito", "#Roma", "#HistoriaDelDerecho"],
-    "extended": ["#Anales", "#Citas", "#Leyes", "#Latin", "#Tiberio", "#Republica", "#Clasicos"]
+    "topic": [
+      "#Tacito",
+      "#Roma",
+      "#HistoriaDelDerecho"
+    ],
+    "extended": [
+      "#Anales",
+      "#Citas",
+      "#Leyes",
+      "#Latin",
+      "#Tiberio",
+      "#Republica",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -59,6 +71,12 @@
     "Presentar las Doce Tablas como el elogio de Tácito a la buena legislación en general. Las llama el último caso de derecho equitativo, y lo dice como bisagra de lo que va a contar: todo lo posterior es decadencia.",
     "Atribuir a Tácito la idea de que la corrupción causa las leyes. La oración pone las dos cosas juntas, no una detrás de la otra; la relación causal es de la interpretación posterior."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-11-02T20:26:00Z",
+  "results": {}
 }

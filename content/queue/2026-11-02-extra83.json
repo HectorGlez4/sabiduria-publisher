@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-10-tarde",
+  "id": "2026-11-02-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JoseRizal", "#Filipinas", "#Literatura"],
-    "extended": ["#ElFilibusterismo", "#SigloXIX", "#Citas", "#Historia", "#Libertad", "#Novela"]
+    "topic": [
+      "#JoseRizal",
+      "#Filipinas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#ElFilibusterismo",
+      "#SigloXIX",
+      "#Citas",
+      "#Historia",
+      "#Libertad",
+      "#Novela"
+    ]
   },
   "sources": [
     {
@@ -59,6 +70,12 @@
     "Citar la versión inglesa «Why independence, if the slaves of today will be the tyrants of tomorrow?» como si fuera el original. Rizal escribió la novela en español; esa forma viene de las traducciones.",
     "El relato de que Rizal se quedó sin dinero a mitad de la impresión y que Valentín Ventura pagó el resto. Circula en casi todas las semblanzas, pero no se verificó aquí contra una fuente de archivo y no se afirma."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-11-02T15:26:00Z",
+  "results": {}
 }
