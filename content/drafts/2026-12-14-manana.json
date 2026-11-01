@@ -1,0 +1,52 @@
+{
+  "id": "2026-12-14-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Vera Rubin y la curva plana de Andrómeda (1970)",
+    "hook": "En 1970, dos astrónomos midieron Andrómeda y las estrellas del borde iban tan rápido como las del centro. No debía ser así.",
+    "body": [
+      "En 1965, Vera Rubin entró en el Departamento de Magnetismo Terrestre de la Institución Carnegie, en Washington. Allí su colega Kent Ford acababa de construir un espectrógrafo con tubo de imagen, uno de los primeros detectores electrónicos de la astronomía. Reducía el tiempo de exposición a una décima parte del de una placa fotográfica sola.",
+      "Con ese aparato midieron cómo giran las estrellas de la galaxia de Andrómeda. Lo esperable era que las lejanas al centro fueran más despacio, como los planetas exteriores del Sistema Solar. No ocurrió: la velocidad se mantenía plana mucho más allá de la luz visible de la galaxia. Publicaron el resultado en febrero de 1970 en The Astrophysical Journal. Rubin escribió después que les pareció desconcertante.",
+      "Hizo falta una década más de curvas planas, galaxia tras galaxia, para que la comunidad aceptara lo que implicaban: que la mayor parte de la materia no se ve. En 1980 Rubin publicó veintiuna galaxias espirales con el mismo comportamiento. Murió el 25 de diciembre de 2016 sin el Nobel. En 2019 el gran telescopio de rastreo que se construía en Chile pasó a llamarse Observatorio Vera C. Rubin."
+    ],
+    "question": "¿Cuánto de lo que damos por cierto descansa en lo que todavía no hemos medido?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La curva que no caía",
+    "subtitle": "Vera Rubin y Kent Ford, Andrómeda, 1970",
+    "body": "Las estrellas del borde de Andrómeda giraban tan rápido como las cercanas al centro. Hizo falta una década para aceptar lo que eso implicaba: que la mayor parte de la materia de las galaxias no se ve."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#VeraRubin", "#Astronomia", "#MateriaOscura"],
+    "extended": ["#Andromeda", "#MujeresEnLaCiencia", "#SigloXX", "#Ciencia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Rubin entró en 1965 en el Departamento de Magnetismo Terrestre (DTM) de la Institución Carnegie de Washington; Ford construyó el espectrógrafo DTM con tubo de imagen, «the first electronic optical detector in astronomy», hoy en el Museo Nacional del Aire y el Espacio; la primera curva de rotación de Rubin y Ford, en 1970, fue la de Andrómeda; velocidades que se mantienen planas en lugar de decaer; en la década siguiente observaron muchas espirales con curvas planas; murió el 25 de diciembre de 2016 en Princeton; el comité Nobel «failed to honor her». Lectura directa.",
+      "source": "Neta A. Bahcall, «Vera Cooper Rubin», obituario, Physics Today, marzo de 2017",
+      "url": "https://physicstoday.aip.org/obituaries/vera-cooper-rubin"
+    },
+    {
+      "claim": "Rubin y Ford, Astrophysical Journal, vol. 159, p. 379 (febrero de 1970); las velocidades de las estrellas lejanas al centro no disminuían; en el número de junio de 1980 del Astrophysical Journal, 21 galaxias espirales, todas con curvas planas, y la frase «The conclusion is inescapable that non-luminous matter exists beyond the optical galaxy»; en 2019 el Large Synoptic Survey Telescope se renombró Observatorio Vera C. Rubin. Lectura directa.",
+      "source": "Tess Joosse, «This Month in Physics History», APS News, 11 de mayo de 2023",
+      "url": "https://www.aps.org/apsnews/2023/05/vera-rubin-paper-dark-matter"
+    },
+    {
+      "claim": "Relato de la propia Rubin: Kent Ford había construido un espectrógrafo con tubo de imagen RCA en cascada que reducía la exposición a 1/10 de la de una placa fotográfica sin ayuda; «Rotation velocities remain flat well beyond the optical galaxy»; «We found it puzzling that stars far from the center traveled as fast as those much closer to the center»; tras el artículo de 1970 hizo falta una década de más curvas planas e ideas teóricas para que la comunidad aceptara que la mayor parte de la materia es oscura; cita Astrophys. J. 159, 379 (1970). Lectura directa.",
+      "source": "Vera C. Rubin, «Seeing dark matter in the Andromeda galaxy», Physics Today, diciembre de 2006",
+      "url": "https://physicstoday.aip.org/opinion/seeing-dark-matter-in-the-andromeda-galaxy"
+    }
+  ],
+  "do_not_use": [
+    "Que Rubin «descubriera» la materia oscura: Zwicky la propuso en los años treinta y la aceptación fue colectiva. El cuerpo dice que sus curvas llevaron a aceptarla.",
+    "Que fuera la primera mujer autorizada a observar en Palomar, y el año exacto: el obituario de Physics Today dice solo que se le negó tiempo en el Hale hasta mediados de los sesenta. No se usa.",
+    "El artículo de 1978 con diez galaxias: aparece en resúmenes de búsqueda, no en las páginas leídas. Se usa solo el de 1980.",
+    "Que el 85 % de la masa del universo sea materia oscura: cifra de un resumen de búsqueda, no de las páginas leídas. No se usa.",
+    "La sociedad que acordó el cambio de nombre del observatorio en 2019: APS News no la nombra. El cuerpo no la menciona."
+  ],
+  "status": "draft"
+}

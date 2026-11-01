@@ -1,0 +1,75 @@
+{
+  "id": "2026-12-14-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Brecht y el país que necesita héroes (Galilei)",
+    "hook": "La frase más citada de Brecht contra los héroes la dice un hombre que acaba de abjurar por miedo.",
+    "quote": {
+      "text": "Desdichado el país que necesita héroes.",
+      "author": "Bertolt Brecht",
+      "work": "Leben des Galilei, escena de la abjuración (escrita en 1938-1939; estreno, Zúrich, 1943)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Brecht escribió Vida de Galileo en 1938 y 1939, exiliado en Dinamarca. Se estrenó en Zúrich el 9 de septiembre de 1943. En una de sus escenas finales, los discípulos de Galileo esperan en Roma el resultado del proceso ante la Inquisición. Confían en que no ceda. Entonces se lee en público su abjuración.",
+      "Andrea, el más fiel de ellos, le grita insultos. Cuando el maestro entra, no quiere ni mirarlo, y le dice: desdichado el país que no tiene héroes. Galileo le responde: no, desdichado el país que necesita héroes.",
+      "La frase se cita como una sentencia de sabiduría política. En la obra es también la defensa de alguien que acaba de ceder. Brecht reescribió la pieza dos veces: con Charles Laughton en Estados Unidos, estrenada en 1947, y otra vez en Berlín en los años cincuenta. Después de Hiroshima, su Galileo dejó de ser un sabio astuto y pasó a ser un hombre que se reprocha su cobardía."
+    ],
+    "question": "¿Es sabio no necesitar héroes, o es la excusa de quien no quiso serlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Brecht", "#Citas", "#Galileo"],
+    "extended": ["#Teatro", "#LiteraturaAlemana", "#SigloXX", "#Heroes", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El diálogo en alemán: Andrea: «Unglücklich das Land, das keine Helden hat.» Galilei: «Nein. Unglücklich das Land, das Helden nötig hat.» Lectura directa, en el anuncio de una puesta en escena de Leben des Galilei.",
+      "source": "Universität Potsdam, ZESSKO, archivo de noticias 2020, «Leben des Galilei»",
+      "url": "https://www.uni-potsdam.de/de/zessko/service/nachrichten-archiv/archiv-2020/lebendesgalilei"
+    },
+    {
+      "claim": "Andrea: «Unhappy is the land that breeds no hero.» Galileo: «No, Andrea: Unhappy is the land that needs a hero.», con el alemán «Unglücklich das Land, das Helden nötig hat»; traducción de la versión llevada a escena por Charles Laughton (ISBN 0-8021-3059-3), escena 12, p. 115, con variantes de traducción. Lectura directa.",
+      "source": "Wikiquote (inglés), «Bertolt Brecht», sección Life of Galileo",
+      "url": "https://en.wikiquote.org/wiki/Bertolt_Brecht"
+    },
+    {
+      "claim": "El mismo intercambio, en la versión americana escrita con Charles Laughton: Galileo responde así a las palabras de despedida de su discípulo Andrea Sarti, furioso y traicionado por la abjuración de su maestro. Lectura directa.",
+      "source": "Noah Millman, «Brecht's Galileo: Hero or Anti-Hero?», The American Conservative, 16 de marzo de 2012",
+      "url": "https://www.theamericanconservative.com/anti-hero-of-science/"
+    },
+    {
+      "claim": "En la escena, Virginia, Federzoni, el pequeño monje y Andrea esperan en Roma el resultado del interrogatorio de Galileo por la Inquisición; su declaración se lee en público; los discípulos se rebelan y Andrea no quiere ni mirarlo; Andrea es el más vehemente e hiriente. Lectura directa.",
+      "source": "LitCharts, «The Life of Galileo», personaje Andrea Sarti",
+      "url": "https://www.litcharts.com/lit/the-life-of-galileo/characters/andrea-sarti"
+    },
+    {
+      "claim": "Escrita en 1938/39 en el exilio en Dinamarca; primera versión estrenada en 1943 en el Schauspielhaus de Zúrich; segunda versión estrenada en 1947 en Beverly Hills (Coronet Theatre). Lectura directa.",
+      "source": "Suhrkamp Verlag, ficha de Bertolt Brecht, Leben des Galilei (edition suhrkamp)",
+      "url": "https://www.suhrkamp.de/buch/bertolt-brecht-leben-des-galilei-t-9783518100011"
+    },
+    {
+      "claim": "Tras Hiroshima y Nagasaki, Brecht cambió la concepción de la obra: la primera versión danesa mostraba a Galileo como científico independiente, la americana como políticamente comprometido, y en la tercera, la versión de Berlín (1956), lamenta su irresponsabilidad; representación de Galileo en Beverly Hills en 1947. Lectura directa.",
+      "source": "Deutsches Historisches Museum, LeMO, biografía de Bertolt Brecht",
+      "url": "https://www.dhm.de/lemo/biografie/bertolt-brecht"
+    },
+    {
+      "claim": "Estreno el 9 de septiembre de 1943 en el Schauspielhaus de Zúrich; versión con Charles Laughton elaborada entre 1944 y 1947 en Santa Mónica; versión de Berlín de 1955/56. Lectura directa.",
+      "source": "Wikipedia (alemán), «Leben des Galilei»",
+      "url": "https://de.wikipedia.org/wiki/Leben_des_Galilei"
+    }
+  ],
+  "do_not_use": [
+    "El número de la escena: Wikiquote da la escena 12 de la versión inglesa; otras fuentes de búsqueda dan la 13; Wikipedia en alemán titula la abjuración como Bild 14 en un apartado. Varía según versión y edición. Por eso work dice «escena de la abjuración», sin número.",
+    "La traducción es propia, sobre el alemán «Unglücklich das Land, das Helden nötig hat». No presentarla como la de ningún traductor publicado.",
+    "La fecha del 22 de junio de 1633 y la campana que anuncia la abjuración en la escena: no se verificaron en ninguna página leída. El cuerpo no las usa.",
+    "Que la frase exprese la opinión de Brecht sin más: la dice el personaje de Galileo justo después de abjurar, y Brecht endureció luego el juicio sobre él. No citarla como máxima del autor sin ese contexto.",
+    "Las páginas de la edición Suhrkamp que dan las guías escolares: no se comprobaron sobre la edición. No se citan páginas."
+  ],
+  "status": "draft"
+}

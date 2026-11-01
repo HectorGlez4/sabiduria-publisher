@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-14-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Qin Shi Huang y el mercurio de su tumba en el monte Li",
+    "hook": "Un historiador chino escribió que la tumba del primer emperador tenía ríos de mercurio. Hace dos mil años. El suelo le da la razón.",
+    "body": [
+      "Qin Shi Huang, el primer emperador que unificó China, fue enterrado en el monte Li en el año 210 a.C. El historiador Sima Qian dejó en el Shiji la descripción: más de setecientos mil condenados excavaron hasta pasar tres capas de agua. Dentro pusieron palacios en miniatura, ballestas que disparaban solas contra quien se acercara, y mercurio que imitaba los cien ríos, el Yangtsé, el río Amarillo y el gran mar, movido por mecanismos. Arriba, el cielo. Abajo, la geografía. A los artesanos que conocían el interior los dejaron encerrados dentro.",
+      "En el montículo se tomaron muestras de suelo. Un estudio encontró hasta 1440 partes por mil millones de mercurio, con una media de 205; otro, más reciente, hasta 2204. Entre julio y agosto de 2016, un equipo de la Universidad de Lund y de colegas chinos midió con láser el mercurio del aire alrededor de la tumba: hasta 27 nanogramos por metro cúbico, frente a un fondo de 5 a 10. Lo publicaron en Scientific Reports en junio de 2020.",
+      "La cámara nunca se ha abierto. La excavación se aplaza hasta que haya forma de proteger lo que hay dentro del contacto con el aire. Los autores dicen que su hallazgo da credibilidad al relato de Sima Qian. También dicen que no permite afirmar que haya un mapa de China debajo. El mercurio está. Los ríos, nadie los ha visto."
+    ],
+    "question": "¿Cuánto vale un relato antiguo que la ciencia confirma a medias?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Los ríos de mercurio",
+    "subtitle": "Monte Li, 210 a.C. — Scientific Reports, 2020",
+    "body": "Sima Qian describió una tumba con ríos de mercurio. El suelo y el aire del montículo tienen niveles altos de mercurio. La cámara sigue cerrada: el mercurio está, los ríos nadie los ha visto."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#QinShiHuang", "#ChinaAntigua", "#Arqueologia"],
+    "extended": ["#SimaQian", "#GuerrerosDeTerracota", "#Mercurio", "#Historia", "#Ciencia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Shiji, capítulo 6 (Anales básicos de Qin Shi Huang): «葬始皇酈山»; más de setecientos mil condenados («天下徒送詣七十餘萬人»); «穿三泉»; palacios, funcionarios y objetos raros; «令匠作機弩矢，有所穿近者輒射之»; «以水銀為百川江河大海，機相灌輸，上具天文，下具地理»; lámparas de grasa de «人魚»; los artesanos que conocían el interior quedaron encerrados («盡閉工匠臧者，無復出者»); «樹草木以象山». Lectura directa del texto chino.",
+      "source": "Sima Qian, Shiji, cap. 6, «秦始皇本紀», Wikisource en chino",
+      "url": "https://zh.wikisource.org/zh-hant/%E5%8F%B2%E8%A8%98/%E5%8D%B7006"
+    },
+    {
+      "claim": "Zhao, Zhang, Duan, Lian, Hou, Li, Zhu y Svanberg, «Mercury as a Geophysical Tracer Gas – Emissions from the Emperor Qin Tomb in Xi'an Studied by Laser Radar», Scientific Reports 10:10414, 26 de junio de 2020: suelo con hasta 1440 ppb y media de 205 ppb en un estudio, 2204 y 169 ppb en uno más reciente; medidas del 24 de julio al 12 de agosto de 2016 desde tres posiciones; hasta 27 ng/m3 frente a un fondo de 5-10 ng/m3; la cámara «has never been opened/looted» y la investigación arqueológica se aplaza hasta tener métodos para proteger los objetos de la exposición al aire; los resultados «add to the credibility» de Sima Qian; asociar el patrón a un mapa de China «would be unwarranted»; la estimación de flujo es «extremely crude». Lectura directa.",
+      "source": "Scientific Reports (Nature), 2020, vía PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7319949"
+    },
+    {
+      "claim": "Según registros de 2200 años, la tumba del emperador Qin, nunca abierta, contendría grandes cantidades de mercurio líquido formando lagos y ríos de un «mapa» de China; el grupo de Sune Svanberg detectó gas de mercurio saliendo de la cámara subterránea con un lidar móvil; resultados publicados en Scientific Reports. Página del 6 de julio de 2020. Lectura directa.",
+      "source": "Lund University, Department of Physics, «Mercury emission from the “Terracotta Army” emperor Qin's mausoleum in Xian measured by lidar»",
+      "url": "https://www.fysik.lu.se/en/node/24"
+    }
+  ],
+  "do_not_use": [
+    "Que la tumba esté llena de ríos de mercurio comprobados: lo medido es mercurio en suelo y aire. Los propios autores dicen que no autoriza a hablar de un mapa de China.",
+    "Que no se abra por miedo a trampas o a maldiciones: lo que dice el artículo es que se espera a métodos que protejan los objetos del aire. Las trampas son el relato de Sima Qian, no la razón oficial.",
+    "«Aceite de ballena» para las lámparas: el texto dice 人魚膏, grasa de «pez humano», y su identificación (ballena, salamandra gigante, foca) es discutida. El cuerpo no lo menciona.",
+    "Las fechas de los muestreos de suelo (1981-1982, 2003) y el área muestreada: solo en resúmenes de búsqueda, no en las páginas leídas. El cuerpo no los fecha.",
+    "La fecha de redacción del Shiji y la distancia exacta en años entre Sima Qian y el entierro: no se verificaron. El cuerpo no las da.",
+    "Que «el suelo le da la razón» signifique prueba: en el hook es una forma de decir que los niveles de mercurio concuerdan con el relato; el cuerpo lo matiza.",
+    "El hallazgo de los guerreros de terracota en marzo de 1974 por campesinos que cavaban un pozo: el artículo solo da 1974. No se usa."
+  ],
+  "status": "draft"
+}

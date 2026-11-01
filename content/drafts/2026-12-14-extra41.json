@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-14-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Montaigne y la forma entera de la humana condición",
+    "hook": "Montaigne escribió tres libros sobre un solo tema, él mismo. Y lo justificó en una frase.",
+    "quote": {
+      "text": "Cada hombre lleva la forma entera de la humana condición.",
+      "author": "Michel de Montaigne",
+      "work": "Ensayos, libro III, cap. 2, «Del arrepentimiento» (1588; ed. póstuma de 1595)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1580 Michel de Montaigne publicó en Burdeos, con el impresor Simon Millanges, los dos primeros libros de sus Ensayos. En 1588 salió en París, con Abel L'Angelier, una edición con un tercer libro. Siguió corrigiendo a mano un ejemplar de esa edición, el que hoy se conoce como ejemplar de Burdeos. Marie de Gournay preparó en 1595 la primera edición póstuma.",
+      "El segundo capítulo del libro III se titula «Del arrepentimiento». Empieza así: los otros forman al hombre; yo lo cuento, y represento a uno en particular, bastante mal formado. Más adelante dice que el mundo no es más que un columpio perpetuo, y que él no enseña, cuenta.",
+      "Y entonces se defiende. Propone, dice, una vida baja y sin lustre. Da igual: toda la filosofía moral se aplica igual a una vida común que a una de tela más rica, porque cada hombre lleva la forma entera de la humana condición. No es modestia ni vanidad. Es el argumento de que mirarse con honestidad a uno mismo ya es estudiar a todos."
+    ],
+    "question": "¿Qué aprenderías de los demás si te miraras a ti mismo sin indulgencia?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Montaigne", "#Citas", "#Ensayos"],
+    "extended": ["#Renacimiento", "#LiteraturaFrancesa", "#SigloXVI", "#Humanismo", "#Filosofia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del ejemplar de Burdeos, Essais, libro III, capítulo 2: «Les autres forment l'homme ; je le recite et en represente un particulier bien mal formé»; «Le monde n'est qu'une branloire perenne»; «Je n'enseigne poinct, je raconte»; «Je propose une vie basse et sans lustre, c'est tout un. On attache aussi bien toute la philosophie morale à une vie populaire et privée que à une vie de plus riche estoffe : chaque homme porte la forme entiere de l'humaine condition». Lectura directa.",
+      "source": "Wikisource (francés), Essais, exemplaire de Bordeaux, Livre III, Chapitre 2",
+      "url": "https://fr.wikisource.org/wiki/Essais/Livre_III/Chapitre_2"
+    },
+    {
+      "claim": "En el texto de 1595 de la edición Michaud (1907): «Chaque homme porte la forme entiere, de l'humaine condition»; también «Les autres forment l'homme, ie le recite», «Le monde n'est qu'vne branloire perenne» y «Ie n'enseigne point, ie raconte». Lectura directa.",
+      "source": "Wikisource (francés), Essais, édition Michaud, 1907, Livre III, Chapitre 2 (texto 1595)",
+      "url": "https://fr.wikisource.org/wiki/Essais/%C3%A9dition_Michaud,_1907/Livre_III/Chapitre_2"
+    },
+    {
+      "claim": "Catálogo de facsímiles: Essais, Bordeaux, S. Millanges, 1580, libros I y II; Essais, París, A. L'Angelier, 1588, libros I a III; ejemplar de Burdeos (edición de 1588); Les Essais, París, A. L'Angelier, 1595, primera edición de Marie de Gournay. La página del proyecto describe el ejemplar de Burdeos como la edición de 1588 con correcciones y añadidos casi todos autógrafos, completado por la edición póstuma de 1595. Lectura directa.",
+      "source": "MONLOE, Bibliothèques Virtuelles Humanistes, CESR, Université de Tours (M.-L. Demonet y A. Legros), «Fac-similés des Essais» y página del proyecto",
+      "url": "https://montaigne.univ-tours.fr/essais-montaigne/"
+    }
+  ],
+  "do_not_use": [
+    "La traducción es propia, sobre el francés del ejemplar de Burdeos y del texto de 1595. No presentarla como la de ningún traductor publicado.",
+    "La versión modernizada de Michaud de 1907 («dans chaque homme se retrouve l'homme tout entier») no es el texto de Montaigne: es una adaptación. No citarla como original.",
+    "Cuántos años dedicó Montaigne a los Ensayos (se suele decir «veinte»): no se verificó en ninguna página leída. El hook habla de tres libros, que sí consta en el catálogo de ediciones.",
+    "Las fechas de nacimiento y muerte de Montaigne (1533-1592) y que corrigiera el ejemplar de Burdeos hasta su muerte: no aparecen en las páginas leídas. El cuerpo no las da.",
+    "Que «Que sais-je?» sea la frase de este capítulo: es otro lema de Montaigne, de la Apología de Raimundo Sabunde (II, 12). No mezclar."
+  ],
+  "status": "draft"
+}
