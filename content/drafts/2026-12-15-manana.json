@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-15-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Maria Reiche y las líneas de Nazca (1932-1998)",
+    "hook": "Maria Reiche no descubrió las líneas de Nazca. Las estudió durante cuarenta años y las defendió cuando casi nadie las defendía.",
+    "body": [
+      "Las líneas de Nazca ya habían sido estudiadas en los años veinte por el arqueólogo peruano Toribio Mejía Xesspe. Maria Reiche, nacida en Dresde en 1903, llegó a Perú en 1932 como institutriz de los hijos del cónsul alemán en Cuzco. Era matemática. Después dio clases en Lima y tradujo textos científicos.",
+      "Hacia 1940 se hizo ayudante del historiador estadounidense Paul Kosok, que estudiaba los antiguos sistemas de riego. En 1941 sobrevoló las líneas. Kosok se fue de Perú en 1948. Ella se quedó en Nazca y siguió sola: midió a pie más de 150 kilómetros cuadrados de desierto y defendió que las figuras eran un gran calendario astronómico.",
+      "Esa hipótesis no se sostuvo. En los años setenta Gerald Hawkins y Anthony Aveni no encontraron relación estadística entre las orientaciones y los fenómenos celestes, y otros investigadores propusieron un vínculo con el agua y los rituales. Lo que sí quedó fue su trabajo de protección: pidió restringir el acceso, financió una torre de observación con las regalías de su libro y recibió la nacionalidad peruana en 1993. Murió en Lima el 8 de junio de 1998."
+    ],
+    "question": "¿Cuánto vale un trabajo de décadas cuando la hipótesis que lo movía resultó equivocada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La señora de las líneas",
+    "subtitle": "Maria Reiche, Nazca, 1941-1998",
+    "body": "Su teoría del calendario astronómico no resistió las pruebas estadísticas. Su trabajo de medición y de protección del desierto sí quedó, y sin él las líneas se habrían perdido."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MariaReiche", "#LineasDeNazca", "#Peru"],
+    "extended": ["#Arqueologia", "#MujeresEnLaCiencia", "#SigloXX", "#Historia", "#Patrimonio", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Reiche (Dresde, 15 de mayo de 1903 – Lima, 8 de junio de 1998) emigró a Perú en 1932 y fue tutora en Cuzco; Kosok y ella estudiaron las líneas juntos desde 1941; desde 1946 trabajó por su cuenta y midió a pie más de 150 km²; interpretó las figuras como calendario astronómico; protegió el sitio, financió una torre de observación con las regalías de su libro; recibió la nacionalidad peruana en 1993. Lectura directa.",
+      "source": "Deutsche Biographie, entrada «Reiche, Maria»",
+      "url": "https://www.deutsche-biographie.de/118852825.html"
+    },
+    {
+      "claim": "En 1932 fue institutriz de los hijos del cónsul alemán en Cuzco; en 1939 maestra en Lima y traductora científica; en 1940 ayudante de Kosok; en 1941 un vuelo le dio la primera vista aérea; tras la partida de Kosok en 1948 siguió sola desde Nazca; Hawkins y Aveni no hallaron relación estadística significativa entre las orientaciones y eventos celestes; su modelo ha sido criticado; murió el 8 de junio de 1998 en Lima y fue enterrada cerca de Nazca. Lectura directa.",
+      "source": "Wikipedia (inglés), «Maria Reiche»",
+      "url": "https://en.wikipedia.org/wiki/Maria_Reiche"
+    },
+    {
+      "claim": "Toribio Mejía Xesspe fue el primero en estudiar sistemáticamente las líneas (1926 según este artículo); Kosok investigó en 1941 y las llamó «el libro de astronomía más grande del mundo»; Reiche defendió la teoría astronómica y protegió el sitio; en los años setenta Reinhard y Aveni la cuestionaron y las vincularon con agua, fertilidad y ritos de lluvia. Lectura directa.",
+      "source": "National Geographic, «Nazca lines in Peru»",
+      "url": "https://www.nationalgeographic.com/history/article/nasca-lines"
+    }
+  ],
+  "do_not_use": [
+    "Que Reiche «descubrió» las líneas: las fuentes atribuyen el primer estudio a Mejía Xesspe y la investigación astronómica inicial a Kosok.",
+    "El año del estudio de Mejía Xesspe: National Geographic da 1926, otras fuentes de búsqueda 1927. El cuerpo dice solo «años veinte».",
+    "El año en que Kosok vio las líneas por primera vez: 1939 según Deutsche Biographie, 1941 según National Geographic y Wikipedia. El cuerpo no lo fija.",
+    "El año de la inscripción en la UNESCO: Deutsche Biographie da 1995, Wikipedia 1994. No se usa porque no se pudo contrastar con la página de la UNESCO (da 403).",
+    "El año en que Reiche empezó a trabajar sola: 1946 (Deutsche Biographie) o 1948 tras la partida de Kosok (Wikipedia). El cuerpo dice que siguió sola después de 1948 y no fija el inicio.",
+    "Que fuera «la primera extranjera» con nacionalidad peruana: lo afirma una sola fuente. No se usa.",
+    "La anécdota de la escoba y la limpieza diaria de las líneas: no apareció en ninguna página leída. No se usa."
+  ],
+  "status": "draft"
+}

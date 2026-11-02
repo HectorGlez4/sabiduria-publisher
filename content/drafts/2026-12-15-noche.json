@@ -1,0 +1,53 @@
+{
+  "id": "2026-12-15-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Zenón de Citio y el naufragio que lo llevó a Atenas",
+    "hook": "Según la tradición, el fundador del estoicismo llegó a la filosofía por un naufragio. Los antiguos ya contaban la historia de tres maneras.",
+    "body": [
+      "Todo lo que sabemos de cómo Zenón de Citio llegó a Atenas viene de Diógenes Laercio, que escribió en el siglo III d. C., siglos después de los hechos. Cuenta que Zenón viajaba de Fenicia al Pireo con un cargamento de tinte púrpura y naufragó. Subió a Atenas, se sentó en una librería y se puso a leer los Memorables de Jenofonte, donde Sócrates aparece vivo. Preguntó dónde podía encontrar hombres así. Pasaba Crates de Tebas, y el librero le dijo: sigue a ese hombre.",
+      "La frase que la tradición le atribuye es: «Hice una buena travesía cuando naufragué». Pero Diógenes anota que otros la contaban distinto. Unos decían que la dijo por Crates. Otros, que se enteró del naufragio estando ya en Atenas y exclamó que la Fortuna hacía bien en empujarlo a la filosofía. Y otros, que no hubo naufragio: vendió la carga en Atenas y después se dedicó a filosofar.",
+      "Hacia el año 301 a. C. empezó a enseñar en la Estoa Pecile, el pórtico pintado de Atenas, y de ahí sacó el nombre su escuela. Que la anécdota sea o no exacta importa menos que lo que cuenta: una pérdida no tiene por qué ser el final de un plan. Puede ser lo que lo cambia de rumbo."
+    ],
+    "question": "¿Qué pérdida de tu vida acabó llevándote a algo que no habrías buscado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El naufragio de Zenón",
+    "subtitle": "Diógenes Laercio, Vidas, VII",
+    "body": "Zenón perdió su cargamento de púrpura cerca del Pireo y acabó en una librería de Atenas, leyendo a Jenofonte. La tradición pone en su boca: «Hice una buena travesía cuando naufragué»."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Zenon", "#Estoicismo", "#FilosofiaAntigua"],
+    "extended": ["#Atenas", "#DiogenesLaercio", "#Grecia", "#Filosofia", "#Historia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Zenón compró púrpura en Fenicia y naufragó cerca del Pireo; fue a Atenas, leyó a Jenofonte en una librería, el librero señaló a Crates («Sigue a ese hombre»); dijo «ahora comprendo que hice una buena travesía cuando naufragué»; variantes: lo dijo por Crates, o la frase a la Fortuna estando en Atenas, o no hubo naufragio y vendió la carga. Traducción de C. D. Yonge (1895), §§ 3 y 5. Lectura directa.",
+      "source": "Diógenes Laercio, Vidas de los filósofos ilustres, libro VII, «Vida de Zenón» (trad. Yonge), Attalus",
+      "url": "https://www.attalus.org/old/diogenes7a.html"
+    },
+    {
+      "claim": "Naufragio en un viaje de Fenicia al Pireo con cargamento de púrpura; sentado en una librería de Atenas; el librero señala a Crates; «I made a prosperous voyage when I suffered shipwreck»; otros atribuyen la frase a su tiempo con Crates; la versión de la Fortuna; la versión sin naufragio. Traducción de R. D. Hicks (Loeb, 1925), VII, §§ 2-5. Lectura directa.",
+      "source": "Diógenes Laercio, Vidas, VII (trad. Hicks, Loeb 1925), Perseus Digital Library",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0258:book=7:chapter=1"
+    },
+    {
+      "claim": "El naufragio, la librería, Jenofonte, Crates de Tebas; cronología posible de llegada a Atenas hacia 312/311 a. C.; comienza a enseñar en la Estoa Pecile en 301 a. C.; los seguidores fueron llamados primero «zenonianos» y luego estoicos; casi todos los detalles proceden de Diógenes Laercio y estas anécdotas se consideran en general poco fiables. Lectura directa.",
+      "source": "Wikipedia (inglés), «Zeno of Citium»",
+      "url": "https://en.wikipedia.org/wiki/Zeno_of_Citium"
+    }
+  ],
+  "do_not_use": [
+    "La edad de Zenón al llegar a Atenas: Hicks da treinta años; la cronología citada por Wikipedia da veintidós hacia 312/311 a. C. Las fechas de su vida son controvertidas. El cuerpo no la menciona.",
+    "La traducción al español de la frase y de las variantes es propia, sobre las versiones inglesas de Yonge y de Hicks. Las dos difieren en el tiempo verbal de la frase («Ahora comprendo...» / «Hice...»). No presentarla como cita literal de ninguna traducción.",
+    "Que el naufragio sea un hecho histórico: la única fuente es Diógenes Laercio, que escribe siglos después y recoge una versión sin naufragio. Se presenta como tradición.",
+    "Que Zenón fuera fenicio sin más o que Citio fuera «una ciudad griega»: no se verificó en las páginas leídas. No se usa.",
+    "La fecha de 301 a. C. para el inicio de su enseñanza procede solo de Wikipedia. No se contrastó con una fuente académica; antes de publicar, conviene contrastarla.",
+    "Los detalles añadidos por divulgación («la sopa de lentejas», el cargamento perdido «entero» o su fortuna previa): no están en las páginas de Diógenes leídas. No se usan."
+  ],
+  "status": "draft"
+}

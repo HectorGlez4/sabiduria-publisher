@@ -1,0 +1,56 @@
+{
+  "id": "2026-12-15-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Wittgenstein y la proposición 7 del Tractatus",
+    "hook": "La frase final del Tractatus suele citarse como una orden de callar. Wittgenstein la puso justo después de pedir que se tirara la escalera.",
+    "quote": {
+      "text": "De lo que no se puede hablar, hay que callar.",
+      "author": "Ludwig Wittgenstein",
+      "work": "Tractatus logico-philosophicus, proposición 7 (Annalen der Naturphilosophie, 1921)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Wittgenstein redactó el Tractatus durante la Primera Guerra Mundial, después de alistarse en el ejército austriaco en 1914. Se publicó en alemán en 1921, en la revista de Wilhelm Ostwald, Annalen der Naturphilosophie. En 1922 apareció en Londres la edición bilingüe con la traducción de C. K. Ogden, y el autor revisó las pruebas.",
+      "El libro termina con una sola línea, la proposición 7: Wovon man nicht sprechen kann, darüber muss man schweigen. Se usa como lema de humildad, o como prohibición de hablar de lo que no se puede probar. Pero la proposición anterior pide algo más raro: quien ha entendido el libro debe reconocer que sus frases son disparates, y tirar la escalera después de subir por ella.",
+      "En 1919, antes de publicarlo, Wittgenstein describió el libro como una obra de sentido ético y dijo que lo esencial lo había puesto en su sitio callándolo. Años después, cuando Carnap sostuvo en el Círculo de Viena que las últimas frases eran confusas, protestó y dijo que no podía imaginar que se hubiera entendido tan mal el final. El silencio de la proposición 7 no cierra la pregunta. Marca dónde termina lo que el lenguaje puede mostrar."
+    ],
+    "question": "¿De qué cosas importantes de tu vida sabes más de lo que podrías decir?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Wittgenstein", "#Citas", "#Tractatus"],
+    "extended": ["#Filosofia", "#Lenguaje", "#SigloXX", "#Silencio", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Proposición 7 en alemán, «Wovon man nicht sprechen kann, darüber muss man schweigen», y en inglés (Ogden) «Whereof one cannot speak, thereof one must be silent»; primera publicación en alemán en 1921 en los Annalen der Naturphilosophie de Ostwald; edición inglesa de Kegan Paul en 1922; carta de 1919 a Ficker sobre el sentido ético del libro; la reacción de Wittgenstein a la lectura de Carnap; la metáfora de la escalera. Lectura directa.",
+      "source": "Wikipedia (inglés), «Tractatus Logico-Philosophicus»",
+      "url": "https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus"
+    },
+    {
+      "claim": "Proposición 7 en las traducciones de Ogden y de Pears y McGuinness (1961); la escritura de las notas durante la Primera Guerra Mundial tras alistarse en 1914; el texto alemán de 1921 y la traducción de Ogden y Ramsey de 1922; la escalera que hay que descartar tras subirla. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Ludwig Wittgenstein»",
+      "url": "https://plato.stanford.edu/entries/wittgenstein/"
+    },
+    {
+      "claim": "Edición Kegan Paul de 1922 con traducción de C. K. Ogden e introducción de Russell, texto original a la par, pruebas revisadas por el autor; Ogden agradece a F. P. Ramsey su ayuda. Lectura directa.",
+      "source": "Wikisource (inglés), Tractatus Logico-Philosophicus, portada y datos de edición",
+      "url": "https://en.wikisource.org/wiki/Tractatus_Logico-Philosophicus"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia, sobre el alemán. No presentarla como la de ninguna edición española publicada.",
+    "El número de la proposición que precede a la 7 («6.54», la escalera): se verificó que existe la metáfora de la escalera al final del libro, pero la numeración exacta no se leyó en el texto. El cuerpo dice «la proposición anterior» sin número.",
+    "La frase del prólogo «lo que puede decirse, puede decirse claramente»: no se verificó en el texto del prólogo. No se usa.",
+    "Que la proposición 7 sea una defensa del misticismo o una condena de la metafísica sin más: son lecturas en disputa. El cuerpo se limita a la carta de 1919 y a la escalera.",
+    "La carta a Ficker (1919) y la reacción a Carnap se tomaron de Wikipedia; no se contrastaron con la correspondencia publicada. La carta a Schlick sobre Carnap figura sin fecha. Antes de publicar, convendría contrastarlas con una edición de las cartas.",
+    "El año de la carta de Wittgenstein sobre Carnap y su destinatario exacto: no se fijan en el cuerpo."
+  ],
+  "status": "draft"
+}
