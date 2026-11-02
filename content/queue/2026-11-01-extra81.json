@@ -87,7 +87,7 @@
       "published_at": "2026-11-01T23:40:32.077744+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 01-Nov-26 15:40:32 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 01-Nov-26 16:55:23 PST."
     }
   },
   "targets": [
@@ -95,6 +95,6 @@
     "instagram",
     "threads"
   ],
-  "attempts": 1,
-  "last_attempt": "2026-11-01T23:40:32.469841+00:00"
+  "attempts": 2,
+  "last_attempt": "2026-11-02T00:55:23.509136+00:00"
 }
