@@ -73,7 +73,7 @@
     "Que excrucior derive de crux, cruz, como prueba de que el poeta habla de crucifixión: la etimología no se verificó en una fuente de calidad. No se usa.",
     "La puntuación: Merrill no pone coma tras faciam; otras ediciones sí. No cambia el sentido."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-01T22:26:00Z",
   "results": {
     "facebook": {
@@ -87,7 +87,7 @@
       "published_at": "2026-11-01T23:40:32.077744+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 01-Nov-26 16:55:23 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 01-Nov-26 19:40:14 PST."
     }
   },
   "targets": [
@@ -95,6 +95,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-02T00:55:23.509136+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-02T03:40:14.288584+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 01-Nov-26 19:40:14 PST."
+  ]
 }
