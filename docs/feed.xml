@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 30 Oct 2026 20:58:32 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 08:04:52 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-01-re51-reel</guid>
+      <pubDate>Sun, 01 Nov 2026 23:26:00 +0000</pubDate>
+      <description><![CDATA[Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.
+
+Maria Sibylla Merian nació en Fráncfort en 1647 y murió en Ámsterdam en 1717. En abril de 1699 se embarcó hacia Surinam con su hija menor, Dorothea. Los naturalistas neerlandeses de su tiempo viajaban con el respaldo de las grandes compañías comerciales; ella no. Vendió parte de su colección y alrededor de doscientos cincuenta y cinco pinturas propias, y completó el resto con una ayuda pequeña del ayuntamiento de Ámsterdam.
+
+Estuvo dos años en la selva, hasta que una enfermedad la obligó a volver en 1701. Lo que trajo no era una colección de ejemplares clavados con alfileres. Había dibujado a los insectos vivos y en su sitio: el huevo, la oruga, la crisálida y el adulto en la misma lámina, y encima la planta concreta de la que aquel animal comía. En 1705 publicó Metamorphosis insectorum Surinamensium, sesenta láminas de cobre, en neerlandés y en latín, asumiendo ella el riesgo económico de la edición.
+
+Poner al insecto sobre su planta parece una decisión de composición. Es una tesis: que un ser vivo no se entiende separado de aquello con lo que se relaciona. La palabra ecología no existiría hasta 1866, siglo y medio después. Hay algo más en ese libro que casi ningún naturalista de la época escribió: Merian dejó constancia de dónde venía su información, y cita el conocimiento de las personas esclavizadas y de los habitantes originarios de Surinam.
+
+¿A quién le debes un dato que hoy das por tuyo?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>A la vocación que fracasa puede suceder otra vocación; al amor que perece, puede sustituirse un amor nuevo; a la felicidad desvanecida puede hallarse el reparo de otra manera de felicidad...</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -480,26 +499,6 @@ La frase se lee hoy como un lema de emprendimiento, y en el cuento es lo contrar
 #SabiduriaDeBolsillo #LuXun #China #Literatura]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra84.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra84.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>«Se resiste a la invasión de los ejércitos; no se resiste a la invasión de las ideas.»</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-23-extra83</guid>
-      <pubDate>Sat, 24 Oct 2026 08:37:50 +0000</pubDate>
-      <description><![CDATA["Se resiste a la invasión de los ejércitos; no se resiste a la invasión de las ideas."
-— Victor Hugo, Historia de un crimen, conclusión «La caída», sección X, 1878
-
-Victor Hugo empezó Historia de un crimen en Bruselas el 11 de diciembre de 1851, nueve días después del golpe de Estado de Luis Napoleón Bonaparte, y lo dejó en mayo de 1852 para escribir Napoleón el Pequeño. El manuscrito esperó veinticinco años. Lo sacó en 1877, durante la crisis política del 16 de mayo, con una nota de cuatro frases: «Este libro es más que actual; es urgente. Lo publico». El primer tomo salió el 1 de octubre de 1877 y el segundo el 15 de marzo de 1878.
-
-La frase está en la sección X de la conclusión, «La caída», que no pudo escribirse en 1852. Empieza con Hugo de regreso de un exilio en los últimos días de septiembre de 1871, recorriendo el valle de Sedán, donde el ejército del emperador se había rendido un año antes. Desde ahí pasa a Francia y a Europa, y llega a la línea: se resiste a la invasión de los ejércitos, no a la de las ideas. Justo antes se pregunta qué hacer contra una revolución que tiene tanta razón.
-
-La versión que se repite, «nada es más poderoso que una idea cuyo tiempo ha llegado», no aparece en el libro. Expresiones parecidas ya estaban en Émile Souvestre en 1848 y en Gustave Aimard en 1861, y en el siglo XX se le pegaron a Hugo. La suya es menos optimista de lo que parece: la escribió alguien que había visto ganar al ejército en 1851 y que esperó diecinueve años de destierro a que la idea llegara.
-
-¿Qué idea de tu época crees que ningún ejército podría detener?
-
-#SabiduriaDeBolsillo #VictorHugo #Francia #Historia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra83.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-23-extra83.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

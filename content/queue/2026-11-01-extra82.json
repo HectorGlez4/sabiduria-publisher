@@ -67,12 +67,15 @@
     "La frase ‘la palabra es el medio de la civilización’ y otras que circulan a nombre de Bello sin referencia a obra. Solo se cita lo que está en el texto del discurso.",
     "Presentar la frase como un lema de superación personal o de armonía general. En el discurso es una tesis sobre la unidad del conocimiento y sobre qué debe enseñar una universidad; la enumeración que la sigue lo deja claro."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-11-02T02:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
