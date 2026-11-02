@@ -70,7 +70,7 @@
     "Citar la versión inglesa «Why independence, if the slaves of today will be the tyrants of tomorrow?» como si fuera el original. Rizal escribió la novela en español; esa forma viene de las traducciones.",
     "El relato de que Rizal se quedó sin dinero a mitad de la impresión y que Valentín Ventura pagó el resto. Circula en casi todas las semblanzas, pero no se verificó aquí contra una fuente de archivo y no se afirma."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
@@ -89,9 +89,12 @@
       "published_at": "2026-11-02T15:41:04.738296+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Monday, 02-Nov-26 10:36:09 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Monday, 02-Nov-26 13:40:32 PST."
     }
   },
-  "attempts": 2,
-  "last_attempt": "2026-11-02T18:36:10.024721+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-02T21:40:32.456618+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Monday, 02-Nov-26 13:40:32 PST."
+  ]
 }
