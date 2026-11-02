@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-14-tarde",
+  "id": "2026-11-03-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Brecht", "#Citas", "#Galileo"],
-    "extended": ["#Teatro", "#LiteraturaAlemana", "#SigloXX", "#Heroes", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#Brecht",
+      "#Citas",
+      "#Galileo"
+    ],
+    "extended": [
+      "#Teatro",
+      "#LiteraturaAlemana",
+      "#SigloXX",
+      "#Heroes",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -71,5 +82,12 @@
     "Que la frase exprese la opinión de Brecht sin más: la dice el personaje de Galileo justo después de abjurar, y Brecht endureció luego el juicio sobre él. No citarla como máxima del autor sin ese contexto.",
     "Las páginas de la edición Suhrkamp que dan las guías escolares: no se comprobaron sobre la edición. No se citan páginas."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-03T19:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

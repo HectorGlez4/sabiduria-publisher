@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-23-extra41",
+  "id": "2026-11-04-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "al-Kindi y la verdad que viene de fuera",
     "hook": "La frase se repite como elogio de la mente abierta. La escribió un hombre que defendía, ante un califa, el derecho a leer a los griegos.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "al-Kindi, Bagdad, siglo IX",
     "subtitle": "El comienzo de un tratado dedicado a un califa",
     "body": "No debemos avergonzarnos de admirar la verdad ni de adquirirla, venga de donde venga. A nadie rebaja la verdad; antes bien, a todos ennoblece."
@@ -79,5 +79,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-11-04T17:26:00Z",
+  "results": {}
 }

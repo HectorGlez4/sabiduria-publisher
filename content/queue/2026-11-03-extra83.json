@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-21-extra41",
+  "id": "2026-11-03-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Shota Rustaveli y la coronación de Tinatin",
     "hook": "En un poema georgiano de finales del siglo XII, un rey sin hijo varón corona a su hija. La corte no protesta: responde con una sola línea sobre los cachorros del león.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -79,5 +79,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-11-04T03:26:00Z",
+  "results": {}
 }
