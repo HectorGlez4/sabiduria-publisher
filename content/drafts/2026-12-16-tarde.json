@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Adam Smith, el carnicero y el interés propio",
+    "hook": "La frase del carnicero, el cervecero y el panadero se usa para defender el egoísmo. Smith la escribió para explicar por qué dependemos de desconocidos.",
+    "quote": {
+      "text": "No es de la benevolencia del carnicero, del cervecero o del panadero de quien esperamos nuestra cena, sino de su atención a su propio interés.",
+      "author": "Adam Smith",
+      "work": "La riqueza de las naciones, libro I, cap. II (1776; texto de la ed. de Cannan, 1904)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Smith publicó La riqueza de las naciones en 1776. La frase está en el libro I, capítulo II, el que trata del principio que da lugar a la división del trabajo. La edición más usada hoy es la que preparó Edwin Cannan en 1904 sobre la quinta edición, de 1789, la última en vida de Smith.",
+      "El argumento va por pasos. Cada oferta de intercambio, dice, significa lo mismo: dame lo que quiero y tendrás lo que quieres. Tras la frase del carnicero, Smith añade que nos dirigimos no a su humanidad, sino a su amor propio, y que nadie, salvo un mendigo, elige depender sobre todo de la benevolencia de sus conciudadanos.",
+      "Eso cambia la lectura. No elogia el egoísmo: describe cómo se coopera con quienes no conocemos y cuya bondad no podemos exigir. Algunos estudiosos, como Paul Sagar, sostienen que el pasaje se lee casi al revés de lo que dice. La frase no pide a nadie que sea egoísta. Explica por qué nuestro pan no depende de que lo sea otro."
+    ],
+    "question": "¿De cuánta gente que nunca conocerás depende tu cena de esta noche?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AdamSmith", "#Citas", "#RiquezaDeLasNaciones"],
+    "extended": ["#Economia", "#Ilustracion", "#SigloXVIII", "#Filosofia", "#Escocia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Libro I, cap. II, en inglés: «Give me that which I want, and you shall have this which you want, is the meaning of every such offer»; «It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner…»; «We address ourselves, not to their humanity, but to their self-love…». Lectura directa (el texto de Gutenberg llega recortado por el límite del lector; la frase completa se contrastó con las otras dos fuentes).",
+      "source": "Project Gutenberg, An Inquiry into the Nature and Causes of the Wealth of Nations (ebook 3300)",
+      "url": "https://www.gutenberg.org/files/3300/3300-h/3300-h.htm"
+    },
+    {
+      "claim": "Libro I, cap. II: «It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner,» y, en el mismo párrafo, «Nobody but a beggar chooses to depend chiefly upon the benevolence of his fellow-citizens». Lectura directa.",
+      "source": "Wikisource (inglés), The Wealth of Nations, Book I, Chapter 2 (edición escaneada, vol. 1)",
+      "url": "https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_I/Chapter_2"
+    },
+    {
+      "claim": "La obra se publicó por primera vez en 1776; el texto de la Library of Economics and Liberty se basa en la compilación de Edwin Cannan de 1904 (Methuen) de la quinta edición (1789), la última en vida de Smith. Lectura directa.",
+      "source": "Library of Economics and Liberty (Liberty Fund), An Inquiry into the Nature and Causes of the Wealth of Nations",
+      "url": "https://www.econlib.org/library/Smith/smWN1.html"
+    },
+    {
+      "claim": "Paul Sagar argumenta que el párrafo del carnicero y el panadero se malinterpreta como defensa del egoísmo, casi invirtiendo su sentido. SOLO a través de un resumen de búsqueda de la entrada «Talking to my butcher» (Cambridge); la página no se leyó.",
+      "source": "Cambridge University Press, Interpreting Adam Smith, «Talking to my butcher»",
+      "url": "https://resolve.cambridge.org/core/books/interpreting-adam-smith/talking-to-my-butcher/BD4C40551E4E060B1CA809082C497FB4"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia, sobre el inglés. No presentarla como la de ninguna edición española publicada.",
+    "La segunda mitad de la frase («but from their regard to their own interest») aparece completa solo en un resumen de búsqueda y en citas parciales; la primera mitad sí se leyó en dos fuentes. Contrastar la frase entera con el texto de Cannan antes de publicar.",
+    "La lectura de Sagar se conoce solo por resumen de búsqueda. El cuerpo la atribuye con «algunos estudiosos».",
+    "Que Smith diga que una persona necesita la ayuda de muchos: el párrafo previo no se leyó entero. El cuerpo se limita a las frases leídas.",
+    "Que la «mano invisible» aparezca en este pasaje: no aparece aquí. No mezclarla.",
+    "Que Smith defendiera el egoísmo como virtud: lectura vulgar, discutida por la bibliografía. La Teoría de los sentimientos morales (1759) no se consultó y no se usa en el cuerpo.",
+    "Que la última edición en vida sea la de 1789 y que la de Cannan sea la «original»: Cannan es una edición moderna de 1904. El campo work lo indica."
+  ],
+  "status": "draft"
+}

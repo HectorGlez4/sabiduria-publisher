@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-16-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "La tulipomanía holandesa de 1637 y la ruina que casi nadie sufrió",
+    "hook": "La tulipomanía es la burbuja más contada de la historia. La historiadora que fue a buscar a los arruinados encontró a menos de media docena.",
+    "body": [
+      "En el invierno de 1636 a 1637, en las ciudades de Holanda, los contratos de bulbos de tulipán cambiaban de mano hasta cinco veces antes de que nadie entregara una flor. Hacia principios de febrero de 1637, con Haarlem como escenario, los precios se vinieron abajo.",
+      "La versión que conocemos —tejedores que dejan el telar, familias en la ruina, ahogados en los canales— llegó sobre todo por panfletos satíricos de la época y por el libro de Charles Mackay de 1841. En 2007, Anne Goldgar publicó Tulipmania y se puso a buscar a esa gente en los archivos. Halló una red pequeña de comerciantes y artesanos acomodados, no de tejedores. Los tratos eran cadenas de promesas de pago: el dinero cambiaba de manos cuando los bulbos se recogían en verano, y tras el desplome muchos compradores sencillamente se negaron a pagar.",
+      "Goldgar identificó a menos de media docena de personas con apuros económicos en esos años, y en ninguna es seguro que la culpa fuera del tulipán. El pintor Jan van Goyen, que se cita a menudo como arruinado por los bulbos, murió en bancarrota en 1656, casi veinte años después. La burbuja perfecta quizá no fue una crisis económica. Fue una historia que una sociedad se contó sobre el dinero."
+    ],
+    "question": "¿Qué otras historias de ruina colectiva repetimos sin haber mirado nunca los archivos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La burbuja de los tulipanes",
+    "subtitle": "Holanda, 1637",
+    "body": "Los archivos muestran una red pequeña de comerciantes y artesanos, tratos sin pagar y menos de media docena de personas con apuros. El relato de la ruina masiva vino de panfletos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Tulipomania", "#SigloXVII", "#Holanda"],
+    "extended": ["#Historia", "#Economia", "#Curiosidades", "#EdadDeOroHolandesa", "#Mitos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Reseña de Tulipmania de Anne Goldgar (University of Chicago Press, 2007): el relato clásico descansa en uno o dos panfletos polémicos; los bloemisten se concentraban en Holanda, sobre todo Haarlem y Ámsterdam, y eran de grupos medios; los operadores eran mercaderes, cerveceros y artesanos, no tejedores; muy pocas quiebras se pueden atribuir a la tulipomanía; tras el desplome de marzo de 1637 los compradores se negaron a pagar; los tratos eran cadenas de promesas con pago al recoger los bulbos en verano; Jan van Goyen murió en bancarrota en 1656. Lectura directa.",
+      "source": "Reviews in History, Institute of Historical Research (Universidad de Londres), reseña nº 666 de J. Leslie Price",
+      "url": "https://reviews.history.ac.uk/review/666"
+    },
+    {
+      "claim": "Máximo de precios en el invierno de 1636-37, con contratos que cambiaban de mano hasta cinco veces sin entregas; colapso a comienzos de febrero de 1637, con una sátira que sitúa el inicio en Haarlem el 3 de febrero; Goldgar identifica a menos de media docena de personas con problemas financieros y duda de que la culpa fuera del tulipán; Mackay publicó en 1841 su relato, cuyas cifras se discuten. Lectura directa.",
+      "source": "Wikipedia (inglés), «Tulip mania», con referencias a Goldgar (2007), Garber (1989, 2000), Thompson (2007) y Mackay (1841)",
+      "url": "https://en.wikipedia.org/wiki/Tulip_mania"
+    },
+    {
+      "claim": "Goldgar, entrevistada: «I couldn't find anybody that went bankrupt» y que fue una crisis cultural más que económica. SOLO a través de un resumen de búsqueda; la página dio 403 y no se leyó.",
+      "source": "Smithsonian Magazine, «There never was real tulip fever»",
+      "url": "https://www.smithsonianmag.com/history/there-never-was-real-tulip-fever-180964915/"
+    }
+  ],
+  "do_not_use": [
+    "Que nadie se arruinó: Goldgar no dice tanto. Hubo pérdidas reales, pero muy por debajo de las cifras de la leyenda y en un círculo reducido. El cuerpo dice menos de media docena de personas con apuros identificadas.",
+    "Que una casa, cinco hectáreas o una fortuna se pagaran por un bulbo (Mackay): cifras disputadas por Krelage (1942) y Garber (2000). No usarlas.",
+    "Suicidios en los canales y tejedores que abandonaban el telar: sin respaldo en los archivos según Goldgar.",
+    "El precio de ƒ10.000 del Semper Augustus y la fecha exacta del 3 de febrero: figuran en Wikipedia, que remite a fuentes que no se leyeron. El cuerpo no los da como hecho.",
+    "La reseña habla del desplome de marzo de 1637 y Wikipedia de principios de febrero: el cuerpo dice solo «hacia principios de febrero», según el artículo, y sin día exacto.",
+    "La Smithsonian y History Today dieron 403: no se leyeron. Solo hay dos fuentes leídas directamente (la reseña del IHR y Wikipedia), por debajo del mínimo de tres. Contrastar con el libro de Goldgar antes de encolar.",
+    "Que el desplome fuera una crisis cultural y de confianza: es la interpretación de Goldgar, no un hecho. El cuerpo la presenta como «quizá»."
+  ],
+  "status": "draft"
+}

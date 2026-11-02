@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Swift y la confabulación de los necios",
+    "hook": "Swift dio una señal para reconocer a un genio. Muchos citan la frase como consuelo, pero Swift no prometió que valga al revés.",
+    "quote": {
+      "text": "Cuando aparece un verdadero genio en el mundo, lo reconoces por esta señal: que todos los necios se han confabulado contra él.",
+      "author": "Jonathan Swift",
+      "work": "Thoughts on Various Subjects (Miscellanies; ed. H. Morley, Cassell, 1886)",
+      "attribution_verified": true
+    },
+    "body": [
+      "La frase pertenece a Thoughts on Various Subjects, una serie de máximas breves de Jonathan Swift que en inglés se llama a veces Thoughts on Various Subjects, Moral and Diverting. En inglés dice: When a true genius appears in the world you may know him by this sign; that the dunces are all in confederacy against him. Está en el volumen que editó Henry Morley en 1886, transcrito por el Proyecto Gutenberg.",
+      "En 1980 se publicó una novela de John Kennedy Toole cuyo título sale de esta máxima: La conjura de los necios. Desde entonces la frase vive entre lectores que se sienten incomprendidos, y es fácil entender por qué: ofrece un consuelo cómodo.",
+      "Pero fíjate en lo que dice. Swift da una señal del genio, no una prueba de lo contrario. Que los necios te ataquen no te hace genio; solo si lo eres, dice, es de esperar que lo hagan. La máxima sirve para mirar a quien es atacado, no para absolverse a uno mismo."
+    ],
+    "question": "¿Cómo distinguirías la crítica de un necio de la de alguien que tiene razón?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Swift", "#Citas", "#Genio"],
+    "extended": ["#Literatura", "#Irlanda", "#SigloXVIII", "#Satira", "#Aforismos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del volumen The Battle of the Books and Other Short Pieces (ed. Henry Morley, transcrito de la edición de Cassell & Company, 1886): bajo el encabezado «Thoughts on Various Subjects» figura «When a true genius appears in the world you may know him by this sign…». Lectura directa del encabezado y del arranque de la frase; la frase completa se contrastó con las otras dos fuentes.",
+      "source": "Project Gutenberg, ebook 623, The Battle of the Books and Other Short Pieces, ed. Henry Morley",
+      "url": "https://www.gutenberg.org/files/623/623-h/623-h.htm"
+    },
+    {
+      "claim": "Frase completa: «When a true genius appears in the world you may know him by this sign; that the dunces are all in confederacy against him.» Lectura directa; la página cita un original de 1726 en la edición online de Patrick Madden.",
+      "source": "Quotidiana (ed. Patrick Madden), Jonathan Swift, «Thoughts on Various Subjects»",
+      "url": "https://essays.quotidiana.org/swift/thoughts_on_various_subjects/"
+    },
+    {
+      "claim": "La frase aparece en Thoughts on Various Subjects, Moral and Diverting; es el origen del título de la novela de 1980 de John Kennedy Toole, A Confederacy of Dunces. Lectura directa.",
+      "source": "Wikipedia (inglés), «Thoughts on Various Subjects, Moral and Diverting»",
+      "url": "https://en.wikipedia.org/wiki/Thoughts_on_Various_Subjects,_Moral_and_Diverting"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia, sobre el inglés. No presentarla como la de ninguna edición publicada.",
+    "El año de la primera impresión de esta máxima: las fuentes se contradicen (1706 en Wikipedia, 1711 en Miscellanies, 1726 en Quotidiana, 1727 en la colección de Swift y Pope; la edición de Dodsley de 1745 según el Swift Archive). No se fija año en el cuerpo ni en work, solo la edición de Morley/Cassell de 1886 que sí se leyó.",
+    "Que la máxima esté en la edición de 1711: sin verificar. El resumen del Bodleian OTA, no leído, la sitúa en una colección de 1711 ampliada en 1727, pero no dice dónde cae esta frase.",
+    "Variantes de la redacción («the dunces are all in confederacy» frente a «all the dunces are in confederacy»): circulan las dos en páginas de citas. La que se usa es la de Gutenberg/Quotidiana.",
+    "Que Toole ya hubiera muerto al publicarse la novela: no se leyó en ninguna de las páginas; solo el año 1980 y el origen del título. El cuerpo no lo dice.",
+    "Que Swift pensara en alguien concreto (se ha relacionado la frase con Sir William Temple en un ensayo del Acton Institute): hipótesis sin contrastar. No usarla.",
+    "Las fechas de Swift (1667-1745) no se leyeron en las páginas consultadas. El cuerpo no las da."
+  ],
+  "status": "draft"
+}
