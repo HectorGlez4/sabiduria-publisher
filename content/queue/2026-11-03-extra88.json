@@ -2,7 +2,7 @@
   "id": "2026-11-03-extra88",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Flora Tristán y el capítulo III de Unión obrera",
     "hook": "En 1843 escribió un manifiesto para organizar a los obreros franceses. Le dedicó un capítulo entero a explicar por qué hablaba de mujeres en un libro sobre trabajo.",
@@ -81,5 +81,8 @@
     "threads"
   ],
   "publish_at": "2026-11-03T17:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
