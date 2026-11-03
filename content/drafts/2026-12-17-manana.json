@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-17-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Katharina Kepler y el juicio por brujería de 1620",
+    "hook": "En 1620, el matemático imperial dejó sus tablas astronómicas para ocuparse de otro caso: el juicio por brujería contra su madre.",
+    "body": [
+      "Katharina Kepler vivía en Leonberg, en el ducado de Württemberg. En 1615, Ursula Reinbold, esposa de un vidriero con la que había tenido un pleito de negocios, la acusó de haberle dado un brebaje amargo que la había enfermado. En esos mismos años, el bailío de Leonberg, Lutherus Einhorn, acusó de hechicería a quince mujeres de la zona e hizo quemar a ocho.",
+      "El 7 de agosto de 1620, Katharina fue arrestada en la casa parroquial de Heumaden, donde vivía con su hija, y llevada a Güglingen. Pasó unos catorce meses presa, buena parte de ellos encadenada. Su hijo Johannes, matemático imperial, dejó su trabajo, se trasladó con su familia a Württemberg, consultó a juristas de la Universidad de Tübingen y llevó él mismo la defensa. Su argumento fue de método: las enfermedades que se atribuían a la magia de su madre tenían explicación médica y de sentido común, y el rumor no era prueba.",
+      "La facultad de Derecho de Tübingen no autorizó la tortura. Ordenó que le mostraran los instrumentos y le explicaran su uso, para forzar una confesión. Katharina no confesó, y en el otoño de 1621 el duque de Württemberg la dejó en libertad. Murió en abril de 1622, unos seis meses después. El mismo hombre que buscaba leyes en el movimiento de los planetas tuvo que defender, ante un tribunal, que una sospecha no es una demostración."
+    ],
+    "question": "¿Cuántas veces una sospecha repetida termina pesando como una prueba?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La madre de Kepler",
+    "subtitle": "Württemberg, 1615-1621",
+    "body": "Acusada de brujería, pasó unos catorce meses presa. Su hijo, el astrónomo, llevó la defensa: el rumor no era prueba. Le mostraron los instrumentos de tortura, no confesó y quedó libre en 1621."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Kepler", "#CazaDeBrujas", "#SigloXVII"],
+    "extended": ["#Historia", "#Astronomia", "#Alemania", "#Justicia", "#Mujeres", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Katharina Kepler nació el 8 de noviembre de 1547 en Leonberg y murió el 13 de abril de 1622 en Roßwälden; la acusó Ursula Reinbold, esposa de un vidriero, tras una disputa de negocios, de haberle dado una bebida amarga que la enfermó (1615); arrestada el 7 de agosto de 1620 en la casa parroquial de Heumaden y llevada a Güglingen; unos catorce meses presa, buena parte en cadenas; le mostraron los instrumentos de tortura; murió unos seis meses después de su liberación; el Vogt Lutherus Einhorn acusó a quince mujeres de hechicería e hizo quemar a ocho; Kepler pidió consejo a juristas y teólogos de Tübingen. Lectura directa.",
+      "source": "Wikipedia (inglés), «Katharina Kepler»",
+      "url": "https://en.wikipedia.org/wiki/Katharina_Kepler"
+    },
+    {
+      "claim": "Kepler, matemático imperial, asumió formalmente la defensa de su madre; dejó su trabajo, se mudó con su familia al sur de Alemania y pasó casi un año intentando liberarla; su defensa mostró que las enfermedades atribuidas a su magia se explicaban con conocimiento médico y sentido común; ella estuvo encadenada al suelo más de un año; fue liberada en el otoño de 1621; el proceso duró seis años. Lectura directa.",
+      "source": "University of Cambridge, Research News, «The astronomer and the witch – how Kepler saved his mother from the stake» (sobre el libro de Ulinka Rublack, 2015)",
+      "url": "https://www.cam.ac.uk/research/news/the-astronomer-and-the-witch-how-kepler-saved-his-mother-from-the-stake"
+    },
+    {
+      "claim": "Arrestada en agosto de 1620 y liberada en octubre de 1621; la facultad jurídica de la Universidad de Tübingen no ordenó tortura, sino que le mostraran los instrumentos y le describieran su uso para presionar una confesión; no confesó; el duque de Württemberg la liberó; Kepler escribió la mayor parte de un alegato de 128 páginas; murió al año siguiente, antes de que su contrademanda llegara a juicio; con Einhorn fueron acusadas quince mujeres y ejecutadas ocho. Lectura directa.",
+      "source": "American Physical Society, APS News, «This Month in Physics History: August 1620: Kepler's Mother Imprisoned for Witchcraft» (agosto de 2015)",
+      "url": "https://www.aps.org/apsnews/2015/08/kepler-mother-imprisoned-witchcraft"
+    },
+    {
+      "claim": "Reseña del libro de Rublack: proceso de 1615 a 1621 en Württemberg; se la consideró demasiado mayor para la tortura y en su lugar se le mostraron los instrumentos; la facultad de Derecho de Tübingen falló a su favor; murió seis meses después de su liberación. Lectura directa.",
+      "source": "Laura J. Snyder, reseña de The Astronomer and the Witch (Ulinka Rublack, Oxford University Press, 2015)",
+      "url": "https://www.laurajsnyder.com/2016/01/review-of-rublacks-the-astronomer-and-the-witch/"
+    }
+  ],
+  "do_not_use": [
+    "Que estuviera a punto de ser quemada en la hoguera o condenada: no hubo condena. El titular de Cambridge habla de «salvarla de la hoguera», pero es un titular; el cuerpo no lo afirma.",
+    "La edad exacta en el juicio: Cambridge dice «late 70s», la reseña de Snyder 75 y Wikipedia da 1547 como año de nacimiento (unos 73 años al ser arrestada). No dar cifra.",
+    "El apellido de la acusadora: APS escribe «Reingold», Wikipedia «Reinbold». Se usa Reinbold, la forma de Wikipedia; comprobar con Rublack antes de publicar.",
+    "Quién empezó la acusación: la reseña de Snyder dice que su hijo Heinrich la llamó bruja públicamente antes que nadie; las otras fuentes empiezan por Reinbold. El cuerpo solo nombra a Reinbold como acusadora formal.",
+    "Que le leyeran los instrumentos (territio verbalis) frente a que se los mostraran (territio realis): las fuentes dicen que se los mostraron y describieron. No usar el término técnico.",
+    "Que el duque declarara que su negativa a confesar probaba su inocencia: solo lo dice APS. No se usa.",
+    "El mes exacto de la liberación: APS dice octubre, otras reseñas septiembre, Cambridge «otoño». El cuerpo dice otoño de 1621.",
+    "La relación entre el juicio y el Somnium de Kepler (el relato con una madre hechicera usado como prueba contra ella): circula mucho, pero ninguna fuente leída lo trata. No usar.",
+    "Que una tía de Katharina hubiera sido quemada por bruja: Cambridge dice que no hay pruebas y que lo inventaron sus enemigos."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-17-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Feijoo y el discurso Voz del pueblo (1726)",
+    "hook": "En 1726, un monje benedictino abrió su gran obra contra los errores comunes con una idea incómoda: que muchos crean algo no lo vuelve cierto.",
+    "quote": {
+      "text": "El valor de las opiniones se ha de computar por el peso, no por el número de las almas. Los ignorantes, por ser muchos, no dejan de ser ignorantes.",
+      "author": "Benito Jerónimo Feijoo",
+      "work": "Teatro crítico universal, t. I, «Voz del pueblo», § I (1726; ed. 1778)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Benito Jerónimo Feijoo era un monje benedictino que enseñaba teología en la Universidad de Oviedo. En 1726 publicó el primer tomo del Teatro crítico universal, una serie de discursos que siguió hasta 1739 con un propósito declarado: desmontar errores comunes, supersticiones y creencias que nadie se detenía a revisar.",
+      "El primer discurso del primer tomo se titula «Voz del pueblo». Feijoo lo dirige contra una máxima que llama «mal entendida»: que Dios se explica en la voz del pueblo. La abre con una frase latina que atribuye a Séneca, Aestimes judicia, non numeres, y la desarrolla en castellano. Más adelante concede que el pueblo a veces acierta, pero, escribe, por luz ajena o por casualidad.",
+      "No era desprecio por la gente sencilla. Era una regla de método, y por eso la puso al principio de todo: antes de corregir un solo error, había que dejar claro que la cantidad de quienes lo repiten no es un argumento. En 1780 ya circulaba traducido al inglés. La pregunta que plantea sigue igual de vigente cuando la opinión se mide en reenvíos."
+    ],
+    "question": "¿Qué crees tú solo porque lo cree casi todo el mundo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Feijoo", "#Citas", "#TeatroCriticoUniversal"],
+    "extended": ["#Ilustracion", "#SigloXVIII", "#Filosofia", "#Espana", "#PensamientoCritico", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del discurso I del tomo I, «Voz del Pueblo», § I: «El valor de las opiniones se ha de computar por el peso, no por el número de las almas.» y «Los ignorantes, por ser muchos, no dejan de ser ignorantes.»; la apertura «Aestimes judicia, non numeres, decía Séneca» con nota marginal «Epist. 39»; la «mal entendida máxima, de que Dios se explica en la voz del pueblo»; «Algunas veces acierta; pero es por ajena luz, o por casualidad». Texto tomado de la edición de Madrid de 1778 (Joaquín Ibarra), tomo 1, págs. 1-19. Lectura directa.",
+      "source": "Proyecto Filosofía en español, Feijoo, Teatro crítico universal, tomo primero, discurso primero",
+      "url": "https://www.filosofia.org/bjf/bjft101.htm"
+    },
+    {
+      "claim": "Índice de la obra: el tomo primero es de 1726 y su discurso 1 es «Voz del Pueblo»; los tomos van de 1726 (I) a 1739 (VIII). Lectura directa.",
+      "source": "Proyecto Filosofía en español, índice del Teatro crítico universal",
+      "url": "https://www.filosofia.org/bjf/bjft000.htm"
+    },
+    {
+      "claim": "Traducción inglesa de John Brett (Londres, 1780), que abre con «The Voice of the People»: «The value of opinions, should be computed by the weight, not by the number of votaries.» y «The ignorant, though numerous, are ignorant still.» Lectura directa.",
+      "source": "Project Gutenberg, Essays, or Discourses, vol. 1 (of 4): Selected from the works of Feyjoo (ebook 71277)",
+      "url": "https://www.gutenberg.org/ebooks/71277"
+    },
+    {
+      "claim": "Feijoo entró en la orden benedictina a los 12 años, enseñó teología y filosofía en la Universidad de Oviedo; el Teatro crítico universal se publicó entre 1726 y 1739; sus obras buscaban combatir supersticiones y errores populares. Lectura directa.",
+      "source": "Wikipedia (inglés), «Benito Jerónimo Feijóo y Montenegro»",
+      "url": "https://en.wikipedia.org/wiki/Benito_Jer%C3%B3nimo_Feij%C3%B3o_y_Montenegro"
+    }
+  ],
+  "do_not_use": [
+    "Que la frase latina Aestimes judicia, non numeres sea de la carta 39 de Séneca: lo dice la nota marginal de Feijoo, pero no se comprobó en las Epístolas a Lucilio. El cuerpo dice que Feijoo «la atribuye» a Séneca, no que sea de Séneca.",
+    "Que Feijoo escribiera textualmente «la voz del pueblo no es la voz de Dios»: la página no contiene esa frase literal. Califica la máxima de «mal entendida» y dice que la voz del pueblo está «enteramente desnuda de autoridad». No ponerle en la boca la negación literal.",
+    "El número de tomos: el índice de Filosofía en español da ocho tomos (1726-1739), Wikipedia nueve volúmenes más tres de suplemento en la edición de 1777, y otras fuentes nueve. No dar cifra.",
+    "La fecha exacta de su muerte: Wikipedia dice 26 de septiembre de 1764; otra fuente de búsqueda dice 26 de diciembre. No usarla.",
+    "Que el primer tomo saliera a la venta el 3 de noviembre de 1726 según la Gaceta: solo en un resumen de búsqueda. No usar.",
+    "El texto de la cita es el de la edición de 1778, no el de la príncipe de 1726. El campo work lo indica; no presentarlo como transcripción de 1726.",
+    "Que Feijoo fuera «el primer fact checker de España»: etiqueta periodística moderna (Vozpópuli), no un juicio de la bibliografía."
+  ],
+  "status": "draft"
+}

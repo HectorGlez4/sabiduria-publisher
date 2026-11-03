@@ -1,0 +1,56 @@
+{
+  "id": "2026-12-17-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Schopenhauer, el talento y el genio (1844)",
+    "hook": "La frase del blanco que nadie ve se cita como un elogio del genio. En Schopenhauer es, sobre todo, una explicación de por qué al genio no se le reconoce a tiempo.",
+    "quote": {
+      "text": "El talento se parece al tirador que da en un blanco que los demás no pueden alcanzar; el genio, al que da en uno que los demás ni siquiera alcanzan a ver.",
+      "author": "Arthur Schopenhauer",
+      "work": "El mundo como voluntad y representación, II, cap. 31 (1844; ed. Reclam, 1892)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Schopenhauer publicó El mundo como voluntad y representación a finales de 1818, con fecha de 1819. Veinticinco años después, en 1844, sacó una segunda edición con un segundo volumen de complementos. El capítulo 31 de ese volumen se titula «Vom Genie», del genio, y ahí está la comparación del tirador.",
+      "La frase no va sola. Justo antes, Schopenhauer distingue dos capacidades: la de hacer algo y la de entenderlo. El talento supera a los demás en lo que pueden hacer, pero no en lo que pueden comprender, y por eso se le reconoce enseguida. El genio supera las dos, y por eso no se le nota de inmediato. La versión que circula, la del blanco que nadie más ve, suena a premio. En el original es también un diagnóstico de soledad.",
+      "Lo sabía por experiencia. Su libro tardó décadas en ser reconocido, y sus clases en Berlín tuvieron pocos alumnos. El reconocimiento le llegó después de 1853, treinta y cinco años después de la primera edición. Leída entera, la frase no promete aplauso a quien ve más lejos. Avisa de que el aplauso, si llega, llega tarde."
+    ],
+    "question": "¿A quién reconociste tarde porque al principio no veías a qué estaba apuntando?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Schopenhauer", "#Citas", "#Filosofia"],
+    "extended": ["#Genio", "#Talento", "#SigloXIX", "#Alemania", "#FilosofiaAlemana", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto alemán del vol. II, «Kapitel 31. Vom Genie»: «Das Talent gleicht dem Schützen, der ein Ziel trifft, welches die Uebrigen nicht erreichen können; das Genie dem, der eines trifft, bis zu welchem sie nicht ein Mal zu sehen vermögen.» La frase anterior dice, en sustancia, que el talento supera la capacidad de hacer de los demás pero no la de comprender, y por eso se le reconoce enseguida, mientras que el genio supera ambas y no se le nota de inmediato. Edición Reclam, 1892. Lectura directa (cotejo frase por frase).",
+      "source": "Projekt Gutenberg-DE, Schopenhauer, Die Welt als Wille und Vorstellung. Zweiter Band",
+      "url": "https://projekt-gutenberg.org/authors/arthur-schopenhauer/books/die-welt-als-wille-und-vorstellung-zweiter-band/chapter/32"
+    },
+    {
+      "claim": "Ficha de verificación: vol. 2, cap. 31, «Vom Genie», ed. de 1844, traducción inglesa de E. F. J. Payne (1958); el original contrapone la Leistungsfähigkeit (capacidad de hacer) y la Apprehensionsfähigkeit (capacidad de comprender); la versión popular «Talent hits a target no-one else can hit; genius hits targets no-one else can see» es una paráfrasis que comprime el argumento. Lectura directa.",
+      "source": "WIST Quotations (Wist Institute), Arthur Schopenhauer, cita 8393",
+      "url": "https://wist.info/schopenhauer-arthur/8393/"
+    },
+    {
+      "claim": "La obra se terminó en marzo de 1818 y se publicó en diciembre de ese año con fecha de 1819; el volumen complementario se publicó en 1844 junto con el primero en una segunda edición conjunta; sus lecciones en Berlín tuvieron pocos alumnos; el reconocimiento llegó tras una reseña de 1853 en la Westminster Review. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Arthur Schopenhauer»",
+      "url": "https://plato.stanford.edu/entries/schopenhauer/"
+    }
+  ],
+  "do_not_use": [
+    "La forma «Talent hits a target no one else can hit; genius hits a target no one else can see»: es una paráfrasis inglesa moderna, no una traducción. No ponerla entre comillas como de Schopenhauer.",
+    "La traducción al español es propia, sobre el alemán. No presentarla como la de Pilar López de Santa María ni de ninguna edición española.",
+    "El texto cotejado es la edición Reclam de 1892, no la de 1844. El campo work lo indica. La página imprime «sehen»; otras ediciones traen «sehn».",
+    "Que el capítulo diga que el genio es dos tercios intelecto y un tercio voluntad: aparece en el mismo capítulo según un resumen de búsqueda, pero no se cotejó. No usar.",
+    "Que su libro de 1818 vendiera casi nada o que se convirtiera en papel viejo: circula, pero la SEP no lo dice. El cuerpo dice solo que tardó décadas en ser reconocido (de 1818 a después de 1853, según la SEP).",
+    "Que coincidiera a propósito sus clases con las de Hegel: anécdota conocida, no verificada aquí. No usar."
+  ],
+  "status": "draft"
+}

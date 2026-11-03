@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el himno a Ninkasi, diosa sumeria de la cerveza",
+    "hook": "Lo llaman la receta de cerveza más antigua del mundo. Es un poema a una diosa, y quienes lo estudian dudan de que sirva para hacer cerveza.",
+    "body": [
+      "Ninkasi era, en Mesopotamia, la diosa de la cerveza y su cervecera. Su himno está escrito en sumerio, en escritura cuneiforme, sobre tablillas de arcilla de época paleobabilónica, hacia el 1800 a.C. La traducción de referencia la publicó el asiriólogo Miguel Civil en 1964, junto con una canción de taberna que lo acompaña.",
+      "El poema le habla a la diosa en segunda persona y le atribuye cada paso del oficio. Hornea el pan de cerveza en el horno grande. Riega la malta cubierta de tierra y la deja en remojo en una jarra, donde las olas suben y las olas bajan. Extiende el mosto cocido sobre esteras de juncos para que se enfríe. Y al final vierte la cerveza filtrada, que sale de la tinaja como la crecida del Tigris y el Éufrates.",
+      "De ahí viene la etiqueta de receta. La investigación es más cauta: una reseña de 2025 en la revista Antiquity resume que el himno recorre los pasos esenciales de la elaboración, pero de forma alegórica, no descriptiva. Es decir, un canto de alabanza escrito por gente que conocía el oficio, no un manual. Lo que sí deja es otra cosa: hace casi cuatro mil años, alguien juzgó que el trabajo de la cervecería merecía una diosa y un himno."
+    ],
+    "question": "¿Qué oficio de hoy crees que merecería un himno, y nadie se lo ha escrito?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El himno a Ninkasi",
+    "subtitle": "Mesopotamia, hacia 1800 a.C.",
+    "body": "Un poema sumerio que alaba a la diosa de la cerveza paso a paso: el pan de cerveza, la malta en remojo, el mosto en esteras, la cerveza que corre como el Tigris. Se le llama receta; los especialistas lo leen como alegoría."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mesopotamia", "#Sumer", "#Ninkasi"],
+    "extended": ["#Historia", "#Cerveza", "#Mitologia", "#Arqueologia", "#Cuneiforme", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Traducción de «A hymn to Ninkasi» (ficheros c4231/tr4231): el pan de cerveza (beerbread) mezclado con aromas dulces y horneado en «the big oven»; la malta cubierta de tierra se riega y se remoja en una jarra donde «the waves rise, the waves fall»; el mosto cocido se extiende sobre «large reed mats» para enfriarse; la tinaja de fermentación sobre la tinaja colectora; la cerveza filtrada se vierte como «the onrush of the Tigris and the Euphrates». Lectura directa.",
+      "source": "The Electronic Text Corpus of Sumerian Literature (ETCSL), Universidad de Oxford, «A hymn to Ninkasi», traducción",
+      "url": "https://etcsl.orinst.ox.ac.uk/section4/tr4231.htm"
+    },
+    {
+      "claim": "El himno se registró en cuneiforme sumerio sobre una tablilla de arcilla durante el período paleobabilónico, hacia el 1800 a.C.; referencia: M. Civil, «A Hymn to the Beer Goddess and a Drinking Song», Fs Oppenheim (1964), págs. 67-89. Lectura directa.",
+      "source": "Cuneiform Digital Library Initiative (CDLI), ficha del Himno a Ninkasi",
+      "url": "https://cdli.earth/cdli-tablet/552"
+    },
+    {
+      "claim": "Reseña de Melania Zingarello (CNRS y Université Côte d'Azur) del libro de Tate Paulette In the Land of Ninkasi (Oxford University Press, 2024): el «Hymn to Ninkasi» y el «Drinking song» asociado datan de la primera mitad del segundo milenio a.C.; el himno se considera que revela los pasos esenciales de la elaboración «albeit allegorically rather than descriptively». Antiquity, vol. 99, nº 406 (agosto de 2025), págs. 1159-1161. Lectura directa.",
+      "source": "Antiquity (Cambridge University Press), reseña de In the Land of Ninkasi",
+      "url": "https://www.cambridge.org/core/product/A18767A1C8D9CBCBAF0737C5598ACE6A/core-reader"
+    }
+  ],
+  "do_not_use": [
+    "Que sea «la receta escrita más antigua del mundo» o un manual de elaboración: la reseña de Antiquity lo describe como alegórico; Sallaberger y el blog de Martyn Cornell (Zythophile), según resúmenes de búsqueda, sostienen que contradice la documentación administrativa sobre la cerveza. El blog no se pudo abrir.",
+    "Que la cervecería Anchor de San Francisco y Fritz Maytag elaboraran en 1989 una «cerveza Ninkasi» a partir del himno con Miguel Civil: aparece en un resumen de búsqueda, sin el año 1989 confirmado. No usar.",
+    "Que la tablilla esté en el Louvre: lo dice la ficha de CDLI, pero no se contrastó con el Louvre ni se sabe si hay más de un ejemplar. No usar.",
+    "La fecha exacta: CDLI dice hacia 1800 a.C.; Zythophile, según resumen, hacia 1890 a.C.; Antiquity, primera mitad del segundo milenio. El cuerpo dice «hacia el 1800 a.C.» y época paleobabilónica.",
+    "Que el himno sea mucho más antiguo que la tablilla (composición sumeria del tercer milenio): CDLI lo afirma como creencia, sin prueba. No usar.",
+    "Que el sumerio fuera ya lengua de escuela y culto hacia el 1800 a.C.: dato general de la asiriología, no comprobado en las tres fuentes leídas. Se quitó del cuerpo.",
+    "Que el mosto se hiciera con miel y vino: la traducción de ETCSL lo menciona, pero la lectura de esos términos está discutida entre traductores. El cuerpo no lo usa.",
+    "Las mujeres como cerveceras en Sumer: circula junto al himno, pero no se verificó aquí."
+  ],
+  "status": "draft"
+}
