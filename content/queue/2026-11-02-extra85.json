@@ -71,7 +71,7 @@
     "Presentar las Doce Tablas como el elogio de Tácito a la buena legislación en general. Las llama el último caso de derecho equitativo, y lo dice como bisagra de lo que va a contar: todo lo posterior es decadencia.",
     "Atribuir a Tácito la idea de que la corrupción causa las leyes. La oración pone las dos cosas juntas, no una detrás de la otra; la relación causal es de la interpretación posterior."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
@@ -90,9 +90,12 @@
       "published_at": "2026-11-03T02:29:57.201525+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Monday, 02-Nov-26 21:40:20 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 03-Nov-26 01:41:16 PST."
     }
   },
-  "attempts": 2,
-  "last_attempt": "2026-11-03T05:40:20.273033+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-03T09:41:16.527792+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 03-Nov-26 01:41:16 PST."
+  ]
 }
