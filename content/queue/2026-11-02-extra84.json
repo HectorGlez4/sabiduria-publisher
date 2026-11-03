@@ -70,12 +70,15 @@
     "Decir que Plutarco escribía sobre niños o sobre escuelas. El texto es un tratado dirigido a un joven sobre cómo asistir a lecciones filosóficas.",
     "Usar la transcripción latina del griego que aparece en el cuerpo como si fuera el texto original. El texto original, en alfabeto griego, está en la primera fuente; en el cuerpo se transcribe para que se pueda leer en voz alta."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-11-02T19:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
