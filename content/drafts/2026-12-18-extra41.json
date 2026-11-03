@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-18-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "el Liezi y el viejo necio que movió las montañas",
+    "hook": "Un anciano de casi noventa años decidió quitar dos montañas de delante de su casa. Cuando se burlaron de él, respondió con una cuenta.",
+    "quote": {
+      "text": "Aunque yo muera, quedará mi hijo; el hijo tendrá nietos, y los nietos, hijos. Hijos y nietos no se acabarán, y la montaña no crecerá. ¿Por qué no habría de allanarse?",
+      "author": "Liezi",
+      "work": "Liezi, cap. 5, «Tang wen» (Las preguntas de Tang), relato de Yugong (texto de Zhang Zhan, c. 370)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El relato está en el capítulo quinto del Liezi, el «Tang wen». Las montañas Taihang y Wangwu medían setecientos li por lado y se alzaban diez mil ren. Al norte vivía un anciano al que llaman Yugong, el viejo necio, que tenía casi noventa años y estaba harto del rodeo que le obligaban a dar para entrar y salir. Reunió a su familia y se pusieron a cavar.",
+      "Un vecino al que llaman Zhisou, el viejo sabio, se rió de él: con los años y las fuerzas que le quedaban, le dijo, no podría arrancar ni un pelo de la montaña. La respuesta de Yugong no apela a la fe ni al esfuerzo heroico. Es aritmética: él morirá, pero sus descendientes no se acaban, y la montaña no crece. El relato termina con el dios del cielo, conmovido por su sinceridad, que manda a los dos hijos de Kua'e cargar con las montañas y llevárselas.",
+      "El 11 de junio de 1945, Mao Zedong cerró el VII Congreso del Partido Comunista Chino contando esta fábula y llamando a sus dos montañas imperialismo y feudalismo. Desde entonces es uno de los relatos más conocidos de China. El libro que la conserva, en cambio, tiene un origen incierto: se atribuye a Lie Yukou, del siglo V a. C., pero todos los textos que existen proceden de la edición que comentó Zhang Zhan hacia el año 370."
+    ],
+    "question": "¿Qué trabajo dejarías empezado sabiendo que otros tendrían que terminarlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Liezi", "#Citas", "#Taoismo"],
+    "extended": ["#China", "#Fabulas", "#FilosofiaChina", "#Perseverancia", "#Clasicos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto chino del Liezi, «Tang wen»: «太行、王屋二山，方七百里，高萬仞»; «北山愚公者，年且九十，面山而居，懲山北之塞，出入之迂也»; objeción del 智叟: «以殘年餘力，曾不能毀山之一毛»; respuesta: «雖我之死，有子存焉；子又生孫，孫又生子；子又有子，子又有孫，子子孫孫無窮匱也，而山不加增，何苦而不平？»; final: «帝感其誠，命夸蛾氏二子負二山». Lectura directa.",
+      "source": "Wikisource en chino, 列子/湯問篇",
+      "url": "https://zh.wikisource.org/wiki/列子/湯問篇"
+    },
+    {
+      "claim": "El Liezi se atribuye a Lie Yukou, filósofo del siglo V a. C.; el texto actual fue probablemente compilado mucho después, en torno al siglo IV d. C., por Zhang Zhan (fl. c. 370), cuyo comentario es la fuente de todos los textos conservados; la opinión erudita está dividida entre obra antigua con interpolaciones o falsificación a partir de fuentes antiguas; el capítulo 5 es «Tang Wen». Lectura directa.",
+      "source": "Wikipedia (inglés), «Liezi»",
+      "url": "https://en.wikipedia.org/wiki/Liezi"
+    },
+    {
+      "claim": "Discurso de clausura de Mao Zedong del 11 de junio de 1945 en el VII Congreso Nacional del Partido Comunista de China, «The Foolish Old Man Who Removed the Mountains»: cuenta la fábula, la respuesta de que los descendientes seguirán y las montañas no pueden crecer, y llama a las dos montañas imperialismo y feudalismo. Lectura directa.",
+      "source": "Marxists Internet Archive, Selected Works of Mao Tse-tung, vol. III, «The Foolish Old Man Who Removed the Mountains»",
+      "url": "https://www.marxists.org/reference/archive/mao/selected-works/volume-3/mswv3_26.htm"
+    },
+    {
+      "claim": "El artículo 愚公移山 sitúa el relato en la sección segunda del capítulo «Tang wen» y menciona el discurso de clausura de Mao en el VII Congreso de 1945 titulado «Yugong yishan». Lectura directa.",
+      "source": "Wikipedia (chino), «愚公移山»",
+      "url": "https://zh.wikipedia.org/zh-hant/愚公移山"
+    }
+  ],
+  "do_not_use": [
+    "Que el Liezi sea, sin más, obra de Lie Yukou del siglo V a. C.: la datación está en disputa y todos los textos vienen de la edición de Zhang Zhan (c. 370). El campo author dice «Liezi» como nombre de la obra-autor tradicional; el cuerpo explica la duda.",
+    "Que el dios fuera el Emperador de Jade u otra deidad concreta: el texto dice solo 帝, «el soberano» o «el dios del cielo». No ponerle nombre.",
+    "El nombre del gigante: Wikisource escribe 夸蛾氏 y otras ediciones 夸娥氏. Se transcribe Kua'e, que vale para las dos.",
+    "La traducción es propia y abreviada sobre el chino de Wikisource: se omite la repetición «子又有子，子又有孫». No presentarla como versión de una edición publicada.",
+    "Equivalencias de medidas (li, ren) en kilómetros o metros: son variables según época. No convertir.",
+    "Que Yugong fuera «tonto» en sentido literal: el nombre 愚公 es irónico frente a 智叟, el «viejo sabio»; el relato invierte la sabiduría. No presentarlo como insulto.",
+    "Detalles del cuerpo que circulan en versiones escolares (la viuda vecina con su hijo de siete u ocho años que ayuda, el viaje de ida y vuelta al mar de Bohai que dura un año): están en el texto completo, pero no se pidieron ni comprobaron en esta lectura. No usar."
+  ],
+  "status": "draft"
+}

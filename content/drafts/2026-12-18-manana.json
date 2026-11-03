@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-18-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Edwin Hubble y la placa VAR! de 1923",
+    "hook": "En octubre de 1923, un astrónomo tachó una letra en una placa de vidrio y escribió encima cuatro caracteres. Con ellos, el universo se volvió mucho más grande.",
+    "body": [
+      "La noche del 5 al 6 de octubre de 1923, Edwin Hubble fotografió la nebulosa de Andrómeda con el telescopio Hooker de 100 pulgadas, en el observatorio de Monte Wilson, California. Fue una exposición de 45 minutos sobre una placa de vidrio que hoy se conoce como H335H. Marcó tres estrellas con una N, de nova, porque creyó que eran estrellas que se encendían de golpe.",
+      "Al comparar la placa con otras anteriores vio que una de ellas no había estallado: subía y bajaba de brillo con regularidad. Era una cefeida, una estrella variable cuyo ritmo permite calcular a qué distancia está. Tachó la N y escribió al lado VAR!, de variable, con signo de exclamación. Su periodo, afinado después por observadores aficionados, es de unos 31,4 días.",
+      "Tres años antes, en el llamado Gran Debate de 1920, Harlow Shapley había defendido que la Vía Láctea medía unos 300.000 años luz y que las nebulosas espirales estaban dentro de ella. La cefeida de Hubble ponía a Andrómeda mucho más lejos de ese límite: era otra galaxia. Cuando Shapley recibió la carta con el resultado, comentó que esa era la carta que había destruido su universo. Hoy se calcula que Andrómeda está a unos dos millones y medio de años luz."
+    ],
+    "question": "¿Qué idea tuya cambiaría por completo si alguien le pusiera, por fin, una medida?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La placa VAR!",
+    "subtitle": "Monte Wilson, 1923",
+    "body": "Hubble creyó ver una nova en Andrómeda. Era una cefeida, una estrella que permite medir distancias. Tachó la N y escribió VAR! Andrómeda resultó ser otra galaxia, mucho más allá de la Vía Láctea."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Hubble", "#Andromeda", "#Astronomia"],
+    "extended": ["#Ciencia", "#Cosmologia", "#Galaxias", "#HistoriaDeLaCiencia", "#Universo", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "La placa H335H («Hooker plate 335 by Hubble») se tomó con el telescopio Hooker de 100 pulgadas de Monte Wilson la noche del 5 al 6 de octubre de 1923; exposición de 45 minutos; Hubble marcaba las novas con N, y en la primera cefeida la N está tachada y marcada «VAR!»; primero la creyó una nova; la placa estableció sin duda que M31 era una galaxia distinta de la nuestra. Lectura directa.",
+      "source": "Carnegie Science, Plate Archives, «M31 VAR!»",
+      "url": "https://carnegiescience.edu/about/history/archives/plate-archives/m31var"
+    },
+    {
+      "claim": "Placa de vidrio de 4 por 5 pulgadas, exposición de 45 minutos en la madrugada del 6 de octubre de 1923 con el telescopio Hooker de 100 pulgadas; marcó tres estrellas con N creyéndolas novas, tachó la N de la variable y escribió «VAR!»; observaciones de aficionados afinaron el periodo de la cefeida a 31,415 días; medidas modernas sitúan Andrómeda a unos 2,5 millones de años luz. Lectura directa.",
+      "source": "Sky & Telescope, «The Star That Changed Our Universe»",
+      "url": "https://skyandtelescope.org/astronomy-news/the-star-that-changed-ouruniverse/"
+    },
+    {
+      "claim": "El Gran Debate se celebró el 26 de abril de 1920 en la reunión de la National Academy of Sciences, entre Harlow Shapley y Heber Curtis; Shapley sostenía que la Vía Láctea medía unos 300.000 años luz y que las nebulosas espirales formaban parte de ella; Hubble mostró que Andrómeda era un universo isla a una distancia que superaba incluso la estimación de Shapley; al recibir la carta de Hubble, Shapley comentó: «Here is the letter that destroyed my universe». Lectura directa.",
+      "source": "Science News, «A century ago, astronomy's Great Debate foreshadowed today's view of the universe»",
+      "url": "https://www.sciencenews.org/article/astronomy-great-debate-island-universe-milky-way"
+    }
+  ],
+  "do_not_use": [
+    "Que el VAR! esté escrito en tinta roja: lo repiten varios blogs y una respuesta del AAVSO, pero la página de Carnegie, que custodia la placa, dice solo tinta. No mencionar el color.",
+    "La fecha de la exposición: Carnegie da la noche del 5 al 6 de octubre, Sky & Telescope «early on October 6» y otras fuentes el 4 de octubre. Se usa la noche del 5 al 6, la de la institución.",
+    "La distancia que calculó Hubble: Sky & Telescope da «un millón de años luz» en un artículo y unos 900.000 en otro (con todas las cefeidas). No dar la cifra de Hubble; el cuerpo solo dice que la ponía mucho más allá del límite de Shapley.",
+    "La redacción exacta de la frase de Shapley: circula como «the letter that has destroyed my universe» y como «the letter that destroyed my universe»; la fuente original sería el recuerdo de Cecilia Payne-Gaposchkin, que no se leyó. Por eso el cuerpo la da en estilo indirecto.",
+    "Que Hubble descubriera en esta placa la expansión del universo: eso es de 1929 y es otro trabajo. Esta placa solo prueba que Andrómeda es otra galaxia.",
+    "La fecha y forma del anuncio público (la reunión de la AAS de enero de 1925, con la ponencia leída por otro): ninguna fuente leída lo trata. No usar.",
+    "Que copias de la placa viajaran en transbordadores espaciales: solo aparece en resúmenes de búsqueda. No usar."
+  ],
+  "status": "draft"
+}

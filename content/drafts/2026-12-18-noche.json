@@ -1,0 +1,53 @@
+{
+  "id": "2026-12-18-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Musonio Rufo y la filosofía para las mujeres",
+    "hook": "En la Roma de Nerón, el maestro de Epicteto defendió en clase que las mujeres debían estudiar filosofía igual que los hombres. Su razón era sencilla.",
+    "body": [
+      "Gayo Musonio Rufo nació hacia los años 20 o 30 en Volsinii, una ciudad etrusca, en una familia del orden ecuestre. Enseñó filosofía estoica en Roma. En el año 65, Nerón lo desterró a la isla de Gíaros, acusado de participar en la conjura de Pisón. Vespasiano volvió a exiliarlo años después. Su alumno más conocido fue Epicteto.",
+      "No escribió libros. Lo que queda de él son lecciones que anotó un discípulo llamado Lucio y que se conservan en veintiún extractos de la antología de Estobeo. La tercera se titula «Que también las mujeres deben filosofar», y la cuarta pregunta si las hijas deben recibir la misma educación que los hijos. Su argumento: los dioses dieron a las mujeres la misma razón que a los hombres, los mismos sentidos y el mismo deseo de virtud. No hay, decía, una virtud para unos y otra para otras.",
+      "Tenía límites. Seguía asignando a los hombres los trabajos más pesados y a las mujeres el hilado y la casa, aunque admitía que ninguna tarea era exclusiva de un sexo. Una lectura de 2018 lo resume así: una propuesta audaz para su época que convive con la concesión al dominio masculino propia de la Roma del siglo I. Pero el punto de partida estaba dicho: si la razón es la misma, la puerta del estudio no puede estar cerrada para nadie."
+    ],
+    "question": "¿Qué argumento de hace dos mil años sigue sin haberse llevado hasta el final?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Musonio Rufo",
+    "subtitle": "Roma, siglo I",
+    "body": "El maestro de Epicteto sostuvo que las mujeres debían estudiar filosofía y que las hijas merecían la misma educación que los hijos. Su razón: los dioses dieron a todos la misma razón."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#MusonioRufo", "#Estoicismo", "#Filosofia"],
+    "extended": ["#Epicteto", "#Roma", "#Mujeres", "#Educacion", "#HistoriaAntigua", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Musonio Rufo (c. 30-antes de 101-102), nacido en Volsinii, ciudad etrusca, como eques romano; Nerón lo desterró a Gíaros tras la conjura de Pisón (65); Vespasiano lo exilió una segunda vez; Epicteto fue su mayor discípulo. Defendía que las mujeres estudiaran filosofía como los hombres: los dioses les dieron la misma razón, los mismos sentidos y partes del cuerpo y el mismo deseo de virtud; hijos e hijas debían recibir la misma educación; rechazaba una virtud para hombres y otra para mujeres; asignaba a los hombres trabajos pesados y a las mujeres el hilado y las tareas interiores, pero concluía que ninguna tarea estaba reservada en exclusiva a un sexo. Lectura directa.",
+      "source": "Internet Encyclopedia of Philosophy, «Musonius Rufus»",
+      "url": "https://iep.utm.edu/musonius/"
+    },
+    {
+      "claim": "Nacido hacia 20-30 d. C. en Volsinii, Etruria, hijo de un eques llamado Capitón; exiliado en 65 a Gíaros por la conjura de Pisón; volvió con Galba en 68; exiliado de nuevo por Vespasiano, quizá hacia 75; Epicteto fue su alumno más famoso; probablemente no escribió nada; una colección de Lucio es la base de 21 extractos conservados por Estobeo; el discurso 3 es «That Women Too Should Study Philosophy» y el 4 «Should Daughters Receive the Same Education as Sons?». Lectura directa.",
+      "source": "Wikipedia (inglés), «Gaius Musonius Rufus»",
+      "url": "https://en.wikipedia.org/wiki/Gaius_Musonius_Rufus"
+    },
+    {
+      "claim": "Resumen del artículo de Juliana Ortegosa Aggio (Universidade Federal da Bahia), ethic@ v. 17, n. 2 (2018), que traduce las diatribas III («Que as mulheres também devem filosofar») y IV: encuentra en Musonio «uma visão ousada para época que propõe a igualdade entre os homens e as mulheres», pero también «uma concessão irrestrita ao domínio masculino sobre as mulheres», conforme a la costumbre romana del siglo I. Lectura directa del resumen.",
+      "source": "Juliana Ortegosa Aggio, «Musonius Rufus' “Feminism”», ethic@ (UFSC), 2018",
+      "url": "https://periodicos.ufsc.br/index.php/ethic/article/view/1677-2954.2018v17n2p179"
+    }
+  ],
+  "do_not_use": [
+    "Que Musonio fuera «feminista»: es una etiqueta anacrónica que el propio artículo de 2018 discute. El cuerpo describe sus argumentos y sus límites, no le pone la etiqueta.",
+    "Que lo llamaran «el Sócrates romano» en su época: la expresión es el título del libro de Cora Lutz (Yale, 1947); no se comprobó que fuera un apodo antiguo.",
+    "Fechas exactas de nacimiento y muerte: IEP da c. 30-antes de 101-102; Wikipedia, nacimiento hacia 20-30. El cuerpo dice «hacia los años 20 o 30» y no da fecha de muerte.",
+    "La fecha del segundo exilio: Wikipedia dice «quizá hacia 75». No dar año.",
+    "Citas literales de las diatribas III y IV: no se leyó el texto griego ni una traducción completa (la de Lutz no estaba accesible). Todo el cuerpo es paráfrasis del IEP; no ponerle frases entre comillas a Musonio.",
+    "Que las mujeres que filosofan serían mejores administradoras de la casa, más justas y templadas: es parte del argumento de la diatriba III según resúmenes de búsqueda, pero no se leyó en fuente directa. No usar."
+  ],
+  "status": "draft"
+}

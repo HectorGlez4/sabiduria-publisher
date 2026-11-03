@@ -1,0 +1,56 @@
+{
+  "id": "2026-12-18-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Orwell y el prefacio perdido de Rebelión en la granja",
+    "hook": "La frase más citada de Orwell sobre la libertad estaba en un prefacio que no se publicó con su libro. Salió a la luz veintisiete años después.",
+    "quote": {
+      "text": "Si la libertad significa algo, significa el derecho a decirle a la gente lo que no quiere oír.",
+      "author": "George Orwell",
+      "work": "«The Freedom of the Press», prefacio para Rebelión en la granja (1945; publ. 1972)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Orwell puso por escrito Rebelión en la granja hacia finales de 1943, en plena guerra, cuando la Unión Soviética era aliada del Reino Unido. Una fábula que se burlaba de Stalin no era bien recibida. Según escribió él mismo, cuatro editoriales rechazaron el libro, y una de ellas lo hizo después de consultar al Ministerio de Información.",
+      "Para la primera edición escribió un prefacio titulado «The Freedom of the Press», la libertad de prensa. Su tesis era incómoda: lo más siniestro de la censura literaria en Inglaterra, decía, es que en gran parte es voluntaria. No hacía falta prohibir nada si los propios editores callaban lo que no convenía. La frase de la libertad está casi al final de ese texto.",
+      "El libro salió en agosto de 1945 con Secker & Warburg, y el prefacio no se incluyó. El texto mecanografiado apareció a comienzos de los años setenta y se publicó el 15 de septiembre de 1972 en el Times Literary Supplement. La frase que hoy se cita como defensa general de la libertad de expresión nació, en realidad, como una queja concreta contra la autocensura de su propio gremio."
+    ],
+    "question": "¿Qué dejamos de decir no porque esté prohibido, sino porque incomoda?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Orwell", "#Citas", "#LibertadDeExpresion"],
+    "extended": ["#RebelionEnLaGranja", "#Literatura", "#Censura", "#SigloXX", "#Libertad", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del ensayo «The Freedom of the Press»: en el último párrafo, «If liberty means anything at all it means the right to tell people what they do not want to hear.»; la idea del libro data de 1937 pero no se escribió hasta finales de 1943; fue un prefacio propuesto para Animal Farm; primera publicación en el Times Literary Supplement el 15 de septiembre de 1972, con introducción de Bernard Crick. Lectura directa.",
+      "source": "The Orwell Foundation, «The Freedom of the Press»",
+      "url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/the-freedom-of-the-press/"
+    },
+    {
+      "claim": "Nota editorial: escrito como prefacio de la primera edición de Animal Farm, no incluido; hallado en el mecanoscrito original en 1971; publicado en el TLS el 15 de septiembre de 1972. En el texto: «it was refused by four publishers»; un editor «decided to consult the Ministry of Information» y cita la carta sobre «an important official in the Ministry of Information»; «The sinister fact about literary censorship in England is that it is largely voluntary.» La frase de la libertad, en el párrafo final. Lectura directa.",
+      "source": "Marxists Internet Archive, George Orwell, «The Freedom of the Press» (1945)",
+      "url": "https://www.marxists.org/archive/orwell/1945/preface.htm"
+    },
+    {
+      "claim": "La frase procede del prefacio «The Freedom of the Press»; Animal Farm salió en agosto de 1945 con Secker & Warburg sin el prefacio; Crick lo fecha probablemente en la primavera de 1945; el texto apareció en mayo de 1971 entre libros de Roger Senhouse y se publicó en el TLS en septiembre de 1972; la variante «Freedom is the right to tell people what they do not want to hear», atribuida a The Road to Wigan Pier, no tiene respaldo. Lectura directa.",
+      "source": "Quote Investigator, «If Liberty Means Anything At All It Means the Right To Tell People What They Do Not Want To Hear» (6 de julio de 2020)",
+      "url": "https://quoteinvestigator.com/2020/07/06/hear-liberty/"
+    }
+  ],
+  "do_not_use": [
+    "La variante «La libertad es el derecho a decirle a la gente lo que no quiere oír», atribuida a El camino a Wigan Pier: Quote Investigator no la encuentra en ese libro. La forma correcta lleva el condicional «si la libertad significa algo».",
+    "Quién encontró el texto y cuándo: la Orwell Foundation dice que lo halló Ian Angus en 1972; Marxists.org dice 1971; Quote Investigator, mayo de 1971 entre libros de Roger Senhouse. El cuerpo dice solo «a comienzos de los años setenta».",
+    "Por qué no se incluyó el prefacio: Paul Potts dice que ya no hacía falta porque Secker & Warburg aceptó el libro; Crick sugiere que Orwell no lo terminó o decidió no usarlo. No dar un motivo.",
+    "El nombre de la editorial que consultó al Ministerio de Información (se suele decir Jonathan Cape) y el del funcionario: el ensayo no los nombra y no se leyó otra fuente. No usar.",
+    "La fecha de redacción del prefacio: la frase del libro dice finales de 1943 para Animal Farm, pero el prefacio sería de 1945 (Crick: probablemente primavera). No confundir las dos fechas.",
+    "La traducción es propia, sobre el inglés del ensayo; no es la de ninguna edición española concreta."
+  ],
+  "status": "draft"
+}
