@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-02-extra42",
+  "id": "2026-11-05-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -74,5 +74,7 @@
     "instagram",
     "threads"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-05T20:26:00Z",
+  "results": {}
 }
