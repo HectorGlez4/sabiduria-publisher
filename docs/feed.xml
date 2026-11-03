@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 03 Nov 2026 02:07:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 10:10:50 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EL BRAILLE LO CREÓ UN ADOLESCENTE Y SU PROPIA ESCUELA LLEGÓ A PROHIBIRLO</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-02-re56-reel</guid>
+      <pubDate>Mon, 02 Nov 2026 22:26:00 +0000</pubDate>
+      <description><![CDATA[EL BRAILLE LO CREÓ UN ADOLESCENTE Y SU PROPIA ESCUELA LLEGÓ A PROHIBIRLO
+
+Louis Braille perdió la vista a los tres años, con una lezna del taller de su padre. A los diez entró en la escuela de jóvenes ciegos de París. A los doce tuvo en las manos un sistema de puntos en relieve que Charles Barbier había ofrecido a la institución. Le pareció incómodo y lo rehízo entero: seis puntos, del tamaño de una yema. Publicó su versión en 1829, con veinte años.
+
+Lo que casi nadie cuenta es lo que vino después. En 1840 llegó un director nuevo, Pierre-Armand Dufau, y prohibió el sistema en la escuela donde había nacido. Los alumnos siguieron escribiéndolo a escondidas. En 1844, en la inauguración de la sede nueva, fueron ellos quienes lo demostraron en público. La escuela lo adoptó oficialmente en 1854, dos años después de que Braille muriera.
+
+Sobrevivió porque quienes lo necesitaban no dejaron de usarlo.
+
+¿Qué cosa útil conoces que haya tenido que abrirse paso contra quien debía cuidarla?
+
+#SabiduriaDeBolsillo #Braille #Historia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-02-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-02-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>LA FRASE MÁS CITADA DE VOLTAIRE SOBRE LA LIBERTAD DE EXPRESIÓN LA ESCRIBIÓ SU BIÓGRAFA INGLESA EN 1906</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -479,27 +498,6 @@ Una imprenta cabe en una carreta y se puede confiscar. Una escritura que ya est�
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re58-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re58-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-24-re56-reel</guid>
-      <pubDate>Sat, 24 Oct 2026 15:26:00 +0000</pubDate>
-      <description><![CDATA["ORIENTARSE" SIGNIFICA, LITERALMENTE, PONERSE DE CARA AL ESTE
-
-Viene del latín oriens: el sol que sale. Durante siglos, orientar algo fue alinearlo hacia el este, como se alineaban las iglesias. Que la palabra sirva para situarse respecto a cualquier punto cardinal es reciente: ese uso se documenta hacia 1842.
-
-La costumbre está dibujada en los mapas. En las mappae mundi cristianas, arriba no iba el norte: iba el este. En el mapa de Hereford, de alrededor del año 1300, pintado sobre una sola piel de becerro de metro y medio, el borde superior lo ocupa el Paraíso terrenal y el centro exacto lo ocupa Jerusalén. La lógica no era geográfica, era narrativa: arriba estaba el principio de la historia.
-
-Y el norte arriba no lo trajo la brújula, como se repite: lo trajo Ptolomeo, que hacia el año 150 lo puso así en su Geografía por comodidad de dibujo. Europa lo adoptó cuando lo redescubrió, más de mil doscientos años después.
-
-Cada vez que alguien dice que necesita orientarse, está mirando al amanecer sin saberlo.
-
-¿Qué otras palabras usamos a diario sin ver lo que llevan dentro?
-
-#SabiduriaDeBolsillo #Mapas #Etimologia #Curiosidades]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re56-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re56-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
