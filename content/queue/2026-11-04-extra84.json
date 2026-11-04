@@ -2,7 +2,7 @@
   "id": "2026-11-04-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "blocked",
   "core": {
     "subject": "Ovidio y la gota que horada la piedra",
     "hook": "La frase latina que se cuelga en las aulas para enseñar constancia tiene cuatro palabras que Ovidio no escribió, y en el poema original dice justo lo contrario.",
@@ -84,5 +84,8 @@
     "threads"
   ],
   "publish_at": "2026-11-04T15:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
