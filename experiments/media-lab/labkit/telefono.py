@@ -1,5 +1,5 @@
 """
-Primitivas adb para el Samsung del laboratorio (serie R5CXB1AWYNF).
+Primitivas adb para el Samsung del laboratorio (ver `SERIALES`).
 
 El volcado de uiautomator sirve para ENCONTRAR controles, pero puede ir con
 retraso respecto a la pantalla: la evidencia de un estado final es siempre una
@@ -13,6 +13,7 @@ tocan el teléfono y son las que cubren las pruebas.
 from __future__ import annotations
 
 import hashlib
+import os
 import re
 import shlex
 import subprocess
@@ -21,7 +22,11 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
-SERIAL = "R5CXB1AWYNF"
+# Teléfonos del laboratorio, por preferencia: el SM-S918B original (1080×2316), que volvió el
+# 2026-11-04, y el SM-S721B (1080×2340) que lo sustituyó en 2026-09. Se usa el primero que adb
+# vea autorizado; MEDIA_LAB_SERIAL manda sobre los dos.
+SERIALES = ("RFCW117Q7FA", "R5CXB1AWYNF")
+_serial: str | None = None
 REMOTO_UI = "/sdcard/lab-ui.xml"
 URI_IMAGENES = "content://media/external/images/media"
 ESPERA_MEDIASTORE_S = 20
@@ -66,6 +71,7 @@ def nodos(xml: str) -> list[dict]:
                                   "resource_id": el.get("resource-id", ""),
                                   "clickable": el.get("clickable", "false") == "true",
                                   "enabled": el.get("enabled", "true") == "true",
+                                  "checked": el.get("checked", "false") == "true",
                                   "profundidad": nivel,
                                   "bounds": (x1, y1, x2, y2),
                                   "centro": ((x1 + x2) // 2, (y1 + y2) // 2)})
@@ -329,11 +335,32 @@ def version_desde_dumpsys(salida: str) -> str | None:
     return " | ".join(vistas) if vistas else None
 
 
+def elegir_serial(salida_devices: str, preferidos: tuple[str, ...] = SERIALES) -> str:
+    """El primero de `preferidos` que `adb devices` lista como «device» (autorizado), o el
+    primero de todos si no hay ninguno: así el error posterior nombra un teléfono concreto."""
+    listos = {c[0] for c in (l.split() for l in salida_devices.splitlines()[1:]) if c[1:2] == ["device"]}
+    return next((s for s in preferidos if s in listos), preferidos[0])
+
+
 # --- E/S contra el teléfono --------------------------------------------------
+
+def serial() -> str:
+    """Serie del teléfono para este proceso: se resuelve una vez y no cambia a media ejecución."""
+    global _serial
+    if _serial is None:
+        _serial = os.environ.get("MEDIA_LAB_SERIAL")
+    if _serial is None:
+        try:
+            salida = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=15).stdout
+        except (OSError, subprocess.TimeoutExpired):
+            salida = ""
+        _serial = elegir_serial(salida)
+    return _serial
+
 
 def adb(*args: str, timeout: int = 60) -> subprocess.CompletedProcess:
     try:
-        r = subprocess.run(["adb", "-s", SERIAL, *args], capture_output=True, timeout=timeout)
+        r = subprocess.run(["adb", "-s", serial(), *args], capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as e:
         raise TelefonoError(f"adb {' '.join(args)}: sin respuesta en {timeout} s") from e
     except OSError as e:

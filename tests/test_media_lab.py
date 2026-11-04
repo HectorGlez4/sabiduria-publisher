@@ -826,6 +826,11 @@ def seccion_interfaz() -> None:
     check(e["bloqueado"] is True and e["listo"] is False, "con la pantalla de bloqueo: no listo")
     e = T.estado_desde_dumpsys("  mWakefulness=Awake\n", "WINDOW MANAGER POLICY STATE\n")
     check(e["bloqueado"] is None and e["listo"] is False, "sin isKeyguardShowing no se sabe: no listo")
+    lista = "List of devices attached\nRFCW117Q7FA\tunauthorized usb:0-1\nR5CXB1AWYNF\tdevice usb:0-2\n"
+    check(T.elegir_serial(lista) == "R5CXB1AWYNF", "serie: el primer teléfono autorizado, no uno sin autorizar")
+    check(T.elegir_serial(lista.replace("unauthorized", "device")) == T.SERIALES[0],
+          "serie: con los dos autorizados, el preferido")
+    check(T.elegir_serial("List of devices attached\n") == T.SERIALES[0], "serie: sin teléfonos, el preferido")
     check(T.teclado_desde_dumpsys("  mInputShown=true\n") is True, "teclado visible")
     check(T.teclado_desde_dumpsys("  mInputShown=false\n") is False, "teclado oculto")
     check(T.teclado_desde_dumpsys("INPUT METHOD MANAGER\n") is None, "sin mInputShown no se sabe")
@@ -1138,7 +1143,7 @@ def seccion_interfaz() -> None:
 
     import phone_clipboard
     args = phone_clipboard.argumentos_servidor(0x2A)
-    check(args[:4] == ["adb", "-s", phone_clipboard.SERIAL, "shell"], "scrcpy-server se lanza por adb shell")
+    check(args[:4] == ["adb", "-s", phone_clipboard.serial(), "shell"], "scrcpy-server se lanza por adb shell")
     check(all(a in args for a in ("power_on=false", "control=true", "video=false", "audio=false", "scid=0000002a")),
           "scrcpy-server sin POWER al arrancar, solo control y scid de 8 cifras hex")
 
@@ -6122,6 +6127,25 @@ def seccion_sitio_instagram() -> None:
     def leer(n, d=datos):
         fuera = bytes(d[:n]); del d[:n]; return fuera
     check(cdp.leer_trama(leer) == (1, larga), "lee una trama del servidor de 300 bytes (longitud de 16 bits)")
+
+    # «Votre story» del composer del Reel: el `toggle` si el volcado lo trae; si `--compressed` lo quitó, la fila
+    # (un Switch). Nunca el interruptor de otra fila (Facebook, justo encima).
+    def caja(rid, clase, x1, y1, x2, y2, texto="", marcado=False):
+        return (f'<node text="{texto}" content-desc="" resource-id="com.instagram.android:id/{rid}" class="{clase}" '
+                f'package="com.instagram.android" checked="{str(marcado).lower()}" bounds="[{x1},{y1}][{x2},{y2}]">')
+    titulo = caja("title", "android.widget.TextView", 147, 1655, 381, 1712, texto="Votre story") + "</node>"
+    facebook = caja("toggle", "android.widget.ToggleButton", 889, 1480, 1035, 1570, marcado=True) + "</node>"
+    fila = caja("", "android.widget.Switch", 0, 1621, 1080, 1763, marcado=True)
+    toggle = caja("toggle", "android.widget.ToggleButton", 889, 1640, 1035, 1729, marcado=True) + "</node>"
+    entero = f"<hierarchy>{facebook}{fila}{titulo}{toggle}</node></hierarchy>"
+    comprimido = f"<hierarchy>{facebook}{fila}{titulo}</node></hierarchy>"
+    n = si.interruptor_junto_a(entero, "Votre story")
+    check(n is not None and n["bounds"] == (889, 1640, 1035, 1729), "«Votre story»: el toggle de su fila, no el de Facebook")
+    n = si.interruptor_junto_a(comprimido, "Votre story")
+    check(n is not None and n["clase"].endswith(".Switch") and n["checked"],
+          "«Votre story» en el volcado comprimido: la fila Switch, con su estado")
+    check(si.interruptor_junto_a(f"<hierarchy>{facebook}</hierarchy>", "Votre story") is None,
+          "sin la fila «Votre story» no se elige ningún interruptor")
 
     def nodo(rid, texto="", desc="", y=0):
         return (f'<node text="{texto}" content-desc="{desc}" resource-id="com.instagram.android:id/{rid}" '

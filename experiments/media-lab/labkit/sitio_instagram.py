@@ -30,6 +30,8 @@ from labkit.pantalla import PantallaInesperada
 
 IG = "com.instagram.android"
 HOJA = "com.android.intentresolver"
+FILA_DE_HOJA = "sem_chooser_row_recycler_view"
+ANCHO_ETIQUETA_ENTERA = 120  # «Instagram» entero mide 181 px; cortado contra el borde, ~50
 CHROME = "com.android.chrome/com.google.android.apps.chrome.Main"
 SITIO = "https://sabiduriadebolsillo.net/cita/"
 _URL_DE_CITA = re.compile(r"https://sabiduriadebolsillo\.net/cita/[a-z0-9-]+/")
@@ -43,6 +45,7 @@ EDITOR = {"feed": "media_thumbnail_tray_button", "reel": "clips_right_action_but
           "story": "your_story_share_shortcut_button"}
 PUBLICAR = {"feed": "share_footer_button", "reel": "share_button", "story": "your_story_share_shortcut_button"}
 TEXTO_DEL_STICKER = "Leer la cita"
+PARA_TODOS_LOS_REELS = "Arrêter pour tous les reels"
 TOP_PISTAS = 10
 ESPERA_S = 25
 
@@ -76,8 +79,8 @@ def _rid(n: dict) -> str:
     return n["resource_id"].split("/")[-1]
 
 
-def por_id(xml: str, rid: str) -> list[dict]:
-    return [n for n in telefono.nodos(xml) if n["package"] == IG and _rid(n) == rid]
+def por_id(xml: str, rid: str, paquete: str = IG) -> list[dict]:
+    return [n for n in telefono.nodos(xml) if n["package"] == paquete and _rid(n) == rid]
 
 
 def filas_de_pistas(xml: str) -> list[Pista]:
@@ -244,6 +247,32 @@ def _exigir_listo() -> None:
         raise PantallaInesperada(f"el teléfono no está listo (no se despierta ni se desbloquea): {e}")
 
 
+def _instagram_en_la_hoja(intentos: int = 8) -> str:
+    """Volcado con Instagram entero en la hoja. En el SM-S918B Instagram no sale en la primera
+    pantalla de la fila de apps (la última `sem_chooser_row_recycler_view`; la de arriba es de
+    contactos): se desliza esa fila a pasos cortos, porque un deslizamiento largo se pasa y lo deja
+    cortado contra el borde. Sin esa fila (el SM-S721B) solo se espera."""
+    xml = _esperar(lambda x: bool(por_id(x, FILA_DE_HOJA, HOJA)) or
+                   telefono.buscar(x, texto="Instagram", paquete=HOJA) is not None, "la hoja de compartir")
+    for _ in range(intentos):
+        n = telefono.buscar(xml, texto="Instagram", paquete=HOJA)
+        if n is not None and n["bounds"][2] - n["bounds"][0] >= ANCHO_ETIQUETA_ENTERA:
+            return xml
+        filas = por_id(xml, FILA_DE_HOJA, HOJA)
+        if not filas:
+            return _esperar(lambda x: telefono.buscar(x, texto="Instagram", paquete=HOJA) is not None,
+                            "Instagram en la hoja de compartir")
+        x1, y1, x2, y2 = filas[-1]["bounds"]
+        y = (y1 + y2) // 2
+        if n is not None and n["bounds"][0] <= x1 + 5:  # cortado a la izquierda: volver un poco
+            telefono.deslizar(x1 + 150, y, x1 + 450, y, 400)
+        else:
+            telefono.deslizar(x2 - 100, y, x2 - 400, y, 400)
+        time.sleep(1.5)
+        xml = telefono.volcado(timeout=20)
+    raise PantallaInesperada("Instagram no aparece entero en la fila de apps de la hoja")
+
+
 def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path) -> dict:
     """Abre la Página de Cita en Chrome, compone la imagen (cuadrada para el feed, vertical
     para Reel y Story) y la manda a Instagram. Termina en el editor de Instagram."""
@@ -268,8 +297,7 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
         s.esperar(f"document.querySelector('[data-lienzo]').height === {ALTO[formato]}",
                   descripcion=f"el lienzo {formato}")
         s.evaluar("document.querySelector('[data-descargar]').click()", gesto=True)
-    xml = _esperar(lambda x: telefono.buscar(x, texto="Instagram", paquete=HOJA) is not None,
-                   "Instagram en la hoja de compartir")
+    xml = _instagram_en_la_hoja()
     cx, cy = telefono.buscar(xml, texto="Instagram", paquete=HOJA)["centro"]
     telefono.deslizar(cx, cy, cx, cy, 900)  # pulsación larga: menú Stories · Reels · Feed · Messages
     opcion = SUPERFICIES[superficie]
@@ -434,7 +462,55 @@ def escribir_pie(superficie: str, pie: str, ev: Path) -> dict:
     time.sleep(2)
     if telefono.teclado_visible():
         raise PantallaInesperada("el teclado sigue abierto tras «OK»")
-    return {"captura": str(telefono.captura(ev / "04-composer.png"))}
+    salida = {"captura": str(telefono.captura(ev / "04-composer.png"))}
+    if superficie == "reel":
+        salida["copia_en_story"] = _sin_copia_en_la_story()
+        salida["captura_opciones"] = str(telefono.captura(ev / "04b-composer-opciones.png"))
+    return salida
+
+
+def interruptor_junto_a(xml: str, titulo: str) -> dict | None:
+    """El interruptor de Instagram en la fila del texto `titulo`, o None. El volcado `--compressed` a veces
+    quita el `toggle` de la derecha y deja solo la fila, que es ella misma un `Switch` con su `checked`:
+    vale cualquiera de los dos, y el `toggle` si están ambos."""
+    t = telefono.buscar(xml, texto=titulo, paquete=IG)
+    if t is None:
+        return None
+    y = t["centro"][1]
+    en_la_fila = [n for n in telefono.nodos(xml) if n["package"] == IG and n["bounds"][1] <= y <= n["bounds"][3]
+                  and (_rid(n) == "toggle" or n["clase"].endswith(".Switch"))]
+    toggles = [n for n in en_la_fila if _rid(n) == "toggle"]
+    if len(toggles) == 1:
+        return toggles[0]
+    return en_la_fila[0] if len(en_la_fila) == 1 else None
+
+
+def _sin_copia_en_la_story() -> str:
+    """Reel: apaga «Votre story» en «Partager aussi sur…». Instagram la trae encendida y recuerda la última
+    elección, así que se comprueba en cada Reel (decisión del usuario del 2026-11-04: sin copia automática
+    en la Story). Threads y Facebook, en la misma lista, no se tocan."""
+    for _ in range(4):
+        n = interruptor_junto_a(telefono.volcado(), "Votre story")
+        if n is not None:
+            break
+        telefono.deslizar(540, 1700, 540, 900, 500)  # x en el centro: lejos de los interruptores de la derecha
+        time.sleep(1.5)
+    else:
+        raise PantallaInesperada("no aparece el interruptor «Votre story» en el composer del Reel")
+    if not n["checked"]:
+        return "ya apagada"
+    telefono.tocar(*n["centro"])
+    time.sleep(1.5)
+    # Apagarlo pregunta «Arrêter l'ajout à votre story ?»: «Arrêter pour tous les reels» es el ajuste de cuenta
+    # que el usuario decidió quitar (no «Ne pas ajouter ce reel», que valdría solo para este).
+    xml = telefono.volcado()
+    if telefono.buscar(xml, texto=PARA_TODOS_LOS_REELS, paquete=IG):
+        _tocar_texto(xml, PARA_TODOS_LOS_REELS)
+        time.sleep(2)
+    n = interruptor_junto_a(telefono.volcado(), "Votre story")
+    if n is None or n["checked"]:
+        raise PantallaInesperada("«Votre story» sigue encendido tras tocarlo")
+    return "apagada"
 
 
 def publicar(superficie: str, ev: Path) -> dict:
@@ -508,6 +584,10 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
     _esperar(lambda x: bool(por_id(x, "profile_tab_icon_view")), "el perfil", plazo=40)
     _esperar(lambda x: not _subiendo(x), "el final de la subida («Partage sur…»)", plazo=180)
     time.sleep(2)
+    # En el SM-S918B el perfil abierto por enlace sale en caché: el contador ya sube, pero ni la baldosa nueva ni
+    # el aro de la Story aparecen hasta tirar hacia abajo para refrescarlo.
+    telefono.deslizar(540, 700, 540, 1700, 500)
+    time.sleep(6)
     if superficie == "story":
         xml = _esperar(lambda x: bool(por_id(x, "row_profile_header_imageview_frame_layout")), "la foto del perfil")
         _tocar_id(xml, "row_profile_header_imageview_frame_layout")
@@ -539,7 +619,7 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
         telefono.tocar(*orden["centro"])
         time.sleep(3)
     for i in range(3):
-        xml = _esperar(lambda x: True, "un volcado del perfil", plazo=30)
+        xml = _esperar(lambda x: True, "un volcado del perfil", plazo=60)  # la pestaña Reels anima las baldosas
         tiles = [n for n in telefono.nodos(xml) if n["package"] == IG and n["desc"].startswith(prefijo)
                  and _rid(n) in ("image_button", "preview_clip_thumbnail")]
         if len(tiles) <= i:

@@ -1,9 +1,11 @@
 # Stories y Reels desde «Compartir» de sabiduriadebolsillo.net
 
-Receta para publicar una cita del sitio en Instagram desde el Samsung del laboratorio
-(R5CXB1AWYNF), usando la función de compartir de la propia página de la cita. Se mide en
-el teléfono; las coordenadas son de pantalla completa 1080×2340 y pueden cambiar con
-cada versión de Instagram: confirmar siempre con una captura antes de tocar.
+Receta para publicar una cita del sitio en Instagram desde un Samsung del laboratorio,
+usando la función de compartir de la propia página de la cita. Desde el 2026-11-04 el
+teléfono es el SM-S918B (`RFCW117Q7FA`, 1080×2316); el SM-S721B (`R5CXB1AWYNF`, 1080×2340)
+sigue valiendo: `labkit/telefono.py` usa el primero de los dos que adb vea autorizado
+(`MEDIA_LAB_SERIAL` manda sobre ambos). Las coordenadas cambian con el teléfono y con cada
+versión de Instagram: confirmar siempre con una captura antes de tocar.
 
 Estado (2026-11-04): **automatizado**. `lab.py sitio` hace cada paso y el bucle lo lanza
 cada 90 min entre las 08:00 y las 23:00 (hora de Madrid) con el encargo
@@ -18,6 +20,9 @@ pantalla cambie.
 | Feed | Jaime Balmes, *El Criterio* | Tinta / Cuadrado | Michael Jackson · Thriller (n.º 1) | 2026-11-03 21:16 | script |
 | Reel | Jaime Balmes, *El Criterio* | Papel / Vertical | Carmen Goett · La Llorona (n.º 10) | 2026-11-03 21:18 | script |
 | Story | Jaime Balmes, *El Criterio* | Papel / Vertical | SENDA SAGRADA Project · LA CATRINA Y LA LLORONA (n.º 7) | 2026-11-03 21:32 | script |
+| Feed | Francisco de Quevedo, *El alguacil endemoniado* | Papel / Cuadrado | Róisín Murphy · Ramalama (Bang Bang) (n.º 5) | 2026-11-04 18:51 | script, SM-S918B |
+| Reel | Francisco de Quevedo, *El alguacil endemoniado* | Siena / Vertical | Emilia · BODYPAINTING (n.º 4) | 2026-11-04 18:58 | script, SM-S918B |
+| Story | Francisco de Quevedo, *El alguacil endemoniado* | Tinta / Vertical | Guns N' Roses · November Rain (n.º 3) | 2026-11-04 19:03 | script, SM-S918B |
 
 ## El bucle
 
@@ -62,9 +67,23 @@ Lo que se aprendió al automatizar (todo está ya en el código):
   deja volcar la pantalla: un toque en el centro lo pausa. En la pestaña Reels, tocarla ya
   elegida abre el orden («Les plus récents»). Las destacadas del perfil también empiezan
   por «Story de <cuenta>,»: el visor se reconoce por «il y a …».
-- **El contador de publicaciones del perfil va con caché**: no sirve para verificar.
-- **Instagram comparte cada Reel en la Story** por su cuenta. El usuario decidió
-  desactivar ese ajuste (2026-11-04); hasta hacerlo, cada ciclo deja dos Stories.
+- **El contador de publicaciones del perfil va con caché**: no sirve para verificar. En el
+  SM-S918B ni la baldosa nueva ni el aro de la Story salen hasta tirar del perfil hacia
+  abajo: `verificar` lo refresca siempre antes de mirar.
+- **Copia del Reel en la Story**: no es un ajuste de Paramètres. Está en el composer del
+  Reel, «Partager aussi sur… → Votre story», encendido por defecto. Al apagarlo Instagram
+  pregunta y «Arrêter pour tous les reels» lo quita para la cuenta (hecho el 2026-11-04,
+  decisión del usuario). `escribir_pie` lo comprueba en cada Reel por si vuelve. Threads y
+  Facebook, en la misma lista, siguen encendidos: cada Reel sale también allí.
+- **Instagram en francés**: todo el kit lee textos en francés. En un teléfono en otro
+  idioma se pone solo Instagram en francés con
+  `adb shell cmd locale set-app-locales com.instagram.android --locales fr-FR` (Android 13+);
+  Chrome y la hoja de compartir pueden quedarse en inglés.
+- **Hoja de compartir del SM-S918B**: dos filas horizontales con el mismo id; la de arriba
+  son **contactos reales** (WhatsApp, Messages) y la de abajo, apps. Instagram no sale en
+  la primera pantalla: se desliza solo la fila de apps, a pasos cortos.
+- **Volcado comprimido**: `uiautomator dump --compressed` a veces quita el interruptor de
+  una fila y deja la fila como `Switch` con su `checked`.
 
 ## Por qué así
 
@@ -175,12 +194,10 @@ cuadrícula del perfil y no tapa el visor de Stories.
 
 ## Pendiente
 
-- **Vueltas limpias**: el primer ciclo completo (2026-11-03 21:12 UTC) salió entero, pero
-  con correcciones del script a mitad (lista del feed, verificación del Reel y de la
-  Story). Hay que mirar los informes de los primeros ciclos programados; si un paso
+- **Vueltas limpias**: los dos ciclos completos (2026-11-03 en el SM-S721B y 2026-11-04 en
+  el SM-S918B) salieron enteros, pero con correcciones del script a mitad (el segundo:
+  hoja de compartir, refresco del perfil, interruptor de la Story). Hay que mirar los informes de los primeros ciclos programados; si un paso
   vuelve a salir con 4, se depura con las secciones «paso a paso» de arriba.
-- **Ajuste Reel → Story**: desactivar en Instagram que los Reels se compartan solos en la
-  Story (decisión del usuario del 2026-11-04). Afecta también a los Reels de producción.
 - **Cadencia con producción**: el ciclo no mira `content/published/`. Las colisiones con
   producción no frenan al laboratorio (decisión del 2026-09-14), pero aquí son 33
   publicaciones al día más las de producción y las copias automáticas en Facebook.

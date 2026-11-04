@@ -25,7 +25,8 @@ import struct
 import subprocess
 import time
 
-SERIAL = "R5CXB1AWYNF"
+from labkit.telefono import serial
+
 SCRCPY_VERSION = "4.1"
 SERVER_LOCAL = "/opt/homebrew/share/scrcpy/scrcpy-server"
 SERVER_REMOTE = "/data/local/tmp/scrcpy-server-lab.jar"
@@ -36,7 +37,7 @@ ADB_TIMEOUT_CORTO = 15
 
 def adb(*args: str, timeout: int = ADB_TIMEOUT_CORTO) -> subprocess.CompletedProcess:
     try:
-        return subprocess.run(["adb", "-s", SERIAL, *args], capture_output=True, text=True, timeout=timeout)
+        return subprocess.run(["adb", "-s", serial(), *args], capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired as e:
         raise RuntimeError(f"adb {' '.join(args)} no respondió en {timeout} s") from e
 
@@ -52,7 +53,7 @@ def argumentos_servidor(scid: int) -> list[str]:
     power_on=false es obligatorio: scrcpy 4.1 tiene powerOn activado por defecto y, con
     control y la pantalla apagada, inyecta KEYCODE_POWER al arrancar. El teléfono lo
     gestiona MaaS360 y aquí nunca se despierta."""
-    return ["adb", "-s", SERIAL, "shell",
+    return ["adb", "-s", serial(), "shell",
             f"CLASSPATH={SERVER_REMOTE}", "app_process", "/", "com.genymobile.scrcpy.Server",
             SCRCPY_VERSION, f"scid={scid:08x}", "log_level=info", "tunnel_forward=true",
             "video=false", "audio=false", "control=true", "power_on=false", "send_dummy_byte=false",
