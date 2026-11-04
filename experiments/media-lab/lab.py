@@ -52,7 +52,7 @@ AGENTE_DESPIERTO = "com.sabiduria.medialab.phone-awake"
 TURNOS = Path(os.environ.get("LAB_TURNOS", LAB / "turnos.json"))
 TURNO_HECHO = Path(os.environ.get("LAB_TURNO_HECHO", LAB / ".turno-hecho"))
 
-DUENOS_VENTANA = ("programada", "manual")
+DUENOS_VENTANA = ("programada", "manual", "sitio")  # sitio: el bucle de citas del sitio a Instagram
 ESTADOS_ACTIVOS = ("pedido", "generando", "generado", "aprobado")
 TIMEOUT_CODEX_S = 420
 COLA_BYTES = 1500
@@ -1067,6 +1067,77 @@ def _tema_confirmado(ev: Path, tema: str | None) -> bool:
     return marca.get("tema") == tema
 
 
+# --- sabiduriadebolsillo.net → Stories y Reels (historias-y-reels-desde-el-sitio.md) ---------
+
+REGISTRO_SITIO = LAB / "sitio-instagram" / "registro.jsonl"
+CORPUS_SITIO = Path.home() / "dev" / "sitio-sdb" / "corpus" / "citas"
+
+
+def _citas_del_corpus() -> list[dict]:
+    import yaml
+    citas = []
+    for f in sorted(CORPUS_SITIO.glob("*.md")):
+        partes = f.read_text(encoding="utf-8").split("---")
+        if len(partes) >= 3:
+            citas.append(yaml.safe_load(partes[1]) or {})
+    return citas
+
+
+def _ya_en_produccion(citas: list[dict]) -> set[str]:
+    """Slugs cuyas citas ya salieron por el publicador (content/published/)."""
+    textos_pub = " ".join(f.read_text(encoding="utf-8") for f in (ROOT / "content" / "published").glob("*.json"))
+    return {c["slug"] for c in citas if c.get("texto") and c["texto"][:60] in textos_pub}
+
+
+def cmd_sitio(a) -> int:
+    import random
+    from labkit import sitio_instagram as si
+    rng = random.Random()
+    registro = si.leer_registro(REGISTRO_SITIO)
+    recientes = [e["pista"] for e in reversed(registro)]
+    if a.paso == "elegir":
+        citas = _citas_del_corpus()
+        usadas = si.usadas_desde(registro) | _ya_en_produccion(citas)
+        cita = si.elegir_cita(citas, usadas, rng)
+        _exigir(cita is not None, "no queda ninguna cita apta sin usar")
+        emitir({"ok": True, "run": f"SITIO-{datetime.now(timezone.utc):%Y%m%d-%H%M}",
+                "slug": cita["slug"], "url": f"{si.SITIO}{cita['slug']}/", "texto": cita["texto"],
+                "autor": cita.get("autor"), "obra": (cita.get("procedencia") or {}).get("obra"),
+                # Un diseño al azar por formato, independiente: el mismo ciclo puede salir en tres colores.
+                "plantillas": {sup: rng.choice(si.PLANTILLAS) for sup in si.SUPERFICIES}})
+        return 0
+    ev = _evidencia(a.run)
+    ev.mkdir(parents=True, exist_ok=True)
+    _exigir(a.superficie in si.SUPERFICIES, "--superficie debe ser feed, reel o story")
+    if a.paso in ("compartir", "enlace"):
+        _exigir(bool(a.url), "--url es obligatorio en este paso")
+    if a.paso == "pie":
+        _exigir(a.superficie in ("feed", "reel") and bool(a.pie), "pie es para feed o reel y exige --pie")
+    if a.paso == "publicar":
+        # El PASS del revisor visual (visual-qa-gate.md) es la única puerta: publicar-sin-confirmacion-humana.
+        _exigir(a.veredicto == "PASS", "publicar exige --veredicto PASS del revisor visual")
+        _exigir(bool(a.slug and a.pista), "publicar exige --slug y --pista para el registro")
+    if a.paso == "verificar":
+        _exigir(bool(a.pista), "verificar exige --pista")
+    pie = Path(a.pie).read_text(encoding="utf-8").rstrip("\n") if a.pie else None
+
+    def publicar() -> dict:
+        res = si.publicar(a.superficie, ev)
+        si.anotar(REGISTRO_SITIO, {"run": a.run, "slug": a.slug, "superficie": a.superficie,
+                                   "pista": a.pista, "publicado_en": res["publicado_en"]})
+        return res
+
+    pasos = {
+        "compartir": lambda: si.compartir_desde_el_sitio(a.url, a.plantilla, a.superficie, ev),
+        "musica": lambda: si.poner_musica(a.superficie, ev, recientes, rng),
+        "enlace": lambda: si.poner_enlace(a.url, ev),
+        "pie": lambda: si.escribir_pie(a.superficie, pie, ev),
+        "publicar": publicar,
+        "verificar": lambda: si.verificar(a.superficie, ev, a.pista, pie),
+    }
+    return _paso_telefono(ev, f"sitio-{a.paso}-inesperada", pasos[a.paso])
+
+
 def cmd_ig(a) -> int:
     from labkit import instagram_feed as ig
     ev = _evidencia(a.run)
@@ -1267,6 +1338,18 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--produccion-cercana", action="store_true",
                    help="preflight trajo espera: un confirmado baja a confirmado_sin_conteo (compartir)")
     p.set_defaults(func=cmd_ig)
+
+    p = sub.add_parser("sitio", help="cita de sabiduriadebolsillo.net a Story o Reel, un paso por llamada")
+    p.add_argument("paso", choices=("elegir", "compartir", "musica", "enlace", "pie", "publicar", "verificar"))
+    p.add_argument("--run", help="id del run (todos los pasos salvo elegir)")
+    p.add_argument("--superficie", choices=("feed", "reel", "story"))
+    p.add_argument("--url", help="URL de la Página de Cita (compartir, enlace)")
+    p.add_argument("--plantilla", default="papel", choices=("papel", "tinta", "siena"))
+    p.add_argument("--pie", help="archivo del pie: el pie.txt que deja compartir (pie, verificar de feed y reel)")
+    p.add_argument("--slug", help="slug de la cita (publicar)")
+    p.add_argument("--pista", help="título de la pista que devolvió musica (publicar, verificar)")
+    p.add_argument("--veredicto", help="última línea del revisor visual: PASS (publicar)")
+    p.set_defaults(func=cmd_sitio)
     return ap
 
 

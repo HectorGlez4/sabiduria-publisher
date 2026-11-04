@@ -6106,6 +6106,95 @@ def seccion_excepciones_s1() -> None:
                   f"B: sonda tocar no pulsa la miniatura con {label} encima ({res and res[0]}, {res and campo(res[1], 'error')})")
 
 
+def seccion_sitio_instagram() -> None:
+    print("\n27. Citas del sitio a Stories y Reels: lo que se decide sin teléfono")
+    import random
+    from datetime import datetime, timedelta, timezone
+    from PIL import Image, ImageDraw
+    from labkit import cdp, sitio_instagram as si
+
+    # Tramas WebSocket: la de texto se desenmascara a lo enviado, y la lectura entiende 126.
+    trama = cdp.trama_texto("hola", mascara=b"\x01\x02\x03\x04")
+    check(trama[:2] == b"\x81\x84" and bytes(b ^ m for b, m in zip(trama[6:], b"\x01\x02\x03\x04")) == b"hola",
+          "la trama de texto va final, enmascarada y con la carga XOR la máscara")
+    larga = b"x" * 300
+    datos = bytearray(b"\x81\x7e" + (300).to_bytes(2, "big") + larga)
+    def leer(n, d=datos):
+        fuera = bytes(d[:n]); del d[:n]; return fuera
+    check(cdp.leer_trama(leer) == (1, larga), "lee una trama del servidor de 300 bytes (longitud de 16 bits)")
+
+    def nodo(rid, texto="", desc="", y=0):
+        return (f'<node text="{texto}" content-desc="{desc}" resource-id="com.instagram.android:id/{rid}" '
+                f'class="android.widget.TextView" package="com.instagram.android" clickable="false" '
+                f'bounds="[279,{y}][900,{y + 50}]" />')
+    filas = "".join(nodo("track_number", str(i), y=800 + i * 170) + nodo("song_title", t, d, y=800 + i * 170)
+                    + nodo("artist_name", a, y=850 + i * 170)
+                    for i, (t, d, a) in enumerate([("BODYPAINTING", "", "Emilia • 2:33"),
+                                                   ("Ramalama", "Espresso explicite", "Róisín Murphy • 3:35"),
+                                                   ("Audio d’origine", "", "thetinychefshow • 0:20")], start=3))
+    pistas = si.filas_de_pistas(f"<hierarchy>{filas}</hierarchy>")
+    check([(p.puesto, p.titulo, p.artista, p.explicita) for p in pistas]
+          == [(3, "BODYPAINTING", "Emilia", False), (4, "Ramalama", "Róisín Murphy", True),
+              (5, "Audio d’origine", "thetinychefshow", False)],
+          "lee puesto, título, artista y la marca de explícita de cada fila de «Populaires»")
+
+    try:
+        rng = random.Random(1)
+        elegidas = {si.elegir_pista(pistas, ["BODYPAINTING"], rng) for _ in range(30)}
+        check(all(p is None or p.titulo != "Audio d’origine" for p in elegidas),
+              "elegir_pista nunca elige «Audio d’origine» (es audio de un usuario, no una canción)")
+        check(all(p is None or p.titulo != "BODYPAINTING" for p in elegidas),
+              "elegir_pista no repite la pista de la publicación anterior")
+        once = [si.Pista(i, f"t{i}", "a", False, (0, 0)) for i in range(1, 13)]
+        check({si.elegir_pista(once, [], random.Random(i)).puesto for i in range(200)} == set(range(1, 11)),
+              "elegir_pista reparte al azar entre el top 10 y nunca baja del 10")
+        solo_malas = [p for p in pistas if p.titulo == "Audio d’origine"]
+        check(si.elegir_pista(solo_malas, [], rng) is None, "elegir_pista da None si ninguna vale")
+    except NotImplementedError:
+        check(False, "elegir_pista está sin escribir (TODO del usuario en labkit/sitio_instagram.py)")
+
+    # Una tarjeta sintética: cita arriba, atribución, firma abajo.
+    im = Image.new("RGB", (1080, 2340), (250, 247, 240))
+    d = ImageDraw.Draw(im)
+    for y0, y1 in [(790, 830), (860, 900), (930, 965), (1060, 1080), (1100, 1120), (1590, 1607)]:
+        d.rectangle([96, y0, 800, y1], fill=(30, 27, 22))
+    d.rectangle([917, 300, 1052, 700], fill=(60, 60, 60))  # columna de botones del editor: no cuenta
+    b = si.bloques(si.filas_con_tinta(im.load()))
+    check(b == [(790, 965), (1060, 1120), (1590, 1607)],
+          "agrupa las líneas en bloques (cita, atribución, firma) e ignora la columna de botones")
+    centro = si.centro_del_hueco(b, 124)
+    check(centro == (1120 + 1590) // 2, "el sticker va al centro del hueco más alto, entre atribución y firma")
+    check(not si.solapa((295, centro - 62, 785, centro + 62), b), "ahí no toca ningún texto")
+    check(si.solapa((295, 897, 785, 1021), b), "en el centro de la pantalla taparía la cita")
+    check(si.centro_del_hueco([(400, 1500), (1560, 1600)], 124) is None,
+          "sin hueco suficiente no hay destino: nunca encima de la cita")
+
+    url = "https://sabiduriadebolsillo.net/cita/ovidio-abandonamos/"
+    pie = si.pie_para("«Abandonamos tarde.» — Ovidio, El remedio del amor.", url)
+    check(pie.endswith("sabiduriadebolsillo.net/cita/ovidio-abandonamos") and "#" not in pie,
+          "el pie termina en la URL, sin https ni hashtag final")
+    try:
+        si.pie_para("x" * 2300, url)
+        check(False, "un pie de más de 2200 caracteres se rechaza")
+    except ValueError:
+        check(True, "un pie de más de 2200 caracteres se rechaza")
+
+    citas = [{"slug": "a", "texto": "corta", "estadoDerechos": "dominio-público"},
+             {"slug": "b", "texto": "y" * 200, "estadoDerechos": "dominio-público"},
+             {"slug": "c", "texto": "corta", "estadoDerechos": "con-permiso"},
+             {"slug": "d", "texto": "corta", "estadoDerechos": "dominio-público"}]
+    check({si.elegir_cita(citas, {"d"}, random.Random(i))["slug"] for i in range(10)} == {"a"},
+          "elegir_cita: solo dominio público, corta y no usada")
+    ahora = datetime(2026, 11, 3, tzinfo=timezone.utc)
+    registro = [{"slug": "viejo", "publicado_en": (ahora - timedelta(days=91)).isoformat()},
+                {"slug": "nuevo", "publicado_en": (ahora - timedelta(days=5)).isoformat()}]
+    check(si.usadas_desde(registro, ahora=ahora) == {"nuevo"}, "una cita vuelve a valer a los 90 días")
+    check(si.story_reciente("Story de sabiduriabolsillo, il y a 4 minutes", "sabiduriabolsillo")
+          and not si.story_reciente("Story de sabiduriabolsillo, il y a 5 heures", "sabiduriabolsillo")
+          and not si.story_reciente("Story de otra, il y a 1 minute", "sabiduriabolsillo"),
+          "la verificación solo da por buena una Story propia de hace minutos")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -6133,6 +6222,7 @@ SECCIONES = [
     seccion_prompt_ventana,
     seccion_zona_segura_story,
     seccion_excepciones_s1,
+    seccion_sitio_instagram,
 ]
 
 
