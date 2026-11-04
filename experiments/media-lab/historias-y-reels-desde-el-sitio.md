@@ -74,7 +74,8 @@ Lo que se aprendió al automatizar (todo está ya en el código):
   Reel, «Partager aussi sur… → Votre story», encendido por defecto. Al apagarlo Instagram
   pregunta y «Arrêter pour tous les reels» lo quita para la cuenta (hecho el 2026-11-04,
   decisión del usuario). `escribir_pie` lo comprueba en cada Reel por si vuelve. Threads y
-  Facebook, en la misma lista, siguen encendidos: cada Reel sale también allí.
+  Facebook, en la misma lista, siguen encendidos a propósito (decisión del usuario del
+  2026-11-04): cada Reel sale también allí.
 - **Instagram en francés**: todo el kit lee textos en francés. En un teléfono en otro
   idioma se pone solo Instagram en francés con
   `adb shell cmd locale set-app-locales com.instagram.android --locales fr-FR` (Android 13+);
