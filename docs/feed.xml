@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 04 Nov 2026 07:10:12 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 14:05:21 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-03-re53-reel</guid>
+      <pubDate>Wed, 04 Nov 2026 01:26:00 +0000</pubDate>
+      <description><![CDATA["El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten."
+— Ibn Jaldún, Al-Muqaddima (1377), Introducción
+
+Ibn Jaldún nació en Túnez el 27 de mayo de 1332. En 1375 se retiró con una tribu árabe a Qalat ibn Salama, cerca de la actual Frenda, en Argelia. Pasó allí más de tres años, y en noviembre de 1377 cerró el primer borrador de la Muqaddima: la introducción y primer libro de su historia universal.
+
+Antes de narrar un solo hecho, dedicó esa introducción a explicar por qué los relatos históricos suelen ser falsos, y fue enumerando las causas una por una. La primera de la lista es el partidismo. Si el alma recibe una información con imparcialidad, escribe, le dedica el examen que esa información merece, y su verdad o su falsedad se hace evidente; si está infectada de partidismo por una opinión o una escuela, acepta sin vacilar un instante lo que le resulta agradable.
+
+El fallo no está en el dato: está en quien lo recibe. Y es un mecanismo que se aplica primero a uno mismo, no a los demás. Ibn Jaldún murió en El Cairo el 17 de marzo de 1406, y la primera traducción completa de su libro al inglés, la de Franz Rosenthal en tres volúmenes, tardó más de cinco siglos y medio en llegar.
+
+¿Qué fue lo último que diste por cierto sin comprobarlo, porque te daba la razón?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Ser culto es el único modo de ser libre.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -476,28 +496,6 @@ La línea de Apeles era un trazo de dibujo, no un renglón escrito. Los escritor
 #SabiduriaDeBolsillo #PlinioElViejo #Apeles #Disciplina]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra87.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra87.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>A quienes entran en los mismos ríos les fluyen aguas siempre distintas.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-24-re51-reel</guid>
-      <pubDate>Sun, 25 Oct 2026 04:26:00 +0000</pubDate>
-      <description><![CDATA["A quienes entran en los mismos ríos les fluyen aguas siempre distintas."
-— Heráclito (fragmento B12)
-
-Este es el único fragmento del río que los especialistas dan por auténtico. Y dice justo lo contrario de lo que todos repetimos.
-
-La versión conocida, "nadie se baña dos veces en el mismo río", no es de Heráclito: es el resumen que hizo Platón un siglo después, y le da la vuelta al sentido. Platón lo lee como imposibilidad: nada se repite, nada permanece.
-
-Heráclito estaba diciendo algo más raro y más útil. El río es el mismo. Precisamente por eso el agua tiene que ser distinta. Lo que le da identidad no es quedarse quieto: es no dejar de correr.
-
-Aplicado a una persona, cambia todo. No eres el mismo porque no hayas cambiado. Eres el mismo porque no has parado.
-
-¿Qué parte de ti se ha mantenido igual solo porque siguió moviéndose?
-
-#SabiduriaDeBolsillo #Heraclito #Filosofia #Grecia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
