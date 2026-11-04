@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-19-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Plimpton 322 y las ternas pitagóricas de Larsa",
+    "hook": "Una tablilla de arcilla de trece centímetros, escrita en Mesopotamia hace casi cuatro mil años, sigue dividiendo a los historiadores de las matemáticas.",
+    "body": [
+      "Se llama Plimpton 322 por George Arthur Plimpton, el coleccionista que la compró al comerciante Edgar J. Banks a comienzos de los años veinte y la legó a la Universidad de Columbia en 1936. Mide unos 13 por 9 centímetros. Según Banks procedía de Tell Senkereh, la antigua Larsa, en el sur de Irak. Columbia la fecha entre 1820 y 1762 antes de nuestra era.",
+      "Tiene cuatro columnas y quince filas de números escritos en base sesenta. En 1945, Otto Neugebauer y Abraham Sachs mostraron que esas cifras corresponden a ternas pitagóricas: lados enteros de triángulos rectángulos, como 3, 4 y 5, pero mucho mayores. El borde izquierdo está roto y conserva restos de pegamento moderno, así que la tablilla pudo ser parte de otra más grande. Contiene además varios errores del escriba.",
+      "Lo que no se sabe es para qué servía. En 2001, la asirióloga Eleanor Robson sostuvo que leerla como tabla trigonométrica no encaja con la idea de ángulo que tenían los babilonios de la época, y propuso que era una ayuda de maestro para preparar problemas. En 2017, dos matemáticos australianos defendieron justo lo contrario: una trigonometría basada en proporciones, no en ángulos. El debate sigue abierto. Los números están claros; el propósito de quien los escribió, no."
+    ],
+    "question": "¿Cuánto de lo que dejamos escrito se entenderá sin saber para qué lo escribimos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Plimpton 322",
+    "subtitle": "Larsa, hacia 1800 a. C.",
+    "body": "Cuatro columnas y quince filas en base sesenta: ternas de lados enteros de triángulos rectángulos. Se sabe qué dicen los números desde 1945. Para qué los escribió un escriba de Larsa sigue en discusión."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Babilonia", "#Matematicas", "#Mesopotamia"],
+    "extended": ["#Plimpton322", "#HistoriaDeLasMatematicas", "#Cuneiforme", "#Arqueologia", "#Pitagoras", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Plimpton 322 (Columbia RBML, Plimpton Cuneiform 322), ca. 1820-1762 a. C., procedente de Larsa (Tell Senkereh), Irak; donación de George Arthur Plimpton en 1936; Neugebauer y Sachs la leyeron a comienzos de los cuarenta como una tabla de ternas pitagóricas; Eleanor Robson sostuvo después que se creó como ayuda de maestro para generar problemas de triángulos rectángulos y pares de recíprocos. Lectura directa.",
+      "source": "Columbia University Libraries, «Jewels in Her Crown: Treasures of Columbia University Libraries Special Collections», ficha de Plimpton 322",
+      "url": "https://online-exhibitions.library.columbia.edu/exhibits/show/jewels/themes/science/158"
+    },
+    {
+      "claim": "La tabla conservada tiene cuatro columnas y quince líneas numeradas más los encabezados, en notación sexagesimal; el borde izquierdo está roto y conserva restos de pegamento moderno, lo que sugiere que formaba parte de una tablilla mayor; mide unos 13 x 9 x 2 cm; Plimpton la compró a Edgar J. Banks a comienzos de los años veinte; Banks dijo que procedía de Tell Senkereh (Larsa); Neugebauer y Sachs la publicaron en Mathematical Cuneiform Texts (1945); contiene varios errores de copia y de cálculo identificados por Neugebauer, Friberg y Robson. Lectura directa.",
+      "source": "A. A. Abdulaziz (Universidad de Balamand), «The Plimpton 322 Tablet and the Babylonian Method of Generating Pythagorean Triples», arXiv:1004.0025",
+      "url": "https://ar5iv.arxiv.org/html/1004.0025"
+    },
+    {
+      "claim": "Resumen del artículo: la lectura popular como tabla trigonométrica no puede ser correcta dado lo que se sabe del concepto de ángulo en el periodo paleobabilónico; la teoría de funciones generadoras es improbable; propone una interpretación basada en pares de recíprocos regulares y una nueva lectura de los encabezados. Historia Mathematica 28(3), 2001, pp. 167-206. Lectura directa del registro.",
+      "source": "Oxford University Research Archive, E. Robson, «Neither Sherlock Holmes nor Babylon: a reassessment of Plimpton 322» (2001)",
+      "url": "https://ora.ox.ac.uk/objects/uuid:e3d8eedb-e745-45b3-8612-71f8951599aa"
+    },
+    {
+      "claim": "En 2017 Daniel Mansfield y Norman Wildberger (UNSW) propusieron en Historia Mathematica que es una tabla trigonométrica basada en proporciones, no en ángulos; Robson y otros la cuestionaron. Resumen de búsqueda de prensa de divulgación (HowStuffWorks, Smithsonian, The Register); no se leyó el artículo original.",
+      "source": "HowStuffWorks, «Ancient Babylonian Tablet May Show Early Trigonometry, But Some Experts Are Dubious»",
+      "url": "https://science.howstuffworks.com/math-concepts/babylon-tablet-plimpton-322-trigonometry.htm"
+    }
+  ],
+  "do_not_use": [
+    "Que la tablilla «demuestra» que los babilonios conocían el teorema de Pitágoras como teorema: contiene ternas, no una demostración. El cuerpo habla solo de ternas.",
+    "Que sea «la tabla trigonométrica más antigua del mundo» (titular de 2017): es la tesis de Mansfield y Wildberger, discutida por Robson y otros. Se presenta como una postura del debate.",
+    "La fecha exacta: Columbia da 1820-1762 a. C.; Robson, según otras fuentes, 1822-1784 a. C.; otras, 1800-1600 a. C. Se usa la de Columbia, que custodia la pieza.",
+    "El año de compra a Banks (1922 según varias páginas): la fuente leída dice «comienzos de los años veinte». No dar el año.",
+    "El número exacto de errores del escriba: el artículo de arXiv da cifras distintas en distintos puntos (cinco o siete). El cuerpo dice «varios».",
+    "Que Robson la considere obra de un burócrata o escriba y no de un matemático: lo dicen resúmenes de búsqueda, no se leyó en una fuente directa. No usar.",
+    "Que Banks fuera el modelo de Indiana Jones: circula, no se verificó y no hace falta.",
+    "Los ejemplos de ternas concretas de la tablilla (como 119, 120, 169): no se verificaron fila por fila. El cuerpo solo usa 3, 4, 5 como ilustración, que no está en la tablilla."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-19-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Santayana y el pasado que se repite (1905)",
+    "hook": "La advertencia más repetida sobre la historia la escribió un filósofo nacido en Madrid. Y no hablaba de historia: hablaba de la memoria.",
+    "quote": {
+      "text": "Quienes no pueden recordar el pasado están condenados a repetirlo.",
+      "author": "George Santayana",
+      "work": "The Life of Reason, vol. I: Reason in Common Sense, cap. XII (Nueva York, Scribner's, 1905)",
+      "attribution_verified": true
+    },
+    "body": [
+      "George Santayana nació en Madrid el 16 de diciembre de 1863. A los ocho años lo llevaron a Boston, estudió y enseñó en Harvard hasta 1912, escribió toda su obra en inglés y murió en Roma en 1952. Nunca renunció a la nacionalidad española.",
+      "La frase está en el capítulo XII de The Life of Reason, publicado en 1905 y titulado «Flujo y constancia en la naturaleza humana». El párrafo empieza con una tesis: el progreso, lejos de consistir en el cambio, depende de la capacidad de retener. Cuando la experiencia no se conserva, dice, la infancia es perpetua. Y luego viene la frase. El párrafo siguiente habla de la mente que olvida como la de los niños, en quienes el instinto no ha aprendido nada de la experiencia.",
+      "Es decir: Santayana no hablaba de guerras ni de imperios, sino de cualquier persona o pueblo que no retiene lo vivido. Con los años la frase se ha atribuido a Edmund Burke y a Winston Churchill, y se ha cambiado «recordar» por «aprender de la historia». El original es más modesto y más exigente: no pide estudiar el pasado, pide no perderlo."
+    ],
+    "question": "¿Qué error tuyo se repite porque nunca llegaste a recordarlo bien?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Santayana", "#Citas", "#Filosofia"],
+    "extended": ["#Memoria", "#Historia", "#TheLifeOfReason", "#PensamientoEspanol", "#SigloXX", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "En el capítulo XII, «Flux and Constancy in Human Nature» (empieza en la p. 269), p. 284: el progreso, «far from consisting in change, depends on retentiveness»; cuando la experiencia no se retiene, «as among savages, infancy is perpetual»; la frase «Those who cannot remember the past are condemned to repeat it» aparece literal; la mente frívola es «the condition of children and barbarians, in whom instinct has learned nothing from experience». Edición consultada: segunda edición, Nueva York, Charles Scribner's Sons, 1932 (copyright 1905). Lectura directa del escaneo.",
+      "source": "Internet Archive, George Santayana, The Life of Reason, vol. I: Reason in Common Sense (Scribner's, 2.ª ed. 1932)",
+      "url": "https://archive.org/stream/lifeofreasonorph11sant/lifeofreasonorph11sant_djvu.txt"
+    },
+    {
+      "claim": "La frase procede del capítulo 12, «Flux and Constancy In Human Nature», de The Life of Reason, publicado en 1905 por Charles Scribner's Sons (pp. 284-285); The Dial la citó el 16 de mayo de 1905; las atribuciones a Edmund Burke y a Winston Churchill no tienen respaldo; las variantes con «doomed» son posteriores. Lectura directa.",
+      "source": "Quote Investigator, «Those Who Cannot Remember the Past Are Condemned To Repeat It» (4 de marzo de 2024)",
+      "url": "https://quoteinvestigator.com/2024/03/04/past-repeat/"
+    },
+    {
+      "claim": "Santayana nació en Madrid el 16 de diciembre de 1863; conservó la nacionalidad española toda la vida; su padre lo llevó a Boston en 1872; estudió en Harvard (1882-1889) y enseñó allí de 1889 a 1912; murió en Roma el 26 de septiembre de 1952; The Life of Reason salió en cinco libros entre 1905 y 1906. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «George Santayana»",
+      "url": "https://plato.stanford.edu/entries/santayana/"
+    },
+    {
+      "claim": "La edición crítica de The Life of Reason forma el volumen VII de The Works of George Santayana, preparada por la Santayana Edition (Indiana University) y publicada por MIT Press; el libro primero, Reason in Common Sense, en 2011. Resumen de búsqueda de las páginas de la Santayana Edition; no se leyó el texto crítico.",
+      "source": "The Santayana Edition, Indiana University Indianapolis",
+      "url": "https://santayana.indianapolis.iu.edu/?p=485"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Edmund Burke o a Winston Churchill: Quote Investigator no la encuentra en ninguno de los dos. La línea de Burke de 1790 sobre mirar a los antepasados solo se le parece en el tema.",
+    "Las variantes «quienes no aprenden de la historia están condenados a repetirla» o con «doomed»: son reformulaciones posteriores; el original dice «remember the past».",
+    "Presentar la frase como una lección sobre la historia política: en el contexto del capítulo habla de la retención de la experiencia como condición del progreso.",
+    "El dato de que se exhiba en la entrada de Auschwitz: circula una placa con la frase en el Bloque 4, pero no se verificó en ninguna fuente leída. No usar.",
+    "La edad de llegada a Boston: SEP dice que su padre lo llevó en 1872, con ocho años; no dar mes.",
+    "El nombre completo en español (Jorge Agustín Nicolás Ruiz de Santayana): circula, pero ninguna fuente leída lo da. No usar.",
+    "La traducción es propia, sobre el inglés del capítulo; no es la de ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

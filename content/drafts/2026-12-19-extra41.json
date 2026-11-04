@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-19-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Walter Scott y la red enredada de Marmion (1808)",
+    "hook": "Esta frase sobre la mentira se le atribuye a Shakespeare desde hace mucho. Es de un poema escocés de 1808, y quien la dice es el mentiroso.",
+    "quote": {
+      "text": "Qué red tan enredada tejemos cuando empezamos a engañar.",
+      "author": "Walter Scott",
+      "work": "Marmion, canto VI, estrofa XVII (Edimburgo, 1808)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Marmion se publicó el 22 de febrero de 1808 en Edimburgo. Es un poema narrativo largo, en seis cantos, sobre la batalla de Flodden de 1513, en la que un ejército inglés derrotó a los escoceses y mató al rey Jacobo IV. La primera edición, de 2.000 ejemplares y muy cara, se agotó en menos de dos meses.",
+      "Los dos versos están en el canto VI, estrofa XVII. No los pronuncia un narrador sabio ni un personaje virtuoso. Los murmura el propio Marmion, el caballero que da título al poema, cuando descubre que el peregrino que lo había acompañado era De Wilton, el rival al que creía haber matado, y teme que su versión de los hechos ya haya llegado a oídos del conde de Douglas.",
+      "La Biblioteca Folger, dedicada a Shakespeare, la incluye entre las frases que con más frecuencia se le atribuyen sin ser suyas. El error le quita algo: dicha por Shakespeare suena a sentencia; dicha por Marmion es una confesión. No describe la mentira desde fuera. La describe alguien que ya está atrapado en ella."
+    ],
+    "question": "¿Cuándo fue la última vez que una pequeña mentira te pidió otra para sostenerse?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#WalterScott", "#Citas", "#Literatura"],
+    "extended": ["#Marmion", "#Escocia", "#Poesia", "#Shakespeare", "#Mentira", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "En el canto VI, estrofa XVII, aparece el pareado «Oh, what a tangled web we weave, / When first we practise to deceive!», entre comillas como pensamiento murmurado por Marmion; lo precede «Yet Clare's sharp questions must I shun; / Must separate Constance from the nun—»; el contexto: Blount y Fitz-Eustace informan de que el peregrino partió al alba en el caballo del conde de Angus, y Marmion comprende que era De Wilton, a quien creía haber matado, y teme que su relato haya llegado a Douglas. Edición de Henry Morley, Cassell & Company, 1888; la introducción dice que el poema salió «early in the year 1808». Lectura directa.",
+      "source": "Project Gutenberg, Walter Scott, Marmion: A Tale of Flodden Field, ed. Henry Morley (Cassell, 1888), eBook #4010",
+      "url": "https://www.gutenberg.org/files/4010/4010-h/4010-h.htm"
+    },
+    {
+      "claim": "Marmion se publicó el 22 de febrero de 1808, impreso por J. Ballantyne and Co. para Archibald Constable and Company (Edimburgo) y William Miller y John Murray (Londres); la primera edición, de precio exorbitante, de 2.000 ejemplares, se agotó en menos de dos meses; trata de la batalla de Flodden (1513), en la que un ejército inglés derrotó a los escoceses y mató al rey Jacobo IV. Lectura directa.",
+      "source": "Edinburgh University Library, The Walter Scott Digital Archive, «Marmion»",
+      "url": "https://www.walterscott.lib.ed.ac.uk/works/poetry/marmion.html"
+    },
+    {
+      "claim": "La frase «Oh what a tangled web we weave» figura entre las cinco citas más comúnmente mal atribuidas a Shakespeare; es de Sir Walter Scott. Esther French, 21 de febrero de 2017. Lectura directa.",
+      "source": "Folger Shakespeare Library, Shakespeare & Beyond, «Fakespeare: 5 quotes commonly misattributed to Shakespeare»",
+      "url": "https://www.folger.edu/blogs/shakespeare-and-beyond/shakepeare-quotes-commonly-misattributed/"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Shakespeare: la Folger la cuenta entre las citas mal atribuidas; es de Marmion, de Walter Scott.",
+    "Presentarla como comentario moral del narrador: en la edición leída va entre comillas como pensamiento de Marmion.",
+    "La variante «O what a tangled web I weave» o con «practice»: la edición de Morley dice «Oh, what a tangled web we weave, / When first we practise to deceive!».",
+    "Quién falsificó la carta de la que habla Douglas en la estrofa XV y si Marmion acusó a De Wilton de traición con ella: no quedó claro en la lectura. No contar esa trama.",
+    "Lo que cobró Scott por el poema (se suele decir mil guineas): la página de Edimburgo no lo da. No usar.",
+    "Que una edición de 1807 sea la primera: algún sitio da 1807; el archivo de la Universidad de Edimburgo da el 22 de febrero de 1808.",
+    "La traducción es propia, sin la exclamación del original; no es la de ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

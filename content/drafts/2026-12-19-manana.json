@@ -1,0 +1,65 @@
+{
+  "id": "2026-12-19-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Babbage y la máquina diferencial nº 2 (1991)",
+    "hook": "Charles Babbage terminó los planos de una máquina de calcular en 1849. Nadie la construyó hasta 1991. Funcionó.",
+    "body": [
+      "En el siglo XIX las tablas de logaritmos y de navegación se calculaban a mano, y estaban llenas de errores. En 1821, revisando unas de ellas, Babbage dejó escrita una queja famosa: ojalá esos cálculos se hubieran hecho con vapor. Su primera máquina diferencial pedía unas 25.000 piezas. Solo llegó a montarse una muestra de unas 2.000 en 1832, el año en que una disputa con su ingeniero, Joseph Clement, paró la obra. El gobierno retiró la financiación en 1842.",
+      "Entre 1847 y 1849 diseñó una segunda versión, más sencilla: unas 8.000 piezas, capaz de calcular valores de 31 cifras con diferencias de hasta séptimo orden, solo sumando. Tampoco la construyó. Durante más de un siglo quedó la pregunta: ¿habría funcionado, o la mecánica de su época no daba para tanto?",
+      "En 1985 el Museo de Ciencias de Londres decidió comprobarlo, con el conservador Doron Swade al frente. Los planos no indicaban tolerancias ni materiales, así que se cuidó que ninguna pieza superara la precisión que Babbage podía lograr. La parte de cálculo quedó terminada en junio de 1991, a tiempo para el bicentenario de su nacimiento, y la impresora en 2002. Pesa unas cinco toneladas y funciona como él lo previó. El obstáculo nunca fue la técnica."
+    ],
+    "question": "¿Cuántas buenas ideas se dan por imposibles solo porque nadie llegó a terminarlas?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La máquina que esperó 142 años",
+    "subtitle": "Londres, junio de 1991",
+    "body": "Babbage diseñó su máquina diferencial nº 2 entre 1847 y 1849: 8.000 piezas, cifras de 31 dígitos. Nunca la construyó. El Museo de Ciencias de Londres la terminó en 1991, sin superar la precisión de su época. Funcionó."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Babbage", "#HistoriaDeLaComputacion", "#Ciencia"],
+    "extended": ["#MaquinaDiferencial", "#Ingenieria", "#SigloXIX", "#Matematicas", "#Computacion", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Difference Engine No 2 (objeto 1992-556), diseñada por Charles Babbage en 1847-1849; la parte principal se completó en junio de 1991 para el bicentenario de su nacimiento; el mecanismo de impresión se completó y añadió en 2002; construcción supervisada por Doron Swade; medidas 2,1 x 3,4 x 0,5 m; hierro, acero y bronce. Lectura directa.",
+      "source": "Science Museum Group Collection, «Difference Engine No.2, designed by Charles Babbage, built by Science Museum»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co62748"
+    },
+    {
+      "claim": "Diseños de 1847-9; el Museo de Ciencias empezó el proyecto en 1985 con Doron Swade; parte de cálculo terminada en 1991 e impresora en 2002; 8.000 piezas; unas cinco toneladas; los planos no especificaban tolerancias, métodos ni materiales y se cuidó no superar en ningún punto la precisión alcanzable por Babbage; «The completed machine works as Babbage intended»; la precisión no fue el factor limitante de sus fracasos. Lectura directa.",
+      "source": "Computer History Museum, «The Babbage Engine: A Modern Sequel»",
+      "url": "https://www.computerhistory.org/babbage/modernsequel/"
+    },
+    {
+      "claim": "La máquina diferencial nº 1 pedía unas 25.000 piezas; se montó en 1832 una pieza de demostración de unas 2.000; la obra se detuvo en 1832 tras una disputa con el ingeniero Joseph Clement; la financiación del gobierno se cortó en 1842; entre 1847 y 1849 completó el diseño de la nº 2. Lectura directa.",
+      "source": "Computer History Museum, «The Babbage Engine: The Engines»",
+      "url": "https://www.computerhistory.org/babbage/engines/"
+    },
+    {
+      "claim": "La máquina nº 2 calcula valores de 31 cifras para polinomios con términos hasta x7, con registros para siete diferencias, usando solo sumas. Lectura directa.",
+      "source": "Computer History Museum, «The Babbage Engine: How it Works»",
+      "url": "https://www.computerhistory.org/babbage/howitworks/"
+    },
+    {
+      "claim": "En 1821 Babbage exclamó «I wish to God these calculations had been executed by steam», motivado por los errores generalizados de las tablas de la época; el Museo de Ciencias completó la primera nº 2 a tamaño real en 1991. Lectura directa.",
+      "source": "Plus Magazine (Universidad de Cambridge), «The cogwheel brain»",
+      "url": "https://plus.maths.org/content/cogwheel-brain"
+    }
+  ],
+  "do_not_use": [
+    "El año de inicio de la construcción: CHM dice 1985; otras páginas dicen 1989. Se usa 1985, el del Computer History Museum.",
+    "La fecha de la impresora: algunas páginas dicen 2000; Science Museum y CHM dicen 2002. Se usa 2002.",
+    "El dinero que gastó el gobierno en la primera máquina (se suele dar 17.000 libras): ninguna fuente leída lo confirma. No usar.",
+    "Que se encontraran errores en los planos de Babbage: circula, pero ninguna fuente leída lo dice. No usar.",
+    "La fecha exacta de la primera ejecución (29 de noviembre de 1991, según algunos): Science Museum dice solo junio de 1991 para la parte principal. No dar día.",
+    "La fecha de muerte de Babbage: no se verificó en las fuentes leídas. Por eso el hook no la usa.",
+    "La copia de Nathan Myhrvold expuesta en Mountain View: verdadera según CHM, pero fuera del foco; no hace falta.",
+    "La frase de 1821 se da en estilo indirecto y traducida; no es la redacción de ninguna edición española."
+  ],
+  "status": "draft"
+}
