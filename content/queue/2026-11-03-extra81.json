@@ -82,7 +82,7 @@
     "Que la frase exprese la opinión de Brecht sin más: la dice el personaje de Galileo justo después de abjurar, y Brecht endureció luego el juicio sobre él. No citarla como máxima del autor sin ese contexto.",
     "Las páginas de la edición Suhrkamp que dan las guías escolares: no se comprobaron sobre la edición. No se citan páginas."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-03T19:26:00Z",
   "results": {
     "facebook": {
@@ -96,7 +96,7 @@
       "published_at": "2026-11-03T23:33:12.104034+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 03-Nov-26 17:40:45 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 03-Nov-26 21:40:22 PST."
     }
   },
   "targets": [
@@ -104,6 +104,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-04T01:40:45.790186+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-04T05:40:22.425632+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 03-Nov-26 21:40:22 PST."
+  ]
 }
