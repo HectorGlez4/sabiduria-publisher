@@ -68,8 +68,14 @@
   "targets": [
     "facebook_reel"
   ],
-  "status": "ready",
-  "results": {},
+  "status": "published",
+  "results": {
+    "facebook_reel": {
+      "post_id": "4832753530382139",
+      "url": "/reel/4832753530382139/",
+      "published_at": "2026-11-04T06:47:51.380775+00:00"
+    }
+  },
   "cita_slug": "jose-marti-ser-culto-es-el-unico-modo-de",
   "reemision_de": "2026-08-25-tarde"
 }
