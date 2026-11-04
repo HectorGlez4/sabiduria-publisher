@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-20-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Rimbaud y el Je est un autre de mayo de 1871",
+    "hook": "Una de las frases más citadas de la poesía moderna tiene un error de gramática a propósito. La escribió un muchacho de dieciséis años en dos cartas.",
+    "quote": {
+      "text": "Porque Yo es otro.",
+      "author": "Arthur Rimbaud",
+      "work": "Carta a Paul Demeny, Charleville, 15 de mayo de 1871",
+      "attribution_verified": true
+    },
+    "body": [
+      "Arthur Rimbaud nació en Charleville el 20 de octubre de 1854. En 1870 llegó a su colegio un profesor joven, Georges Izambard, que lo animó a escribir. En mayo de 1871, con dieciséis años, Rimbaud le mandó una carta el día 13 y otra, dos días después, al poeta Paul Demeny. En las dos aparece la misma frase: «Je est un autre». En francés el verbo correcto sería suis; Rimbaud lo conjuga en tercera persona.",
+      "La carta a Izambard explica lo que quiere decir: es falso decir «yo pienso»; habría que decir «me piensan». Y añade una imagen: tanto peor para la madera que se descubre violín. Para él, el poeta no es el dueño de lo que escribe, sino el instrumento por el que algo suena. En la carta a Demeny propone llegar ahí por un largo, inmenso y razonado desarreglo de todos los sentidos.",
+      "Ninguna de las dos cartas se conoció en vida de Rimbaud, que murió en Marsella el 10 de noviembre de 1891. Se publicaron entre 1912 y 1928, y solo entonces la frase empezó a circular. Hoy se cita como un lema sobre la identidad; en su origen era una descripción de cómo se escribe."
+    ],
+    "question": "¿Cuándo fue la última vez que dijiste algo y sentiste que no lo habías pensado tú?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Rimbaud", "#Citas", "#Poesia"],
+    "extended": ["#JeEstUnAutre", "#LiteraturaFrancesa", "#SigloXIX", "#CartasDelVidente", "#Identidad", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Carta a Paul Demeny fechada «Charleville, 15 mai 1871»; contiene «Car Je est un autre» y «Le poète se fait voyant par un long, immense et raisonné dérèglement de tous les sens». Texto de Correspondance inédite (1870-1875) d'Arthur Rimbaud, ed. Roger Gilbert-Lecomte, Éditions des Cahiers libres, 1929, pp. 51-63. Lectura directa.",
+      "source": "Wikisource (francés), «Lettre de Rimbaud à Paul Demeny - 15 mai 1871»",
+      "url": "https://fr.wikisource.org/wiki/Lettre_de_Rimbaud_à_Paul_Demeny_-_15_mai_1871"
+    },
+    {
+      "claim": "Carta a Georges Izambard de [13] de mayo de 1871: «C'est faux de dire : Je pense. On devrait dire : On me pense.», «JE est un autre.» y «Tant pis pour le bois qui se trouve violon». Texto de Œuvres, ed. Paul Hartmann, Mercure de France, 1958, pp. 305-306. Lectura directa.",
+      "source": "Wikisource (francés), «Lettre de Rimbaud à Georges Izambard - 13 mai 1871»",
+      "url": "https://fr.wikisource.org/wiki/Lettre_de_Rimbaud_à_Georges_Izambard_-_13_mai_1871"
+    },
+    {
+      "claim": "Las dos cartas son del 13 de mayo (a Izambard) y del 15 de mayo de 1871 (a Demeny); no se conocieron en vida de Rimbaud; «leur publication tardive (1912-1928)»; la «fameuse formule du « Je est un autre »» procede de ellas. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Rimbaud Arthur (1854-1891)», sección «Poésie et voyance»",
+      "url": "https://www.universalis.fr/encyclopedie/arthur-rimbaud/2-poesie-et-voyance/"
+    },
+    {
+      "claim": "Nacimiento de Jean-Nicolas-Arthur Rimbaud en Charleville el 20 de octubre de 1854; en 1870, llegada al colegio de Georges Izambard, que tendrá gran influencia sobre él; los días 13 y 15 de mayo de 1871 expone la «voyance» en dos cartas a Izambard y a Demeny; muerte en Marsella el 10 de noviembre de 1891. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Rimbaud Arthur (repères chronologiques)»",
+      "url": "https://www.universalis.fr/encyclopedie/rimbaud-reperes-chronologiques/"
+    }
+  ],
+  "do_not_use": [
+    "Que Rimbaud tuviera diecisiete años al escribir las cartas: circula en páginas escolares, pero nació el 20 de octubre de 1854; en mayo de 1871 tenía dieciséis.",
+    "La frase «Si le cuivre s'éveille clairon, il n'y a rien de sa faute», de la carta a Demeny: aparece en un resultado de búsqueda, pero no se leyó en la fuente. No usar.",
+    "Que la carta a Demeny se publicara por primera vez en 1912 exactamente, o dónde se conserva el manuscrito: Universalis da solo el intervalo 1912-1928. No dar año concreto ni ubicación.",
+    "Que Rimbaud dejara de escribir a los veinte o veintiún años: no se verificó en esta ejecución. No usar.",
+    "Presentar la frase como un lema sobre la identidad o la otredad social: en las cartas describe la relación del poeta con lo que escribe.",
+    "Las traducciones son propias; no corresponden a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

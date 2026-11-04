@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-20-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Robert Hooke y el corcho de Micrographia (1665)",
+    "hook": "La palabra «célula» nació en 1665, mirando un trozo de corcho. Quien la eligió pensaba en un panal de abejas.",
+    "body": [
+      "Robert Hooke nació el 28 de julio de 1635 y en 1662 se convirtió en el primer conservador de experimentos de la Royal Society de Londres. La Sociedad autorizó la impresión de su libro el 23 de noviembre de 1664, y Micrographia salió con fecha de 1665: treinta y ocho grabados de lo que se veía a través de un microscopio, entre ellos una pulga en una lámina plegada de casi medio metro.",
+      "En la observación XVIII cortó una lámina finísima de corcho. Vio poros separados por paredes delgadas, «muy parecido a un panal», y los llamó cells, celdas. Luego hizo la cuenta: unas 1.100 por pulgada en línea, más de un millón por pulgada cuadrada, más de mil doscientos millones por pulgada cúbica. Nadie había contado nunca algo tan pequeño.",
+      "Samuel Pepys vio el libro en su librería el 2 de enero de 1665 y lo encargó en el acto. Semanas después anotó en su diario que se había quedado leyéndolo hasta las dos de la mañana: el libro más ingenioso que había leído en su vida. La palabra que Hooke tomó de un panal es hoy la unidad de todo lo vivo."
+    ],
+    "question": "¿Qué palabra de uso diario nació de alguien que solo intentaba describir lo que tenía delante?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La celda del corcho",
+    "subtitle": "Micrographia, Londres, 1665",
+    "body": "Robert Hooke miró una lámina de corcho al microscopio y vio poros «como un panal». Los llamó cells y contó más de mil doscientos millones por pulgada cúbica. Pepys leyó el libro hasta las dos de la mañana."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#RobertHooke", "#HistoriaDeLaCiencia", "#Microscopio"],
+    "extended": ["#Micrographia", "#Celula", "#RoyalSociety", "#SigloXVII", "#Biologia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Hooke fue nombrado primer «Curator of Experiments» de la Royal Society en 1662; la orden del presidente de la Sociedad que autoriza la impresión está fechada el 23 de noviembre de 1664; la lámina plegada de la pulga mide «almost half a metre long and over 35cm tall»; Pepys vio el libro el 2 de enero de 1665 y lo encargó («presently bespoke it»), y recibió su ejemplar el 20 de enero. Lectura directa.",
+      "source": "Cambridge University Library, Special Collections blog, «Robert Hooke and his Micrographia»",
+      "url": "https://specialcollections-blog.lib.cam.ac.uk/?p=9478"
+    },
+    {
+      "claim": "Micrographia salió en 1665 a través de la Royal Society; el folio contiene treinta y ocho grabados; en la descripción del corcho Hooke acuñó «cell» en sentido biológico; Hooke nació el 28 de julio de 1635 (1635-1703). Lectura directa.",
+      "source": "British Library, blog «Fleas, mould and plant cells under a 17th-century microscope»",
+      "url": "https://www.bl.uk/stories/blogs/posts/fleas-mould-and-plant-cells-under-a-17th-century-microscope"
+    },
+    {
+      "claim": "Hooke usó «cell» por primera vez para los poros del corcho y de la médula de plantas, comparándolos con las celdas de un panal; Pepys se quedó leyendo hasta las dos de la mañana y lo llamó «the most ingenious book that ever I read in my life»; una gran lámina plegada muestra la pulga. Lectura directa.",
+      "source": "Royal Society, blog «Restoration reading» (abril de 2013)",
+      "url": "https://royalsociety.org/blog/2013/04/restoration-reading/"
+    },
+    {
+      "claim": "Texto de Micrographia: portada con año MDCLXV; imprimatur del Consejo de la Royal Society «Novem. 23. 1664», firmado por Brouncker; Observación XVIII, «Of the Schematisme or Texture of Cork»: los poros son «much like a Honey-comb, but that the pores of it were not regular»; cálculo de unas 1.100 celdas por pulgada lineal, «in a square Inch above a Million, or 1166400» y «in a Cubick Inch, above twelve hundred Millions, or 1259712000». Lectura directa del texto completo.",
+      "source": "Project Gutenberg, Robert Hooke, Micrographia (1665), eBook n.º 15491",
+      "url": "https://www.gutenberg.org/files/15491/15491-h/15491-h.htm"
+    }
+  ],
+  "do_not_use": [
+    "Que Hooke inventara el microscopio: no lo hizo, y ninguna fuente leída lo afirma.",
+    "Que Hooke viera células vivas o su núcleo: el corcho es tejido que no se trató en las fuentes leídas como vivo; no afirmar qué vio más allá de los poros y paredes que describe.",
+    "Que la palabra «cell» venga de las celdas de los monjes: circula, pero las fuentes leídas solo dan la comparación con el panal. No usar.",
+    "La fecha exacta de publicación (enero o septiembre de 1665): las fuentes difieren; se da solo el año 1665 de la portada.",
+    "La fecha exacta de la entrada de Pepys sobre las dos de la mañana (suele darse el 21 de enero de 1665): pepysdiary.com dio 403 y no se leyó la entrada. Por eso el cuerpo dice «semanas después».",
+    "Que Pepys entrara en la Royal Society tres semanas después de leerlo: aparece en un resumen de búsqueda, no en una fuente leída. No usar.",
+    "La teoría celular de Schleiden y Schwann: no se verificó en esta ejecución. No usar fechas.",
+    "La página del NYAM sobre Micrographia redirige a un dominio ajeno (jurasudfoot.com): no se siguió ni se cita."
+  ],
+  "status": "draft"
+}

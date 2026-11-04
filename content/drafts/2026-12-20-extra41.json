@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-20-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Robert Frost y el camino no tomado (1916)",
+    "hook": "El poema que se lee como un elogio de elegir el camino difícil dice, dos estrofas antes, que los dos caminos estaban igual de gastados.",
+    "quote": {
+      "text": "Dos caminos se abrían en un bosque, y yo… / yo tomé el menos transitado, / y eso ha marcado toda la diferencia.",
+      "author": "Robert Frost",
+      "work": "«The Road Not Taken», en Mountain Interval (Nueva York, Henry Holt, 1916)",
+      "attribution_verified": true
+    },
+    "body": [
+      "«The Road Not Taken» abre Mountain Interval, el libro que Robert Frost publicó en Nueva York en 1916. Un caminante llega a una bifurcación en un bosque amarillo, mira un sendero, elige el otro. Las tres líneas finales se citan en discursos de graduación como una invitación a no seguir a la multitud.",
+      "Pero el poema dice otra cosa antes. Del segundo camino escribe que el paso de la gente los había gastado «en realidad casi igual», y que aquella mañana los dos estaban cubiertos de hojas que nadie había pisado. No había un camino menos transitado. La diferencia la pone el caminante después, cuando cuente la historia «con un suspiro», dentro de muchos años.",
+      "En la primavera de 1915 Frost le mandó un borrador a su amigo el poeta inglés Edward Thomas, que creyó que el caminante era el propio Frost. Frost le explicó que el suspiro era fingido, para divertirse. Thomas no lo vio como una broma. Se alistó en julio de 1915 y murió en Arras el 9 de abril de 1917. Frost escribiría después que apenas media docena de personas entendían a quién iba dirigido su poema."
+    ],
+    "question": "¿Cuántas de tus decisiones decisivas solo lo parecieron cuando empezaste a contarlas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#RobertFrost", "#Citas", "#Poesia"],
+    "extended": ["#TheRoadNotTaken", "#EdwardThomas", "#PoesiaEstadounidense", "#SigloXX", "#Decisiones", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Mountain Interval, Henry Holt and Company, Nueva York, copyright 1916; «The Road Not Taken» es el primer poema del libro (p. 9); empieza «Two roads diverged in a yellow wood»; contiene «Though as for that the passing there / Had worn them really about the same»; la última estrofa empieza «I shall be telling this with a sigh» y termina «Two roads diverged in a wood, and I–– / I took the one less traveled by, / And that has made all the difference.» Lectura directa del texto (impresión de 1931).",
+      "source": "Project Gutenberg, Robert Frost, Mountain Interval",
+      "url": "https://www.gutenberg.org/files/29345/29345-h/29345-h.htm"
+    },
+    {
+      "claim": "En la primavera de 1915 Frost envió a Edward Thomas un borrador titulado «Two Roads»; Thomas supuso que el hablante era Frost y no captó la broma; Frost le dijo que el suspiro era «a mock sigh, hypocritical for the fun of the thing»; Frost escribió a Louis Untermeyer que «not half a dozen people can tell who was hit and where he was hit by my Road Not Taken»; el poema dice que los caminos estaban gastados «really about the same» y que los dos yacían «In leaves no step had trodden black». Extracto del libro de David Orr, The Road Not Taken (Penguin Press, 2015). Lectura directa.",
+      "source": "Literary Hub, David Orr, «You're Probably Misreading Robert Frost's Most Famous Poem» (18 de agosto de 2016)",
+      "url": "https://lithub.com/youre-probably-misreading-robert-frosts-most-famous-poem/"
+    },
+    {
+      "claim": "Edward Thomas nació el 3 de marzo de 1878 en Lambeth; en 1913 la familia de Frost se instaló cerca de su casa; Frost lo convenció de escribir poesía; se alistó en los Artists' Rifles en julio de 1915; murió por la explosión de un obús el 9 de abril de 1917, primer día de la batalla de Arras. Lectura directa.",
+      "source": "Academy of American Poets (poets.org), «Edward Thomas»",
+      "url": "https://poets.org/poet/edward-thomas"
+    }
+  ],
+  "do_not_use": [
+    "Que el poema sea un elogio de la originalidad o del inconformismo: el propio texto dice que los dos caminos estaban igual de gastados.",
+    "Que el poema empujara a Thomas a alistarse: circula, pero las fuentes leídas no establecen esa causa. El cuerpo solo da la secuencia de fechas.",
+    "La primera publicación en The Atlantic Monthly de agosto de 1915: aparece en resultados de búsqueda, pero theatlantic.com no se pudo leer. No usar.",
+    "La causa de la muerte de Thomas: poets.org dice explosión de obús; otras páginas dicen disparo en el pecho. El cuerpo no la menciona.",
+    "Que en sus paseos Thomas se lamentara siempre del sendero no tomado: circula como origen del poema, pero no se leyó en ninguna fuente. No usar.",
+    "La página de la Poetry Foundation sobre el poema dio 403 y no se cita.",
+    "Las traducciones son propias, sobre el inglés de 1916."
+  ],
+  "status": "draft"
+}

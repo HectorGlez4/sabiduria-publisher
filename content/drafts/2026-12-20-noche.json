@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-20-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Philippa Foot y el tranvía desbocado de 1967",
+    "hook": "El dilema moral más famoso del siglo XX empezó como un ejemplo secundario en un artículo sobre el aborto. Y no era un tren: era un tranvía.",
+    "body": [
+      "Philippa Foot nació el 3 de octubre de 1920 y fue profesora en Somerville, un colegio femenino de Oxford. En 1967 publicó en el número 5 de la Oxford Review un artículo titulado «El problema del aborto y la doctrina del doble efecto». En medio del argumento propuso un caso: el conductor de un tranvía sin frenos que solo puede desviarlo de una vía estrecha a otra. En una trabajan cinco hombres; en la otra, uno. ¿Por qué nos parece que debe girar hacia la vía donde hay uno solo?",
+      "Foot no buscaba un acertijo. Quería poner a prueba una doctrina antigua, la que distingue entre el daño que se pretende y el daño que se prevé, y aplicarla a una cuestión real. El nombre de «problema del tranvía» no es suyo: se lo dio Judith Jarvis Thomson, que lo desarrolló en 1976 y lo usó como título de un artículo en el Yale Law Journal en 1985.",
+      "Medio siglo después, el ejemplo dejó de ser hipotético. En octubre de 2018 la revista Nature publicó los resultados de Moral Machine, una plataforma del MIT que reunió casi 40 millones de decisiones de personas de 233 países y territorios sobre a quién debería salvar un coche autónomo. La pregunta de Foot sigue abierta. Ahora la responden programadores."
+    ],
+    "question": "¿Hay alguna diferencia moral entre causar un daño y dejar que ocurra?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El tranvía de Philippa Foot",
+    "subtitle": "Oxford Review, número 5, 1967",
+    "body": "Un conductor solo puede desviar su tranvía de una vía a otra: en una hay cinco hombres, en la otra uno. Foot lo planteó en un artículo sobre el aborto. El nombre de «problema del tranvía» se lo dio después Judith Jarvis Thomson."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PhilippaFoot", "#Filosofia", "#Etica"],
+    "extended": ["#ProblemaDelTranvia", "#DilemaMoral", "#Oxford", "#SigloXX", "#FilosofiaMoral", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Foot nació el 3 de octubre de 1920 y murió el 3 de octubre de 2010; estudió en Somerville, colegio femenino de Oxford, y fue fellow desde 1949; «The Problem of Abortion and the Doctrine of Double Effect» apareció en Oxford Review, 5: 5-15 (1967), y trata del aborto y la doctrina del doble efecto; el caso del vehículo desbocado que puede desviarse de cinco personas a una procede de ese artículo. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Philippa Foot»",
+      "url": "https://plato.stanford.edu/entries/philippa-foot/"
+    },
+    {
+      "claim": "Carta de Judith Jarvis Thomson y respuesta de Cass R. Sunstein: en su ensayo de 1967 Foot describe al conductor de un tranvía desbocado que «can only steer from one narrow track on to another», con cinco hombres trabajando en una vía y uno en la otra; Thomson presentó el caso en su artículo «The Trolley Problem», Yale Law Journal, 1985; Sunstein: «it was indeed Thomson, and not Foot, who named the Trolley Problem». Lectura directa.",
+      "source": "The New York Review of Books, «Stop That Tram!» (22 de mayo de 2014)",
+      "url": "https://www.nybooks.com/articles/2014/05/22/stop-that-tram/"
+    },
+    {
+      "claim": "Cita el pasaje de Foot de 1967: «he is the driver of a runaway tram which he can only steer from one narrow track on to another; five men are working on one track and one man on the other»; Thomson escribió «Killing, Letting Die, and the Trolley Problem» en 1976, nueve años después. Lectura directa.",
+      "source": "Philosophy Now, n.º 116, Omid Panahi, «Could There Be A Solution To The Trolley Problem?»",
+      "url": "https://philosophynow.org/issues/116/Could_There_Be_A_Solution_To_The_Trolley_Problem"
+    },
+    {
+      "claim": "El estudio Moral Machine reunió «nearly 40 million individual decisions» de 233 países y territorios sobre dilemas de vehículos autónomos relacionados con el problema del tranvía; el artículo se publicó en Nature el 24 de octubre de 2018. Lectura directa.",
+      "source": "MIT News, «How should autonomous vehicles be programmed?» (24 de octubre de 2018)",
+      "url": "https://news.mit.edu/2018/how-autonomous-vehicles-programmed-1024"
+    }
+  ],
+  "do_not_use": [
+    "Que Philippa Foot cofundara Oxfam: la SEP dice que se afirma a veces, pero los primeros registros de su participación son de 1948, seis años después de la fundación del Oxford Committee for Famine Relief. No usar.",
+    "Que Foot llamara a su caso «problema del tranvía» o «trolley problem»: el nombre es de Thomson.",
+    "La variante del hombre gordo en el puente: no se verificó quién la propuso ni cuándo. No usar.",
+    "El caso del juez que condena a un inocente para evitar un motín, que suele acompañar al del tranvía en el artículo de 1967: no se leyó en ninguna fuente. No usar.",
+    "La paginación exacta del pasaje del tranvía en la Oxford Review: no se leyó el artículo original, solo citas de él. No dar página.",
+    "El año de lanzamiento de la plataforma Moral Machine: MIT News no lo da. No usar.",
+    "Las traducciones del pasaje de Foot son propias."
+  ],
+  "status": "draft"
+}
