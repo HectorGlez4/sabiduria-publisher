@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-22-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Joseph Lister y el niño de la carreta (1865)",
+    "hook": "La cirugía antiséptica empezó con un niño de once años al que una carreta le pasó por encima de la pierna.",
+    "body": [
+      "El 12 de agosto de 1865 ingresó en la Royal Infirmary de Glasgow un niño de once años, James Greenlees. La rueda de una carreta vacía le había roto la pierna, y el hueso había atravesado la piel. El cirujano Joseph Lister le limpió la herida y la cubrió con apósitos empapados en ácido carbólico.",
+      "La idea no venía de la medicina. En 1864 Lister había leído que el ácido carbólico producía efectos notables sobre las aguas residuales de la ciudad de Carlisle. A las seis semanas los huesos del niño estaban firmemente unidos; dos días después la herida había cerrado. Lister publicó el método en The Lancet en 1867 y contó que en sus salas, en nueve meses, no se había dado un solo caso de piemia, gangrena hospitalaria ni erisipela.",
+      "El objeto que quedó como símbolo de su método, un pulverizador que envolvía el quirófano en una niebla de ácido, lo abandonó él mismo en 1887. Había llegado a la conclusión de que el peligro mayor no estaba en el aire, sino en los dedos, los vendajes y la piel del paciente."
+    ],
+    "question": "¿Qué idea útil te llegó de un campo que no era el tuyo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Joseph Lister",
+    "subtitle": "Glasgow, 12 de agosto de 1865",
+    "body": "Curó la fractura abierta de un niño de once años con apósitos de ácido carbólico, una idea que tomó de las aguas residuales de Carlisle. En 1887 abandonó su propio pulverizador: el peligro estaba en las manos, no en el aire."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Medicina", "#Ciencia"],
+    "extended": ["#JosephLister", "#Antisepsia", "#Cirugia", "#Glasgow", "#SigloXIX", "#HistoriaDeLaMedicina"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de Lister, «On a New Method of Treating Compound Fracture, Abscess, &c.» (The Lancet, 1867), Caso 1: «James G——, aged eleven years, was admitted into the Glasgow Royal Infirmary on the 12th of August, 1865», lesión «caused by the wheel of an empty cart passing over the limb»; «At the expiration of six weeks I examined the condition of the bones, and, finding them firmly united, discarded the splints; and two days later the sore was entirely healed»; «In the course of the year 1864 I was much struck with an account of the remarkable effects produced by carbolic acid upon the sewage of the town of Carlisle». Lectura directa.",
+      "source": "The Collected Papers of Joseph, Baron Lister, vol. II (Oxford, Clarendon Press, 1909), escaneo de la Universidad de Toronto en Internet Archive",
+      "url": "https://archive.org/stream/collectedpaperso02listuoft/collectedpaperso02listuoft_djvu.txt"
+    },
+    {
+      "claim": "El paciente fue James Greenlees, un muchacho golpeado por una carreta en la calle; fractura de tibia con el hueso atravesando la piel; Glasgow Royal Infirmary, 1865; Lister empapó los apósitos en una solución de ácido carbólico; lo inspiró haber leído que el ácido carbólico aplicado a las aguas residuales de Carlisle reducía el olor. Lectura directa.",
+      "source": "Royal College of Physicians and Surgeons of Glasgow, Heritage, exposición «Lister: antiseptic practice»",
+      "url": "https://heritage.rcpsg.ac.uk/exhibits/show/lister-exhibition/lister-antiseptic-practice"
+    },
+    {
+      "claim": "Lister, «On the Antiseptic Principle of the Practice of Surgery» (1867): sus salas «have completely changed their character» y «during the last nine months not a single instance of pyaemia, hospital gangrene, or erysipelas has occurred in them». Lectura directa.",
+      "source": "Internet Modern History Sourcebook, Fordham University, «Joseph Lister: Antiseptic Principle Of The Practice Of Surgery, 1867»",
+      "url": "https://sourcebooks.web.fordham.edu/mod/1867lister.asp"
+    },
+    {
+      "claim": "Pulverizador de vapor carbólico usado por Lister, hecho por D. Marr, Londres, c. 1867; operarlo era quedar envuelto en una niebla amarilla; Lister abandonó el pulverizador en 1887 porque los gérmenes de los dedos, los vendajes y la piel del paciente suponían un peligro mayor. Lectura directa.",
+      "source": "Science Museum Group Collection, objeto A43470, «Carbolic steam spray used by Joseph Lister»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co163555/carbolic-steam-spray-used-by-joseph-lister"
+    }
+  ],
+  "do_not_use": [
+    "Que el niño tuviera siete años: lo dicen algunas páginas divulgativas; el propio texto de Lister dice «aged eleven years».",
+    "Que el niño «salió caminando del hospital» a las seis semanas: circula en resúmenes; Lister solo dice que a las seis semanas los huesos estaban unidos y que dos días después la herida había cerrado.",
+    "Las cifras de mortalidad en amputaciones antes y después del método (del artículo de 1870 sobre la salubridad del hospital): no se leyeron en la fuente. No usar.",
+    "Que Lister fuera el primero en usar ácido carbólico en heridas: no verificado y probablemente falso; no afirmarlo.",
+    "El número exacto de entregas del artículo en The Lancet (cinco, siete): las fuentes discrepan. Decir solo «en 1867».",
+    "La fecha en que empezó a usar el pulverizador (1870 o 1871 según la fuente): no usar.",
+    "Que el químico John Anderson le hablara de Pasteur: aparece solo en resultados de búsqueda, no en una fuente leída."
+  ],
+  "status": "draft"
+}

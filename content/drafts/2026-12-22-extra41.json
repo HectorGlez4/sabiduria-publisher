@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-22-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Ibsen y la última frase de Un enemigo del pueblo (1882)",
+    "hook": "Ibsen no sabía si su obra era una comedia o un drama. Termina con un hombre rodeado de vidrios rotos que dice sentirse el más fuerte del mundo.",
+    "quote": {
+      "text": "El hombre más fuerte del mundo es el que está más solo.",
+      "author": "Henrik Ibsen",
+      "work": "Un enemigo del pueblo, acto V, escena final (Copenhague, Gyldendal, 1882)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En Un enemigo del pueblo, el doctor Stockmann descubre que las aguas del balneario que sostiene a su pueblo están contaminadas. Quiere decirlo. El pueblo, que vive del balneario, no quiere oírlo. En el cuarto acto, una asamblea de vecinos lo declara por votación enemigo del pueblo.",
+      "El quinto acto empieza en su estudio, con los cristales de las dos ventanas rotos a pedradas. Stockmann recoge las piedras del suelo y dice que las guardará como reliquias. Decide sacar a sus hijos de la escuela y enseñarles él mismo, con chicos de la calle. Entonces le dice a su familia que ha hecho un gran descubrimiento: el hombre más fuerte del mundo es el que está más solo. Su mujer solo alcanza a responder: «Ay, Thomas, Thomas».",
+      "Ibsen publicó la obra el 28 de noviembre de 1882, en Copenhague, en una tirada de 10.000 ejemplares. Al terminar el borrador le escribió a su editor que no sabía si llamarla comedia o drama. La frase final suele citarse como un elogio de la firmeza. En la escena la dice un hombre con las ventanas rotas, y nadie en el escenario le contesta que tenga razón."
+    ],
+    "question": "¿Cuándo se distingue la firmeza de la terquedad?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Ibsen", "#Citas", "#Teatro"],
+    "extended": ["#UnEnemigoDelPueblo", "#HenrikIbsen", "#LiteraturaNoruega", "#SigloXIX", "#Dramaturgia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la obra (traducción inglesa de R. Farquharson Sharp): acto IV, Aslaksen anuncia que «this meeting of citizens declares Dr. Thomas Stockmann to be an enemy of the people»; acotación inicial del acto V: «two windows, of which all the panes are broken»; Stockmann: «I shall treasure these stones as relics»; decide sacar a los chicos de la escuela y reunir «street urchins» como alumnos; final: «the strongest man in the world is he who stands most alone», seguido de Mrs. Stockmann: «Oh, Thomas, Thomas!» y Petra: «Father!». Lectura directa.",
+      "source": "Henrik Ibsen, An Enemy of the People, trad. R. Farquharson Sharp, Project Gutenberg, ebook n.º 2446",
+      "url": "https://www.gutenberg.org/files/2446/2446-h/2446-h.htm"
+    },
+    {
+      "claim": "Texto original noruego de la frase: «den stærkeste mand i verden, det er han, som står mest alene»; la dice Stockmann al final, con su familia alrededor; la obra se publicó en 1882 y se estrenó el 13 de enero de 1883 en el Christiania Theater; el balneario del pueblo está contaminado; Ibsen la escribió tras la fuerte oposición a Gengangere (Espectros, 1881). Artículo de Erik Bjerck Hagen, profesor de la Universidad de Bergen. Lectura directa.",
+      "source": "Store norske leksikon, «En folkefiende»",
+      "url": "https://snl.no/En_folkefiende"
+    },
+    {
+      "claim": "Publicada el 28 de noviembre de 1882 por Gyldendalske Boghandels Forlag (F. Hegel & Søn), Copenhague, en una tirada de 10.000 ejemplares; copia en limpio empezada en Roma y terminada en Gossensass; carta a Hegel del 21 de junio de 1882: había terminado el drama el día anterior y no estaba seguro de si llamarlo comedia o drama; estreno el 13 de enero de 1883 en el Christiania Theater. Lectura directa.",
+      "source": "Universidad de Oslo, Centre for Ibsen Studies, Virtual Ibsen Centre, «An Enemy of the People»",
+      "url": "https://hf.uio.no/is/english/services/virtual-ibsen-centre/on-ibsen-s-work/fo"
+    }
+  ],
+  "do_not_use": [
+    "Versiones de la frase como «el hombre más fuerte es el que está solo» o «el más fuerte es quien se queda solo»: el original dice «står mest alene», el que está más solo, en grado comparativo. Mantener el «más».",
+    "Que sea una frase de Ibsen en primera persona o un lema suyo: la dice un personaje, el doctor Stockmann, al final de la obra.",
+    "Que la obra sea una respuesta directa de Ibsen a las críticas a Espectros: SNL lo sitúa después de esa oposición, pero el centro Ibsen de Oslo dice que la idea era anterior a Espectros y la apartó para escribirla. No afirmar que nació como respuesta.",
+    "La interpretación de que la frase llega tarde o es irónica: aparece en un documento de Trøndelag Teater que no se leyó; la pieza solo describe la escena.",
+    "La traducción al español es propia, a partir del noruego que da SNL y la versión inglesa de Sharp; no corresponde a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

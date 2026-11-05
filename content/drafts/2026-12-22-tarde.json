@@ -1,0 +1,56 @@
+{
+  "id": "2026-12-22-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Malala Yousafzai en la ONU el día de sus 16 años",
+    "hook": "Nueve meses después de recibir un disparo en la cabeza, Malala habló en la ONU. No pidió castigo para nadie.",
+    "quote": {
+      "text": "Un niño, un maestro, un libro y una pluma pueden cambiar el mundo.",
+      "author": "Malala Yousafzai",
+      "work": "Discurso ante la Asamblea de la Juventud de la ONU, Nueva York, 12 de julio de 2013",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 9 de octubre de 2012, en el valle de Swat, en Pakistán, un talibán le disparó a Malala Yousafzai en un autobús. La bala le entró por el lado izquierdo de la frente. Tenía quince años.",
+      "El 12 de julio de 2013 cumplió dieciséis y los pasó en la sede de las Naciones Unidas, en Nueva York, ante cientos de jóvenes. Era su primera aparición pública desde el atentado, y llevaba un chal que había pertenecido a Benazir Bhutto. Dijo que no estaba allí para hablar de venganza personal, y algo más difícil: que ni siquiera odiaba al talibán que le había disparado.",
+      "La frase que más se recuerda va justo después de llamar a los libros y las plumas «nuestras armas más poderosas». Es una cuenta mínima: cuatro cosas, una de cada una. La pronunció alguien que sabía lo que cuesta a veces conseguir la primera."
+    ],
+    "question": "¿Qué maestro te cambió algo que todavía llevas contigo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Malala", "#Citas", "#Educacion"],
+    "extended": ["#MalalaYousafzai", "#ONU", "#DerechoALaEducacion", "#Pakistan", "#Ninas", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Material oficial de la ONU sobre el acto: 12 de julio de 2013, sede de Naciones Unidas en Nueva York; Malala cumplía 16 años; Ban Ki-moon declaró el día «Malala Day»; en la lista de planos, cita textual: «One child, one teacher, one book, and one pen can change the world.» y «let us pick up our books and our pens, they are our most powerful weapons». Lectura directa.",
+      "source": "UNifeed, Naciones Unidas, «UN / Malala», asset U130712b",
+      "url": "https://media.un.org/unifeed/en/asset/u130/u130712b"
+    },
+    {
+      "claim": "Transcripción del discurso: «on the 9th of October, 2012, the Taliban shot me on the left side of my forehead»; «Neither am I here to speak in terms of personal revenge against the Taliban or any other terrorist group»; «I do not even hate the Talib who shot me»; la frase inmediatamente anterior a la cita es «They are our most powerful weapons»; la cita: «One child, one teacher, one book, and one pen can change the world». Lectura directa.",
+      "source": "Rev, «Malala Yousafzai Speech at United Nations Youth Assembly 2013 Transcript»",
+      "url": "https://www.rev.com/transcripts/malala-yousafzai-speech-at-united-nations-youth-assembly-2013-transcript"
+    },
+    {
+      "claim": "Habló el día en que cumplió 16 años en la Asamblea de la Juventud de la ONU; fue su primera aparición pública desde que un talibán le disparó en un autobús en el valle de Swat; llevaba un chal que había pertenecido a Benazir Bhutto; cita la frase con el orden «one pen and one book». Lectura directa.",
+      "source": "Dawn (Karachi), «Malala speaks at UN, vows not to be silenced», 12 de julio de 2013",
+      "url": "https://dawn.com/news/1028531"
+    }
+  ],
+  "do_not_use": [
+    "La fecha del atentado que da Dawn («October 12»): es un error; la propia Malala dice en el discurso «the 9th of October, 2012». Usar el 9 de octubre.",
+    "El orden «una pluma y un libro» (Dawn) o la versión sin «un niño» de UN News: el registro oficial de la ONU y la transcripción dicen «one child, one teacher, one book, and one pen». Usar ese orden.",
+    "La frase «Weakness, fear and hopelessness died. Strength, power and courage was born»: la transcripción del vídeo dice «fervor» en lugar de «power». No citarla sin resolver la discrepancia.",
+    "El número de asistentes (cientos, más de 500, casi 1.000 según la fuente): decir solo «cientos de jóvenes», que es lo que da la descripción de UNifeed.",
+    "El Premio Nobel de la Paz de 2014 y que fuera la galardonada más joven: cierto según la prensa general, pero nobelprize.org dio 403 y no se leyó. No mencionarlo en esta pieza.",
+    "La traducción es propia; no corresponde a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

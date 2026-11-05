@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-22-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Kanesh y las cartas de las mujeres de Assur",
+    "hook": "Hace casi cuatro mil años, una tejedora le contestó por carta a su marido, que se quejaba de sus telas, que hacía lo que podía.",
+    "body": [
+      "Hacia 1900 a.C., mercaderes de Assur, una ciudad a orillas del Tigris, se instalaron en Kanesh, en el centro de Anatolia, en la actual Kültepe, Turquía. Entre las dos ciudades había unos 1.200 kilómetros: una tablilla de arcilla tardaba seis semanas en llegar, en caravana de burros, cruzando la estepa siria y los montes Tauro. Cada carta viajaba envuelta en un sobre, también de arcilla, con el sello de quien la enviaba.",
+      "Hacia 1835 a.C. un incendio arrasó Kanesh y coció las tablillas que guardaban las casas. Por eso se conservan más de 23.000. En menos del 10 por ciento de las cartas aparece una mujer como remitente o destinataria, pero muchas de ellas las escribieron con su propia mano. La escritura usaba unos 120 signos, y algunas cartas están tan mal trazadas que, según la asirióloga Cécile Michel, quien las escribió acababa de aprender.",
+      "Esas mujeres se quedaban en Assur, tejían las telas que sus maridos vendían en Anatolia y discutían precios. Lamassi, tejedora, recibió críticas de su marido, Pushu-ken, por la tela que le había mandado, y le respondió que se esforzaba en hacerla y enviarla. Tarām-Kūbi le pidió plata a su marido, Innaya, durante una hambruna. En un archivo hecho de cuentas y contratos, sus cartas son las que hablan de la casa y usan un lenguaje emocional que casi no aparece en las demás."
+    ],
+    "question": "¿Qué dirían de nosotros nuestros mensajes si alguien los leyera dentro de cuatro mil años?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Las cartas de Kanesh",
+    "subtitle": "Anatolia, hacia 1900 a.C.",
+    "body": "Un incendio coció más de 23.000 tablillas de mercaderes asirios. Entre ellas están las cartas de sus mujeres, que tejían en Assur, a seis semanas de camino, y negociaban precios por escrito, muchas veces con su propia mano."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Mesopotamia", "#Arqueologia"],
+    "extended": ["#Kanesh", "#Kultepe", "#Asiria", "#Cuneiforme", "#MujeresEnLaHistoria", "#Anatolia"]
+  },
+  "sources": [
+    {
+      "claim": "La mayoría de las tablillas de Kanesh datan de hacia 1900-1840 a.C.; Kanesh es la actual Kültepe (Turquía) y Assur está en el Tigris; una tablilla recorría unas 750 millas en seis semanas en caravana de burros por la estepa siria y los montes Tauro; hacia 1835 a.C. un incendio destruyó Kanesh y coció muchas tablillas; se han hallado más de 23.000; las tablillas iban en sobres de arcilla sobre los que se hacía rodar un sello cilíndrico; los nombres de mujeres aparecen como remitente o destinataria en menos del 10 % de las cartas; muchas escribían con su propia mano; la escritura usaba unos 120 signos; Cécile Michel señala cartas tan mal escritas que su autor «has just learned on the spot»; Lamassi, tejedora, contestó a las críticas de su marido Pushu-ken sobre sus telas «I try my best to make and send textiles to you!»; Tarām-Kūbi pidió a su marido Innaya que enviara plata durante una hambruna; las cartas de mujeres tratan a menudo de asuntos de la casa y personales y usan un lenguaje emocional raro en el resto. Lectura directa.",
+      "source": "Durrie Bouscaren, «Assyrian Women of Letters», Archaeology (Archaeological Institute of America), noviembre-diciembre de 2023",
+      "url": "https://archaeology.org/issues/november-december-2023/features/assyrian-women-of-letters/"
+    },
+    {
+      "claim": "Las 23.000 tablillas halladas en Kültepe (la antigua Kaneš, Anatolia central); textos del siglo XIX a.C. de Aššur y Kaneš; las cartas enviadas desde Aššur muestran el papel preeminente de las mujeres asirias en la familia y la economía doméstica y su contribución al comercio a larga distancia; productoras de textiles, inversoras y acreedoras. Lectura directa.",
+      "source": "MSH Mondes (CNRS / Université Paris Nanterre), ficha del libro de Cécile Michel, Women of Assur and Kanesh (SBL Press, 2020)",
+      "url": "https://www.mshmondes.cnrs.fr/women-assur-and-kanesh"
+    },
+    {
+      "claim": "Hace unos 4.000 años mercaderes asirios establecieron un puesto comercial en Kaneš, en Anatolia central; su historia se conoce por las tablillas de arcilla en que escribían; Tarām-Kūbi, mujer asiria, se carteaba con su hermano y su marido instalados en Kaneš. Lectura directa.",
+      "source": "Institut des Hautes Études Scientifiques (IHES), conferencia de Cécile Michel, 18 de noviembre de 2022",
+      "url": "https://www.ihes.fr/en/conference-by-cecile-michel-on-november-18-2022/"
+    }
+  ],
+  "do_not_use": [
+    "Que sean «las primeras cartas escritas por mujeres» o «las voces femeninas más antiguas»: no verificado, y Enheduanna (hacia 2300 a.C.) es anterior. No decirlo.",
+    "La cifra exacta de tablillas (22.000, 23.000, 23.500 según la fuente): usar «más de 23.000», que dan Archaeology y la ficha del CNRS.",
+    "Que el incendio fuera un ataque: Archaeology dice que la mayoría de los investigadores lo creen posible, no probado. No afirmarlo.",
+    "Las palabras exactas de la carta de Lamassi en traducción española: la frase inglesa es de la traducción de Michel citada por Archaeology; la pieza la parafrasea, no la cita.",
+    "Que Innaya comprara estaño a los elamitas y telas a los babilonios: aparece en un resumen de búsqueda de un artículo de Michel que no se pudo leer. No usar.",
+    "El tamaño de las caravanas (10 a 50 burros): aparece en una fuente de búsqueda no leída. No usar.",
+    "La primera excavación turca en 1948 y las de Chantre (1893) y Hrozný (1925): solo en resultados de búsqueda. No usar.",
+    "La distancia en kilómetros es conversión propia de las 750 millas de Archaeology (unos 1.200 km)."
+  ],
+  "status": "draft"
+}
