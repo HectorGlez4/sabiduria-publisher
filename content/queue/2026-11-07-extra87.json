@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-15-extra41",
+  "id": "2026-11-07-extra87",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Proust", "#Citas", "#Literatura"],
-    "extended": ["#EnBuscaDelTiempoPerdido", "#Francia", "#Musica", "#Arte", "#Lectura", "#Historia"]
+    "topic": [
+      "#Proust",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#EnBuscaDelTiempoPerdido",
+      "#Francia",
+      "#Musica",
+      "#Arte",
+      "#Lectura",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "Que Vinteuil es un compositor real: es un personaje de la novela. Se discuten sus posibles modelos (Franck, Saint-Saëns, Fauré y otros); no se verificaron y no entran.",
     "Fecha exacta de publicación (noviembre de 1923): no se verificó el mes. El copy dice solo 1923."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-07T23:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-21-tarde",
+  "id": "2026-11-06-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Baudelaire", "#Citas", "#Poesia"],
-    "extended": ["#EnivrezVous", "#SpleenDeParis", "#LiteraturaFrancesa", "#SigloXIX", "#Tiempo", "#Sabiduria"]
+    "topic": [
+      "#Baudelaire",
+      "#Citas",
+      "#Poesia"
+    ],
+    "extended": [
+      "#EnivrezVous",
+      "#SpleenDeParis",
+      "#LiteraturaFrancesa",
+      "#SigloXIX",
+      "#Tiempo",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -61,5 +72,12 @@
     "Atribuir a Baudelaire la frase inglesa «Always be drunk» como si fuera un original: es traducción.",
     "Las traducciones son propias; no corresponden a ninguna edición española concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-06T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

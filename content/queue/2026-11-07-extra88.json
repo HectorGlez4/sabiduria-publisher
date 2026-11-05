@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-15-tarde",
+  "id": "2026-11-07-extra88",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#OmarJayam", "#Citas", "#Poesia"],
-    "extended": ["#Rubaiyat", "#FitzGerald", "#Persia", "#Traduccion", "#Literatura", "#Historia"]
+    "topic": [
+      "#OmarJayam",
+      "#Citas",
+      "#Poesia"
+    ],
+    "extended": [
+      "#Rubaiyat",
+      "#FitzGerald",
+      "#Persia",
+      "#Traduccion",
+      "#Literatura",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "Presentar la frase como cita literal de Jayam sin mencionar a FitzGerald: la redacción inglesa es suya y la traducción fue libre.",
     "Fecha del manuscrito Ouseley: 1460/61 según Forrest; la fuente de Humanists UK dice 1460. El copy no la da."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-08T02:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

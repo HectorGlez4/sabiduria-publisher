@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-13-extra43",
+  "id": "2026-11-06-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,22 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#BertrandRussell", "#Citas", "#Historia"],
-    "extended": ["#Filosofia", "#1933", "#Pensamiento", "#Duda", "#SigloXX"]
+    "topic": [
+      "#BertrandRussell",
+      "#Citas",
+      "#Historia"
+    ],
+    "extended": [
+      "#Filosofia",
+      "#1933",
+      "#Pensamiento",
+      "#Duda",
+      "#SigloXX"
+    ]
   },
   "sources": [
     {
@@ -57,5 +67,12 @@
     "Relacionarla con el efecto Dunning-Kruger como si Russell lo hubiera anticipado científicamente: es una asociación de divulgación, no algo que diga el texto.",
     "«Columna semanal»: la frecuencia exacta no se verificó en las fuentes. Solo se afirma que los artículos salieron en periódicos de Hearst entre 1933 y 1935."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-07T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

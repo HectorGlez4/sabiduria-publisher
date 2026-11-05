@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-14-extra41",
+  "id": "2026-11-07-extra86",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,18 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JohnDonne", "#Citas", "#Literatura"],
-    "extended": ["#NingunHombreEsUnaIsla", "#SigloXVII", "#Inglaterra", "#Humanidad", "#Historia"]
+    "topic": [
+      "#JohnDonne",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#NingunHombreEsUnaIsla",
+      "#SigloXVII",
+      "#Inglaterra",
+      "#Humanidad",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -56,5 +66,12 @@
     "Que las campanas que oía eran las de la catedral de San Pablo, de la que era deán, o las de una iglesia concreta junto a su casa: no se verificó.",
     "La versión «por quién doblan las campanas, doblan por ti» con signo de pregunta: en el original no es una pregunta, es una orden de no enviar a preguntar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-07T19:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
