@@ -213,12 +213,24 @@ def usadas_desde(registro: list[dict], dias: int = 90, ahora: datetime | None = 
 
 # --- Teléfono ------------------------------------------------------------------
 
+def quitar_valoracion(xml: str) -> bool:
+    """Cierra «Donner une note à Instagram» con «Non merci» si está a la vista. Sale tras publicar y tapa el editor
+    siguiente: tumbó casi todas las Stories de la prueba de cada 15 min (5 nov)."""
+    if telefono.buscar(xml, texto="Donner une note à Instagram", paquete=IG) is None:
+        return False
+    boton = telefono.buscar(xml, texto="Non merci", paquete=IG)
+    if boton is None:
+        return False
+    telefono.tocar(*boton["centro"])
+    return True
+
+
 def _esperar(cumple, descripcion: str, plazo: float = ESPERA_S) -> str:
     limite = time.monotonic() + plazo
     while True:
         try:
             xml = telefono.volcado(timeout=20)
-            if cumple(xml):
+            if not quitar_valoracion(xml) and cumple(xml):  # tras quitarla, el plazo sigue corriendo
                 return xml
         except telefono.TelefonoError:
             pass
@@ -352,9 +364,16 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
     telefono.tocar(*fila.centro)
     _tocar_id(_esperar(lambda x: bool(por_id(x, "audio_bar_select_tap_target")), "la barra de la pista"),
               "audio_bar_select_tap_target")
-    xml = _esperar(lambda x: bool(por_id(x, "music_editor_done_button")) or bool(por_id(x, EDITOR[superficie])),
+    xml = _esperar(lambda x: bool(por_id(x, "music_editor_done_button")) or bool(por_id(x, EDITOR[superficie]))
+                   or (superficie == "reel" and _check_del_clip(x) is not None),
                    "el editor del clip o el de la foto")
-    if por_id(xml, "music_editor_done_button"):
+    if not por_id(xml, "music_editor_done_button") and not por_id(xml, EDITOR[superficie]):
+        # Variante del Reel con la pista arriba y un ✓ en la esquina en vez de «Terminé» (19:39 del 5 nov).
+        # Se guarda el volcado para aprender su id; tras el ✓ tiene que volver el editor del Reel.
+        (ev / "02-clip-check.xml").write_text(xml, encoding="utf-8")
+        telefono.tocar(*_check_del_clip(xml)["centro"])
+        _esperar(lambda x: bool(por_id(x, EDITOR[superficie])), "el editor del Reel tras el ✓")
+    elif por_id(xml, "music_editor_done_button"):
         # Algunas pistas del Reel solo abren «Choisissez la section…», sin opciones de sticker: nada que tape.
         try:
             xml = _esperar(lambda x: telefono.buscar(x, texto="Musique uniquement", paquete=IG) is not None,
@@ -369,6 +388,18 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
     time.sleep(3)
     return {"pista": pista._asdict() | {"centro": None}, "ranking": [f.titulo for f in filas],
             "captura": str(telefono.captura(ev / f"02-musica-{superficie}.png"))}
+
+
+def _check_del_clip(xml: str) -> dict | None:
+    """El ✓ de «Choisissez la section à ajouter à votre reel»: el nodo pulsable de Instagram arriba a la derecha.
+    None si no es esa pantalla o el ✓ no se distingue (entonces cuenta como pantalla inesperada)."""
+    if telefono.buscar(xml, contiene="Choisissez la section", paquete=IG) is None:
+        return None
+    ancho = max(n["bounds"][2] for n in telefono.nodos(xml))
+    candidatos = [n for n in telefono.nodos(xml) if n["package"] == IG and n["clickable"] and n["enabled"]
+                  and n["centro"][0] > ancho * 0.8 and n["centro"][1] < 400
+                  and n["bounds"][2] - n["bounds"][0] < ancho * 0.25]
+    return candidatos[0] if len(candidatos) == 1 else None
 
 
 def _desplazar_lista(visibles: list[Pista], hacia_abajo: bool) -> None:

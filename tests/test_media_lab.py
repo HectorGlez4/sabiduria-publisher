@@ -6148,6 +6148,36 @@ def seccion_sitio_instagram() -> None:
     check(si.interruptor_junto_a(f"<hierarchy>{facebook}</hierarchy>", "Votre story") is None,
           "sin la fila «Votre story» no se elige ningún interruptor")
 
+    # El diálogo de valoración se cierra con «Non merci», nunca con «Donner une note…» ni «Me rappeler plus tard».
+    def nodo(texto, x1, y1, x2, y2, pulsable=False):
+        return (f'<node text="{texto}" content-desc="" resource-id="" class="android.widget.TextView" '
+                f'package="com.instagram.android" clickable="{str(pulsable).lower()}" '
+                f'bounds="[{x1},{y1}][{x2},{y2}]" />')
+    dialogo = ("<hierarchy>" + nodo("Donner une note à Instagram", 125, 840, 820, 900)
+               + nodo("Donner une note à Instagram", 90, 1130, 990, 1265, True)
+               + nodo("Me rappeler plus tard", 90, 1265, 990, 1400, True)
+               + nodo("Non merci", 90, 1400, 990, 1535, True) + "</hierarchy>")
+    toques, tocar_real = [], si.telefono.tocar
+    si.telefono.tocar = lambda x, y: toques.append((x, y))
+    try:
+        check(si.quitar_valoracion(dialogo) and toques == [(540, 1467)], "la valoración se cierra con «Non merci»")
+        toques.clear()
+        check(not si.quitar_valoracion("<hierarchy>" + nodo("Non merci", 90, 1400, 990, 1535, True) + "</hierarchy>")
+              and not toques, "un «Non merci» sin el diálogo de valoración no se toca")
+    finally:
+        si.telefono.tocar = tocar_real
+
+    # El editor del clip con ✓ arriba a la derecha: un único pulsable en la esquina; sin el texto, nada.
+    seccion = nodo("Choisissez la section à ajouter à votre reel.", 156, 1650, 924, 1700)
+    fondo = nodo("", 0, 0, 1080, 2340)
+    check_ = nodo("", 960, 190, 1045, 270, True)
+    n = si._check_del_clip(f"<hierarchy>{fondo}{seccion}{check_}{nodo('', 498, 188, 583, 273, True)}</hierarchy>")
+    check(n is not None and n["bounds"] == (960, 190, 1045, 270), "el ✓ del clip es el pulsable de la esquina")
+    check(si._check_del_clip(f"<hierarchy>{fondo}{check_}</hierarchy>") is None,
+          "sin «Choisissez la section…» no se busca el ✓")
+    check(si._check_del_clip(f"<hierarchy>{fondo}{seccion}{check_}{nodo('', 900, 300, 1040, 380, True)}</hierarchy>")
+          is None, "dos pulsables en la esquina: no se adivina cuál es el ✓")
+
     def nodo(rid, texto="", desc="", y=0):
         return (f'<node text="{texto}" content-desc="{desc}" resource-id="com.instagram.android:id/{rid}" '
                 f'class="android.widget.TextView" package="com.instagram.android" clickable="false" '

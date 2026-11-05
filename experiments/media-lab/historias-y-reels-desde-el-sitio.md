@@ -92,6 +92,12 @@ Lo que se aprendió al automatizar (todo está ya en el código):
 - **Burbuja de notas sobre la foto del perfil**: «Vos pensées ici…» tapa la mitad alta de
   la foto y, tocada, abre el editor de notas en vez del visor de la Story. `verificar` toca
   la parte baja de la foto (dejó dos Stories «sin verificar» antes del arreglo).
+- **«Donner une note à Instagram»**: tras unas cuantas publicaciones seguidas, Instagram saca
+  este diálogo de valoración encima del editor siguiente (tumbó 5 de 6 Stories en la prueba
+  de cada 15 min). Cualquier espera de `lab.py sitio` lo cierra con «Non merci».
+- **Clip del Reel con ✓ en vez de «Terminé»**: otra variante de «Choisissez la section…»,
+  con la pista arriba y un ✓ en la esquina. `musica` toca el único pulsable de esa esquina,
+  exige volver al editor del Reel y guarda el volcado en `02-clip-check.xml` para aprender su id.
 
 ## Por qué así
 
