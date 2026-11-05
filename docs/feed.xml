@@ -7,8 +7,30 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 04 Nov 2026 21:42:48 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 06:05:12 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>LA EXPRESIÓN QUE HIZO CÉLEBRE A HANNAH ARENDT APARECE UNA SOLA VEZ DENTRO DEL LIBRO</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-04-re56-reel</guid>
+      <pubDate>Wed, 04 Nov 2026 19:26:00 +0000</pubDate>
+      <description><![CDATA["La lección de la terrible banalidad del mal, que desafía las palabras y el pensamiento."
+— Hannah Arendt, Eichmann en Jerusalén, 1963, última frase antes del epílogo
+
+Eichmann en Jerusalén se publicó en 1963: primero por entregas en The New Yorker, entre febrero y marzo, y después como libro en Viking Press. El subtítulo es "Un informe sobre la banalidad del mal". Dentro del texto la expresión aparece una única vez, en la última frase del relato, justo antes del epílogo.
+
+La frase no dice que el mal sea poca cosa. Describe al hombre, no al crimen: Arendt le atribuye una incapacidad genuina para pensar y una superficialidad extraordinaria. Tampoco lo excusa. Sostuvo que Eichmann era responsable y defendió la condena a muerte.
+
+La lectura que se impuso fue la contraria, y la acusó de trivializar los crímenes y de sostener que él solo obedecía órdenes. Ocho años después, en 1971, volvió sobre el asunto para precisarlo: lo que le faltaba a Eichmann era la capacidad de mirar cualquier cosa desde el punto de vista de otro.
+
+Una frase de once palabras, citada millones de veces, sostenida por un libro que casi nadie termina.
+
+¿Cuánto de lo que repetimos lo hemos leído entero?
+
+#SabiduriaDeBolsillo #HannahArendt #Filosofia #Citas]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>EL POEMA QUE SE REPARTE COMO ELOGIO DE LA PUREZA FEMENINA ES UNA CUENTA PASADA AL HOMBRE QUE LA EXIGE</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -478,26 +500,6 @@ En 1668, Thomas Hobbes, que de joven había trabajado como secretario de Bacon, 
 #SabiduriaDeBolsillo #FrancisBacon #Citas #Filosofia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La frase más repetida sobre el perdón no se escribió para los pecadores. Se escribió para los críticos literarios.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-24-extra88</guid>
-      <pubDate>Sun, 25 Oct 2026 07:17:25 +0000</pubDate>
-      <description><![CDATA["Errar es humano; perdonar, divino."
-— Alexander Pope, Ensayo sobre la crítica, parte II (1711)
-
-En mayo de 1711, Alexander Pope publicó en Londres un poema largo en pareados titulado Ensayo sobre la crítica. Tenía veintitrés años. El poema es un manual en verso para quienes juzgan libros ajenos: qué saber antes de opinar, qué defectos vigilar, cómo no confundir ingenio con criterio.
-
-La frase cierra la segunda parte, en el verso 525. Los versos que la preceden hablan de los críticos que destrozan a un mal autor por sed de gloria, y piden que en el crítico no se pierda la persona: el buen carácter y el buen juicio deben ir siempre juntos. El perdón que Pope reclama es, en primer lugar, el del lector severo ante los versos torpes de otro.
-
-Del mismo poema salieron otras dos frases que hoy circulan sueltas: «Un poco de saber es cosa peligrosa» y «Los necios se lanzan donde los ángeles temen pisar». Las tres nacieron como consejos sobre cómo leer. Se han quedado como consejos sobre cómo vivir, y quizá no sea un desvío tan grande.
-
-¿Qué es más difícil de perdonar, un error ajeno o uno que habríamos sabido evitar?
-
-#SabiduriaDeBolsillo #AlexanderPope #Citas #Literatura]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra88.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra88.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
