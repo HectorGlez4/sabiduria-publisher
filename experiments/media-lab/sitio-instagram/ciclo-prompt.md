@@ -9,7 +9,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres un ciclo del bucle «
 - Nunca termines un mensaje esperando algo ni dejes nada en segundo plano: la sesión se cerraría sin publicar ni soltar el cerrojo.
 
 ## Pasos
-1. `lab.py lock-tomar --dueno sitio`. Si `cerrojo` es false, otra ventana usa el teléfono: termina con una línea de informe.
+1. `lab.py lock-tomar --dueno sitio --nuevo`. Si `cerrojo` es false (sale con 3), otro ciclo o ventana usa el teléfono: termina con una línea de informe, sin soltar el cerrojo (no es tuyo).
 2. `lab.py sitio elegir`. Anota `run`, `slug`, `url` y `plantillas` (una por formato).
 3. Para cada formato, en este orden: `feed`, `reel`, `story`. Llama RUN_F al `run` con el formato detrás (`SITIO-…-FEED`, `-REEL`, `-STORY`). Antes de cada formato, `lab.py lock-tomar --dueno sitio`; si devuelve `cerrojo: false`, salta al paso 5.
 

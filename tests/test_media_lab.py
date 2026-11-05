@@ -512,6 +512,7 @@ def seccion_manifiesto_y_cerrojo() -> None:
         lock.write_text('{"dueno": "manual", "desde": "2026-09-15T08:20:00"}', encoding="utf-8")
         check(not cerrojo.tomar(lock, t, "programada"), "un cerrojo reciente sin zona horaria bloquea sin romper")
         check(cerrojo.tomar(lock, t, "manual"), "el mismo dueño renueva su cerrojo")
+        check(not cerrojo.tomar(lock, t, "manual", nuevo=True), "con nuevo ni el mismo dueño pisa un cerrojo vigente")
         check(not cerrojo.soltar(lock, "programada") and lock.exists(), "otro dueño no suelta el cerrojo")
         lock.write_text('{"dueno": "manual", "desde": "2026-09-15T10:00:00+00:00"}', encoding="utf-8")
         check(cerrojo.tomar(lock, t, "programada"), "un cerrojo con fecha futura se trata como abandonado")

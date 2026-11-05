@@ -191,7 +191,7 @@ def cmd_preflight(a) -> int:
 
 
 def cmd_lock_tomar(a) -> int:
-    ok = cerrojo.tomar(LOCK, ahora(), a.dueno)
+    ok = cerrojo.tomar(LOCK, ahora(), a.dueno, nuevo=a.nuevo)
     emitir({"cerrojo": ok})
     return 0 if ok else 3
 
@@ -1188,6 +1188,7 @@ def construir() -> argparse.ArgumentParser:
     sub.add_parser("preflight").set_defaults(func=cmd_preflight)
     p = sub.add_parser("lock-tomar")
     p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
+    p.add_argument("--nuevo", action="store_true", help="falla si hay un cerrojo vigente, aunque sea del mismo dueño")
     p.set_defaults(func=cmd_lock_tomar)
     p = sub.add_parser("lock-soltar")
     p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
