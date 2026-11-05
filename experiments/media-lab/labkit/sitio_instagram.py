@@ -355,8 +355,15 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
     xml = _esperar(lambda x: bool(por_id(x, "music_editor_done_button")) or bool(por_id(x, EDITOR[superficie])),
                    "el editor del clip o el de la foto")
     if por_id(xml, "music_editor_done_button"):
-        _tocar_texto(xml, "Musique uniquement")  # nunca letras ni carátula: taparían la cita
-        time.sleep(1.5)
+        # Algunas pistas del Reel solo abren «Choisissez la section…», sin opciones de sticker: nada que tape.
+        try:
+            xml = _esperar(lambda x: telefono.buscar(x, texto="Musique uniquement", paquete=IG) is not None,
+                           "«Musique uniquement»", plazo=6)
+            _tocar_texto(xml, "Musique uniquement")  # nunca letras ni carátula: taparían la cita
+            time.sleep(1.5)
+        except PantallaInesperada:
+            if superficie != "reel":
+                raise
         _tocar_id(telefono.volcado(), "music_editor_done_button")
     # En el feed no hay editor de clip: la pista queda puesta en la píldora de arriba.
     time.sleep(3)
@@ -589,8 +596,12 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
     telefono.deslizar(540, 700, 540, 1700, 500)
     time.sleep(6)
     if superficie == "story":
-        xml = _esperar(lambda x: bool(por_id(x, "row_profile_header_imageview_frame_layout")), "la foto del perfil")
-        _tocar_id(xml, "row_profile_header_imageview_frame_layout")
+        xml = _esperar(lambda x: len(por_id(x, "row_profile_header_imageview_frame_layout")) == 1,
+                       "la foto del perfil")
+        # Por la mitad baja: la burbuja vacía de las notas («Vos pensées ici…») tapa la de arriba y, tocada,
+        # abre el editor de notas en vez del visor (pasó en el SM-S918B).
+        x1, y1, x2, y2 = por_id(xml, "row_profile_header_imageview_frame_layout")[0]["bounds"]
+        telefono.tocar((x1 + x2) // 2, y2 - (y2 - y1) // 5)
         # Solo cuenta como visor un content-desc con la edad («il y a …»): las historias destacadas del perfil
         # también empiezan por «Story de <cuenta>,» («1 sur 0, Vus.») y tocar a ciegas sobre el perfil abre otra
         # cosa (pasó: el «tableau de bord»).

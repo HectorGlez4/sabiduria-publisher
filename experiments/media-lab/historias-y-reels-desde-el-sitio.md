@@ -85,6 +85,13 @@ Lo que se aprendió al automatizar (todo está ya en el código):
   la primera pantalla: se desliza solo la fila de apps, a pasos cortos.
 - **Volcado comprimido**: `uiautomator dump --compressed` a veces quita el interruptor de
   una fila y deja la fila como `Switch` con su `checked`.
+- **Pistas del Reel sin «Musique uniquement»**: con algunas pistas el editor del Reel solo
+  abre «Choisissez la section à ajouter à votre reel» y «Terminé», sin opciones de sticker.
+  En el Reel no hay nada que tape la cita y se pulsa «Terminé» directamente; en feed y Story
+  la opción sigue siendo obligatoria (tumbó el Reel del 2026-11-04 a las 23:12).
+- **Burbuja de notas sobre la foto del perfil**: «Vos pensées ici…» tapa la mitad alta de
+  la foto y, tocada, abre el editor de notas en vez del visor de la Story. `verificar` toca
+  la parte baja de la foto (dejó dos Stories «sin verificar» antes del arreglo).
 
 ## Por qué así
 
