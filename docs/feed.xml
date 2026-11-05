@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 05 Nov 2026 06:05:12 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 10:05:28 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La mujer tiene derecho a subir al cadalso; debe tener igualmente el de subir a la tribuna.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-04-re58-reel</guid>
+      <pubDate>Wed, 04 Nov 2026 23:26:00 +0000</pubDate>
+      <description><![CDATA["La mujer tiene derecho a subir al cadalso; debe tener igualmente el de subir a la tribuna."
+— Olympe de Gouges, Declaración de los derechos de la mujer y de la ciudadana, artículo X
+
+El 5 de septiembre de 1791, Marie Gouze —nacida en Montauban en 1748 y conocida como Olympe de Gouges— publicó una reescritura de la Declaración de los Derechos del Hombre: preámbulo, diecisiete artículos y un postámbulo, dedicada a María Antonieta. Se imprimieron cinco ejemplares para que el texto se debatiera en la Asamblea Nacional. No se debatió. El primer artículo empieza: «La mujer nace libre y permanece igual al hombre en derechos». La frase del cadalso está en el décimo.
+
+Y no es una consigna suelta: es la parte central de un artículo sobre la libertad de opinión. El artículo X entero dice: «Nadie debe ser inquietado por sus opiniones, ni siquiera las fundamentales; la mujer tiene derecho a subir al cadalso, debe tener igualmente el de subir a la tribuna, siempre que sus manifestaciones no perturben el orden público establecido por la ley». Lo que se cita es el medio. Lo que se cae es el argumento —si la ley ya le reconoce a una mujer el derecho a ser ejecutada, no puede negarle el de hablar— y también la condición final, que le pone límite a ese mismo derecho.
+
+Dos años y dos meses después, el 3 de noviembre de 1793, Olympe de Gouges fue guillotinada en la plaza de la Revolución. Fue la segunda mujer ejecutada bajo el Terror, después de María Antonieta, a quien había dedicado el texto. La condenó el Tribunal revolucionario por sus posiciones girondinas y su oposición a Robespierre, no por la Declaración de 1791. El verbo del artículo X, en cambio, no era una metáfora: había escrito «tiene derecho a subir al cadalso», y subió.
+
+¿Qué condición se le suele añadir al derecho de hablar?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re58-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re58-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>LA EXPRESIÓN QUE HIZO CÉLEBRE A HANNAH ARENDT APARECE UNA SOLA VEZ DENTRO DEL LIBRO</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -480,26 +500,6 @@ Italo Calvino, en Seis propuestas para el próximo milenio (1988), escribió que
 #SabiduriaDeBolsillo #Monterroso #Microrrelato #Citas]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra81.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra81.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Francis Bacon sí escribió que el saber es poder. La primera vez estaba hablando de Dios.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-24-extra81</guid>
-      <pubDate>Sun, 25 Oct 2026 07:40:00 +0000</pubDate>
-      <description><![CDATA["La ciencia y el poder del hombre coinciden, porque donde se ignora la causa no se puede producir el efecto."
-— Francis Bacon, Novum Organum, libro I, aforismo 3 (1620)
-
-En 1597, Bacon publicó en latín unas Meditaciones sagradas. En la dedicada a las herejías discute con quienes separan lo que Dios sabe de lo que Dios puede. En medio del argumento abre un paréntesis: «pues también el saber mismo es poder». Es una precisión teológica sobre los atributos divinos, no un lema.
-
-Veintitrés años después, en 1620, volvió a la idea en el Novum Organum, su programa para reformar las ciencias, y esta vez hablaba del ser humano. El aforismo 3 es la cita de hoy. Y sigue así: a la naturaleza solo se la vence obedeciéndola. El poder del que habla Bacon no es mandar sobre otros, sino entender causas.
-
-En 1668, Thomas Hobbes, que de joven había trabajado como secretario de Bacon, dejó escrita en latín la fórmula que hoy se repite, scientia potentia est. Pero añadió dos palabras que casi nadie cita: sed parva. El saber es poder, pero poco.
-
-¿Qué sabes hoy que te haya dado más poder del que esperabas?
-
-#SabiduriaDeBolsillo #FrancisBacon #Citas #Filosofia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra81.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-24-extra81.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
