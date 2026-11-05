@@ -1,0 +1,58 @@
+{
+  "id": "2026-12-21-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Jenófanes y los dioses dibujados por bueyes",
+    "hook": "Hace unos 2.500 años, un poeta griego escribió que si los bueyes tuvieran manos, dibujarían a sus dioses con forma de buey.",
+    "body": [
+      "Jenófanes nació en Colofón, en la costa de Jonia, y floreció hacia la 60.ª Olimpiada, entre el 540 y el 537 a.C. Según sus propios versos, dejó su tierra a los veinticinco años y anduvo de un lado a otro de Grecia durante sesenta y siete más. De su obra quedan unos cuarenta fragmentos.",
+      "En ellos acusa a Homero y a Hesíodo de atribuir a los dioses lo que entre los hombres es vergüenza: el robo, el adulterio y el engaño. Y propone una explicación: los mortales imaginan dioses a su medida. Los etíopes dicen que los suyos son chatos y negros; los tracios, que tienen ojos azules y pelo rojizo. Si los caballos y los bueyes pudieran dibujar, sus dioses serían caballos y bueyes.",
+      "Estos versos se salvaron porque los copió, siglos después, Clemente de Alejandría, que los usó en los libros V y VII de sus Stromata para argumentar contra los dioses paganos. La observación de Jenófanes va más allá de la religión: cuando imaginamos lo que nos excede, solemos dibujarlo con nuestra propia cara."
+    ],
+    "question": "¿Qué imagen de algo grande has descubierto que era, en el fondo, un retrato tuyo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Jenófanes de Colofón",
+    "subtitle": "Cada pueblo pinta a sus dioses con su propia cara",
+    "body": "Los etíopes los imaginan chatos y negros; los tracios, de ojos azules y pelo rojizo. Si los bueyes tuvieran manos, escribió en el siglo VI a.C., sus dioses tendrían forma de buey."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Filosofia", "#GreciaAntigua", "#Presocraticos"],
+    "extended": ["#Jenofanes", "#Antropomorfismo", "#Religion", "#Homero", "#HistoriaDeLasIdeas", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Jenófanes nació en Colofón según Diógenes Laercio y floreció en la 60.ª Olimpiada (540-537 a.C.); en B8 dice haber andado por la tierra griega sesenta y siete años, desde los veinticinco; B11: Homero y Hesíodo atribuyeron a los dioses el robo, el adulterio y el engaño mutuo; B14-16 comentan la tendencia humana a concebir a los dioses en forma humana; B15: si caballos y bueyes tuvieran manos y pudieran dibujar, sus dioses se parecerían a caballos y bueyes; B16: los etíopes dicen que sus dioses son chatos y negros, los tracios que tienen ojos azules y pelo rojizo; Clemente citó B14-16 y B23. Lectura directa.",
+      "source": "James Lesher, «Xenophanes», Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/xenophanes/"
+    },
+    {
+      "claim": "Clemente de Alejandría, Stromata, libro V, capítulo 14, cita a Jenófanes de Colofón: si los bueyes o los leones tuvieran manos y pudieran dibujar, los caballos pintarían a los dioses como caballos y los bueyes como bueyes; y el fragmento del dios único, distinto de los mortales en forma y en mente. Lectura directa.",
+      "source": "Clemente de Alejandría, Stromata, libro V, cap. 14 (Ante-Nicene Fathers, vol. 2, en New Advent)",
+      "url": "https://www.newadvent.org/fathers/02105.htm"
+    },
+    {
+      "claim": "Clemente de Alejandría, Stromata, libro VII, capítulo 4, «Los paganos hicieron dioses semejantes a sí mismos»: cada pueblo los pinta parecidos a sí, como dice Jenófanes, los etíopes negros y chatos, los tracios rojizos. Lectura directa.",
+      "source": "Clemente de Alejandría, Stromata, libro VII, cap. 4 (Ante-Nicene Fathers, vol. 2, en New Advent)",
+      "url": "https://www.newadvent.org/fathers/02107.htm"
+    },
+    {
+      "claim": "Jenófanes critica a los dioses de Homero y Hesíodo; cada etnia se hace dioses a su imagen, color incluido: los etíopes negros y de nariz chata, los tracios de ojos azules y cabello rojo; los animales se harían dioses según su especie; se conservan unos cuarenta fragmentos; vida de rapsoda errante. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Xénophane de Colophon»",
+      "url": "https://www.universalis.fr/encyclopedie/xenophane-de-colophon/"
+    }
+  ],
+  "do_not_use": [
+    "Llamarlo el primer monoteísta: la Stanford Encyclopedia señala que el plural «dioses» del fragmento B23 complica esa lectura, y Universalis advierte contra entenderlo en sentido moderno.",
+    "El año de nacimiento: Universalis da hacia el 520 a.C., incompatible con el floruit de 540-537 a.C. de la Stanford Encyclopedia. No dar año de nacimiento.",
+    "Que fundara la escuela de Elea y fuera maestro de Parménides: lo dice Universalis, pero es una tradición antigua discutida. No usar.",
+    "Que dejara Jonia por la invasión de los medos: Universalis lo presenta en condicional. No usar.",
+    "El detalle de los leones: aparece en la traducción de Clemente (Stromata V 14), pero la Stanford Encyclopedia resume B15 solo con caballos y bueyes. Mencionar solo caballos y bueyes.",
+    "Fechar a Clemente de Alejandría con precisión: no se verificó en esta ejecución; decir solo «siglos después»."
+  ],
+  "status": "draft"
+}

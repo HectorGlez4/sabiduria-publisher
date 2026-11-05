@@ -1,0 +1,58 @@
+{
+  "id": "2026-12-21-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Pushkin y el álbum de Zizi Vulf (1825)",
+    "hook": "Pushkin no escribió este consejo para un libro. Lo dejó en 1825 en el álbum de una muchacha de quince años.",
+    "quote": {
+      "text": "Si la vida te engaña, no te apenes, no te enojes. En el día del desaliento, resígnate: el día de la alegría, créeme, llegará.",
+      "author": "Alexandr Pushkin",
+      "work": "«Если жизнь тебя обманет…», poema de álbum, Moskovski Telégraf, 1825",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 9 de agosto de 1824 Alexandr Pushkin llegó desterrado a Mijáilovskoye, la finca de su familia cerca de Pskov. El zar lo había expulsado del servicio por una carta interceptada en la que dudaba de la inmortalidad del alma. A tres kilómetros estaba Trigórskoye, la finca de Praskovia Ósipova, donde el poeta pasaba buena parte de sus días.",
+      "La segunda hija de Ósipova, Evpraksia Vulf, a quien en casa llamaban Zizi, tenía quince años. En 1825, entre enero y agosto, Pushkin escribió en su álbum dos estrofas breves que empiezan así: si la vida te engaña, no te apenes. Ese mismo año los publicó en la revista Moskovski Telégraf.",
+      "El poema termina con un verso que dice más que el consejo: lo que pasa, se volverá querido. No promete que el dolor no llegue, sino que el tiempo cambia la manera de recordarlo. Lo escribió un hombre confinado, para una adolescente, y ese mismo año decidió que también era para los demás."
+    ],
+    "question": "¿Qué momento difícil recuerdas hoy con cariño?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pushkin", "#Citas", "#Poesia"],
+    "extended": ["#LiteraturaRusa", "#SigloXIX", "#Consuelo", "#Mijailovskoye", "#PoesiaRusa", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema según la edición académica (Pushkin, Polnoe sobranie sochinenii en 16 tomos, Academia de Ciencias de la URSS, 1937-1959, t. 2, libro 1, p. 415, vía FEB): primera estrofa «Если жизнь тебя обманет, / Не печалься, не сердись! / В день уныния смирись: / День веселья, верь, настанет.»; último verso «Что пройдет, то будет мило.»; datación enero-agosto de 1825; escrito en el álbum de la segunda hija de P. A. Ósipova, Evpraksia Nikoláyevna Vulf (Zizi), de quince años (1809-1883); publicado por Pushkin por primera vez en Moskovski Telégraf, 1825, parte V, n.º XVII, p. 37 (comentario de D. Blagói). Lectura directa.",
+      "source": "Wikisource (ruso), «Если жизнь тебя обманет (Пушкин)», texto y notas tomados de la edición académica",
+      "url": "https://ru.wikisource.org/wiki/Если_жизнь_тебя_обманет_(Пушкин)"
+    },
+    {
+      "claim": "Trigórskoye está a tres kilómetros de Mijáilovskoye; Pushkin conoció a Praskovia Ósipova en su primera visita a Mijáilovskoye y se hicieron amigos; la familia llamaba Zizi a la joven Evpraksia Vulf; los versos de «If life should deceive you» están dedicados a Evpraksia; Pushkin visitaba Trigórskoye a menudo, sobre todo al principio de su destierro. Lectura directa.",
+      "source": "Museo-reserva estatal de A. S. Pushkin «Mijáilovskoye», página sobre Trigórskoye",
+      "url": "https://pushkinland.ru/2018/english/res2.php"
+    },
+    {
+      "claim": "Pushkin fue expulsado del servicio el 18 de julio de 1824 por el zar por una carta a un amigo en la que cuestionaba la inmortalidad del alma, y enviado a la finca familiar de Mijáilovskoye, cerca de Pskov, adonde llegó el 9 de agosto de 1824; el destierro duró de 1824 a 1826. Lectura directa.",
+      "source": "Encyclopedia.com (Encyclopedia of World Biography, Gale), «Aleksandr Sergeevich Pushkin»",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/aleksandr-sergeevich-pushkin"
+    }
+  ],
+  "do_not_use": [
+    "La nota de Wikisource según la cual el autógrafo lleva la fecha «7 de abril de 1835»: contradice la publicación de 1825 y no se aclaró. No mencionar el autógrafo.",
+    "Que el poema se escribiera precisamente en Trigórskoye o en un día concreto: la edición académica solo da enero-agosto de 1825.",
+    "Que Pushkin estuviera enamorado de Zizi: aparece en sitios escolares, no en fuentes leídas. No usar.",
+    "La traducción de la segunda estrofa salvo su último verso: solo se verificó la primera estrofa y el verso final.",
+    "El título con que apareció en la revista («Стихи в альбом») o en la colección de 1826 («В альбом»): solo en resultados de búsqueda, no en una fuente leída. No usar.",
+    "La fecha de nacimiento de Pushkin: Encyclopedia.com da el 26 de mayo de 1799 (calendario juliano); no usar sin aclarar el calendario.",
+    "La comprobación directa en feb-web.ru falló por la codificación de la página; el texto se tomó de Wikisource, que reproduce la edición académica.",
+    "Las traducciones son propias; no corresponden a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

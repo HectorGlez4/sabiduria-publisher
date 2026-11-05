@@ -1,0 +1,65 @@
+{
+  "id": "2026-12-21-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Nicolas Appert y el premio de la conserva (1810)",
+    "hook": "El gobierno francés pagó 12.000 francos en 1810 por un método para conservar alimentos. Su inventor no sabía por qué funcionaba.",
+    "body": [
+      "Nicolas Appert nació en Châlons el 17 de noviembre de 1749 y era confitero en la rue des Lombards de París. Su método era sencillo: llenar frascos de vidrio de boca ancha, cerrarlos herméticamente y hervirlos al baño María. En 1806 y 1807 la marina probó sus conservas en los puertos del Atlántico, con buen resultado.",
+      "El ministro del Interior, el conde de Montalivet, le ofreció elegir: patentar el invento o cederlo a todos a cambio de un premio. Appert eligió lo segundo. El 30 de enero de 1810 se le concedieron 12.000 francos, con una condición: publicar el método a su costa. El libro salió ese mismo año, en una tirada de 6.000 ejemplares.",
+      "Appert trabajaba a ciegas. Creía que el calor mataba los fermentos; Gay-Lussac, que estaba en la comisión, lo atribuía al oxígeno del frasco. La explicación llegó medio siglo después con Pasteur, que lo reconoció como precursor. Appert murió el 1 de junio de 1841 en Massy, en la miseria, y fue enterrado en la fosa común. Hoy el proceso lleva su nombre: appertización."
+    ],
+    "question": "¿Cuántas cosas usamos a diario sin saber por qué funcionan?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Nicolas Appert",
+    "subtitle": "El confitero que conservó sin entender",
+    "body": "En 1810 recibió 12.000 francos por cerrar alimentos en frascos de vidrio y hervirlos. Renunció a la patente para que el método fuera de todos. Pasteur explicó por qué funcionaba medio siglo después."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Ciencia", "#Alimentacion"],
+    "extended": ["#NicolasAppert", "#Conservas", "#SigloXIX", "#Pasteur", "#Inventos", "#Curiosidades"]
+  },
+  "sources": [
+    {
+      "claim": "Appert nació el 17 de noviembre de 1749 en Châlons-en-Champagne; confitero en el 47 y luego el 57 de la rue des Lombards desde 1784; conservas en recipientes de vidrio; pruebas en los puertos del Atlántico en 1806-1807 concluyentes; el ministro del Interior, conde de Montalivet, formó una comisión con Bardel, Gay-Lussac, Scipion-Perrier y Molard; elección entre patente o ceder el invento a cambio de un premio; premio de 12.000 francos notificado el 30 de enero de 1810, a cargo de publicar a su costa; libro publicado en junio de 1810, tirada de 6.000 ejemplares a 3 francos; método empírico, Appert creía que el calor a 100 °C mataba los fermentos y discrepaba de Gay-Lussac, que lo atribuía al oxígeno; Pasteur lo reconoció como precursor; murió el 1 de junio de 1841 y fue enterrado en la fosa común de Massy. Lectura directa.",
+      "source": "Fondation Napoléon, napoleon.org, «Appert et l'invention de la conserve»",
+      "url": "https://www.napoleon.org/histoire-des-2-empires/articles/appert-et-linvention-de-la-conserve"
+    },
+    {
+      "claim": "Appert eligió el apoyo del ministerio del Interior en lugar de una patente, por considerarlo más útil a la humanidad; el método: botella de vidrio de boca ancha cerrada herméticamente y sometida al baño María en agua hirviendo, sin teoría científica que lo explicara; cincuenta años después Pasteur elogió el genio experimental de ese artesano, padre de una industria. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Le Livre de tous les ménages (N. Appert)»",
+      "url": "https://www.universalis.fr/encyclopedie/le-livre-de-tous-les-menages/"
+    },
+    {
+      "claim": "Appert fue anunciado ganador del premio de 12.000 francos en enero de 1810; no sabía que los microbios causaban la descomposición. Lectura directa.",
+      "source": "U.S. National Park Service, «Why No Cans?» (actualizado el 4 de diciembre de 2020)",
+      "url": "https://www.nps.gov/articles/000/why-no-cans.htm"
+    },
+    {
+      "claim": "Appert no comprendió que el calor destruía los microorganismos del alimento; método de botellas de vidrio sumergidas en agua hirviendo; publicó su libro en 1810; murió en la pobreza en 1841. Lectura directa.",
+      "source": "Encyclopedia.com (World of Microbiology and Immunology, Gale), «Appert, Nicolas François (1750-1841)»",
+      "url": "https://encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/appert-nicolas-francois-1750-1841"
+    },
+    {
+      "claim": "Nacido el 17 de noviembre de 1749 en Châlons; la comisión le concedió 12.000 francos y prefirió el premio a la patente; murió el 1 de junio de 1841 en Massy y su cuerpo fue depositado en la fosa común. Lectura directa.",
+      "source": "Office de tourisme de Châlons-en-Champagne, «Nicolas Appert»",
+      "url": "https://en.chalons-tourisme.com/discover/history-and-iconic-landmarks/famous-people-from-chalons/nicolas-appert/"
+    }
+  ],
+  "do_not_use": [
+    "Que Napoleón ofreciera el premio en 1795: circula mucho, pero en 1795 Napoleón no gobernaba Francia; Fondation Napoléon atribuye la concesión al ministro Montalivet en 1810. No decir quién ni cuándo se convocó el premio.",
+    "Que el premio se concediera en 1809 (Encyclopedia.com) o que el libro saliera en junio de 1809 (oficina de turismo de Châlons): Fondation Napoléon da la notificación el 30 de enero de 1810 y el libro en junio de 1810. Usar 1810.",
+    "Que Appert inventara la lata: usaba vidrio; la hojalata la introdujeron otros en Inglaterra (Durand, Donkin). No llamarlo inventor de la lata.",
+    "La fecha de destrucción de la fábrica de Massy: Encyclopedia.com dice 1814, Fondation Napoléon 1815. No usar.",
+    "La fecha de fundación de la fábrica de Massy (1802, 1804 o 1812 según la fuente): no usar.",
+    "Que el abrelatas llegara cuarenta años después: lo dice NPS sin dar fecha ni inventor verificados aquí. No usar.",
+    "La fecha exacta en que Pasteur lo reconoció como precursor: no verificada; decir solo «medio siglo después».",
+    "La pensión anual de 1.200 francos: aparece en resultados de búsqueda sin fuente leída. No usar."
+  ],
+  "status": "draft"
+}

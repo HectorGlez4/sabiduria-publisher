@@ -1,0 +1,65 @@
+{
+  "id": "2026-12-21-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Baudelaire y el poema en prosa Enivrez-vous",
+    "hook": "Baudelaire escribió que hay que estar siempre ebrio. Dos líneas después aclara que el vino es solo una de tres opciones.",
+    "quote": {
+      "text": "Hay que estar siempre ebrio. Todo está ahí: es la única cuestión.",
+      "author": "Charles Baudelaire",
+      "work": "Petits poèmes en prose (Le Spleen de Paris), XXXIII, «Enivrez-vous», 1869",
+      "attribution_verified": true
+    },
+    "body": [
+      "Charles Baudelaire nació en París el 9 de abril de 1821 y murió allí el 31 de agosto de 1867. No llegó a ver reunidos sus poemas en prosa: Théodore de Banville y Charles Asselineau los juntaron en 1869, en el cuarto volumen de sus obras completas, editado por Michel Lévy. Son cincuenta piezas. La número XXXIII se titula «Enivrez-vous», embriagaos.",
+      "El poema dice por qué hay que estar ebrio: para no sentir el fardo del Tiempo, que quiebra los hombros y dobla hacia la tierra. Y responde enseguida a la pregunta obvia, ¿de qué?: de vino, de poesía o de virtud, a vuestro gusto. Al final, el viento, la ola, la estrella, el pájaro y el reloj contestan lo mismo cuando se les pregunta la hora: es la hora de embriagarse.",
+      "La primera línea circula sola, a menudo como brindis. Leída entera, la embriaguez de Baudelaire no es la de la botella, sino la de cualquier entrega que haga olvidar el reloj, incluida la virtud. Lo que el poema combate no es la sobriedad, sino ser esclavos martirizados del Tiempo."
+    ],
+    "question": "¿Qué te hace perder la cuenta de las horas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Baudelaire", "#Citas", "#Poesia"],
+    "extended": ["#EnivrezVous", "#SpleenDeParis", "#LiteraturaFrancesa", "#SigloXIX", "#Tiempo", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema en la edición Petits Poëmes en prose (Le Spleen de Paris), ed. Jacques Crépet, Œuvres complètes, Louis Conard, París, 1926, p. 123: «Il faut être toujours ivre. Tout est là : c'est l'unique question.»; «le fardeau du Temps qui brise vos épaules et vous penche vers la terre»; «Mais de quoi ? De vin, de poésie ou de vertu, à votre guise. Mais enivrez-vous.». Página validada por dos contribuyentes. Lectura directa.",
+      "source": "Wikisource (francés), facsímil de Baudelaire, Petits poëmes en prose, Conard, 1926, página 135 del djvu",
+      "url": "https://fr.wikisource.org/wiki/Page:Baudelaire_-_Petits_po%C3%ABmes_en_prose,_Conard,_1926.djvu/135"
+    },
+    {
+      "claim": "Continuación del poema: el viento, la ola, la estrella, el pájaro y el reloj responden «Il est l'heure de s'enivrer !»; «Pour n'être pas les esclaves martyrisés du Temps, enivrez-vous»; cierra con «De vin, de poésie ou de vertu, à votre guise.». Lectura directa.",
+      "source": "Wikisource (francés), facsímil de Baudelaire, Petits poëmes en prose, Conard, 1926, página 136 del djvu",
+      "url": "https://fr.wikisource.org/wiki/Page:Baudelaire_-_Petits_po%C3%ABmes_en_prose,_Conard,_1926.djvu/136"
+    },
+    {
+      "claim": "Índice de la edición Conard 1926: «Enivrez-vous» es la pieza XXXIII, texto en la p. 123. Lectura directa.",
+      "source": "Wikisource (francés), «Livre:Baudelaire - Petits poëmes en prose, Conard, 1926.djvu»",
+      "url": "https://fr.wikisource.org/wiki/Livre:Baudelaire_-_Petits_po%C3%ABmes_en_prose,_Conard,_1926.djvu"
+    },
+    {
+      "claim": "Los poemas en prosa se reunieron póstumamente en junio de 1869, en el cuarto volumen de las Obras completas, organizados por Théodore de Banville y Charles Asselineau; París, Michel Lévy, 1869. Lectura directa.",
+      "source": "Alea: Estudos Neolatinos (Universidade Federal do Rio de Janeiro), «Apresentação. Le Spleen de Paris: 150 anos»",
+      "url": "https://revistas.ufrj.br/index.php/alea/article/view/27424"
+    },
+    {
+      "claim": "Baudelaire nació el 9 de abril de 1821 en París y murió el 31 de agosto de 1867; Petits poèmes en prose (1869), a veces llamado Spleen de Paris, contiene cincuenta poemas en prosa. Lectura directa.",
+      "source": "Encyclopedia.com (European Writers / Gale), «Baudelaire, Charles»",
+      "url": "https://encyclopedia.com/arts/encyclopedias-almanacs-transcripts-and-maps/baudelaire-charles"
+    }
+  ],
+  "do_not_use": [
+    "Que «Enivrez-vous» apareciera por primera vez en Le Figaro el 7 de febrero de 1864: circula, pero no se verificó en ninguna fuente leída en esta ejecución. No dar fecha ni periódico de primera publicación.",
+    "Presentar la frase como elogio del alcohol o lema de fiesta: el poema ofrece vino, poesía o virtud, y el motivo es no sentir el peso del Tiempo.",
+    "Quién eligió cada uno de los dos títulos, Petits poèmes en prose y Le Spleen de Paris: los resultados de búsqueda lo cuentan de formas distintas y no se verificó en una fuente leída. No entrar en el detalle.",
+    "Atribuir a Baudelaire la frase inglesa «Always be drunk» como si fuera un original: es traducción.",
+    "Las traducciones son propias; no corresponden a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}
