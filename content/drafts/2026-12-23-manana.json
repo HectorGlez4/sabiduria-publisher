@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-23-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Pasteur, Joseph Meister y la rabia (1885)",
+    "hook": "La primera vacuna contra la rabia en un ser humano la ideó un químico que no tenía título para ponerla.",
+    "body": [
+      "En julio de 1885, un perro rabioso mordió catorce veces a Joseph Meister, un niño de nueve años de una aldea de Alsacia. Su madre lo llevó a París a ver a Louis Pasteur, que había probado su tratamiento en perros y conejos, nunca en una persona.",
+      "Pasteur no era médico. Su doctorado era en química y física, y eso le pesó toda la vida. Antes de decidir consultó a dos médicos, Alfred Vulpian y Jacques-Joseph Grancher. Fue Grancher quien lo convenció de intentarlo y quien puso las inyecciones: la primera el 6 de julio de 1885, doce en diez días, cada una más virulenta que la anterior.",
+      "Menos de un mes después estaba claro que el niño se había salvado. El método llevó el nombre de Pasteur, y con razón: la idea era suya. Pero la mano que se atrevió a usarla en un niño fue la de otro."
+    ],
+    "question": "¿Qué decisión tuya dependió de que alguien más se atreviera primero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Louis Pasteur",
+    "subtitle": "París, 6 de julio de 1885",
+    "body": "Un perro rabioso mordió catorce veces a Joseph Meister, de nueve años. Pasteur, químico y no médico, tenía el tratamiento; las doce inyecciones las puso el médico Jacques-Joseph Grancher. El niño sobrevivió."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Ciencia", "#Medicina"],
+    "extended": ["#LouisPasteur", "#Rabia", "#Vacunas", "#HistoriaDeLaMedicina", "#SigloXIX", "#Francia"]
+  },
+  "sources": [
+    {
+      "claim": "En julio de 1885 Joseph Meister, de nueve años, de Alsacia, fue mordido 14 veces por un perro rabioso; su madre fue a París a pedirle a Pasteur que salvara a su hijo; Grancher convenció a Pasteur de intentarlo y de dejarle administrar el tratamiento; «Every day for ten days, Dr. Grancher administered 12 doses of the vaccine»; «Less than a month later, the outcome was clear: Joseph Meister had been saved». Lectura directa.",
+      "source": "Institut Pasteur, «History of the first rabies vaccination in 1885»",
+      "url": "https://www.pasteur.fr/en/research-journal/news/history-first-rabies-vaccination-1885"
+    },
+    {
+      "claim": "Meister tenía 9 años; el ataque fue el 4 de julio de 1885 y lo mordió en 14 sitios; la vacuna se le administró por primera vez el 6 de julio de 1885; Pasteur «was not a medical doctor; his doctorate was awarded for dissertations in chemistry and physics»; la historia de que Meister murió en 1940 defendiendo la cripta de Pasteur es «just a myth». Lectura directa.",
+      "source": "PBS NewsHour, «Louis Pasteur's risky move to save a boy from almost certain death»",
+      "url": "https://www.pbs.org/newshour/health/louis-pasteurs-risky-move-to-save-a-boy-from-almost-certain-death"
+    },
+    {
+      "claim": "Meister era de la aldea de Meisengott, cerca de Villé, en los Vosgos; «nicht weniger als 14-mal gebissen»; el 6 de julio de 1885 Pasteur tuvo que decidirse; Pasteur, «selbst kein Mediziner», presentó al niño a los médicos Alfred Vulpian y Jacques-Joseph Grancher, que aconsejaron vacunar; doce inyecciones en diez días, de virulencia creciente. Lectura directa.",
+      "source": "Friedrich Hofmann, «Geschichte der Medizin: Louis Pasteur, Joseph Meister und die Tollwutimpfung», Deutsches Ärzteblatt, 27/2010",
+      "url": "https://www.aerzteblatt.de/archiv/77449/Geschichte-der-Medizin-Louis-Pasteur-Joseph-Meister-und-die-Tollwutimpfung"
+    }
+  ],
+  "do_not_use": [
+    "Que Meister se suicidó en 1940 para no abrir la cripta de Pasteur a los alemanes: PBS lo califica de mito y el Ärzteblatt solo lo recoge como lo que contó un periódico. No usar.",
+    "«Trece inoculaciones en tres semanas» (PBS): el Institut Pasteur y el Ärzteblatt dan doce dosis en diez días. Usar doce en diez días.",
+    "Que Meister tuviera ocho años: aparece en alguna página divulgativa; las tres fuentes leídas dicen nueve.",
+    "Que Pasteur pusiera él mismo las inyecciones: el Institut Pasteur dice que las administró Grancher; no atribuírselas a Pasteur.",
+    "Que el preparado usado en Meister fuera exactamente el probado en perros: un artículo citado en la búsqueda sostiene que se hizo por otro método casi sin ensayar en animales; no se leyó la fuente. No afirmar ni negar.",
+    "La comunicación a la Academia de Ciencias del 26 de octubre de 1885: no verificada. No mencionarla.",
+    "Que Meister fuera después conserje del Instituto Pasteur: lo dice el Ärzteblatt (desde 1913), pero las fechas varían entre fuentes; no usar en esta pieza."
+  ],
+  "status": "draft"
+}

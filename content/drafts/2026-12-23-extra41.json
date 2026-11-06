@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-23-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Yehuda Haleví y el poema Libi ba-mizraj",
+    "hook": "Un médico de la España medieval escribió el verso de nostalgia más célebre de la poesía hebrea. Luego intentó cumplirlo.",
+    "quote": {
+      "text": "Mi corazón está en Oriente, y yo en el extremo de Occidente.",
+      "author": "Yehuda Haleví",
+      "work": "Libi ba-mizraj, poema hebreo (s. XII); versión inglesa de Nina Salaman, JPS, 1924",
+      "attribution_verified": true
+    },
+    "body": [
+      "Yehuda Haleví nació hacia el último cuarto del siglo XI, probablemente en Tudela, en la península ibérica. Se ganaba la vida como médico, y escribía poesía en hebreo. Sus poemas más famosos son los que dedicó a Sion, la tierra de Israel, que para él estaba al otro extremo del Mediterráneo.",
+      "El más conocido empieza con este verso, y sigue preguntando cómo puede encontrarle sabor a la comida quien vive tan lejos de lo que ama. No es una imagen: es la queja de alguien que tiene una vida cómoda y no se la perdona.",
+      "Ya mayor, decidió irse. Llegó a Egipto a comienzos de septiembre de 1140, pasó allí unos ocho meses y en mayo de 1141 se embarcó en Alejandría rumbo a la tierra de Israel. Murió ese verano, unos dos meses después. Las cartas que se conservan no dicen si llegó a pisarla."
+    ],
+    "question": "¿Qué distancia sigues nombrando sin decidirte a recorrerla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#YehudaHalevi", "#Citas", "#Poesia"],
+    "extended": ["#Sefarad", "#PoesiaHebrea", "#EdadMedia", "#Tudela", "#Nostalgia", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El poema «My Heart Is In the East», de Yehuda Halevi, empieza «My heart is in the east, and I in the uttermost west--» y sigue «How can I find savour in food? How shall it be sweet to me?»; traducción del hebreo de Nina Salaman, 1924, Jewish Publication Society of America; el poema menciona Sion, España, Edom y Arabia. Lectura directa.",
+      "source": "Jewish Virtual Library, «\"My Heart is in the East\" - Yehuda Halevi»",
+      "url": "https://www.jewishvirtuallibrary.org/quot-my-heart-is-in-the-east-quot-yehuda-halevi"
+    },
+    {
+      "claim": "El poema de Judah Halevi empieza «My heart is in the east, and I in the uttermost west» y expresa su anhelo de Sion y la intensidad de su nostalgia. Lectura directa.",
+      "source": "My Jewish Learning, «My Heart Is in the East»",
+      "url": "https://www.myjewishlearning.com/article/my-heart-is-in-the-east/"
+    },
+    {
+      "claim": "Halevi nació en el octavo decenio o en la primera mitad del noveno del siglo XI, «likely» en Tudela; «His primary livelihood came from his work as a physician»; escribió muchos de sus «Zion poems» en sus últimos años; estuvo en Egipto de «early September 1140 to mid-May 1141»; «In May 1141, Halevi sailed from the port of Alexandria on his way to the Land of Israel»; murió en el verano de 1141, unos dos meses después; las cartas «do not include specific information about his fate in the Land of Israel». Lectura directa.",
+      "source": "Ehud Krinis, «Judah Halevi», Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/halevi/"
+    }
+  ],
+  "do_not_use": [
+    "La leyenda de que murió atropellado por un jinete a las puertas de Jerusalén mientras recitaba un poema: no la confirman las cartas de la Guenizá; la Stanford Encyclopedia dice que no hay información concreta sobre su suerte en la tierra de Israel. No contarla como hecho.",
+    "Que naciera en Toledo: la Stanford Encyclopedia da Tudela como lo más probable. Decir «probablemente en Tudela».",
+    "Un año exacto de nacimiento (1075, 1085): es aproximado. No darlo.",
+    "La fecha de composición del poema: la Jewish Virtual Library lo fecha hacia 1141; otras fuentes (no leídas) dicen que lo escribió aún en España. No fecharlo.",
+    "Una fecha exacta de llegada a Alejandría (8 de septiembre de 1140) o de partida (14 de mayo de 1141): aparecen en resultados de búsqueda, no en una fuente leída. Usar «comienzos de septiembre» y «mayo».",
+    "Que la frase sea un lema sionista moderno: el poema es del siglo XII; no presentarlo como texto político moderno.",
+    "La traducción al español es propia, desde la versión inglesa de Nina Salaman (JPS, 1924) y no desde el hebreo; no corresponde a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

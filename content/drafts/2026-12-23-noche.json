@@ -1,0 +1,53 @@
+{
+  "id": "2026-12-23-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Diocleciano y el edicto de precios máximos (301)",
+    "hook": "En el año 301, Roma fijó por ley el precio máximo de unas 1.400 cosas. Un testigo cuenta que los mercados se vaciaron.",
+    "body": [
+      "En el año 301, el emperador Diocleciano publicó un edicto para frenar una inflación desbocada. No fijaba precios exactos, sino topes: lo máximo que se podía cobrar por unos 1.400 bienes y servicios, desde alimentos hasta jornales. Se grabó en piedra en las ciudades del Oriente del imperio. Hoy se conocen más de cuarenta copias, todas fragmentarias.",
+      "La más completa está en Afrodisias, en la actual Turquía, en la fachada de su basílica civil: conserva cerca del 40 % del texto, en latín, junto a otro edicto del mismo año sobre el valor de la moneda.",
+      "Lactancio, un escritor cristiano que detestaba a Diocleciano, dejó el relato de lo que pasó después: se derramó mucha sangre por cosas mínimas, nadie se atrevía a poner nada en venta y la escasez empeoró, hasta que la ley tuvo que derogarse. Es un testimonio hostil. Pero la piedra sigue ahí, y recuerda que un precio escrito en un muro no obliga a nadie a vender."
+    ],
+    "question": "¿Qué problema has visto empeorar por querer resolverlo por decreto?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El edicto de Diocleciano",
+    "subtitle": "Afrodisias, año 301",
+    "body": "Fijó el precio máximo de unos 1.400 bienes y servicios para frenar la inflación. La copia más completa, en latín, conserva cerca del 40 % del texto en la fachada de la basílica civil de Afrodisias."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#AntiguaRoma", "#Economia"],
+    "extended": ["#Diocleciano", "#Afrodisias", "#Inflacion", "#Epigrafia", "#ImperioRomano", "#Arqueologia"]
+  },
+  "sources": [
+    {
+      "claim": "El edicto se publicó en el año 301 «in an attempt to curb rampant inflation»; fija precios legales máximos de «c. 1400 goods and services»; sobreviven más de cuarenta copias fragmentarias, todas del Oriente del imperio, unas en latín y otras con la lista en griego tras un preámbulo latino; la copia más completa es la latina de Afrodisias, que conserva «c. 40% of the Edict», inscrita en la cara norte de la basílica civil; en el mismo muro hay un texto monetario («Currency Dossier»). Lectura directa.",
+      "source": "Eleanor Dickey, reseña de Michael Crawford, Diocletian's edict of maximum prices at the Civil Basilica in Aphrodisias (Aphrodisias 13, Wiesbaden, Reichert, 2023), Bryn Mawr Classical Review 2024.07.21",
+      "url": "https://bmcr.brynmawr.edu/?p=90150"
+    },
+    {
+      "claim": "«In AD 301, the emperor Diocletian issued his famous Edict of Maximum Prices», que intentó frenar la inflación fijando precios máximos; en Afrodisias se inscribió en latín una de las copias mejor conservadas sobre el revestimiento de mármol de la fachada de la basílica civil, junto con su edicto monetario del mismo año. Lectura directa.",
+      "source": "Aphrodisias Excavations (Universidad de Oxford), «Diocletian's Price Edict»",
+      "url": "https://aphrodisias-excavations.com/?p=6757"
+    },
+    {
+      "claim": "Lactancio, De mortibus persecutorum, cap. 7: Diocleciano «attempted by an ordinance to limit their prices. Then much blood was shed for the veriest trifles; men were afraid to expose anything to sale, and the scarcity became more excessive and grievous than ever, until, in the end, the ordinance, after having proved destructive to multitudes, was from mere necessity abrogated.» Lectura directa (trad. inglesa de William Fletcher, Ante-Nicene Fathers, vol. 7).",
+      "source": "Lactancio, Of the Manner in Which the Persecutors Died, cap. 7, en New Advent",
+      "url": "https://www.newadvent.org/fathers/0705.htm"
+    }
+  ],
+  "do_not_use": [
+    "Precios concretos (el jornal de un peón de 25 denarios con comida, el modio de trigo, la cerveza): circulan en blogs y resúmenes, pero no se leyó una traducción del edicto; la de Kropff está en PDF/DOCX y no se pudo abrir. No citar cifras de la lista.",
+    "Que el edicto fijara precios exactos: fijaba máximos, no precios fijos.",
+    "Que el edicto se derogara en una fecha concreta o que fuera «ignorado hacia el 305»: la derogación la cuenta solo Lactancio, sin fecha; no precisarla.",
+    "Que el número de secciones sea 37: la edición de Crawford (2023) lo renumera en 70 por los fragmentos nuevos. No dar número de secciones.",
+    "Que los fragmentos se hallaran en 1937 o en los siglos XVIII-XIX: aparece en resultados de búsqueda, no en una fuente leída.",
+    "La cita de Lactancio en español es traducción propia desde la versión inglesa; Lactancio era hostil a Diocleciano y su relato debe presentarse como testimonio parcial."
+  ],
+  "status": "draft"
+}
