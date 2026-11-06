@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-24-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lavoisier y el capítulo XIII del Traité (1789)",
+    "hook": "«Nada se pierde, nada se crea, todo se transforma» no está en ningún libro de Lavoisier. Lo que escribió era más modesto, y más difícil.",
+    "quote": {
+      "text": "Nada se crea, ni en las operaciones del arte ni en las de la naturaleza.",
+      "author": "Antoine-Laurent Lavoisier",
+      "work": "Traité élémentaire de chimie (París, 1789), primera parte, cap. XIII",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1789 Lavoisier publicó su Tratado elemental de química, el manual de la química nueva. La frase está en el capítulo XIII, dedicado a la fermentación del vino, y no es un lema: es una regla de trabajo. Para entender qué pasa cuando el mosto se vuelve vino, dice, hay que conocer bien lo que entra y lo que sale, porque en toda operación hay la misma cantidad de materia antes y después.",
+      "El «todo se transforma» que hoy lleva su nombre es una condensación posterior. La idea de fondo es mucho más vieja: veintidós siglos antes, Anaxágoras ya escribió que los griegos se equivocan al hablar de nacer y perecer, porque nada nace ni perece, solo se mezcla y se separa.",
+      "Lo que Lavoisier añadió no fue la intuición, sino la balanza. Convirtió una idea filosófica en algo que se podía pesar. Cinco años después, en la primavera de 1794, fue guillotinado por haber sido recaudador de impuestos de la monarquía."
+    ],
+    "question": "¿Qué de lo que das por perdido solo cambió de forma?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lavoisier", "#Citas", "#Ciencia"],
+    "extended": ["#Quimica", "#HistoriaDeLaCiencia", "#SigloXVIII", "#Anaxagoras", "#CitasMalAtribuidas", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Traité élémentaire de chimie, primera parte, capítulo XIII, «De la décomposition des Oxides végétaux par la fermentation vineuse»: «car rien ne se crée, ni dans les opérations de l'art, ni dans celles de la nature, & l'on peut poser en principe que dans toute opération, il y a une égale quantité de matière avant & après l'opération; que la qualité & la quantité des principes est la même, & qu'il n'y a que des changements, des modifications». La frase justifica que para entender la fermentación hay que conocer bien el cuerpo que fermenta y los productos de la fermentación. Lectura directa.",
+      "source": "Lavoisier, Traité élémentaire de chimie (1789), Wikisource en francés, Partie 1, Chapitre 13",
+      "url": "https://fr.wikisource.org/wiki/Traité_élémentaire_de_chimie/Partie_1/Chapitre_13"
+    },
+    {
+      "claim": "Traducción inglesa de Robert Kerr, Elements of Chemistry, 1790, capítulo XIII, «Of the Decomposition of Vegetable Oxyds by the Vinous Fermentation»: «in all the operations of art and nature, nothing is created; an equal quantity of matter exists both before and after the experiment; the quality and quantity of the elements remain precisely the same». Lavoisier lo llama un axioma incontestable. Lectura directa.",
+      "source": "Antoine Lavoisier, Elements of Chemistry, trad. Robert Kerr (Edimburgo, 1790), Project Gutenberg eBook 30775",
+      "url": "https://www.gutenberg.org/files/30775/30775-h/30775-h.htm"
+    },
+    {
+      "claim": "El Traité élémentaire de chimie es de 1789 y fue «the definitive textbook of the new chemistry»; Lavoisier mostró que la materia no se crea ni se destruye, solo se transforma; en 1768 entró en la Ferme Générale, que recaudaba impuestos para la monarquía, lo que lo convirtió después en blanco de los revolucionarios; fue arrestado en 1793 y guillotinado en la primavera de 1794. Lectura directa.",
+      "source": "Science History Institute, «Antoine-Laurent Lavoisier», Scientific Biographies",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/antoine-laurent-lavoisier/"
+    },
+    {
+      "claim": "Anaxágoras, fragmento B17: «The Greeks do not think correctly about coming-to-be and passing-away; for no thing comes to be or passes away», sino que las cosas se mezclan y se separan a partir de las que existen. Lectura directa.",
+      "source": "John Sisko y Patricia Curd, «Anaxagoras», Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/anaxagoras/"
+    }
+  ],
+  "do_not_use": [
+    "«Rien ne se perd, rien ne se crée, tout se transforme» como cita literal de Lavoisier: no aparece en el capítulo XIII ni se encontró en ninguna obra suya. Es una condensación posterior; presentarla como tal.",
+    "Quién acuñó exactamente el lema «tout se transforme» (se ha atribuido a Dumas y a otros): no se verificó en una fuente leída. No nombrar a nadie.",
+    "Que Lavoisier «descubriera» la ley de conservación de la masa como idea nueva: Lomonósov (1748) y antes Jean Rey expresaron ideas parecidas, y la intuición es antigua (Anaxágoras). Decir que la volvió medible, no que la inventó.",
+    "Una fecha exacta de la ejecución (8 de mayo de 1794): circula con frecuencia, pero la fuente leída solo dice «spring 1794». Usar «primavera de 1794».",
+    "La frase apócrifa del juez «La República no necesita sabios»: atribución no documentada. No usarla.",
+    "La traducción al español es propia, desde el francés de 1789; no corresponde a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

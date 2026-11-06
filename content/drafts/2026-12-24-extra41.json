@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-24-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Hölderlin y los versos iniciales de Patmos",
+    "hook": "El verso de consuelo más citado de la poesía alemana es el tercero de un himno. Los dos primeros hablan de lo difícil que es encontrar a Dios.",
+    "quote": {
+      "text": "Pero donde hay peligro, crece también lo que salva.",
+      "author": "Friedrich Hölderlin",
+      "work": "«Patmos», himno dedicado al landgrave de Homburg (1803), vv. 3-4",
+      "attribution_verified": true
+    },
+    "body": [
+      "A comienzos de 1803, Friedrich Hölderlin dedicó «Patmos» al landgrave de Homburg, un pequeño estado cerca de Fráncfort. El himno empieza así: «Cerca está, y difícil de asir, el dios». Solo después viene el verso que todos conocen.",
+      "Citado solo, suena a promesa: si el peligro aumenta, la salvación también. En el poema es otra cosa. Es la respuesta a un problema: lo que salva está cerca, pero no se deja agarrar. Las imágenes que siguen son águilas que viven en la oscuridad y montañeses que cruzan el abismo sobre puentes ligeros.",
+      "En el siglo XX, Heidegger puso estos versos en el centro de su ensayo sobre la técnica. Y aun así advirtió que no hay derecho a esperar que, allí donde está el peligro, lo que salva aparezca de inmediato y sin preparación. El verso no consuela: obliga a buscar."
+    ],
+    "question": "¿Qué peligro te enseñó a ver algo que antes no veías?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Holderlin", "#Citas", "#Poesia"],
+    "extended": ["#PoesiaAlemana", "#Romanticismo", "#Heidegger", "#Filosofia", "#SigloXIX", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "El poema se titula «Patmos», con la dedicatoria «Dem Landgrafen von Homburg», y empieza: «Nah ist / Und schwer zu fassen der Gott. / Wo aber Gefahr ist, wächst / Das Rettende auch. / Im Finstern wohnen / Die Adler und furchtlos gehn / Die Söhne der Alpen über den Abgrund weg / Auf leichtgebaueten Brücken.» Lectura directa.",
+      "source": "Friedrich Hölderlin, Gedichte, Projekt Gutenberg-DE, capítulo 136, «Patmos»",
+      "url": "https://projekt-gutenberg.org/authors/friedrich-hoelderlin/books/friedrich-hoelderlin-gedichte/chapter/136"
+    },
+    {
+      "claim": "«Patmos» está dedicado al Landgraf von Homburg, «the ruler of a small state near Frankfurt»; el poema data de febrero de 1803 y pertenece a los himnos tardíos; traducción inglesa de los primeros versos: «The god / Is near, and hard to grasp. / But where there is danger, / A rescuing agency grows as well». Lectura directa.",
+      "source": "James Mitchell, Poems of Friedrich Hölderlin, «Patmos», notas",
+      "url": "https://holderlinpoems.com/poems/patmos1.html"
+    },
+    {
+      "claim": "El landgrave de Homburg había recibido ya un poema que Hölderlin le envió el 6 de febrero de 1803, «mit vielem Dank und Freude». Lectura directa.",
+      "source": "Universitätsbibliothek Tübingen, serie «Objekt des Monats»",
+      "url": "https://uni-tuebingen.de/fr/173199"
+    },
+    {
+      "claim": "En «The Question Concerning Technology», Heidegger cita «But where danger is, grows / The saving power also» y lo introduce con «Let us think carefully about these words of Hölderlin»; en el mismo ensayo advierte que no tenemos derecho a esperar que allí donde está el peligro podamos asir lo que salva de inmediato y sin preparación. Lectura directa de la página del texto (GA 7) y del resumen del pasaje.",
+      "source": "Martin Heidegger, The Question Concerning Technology (GA 7), edición en línea beyng.com",
+      "url": "https://beyng.com/pages/en/QCT/QCT.028.html"
+    }
+  ],
+  "do_not_use": [
+    "Que el poema «se publicara» en febrero de 1803: lo que se documenta es que se entregó al landgrave a comienzos de 1803; no consta que se imprimiera entonces. Decir «a comienzos de 1803» y no dar fecha de publicación ni de escritura (hay quien la sitúa en 1802).",
+    "La fecha exacta de la entrega (30 de enero de 1803, 55.º cumpleaños del landgrave, a través de Isaak von Sinclair): aparece en un ensayo introducido con «es heißt», y la Universidad de Tübingen da el 6 de febrero de 1803 sin nombrar el poema. No dar día.",
+    "Que el landgrave pidiera el poema a Klopstock contra la exégesis bíblica moderna y Hölderlin respondiera sin que se lo pidieran: solo aparece en el resumen de un artículo no leído (MDPI dio 403). No contarlo.",
+    "El año del ensayo de Heidegger (conferencia de Múnich de 1953): no se verificó en una fuente leída. Decir «en el siglo XX».",
+    "Presentar el verso como lema motivacional o atribuirlo a Heidegger: es de Hölderlin, y en el poema va precedido de la dificultad de «asir» al dios.",
+    "Que Hölderlin escribiera «Patmos» ya enfermo o en la torre de Tübingen: la torre es posterior (desde 1807).",
+    "La traducción al español es propia, desde el alemán; no corresponde a ninguna edición española concreta."
+  ],
+  "status": "draft"
+}

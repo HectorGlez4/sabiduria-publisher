@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-24-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Fleming y la advertencia de su conferencia Nobel (1945)",
+    "hook": "El hombre que descubrió la penicilina usó su discurso del Nobel para explicar cómo dejaría de funcionar.",
+    "body": [
+      "En 1928, en su laboratorio de Londres, Alexander Fleming encontró moho en una placa de cultivo que llevaba semanas olvidada. Alrededor del moho, las bacterias estafilococos habían muerto. Publicó el hallazgo en 1929 en el British Journal of Experimental Pathology, y apenas despertó interés: purificar aquella sustancia era trabajo de químicos.",
+      "Lo hicieron otros. En Oxford, Howard Florey y Ernst Chain retomaron el artículo, probaron la penicilina en ratones y, hacia 1941, en los primeros pacientes. En 1945 los tres compartieron el Nobel de Medicina.",
+      "En su conferencia, Fleming no habló solo del triunfo. Dijo que no era difícil volver a los microbios resistentes en el laboratorio. Que podía llegar el día en que cualquiera comprara penicilina en una tienda. Y que el ignorante podría tomarse menos de la dosis necesaria y, con eso, enseñar a sus microbios a resistir. Ochenta años después, la resistencia a los antibióticos sigue avanzando."
+    ],
+    "question": "¿Qué remedio tuyo se debilitó por usarlo a medias?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Alexander Fleming",
+    "subtitle": "Conferencia Nobel de 1945",
+    "body": "Descubrió la penicilina en 1928. Al recibir el Nobel avisó que no era difícil volver resistentes a los microbios, y que quien tomara dosis insuficientes podría enseñarles a resistir."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Ciencia", "#Medicina"],
+    "extended": ["#AlexanderFleming", "#Penicilina", "#Antibioticos", "#HistoriaDeLaMedicina", "#SigloXX", "#Nobel"]
+  },
+  "sources": [
+    {
+      "claim": "Fleming descubrió la penicilina tras dejar placas desatendidas en el laboratorio durante el verano de 1928 y encontrar moho al volver. De su conferencia Nobel de 1945 cita: «It is not difficult to make microbes resistant to penicillin in the laboratory», «The time may come when penicillin can be bought by anyone in the shops» y «the ignorant man may easily underdose himself and by exposing his microbes to non-lethal quantities...». Lectura directa.",
+      "source": "Emily Green, «Antibiotics and Antibiotic Resistance: from Past to Present», Lacy Lab, Vanderbilt University Medical Center, 22 de febrero de 2022",
+      "url": "https://www.vumc.org/lacy-lab/adventure-travel-guide-microbial-world/antibiotics-and-antibiotic-resistance-past-present"
+    },
+    {
+      "claim": "En 1928 Fleming vio moho del género Penicillium en una placa donde los estafilococos habían muerto; en 1929 publicó sus resultados en el British Journal of Experimental Pathology y «raised little interest»; refinar y cultivar el moho era trabajo «better suited to a chemist»; Florey fue profesor de patología en Oxford desde 1935; Chain encontró el artículo de Fleming a comienzos de 1938; el equipo de Oxford probó la penicilina en ratones y en unos pocos pacientes hacia 1941. Lectura directa.",
+      "source": "PBS, A Science Odyssey, «Fleming discovers penicillin, 1928»",
+      "url": "https://www.pbs.org/wgbh/aso/databank/entries/dm28pe.html"
+    },
+    {
+      "claim": "El descubrimiento inicial fue en 1928 en St Mary's; el trabajo de Florey y Chain llevó al Nobel de 1945 compartido con Fleming; «Fleming predicted the emergence of antibiotic resistance in 1945»; la resistencia está hoy «gathering pace». Lectura directa.",
+      "source": "John Tregoning, «Fleming's Final Flourish», Imperial College London, blog Imperial Medicine, 1 de enero de 2025",
+      "url": "https://blogs.imperial.ac.uk/imperial-medicine/2025/01/01/flemings-final-flourish/"
+    }
+  ],
+  "do_not_use": [
+    "El ejemplo de «Mr. X», que se cura a medias una angina e infecta a su mujer con microbios resistentes: está en la conferencia según varias páginas, pero no se leyó el texto completo (nobelprize.org dio 403). No contarlo.",
+    "La fecha exacta del hallazgo (3 de septiembre de 1928) ni el detalle de que volvía de vacaciones: circula mucho; las fuentes leídas dicen «verano de 1928» y que volvió en otoño. No dar día.",
+    "El «That's funny» de Fleming al ver la placa: lo recoge PBS, pero es anécdota sin documento. No citarlo como frase suya.",
+    "Que la placa se contaminó por una ventana abierta: versión no verificada; otras la atribuyen a un laboratorio de micología del piso de abajo. No usar ninguna.",
+    "El primer paciente, el policía Albert Alexander (1941), y que murió al agotarse la penicilina: no se leyó en una fuente de esta ronda. No usar.",
+    "Que Fleming «inventó» los antibióticos o los desarrolló él solo: la purificación y el uso clínico fueron obra del equipo de Oxford (Florey, Chain, Heatley).",
+    "La fecha de la conferencia (11 de diciembre de 1945): no se verificó en una fuente leída. Decir solo 1945.",
+    "Las frases de la conferencia van traducidas por cuenta propia desde el inglés citado por Vanderbilt."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-24-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Tutankamón y la respuesta de Howard Carter (1922)",
+    "hook": "La frase más célebre de la arqueología, «cosas maravillosas», no está en el diario de quien la dijo.",
+    "body": [
+      "El 4 de noviembre de 1922, Howard Carter encontró en el Valle de los Reyes el primer escalón de una tumba. Al día siguiente le cablegrafió a su mecenas, Lord Carnarvon, que por fin había hecho un descubrimiento maravilloso, con los sellos intactos.",
+      "El 26 de noviembre abrieron un pequeño hueco en la segunda puerta sellada y Carter miró dentro a la luz de una vela. En su diario de excavación quedó anotado lo que se dijeron: Carnarvon le preguntó si veía algo, y él respondió: «Sí, es maravilloso».",
+      "Un año después, en el libro que publicó con Arthur Mace en 1923, la escena ya era otra. El aire caliente hacía temblar la llama, los detalles salían despacio de la niebla, oro por todas partes, y Carter apenas podía articular: «Sí, cosas maravillosas». Esa es la versión que pasó a la historia. La del diario es más pobre, y probablemente la verdadera."
+    ],
+    "question": "¿Qué recuerdo tuyo mejoró cada vez que lo contaste?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Howard Carter",
+    "subtitle": "Valle de los Reyes, 26 de noviembre de 1922",
+    "body": "Su diario de excavación dice que respondió «Sí, es maravilloso». El libro que publicó en 1923 cambió la frase por «Sí, cosas maravillosas», la versión que se repite desde entonces."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Egipto", "#Arqueologia"],
+    "extended": ["#Tutankamon", "#HowardCarter", "#AntiguoEgipto", "#ValleDeLosReyes", "#SigloXX", "#Patrimonio"]
+  },
+  "sources": [
+    {
+      "claim": "Diario de excavación de Carter, temporada 1: el 4 de noviembre de 1922, «At about 10am I discovered beneath almost the first hut attacked the first traces of the entrance of the tomb», el primer escalón; el 5 de noviembre, cable a Carnarvon: «At last have made wonderful discovery in Valley a magnificent tomb with seals intact»; el 26 de noviembre llegaron a una segunda puerta sellada, hicieron «a tiny breach in the top left hand corner», Carter miró con una vela, y «Lord Carnarvon said to me 'Can you see anything'. I replied to him Yes, it is wonderful». Lectura directa.",
+      "source": "Griffith Institute, University of Oxford, «Discovering Tutankhamun: Howard Carter's journals, season 1»",
+      "url": "http://www.griffith.ox.ac.uk/discoveringTut/journals-and-diaries/season-1/journal.html"
+    },
+    {
+      "claim": "El diario de excavación de Carter del 26 de noviembre de 1922 registra «Yes, it is wonderful», lo que pone en duda la redacción de la frase famosa; el libro publicado, The Tomb of Tut.ankh.Amen (Carter y Mace, vol. 1, p. 96), da «Yes, wonderful things»; el catálogo de la exposición de la Weston Library se inclina por la versión del diario. Lectura directa.",
+      "source": "Susanne Woodhouse, «Tutankhamun at the Sackler Library: Excavating the Archive», blog de las Bodleian Libraries, 14 de diciembre de 2022",
+      "url": "https://blogs.bodleian.ox.ac.uk/sackler/2022/12/14/tutankhamun-at-the-sackler-library-excavating-the-archive/"
+    },
+    {
+      "claim": "Howard Carter y A. C. Mace, The Tomb of Tut-ankh-Amen, copyright 1923, George H. Doran; el pasaje dice que el aire caliente hacía parpadear la vela, que los detalles «emerged slowly from the mist», «strange animals, statues, and gold — everywhere the glint of gold», y que cuando Carnarvon preguntó «Can you see anything?» «it was all I could do to get out the words, “Yes, wonderful things.”». Lectura directa del texto digitalizado.",
+      "source": "Howard Carter y A. C. Mace, The Tomb of Tut-ankh-Amen, vol. I (Nueva York, Doran, 1923), Internet Archive",
+      "url": "https://archive.org/stream/tomboftutankhame00cart_1/tomboftutankhame00cart_1_djvu.txt"
+    }
+  ],
+  "do_not_use": [
+    "«Sí, cosas maravillosas» como lo que Carter dijo esa noche: es la versión del libro de 1923; su diario de ese día dice «Yes, it is wonderful». Presentarlo como versión publicada después.",
+    "La versión de Wikiquote que fecha la frase el 25 de noviembre: el diario del Griffith la sitúa el 26. Usar el 26.",
+    "La «maldición de Tutankamón» y la muerte de Carnarvon en 1923 como efecto de la tumba: leyenda de prensa sin base. No usar.",
+    "Que Mace redactara él la escena del libro: se sabe que fue coautor del primer volumen, pero no se verificó quién escribió ese pasaje. No afirmarlo.",
+    "El número de objetos de la tumba o los años de vaciado (1922-1932): no se verificaron en una fuente leída en esta ronda. No darlos.",
+    "Que la escena del libro sea «inventada»: es una reelaboración posterior; decir que es otra versión y que la del diario es probablemente la más fiel, no que el libro mienta.",
+    "El archivo del Griffith Institute (archive.griffith.ox.ac.uk) dio bloqueo antibots; las transcripciones se leyeron en la web «Discovering Tutankhamun» del mismo instituto.",
+    "Las traducciones al español son propias, desde el inglés."
+  ],
+  "status": "draft"
+}
