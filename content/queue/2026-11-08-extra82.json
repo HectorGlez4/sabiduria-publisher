@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-17-tarde",
+  "id": "2026-11-08-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Montesquieu", "#Citas", "#Filosofia"],
-    "extended": ["#DivisionDePoderes", "#Ilustracion", "#1748", "#Libertad", "#FrasesCelebres", "#Politica"]
+    "topic": [
+      "#Montesquieu",
+      "#Citas",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#DivisionDePoderes",
+      "#Ilustracion",
+      "#1748",
+      "#Libertad",
+      "#FrasesCelebres",
+      "#Politica"
+    ]
   },
   "sources": [
     {
@@ -56,5 +67,12 @@
     "Que Montesquieu inventó la separación de poderes: el propio Madison, en El Federalista 47, dice que si no es el autor del principio tiene al menos el mérito de haberlo expuesto mejor.",
     "La fuente de la UNJF (PDF) no se leyó directamente; su contenido procede de un resumen de búsqueda. La localización XI, 4 está verificada en el texto de Wikisource."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-08T17:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

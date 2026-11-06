@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-25-extra41",
+  "id": "2026-11-08-extra84",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#PicoDellaMirandola", "#Humanismo", "#Citas"],
-    "extended": ["#Renacimiento", "#Filosofia", "#Siglo15", "#LibertadHumana", "#FrasesCelebres", "#Sabiduria"]
+    "topic": [
+      "#PicoDellaMirandola",
+      "#Humanismo",
+      "#Citas"
+    ],
+    "extended": [
+      "#Renacimiento",
+      "#Filosofia",
+      "#Siglo15",
+      "#LibertadHumana",
+      "#FrasesCelebres",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "La idea de que Brian Copenhaver sostiene que el texto «no trata de la dignidad humana»: salió en un resumen de búsqueda; no se leyó el libro. La interpretación de la SEP (el discurso concluye con el hombre que debe hacerse ángel) es la que se usa.",
     "El número de páginas, la edición crítica y la fecha exacta de la composición: la SEP y Wikipedia dicen «hacia 1486»; no se afirma más."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-09T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

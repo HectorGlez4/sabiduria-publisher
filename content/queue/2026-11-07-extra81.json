@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-16-extra41",
+  "id": "2026-11-07-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Eclesiastes", "#Citas", "#Biblia"],
-    "extended": ["#Qohelet", "#Salomon", "#Sabiduria", "#Historia", "#Literatura", "#Antiguedad"]
+    "topic": [
+      "#Eclesiastes",
+      "#Citas",
+      "#Biblia"
+    ],
+    "extended": [
+      "#Qohelet",
+      "#Salomon",
+      "#Sabiduria",
+      "#Historia",
+      "#Literatura",
+      "#Antiguedad"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "Usar la traducción de El libro del Pueblo de Dios en la tarjeta: tiene derechos de la Libreria Editrice Vaticana. La cita usa la Reina-Valera de 1909, de dominio público.",
     "Cuántos siglos separan el libro de Salomón: la fecha del reinado de Salomón no se verificó en fuente leída para esta pieza. El copy dice solo que el texto es posterior al exilio, como afirma la World Encyclopedia de Oxford recogida en Encyclopedia.com («after the Babylonian Captivity»)."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-08T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
