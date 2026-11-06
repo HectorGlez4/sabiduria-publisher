@@ -6224,10 +6224,10 @@ def seccion_sitio_instagram() -> None:
     check(si.centro_del_hueco([(400, 1500), (1560, 1600)], 124) is None,
           "sin hueco suficiente no hay destino: nunca encima de la cita")
 
-    url = "https://sabiduriadebolsillo.net/cita/ovidio-abandonamos/"
-    pie = si.pie_para("«Abandonamos tarde.» — Ovidio, El remedio del amor.", url)
-    check(pie.endswith("sabiduriadebolsillo.net/cita/ovidio-abandonamos") and not pie.rstrip().split()[-1].startswith("#"),
-          "el pie termina en la URL, sin https ni hashtag final")
+    pie = si.pie_para("«Abandonamos tarde.» — Ovidio, El remedio del amor.")
+    check("sabiduriadebolsillo.net" not in pie and "http" not in pie, "el pie no lleva URL (resta alcance en Facebook)")
+    check(pie.endswith(si.CIERRE_PIE) and not pie.rstrip().split()[-1].startswith("#"),
+          "el pie termina en la pregunta, nunca en un hashtag")
     check("#SabiduriaDeBolsillo #Ovidio #Frases" in pie, "el pie lleva los hashtags fijos y el del autor")
     check(si.hashtag_del_autor("«x» — Santiago Ramón y Cajal, Reglas.") == "#SantiagoRamonYCajal"
           and si.hashtag_del_autor("sin atribución") is None, "el hashtag del autor va sin tildes ni espacios")
@@ -6241,7 +6241,7 @@ def seccion_sitio_instagram() -> None:
         check(not si.lienzo_pintado(negro) and si.lienzo_pintado(tarjeta),
               "el editor en negro no cuenta como pintado; una tarjeta oscura con texto sí")
     try:
-        si.pie_para("x" * 2300, url)
+        si.pie_para("x" * 2300)
         check(False, "un pie de más de 2200 caracteres se rechaza")
     except ValueError:
         check(True, "un pie de más de 2200 caracteres se rechaza")

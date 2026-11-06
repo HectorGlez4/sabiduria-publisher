@@ -205,14 +205,17 @@ def hashtag_del_autor(texto_plano: str) -> str | None:
     return "#" + "".join(w[:1].upper() + w[1:] for w in palabras) if palabras else None
 
 
-def pie_para(texto_plano: str, url: str) -> str:
-    """El pie: la atribución canónica del sitio, los hashtags y, aparte, dónde leerla. Termina en la URL y
-    nunca en un hashtag, que abriría el desplegable que tapa los botones del composer. Los hashtags van desde
-    la prueba del 6 nov: los pies sin ninguno solo llegaban a quien ya seguía la cuenta."""
+CIERRE_PIE = "¿Qué te dice a ti?"
+
+
+def pie_para(texto_plano: str) -> str:
+    """El pie: la atribución canónica del sitio, los hashtags y una pregunta. Sin URL: un enlace en el pie le
+    quita alcance en Facebook (decisión del usuario, 6 nov); el enlace solo va en el sticker de la Story.
+    Termina en la pregunta y nunca en un hashtag, que abriría el desplegable que tapa los botones del composer.
+    Los hashtags van desde la prueba del 6 nov: los pies sin ninguno solo llegaban a quien ya seguía la cuenta."""
     etiquetas = " ".join(dict.fromkeys(filter(None, (HASHTAGS_FIJOS[0], hashtag_del_autor(texto_plano),
                                                       *HASHTAGS_FIJOS[1:]))))
-    pie = (f"{texto_plano}\n\n{etiquetas}\n\n"
-           f"La cita, su obra y dónde leerla: {url.removeprefix('https://').rstrip('/')}")
+    pie = f"{texto_plano}\n\n{etiquetas}\n\n{CIERRE_PIE}"
     if len(pie) > LIMITE_PIE:
         raise ValueError(f"el pie mide {len(pie)} caracteres y el límite de Instagram es {LIMITE_PIE}")
     return pie
@@ -352,7 +355,7 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
             raise PantallaInesperada("el editor del Reel sigue en negro tras 30 s")
         time.sleep(3)
     pie = ev / "pie.txt"
-    pie.write_text(pie_para(texto_plano, url), encoding="utf-8")
+    pie.write_text(pie_para(texto_plano), encoding="utf-8")
     return {"url": url, "plantilla": plantilla, "formato": formato, "superficie": superficie, "pie": str(pie),
             "captura": str(telefono.captura(ev / f"01-editor-{superficie}.png"))}
 

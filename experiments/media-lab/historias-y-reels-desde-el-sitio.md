@@ -189,9 +189,10 @@ Probado el 2026-11-03 con José Ingenieros, diseño Tinta y formato Vertical, m�
    enteros. Salir con la X las dos veces, sin cambiar nada.
 6. **Pie**: tocar «Écrivez une légende…» → `phone_clipboard.py --file pie.txt` (pega
    con tildes y «») → «OK» arriba a la derecha. Plantilla del pie: la cita entre «»,
-   «— Autor, Obra» y «La cita, su obra y dónde leerla: sabiduriadebolsillo.net/cita/<slug>».
-   Termina en la URL, **no en un hashtag** (un hashtag final abre el desplegable que tapa
-   los botones). En Reels la URL no se puede pulsar; solo la Story lleva enlace clicable.
+   «— Autor, Obra», los hashtags y «¿Qué te dice a ti?». **Sin URL**: un enlace en el pie
+   resta alcance en Facebook (decisión del usuario, 6 nov); el enlace solo va en el sticker
+   de la Story. Termina en la pregunta, **no en un hashtag** (un hashtag final abre el
+   desplegable que tapa los botones).
 7. «Ajouter une mention IA»: dejarla desactivada. Es para imágenes realistas hechas con
    IA y la tarjeta es tipografía.
 8. Revisor independiente sobre el fotograma del editor, la baldosa de la cuadrícula y la
