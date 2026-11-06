@@ -7,8 +7,30 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 05 Nov 2026 17:42:49 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 04:05:10 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Juventud, divino tesoro, ¡ya te vas para no volver!</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-05-re51-reel</guid>
+      <pubDate>Thu, 05 Nov 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["Juventud, divino tesoro, ¡ya te vas para no volver!"
+— Rubén Darío, «Canción de otoño en primavera», Cantos de vida y esperanza (Madrid, 1905)
+
+La línea circula suelta, en brindis y en discursos de graduación, como un elogio de la juventud. En el poema no elogia nada. Es un estribillo, y lo que hace primero es abrirlo. Detrás vienen dos versos que casi nunca se citan: cuando quiero llorar, no lloro, y a veces lloro sin querer.
+
+El estribillo vuelve cuatro veces más, cada una después de un amor que se acabó. A la tercera vuelta el verbo cambia de tiempo: te fuiste para no volver. En la cuarta y en la quinta regresa al presente, ya te vas. El poema no se cierra en pasado.
+
+Tampoco se cierra en el estribillo. Después del último viene un verso solo, sin estrofa que lo acompañe: mas es mía el Alba de oro. Es la única línea del poema que no habla de pérdida, y es la última.
+
+Darío lo publicó en Madrid en 1905, dentro de Cantos de vida y esperanza, en la sección «Otros poemas», con dedicatoria a Martínez Sierra. El título del libro dice de qué va: cantos de vida y de esperanza. De él se cita casi siempre el verso donde algo se va.
+
+¿Qué se te fue sin dejar de ser tuyo?
+
+#SabiduriaDeBolsillo #RubenDario #Poesia #Modernismo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-05-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-05-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>MONTAIGNE SE ENCERRÓ EN UNA TORRE PARA ESTAR EN PAZ Y ENCONTRÓ LO CONTRARIO</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -481,26 +503,6 @@ El reconocimiento llegó tarde y sin dinero: la Electronic Frontier Foundation l
 #SabiduriaDeBolsillo #HedyLamarr #HistoriaDeLaCiencia #Inventos]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Caminante, no hay camino, se hace camino al andar.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-25-re51-reel</guid>
-      <pubDate>Sun, 25 Oct 2026 17:26:00 +0000</pubDate>
-      <description><![CDATA["Caminante, no hay camino, se hace camino al andar."
-— Antonio Machado (1875-1939)
-
-A esta frase se le suele pegar otra: "golpe a golpe, verso a verso". No es de Machado. La escribió Joan Manuel Serrat en 1969, en las estrofas propias que añadió al musicalizar el poema. El original tiene diez versos y no menciona ningún golpe.
-
-Y dice algo bastante menos alentador de lo que se supone. El camino no está delante: son las huellas que ya dejaste. Por eso el poema sigue con la senda que nunca se ha de volver a pisar, y termina con estelas en la mar, que es lo que dura una huella en el agua.
-
-Machado lo comprobó al final. Salió de Barcelona el 22 de enero de 1939, cruzó a Francia el 27 y murió en Collioure un mes después. En el bolsillo del abrigo le encontraron un papel arrugado con un último verso escrito a lápiz.
-
-¿Qué camino tuyo solo se entendió cuando ya lo habías andado?
-
-#SabiduriaDeBolsillo #Machado #Poesia #Frases]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
