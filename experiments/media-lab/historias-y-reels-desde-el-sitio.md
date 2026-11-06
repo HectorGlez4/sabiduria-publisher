@@ -98,6 +98,15 @@ Lo que se aprendió al automatizar (todo está ya en el código):
 - **Clip del Reel con ✓ en vez de «Terminé»**: otra variante de «Choisissez la section…»,
   con la pista arriba y un ✓ en la esquina. `musica` toca el único pulsable de esa esquina,
   exige volver al editor del Reel y guarda el volcado en `02-clip-check.xml` para aprender su id.
+  Hay una tercera: los estilos del sticker con «Musique uniquement» ya elegido y el mismo ✓.
+- **Reel en negro**: a veces el editor abre con la vista previa negra. `compartir` espera
+  hasta 30 s a ver contraste en la franja de la cita (`lienzo_pintado`) antes de seguir.
+- **Verificar el Reel en la cuadrícula**: la pestaña Reels anima las baldosas y uiautomator no
+  vuelca; en la cuadrícula el Reel sale como «Reel par…» y sí se puede abrir y leer.
+- **Lo que dijo la prueba de cada 15 min (5–6 nov, Business Suite)**: el Reel llega a ~130
+  cuentas de Instagram cada uno y no bajó en toda la noche; la foto y la Story, a ~6. Facebook
+  apenas suma (el Reel compartido cayó de ~30 espectadores a 1–4 pasadas las 21 h). Por eso el
+  ciclo hace el Reel primero y el pie lleva hashtags.
 
 ## Por qué así
 

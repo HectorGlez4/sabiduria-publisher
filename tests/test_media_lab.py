@@ -6226,8 +6226,20 @@ def seccion_sitio_instagram() -> None:
 
     url = "https://sabiduriadebolsillo.net/cita/ovidio-abandonamos/"
     pie = si.pie_para("«Abandonamos tarde.» — Ovidio, El remedio del amor.", url)
-    check(pie.endswith("sabiduriadebolsillo.net/cita/ovidio-abandonamos") and "#" not in pie,
+    check(pie.endswith("sabiduriadebolsillo.net/cita/ovidio-abandonamos") and not pie.rstrip().split()[-1].startswith("#"),
           "el pie termina en la URL, sin https ni hashtag final")
+    check("#SabiduriaDeBolsillo #Ovidio #Frases" in pie, "el pie lleva los hashtags fijos y el del autor")
+    check(si.hashtag_del_autor("«x» — Santiago Ramón y Cajal, Reglas.") == "#SantiagoRamonYCajal"
+          and si.hashtag_del_autor("sin atribución") is None, "el hashtag del autor va sin tildes ni espacios")
+    import tempfile
+    with tempfile.TemporaryDirectory() as d:
+        negro, tarjeta = pathlib.Path(d) / "negro.png", pathlib.Path(d) / "tarjeta.png"
+        Image.new("RGB", (1080, 2340), (0, 0, 0)).save(negro)
+        im = Image.new("RGB", (1080, 2340), (60, 35, 25))
+        ImageDraw.Draw(im).rectangle((100, 800, 900, 860), fill=(200, 180, 160))
+        im.save(tarjeta)
+        check(not si.lienzo_pintado(negro) and si.lienzo_pintado(tarjeta),
+              "el editor en negro no cuenta como pintado; una tarjeta oscura con texto sí")
     try:
         si.pie_para("x" * 2300, url)
         check(False, "un pie de más de 2200 caracteres se rechaza")

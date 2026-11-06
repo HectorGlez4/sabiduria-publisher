@@ -11,7 +11,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres un ciclo del bucle «
 ## Pasos
 1. `lab.py lock-tomar --dueno sitio --nuevo`. Si `cerrojo` es false (sale con 3), otro ciclo o ventana usa el teléfono: termina con una línea de informe, sin soltar el cerrojo (no es tuyo).
 2. `lab.py sitio elegir`. Anota `run`, `slug`, `url` y `plantillas` (una por formato).
-3. Para cada formato, en este orden: `feed`, `reel`, `story`. Llama RUN_F al `run` con el formato detrás (`SITIO-…-FEED`, `-REEL`, `-STORY`). Antes de cada formato, `lab.py lock-tomar --dueno sitio`; si devuelve `cerrojo: false`, salta al paso 5.
+3. Para cada formato, en este orden: `reel`, `feed`, `story` (el Reel primero: es el que llega a gente nueva, unas 130 cuentas por Reel frente a unas 6 de la foto o la Story). Llama RUN_F al `run` con el formato detrás (`SITIO-…-FEED`, `-REEL`, `-STORY`). Antes de cada formato, `lab.py lock-tomar --dueno sitio`; si devuelve `cerrojo: false`, salta al paso 5.
 
    | Paso | Comando | ver |
    |---|---|---|

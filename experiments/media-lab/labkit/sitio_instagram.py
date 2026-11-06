@@ -20,6 +20,7 @@ import shlex
 import subprocess
 import sys
 import time
+import unicodedata
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -118,6 +119,15 @@ def elegir_pista(filas: list[Pista], recientes: list[str], rng: random.Random) -
     return rng.choice(aptas) if aptas else None
 
 
+def lienzo_pintado(captura: Path, minimo: float = 4.0) -> bool:
+    """La tarjeta se ve en el editor: en la franja de la cita hay contraste (texto sobre fondo). La vista previa
+    en negro es un plano casi uniforme; vale para los tres diseños, también el oscuro."""
+    from PIL import Image, ImageStat
+    with Image.open(captura) as im:
+        franja = im.convert("L").crop((60, 500, im.width - 60, 1500))
+        return ImageStat.Stat(franja).stddev[0] >= minimo
+
+
 def color_de_fondo(px, ancho: tuple[int, int], alto: tuple[int, int]) -> tuple[int, int, int]:
     """El color más frecuente de una muestra de la zona: el fondo de la tarjeta."""
     muestra = Counter(px[x, y] for y in range(alto[0], alto[1], 37) for x in range(ancho[0], ancho[1], 23))
@@ -182,10 +192,27 @@ def elegir_cita(citas: list[dict], usadas: set[str], rng: random.Random, largo_m
 LIMITE_PIE = 2200  # el de Instagram: un pie más largo se corta sin aviso
 
 
+HASHTAGS_FIJOS = ("#SabiduriaDeBolsillo", "#Frases", "#Citas", "#Reflexiones")
+
+
+def hashtag_del_autor(texto_plano: str) -> str | None:
+    """«…» — Miguel de Unamuno, Obra. → #MiguelDeUnamuno (sin tildes ni signos)."""
+    if " — " not in texto_plano:
+        return None
+    autor = texto_plano.rsplit(" — ", 1)[1].split(",")[0].strip().rstrip(".")
+    plano = unicodedata.normalize("NFKD", autor).encode("ascii", "ignore").decode()
+    palabras = re.findall(r"[A-Za-z0-9]+", plano)
+    return "#" + "".join(w[:1].upper() + w[1:] for w in palabras) if palabras else None
+
+
 def pie_para(texto_plano: str, url: str) -> str:
-    """El pie: la atribución canónica del sitio y, aparte, dónde leerla. Termina en la URL y
-    nunca en un hashtag, que abriría el desplegable que tapa los botones del composer."""
-    pie = f"{texto_plano}\n\nLa cita, su obra y dónde leerla: {url.removeprefix('https://').rstrip('/')}"
+    """El pie: la atribución canónica del sitio, los hashtags y, aparte, dónde leerla. Termina en la URL y
+    nunca en un hashtag, que abriría el desplegable que tapa los botones del composer. Los hashtags van desde
+    la prueba del 6 nov: los pies sin ninguno solo llegaban a quien ya seguía la cuenta."""
+    etiquetas = " ".join(dict.fromkeys(filter(None, (HASHTAGS_FIJOS[0], hashtag_del_autor(texto_plano),
+                                                      *HASHTAGS_FIJOS[1:]))))
+    pie = (f"{texto_plano}\n\n{etiquetas}\n\n"
+           f"La cita, su obra y dónde leerla: {url.removeprefix('https://').rstrip('/')}")
     if len(pie) > LIMITE_PIE:
         raise ValueError(f"el pie mide {len(pie)} caracteres y el límite de Instagram es {LIMITE_PIE}")
     return pie
@@ -317,6 +344,13 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
     _tocar_texto(xml, opcion, HOJA)  # por texto: el orden del menú cambia entre usos
     _esperar(lambda x: bool(por_id(x, EDITOR[superficie])), f"el editor de {opcion}", plazo=40)
     time.sleep(2)
+    # El Reel a veces abre con la vista previa en negro y la tarjeta tarda en pintarse (5 nov: tres Reels
+    # descartados así). Se espera a ver texto en el lienzo antes de seguir; si no llega, pantalla inesperada.
+    limite = time.monotonic() + 30
+    while superficie == "reel" and not lienzo_pintado(telefono.captura(ev / "01a-editor-espera.png")):
+        if time.monotonic() >= limite:
+            raise PantallaInesperada("el editor del Reel sigue en negro tras 30 s")
+        time.sleep(3)
     pie = ev / "pie.txt"
     pie.write_text(pie_para(texto_plano, url), encoding="utf-8")
     return {"url": url, "plantilla": plantilla, "formato": formato, "superficie": superficie, "pie": str(pie),
@@ -368,7 +402,7 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
                    or (superficie == "reel" and _check_del_clip(x) is not None),
                    "el editor del clip o el de la foto")
     if not por_id(xml, "music_editor_done_button") and not por_id(xml, EDITOR[superficie]):
-        # Variante del Reel con la pista arriba y un ✓ en la esquina en vez de «Terminé» (19:39 del 5 nov).
+        # Variantes del Reel con la pista arriba y un ✓ en la esquina en vez de «Terminé» (5 nov).
         # Se guarda el volcado para aprender su id; tras el ✓ tiene que volver el editor del Reel.
         (ev / "02-clip-check.xml").write_text(xml, encoding="utf-8")
         telefono.tocar(*_check_del_clip(xml)["centro"])
@@ -393,7 +427,10 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
 def _check_del_clip(xml: str) -> dict | None:
     """El ✓ de «Choisissez la section à ajouter à votre reel»: el nodo pulsable de Instagram arriba a la derecha.
     None si no es esa pantalla o el ✓ no se distingue (entonces cuenta como pantalla inesperada)."""
-    if telefono.buscar(xml, contiene="Choisissez la section", paquete=IG) is None:
+    # Dos variantes con el ✓ arriba: solo el tramo («Choisissez la section…»), o los estilos del sticker con
+    # «Musique uniquement» ya elegido (su rótulo en el centro; con otro estilo elegido no se toca el ✓).
+    if (telefono.buscar(xml, contiene="Choisissez la section", paquete=IG) is None
+            and telefono.buscar(xml, texto="Musique uniquement", paquete=IG) is None):
         return None
     ancho = max(n["bounds"][2] for n in telefono.nodos(xml))
     candidatos = [n for n in telefono.nodos(xml) if n["package"] == IG and n["clickable"] and n["enabled"]
@@ -648,7 +685,9 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
         raise PantallaInesperada("no hay una Story de los últimos minutos en el perfil")
     # Las baldosas se llaman distinto según la pestaña: `image_button` («Reel par…», «Photo de…») en la
     # cuadrícula y `preview_clip_thumbnail` («Reel de <cuenta>. Nombre de vues…») en la de Reels.
-    pestaña_de, prefijo = {"reel": ("Reels", ("Reel par", "Reel de")), "feed": ("Vue Grille", ("Photo de",))}[superficie]
+    # El Reel se busca en la cuadrícula, no en la pestaña Reels: allí las baldosas se animan, uiautomator no
+    # vuelca y 17 de 19 Reels de la prueba del 5 nov quedaron «sin verificar» estando en el perfil.
+    pestaña_de, prefijo = {"reel": ("Vue Grille", ("Reel par", "Reel de")), "feed": ("Vue Grille", ("Photo de",))}[superficie]
     xml = _esperar(lambda x: any(n["desc"] == pestaña_de for n in por_id(x, "profile_tab_icon_view")),
                    f"la pestaña «{pestaña_de}» del perfil")
     pestaña = [n for n in por_id(xml, "profile_tab_icon_view") if n["desc"] == pestaña_de]
@@ -660,7 +699,7 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
     if orden:
         telefono.tocar(*orden["centro"])
         time.sleep(3)
-    for i in range(3):
+    for i in range(4):  # la cuadrícula puede llevar arriba un Reel fijado
         xml = _esperar(lambda x: True, "un volcado del perfil", plazo=60)  # la pestaña Reels anima las baldosas
         tiles = [n for n in telefono.nodos(xml) if n["package"] == IG and n["desc"].startswith(prefijo)
                  and _rid(n) in ("image_button", "preview_clip_thumbnail")]
@@ -683,4 +722,4 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
                     "captura": str(telefono.captura(ev / "07-verificada.png"))}
         telefono.tecla(4)
         time.sleep(2)
-    raise PantallaInesperada(f"no aparece una publicación ({superficie}) con «{pista}» entre las tres primeras")
+    raise PantallaInesperada(f"no aparece una publicación ({superficie}) con «{pista}» entre las cuatro primeras")
