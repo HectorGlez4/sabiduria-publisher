@@ -95,6 +95,15 @@ Lo que se aprendió al automatizar (todo está ya en el código):
 - **«Donner une note à Instagram»**: tras unas cuantas publicaciones seguidas, Instagram saca
   este diálogo de valoración encima del editor siguiente (tumbó 5 de 6 Stories en la prueba
   de cada 15 min). Cualquier espera de `lab.py sitio` lo cierra con «Non merci».
+- **Cuenta activa**: el 7 nov Instagram amaneció con la cuenta personal activa. `compartir`
+  abre antes el perfil de @sabiduriabolsillo y exige «Modifier le profil»; si no, `CuentaAjena`
+  y el ciclo para sin cambiar de cuenta.
+- **Visor de las Stories propias**: empieza por la más antigua de las últimas 24 h. Tras una
+  noche de prueba hay 30 o más, y al pasar la última el visor se cierra: `verificar` avanza
+  hasta 150 s, guarda lo visto en `07-segmentos-*.txt` y, si el toque en el perfil no abre el
+  visor, prueba la bandeja de la portada. Todas las Stories de la prueba 2 quedaron «sin
+  verificar» por esto, aunque salieron.
+- **Volcados vacíos sueltos**: toda lectura de pantalla pasa por `_esperar`, que reintenta.
 - **Clip del Reel con ✓ en vez de «Terminé»**: otra variante de «Choisissez la section…»,
   con la pista arriba y un ✓ en la esquina. `musica` toca el único pulsable de esa esquina,
   exige volver al editor del Reel y guarda el volcado en `02-clip-check.xml` para aprender su id.
@@ -205,10 +214,9 @@ Probado el 2026-11-03 con José Ingenieros, diseño Tinta y formato Vertical, m�
     En el volcado, `content-desc="<Artista> · <Pista>"` confirma la música. El contador
     de publicaciones del perfil sube en 1.
 
-Nota del revisor (no bloquea): en el visor de Reels la firma «SABIDURÍA DE BOLSILLO»
-(y≈1592 del lienzo) queda justo encima del nombre de la cuenta. No se tapa, pero va
-muy justa. Si un día se tapa, subir el límite inferior de la franja vertical en
-`imagen.js` (hoy 1680).
+Franja vertical subida a 240–1500 (7 nov): con 1680 la firma (y≈1592 del lienzo) caía
+bajo los botones Audio/Texte del editor del Reel y el revisor tumbó 9 de 30 Reels de la
+prueba 2. Ahora la firma va en y≈1412, también dentro de la zona segura de la Story.
 
 **Bloqueo resuelto**: la imagen del sitio era solo cuadrada (1080×1080). La portada del
 Reel y la baldosa 3:4 del perfil la ampliaban y **cortaban el texto por los lados**, y

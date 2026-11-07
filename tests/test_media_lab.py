@@ -6223,6 +6223,23 @@ def seccion_sitio_instagram() -> None:
     check(si.solapa((295, 897, 785, 1021), b), "en el centro de la pantalla taparía la cita")
     check(si.centro_del_hueco([(400, 1500), (1560, 1600)], 124) is None,
           "sin hueco suficiente no hay destino: nunca encima de la cita")
+    largo = [(640, 1240), (1290, 1380), (1500, 1520)]  # cita larga: no cabe entre atribución y firma
+    check(si.centro_del_hueco(largo, 124) == (si.TINTA_Y[0] + 640) // 2,
+          "si entre bloques no cabe, el sticker va al hueco de encima de la cita")
+    check(si.centro_del_hueco(b, 124) == (1120 + 1590) // 2, "con hueco entre bloques, el de encima no se usa")
+
+    # La cuenta activa: el perfil de la cuenta del sitio dice «Modifier le profil» solo si es ella.
+    def perfil(titulo, *textos):
+        def n(t, rid=""):
+            return (f'<node text="{t}" content-desc="" resource-id="{rid}" class="android.widget.TextView" '
+                    f'package="com.instagram.android" clickable="false" bounds="[0,0][10,10]" />')
+        return ("<hierarchy>" + n(titulo, "com.instagram.android:id/action_bar_title")
+                + "".join(n(t) for t in textos) + "</hierarchy>")
+    check(si.perfil_propio(perfil("sabiduriabolsillo", "Modifier le profil")) is True, "perfil propio: se publica")
+    check(si.perfil_propio(perfil("sabiduriabolsillo", "Suivi(e)", "Envoyer un message")) is False,
+          "perfil visto desde otra cuenta: no se publica")
+    check(si.perfil_propio(perfil("hec.gonzlez", "Modifier le profil", "sabiduriabolsillo")) is None,
+          "el perfil de otra cuenta no cuenta como el del sitio aunque lo nombre: se sigue esperando")
 
     pie = si.pie_para("«Abandonamos tarde.» — Ovidio, El remedio del amor.")
     check("sabiduriadebolsillo.net" not in pie and "http" not in pie, "el pie no lleva URL (resta alcance en Facebook)")

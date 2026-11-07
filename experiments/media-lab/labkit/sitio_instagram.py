@@ -47,6 +47,7 @@ EDITOR = {"feed": "media_thumbnail_tray_button", "reel": "clips_right_action_but
 PUBLICAR = {"feed": "share_footer_button", "reel": "share_button", "story": "your_story_share_shortcut_button"}
 TEXTO_DEL_STICKER = "Leer la cita"
 PARA_TODOS_LOS_REELS = "Arrêter pour tous les reels"
+CUENTA = "sabiduriabolsillo"
 TOP_PISTAS = 10
 ESPERA_S = 25
 
@@ -64,6 +65,10 @@ ARRASTRES = 4  # el arrastre recorre ~70 % de lo pedido: se corrige en varias pa
 
 class SinHueco(PantallaInesperada):
     """La cita no deja sitio para el sticker sin taparla: esa cita no se publica como Story."""
+
+
+class CuentaAjena(PantallaInesperada):
+    """Instagram tiene activa otra cuenta: no se publica nada hasta que vuelva la del sitio."""
 
 
 class Pista(NamedTuple):
@@ -164,16 +169,22 @@ def bloques(filas: list[int], union: int = UNION_BLOQUES) -> list[tuple[int, int
 def centro_del_hueco(bloques_: list[tuple[int, int]], alto_sticker: int, margen: int = MARGEN_STICKER,
                      limites: tuple[int, int] = HUECO_Y) -> int | None:
     """Centro `y` del hueco más alto entre dos bloques donde cabe el sticker con `margen` de
-    aire por arriba y por abajo, dentro de `limites`. None si no cabe en ninguno: nunca se
-    pone encima de la cita."""
-    mejor = None
-    for (_, fin), (inicio, _) in zip(bloques_, bloques_[1:]):
-        libre = inicio - fin - 2 * margen
-        centro = (fin + inicio) // 2
-        if libre >= alto_sticker and limites[0] <= centro <= limites[1]:
-            if mejor is None or libre > mejor[0]:
-                mejor = (libre, centro)
-    return None if mejor is None else mejor[1]
+    aire por arriba y por abajo, dentro de `limites`. Si entre bloques no cabe, el hueco de encima
+    de la cita, bajo la cabecera del visor (la franja vertical del 7 nov estrechó el de abajo).
+    None si no cabe en ninguno: nunca se pone encima del texto."""
+    def el_mayor(pares) -> int | None:
+        mejor = None
+        for fin, inicio in pares:
+            libre = inicio - fin - 2 * margen
+            centro = (fin + inicio) // 2
+            if libre >= alto_sticker and limites[0] <= centro <= limites[1]:
+                if mejor is None or libre > mejor[0]:
+                    mejor = (libre, centro)
+        return None if mejor is None else mejor[1]
+    entre = el_mayor((fin, inicio) for (_, fin), (inicio, _) in zip(bloques_, bloques_[1:]))
+    if entre is not None or not bloques_:
+        return entre
+    return el_mayor([(TINTA_Y[0], bloques_[0][0])])
 
 
 def solapa(caja: tuple[int, int, int, int], bloques_: list[tuple[int, int]], margen: int = MARGEN_STICKER) -> bool:
@@ -269,6 +280,12 @@ def _esperar(cumple, descripcion: str, plazo: float = ESPERA_S) -> str:
         time.sleep(1.5)
 
 
+def _volcar() -> str:
+    """Un volcado de ahora, con los reintentos de `_esperar`: un volcado vacío suelto («volcado no
+    válido: ''») tumbó un ciclo entero en mitad de `musica` (6 nov, 20:35)."""
+    return _esperar(lambda x: True, "un volcado de la pantalla", plazo=15)
+
+
 def _tocar_id(xml: str, rid: str) -> None:
     nodos = por_id(xml, rid)
     if len(nodos) != 1:
@@ -287,6 +304,30 @@ def _exigir_listo() -> None:
     e = telefono.estado()
     if not e["listo"]:
         raise PantallaInesperada(f"el teléfono no está listo (no se despierta ni se desbloquea): {e}")
+
+
+def perfil_propio(xml: str, cuenta: str = CUENTA) -> bool | None:
+    """En el perfil de `cuenta`: True si es la cuenta activa («Modifier le profil»), False si se ve
+    desde otra («Suivi(e)», «S’abonner», «Envoyer un message»). None si el volcado aún no es ese perfil."""
+    def hay(*textos: str) -> bool:
+        return any(n["package"] == IG and (n["texto"] in textos or n["desc"] in textos) for n in telefono.nodos(xml))
+    if not any(n["package"] == IG and _rid(n) == "action_bar_title" and n["texto"] == cuenta
+               for n in telefono.nodos(xml)):
+        return None
+    if hay("Modifier le profil"):
+        return True
+    if hay("Suivi(e)", "S’abonner", "S'abonner", "Envoyer un message"):
+        return False
+    return None
+
+
+def exigir_cuenta(cuenta: str = CUENTA) -> None:
+    """Nada se publica desde otra cuenta. El 7 nov Instagram amaneció con la cuenta personal activa
+    y el bucle no lo miraba: habría publicado allí."""
+    telefono.shell(f"am start -a android.intent.action.VIEW -d {shlex.quote(f'instagram://user?username={cuenta}')}")
+    xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
+    if not perfil_propio(xml, cuenta):
+        raise CuentaAjena(f"Instagram tiene activa otra cuenta, no {cuenta}: no se publica")
 
 
 def _instagram_en_la_hoja(intentos: int = 8) -> str:
@@ -323,6 +364,7 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
     if plantilla not in PLANTILLAS or superficie not in SUPERFICIES:
         raise ValueError(f"plantilla {plantilla!r} o superficie {superficie!r} desconocida")
     _exigir_listo()
+    exigir_cuenta()
     telefono.cerrar_cortina()
     cdp.reenviar()
     telefono.shell(f"am start -n {CHROME} -a android.intent.action.VIEW -d {shlex.quote(url)}")
@@ -380,15 +422,15 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
     for _ in range(4):
         if max(vistas) >= TOP_PISTAS:
             break
-        _desplazar_lista(filas_de_pistas(telefono.volcado()), hacia_abajo=True)
-        vistas.update({f.puesto: f for f in filas_de_pistas(telefono.volcado())})
+        _desplazar_lista(filas_de_pistas(_volcar()), hacia_abajo=True)
+        vistas.update({f.puesto: f for f in filas_de_pistas(_volcar())})
     filas = [vistas[k] for k in sorted(vistas)]
     pista = elegir_pista(filas, recientes, rng)
     if pista is None:
         raise PantallaInesperada(f"ninguna pista de «Populaires» vale: {[f.titulo for f in filas]}")
     # Tras deslizar, el centro guardado puede ser de antes: se busca la fila por su puesto.
     for _ in range(6):
-        visibles = filas_de_pistas(telefono.volcado())
+        visibles = filas_de_pistas(_volcar())
         en_pantalla = {f.puesto: f for f in visibles}
         if pista.puesto in en_pantalla:
             break
@@ -420,7 +462,7 @@ def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Ra
         except PantallaInesperada:
             if superficie != "reel":
                 raise
-        _tocar_id(telefono.volcado(), "music_editor_done_button")
+        _tocar_id(_volcar(), "music_editor_done_button")
     # En el feed no hay editor de clip: la pista queda puesta en la píldora de arriba.
     time.sleep(3)
     return {"pista": pista._asdict() | {"centro": None}, "ranking": [f.titulo for f in filas],
@@ -477,16 +519,16 @@ def poner_enlace(url: str, ev: Path) -> dict:
         texto = bloques(filas_con_tinta(im.convert("RGB").load()))
     if not texto:
         raise PantallaInesperada("no se ve texto en la tarjeta: ¿no está el editor de Stories?")
-    _tocar_id(telefono.volcado(), "asset_button")
+    _tocar_id(_volcar(), "asset_button")
     _tocar_texto(_esperar(lambda x: telefono.buscar(x, texto="Sticker à lien", paquete=IG) is not None,
                           "«Sticker à lien»"), "Sticker à lien")
     _esperar(lambda x: bool(por_id(x, "link_sticker_list_web_url_edit_text")), "el campo de la URL")
     telefono.shell(f"input text {shlex.quote(url)}")
-    _tocar_id(telefono.volcado(), "link_sticker_custom_cta_row_title")
+    _tocar_id(_volcar(), "link_sticker_custom_cta_row_title")
     _esperar(lambda x: bool(por_id(x, "link_sticker_custom_cta_edit_text")), "el campo del texto del sticker")
     telefono.shell(f"input text {shlex.quote(TEXTO_DEL_STICKER.replace(' ', '%s'))}")
     time.sleep(1)
-    xml = telefono.volcado()
+    xml = _volcar()
     escrita = por_id(xml, "link_sticker_list_web_url_edit_text")
     if not escrita or escrita[0]["texto"] != url:
         raise PantallaInesperada(f"la URL escrita no coincide: {escrita and escrita[0]['texto']!r}")
@@ -515,7 +557,7 @@ def escribir_pie(superficie: str, pie: str, ev: Path) -> dict:
     if superficie == "story":
         raise ValueError("la Story no lleva pie: el enlace va en el sticker")
     _exigir_listo()
-    _tocar_id(telefono.volcado(), EDITOR[superficie])
+    _tocar_id(_volcar(), EDITOR[superficie])
     xml = _esperar(lambda x: bool(por_id(x, "caption_input_text_view"))
                    or telefono.buscar(x, contiene="réutiliser votre contenu", paquete=IG) is not None,
                    "el composer del Reel", plazo=40)
@@ -568,7 +610,7 @@ def _sin_copia_en_la_story() -> str:
     elección, así que se comprueba en cada Reel (decisión del usuario del 2026-11-04: sin copia automática
     en la Story). Threads y Facebook, en la misma lista, no se tocan."""
     for _ in range(4):
-        n = interruptor_junto_a(telefono.volcado(), "Votre story")
+        n = interruptor_junto_a(_volcar(), "Votre story")
         if n is not None:
             break
         telefono.deslizar(540, 1700, 540, 900, 500)  # x en el centro: lejos de los interruptores de la derecha
@@ -581,11 +623,11 @@ def _sin_copia_en_la_story() -> str:
     time.sleep(1.5)
     # Apagarlo pregunta «Arrêter l'ajout à votre story ?»: «Arrêter pour tous les reels» es el ajuste de cuenta
     # que el usuario decidió quitar (no «Ne pas ajouter ce reel», que valdría solo para este).
-    xml = telefono.volcado()
+    xml = _volcar()
     if telefono.buscar(xml, texto=PARA_TODOS_LOS_REELS, paquete=IG):
         _tocar_texto(xml, PARA_TODOS_LOS_REELS)
         time.sleep(2)
-    n = interruptor_junto_a(telefono.volcado(), "Votre story")
+    n = interruptor_junto_a(_volcar(), "Votre story")
     if n is None or n["checked"]:
         raise PantallaInesperada("«Votre story» sigue encendido tras tocarlo")
     return "apagada"
@@ -595,9 +637,9 @@ def publicar(superficie: str, ev: Path) -> dict:
     """El único toque que publica. Solo lo llama quien ya tiene el PASS del revisor."""
     _exigir_listo()
     boton = PUBLICAR[superficie]
-    xml1 = telefono.volcado()
+    xml1 = _volcar()
     time.sleep(1.5)
-    xml2 = telefono.volcado()
+    xml2 = _volcar()
     cajas = [[n["bounds"] for n in por_id(x, boton)] for x in (xml1, xml2)]
     if len(cajas[0]) != 1 or cajas[0] != cajas[1]:
         raise PantallaInesperada(f"«{boton}» no está quieto y único en dos volcados: {cajas}")
@@ -648,8 +690,41 @@ def story_reciente(desc: str, cuenta: str, max_min: int = 5) -> bool:
     return bool(m) and m["cuenta"] == cuenta and int(m["n"]) <= max_min
 
 
+def _recorrer_visor(ev: Path, cuenta: str, camino: str, plazo_s: int = 150) -> dict:
+    """Con el visor recién pedido, avanza segmento a segmento hasta una Story propia de hace minutos.
+
+    El visor de las Stories propias empieza por la más antigua de las últimas 24 h: tras una noche de
+    prueba son 30 o más, y con 12 saltos no se llegaba a la reciente; al pasar la última el visor se
+    cierra y vuelve al perfil (las 30 Stories de la prueba del 6 nov quedaron «sin verificar»). Solo cuenta
+    como visor un content-desc con la edad («il y a …»): las destacadas del perfil también empiezan por
+    «Story de <cuenta>,» y tocar a ciegas sobre el perfil abre otra cosa (pasó: el «tableau de bord»)."""
+    vistos: list[str] = []
+    registro = ev / f"07-segmentos-{camino}.txt"
+    limite = time.monotonic() + plazo_s
+    try:
+        while True:
+            xml = _esperar(lambda x: _segmento_del_visor(x, cuenta) is not None,
+                           "el visor con una Story propia", plazo=20 if not vistos else 10)
+            desc = _segmento_del_visor(xml, cuenta)
+            vistos.append(desc)
+            if story_reciente(desc, cuenta):
+                return {"encontrada": True, "desc": desc, "segmento": len(vistos) - 1, "camino": camino,
+                        "captura": str(telefono.captura(ev / "07-verificada.png"))}
+            if time.monotonic() >= limite:
+                raise PantallaInesperada(f"sin una Story de hace minutos tras {len(vistos)} segmentos en {plazo_s} s")
+            telefono.tocar(1000, 1000)  # siguiente segmento: solo con el visor confirmado en pantalla
+            time.sleep(1.5)
+    except PantallaInesperada as e:
+        if vistos and "segmentos" not in str(e):
+            raise PantallaInesperada(f"el visor se cerró tras {len(vistos)} segmentos sin una Story de hace "
+                                     f"minutos (el último: {vistos[-1]!r})") from e
+        raise
+    finally:
+        registro.write_text("\n".join(vistos) + "\n", encoding="utf-8")
+
+
 def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
-              cuenta: str = "sabiduriabolsillo") -> dict:
+              cuenta: str = CUENTA) -> dict:
     """Busca lo publicado desde el perfil. No se fía de la bandeja de Stories de la portada:
     va en caché y se desplaza sola."""
     _exigir_listo()
@@ -673,19 +748,28 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
         # abre el editor de notas en vez del visor (pasó en el SM-S918B).
         x1, y1, x2, y2 = por_id(xml, "row_profile_header_imageview_frame_layout")[0]["bounds"]
         telefono.tocar((x1 + x2) // 2, y2 - (y2 - y1) // 5)
-        # Solo cuenta como visor un content-desc con la edad («il y a …»): las historias destacadas del perfil
-        # también empiezan por «Story de <cuenta>,» («1 sur 0, Vus.») y tocar a ciegas sobre el perfil abre otra
-        # cosa (pasó: el «tableau de bord»).
-        for i in range(12):
-            xml = _esperar(lambda x: _segmento_del_visor(x, cuenta) is not None,
-                           "el visor con una Story propia", plazo=20)
-            desc = _segmento_del_visor(xml, cuenta)
-            if story_reciente(desc, cuenta):
-                return {"encontrada": True, "desc": desc, "segmento": i,
-                        "captura": str(telefono.captura(ev / "07-verificada.png"))}
-            telefono.tocar(1000, 1000)  # siguiente segmento: solo con el visor confirmado en pantalla
-            time.sleep(1.5)
-        raise PantallaInesperada("no hay una Story de los últimos minutos en el perfil")
+        try:
+            return _recorrer_visor(ev, cuenta, "perfil")
+        except PantallaInesperada as e:
+            if "segmentos" in str(e):
+                raise  # el visor sí se abrió: la bandeja empezaría otra vez por la más antigua
+            # Segundo camino: la bandeja de la portada, donde la Story propia es siempre la primera.
+            # Instagram restaura la última pantalla al abrirse, así que se va a la portada por su pestaña.
+            telefono.captura(ev / "07a-sin-visor-perfil.png")
+            telefono.shell("input keyevent 4")
+            time.sleep(2)
+            telefono.shell("monkey -p com.instagram.android -c android.intent.category.LAUNCHER 1")
+            xml = _esperar(lambda x: bool(por_id(x, "feed_tab")), "la barra de pestañas", plazo=30)
+            telefono.tocar(*por_id(xml, "feed_tab")[0]["centro"])
+            propia = f"Story de {cuenta}, 0 sur"
+            xml = _esperar(lambda x: any(n["desc"].startswith(propia) for n in por_id(x, "avatar_image_view")),
+                           f"la Story de {cuenta} en la bandeja", plazo=30)
+            telefono.tocar(*[n for n in por_id(xml, "avatar_image_view") if n["desc"].startswith(propia)][0]["centro"])
+            try:
+                return _recorrer_visor(ev, cuenta, "bandeja")
+            except PantallaInesperada as e2:
+                raise PantallaInesperada(f"perfil: {e}; bandeja: {e2}") from e2
+    # Las baldosas se llaman distinto según la pestaña: `image_button` («Reel par…», «Photo de…») en la
     # Las baldosas se llaman distinto según la pestaña: `image_button` («Reel par…», «Photo de…») en la
     # cuadrícula y `preview_clip_thumbnail` («Reel de <cuenta>. Nombre de vues…») en la de Reels.
     # El Reel se busca en la cuadrícula, no en la pestaña Reels: allí las baldosas se animan, uiautomator no
@@ -698,7 +782,7 @@ def verificar(superficie: str, ev: Path, pista: str, pie: str | None = None,
     time.sleep(3)
     # Tocar la pestaña ya elegida abre el orden («Les plus récents» / «Les plus vus») encima de la cuadrícula:
     # se elige el más reciente, que además pone lo recién publicado primero.
-    orden = telefono.buscar(telefono.volcado(), texto="Les plus récents", paquete=IG)
+    orden = telefono.buscar(_volcar(), texto="Les plus récents", paquete=IG)
     if orden:
         telefono.tocar(*orden["centro"])
         time.sleep(3)
