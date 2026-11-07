@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-extra41",
+  "id": "2026-11-09-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Hojoki", "#KamoNoChomei", "#Citas"],
-    "extended": ["#Japon", "#Budismo", "#Impermanencia", "#Kioto", "#LiteraturaJaponesa", "#Historia", "#Sabiduria"]
+    "topic": [
+      "#Hojoki",
+      "#KamoNoChomei",
+      "#Citas"
+    ],
+    "extended": [
+      "#Japon",
+      "#Budismo",
+      "#Impermanencia",
+      "#Kioto",
+      "#LiteraturaJaponesa",
+      "#Historia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "Que el manuscrito de Daifukkō-ji sea autógrafo de Chōmei: la nota antigua que lo afirma está discutida. No se usa.",
     "Presentar la frase como préstamo o eco de Heráclito: la comparación es moderna; no hay relación textual."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-10T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

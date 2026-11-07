@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-extra42",
+  "id": "2026-11-09-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#ElPrincipito", "#SaintExupery", "#Citas"],
-    "extended": ["#LiteraturaFrancesa", "#Manuscritos", "#NuevaYork", "#Libros", "#Lectura", "#Historia", "#Sabiduria"]
+    "topic": [
+      "#ElPrincipito",
+      "#SaintExupery",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaFrancesa",
+      "#Manuscritos",
+      "#NuevaYork",
+      "#Libros",
+      "#Lectura",
+      "#Historia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +69,12 @@
     "La frase «C'est le temps que tu as perdu pour ta rose...»: no se verificó su redacción exacta en esta ejecución. No se usa.",
     "Atribuir la frase o la imagen del corazón a fuentes anteriores (Pascal y sus razones del corazón): no hay relación demostrada. No se sugiere."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-10T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

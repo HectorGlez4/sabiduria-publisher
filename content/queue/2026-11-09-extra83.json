@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-03-extra41",
+  "id": "2026-11-09-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Chejov", "#Escritura", "#Citas"],
-    "extended": ["#LiteraturaRusa", "#Cartas", "#Siglo19", "#Rusia", "#Teatro", "#Oficio", "#Sabiduria"]
+    "topic": [
+      "#Chejov",
+      "#Escritura",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaRusa",
+      "#Cartas",
+      "#Siglo19",
+      "#Rusia",
+      "#Teatro",
+      "#Oficio",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "La traducción castellana de la cita es propia, literal desde el ruso de la edición Nauka; no se atribuye a ningún traductor publicado.",
     "La página de chehov-lit.ru da en un extracto la fecha «11 января»: es un error de lectura de la codificación rota; el resto de fuentes y la edición en Wikisource dan 11 de abril."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-10T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

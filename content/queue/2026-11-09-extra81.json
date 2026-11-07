@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-30-tarde",
+  "id": "2026-11-09-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Nebrija", "#LenguaCastellana", "#Citas"],
-    "extended": ["#Gramatica", "#1492", "#Salamanca", "#Espanol", "#Historia", "#Humanismo", "#Sabiduria"]
+    "topic": [
+      "#Nebrija",
+      "#LenguaCastellana",
+      "#Citas"
+    ],
+    "extended": [
+      "#Gramatica",
+      "#1492",
+      "#Salamanca",
+      "#Espanol",
+      "#Historia",
+      "#Humanismo",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -59,5 +71,12 @@
     "Que la frase sea una celebración del imperio: el prólogo la usa también como advertencia de caída conjunta; la lectura del último párrafo es interpretación de la redacción.",
     "Verificación incompleta: el texto español completo del pasaje solo se vio en resúmenes de búsqueda; las ediciones en PDF no se pudieron leer. Lo citado en quote.text («Siempre la lengua fue compañera del imperio») sí está confirmado por tres fuentes leídas. Revisar contra la edición de Quilis o de Carmen Lozano (RAE) antes de encolar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-09T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
