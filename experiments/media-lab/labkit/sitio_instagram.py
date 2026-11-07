@@ -117,9 +117,10 @@ def elegir_pista(filas: list[Pista], recientes: list[str], rng: random.Random) -
 
     Decisión del usuario (2026-11-03): al azar entre el top 10, para que cada publicación
     suene distinta. «Audio d’origine» es audio de otra cuenta, no una canción, y la pista
-    de la publicación anterior no se repite seguida.
+    de la publicación anterior no se repite seguida. Decisión del usuario (2026-11-07): nunca una pista
+    marcada como explícita.
     """
-    aptas = [f for f in filas if f.puesto <= TOP_PISTAS and not f.titulo.startswith("Audio d")
+    aptas = [f for f in filas if f.puesto <= TOP_PISTAS and not f.titulo.startswith("Audio d") and not f.explicita
              and (not recientes or f.titulo != recientes[0])]
     return rng.choice(aptas) if aptas else None
 

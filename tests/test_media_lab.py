@@ -6217,7 +6217,9 @@ def seccion_sitio_instagram() -> None:
         once = [si.Pista(i, f"t{i}", "a", False, (0, 0)) for i in range(1, 13)]
         check({si.elegir_pista(once, [], random.Random(i)).puesto for i in range(200)} == set(range(1, 11)),
               "elegir_pista reparte al azar entre el top 10 y nunca baja del 10")
-        solo_malas = [p for p in pistas if p.titulo == "Audio d’origine"]
+        check(all(p is None or not p.explicita for p in elegidas),
+              "elegir_pista nunca elige una pista explícita (decisión del usuario, 7 nov)")
+        solo_malas = [p for p in pistas if p.titulo == "Audio d’origine" or p.explicita]
         check(si.elegir_pista(solo_malas, [], rng) is None, "elegir_pista da None si ninguna vale")
     except NotImplementedError:
         check(False, "elegir_pista está sin escribir (TODO del usuario en labkit/sitio_instagram.py)")
