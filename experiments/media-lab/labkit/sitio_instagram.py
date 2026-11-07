@@ -342,8 +342,14 @@ def perfil_propio(xml: str, cuenta: str = CUENTA) -> bool | None:
 def exigir_cuenta(cuenta: str = CUENTA) -> None:
     """Nada se publica desde otra cuenta. El 7 nov Instagram amaneció con la cuenta personal activa
     y el bucle no lo miraba: habría publicado allí."""
-    telefono.shell(f"am start -a android.intent.action.VIEW -d {shlex.quote(f'instagram://user?username={cuenta}')}")
-    xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
+    enlace = f"am start -a android.intent.action.VIEW -d {shlex.quote(f'instagram://user?username={cuenta}')}"
+    telefono.shell(enlace)
+    try:
+        xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
+    except PantallaInesperada:
+        # En frío Instagram abre la portada y no llega al perfil (SM-S721B, 7 nov): el enlace otra vez.
+        telefono.shell(enlace)
+        xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
     if not perfil_propio(xml, cuenta):
         raise CuentaAjena(f"Instagram tiene activa otra cuenta, no {cuenta}: no se publica")
 
