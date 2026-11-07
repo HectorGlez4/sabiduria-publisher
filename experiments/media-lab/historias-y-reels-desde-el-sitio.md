@@ -103,6 +103,11 @@ Lo que se aprendió al automatizar (todo está ya en el código):
   hasta 150 s, guarda lo visto en `07-segmentos-*.txt` y, si el toque en el perfil no abre el
   visor, prueba la bandeja de la portada. Todas las Stories de la prueba 2 quedaron «sin
   verificar» por esto, aunque salieron.
+- **«Partager dans le statut WhatsApp ?»**: sale al pulsar Compartir en el feed y retiene la
+  publicación hasta que se contesta (7 nov: la foto no salió y el registro dijo que sí). `publicar`
+  y toda espera la cierran con «Plus tard»: nunca se comparte con los contactos.
+- **Columna de herramientas de la Story**: ocupa x ≥ 917 hasta y≈940 y tapaba el final de la
+  primera línea. Desde el 7 nov el vertical del sitio deja 192 px a la derecha (texto hasta x≈888).
 - **Volcados vacíos sueltos**: toda lectura de pantalla pasa por `_esperar`, que reintenta.
 - **Clip del Reel con ✓ en vez de «Terminé»**: otra variante de «Choisissez la section…»,
   con la pista arriba y un ✓ en la esquina. `musica` toca el único pulsable de esa esquina,
