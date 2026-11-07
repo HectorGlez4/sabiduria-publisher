@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-26-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "San Juan de la Cruz y el examen de la tarde",
+    "hook": "La frase de San Juan de la Cruz que todos repiten tiene una segunda mitad. Casi nadie la cita.",
+    "quote": {
+      "text": "A la tarde te examinarán en el amor. Aprende a amar como Dios quiere ser amado, y deja tu condición.",
+      "author": "San Juan de la Cruz",
+      "work": "Dichos de luz y amor, 59 (numeración de los Carmelitas Descalzos de Segovia)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Juan de la Cruz, carmelita del siglo XVI, dejó además de sus poemas una colección de sentencias breves en prosa, los «Dichos de luz y amor». En una de ellas escribió: «A la tarde te examinarán en el amor». Así, sola, se lee en estampas, homilías y recordatorios.",
+      "Pero el dicho no termina ahí. Sigue: «Aprende a amar como Dios quiere ser amado, y deja tu condición». La primera mitad anuncia un examen. La segunda dice que hay que prepararlo, y que prepararlo cuesta renunciar a algo propio.",
+      "Ni siquiera su número es fijo. Los carmelitas de Segovia, donde está su sepulcro, lo numeran 59; otras ediciones, 60. El Catecismo de la Iglesia Católica lo cita en su párrafo 1022: la versión española remite a «Avisos y sentencias, 57»; la inglesa, a «Dichos 64», y traduce «at the evening of life», la tarde de la vida. Él solo escribió «a la tarde»."
+    ],
+    "question": "¿Qué parte de ti tendrías que dejar para aprender a querer mejor?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SanJuanDeLaCruz", "#Citas", "#SigloDeOro"],
+    "extended": ["#Mistica", "#LiteraturaEspanola", "#Amor", "#Carmelitas", "#Espiritualidad", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto: «A la tarde te examinarán en el amor. Aprende a amar como Dios quiere ser amado, y deja tu condición», numerado n. 59 de los «Dichos de luz y amor». Lectura directa en la página de textos del sitio de los Carmelitas Descalzos de Segovia (Convento de San Juan de la Cruz, Paseo Segundo Rincón 5), que tiene una sección «Iglesia y Sepulcro».",
+      "source": "Carmelitas Descalzos de Segovia, sanjuandelacruzsegovia.com, «Textos»",
+      "url": "https://sanjuandelacruzsegovia.com/textos/"
+    },
+    {
+      "claim": "La misma sentencia, con la segunda mitad «aprende a amar como Dios quiere ser amado y deja tu condición», aparece con el número 60 en esta transcripción de los «Dichos de luz y amor» (fuente indicada: Arvo.net). Lectura directa.",
+      "source": "Solidaridad.net, «Avisos espirituales. Dichos de luz y de amor de San Juan de la Cruz»",
+      "url": "https://solidaridad.net/avisos-espirituales-dichos-de-luz-y-de-amor-de-san-juan-de-la-cruz2102/"
+    },
+    {
+      "claim": "El Catecismo de la Iglesia Católica, en español, cierra el párrafo 1022 con «A la tarde te examinarán en el amor» (San Juan de la Cruz, «Avisos y sentencias», 57). Lectura directa.",
+      "source": "Catecismo de la Iglesia Católica, §1022, texto español, Santa Sede (vatican.va)",
+      "url": "https://www.vatican.va/archive/catechism_sp/p123a12_sp.html"
+    },
+    {
+      "claim": "El Catecismo en inglés, párrafo 1022: «At the evening of life, we shall be judged on our love», nota 595: «St. John of the Cross, Dichos 64». Lectura directa.",
+      "source": "Catechism of the Catholic Church, §1022, texto inglés, Santa Sede (vatican.va)",
+      "url": "https://www.vatican.va/archive/ENG0015/__P2L.HTM"
+    }
+  ],
+  "do_not_use": [
+    "«En el atardecer de la vida te examinarán en el amor»: es una paráfrasis muy difundida; el texto dice «a la tarde», sin «de la vida».",
+    "Dar un número único del dicho como el verdadero: las fuentes leídas dan 57 (Avisos y sentencias), 59, 60 y 64. Por eso la pieza cita la numeración de Segovia y explica la discrepancia.",
+    "Que el manuscrito de Andújar sea autógrafo del santo, o cualquier fecha de composición de los Dichos: no se verificó en fuentes leídas en esta ronda.",
+    "Interpretar «deja tu condición» con un significado preciso (genio, carácter, voluntad propia) como si lo dijera la fuente: no se leyó un comentario crítico que lo fije.",
+    "No se verificó el año de una edición crítica concreta (Ruiz Salvador, EDE, u otras); la cita se apoya en la transcripción carmelita y en el Catecismo.",
+    "Datos biográficos (Fontiveros 1542, Úbeda 1591, doctor de la Iglesia en 1926): no se leyeron en fuentes verificadas en esta ronda; no se usan."
+  ],
+  "status": "draft"
+}

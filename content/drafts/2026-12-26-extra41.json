@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-26-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Publilio Siro y el día que aprende del anterior",
+    "hook": "Un esclavo sirio llegó a Roma, escribió comedias que se perdieron, y quedaron sus frases sueltas.",
+    "quote": {
+      "text": "El día siguiente es discípulo del anterior.",
+      "author": "Publilio Siro",
+      "work": "Sententiae, 146 (ed. J. W. y A. M. Duff, Minor Latin Poets, Loeb, 1934)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Publilio era sirio y llegó a Roma como esclavo en el siglo I a.C. Macrobio cuenta que, siendo niño, su ingenio y su gracia le ganaron la libertad y una educación más esmerada. Se hizo autor de mimos, el teatro popular de la época, y los representó con gran éxito por las ciudades de Italia.",
+      "En unos juegos de Julio César desafió a todos los autores de mimos y los venció a todos, incluido el veterano Laberio. César dio a Publilio la palma y a Laberio un anillo de oro, con una frase de consuelo: lo había vencido el sirio. Un siglo después, Séneca se preguntaba cuántos versos de Publilio merecían decirse en la tragedia y no solo en la farsa.",
+      "Sus obras se perdieron. Lo que llegó es una colección de sentencias de un solo verso, ordenadas alfabéticamente, en la que los editores ya advierten frases añadidas por otras manos. Esta figura en la lista principal, no entre las espurias: «Discipulus est prioris posterior dies». Cada día aprende del anterior. Lo que no dice es si el anterior tuvo algo que enseñar."
+    ],
+    "question": "¿Qué te enseñó ayer que hoy todavía no has aplicado?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PublilioSiro", "#Citas", "#Roma"],
+    "extended": ["#RomaAntigua", "#Latin", "#Sentencias", "#Seneca", "#Clasicos", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "«Discipulus est prioris posterior dies» figura en la lista principal de las sentencias de Publilio Siro, bajo la letra D, y no en la sección «Sententiae falso inter Publilianas receptae». Lectura directa.",
+      "source": "The Latin Library, «Publilius Syrus, Sententiae»",
+      "url": "https://www.thelatinlibrary.com/syrus.html"
+    },
+    {
+      "claim": "Sentencia 146: «Discipulus est prioris posterior dies», trad. «Next day is pupil of the day before»; portada fechada MCMXXXIV (1934). La introducción dice que era de origen sirio, que llegó a Roma como esclavo (probablemente de Antioquía), que su ingenio le valió la manumisión, que escribió mimos, que venció a Laberio en un certamen ante César, y que es difícil saber cuánto material proverbial se añadió después a las colecciones, por lo que los editores marcan los versos dudosos. Lectura directa.",
+      "source": "J. Wight Duff y Arnold M. Duff (eds.), Minor Latin Poets, Loeb Classical Library, 1934, Internet Archive",
+      "url": "https://archive.org/stream/minorlatinpoetsw00duffuoft/minorlatinpoetsw00duffuoft_djvu.txt"
+    },
+    {
+      "claim": "Publilio era «natione Syrus»; de niño, llevado ante el patrono de su amo, ganó su favor por su ingenio y gracia, fue manumitido y educado con más esmero; compuso mimos con gran aplauso en las ciudades de Italia; en los juegos de César desafió a todos los autores e intérpretes y venció incluso a Laberio; César dijo «Favente tibi me victus es, Laberi, a Syro» y dio la palma a Publilio y a Laberio un anillo de oro y quinientos sestercios. Lectura directa del latín.",
+      "source": "Macrobio, Saturnales II, 7, LacusCurtius (Bill Thayer), Universidad de Chicago",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Macrobius/Saturnalia/2*.html"
+    },
+    {
+      "claim": "Séneca escribe que en el mimo yacen muchos versos sabios y pregunta cuántos versos de Publilio merecen decirlos actores de coturno y no solo de zapatilla (Epístola 8, 8), y cita uno en 8, 9. Trad. R. M. Gummere. Lectura directa.",
+      "source": "Séneca, Epístolas morales a Lucilio, 8, 8-9, Wikisource",
+      "url": "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius/Letter_8"
+    }
+  ],
+  "do_not_use": [
+    "«Cada día es el alumno de ayer» o «Each day is the scholar of yesterday» citados desde páginas de frases: la versión verificada es el latín de la colección y la traducción de Duff.",
+    "El año del certamen con Laberio: Duff lo sitúa en el 45 a.C. y otras fuentes en el 46. No dar año.",
+    "Que Publilio era de Antioquía como hecho: Duff dice «most likely». El texto solo dice sirio.",
+    "«Necesse est multos timeat quem multi timent»: The Latin Library la coloca entre las sentencias falsamente atribuidas a Publilio. No usarla como suya.",
+    "Muchas frases que circulan en inglés con su nombre no aparecen en las listas latinas; no citar ninguna sin localizarla en la colección.",
+    "La forma «Publio Siro» circula, pero Duff y The Latin Library lo llaman Publilius; no se verificó de dónde viene la variante, así que se usa Publilio.",
+    "La traducción al español de la sentencia es propia, desde el latín y la versión de Duff."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "2026-12-26-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Orfeo y Eurídice: la mirada atrás de Virgilio y Ovidio",
+    "hook": "Orfeo no siempre perdió a Eurídice por mirar atrás. En Platón ni siquiera llegó a verla.",
+    "body": [
+      "En la «Alcestis» de Eurípides, el rey Admeto lamenta no tener la voz y la música de Orfeo: si las tuviera, dice, bajaría al Hades a encantar a sus señores y devolvería a su esposa a la luz. Habla del canto como de una llave que abre la muerte.",
+      "Platón cuenta otra cosa. En el «Banquete», Fedro dice que los dioses solo le mostraron a Orfeo una aparición de su mujer, no a ella, porque lo juzgaron un músico sin valor para morir por amor, como sí había hecho Alcestis. La mirada que lo pierde todo aparece en las «Geórgicas» de Virgilio, en boca del dios marino Proteo: Orfeo se detiene «iam luce sub ipsa», ya junto a la luz, y se vuelve. Eurídice alcanza a preguntarle qué locura tan grande los ha perdido a los dos.",
+      "Ovidio, en el libro X de las «Metamorfosis», repite la escena, pero cambia lo último. Eurídice muere por segunda vez y no se queja de su marido. ¿De qué iba a quejarse, escribe Ovidio, sino de haber sido amada?"
+    ],
+    "question": "¿Cuántas veces se ha perdido algo por no saber esperar un paso más?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Orfeo y Eurídice",
+    "subtitle": "Eurípides, Platón, Virgilio, Ovidio",
+    "body": "En Platón, los dioses solo le muestran una aparición de ella. En Virgilio, Orfeo se vuelve ya junto a la luz. En Ovidio, Eurídice no le reprocha nada: solo podía quejarse de haber sido amada."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mitologia", "#Orfeo", "#Clasicos"],
+    "extended": ["#Euridice", "#Virgilio", "#Ovidio", "#Platon", "#MitologiaGriega", "#Literatura"]
+  },
+  "sources": [
+    {
+      "claim": "Admeto dice que si tuviera «the voice and music of Orpheus» para encantar a la hija de Deméter o a su esposo, bajaría al Hades y nada le impediría devolver a Alcestis viva a la luz (vv. 357-362). Lectura directa.",
+      "source": "Eurípides, Alcestis 357-362, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0088:card=357"
+    },
+    {
+      "claim": "Fedro: los dioses mostraron a Orfeo «only a wraith of the woman for whom he came», no a ella, porque juzgaron su empresa cobarde: era un músico («minstrel») sin valor para morir por amor como Alcestis. Trad. H. N. Fowler (Loeb, 1925). Lectura directa.",
+      "source": "Platón, Banquete 179d, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0174:text=Sym.:section=179d"
+    },
+    {
+      "claim": "Eurídice muere huyendo de Aristeo («dum te fugeret», v. 457) junto a una serpiente; Orfeo «restitit... iam luce sub ipsa... respexit» (vv. 490-491); ella dice «quis et me miseram et te perdidit, Orpheu, quis tantus furor?» (vv. 494-495); el relato es de Proteo: «Haec Proteus» (v. 528). Lectura directa del latín.",
+      "source": "Virgilio, Geórgicas IV 453-528, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0059:book=4:card=453"
+    },
+    {
+      "claim": "La condición: «ne flectat retro sua lumina, donec Avernas exierit valles» (vv. 51-52); «flexit amans oculos» (v. 57); Eurídice «non est de coniuge quicquam questa suo (quid enim nisi se quereretur amatam?)» (vv. 60-61). Lectura directa del latín.",
+      "source": "Ovidio, Metamorfosis X 1-63, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0029:book=10:card=1"
+    }
+  ],
+  "do_not_use": [
+    "Que en una versión griega antigua Orfeo rescataba a Eurídice con éxito: se dice a menudo, pero no se leyó en una fuente académica en esta ronda. Del pasaje de «Alcestis» solo se afirma lo que dice Admeto.",
+    "Que Orfeo muere despedazado por las ménades en el «Banquete»: el pasaje leído (179d) solo dice que los dioses le causaron la muerte; el detalle de las mujeres no se verificó ahí.",
+    "Fechas de composición de «Alcestis», el «Banquete», las «Geórgicas» o las «Metamorfosis»: no se verificaron en fuentes leídas en esta ronda; no se dan.",
+    "Que Virgilio fue el primero en contar la mirada atrás: es la versión más antigua conservada según muchos manuales, pero no se leyó en una fuente verificada. El texto no lo afirma.",
+    "Que la serpiente mordió a Eurídice en el tobillo o el talón: Virgilio solo dice que no vio a la serpiente; el detalle es de otras versiones.",
+    "Las traducciones al español de Virgilio y Ovidio son propias, desde el latín."
+  ],
+  "status": "draft"
+}

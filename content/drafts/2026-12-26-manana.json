@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-26-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Elena Cornaro Piscopia y el doctorado de 1678",
+    "hook": "Pidió doctorarse en teología. El obispo lo llamó un disparate. Le dieron el título en filosofía.",
+    "body": [
+      "En 1677, Elena Lucrezia Cornaro Piscopia, una veneciana nacida en 1646, solicitó a la Universidad de Padua el doctorado en teología. Gregorio Barbarigo, obispo de Padua y canciller de la universidad, se negó en firme: conceder un doctorado a una mujer era «uno sproposito», un disparate.",
+      "La salida la negoció su maestro, Carlo Rinaldini: el título sería en filosofía. El 25 de junio de 1678 Elena habló en latín sobre pasajes de Aristóteles, y acudió tanta gente que, según se cuenta, el acto se trasladó a la catedral. Padua la recuerda como la primera mujer que obtuvo un título universitario.",
+      "El título no le abrió ninguna cátedra. Murió en Padua en julio de 1684, a los 38 años, y está enterrada en la iglesia de Santa Giustina. Su estatua está hoy al pie de una escalera del Palazzo Bo, la sede de la universidad que no la dejó enseñar."
+    ],
+    "question": "¿Qué puerta se abre a medias y aun así cambia lo que viene después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Elena Cornaro Piscopia",
+    "subtitle": "Padua, 25 de junio de 1678",
+    "body": "Pidió el doctorado en teología y el obispo se negó. Se doctoró en filosofía hablando en latín sobre Aristóteles. Padua la recuerda como la primera mujer con título universitario. Nunca pudo enseñar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#MujeresEnLaHistoria", "#Universidad"],
+    "extended": ["#ElenaCornaro", "#Padua", "#SigloXVII", "#Filosofia", "#Venecia", "#HistoriaDeLaEducacion"]
+  },
+  "sources": [
+    {
+      "claim": "Nacida en Venecia en 1646; en 1677 pidió el doctorado en teología; Gregorio Barbarigo, obispo de Padua y canciller de la universidad, se negó y llamó «uno sproposito» doctorar a una mujer; por mediación de su maestro Carlo Rinaldini obtuvo la laurea en filosofía el 25 de junio de 1678; murió en Padua en julio de 1684 y fue enterrada en Santa Giustina; en 1773 Caterina Dolfin donó a la universidad su estatua, al pie de la Scalone Cornaro en el Cortile Antico del Palazzo Bo. Lectura directa.",
+      "source": "Università degli Studi di Padova, «Elena Lucrezia Cornaro Piscopia»",
+      "url": "https://www.unipd.it/elena-lucrezia-cornaro-piscopia"
+    },
+    {
+      "claim": "La Universidad de Padua la presenta como «the first woman in modern history to receive a university degree», un doctorado en filosofía en 1678. Lectura directa.",
+      "source": "Università degli Studi di Padova, Centro di Ateneo Elena Cornaro, «Elena Cornaro & University of Padua»",
+      "url": "https://centroelenacornaro.unipd.it/elena-cornaro-university-padua"
+    },
+    {
+      "claim": "Nacida en Venecia el 5 de junio de 1646, murió el 26 de julio de 1684 a los 38 años; como mujer se le había negado el examen de doctor en teología; los examinadores la aprobaron el 25 de junio de 1678; en la ceremonia habló en latín sobre pasajes de Aristóteles; la ceremonia pública tuvo lugar en la catedral de Padua (escena del vitral de 1906 de la biblioteca de Vassar). Lectura directa.",
+      "source": "Vassar College Libraries, «Cornaro Window»",
+      "url": "https://library.vassar.edu/libraries-collections/main-library/cornaro-window"
+    },
+    {
+      "claim": "La disertación fue el 25 de junio de 1678 y «si racconta» que acudió tanta gente que se celebró en la catedral; Barbarigo se opuso a la teología; mediación de Rinaldini; no pudo enseñar; murió en julio de 1684 a los 38 años, enterrada en Santa Giustina; estudios citan a Bitisia Gozzadini (Bolonia, 1236) e Isabel de Losa (Córdoba, siglo XVI) como posibles precedentes. Lectura directa.",
+      "source": "Il Post, «Elena Cornaro Piscopia, la prima donna laureata al mondo (forse)», 5 de junio de 2019",
+      "url": "https://www.ilpost.it/2019/06/05/elena-cornaro-piscopia/"
+    }
+  ],
+  "do_not_use": [
+    "Que fue «la primera mujer licenciada del mundo» sin matiz: se citan precedentes discutidos (Bitisia Gozzadini en Bolonia, 1236; Isabel de Losa en el siglo XVI). Por eso el texto dice que Padua «la recuerda» así, no que lo fuera con certeza.",
+    "Llamar cardenal a Barbarigo en 1677-1678: la universidad lo identifica como obispo de Padua y canciller; no se verificó la fecha de su cardenalato en esta ronda.",
+    "Que la ceremonia se trasladó a la catedral como hecho seguro: Il Post lo da como relato («si racconta») y Vassar lo representa en un vitral. Se mantiene el «según se cuenta».",
+    "Insignias concretas (anillo, laurel, muceta de armiño): circulan, pero no se leyeron en ninguna fuente verificada.",
+    "El día exacto de la muerte: Vassar da el 26 de julio; la universidad solo dice julio de 1684. El texto da el mes.",
+    "Que la estatua sea contemporánea suya: la donó Caterina Dolfin en 1773.",
+    "«Uno sproposito» va traducido por cuenta propia como «un disparate»."
+  ],
+  "status": "draft"
+}
