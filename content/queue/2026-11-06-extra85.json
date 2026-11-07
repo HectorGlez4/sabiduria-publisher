@@ -67,12 +67,15 @@
     "Relacionarla con el efecto Dunning-Kruger como si Russell lo hubiera anticipado científicamente: es una asociación de divulgación, no algo que diga el texto.",
     "«Columna semanal»: la frecuencia exacta no se verificó en las fuentes. Solo se afirma que los artículos salieron en periódicos de Hearst entre 1933 y 1935."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-07T04:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
