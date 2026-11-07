@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 06 Nov 2026 16:06:09 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 06:05:07 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La frase budista más repetida en Occidente dice que al odio lo apaga el amor. El texto original no dice amor.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-06-re51-reel</guid>
+      <pubDate>Fri, 06 Nov 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["El odio nunca se apacigua con odio en este mundo; solo con la ausencia de odio se apacigua. Ésta es una ley eterna."
+— Dhammapada, canon budista pali, Capítulo I, Yamakavagga (Versos gemelos)
+
+El verso es el quinto del primer capítulo del Dhammapada, la antología de veintiséis capítulos recogida en el Khuddaka Nikāya del canon pali. En pali dice: «Na hi verena verāni sammantīdha kudācanaṁ; averena ca sammanti, esa dhammo sanantano». Los dos versos anteriores lo preparan con una letanía: me insultó, me golpeó, me venció, me robó. Quien guarda esos pensamientos, dice el texto, no apaga nada.
+
+En 1881, Max Müller lo tradujo al inglés para la colección Sacred Books of the East y escribió: «hatred ceases by love, this is an old rule». De ahí viene el «solo el amor» que hoy se repite en carteles y discursos. Pero la palabra pali es avera, que significa ausencia de odio, y las traducciones modernas la respetan: «solo con la ausencia de odio se apacigua». No es lo mismo. La primera versión pide querer al que hizo daño; la segunda pide algo más pequeño y más difícil: dejar de devolverlo.
+
+El texto tampoco lo presenta como un consejo. Lo cierra con «esa dhammo sanantano»: una ley antigua, una regla que ya estaba ahí. El comentario tradicional sitúa la escena en el monasterio de Jetavana, en Sāvatthī, ante dos mujeres atrapadas en una cadena de venganzas que venía de vidas anteriores.
+
+¿Qué se necesita para dejar de devolver un golpe sin tener que perdonarlo?
+
+#SabiduriaDeBolsillo #Dhammapada #Budismo #SabiduriaAntigua]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-06-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-06-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El libro más antiguo que se conserva impreso con tipos de metal móviles no es europeo. Salió de un templo coreano en 1377 y hoy está en París.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -482,24 +502,6 @@ Esa segunda mitad casi nunca se cita. Con ella, la frase deja de enfrentar la ra
 #SabiduriaDeBolsillo #Goya #Citas #Arte]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra83.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra83.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>La América española es original: originales han de ser sus instituciones y su gobierno. O inventamos o erramos.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-25-re55-reel</guid>
-      <pubDate>Mon, 26 Oct 2026 02:26:00 +0000</pubDate>
-      <description><![CDATA["La América española es original: originales han de ser sus instituciones y su gobierno. O inventamos o erramos."
-— Simón Rodríguez (1769-1854)
-
-La escribió el maestro de Bolívar, el mismo que años después lo acompañó por Europa y guardó de memoria su juramento de Roma. Se repite todo el tiempo en escuelas y discursos sobre educación, y no fue escrita para eso: Rodríguez hablaba de instituciones y de gobiernos, y advertía que copiar los modelos de Europa o de Estados Unidos era la forma más segura de equivocarse.
-
-En el original ni se escribe así: usaba una ortografía propia, con "orijinal" en jota. Murió el 28 de febrero de 1854 en Amotape, un pueblo del norte del Perú, sin nada. Sus restos entraron al Panteón Nacional de Caracas cien años más tarde.
-
-¿Qué estás copiando de un modelo que no se hizo pensando en tu caso?
-
-#SabiduriaDeBolsillo #SimonRodriguez #AmericaLatina #Frases]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re55-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-re55-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
