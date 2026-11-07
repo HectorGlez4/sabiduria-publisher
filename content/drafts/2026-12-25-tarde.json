@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-25-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "el «conócete a ti mismo» de Delfos",
+    "hook": "La frase más famosa de la filosofía griega no la escribió ningún filósofo. Estaba a la entrada de un templo.",
+    "quote": {
+      "text": "Conócete a ti mismo.",
+      "author": "Máxima del templo de Apolo en Delfos",
+      "work": "Platón, Protágoras 343b; Pausanias X, 24, 1",
+      "attribution_verified": true
+    },
+    "body": [
+      "En el santuario de Apolo en Delfos, el lugar del oráculo más consultado de Grecia, había máximas escritas a la vista de quien entraba. Platón, en el «Protágoras», cuenta que los Siete Sabios fueron juntos a Delfos y dedicaron al dios dos de ellas: «Conócete a ti mismo» y «Nada en exceso». Más de cinco siglos después, el viajero Pausanias repitió la misma historia al describir el templo.",
+      "Es decir, la frase no tiene autor. Es una ofrenda colectiva. Sócrates la adoptó, pero no la inventó.",
+      "Jenofonte recoge una conversación en la que Sócrates pregunta a un joven, Eutidemo, si en Delfos vio la inscripción. Él responde que sí, pero que no le prestó atención: estaba seguro de conocerse ya. En el «Fedro», en cambio, es Sócrates quien confiesa que todavía no ha sido capaz de cumplirla, y que por eso le parece ridículo investigar otras cosas antes. El joven la daba por sabida. El viejo seguía en ella."
+    ],
+    "question": "¿Qué descubriste de ti cuando ya creías conocerte?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Delfos", "#Citas", "#Filosofia"],
+    "extended": ["#GreciaAntigua", "#Socrates", "#Platon", "#ConoceteATiMismo", "#Sabiduria", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "En el «Protágoras», Sócrates enumera a los Siete Sabios (Tales, Pítaco, Bías, Solón, Cleobulo, Misón y Quilón), dice que su sabiduría se ve en sus dichos breves, y que se reunieron y dedicaron a Apolo en el templo de Delfos las máximas «Know thyself» y «Nothing overmuch». Lectura directa, trad. W. R. M. Lamb (Loeb, Harvard University Press, 1967), 343a-b.",
+      "source": "Platón, Protágoras 343a-b, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0178:text=Prot.:section=343b"
+    },
+    {
+      "claim": "«These sages, then, came to Delphi and dedicated to Apollo the celebrated maxims, “Know thyself,” and “Nothing in excess.”» Lectura directa, trad. W. H. S. Jones (Loeb), Pausanias, Descripción de Grecia X, 24, 1, en el pronaos del templo.",
+      "source": "Pausanias, Descripción de Grecia X, 24, 1, Theoi Classical Texts Library",
+      "url": "https://www.theoi.com/Text/Pausanias10B.html"
+    },
+    {
+      "claim": "Sócrates pregunta a Eutidemo si estuvo en Delfos y vio la inscripción «Know thyself»; Eutidemo responde que la vio pero no le prestó atención: «Indeed I did not; because I felt sure that I knew that already». Lectura directa, trad. E. C. Marchant (Loeb, 1923).",
+      "source": "Jenofonte, Memorables IV, 2, 24, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0208:book=4:chapter=2:section=24"
+    },
+    {
+      "claim": "Sócrates dice que no tiene tiempo para interpretar mitos porque «I am not yet able, as the Delphic inscription has it, to know myself», y que le parece ridículo investigar lo ajeno mientras ignora eso. Lectura directa, trad. H. N. Fowler (Loeb, 1925).",
+      "source": "Platón, Fedro 229e, Perseus Digital Library, Tufts University",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0174:text=Phaedrus:section=229e"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Sócrates como autor: es una máxima del santuario de Delfos; Sócrates la cita y la comenta.",
+    "Atribuirla a un sabio concreto (Quilón, Tales, Solón...): la tradición antigua no se pone de acuerdo, y Platón y Pausanias la presentan como dedicatoria conjunta de los Siete Sabios.",
+    "Que la inscripción significaba «sabe que eres mortal» o «conoce tus límites»: es una interpretación moderna y antigua plausible, pero no se leyó en una fuente académica en esta ronda. No darla como significado cierto.",
+    "Que estaba grabada «sobre la puerta» o en un lugar exacto del edificio: Pausanias la sitúa en el pronaos; no precisar más.",
+    "La frase latina «Nosce te ipsum» o la «Temet nosce» de Matrix como origen: son traducciones posteriores.",
+    "El año del «Protágoras» (c. 380 a.C.) no se verificó en una fuente leída; no dar fecha de composición.",
+    "Las citas van traducidas por cuenta propia desde las versiones inglesas de la Loeb."
+  ],
+  "status": "draft"
+}

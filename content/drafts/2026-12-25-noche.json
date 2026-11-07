@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-25-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el disco de Festo",
+    "hook": "Alguien en la Creta minoica fabricó sellos para escribir. Solo conocemos un texto hecho con ellos.",
+    "body": [
+      "El 3 de julio de 1908, el arqueólogo italiano Luigi Pernier recuperó en el palacio minoico de Festo, en Creta, un disco de arcilla cocida de unos 16 centímetros. Ambas caras están cubiertas por una espiral de más de doscientos cuarenta signos, de 45 tipos distintos. Se fecha en la Edad del Bronce, en torno a la primera mitad del segundo milenio antes de Cristo.",
+      "Los signos no se dibujaron uno a uno. Se imprimieron en la arcilla blanda con sellos, uno para cada símbolo, y el mismo sello se repite en distintos lugares. El escriba incluso borró y volvió a estampar algunos. Por eso se le ha llamado un antecedente remoto de los tipos móviles.",
+      "El problema es que es el único. No se han encontrado los sellos ni otro texto igual, y con un solo ejemplar no hay forma de comprobar ninguna lectura. Hubo quien llegó a sostener, en 2008, que era una falsificación; la mayoría de los especialistas lo considera auténtico, aunque el museo de Heraclión, donde se exhibe, no ha permitido pruebas que lo dañen. Más de un siglo después, nadie sabe qué dice."
+    ],
+    "question": "¿Qué vale un mensaje que nadie más puede leer?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El disco de Festo",
+    "subtitle": "Creta, hallado en 1908",
+    "body": "Sus signos se imprimieron con sellos en la arcilla blanda, uno por símbolo. Es el único texto conocido de esa escritura, y por eso, más de un siglo después de su hallazgo, nadie ha podido leerlo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Arqueologia", "#Creta"],
+    "extended": ["#DiscoDeFesto", "#Minoicos", "#Escritura", "#EdadDelBronce", "#Misterios", "#GreciaAntigua"]
+  },
+  "sources": [
+    {
+      "claim": "El disco lo descubrió Luigi Pernier el 3 de julio de 1908 en el área nororiental del palacio de Festo; mide 15,8-16,5 cm de diámetro; tiene 45 signos distintos; la superficie fue «stamped with tiny seals to create the pictograms»; es el único artefacto conocido con esta escritura; se guarda en el Museo Arqueológico de Heraclión; ha resistido innumerables intentos de traducción. Lectura directa.",
+      "source": "Swansea University, Ancient World, «The Phaistos disc (disk)»",
+      "url": "https://ancient-world.swansea.ac.uk/?p=1614"
+    },
+    {
+      "claim": "Pernier lo halló en 1908 en una dependencia subterránea del palacio de Festo, en una capa de tierra negra y ceniza; tiene 241 símbolos de 45 signos distintos impresos con sellos individuales; algunos símbolos se produjeron con sellos distintos; hay símbolos borrados y vueltos a inscribir; se fecha hacia 1700-1600 a.C. Lectura directa.",
+      "source": "The Past (Current Publishing), «The Phaistos Disc», 29 de diciembre de 2018",
+      "url": "https://the-past.com/shorts/objects/the-phaistos-disc/"
+    },
+    {
+      "claim": "Los símbolos se estamparon en la arcilla, no se inscribieron uno a uno, y el artículo lo llama el ejemplo más antiguo conocido del uso de «tipos móviles»; «nothing else like it has so far been unearthed»; no se sabe qué significan los símbolos. Lectura directa.",
+      "source": "Josho Brouwers, «The Phaistos Disc», Ancient World Magazine, 28 de septiembre de 2019",
+      "url": "https://www.ancientworldmagazine.com/articles/phaistos-disc"
+    },
+    {
+      "claim": "Jerome Eisenberg publicó en Minerva en 2008 que el disco era un fraude de Pernier; tras ello se pidió una prueba de termoluminiscencia, que el Museo Arqueológico de Heraclión ha declinado; «most scholars think that the disk is likely genuine»; sigue sin traducir. Lectura directa.",
+      "source": "Lou Bodenhemier, «Fraud or Find? What We Know About Crete's Mysterious Phaistos Disk», ExplorersWeb, 24 de noviembre de 2025",
+      "url": "https://explorersweb.com/fraud-or-find-what-we-know-about-cretes-mysterious-phaistos-disk/"
+    }
+  ],
+  "do_not_use": [
+    "Una cifra exacta de signos: unas fuentes dan 241 y otras 242. Decir «más de doscientos cuarenta».",
+    "Una fecha precisa: las propuestas van de 1850 a 1400 a.C. según autores. No dar siglo exacto.",
+    "Presentarlo sin matiz como «la primera imprenta» o «el primer tipo móvil»: no es impresión en sentido moderno, y la etiqueta se discute. Decir «antecedente remoto».",
+    "Cualquier «desciframiento» (calendario, himno, eclipse, texto en griego o en luvita): ninguno se ha podido verificar. La hipótesis del museo de que sea un himno o encantamiento es especulación.",
+    "Que los signos son los mismos que el Lineal A: hay parecidos discutidos y un estudio estadístico de 2018, no una equivalencia demostrada.",
+    "Que sea con seguridad una falsificación o con seguridad auténtico: la mayoría lo tiene por auténtico, pero no se ha hecho la prueba de termoluminiscencia.",
+    "La página del Museo de Heraclión no se pudo leer (error de certificado); lo que se dice del museo procede de fuentes secundarias."
+  ],
+  "status": "draft"
+}

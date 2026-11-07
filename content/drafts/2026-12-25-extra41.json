@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-25-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Patrice Lumumba y la carta a Pauline desde Thysville",
+    "hook": "Su frase más citada se atribuye al discurso de la independencia del Congo. La escribió después, preso, en una carta a su esposa.",
+    "quote": {
+      "text": "La historia dirá un día su palabra. […] África escribirá su propia historia.",
+      "author": "Patrice Lumumba",
+      "work": "Carta a su esposa Pauline desde la prisión de Thysville",
+      "attribution_verified": true
+    },
+    "body": [
+      "El 30 de junio de 1960, día de la independencia del Congo, Patrice Lumumba pronunció un discurso que todavía se recuerda. Meses después estaba preso en Thysville. Desde allí escribió una carta a su esposa, Pauline. Fue asesinado el 17 de enero de 1961.",
+      "En esa carta dice que la historia hablará un día, pero que no será la que se enseñe en Bruselas, en París, en Washington ni en las Naciones Unidas. Y añade que África escribirá su propia historia, una historia de gloria y de dignidad. Ese mismo año se publicó en Moscú, en una recopilación de sus textos, con el título «Carta desde la prisión de Thysville».",
+      "Hoy la frase circula como si la hubiera pronunciado en aquel discurso. La agencia de prensa del Congo lo desmiente: nunca la dijo allí. No era una consigna ante una multitud. Era lo que un preso le escribía a su mujer, poco antes de morir."
+    ],
+    "question": "¿Quién crees que escribirá la historia de tu tiempo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lumumba", "#Citas", "#Africa"],
+    "extended": ["#Congo", "#HistoriaDeAfrica", "#Descolonizacion", "#SigloXX", "#Cartas", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "El texto «Letter from Thysville Prison to Mrs. Lumumba» se publicó en Patrice Lumumba, The Truth about a Monstrous Crime of the Colonialists, Moscú, Foreign Languages Publishing House, 1961, pp. 230-231, e incluye «The day will come when history will speak», que no será la historia enseñada en Bruselas, París, Washington o las Naciones Unidas, y «Africa will write its own history». Lectura directa.",
+      "source": "Marxists Internet Archive, Patrice Lumumba, «Letter from Thysville Prison to Mrs. Lumumba» (transcripción de la edición de Moscú de 1961)",
+      "url": "https://www.marxists.org/subject/africa/lumumba/1961/xx/letter.htm"
+    },
+    {
+      "claim": "Texto francés de la carta-testamento a su compañera Pauline, escrita en prisión pocos días antes de su asesinato del 17 de enero de 1961: «L'histoire dira un jour son mot», «mais ce ne sera pas l'histoire qu'on enseignera à Bruxelles, Washington, Paris ou aux Nations Unies», «L'Afrique écrira sa propre histoire», «une histoire de gloire et de dignité». Lectura directa.",
+      "source": "Ali Attar, «La lettre testament de Patrice Lumumba», Afrik.com, 17 de enero de 2011",
+      "url": "https://www.afrik.com/la-lettre-testament-de-patrice-lumumba"
+    },
+    {
+      "claim": "La Agencia Congoleña de Prensa clasifica «L'Afrique écrira sa propre histoire» entre las «Fausses citations» del discurso del 30 de junio de 1960: nunca se pronunció allí; «Elle provient d'une lettre à sa femme en 1961». Lectura directa.",
+      "source": "Agence Congolaise de Presse (ACP), «Le discours de Lumumba du 30 juin 1960 – Mythes, Réalités et Postérité», #ACP_Debunkage, 30 de junio de 2025",
+      "url": "https://acp.cd/debunkage/le-discours-de-lumumba-du-30-juin-1960-mythes-realites-et-posterite/"
+    },
+    {
+      "claim": "La carta, escrita poco antes de su asesinato del 17 de enero de 1961, dice «History will one day have its say, but it will not be the history that is taught in Brussels, Paris, Washington or in the United Nations» y «Africa will write its own history». Lectura directa.",
+      "source": "Letters of Note, «I prefer to die with my head unbowed»",
+      "url": "https://news.lettersofnote.com/p/i-prefer-to-die-with-my-head-unbowed"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase al discurso de la independencia del 30 de junio de 1960: la ACP lo desmiente expresamente.",
+    "Una fecha exacta de la carta: el archivo marxista neerlandés la fecha en noviembre de 1960, otras fuentes en enero de 1961, y la edición de Moscú no da fecha. Decir solo que la escribió preso en Thysville, poco antes de su muerte.",
+    "El orden de las ciudades: la versión francesa de Afrik.com da «Bruxelles, Washington, Paris» y las inglesas «Brussels, Paris, Washington». No reproducir el pasaje de las ciudades entre comillas.",
+    "El final «au nord et au sud du Sahara»: circula unido a la frase pero no se leyó completo en una fuente de esta ronda. No citarlo.",
+    "El Camp Hardy y el traslado a Thysville el 2 de diciembre de 1960: solo aparece en un artículo de Senego no leído. No dar fecha del traslado.",
+    "Quién lo mató y cómo (agentes belgas, Katanga, Tshombe, CIA): la responsabilidad es compleja y no se verificó en esta ronda. Decir solo que fue asesinado el 17 de enero de 1961.",
+    "La frase «Je préfère mourir la tête haute»: es de la misma carta, pero no se leyó en el original francés. No usarla.",
+    "La traducción al español es propia, desde el francés de Afrik.com y el inglés de la edición de Moscú."
+  ],
+  "status": "draft"
+}

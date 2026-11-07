@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-25-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Alfred Wegener y la deriva continental (1912)",
+    "hook": "El hombre que dijo que los continentes se mueven no era geólogo. Y murió sin saber qué los movía.",
+    "body": [
+      "El 6 de enero de 1912, en una reunión de la Asociación Geológica en Fráncfort, un meteorólogo de 31 años llamado Alfred Wegener expuso una idea extraña: los continentes no estaban fijos, se habían separado de una sola masa. En 1915 la desarrolló en un libro, «El origen de los continentes y los océanos».",
+      "La respuesta de los geólogos fue hostil. Le reprochaban ser un intruso, y tenían un argumento serio: Wegener no podía explicar qué fuerza empujaba algo tan enorme. Él mismo lo reconoció en 1929: el Newton de la teoría de la deriva todavía no había aparecido. Ninguna universidad alemana le dio una cátedra; la consiguió en Graz, Austria, en 1924.",
+      "En 1930 dirigió una expedición a Groenlandia. El 1 de noviembre, el día que cumplía 50 años, salió de la estación Eismitte hacia la costa con el groenlandés Rasmus Villumsen. Su cuerpo apareció el 12 de mayo de 1931. Villumsen y el diario de Wegener no se encontraron nunca. Las pruebas que le dieron la razón llegaron desde mediados de los años cincuenta, del fondo del océano."
+    ],
+    "question": "¿Qué idea tuya tiene razón aunque todavía no sepas explicarla?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Alfred Wegener",
+    "subtitle": "Fráncfort, 6 de enero de 1912",
+    "body": "Un meteorólogo propuso que los continentes se mueven. Los geólogos lo rechazaron porque no sabía qué fuerza los empujaba. Murió en Groenlandia en 1930; las pruebas llegaron décadas después, del fondo del mar."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Historia", "#Ciencia", "#Geologia"],
+    "extended": ["#AlfredWegener", "#DerivaContinental", "#TectonicaDePlacas", "#Groenlandia", "#SigloXX", "#HistoriaDeLaCiencia"]
+  },
+  "sources": [
+    {
+      "claim": "Wegener nació en Berlín en 1880; el 6 de enero de 1912, siendo un «31-year-old meteorologist», presentó en la reunión anual de la Asociación Geológica en Fráncfort del Meno su visión de la formación de océanos y continentes; su obra principal apareció como libro en 1915; murió en el regreso desde Eismitte, presumiblemente hacia el 16 de noviembre de 1930; la búsqueda dirigida por Ernst Sorge y Karl Weiken encontró su tumba el 12 de mayo de 1931; «Willumsen and with him Wegener's diary remained missing». Lectura directa.",
+      "source": "Alfred-Wegener-Institut, Helmholtz-Zentrum für Polar- und Meeresforschung, biografía de Alfred Wegener",
+      "url": "https://www.awi.de/en/about-us/organisation/alfred-wegener.html"
+    },
+    {
+      "claim": "El 6 de enero de 1912 Wegener expuso su teoría ante la Geological Association en Fráncfort; publicó The Origin of Continents and Oceans en 1915; la reacción fue «militantly hostile» y se le atacó como intruso; no podía identificar una fuerza capaz de mover los continentes; en 1929 escribió «The Newton of drift theory has not yet appeared»; ninguna universidad alemana le dio cátedra y Graz lo nombró en 1924; el 1 de noviembre de 1930, día de su 50 cumpleaños, salió de Eismitte con Rasmus Villumsen; su cuerpo se encontró el 12 de mayo de 1931 y el de Villumsen nunca; desde mediados de los años cincuenta el paleomagnetismo y la oceanografía convencieron a la mayoría de que los continentes se mueven. Lectura directa.",
+      "source": "NASA Earth Observatory, «Alfred Wegener» (2001, actualizado 2026)",
+      "url": "https://science.nasa.gov/earth/earth-observatory/alfred-wegener"
+    },
+    {
+      "claim": "Wegener presentó la hipótesis el 6 de enero de 1912 en Fráncfort; en 1915 reunió pruebas de varias disciplinas en The Origin of Continents and Oceans; no tenía un mecanismo convincente; la exploración del fondo oceánico en los años cincuenta apoyó el movimiento de las placas y «by the late 1960s, plate tectonics was the scientific consensus among geologists»; su cuerpo se recuperó el 12 de mayo de 1931 y Villumsen nunca apareció. Lectura directa.",
+      "source": "APS News, «This Month in Physics History: January 6, 1912», American Physical Society, enero de 2019",
+      "url": "https://aps.org/publications/apsnews/201901/history.cfm"
+    }
+  ],
+  "do_not_use": [
+    "La frase «Utter, damned rot!» y su autor: NASA la atribuye al presidente de una sociedad estadounidense sin que se haya verificado quién ni dónde. No citarla.",
+    "La causa de la muerte como hecho: el AWI dice que solo puede suponerse un fallo cardiaco y NASA que «probablemente» fue un infarto. No darla como segura.",
+    "La fecha exacta de la muerte: el AWI la sitúa «presumiblemente» hacia el 16 de noviembre de 1930. No dar día.",
+    "La edad de Villumsen: NASA y APS discrepan (22 o 23). No darla.",
+    "Que el cuerpo se encontrara en abril de 1931: AWI, NASA y APS dan el 12 de mayo.",
+    "Llamarlo «geólogo»: era meteorólogo, doctorado en astronomía en 1904.",
+    "Que Wegener propusiera la tectónica de placas tal como se entiende hoy: su mecanismo (fuerza centrífuga, precesión) era erróneo; la tectónica de placas es de los años sesenta.",
+    "El título «El origen de los continentes y los océanos» va traducido por cuenta propia desde «Die Entstehung der Kontinente und Ozeane»."
+  ],
+  "status": "draft"
+}
