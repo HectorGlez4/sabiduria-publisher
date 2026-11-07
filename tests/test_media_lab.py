@@ -6287,6 +6287,8 @@ def seccion_sitio_instagram() -> None:
     registro = [{"slug": "viejo", "publicado_en": (ahora - timedelta(days=91)).isoformat()},
                 {"slug": "nuevo", "publicado_en": (ahora - timedelta(days=5)).isoformat()}]
     check(si.usadas_desde(registro, ahora=ahora) == {"nuevo"}, "una cita vuelve a valer a los 90 días")
+    check(si.story_reciente("Story de sabiduriabolsillo, il y a 26 secondes", "sabiduriabolsillo"),
+          "una Story de hace segundos también es reciente")
     check(si.story_reciente("Story de sabiduriabolsillo, il y a 4 minutes", "sabiduriabolsillo")
           and not si.story_reciente("Story de sabiduriabolsillo, il y a 5 heures", "sabiduriabolsillo")
           and not si.story_reciente("Story de otra, il y a 1 minute", "sabiduriabolsillo"),

@@ -666,26 +666,24 @@ def publicar(superficie: str, ev: Path) -> dict:
     publicado_en = datetime.now(timezone.utc).isoformat(timespec="seconds")
     _tocar_id(xml2, boton)
     avisos = []
-    if superficie == "reel":
-        # Aviso de reutilización del audio original: decisión del usuario del 2026-11-03.
+    # Tras pulsar pueden salir, en cualquier orden y con retraso, el aviso del audio original (Reel: decisión del
+    # usuario del 2026-11-03, «Désactiver et partager») y la hoja del estado de WhatsApp, que retiene la
+    # publicación hasta que se contesta («Plus tard»; 7 nov: en el Reel salió a los ~15 s y lo tumbó). Se vigila
+    # los 30 s enteros: la barra de subida sale antes que la hoja, así que verla no basta para parar. La Story no
+    # saca ninguna de las dos.
+    limite = time.monotonic() + (30 if superficie != "story" else 0)
+    while time.monotonic() < limite:
         try:
-            xml = _esperar(lambda x: telefono.buscar(x, texto="Désactiver et partager", paquete=IG) is not None,
-                           "el aviso de audio original", plazo=8)
+            xml = telefono.volcado(timeout=10)
+        except telefono.TelefonoError:
+            time.sleep(1.5)
+            continue
+        if superficie == "reel" and telefono.buscar(xml, texto="Désactiver et partager", paquete=IG) is not None:
             _tocar_texto(xml, "Désactiver et partager")
             avisos.append("aviso de audio original: «Désactiver et partager»")
-        except PantallaInesperada:
-            pass
-    if superficie != "story":
-        # «Partager dans le statut WhatsApp ?» retiene la publicación hasta que se contesta (7 nov).
-        limite = time.monotonic() + 10
-        while time.monotonic() < limite:
-            try:
-                if quitar_whatsapp(telefono.volcado(timeout=10)):
-                    avisos.append("hoja del estado de WhatsApp: «Plus tard»")
-                    break
-            except telefono.TelefonoError:
-                pass
-            time.sleep(1.5)
+        elif quitar_whatsapp(xml):
+            avisos.append("hoja del estado de WhatsApp: «Plus tard»")
+        time.sleep(1.5)
     time.sleep(5)
     return {"publicado_en": publicado_en, "avisos": avisos, "captura_antes": antes,
             "captura": str(telefono.captura(ev / "06-tras-publicar.png"))}
@@ -697,7 +695,7 @@ def _subiendo(xml: str) -> bool:
                for n in telefono.nodos(xml))
 
 
-_HACE_MINUTOS = re.compile(r"Story de (?P<cuenta>[^,]+), il y a (?P<n>\d+) minutes?")
+_HACE_MINUTOS = re.compile(r"Story de (?P<cuenta>[^,]+), il y a (?P<n>\d+) (?P<unidad>minutes?|secondes?)")
 
 
 _VISOR = re.compile(r"Story de (?P<cuenta>[^,]+), il y a ")
@@ -715,7 +713,8 @@ def _segmento_del_visor(xml: str, cuenta: str) -> str | None:
 def story_reciente(desc: str, cuenta: str, max_min: int = 5) -> bool:
     """El content-desc del visor es de una Story de `cuenta` publicada hace ≤ `max_min` minutos."""
     m = _HACE_MINUTOS.match(desc)
-    return bool(m) and m["cuenta"] == cuenta and int(m["n"]) <= max_min
+    # Recién publicada dice «il y a 26 secondes»: también cuenta (7 nov, la tumbaba).
+    return bool(m) and m["cuenta"] == cuenta and (m["unidad"].startswith("seconde") or int(m["n"]) <= max_min)
 
 
 def _recorrer_visor(ev: Path, cuenta: str, camino: str, plazo_s: int = 150) -> dict:
