@@ -266,12 +266,29 @@ def quitar_valoracion(xml: str) -> bool:
     return True
 
 
+def quitar_whatsapp(xml: str) -> bool:
+    """Cierra «Partager dans le statut WhatsApp ?» con «Plus tard»: nunca se comparte con los contactos. Sale al
+    pulsar Compartir en el feed y retiene la publicación mientras está abierta (7 nov: la foto no llegó a salir)."""
+    if telefono.buscar(xml, contiene="statut WhatsApp", paquete=IG) is None:
+        return False
+    boton = telefono.buscar(xml, texto="Plus tard", paquete=IG)
+    if boton is None:
+        return False
+    telefono.tocar(*boton["centro"])
+    return True
+
+
+def quitar_dialogos(xml: str) -> bool:
+    """Los diálogos de Instagram que tapan el flujo y se cierran sin elegir nada que publique o comparta."""
+    return quitar_valoracion(xml) or quitar_whatsapp(xml)
+
+
 def _esperar(cumple, descripcion: str, plazo: float = ESPERA_S) -> str:
     limite = time.monotonic() + plazo
     while True:
         try:
             xml = telefono.volcado(timeout=20)
-            if not quitar_valoracion(xml) and cumple(xml):  # tras quitarla, el plazo sigue corriendo
+            if not quitar_dialogos(xml) and cumple(xml):  # tras quitarla, el plazo sigue corriendo
                 return xml
         except telefono.TelefonoError:
             pass
@@ -658,6 +675,17 @@ def publicar(superficie: str, ev: Path) -> dict:
             avisos.append("aviso de audio original: «Désactiver et partager»")
         except PantallaInesperada:
             pass
+    if superficie != "story":
+        # «Partager dans le statut WhatsApp ?» retiene la publicación hasta que se contesta (7 nov).
+        limite = time.monotonic() + 10
+        while time.monotonic() < limite:
+            try:
+                if quitar_whatsapp(telefono.volcado(timeout=10)):
+                    avisos.append("hoja del estado de WhatsApp: «Plus tard»")
+                    break
+            except telefono.TelefonoError:
+                pass
+            time.sleep(1.5)
     time.sleep(5)
     return {"publicado_en": publicado_en, "avisos": avisos, "captura_antes": antes,
             "captura": str(telefono.captura(ev / "06-tras-publicar.png"))}

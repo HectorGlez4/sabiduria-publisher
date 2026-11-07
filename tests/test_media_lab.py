@@ -6167,6 +6167,20 @@ def seccion_sitio_instagram() -> None:
     finally:
         si.telefono.tocar = tocar_real
 
+    hoja = ("<hierarchy>" + nodo("Partager dans le statut WhatsApp ?", 90, 1430, 990, 1560)
+            + nodo("Oui, continuer", 45, 1808, 1035, 1931, True) + nodo("Plus tard", 450, 1980, 630, 2050, True)
+            + "</hierarchy>")
+    si.telefono.tocar = lambda x, y: toques.append((x, y))
+    try:
+        toques.clear()
+        check(si.quitar_whatsapp(hoja) and toques == [(540, 2015)],
+              "la hoja del estado de WhatsApp se cierra con «Plus tard», nunca «Oui, continuer»")
+        toques.clear()
+        check(not si.quitar_whatsapp("<hierarchy>" + nodo("Plus tard", 450, 1980, 630, 2050, True) + "</hierarchy>")
+              and not toques, "un «Plus tard» sin la hoja de WhatsApp no se toca")
+    finally:
+        si.telefono.tocar = tocar_real
+
     # El editor del clip con ✓ arriba a la derecha: un único pulsable en la esquina; sin el texto, nada.
     seccion = nodo("Choisissez la section à ajouter à votre reel.", 156, 1650, 924, 1700)
     fondo = nodo("", 0, 0, 1080, 2340)
