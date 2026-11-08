@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-09-tarde",
+  "id": "2026-11-10-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#CharlotteBronte", "#JaneEyre", "#Citas"],
-    "extended": ["#LiteraturaInglesa", "#Novela", "#SigloXIX", "#Literatura", "#Libertad", "#Lectura", "#Sabiduria"]
+    "topic": [
+      "#CharlotteBronte",
+      "#JaneEyre",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaInglesa",
+      "#Novela",
+      "#SigloXIX",
+      "#Literatura",
+      "#Libertad",
+      "#Lectura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +69,12 @@
     "La fecha exacta de la escena (víspera de San Juan): no se verificó en el texto. El cuerpo dice «una noche de verano».",
     "«Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless?»: está en el mismo capítulo y se verificó, pero se reserva para otra pieza; no mezclar dos citas."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-11T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

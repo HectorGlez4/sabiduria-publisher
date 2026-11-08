@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-07-extra41",
+  "id": "2026-11-10-extra82",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JamesBaldwin", "#Citas", "#Literatura"],
-    "extended": ["#LiteraturaEstadounidense", "#Ensayo", "#Hemingway", "#Faulkner", "#SigloXX", "#Sabiduria"]
+    "topic": [
+      "#JamesBaldwin",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#LiteraturaEstadounidense",
+      "#Ensayo",
+      "#Hemingway",
+      "#Faulkner",
+      "#SigloXX",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "Que la frase sea de un discurso o de una entrevista: es la primera línea de un ensayo impreso.",
     "La reimpresión en Negro Digest (enero de 1963) se conoce solo por Popik; no se menciona."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-10T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

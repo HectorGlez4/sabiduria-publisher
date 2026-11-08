@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-09-extra41",
+  "id": "2026-11-10-extra84",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#TaoYuanming", "#PoesiaChina", "#Citas"],
-    "extended": ["#China", "#Poesia", "#DinastiaJin", "#Crisantemos", "#Retiro", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#TaoYuanming",
+      "#PoesiaChina",
+      "#Citas"
+    ],
+    "extended": [
+      "#China",
+      "#Poesia",
+      "#DinastiaJin",
+      "#Crisantemos",
+      "#Retiro",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "El año de nacimiento 365 es el tradicional; Yuan Xingpei propone 352. El cuerpo usa 365-427, que es lo que dan JAANUS y la tradición.",
     "Los ochenta días en Pengze: solo los da Wikipedia entre las fuentes leídas. No se usan."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-11T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

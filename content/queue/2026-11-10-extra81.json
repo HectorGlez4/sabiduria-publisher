@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-05-extra43",
+  "id": "2026-11-10-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#MaryOliver", "#Poesia", "#Citas"],
-    "extended": ["#PoesiaEstadounidense", "#Naturaleza", "#Atencion", "#Literatura", "#Lectura", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#MaryOliver",
+      "#Poesia",
+      "#Citas"
+    ],
+    "extended": [
+      "#PoesiaEstadounidense",
+      "#Naturaleza",
+      "#Atencion",
+      "#Literatura",
+      "#Lectura",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "Que viviera en Provincetown cuando escribió el poema: poets.org dice que vivió allí más de cuarenta años, hasta 2005 aproximadamente; la pieza dice que en 1984 vivía allí desde hacía años, lo que encaja con ese dato, pero no da la fecha de llegada.",
     "Afirmar que la línea se usa en tazas, carteles o discursos de graduación: es plausible, pero no se buscó fuente. No se menciona."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-10T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
