@@ -31,6 +31,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres un ciclo del bucle «
 
 ## Si algo falla
 - **Borrador abierto** (un 4 en a, b o c, o un FAIL del revisor): Instagram tiene un editor a medias. Sal con `lab.py telefono-atras --app instagram --run RUN_F --nombre salida-N` mirando cada captura. Cuando la captura muestre el diálogo «Recommencer ?» o «Abandonner la photo ?», `lab.py telefono-descartar --app instagram --run RUN_F --nombre descarte`. Si no lo consigues en tres «atrás», para el ciclo (paso 5) y dilo en el informe: el siguiente ciclo encontraría el editor abierto.
+- Un 4 en el paso a con «sigue en negro»: Instagram abrió el editor sin la tarjeta (pasa a veces con la foto justo después del Reel). Sal como en «Borrador abierto» y repite el paso a de ese formato **una sola vez**; si vuelve a salir en negro, déjalo sin publicar y sigue con el siguiente formato.
 - `SinHueco` en el paso c de la Story: la cita es demasiado larga para el sticker. Descarta el borrador como arriba y termina el ciclo con la Story sin publicar; no la publiques sin enlace.
 - Un 4 con `CuentaAjena`: Instagram tiene activa otra cuenta, no @sabiduriabolsillo. No cambies de cuenta ni toques más el teléfono (paso 5); ponlo en la primera línea del informe para que el usuario la devuelva.
 - Un 4 con `TelefonoNoListo`, `SinVolcado` o `TelefonoError` (por ejemplo «device not found»: el teléfono se desconectó del USB): no toques más el teléfono en este ciclo (paso 5) y dilo en la primera línea del informe para que el usuario lo reconecte.

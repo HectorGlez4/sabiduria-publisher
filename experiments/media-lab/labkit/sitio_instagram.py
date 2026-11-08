@@ -127,10 +127,11 @@ def elegir_pista(filas: list[Pista], recientes: list[str], rng: random.Random) -
 
 def lienzo_pintado(captura: Path, minimo: float = 4.0) -> bool:
     """La tarjeta se ve en el editor: en la franja de la cita hay contraste (texto sobre fondo). La vista previa
-    en negro es un plano casi uniforme; vale para los tres diseños, también el oscuro."""
+    en negro es un plano casi uniforme; vale para los tres diseños, también el oscuro. La franja cae dentro del
+    cuadrado del feed (y 567–1647): con y desde 500 el borde gris de encima daba 4,0 a una foto negra."""
     from PIL import Image, ImageStat
     with Image.open(captura) as im:
-        franja = im.convert("L").crop((60, 500, im.width - 60, 1500))
+        franja = im.convert("L").crop((60, 620, im.width - 60, 1600))
         return ImageStat.Stat(franja).stddev[0] >= minimo
 
 
@@ -414,11 +415,13 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
     _esperar(lambda x: bool(por_id(x, EDITOR[superficie])), f"el editor de {opcion}", plazo=40)
     time.sleep(2)
     # El Reel a veces abre con la vista previa en negro y la tarjeta tarda en pintarse (5 nov: tres Reels
-    # descartados así). Se espera a ver texto en el lienzo antes de seguir; si no llega, pantalla inesperada.
-    limite = time.monotonic() + 30
-    while superficie == "reel" and not lienzo_pintado(telefono.captura(ev / "01a-editor-espera.png")):
+    # descartados así). Al feed le pasa igual cuando llega justo tras el Reel (7 y 8 nov: dos fotos en negro, con
+    # la miniatura también negra). Se espera a ver texto en el lienzo; si no llega, pantalla inesperada.
+    # La Story no: su editor pinta encima herramientas y el contraste no distingue negro de tarjeta.
+    limite = time.monotonic() + 45
+    while superficie != "story" and not lienzo_pintado(telefono.captura(ev / "01a-editor-espera.png")):
         if time.monotonic() >= limite:
-            raise PantallaInesperada("el editor del Reel sigue en negro tras 30 s")
+            raise PantallaInesperada(f"el editor del {SUPERFICIES[superficie]} sigue en negro tras 45 s")
         time.sleep(3)
     pie = ev / "pie.txt"
     pie.write_text(pie_para(texto_plano), encoding="utf-8")

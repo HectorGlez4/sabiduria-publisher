@@ -6273,6 +6273,12 @@ def seccion_sitio_instagram() -> None:
         im.save(tarjeta)
         check(not si.lienzo_pintado(negro) and si.lienzo_pintado(tarjeta),
               "el editor en negro no cuenta como pintado; una tarjeta oscura con texto sí")
+        # El feed en negro del 8 nov: cuadrado negro (y 567–1647) bajo una cabecera gris oscura.
+        feed_negro = pathlib.Path(d) / "feed-negro.png"
+        im = Image.new("RGB", (1080, 2340), (17, 20, 25))
+        ImageDraw.Draw(im).rectangle((0, 567, 1079, 1647), fill=(0, 0, 0))
+        im.save(feed_negro)
+        check(not si.lienzo_pintado(feed_negro), "la foto del feed en negro bajo la cabecera gris no cuenta como pintada")
     try:
         si.pie_para("x" * 2300)
         check(False, "un pie de más de 2200 caracteres se rechaza")
