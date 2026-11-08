@@ -68,12 +68,15 @@
     "Que Vinteuil es un compositor real: es un personaje de la novela. Se discuten sus posibles modelos (Franck, Saint-Saëns, Fauré y otros); no se verificaron y no entran.",
     "Fecha exacta de publicación (noviembre de 1923): no se verificó el mes. El copy dice solo 1923."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-07T23:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
