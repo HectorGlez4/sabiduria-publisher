@@ -66,7 +66,7 @@
     "Que las campanas que oía eran las de la catedral de San Pablo, de la que era deán, o las de una iglesia concreta junto a su casa: no se verificó.",
     "La versión «por quién doblan las campanas, doblan por ti» con signo de pregunta: en el original no es una pregunta, es una orden de no enviar a preguntar."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-07T19:26:00Z",
   "results": {
     "facebook": {
@@ -80,7 +80,7 @@
       "published_at": "2026-11-08T04:27:40.855037+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 07-Nov-26 22:23:49 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 08-Nov-26 03:40:55 PST."
     }
   },
   "targets": [
@@ -88,6 +88,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-08T06:23:49.952532+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-08T11:40:55.131250+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 08-Nov-26 03:40:55 PST."
+  ]
 }
