@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-27-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "José Ingenieros y la proa visionaria (1913)",
+    "hook": "La frase de la estrella abre un libro que, durante ocho de sus diez capítulos, habla de lo contrario.",
+    "quote": {
+      "text": "Cuando pones la proa visionaria hacia una estrella y tiendes el ala hacia tal excelsitud inasible, afanoso de perfección y rebelde a la mediocridad, llevas en ti el resorte misterioso de un Ideal.",
+      "author": "José Ingenieros",
+      "work": "El hombre mediocre, «La moral de los idealistas», I (Renacimiento, 1913)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1913, la editorial Renacimiento, de Madrid y Buenos Aires, publicó «El hombre mediocre», de José Ingenieros, médico y psiquiatra nacido en Palermo en 1877. Su primera sección se titula «Las luces del camino», y su primera frase es la de la proa y la estrella.",
+      "Esa frase se lee como una arenga, y lo es. Pero el libro que abre es, sobre todo, un diagnóstico. De sus diez capítulos, ocho estudian al mediocre: su inteligencia, su moral, la envidia, la vejez niveladora. Dos de ellos llevan el asunto a la política con una palabra propia, «mediocracia». Una sección se titula «La política de las piaras».",
+      "La estrella del comienzo no es un adorno. Es la medida con la que Ingenieros juzga todo lo que viene después. Murió en Buenos Aires en 1925, a los 48 años, y su frase más citada sigue siendo la única página luminosa de un libro severo."
+    ],
+    "question": "¿Qué estrella usas tú para medir lo que te conformas con hacer?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JoseIngenieros", "#Citas", "#LiteraturaArgentina"],
+    "extended": ["#ElHombreMediocre", "#Ideales", "#Ensayo", "#Argentina", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Edición Renacimiento, Madrid y Buenos Aires, 1913. El primer capítulo, «La moral de los idealistas», abre con la sección «I.—Las luces del camino», cuya primera frase es «Cuando pones la proa visionaria hacia una estrella y tiendes el ala hacia tal excelsitud inasible, afanoso de perfección y rebelde á la mediocridad, llevas en ti el resorte misterioso de un Ideal» (con la acentuación antigua «á»). Índice de diez capítulos: La moral de los idealistas; El hombre mediocre; La mediocridad intelectual; La mediocridad moral; Los caracteres mediocres; La envidia; La vejez niveladora; La mediocracia (con la sección «La política de las piaras»); Los arquetipos de la mediocracia; Los forjadores de ideales. Lectura directa.",
+      "source": "José Ingenieros, «El hombre mediocre. Ensayo de psicología y moral», Renacimiento (Madrid-Buenos Aires, 1913), Project Gutenberg eBook #64974",
+      "url": "https://www.gutenberg.org/ebooks/64974"
+    },
+    {
+      "claim": "La primera edición de «El hombre mediocre» es de Madrid, Editorial Renacimiento, 1913; existe una sexta edición póstuma de 1926 corregida por el autor. La obra figura entre los ensayos de José Ingenieros. Lectura directa.",
+      "source": "Wikisource en español, «El hombre mediocre» (página de ediciones)",
+      "url": "https://es.wikisource.org/wiki/El_hombre_mediocre"
+    },
+    {
+      "claim": "José Ingenieros nació como Giuseppe Ingegnieri en Palermo el 24 de abril de 1877 y murió en Buenos Aires el 31 de octubre de 1925, a los 48 años; fue médico, psiquiatra, criminólogo, sociólogo y escritor; «El hombre mediocre» es de 1913. Lectura directa.",
+      "source": "ABC Color (Asunción), «“El hombre mediocre”: ¿sos capaz de pensar por vos mismo?», 11 de mayo de 2021",
+      "url": "https://www.abc.com.py/marketing/2021/05/11/el-hombre-mediocre-sos-capaz-de-pensar-por-vos-mismo/"
+    }
+  ],
+  "do_not_use": [
+    "Que escribió el libro por despecho tras perder en 1911 la cátedra de Medicina Legal de la UBA, o que se lo dedicó con ironía al presidente Roque Sáenz Peña: aparece en estudios académicos, pero solo en PDF que no se pudieron leer en esta ronda; no se usa hasta verificarlo.",
+    "Llamar «Introducción» a la sección de la frase: en la edición de 1913 leída es el capítulo «La moral de los idealistas», sección I «Las luces del camino»; otras ediciones lo rotulan como introducción.",
+    "Versiones con variantes («hacia una estrella y tiendes las alas», «rebelde ante la mediocridad»): el texto de 1913 dice «tiendes el ala» y «rebelde á la mediocridad».",
+    "Que el libro se publicó en 1914 o primero en Europa en otra fecha: la portada de la edición leída dice 1913.",
+    "Datos de la vida de Ingenieros fuera de nacimiento, muerte y profesión: solo se verificaron en un artículo de prensa; no se usan."
+  ],
+  "status": "draft"
+}

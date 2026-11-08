@@ -1,0 +1,54 @@
+{
+  "id": "2026-12-27-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Ícaro y el vuelo a media altura",
+    "hook": "Dédalo no solo le prohibió a Ícaro volar alto. También le prohibió volar bajo.",
+    "body": [
+      "En el libro VIII de las «Metamorfosis», Ovidio cuenta cómo Dédalo arma alas de plumas y cera para él y para su hijo. Antes de despegar le da una instrucción precisa: volar por el camino del medio, «medio limite». Si baja demasiado, el agua del mar le cargará las plumas. Si sube demasiado, el fuego del sol se las quemará.",
+      "No es una versión aislada. Apolodoro, en su Epítome, repite los dos avisos: no subir, porque el sol funde el pegamento, y no acercarse al mar, porque la humedad suelta las plumas. Ovidio añade un tercero: que no mire las estrellas, ni el Boyero ni Hélice ni la espada de Orión, y que lo siga a él.",
+      "Ícaro sube, la cera se ablanda y cae al mar gritando el nombre de su padre. Dédalo maldice sus propias artes y lo entierra; la tierra toma el nombre del muchacho. El refrán se quedó con la mitad de la lección, la del que se atreve demasiado. La otra mitad advertía contra el que, por miedo, vuela tan bajo que el mar lo hunde igual."
+    ],
+    "question": "¿En qué parte de tu vida estás volando demasiado bajo por miedo a quemarte?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Ícaro y el camino del medio",
+    "subtitle": "Ovidio, Metamorfosis VIII",
+    "body": "Dédalo le dio a su hijo dos avisos, no uno. Muy alto, el sol quema la cera. Muy bajo, el agua del mar empapa las plumas. Hay que volar por el medio. El refrán solo recuerda el primero."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Mitologia", "#Icaro", "#Ovidio"],
+    "extended": ["#MitologiaGriega", "#Metamorfosis", "#Dedalo", "#Clasicos", "#Literatura", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Ovidio, Metamorfosis VIII, hacia los versos 203-207: Dédalo ordena volar por el camino del medio («medio... limite curras»); si va más bajo, el agua cargará las plumas («demissior ibis, unda gravet pennas»); si va más alto, el fuego las quemará («celsior, ignis adurat»); que no mire al Boyero, a Hélice ni a la espada de Orión («Booten», «Helicen», «Orionis ensem»). Hacia los versos 229-235: cae gritando el nombre paterno («patrium clamantia nomen»); el mar toma su nombre; Dédalo maldice sus artes («devovitque suas artes»), entierra el cuerpo y la tierra se llama por el del enterrado. Lectura directa del texto latino.",
+      "source": "Ovidio, Metamorphoses, libro VIII, texto latino, Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0029:book=8:card=183"
+    },
+    {
+      "claim": "Epítome 1.12: Dédalo le advirtió a Ícaro que no volara alto, para que el pegamento no se fundiera con el sol, ni cerca del mar, para que la humedad no soltara las plumas. Traducción de J. G. Frazer. Lectura directa.",
+      "source": "Apolodoro, Epítome 1.12, trad. J. G. Frazer, Theoi Classical Texts Library",
+      "url": "https://www.theoi.com/Text/ApollodorusE.html"
+    },
+    {
+      "claim": "Metamorfosis VIII, 183-235, en traducción inglesa: Dédalo le pide tomar el camino del medio, porque la humedad carga las alas si vuela bajo y el sol las quema si vuela alto; Ícaro, disfrutando del vuelo, abandona a su guía y sube; la cera se ablanda; cae al mar llamando a su padre; Dédalo maldice sus inventos al ver las plumas en el agua, lo entierra y la isla se llama Icaria. Traducción de A. S. Kline, 2000. Lectura directa.",
+      "source": "Ovidio, Metamorphoses, libro VIII, trad. A. S. Kline (2000), Poetry in Translation",
+      "url": "https://www.poetryintranslation.com/PITBR/Latin/Metamorph8.php"
+    }
+  ],
+  "do_not_use": [
+    "Reducir el aviso de Dédalo a «no vueles cerca del sol»: tanto Ovidio como Apolodoro dan dos avisos, alto y bajo.",
+    "Nombrar el mar Icario o la isla Icaria como hecho geográfico verificado: Kline traduce «Icaria» y el latín dice que el mar y la tierra tomaron su nombre, pero no se verificó la geografía en una fuente independiente; el texto dice solo que la tierra tomó su nombre.",
+    "Detalles de la huida (el laberinto, Minos, la prisión en Creta): son parte del mito, pero no se leyeron en las fuentes de esta ronda y no se usan.",
+    "La fecha de composición de las Metamorfosis (circa 8 d.C.): no se verificó en esta ronda.",
+    "La perdiz (Pérdix) que aplaude el entierro aparece justo después en Ovidio y abre otra historia, la del sobrino de Dédalo; no se usa para no alargar.",
+    "La lectura moral final (el que vuela bajo por miedo) es interpretación de la pieza, no de Ovidio; el texto la presenta como lo que dice el refrán frente al mito, sin atribuírsela al poeta.",
+    "El cuadro «Paisaje con la caída de Ícaro» atribuido a Bruegel: su autoría está discutida; no se menciona."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "2026-12-27-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Poincaré y el montón de piedras (1902)",
+    "hook": "Henri Poincaré comparó la ciencia con una casa. Antes de hablar de piedras, dio una orden.",
+    "quote": {
+      "text": "El sabio debe ordenar; la ciencia se hace con hechos, como una casa con piedras; pero una acumulación de hechos no es una ciencia, como un montón de piedras no es una casa.",
+      "author": "Henri Poincaré",
+      "work": "La ciencia y la hipótesis, cap. IX, «Las hipótesis en física» (1902)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1902, el matemático francés Henri Poincaré publicó «La ciencia y la hipótesis». En el capítulo IX, «Las hipótesis en física», se pregunta si basta con atenerse a la experiencia desnuda. Responde que no: eso sería no entender qué es la ciencia.",
+      "Y entonces escribe la frase de la casa. No empieza en las piedras. Empieza con cuatro palabras: «Le savant doit ordonner», el sabio debe ordenar. Los hechos son el material. Lo que los vuelve conocimiento es el orden que alguien les da, y ese orden pasa por generalizar y arriesgar hipótesis.",
+      "En 1905 la frase ya circulaba en inglés, en la traducción de W. J. Greenstreet: «an accumulation of facts is no more a science than a heap of stones is a house». Más de un siglo después, con más datos que nunca, la advertencia pesa más que entonces."
+    ],
+    "question": "¿Qué montón de datos tienes guardado que todavía no se ha vuelto casa?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Poincare", "#Citas", "#Ciencia"],
+    "extended": ["#FilosofiaDeLaCiencia", "#Matematicas", "#Francia", "#Conocimiento", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés: «Le savant doit ordonner ; on fait la science avec des faits comme une maison avec des pierres ; mais une accumulation de faits n’est pas plus une science qu’un tas de pierres n’est une maison», en el capítulo IX, «Les hypothèses en physique», sección «Rôle de l’expérience et de la généralisation»; la frase anterior dice que atenerse a la experiencia desnuda es imposible y sería «méconnaître complètement le véritable caractère de la science». Edición Flammarion, París, 1917, págs. 167-188 del capítulo; texto validado. Lectura directa.",
+      "source": "Henri Poincaré, «La Science et l’Hypothèse», cap. IX, ed. Flammarion (París, 1917), Wikisource en francés",
+      "url": "https://fr.wikisource.org/wiki/La_Science_et_l%E2%80%99Hypoth%C3%A8se/Chapitre_9"
+    },
+    {
+      "claim": "Traducción inglesa de W. J. Greenstreet, Walter Scott Publishing Co., Londres y Newcastle-on-Tyne, 1905: «Science is built up of facts, as a house is built of stones; but an accumulation of facts is no more a science than a heap of stones is a house», en el capítulo IX, «Hypotheses in Physics», sección «The Rôle of Experiment and Generalisation». Lectura directa.",
+      "source": "Henri Poincaré, «Science and Hypothesis», trad. W. J. Greenstreet (1905), Project Gutenberg eBook #37157",
+      "url": "https://www.gutenberg.org/ebooks/37157"
+    },
+    {
+      "claim": "Poincaré nació en Nancy en 1854 y murió en París en 1912; «La Science et l’hypothèse» se publicó en 1902; para él los resultados experimentales pueden generalizarse de infinitas maneras y cada generalización da una hipótesis. Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Henri Poincaré»",
+      "url": "https://plato.stanford.edu/entries/poincare/"
+    }
+  ],
+  "do_not_use": [
+    "Citar solo la segunda mitad como si fuera la frase entera: en el original la precede «Le savant doit ordonner».",
+    "Versiones con «ladrillos» («bricks») en lugar de piedras: el francés dice «pierres» y la traducción de 1905 «stones».",
+    "La traducción al español es propia; no se cotejó con una edición española publicada.",
+    "Dar el número de página exacto de la frase: la edición de Wikisource solo da el rango del capítulo (167-188, ed. 1917); no se verificó la paginación de la primera edición de 1902.",
+    "Atribuir la frase a otros libros de Poincaré («El valor de la ciencia», 1905; «Ciencia y método», 1908): está en «La ciencia y la hipótesis», cap. IX.",
+    "Afirmar que la primera parte «casi nunca» se cita: no se midió, y por eso el texto no lo dice."
+  ],
+  "status": "draft"
+}

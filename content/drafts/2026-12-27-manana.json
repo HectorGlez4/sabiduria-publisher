@@ -1,0 +1,61 @@
+{
+  "id": "2026-12-27-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "el manuscrito Voynich y el carbono 14 de 2009",
+    "hook": "Se sabe de qué época es la piel en que está escrito. Lo que dice, nadie lo sabe.",
+    "body": [
+      "En la Biblioteca Beinecke de la Universidad de Yale se guarda un libro catalogado como MS 408: 102 folios de pergamino de 22,5 por 16 centímetros, llenos de plantas, astros y una escritura que nadie ha identificado. Wilfrid Voynich lo compró en 1912 al colegio jesuita de Frascati, cerca de Roma. El librero H. P. Kraus lo donó a Yale en 1969.",
+      "En 2009, un equipo de la Universidad de Arizona cortó cuatro tiras de un milímetro por seis de cuatro páginas distintas y las fechó por radiocarbono. El pergamino salió de entre 1404 y 1438. Eso adelantaba su edad en un siglo respecto de lo que se suponía.",
+      "Pero el carbono 14 fecha el animal, no la mano que escribió. La tinta es difícil de fechar: algunas son minerales y no tienen carbono. La ficha de la propia Beinecke sigue situando la escritura a finales del siglo XV o en el XVI, y llama «pura especulación» la vieja idea de que lo escribió Roger Bacon. Sabemos cuándo murió el animal. El texto sigue callado."
+    ],
+    "question": "¿Cuánto de lo que sabemos de algo es solo la fecha de su envoltorio?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El manuscrito Voynich",
+    "subtitle": "Yale, Beinecke MS 408",
+    "body": "En 2009 la Universidad de Arizona fechó su pergamino entre 1404 y 1438. Es la piel, no la escritura: la tinta no se pudo fechar. Su alfabeto sigue sin identificarse y su autor, sin nombre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ManuscritoVoynich", "#Misterios", "#Historia"],
+    "extended": ["#Yale", "#Radiocarbono", "#Manuscritos", "#Criptografia", "#EdadMedia", "#Libros"]
+  },
+  "sources": [
+    {
+      "claim": "Beinecke MS 408: pergamino, 102 folios (ff. 102 + i), 225 x 160 mm; adquirido por Wilfrid M. Voynich en 1912 del colegio jesuita de Frascati, cerca de Roma; donado a la Beinecke en 1969 por H. P. Kraus, que lo compró a la herencia de Ethel Voynich; datación del catálogo «end of the 15th or during the 16th [?] century». Lectura directa.",
+      "source": "Beinecke Rare Book & Manuscript Library, Yale University, catálogo de manuscritos anteriores a 1600, «Beinecke MS 408»",
+      "url": "https://pre1600ms.beinecke.library.yale.edu/docs/pre1600.ms408.HTM"
+    },
+    {
+      "claim": "«Written in an unidentified script by an unknown author»; producido en Europa central «at the end of the fifteenth or during the sixteenth century»; los intentos criptográficos han fracasado; Rodolfo II creyó que era obra de Roger Bacon, asociación que la página califica de «pure speculation»; Voynich lo compró en Frascati en 1912. Lectura directa.",
+      "source": "Beinecke Rare Book & Manuscript Library, Yale University, «Voynich Manuscript» (Collection Highlights)",
+      "url": "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript"
+    },
+    {
+      "claim": "Greg Hodgins, físico de la Universidad de Arizona, tomó en Yale cuatro muestras de cuatro páginas, de 1 por 6 milímetros, de hojas no reencuadernadas; el pergamino se fechó entre 1404 y 1438; la datación adelantó la edad supuesta del manuscrito en unos cien años; fechar la tinta es muy difícil porque tiene poco carbono y algunas tintas son minerales. Lectura directa.",
+      "source": "Medievalists.net, «Mysterious Voynich Manuscript dates back to the 15th century», febrero de 2011 (con declaraciones de Greg Hodgins, Universidad de Arizona)",
+      "url": "https://www.medievalists.net/2011/02/mysterious-voynich-manuscript-dates-back-to-the-15th-century/"
+    },
+    {
+      "claim": "La Universidad de Arizona fechó el pergamino entre 1404 y 1438 con un 95 % de probabilidad; se anunció en rueda de prensa el 8 de diciembre de 2009, en el marco de un documental de la televisión austriaca ORF; cuatro muestras (folios 8, 26, 47 y 68); la datación no informa de cuándo se aplicó la tinta. Lectura directa.",
+      "source": "René Zandbergen, voynich.nu, «Radio-carbon dating of the Voynich MS»",
+      "url": "https://www.voynich.nu/extra/carbon.html"
+    }
+  ],
+  "do_not_use": [
+    "Que el carbono 14 fechó la escritura o la tinta: fechó el pergamino. En la rueda de prensa de 2009 se dijo que la tinta se aplicó poco después, y voynich.nu lo califica de incorrecto.",
+    "Que el manuscrito es obra de Roger Bacon: la Beinecke lo llama «pura especulación».",
+    "Que John Dee fue su dueño como hecho: la Beinecke dice que la investigación reciente lo pone seriamente en duda (aunque el catálogo antiguo lo daba como probable).",
+    "Que Rodolfo II pagó 600 ducados como hecho seguro: procede de la carta de Marci de 1665-1666, que recoge un dato de Mnišovský de más de veinte años antes; la venta no está documentada en firme.",
+    "Que el catálogo de Yale prueba que «no pudo escribirse antes de 1493» por plantas americanas: lo dice el registro antiguo a partir de identificaciones botánicas discutidas; no se usa.",
+    "Cualquier «desciframiento» anunciado (p. ej. Gerard Cheshire, 2019, protorromance): no aceptado; no se verificó en fuentes académicas en esta ronda y no se menciona.",
+    "La fecha de la carta de Marci: el catálogo da 1666 (o quizá 1665) y otras fuentes el 16 de agosto de 1665; no se usa en el texto.",
+    "Discrepancia de fechas de Kraus: la Beinecke dice que lo compró en 1961 y lo donó «ocho años después»; la pieza solo da la donación, 1969.",
+    "Nombrar la especie del animal del pergamino (oveja, ternera, cabra): no se verificó en esta ronda; el texto dice «el animal»."
+  ],
+  "status": "draft"
+}
