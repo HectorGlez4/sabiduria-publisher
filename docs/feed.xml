@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 07 Nov 2026 15:50:18 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 04:05:21 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La literatura tardó siglos en tener autor. La primera persona que puso su nombre al final de un texto fue una sacerdotisa, hace más de cuatro mil años.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-07-re56-reel</guid>
+      <pubDate>Sat, 07 Nov 2026 15:26:00 +0000</pubDate>
+      <description><![CDATA[La literatura tardó siglos en tener autor. La primera persona que puso su nombre al final de un texto fue una sacerdotisa, hace más de cuatro mil años.
+
+Enheduanna fue suma sacerdotisa del dios luna Nanna en la ciudad de Ur, hacia el año 2300 antes de Cristo, e hija de Sargón de Acad. Reunió una colección de cuarenta y dos himnos a los templos de Sumeria, más de quinientas líneas, y al final hizo algo que hasta entonces nadie había hecho: escribir quién lo había compuesto. El cierre dice que la compiladora de las tablillas fue Enheduanna, y añade una línea que suena a conciencia de estar estrenando algo: se ha creado algo que nadie ha creado antes.
+
+De su tiempo queda un solo objeto: un disco de piedra de veinticinco centímetros, hallado en pedazos en las excavaciones de Ur y hoy en un museo de Filadelfia. La inscripción del reverso la nombra como sacerdotisa de Nanna e hija de Sargón. Los poemas, en cambio, no se conservan en tablillas suyas: las copias más antiguas son de escribas de alrededor del 1750 antes de Cristo, unos quinientos cincuenta años posteriores. Por eso hay especialistas que dudan de que los escribiera ella y otros que sostienen que la firma se copió porque estaba ahí.
+
+El debate sigue abierto y probablemente no se cierre. Lo que no se discute es el gesto. Antes de esas líneas los textos existían sin dueño: nadie respondía por ellos. Firmar fue aceptar que detrás de unas palabras hay alguien a quien se le pueden pedir cuentas.
+
+¿Qué parte de lo que haces firmarías con tu nombre?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Ha sido mi convicción de siempre, más arraigada y más corroborada en mí cuanto más tiempo pasa, la de que la suprema virtud de un hombre debe ser la sinceridad.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -477,26 +496,6 @@ Circunstancia, en singular, es lo que está alrededor: el barrio, el trabajo, la
 #SabiduriaDeBolsillo #OrtegaYGasset #Filosofia #Frases]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El pasaje más famoso de la literatura japonesa empieza con dos sustantivos y ningún verbo. Hace mil años que los lectores ponen el verbo que falta.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-25-extra85</guid>
-      <pubDate>Mon, 26 Oct 2026 09:32:20 +0000</pubDate>
-      <description><![CDATA["La primavera, el alba. Poco a poco blanquea el borde de los montes, se aclara un poco, y unas nubes violáceas se tienden, finas, a lo largo."
-— Sei Shōnagon, El libro de la almohada, sección 1 (hacia 1002)
-
-Sei Shōnagon fue dama de compañía de la emperatriz Teishi en la corte de Heian, en la década de 990. Allí escribió el Makura no sōshi, El libro de la almohada, que estaba terminado hacia el año 1002. Son casi trescientas secciones: recuerdos de palacio, observaciones y más de ciento sesenta listas de cosas agradables, odiosas o conmovedoras.
-
-La primera sección asigna a cada estación su hora. La primavera, el alba. El verano, la noche. El otoño, el atardecer. El invierno, la primera mañana, cuando se llevan brasas de habitación en habitación. En el original la frase inicial es haru wa akebono, y no hay verbo: las versiones en japonés moderno añaden entre paréntesis «es lo mejor». La sección no termina en lo bello. Termina al mediodía, con el fuego del brasero convertido en ceniza blanca, y una sola palabra: feo.
-
-En 2012 la investigadora Valerie Henitiuk reunió casi cincuenta traducciones de este pasaje, hechas a lo largo de ciento treinta y cinco años en dieciséis lenguas. Cada traductor tuvo que decidir qué poner donde Sei Shōnagon no puso nada.
-
-¿Cuál sería tu hora de cada estación?
-
-#SabiduriaDeBolsillo #SeiShonagon #LiteraturaJaponesa #Citas]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra85.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-25-extra85.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
