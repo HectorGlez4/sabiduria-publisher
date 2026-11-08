@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-28-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Alberdi y gobernar es poblar (1852)",
+    "hook": "Alberdi escribió tres palabras que Argentina repite desde 1852. Veintisiete años después tuvo que explicarlas.",
+    "quote": {
+      "text": "Así, en América gobernar es poblar. Definir de otro modo el gobierno, es desconocer su misión sudamericana.",
+      "author": "Juan Bautista Alberdi",
+      "work": "Bases y puntos de partida, cap. XXXI (1852)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1852 Juan Bautista Alberdi vivía en Valparaíso, Chile, y allí publicó «Bases y puntos de partida para la organización política de la República Argentina». El 22 de julio de ese año Justo José de Urquiza le escribió que el libro era «un medio de cooperación importantísimo». Fue una de las fuentes de la Constitución argentina de 1853.",
+      "La frase titula el capítulo XXXI. El argumento es económico: el fin del gobierno en América, escribe, es «esencialmente económico», y la población es a la vez el fin y el medio. Había que ganar territorio a lo que llama «la soledad y el desierto».",
+      "En 1879, en París, Alberdi escribió unas «Páginas explicativas» porque la máxima se repetía «a cada paso» con su nombre. Poblar, aclaró, es educar, mejorar y civilizar, pero solo con cierta gente. Si no, «poblar es apestar, corromper, degenerar, envenenar un país». La máxima circula sola. Su autor le puso condiciones, y algunas dicen más de los prejuicios de su siglo que de América."
+    ],
+    "question": "¿Qué frase célebre repetimos sin la condición que le puso su autor?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Alberdi", "#Citas", "#Argentina"],
+    "extended": ["#HistoriaArgentina", "#Constitucion", "#Inmigracion", "#AmericaLatina", "#Pensamiento", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo XXXI de las Bases, con el encabezado «En América gobernar es poblar»; en el cuerpo: «Es pues esencialmente económico el fin de la política constitucional y del gobierno en América. Así, en América gobernar es poblar. Definir de otro modo el gobierno, es desconocer su misión sudamericana»; la población es «el fin y es el medio al mismo tiempo»; habla de la «conquista sobre la soledad y el desierto». Edición de Buenos Aires, 1915 (Francisco Cruz). Comprobación directa.",
+      "source": "Juan Bautista Alberdi, «Bases y puntos de partida para la organización política de la República Argentina», cap. XXXI, Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Bases_y_puntos_de_partida_para_la_organización_política_de_la_República_Argentina/31"
+    },
+    {
+      "claim": "Bajo el título «Gobernar es poblar», Alberdi dice que la máxima se repite con su nombre «a cada paso» y que está «obligado a explicarla»: «Gobernar es poblar en el sentido que poblar es educar, mejorar, civilizar, enriquecer y engrandecer…»; «Poblar es apestar, corromper, degenerar, envenenar un país, cuando en vez de poblarlo con la flor de la población trabajadora de Europa, se le puebla con la basura de la Europa atrasada o menos culta». Firmado «París, 1879». Comprobación directa.",
+      "source": "Juan Bautista Alberdi, «Páginas explicativas», incluidas en la edición de las Bases (Buenos Aires, 1915), Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Bases_y_puntos_de_partida_para_la_organización_política_de_la_República_Argentina/Páginas_explicativas_de_Juan_B._Alberdi"
+    },
+    {
+      "claim": "Carta de Urquiza a Alberdi fechada en Palermo (Buenos Aires) el 22 de julio de 1852, en respuesta a la del 30 de mayo con que Alberdi le envió las Bases: «Su bien pensado libro, es, a mi juicio, un medio de cooperación importantísimo». Lectura directa.",
+      "source": "Carta de Justo José de Urquiza a Juan B. Alberdi (22 de julio de 1852), Wikisource en español",
+      "url": "https://es.wikisource.org/wiki/Carta_de_Justo_Jos%C3%A9_de_Urquiza_a_Juan_B._Alberdi"
+    },
+    {
+      "claim": "La estancia de Alberdi en Valparaíso culminó con la publicación de las Bases en 1852, que sirvieron de fundamento a la Constitución argentina de 1853. Lectura directa del resumen.",
+      "source": "Gonzalo Serrano, «Valparaíso en la configuración del paradigma político de Juan Bautista Alberdi», Notas Históricas y Geográficas (Universidad de Playa Ancha), repositorio Revistas Chilenas, Universidad de Chile",
+      "url": "https://revistaschilenas.uchile.cl/handle/2250/216231"
+    }
+  ],
+  "do_not_use": [
+    "La fecha exacta de publicación (1 de mayo de 1852, imprenta de Santos Tornero): aparece en una fuente secundaria y choca con la carta del 30 de mayo con que Alberdi envió el libro a Urquiza; no se verificó en una edición original. El texto dice solo «en 1852».",
+    "Que las Bases se redactaron en la quinta «Las Delicias» de Quillota: solo en una fuente leída a través de un buscador (PDF no legible); no se usa.",
+    "Llamar «exilio» a su estancia en Chile como dato verificado: la fuente institucional consultada no lo menciona; el texto dice que vivía en Valparaíso.",
+    "Que la Constitución de 1853 copió el proyecto de Alberdi: las fuentes la llaman fundamento o fuente; el texto dice «una de las fuentes».",
+    "Afirmar que la cita del capítulo XXXI está en la página 199: lo da un índice de una edición que no se consultó; no se usa.",
+    "Atribuir «poblar es apestar» a las Bases de 1852: está en las «Páginas explicativas», firmadas en París en 1879.",
+    "Otras máximas que circulan con el nombre de Alberdi: no se verificaron en esta ronda; no se usan.",
+    "Que Argentina «repite la frase desde 1852» es una formulación del gancho; el respaldo documental es la queja del propio Alberdi en 1879 de que se repetía «a cada paso»."
+  ],
+  "status": "draft"
+}

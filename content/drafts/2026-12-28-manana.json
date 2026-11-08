@@ -1,0 +1,69 @@
+{
+  "id": "2026-12-28-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Benjamin Banneker y el almanaque de 1792",
+    "hook": "En 1791 Jefferson pidió pruebas. Le llegaron por correo, de puño y letra, y dieciocho años después dudó de ellas.",
+    "body": [
+      "Benjamin Banneker nació libre el 9 de noviembre de 1731 en el condado de Baltimore, Maryland. En 1791 trabajó con el agrimensor Andrew Ellicott en el primer levantamiento del territorio que sería el Distrito de Columbia: manejaba los instrumentos astronómicos que fijaban la posición. Ese mismo año calculó un almanaque para 1792.",
+      "El 19 de agosto de 1791 envió el manuscrito al secretario de Estado, Thomas Jefferson, con una carta. Le citaba su propia frase de la Declaración de Independencia, que todos los hombres son creados iguales, y le reprochaba retener «por fraude y violencia» a tantos de sus hermanos. Jefferson contestó el 30 de agosto que deseaba ver pruebas de que la naturaleza había dado a los negros talentos iguales. Ese mismo día escribió a Condorcet, en París, y llamó a Banneker «un matemático muy respetable».",
+      "Banneker murió en octubre de 1806. En 1809 Jefferson escribió al poeta Joel Barlow que Banneker sabía trigonometría esférica suficiente para hacer almanaques, «no sin la sospecha» de que lo ayudaba Ellicott. La prueba que había pedido le llegó firmada. Con los años, prefirió sospechar de ella."
+    ],
+    "question": "¿Qué prueba bastaría para quien ya decidió no creer?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Benjamin Banneker",
+    "subtitle": "Maryland, 1731-1806",
+    "body": "En 1791 envió a Jefferson el manuscrito de su almanaque y una carta contra la esclavitud. Jefferson lo elogió ante Condorcet. En 1809 escribió que sus cálculos despertaban «la sospecha» de una ayuda ajena."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#BenjaminBanneker", "#Historia", "#Ciencia"],
+    "extended": ["#Astronomia", "#Matematicas", "#Jefferson", "#HistoriaAfroamericana", "#Almanaque", "#Esclavitud"]
+  },
+  "sources": [
+    {
+      "claim": "Carta de Banneker a Jefferson fechada cerca de Ellicott's Lower Mills, condado de Baltimore, el 19 de agosto de 1791; cita la Declaración («all men are created equal»); acusa a Jefferson de «detaining by fraud and violence so numerous a part of my brethren»; dice que su tiempo se lo había ocupado el Territorio Federal «by the request of Mr. Andrew Ellicott» y que envía copia de un almanaque calculado para el año siguiente. Lectura directa.",
+      "source": "Encyclopedia Virginia (Virginia Humanities), «Letter from Benjamin Banneker to Thomas Jefferson (August 19, 1791)»",
+      "url": "https://encyclopediavirginia.org/primary-documents/letter-from-benjamin-banneker-to-thomas-jefferson-august-19-1791/"
+    },
+    {
+      "claim": "Banneker era un matemático, agrimensor y astrónomo afroamericano libre; envió a Jefferson el manuscrito del almanaque antes de su publicación; Jefferson respondió desde Filadelfia el 30 de agosto de 1791 que deseaba ver pruebas de que la naturaleza había dado a los negros talentos iguales a los de otros, atribuyó la aparente falta a su condición degradada, y dijo que enviaba el almanaque al secretario de la Academia de Ciencias de París; el cuáquero Daniel Lawrence imprimió las dos cartas en folleto en 1792. Lectura directa.",
+      "source": "National Park Service, Independence National Historical Park, «Benjamin Banneker's Letters to Thomas Jefferson, 1791»",
+      "url": "https://www.nps.gov/articles/000/inde-bbanneker-letters-tjefferson-1791.htm"
+    },
+    {
+      "claim": "Carta de Jefferson a Condorcet del 30 de agosto de 1791: «a negro, the son of a black man born in Africa, and of a black woman born in the United States», «a very respectable Mathematician», que trabajó «under one of our chief directors in laying out the new federal city» y que hizo un almanaque en sus ratos libres. Lectura directa.",
+      "source": "Encyclopedia Virginia, «Letter from Thomas Jefferson to Nicolas de Condorcet (August 30, 1791)»",
+      "url": "https://encyclopediavirginia.org/entries/letter-from-thomas-jefferson-to-nicolas-de-condorcet-august-30-1791/"
+    },
+    {
+      "claim": "Carta de Jefferson a Joel Barlow del 8 de octubre de 1809: «we know he had spherical trigonometry enough to make almanacs, but not without the suspicion of aid from Ellicot», a quien llama vecino y amigo de Banneker. Lectura directa.",
+      "source": "Encyclopedia Virginia, «Letter from Thomas Jefferson to Joel Barlow (October 8, 1809)»",
+      "url": "https://encyclopediavirginia.org/entries/letter-from-thomas-jefferson-to-joel-barlow-october-8-1809/"
+    },
+    {
+      "claim": "Banneker nació el 9 de noviembre de 1731 en el condado de Baltimore, Maryland, y murió el 9 de octubre de 1806; en 1791 ayudó a Andrew Ellicott en el primer levantamiento de lo que sería el Distrito de Columbia y «operated the astronomical equipment» que fijaba la posición de los agrimensores. Lectura directa.",
+      "source": "Histories of the National Mall (Roy Rosenzweig Center for History and New Media, George Mason University), «Benjamin Banneker»",
+      "url": "https://mallhistory.org/items/show/77.html"
+    },
+    {
+      "claim": "Smithsonian Libraries conserva el «Pennsylvania, Delaware, Maryland and Virginia almanack and ephemeris for the year of our Lord 1792», impreso por W. Goddard y J. Angell [1791?]; fechas del autor 1731-1806. Lectura directa.",
+      "source": "Smithsonian Libraries and Archives, Digital Library, autor «Banneker, Benjamin»",
+      "url": "https://library.si.edu/es/digital-library/author/banneker-benjamin"
+    }
+  ],
+  "do_not_use": [
+    "Que Banneker reconstruyó de memoria el plano de Washington cuando L'Enfant se marchó con él: no se verificó en esta ronda y se considera leyenda; no se menciona.",
+    "Que construyó un reloj de madera a los veintitantos años: solo lo dice una de las fuentes consultadas (mallhistory.org); no se cotejó con una segunda y se deja fuera.",
+    "Que Ellicott ayudó de verdad a Banneker con los cálculos: es una sospecha que Jefferson expresa en 1809, no un hecho; el texto la presenta como sospecha de Jefferson.",
+    "Que Condorcet recibió la carta y el almanaque: los editores de los Papers of Thomas Jefferson remiten a Bedini (1972) sobre la posibilidad de que no llegaran; el texto solo dice que Jefferson le escribió.",
+    "Fecha de muerte 19 de octubre de 1806: aparece en algunas copias de Wikipedia; mallhistory.org da el 9 de octubre. El texto dice solo «octubre de 1806».",
+    "Que Jefferson consiguió personalmente el empleo de Banneker con Ellicott: lo afirma Jefferson ante Condorcet («I procured him to be employed»), pero la carta de Banneker dice que fue a petición de Ellicott; no se usa.",
+    "Las traducciones al español de las cartas son propias."
+  ],
+  "status": "draft"
+}

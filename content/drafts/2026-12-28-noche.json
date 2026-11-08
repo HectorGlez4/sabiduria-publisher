@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-28-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Narciso, Eco y la profecía de Tiresias",
+    "hook": "El adivino puso una condición para que Narciso llegara a viejo: que no llegara a conocerse.",
+    "body": [
+      "Ovidio cuenta la historia en el libro III de las «Metamorfosis». La ninfa Liríope pregunta al adivino Tiresias si su hijo verá una larga vejez. La respuesta cabe en cuatro palabras latinas: «si se non noverit», si no llega a conocerse. A los dieciséis años Narciso rechaza a todos los que lo desean. Entre ellos, a la ninfa Eco.",
+      "Eco no podía hablar la primera ni callar cuando otro hablaba. Era un castigo de Juno: con su charla la había entretenido mientras las ninfas que estaban con Júpiter escapaban. Narciso se enamora de su reflejo en una fuente, y cuando entiende que es él mismo, se consume. Aun en el reino de las sombras sigue mirándose en las aguas de la Estigia. Donde debía estar su cuerpo aparece una flor de corazón amarillo y pétalos blancos.",
+      "No todos en la Antigüedad creyeron esa versión. Pausanias, en su «Descripción de Grecia», la llamó «completa estupidez»: alguien en edad de enamorarse sabría distinguir a un hombre de su reflejo. Él recogió otra, menos conocida, en la que Narciso tenía una hermana gemela idéntica y, muerta ella, se consolaba mirando en el agua un rostro como el suyo. Eco no aparece en ella. La versión que perduró fue la de Ovidio."
+    ],
+    "question": "¿Qué duele más, no conocerse nunca o conocerse demasiado tarde?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Narciso y Eco",
+    "subtitle": "Ovidio, Metamorfosis, libro III",
+    "body": "Tiresias predijo que Narciso viviría mucho «si no llega a conocerse». Eco, castigada por Juno, solo podía repetir. Pausanias contó otra versión: una hermana gemela muerta, y ningún reflejo confundido."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Narciso", "#Mitologia", "#Ovidio"],
+    "extended": ["#MitologiaGriega", "#Metamorfosis", "#Eco", "#Pausanias", "#LiteraturaLatina", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Ovidio, Metamorfosis III 344-346: la madre consulta al «fatidicus vates» si el hijo verá «tempora maturae... longa senectae», y él responde «si se non noverit»; III 355-356: Eco, «quae nec reticere loquenti, / nec prior ipsa loqui didicit»; III 360-365: el castigo de Juno porque Eco la entretenía con largas charlas mientras las ninfas que estaban con Júpiter huían. Comprobación directa del texto latino.",
+      "source": "Ovidio, «Metamorphoses», libro III, texto latino, Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0029:book=3:card=339"
+    },
+    {
+      "claim": "El adivino es Tiresias; responde a Liríope «If he does not discover himself»; Narciso tenía dieciséis años (III 339-358); aun en la casa de las sombras «he gazed into the Stygian waters», y en lugar del cuerpo se halló una flor de pétalos blancos y corazón amarillo (III 474-510). Lectura directa.",
+      "source": "Ovidio, «Metamorphoses», libro III, trad. A. S. Kline, Ovid Collection, University of Virginia",
+      "url": "https://ovid.lib.virginia.edu/trans/Metamorph3.htm"
+    },
+    {
+      "claim": "Pausanias, Descripción de Grecia 9.31.7-8 (trad. W. H. S. Jones): en territorio de Tespias, en Donacon, está la fuente de Narciso; llama «utter stupidity» creer que alguien en edad de enamorarse fuera «incapable of distinguishing a man from a man's reflection»; cuenta la versión de una «twin sister» idéntica cuya muerte lo llevó a buscar consuelo en la fuente. Comprobación directa.",
+      "source": "Pausanias, «Description of Greece», libro 9, trad. W. H. S. Jones, Theoi Classical Texts Library",
+      "url": "https://www.theoi.com/Text/Pausanias9B.html"
+    },
+    {
+      "claim": "Recopilación de fuentes antiguas sobre Narciso: Pausanias 9.31.7-9 (hermana gemela, versión «less popular»), Conón, Narraciones 24 (Ameinias y Némesis); en las fuentes citadas Eco solo aparece en Ovidio, Metamorfosis 3.339-509. Lectura directa.",
+      "source": "Theoi Greek Mythology, «Narkissos»",
+      "url": "https://www.theoi.com/Heros/Narkissos.html"
+    }
+  ],
+  "do_not_use": [
+    "Que Ovidio inventó a Eco o que Eco no aparece en ninguna fuente anterior: Theoi solo muestra que no está en las fuentes que recopila; no se verificó la tradición anterior a Ovidio, así que el texto dice solo que no aparece en la versión de Pausanias.",
+    "Que Tiresias aparece nombrado en los versos 344-346: allí Ovidio lo llama «fatidicus vates»; el nombre está en el episodio inmediatamente anterior y lo da la traducción de Kline. El texto dice «el adivino Tiresias», que es la lectura estándar.",
+    "La fecha de composición de las Metamorfosis (hacia el 8 d. C.): no se verificó en esta ronda y no se da.",
+    "El origen del término «narcisismo» (Havelock Ellis, Näcke, Freud): no se verificó en esta ronda; no se menciona.",
+    "La versión de Conón (Ameinias se mata ante la puerta de Narciso e invoca a Némesis): verificada solo en una recopilación; no se usa en el cuerpo.",
+    "Identificar la flor con una especie concreta (Narcissus poeticus): Ovidio solo describe pétalos blancos y corazón amarillo.",
+    "Las traducciones al español del latín y del inglés son propias."
+  ],
+  "status": "draft"
+}

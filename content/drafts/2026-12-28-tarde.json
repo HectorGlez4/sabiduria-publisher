@@ -1,0 +1,57 @@
+{
+  "id": "2026-12-28-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tocqueville y el aprendizaje de la libertad (1835)",
+    "hook": "Tocqueville elogió la libertad como pocos. En la misma frase advirtió que cuesta aprenderla.",
+    "quote": {
+      "text": "No hay nada más fecundo en maravillas que el arte de ser libre; pero no hay nada más duro que el aprendizaje de la libertad.",
+      "author": "Alexis de Tocqueville",
+      "work": "La democracia en América, «De la idea de los derechos» (1835)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1831 el gobierno francés envió a Alexis de Tocqueville y a Gustave de Beaumont a estudiar las prisiones de Estados Unidos. Entre 1831 y 1832 recorrieron 17 de los 24 estados de entonces. De ese viaje salió «De la democracia en América», cuyo primer volumen publicó en París el librero Gosselin en 1835.",
+      "La frase está en la sección «De la idea de los derechos en los Estados Unidos». Justo antes, Tocqueville observa que los estados donde los ciudadanos gozan de sus derechos desde hace más tiempo son los que mejor saben usarlos. Y la introduce con cuatro palabras: «No se repetirá bastante».",
+      "El párrafo no termina ahí. El despotismo, escribe, se presenta como «el reparador de todos los males sufridos». La libertad, en cambio, nace en medio de tormentas, se asienta con trabajo entre discordias, y «solo cuando ya es vieja» se pueden conocer sus beneficios. La advertencia no es contra la libertad. Es contra la impaciencia."
+    ],
+    "question": "¿Qué libertad tuya tardaste años en aprender a usar?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Tocqueville", "#Citas", "#Libertad"],
+    "extended": ["#Democracia", "#FilosofiaPolitica", "#Francia", "#Historia", "#Pensamiento", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés: «On ne saurait trop le dire : il n’est rien de plus fécond en merveilles que l’art d’être libre ; mais il n’y a rien de plus dur que l’apprentissage de la liberté», en la sección «De l’idée des droits aux États-Unis» del capítulo «Quels sont les avantages réels que la société américaine retire du gouvernement de la démocratie»; la precede la observación de que los estados donde los ciudadanos gozan de sus derechos desde hace más tiempo son los que mejor saben usarlos; la sigue el pasaje sobre el despotismo, «le réparateur de tous les maux soufferts», y la libertad, que «naît d’ordinaire au milieu des orages» y de la que solo «quand elle est déjà vieille» se conocen los beneficios. Œuvres complètes, Michel Lévy Frères, vol. 2, págs. 107-133 del capítulo. Comprobación directa.",
+      "source": "Alexis de Tocqueville, «De la démocratie en Amérique», Œuvres complètes (Michel Lévy, 1864-1866), vol. 2, cap. VI, Wikisource en francés",
+      "url": "https://fr.wikisource.org/wiki/De_la_d%C3%A9mocratie_en_Am%C3%A9rique/%C3%89dition_1866/Vol_2/Chapitre_06"
+    },
+    {
+      "claim": "Traducción inglesa de Henry Reeve (Londres, Saunders and Otley, 1835, vol. I): «nothing is more fertile in prodigies than the art of being free», con la mención del «apprenticeship of liberty», en la sección «Notion of Rights in the United States» del capítulo XIV, «Advantages American Society Derive From Democracy». Confirma que el pasaje ya estaba en el primer volumen de 1835. Comprobación directa.",
+      "source": "Alexis de Tocqueville, «Democracy in America», vol. I, trad. Henry Reeve (1835), Project Gutenberg eBook #815",
+      "url": "https://www.gutenberg.org/files/815/815-h/815-h.htm"
+    },
+    {
+      "claim": "Tocqueville (1805-1859) viajó a Estados Unidos en 1831 con Gustave de Beaumont; la razón oficial fue estudiar los nuevos sistemas penitenciarios; el viaje duró de 1831 a 1832 y visitaron 17 de los 24 estados de entonces; «De la démocratie en Amérique» se publicó en París, Librairie de C. Gosselin, 1835-1840. Lectura directa.",
+      "source": "Lehigh University Libraries, Special Collections, exposición «French Narratives: Alexis de Tocqueville's De la démocratie en Amérique»",
+      "url": "https://exhibits.lib.lehigh.edu/exhibits/show/atlases/french-narratives/tocqueville"
+    }
+  ],
+  "do_not_use": [
+    "Citar el número de capítulo como «cap. VI» sin más: es la numeración de las Œuvres complètes (1864-1866); en la traducción de Reeve de 1835 es el capítulo XIV. Por eso el campo work da el título de la sección.",
+    "Dar número de página: Wikisource solo muestra el rango del capítulo (107-133) de la edición Michel Lévy; no se verificó la paginación de la primera edición de 1835.",
+    "Discrepancia de año en Wikisource: el título dice «édition 1866» y la ficha bibliográfica 1864; se cita como 1864-1866.",
+    "Atribuir la frase al segundo volumen (1840) o a «El Antiguo Régimen y la Revolución» (1856): está en el primer volumen, 1835.",
+    "La traducción al español es propia; no se cotejó con una edición española publicada.",
+    "Que Tocqueville y Beaumont estuvieron exactamente nueve meses: lo repiten fuentes divulgativas, pero no se verificó en una fuente institucional; el texto dice «entre 1831 y 1832».",
+    "Afirmar que la continuación del párrafo «casi nunca» se cita: no se midió, y por eso el texto no lo dice."
+  ],
+  "status": "draft"
+}
