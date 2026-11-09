@@ -68,12 +68,15 @@
     "Usar la traducción de El libro del Pueblo de Dios en la tarjeta: tiene derechos de la Libreria Editrice Vaticana. La cita usa la Reina-Valera de 1909, de dominio público.",
     "Cuántos siglos separan el libro de Salomón: la fecha del reinado de Salomón no se verificó en fuente leída para esta pieza. El copy dice solo que el texto es posterior al exilio, como afirma la World Encyclopedia de Oxford recogida en Encyclopedia.com («after the Babylonian Captivity»)."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-08T03:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
