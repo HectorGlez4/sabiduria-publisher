@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 08 Nov 2026 20:08:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 18:07:16 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-07-re51-reel</guid>
+      <pubDate>Sun, 08 Nov 2026 04:26:00 +0000</pubDate>
+      <description><![CDATA["La esperanza es esa cosa con plumas que se posa en el alma y canta la melodía sin las palabras."
+— Emily Dickinson, «Hope» is the thing with feathers (Fr. 314 / J. 254), en Poems by Emily Dickinson
+
+Emily Dickinson murió en Amherst, Massachusetts, en 1886. En vida se le publicaron once poemas de los casi mil ochocientos que escribió, casi todos sin su permiso, en periódicos que además le cambiaban el título y la puntuación. De uno de ellos se quejó por escrito. El manuscrito de este poema está en la biblioteca Houghton de Harvard, cosido por ella misma en el fascículo 13, hacia 1861.
+
+Su hermana Lavinia encontró los poemas en un arcón después del entierro. Mabel Loomis Todd y Thomas Wentworth Higginson los prepararon para la imprenta, y en 1891 este salió en Poems by Emily Dickinson, Second Series. Los editores hicieron lo que Dickinson había reprochado en vida: le pusieron el título «Hope», quitaron las comillas con que ella marcaba la palabra en el primer verso y sustituyeron sus rayas por comas y puntos. La versión que se cita en el mundo es esa, la corregida.
+
+El poema no dice que la esperanza consuele. Dice que canta más dulce en el vendaval, que hace falta una tormenta muy fuerte para acallarla, y termina con una cuenta: la escuchó en la tierra más fría y en el mar más extraño, y ni en la peor necesidad le pidió una migaja.
+
+¿Qué cosas sostienen la vida sin cobrar nada por hacerlo?
+
+#SabiduriaDeBolsillo #EmilyDickinson #Poesia #Esperanza]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>No haré cosa alguna por la opinión, harélas todas por la conciencia.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -476,25 +496,6 @@ Y seguimos sin saber qué era. La UNESCO lo inscribió en 2018 evitando la palab
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-26-re55-reel</guid>
-      <pubDate>Tue, 27 Oct 2026 02:26:00 +0000</pubDate>
-      <description><![CDATA[MARY ANNING ENCONTRÓ LOS FÓSILES QUE FUNDARON UNA CIENCIA Y NO PUDO ENTRAR EN LA SOCIEDAD QUE LOS ESTUDIABA
-
-Vivía de vender fósiles en la playa de Lyme Regis, al sur de Inglaterra. En 1811 su hermano encontró el cráneo de un animal desconocido y ella desenterró el resto del esqueleto: el primer ictiosaurio que llegó a la ciencia londinense. En diciembre de 1823 sacó del acantilado el primer esqueleto completo de plesiosaurio. Cuvier, la mayor autoridad de Europa, lo dio por falso antes de rectificar.
-
-Los artículos que describieron esos animales casi nunca llevaban su nombre. La Sociedad Geológica de Londres discutió su plesiosaurio en una reunión a la que no la invitaron. Nunca fue socia: no admitían mujeres.
-
-Murió el 9 de marzo de 1847. Al año siguiente el presidente de esa misma sociedad leyó su elogio fúnebre ante los socios, rompiendo la norma por alguien de fuera. Las mujeres pudieron ingresar en mayo de 1919: setenta y dos años tarde.
-
-¿De quién es el mérito: de quien encuentra o de quien escribe?
-
-#SabiduriaDeBolsillo #MaryAnning #Paleontologia #MujeresEnLaCiencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re55-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-26-re55-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
