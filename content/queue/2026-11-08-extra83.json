@@ -67,12 +67,15 @@
     "Atribuir a Quiroga reglas que circulan en versiones ampliadas o reescritas del Decálogo; solo se cita el precepto IX tal como figura en Wikisource y Ciudad Seva.",
     "El precepto IX se ha citado a veces con «no escribas bajo el imperio de las emociones», en plural: el texto dice «de la emoción»."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-08T22:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

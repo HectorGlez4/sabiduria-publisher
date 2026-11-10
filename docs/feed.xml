@@ -7,8 +7,24 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 09 Nov 2026 18:07:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 18:25:16 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>la paciencia todo lo alcanza.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-08-re53-reel</guid>
+      <pubDate>Sun, 08 Nov 2026 19:26:00 +0000</pubDate>
+      <description><![CDATA["la paciencia todo lo alcanza."
+— Teresa de Jesús (1515-1582), Nada te turbe
+
+Religiosa y escritora abulense, reformadora del Carmelo. Escribió sobre la vida interior en una prosa deliberadamente llana.
+
+¿Qué te sostuvo la última vez que se puso difícil?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re53-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re53-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>El poema sobre la esperanza más citado del inglés se publicó cinco años después de que muriera quien lo escribió, y con la puntuación cambiada.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -477,25 +493,6 @@ La cifra estaba mal. Veintidós minutos equivalen a 226.663 kilómetros por segu
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Movieron bloques de ocho toneladas sin rueda, sin metal y sin una sola pieza de barro cocido.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-27-re51-reel</guid>
-      <pubDate>Tue, 27 Oct 2026 17:26:00 +0000</pubDate>
-      <description><![CDATA[Movieron bloques de ocho toneladas sin rueda, sin metal y sin una sola pieza de barro cocido.
-
-En el sureste de Turquía, entre el 9600 y el 8200 antes de Cristo, alguien levantó círculos de pilares de piedra en forma de T. Los mayores miden cinco metros y medio y pesan unas ocho toneladas, y están tallados con zorros, escorpiones, buitres y serpientes. Son seis mil años anteriores a Stonehenge.
-
-Del sitio se han recuperado más de cien mil fragmentos de hueso animal. Todos son de especies salvajes: gacela sobre todo, jabalí, ciervo, aves. Quienes lo construyeron todavía cazaban. El trigo domesticado aparece en la región unos quinientos años después. Primero el monumento; después, el campo sembrado.
-
-Y seguimos sin saber qué era. La UNESCO lo inscribió en 2018 evitando la palabra templo: los llama edificios comunales. Un arqueólogo sostiene desde 2011 que eran casas. Lo más antiguo que construimos en grande todavía no tiene nombre seguro.
-
-¿Qué se construye primero, cuando todavía no hay nada resuelto?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
