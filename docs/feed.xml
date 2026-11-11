@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Tue, 10 Nov 2026 18:25:16 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 23:38:29 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EL TORNAVIAJE: durante cuarenta años se pudo cruzar el Pacífico, pero no volver</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-08-re55-reel</guid>
+      <pubDate>Sun, 08 Nov 2026 23:26:00 +0000</pubDate>
+      <description><![CDATA[EL TORNAVIAJE: durante cuarenta años se pudo cruzar el Pacífico, pero no volver
+
+Ir era posible desde Magallanes. Regresar, no: los vientos empujaban siempre hacia el oeste y expedición tras expedición se quedó del otro lado. El 1 de junio de 1565 el fraile agustino Andrés de Urdaneta salió de Cebú en el San Pedro con doscientos hombres y probó otra cosa: subir hasta el paralelo 38 a buscar vientos contrarios. Llegó a Acapulco el 8 de octubre, cuatro meses y ocho días después. Del escorbuto solo quedaban dieciocho hombres capaces de maniobrar.
+
+Lo que casi nadie cuenta es que no fue el primero. Un patache diminuto, el San Lucas, se había separado de la flota en diciembre de 1564 y llegó al puerto de la Navidad el 9 de agosto, dos meses antes. A su capitán, Alonso de Arellano, lo investigaron por desertor: ni lo castigaron ni lo premiaron. Urdaneta traía mejores diarios y mejores mapas, y el mérito fue suyo.
+
+Esa ruta funcionó doscientos cincuenta años, hasta 1815.
+
+¿Cuánto pesa llegar primero si nadie te cree el relato?
+
+#SabiduriaDeBolsillo #Acapulco #Historia #Curiosidades]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re55-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re55-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>la paciencia todo lo alcanza.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -474,25 +493,6 @@ Ensayista uruguayo. Escribió para los jóvenes de su siglo un ideal de vida int
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re55-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re55-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Al hombre al que se le atribuye la primera medición de la velocidad de la luz le falta un detalle en la biografía: nunca publicó una cifra de la velocidad de la luz.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-10-27-re53-reel</guid>
-      <pubDate>Tue, 27 Oct 2026 22:26:00 +0000</pubDate>
-      <description><![CDATA[Al hombre al que se le atribuye la primera medición de la velocidad de la luz le falta un detalle en la biografía: nunca publicó una cifra de la velocidad de la luz.
-
-Ole Rømer, astrónomo danés en el Observatorio de París, llevaba años cronometrando los eclipses de Ío, la luna interior de Júpiter. El intervalo entre un eclipse y el siguiente no salía constante: se acortaba mientras la Tierra se acercaba a Júpiter y se alargaba mientras se alejaba. El 22 de agosto de 1676 Cassini presentó el hallazgo a la Academia de Ciencias de París; el 21 de noviembre lo expuso Rømer en persona, y en diciembre apareció en el Journal des Sçavans. Su conclusión fue que la luz tarda unos veintidós minutos en cruzar el diámetro de la órbita terrestre.
-
-Eso es un retraso, no una velocidad. Rømer nunca convirtió su número a leguas ni a millas por segundo. El primero en hacerlo fue Christiaan Huygens, que combinó los veintidós minutos con el diámetro de la órbita que Cassini había medido en 1671 y obtuvo unos 110 millones de toesas por segundo: alrededor de 214.000 kilómetros por segundo. La prueba, en cambio, sí fue de Rømer, y fue una predicción: anunció que la reaparición de Ío prevista para noviembre de 1676 llegaría con unos diez minutos de retraso sobre lo calculado. Se observó el 9 de noviembre.
-
-La cifra estaba mal. Veintidós minutos equivalen a 226.663 kilómetros por segundo, un 24,4 % por debajo del valor real de 299.792. Y la explicación tampoco convenció: Cassini, que la había presentado, la rechazó, y Picard compartió sus dudas. La finitud de la luz no quedó asentada hasta que James Bradley midió la aberración estelar, medio siglo después. Lo que Rømer aportó no fue el número correcto. Fue la prueba de que ahí había un número.
-
-¿Cuánto vale una cifra equivocada que abre la pregunta correcta?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re53-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-10-27-re53-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
