@@ -70,12 +70,15 @@
     "Que Descartes copiara a Agustín («si fallor, sum», Ciudad de Dios XI, 26): el parecido se discute desde el siglo XVII, pero la dependencia no está probada. No se afirma.",
     "La traducción «pienso, luego existo» es la tradicional; el francés dice «je suis» (soy). La pieza usa «pienso, luego soy» en la cita, que es más literal."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-09T20:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

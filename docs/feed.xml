@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 12 Nov 2026 04:21:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 13:24:43 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-09-re51-reel</guid>
+      <pubDate>Mon, 09 Nov 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA[LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ
+
+Diseccionó alrededor de treinta cuerpos humanos a lo largo de su vida. En el invierno de 1510 y 1511 trabajó en la facultad de medicina de Pavía, junto al catedrático de anatomía Marcantonio della Torre, y solo esa temporada pudo abrir hasta veinte cadáveres. De ahí salieron cientos de hojas de dibujos con miles de palabras de notas.
+
+Los dos planeaban un tratado ilustrado. Della Torre murió de peste en 1511, a los treinta años. Leonardo siguió solo, nunca lo terminó, y murió en 1519. Sus papeles pasaron a su discípulo Francesco Melzi, un coleccionista los encuadernó después en un álbum, y ese álbum entró en la colección real inglesa hacia 1670. Ahí se quedaron.
+
+No se publicaron ni se entendieron hasta finales del siglo XIX. Para entonces la anatomía moderna llevaba más de tres siglos en marcha: la había fundado otro libro, impreso en 1543.
+
+¿Qué guardas terminado a medias, esperando el momento perfecto?
+
+#SabiduriaDeBolsillo #Leonardo #Anatomia #Ciencia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>No tenemos poco tiempo: hemos perdido mucho.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -478,25 +497,6 @@ Los países católicos aplicaron el cambio en 1582. Inglaterra y sus colonias es
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-01-re51-reel</guid>
-      <pubDate>Sun, 01 Nov 2026 23:26:00 +0000</pubDate>
-      <description><![CDATA[Vendió doscientos cincuenta y cinco de sus propios cuadros para pagarse la expedición que ninguna compañía quiso financiarle. Tenía cincuenta y dos años.
-
-Maria Sibylla Merian nació en Fráncfort en 1647 y murió en Ámsterdam en 1717. En abril de 1699 se embarcó hacia Surinam con su hija menor, Dorothea. Los naturalistas neerlandeses de su tiempo viajaban con el respaldo de las grandes compañías comerciales; ella no. Vendió parte de su colección y alrededor de doscientos cincuenta y cinco pinturas propias, y completó el resto con una ayuda pequeña del ayuntamiento de Ámsterdam.
-
-Estuvo dos años en la selva, hasta que una enfermedad la obligó a volver en 1701. Lo que trajo no era una colección de ejemplares clavados con alfileres. Había dibujado a los insectos vivos y en su sitio: el huevo, la oruga, la crisálida y el adulto en la misma lámina, y encima la planta concreta de la que aquel animal comía. En 1705 publicó Metamorphosis insectorum Surinamensium, sesenta láminas de cobre, en neerlandés y en latín, asumiendo ella el riesgo económico de la edición.
-
-Poner al insecto sobre su planta parece una decisión de composición. Es una tesis: que un ser vivo no se entiende separado de aquello con lo que se relaciona. La palabra ecología no existiría hasta 1866, siglo y medio después. Hay algo más en ese libro que casi ningún naturalista de la época escribió: Merian dejó constancia de dónde venía su información, y cita el conocimiento de las personas esclavizadas y de los habitantes originarios de Surinam.
-
-¿A quién le debes un dato que hoy das por tuyo?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

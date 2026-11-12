@@ -75,12 +75,26 @@
     "Mezclar este verso con \"Me moriré en París con aguacero\" (de \"Piedra negra sobre una piedra blanca\") o con \"Masa\": son poemas de libros posteriores, publicados póstumamente en 1939.",
     "Presentar la cita como consuelo o como lema de superación. El poema no explica el golpe ni promete nada: el eje del texto es justamente que el poeta admite no saber."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook_story",
     "instagram_story"
   ],
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "977049978816768",
+      "photo_id": "1150928974398428",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-11-12T13:24:29.270588+00:00"
+    },
+    "instagram_story": {
+      "post_id": "17935709103409010",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-11-12T13:24:42.985052+00:00"
+    }
+  },
   "publish_at": "2026-11-09T19:26:00Z",
   "reemision_de": "2026-08-27-extra11"
 }
