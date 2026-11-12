@@ -66,12 +66,15 @@
     "Llamar «discurso en el Parlamento» al texto: lo hace un ensayo secundario; es un panfleto publicado el 23 de abril de 1770.",
     "Una paginación concreta de la frase fuera de la tercera edición: Quote Investigator da p. 106 de esa edición; otras ediciones modernas paginan distinto y no se abrieron."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-09T02:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
