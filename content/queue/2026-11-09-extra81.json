@@ -71,7 +71,7 @@
     "Que la frase sea una celebración del imperio: el prólogo la usa también como advertencia de caída conjunta; la lectura del último párrafo es interpretación de la redacción.",
     "Verificación incompleta: el texto español completo del pasaje solo se vio en resúmenes de búsqueda; las ediciones en PDF no se pudieron leer. Lo citado en quote.text («Siempre la lengua fue compañera del imperio») sí está confirmado por tres fuentes leídas. Revisar contra la edición de Quilis o de Carmen Lozano (RAE) antes de encolar."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-09T15:26:00Z",
   "results": {
     "facebook": {
@@ -85,7 +85,7 @@
       "published_at": "2026-11-12T04:44:02.653012+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 11-Nov-26 23:41:01 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Thursday, 12-Nov-26 03:41:02 PST."
     }
   },
   "targets": [
@@ -93,6 +93,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-12T07:41:01.793081+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-12T11:41:02.164546+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Thursday, 12-Nov-26 03:41:02 PST."
+  ]
 }
