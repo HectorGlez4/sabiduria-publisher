@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 12 Nov 2026 13:24:43 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 16:05:42 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>BOECIO ESCRIBIÓ UNO DE LOS LIBROS MÁS LEÍDOS DE LA EDAD MEDIA EN UNA CELDA, ESPERANDO QUE LO EJECUTARAN</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-09-re53-reel</guid>
+      <pubDate>Mon, 09 Nov 2026 22:26:00 +0000</pubDate>
+      <description><![CDATA[BOECIO ESCRIBIÓ UNO DE LOS LIBROS MÁS LEÍDOS DE LA EDAD MEDIA EN UNA CELDA, ESPERANDO QUE LO EJECUTARAN
+
+Era el segundo hombre del reino: maestro de los oficios de Teodorico, el rey ostrogodo que gobernaba Italia desde Rávena. Lo acusaron de traición y de practicar magia, lo encarcelaron y lo mandaron matar hacia el año 526. Pasó preso alrededor de un año, y ahí escribió.
+
+El libro es un diálogo. La Filosofía se le aparece en la celda con forma de mujer y le pregunta de qué se queja. Cuando él enumera lo perdido —el cargo, el nombre, la casa, la reputación—, ella le responde con una imagen que después recorrió toda la Edad Media: la rueda de la Fortuna. Nada de eso era suyo. Estaba prestado, y la rueda gira.
+
+Un detalle que casi nadie menciona: Boecio era cristiano y había escrito tratados de teología, pero en este libro no aparece Cristo ni una sola vez. Se consuela únicamente con lo que puede razonar.
+
+Lo tradujeron un rey de Inglaterra, Chaucer y la reina Isabel I.
+
+¿Qué de lo que hoy llamas tuyo te lo prestaron?
+
+#SabiduriaDeBolsillo #Boecio #Filosofia #EdadMedia]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re53-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re53-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -478,25 +499,6 @@ La definición más repetida de la tolerancia en Occidente no es una cita. Es el
 #SabiduriaDeBolsillo #Voltaire #Citas #LibertadDeExpresion]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-02-re55-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-02-re55-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Teresa de Ávila murió a las nueve de la noche del jueves 4 de octubre de 1582. La enterraron a la mañana siguiente, que fue viernes 15.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-01-re53-reel</guid>
-      <pubDate>Mon, 02 Nov 2026 03:26:00 +0000</pubDate>
-      <description><![CDATA[Teresa de Ávila murió a las nueve de la noche del jueves 4 de octubre de 1582. La enterraron a la mañana siguiente, que fue viernes 15.
-
-El calendario juliano corría unos once minutos largo cada año. En dieciséis siglos, esos minutos se habían convertido en diez días de desfase, y el equinoccio de primavera —del que depende el cálculo de la Pascua— ya no caía donde lo habían fijado los padres del Concilio de Nicea. La bula Inter gravissimas, firmada por Gregorio XIII el 24 de febrero de 1582, ordenó la corrección: suprimir del calendario los días 5 a 14 de octubre de aquel año. Al jueves 4 le siguió el viernes 15.
-
-Teresa de Jesús agonizaba esa misma noche en Alba de Tormes. Murió con las nueve campanadas del jueves 4. Su funeral se celebró a las diez de la mañana siguiente, y esa mañana ya era 15 de octubre. Ahí quedó su fiesta. No hubo diez días de agonía: hubo una noche, y dos nombres para las dos orillas de esa noche.
-
-Los países católicos aplicaron el cambio en 1582. Inglaterra y sus colonias esperaron hasta 1752. Durante casi ciento setenta años, Europa escribió dos fechas distintas para el mismo instante. De ahí viene la coincidencia más repetida de la historia literaria: Cervantes y Shakespeare figuran los dos en el 23 de abril de 1616. Pero el 23 inglés era juliano; en el calendario que hoy usamos, Shakespeare murió el 3 de mayo. Y el 23 de Cervantes es el día en que lo enterraron: murió el 22.
-
-¿Qué coincidencia que das por cierta depende solo de cómo se cuenta?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re53-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-01-re53-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
