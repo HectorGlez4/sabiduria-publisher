@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-19-tarde",
+  "id": "2026-11-13-extra87",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Santayana", "#Citas", "#Filosofia"],
-    "extended": ["#Memoria", "#Historia", "#TheLifeOfReason", "#PensamientoEspanol", "#SigloXX", "#Sabiduria"]
+    "topic": [
+      "#Santayana",
+      "#Citas",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Memoria",
+      "#Historia",
+      "#TheLifeOfReason",
+      "#PensamientoEspanol",
+      "#SigloXX",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "El nombre completo en español (Jorge Agustín Nicolás Ruiz de Santayana): circula, pero ninguna fuente leída lo da. No usar.",
     "La traducción es propia, sobre el inglés del capítulo; no es la de ninguna edición española concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-14T02:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

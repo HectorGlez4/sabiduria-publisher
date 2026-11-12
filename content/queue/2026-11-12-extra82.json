@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-10-tarde",
+  "id": "2026-11-12-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#DavidHume", "#Filosofia", "#Citas"],
-    "extended": ["#Ilustracion", "#IlustracionEscocesa", "#Etica", "#Razon", "#Pasiones", "#SigloXVIII", "#Sabiduria"]
+    "topic": [
+      "#DavidHume",
+      "#Filosofia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Ilustracion",
+      "#IlustracionEscocesa",
+      "#Etica",
+      "#Razon",
+      "#Pasiones",
+      "#SigloXVIII",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "Las cifras del contrato (50 libras y mil ejemplares): aparecen en fuentes de subastas, no verificadas. No se usan.",
     "Que su autobiografía sea de «décadas después»: My Own Life está fechada en abril de 1776, treinta y siete años después. Correcto, pero si se quiere el año exacto, verificarlo antes."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-12T23:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

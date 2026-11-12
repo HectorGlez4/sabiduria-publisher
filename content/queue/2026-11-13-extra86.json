@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-18-extra41",
+  "id": "2026-11-13-extra86",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Liezi", "#Citas", "#Taoismo"],
-    "extended": ["#China", "#Fabulas", "#FilosofiaChina", "#Perseverancia", "#Clasicos", "#Sabiduria"]
+    "topic": [
+      "#Liezi",
+      "#Citas",
+      "#Taoismo"
+    ],
+    "extended": [
+      "#China",
+      "#Fabulas",
+      "#FilosofiaChina",
+      "#Perseverancia",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "Que Yugong fuera «tonto» en sentido literal: el nombre 愚公 es irónico frente a 智叟, el «viejo sabio»; el relato invierte la sabiduría. No presentarlo como insulto.",
     "Detalles del cuerpo que circulan en versiones escolares (la viuda vecina con su hijo de siete u ocho años que ayuda, el viaje de ida y vuelta al mar de Bohai que dura un año): están en el texto completo, pero no se pidieron ni comprobaron en esta lectura. No usar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-13T22:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

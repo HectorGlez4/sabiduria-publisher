@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-10-extra41",
+  "id": "2026-11-12-extra81",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#TomasDeKempis", "#ImitacionDeCristo", "#Citas"],
-    "extended": ["#EdadMedia", "#SigloXV", "#Espiritualidad", "#Refranes", "#Manuscritos", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#TomasDeKempis",
+      "#ImitacionDeCristo",
+      "#Citas"
+    ],
+    "extended": [
+      "#EdadMedia",
+      "#SigloXV",
+      "#Espiritualidad",
+      "#Refranes",
+      "#Manuscritos",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +69,12 @@
     "La autoría de Gerson u otros: se discutió durante siglos; las fuentes leídas la dan a Kempis. No se plantea la polémica en el cuerpo.",
     "Lope de Vega, soneto «Desmayarse, atreverse, estar furioso»: se descartó en esta ejecución porque el número (126) solo aparece en material escolar y no se pudo leer ninguna edición crítica (RAE y UAM dan 403). Fecha 1602 (Casa Museo Lope de Vega) o 1604 (Rimas) sin resolver."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-12T19:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

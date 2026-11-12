@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-16-tarde",
+  "id": "2026-11-13-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#AdamSmith", "#Citas", "#RiquezaDeLasNaciones"],
-    "extended": ["#Economia", "#Ilustracion", "#SigloXVIII", "#Filosofia", "#Escocia", "#Sabiduria"]
+    "topic": [
+      "#AdamSmith",
+      "#Citas",
+      "#RiquezaDeLasNaciones"
+    ],
+    "extended": [
+      "#Economia",
+      "#Ilustracion",
+      "#SigloXVIII",
+      "#Filosofia",
+      "#Escocia",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "Que Smith defendiera el egoísmo como virtud: lectura vulgar, discutida por la bibliografía. La Teoría de los sentimientos morales (1759) no se consultó y no se usa en el cuerpo.",
     "Que la última edición en vida sea la de 1789 y que la de Cannan sea la «original»: Cannan es una edición moderna de 1904. El campo work lo indica."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-13T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

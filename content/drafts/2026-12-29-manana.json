@@ -1,0 +1,64 @@
+{
+  "id": "2026-12-29-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "William Herschel y los rayos caloríficos de 1800",
+    "hook": "En abril de 1800 Herschel encontró una luz que nadie podía ver. En noviembre decidió que no era luz.",
+    "body": [
+      "William Herschel había nacido en Hanover en 1738, fue músico antes que astrónomo y en 1781 descubrió Urano. En 1800 hizo pasar la luz del Sol por un prisma y puso termómetros de bulbo ennegrecido en cada color, con otros a la sombra como control. El calor subía del violeta al rojo.",
+      "Luego colocó los termómetros más allá del rojo, donde no se veía nada. En el informe leído ante la Royal Society el 24 de abril de 1800 anotó que uno de ellos subió seis grados y medio en diez minutos, a media pulgada del último color visible. Concluyó que del Sol llegan rayos menos refrangibles que cualquiera de los que afectan a la vista. Los llamó rayos caloríficos. Hoy se llaman infrarrojos.",
+      "En la segunda parte de su último trabajo sobre el tema, leída en noviembre de ese año, se echó atrás. Escribió que los rayos que dan calor y los que dan luz son de distinta naturaleza y que no tienen en común más que cierto grado de refrangibilidad. Había medido bien. Lo que le falló fue la interpretación de lo que había medido."
+    ],
+    "question": "¿Cuántas veces el dato ya estaba y faltaba la manera de entenderlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "William Herschel",
+    "subtitle": "Londres, Royal Society, 1800",
+    "body": "Puso termómetros más allá del rojo del espectro y el mercurio subió. Llamó caloríficos a esos rayos invisibles. Meses después concluyó que no eran luz. Hoy los llamamos infrarrojos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#WilliamHerschel", "#Ciencia", "#Infrarrojo"],
+    "extended": ["#Astronomia", "#Fisica", "#HistoriaDeLaCiencia", "#Luz", "#RoyalSociety", "#Espectro"]
+  },
+  "sources": [
+    {
+      "claim": "«Experiments on the Refrangibility of the invisible Rays of the Sun», William Herschel, Philosophical Transactions of the Royal Society of London, vol. 90 (1800), leído el 24 de abril de 1800: concluye que «there are rays coming from the sun, which are less refrangible than any of those that affect the sight»; el termómetro n.º 1 subió 6½ grados en 10 minutos con su centro a ½ pulgada más allá de la luz visible. Lectura directa del texto OCR.",
+      "source": "W. Herschel, Phil. Trans. R. Soc. Lond. 90 (1800), págs. 284-292; OCR de JSTOR 107057 en el corpus «Philosophical Transactions OCR 1665-1869»",
+      "url": "https://jimclifford.ca/philosophical-transactions-ocr-1665-1869/articles/jstor-107057/"
+    },
+    {
+      "claim": "«Experiments on the Solar, and on the Terrestrial Rays that Occasion Heat [...] in Order to Determine Whether they are the Same, or Different. Part II», Herschel, Phil. Trans. vol. 90 (1800): el texto sostiene que la diferencia observada «can only be accounted for by admitting the rays themselves to be of a different nature» y que «they have nothing in common but a certain equal degree of refrangibility». Lectura directa del texto OCR.",
+      "source": "W. Herschel, Phil. Trans. R. Soc. Lond. 90 (1800), Part II; OCR de JSTOR 107062",
+      "url": "https://jimclifford.ca/philosophical-transactions-ocr-1665-1869/articles/jstor-107062/"
+    },
+    {
+      "claim": "Primer artículo presentado en marzo de 1800; tercer trabajo publicado en dos partes, mayo y noviembre de 1800; en él Herschel «backed away from his conclusion» y consideró la luz y el calor radiante entidades probablemente distintas, algo que va contra lo que hoy se sabe; método: prisma, tarjeta con rendija, un termómetro en la luz y otro a la sombra; la temperatura subía del violeta al verde y al rojo. Lectura directa.",
+      "source": "American Physical Society, APS News, «This Month in Physics History: William Herschel and invisible light» (febrero de 2024)",
+      "url": "https://www.aps.org/apsnews/2024/02/william-herschel-invisible-light"
+    },
+    {
+      "claim": "Segundo trabajo del 24 de abril de 1800 con los termómetros justo más allá del borde rojo; el tercero en dos partes, mayo y noviembre de 1800. Lectura directa.",
+      "source": "Linda Hall Library, «Scientist of the Day: William Herschel»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/william-herschel-4/"
+    },
+    {
+      "claim": "Herschel nació en Hanover en 1738, fue conocido como músico y astrónomo, descubrió Urano en 1781; usó termómetros de bulbo ennegrecido y termómetros de control; llamó «calorific rays» a la radiación más allá del rojo, luego renombrada infrarroja. Lectura directa.",
+      "source": "IPAC, California Institute of Technology (NASA), «Herschel Discovers Infrared Light»",
+      "url": "https://www.ipac.caltech.edu/Outreach/Edu/Herschel/herschel_bio.html"
+    }
+  ],
+  "do_not_use": [
+    "Que el descubrimiento fue un accidente: las propias memorias muestran una serie razonada de mediciones; un artículo de STEM/Catalyst lo discute expresamente. No se dice ni lo uno ni lo otro.",
+    "La fecha del 11 de febrero de 1800 para la observación con filtros de colores: solo aparece en un libro de texto (Macmillan); no se verificó en fuente primaria.",
+    "Que Herschel usó la palabra «infrarrojo»: el término es posterior; él habló de rayos invisibles y caloríficos.",
+    "Dar la fecha exacta de lectura de la Part II (6 de noviembre de 1800): aparece en resultados de búsqueda, pero no se leyó en la fuente; el texto dice «noviembre».",
+    "Afirmar quién y cuándo demostró después que el infrarrojo es luz (Ampère, Melloni): no se verificó en esta ronda.",
+    "La conclusión de la Part II se resume con dos frases del propio texto; el OCR leído no contenía una frase de cierre única, así que no se presenta ninguna cita como «la última frase».",
+    "Las traducciones al español son propias."
+  ],
+  "status": "draft"
+}

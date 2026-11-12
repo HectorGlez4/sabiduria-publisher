@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-29-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Percy Shelley y el soneto Ozymandias (1818)",
+    "hook": "La frase más arrogante de la poesía inglesa la escribió Shelley para que la leyera la arena.",
+    "quote": {
+      "text": "Mi nombre es Ozymandias, rey de reyes: ¡mirad mis obras, poderosos, y desesperad!",
+      "author": "Percy Bysshe Shelley",
+      "work": "«Ozymandias», The Examiner, n.º 524 (11 de enero de 1818)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Shelley escribió el soneto a finales de 1817, en un concurso amistoso con su amigo Horace Smith: los dos tratarían el mismo tema. Lo publicó el semanario The Examiner el 11 de enero de 1818, bajo el seudónimo Glirastes. La frase es la inscripción del pedestal de una estatua rota que un viajero encuentra en el desierto.",
+      "La inscripción existe, o existió en un libro. El historiador griego Diodoro de Sicilia, en el siglo I antes de nuestra era, describe en el libro I de su Biblioteca histórica la estatua sedente de Osimandias, la mayor de Egipto, con un pie de más de siete codos. Según Diodoro decía: «Rey de reyes soy yo, Osimandias. Si alguien quiere saber cuán grande soy y dónde yazgo, que supere una de mis obras». Los editores modernos identifican al rey con Ramsés II.",
+      "Shelley conserva el desafío y le añade una sola línea después: «Nada más queda». Alrededor, dice el soneto, la arena se extiende sola y llana. En Diodoro la frase reta a superar al rey. En Shelley ya no hay nadie a quien retar."
+    ],
+    "question": "¿Qué obra tuya querrías que hablara por ti cuando ya no estés para explicarla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Shelley", "#Citas", "#Poesia"],
+    "extended": ["#Ozymandias", "#Romanticismo", "#LiteraturaInglesa", "#Egipto", "#RamsesII", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del soneto: verso 10 «My name is Ozymandias, King of Kings,», verso 11 «Look on my Works ye Mighty, and despair!», verso 12 «Nothing beside remains. Round the decay»; primera publicación como «Ozymandias», firmado Glirastes, en The Examiner, n.º 524, 11 de enero de 1818; texto base del manuscrito Bodleian MS Shelley e.4, fol. 85r, con variantes de Rosalind and Helen (Londres, C. and J. Ollier, 1819). Lectura directa.",
+      "source": "Representative Poetry Online, University of Toronto Libraries, «Ozymandias», Percy Bysshe Shelley",
+      "url": "https://rpo.library.utoronto.ca/poems/ozymandias"
+    },
+    {
+      "claim": "Diodoro de Sicilia, Biblioteca histórica, libro I, caps. 47-48 (Loeb Classical Library, vol. I, 1933): estatua sedente de piedra negra de Siene, la mayor de Egipto, con un pie de más de siete codos; inscripción «King of Kings am I, Osymandyas. If anyone would know how great I am and where I lie, let him surpass one of my works»; la nota del editor identifica el conjunto con el Rameseo y el coloso con Ramsés II. Lectura directa.",
+      "source": "Diodorus Siculus, Library of History, Book I, Loeb 1933, en LacusCurtius (Bill Thayer, University of Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/1C*.html"
+    },
+    {
+      "claim": "Shelley y Horace Smith escribieron sus sonetos en 1817 como «friendly competition» sobre el mismo tema; ambos aparecieron en The Examiner de Leigh Hunt a pocas semanas de distancia; Smith retituló después el suyo «On a Stupendous Leg of Granite». Lectura directa.",
+      "source": "George Mason University, página docente de R. Nanian, «Shelley & Smith»",
+      "url": "https://mason.gmu.edu/~rnanian/Shelley&Smith.html"
+    },
+    {
+      "claim": "El soneto se publicó en un periódico en 1818 y en un libro en 1819; la cabeza del «Younger Memnon» la obtuvo Henry Salt para el British Museum en 1816, pero no llegó a Londres ni se expuso hasta 1821, por lo que no pudo inspirar a Shelley verla. Lectura directa.",
+      "source": "Linda Hall Library, «Scientist of the Day: Percy Bysshe Shelley»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/percy-bysshe-shelley/"
+    }
+  ],
+  "do_not_use": [
+    "Que Shelley escribió el soneto tras ver en el British Museum el busto de Ramsés II («Younger Memnon»): la pieza no llegó a Londres ni se expuso hasta 1821; Linda Hall Library y Live Science lo descartan.",
+    "Que el busto llegó al British Museum en 1818: lo repiten blogs; las fuentes cuidadosas dan adquisición en 1816-1817 y llegada en 1821.",
+    "La fecha del soneto de Horace Smith en The Examiner (1 de febrero de 1818): una fuente universitaria dice que ambos salieron en enero; hay discrepancia y no se usa.",
+    "El número de sección exacto de Diodoro (I.47.4 o I.48.4): la página leída no lo dejó claro; se cita como caps. 47-48.",
+    "Que la inscripción del soneto es traducción literal de Diodoro: «despair» es de Shelley; en Diodoro el rey reta a superar sus obras.",
+    "El nombre del manuscrito: el texto base de RPO trae «No thing remains beside»; la lectura «Nothing beside remains» es la de 1819, que es la que circula.",
+    "La traducción al español es propia; no se cotejó con una edición publicada."
+  ],
+  "status": "draft"
+}

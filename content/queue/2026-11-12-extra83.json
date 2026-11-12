@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-12-extra41",
+  "id": "2026-11-12-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#EbnerEschenbach", "#Citas", "#Aforismos"],
-    "extended": ["#LiteraturaAustriaca", "#SigloXIX", "#Conocimiento", "#MujeresEscritoras", "#Viena", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#EbnerEschenbach",
+      "#Citas",
+      "#Aforismos"
+    ],
+    "extended": [
+      "#LiteraturaAustriaca",
+      "#SigloXIX",
+      "#Conocimiento",
+      "#MujeresEscritoras",
+      "#Viena",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +70,12 @@
     "Que fuera autodidacta o que no pudiera ir a la universidad por ser mujer: no se verificó. Solo consta que nunca estudió en Viena.",
     "Das Waldfräulein (1873) se omite en la lista del cuerpo por espacio, no por duda."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-13T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

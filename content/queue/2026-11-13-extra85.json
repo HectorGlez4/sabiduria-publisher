@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-17-tarde",
+  "id": "2026-11-13-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Feijoo", "#Citas", "#TeatroCriticoUniversal"],
-    "extended": ["#Ilustracion", "#SigloXVIII", "#Filosofia", "#Espana", "#PensamientoCritico", "#Sabiduria"]
+    "topic": [
+      "#Feijoo",
+      "#Citas",
+      "#TeatroCriticoUniversal"
+    ],
+    "extended": [
+      "#Ilustracion",
+      "#SigloXVIII",
+      "#Filosofia",
+      "#Espana",
+      "#PensamientoCritico",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "El texto de la cita es el de la edición de 1778, no el de la príncipe de 1726. El campo work lo indica; no presentarlo como transcripción de 1726.",
     "Que Feijoo fuera «el primer fact checker de España»: etiqueta periodística moderna (Vozpópuli), no un juicio de la bibliografía."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-13T17:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
