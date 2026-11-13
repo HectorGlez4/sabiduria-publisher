@@ -1184,6 +1184,9 @@ def _sitio_cola() -> int:
     ev = _evidencia(run)
     ev.mkdir(parents=True, exist_ok=True)
     archivos = {}
+    # Se renderiza en la evidencia del run, no en assets/: allí hay tarjetas versionadas y pisarlas deja el árbol
+    # sucio, y entonces el `git rebase` del ciclo se niega a correr (13 nov).
+    publish.ASSETS = ev
     if "feed" in pendientes:
         archivos["feed"] = str(publish.render_card(unit))
     if {"reel", "story"} & set(pendientes):
