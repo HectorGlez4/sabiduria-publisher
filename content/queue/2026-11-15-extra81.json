@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-30-tarde",
+  "id": "2026-11-15-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Euripides", "#Citas", "#TeatroGriego"],
-    "extended": ["#Hipolito", "#Grecia", "#Tragedia", "#Aristofanes", "#Aristoteles", "#Sabiduria"]
+    "topic": [
+      "#Euripides",
+      "#Citas",
+      "#TeatroGriego"
+    ],
+    "extended": [
+      "#Hipolito",
+      "#Grecia",
+      "#Tragedia",
+      "#Aristofanes",
+      "#Aristoteles",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -63,5 +74,12 @@
     "Atribuir a Eurípides la frase «a quien los dioses quieren destruir, primero lo enloquecen»: es un adagio posterior sin verso identificable en su obra.",
     "La traducción al español del verso es propia, a partir del griego y de la versión de Kovacs."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-16T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
