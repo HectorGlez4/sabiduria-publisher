@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-31-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Chamfort y el día en que no se ha reído",
+    "hook": "Uno de los elogios más citados de la risa lo dejó entre sus papeles un moralista famoso por su amargura.",
+    "quote": {
+      "text": "El más perdido de todos los días es aquel en que no se ha reído.",
+      "author": "Nicolas de Chamfort",
+      "work": "Maximes et pensées, cap. I, «Maximes générales» (ed. Ginguené, 1796)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Nicolas de Chamfort nació en Clermont-Ferrand hacia 1741, de padres inciertos. Fue autor de teatro y en 1781, al cuarto intento, entró en la Academia Francesa. Apoyó la Revolución y llegó a ser secretario del club de los jacobinos, pero el Terror lo alcanzó: en septiembre de 1793, a punto de ser detenido, intentó quitarse la vida. Murió en París en abril de 1794.",
+      "Dejó miles de notas sueltas. Su amigo Pierre-Louis Ginguené las reunió en 1795, en el último tomo de sus obras, con el título que Chamfort había pensado para ellas: Productos de la civilización perfeccionada. En la edición de 1796, la frase está en el primer capítulo, el de las máximas generales.",
+      "Lo que la rodea no es alegre. La máxima anterior reprocha a la tragedia que dé demasiada importancia a la vida y a la muerte. La siguiente dice que casi todas las locuras son simples tonterías. Entre esas dos, Chamfort no recomienda la risa como adorno: la pone como lo único que salva un día del todo."
+    ],
+    "question": "¿Cuándo fue la última vez que un día se te salvó por una risa?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Chamfort", "#Citas", "#Ilustracion"],
+    "extended": ["#Moralistas", "#Francia", "#Risa", "#Maximas", "#RevolucionFrancesa", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Chapitre Ier, «Maximes générales» (pp. 5-27): «La plus perdue de toutes les journées est celle où l'on n'a pas ri.» La máxima anterior trata de que la tragedia da demasiada importancia a la vida y a la muerte; la siguiente, de que la mayoría de las locuras son simples tonterías. Texto validado de la edición de 1796. Lectura directa.",
+      "source": "Wikisource (fr), Chamfort, «Maximes, Pensées, Caractères et Anecdotes», éd. Pierre-Louis Ginguené, Londres, T. Baylis, 1796, chap. 1",
+      "url": "https://fr.wikisource.org/wiki/Maximes_Pens%C3%A9es_Caract%C3%A8res_et_Anecdotes/Chapitre_1"
+    },
+    {
+      "claim": "La edición tiene una «Notice sur la Vie de Chamfort» de Ginguené; Chamfort murió «le 24 Germinal de l'an ii de la République», 13 de abril de 1794; índice: Maximes et Pensées en ocho capítulos, el primero «Maximes générales». Lectura directa.",
+      "source": "Wikisource (fr), «Maximes Pensées Caractères et Anecdotes», índice y Notice (éd. Ginguené, 1796)",
+      "url": "https://fr.wikisource.org/wiki/Maximes_Pens%C3%A9es_Caract%C3%A8res_et_Anecdotes/Notice"
+    },
+    {
+      "claim": "Nacimiento registrado en Clermont-Ferrand, filiación incierta; elegido a la Académie française en 1781 «on his fourth attempt»; apoyó la causa republicana y fue secretario del club de los jacobinos; el 10 de septiembre de 1793, esperando ser arrestado, se disparó y sobrevivió; Ginguené publicó sus obras en cuatro volúmenes, el cuarto con sus notas titulado «Produits de la civilisation perfectionée». Martin Jenkins, 2023. Lectura directa.",
+      "source": "Philosophy Now, nº 155, «Chamfort (1740-1794)»",
+      "url": "https://philosophynow.org/issues/155/Chamfort_1740-1794"
+    },
+    {
+      "claim": "Chamfort pensaba titular «Produits de la civilisation perfectionnée» una obra a la vez tratado moral y panfleto; no fue un apóstol sarcástico de la renuncia amarga; escapó del Terror intentando suicidarse. Jeannine Etiemble (Université du Maine). Lectura directa.",
+      "source": "Encyclopædia Universalis, «Chamfort (1741-1794)», 3. Le moraliste",
+      "url": "https://www.universalis.fr/encyclopedie/chamfort/3-le-moraliste/"
+    },
+    {
+      "claim": "Nació el 6 de abril de 1741 en Clermont-Ferrand (con un segundo registro del 22 de junio); murió en París el 13 de abril de 1794; en septiembre de 1793 se disparó en su despacho y sobrevivió; Ginguené publicó sus obras en cuatro volúmenes en 1795. Lectura directa.",
+      "source": "Wikipedia, «Nicolas Chamfort»",
+      "url": "https://en.wikipedia.org/wiki/Nicolas_Chamfort"
+    }
+  ],
+  "do_not_use": [
+    "La fecha de muerte del 13 de mayo de 1794 que da Philosophy Now: la Notice de Ginguené dice 24 de germinal del año II (13 de abril de 1794), y Wikipedia coincide. Se dice solo «abril de 1794».",
+    "El año de nacimiento: Philosophy Now dice registro de 1740; Wikipedia, 1741. Por eso el cuerpo dice «hacia 1741».",
+    "El número de la máxima (n.º 80 del cap. I en la traducción de Morley, n.º 442 en Van Bever): no se comprobó en el texto; no se da número.",
+    "Fechar la frase en «Maximes et pensées (1805)»: es una edición posterior; la de 1796 ya la trae.",
+    "Los detalles del intento de suicidio (disparo en la cara, cortes en el cuello y el pecho): se omiten a propósito por tono; solo se menciona el intento.",
+    "Que la máxima la escribió en prisión o tras el intento de suicidio: no hay fecha de redacción de la nota.",
+    "La traducción al español es propia. «Journée» es el día vivido, no la fecha: se traduce como «día»."
+  ],
+  "status": "draft"
+}

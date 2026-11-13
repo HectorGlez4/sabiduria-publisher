@@ -1,0 +1,60 @@
+{
+  "id": "2026-12-31-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la Lista Real sumeria y Kubaba de Kish",
+    "hook": "En la lista de reyes más completa de Sumeria hay una sola mujer, y antes de reinar llevaba una taberna.",
+    "body": [
+      "El prisma Weld-Blundell es un bloque de arcilla de 20 centímetros, escrito por sus cuatro caras en cuneiforme sumerio. Se hizo hacia el 1800 antes de nuestra era, probablemente en Larsa, en el actual Irak, y desde 1923 está en el Museo Ashmolean de Oxford. Enumera ciudades, reyes y años de reinado.",
+      "Empieza así: después de que la realeza descendió del cielo, la realeza estuvo en Eridu. Allí Alulim reinó 28 800 años. Antes del diluvio, ocho reyes en cinco ciudades suman 241 200 años. Después las cifras se van haciendo humanas, y la lista termina con Sin-magir, rey de Isin hacia el 1827 a.C. Según el Ashmolean, servía a los reyes de Isin para presentarse como herederos legítimos de los grandes reinos del pasado.",
+      "En medio aparece Kug-Bau, o Kubaba: la tabernera que afianzó los cimientos de Kish. Reinó cien años y ella sola forma la tercera dinastía de la ciudad. La lista no la llama reina, sino lugal, rey: es la única mujer con ese título. Los asiriólogos la consideran una figura legendaria. Lo que la lista sí documenta es que, para quienes la escribieron, una tabernera podía fundar una dinastía."
+    ],
+    "question": "¿Qué parte de nuestra historia oficial se escribió, como esta, para justificar a quien la encargó?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Lista Real sumeria",
+    "subtitle": "Kubaba, tabernera y rey de Kish",
+    "body": "En un prisma de arcilla de hacia el 1800 a.C., entre reyes que gobiernan miles de años, aparece una sola mujer: una tabernera que reinó en Kish con el título de rey."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Sumeria", "#Mesopotamia", "#Historia"],
+    "extended": ["#Kubaba", "#Kish", "#Cuneiforme", "#Arqueologia", "#Ashmolean", "#MujeresEnLaHistoria"]
+  },
+  "sources": [
+    {
+      "claim": "Traducción de la Lista Real sumeria: «After the kingship descended from heaven, the kingship was in Eridug. In Eridug, Alulim became king; he ruled for 28800 years»; «In 5 cities 8 kings; they ruled for 241200 years. Then the flood swept over»; «In Kic, Kug-Bau, the woman tavern-keeper, who made firm the foundations of Kic, became king; she ruled for 100 years». Lectura directa.",
+      "source": "The Electronic Text Corpus of Sumerian Literature (ETCSL), University of Oxford, «The Sumerian king list», t.2.1.1",
+      "url": "https://etcsl.orinst.ox.ac.uk/section2/tr211.htm"
+    },
+    {
+      "claim": "Prisma de la Lista Real sumeria, AN1923.444: hacia 1800 a.C., probablemente de Larsa (Irak), arcilla, 20 × 9 cm, donado por Herbert Weld-Blundell en 1923; cuatro caras con dos columnas de cuneiforme sumerio; mezcla mito, leyenda e historia, con reinados larguísimos al principio que se hacen realistas; incluye un pasaje del diluvio; termina con Sin-magir de Isin (c. 1827-1817 a.C.); los reyes de Isin se presentaban así como «the rightful successors of powerful kingdoms of the past». Lectura directa.",
+      "source": "Ashmolean Museum, University of Oxford, ficha «Sumerian King List»",
+      "url": "https://ashmolean.org/node/178641"
+    },
+    {
+      "claim": "El título que se le aplica es lugal («rey»), sin equivalente femenino (Glassner 2004); es la única gobernante de la tercera dinastía de Kish (Wilcke 1988); reinado de cien años, «supernaturally long» (Wilcke); Steinkeller (2017) la llama gobernante «mythical»; Stol (2016) describe el «presagio de Kubaba» como el nacimiento de un ser andrógino. Lectura directa.",
+      "source": "Wikipedia, «Kubaba», con referencias a Glassner, Wilcke, Steinkeller y Stol",
+      "url": "https://en.wikipedia.org/wiki/Kubaba"
+    },
+    {
+      "claim": "La Lista la llama lugal (rey), no eresh; «She is the only woman to bear this title»; epíteto «the woman tavern-keeper, who made firm the foundations of Kish»; se le atribuyen unos improbables cien años; la Lista mezcla con frecuencia historia y leyenda. Cody Cottier, 23 de febrero de 2021. Lectura directa.",
+      "source": "Discover Magazine, «Queen Kubaba: The Tavern Keeper Who Became the First Female Ruler in History»",
+      "url": "https://www.discovermagazine.com/queen-kubaba-the-tavern-keeper-who-became-the-first-female-ruler-in-history-42265"
+    }
+  ],
+  "do_not_use": [
+    "Que Kubaba fue «la primera mujer gobernante de la historia» como hecho: es el titular de Discover, pero Steinkeller la considera mítica y no hay inscripción contemporánea suya leída en esta ronda.",
+    "Fecharla en el Dinástico Arcaico III (c. 2500-2330 a.C.): aparece en páginas divulgativas; no se leyó en fuente de calidad.",
+    "Llamarla «prostituta» por traducir «tabernera» como «barmaid»: es una lectura antigua y discutida que recogen páginas divulgativas; no se usa.",
+    "Confundirla con la diosa Kubaba de Karkemish: son figuras distintas según las fuentes; la relación está discutida.",
+    "El presagio del nacimiento andrógino que lleva su nombre (Stol 2016): solo se leyó vía Wikipedia; se omite del cuerpo.",
+    "Que el prisma se halló en Larsa en 1922 (o en 1921): las fuentes discrepan; el Ashmolean dice solo «probably Larsa» y da 1923 como año de donación.",
+    "Que hay unos 25 ejemplares o fragmentos de la Lista: solo en copias de Wikipedia; no se da cifra.",
+    "Las traducciones al español de las líneas de la Lista son propias, a partir del inglés de ETCSL."
+  ],
+  "status": "draft"
+}

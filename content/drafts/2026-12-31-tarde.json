@@ -1,0 +1,62 @@
+{
+  "id": "2026-12-31-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Arquíloco, la zorra y el erizo (fr. 201)",
+    "hook": "El verso de la zorra y el erizo sobrevive en un solo renglón, y ya en la Antigüedad no se sabía de quién era.",
+    "quote": {
+      "text": "La zorra sabe muchas cosas, pero el erizo sabe una sola y grande.",
+      "author": "Arquíloco",
+      "work": "Fragmento 201 West, citado por Zenobio en su colección de proverbios (5, 68)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Del poeta griego Arquíloco nos queda este verso porque un compilador de proverbios, Zenobio, lo copió en su colección, en el libro 5, número 68. Es un trímetro yámbico de seis palabras en griego.",
+      "El propio Zenobio dudaba del autor. Escribió que el verso era de Homero y que Arquíloco lo había usado en sus Epodos, y que el proverbio se decía de la gente muy astuta. Si tenía razón, vendría del Margites, un poema cómico atribuido a Homero que también se perdió. El helenista C. M. Bowra lo llamó, en 1940, tan misterioso como encantador.",
+      "Su fama moderna es de Isaiah Berlin. En 1951 publicó en Oxford un estudio sobre el escepticismo histórico de Tolstói y en 1953 lo reeditó, ampliado, como El erizo y la zorra. Berlin advirtió que el verso quizá solo significa que la zorra, con toda su astucia, pierde ante la única defensa del erizo. Y luego lo usó para dividir a los escritores: Platón y Dante, erizos; Shakespeare, zorra."
+    ],
+    "question": "¿Sabes muchas cosas, o una sola que te defiende?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Arquiloco", "#Citas", "#GreciaAntigua"],
+    "extended": ["#IsaiahBerlin", "#Tolstoi", "#Poesia", "#Filosofia", "#Proverbios", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "C. M. Bowra, «The Fox and the Hedgehog», The Classical Quarterly 34, 1-2 (abril de 1940), pp. 26-29: el verso es un trímetro yámbico «πόλλ᾽ οἶδ᾽ ἀλώπηξ, ἀλλ᾽ ἐχῖνος ἓν μέγα»; Zenobio lo cita (5, 68), dice que lo escribió Homero y que Arquíloco lo usó en sus Epodos, y que el proverbio se aplicaba a los muy astutos; si Zenobio tiene razón, procede del Margites, como vio Bergk; cita además versos del Fénix de Ion de Quíos sobre el erizo. Lectura directa de la primera página.",
+      "source": "Cambridge University Press, The Classical Quarterly, artículo de C. M. Bowra (1940)",
+      "url": "https://cambridge.org/core/journals/classical-quarterly/article/fox-and-the-hedgehog/CB260FE13E7937B6582EE81F431A2C26"
+    },
+    {
+      "claim": "Berlin cita el verso «The fox knows many things, but the hedgehog knows one big thing»; escribe que los estudiosos han diferido sobre la interpretación de «these dark words», que quizá solo significan que la zorra, con toda su astucia, es derrotada por la única defensa del erizo; tomado en sentido figurado marca una de las diferencias más hondas entre escritores y pensadores; pone a Platón y Dante entre los erizos y a Shakespeare entre las zorras. Lectura directa.",
+      "source": "The Isaiah Berlin Virtual Library (Wolfson College, Oxford), tributo de Leon Wieseltier (2000) con el pasaje de «The Hedgehog and the Fox»",
+      "url": "https://berlin.wolf.ox.ac.uk/writings_on_ib/washington_tributes/wieseltier.html"
+    },
+    {
+      "claim": "«Lev Tolstoy's Historical Scepticism», Oxford Slavonic Papers 2 (1951), 17-54; reimpreso con añadidos como «The Hedgehog and the Fox: An Essay on Tolstoy's View of History» (Londres, 1953). Lectura directa.",
+      "source": "The Isaiah Berlin Catalogue, Wolfson College, Oxford, Bib.44",
+      "url": "https://isaiah-berlin.wolfson.ox.ac.uk/node/3641"
+    },
+    {
+      "claim": "Texto griego del fragmento 201: «πόλλ' οἶδ' ἀλώπηξ, ἐχῖνος δ' ἓν μέγα», con la traducción inglesa de Berlin y variantes. Lectura directa; se usa solo como contraste del texto, no como prueba de atribución.",
+      "source": "Wikiquote, «Archilochus»",
+      "url": "https://en.wikiquote.org/wiki/Archilochus"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar sin matiz que el verso es de Arquíloco: Zenobio, la única fuente antigua, dice que lo escribió Homero y que Arquíloco lo usó. Por eso el cuerpo lo cuenta.",
+    "La frase de Berlin «I never meant it very seriously… an enjoyable intellectual game»: circula citada a Jahanbegloo, Conversations with Isaiah Berlin, p. 188, pero solo se vio en copias de Wikipedia, no en el libro.",
+    "Fechar a Arquíloco (siglo VII a.C.) o a Zenobio (siglo II): no se leyó en ninguna fuente de esta ronda.",
+    "Que Erasmo recogió el proverbio en sus Adagia: es probable, pero no se leyó.",
+    "Que Tolstói era una zorra que quería ser erizo: es la tesis de Berlin, pero el pasaje no se leyó completo; se omite.",
+    "El texto griego varía entre ediciones (ἀλλ᾽ ἐχῖνος en Bowra, ἐχῖνος δ᾽ en otras); no se cita en griego en el cuerpo.",
+    "La traducción al español es propia. En griego «ἀλώπηξ» es femenino: «la zorra», no «el zorro»."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "2026-12-31-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Copérnico y el prefacio sin firma de Osiander",
+    "hook": "La primera página del libro de Copérnico decía que el libro no tenía por qué ser verdad. No la escribió él.",
+    "body": [
+      "De revolutionibus, la obra en que Nicolás Copérnico ponía al Sol en el centro, se imprimió en Núremberg en 1543. La primera tirada fue de unos cuatrocientos ejemplares. Copérnico murió ese mismo año.",
+      "Antes del prólogo del autor, el lector encontraba una nota breve y sin firma. Decía que las hipótesis de los astrónomos no necesitan ser verdaderas, ni siquiera probables, para ser útiles: basta con que sirvan para calcular. La había añadido Andreas Osiander, un pastor luterano de Núremberg que supervisaba la impresión, sin permiso de Copérnico ni de su discípulo Rheticus. Como no llevaba nombre, cualquiera podía leerla como la opinión del propio Copérnico, que creía que el Sol estaba de verdad en el centro.",
+      "El obispo Tiedemann Giese pidió al concejo de Núremberg que corrigiera el libro, y el concejo no hizo nada. Un lector de la época, Hieronymus Schreiber, anotó en su ejemplar quién era el autor de la nota. Ese ejemplar acabó en manos de Johannes Kepler, que lo hizo público alrededor de medio siglo después. Algunos historiadores creen que aquella página, por desleal que fuera, ayudó a que el libro se leyera sin ser condenado de inmediato."
+    ],
+    "question": "¿Cuántas ideas han llegado hasta nosotros envueltas en una advertencia que su autor nunca habría firmado?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Copérnico, 1543",
+    "subtitle": "La nota al lector que nadie firmó",
+    "body": "Una nota sin firma al comienzo de De revolutionibus decía que sus hipótesis no necesitaban ser verdaderas. La escribió Andreas Osiander, que supervisaba la impresión, sin permiso del autor."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Copernico", "#Ciencia", "#HistoriaDeLaCiencia"],
+    "extended": ["#Kepler", "#Astronomia", "#Heliocentrismo", "#Renacimiento", "#Libros", "#Osiander"]
+  },
+  "sources": [
+    {
+      "claim": "Osiander escribió una breve nota «To the Reader» con una sección «On Hypotheses»; sostenía que las hipótesis de los astrónomos «need not be true, or even probable, to be useful»; la nota no estaba firmada, de modo que parecía de Copérnico; Copérnico sí creía que el Sol era el centro; en 1542 Rheticus pidió a Osiander que se encargara de la edición final mientras el libro estaba en prensa en Núremberg; Kepler dedujo unos cincuenta años después que Copérnico no la escribió; el ejemplar de Glasgow, de Willebrord Snel, lleva el nombre de Osiander escrito a mano. Lectura directa.",
+      "source": "Linda Hall Library, «Scientist of the Day: Andreas Osiander»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/andreas-osiander/"
+    },
+    {
+      "claim": "La edición de Núremberg de marzo de 1543 incluía una carta anónima al lector, añadida sin permiso del autor ni de Rheticus, que presentaba las tesis heliostáticas como mera hipótesis; su autor fue Andreas Osiander (1498-1552), pastor luterano de Núremberg, hecho que Kepler publicitaría más tarde. Lectura directa.",
+      "source": "Whipple Museum / Department of History and Philosophy of Science, University of Cambridge, «Copernicus's Book» (exposición Starry Messenger)",
+      "url": "https://www.sites.hps.cam.ac.uk/starry/coperbooks.html"
+    },
+    {
+      "claim": "Osiander, teólogo luterano, escribió una carta al lector sin firma colocada tras la portada; afirmaba que la obra solo ofrecía una manera más sencilla de calcular las posiciones de los cuerpos celestes; Kepler reveló a su autor «50 years later»; Rheticus quedó consternado; otros piensan que gracias a ese prefacio la obra se leyó y no fue condenada de inmediato; se dice que Copérnico recibió el libro impreso en su lecho de muerte. Lectura directa.",
+      "source": "MacTutor History of Mathematics, University of St Andrews, biografía «Nicolaus Copernicus»",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Copernicus/"
+    },
+    {
+      "claim": "Copérnico no autorizó el prólogo de Andreas Osiander, que supervisó la impresión y lo incluyó sin conocimiento del autor y sin identificarse; Rheticus publicó la Narratio prima en 1541 y De revolutionibus apareció en 1543. Lectura directa.",
+      "source": "Dartmouth College, Department of Mathematics, «Renaissance Astronomy» reader, Copernicus",
+      "url": "https://math.dartmouth.edu/~matc/Readers/renaissance.astro/1.0.Copernicus.html"
+    },
+    {
+      "claim": "Osiander añadió su propia carta sin firma; Tiedemann Giese instó al concejo de Núremberg a emitir una corrección y no se hizo; Hieronymus Schreiber (m. 1547) dejó en su ejemplar una nota sobre la autoría de Osiander; ese ejemplar llegó a Kepler; la primera tirada fue de 400 ejemplares; el libro se publicó poco antes de la muerte de Copérnico en 1543. Lectura directa.",
+      "source": "Wikipedia, «De revolutionibus orbium coelestium»",
+      "url": "https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium"
+    },
+    {
+      "claim": "El prefacio no firmado de Osiander se leyó durante mucho tiempo como texto instrumentalista clásico; su tesis central presenta el movimiento de la Tierra y el reposo del Sol como hipótesis para calcular posiciones, no como descripción física. Lectura directa del resumen.",
+      "source": "Matjaž Vesel, «Osiander's Epistemology of Astronomy», Filozofski vestnik 26 (3), ZRC SAZU",
+      "url": "https://ojs.zrc-sazu.si/filozofski-vestnik/article/view/4343"
+    }
+  ],
+  "do_not_use": [
+    "Que Copérnico recibió el primer ejemplar impreso en su lecho de muerte y murió al verlo: MacTutor lo da como «is said»; es tradición basada en una carta de Giese, no hecho comprobado. Linda Hall añade que había sufrido un derrame y duda de que pudiera reaccionar.",
+    "Que Kepler lo reveló en 1609 en el reverso de la portada de Astronomia nova: aparece en resúmenes de búsqueda del catálogo de la Universidad de Michigan, pero la página no cargó; en el cuerpo solo se dice «alrededor de medio siglo después», como Linda Hall y MacTutor.",
+    "Que el prefacio salvó al libro del Índice hasta el siglo XVII: lo dice la New Catholic Encyclopedia (vía Encyclopedia.com), pero no se contrastó; en el cuerpo se presenta solo como opinión de algunos historiadores, con MacTutor.",
+    "Que Osiander cambió el título del libro: Cambridge y MacTutor mencionan palabras añadidas al título, pero no está claro que fuera él; se omite.",
+    "Llamar «fraude» o «engaño» a Osiander sin matiz: Vesel sostiene que su postura epistemológica era coherente con los estándares del siglo XVI.",
+    "Que Copérnico tuvo miedo a la Iglesia y por eso aceptó el prefacio: no hay prueba de que lo conociera.",
+    "La traducción al español de «need not be true, or even probable» es propia, a partir de la paráfrasis inglesa de Linda Hall."
+  ],
+  "status": "draft"
+}
