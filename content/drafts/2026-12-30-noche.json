@@ -1,0 +1,59 @@
+{
+  "id": "2026-12-30-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la alfombra de Pazyryk en el kurgán 5 del Altái",
+    "hook": "La alfombra de nudos más antigua que se conoce apareció junto a unos caballos, en la tumba de un jefe nómada del Altái, con dibujos que siguen la tradición de Irán.",
+    "body": [
+      "En 1949 el arqueólogo Serguéi Rudenko excavó el quinto kurgán del valle de Pazyryk, en los montes Altái. Las tumbas de esa cultura se cavaban a unos tres metros en suelo helado y se cubrían con montículos de piedra. El agua que entraba en la cámara se congelaba y ya no se derretía. Por eso llegaron hasta hoy la madera, el cuero, el fieltro y la lana.",
+      "En el enterramiento de los caballos apareció una alfombra de 1,83 por 2 metros, con unos 3600 nudos dobles por decímetro cuadrado y un pelo de apenas dos milímetros. Pavel Azbelev, arqueólogo del Museo del Hermitage, calcula que una sola tejedora tardaría al menos año y medio en hacerla. Las dendrocronologías la sitúan hoy entre 252 y 238 antes de nuestra era, más tarde de lo que creyó Rudenko.",
+      "Lo extraño está en el dibujo. Un friso de jinetes y hombres que llevan caballos, otro de ciervos moteados, todo en la tradición pictórica de Irán: el jinete con su caballo tiene un paralelo cercano en un relieve de Persépolis. Azbelev sostiene que la alfombra no pertenece a la tradición de Pazyryk y que probablemente fue un regalo diplomático. La alfombra más antigua del mundo se conservó lejos del lugar donde la tejieron, y nadie sabe con certeza dónde fue."
+    ],
+    "question": "¿Cuánto de lo que sabemos de un pueblo viene de objetos que en realidad le llegaron de fuera?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La alfombra de Pazyryk",
+    "subtitle": "Montes Altái, siglo III a.C.",
+    "body": "La alfombra de nudos más antigua que se conoce se conservó en hielo, en la tumba de un jefe nómada del Altái. Sus jinetes y ciervos siguen modelos de Irán. Pudo ser un regalo traído de lejos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pazyryk", "#Historia", "#Arqueologia"],
+    "extended": ["#Altai", "#Hermitage", "#Alfombras", "#Escitas", "#Nomadas", "#Persia"]
+  },
+  "sources": [
+    {
+      "claim": "Pavel Azbelev, arqueólogo del Museo Estatal del Hermitage, entrevistado por Snezhana Atanova (Instituto de Estudios Orientales, Academia Rusa de Ciencias): la alfombra procede del enterramiento de caballos del quinto kurgán de Pazyryk; se conservó por el permafrost; 1,83 × 2,00 m; nudos simétricos dobles, unos 3600 por decímetro cuadrado; pelo de unos 2 mm; al menos año y medio de trabajo para una tejedora; siglos IV-III a.C.; «the oldest known pile carpet»; no pertenece a la tradición de Pazyryk, «a foreign cultural monument, most likely a diplomatic gift»; motivos tomados de Irán y Oriente Próximo; el nómada que lleva un caballo tiene paralelo en un relieve de Persépolis; frisos de jinetes y de ciervos moteados; Rudenko dirigió las excavaciones de los kurganes 2 a 5 en 1947-1949. Lectura directa.",
+      "source": "Voices on Central Asia, entrevista a Pavel Azbelev (State Hermitage Museum) por Snezhana Atanova",
+      "url": "https://voicesoncentralasia.org/?p=7379"
+    },
+    {
+      "claim": "Fichas de la colección del Hermitage: alfombra de pelo, lana, 183 × 200 cm, kurgán 5 de Pazyryk, 252-238 a.C.; las fechas revisadas por C14 y dendrocronología (Stepanova) son más recientes que las propuestas por Rudenko; el fieltro aplicado del kurgán 5 se excavó en 1949; el suelo helado preservó material orgánico. Lectura directa.",
+      "source": "University of Washington, Silk Road Seattle (Daniel C. Waugh), «State Hermitage Museum: Southern Siberia/Pazyryk»",
+      "url": "https://depts.washington.edu/silkroad/museums/shm/shmpazyryk.html"
+    },
+    {
+      "claim": "Las tumbas de la cultura de Pazyryk se cavaban a tres metros en permafrost y se cubrían con grandes montículos de rocas; el agua que llenaba la cámara no se derretía en verano: «everything that froze there froze forever». Lectura directa.",
+      "source": "Konstantin L. Bannikov, «The Arbiters of Eon», SCIENCE First Hand, vol. 47, n.º 2/3 (2017)",
+      "url": "https://scfh.ru/en/papers/arbiters-of-eon/"
+    },
+    {
+      "claim": "La alfombra de pelo más antigua conocida procede del quinto kurgán de Pazyryk y se expone en el Hermitage; los túmulos conservan el frío y mantienen congelados los ajuares, por lo que se preservaron tela, madera, cuerno y cuero; el autor la considera obra hecha en el Altái. Lectura directa.",
+      "source": "Peter Turchin, «The Pazyryk Kurgans: A Glimpse into the Amazing World of Central Asia in the Iron Age» (6 de julio de 2014)",
+      "url": "https://peterturchin.com/the-pazyryk-kurgans-a-glimpse-into-the-amazing-world-of-central-asia-in-the-iron-age-i-millennium-bce/"
+    }
+  ],
+  "do_not_use": [
+    "Que los saqueadores antiguos crearon el hielo al abrir un pozo por el que entró el agua: lo dicen History.com y Discover para otras tumbas; SCIENCE First Hand solo menciona las intrusiones de ladrones como un factor más, y no se verificó para el kurgán 5.",
+    "Dar como seguro el lugar de fabricación (Persia, Armenia, Asia Central o el propio Altái): las fuentes discrepan; Azbelev habla de regalo diplomático y Turchin de obra del Altái.",
+    "Fechar la alfombra en el siglo V a.C.: es la datación antigua de Rudenko y de muchas webs de alfombras; la revisión por C14 y dendrocronología da 252-238 a.C.",
+    "Situar la tumba en Mongolia: error de algunas webs; Pazyryk está en el Altái ruso.",
+    "Afirmar sin matiz que es «la alfombra más antigua del mundo»: lo es entre las de nudos conocidas; hay tejidos y fieltros más antiguos.",
+    "Decir que la tumba era de un «príncipe escita»: las fuentes hablan de un jefe de la cultura de Pazyryk; la adscripción escita o saka es de manual y no se precisa aquí.",
+    "La cifra de 1 250 000 nudos totales: aparece en páginas derivadas de Wikipedia; no se leyó en la fuente del Hermitage."
+  ],
+  "status": "draft"
+}

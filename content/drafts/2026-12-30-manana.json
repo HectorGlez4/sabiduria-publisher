@@ -1,0 +1,71 @@
+{
+  "id": "2026-12-30-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Georges Lemaître y la traducción de 1931",
+    "hook": "El párrafo que le habría dado la prioridad sobre Hubble lo borró el propio Lemaître.",
+    "body": [
+      "En 1927 el astrónomo belga Georges Lemaître publicó en francés, en los Annales de la Société Scientifique de Bruxelles, un trabajo que unía la relatividad general con las velocidades de las nebulosas lejanas. De ahí sacó una tasa de expansión del universo de unos 625 kilómetros por segundo por megapársec. Era un cálculo parecido al que Edwin Hubble publicaría dos años después.",
+      "En 1931 la revista de la Royal Astronomical Society, Monthly Notices, sacó el artículo en inglés. Faltaba justo el párrafo de la estimación, y una ecuación había cambiado. Durante décadas se sospechó de los editores, del traductor anónimo y hasta del propio Hubble. Todavía en junio de 2011 el astrónomo Sidney van den Bergh sugería una omisión deliberada del traductor.",
+      "En noviembre de ese año Mario Livio, del Space Telescope Science Institute, encontró la respuesta en la correspondencia de la sociedad. El traductor era Lemaître, y escribió a los editores que no le parecía aconsejable reimprimir su discusión provisional de las velocidades radiales. En octubre de 2018 el 78 % de los miembros votantes de la Unión Astronómica Internacional recomendó llamar a la ley Hubble-Lemaître."
+    ],
+    "question": "¿Qué parte de tu trabajo recortarías hoy por parecerte provisional, sin saber lo que valdrá mañana?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Georges Lemaître",
+    "subtitle": "Bruselas 1927, Londres 1931",
+    "body": "Calculó la expansión del universo dos años antes que Hubble. Al traducir su artículo al inglés, él mismo quitó el párrafo de la cifra porque la creía provisional."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lemaitre", "#Ciencia", "#Cosmologia"],
+    "extended": ["#Hubble", "#Astronomia", "#HistoriaDeLaCiencia", "#Universo", "#BigBang", "#Fisica"]
+  },
+  "sources": [
+    {
+      "claim": "El artículo original de Lemaître apareció en francés en los «Annales de la Société Scientifique de Bruxelles» en 1927; la traducción inglesa se publicó en Monthly Notices of the Royal Astronomical Society en 1931 sin algunos cálculos, entre ellos lo que luego se llamaría constante de Hubble; Lemaître calculó una tasa similar a la que Hubble publicó dos años después; se había especulado con que la culpa era de los editores o de Hubble; Mario Livio, astrofísico del Space Telescope Science Institute, halló que Lemaître mismo omitió los pasajes al traducir el artículo; en una carta a los editores escribió «I did not find advisable to reprint the provisional discussion of radial velocities»; publicado en Nature el 10 de noviembre de 2011. Lectura directa.",
+      "source": "Phys.org, «Was the real discovery of the expanding universe lost in translation?» (comunicado del Space Telescope Science Institute, noviembre de 2011)",
+      "url": "https://phys.org/news/2011-11-astronomy-hubble-whodunnit.html"
+    },
+    {
+      "claim": "Mismo comunicado: Livio revisó cientos de piezas de correspondencia y actas de la Royal Astronomical Society y material del Archivo Lemaître; la carta a los editores de Monthly Notices es una de las dos que resuelven la cuestión. Lectura directa.",
+      "source": "Newswise, «Was the Real Discovery of the Expanding Universe Lost in Translation?» (Space Telescope Science Institute)",
+      "url": "https://www.newswise.com/articles/was-the-real-discovery-of-the-expanding-universe-lost-in-translation"
+    },
+    {
+      "claim": "El anuncio de Lemaître de 1927 se publicó en francés en una revista de poco impacto; en la traducción inglesa de 1931 se alteró una ecuación clave para que no se refiriera a lo que hoy se llama constante de Hubble y se omitió la sección sobre la expansión; el autor sugiere una omisión deliberada del traductor no identificado; enviado el 6 de junio de 2011. Lectura directa del resumen.",
+      "source": "Sidney van den Bergh, «The Curious Case of Lemaitre's Equation No. 24», arXiv:1106.1195 (JRASC, 2011)",
+      "url": "https://arxiv.org/abs/1106.1195"
+    },
+    {
+      "claim": "Lemaître usó datos para estimar la constante de Hubble en su artículo de 1927 y obtuvo «about 625 km/sec/Mpc». Lectura directa.",
+      "source": "Sean Carroll, «Update: Lemaitre vs. Hubble», Discover Magazine (26 de noviembre de 2007)",
+      "url": "https://discovermagazine.com/the-sciences/update-lemaitre-vs-hubble"
+    },
+    {
+      "claim": "La votación electrónica de la IAU cerró a medianoche UT del 26 de octubre de 2018; se invitó a 11 072 miembros, votaron 4060 (37 %); 78 % a favor, 20 % en contra, 2 % abstenciones; la resolución recomienda llamar a la ley de Hubble «ley de Hubble-Lemaître» y se presentó en la Asamblea General de Viena en agosto de 2018; Lemaître es descrito como astrónomo belga. Lectura directa.",
+      "source": "Astronomy Now, sobre el comunicado de prensa IAU 1812 (29 de octubre de 2018)",
+      "url": "https://astronomynow.com/?p=27702"
+    },
+    {
+      "claim": "La IAU de Viena recomendó en 2018 el nombre «Hubble-Lemaître law»; el historiador Helge Kragh sostiene que la justificación histórica de la resolución tiene fallos serios. Lectura directa del resumen.",
+      "source": "Helge Kragh, «Hubble Law or Hubble-Lemaître Law? The IAU Resolution», arXiv:1809.02557 (2018)",
+      "url": "https://arxiv.org/abs/1809.02557"
+    }
+  ],
+  "do_not_use": [
+    "Que Eddington tradujo el artículo de 1931 y quitó la discusión de los datos: lo dice Discover en 2007, antes del hallazgo de Livio; la carta de 1931 muestra que la traducción y el recorte fueron de Lemaître.",
+    "Que Hubble o los editores de Monthly Notices censuraron el párrafo: era la sospecha previa a 2011; Livio la descarta.",
+    "Que Lemaître «descubrió» la expansión y Hubble la «robó»: Hubble no intervino en la traducción, y Kragh advierte que la historia de 1927-1931 es más compleja que una prioridad simple.",
+    "La cifra de Hubble de 1929 (500, 530 o 600 km/s/Mpc según la fuente): las fuentes no coinciden; no se da número.",
+    "La alternativa de 575 km/s/Mpc con otros pesos: aparece en búsquedas (Block, arXiv:1106.3928) pero no se leyó en la fuente.",
+    "Que Lemaître era sacerdote católico: es cierto según la literatura, pero no se leyó en ninguna fuente de esta ronda; se omite.",
+    "El destinatario exacto de la carta (se cita a W. M. Smart) y su fecha: no aparecen en las páginas leídas.",
+    "El artículo de Livio en Nature (479, 171) y el PDF de la SAF no se pudieron leer (redirección de acceso y PDF); los datos vienen del comunicado del STScI.",
+    "La traducción al español de la frase de la carta es propia."
+  ],
+  "status": "draft"
+}

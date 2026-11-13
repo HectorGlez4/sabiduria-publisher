@@ -1,0 +1,63 @@
+{
+  "id": "2026-12-30-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "el prólogo del Lazarillo de Tormes (Burgos, 1554)",
+    "hook": "Un libro sin autor se defendió en su primera página con una frase de un sabio romano. Siglos después apareció emparedado entre libros prohibidos.",
+    "quote": {
+      "text": "No hay libro, por malo que sea, que no tenga alguna cosa buena.",
+      "author": "Anónimo, citando a Plinio",
+      "work": "Lazarillo de Tormes, Prólogo (Burgos, 1554)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Las ediciones más antiguas que se conservan de La vida de Lazarillo de Tormes son de 1554: Burgos, Amberes, Alcalá de Henares y Medina del Campo. El libro no lleva nombre de autor. En el prólogo, el narrador pide que lo lean aunque sea poca cosa, y se ampara en una autoridad: dice Plinio que no hay libro, por malo que sea, que no tenga alguna cosa buena.",
+      "La frase tiene dueño exacto. Plinio el Joven, en la carta 5 del libro III, escrita a Bebio Macro para describir las costumbres de su tío, cuenta que Plinio el Viejo no leía nada sin tomar extractos, y que solía decir que ningún libro es tan malo que no sea útil en alguna parte. No la escribió el tío. La repetía en voz alta, y la apuntó el sobrino.",
+      "En el verano de 1992, en una casa de Barcarrota, en Badajoz, unos albañiles encontraron emparedado un ejemplar de la edición de Medina del Campo. Estaba junto a otras obras, la mayoría prohibidas. Es el único que se conoce de esa edición. Un libro que pedía ser leído aunque fuera malo sobrevivió porque alguien lo escondió."
+    ],
+    "question": "¿Qué libro que te pareció malo te dejó, aun así, una sola cosa que conservas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Lazarillo", "#Citas", "#Libros"],
+    "extended": ["#LazarilloDeTormes", "#SigloDeOro", "#Plinio", "#Lectura", "#LiteraturaEspañola", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto del Prólogo: «dice Plinio que no hay libro, por malo que sea, que no tenga alguna cosa buena»; el texto se basa en la edición de Burgos de 1554, con las interpolaciones de Alcalá marcadas. Lectura directa.",
+      "source": "Project Gutenberg, eBook n.º 320, Vida de Lazarillo de Tormes y de sus fortunas y adversidades",
+      "url": "https://www.gutenberg.org/cache/epub/320/pg320-images.html"
+    },
+    {
+      "claim": "Plinio el Joven, Epistulae III, 5, a Bebio Macro, sobre su tío (avunculum meum), § 10: «Nihil enim legit quod non excerperet; dicere etiam solebat nullum esse librum tam malum ut non aliqua parte prodesset». Lectura directa.",
+      "source": "The Latin Library, C. Plinius Caecilius Secundus, Epistularum liber III",
+      "url": "https://www.thelatinlibrary.com/pliny.ep3.html"
+    },
+    {
+      "claim": "Las ediciones más antiguas conservadas son de 1554; durante más de cuatro siglos se conocieron tres (Alcalá, un ejemplar; Burgos, uno; Amberes, seis); en el verano de 1992 apareció en una casa antigua de Barcarrota (Badajoz), durante una reforma, un ejemplar emparedado de la edición de Medina del Campo impresa en marzo, junto a otras diez obras, la mayoría prohibidas; la Junta de Extremadura compró el lote en 1995. Lectura directa.",
+      "source": "Enriqueta Zafra, Toronto Metropolitan University, proyecto «Lazarillo gráfico», artículo",
+      "url": "https://www.torontomu.ca/~lazarillographic/articulo.html"
+    },
+    {
+      "claim": "El ejemplar de Barcarrota es el único conocido de la edición de Medina del Campo de 1554, impresa por Mateo y Francisco del Canto. Lectura directa del resumen.",
+      "source": "Rosa Navarro Durán, «La vida de Lazarillo de Tormes a la nueva luz de Barcarrota», Alborayque 1 (2007), págs. 41-67, Dipòsit Digital de la Universitat de Barcelona",
+      "url": "https://diposit.ub.edu/items/77509e83-63ef-49c5-8505-90ab9ca53897/full"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase directamente a Plinio el Viejo como escrita por él: la recoge su sobrino en Epistulae III, 5, 10 como algo que «solía decir».",
+    "Decir que el autor del Lazarillo es Diego Hurtado de Mendoza, Juan de Valdés, Alfonso de Valdés u otro: son atribuciones discutidas; el libro es anónimo.",
+    "Fechar la princeps en 1552-1553 o en 1520: es hipótesis; lo conservado es de 1554.",
+    "Que el Lazarillo entró en el Índice de 1559 y que López de Velasco lo publicó castigado en 1573: es conocido, pero no se leyó en fuente en esta ronda.",
+    "La fecha exacta del colofón de Medina del Campo (1 de marzo de 1554): aparece en búsquedas; Zafra solo dice «marzo».",
+    "Que el ejemplar se hizo público en 1995: es la fecha de la compra por la Junta de Extremadura; el hallazgo es de 1992.",
+    "La frase de Tulio en el mismo prólogo («La honra cría las artes»): está en el texto, pero no se trata aquí.",
+    "La traducción al español de la carta de Plinio es propia."
+  ],
+  "status": "draft"
+}

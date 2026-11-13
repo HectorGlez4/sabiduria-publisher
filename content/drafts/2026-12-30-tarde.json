@@ -1,0 +1,67 @@
+{
+  "id": "2026-12-30-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Eurípides y el juramento de Hipólito (v. 612)",
+    "hook": "A Eurípides lo acusaron de enseñar a jurar en falso con un verso cuyo personaje muere por cumplir lo que juró.",
+    "quote": {
+      "text": "Mi lengua juró; mi mente no ha jurado.",
+      "author": "Eurípides",
+      "work": "Hipólito, verso 612 (representada en Atenas en 428 a.C.)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Hipólito se representó en Atenas en 428 antes de nuestra era, en las Grandes Dionisias, y ganó el primer premio. En el verso 612 la nodriza de Fedra le ruega al joven que no rompa el juramento de silencio que le arrancó antes de contarle un secreto. Él responde con esa línea, furioso.",
+      "La frase se volvió escándalo. Aristóteles cuenta en la Retórica, libro III, capítulo 15, que un tal Higienón acusó a Eurípides de impiedad ante un tribunal por haber escrito un verso que invitaba al perjurio. Aristófanes la puso en boca de Dioniso al final de Las ranas, cuando el dios rompe su palabra y elige a Esquilo en lugar de Eurípides.",
+      "Pero el personaje no hace lo que dice. Unos cuarenta versos después Hipólito declara que su piedad salva a la nodriza: si no estuviera atado por un juramento a los dioses, se lo contaría todo a su padre. Calla. Ante Teseo vuelve a callar para no romper lo jurado en vano, y muere desterrado por una acusación falsa. El verso más citado contra él es el único momento en que dudó."
+    ],
+    "question": "¿Cuántas veces juzgamos a alguien por lo que dijo en un arrebato y no por lo que hizo después?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Euripides", "#Citas", "#TeatroGriego"],
+    "extended": ["#Hipolito", "#Grecia", "#Tragedia", "#Aristofanes", "#Aristoteles", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego del verso 612 de Hipólito, en boca de Hipólito tras la súplica de la nodriza en el verso 611 («ὦ τέκνον, ὅρκους μηδαμῶς ἀτιμάσῃς»): «ἡ γλῶσσ᾽ ὀμώμοχ᾽, ἡ δὲ φρὴν ἀνώμοτος». Edición de David Kovacs (Harvard University Press). Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Euripides, Hippolytus, texto griego, vv. 601-637",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0105:card=601"
+    },
+    {
+      "claim": "Traducción de Kovacs: v. 611 nodriza «My child, I beg you, do not break your oath!»; v. 612 Hipólito «It was my tongue that swore it, not my mind»; vv. 656-661: «it is my piety that saves you, woman», de no estar atrapado por un juramento a los dioses se lo diría a su padre, «I shall leave the house and hold my tongue»; hacia el v. 1060 ante Teseo se contiene porque «would break the oath I swore to no purpose». Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Euripides, Hippolytus, trad. David Kovacs, vv. 601-668 y 1060 ss.",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0106:card=638"
+    },
+    {
+      "claim": "Aristóteles, Retórica 3.15, 1416a28-35 (T 98 Kannicht): en un juicio de antídosis Higienón acusó a Eurípides de impiedad por haber escrito un verso que alentaba el perjurio, el de Hipólito «My tongue swore, but my mind did not»; Eurípides respondió que no debía traerse a los tribunales lo ya juzgado en los certámenes dionisíacos. Lectura directa.",
+      "source": "Fragments of Ancient Greek Poetry (Living Poets), Durham University, «Aristotle, Art of Rhetoric 3.15.1416a.28-35»",
+      "url": "https://livingpoets.dur.ac.uk/w/index.php/Aristotle,_Art_of_Rhetoric_3.15.1416a.28-35"
+    },
+    {
+      "claim": "Aristófanes, Las ranas, v. 1471: Dioniso dice «‘ἡ γλῶττ᾽ ὀμώμοκ᾽,’ Αἰσχύλον δ᾽ αἱρήσομαι»; en el v. 1472 Eurípides le reprocha lo que ha hecho. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Aristophanes, Frogs, texto griego, vv. 1460-1480",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0031:card=1460"
+    },
+    {
+      "claim": "Hipólito se produjo en 428 a.C. en las Grandes Dionisias y quedó primera, una de las cuatro victorias de Eurípides; hubo una versión anterior que no tuvo éxito y no se conserva. Lectura directa.",
+      "source": "Binghamton University, guía de estudio «Euripides' Hippolytus» (A. Scholtz)",
+      "url": "https://bingdev.binghamton.edu/ascholtz/ams150/study_guides/euripides_hippolytus.html"
+    }
+  ],
+  "do_not_use": [
+    "Presentar el verso como la moral de Eurípides o de la obra: Hipólito cumple el juramento y muere por ello (vv. 656-661 y ~1060).",
+    "La fecha del juicio de Higienón: no aparece en ninguna fuente leída.",
+    "Que Eurípides fue condenado por impiedad: Aristóteles solo recoge la acusación y su defensa; no hay noticia del resultado en lo leído.",
+    "Fechar Las ranas (405 a.C.) o el v. 101 donde también se alude a la frase: no se leyó en fuente en esta ronda.",
+    "La cifra de «unos cuarenta versos» es aproximada (612 a 656); Perseus marca los números cada cinco versos.",
+    "Atribuir a Eurípides la frase «a quien los dioses quieren destruir, primero lo enloquecen»: es un adagio posterior sin verso identificable en su obra.",
+    "La traducción al español del verso es propia, a partir del griego y de la versión de Kovacs."
+  ],
+  "status": "draft"
+}
