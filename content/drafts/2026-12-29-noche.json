@@ -1,0 +1,52 @@
+{
+  "id": "2026-12-29-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Aracne y el tapiz de los crímenes divinos",
+    "hook": "Aracne no perdió el concurso contra Minerva. Según Ovidio, eso fue precisamente lo que no se le perdonó.",
+    "body": [
+      "La versión completa del mito que se conserva de la Antigüedad está en el libro VI de las Metamorfosis del poeta romano Ovidio. Aracne vivía en Hipepa, un pueblo pequeño de Lidia. Era hija de Idmón de Colofón, que teñía lana. No tenía linaje. Tenía fama de tejer mejor que nadie, y se negó a admitir que se lo debiera a la diosa.",
+      "Minerva aceptó el desafío. Tejió su disputa con Neptuno por Atenas, con doce dioses en sus tronos, y en las cuatro esquinas puso a mortales castigados por desafiar a los dioses. Era una advertencia. Aracne tejió otra cosa: Europa raptada por un toro, Leda bajo un cisne, Dánae bajo la lluvia de oro. Los engaños de los dioses, uno tras otro.",
+      "Ovidio es explícito, en los versos 129 y 130: ni Palas ni la Envidia habrían podido encontrar un defecto en aquella obra. La diosa se dolió del éxito. Rasgó el tapiz, al que el poeta llama «crímenes celestes», y golpeó a Aracne en la frente con la lanzadera, tres y cuatro veces. Aracne no lo soportó y se ahorcó. Minerva la descolgó y la convirtió en araña. El castigo no cayó sobre un mal trabajo. Cayó sobre uno perfecto que mostraba lo que nadie quería ver."
+    ],
+    "question": "¿Qué se castiga más, el error o la verdad bien hecha?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Aracne",
+    "subtitle": "Ovidio, Metamorfosis, libro VI",
+    "body": "Tejió los engaños de los dioses frente a Minerva. Ni la diosa ni la Envidia encontraron un defecto en su tapiz. Minerva lo rasgó de todos modos, y a la tejedora la convirtió en araña."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Aracne", "#Mitologia", "#Ovidio"],
+    "extended": ["#Metamorfosis", "#Minerva", "#MitologiaGriega", "#Literatura", "#Antiguedad", "#Tejido"]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de Metamorfosis VI: Aracne, hija de «Colophonius Idmon» (v. 8), vivía en la pequeña Hipepa (v. 13); tejió a Europa, Asterie, Leda, Antíope, Alcmena, Dánae y otros engaños divinos (vv. 103-127); «Non illud Pallas, non illud carpere Livor / possit opus: doluit successu flava virago» (vv. 129-130); «et rupit pictas, caelestia crimina, vestes» (v. 131); la golpea en la frente «ter quater» con la lanzadera (v. 133); se ahorca (vv. 134-135); Palas la descuelga y la transforma en araña (vv. 135-145). Comprobación directa.",
+      "source": "Ovidio, Metamorphoses, liber VI, The Latin Library",
+      "url": "https://www.thelatinlibrary.com/ovid/ovid.met6.shtml"
+    },
+    {
+      "claim": "Traducción de A. S. Kline: el tapiz de Minerva muestra el Areópago, su disputa con Neptuno por la ciudad, doce dioses con Júpiter en el centro, y en las cuatro esquinas mortales castigados por desafiar a los dioses (Ródope y Hemo, la reina pigmea, Antígona, Cíniras), con una orla de olivo; «Neither Pallas nor Envy itself could fault that work»; la diosa «tore the tapestry, embroidered with the gods' crimes». Lectura directa.",
+      "source": "Ovid, Metamorphoses, Book VI, trad. A. S. Kline, The Ovid Collection, University of Virginia Library",
+      "url": "https://ovid.lib.virginia.edu/trans/Metamorph6.htm"
+    },
+    {
+      "claim": "Ovidio, Metamorfosis 6, es la única narración antigua completa del mito; Virgilio (Geórgicas IV), Eliano y Plinio el Viejo solo lo aluden. Lectura directa.",
+      "source": "Theoi Project, «Arachne»",
+      "url": "https://www.theoi.com/Heroine/Arakhne.html"
+    }
+  ],
+  "do_not_use": [
+    "Que Minerva convirtió a Aracne en araña por haber perdido o tejido peor: en Ovidio la obra no tiene defecto; la causa es el éxito y el tema.",
+    "Versiones griegas en que Aracne es una muchacha que compite con Atenea en Atenas o en que hay otra genealogía: no se verificaron; la pieza sigue solo a Ovidio.",
+    "Velázquez, «Las hilanderas o la fábula de Aracne» (Prado, P1173, 1655-1660, con el rapto de Europa al fondo según Tiziano y Rubens, e inventario de Pedro de Arce de 1664): solo se leyó en resúmenes de búsqueda; las páginas del Prado devolvieron 403. No se usa hasta comprobarlo.",
+    "Fechar las Metamorfosis (se suele decir «hacia el año 8», el del destierro de Ovidio): no se verificó en esta ronda y el texto no da año.",
+    "Las traducciones al español son propias."
+  ],
+  "status": "draft"
+}

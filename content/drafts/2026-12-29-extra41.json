@@ -1,0 +1,55 @@
+{
+  "id": "2026-12-29-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Marcial y el epigrama VI 70 sobre Cotta",
+    "hook": "Marcial escribió un epigrama sobre un hombre de sesenta y dos años que nunca había estado enfermo. Lo cerró con una cuenta.",
+    "quote": {
+      "text": "La vida no es vivir, sino estar sano.",
+      "author": "Marco Valerio Marcial",
+      "work": "Epigramas, libro VI, 70 (hacia 90-91)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El libro VI de los Epigramas de Marcial salió en Roma hacia el año 90 o 91, bajo Domiciano. El poema 70 está dirigido a un amigo, Marciano, y habla de un tal Cotta. Ha cumplido sesenta cosechas y, cree el poeta, ya dos más. No recuerda haber sufrido ni un solo día el fastidio de la cama con fiebre.",
+      "A los médicos, dice Marcial, Cotta les hace un gesto obsceno con el dedo, y la traducción inglesa de 1897 nombra a tres: Alcón, Dasio y Símaco. Luego viene la cuenta. Si a nuestros años se les restaran los días de enfermedad, quien crea que Príamo y Néstor vivieron mucho se equivoca. Medidos así, escribe, somos niños y parecemos viejos.",
+      "La última línea es la que se cita: «Non est vivere, sed valere vita est». El latín juega con dos verbos casi iguales, vivir y valer, que es estar sano y tener fuerza. Marcial no habla de la salud como un adorno de la vida. La pone como su unidad de medida."
+    ],
+    "question": "¿Cuántos de tus años contarían si se midieran así?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Marcial", "#Citas", "#Salud"],
+    "extended": ["#Roma", "#Latin", "#Epigramas", "#Clasicos", "#LiteraturaLatina", "#Sabiduria"]
+  },
+  "sources": [
+    {
+      "claim": "Texto latino de Epigramas VI 70: empieza «Sexagesima, Marciane, messis» y sigue «iam secunda Cottae»; Cotta «nec se taedia lectuli calentis / expertum meminit die uel uno»; «Ostendit digitum, sed inpudicum, / Alconti Dasioque Symmachoque»; quien crea largas las vidas de Príamo y Néstor se engaña; «infantes sumus et senes uidemur»; último verso «Non est uiuere, sed ualere uita est». Comprobación directa.",
+      "source": "Marcial, Epigrammaton liber VI, The Latin Library",
+      "url": "https://www.thelatinlibrary.com/martial/mart6.shtml"
+    },
+    {
+      "claim": "Traducción anónima de 1897 (Bohn's Classical Library, revisada por R. Pearse): «Sixty summers», «I think, two more»; Cotta «does not remember ever to have felt the weariness of a bed of sickness even for a single day»; «bids the doctors Alcon, Dasius, and Symmachus keep at a distance»; «He who thinks that the lives of Priam and of Nestor were long is much deceived»; último verso «Life consists not in living, but in enjoying health». Lectura directa.",
+      "source": "Martial, Epigrams, Book VI, trad. anónima (1897), Pomona College, fuentes del curso de C. Chinn",
+      "url": "https://pages.pomona.edu/~cmc24747/sources/martial/mart_ep_6.htm"
+    },
+    {
+      "claim": "El libro VI de los Epigramas de Marcial pudo publicarse en el 90 o el 91 d. C.; la fecha del 90 se atribuye a Coleman y la del 91 a Nauta. Lectura directa.",
+      "source": "Base de datos «Judaism and Rome» (Heurist, Huma-Num), ficha de Marcial, Epigramas VI.3",
+      "url": "https://heurist.huma-num.fr/heurist/judaism_and_rome/view/1296"
+    }
+  ],
+  "do_not_use": [
+    "Que Marcial nació en Bílbilis hacia el año 40 y murió hacia el 104: es lo habitual, pero no se verificó en esta ronda y no se menciona.",
+    "Presentar a Alcón, Dasio y Símaco como médicos según el texto latino: el latín solo los nombra; es la traducción de 1897 la que los llama doctores. El texto lo atribuye a esa traducción.",
+    "Atribuir la frase a Hipócrates, a Séneca o a «un proverbio latino» anónimo: es el último verso de Marcial VI 70.",
+    "La traducción al español es propia; no se cotejó con una edición española publicada.",
+    "Dar el año exacto del libro VI: hay dos propuestas, 90 y 91; se dice «hacia el 90 o 91»."
+  ],
+  "status": "draft"
+}
