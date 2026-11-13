@@ -68,11 +68,17 @@
     "«Escipión lloró ante las ruinas y citó a Homero». Anécdota de Polibio transmitida por Apiano; no se comprobó en esta sesión y queda fuera del copy.",
     "Recordatorio heredado que sigue vigente: «los mayas inventaron el cero» (fue Mesoamérica zoque y epi-olmeca), las chinampas como «jardines flotantes» (son islotes fijos) y el mapa de Vinlandia (falsificación del siglo XX)."
   ],
-  "status": "ready",
+  "status": "published",
   "targets": [
     "facebook_reel"
   ],
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1117886757881212",
+      "url": "/reel/1117886757881212/",
+      "published_at": "2026-11-13T13:43:25.939555+00:00"
+    }
+  },
   "publish_at": "2026-11-10T17:26:00Z",
   "reemision_de": "2026-08-29-extra16"
 }
