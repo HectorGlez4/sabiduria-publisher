@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-24-extra41",
+  "id": "2026-11-14-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Holderlin", "#Citas", "#Poesia"],
-    "extended": ["#PoesiaAlemana", "#Romanticismo", "#Heidegger", "#Filosofia", "#SigloXIX", "#Sabiduria"]
+    "topic": [
+      "#Holderlin",
+      "#Citas",
+      "#Poesia"
+    ],
+    "extended": [
+      "#PoesiaAlemana",
+      "#Romanticismo",
+      "#Heidegger",
+      "#Filosofia",
+      "#SigloXIX",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "Que Hölderlin escribiera «Patmos» ya enfermo o en la torre de Tübingen: la torre es posterior (desde 1807).",
     "La traducción al español es propia, desde el alemán; no corresponde a ninguna edición española concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-14T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

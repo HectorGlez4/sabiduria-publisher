@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-26-extra41",
+  "id": "2026-11-15-extra86",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#PublilioSiro", "#Citas", "#Roma"],
-    "extended": ["#RomaAntigua", "#Latin", "#Sentencias", "#Seneca", "#Clasicos", "#Sabiduria"]
+    "topic": [
+      "#PublilioSiro",
+      "#Citas",
+      "#Roma"
+    ],
+    "extended": [
+      "#RomaAntigua",
+      "#Latin",
+      "#Sentencias",
+      "#Seneca",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "La forma «Publio Siro» circula, pero Duff y The Latin Library lo llaman Publilius; no se verificó de dónde viene la variante, así que se usa Publilio.",
     "La traducción al español de la sentencia es propia, desde el latín y la versión de Duff."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-15T19:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-23-tarde",
+  "id": "2026-11-14-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#MarkTwain", "#Citas", "#Literatura"],
-    "extended": ["#Humor", "#Periodismo", "#SigloXIX", "#CitasMalAtribuidas", "#LiteraturaEstadounidense", "#Sabiduria"]
+    "topic": [
+      "#MarkTwain",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Humor",
+      "#Periodismo",
+      "#SigloXIX",
+      "#CitasMalAtribuidas",
+      "#LiteraturaEstadounidense",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "No se consultó el escaneo original del Journal (Chronicling America dio 403): el texto de 1897 se toma de Quote Investigator, que cita el periódico, coincidente con Campbell y Mental Floss.",
     "La traducción es propia; no corresponde a ninguna edición española concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-14T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

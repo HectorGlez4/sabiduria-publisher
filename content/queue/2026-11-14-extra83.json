@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-24-tarde",
+  "id": "2026-11-14-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Lavoisier", "#Citas", "#Ciencia"],
-    "extended": ["#Quimica", "#HistoriaDeLaCiencia", "#SigloXVIII", "#Anaxagoras", "#CitasMalAtribuidas", "#Sabiduria"]
+    "topic": [
+      "#Lavoisier",
+      "#Citas",
+      "#Ciencia"
+    ],
+    "extended": [
+      "#Quimica",
+      "#HistoriaDeLaCiencia",
+      "#SigloXVIII",
+      "#Anaxagoras",
+      "#CitasMalAtribuidas",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "La frase apócrifa del juez «La República no necesita sabios»: atribución no documentada. No usarla.",
     "La traducción al español es propia, desde el francés de 1789; no corresponde a ninguna edición española concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-15T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

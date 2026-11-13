@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-25-extra41",
+  "id": "2026-11-14-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Lumumba", "#Citas", "#Africa"],
-    "extended": ["#Congo", "#HistoriaDeAfrica", "#Descolonizacion", "#SigloXX", "#Cartas", "#Historia"]
+    "topic": [
+      "#Lumumba",
+      "#Citas",
+      "#Africa"
+    ],
+    "extended": [
+      "#Congo",
+      "#HistoriaDeAfrica",
+      "#Descolonizacion",
+      "#SigloXX",
+      "#Cartas",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -59,5 +70,12 @@
     "La frase «Je préfère mourir la tête haute»: es de la misma carta, pero no se leyó en el original francés. No usarla.",
     "La traducción al español es propia, desde el francés de Afrik.com y el inglés de la edición de Moscú."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-15T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

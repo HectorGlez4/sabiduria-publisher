@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-26-tarde",
+  "id": "2026-11-15-extra87",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SanJuanDeLaCruz", "#Citas", "#SigloDeOro"],
-    "extended": ["#Mistica", "#LiteraturaEspanola", "#Amor", "#Carmelitas", "#Espiritualidad", "#Sabiduria"]
+    "topic": [
+      "#SanJuanDeLaCruz",
+      "#Citas",
+      "#SigloDeOro"
+    ],
+    "extended": [
+      "#Mistica",
+      "#LiteraturaEspanola",
+      "#Amor",
+      "#Carmelitas",
+      "#Espiritualidad",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -57,5 +68,12 @@
     "No se verificó el año de una edición crítica concreta (Ruiz Salvador, EDE, u otras); la cita se apoya en la transcripción carmelita y en el Catecismo.",
     "Datos biográficos (Fontiveros 1542, Úbeda 1591, doctor de la Iglesia en 1926): no se leyeron en fuentes verificadas en esta ronda; no se usan."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-15T23:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
