@@ -412,6 +412,44 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
     opcion = SUPERFICIES[superficie]
     xml = _esperar(lambda x: telefono.buscar(x, texto=opcion, paquete=HOJA) is not None, f"«{opcion}» en el menú")
     _tocar_texto(xml, opcion, HOJA)  # por texto: el orden del menú cambia entre usos
+    _esperar_editor(superficie, ev)
+    pie = ev / "pie.txt"
+    pie.write_text(pie_para(texto_plano), encoding="utf-8")
+    return {"url": url, "plantilla": plantilla, "formato": formato, "superficie": superficie, "pie": str(pie),
+            "captura": str(telefono.captura(ev / f"01-editor-{superficie}.png"))}
+
+
+# Actividades de Instagram que abren cada editor con una imagen (las mismas que el menú de la hoja de compartir).
+# En el código de Instagram «Clips» es el Reel y «Story» la historia.
+ACTIVIDAD = {"feed": "com.instagram.share.handleractivity.ShareHandlerActivity",
+             "reel": "com.instagram.share.handleractivity.ClipsShareHandlerActivity",
+             "story": "com.instagram.share.handleractivity.StoryShareHandlerActivity"}
+CARPETA_COLA = "/sdcard/Pictures/SabiduriaCola"
+
+
+def compartir_archivo(archivo: Path, superficie: str, ev: Path) -> dict:
+    """Pieza de la cola del publicador: sube la imagen ya renderizada y la abre en el editor de Instagram de esa
+    superficie. Termina donde `compartir_desde_el_sitio`: en el editor, listo para la música."""
+    if superficie not in SUPERFICIES:
+        raise ValueError(f"superficie {superficie!r} desconocida")
+    if not archivo.is_file():
+        raise ValueError(f"no existe la imagen {archivo}")
+    _exigir_listo()
+    exigir_cuenta()
+    telefono.cerrar_cortina()
+    remoto = f"{CARPETA_COLA}/{ev.name}-{archivo.name}"  # nombre único por run: MediaStore no repite filas
+    telefono.shell(f"mkdir -p {CARPETA_COLA}")
+    telefono.subir(archivo, remoto)
+    uri = f"{telefono.URI_IMAGENES}/{telefono.id_mediastore(remoto.rsplit('/', 1)[-1])}"
+    telefono.shell(f"am start -a android.intent.action.SEND -t image/png --grant-read-uri-permission"
+                   f" --eu android.intent.extra.STREAM {shlex.quote(uri)} -n {IG}/{ACTIVIDAD[superficie]}")
+    _esperar_editor(superficie, ev)
+    return {"archivo": str(archivo), "superficie": superficie,
+            "captura": str(telefono.captura(ev / f"01-editor-{superficie}.png"))}
+
+
+def _esperar_editor(superficie: str, ev: Path) -> None:
+    opcion = SUPERFICIES[superficie]
     _esperar(lambda x: bool(por_id(x, EDITOR[superficie])), f"el editor de {opcion}", plazo=40)
     time.sleep(2)
     # El Reel a veces abre con la vista previa en negro y la tarjeta tarda en pintarse (5 nov: tres Reels
@@ -423,10 +461,6 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
         if time.monotonic() >= limite:
             raise PantallaInesperada(f"el editor del {SUPERFICIES[superficie]} sigue en negro tras 45 s")
         time.sleep(3)
-    pie = ev / "pie.txt"
-    pie.write_text(pie_para(texto_plano), encoding="utf-8")
-    return {"url": url, "plantilla": plantilla, "formato": formato, "superficie": superficie, "pie": str(pie),
-            "captura": str(telefono.captura(ev / f"01-editor-{superficie}.png"))}
 
 
 def poner_musica(superficie: str, ev: Path, recientes: list[str], rng: random.Random) -> dict:
@@ -579,8 +613,9 @@ def poner_enlace(url: str, ev: Path) -> dict:
             "captura": str(telefono.captura(ev / "03-enlace.png"))}
 
 
-def escribir_pie(superficie: str, pie: str, ev: Path) -> dict:
-    """Feed o Reel: del editor al composer y el pie pegado con tildes (`phone_clipboard.py`)."""
+def escribir_pie(superficie: str, pie: str, ev: Path, cruzar: bool = True) -> dict:
+    """Feed o Reel: del editor al composer y el pie pegado con tildes (`phone_clipboard.py`). `cruzar` deja
+    Threads y Facebook de «Partager aussi sur…» encendidos (bucle del sitio) o apagados (piezas de la cola)."""
     if superficie == "story":
         raise ValueError("la Story no lleva pie: el enlace va en el sticker")
     _exigir_listo()
@@ -612,7 +647,8 @@ def escribir_pie(superficie: str, pie: str, ev: Path) -> dict:
     salida = {"captura": str(telefono.captura(ev / "04-composer.png"))}
     if superficie == "reel":
         salida["copia_en_story"] = _sin_copia_en_la_story()
-        salida["captura_opciones"] = str(telefono.captura(ev / "04b-composer-opciones.png"))
+    salida["cruces"] = ajustar_cruces(cruzar)
+    salida["captura_opciones"] = str(telefono.captura(ev / "04b-composer-opciones.png"))
     return salida
 
 
@@ -630,6 +666,80 @@ def interruptor_junto_a(xml: str, titulo: str) -> dict | None:
     if len(toggles) == 1:
         return toggles[0]
     return en_la_fila[0] if len(en_la_fila) == 1 else None
+
+
+# Filas de «Partager aussi sur…» en el composer, por el nombre que enseñan (visto el 8 nov en el Reel).
+CRUCES = {"Threads": CUENTA, "Facebook": "Sabiduria De Bolsillo"}
+
+
+FILA_CRUCES = "Partager aussi sur"  # sin los puntos: «…» o «...» según la versión
+
+
+def _composer_con_cruces() -> tuple[str, str]:
+    """Desliza el composer hasta ver los cruces. Devuelve el volcado y cómo los enseña Instagram: «sueltos» (un
+    interruptor por red, el composer del Reel) o «fila» (una fila «Partager aussi sur…» con el resumen de las
+    redes encendidas debajo y una pantalla aparte; el composer de la foto desde el 13 nov)."""
+    for _ in range(5):
+        xml = _volcar()
+        if interruptor_junto_a(xml, CRUCES["Facebook"]) is not None:
+            return xml, "sueltos"
+        if telefono.buscar(xml, contiene=FILA_CRUCES, paquete=IG) is not None:
+            return xml, "fila"
+        telefono.deslizar(540, 1700, 540, 900, 500)  # x en el centro: lejos de los interruptores de la derecha
+        time.sleep(1.5)
+    raise PantallaInesperada("no aparecen los cruces a Threads y Facebook en el composer")
+
+
+def resumen_de_cruces(xml: str) -> set[str]:
+    """Redes encendidas según el resumen bajo la fila «Partager aussi sur…» (el composer de la foto)."""
+    fila = telefono.buscar(xml, contiene=FILA_CRUCES, paquete=IG)
+    if fila is None:
+        return set()
+    y0 = fila["bounds"][3]
+    debajo = [n for n in telefono.nodos(xml) if n["package"] == IG and y0 <= n["bounds"][1] <= y0 + 160]
+    # El resumen puede venir en un nodo («sabiduriabolsillo • Sabiduria De Bolsillo») o en uno por red.
+    textos = " · ".join(f"{n['texto']} {n['desc']}" for n in debajo)
+    return {red for red, titulo in CRUCES.items() if titulo in textos}
+
+
+def _fijar_sueltos(encender: bool) -> dict:
+    estado = {}
+    for red, titulo in CRUCES.items():
+        n = interruptor_junto_a(_volcar(), titulo)
+        if n is None:
+            raise PantallaInesperada(f"no aparece el interruptor «{titulo}» ({red})")
+        if bool(n["checked"]) == encender:
+            estado[red] = "ya estaba"
+            continue
+        telefono.tocar(*n["centro"])
+        time.sleep(1.5)
+        n = interruptor_junto_a(_volcar(), titulo)
+        if n is None or bool(n["checked"]) != encender:
+            raise PantallaInesperada(f"«{titulo}» ({red}) no quedó {'encendido' if encender else 'apagado'}")
+        estado[red] = "encendido" if encender else "apagado"
+    return estado
+
+
+def ajustar_cruces(encender: bool) -> dict:
+    """Threads y Facebook de «Partager aussi sur…». El bucle del sitio los quiere encendidos (decisión del usuario
+    del 2026-11-04); las piezas de la cola, apagados, porque esas redes ya salieron por API (2026-11-13).
+    Instagram recuerda la última elección: por eso se fija el estado en cada publicación y no solo se apaga.
+    Si ya está como debe, no se toca nada."""
+    xml, forma = _composer_con_cruces()
+    if forma == "sueltos":
+        return _fijar_sueltos(encender)
+    quiero = set(CRUCES) if encender else set()
+    if resumen_de_cruces(xml) == quiero:
+        return {red: "ya estaba" for red in CRUCES}
+    telefono.tocar(*telefono.buscar(xml, contiene=FILA_CRUCES, paquete=IG)["centro"])
+    _esperar(lambda x: interruptor_junto_a(x, CRUCES["Facebook"]) is not None, "la pantalla «Partager aussi sur…»")
+    estado = _fijar_sueltos(encender)
+    telefono.tecla(4)
+    time.sleep(2)
+    xml, _ = _composer_con_cruces()
+    if resumen_de_cruces(xml) != quiero:
+        raise PantallaInesperada(f"el resumen de «{FILA_CRUCES}» no quedó como se pidió: {resumen_de_cruces(xml)}")
+    return estado
 
 
 def _sin_copia_en_la_story() -> str:

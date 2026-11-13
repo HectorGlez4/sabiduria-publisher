@@ -54,6 +54,17 @@ MAX_INTENTOS = 3
 # Poner {"facebook"} aquí desvía Facebook al feed sin hacer fallar la pieza.
 POR_FEED: set[str] = set()
 
+# Plataformas que NO se publican por API sino desde el móvil del laboratorio, con
+# un sonido del top 10 de «Populaires» (la API no deja poner música). Decisión del
+# usuario, 13 nov 2026: Instagram sale del móvil (foto, Reel y, si la pieza la lleva,
+# Story); Facebook y Threads siguen por API a su hora. Si el móvil no está, la pieza
+# espera: nunca sale por API sin música.
+#
+# Aquí solo se deja la marca `{"via": "telefono", "pendiente": true}`; el ciclo del
+# móvil (experiments/media-lab/sitio-instagram/ciclo-prompt.md, `lab.py sitio cola`)
+# la recoge de content/published/ y la sustituye por lo publicado.
+POR_TELEFONO: set[str] = {"instagram", "instagram_story"}
+
 
 def load(path: pathlib.Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -320,6 +331,15 @@ def publish_unit(unit: dict, path: pathlib.Path, dry_run: bool = False) -> str:
                 "published_at": datetime.now(timezone.utc).isoformat(),
             }
             print(f"  · {platform}: se sirve por el feed RSS, no por API")
+            save(unit, path)
+            continue
+        if platform in POR_TELEFONO:
+            unit["results"][platform] = {
+                "via": "telefono",
+                "pendiente": True,
+                "encolada_en": datetime.now(timezone.utc).isoformat(),
+            }
+            print(f"  · {platform}: sale desde el móvil con música, no por API")
             save(unit, path)
             continue
         if platform in PENDING:

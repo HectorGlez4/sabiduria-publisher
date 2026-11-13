@@ -6303,6 +6303,62 @@ def seccion_sitio_instagram() -> None:
           "la verificación solo da por buena una Story propia de hace minutos")
 
 
+def seccion_cola_instagram() -> None:
+    print("\nCola del publicador → Instagram desde el móvil")
+    import tempfile
+    from labkit import cola_instagram as cola
+    from labkit import sitio_instagram as si
+    from labkit import telefono as tel
+    from PIL import Image
+
+    pendiente = {"via": "telefono", "pendiente": True, "encolada_en": "2026-11-13T10:00:00+00:00"}
+    feed = {"id": "a", "results": {"facebook": {"post_id": "1"}, "instagram": dict(pendiente)}}
+    story = {"id": "b", "results": {"instagram_story": dict(pendiente, encolada_en="2026-11-12T10:00:00+00:00")}}
+    api = {"id": "c", "results": {"instagram": {"post_id": "9"}}}
+    check(cola.superficies_pendientes(feed) == ["reel", "feed"] and cola.superficies_pendientes(story) == ["story"]
+          and cola.superficies_pendientes(api) == [],
+          "una pieza del feed sale como Reel y foto; una de historia, como Story; lo publicado por API no cuenta")
+    eleg = cola.elegir_pieza([(pathlib.Path("a.json"), feed), (pathlib.Path("b.json"), story)])
+    check(eleg is not None and eleg[1]["id"] == "b", "sale primero la que lleva más tiempo esperando al móvil")
+    cola.anotar_publicada(feed, "reel", "M83 Outro", "2026-11-13T11:00:00+00:00", "COLA-X-REEL")
+    check(cola.superficies_pendientes(feed) == ["feed"] and feed["results"]["instagram_reel"]["pista"] == "M83 Outro",
+          "tras el Reel solo queda la foto")
+    cola.anotar_publicada(feed, "feed", "November", "2026-11-13T11:05:00+00:00", "COLA-X-FEED")
+    check(cola.superficies_pendientes(feed) == [] and "pendiente" not in feed["results"]["instagram"]
+          and feed["results"]["instagram"]["encolada_en"], "con todo publicado la pieza deja de estar pendiente")
+    terca = {"id": "d", "results": {"instagram": dict(pendiente)}}
+    for _ in range(cola.MAX_INTENTOS):
+        check(cola.contar_intento(terca, "t") == ["reel", "feed"], "dentro de los intentos sigue pendiente")
+    check(cola.contar_intento(terca, "t") == [] and terca["results"]["instagram"].get("abandonada")
+          and cola.superficies_pendientes(terca) == [], "pasados los intentos se abandona y deja paso a las demás")
+
+    salida = ('Row: 0 _id=17, _display_name=COLA-1-a.png\n'
+              'Row: 1 _id=42, _display_name=COLA-1-a.png\nRow: 2 _id=50, _display_name=otra.png')
+    check(tel.id_de_fila(salida, "COLA-1-a.png") == 42 and tel.id_de_fila(salida, "nada.png") is None,
+          "el content:// de la imagen subida es la fila más reciente con ese nombre exacto")
+
+    def n(texto, y1, y2):
+        return (f'<node text="{texto}" content-desc="" resource-id="" class="android.widget.TextView" '
+                f'package="com.instagram.android" clickable="false" bounds="[40,{y1}][1000,{y2}]" />')
+    fila = n("Partager aussi sur…", 1680, 1740)
+    ambas = "<hierarchy>" + fila + n("sabiduriabolsillo • Sabiduria De Bolsillo", 1760, 1810) + "</hierarchy>"
+    sola = "<hierarchy>" + fila + n("Sabiduria De Bolsillo", 1760, 1810) + n("sabiduriabolsillo", 2100, 2150) + "</hierarchy>"
+    check(si.resumen_de_cruces(ambas) == {"Threads", "Facebook"}, "el resumen de la foto dice qué cruces están encendidos")
+    check(si.resumen_de_cruces(sola) == {"Facebook"}, "solo cuenta lo que va justo debajo de «Partager aussi sur…»")
+
+    with tempfile.TemporaryDirectory() as d:
+        tarjeta = pathlib.Path(d) / "t.png"
+        im = Image.new("RGB", (1080, 1350), (245, 240, 230))  # borde claro (el fondo lo copia), centro oscuro
+        im.paste((200, 30, 30), (8, 8, 1072, 1342))
+        im.save(tarjeta)
+        for sup, (x0, y0, x1, y1) in cola.CAJA_SEGURA.items():
+            with Image.open(cola.vertical_seguro(tarjeta, sup, pathlib.Path(d) / f"{sup}.png")) as im:
+                caja = Image.eval(im.convert("L"), lambda v: 255 if v < 120 else 0).getbbox()
+                check(im.size == (1080, 1920) and caja is not None and caja[0] >= x0 and caja[1] >= y0
+                      and caja[2] <= x1 and caja[3] <= y1,
+                      f"{sup}: la tarjeta entera cabe en la zona que no tapa el editor ({caja})")
+
+
 SECCIONES = [
     seccion_portapapeles,
     seccion_encargos,
@@ -6331,6 +6387,7 @@ SECCIONES = [
     seccion_zona_segura_story,
     seccion_excepciones_s1,
     seccion_sitio_instagram,
+    seccion_cola_instagram,
 ]
 
 

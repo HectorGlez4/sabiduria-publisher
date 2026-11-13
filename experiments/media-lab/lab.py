@@ -1106,36 +1106,107 @@ def cmd_sitio(a) -> int:
                 # Un diseño al azar por formato, independiente: el mismo ciclo puede salir en tres colores.
                 "plantillas": {sup: rng.choice(si.PLANTILLAS) for sup in si.SUPERFICIES}})
         return 0
+    if a.paso == "cola":
+        return _sitio_cola()
     ev = _evidencia(a.run)
     ev.mkdir(parents=True, exist_ok=True)
     _exigir(a.superficie in si.SUPERFICIES, "--superficie debe ser feed, reel o story")
-    if a.paso in ("compartir", "enlace"):
+    if a.paso == "compartir":
+        _exigir(bool(a.url) != bool(a.archivo), "compartir exige --url (cita del sitio) o --archivo (pieza de la cola)")
+    if a.paso == "enlace":
         _exigir(bool(a.url), "--url es obligatorio en este paso")
     if a.paso == "pie":
         _exigir(a.superficie in ("feed", "reel") and bool(a.pie), "pie es para feed o reel y exige --pie")
     if a.paso == "publicar":
         # El PASS del revisor visual (visual-qa-gate.md) es la única puerta: publicar-sin-confirmacion-humana.
         _exigir(a.veredicto == "PASS", "publicar exige --veredicto PASS del revisor visual")
-        _exigir(bool(a.slug and a.pista), "publicar exige --slug y --pista para el registro")
+        _exigir(bool((a.slug or a.pieza) and a.pista), "publicar exige --slug (o --pieza) y --pista para el registro")
     if a.paso == "verificar":
         _exigir(bool(a.pista), "verificar exige --pista")
     pie = Path(a.pie).read_text(encoding="utf-8").rstrip("\n") if a.pie else None
 
     def publicar() -> dict:
         res = si.publicar(a.superficie, ev)
-        si.anotar(REGISTRO_SITIO, {"run": a.run, "slug": a.slug, "superficie": a.superficie,
-                                   "pista": a.pista, "publicado_en": res["publicado_en"]})
+        si.anotar(REGISTRO_SITIO, {"run": a.run, "slug": a.slug or a.pieza, "superficie": a.superficie,
+                                   "pista": a.pista, "publicado_en": res["publicado_en"],
+                                   **({"pieza": a.pieza} if a.pieza else {})})
+        if a.pieza:
+            res["pieza_actualizada"] = _anotar_en_la_pieza(a.pieza, a.superficie, a.pista, res["publicado_en"], a.run)
         return res
 
+    def compartir() -> dict:
+        if a.archivo:
+            return si.compartir_archivo(Path(a.archivo), a.superficie, ev)
+        return si.compartir_desde_el_sitio(a.url, a.plantilla, a.superficie, ev)
+
     pasos = {
-        "compartir": lambda: si.compartir_desde_el_sitio(a.url, a.plantilla, a.superficie, ev),
+        "compartir": compartir,
         "musica": lambda: si.poner_musica(a.superficie, ev, recientes, rng),
         "enlace": lambda: si.poner_enlace(a.url, ev),
-        "pie": lambda: si.escribir_pie(a.superficie, pie, ev),
+        # Piezas de la cola: Threads y Facebook ya salieron por API, así que sus cruces van apagados.
+        "pie": lambda: si.escribir_pie(a.superficie, pie, ev, cruzar=not a.pieza),
         "publicar": publicar,
         "verificar": lambda: si.verificar(a.superficie, ev, a.pista, pie),
     }
     return _paso_telefono(ev, f"sitio-{a.paso}-inesperada", pasos[a.paso])
+
+
+PUBLICADAS = ROOT / "content" / "published"
+
+
+def _publicador():
+    """src.publish y src.variants del publicador de la nube (render y pie de Instagram)."""
+    if str(ROOT) not in sys.path:
+        sys.path.insert(0, str(ROOT))
+    from src import publish, variants
+    return publish, variants
+
+
+def _sitio_cola() -> int:
+    """La pieza de la cola que lleva más tiempo esperando al móvil, con sus imágenes y su pie, o `pieza: null`."""
+    from labkit import cola_instagram as cola
+    publish, variants = _publicador()
+    piezas = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in sorted(PUBLICADAS.glob("*.json"))]
+    ahora = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    abandonadas = []
+    while (elegida := cola.elegir_pieza(piezas)) is not None:
+        ruta, unit, _ = elegida
+        pendientes = cola.contar_intento(unit, ahora)
+        publish.save(unit, ruta)
+        if pendientes:
+            break
+        abandonadas.append(unit["id"])
+        piezas = [(f, u) for f, u in piezas if f != ruta]
+    else:
+        emitir({"ok": True, "pieza": None, "abandonadas": abandonadas})
+        return 0
+    run = f"COLA-{datetime.now(timezone.utc):%Y%m%d-%H%M}"
+    ev = _evidencia(run)
+    ev.mkdir(parents=True, exist_ok=True)
+    archivos = {}
+    if "feed" in pendientes:
+        archivos["feed"] = str(publish.render_card(unit))
+    if {"reel", "story"} & set(pendientes):
+        tarjeta = publish.render_card(unit)
+        for s in ("reel", "story"):
+            if s in pendientes:
+                archivos[s] = str(cola.vertical_seguro(tarjeta, s, ev / f"{unit['id']}-{s}.png"))
+    pie = ev / "pie.txt"
+    pie.write_text(variants.build(unit, "instagram")["text"], encoding="utf-8")
+    emitir({"ok": True, "pieza": unit["id"], "ruta": str(ruta.relative_to(ROOT)), "run": run,
+            "superficies": pendientes, "archivos": archivos, "pie": str(pie),
+            "intento": unit["intentos_telefono"], "abandonadas": abandonadas})
+    return 0
+
+
+def _anotar_en_la_pieza(pieza: str, superficie: str, pista: str, publicado_en: str, run: str) -> str:
+    from labkit import cola_instagram as cola
+    publish, _ = _publicador()
+    ruta = PUBLICADAS / f"{pieza}.json"
+    unit = json.loads(ruta.read_text(encoding="utf-8"))
+    cola.anotar_publicada(unit, superficie, pista, publicado_en, run)
+    publish.save(unit, ruta)
+    return str(ruta.relative_to(ROOT))
 
 
 def cmd_ig(a) -> int:
@@ -1341,7 +1412,7 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_ig)
 
     p = sub.add_parser("sitio", help="cita de sabiduriadebolsillo.net a Story o Reel, un paso por llamada")
-    p.add_argument("paso", choices=("elegir", "compartir", "musica", "enlace", "pie", "publicar", "verificar"))
+    p.add_argument("paso", choices=("elegir", "cola", "compartir", "musica", "enlace", "pie", "publicar", "verificar"))
     p.add_argument("--run", help="id del run (todos los pasos salvo elegir)")
     p.add_argument("--superficie", choices=("feed", "reel", "story"))
     p.add_argument("--url", help="URL de la Página de Cita (compartir, enlace)")
@@ -1350,6 +1421,8 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--slug", help="slug de la cita (publicar)")
     p.add_argument("--pista", help="título de la pista que devolvió musica (publicar, verificar)")
     p.add_argument("--veredicto", help="última línea del revisor visual: PASS (publicar)")
+    p.add_argument("--archivo", help="imagen de la pieza de la cola que devolvió `sitio cola` (compartir)")
+    p.add_argument("--pieza", help="id de la pieza de la cola (pie, publicar): cruces apagados y la pieza anotada")
     p.set_defaults(func=cmd_sitio)
     return ap
 

@@ -491,6 +491,29 @@ def versiones(paquetes: dict[str, str]) -> dict[str, str | None]:
     return fuera
 
 
+def id_de_fila(salida: str, nombre: str) -> int | None:
+    """El _id más alto de las filas de `content query` con ese _display_name exacto (la última subida)."""
+    ids = []
+    for linea in salida.splitlines():
+        m = re.search(r"_id=(\d+)", linea)
+        n = re.search(r"_display_name=(.*?)(?:, \w+=|$)", linea)
+        if linea.startswith("Row:") and m and n and n.group(1) == nombre:
+            ids.append(int(m.group(1)))
+    return max(ids) if ids else None
+
+
+def id_mediastore(nombre: str) -> int:
+    """El _id de MediaStore de una imagen ya subida, para pasarla a otra app como content://."""
+    if not _NOMBRE_SEGURO.fullmatch(nombre):
+        raise TelefonoError(f"nombre de archivo no apto para la consulta: {nombre!r}")
+    salida = shell("content query --uri " + URI_IMAGENES + " --projection _id:_display_name"
+                   " --where " + shlex.quote(f"_display_name='{nombre}'"))
+    fila = id_de_fila(salida, nombre)
+    if fila is None:
+        raise TelefonoError(f"{nombre} no está en MediaStore")
+    return fila
+
+
 def subir(local: Path, remoto: str) -> dict:
     """Sube la imagen, la registra en MediaStore y comprueba el hash.
 

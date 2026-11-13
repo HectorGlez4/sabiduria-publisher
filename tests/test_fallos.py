@@ -116,7 +116,7 @@ def main() -> int:
     print("\n3. Un fallo de plataforma se reintenta y no se entierra")
     tmp = entorno()
     import fake_graph_shim  # noqa: F401
-    p = pieza("2026-01-01-tarde", "2026-01-01T19:00:00Z", targets=["instagram"])
+    p = pieza("2026-01-01-tarde", "2026-01-01T19:00:00Z", targets=["threads"])
     ruta = publish.QUEUE / "p.json"
     ruta.write_text(json.dumps(p), encoding="utf-8")
     publish.upload_asset = lambda x: "https://example.invalid/x.png"
@@ -126,10 +126,10 @@ def main() -> int:
 
     from src.platforms import meta
     original = dict(meta.PUBLISHERS)
-    # Instagram y no Facebook: Facebook ya no pasa por meta.PUBLISHERS, se sirve
-    # por el feed RSS. Lo que este caso comprueba —que un fallo de plataforma se
-    # reintenta en vez de enterrar la pieza— necesita una que sí llame a la API.
-    meta.PUBLISHERS["instagram"] = revienta
+    # Threads: lo que este caso comprueba —que un fallo de plataforma se reintenta
+    # en vez de enterrar la pieza— necesita una red que sí llame a la API, e
+    # Instagram ya sale desde el móvil (publish.POR_TELEFONO).
+    meta.PUBLISHERS["threads"] = revienta
     try:
         for intento in (1, 2):
             publish.publish_unit(json.loads(ruta.read_text(encoding="utf-8")), ruta)
@@ -146,6 +146,30 @@ def main() -> int:
               f"al llegar a {publish.MAX_INTENTOS} intentos se aparta")
         check("Meta se cayó" in " ".join(tras["blocked_reason"]),
               "el motivo guarda el error real de la plataforma")
+    finally:
+        meta.PUBLISHERS.clear()
+        meta.PUBLISHERS.update(original)
+    shutil.rmtree(tmp, ignore_errors=True)
+
+    print("\n4. Instagram no sale por API: queda pendiente para el móvil")
+    tmp = entorno()
+    p = pieza("2026-01-01-tarde", "2026-01-01T19:00:00Z", targets=["instagram", "instagram_story"])
+    ruta = publish.QUEUE / "p.json"
+    ruta.write_text(json.dumps(p), encoding="utf-8")
+    publish.upload_asset = lambda x: "https://example.invalid/x.png"
+
+    def no_llames(*_a, **_k):
+        raise AssertionError("Instagram no debe llamar a la API")
+
+    original = dict(meta.PUBLISHERS)
+    meta.PUBLISHERS["instagram"] = meta.PUBLISHERS["instagram_story"] = no_llames
+    try:
+        ok = publish.publish_unit(json.loads(ruta.read_text(encoding="utf-8")), ruta)
+        tras = json.loads((publish.PUBLISHED / "p.json").read_text(encoding="utf-8"))
+        check(ok == "published", "la pieza sale (Facebook y Threads a su hora) sin esperar al móvil")
+        check(all(tras["results"][r].get("via") == "telefono" and tras["results"][r].get("pendiente")
+                  for r in ("instagram", "instagram_story")),
+              "Instagram y su Story quedan marcados como pendientes del móvil")
     finally:
         meta.PUBLISHERS.clear()
         meta.PUBLISHERS.update(original)

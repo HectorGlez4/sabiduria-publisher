@@ -128,7 +128,12 @@ def main() -> int:
     check(variants.preflight(unit, []) == [], "la pieza pasa limpia")
 
     print("\n2. Publicación completa")
+    # Este test cubre el adaptador de Instagram por API (sondeo, error 9007, permalink),
+    # que sigue en el código aunque producción saque Instagram desde el móvil.
+    por_telefono = publish.POR_TELEFONO
+    publish.POR_TELEFONO = set()
     ok = publish.publish_unit(unit, unit_path)
+    publish.POR_TELEFONO = por_telefono
     check(ok == "published", "publish_unit devuelve 'published'")
 
     print("\n3. Resultados por plataforma")
