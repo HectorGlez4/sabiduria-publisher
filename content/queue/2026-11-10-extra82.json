@@ -69,7 +69,7 @@
     "Que la frase sea de un discurso o de una entrevista: es la primera línea de un ensayo impreso.",
     "La reimpresión en Negro Digest (enero de 1963) se conoce solo por Popik; no se menciona."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-10T20:26:00Z",
   "results": {
     "facebook": {
@@ -83,7 +83,7 @@
       "encolada_en": "2026-11-13T14:27:45.466153+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Friday, 13-Nov-26 09:41:04 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Friday, 13-Nov-26 09:55:28 PST."
     }
   },
   "targets": [
@@ -91,6 +91,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-13T17:41:04.852095+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-13T17:55:28.372601+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Friday, 13-Nov-26 09:55:28 PST."
+  ]
 }
