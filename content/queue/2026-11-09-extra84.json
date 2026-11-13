@@ -70,12 +70,15 @@
     "Que el manuscrito de Daifukkō-ji sea autógrafo de Chōmei: la nota antigua que lo afirma está discutida. No se usa.",
     "Presentar la frase como préstamo o eco de Heráclito: la comparación es moderna; no hay relación textual."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-10T03:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
