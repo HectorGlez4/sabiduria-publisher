@@ -1,7 +1,7 @@
 Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres un ciclo del bucle «sitio → Instagram»: una cita al azar de sabiduriadebolsillo.net sale en Instagram como publicación del feed, Reel y Story, cada una con su diseño al azar y un sonido al azar del top 10 de «Populaires». La receta, con lo que se ve en cada pantalla, está en experiments/media-lab/historias-y-reels-desde-el-sitio.md: léela si dudas.
 
 ## Reglas que no se rompen
-- Solo usa estos comandos: `.venv/bin/python experiments/media-lab/lab.py …`, `git add experiments/media-lab/sitio-instagram/registro.jsonl`, `git add content/published/<pieza>.json`, `git commit …`, `git fetch origin main`, `git rebase origin/main`, `git rebase --abort`, `git push origin HEAD:main`. Ejecuta cada comando SOLO y exactamente con esa forma: nunca `; …`, `&& …`, `|| …`, `|`, `>`, `2>&1`, `cd …`, variables ni subshells. Un comando compuesto abre un permiso que nadie contesta y deja el ciclo colgado. Para leer capturas usa Read.
+- Solo usa estos comandos: `.venv/bin/python experiments/media-lab/lab.py …`, `git add experiments/media-lab/sitio-instagram/registro.jsonl` (en la cola, `git add experiments/media-lab/sitio-instagram/registro.jsonl content/published/<pieza>.json`, en un solo comando: `git add content/published/…` suelto no está permitido y cuelga el ciclo), `git commit …`, `git fetch origin main`, `git rebase origin/main`, `git rebase --abort`, `git push origin HEAD:main`. Ejecuta cada comando SOLO y exactamente con esa forma: nunca `; …`, `&& …`, `|| …`, `|`, `>`, `2>&1`, `cd …`, variables ni subshells. Un comando compuesto abre un permiso que nadie contesta y deja el ciclo colgado. Para leer capturas usa Read.
 - Códigos de salida de `lab.py`: 0 correcto; 2 argumentos inválidos (corrige la llamada); 4 pantalla inesperada o error del teléfono (ver «Si algo falla»).
 - Nunca publiques sin `VERDICT: PASS` de un revisor independiente. El sticker de enlace de la Story **nunca** tapa la cita, la atribución ni la firma (decisión del usuario).
 - Nunca pulses nada a ciegas: tras cada paso abre su `captura` con Read y confirma lo que dice la columna «ver».
@@ -28,7 +28,7 @@ Trabaja en el repo /Users/hec/dev/sabiduriaPublisher. Eres un ciclo del bucle «
 
    f. `lab.py sitio verificar --run RUN_F --superficie F --pista "TITULO"` (en feed y reel añade `--pie PIE`). Si sale con 4, anótalo en el informe («publicado sin verificar»), pero no lo republiques.
 
-4. Si quedó publicado al menos un formato: `git add experiments/media-lab/sitio-instagram/registro.jsonl` (en la cola, también `git add content/published/PIEZA.json`; y aunque no se publicara nada, porque `sitio cola` anota el intento en ella), `git commit -m "sitio a instagram: SLUG"` (en la cola, `"cola a instagram: PIEZA"`), `git fetch origin main`, `git rebase origin/main` y `git push origin HEAD:main`. Si el rebase falla, `git rebase --abort` y dilo en el informe.
+4. Si quedó publicado al menos un formato: `git add experiments/media-lab/sitio-instagram/registro.jsonl` (en la cola, un solo comando `git add experiments/media-lab/sitio-instagram/registro.jsonl content/published/PIEZA.json`, también si no se publicó nada, porque `sitio cola` anota el intento en la pieza), `git commit -m "sitio a instagram: SLUG"` (en la cola, `"cola a instagram: PIEZA"`), `git fetch origin main`, `git rebase origin/main` y `git push origin HEAD:main`. Si el rebase falla, `git rebase --abort` y dilo en el informe.
 5. `lab.py lock-soltar --dueno sitio`.
 
 ## Si algo falla
