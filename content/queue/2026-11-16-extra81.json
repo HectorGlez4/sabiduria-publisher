@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-31-extra41",
+  "id": "2026-11-16-extra81",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Chamfort", "#Citas", "#Ilustracion"],
-    "extended": ["#Moralistas", "#Francia", "#Risa", "#Maximas", "#RevolucionFrancesa", "#Sabiduria"]
+    "topic": [
+      "#Chamfort",
+      "#Citas",
+      "#Ilustracion"
+    ],
+    "extended": [
+      "#Moralistas",
+      "#Francia",
+      "#Risa",
+      "#Maximas",
+      "#RevolucionFrancesa",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -63,5 +74,12 @@
     "Que la máxima la escribió en prisión o tras el intento de suicidio: no hay fecha de redacción de la nota.",
     "La traducción al español es propia. «Journée» es el día vivido, no la fecha: se traduce como «día»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-16T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-30-extra41",
+  "id": "2026-11-16-extra83",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Lazarillo", "#Citas", "#Libros"],
-    "extended": ["#LazarilloDeTormes", "#SigloDeOro", "#Plinio", "#Lectura", "#LiteraturaEspañola", "#Sabiduria"]
+    "topic": [
+      "#Lazarillo",
+      "#Citas",
+      "#Libros"
+    ],
+    "extended": [
+      "#LazarilloDeTormes",
+      "#SigloDeOro",
+      "#Plinio",
+      "#Lectura",
+      "#LiteraturaEspañola",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -59,5 +70,12 @@
     "La frase de Tulio en el mismo prólogo («La honra cría las artes»): está en el texto, pero no se trata aquí.",
     "La traducción al español de la carta de Plinio es propia."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-17T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

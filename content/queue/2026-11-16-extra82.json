@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-29-tarde",
+  "id": "2026-11-16-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Shelley", "#Citas", "#Poesia"],
-    "extended": ["#Ozymandias", "#Romanticismo", "#LiteraturaInglesa", "#Egipto", "#RamsesII", "#Sabiduria"]
+    "topic": [
+      "#Shelley",
+      "#Citas",
+      "#Poesia"
+    ],
+    "extended": [
+      "#Ozymandias",
+      "#Romanticismo",
+      "#LiteraturaInglesa",
+      "#Egipto",
+      "#RamsesII",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "El nombre del manuscrito: el texto base de RPO trae «No thing remains beside»; la lectura «Nothing beside remains» es la de 1819, que es la que circula.",
     "La traducción al español es propia; no se cotejó con una edición publicada."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-16T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-31-tarde",
+  "id": "2026-11-16-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Arquiloco", "#Citas", "#GreciaAntigua"],
-    "extended": ["#IsaiahBerlin", "#Tolstoi", "#Poesia", "#Filosofia", "#Proverbios", "#Sabiduria"]
+    "topic": [
+      "#Arquiloco",
+      "#Citas",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#IsaiahBerlin",
+      "#Tolstoi",
+      "#Poesia",
+      "#Filosofia",
+      "#Proverbios",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -58,5 +69,12 @@
     "El texto griego varía entre ediciones (ἀλλ᾽ ἐχῖνος en Bowra, ἐχῖνος δ᾽ en otras); no se cita en griego en el cuerpo.",
     "La traducción al español es propia. En griego «ἀλώπηξ» es femenino: «la zorra», no «el zorro»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-17T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
