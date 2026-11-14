@@ -1094,7 +1094,7 @@ def cmd_sitio(a) -> int:
     from labkit import sitio_instagram as si
     rng = random.Random()
     registro = si.leer_registro(REGISTRO_SITIO)
-    recientes = [e["pista"] for e in reversed(registro)]
+    recientes = [e["pista"] for e in reversed(registro) if e.get("pista")]  # LinkedIn no lleva música
     if a.paso == "elegir":
         citas = _citas_del_corpus()
         usadas = si.usadas_desde(registro) | _ya_en_produccion(citas)
@@ -1110,7 +1110,9 @@ def cmd_sitio(a) -> int:
         return _sitio_cola()
     ev = _evidencia(a.run)
     ev.mkdir(parents=True, exist_ok=True)
-    _exigir(a.superficie in si.SUPERFICIES, "--superficie debe ser feed, reel o story")
+    if a.superficie == "linkedin":
+        return _sitio_linkedin(a, ev)
+    _exigir(a.superficie in si.SUPERFICIES, "--superficie debe ser feed, reel, story o linkedin")
     if a.paso == "compartir":
         _exigir(bool(a.url) != bool(a.archivo), "compartir exige --url (cita del sitio) o --archivo (pieza de la cola)")
     if a.paso == "enlace":
@@ -1149,6 +1151,39 @@ def cmd_sitio(a) -> int:
         "verificar": lambda: si.verificar(a.superficie, ev, a.pista, pie),
     }
     return _paso_telefono(ev, f"sitio-{a.paso}-inesperada", pasos[a.paso])
+
+
+def _sitio_linkedin(a, ev: Path) -> int:
+    """La foto de la cita en la Página de LinkedIn (labkit/sitio_linkedin.py). Solo citas del sitio: ni música
+    ni enlace (va en el pie) ni piezas de la cola (decisión del usuario del 14 nov)."""
+    from labkit import sitio_instagram as si
+    from labkit import sitio_linkedin as li
+    _exigir(a.paso in ("compartir", "pie", "publicar", "verificar", "descartar"),
+            "en linkedin solo hay compartir, pie, publicar, verificar y descartar")
+    _exigir(not a.pieza and not a.archivo, "linkedin solo publica citas del sitio, no piezas de la cola")
+    if a.paso == "compartir":
+        _exigir(bool(a.url), "compartir en linkedin exige --url")
+    if a.paso == "pie":
+        _exigir(bool(a.pie), "pie exige --pie (el pie-linkedin.txt que deja compartir)")
+    if a.paso == "publicar":
+        _exigir(a.veredicto == "PASS", "publicar exige --veredicto PASS del revisor visual")
+        _exigir(bool(a.slug), "publicar en linkedin exige --slug para el registro")
+    pie = Path(a.pie).read_text(encoding="utf-8").rstrip("\n") if a.pie else None
+
+    def publicar() -> dict:
+        res = li.publicar(ev)
+        si.anotar(REGISTRO_SITIO, {"run": a.run, "slug": a.slug, "superficie": "linkedin",
+                                   "pista": None, "publicado_en": res["publicado_en"]})
+        return res
+
+    pasos = {
+        "compartir": lambda: li.compartir(a.url, a.plantilla, ev),
+        "pie": lambda: li.escribir_pie(pie, ev),
+        "publicar": publicar,
+        "verificar": lambda: li.verificar(ev),
+        "descartar": lambda: li.descartar(ev),
+    }
+    return _paso_telefono(ev, f"linkedin-{a.paso}-inesperada", pasos[a.paso])
 
 
 PUBLICADAS = ROOT / "content" / "published"
@@ -1426,9 +1461,10 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_ig)
 
     p = sub.add_parser("sitio", help="cita de sabiduriadebolsillo.net a Story o Reel, un paso por llamada")
-    p.add_argument("paso", choices=("elegir", "cola", "compartir", "musica", "enlace", "pie", "publicar", "verificar"))
+    p.add_argument("paso", choices=("elegir", "cola", "compartir", "musica", "enlace", "pie", "publicar", "verificar",
+                                     "descartar"))
     p.add_argument("--run", help="id del run (todos los pasos salvo elegir)")
-    p.add_argument("--superficie", choices=("feed", "reel", "story"))
+    p.add_argument("--superficie", choices=("feed", "reel", "story", "linkedin"))
     p.add_argument("--url", help="URL de la Página de Cita (compartir, enlace)")
     p.add_argument("--plantilla", default="papel", choices=("papel", "tinta", "siena"))
     p.add_argument("--pie", help="archivo del pie: el pie.txt que deja compartir (pie, verificar de feed y reel)")

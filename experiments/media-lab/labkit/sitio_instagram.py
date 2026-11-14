@@ -381,6 +381,31 @@ def _instagram_en_la_hoja(intentos: int = 8) -> str:
     raise PantallaInesperada("Instagram no aparece entero en la fila de apps de la hoja")
 
 
+def componer_en_el_sitio(url: str, plantilla: str, formato: str) -> str:
+    """Abre la Página de Cita en Chrome, compone la imagen en `plantilla` y `formato` y pulsa compartir: deja
+    abierta la hoja de compartir de Android con la imagen. Devuelve la atribución canónica del sitio (la misma
+    que copia «Copiar la cita»), de la que sale el pie. La usan Instagram y LinkedIn."""
+    if not _URL_DE_CITA.fullmatch(url):
+        raise ValueError(f"no es una URL de cita del sitio: {url}")
+    if plantilla not in PLANTILLAS or formato not in ALTO:
+        raise ValueError(f"plantilla {plantilla!r} o formato {formato!r} desconocido")
+    telefono.cerrar_cortina()
+    cdp.reenviar()
+    telefono.shell(f"am start -n {CHROME} -a android.intent.action.VIEW -d {shlex.quote(url)}")
+    with cdp.sesion_en(url) as s:
+        s.esperar("!!document.querySelector('[data-abrir]')", descripcion="el botón de la imagen")
+        texto_plano = s.evaluar("document.querySelector('[data-imagen]').dataset.textoPlano")
+        s.evaluar("document.querySelector('[data-abrir]').click()", gesto=True)
+        s.esperar("document.querySelectorAll('[data-formatos] .formato').length === 2",
+                  descripcion="los formatos (¿sitio sin el formato vertical?)")
+        s.evaluar(f"document.querySelector('.plantilla[data-id=\"{plantilla}\"]').click();"
+                  f"document.querySelector('.formato[data-id=\"{formato}\"]').click()")
+        s.esperar(f"document.querySelector('[data-lienzo]').height === {ALTO[formato]}",
+                  descripcion=f"el lienzo {formato}")
+        s.evaluar("document.querySelector('[data-descargar]').click()", gesto=True)
+    return texto_plano
+
+
 def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path) -> dict:
     """Abre la Página de Cita en Chrome, compone la imagen (cuadrada para el feed, vertical
     para Reel y Story) y la manda a Instagram. Termina en el editor de Instagram."""
@@ -390,22 +415,8 @@ def compartir_desde_el_sitio(url: str, plantilla: str, superficie: str, ev: Path
         raise ValueError(f"plantilla {plantilla!r} o superficie {superficie!r} desconocida")
     _exigir_listo()
     exigir_cuenta()
-    telefono.cerrar_cortina()
-    cdp.reenviar()
-    telefono.shell(f"am start -n {CHROME} -a android.intent.action.VIEW -d {shlex.quote(url)}")
-    with cdp.sesion_en(url) as s:
-        s.esperar("!!document.querySelector('[data-abrir]')", descripcion="el botón de la imagen")
-        # La atribución canónica del sitio (la misma que copia «Copiar la cita»): el pie sale de aquí.
-        texto_plano = s.evaluar("document.querySelector('[data-imagen]').dataset.textoPlano")
-        s.evaluar("document.querySelector('[data-abrir]').click()", gesto=True)
-        s.esperar("document.querySelectorAll('[data-formatos] .formato').length === 2",
-                  descripcion="los formatos (¿sitio sin el formato vertical?)")
-        formato = FORMATO[superficie]
-        s.evaluar(f"document.querySelector('.plantilla[data-id=\"{plantilla}\"]').click();"
-                  f"document.querySelector('.formato[data-id=\"{formato}\"]').click()")
-        s.esperar(f"document.querySelector('[data-lienzo]').height === {ALTO[formato]}",
-                  descripcion=f"el lienzo {formato}")
-        s.evaluar("document.querySelector('[data-descargar]').click()", gesto=True)
+    formato = FORMATO[superficie]
+    texto_plano = componer_en_el_sitio(url, plantilla, formato)
     xml = _instagram_en_la_hoja()
     cx, cy = telefono.buscar(xml, texto="Instagram", paquete=HOJA)["centro"]
     telefono.deslizar(cx, cy, cx, cy, 900)  # pulsación larga: menú Stories · Reels · Feed · Messages

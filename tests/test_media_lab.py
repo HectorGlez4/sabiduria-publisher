@@ -6333,6 +6333,15 @@ def seccion_cola_instagram() -> None:
     check(cola.contar_intento(terca, "t") == [] and terca["results"]["instagram"].get("abandonada")
           and cola.superficies_pendientes(terca) == [], "pasados los intentos se abandona y deja paso a las demás")
 
+    from labkit import sitio_linkedin as li
+    url = "https://sabiduriadebolsillo.net/cita/jose-marti-x/"
+    pie_li = li.pie_linkedin("«La nueva generación es digna de sus padres.»\n— José Martí", url)
+    check(url in pie_li and pie_li.startswith("«La nueva") and pie_li.endswith(si.CIERRE_PIE)
+          and url not in si.pie_para("«La nueva generación es digna de sus padres.»\n— José Martí"),
+          "el pie de LinkedIn lleva el enlace a la cita (el de Instagram no) y acaba en la pregunta")
+    check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
+          "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
+
     # Sin teléfono no hay intento: el 13 nov tres ciclos sin adb gastaron los tres intentos de re52-story.
     lab_cli = modulo_lab()
     with tempfile.TemporaryDirectory() as d:
