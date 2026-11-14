@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-02-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Hermann Hesse y el capítulo Govinda de Siddhartha",
+    "hook": "Un libro que generaciones de lectores han tomado por guía espiritual termina con su protagonista negándose a enseñar.",
+    "quote": {
+      "text": "El saber se puede comunicar; la sabiduría, no. Se la puede encontrar, se la puede vivir […], pero no se la puede decir ni enseñar.",
+      "author": "Hermann Hesse",
+      "work": "Siddhartha, segunda parte, cap. «Govinda» (S. Fischer, 1922)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Hermann Hesse terminó la primera parte de Siddhartha a comienzos de 1920 y la publicó suelta en julio de 1921. Luego se atascó: no supo seguir. Retomó el libro a comienzos de 1922 y en mayo había escrito los ocho capítulos que faltaban. La novela completa salió en octubre de 1922 en S. Fischer, en Berlín, con 146 páginas.",
+      "La frase está en el último capítulo. Govinda, el amigo de juventud que se hizo monje, encuentra a Siddhartha junto al río. Los dos son ya viejos. Govinda le pregunta si tiene una enseñanza que lo ayude. Siddhartha le contesta que la sabiduría que un sabio intenta comunicar suena siempre a necedad, y entonces dice esto.",
+      "Añade que ya lo sospechaba de joven, y que eso fue lo que lo alejó de los maestros. La traducción inglesa de 1951, en rústica desde 1957, convirtió el libro en lectura de culto en los años sesenta. Mucha gente lo buscó como manual. El personaje, al final, se niega a serlo."
+    ],
+    "question": "¿Qué sabes hoy que nadie habría podido enseñarte?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HermannHesse",
+      "#Siddhartha",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaAlemana",
+      "#Sabiduria",
+      "#Novela",
+      "#Libros",
+      "#Lectura",
+      "#Filosofia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo «Govinda»: «Weisheit ist nicht mitteilbar. Weisheit, welche ein Weiser mitzuteilen versucht, klingt immer wie Narrheit.» … «Wissen kann man mitteilen, Weisheit aber nicht. Man kann sie finden, man kann sie leben, man kann von ihr getragen werden, man kann mit ihr Wunder tun, aber sagen und lehren kann man sie nicht.» Siddhartha añade: «Dies war es, was ich schon als Jüngling manchmal ahnte, was mich von den Lehrern fortgetrieben hat.» Govinda dice «wir sind alte Männer geworden». El capítulo «Govinda» es el último, tras «Der Sohn» y «Om». Transcripción de la primera edición de 1922; dedicatoria de la primera parte a Romain Rolland y de la segunda a Wilhelm Gundert. Lectura directa.",
+      "source": "Project Gutenberg, eBook #2499, Hermann Hesse, «Siddhartha: eine indische Dichtung» (texto de la edición original de 1922)",
+      "url": "https://www.gutenberg.org/cache/epub/2499/pg2499.txt"
+    },
+    {
+      "claim": "Ficha bibliográfica: Siddhartha, S. Fischer, Berlín, 1922, 146 páginas. Lectura directa.",
+      "source": "Open Library (Internet Archive), registro de la edición de 1922",
+      "url": "https://openlibrary.org/books/OL6666707M/Siddhartha"
+    },
+    {
+      "claim": "La novela se escribió «von 1919 bis 1922»; al final Govinda vuelve para conocer las ideas de Siddharta; esas ideas no se pueden transmitir con palabras. Duden Learnattack GmbH. Lectura directa.",
+      "source": "Lernhelfer (Duden Learnattack), Schülerlexikon Deutsch Abitur, «Siddharta»",
+      "url": "https://www.lernhelfer.de/schuelerlexikon/deutsch-abitur/artikel/siddharta"
+    },
+    {
+      "claim": "La primera parte se terminó a comienzos de 1920 y se publicó por separado en julio de 1921; después Hesse no pudo seguir; retomó la segunda parte a comienzos de 1922 y terminó los ocho capítulos restantes en mayo de 1922; la novela completa se publicó en octubre de 1922 (S. Fischer Verlag); traducción de Hilda Rosner, New Directions, 1951; la edición en rústica de 1957 le dio prominencia en la contracultura de los años sesenta. Lectura directa.",
+      "source": "Wikipedia, «Siddhartha (novel)»",
+      "url": "https://en.wikipedia.org/wiki/Siddhartha_(novel)"
+    }
+  ],
+  "do_not_use": [
+    "La versión inglesa que circula en páginas de citas («Wisdom cannot be imparted…», de la traducción de Rosner) no es el texto de Hesse; la traducción al español es propia, desde el alemán de 1922.",
+    "Atribuir la frase a Hesse como opinión directa sin decir que la pronuncia un personaje: es Siddhartha quien la dice, en diálogo con Govinda. El cuerpo lo deja claro.",
+    "La cita recorta las cláusulas intermedias («uno puede dejarse llevar por ella, se pueden hacer milagros con ella»): se marca con […].",
+    "La explicación del bloqueo de 1920-1921 (depresión, crisis, psicoanálisis con Jung o Lang): no se verificó en fuente de calidad. El cuerpo solo dice que se atascó y no supo seguir.",
+    "Que Hesse viajó a la India en 1911: según fuentes de búsqueda llegó a Ceilán y el sudeste asiático, no a la India continental. No se pudo leer ninguna fuente de calidad (Goethe-Institut y Heidelberg dieron 403 o bloqueo). No se menciona el viaje.",
+    "Fecha de nacimiento, Calw y el Nobel de 1946: no se leyeron en fuente directa en esta ejecución (nobelprize.org dio 403). No se usan.",
+    "Cifras de ventas o de lectores: no se verificó ninguna. No se dan números; el hook dice «generaciones de lectores»."
+  ],
+  "status": "draft"
+}

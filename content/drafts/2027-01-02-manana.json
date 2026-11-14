@@ -1,0 +1,76 @@
+{
+  "id": "2027-01-02-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Edward Jenner y James Phipps (1796)",
+    "hook": "La vacuna de Jenner se probó en el hijo de su jardinero, de ocho años. La Royal Society no quiso publicar el resultado.",
+    "body": [
+      "El 14 de mayo de 1796, en Berkeley, Inglaterra, el médico rural Edward Jenner tomó materia de una pústula de viruela bovina en la mano de una lechera, Sarah Nelmes. La introdujo en dos pequeños cortes del brazo de James Phipps, de ocho años, hijo de su jardinero. El niño tuvo algo de fiebre y nada más.",
+      "El 1 de julio lo expuso a la viruela humana, la enfermedad que mataba de verdad. No prendió. Jenner insistió varias veces más, con el mismo resultado. En 1797 envió un trabajo a la Royal Society, que lo rechazó: le pidieron más casos. No volvió a mandarlo. En 1798 publicó por su cuenta su Investigación, con veintitrés casos, y llamó al método vacunación, de vacca, vaca en latín.",
+      "La vaca de la que salió todo se llamaba Blossom, de raza Gloucester. En 1857 la familia de Jenner regaló su piel a la escuela de medicina de St George's, en Londres, donde él había estudiado, y allí sigue colgada en la biblioteca. Jenner, por su parte, le cedió a Phipps una casa en Berkeley. Phipps murió en 1853, a los sesenta y seis años."
+    ],
+    "question": "¿Cuántos hallazgos esperan todavía a que alguien acepte publicarlos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Jenner, 1796",
+    "subtitle": "Una lechera, un niño y una vaca llamada Blossom",
+    "body": "Jenner inoculó viruela bovina a James Phipps, de ocho años, el 14 de mayo de 1796. La Royal Society rechazó su trabajo en 1797. Lo publicó por su cuenta en 1798."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EdwardJenner",
+      "#Vacunas",
+      "#HistoriaDeLaMedicina"
+    ],
+    "extended": [
+      "#Viruela",
+      "#Ciencia",
+      "#Medicina",
+      "#Inglaterra",
+      "#SigloXVIII",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El 14 de mayo de 1796 Jenner inoculó a James Phipps, de ocho años, con materia de una pústula de la mano de Sarah Nelmes (casos XVI y XVII de la Inquiry); el niño tuvo fiebre y algo de malestar, «no great illness»; unas seis semanas después le inyectó repetidamente materia variolosa sin pústula ni síntomas; la Royal Society rechazó en 1797 un trabajo de Jenner sobre el tema; Jenner publicó la Inquiry de forma privada en 1798 y no volvió a enviarlo a la Royal Society; los casos llegan hasta el XXIII. Alfredo Morabia, Journal of the Royal Society of Medicine 111(7), 2018, pp. 255-257. Lectura directa.",
+      "source": "James Lind Library / Journal of the Royal Society of Medicine, Morabia, «Edward Jenner's 1798 report of challenge experiments demonstrating the protective effects of cowpox against smallpox»",
+      "url": "https://www.jameslindlibrary.org/illustrating/articles/edward-jenners-1798-report-of-challenge-experiments-demonstrati"
+    },
+    {
+      "claim": "Phipps fue inoculado con materia de viruela «on the 1st of July following» la inoculación de viruela bovina del 14 de mayo de 1796; el trabajo enviado a la Royal Society se rechazó por falta de pruebas y se le pidieron más casos; Blossom era una vaca Gloucester de una granja de Breadstone, junto a Berkeley, que contagió a la lechera Sarah Nelmes; la Inquiry fue una publicación independiente impresa por Sampson Low en Londres. Tim Wallington, vicepresidente del Jenner Trust, conferencia del 21 de septiembre de 2011. Lectura directa.",
+      "source": "Gresham College, Tim Wallington, «The Life and Legacy of Dr Edward Jenner FRS, pioneer of vaccination» (2011)",
+      "url": "https://www.gresham.ac.uk/node/12320"
+    },
+    {
+      "claim": "James Phipps era «the eight year old son of Jenner's gardener, Christopher Phipps»; la linfa procedía de Sarah Nelmes; Jenner cedió a James y su familia el arrendamiento de la casa hoy llamada Phipps Cottage; Phipps fue enterrado en el cementerio de St Mary el 25 de abril de 1853, «aged 66». Lectura directa.",
+      "source": "Dr Jenner's House, Museum and Garden (Berkeley), «James Phipps' Cottage, Church Lane»",
+      "url": "https://jennermuseum.com/phipps-cottage"
+    },
+    {
+      "claim": "Jenner presentó un trabajo al año siguiente que despertó interés, pero se le pidieron más pruebas; los resultados completos se publicaron en 1798; llamó al método «vaccination» por la palabra latina para vaca, vacca. Lectura directa.",
+      "source": "Science Museum Group Collection, «Edward Jenner 1749-1823»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp37470/edward-jenner"
+    },
+    {
+      "claim": "La familia de Jenner regaló la piel de la vaca a St George's en 1857 «to commemorate its illustrious alumnus»; cuelga en la biblioteca de St George's; es una vaca Gloucester; hay quien duda de su autenticidad porque el Gloucester Folk Museum también tiene una piel de Jenner. Times Higher Education, 22 de julio de 2005. Lectura directa.",
+      "source": "Times Higher Education, «Campus curiosities (10): Edward Jenner's cow, St George's, University of London»",
+      "url": "https://www.timeshighereducation.com/node/92998"
+    }
+  ],
+  "do_not_use": [
+    "Que Phipps fue el primer vacunado sin matiz: la casa museo de Jenner dice que sus actas muestran una «vaccination» siete años antes, a su propio hijo de diez meses. Wikipedia habla de viruela porcina en 1789. Como el hecho y la materia usada no están claros, no se dice «el primero» ni en el hook ni en el cuerpo.",
+    "La fecha del 17 de mayo de 1796 que da Wikipedia en otra página: Morabia, Gresham y la mayoría de fuentes dan el 14 de mayo.",
+    "Que Jenner inventó la idea de protegerse con viruela bovina: Benjamin Jesty y otros lo habían hecho antes (circula ampliamente). No se investigó en esta ejecución; no se dice ni que fue el primero en idearlo ni lo contrario.",
+    "La supuesta carta de Joseph Banks advirtiendo a Jenner de que cuidara su reputación: solo apareció en resúmenes de búsqueda y espejos de Wikipedia. No se usa.",
+    "Que la piel de Blossom de St George's es sin duda la auténtica: el propio artículo recoge la duda y la respuesta de la escuela (pudo haber más de una vaca). El cuerpo dice «la vaca de la que salió todo se llamaba Blossom» y que su piel está en St George's, sin entrar en la disputa.",
+    "El nombre de la institución: St George's se fusionó con City en 2024 (City St George's, University of London). Se dice «la escuela de medicina de St George's».",
+    "Que la Inquiry se pagó de su bolsillo: la Science Museum y Morabia dicen «publicó de forma privada» o «por su cuenta»; Gresham dice impresión independiente de Sampson Low. Se dice «por su cuenta», no se habla de dinero.",
+    "La Royal Society «rechazó» frente a «pidió más pruebas»: el Science Museum suaviza («further proof was requested»). El cuerpo dice ambas cosas: lo rechazó y le pidieron más casos."
+  ],
+  "status": "draft"
+}

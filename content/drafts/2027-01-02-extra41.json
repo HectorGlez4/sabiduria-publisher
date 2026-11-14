@@ -1,0 +1,68 @@
+{
+  "id": "2027-01-02-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Vauvenargues y la máxima CXXVII de 1747",
+    "hook": "Seis palabras sobre el corazón y el pensamiento las escribió un oficial que volvió de la guerra con las piernas congeladas y casi ciego.",
+    "quote": {
+      "text": "Los grandes pensamientos vienen del corazón.",
+      "author": "Vauvenargues",
+      "work": "Réflexions et maximes, CXXVII (París, Briasson, 1747)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Luc de Clapiers, marqués de Vauvenargues, nació en 1715 en Aix-en-Provence. A los veinte años entró como oficial subalterno en el Regimiento del Rey. En el invierno de 1742 a 1743 estuvo en la retirada de Praga, una marcha de unos trece mil hombres entre hambre y helada. Volvió con las piernas congeladas, y antes de curarse lo atacó la viruela, que lo dejó desfigurado y casi ciego.",
+      "En 1744 dejó el ejército para dedicarse a escribir. Vivió pobre en París, distanciado de su familia. Voltaire, que lo apreciaba, lo visitaba a menudo. En 1746 publicó sin su nombre su único libro, que incluía unas máximas. Murió en París en la primavera de 1747, a los treinta y dos años. La edición corregida salió ese mismo año y apenas se notó.",
+      "En ella la frase lleva el número CXXVII. La máxima siguiente dice que el buen instinto no necesita de la razón, sino que se la da. No es un elogio de la emoción frente al juicio. Es la idea de un hombre que pensó mucho y sostuvo que lo grande empieza antes de pensar."
+    ],
+    "question": "¿Cuál fue la última idea que te nació antes de razonarla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Vauvenargues",
+      "#Citas",
+      "#Moralistas"
+    ],
+    "extended": [
+      "#LiteraturaFrancesa",
+      "#Maximas",
+      "#Ilustracion",
+      "#Francia",
+      "#Corazon",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Máxima CXXVII: «Les grandes pensées viennent du cœur.» La CXXVI compara las faltas de las pasiones con las del juicio; la CXXVIII dice que el buen instinto no necesita de la razón, sino que la da. Edición: «Introduction à la connaissance de l'esprit humain, suivie de Réflexions et de maximes», París, Antoine-Claude Briasson, 1747; «Réflexions et maximes» empieza en la p. 259. Lectura directa.",
+      "source": "Wikisource (fr), Vauvenargues, «Réflexions et maximes (1747)», transcripción de la edición Briasson de 1747",
+      "url": "https://fr.wikisource.org/wiki/R%C3%A9flexions_et_maximes_(1747)"
+    },
+    {
+      "claim": "Nacido en 1715, hijo mayor de un magistrado recién ennoblecido, de salud muy delicada; vivió hasta los veinte años en Aix-en-Provence o en el castillo de Vauvenargues; la carrera militar le trajo «déceptions et souffrances»; dimitió en 1744 para ser hombre de letras; vivió pobre en París, distanciado de su familia, «chéri de Voltaire et de Marmontel»; su único libro apareció en 1746 «sans nom d'auteur», con Introduction, Réflexions y Maximes; la edición póstuma de 1747 «passa presque inaperçue»; murió en París en 1747 a los 32 años. Andrée Hof. Lectura directa.",
+      "source": "Encyclopædia Universalis, «Vauvenargues Luc de Clapiers marquis de (1715-1747)»",
+      "url": "https://www.universalis.fr/encyclopedie/luc-de-vauvenargues/"
+    },
+    {
+      "claim": "Nacido en 1715 en Aix; a los veinte años, subalterno en el Regimiento del Rey; dejó el servicio en 1744; estuvo en la retirada de Praga del invierno de 1742-43, unos trece mil hombres con Belle-Isle entre hambre y helada; «His legs had been frost-bitten»; «he was stricken by small-pox, which left him disfigured and almost blind»; Voltaire lo visitaba a menudo en París; «The end came in the spring of 1747, when Vauvenargues was no more than thirty-two»; cita el aforismo «Great thoughts come from the heart». John Morley, Critical Miscellanies, vol. 2, Macmillan, 1905. Lectura directa.",
+      "source": "Project Gutenberg, eBook #16937, John Morley, «Critical Miscellanies (Vol 2 of 3), Essay 1: Vauvenargues»",
+      "url": "https://www.gutenberg.org/cache/epub/16937/pg16937-images.html"
+    }
+  ],
+  "do_not_use": [
+    "Fechar la frase solo en 1746 con el número 127: el número CXXVII se comprobó en la edición de 1747; la de 1746 no se leyó. El work cita 1747.",
+    "Que Voltaire elogió expresamente esta máxima: un resumen automático lo afirmó, pero la comprobación literal en Morley no lo confirmó. No se dice.",
+    "La variante «Les vilaines pensées viennent du cœur», que una página de citas también atribuye a Vauvenargues: no está en la edición de 1747 consultada; no se usa.",
+    "Leer la máxima como elogio del sentimentalismo o de la emoción contra la razón: la máxima siguiente (CXXVIII) habla del instinto que da a la razón lo que necesita; el cuerpo lo aclara.",
+    "La fecha exacta de muerte (28 de mayo de 1747, según algunas fuentes): no se verificó; se dice «en la primavera de 1747».",
+    "El origen evangélico que a veces se le busca (Mateo 15:19, «del corazón salen los malos pensamientos»): no se investigó; no se menciona.",
+    "La traducción al español es propia. Son seis palabras en español y en francés; el hook se sostiene en las dos lenguas."
+  ],
+  "status": "draft"
+}

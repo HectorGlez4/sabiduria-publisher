@@ -1,0 +1,75 @@
+{
+  "id": "2027-01-02-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Prometeo y el engaño de Mecona",
+    "hook": "Antes de robar el fuego, Prometeo hizo trampa en un reparto de carne. Según Hesíodo, Zeus se dio cuenta y eligió la peor parte a propósito.",
+    "body": [
+      "La Teogonía, el poema de Hesíodo sobre el origen de los dioses griegos, cuenta que en Mecona dioses y hombres discutían cómo repartirse. Prometeo descuartizó un buey e hizo dos lotes. En uno metió la carne y las vísceras bajo el estómago del animal, que no se veía apetecible. En el otro envolvió los huesos en grasa brillante.",
+      "Zeus eligió la grasa. El poema dice que vio la trampa y no dejó de percibirla, y que la aceptó porque ya tramaba males contra los mortales. Por eso, explica Hesíodo, los hombres queman huesos blancos en los altares y se quedan la carne. Después Zeus les negó el fuego. Prometeo lo robó escondido en una caña hueca de férula, y Zeus respondió con la primera mujer, hecha de tierra, como precio del fuego.",
+      "El castigo de Prometeo es un águila que le come el hígado de día; de noche le vuelve a crecer. Hesíodo no dice dónde estaba encadenado: el Cáucaso llega con autores posteriores. Y lo libera Heracles, con permiso de Zeus. Los estudiosos todavía discuten si en una versión más antigua Zeus sí fue engañado. En la de Hesíodo, el dios prefiere el humo y deja a los hombres con el alimento."
+    ],
+    "question": "¿Cuántas veces se acepta perder un reparto para tener después un motivo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Prometeo en Mecona",
+    "subtitle": "El reparto que explica por qué se queman los huesos",
+    "body": "Prometeo escondió la carne bajo el estómago del buey y envolvió los huesos en grasa. En la Teogonía, Zeus ve la trampa y elige la grasa igual. Desde entonces, a los dioses les tocan los huesos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Prometeo",
+      "#MitologiaGriega",
+      "#Hesiodo"
+    ],
+    "extended": [
+      "#Zeus",
+      "#GreciaAntigua",
+      "#Mitologia",
+      "#Fuego",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Teogonía 507-544 (trad. Evelyn-White): Zeus ata a Prometeo con «inextricable bonds»; un águila de largas alas le come el hígado, que vuelve a crecer de noche; Heracles mata al águila y lo libera «not without the will of Olympian Zeus»; en la disputa de Mecona entre dioses y mortales, Prometeo corta un buey: la carne y la grasa interior bajo el estómago, los huesos bajo grasa brillante. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Hesíodo, Teogonía 507-544, trad. H. G. Evelyn-White",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0130:card=507"
+    },
+    {
+      "claim": "Teogonía 545-584: Zeus «saw and failed not to perceive the trick» y trama males contra los mortales; toma la grasa blanca, y por eso los mortales queman huesos blancos en los altares; Zeus no les da el fuego; Prometeo lo lleva escondido en una caña hueca de férula; Zeus hace «an evil thing for men as the price of fire»: Hefesto modela de tierra una doncella. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Hesíodo, Teogonía 545-584, trad. H. G. Evelyn-White",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0130:card=545"
+    },
+    {
+      "claim": "El pasaje de la Teogonía no nombra el lugar donde Prometeo está atado; el monte Cáucaso aparece en Apolodoro (1.45) y en Pseudo-Higino (Astronomica 2.15), y Esquilo sitúa la escena en tierra escita; Pseudo-Higino dice que Zeus fue engañado; la creación de los hombres de barro por Prometeo está en Apolodoro, Ovidio e Higino, no en Hesíodo, donde Hefesto forma a la primera mujer. Lectura directa.",
+      "source": "Theoi Project, «Prometheus», con citas de fuentes antiguas",
+      "url": "https://www.theoi.com/Titan/TitanPrometheus.html"
+    },
+    {
+      "claim": "En Mecona, Prometeo escondió carne y vísceras y envolvió los huesos en grasa brillante; si Zeus fue engañado es «a much-debated point»; el relato explica por qué los hombres quemaban huesos envueltos en grasa para los dioses y comían la carne; los dioses recibían el humo graso. Jan-Mathieu Carbon, CHS Research Bulletin 5, nº 2 (2017). Lectura directa.",
+      "source": "Harvard University, Center for Hellenic Studies, Research Bulletin, Carbon, «At the Table of the Gods? Divine Appetites and Animal Sacrifice»",
+      "url": "https://research-bulletin.chs.harvard.edu/2017/09/11/divine-appetites-animal-sacrifice/"
+    },
+    {
+      "claim": "Martin West sostiene que en una versión anterior Prometeo sí engañó a Zeus («Zeus was in fact thoroughly taken in»); Stocking lo discute: Zeus se enfada por el intento, no por haber sido engañado; Vernant ve en el reparto del buey la separación entre dioses y hombres. Charles H. Stocking, en Mètis (Éditions de l'EHESS), pp. 183-210. Lectura directa.",
+      "source": "OpenEdition Books / Éditions de l'EHESS, Stocking, «Sacrifice, Succession, and Paternity in Hesiod's Theogony»",
+      "url": "https://books.openedition.org/editionsehess/3037"
+    }
+  ],
+  "do_not_use": [
+    "Que Prometeo creó a los hombres de barro según Hesíodo: es de Apolodoro, Ovidio e Higino. En Hesíodo, Hefesto modela a la primera mujer.",
+    "Que Hesíodo sitúa el castigo en el Cáucaso: la Teogonía no da lugar. El Cáucaso es de autores posteriores (Apolodoro, Pseudo-Higino).",
+    "Que el castigo es eterno sin más: en Hesíodo, Heracles lo libera con permiso de Zeus.",
+    "Que Zeus fue engañado: en el texto de Hesíodo lo ve y lo acepta. Pseudo-Higino y la reconstrucción de West dicen lo contrario; el cuerpo menciona solo que se discute.",
+    "El nombre de Pandora: en el pasaje de la Teogonía no aparece (sí en Trabajos y días). El cuerpo dice «la primera mujer». Ya hay una pieza publicada sobre Pandora y la jarra.",
+    "La fecha de Hesíodo (finales del siglo VIII o VII a.C.): no se verificó en esta ejecución, así que el cuerpo no da fecha.",
+    "«Férula» es la traducción de narthex (Ferula communis), la «caña hueca de hinojo» de las traducciones inglesas: no es el hinojo de cocina."
+  ],
+  "status": "draft"
+}
