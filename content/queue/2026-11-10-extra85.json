@@ -69,12 +69,15 @@
     "La fecha exacta de la escena (víspera de San Juan): no se verificó en el texto. El cuerpo dice «una noche de verano».",
     "«Do you think, because I am poor, obscure, plain, and little, I am soulless and heartless?»: está en el mismo capítulo y se verificó, pero se reserva para otra pieza; no mezclar dos citas."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-11T04:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
