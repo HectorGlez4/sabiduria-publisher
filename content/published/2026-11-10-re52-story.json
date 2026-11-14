@@ -85,10 +85,13 @@
     },
     "instagram_story": {
       "via": "telefono",
-      "pendiente": true,
-      "encolada_en": "2026-11-13T14:05:37.551991+00:00"
+      "encolada_en": "2026-11-13T14:05:37.551991+00:00",
+      "published_at": "2026-11-14T15:36:59+00:00",
+      "pista": "FRAGMENTS",
+      "run": "COLA-20261114-1535-STORY"
     }
   },
   "publish_at": "2026-11-10T19:26:00Z",
-  "reemision_de": "2026-08-28-extra14"
+  "reemision_de": "2026-08-28-extra14",
+  "intentos_telefono": 2
 }
