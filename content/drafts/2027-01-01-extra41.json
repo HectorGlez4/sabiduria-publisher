@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-01-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tito Livio y el prefacio de Ab urbe condita",
+    "hook": "Antes de contar ocho siglos de Roma, Tito Livio explicó para qué servía leerlos. Y lo dijo en tono de aviso, no de elogio.",
+    "quote": {
+      "text": "Lo saludable y fructífero de conocer la historia es ver ejemplos de toda clase expuestos en un monumento ilustre: de ahí tomar, para ti y tu república, lo que imitar; de ahí, lo que evitar, vergonzoso al empezar y vergonzoso al terminar.",
+      "author": "Tito Livio",
+      "work": "Historia de Roma desde su fundación (Ab urbe condita), prefacio, 10; hacia 27-25 a.C.",
+      "attribution_verified": true
+    },
+    "body": [
+      "Tito Livio nació en Patavium, la actual Padua, en el siglo I a.C. Dedicó su vida a una historia de Roma desde la fundación de la ciudad. Escribió 142 libros. Se conservan completos solo 35: del I al X y del XXI al XLV.",
+      "La frase está en el prefacio, que abre el primer libro. Justo antes, Livio pide al lector que se fije en la vida y las costumbres, en los hombres y las artes con que se ganó el imperio. Y luego en cómo, al aflojarse poco a poco la disciplina, las costumbres fueron cediendo y después cayeron, hasta llegar a su propio tiempo, en el que no podemos soportar ni nuestros vicios ni sus remedios.",
+      "Por eso la historia era para él un monumento a la vista de todos: un muestrario de lo que conviene repetir y de lo que no. No prometía grandeza. Prometía material para elegir."
+    ],
+    "question": "¿Qué ejemplo del pasado te sirve más: el que imitas o el que evitas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#TitoLivio",
+      "#Historia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Roma",
+      "#AntiguaRoma",
+      "#Clasicos",
+      "#Latin",
+      "#Padua",
+      "#Literatura",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino del prefacio contiene, en la sección 10 según la numeración habitual, «Hoc illud est praecipue in cognitione rerum salubre ac frugiferum, omnis te exempli documenta in inlustri posita monumento intueri; inde tibi tuaeque rei publicae quod imitere capias, inde foedum inceptu foedum exitu quod vites», y en la sección 9 «nec vitia nostra nec remedia pati possumus». Comprobación directa sobre el texto.",
+      "source": "The Latin Library, Tito Livio, Ab urbe condita, praefatio",
+      "url": "https://www.thelatinlibrary.com/livy/liv.pr.shtml"
+    },
+    {
+      "claim": "Traducción inglesa de Canon Roberts (J. M. Dent / E. P. Dutton, 1912), prefacio 10-12: describe el estudio del pasado como un provecho excepcionalmente beneficioso y fructífero; de ahí el lector puede elegir para sí y para su país qué imitar, y qué evitar por ser dañino en su comienzo y desastroso en su desenlace. Lectura directa.",
+      "source": "Perseids / Perseus Digital Library (Tufts University), Livy, Ab urbe condita, perseus-eng3, 1.0.10-1.0.12",
+      "url": "https://cts.perseids.org/read/latinLit/phi0914/phi001/perseus-eng3/1.0.10-1.0.12"
+    },
+    {
+      "claim": "Prefacio 9, latín y traducción: el lector debe atender a la vida y las costumbres, a los hombres y las artes con que se fundó y creció el poder; después, cómo al debilitarse la disciplina las costumbres decayeron, hasta estos tiempos en que no podemos soportar ni nuestros vicios ni sus remedios («nec vitia nostra nec remedia pati possumus»). Lectura directa.",
+      "source": "Sententiae Antiquae, «What Should One Learn from Early Histories?» (Livy, Ab Urbe Condita, Praefatio 9)",
+      "url": "https://sententiaeantiquae.com/2020/08/09/what-should-one-learn-from-early-histories/"
+    },
+    {
+      "claim": "Livio nació en Patavium (Padua); san Jerónimo fecha su vida en 59 a.C.-17 d.C. (la entrada principal propone hacia 64 a.C.-12 d.C.); Ab urbe condita tenía 142 libros; se conservan completos 35, I-X y XXI-XLV; los cinco primeros se publicaron entre 27 y 25 a.C. Lectura directa.",
+      "source": "Encyclopedia of World Biography (Gale) y entrada de Oxford, en Encyclopedia.com, «Livy»",
+      "url": "https://encyclopedia.com/people/history/historians-ancient-biographies/livy"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia, sobre el latín de The Latin Library y la versión inglesa de Roberts (1912). No presentarla como la de un traductor publicado. «Foedum inceptu foedum exitu» se vierte «vergonzoso al empezar y vergonzoso al terminar»; Roberts lo da como «dañino en su comienzo y desastroso en su desenlace».",
+    "Las fechas de vida: 59 a.C.-17 d.C. es la datación de san Jerónimo; Gale propone hacia 64 a.C.-12 d.C. El cuerpo dice solo «siglo I a.C.».",
+    "La fecha de la cita: la de los cinco primeros libros (27-25 a.C.) según Gale; no hay fecha separada para el prefacio. Por eso «hacia».",
+    "«Ocho siglos de Roma» en el hook: la obra iba de la fundación mítica (753 a.C.) a la época de Livio, unos setecientos cincuenta años; se redondea a ocho siglos, no a una cifra exacta.",
+    "Que Livio escribiera por encargo de Augusto o como propagandista: no se verificó. No se menciona.",
+    "El contexto de las guerras civiles y de Augusto no se sostuvo con una fuente leída para esta pieza. Se quitó del cuerpo.",
+    "The Latin Library no numera las secciones; la 9 y la 10 siguen la numeración habitual de las ediciones, confirmada por Roberts y Sententiae Antiquae."
+  ],
+  "status": "draft"
+}

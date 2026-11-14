@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-01-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Einstein y la comprensibilidad del mundo (1936)",
+    "hook": "En 1936, Einstein dejó escrita la frase que más lo inquietaba de la ciencia. No hablaba de lo que no sabemos, sino de lo que sí.",
+    "quote": {
+      "text": "Puede decirse: lo eternamente incomprensible del mundo es que sea comprensible.",
+      "author": "Albert Einstein",
+      "work": "Física y realidad (Physik und Realität), Journal of the Franklin Institute, 1936",
+      "attribution_verified": true
+    },
+    "body": [
+      "La frase está en Física y realidad, un ensayo que Einstein publicó en alemán en marzo de 1936, en el Journal of the Franklin Institute. Aparece en la sección dedicada al método de la ciencia.",
+      "El contexto la hace más precisa de lo que parece suelta. Einstein dice que es notable que nuestras impresiones de los sentidos puedan ordenarse con el pensamiento, y que no sabe explicar por qué. Recuerda que Kant ya vio que, sin ese orden, la idea de un mundo exterior real no tendría sentido.",
+      "Y aclara qué entiende por comprensible, en un sentido modesto: que las impresiones de los sentidos se dejan ordenar mediante conceptos generales y sus relaciones. No afirmaba que entendamos el universo. Le asombraba que se pueda empezar a entenderlo."
+    ],
+    "question": "¿Qué te asombra más: lo que no entendemos o que algo se deje entender?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Einstein",
+      "#FilosofiaDeLaCiencia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Fisica",
+      "#Ciencia",
+      "#Kant",
+      "#Conocimiento",
+      "#Universo",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto inglés de «Physics and Reality», publicado por primera vez en 1936, con permiso de los Albert Einstein Archives (Universidad Hebrea de Jerusalén): en la sección «General Consideration Concerning the Method of Science» dice «One may say 'the eternal mystery of the world is its comprehensibility'»; antes afirma que es notable que las experiencias sensoriales se puedan ordenar con el pensamiento y que no sabe explicarlo; cita a Kant sobre el mundo exterior real; después aclara que usa «comprensibilidad» en un sentido modesto: ordenar las impresiones sensoriales mediante conceptos generales y sus relaciones. Lectura directa.",
+      "source": "Dædalus (American Academy of Arts & Sciences), otoño de 2003, «Physics & reality»",
+      "url": "https://www.amacad.org/publication/daedalus/physics-reality"
+    },
+    {
+      "claim": "Ficha bibliográfica: «Physik und Realität», Albert Einstein, Journal of the Franklin Institute, 1936, DOI 10.1016/S0016-0032(36)91045-1. Lectura directa.",
+      "source": "MaRDI portal (Mathematical Research Data Initiative), Publication Q2645179",
+      "url": "https://portal.mardi4nfdi.de/wiki/Publication:2645179"
+    },
+    {
+      "claim": "La frase procede de «Physics and Reality», Journal of the Franklin Institute, vol. 221, n.º 3, marzo de 1936; Gerald Holton propone traducir «the eternally incomprehensible thing about the world is its comprehensibility»; la forma «The most incomprehensible thing about the world is that it is comprehensible» es una variante de traducción (Vallentin, 1954); las comillas del original pueden señalar un aforismo o una alusión a Kant. Lectura directa.",
+      "source": "Wikiquote en inglés, «Albert Einstein», sección de 1936",
+      "url": "https://en.wikiquote.org/wiki/Albert_Einstein"
+    },
+    {
+      "claim": "El escaneo del número de marzo de 1936 (vol. 221, n.º 3) del Journal of the Franklin Institute contiene en alemán «Man kann sagen: Das ewig Unbegreifliche an der Welt ist ihre Begreiflichkeit». Visto a través del resumen del buscador; el PDF no se pudo abrir directamente.",
+      "source": "nLab, copia escaneada de «Physik und Realität» (1936)",
+      "url": "https://ncatlab.org/nlab/files/Einstein-PhysikRealitate.pdf"
+    }
+  ],
+  "do_not_use": [
+    "La forma «Lo más incomprensible del universo es que sea comprensible»: es una traducción libre que circula en páginas de citas; cambia «mundo» por «universo» y pierde el «eternamente». Se usa la versión ceñida al alemán.",
+    "Las páginas del artículo: las fuentes dan 313-347 o 349-382. No se citan páginas.",
+    "La traducción al español es propia, sobre el alemán («Das ewig Unbegreifliche an der Welt ist ihre Begreiflichkeit») y la versión inglesa de Dædalus. «Begreiflichkeit» se traduce «que sea comprensible»; no presentarla como la de un traductor publicado.",
+    "El alemán se comprobó a través del resumen del buscador sobre el escaneo en PDF, que no se pudo leer directamente. La lectura directa es la del texto inglés de Dædalus.",
+    "Que la frase sea de Kant: las comillas del original admiten esa lectura, pero ninguna fuente lo afirma. No se dice.",
+    "La continuación «el hecho de que sea comprensible es un milagro» está en el párrafo siguiente, según Wikiquote; no forma parte de la frase y no se une a ella.",
+    "Que el ensayo saliera en edición bilingüe alemán-inglés en la revista: no se verificó. El cuerpo dice solo que se publicó en alemán."
+  ],
+  "status": "draft"
+}

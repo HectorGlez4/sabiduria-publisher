@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-01-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Sísifo y la piedra del canto XI de la Odisea",
+    "hook": "Homero describe la piedra de Sísifo con todo detalle. Lo que no dice en ningún verso es qué hizo para merecerla.",
+    "body": [
+      "La primera aparición del castigo está en el canto XI de la Odisea, versos 593 a 600. Odiseo baja al mundo de los muertos y ve a Sísifo empujando con manos y pies una piedra enorme hacia la cima de una colina. Cuando está a punto de pasarla, el peso la hace volver y rueda hasta la llanura. Él vuelve a empujar. Le corre el sudor por los miembros y el polvo le sube sobre la cabeza.",
+      "Homero no da el motivo. En la Ilíada solo lo llama el más astuto de los hombres y lo sitúa en Éfira, la ciudad que después se llamó Corinto. Las razones llegaron más tarde, y no son una sola. Según la Biblioteca de Apolodoro, delató a Zeus: le contó al río Asopo quién se había llevado a su hija Egina. Según Ferécides, cuando Zeus le mandó a la Muerte, Sísifo la encerró, y nadie murió hasta que Ares la liberó; luego pidió a su esposa que no le hiciera los ritos fúnebres, y con esa excusa convenció a Hades de dejarlo volver a la tierra.",
+      "La imagen precedió a la culpa. Durante siglos los griegos repitieron el castigo y fueron inventándole crímenes. Hoy pasa lo mismo: todos reconocen la piedra, casi nadie sabe por qué rueda."
+    ],
+    "question": "¿Qué castigos recordamos sin acordarnos ya de la falta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Sísifo",
+    "subtitle": "Odisea XI, 593-600",
+    "body": "Homero cuenta la piedra, la cuesta y el sudor. No cuenta el crimen. Las razones del castigo las añadieron autores posteriores, y no coinciden entre sí."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Sisifo",
+      "#MitologiaGriega",
+      "#Odisea"
+    ],
+    "extended": [
+      "#Homero",
+      "#Grecia",
+      "#Mitologia",
+      "#Corinto",
+      "#Hades",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Odisea XI, 593-600 (trad. A. T. Murray): Sísifo, en tormento, intenta subir una piedra monstruosa con ambas manos; apoyándose con manos y pies la empuja hacia la cresta de una colina; cuando va a pasarla, el peso la hace volver y rueda a la llanura; él vuelve a empujar; el sudor le corre por los miembros y el polvo se levanta sobre su cabeza. El pasaje no menciona ningún crimen. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Homero, Odisea, libro 11",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=11:card=568"
+    },
+    {
+      "claim": "Ilíada VI, hacia el verso 153 (trad. Murray): en Éfira vivía Sísifo, «el más astuto de los hombres», hijo de Eolo. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Homero, Ilíada, libro 6",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=6:card=144"
+    },
+    {
+      "claim": "Apolodoro, Biblioteca 1.9.3 (trad. Frazer): Sísifo, hijo de Eolo, fundó Éfira, hoy Corinto; en el Hades empuja una piedra con manos y cabeza hacia lo alto y, cuando casi la pasa, vuelve a rodar; sufre ese castigo por haber revelado a Asopo que Zeus se había llevado en secreto a su hija Egina. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Apolodoro, Biblioteca, 1.9.3",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0022:text=Library:book=1:chapter=9:section=3"
+    },
+    {
+      "claim": "En la Odisea, Odiseo ve a Sísifo en el mundo de los muertos pero calla las razones del castigo; según Ferécides (FGrH 3 F119), Sísifo contó a Asopo la seducción de Egina por Zeus, Zeus le envió a Tánato, Sísifo lo encerró y Ares lo liberó; antes de ceder hizo prometer a su esposa Mérope que no le daría sepultura ni ofrendas, y Hades lo dejó volver a la tierra con el pretexto de castigarla; vivió largo tiempo y al morir los dioses le impusieron la roca. Basado en The Oxford Guide to Classical Mythology in the Arts, 1300-1990s (ed. J. Davidson Reid, Oxford University Press, 1994). Lectura directa.",
+      "source": "Brigham Young University, OGCMA (Roger T. Macfarlane), «Sisyphus», según Reid, Oxford University Press, 1994",
+      "url": "https://cal.byu.edu/macfarlane/OGCMA/Sisyphus1.0000_Reid.htm"
+    }
+  ],
+  "do_not_use": [
+    "Que Sísifo encadenara a la Muerte: la fuente leída (Reid vía BYU) dice que la encerró en un calabozo; otras versiones hablan de cadenas. El cuerpo dice «la encerró».",
+    "La versión en que engaña a Perséfone para volver del Hades: no se confirmó en ninguna fuente leída. No se usa.",
+    "Teognis como fuente de la vuelta a la tierra y de Hermes llevándolo a la fuerza: aparece en un resumen del diccionario de Smith, pero no se leyó el texto de Teognis. No se usa.",
+    "Que asaltara y matara a viajeros: algunas fuentes posteriores lo dicen, pero no se leyó ninguna directamente. No se usa.",
+    "Camus y El mito de Sísifo: ya hay una pieza de cita de Camus en el corpus y el tema aquí es Homero. No se menciona.",
+    "Las líneas exactas: Perseus solo marca cada cinco versos. Odisea XI 593-600 es la numeración habitual; Ilíada VI 153 es aproximada y no se cita en el cuerpo.",
+    "Las versiones de Homero son paráfrasis propias sobre la traducción inglesa de Murray, no traducción publicada."
+  ],
+  "status": "draft"
+}

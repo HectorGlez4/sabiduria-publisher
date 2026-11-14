@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-01-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Ørsted y la aguja que se movió en abril de 1820",
+    "hook": "En abril de 1820, en Copenhague, una aguja de brújula se movió un poco junto a un cable. Tan poco que el público no lo notó.",
+    "body": [
+      "Hans Christian Ørsted enseñaba física en la Universidad de Copenhague. La tradición fecha el hallazgo el 21 de abril de 1820: mientras preparaba una demostración, vio que la aguja de una brújula cercana se apartaba del norte al pasar corriente por un cable conectado a una pila voltaica.",
+      "No lo publicó enseguida. Pasó unos tres meses repitiendo el experimento. Comprobó que, si invertía la corriente, la aguja se desviaba hacia el otro lado, y que ni el vidrio ni la madera interpuestos detenían el efecto.",
+      "El 21 de julio de 1820 dio a conocer el resultado en un folleto de cuatro páginas, en latín: Experimentos sobre el efecto de la corriente eléctrica en la aguja magnética. Lo hizo circular entre físicos y sociedades científicas. De esa hoja salieron, en pocos años, las leyes de Ampère y la inducción de Faraday. Hoy quedan tan pocos ejemplares que la Smithsonian cuenta el suyo entre tres conocidos en América."
+    ],
+    "question": "¿Cuántas cosas importantes se mueven tan poco que nadie las mira?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ørsted, 1820",
+    "subtitle": "La aguja que unió la electricidad y el magnetismo",
+    "body": "Una corriente eléctrica desvía una brújula. Ørsted lo vio en abril de 1820, lo comprobó durante tres meses y lo contó en cuatro páginas en latín."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Orsted",
+      "#Electromagnetismo",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Fisica",
+      "#Copenhague",
+      "#Ciencia",
+      "#Brujula",
+      "#Electricidad",
+      "#Magnetismo",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Según la tradición, el 21 de abril de 1820, en una demostración ante estudiantes, la aguja de una brújula cercana se movió al cerrarse un circuito; el folleto en latín «Experimenta circa effectum conflictus electrici in acum magneticam», de cuatro páginas, se anunció el 21 de julio de 1820; es muy escaso y se tradujo en pocos meses en varias revistas. Lectura directa.",
+      "source": "Linda Hall Library, Scientist of the Day, «Hans Christian Oersted»",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/hans-christian-oersted/"
+    },
+    {
+      "claim": "El 21 de abril de 1820, al preparar el aparato de una demostración, Ørsted vio que la aguja se desviaba del norte magnético al pasar corriente por un cable unido a una pila; la desviación fue tan leve que el público no lo notó; reflexionó unos tres meses; invertir la corriente invertía la desviación y la madera o el vidrio no bloqueaban el efecto; el 21 de julio de 1820 publicó un folleto que circuló entre físicos y sociedades científicas; después vinieron Ampère y, una década más tarde, Faraday. Lectura directa.",
+      "source": "American Physical Society, APS News, «July 1820: Oersted & Electromagnetism» (julio de 2008)",
+      "url": "https://aps.org/apsnews/2008/07/1820-oersted-electromagnetism"
+    },
+    {
+      "claim": "Ficha del folleto: «Experimenta circa effectum conflictus electrici in acum magneticam», Hans Christian Ørsted, 1820, Typis Schultzianis; la Smithsonian lo describe como uno de tres ejemplares conocidos en América. Lectura directa.",
+      "source": "Smithsonian Libraries and Archives, colección Heralds of Science",
+      "url": "https://library.si.edu/es/digital-library/book/experimentacirc00orst"
+    },
+    {
+      "claim": "Una tarde, mientras preparaba una clase en la Universidad de Copenhague, Ørsted vio moverse la aguja de una pequeña brújula al conectar o desconectar un circuito unido a una pila voltaica, y escribió después un breve artículo. Lectura directa.",
+      "source": "National High Magnetic Field Laboratory (MagLab), Magnet Academy, «Oersted's Compass – 1820»",
+      "url": "https://nationalmaglab.org/magnet-academy/history-of-electricity-magnetism/museum/oersteds-compass-1820"
+    }
+  ],
+  "do_not_use": [
+    "La fecha del 21 de abril de 1820 es la de la tradición (así lo dice la Linda Hall Library). El cuerpo la presenta como «la tradición fecha».",
+    "Las fuentes no coinciden sobre si fue durante la clase o al prepararla: APS y MagLab hablan de preparar el aparato o la clase; Linda Hall, de una demostración ante estudiantes. El cuerpo dice «mientras preparaba una demostración».",
+    "Que fuera un descubrimiento puramente casual: está disputado. Hay historiadores (Kipnis, Science & Education, 2005, no leído) que discuten el papel del azar, y otros que lo ven como experimento buscado por sus ideas filosóficas. No se dice ni lo uno ni lo otro.",
+    "Romagnosi en 1802: circula como precedente, pero solo apareció en un resumen de búsqueda. No se usa.",
+    "Arago y la Académie en septiembre de 1820: no se leyó en fuente de calidad. No se usa.",
+    "Los cientos de miles en su funeral de 1851: Linda Hall lo da como «reportedly». No se usa.",
+    "La ortografía del título latino varía entre fuentes (acum / acvum). Se traduce al español y no se cita el latín en el cuerpo.",
+    "El dato de los tres ejemplares es solo de América, según la Smithsonian; no son tres en el mundo."
+  ],
+  "status": "draft"
+}
