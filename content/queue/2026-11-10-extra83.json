@@ -68,12 +68,15 @@
     "Que el verso cierre el poema: abre la fábula. La primera línea termina en dos puntos en la edición de 1874; otras ediciones ponen punto.",
     "Que la versión de Esopo tenga el final de la casa: ese remate es de La Fontaine según el texto francés; la fuente consultada solo dice que difiere poco en lo esencial. Si se duda, no atribuir a Esopo ningún detalle del diálogo."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-11T01:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
