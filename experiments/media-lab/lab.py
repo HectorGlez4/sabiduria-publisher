@@ -1165,8 +1165,19 @@ def _publicador():
 def _sitio_cola() -> int:
     """La pieza de la cola que lleva más tiempo esperando al móvil, con sus imágenes y su pie, o `pieza: null`."""
     from labkit import cola_instagram as cola
+    from labkit import telefono
     publish, variants = _publicador()
-    piezas = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in sorted(PUBLICADAS.glob("*.json"))]
+    # Un ciclo sin teléfono no es un intento: el 13 nov tres ciclos sin adb gastaron los tres de re52-story
+    # y el cuarto la habría abandonado sin haberla probado nunca.
+    try:
+        listo = telefono.adb("get-state", timeout=15).stdout.decode().strip() == "device"
+    except telefono.TelefonoError:
+        listo = False
+    if not listo:
+        emitir({"ok": False, "telefono": False, "serial": telefono.serial(),
+                "error": "el teléfono no responde por adb (desconectado o «unauthorized»): no se cuenta intento"})
+        return 4
+    piezas =[(f, json.loads(f.read_text(encoding="utf-8"))) for f in sorted(PUBLICADAS.glob("*.json"))]
     ahora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     abandonadas = []
     while (elegida := cola.elegir_pieza(piezas)) is not None:

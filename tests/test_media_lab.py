@@ -6305,6 +6305,7 @@ def seccion_sitio_instagram() -> None:
 
 def seccion_cola_instagram() -> None:
     print("\nCola del publicador → Instagram desde el móvil")
+    import json
     import tempfile
     from labkit import cola_instagram as cola
     from labkit import sitio_instagram as si
@@ -6331,6 +6332,25 @@ def seccion_cola_instagram() -> None:
         check(cola.contar_intento(terca, "t") == ["reel", "feed"], "dentro de los intentos sigue pendiente")
     check(cola.contar_intento(terca, "t") == [] and terca["results"]["instagram"].get("abandonada")
           and cola.superficies_pendientes(terca) == [], "pasados los intentos se abandona y deja paso a las demás")
+
+    # Sin teléfono no hay intento: el 13 nov tres ciclos sin adb gastaron los tres intentos de re52-story.
+    lab_cli = modulo_lab()
+    with tempfile.TemporaryDirectory() as d:
+        pub = pathlib.Path(d)
+        (pub / "b.json").write_text(json.dumps(story), encoding="utf-8")
+        antes_pub, antes_adb, antes_emitir = lab_cli.PUBLICADAS, tel.adb, lab_cli.emitir
+        emitido = []
+
+        def sin_adb(*_a, **_k):
+            raise tel.TelefonoError("adb: device unauthorized")
+        lab_cli.PUBLICADAS, tel.adb, lab_cli.emitir = pub, sin_adb, emitido.append
+        try:
+            codigo = lab_cli._sitio_cola()
+        finally:
+            lab_cli.PUBLICADAS, tel.adb, lab_cli.emitir = antes_pub, antes_adb, antes_emitir
+        tras = json.loads((pub / "b.json").read_text(encoding="utf-8"))
+        check(codigo != 0 and emitido and emitido[0].get("telefono") is False and "intentos_telefono" not in tras,
+              "con el teléfono sin responder, `sitio cola` se para sin contar intento en la pieza")
 
     salida = ('Row: 0 _id=17, _display_name=COLA-1-a.png\n'
               'Row: 1 _id=42, _display_name=COLA-1-a.png\nRow: 2 _id=50, _display_name=otra.png')
