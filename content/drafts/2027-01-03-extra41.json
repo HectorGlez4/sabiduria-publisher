@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-03-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Wordsworth y el niño padre del hombre (1802)",
+    "hook": "La frase se repite como elogio de la infancia. En el poema es el deseo de un adulto de no romper con el niño que fue.",
+    "quote": {
+      "text": "El niño es el padre del hombre; y quisiera que mis días estuvieran unidos, uno a otro, por la piedad natural.",
+      "author": "William Wordsworth",
+      "work": "«My Heart Leaps Up», versos 7-9 (1802)",
+      "attribution_verified": true
+    },
+    "body": [
+      "William Wordsworth escribió el poema la noche del 26 de marzo de 1802. Tiene nueve versos. Empieza con el corazón que salta al ver un arcoíris en el cielo. Así era, dice, cuando su vida comenzó; así es ahora que es un hombre; y así sea cuando llegue a viejo, o que lo dejen morir. Solo entonces llega la frase famosa, y no viene sola: va seguida de un deseo.",
+      "El niño no es aquí un maestro. Es el origen. El adulto viene de él, y lo que pide es que sus días queden atados uno al otro, sin ruptura, por una piedad natural. Al día siguiente, en el desayuno, empezó otro poema, la oda sobre los indicios de inmortalidad en la infancia. La terminó a comienzos de 1804 y la publicó en 1807. Con el tiempo, estos tres versos pasaron a encabezarla.",
+      "Mucho antes, John Milton había escrito una idea parecida en El paraíso recobrado, libro IV, versos 220 y 221: la niñez muestra al hombre, como la mañana muestra el día. Pero en Milton la frase la pronuncia Satanás. Se la dice a Jesús mientras intenta tentarlo con el saber y con la fama."
+    ],
+    "question": "¿Qué conservas todavía del niño que fuiste?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Wordsworth",
+      "#Poesia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Romanticismo",
+      "#PoesiaInglesa",
+      "#Infancia",
+      "#Milton",
+      "#Sabiduria",
+      "#Literatura"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Epígrafe de la oda: «The child is father of the man; / And I could wish my days to be / Bound each to each by natural piety», de «My Heart Leaps Up»; esos versos preliminares vienen de «My Heart Leaps Up», compuesto el 26 de marzo de 1802, el día antes de empezar la oda; el 27 de marzo de 1802: «At breakfast William wrote part of an ode»; la oda se completó a comienzos de 1804 y se publicó en 1807 en Poems, in Two Volumes. Lectura directa.",
+      "source": "Representative Poetry Online, University of Toronto Libraries, William Wordsworth, «Ode: Intimations of Immortality from Recollections of Early Childhood»",
+      "url": "https://rpo.library.utoronto.ca/poems/ode-intimations-immortality-recollections-early-childhood"
+    },
+    {
+      "claim": "Wordsworth escribió «My Heart Leaps Up» «on the night of March 26, 1802»; se publicó por primera vez en Poems, in Two Volumes (1807); el poema tiene nueve versos y el séptimo es «The Child is father of the Man;»; los tres últimos versos son el epígrafe de la oda Intimations of Immortality. Lectura directa (comprobación del texto, no transcripción). Traducción al español propia.",
+      "source": "Wikipedia, «My Heart Leaps Up»",
+      "url": "https://en.wikipedia.org/wiki/My_Heart_Leaps_Up"
+    },
+    {
+      "claim": "Paradise Regained, libro IV, versos 220-221: «Teaching not taught; the childhood shews the man, / As morning shews the day. Be famous then»; los pronuncia el Tentador, en el discurso que empieza en el verso 195 («To whom the Fiend with fear abasht reply'd»), en el que insta a Jesús a buscar la sabiduría y el saber. Lectura directa.",
+      "source": "The John Milton Reading Room, Dartmouth College, «Paradise Regained», libro 4",
+      "url": "https://milton.host.dartmouth.edu/reading_room/pr/book_4/text.shtml"
+    }
+  ],
+  "do_not_use": [
+    "Que Wordsworth tomó la frase de Milton: una sola fuente de búsqueda lo afirma y no se verificó. El cuerpo solo dice que Milton había escrito una idea parecida, sin hablar de influencia.",
+    "Que el epígrafe de la oda se añadió en 1815 y que el de 1807 era de Virgilio («Paulo majora canamus»): una sola fuente secundaria; RPO no lo menciona. El cuerpo dice «con el tiempo».",
+    "Leer la frase como «los niños enseñan a los adultos»: el poema habla de continuidad entre el niño y el hombre que fue. El cuerpo lo explica.",
+    "La réplica de Gerard Manley Hopkins («The child is father to the man. How can he be?»): no se verificó en esta ejecución. No se usa.",
+    "Detalles del diario de Dorothy Wordsworth del 26 de marzo de 1802 (la carta a Annette, «The Cuckow»): no se leyeron en fuente directa. Solo se usa la entrada del 27 que cita RPO.",
+    "El título «The Rainbow»: el poema circula con ese nombre y con «My Heart Leaps Up»; se usa este último.",
+    "El año de El paraíso recobrado (1671): no se leyó en fuente directa en esta ejecución. Se cita sin año.",
+    "La versión «the child is father to the man», con «to»: el texto de Wordsworth dice «of»."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "2027-01-03-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "el Códice Florentino y sus dos columnas",
+    "hook": "En el gran libro sobre el mundo mexica, cada página cuenta la historia dos veces, en náhuatl y en español. Las dos versiones no siempre coinciden.",
+    "body": [
+      "El Códice Florentino tiene doce libros, unas 2500 páginas y más de 2000 imágenes pintadas por artistas indígenas. Se terminó en 1577 en el Colegio de Santa Cruz de Tlatelolco. Lo dirigió el franciscano Bernardino de Sahagún, que trabajó durante treinta años con antiguos alumnos y ancianos nahuas. Hoy está en la Biblioteca Medicea Laurenziana de Florencia, y de ahí le viene el nombre.",
+      "Cada página tiene dos columnas: el náhuatl a la derecha y el español a la izquierda. El náhuatl se escribió primero, y la traducción se aparta de él. El libro XII cuenta la conquista desde Tenochtitlan y Tlatelolco. En náhuatl, son los españoles quienes sacan del templo los cuerpos de Moctezuma y de Itzquauhtzin. En español, los mexicas encuentran los cuerpos fuera. Y la columna española ni siquiera nombra a Itzquauhtzin, el señor de Tlatelolco.",
+      "La columna náhuatl sí lo nombra. Cuenta que su gente lloró mucho, que tenía el corazón desolado, y que su cuerpo se quemó con gran esplendor. Durante siglos el libro se leyó sobre todo por su lado español. En 2023 el Getty Research Institute publicó el códice completo en línea, con las dos columnas y los textos buscables. Lo presenta como obra de Sahagún y de un grupo de ancianos, autores y artistas nahuas."
+    ],
+    "question": "¿Quién decide qué columna de una historia se lee primero?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Códice Florentino, 1577",
+    "subtitle": "Doce libros, dos lenguas y una traducción que se aparta",
+    "body": "Terminado en Tlatelolco en 1577, con náhuatl a la derecha y español a la izquierda. En el libro XII la columna española no nombra a Itzquauhtzin, señor de Tlatelolco."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#CodiceFlorentino",
+      "#Nahuatl",
+      "#Mexicas"
+    ],
+    "extended": [
+      "#Sahagun",
+      "#Tlatelolco",
+      "#HistoriaDeMexico",
+      "#Codices",
+      "#Civilizaciones",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El códice se completó en 1577 en Tlatelolco; «the Nahua contributors from Tlatelolco were its first authors»; texto náhuatl a la derecha y español a la izquierda; «The Nahuatl text came first, and it varies significantly from the Spanish one»; en el libro XII la versión náhuatl dice que «the Spaniards remove the bodies from the temple» (Moctezuma e Itzquauhtzin), mientras en la española los mexicas encuentran los cuerpos fuera de un templo; la española ni siquiera da el nombre de Itzquauhtzin; la náhuatl describe el duelo: «They grieved greatly, their hearts were desolate . . . It was with great splendor that his body was burned». Kayla Aletha Welch. Lectura directa.",
+      "source": "Latinx Project, New York University, «Digital Repatriation at the Getty Restores Powerful Nahua Voices»",
+      "url": "https://www.latinxproject.nyu.edu/intervenxions/digital-florentine-codex"
+    },
+    {
+      "claim": "El códice fue escrito por autores y artistas nahuas, con el franciscano Bernardino de Sahagún en el Colegio Imperial de Santa Cruz de Tlatelolco; tiene 12 libros, unas 2500 páginas y «more than 2,000 images drawn and painted by Indigenous artists»; náhuatl y español aparecen lado a lado; el original está en la Biblioteca Medicea Laurenziana. Nota del 26 de octubre de 2023. Lectura directa.",
+      "source": "UCLA Newsroom, «Digitized Florentine Codex reveals Aztec culture, language»",
+      "url": "https://newsroom.ucla.edu/releases/digitized-florentine-codex-reveals-aztec-culture-language"
+    },
+    {
+      "claim": "Sahagún (1499-1590) enseñó latín, retórica y teología a jóvenes indígenas; trabajó en «a 30-year project» con estudiantes y ancianos nativos; el códice tiene «over 2,400 images» y se le llama Florentino por su ubicación en la Biblioteca Medicea Laurenziana de Florencia. Lectura directa.",
+      "source": "J. Paul Getty Museum, exposición «The Aztec Pantheon and the Art of Empire», «The Florentine Codex»",
+      "url": "https://www.getty.edu/art/exhibitions/aztec/florentine_codex.html"
+    },
+    {
+      "claim": "El libro 12 trata la conquista desde la perspectiva de los conquistados de Tenochtitlan-Tlatelolco y es «the only strictly historical book» de la Historia general; texto náhuatl a la derecha y glosa o traducción española a la izquierda; unas 2500 páginas y más de 2000 ilustraciones. Lectura directa.",
+      "source": "Wikipedia, «Florentine Codex»",
+      "url": "https://en.wikipedia.org/wiki/Florentine_Codex"
+    },
+    {
+      "claim": "El Getty Research Institute publicó en línea los 12 libros, con 2500 páginas y casi 2500 ilustraciones, con transcripciones en náhuatl y español y traducciones; los libros se concluyeron en el Colegio Imperial de la Santa Cruz de Tlatelolco. Edición 335, enero de 2024. Lectura directa.",
+      "source": "Revista Pesquisa FAPESP, «Una enciclopedia sobre los aztecas»",
+      "url": "https://revistapesquisa.fapesp.br/es/una-enciclopedia-sobre-los-aztecas/"
+    },
+    {
+      "claim": "El códice fue «created by Franciscan friar Bernardino de Sahagún and a group of Nahua elders, authors, and artists» y se completó en 1577 en el Imperial Colegio de la Santa Cruz de Tlatelolco; columnas paralelas de náhuatl y español, «nearly 2,500 images»; la edición digital, en 12 libros (del 1, Dioses, al 12, Conquista de México), hace buscables textos e imágenes. El sitio no da fecha de lanzamiento: el año 2023 sale de la nota de UCLA del 26 de octubre de 2023. Lectura directa.",
+      "source": "Getty Research Institute, Digital Florentine Codex",
+      "url": "https://florentinecodex.getty.edu"
+    }
+  ],
+  "do_not_use": [
+    "Que Felipe II mandó confiscar o destruir todas las copias en 1577: la nota de NYU lo dice así, pero los estudios de la UNAM (León-Portilla) hablan de órdenes reales de 1576-1578 para enviar los manuscritos a España, no de una prohibición explícita; no se pudo leer el texto de la cédula (PDF). No se menciona.",
+    "Cómo llegó a Florencia (regalo de Felipe II a Francesco de Medici, fray Rodrigo de Sequera, Fernando I de Medici): las fuentes discrepan y ninguna se leyó en edición crítica. Solo se dice dónde está.",
+    "La cifra exacta de 2468 ilustraciones: solo la da Smarthistory (403). Se usa «más de 2000».",
+    "Las fechas de elaboración: Wikipedia da 1545-1590 para todo el proyecto y 1569 para una versión final; otras fuentes dan 1575-1577 para la copia de Florencia. Se dice solo que se terminó en 1577 y que fueron treinta años de trabajo (Getty).",
+    "Que la columna española es censura deliberada: las fuentes dicen que se aparta y difiere; no se afirma intención.",
+    "Que el códice es «el primer libro de antropología» o expresiones parecidas: frecuentes en prensa, no verificadas. No se usan.",
+    "Atribuir la frase de Terraciano («the most remarkable cultural and intellectual product of the early Americas») como dato: es opinión. No se usa.",
+    "Nombres de colaboradores nahuas (Antonio Valeriano, Martín Jacobita, etc.): no se leyeron en fuente directa en esta ejecución."
+  ],
+  "status": "draft"
+}

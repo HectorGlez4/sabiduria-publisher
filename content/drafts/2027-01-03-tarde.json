@@ -1,0 +1,79 @@
+{
+  "id": "2027-01-03-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Quintiliano y el mentiroso con buena memoria",
+    "hook": "Un refrán romano contra los mentirosos nos llegó dentro de un manual que enseñaba a contar historias falsas en un juicio.",
+    "quote": {
+      "text": "Es verdad lo que suele decirse: que el mentiroso debe tener buena memoria.",
+      "author": "Quintiliano",
+      "work": "Institución oratoria, libro IV, cap. 2, § 91 (hacia el año 95)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Marco Fabio Quintiliano nació hacia el año 35 en Calagurris, hoy Calahorra, en Hispania. Enseñó retórica en Roma y, hacia el año 95, terminó la Institución oratoria, un tratado en doce libros sobre la formación del orador. En latín la frase dice: mendacem memorem esse oportere. Él no la presenta como suya. La introduce como algo que dice la gente.",
+      "El contexto es incómodo. En el libro IV, capítulo 2, Quintiliano trata la narración de los hechos en un juicio, y dedica unos párrafos a las exposiciones falsas que se usan en el foro. Da reglas. Lo inventado tiene que ser posible y encajar con personas, fechas y lugares. No debe contradecirse. Y como quien inventa suele olvidar lo que dijo, hay que tenerlo presente durante todo el discurso. Ahí entra el refrán.",
+      "Es decir, no es una condena moral. Es un consejo técnico al abogado que va a sostener una versión falsa. El tratado estuvo incompleto durante siglos. En 1416 el humanista Poggio Bracciolini halló un manuscrito entero en la abadía de San Galo. En una carta del 15 de diciembre lo describió a salvo, pero sucio de moho y polvo."
+    ],
+    "question": "¿Cuántas verdades necesitan menos memoria que una sola mentira?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Quintiliano",
+      "#Retorica",
+      "#Citas"
+    ],
+    "extended": [
+      "#RomaAntigua",
+      "#Latin",
+      "#Calahorra",
+      "#Clasicos",
+      "#Sabiduria",
+      "#Filosofia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Libro IV, cap. 2, § 91: «verumque est illud quod vulgo dicitur: mendacem memorem esse oportere.» El pasaje empieza en § 88: «Sunt quaedam et falsae expositiones, quarum in foro duplex genus est»; § 89: «prima sit curarum ut id quod fingemus fieri possit»; § 90: «curandum praecipue, quod fingentibus frequenter excidit, ne qua inter se pugnent». Lectura directa. Traducción al español propia.",
+      "source": "The Latin Library, Quintiliano, «Institutio oratoria», libro IV",
+      "url": "https://www.thelatinlibrary.com/quintilian/quintilian.institutio4.shtml"
+    },
+    {
+      "claim": "Traducción inglesa de la Loeb Classical Library, vol. II (1920), § 91: «there is no doubt about the truth of the proverb that a liar should have a good memory»; los §§ 88-92 tratan las exposiciones falsas de los hechos: lo inventado debe ser posible, coherente con personas, fechas y lugares, no contradecirse, y el orador debe tenerlo presente en todo el discurso porque los mentirosos tienden a olvidar sus falsedades. Lectura directa.",
+      "source": "LacusCurtius (Bill Thayer, University of Chicago), Quintiliano, «Institutio Oratoria», libro IV, cap. 2, Loeb 1920",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Quintilian/Institutio_Oratoria/4B*.html"
+    },
+    {
+      "claim": "Traducción de Harold Edgeworth Butler, Harvard University Press / William Heinemann, 1920-1922, 4.2.89-91: «Above all we must see that we do not contradict ourselves, a slip which is far from rare on the part of spinners of fiction». Lectura directa.",
+      "source": "Perseus / Perseids (Tufts University), Quintiliano, «Institutio Oratoria» 4.2.89-4.2.91, trad. Butler",
+      "url": "https://fgh.perseids.org/read/latinLit/phi1002/phi001/perseus-eng2/4.2.89-4.2.91"
+    },
+    {
+      "claim": "Quintiliano nació hacia el año 35 en Calagurris (Calahorra, La Rioja), en Hispania, y vivió hasta hacia el 100; la Institutio oratoria es un tratado en doce libros sobre la teoría y la práctica de la retórica, escrito hacia el año 95. Lectura directa.",
+      "source": "Wikipedia, «Quintilian»",
+      "url": "https://en.wikipedia.org/wiki/Quintilian"
+    },
+    {
+      "claim": "Poggio Bracciolini halló un manuscrito completo de Quintiliano en la abadía de San Galo; en una carta del 15 de diciembre de 1416 escribió que encontraron a «Quintilian still safe and sound, though filthy with mold and dust»; ese manuscrito está hoy en la Zentralbibliothek de Zúrich, MS C74a. Lee Honeycutt, «The History of Quintilian's Text». Lectura directa.",
+      "source": "Kairos: A Journal of Rhetoric, Technology, and Pedagogy, Lee Honeycutt, «Quintilian's Institutes of Oratory: The History of Quintilian's Text»",
+      "url": "https://kairos.technorhetoric.net/stasis/2017/honeycutt/quintilian/history.html"
+    }
+  ],
+  "do_not_use": [
+    "Que la frase es de Quintiliano como idea propia: él la da como dicho común («quod vulgo dicitur»). La pieza lo dice así. No se sabe quién la acuñó.",
+    "Atribuciones a Cicerón, Apuleyo u otros autores que circulan en páginas de citas: no se verificaron.",
+    "La versión de Montaigne en «De los mentirosos» (Ensayos I, 9): aparece en búsquedas, pero no se pudo leer el texto (Gutenberg dio 403 y el resto eran PDF). No se menciona.",
+    "Que Quintiliano fue el primer maestro de retórica con sueldo del Estado, pagado por Vespasiano: circula y tiene base en Suetonio y Jerónimo, pero no se leyó en fuente directa en esta ejecución. No se usa.",
+    "Que Vespasiano lo hizo cónsul: Wikipedia lo dice en un pasaje confuso; no se usa.",
+    "Leer la frase como sentencia moral contra la mentira: en el original es un consejo técnico al orador que sostiene una exposición falsa. El cuerpo lo explica.",
+    "Detalles de cómo Poggio sacó los manuscritos de San Galo (carros, abades descuidados): son relatos secundarios discutidos. Solo se dice que lo halló y lo que escribió en la carta.",
+    "La versión latina con «oportet» que dan muchas páginas: en Quintiliano es infinitivo, «oportere», dentro de una oración indirecta."
+  ],
+  "status": "draft"
+}

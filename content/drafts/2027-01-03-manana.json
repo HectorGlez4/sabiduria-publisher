@@ -1,0 +1,76 @@
+{
+  "id": "2027-01-03-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Gutenberg y el pleito de Fust de 1455",
+    "hook": "Gutenberg imprimió la Biblia de 42 líneas. Dos años después, el primer libro europeo con fecha impresa salió firmado por el socio que lo demandó.",
+    "body": [
+      "Hacia 1450, en Maguncia, el abogado Johann Fust le prestó a Johannes Gutenberg 800 florines para su proyecto. Hacia 1452 puso otros 800 y entró como socio. Con ese dinero se imprimió la Biblia latina de 42 líneas, en una tirada de unos 180 ejemplares, cerca de 150 en papel y unos 30 en pergamino. Hoy se conservan 49.",
+      "La sociedad terminó mal. Fust demandó a Gutenberg por la devolución de los préstamos y los intereses. Lo que se sabe del pleito sale casi entero de un solo documento, el que levantó el notario Ulrich Helmasperger el 6 de noviembre de 1455. El fallo no está registrado. Se cree que Gutenberg perdió la tirada de la Biblia y buena parte del taller.",
+      "En el juicio declaró a favor de Fust un hombre del taller, Peter Schoeffer. El 14 de agosto de 1457, Fust y Schoeffer terminaron un salterio en Maguncia. Su colofón da la fecha y los dos nombres. Es el libro europeo más antiguo con fecha de edición impresa. En 1465 el arzobispo de Maguncia tomó a Gutenberg a su servicio, con grano, vino y ropa. Murió el 3 de febrero de 1468."
+    ],
+    "question": "¿Cuántas obras llevan el nombre de quien pagó y no el de quien las hizo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Gutenberg, 1455",
+    "subtitle": "Un préstamo, un pleito y un notario de Maguncia",
+    "body": "Fust prestó 1600 florines para la imprenta y en 1455 demandó a Gutenberg. En 1457 él y Schoeffer firmaron el primer libro con fecha impresa. Gutenberg no aparece en el colofón."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Gutenberg",
+      "#Imprenta",
+      "#HistoriaDelLibro"
+    ],
+    "extended": [
+      "#Maguncia",
+      "#Biblia",
+      "#SigloXV",
+      "#Libros",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Fust, «a lawyer from Mainz», presta primero 800 florines a Gutenberg (1450-1452); «probably as early as 1452» paga otros 800 para hacerse socio; la Biblia de 42 líneas se imprime en latín en una tirada estimada de unos 180 ejemplares (1452-1454); el instrumento de Helmasperger del 6 de noviembre de 1455 informa del pleito de Fust contra Gutenberg, «the outcome of which is not clearly documented»; «Gutenberg probably loses the entire Bible print run as well as large parts of his printing workshop»; en 1465 el arzobispo Adolf von Nassau lo toma a su servicio con vino, grano y ropa; muere el 3 de febrero de 1468. Lectura directa.",
+      "source": "Gutenberg-Museum / gutenberg.de, «Gutenberg and his time in data»",
+      "url": "https://www.gutenberg.de/en/zeit/zeitleiste_gutenberg"
+    },
+    {
+      "claim": "Tras el fin de la sociedad, los dos discrepaban sobre la cuantía de la devolución de los préstamos a Fust y los posibles intereses; el instrumento del 6 de noviembre de 1455, levantado por el notario de Maguncia Ulrich Helmasperger, es la fuente más famosa sobre Gutenberg; la Biblia tuvo 180 ejemplares, unos 150 en papel y unos 30 en pergamino, y se conservan 49. Lectura directa.",
+      "source": "Gutenberg-Gesellschaft (Maguncia), «Gutenberg's invention»",
+      "url": "https://www.gutenberg-gesellschaft.de/en/johannes-gutenberg/gutenbergs-invention"
+    },
+    {
+      "claim": "Fust demandó en Maguncia alegando que Gutenberg le debía la devolución de grandes préstamos; Gutenberg respondió que la mayor parte era inversión en la empresa común; el instrumento de Helmasperger, notarizado el 6 de noviembre de 1455, resume la demanda por los préstamos para «the work of the books». Lectura directa.",
+      "source": "Princeton University Library, Scheide Library, «The Gutenberg Bible»",
+      "url": "https://dpul.princeton.edu/gutenberg/feature/the-gutenberg-bible"
+    },
+    {
+      "claim": "Fust demandó a Gutenberg por la devolución de los fondos aportados; el instrumento de Helmasperger recoge la disolución legal de la sociedad; «The outcome of the suit is not recorded»; Schoeffer fue testigo de Fust en el pleito; Fust y Schoeffer fundaron la primera empresa de imprenta sostenida de Europa. Lectura directa.",
+      "source": "Bridwell Library, Southern Methodist University, exposición «Gutenberg, Fust, and Schoeffer»",
+      "url": "https://bridwell.omeka.net/exhibits/show/schoeffer/gutenbergfustschoeffer"
+    },
+    {
+      "claim": "El colofón del Salterio de Maguncia da la fecha de 1457, víspera de la Asunción (14 de agosto), y nombra a Fust, ciudadano de Maguncia, y a Peter Schoeffer de Gernsheim; es «the earliest European book with a printed date of publication» y la primera publicación importante de Fust y Schoeffer tras separarse de Gutenberg. Lectura directa.",
+      "source": "Wikipedia, «Mainz Psalter»",
+      "url": "https://en.wikipedia.org/wiki/Mainz_Psalter"
+    }
+  ],
+  "do_not_use": [
+    "Que Gutenberg perdió con seguridad el taller y la tirada: el fallo no está registrado (Bridwell, gutenberg.de). Se dice «se cree». Otras fuentes de búsqueda sostienen que Gutenberg devolvió el dinero con intereses.",
+    "Que el nombre de Gutenberg no aparece en ningún libro impreso: circula, pero no se leyó en fuente de calidad en esta ejecución. El hook y el cuerpo solo hablan del colofón del salterio.",
+    "Que el Salterio de 1457 es «el primer libro con el nombre de su impresor» sin matiz: Wikipedia lo llama el más antiguo con fecha de edición impresa; hay un dato de 1456 en una encuadernación de otro libro. Se dice «fecha de edición impresa».",
+    "Que Schoeffer se casó con la hija de Fust: no se verificó. No se usa.",
+    "Las cifras de la tirada varían: Princeton da al menos 120 en papel y quizá 40 en vitela; gutenberg.de y la Gutenberg-Gesellschaft dan unos 180, 150 y 30. Se usan estas últimas con «unos» y «cerca de».",
+    "El año de muerte de Fust (1466 o 1467): no se usa.",
+    "Que Fust era orfebre o banquero: gutenberg.de lo llama abogado; no se usan otras profesiones.",
+    "Que el arzobispo premió a Gutenberg por la imprenta: gutenberg.de dice que los motivos no están aclarados. El cuerpo no da motivo."
+  ],
+  "status": "draft"
+}
