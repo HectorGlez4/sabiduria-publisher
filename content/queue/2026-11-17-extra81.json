@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-01-tarde",
+  "id": "2026-11-17-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -70,5 +70,12 @@
     "La continuación «el hecho de que sea comprensible es un milagro» está en el párrafo siguiente, según Wikiquote; no forma parte de la frase y no se une a ella.",
     "Que el ensayo saliera en edición bilingüe alemán-inglés en la revista: no se verificó. El cuerpo dice solo que se publicó en alemán."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-17T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

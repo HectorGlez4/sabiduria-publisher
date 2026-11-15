@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-09-tarde",
+  "id": "2026-11-17-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#MartinFierro", "#JoseHernandez", "#Argentina"],
-    "extended": ["#Literatura", "#Gauchesca", "#Citas", "#Poesia", "#Historia", "#Libros"]
+    "topic": [
+      "#MartinFierro",
+      "#JoseHernandez",
+      "#Argentina"
+    ],
+    "extended": [
+      "#Literatura",
+      "#Gauchesca",
+      "#Citas",
+      "#Poesia",
+      "#Historia",
+      "#Libros"
+    ]
   },
   "sources": [
     {
@@ -54,6 +65,12 @@
     "Modernizar la cita del todo. Se actualizaron acentos y puntuación y se conservó ‘ajuera’; el original escribe ‘union’ sin tilde y separa los versos con rayas.",
     "Atribuir a Hernández la invención de la poesía gauchesca. Lo precedieron Bartolomé Hidalgo, Hilario Ascasubi y Estanislao del Campo, y esa filiación no se verificó aquí en detalle."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-11-18T03:26:00Z",
+  "results": {}
 }

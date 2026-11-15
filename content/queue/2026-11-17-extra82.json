@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-02-tarde",
+  "id": "2026-11-17-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -69,5 +69,12 @@
     "Fecha de nacimiento, Calw y el Nobel de 1946: no se leyeron en fuente directa en esta ejecución (nobelprize.org dio 403). No se usan.",
     "Cifras de ventas o de lectores: no se verificó ninguna. No se dan números; el hook dice «generaciones de lectores»."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-17T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
