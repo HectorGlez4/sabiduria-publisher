@@ -41,7 +41,9 @@ def pie_linkedin(texto_plano: str, url: str) -> str:
     cita, etiquetas, cierre = pie_para(texto_plano).rsplit("\n\n", 2)
     if cierre != CIERRE_PIE:
         raise ValueError("pie_para cambió de forma: revisa pie_linkedin")
-    pie = f"{cita}\n\nLee la cita completa: {url}\n\n{etiquetas}\n\n{cierre}"
+    # Con la Marca de origen, como Threads (`src/variants.py`): sin ella la visita llega sin red. Ojo: el sitio
+    # solo cuenta las marcas de su conjunto cerrado (`sitio-sdb/src/lib/redes.ts`), y «linkedin» aún no está.
+    pie = f"{cita}\n\nLee la cita completa: {url}?de=linkedin\n\n{etiquetas}\n\n{cierre}"
     if len(pie) > LIMITE_PIE:
         raise ValueError(f"el pie mide {len(pie)} caracteres y el límite de LinkedIn es {LIMITE_PIE}")
     return pie
@@ -71,8 +73,15 @@ def _un_texto(xml: str, opciones: tuple[str, ...], paquete: str | None) -> dict 
 
 
 def _abrir_linkedin_en_la_hoja(intentos: int = 8) -> None:
-    """De la hoja de compartir a «Share in a post» de LinkedIn: «More» al final de la fila de apps, luego la lista
-    «Apps» desplazada hasta LinkedIn. Nunca se lee la fila de arriba de la hoja: son contactos."""
+    """De la hoja de compartir a «Share in a post» de LinkedIn."""
+    abrir_app_en_la_hoja("LinkedIn", intentos)
+    xml = _esperar(lambda x: _un_texto(x, EN_UN_POST, None) is not None, "«Share in a post»", plazo=15)
+    telefono.tocar(*_un_texto(xml, EN_UN_POST, None)["centro"])
+
+
+def abrir_app_en_la_hoja(nombre: str, intentos: int = 8) -> None:
+    """De la hoja de compartir a la app `nombre`: «More» al final de la fila de apps, luego la lista «Apps»
+    desplazada hasta ella. Nunca se lee la fila de arriba de la hoja: son contactos. La usan LinkedIn y Threads."""
     xml = _esperar(lambda x: bool(por_id(x, FILA_DE_HOJA, HOJA)), "la hoja de compartir")
     for _ in range(intentos):
         filas = por_id(xml, FILA_DE_HOJA, HOJA)
@@ -91,15 +100,13 @@ def _abrir_linkedin_en_la_hoja(intentos: int = 8) -> None:
     for _ in range(intentos):
         time.sleep(1.5)
         xml = telefono.volcado(timeout=20)
-        li = telefono.buscar(xml, texto="LinkedIn", paquete=HOJA)
-        if li is not None and li["bounds"][1] > 250:
+        app = telefono.buscar(xml, texto=nombre, paquete=HOJA)
+        if app is not None and app["bounds"][1] > 250:
             break
         telefono.deslizar(540, 1900, 540, 1000, 500)
     else:
-        raise PantallaInesperada("LinkedIn no aparece en la lista «Apps» de la hoja")
-    telefono.tocar(*li["centro"])
-    xml = _esperar(lambda x: _un_texto(x, EN_UN_POST, None) is not None, "«Share in a post»", plazo=15)
-    telefono.tocar(*_un_texto(xml, EN_UN_POST, None)["centro"])
+        raise PantallaInesperada(f"{nombre} no aparece en la lista «Apps» de la hoja")
+    telefono.tocar(*app["centro"])
 
 
 def _editor(xml: str) -> bool:

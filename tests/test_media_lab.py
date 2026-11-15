@@ -6336,9 +6336,22 @@ def seccion_cola_instagram() -> None:
     from labkit import sitio_linkedin as li
     url = "https://sabiduriadebolsillo.net/cita/jose-marti-x/"
     pie_li = li.pie_linkedin("«La nueva generación es digna de sus padres.»\n— José Martí", url)
-    check(url in pie_li and pie_li.startswith("«La nueva") and pie_li.endswith(si.CIERRE_PIE)
+    check(f"{url}?de=linkedin" in pie_li and pie_li.startswith("«La nueva") and pie_li.endswith(si.CIERRE_PIE)
           and url not in si.pie_para("«La nueva generación es digna de sus padres.»\n— José Martí"),
           "el pie de LinkedIn lleva el enlace a la cita (el de Instagram no) y acaba en la pregunta")
+    from labkit import sitio_threads as th
+    pie_th = th.pie_threads("«La nueva generación es digna de sus padres.» — José Martí, Ismaelillo, 1882.", url)
+    check(pie_th.startswith("«La nueva generación es digna de sus padres.» — José Martí, Ismaelillo, 1882.\n\n")
+          and f"\n\n{url}?de=threads\n\n" in pie_th and pie_th.endswith(si.CIERRE_PIE) and "#" not in pie_th,
+          "el texto de Threads: cita y autor en una línea, el enlace con ?de=threads, la pregunta y sin hashtags")
+    largo = th.pie_threads("«" + "palabra " * 120 + "» — Autor, Obra.", url)
+    check(len(largo) == th.LIMITE_PIE and f"{url}?de=threads" in largo and "…" in largo,
+          "una cita que no cabe en 500 se recorta y el enlace queda entero")
+    cabecera = ('<hierarchy><node text="{} › Communauté ou sujet" package="com.instagram.barcelona" '
+                'class="android.widget.TextView" bounds="[505,293][973,342]" /></hierarchy>')
+    check(th._cuenta_es_la_nuestra(cabecera.format("sabiduriabolsillo"))
+          and not th._cuenta_es_la_nuestra(cabecera.format("hec.gonzlez")),
+          "Threads: la cuenta se lee en la cabecera del editor y otra cuenta no pasa")
     check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
           "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
 
