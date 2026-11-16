@@ -6359,9 +6359,10 @@ def seccion_cola_instagram() -> None:
           "el pie de TikTok: la cita, el enlace con ?de=tiktok, los hashtags y la pregunta al final")
     perfil_tt = ('<hierarchy><node text="{}" package="com.zhiliaoapp.musically" '
                  'class="android.widget.TextView" bounds="[45,130][525,200]" /></hierarchy>')
-    check(tt._cuenta_es_la_nuestra(perfil_tt.format("Sabiduria de bolsillo"))
-          and not tt._cuenta_es_la_nuestra(perfil_tt.format("hec.gonzlez")),
-          "TikTok: la cuenta se lee en la cabecera del perfil y otra cuenta no pasa")
+    check(tt._cuenta_es_la_nuestra(perfil_tt.format("@sabiduriabolsillo"))
+          and not tt._cuenta_es_la_nuestra(perfil_tt.format("Sabiduria de bolsillo1"))
+          and not tt._cuenta_es_la_nuestra(perfil_tt.format("@hec.gonzlez")),
+          "TikTok: la cuenta se lee por el @ del perfil y otra cuenta no pasa")
     check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
           "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
 

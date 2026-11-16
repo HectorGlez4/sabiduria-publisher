@@ -27,7 +27,7 @@ from labkit.sitio_instagram import CIERRE_PIE, PantallaInesperada, _esperar, _ex
 from labkit.sitio_linkedin import _un_texto, abrir_app_en_la_hoja
 
 TT = "com.zhiliaoapp.musically"
-CUENTA = "Sabiduria de bolsillo"   # el nombre de la cabecera del perfil, no el @
+CUENTA = "@sabiduriabolsillo"   # el @ del perfil: el nombre de la cabecera cambia («Sabiduria de bolsillo1»)
 SIGUIENTE = ("Next", "Suivant", "Siguiente")
 PUBLICAR = ("Post", "Publier", "Publicar")
 BORRADORES = ("Drafts", "Brouillons", "Borradores")
@@ -63,13 +63,14 @@ def _cuenta_es_la_nuestra(xml: str) -> bool:
 def _exigir_cuenta() -> None:
     """Abre TikTok en «Profile» y lee el nombre de la cabecera. Sin él, no se sigue."""
     telefono.lanzar(TT)
-    xml = _esperar(lambda x: telefono.buscar(x, texto="Profile", paquete=TT) is not None, "la barra de TikTok", plazo=30)
-    perfil = next((n for n in telefono.nodos(xml) if n["package"] == TT and n["desc"] == "Profile"), None)
-    if perfil is not None:
-        telefono.tocar(*perfil["centro"])
-        time.sleep(3)
-    xml = telefono.volcado(timeout=20)
-    if not _cuenta_es_la_nuestra(xml):
+    # TikTok suele abrir en «For You» con un vídeo en marcha, y entonces uiautomator no consigue volcar la pantalla
+    # (16 nov: el ciclo de las 21:21 esperó 30 s a la barra y falló). Se toca «Profile» por su sitio fijo en la barra
+    # de abajo (1080 px de ancho, la quinta pestaña) y se lee la cabecera del perfil, que sí se vuelca.
+    time.sleep(6)
+    telefono.tocar(972, 2110)
+    try:
+        _esperar(_cuenta_es_la_nuestra, f"la cuenta «{CUENTA}» en el perfil de TikTok", plazo=30)
+    except PantallaInesperada:
         raise PantallaInesperada(f"TikTok no muestra la cuenta «{CUENTA}» en su perfil: no se sigue")
 
 
