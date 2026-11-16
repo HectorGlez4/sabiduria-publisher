@@ -1110,7 +1110,7 @@ def cmd_sitio(a) -> int:
         return _sitio_cola()
     ev = _evidencia(a.run)
     ev.mkdir(parents=True, exist_ok=True)
-    if a.superficie in ("linkedin", "threads"):
+    if a.superficie in ("linkedin", "threads", "tiktok"):
         return _sitio_directo(a, ev)
     _exigir(a.superficie in si.SUPERFICIES, "--superficie debe ser feed, reel, story, linkedin o threads")
     if a.paso == "compartir":
@@ -1160,6 +1160,8 @@ def _sitio_directo(a, ev: Path) -> int:
     from labkit import sitio_instagram as si
     if a.superficie == "threads":
         from labkit import sitio_threads as li
+    elif a.superficie == "tiktok":
+        from labkit import sitio_tiktok as li
     else:
         from labkit import sitio_linkedin as li
     red = a.superficie
@@ -1178,7 +1180,8 @@ def _sitio_directo(a, ev: Path) -> int:
     def publicar() -> dict:
         res = li.publicar(ev)
         si.anotar(REGISTRO_SITIO, {"run": a.run, "slug": a.slug, "superficie": red,
-                                   "pista": None, "publicado_en": res["publicado_en"]})
+                                   "pista": a.pista if red == "tiktok" else None,
+                                   "publicado_en": res["publicado_en"]})
         return res
 
     pasos = {
@@ -1469,7 +1472,7 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("paso", choices=("elegir", "cola", "compartir", "musica", "enlace", "pie", "publicar", "verificar",
                                      "descartar"))
     p.add_argument("--run", help="id del run (todos los pasos salvo elegir)")
-    p.add_argument("--superficie", choices=("feed", "reel", "story", "linkedin", "threads"))
+    p.add_argument("--superficie", choices=("feed", "reel", "story", "linkedin", "threads", "tiktok"))
     p.add_argument("--url", help="URL de la Página de Cita (compartir, enlace)")
     p.add_argument("--plantilla", default="papel", choices=("papel", "tinta", "siena"))
     p.add_argument("--pie", help="archivo del pie: el pie.txt que deja compartir (pie, verificar de feed y reel)")

@@ -6352,6 +6352,16 @@ def seccion_cola_instagram() -> None:
     check(th._cuenta_es_la_nuestra(cabecera.format("sabiduriabolsillo"))
           and not th._cuenta_es_la_nuestra(cabecera.format("hec.gonzlez")),
           "Threads: la cuenta se lee en la cabecera del editor y otra cuenta no pasa")
+    from labkit import sitio_tiktok as tt
+    pie_tt = tt.pie_tiktok("«La nueva generación es digna de sus padres.» — José Martí, Ismaelillo, 1882.", url)
+    check(pie_tt.startswith("«La nueva generación") and f"Más citas: {url}?de=tiktok\n\n#" in pie_tt
+          and pie_tt.endswith(si.CIERRE_PIE),
+          "el pie de TikTok: la cita, el enlace con ?de=tiktok, los hashtags y la pregunta al final")
+    perfil_tt = ('<hierarchy><node text="{}" package="com.zhiliaoapp.musically" '
+                 'class="android.widget.TextView" bounds="[45,130][525,200]" /></hierarchy>')
+    check(tt._cuenta_es_la_nuestra(perfil_tt.format("Sabiduria de bolsillo"))
+          and not tt._cuenta_es_la_nuestra(perfil_tt.format("hec.gonzlez")),
+          "TikTok: la cuenta se lee en la cabecera del perfil y otra cuenta no pasa")
     check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
           "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
 
