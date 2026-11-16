@@ -113,15 +113,49 @@ def _editor(xml: str) -> bool:
     return _un_texto(xml, PUBLICAR, LI) is not None
 
 
+PAGINA = "Sabiduria de Bolsillo"
+MENU = "Menu button: Access my profile and other navigation links"
+EXITO = ("Post successful.", "Post successful", "Publication réussie.", "Publicación correcta.")
+
+
+def texto_de_la_cita(url: str) -> str:
+    """La atribución canónica que el sitio pone en `data-texto-plano` (la misma que «Copiar la cita»)."""
+    import html
+    import re
+    import urllib.request
+    with urllib.request.urlopen(url, timeout=30) as r:
+        pagina = r.read().decode("utf-8")
+    m = re.search(r'data-texto-plano="([^"]+)"', pagina)
+    if m is None:
+        raise PantallaInesperada(f"la página de la cita no trae data-texto-plano: {url}")
+    return html.unescape(m.group(1))
+
+
 def compartir(url: str, plantilla: str, ev: Path) -> dict:
-    """De la cita del sitio al editor de LinkedIn con la tarjeta cuadrada. Termina en el editor, sin pie."""
+    """Abre el editor de la Página desde su panel («Manage pages» → la Página → «Start a post»). Termina en el
+    editor vacío con el avatar dorado. `plantilla` no se usa: la imagen llega con la vista previa del enlace.
+
+    Por qué no la hoja de compartir (16 nov 2026): las 6 publicaciones que salieron por la hoja (Chrome → LinkedIn)
+    subían la imagen al 100 % y nunca aparecían ni en la Página ni en el perfil, sin aviso. La misma cita escrita
+    en el editor del panel de la Página salió al momento con «Post successful.» y la tarjeta en la vista previa."""
     _exigir_listo()
-    texto_plano = componer_en_el_sitio(url, plantilla, "cuadrado")
-    _abrir_linkedin_en_la_hoja()
-    _esperar(_editor, "el editor de LinkedIn", plazo=40)
-    time.sleep(3)  # la tarjeta tarda en pintarse
     pie = ev / "pie-linkedin.txt"
-    pie.write_text(pie_linkedin(texto_plano, url), encoding="utf-8")
+    pie.write_text(pie_linkedin(texto_de_la_cita(url), url), encoding="utf-8")
+    telefono.forzar_cierre(LI)
+    telefono.lanzar(LI)
+    xml = _esperar(lambda x: any(n["package"] == LI and n["desc"] == MENU for n in telefono.nodos(x)),
+                   "el inicio de LinkedIn", plazo=40)
+    telefono.tocar(*next(n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] == MENU)["centro"])
+    xml = _esperar(lambda x: telefono.buscar(x, texto=PAGINA, paquete=LI) is not None, "la Página en el menú", plazo=20)
+    telefono.tocar(*telefono.buscar(xml, texto=PAGINA, paquete=LI)["centro"])
+    escribir = lambda x: any(n["package"] == LI and n["desc"] == "Start a post" for n in telefono.nodos(x))
+    xml = _esperar(escribir, "el panel de la Página", plazo=30)
+    telefono.tocar(*next(n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] == "Start a post")["centro"])
+    _esperar(_editor, "el editor de la Página", plazo=30)
+    time.sleep(2)
+    if telefono.teclado_visible():
+        telefono.tecla(4)
+        time.sleep(1.5)
     captura = telefono.captura(ev / "01-editor-linkedin.png")
     pagina, color = autor_es_la_pagina(captura)
     if not pagina:
@@ -153,6 +187,11 @@ def escribir_pie(pie: str, ev: Path) -> dict:
         time.sleep(2)
     if telefono.teclado_visible():
         raise PantallaInesperada("el teclado sigue abierto")
+    # La tarjeta llega como vista previa del enlace (la imagen og: del sitio), debajo del texto; con el teclado
+    # abierto queda tapada y no sale en el volcado. Sin ella no se publica.
+    _esperar(lambda x: any(n["package"] == LI and n["desc"].startswith("Sharing preview box")
+                           and "sabiduriadebolsillo.net" in n["desc"] for n in telefono.nodos(x)),
+             "la vista previa del enlace", plazo=30)
     captura = telefono.captura(ev / "04-composer-linkedin.png")
     pagina, color = autor_es_la_pagina(captura)
     if not pagina:
@@ -183,7 +222,8 @@ def publicar(ev: Path) -> dict:
 
 
 def verificar(ev: Path, plazo_s: int = 60) -> dict:
-    """El editor ya no está abierto: LinkedIn lo cierra al aceptar la publicación. Si sigue abierto, no salió."""
+    """LinkedIn enseña «Post successful.» al aceptar la publicación. Que el editor se cierre no basta: por la hoja
+    de compartir se cerraba igual y la publicación no llegaba (16 nov)."""
     limite = time.monotonic() + plazo_s
     while time.monotonic() < limite:
         try:
@@ -191,10 +231,15 @@ def verificar(ev: Path, plazo_s: int = 60) -> dict:
         except telefono.TelefonoError:
             time.sleep(2)
             continue
-        if not _editor(xml):
-            return {"verificado": True, "captura": str(telefono.captura(ev / "07-verificado-linkedin.png"))}
+        if _un_texto(xml, EXITO, LI) is not None:
+            captura = telefono.captura(ev / "07-verificado-linkedin.png")
+            cerrar = next((n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] in ("Close", "Fermer")
+                           and n["bounds"][1] < 300), None)
+            if cerrar is not None:  # la X de arriba; nunca la oferta de Premium de abajo
+                telefono.tocar(*cerrar["centro"])
+            return {"verificado": True, "captura": str(captura)}
         time.sleep(3)
-    raise PantallaInesperada(f"el editor de LinkedIn sigue abierto {plazo_s} s después de «Post»")
+    raise PantallaInesperada(f"LinkedIn no dijo «Post successful.» {plazo_s} s después de «Post»")
 
 
 DESCARTAR = ("Discard", "Supprimer", "Descartar")
