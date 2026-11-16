@@ -1,0 +1,75 @@
+{
+  "id": "2027-01-04-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Bazalgette y el hedor del Támesis",
+    "hook": "Los planos de las cloacas de Londres llevaban dos años atascados. En 1858 la ley salió en dieciocho días: el olor había llegado al Parlamento.",
+    "body": [
+      "El verano de 1858 fue caluroso y seco en Londres. El Támesis bajó de nivel y dejó al aire las aguas negras de una ciudad de más de dos millones y medio de habitantes, la más grande del mundo. El Parlamento estaba en sesión, a la orilla del río. Las cortinas del lado del agua se empaparon en cloruro de cal para tapar el olor. No funcionó.",
+      "El 15 de julio, el ministro de Hacienda, Benjamin Disraeli, presentó un proyecto para purificar el Támesis. Llamó al río una laguna estigia, cargada de horrores inefables e intolerables. Calculó la obra en no menos de tres millones de libras, pagadas con un impuesto durante cuarenta años. El 2 de agosto ya era ley. Los planos de Bazalgette estaban listos desde junio de 1856, detenidos en una disputa con el gobierno sobre dónde verter y cuánto costaba.",
+      "El ingeniero Joseph Bazalgette diseñó 82 millas de grandes colectores de ladrillo que recogían 1100 millas de drenajes y llevaban el agua río abajo. Usó 318 millones de ladrillos y un cemento Portland muy resistente, e hizo los túneles más grandes de lo necesario, pensando en una ciudad que iba a crecer. El sistema se inauguró en 1865 y se terminó en 1875. Sigue siendo la base del alcantarillado de Londres."
+    ],
+    "question": "¿Cuántos problemas esperan a que los sufra de cerca quien puede resolverlos?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Londres, 1858",
+    "subtitle": "Un río, un parlamento y 318 millones de ladrillos",
+    "body": "En el verano de 1858 el Támesis olía tanto que el Parlamento empapó sus cortinas en cloruro de cal. La ley de limpieza se presentó el 15 de julio y fue aprobada el 2 de agosto. Bazalgette terminó las cloacas en 1875."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Londres",
+      "#Bazalgette",
+      "#HistoriaDeLaIngenieria"
+    ],
+    "extended": [
+      "#Tamesis",
+      "#SigloXIX",
+      "#Ingenieria",
+      "#Ciudades",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El verano de 1858 fue caluroso y seco y el río bajó de su nivel normal dejando expuestas las aguas residuales; la población de Londres superaba los 2,5 millones y era la ciudad más grande del mundo; el Parlamento estaba en sesión y los diputados sufrieron el olor; se empaparon cortinas y persianas en cloruro de cal; Disraeli propuso un proyecto de ley que «became law in just 18 days»; el sistema se completó en 1875. Lectura directa.",
+      "source": "London Museum, «A very smelly summer in the city: the Great Stink of 1858»",
+      "url": "https://londonmuseum.org.uk/collections/london-stories/great-stink-of-1858"
+    },
+    {
+      "claim": "Primera lectura, 15 de julio de 1858: el ministro de Hacienda (Chancellor of the Exchequer) presenta un proyecto «the object of which is the purification of the river Thames»; el río «has really become a Stygian pool, reeking with ineffable and intolerable horrors»; coste que «cannot, indeed, be computed at much less than £3,000,000»; impuesto de no más de 3 peniques por libra durante cuarenta años. Lectura directa.",
+      "source": "Hansard, HC Deb 15 July 1858, «Metropolis Local Management Act Amendment Bill — First Reading»",
+      "url": "https://api.parliament.uk/historic-hansard/commons/1858/jul/15/first-reading"
+    },
+    {
+      "claim": "Las cortinas del lado del río se empaparon en cloruro de cal, sin éxito; Disraeli llamó al Támesis «a Stygian pool, reeking with ineffable and intolerable horrors»; el proyecto se convirtió en ley el 2 de agosto; las obras duraron de 1859 a 1875; «By June 1856 Bazalgette completed his definitive plans», a los que Benjamin Hall objetó los puntos de vertido; en julio de 1857 tres consultores propusieron otro plan de más de 5,4 millones frente a un máximo de 2,4 del de Bazalgette. Lectura directa.",
+      "source": "Wikipedia, «Great Stink»",
+      "url": "https://en.wikipedia.org/wiki/Great_Stink"
+    },
+    {
+      "claim": "El plan constaba de 1100 millas de drenajes que alimentaban 82 millas de nuevos colectores de ladrillo; se usaron 318 millones de ladrillos; Bazalgette «insisted on using extremely strong, water-resistant Portland cement» y construyó túneles «far larger than were originally needed, anticipating the growth of the city»; el sistema se inauguró oficialmente en 1865 y se terminó en 1875. Lectura directa.",
+      "source": "London Museum, «How Bazalgette built London's first super-sewer»",
+      "url": "https://londonmuseum.org.uk/collections/london-stories/how-bazalgette-built-londons-first-super-sewer/"
+    },
+    {
+      "claim": "Bazalgette (1819-1891), ingeniero jefe del Metropolitan Board of Works, responsable de la red de alcantarillas del centro de Londres; sus túneles anchos de ladrillo se eligieron frente a las tuberías estrechas que preferían Edwin Chadwick y otros; el Gran Hedor de 1858 empujó a la ciudad a actuar. Lectura directa.",
+      "source": "Science Museum Group Collection, «Joseph William Bazalgette 1819-1891»",
+      "url": "https://collection.sciencemuseumgroup.org.uk/people/cp110961/joseph-william-bazalgette"
+    }
+  ],
+  "do_not_use": [
+    "La anécdota de que Bazalgette duplicó el diámetro de las tuberías calculado («solo lo haremos una vez»): circula mucho, pero ninguna de las fuentes leídas la recoge. Se dice solo que hizo los túneles más grandes de lo necesario.",
+    "Que el Parlamento se suspendió o se trasladó por el olor: se discutió trasladarlo a Oxford o St Albans, pero no se hizo. No se usa.",
+    "Que el Gran Hedor provocó una epidemia de cólera: no hubo brote grave en 1858 atribuible al olor; la teoría del miasma era la creencia de la época. No se usa.",
+    "Cifras distintas de la red: algunas fuentes dan 83 o casi 100 millas de colectores, 1300 millas en total o 13.000 de alcantarillas locales. Se usan las del London Museum: 82 y 1100.",
+    "Las temperaturas de 34-36 °C a la sombra que da Wikipedia y los 30 °C del London Museum no coinciden. No se da cifra.",
+    "La fecha de presentación del 15 de junio que da Wikipedia en el texto: Hansard registra la primera lectura el 15 de julio, y el London Museum habla de 18 días hasta la ley. Se usa el 15 de julio.",
+    "El nombre de Disraeli no figura en la página de Hansard, que solo dice «Chancellor of the Exchequer»; Disraeli lo era en 1858 y Wikipedia le atribuye la frase. Se da como tal."
+  ],
+  "status": "draft"
+}

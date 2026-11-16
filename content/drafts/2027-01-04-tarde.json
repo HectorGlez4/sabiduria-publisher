@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-04-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Lope de Vega y el soneto Desmayarse, atreverse",
+    "hook": "Lope de Vega escribió trece versos sobre el amor sin decir qué es. En el decimocuarto renunció a definirlo.",
+    "quote": {
+      "text": "Esto es amor, quien lo probó lo sabe.",
+      "author": "Lope de Vega",
+      "work": "Rimas, soneto CXXVI, «Desmayarse, atreverse, estar furioso» (Madrid, Pedro Madrigal, 1602)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1602 la imprenta de Pedro Madrigal, en Madrid, sacó La hermosura de Angélica, de Lope de Vega, con otras diversas rimas. Entre ellas iba el soneto número 126. Empieza así: desmayarse, atreverse, estar furioso.",
+      "Lo que sigue es una lista. Durante trece versos no hay verbo principal, solo infinitivos y adjetivos que se contradicen: atreverse y desmayarse, huir del desengaño, creer que un cielo cabe en un infierno. No dice qué es todo eso. Lo enumera.",
+      "El sujeto llega en el último verso, y no es una definición. Es una renuncia a darla. Lope no explica el amor; dice que se reconoce por haberlo vivido. Después de trece versos de intentar decirlo, el soneto admite que la experiencia no se transmite con palabras."
+    ],
+    "question": "¿Qué cosas solo se entienden después de haberlas vivido?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#LopeDeVega",
+      "#SigloDeOro",
+      "#Citas"
+    ],
+    "extended": [
+      "#Poesia",
+      "#Soneto",
+      "#Amor",
+      "#LiteraturaEspanola",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Ficha del poema «Rima CXXVI», de Lope de Vega: publicación original en «Rimas», Imprenta de Pedro Madrigal, Madrid, 1602; edición usada, Biblioteca Virtual Miguel de Cervantes, 2003. Último verso: «esto es amor, quien lo probó lo sabe». Lectura directa.",
+      "source": "UNED, proyecto PoeMAS, «Rima CXXVI – Lope de Vega»",
+      "url": "https://poemas.uned.es/poema/rima-cxxvi-lope-de-vega/"
+    },
+    {
+      "claim": "Texto del soneto de Lope de Vega (1562-1635) en la antología universitaria Liter·Alia: el verso 1 empieza «Desmayarse, atreverse, estar furioso»; el 9 es «huir el rostro al claro desengaño»; el 12, «creer que un cielo en un infierno cabe»; el 14, «esto es amor, quien lo probó lo sabe». Los versos 1-13 son frases de infinitivo y adjetivos, sin verbo principal conjugado (solo «cabe», dentro de una subordinada). La página fecha el poema en 1604, fecha de la edición sevillana de las Rimas. Lectura directa.",
+      "source": "Liter·Alia. Literaturas Hispánicas en contexto (Scalar, USC), «Los efectos del amor»",
+      "url": "https://scalar.usc.edu/works/literalia/los-efectos-del-amor"
+    },
+    {
+      "claim": "Registro del ejemplar: «La hermosura de Angelica : con otras diuersas rimas / de Lope de Vega Carpio», «En Madrid : En la emprenta de Pedro Madrigal, año 1602»; incluye «Segunda» y «Tercera parte de las rimas de Lope de Vega Carpio» con portadas propias. Lectura directa.",
+      "source": "University of Pennsylvania Libraries, catálogo Franklin, Kislak Center, ejemplar 868V",
+      "url": "https://find.library.upenn.edu/catalog/9931344973503681"
+    }
+  ],
+  "do_not_use": [
+    "La fecha de 1634 y el título «Rimas humanas» que dan algunas páginas de poemas: no coinciden con la ficha de la UNED ni con el ejemplar de 1602 de UPenn. Probablemente confunden con otra obra de Lope de ese año, pero no se verificó. Se da 1602.",
+    "La fecha de 1604 que da Liter·Alia: según artículos que no se pudieron leer completos, es el año de la reedición de Sevilla. La primera impresión es la de Madrid de 1602 (UNED, catálogo de UPenn). Se da 1602.",
+    "Que los sonetos de 1602 eran exactamente doscientos: lo dicen artículos en PDF que no se pudieron leer. No se da la cifra.",
+    "El número de página 305 que circula en un blog: no verificado. No se usa.",
+    "Biografía amorosa de Lope (Elena Osorio, Micaela de Luján) como clave del soneto: es interpretación y no se verificó. No se usa.",
+    "El texto completo del soneto: no se transcribe; solo el último verso y fragmentos breves."
+  ],
+  "status": "draft"
+}

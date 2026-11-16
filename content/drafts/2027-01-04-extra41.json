@@ -1,0 +1,68 @@
+{
+  "id": "2027-01-04-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "el Rigveda y la estrofa I, 164, 46",
+    "hook": "La frase circula como «la verdad es una». En el himno védico donde nació, lo que es uno tiene nombres de dioses.",
+    "quote": {
+      "text": "Lo que es uno, los sabios lo llaman de muchas maneras.",
+      "author": "Rigveda",
+      "work": "Rigveda, libro I, himno 164, estrofa 46 (atribuido a Dīrghatamas; trad. de Wilson, 1866)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El Rigveda es una colección de himnos en sánscrito védico, dividida en diez libros. El primero está entre las partes más tardías, compuesto hacia el año 1000 a.C. o después. La tradición atribuye los himnos 140 a 164 de ese libro al poeta Dīrghatamas. El 164 está dedicado a los Viśvedevas, el conjunto de todos los dioses.",
+      "En sánscrito, la estrofa 46 dice: ekaṃ sad viprā bahudhā vadanti. Palabra por palabra: lo que es uno, los inspirados lo dicen de muchas maneras. El verso no está solo. A su alrededor enumera nombres: Indra, Mitra, Varuṇa, Agni, el ave celeste Garutmān, Yama, Mātariśvan. Todos son dioses.",
+      "En 1866 H. H. Wilson lo tradujo así: los sacerdotes sabios llaman a uno con muchos nombres. El comentarista medieval Sāyaṇa leía que ese uno era el Sol; otros, Agni, el fuego. La palabra «verdad» la añadieron lecturas posteriores. El himno no habla de doctrinas en general. Dice que varios dioses podrían ser un solo dios llamado de muchas formas."
+    ],
+    "question": "¿Cuántas discusiones son solo sobre el nombre de una misma cosa?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Rigveda",
+      "#India",
+      "#Citas"
+    ],
+    "extended": [
+      "#Sanscrito",
+      "#Vedas",
+      "#Filosofia",
+      "#Clasicos",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Rigveda 1.164.46, en sánscrito «ekaṃ sad viprā bahudhā vadanty agniṃ yamam mātariśvānam āhuḥ»; la estrofa nombra a Indra, Mitra, Varuṇa, Agni, Garutmān, Yama y Mātariśvan; glosas: ekaṃ «one», sad «to be, exist», viprāḥ «a learned person, priest, poet», bahudhā «in many ways», vadanti «to speak, say, call, name»; traducción de H. H. Wilson (1866): «for learned priests call one by many names»; ṛṣi: Dīrghatamās Aucathya; nota de Sāyaṇa: «Sun is assumed; Nirukta assumes the Agni». Lectura directa. Traducción al español propia a partir de las glosas.",
+      "source": "Wisdom Library, «Rig Veda (translation and commentary)», trad. H. H. Wilson (1866), himno I.164, estrofa 46",
+      "url": "https://www.wisdomlib.org/hinduism/book/rig-veda-english-translation/d/doc830789.html"
+    },
+    {
+      "claim": "La estrofa 46 forma parte de un himno a los Viśvedevas y se cita a menudo como ejemplo de un monismo o monoteísmo incipiente; es la base de la frase conocida «Truth is one, sages call it by various names»; traducción de Griffith: «To what is One, sages give many a title / they call it Agni, Yama, Matarisvan»; el Mandala 1 probablemente data del periodo védico tardío o de hacia el 1000 a.C., y con el Mandala 10 forma la parte más tardía del Rigveda. Lectura directa.",
+      "source": "Wikipedia, «Mandala 1»",
+      "url": "https://en.wikipedia.org/wiki/Mandala_1"
+    },
+    {
+      "claim": "Dīrghatamas es el autor tradicional de los himnos 140 a 164 del primer mandala del Rigveda; el himno de Asya Vāmasya (1.164) es uno de sus poemas más famosos. Lectura directa.",
+      "source": "Wikipedia, «Dirghatamas»",
+      "url": "https://en.wikipedia.org/wiki/Dirghatamas"
+    }
+  ],
+  "do_not_use": [
+    "La versión «La verdad es una, los sabios la llaman con muchos nombres»: es una lectura posterior. El sánscrito dice «lo que es uno» (ekaṃ sad), no «verdad», y el contexto son nombres de dioses. Se usa una traducción más literal y el cuerpo lo explica.",
+    "Presentar la estrofa como prueba de tolerancia religiosa entre religiones distintas: es una lectura moderna; el himno habla de los dioses védicos. No se usa.",
+    "La traducción de Jamison y Brereton (Oxford, 2014): no se pudo leer (solo en PDF). No se cita su texto.",
+    "La traducción de Griffith en sacred-texts.com dio 403; se toma de la cita en Wikipedia y no se trata como lectura directa del original.",
+    "Detalles de la leyenda de Dīrghatamas (ciego de nacimiento, arrojado al río): circulan en páginas devocionales; no verificados. No se usan.",
+    "Fechas precisas del Rigveda (1500-1200 a.C. y otras): la datación es discutida. Se dice solo que el primer libro es de hacia el 1000 a.C., según Wikipedia, y con «hacia».",
+    "Que el himno 164 tiene 52 estrofas: solo se vio en páginas de comentario sin calidad. No se da la cifra."
+  ],
+  "status": "draft"
+}

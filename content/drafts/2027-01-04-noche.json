@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-04-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "la espada de Damocles en las Tusculanas",
+    "hook": "Hoy la espada de Damocles es una amenaza cualquiera. En el libro donde aparece, Cicerón la usa para probar algo más preciso: que el tirano no puede ser feliz.",
+    "body": [
+      "Cicerón escribió las Disputaciones tusculanas en el año 45 a.C., en su villa de Túsculo. En febrero de ese año había muerto allí su hija Tulia, semanas después de dar a luz. Él se apartó de la vida pública y se dedicó a la filosofía. La obra tiene cinco libros. El último pregunta si la virtud basta para vivir feliz.",
+      "En ese libro, secciones 61 y 62, cuenta la historia. Dionisio, tirano de Siracusa, que tomó el poder a los 25 años y gobernó 38, tenía un adulador llamado Damocles. Damocles le decía que nadie había sido nunca tan dichoso. Dionisio le ofreció probarlo: lo sentó en un lecho de oro, con mesa y criados, y mandó colgar del techo una espada sujeta por una sola crin de caballo, justo sobre su cuello. Damocles pidió irse. Ya no quería ser feliz.",
+      "La conclusión de Cicerón es una pregunta: si no queda claro que nada es dichoso para quien vive con un terror siempre suspendido sobre él. La espada no es una desgracia que puede caer. Es la condición permanente de quien manda por la fuerza. Cicerón dedicó la obra a su amigo Bruto, el mismo que al año siguiente participó en el asesinato de César."
+    ],
+    "question": "¿Cuánto poder deja de valer la pena cuando obliga a vivir vigilando el techo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Cicerón, 45 a.C.",
+    "subtitle": "Una crin de caballo sobre un lecho de oro",
+    "body": "En las Disputaciones tusculanas, libro V, el tirano Dionisio sienta a su adulador Damocles bajo una espada colgada de una crin. Cicerón no habla de un peligro cualquiera: habla de por qué quien gobierna con miedo no puede ser feliz."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Ciceron",
+      "#Damocles",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#RomaAntigua",
+      "#Siracusa",
+      "#Estoicismo",
+      "#Clasicos",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Disputaciones tusculanas V, 61-62: Damocles, «ex eius adsentatoribus», alaba el poder y la riqueza de Dionisio, tirano de Siracusa, y dice que nadie fue más feliz; Dionisio lo hace acomodar en un «aureo lecto» con criados y manda colgar del techo una espada sujeta por «saeta equina» para «ut impenderet illius beati cervicibus»; Damocles pide irse porque «iam beatus nollet esse»; Cicerón concluye preguntando si no ha mostrado que nada es dichoso para aquel «cui semper aliqui terror impendeat». En V, 57: Dionisio reinó «duodequadraginta annos» (38) y tomó el poder con «quinque et viginti natus annos» (25). Lectura directa.",
+      "source": "The Latin Library, Cicerón, «Tusculanae Disputationes», libro V",
+      "url": "https://www.thelatinlibrary.com/cicero/tusc5.shtml"
+    },
+    {
+      "claim": "Texto latino de V, 61 en la edición de M. Pohlenz (Teubner, 1918): «ex eius adsentatoribus», «in aureo lecto strato». Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Cicerón, «Tusculanae Disputationes» 5.61, ed. Pohlenz",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0044:book=5:section=61"
+    },
+    {
+      "claim": "Escrita hacia el 45 a.C., probablemente en verano u otoño, en su villa de Túsculo; tras la muerte de Tulia Cicerón se apartó de los asuntos públicos y se dedicó a la filosofía; cinco libros, el V sobre «Whether virtue alone be sufficient for a happy life»; dedicada a Bruto, «who later assassinated Julius Caesar»; es «the locus classicus of the legend of the Sword of Damocles». Lectura directa.",
+      "source": "Wikipedia, «Tusculanae Disputationes»",
+      "url": "https://en.wikipedia.org/wiki/Tusculanae_Disputationes"
+    },
+    {
+      "claim": "En enero del 45 a.C. Tulia dio a luz un hijo en la casa de Cicerón en Roma; fue trasladada a la villa de Túsculo, donde murió a mediados de febrero, al parecer por complicaciones del parto. Miriam T. Griffin. Lectura directa.",
+      "source": "OUPblog (Oxford University Press), Miriam T. Griffin, «Cicero on life and death», 2017",
+      "url": "https://blog.oup.com/2017/03/cicero-on-life-and-death/"
+    }
+  ],
+  "do_not_use": [
+    "Que el tirano era Dionisio II: los datos de V, 57 (38 años de reinado, tomó el poder a los 25) corresponden a Dionisio I, llamado el Viejo. El cuerpo dice solo «Dionisio, tirano de Siracusa».",
+    "Que la historia la inventó Cicerón: él la cuenta como anécdota conocida; su fuente probable es el historiador Timeo, pero no se verificó. No se menciona.",
+    "Que Damocles era cortesano, ministro o amigo: Cicerón lo llama adulador (adsentator). Se dice adulador.",
+    "Leer «espada de Damocles» como cualquier peligro inminente: en Cicerón es un argumento sobre la infelicidad del tirano. El cuerpo lo explica.",
+    "Que la obra se escribió por la muerte de Tulia o para consolarse de ella: la consolación fue otra obra, la Consolatio. Las fuentes solo dicen que tras la muerte se dedicó a la filosofía. El cuerpo da la cronología sin causa directa.",
+    "Que la dedicatoria a Bruto inspiró el asesinato de César: no hay base. El cuerpo solo da el dato de quién era Bruto."
+  ],
+  "status": "draft"
+}
