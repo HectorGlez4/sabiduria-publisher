@@ -323,6 +323,13 @@ def _exigir_listo() -> None:
     e = telefono.estado()
     if not e["listo"]:
         raise PantallaInesperada(f"el teléfono no está listo (no se despierta ni se desbloquea): {e}")
+    # La noche del 15 al 16 nov la cortina de notificaciones quedó abierta y tumbó 17 ciclos seguidos en la
+    # comprobación de la cuenta, antes de `componer_en_el_sitio`, que era el único que la cerraba. Aquí la cierra
+    # cada paso; si ya está cerrada no hace nada, y si el comando falla no es motivo para no seguir.
+    try:
+        telefono.cerrar_cortina()
+    except telefono.TelefonoError:
+        pass
 
 
 def perfil_propio(xml: str, cuenta: str = CUENTA) -> bool | None:
