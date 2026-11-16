@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-05-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Proverbios 15:1 y la respuesta blanda",
+    "hook": "Es una de las frases más antiguas sobre cómo discutir, y tiene dos mitades. Casi siempre se cita solo la primera.",
+    "quote": {
+      "text": "La blanda respuesta quita la ira; mas la palabra áspera hace subir el furor.",
+      "author": "Libro de los Proverbios",
+      "work": "Proverbios 15:1 (versión Reina-Valera Antigua)",
+      "attribution_verified": true
+    },
+    "body": [
+      "El versículo está en la primera gran colección del libro de los Proverbios, la que va del capítulo 10 al 22 y se abre con un título: Proverbios de Salomón. La tradición atribuye el libro al rey. La mayoría de los estudiosos piensa que es una antología reunida durante siglos, y que el libro tomó su forma final después del exilio en Babilonia. Otra sección, del capítulo 25 en adelante, dice haber sido copiada por los hombres de Ezequías, rey de Judá a finales del siglo VIII a. C.",
+      "Casi todo en esa colección son dichos de dos líneas, y este es uno de ellos. La primera línea dice qué calma. La segunda dice qué enciende. En hebreo son ocho palabras en total. No promete que la respuesta suave convenza a nadie ni que dé la razón. Dice algo más modesto: que baja la temperatura.",
+      "La segunda mitad es la que se olvida, y es la más práctica. Quien responde con aspereza no se defiende: le da combustible al otro. El proverbio no habla de quién tiene la razón. Habla de lo que cada respuesta provoca."
+    ],
+    "question": "¿Cuándo fue la última vez que una respuesta suya apagó una discusión en vez de alimentarla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Proverbios",
+      "#Biblia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Sabiduria",
+      "#LiteraturaSapiencial",
+      "#Palabras",
+      "#Conversacion",
+      "#Clasicos",
+      "#Reflexion"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Proverbios 15:1 en la Reina-Valera Antigua: «LA blanda respuesta quita la ira: Mas la palabra áspera hace subir el furor»; Proverbios 10:1 se abre con «Las sentencias de Salomón»; Proverbios 25:1: «TAMBIÉN estos son proverbios de Salomón, los cuales copiaron los varones de Ezechîas, rey de Judá». Lectura directa.",
+      "source": "Bible Gateway, Reina-Valera Antigua (RVA), Proverbios 15:1; 10:1; 25:1",
+      "url": "https://www.biblegateway.com/passage/?search=Proverbios%2015%3A1%3B%20Proverbios%2010%3A1%3B%20Proverbios%2025%3A1&version=RVA"
+    },
+    {
+      "claim": "Texto hebreo masorético de Proverbios 15:1: «מַֽעֲנֶה־רַּ֭ךְ יָשִׁ֣יב חֵמָ֑ה וּדְבַר־עֶ֝֗צֶב יַעֲלֶה־אָֽף׃» (ocho palabras gráficas, contando las unidas por maqaf como unidades separadas: maaneh, rakh, yashiv, jemah, udevar, etsev, yaaleh, af). Lectura directa.",
+      "source": "Sefaria, Proverbs 15:1, versión «Miqra according to the Masorah»",
+      "url": "https://www.sefaria.org/api/v3/texts/Proverbs.15.1"
+    },
+    {
+      "claim": "El libro se atribuye a Salomón; esquema: «First Solomonic Collection of Sayings» (10:1-22:16) y «Second Solomonic Collection, Collected Under King Hezekiah» (25:1-29:27); las colecciones posteriores al capítulo 9 son en su mayoría dichos independientes de dos líneas; «Editing of the whole book was done in the early postexilic period, in the view of most scholars». Lectura directa.",
+      "source": "United States Conference of Catholic Bishops, New American Bible (Revised Edition), introducción a Proverbios",
+      "url": "https://bible.usccb.org/bible/proverbs/0"
+    },
+    {
+      "claim": "Los capítulos 10-22:16 llevan el título «Proverbios de Salomón»; los capítulos 25-29 se atribuyen a «los hombres de Ezequías», lo que los sitúa a finales del siglo VIII a. C.; el libro se atribuye por tradición a Salomón y el título repetido indica más una categoría que una autoría. Lectura directa.",
+      "source": "Wikipedia, «Book of Proverbs»",
+      "url": "https://en.wikipedia.org/wiki/Book_of_Proverbs"
+    }
+  ],
+  "do_not_use": [
+    "Que Salomón escribió este versículo: la tradición se lo atribuye, pero la introducción de la USCCB y la investigación citada en Wikipedia leen el título como colección, no como autoría. Se dice solo que la tradición se lo atribuye.",
+    "Fechar la versión Reina-Valera Antigua en un año concreto (1602, 1862 o 1909): Bible Gateway no da el año en la página leída. Se cita solo como Reina-Valera Antigua.",
+    "Etimologías del hebreo («af» como nariz, «étsev» como dolor): circulan en comentarios, pero no se verificaron en esta investigación. No se usan.",
+    "Que la sección 22:17-24:22 procede de la Instrucción de Amenemope: es cierto según la investigación, pero no afecta a 15:1. No se mezcla.",
+    "Atribuir el versículo a Jesús, al Talmud o a un sabio oriental: es de Proverbios 15:1. No se usa otra atribución.",
+    "El recuento de ocho palabras: depende de contar por separado las palabras unidas por maqaf; con la grafía tal cual son cuatro bloques por línea. Se dice ocho palabras."
+  ],
+  "status": "draft"
+}

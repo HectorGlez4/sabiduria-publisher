@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-05-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Midas y las arenas de oro del Pactolo",
+    "hook": "El mito del rey Midas no termina con un castigo. Termina con un río que arrastra oro, y ese río existe.",
+    "body": [
+      "Ovidio lo cuenta en el libro XI de las Metamorfosis. Midas, rey de Frigia, agasaja durante doce días al viejo Sileno, el maestro de Baco, y se lo devuelve. Baco le ofrece lo que quiera. Midas pide que todo lo que toque se vuelva oro. Prueba con una rama, una piedra, una manzana: funciona. Después prueba con el pan y con el vino, y también se vuelven oro. Rico, hambriento y con sed, ruega que le quiten el don.",
+      "Baco le ordena lavarse en la fuente del río que pasa junto a Sardes. Midas obedece, el poder pasa al agua, y desde entonces, dice Ovidio, ese río tiñe de oro sus arenas y los campos vecinos. El río es el Pactolo. Más de cuatro siglos antes, Heródoto ya había escrito que bajaba del monte Tmolo cargado de polvo de oro y cruzaba la plaza del mercado de Sardes.",
+      "En 1968 un equipo de Harvard y Cornell excavó junto a ese río, fuera de las murallas de Sardes, una refinería del siglo VI a. C. Allí los lidios separaban el electro, la aleación natural de oro y plata que arrastraba el Pactolo, en oro puro y plata pura. Fue en tiempos de Creso, cuando se acuñaron las primeras monedas de oro y de plata. El mito explicaba de dónde salía la riqueza. La arqueología encontró el taller."
+    ],
+    "question": "¿Qué otros mitos estarán explicando, a su manera, algo que de verdad ocurrió?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Sardes, siglo VI a. C.",
+    "subtitle": "Un rey, un deseo y un río que arrastra oro",
+    "body": "Según Ovidio, Midas se libró de su don lavándose en el río de Sardes, que desde entonces arrastra oro. Heródoto ya hablaba del polvo de oro del Pactolo. En 1968 se excavó junto a él una refinería lidia del siglo VI a. C."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Midas",
+      "#Mitologia",
+      "#Arqueologia"
+    ],
+    "extended": [
+      "#Ovidio",
+      "#Sardes",
+      "#Lidia",
+      "#Creso",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Metamorfosis XI: unos campesinos frigios capturan a Sileno y lo llevan ante Midas, que lo hospeda y lo devuelve a Baco; Baco le ofrece un don y Midas pide que todo lo que toque se vuelva oro; prueba con una rama, una piedra, un terrón, espigas, una manzana; el pan, la carne y el vino se vuelven oro; Midas ruega a Baco, que retira el don y le manda bañarse en la fuente del río que pasa junto a Sardes; el oro pasa al río y los campos vecinos siguen dorados. Lectura directa (traducción de Brookes More).",
+      "source": "Ovidio, Metamorfosis XI, 85-145, Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=11:card=85"
+    },
+    {
+      "claim": "Heródoto, Historias V, 101 (traducción de Rawlinson): el Pactolo «comes down from Mount Tmolus, and brings the Sardians a quantity of gold-dust», y «runs directly through the market place of Sardis». Lectura directa.",
+      "source": "Wikisource, «The History of Herodotus (Rawlinson)», libro V",
+      "url": "https://en.wikisource.org/wiki/History_of_Herodotus/Book_5"
+    },
+    {
+      "claim": "La «refinería de oro» de Pactolus North, junto al río Pactolo y fuera de las defensas de Sardes, contiene instalaciones para separar el electro, aleación natural o artificial de oro y plata; se usó en la primera mitad del siglo VI a. C., en la época de Creso, cuando se acuñaban las primeras monedas de oro y plata; técnicas: cementación, fundición y copelación. Lectura directa.",
+      "source": "Archaeological Exploration of Sardis (Harvard Art Museums / Cornell), «Pactolus North: ... Lydian Gold Refinery and Altar of Cybele»",
+      "url": "https://sardisexpedition.org/en/essays/about-pn"
+    },
+    {
+      "claim": "Andrew Ramage encontró la refinería en Sardes en 1968, siendo estudiante de posgrado de Harvard; pertenecía a la época de Creso; los lidios separaban el oro aluvial del río Pactolo en plata y oro; Sardes cayó ante los persas en 546 a. C. Lectura directa.",
+      "source": "Cornell Chronicle, «Archaeologist Andrew Ramage strikes gold again with new book»",
+      "url": "https://news.cornell.edu/node/282650"
+    }
+  ],
+  "do_not_use": [
+    "Cualquier cifra distinta de doce para los días que Midas agasaja a Sileno: la traducción leída en Perseus habla de doce días antes de devolverlo.",
+    "Que Midas murió de hambre o que su hija se convirtió en oro: la hija aparece en versiones modernas (Hawthorne, 1852), no en Ovidio. En Ovidio, Midas se salva lavándose en el río. No se usa.",
+    "Las orejas de burro de Midas: están en el mismo libro XI, pero son otro episodio. No se mezclan.",
+    "Que la tumba del túmulo MM de Gordion es la de Midas: es una identificación antigua que la datación posterior ha puesto en duda; no se verificó en esta investigación. No se usa.",
+    "Que los lidios inventaron la moneda o que Creso acuñó las primeras monedas del mundo: la fuente dice que en su época se acuñaban las primeras monedas de oro y de plata separadas; las primeras monedas de electro son anteriores. Se dice solo eso.",
+    "Que el Pactolo sigue llevando oro hoy en cantidad apreciable: no verificado. No se dice."
+  ],
+  "status": "draft"
+}

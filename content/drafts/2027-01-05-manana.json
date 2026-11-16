@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-05-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Anders Celsius y su escala invertida de 1742",
+    "hook": "En el termómetro que diseñó Anders Celsius, el agua se congelaba a 100 grados y hervía a 0.",
+    "body": [
+      "En 1742 el astrónomo sueco Anders Celsius publicó en las actas de la Real Academia Sueca de Ciencias un artículo breve: Observaciones sobre dos grados constantes en un termómetro. Los dos puntos fijos eran el hielo que se funde y el agua que hierve, y entre ellos trazó cien divisiones. Pero los numeró al revés de como los usamos hoy: 0 para la ebullición y 100 para la congelación. Su propio termómetro, que se conserva en Uppsala, todavía marca así.",
+      "Celsius murió en 1744, a los 42 años. Poco después, en los registros meteorológicos suecos empezaron a aparecer termómetros con la escala dada vuelta, bajo nombres distintos: Celsius Novum, Ekström, Strömer. Linneo encargó uno así al fabricante Daniel Ekström hacia 1744. En Lyon, en 1743, Jean-Pierre Christin ya había presentado un termómetro de cien grados con el 0 en la congelación. El Departamento de Astronomía de Uppsala, que estudió el caso, concluye que a nadie en particular se le puede atribuir el cambio.",
+      "El nombre tardó todavía más. Durante dos siglos se dijo grado centígrado. En 1948, entre tres propuestas —grado centígrado, grado centesimal y grado Celsius—, el Comité Internacional de Pesas y Medidas eligió la última. La escala que lleva su nombre es la de Celsius, pero dada vuelta por otros."
+    ],
+    "question": "¿Cuántas ideas llegan a nosotros con el nombre de quien las propuso, pero en la forma que les dieron otros?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Uppsala, 1742",
+    "subtitle": "La escala que hubo que dar vuelta",
+    "body": "Anders Celsius dividió en cien grados el tramo entre el hielo y el agua hirviendo, pero puso el 0 en la ebullición y el 100 en la congelación. Tras su muerte en 1744 otros invirtieron la escala. El nombre «grado Celsius» se adoptó en 1948."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Celsius",
+      "#HistoriaDeLaCiencia",
+      "#Termometro"
+    ],
+    "extended": [
+      "#Uppsala",
+      "#Suecia",
+      "#SigloXVIII",
+      "#Medicion",
+      "#Ciencia",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Celsius (1701-1744) construyó en 1742 su propia escala de temperatura definida por los puntos de congelación y ebullición del agua a presión normal, y dividió el intervalo en 100 grados; murió a los 42 años; su termómetro de mercurio, con foto de Gustavianum, tenía «100 degrees at the freezing point and 0 degrees at the boiling point». Lectura directa.",
+      "source": "Uppsala University, «Anders Celsius and the Celsius temperature scale»",
+      "url": "https://www.uu.se/en/about-uu/history/celsius"
+    },
+    {
+      "claim": "El artículo de Celsius se titula «Observations of two persistent degrees on a thermometer»; Linneo encargó un termómetro con la escala moderna al fabricante Daniel Ekström hacia 1744; tras la muerte de Celsius en 1744 aparecieron en los informes meteorológicos termómetros de escala directa con los nombres «Celsius Novum», «Ekström» y «Strömer»; el relato de Wargentin en las actas de la Academia de 1749 menciona a Celsius, a Strömer y a Ekström y no a Linneo; «no single person can be given the credit». Lectura directa.",
+      "source": "Uppsala University, Department of Physics and Astronomy, «Celsius thermometer used by Linné»",
+      "url": "https://www.astro.uu.se/history/celsius_scale.html"
+    },
+    {
+      "claim": "En 1742 Celsius introdujo una escala basada en esos dos puntos separados por 100 divisiones; en su escala original 100 grados correspondían a la congelación y 0 a la ebullición, «just the reverse of modern practice»; poco después de su muerte en 1744 aparecieron termómetros con la escala invertida, y algunos atribuyen el cambio a Linneo. Lectura directa.",
+      "source": "Linda Hall Library, «Anders Celsius» (Scientist of the Day)",
+      "url": "https://www.lindahall.org/anders-celsius/"
+    },
+    {
+      "claim": "El artículo «Observationer om twänne beständiga grader på en thermometer» se publicó en Kungliga Svenska Vetenskapsakademiens Handlingar en 1742, pp. 171-180; Jean-Pierre Christin, secretario de la Academia de Lyon, invirtió la escala en 1743 (termómetro de Lyon, 19 de mayo de 1743). Lectura directa.",
+      "source": "Wikipedia, «Celsius»",
+      "url": "https://en.wikipedia.org/wiki/Celsius"
+    },
+    {
+      "claim": "Decisión del CIPM de 1948 (PV, 21, 88): de tres nombres propuestos, «degree centigrade», «centesimal degree» y «degree Celsius», el CIPM eligió «degree Celsius»; la 9.ª CGPM adoptó también el nombre en 1948. Lectura directa.",
+      "source": "NIST, Special Publication 330 (El Sistema Internacional de Unidades), Apéndice 1",
+      "url": "https://www.nist.gov/pml/special-publication-330/sp-330-appendix-1"
+    }
+  ],
+  "do_not_use": [
+    "Que Linneo invirtió la escala de Celsius: lo repiten muchas páginas, pero el Departamento de Astronomía de Uppsala señala que el relato de la Academia de 1749 ni lo menciona y que el mérito no es de nadie en particular. Se dice solo que encargó un termómetro con la escala moderna.",
+    "La fecha de 1745 o 1747 como año de la inversión: varía según la fuente (carta de Linneo del 16 de diciembre de 1745, uso en el observatorio en 1747). No se da un año exacto de la inversión.",
+    "Que Christin copió a Celsius: hay quien dice que lo invirtió y quien dice que lo inventó de forma independiente. Se dice solo que en Lyon, en 1743, presentó un termómetro con el 0 en la congelación, sin tomar partido.",
+    "La fecha del 25 de diciembre de 1741 para la presentación de la escala que circula en redes: no verificada. Se da 1742, año de la publicación.",
+    "Que Celsius eligió el orden invertido para evitar temperaturas negativas en invierno: es una explicación que circula sin fuente primaria leída. No se usa.",
+    "Que la escala se sigue llamando «centígrado» oficialmente: el nombre oficial desde 1948 es grado Celsius."
+  ],
+  "status": "draft"
+}

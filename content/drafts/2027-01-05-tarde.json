@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-05-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Schiller y el juego de la carta XV (1795)",
+    "hook": "Schiller escribió que el ser humano solo es del todo humano cuando juega. No hablaba del recreo.",
+    "quote": {
+      "text": "El hombre solo juega cuando es hombre en el pleno sentido de la palabra, y solo es plenamente hombre cuando juega.",
+      "author": "Friedrich Schiller",
+      "work": "Cartas sobre la educación estética del hombre, carta XV (Die Horen, 1795)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En noviembre de 1791 un príncipe danés y un ministro de Hacienda de Copenhague le ofrecieron a Friedrich Schiller mil táleros al año durante tres años. Les habían dicho que tenía la salud destrozada por el exceso de trabajo. Schiller les respondió con una serie de cartas sobre la belleza. Reescritas, se imprimieron en 1795 en la revista Die Horen.",
+      "La frase está en la carta decimoquinta, y la que la precede dice algo más preciso: que con la belleza el hombre solo debe jugar, y que solo con la belleza debe jugar. Para Schiller el juego no es pasatiempo. Es el estado en que la razón y los sentidos dejan de tirar cada uno para su lado y actúan juntos, sin que ninguno mande.",
+      "Él mismo advirtió que la frase iba a sostener todo el edificio del arte y del arte de vivir, que llamó más difícil. Y puso un ejemplo: los griegos quitaron de la cara de sus dioses la seriedad, el trabajo y la preocupación. Se cita hoy como elogio del ocio. Él la escribió como una definición de la libertad."
+    ],
+    "question": "¿En qué momentos se siente usted entero, sin una parte de sí peleando con la otra?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Schiller",
+      "#Filosofia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Estetica",
+      "#Belleza",
+      "#Juego",
+      "#LiteraturaAlemana",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La carta decimoquinta de «Über die ästhetische Erziehung des Menschen» contiene: «der Mensch spielt nur, wo er in voller Bedeutung des Worts Mensch ist, und er ist nur da ganz Mensch, wo er spielt»; la frase anterior dice que el hombre solo debe jugar con la belleza y solo con la belleza; Schiller anuncia que el principio sostendrá todo el edificio del arte estético y del más difícil arte de vivir; a continuación los griegos borran de la frente de sus dioses la seriedad, el trabajo y el placer vano, y se menciona la Juno Ludovisi. Lectura directa.",
+      "source": "Projekt Gutenberg-DE, Friedrich Schiller, «Ueber die ästhetische Erziehung des Menschen», capítulo con las cartas 13-18",
+      "url": "https://projekt-gutenberg.org/authors/friedrich-schiller/books/friedrich-schiller-ueber-die-aesthetische-erziehung-des-menschen/chapter/3"
+    },
+    {
+      "claim": "Carta del 27 de noviembre de 1791 en la que se ofrece a Schiller «ein jährliches Geschenk von tausend Thalern» «auf drei Jahre», mencionando su salud quebrantada por el exceso de esfuerzo y trabajo «so sagt man uns»; capítulo dedicado al duque de Augustenburg y al conde Schimmelmann. Lectura directa.",
+      "source": "Gustav Schwab, «Schiller's Leben», en Projekt Gutenberg-DE",
+      "url": "https://projekt-gutenberg.org/authors/gustav-schwab/books/schillers-leben/chapter/53"
+    },
+    {
+      "claim": "El príncipe heredero danés Friedrich Christian de Schleswig-Holstein-Augustenburg y el conde Ernst von Schimmelmann, ministro danés de Hacienda, pagaron a Schiller una pensión de tres años de 1000 táleros anuales; Schiller les escribió una serie de cartas (las «Augustenburger Briefe»); la versión reelaborada apareció en enero de 1795 en las «Horen». Lectura directa.",
+      "source": "Duden Learnattack / Lernhelfer, Schülerlexikon Deutsch Abitur, «Friedrich von Schiller: Über die ästhetische Erziehung des Menschen»",
+      "url": "https://www.lernhelfer.de/schuelerlexikon/deutsch-abitur/artikel/friedrich-von-schiller-ueber-die-aesthetische-erziehung-des"
+    },
+    {
+      "claim": "Las cartas fueron escritas por Schiller en 1793 a Friedrich Christian von Augustenburg y son un primer borrador de «Über die ästhetische Erziehung des Menschen in einer Reihe von Briefen». Lectura directa.",
+      "source": "Wikipedia, «Augustenburger Briefe»",
+      "url": "https://en.wikipedia.org/wiki/Augustenburger_Briefe"
+    }
+  ],
+  "do_not_use": [
+    "La versión recortada «el hombre solo es plenamente hombre cuando juega» sin la primera mitad: es la que circula, y hace parecer que habla del juego en general. Se cita la frase entera, que en la carta va ligada a la belleza.",
+    "Usar la frase como elogio del juego infantil o del tiempo libre: en la carta el juego es el impulso que concilia el impulso sensible y el formal, y su objeto es la belleza. No se presenta como lema de ocio.",
+    "Que las cartas a Augustenburg ardieron en el incendio del palacio de Christiansborg de 1794: Lernhelfer habla de un incendio del palacio en 1794, pero no se verificó el nombre ni que se perdieran todos los originales (se publicaron copias en 1875). No se usa.",
+    "Que las cartas 10-16 salieron en el segundo número de Die Horen de 1795 (pp. 51-94): lo da una nota editorial que no se pudo leer directamente. Se dice solo 1795.",
+    "El rumor de la muerte de Schiller en 1791 que llegó a Copenhague: aparece en Schwab y en una publicación de la Klassik Stiftung en PDF que no se pudo leer. No se usa.",
+    "La fecha de la respuesta de agradecimiento de Schiller (16 o 19 de diciembre de 1791): las fuentes difieren. No se usa.",
+    "La traducción: es propia, del alemán de la carta XV; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}
