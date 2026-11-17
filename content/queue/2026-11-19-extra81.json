@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-07-extra41",
+  "id": "2026-11-19-extra81",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -67,5 +67,12 @@
     "Que escribió el libro para Isabella Stewart Gardner o a petición suya: la página del museo Gardner dio 403 y no se leyó. No se usa.",
     "La traducción es propia, desde el inglés original; no se atribuye a ninguna edición española."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-20T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
