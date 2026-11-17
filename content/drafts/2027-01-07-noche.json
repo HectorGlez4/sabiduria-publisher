@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-07-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Perséfone y la granada del Himno a Deméter",
+    "hook": "En el relato griego más antiguo, Perséfone come un solo grano de granada y dice que la obligaron. En Ovidio come siete, y los arranca ella misma.",
+    "body": [
+      "El Himno homérico a Deméter, probablemente del siglo VII a.C., sobrevivió en un único manuscrito, hallado en Moscú en 1777 y hoy en Leiden. En él, cuando Zeus ordena devolver a Perséfone a su madre, Hades le da a escondidas un grano de granada. Por haberlo comido, deberá pasar bajo tierra un tercio de cada año.",
+      "Cuando su madre le pregunta, Perséfone responde que Hades le metió el grano en la boca y la obligó a probarlo contra su voluntad. Ovidio, en Roma, cuenta otra cosa en el libro V de las Metamorfosis: Proserpina pasea por los jardines del inframundo, arranca ella misma la fruta y come siete granos. Solo la ve Ascálafo, que la delata. Y el año ya no se parte en tercios, sino en dos mitades.",
+      "Es el mismo mito y no dice lo mismo. En una versión hay un engaño; en la otra, un descuido con testigo. Lo que se recuerda hoy como la historia de Perséfone suele ser una mezcla de las dos, y cada una carga la culpa en un lugar distinto."
+    ],
+    "question": "¿Cuántas historias que conoce de memoria ha leído en su versión más antigua?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Perséfone",
+    "subtitle": "Un grano o siete",
+    "body": "En el Himno homérico a Deméter, Hades le da a escondidas un grano de granada y ella dice que la obligó. En las Metamorfosis de Ovidio, ella misma arranca la fruta y come siete. El mito cambió de culpable."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Persefone",
+      "#MitologiaGriega",
+      "#Mitologia"
+    ],
+    "extended": [
+      "#Demeter",
+      "#Ovidio",
+      "#Granada",
+      "#Clasicos",
+      "#Grecia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Himno homérico a Deméter (trad. Evelyn-White): Hades «secretly gave her sweet pomegranate seed to eat» (v. 371); Perséfone dice a Deméter que «he secretly put in my mouth sweet food, a pomegranate seed, and forced me to taste against my will» (v. 410-411); deberá vivir abajo «a third part of the seasons every year» (v. 398-400, y de nuevo v. 463-464). Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Homeric Hymn 2, To Demeter, trad. H. G. Evelyn-White",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0138%3Ahymn%3D2"
+    },
+    {
+      "claim": "Ovidio, Metamorfosis V: Proserpina, paseando por los campos cultivados del Estigio, arranca la fruta de un granado y masca siete granos; nadie la vio salvo Ascálafo, que la delató y fue convertido en búho; Júpiter divide el año en partes iguales, seis meses con su madre y seis con su esposo. Lectura directa (trad. inglesa de Brookes More, libro V, v. 487-571).",
+      "source": "Perseus Digital Library (Tufts University), Ovidio, Metamorphoses, libro V",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0028%3Abook%3D5%3Acard%3D533"
+    },
+    {
+      "claim": "Apolodoro, Biblioteca 1.5.3: Plutón le dio a comer un grano de granada; Ascálafo, hijo de Aqueronte y Gorgira, testificó contra ella; Perséfone quedó obligada a pasar con Plutón un tercio de cada año. Lectura directa.",
+      "source": "Perseus Digital Library (Tufts University), Apolodoro, Library 1.5.3, trad. J. G. Frazer",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0022%3Atext%3DLibrary%3Abook%3D1%3Achapter%3D5%3Asection%3D3"
+    },
+    {
+      "claim": "El himno sobrevive solo en el manuscrito descubierto por Matthiae en Moscú; las consideraciones de estilo apuntan al siglo VII a.C. como fecha probable y no es posterior a comienzos del VI. Lectura directa (introducción de Evelyn-White).",
+      "source": "LibreTexts Humanities (Long Beach City College), «The Homeric Hymn to Demeter»",
+      "url": "https://human.libretexts.org/Courses/Long_Beach_City_College/Temples_of_the_Gods%3A_An_Introduction_to_Classical_Mythology/05%3A_The_Feminine_Divine/5.06%3A_The_Homeric_Hymn_to_Demeter"
+    },
+    {
+      "claim": "Leiden, Universiteitsbibliotheek, BPG 33 H: códice griego de la primera mitad del siglo XV con la Ilíada (VIII.435-XIII.134) e himnos homéricos, empezando por el de Ceres/Deméter (ff. 31r-36r); «discovered in Moscow in 1777 by C.F. Matthaei». Lectura directa de la ficha.",
+      "source": "Biblissima / Bibliothèque de l'Université de Leyde, ficha IIIF del manuscrito BPG 33 H",
+      "url": "https://iiif.biblissima.fr/collections/manifest/95790aa1610bb55add49e4ed370142e5d7f582e7"
+    }
+  ],
+  "do_not_use": [
+    "Que el manuscrito se encontró entre gallinas y cerdos, o en un establo: Wikipedia dice «en un granero a las afueras de Moscú», la ficha de Leiden dice solo «en Moscú». Se dice «en Moscú».",
+    "Seis granos (por los seis meses): versión moderna popular. El himno y Apolodoro dicen uno; Ovidio, siete.",
+    "Que Perséfone pasa en el inframundo el invierno o la mitad del año en la versión griega: el himno y Apolodoro dicen un tercio del año; la mitad es de Ovidio.",
+    "La fecha exacta del himno: es estimación por estilo (siglo VII a.C. probable). Se dice «probablemente».",
+    "Números de verso de Ovidio (V, 534-550): no se vieron en la página leída, que solo da el bloque 487-571. No se citan versos sueltos.",
+    "La fecha de las Metamorfosis (hacia el 8 d.C.) no se verificó en esta ejecución: no se da."
+  ],
+  "status": "draft"
+}

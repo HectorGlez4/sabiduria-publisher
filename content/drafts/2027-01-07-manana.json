@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-07-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "Ötzi y la punta de flecha vista en 2001",
+    "hook": "Durante diez años se creyó que Ötzi había muerto de frío. La punta de flecha estuvo todo ese tiempo en su hombro.",
+    "body": [
+      "El 19 de septiembre de 1991, Erika y Helmut Simon, dos excursionistas alemanes, encontraron un cuerpo en el hielo a 3210 metros, cerca del paso de Tisenjoch, en la frontera entre Austria e Italia. Se pensó en un montañista accidentado. Era un hombre que había muerto hace unos 5300 años.",
+      "Los primeros estudios no encontraron heridas, y la conclusión fue que había muerto de frío y agotamiento en la montaña. En julio de 2001, una tomografía mostró una punta de flecha de sílex bajo el omóplato izquierdo, de menos de una pulgada. El cuerpo llevaba casi diez años en manos de científicos.",
+      "En 2007 un equipo de Bolzano y Zúrich vio en las imágenes que la flecha había roto la arteria subclavia. Ötzi se desangró en minutos. El caso más estudiado de la prehistoria resultó ser un homicidio, y lo que lo probaba estaba a la vista desde el principio. Solo hacía falta mirar sin dar la respuesta por sabida."
+    ],
+    "question": "¿Qué conclusión suya lleva años sin revisarse porque parecía cerrada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ötzi, 1991",
+    "subtitle": "La flecha que nadie vio en diez años",
+    "body": "Hallado en 1991 en un glaciar alpino, se creyó que había muerto de frío. En 2001 una tomografía mostró una punta de flecha de sílex bajo su omóplato izquierdo. La flecha había roto una arteria."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Otzi",
+      "#Arqueologia",
+      "#Prehistoria"
+    ],
+    "extended": [
+      "#Alpes",
+      "#HombreDeHielo",
+      "#Historia",
+      "#Ciencia",
+      "#Curiosidades",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El 19 de septiembre de 1991 Erika y Helmut Simon, excursionistas alemanes, hallaron el cuerpo a 3210 m cerca de Tisenjoch/Giogo di Tisa, en el valle de Schnals/Senales, junto a la frontera austro-italiana; se supuso que era víctima de un accidente de montaña y el cuerpo se llevó al Instituto de Medicina Forense de Innsbruck. Lectura directa.",
+      "source": "Museo Arqueológico del Tirol del Sur (Bolzano), «The discovery»",
+      "url": "https://www.iceman.it/en/the-discovery/"
+    },
+    {
+      "claim": "Al principio se pensó que Ötzi había muerto en un accidente de montaña; solo en 2001 una radiografía reveló una punta de flecha de sílex en su hombro izquierdo; la flecha cortó la arteria subclavia y murió desangrado en minutos; vivió hace unos 5300 años. Lectura directa.",
+      "source": "Museo Arqueológico del Tirol del Sur (Bolzano), «The mummy»",
+      "url": "https://www.iceman.it/en/the-mummy/"
+    },
+    {
+      "claim": "Artículo del 25 de julio de 2001: científicos hallaron dos semanas antes, mediante tomografía computarizada, una punta de flecha de menos de una pulgada bajo el hombro izquierdo superior; antes se había especulado con que se durmió y murió en la nieve o con una caída. Lectura directa.",
+      "source": "The Daily Herald (Everett), «Iceman was slain by arrow, scientists say», 25 de julio de 2001",
+      "url": "https://www.heraldnet.com/news/iceman-was-slain-by-arrow-scientists-say"
+    },
+    {
+      "claim": "En 1992, sin hallar heridas, los investigadores concluyeron que Ötzi murió de frío y agotamiento. Lectura directa (cronología del artículo).",
+      "source": "Discover Magazine, «Cracking a Very Cold Case: The Killing of Ötzi the Iceman»",
+      "url": "https://www.discovermagazine.com/cracking-a-very-cold-case-the-killing-of-otzi-the-iceman-16889"
+    },
+    {
+      "claim": "Un equipo ítalo-suizo (Rühli, Universidad de Zúrich; Egarter Vigl, Museo Arqueológico del Tirol del Sur; Pernter y Gostner, Hospital General de Bolzano) halló en la TC una lesión de la pared dorsal de la arteria subclavia izquierda causada por la punta de flecha y concluyó que murió en poco tiempo por esa lesión; publicado en Journal of Archaeological Science (2007). Lectura directa.",
+      "source": "ScienceDaily, nota de la Universidad de Zúrich, 6 de junio de 2007",
+      "url": "https://sciencedaily.com/releases/2007/06/070606113424.htm"
+    }
+  ],
+  "do_not_use": [
+    "La fecha 2002 para el hallazgo de la flecha: la da una cronología de Discover Magazine, pero el museo de Bolzano y la prensa de julio de 2001 dicen 2001. Se usa 2001.",
+    "Que fue Paul Gostner quien vio la flecha comparando sus imágenes con las de Innsbruck: aparece en resúmenes de búsqueda, no se leyó en una fuente directa. No se nombra al descubridor.",
+    "El tamaño exacto de la punta (2 cm, 13 mm): las fuentes difieren. Se dice solo «menos de una pulgada», que es lo que publicó la prensa de 2001.",
+    "Que el equipo de Innsbruck pasó por alto la flecha en sus radiografías: es plausible y se repite, pero no se leyó en lectura directa. No se usa.",
+    "Que la herida en la cabeza fue la causa de la muerte: el museo menciona una herida grave en la cabeza, pero la causa que da es la arteria subclavia.",
+    "La 'maldición de Ötzi' (muertes de quienes lo estudiaron): leyenda de prensa sin base."
+  ],
+  "status": "draft"
+}

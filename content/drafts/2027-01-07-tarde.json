@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Marie Curie y los soñadores de sus notas de 1923",
+    "hook": "Marie Curie defendió a los soñadores en el mismo párrafo en que explicó por qué nunca patentó el radio.",
+    "quote": {
+      "text": "La humanidad necesita, sin duda, hombres prácticos que saquen el mejor partido de su trabajo, sin olvidar el interés general. Pero también necesita soñadores, para quienes seguir un propósito sin interés propio es tan imperioso que no pueden atender mucho a su beneficio material.",
+      "author": "Marie Curie",
+      "work": "Notas autobiográficas, cap. III, en Pierre Curie (Nueva York, Macmillan, 1923)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1923 Marie Curie publicó en Nueva York una biografía de su marido, Pierre, y añadió al final unas notas autobiográficas. La frase está en el último párrafo del tercer capítulo de esas notas, el que recorre de la guerra de 1914 a su viaje a Estados Unidos de 1921.",
+      "El párrafo empieza con una decisión. Ella y Pierre publicaron sin reservas cómo se obtenía el radio y no sacaron patente. Renunciaron a una fortuna, admite, y amigos suyos le dijeron que con ella habrían podido financiar un instituto mejor. Aun así, escribe, sigue creyendo que hicieron bien.",
+      "Lo que viene después no es un desprecio por la gente práctica: le reconoce su lugar. Y no termina en el elogio del idealista. Termina en una exigencia: una sociedad bien organizada debería dar a esos trabajadores los medios para hacer su labor. El soñador, para Curie, no tiene por qué ser pobre. Es la sociedad la que tiene que hacerse cargo."
+    ],
+    "question": "¿Quién sostiene hoy el trabajo de quienes no buscan ganar con él?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MarieCurie",
+      "#Ciencia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Radio",
+      "#MujeresEnLaCiencia",
+      "#Investigacion",
+      "#Idealismo",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El último párrafo del capítulo 3 de las Autobiographical Notes dice: «Humanity, surely, needs practical men who make the best of their work for the sake of their own interests, without forgetting the general interest. But it also needs dreamers, for whom the unselfish following of a purpose is so imperative that it becomes impossible for them to devote much attention to their own material benefit.» En el mismo párrafo: no patentaron ni guardaron en secreto el método, renunciaron a una fortuna que amigos decían que habría servido para un instituto mejor, «Yet, I still believe that we have done right», y «a society well organized ought to assure to these workers the means for efficient labor». El capítulo cubre de 1914 a 1921. Lectura directa.",
+      "source": "Wikisource (inglés), Marie Curie, Pierre Curie, Autobiographical Notes, capítulo 3",
+      "url": "https://en.wikisource.org/wiki/Pierre_Curie/Autobiographical_Notes%E2%80%94Chapter_3"
+    },
+    {
+      "claim": "Pierre Curie, de Marie Curie, con sus Autobiographical Notes, traducido por Charlotte y Vernon Kellogg, introducción de Mrs. William Brown Meloney; Nueva York, The Macmillan Company, noviembre de 1923. Lectura directa de la portada y el índice.",
+      "source": "Wikisource (inglés), Pierre Curie (1923), portada e índice",
+      "url": "https://en.wikisource.org/wiki/Pierre_Curie"
+    },
+    {
+      "claim": "Marie Curie tomó la decisión consciente de no patentar el radio ni sus aplicaciones médicas; en 1921 hizo su primera visita a Estados Unidos y el 20 de mayo recibió en la Casa Blanca, de manos del presidente Harding, el gramo de radio reunido por una campaña de Mrs. W. B. Meloney. Lectura directa.",
+      "source": "National Institute of Standards and Technology (NIST), página histórica sobre Marie Curie y el patrón de radio",
+      "url": "https://www.nist.gov/node/446041"
+    },
+    {
+      "claim": "La versión que más circula («Humanity needs practical men, who get the most out of their work... But humanity also needs dreamers, for whom the disinterested development of an enterprise is so captivating...») aparece citada de segunda mano, en un libro de astrofísica de 2003, sin página ni edición original. Lectura directa.",
+      "source": "Wikiquote (inglés), «Marie Curie»",
+      "url": "https://en.wikiquote.org/wiki/Marie_Curie"
+    }
+  ],
+  "do_not_use": [
+    "La versión que circula en páginas de citas («who get the most out of their work», «the disinterested development of an enterprise is so captivating»): no coincide con el texto de la edición de 1923 y solo se documenta de segunda mano. Se traduce desde el texto de Wikisource.",
+    "Recortar la cita a «La humanidad también necesita soñadores» como desprecio de lo práctico: la primera frase reconoce a los hombres prácticos.",
+    "«Nada en la vida debe ser temido, solo comprendido»: muy atribuida a Curie, sin fuente primaria localizada en esta ejecución. No se usa.",
+    "«Soy de los que piensan, como Nobel, que la humanidad sacará más bien que mal de los nuevos descubrimientos»: es de Pierre Curie (final de su conferencia Nobel), no de Marie.",
+    "La lengua original de las notas: la edición de 1923 es la de Nueva York con traductores en portada; no se verificó si las notas se escribieron en francés o en inglés. La traducción al español es propia, desde el texto inglés de 1923.",
+    "Cifras de premios Nobel o fechas biográficas: la página de nobelprize.org dio 403 y no se leyó. No se mencionan."
+  ],
+  "status": "draft"
+}

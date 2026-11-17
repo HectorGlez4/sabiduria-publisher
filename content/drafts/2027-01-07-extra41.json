@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-07-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Okakura Kakuzō y El libro del té (1906)",
+    "hook": "En 1906 un japonés escribió en inglés que Occidente solo llamó civilizado a su país cuando lo vio ganar una guerra.",
+    "quote": {
+      "text": "Con gusto seguiríamos siendo bárbaros, si nuestro derecho a la civilización tuviera que fundarse en la espantosa gloria de la guerra.",
+      "author": "Okakura Kakuzō",
+      "work": "El libro del té, cap. I, «La taza de la humanidad» (1906)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Okakura Kakuzō nació en 1863 y en 1904 se fue a Boston, a trabajar en el departamento de arte chino y japonés del Museo de Bellas Artes. Ese mismo año empezó la guerra entre Japón y Rusia. En 1906 publicó en Estados Unidos El libro del té, escrito directamente en inglés para lectores occidentales.",
+      "El primer capítulo define el té como un culto a lo bello en medio de los hechos sórdidos de la vida diaria. Y enseguida pasa la cuenta: el occidental medio, escribe, tenía a Japón por bárbaro mientras se dedicaba a las artes de la paz, y lo llama civilizado desde que empezó a matar en masa en los campos de batalla de Manchuria. Se habla mucho del código del samurái, el arte de morir, y casi nada del té, que representa buena parte de su arte de vivir.",
+      "Después viene la frase. No es un desplante contra Occidente: la siguiente dice que prefiere esperar el día en que se respeten su arte y sus ideales. Okakura no pedía que admiraran a su país por vencer. Pedía que lo midieran por otra cosa."
+    ],
+    "question": "¿Por qué se admira antes a un pueblo por sus victorias que por sus artes?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Okakura",
+      "#ElLibroDelTe",
+      "#Citas"
+    ],
+    "extended": [
+      "#Japon",
+      "#Te",
+      "#Civilizacion",
+      "#Paz",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo I, «The Cup of Humanity»: «Teaism is a cult founded on the adoration of the beautiful among the sordid facts of everyday existence»; el occidental «was wont to regard Japan as barbarous while she indulged in the gentle arts of peace: he calls her civilised since she began to commit wholesale slaughter on Manchurian battlefields»; «Much comment has been given lately to the Code of the Samurai,—the Art of Death which makes our soldiers exult in self-sacrifice; but scarcely any attention has been drawn to Teaism, which represents so much of our Art of Life»; «Fain would we remain barbarians, if our claim to civilisation were to be based on the gruesome glory of war»; y a continuación «Fain would we await the time when due respect shall be paid to our art and ideals». Lectura directa.",
+      "source": "Wikisource (inglés), Okakura Kakuzō, The Book of Tea, Chapter I",
+      "url": "https://en.wikisource.org/wiki/The_Book_of_Tea/Chapter_I"
+    },
+    {
+      "claim": "The Book of Tea, de Okakura-Kakuzo, 1906; copyright 1906 de Fox Duffield & Company. Lectura directa de la portada.",
+      "source": "Wikisource (inglés), The Book of Tea, portada e índice",
+      "url": "https://en.wikisource.org/wiki/The_Book_of_Tea"
+    },
+    {
+      "claim": "Okakura Kakuzō (1863-1913) escribió tres libros en inglés, entre ellos The Book of Tea, publicado en Estados Unidos en 1906 (Fox Duffield); en 1904, el mismo año en que estallaron las hostilidades entre Japón y Rusia, se trasladó a EE. UU. como primer conservador japonés del departamento de arte chino y japonés del Museo de Bellas Artes de Boston. Lectura directa.",
+      "source": "Nippon.com, «Beyond East and West: Okakura Kakuzō and The Book of Tea»",
+      "url": "https://www.nippon.com/en/views/b07207/beyond-east-and-west-okakura-kakuzo-and-the-book-of-tea.html"
+    },
+    {
+      "claim": "The Book of Tea se publicó en Estados Unidos en 1906, lo escribió Okakura Kakuzō en inglés y está dirigido a un público occidental. Lectura directa.",
+      "source": "Standard Ebooks, ficha de The Book of Tea",
+      "url": "https://standardebooks.org/ebooks/okakura-kakuzo/the-book-of-tea"
+    }
+  ],
+  "do_not_use": [
+    "«Content to remain barbarians»: paráfrasis que circula; el texto de 1906 dice «Fain would we remain barbarians».",
+    "El cargo exacto y la fecha en el Museo de Bellas Artes de Boston: las fuentes difieren (primer conservador en 1904 según Nippon.com, jefe de la división asiática en 1910 según Standard Ebooks, conservador 1906-1913 según un librero). Se dice solo que en 1904 se fue a trabajar al departamento de arte chino y japonés.",
+    "La editorial: la portada de Wikisource menciona G. P. Putnam's Sons (Londres y Nueva York) y copyright de Fox Duffield; se omite la editorial en la ficha de la cita.",
+    "Que escribió el libro para Isabella Stewart Gardner o a petición suya: la página del museo Gardner dio 403 y no se leyó. No se usa.",
+    "La traducción es propia, desde el inglés original; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}
