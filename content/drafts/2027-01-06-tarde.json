@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-06-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Boileau y el canto I del Arte poética (1674)",
+    "hook": "Boileau escribió que lo bien pensado se dice con claridad. Unos versos después pidió rehacer cada texto veinte veces.",
+    "quote": {
+      "text": "Lo que se concibe bien se enuncia con claridad, y las palabras para decirlo llegan con facilidad.",
+      "author": "Nicolas Boileau",
+      "work": "El arte poética, canto I (Œuvres diverses, París, 1674)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Nicolas Boileau nació en 1636. En 1674 reunió sus obras en un volumen, las Œuvres diverses, y metió en él un tratado en verso de cuatro cantos sobre cómo se escribe, a imitación del Arte poética de Horacio. El pareado más citado está en el primer canto.",
+      "No va solo. Los versos anteriores hablan de ciertos espíritus cuyos pensamientos viven envueltos en una nube espesa, y dan la orden: antes de escribir, aprendan a pensar. Según la idea sea más o menos oscura, dice, la expresión la sigue más o menos limpia. El problema del texto confuso, para Boileau, no está en la pluma. Está antes.",
+      "Y la facilidad que promete no es la del primer intento. Más adelante, en el mismo canto, aconseja apresurarse despacio y volver a poner la obra en el telar veinte veces. Las palabras llegan solas, sí. Pero llegan al final de un trabajo, no en lugar de él."
+    ],
+    "question": "¿Qué idea suya le cuesta explicar porque todavía no termina de pensarla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Boileau",
+      "#Escritura",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaFrancesa",
+      "#Claridad",
+      "#Pensamiento",
+      "#Clasicos",
+      "#Siglo17",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El canto I de L'Art poétique contiene «Ce que l'on conçoit bien s'énonce clairement, / Et les mots pour le dire arrivent aisément»; lo preceden los versos sobre «certains esprits dont les sombres pensées / Sont d'un nuage épais toujours embarrassées», «Avant donc que d'écrire apprenez à penser» y «Selon que notre idée est plus ou moins obscure, / L'expression la suit, ou moins nette, ou plus pure»; más adelante en el mismo canto aparecen «Hâtez-vous lentement» y «Vingt fois sur le métier remettez votre ouvrage». Lectura directa, edición Œuvres poétiques, Imprimerie générale, 1872, vol. 1, pp. 203-211.",
+      "source": "Wikisource (francés), Boileau, Œuvres poétiques, L'Art poétique, Chant I",
+      "url": "https://fr.wikisource.org/wiki/Boileau_-_%C5%92uvres_po%C3%A9tiques/L%E2%80%99Art_po%C3%A9tique/Chant_I"
+    },
+    {
+      "claim": "En 1674 Boileau publicó, junto con obras anteriores, las «Œuvres diverses du sieur D…», que incluían L'Art poétique; la obra tiene cuatro partes y ocupa en la literatura francesa un lugar paralelo al de su modelo latino, el Ars poetica de Horacio. Lectura directa.",
+      "source": "Encyclopædia Britannica, 11.ª edición (1911), «Boileau-Despréaux, Nicolas», en Wikisource",
+      "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Boileau-Despr%C3%A9aux,_Nicolas"
+    },
+    {
+      "claim": "Boileau vivió de 1636 a 1711; su Arte poética se divide en cuatro partes y tuvo éxito inmediato en los salones de París. Lectura directa.",
+      "source": "Encyclopedia of World Biography, «Nicholas Boileau-Despréaux», en Encyclopedia.com",
+      "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/nicholas-boileau-despreaux"
+    }
+  ],
+  "do_not_use": [
+    "El número de verso (153-154) del pareado: solo lo da un sitio de citas; la edición de Wikisource no numera los versos. No se usa.",
+    "Que «Hâtez-vous lentement» es invención de Boileau: es la vieja máxima latina festina lente; no se presenta como suya ni se le atribuye su origen.",
+    "Presentar el pareado como elogio de escribir rápido o sin esfuerzo: el mismo canto pide rehacer la obra veinte veces.",
+    "La fecha de nacimiento exacta (1 de noviembre de 1636) y su edad en 1674: no se verificó el día en lectura directa. Se dice solo el año, 1636.",
+    "La elección a la Académie francesa en 1684 impuesta por Luis XIV: solo aparece en resúmenes de búsqueda, no en lectura directa. No se usa.",
+    "La traducción es propia, del francés; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}

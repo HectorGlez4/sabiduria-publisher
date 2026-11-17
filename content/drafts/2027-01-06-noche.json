@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-06-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Filemón y Baucis en las Metamorfosis de Ovidio",
+    "hook": "Mil casas cerraron la puerta a dos viajeros. La única que abrió era la más pobre.",
+    "body": [
+      "En el libro VIII de las Metamorfosis, Ovidio cuenta que Júpiter y Mercurio, disfrazados de mortales, recorrieron las colinas de Frigia pidiendo techo. Llamaron a mil casas y mil casas echaron el cerrojo. Los recibió una choza de juncos donde vivían dos ancianos, Filemón y Baucis. Les sirvieron lo poco que tenían, y la jarra de vino empezó a llenarse sola. Quisieron matar para ellos su único ganso. El ganso corrió a esconderse entre los dioses.",
+      "Los dioses inundaron la comarca y convirtieron la choza en templo. Les ofrecieron lo que pidieran. Filemón pidió dos cosas: cuidar ese templo, y que una misma hora se los llevara a ambos, para no ver nunca la tumba de su mujer ni ser enterrado por ella. Al morir, él se volvió roble y ella tilo, uno junto al otro. Ovidio pone la historia en boca de Lélex, que la cuenta para responder a un hombre que se burlaba de los dioses.",
+      "Siglos después, Goethe tomó los nombres para el acto V del segundo Fausto. Ahí son otra pareja de ancianos cuya cabaña y cuyos tilos le estorban la vista a Fausto, que quiere ver entera su obra. Ordena reubicarlos. Mefistófeles y sus hombres queman la casa con ellos dentro. Goethe le dijo a Eckermann en 1831 que su pareja no tenía nada que ver con la antigua. El mito premiaba la puerta abierta. Su reescritura moderna muestra lo que pasa cuando la casa pequeña está en medio del progreso."
+    ],
+    "question": "¿Qué casa pequeña ha visto usted desaparecer porque estorbaba a algo más grande?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Filemón y Baucis",
+    "subtitle": "Un roble y un tilo en Ovidio, una cabaña quemada en Goethe",
+    "body": "Mil casas cerraron la puerta a Júpiter y Mercurio. Los acogieron dos ancianos pobres, que pidieron morir en la misma hora. Él se volvió roble; ella, tilo. Siglos después, en el Fausto de Goethe, otra pareja con sus nombres muere porque su cabaña estorba."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Mitologia",
+      "#Ovidio",
+      "#Hospitalidad"
+    ],
+    "extended": [
+      "#Metamorfosis",
+      "#Goethe",
+      "#Fausto",
+      "#MitologiaGriega",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Metamorfosis VIII, en latín: «mille domos adiere locum requiemque petentes, / mille domos clausere serae»; «collibus est Phrygiis»; Filemón pide «auferat hora duos eadem, nec coniugis umquam / busta meae videam, neu sim tumulandus ab illa»; «tiliae contermina quercus»; «cura deum di sint»; el narrador es Lélex. Lectura directa.",
+      "source": "The Latin Library, Ovidio, Metamorphoses, liber VIII",
+      "url": "https://www.thelatinlibrary.com/ovid/ovid.met8.shtml"
+    },
+    {
+      "claim": "Traducción de A. S. Kline, Metamorfosis VIII, 611-724: Pirítoo se burla de que los dioses cambien la forma de las cosas y Lélex responde; Júpiter y Mercurio disfrazados en Frigia; mil casas cerradas; la choza de techo de juncos; la crátera que se rellena sola; el único ganso que se refugia junto a los dioses; la inundación de la vecindad y la choza convertida en templo; la petición de ser sacerdotes guardianes del templo y morir a la misma hora; Baucis tilo y Filemón roble. Lectura directa.",
+      "source": "Poetry in Translation, Ovidio, The Metamorphoses, libro VIII, trad. A. S. Kline",
+      "url": "https://www.poetryintranslation.com/PITBR/Latin/Metamorph8.php"
+    },
+    {
+      "claim": "Fausto II, acto V: la cabaña y los tilos de Filemón y Baucis estorban a Fausto, que quiere ver entera su obra; ordena a Mefistófeles apartarlos y darles una finca en otro lugar; Mefistófeles y los tres valientes derriban la puerta, la paja se incendia y los ancianos mueren; Fausto: «I wanted them moved, not dead». Lectura directa.",
+      "source": "Poetry in Translation, Goethe, Faust Part II, Act V, trad. A. S. Kline",
+      "url": "https://www.poetryintranslation.com/PITBR/German/FaustIIActV.php"
+    },
+    {
+      "claim": "Conversación del lunes 6 de junio de 1831: Goethe dice «Mein Philemon und Baucis hat mit jenem berühmten Paare des Altertums und der sich daran knüpfenden Sage nichts zu tun» y que les dio esos nombres para realzar los caracteres. Lectura directa.",
+      "source": "Johann Peter Eckermann, Gespräche mit Goethe, en Projekt Gutenberg-DE",
+      "url": "https://projekt-gutenberg.org/authors/johann-peter-eckermann/books/johann-peter-eckermann-gespraeche-mit-goethe/chapter/209"
+    }
+  ],
+  "do_not_use": [
+    "Que los ancianos de Goethe «mueren del susto»: lo dice Mefistófeles, pero Linceo describe la casa entre humo y llamas. El cuerpo dice que queman la casa con ellos dentro.",
+    "Que Fausto ordenó matarlos: ordenó reubicarlos y reniega de la violencia. No se le atribuye la orden de matar.",
+    "Que en Goethe son la misma pareja de Ovidio: Goethe lo negó ante Eckermann el 6 de junio de 1831.",
+    "La fecha de composición de las Metamorfosis (hacia el año 8) y la de publicación del segundo Fausto (1832, póstuma): no se verificaron en lectura directa. Se dice «siglos después».",
+    "Que los árboles siguen en Bitinia, como dice Lélex: es un detalle del narrador dentro de la ficción; no se presenta como dato.",
+    "Las traducciones al español son propias, del latín y del alemán, con apoyo de la traducción inglesa de Kline."
+  ],
+  "status": "draft"
+}

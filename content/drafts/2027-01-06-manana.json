@@ -1,0 +1,65 @@
+{
+  "id": "2027-01-06-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Henry Cavendish y la densidad de la Tierra (1798)",
+    "hook": "El experimento que pesó la Tierra lleva el nombre de Cavendish. El aparato lo había construido un hombre muerto.",
+    "body": [
+      "En junio de 1798 Henry Cavendish publicó en las Philosophical Transactions de la Royal Society sus Experimentos para determinar la densidad de la Tierra. Una barra de madera de 1,8 metros colgaba de un hilo con una bola de plomo en cada punta. Junto a ellas, dos bolas de 158 kilos. Su atracción, mínima, hacía girar la barra. Cavendish cerró la sala y la observó desde fuera con un telescopio: cualquier diferencia de calor movía el aire y falseaba la medida.",
+      "La primera frase del artículo no habla de él. Dice que el método lo ideó el difunto reverendo John Michell, que terminó el aparato poco antes de morir y no llegó a hacer ningún experimento. La caja pasó a Francis Wollaston, profesor en Cambridge, que se la dio a Cavendish por no tener dónde usarla. Cavendish rehízo la mayor parte. El resultado: la Tierra es 5,48 veces más densa que el agua. Hoy se acepta 5,51.",
+      "Los manuales dicen que Cavendish midió la constante G de la gravitación. Él no la calculó: expresó su resultado como una densidad. Una de las primeras referencias a G es de 1873, setenta y cinco años después. El experimento lleva el nombre de quien lo terminó, y se recuerda por una constante que él nunca dio."
+    ],
+    "question": "¿Qué trabajo suyo terminó otra persona, o qué trabajo ajeno terminó usted?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Cavendish, 1798",
+    "subtitle": "El aparato de Michell, la sala cerrada y la constante que no calculó",
+    "body": "El reverendo John Michell construyó el aparato y murió sin usarlo. Cavendish lo rehízo, lo encerró en una sala y lo observó con un telescopio desde fuera. Resultado: la Tierra es 5,48 veces más densa que el agua."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Cavendish",
+      "#HistoriaDeLaCiencia",
+      "#Fisica"
+    ],
+    "extended": [
+      "#Gravedad",
+      "#RoyalSociety",
+      "#JohnMichell",
+      "#Ciencia",
+      "#Experimentos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Cavendish, «Experiments to determine the density of the Earth», Philosophical Transactions vol. 88, leído el 21 de junio de 1798: el método lo ideó «the late Rev. John Michell», que «did not complete the apparatus till a short time before his death, and did not live to make any experiments with it»; pasó a «the Rev. Francis John Hyde Wollaston, Jacksonian Professor at Cambridge»; Cavendish «chose to make the greatest part of it afresh»; colocó el aparato «in a room which should remain constantly shut» y observó el brazo «from without, by means of a telescope», por las corrientes de aire causadas por el calor; conclusión: «the density of the earth comes out 5.48 times greater than that of water». Lectura directa del OCR del artículo.",
+      "source": "Philosophical Transactions of the Royal Society, vol. 88 (1798), artículo XXI, OCR en el corpus de Jim Clifford",
+      "url": "https://jimclifford.ca/philosophical-transactions-ocr-1665-1869/articles/jstor-106988/"
+    },
+    {
+      "claim": "Cavendish (1731-1810) informó en junio de 1798 que la densidad de la Tierra era 5,48 veces la del agua; el aparato de partida venía del reverendo John Michell, que murió sin llevar a cabo el experimento; observaba con un telescopio a través de una ventana y movía los pesos desde fuera; hoy el experimento se ve como una medida de la constante G. Lectura directa.",
+      "source": "American Physical Society, APS News, «June 1798: Cavendish weighs the world» (junio de 2008)",
+      "url": "https://aps.org/apsnews/2008/06/1798-cavendish-weighs-world"
+    },
+    {
+      "claim": "Barra de madera de seis pies (1,8 m) con bolas de plomo de 0,73 kg; bolas grandes de 158 kg; Cavendish expresó su resultado como densidad de la Tierra, no como G; «One of the first references to G is in 1873, 75 years after Cavendish's work»; valor actual de la densidad media terrestre 5,514 g/cm³. Lectura directa.",
+      "source": "Wikipedia, «Cavendish experiment»",
+      "url": "https://en.wikipedia.org/wiki/Cavendish_experiment"
+    }
+  ],
+  "do_not_use": [
+    "Que el valor de Cavendish fue en realidad 5,448 y que el 5,48 se debe a un error aritmético hallado por Francis Baily (en 1821 o en 1842, según la fuente): solo lo da Wikipedia y de forma confusa. El cuerpo usa el 5,48 que figura en la conclusión del propio artículo.",
+    "Que hizo el experimento en un cobertizo de su jardín: solo en una página de divulgación sin fuente. El artículo habla de «a room»; se dice «la sala».",
+    "Que Cavendish «midió G» o «calculó la constante gravitacional»: él dio una densidad, no G.",
+    "Las «estrellas oscuras» de Michell (precursoras de los agujeros negros): cierto en la literatura, pero no se verificó en esta ejecución. No se usa.",
+    "Que el calor del cuerpo del observador era la causa concreta que temía: el artículo habla de corrientes de aire por diferencias de temperatura; lo del cuerpo es la lectura habitual pero no se leyó literalmente. Se dice «cualquier diferencia de calor».",
+    "Que la letra G no aparece en el artículo: no se buscó en el texto completo. Se dice solo que expresó el resultado como densidad.",
+    "La edad de Cavendish en 1798 (66 o 67): no se verificó la fecha exacta de nacimiento. No se usa."
+  ],
+  "status": "draft"
+}

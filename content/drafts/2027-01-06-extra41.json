@@ -1,0 +1,77 @@
+{
+  "id": "2027-01-06-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Euclides da Cunha y el sertanejo de Os Sertões (1902)",
+    "hook": "La frase más orgullosa del sertón brasileño la escribió un periodista enviado a contar su derrota.",
+    "quote": {
+      "text": "El sertanejo es, ante todo, un fuerte.",
+      "author": "Euclides da Cunha",
+      "work": "Os Sertões, parte «O Homem», capítulo III (Laemmert, 1902)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1897 el diario O Estado de S. Paulo mandó a Euclides da Cunha a cubrir la guerra de Canudos, un caserío del interior de Brasil que el ejército de la República tardó cuatro expediciones en tomar. Cinco años después, en 1902, la editorial Laemmert publicó Os Sertões. Los costos los pagó el autor.",
+      "La frase abre el capítulo III de la segunda parte, «O Homem». La que la sigue la compara con el raquitismo de los mestizos neurasténicos de la costa, y unas líneas más abajo el mismo hombre es desgarbado, torcido, un Hércules-Quasímodo. Euclides escribía con las teorías raciales de su tiempo, que hoy no se sostienen. Lo que no pudo negar fue lo que vio.",
+      "El libro termina con otra frase seca: Canudos no se rindió. Resistió hasta el agotamiento completo. Al final quedaban cuatro defensores, un viejo, dos hombres hechos y un niño, frente a cinco mil soldados. La fuerza que la frase celebra es la de un pueblo que perdió la guerra entera."
+    ],
+    "question": "¿Qué fuerza ha visto usted en alguien a quien nadie esperaba ver resistir?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EuclidesDaCunha",
+      "#OsSertoes",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaBrasilena",
+      "#Canudos",
+      "#Brasil",
+      "#Historia",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El capítulo III de «O Homem» se abre con «O sertanejo é, antes de tudo, um forte.»; la frase siguiente es «Não tem o raquitismo exaustivo dos mestiços neurastênicos do litoral»; unas líneas después aparecen «É desgracioso, desengonçado, torto» y la expresión «Hércules-Quasímodo». Lectura directa.",
+      "source": "Wikisource (portugués), Euclides da Cunha, Os Sertões, O Homem, III",
+      "url": "https://pt.wikisource.org/wiki/Os_Sert%C3%B5es/O_Homem/III"
+    },
+    {
+      "claim": "La edición de 1902 se divide en A Terra, O Homem y una tercera parte sobre la lucha con sus secciones (preliminares, Travessia do Cambaio, Expedição Moreira César, Quarta Expedição, Nova Fase da Luta, Últimos Dias); el índice titula el capítulo III de O Homem «O sertanejo». Lectura directa.",
+      "source": "Wikisource (portugués), Os Sertões (1902), índice de la primera edición",
+      "url": "https://pt.wikisource.org/wiki/Os_Sert%C3%B5es_(1902)"
+    },
+    {
+      "claim": "Últimos Dias, VI: «Canudos não se rendeu. Exemplo único em toda a história, resistiu até ao esgotamento completo»; cayó «no dia 5, ao entardecer»; «Eram quatro apenas: um velho, dois homens feitos e uma criança, na frente dos quais rugiam raivosamente 5 mil soldados». Lectura directa.",
+      "source": "Wikisource (portugués), Euclides da Cunha, Os Sertões, Últimos Dias, VI",
+      "url": "https://pt.wikisource.org/wiki/Os_Sert%C3%B5es/%C3%9Altimos_Dias/VI"
+    },
+    {
+      "claim": "Euclides da Cunha (Cantagalo, 20 de enero de 1866 - Río de Janeiro, 15 de agosto de 1909) cubrió la guerra de Canudos en 1897 como corresponsal de O Estado de S. Paulo; Os Sertões se publicó en 1902 por la editorial Laemmert, con los costos a cargo del autor. Lectura directa.",
+      "source": "Academia Brasileira de Letras, biografía de Euclides da Cunha (cadeira 7)",
+      "url": "https://www.academia.org.br/academicos/euclides-da-cunha/biografia"
+    },
+    {
+      "claim": "O Estado de S. Paulo envió a Euclides da Cunha en 1897 para cubrir la guerra de Canudos; la fecha exacta de publicación de Os Sertões es incierta, y se toma como oficial la de la dedicatoria más antigua, 2 de diciembre de 1902. Lectura directa.",
+      "source": "Correio Braziliense, «Os 120 anos de Os Sertões, apontado como primeiro livro-reportagem brasileiro» (diciembre de 2022)",
+      "url": "https://www.correiobraziliense.com.br/brasil/2022/12/5056169-os-120-anos-de-os-sertoes-apontado-como-primeiro-livro-reportagem-brasileiro.html"
+    }
+  ],
+  "do_not_use": [
+    "Que Canudos cayó el 5 de octubre de 1897: el libro dice «no dia 5, ao entardecer» sin mes en la página leída, y el mes solo aparece en resúmenes de búsqueda. Se omite la fecha exacta.",
+    "Que Euclides salió de Canudos el 3 de octubre, enfermo de fiebre, dos días antes del final: solo en resúmenes de búsqueda (Folha Vitória, Revista de Antropologia USP en PDF ilegible). No se usa.",
+    "Las cifras de 22 cartas y 55 telegramas enviados al diario: solo en un resumen de búsqueda. No se usan.",
+    "Citar la frase sola como elogio del nordestino sin el contexto: en el capítulo va ligada a teorías raciales deterministas (la comparación con los «mestiços neurastênicos do litoral»). No se reproduce esa comparación como verdad, se señala como idea de su época.",
+    "Que el ejército necesitó cuatro expediciones: el índice de 1902 nombra la Expedição Moreira César y la Quarta Expedição; el número cuatro se infiere del título «Quarta Expedição». Se mantiene porque lo da el propio libro.",
+    "La traducción es propia, del portugués; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}
