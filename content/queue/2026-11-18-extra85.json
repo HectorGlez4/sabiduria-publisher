@@ -1,5 +1,5 @@
 {
-  "id": "2026-10-11-extra41",
+  "id": "2026-11-18-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Dante", "#DivinaComedia", "#Literatura"],
-    "extended": ["#Infierno", "#Ulises", "#Citas", "#EdadMedia", "#Italia", "#Poesia", "#Historia"]
+    "topic": [
+      "#Dante",
+      "#DivinaComedia",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Infierno",
+      "#Ulises",
+      "#Citas",
+      "#EdadMedia",
+      "#Italia",
+      "#Poesia",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -55,6 +67,12 @@
     "Citar el PDF de la Accademia della Crusca como si se hubiera leído. Se descargó pero no pudo convertirse a texto en esta sesión; lo que se recoge de él procede del resumen indexado, y el mismo contenido está respaldado por la Enciclopedia Dantesca.",
     "Usar el terceto como lema motivacional sin más. La pieza no niega lo que dice el verso; señala que en el poema sirve para persuadir a unos hombres de un viaje del que ninguno regresó."
   ],
-  "status": "draft",
-  "targets": ["facebook", "instagram", "threads"]
+  "status": "ready",
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "publish_at": "2026-11-19T04:26:00Z",
+  "results": {}
 }

@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-06-extra41",
+  "id": "2026-11-18-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -73,5 +73,12 @@
     "Que el ejército necesitó cuatro expediciones: el índice de 1902 nombra la Expedição Moreira César y la Quarta Expedição; el número cuatro se infiere del título «Quarta Expedição». Se mantiene porque lo da el propio libro.",
     "La traducción es propia, del portugués; no se atribuye a ninguna edición española."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-18T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

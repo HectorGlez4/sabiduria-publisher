@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-05-tarde",
+  "id": "2026-11-18-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -69,5 +69,12 @@
     "La fecha de la respuesta de agradecimiento de Schiller (16 o 19 de diciembre de 1791): las fuentes difieren. No se usa.",
     "La traducción: es propia, del alemán de la carta XV; no se atribuye a ninguna edición española."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-19T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

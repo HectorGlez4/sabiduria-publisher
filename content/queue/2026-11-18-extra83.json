@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-05-extra41",
+  "id": "2026-11-18-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -68,5 +68,12 @@
     "Atribuir el versículo a Jesús, al Talmud o a un sabio oriental: es de Proverbios 15:1. No se usa otra atribución.",
     "El recuento de ocho palabras: depende de contar por separado las palabras unidas por maqaf; con la grafía tal cual son cuatro bloques por línea. Se dice ocho palabras."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-19T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

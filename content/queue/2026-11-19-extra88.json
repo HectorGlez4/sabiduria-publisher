@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-19-tarde",
+  "id": "2026-11-19-extra88",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Shakespeare", "#Hamlet", "#Citas"],
-    "extended": ["#Teatro", "#LiteraturaInglesa", "#1623", "#FrasesCelebres", "#Literatura", "#Clasicos"]
+    "topic": [
+      "#Shakespeare",
+      "#Hamlet",
+      "#Citas"
+    ],
+    "extended": [
+      "#Teatro",
+      "#LiteraturaInglesa",
+      "#1623",
+      "#FrasesCelebres",
+      "#Literatura",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -51,5 +62,12 @@
     "Decir que la frase no está en ninguna edición anterior al Folio: no se comprobó el primer cuarto de 1603 (Q1). El cuerpo solo habla del segundo cuarto.",
     "Las cifras de líneas propias de cada texto varían según el editor (unas 70 u 85 del Folio, unas 200 o 230 de Q2). No entran."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-20T02:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

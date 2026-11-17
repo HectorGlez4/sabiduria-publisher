@@ -1,8 +1,8 @@
 {
-  "id": "2026-10-18-extra41",
+  "id": "2026-11-19-extra86",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Śāntideva y el Bodhicaryāvatāra VI, 10",
     "hook": "La frase se repite firmada por Buda. Es de un monje indio que vivió más de mil años después, y en su libro no es un consuelo: es el primer paso de un método contra la ira.",
@@ -21,7 +21,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -70,5 +70,7 @@
     "facebook",
     "instagram",
     "threads"
-  ]
+  ],
+  "publish_at": "2026-11-19T19:26:00Z",
+  "results": {}
 }
