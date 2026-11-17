@@ -117,7 +117,8 @@ def _editor(xml: str) -> bool:
 
 PAGINA = "Sabiduria de Bolsillo"
 MENU = "Menu button: Access my profile and other navigation links"
-EXITO = ("Post successful.", "Post successful", "Publication réussie.", "Post publié.", "Post publié",
+EXITO = ("Post successful.", "Post successful", "Le post a bien été publié.", "Le post a bien été publié",
+         "Publication réussie.", "Post publié.", "Post publié",
          "Publicación correcta.")
 PANEL = "https://www.linkedin.com/company/105723257/admin/dashboard/"  # el panel de la Página «Sabiduria de Bolsillo»
 ESCRIBIR = ("Start a post", "Commencer un post", "Crear una publicación", "Empezar una publicación")

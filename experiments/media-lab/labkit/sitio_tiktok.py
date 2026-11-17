@@ -30,9 +30,9 @@ TT = "com.zhiliaoapp.musically"
 CUENTA = "@sabiduriabolsillo"   # el @ del perfil: el nombre de la cabecera cambia («Sabiduria de bolsillo1»)
 SIGUIENTE = ("Next", "Suivant", "Siguiente")
 PUBLICAR = ("Post", "Publier", "Publicar")
-BORRADORES = ("Drafts", "Brouillons", "Borradores")
+BORRADORES = ("Drafts", "Brouillons", "Brouillon", "Borradores")
 DESCARTAR = ("Discard", "Supprimer", "Descartar")
-FALLO = ("Couldn't post", "Retry", "Réessayer", "Reintentar", "Upload failed")
+FALLO = ("Couldn't post", "Retry", "Réessayer", "Reintentar", "Upload failed", "Échec de la publication")
 LIMITE_PIE = 4000
 MARCA = "?de=tiktok"
 
@@ -48,8 +48,11 @@ def pie_tiktok(texto_plano: str, url: str) -> str:
     return pie
 
 
+HISTORIA = ("Your Story", "Ta Story", "Tu historia", "Votre story")
+
+
 def _editor(xml: str) -> bool:
-    return _un_texto(xml, SIGUIENTE, TT) is not None and telefono.buscar(xml, texto="Your Story", paquete=TT) is not None
+    return _un_texto(xml, SIGUIENTE, TT) is not None and _un_texto(xml, HISTORIA, TT) is not None
 
 
 def _pantalla_de_publicar(xml: str) -> bool:
