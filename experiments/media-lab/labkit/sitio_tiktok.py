@@ -156,7 +156,10 @@ def verificar(ev: Path, plazo_s: int = 90) -> dict:
         try:
             xml = telefono.volcado(timeout=20)
         except telefono.TelefonoError:
-            time.sleep(2)
+            # Tras «Post» TikTok salta a «For You» con un vídeo en marcha, que uiautomator no vuelca (17 nov): la
+            # pantalla de publicar, que sí se vuelca, ya no está.
+            cerrada = True
+            time.sleep(3)
             continue
         if any(telefono.buscar(xml, contiene=t, paquete=TT) for t in FALLO):
             raise PantallaInesperada("TikTok avisa de que la publicación falló")

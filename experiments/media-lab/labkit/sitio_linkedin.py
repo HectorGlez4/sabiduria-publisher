@@ -15,6 +15,8 @@ Por qué este camino (explorado el 14 nov en el SM-S918B):
 """
 from __future__ import annotations
 
+import re
+import shlex
 import subprocess
 import sys
 import time
@@ -115,7 +117,16 @@ def _editor(xml: str) -> bool:
 
 PAGINA = "Sabiduria de Bolsillo"
 MENU = "Menu button: Access my profile and other navigation links"
-EXITO = ("Post successful.", "Post successful", "Publication réussie.", "Publicación correcta.")
+EXITO = ("Post successful.", "Post successful", "Publication réussie.", "Post publié.", "Post publié",
+         "Publicación correcta.")
+PANEL = "https://www.linkedin.com/company/105723257/admin/dashboard/"  # el panel de la Página «Sabiduria de Bolsillo»
+ESCRIBIR = ("Start a post", "Commencer un post", "Crear una publicación", "Empezar una publicación")
+VISTA_PREVIA = ("Sharing preview box", "Fenêtre de présentation du partage", "Vista previa")
+SIN_VISTA_PREVIA = ("Cannot display preview", "Impossible d’afficher l’aperçu", "Impossible d'afficher l'aperçu")
+
+
+def _boton_escribir(xml: str) -> dict | None:
+    return next((n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] in ESCRIBIR), None)
 
 
 def texto_de_la_cita(url: str) -> str:
@@ -142,15 +153,12 @@ def compartir(url: str, plantilla: str, ev: Path) -> dict:
     pie = ev / "pie-linkedin.txt"
     pie.write_text(pie_linkedin(texto_de_la_cita(url), url), encoding="utf-8")
     telefono.forzar_cierre(LI)
-    telefono.lanzar(LI)
-    xml = _esperar(lambda x: any(n["package"] == LI and n["desc"] == MENU for n in telefono.nodos(x)),
-                   "el inicio de LinkedIn", plazo=40)
-    telefono.tocar(*next(n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] == MENU)["centro"])
-    xml = _esperar(lambda x: telefono.buscar(x, texto=PAGINA, paquete=LI) is not None, "la Página en el menú", plazo=20)
-    telefono.tocar(*telefono.buscar(xml, texto=PAGINA, paquete=LI)["centro"])
-    escribir = lambda x: any(n["package"] == LI and n["desc"] == "Start a post" for n in telefono.nodos(x))
-    xml = _esperar(escribir, "el panel de la Página", plazo=30)
-    telefono.tocar(*next(n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] == "Start a post")["centro"])
+    # El panel de la Página por enlace directo: el menú lateral no sirve (17 nov, una oferta de Premium tapaba la
+    # Página en «Manage» y fallaron 7 ciclos seguidos).
+    telefono.shell(f"am start -a android.intent.action.VIEW -d {PANEL} -p {LI}")
+    escribir = lambda x: _boton_escribir(x) is not None
+    xml = _esperar(escribir, "el panel de la Página", plazo=40)
+    telefono.tocar(*_boton_escribir(xml)["centro"])
     _esperar(_editor, "el editor de la Página", plazo=30)
     time.sleep(2)
     if telefono.teclado_visible():
@@ -164,6 +172,17 @@ def compartir(url: str, plantilla: str, ev: Path) -> dict:
             "captura": str(captura)}
 
 
+def _pegar(texto: str, fichero: Path) -> None:
+    """Pega `texto` con tildes donde esté el cursor (`phone_clipboard.py`)."""
+    fichero.write_text(texto, encoding="utf-8")
+    script = Path(__file__).resolve().parent.parent / "phone_clipboard.py"
+    r = subprocess.run([sys.executable, str(script), "--file", str(fichero)], capture_output=True, text=True,
+                       timeout=60)
+    if r.returncode != 0:
+        raise PantallaInesperada(f"phone_clipboard falló: {r.stderr or r.stdout}")
+    time.sleep(1.5)
+
+
 def escribir_pie(pie: str, ev: Path) -> dict:
     """El pie pegado con tildes en «Share your thoughts…» (`phone_clipboard.py`), con el teclado cerrado."""
     _exigir_listo()
@@ -173,15 +192,27 @@ def escribir_pie(pie: str, ev: Path) -> dict:
         raise PantallaInesperada("no aparece el campo del texto en el editor de LinkedIn")
     telefono.tocar(*campo["centro"])
     time.sleep(1.5)
-    fichero = ev / "pie-linkedin.txt"
-    fichero.write_text(pie, encoding="utf-8")
-    script = Path(__file__).resolve().parent.parent / "phone_clipboard.py"
-    r = subprocess.run([sys.executable, str(script), "--file", str(fichero)], capture_output=True, text=True,
-                       timeout=60)
-    if r.returncode != 0:
-        raise PantallaInesperada(f"phone_clipboard falló: {r.stderr or r.stdout}")
+    (ev / "pie-linkedin.txt").write_text(pie, encoding="utf-8")
+    # LinkedIn solo saca la vista previa (la tarjeta) de un enlace TECLEADO: pegado entero no la saca (17 nov, en el
+    # SM-S721B). Se pega lo de antes del enlace, el enlace se teclea (es ASCII) y se pega lo de después.
+    m = re.search(r"https://\S+", pie)
+    if m is None:
+        raise ValueError("el pie de LinkedIn no lleva enlace")
+    antes, enlace, despues = pie[:m.start()], m.group(0), pie[m.end():]
+    _pegar(antes, ev / "pie-linkedin-1.txt")
     primera = pie.splitlines()[0][:30]
     _esperar(lambda x: telefono.buscar(x, contiene=primera, paquete=LI) is not None, "el pie pegado")
+    telefono.shell(f"input text {shlex.quote(enlace)}")
+    if not despues.startswith("\n"):
+        raise ValueError("tras el enlace del pie de LinkedIn debe venir un salto de línea")
+    telefono.tecla(66)  # el salto tecleado es lo que cierra el enlace y dispara la vista previa
+    time.sleep(1)
+    _pegar(despues[1:], ev / "pie-linkedin-2.txt")
+    _esperar(lambda x: telefono.buscar(x, contiene=CIERRE_PIE, paquete=LI) is not None, "el final del pie")
+    escrito = next((n["texto"] for n in telefono.nodos(telefono.volcado(timeout=20))
+                    if n["package"] == LI and n["clase"].endswith("EditText")), "")
+    if " ".join(escrito.split()) != " ".join(pie.split()):
+        raise PantallaInesperada("el texto del editor de LinkedIn no es el pie exacto")
     if telefono.teclado_visible():
         telefono.tecla(4)  # «atrás» con el teclado abierto solo lo cierra
         time.sleep(2)
@@ -189,9 +220,12 @@ def escribir_pie(pie: str, ev: Path) -> dict:
         raise PantallaInesperada("el teclado sigue abierto")
     # La tarjeta llega como vista previa del enlace (la imagen og: del sitio), debajo del texto; con el teclado
     # abierto queda tapada y no sale en el volcado. Sin ella no se publica.
-    _esperar(lambda x: any(n["package"] == LI and n["desc"].startswith("Sharing preview box")
-                           and "sabiduriadebolsillo.net" in n["desc"] for n in telefono.nodos(x)),
-             "la vista previa del enlace", plazo=30)
+    def vista_previa(x: str) -> bool:
+        if any(n["package"] == LI and any(n["texto"].startswith(t) for t in SIN_VISTA_PREVIA) for n in telefono.nodos(x)):
+            raise PantallaInesperada("LinkedIn no pudo sacar la vista previa del enlace: sin tarjeta no se publica")
+        return any(n["package"] == LI and n["desc"].startswith(VISTA_PREVIA) and "sabiduriadebolsillo.net" in n["desc"]
+                   for n in telefono.nodos(x))
+    _esperar(vista_previa, "la vista previa del enlace", plazo=45)
     captura = telefono.captura(ev / "04-composer-linkedin.png")
     pagina, color = autor_es_la_pagina(captura)
     if not pagina:
@@ -233,7 +267,7 @@ def verificar(ev: Path, plazo_s: int = 60) -> dict:
             continue
         if _un_texto(xml, EXITO, LI) is not None:
             captura = telefono.captura(ev / "07-verificado-linkedin.png")
-            cerrar = next((n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] in ("Close", "Fermer")
+            cerrar = next((n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] in ("Close", "Fermer", "Cerrar")
                            and n["bounds"][1] < 300), None)
             if cerrar is not None:  # la X de arriba; nunca la oferta de Premium de abajo
                 telefono.tocar(*cerrar["centro"])

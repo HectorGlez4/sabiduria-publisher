@@ -358,8 +358,33 @@ def exigir_cuenta(cuenta: str = CUENTA) -> None:
         # En frío Instagram abre la portada y no llega al perfil (SM-S721B, 7 nov): el enlace otra vez.
         telefono.shell(enlace)
         xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
+    if perfil_propio(xml, cuenta):
+        return
+    # 16–17 nov: Instagram cambió de cuenta solo varias veces, incluso a mitad de ciclo, y tumbó los ciclos hasta que
+    # alguien volvía a poner @sabiduriabolsillo. El usuario autorizó (16 nov) volver a ella con el selector de
+    # cuentas, que no pide contraseña. Si no aparece en el selector, no se toca nada más.
+    _volver_a_la_cuenta(cuenta)
+    telefono.shell(enlace)
+    xml = _esperar(lambda x: perfil_propio(x, cuenta) is not None, f"el perfil de {cuenta}", plazo=40)
     if not perfil_propio(xml, cuenta):
-        raise CuentaAjena(f"Instagram tiene activa otra cuenta, no {cuenta}: no se publica")
+        raise CuentaAjena(f"Instagram tiene activa otra cuenta, no {cuenta}, y el selector no la devolvió: no se publica")
+
+
+def _volver_a_la_cuenta(cuenta: str) -> None:
+    """Pulsación larga en la pestaña del perfil → la fila de `cuenta` en el selector de cuentas."""
+    telefono.forzar_cierre(IG)
+    telefono.lanzar(IG)
+    xml = _esperar(lambda x: bool(por_id(x, "profile_tab")), "la pestaña del perfil", plazo=30)
+    x1, y1, x2, y2 = por_id(xml, "profile_tab")[0]["bounds"]
+    telefono.deslizar((x1 + x2) // 2, (y1 + y2) // 2, (x1 + x2) // 2, (y1 + y2) // 2, 900)
+    xml = _esperar(lambda x: telefono.buscar(x, texto=cuenta, paquete=IG) is not None, "el selector de cuentas", plazo=15)
+    if telefono.buscar(xml, contiene="Ajouter un compte", paquete=IG) is None and \
+            telefono.buscar(xml, contiene="Add Instagram account", paquete=IG) is None:
+        raise CuentaAjena("la pulsación larga no abrió el selector de cuentas: no se toca nada más")
+    fila = min((n for n in telefono.nodos(xml) if n["package"] == IG and n["texto"] == cuenta),
+               key=lambda n: n["bounds"][1])  # la primera: la lista de cuentas de Instagram, no la de otros perfiles
+    telefono.tocar(*fila["centro"])
+    time.sleep(6)
 
 
 def _instagram_en_la_hoja(intentos: int = 8) -> str:
