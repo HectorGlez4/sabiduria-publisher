@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-08-tarde",
+  "id": "2026-11-20-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Flaubert y el lisez pour vivre a Leroyer de Chantepie",
     "hook": "La frase de Flaubert sobre la lectura no es un elogio de los libros. Es una receta para alguien que no estaba bien.",
@@ -22,15 +22,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "Gustave Flaubert",
     "subtitle": "Carta a Leroyer de Chantepie, junio de 1857",
     "body": "No lea como leen los niños, para divertirse, ni como leen los ambiciosos, para instruirse. No: lea para vivir."
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Flaubert", "#Lectura", "#Citas"],
-    "extended": ["#LiteraturaFrancesa", "#Montaigne", "#Libros", "#Cartas", "#SigloXIX"]
+    "topic": [
+      "#Flaubert",
+      "#Lectura",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaFrancesa",
+      "#Montaigne",
+      "#Libros",
+      "#Cartas",
+      "#SigloXIX"
+    ]
   },
   "sources": [
     {
@@ -65,5 +75,12 @@
     "Las traducciones inglesas de sitios de citas ('read in order to live', 'read to live') como si fueran el original: la cita se da desde el francés de la edición Conard.",
     "Que Leroyer de Chantepie fuera paciente de Flaubert: el 'comme médecin' es una figura retórica de la carta del 18 de mayo de 1857, no un dato biográfico.",
     "La fecha exacta del 6 de junio: la edición Conard solo pone [juin 1857]; el día lo da la edición de Rouen citada por Jousset. En la tarjeta se usa 'junio de 1857'."
+  ],
+  "publish_at": "2026-11-20T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

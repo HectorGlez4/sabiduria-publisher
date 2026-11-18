@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-20-extra41",
+  "id": "2026-11-20-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Hesiodo", "#Citas", "#TrabajosYDias"],
-    "extended": ["#Grecia", "#PoesiaGriega", "#Virtud", "#FrasesCelebres", "#Esfuerzo", "#Clasicos"]
+    "topic": [
+      "#Hesiodo",
+      "#Citas",
+      "#TrabajosYDias"
+    ],
+    "extended": [
+      "#Grecia",
+      "#PoesiaGriega",
+      "#Virtud",
+      "#FrasesCelebres",
+      "#Esfuerzo",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "Que el pasaje diga que el esfuerzo «se acaba» en la cima: el texto dice que es fácil (aunque siga siendo duro) en la cima; así lo recoge el cuerpo.",
     "La frase circula como «el sudor es el precio de la virtud» sin cita al texto: usar solo con Trabajos y días 289-290."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-21T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

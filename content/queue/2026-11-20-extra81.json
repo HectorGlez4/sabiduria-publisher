@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-08-extra41",
+  "id": "2026-11-20-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Homero y las hojas de Glauco en la Ilíada VI",
     "hook": "El verso de Homero sobre las hojas lo dice un guerrero para quitarle importancia a su linaje. Y luego lo recita entero.",
@@ -29,8 +29,18 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Homero", "#Iliada", "#Citas"],
-    "extended": ["#GreciaAntigua", "#LiteraturaClasica", "#Poesia", "#Mitologia", "#Clasicos"]
+    "topic": [
+      "#Homero",
+      "#Iliada",
+      "#Citas"
+    ],
+    "extended": [
+      "#GreciaAntigua",
+      "#LiteraturaClasica",
+      "#Poesia",
+      "#Mitologia",
+      "#Clasicos"
+    ]
   },
   "sources": [
     {
@@ -65,5 +75,12 @@
     "Presentar la cita como reflexión del narrador o de Homero en primera persona: la pronuncia Glauco.",
     "Leer el cambio de armaduras solo como amistad: el propio poema lo comenta con ironía (Zeus le quitó el juicio a Glauco).",
     "Numeración exacta de versos según otras ediciones: se usa 146-149, la de Perseus/Murray; el texto en español es de Segalá, que no numera versos."
+  ],
+  "publish_at": "2026-11-20T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

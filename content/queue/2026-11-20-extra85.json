@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-20-tarde",
+  "id": "2026-11-20-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Confucio", "#Citas", "#Analectas"],
-    "extended": ["#China", "#Filosofia", "#Aprendizaje", "#FrasesCelebres", "#PensamientoCritico", "#Sabiduria"]
+    "topic": [
+      "#Confucio",
+      "#Citas",
+      "#Analectas"
+    ],
+    "extended": [
+      "#China",
+      "#Filosofia",
+      "#Aprendizaje",
+      "#FrasesCelebres",
+      "#PensamientoCritico",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "La cita circula como «Si estudias y no piensas, estás perdido…» con variantes y sin capítulo: no usar ninguna sin el II, 15.",
     "La edición crítica china de Analectas (Yang Bojun, Zhu Xi) no se consultó directamente."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-21T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
