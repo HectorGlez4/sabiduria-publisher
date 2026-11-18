@@ -159,6 +159,16 @@ def _agente_despierto() -> bool | None:
     return r.returncode == 0
 
 
+def cmd_esperar(a) -> int:
+    """Una pausa con permiso fijo. Si el revisor visual acaba en segundo plano, el ciclo la repite hasta que
+    llegue su notificación: el 18 nov a las 03:13 un ciclo improvisó un vigilante (Monitor) que pedía permiso,
+    nadie contestó y se quedó parado con el cerrojo y un feed con PASS sin publicar."""
+    import time
+    time.sleep(max(1, min(a.segundos, 120)))
+    emitir({"ok": True, "esperado_s": max(1, min(a.segundos, 120))})
+    return 0
+
+
 def cmd_preflight(a) -> int:
     from labkit import telefono
     t = ahora()
@@ -1314,6 +1324,9 @@ def construir() -> argparse.ArgumentParser:
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     sub.add_parser("preflight").set_defaults(func=cmd_preflight)
+    p = sub.add_parser("esperar", help="pausa de hasta 120 s mientras llega la notificación de un revisor")
+    p.add_argument("--segundos", type=int, default=30)
+    p.set_defaults(func=cmd_esperar)
     p = sub.add_parser("lock-tomar")
     p.add_argument("--dueno", choices=DUENOS_VENTANA, required=True)
     p.add_argument("--nuevo", action="store_true", help="falla si hay un cerrojo vigente, aunque sea del mismo dueño")

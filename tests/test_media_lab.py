@@ -6363,6 +6363,16 @@ def seccion_cola_instagram() -> None:
           and not tt._cuenta_es_la_nuestra(perfil_tt.format("Sabiduria de bolsillo1"))
           and not tt._cuenta_es_la_nuestra(perfil_tt.format("@hec.gonzlez")),
           "TikTok: la cuenta se lee por el @ del perfil y otra cuenta no pasa")
+    fila_tt = ('<node text="{}" resource-id="com.zhiliaoapp.musically:id/{}" package="com.zhiliaoapp.musically" '
+               'class="android.widget.TextView" bounds="[214,{}][770,{}]" />')
+    panel_tt = ("<hierarchy>" + fila_tt.format("Pour toi", "y6z", 1109, 1162)
+                + fila_tt.format("Clementine", "title", 1417, 1473)
+                + fila_tt.format("Joana Marques Violinista - son original", "title", 1248, 1304)
+                + fila_tt.format("Joana Marques Violinista · 10.6K publications", "tv_author", 1310, 1352)
+                + "</hierarchy>")
+    check(tt.cancion_elegida(panel_tt) == "Joana Marques Violinista - son original"
+          and tt.cancion_elegida(panel_tt.replace("Pour toi", "Paramètres")) is None,
+          "TikTok: la canción es la primera fila del panel de sonidos (17 nov, app en francés); sin panel, nada")
     check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
           "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
 

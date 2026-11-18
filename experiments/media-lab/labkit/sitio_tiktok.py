@@ -77,6 +77,35 @@ def _exigir_cuenta() -> None:
         raise PantallaInesperada(f"TikTok no muestra la cuenta «{CUENTA}» en su perfil: no se sigue")
 
 
+PILDORA = (480, 228)   # mitad izquierda de la píldora de la canción, lejos de su «X», que quita la música
+PESTANAS_SONIDO = ("For You", "Pour toi", "Para ti", "Popular", "Populaire")
+
+
+def cancion_elegida(xml: str) -> str | None:
+    """La canción que TikTok puso, leída del panel de sonidos: va la primera de la lista, resaltada."""
+    nodos = [n for n in telefono.nodos(xml) if n["package"] == TT]
+    if not any(n["texto"] in PESTANAS_SONIDO for n in nodos):
+        return None
+    titulos = sorted((n for n in nodos if n["resource_id"].endswith("/title") and n["texto"].strip()),
+                     key=lambda n: n["bounds"][1])
+    return titulos[0]["texto"].strip() if titulos else None
+
+
+def _cancion_del_panel() -> str | None:
+    """En la app en francés (R5CX, 17 nov) la píldora no vuelca su texto ni existe `tv_top_text`: se abre el
+    panel de sonidos tocando la píldora, se lee la primera fila y «atrás» lo cierra sin cambiar la canción."""
+    telefono.tocar(*PILDORA)
+    time.sleep(3)
+    xml = telefono.volcado(timeout=20)
+    cancion = cancion_elegida(xml)
+    if cancion is not None or not _editor(xml):
+        telefono.tecla(4)
+        time.sleep(2)
+        if not _editor(telefono.volcado(timeout=20)):
+            raise PantallaInesperada("al cerrar el panel de sonidos no se volvió al editor de TikTok")
+    return cancion
+
+
 def compartir(url: str, plantilla: str, ev: Path) -> dict:
     """De la cita del sitio a la pantalla de publicar de TikTok con la tarjeta vertical y la música que pone
     TikTok. Termina en esa pantalla, sin texto."""
@@ -93,6 +122,9 @@ def compartir(url: str, plantilla: str, ev: Path) -> dict:
                         and n["resource_id"].endswith("/tv_top_text") and n["texto"]), None)
         if cancion:
             break
+    if not cancion:
+        cancion = _cancion_del_panel()
+        xml = telefono.volcado(timeout=20)
     editor = telefono.captura(ev / "01-editor-tiktok.png")
     telefono.tocar(*_un_texto(xml, SIGUIENTE, TT)["centro"])
     _esperar(_pantalla_de_publicar, "la pantalla de publicar de TikTok", plazo=30)
