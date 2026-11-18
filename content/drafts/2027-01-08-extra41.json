@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-08-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Homero y las hojas de Glauco en la Ilíada VI",
+    "hook": "El verso de Homero sobre las hojas lo dice un guerrero para quitarle importancia a su linaje. Y luego lo recita entero.",
+    "body": [
+      "En el canto VI de la Ilíada, Diomedes encuentra en el campo de batalla a un enemigo que no conoce y le pregunta quién es. Glauco, hijo de Hipóloco, responde con la comparación más célebre del poema: los hombres son como las hojas.",
+      "La comparación es una manera de decir que preguntar por la familia de alguien no sirve de mucho. Pero Glauco no se detiene ahí. Recita su ascendencia hasta llegar a su abuelo, Belerofonte. Y Diomedes descubre que su propio abuelo, Eneo, había hospedado a ese hombre veinte días y había intercambiado regalos con él.",
+      "Los dos deciden no enfrentarse. Cambian sus armaduras en señal de amistad: Glauco entrega una de oro, que valía cien bueyes, por una de bronce que valía nueve. El poeta comenta que Zeus le quitó el juicio.",
+      "El verso que se cita como lección sobre lo pasajero de la vida es, en su sitio, el preámbulo de una genealogía que salva dos vidas. Las hojas caen, pero alguien recuerda de qué árbol eran."
+    ],
+    "question": "¿Qué parte de lo que fueron sus abuelos sigue actuando en usted?",
+    "quote": {
+      "text": "Cual la generación de las hojas, así la de los hombres. Esparce el viento las hojas por el suelo, y la selva, reverdeciendo, produce otras al llegar la primavera: de igual suerte, una generación humana nace y otra perece.",
+      "author": "Homero",
+      "work": "Ilíada, canto VI, vv. 146-149 (trad. Luis Segalá y Estalella, Barcelona, 1908)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Homero",
+    "subtitle": "Ilíada, canto VI",
+    "body": "Cual la generación de las hojas, así la de los hombres. Esparce el viento las hojas por el suelo, y la selva, reverdeciendo, produce otras al llegar la primavera: de igual suerte, una generación humana nace y otra perece."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Homero", "#Iliada", "#Citas"],
+    "extended": ["#GreciaAntigua", "#LiteraturaClasica", "#Poesia", "#Mitologia", "#Clasicos"]
+  },
+  "sources": [
+    {
+      "claim": "Texto en español: «Cual la generación de las hojas, así la de los hombres. Esparce el viento las hojas por el suelo, y la selva, reverdeciendo, produce otras al llegar la primavera: de igual suerte, una generación humana nace y otra perece.» Respuesta de Glauco a Diomedes, canto VI; traducción de Luis Segalá y Estalella, Montaner y Simón, Barcelona, 1908.",
+      "source": "Wikisource (español), La Ilíada, trad. Luis Segalá y Estalella (1908), Canto VI",
+      "url": "https://es.wikisource.org/wiki/La_Il%C3%ADada_(Luis_Segal%C3%A1_y_Estalella)/Canto_VI"
+    },
+    {
+      "claim": "Glauco, hijo de Hipóloco, responde a Diomedes, hijo de Tideo, que le pregunta por su linaje, con la comparación de las generaciones de los hombres con las de las hojas (Il. VI, 145-149).",
+      "source": "Homero, Ilíada, trad. A. T. Murray (1924), Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=6:card=144"
+    },
+    {
+      "claim": "Diomedes recuerda que su abuelo Eneo hospedó a Belerofonte veinte días e intercambiaron regalos; los dos acuerdan evitar sus lanzas y cambiar las armaduras.",
+      "source": "Homero, Ilíada VI, Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=6:card=212"
+    },
+    {
+      "claim": "Zeus le quitó el juicio a Glauco (φρένας ἐξέλετο, v. 234), que cambió armas de oro por armas de bronce: cien bueyes (ἑκατόμβοι) contra nueve (ἐννεαβοίων), vv. 235-236.",
+      "source": "Homero, Ilíada VI, texto griego, Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=6:card=232"
+    },
+    {
+      "claim": "Glauco abre su respuesta con el célebre símil que compara las generaciones humanas con las hojas de los árboles, y lo pronuncia un personaje, no el narrador.",
+      "source": "Thomas Van Nortwick, «Iliad 6.116-155», en Van Nortwick y Steadman, Homer: Iliad 6 and 22, Dickinson College Commentaries, 2018",
+      "url": "https://dcc.dickinson.edu/node/28852"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir el símil a Simónides o al 'hombre de Quíos': un poema arcaico cita el verso, pero esa cita no se verificó en esta ejecución.",
+    "Decir que el verso se repite literalmente en el canto XX: lo que se repite (Il. XX, 213-214) son los versos 150-151, la oferta de contar el linaje, no el símil de las hojas.",
+    "Presentar la cita como reflexión del narrador o de Homero en primera persona: la pronuncia Glauco.",
+    "Leer el cambio de armaduras solo como amistad: el propio poema lo comenta con ironía (Zeus le quitó el juicio a Glauco).",
+    "Numeración exacta de versos según otras ediciones: se usa 146-149, la de Perseus/Murray; el texto en español es de Segalá, que no numera versos."
+  ]
+}

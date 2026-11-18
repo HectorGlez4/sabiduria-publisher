@@ -1,0 +1,63 @@
+{
+  "id": "2027-01-08-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Pigmalión y la estatua sin nombre de Ovidio",
+    "hook": "La estatua de la que se enamoró Pigmalión no se llamaba Galatea. En Ovidio no se llama de ninguna manera.",
+    "body": [
+      "El relato está en el libro X de las Metamorfosis, versos 243 a 297. Pigmalión, escultor de Chipre, vive solo porque desprecia a las mujeres que ha visto. Talla una figura de marfil tan lograda que, escribe Ovidio, el arte queda oculto por su propio arte: ars adeo latet arte sua.",
+      "Se enamora de ella, la viste, le lleva regalos. En la fiesta de Venus pide una esposa semejante a su joven de marfil, sin atreverse a decir la de marfil. Al volver, la besa y el marfil cede bajo sus dedos.",
+      "En todo el pasaje la estatua es solo eburnea virgo, la doncella de marfil. El nombre Galatea es un añadido posterior a la Antigüedad. Las bases de iconografía de la Universidad de Aix-Marseille y la guía de Oxford sobre la mitología clásica en las artes lo sitúan en el Pygmalion de Rousseau, de 1762.",
+      "El mito que se cuenta para hablar de alguien que da forma a otra persona a su gusto dejó a esa persona, durante siglos, sin nombre propio. Se lo pusieron después, desde fuera, como todo lo demás."
+    ],
+    "question": "¿Cuántas veces conocemos a alguien solo por lo que otro hizo de él?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Pigmalión",
+    "subtitle": "Metamorfosis X, 243-297",
+    "body": "En Ovidio la estatua no tiene nombre: es solo la doncella de marfil. Galatea se lo pusieron después; las fuentes lo sitúan en el Pygmalion de Rousseau, de 1762."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Pigmalion", "#Ovidio", "#MitologiaGriega"],
+    "extended": ["#Metamorfosis", "#Mitologia", "#Rousseau", "#LiteraturaLatina", "#Galatea"]
+  },
+  "sources": [
+    {
+      "claim": "En Metamorfosis X, 243-297, Pigmalión talla una estatua de marfil («sculpsit ebur», v. 248), el arte se oculta en su propio arte («ars adeo latet arte sua», v. 252), y la estatua no recibe nombre: se la llama «eburnea virgo» (v. 276).",
+      "source": "Ovidio, Metamorphoses, texto latino en Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0029:book=10:card=243"
+    },
+    {
+      "claim": "Pigmalión vive solo por desprecio a las mujeres; viste y obsequia a la estatua; en la fiesta de Venus pide una esposa semejante a su estatua sin atreverse a decir 'la de marfil'; al volver, el marfil se ablanda bajo sus besos.",
+      "source": "Ovidio, Metamorphoses X, trad. Brookes More (1922), Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0028:book=10:card=243"
+    },
+    {
+      "claim": "Las Propétides, que preceden al relato, son convertidas en piedra (Met. X, 238-242).",
+      "source": "Ovidio, Metamorphoses, texto latino en Perseus Digital Library (Tufts University)",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0029:book=10:card=238"
+    },
+    {
+      "claim": "El nombre Galatea es un añadido posclásico; el Pygmalion de Rousseau (1762) inventa el nombre y marca un punto de inflexión en el desarrollo del mito.",
+      "source": "The Oxford Guide to Classical Mythology in the Arts (J. D. Reid), entrada Pygmalion, edición en línea de Brigham Young University",
+      "url": "https://ogcma.byu.edu/Pygmalion1.0000_Reid.htm"
+    },
+    {
+      "claim": "La estatua no parece haberse llamado Galatea antes del Pygmalion de Rousseau (1762).",
+      "source": "Ut pictura18, base iconográfica de la Université d'Aix-Marseille, tema Pygmalion and his statue",
+      "url": "https://utpictura18.univ-amu.fr/en/notices/sujet/mythology/classical-mythology-pygmalion-and-his-statue"
+    }
+  ],
+  "do_not_use": [
+    "Que Rousseau 'inventó' con certeza el nombre: la guía de Oxford lo afirma, pero otros autores dicen que no se sabe si lo inventó o solo fue el primero en registrarlo; en el cuerpo se dice que las fuentes lo sitúan en su obra.",
+    "La fecha de estreno del Pygmalion de Rousseau: las fuentes dan 1770 (Lyon) o 1775; 1762 es la fecha de composición. No se usa la del estreno.",
+    "El sexo de Pafos, hijo o hija de la estatua: las traducciones discrepan (More, 1922, dice hija; el latín 'Paphon' admite lectura masculina). No se menciona.",
+    "Confundir a la estatua con la nereida Galatea de Acis y Polifemo (Met. XIII): son figuras distintas.",
+    "Que Pigmalión fuera rey en Ovidio: en las Metamorfosis es escultor; la versión del rey de Chipre procede de otras tradiciones y no se verificó en esta ejecución."
+  ]
+}

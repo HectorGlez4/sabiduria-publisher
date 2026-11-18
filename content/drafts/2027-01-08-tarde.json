@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Flaubert y el lisez pour vivre a Leroyer de Chantepie",
+    "hook": "La frase de Flaubert sobre la lectura no es un elogio de los libros. Es una receta para alguien que no estaba bien.",
+    "body": [
+      "En junio de 1857, desde Croisset, Gustave Flaubert respondió a su corresponsal Marie-Sophie Leroyer de Chantepie. Unas semanas antes le había mandado estudiar a Montaigne a fondo y se lo había ordenado, dijo, como médecin.",
+      "En la carta de junio insiste: que lo lea despacio, que la calmará. Y entonces escribe la línea que hoy se cita sola. Lo que sigue la convierte en un régimen: Shakespeare, Goethe, Homero traducido, insistir con el libro que aburre, trabajar para que una naturaleza rica no se hunda en la tristeza y la ociosidad.",
+      "Durante años la carta circuló con fecha equivocada, 16 de junio de 1867. René Descharmes la devolvió a su año verdadero, 1857: veinte años antes.",
+      "Leer para vivir no era, para Flaubert, una forma elegante de decir que los libros son importantes. Era una indicación concreta: un orden de lecturas para sostener a una persona."
+    ],
+    "question": "¿Qué libro le recetaría hoy a alguien que atraviesa un mal momento?",
+    "quote": {
+      "text": "No lea como leen los niños, para divertirse, ni como leen los ambiciosos, para instruirse. No: lea para vivir.",
+      "author": "Gustave Flaubert",
+      "work": "Carta a M.-S. Leroyer de Chantepie, junio de 1857 (Correspondance, ed. Conard, t. 4, 1927)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Gustave Flaubert",
+    "subtitle": "Carta a Leroyer de Chantepie, junio de 1857",
+    "body": "No lea como leen los niños, para divertirse, ni como leen los ambiciosos, para instruirse. No: lea para vivir."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#Flaubert", "#Lectura", "#Citas"],
+    "extended": ["#LiteraturaFrancesa", "#Montaigne", "#Libros", "#Cartas", "#SigloXIX"]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés: «Mais ne lisez pas, comme les enfants lisent, pour vous amuser, ni comme les ambitieux lisent, pour vous instruire. Non, lisez pour vivre.» Carta 541 a Mlle Leroyer de Chantepie, fechada [Croisset, juin 1857], Correspondance, Louis Conard, París, 1927, tomo 4, pp. 194-198.",
+      "source": "Wikisource (francés), transcripción de la Correspondance de Gustave Flaubert, ed. Conard, tomo 4",
+      "url": "https://fr.wikisource.org/wiki/Correspondance_de_Gustave_Flaubert/Tome_4/0541"
+    },
+    {
+      "claim": "En la misma carta, antes de la frase, recomienda leer a Montaigne despacio porque la calmará; después recomienda Shakespeare, Goethe y traducciones de Homero, Petronio, Plauto y Apuleyo, insistir con el libro que aburre y trabajar para que una naturaleza rica no se hunda en la tristeza y la ociosidad.",
+      "source": "Wikisource (francés), Correspondance, ed. Conard, tomo 4, carta 541",
+      "url": "https://fr.wikisource.org/wiki/Correspondance_de_Gustave_Flaubert/Tome_4/0541"
+    },
+    {
+      "claim": "En la carta de Croisset del 18 de mayo [1857] a la misma destinataria le manda estudiar a Montaigne a fondo: «je vous l'ordonne, comme médecin».",
+      "source": "Wikisource (francés), Correspondance, ed. Conard, tomo 4, carta 534",
+      "url": "https://fr.wikisource.org/wiki/Correspondance_de_Gustave_Flaubert/Tome_4/0534"
+    },
+    {
+      "claim": "La carta se fecha el 6 de junio de 1857 y contiene el pasaje «ne lisez pas, comme les enfants lisent… Non. Lisez pour vivre»; la destinataria respondió el 30 de junio de 1857 que leería el Montaigne que le prescribía.",
+      "source": "Philippe Jousset, «Flaubert lecteur de Montaigne», revista Flaubert, n.º 2, 2009 (Université de Rouen / OpenEdition)",
+      "url": "https://journals.openedition.org/flaubert/848?lang=en"
+    },
+    {
+      "claim": "La Correspondance había fechado la carta el 16 de junio de 1867 y René Descharmes la restituyó a junio de 1857.",
+      "source": "A. Debidour, Les Amis de Flaubert, Bulletin n.º 8, 1956, p. 49",
+      "url": "https://www.amis-flaubert-maupassant.fr/article-bulletins/008_049/"
+    }
+  ],
+  "do_not_use": [
+    "La fecha 16 de junio de 1867 (y la edición Charpentier de 1925 citada con esa fecha en Quote Investigator): es una datación errónea, corregida por René Descharmes a junio de 1857.",
+    "Atribuir la frase a Proust o presentarla como apertura de Sur la lecture (1905): un resumen automático de búsqueda lo sugirió sin fuente; la frase está en la carta de Flaubert.",
+    "Las traducciones inglesas de sitios de citas ('read in order to live', 'read to live') como si fueran el original: la cita se da desde el francés de la edición Conard.",
+    "Que Leroyer de Chantepie fuera paciente de Flaubert: el 'comme médecin' es una figura retórica de la carta del 18 de mayo de 1857, no un dato biográfico.",
+    "La fecha exacta del 6 de junio: la edición Conard solo pone [juin 1857]; el día lo da la edición de Rouen citada por Jousset. En la tarjeta se usa 'junio de 1857'."
+  ]
+}

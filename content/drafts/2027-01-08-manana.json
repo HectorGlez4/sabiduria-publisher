@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-08-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Rachel Carson y la enfermedad que calló",
+    "hook": "Rachel Carson escribió Primavera silenciosa con un cáncer que su cirujano no le nombró y que ella después ocultó a casi todos.",
+    "body": [
+      "En 1960, a mitad de la investigación sobre los pesticidas, a Rachel Carson le extirparon un pecho. Según el Science History Institute, el cirujano no le informó de que los tumores eran malignos. Un año después el cáncer se había extendido.",
+      "El libro apareció en tres entregas en The New Yorker en junio de 1962 y luego como volumen. Cuando llegaron los ataques, Carson guardó su enfermedad en secreto, salvo para su editor y para su amiga Dorothy Freeman: temían, cuenta el Servicio de Parques Nacionales de Estados Unidos, que las empresas químicas la usaran contra ella.",
+      "En 1963, ya enferma, declaró ante el Comité de Comercio del Senado y pidió etiquetas que advirtieran del daño ambiental de cada producto. Murió el 14 de abril de 1964 en Silver Spring, Maryland. La Agencia de Protección Ambiental canceló el DDT en 1972. Ella no lo vio.",
+      "El silencio no fue pudor, fue cálculo. Si el diagnóstico se sabía, la discusión podía pasar de lo que decía el libro a la salud de quien lo había escrito."
+    ],
+    "question": "¿Cuándo conviene que una idea se defienda sin la biografía de quien la propone?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Rachel Carson",
+    "subtitle": "El diagnóstico que no dejó entrar en la discusión",
+    "body": "Escribió Primavera silenciosa enferma de cáncer. Tras publicarlo, solo su editor y una amiga lo sabían: temían que la industria química lo usara contra ella. Murió en abril de 1964."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#RachelCarson", "#PrimaveraSilenciosa", "#HistoriaDeLaCiencia"],
+    "extended": ["#Ecologia", "#DDT", "#MujeresEnLaCiencia", "#Biologia", "#MedioAmbiente"]
+  },
+  "sources": [
+    {
+      "claim": "En 1960 le practicaron una mastectomía y el cirujano no le informó de que los tumores eran malignos; después el cáncer se extendió a las costillas.",
+      "source": "Science History Institute, biografía científica de Rachel Carson",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/rachel-carson/"
+    },
+    {
+      "claim": "Fue diagnosticada de cáncer de mama terminal a finales de 1960 y murió en abril de 1964.",
+      "source": "Rachel Carson Center for Environment and Society, LMU Múnich, biografía",
+      "url": "https://www.sprachlit.lmu.de/carsoncenter/en/about/rachel-carson-biography/"
+    },
+    {
+      "claim": "Silent Spring se publicó primero en tres partes en The New Yorker en junio de 1962 y luego como libro.",
+      "source": "National Park Service (EE. UU.), perfil de Rachel Carson",
+      "url": "https://www.nps.gov/people/rachel-carson.htm"
+    },
+    {
+      "claim": "Tras la publicación ocultó su enfermedad a todos salvo a su editor y a Dorothy Freeman, por temor a que las empresas químicas la usaran contra ella.",
+      "source": "National Park Service (EE. UU.), perfil de Rachel Carson",
+      "url": "https://www.nps.gov/people/rachel-carson.htm"
+    },
+    {
+      "claim": "En 1963 declaró ante el Comité de Comercio del Senado y pidió etiquetas de advertencia sobre el daño ambiental; murió el 14 de abril de 1964 en su casa de Silver Spring, Maryland.",
+      "source": "National Park Service (EE. UU.), perfil de Rachel Carson",
+      "url": "https://www.nps.gov/people/rachel-carson.htm"
+    },
+    {
+      "claim": "Ya enferma, declaró ante dos comités del Congreso sobre el uso de pesticidas.",
+      "source": "Science History Institute, biografía científica de Rachel Carson",
+      "url": "https://www.sciencehistory.org/education/scientific-biographies/rachel-carson/"
+    },
+    {
+      "claim": "En 1972 la EPA emitió una orden de cancelación del DDT por sus efectos ambientales adversos; el libro de Carson de 1962 había despertado preocupación pública por el uso indebido de pesticidas.",
+      "source": "U.S. Environmental Protection Agency, DDT: A Brief History and Status",
+      "url": "https://www.epa.gov/ingredients-used-pesticide-products/ddt-brief-history-and-status"
+    }
+  ],
+  "do_not_use": [
+    "Que Primavera silenciosa 'prohibió' el DDT o llevó directamente a su prohibición: la EPA solo atribuye al libro haber despertado la preocupación pública; la cancelación de 1972 fue una decisión administrativa posterior, tras litigios.",
+    "Que Carson pidiera eliminar todos los pesticidas: el libro pedía moderación y cuidado en su uso, no su abolición.",
+    "Que el DDT o los pesticidas le causaran el cáncer: ninguna fuente de calidad lo sostiene.",
+    "La fecha exacta de salida del libro (27 de septiembre de 1962) solo se encontró en History.com; no se usa en el cuerpo sin fuente institucional.",
+    "Que su médico 'causó' la extensión del cáncer por negligencia: es afirmación de blogs sin fuente; la fuente institucional solo dice que no le comunicó la malignidad.",
+    "El nombre exacto del comité de 1963 varía según la fuente (Comercio, Operaciones Gubernamentales); se usa el del Servicio de Parques Nacionales y se menciona que fueron dos comités."
+  ]
+}
