@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-07-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tennyson y la elegía por Arthur Hallam",
+    "hook": "Se cita después de una ruptura amorosa. Tennyson lo escribió por un amigo muerto a los veintidós años.",
+    "quote": {
+      "text": "Lo tengo por cierto, pase lo que pase; lo siento cuando más sufro: es mejor haber amado y perdido que no haber amado nunca.",
+      "author": "Alfred Tennyson",
+      "work": "In Memoriam A. H. H., XXVII (Londres, 1850)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Arthur Henry Hallam murió de un derrame cerebral en Viena el 15 de septiembre de 1833. Tenía veintidós años, era amigo de Alfred Tennyson y estaba comprometido con su hermana Emily. Tennyson pasó diecisiete años escribiendo secciones breves en su memoria. En 1850 las publicó sin su nombre, con el título In Memoriam A. H. H.",
+      "La frase famosa cierra la sección XXVII. Las estrofas anteriores dicen lo que el poeta no envidia: el pájaro nacido en la jaula que nunca conoció los bosques de verano, ni la bestia que vive sin sentido de culpa. No quiere una vida sin dolor si el precio es no haber sabido nada.",
+      "Hoy se repite como consuelo después de un amor que terminó. En el poema, lo perdido no volverá de ninguna manera. Por eso pesa más. Tennyson no dice que la pérdida duela menos con el tiempo. Dice que, aun en el peor momento, no cambiaría haber querido a alguien por no tener que llorarlo."
+    ],
+    "question": "¿A quién no cambiaría, aunque perderlo le haya costado tanto?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tennyson",
+      "#Duelo",
+      "#Citas"
+    ],
+    "extended": [
+      "#PoesiaInglesa",
+      "#Amistad",
+      "#InMemoriam",
+      "#Siglo19",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La sección 27 de In Memoriam A. H. H. empieza «I envy not in any moods / The captive void of noble rage, / The linnet born within the cage, / That never knew the summer woods:», sigue «I envy not the beast that takes / His license in the field of time, / Unfetter'd by the sense of crime» y termina «I hold it true, whate'er befall; / I feel it, when I sorrow most; / 'Tis better to have loved and lost / Than never to have loved at all.». Edición de origen: In Memoriam, Londres, E. Moxon, 1850 (ed. RPO J. D. Robins). La nota de la página dice que Hallam, amigo de Tennyson y prometido de su hermana Emily, murió de un derrame en Viena el 15 de septiembre de 1833, a los veintidós años, y que las secciones se escribieron entre 1833 y 1850. Lectura directa (comprobación verso a verso).",
+      "source": "Representative Poetry Online, Universidad de Toronto, «In Memoriam A. H. H. Obiit MDCCCXXXIII: 27»",
+      "url": "https://rpo.library.utoronto.ca/poems/memoriam-h-h-obiit-mdcccxxxiii-27"
+    },
+    {
+      "claim": "Hallam murió de una hemorragia cerebral en Viena en 1833, a los veintidós años; Tennyson compuso y corrigió el poema durante diecisiete años (1833-1850) y lo publicó de forma anónima; el verso «'Tis better to have loved and lost» está en el canto 27, en la estrofa que empieza «I hold it true, whate'er befall». Lectura directa.",
+      "source": "Wikipedia (inglés), «In Memoriam A.H.H.»",
+      "url": "https://en.wikipedia.org/wiki/In_Memoriam_A.H.H."
+    },
+    {
+      "claim": "El verso procede de la sección XXVII de In Memoriam, escrita por el dolor de la muerte de Arthur Hallam; mucha gente lo cita tras una ruptura amorosa, desplazando el sentido de una muerte a una relación. Lectura directa; artículo firmado por Jennifer Jones.",
+      "source": "Farringford (casa de Tennyson, isla de Wight), «'Tis better to have loved and lost»",
+      "url": "https://farringford.co.uk/news-events/tennyson-poems-blog/tis-better-to-have-loved-and-lost"
+    }
+  ],
+  "do_not_use": [
+    "Presentar el verso como reflexión sobre un amor romántico o una ruptura: es una elegía por un amigo muerto.",
+    "Que el verso es original de Tennyson sin precedentes: se han señalado ideas parecidas en autores anteriores (William Congreve, entre otros), no verificadas en esta ejecución. No se afirma ni se niega originalidad; se acredita solo la formulación de In Memoriam XXVII.",
+    "Que Tennyson fue nombrado Poeta Laureado el mismo año de la publicación (1850) gracias al poema: no se leyó en fuente directa. No se usa.",
+    "Que la reina Victoria encontró consuelo en el poema tras la muerte del príncipe Alberto: lo dice Wikipedia, pero no hacía falta y no se corroboró en una segunda fuente. No se usa.",
+    "Llamarlo «Lord Tennyson» en 1850: recibió el título de barón en 1884; en la atribución va como Alfred Tennyson.",
+    "La traducción es propia, del inglés; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}

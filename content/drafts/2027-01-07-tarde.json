@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-07-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Garcilaso y la rosa marchita del soneto XXIII",
+    "hook": "El soneto más famoso de Garcilaso invita a gozar la juventud. Pero termina con una ley que no admite excepciones.",
+    "quote": {
+      "text": "Marchitará la rosa el viento helado, todo lo mudará la edad ligera, por no hacer mudanza en su costumbre.",
+      "author": "Garcilaso de la Vega",
+      "work": "Soneto XXIII (Barcelona, 1543)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Garcilaso de la Vega murió en Niza el 14 de octubre de 1536, por una herida recibida en el asalto a una fortaleza en Le Muy, en Provenza. No vio impresos sus versos. Salieron en Barcelona en 1543, en el mismo volumen que las obras de su amigo Juan Boscán.",
+      "El soneto XXIII es el que se aprende en la escuela. Los cuartetos describen un rostro joven, de rosa y azucena, y el primer terceto da la orden: coged de vuestra alegre primavera el dulce fruto, antes de que el tiempo cubra de nieve la cumbre. Casi siempre se cita hasta ahí, como una invitación a disfrutar.",
+      "El último terceto cambia el tono. El viento marchitará la rosa y la edad lo mudará todo, por no hacer mudanza en su costumbre. Es una paradoja exacta: lo único que el tiempo no cambia es su costumbre de cambiarlo todo. El poema no promete nada. Solo pide no llegar tarde a lo que ya se está yendo."
+    ],
+    "question": "¿Qué está dejando para después como si el tiempo fuera a esperarlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Garcilaso",
+      "#SigloDeOro",
+      "#Citas"
+    ],
+    "extended": [
+      "#PoesiaEspanola",
+      "#Soneto",
+      "#Renacimiento",
+      "#Tiempo",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El soneto XXIII de Garcilaso empieza «En tanto que de rosa y azucena»; el primer terceto dice «coged de vuestra alegre primavera / el dulce fruto antes que el tiempo airado / cubra de nieve la hermosa cumbre» y el último «Marchitará la rosa el viento helado, / todo lo mudará la edad ligera, / por no hacer mudanza en su costumbre». Lectura directa (comprobación verso a verso); edición base: Garcilaso de la Vega, Poesías, Madrid, Tipográfica Renovación, 1919. La página está marcada como no corregida.",
+      "source": "Wikisource (español), «En tanto que de rosa y azucena»",
+      "url": "https://es.wikisource.org/wiki/En_tanto_que_de_rosa_y_azucena"
+    },
+    {
+      "claim": "Segunda transcripción independiente del soneto XXIII: coinciden palabra por palabra los dos tercetos; solo difiere la puntuación (coma tras «fruto», sin coma tras «ligera»). La página remite a las ediciones de Elias Rivers (1988) y Bruce Wardropper (1971). Lectura directa.",
+      "source": "Spain Then and Now, «Garcilaso, Sonnet 23»",
+      "url": "https://www.spainthenandnow.com/spanish-literature/garcilaso-sonnet-23"
+    },
+    {
+      "claim": "Garcilaso murió en Niza el 14 de octubre de 1536, herido de muerte en el asalto a la fortaleza de Lo Muèi (Le Muy, cerca de Fréjus); su obra se publicó en Barcelona en 1543 junto con la de Joan Boscà (Las obras de Boscán y Garcilaso). Lectura directa.",
+      "source": "Gran Enciclopèdia Catalana, «Garcilaso de la Vega»",
+      "url": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/garcilaso-de-la-vega-0"
+    },
+    {
+      "claim": "Murió el 14 de octubre de 1536 en Niza, tras 25 días de sufrir una herida recibida en combate en Le Muy; su poesía se publicó póstumamente en 1543 en un volumen junto a la de Boscán. Lectura directa.",
+      "source": "Wikipedia (inglés), «Garcilaso de la Vega (poet)»",
+      "url": "https://en.wikipedia.org/wiki/Garcilaso_de_la_Vega_(poet)"
+    }
+  ],
+  "do_not_use": [
+    "Quién sacó exactamente la edición de 1543: la Enciclopèdia Catalana y la Wikipedia inglesa dicen que la publicó Boscán; otros resúmenes (Britannica, solo en buscador) dicen que la publicó su viuda, Ana Girón de Rebolledo, porque Boscán murió antes de terminarla. No se verificó en lectura directa; el cuerpo dice solo que salió en el mismo volumen que las obras de Boscán.",
+    "La fecha de nacimiento de Garcilaso: las fuentes dan entre 1498 y 1503 (1501 y 1503 las más repetidas). No se usa ni se calcula su edad al morir.",
+    "Que el soneto imita el «collige, virgo, rosas» de Ausonio: es la lectura tradicional desde Herrera, pero la autoría del poema latino (Ausonio o el Apéndice virgiliano) está discutida y no se leyó en fuente directa. No se usa.",
+    "La fecha de muerte 19 de octubre que dan algunos materiales docentes: las dos fuentes leídas dicen 14 de octubre.",
+    "Que Garcilaso fue el primero en subir la escala en Le Muy: aparece en materiales docentes y en resúmenes de búsqueda, no en lectura directa. No se usa.",
+    "La puntuación exacta del verso 13 varía entre ediciones (con o sin coma tras «ligera»); se sigue la de Wikisource."
+  ],
+  "status": "draft"
+}

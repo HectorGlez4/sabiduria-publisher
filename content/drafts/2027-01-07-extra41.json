@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-07-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Robert Burns y el ratón de noviembre de 1785",
+    "hook": "Burns le dijo a un ratón que los planes mejor trazados se tuercen. Luego le confesó que lo envidiaba.",
+    "quote": {
+      "text": "Los planes mejor trazados de ratones y hombres se tuercen a menudo, y no nos dejan más que pena y dolor en lugar de la alegría prometida.",
+      "author": "Robert Burns",
+      "work": "To a Mouse, estrofa 7 (Kilmarnock, 1786)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En noviembre de 1785, Robert Burns araba un campo en Escocia y la reja levantó el nido de una ratona. De ahí salió un poema en escocés, To a Mouse. Lo imprimió John Wilson en Kilmarnock el 31 de julio de 1786, en el primer libro de Burns: 612 ejemplares a tres chelines.",
+      "El poema le pide perdón al animal. Le acaba de destruir la casa al empezar el invierno, cuando ya no queda con qué hacer otra. Y en la séptima estrofa viene el consuelo famoso: no estás sola, ratoncita, en descubrir que prever puede ser inútil. Los planes mejor trazados se tuercen.",
+      "Pero el poema no termina ahí. En la última estrofa Burns la llama bendita comparada con él. A ella solo le toca el presente. Él mira hacia atrás y ve un panorama sombrío, y hacia adelante, aunque no ve nada, adivina y teme. El plan torcido duele una vez. Lo que pesa de verdad es la capacidad de anticiparlo."
+    ],
+    "question": "¿Cuánto de lo que teme hoy le está pasando de verdad?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#RobertBurns",
+      "#Poesia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Escocia",
+      "#LiteraturaEscocesa",
+      "#Siglo18",
+      "#Presente",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "«To a Mouse, On turning her up in her Nest with the Plough, November, 1785»; la estrofa que empieza «But Mousie, thou art no thy-lane, / In proving foresight may be vain» contiene «The best laid schemes o' Mice an' Men, / Gang aft agley, / An' lea'e us nought but grief an' pain, / For promis'd joy!», y la última dice «Still, thou art blest, compar'd wi' me! / The present only toucheth thee: / But Och! I backward cast my e'e, / On prospects drear! / An' forward, tho' I canna see, / I guess an' fear!». Fuente: Poems, Chiefly in the Scottish Dialect, Kilmarnock, John Wilson, 1786, pp. 138-140 (ESTC T91548), imágenes de la National Library of Scotland. Las estrofas 4 y 5 dicen que la casita quedó en ruinas, sin nada con qué hacer otra, con los vientos de diciembre por delante (vv. 19-28). Lectura directa (comprobación verso a verso); la transcripción moderniza con cautela la ortografía.",
+      "source": "Eighteenth-Century Poetry Archive, Burns, «To a Mouse» (1786)",
+      "url": "https://www.eighteenthcenturypoetry.org/works/cbu86-w0140.shtml"
+    },
+    {
+      "claim": "Segunda transcripción del mismo texto, a partir de la edición de Kilmarnock de 1786 (ejemplar de la Fisher Rare Book Library, Universidad de Toronto), editada por G. G. Falle: coinciden las palabras de las dos estrofas; difieren mayúsculas y puntuación menores. Compuesto en 1785, publicado en 1786. Lectura directa.",
+      "source": "Representative Poetry Online, Universidad de Toronto, «To a Mouse»",
+      "url": "https://rpo.library.utoronto.ca/poems/mouse"
+    },
+    {
+      "claim": "Poems, Chiefly in the Scottish Dialect fue impreso y publicado por John Wilson de Kilmarnock el 31 de julio de 1786; se imprimieron 612 ejemplares y costaba tres chelines; incluye To a Mouse. Lectura directa.",
+      "source": "Wikipedia (inglés), «Poems, Chiefly in the Scottish Dialect»",
+      "url": "https://en.wikipedia.org/wiki/Poems,_Chiefly_in_the_Scottish_Dialect"
+    }
+  ],
+  "do_not_use": [
+    "Que Burns compuso el poema con las manos en el arado: procede del testimonio de su hermano Gilbert y de recuerdos tardíos de un mozo de labranza (versiones que discrepan entre sí sobre quién casi mató al ratón). No se leyó en fuente directa. El cuerpo dice solo que araba y que la reja levantó el nido, que es lo que declara el propio subtítulo.",
+    "El nombre de la granja (Mossgiel) y la edad de Burns: no se verificaron en lectura directa. No se usan.",
+    "Que la novela De ratones y hombres de Steinbeck toma el título de este verso: muy repetido, pero no se verificó en esta ejecución. No se usa.",
+    "Que «agley» significa «salir mal» en general: en escocés es «torcido, desviado»; se traduce «se tuercen».",
+    "Numerar la estrofa: las fuentes no numeran; «estrofa 7» resulta de contar las estrofas de seis versos (vv. 37-42). Es la séptima de ocho.",
+    "La traducción es propia, del escocés; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}

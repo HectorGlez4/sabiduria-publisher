@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-07-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tiútchev y el pensamiento dicho que es mentira",
+    "hook": "Tiútchev escribió un poema para aconsejar silencio. Y lo dejó imprimir tres veces.",
+    "quote": {
+      "text": "¿Cómo podrá el corazón decirse? ¿Cómo podrá otro comprenderte? ¿Entenderá él de qué vives? Un pensamiento dicho es una mentira.",
+      "author": "Fiódor Tiútchev",
+      "work": "Silentium!, estrofa 2 (Molva, 1833)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Fiódor Tiútchev pasó veintidós años fuera de Rusia como diplomático, buena parte en Múnich. En 1830 escribió un poema de tres estrofas con título en latín, Silentium! Se publicó en marzo de 1833 en Molva, un suplemento de la revista Teleskop, y en 1836 en Sovremennik, la revista que dirigía Pushkin.",
+      "El poema da una orden desde el primer verso: calla, escóndete, guarda tus sentimientos y tus sueños. En la segunda estrofa explica por qué. El corazón no sabe decirse, el otro no puede entender de qué vive uno, y el pensamiento, al pronunciarse, se vuelve falso. Esa última línea se cita sola, como una sentencia sobre la mentira.",
+      "Pero el poema no habla de mentir. Habla de lo que se pierde al traducir lo interior en palabras. Y no termina en la renuncia: en la tercera estrofa dice que hay un mundo entero en el alma, y que hay que saber vivir dentro de uno. Lo paradójico es evidente. Tiútchev lo dijo en verso, y lo vio impreso en 1833, 1836 y 1854."
+    ],
+    "question": "¿Qué ha dejado de decir porque al decirlo se volvía otra cosa?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tiutchev",
+      "#PoesiaRusa",
+      "#Citas"
+    ],
+    "extended": [
+      "#Silencio",
+      "#Rusia",
+      "#Siglo19",
+      "#Palabras",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de Silentium! en tres estrofas: empieza «Молчи, скрывайся и таи / И чувства и мечты свои»; la segunda estrofa dice «Как сердцу высказать себя? / Другому как понять тебя? / Поймет ли он, чем ты живешь? / Мысль изреченная есть ложь»; la tercera contiene «Лишь жить в себе самом умей — / Есть целый мир в душе твоей» y termina «Внимай их пенью — и молчи!..». Edición: Тютчев, Полное собрание сочинений и писем в шести томах, т. 1, Стихотворения 1813—1849, Москва, Классика, 2002, p. 123 (vía ФЭБ). Lectura directa (comprobación verso a verso).",
+      "source": "Wikisource (ruso), «Silentium! (Тютчев)/ПСС 2002 (СО)»",
+      "url": "https://ru.wikisource.org/wiki/Silentium!_(%D0%A2%D1%8E%D1%82%D1%87%D0%B5%D0%B2)/%D0%9F%D0%A1%D0%A1_2002_(%D0%A1%D0%9E)"
+    },
+    {
+      "claim": "Fecha de creación: 1830. Primera publicación: periódico «Молва», suplemento de la revista «Телескоп», 1833, n.º 32, 16 de marzo, p. 125; después en «Современникъ», 1836, t. III, n.º 1, p. 16, y en 1854. Lectura directa (ficha de la obra).",
+      "source": "Wikisource (ruso), «Silentium! (Тютчев)»",
+      "url": "https://ru.wikisource.org/wiki/Silentium!_(%D0%A2%D1%8E%D1%82%D1%87%D0%B5%D0%B2)"
+    },
+    {
+      "claim": "Segunda transcripción independiente: texto ruso de tres estrofas de seis versos, con las mismas palabras en la segunda estrofa (grafía con ё) y el mismo cierre. Lectura directa.",
+      "source": "Ocaso Press, «Tiutchev: Silentium»",
+      "url": "https://www.ocasopress.com/tiutchev-silentium.html"
+    },
+    {
+      "claim": "Tiútchev (1803-1873) fue a Múnich en 1822 como diplomático y permaneció 22 años fuera de Rusia; el príncipe Gagarin obtuvo su permiso para publicar poemas escogidos en Sovremennik, la revista de Pushkin; Silentium! se describe como un poema arquetípico escrito en 1830. Lectura directa.",
+      "source": "Wikipedia (inglés), «Fyodor Tyutchev»",
+      "url": "https://en.wikipedia.org/wiki/Fyodor_Tyutchev"
+    }
+  ],
+  "do_not_use": [
+    "Que Pushkin «descubrió» a Tiútchev o publicó él mismo los poemas: según la fuente leída, fue el príncipe Iván Gagarin quien obtuvo el permiso para publicarlos en Sovremennik, revista editada por Pushkin. El cuerpo dice solo que la revista la dirigía Pushkin.",
+    "Que los poemas de Sovremennik salieron firmados con las iniciales «F. T.»: muy repetido, no se leyó en fuente directa. No se usa.",
+    "Presentar «Мысль изреченная есть ложь» como una sentencia sobre la mentira o la hipocresía: en el poema es sobre la imposibilidad de comunicar la vida interior.",
+    "Que el poema se escribió antes de 1830 o a comienzos de la década: las dataciones varían en estudios; se sigue la de la edición académica (1830).",
+    "La traducción de Nabokov («A thought, once uttered, is untrue») no se cita; la traducción al español es propia, del ruso."
+  ],
+  "status": "draft"
+}
