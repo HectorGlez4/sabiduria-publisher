@@ -1,0 +1,65 @@
+{
+  "id": "2027-01-09-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "las piezas de Lewis y el guerrero del cajón",
+    "hook": "En 1964 un anticuario de Edimburgo pagó cinco libras por una figurita de marfil. En 2019 se vendió por 735.000.",
+    "body": [
+      "Antes del 11 de abril de 1831, cerca de Uig, en la isla escocesa de Lewis, apareció un conjunto de 93 piezas de marfil de morsa: reyes, reinas, obispos, caballeros, peones y guardias tallados hacia 1150-1175. Las circunstancias del hallazgo nunca quedaron claras. Hoy el Museo Británico guarda 82 y el Museo Nacional de Escocia, 11.",
+      "Las piezas proceden de unos cuatro juegos distintos. No eran la partida de alguien, eran probablemente el surtido de alguien. Los guardias están tallados como berserkers, los guerreros feroces de las sagas nórdicas. El origen más defendido es Noruega, aunque nadie lo da por seguro.",
+      "Si hubo cuatro juegos completos, faltaban un caballero y cuatro guardias. En 1964 un anticuario de Edimburgo compró por cinco libras una figura que anotó como «guerrero de ajedrez antiguo de colmillo de morsa». Su familia la guardó en un cajón durante 55 años. En 2019, Sotheby's la presentó como probable guardia perdido y la vendió en julio por 735.000 libras.",
+      "Una pieza de un juego medieval pasó medio siglo entre cubiertos y papeles sin que nadie supiera qué era. El objeto no cambió. Cambió quién lo miraba."
+    ],
+    "question": "¿Qué objeto de tu casa sigue esperando a alguien que sepa lo que es?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Las piezas de Lewis",
+    "subtitle": "Cinco libras en 1964, 735.000 en 2019",
+    "body": "93 piezas de marfil de morsa talladas hacia 1150-1175 aparecieron en la isla de Lewis en 1831. Faltaban cuatro guardias. Uno pasó 55 años en el cajón de una familia de Edimburgo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#PiezasDeLewis", "#EdadMedia", "#Ajedrez"],
+    "extended": ["#Arqueologia", "#Escocia", "#Vikingos", "#MuseoBritanico", "#HistoriaDelArte"]
+  },
+  "sources": [
+    {
+      "claim": "Se conocen 93 piezas: 82 en el Museo Británico y 11 en el Museo Nacional de Escocia; datadas hacia 1150-1175; marfil de morsa; halladas cerca de Uig, en Lewis, en circunstancias poco claras, antes del 11 de abril de 1831, cuando se exhibieron en Edimburgo; proceden de unos cuatro juegos; los guardias se representan como berserkers de las sagas.",
+      "source": "Museo Británico, ficha 'The Lewis Chessmen' en Google Arts & Culture",
+      "url": "https://artsandculture.google.com/asset/the-lewis-chessmen/QwF6Au2fAMWStQ"
+    },
+    {
+      "claim": "El origen es incierto: Frederic Madden propuso Islandia en 1832 y otros Irlanda, Escocia o Inglaterra; Noruega es candidata plausible por sus vínculos con las Hébridas Exteriores.",
+      "source": "Museo Británico, ficha 'The Lewis Chessmen' en Google Arts & Culture",
+      "url": "https://artsandculture.google.com/asset/the-lewis-chessmen/QwF6Au2fAMWStQ"
+    },
+    {
+      "claim": "El conjunto incluía 78 piezas de ajedrez, 14 piezas de tablas y una hebilla; la mayoría son de marfil de morsa y algunas de diente de cachalote; el Museo Nacional de Escocia considera más probable como lugar del hallazgo Mealista, también en la parroquia de Uig.",
+      "source": "National Museums Scotland, 'Lewis chess pieces' (consultado mediante extracto del buscador: la página devolvió 403 al WebFetch)",
+      "url": "https://www.nms.ac.uk/explore-our-collections/stories/scottish-history-and-archaeology/lewis-chess-pieces/"
+    },
+    {
+      "claim": "En 1964 un anticuario compró la figura y la catalogó como 'Antique Walrus Tusk Warrior Chessman'; la familia la guardó en un cajón; al conjunto le faltaban un caballero y cuatro guardias; Sotheby's la sacó a subasta en Londres el 2 de julio de 2019.",
+      "source": "Al Jazeera, 'Lost Lewis Chessman found, could fetch $1m at auction' (junio de 2019)",
+      "url": "https://www.aljazeera.com/news/2019/06/lost-lewis-chessman-fetch-1m-auction-190604061934919.html"
+    },
+    {
+      "claim": "Un anticuario de Edimburgo la compró por 5 libras en 1964; se vendió en Sotheby's en julio de 2019 por 735.000 libras; Sotheby's sugiere que es uno de los guardias que faltan si el conjunto tenía cuatro juegos.",
+      "source": "ChessBase, 'Newly discovered Lewis chess piece sold for GBP £735,000' (2 de julio de 2019)",
+      "url": "https://en.chessbase.com/post/lewis-chess-pieces-discovery-2019-auction-sothebys"
+    }
+  ],
+  "do_not_use": [
+    "Que las piezas se hicieron con certeza en Trondheim (Nidaros): es la hipótesis más citada, pero el Museo Británico la presenta como plausible, no probada. En el cuerpo: 'el origen más defendido es Noruega'.",
+    "La leyenda de que una vaca o un pastor las desenterró: no aparece en las fuentes institucionales consultadas; el Museo Británico dice que las circunstancias no están claras.",
+    "Que en Londres hay 67 piezas: cifra de fuentes antiguas o simplificadas; las de los museos son 82 y 11 (sobre 93 objetos, no todos de ajedrez).",
+    "Que el hallazgo tenía 59 piezas de ajedrez (ChessBase): contradice las 78 del Museo Nacional de Escocia; no se usa.",
+    "El precio de compra de 1964 en dólares (6 o 14 USD) que dieron medios estadounidenses: se usa la cifra en libras.",
+    "Que la pieza de 2019 está confirmada como del mismo tesoro de Uig: Sotheby's la atribuyó al mismo taller y la propuso como uno de los guardias perdidos; no hay prueba documental de que estuviera en el hallazgo de 1831.",
+    "Que los guardias muerden el borde del escudo: es detalle conocido, pero no se verificó en una fuente que se pudiera leer en esta ejecución; no se usa."
+  ]
+}

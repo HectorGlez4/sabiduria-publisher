@@ -1,0 +1,64 @@
+{
+  "id": "2027-01-09-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Toussaint Louverture y el tronco del árbol de la libertad",
+    "hook": "Lo subieron preso a un barco francés en 1802. Lo que dijo al llegar a bordo lo dejó escrito uno de los generales que lo combatían.",
+    "body": [
+      "Toussaint Louverture, antiguo esclavo y gobernador de Saint-Domingue, fue arrestado el 7 de junio de 1802. Lo atrajeron con una cita con el general francés Brunet, en la zona de Gonaïves, y lo embarcaron en el navío Héros.",
+      "Según el general Pamphile de Lacroix, que sirvió en la expedición francesa, al llegar a bordo se dirigió al comandante, el jefe de división Savary, con estas palabras. Lacroix las publicó en París en 1819, en el segundo tomo de sus memorias sobre la revolución de Saint-Domingue, capítulo XVII.",
+      "La frase no es una consigna de proclama. Es el razonamiento de un prisionero: la persona se puede quitar; lo que ya echó raíz en mucha gente, no.",
+      "Lo encerraron sin juicio en el fuerte de Joux, en el Jura. Murió allí, de frío y privaciones, el 7 de abril de 1803."
+    ],
+    "question": "¿Qué idea conoces que haya sobrevivido a quien la defendía?",
+    "quote": {
+      "text": "Al derribarme, en Saint-Domingue solo se ha abatido el tronco del árbol de la libertad de los negros; volverá a brotar por las raíces, porque son profundas y numerosas.",
+      "author": "Toussaint Louverture",
+      "work": "A bordo del Héros, 1802, según P. de Lacroix, Mémoires, t. II, cap. XVII (París, 1819)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Toussaint Louverture",
+    "subtitle": "A bordo del Héros, junio de 1802"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ToussaintLouverture", "#Haiti", "#RevolucionHaitiana"],
+    "extended": ["#Citas", "#Libertad", "#HistoriaDelCaribe", "#Abolicion", "#Historia"]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés de la frase ('…il repoussera par les racines, parce qu'elles sont profondes et nombreuses'), dirigida por Toussaint al jefe de división Savary, comandante del Héros, tras ser apresado mediante una cita preparada con el general Brunet en Gonaïves; tomo II, capítulo XVII.",
+      "source": "Pamphile de Lacroix, Mémoires pour servir à l'histoire de la révolution de Saint-Domingue, t. II, París, Pillet aîné, 1819 (ejemplar digitalizado en Internet Archive)",
+      "url": "https://archive.org/details/mmoirespourser02lacr"
+    },
+    {
+      "claim": "Fue apresado en junio de 1802 tras retirarse a una de sus plantaciones y murió en el fuerte de Joux, en el Jura, donde estaba confinado sin juicio.",
+      "source": "Bibliothèque nationale de France, France-Amériques, 'Toussaint Louverture: Destiny and Contradictions'",
+      "url": "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions"
+    },
+    {
+      "claim": "Fue arrestado el 7 de junio de 1802 e incarcerado en el fuerte de Joux, donde enfermó y murió de frío y privaciones.",
+      "source": "Hérodote.net, 'Toussaint Louverture (1743-1803), l'héritier noir des Lumières'",
+      "url": "https://www.herodote.net/L_heritier_noir_des_Lumieres-synthese-403.php"
+    },
+    {
+      "claim": "Murió el 7 de abril de 1803 en el calabozo del fuerte de Joux, menos de un año después de empezar su encierro.",
+      "source": "Le Nouvelliste (Haití), 'Toussaint Louverture incarcéré, mort et honoré au fort de Joux'",
+      "url": "https://www.lenouvelliste.com/en/article/242026/toussaint-louverture-incarcere-mort-et-honore-au-fort-de-joux"
+    }
+  ],
+  "do_not_use": [
+    "Que Toussaint escribió la frase: es una palabra dicha y transmitida por Pamphile de Lacroix en 1819, general de la expedición francesa. El cuerpo lo dice así.",
+    "Que la dijo a bordo de la fragata Créole: varias páginas lo afirman; Lacroix lo sitúa en el Héros, al mando de Savary. En Lacroix la Créole aparece en otro pasaje.",
+    "La traducción 'en Santo Domingo': Saint-Domingue era la colonia francesa (actual Haití); Santo Domingo era la parte española. Se mantiene 'Saint-Domingue'.",
+    "El texto francés exacto palabra por palabra de la primera mitad: la digitalización de Lacroix está dañada en 'abattu'; la segunda mitad sí se leyó literal. La traducción sigue la lectura establecida.",
+    "Que Dessalines lo traicionó: Hérodote lo menciona como denuncia, pero es materia disputada entre historiadores; no se usa.",
+    "Fechas de traslado distintas (25 de agosto de 1802 en napoleon-empire.org): no se dan fechas de llegada a Francia ni al fuerte."
+  ]
+}

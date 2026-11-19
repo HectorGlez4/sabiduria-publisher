@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-09-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Katherine Johnson y la comprobación de John Glenn",
+    "hook": "En 1962, antes de orbitar la Tierra, John Glenn pidió que una matemática repitiera a mano los cálculos de la computadora.",
+    "body": [
+      "Katherine Johnson nació el 26 de agosto de 1918 en White Sulphur Springs, Virginia Occidental. En el verano de 1953 entró en el laboratorio de Langley del NACA, en West Area Computing, la sección de calculistas negras que dirigía Dorothy Vaughan. En 1961 calculó la trayectoria del vuelo de Alan Shepard.",
+      "Para el Friendship 7, la NASA había programado las ecuaciones orbitales en computadoras IBM conectadas a estaciones de seguimiento. Glenn no se fiaba del todo de la máquina. Según la NASA, pidió a los ingenieros que buscaran a «la chica» para que hiciera los mismos números a mano. Johnson recordaba su frase: si ella decía que estaban bien, él estaba listo.",
+      "Los números coincidieron. Glenn despegó el 20 de febrero de 1962. La comprobación no fue en la plataforma ni en segundos, como la muestra el cine: según la autora Margot Lee Shetterly, le llevó cerca de un día y medio, y Johnson la hizo en Virginia, no en Florida.",
+      "Lo que Glenn pedía no era desconfianza en el cálculo, sino una segunda mano independiente. La computadora era nueva; la calculista, no. En 2015 recibió la Medalla Presidencial de la Libertad. Murió el 24 de febrero de 2020."
+    ],
+    "question": "¿A quién le pedirías hoy que revisara a mano lo que te dice una máquina?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Katherine Johnson",
+    "subtitle": "La segunda mano que pidió un astronauta",
+    "body": "Antes del Friendship 7, John Glenn quiso que ella repitiera a mano los cálculos orbitales de las computadoras IBM. Si los números estaban bien, él estaba listo. Lo estaban: despegó el 20 de febrero de 1962."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#KatherineJohnson", "#HistoriaDeLaCiencia", "#NASA"],
+    "extended": ["#Matematicas", "#MujeresEnLaCiencia", "#CarreraEspacial", "#JohnGlenn", "#FigurasOcultas"]
+  },
+  "sources": [
+    {
+      "claim": "Nació el 26 de agosto de 1918 en White Sulphur Springs, Virginia Occidental; entró en Langley en el verano de 1953, en West Area Computing, la sección de calculistas negras dirigida por Dorothy Vaughan.",
+      "source": "NASA, biografía de Katherine Johnson",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+    },
+    {
+      "claim": "Antes del vuelo del Friendship 7, Glenn pidió a los ingenieros que buscaran a 'the girl' para comprobar a mano los números de la computadora; Johnson recordaba que dijo: si ella dice que están bien, estoy listo.",
+      "source": "NASA, biografía de Katherine Johnson",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+    },
+    {
+      "claim": "Recibió la Medalla Presidencial de la Libertad en 2015 y murió el 24 de febrero de 2020.",
+      "source": "NASA, biografía de Katherine Johnson",
+      "url": "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/"
+    },
+    {
+      "claim": "Calculó la trayectoria del vuelo Freedom 7 de Alan Shepard en 1961 y en 1962 verificó los cálculos orbitales de las computadoras electrónicas para el Friendship 7 de Glenn.",
+      "source": "NASA, nota de prensa sobre la instalación IV&V redesignada en su honor (22 de febrero de 2019)",
+      "url": "https://www.nasa.gov/news-release/nasa-renames-facility-in-honor-of-hidden-figure-katherine-johnson/"
+    },
+    {
+      "claim": "Las ecuaciones orbitales del Friendship 7 se programaron en computadoras IBM enlazadas con estaciones de seguimiento; Glenn quiso que Johnson repitiera los mismos números a mano en su calculadora de escritorio.",
+      "source": "IEEE Spectrum, The Institute, artículo sobre Katherine Johnson",
+      "url": "https://spectrum.ieee.org/katherine-johnson-the-hidden-figures-mathematician-who-got-astronaut-john-glenn-into-space"
+    },
+    {
+      "claim": "Glenn despegó el 20 de febrero de 1962; según Margot Lee Shetterly, los cálculos de Johnson llevaron alrededor de un día y medio y ella estaba en Virginia durante el lanzamiento, no en Florida; la película los comprime en segundos junto a la plataforma.",
+      "source": "collectSPACE, 'Hidden Figures' and the John Glenn mystery (enero de 2017)",
+      "url": "https://www.collectspace.com/news/news-010517b-hidden-figures-john-glenn-mystery.html"
+    }
+  ],
+  "do_not_use": [
+    "La escena de la película Figuras ocultas en la que Johnson entrega los cálculos en el último momento con Glenn en la plataforma: está dramatizada; ella estaba en Virginia y el trabajo llevó en torno a un día y medio.",
+    "La fecha exacta de la comprobación: ni Shetterly encontró un documento que la fije; Johnson dio versiones distintas ('semanas antes' y otras). No se da fecha en el cuerpo.",
+    "La duración de tres días que dio el director Ted Melfi: contradice a Shetterly; se usa la cifra de la autora del libro.",
+    "El modelo exacto de la computadora (IBM 7090) y su ubicación (Goddard o Washington): las fuentes no coinciden; el cuerpo dice solo 'computadoras IBM'.",
+    "Que calculó sola la trayectoria del Apolo 11: la NASA habla de cálculos para 'varias misiones Apolo' sin atribuirle la del Apolo 11 en exclusiva.",
+    "Confundir el Friendship 7 (Glenn, 1962) con el Freedom 7 (Shepard, 1961): varias páginas lo hacen."
+  ]
+}

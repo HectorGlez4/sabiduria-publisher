@@ -1,0 +1,69 @@
+{
+  "id": "2027-01-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "San Martín y las máximas para Merceditas",
+    "hook": "En el exilio belga, el general que cruzó los Andes escribió doce reglas para educar a su hija. La séptima habla de religión.",
+    "body": [
+      "José de San Martín dejó Buenos Aires el 10 de febrero de 1824 con su única hija, Mercedes, nacida en Mendoza en 1816. Se instaló en Bélgica, que consideraba uno de los países más baratos de Europa. Allí, hacia 1825, redactó una lista de máximas para su educación.",
+      "Son doce, cortas, casi telegráficas. Amor a la verdad y odio a la mentira. Caridad con los pobres. Respeto por la propiedad ajena. Saber guardar un secreto. Que hable poco y lo preciso. Amor al aseo y desprecio al lujo. La última, amor por la patria y por la libertad.",
+      "La séptima pide inspirarle indulgencia hacia todas las religiones. No pide que crea en otras. Pide que no las desprecie. La escribió un padre para una niña de nueve años, no un estadista para una constitución.",
+      "El Instituto Nacional Sanmartiniano publicó el texto en 1963. Circulan versiones con palabras cambiadas; esta es la de esa edición."
+    ],
+    "question": "¿Qué regla de educación dejarías por escrito si solo pudieras dejar doce?",
+    "quote": {
+      "text": "Inspirarla sentimientos de indulgencia hacia todas las religiones.",
+      "author": "José de San Martín",
+      "work": "Máximas para mi hija, n.º 7 (c. 1825; ed. Instituto Nacional Sanmartiniano, 1963)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "José de San Martín",
+    "subtitle": "Máximas para mi hija, c. 1825"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#SanMartin", "#Merceditas", "#HistoriaArgentina"],
+    "extended": ["#Citas", "#Educacion", "#Tolerancia", "#Libertador", "#Crianza"]
+  },
+  "sources": [
+    {
+      "claim": "Texto de las doce máximas según la versión oficial del Instituto Nacional Sanmartiniano (publicación de 1963), incluida la n.º 7: 'Inspirarla sentimientos de Indulgencia hacia todas las Religiones'; también 'Que hable poco y lo preciso', 'Amor al Aseo y desprecio al Lujo' e 'Inspirarla amor por la Patria y por la Libertad'.",
+      "source": "Meer, 'Máximas para Merceditas' (el autor pidió la versión oficial al Instituto Nacional Sanmartiniano)",
+      "url": "https://www.meer.com/es/95768-maximas-para-merceditas"
+    },
+    {
+      "claim": "La máxima 7 dice 'sentimientos de indulgencia hacia todas las Religiones'; las máximas se escribieron hacia 1825, cuando San Martín vivía en Bruselas; Mercedes salió con él hacia Europa en febrero de 1824.",
+      "source": "Infobae, 'Las máximas de San Martín para Merceditas' (17 de agosto de 2022)",
+      "url": "https://www.infobae.com/sociedad/2022/08/17/las-maximas-de-san-martin-para-merceditas-dignas-de-ser-ensenadas-en-todos-los-hogares-y-en-todas-las-escuelas/"
+    },
+    {
+      "claim": "Las máximas 7, 11 y 12 tratan de la indulgencia hacia todas las religiones, el amor al aseo y el desprecio al lujo, y el amor por la patria y la libertad; San Martín vivió en Bruselas de fines de 1824 a fines de 1830.",
+      "source": "La Nación, 'Las máximas de San Martín para Mercedes' (17 de junio de 2025)",
+      "url": "https://www.lanacion.com.ar/opinion/las-maximas-de-san-martin-para-mercedes-nid17062025/"
+    },
+    {
+      "claim": "Mercedes nació en Mendoza el 24 de agosto de 1816; zarpó con su padre de Buenos Aires el 10 de febrero de 1824; San Martín se trasladó a Bélgica, que consideraba uno de los países más baratos de Europa, y allí escribió las máximas.",
+      "source": "Infobae, 'A 150 años de la muerte de Merceditas' (28 de febrero de 2025)",
+      "url": "https://www.infobae.com/historia/2025/02/28/a-150-anos-de-la-muerte-de-merceditas-la-adorada-hija-de-san-martin-la-infancia-con-sus-abuelos-y-su-vida-en-el-exilio-europeo/"
+    },
+    {
+      "claim": "Las máximas se exhiben en el Museo Mitre de Buenos Aires en una muestra que combina documentos originales y facsimilares.",
+      "source": "La Nación, 'Mitre y San Martín unidos por la historia en una nueva exposición' (15 de mayo de 2025)",
+      "url": "https://www.lanacion.com.ar/cultura/mitre-y-san-martin-unidos-por-la-historia-en-una-nueva-exposicion-partes-militares-del-cruce-de-los-nid15052025/"
+    }
+  ],
+  "do_not_use": [
+    "La máxima 1 sobre los insectos: la versión del Instituto que reproduce Meer dice 'insectos que no perjudican' e Infobae dice 'que nos perjudican'; cambia el sentido y no se pudo cotejar el manuscrito. No se cita.",
+    "'Inspirarle' en lugar de 'Inspirarla': es modernización de La Nación; el texto del Instituto conserva el 'la' del original. En la cita se respeta 'Inspirarla'.",
+    "Que el manuscrito original esté en el Museo Mitre: la nota de La Nación habla de una muestra de originales y facsímiles sin precisar cuál es este. No se afirma.",
+    "La fecha exacta y el lugar exacto: las fuentes dicen 'hacia 1825' y 'probablemente en Bruselas'; no se da día ni ciudad como seguros.",
+    "Que San Martín las escribió estando Mercedes en un colegio de Bruselas: Infobae la sitúa primero en un colegio de Hampstead, Inglaterra; no se menciona colegio.",
+    "Otras 'frases de San Martín' de páginas de citas sin procedencia ('Serás lo que debas ser o no serás nada' se atribuye sin documento claro): no se usan aquí."
+  ]
+}
