@@ -135,6 +135,16 @@ def lienzo_pintado(captura: Path, minimo: float = 4.0) -> bool:
         return ImageStat.Stat(franja).stddev[0] >= minimo
 
 
+def lienzo_negro(captura: Path, maximo: float = 0.8) -> bool:
+    """La Story abrió en negro: casi toda la franja de la tarjeta es negra (L < 20). El 18 nov la Story negra
+    daba 0,97 y las 40 Stories buenas anteriores, también la del diseño oscuro (media ≈ 34), daban 0,0."""
+    from PIL import Image
+    with Image.open(captura) as im:
+        franja = im.convert("L").crop((60, 400, im.width - 60, 1600))
+        oscuros = sum(franja.histogram()[:20])
+        return oscuros / (franja.width * franja.height) > maximo
+
+
 def color_de_fondo(px, ancho: tuple[int, int], alto: tuple[int, int]) -> tuple[int, int, int]:
     """El color más frecuente de una muestra de la zona: el fondo de la tarjeta."""
     muestra = Counter(px[x, y] for y in range(alto[0], alto[1], 37) for x in range(ancho[0], ancho[1], 23))
@@ -498,9 +508,15 @@ def _esperar_editor(superficie: str, ev: Path) -> None:
     # El Reel a veces abre con la vista previa en negro y la tarjeta tarda en pintarse (5 nov: tres Reels
     # descartados así). Al feed le pasa igual cuando llega justo tras el Reel (7 y 8 nov: dos fotos en negro, con
     # la miniatura también negra). Se espera a ver texto en el lienzo; si no llega, pantalla inesperada.
-    # La Story no: su editor pinta encima herramientas y el contraste no distingue negro de tarjeta.
+    # La Story no: su editor pinta encima herramientas y el contraste no distingue negro de tarjeta; en ella se
+    # mira si la franja es casi toda negra (18 nov 13:37: Story en negro que se dio por buena).
     limite = time.monotonic() + 45
-    while superficie != "story" and not lienzo_pintado(telefono.captura(ev / "01a-editor-espera.png")):
+
+    def en_negro() -> bool:
+        captura = telefono.captura(ev / "01a-editor-espera.png")
+        return lienzo_negro(captura) if superficie == "story" else not lienzo_pintado(captura)
+
+    while en_negro():
         if time.monotonic() >= limite:
             raise PantallaInesperada(f"el editor del {SUPERFICIES[superficie]} sigue en negro tras 45 s")
         time.sleep(3)

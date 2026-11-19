@@ -6373,6 +6373,25 @@ def seccion_cola_instagram() -> None:
     check(tt.cancion_elegida(panel_tt) == "Joana Marques Violinista - son original"
           and tt.cancion_elegida(panel_tt.replace("Pour toi", "Paramètres")) is None,
           "TikTok: la canción es la primera fila del panel de sonidos (17 nov, app en francés); sin panel, nada")
+    from PIL import Image as _Im, ImageDraw as _Dr
+    from labkit import textos as textos_lab
+    with tempfile.TemporaryDirectory() as d:
+        negra, oscura = pathlib.Path(d) / "negra.png", pathlib.Path(d) / "oscura.png"
+        _Im.new("RGB", (1080, 2340), (0, 0, 0)).save(negra)
+        im = _Im.new("RGB", (1080, 2340), (34, 34, 38))
+        _Dr.Draw(im).text((100, 800), "«Nada te turbe»", fill=(240, 230, 210))
+        im.save(oscura)
+        check(si.lienzo_negro(negra) and not si.lienzo_negro(oscura),
+              "Story: el editor en negro se detecta y la tarjeta del diseño oscuro no cuenta como negro (18 nov)")
+    check(textos_lab.es_titulo_descarte("Abandonner les\nmodifications ?", "instagram"),
+          "Instagram: «Abandonner les modifications ?» de la Story con música es un descarte conocido (18 nov)")
+    premium = ('<hierarchy><node text="" content-desc="Fermer" package="com.linkedin.android" '
+               'class="android.widget.ImageButton" bounds="[40,170][160,290]" />'
+               '<node text="Page LinkedIn Premium" content-desc="" package="com.linkedin.android" '
+               'class="android.widget.TextView" bounds="[70,780][1000,1170]" /></hierarchy>')
+    check(li._panel_o_premium(premium) and li._cerrar_arriba(premium)["bounds"][1] < 400
+          and li._boton_escribir(premium) is None,
+          "LinkedIn: la pantalla de Premium se reconoce y se cierra por su X de arriba (18 nov)")
     check(li.es_la_pagina((225, 182, 98)) and not li.es_la_pagina((208, 199, 198)),
           "LinkedIn: el avatar dorado de la Página pasa; el de la foto de perfil personal, no")
 

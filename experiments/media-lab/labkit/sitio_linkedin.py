@@ -130,6 +130,23 @@ def _boton_escribir(xml: str) -> dict | None:
     return next((n for n in telefono.nodos(xml) if n["package"] == LI and n["desc"] in ESCRIBIR), None)
 
 
+CERRAR = ("Close", "Fermer", "Cerrar", "Ignorer", "Dismiss")
+
+
+def _cerrar_arriba(xml: str) -> dict | None:
+    """La X de arriba de una pantalla de LinkedIn (y < 400): nunca un botón de oferta, que va abajo."""
+    return next((n for n in telefono.nodos(xml) if n["package"] == LI and (n["desc"] in CERRAR or n["texto"] in CERRAR)
+                 and n["bounds"][1] < 400), None)
+
+
+def _es_premium(xml: str) -> bool:
+    return any(n["package"] == LI and "Premium" in (n["texto"] or "") for n in telefono.nodos(xml))
+
+
+def _panel_o_premium(xml: str) -> bool:
+    return _boton_escribir(xml) is not None or (_es_premium(xml) and _cerrar_arriba(xml) is not None)
+
+
 def texto_de_la_cita(url: str) -> str:
     """La atribución canónica que el sitio pone en `data-texto-plano` (la misma que «Copiar la cita»)."""
     import html
@@ -157,8 +174,15 @@ def compartir(url: str, plantilla: str, ev: Path) -> dict:
     # El panel de la Página por enlace directo: el menú lateral no sirve (17 nov, una oferta de Premium tapaba la
     # Página en «Manage» y fallaron 7 ciclos seguidos).
     telefono.shell(f"am start -a android.intent.action.VIEW -d {PANEL} -p {LI}")
-    escribir = lambda x: _boton_escribir(x) is not None
-    xml = _esperar(escribir, "el panel de la Página", plazo=40)
+    xml = _esperar(_panel_o_premium, "el panel de la Página", plazo=40)
+    if _boton_escribir(xml) is None:
+        # 18 nov 13:37: en vez del panel salió a pantalla completa la prueba gratuita de «Page LinkedIn Premium».
+        # Se cierra con su X de arriba, nunca con el botón de la oferta, y se vuelve a pedir el panel.
+        telefono.tocar(*_cerrar_arriba(xml)["centro"])
+        time.sleep(3)
+        telefono.shell(f"am start -a android.intent.action.VIEW -d {PANEL} -p {LI}")
+        xml = _esperar(lambda x: _boton_escribir(x) is not None, "el panel de la Página tras cerrar Premium",
+                       plazo=40)
     telefono.tocar(*_boton_escribir(xml)["centro"])
     _esperar(_editor, "el editor de la Página", plazo=30)
     time.sleep(2)

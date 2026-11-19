@@ -57,13 +57,33 @@ def _exigir_cuenta(xml: str) -> None:
         raise PantallaInesperada(f"el editor de Threads no muestra la cuenta @{CUENTA}: no se sigue")
 
 
+def _imagen_pintada(ev: Path, plazo_s: int = 12) -> bool:
+    """En el hueco de la imagen hay tarjeta (contraste). Con la imagen buena la franja da 36–55; en blanco, 0."""
+    from PIL import Image, ImageStat
+    limite = time.monotonic() + plazo_s
+    while True:
+        time.sleep(2)
+        with Image.open(telefono.captura(ev / "01a-editor-threads-espera.png")) as im:
+            if ImageStat.Stat(im.convert("L").crop((200, 700, 900, 1100))).stddev[0] >= 10:
+                return True
+        if time.monotonic() >= limite:
+            return False
+
+
 def compartir(url: str, plantilla: str, ev: Path) -> dict:
     """De la cita del sitio al editor de Threads con la tarjeta cuadrada. Termina en el editor, sin texto."""
     _exigir_listo()
-    texto_plano = componer_en_el_sitio(url, plantilla, "cuadrado")
-    abrir_app_en_la_hoja("Threads")
-    xml = _esperar(_editor, "el editor de Threads", plazo=40)
-    time.sleep(2)
+    for intento in (1, 2):
+        texto_plano = componer_en_el_sitio(url, plantilla, "cuadrado")
+        abrir_app_en_la_hoja("Threads")
+        xml = _esperar(_editor, "el editor de Threads", plazo=40)
+        if _imagen_pintada(ev):
+            break
+        # 18 nov 10:48 y 15:47: el editor abrió con el hueco de la imagen en blanco, y esperar no lo arregla
+        # (el 01b de las 15:47 seguía en blanco). Se cierra con la X y se comparte otra vez, una sola vez.
+        descartar(ev)
+        if intento == 2:
+            raise PantallaInesperada("el editor de Threads abrió dos veces sin la tarjeta (hueco en blanco)")
     _exigir_cuenta(telefono.volcado(timeout=20))
     pie = ev / "pie-threads.txt"
     pie.write_text(pie_threads(texto_plano, url), encoding="utf-8")

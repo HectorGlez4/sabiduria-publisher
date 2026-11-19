@@ -106,7 +106,9 @@ BORRADO_VERBOS = ("supprimer", "eliminar", "borrar", "delete", "remove", "retire
 DESCARTE = {
     # «Abandonner la photo ?» (feed y Story) y «Enregistrer le brouillon ?» (Reel, botón «Recommencer»): vistos al
     # salir de los flujos del sitio el 2026-11-03.
-    "instagram": {"titulos": ("Recommencer ?", "Abandonner la photo ?", "Enregistrer le brouillon ?"),
+    "instagram": {"titulos": ("Recommencer ?", "Abandonner la photo ?", "Enregistrer le brouillon ?",
+                                # 18 nov 13:37: la Story con música ya puesta pregunta esto (botón «Abandonner»)
+                                "Abandonner les modifications ?"),
                   "botones": ("Recommencer", "Abandonner", "Supprimer")},
     "threads": {"titulos": (), "botones": ()},  # sin descarte automático hasta S1: la tarea 12a añade el diálogo observado si no es de borrado
     "facebook": {"titulos": ("¿Descartar publicación?",), "botones": ("Descartar",)},  # confirmar contra el fixture de S1
