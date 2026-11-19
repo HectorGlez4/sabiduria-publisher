@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-21-noche",
+  "id": "2026-11-21-extra85",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JohnStuartMill", "#Citas", "#SobreLaLibertad"],
-    "extended": ["#Filosofia", "#PensamientoCritico", "#Siglo19", "#LibertadDeExpresion", "#Debate", "#Sabiduria"]
+    "topic": [
+      "#JohnStuartMill",
+      "#Citas",
+      "#SobreLaLibertad"
+    ],
+    "extended": [
+      "#Filosofia",
+      "#PensamientoCritico",
+      "#Siglo19",
+      "#LibertadDeExpresion",
+      "#Debate",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "El año de la edición: Gutenberg da introducción de 1901 y primera publicación de 1859; Wikisource usa la 4.ª edición sin fecha. La pieza fecha la obra en 1859, no la edición consultada.",
     "La tercera fuente (resúmenes de páginas de citas) no cuenta como verificación independiente; solo las dos transcripciones del texto de Mill se abrieron y leyeron. La edición de Oxford (Online Library of Liberty) devolvió 403 o no se localizó."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-22T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

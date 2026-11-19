@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-07-tarde",
+  "id": "2026-11-21-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,7 +20,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
@@ -68,5 +68,12 @@
     "Que Garcilaso fue el primero en subir la escala en Le Muy: aparece en materiales docentes y en resúmenes de búsqueda, no en lectura directa. No se usa.",
     "La puntuación exacta del verso 13 varía entre ediciones (con o sin coma tras «ligera»); se sigue la de Wikisource."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-21T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

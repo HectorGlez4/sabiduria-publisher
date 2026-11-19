@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-08-extra41",
+  "id": "2026-11-21-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -67,5 +67,12 @@
     "Que Hegel era rector de la Universidad de Berlín al publicarla: lo fue en 1829-1830, no se verificó en esta ejecución. No se usa.",
     "La traducción al español es propia, a partir del alemán y de la versión inglesa de Dyde; no se atribuye a ninguna edición española."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-22T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
