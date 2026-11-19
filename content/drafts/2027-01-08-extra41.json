@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-08-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Hegel y el búho de Minerva (1820)",
+    "hook": "Hegel escribió que el búho de Minerva vuela al anochecer. Lo dijo para negarle a la filosofía el derecho a dar instrucciones.",
+    "quote": {
+      "text": "El búho de Minerva no emprende su vuelo sino al caer el crepúsculo.",
+      "author": "G. W. F. Hegel",
+      "work": "Filosofía del derecho, prefacio (Berlín, Nicolai, 1821)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Hegel firmó el prefacio de su Filosofía del derecho en Berlín el 25 de junio de 1820. El libro salió de la imprenta de Nicolai con fecha de 1821. La frase del búho, el animal de la diosa de la sabiduría, está casi al final de ese prefacio.",
+      "Justo antes, Hegel explica qué quiere decir. Para enseñar cómo debería ser el mundo, la filosofía siempre llega tarde. Aparece cuando la realidad ya terminó de formarse. Cuando pinta gris sobre gris, una forma de vida ya envejeció, y ese gris no la rejuvenece: solo permite conocerla.",
+      "Se suele citar como consuelo, como si dijera que la sabiduría llega con los años. En el texto es otra cosa, más incómoda. Comprender algo de verdad exige que ese algo ya haya pasado. Lo que todavía está ocurriendo, nadie lo entiende del todo."
+    ],
+    "question": "¿Qué entiende hoy de una época de su vida que mientras la vivía no entendía?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hegel",
+      "#Filosofia",
+      "#Citas"
+    ],
+    "extended": [
+      "#FilosofiaAlemana",
+      "#Minerva",
+      "#Siglo19",
+      "#Historia",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En el prefacio de la Filosofía del derecho: la filosofía «always comes too late» para enseñar cómo debe ser el mundo; no aparece hasta que la realidad ha completado su proceso de formación; «When philosophy paints its grey in grey, one form of life has become old», y ese gris no la rejuvenece, solo permite conocerla; sigue «The owl of Minerva, takes its flight only when the shades of night are gathering». El prefacio está fechado en Berlín, 25 de junio de 1820. Traducción de S. W. Dyde, 1896. Lectura directa.",
+      "source": "Hegel, Philosophy of Right, Preface, trad. S. W. Dyde (1896), Marxists Internet Archive",
+      "url": "https://www.marxists.org/reference/archive/hegel/works/pr/preface.htm"
+    },
+    {
+      "claim": "Primera edición: Grundlinien der Philosophie des Rechts, título alternativo Naturrecht und Staatswissenschaft im Grundrisse, Berlín, Nicolai, 1821; ejemplar de la Staats- und Stadtbibliothek Augsburg digitalizado por la Bayerische Staatsbibliothek. Lectura directa.",
+      "source": "Deutsche Digitale Bibliothek, ficha de la edición de 1821",
+      "url": "https://www.deutsche-digitale-bibliothek.de/item/HV6ZQR2TSKJ6FVH4SVJTTSTRVL2VJ5V2?lang=en"
+    },
+    {
+      "claim": "La Filosofía del derecho «was published in 1821 when Hegel taught in Berlin». Lectura directa.",
+      "source": "Stanford Encyclopedia of Philosophy, «Hegel's Social and Political Philosophy»",
+      "url": "https://plato.stanford.edu/entries/hegel-social-political/"
+    },
+    {
+      "claim": "Texto alemán de la frase: «Die Eule der Minerva beginnt erst mit der einbrechenden Dämmerung ihren Flug», precedida de «grau in grau»; referencia Sämtliche Werke, ed. Glockner, vol. 7, p. 37. Visto solo en resultados de búsqueda y en la monografía de M. Dolar (Filozofija i društvo, 2015); no se leyó el original alemán en lectura directa.",
+      "source": "Dolar, «The owl of Minerva from dusk till dawn, or, two shades of gray», Filozofija i društvo (2015)",
+      "url": "https://journal.ifdt.bg.ac.rs/index.php/fid/article/view/291"
+    }
+  ],
+  "do_not_use": [
+    "Fechar la obra solo en 1820 o solo en 1821 sin explicar: el prefacio está firmado el 25 de junio de 1820 y la portada de la primera edición dice 1821. Que el libro ya circulaba a finales de 1820 se repite, pero no se verificó. El cuerpo da las dos fechas.",
+    "Leer la frase como «la sabiduría llega con la vejez» en sentido personal: en el texto se refiere a la filosofía frente a la historia y va contra quien pretende dictar cómo debe ser el Estado.",
+    "Llamarla «lechuza» o «búho» indistintamente está bien en español; no afirmar que Hegel habla de una especie concreta.",
+    "Que Hegel era rector de la Universidad de Berlín al publicarla: lo fue en 1829-1830, no se verificó en esta ejecución. No se usa.",
+    "La traducción al español es propia, a partir del alemán y de la versión inglesa de Dyde; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}

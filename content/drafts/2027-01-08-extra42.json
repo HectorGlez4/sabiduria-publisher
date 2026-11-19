@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-08-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Valéry y el último verso de El cementerio marino",
+    "hook": "El verso más citado de Valéry no dice que hay que vivir. Dice que hay que intentarlo.",
+    "quote": {
+      "text": "Se levanta el viento... Hay que intentar vivir.",
+      "author": "Paul Valéry",
+      "work": "El cementerio marino, última estrofa (La Nouvelle Revue française, 1920)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Paul Valéry nació en Sète en 1871. En 1892 decidió dejar la vida literaria, y pasaron unos veinte años antes de que volviera a la poesía, con La joven Parca, en 1917. Tres años después publicó en La Nouvelle Revue française El cementerio marino: veinticuatro estrofas de seis versos, dichas por alguien que mira el mar desde un cementerio.",
+      "El poema abre con un epígrafe de Píndaro, de la tercera Pítica: no ansíes, alma mía, la vida inmortal; agota los recursos de lo posible. Durante casi todo el poema, el que habla mira el mediodía inmóvil sobre el agua y se deja tentar por esa quietud perfecta, que es también la de los muertos que tiene debajo.",
+      "En la última estrofa algo se mueve. El viento abre y cierra el libro, la ola salta contra las rocas, y llega el verso. No es una consigna de entusiasmo. El verbo es tentar: probar, intentar, sin garantía. Valéry no promete que la vida valga la pena. Dice que el viento ya empezó y que conviene ponerse en marcha."
+    ],
+    "question": "¿Qué cosa lleva tiempo contemplando en lugar de intentarla?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PaulValery",
+      "#Poesia",
+      "#Citas"
+    ],
+    "extended": [
+      "#PoesiaFrancesa",
+      "#Pindaro",
+      "#Siglo20",
+      "#Vivir",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Le Cimetière marin tiene 24 estrofas de seis versos; la última contiene «Le vent se lève !… Il faut tenter de vivre !»; el epígrafe es de Píndaro, Píticas III («Μή, φίλα ψυχά, βίον ἀθάνατον σπεῦδε, τὰν δ' ἔμπρακτον ἄντλει μαχανάν»). El poema se fecha en 1920; el texto sigue Œuvres de Paul Valéry, vol. 3, NRF, 1933, pp. 157-163. Lectura directa (comprobación, no transcripción). La misma última estrofa menciona el viento que abre y cierra el libro y la ola que salta de las rocas.",
+      "source": "Wikisource (francés), «Le Cimetière marin»",
+      "url": "https://fr.wikisource.org/wiki/Le_Cimetière_marin"
+    },
+    {
+      "claim": "Valéry nació en Cette (hoy Sète) el 30 de octubre de 1871; en 1892 resolvió abandonar la vida literaria; tras unos veinte años de rechazo de la literatura volvió a la poesía en 1917 con La Jeune Parque; Le Cimetière marin apareció en La Nouvelle Revue française en 1920 y fue recogido en Charmes (1922). Lectura directa.",
+      "source": "Encyclopédie Larousse, «Paul Valéry»",
+      "url": "https://www.larousse.fr/encyclopedie/personnage/Valéry/148104"
+    },
+    {
+      "claim": "Píndaro, Pítica III, vv. 61-62: «Do not crave immortal life, my soul, but use to the full the resources of what is possible» (trad. Diane Arnson Svarlien, 1990). Lectura directa.",
+      "source": "Perseus Digital Library, Píndaro, Pítica 3",
+      "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0162:book=P.:poem=3"
+    }
+  ],
+  "do_not_use": [
+    "Que el poema se publicó por primera vez en Charmes (1922): algunas fichas lo dicen, pero apareció antes en La Nouvelle Revue française, en 1920 (Larousse). El mes (junio) no se verificó en lectura directa.",
+    "Que Valéry está enterrado en el cementerio marino de Sète y que el cementerio cambió de nombre por el poema: aparece en resultados de búsqueda, no se verificó en lectura directa. No se usa.",
+    "Que Valéry no escribió nada en esos veinte años: dejó la poesía, pero siguió escribiendo prosa y sus cuadernos. El cuerpo dice solo que no volvió a la poesía.",
+    "Que la película de Miyazaki Se levanta el viento (2013) toma el título del verso: muy repetido, no se verificó en esta ejecución. No se usa.",
+    "Traducir «il faut tenter de vivre» por «hay que vivir»: pierde el verbo tenter, que es el centro de la pieza.",
+    "La traducción al español es propia; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}

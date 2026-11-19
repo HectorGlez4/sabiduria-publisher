@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-08-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Juan Rulfo y la primera frase de Pedro Páramo",
+    "hook": "La primera frase de Pedro Páramo ya estaba escrita cuando la novela todavía no se llamaba Pedro Páramo.",
+    "quote": {
+      "text": "Vine a Comala porque me dijeron que acá vivía mi padre, un tal Pedro Páramo.",
+      "author": "Juan Rulfo",
+      "work": "Pedro Páramo, primera frase (Fondo de Cultura Económica, 1955)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Pedro Páramo terminó de imprimirse el 19 de marzo de 1955 en el Fondo de Cultura Económica, en México. Antes de llamarse así se llamó Una estrella junto a la luna, Los murmullos y Comala. En el manuscrito que conserva la UNAM, titulado Los murmullos, la primera línea ya es la que conocemos.",
+      "Rulfo dijo después que aquella primera edición no era la oficial, sino un borrador que entregó para ver si se la publicaban. Contó también que debió haber sacado unas cien páginas. La novela siguió cambiando de palabras y de pasajes en ediciones posteriores. La frase de entrada, en cambio, ya estaba en el manuscrito tal como se lee hoy.",
+      "Es una frase de alguien que no sabe casi nada. Me dijeron. Un tal. Juan Preciado llega por una promesa hecha a su madre moribunda, a buscar a un padre del que solo conoce el nombre, a un pueblo donde poco a poco descubre que la gente con quien habla está muerta. Todo el libro está en esas dos palabras: un tal."
+    ],
+    "question": "¿A quién de su propia familia conoce solo de oídas?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JuanRulfo",
+      "#PedroParamo",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaMexicana",
+      "#Comala",
+      "#Novela",
+      "#Siglo20",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La primera edición de Pedro Páramo se terminó de imprimir el 19 de marzo de 1955; el manuscrito que conserva la UNAM se titula Los murmullos y su primera línea es «Vine a Comala porque me dijeron que acá vivía mi padre, un tal Pedro Páramo»; otros títulos posibles fueron Los desiertos de la tierra, Una estrella junto a la luna y Comala; Rulfo dijo que la edición publicada no era la oficial sino «un borrador que les entregué para ver si la publicaban». Nota de Alejandra del Castillo con declaraciones de Alejandra González (Instituto de Investigaciones Bibliográficas), 20 de marzo de 2025. Lectura directa.",
+      "source": "Gaceta UNAM, «Pedro Páramo habita en la UNAM»",
+      "url": "https://www.gaceta.unam.mx/pedro-paramo-habita-en-la-unam/"
+    },
+    {
+      "claim": "La novela se llamó primero Una estrella junto a la luna, luego Los murmullos, antes de Pedro Páramo; el pueblo se llamó primero Tuxcacuexco; las versiones sucesivas suprimieron pasajes y cambiaron palabras y construcciones; Rulfo dijo «debí haber sacado unas 100 páginas»; algunas fuentes fechan la primera edición en marzo y otras en junio de 1955. Mario Goloboff, 12 de marzo de 2025. Lectura directa.",
+      "source": "Semanario Universidad (Universidad de Costa Rica), «A los 70 años de la primera edición de Pedro Páramo»",
+      "url": "https://semanariouniversidad.com/suplementos/a-los-70-anos-de-la-primera-edicion-de-pedro-paramo/"
+    },
+    {
+      "claim": "Primera edición en 1955 por el Fondo de Cultura Económica; Juan Preciado prometió a su madre, Dolores Preciado, en su lecho de muerte, que iría a Comala a reclamar a su padre; en Comala encuentra a varias personas y poco a poco las percibe como muertas; el texto se publicó antes por entregas como Una estrella junto a la luna (Las Letras Patrias), Los murmullos (Universidad de México) y Comala (Dintel). Lectura directa.",
+      "source": "Wikipedia (español), «Pedro Páramo»",
+      "url": "https://es.wikipedia.org/wiki/Pedro_Páramo"
+    }
+  ],
+  "do_not_use": [
+    "Fecha exacta de la primera edición: la Gaceta UNAM da el 19 de marzo de 1955 como fin de impresión; otras fuentes dan el 30 de marzo, junio o el 18 de julio de 1955. El cuerpo usa la de la UNAM y dice «terminó de imprimirse».",
+    "Que fue el número 19 de la colección Letras Mexicanas con 2.000 ejemplares y portada de Ricardo Martínez: aparece en resultados de búsqueda, no se verificó en lectura directa. No se usa.",
+    "Que la primera edición vendió muy poco y tardó años en agotarse: muy repetido, no se verificó en esta ejecución. No se usa.",
+    "Que el narrador Juan Preciado habla ya muerto desde la tumba que comparte con Dorotea: es una lectura extendida del libro, pero no se verificó en fuente directa en esta ejecución. El cuerpo dice solo que descubre que la gente con quien habla está muerta.",
+    "Que la frase de apertura se mantuvo idéntica en todas las ediciones revisadas por Rulfo: se verificó solo que figura en el manuscrito y que es la que se conoce; el cuerpo no afirma más que eso de forma literal.",
+    "La frase se cita del texto de Rulfo; es una sola oración, dentro de los límites de cita breve."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-08-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Protágoras y el hombre medida del Teeteto",
+    "hook": "La frase de Protágoras se cita como un elogio del ser humano. En Platón es un viento que a uno le parece frío y a otro no.",
+    "quote": {
+      "text": "El hombre es la medida de todas las cosas: de las que son, de que son; y de las que no son, de que no son.",
+      "author": "Protágoras",
+      "work": "Citado por Platón, Teeteto 152a (ed. Loeb, trad. Fowler, 1921)",
+      "attribution_verified": true
+    },
+    "body": [
+      "Protágoras nació en Abdera, en Tracia, hacia el 490 a.C., y murió hacia el 420. De sus libros no queda ninguno. La frase sobrevive porque otros la copiaron: Platón en el Teeteto y, siglos después, Diógenes Laercio, que dice que con ella empezaba una de sus obras.",
+      "En el Teeteto, Sócrates la explica enseguida con un ejemplo. Sopla el mismo viento y uno de los dos siente frío y el otro no. Entonces, ¿el viento es frío o no lo es? Para Protágoras, frío para quien lo siente así y no para el otro. Cada cosa es para mí tal como me aparece, y para ti tal como te aparece a ti.",
+      "No es, por tanto, una alabanza de la grandeza humana. Es la tesis de que no hay una medida por encima de cada uno, y Platón la cita para discutirla durante decenas de páginas. La frase llega hasta hoy en boca de quien quería refutarla."
+    ],
+    "question": "¿En qué desacuerdo suyo los dos podrían tener razón sobre el mismo viento?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Protagoras",
+      "#Filosofia",
+      "#Citas"
+    ],
+    "extended": [
+      "#Platon",
+      "#GreciaAntigua",
+      "#Sofistas",
+      "#Relativismo",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En Teeteto 152a Sócrates dice que Protágoras afirma «somewhere that man is the measure of all things, of the existence of the things that are and the non-existence of the things that are not»; lo glosa como «individual things are for me such as they appear to me» (y para ti como te aparecen a ti) y da el ejemplo: «when the same wind blows, one of us feels cold, and the other does not». Lectura directa del texto inglés en Perseus.",
+      "source": "Platón, Teeteto 152a-b, en Perseus Digital Library (Tufts University)",
+      "url": "https://atlas.perseus.tufts.edu/library/passage/urn:cts:greekLit:tlg0059.tlg006.perseus-eng2:152/text"
+    },
+    {
+      "claim": "La traducción inglesa de Perseus es la de Harold North Fowler, Loeb Classical Library, 1921 (volumen Theaetetus, Sophist). Ficha del catálogo de Perseus, vista en el resultado de búsqueda.",
+      "source": "Perseus Catalog, urn:cts:greekLit:tlg0059.tlg006",
+      "url": "https://catalog.perseus.org/catalog/urn:cts:greekLit:tlg0059.tlg006.perseus-eng1"
+    },
+    {
+      "claim": "Protágoras nació hacia el 490 a.C. en Abdera (Tracia) y murió hacia el 420 a.C.; el fragmento del hombre medida es DK 80 B1; solo dos títulos de sus obras son probablemente fiables; las fuentes posteriores escriben siglos después; las historias de juicio por impiedad y quema de libros en Atenas «may well have been later legends». Lectura directa.",
+      "source": "Internet Encyclopedia of Philosophy, «Protagoras»",
+      "url": "https://iep.utm.edu/protagor/"
+    },
+    {
+      "claim": "Diógenes Laercio IX, 51: Protágoras «began a work» con «Man is the measure of all things, of things that are that they are, and of things that are not that they are not»; la frase sobre los dioses abre otra obra distinta. Trad. R. D. Hicks. Lectura directa.",
+      "source": "Diógenes Laercio, Vidas de los filósofos ilustres IX, 50-52, trad. Hicks, en Wikisource",
+      "url": "https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_IX"
+    }
+  ],
+  "do_not_use": [
+    "Que los atenienses quemaron sus libros en el ágora y lo desterraron: lo cuenta Diógenes Laercio IX, 52, pero la IEP lo considera probablemente leyenda posterior. No se afirma en el cuerpo.",
+    "Que murió ahogado en un naufragio huyendo de Atenas: forma parte de las mismas tradiciones tardías. No se usa.",
+    "Que redactó las leyes de Turios por encargo de Pericles en 444 a.C.: la IEP lo da, pero Diógenes lo atribuye solo a Heráclides Póntico. No se usa.",
+    "El título de la obra que abría la frase (La verdad, o Discursos demoledores / Kataballontes): no se verificó en lectura directa. El cuerpo dice solo «una de sus obras».",
+    "Leer la frase como humanismo renacentista (el hombre en el centro del universo): es un uso posterior; en el Teeteto se refiere a la percepción de cada individuo.",
+    "La traducción al español es propia, a partir del inglés de Fowler y Hicks; no se atribuye a ninguna edición española."
+  ],
+  "status": "draft"
+}
