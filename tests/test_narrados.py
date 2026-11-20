@@ -373,11 +373,101 @@ def seccion_proyecto() -> None:
         check(not faltan, f"assets copiados {faltan}")
 
 
+def seccion_chequeos() -> None:
+    print("\n5. Chequeos de composición, audio y transcripción")
+    import shutil
+    import subprocess
+    from labkit import narrado_chequeos as nc
+
+    voz = ["Quien tiene un porqué para vivir, soporta casi cualquier cómo.", "La escribió en 1888."]
+    check(nc.comparar(voz, "quien tiene un por qué para vivir soporta casi cualquier como la escribio en "
+                           "mil ochocientos ochenta y ocho") is None,
+          "tolera división de palabras, tildes, comas y cifras")
+    check("casi" in (nc.comparar(voz, "quien tiene un porque para vivir soporta cualquier como la escribio "
+                                      "en 1888") or ""), "detecta la palabra que falta")
+    check(nc.comparar(voz, voz[0] + " " + voz[1] + " gracias por ver") is not None,
+          "detecta palabras de más")
+    check("gracias" in (nc.comparar(voz, voz[0] + " " + voz[1] + " gracias por ver") or ""),
+          "dice cuáles sobran")
+    check(nc.comparar(voz, "quien tiene un porque") is not None, "detecta que la voz se corta")
+
+    nombre = ["La escribió Friedrich Nietzsche en 1888."]
+    dicho = "la escribio friedrich niche en mil ochocientos ochenta y ocho"
+    check(nc.comparar(nombre, dicho) is not None, "sin nombres, «niche» por «Nietzsche» falla")
+    check(nc.comparar(nombre, dicho, ["Nietzsche"]) is None, "con nombres, «niche» por «Nietzsche» pasa")
+    check(nc.comparar(nombre, dicho, nombres=None) is not None, "nombres=None es el comportamiento estricto")
+    check(nc.comparar(nombre, "la escribio friedrich nietzsche ocho", ["Nietzsche"]) is not None,
+          "con nombres, una palabra ordinaria que falta sigue fallando")
+    check("escribio" in (nc.comparar(nombre, "la friedrich niche en mil ochocientos ochenta y ocho",
+                                     ["Nietzsche"]) or ""), "con nombres, el contexto nombra la palabra caída")
+    check(nc.comparar(nombre, dicho + " hoy", ["Nietzsche"]) is not None, "con nombres, sobrar sigue fallando")
+    check(nc.comparar(nombre, "la escribio friedrich en mil ochocientos ochenta y ocho", ["Nietzsche"]) is not None,
+          "el nombre no puede faltar del todo")
+    check(nc.comparar(["Frankl la citó."], "Franco la citó.", ["Frankl"]) is None, "un nombre al inicio")
+
+    fixtures = ROOT / "tests" / "fixtures" / "narrados"
+    informe = json.loads((fixtures / "hyperframes-check-espiga.json").read_text(encoding="utf-8"))
+    p = nc.problemas_de_check(informe)
+    check(len(p) == 6 and all("outside_safe_zone" in x for x in p), f"el check de la espiga da 6 avisos de zona segura ({len(p)})")
+    check(sum("right edge" in x for x in p) == 4 and sum("bottom edge" in x for x in p) == 2,
+          "cuatro por el borde derecho y dos por el inferior")
+    check(not any("timeline_track_too_dense" in x or "nested_structure" in x for x in p),
+          "se ignoran la densidad y la subcomposición")
+    mixto = {"lint": {"findings": [{"code": "x", "severity": "error", "message": "roto"}]},
+             "layout": {"findings": [{"code": "text_below_floor", "severity": "warning", "message": "chico"},
+                                     {"code": "otra", "severity": "warning", "message": "ruido"}]}}
+    check(len(nc.problemas_de_check(mixto)) == 2, "un error y un text_below_floor cuentan; otro aviso no")
+    check(nc.problemas_de_check({}) == [], "informe vacío sin problemas")
+
+    crudo = json.loads((fixtures / "hyperframes-transcripcion-espiga.json").read_text(encoding="utf-8"))
+    t = nc.palabras_de_transcripcion(crudo)
+    check(set(t) == {"texto", "palabras"} and set(t["palabras"][0]) == {"palabra", "inicio"}
+          and t["palabras"][1]["inicio"] == 0.6, "transcribir devuelve solo texto y palabras con inicio")
+    espiga = ["Esta frase no es de Viktor Frankl.",
+              "Quien tiene un porqué para vivir, soporta casi cualquier cómo.",
+              "La escribió Friedrich Nietzsche en 1888, como una intuición.",
+              "Frankl la citó con su nombre en 1946, al salir de los campos de concentración.",
+              "Una frase pensada en un escritorio, y comprobada en el infierno.",
+              "¿Cuál es hoy tu porqué?"]
+    check(nc.comparar(espiga, t["texto"], ["Viktor"]) is None,
+          "la transcripción real de la espiga compara igual al guion (con «Viktor» como nombre)")
+    check(nc.comparar(espiga, t["texto"]) is not None, "sin nombres, «Victor» por «Viktor» falla")
+
+    if shutil.which("ffmpeg") and shutil.which("ffprobe"):
+        with tempfile.TemporaryDirectory() as d:
+            def tono(nombre: str, dur: int, hueco: str | None = None) -> pathlib.Path:
+                f = pathlib.Path(d) / nombre
+                af = "volume=0.5" + (f",volume=enable='between(t,{hueco})':volume=0" if hueco else "")
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                                f"sine=frequency=440:duration={dur}:sample_rate=48000", "-af", af, str(f)],
+                               check=True)
+                return f
+            con_hueco = tono("hueco.wav", 30, "10,12")
+            s = nc.silencios(con_hueco)
+            check(len(s) == 1 and abs(s[0][0] - 10) < 0.1 and abs(s[0][1] - 12) < 0.1, f"silencios halla el hueco {s}")
+            m = nc.medidas(con_hueco)
+            check(abs(m["duracion"] - 30) < 0.1 and m["lufs"] < 0 and m["pico"] < 0, f"medidas {m}")
+            check(any("silencio" in x for x in nc.audio_ok(con_hueco, 28)), "audio_ok reporta el silencio")
+            check(not any("silencio" in x for x in nc.audio_ok(con_hueco, 9)),
+                  "un silencio posterior al fin de la narración no cuenta")
+            check(any("duración" in x for x in nc.audio_ok(tono("corto.wav", 20), 18)),
+                  "audio_ok reporta la duración de 20 s")
+            check(not any("duración" in x for x in nc.audio_ok(con_hueco, 28)), "30 s no es problema de duración")
+            try:
+                nc.medidas(pathlib.Path(d) / "no-existe.wav")
+                check(False, "medir un archivo ausente lanza ChequeoFallido")
+            except nc.ChequeoFallido as e:
+                check(e.herramienta == "ffprobe", "medir un archivo ausente lanza ChequeoFallido")
+    else:
+        print("  (omitido: falta ffmpeg o ffprobe)")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
     seccion_voz,
     seccion_proyecto,
+    seccion_chequeos,
 ]
 
 

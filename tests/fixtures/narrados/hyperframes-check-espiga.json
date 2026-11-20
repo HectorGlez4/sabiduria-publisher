@@ -1,0 +1,421 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 7,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "This HTML file has 6 timed elements. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"a\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#a",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"a\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"b\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#b",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"b\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"c\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#c",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"c\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"d\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#d",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"d\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"e\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#e",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"e\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"f\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#f",
+        "dataAttributes": {},
+        "sourceFile": "/proyecto/index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"f\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "selector": "#tachado",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 210.69,
+          "y": 773.91,
+          "width": 578.62,
+          "height": 118
+        },
+        "time": 1.611,
+        "rect": {
+          "left": 210.69,
+          "top": 773.91,
+          "right": 789.31,
+          "bottom": 891.91,
+          "width": 578.62,
+          "height": 118
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Viktor Frankl",
+        "message": "<div> \"Viktor Frankl\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 1.611,
+        "lastSeen": 1.611,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          1.611
+        ]
+      },
+      {
+        "selector": "#cita",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 163.44,
+          "y": 657.06,
+          "width": 629.89,
+          "height": 224.36
+        },
+        "time": 4.833,
+        "rect": {
+          "left": 163.44,
+          "top": 657.06,
+          "right": 793.33,
+          "bottom": 881.42,
+          "width": 629.89,
+          "height": 224.36
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Quien tiene un porqué para",
+        "message": "<div> \"Quien tiene un porqué para\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 4.833,
+        "lastSeen": 4.833,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          4.833
+        ]
+      },
+      {
+        "selector": "#e2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 198.06,
+          "y": 831,
+          "width": 603.86,
+          "height": 219.19
+        },
+        "time": 24.167,
+        "rect": {
+          "left": 198.06,
+          "top": 831,
+          "right": 801.92,
+          "bottom": 1050.19,
+          "width": 603.86,
+          "height": 219.19
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Comprobadaen el infierno.",
+        "message": "<div> \"Comprobadaen el infierno.\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 24.167,
+        "lastSeen": 24.167,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          24.167
+        ]
+      },
+      {
+        "selector": "#pregunta",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 219.25,
+          "y": 672.61,
+          "width": 561.48,
+          "height": 233.39
+        },
+        "time": 27.389,
+        "rect": {
+          "left": 219.25,
+          "top": 672.61,
+          "right": 780.73,
+          "bottom": 906,
+          "width": 561.48,
+          "height": 233.39
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "¿Cuál es hoytu porqué?",
+        "message": "<div> \"¿Cuál es hoytu porqué?\" is outside the safe area: TikTok (right edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.389,
+        "lastSeen": 27.389,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.389
+        ]
+      },
+      {
+        "selector": "#firma",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 251.39,
+          "y": 1291,
+          "width": 497.22,
+          "height": 45
+        },
+        "time": 27.389,
+        "rect": {
+          "left": 251.39,
+          "top": 1291,
+          "right": 748.61,
+          "bottom": 1336,
+          "width": 497.22,
+          "height": 45
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Sabiduría de Bolsillo",
+        "message": "<div> \"Sabiduría de Bolsillo\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.389,
+        "lastSeen": 27.389,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.389
+        ]
+      },
+      {
+        "selector": "#aviso",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 412.64,
+          "y": 1346,
+          "width": 174.7,
+          "height": 39
+        },
+        "time": 27.389,
+        "rect": {
+          "left": 412.64,
+          "top": 1346,
+          "right": 587.34,
+          "bottom": 1385,
+          "width": 174.7,
+          "height": 39
+        },
+        "code": "outside_safe_zone",
+        "severity": "warning",
+        "text": "Voz sintética",
+        "message": "<div> \"Voz sintética\" is outside the safe area: TikTok (bottom edge), Instagram Reels (bottom edge), YouTube Shorts (bottom edge).",
+        "fixHint": "Move the text inside the safe area, or mark text meant to sit there with data-layout-allow-safe-zone.",
+        "firstSeen": 27.389,
+        "lastSeen": 27.389,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          27.389
+        ]
+      }
+    ],
+    "duration": 29,
+    "samples": [
+      1.611,
+      4.833,
+      8.056,
+      11.278,
+      14.5,
+      17.722,
+      20.944,
+      24.167,
+      27.389
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 6,
+    "truncated": false,
+    "faceCheck": {
+      "ran": true,
+      "candidates": 0,
+      "faces": 0
+    }
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      1.611,
+      8.056,
+      14.5,
+      20.944,
+      27.389
+    ],
+    "checked": 9,
+    "passed": 9
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 232
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "7242aba7-0dc0-4c29-aa13-60dee55ec8be",
+    "revision": null,
+    "report": "/proyecto/.hyperframes/artifacts/checks/7242aba7-0dc0-4c29-aa13-60dee55ec8be.json",
+    "attribution": "unversioned"
+  },
+  "_meta": {
+    "version": "0.9.70",
+    "latestVersion": "0.9.72",
+    "updateAvailable": true,
+    "checkedAt": "2026-11-20T18:03:43.995Z",
+    "updateNotice": "For the user: HyperFrames CLI 0.9.72 is available (this run is 0.9.70). To update, run: (cd ~ && npx hyperframes@latest update)"
+  }
+}
