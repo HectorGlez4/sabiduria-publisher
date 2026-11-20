@@ -326,7 +326,8 @@ def seccion_proyecto() -> None:
         check("escena 2" in str(e) and "201" in str(e) and "200" in str(e),
               "NoCabe nombra la escena, la longitud y el máximo")
     guion_140 = copy.deepcopy(guion_ok)
-    guion_140["escenas"][1]["pantalla"]["texto"] = " ".join(["palabra"] * 17)[:140]
+    guion_140["escenas"][1]["pantalla"]["texto"] = ("palabra " * 20)[:140]
+    check(len(guion_140["escenas"][1]["pantalla"]["texto"]) == 140, "la cita de prueba mide exactamente 140")
     px = np_.tamano_cita(guion_140["escenas"][1]["pantalla"]["texto"])
     h140 = np_.html(guion_140, tiempos_ok, total, None)
     check(f'style="font-size:{px}px"' in h140 and 56 <= px < 84, f"cita de 140 caracteres a {px} px en el HTML")
