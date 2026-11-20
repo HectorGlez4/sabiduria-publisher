@@ -23,6 +23,15 @@ def check(cond: bool, label: str) -> None:
         FALLOS.append(label)
 
 
+def tiene_todos(problemas: list[str], *trozos: str) -> bool:
+    return all(any(t in p for p in problemas) for t in trozos)
+
+
+def sembrada_tabla() -> dict:
+    return json.loads((ROOT / "experiments" / "media-lab" / "narrados" / "pronunciacion.json")
+                      .read_text(encoding="utf-8"))
+
+
 def _guion_ok() -> dict:
     return {
         "pieza": "2026-11-10-re55-reel",
@@ -146,6 +155,73 @@ def seccion_guion() -> None:
     check(any("infierno" in p for p in ng.validar(ok, prohibida, True)),
           "término de do_not_use en una voz")
 
+    # Hallazgo 1: la voz de la cita debe ser core.quote.text (solo letras y dígitos cuentan)
+    def con_escena(i, voz=None, **pantalla):
+        g = _guion_ok()
+        if voz is not None:
+            g["escenas"][i]["voz"] = voz
+        g["escenas"][i]["pantalla"].update(pantalla)
+        return g
+
+    cambiada = ng.validar(con_escena(1, "Quien tiene un cómo para vivir soporta casi cualquier porqué."), pieza, True)
+    check(any("voz" in p and "core.quote.text" in p for p in cambiada),
+          f"hallazgo 1: la voz de la cita con palabras cambiadas de sitio falla ({cambiada})")
+    check(ng.validar(con_escena(1, "Quien tiene un porqué para vivir, soporta casi cualquier cómo…"), pieza, True) == [],
+          "hallazgo 1: la puntuación añadida a la voz de la cita se admite")
+    check(any("core.quote.text" in p for p in ng.validar(
+              con_escena(1, "Quien tiene un porqué para vivir soporta cualquier cómo."), pieza, True)),
+          "hallazgo 1: a la voz de la cita le falta una palabra")
+
+    # Hallazgo 2: todo texto de pantalla pasa los mismos controles que la voz
+    def tiene(problemas, *trozos):
+        return all(any(t in p for p in problemas) for t in trozos)
+
+    pr = ng.validar(con_escena(5, texto="¿Qué pensaría Einstein en 1950?"), pieza, True)
+    check(tiene(pr, "Einstein", "1950", "core.question"), f"hallazgo 2: pregunta en pantalla inventada ({pr})")
+    pr = ng.validar(con_escena(5, voz="¿Qué pensaría Einstein en 1950?"), pieza, True)
+    check(tiene(pr, "Einstein", "1950", "core.question"), f"hallazgo 2: pregunta en la voz inventada ({pr})")
+    pr = ng.validar(con_escena(4, claro="Lo dijo Goethe", oscuro="en 1750"), pieza, True)
+    check(tiene(pr, "pantalla.claro", "Goethe", "pantalla.oscuro", "1750"), f"hallazgo 2: contraste inventado ({pr})")
+    pr = ng.validar(con_escena(3, nota="en Auschwitz en 1944"), pieza, True)
+    check(tiene(pr, "pantalla.nota", "Auschwitz", "1944"), f"hallazgo 2: nota inventada ({pr})")
+    pr = ng.validar(con_escena(0, etiqueta="Lo robó Jung"), pieza, True)
+    check(tiene(pr, "pantalla.etiqueta", "Jung"), f"hallazgo 2: etiqueta inventada ({pr})")
+    pr = ng.validar(con_escena(0, nombre="Viktor Frankl el plagiario"), pieza, True)
+    check(tiene(pr, "pantalla.nombre", "plagiario"), f"hallazgo 2: comentario dentro de pantalla.nombre ({pr})")
+    prohibida_pantalla = copy.deepcopy(pieza)
+    prohibida_pantalla["do_not_use"] = ["escritorio"]
+    check(any("pantalla.claro" in p and "escritorio" in p for p in ng.validar(ok, prohibida_pantalla, True)),
+          "do_not_use también vale para la pantalla")
+
+    # Hallazgo 3: nombre al principio de frase
+    pr = ng.validar(con_voz("Goethe la habría firmado en 1888. Einstein también."), pieza, True)
+    check(tiene(pr, "«Goethe» abre una frase", "«Einstein» abre una frase"),
+          f"hallazgo 3: nombres que abren frase y no están en la pieza ({pr})")
+    check(any("«Jung» abre una frase" in p for p in ng.validar(con_escena(4, claro="Jung, en un escritorio"),
+                                                               pieza, True)),
+          "hallazgo 3: también en la pantalla")
+    check(ng.validar(con_voz("Nietzsche la escribió en 1888."), pieza, True) == [],
+          "un nombre de la pieza puede abrir frase")
+    check(ng.validar(con_voz("Frase pensada en un escritorio."), pieza, True) == [],
+          "una palabra que abre frase y la pieza trae en minúscula es ordinaria")
+    check(ng.validar(con_voz("Hoy, también, una frase."), pieza, True) == [], "las palabras funcionales abren frase")
+    check(80 <= len(ng.FUNCIONALES) <= 120 and all(w == w.lower() for w in ng.FUNCIONALES),
+          f"lista cerrada de palabras funcionales ({len(ng.FUNCIONALES)})")
+    muestra = ng.cargar(ROOT / "experiments" / "media-lab" / "narrados" / "2026-08-23-tarde" / "guion.json")
+    pieza_tarde = json.loads((ROOT / "content" / "published" / "2026-08-23-tarde.json").read_text(encoding="utf-8"))
+    check(ng.validar(muestra, pieza_tarde, True) == [], "el guion de muestra comiteado es válido")
+
+    # Hallazgo 5: cifras solo para años
+    pr = ng.validar(con_voz("La citó 40 veces en 12 libros, el 99 por ciento."), pieza, True)
+    check(sum("escribe el número con letras" in p for p in pr) == 3, f"hallazgo 5: 40, 12 y 99 ({pr})")
+    for malo in ("Tenía 21 años.", "Vendió 1.500 libros.", "El 40% de la frase.", "En el 12º libro.",
+                 "Lo leyeron 15000 veces.", "Hacia el 3000 antes de Cristo."):
+        check(any("escribe el número con letras" in p for p in ng.validar(con_voz(malo), pieza, True)),
+              f"hallazgo 5: «{malo}» no pasa")
+    check(any("pantalla.nota" in p and "con letras" in p for p in ng.validar(con_escena(3, nota="21 años"), pieza, True)),
+          "hallazgo 5: también en la pantalla")
+    check(ng.validar(con_voz("En 1888, y otra vez en (1946)."), pieza, True) == [], "años de la pieza con puntuación")
+
     with tempfile.TemporaryDirectory() as d:
         ruta = pathlib.Path(d) / "guion.json"
         ruta.write_text(json.dumps(ok, ensure_ascii=False), encoding="utf-8")
@@ -200,10 +276,45 @@ def seccion_pronuncia() -> None:
           == "La escribió Niche en mil ochocientos ochenta y ocho.", "reescribe solo para la voz")
     check(npr.para_la_voz("Dijo Nietzsche.", tabla_sin_aprobar) == "Dijo Nietzsche.",
           "no reescribe nombres sin aprobar")
-    check(npr.para_la_voz("Dijo Nietzschean y 3000 veces.", tabla_aprobada)
-          == "Dijo Nietzschean y 3000 veces.", "palabra completa y números fuera de rango intactos")
-    check("Frankl" in npr.nombres("Frankl la citó.", tabla_sin_aprobar)
-          and "Frankl" not in npr.nombres("Frankl la citó.", {}), "inicial de frase solo si está en la tabla")
+    check(npr.para_la_voz("Dijo Nietzschean.", tabla_aprobada) == "Dijo Nietzschean.", "palabra completa intacta")
+    from labkit import narrado_guion as ng
+    ctx = ng.contexto(guion_ok)
+    check("Frankl" in ng.nombres_propios("Frankl la citó.", ctx), "inicial de frase: nombre si va con mayúscula en otra parte")
+    check(npr.para_la_voz("Frankl la citó.", {"Frankl": {"dicho": "Franklo", "aprobado_por": "hec"}}, ctx)
+          == "Franklo la citó.", "inicial de frase: la voz usa el dicho del nombre")
+    check(ng.nombres_propios("Esta frase la citó.", ctx) == [], "una palabra funcional que abre frase no es nombre")
+
+    # Hallazgo 3: el nombre que abre frase no se salta la compuerta
+    goethe = _guion_ok()
+    goethe["escenas"][4]["voz"] = "Goethe la habría firmado en 1888. Einstein también."
+    faltan = npr.pendientes(goethe, {})
+    check("Goethe" in faltan and "Einstein" in faltan, f"hallazgo 3: pendientes ve los nombres que abren frase ({faltan})")
+    muestra = ng.cargar(ROOT / "experiments" / "media-lab" / "narrados" / "2026-08-23-tarde" / "guion.json")
+    check(npr.pendientes(muestra, {}) == ["Frankl", "Friedrich", "Nietzsche", "Viktor"],
+          "el guion de muestra con la tabla vacía: los cuatro nombres")
+
+    # Hallazgo 5: solo los años se leen; cualquier otra cifra es un error, no una adivinanza
+    check(npr.para_la_voz("Vale (1888), y en 1946.", {}) == "Vale (mil ochocientos ochenta y ocho), y en mil novecientos cuarenta y seis.",
+          "los años se leen con su puntuación")
+    for malo in ("Vendió 1.500 libros.", "40 veces en 12 libros, el 99 por ciento.", "Tenía 21 años.",
+                 "Dijo Nietzschean y 3000 veces.", "El 40%.", "Fue el 12º."):
+        try:
+            npr.para_la_voz(malo, tabla_aprobada)
+            check(False, f"hallazgo 5: para_la_voz(«{malo}») lanza ValueError")
+        except ValueError:
+            check(True, f"hallazgo 5: para_la_voz(«{malo}») lanza ValueError")
+
+    # Hallazgo 6a: la tabla solo reescribe nombres
+    no_si = {"no": {"dicho": "sí", "aprobado_por": "hec", "fecha": "2026-11-20"}}
+    check(npr.para_la_voz("Esta frase no es de Viktor Frankl.", no_si) == "Esta frase no es de Viktor Frankl.",
+          "hallazgo 6: una entrada en minúscula no reescribe la voz")
+    pt = npr.problemas_de_tabla({**no_si, "Paz": {"dicho": " ", "aprobado_por": "hec"}, "Luz": "Lus",
+                                 "Viktor": {"dicho": "Víktor", "aprobado_por": ""}})
+    check(len(pt) == 3 and tiene_todos(pt, "«no»", "«Paz»", "«Luz»"), f"problemas_de_tabla: minúscula, dicho vacío, no objeto ({pt})")
+    check(npr.problemas_de_tabla(sembrada_tabla()) == [], "la tabla comiteada no tiene problemas")
+    check(npr.problemas_de_tabla([]) != [], "una tabla que no es objeto es un problema")
+    check(npr.para_la_voz("La escribió Nietzsche.", {"Nietzsche": {"dicho": "", "aprobado_por": "hec"}})
+          == "La escribió Nietzsche.", "un dicho vacío no se honra")
 
     sembrada = json.loads((ROOT / "experiments" / "media-lab" / "narrados" / "pronunciacion.json")
                           .read_text(encoding="utf-8"))
@@ -418,6 +529,24 @@ def seccion_chequeos() -> None:
           "el nombre no puede faltar del todo")
     check(nc.comparar(["Frankl la citó."], "Franco la citó.", ["Frankl"]) is None, "un nombre al inicio")
 
+    # Hallazgo 6b: la tolerancia vale solo donde el guion escribe el nombre con mayúscula
+    nombres_tarde = {"Viktor": ["Víktor"], "Frankl": ["Frankl"], "no": ["sí"]}
+    check(nc.comparar(["Esta frase no es de Viktor Frankl."], "esta frase si es de victor frankl", nombres_tarde)
+          is not None, "hallazgo 6: «no» dicho «sí» falla aunque «no» venga como nombre")
+    check(nc.comparar(["La Paz trae paz."], "la pas trae guerra", {"Paz": []}) is not None,
+          "hallazgo 6: «paz» en minúscula no hereda la tolerancia del nombre «Paz»")
+    check(nc.comparar(["La Paz trae paz."], "la pas trae paz", {"Paz": []}) is None,
+          "la tolerancia sigue valiendo en la posición del nombre")
+    # Hallazgo 6c: lo que se oye en lugar del nombre debe parecerse al nombre o a su dicho
+    nombres_n = {"Friedrich": ["Frídrij"], "Nietzsche": ["Niche"]}
+    check(nc.comparar(nombre, "la escribio carl jung en mil ochocientos ochenta y ocho", nombres_n) is not None,
+          "hallazgo 6: «Friedrich Nietzsche» oído como «Carl Jung» falla")
+    check(nc.comparar(nombre, "la escribio fridrij niche en mil ochocientos ochenta y ocho", nombres_n) is None,
+          "el dicho aprobado se acepta en la posición del nombre")
+    check(nc.comparar(nombre, "la escribio friedrich jung en mil ochocientos ochenta y ocho", ["Nietzsche"])
+          is not None, "con una lista de nombres, una palabra que no se parece falla")
+    check(nc.comparar(["Lo dijo en 1888."], "lo dijo en 12000") is not None, "una cifra fuera de rango en la transcripción es divergencia, no excepción")
+
     fixtures = ROOT / "tests" / "fixtures" / "narrados"
     informe = json.loads((fixtures / "hyperframes-check-espiga.json").read_text(encoding="utf-8"))
     p = nc.problemas_de_check(informe)
@@ -617,8 +746,10 @@ def seccion_construir() -> None:
         return d
 
     class Falsas:
-        def __init__(self, transcripcion_mp4=None, problemas_audio=()):
+        def __init__(self, transcripcion_mp4=None, problemas_audio=(), base=4.0, palabras_cita=None):
             self.sintetizadas, self.orden = [], []
+            self.base = base  # 6 frases de 4,1–4,6 s: unos 32 s, dentro de 25–40
+            self.palabras_cita = palabras_cita if palabras_cita is not None else cita.split()
             self.mp4 = transcripcion_mp4 if transcripcion_mp4 is not None else " ".join(voces)
             self.problemas_audio = list(problemas_audio)
 
@@ -627,7 +758,7 @@ def seccion_construir() -> None:
                 self.sintetizadas.append(frase)
                 Path(salida).parent.mkdir(parents=True, exist_ok=True)
                 Path(salida).write_bytes(b"wav")
-                return 2.0 + 0.1 * len(self.sintetizadas)
+                return self.base + 0.1 * len(self.sintetizadas)
 
             def mezclar(wavs, inicios, total, salida):
                 self.orden.append("mezclar")
@@ -637,8 +768,8 @@ def seccion_construir() -> None:
                 self.orden.append("transcribir")
                 if str(audio).endswith(".mp4"):
                     return {"texto": self.mp4, "palabras": []}
-                palabras = [{"palabra": w, "inicio": 0.2 * k} for k, w in enumerate(cita.split())]
-                return {"texto": cita, "palabras": palabras}
+                palabras = [{"palabra": w, "inicio": 0.2 * k} for k, w in enumerate(self.palabras_cita)]
+                return {"texto": " ".join(self.palabras_cita), "palabras": palabras}
 
             def render(proyecto):
                 self.orden.append("render")
@@ -689,8 +820,8 @@ def seccion_construir() -> None:
         check(len(f.segundos) == 6 and f.segundos == sorted(f.segundos), "un fotograma por escena, en orden")
         en_disco = json.loads((build / "informe.json").read_text(encoding="utf-8"))
         check(en_disco == inf, "informe.json es lo que devuelve construir")
-        check(Path(inf["mp4"]) == build / "2026-08-23-tarde.mp4" and Path(inf["mp4"]).exists(), "el mp4 queda en build/")
-        check(Path(inf["hoja"]) == build / "hoja.jpg" and Path(inf["hoja"]).exists(), "la hoja queda en build/")
+        check(Path(inf["mp4"]) == (build / "2026-08-23-tarde.mp4").resolve() and Path(inf["mp4"]).exists(), "el mp4 queda en build/")
+        check(Path(inf["hoja"]) == (build / "hoja.jpg").resolve() and Path(inf["hoja"]).exists(), "la hoja queda en build/")
         check(inf["veredicto"] is None and inf["duracion"] > 0, "veredicto vacío y duración")
         # 5. repetir da el mismo informe salvo la hora
         f2 = Falsas()
@@ -771,6 +902,99 @@ def seccion_construir() -> None:
         check(not (build / "2026-08-23-tarde.mp4").exists() and (build / "informe.json").exists(),
               "parada en la compuerta de nombres: el mp4 viejo desaparece")
 
+    # Hallazgo 4: construir no vacía nada que no sea suyo
+    def se_niega(etiqueta, pieza_id="2026-08-23-tarde", **kw):
+        f = Falsas()
+        try:
+            nr.construir(pieza_id, tabla=aprobada, herramientas=f.herramientas(), **kw)
+            check(False, etiqueta)
+        except ValueError as e:
+            check(f.sintetizadas == [], f"{etiqueta} ({str(e)[:60]})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        carpeta = raiz / "experiments/media-lab/narrados/2026-08-23-tarde"
+        real = ROOT / "experiments/media-lab/narrados/2026-08-23-tarde"
+        se_niega("hallazgo 4: salida = la carpeta real del guion (fuera de temp) se niega", raiz=raiz, salida=real)
+        check((real / "guion.json").exists(), "hallazgo 4: el guion real sigue en su sitio")
+        se_niega("hallazgo 4: salida «build» en la carpeta de otra pieza se niega",
+                 raiz=raiz, salida=ROOT / "experiments/media-lab/narrados/otra-pieza/build")
+        check(not (ROOT / "experiments/media-lab/narrados/otra-pieza").exists(), "hallazgo 4: no se creó nada")
+        se_niega("hallazgo 4: salida fuera de temp y de la pieza se niega", raiz=raiz,
+                 salida=ROOT / "experiments/media-lab/results/no-existe-narrado")
+        se_niega("hallazgo 4: salida = la carpeta temporal del sistema se niega", raiz=raiz,
+                 salida=Path(tempfile.gettempdir()))
+        se_niega("hallazgo 4: una carpeta con guion.json nunca se vacía", raiz=raiz, salida=carpeta)
+        check((carpeta / "guion.json").exists(), "hallazgo 4: el guion de la carpeta temporal sigue")
+        repo = Path(d) / "repo"
+        (repo / ".git").mkdir(parents=True)
+        se_niega("hallazgo 4: una carpeta con .git nunca se vacía", raiz=raiz, salida=repo)
+        check((repo / ".git").is_dir(), "hallazgo 4: .git sigue")
+        for malo in ("../2026-08-23-tarde", "a/b", "..", "", "x..y"):
+            se_niega(f"hallazgo 4: pieza_id {malo!r} se niega", pieza_id=malo, raiz=raiz)
+        propia = Path(d) / "salida-propia"
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas(),
+                           salida=propia)
+        check(inf["ok"] is True and (propia / "informe.json").exists(), "una salida dentro de temp se acepta")
+
+    # Hallazgo 4: si vaciar falla, no queda un informe ok viejo
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        build = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build"
+        build.mkdir()
+        (build / "informe.json").write_text('{"ok": true}', encoding="utf-8")
+        original = nr.shutil.rmtree
+
+        def rmtree_roto(*a, **k):
+            raise OSError("disco ocupado")
+        nr.shutil.rmtree = rmtree_roto
+        try:
+            nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+            check(False, "hallazgo 4: vaciar fallido se relanza")
+        except OSError:
+            check(True, "hallazgo 4: vaciar fallido se relanza")
+        finally:
+            nr.shutil.rmtree = original
+        quedo = json.loads((build / "informe.json").read_text(encoding="utf-8"))
+        check(quedo["ok"] is False and "disco ocupado" in quedo["problemas"][0],
+              "hallazgo 4: tras un vaciado fallido el informe dice ok false")
+
+    # Hallazgo 6a: una tabla con entradas malas para antes de sintetizar
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas()
+        mala = {**aprobada, "no": {"dicho": "sí", "aprobado_por": "hec", "fecha": "2026-11-20"}}
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=mala, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "pronunciacion" and any("«no»" in p for p in inf["problemas"])
+              and f.sintetizadas == [], "hallazgo 6: entrada en minúscula: fase «pronunciacion», nada sintetizado")
+
+    # Hallazgo 6c en la ida y vuelta: otro nombre en lugar del escrito
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas(transcripcion_mp4=" ".join(voces).replace("Friedrich Nietzsche", "Carl Jung"))
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "ida_y_vuelta", "hallazgo 6: «Carl Jung» por «Friedrich Nietzsche» falla")
+
+    # Menores: duración antes del render y tiempos de la cita
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas(base=2.0)
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "tiempos" and "render" not in f.orden
+              and any("25" in p for p in inf["problemas"]), f"un reel de menos de 25 s se para antes del render ({inf['problemas']})")
+        f = Falsas(base=7.0)
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "tiempos", "un reel de más de 40 s se para antes del render")
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+        check(inf["ok"] is True and inf["cita_tiempos"] == "transcritos", "cita_tiempos: transcritos")
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada,
+                           herramientas=Falsas(palabras_cita=cita.split()[:4]).herramientas())
+        check(inf["ok"] is True and inf["cita_tiempos"] == "repartidos", "cita_tiempos: repartidos")
+    import inspect
+    from labkit import narrado_voz as nv
+    check("hyperframes@" not in inspect.getsource(nv) and nv.VERSION is nc.VERSION,
+          "narrado_voz usa la única VERSION de hyperframes")
+
     # 6. revisar
     with tempfile.TemporaryDirectory() as d:
         raiz = raiz_falsa(Path(d))
@@ -779,6 +1003,31 @@ def seccion_construir() -> None:
             check(False, "revisar sin informe se niega")
         except ValueError:
             check(True, "revisar sin informe se niega")
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+        import hashlib
+        guion_json = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/guion.json"
+        check(inf["sha256_mp4"] == hashlib.sha256(Path(inf["mp4"]).read_bytes()).hexdigest()
+              and inf["sha256_guion"] == hashlib.sha256(guion_json.read_bytes()).hexdigest(),
+              "hallazgo 7: el informe lleva el sha256 del mp4 y del guion")
+        ruta_inf = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build/informe.json"
+
+        def revisar_se_niega(etiqueta):
+            antes = ruta_inf.read_text(encoding="utf-8")
+            try:
+                nr.revisar("2026-08-23-tarde", "PASS", raiz=raiz)
+                check(False, etiqueta)
+            except ValueError as e:
+                check(ruta_inf.read_text(encoding="utf-8") == antes, f"{etiqueta} ({str(e)[:50]})")
+
+        original_guion = guion_json.read_bytes()
+        guion_json.write_bytes(original_guion + b"\n")
+        revisar_se_niega("hallazgo 7: revisar con el guion cambiado se niega y no anota nada")
+        guion_json.write_bytes(original_guion)
+        mp4 = Path(inf["mp4"])
+        mp4.write_bytes(b"otro mp4")
+        revisar_se_niega("hallazgo 7: revisar con el mp4 cambiado se niega")
+        mp4.unlink()
+        revisar_se_niega("hallazgo 7: revisar sin el mp4 se niega")
         inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
         out = nr.revisar("2026-08-23-tarde", "PASS", raiz=raiz)
         check(out["veredicto"] == "PASS" and out["ok"] is True, "PASS deja el informe usable")
