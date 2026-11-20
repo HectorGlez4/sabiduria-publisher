@@ -292,3 +292,33 @@ check(comparar(voz, voz[0] + " " + voz[1] + " gracias por ver") is not None, "de
 
 - Hand the user the built MP4 for the Nietzsche piece and two more candidates' scripts to judge the format.
 - Phase 2 starts with a phone probe that posts nothing: push an MP4, register it as a video, open the Reel composer on it, find the «Ajouter une mention IA» control, and record fixtures. Its plan is written from what the probe finds.
+
+---
+
+## Outcome (2026-11-20)
+
+Built on main in commits `a296f194..7d041c7e`. `tests/test_narrados.py`: 272 checks pass. A trial build of `2026-08-23-tarde` with the real tools passed every check (27.2 s, −16.1 LUFS, peak −2.5 dB). A real build waits for a person to approve four names in `experiments/media-lab/narrados/pronunciacion.json`.
+
+Changes from this plan, decided during execution:
+
+- The sample script lives under `narrados/2026-08-23-tarde/` (the surviving id for the Nietzsche quote).
+- The text box follows the renderer's safe-area rule (x 120–780, y 288–1248), not the fixed box above.
+- No scale animations; rules and the strike-through fade in.
+- Check peak limit −1.5 dB; mix target −2.5 dBTP, stereo, two-pass.
+- The validator is stricter than Task 1 describes: every on-screen string is checked; the quote's and the question's voice and text must equal the piece's; digits only as 3–4-digit years; a sentence-opening word must be a function word, a word of the piece, or an approved name.
+- The name table honours only capitalised keys; the transcript tolerance needs a similar-sounding word at the name's position.
+- `informe.json` carries sha256 of the MP4 and the script, and `revisar` verifies them.
+- Only 11 candidate pieces exist, not about 34.
+
+Known gaps, for the phase 2 plan:
+
+- Years or numbers written as words in a script are not checked against the piece.
+- A genuine quote that contains a non-year number, or opens with a word found nowhere else in the piece, cannot pass the validator.
+- An invented name written in lower case is not detected.
+- The quote's word timings fell back to even spacing in the real build (`cita_tiempos: repartidos`).
+- On a timeout only the direct child process is killed; `npx` grandchildren may survive.
+- `revisar` trusts the MP4 path stored in `informe.json`; the contact sheet is not hashed.
+- `elegir` does not return a design; `construir` is keyed by `--pieza`, the spec says `--run`.
+- `tests/test_narrados.py` should be split by module before phone fixtures are added.
+- Malformed `candidatas.json`, registry lines or piece files raise without naming the file.
+- Layout sits left of centre and in the upper part of the frame; the Heráclito candidate is a weak fit.
