@@ -32,7 +32,7 @@ SECCIONES_CHECK = ("lint", "runtime", "layout", "motion", "contrast", "craft", "
 DURACION_MIN, DURACION_MAX = 25.0, 40.0
 SILENCIO_MAX = 1.2
 LUFS_MIN, LUFS_MAX = -17.0, -15.0
-PICO_MAX = -1.0
+PICO_MAX = -1.5
 
 
 class ChequeoFallido(Exception):
@@ -203,7 +203,7 @@ def medidas(mp4: Path) -> dict:
 
 def audio_ok(mp4: Path, fin_narracion: float) -> list[str]:
     """Problemas de audio: duración fuera de 25–40 s, silencio de más de 1,2 s que empiece antes de `fin_narracion` (aunque acabe después),
-    sonoridad fuera de −17…−15 LUFS o pico por encima de −1,0 dB. Lista vacía si todo está bien."""
+    sonoridad fuera de −17…−15 LUFS o pico por encima de −1,5 dB. Lista vacía si todo está bien."""
     problemas = []
     m = medidas(mp4)
     if not DURACION_MIN <= m["duracion"] <= DURACION_MAX:

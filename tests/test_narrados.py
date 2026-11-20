@@ -285,7 +285,7 @@ def seccion_voz() -> None:
             check(mezcla.exists() and abs(nv._duracion(mezcla) - 6.0) < 0.1, "mezclar respeta el total")
             from labkit import narrado_chequeos as nc_
             medido = nc_.medidas(mezcla)
-            check(-16.5 <= medido["lufs"] <= -15.5 and medido["pico"] <= -1.0,
+            check(-16.5 <= medido["lufs"] <= -15.5 and medido["pico"] <= -2.0,
                   f"mezclar clava -16 LUFS en estéreo ({medido['lufs']:.1f}, pico {medido['pico']:.1f})")
         else:
             print("  (omitido: falta say o ffmpeg)")
@@ -305,6 +305,15 @@ def seccion_proyecto() -> None:
     check(h.count("<section") == 6, "una sección por escena")
     check("cdn.jsdelivr" not in h and "http" not in h.split("<body")[0], "sin red: gsap y fuentes locales")
     check("Voz sintética" in h and "Sabiduría de Bolsillo" in h, "firma y aviso")
+    import re as re_
+    for nombre_diseno in np_._disenos():
+        g_d = _guion_ok()
+        g_d["diseno"] = nombre_diseno
+        h_d = np_.html(g_d, tiempos_ok, 28.52, None)
+        color = lambda i: re_.search(rf"#{i} \{{[^}}]*?color: ([^;]+);", h_d).group(1)
+        tam = int(re_.search(r"#aviso \{[^}]*?font-size: (\d+)px", h_d).group(1))
+        check(color("firma") == color("aviso") and tam >= 28,
+              f"{nombre_diseno}: firma y aviso del mismo color y aviso de 28 px o más")
     check(h.count('class="p"') == 10, "la cita va palabra a palabra")
     check("Niche" not in h, "la pantalla no lleva la pronunciación")
     check('window.__timelines["main"]' in h and "tl.seek(0)" in h, "línea de tiempo registrada")
@@ -718,6 +727,49 @@ def seccion_construir() -> None:
         inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=h)
         check(inf["ok"] is False and inf["fase"] == "chequeo" and "no corrió" in inf["problemas"][0],
               "herramienta rota: queda en el informe")
+
+    # 7. imprevistos: quedan en el informe y se relanzan; nada de una corrida anterior sobrevive
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        h = Falsas().herramientas()
+
+        def explota(proyecto):
+            raise RuntimeError("se cayó")
+        h = nr.Herramientas(**{**h.__dict__, "render": explota})
+        try:
+            nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=h)
+            check(False, "excepción imprevista: se relanza")
+        except RuntimeError:
+            check(True, "excepción imprevista: se relanza")
+        en_disco = json.loads((raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build/informe.json")
+                              .read_text(encoding="utf-8"))
+        check(en_disco["ok"] is False and "RuntimeError" in en_disco["problemas"][0],
+              "excepción imprevista: informe ok false con el tipo")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        carpeta = raiz / "experiments/media-lab/narrados"
+        nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+        (carpeta / "pronunciacion.json").write_text("{roto", encoding="utf-8")
+        try:
+            nr.construir("2026-08-23-tarde", raiz=raiz, herramientas=Falsas().herramientas())
+            check(False, "pronunciacion.json corrupto: se relanza")
+        except ValueError:
+            check(True, "pronunciacion.json corrupto: se relanza")
+        build = carpeta / "2026-08-23-tarde" / "build"
+        info = json.loads((build / "informe.json").read_text(encoding="utf-8"))
+        check(info["ok"] is False and not (build / "2026-08-23-tarde.mp4").exists() and not (build / "hoja.jpg").exists(),
+              "pronunciacion.json corrupto: ni informe ok ni mp4 viejos")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        build = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build"
+        build.mkdir()
+        (build / "2026-08-23-tarde.mp4").write_bytes(b"viejo")
+        sin_aprobar = {n: {"dicho": n, "aprobado_por": "", "fecha": ""} for n in aprobada}
+        nr.construir("2026-08-23-tarde", raiz=raiz, tabla=sin_aprobar, herramientas=Falsas().herramientas())
+        check(not (build / "2026-08-23-tarde.mp4").exists() and (build / "informe.json").exists(),
+              "parada en la compuerta de nombres: el mp4 viejo desaparece")
 
     # 6. revisar
     with tempfile.TemporaryDirectory() as d:

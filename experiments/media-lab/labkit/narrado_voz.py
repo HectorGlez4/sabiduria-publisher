@@ -30,7 +30,7 @@ LIMITE_KOKORO = 300      # s máximos para una frase con Kokoro (npx)
 LIMITE_HERRAMIENTA = 120  # s máximos para say, ffmpeg y ffprobe
 MINIMO_AUDIO = 0.3       # una frase más corta que esto es un fallo del motor
 LUFS = -16
-PICO_REAL = -1.5
+PICO_REAL = -2.5   # margen: el AAC del mp4 sube el pico unas décimas y el tope del reel es -1,5 dB
 
 _RECORTE = ("silenceremove=start_periods=1:start_threshold=-50dB,areverse,"
             "silenceremove=start_periods=1:start_threshold=-50dB,areverse")
@@ -171,7 +171,7 @@ def _medir_mezcla(ffmpeg: str, entradas: list[str], base: str) -> dict:
 
 
 def mezclar(wavs: list[Path], inicios: list[float], total: float, salida: Path) -> None:
-    """Junta las frases en una pista estéreo de `total` s, normalizada a -16 LUFS / -1,5 dB de pico real.
+    """Junta las frases en una pista estéreo de `total` s, normalizada a -16 LUFS / -2,5 dB de pico real.
 
     La pista sale en estéreo porque el mp4 lo es: una pista mono duplicada en dos canales mide 3 LU más
     fuerte. Se normaliza en dos pasadas (medir y aplicar de forma lineal) para clavar el objetivo."""

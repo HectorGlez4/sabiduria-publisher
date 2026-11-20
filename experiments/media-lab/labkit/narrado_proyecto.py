@@ -219,7 +219,7 @@ def _css(d: dict) -> str:
       .noche-tinta {{ color: var(--noche-tinta); }}
       .pregunta {{ font-size: 96px; font-weight: 600; line-height: 1.15; }}
       #firma {{ position: absolute; left: 120px; right: 300px; top: 1120px; text-align: center; font-family: "Poppins"; font-weight: 500; font-size: 32px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--etiqueta); }}
-      #aviso {{ position: absolute; left: 120px; right: 300px; top: 1175px; text-align: center; font-family: "Poppins"; font-weight: 300; font-size: 28px; color: var(--etiqueta); }}
+      #aviso {{ position: absolute; left: 120px; right: 300px; top: 1175px; text-align: center; font-family: "Poppins"; font-weight: 500; font-size: 28px; color: var(--etiqueta); }}
     """
 
 

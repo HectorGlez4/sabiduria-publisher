@@ -211,9 +211,6 @@ def _ida_y_vuelta(guion: dict, tabla: dict, mp4: Path, h: Herramientas) -> list[
 
 def _construir_pasos(pieza_id, guion, tabla, motor, salida, h, informe) -> None:
     """Los pasos tras la compuerta de nombres; el primero que falla lanza `_Parada`."""
-    if salida.exists():
-        shutil.rmtree(salida)
-    salida.mkdir(parents=True)
     wavs, duraciones = _sintetizar_frases(guion, tabla, motor, salida, h)
     tiempos = nv.linea_de_tiempo([e["tipo"] for e in guion["escenas"]], duraciones)
     total = nv.duracion_total(tiempos)
@@ -237,6 +234,7 @@ def _construir_pasos(pieza_id, guion, tabla, motor, salida, h, informe) -> None:
         raise _Parada("ida_y_vuelta", problemas)
     # cuando la frase acaba la escena ya mostró todo; sin pasar de donde empieza su fundido de salida
     medios = [round(min(t["fin"] + 0.2, t["escena_hasta"] - 0.4), 2) for t in tiempos]
+    medios[-1] = round(tiempos[-1]["escena_hasta"] - 0.5, 2)  # la última escena entra firma y aviso tras la frase
     hoja = salida / "hoja.jpg"
     shutil.copyfile(h.fotogramas(proyecto, medios), hoja)
     informe["hoja"] = str(hoja)
@@ -261,6 +259,8 @@ def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None,
     informe = {"ok": False, "pieza": pieza_id, "fase": "guion", "problemas": [], "mp4": None, "hoja": None,
                "duracion": None, "construido_en": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                "veredicto": None}
+    if salida.exists():
+        shutil.rmtree(salida)  # nada de una corrida anterior (mp4, hoja, informe) sobrevive a esta
     try:
         guion, _ = _guion_de(pieza_id, base, raiz)
         tabla = _tabla_de(tabla, raiz)
@@ -273,6 +273,10 @@ def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None,
         informe.update(fase=p.fase, problemas=p.problemas)
     except (nv.VozFallida, nc.ChequeoFallido, np_.NoCabe) as e:
         informe.update(fase=_fase_de(e, informe), problemas=[str(e)])
+    except Exception as e:  # imprevisto: queda en el informe y se relanza para que `lab.py` falle
+        informe.update(problemas=[f"{type(e).__name__}: {e}"])
+        _escribir_informe(salida, informe)
+        raise
     _escribir_informe(salida, informe)
     return informe
 

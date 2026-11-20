@@ -37,7 +37,7 @@ experiments/media-lab/lab.py narrado revisar --pieza ID --veredicto PASS|FAIL
 
 - `elegir` da la primera pieza elegible (`candidatas.json`, cita verificada, una por cita, nunca una ya
   registrada) y crea su carpeta.
-- `construir` lee `narrados/ID/guion.json` y deja todo en `narrados/ID/build/` (se vacía en cada corrida):
+- `construir` lee `narrados/ID/guion.json` y deja todo en `narrados/ID/build/` (se vacía entera nada más empezar cada corrida, antes de leer el guion):
   `ID.mp4`, `hoja.jpg` (una captura por escena) e `informe.json` (`ok`, `fase`, `problemas`, `duracion`,
   `veredicto`). El primer paso que falla detiene la corrida y su causa queda en el informe; sale con código 2.
 - `revisar` anota el veredicto de quien mira `hoja.jpg` y escucha el mp4. Solo funciona sobre un informe
@@ -46,7 +46,7 @@ experiments/media-lab/lab.py narrado revisar --pieza ID --veredicto PASS|FAIL
 Qué comprueba `construir`, en orden: el guion contra la pieza (años, nombres, cita, estructura); que todos los
 nombres propios estén aprobados; la voz de cada frase; `hyperframes check` (errores, zona segura, texto bajo
 el mínimo); el render; el audio del mp4 (25–40 s, sin silencios de más de 1,2 s mientras se habla, −17…−15
-LUFS, pico ≤ −1 dB); y la ida y vuelta: Whisper transcribe el mp4 y debe decir exactamente el guion.
+LUFS, pico ≤ −1,5 dB); y la ida y vuelta: Whisper transcribe el mp4 y debe decir exactamente el guion.
 
 ### Aprobar un nombre
 
