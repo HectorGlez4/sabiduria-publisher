@@ -579,6 +579,162 @@ def seccion_candidatas() -> None:
             check(True, "sin candidatas lanza SinCandidatas")
 
 
+def seccion_construir() -> None:
+    print("\n7. construir: orquestación con herramientas falsas")
+    from pathlib import Path
+    import labkit.narrado as nr
+    from labkit import narrado_chequeos as nc
+    from labkit import narrado_guion as ng
+
+    guion = _guion_ok()
+    guion["pieza"] = "2026-08-23-tarde"
+    pieza = json.loads((ROOT / "content" / "published" / "2026-08-23-tarde.json").read_text(encoding="utf-8"))
+    aprobada = {n: {"dicho": n, "aprobado_por": "ensayo", "fecha": "2026-11-20"}
+                for n in ("Frankl", "Friedrich", "Nietzsche", "Viktor")}
+    voces = [e["voz"] for e in guion["escenas"]]
+    cita = guion["escenas"][1]["pantalla"]["texto"]
+
+    def raiz_falsa(d: Path) -> Path:
+        (d / "content" / "published").mkdir(parents=True)
+        (d / "content" / "published" / "2026-08-23-tarde.json").write_text(json.dumps(pieza), encoding="utf-8")
+        carpeta = d / "experiments" / "media-lab" / "narrados"
+        (carpeta / "2026-08-23-tarde").mkdir(parents=True)
+        (carpeta / "candidatas.json").write_text('["2026-08-23-tarde"]', encoding="utf-8")
+        (carpeta / "2026-08-23-tarde" / "guion.json").write_text(json.dumps(guion), encoding="utf-8")
+        return d
+
+    class Falsas:
+        def __init__(self, transcripcion_mp4=None, problemas_audio=()):
+            self.sintetizadas, self.orden = [], []
+            self.mp4 = transcripcion_mp4 if transcripcion_mp4 is not None else " ".join(voces)
+            self.problemas_audio = list(problemas_audio)
+
+        def herramientas(self):
+            def sintetizar(frase, salida, motor="kokoro"):
+                self.sintetizadas.append(frase)
+                Path(salida).parent.mkdir(parents=True, exist_ok=True)
+                Path(salida).write_bytes(b"wav")
+                return 2.0 + 0.1 * len(self.sintetizadas)
+
+            def mezclar(wavs, inicios, total, salida):
+                self.orden.append("mezclar")
+                Path(salida).write_bytes(b"mezcla")
+
+            def transcribir(audio):
+                self.orden.append("transcribir")
+                if str(audio).endswith(".mp4"):
+                    return {"texto": self.mp4, "palabras": []}
+                palabras = [{"palabra": w, "inicio": 0.2 * k} for k, w in enumerate(cita.split())]
+                return {"texto": cita, "palabras": palabras}
+
+            def render(proyecto):
+                self.orden.append("render")
+                (Path(proyecto) / "renders").mkdir(exist_ok=True)
+                mp4 = Path(proyecto) / "renders" / "a.mp4"
+                mp4.write_bytes(b"mp4")
+                return mp4
+
+            def fotogramas(proyecto, segundos):
+                self.orden.append("fotogramas")
+                self.segundos = segundos
+                hoja = Path(proyecto) / "contact-sheet.jpg"
+                hoja.write_bytes(b"jpg")
+                return hoja
+
+            return nr.Herramientas(sintetizar=sintetizar, mezclar=mezclar, transcribir=transcribir,
+                                   chequeo=lambda proyecto: [], render=render, fotogramas=fotogramas,
+                                   audio_ok=lambda mp4, fin: list(self.problemas_audio))
+
+    # 1. nombres sin aprobar: se para antes de sintetizar
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas()
+        sin_aprobar = {n: {"dicho": n, "aprobado_por": "", "fecha": ""} for n in aprobada}
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=sin_aprobar, herramientas=f.herramientas())
+        check(f.sintetizadas == [], "nombres sin aprobar: no se sintetiza nada")
+        check(inf["ok"] is False and inf["fase"] == "nombres", "nombres sin aprobar: fase «nombres»")
+        check(any("Nietzsche" in p for p in inf["problemas"]) and any("aprobado_por" in p for p in inf["problemas"]),
+              "nombres sin aprobar: se nombran y se dice dónde aprobar")
+        check((raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build/informe.json").exists(),
+              "nombres sin aprobar: deja informe.json")
+
+    # 2. un archivo viejo en build/ desaparece; una corrida limpia deja ok
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        build = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build"
+        build.mkdir()
+        (build / "viejo.txt").write_text("x", encoding="utf-8")
+        f = Falsas()
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(not (build / "viejo.txt").exists(), "build/ se vacía antes de construir")
+        check(inf["ok"] is True and inf["fase"] == "completo" and inf["problemas"] == [], "corrida limpia: ok")
+        check(len(f.sintetizadas) == 6, "una síntesis por frase")
+        check("Niche" not in " ".join(f.sintetizadas) and "mil ochocientos ochenta y ocho" in " ".join(f.sintetizadas),
+              "la voz lleva las cifras en palabras")
+        check(f.orden == ["mezclar", "transcribir", "render", "transcribir", "fotogramas"],
+              f"orden de los pasos ({f.orden})")
+        check(len(f.segundos) == 6 and f.segundos == sorted(f.segundos), "un fotograma por escena, en orden")
+        en_disco = json.loads((build / "informe.json").read_text(encoding="utf-8"))
+        check(en_disco == inf, "informe.json es lo que devuelve construir")
+        check(Path(inf["mp4"]) == build / "2026-08-23-tarde.mp4" and Path(inf["mp4"]).exists(), "el mp4 queda en build/")
+        check(Path(inf["hoja"]) == build / "hoja.jpg" and Path(inf["hoja"]).exists(), "la hoja queda en build/")
+        check(inf["veredicto"] is None and inf["duracion"] > 0, "veredicto vacío y duración")
+        # 5. repetir da el mismo informe salvo la hora
+        f2 = Falsas()
+        inf2 = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f2.herramientas())
+        quitar = lambda x: {k: v for k, v in x.items() if k != "construido_en"}
+        check(quitar(inf) == quitar(inf2), "dos corridas dan el mismo informe salvo construido_en")
+
+    # 3. a la transcripción le falta una palabra
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas(transcripcion_mp4=" ".join(voces).replace("soporta ", ""))
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "ida_y_vuelta", "palabra perdida: falla la ida y vuelta")
+        check(any("soporta" in p for p in inf["problemas"]), "palabra perdida: el problema la nombra")
+
+    # 4. un chequeo de audio que falla para el proceso antes de transcribir el mp4
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas(problemas_audio=["sonoridad -13 LUFS"])
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+        check(inf["ok"] is False and inf["fase"] == "audio" and inf["problemas"] == ["sonoridad -13 LUFS"],
+              "audio: falla y lo cuenta")
+        check(f.orden.count("transcribir") == 1, "audio: no se transcribe el mp4")
+
+    # 5. herramienta que lanza ChequeoFallido
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        f = Falsas()
+        h = f.herramientas()
+
+        def rota(proyecto):
+            raise nc.ChequeoFallido("hyperframes check", "no corrió")
+        h = nr.Herramientas(**{**h.__dict__, "chequeo": rota})
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=h)
+        check(inf["ok"] is False and inf["fase"] == "chequeo" and "no corrió" in inf["problemas"][0],
+              "herramienta rota: queda en el informe")
+
+    # 6. revisar
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        try:
+            nr.revisar("2026-08-23-tarde", "PASS", raiz=raiz)
+            check(False, "revisar sin informe se niega")
+        except ValueError:
+            check(True, "revisar sin informe se niega")
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+        out = nr.revisar("2026-08-23-tarde", "PASS", raiz=raiz)
+        check(out["veredicto"] == "PASS" and out["ok"] is True, "PASS deja el informe usable")
+        out = nr.revisar("2026-08-23-tarde", "FAIL", raiz=raiz)
+        check(out["veredicto"] == "FAIL" and out["ok"] is False, "FAIL marca la construcción como inservible")
+        try:
+            nr.revisar("2026-08-23-tarde", "PASS", raiz=raiz)
+            check(False, "revisar sobre un informe no ok se niega")
+        except ValueError:
+            check(True, "revisar sobre un informe no ok se niega")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
@@ -586,6 +742,7 @@ SECCIONES = [
     seccion_proyecto,
     seccion_chequeos,
     seccion_candidatas,
+    seccion_construir,
 ]
 
 

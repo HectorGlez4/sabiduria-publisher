@@ -15,6 +15,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import time
 import unicodedata
 from pathlib import Path
 
@@ -22,6 +23,8 @@ from .narrado_pronuncia import numero_en_palabras
 
 LIMITE_CHECK = 300       # s máximos para `hyperframes check`
 LIMITE_TRANSCRIBE = 600  # s máximos para `hyperframes transcribe`
+LIMITE_RENDER = 600      # s máximos para `hyperframes render`
+LIMITE_FOTOGRAMAS = 300  # s máximos para `hyperframes snapshot`
 LIMITE_HERRAMIENTA = 120  # s máximos para ffmpeg y ffprobe
 VERSION = "hyperframes@0.9.70"
 AVISOS_QUE_BLOQUEAN = ("outside_safe_zone", "text_below_floor")
@@ -308,3 +311,43 @@ def transcribir(audio: Path) -> dict:
     if not resultado["palabras"]:
         raise ChequeoFallido("hyperframes transcribe", "la transcripción no tiene palabras")
     return resultado
+
+
+_ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
+
+
+def render(proyecto: Path) -> Path:
+    """Renderiza el proyecto con `hyperframes render` y devuelve el `.mp4` más reciente de `renders/`."""
+    proyecto = Path(proyecto)
+    antes = time.time() - 1
+    r = _correr([_requiere("npx"), "--yes", VERSION, "render"], "hyperframes render", LIMITE_RENDER,
+                cwd=str(proyecto), env=_entorno())
+    if r.returncode != 0:
+        ultima = (r.stderr.strip().splitlines() or r.stdout.strip().splitlines() or ["sin salida"])[-1]
+        raise ChequeoFallido("hyperframes render", f"código {r.returncode}: {_ANSI.sub('', ultima)[:300]}")
+    nuevos = [m for m in (proyecto / "renders").glob("*.mp4") if m.stat().st_mtime >= antes]
+    if not nuevos:
+        raise ChequeoFallido("hyperframes render", "terminó sin dejar ningún .mp4 en renders/")
+    return max(nuevos, key=lambda m: m.stat().st_mtime)
+
+
+def fotogramas(proyecto: Path, segundos: list[float]) -> Path:
+    """Captura un fotograma por instante con `hyperframes snapshot --at` y devuelve la hoja de contactos."""
+    proyecto = Path(proyecto)
+    if not segundos:
+        raise ChequeoFallido("hyperframes snapshot", "no se pidió ningún instante")
+    at = ",".join(f"{s:g}" for s in segundos)
+    r = _correr([_requiere("npx"), "--yes", VERSION, "snapshot", "--at", at], "hyperframes snapshot",
+                LIMITE_FOTOGRAMAS, cwd=str(proyecto), env=_entorno())
+    salida = _ANSI.sub("", r.stdout)
+    if r.returncode != 0:
+        ultima = (r.stderr.strip().splitlines() or salida.strip().splitlines() or ["sin salida"])[-1]
+        raise ChequeoFallido("hyperframes snapshot", f"código {r.returncode}: {ultima[:300]}")
+    for linea in salida.splitlines():
+        m = re.search(r"(\S*contact-sheet\.jpg)", linea)
+        if m:
+            ruta = Path(m.group(1))
+            ruta = ruta if ruta.is_absolute() else proyecto / ruta
+            if ruta.exists():
+                return ruta
+    raise ChequeoFallido("hyperframes snapshot", "no informó ninguna contact-sheet.jpg existente")
