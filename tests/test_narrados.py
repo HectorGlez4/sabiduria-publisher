@@ -164,8 +164,57 @@ def seccion_guion() -> None:
             check(str(ruta) in str(e), "cargar con raíz que no es objeto lanza ValueError con la ruta")
 
 
+def seccion_pronuncia() -> None:
+    print("\n2. Pronunciación y aprobación de nombres")
+    from labkit import narrado_pronuncia as npr
+
+    num = npr.numero_en_palabras
+    casos = {
+        0: "cero", 16: "dieciséis", 21: "veintiuno", 22: "veintidós", 30: "treinta",
+        31: "treinta y uno", 100: "cien", 101: "ciento uno", 115: "ciento quince",
+        500: "quinientos", 700: "setecientos", 900: "novecientos", 1000: "mil",
+        1001: "mil uno", 1500: "mil quinientos", 1888: "mil ochocientos ochenta y ocho",
+        1946: "mil novecientos cuarenta y seis", 2000: "dos mil", 2001: "dos mil uno",
+        2999: "dos mil novecientos noventa y nueve",
+    }
+    for n, esperado in casos.items():
+        check(num(n) == esperado, f"{n} -> {esperado}")
+    for n in (-1, 3000):
+        try:
+            num(n)
+            check(False, f"{n} fuera de rango lanza ValueError")
+        except ValueError:
+            check(True, f"{n} fuera de rango lanza ValueError")
+
+    guion_ok = _guion_ok()
+    tabla_sin_aprobar = {n: {"dicho": n, "aprobado_por": "", "fecha": ""}
+                         for n in ("Nietzsche", "Friedrich", "Viktor", "Frankl")}
+    tabla_aprobada = {n: {"dicho": n, "aprobado_por": "hec", "fecha": "2026-11-20"}
+                      for n in tabla_sin_aprobar}
+    tabla_aprobada["Nietzsche"]["dicho"] = "Niche"
+    check(npr.pendientes(guion_ok, {}) == ["Frankl", "Friedrich", "Nietzsche", "Viktor"],
+          "sin tabla, todos pendientes")
+    check(npr.pendientes(guion_ok, tabla_sin_aprobar) != [], "una entrada sin aprobado_por no cuenta")
+    check(npr.pendientes(guion_ok, tabla_aprobada) == [], "aprobada, nada pendiente")
+    check(npr.para_la_voz("La escribió Nietzsche en 1888.", tabla_aprobada)
+          == "La escribió Niche en mil ochocientos ochenta y ocho.", "reescribe solo para la voz")
+    check(npr.para_la_voz("Dijo Nietzsche.", tabla_sin_aprobar) == "Dijo Nietzsche.",
+          "no reescribe nombres sin aprobar")
+    check(npr.para_la_voz("Dijo Nietzschean y 3000 veces.", tabla_aprobada)
+          == "Dijo Nietzschean y 3000 veces.", "palabra completa y números fuera de rango intactos")
+    check("Frankl" in npr.nombres("Frankl la citó.", tabla_sin_aprobar)
+          and "Frankl" not in npr.nombres("Frankl la citó.", {}), "inicial de frase solo si está en la tabla")
+
+    sembrada = json.loads((ROOT / "experiments" / "media-lab" / "narrados" / "pronunciacion.json")
+                          .read_text(encoding="utf-8"))
+    check(sorted(sembrada) == ["Frankl", "Friedrich", "Nietzsche", "Viktor"], "tabla sembrada con los cuatro nombres")
+    check(all(e["aprobado_por"] == "" and e["fecha"] == "" and e["dicho"] for e in sembrada.values()),
+          "la tabla sembrada no está aprobada")
+
+
 SECCIONES = [
     seccion_guion,
+    seccion_pronuncia,
 ]
 
 

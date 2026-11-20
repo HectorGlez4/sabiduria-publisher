@@ -55,7 +55,7 @@ def _normalizar_cita(texto: str) -> str:
     return " ".join(str(texto).strip(_COMILLAS + " \t\n").split())
 
 
-def _nombres(voz: str) -> list[str]:
+def nombres_propios(voz: str) -> list[str]:
     """Palabras con mayúscula que no abren frase."""
     salida = []
     for m in _PALABRA.finditer(voz):
@@ -98,7 +98,7 @@ def _problemas_voz(i: int, voz: str, texto_pieza: str, prohibidos: list[str]) ->
     for numero in re.findall(r"(?<!\d)\d{3,4}(?!\d)", voz):
         if not _aparece(numero, texto_pieza):
             problemas.append(f"{cual}: el año {numero} no aparece en la pieza")
-    for nombre in dict.fromkeys(_nombres(voz)):
+    for nombre in dict.fromkeys(nombres_propios(voz)):
         if not _aparece(nombre, texto_pieza):
             problemas.append(f"{cual}: el nombre {nombre} no aparece en la pieza")
     bajo = voz.lower()
