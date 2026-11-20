@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-extra41",
+  "id": "2026-11-22-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Du Bois y la línea de color de 1903",
     "hook": "Du Bois abrió y cerró un mismo capítulo con la misma frase. La primera vez la terminó de un modo que casi nunca se cita.",
@@ -28,8 +28,18 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#DuBois", "#LasAlmasDelPuebloNegro", "#Panafricanismo"],
-    "extended": ["#Citas", "#HistoriaAfroamericana", "#SigloXX", "#Sociologia", "#DerechosCiviles"]
+    "topic": [
+      "#DuBois",
+      "#LasAlmasDelPuebloNegro",
+      "#Panafricanismo"
+    ],
+    "extended": [
+      "#Citas",
+      "#HistoriaAfroamericana",
+      "#SigloXX",
+      "#Sociologia",
+      "#DerechosCiviles"
+    ]
   },
   "sources": [
     {
@@ -82,5 +92,12 @@
     "Que la frase aparece ‘tres veces en el libro’ como recuento total: se comprobaron el prólogo y el capítulo II, no el libro entero. Son tres apariciones verificadas; podría haber más.",
     "Traducir ‘color-line’ como ‘barrera racial’ o ‘problema racial’: Du Bois usa un término propio, con guion; se respeta ‘línea de color’.",
     "El texto de Project Gutenberg (ebook 408): devolvió 503 en esta ejecución; el cotejo se hizo contra la transcripción de Wikisource de la segunda edición."
+  ],
+  "publish_at": "2026-11-22T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

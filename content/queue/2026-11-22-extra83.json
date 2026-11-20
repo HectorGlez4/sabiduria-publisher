@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-09-tarde",
+  "id": "2026-11-22-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "San Martín y las máximas para Merceditas",
     "hook": "En el exilio belga, el general que cruzó los Andes escribió doce reglas para educar a su hija. La séptima habla de religión.",
@@ -22,14 +22,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "José de San Martín",
     "subtitle": "Máximas para mi hija, c. 1825"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#SanMartin", "#Merceditas", "#HistoriaArgentina"],
-    "extended": ["#Citas", "#Educacion", "#Tolerancia", "#Libertador", "#Crianza"]
+    "topic": [
+      "#SanMartin",
+      "#Merceditas",
+      "#HistoriaArgentina"
+    ],
+    "extended": [
+      "#Citas",
+      "#Educacion",
+      "#Tolerancia",
+      "#Libertador",
+      "#Crianza"
+    ]
   },
   "sources": [
     {
@@ -65,5 +75,12 @@
     "La fecha exacta y el lugar exacto: las fuentes dicen 'hacia 1825' y 'probablemente en Bruselas'; no se da día ni ciudad como seguros.",
     "Que San Martín las escribió estando Mercedes en un colegio de Bruselas: Infobae la sitúa primero en un colegio de Hampstead, Inglaterra; no se menciona colegio.",
     "Otras 'frases de San Martín' de páginas de citas sin procedencia ('Serás lo que debas ser o no serás nada' se atribuye sin documento claro): no se usan aquí."
+  ],
+  "publish_at": "2026-11-23T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

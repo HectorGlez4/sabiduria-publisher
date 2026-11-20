@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-tarde",
+  "id": "2026-11-22-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Juliana de Norwich y el todo irá bien de 1373",
     "hook": "La frase de consuelo más repetida de la mística inglesa no la dice su autora. Es la respuesta que recibe, y empieza admitiendo el pecado.",
@@ -22,14 +22,24 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "Juliana de Norwich",
     "subtitle": "Revelaciones del amor divino, capítulo 27"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JulianaDeNorwich", "#Mistica", "#EdadMedia"],
-    "extended": ["#Citas", "#LiteraturaInglesa", "#Norwich", "#Consuelo", "#HistoriaDeLasMujeres"]
+    "topic": [
+      "#JulianaDeNorwich",
+      "#Mistica",
+      "#EdadMedia"
+    ],
+    "extended": [
+      "#Citas",
+      "#LiteraturaInglesa",
+      "#Norwich",
+      "#Consuelo",
+      "#HistoriaDeLasMujeres"
+    ]
   },
   "sources": [
     {
@@ -73,5 +83,12 @@
     "Que T. S. Eliot cita la frase en ‘Little Gidding’ (1942): Wikipedia lo dice, pero no se cotejó el poema. No se usa.",
     "Que la edición de Warrack de 1901 la publicó Methuen: no se pudo comprobar la portada (Project Gutenberg devolvió 503 en esta ejecución).",
     "‘Primera escritora en lengua inglesa’ sin matiz: lo que sostienen las fuentes es ‘el libro más antiguo que se conserva en inglés del que se sabe que lo escribió una mujer’."
+  ],
+  "publish_at": "2026-11-22T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

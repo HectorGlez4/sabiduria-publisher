@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-21-tarde",
+  "id": "2026-11-22-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#LordActon", "#Citas", "#Poder"],
-    "extended": ["#Historia", "#Siglo19", "#FrasesCelebres", "#Etica", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#LordActon",
+      "#Citas",
+      "#Poder"
+    ],
+    "extended": [
+      "#Historia",
+      "#Siglo19",
+      "#FrasesCelebres",
+      "#Etica",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -53,5 +64,12 @@
     "Frases anteriores parecidas (Pitt, 1770, u otras): no se verificaron en fuente leída. No entran.",
     "La traducción al español es propia; no cita edición española."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-23T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-09-extra41",
+  "id": "2026-11-22-extra84",
   "slot": "noche",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Toussaint Louverture y el tronco del árbol de la libertad",
     "hook": "Lo subieron preso a un barco francés en 1802. Lo que dijo al llegar a bordo lo dejó escrito uno de los generales que lo combatían.",
@@ -28,8 +28,18 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#ToussaintLouverture", "#Haiti", "#RevolucionHaitiana"],
-    "extended": ["#Citas", "#Libertad", "#HistoriaDelCaribe", "#Abolicion", "#Historia"]
+    "topic": [
+      "#ToussaintLouverture",
+      "#Haiti",
+      "#RevolucionHaitiana"
+    ],
+    "extended": [
+      "#Citas",
+      "#Libertad",
+      "#HistoriaDelCaribe",
+      "#Abolicion",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -60,5 +70,12 @@
     "El texto francés exacto palabra por palabra de la primera mitad: la digitalización de Lacroix está dañada en 'abattu'; la segunda mitad sí se leyó literal. La traducción sigue la lectura establecida.",
     "Que Dessalines lo traicionó: Hérodote lo menciona como denuncia, pero es materia disputada entre historiadores; no se usa.",
     "Fechas de traslado distintas (25 de agosto de 1802 en napoleon-empire.org): no se dan fechas de llegada a Francia ni al fuerte."
+  ],
+  "publish_at": "2026-11-23T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }
