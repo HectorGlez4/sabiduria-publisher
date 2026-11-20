@@ -287,10 +287,79 @@ def seccion_voz() -> None:
             print("  (omitido: falta say o ffmpeg)")
 
 
+def seccion_proyecto() -> None:
+    print("\n4. Generador del proyecto HyperFrames")
+    from labkit import narrado_proyecto as np_
+    from labkit.narrado_voz import duracion_total, linea_de_tiempo
+
+    guion_ok = _guion_ok()
+    tipos = [e["tipo"] for e in guion_ok["escenas"]]
+    tiempos_ok = linea_de_tiempo(tipos, [3.0, 4.0, 5.0, 6.0, 4.0, 2.0])
+    total = duracion_total(tiempos_ok)
+    h = np_.html(guion_ok, tiempos_ok, 28.52, None)
+    check('data-duration="28.52"' in h and 'data-width="1080"' in h, "raíz con duración y tamaño")
+    check(h.count("<section") == 6, "una sección por escena")
+    check("cdn.jsdelivr" not in h and "http" not in h.split("<body")[0], "sin red: gsap y fuentes locales")
+    check("Voz sintética" in h and "Sabiduría de Bolsillo" in h, "firma y aviso")
+    check(h.count('class="p"') == 10, "la cita va palabra a palabra")
+    check("Niche" not in h, "la pantalla no lleva la pronunciación")
+    check('window.__timelines["main"]' in h and "tl.seek(0)" in h, "línea de tiempo registrada")
+    check('data-composition-id="main"' in h and 'id="voz"' in h and "Math.random" not in h
+          and "Date.now" not in h, "raíz de HyperFrames, voz y determinismo")
+    s1 = tiempos_ok[1]
+    check(f'data-start="{s1["escena_desde"]:g}"' in h, "la sección usa escena_desde")
+    check(np_.tamano_cita("x" * 60) == 84 and np_.tamano_cita("x" * 140) >= 56,
+          "la cita larga encoge sin bajar de 56")
+    check(np_.tamano_cita("x" * 70) == 84 and np_.tamano_cita("x" * 200) == 56, "extremos de tamano_cita")
+    try:
+        np_.tamano_cita("x" * 201)
+        check(False, "201 caracteres lanza NoCabe")
+    except np_.NoCabe as e:
+        check(e.args[:2] == ("cita", 201), "201 caracteres lanza NoCabe")
+
+    g = copy.deepcopy(guion_ok)
+    g["escenas"][0]["pantalla"]["nombre"] = "A<b> & C\nD"
+    h2 = np_.html(g, tiempos_ok, total, None)
+    check("A&lt;b&gt; &amp; C<br />D" in h2 and "A<b>" not in h2, "la pantalla se escapa y \\n pasa a <br />")
+
+    palabras = [round(1 + k * 0.1, 3) for k in range(10)]
+    h3 = np_.html(guion_ok, tiempos_ok, total, palabras)
+    check("1.9" in h3, "usa los tiempos de palabra dados")
+    h4 = np_.html(guion_ok, tiempos_ok, total, palabras[:4])
+    check(h4.count('class="p"') == 10, "palabras de otra longitud: reparto uniforme")
+    for d in ("tinta", "siena"):
+        gd = copy.deepcopy(guion_ok)
+        gd["diseno"] = d
+        check(np_.html(gd, tiempos_ok, total, None).count("<section") == 6, f"diseño {d}")
+    gd = copy.deepcopy(guion_ok)
+    gd["diseno"] = "inexistente"
+    try:
+        np_.html(gd, tiempos_ok, total, None)
+        check(False, "diseño desconocido lanza ValueError")
+    except ValueError:
+        check(True, "diseño desconocido lanza ValueError")
+
+    with tempfile.TemporaryDirectory() as d:
+        voz = pathlib.Path(d) / "v.wav"
+        voz.write_bytes(b"RIFF")
+        dest = pathlib.Path(d) / "proy"
+        for _ in range(2):  # segunda vez: sobrescribe
+            r = np_.escribir(dest, guion_ok, tiempos_ok, total, None, voz)
+        check(r == dest and (dest / "index.html").exists(), "escribir devuelve el destino y escribe index.html")
+        check(json.loads((dest / "meta.json").read_text(encoding="utf-8")) ==
+              {"id": guion_ok["pieza"], "name": guion_ok["pieza"]}, "meta.json")
+        check("paths" in json.loads((dest / "hyperframes.json").read_text(encoding="utf-8")),
+              "hyperframes.json")
+        faltan = [n for n in ("gsap.min.js", "voz.wav", "Lora-Variable.ttf", "Lora-Italic-Variable.ttf",
+                              "Poppins-Medium.ttf", "Poppins-Light.ttf") if not (dest / "assets" / n).exists()]
+        check(not faltan, f"assets copiados {faltan}")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
     seccion_voz,
+    seccion_proyecto,
 ]
 
 

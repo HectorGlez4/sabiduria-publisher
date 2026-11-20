@@ -1,0 +1,17 @@
+{
+  "papel": {
+    "fondo": "#f7f1e4", "fondo2": "#eee4d0", "tinta": "#2c261c",
+    "etiqueta": "#96722d", "filete": "#bf9b4e",
+    "noche": "#2c261c", "noche_tinta": "#f7f1e4", "giro": "#96722d"
+  },
+  "tinta": {
+    "fondo": "#2c261c", "fondo2": "#2c261c", "tinta": "#f7f1e4",
+    "etiqueta": "#bf9b4e", "filete": "#bf9b4e",
+    "noche": "#f7f1e4", "noche_tinta": "#2c261c", "giro": "#96722d"
+  },
+  "siena": {
+    "fondo": "#8c4a2f", "fondo2": "#8c4a2f", "tinta": "#ffffff",
+    "etiqueta": "#f7e3d8", "filete": "#f7e3d8",
+    "noche": "#faf7f0", "noche_tinta": "#1f1b16", "giro": "#8c4a2f"
+  }
+}
