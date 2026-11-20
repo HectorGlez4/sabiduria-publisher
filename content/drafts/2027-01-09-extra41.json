@@ -1,0 +1,81 @@
+{
+  "id": "2027-01-09-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Góngora y la letrilla Ándeme yo caliente (1581)",
+    "hook": "El poeta más difícil de la lengua española empezó escribiendo en favor de la mantequilla y el pan tierno.",
+    "body": [
+      "Luis de Góngora nació en Córdoba el 11 de julio de 1561. La letrilla está fechada en 1581: rondaba los veinte años. El estribillo abre el poema y cierra cada una de sus seis estrofas.",
+      "La primera estrofa fija el tono. «Traten otros del gobierno / del mundo y sus monarquías», dice, y a continuación explica qué gobierna sus días: «mantequillas y pan tierno», y en las mañanas de invierno, «naranjada y aguardiente». No es un elogio de la pobreza ni una lección moral. Es alguien que elige el desayuno antes que el poder y acepta que se rían de él.",
+      "Góngora no publicó su obra. Un intento de 1623 no prosperó, y sus versos pasaron de mano en mano en copias manuscritas. Murió en Córdoba el 23 de mayo de 1627. Ese mismo año, Juan López Vicuña imprimió las «Obras en verso del Homero español».",
+      "Entre la fecha de la letrilla y esa edición median cuarenta y seis años."
+    ],
+    "question": "¿A qué renunciaría usted con tal de que lo dejaran tranquilo?",
+    "quote": {
+      "text": "Ándeme yo caliente y ríase la gente.",
+      "author": "Luis de Góngora",
+      "work": "Letrilla «Ándeme yo caliente» (1581)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Luis de Góngora",
+    "subtitle": "Letrilla de 1581"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Gongora",
+      "#SigloDeOro",
+      "#PoesiaEspanola"
+    ],
+    "extended": [
+      "#Citas",
+      "#Letrilla",
+      "#Barroco",
+      "#Literatura",
+      "#Cordoba"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El estribillo dice ‘Ándeme yo caliente / Y riase la gente.’; la primera estrofa empieza ‘Traten otros del gobierno / Del mundo y sus monarquias’, y siguen ‘Mantequillas y pan tierno’ y ‘Y las mañanas de invierno / Naranjada y aguardiente’. Seis estrofas, cada una cerrada por el estribillo. Texto tomado de Poesías escogidas de D. Luis de Góngora y Argote, Imprenta de Noguér y Manté, Córdoba, 1841, pp. 138-139.",
+      "source": "Luis de Góngora, ‘Ándeme yo caliente’, en Wikisource en español (edición de Córdoba, 1841)",
+      "url": "https://es.wikisource.org/wiki/%C3%81ndeme_yo_caliente"
+    },
+    {
+      "claim": "Mismo estribillo (‘Ándeme yo caliente / y ríase la gente.’) y mismos versos de la primera estrofa; el encabezado fecha la letrilla en 1581. Seis estrofas, en un orden distinto del de la edición de 1841.",
+      "source": "Universitat de València, página de Carlos Ivorra, ‘Góngora: Ándeme yo caliente’",
+      "url": "https://www.uv.es/ivorra/Gongora/Romances/Caliente.htm"
+    },
+    {
+      "claim": "La página de autor lista ‘Ándeme yo caliente (1581)’ entre las letrillas; Góngora: 11 de julio de 1561 - 23 de mayo de 1627.",
+      "source": "Wikisource en español, ‘Autor: Luis de Góngora y Argote’",
+      "url": "https://es.wikisource.org/wiki/Luis_de_G%C3%B3ngora_y_Argote"
+    },
+    {
+      "claim": "‘Córdoba, 11 de julio de 1561-Córdoba, 23 de mayo de 1627’. ‘Aunque Góngora no publicó sus obras (un intento suyo en 1623 no fructificó), estas pasaron de mano en mano en copias manuscritas.’ ‘El mismo año de su muerte Juan López Vicuña publicó ya unas Obras en verso del Homero español.’",
+      "source": "Wikipedia en español, ‘Luis de Góngora’ (fuente secundaria)",
+      "url": "https://es.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
+    },
+    {
+      "claim": "El poema se compuso en 1581 y es una letrilla, forma que suele abrirse con un estribillo. (Página leída solo en parte: lo demás llegó resumido.)",
+      "source": "Spain Then and Now, ‘Luis de Góngora. Ándeme yo caliente… 1581’ (divulgación)",
+      "url": "https://spainthenandnow.com/spanish-literature/luis-de-gongora-andeme-yo-caliente-1581"
+    }
+  ],
+  "do_not_use": [
+    "Que el estribillo era un refrán anterior que Góngora tomó y glosó: es lo que suele decirse y es verosímil, pero no se pudo verificar. El Refranero multilingüe del Centro Virtual Cervantes estaba en mantenimiento y ninguna página leída lo documenta en Hernán Núñez ni en Correas. No se afirma.",
+    "Que el refrán aparece en el Quijote, segunda parte, capítulo 50, en boca de Sanchica: solo se leyó una traducción inglesa (Texas A&M), donde Sanchica dice algo de ese sentido. El texto español no se pudo cotejar (Wikisource dio 404, Gutenberg 503). No se menciona en el cuerpo.",
+    "La forma ‘Ande yo caliente y ríase la gente’, que es como circula hoy: las dos transcripciones leídas del poema dicen ‘Ándeme’.",
+    "La edad exacta de Góngora al escribirla: nació en julio de 1561 y la letrilla lleva solo el año 1581, así que tenía diecinueve o veinte. En el cuerpo se dice ‘rondaba los veinte’.",
+    "El orden de las estrofas y el contenido de las cinco últimas: las dos transcripciones las ordenan de forma distinta y solo se cotejaron verso a verso el estribillo y la primera. No se citan las demás.",
+    "Que el manuscrito Chacón es de 1628: Wikipedia lo nombra como el más autorizado pero la fecha no apareció en el texto leído. No se menciona.",
+    "Que la edición de Vicuña de 1627 fue ‘la primera’ de sus obras: el texto leído solo dice que se publicó el año de su muerte.",
+    "Que la letrilla circuló manuscrita durante cuarenta y seis años como dato documentado de este poema concreto: lo verificado es general (su obra no se imprimió en vida). El cuerpo solo cuenta los años entre las dos fechas."
+  ]
+}

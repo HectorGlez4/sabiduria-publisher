@@ -1,0 +1,95 @@
+{
+  "id": "2027-01-09-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Stendhal y el epígrafe firmado Saint-Réal",
+    "hook": "La definición más citada de la novela realista lleva una firma ajena. Quien la firma no la escribió.",
+    "body": [
+      "«Rojo y negro» salió en París, en la casa Levavasseur, a finales de 1830 y con el año 1831 en la portada. El capítulo XIII del libro primero lleva esta frase como epígrafe. Debajo, un nombre: Saint-Réal.",
+      "César Vichard de Saint-Réal existió. Fue un abate e historiador saboyano, nacido en 1643 y muerto en Chambéry en 1692. Pero la frase no está en su obra: un estudio universitario francés reconoce que no la encontró, como tampoco sus predecesores. El mismo estudio señala que la mayoría de los epígrafes de la novela salieron de la imaginación de Stendhal, y que solo siete, todos del «Don Juan» de Byron, son exactos.",
+      "Stendhal repite la imagen en el libro segundo, capítulo XIX, ya sin firma prestada. El narrador interrumpe el relato: una novela es un espejo que se pasea por un camino real, y unas veces refleja el azul del cielo y otras el fango de los charcos.",
+      "Henri Beyle, que firmaba Stendhal, nació en Grenoble el 23 de enero de 1783 y murió en París el 23 de marzo de 1842."
+    ],
+    "question": "¿Por qué alguien pondría su mejor frase bajo el nombre de otro?",
+    "quote": {
+      "text": "Una novela es un espejo que se pasea a lo largo de un camino.",
+      "author": "Stendhal",
+      "work": "Rojo y negro (1830), libro I, epígrafe del cap. XIII",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Stendhal",
+    "subtitle": "Rojo y negro, 1830"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Stendhal",
+      "#RojoYNegro",
+      "#LiteraturaFrancesa"
+    ],
+    "extended": [
+      "#Citas",
+      "#Novela",
+      "#Realismo",
+      "#SigloXIX",
+      "#Libros"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El capítulo XIII se titula ‘Les Bas à jour’ y su epígrafe dice ‘Un roman : c’est un miroir qu’on promène le long d’un chemin.’, firmado ‘Saint-Réal.’. La transcripción reproduce la edición de Michel Lévy Frères, París, 1854, no la primera. La traducción al español de la cita es propia.",
+      "source": "Stendhal, Le Rouge et le Noir (Michel Lévy Frères, 1854), cap. XIII, en Wikisource en francés",
+      "url": "https://fr.wikisource.org/wiki/Le_Rouge_et_le_Noir/Chapitre_XIII"
+    },
+    {
+      "claim": "En el capítulo XLIX de la numeración corrida, ‘L’Opéra Bouffe’, se lee: ‘Eh, monsieur, un roman est un miroir qui se promène sur une grande route. Tantôt il reflète à vos yeux l’azur des cieux, tantôt la fange des bourbiers de la route.’ El pasaje va dentro de un paréntesis del narrador.",
+      "source": "Stendhal, Le Rouge et le Noir (Michel Lévy Frères, 1854), cap. XLIX, en Wikisource en francés",
+      "url": "https://fr.wikisource.org/wiki/Le_Rouge_et_le_Noir/Chapitre_XLIX"
+    },
+    {
+      "claim": "Sobre la cita de Saint-Réal: ‘Je n’ai pas trouvé, plus que mes prédécesseurs, cette citation dans l’œuvre de Saint-Réal’ (nota 16); la llama ‘la facétieuse épigraphe signée « Saint-Réal »’. Sobre el conjunto: la mayoría de los epígrafes ‘sont fantaisistes et nées dans l’imagination d’un auteur qui se dédouble lui-même’; ‘seules sept (toutes empruntées au Don Juan de Byron) sont à la fois exactes et bien localisées’. La novela fue ‘mis en vente en décembre 1830, il porte 1831 sur sa couverture’, impresa por el editor Levavasseur.",
+      "source": "Presses universitaires de Rouen et du Havre (OpenEdition Books), ‘Introduction. Un étrange objet’",
+      "url": "https://books.openedition.org/purh/5568"
+    },
+    {
+      "claim": "La novela se publicó ‘à Paris chez Levavasseur le 13 novembre 1830, bien que l'édition originale mentionne la date de 1831’; está dividida en dos partes.",
+      "source": "Wikipedia en francés, ‘Le Rouge et le Noir’ (fuente secundaria)",
+      "url": "https://fr.wikipedia.org/wiki/Le_Rouge_et_le_Noir"
+    },
+    {
+      "claim": "El libro primero termina tras el capítulo XXX (‘the first book (Livre premier, ending after Chapter XXX)’), de modo que el XLIX de la numeración corrida es el XIX del libro segundo. ‘Stendhal wrote most of the epigraphs’ que atribuyó a otros.",
+      "source": "Wikipedia en inglés, ‘The Red and the Black’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/The_Red_and_the_Black"
+    },
+    {
+      "claim": "‘César Vichard de Saint-Réal, né le 9 avril 1643 et mort à Chambéry le 13 septembre 1692, est un homme de lettres savoyard’; abate, historiador. ‘C'est à Saint-Réal que Stendhal attribue la célèbre formule’.",
+      "source": "Wikipedia en francés, ‘César Vichard de Saint-Réal’ (fuente secundaria)",
+      "url": "https://fr.wikipedia.org/wiki/C%C3%A9sar_Vichard_de_Saint-R%C3%A9al"
+    },
+    {
+      "claim": "Henri Beyle (Marie-Henri Beyle en el registro civil), conocido como Stendhal, nació el 23 de enero de 1783 en Grenoble y murió el 23 de marzo de 1842 en París.",
+      "source": "Wikipedia en francés, ‘Stendhal’ (fuente secundaria)",
+      "url": "https://fr.wikipedia.org/wiki/Stendhal"
+    },
+    {
+      "claim": "El epígrafe del capítulo XIII de la primera parte está ‘attribuée à Saint-Réal’.",
+      "source": "Acta fabula (revista de reseñas de Fabula, investigación en literatura)",
+      "url": "https://www.fabula.org/revue/document4175.php"
+    }
+  ],
+  "do_not_use": [
+    "Atribuir la frase a Saint-Réal, como hace el propio libro: el estudio de las PURH no la halló en su obra, ni sus predecesores. Tampoco afirmar como hecho probado que Stendhal ‘la inventó’: lo verificado es que no se ha encontrado en Saint-Réal y que la mayoría de los epígrafes son de fantasía.",
+    "El día exacto de salida: Wikipedia en francés da el 13 de noviembre de 1830 y el estudio de las PURH dice que se puso en venta en diciembre de 1830. En el cuerpo se dice ‘a finales de 1830’.",
+    "Que ‘Saint-Réal’ es un juego de palabras con ‘saint réel’: es una lectura crítica (G. C. Jones, citado por P. Lombardo) que solo apareció en un resumen de búsqueda, no en una página leída. No se usa.",
+    "Citar la versión larga (‘un espejo que se pasea por un camino real…’) como si fuera el epígrafe, o al revés: son dos pasajes distintos, el epígrafe del cap. XIII del libro I y el paréntesis del cap. XIX del libro II.",
+    "El título del capítulo XIII en español (‘Las medias caladas’): no se cotejó ninguna traducción publicada; no se da en el cuerpo.",
+    "Que el epígrafe general ‘La vérité, l’âpre vérité’ sea de Danton: el mismo estudio lo llama fantasiosamente firmado. No se menciona en el cuerpo.",
+    "El texto de la primera edición de Levavasseur: no se pudo consultar (Gallica devolvió 403 y Gutenberg 503). El cotejo es contra la edición de Michel Lévy de 1854."
+  ]
+}

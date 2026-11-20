@@ -1,0 +1,90 @@
+{
+  "id": "2027-01-09-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Melville y la isla de Queequeg en Moby Dick",
+    "hook": "La isla que según Melville no figura en ningún mapa tampoco tiene un nombre fijo dentro de su propio libro.",
+    "body": [
+      "El capítulo 12 de «Moby Dick» empieza presentando al arponero Queequeg: era natural de Kokovoko, una isla muy lejana, al oeste y al sur. La frase siguiente es esta. La isla es invención de Melville.",
+      "En el capítulo 13 de la edición estadounidense la misma isla se llama Rokovoko, dos veces en un párrafo. La Melville Electronic Library lo explica como un error del impresor, corregido en la edición británica, y por eso las ediciones críticas modernas unifican el nombre.",
+      "La frase suele citarse como invitación al viaje. El capítulo cuenta otra cosa. Queequeg es hijo de un rey y sobrino de un sumo sacerdote. Se embarca para aprender entre los cristianos, y lo que concluye es que también ellos pueden ser miserables y malvados. Decide morir pagano.",
+      "La novela salió en Londres el 18 de octubre de 1851, en tres volúmenes y con el título «The Whale», y en Nueva York en noviembre, en la casa Harper & Brothers. Melville nació en Nueva York el 1 de agosto de 1819 y murió allí el 28 de septiembre de 1891."
+    ],
+    "question": "¿Qué lugar de su vida no encontraría usted en ningún mapa?",
+    "quote": {
+      "text": "No está en ningún mapa; los lugares verdaderos nunca lo están.",
+      "author": "Herman Melville",
+      "work": "Moby Dick (1851), cap. 12, «Biográfico»",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Herman Melville",
+    "subtitle": "Moby Dick, 1851"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Melville",
+      "#MobyDick",
+      "#LiteraturaEstadounidense"
+    ],
+    "extended": [
+      "#Citas",
+      "#Novela",
+      "#Queequeg",
+      "#SigloXIX",
+      "#Libros"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo 12: ‘Queequeg was a native of Kokovoko, an island far away to the West and South. It is not down in any map; true places never are.’ Nota editorial: ‘Queequeg's Pacific Island home is Melville's invention.’ La traducción al español de la cita es propia.",
+      "source": "Melville Electronic Library,Versions of Moby-Dick, cap. 12, ‘Biographical’",
+      "url": "https://mel.netlify.app/editions/versions-of-moby-dick/12-biographical"
+    },
+    {
+      "claim": "Capítulo 13, nota editorial: la isla ‘appears again in the American version, here and later in this paragraph, as Rokovoko. The change is an American printer's error corrected in the British edition. To avoid confusion, the NN, Longman, and MEL editions emend to Kokovoko.’",
+      "source": "Melville Electronic Library,Versions of Moby-Dick, cap. 13, ‘Wheelbarrow’",
+      "url": "https://mel.netlify.app/editions/versions-of-moby-dick/13-wheelbarrow"
+    },
+    {
+      "claim": "Transcripción de la edición estadounidense de 1851, cap. 12: ‘Queequeg was a native of Kokovoko’; ‘His father was a High Chief, a King; his uncle a High Priest’; ‘a profound desire to learn among the Christians’; ‘even Christians could be both miserable and wicked’; ‘it's a wicked world in all meridians; I'll die a pagan’. Esta transcripción lee ‘not down on any map’.",
+      "source": "Herman Melville, Moby-Dick (Harper & Brothers, 1851), cap. 12, en Wikisource en inglés",
+      "url": "https://en.wikisource.org/wiki/Moby-Dick_(1851)_US_edition/Chapter_12"
+    },
+    {
+      "claim": "Transcripción de la edición estadounidense de 1851, cap. 13: ‘The people of his island of Rokovoko, it seems’ y ‘touched at Rokovoko’ en el mismo párrafo.",
+      "source": "Herman Melville, Moby-Dick (Harper & Brothers, 1851), cap. 13, en Wikisource en inglés",
+      "url": "https://en.wikisource.org/wiki/Moby-Dick_(1851)_US_edition/Chapter_13"
+    },
+    {
+      "claim": "Texto anotado: cap. 12, ‘Kokovoko’ y ‘It is not down in any map; true places never are.’",
+      "source": "Power Moby-Dick, edición anotada en línea, cap. 12",
+      "url": "http://www.powermobydick.com/Moby012.html"
+    },
+    {
+      "claim": "‘The book was first published (in three volumes) as The Whale in London in October 1851’ y en un solo volumen en Nueva York en noviembre; ficha: Richard Bentley, ‘October 18, 1851 (United Kingdom)’; Harper & Brothers, ‘November 14, 1851 (United States)’.",
+      "source": "Wikipedia en inglés, ‘Moby-Dick’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Moby-Dick"
+    },
+    {
+      "claim": "‘Herman Melville was born in New York City, on August 1, 1819’; murió el ‘September 28, 1891’ en Nueva York.",
+      "source": "Wikipedia en inglés, ‘Herman Melville’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Herman_Melville"
+    }
+  ],
+  "do_not_use": [
+    "Decidir si el original dice ‘in any map’ o ‘on any map’: la Melville Electronic Library y Power Moby-Dick leen ‘in’; la transcripción de Wikisource de la edición de 1851 y Lit2Go leen ‘on’. No se pudo ver el facsímil (Gutenberg dio 503, la Library of Congress 403). En español la traducción es la misma, y el cuerpo no cita el inglés.",
+    "Llamar a la isla solo ‘Rokovoko’, como hacen Lit2Go y Wikipedia en su resumen del argumento: en el capítulo 12 las tres transcripciones cotejadas dicen ‘Kokovoko’.",
+    "Cualquier etimología o modelo real de Kokovoko: la nota de la Melville Electronic Library dice que es invención de Melville, y no se halló fuente sobre el origen del nombre.",
+    "Las cifras de ventas en vida de Melville (unos 3200 ejemplares): solo llegaron en un resumen de Wikipedia, no en texto leído, y el periodo que cubren pasa de su muerte. No se usan.",
+    "El día exacto de la edición de Nueva York: Wikipedia da el 14 de noviembre de 1851 pero su sección de ediciones dice ‘probably’. En el cuerpo se dice ‘en noviembre’.",
+    "Que la frase habla del viaje o de ‘salir a descubrir’: en el capítulo es una observación del narrador sobre la patria de Queequeg, y lo que sigue es su desengaño con la cristiandad.",
+    "La dedicatoria a Hawthorne: verificada en Wikipedia, pero no se usa en el cuerpo por espacio."
+  ]
+}

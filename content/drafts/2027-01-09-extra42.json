@@ -1,0 +1,94 @@
+{
+  "id": "2027-01-09-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Kobayashi Issa y el mundo de rocío (1819)",
+    "hook": "Issa sabía que todo pasa. El haiku que escribió al morir su hija termina justo donde esa certeza deja de servirle.",
+    "body": [
+      "Sato nació el cuarto día del quinto mes de 1818, según el calendario japonés de entonces. Murió de viruela el día veintiuno del sexto mes de 1819. Vivió poco más de un año.",
+      "El poema tiene diecisiete sílabas y repite dos veces la misma palabra, «tsuyu», rocío. El rocío era una imagen conocida de lo que dura poco. Las dos primeras líneas la aceptan. La tercera, «sari nagara», no añade ningún argumento: se queda en una objeción sin terminar.",
+      "El haiku figura en «Oraga haru», el libro en prosa y verso que recoge ese año de 1819. Issa lo revisó y no llegó a publicarlo. Lo imprimió Shirai Isshi en 1852, veinticinco años después de su muerte, y fue él quien le puso el título.",
+      "Los cuatro hijos de su primer matrimonio murieron pequeños. Su esposa Kiku murió en 1823. En 1827 un incendio destruyó su casa de Kashiwabara. Issa murió en un almacén de su propiedad el 5 de enero de 1828. Dejó más de veinte mil haikus."
+    ],
+    "question": "¿Qué se hace con una verdad que se acepta y aun así no consuela?",
+    "quote": {
+      "text": "El mundo de rocío es un mundo de rocío, y sin embargo…",
+      "author": "Kobayashi Issa",
+      "work": "Oraga haru (escrito en 1819, impreso en 1852)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Kobayashi Issa",
+    "subtitle": "Oraga haru, 1819"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Issa",
+      "#Haiku",
+      "#PoesiaJaponesa"
+    ],
+    "extended": [
+      "#Citas",
+      "#KobayashiIssa",
+      "#Japon",
+      "#Duelo",
+      "#Poesia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto japonés del haiku: 露の世は露の世ながらさりながら. ‘A daughter, Satoyo (里世), died less than two-and-a-half years later, inspiring Issa to write this haiku.’ Traducción de Lewis Mackenzie: ‘This dewdrop world -- / Is a dewdrop world, / And yet, and yet . . .’. Issa murió el ‘January 5, 1828’, día 19 del undécimo mes del año 10 de Bunsei; ‘Issa wrote over 20,000 haiku’; Kiku ‘died in 1823’; tras el incendio de Kashiwabara de 1827 perdió la casa y vivió en su ‘kura (storehouse)’. La traducción al español de la cita es propia.",
+      "source": "Wikipedia en inglés, ‘Kobayashi Issa’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Kobayashi_Issa"
+    },
+    {
+      "claim": "Bajo el encabezado 『おらが春』 figura el haiku 「露の世は露の世ながらさりながら」.",
+      "source": "Wikiquote en japonés, ‘小林一茶’ (fuente secundaria)",
+      "url": "https://ja.wikiquote.org/wiki/%E5%B0%8F%E6%9E%97%E4%B8%80%E8%8C%B6"
+    },
+    {
+      "claim": "Cronología: ‘1818, Age 56: Fifth Month, 4th day, a daughter, Sato, is born.’ ‘1819, Age 57: Sixth Month, 21st day, Sato dies of smallpox.’, con el poema en esa misma entrada (‘this world / is a dewdrop world / yes... but...’). ‘1827 […] a fire sweeps through Kashiwabara village, destroying Issa's house’; ‘Eleventh Month, 19th day, he dies of a stroke. Equivalent Western date: January 5, 1828.’ Enumera cuatro hijos del primer matrimonio muertos en la infancia.",
+      "source": "David G. Lanoue (profesor de Xavier University of Louisiana hasta 2024), Haiku of Kobayashi Issa, ‘About Issa’",
+      "url": "http://haikuguy.com/issa/aboutissa.html"
+    },
+    {
+      "claim": "Oraga haru cubre ‘1819年（文政2年）、一茶57歳の一年間’; Issa lo revisó pero quedó ‘未刊のまま’; lo publicó Shirai Isshi (白井一之) en ‘1852年（嘉永5年）’, ‘没後25年’; el título lo puso Shirai, tomado de un haiku de la primera sección. Sato había nacido en ‘1818年（文政元年）5月’. ‘初婚の妻との間の4人の子どもは全て夭折し’. Issa murió en el almacén (土蔵).",
+      "source": "Wikipedia en japonés, ‘おらが春’ (fuente secundaria)",
+      "url": "https://ja.wikipedia.org/wiki/%E3%81%8A%E3%82%89%E3%81%8C%E6%98%A5"
+    },
+    {
+      "claim": "Romanización: ‘tsuyu no yo wa / tsuyu no yo nagara / sari nagara’; ‘these two words are the same, tsuyu, which means dew’; la niña contrajo viruela con un año y murió; Issa ‘knew the laws of reality. And yet, when he lost his little girl, he committed this gasp of a poem.’",
+      "source": "Pico Iyer, ‘About a Poem: Pico Iyer on a haiku by Kobayashi Issa’, Lion's Roar",
+      "url": "https://www.lionsroar.com/about-a-poem/"
+    },
+    {
+      "claim": "El poema parte de ‘a familiar line of scripture that compares the evanescence of life to the morning dew’; Oraga haru (1819) es ‘an autobiographical account of his most memorable year’.",
+      "source": "Terebess Asia Online, ‘Kobayashi Issa’ (recopilación de traducciones y estudios)",
+      "url": "https://terebess.hu/english/haiku/issa.html"
+    },
+    {
+      "claim": "Texto japonés del haiku y traducción ‘The world of dew -- / A world of dew it is indeed, / And yet, and yet . . .’; ‘over 20,000 haiku’; Issa ‘died on January 5, 1828’.",
+      "source": "Issa-kan (一茶館), villa de Takayama, Nagano, ‘About Issa’",
+      "url": "https://www.kobayashi-issa.jp/en-about-issa"
+    }
+  ],
+  "do_not_use": [
+    "Citar el final como ‘y sin embargo, y sin embargo’ presentándolo como literal: es la solución de las traducciones inglesas (Mackenzie, Iyer). En japonés ‘sari nagara’ aparece una sola vez; lo que se repite es ‘tsuyu no yo’ y ‘nagara’.",
+    "El pasaje en prosa de Oraga haru que precede al haiku (el agua que no vuelve, la flor que no regresa a la rama): no se pudo leer el texto del libro (Wikisource en japonés dio 404). Que el haiku está en Oraga haru se apoya en Wikiquote en japonés; no se describe el pasaje.",
+    "Que el poema se escribió ‘un mes después’ de la muerte de Sato: solo salió en un resumen de búsqueda. No se da plazo.",
+    "Pico Iyer anota que ‘some scholars now say the elegy was, in fact, inspired by the death of a son’. No se encontró el estudio ni ninguna variante anterior documentada; Lanoue y Wikipedia lo ligan a Sato. Si una ejecución futura localiza esa investigación, hay que revisar esta pieza.",
+    "Fechas occidentales de nacimiento y muerte de Sato (7 de junio de 1818, 11 de agosto de 1819): solo aparecieron en un resumen de Wikipedia en japonés, no en texto leído. En el cuerpo se dan las del calendario japonés, con Lanoue.",
+    "Que Issa murió en 1827: muchas fuentes lo dicen porque el año 10 de Bunsei corresponde en su mayor parte a 1827, pero el día 19 del undécimo mes cae en el 5 de enero de 1828.",
+    "La edad de Issa en 1819: las fuentes japonesas dan 57 por el cómputo tradicional; por el occidental tenía 56. No se da edad.",
+    "‘Cinco hijos’ muertos (Terebess) o que Kiku murió de parto (Iyer): Lanoue y Wikipedia en japonés dan cuatro hijos del primer matrimonio y no mencionan parto. Tampoco la edad a la que perdió a su madre (dos o tres años según la fuente).",
+    "Llamar a kobayashi-issa.jp ‘el museo de Issa’: es el Issa-kan de la villa de Takayama, no el Museo Conmemorativo de Issa de Shinano-machi, y su texto biográfico está adaptado de Wikipedia.",
+    "Que el rocío es específicamente una imagen budista: Terebess habla de ‘una línea conocida de las escrituras’ sin nombrarla. En el cuerpo se dice solo que era una imagen conocida de lo que dura poco.",
+    "La Britannica (403) y el archivo de la Universidad de Virginia (403) no se pudieron leer; el PDF de la Universidad de Shinshu sobre este haiku tampoco."
+  ]
+}
