@@ -212,9 +212,58 @@ def seccion_pronuncia() -> None:
           "la tabla sembrada no está aprobada")
 
 
+def seccion_voz() -> None:
+    print("\n3. Voz por frases, línea de tiempo y mezcla")
+    import shutil
+    import subprocess
+    from labkit import narrado_voz as nv
+
+    t = nv.linea_de_tiempo(["tachado", "cita", "nombre_ano", "nombre_ano", "contraste", "pregunta"],
+                           [2.217, 3.872, 5.223, 6.24, 4.111, 1.207])
+    check([round(x["inicio"], 2) for x in t] == [0.6, 3.52, 7.84, 13.51, 20.2, 25.01],
+          "inicios con huecos 0,45 y 0,7")
+    check(round(t[-1]["fin"] + 2.3, 2) == 28.52, "duración total con cola")
+    check(nv.duracion_total(t) == 28.52, "duracion_total suma la cola")
+    check(t[1]["escena_desde"] == round(t[1]["inicio"] - 0.2, 2), "la escena entra 0,2 s antes")
+    check(t[0]["escena_desde"] == 0.0 and t[-1]["escena_hasta"] == 28.52,
+          "la primera escena arranca en 0 y la última acaba en el total")
+    check(all(t[i]["escena_hasta"] == t[i + 1]["escena_desde"] for i in range(len(t) - 1)),
+          "cada escena acaba donde empieza la siguiente")
+
+    with tempfile.TemporaryDirectory() as d:
+        d = pathlib.Path(d)
+
+        def motor_corto(frase: str, salida: pathlib.Path) -> None:
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                            "sine=frequency=440:duration=0.1", str(salida)], check=True)
+
+        if shutil.which("ffmpeg") and shutil.which("ffprobe"):
+            nv.MOTORES["corto"] = motor_corto
+            try:
+                nv.sintetizar("Frase de prueba muy breve.", d / "corto.wav", motor="corto")
+                check(False, "VozFallida con un audio de 0,1 s")
+            except nv.VozFallida as e:
+                check("Frase de prueba muy breve." in str(e) and e.frase == "Frase de prueba muy breve.",
+                      "VozFallida nombra la frase")
+            finally:
+                del nv.MOTORES["corto"]
+        else:
+            print("  (omitido: falta ffmpeg)")
+
+        if shutil.which("say") and shutil.which("ffmpeg"):
+            dur = nv.sintetizar("Hola, esta es una frase de prueba.", d / "hola.wav", motor="say")
+            check(dur > 0.3, f"sintetizar con say dura {dur:.2f} s")
+            mezcla = d / "mezcla.wav"
+            nv.mezclar([d / "hola.wav", d / "hola.wav"], [0.6, 3.0], 6.0, mezcla)
+            check(mezcla.exists() and abs(nv._duracion(mezcla) - 6.0) < 0.1, "mezclar respeta el total")
+        else:
+            print("  (omitido: falta say o ffmpeg)")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
+    seccion_voz,
 ]
 
 
