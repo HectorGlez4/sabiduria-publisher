@@ -1,0 +1,55 @@
+{
+  "pieza": "2026-08-23-tarde",
+  "diseno": "papel",
+  "escenas": [
+    {
+      "tipo": "tachado",
+      "voz": "Esta frase no es de Viktor Frankl.",
+      "pantalla": {
+        "etiqueta": "No es de",
+        "nombre": "Viktor Frankl"
+      }
+    },
+    {
+      "tipo": "cita",
+      "voz": "Quien tiene un porqué para vivir soporta casi cualquier cómo.",
+      "pantalla": {
+        "texto": "Quien tiene un porqué para vivir soporta casi cualquier cómo."
+      }
+    },
+    {
+      "tipo": "nombre_ano",
+      "voz": "La escribió Friedrich Nietzsche en 1888, como una intuición.",
+      "pantalla": {
+        "etiqueta": "La escribió",
+        "nombre": "Friedrich Nietzsche",
+        "ano": "1888"
+      }
+    },
+    {
+      "tipo": "nombre_ano",
+      "voz": "Frankl la citó con su nombre en 1946, al salir de los campos de concentración.",
+      "pantalla": {
+        "etiqueta": "La citó",
+        "nombre": "Viktor Frankl",
+        "ano": "1946",
+        "nota": "al salir de los campos"
+      }
+    },
+    {
+      "tipo": "contraste",
+      "voz": "Una frase pensada en un escritorio y comprobada en el infierno.",
+      "pantalla": {
+        "claro": "pensada en un escritorio",
+        "oscuro": "comprobada en el infierno"
+      }
+    },
+    {
+      "tipo": "pregunta",
+      "voz": "¿Cuál es hoy tu porqué?",
+      "pantalla": {
+        "texto": "¿Cuál es hoy tu porqué?"
+      }
+    }
+  ]
+}

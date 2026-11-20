@@ -1099,6 +1099,30 @@ def _ya_en_produccion(citas: list[dict]) -> set[str]:
     return {c["slug"] for c in citas if c.get("texto") and c["texto"][:60] in textos_pub}
 
 
+def cmd_narrado(a) -> int:
+    """Reel narrado, un paso por llamada: elegir la pieza, construir el mp4 o anotar el veredicto visual."""
+    from labkit import narrado as nr
+    if a.paso == "elegir":
+        try:
+            emitir({"ok": True, **nr.elegir()})
+        except nr.SinCandidatas as e:
+            emitir({"ok": False, "tipo": "SinCandidatas", "error": str(e)})
+            return 2
+        return 0
+    _exigir(bool(a.pieza) and bool(_NOMBRE.fullmatch(a.pieza)), f"{a.paso} exige --pieza con un id válido")
+    if a.paso == "revisar":
+        _exigir(a.veredicto in ("PASS", "FAIL"), "revisar exige --veredicto PASS o FAIL")
+        emitir({"ok": True, **nr.revisar(a.pieza, a.veredicto)})
+        return 0
+    informe = nr.construir(a.pieza, motor=a.motor)
+    emitir(informe)
+    if not informe["ok"]:
+        print(f"narrado construir: falló en «{informe['fase']}»: " + " | ".join(informe["problemas"]),
+              file=sys.stderr)
+        return 2
+    return 0
+
+
 def cmd_sitio(a) -> int:
     import random
     from labkit import sitio_instagram as si
@@ -1495,6 +1519,14 @@ def construir() -> argparse.ArgumentParser:
     p.add_argument("--archivo", help="imagen de la pieza de la cola que devolvió `sitio cola` (compartir)")
     p.add_argument("--pieza", help="id de la pieza de la cola (pie, publicar): cruces apagados y la pieza anotada")
     p.set_defaults(func=cmd_sitio)
+
+    p = sub.add_parser("narrado", help="reel narrado de una cita: elegir, construir y revisar, un paso por llamada")
+    p.add_argument("paso", choices=("elegir", "construir", "revisar"))
+    p.add_argument("--pieza", help="id de la pieza (construir, revisar)")
+    p.add_argument("--motor", default="kokoro", choices=("kokoro", "say"), help="motor de voz (construir)")
+    p.add_argument("--veredicto", help="PASS o FAIL del revisor visual (revisar)")
+    p.set_defaults(func=cmd_narrado)
+
     return ap
 
 
