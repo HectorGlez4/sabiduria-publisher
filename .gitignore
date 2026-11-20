@@ -14,3 +14,4 @@ experiments/media-lab/assets/**/.*.tmp
 # gh run download <id> -D experiments/media-lab/results/<id>: descargas locales, no se comitean.
 experiments/media-lab/results/[0-9]*/
 experiments/media-lab/.venv-voz/
+experiments/media-lab/narrados/*/build/

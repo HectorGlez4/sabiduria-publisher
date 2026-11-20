@@ -224,6 +224,14 @@ def seccion_voz() -> None:
           "inicios con huecos 0,45 y 0,7")
     check(round(t[-1]["fin"] + 2.3, 2) == 28.52, "duración total con cola")
     check(nv.duracion_total(t) == 28.52, "duracion_total suma la cola")
+    check(nv.duracion_total(t) == t[-1]["escena_hasta"], "duracion_total == escena_hasta final")
+    raro = nv.linea_de_tiempo(["tachado", "cita", "pregunta"], [0.3333333, 1.0005, 0.7777777])
+    check(nv.duracion_total(raro) == raro[-1]["escena_hasta"], "duracion_total == escena_hasta con decimales raros")
+    try:
+        nv.duracion_total([])
+        check(False, "duracion_total([]) lanza ValueError")
+    except ValueError as e:
+        check("vacía" in str(e), "duracion_total([]) lanza ValueError claro")
     check(t[1]["escena_desde"] == round(t[1]["inicio"] - 0.2, 2), "la escena entra 0,2 s antes")
     check(t[0]["escena_desde"] == 0.0 and t[-1]["escena_hasta"] == 28.52,
           "la primera escena arranca en 0 y la última acaba en el total")
@@ -236,6 +244,25 @@ def seccion_voz() -> None:
         def motor_corto(frase: str, salida: pathlib.Path) -> None:
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
                             "sine=frequency=440:duration=0.1", str(salida)], check=True)
+
+        # Tope de tiempo y fallo de ffprobe, sin esperas reales.
+        orig_lim = nv.LIMITE_HERRAMIENTA
+        nv.LIMITE_HERRAMIENTA = 0.2
+        try:
+            nv._correr([sys.executable, "-c", "import time; time.sleep(5)"], "herramienta-lenta",
+                       nv.LIMITE_HERRAMIENTA, "Frase lenta.")
+            check(False, "el tope de tiempo lanza VozFallida")
+        except nv.VozFallida as e:
+            check("herramienta-lenta" in e.motivo and "0.2" in e.motivo and e.frase == "Frase lenta.",
+                  "el tope de tiempo nombra herramienta y límite")
+        finally:
+            nv.LIMITE_HERRAMIENTA = orig_lim
+        if shutil.which("ffprobe"):
+            try:
+                nv._duracion(d / "no-existe.wav", "Frase.")
+                check(False, "ffprobe fallido lanza VozFallida")
+            except nv.VozFallida as e:
+                check("ffprobe" in e.motivo and "0.00" not in e.motivo, "ffprobe fallido se dice como fallo de la herramienta")
 
         if shutil.which("ffmpeg") and shutil.which("ffprobe"):
             nv.MOTORES["corto"] = motor_corto

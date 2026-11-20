@@ -24,6 +24,8 @@ TIPOS_CON_PAUSA = ("cita", "pregunta")
 ENTRADA = 0.6            # silencio antes de la primera frase
 COLA = 2.3               # silencio tras la última frase
 ENTRADA_ESCENA = 0.2     # la escena entra 0,2 s antes de su frase
+LIMITE_KOKORO = 300      # s máximos para una frase con Kokoro (npx)
+LIMITE_HERRAMIENTA = 120  # s máximos para say, ffmpeg y ffprobe
 MINIMO_AUDIO = 0.3       # una frase más corta que esto es un fallo del motor
 LUFS = -16
 PICO_REAL = -1.5
@@ -48,14 +50,26 @@ def _requiere(herramienta: str, frase: str = "") -> str:
     return ruta
 
 
-def _duracion(wav: Path) -> float:
-    ffprobe = _requiere("ffprobe")
-    r = subprocess.run([ffprobe, "-v", "error", "-show_entries", "format=duration",
-                        "-of", "default=nw=1:nk=1", str(wav)], capture_output=True, text=True)
+def _correr(cmd: list[str], herramienta: str, limite: float, frase: str = "",
+            **kw) -> subprocess.CompletedProcess:
+    """`subprocess.run` con tope de tiempo: al agotarse lanza VozFallida nombrando herramienta y límite."""
     try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=limite, **kw)
+    except subprocess.TimeoutExpired:
+        raise VozFallida(frase, f"{herramienta} no terminó en {limite:g} s y se canceló") from None
+
+
+def _duracion(wav: Path, frase: str = "") -> float:
+    ffprobe = _requiere("ffprobe", frase)
+    r = _correr([ffprobe, "-v", "error", "-show_entries", "format=duration",
+                 "-of", "default=nw=1:nk=1", str(wav)], "ffprobe", LIMITE_HERRAMIENTA, frase)
+    try:
+        if r.returncode != 0:
+            raise ValueError
         return float(r.stdout.strip())
     except ValueError:
-        return 0.0
+        raise VozFallida(frase, f"ffprobe no pudo medir {wav.name} (código {r.returncode}): "
+                                f"{(r.stderr.strip() or r.stdout.strip() or 'sin salida')[:300]}") from None
 
 
 def _motor_kokoro(frase: str, salida: Path) -> None:
@@ -67,9 +81,9 @@ def _motor_kokoro(frase: str, salida: Path) -> None:
         txt.write_text(frase, encoding="utf-8")
         entorno = dict(os.environ, HYPERFRAMES_PYTHON=str(PYTHON_VOZ), DO_NOT_TRACK="1",
                        HYPERFRAMES_SKIP_SKILLS="1")
-        r = subprocess.run([npx, "--yes", "hyperframes@0.9.70", "tts", str(txt), "-o", str(salida),
-                            "-v", "em_santa", "-l", "es", "--speed", "0.95", "--json"],
-                           capture_output=True, text=True, env=entorno)
+        r = _correr([npx, "--yes", "hyperframes@0.9.70", "tts", str(txt), "-o", str(salida),
+                     "-v", "em_santa", "-l", "es", "--speed", "0.95", "--json"],
+                    "kokoro (npx hyperframes)", LIMITE_KOKORO, frase, env=entorno)
     if r.returncode != 0:
         ultima = (r.stdout.strip().splitlines() or [r.stderr.strip()])[-1]
         raise VozFallida(frase, f"kokoro terminó con código {r.returncode}: {ultima[:300]}")
@@ -77,8 +91,8 @@ def _motor_kokoro(frase: str, salida: Path) -> None:
 
 def _motor_say(frase: str, salida: Path) -> None:
     say = _requiere("say", frase)
-    r = subprocess.run([say, "-v", "Paulina", "-r", "165", "-o", str(salida),
-                        "--data-format=LEF32@22050", frase], capture_output=True, text=True)
+    r = _correr([say, "-v", "Paulina", "-r", "165", "-o", str(salida),
+                 "--data-format=LEF32@22050", frase], "say", LIMITE_HERRAMIENTA, frase)
     if r.returncode != 0:
         raise VozFallida(frase, f"say terminó con código {r.returncode}: {r.stderr.strip()[:300]}")
 
@@ -99,14 +113,19 @@ def sintetizar(frase: str, salida: Path, motor: str = "kokoro") -> float:
         MOTORES[motor](frase, crudo)
         if not crudo.exists() or crudo.stat().st_size == 0:
             raise VozFallida(frase, "el motor no escribió ningún audio")
-        r = subprocess.run([ffmpeg, "-y", "-loglevel", "error", "-i", str(crudo), "-af", _RECORTE,
-                            "-ar", "48000", "-ac", "1", str(salida)], capture_output=True, text=True)
+        r = _correr([ffmpeg, "-y", "-loglevel", "error", "-i", str(crudo), "-af", _RECORTE,
+                     "-ar", "48000", "-ac", "1", str(salida)], "ffmpeg", LIMITE_HERRAMIENTA, frase)
     if r.returncode != 0 or not salida.exists():
         raise VozFallida(frase, f"ffmpeg no pudo recortar el audio: {r.stderr.strip()[:300]}")
-    duracion = _duracion(salida)
+    duracion = _duracion(salida, frase)
     if duracion < MINIMO_AUDIO:
         raise VozFallida(frase, f"audio de {duracion:.2f} s, menos de {MINIMO_AUDIO} s")
     return duracion
+
+
+def _total(fin_ultima: float) -> float:
+    """Única fórmula del total: fin de la última frase más la cola."""
+    return round(fin_ultima + COLA, 2)
 
 
 def linea_de_tiempo(tipos: list[str], duraciones: list[float]) -> list[dict]:
@@ -120,19 +139,21 @@ def linea_de_tiempo(tipos: list[str], duraciones: list[float]) -> list[dict]:
             cursor += HUECO_ANTES_DE if tipo in TIPOS_CON_PAUSA else HUECO_FRASES
         frases.append((cursor, cursor + dur))
         cursor += dur
-    total = cursor + COLA
     items = []
     for i, (inicio, fin) in enumerate(frases):
         desde = 0.0 if i == 0 else round(inicio - ENTRADA_ESCENA, 2)
-        hasta = round(total, 2) if i == len(frases) - 1 else round(frases[i + 1][0] - ENTRADA_ESCENA, 2)
+        hasta = (_total(round(fin, 3)) if i == len(frases) - 1
+                 else round(frases[i + 1][0] - ENTRADA_ESCENA, 2))
         items.append({"inicio": round(inicio, 3), "fin": round(fin, 3),
                       "escena_desde": desde, "escena_hasta": hasta})
     return items
 
 
 def duracion_total(tiempos: list[dict]) -> float:
-    """Duración del reel: fin de la última frase más la cola."""
-    return round(tiempos[-1]["fin"] + COLA, 2)
+    """Duración del reel; siempre igual al `escena_hasta` de la última escena."""
+    if not tiempos:
+        raise ValueError("duracion_total: la línea de tiempo está vacía")
+    return _total(tiempos[-1]["fin"])
 
 
 def mezclar(wavs: list[Path], inicios: list[float], total: float, salida: Path) -> None:
@@ -151,7 +172,7 @@ def mezclar(wavs: list[Path], inicios: list[float], total: float, salida: Path) 
               f"apad=whole_dur={total},atrim=0:{total},loudnorm=I={LUFS}:TP={PICO_REAL}")
     salida = Path(salida)
     salida.parent.mkdir(parents=True, exist_ok=True)
-    r = subprocess.run([ffmpeg, "-y", "-loglevel", "error", *entradas, "-filter_complex", filtro,
-                        "-ar", "48000", str(salida)], capture_output=True, text=True)
+    r = _correr([ffmpeg, "-y", "-loglevel", "error", *entradas, "-filter_complex", filtro,
+                 "-ar", "48000", str(salida)], "ffmpeg (mezcla)", LIMITE_HERRAMIENTA, "(mezcla)")
     if r.returncode != 0 or not salida.exists():
         raise VozFallida("(mezcla)", f"ffmpeg no pudo mezclar: {r.stderr.strip()[:300]}")
