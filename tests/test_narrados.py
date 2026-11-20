@@ -75,10 +75,17 @@ def seccion_guion() -> None:
 
     pregunta_en_medio = _guion_ok()
     pregunta_en_medio["escenas"].insert(3, pregunta_en_medio["escenas"][-1])
-    cuatro = _guion_ok()
-    cuatro["escenas"] = cuatro["escenas"][:4]
-    ocho = _guion_ok()
-    ocho["escenas"] = ocho["escenas"][:5] + ocho["escenas"][2:5] + ocho["escenas"][5:]
+    def con_n_escenas(n):
+        """n escenas con cita y pregunta final: se rellena con contrastes antes de la pregunta."""
+        g = _guion_ok()
+        relleno = copy.deepcopy(g["escenas"][4])
+        cuerpo = g["escenas"][:-1]
+        pregunta = g["escenas"][-1]
+        while len(cuerpo) + 1 < n:
+            cuerpo.append(copy.deepcopy(relleno))
+        g["escenas"] = cuerpo[:n - 1] + [pregunta]
+        return g
+
     cita_cambiada = _guion_ok()
     cita_cambiada["escenas"][1]["pantalla"]["texto"] = "Quien tiene un porqué soporta todo."
     tres = _guion_ok()
@@ -93,8 +100,33 @@ def seccion_guion() -> None:
     check(any("cita" in p for p in ng.validar(sin("cita"), pieza, True)), "falta la escena cita")
     check(any("última" in p for p in ng.validar(pregunta_en_medio, pieza, True)),
           "pregunta no es la última")
-    check(len(ng.validar(cuatro, pieza, True)) >= 1 and len(ng.validar(ocho, pieza, True)) >= 1,
-          "5 a 7 escenas")
+    for n in (4, 8):
+        g = con_n_escenas(n)
+        check(len(g["escenas"]) == n, f"el guion de prueba tiene {n} escenas")
+        check(g["escenas"][-1]["tipo"] == "pregunta"
+              and any(e["tipo"] == "cita" for e in g["escenas"]),
+              f"{n} escenas con cita y pregunta final")
+        pr = ng.validar(g, pieza, True)
+        check(len(pr) == 1 and "escenas" in pr[0], f"{n} escenas: solo falla el recuento")
+    for n in (5, 7):
+        check(ng.validar(con_n_escenas(n), pieza, True) == [], f"{n} escenas es válido")
+    falso_nombre = _guion_ok()
+    falso_nombre["escenas"][0]["pantalla"]["nombre"] = "Viktor Goethe"
+    check(any("Goethe" in p and "pantalla.nombre" in p
+              for p in ng.validar(falso_nombre, pieza, True)), "pantalla.nombre que la pieza no contiene")
+    falso_ano = _guion_ok()
+    falso_ano["escenas"][2]["pantalla"]["ano"] = "1889"
+    check(any("1889" in p and "pantalla.ano" in p
+              for p in ng.validar(falso_ano, pieza, True)), "pantalla.ano que la pieza no contiene")
+    check(any("188" in p for p in ng.validar(con_voz("La escribió en 188."), pieza, True)),
+          "188 no cuenta como 1888 (palabra completa)")
+    check(any("Lo dijo Dios" not in p and "Dios" in p
+              for p in ng.validar(con_voz("Lo dijo Dios."), {**pieza, "core": {
+                  **pieza["core"], "hook": "", "body": ["Habló la Diosa."],
+                  "question": "", "quote": {"text": "", "author": ""}}}, True)),
+          "Dios no cuenta como parte de Diosa")
+    check(ng.validar([], pieza, True) != [] and ng.validar("x", pieza, True) != [],
+          "guion que no es objeto: problema, no excepción")
     check(any("1889" in p for p in ng.validar(con_voz("La escribió en 1889."), pieza, True)),
           "año que la pieza no contiene")
     check(any("Goethe" in p for p in ng.validar(con_voz("Lo dijo Goethe."), pieza, True)),
@@ -124,6 +156,12 @@ def seccion_guion() -> None:
             check(False, "cargar con JSON roto lanza ValueError")
         except ValueError as e:
             check(str(ruta) in str(e), "cargar con JSON roto lanza ValueError con la ruta")
+        ruta.write_text("[1, 2]", encoding="utf-8")
+        try:
+            ng.cargar(ruta)
+            check(False, "cargar con raíz que no es objeto lanza ValueError")
+        except ValueError as e:
+            check(str(ruta) in str(e), "cargar con raíz que no es objeto lanza ValueError con la ruta")
 
 
 SECCIONES = [

@@ -35,9 +35,12 @@ _INICIO_FRASE = re.compile(r"(?:^|[.!?…¿¡:]\s*)$")
 def cargar(ruta: Path) -> dict:
     ruta = Path(ruta)
     try:
-        return json.loads(ruta.read_text(encoding="utf-8"))
+        guion = json.loads(ruta.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         raise ValueError(f"{ruta}: JSON ilegible ({e})") from e
+    if not isinstance(guion, dict):
+        raise ValueError(f"{ruta}: el guion debe ser un objeto JSON")
+    return guion
 
 
 def _texto_pieza(pieza: dict) -> str:
@@ -65,16 +68,38 @@ def _nombres(voz: str) -> list[str]:
     return salida
 
 
+def _aparece(termino: str, texto: str) -> bool:
+    """El término está en el texto como palabra o número completos, no como parte de otro."""
+    return re.search(rf"(?<!\w){re.escape(termino)}(?!\w)", texto) is not None
+
+
+def _problemas_pantalla(i: int, tipo: str, pantalla: dict, texto_pieza: str) -> list[str]:
+    cual = f"escena {i} ({tipo})"
+    problemas = []
+    nombre = pantalla.get("nombre")
+    if isinstance(nombre, str):
+        for palabra in dict.fromkeys(m.group() for m in _PALABRA.finditer(nombre)
+                                     if m.group()[0].isupper()):
+            if not _aparece(palabra, texto_pieza):
+                problemas.append(f"{cual}: pantalla.nombre {palabra} no aparece en la pieza")
+    ano = pantalla.get("ano")
+    if isinstance(ano, str):
+        for numero in re.findall(r"\d+", ano):
+            if not _aparece(numero, texto_pieza):
+                problemas.append(f"{cual}: pantalla.ano {numero} no aparece en la pieza")
+    return problemas
+
+
 def _problemas_voz(i: int, voz: str, texto_pieza: str, prohibidos: list[str]) -> list[str]:
     cual = f"escena {i}"
     if not isinstance(voz, str) or not voz.strip():
         return [f"{cual}: voz vacía"]
     problemas = []
     for numero in re.findall(r"(?<!\d)\d{3,4}(?!\d)", voz):
-        if numero not in texto_pieza:
+        if not _aparece(numero, texto_pieza):
             problemas.append(f"{cual}: el año {numero} no aparece en la pieza")
     for nombre in dict.fromkeys(_nombres(voz)):
-        if nombre not in texto_pieza:
+        if not _aparece(nombre, texto_pieza):
             problemas.append(f"{cual}: el nombre {nombre} no aparece en la pieza")
     bajo = voz.lower()
     for termino in prohibidos:
@@ -84,6 +109,8 @@ def _problemas_voz(i: int, voz: str, texto_pieza: str, prohibidos: list[str]) ->
 
 
 def validar(guion: dict, pieza: dict, es_falsa_atribucion: bool) -> list[str]:
+    if not isinstance(guion, dict):
+        return ["el guion debe ser un objeto"]
     problemas: list[str] = []
     if guion.get("diseno") not in DISENOS:
         problemas.append(f"diseno {guion.get('diseno')!r} desconocido (uno de {', '.join(DISENOS)})")
@@ -120,6 +147,8 @@ def validar(guion: dict, pieza: dict, es_falsa_atribucion: bool) -> list[str]:
         for campo in pantalla:
             if campo not in permitidos:
                 problemas.append(f"escena {i} ({tipo}): pantalla.{campo} no existe en este tipo")
+        if tipo in ("tachado", "nombre_ano"):
+            problemas += _problemas_pantalla(i, tipo, pantalla, texto_pieza)
         if tipo == "cita" and isinstance(pantalla.get("texto"), str):
             if _normalizar_cita(pantalla["texto"]) != _normalizar_cita(quote):
                 problemas.append(f"escena {i}: el texto de la cita difiere de core.quote.text")
