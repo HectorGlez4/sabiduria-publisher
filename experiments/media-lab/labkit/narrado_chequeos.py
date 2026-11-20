@@ -17,8 +17,10 @@ import subprocess
 import tempfile
 import time
 import unicodedata
+from difflib import SequenceMatcher
 from pathlib import Path
 
+from .narrado_guion import _PALABRA
 from .narrado_pronuncia import numero_en_palabras
 
 LIMITE_CHECK = 300       # s máximos para `hyperframes check`
@@ -67,26 +69,52 @@ def _entorno() -> dict:
 
 _NUMERO = re.compile(r"(?<!\w)\d+(?!\w)")
 _PUNTUACION = re.compile(r"[.,;:!?¿¡…]")
+PARECIDO_MIN = 0.6  # SequenceMatcher entre lo oído y el nombre escrito o su dicho
+
+
+def _plegar(palabra: str) -> str:
+    base = unicodedata.normalize("NFD", palabra.lower())
+    return "".join(c for c in base if c.isalpha() and not unicodedata.combining(c))
+
+
+def _tokens_con_origen(texto: str) -> list[tuple[str, str]]:
+    """`(palabra normalizada, trozo original)`: cifras a palabras (las de más de 2999 quedan en cifras y
+    no casan con nada), minúsculas, sin tildes y solo letras."""
+    def cifra(m: re.Match) -> str:
+        n = int(m.group())
+        return " " + numero_en_palabras(n) + " " if n <= 2999 else m.group()
+    texto = _PUNTUACION.sub(" ", _NUMERO.sub(cifra, texto))
+    salida = []
+    for trozo in texto.split():
+        limpia = _plegar(trozo) or ("".join(c for c in trozo if c.isdigit()))
+        if limpia:
+            salida.append((limpia, trozo))
+    return salida
 
 
 def _tokens(texto: str) -> list[str]:
     """Palabras normalizadas: cifras a palabras, minúsculas, sin tildes y solo letras."""
-    texto = _NUMERO.sub(lambda m: " " + numero_en_palabras(int(m.group())) + " ", texto)
-    texto = _PUNTUACION.sub(" ", texto)
-    salida = []
-    for palabra in texto.split():
-        base = unicodedata.normalize("NFD", palabra.lower())
-        limpia = "".join(c for c in base if c.isalpha() and not unicodedata.combining(c))
-        if limpia:
-            salida.append(limpia)
-    return salida
+    return [t for t, _ in _tokens_con_origen(texto)]
 
 
 def _contexto(palabras: list[str], desde: int, hasta: int, margen: int = 2) -> str:
     return " ".join(palabras[max(0, desde - margen):hasta + margen])
 
 
-def comparar(guion_voz: list[str], transcrito: str, nombres: list[str] | None = None) -> str | None:
+def _formas(nombres) -> dict[str, list[str]]:
+    """De `nombres` (lista de nombres o `{escrito: [formas aceptadas…]}`) a `{palabra escrita: [formas plegadas]}`."""
+    if not nombres:
+        return {}
+    pares = nombres.items() if isinstance(nombres, dict) else ((n, []) for n in nombres)
+    formas: dict[str, list[str]] = {}
+    for escrito, aceptadas in pares:
+        for palabra in _PALABRA.findall(escrito):
+            formas.setdefault(palabra, []).extend(
+                f for f in [_plegar(palabra), *(_plegar(a) for a in aceptadas or [])] if f)
+    return formas
+
+
+def comparar(guion_voz: list[str], transcrito: str, nombres: list[str] | dict | None = None) -> str | None:
     """`None` si lo que dijo la voz es el guion; si no, un mensaje con unas cinco palabras de contexto.
 
     Se normalizan los dos lados: cifras a palabras (`numero_en_palabras`), minúsculas, sin tildes y sin
@@ -94,29 +122,36 @@ def comparar(guion_voz: list[str], transcrito: str, nombres: list[str] | None = 
     cifras no cuentan. Todo lo demás debe coincidir exacto.
 
     `nombres` son nombres propios del guion que un reconocedor puede escribir distinto («Nietzsche»
-    como «Niche», «Frankl» como «Franco»). Cada palabra de esos nombres se quita del guion y, en su
-    lugar, la transcripción puede traer cualquier palabra, una sola. Una palabra ordinaria que falta o
-    sobra sigue siendo divergencia aunque se pasen nombres.
+    como «Niche», «Frankl» como «Franco»): una lista, o `{escrito: [formas aceptadas, p. ej. el dicho]}`.
+    Solo donde el guion escribe uno de esos nombres con mayúscula, la transcripción puede traer otra
+    palabra, una sola, que se parezca (`PARECIDO_MIN`) al nombre escrito o a una de sus formas. La misma
+    palabra en minúscula no tiene tolerancia, y una palabra ordinaria que falta o sobra sigue siendo
+    divergencia aunque se pasen nombres.
     """
-    comodines = {t for n in (nombres or []) for t in _tokens(n)}
-    esperado = _tokens(" ".join(guion_voz))
-    dicho = _tokens(transcrito)
-    # partes: ("texto", [palabras]) o ("nombre", [palabra])
-    partes: list[tuple[str, list[str]]] = []
-    for palabra in esperado:
-        clase = "nombre" if palabra in comodines else "texto"
-        if clase == "texto" and partes and partes[-1][0] == "texto":
+    formas = _formas(nombres)
+    esperado, partes = [], []
+    # partes: ("texto", [palabras]) o ("nombre", [palabra], formas)
+    for palabra, trozo in _tokens_con_origen(" ".join(guion_voz)):
+        esperado.append(palabra)
+        escrito = next((w for w in _PALABRA.findall(trozo) if w[0].isupper() and w in formas), None)
+        if escrito is not None:
+            partes.append(("nombre", [palabra], formas[escrito]))
+        elif partes and partes[-1][0] == "texto":
             partes[-1][1].append(palabra)
         else:
-            partes.append((clase, [palabra]))
+            partes.append(("texto", [palabra], []))
+    dicho = _tokens(transcrito)
 
     i = 0           # palabra de la transcripción por consumir
     pos_guion = 0   # palabra del guion por la que vamos
-    for clase, palabras in partes:
+    for clase, palabras, aceptadas in partes:
         if clase == "nombre":
             if i >= len(dicho):
                 return (f"la voz se quedó sin decir «{palabras[0]}» "
                         f"(guion: «…{_contexto(esperado, pos_guion, pos_guion + 1)}…»)")
+            if max(SequenceMatcher(None, dicho[i], f).ratio() for f in aceptadas) < PARECIDO_MIN:
+                return (f"el guion dice el nombre «{palabras[0]}» y la voz dijo «…{_contexto(dicho, i, i + 1)}…», "
+                        f"que no se le parece (guion: «…{_contexto(esperado, pos_guion, pos_guion + 1)}…»)")
             i += 1
             pos_guion += 1
             continue

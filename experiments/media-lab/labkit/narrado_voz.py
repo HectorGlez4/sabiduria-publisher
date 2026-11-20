@@ -17,6 +17,8 @@ import tempfile
 from pathlib import Path
 from typing import Callable
 
+from .narrado_chequeos import VERSION
+
 RAIZ_LAB = Path(__file__).resolve().parent.parent
 PYTHON_VOZ = RAIZ_LAB / ".venv-voz" / "bin" / "python"
 
@@ -83,7 +85,7 @@ def _motor_kokoro(frase: str, salida: Path) -> None:
         txt.write_text(frase, encoding="utf-8")
         entorno = dict(os.environ, HYPERFRAMES_PYTHON=str(PYTHON_VOZ), DO_NOT_TRACK="1",
                        HYPERFRAMES_SKIP_SKILLS="1")
-        r = _correr([npx, "--yes", "hyperframes@0.9.70", "tts", str(txt), "-o", str(salida),
+        r = _correr([npx, "--yes", VERSION, "tts", str(txt), "-o", str(salida),
                      "-v", "em_santa", "-l", "es", "--speed", "0.95", "--json"],
                     "kokoro (npx hyperframes)", LIMITE_KOKORO, frase, env=entorno)
     if r.returncode != 0:
