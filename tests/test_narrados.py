@@ -416,8 +416,46 @@ def seccion_chequeos() -> None:
     mixto = {"lint": {"findings": [{"code": "x", "severity": "error", "message": "roto"}]},
              "layout": {"findings": [{"code": "text_below_floor", "severity": "warning", "message": "chico"},
                                      {"code": "otra", "severity": "warning", "message": "ruido"}]}}
-    check(len(nc.problemas_de_check(mixto)) == 2, "un error y un text_below_floor cuentan; otro aviso no")
-    check(nc.problemas_de_check({}) == [], "informe vacío sin problemas")
+    base = lambda: copy.deepcopy(informe)  # noqa: E731
+    mixto = base()
+    mixto["lint"]["findings"] = [{"code": "x", "severity": "error", "message": "roto"}]
+    mixto["lint"]["errorCount"] = 1
+    mixto["layout"]["findings"] = [{"code": "text_below_floor", "severity": "warning", "message": "chico"},
+                                   {"code": "otra", "severity": "warning", "message": "ruido"}]
+    check(len(nc.problemas_de_check(mixto, 1)) == 2, "un error y un text_below_floor cuentan; otro aviso no")
+
+    def falla(inf, codigo=0, etiqueta=""):
+        try:
+            nc.problemas_de_check(inf, codigo)
+            check(False, etiqueta)
+        except nc.ChequeoFallido as e:
+            check(True, etiqueta + f" ({e.motivo[:50]})")
+    falla({}, 0, "informe vacío lanza ChequeoFallido")
+    falla([], 0, "informe que no es objeto lanza ChequeoFallido")
+    falla({"layout": {}}, 1, "solo layout vacío con código 1 lanza ChequeoFallido")
+    falla({"layout": None}, 0, "layout nulo lanza ChequeoFallido")
+    x = base(); x["browserSkipped"] = True
+    falla(x, 0, "browserSkipped lanza ChequeoFallido")
+    x = base(); x["layout"]["truncated"] = True
+    falla(x, 0, "layout truncado lanza ChequeoFallido")
+    x = base(); x["layout"]["samples"] = []
+    falla(x, 0, "layout sin muestras lanza ChequeoFallido")
+    x = base(); x["contrast"]["enabled"] = False
+    falla(x, 0, "contrast desactivado lanza ChequeoFallido")
+    x = base(); x["craft"]["enabled"] = False
+    falla(x, 0, "craft desactivado lanza ChequeoFallido")
+    x = base(); del x["audio"]
+    falla(x, 0, "sección ausente lanza ChequeoFallido")
+    x = base(); x["runtime"]["errorCount"] = 2
+    falla(x, 1, "errorCount mayor que los errores leídos lanza ChequeoFallido")
+    x = base(); x["layout"]["findings"] = None
+    falla(x, 0, "findings mal formado lanza ChequeoFallido, no AttributeError")
+    x = base(); x["layout"]["findings"] = ["texto"]
+    falla(x, 0, "findings con elementos que no son objetos lanza ChequeoFallido")
+    falla(base(), 2, "código de salida 2 con informe sin errores lanza ChequeoFallido")
+    check(len(nc.problemas_de_check(base(), 0)) == 6, "con código 0 el informe real sigue dando 6")
+    x = base(); x["motion"]["enabled"] = False
+    check(len(nc.problemas_de_check(x)) == 6, "motion desactivado es como en la corrida real: no falla")
 
     crudo = json.loads((fixtures / "hyperframes-transcripcion-espiga.json").read_text(encoding="utf-8"))
     t = nc.palabras_de_transcripcion(crudo)
@@ -453,6 +491,25 @@ def seccion_chequeos() -> None:
             check(any("duración" in x for x in nc.audio_ok(tono("corto.wav", 20), 18)),
                   "audio_ok reporta la duración de 20 s")
             check(not any("duración" in x for x in nc.audio_ok(con_hueco, 28)), "30 s no es problema de duración")
+            a_caballo = tono("caballo.wav", 30, "10,15")
+            check(any("silencio" in x for x in nc.audio_ok(a_caballo, 12)),
+                  "un hueco que cruza fin_narracion se reporta")
+            cola = tono("cola.wav", 30, "27.7,30")
+            check(not any("silencio" in x for x in nc.audio_ok(cola, 27.7)),
+                  "la cola natural que empieza en fin_narracion no se reporta")
+            sin_fin = tono("sinfin.wav", 30, "20,30")
+            sf = nc.silencios(sin_fin)
+            check(len(sf) == 1 and abs(sf[0][1] - 30) < 0.1, f"un silencio sin silence_end llega al final {sf}")
+            check(any("silencio" in x for x in nc.audio_ok(sin_fin, 28)),
+                  "un silencio sin fin que empieza a media narración se reporta")
+            mudo = pathlib.Path(d) / "mudo.wav"
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                            "anullsrc=r=48000:cl=mono", "-t", "30", str(mudo)], check=True)
+            try:
+                nc.audio_ok(mudo, 28)
+                check(False, "audio mudo (medida no finita) lanza ChequeoFallido")
+            except nc.ChequeoFallido:
+                check(True, "audio mudo (medida no finita) lanza ChequeoFallido")
             try:
                 nc.medidas(pathlib.Path(d) / "no-existe.wav")
                 check(False, "medir un archivo ausente lanza ChequeoFallido")

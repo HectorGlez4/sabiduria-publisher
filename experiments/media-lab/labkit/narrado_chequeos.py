@@ -9,6 +9,7 @@ herramienta no corra o no termine lanza `ChequeoFallido`.
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import shutil
@@ -151,50 +152,62 @@ def comparar(guion_voz: list[str], transcrito: str, nombres: list[str] | None = 
 
 # ---------------------------------------------------------------- audio
 
+def _duracion(mp4: Path) -> float:
+    r = _correr([_requiere("ffprobe"), "-v", "error", "-show_entries", "format=duration",
+                 "-of", "default=nw=1:nk=1", str(mp4)], "ffprobe", LIMITE_HERRAMIENTA)
+    try:
+        if r.returncode != 0:
+            raise ValueError
+        return float(r.stdout.strip())
+    except ValueError:
+        raise ChequeoFallido("ffprobe", f"no pudo medir {Path(mp4).name} (código {r.returncode}): "
+                                        f"{(r.stderr.strip() or r.stdout.strip() or 'sin salida')[:300]}") from None
+
+
 def silencios(mp4: Path) -> list[tuple[float, float]]:
-    """Silencios (inicio, fin) del audio con `silencedetect=noise=-40dB:d=0.3`; uno que llega al final se descarta."""
+    """Silencios (inicio, fin) con `silencedetect=noise=-40dB:d=0.3`; uno sin `silence_end` llega al final del archivo."""
     r = _correr([_requiere("ffmpeg"), "-hide_banner", "-nostats", "-i", str(mp4), "-vn", "-af",
                  "silencedetect=noise=-40dB:d=0.3", "-f", "null", "-"], "ffmpeg (silencedetect)",
                 LIMITE_HERRAMIENTA)
     if r.returncode != 0:
         raise ChequeoFallido("ffmpeg (silencedetect)",
                              f"código {r.returncode}: {r.stderr.strip()[-300:]}")
-    inicios = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", r.stderr)]
+    inicios = [max(float(x), 0.0) for x in re.findall(r"silence_start: (-?[\d.]+)", r.stderr)]
     fines = [float(x) for x in re.findall(r"silence_end: (-?[\d.]+)", r.stderr)]
-    return [(max(a, 0.0), b) for a, b in zip(inicios, fines)]
+    if len(fines) < len(inicios):
+        fines.append(max(_duracion(mp4), inicios[len(fines)]))
+    return list(zip(inicios, fines))
 
 
 def medidas(mp4: Path) -> dict:
-    """`{"duracion", "lufs", "pico"}`: duración por ffprobe; sonoridad integrada y pico real por `loudnorm`."""
-    r = _correr([_requiere("ffprobe"), "-v", "error", "-show_entries", "format=duration",
-                 "-of", "default=nw=1:nk=1", str(mp4)], "ffprobe", LIMITE_HERRAMIENTA)
-    try:
-        if r.returncode != 0:
-            raise ValueError
-        duracion = float(r.stdout.strip())
-    except ValueError:
-        raise ChequeoFallido("ffprobe", f"no pudo medir {Path(mp4).name} (código {r.returncode}): "
-                                        f"{(r.stderr.strip() or r.stdout.strip() or 'sin salida')[:300]}") from None
+    """`{"duracion", "lufs", "pico"}`: duración por ffprobe; sonoridad integrada y pico real por `loudnorm`.
+    Un valor no finito (audio mudo: -inf) lanza ChequeoFallido."""
+    duracion = _duracion(mp4)
     r = _correr([_requiere("ffmpeg"), "-hide_banner", "-nostats", "-i", str(mp4), "-vn", "-af",
                  "loudnorm=print_format=json", "-f", "null", "-"], "ffmpeg (loudnorm)", LIMITE_HERRAMIENTA)
     bloques = re.findall(r"\{[^{}]*\}", r.stderr)
     try:
         datos = json.loads(bloques[-1])
-        return {"duracion": duracion, "lufs": float(datos["input_i"]), "pico": float(datos["input_tp"])}
+        m = {"duracion": duracion, "lufs": float(datos["input_i"]), "pico": float(datos["input_tp"])}
     except (IndexError, KeyError, ValueError):
         raise ChequeoFallido("ffmpeg (loudnorm)",
                              f"no devolvió las medidas (código {r.returncode}): {r.stderr.strip()[-300:]}") from None
+    malas = [k for k, v in m.items() if not math.isfinite(v)]
+    if malas:
+        raise ChequeoFallido("ffmpeg (loudnorm)", f"medidas no finitas {malas}: ¿audio mudo?")
+    return m
 
 
 def audio_ok(mp4: Path, fin_narracion: float) -> list[str]:
-    """Problemas de audio: duración fuera de 25–40 s, silencio de más de 1,2 s antes de `fin_narracion`,
+    """Problemas de audio: duración fuera de 25–40 s, silencio de más de 1,2 s que empiece antes de `fin_narracion` (aunque acabe después),
     sonoridad fuera de −17…−15 LUFS o pico por encima de −1,0 dB. Lista vacía si todo está bien."""
     problemas = []
     m = medidas(mp4)
     if not DURACION_MIN <= m["duracion"] <= DURACION_MAX:
         problemas.append(f"duración {m['duracion']:.1f} s fuera de {DURACION_MIN:g}–{DURACION_MAX:g} s")
     for inicio, fin in silencios(mp4):
-        if fin - inicio > SILENCIO_MAX and fin < fin_narracion:
+        # la cola natural empieza en `fin_narracion`; todo silencio largo que empieza antes es un hueco
+        if fin - inicio > SILENCIO_MAX and inicio < fin_narracion - 0.05:
             problemas.append(f"silencio de {fin - inicio:.1f} s entre {inicio:.1f} s y {fin:.1f} s "
                              f"(máximo {SILENCIO_MAX:g} s)")
     if not LUFS_MIN <= m["lufs"] <= LUFS_MAX:
@@ -206,34 +219,69 @@ def audio_ok(mp4: Path, fin_narracion: float) -> list[str]:
 
 # ---------------------------------------------------------------- hyperframes
 
-def problemas_de_check(informe: dict) -> list[str]:
-    """Errores y avisos que bloquean (`outside_safe_zone`, `text_below_floor`) de un informe de `check --json`."""
+SECCIONES_ACTIVAS = ("contrast", "craft")  # las que la corrida real de la espiga tenía activadas
+
+
+def problemas_de_check(informe: dict, codigo_salida: int = 0) -> list[str]:
+    """Errores y avisos que bloquean (`outside_safe_zone`, `text_below_floor`) de un informe de `check --json`.
+
+    Un informe en el que el chequeo no pudo correr lanza ChequeoFallido: navegador omitido, informe
+    truncado, sin muestras de maquetación, una sección ausente o con `findings` mal formado,
+    `contrast`/`craft` desactivados, un `errorCount` mayor que los errores leídos, o la herramienta
+    con código de salida distinto de cero sin ningún error en el informe."""
+    def falla(motivo: str):
+        return ChequeoFallido("hyperframes check", motivo)
+
+    if not isinstance(informe, dict):
+        raise falla("el informe no es un objeto JSON")
+    if informe.get("browserSkipped"):
+        raise falla("el navegador se omitió: la maquetación no se comprobó")
     problemas = []
+    total_errores = 0
     for seccion in SECCIONES_CHECK:
-        for h in (informe.get(seccion) or {}).get("findings", []):
+        datos = informe.get(seccion)
+        if not isinstance(datos, dict):
+            raise falla(f"falta la sección «{seccion}» del informe")
+        hallazgos = datos.get("findings")
+        if not isinstance(hallazgos, list) or not all(isinstance(h, dict) for h in hallazgos):
+            raise falla(f"la sección «{seccion}» trae `findings` mal formado")
+        if seccion in SECCIONES_ACTIVAS and datos.get("enabled") is not True:
+            raise falla(f"la sección «{seccion}» está desactivada")
+        if seccion == "layout":
+            if datos.get("truncated"):
+                raise falla("el informe de «layout» está truncado")
+            if not isinstance(datos.get("samples"), list) or not datos["samples"]:
+                raise falla("«layout» no tomó ninguna muestra")
+        errores = sum(1 for h in hallazgos if h.get("severity") == "error")
+        total_errores += errores
+        contados = datos.get("errorCount", 0)
+        if isinstance(contados, int) and contados > errores:
+            raise falla(f"«{seccion}» declara {contados} error(es) y solo se leyeron {errores}")
+        for h in hallazgos:
             codigo = h.get("code", "?")
             if h.get("severity") == "error" or (h.get("severity") == "warning" and codigo in AVISOS_QUE_BLOQUEAN):
                 cuando = f" t={h['time']:g}s" if isinstance(h.get("time"), (int, float)) else ""
                 donde = f" {h['selector']}" if h.get("selector") else ""
                 texto = f" «{h['text']}»" if h.get("text") else ""
                 problemas.append(f"{seccion}: {codigo}{cuando}{donde}{texto} — {h.get('message', '')}")
+    if codigo_salida != 0 and total_errores == 0:
+        raise falla(f"terminó con código {codigo_salida} pero el informe no trae ningún error que lo explique")
     return problemas
 
 
 def chequeo_hyperframes(proyecto: Path) -> list[str]:
     """Corre `hyperframes check` en el proyecto; devuelve sus errores y los avisos de zona segura y de
-    texto bajo el mínimo. `timeline_track_too_dense` y `nested_structure_needs_subcomposition` se ignoran."""
+    texto bajo el mínimo. `timeline_track_too_dense` y `nested_structure_needs_subcomposition` se ignoran.
+    Si el chequeo no corrió de verdad lanza ChequeoFallido (ver `problemas_de_check`)."""
     r = _correr([_requiere("npx"), "--yes", VERSION, "check", "--no-cache", "--json"],
                 "hyperframes check", LIMITE_CHECK, cwd=str(proyecto), env=_entorno())
     try:
         informe = json.loads(r.stdout)
-        if not isinstance(informe, dict) or "layout" not in informe:
-            raise ValueError
     except ValueError:
         ultima = (r.stderr.strip().splitlines() or [r.stdout.strip()[:200] or "sin salida"])[-1]
         raise ChequeoFallido("hyperframes check",
                              f"código {r.returncode} y sin informe JSON legible: {ultima[:300]}") from None
-    return problemas_de_check(informe)
+    return problemas_de_check(informe, r.returncode)
 
 
 def palabras_de_transcripcion(crudo: list) -> dict:
