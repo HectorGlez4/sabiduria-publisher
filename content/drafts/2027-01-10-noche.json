@@ -1,0 +1,83 @@
+{
+  "id": "2027-01-10-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el Coloso de Rodas y el puerto que nunca cruzó",
+    "hook": "La imagen del Coloso de Rodas con un pie en cada muelle no aparece en ningún autor antiguo. La primera noticia es de un viajero de 1395.",
+    "body": [
+      "En 305-304 a.C., Demetrio sitió Rodas durante un año y se retiró. Según Plinio el Viejo, los rodios vendieron las máquinas de guerra que dejó y con esos 300 talentos pagaron una estatua del Sol. La hizo Cares de Lindos, discípulo de Lisipo. Tardó doce años. Medía setenta codos, algo más de treinta metros.",
+      "Estuvo en pie poco más de medio siglo. Un terremoto, hacia el 226 a.C., la derribó. Estrabón dice que se quebró por las rodillas y que un oráculo disuadió a los rodios de levantarla. Polibio cuenta que Ptolomeo prometió 3.000 talentos para restaurarla. Nunca se hizo.",
+      "Plinio la vio, o la describe, ya caída: pocos hombres podían abarcar el pulgar con los brazos, y los dedos eran mayores que la mayoría de las estatuas. Ni él ni Estrabón dicen que cruzara la bocana del puerto. Esa postura llega con la Edad Media tardía y con los grabados del siglo XVI.",
+      "Los arqueólogos la sitúan hoy junto al puerto o en un santuario de Helios, sobre una colina de la ciudad. La maravilla más famosa de Rodas es, en la forma en que se la recuerda, un dibujo posterior en mil seiscientos años."
+    ],
+    "question": "¿Cuántas imágenes del pasado que das por ciertas son de quien las dibujó después?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El Coloso de Rodas",
+    "subtitle": "Setenta codos, doce años, medio siglo en pie",
+    "body": "Plinio da su altura, su autor y su coste. Estrabón dice que cayó quebrado por las rodillas. Ninguno escribe que cruzara el puerto: esa imagen aparece hacia 1395."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#ColosoDeRodas", "#SieteMaravillas", "#GreciaAntigua"],
+    "extended": ["#Arqueologia", "#HistoriaAntigua", "#Rodas", "#Plinio", "#Mitos", "#Helenismo"]
+  },
+  "sources": [
+    {
+      "claim": "Historia Natural 34, 41: ‘LXX cubitorum altitudinis fuit hoc simulacrum’; ‘quem fecerat Chares Lindius, Lysippi supra dicti discipulus’; ‘sed iacens quoque miraculo est’; ‘pauci pollicem eius amplectuntur, maiores sunt digiti quam pleraeque statuae’; ‘duodecim annis tradunt effectum CCC talentis, quae contigerant ex apparatu regis Demetrii relicto morae taedio obsessa Rhodo’. El pasaje no dice nada sobre un puerto ni sobre la postura de las piernas.",
+      "source": "Plinio el Viejo, Naturalis Historia, libro 34 (texto latino, LacusCurtius, Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Pliny_the_Elder/34*.html"
+    },
+    {
+      "claim": "Traducción inglesa del mismo pasaje: hecha por Cares de Lindos, discípulo de Lisipo; ‘but even lying on the ground it is a marvel’; ‘Few people can make their arms meet round the thumb of the figure’; tardó doce años y costó 300 talentos, obtenidos de las máquinas de guerra que el rey Demetrio abandonó.",
+      "source": "Plinio el Viejo, Natural History 34 (trad. H. Rackham, Loeb, 1952), en Attalus.org",
+      "url": "https://www.attalus.org/translate/pliny_hn34a.html"
+    },
+    {
+      "claim": "Geografía 14, 2, 5: ‘it now lies on the ground, having been thrown down by an earthquake and broken at the knees. In accordance with a certain oracle, the people did not raise it again’; cita el verso ‘seven times ten cubits in height, the work of Chares the Lindian’. No menciona que cruzara el puerto.",
+      "source": "Estrabón, Geography, libro XIV, cap. 2 (trad. H. L. Jones, Loeb; LacusCurtius, Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/14B*.html"
+    },
+    {
+      "claim": "Historias 5, 88-89: los rodios se valieron del ‘earthquake which had occurred a short time previously and which had cast down their great Colossus’; Ptolomeo prometió, entre otros dones, ‘three thousand talents (of bronze?) for the restoration of the Colossus’.",
+      "source": "Polibio, Histories, libro V (trad. W. R. Paton, Loeb; LacusCurtius, Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/5*.html"
+    },
+    {
+      "claim": "Los peregrinos identificaron por error restos como partes de la estatua, lo que llevó a ‘spurious depictions of the Colossus straddling the harbor’; a Cares le llevó doce años; Nathan Badoud considera que el emplazamiento más probable es un santuario de Helios en lo alto de una pequeña colina en el centro de la ciudad; la estatua seguía en el suelo en el siglo I d.C.",
+      "source": "Archaeology Magazine (Archaeological Institute of America), Benjamin Leonard, ‘Colossus of Rhodes’, en ‘Secrets of the Seven Wonders’ (noviembre-diciembre de 2025)",
+      "url": "https://archaeology.org/issues/november-december-2025/collection/colossus-of-rhodes/secrets-of-the-seven-wonders/"
+    },
+    {
+      "claim": "‘Contrary to popular post-classical depictions of the Colossus straddling the harbour entrance, historical evidence suggests it likely stood beside the harbour’; el lado oriental del puerto es la ubicación que considera más probable; unos 33 metros de altura; terremoto en 226 a.C.",
+      "source": "Engineers Ireland, Engineers Journal, ‘Colossus of Rhodes: rise and fall of one of the ancient seven wonders of the world’ (4 de noviembre de 2024)",
+      "url": "https://www.engineersireland.ie/Engineers-Journal/Civil/colossus-of-rhodes-rise-and-fall-of-one-of-the-ancient-seven-wonders-of-the-world"
+    },
+    {
+      "claim": "El asedio de Demetrio en 305/304 duró un año.",
+      "source": "Livius.org (Jona Lendering), ‘Rhodes’",
+      "url": "https://www.livius.org/articles/place/rhodes/"
+    },
+    {
+      "claim": "‘The harbour-straddling Colossus was a figment of medieval imaginations’; la imagen se apoya en ‘the writings of an Italian visitor who in 1395 noted that local tradition held that the right foot had stood where the church of St John of the Colossus was then located’; la representación moderna más antigua conocida es de 1572 (Octo Mundi Miracula); construcción hacia 292-280 a.C.; el emplazamiento original sigue en disputa.",
+      "source": "Wikipedia en inglés, ‘Colossus of Rhodes’ (fuente secundaria, usada como contraste para la fecha de 1395)",
+      "url": "https://en.wikipedia.org/wiki/Colossus_of_Rhodes"
+    }
+  ],
+  "do_not_use": [
+    "Los años exactos que estuvo en pie: el texto latino de LacusCurtius y la traducción de Rackham dicen 66 (‘post LXVI annum’); la traducción de Bostock, que reproduce Wikipedia, dice 56; las cuentas modernas (280 a 226 a.C.) dan 54. En el cuerpo: ‘poco más de medio siglo’.",
+    "El año exacto del terremoto: 226 a.C. en la mayoría de las fuentes, 227 en Archaeology Magazine y en Livius. Polibio no da fecha. En el cuerpo: ‘hacia el 226 a.C.’.",
+    "Que los restos se vendieron en 653 o 654 a un mercader judío de Edesa que los cargó en 900 camellos: la única fuente es la crónica de Teófanes, del siglo IX; Wikipedia recoge que L. I. Conrad lo considera probablemente propaganda, y Bar Hebreo dice Emesa. No se usa.",
+    "Que el viajero de 1395 fue Niccolò de Martoni: es el nombre que suele darse, pero ninguna fuente leída en esta ejecución lo nombra. Se dice solo ‘un viajero de 1395’.",
+    "Que los grabados que fijaron la imagen son de Maarten van Heemskerck: apareció solo en un extracto del buscador. En el cuerpo: ‘los grabados del siglo XVI’.",
+    "La altura en metros como cifra cerrada: 32 o 33 metros según el pasaje de Wikipedia, 33 en Engineers Ireland, unos 120 pies (36 m) en Archaeology Magazine. La fuente antigua dice setenta codos; en el cuerpo, ‘algo más de treinta metros’.",
+    "Que se sabe dónde estuvo: el emplazamiento sigue en disputa (junto al puerto de Mandraki, en un rompeolas o en un santuario de Helios en la acrópolis). No se da uno como seguro.",
+    "Que Plinio vio la estatua con sus ojos: el texto la describe caída, pero no afirma que fuera testigo. En el cuerpo: ‘la vio, o la describe’.",
+    "El pedestal de mármol blanco de 15 metros y las cifras de 500 talentos de bronce y 300 de hierro atribuidas a Filón de Bizancio: no se pudo leer la fuente. No se usan.",
+    "World History Encyclopedia y Britannica: devolvieron 403; no cuentan como fuentes verificadas."
+  ]
+}

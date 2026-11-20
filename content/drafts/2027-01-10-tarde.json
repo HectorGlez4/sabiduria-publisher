@@ -1,0 +1,77 @@
+{
+  "id": "2027-01-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Juliana de Norwich y el todo irá bien de 1373",
+    "hook": "La frase de consuelo más repetida de la mística inglesa no la dice su autora. Es la respuesta que recibe, y empieza admitiendo el pecado.",
+    "body": [
+      "En mayo de 1373, una mujer de treinta años, gravemente enferma y convencida de que moría, tuvo una serie de visiones. Sanó. Vivió después como reclusa en una celda adosada a la iglesia de St Julian, en Norwich. No se sabe con certeza si Juliana era su nombre.",
+      "La frase está en el capítulo 27, en la decimotercera revelación. Ella cuenta que se preguntaba a menudo por qué Dios no había impedido el comienzo del pecado, porque entonces todo habría ido bien. Quien responde es Jesús: convenía que hubiera pecado, pero todo irá bien. En el inglés medio del manuscrito, el pecado es «behovabil».",
+      "El libro es el más antiguo que se conserva en inglés del que se sabe que lo escribió una mujer. No se imprimió hasta 1670, en la edición del benedictino Serenus de Cressy. En 1901, Grace Warrack modernizó el texto del manuscrito Sloane 2499 y lo acercó a los lectores del siglo XX.",
+      "No es una promesa de que nada malo pase. Es lo que se le dice a alguien que ya preguntó por qué pasa."
+    ],
+    "question": "¿Consuela más una frase cuando se sabe a qué pregunta respondía?",
+    "quote": {
+      "text": "Todo irá bien, y todo irá bien, y toda clase de cosas irá bien.",
+      "author": "Juliana de Norwich",
+      "work": "Revelaciones del amor divino, cap. 27 (texto largo)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Juliana de Norwich",
+    "subtitle": "Revelaciones del amor divino, capítulo 27"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#JulianaDeNorwich", "#Mistica", "#EdadMedia"],
+    "extended": ["#Citas", "#LiteraturaInglesa", "#Norwich", "#Consuelo", "#HistoriaDeLasMujeres"]
+  },
+  "sources": [
+    {
+      "claim": "Capítulo XXVII: ‘all shall be well, and all shall be well, and all manner of thing shall be well’; la frase la pronuncia Jesús (‘But Jesus, who in this Vision informed me of all that is needful to me, answered by this word and said: It behoved that there should be sin’); antes, ella se preguntaba ‘why by the great foreseeing wisdom of God the beginning of sin was not hindered: for then, methought, all should have been well’. La nota al pie da el inglés medio: ‘Synne is behovabil, but al shal be wel…’. La traducción al español de la cita es propia, a partir de este texto.",
+      "source": "Julian of Norwich, Revelations of Divine Love, versión modernizada de Grace Warrack, cap. XXVII (Christian Classics Ethereal Library)",
+      "url": "https://www.ccel.org/ccel/julian/revelations.xiv.i.html"
+    },
+    {
+      "claim": "El capítulo XXVII va bajo el encabezado ‘The Thirteenth Revelation’; mismo texto de la frase; traducción de Grace Harriet Warrack; nota con el inglés medio ‘Synne is behovabil, but al shal be wel & al shal be wel & al manner of thyng shal be wele’.",
+      "source": "Wikisource, Revelations of Divine Love (ed. Warrack, reimpresión de 1907), Chapter 27",
+      "url": "https://en.wikisource.org/wiki/Revelations_of_Divine_Love/Chapter_27"
+    },
+    {
+      "claim": "Capítulo II del mismo texto: las revelaciones ocurrieron en mayo del año 1373, cuando ella tenía treinta años.",
+      "source": "Julian of Norwich, Revelations of Divine Love, versión de Grace Warrack, cap. II (Christian Classics Ethereal Library)",
+      "url": "https://www.ccel.org/ccel/julian/revelations.i.ii.html"
+    },
+    {
+      "claim": "El manuscrito Stowe 42 contiene las Revelations of Divine Love ‘by the anchoress and mystic Julian of Norwich (b. 1342, d. c.1416)’; se cree copia de un ejemplar usado para la edición publicada en 1670 por Serenus Cressy, confesor benedictino de las monjas inglesas exiliadas en Cambrai.",
+      "source": "British Library, catálogo de archivos y manuscritos, Stowe MS 42",
+      "url": "https://searcharchives.bl.uk/catalog/040-001952820"
+    },
+    {
+      "claim": "Vivía como reclusa en una celda junto a la iglesia de St Julian en Norwich; el libro fue editado por primera vez por Serenus de Cressy en 1670; el mejor manuscrito del Museo Británico fue editado en forma modernizada por Grace Warrack en 1901; las lecturas de la fecha de las visiones difieren.",
+      "source": "Catholic Encyclopedia (1907-1912), ‘Juliana of Norwich’, por Edmund G. Gardner",
+      "url": "https://www.catholic.com/encyclopedia/juliana-of-norwich"
+    },
+    {
+      "claim": "‘It is the earliest surviving example of a book in the English language known to have been written by a woman’; en 1373, gravemente enferma y convencida de estar cerca de la muerte, a los treinta años, recibió una serie de visiones; la traducción de Warrack de 1901 del manuscrito ‘Sloane 2499’ introdujo el libro a los lectores del siglo XX; ‘It is not known for certain whether the name Julian was adopted once she became a recluse’.",
+      "source": "Wikipedia en inglés, ‘Revelations of Divine Love’ y ‘Julian of Norwich’ (fuente secundaria, usada como contraste)",
+      "url": "https://en.wikipedia.org/wiki/Revelations_of_Divine_Love"
+    }
+  ],
+  "do_not_use": [
+    "El día exacto de las visiones: el texto de Warrack dice 13 de mayo de 1373, Wikipedia da el 8 de mayo y la Catholic Encyclopedia ‘8 o 14 (las lecturas difieren)’. Los manuscritos no coinciden. En el cuerpo se dice solo ‘mayo de 1373’.",
+    "Presentar la frase como consejo u opinión de Juliana: en el texto la dice Jesús, en respuesta a su pregunta sobre el pecado. La autoría del libro es suya; la voz de la frase, no.",
+    "Que ‘Juliana’ es un nombre tomado de la iglesia de St Julian: es conjetura frecuente; Wikipedia recoge que no hay prueba de que las reclusas adoptaran el nombre del patrón de su iglesia. Tampoco se afirma lo contrario.",
+    "Que tenía ‘treinta años y medio’: es lectura de una de las versiones; el texto de Warrack dice ‘thirty years of age’.",
+    "Que nació el 8 de noviembre de 1343: fecha sin respaldo que aparece en la ficha de CCEL; la British Library da ‘b. 1342’ y Wikipedia ‘1343 o finales de 1342’. No se da fecha de nacimiento.",
+    "Que los manuscritos del texto largo los copiaron monjas benedictinas inglesas en Cambrai y París: solo se confirmó el vínculo de Cressy con las monjas de Cambrai (British Library); para el manuscrito de París las fuentes discrepan (se habla de monjas brigidinas). No se afirma quién copió qué.",
+    "Que T. S. Eliot cita la frase en ‘Little Gidding’ (1942): Wikipedia lo dice, pero no se cotejó el poema. No se usa.",
+    "Que la edición de Warrack de 1901 la publicó Methuen: no se pudo comprobar la portada (Project Gutenberg devolvió 503 en esta ejecución).",
+    "‘Primera escritora en lengua inglesa’ sin matiz: lo que sostienen las fuentes es ‘el libro más antiguo que se conserva en inglés del que se sabe que lo escribió una mujer’."
+  ]
+}

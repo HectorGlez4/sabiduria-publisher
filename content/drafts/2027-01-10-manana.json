@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-10-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Ángela Ruiz Robles y la Enciclopedia Mecánica",
+    "hook": "En 1949, una maestra de Ferrol pidió la patente de un libro con carretes, cristal de aumento y luz para leer a oscuras. Nunca llegó a las aulas.",
+    "body": [
+      "Ángela Ruiz Robles nació en Villamanín, León, el 28 de marzo de 1895. Fue maestra en Mandiá, una aldea cercana a Ferrol, y escribió dieciséis libros de texto. En 1947 recibió la Cruz de Alfonso X el Sabio.",
+      "En 1949 solicitó una patente que se le concedió con el número 190.698. El título era «Procedimiento mecánico, eléctrico y a presión de aire para lectura de libros». Las materias iban en carretes intercambiables, bajo una lámina transparente e irrompible, con cristal de aumento y luz. Preveía incluso añadir sonido con la explicación de cada tema.",
+      "Hacia 1962 se construyó un prototipo en el Parque de Artillería de Ferrol, de bronce, cinc y madera. El aparato nunca se comercializó. Ella murió en Ferrol el 27 de octubre de 1975.",
+      "El prototipo está hoy en el Museo Nacional de Ciencia y Tecnología, en A Coruña. La Oficina Española de Patentes lo considera un precursor del libro electrónico. No era electrónico. Era la misma idea, resuelta con lo que había."
+    ],
+    "question": "¿Cuántas ideas se quedan en prototipo solo por llegar antes de tiempo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ángela Ruiz Robles",
+    "subtitle": "La patente 190.698",
+    "body": "Maestra en Ferrol, pidió en 1949 la patente de un libro mecánico con carretes, cristal de aumento y luz. El prototipo se construyó hacia 1962. Nunca se comercializó. Hoy está en un museo de A Coruña."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#AngelaRuizRobles", "#EnciclopediaMecanica", "#Inventoras"],
+    "extended": ["#HistoriaDeLaCiencia", "#Ferrol", "#Educacion", "#MujeresEnLaCiencia", "#Patentes"]
+  },
+  "sources": [
+    {
+      "claim": "Obtuvo la patente n.º 190.698 con el título ‘Procedimiento mecánico, eléctrico y a presión de aire para lectura de libros’; ideó el libro en 1949; el aparato ‘es considerado como precursor del libro electrónico de la actualidad’.",
+      "source": "Oficina Española de Patentes y Marcas, noticia sobre la exposición del prototipo en Espacio Fundación Telefónica (2 de marzo de 2015)",
+      "url": "https://www.oepm.es/es/detalle-noticia/Exposicion-del-prototipo-del-libro-mecanico-de-Angela-Ruiz-Robles-en-Espacio-Fundacion-Telefonica/"
+    },
+    {
+      "claim": "Ficha del objeto: inventario CE2014/014/0001; patente de Ángela Ruiz Robles, prototipo del Parque de Artillería del Ferrol; materia: bronce, cinc, madera, papel vegetal, pintura, plástico; datación 1962 [ca]; lugar de producción: Ferrol.",
+      "source": "Museo Nacional de Ciencia y Tecnología (MUNCYT), catálogo de la colección, ‘Enciclopedia mecánica’",
+      "url": "https://muncyt.es/coleccion/catalogo/enciclopedia-mecanica"
+    },
+    {
+      "claim": "Solicitó en 1949 la patente que en 1950 le concederían con el número 190.698; textos e ilustraciones en carretes, lámina transparente e irrompible, cristal de aumento y luz para leer en la oscuridad; preveía incorporar el sonido con las explicaciones de cada tema; se hizo cargo de la escuela de Mandiá; escribió 16 libros de texto; en 1947 recibió la distinción de Alfonso X el Sabio; el prototipo se fabricó en los talleres de Artillería de Ferrol; no consiguió que su invento sirviera como soporte de estudio en las aulas.",
+      "source": "Diario de León, ‘La madre del e-book era de Villamanín’ (21 de mayo de 2013)",
+      "url": "https://www.diariodeleon.es/monograficos/innova/130521/1385526/madre-e-book-villamanin.html"
+    },
+    {
+      "claim": "Nació en Villamanín (León) el 28 de marzo de 1895 y murió en Ferrol el 27 de octubre de 1975; el dispositivo, de cinc, madera y bronce, nunca llegó a comercializarse; el prototipo se exhibe en el MUNCYT de A Coruña.",
+      "source": "Telefónica, blog de la sala de comunicación, ‘Ángela Ruiz Robles’",
+      "url": "https://www.telefonica.com/es/sala-comunicacion/blog/angela-ruiz-robles/"
+    },
+    {
+      "claim": "Villamanín, 28 de marzo de 1895 – Ferrol, 27 de octubre de 1975; en 1918 obtuvo plaza de maestra en Santa Eugenia de Mandiá, aldea próxima a Ferrol; un total de dieciséis libros; en 1962 se realizó un prototipo en el Parque de Artillería de Ferrol; Cruz de Alfonso X el Sabio (1947).",
+      "source": "Wikipedia en español, ‘Ángela Ruiz Robles’ (fuente secundaria, usada solo como contraste)",
+      "url": "https://es.wikipedia.org/wiki/%C3%81ngela_Ruiz_Robles"
+    }
+  ],
+  "do_not_use": [
+    "El número de patente 190.968: lo da el blog de Telefónica y es una errata. La Oficina Española de Patentes y Marcas y el Diario de León dan 190.698.",
+    "Que fue ‘el primer libro electrónico de la historia’ o ‘el primer eBook’: el aparato era mecánico. La OEPM dice ‘precursor’, y esa es la palabra que se usa.",
+    "Que en 1970 rechazó una oferta de Washington para explotar la patente en Estados Unidos porque quería que se desarrollara en Ferrol: solo aparece en Wikipedia, que remite a una entrevista con su hija en La Voz de Galicia (2010) que no se pudo leer. No se afirma.",
+    "Que no se fabricó ‘por falta de financiación’: lo dice Wikipedia en inglés sin fuente legible; las fuentes leídas solo dicen que nunca se comercializó. No se da la causa.",
+    "La segunda patente de 1962 con número 276.346: Wikipedia en inglés da 276.346 en un pasaje y 276.364 en otro, y ninguna fuente institucional leída la recoge. No se cita número ni se habla de segunda patente.",
+    "Que el prototipo es de cobre (Diario de León): la ficha del MUNCYT dice bronce, cinc y madera.",
+    "El nombre exacto de la aldea, Santa Eugenia o Santa Uxía de Mandiá: las fuentes alternan la forma castellana y la gallega; en el cuerpo se dice solo Mandiá.",
+    "Que el aparato reproducía sonido: era una función prevista, no confirmada en el prototipo. En el cuerpo: ‘preveía incluso añadir sonido’.",
+    "La biografía del Diccionario Biográfico de la Real Academia de la Historia y el museo virtual histórico de la OEPM: no cargaron en esta ejecución; no cuentan como fuentes verificadas."
+  ]
+}

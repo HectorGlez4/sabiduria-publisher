@@ -1,0 +1,86 @@
+{
+  "id": "2027-01-10-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Du Bois y la línea de color de 1903",
+    "hook": "Du Bois abrió y cerró un mismo capítulo con la misma frase. La primera vez la terminó de un modo que casi nunca se cita.",
+    "body": [
+      "«Las almas del pueblo negro» salió en Chicago en 1903, en la editorial A. C. McClurg. La frase aparece ya en el prólogo, que Du Bois firma en Atlanta el 1 de febrero de ese año. Vuelve como primera línea del capítulo II, «Del alba de la libertad». Y es también la última línea del mismo capítulo.",
+      "No era nueva. Del 23 al 25 de julio de 1900 se reunió en Londres la primera Conferencia Panafricana, organizada por el abogado trinitense Henry Sylvester Williams. Du Bois presidió el comité que redactó el mensaje «A las naciones del mundo», y allí usó ya la fórmula.",
+      "Suele leerse como una frase sobre Estados Unidos. En el capítulo II la oración no termina en el punto: sigue con una raya y define la línea de color como la relación entre las razas más oscuras y las más claras «en Asia y África, en América y las islas del mar». Hablaba del mundo entero.",
+      "Du Bois nació en Great Barrington, Massachusetts, en 1868, y en 1895 fue el primer afroamericano doctorado en Harvard. Murió en Acra, Ghana, el 27 de agosto de 1963."
+    ],
+    "question": "¿Qué cambia en una frase célebre cuando se lee hasta donde termina?",
+    "quote": {
+      "text": "El problema del siglo XX es el problema de la línea de color.",
+      "author": "W. E. B. Du Bois",
+      "work": "Las almas del pueblo negro (1903), cap. II",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "W. E. B. Du Bois",
+    "subtitle": "Las almas del pueblo negro, 1903"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": ["#DuBois", "#LasAlmasDelPuebloNegro", "#Panafricanismo"],
+    "extended": ["#Citas", "#HistoriaAfroamericana", "#SigloXX", "#Sociologia", "#DerechosCiviles"]
+  },
+  "sources": [
+    {
+      "claim": "The Forethought: la oración termina ‘for the problem of the Twentieth Century is the problem of the color-line’; va firmado ‘W. E. B. Du B.’, ‘Atlanta, Ga., Feb. 1, 1903’.",
+      "source": "W. E. B. Du Bois, The Souls of Black Folk (2.ª ed., A. C. McClurg & Co.), ‘The Forethought’, en Wikisource",
+      "url": "https://en.wikisource.org/wiki/The_Souls_of_Black_Folk/The_Forethought"
+    },
+    {
+      "claim": "Capítulo II, ‘Of the Dawn of Freedom’: primera oración, ‘The problem of the twentieth century is the problem of the color-line,—the relation of the darker to the lighter races of men in Asia and Africa, in America and the islands of the sea’; última oración del capítulo, ‘The problem of the Twentieth Century is the problem of the color-line’. La traducción al español de la cita es propia.",
+      "source": "W. E. B. Du Bois, The Souls of Black Folk (2.ª ed., A. C. McClurg & Co.), cap. II, en Wikisource",
+      "url": "https://en.wikisource.org/wiki/The_Souls_of_Black_Folk/Chapter_2"
+    },
+    {
+      "claim": "En el mensaje ‘To the Nations of the World’ (1900), Du Bois ‘uttered the famous phrase, The problem of the twentieth century is the problem of the color line’; el mensaje fue cofirmado por los organizadores de la conferencia.",
+      "source": "Cambridge University Press, W. E. B. Du Bois: International Thought, cap. ‘To the Nations of the World (1900)’ (resumen del capítulo)",
+      "url": "https://www.cambridge.org/core/books/w-e-b-du-bois-international-thought/to-the-nations-of-the-world-1900/F39373DE0C7CF0C12002FED832742882"
+    },
+    {
+      "claim": "La conferencia se celebró del 23 al 25 de julio de 1900 en el Westminster Town Hall de Londres; ‘Organized primarily by the Trinidadian barrister Henry Sylvester Williams’; el mensaje lo firmaron Walters, Brown, Williams y Du Bois (‘Chairman of the Committee on the Address’).",
+      "source": "Wikipedia en inglés, ‘First Pan-African Conference’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/First_Pan-African_Conference"
+    },
+    {
+      "claim": "Du Bois redactó el ‘Address to the Nations of the World’ de la conferencia panafricana de Londres de 1900.",
+      "source": "Library of Congress, blog, ‘African-American History Month: First Pan-African Congress’ (febrero de 2019)",
+      "url": "https://blogs.loc.gov/loc/2019/02/african-american-history-month-first-pan-african-congress/"
+    },
+    {
+      "claim": "The Souls of Black Folk se publicó en 1903 en Chicago, por A. C. McClurg & Co.",
+      "source": "Wikipedia en inglés, ‘The Souls of Black Folk’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/The_Souls_of_Black_Folk"
+    },
+    {
+      "claim": "‘The first Black American to earn a PhD from Harvard University’; ‘Du Bois died in Ghana on Aug. 27, 1963’.",
+      "source": "NAACP, ‘W.E.B. Du Bois’ (History Explained)",
+      "url": "https://naacp.org/find-resources/history-explained/civil-rights-leaders/web-du-bois"
+    },
+    {
+      "claim": "Nació el 23 de febrero de 1868 en Great Barrington, Massachusetts; en 1895 fue el primer afroamericano en obtener un doctorado en Harvard; murió en Acra el 27 de agosto de 1963.",
+      "source": "Wikipedia en inglés, ‘W. E. B. Du Bois’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/W._E._B._Du_Bois"
+    }
+  ],
+  "do_not_use": [
+    "El texto literal de la frase en el mensaje de Londres de 1900: no se pudo leer el documento (BlackPast devolvió 403, Wikisource y marxists.org 404). Solo se afirma, con Cambridge University Press, que allí usó ya la fórmula; no se cita su redacción de 1900 ni se dice que abriera el texto.",
+    "El número de delegados de la conferencia de 1900: la Library of Congress dice 30 y Wikipedia 37 delegados más unos 10 observadores. No se da cifra.",
+    "Que el capítulo II se publicó antes como ‘The Freedmen's Bureau’ en The Atlantic Monthly (marzo de 1901) y ya llevaba la frase: es lo que suele decirse, pero The Atlantic no se pudo leer. No se usa.",
+    "El día de publicación del libro, 18 de abril de 1903: solo lo da Wikipedia. En el cuerpo se dice 1903.",
+    "Que Du Bois fundó la NAACP en 1909: fue uno de los fundadores, y Wikipedia alterna 1909 y 1910. No se menciona en el cuerpo.",
+    "Que la frase aparece ‘tres veces en el libro’ como recuento total: se comprobaron el prólogo y el capítulo II, no el libro entero. Son tres apariciones verificadas; podría haber más.",
+    "Traducir ‘color-line’ como ‘barrera racial’ o ‘problema racial’: Du Bois usa un término propio, con guion; se respeta ‘línea de color’.",
+    "El texto de Project Gutenberg (ebook 408): devolvió 503 en esta ejecución; el cotejo se hizo contra la transcripción de Wikisource de la segunda edición."
+  ]
+}
