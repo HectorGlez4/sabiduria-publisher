@@ -337,7 +337,7 @@ def fotogramas(proyecto: Path, segundos: list[float]) -> Path:
     if not segundos:
         raise ChequeoFallido("hyperframes snapshot", "no se pidió ningún instante")
     at = ",".join(f"{s:g}" for s in segundos)
-    r = _correr([_requiere("npx"), "--yes", VERSION, "snapshot", "--at", at], "hyperframes snapshot",
+    r = _correr([_requiere("npx"), "--yes", VERSION, "snapshot", "--at", at, "--no-end"], "hyperframes snapshot",
                 LIMITE_FOTOGRAMAS, cwd=str(proyecto), env=_entorno())
     salida = _ANSI.sub("", r.stdout)
     if r.returncode != 0:

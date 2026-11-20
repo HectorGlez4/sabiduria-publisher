@@ -235,7 +235,8 @@ def _construir_pasos(pieza_id, guion, tabla, motor, salida, h, informe) -> None:
     problemas = _ida_y_vuelta(guion, tabla, mp4, h)
     if problemas:
         raise _Parada("ida_y_vuelta", problemas)
-    medios = [round((t["escena_desde"] + t["escena_hasta"]) / 2, 2) for t in tiempos]
+    # cuando la frase acaba la escena ya mostró todo; sin pasar de donde empieza su fundido de salida
+    medios = [round(min(t["fin"] + 0.2, t["escena_hasta"] - 0.4), 2) for t in tiempos]
     hoja = salida / "hoja.jpg"
     shutil.copyfile(h.fotogramas(proyecto, medios), hoja)
     informe["hoja"] = str(hoja)

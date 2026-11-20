@@ -8,7 +8,9 @@ solo para pruebas y como último recurso. Los motores externos se registran en `
 """
 from __future__ import annotations
 
+import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -156,8 +158,23 @@ def duracion_total(tiempos: list[dict]) -> float:
     return _total(tiempos[-1]["fin"])
 
 
+def _medir_mezcla(ffmpeg: str, entradas: list[str], base: str) -> dict:
+    """Primera pasada de `loudnorm`: las medidas de la mezcla ya en estéreo, tal como se oirá en el mp4."""
+    r = _correr([ffmpeg, "-hide_banner", "-nostats", *entradas, "-filter_complex",
+                 f"{base},loudnorm=I={LUFS}:TP={PICO_REAL}:print_format=json", "-f", "null", "-"],
+                "ffmpeg (medida de la mezcla)", LIMITE_HERRAMIENTA, "(mezcla)")
+    try:
+        datos = json.loads(re.findall(r"\{[^{}]*\}", r.stderr)[-1])
+        return {k: float(datos[k]) for k in ("input_i", "input_tp", "input_lra", "input_thresh", "target_offset")}
+    except (IndexError, KeyError, ValueError):
+        raise VozFallida("(mezcla)", f"loudnorm no devolvió medidas: {r.stderr.strip()[-300:]}") from None
+
+
 def mezclar(wavs: list[Path], inicios: list[float], total: float, salida: Path) -> None:
-    """Junta las frases en una sola pista de `total` s, normalizada a -16 LUFS / -1,5 dB de pico real."""
+    """Junta las frases en una pista estéreo de `total` s, normalizada a -16 LUFS / -1,5 dB de pico real.
+
+    La pista sale en estéreo porque el mp4 lo es: una pista mono duplicada en dos canales mide 3 LU más
+    fuerte. Se normaliza en dos pasadas (medir y aplicar de forma lineal) para clavar el objetivo."""
     if not wavs or len(wavs) != len(inicios):
         raise ValueError("wavs e inicios deben ser listas no vacías de la misma longitud")
     ffmpeg = _requiere("ffmpeg")
@@ -168,8 +185,12 @@ def mezclar(wavs: list[Path], inicios: list[float], total: float, salida: Path) 
         ms = round(inicio * 1000)
         retrasos.append(f"[{i}:a]adelay={ms}:all=1[a{i}]")
     etiquetas = "".join(f"[a{i}]" for i in range(len(wavs)))
-    filtro = (";".join(retrasos) + f";{etiquetas}amix=inputs={len(wavs)}:normalize=0,"
-              f"apad=whole_dur={total},atrim=0:{total},loudnorm=I={LUFS}:TP={PICO_REAL}")
+    base = (";".join(retrasos) + f";{etiquetas}amix=inputs={len(wavs)}:normalize=0,"
+            f"apad=whole_dur={total},atrim=0:{total},pan=stereo|c0=c0|c1=c0")
+    m = _medir_mezcla(ffmpeg, entradas, base)
+    filtro = (f"{base},loudnorm=I={LUFS}:TP={PICO_REAL}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
+              f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:"
+              f"offset={m['target_offset']}:linear=true")
     salida = Path(salida)
     salida.parent.mkdir(parents=True, exist_ok=True)
     r = _correr([ffmpeg, "-y", "-loglevel", "error", *entradas, "-filter_complex", filtro,

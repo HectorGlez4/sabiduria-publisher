@@ -204,8 +204,8 @@ def _css(d: dict) -> str:
       #fondo {{ position: absolute; inset: 0; background: linear-gradient(var(--fondo), var(--fondo2)); }}
       #noche {{ position: absolute; inset: 0; background: var(--noche); opacity: 0; }}
       .clip {{ position: absolute; inset: 0; }}
-      /* franja segura del Reel: texto entre y 240 y 1500 */
-      .caja {{ position: absolute; left: 90px; right: 170px; top: 250px; height: 1080px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }}
+      /* zona segura común de TikTok, Reels y Shorts (las reglas de `hyperframes check`): x 120–780, y 288–1248 */
+      .caja {{ position: absolute; left: 120px; right: 300px; top: 288px; height: 960px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }}
       .et {{ font-family: "Poppins"; font-weight: 500; font-size: 34px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--etiqueta); }}
       .grande {{ font-size: 92px; font-weight: 600; line-height: 1.1; }}
       .ano {{ font-family: "Poppins"; font-weight: 500; font-size: 250px; line-height: 1; color: var(--etiqueta); letter-spacing: -0.03em; }}
@@ -218,8 +218,8 @@ def _css(d: dict) -> str:
       .comilla {{ font-size: 260px; line-height: 0.6; color: var(--filete); height: 150px; }}
       .noche-tinta {{ color: var(--noche-tinta); }}
       .pregunta {{ font-size: 96px; font-weight: 600; line-height: 1.15; }}
-      #firma {{ position: absolute; left: 90px; right: 170px; top: 1290px; text-align: center; font-family: "Poppins"; font-weight: 500; font-size: 32px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--etiqueta); }}
-      #aviso {{ position: absolute; left: 90px; right: 170px; top: 1345px; text-align: center; font-family: "Poppins"; font-weight: 300; font-size: 28px; color: var(--etiqueta); }}
+      #firma {{ position: absolute; left: 120px; right: 300px; top: 1120px; text-align: center; font-family: "Poppins"; font-weight: 500; font-size: 32px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--etiqueta); }}
+      #aviso {{ position: absolute; left: 120px; right: 300px; top: 1175px; text-align: center; font-family: "Poppins"; font-weight: 300; font-size: 28px; color: var(--etiqueta); }}
     """
 
 

@@ -283,6 +283,10 @@ def seccion_voz() -> None:
             mezcla = d / "mezcla.wav"
             nv.mezclar([d / "hola.wav", d / "hola.wav"], [0.6, 3.0], 6.0, mezcla)
             check(mezcla.exists() and abs(nv._duracion(mezcla) - 6.0) < 0.1, "mezclar respeta el total")
+            from labkit import narrado_chequeos as nc_
+            medido = nc_.medidas(mezcla)
+            check(-16.5 <= medido["lufs"] <= -15.5 and medido["pico"] <= -1.0,
+                  f"mezclar clava -16 LUFS en estéreo ({medido['lufs']:.1f}, pico {medido['pico']:.1f})")
         else:
             print("  (omitido: falta say o ffmpeg)")
 
