@@ -317,6 +317,23 @@ def seccion_proyecto() -> None:
     except np_.NoCabe as e:
         check(e.args[:2] == ("cita", 201), "201 caracteres lanza NoCabe")
 
+    guion_largo = copy.deepcopy(guion_ok)
+    guion_largo["escenas"][1]["pantalla"]["texto"] = "x" * 201
+    try:
+        np_.html(guion_largo, tiempos_ok, total, None)
+        check(False, "html() con cita de 201 caracteres lanza NoCabe")
+    except np_.NoCabe as e:
+        check("escena 2" in str(e) and "201" in str(e) and "200" in str(e),
+              "NoCabe nombra la escena, la longitud y el máximo")
+    guion_140 = copy.deepcopy(guion_ok)
+    guion_140["escenas"][1]["pantalla"]["texto"] = " ".join(["palabra"] * 17)[:140]
+    px = np_.tamano_cita(guion_140["escenas"][1]["pantalla"]["texto"])
+    h140 = np_.html(guion_140, tiempos_ok, total, None)
+    check(f'style="font-size:{px}px"' in h140 and 56 <= px < 84, f"cita de 140 caracteres a {px} px en el HTML")
+    script = h.split("<script>", 1)[1]
+    check("scale" not in script and "rotation" not in script.lower()
+          and "Math.random" not in script, "el guion de animación no escala ni rota")
+
     g = copy.deepcopy(guion_ok)
     g["escenas"][0]["pantalla"]["nombre"] = "A<b> & C\nD"
     h2 = np_.html(g, tiempos_ok, total, None)

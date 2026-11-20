@@ -33,20 +33,24 @@ SALIDA = 0.3             # duración del fundido de salida de cada escena
 class NoCabe(Exception):
     """Un texto de la pantalla es demasiado largo para su caja."""
 
-    def __init__(self, campo: str, n_caracteres: int):
+    def __init__(self, campo: str, n_caracteres: int, maximo: int = CITA_MAX, escena: int | None = None):
         self.campo = campo
         self.n_caracteres = n_caracteres
+        self.maximo = maximo
+        self.escena = escena
         super().__init__(campo, n_caracteres)
 
     def __str__(self) -> str:
-        return f"«{self.campo}» no cabe en pantalla: {self.n_caracteres} caracteres (máximo {CITA_MAX})"
+        donde = f" en la escena {self.escena}" if self.escena else ""
+        return (f"«{self.campo}»{donde} no cabe en pantalla: {self.n_caracteres} caracteres "
+                f"(máximo {self.maximo})")
 
 
 def tamano_cita(texto: str) -> int:
     """84 px hasta 70 caracteres; baja linealmente hasta 56 px a los 200. Más largo: NoCabe."""
     n = len(texto)
     if n > CITA_MAX:
-        raise NoCabe("cita", n)
+        raise NoCabe("cita", n, CITA_MAX)
     if n <= CITA_MAX_GRANDE:
         return CITA_PX_GRANDE
     paso = (CITA_PX_GRANDE - CITA_PX_MINIMO) * (n - CITA_MAX_GRANDE) / (CITA_MAX - CITA_MAX_GRANDE)
@@ -77,8 +81,12 @@ def _marcado_tachado(i: int, p: dict, t: dict, d: dict) -> str:
 
 def _marcado_cita(i: int, p: dict, t: dict, d: dict) -> str:
     palabras = " ".join(f'<span class="p">{_txt(w)}</span>' for w in p["texto"].split())
+    try:
+        px = tamano_cita(p["texto"])
+    except NoCabe as e:
+        raise NoCabe(e.campo, e.n_caracteres, e.maximo, escena=i + 1) from None
     return (f'<div class="comilla" id="s{i}q">“</div>\n'
-            f'        <div class="cita" id="s{i}c" style="font-size:{tamano_cita(p["texto"])}px">{palabras}</div>')
+            f'        <div class="cita" id="s{i}c" style="font-size:{px}px">{palabras}</div>')
 
 
 def _marcado_nombre_ano(i: int, p: dict, t: dict, d: dict) -> str:
@@ -105,7 +113,7 @@ def _marcado_pregunta(i: int, p: dict, t: dict, d: dict) -> str:
 def _gsap_tachado(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
     return [f'sube("#s{i}b", {_n(t0 + 0.55 * dur)});',
-            f'tl.fromTo("#s{i}r", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.45, ease: "power2.inOut" }}, '
+            f'tl.fromTo("#s{i}r", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.45, ease: "power2.inOut" }}, '
             f'{_n(t0 + 0.8 * dur)});']
 
 
@@ -120,8 +128,8 @@ def _gsap_cita(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
               f'  tl.fromTo(p, {{ opacity: 0, y: 24 }}, {{ opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }}, '
               f'palabras{i}[k]));']
     if i > 0:
-        lineas.insert(0, f'tl.fromTo("#s{i}q", {{ opacity: 0, scale: 0.6 }}, '
-                         f'{{ opacity: 1, scale: 1, duration: 0.4, ease: "back.out(2)" }}, '
+        lineas.insert(0, f'tl.fromTo("#s{i}q", {{ opacity: 0, y: 24 }}, '
+                         f'{{ opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }}, '
                          f'{_n(max(t["escena_desde"], palabras[0] - 0.15))});')
     return lineas
 
@@ -129,9 +137,8 @@ def _gsap_cita(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
 def _gsap_nombre_ano(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
     lineas = [f'sube("#s{i}b", {_n(t0 + 0.12 * dur)});',
-              f'tl.fromTo("#s{i}f", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.4 }}, {_n(t0 + 0.3 * dur)});',
-              f'tl.fromTo("#s{i}y", {{ opacity: 0, scale: 0.8 }}, '
-              f'{{ opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.6)" }}, {_n(t0 + 0.38 * dur)});']
+              f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(t0 + 0.3 * dur)});',
+              f'sube("#s{i}y", {_n(t0 + 0.38 * dur)}, 0.6);']
     if i > 0:
         lineas.insert(0, f'sube("#s{i}a", {_n(t0)});')
     if p.get("nota"):
@@ -145,7 +152,7 @@ def _gsap_contraste(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     return [f'sube("#s{i}a", {_n(t0)});',
             f'tl.to("#noche", {{ opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {_n(giro)});',
             f'tl.to("#s{i}a", {{ color: "{d["giro"]}", duration: 0.7 }}, {_n(giro)});',
-            f'tl.fromTo("#s{i}f", {{ scaleX: 0 }}, {{ scaleX: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
+            f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
             f'sube("#s{i}b", {_n(giro + 0.3)}, 0.6);',
             f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
 
