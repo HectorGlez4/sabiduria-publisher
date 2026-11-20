@@ -519,12 +519,73 @@ def seccion_chequeos() -> None:
         print("  (omitido: falta ffmpeg o ffprobe)")
 
 
+def seccion_candidatas() -> None:
+    print("candidatas, runs y registro")
+    import datetime as dt
+    import labkit.narrado as nr
+
+    def pieza(pid, cita, verificada=True, cuerpo=("Texto.",), reemision=None):
+        d = {"id": pid, "core": {"subject": "s", "hook": "h", "body": list(cuerpo),
+                                 "quote": {"text": cita, "attribution_verified": verificada}}}
+        if reemision:
+            d["reemision_de"] = reemision
+        return d
+
+    a = pieza("2026-01-01-a", "Quien tiene un porqué, vive.")
+    a2 = pieza("2026-03-01-a-bis", "quien tiene un PORQUÉ vive", reemision="2026-01-01-a")
+    b = pieza("2026-02-01-b", "Otra frase distinta")
+    c = pieza("2026-02-02-c", "Frase sin verificar", verificada=False)
+    d = pieza("2026-02-03-d", "Fuera de lista")
+    e = pieza("2026-02-04-e", "Ya hecha antes")
+    todas = [a2, a, b, c, d, e]
+    cand = ["2026-01-01-a", "2026-03-01-a-bis", "2026-02-01-b", "2026-02-02-c", "2026-02-04-e"]
+    ids = [p["id"] for p in nr.elegibles(todas, cand, [])]
+    check("2026-01-01-a" in ids and "2026-03-01-a-bis" not in ids, "reedición cuenta una vez y gana el id anterior")
+    check("2026-02-02-c" not in ids, "sin atribución verificada se descarta")
+    check("2026-02-03-d" not in ids, "fuera de candidatas se descarta")
+    reg = [{"pieza": "otra", "cita": nr.clave_cita("Ya hecha antes"), "run": "x", "construido_en": "2026-01-01T00:00:00Z"}]
+    check("2026-02-04-e" not in [p["id"] for p in nr.elegibles(todas, cand, reg)], "cita ya registrada se descarta")
+    check(ids == sorted(ids), "elegibles sale ordenado por id")
+    check(nr.clave_cita("¡Él, así!") == "elasi", "clave: minúsculas, sin tildes ni signos")
+
+    with tempfile.TemporaryDirectory() as t:
+        raiz = pathlib.Path(t)
+        (raiz / "content" / "published").mkdir(parents=True)
+        (raiz / "experiments" / "media-lab" / "narrados").mkdir(parents=True)
+        for p in (a, b):
+            (raiz / "content" / "published" / f"{p['id']}.json").write_text(json.dumps(p))
+        (raiz / "experiments" / "media-lab" / "narrados" / "candidatas.json").write_text(
+            json.dumps(["2026-01-01-a", "2026-02-01-b"]))
+        ahora = dt.datetime(2026, 11, 20, 9, 5, tzinfo=dt.timezone.utc)
+        r = nr.elegir(ahora=ahora, raiz=raiz)
+        check(r["pieza"] == "2026-01-01-a" and r["run"] == "NARRADO-20261120-0905", "elegir da pieza y run")
+        check(pathlib.Path(r["carpeta"]).is_dir() and r["es_falsa_atribucion"] is True, "elegir crea la carpeta")
+        check(not (raiz / "experiments/media-lab/narrados/registro.jsonl").exists(), "elegir no escribe el registro")
+        check(nr.es_falsa_atribucion("2026-02-01-b", raiz) and not nr.es_falsa_atribucion("zzz", raiz),
+              "es_falsa_atribucion mira candidatas")
+        nr.registrar({"pieza": "2026-01-01-a", "cita": nr.clave_cita(a["core"]["quote"]["text"]),
+                      "run": r["run"], "construido_en": "2026-11-20T09:05:00Z"}, raiz)
+        nr.registrar({"pieza": "2026-02-01-b", "cita": "x", "run": "y", "construido_en": "z"}, raiz)
+        lineas = (raiz / "experiments/media-lab/narrados/registro.jsonl").read_text().splitlines()
+        check(len(lineas) == 2 and json.loads(lineas[0])["pieza"] == "2026-01-01-a", "registrar añade sin reescribir")
+        r2 = nr.elegir(ahora=ahora, raiz=raiz)
+        check(r2["pieza"] == "2026-02-01-b", "tras registrar, elegir pasa a la siguiente cita")
+        nr.registrar({"pieza": "2026-02-01-b", "cita": nr.clave_cita(b["core"]["quote"]["text"]),
+                      "run": "y", "construido_en": "z"}, raiz)
+        try:
+            nr.elegir(ahora=ahora, raiz=raiz)
+            check(False, "sin candidatas lanza SinCandidatas")
+        except nr.SinCandidatas:
+            check(True, "sin candidatas lanza SinCandidatas")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
     seccion_voz,
     seccion_proyecto,
     seccion_chequeos,
+    seccion_candidatas,
 ]
 
 
