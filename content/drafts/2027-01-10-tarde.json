@@ -1,0 +1,77 @@
+{
+  "id": "2027-01-10-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Simónides y el epitafio de las Termópilas",
+    "hook": "El epitafio más célebre de Grecia tiene dos versos. Heródoto, que lo copió, no dice quién lo escribió.",
+    "body": [
+      "En el año 480 a.C., un ejército griego murió defendiendo el paso de las Termópilas. Heródoto, en el libro VII de sus «Historias», capítulo 228, copia tres inscripciones que se grabaron en el lugar. La primera, para todos los caídos, cuenta cuatro mil hombres del Peloponeso contra trescientas miríadas. La segunda es la de los espartanos. La tercera, la del adivino Megistias.",
+      "Heródoto dice quién las mandó grabar: los anfictiones. Y nombra a un solo poeta, Simónides, hijo de Leoprepes, que hizo el epitafio de Megistias por amistad. Del dístico de los espartanos no da autor.",
+      "La tradición se lo dio a Simónides. Cicerón lo tradujo al latín en las «Tusculanas» (I, 101) y lo presentó como suyo. Al traducir cambió una palabra: sus espartanos ya no obedecen «palabras», sino «las santas leyes de la patria».",
+      "En el griego de Heródoto el verso es más seco. No habla de gloria, ni de victoria, ni de patria. Pide un recado a quien pase por allí: que diga en casa que cumplieron lo que se les dijo."
+    ],
+    "question": "¿Qué pedirías que un desconocido contara de ti?",
+    "quote": {
+      "text": "Extranjero, anuncia a los lacedemonios que aquí yacemos, obedientes a sus palabras.",
+      "author": "Atribuido a Simónides de Ceos",
+      "work": "Epitafio de los espartanos, en Heródoto, Historias VII, 228",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Epitafio de las Termópilas",
+    "subtitle": "Heródoto, Historias VII, 228"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Termopilas",
+      "#Simonides",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Citas",
+      "#Herodoto",
+      "#Esparta",
+      "#HistoriaAntigua",
+      "#Poesia",
+      "#Epitafio"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Historias VII, 228 (trad. A. D. Godley, Loeb): el capítulo recoge tres inscripciones: una común para todos los caídos, que empieza ‘Four thousand warriors’ y cuenta cuatro mil hombres del Peloponeso contra trescientas miríadas; una propia de los espartanos, dirigida a quien pasa, que dice que yacen allí obedientes a las palabras de los espartanos; y una para el adivino Megistias. Heródoto dice que los anfictiones erigieron las inscripciones y los pilares, salvo el epitafio de Megistias, que hizo Simónides, hijo de Leoprepes, por amistad. No nombra autor para el dístico de los espartanos. La página abarca los capítulos 175-239 del libro VII.",
+      "source": "Heródoto, Histories, libro VII (trad. A. D. Godley, Loeb; LacusCurtius, Universidad de Chicago)",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/7D*.html"
+    },
+    {
+      "claim": "Texto griego del dístico: ‘Ὦ ξεῖν', ἀγγέλλειν Λακεδαιμονίοις ὅτι τῇδε / κείμεθα, τοῖς κείνων ῥήμασι πειθόμενοι.’, citado como epitafio de los lacedemonios caídos en las Termópilas, con la traducción inglesa de F. L. Lucas (‘Tell them in Lacedaemon, passer-by / That here, obedient to their word, we lie’). La traducción al español de la cita es propia, hecha sobre este texto griego.",
+      "source": "Wikipedia en inglés, ‘Simonides of Ceos’ (fuente secundaria, usada para el texto griego)",
+      "url": "https://en.wikipedia.org/wiki/Simonides_of_Ceos"
+    },
+    {
+      "claim": "Tusculanas I, 101: Cicerón introduce el epigrama con ‘in quos Simonides:’ y lo da en latín: ‘Dic, hospes, Spartae, nos te hic vidisse iacentis, / Dum sanctis patriae legibus obsequimur.’",
+      "source": "Cicerón, Tusculanae Disputationes I, 101 (texto latino, Perseus Digital Library, Universidad de Tufts)",
+      "url": "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A2007.01.0044%3Abook%3D1%3Asection%3D101"
+    },
+    {
+      "claim": "La batalla de las Termópilas se fecha en 480 a.C.; la página da una versión moderna del epitafio: ‘Stranger, go tell the Spartans that here we are buried, obedient to their orders.’",
+      "source": "Livius.org (Jona Lendering), ‘Thermopylae (480 BCE)’",
+      "url": "https://www.livius.org/articles/battle/thermopylae-480-bce/"
+    }
+  ],
+  "do_not_use": [
+    "Decir sin matiz que el dístico ‘es de Simónides’ según Heródoto: Heródoto solo le atribuye el epitafio de Megistias. La atribución del dístico espartano es tradición posterior (Cicerón lo presenta como suyo; el editor de Loeb, en nota, sostiene que compuso los tres). En el cuerpo: ‘la tradición se lo dio a Simónides’; en la ficha: ‘Atribuido a’.",
+    "La variante griega ‘πειθόμενοι νομίμοις’ (‘obedientes a sus leyes’) transmitida por Licurgo, Diodoro o Estrabón: solo apareció en un resumen automático de Wikipedia, no en texto leído; la página de Licurgo en Perseus devolvió error 500. En el cuerpo solo se usa el latín de Cicerón, que sí se leyó.",
+    "Que la piedra original se perdió y que el epitafio se volvió a grabar en una lápida nueva en 1955, en la colina de Kolonós: lo de 1955 salió solo de un resumen automático de Wikipedia y la ubicación no apareció en ninguna página. No se usa.",
+    "La cifra de ‘300 espartanos’ y los detalles de la batalla (Leónidas, Efialtes, los tespios): no se cotejaron en esta ejecución. El cuerpo no los menciona.",
+    "‘Trescientas miríadas’ como dato histórico del ejército persa (tres millones): es la cifra de la inscripción, no un recuento fiable. En el cuerpo se da como lo que dice la inscripción.",
+    "El año de las «Tusculanas» (45 a.C.): no se verificó en una página leída. No se da.",
+    "La versión ‘Caminante, ve a Esparta y di…’ entrecomillada como texto de Heródoto: hay muchas traducciones libres en circulación; la de la ficha es traducción propia y literal del griego.",
+    "Perseus (hopper) para Heródoto, Wikisource en inglés, sacred-texts y Scaife: devolvieron solo navegación, 404, 403 o un bloqueo de bots. No cuentan como fuentes verificadas; el capítulo se leyó en LacusCurtius."
+  ]
+}

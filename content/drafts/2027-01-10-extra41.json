@@ -1,0 +1,100 @@
+{
+  "id": "2027-01-10-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Marx y la undécima nota sobre Feuerbach",
+    "hook": "La frase más citada de Marx no se publicó mientras vivió. Era una nota de cuaderno, y la versión que circula tiene una palabra que añadió Engels.",
+    "body": [
+      "En la primavera de 1845, en Bruselas, Marx apuntó en un cuaderno once notas bajo el rótulo «ad Feuerbach». La última ocupa una sola línea. No las publicó nunca.",
+      "Marx murió el 14 de marzo de 1883. Engels encontró las notas en un cuaderno viejo y las imprimió en 1888, como apéndice de su libro sobre Ludwig Feuerbach. En el prólogo, fechado en Londres el 21 de febrero de ese año, las describe como apuntes escritos a toda prisa, para desarrollarlos después, que de ningún modo estaban destinados a la imprenta.",
+      "Al editarlas retocó la última. Marx había escrito: «es kömmt drauf an, sie zu verändern». Engels puso punto y coma y añadió «aber», «pero». El texto de Marx tal como quedó en el cuaderno no se publicó hasta 1924.",
+      "La versión de Engels es la que se tradujo y la que se repite. También es la que está grabada en la tumba de Marx en el cementerio de Highgate, en Londres, inaugurada el 15 de marzo de 1956: allí la frase dice «however»."
+    ],
+    "question": "¿Cuánto de lo que citas de alguien pasó antes por la mano de su editor?",
+    "quote": {
+      "text": "Los filósofos no han hecho más que interpretar de diversos modos el mundo, pero de lo que se trata es de transformarlo.",
+      "author": "Karl Marx",
+      "work": "Tesis sobre Feuerbach, XI (1845; publicada por Engels en 1888)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Karl Marx",
+    "subtitle": "Tesis sobre Feuerbach, XI (1845)"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#KarlMarx",
+      "#TesisSobreFeuerbach",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Engels",
+      "#SigloXIX",
+      "#HistoriaDeLasIdeas",
+      "#Libros"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto original de Marx, tesis 11: ‘Die Philosophen haben die Welt nur verschieden interpretiert, es kömmt drauf an, sie zu verändern.’ El texto lleva el rótulo ‘1. ad Feuerbach’ y tiene once tesis.",
+      "source": "Marx, Thesen über Feuerbach, versión original de 1845 (Marxists Internet Archive, sección alemana)",
+      "url": "https://www.marxists.org/deutsch/archiv/marx-engels/1845/thesen/thesfeue-or.htm"
+    },
+    {
+      "claim": "Versión editada por Engels en 1888, tesis 11: ‘Die Philosophen haben die Welt nur verschieden interpretiert; es kommt aber darauf an, sie zu verändern.’",
+      "source": "Marx, Thesen über Feuerbach, versión de Engels de 1888 (Marxists Internet Archive, sección alemana)",
+      "url": "https://www.marxists.org/deutsch/archiv/marx-engels/1845/thesen/thesfeue.htm"
+    },
+    {
+      "claim": "Traducción española de la tesis XI: ‘Los filósofos no han hecho más que interpretar de diversos modo el mundo, pero de lo que se trata es de transformarlo.’ (la página dice ‘diversos modo’, errata evidente que la ficha corrige a ‘modos’); ‘publicado por primera vez por Friedrich Engels en 1888 como apéndice’.",
+      "source": "Marx, Tesis sobre Feuerbach (Marxists Internet Archive, sección en español)",
+      "url": "https://www.marxists.org/espanol/m-e/1840s/45-feuer.htm"
+    },
+    {
+      "claim": "‘Written: by Marx in Brussels in the spring of 1845, under the title «1) ad Feuerbach»’; ‘Marx’s original text was first published in 1924, in German and in Russian translation, by the Institute of Marxism-Leninism in Marx-Engels Archives, Book I, Moscow.’",
+      "source": "Marxists Internet Archive, ‘Theses on Feuerbach’ (índice y nota editorial)",
+      "url": "https://www.marxists.org/archive/marx/works/1845/theses/index.htm"
+    },
+    {
+      "claim": "‘Written: by Marx in the Spring of 1845, but slightly edited by Engels’; publicadas por primera vez ‘As an appendix to Ludwig Feuerbach and the End of Classical German Philosophy in 1888’.",
+      "source": "Marxists Internet Archive, ‘Theses on Feuerbach’ (texto inglés con nota editorial)",
+      "url": "https://www.marxists.org/archive/marx/works/1845/theses/theses.htm"
+    },
+    {
+      "claim": "Prólogo de Engels: ‘in an old notebook of Marx’s I have found the 11 Theses on Feuerbach, printed here as an appendix’; ‘notes hurriedly scribbled down for later elaboration, absolutely not intended for publication’; ‘the first document in which is deposited the brilliant germ of the new world outlook’. Fechado ‘February 21, 1888’, ‘London’.",
+      "source": "Friedrich Engels, prólogo de 1888 a Ludwig Feuerbach and the End of Classical German Philosophy (Marxists Internet Archive)",
+      "url": "https://www.marxists.org/archive/marx/works/1886/ludwig-feuerbach/foreword.htm"
+    },
+    {
+      "claim": "‘In his «Theses on Feuerbach» (1845) Marx provides a background to what would become his theory of history.’",
+      "source": "Stanford Encyclopedia of Philosophy, ‘Karl Marx’",
+      "url": "https://plato.stanford.edu/entries/marx/"
+    },
+    {
+      "claim": "‘Nor did Marx publish the Theses on Feuerbach during his lifetime.’",
+      "source": "Wikipedia en inglés, ‘Theses on Feuerbach’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Theses_on_Feuerbach"
+    },
+    {
+      "claim": "Marx murió el 14 de marzo de 1883. La tumba lleva dos textos: ‘Workers of all lands unite’ y ‘The philosophers have only interpreted the world in various ways • the point however is to change it’. El monumento, obra de Laurence Bradshaw, se inauguró el 15 de marzo de 1956.",
+      "source": "Wikipedia en inglés, ‘Tomb of Karl Marx’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Tomb_of_Karl_Marx"
+    }
+  ],
+  "do_not_use": [
+    "Presentar la frase como algo que Marx publicó o proclamó: es una nota de cuaderno de 1845 que él no dio a la imprenta; la publicó Engels en 1888, cinco años después de su muerte.",
+    "Citar la versión con ‘pero’ (‘aber’) como el texto literal de Marx: es la versión editada por Engels. El original dice ‘es kömmt drauf an’, sin conjunción adversativa. La ficha usa la traducción española corriente, que sigue a Engels, y el cuerpo lo explica.",
+    "Que la frase está grabada en el vestíbulo de la Universidad Humboldt de Berlín desde 1953: solo lo dice Wikipedia en inglés (‘entryway’, por orden del SED en 1953); la página de la universidad devolvió un bloqueo de bots. No se usa en el cuerpo.",
+    "La ficha de Historic England sobre la tumba (grado I, año de catalogación): devolvió 403. Los datos de la tumba vienen solo de Wikipedia; el cuerpo usa únicamente la inscripción y la fecha de inauguración.",
+    "La fuente exacta de la primera edición del original: la página inglesa de marxists.org dice Moscú, 1924; la alemana dice seguir una publicación de Moscú de 1932. En el cuerpo: ‘no se publicó hasta 1924’, según la nota editorial inglesa.",
+    "La página de Highgate Cemetery sobre Marx: la URL devolvió una noticia sin relación. No cuenta como fuente.",
+    "Usar el sujeto ‘tesis XI’: ‘tesis’ y ‘XI’ ya aparecen en otros sujetos del corpus y pueden dar falsos positivos en el control de repetición."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "2027-01-10-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Emma Lazarus y la placa del pedestal",
+    "hook": "Los versos que todos asocian a la Estatua de la Libertad no estaban en ella el día en que se inauguró. Llegaron diecisiete años después.",
+    "body": [
+      "Emma Lazarus nació en Nueva York el 22 de julio de 1849, en una familia de judíos sefardíes de origen portugués. En 1883 le pidieron un poema para una subasta de arte y literatura que reunía fondos para el pedestal de la estatua. Al principio se negó. Lo escribió el 2 de noviembre de ese año: un soneto, «The New Colossus».",
+      "Lazarus trabajó en Ward's Island como ayudante de los inmigrantes judíos retenidos por los funcionarios de Castle Garden. En el poema la estatua no es un gigante de bronce como el de la fama griega. Es una mujer, la «Madre de los Exiliados», y habla con labios callados: «Give me your tired, your poor, / Your huddled masses yearning to breathe free».",
+      "La estatua se inauguró el 28 de octubre de 1886. Lazarus murió en noviembre de 1887, a los 38 años. En 1901 una amiga, Georgina Schuyler, encontró un libro con el soneto y organizó una campaña cívica. En 1903 se colocó una placa de bronce con sus versos en la pared interior del pedestal.",
+      "Según el Servicio de Parques Nacionales de Estados Unidos, la antorcha quería decir «ilustración», como pretendían sus creadores. Para quienes llegaban en barco significó otra cosa: bienvenida. El sentido que hoy tiene la estatua se lo dio un poema escrito para una subasta."
+    ],
+    "question": "¿Quién decide lo que significa un monumento: quien lo levanta o quien lo mira?",
+    "quote": {
+      "text": "Dame a tus cansados, a tus pobres, a tus masas hacinadas que anhelan respirar en libertad.",
+      "author": "Emma Lazarus",
+      "work": "The New Colossus (soneto, 1883), versos 10-11",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Emma Lazarus",
+    "subtitle": "The New Colossus, 1883"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EmmaLazarus",
+      "#EstatuaDeLaLibertad",
+      "#Poesia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Migracion",
+      "#NuevaYork",
+      "#SigloXIX",
+      "#Soneto",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El soneto dice: ‘With silent lips. «Give me your tired, your poor, / Your huddled masses yearning to breathe free,’; su primer verso es ‘Not like the brazen giant of Greek fame’; presenta a la estatua como ‘Mother of Exiles’. Una réplica de la placa está en el Statue of Liberty Museum. La traducción al español de la cita es propia.",
+      "source": "National Park Service (EE. UU.), Statue of Liberty National Monument, ‘The New Colossus’",
+      "url": "https://www.nps.gov/stli/learn/historyculture/colossus.htm"
+    },
+    {
+      "claim": "Nació el 22 de julio de 1849 en Nueva York, ‘to a wealthy sugar refining family of Portuguese Sephardic Jewish descent’. Evarts y Harrison le pidieron en 1883 un soneto para la ‘Art Loan Fund Exhibition in Aid of the Bartholdi Pedestal Fund for the Statue of Liberty’, subasta de arte y literatura; lo escribió el 2 de noviembre de 1883. Trabajó en Ward's Island como ayudante de inmigrantes judíos retenidos por funcionarios de Castle Garden. Murió en Nueva York el 19 de noviembre de 1887. Georgina Schuyler halló en 1901 un libro con el soneto y ‘organized a civic effort’; en 1903 la placa se colocó ‘on the inner wall of the pedestal’.",
+      "source": "National Park Service (EE. UU.), Statue of Liberty National Monument, ‘Emma Lazarus’",
+      "url": "https://www.nps.gov/stli/learn/historyculture/emma-lazarus.htm"
+    },
+    {
+      "claim": "‘To these anxious newcomers, the Statue's uplifted torch did not suggest «enlightenment,» as her creators intended, but rather, «welcome.»’; el poema ‘received little attention at the time, but in 1903 was engraved on a bronze plaque’ fijada a la base de la estatua.",
+      "source": "National Park Service (EE. UU.), Statue of Liberty National Monument, ‘The Immigrant's Statue’",
+      "url": "https://www.nps.gov/stli/learn/historyculture/the-immigrants-statue.htm"
+    },
+    {
+      "claim": "Texto del poema, de catorce versos, con los dos versos citados.",
+      "source": "Academy of American Poets (poets.org), ‘The New Colossus’",
+      "url": "https://poets.org/poem/new-colossus"
+    },
+    {
+      "claim": "Le pidieron ‘an original poem to be auctioned off as a fundraiser for the building of the pedestal’; ‘Though she initially declined’; ascendencia sefardí con antepasados de Portugal; lo llama ‘her sonnet’.",
+      "source": "Academy of American Poets (poets.org), ‘Emma Lazarus’",
+      "url": "https://poets.org/poet/emma-lazarus"
+    },
+    {
+      "claim": "Lazarus ‘wrote her famous sonnet The New Colossus in 1883 for an art and literary auction’; la estatua se inauguró el 28 de octubre de 1886 con el presidente Grover Cleveland; en 1903 la placa fue ‘placed in the pedestal’.",
+      "source": "The Statue of Liberty–Ellis Island Foundation, ‘Overview + History’",
+      "url": "https://www.statueofliberty.org/statue-of-liberty/overview-history/"
+    },
+    {
+      "claim": "‘Initially, she refused’ y Constance Cary Harrison la convenció; el poema ‘played no role at the opening of the statue in 1886’; en la placa falta la coma tras ‘Keep’ en ‘Keep, ancient lands’.",
+      "source": "Wikipedia en inglés, ‘The New Colossus’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/The_New_Colossus"
+    }
+  ],
+  "do_not_use": [
+    "El día exacto de su muerte: el Servicio de Parques Nacionales dice 19 de noviembre de 1887; la Academy of American Poets dice 17 de noviembre. En el cuerpo: ‘noviembre de 1887’. La edad (38) sale de las fechas, ninguna página la da.",
+    "Que el poema se leyó en la inauguración de 1886, o que la estatua nació como símbolo de la inmigración: Wikipedia dice que el poema no tuvo ningún papel ese día y el NPS dice que los creadores pensaban en la ‘ilustración’. Tampoco afirmar, como hecho leído en fuente primaria, que ‘no se mencionó’: el cuerpo solo dice que la placa llegó diecisiete años después.",
+    "Que la placa original está en el museo: según el NPS la original sigue dentro del pedestal y en el Statue of Liberty Museum hay una réplica.",
+    "Que Lazarus nunca vio la estatua terminada, o que estaba en Europa el día de la inauguración: ninguna página leída lo afirma. No se usa.",
+    "Cuánto recaudó la subasta, o que el soneto se leyó en su apertura: no apareció en ninguna página. Los ‘más de 100.000 dólares de 120.000 donantes’ son de la campaña de prensa de Pulitzer de 1885, no de la subasta.",
+    "Que la estatua era un regalo por la ‘amistad franco-estadounidense’ o un monumento al ‘republicanismo internacional’: lo segundo es una cita de Paul Auster en Wikipedia; lo primero no apareció en las páginas leídas. No se usa.",
+    "Que el pogromo de 1881 la llevó al activismo, con esas palabras: poets.org dice solo que las noticias de los pogromos rusos avivaron su interés y que en 1881 vio llegar refugiados. El cuerpo se limita al trabajo en Ward's Island que documenta el NPS.",
+    "Poetry Foundation, Jewish Women's Archive, Library of Congress (Today in History) y Smithsonian Magazine: devolvieron 403; NEH, 404. No cuentan como fuentes verificadas."
+  ]
+}

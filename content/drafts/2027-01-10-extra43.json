@@ -1,0 +1,78 @@
+{
+  "id": "2027-01-10-extra43",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Thomas Gray y la ignorancia dichosa de Eton",
+    "hook": "«La ignorancia es una dicha» se repite como refrán. En el poema de donde sale no elogia al ignorante: habla de unos niños que juegan.",
+    "body": [
+      "Thomas Gray fue alumno de Eton de 1725 a 1734. Era el quinto de doce hermanos y el único que sobrevivió. En 1742 murió su amigo Richard West, a los 25 años. Ese agosto Gray escribió una oda de cien versos: «Ode on a Distant Prospect of Eton College».",
+      "El poema mira el colegio desde lejos. Los muchachos juegan. Y el que mira, ya adulto, sabe lo que ellos no: «Alas, regardless of their doom, / The little victims play!». Después anuncia lo que les espera: los «ministros del destino humano» y el cortejo de la desgracia, con las pasiones al frente.",
+      "La última estrofa se pregunta para qué avisarles. La pena nunca llega tarde y la felicidad vuela demasiado rápido. Pensar destruiría su paraíso. Y cierra: «No more; where ignorance is bliss, / 'Tis folly to be wise».",
+      "No dice que no saber sea mejor que saber. Dice que hay un saber, el del propio futuro, que a un niño no le serviría de nada. La oda salió en Londres en 1747, sin firma, impresa por Robert Dodsley. Fue el primer poema inglés de Gray que llegó a la imprenta."
+    ],
+    "question": "¿Qué le ahorrarías saber a quien fuiste de niño?",
+    "quote": {
+      "text": "Donde la ignorancia es dicha, es locura ser sabio.",
+      "author": "Thomas Gray",
+      "work": "Ode on a Distant Prospect of Eton College (1742; publ. 1747), vv. 99-100",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Thomas Gray",
+    "subtitle": "Oda a Eton College, 1742"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ThomasGray",
+      "#PoesiaInglesa",
+      "#Eton"
+    ],
+    "extended": [
+      "#Citas",
+      "#Poesia",
+      "#SigloXVIII",
+      "#Infancia",
+      "#Literatura",
+      "#Refranes"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema, numerado hasta el verso 100: versos 99-100, ‘No more; where ignorance is bliss, / 'Tis folly to be wise.’; versos 51-52, ‘Alas, regardless of their doom, / The little victims play!’. Nota: ‘Written in August 1742, and first published, anonymously, in 1747’; fue ‘the first of Gray's English poems to appear in print’; Gray estuvo en Eton ‘from 1725 to 1734’. Pie editorial: ‘London: R. Dodsley, 1747’. La traducción al español de la cita es propia.",
+      "source": "Representative Poetry Online (Bibliotecas de la Universidad de Toronto), ‘Ode on a Distant Prospect of Eton College’",
+      "url": "https://rpo.library.utoronto.ca/content/ode-distant-prospect-eton-college"
+    },
+    {
+      "claim": "Texto con notas: los mismos versos 51-52 y 99-100; los versos 56-61 nombran ‘ministers of human fate’, ‘black Misfortune's baleful train’ y las Pasiones; el esquema métrico es ‘ten-line stanza’. La página se leyó literalmente hasta el verso 61.",
+      "source": "Thomas Gray Archive (ed. Alexander Huber, Universidad de Oxford), ‘Ode on a Distant Prospect of Eton College’",
+      "url": "https://www.thomasgray.org/cgi-bin/display.cgi?text=odec"
+    },
+    {
+      "claim": "‘From 1725 to 1734 Gray attended Eton College’; fue ‘the fifth and only surviving child of twelve children’; West (1716-42) murió ‘aged only 25’; la oda de Eton, la ‘Ode to Adversity’ y el soneto a la muerte de West ‘were written before the close of the summer’; la oda se publicó anónima, por Dodsley, en 1747.",
+      "source": "Thomas Gray Archive, biografía de Thomas Gray",
+      "url": "https://www.thomasgray.org/resources/bio.shtml"
+    },
+    {
+      "claim": "Últimos versos de la estrofa final: ‘Yet ah! why should they know their fate? / Since sorrow never comes too late, / And happiness too swiftly flies. / Thought would destroy their paradise. / No more; where ignorance is bliss, / 'Tis folly to be wise.’; el poema tiene ‘ten 10-line stanzas’.",
+      "source": "Wikipedia en inglés, ‘Ode on a Distant Prospect of Eton College’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/Ode_on_a_Distant_Prospect_of_Eton_College"
+    }
+  ],
+  "do_not_use": [
+    "Citar ‘la ignorancia es una dicha’ como elogio de no saber: en el poema la frase es condicional (‘donde…’) y se refiere a los escolares que ignoran las penas de la vida adulta.",
+    "El día de la muerte de Richard West (suele darse el 1 de junio de 1742): ninguna página leída lo trae. En el cuerpo: ‘en 1742’.",
+    "La fecha del 30 de mayo de 1747, el formato en folio y el precio de seis peniques: salieron solo de un resumen automático del Thomas Gray Archive; la biografía del mismo archivo dice ‘the summer of 1747’. En el cuerpo: ‘en 1747’.",
+    "Que la pelea con Horace Walpole fue en 1742: la biografía la fecha en Reggio en 1741, con reconciliación en 1745. No se menciona en el cuerpo.",
+    "El epígrafe de Menandro (‘soy hombre: razón suficiente para ser desdichado’): solo apareció en un resumen automático, que además indica que se añadió en 1768 y que la cita no se ha podido localizar. No se usa.",
+    "Que Gray ‘acuñó’ el refrán o que este tiene precedentes en Sófocles, Prior o Davenant: lo primero lo dice solo Wikipedia; lo segundo no apareció en ninguna página leída. El cuerpo dice solo que la frase sale de este poema.",
+    "La lista completa de males de los versos 62-90 (Ambición, Pobreza, ‘slow-consuming Age’, ‘painful family of Death’): salió de un resumen automático de la página, no de texto leído. El cuerpo solo nombra lo leído hasta el verso 61.",
+    "Que escribió la oda en Stoke Poges: solo en resumen automático. No se da el lugar.",
+    "Poetry Foundation (403), British Library (404) y poets.org (404): no cuentan como fuentes verificadas."
+  ]
+}
