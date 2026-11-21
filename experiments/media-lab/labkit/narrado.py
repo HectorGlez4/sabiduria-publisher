@@ -23,6 +23,7 @@ from . import narrado_chequeos as nc
 from . import narrado_guion as ng
 from . import narrado_proyecto as np_
 from . import narrado_pronuncia as npr
+from . import narrado_ritmo as nr
 from . import narrado_voz as nv
 
 RAIZ = Path(__file__).resolve().parents[3]
@@ -232,6 +233,7 @@ def _construir_pasos(pieza_id, guion, tabla, ctx, motor, salida, h, informe) -> 
     tiempos = nv.linea_de_tiempo([e["tipo"] for e in guion["escenas"]], duraciones)
     total = nv.duracion_total(tiempos)
     informe["duracion"] = total
+    informe["avisos"] = nr.avisos(guion, tiempos)
     if not nc.DURACION_MIN <= total <= nc.DURACION_MAX:
         raise _Parada("tiempos", [f"la narración dura {total:.1f} s, fuera de "
                                   f"{nc.DURACION_MIN:g}–{nc.DURACION_MAX:g} s: alarga o acorta el guion"])
@@ -307,7 +309,7 @@ def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None,
     _exigir_id(pieza_id)
     salida = _salida_segura(salida, pieza_id, raiz)
     informe = {"ok": False, "pieza": pieza_id, "fase": "guion", "problemas": [], "mp4": None, "hoja": None,
-               "duracion": None, "cita_tiempos": None, "sha256_mp4": None, "sha256_guion": None,
+               "duracion": None, "avisos": [], "cita_tiempos": None, "sha256_mp4": None, "sha256_guion": None,
                "construido_en": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "veredicto": None}
     (salida / "informe.json").unlink(missing_ok=True)  # primero: ningún informe ok viejo sobrevive a un fallo
     try:

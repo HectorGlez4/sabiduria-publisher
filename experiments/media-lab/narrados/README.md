@@ -100,3 +100,9 @@ La misma regla decide qué nombres necesitan aprobación, cuáles reescribe la v
 - Cada texto de `pantalla` pasa los mismos controles que la `voz` (años, cifras, nombres, `do_not_use`).
 - `pantalla` lleva solo lo que se ve; `voz` solo lo que se dice. El `pieza` del guion es el id superviviente
   de la cita en `candidatas.json`.
+
+## Ritmo y ganchos
+
+- `informe.json` lleva `avisos`: notas de ritmo que no frenan el build (gancho que acaba pasados 3 s, frase de más de 5 s, última línea sin eco del gancho). Reglas en `labkit/narrado_ritmo.py`.
+- [ganchos.md](ganchos.md): menú de fórmulas para la primera frase y qué dicen los datos propios.
+- `labkit/atipicos.py` ordena publicaciones por su múltiplo sobre la mediana de la cuenta (≥ 3× es señal, < 1,5× es ruido). Los datos se leen a mano del perfil; no hay rastreador.

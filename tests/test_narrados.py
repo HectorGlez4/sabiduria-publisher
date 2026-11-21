@@ -318,9 +318,10 @@ def seccion_pronuncia() -> None:
 
     sembrada = json.loads((ROOT / "experiments" / "media-lab" / "narrados" / "pronunciacion.json")
                           .read_text(encoding="utf-8"))
-    check(sorted(sembrada) == ["Frankl", "Friedrich", "Nietzsche", "Viktor"], "tabla sembrada con los cuatro nombres")
-    check(all(e["aprobado_por"] == "" and e["fecha"] == "" and e["dicho"] for e in sembrada.values()),
-          "la tabla sembrada no está aprobada")
+    check({"Frankl", "Friedrich", "Nietzsche", "Viktor"} <= set(sembrada), "la tabla comiteada tiene los cuatro nombres del ejemplo")
+    # Una aprobación es de una persona y lleva fecha; una entrada sin aprobar no lleva ninguna de las dos.
+    check(all(e["dicho"] and bool(e["aprobado_por"].strip()) == bool(e["fecha"].strip()) for e in sembrada.values()),
+          "en la tabla comiteada, aprobado_por y fecha van juntos o no van")
 
 
 def seccion_voz() -> None:
