@@ -70,7 +70,7 @@
     "Que fuera autodidacta o que no pudiera ir a la universidad por ser mujer: no se verificó. Solo consta que nunca estudió en Viena.",
     "Das Waldfräulein (1873) se omite en la lista del cuerpo por espacio, no por duda."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-13T03:26:00Z",
   "results": {
     "facebook": {
@@ -84,7 +84,7 @@
       "encolada_en": "2026-11-21T18:41:52.330534+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 21-Nov-26 13:41:36 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 21-Nov-26 15:28:49 PST."
     }
   },
   "targets": [
@@ -92,6 +92,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-21T21:41:36.158736+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-21T23:28:49.479852+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 21-Nov-26 15:28:49 PST."
+  ]
 }
