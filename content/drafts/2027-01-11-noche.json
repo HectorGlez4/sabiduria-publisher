@@ -1,0 +1,91 @@
+{
+  "id": "2027-01-11-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "Stonehenge y la Piedra del Altar, aún sin cantera",
+    "hook": "La piedra central de Stonehenge pesa seis toneladas. En 2026 se sabe mejor que nunca de dónde no viene.",
+    "body": [
+      "En el centro de Stonehenge hay una losa tumbada de arenisca gris verdosa. Mide unos cinco metros por uno y pesa unas seis toneladas. Se la llama Piedra del Altar, y queda casi tapada por otra piedra del monumento que cayó sobre ella.",
+      "Durante cerca de un siglo se dio por hecho que venía de Gales, como las llamadas piedras azules, que salieron de las colinas de Preseli. En agosto de 2024, un estudio publicado en «Nature» dató granos de circón, apatita y rutilo en fragmentos de la losa recogidos en excavaciones antiguas. Las edades coincidían con las areniscas de la cuenca Orcadiana, en el noreste de Escocia, a unos 750 kilómetros.",
+      "Un mes después, un segundo estudio comparó la losa con los círculos de piedra de las Orcadas y descartó la isla principal.",
+      "El 5 de noviembre de 2026, la Universidad de Aberystwyth presentó un tercer trabajo. Su director, Duncan Pirrie, lo llama la investigación geológica más completa hecha sobre la piedra. El resultado: ninguno de los lugares examinados reúne sus características. La búsqueda en la cuenca Orcadiana no ha dado, hasta ahora, con ninguno.",
+      "Se sabe cuánto pesa, de qué está hecha y qué edad tienen sus granos. No se sabe de qué cantera salió ni cómo llegó. Nick Pearce, uno de los autores, lo dice así: descartar zonas es tan importante como identificar otras nuevas."
+    ],
+    "question": "¿Cuánto vale saber con certeza dónde no está la respuesta?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La Piedra del Altar",
+    "subtitle": "Stonehenge: seis toneladas sin cantera conocida",
+    "body": "Un siglo creyéndola galesa. En 2024, sus minerales apuntaron al noreste de Escocia, a 750 kilómetros. En 2026, el estudio más completo no encontró ningún lugar que coincida con ella. La búsqueda sigue."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Stonehenge",
+      "#Arqueologia",
+      "#Neolitico"
+    ],
+    "extended": [
+      "#Historia",
+      "#Geologia",
+      "#Prehistoria",
+      "#Megalitos",
+      "#Ciencia",
+      "#PatrimonioMundial"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Comunicado del 14 de agosto de 2024: ‘For the past hundred years, the iconic six-tonne Altar Stone at the heart of the ancient site was believed to have come from Wales.’ El estudio analizó ‘fragments of the Altar Stone’ y halló coincidencia con la Old Red Sandstone de la cuenca Orcadiana, en el noreste de Escocia, ‘at least 700 km (435 miles)’ de Stonehenge. ‘The majority of Stonehenge's world-renowned ‘bluestones’ came from the Preseli Hills area in west Wales’. ‘The Altar Stone, a sandstone, has traditionally been grouped with these other, smaller, igneous bluestones.’ No está claro cuándo llegó; pudo colocarse ‘during the second construction phase at around 2620 – 2480 BC’. La investigación ‘does not provide direct evidence about how the Altar Stone got to its world-famous location’. Da el DOI del artículo de Nature: 10.1038/s41586-024-07652-1.",
+      "source": "Aberystwyth University, ‘Stonehenge Altar Stone came from Scotland, not Wales’ (14 de agosto de 2024)",
+      "url": "https://aber.ac.uk/en/news/archive/2024/08/title-274690-en.html"
+    },
+    {
+      "claim": "Comunicado del 5 de septiembre de 2024: el estudio, publicado en ‘Journal of Archaeological Science: Reports’ y dirigido por Richard Bevins, examinó ‘the five exposed Neolithic-age stones at the Stones of Stenness and seven others at the Ring of Brodgar on mainland Orkney’ y concluye que la Piedra del Altar ‘was not sourced from Mainland Orkney but elsewhere within north-eastern Scotland’. Bevins la describe como ‘grey-green sandstone’ que ocupa ‘a near central location’.",
+      "source": "Aberystwyth University, ‘Stonehenge origins search heats up as Orkney ruled out’ (5 de septiembre de 2024)",
+      "url": "https://www.aber.ac.uk/en/news/archive/2024/09/title-275266-en.html"
+    },
+    {
+      "claim": "Comunicado del 5 de noviembre de 2026: estudio publicado en ‘Journal of the Geological Society’ y dirigido por Duncan Pirrie, profesor emérito de la University of South Wales. ‘This is the most comprehensive geological investigation of the Altar Stone ever undertaken.’ ‘So far, none of the locations examined have the same set of characteristics as the Altar Stone. That tells us the search is not over.’ ‘So far, the search in the Orcadian Basin in north-east Scotland has not revealed a location with the same characteristics as the Altar Stone.’ Los científicos ‘rule out several previously proposed locations’. Nick Pearce (Aberystwyth): ‘ruling out potential source areas is just as important as identifying new ones.’ Bevins: ‘For almost a century, the prevailing view was that the Altar Stone came from west Wales.’",
+      "source": "Aberystwyth University, ‘Mystery origin of iconic Stonehenge Altar Stone deepens as search narrows’ (5 de noviembre de 2026)",
+      "url": "https://www.aber.ac.uk/en/news/archive/2026/11/title-290479-en.html"
+    },
+    {
+      "claim": "La piedra es ‘a recumbent 6-metric-ton rectangular monolith’, ‘mostly covered by a collapsed pillar’; se hizo datación uranio-plomo de ‘three types of minerals contained in the Altar Stone sample (zircon, apatite, and rutile)’, sobre ‘a small sliver of the greenish-gray Altar Stone gathered during a previous archaeological dig’; algunos granos tenían ‘from 1 billion to 2 billion years old’ y otros unos 450 millones de años; la distancia es de ‘750 kilometers (470 miles)’; Anthony Clarke es ‘first author of the study and a Ph.D. student in geology at Curtin University’.",
+      "source": "Eos (American Geophysical Union), ‘From Sandstone Basin to Stonehenge Altar’ (2024)",
+      "url": "https://eos.org/articles/from-sandstone-basin-to-stonehenge-altar"
+    },
+    {
+      "claim": "‘the team was not permitted to chip away rocks at the site, but instead analyzed minerals in bits of rock that had been collected in previous digs, some dating back to the 1840s’; la distancia es de ‘more than 460 miles (740 kilometers)’; ‘It's not clear whether the 16-foot (5-meter) stone was carried by boat or through land’.",
+      "source": "PBS NewsHour / Associated Press (Christina Larson), ‘New research reveals Stonehenge's altar stone originally came from Scotland’ (14 de agosto de 2024)",
+      "url": "https://www.pbs.org/newshour/science/new-research-reveals-stonehenges-altar-stone-originally-came-from-scotland"
+    },
+    {
+      "claim": "La losa es de ‘five-by-one-metre’, ‘weighing an estimated six tonnes’, y procede de ‘some 750km (465 miles)’.",
+      "source": "Al Jazeera, ‘Stonehenge's Altar Stone came all the way from Scotland, new research shows’ (14 de agosto de 2024)",
+      "url": "https://www.aljazeera.com/news/2024/8/14/stonehenges-altar-stone-came-all-the-way-from-scotland-new-research-shows"
+    },
+    {
+      "claim": "Referencia del estudio: Clarke, Kirkland, Bevins, Pearce, Glorie e Ixer, ‘A Scottish provenance for the Altar Stone of Stonehenge’, Nature 632 (8025): 570–575, 15 de agosto de 2024. La piedra mide ‘4.9 m long by 1 m wide by 0.5 m thick’, se identifica como ‘Stone 80’, y la piedra 55, un sarsen, ‘lies on top of Stone 80 perpendicularly, and is thought to have fallen across it’. ‘the source remains unknown’.",
+      "source": "Wikipedia en inglés, ‘Altar Stone (Stonehenge)’ (fuente secundaria; editada el 15 de noviembre de 2026)",
+      "url": "https://en.wikipedia.org/wiki/Altar_Stone_(Stonehenge)"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar sin matiz que la Piedra del Altar ‘viene de Escocia’: era el titular de 2024. El comunicado de noviembre de 2026 dice que ningún lugar examinado coincide con ella y que la búsqueda en la cuenca Orcadiana no ha dado resultado ‘so far’. En el cuerpo: los minerales ‘coincidían’ en 2024 y la cantera sigue sin encontrarse.",
+    "Afirmar lo contrario, que el origen escocés quedó ‘descartado’ o es ‘very unlikely’: esa frase solo aparece en Wikipedia, que cita a The Guardian y la BBC (5 de noviembre de 2026); ninguno de los dos se pudo abrir. El comunicado de Aberystwyth, que sí se leyó, habla de afinar la búsqueda, no de descartar Escocia. Tampoco se usa que la piedra pudo venir ‘del norte de Inglaterra o de Irlanda’: misma procedencia sin leer.",
+    "Que la Piedra del Altar viene del sureste de Gales: la página de English Heritage ‘Building Stonehenge’ todavía lo dice (‘a type of sandstone found in south-east Wales’), pero los comunicados de 2024 y 2026 dan esa teoría por superada.",
+    "Que llegó por mar, o ‘más de 1000 km por mar’: el comunicado de 2024 dice que no hay evidencia directa de cómo llegó; el transporte marítimo es una hipótesis de los autores. La cifra de 1000 km solo salió en el resumen de un buscador.",
+    "Las distancias de las demás piedras (bluestones a 240 km; sarsens a 25 km desde West Woods): Eos da 220 km para las bluestones y English Heritage no da cifra para West Woods. No se dan distancias.",
+    "Que H. H. Thomas propuso el origen galés en 1923, o que se señalaban las Senni Beds: lo segundo solo en Wikipedia, lo primero en ninguna página leída. En el cuerpo: ‘cerca de un siglo’.",
+    "Que Inigo Jones le puso el nombre en 1620: Wikipedia dice solo que el nombre ‘probably’ viene de un comentario suyo. No se usa.",
+    "Una fecha firme de llegada de la piedra (2500 o 2600 a.C.): las fuentes dan cifras distintas y el comunicado de 2024 dice que no está claro. No se da fecha.",
+    "El título, la lista completa de autores y la fecha de publicación del estudio de 2026: no figuran en el comunicado; el DOI (10.1144/jgs2026-090) aparece enlazado, pero la página de la revista no se abrió. Se cita por el comunicado y por su director.",
+    "El artículo de Nature no se leyó directamente (redirige a un inicio de sesión; PubMed y PMC devolvieron un muro de cookies y un reCAPTCHA). Su contenido se toma de los comunicados de Aberystwyth, de Eos y de AP; la referencia bibliográfica, de Wikipedia.",
+    "ucl.ac.uk (403), curtin.edu.au (404), The Guardian y BBC (bloqueados por la herramienta): no cuentan como fuentes verificadas."
+  ]
+}

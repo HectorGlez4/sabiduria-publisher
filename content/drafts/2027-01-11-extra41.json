@@ -1,0 +1,87 @@
+{
+  "id": "2027-01-11-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "el Inca Garcilaso y el mundo que es uno solo (1609)",
+    "hook": "Un mestizo del Cuzco le explicó a Europa, en 1609, que el «Nuevo Mundo» solo era nuevo para ella.",
+    "body": [
+      "Nació en el Cuzco el 12 de abril de 1539 y lo bautizaron Gómez Suárez de Figueroa. Su padre era un capitán español, Sebastián Garcilaso de la Vega. Su madre, Isabel Chimpu Ocllo, era nieta del inca Huayna Cápac. En 1560, con veinte años, salió del Perú. Vivió en Montilla y en Córdoba, donde murió en abril de 1616.",
+      "En 1609 se imprimió en Lisboa, en el taller de Pedro Crasbeeck, la primera parte de sus «Comentarios Reales». El primer capítulo del libro primero se titula «Si hay muchos mundos». Es una cuestión de cosmógrafos, y Garcilaso avisa de que no es su asunto principal, «ni las fuerzas de un indio pueden presumir tanto».",
+      "Enseguida contesta. Hay un solo mundo. Lo de «nuevo», explica, es porque se descubrió «nuevamente para nosotros». Y a quien siga imaginando muchos mundos, añade, no hay para qué responderle.",
+      "Lo escribe un hombre que pertenecía a los dos lados. En ese mismo libro recuerda que nació en la zona tórrida, en el Cuzco. Para Europa, aquella tierra era nueva. Para él era la de su madre."
+    ],
+    "question": "¿Qué llamas nuevo solo porque acabas de conocerlo?",
+    "quote": {
+      "text": "No hay más que un mundo, y aunque llamamos Mundo Viejo y Mundo Nuevo […] no porque sean dos, sino todo uno.",
+      "author": "Inca Garcilaso de la Vega",
+      "work": "Comentarios Reales, primera parte, libro I, cap. I (Lisboa, Pedro Crasbeeck, 1609)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Inca Garcilaso de la Vega",
+    "subtitle": "Comentarios Reales, libro I, capítulo I (1609)"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#IncaGarcilaso",
+      "#ComentariosReales",
+      "#Peru"
+    ],
+    "extended": [
+      "#Citas",
+      "#LiteraturaHispanoamericana",
+      "#Cuzco",
+      "#SigloXVII",
+      "#Historia",
+      "#Mestizaje"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Transcripción que declara reproducir, modernizándola, la edición príncipe de Lisboa, 1609. Libro primero, ‘Capítulo I: Si hay muchos mundos. Trata de las cinco Zonas’. El pasaje: ‘Mas porque no es aqueste mi principal intento ni las fuerzas de un indio pueden presumir tanto […] digo que a lo primero se podrá afirmar que no hay más que un mundo, y aunque llamamos Mundo Viejo y Mundo Nuevo, es por haberse descubierto aquél nuevamente para nosotros, y no porque sean dos, sino todo uno. Y a los que todavía imaginaren que hay muchos mundos, no hay para qué responderles’ (el OCR da ‘llamarnos’ por ‘llamamos’). En el mismo libro: ‘yo nací en la tórrida zona, que es en el Cozco’. En el Proemio: ‘hasta el año de 1560 que yo salí de ella’.",
+      "source": "Inca Garcilaso de la Vega, Comentarios Reales de los Incas (transcripción modernizada de la princeps de 1609; Internet Archive)",
+      "url": "https://archive.org/details/comentarios-reales-de-los-incas-1609"
+    },
+    {
+      "claim": "Edición de Horacio H. Urteaga, tomo I (Colección de Historiadores Clásicos del Perú, Lima, Sanmartí, 1918), libro primero, capítulo I: ‘digo, que a lo mejor se podrá afirmar que no hay mas que un mundo, y aunque llamamos Mundo Viejo y Mundo Nuevo, es por haberse descubierto este nuevamente para nosotros’.",
+      "source": "Inca Garcilaso de la Vega, Los Comentarios Reales de los Incas, ed. Horacio H. Urteaga, t. I (Lima, 1918; Internet Archive)",
+      "url": "https://archive.org/details/loscomentariosre01vega"
+    },
+    {
+      "claim": "Capítulo I, ‘Si hay muchos mundos. Trata de las cinco Zonas’: ‘digo que a lo mejor se podrá afirmar que no hay más que un mundo, y aunque llamamos Mundo Viejo y Mundo Nuevo es por haberse descubierto éste nuevamente para nosotros’; el resto del pasaje (‘y no porque sean dos, sino todo uno’) coincide con la transcripción de Internet Archive.",
+      "source": "Wikisource en español, ‘Comentarios reales (Primera parte)’, libro I (no declara edición de base)",
+      "url": "https://es.wikisource.org/wiki/Comentarios_reales_(Primera_parte)/I"
+    },
+    {
+      "claim": "Nació en el Cuzco el 12 de abril de 1539; ‘Su nombre de bautismo fue Gómez Suárez de Figueroa’; hijo del ‘capitán Sebastián Garcilaso de la Vega y Vargas’ y de Isabel Chimpu Ocllo, ‘bisnieta del inca Túpac Yupanqui y nieta del inca Huayna Cápac’; salió del Cuzco ‘El 20 de enero de 1560, a los veinte años de edad’; ‘se estableció en la ciudad cordobesa de Montilla’ y pasó a Córdoba en 1591; murió en Córdoba en abril de 1616 (el texto da ‘entre el 22 y el 24 de abril’ como fechas probables); la primera parte de los Comentarios se imprimió en Lisboa en 1609, ‘por Pedro Crasbeeck’; la segunda fue ‘publicada póstumamente en Córdoba, en 1617, con el título de Historia general del Perú’.",
+      "source": "Wikipedia en español, ‘Inca Garcilaso de la Vega’ (fuente secundaria, para la biografía)",
+      "url": "https://es.wikipedia.org/wiki/Inca_Garcilaso_de_la_Vega"
+    },
+    {
+      "claim": "La obra ‘Fue publicado en Lisboa en 1609’, en edición ‘realizada por Pedro Crasbeeck’; el autor residía en España desde 1560 y la escribió ‘mayormente en Córdoba’.",
+      "source": "Wikipedia en español, ‘Comentarios Reales de los Incas’ (fuente secundaria)",
+      "url": "https://es.wikipedia.org/wiki/Comentarios_Reales_de_los_Incas"
+    },
+    {
+      "claim": "Portada de la princeps: ‘PRIMERA PARTE DE LOS COMENTARIOS REALES QUE TRATAN DEL ORIGEN DE LOS YNCAS, REYES QUE FUERON DEL PERU...’, Lisboa, 1609; el autor, ‘(1539-1616)’.",
+      "source": "Universitat de València, página sobre Garcilaso de la Vega el Inca (transcripción de la portada)",
+      "url": "https://www.uv.es/~fores/GarcilasoVega.html"
+    }
+  ],
+  "do_not_use": [
+    "Citar el tramo central de la frase como texto fijo: las transcripciones difieren. La modernizada de la princeps lee ‘es por haberse descubierto aquél nuevamente para nosotros’; la edición de Urteaga (1918) y Wikisource leen ‘este/éste’. No se pudo consultar un facsímil de 1609 para decidir. Por eso la ficha omite ese tramo con ‘[…]’ y el cuerpo solo cita ‘nuevamente para nosotros’, que es común a las tres.",
+    "‘A lo primero se podrá afirmar’ frente a ‘a lo mejor se podrá afirmar’: misma discrepancia entre transcripciones (la primera en la modernizada de la princeps, la segunda en Urteaga y Wikisource). No se cita ninguna de las dos.",
+    "Que murió ‘el 23 de abril de 1616, el mismo día que Cervantes y Shakespeare’: la propia Wikipedia da ‘entre el 22 y el 24 de abril’ y recoge que la lápida dice 22. En el cuerpo: ‘en abril de 1616’.",
+    "Que su madre era ‘sobrina de Huayna Cápac’ o ‘nieta de Túpac Yupanqui’: la página leída dice nieta de Huayna Cápac y bisnieta de Túpac Yupanqui. Es dato de fuente secundaria; en el cuerpo solo ‘nieta del inca Huayna Cápac’.",
+    "Que ‘nunca volvió al Perú’ o que pidió volver y se le negó: no apareció en ninguna página leída. El cuerpo dice solo dónde vivió y murió.",
+    "Que el pasaje sobre haber nacido en la zona tórrida está en el capítulo I: se leyó en el libro primero, pero no se comprobó en qué capítulo. En el cuerpo: ‘en ese mismo libro’.",
+    "Presentar la frase como una proclama de igualdad entre pueblos o de ‘mestizaje’: en su contexto es una respuesta a una duda cosmográfica (si hay uno o muchos mundos). La lectura del último párrafo es de la página y se apoya solo en quién la escribe.",
+    "Cervantes Virtual (403), BNE (403), Brown/John Carter Brown Library (404), Gutenberg (503), Google Books (pantalla de consentimiento), el diccionario biográfico de la RAH (redirige a la portada) y el PDF del Museo Garcilaso (ilegible): no cuentan como fuentes verificadas."
+  ]
+}

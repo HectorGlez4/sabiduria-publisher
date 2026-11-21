@@ -1,0 +1,94 @@
+{
+  "id": "2027-01-11-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Abigail Adams y la carta del 31 de marzo de 1776",
+    "hook": "En 1776 una mujer pidió por carta a un legislador que no olvidara a las mujeres. Él le contestó que no podía sino reírse.",
+    "body": [
+      "El 31 de marzo de 1776, Abigail Adams escribió desde Braintree, Massachusetts, a su marido. John Adams estaba en Filadelfia, como delegado en el Congreso Continental. Ella tenía 31 años. La independencia aún no se había declarado: el párrafo empieza diciendo que ansía oír la noticia.",
+      "Luego viene la petición, y enseguida una razón: «Recuerden que todos los hombres serían tiranos si pudieran». Y una advertencia. Si no se presta a las damas especial cuidado y atención, escribe, están decididas a fomentar una rebelión, y no se sentirán obligadas por leyes en las que no tengan voz ni representación.",
+      "Era el argumento de la propia revolución, vuelto hacia dentro.",
+      "John Adams respondió el 14 de abril. «En cuanto a tu extraordinario código de leyes, no puedo sino reírme». Añadió que sabían bien que no les convenía derogar sus «sistemas masculinos», y que no pensaban someterse al «despotismo de las enaguas».",
+      "La carta no era un documento público. Abigail la terminó el 5 de abril y hoy se conserva entre los papeles de la familia Adams, en la Massachusetts Historical Society. Pidió poco: que se acordaran."
+    ],
+    "question": "¿Qué petición razonable se sigue contestando hoy con una risa?",
+    "quote": {
+      "text": "En el nuevo código de leyes que supongo será necesario que hagan, deseo que se acuerden de las damas y sean con ellas más generosos y favorables que sus antepasados.",
+      "author": "Abigail Adams",
+      "work": "Carta a John Adams, Braintree, 31 de marzo de 1776 (Adams Family Correspondence, vol. 1)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream",
+    "title": "Abigail Adams",
+    "subtitle": "Carta a John Adams, 31 de marzo de 1776"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AbigailAdams",
+      "#Historia",
+      "#DerechosDeLasMujeres"
+    ],
+    "extended": [
+      "#Citas",
+      "#SigloXVIII",
+      "#Cartas",
+      "#MujeresEnLaHistoria",
+      "#IndependenciaDeEstadosUnidos",
+      "#JohnAdams"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la carta, con el encabezado ‘Braintree March 31 1776’ y la ortografía original: ‘I long to hear that you have declared an independancy—and by the way in the new Code of Laws which I suppose it will be necessary for you to make I desire you would Remember the Ladies, and be more generous and favourable to them than your ancestors. Do not put such unlimited power into the hands of the Husbands. Remember all Men would be tyrants if they could. If perticuliar care and attention is not paid to the Laidies we are determined to foment a Rebelion, and will not hold ourselves bound by any Laws in which we have no voice, or Representation.’ Incluye un apartado ‘April 5’ con la continuación. Incluye también la respuesta de John Adams (‘Ap. 14, 1776’): ‘As to your extraordinary Code of Laws, I cannot but laugh.’; ‘Depend upon it, We know better than to repeal our Masculine systems.’; ‘the Despotism of the Peticoat’. Procedencia declarada: ‘Reproduced from the Original Electronic Text at the Massachusetts Historical Society’. La traducción al español de la cita y de los fragmentos es propia, hecha sobre este texto.",
+      "source": "Hanover College, Department of History, ‘Letters between Abigail Adams and her husband John Adams’ (texto electrónico de la Massachusetts Historical Society)",
+      "url": "https://history.hanover.edu/courses/excerpts/161adams.html"
+    },
+    {
+      "claim": "Las mismas tres frases de la carta, con idéntica ortografía; la fecha se da como ‘March 31 – April 5, 1776’; procedencia: ‘Adams Family Papers, Massachusetts Historical Society’. La respuesta de John Adams lleva el encabezado ‘[PHILADELPHIA] Ap. 14, 1776’ e incluye las tres frases citadas. Da ‘Abigail Smith Adams (1744-1818)’ y ‘John Adams (1735-1826)’, casados desde 1764, y dice que él era delegado en el ‘Second Continental Congress’.",
+      "source": "Dickinson College, House Divided Project, ‘Abigail and John Adams, Letters (1776)’",
+      "url": "https://housedivided.dickinson.edu/sites/teagle/?p=1466"
+    },
+    {
+      "claim": "Transcripción larga de la carta, encabezada ‘Braintree March 31 1776’, con las mismas tres frases y la misma ortografía; nota editorial: ‘[Abigail Adams finished her letter on April 5 and signed it as follows]’; fuente declarada: ‘National Archives, Founders Online’.",
+      "source": "American Battlefield Trust, ‘Abigail Adams to John Adams – Remember The Ladies’",
+      "url": "https://www.battlefields.org/learn/primary-sources/abigail-adams-john-adams-remember-ladies"
+    },
+    {
+      "claim": "Texto de la carta bajo el encabezado ‘March 31, 1776’, con las mismas tres frases en su ortografía original; enlaza como procedencia a Founders Online (Archivos Nacionales).",
+      "source": "National Constitution Center, Historic Document Library, ‘Abigail Adams to John Adams (1776)’",
+      "url": "https://constitutioncenter.org/the-constitution/historic-document-library/detail/abigail-adams-to-john-adams-1776"
+    },
+    {
+      "claim": "La carta es del 31 de marzo de 1776 y John Adams estaba ‘at the Continental Congress in Philadelphia’; crédito ‘Courtesy: Massachusetts Historical Society’.",
+      "source": "PBS, American Experience, ‘Remember the Ladies’",
+      "url": "https://www.pbs.org/wgbh/americanexperience/features/adams-remember-ladies"
+    },
+    {
+      "claim": "Abigail Adams nació el 22 de noviembre de 1744 en Weymouth, Massachusetts, y murió el 28 de octubre de 1818 en Quincy (de donde sale que tenía 31 años en marzo de 1776); John le escribía ‘while he was in Philadelphia as a delegate in the Continental Congress’.",
+      "source": "Wikipedia en inglés, ‘Abigail Adams’ (fuente secundaria, solo para las fechas de nacimiento y muerte)",
+      "url": "https://en.wikipedia.org/wiki/Abigail_Adams"
+    },
+    {
+      "claim": "La edición de la carta figura catalogada como ‘Adams Family Correspondence, volume 1’ (documento ADMS-04-01-02-0241 de la Adams Papers Digital Edition) y, en Founders Online, como ‘Abigail Adams to John Adams, 31 March 1776’ (Adams/04-01-02-0241). Dato tomado del título de los resultados de búsqueda: ninguna de las dos páginas se pudo abrir (conexión rechazada y respuesta 202 vacía).",
+      "source": "Massachusetts Historical Society, Adams Papers Digital Edition (solo la ficha del resultado de búsqueda)",
+      "url": "https://www.masshist.org/publications/adams-papers/index.php/view/ADMS-04-01-02-0241"
+    }
+  ],
+  "do_not_use": [
+    "El año y el editor de la edición impresa (L. H. Butterfield, Harvard University Press, 1963): ninguna página leída los da. En la ficha solo va ‘Adams Family Correspondence, vol. 1’, que es lo que aparece en el catálogo.",
+    "Decir que Abigail Adams pidió el voto para las mujeres: la carta no habla de votar. Pide que el nuevo código no deje un poder ilimitado en manos de los maridos, y amenaza con no acatar leyes hechas sin ‘voz ni representación’.",
+    "Que John Adams servía en el ‘Primer Congreso Continental’: lo dice el resumen del National Constitution Center y es un error del sitio; Dickinson dice ‘Second Continental Congress’. En el cuerpo: ‘Congreso Continental’.",
+    "‘Faltaban tres meses para la Declaración de Independencia’: ninguna página leída da esa cuenta. El cuerpo se apoya en la propia carta, que dice ansiar la noticia.",
+    "La versión modernizada de PBS (‘rebellion’, ‘representation’, ‘remember the ladies’ en minúscula) y la de Wikipedia (‘favorable’ sin u) citadas como texto literal: la ortografía de la carta es ‘Rebelion’, ‘Laidies’, ‘perticuliar’, ‘favourable’.",
+    "‘Era ilegal que las mujeres tuvieran propiedades’ (PBS) y cualquier referencia a la ‘coverture’ o a la Enmienda XIX de 1920: PBS lo dice sin matiz y lo demás no apareció en ninguna página leída. No se usa.",
+    "La frase de UMBC ‘As to Declarations of Independency, be patient’ al comienzo de la respuesta de John: solo aparece en esa transcripción, no en Hanover ni en Dickinson. No se cita.",
+    "Presentar la respuesta de John Adams como puro desprecio o como broma cariñosa: las fuentes leídas dan el texto, no su tono. El cuerpo cita las frases y no las interpreta.",
+    "founders.archives.gov, masshist.org, amrevmuseum.org, pressbooks.pub y digitalcommonwealth.org: no se pudieron leer (202 vacío, conexión rechazada, 403, bloqueo anti-bot). El texto se cotejó en cinco transcripciones que coinciden palabra por palabra."
+  ]
+}

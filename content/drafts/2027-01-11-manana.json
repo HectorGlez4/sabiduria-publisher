@@ -1,0 +1,76 @@
+{
+  "id": "2027-01-11-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "status": "draft",
+  "core": {
+    "subject": "Henrietta Lacks y las células HeLa (1951)",
+    "hook": "Sus células llevan vivas en los laboratorios desde 1951. Su tumba no tuvo lápida hasta 2010.",
+    "body": [
+      "Henrietta Lacks nació el 1 de agosto de 1920 en Roanoke, Virginia. Cultivaba tabaco y era madre de cinco hijos. El 29 de enero de 1951 acudió al hospital Johns Hopkins, en Baltimore, porque notaba un bulto en el vientre. Era un cáncer de cuello uterino.",
+      "El ginecólogo Howard Jones tomó una biopsia del tumor y la muestra llegó al laboratorio de George Gey. Nadie le pidió permiso: en esa época ni se exigía ni era costumbre pedirlo. Hasta entonces, las células humanas cultivadas duraban, como mucho, unos días. Las suyas siguieron multiplicándose. Gey las etiquetó, como hacía siempre, con las dos primeras letras del nombre y del apellido: HeLa.",
+      "Henrietta Lacks murió el 4 de octubre de 1951. Tenía 31 años. La enterraron sin lápida en el cementerio familiar, en Virginia. Sus células siguieron: en 1954 Jonas Salk las usaba en su investigación de la vacuna contra la polio, y en 1955 fueron las primeras células humanas clonadas. En 2021, la Organización Mundial de la Salud contaba más de 75.000 estudios hechos con ellas.",
+      "La familia supo que seguían en uso en 1975, por una conversación en una cena. En marzo de 2013 un laboratorio europeo publicó el genoma de HeLa sin avisarles. En agosto de ese año, los Institutos Nacionales de Salud de Estados Unidos acordaron con ellos que dos familiares entraran en el comité de seis miembros creado para el acceso a esos datos.",
+      "La lápida llegó en 2010. La donó Roland Pattillo."
+    ],
+    "question": "¿Qué se le debe a quien ayudó sin saberlo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Henrietta Lacks",
+    "subtitle": "Las células que nadie le pidió",
+    "body": "Murió en 1951, a los 31 años. Las células de su tumor, tomadas sin pedirle permiso, fueron las primeras humanas que no murieron en el laboratorio. Su familia lo supo en 1975. Su tumba tuvo lápida en 2010."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#HenriettaLacks",
+      "#HeLa",
+      "#HistoriaDeLaMedicina"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Bioetica",
+      "#MujeresEnLaHistoria",
+      "#Biologia",
+      "#HistoriaDeLaCiencia",
+      "#Medicina"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "‘died of cervical cancer, 70 years ago, on 4 October, 1951’; ‘She was only 31 years old’; ‘raising five children near Baltimore’; acudió a Johns Hopkins tras una hemorragia; los investigadores tomaron biopsias ‘without her knowledge or consent’; ‘The cells were mass produced, for profit, without recognition to her family’; ‘the subjects of over 75,000 studies’; el Director General de la OMS le concedió un premio póstumo, recogido en Ginebra por su hijo Lawrence Lacks (comunicado del 13 de octubre de 2021).",
+      "source": "Organización Mundial de la Salud, ‘WHO Director-General bestows posthumous award on the late Henrietta Lacks’ (13 de octubre de 2021)",
+      "url": "https://www.who.int/news/item/13-10-2021-who-director-general-bestows-posthumous-award-on-the-late-henrietta-lacks"
+    },
+    {
+      "claim": "Era ‘a black tobacco farmer’ y ‘a mother of five’; ‘the gynecologist on duty, Howard Jones, took a biopsy of the tumor cells’; las células llegaron a George Gey a través de un colega común; ‘taking samples from patients without permission was a standard practice at the time’; los datos del genoma se compartieron sin conocimiento de la familia; en agosto de 2013 se anunció el acuerdo con los NIH, tras reunirse su director, Francis S. Collins, con la familia.",
+      "source": "American Society for Biochemistry and Molecular Biology, ASBMB Today, ‘Sharing the whole HeLa genome’",
+      "url": "https://www.asbmb.org/asbmb-today/science/sharing-the-whole-hela-genome"
+    },
+    {
+      "claim": "El 11 de marzo de 2013 el EMBL publicó en ‘G3: Genes, Genomes and Genetics’ la secuencia del genoma de una línea HeLa, en un proyecto dirigido por Lars Steinmetz; las células HeLa habían dado lugar a ‘more than 60,000 research publications’ y a dos premios Nobel (2008 y 2011), y ‘have even been into space’.",
+      "source": "European Molecular Biology Laboratory (EMBL), ‘Havoc in biology's most-used human cell line’ (2013)",
+      "url": "https://www.embl.org/news/science/havoc-in-biologys-most-used-human-cell-line/"
+    },
+    {
+      "claim": "Nació el 1 de agosto de 1920 en Roanoke, Virginia; murió el 4 de octubre de 1951, a los 31 años; cinco hijos; ‘tobacco farmer’. ‘On January 29, 1951, Lacks went to Johns Hopkins because she felt a ‘knot’ in her womb.’ ‘Neither Henrietta Lacks nor her family had given her physicians permission to harvest her cells. At that time, permission was neither required nor customarily sought.’ Antes las células cultivadas ‘survived for only a few days at most’. Gey etiquetaba las muestras con ‘the first two letters of the patient's first and last names’. ‘by 1954, Jonas Salk was using HeLa cells in his research to develop the polio vaccine’. ‘HeLa cells were the first human cells successfully cloned, in 1955’. ‘In 1975, the family also learned through a chance dinner-party conversation’ que el material seguía en uso. Agosto de 2013: ‘two family members will join the six-member committee’. ‘Lacks was buried in an unmarked grave in the family cemetery’; en 2010 ‘Roland Pattillo ... donated a headstone for Lacks’.",
+      "source": "Wikipedia en inglés, ‘Henrietta Lacks’ (fuente secundaria; leída en literal solo la primera parte del artículo)",
+      "url": "https://en.wikipedia.org/wiki/Henrietta_Lacks"
+    }
+  ],
+  "do_not_use": [
+    "Cualquier afirmación atribuida a Johns Hopkins (que ‘nunca vendió ni se benefició’ de las células, que las distribuyó gratis, que era de los pocos hospitales que atendían a pacientes negros pobres): hopkinsmedicine.org y hub.jhu.edu devolvieron 403 y no se leyeron. La OMS dice, además, que las células ‘were mass produced, for profit’. No se entra en quién ganó dinero.",
+    "Que las células HeLa ‘se duplicaban cada 20-24 horas’: solo apareció en el resumen de un buscador, no en ninguna página leída.",
+    "La cifra de la OMS de ‘over 50,000,000 metric tonnes’ de células distribuidas: figura en el comunicado sin fuente y es inverosímil como masa real. No se usa.",
+    "‘Casi 11.000 patentes’: solo en Wikipedia. No se usa.",
+    "El alias ‘Helen Lane’ con el que se ocultó su identidad: solo llegó por un resumen automático de la parte de Wikipedia no leída en literal.",
+    "Que la familia se enteró ‘en 1973’: la página leída dice 1975 (antes, a principios de los setenta, les habían pedido muestras de sangre). Se da 1975.",
+    "Decir que tomar la muestra fue ‘ilegal’: dos fuentes dicen que no pedir permiso era la práctica corriente de la época y que no se exigía. El cuerpo dice solo que no se le pidió.",
+    "El acuerdo de la familia con Thermo Fisher (31 de julio de 2023, términos no revelados): solo en Wikipedia; la nota de AP no se pudo abrir. No se menciona.",
+    "Que el acuerdo de 2013 ‘no incluyó dinero’ o ‘compensación’: no se confirmó en texto literal. El cuerpo no habla de compensación.",
+    "Nombrar el diagnóstico exacto (carcinoma epidermoide, reclasificado en 1970 como adenocarcinoma): detalle solo de Wikipedia. El cuerpo dice ‘cáncer de cuello uterino’, que es lo que dice la OMS.",
+    "Las páginas de NIH, Nature, Smithsonian, BMJ, NPR y AP sobre el caso: devolvieron 403, 404, redirección a inicio de sesión o tiempo de espera agotado. No cuentan como fuentes verificadas."
+  ]
+}
