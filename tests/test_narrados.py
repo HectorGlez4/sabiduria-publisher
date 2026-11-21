@@ -102,7 +102,7 @@ def seccion_guion() -> None:
     tres["escenas"][3]["voz"] = "Lo dijo Goethe en 1889."
     tres["escenas"][4]["voz"] = ""
 
-    check(ng.TIPOS == ("tachado", "cita", "nombre_ano", "contraste", "pregunta"),
+    check(ng.TIPOS == ("tachado", "cita", "nombre_ano", "texto", "contraste", "pregunta"),
           "TIPOS exactos")
     check(ng.validar(ok, pieza, True) == [], "el guion del spike es válido")
     check(any("tipo" in p for p in ng.validar(con_tipo("baile"), pieza, True)), "tipo desconocido")
@@ -1041,6 +1041,33 @@ def seccion_construir() -> None:
             check(True, "revisar sobre un informe no ok se niega")
 
 
+def seccion_texto() -> None:
+    print("\n8. Escena de texto llano")
+    from labkit import narrado_guion as ng
+    from labkit import narrado_proyecto as np_
+    from labkit.narrado_voz import duracion_total, linea_de_tiempo
+
+    pieza = json.loads((ROOT / "content" / "published" / "2026-08-23-tarde.json").read_text(encoding="utf-8"))
+    guion = ng.cargar(ROOT / "experiments" / "media-lab" / "narrados" / "2026-08-23-tarde" / "guion.json")
+    tipos = [e["tipo"] for e in guion["escenas"]]
+    check(tipos.count("texto") == 1 and len(tipos) == 7, "el guion de ejemplo parte la frase larga con una escena de texto")
+    check(ng.validar(guion, pieza, True) == [], "y sigue siendo válido contra la pieza")
+    falso = json.loads(json.dumps(guion))
+    falso["escenas"][4]["pantalla"]["texto"] = "al salir de Auschwitz en 1944"
+    pr = ng.validar(falso, pieza, True)
+    check(any("Auschwitz" in p for p in pr) and any("1944" in p for p in pr), "el texto llano también se coteja con la pieza")
+    sin = json.loads(json.dumps(guion))
+    del sin["escenas"][4]["pantalla"]["texto"]
+    check(ng.validar(sin, pieza, True) != [], "una escena de texto sin `texto` es un problema")
+    tiempos = linea_de_tiempo(tipos, [2.2, 3.9, 4.8, 3.2, 2.9, 4.1, 1.2])
+    h = np_.html(guion, tiempos, duracion_total(tiempos), None)
+    check(h.count("<section") == 7 and 'class="texto"' in h and "al salir de los campos de concentración" in h,
+          "el generador pinta la escena de texto")
+    guion_js = h.split("<script>")[-1]
+    check("scale" not in guion_js.lower() and h.count("#noche") == h.replace('class="texto"', "").count("#noche"),
+          "sin escalados ni un segundo cambio de fondo")
+
+
 SECCIONES = [
     seccion_guion,
     seccion_pronuncia,
@@ -1049,6 +1076,7 @@ SECCIONES = [
     seccion_chequeos,
     seccion_candidatas,
     seccion_construir,
+    seccion_texto,
 ]
 
 

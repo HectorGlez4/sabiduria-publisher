@@ -93,6 +93,7 @@ La misma regla decide qué nombres necesitan aprobación, cuáles reescribe la v
   ciento»; nada de «40», «1.500», «99 %» ni «12º».
 - Entre 5 y 7 escenas, una frase por escena. Debe haber una `cita` y una `pregunta` como última escena;
   `tachado` solo en falsas atribuciones.
+  `texto` es una escena de texto llano (`pantalla.texto`, una frase corta): sirve para partir una frase larga en dos.
 - La `voz` y la `pantalla.texto` de la `cita` dicen `core.quote.text`, y las de la `pregunta`,
   `core.question`, palabra por palabra y en el mismo orden (en la voz se puede añadir puntuación para la
   entonación). La pantalla de la cita repite el texto exacto.

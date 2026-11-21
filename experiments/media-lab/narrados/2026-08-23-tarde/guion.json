@@ -28,12 +28,18 @@
     },
     {
       "tipo": "nombre_ano",
-      "voz": "Frankl la citó con su nombre en 1946, al salir de los campos de concentración.",
+      "voz": "Frankl la citó en 1946, como de Nietzsche.",
       "pantalla": {
         "etiqueta": "La citó",
         "nombre": "Viktor Frankl",
-        "ano": "1946",
-        "nota": "al salir de los campos"
+        "ano": "1946"
+      }
+    },
+    {
+      "tipo": "texto",
+      "voz": "Al salir de los campos de concentración.",
+      "pantalla": {
+        "texto": "al salir de los campos de concentración"
       }
     },
     {

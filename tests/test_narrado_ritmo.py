@@ -25,7 +25,14 @@ def check(cond: bool, label: str) -> None:
 
 
 def main() -> int:
-    guion = json.loads((ROOT / "experiments/media-lab/narrados/2026-08-23-tarde/guion.json").read_text(encoding="utf-8"))
+    # Guion propio de la prueba: el comiteado cambia cuando se reescribe una escena.
+    voces = [("tachado", "Esta frase no es de Viktor Frankl."),
+             ("cita", "Quien tiene un porqué para vivir soporta casi cualquier cómo."),
+             ("nombre_ano", "La escribió Friedrich Nietzsche en 1888, como una intuición."),
+             ("nombre_ano", "Frankl la citó en 1946, como de Nietzsche."),
+             ("contraste", "Una frase pensada en un escritorio y comprobada en el infierno."),
+             ("pregunta", "¿Cuál es hoy tu porqué?")]
+    guion = {"escenas": [{"tipo": t, "voz": v, "pantalla": {}} for t, v in voces]}
     tipos = [e["tipo"] for e in guion["escenas"]]
 
     print("\n1. El guion de ejemplo con frases cortas no avisa de nada")

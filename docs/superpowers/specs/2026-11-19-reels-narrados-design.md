@@ -71,7 +71,7 @@ file rendered to a 29-second 1080×1920 MP4 in 16 seconds with HyperFrames
   an ordered list of 5–7 scenes, each `{tipo, voz, pantalla}`. `voz` is the sentence
   spoken; `pantalla` is the short on-screen text.
 - Scene types (closed list, each optional except `cita` and `pregunta`; `tachado`
-  only for misattribution pieces): `tachado` (a name struck through), `cita` (word by
+  only for misattribution pieces): `tachado` (a name struck through), `texto` (one plain line, added 2026-11-21 to split long sentences), `cita` (word by
   word), `nombre_ano` (name, year, one italic line), `contraste` (two lines, paper
   turns to ink), `pregunta` (closing question, signature, "Voz sintética").
 - The agent in the routine writes the script from the piece's `core` only.

@@ -23,7 +23,7 @@ import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
-TIPOS = ("tachado", "cita", "nombre_ano", "contraste", "pregunta")
+TIPOS = ("tachado", "cita", "nombre_ano", "texto", "contraste", "pregunta")
 DISENOS = ("papel", "tinta", "siena")
 MIN_ESCENAS, MAX_ESCENAS = 5, 7
 
@@ -31,6 +31,7 @@ CAMPOS = {
     "tachado": ("etiqueta", "nombre"),
     "cita": ("texto",),
     "nombre_ano": ("etiqueta", "nombre", "ano"),
+    "texto": ("texto",),
     "contraste": ("claro", "oscuro"),
     "pregunta": ("texto",),
 }

@@ -104,6 +104,10 @@ def _marcado_contraste(i: int, p: dict, t: dict, d: dict) -> str:
             f'        <div class="grande noche-tinta" id="s{i}b">{_txt(p["oscuro"])}</div>')
 
 
+def _marcado_texto(i: int, p: dict, t: dict, d: dict) -> str:
+    return f'<div class="texto" id="s{i}a">{_txt(p["texto"])}</div>'
+
+
 def _marcado_pregunta(i: int, p: dict, t: dict, d: dict) -> str:
     return f'<div class="pregunta" id="s{i}a">{_txt(p["texto"])}</div>'
 
@@ -157,6 +161,10 @@ def _gsap_contraste(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
             f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
 
 
+def _gsap_texto(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
+    return [f'sube("#s{i}a", {_n(t["inicio"])}, 0.6);']
+
+
 def _gsap_pregunta(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0 = t["inicio"]
     return [f'sube("#s{i}a", {_n(t0)}, 0.6);',
@@ -168,6 +176,7 @@ ESCENAS = {
     "tachado": (_marcado_tachado, _gsap_tachado),
     "cita": (_marcado_cita, _gsap_cita),
     "nombre_ano": (_marcado_nombre_ano, _gsap_nombre_ano),
+    "texto": (_marcado_texto, _gsap_texto),
     "contraste": (_marcado_contraste, _gsap_contraste),
     "pregunta": (_marcado_pregunta, _gsap_pregunta),
 }
@@ -210,6 +219,7 @@ def _css(d: dict) -> str:
       .grande {{ font-size: 92px; font-weight: 600; line-height: 1.1; }}
       .ano {{ font-family: "Poppins"; font-weight: 500; font-size: 250px; line-height: 1; color: var(--etiqueta); letter-spacing: -0.03em; }}
       .nota {{ font-style: italic; font-size: 52px; line-height: 1.3; }}
+      .texto {{ font-size: 76px; font-weight: 500; line-height: 1.22; }}
       .filete {{ width: 160px; height: 4px; background: var(--filete); margin: 48px 0; transform-origin: center; }}
       .tachado {{ position: relative; display: inline-block; margin-top: 36px; }}
       .raya {{ position: absolute; left: -24px; right: -24px; top: 54%; height: 10px; background: var(--etiqueta); transform-origin: left center; }}
