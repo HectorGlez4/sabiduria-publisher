@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 21 Nov 2026 16:05:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 18:19:46 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-12-re53-reel</guid>
+      <pubDate>Fri, 13 Nov 2026 01:26:00 +0000</pubDate>
+      <description><![CDATA[Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.
+
+Hacia el año 261 antes de Cristo, en el octavo de su reinado, el emperador Ashoka conquistó el reino de Kalinga, en la costa este de la India. Las cifras las dio él mismo, talladas en roca en el llamado Edicto XIII: ciento cincuenta mil personas deportadas, cien mil muertas y muchas más muertas después. Es de las pocas veces en la historia en que un vencedor deja escrito el número de sus víctimas.
+
+Ese texto se repite por todo el imperio, del norte del actual Pakistán al sur de la India, y en Kandahar se grabó incluso en griego para que lo leyeran allí. Falta en un solo sitio: en Kalinga. En las dos rocas del territorio arrasado, Dhauli y Jaugada, el Edicto XIII no está, y su lugar lo ocupan otros textos, dirigidos a los funcionarios de la zona.
+
+Tampoco dejó de matar. En uno de sus pilares concede a los condenados a muerte tres días de plazo, no la vida. Y firmó todo aquello con un título, no con su nombre: hasta 1915, cuando un ingeniero de minas de oro llamado C. Beadon dio en Maski con la primera inscripción que decía Asoka, nadie podía afirmar con certeza quién había escrito los edictos. Reconocer en voz alta y reparar donde duele no son la misma cosa.
+
+¿A quién le falta escuchar una disculpa que ya contaste a todos los demás?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re53-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re53-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>TENOCHTITLÁN TENÍA AGUA POTABLE ENTUBADA, Y UN CAÑO DE REPUESTO, EN 1466</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -481,26 +500,6 @@ Se lee como un poema sobre la mujer. Está escrito en segunda persona, y la segu
 #SabiduriaDeBolsillo #AlfonsinaStorni #Poesia #Citas]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re55-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re55-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-03-re53-reel</guid>
-      <pubDate>Wed, 04 Nov 2026 01:26:00 +0000</pubDate>
-      <description><![CDATA["El prejuicio y el partidismo nublan la facultad crítica e impiden la investigación crítica. El resultado es que las falsedades se aceptan y se transmiten."
-— Ibn Jaldún, Al-Muqaddima (1377), Introducción
-
-Ibn Jaldún nació en Túnez el 27 de mayo de 1332. En 1375 se retiró con una tribu árabe a Qalat ibn Salama, cerca de la actual Frenda, en Argelia. Pasó allí más de tres años, y en noviembre de 1377 cerró el primer borrador de la Muqaddima: la introducción y primer libro de su historia universal.
-
-Antes de narrar un solo hecho, dedicó esa introducción a explicar por qué los relatos históricos suelen ser falsos, y fue enumerando las causas una por una. La primera de la lista es el partidismo. Si el alma recibe una información con imparcialidad, escribe, le dedica el examen que esa información merece, y su verdad o su falsedad se hace evidente; si está infectada de partidismo por una opinión o una escuela, acepta sin vacilar un instante lo que le resulta agradable.
-
-El fallo no está en el dato: está en quien lo recibe. Y es un mecanismo que se aplica primero a uno mismo, no a los demás. Ibn Jaldún murió en El Cairo el 17 de marzo de 1406, y la primera traducción completa de su libro al inglés, la de Franz Rosenthal en tres volúmenes, tardó más de cinco siglos y medio en llegar.
-
-¿Qué fue lo último que diste por cierto sin comprobarlo, porque te daba la razón?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
