@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-extra42",
+  "id": "2026-11-23-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Emma Lazarus y la placa del pedestal",
     "hook": "Los versos que todos asocian a la Estatua de la Libertad no estaban en ella el día en que se inauguró. Llegaron diecisiete años después.",
@@ -88,5 +88,12 @@
     "Que la estatua era un regalo por la ‘amistad franco-estadounidense’ o un monumento al ‘republicanismo internacional’: lo segundo es una cita de Paul Auster en Wikipedia; lo primero no apareció en las páginas leídas. No se usa.",
     "Que el pogromo de 1881 la llevó al activismo, con esas palabras: poets.org dice solo que las noticias de los pogromos rusos avivaron su interés y que en 1881 vio llegar refugiados. El cuerpo se limita al trabajo en Ward's Island que documenta el NPS.",
     "Poetry Foundation, Jewish Women's Archive, Library of Congress (Today in History) y Smithsonian Magazine: devolvieron 403; NEH, 404. No cuentan como fuentes verificadas."
+  ],
+  "publish_at": "2026-11-24T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

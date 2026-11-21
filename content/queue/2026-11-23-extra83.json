@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-09-extra42",
+  "id": "2026-11-23-extra83",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Kobayashi Issa y el mundo de rocío (1819)",
     "hook": "Issa sabía que todo pasa. El haiku que escribió al morir su hija termina justo donde esa certeza deja de servirle.",
@@ -90,5 +90,12 @@
     "Llamar a kobayashi-issa.jp ‘el museo de Issa’: es el Issa-kan de la villa de Takayama, no el Museo Conmemorativo de Issa de Shinano-machi, y su texto biográfico está adaptado de Wikipedia.",
     "Que el rocío es específicamente una imagen budista: Terebess habla de ‘una línea conocida de las escrituras’ sin nombrarla. En el cuerpo se dice solo que era una imagen conocida de lo que dura poco.",
     "La Britannica (403) y el archivo de la Universidad de Virginia (403) no se pudieron leer; el PDF de la Universidad de Shinshu sobre este haiku tampoco."
+  ],
+  "publish_at": "2026-11-24T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

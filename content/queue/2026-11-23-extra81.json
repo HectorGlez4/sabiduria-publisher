@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-extra41",
+  "id": "2026-11-23-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Marx y la undécima nota sobre Feuerbach",
     "hook": "La frase más citada de Marx no se publicó mientras vivió. Era una nota de cuaderno, y la versión que circula tiene una palabra que añadió Engels.",
@@ -22,7 +22,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "Karl Marx",
     "subtitle": "Tesis sobre Feuerbach, XI (1845)"
   },
@@ -96,5 +96,12 @@
     "La fuente exacta de la primera edición del original: la página inglesa de marxists.org dice Moscú, 1924; la alemana dice seguir una publicación de Moscú de 1932. En el cuerpo: ‘no se publicó hasta 1924’, según la nota editorial inglesa.",
     "La página de Highgate Cemetery sobre Marx: la URL devolvió una noticia sin relación. No cuenta como fuente.",
     "Usar el sujeto ‘tesis XI’: ‘tesis’ y ‘XI’ ya aparecen en otros sujetos del corpus y pueden dar falsos positivos en el control de repetición."
+  ],
+  "publish_at": "2026-11-23T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

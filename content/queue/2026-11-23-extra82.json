@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-09-tarde",
+  "id": "2026-11-23-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Stendhal y el epígrafe firmado Saint-Réal",
     "hook": "La definición más citada de la novela realista lleva una firma ajena. Quien la firma no la escribió.",
@@ -22,7 +22,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "Stendhal",
     "subtitle": "Rojo y negro, 1830"
   },
@@ -91,5 +91,12 @@
     "El título del capítulo XIII en español (‘Las medias caladas’): no se cotejó ninguna traducción publicada; no se da en el cuerpo.",
     "Que el epígrafe general ‘La vérité, l’âpre vérité’ sea de Danton: el mismo estudio lo llama fantasiosamente firmado. No se menciona en el cuerpo.",
     "El texto de la primera edición de Levavasseur: no se pudo consultar (Gallica devolvió 403 y Gutenberg 503). El cotejo es contra la edición de Michel Lévy de 1854."
+  ],
+  "publish_at": "2026-11-23T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-09-extra43",
+  "id": "2026-11-23-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Melville y la isla de Queequeg en Moby Dick",
     "hook": "La isla que según Melville no figura en ningún mapa tampoco tiene un nombre fijo dentro de su propio libro.",
@@ -86,5 +86,12 @@
     "El día exacto de la edición de Nueva York: Wikipedia da el 14 de noviembre de 1851 pero su sección de ediciones dice ‘probably’. En el cuerpo se dice ‘en noviembre’.",
     "Que la frase habla del viaje o de ‘salir a descubrir’: en el capítulo es una observación del narrador sobre la patria de Queequeg, y lo que sigue es su desengaño con la cristiandad.",
     "La dedicatoria a Hawthorne: verificada en Wikipedia, pero no se usa en el cuerpo por espacio."
+  ],
+  "publish_at": "2026-11-24T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }
