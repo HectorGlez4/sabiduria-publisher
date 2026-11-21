@@ -70,12 +70,15 @@
     "Las cifras del contrato (50 libras y mil ejemplares): aparecen en fuentes de subastas, no verificadas. No se usan.",
     "Que su autobiografía sea de «décadas después»: My Own Life está fechada en abril de 1776, treinta y siete años después. Correcto, pero si se quiere el año exacto, verificarlo antes."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-12T23:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

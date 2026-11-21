@@ -7,8 +7,29 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 14 Nov 2026 03:11:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 16:05:42 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>TENOCHTITLÁN TENÍA AGUA POTABLE ENTUBADA, Y UN CAÑO DE REPUESTO, EN 1466</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-12-re51-reel</guid>
+      <pubDate>Thu, 12 Nov 2026 20:26:00 +0000</pubDate>
+      <description><![CDATA[TENOCHTITLÁN TENÍA AGUA POTABLE ENTUBADA, Y UN CAÑO DE REPUESTO, EN 1466
+
+El acueducto de Chapultepec traía agua de manantial a la ciudad desde más de cuatro kilómetros. Eso ya es notable. Lo extraordinario es cómo estaba hecho: dos conductos de cerámica en paralelo, de unos cincuenta centímetros de diámetro cada uno.
+
+No era decoración ni exceso. Era el diseño. El agua se desviaba a un caño mientras el otro se limpiaba y se reparaba, y así la ciudad no se quedaba nunca sin agua potable. Redundancia planificada, en el siglo XV.
+
+El ingeniero de esa obra es el mismo hombre al que hoy recordamos como poeta: Nezahualcóyotl, señor de Texcoco. También diseñó el albarradón de 1449, más de dieciséis kilómetros de tierra y piedra con compuertas, para que el agua salada del lago de Texcoco no se mezclara con la dulce.
+
+Y no eran infalibles: en 1499, otra obra hidráulica inundó la ciudad entera.
+
+¿A cuántos personajes conocemos por la mitad de lo que hicieron?
+
+#SabiduriaDeBolsillo #Tenochtitlan #Mexicas #HistoriaDeMexico]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Quien tiene un porqué para vivir soporta casi cualquier cómo.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -480,26 +501,6 @@ El fallo no está en el dato: está en quien lo recibe. Y es un mecanismo que se
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Ser culto es el único modo de ser libre.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-03-re51-reel</guid>
-      <pubDate>Tue, 03 Nov 2026 20:26:00 +0000</pubDate>
-      <description><![CDATA["Ser culto es el único modo de ser libre."
-— José Martí (1853-1895)
-
-En el original esa frase no va sola. Martí escribió tres seguidas: ser bueno es el único modo de ser dichoso, ser culto es el único modo de ser libre, y en lo común de la naturaleza humana se necesita ser próspero para ser bueno. La tercera es la que nadie repite, y es la que sostiene a las otras dos.
-
-Tampoco era un discurso solemne. Salió en un mensuario neoyorquino de agricultura, comercio e industria, donde Martí publicó unos cuarenta textos entre marzo de 1883 y julio de 1884. Y proponía algo muy concreto: maestros que caminaran hasta el campo, porque el campo no podía caminar hasta la escuela.
-
-Leída entera, la idea incomoda un poco más. La cultura libera. Pero primero hay que poder comer.
-
-¿Quién tuvo que ir hasta donde estabas tú para enseñarte algo?
-
-#SabiduriaDeBolsillo #JoseMarti #Educacion #Frases]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
