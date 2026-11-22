@@ -251,3 +251,31 @@ This task is run by the controller with the user, not by a subagent. It touches 
 - Phase 3 schedule, TikTok, Facebook.
 - The phase 1 gaps listed in that plan's "Outcome", except the registry call (Task 6).
 - `lab.py sitio descartar` raises a KeyError for feed, reel and story today (`lab.py:1178-1187`); it belongs to the site loop.
+
+---
+
+## Outcome of tasks 1–7 (2026-11-22)
+
+Built on main, in the commits titled `narrado:` / `telefono:` after the plan commit. `tests/test_narrado_movil.py` 542 checks, `tests/test_narrados.py` 313, `tests/test_media_lab.py` 1 214, all passing. Everything was tested against a fake phone and sanitised dumps from the 2026-11-22 probe; nothing has run on the real phone yet. Task 8 (rehearsal, then the first real post) is still to do, with the user.
+
+Changes from this plan, decided during execution:
+
+- The share is recorded in the committed registry `narrados/registro.jsonl` (and the state file) before the tap, durably, under a non-blocking `flock` on `narrados/.registro.lock`. `subir`, `publicar` and a rebuild refuse once the quote or the piece is in the registry. The registry protects only once it is committed; the runbook says to commit it between `publicar` and `verificar`.
+- `verificar` never calls `exigir_cuenta` (its recovery force-closes Instagram). It reaches the profile by tapping the profile tab and checks the account from the dump.
+- `publicar` proves the brand account from the Threads row title on the fresh details screen, at the moment of the tap.
+- The video is deleted only after a confirmed `verificado` with no upload banner seen; every `incierto` keeps it. `limpiar` removes it, and refuses until 15 minutes after the share.
+- `verificar` confirms the +1 with one more refresh, and stops at 360 s as `incierto`.
+- A `contraste` scene cannot open a reel (the cover would hide its second line).
+- After the share the step closes the WhatsApp status sheet with «Plus tard», as the site loop does.
+- Exit code 3 means "finished, a person must look"; 1 means an unexpected error (check the state before doing anything).
+- After an `incierto` the quote stays blocked until the user deletes its registry lines by hand; the code never does.
+
+Known gaps, deferred:
+
+- `narrado_movil.py` (about 1 600 lines) and `tests/test_narrado_movil.py` (about 2 600) should be split by step before more is added; four overlapping "already shared" tuples, three "details screen" predicates and three ways of reading the active account should be unified.
+- `verificar` matches only the caption's first line; the confirmation round does not re-check the newest tile; the opening cap keys on a tile description that ignores row and column; a banner seen only in an earlier round still allows deleting after a clean `verificado`; the banner flag is module-level state.
+- `elegibles` matches on quote text only, so a shared piece whose quote was edited is offered by `elegir` and then refused by `subir`.
+- `F_FULLFSYNC` is not used on macOS; one malformed registry line blocks every quote (safe direction); multi-word tags are merged into one hashtag.
+- The text of the «recuperado del registro» problem does not mention the 15-minute wait of `limpiar`; the runbook's code block ends with an unconditional `lock-soltar` while the prose says to keep the lock after an exit 3.
+
+To settle on the phone, most likely to stop the first rehearsal first: what a playing Reel dumps like and which node holds its caption (a cut or prefixed caption makes every `verificar` `incierto`); what Instagram shows after «Partager» (audio notice, WhatsApp sheet, upload banner); whether the caption field equals the typed caption exactly; whether the AI-label switch opens a confirmation sheet; where «atrás» from the details screen goes; whether the Threads row (needed for the account check and for turning the cross-post off) is always present; pinned posts at the top of the grid; whether the gallery tile's duration is rounded or cut; whether the Facebook row scrolls fully into view; and real `verificar` wall time against the 600 s tool timeout.
