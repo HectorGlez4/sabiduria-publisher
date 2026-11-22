@@ -1675,13 +1675,15 @@ class VerificarSimulado(TelefonoSimulado):
 
     def __init__(self, *, antes: int = 4191, recuentos=(4192,), baldosa: str = REEL_1, pie_reel: str | None = None,
                  banner: int = 0, orden: bool = True, ajena: bool = False, fallos=(), inicial: str = "otra",
-                 reel_volcable: bool = True, baldosa_cuadricula: str | None = None, **kw):
+                 reel_volcable: bool = True, baldosa_cuadricula: str | None = None,
+                 banner_desde_refresco: int | None = None, **kw):
         super().__init__([""], **kw)
         self.recuento, self.recuentos = antes, list(recuentos)
         self.baldosa, self.pie_reel = baldosa, pie_reel
         self.banner, self.hoja_orden, self.ajena, self.fallos = banner, orden, ajena, fallos
         self.reel_volcable = reel_volcable
         self.baldosa_cuadricula = baldosa_cuadricula  # la descripción de la baldosa tras «Vue Grille», si cambia
+        self.banner_desde_refresco = banner_desde_refresco  # desde ese refresco (1, 2, …), la barra no se va
         self.en_cuadricula = False
         self.donde = inicial
         self.refrescos = 0
@@ -1696,6 +1698,8 @@ class VerificarSimulado(TelefonoSimulado):
             banner = self.donde == "perfil" and self.banner > 0
             if banner:
                 self.banner -= 1
+            if self.banner_desde_refresco is not None and self.refrescos >= self.banner_desde_refresco:
+                banner = True
             baldosa = self.baldosa_cuadricula if self.en_cuadricula and self.baldosa_cuadricula else self.baldosa
             return perfil_con(self.recuento, baldosa, banner=banner, hoja=self.donde == "orden")
         if self.donde == "reel":
@@ -1880,7 +1884,10 @@ def seccion_verificar() -> None:
         check(sim.reloj - 1000 >= 180 and sim.refrescos >= 3 and sim.dormido >= 3 * 15, f"espera el plazo entero, refrescando ({sim.refrescos})")
         bien_registrado(raiz, escrituras, "incierto", "recuento sin cambiar")
         check(ultima(raiz)["problemas"] == res.get("problemas"), "los problemas van también al registro")
-        check(borrados == [nombre], "recuento sin cambiar: borra el vídeo")
+        check(borrados == [] and res.get("video_conservado") is True and ultima(raiz)["video_conservado"] is True
+              and narrado.estado_movil(PIEZA, raiz).get("video_conservado") is True
+              and any("el resultado es incierto y la subida podría seguir en curso" in p for p in res["problemas"]),
+              "recuento sin cambiar («incierto»): el vídeo se conserva, en el resultado, el registro y el estado")
         check(sim.toques == [centro_de(XML_REELS, "profile_tab")] and all(
                   not any(n["resource_id"].endswith("/share_button") for n in telefono.nodos(xml or jerarquia()))
                   for _, _, xml in sim.toques_en),
@@ -1966,7 +1973,7 @@ def seccion_verificar() -> None:
               and any("último error" in p and ("TelefonoError" in p or "SinVolcado" in p) for p in res.get("problemas", [])),
               f"falla hasta el plazo: «incierto» con el último error ({res.get('problemas')})")
         bien_registrado(raiz, escrituras, "incierto", "fallo hasta el plazo")
-        check(borrados == [nombre], "fallo hasta el plazo: borra el vídeo igual")
+        check(borrados == [] and res.get("video_conservado") is True, "fallo hasta el plazo («incierto»): vídeo conservado")
 
     with tempfile.TemporaryDirectory() as d:
         raiz, sim, res, err, borrados, escrituras = correr(d, ajena=True, pie_reel=pie)
@@ -2139,6 +2146,55 @@ def seccion_verificar() -> None:
         check(err is None and res.get("estado") == "verificado" and ultima(raiz)["estado"] == "verificado"
               and narrado.estado_movil(PIEZA, raiz).get("paso") == "verificado",
               f"una captura que lanza (no TelefonoError) no impide registrar «verificado» ({err!r}, {res})")
+
+    print("\n17c. verificar: el vídeo solo se borra con «verificado» y sin la barra de subida")
+    nm._BANNER_EN_RONDA[0] = False
+    nm._vistazo(real)
+    sin = nm._BANNER_EN_RONDA[0]
+    nm._vistazo(perfil_con(4192, banner=True))
+    check(sin is False and nm._BANNER_EN_RONDA[0] is True, "_vistazo enciende la marca de la ronda con un volcado con la barra")
+    nm._BANNER_EN_RONDA[0] = False
+    with tempfile.TemporaryDirectory() as d:
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=pie, banner_desde_refresco=2)
+        check(err is None and res.get("estado") == "incierto" and borrados == [] and res.get("video_conservado") is True
+              and any("no se pudo releer" in p for p in res["problemas"])
+              and ultima(raiz)["video_conservado"] is True
+              and narrado.estado_movil(PIEZA, raiz).get("video_conservado") is True,
+              f"A1: la barra sale desde el refresco de la confirmación: «incierto» y vídeo conservado ({borrados}, "
+              f"{res.get('problemas')})")
+    with tempfile.TemporaryDirectory() as d:
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=pie, recuentos=(4191,), banner_desde_refresco=3)
+        check(err is None and res.get("estado") == "incierto" and borrados == [] and res.get("video_conservado") is True,
+              f"la barra sale tras un refresco de las últimas rondas: vídeo conservado ({borrados})")
+    with tempfile.TemporaryDirectory() as d:
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=pie)
+        check(res.get("estado") == "verificado" and borrados == [nombre] and res.get("video_conservado") is False
+              and ultima(raiz)["video_conservado"] is False
+              and narrado.estado_movil(PIEZA, raiz).get("video_conservado") is False,
+              "«verificado» sin barra en ningún volcado: el vídeo se borra y video_conservado es false en todas partes")
+    for etiqueta, kw in (("+2", {"recuentos": (4193,)}), ("otro pie", {"pie_reel": otro_pie}),
+                         ("popup todo el plazo (A5)", {"emergentes": ([emergente],)})):
+        with tempfile.TemporaryDirectory() as d:
+            kw.setdefault("pie_reel", pie)
+            raiz, sim, res, err, borrados, escrituras = correr(d, **kw)
+            check(err is None and res.get("estado") == "incierto" and borrados == [] and res.get("video_conservado")
+                  is True and ultima(raiz)["video_conservado"] is True
+                  and narrado.estado_movil(PIEZA, raiz).get("video_conservado") is True,
+                  f"«incierto» por {etiqueta}: vídeo conservado en el resultado, el registro y el estado ({borrados})")
+    for conservado in (True, False):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_compartido(d), pathlib.Path(d) / "ev"
+            estado_linea = "incierto" if conservado else "verificado"
+            narrado.registrar({**leer_registro(raiz)[0], "estado": estado_linea, "verificado_en": "2026-11-22T15:05:00+00:00",
+                               "publicaciones_antes": 4191, "publicaciones_despues": 4191, "problemas": [],
+                               "video_conservado": conservado}, raiz)
+            sim = VerificarSimulado(pie_reel=pie)
+            res, err, borrados, escrituras = correr_verificar(sim, raiz, ev)
+            estado = narrado.estado_movil(PIEZA, raiz)
+            check(err is None and res.get("estado") == estado_linea and estado.get("paso") == estado_linea
+                  and estado.get("video_conservado") is conservado and res.get("video_conservado") is conservado
+                  and sim.volcados_leidos == 0 and borrados == [] and len(leer_registro(raiz)) == 2,
+                  f"recuperación de una línea «{estado_linea}»: video_conservado={conservado} sale de la línea ({estado})")
 
     check(TODOS_VERIFICAR and all(sim.orden == [] and sim.prohibidos == [] for sim in TODOS_VERIFICAR),
           f"en ninguna prueba de verificar se cierra ni se lanza Instagram ni hay shell/adb "
