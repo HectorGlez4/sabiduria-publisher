@@ -2389,6 +2389,37 @@ def seccion_cli() -> None:
           and not rechaza("narrado", "revisar", "--pieza", PIEZA, "--veredicto", "PASS"),
           "elegir, construir y revisar siguen aceptando lo de siempre")
 
+    # Errores imprevistos, cerrojo raro y estado corrupto
+    for paso in ("publicar", "verificar"):
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d, errores={paso: RuntimeError("se rompió")}) as sim:
+            sim.poner_cerrojo("narrado")
+            codigo, datos, err = sim("narrado", paso, "--pieza", PIEZA)
+            check(codigo == 1 and datos and datos.get("ok") is False and "RuntimeError: se rompió" in datos.get("error", "")
+                  and "revisa el estado" in datos.get("error", "").lower() and "Traceback" not in err,
+                  f"{paso} con un error imprevisto: salida 1, JSON con el aviso y sin traceback ({codigo}, {datos})")
+    with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+        sim.poner_cerrojo("narrado")
+        sim.cli.lab.LOCK.write_text("{no es json", encoding="utf-8")
+        codigo, datos, err = sim("narrado", "subir", "--pieza", PIEZA)
+        check(codigo == 2 and sim.llamadas == [] and "nadie" in (datos or {}).get("error", "") and "Traceback" not in err,
+              f"cerrojo ilegible: salida 2, como «nadie» ({codigo}, {datos})")
+        sim.poner_cerrojo("narrado", hace_min=-60)
+        codigo, datos, err = sim("narrado", "subir", "--pieza", PIEZA)
+        check(codigo == 2 and sim.llamadas == [] and "hora futura" in (datos or {}).get("error", "")
+              and "abandonado" not in datos.get("error", ""),
+              f"cerrojo con hora futura: salida 2 y dice «hora futura» ({codigo}, {datos})")
+    for paso in ("publicar", "subir"):
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+            sim.poner_cerrojo("narrado")
+
+            def corrupto(pieza, raiz=None):
+                raise ValueError("movil.json ilegible")
+            sim.narrado.estado_movil = corrupto
+            sim.errores[paso] = ValueError("movil.json ilegible")
+            codigo, datos, err = sim("narrado", paso, "--pieza", PIEZA)
+            check(codigo == 2 and datos and datos.get("ok") is False and "Traceback" not in err,
+                  f"{paso} con movil.json corrupto: salida 2, sin traceback ({codigo}, {datos})")
+
 
 def seccion_guia() -> None:
     print("\n15. narrados/README.md: «Publicar desde el móvil»")
@@ -2404,6 +2435,17 @@ def seccion_guia() -> None:
     orden = ("narrado elegir", "narrado construir", "narrado revisar --pieza", "lock-tomar --dueno narrado --nuevo",
              "narrado subir", "narrado abrir", "narrado pie", "narrado publicar", "git add", "git commit",
              "narrado verificar", "git add", "git commit", "lock-soltar --dueno narrado")
+    prefijo = ".venv/bin/python experiments/media-lab/lab.py "
+    sin_prefijo = [l for l in lineas if "lab.py" in l and not l.startswith(prefijo)]
+    check(not sin_prefijo and any(l.startswith(prefijo) for l in lineas),
+          f"cada comando de lab.py lleva el intérprete y la ruta completa ({sin_prefijo})")
+    commits = [l for l in lineas if l.startswith("git commit")]
+    registro = "-- experiments/media-lab/narrados/registro.jsonl"
+    check(len(commits) == 2 and all(l.endswith(registro) and " -m " in l for l in commits),
+          f"los dos commits son «git commit -m … -- <registro>» ({commits})")
+    check("git log -1 --stat" in lineas, "tras el segundo commit se mira git log -1 --stat")
+    check(re.search(r"^El push solo cuando el usuario lo diga\.$", seccion, re.M) is not None,
+          "«el push solo cuando el usuario lo diga» va en su propia línea")
     pos, i = [], 0
     for clave in orden:
         while i < len(lineas) and clave not in lineas[i]:
@@ -2416,9 +2458,10 @@ def seccion_guia() -> None:
     check(any("registro.jsonl" in l and "git add" in l for l in lineas), "se comitea narrados/registro.jsonl")
     malas = [l for l in lineas if any(t in l for t in (";", "&&", "||", "$?"))]
     check(not malas, f"ninguna línea de los bloques de código lleva ; && || ni $? ({malas})")
-    for frase in ("descartar", "limpiar", "nunca", "3 minutos", "otra cuenta", "bloqueado"):
+    for frase in ("descartar", "limpiar", "nunca", "3 minutos", "otra cuenta", "bloqueado", "no desbloquees",
+                  "`lock-tomar` sale con 3", "movil.json", "hora futura"):
         check(frase.lower() in seccion.lower(), f"la guía menciona «{frase}»")
-    for codigo in ("| 0 ", "| 2 ", "| 3 ", "| 4 "):
+    for codigo in ("| 0 ", "| 1 ", "| 2 ", "| 3 ", "| 4 "):
         check(codigo in seccion, f"la tabla de salidas tiene la fila {codigo.strip(' |')}")
 
 

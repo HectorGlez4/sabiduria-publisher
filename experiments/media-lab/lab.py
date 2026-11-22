@@ -1109,12 +1109,15 @@ def _exigir_cerrojo_narrado() -> None:
     o `narrado_movil`. ArgumentoNoValido (salida 2) con el dueño actual, o «nadie»."""
     dueno, desde = cerrojo._leer(LOCK) if LOCK.exists() else (None, None)
     ahora_ = ahora()
-    if desde is not None and desde > ahora_ + cerrojo.MARGEN_FUTURO:
+    futuro = desde is not None and desde > ahora_ + cerrojo.MARGEN_FUTURO
+    if futuro:
         desde = None  # fecha futura: el cerrojo cuenta como abandonado, igual que en `cerrojo.tomar`
     abandonado = desde is None or ahora_ - desde >= cerrojo.ABANDONO
     if dueno != "narrado" or abandonado:
         if dueno is None:
             actual = "nadie"
+        elif futuro:
+            actual = f"{dueno} (con hora futura: reloj desajustado)"
         elif abandonado:
             actual = f"{dueno} (abandonado: más de 90 minutos)"
         else:
@@ -1150,6 +1153,13 @@ def _narrado_movil(a) -> int:
     except nm.NoPublicar as e:
         emitir({"ok": False, "tipo": "NoPublicar", "error": str(e), "motivos": e.motivos})
         return 2
+    except (ValueError, KeyError):
+        raise  # `main` los trata como negativa (salida 2)
+    except Exception as e:  # noqa: BLE001 — un error imprevisto de un paso: JSON y salida 1, no un traceback
+        emitir({"ok": False, "tipo": type(e).__name__,
+                "error": f"{type(e).__name__}: {e}. Revisa el estado antes de hacer nada más "
+                         "(movil.json y registro.jsonl); nunca repitas `publicar`"})
+        return 1
 
 
 def cmd_narrado(a) -> int:

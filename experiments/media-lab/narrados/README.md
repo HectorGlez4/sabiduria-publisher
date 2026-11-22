@@ -111,31 +111,41 @@ La misma regla decide qué nombres necesitan aprobación, cuáles reescribe la v
 
 ## Publicar desde el móvil
 
-La primera publicación real se hace con el usuario mirando. Todos los comandos salen de la raíz del repo, con
-`.venv/bin/python`, y se lanzan uno por línea: ningún `;`, `&&` ni `$?` (una ejecución desatendida se cuelga con
-comandos compuestos). Cada paso del móvil imprime JSON y su código de salida dice qué hacer.
+La primera publicación real se hace con el usuario mirando. Todos los comandos se lanzan desde la raíz del repo, uno
+por línea: ningún `;`, `&&`, `||` ni `$?` (una ejecución desatendida se cuelga con comandos compuestos). Cada paso del
+móvil imprime JSON y su código de salida dice qué hacer.
 
 ```
-experiments/media-lab/lab.py narrado elegir
-experiments/media-lab/lab.py narrado construir --pieza ID
-experiments/media-lab/lab.py narrado revisar --pieza ID --veredicto PASS
-experiments/media-lab/lab.py lock-tomar --dueno narrado --nuevo
-experiments/media-lab/lab.py narrado subir --pieza ID
-experiments/media-lab/lab.py narrado abrir --pieza ID
-experiments/media-lab/lab.py narrado pie --pieza ID
-experiments/media-lab/lab.py narrado publicar --pieza ID
+.venv/bin/python experiments/media-lab/lab.py narrado elegir
+.venv/bin/python experiments/media-lab/lab.py narrado construir --pieza ID
+.venv/bin/python experiments/media-lab/lab.py narrado revisar --pieza ID --veredicto PASS
+.venv/bin/python experiments/media-lab/lab.py lock-tomar --dueno narrado --nuevo
+.venv/bin/python experiments/media-lab/lab.py narrado subir --pieza ID
+.venv/bin/python experiments/media-lab/lab.py narrado abrir --pieza ID
+.venv/bin/python experiments/media-lab/lab.py narrado pie --pieza ID
+.venv/bin/python experiments/media-lab/lab.py narrado publicar --pieza ID
 git add experiments/media-lab/narrados/registro.jsonl
-git commit -m "narrado: registro de ID compartido"
-experiments/media-lab/lab.py narrado verificar --pieza ID
+git commit -m "narrado: registro de ID compartido" -- experiments/media-lab/narrados/registro.jsonl
+.venv/bin/python experiments/media-lab/lab.py narrado verificar --pieza ID
 git add experiments/media-lab/narrados/registro.jsonl
-git commit -m "narrado: registro de ID verificado"
-experiments/media-lab/lab.py lock-soltar --dueno narrado
+git commit -m "narrado: registro de ID verificado" -- experiments/media-lab/narrados/registro.jsonl
+git log -1 --stat
+.venv/bin/python experiments/media-lab/lab.py lock-soltar --dueno narrado
 ```
+
+El push solo cuando el usuario lo diga.
+
+Si `lock-tomar` sale con 3, para y avisa al usuario: otro ciclo tiene el teléfono. Con el móvil bloqueado o con otra
+cuenta activa de Instagram, para y avisa al usuario: no desbloquees ni cambies de cuenta.
+
+La forma `git commit -m "…" -- <registro>` comitea solo esa ruta: si `git status` muestra otros archivos en el índice
+(staged), se quedan como estaban. Tras el segundo commit, `git log -1 --stat` debe mostrar solo
+`narrados/registro.jsonl`; si muestra algo más, para y avisa al usuario.
 
 - `elegir` solo hace falta si no hay pieza escogida; `revisar --veredicto PASS` lo dice una persona (o el revisor
   visual) tras mirar `hoja.jpg` y escuchar el mp4: no se escribe por inercia.
 - Tras `publicar` la línea de `narrados/registro.jsonl` existe pero **no está comiteada** y solo protege cuando lo
-  está (y empujada): comitea ANTES de `verificar`, y otra vez después. El push, cuando lo diga el usuario. Los pasos
+  está (y empujada): comitea ANTES de `verificar`, y otra vez después. Los pasos
   del móvil no ejecutan git: otro proceso comitea en este checkout.
 - El cerrojo lo toma esta guía, nunca el paso. Todos los pasos del móvil (incluido `limpiar`) se niegan, con salida 2,
   si el cerrojo no es de `narrado` o lleva más de 90 minutos. Se suelta al terminar (también tras `descartar`).
@@ -147,6 +157,7 @@ experiments/media-lab/lab.py lock-soltar --dueno narrado
 | Código | Significa | Qué hacer |
 |---|---|---|
 | 0 | El paso hizo lo suyo (`verificar` «verificado», `descartar` sin problemas, `limpiar` con `borrado: true`; `publicar` si volvió normal) | Seguir con el siguiente comando. Tras `publicar`, 0 no prueba que saliera: lo decide `verificar` |
+| 1 | Error imprevisto (el JSON trae `error`; antes era un traceback) | No sigas: mira el estado con `cat experiments/media-lab/narrados/<pieza>/build/movil.json` y el registro, y avisa al usuario; nunca repitas `publicar` |
 | 2 | Negativa o mal uso: cerrojo ajeno, estado que no toca, `NoPublicar`, id no válido, `ValueError` | Leer `error` / `motivos`; no insistir hasta entender la causa |
 | 3 | El paso terminó pero una persona debe mirar: `verificar` «incierto», `descartar` con `problemas`, `limpiar` con `borrado: false` | Mirar el teléfono y el JSON (`problemas`); no repetir a ciegas; no publicar |
 | 4 | Pantalla inesperada, otra cuenta o error del teléfono (hay captura en la carpeta de evidencia) | Mirar la captura; resolver a mano o `descartar`; no seguir con el siguiente paso |
@@ -155,7 +166,7 @@ experiments/media-lab/lab.py lock-soltar --dueno narrado
 
 | Mensaje | Qué significa |
 |---|---|
-| «el cerrojo de la ventana no es de «narrado»: lo tiene nadie / sitio / manual / programada» | Falta `lock-tomar --dueno narrado --nuevo`, o otro ciclo tiene el teléfono. Si dice «abandonado» llevaba más de 90 minutos: se retoma con `lock-tomar --nuevo` |
+| «el cerrojo de la ventana no es de «narrado»: lo tiene nadie / sitio / manual / programada» | Falta `lock-tomar --dueno narrado --nuevo`, o otro ciclo tiene el teléfono. Si dice «abandonado» llevaba más de 90 minutos: se retoma con `lock-tomar --nuevo`. Si dice «con hora futura (reloj desajustado)», avisa al usuario |
 | «exige --pieza con un id válido» | El id lleva `/`, `..`, espacios o está vacío |
 | «publicar exige el estado «listo»» | Falta `subir`, `abrir` o `pie`, o se descartó: repetir lo que falte |
 | `NoPublicar` («ya se compartió», «ya hay un registro de esta cita», pie o vídeo distintos…) | `publicar` se negó sin tocar nada; no se vuelve a compartir. Si hay un motivo de pie o vídeo, `descartar` y repetir |
