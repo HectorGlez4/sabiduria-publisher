@@ -2475,7 +2475,9 @@ def seccion_guia() -> None:
     malas = [l for l in lineas if any(t in l for t in (";", "&&", "||", "$?"))]
     check(not malas, f"ninguna línea de los bloques de código lleva ; && || ni $? ({malas})")
     for frase in ("descartar", "limpiar", "nunca", "3 minutos", "otra cuenta", "bloqueado", "no desbloquees",
-                  "`lock-tomar` sale con 3", "movil.json", "hora futura"):
+                  "`lock-tomar` sale con 3", "movil.json", "hora futura", "timeout: 600000", "nunca en segundo plano",
+                  "no impide un segundo terminal", "### Después de un «incierto»", "Recommencer", "15 minutos",
+                  "el código nunca lo hace", "NO se suelta", "si el archivo no existe"):
         check(frase.lower() in seccion.lower(), f"la guía menciona «{frase}»")
     for codigo in ("| 0 ", "| 1 ", "| 2 ", "| 3 ", "| 4 "):
         check(codigo in seccion, f"la tabla de salidas tiene la fila {codigo.strip(' |')}")

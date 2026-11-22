@@ -145,10 +145,21 @@ La forma `git commit -m "…" -- <registro>` comitea solo esa ruta: si `git stat
 - `elegir` solo hace falta si no hay pieza escogida; `revisar --veredicto PASS` lo dice una persona (o el revisor
   visual) tras mirar `hoja.jpg` y escuchar el mp4: no se escribe por inercia.
 - Tras `publicar` la línea de `narrados/registro.jsonl` existe pero **no está comiteada** y solo protege cuando lo
-  está (y empujada): comitea ANTES de `verificar`, y otra vez después. Los pasos
+  está (y empujada): comitea ANTES de `verificar`, y otra vez después. Si `publicar` salió con 2 o con 1 y
+  `git status` muestra `narrados/registro.jsonl` modificado, comitéalo igual con la forma segura de arriba (la línea
+  bloquea la cita aunque no se pulsara). Si el archivo no existe, sáltate `git add` y el commit. Los pasos
   del móvil no ejecutan git: otro proceso comitea en este checkout.
 - El cerrojo lo toma esta guía, nunca el paso. Todos los pasos del móvil (incluido `limpiar`) se niegan, con salida 2,
-  si el cerrojo no es de `narrado` o lleva más de 90 minutos. Se suelta al terminar (también tras `descartar`).
+  si el cerrojo no es de `narrado` o lleva más de 90 minutos. Se suelta tras `verificar` con salida 0 (y tras
+  `descartar`). Tras un `verificar` con salida 3 **NO se suelta** hasta que el usuario haya mirado el teléfono: con él
+  suelto, el bucle del sitio podría cerrar Instagram a mitad de una subida.
+- El cerrojo de la ventana dice QUIÉN tiene el teléfono, no QUÉ proceso: **no impide un segundo terminal** que corra
+  los mismos pasos. Lo único que impide dos `publicar` a la vez es el cerrojo del registro
+  (`narrados/.registro.lock`, fuera de git): el segundo se niega en el acto, sin esperar, y no pulsa. Aun así, una sola
+  terminal por pieza.
+- Los pasos del móvil tardan: `publicar` 1–2 minutos (incluidos 30 s vigilando tras el toque) y `verificar` hasta
+  6 minutos (3 de plazo y un límite duro de 6). Cada paso se lanza con `timeout: 600000` y
+  **nunca en segundo plano**: si se corta durante la vigilancia, el aviso «Désactiver et partager» queda sin contestar.
 - La carpeta de evidencia (capturas y volcados) es `evidence/android/NARRADO-ID/`.
 - `publicar` no admite más opción que `--pieza`: no hay `--force` ni `--si`. Además exige que el estado sea «listo».
 
@@ -159,7 +170,7 @@ La forma `git commit -m "…" -- <registro>` comitea solo esa ruta: si `git stat
 | 0 | El paso hizo lo suyo (`verificar` «verificado», `descartar` sin problemas, `limpiar` con `borrado: true`; `publicar` si volvió normal) | Seguir con el siguiente comando. Tras `publicar`, 0 no prueba que saliera: lo decide `verificar` |
 | 1 | Error imprevisto (el JSON trae `error`; antes era un traceback) | No sigas: mira el estado con `cat experiments/media-lab/narrados/<pieza>/build/movil.json` y el registro, y avisa al usuario; nunca repitas `publicar` |
 | 2 | Negativa o mal uso: cerrojo ajeno, estado que no toca, `NoPublicar`, id no válido, `ValueError` | Leer `error` / `motivos`; no insistir hasta entender la causa |
-| 3 | El paso terminó pero una persona debe mirar: `verificar` «incierto», `descartar` con `problemas`, `limpiar` con `borrado: false` | Mirar el teléfono y el JSON (`problemas`); no repetir a ciegas; no publicar |
+| 3 | El paso terminó pero una persona debe mirar: `verificar` «incierto», `descartar` con `problemas`, `limpiar` con `borrado: false` | Mirar el teléfono y el JSON (`problemas`); no repetir a ciegas; no publicar. Tras `verificar`: ver «Después de un «incierto»» y no soltar el cerrojo |
 | 4 | Pantalla inesperada, otra cuenta o error del teléfono (hay captura en la carpeta de evidencia) | Mirar la captura; resolver a mano o `descartar`; no seguir con el siguiente paso |
 
 ### Qué dice cada negativa (salida 2)
@@ -180,13 +191,28 @@ La forma `git commit -m "…" -- <registro>` comitea solo esa ruta: si `git stat
 - Una reconstrucción tras «compartido» se rechaza: esa cita no se vuelve a subir.
 - `descartar` es la salida de cualquier paso anterior a `publicar`: deja Instagram sin el borrador y borra el vídeo
   del teléfono. Tras «compartido», «verificado» o «incierto» se niega: eso es cosa de `verificar`.
-- `limpiar` borra el vídeo de prueba que `verificar` conservó porque una subida podía seguir en curso. Córrelo solo
-  varios minutos después, sin el banner «Partage sur…» en el perfil; si no, cortaría la subida.
+- `limpiar` borra el vídeo de prueba que `verificar` conservó (todo «incierto» lo conserva, y un «verificado» si vio
+  la barra de subida). Se niega (salida 2, con los minutos que faltan) hasta 15 minutos después de compartir; córrelo
+  además solo sin el banner «Partage sur…» en el perfil: si no, cortaría la subida.
 
 ### Dónde se detiene el código a propósito
 
 - Otra cuenta activa en Instagram: se detiene (salida 4, `CuentaAjena`); no cambia de cuenta.
 - Teléfono bloqueado: se detiene; nunca lo despierta ni lo desbloquea.
 - El plazo de verificación es de 3 minutos: si en ese tiempo no hay +1 publicación y el pie correcto, `verificar`
-  devuelve «incierto» (salida 3) y conserva el vídeo.
+  devuelve «incierto» (salida 3) y conserva el vídeo. Pasados 6 minutos en total (límite duro, también a mitad de una
+  lectura) acaba «incierto» con «tiempo máximo de verificación agotado».
 - Una pantalla que no es la esperada: salida 4 con captura; nunca reintenta por su cuenta.
+
+### Después de un «incierto»
+
+La cita queda bloqueada a propósito: ningún paso la desbloquea.
+
+1. Para y avisa al usuario. No corras `publicar` ni `subir` otra vez, y no sueltes el cerrojo.
+2. El usuario mira el perfil de la marca en el teléfono: ¿salió el Reel? ¿el número de publicaciones subió en uno?
+3. Si salió: no hay nada más que hacer salvo `limpiar` más tarde (15 minutos o más después de compartir y sin el
+   banner «Partage sur…» en el perfil). Luego se suelta el cerrojo.
+4. Si NO salió: el usuario cierra el compositor a mano en el teléfono («atrás» hasta la hoja «Enregistrer le
+   brouillon ?» y luego «Recommencer»). La cita sigue bloqueada hasta que el usuario borre a propósito las líneas de
+   esa cita en `narrados/registro.jsonl` con un editor de texto y lo comitee. Esa fricción es intencionada: borrar la
+   línea a mano es la única forma, y el código nunca lo hace.

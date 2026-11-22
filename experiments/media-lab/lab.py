@@ -11,7 +11,8 @@ subcomando que borre o cancele publicaciones: eso es manual (media-lab-cancel).
 
 Códigos de salida: 0 bien; 1 fallo de generación o interrupción; 2 argumentos o
 datos no válidos (siempre con JSON {"ok": false, "tipo", "error"}); 3 cerrojo no
-tomado o no soltado; 4 pantalla inesperada o error del teléfono (tipo
+tomado o no soltado (en los pasos del móvil de `narrado`, 3 es «terminó pero una persona
+debe mirar», y un cerrojo ajeno sale con 2); 4 pantalla inesperada o error del teléfono (tipo
 `SinVolcado`, subclase de `PantallaInesperada`, cuando ningún volcado fue
 legible); 5 envío de Instagram no confirmado; 6 Codex tocó archivos no permitidos.
 """
