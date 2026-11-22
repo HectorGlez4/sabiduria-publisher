@@ -61,6 +61,13 @@ TEXTOS: dict[str, dict[str, str]] = {
         # 2026-11-07 en el bucle del sitio: nunca se comparte a los contactos, y la hoja abierta retenía la publicación)
         "statut_whatsapp": "statut WhatsApp",
         "plus_tard": "Plus tard",
+        # verificar un reel narrado desde el perfil (los mismos textos que `sitio_instagram.verificar`)
+        "subiendo": "Partage sur",  # la barra de subida («Partage sur…»), por prefijo
+        "subiendo_publicacion": "Publication sur",  # la misma barra en una foto, por prefijo
+        "vista_cuadricula": "Vue Grille",  # content-desc de la pestaña de la cuadrícula del perfil
+        "mas_recientes": "Les plus récents",  # el orden de la cuadrícula, en la hoja que abre la pestaña ya elegida
+        "baldosa_reel_par": "Reel par",  # content-desc de una baldosa de Reel en la cuadrícula, por prefijo
+        "baldosa_reel_de": "Reel de",  # la misma baldosa en la pestaña Reels, por prefijo
     },
     "threads": {
         "publicar": "Publier",  # confirmar contra el fixture de S1

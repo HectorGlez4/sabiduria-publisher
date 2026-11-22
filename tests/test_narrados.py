@@ -743,6 +743,10 @@ def seccion_candidatas() -> None:
     check("2026-02-03-d" not in ids, "fuera de candidatas se descarta")
     reg = [{"pieza": "otra", "cita": nr.clave_cita("Ya hecha antes"), "run": "x", "construido_en": "2026-01-01T00:00:00Z"}]
     check("2026-02-04-e" not in [p["id"] for p in nr.elegibles(todas, cand, reg)], "cita ya registrada se descarta")
+    incierta = [{"pieza": "2026-02-04-e", "cita": nr.clave_cita("Ya hecha antes"), "estado": "incierto",
+                 "verificado_en": "2026-11-22T15:03:00+00:00", "problemas": ["el recuento no cambió"]}]
+    check("2026-02-04-e" not in [p["id"] for p in nr.elegibles(todas, cand, incierta)],
+          "una línea «incierto» del registro también descarta la cita")
     check(ids == sorted(ids), "elegibles sale ordenado por id")
     check(nr.clave_cita("¡Él, así!") == "elasi", "clave: minúsculas, sin tildes ni signos")
 
@@ -768,6 +772,13 @@ def seccion_candidatas() -> None:
         check(len(lineas) == 2 and json.loads(lineas[0])["pieza"] == "2026-01-01-a", "registrar añade sin reescribir")
         r2 = nr.elegir(ahora=ahora, raiz=raiz)
         check(r2["pieza"] == "2026-02-01-b", "tras registrar, elegir pasa a la siguiente cita")
+        clave_a = nr.clave_cita(a["core"]["quote"]["text"])
+        nr.registrar({"pieza": "2026-01-01-a", "cita": clave_a, "estado": "compartido"}, raiz)
+        nr.registrar({"pieza": "otra", "cita": "otra", "estado": "verificado"}, raiz)
+        nr.registrar({"pieza": "2026-01-01-a", "cita": clave_a, "estado": "incierto"}, raiz)
+        ultima = nr.ya_compartida("2026-01-01-a", raiz)
+        check(ultima is not None and ultima.get("estado") == "incierto",
+              f"ya_compartida devuelve la línea más reciente de la cita ({ultima})")
         nr.registrar({"pieza": "2026-02-01-b", "cita": nr.clave_cita(b["core"]["quote"]["text"]),
                       "run": "y", "construido_en": "z"}, raiz)
         try:
