@@ -9,13 +9,15 @@ hace su parte y lo deja en el paso siguiente. Nada se adivina: si una pantalla n
 PantallaInesperada y no se toca más.
 
 Todo el teléfono pasa por `pasos.*` (los toques, por `pasos.tocar`, que no pulsa nada que publique; el único
-«Partager», por `pasos.enviar` desde `publicar`) y por funciones con nombre de `telefono`. Del bucle del sitio solo se usa `exigir_cuenta`, a través de la
-referencia de este módulo, que las pruebas sustituyen porque llama a `telefono.shell`.
+«Partager», por `pasos.enviar` desde `publicar`) y por funciones con nombre de `telefono`. Del bucle del sitio solo se usan `exigir_cuenta` (en `abrir`, antes de
+compartir; nunca en `verificar`, porque su recuperación cierra Instagram), a través de la referencia de este módulo, que
+las pruebas sustituyen porque llama a `telefono.shell`, y la excepción `CuentaAjena`.
 """
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -994,6 +996,11 @@ DESLIZAR_REFRESCO_MS = 500  # como `sitio_instagram.verificar`
 ID_PESTANA_PERFIL = "profile_tab_icon_view"
 ID_BALDOSA = "image_button"  # baldosa de la cuadrícula del perfil («Reel par…», «Photo de…»), volcado 11 del 22 nov
 PASOS_VERIFICADOS = ("verificado", "incierto")
+ID_PESTANA_PROPIA = "profile_tab"  # la pestaña «Profil» de la barra de abajo (volcado 11 del 22 nov)
+MAX_ATRAS_VERIFICAR = 3  # «atrás» seguidos, con Instagram delante, buscando la barra de abajo
+MAX_APERTURAS = 3  # veces que se abre la misma baldosa (por su descripción) con el pie distinto o ilegible
+_FIN_CORTADO = re.compile(r"\s*(?:…|\.\.\.)\s*(?:plus)?\s*$")
+LARGO_LEYENDA = 30  # un texto así de largo (o con «#») en el Reel abierto se toma por su leyenda
 
 
 def subiendo(xml: str) -> bool:
@@ -1002,10 +1009,18 @@ def subiendo(xml: str) -> bool:
     return any(n["package"] == IG and n["texto"].startswith(prefijos) for n in telefono.nodos(xml))
 
 
+def cuenta_activa_en_perfil(xml: str) -> str | None:
+    """La cuenta cuyo perfil PROPIO enseña el volcado: el texto del único `action_bar_title` de Instagram, si además
+    está «Modifier le profil» (solo sale en el perfil de la cuenta activa). None si no es un perfil propio o si hay
+    más de un título. Pura: los mismos nodos que `sitio_instagram.perfil_propio`, pero dice CUÁL es la cuenta."""
+    titulos = {n["texto"] for n in _por_id(xml, "action_bar_title") if n["texto"]}
+    propio = any(n["package"] == IG and _t("modificar_perfil") in (n["texto"], n["desc"]) for n in telefono.nodos(xml))
+    return titulos.pop() if propio and len(titulos) == 1 else None
+
+
 def _es_perfil_de_la_marca(xml: str) -> bool:
     """El perfil de la marca, con ella como cuenta activa («Modifier le profil» a la vista)."""
-    return ip.perfil_activo(xml) == CUENTA and any(
-        n["package"] == IG and _t("modificar_perfil") in (n["texto"], n["desc"]) for n in telefono.nodos(xml))
+    return cuenta_activa_en_perfil(xml) == CUENTA
 
 
 def _opcion_mas_recientes(xml: str) -> dict | None:
@@ -1058,29 +1073,72 @@ def _motivo_para_no_refrescar(xml: str, gesto: tuple[int, int, int, int]) -> str
     return ip.hoja_abierta(xml)
 
 
-def _perfil_delante() -> str:
-    """Volcado fresco del perfil de la marca. Si la hoja del orden de la cuadrícula está abierta, elige «Les plus
-    récents» (`pasos.tocar`); si es otra pantalla (el Reel abierto de una lectura que falló a medias), vuelve al perfil
-    con `exigir_cuenta`. Si la barra de subida está delante, la devuelve tal cual: ahí no se lee nada."""
+
+
+def leyenda_del_reel(xml: str, pie: str) -> str:
+    """Qué dice del pie el Reel abierto en `xml`. Pura. En este orden:
+    «coincide»: `pie_en_pantalla`;
+    «cortada»: un texto de Instagram acaba en «…» / «...» (con o sin «plus») y lo de antes es el principio (10
+    caracteres o más) de la primera línea del pie: no se puede leer entera;
+    «distinta»: hay un texto que parece una leyenda (LARGO_LEYENDA caracteres o más, o con «#») y no es esta;
+    «ausente»: ninguno de los anteriores (no hay leyenda en el volcado).
+    SUPOSICIÓN: el visor nunca se ha volcado; «parece una leyenda» es una heurística."""
+    if pie_en_pantalla(xml, pie):
+        return "coincide"
+    primera = _normal(_primera_linea(pie))
+    textos_ig = [_normal(n["texto"]) for n in telefono.nodos(xml)
+                 if n["package"] == IG and n["clase"] not in pantalla.CLASES_CAMPO and n["texto"].strip()]
+    for t in textos_ig:
+        recorte = _FIN_CORTADO.sub("", t)
+        if recorte != t and len(recorte) >= 10 and primera.startswith(recorte):
+            return "cortada"
+    if any(len(t) >= LARGO_LEYENDA or "#" in t for t in textos_ig):
+        return "distinta"
+    return "ausente"
+
+
+def _ir_al_perfil(ev: Path) -> str:
+    """Volcado fresco del perfil de la marca, llegando SOLO con toques de navegación: nunca `exigir_cuenta` (su
+    recuperación cierra Instagram, y la subida de lo que se verifica corre en segundo plano dentro de la app), nunca
+    lanzar ni reiniciar la app, nunca cambiar de cuenta. Si la barra «Partage sur…» está delante, devuelve ese volcado
+    (ahí no se lee nada). Si la hoja del orden está abierta, «Les plus récents». Si hay barra de abajo, la pestaña
+    `profile_tab` (`pasos.tocar`); si no, `pasos.atras` (solo con Instagram delante) hasta MAX_ATRAS_VERIFICAR veces.
+    El perfil propio de OTRA cuenta: `si.CuentaAjena`, sin tocar nada más."""
     pasos.exigir_listo()
     xml = pasos.volcado_fresco()
-    if subiendo(xml):
-        return xml
-    opcion = _opcion_mas_recientes(xml)
-    if opcion is not None:
-        pasos.tocar(opcion, xml)
-        reloj.dormir(2)
+    atras_usados = 0
+    for _ in range(2 * MAX_ATRAS_VERIFICAR + 4):
+        if subiendo(xml):
+            return xml
+        cuenta = cuenta_activa_en_perfil(xml)
+        if cuenta == CUENTA:
+            return xml
+        if cuenta is not None:
+            raise si.CuentaAjena(f"Instagram enseña el perfil de otra cuenta ({cuenta!r}), no el de {CUENTA}: no se "
+                                 "ha hecho nada (ni se cambia de cuenta ni se cierra la app); que lo mire una persona")
+        opcion = _opcion_mas_recientes(xml)
+        pestanas = _por_id(xml, ID_PESTANA_PROPIA)
+        if opcion is not None:
+            pasos.tocar(opcion, xml)
+            reloj.dormir(2)
+        elif len(pestanas) == 1:
+            pasos.tocar(pestanas[0], xml)
+            reloj.dormir(2)
+        elif atras_usados < MAX_ATRAS_VERIFICAR:
+            atras_usados += 1
+            pasos.atras(IG, ev, f"verificar-atras-{atras_usados}")
+        else:
+            raise PantallaInesperada(f"tras {MAX_ATRAS_VERIFICAR} «atrás» no aparece la barra con la pestaña del perfil")
+        pasos.exigir_listo()
         xml = pasos.volcado_fresco()
-    if not _es_perfil_de_la_marca(xml):
-        exigir_cuenta(CUENTA)
-        xml = pasos.esperar_que(_es_perfil_de_la_marca, f"el perfil de {CUENTA}", app="instagram")
-    return xml
+    raise PantallaInesperada(f"no se llegó al perfil de {CUENTA} con la pestaña del perfil")
 
 
-def _recuento_refrescado(xml: str) -> int:
+def _recuento_refrescado(xml: str) -> tuple[int, str]:
     """Tira del perfil hacia abajo (`ip.gesto_de_refresco` sobre `xml`, el gesto comprobado con
     `_motivo_para_no_refrescar`, con el teléfono listo) y lee el número de publicaciones, igual en varios volcados
-    frescos seguidos. El perfil abierto por enlace sale en caché: sin refrescar no sube. PantallaInesperada si no."""
+    frescos seguidos. Devuelve (recuento, volcado). El perfil abierto sale en caché: sin refrescar no sube.
+    PantallaInesperada si no."""
     gesto = ip.gesto_de_refresco(xml)
     motivo = _motivo_para_no_refrescar(xml, gesto)
     if motivo is not None:
@@ -1091,13 +1149,16 @@ def _recuento_refrescado(xml: str) -> int:
 
     def lectura(x: str) -> int | None:
         return ip.publicaciones_de_perfil(x) if _es_perfil_de_la_marca(x) and not subiendo(x) else None
-    return pasos.esperar_estable(lectura, descripcion=f"el número de publicaciones de {CUENTA} tras refrescar")[1]
+    estable, recuento = pasos.esperar_estable(lectura, descripcion=f"el número de publicaciones de {CUENTA} tras refrescar")
+    return recuento, estable
 
 
-def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[bool, str, str | None]:
-    """(encontrada, motivo, captura): la pestaña «Vue Grille» (y «Les plus récents» si sale la hoja del orden), la
-    baldosa más reciente estable en varios volcados; si es un Reel se abre con `pasos.tocar`, se lee el pie en un
-    volcado estable y se vuelve con `pasos.atras`. Una foto no se abre. Los fallos de pantalla se propagan."""
+def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[str, str, str | None]:
+    """(resultado, descripción de la baldosa, captura). La pestaña «Vue Grille» (y «Les plus récents» si sale la hoja
+    del orden), la baldosa más reciente estable en varios volcados; una foto no se abre («no_reel»). Un Reel se abre
+    con `pasos.tocar`; desde ahí nada se propaga: se lee la leyenda en un volcado estable (`leyenda_del_reel`:
+    «coincide», «distinta», o «ilegible» si está cortada, no está o el visor no se deja volcar) y, si no coincide, se
+    intenta volver con `pasos.atras` (si falla, la ronda siguiente vuelve al perfil). Lo de antes del toque se propaga."""
     pasos.exigir_listo()
     xml = pasos.volcado_fresco()
     if not _es_perfil_de_la_marca(xml):
@@ -1118,7 +1179,7 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[bool, str, str | None]:
     xml, (_, desc) = pasos.esperar_estable(baldosa, descripcion="la baldosa más reciente de la cuadrícula")
     primera = baldosa_mas_reciente(xml)
     if not _es_reel(primera):
-        return False, f"la publicación más reciente de la cuadrícula no es un Reel ({desc[:60]!r})", None
+        return "no_reel", desc, None
     pasos.tocar(primera, xml)
     reloj.dormir(3)
 
@@ -1126,43 +1187,75 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[bool, str, str | None]:
         if _es_cuadricula(x):
             return None
         return tuple((n["texto"], n["desc"]) for n in telefono.nodos(x))
-    xml, _ = pasos.esperar_estable(abierto, descripcion="el Reel abierto quieto")
-    if not pie_en_pantalla(xml, pie):
+    try:
+        xml, _ = pasos.esperar_estable(abierto, descripcion="el Reel abierto quieto")
+        leida = leyenda_del_reel(xml, pie)
+    except (PantallaInesperada, telefono.TelefonoError):
+        leida = "ausente"
+    if leida == "coincide":
+        return "coincide", desc, str(telefono.captura(ev / "verificar-1-reel.png"))
+    try:
         pasos.atras(IG, ev, "verificar-2-otro-pie")
-        return False, (f"la publicación más reciente es un Reel pero su pie no empieza por la primera línea del pie "
-                       f"({_primera_linea(pie)[:40]!r}…)"), None
-    captura = str(telefono.captura(ev / "verificar-1-reel.png"))
-    return True, "", captura
+    except (PantallaInesperada, telefono.TelefonoError):
+        pass  # la ronda siguiente vuelve al perfil con `_ir_al_perfil`
+    return ("distinta" if leida == "distinta" else "ilegible"), desc, None
+
+
+def _texto_aperturas(cuentas: dict[str, int]) -> str:
+    def veces(n: int) -> str:
+        return "1 vez" if n == 1 else f"{n} veces"
+    partes = []
+    if cuentas.get("distinta"):
+        partes.append(f"la leyenda del último Reel no coincide ({veces(cuentas['distinta'])})")
+    if cuentas.get("ilegible"):
+        partes.append(f"no se pudo leer la leyenda del último Reel ({veces(cuentas['ilegible'])})")
+    return "; ".join(partes)
 
 
 def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
     """Las lecturas de `verificar` hasta el plazo (PLAZO_VERIFICAR_S desde `inicio`), cada ESPERA_ENTRE_LECTURAS_S.
     Devuelve {"estado", "despues", "encontrada", "problemas", "captura"}. Un fallo de pantalla o de lectura no
-    acaba antes: se reintenta y, si llega el plazo, va a los problemas como último error."""
+    acaba antes: se reintenta y, si llega el plazo, va a los problemas como último error; solo `si.CuentaAjena` sale
+    en el acto. Una misma baldosa (por su descripción) se abre como mucho MAX_APERTURAS veces con la leyenda distinta o
+    ilegible; después solo se sigue leyendo el recuento (un refresco puede cambiar la baldosa más reciente)."""
     plazo, espera = PLAZO_VERIFICAR_S, ESPERA_ENTRE_LECTURAS_S
     despues: int | None = None
     motivo = None
     ultimo_error = None
+    aperturas: dict[str, dict[str, int]] = {}
     while True:
         try:
-            xml = _perfil_delante()
+            xml = _ir_al_perfil(ev)
             if subiendo(xml):
                 motivo = f"la barra de subida («{_t('subiendo')}…») seguía en pantalla"
             else:
-                despues = _recuento_refrescado(xml)
+                despues, perfil = _recuento_refrescado(xml)
                 if despues >= antes + 2:
                     return {"estado": "incierto", "despues": despues, "encontrada": False, "captura": None,
                             "problemas": [f"más de una publicación nueva: el perfil pasó de {antes} a {despues}; "
                                           "puede haberse publicado dos veces: que lo mire una persona"]}
                 if despues == antes + 1:
-                    encontrada, motivo, captura = _abrir_lo_mas_reciente(pie, ev)
-                    if encontrada:
-                        return {"estado": "verificado", "despues": despues, "encontrada": True, "captura": captura,
-                                "problemas": []}
+                    vista = baldosa_mas_reciente(perfil)
+                    vistas = aperturas.get(vista["desc"], {}) if vista is not None else {}
+                    if sum(vistas.values()) >= MAX_APERTURAS:
+                        motivo = _texto_aperturas(vistas)
+                    else:
+                        resultado, desc, captura = _abrir_lo_mas_reciente(pie, ev)
+                        if resultado == "coincide":
+                            return {"estado": "verificado", "despues": despues, "encontrada": True,
+                                    "captura": captura, "problemas": []}
+                        if resultado == "no_reel":
+                            motivo = f"la publicación más reciente de la cuadrícula no es un Reel ({desc[:60]!r})"
+                        else:
+                            cuenta = aperturas.setdefault(desc, {})
+                            cuenta[resultado] = cuenta.get(resultado, 0) + 1
+                            motivo = _texto_aperturas(cuenta)
                 else:
                     motivo = (f"el recuento no cambió ({despues}): no consta la publicación; que lo mire una persona "
                               "antes de volver a publicar" if despues == antes
                               else f"el recuento es {despues}, no {antes + 1}")
+        except si.CuentaAjena:
+            raise
         except (PantallaInesperada, telefono.TelefonoError) as e:
             ultimo_error = f"{type(e).__name__}: {e}"
         if reloj.monotonic() - inicio >= plazo:
@@ -1180,12 +1273,15 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
 
     El estado tiene que ser «compartido» («verificado» o «incierto»: ValueError("ya verificada"); otro: ValueError),
     con `publicaciones_antes` y `nombre_remoto`, y el pie se recalcula, todo antes de tocar el teléfono. Luego:
-    a. `pasos.exigir_listo()` y `exigir_cuenta` (otra cuenta o el teléfono no listo: la excepción sale tal cual, sin
-       registro y con el estado «compartido»);
+    a. `pasos.exigir_listo()` (no listo: la excepción sale tal cual, sin registro y con el estado «compartido»). Al
+       perfil de la marca se llega en cada ronda con `_ir_al_perfil`: solo toques de navegación (pestaña del perfil,
+       «atrás»), NUNCA `exigir_cuenta`, que puede cerrar Instagram y cortar la subida en segundo plano. Otra cuenta
+       en el perfil propio, en cualquier ronda: `si.CuentaAjena` tal cual, sin registro, estado «compartido»;
     b. hasta PLAZO_VERIFICAR_S desde el principio, cada ESPERA_ENTRE_LECTURAS_S: con la barra «Partage sur…» se espera;
        si no, se refresca el perfil y se lee el recuento;
     c. con `publicaciones_antes + 1`, la baldosa más reciente de «Vue Grille» («Les plus récents»), si es un Reel, se
-       abre y su pie tiene que empezar por la primera línea del pie; luego «atrás»;
+       abre y su pie tiene que empezar por la primera línea del pie; luego «atrás». La misma baldosa se abre como
+       mucho MAX_APERTURAS veces con la leyenda distinta o ilegible;
     d. «verificado» con las dos cosas; «incierto» con +2 o más (en el acto), o si llega el plazo sin las dos (el
        recuento no cambió, la baldosa no es un Reel, otro pie, o fallos de lectura: el último va a los problemas).
     Siempre que se llega a d: la línea {"pieza", "cita", "estado", "verificado_en", "publicaciones_antes",
@@ -1207,7 +1303,6 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
 
     inicio = reloj.monotonic()
     pasos.exigir_listo()
-    exigir_cuenta(CUENTA)
     lectura = _sondear(antes, pie, ev, inicio)
 
     problemas = list(lectura["problemas"])

@@ -1633,6 +1633,15 @@ def perfil_con(recuento: int, baldosa: str = REEL_1, *, banner: bool = False, ho
     return xml.replace("</node></hierarchy>", extra + "</node></hierarchy>") if extra else xml
 
 
+def perfil_ajeno() -> str:
+    """11-perfil.xml (real) como perfil PROPIO de otra cuenta: el título de la barra y los nombres, a `cuenta_ajena`."""
+    xml = fixture("11-perfil.xml")
+    titulo = 'text="sabiduriabolsillo" resource-id="com.instagram.android:id/action_bar_title"'
+    assert titulo in xml
+    return (xml.replace(titulo, titulo.replace("sabiduriabolsillo", "cuenta_ajena"))
+            .replace("Sabiduria De Bolsillo", "Cuenta Ajena"))
+
+
 def xml_reel_abierto(pie: str) -> str:
     """SINTÉTICA: el Reel abierto desde la cuadrícula, pausado y volcable. Los ids son una suposición; el código no los
     mira: lee el pie de cualquier nodo de texto de Instagram. Lleva su propio «Partager» (el avión de papel)."""
@@ -1648,42 +1657,52 @@ def xml_reel_abierto(pie: str) -> str:
 
 
 ESPERA_VERIFICAR = 15
-TOQUES_VERIFICAR: list[tuple] = []  # (x, y, volcado en pantalla) de todas las pruebas de verificar
+TOQUES_VERIFICAR: list[tuple] = []
+TODOS_VERIFICAR: list = []  # cada simulador de verificar, para mirar al final que nada cerró ni lanzó la app  # (x, y, volcado en pantalla) de todas las pruebas de verificar
 
 
 class VerificarSimulado(TelefonoSimulado):
-    """El perfil de la marca tras compartir. Antes de refrescar enseña `antes` (en caché); cada refresco (deslizar en
-    el perfil) pasa al siguiente de `recuentos` (el último se repite). Tocar «Vue Grille» abre la hoja del orden (si
-    `orden`), «Les plus récents» la cierra, la primera baldosa (si es un Reel) abre `xml_reel_abierto(pie_reel)` y
-    «atrás» vuelve al perfil. `banner` = volcados del perfil con la barra de subida; `fallos` = números de volcado
-    (1, 2, …) que dan TelefonoError. `dormir` adelanta el reloj."""
+    """El teléfono tras compartir, empezando en `inicial` («otra»: un Reel ajeno con la barra de abajo; «detalles» y
+    «editor»: fixtures 05 y 04, sin barra; «reel»: el visor). La pestaña `profile_tab` lleva al perfil propio (el de la
+    marca, o el de `cuenta_ajena` si `ajena`). En el perfil, antes de refrescar se ve `antes` (en caché); cada refresco
+    (deslizar hacia abajo) pasa al siguiente de `recuentos` (el último se repite). «Vue Grille» abre la hoja del orden
+    (si `orden`), «Les plus récents» la cierra, la primera baldosa (si es un Reel) abre `xml_reel_abierto(pie_reel)`
+    (si `reel_volcable` es False, el visor da TelefonoError en cada volcado, como un Reel en marcha) y «atrás» va
+    detalles → editor → otra, y del visor o la hoja al perfil. `banner` = volcados del perfil con la barra de subida;
+    `fallos` = números de volcado (1, 2, …) que dan TelefonoError. `dormir` adelanta el reloj."""
+
+    ATRAS = {"detalles": "editor", "editor": "otra", "reel": "perfil", "orden": "perfil"}
 
     def __init__(self, *, antes: int = 4191, recuentos=(4192,), baldosa: str = REEL_1, pie_reel: str | None = None,
-                 banner: int = 0, orden: bool = True, ajena: bool = False, fallos=(), **kw):
+                 banner: int = 0, orden: bool = True, ajena: bool = False, fallos=(), inicial: str = "otra",
+                 reel_volcable: bool = True, **kw):
         super().__init__([""], **kw)
         self.recuento, self.recuentos = antes, list(recuentos)
         self.baldosa, self.pie_reel = baldosa, pie_reel
-        self.banner, self.orden, self.ajena, self.fallos = banner, orden, ajena, fallos
-        self.donde = "otra"
-        self.cuentas: list[str] = []
+        self.banner, self.hoja_orden, self.ajena, self.fallos = banner, orden, ajena, fallos
+        self.reel_volcable = reel_volcable
+        self.donde = inicial
         self.refrescos = 0
         self.dormido = 0.0
-
-    def exigir_cuenta(self, cuenta: str) -> None:
-        from labkit import sitio_instagram as si
-        self.cuentas.append(cuenta)
-        if self.ajena:
-            raise si.CuentaAjena(f"Instagram tiene activa otra cuenta, no {cuenta}")
-        self.donde = "perfil"
+        self.aperturas = 0  # toques en la baldosa que abren el visor
+        TODOS_VERIFICAR.append(self)
 
     def pantalla(self) -> str:
         if self.donde in ("perfil", "orden"):
+            if self.ajena:
+                return perfil_ajeno()
             banner = self.donde == "perfil" and self.banner > 0
             if banner:
                 self.banner -= 1
             return perfil_con(self.recuento, self.baldosa, banner=banner, hoja=self.donde == "orden")
         if self.donde == "reel":
+            if not self.reel_volcable:
+                raise telefono.TelefonoError("uiautomator: could not get idle state (Reel en marcha, simulado)")
             return xml_reel_abierto(self.pie_reel)
+        if self.donde == "detalles":
+            return fixture("05-detalles.xml")
+        if self.donde == "editor":
+            return fixture("04-editor.xml")
         return XML_REELS
 
     def volcado(self, timeout: int = 30) -> str:
@@ -1703,17 +1722,20 @@ class VerificarSimulado(TelefonoSimulado):
         super().tocar(x, y)
         TOQUES_VERIFICAR.append((x, y, self.ultimo))
         en = [n for n in telefono.nodos(self.ultimo or jerarquia()) if dentro((x, y), n["bounds"])]
-        if self.donde == "perfil" and any(n["desc"] == "Vue Grille" for n in en):
-            self.donde = "orden" if self.orden else "perfil"
+        if any(n["resource_id"] == f"{IG}:id/profile_tab" for n in en):
+            self.donde = "perfil"
+        elif self.donde == "perfil" and any(n["desc"] == "Vue Grille" for n in en):
+            self.donde = "orden" if self.hoja_orden else "perfil"
         elif self.donde == "orden" and any(n["texto"] == "Les plus récents" for n in en):
             self.donde = "perfil"
         elif self.donde == "perfil" and any(n["desc"] == self.baldosa for n in en) and self.baldosa.startswith("Reel"):
             self.donde = "reel"
+            self.aperturas += 1
 
     def tecla(self, codigo: int) -> None:
         super().tecla(codigo)
-        if codigo == 4 and self.donde in ("reel", "orden"):
-            self.donde = "perfil"
+        if codigo == 4 and self.donde in self.ATRAS:
+            self.donde = self.ATRAS[self.donde]
 
     def dormir(self, segundos: float) -> None:
         self.dormido += segundos
@@ -1734,7 +1756,8 @@ def preparado_compartido(d: str) -> pathlib.Path:
 
 
 def correr_verificar(sim: VerificarSimulado, raiz: pathlib.Path, ev: pathlib.Path, *, borrar=True):
-    """`verificar` con el teléfono simulado, `exigir_cuenta` del simulador, el reloj que avanza al dormir y un
+    """`verificar` con el teléfono simulado, `exigir_cuenta` sustituida por una que lanza AssertionError (verificar
+    nunca la llama), el reloj que avanza al dormir y un
     escritor del estado que apunta, en cada escritura, el paso y el registro que había en el disco en ese momento.
     Devuelve (resultado, error, borrados, escrituras)."""
     from labkit import narrado, narrado_movil as nm, reloj
@@ -1749,7 +1772,9 @@ def correr_verificar(sim: VerificarSimulado, raiz: pathlib.Path, ev: pathlib.Pat
         reloj.dormir = sim.dormir  # con_telefono_simulado lo restaura al salir
         return nm.verificar(PIEZA, ev, raiz=raiz)
 
-    narrado.guardar_estado_movil, nm.exigir_cuenta = guardar, sim.exigir_cuenta
+    def exigir_cuenta_prohibida(cuenta):
+        raise AssertionError("verificar llamó a exigir_cuenta, que puede cerrar Instagram")
+    narrado.guardar_estado_movil, nm.exigir_cuenta = guardar, exigir_cuenta_prohibida
     try:
         res, err, borrados = correr_con_video(sim, accion, borrar=borrar)
     finally:
@@ -1773,6 +1798,15 @@ def seccion_verificar() -> None:
     check(nm.baldosa_mas_reciente(xml_reel_abierto(pie)) is None, "en el Reel abierto no hay baldosas")
     check(nm.pie_en_pantalla(xml_reel_abierto(pie), pie) and not nm.pie_en_pantalla(xml_reel_abierto(otro_pie), pie),
           "el pie del Reel abierto se reconoce por su primera línea, y otro no")
+    cortado = pie.splitlines()[0][:30] + "… plus"
+    check([nm.leyenda_del_reel(xml_reel_abierto(x), pie) for x in (pie, otro_pie, cortado, "")]
+          == ["coincide", "distinta", "cortada", "ausente"],
+          "la leyenda del Reel abierto: coincide, distinta, cortada por «… plus», ausente")
+    ajeno = perfil_ajeno()
+    check(nm.cuenta_activa_en_perfil(real) == "sabiduriabolsillo" and si.perfil_propio(real) is True
+          and nm.cuenta_activa_en_perfil(ajeno) == "cuenta_ajena" and si.perfil_propio(ajeno) is None
+          and nm.cuenta_activa_en_perfil(XML_REELS) is None and nm.cuenta_activa_en_perfil(xml_reel_abierto(pie)) is None,
+          "la cuenta del perfil propio: la marca en el real, cuenta_ajena en el de otra cuenta, ninguna fuera del perfil")
     check(not nm.pie_en_pantalla(real, pie), "en el perfil no hay pie")
     check(nm.subiendo(perfil_con(4191, banner=True)) and not nm.subiendo(real), "la barra «Partage sur…»")
     check(nm.PLAZO_VERIFICAR_S == 180 and nm.ESPERA_ENTRE_LECTURAS_S == 15, "plazos: 180 s en total, 15 s entre lecturas")
@@ -1800,9 +1834,15 @@ def seccion_verificar() -> None:
 
     def correr(d, **kw):
         borrar = kw.pop("borrar", True)
+        plazo = kw.pop("plazo", None)
         raiz, ev = preparado_compartido(d), pathlib.Path(d) / "ev"
         sim = VerificarSimulado(**kw)
-        res, err, borrados, escrituras = correr_verificar(sim, raiz, ev, borrar=borrar)
+        if plazo is not None:
+            nm.PLAZO_VERIFICAR_S = plazo
+        try:
+            res, err, borrados, escrituras = correr_verificar(sim, raiz, ev, borrar=borrar)
+        finally:
+            nm.PLAZO_VERIFICAR_S = 180
         return raiz, sim, res or {}, err, borrados, escrituras
 
     nombre = None
@@ -1816,9 +1856,12 @@ def seccion_verificar() -> None:
               and res["problemas"] == [] and res["captura"], f"devuelve el resultado completo ({res})")
         bien_registrado(raiz, escrituras, "verificado", "verificado")
         check(borrados == [nombre], f"verificado: borra el vídeo del teléfono ({borrados})")
-        check(sim.cuentas == ["sabiduriabolsillo"] and sim.refrescos >= 1, "exige la cuenta de la marca y refresca")
+        tab = centro_de(XML_REELS, "profile_tab")
+        check(sim.refrescos >= 1 and sim.toques[:1] == [tab], "llega al perfil con la pestaña «Profil» y refresca")
         check(4 in sim.teclas and sim.donde == "perfil", "tras leer el pie vuelve al perfil con «atrás»")
-        check(len(sim.toques) == 3, f"toca «Vue Grille», «Les plus récents» y la baldosa, nada más ({sim.toques})")
+        check(len(sim.toques) == 4 and sim.aperturas == 1,
+              f"toca «Profil», «Vue Grille», «Les plus récents» y la baldosa, nada más ({sim.toques})")
+        check(not isinstance(err, AssertionError), "nunca llama a exigir_cuenta (la sustituta lanza AssertionError)")
         check(sim.deslizamientos and all(g[3] > g[1] for g in sim.deslizamientos),
               f"solo desliza hacia abajo, para refrescar ({sim.deslizamientos})")
 
@@ -1831,8 +1874,11 @@ def seccion_verificar() -> None:
         bien_registrado(raiz, escrituras, "incierto", "recuento sin cambiar")
         check(ultima(raiz)["problemas"] == res.get("problemas"), "los problemas van también al registro")
         check(borrados == [nombre], "recuento sin cambiar: borra el vídeo")
-        check(not any(dentro(t, BARRA["share_button"]) for t in sim.toques) and sim.toques == [],
-              f"recuento sin cambiar: ni share_button ni ningún otro toque ({sim.toques})")
+        check(sim.toques == [centro_de(XML_REELS, "profile_tab")] and all(
+                  not any(n["resource_id"].endswith("/share_button") for n in telefono.nodos(xml or jerarquia()))
+                  for _, _, xml in sim.toques_en),
+              f"recuento sin cambiar: ningún toque salvo «Profil» para llegar al perfil, y ninguno con un share_button "
+              f"en pantalla ({sim.toques})")
 
     with tempfile.TemporaryDirectory() as d:
         raiz, ev = preparado_compartido(d), pathlib.Path(d) / "ev"
@@ -1851,15 +1897,43 @@ def seccion_verificar() -> None:
               f"recuento +2: «incierto» ({res})")
         check(any("más de una publicación" in p and "persona" in p for p in res.get("problemas", [])),
               f"y dice que salió más de una publicación y que lo mire una persona ({res.get('problemas')})")
-        check(sim.toques == [], f"recuento +2: no abre nada ({sim.toques})")
+        check(sim.toques == [centro_de(XML_REELS, "profile_tab")], f"recuento +2: no abre nada ({sim.toques})")
         bien_registrado(raiz, escrituras, "incierto", "recuento +2")
 
     with tempfile.TemporaryDirectory() as d:
-        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=otro_pie)
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=otro_pie, plazo=900)
         check(err is None and res.get("estado") == "incierto" and res.get("publicaciones_despues") == 4192,
               f"recuento +1 y el Reel más reciente con otro pie: «incierto» ({res})")
-        check(any("pie" in p for p in res.get("problemas", [])), f"y dice que el pie no casa ({res.get('problemas')})")
+        check(any("la leyenda del último Reel no coincide (3 veces)" in p for p in res.get("problemas", [])),
+              f"y dice que la leyenda no coincide, 3 veces ({res.get('problemas')})")
+        check(sim.aperturas == 3 and sim.refrescos > 6,
+              f"otro pie: abre la baldosa 3 veces y luego solo sigue leyendo el recuento ({sim.aperturas}, "
+              f"{sim.refrescos} refrescos)")
         bien_registrado(raiz, escrituras, "incierto", "otro pie")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=cortado, plazo=900)
+        check(err is None and res.get("estado") == "incierto" and sim.aperturas == 3 and sim.refrescos > 6
+              and any("no se pudo leer la leyenda del último Reel (3 veces)" in p for p in res.get("problemas", [])),
+              f"leyenda cortada por «… plus»: ilegible, 3 aperturas y luego solo el recuento ({sim.aperturas}, "
+              f"{res.get('problemas')})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=pie, reel_volcable=False)
+        check(err is None and res.get("estado") == "incierto" and sim.aperturas == 1
+              and any("no se pudo leer la leyenda del último Reel (1 vez)" in p for p in res.get("problemas", [])),
+              f"el visor no se deja volcar (Reel en marcha): «incierto», ilegible ({sim.aperturas}, "
+              f"{res.get('problemas')})")
+        bien_registrado(raiz, escrituras, "incierto", "visor sin volcado")
+
+    for inicial, atras in (("detalles", 2), ("editor", 1), ("reel", 0)):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, sim, res, err, borrados, escrituras = correr(d, pie_reel=pie, inicial=inicial)
+            tab = centro_de(XML_REELS if inicial != "reel" else xml_reel_abierto(pie), "profile_tab")
+            check(err is None and res.get("estado") == "verificado" and sim.teclas[:atras] == [4] * atras
+                  and sim.toques[:1] == [tab],
+                  f"empezando en «{inicial}»: {atras} «atrás» y la pestaña «Profil» hasta el perfil, «verificado» "
+                  f"({err!r}, {sim.teclas}, {sim.toques[:1]})")
 
     with tempfile.TemporaryDirectory() as d:
         raiz, sim, res, err, borrados, escrituras = correr(d, baldosa=FOTO_1, pie_reel=pie)
@@ -1889,16 +1963,18 @@ def seccion_verificar() -> None:
 
     with tempfile.TemporaryDirectory() as d:
         raiz, sim, res, err, borrados, escrituras = correr(d, ajena=True, pie_reel=pie)
-        check(isinstance(err, si.CuentaAjena), f"otra cuenta al empezar: error, no «incierto» ({err!r})")
+        check(isinstance(err, si.CuentaAjena) and "otra cuenta" in str(err) and "cuenta_ajena" in str(err)
+              and "no se ha hecho nada" in str(err), f"otra cuenta en el perfil: error, no «incierto» ({err!r})")
         check(len(leer_registro(raiz)) == 1 and escrituras == [] and borrados == []
-              and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido" and sim.toques == [],
-              "otra cuenta: ni línea nueva, ni estado, ni borrado, ni toques")
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido"
+              and sim.toques == [centro_de(XML_REELS, "profile_tab")] and sim.deslizamientos == [],
+              f"otra cuenta: ni línea nueva, ni estado, ni borrado; solo el toque de navegación ({sim.toques})")
 
     with tempfile.TemporaryDirectory() as d:
         raiz, ev = preparado_compartido(d), pathlib.Path(d) / "ev"
         sim = VerificarSimulado(pie_reel=pie, listo=False)
         res, err, borrados, escrituras = correr_verificar(sim, raiz, ev)
-        check(err is not None and sim.cuentas == [] and len(leer_registro(raiz)) == 1 and escrituras == []
+        check(err is not None and sim.toques == [] and len(leer_registro(raiz)) == 1 and escrituras == []
               and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido",
               f"teléfono bloqueado al empezar: error, nada escrito ({err!r})")
 
@@ -1910,7 +1986,7 @@ def seccion_verificar() -> None:
             res, err, borrados, escrituras = correr_verificar(sim, raiz, ev)
             ya = paso in ("verificado", "incierto")
             check(isinstance(err, ValueError) and ("ya verificada" in str(err)) == ya and sim.volcados_leidos == 0
-                  and sim.cuentas == [] and borrados == [] and escrituras == [] and len(leer_registro(raiz)) == 1,
+                  and sim.toques == [] and borrados == [] and escrituras == [] and len(leer_registro(raiz)) == 1,
                   f"en «{paso}»: ValueError antes de tocar el teléfono ({err!r})")
 
     for borrar, que in ((False, "False"), (telefono.TelefonoError("adb: sin respuesta"), "lanza")):
@@ -1921,6 +1997,9 @@ def seccion_verificar() -> None:
                   and ultima(raiz)["estado"] == "verificado",
                   f"borrar_video {que}: el resultado queda registrado y el problema se informa ({res.get('problemas')})")
 
+    check(TODOS_VERIFICAR and all(sim.orden == [] and sim.prohibidos == [] for sim in TODOS_VERIFICAR),
+          f"en ninguna prueba de verificar se cierra ni se lanza Instagram ni hay shell/adb "
+          f"({[(sim.orden, sim.prohibidos) for sim in TODOS_VERIFICAR if sim.orden or sim.prohibidos]})")
     malos = []
     for x, y, xml in TOQUES_VERIFICAR:
         for n in telefono.nodos(xml or jerarquia()):
