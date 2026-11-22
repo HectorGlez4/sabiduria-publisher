@@ -69,7 +69,7 @@
     "El texto de la cita es el de la edición de 1778, no el de la príncipe de 1726. El campo work lo indica; no presentarlo como transcripción de 1726.",
     "Que Feijoo fuera «el primer fact checker de España»: etiqueta periodística moderna (Vozpópuli), no un juicio de la bibliografía."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-13T17:26:00Z",
   "results": {
     "facebook": {
@@ -83,7 +83,7 @@
       "encolada_en": "2026-11-22T04:10:45.130400+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Saturday, 21-Nov-26 23:08:22 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 22-Nov-26 02:26:21 PST."
     }
   },
   "targets": [
@@ -91,6 +91,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-22T07:08:22.212267+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-22T10:26:21.467035+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 22-Nov-26 02:26:21 PST."
+  ]
 }
