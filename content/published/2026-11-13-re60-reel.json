@@ -2,7 +2,7 @@
   "id": "2026-11-13-re60-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Safo y el fragmento 147",
     "hook": "El verso de Safo sobre ser recordada llegó hasta nosotros porque, setecientos años después, un hombre lo citó para quejarse de que le habían quitado su estatua.",
@@ -79,6 +79,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-14T03:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1891320925377048",
+      "url": "/reel/1891320925377048/",
+      "published_at": "2026-11-22T21:57:34.132053+00:00"
+    }
+  },
   "reemision_de": "2026-09-13-extra82"
 }

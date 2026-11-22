@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 22 Nov 2026 15:53:23 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 21:57:34 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>El verso de Safo sobre ser recordada llegó hasta nosotros porque, setecientos años después, un hombre lo citó para quejarse de que le habían quitado su estatua.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-13-re60-reel</guid>
+      <pubDate>Sat, 14 Nov 2026 03:26:00 +0000</pubDate>
+      <description><![CDATA["Digo que alguien se acordará de nosotras, incluso en otro tiempo."
+— Safo de Lesbos, Fragmento 147 (Lobel-Page y Voigt)
+
+Safo nació en Lesbos hacia el 630 a.C. Los eruditos de la Biblioteca de Alejandría reunieron su obra en nueve libros, y se calcula que escribió unos diez mil versos. Hoy queda un solo poema completo y unos doscientos fragmentos. Ese poema entero, la oda a Afrodita, sobrevivió porque Dionisio de Halicarnaso lo copió íntegro hacia el año 30 a.C. para explicar cómo se ensamblaba un texto. De Safo, casi todo lo que tenemos está dentro de citas ajenas.
+
+El fragmento 147 son cuatro palabras en dialecto eolio: μνάσεσθαί τινα φαῖμι καὶ ἕτερον ἀμμέων. Están en el párrafo 47 de un discurso pronunciado en Corinto en el siglo II de nuestra era. Quien habla se queja de que los corintios le levantaron una estatua de bronce y después la retiraron, sin juicio y sin cargo alguno; dice que no le importa que la fundan, y cita a Safo, «que lo dice bellísimamente». El discurso se transmitió durante siglos con el número XXXVII del corpus de Dión de Prusa. Desde el siglo XIX los especialistas coinciden en que no es suyo, sino de Favorino de Arlés, sofista de la época de Adriano.
+
+La cadena termina de un modo que Favorino no buscaba. Perdió su estatua y perdió también su firma: mil quinientos años leyéndose su discurso bajo el nombre de otro. Lo único que quedó intacto es la frase prestada que había citado de paso. Safo apostó a que alguien se acordaría, y ganó la apuesta por una vía que no podía prever.
+
+¿Quién decide qué parte de lo que hacemos sobrevive?
+
+#SabiduriaDeBolsillo #Safo #PoesiaGriega #Memoria]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-13-re60-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-13-re60-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>EL VERSO PERSA MÁS FAMOSO SOBRE LA POESÍA QUE VENCE A LA PIEDRA ESTÁ DENTRO DE UN ELOGIO AL REY</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -473,27 +493,6 @@ Darío lo publicó en Madrid en 1905, dentro de Cantos de vida y esperanza, en l
 #SabiduriaDeBolsillo #RubenDario #Poesia #Modernismo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-05-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-05-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>MONTAIGNE SE ENCERRÓ EN UNA TORRE PARA ESTAR EN PAZ Y ENCONTRÓ LO CONTRARIO</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-04-re60-reel</guid>
-      <pubDate>Thu, 05 Nov 2026 03:26:00 +0000</pubDate>
-      <description><![CDATA[MONTAIGNE SE ENCERRÓ EN UNA TORRE PARA ESTAR EN PAZ Y ENCONTRÓ LO CONTRARIO
-
-El 28 de febrero de 1571, el día que cumplía treinta y ocho años, mandó pintar en la pared de su estudio que se retiraba de la corte y de los cargos públicos a pasar en calma lo poco que le quedara de vida. Se encerró en la torre de su castillo, con más de mil libros y con sentencias griegas y latinas pintadas en las vigas del techo.
-
-Le salió al revés, y lo dejó anotado en un capítulo brevísimo, De la ociosidad. Esperaba que su espíritu, ya sin ocupaciones, descansara en sí mismo. Lo que hizo fue producir quimeras y monstruos fantásticos, encabalgados los unos sobre los otros, sin orden ni propósito.
-
-Su reacción fue rara: empezó a registrarlos por escrito, con la esperanza de que su propio espíritu acabara avergonzándose de sí mismo.
-
-De ese registro salieron los Ensayos, en 1580. Del retiro no quedó tanto: viajando por Italia lo eligieron alcalde de Burdeos, y aceptó.
-
-¿Qué se te aparece en la cabeza cuando por fin no tienes nada que hacer?
-
-#SabiduriaDeBolsillo #Montaigne #Filosofia #Ensayo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re60-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re60-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
