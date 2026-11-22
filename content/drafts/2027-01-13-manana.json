@@ -1,0 +1,81 @@
+{
+  "id": "2027-01-13-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Ulugh Beg y el sextante enterrado de Samarcanda",
+    "hook": "EL OBSERVATORIO DE ULUGH BEG SE ARRUINÓ EN SIGLO Y MEDIO, PERO LA PALA LO ENCONTRÓ EN 1908",
+    "body": [
+      "En la década de 1420, Ulugh Beg hizo levantar en Samarcanda un observatorio con un sextante de piedra de más de treinta metros de radio, en parte enterrado en una zanja. Con ese instrumento volvieron a medir la posición de 992 estrellas fijas y las reunieron, hacia 1437, en el Zij-i Sultani. Las 27 que quedaban demasiado al sur para verse desde Samarcanda las tomaron del libro de al-Sufi, del año 964.",
+      "En octubre de 1449, cuando iba camino de La Meca, fue asesinado por orden de su propio hijo, Abd al-Latif. Las fuentes dan el 27 de octubre. El observatorio no desapareció de golpe: se fue arruinando y hacia principios del siglo XVI estaba en ruinas.",
+      "En 1908 el arqueólogo ruso Vasili Vyatkin encontró los restos del instrumento. Lo que el siglo XV midió en el cielo quedó copiado en tablas que se siguieron leyendo. Lo que construyó en piedra volvió a la luz con una pala."
+    ],
+    "question": "¿Qué dejarías hecho para que lo encuentre alguien dentro de quinientos años?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "ULUGH BEG",
+    "subtitle": "Un sextante de piedra enterrado en una zanja",
+    "body": "En Samarcanda midió de nuevo 992 estrellas y las reunió hacia 1437 en un catálogo. Su hijo mandó asesinarlo en 1449. El observatorio se arruinó con los años y en 1908 un arqueólogo encontró los restos del instrumento."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#UlughBeg",
+      "#Astronomia",
+      "#Samarcanda"
+    ],
+    "extended": [
+      "#HistoriaDeLaCiencia",
+      "#Estrellas",
+      "#Timuridas",
+      "#AsiaCentral",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Observatorio de Samarcanda construido en la década de 1420 (fecha de inicio y de término discutidas: 1420, 1424, 1428); sextante Fakhri de unos 40 m de radio (36 m en otra página), parte enterrado en una zanja; restos hallados por V. L. Vyatkin en 1908",
+      "source": "Wikipedia en inglés (Ulugh Beg Observatory)",
+      "url": "https://en.wikipedia.org/wiki/Ulugh_Beg_Observatory"
+    },
+    {
+      "claim": "Redeterminó las posiciones de 992 estrellas fijas; Zij publicado hacia 1437; 27 estrellas demasiado al sur tomadas del Libro de las estrellas fijas de al-Sufi",
+      "source": "Wikipedia en inglés (Zij-i Sultani)",
+      "url": "https://en.wikipedia.org/wiki/Zij-i_Sultani"
+    },
+    {
+      "claim": "Asesinado en 1449 por instigación de su hijo Abd al-Latif; observatorio construido a partir de 1428",
+      "source": "MacTutor, Universidad de St Andrews (Ulugh Beg)",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Ulugh_Beg/"
+    },
+    {
+      "claim": "Decapitado por orden de su hijo; catálogo de 1018 estrellas (cifra que otras fuentes discuten)",
+      "source": "Stanford University (Practical Astronomy in the Islamicate World: Ulugh Beg's Zij-i Sultani)",
+      "url": "https://web.stanford.edu/~fparviz/introduction.html"
+    },
+    {
+      "claim": "Asesinado el 27 de octubre de 1449; observatorio reducido a ruinas hacia principios del siglo XVI; restos hallados en 1908 por Vyatkin",
+      "source": "Encyclopedia.com (Ulugh Beg)",
+      "url": "https://www.encyclopedia.com/people/science-and-technology/astronomy-biographies/ulugh-beg"
+    }
+  ],
+  "do_not_use": [
+    "cifra cerrada del catálogo (circulan 1018, 994, 992 y \"alrededor de mil\"; las fuentes no concilian: se usa solo 992 medidas de nuevo más 27 de al-Sufi)",
+    "radio del sextante como dato exacto (36 m en Wikipedia Ulugh Beg frente a 40,04 m en Wikipedia Observatorio y Encyclopedia.com; se usa \"más de treinta metros\")",
+    "\"el observatorio fue destruido de inmediato tras el asesinato\" (Wikipedia Observatorio lo dice, pero Encyclopedia.com habla de ruina gradual hasta fines del XV o principios del XVI; Ali Qushji trabajó allí hasta el asesinato)",
+    "el valor del año sidéreo (6 h 10 m 8 s, error de +58 s) como dato firme: solo está en dos páginas de Wikipedia que no son independientes, y MacTutor da un valor distinto (5 h 49 m 15 s)",
+    "la sucesión de directores del observatorio (al-Kashi, Qadi Zada, Ali Qushji frente a solo Ali Qushji según MacTutor y Encyclopedia.com)",
+    "la matanza de Herat de 1448 (frase marcada \"failed verification\" en Wikipedia)",
+    "el año 1909 para el redescubrimiento (dos fuentes dan 1908; 1909 no se confirmó)",
+    "nada de esta pieza se verificó con Britannica ni con la página de la Universidad de Michigan: no abrieron (403 y error de DNS)"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

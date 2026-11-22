@@ -1,0 +1,82 @@
+{
+  "id": "2027-01-13-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Hatshepsut, Punt y las imágenes picadas",
+    "hook": "HATSHEPSUT GRABÓ SU VIAJE A PUNT EN UN MURO Y VEINTE AÑOS DESPUÉS ALGUIEN PICÓ SU IMAGEN",
+    "body": [
+      "En el año 9 de su reinado, a mediados del siglo XV a. C., Hatshepsut envió una expedición a Punt, una tierra cuya ubicación exacta aún se discute. Los relieves de su templo de Deir el-Bahari muestran la llegada de incienso, mirra, ébano, oro, animales vivos y 31 árboles de mirra con las raíces en cestas.",
+      "Hacia el final del reinado de Tutmosis III, unas dos décadas después de su muerte, se picaron sus imágenes y se rompieron sus estatuas. Durante mucho tiempo se explicó como venganza personal.",
+      "Un estudio de 2025 en la revista Antiquity sobre sus estatuas, rotas por el cuello, la cintura y las rodillas, propone otra lectura: una desactivación ritual, que no implica necesariamente hostilidad. El relieve de Punt, en cambio, sigue en el muro."
+    ],
+    "question": "¿Qué parte de lo que has hecho querrías que se conservara, y cuál no?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "HATSHEPSUT",
+    "subtitle": "El viaje a Punt sigue en el muro",
+    "body": "Grabó en su templo la expedición del año 9: incienso, ébano, oro y 31 árboles de mirra. Dos décadas después de su muerte se picaron sus imágenes. Un estudio reciente ve en eso un acto ritual, no necesariamente odio."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hatshepsut",
+      "#EgiptoAntiguo",
+      "#Punt"
+    ],
+    "extended": [
+      "#DeirElBahari",
+      "#Arqueologia",
+      "#Faraones",
+      "#Historia",
+      "#HistoriaAntigua",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Expedición a Punt en el año 9 de Hatshepsut (c. 1471 a. C. según esta fuente); 31 árboles de mirra vivos",
+      "source": "Wikipedia en inglés (Hatshepsut)",
+      "url": "https://en.wikipedia.org/wiki/Hatshepsut"
+    },
+    {
+      "claim": "Expedición del año 9, siglo XV a. C.; mercancías de Punt (incienso, mirra, ébano, oro, animales vivos); localización debatida (Cuerno de África frente a la costa occidental de Arabia)",
+      "source": "Wikipedia en inglés (Land of Punt)",
+      "url": "https://en.wikipedia.org/wiki/Land_of_Punt"
+    },
+    {
+      "claim": "Mutilación de las imágenes hacia el año 42 de Tutmosis III, unas dos décadas tras la muerte de Hatshepsut, y motivos propuestos",
+      "source": "Wikipedia en inglés (Mortuary temple of Hatshepsut)",
+      "url": "https://en.wikipedia.org/wiki/Mortuary_temple_of_Hatshepsut"
+    },
+    {
+      "claim": "Estatuas rotas por cuello, cintura y rodillas; interpretación como desactivación ritual que no implica necesariamente hostilidad",
+      "source": "Antiquity (Reconstructing the shattered visage of Queen Hatshepsut, 2025)",
+      "url": "https://antiquity.ac.uk/news/2025/reconstructing-shattered-visage-queen-hatshepsut"
+    },
+    {
+      "claim": "Reinado de Hatshepsut hacia 1473–1458 a. C. y lectura reciente del daño a sus estatuas",
+      "source": "Archaeology (Study suggests new reason for vandalism of female pharaohs' statues, 2025)",
+      "url": "https://archaeology.org/news/2025/06/25/study-suggests-new-reason-for-vandalism-of-female-pharaohs-statues/"
+    }
+  ],
+  "do_not_use": [
+    "número de barcos (cinco) y de hombres (210): solo aparecen en Wikipedia y en sitios divulgativos, sin segunda fuente de calidad",
+    "un año a. C. fijo para la expedición (circulan 1493, 1480, 1477 y c. 1471)",
+    "que las fosas halladas en Deir el-Bahari (Naville, Winlock) fueran de los árboles de mirra de Punt: es una inferencia, no un hecho; ninguna fuente leída une ambas cosas, y no se confirmó que las raíces sigan visibles",
+    "«la proscripción fue una venganza personal de Tutmosis III»: disputado (Redford habla de necesidad política; Wong de desactivación ritual) y no está claro si fue él o Amenhotep II",
+    "el año 42 de Tutmosis III como dato cerrado: solo está en Wikipedia; se usa «unas dos décadas después»",
+    "detalles físicos de la reina Ati y sus diagnósticos médicos (especulación sin resolver)",
+    "el uso del incienso como kohl (solo Wikipedia)",
+    "una ubicación firme de Punt (Eritrea, Sudán, Somalia, Etiopía o Arabia; en disputa)",
+    "esta pieza no pudo comprobarse con el Metropolitan Museum, el Museo Egipcio de El Cairo ni Britannica (403 o 429): las fuentes leídas son de segunda mano y conviene una revisión humana antes de publicar"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

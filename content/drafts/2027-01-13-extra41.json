@@ -1,0 +1,80 @@
+{
+  "id": "2027-01-13-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Emily Brontë y No coward soul is mine",
+    "hook": "EL POEMA QUE SE CREYÓ LO ÚLTIMO QUE ESCRIBIÓ EMILY BRONTË LO ESCRIBIÓ CASI TRES AÑOS ANTES DE MORIR",
+    "body": [
+      "«No coward soul is mine, / No trembler in the world's storm-troubled sphere». El 2 de enero de 1846, Emily Brontë copió esos versos en su cuaderno de poemas, hoy en la British Library. Lleva la fecha al margen, de su mano, y es el último poema del cuaderno.",
+      "Murió en diciembre de 1848. Su hermana Charlotte publicó el poema después y la idea de que fue lo último que Emily escribió se hizo corriente. El manuscrito dice otra cosa: fue el último que copió en ese cuaderno, pero ella siguió escribiendo versos después.",
+      "El poema no necesita la leyenda. Habla de un alma sin miedo en un mundo de tormentas. La traducción es nuestra."
+    ],
+    "question": "¿Qué te sostiene cuando el mundo se pone de tormenta?",
+    "quote": {
+      "text": "No hay cobardía en mi alma; no soy de los que tiemblan en la esfera azotada por las tormentas del mundo.",
+      "author": "Emily Brontë",
+      "work": "«No coward soul is mine», poema fechado el 2 de enero de 1846",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EmilyBronte",
+      "#Poesia",
+      "#Citas"
+    ],
+    "extended": [
+      "#LiteraturaInglesa",
+      "#HermanasBronte",
+      "#Victoriana",
+      "#Sabiduria",
+      "#Reflexiones",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El poema figura en el cuaderno de Emily Brontë, f. 18r, es el último del cuaderno y lleva fecha 2 de enero de 1846; cada poema trae al margen su fecha de composición",
+      "source": "British Library, Add MS 89488 (Emily Brontë's notebook of poems)",
+      "url": "https://searcharchives.bl.uk/catalog/032-004264981"
+    },
+    {
+      "claim": "Primeros versos con su puntuación y fecha 2 de enero de 1846",
+      "source": "Brontë Society, wuthering-heights.co.uk (Emily Brontë poetry)",
+      "url": "https://mail.wuthering-heights.co.uk/emily-bronte-poetry"
+    },
+    {
+      "claim": "Poema de 7 cuartetas, publicación póstuma (edición de 1850 según esta fuente), texto de la edición Shorter/Hatfield de 1923",
+      "source": "Representative Poetry Online, Universidad de Toronto",
+      "url": "https://rpo.library.utoronto.ca/content/no-coward-soul-mine"
+    },
+    {
+      "claim": "La afirmación de que fue lo último que escribió es inexacta: fue el último poema copiado en el cuaderno, pero Emily siguió escribiendo versos",
+      "source": "Wikipedia en inglés (Emily Brontë)",
+      "url": "https://en.wikipedia.org/wiki/Emily_Bront%C3%AB"
+    }
+  ],
+  "do_not_use": [
+    "que fue el último poema que escribió Emily antes de morir en diciembre de 1848 (la fecha del manuscrito, 2 de enero de 1846, lo desmiente)",
+    "una frase textual de Charlotte («the last lines my sister Emily ever wrote») atribuida al prefacio de 1850 o a una nota en el Morgan: solo se vio en un resumen de buscador, la página del Morgan dio 403; no citarla entre comillas",
+    "la fecha 25 de enero de 1846 (annebronte.org; contradice al catálogo de la British Library)",
+    "el título exacto de la edición póstuma y su año (1850 según RPO, 1851 según un blog): no se confirmó; la pieza solo dice que Charlotte lo publicó después de la muerte de Emily",
+    "que NO esté en los Poems de 1846 como dato firme (es lo esperable por la fecha, pero no se comprobó en una edición del volumen)",
+    "que fuera leído en su funeral (ninguna fuente); y que Emily Dickinson lo eligiera para el suyo (sin fuente primaria)",
+    "que pertenezca o no al ciclo Gondal: no se encontró fuente; el catálogo de la BL no lo menciona",
+    "la puntuación exacta del poema: la versión editada por Charlotte va sin comas y las modernas con ellas; se usa la de wuthering-heights.co.uk. No se pudo abrir Wikisource, Poetry Foundation ni la edición de Saskatchewan para cotejar",
+    "la traducción al español es propia"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

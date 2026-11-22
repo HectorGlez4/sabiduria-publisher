@@ -1,0 +1,78 @@
+{
+  "id": "2027-01-13-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "al-Mutanabbi y los vientos contra las naves",
+    "hook": "EL VERSO ÁRABE MÁS CITADO SOBRE LOS DESEOS FRUSTRADOS, SEGÚN SU COMENTARISTA, ES UNA BURLA A SUS ENEMIGOS",
+    "body": [
+      "El verso es el duodécimo de una casida de veinticinco, «Bima t-taʿallulu», que arranca preguntando con qué se consuela quien no tiene «ni familia ni patria, ni compañero de copa, ni copa, ni morada».",
+      "Al-Mutanabbi la compuso en su etapa en Egipto. Según su comentarista al-Wahidi, no se la recitó al gobernante Kafur. Los versos cercanos hablan de gente que lo dio por muerto, y al-Wahidi lee otros como indirectas contra Sayf al-Dawla.",
+      "Hoy se cita como consuelo ante lo que no sale. En el comentario de al-Wahidi el sentido apunta en otra dirección: los enemigos no consiguen lo que desean. La traducción es nuestra."
+    ],
+    "question": "¿Qué viento sopló en contra de lo que querías, y a qué puerto te llevó?",
+    "quote": {
+      "text": "No todo lo que el hombre desea lo alcanza: los vientos soplan en contra de lo que querrían las naves.",
+      "author": "al-Mutanabbi",
+      "work": "Diwan, casida «Bima t-taʿallulu», verso 12",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#AlMutanabbi",
+      "#PoesiaArabe",
+      "#Citas"
+    ],
+    "extended": [
+      "#Diwan",
+      "#LiteraturaArabe",
+      "#Poesia",
+      "#Sabiduria",
+      "#Reflexiones",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto árabe del verso «ما كل ما يتمنى المرء يدركه / تجري الرياح بما لا تشتهي السفن» dentro de la casida «بم التعلل لا أهل ولا وطن»",
+      "source": "Wikisource en árabe (بم التعلل لا أهل ولا وطن)",
+      "url": "https://ar.wikisource.org/wiki/بم_التعلل_لا_أهل_ولا_وطن"
+    },
+    {
+      "claim": "Casida de 25 versos, métrica al-basit, con el verso en el lugar 12 y el comentario de al-Wahidi (compuesta en Egipto y no recitada a Kafur; el sentido, que los enemigos no consiguen lo que desean)",
+      "source": "Mizan al-Arab (comentario de al-Wahidi)",
+      "url": "https://mizanalarab.com/poem/35943"
+    },
+    {
+      "claim": "Casida de 25 versos y verso en el lugar 12",
+      "source": "adab.wiki (بم التعلل لا أهل ولا وطن)",
+      "url": "https://adab.wiki/wiki/بم_التعلل_لا_أهل_ولا_وطن"
+    },
+    {
+      "claim": "Resumen escolar de la ocasión (rumores de su muerte en el consejo de Sayf al-Dawla en Alepo) y numeración del verso",
+      "source": "Alhaselah",
+      "url": "https://www.alhaselah.com/2024/01/ta3alol.html"
+    }
+  ],
+  "do_not_use": [
+    "la forma «ليس كل ما يتمنى…» que circula en Goodreads (es un error de cita, no una variante de la tradición)",
+    "que se compuso en Shiraz o para ʿAdud al-Dawla (ninguna fuente lo sostiene)",
+    "que se compuso «al partir de Fustat» o con una fecha exacta (no se confirmó en dos fuentes sólidas; solo se puede decir «etapa egipcia»)",
+    "«lo dijo cuando esperaba la gobernación» (relato sin respaldo según Arageek)",
+    "cualquier traducción inglesa atribuida a Arberry, Nicholson o Wormhoudt: no se pudo ver el texto; la traducción al español es propia",
+    "número de página de una edición impresa del Diwan: no se pudo comprobar; el verso está localizado por su lugar (12) en la casida, no por página",
+    "la lectura del verso como pura resignación sin matiz: el comentario de al-Wahidi lo entiende como alusión a los enemigos"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
