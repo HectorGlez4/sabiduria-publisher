@@ -159,15 +159,14 @@ def _gsap_nombre_ano(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
 def _gsap_contraste(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
     giro = t0 + 0.5 * dur
-    lineas = [f'sube("#s{i}a", {_n(t0)});',
-              f'tl.to("#noche", {{ opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {_n(giro)});',
-              f'tl.to("#s{i}a", {{ color: "{d["giro"]}", duration: 0.7 }}, {_n(giro)});',
-              f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
-              f'sube("#s{i}b", {_n(giro + 0.3)}, 0.6);',
-              f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
-    if i == 0:  # portada: sin entradas de texto (el giro de color y de fondo se conserva)
-        lineas = [l for l in lineas if not l.startswith("sube(")]
-    return lineas
+    # Una `contraste` no puede abrir un reel (lo impide el validador): su segunda línea es del color del
+    # fondo hasta el giro, así que no hay portada posible. En primera posición se genera como siempre.
+    return [f'sube("#s{i}a", {_n(t0)});',
+            f'tl.to("#noche", {{ opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {_n(giro)});',
+            f'tl.to("#s{i}a", {{ color: "{d["giro"]}", duration: 0.7 }}, {_n(giro)});',
+            f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
+            f'sube("#s{i}b", {_n(giro + 0.3)}, 0.6);',
+            f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
 
 
 def _gsap_texto(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:

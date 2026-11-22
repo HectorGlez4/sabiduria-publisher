@@ -92,7 +92,8 @@ La misma regla decide qué nombres necesitan aprobación, cuáles reescribe la v
   Cualquier otro número se escribe con letras: «cuarenta veces», «veintiún años», «el noventa y nueve por
   ciento»; nada de «40», «1.500», «99 %» ni «12º».
 - Entre 5 y 7 escenas, una frase por escena. Debe haber una `cita` y una `pregunta` como última escena;
-  `tachado` solo en falsas atribuciones.
+  `tachado` solo en falsas atribuciones. La primera escena es la portada del Reel: todo su texto está en
+  pantalla desde el primer fotograma, y por eso no puede ser un `contraste`.
   `texto` es una escena de texto llano (`pantalla.texto`, una frase corta): sirve para partir una frase larga en dos.
 - La `voz` y la `pantalla.texto` de la `cita` dicen `core.quote.text`, y las de la `pregunta`,
   `core.question`, palabra por palabra y en el mismo orden (en la voz se puede añadir puntuación para la

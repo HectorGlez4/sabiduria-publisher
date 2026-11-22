@@ -288,6 +288,9 @@ def validar(guion: dict, pieza: dict, es_falsa_atribucion: bool) -> list[str]:
         if tipo == "tachado" and not es_falsa_atribucion:
             problemas.append(f"escena {i}: tachado solo se usa en falsas atribuciones")
 
+    if tipos and tipos[0] == "contraste":
+        problemas.append("la primera escena no puede ser `contraste`: es la portada y su segunda línea "
+                         "no se ve hasta el cambio de fondo")
     if "cita" not in tipos:
         problemas.append("falta la escena cita")
     if "pregunta" not in tipos:

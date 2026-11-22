@@ -105,6 +105,11 @@ def seccion_guion() -> None:
     check(ng.TIPOS == ("tachado", "cita", "nombre_ano", "texto", "contraste", "pregunta"),
           "TIPOS exactos")
     check(ng.validar(ok, pieza, True) == [], "el guion del spike es válido")
+    abre_contraste = copy.deepcopy(ok)
+    abre_contraste["escenas"][0] = {"tipo": "contraste", "voz": ok["escenas"][0]["voz"],
+                                    "pantalla": {"claro": "pensada", "oscuro": "comprobada"}}
+    check(any("primera escena" in p and "contraste" in p for p in ng.validar(abre_contraste, pieza, True)),
+          "una contraste no puede abrir el reel")
     check(any("tipo" in p for p in ng.validar(con_tipo("baile"), pieza, True)), "tipo desconocido")
     check(any("cita" in p for p in ng.validar(sin("cita"), pieza, True)), "falta la escena cita")
     check(any("última" in p for p in ng.validar(pregunta_en_medio, pieza, True)),
@@ -512,10 +517,16 @@ def seccion_proyecto() -> None:
     for tipo, escena in primeras.items():
         g_p, t_p = guion_con_primera(escena)
         js_p = np_.html(g_p, t_p, 28.52, None).split("<script>", 1)[1]
+        if tipo == "contraste":  # no hay portada posible: se genera como antes (ambas líneas entran)
+            check(animado(js_p, "#s0a") and animado(js_p, "#s0b"), "contraste en primera posición: sin cambios")
+            continue
         texto0 = [l for l in js_p.splitlines() if '"#s0' in l and ("sube(" in l or "fromTo(" in l)]
         marcas = [l for l in texto0 if '"#s0f"' in l]
         check(len(texto0) == len(marcas), f"portada {tipo}: solo las marcas (filete) se animan en la escena 1 ({texto0})")
         check(not any(animado(js_p, f"#s0{x}") for x in "abye"), f"portada {tipo}: texto sin entrada")
+        html_p = np_.html(g_p, t_p, 28.52, None)
+        sec0 = html_p.split('<section id="e0"', 1)[1].split('<section id="e1"', 1)[0]
+        check("noche-tinta" not in sec0, f"portada {tipo}: ningún texto del color del fondo")
         check("#s0c .p" not in js_p and "palabras0" not in js_p, f"portada {tipo}: sin palabra a palabra")
         check(animado(js_p, "#s1b"), f"portada {tipo}: la escena 2 conserva su entrada")
     g_p, t_p = guion_con_primera(primeras["nombre_ano"])
