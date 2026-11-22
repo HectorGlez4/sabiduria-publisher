@@ -74,6 +74,7 @@ def nodos(xml: str) -> list[dict]:
                                   "clickable": el.get("clickable", "false") == "true",
                                   "enabled": el.get("enabled", "true") == "true",
                                   "checked": el.get("checked", "false") == "true",
+                                  "checkable": el.get("checkable", "false") == "true",
                                   "profundidad": nivel,
                                   "bounds": (x1, y1, x2, y2),
                                   "centro": ((x1 + x2) // 2, (y1 + y2) // 2)})

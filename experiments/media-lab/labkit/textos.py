@@ -43,6 +43,13 @@ TEXTOS: dict[str, dict[str, str]] = {
         "inicio": "Home",  # content-desc de la pestaña `feed_tab`
         "nuevo_reel": "Nouveau reel",  # título de la galería y de la pantalla de detalles
         "miniatura_video": "Miniature de la vidéo",  # en la descripción de una casilla de vídeo de la galería
+        # pantalla de detalles del reel, deslizando hacia abajo (volcados 06 y 07 de la sonda del 22 nov)
+        "audio_original": "Audio d’origine",  # a la derecha de «Renommer l’audio»: el vídeo sin música añadida
+        "mencion_ia": "Ajouter une mention\u00a0IA",  # con espacio duro, como sale en el volcado
+        "essai": "Essai",  # content-desc del Switch de fila entera (Reel de prueba)
+        "partager_aussi": "Partager aussi sur...",  # cabecera de los cruces: empieza por «partager» (envío)
+        "cruce_threads": "Threads · Public",  # subtítulo de la fila del cruce a Threads
+        "cruce_facebook": "Facebook · Public",  # subtítulo de la fila del cruce a Facebook
     },
     "threads": {
         "publicar": "Publier",  # confirmar contra el fixture de S1

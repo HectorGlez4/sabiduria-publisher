@@ -599,8 +599,373 @@ def seccion_abrir() -> None:
               f"teléfono bloqueado: se para antes de la cuenta ({err!r})")
 
 
+# ---------------------------------------------------------------- tarea 4: pie, mención IA y cruces
+
+BARRA = {"share_button": (563, 2001, 1035, 2125), "save_draft_button": (45, 2001, 518, 2125)}
+FRANJA = (251, 1961)  # bajo la barra de acción y sobre la barra de «Partager», en 05/06/07
+DY_FIN = 150  # lo que sube la lista entre 06 y la pantalla «fin», con todas las filas enteras
+
+
+def pie_de_prueba() -> str:
+    import json
+    from labkit import narrado_pie
+    return narrado_pie.pie(json.loads((ROOT / "content" / "published" / f"{PIEZA}.json").read_text(encoding="utf-8")))
+
+
+def con_pie(xml: str, pie: str) -> str:
+    """05 con el pie escrito en el campo, escapado como lo escribe uiautomator."""
+    import html
+    vacio = 'text="Écrivez une légende et ajoutez des hashtags…" resource-id="com.instagram.android:id/caption_input_text_view"'
+    assert vacio in xml
+    escrito = html.escape(pie, quote=True).replace("\n", "&#10;")
+    return xml.replace(vacio, f'text="{escrito}" resource-id="com.instagram.android:id/caption_input_text_view"')
+
+
+def pantalla_fin() -> str:
+    """06 con la lista DY_FIN px más arriba: la fila de Facebook, que en 06 queda cortada contra la barra de abajo,
+    sale entera (sus bounds de verdad: 192 px de fila, como la de Threads). Lo que sube por encima de la franja queda
+    detrás de la barra de acción, como en los volcados reales (uiautomator no recorta al padre)."""
+    import re
+    xml = fixture("06-detalles-abajo.xml")
+    for cortado, entero in (("[0,1846][1080,1961]", "[0,1846][1080,2038]"),
+                            ("[169,1946][844,1961]", "[169,1946][844,1995]"),
+                            ("[889,1897][1035,1961]", "[889,1897][1035,1987]")):
+        assert xml.count(cortado) >= 1, cortado  # la fila de Facebook son dos nodos con las mismas bounds
+        xml = xml.replace(cortado, entero)
+
+    def mover(m):
+        x1, y1, x2, y2 = map(int, m.groups())
+        if FRANJA[0] < y1 < FRANJA[1]:
+            y1, y2 = y1 - DY_FIN, y2 - DY_FIN
+        return f'bounds="[{x1},{y1}][{x2},{y2}]"'
+    return re.sub(r'bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', mover, xml)
+
+
+def con_estados(xml: str, estados: dict[str, bool], interruptores: dict[str, tuple]) -> str:
+    """Pone `checked` de cada interruptor (localizado por sus bounds en esta pantalla) según `estados`."""
+    import re
+
+    def poner(m):
+        etiqueta = m.group(0)
+        for clave, b in interruptores.items():
+            if f'bounds="[{b[0]},{b[1]}][{b[2]},{b[3]}]"' in etiqueta:
+                return re.sub(r'checked="(true|false)"', f'checked="{str(estados[clave]).lower()}"', etiqueta)
+        return etiqueta
+    return re.sub(r"<node [^>]*>", poner, xml)
+
+
+def subir_y(b: tuple, dy: int) -> tuple:
+    return (b[0], b[1] - dy, b[2], b[3] - dy)
+
+
+# Los interruptores de cada pantalla del simulador, por bounds (medidos en 05 y 06, no calculados por el código).
+INTERRUPTORES_06 = {"ia": (889, 971, 1035, 1106), "essai": (0, 1435, 1080, 1577),
+                    "threads": (889, 1705, 1035, 1795), "facebook": (889, 1897, 1035, 1961)}
+INTERRUPTORES_FIN = {"ia": subir_y((889, 971, 1035, 1106), DY_FIN), "essai": subir_y((0, 1435, 1080, 1577), DY_FIN),
+                     "threads": subir_y((889, 1705, 1035, 1795), DY_FIN),
+                     "facebook": subir_y((889, 1897, 1035, 1987), DY_FIN)}
+INTERRUPTORES_ARRIBA = {"ia": (889, 2301, 1035, 2316)}
+
+
+def dentro(punto: tuple, b: tuple) -> bool:
+    return b[0] <= punto[0] < b[2] and b[1] <= punto[1] < b[3]
+
+
+class DetallesSimulado(TelefonoSimulado):
+    """La pantalla de detalles del reel con estado: arriba (05, con el pie que se pegue) o abajo (la pantalla «fin»,
+    o 06 si `sin_fin`). Deslizar con el dedo hacia arriba baja la lista; hacia abajo la sube. Tocar el centro de un
+    interruptor lo cambia salvo que esté en `atascados`; tocar el de `dialogo_tras` abre en su lugar la hoja
+    «Enregistrer le brouillon ?» (09) y ya no se sale de ella; `reenciende` = {tocado: otro} vuelve a encender `otro`
+    al tocar `tocado`."""
+
+    def __init__(self, *, ia=False, essai=False, threads=True, facebook=True, atascados=(), dialogo_tras=None,
+                 sin_fin=False, pie_pegado=None, reenciende=None, **kw):
+        super().__init__([""], **kw)
+        self.estados = {"ia": ia, "essai": essai, "threads": threads, "facebook": facebook}
+        self.atascados, self.dialogo_tras, self.sin_fin = set(atascados), dialogo_tras, sin_fin
+        self.posicion, self.dialogo, self.pie = "arriba", False, pie_pegado
+        self.reenciende = reenciende or {}
+
+    def interruptores(self) -> dict[str, tuple]:
+        if self.posicion == "arriba":
+            return INTERRUPTORES_ARRIBA
+        return INTERRUPTORES_06 if self.sin_fin else INTERRUPTORES_FIN
+
+    def pantalla(self) -> str:
+        if self.dialogo:
+            return fixture("09-atras-2.xml")
+        if self.posicion == "arriba":
+            base = fixture("05-detalles.xml")
+            base = con_pie(base, self.pie) if self.pie is not None else base
+        else:
+            base = fixture("06-detalles-abajo.xml") if self.sin_fin else pantalla_fin()
+        return con_estados(base, self.estados, self.interruptores())
+
+    def volcado(self, timeout: int = 30) -> str:
+        self.volcados_leidos += 1
+        self.ultimo = self.pantalla()
+        return self.ultimo
+
+    def tocar(self, x: int, y: int) -> None:
+        super().tocar(x, y)
+        for clave, b in self.interruptores().items():
+            if dentro((x, y), b):
+                if clave == self.dialogo_tras:
+                    self.dialogo = True
+                elif clave not in self.atascados:
+                    self.estados[clave] = not self.estados[clave]
+                if clave in self.reenciende:
+                    self.estados[self.reenciende[clave]] = True
+
+    def deslizar(self, x1: int, y1: int, x2: int, y2: int, ms: int = 400) -> None:
+        super().deslizar(x1, y1, x2, y2, ms)
+        self.posicion = "abajo" if y2 < y1 else "arriba"
+
+    def pegar(self, texto: str, paste: bool = True) -> None:
+        super().pegar(texto, paste)
+        self.pie = texto
+
+
+def seccion_interruptores() -> None:
+    print("\n9. interruptor_de_fila y detalles_listos (puras, sobre los volcados de la sonda)")
+    from labkit import narrado_movil as nm, pantalla, textos
+
+    pie = pie_de_prueba()
+    ia = nm.interruptor_de_fila(fixture("06-detalles-abajo.xml"), "Ajouter une mention IA")
+    check(ia["bounds"] == (889, 971, 1035, 1106) and ia["checked"] is False, "interruptor de la mención IA, apagado")
+    check(nm.interruptor_de_fila(fixture("07-mencion-ia.xml"), "Ajouter une mention IA")["checked"] is True,
+          "encendido tras el toque")
+    faltan = nm.detalles_listos(fixture("06-detalles-abajo.xml"), pie)
+    check(any("IA" in f for f in faltan) and any("Threads" in f for f in faltan) and any("Facebook" in f for f in faltan),
+          f"la sonda: IA apagada y los dos cruces encendidos ({faltan})")
+    check(any("IA" in f for f in nm.detalles_listos(fixture("05-detalles.xml"), pie)), "fila fuera de pantalla = no confirmada")
+
+    arriba = nm.detalles_listos(fixture("05-detalles.xml"), pie)
+    check(any("IA" in f and "no está en pantalla" in f for f in arriba),
+          f"en 05 la fila IA es una franja bajo la barra de abajo: «no está en pantalla», no «apagada» ({arriba})")
+    check(nm.interruptor_de_fila(fixture("05-detalles.xml"), "Ajouter une mention IA")["bounds"] == (889, 2301, 1035, 2316),
+          "en 05 el interruptor existe en el volcado (y no por eso cuenta)")
+    check(" " in textos.texto("instagram", "mencion_ia") and nm.interruptor_de_fila(
+        fixture("06-detalles-abajo.xml"), "Ajouter une mention IA") is not None,
+        "la constante lleva el espacio duro del volcado y el título con espacio normal también casa")
+    essai = nm.interruptor_de_fila(fixture("06-detalles-abajo.xml"), "Essai")
+    check(essai is not None and essai["clase"].endswith(".Switch") and essai["bounds"] == (0, 1435, 1080, 1577),
+          "«Essai»: el propio Switch de la fila")
+    threads = nm.interruptor_de_fila(fixture("06-detalles-abajo.xml"), "Threads · Public")
+    facebook = nm.interruptor_de_fila(fixture("06-detalles-abajo.xml"), "Facebook · Public")
+    check(threads["bounds"] == (889, 1705, 1035, 1795) and threads["checked"]
+          and facebook["bounds"] == (889, 1897, 1035, 1961) and facebook["checked"],
+          "cruces: el `toggle` de cada fila, no el ToggleButton de fila entera que empieza en x=0")
+    check(nm.interruptor_de_fila(fixture("06-detalles-abajo.xml"), "Instagram · Public") is None, "sin esa fila: None")
+    doble = fixture("06-detalles-abajo.xml").replace('text="Facebook · Public"', 'text="Threads · Public"')
+    check(nm.interruptor_de_fila(doble, "Threads · Public") is None, "dos filas con el mismo título: None, no la primera")
+
+    check(any("Facebook" in f and "no está en pantalla" in f for f in faltan),
+          f"en 06 la fila de Facebook toca la barra de abajo (cortada): no está en pantalla ({faltan})")
+    check(not any("Essai" in f for f in faltan) and not any("audio" in f.lower() for f in faltan),
+          f"en 06 «Essai» apagado y «Audio d’origine» presente: sin queja ({faltan})")
+    check(any("pie" in f for f in faltan), "en 06 no se ve el campo del pie: el pie no está confirmado")
+
+    fin = pantalla_fin()
+    bien = con_estados(fin, {"ia": True, "essai": False, "threads": False, "facebook": False}, INTERRUPTORES_FIN)
+    arriba_ok = con_pie(fixture("05-detalles.xml"), pie)
+    check(nm.detalles_listos_en_dos(arriba_ok, bien, pie) == [], "pie arriba e interruptores abajo, todo bien: []")
+    check([f for f in nm.detalles_listos(bien, pie) if "pie" not in f] == [], "abajo solo falta el pie")
+    sin_pie = nm.detalles_listos_en_dos(fixture("05-detalles.xml"), bien, pie)
+    check(len(sin_pie) == 1 and "pie" in sin_pie[0], f"el campo con el texto de ayuda: falta el pie ({sin_pie})")
+    otro_pie = nm.detalles_listos_en_dos(con_pie(fixture("05-detalles.xml"), "Otro texto\n\n#x"), bien, pie)
+    check(len(otro_pie) == 1 and "pie" in otro_pie[0], "otro pie en el campo: falta el pie")
+    con_essai = con_estados(fin, {"ia": True, "essai": True, "threads": False, "facebook": False}, INTERRUPTORES_FIN)
+    check([f for f in nm.detalles_listos_en_dos(arriba_ok, con_essai, pie)] != []
+          and all("Essai" in f for f in nm.detalles_listos_en_dos(arriba_ok, con_essai, pie)), "«Essai» encendido: falta")
+    sin_audio = bien.replace("Audio d’origine", "Ma chanson")
+    check(any("Audio d’origine" in f for f in nm.detalles_listos_en_dos(arriba_ok, sin_audio, pie)),
+          "sin «Audio d’origine»: falta el audio original")
+    check(any("Facebook" in f for f in nm.detalles_listos_en_dos(
+        arriba_ok, con_estados(fixture("06-detalles-abajo.xml"), {"ia": True, "essai": False, "threads": False,
+                                                                   "facebook": False}, INTERRUPTORES_06), pie)),
+          "con Facebook cortado contra la barra no vale aunque marque apagado")
+    tapado = bien.replace("</hierarchy>",
+                          '<node index="9" text="" resource-id="" class="android.widget.FrameLayout" '
+                          'package="com.instagram.android" content-desc="" clickable="true" enabled="true" '
+                          'bounds="[0,1500][1080,1900]" /></hierarchy>')
+    check(any("Threads" in f for f in nm.detalles_listos_en_dos(arriba_ok, tapado, pie)),
+          "algo dibujado encima del interruptor: no cuenta")
+    check(nm.detalles_listos_en_dos(arriba_ok, fixture("09-atras-2.xml"), pie) != [], "otra pantalla abajo: no listo")
+    check(nm.detalles_listos_en_dos(fixture("09-atras-2.xml"), bien, pie) != [], "otra pantalla arriba: no listo")
+
+    print("\n10. La guardia de toques en los interruptores de 06")
+    xml = fixture("06-detalles-abajo.xml")
+    for titulo in ("Ajouter une mention IA", "Essai", "Threads · Public", "Facebook · Public"):
+        n = nm.interruptor_de_fila(xml, titulo)
+        check(pantalla.es_envio(xml, n), f"sin lista blanca, la guardia rechaza «{titulo}» (por «Partager aussi sur...»)")
+        check(not pantalla.es_envio(xml, n, ignorar=nm.PERMITIR_INTERRUPTORES),
+              f"con PERMITIR_INTERRUPTORES, «{titulo}» se puede tocar")
+    for rid, b in BARRA.items():
+        n = next(m for m in telefono.nodos(xml) if m["resource_id"] == f"{IG}:id/{rid}")
+        check(n["bounds"] == b and pantalla.es_envio(xml, n, ignorar=nm.PERMITIR_INTERRUPTORES),
+              f"con la misma lista blanca, «{rid}» sigue rechazado")
+    check(nm.PERMITIR_INTERRUPTORES == (textos.texto("instagram", "partager_aussi"),) == ("Partager aussi sur...",),
+          "la lista blanca es solo la cabecera «Partager aussi sur...»")
+
+    print("\n11. El gesto de la lista")
+    for nombre in ("05-detalles.xml", "06-detalles-abajo.xml"):
+        for sentido in ("bajar", "subir"):
+            x1, y1, x2, y2 = nm.gesto_de_lista(fixture(nombre), sentido)
+            check(all(FRANJA[0] < y < FRANJA[1] for y in (y1, y2)) and x1 == x2 and 0 <= x1 < 147
+                  and not any(dentro(p, b) for p in ((x1, y1), (x2, y2)) for b in BARRA.values())
+                  and ((y2 < y1) if sentido == "bajar" else (y2 > y1)),
+                  f"{nombre}, {sentido}: vertical, a la izquierda de los títulos y dentro de la lista ({(x1, y1, x2, y2)})")
+    from labkit.pantalla import PantallaInesperada
+    check(lanza(PantallaInesperada, nm.gesto_de_lista, fixture("09-atras-2.xml"), "bajar"),
+          "sin la barra de abajo ni la de acción no se desliza")
+
+
+def correr_pie(sim: TelefonoSimulado, raiz: pathlib.Path, ev: pathlib.Path):
+    from labkit import narrado_movil as nm
+    return con_telefono_simulado(sim, lambda: nm.poner_pie(PIEZA, ev, raiz=raiz))
+
+
+def preparado_abierto(d: str) -> pathlib.Path:
+    import shutil
+    from labkit import narrado
+    raiz = arbol(d)
+    publicadas = raiz / "content" / "published"
+    publicadas.mkdir(parents=True)
+    shutil.copy(ROOT / "content" / "published" / f"{PIEZA}.json", publicadas)
+    narrado.guardar_estado_movil(PIEZA, {"paso": "abierto", "nombre_remoto": f"{PIEZA}-12345678.mp4",
+                                         "sha256": "1" * 64, "subido_en": SUBIDO_EN, "duracion_ms": DURACION_MS,
+                                         "publicaciones_antes": 4191}, raiz)
+    return raiz
+
+
+def sin_toques_en_la_barra(sim: TelefonoSimulado) -> bool:
+    return not any(dentro(t, b) for t in sim.toques for b in BARRA.values())
+
+
+def seccion_poner_pie() -> None:
+    print("\n12. narrado_movil.poner_pie con el teléfono simulado")
+    from labkit import narrado, narrado_movil as nm
+    from labkit.pantalla import PantallaInesperada
+    from labkit.pasos import TelefonoNoListo
+
+    pie = pie_de_prueba()
+    campo = centro_de(fixture("05-detalles.xml"), "caption_input_text_view")
+    centro = {k: ((b[0] + b[2]) // 2, (b[1] + b[3]) // 2) for k, b in INTERRUPTORES_FIN.items()}
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado()
+        res, err = correr_pie(sim, raiz, ev)
+        check(err is None, f"camino feliz sin error ({err!r})")
+        check(sim.pegados == [pie], "pega el pie de la pieza, entero")
+        check(sim.toques == [campo, centro["ia"], centro["threads"], centro["facebook"]],
+              f"toca el campo, la mención IA, Threads y Facebook, en ese orden; «Essai» ya estaba apagado ({sim.toques})")
+        check(sin_toques_en_la_barra(sim), "ningún toque dentro de «Partager» ni de «Enregistrer le brouillon»")
+        check(sim.estados == {"ia": True, "essai": False, "threads": False, "facebook": False},
+              f"queda la IA encendida y lo demás apagado ({sim.estados})")
+        sim.posicion = "arriba"
+        xml_arriba = sim.pantalla()
+        sim.posicion = "abajo"
+        check(nm.detalles_listos_en_dos(xml_arriba, sim.pantalla(), pie) == [],
+              "la pantalla final del simulador da detalles_listos_en_dos == []")
+        estado = narrado.estado_movil(PIEZA, raiz)
+        check(estado.get("paso") == "listo" and estado.get("pie_sha256") == hashlib.sha256(pie.encode()).hexdigest()
+              and estado.get("publicaciones_antes") == 4191 and estado == res,
+              f"estado «listo» con pie_sha256 y lo anterior intacto ({estado})")
+        check(len(sim.capturas) == 2 and sim.capturas[0] != sim.capturas[1] and not sim.prohibidos,
+              f"dos capturas, arriba y abajo, y sin E/S real ({sim.capturas})")
+        check(sim.deslizamientos and all(FRANJA[0] < y < FRANJA[1] for g in sim.deslizamientos for y in (g[1], g[3]))
+              and not any(dentro(p, b) for g in sim.deslizamientos for p in ((g[0], g[1]), (g[2], g[3]))
+                          for b in BARRA.values()),
+              f"cada deslizamiento empieza y acaba dentro de la lista, nunca en la barra ({sim.deslizamientos})")
+        check(sim.teclas.count(4) == 0, "sin teclado abierto no se pulsa «atrás»")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(atascados={"ia"})
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada), f"la mención IA sigue apagada tras el toque: se para ({err!r})")
+        check(narrado.estado_movil(PIEZA, raiz)["paso"] == "abierto", "y el estado sigue «abierto»")
+        check(sim.toques == [campo, centro["ia"]] and sin_toques_en_la_barra(sim),
+              f"un solo toque en la IA y nada más después ({sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(atascados={"facebook"})
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada) and narrado.estado_movil(PIEZA, raiz)["paso"] == "abierto",
+              f"Facebook no se apaga: se para y sigue «abierto» ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(reenciende={"facebook": "threads"})
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada) and "Threads" in str(err)
+              and narrado.estado_movil(PIEZA, raiz)["paso"] == "abierto" and len(sim.capturas) == 1,
+              f"apagar Facebook vuelve a encender Threads: la segunda lectura lo ve y se para ({err!r})")
+        check(sim.toques == [campo, centro["ia"], centro["threads"], centro["facebook"]],
+              f"y no vuelve a tocar Threads por su cuenta ({sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(dialogo_tras="threads")
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada) and narrado.estado_movil(PIEZA, raiz)["paso"] == "abierto",
+              f"tras tocar Threads sale una hoja: se para ({err!r})")
+        check(sim.toques == [campo, centro["ia"], centro["threads"]] and sim.teclas == [],
+              f"y no toca nada más ni intenta cerrarla con «atrás» ({sim.toques}, {sim.teclas})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(ia=True, essai=True, threads=False, facebook=False)
+        res, err = correr_pie(sim, raiz, ev)
+        check(err is None and sim.toques == [campo, centro["essai"]],
+              f"«Essai» encendido se apaga y lo que ya está bien no se toca ({err!r}, {sim.toques})")
+        check(sim.estados == {"ia": True, "essai": False, "threads": False, "facebook": False}, "queda todo bien")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(sin_fin=True)
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada) and sim.toques == [campo],
+              f"la fila de Facebook nunca sale entera: se para sin tocar ningún interruptor ({err!r}, {sim.toques})")
+        check(0 < len(sim.deslizamientos) <= nm.MAX_DESLIZAMIENTOS,
+              f"con un tope de deslizamientos ({len(sim.deslizamientos)})")
+        check(narrado.estado_movil(PIEZA, raiz)["paso"] == "abierto", "el estado sigue «abierto»")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": "subido"}, raiz)
+        sim = DetallesSimulado()
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, ValueError) and sim.volcados_leidos == 0 and sim.toques == [],
+              f"sin «abierto»: ValueError sin tocar el teléfono ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(listo=False)
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, TelefonoNoListo) and sim.toques == [] and sim.pegados == [],
+              f"teléfono bloqueado: se para antes de nada ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado()
+        sim.dialogo = True
+        res, err = correr_pie(sim, raiz, ev)
+        check(isinstance(err, PantallaInesperada) and sim.toques == [] and sim.pegados == [],
+              f"no está en los detalles del reel: no se escribe nada ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_abierto(d), pathlib.Path(d) / "ev"
+        sim = DetallesSimulado(teclado=(True, False))
+        res, err = correr_pie(sim, raiz, ev)
+        check(err is None and sim.teclas == [4], f"con el teclado abierto tras pegar, un «atrás» y sigue ({err!r}, {sim.teclas})")
+
+
 SECCIONES = [seccion_puras, seccion_subir, seccion_borrar, seccion_pie, seccion_apto_y_estado, seccion_miniatura,
-             seccion_subir_paso, seccion_abrir]
+             seccion_subir_paso, seccion_abrir, seccion_interruptores, seccion_poner_pie]
 
 
 def main() -> int:
