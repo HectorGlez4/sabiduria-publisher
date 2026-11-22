@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-11-extra41",
+  "id": "2026-11-24-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "el Inca Garcilaso y el mundo que es uno solo (1609)",
     "hook": "Un mestizo del Cuzco le explicó a Europa, en 1609, que el «Nuevo Mundo» solo era nuevo para ella.",
@@ -22,7 +22,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream",
+    "variant": "gold",
     "title": "Inca Garcilaso de la Vega",
     "subtitle": "Comentarios Reales, libro I, capítulo I (1609)"
   },
@@ -83,5 +83,12 @@
     "Que el pasaje sobre haber nacido en la zona tórrida está en el capítulo I: se leyó en el libro primero, pero no se comprobó en qué capítulo. En el cuerpo: ‘en ese mismo libro’.",
     "Presentar la frase como una proclama de igualdad entre pueblos o de ‘mestizaje’: en su contexto es una respuesta a una duda cosmográfica (si hay uno o muchos mundos). La lectura del último párrafo es de la página y se apoya solo en quién la escribe.",
     "Cervantes Virtual (403), BNE (403), Brown/John Carter Brown Library (404), Gutenberg (503), Google Books (pantalla de consentimiento), el diccionario biográfico de la RAH (redirige a la portada) y el PDF del Museo Garcilaso (ilegible): no cuentan como fuentes verificadas."
+  ],
+  "publish_at": "2026-11-24T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

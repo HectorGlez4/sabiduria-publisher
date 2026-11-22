@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-extra43",
+  "id": "2026-11-24-extra85",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Thomas Gray y la ignorancia dichosa de Eton",
     "hook": "«La ignorancia es una dicha» se repite como refrán. En el poema de donde sale no elogia al ignorante: habla de unos niños que juegan.",
@@ -74,5 +74,12 @@
     "La lista completa de males de los versos 62-90 (Ambición, Pobreza, ‘slow-consuming Age’, ‘painful family of Death’): salió de un resumen automático de la página, no de texto leído. El cuerpo solo nombra lo leído hasta el verso 61.",
     "Que escribió la oda en Stoke Poges: solo en resumen automático. No se da el lugar.",
     "Poetry Foundation (403), British Library (404) y poets.org (404): no cuentan como fuentes verificadas."
+  ],
+  "publish_at": "2026-11-25T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

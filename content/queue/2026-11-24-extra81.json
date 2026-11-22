@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-11-tarde",
+  "id": "2026-11-24-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Abigail Adams y la carta del 31 de marzo de 1776",
     "hook": "En 1776 una mujer pidió por carta a un legislador que no olvidara a las mujeres. Él le contestó que no podía sino reírse.",
@@ -90,5 +90,12 @@
     "La frase de UMBC ‘As to Declarations of Independency, be patient’ al comienzo de la respuesta de John: solo aparece en esa transcripción, no en Hanover ni en Dickinson. No se cita.",
     "Presentar la respuesta de John Adams como puro desprecio o como broma cariñosa: las fuentes leídas dan el texto, no su tono. El cuerpo cita las frases y no las interpreta.",
     "founders.archives.gov, masshist.org, amrevmuseum.org, pressbooks.pub y digitalcommonwealth.org: no se pudieron leer (202 vacío, conexión rechazada, 403, bloqueo anti-bot). El texto se cotejó en cinco transcripciones que coinciden palabra por palabra."
+  ],
+  "publish_at": "2026-11-24T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

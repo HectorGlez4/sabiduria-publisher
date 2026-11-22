@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-12-tarde",
+  "id": "2026-11-24-extra84",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Bentham y la pregunta de si pueden sufrir (1789)",
     "hook": "En 1789 un jurista inglés cambió la pregunta. No importaba si los animales razonan o hablan. Importaba otra cosa.",
@@ -80,5 +80,12 @@
     "‘El día llegará’: el original dice ‘The day may come’. Es una posibilidad, no un anuncio.",
     "La edición corregida de 1823 como año de la frase: solo Econlib la menciona y no se comprobó si el pasaje cambió entre ediciones. La ficha da 1780 y 1789, en los que coinciden tres fuentes.",
     "iep.utm.edu (error 500) y la página del capítulo XVII en Econlib (no se abrió; se leyó la del XVI, que da los datos de publicación): no cuentan como fuentes del texto de la cita."
+  ],
+  "publish_at": "2026-11-25T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }
