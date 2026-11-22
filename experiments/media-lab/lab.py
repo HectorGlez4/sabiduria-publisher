@@ -1099,9 +1099,64 @@ def _ya_en_produccion(citas: list[dict]) -> set[str]:
     return {c["slug"] for c in citas if c.get("texto") and c["texto"][:60] in textos_pub}
 
 
+PASOS_NARRADO_MOVIL = ("subir", "abrir", "pie", "publicar", "verificar", "descartar", "limpiar")
+SALIDA_REVISAR = 3  # el paso terminó pero una persona debe mirar
+
+
+def _exigir_cerrojo_narrado() -> None:
+    """Todo paso de teléfono de un narrado exige el cerrojo de la ventana en manos de `narrado` y no abandonado.
+    Nunca lo toma: eso lo hace la guía (`lock-tomar --dueno narrado --nuevo`). Se llama ANTES de tocar el teléfono
+    o `narrado_movil`. ArgumentoNoValido (salida 2) con el dueño actual, o «nadie»."""
+    dueno, desde = cerrojo._leer(LOCK) if LOCK.exists() else (None, None)
+    ahora_ = ahora()
+    if desde is not None and desde > ahora_ + cerrojo.MARGEN_FUTURO:
+        desde = None  # fecha futura: el cerrojo cuenta como abandonado, igual que en `cerrojo.tomar`
+    abandonado = desde is None or ahora_ - desde >= cerrojo.ABANDONO
+    if dueno != "narrado" or abandonado:
+        if dueno is None:
+            actual = "nadie"
+        elif abandonado:
+            actual = f"{dueno} (abandonado: más de 90 minutos)"
+        else:
+            actual = dueno
+        raise ArgumentoNoValido(
+            f"el cerrojo de la ventana no es de «narrado»: lo tiene {actual}. "
+            "Toma el cerrojo con `lock-tomar --dueno narrado --nuevo` antes de cualquier paso del móvil")
+
+
+def _narrado_movil(a) -> int:
+    """`narrado subir|abrir|pie|publicar|verificar|descartar|limpiar --pieza ID`: un paso del móvil por llamada.
+    Salidas: 0 el paso hizo lo suyo; 2 negativa o mal uso; 3 terminó pero una persona debe mirar (`verificar`
+    «incierto», `descartar` con problemas, `limpiar` sin borrar); 4 pantalla inesperada (con captura)."""
+    from labkit import narrado as nr, narrado_movil as nm
+    _exigir(bool(a.pieza) and bool(_NOMBRE.fullmatch(a.pieza)) and ".." not in a.pieza,
+            f"{a.paso} exige --pieza con un id válido (letras, dígitos, punto, guion y guion bajo; sin «..»)")
+    _exigir_cerrojo_narrado()
+    if a.paso == "publicar":
+        # Duplica a propósito la comprobación de `publicar`: no se llega al teléfono sin el estado «listo».
+        paso = nr.estado_movil(a.pieza).get("paso")
+        _exigir(paso == "listo", f"publicar exige el estado «listo» y el móvil de {a.pieza} está en {paso!r}")
+    ev = _evidencia(f"NARRADO-{a.pieza}")
+    ev.mkdir(parents=True, exist_ok=True)
+    pasos = {"subir": nm.subir, "abrir": nm.abrir, "pie": nm.poner_pie, "publicar": nm.publicar,
+             "verificar": nm.verificar, "descartar": nm.descartar,
+             "limpiar": lambda pieza, evid: nm.limpiar(pieza, evid)}
+    codigos = {"verificar": lambda r: 0 if r.get("estado") == "verificado" else SALIDA_REVISAR,
+               "descartar": lambda r: SALIDA_REVISAR if r.get("problemas") else 0,
+               "limpiar": lambda r: 0 if r.get("borrado") is True else SALIDA_REVISAR}
+    try:
+        return _paso_telefono(ev, f"narrado-{a.paso}-inesperada", lambda: pasos[a.paso](a.pieza, ev),
+                              codigos.get(a.paso, lambda r: 0))
+    except nm.NoPublicar as e:
+        emitir({"ok": False, "tipo": "NoPublicar", "error": str(e), "motivos": e.motivos})
+        return 2
+
+
 def cmd_narrado(a) -> int:
     """Reel narrado, un paso por llamada: elegir la pieza, construir el mp4 o anotar el veredicto visual."""
     from labkit import narrado as nr
+    if a.paso in PASOS_NARRADO_MOVIL:
+        return _narrado_movil(a)
     if a.paso == "elegir":
         try:
             emitir({"ok": True, **nr.elegir()})
@@ -1521,11 +1576,22 @@ def construir() -> argparse.ArgumentParser:
     p.set_defaults(func=cmd_sitio)
 
     p = sub.add_parser("narrado", help="reel narrado de una cita: elegir, construir y revisar, un paso por llamada")
-    p.add_argument("paso", choices=("elegir", "construir", "revisar"))
-    p.add_argument("--pieza", help="id de la pieza (construir, revisar)")
-    p.add_argument("--motor", default="kokoro", choices=("kokoro", "say"), help="motor de voz (construir)")
-    p.add_argument("--veredicto", help="PASS o FAIL del revisor visual (revisar)")
     p.set_defaults(func=cmd_narrado)
+    ps = p.add_subparsers(dest="paso", required=True, metavar="paso")
+    ps.add_parser("elegir", help="la primera pieza elegible")
+    q = ps.add_parser("construir", help="construir el mp4 de la pieza")
+    q.add_argument("--pieza", help="id de la pieza")
+    q.add_argument("--motor", default="kokoro", choices=("kokoro", "say"), help="motor de voz")
+    q = ps.add_parser("revisar", help="anotar el veredicto del revisor visual")
+    q.add_argument("--pieza", help="id de la pieza")
+    q.add_argument("--veredicto", help="PASS o FAIL del revisor visual")
+    for paso, ayuda in (("subir", "subir el mp4 revisado al teléfono"), ("abrir", "abrir el reel en Instagram"),
+                        ("pie", "pegar el pie"), ("publicar", "compartir, una sola vez (no admite más opciones que --pieza)"),
+                        ("verificar", "comprobar que salió: recuento y pie"),
+                        ("descartar", "salida de cualquier paso anterior a publicar"),
+                        ("limpiar", "borrar el vídeo que verificar conservó")):
+        q = ps.add_parser(paso, help=f"móvil, con el cerrojo «narrado»: {ayuda}", allow_abbrev=False)
+        q.add_argument("--pieza", required=True, help="id de la pieza")
 
     return ap
 

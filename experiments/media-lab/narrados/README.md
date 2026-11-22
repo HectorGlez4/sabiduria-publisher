@@ -108,3 +108,74 @@ La misma regla decide qué nombres necesitan aprobación, cuáles reescribe la v
 - `informe.json` lleva `avisos`: notas de ritmo que no frenan el build (gancho que acaba pasados 3 s, frase de más de 5 s, última línea sin eco del gancho). Reglas en `labkit/narrado_ritmo.py`.
 - [ganchos.md](ganchos.md): menú de fórmulas para la primera frase y qué dicen los datos propios.
 - `labkit/atipicos.py` ordena publicaciones por su múltiplo sobre la mediana de la cuenta (≥ 3× es señal, < 1,5× es ruido). Los datos se leen a mano del perfil; no hay rastreador.
+
+## Publicar desde el móvil
+
+La primera publicación real se hace con el usuario mirando. Todos los comandos salen de la raíz del repo, con
+`.venv/bin/python`, y se lanzan uno por línea: ningún `;`, `&&` ni `$?` (una ejecución desatendida se cuelga con
+comandos compuestos). Cada paso del móvil imprime JSON y su código de salida dice qué hacer.
+
+```
+experiments/media-lab/lab.py narrado elegir
+experiments/media-lab/lab.py narrado construir --pieza ID
+experiments/media-lab/lab.py narrado revisar --pieza ID --veredicto PASS
+experiments/media-lab/lab.py lock-tomar --dueno narrado --nuevo
+experiments/media-lab/lab.py narrado subir --pieza ID
+experiments/media-lab/lab.py narrado abrir --pieza ID
+experiments/media-lab/lab.py narrado pie --pieza ID
+experiments/media-lab/lab.py narrado publicar --pieza ID
+git add experiments/media-lab/narrados/registro.jsonl
+git commit -m "narrado: registro de ID compartido"
+experiments/media-lab/lab.py narrado verificar --pieza ID
+git add experiments/media-lab/narrados/registro.jsonl
+git commit -m "narrado: registro de ID verificado"
+experiments/media-lab/lab.py lock-soltar --dueno narrado
+```
+
+- `elegir` solo hace falta si no hay pieza escogida; `revisar --veredicto PASS` lo dice una persona (o el revisor
+  visual) tras mirar `hoja.jpg` y escuchar el mp4: no se escribe por inercia.
+- Tras `publicar` la línea de `narrados/registro.jsonl` existe pero **no está comiteada** y solo protege cuando lo
+  está (y empujada): comitea ANTES de `verificar`, y otra vez después. El push, cuando lo diga el usuario. Los pasos
+  del móvil no ejecutan git: otro proceso comitea en este checkout.
+- El cerrojo lo toma esta guía, nunca el paso. Todos los pasos del móvil (incluido `limpiar`) se niegan, con salida 2,
+  si el cerrojo no es de `narrado` o lleva más de 90 minutos. Se suelta al terminar (también tras `descartar`).
+- La carpeta de evidencia (capturas y volcados) es `evidence/android/NARRADO-ID/`.
+- `publicar` no admite más opción que `--pieza`: no hay `--force` ni `--si`. Además exige que el estado sea «listo».
+
+### Códigos de salida
+
+| Código | Significa | Qué hacer |
+|---|---|---|
+| 0 | El paso hizo lo suyo (`verificar` «verificado», `descartar` sin problemas, `limpiar` con `borrado: true`; `publicar` si volvió normal) | Seguir con el siguiente comando. Tras `publicar`, 0 no prueba que saliera: lo decide `verificar` |
+| 2 | Negativa o mal uso: cerrojo ajeno, estado que no toca, `NoPublicar`, id no válido, `ValueError` | Leer `error` / `motivos`; no insistir hasta entender la causa |
+| 3 | El paso terminó pero una persona debe mirar: `verificar` «incierto», `descartar` con `problemas`, `limpiar` con `borrado: false` | Mirar el teléfono y el JSON (`problemas`); no repetir a ciegas; no publicar |
+| 4 | Pantalla inesperada, otra cuenta o error del teléfono (hay captura en la carpeta de evidencia) | Mirar la captura; resolver a mano o `descartar`; no seguir con el siguiente paso |
+
+### Qué dice cada negativa (salida 2)
+
+| Mensaje | Qué significa |
+|---|---|
+| «el cerrojo de la ventana no es de «narrado»: lo tiene nadie / sitio / manual / programada» | Falta `lock-tomar --dueno narrado --nuevo`, o otro ciclo tiene el teléfono. Si dice «abandonado» llevaba más de 90 minutos: se retoma con `lock-tomar --nuevo` |
+| «exige --pieza con un id válido» | El id lleva `/`, `..`, espacios o está vacío |
+| «publicar exige el estado «listo»» | Falta `subir`, `abrir` o `pie`, o se descartó: repetir lo que falte |
+| `NoPublicar` («ya se compartió», «ya hay un registro de esta cita», pie o vídeo distintos…) | `publicar` se negó sin tocar nada; no se vuelve a compartir. Si hay un motivo de pie o vídeo, `descartar` y repetir |
+| «no se puede publicar» / «no se vuelve a subir» (`subir`) | La cita ya tiene registro o este build ya se compartió: no se reconstruye ni se vuelve a subir |
+
+### Qué se puede repetir
+
+- `subir`: si no se compartió nada (estado `subido` o anterior, o `descartado`).
+- `abrir` y `pie`: después de `descartar` (hay que volver a `subir`, `abrir` y `pie` en orden).
+- `publicar`: NUNCA otra vez. Si la salida fue rara, `verificar` decide; si no se sabe, una persona mira el perfil.
+- Una reconstrucción tras «compartido» se rechaza: esa cita no se vuelve a subir.
+- `descartar` es la salida de cualquier paso anterior a `publicar`: deja Instagram sin el borrador y borra el vídeo
+  del teléfono. Tras «compartido», «verificado» o «incierto» se niega: eso es cosa de `verificar`.
+- `limpiar` borra el vídeo de prueba que `verificar` conservó porque una subida podía seguir en curso. Córrelo solo
+  varios minutos después, sin el banner «Partage sur…» en el perfil; si no, cortaría la subida.
+
+### Dónde se detiene el código a propósito
+
+- Otra cuenta activa en Instagram: se detiene (salida 4, `CuentaAjena`); no cambia de cuenta.
+- Teléfono bloqueado: se detiene; nunca lo despierta ni lo desbloquea.
+- El plazo de verificación es de 3 minutos: si en ese tiempo no hay +1 publicación y el pie correcto, `verificar`
+  devuelve «incierto» (salida 3) y conserva el vídeo.
+- Una pantalla que no es la esperada: salida 4 con captura; nunca reintenta por su cuenta.

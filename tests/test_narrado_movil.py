@@ -16,7 +16,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "experiments" / "media-lab"))
 
 from labkit import telefono  # noqa: E402
-from test_media_lab import TelefonoSimulado, con_telefono_simulado, jerarquia, nodo_xml  # noqa: E402
+from labkit.pantalla import PantallaInesperada  # noqa: E402
+from labkit.sitio_instagram import CuentaAjena  # noqa: E402
+from test_media_lab import LabAislado, modulo_lab, TelefonoSimulado, con_telefono_simulado, jerarquia, nodo_xml  # noqa: E402
 
 FALLOS: list[str] = []
 LINEA = "Row: 0 _id=1000023376, _display_name=narrado-sonda.mp4, duration=27533, width=1080, height=1920"
@@ -2211,9 +2213,218 @@ def seccion_verificar() -> None:
           f"toques, {malos})")
 
 
+# ---------------------------------------------------------------- lab.py narrado <paso del móvil>
+
+PASOS_CLI = ("subir", "abrir", "pie", "publicar", "verificar", "descartar", "limpiar")
+FUNCION_DE = {"subir": "subir", "abrir": "abrir", "pie": "poner_pie", "publicar": "publicar",
+              "verificar": "verificar", "descartar": "descartar", "limpiar": "limpiar"}
+NORMAL = {"subir": {"paso": "subido"}, "abrir": {"paso": "abierto"}, "pie": {"paso": "listo"},
+          "publicar": {"compartido_en": "t", "avisos": ["a"]},
+          "verificar": {"estado": "verificado", "problemas": []}, "descartar": {"paso": "descartado", "problemas": []},
+          "limpiar": {"borrado": True, "problemas": []}}
+
+
+class CliSimulada:
+    """lab.main() en proceso con las funciones de narrado_movil, el estado y `telefono.captura` sustituidos."""
+
+    def __init__(self, d: str, resultados: dict | None = None, errores: dict | None = None, estado: str | None = "listo"):
+        from labkit import narrado, narrado_movil as nm
+        self.nm, self.narrado = nm, narrado
+        self.raiz = pathlib.Path(d)
+        self.llamadas: list[tuple] = []
+        self.resultados = {**NORMAL, **(resultados or {})}
+        self.errores = errores or {}
+        self.estado = estado
+        self.guardado: dict = {}
+        self.cli = LabAislado(self.raiz)
+
+    def __enter__(self):
+        self.cli.__enter__()
+        for paso, nombre in FUNCION_DE.items():
+            self.guardado[nombre] = getattr(self.nm, nombre)
+            setattr(self.nm, nombre, self._doble(paso))
+        self.guardado["estado_movil"] = self.narrado.estado_movil
+        self.narrado.estado_movil = lambda pieza, raiz=None: {"paso": self.estado} if self.estado else {}
+        self.guardado["captura"] = telefono.captura
+        telefono.captura = lambda ruta, *a, **k: str(ruta)
+        return self
+
+    def __exit__(self, *exc):
+        for nombre, f in self.guardado.items():
+            if nombre == "estado_movil":
+                self.narrado.estado_movil = f
+            elif nombre == "captura":
+                telefono.captura = f
+            else:
+                setattr(self.nm, nombre, f)
+        self.cli.__exit__(*exc)
+
+    def _doble(self, paso):
+        def f(pieza, ev=None, raiz=None):
+            self.llamadas.append((paso, pieza))
+            if paso in self.errores:
+                raise self.errores[paso]
+            return dict(self.resultados[paso])
+        return f
+
+    @property
+    def evidencia(self) -> pathlib.Path:
+        return self.cli.lab.EVIDENCIA
+
+    def poner_cerrojo(self, dueno: str | None, hace_min: float = 1) -> None:
+        import datetime as dt
+        import json
+        ruta = self.cli.lab.LOCK
+        if dueno is None:
+            ruta.unlink(missing_ok=True)
+            return
+        desde = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=hace_min)
+        ruta.write_text(json.dumps({"dueno": dueno, "desde": desde.isoformat()}), encoding="utf-8")
+
+    def __call__(self, *args):
+        return self.cli(*args)
+
+
+def seccion_cli() -> None:
+    print("\n14. lab.py narrado subir|abrir|pie|publicar|verificar|descartar|limpiar")
+    import contextlib
+    import io
+
+    for paso in PASOS_CLI:
+        for etiqueta, dueno, hace in (("sin cerrojo", None, 1), ("de sitio", "sitio", 1), ("de manual", "manual", 1),
+                                      ("de programada", "programada", 1), ("de narrado abandonado", "narrado", 100)):
+            with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+                sim.poner_cerrojo(dueno, hace)
+                codigo, datos, err = sim("narrado", paso, "--pieza", PIEZA)
+                esperado = {"sin cerrojo": "nadie", "de narrado abandonado": "narrado (abandonado"}.get(etiqueta, dueno)
+                check(codigo == 2 and sim.llamadas == [] and datos and esperado in datos.get("error", "")
+                      and not sim.evidencia.exists(),
+                      f"{paso} {etiqueta}: salida 2, nombra «{esperado}», ni teléfono ni carpeta de evidencia "
+                      f"({codigo}, {sim.llamadas}, {datos})")
+
+    for paso in PASOS_CLI:
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+            sim.poner_cerrojo("narrado")
+            codigo, datos, err = sim("narrado", paso, "--pieza", PIEZA)
+            check(codigo == 0 and sim.llamadas == [(paso, PIEZA)] and datos and datos.get("ok") is True
+                  and (sim.evidencia / f"NARRADO-{PIEZA}").is_dir(),
+                  f"{paso} con el cerrojo de narrado: salida 0, una llamada con la pieza, JSON y evidencia "
+                  f"({codigo}, {sim.llamadas}, {datos})")
+    with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+        sim.poner_cerrojo("narrado")
+        codigo, datos, _ = sim("narrado", "publicar", "--pieza", PIEZA)
+        check(datos and datos.get("avisos") == ["a"], f"publicar imprime los avisos ({datos})")
+
+    casos = (("verificar", {"estado": "incierto", "problemas": ["x"]}, 3),
+             ("verificar", {"estado": "verificado", "problemas": []}, 0),
+             ("descartar", {"paso": "descartado", "problemas": ["no se pudo borrar"]}, 3),
+             ("descartar", {"paso": "descartado", "problemas": []}, 0),
+             ("limpiar", {"borrado": False, "problemas": ["sigue"]}, 3),
+             ("limpiar", {"borrado": True, "problemas": []}, 0))
+    for paso, res, esperado in casos:
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d, resultados={paso: res}) as sim:
+            sim.poner_cerrojo("narrado")
+            codigo, datos, _ = sim("narrado", paso, "--pieza", PIEZA)
+            check(codigo == esperado and datos and all(datos.get(k) == v for k, v in res.items())
+                  and datos.get("ok") is (esperado == 0),
+                  f"{paso} {res}: salida {esperado} y el JSON sale entero ({codigo}, {datos})")
+
+    for paso in ("subir", "verificar"):
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d, errores={paso: PantallaInesperada("otra pantalla")}) as sim:
+            sim.poner_cerrojo("narrado")
+            codigo, datos, _ = sim("narrado", paso, "--pieza", PIEZA)
+            check(codigo == 4 and datos and datos.get("tipo") == "PantallaInesperada" and datos.get("captura"),
+                  f"{paso} con una pantalla inesperada: salida 4 con captura ({codigo}, {datos})")
+    with tempfile.TemporaryDirectory() as d, CliSimulada(d, errores={"abrir": CuentaAjena("otra cuenta")}) as sim:
+        sim.poner_cerrojo("narrado")
+        codigo, datos, _ = sim("narrado", "abrir", "--pieza", PIEZA)
+        check(codigo == 4 and datos and datos.get("tipo") == "CuentaAjena", f"CuentaAjena: salida 4 ({codigo}, {datos})")
+
+    from labkit.narrado_movil import NoPublicar
+    with tempfile.TemporaryDirectory() as d, CliSimulada(d, errores={"publicar": NoPublicar(["ya se compartió", "otro"])}) as sim:
+        sim.poner_cerrojo("narrado")
+        codigo, datos, _ = sim("narrado", "publicar", "--pieza", PIEZA)
+        check(codigo == 2 and datos and datos.get("motivos") == ["ya se compartió", "otro"] and datos.get("ok") is False,
+              f"NoPublicar: salida 2 y los motivos impresos ({codigo}, {datos})")
+
+    for estado in ("abierto", "compartido", "subido", None):
+        with tempfile.TemporaryDirectory() as d, CliSimulada(d, estado=estado) as sim:
+            sim.poner_cerrojo("narrado")
+            codigo, datos, _ = sim("narrado", "publicar", "--pieza", PIEZA)
+            check(codigo == 2 and sim.llamadas == [],
+                  f"publicar con el estado {estado!r}: salida 2 sin llamar al paso ({codigo})")
+
+    with tempfile.TemporaryDirectory() as d, CliSimulada(d) as sim:
+        sim.poner_cerrojo("narrado")
+        for paso in PASOS_CLI:
+            for malo in ("../x", "a/b", "a..b", ".oculto", "x y"):
+                codigo, datos, _ = sim("narrado", paso, "--pieza", malo)
+                check(codigo == 2 and sim.llamadas == [], f"{paso} con --pieza {malo!r}: salida 2, nada llamado ({codigo})")
+        sim.poner_cerrojo(None)
+        codigo, datos, _ = sim("narrado", "subir", "--pieza", "../x")
+        check(codigo == 2 and "id válido" in (datos or {}).get("error", ""),
+              f"id malo y sin cerrojo: lo primero que dice es lo del id ({datos})")
+
+    parser = modulo_lab().construir()
+
+    def rechaza(*argv) -> bool:
+        with contextlib.redirect_stderr(io.StringIO()):
+            try:
+                parser.parse_args(list(argv))
+            except SystemExit as e:
+                return e.code == 2
+        return False
+    check(not rechaza("narrado", "publicar", "--pieza", PIEZA), "publicar --pieza ID se acepta")
+    for extra in (("--force",), ("--si",), ("--motor", "say"), ("--veredicto", "PASS"), ("--yes",), ("--pie", "x")):
+        check(rechaza("narrado", "publicar", "--pieza", PIEZA, *extra), f"publicar rechaza {extra[0]}")
+    narrado_p = parser._subparsers._group_actions[0].choices["narrado"]
+    sub = narrado_p._subparsers._group_actions[0].choices["publicar"]
+    opciones = {o for a in sub._actions for o in a.option_strings} - {"-h", "--help"}
+    check(opciones == {"--pieza"}, f"el parser de publicar solo tiene --pieza ({opciones})")
+    check(rechaza("narrado", "inventar", "--pieza", PIEZA), "un paso desconocido se rechaza")
+    check(rechaza("narrado"), "narrado sin paso se rechaza")
+    for paso in PASOS_CLI:
+        check(rechaza("narrado", paso), f"{paso} sin --pieza se rechaza")
+    check(not rechaza("narrado", "elegir") and not rechaza("narrado", "construir", "--pieza", PIEZA, "--motor", "say")
+          and not rechaza("narrado", "revisar", "--pieza", PIEZA, "--veredicto", "PASS"),
+          "elegir, construir y revisar siguen aceptando lo de siempre")
+
+
+def seccion_guia() -> None:
+    print("\n15. narrados/README.md: «Publicar desde el móvil»")
+    import re
+    texto = (ROOT / "experiments" / "media-lab" / "narrados" / "README.md").read_text(encoding="utf-8")
+    m = re.search(r"^## Publicar desde el móvil\n(.*?)(?=^## |\Z)", texto, re.M | re.S)
+    check(m is not None, "existe la sección «Publicar desde el móvil»")
+    if m is None:
+        return
+    seccion = m.group(1)
+    bloques = re.findall(r"```[^\n]*\n(.*?)```", seccion, re.S)
+    lineas = [l.strip() for b in bloques for l in b.splitlines() if l.strip() and not l.strip().startswith("#")]
+    orden = ("narrado elegir", "narrado construir", "narrado revisar --pieza", "lock-tomar --dueno narrado --nuevo",
+             "narrado subir", "narrado abrir", "narrado pie", "narrado publicar", "git add", "git commit",
+             "narrado verificar", "git add", "git commit", "lock-soltar --dueno narrado")
+    pos, i = [], 0
+    for clave in orden:
+        while i < len(lineas) and clave not in lineas[i]:
+            i += 1
+        pos.append(i if i < len(lineas) else None)
+        i += 1
+    check(None not in pos, f"los comandos salen en el orden pedido (faltan o desordenados: "
+                           f"{[o for o, p in zip(orden, pos) if p is None]})")
+    check(any("--veredicto PASS" in l for l in lineas), "la revisión humana lleva --veredicto PASS")
+    check(any("registro.jsonl" in l and "git add" in l for l in lineas), "se comitea narrados/registro.jsonl")
+    malas = [l for l in lineas if any(t in l for t in (";", "&&", "||", "$?"))]
+    check(not malas, f"ninguna línea de los bloques de código lleva ; && || ni $? ({malas})")
+    for frase in ("descartar", "limpiar", "nunca", "3 minutos", "otra cuenta", "bloqueado"):
+        check(frase.lower() in seccion.lower(), f"la guía menciona «{frase}»")
+    for codigo in ("| 0 ", "| 2 ", "| 3 ", "| 4 "):
+        check(codigo in seccion, f"la tabla de salidas tiene la fila {codigo.strip(' |')}")
+
+
 SECCIONES = [seccion_puras, seccion_subir, seccion_borrar, seccion_pie, seccion_apto_y_estado, seccion_miniatura,
              seccion_subir_paso, seccion_abrir, seccion_interruptores, seccion_poner_pie, seccion_publicar,
-             seccion_descartar, seccion_verificar]
+             seccion_descartar, seccion_verificar, seccion_cli, seccion_guia]
 
 
 def main() -> int:
