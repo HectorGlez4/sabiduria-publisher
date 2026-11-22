@@ -1,0 +1,86 @@
+{
+  "id": "2027-01-12-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "status": "draft",
+  "core": {
+    "subject": "Le Verrier, Galle y Neptuno en 1846",
+    "hook": "En 1846 un planeta se encontró primero sobre el papel. El telescopio tardó menos de una hora en confirmarlo.",
+    "body": [
+      "En 1821, Alexis Bouvard publicó unas tablas con la órbita de Urano. Las observaciones posteriores no encajaban con ellas. El planeta no pasaba por donde los cálculos decían.",
+      "El 31 de agosto de 1846, el matemático Urbain Le Verrier presentó ante la Academia de Ciencias de París la posición de un cuerpo desconocido que explicaría el desajuste. No logró que ningún astrónomo francés se pusiera a buscarlo. Escribió entonces a Berlín, a Johann Gottfried Galle, ayudante del observatorio.",
+      "La carta llegó la mañana del 23 de septiembre. Galle tenía 34 años. Esa misma noche apuntó al cielo un refractor Fraunhofer de nueve pulgadas. Un estudiante, Heinrich d'Arrest, propuso comparar lo que veían con una carta estelar recién terminada por Carl Bremiker. En menos de una hora dieron con un punto que no figuraba en ella. Estaba a menos de un grado del lugar calculado.",
+      "Galle contestó a Le Verrier que el planeta cuya posición había señalado existía realmente.",
+      "No era la primera vez que alguien lo veía. Galileo lo había anotado en 1612 y 1613 como una estrella fija. En Cambridge, James Challis lo observó el 8 y el 12 de agosto de ese mismo 1846 y no lo reconoció: su carta del cielo estaba desactualizada. Galle fue el primero en mirarlo sabiendo lo que era, y siempre atribuyó el descubrimiento a Le Verrier."
+    ],
+    "question": "¿Qué cuenta más: ver algo primero o saber qué se está viendo?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Neptuno, 1846",
+    "subtitle": "El planeta que se calculó antes de verse",
+    "body": "Urano no pasaba por donde debía. Le Verrier calculó dónde tenía que estar el cuerpo que lo desviaba y escribió a Berlín. La carta llegó el 23 de septiembre de 1846. Esa noche, Galle lo encontró en menos de una hora, a menos de un grado del lugar previsto."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Neptuno",
+      "#Astronomia",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#LeVerrier",
+      "#Galle",
+      "#SistemaSolar",
+      "#SigloXIX",
+      "#Matematicas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "‘triggered in 1821, when Alexis Bouvard published astronomical tables for the orbit of Uranus’; hubo ‘significant discrepancies between the predictions and their observations’. ‘On August 31, 1846, Le Verrier presented his predicted position for a new planet to the French Academy’. ‘The very first night, on September 23, 1846, Galle and his colleague, Heinrich d'Arrest, found Neptune’; ‘It took them less than an hour to do so.’; ‘within 1 degree of Le Verrier's predicted location’. Challis ‘realized that he had observed the planet on August 8th and 12th’; ‘He just didn't recognize it as such because his star map was out of date.’ Galileo lo observó en 1612/1613 y ‘thought it was fixed star’.",
+      "source": "American Physical Society, APS News, ‘September 23, 1846: Neptune's Existence Observationally Confirmed’ (Leah Poffenberger, 1 de agosto de 2020)",
+      "url": "https://www.aps.org/apsnews/2020/08/neptunes-existence-confirmed"
+    },
+    {
+      "claim": "Galle, ‘born June 9, 1812’ (de donde sale que tenía 34 años en septiembre de 1846), trabajaba en el Observatorio de Berlín; ‘on Sep. 23, 1846, he received a letter from Urbain Le Verrier at the Paris Observatory’; lo halló ‘on the very first night, Sept. 23, 1846’ con ‘a 9-inch equatorial refractor built by the firm of Joseph Fraunhofer’ y ‘a new star chart for the area of prediction by Carl Bremiker’; estaba ‘about one degree removed from the location predicted by Le Verrier’. ‘Galileo recorded the position of Neptune twice, on Dec. 28, 1612, and Jan. 28, 1613’ y ‘thought it was a star, not a new planet’. Galle fue ‘the first person to knowingly see it’.",
+      "source": "Linda Hall Library, ‘Scientist of the Day: Johann Galle’ (William B. Ashworth Jr., 9 de junio de 2021)",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/johann-galle-2"
+    },
+    {
+      "claim": "‘Le Verrier sent his predictions to Johann Gottfried Galle at the Berlin Observatory, who found Neptune on his first night of searching in 1846.’ ‘Galileo recorded Neptune as a fixed star during observations with his small telescope in 1612 and 1613.’ La búsqueda nació de que ‘Uranus didn't travel exactly as astronomers expected it to’.",
+      "source": "NASA Science, ‘Neptune: Facts’",
+      "url": "https://science.nasa.gov/neptune/facts/"
+    },
+    {
+      "claim": "‘after months of lukewarm responses from French astronomers, Le Verrier asked German astronomer Johann Galle to likewise hunt for the planet using Berlin Observatory's telescope’; ‘Galle received Le Verrier's letter on September 23, 1846.’ ‘That same evening, Galle found Neptune.’; ‘a mere 1 degree from Le Verrier's predicted position’. Challis ‘did spot Neptune before Galle — twice.’",
+      "source": "Astronomy Magazine, ‘Who discovered Neptune?’ (Joel Davis, 2020, actualizado en 2023)",
+      "url": "https://www.astronomy.com/science/who-discovered-neptune"
+    },
+    {
+      "claim": "‘On 31 August, Le Verrier presented a third memoir, now giving the mass and orbit of the new body.’ ‘Having been unsuccessful in his efforts to interest any French astronomer in the problem’, envió sus resultados por correo a Galle. ‘Galle received Le Verrier's letter in the morning of 23 September.’ Galle era ‘an assistant at the Berlin Observatory’; el director, Johann Franz Encke, ‘permitted the use of the telescope’; d'Arrest era ‘a student who was working at the observatory’ y ‘suggested that a recently published chart of the sky, Hora XXI’, completada por Carl Bremiker, se comparase con el cielo. Neptuno se halló ‘after less than an hour of searching’, ‘less than 1 degree from the position Le Verrier had predicted’. Respuesta de Galle: ‘the planet whose place you have [computed] really exists’. ‘Neptune had been observed on August 8 and August 12 but because Challis lacked an up-to-date star-map’ no se reconoció como planeta.",
+      "source": "Wikipedia en inglés, ‘Discovery of Neptune’ (fuente secundaria; única que da la frase de la respuesta de Galle y el papel de d'Arrest)",
+      "url": "https://en.wikipedia.org/wiki/Discovery_of_Neptune"
+    },
+    {
+      "claim": "‘Galle always refused to be acknowledged as the discoverer of Neptune; he attributed the discovery to Le Verrier.’ Fechas de Galle: ‘(9 June 1812 – 10 July 1910)’. La carta de Le Verrier, ‘Sent on 18 September 1846, it reached Galle on the morning of 23 September.’",
+      "source": "Wikipedia en inglés, ‘Johann Gottfried Galle’ (fuente secundaria; el artículo lleva aviso de falta de citas)",
+      "url": "https://en.wikipedia.org/wiki/Johann_Gottfried_Galle"
+    }
+  ],
+  "do_not_use": [
+    "La exclamación de d'Arrest ‘¡Esa estrella no está en el mapa!’: solo la da Wikipedia, narrada como hecho y sin que se leyera la nota al pie. No se usa como cita.",
+    "La fecha de la respuesta de Galle (se suele dar el 25 de septiembre de 1846) y su texto original en francés: ninguna página leída da ni la fecha ni el original. En el cuerpo la respuesta va en estilo indirecto y sin fecha.",
+    "Que la carta salió de París el 18 de septiembre: solo lo dice el artículo de Wikipedia sobre Galle; APS da a entender que se envió el 31 de agosto. En el cuerpo solo figura la fecha de llegada, en la que coinciden cuatro fuentes.",
+    "Que el hallazgo fue ‘justo después de medianoche’ y que Encke cumplía 55 años ese día: solo en Wikipedia. No se usan.",
+    "La cifra de ‘55 minutos de arco’ y la magnitud 8: la primera no aparece en ninguna página leída; la segunda solo en Wikipedia. En el cuerpo: ‘a menos de un grado’.",
+    "La apertura del refractor en centímetros: Wikipedia da 24,4 cm en un artículo y unos 22,5 cm en otro. En el cuerpo: ‘nueve pulgadas’.",
+    "Que John Couch Adams predijo la posición antes que Le Verrier o con igual acierto: la prioridad sigue disputada; APS dice que su contacto con Challis en 1845 ‘has not been definitively confirmed’ y Astronomy sitúa su predicción a 12 grados. El cuerpo no entra en la disputa y solo menciona las observaciones de Challis.",
+    "‘Neptuno fue descubierto oficialmente por Le Verrier’ (Astronomy): es un veredicto del autor, no un consenso. Tampoco se dice que lo descubrió Galle a secas.",
+    "Que Galileo sospechó que era un planeta: APS y Astronomy citan un estudio de 2009 y concluyen que no hay constancia de que lo siguiera. Las fechas exactas de sus anotaciones varían entre fuentes (27 o 28 de enero de 1613); en el cuerpo solo los años.",
+    "Que Urano había completado una órbita entera desde su descubrimiento: APS y Wikipedia se contradicen. No se usa.",
+    "Quién propuso el nombre de Neptuno: Wikipedia dice en un artículo que fue por consenso y en otro que lo propuso Le Verrier. No se usa."
+  ]
+}

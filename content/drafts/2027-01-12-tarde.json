@@ -1,0 +1,84 @@
+{
+  "id": "2027-01-12-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Bentham y la pregunta de si pueden sufrir (1789)",
+    "hook": "En 1789 un jurista inglés cambió la pregunta. No importaba si los animales razonan o hablan. Importaba otra cosa.",
+    "body": [
+      "Jeremy Bentham imprimió su «Introducción a los principios de la moral y la legislación» en 1780 y no la publicó hasta 1789. Es un tratado de derecho penal. El capítulo XVII trata de los límites de esa rama del derecho.",
+      "Allí escribe que los demás animales, por la insensibilidad de los juristas antiguos, han quedado degradados a la clase de las cosas. Y compara. Los franceses, dice, ya han descubierto que el color negro de la piel no es razón para abandonar a un ser humano al capricho de quien lo atormenta. Quizá un día se reconozca que el número de patas o el vello de la piel tampoco lo son.",
+      "Entonces se pregunta dónde está la línea. ¿En la razón? ¿En el habla? Un caballo o un perro adultos, responde, son más racionales y más tratables que un niño de un día, de una semana o de un mes.",
+      "Y aunque no lo fueran, añade, ¿de qué serviría? Ahí va la frase.",
+      "Bentham no anuncia nada. Escribe «puede llegar el día». Murió en 1832, a los 84 años. La pregunta sigue en el mismo sitio: no pide saber cuánto se parece a nosotros el que sufre."
+    ],
+    "question": "¿Con qué pregunta decides quién merece tu consideración?",
+    "quote": {
+      "text": "La cuestión no es: ¿pueden razonar?, ni: ¿pueden hablar?, sino: ¿pueden sufrir?",
+      "author": "Jeremy Bentham",
+      "work": "An Introduction to the Principles of Morals and Legislation, cap. XVII (1789)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Jeremy Bentham",
+    "subtitle": "Principios de la moral y la legislación, cap. XVII (1789)"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Bentham",
+      "#Filosofia",
+      "#Etica"
+    ],
+    "extended": [
+      "#Citas",
+      "#SigloXVIII",
+      "#Utilitarismo",
+      "#Animales",
+      "#Derecho",
+      "#HistoriaDeLasIdeas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "La sección 1.4 (‘Sentience’) reproduce el pasaje en cita de bloque: ‘The day may come, when the rest of the animal creation may acquire those rights’...; ‘The French have already discovered that the blackness of skin is no reason’...; ‘It may come one day to be recognized, that the number of legs, the villosity of the skin,’...; ‘What else is it that should trace the insuperable line?’; ‘Is it the faculty of reason, or perhaps, the faculty for discourse?’; ‘the question is not, Can they reason? nor, Can they talk? but, Can they suffer?’ (con ‘reason’, ‘talk’ y ‘suffer’ en cursiva). Referencia que da: ‘(Bentham 1780/1789: chapter xvii, paragraph 6)’. Lo presenta así: ‘Bentham, one of the more forceful defenders of this sentientist view of moral considerability, famously wrote:’. La traducción al español de la cita es propia, hecha sobre este texto.",
+      "source": "Stanford Encyclopedia of Philosophy, ‘The Moral Status of Animals’",
+      "url": "https://plato.stanford.edu/entries/moral-animal/"
+    },
+    {
+      "claim": "‘The First Edition of this work was printed in the year 1780; and first published in 1789.’ El texto es reimpresión de ‘A New Edition, corrected by the Author’, publicada en 1823 (reimpresión de Clarendon Press, 1907). El índice de la página sitúa el capítulo XVII a continuación del XVI, ‘Division of Offences’.",
+      "source": "Econlib (Liberty Fund), Jeremy Bentham, ‘An Introduction to the Principles of Morals and Legislation’",
+      "url": "https://www.econlib.org/library/Bentham/bnthPML.html?chapter_num=18"
+    },
+    {
+      "claim": "Título del capítulo: ‘Chapter XVII: Of the Limits of the Penal Branch of Jurisprudence’. En el texto principal, §1, párrafo IV: ‘Other animals, which, on account of their interests having been neglected by the insensibility of the ancient jurists’ ... ‘stand degraded into the class of things’. La transcripción no incluye las notas del autor, de modo que la frase citada no aparece en esta página.",
+      "source": "Wikisource en inglés, ‘An Introduction to the Principles of Morals and Legislation’, capítulo XVII",
+      "url": "https://en.wikisource.org/wiki/An_Introduction_to_the_Principles_of_Morals_and_Legislation/Chapter_XVII"
+    },
+    {
+      "claim": "Reproduce el pasaje más completo: ‘The day may come when the rest of the animal creation may acquire those rights’...; ‘The French have already discovered that the blackness of the skin is no reason’...; ‘But a full-grown horse or dog is beyond comparison a more rational, as well as a more conversable animal,’ que un niño de un día, una semana o un mes; ‘But suppose they were otherwise, what would it avail?’; ‘The question is not Can they reason? nor Can they talk? but, Can they suffer?’. Lo sitúa en ‘Chapter 17, 'Of the Limits of the Penal Branch of Jurisprudence'’ y lo cita como ‘Bentham, Introduction, pp. 310-11n.1’. El libro fue ‘originally printed in 1780, and first published in 1789.’",
+      "source": "Wikipedia en inglés, ‘An Introduction to the Principles of Morals and Legislation’ (fuente secundaria)",
+      "url": "https://en.wikipedia.org/wiki/An_Introduction_to_the_Principles_of_Morals_and_Legislation"
+    },
+    {
+      "claim": "Bentham ‘was an English philosopher, jurist, and social reformer regarded as the founder of modern utilitarianism.’ ‘Bentham was born on 4 February 1747/8 O.S.’; murió el ‘6 June 1832 (aged 84)’. ‘He has also become known as an early advocate of animal rights.’",
+      "source": "Wikipedia en inglés, ‘Jeremy Bentham’ (fuente secundaria, solo para las fechas)",
+      "url": "https://en.wikipedia.org/wiki/Jeremy_Bentham"
+    }
+  ],
+  "do_not_use": [
+    "Decir que la frase está ‘en una nota al pie’ como dato firme: lo sugiere la forma de la cita de Wikipedia (‘pp. 310-11n.1’) y que Wikisource, que no transcribe las notas, no la contenga; pero ninguna página leída lo dice con palabras, y la Stanford Encyclopedia la sitúa en ‘chapter xvii, paragraph 6’. En la ficha y en el cuerpo: ‘capítulo XVII’, sin más precisión.",
+    "El número de párrafo (IV o 6) y la página: las fuentes no coinciden. No se dan.",
+    "La puntuación inglesa literal de la frase: la Stanford Encyclopedia pone comas tras ‘not’ y ‘nor’ y Wikipedia no. La cita va en español, en traducción propia.",
+    "Que Bentham defendía no matar ni comer animales: se suele citar que la misma nota admite comerlos y matarlos con poco dolor, pero ese texto no apareció en ninguna página leída (quedó en la parte no leída de Econlib y utilitarianism.com). No se afirma ni una cosa ni la otra.",
+    "Que ‘los franceses’ alude al Code Noir de Luis XIV: no apareció en ninguna página leída. En el cuerpo solo lo que dice el pasaje.",
+    "Presentar a Bentham como fundador del movimiento por los derechos de los animales o decir que Peter Singer tomó la frase de aquí: la Stanford Encyclopedia menciona a Singer aparte y no lo enlaza con el pasaje. Wikipedia dice solo ‘early advocate’. No se usa.",
+    "‘El día llegará’: el original dice ‘The day may come’. Es una posibilidad, no un anuncio.",
+    "La edición corregida de 1823 como año de la frase: solo Econlib la menciona y no se comprobó si el pasaje cambió entre ediciones. La ficha da 1780 y 1789, en los que coinciden tres fuentes.",
+    "iep.utm.edu (error 500) y la página del capítulo XVII en Econlib (no se abrió; se leyó la del XVI, que da los datos de publicación): no cuentan como fuentes del texto de la cita."
+  ]
+}

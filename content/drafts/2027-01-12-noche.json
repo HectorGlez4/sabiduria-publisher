@@ -1,0 +1,91 @@
+{
+  "id": "2027-01-12-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "status": "draft",
+  "core": {
+    "subject": "el nudo gordiano y la clavija de Aristóbulo",
+    "hook": "Se da por hecho que Alejandro cortó el nudo gordiano con la espada. Uno de los hombres que fueron con él a Asia contó otra cosa.",
+    "body": [
+      "En el año 333 a.C., Alejandro reunió sus ejércitos en Gordio, capital de la antigua Frigia. En la ciudadela se guardaba un carro consagrado a Zeus. El yugo iba atado a la lanza con una cuerda de corteza de cornejo, y no se le veía principio ni fin. Se decía que quien la soltara estaba destinado a gobernar Asia.",
+      "Lo que pasó después tiene dos versiones, y las dos están en el mismo libro. Arriano escribe que, según algunos, Alejandro no halló manera de desatarla, la golpeó con la espada y la cortó. Y añade enseguida: Aristóbulo dice que sacó la clavija de la lanza, un taco de madera que la atravesaba y sujetaba la cuerda, y separó el yugo.",
+      "Aristóbulo acompañó a Alejandro en su guerra en Oriente y publicó sus memorias a los ochenta y cuatro años. La obra se perdió. Sobrevive en lo que otros copiaron de ella.",
+      "Plutarco recoge las dos versiones y precisa que la de la espada es la de la mayoría de los autores. Curcio Rufo le pone a Alejandro una frase: «Nada importa cómo se desaten». Y cierra con una duda: así burló el oráculo o lo cumplió.",
+      "Arriano no elige. «Cómo llevó a cabo Alejandro la hazaña de esta cuerda, no puedo afirmarlo con seguridad». La versión que ganó es la del tajo. La otra, la del que mira dónde está la pieza que sostiene todo, quedó en una línea."
+    ],
+    "question": "¿Por qué recordamos mejor el tajo que la clavija?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El nudo gordiano",
+    "subtitle": "Dos versiones en el mismo libro",
+    "body": "Según algunos, Alejandro lo cortó con la espada. Según Aristóbulo, que fue con él a Asia, sacó la clavija que sujetaba la cuerda y soltó el yugo. Arriano, que transmite las dos, admite que no puede afirmar con seguridad cuál ocurrió."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#NudoGordiano",
+      "#AlejandroMagno",
+      "#HistoriaAntigua"
+    ],
+    "extended": [
+      "#Historia",
+      "#GreciaAntigua",
+      "#Arriano",
+      "#Plutarco",
+      "#Frigia",
+      "#Leyendas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Arriano, Anábasis II, 3, en la traducción de E. J. Chinnock: ‘He was also desirous of seeing the wagon of Gordius and the cord which bound the yoke to the wagon.’ Midas ‘dedicated his father's wagon in the citadel as a thank-offering to Zeus the king.’ ‘whosoever could loosen the cord with which the yoke of the wagon was tied, was destined to be the ruler of Asia.’ ‘The cord was made of cornel bark, and neither end nor beginning to it could be seen.’ ‘It is said by some that when Alexander could find out no way to loosen the cord...’ ‘he struck the cord with his sword and cut it through, saying that it had been untied by him.’ ‘But Aristobulus says that he pulled out the pin of the wagon-pole, which was a wooden peg driven right through it, holding the cord together.’ ‘How Alexander performed the feat in connection with this cord, I cannot affirm with confidence.’ La traducción al español de las frases es propia, hecha sobre este texto inglés.",
+      "source": "Arriano, The Anabasis of Alexander, libro II, capítulo III, trad. E. J. Chinnock (Wikisource en inglés)",
+      "url": "https://en.wikisource.org/wiki/The_Anabasis_of_Alexander/Book_II/Chapter_III"
+    },
+    {
+      "claim": "Plutarco, Vida de Alejandro 18: ‘the inhabitants had a tradition, that for him was reserved the empire of the world.’ ‘Most authors tell the story that Alexander finding himself unable to untie the knot’ ... ‘cut it asunder with his sword.’ ‘But Aristobulus tells us it was easy for him to undo it, by only pulling the pin out of the pole’ ... ‘drawing off the yoke itself from below.’ Nota de la página: ‘In the first months of 333, Alexander united his armies, which had been operating separately, in Gordium.’",
+      "source": "Livius.org, ‘Plutarch on the Gordian Knot’ (traducción Dryden/Evelyn)",
+      "url": "https://www.livius.org/sources/content/plutarch/plutarchs-alexander/plutarch-on-the-gordian-knot/"
+    },
+    {
+      "claim": "Curcio Rufo, III, 1, 14-18, texto latino (edición Teubner de Theodor Vogel, 1880): ‘Notabile erat iugum adstrictum conpluribus nodis in semetipsos inplicatis et celantibus nexus.’ ‘editam esse oraculo sortem, Asiae potiturum, qui inexplicabile vinculum solvisset’. ‘'Nihil', inquit, 'interest, quomodo solvantur'’. ‘gladioque ruptis omnibus loris oraculi sortem vel elusit vel inplevit.’ La traducción al español es propia.",
+      "source": "LacusCurtius (Universidad de Chicago), Quinto Curcio Rufo, Historiae Alexandri Magni, libro III",
+      "url": "https://penelope.uchicago.edu/Thayer/L/Roman/Texts/Curtius/3*.html"
+    },
+    {
+      "claim": "Justino, Epítome 11.7: ‘He soon after marched to a city called Gordium, which is situated between the Greater and Lesser Phrygia’; ‘the knot of which, if anyone should loose, the oracles of old had predicted that he should rule all Asia.’; ‘not being able to find the ends of the cords, which were hidden within the knots’, ‘he put a forced interpretation on the oracle, and cut the cords with his sword’.",
+      "source": "Attalus.org, Justino, Epítome de Pompeyo Trogo, libro 11 (trad. J. S. Watson, 1853)",
+      "url": "https://www.attalus.org/translate/justin11.html"
+    },
+    {
+      "claim": "‘Aristobulus was probably one of the friends of Alexander's father Philip and accompanied Alexander on his war in the East.’ ‘published his memoirs of the Persian campaign at the age of eighty-four, and died in Cassandra in Macedonia after 301.’ Su obra ‘is now lost’ y estuvo entre ‘the most important sources of Arrian's Anabasis’.",
+      "source": "Livius.org, ‘Aristobulus’",
+      "url": "https://www.livius.org/articles/person/aristobulus/"
+    },
+    {
+      "claim": "‘Gordium: capital of ancient Phrygia, modern Yassihüyük.’",
+      "source": "Livius.org, ‘Gordium’",
+      "url": "https://www.livius.org/articles/place/gordium/"
+    },
+    {
+      "claim": "‘In 333 BC, Alexander was challenged to untie the knot.’ ‘Sources from antiquity disagree on his solution.’ ‘Arrian and Plutarch are secondary sources; Aristobolus' text is lost.’",
+      "source": "Wikipedia en inglés, ‘Gordian Knot’ (fuente secundaria, solo para el año y el resumen del desacuerdo)",
+      "url": "https://en.wikipedia.org/wiki/Gordian_Knot"
+    }
+  ],
+  "do_not_use": [
+    "Afirmar sin matiz que Alejandro cortó el nudo con la espada: es la versión de ‘la mayoría de los autores’ según Plutarco, pero Arriano y Plutarco dan también la de Aristóbulo, y Arriano dice que no puede afirmar cuál ocurrió.",
+    "Afirmar lo contrario, que ‘en realidad’ sacó la clavija: tampoco se puede. La versión de Aristóbulo llega de segunda mano y Livius advierte que no todas las citas de su obra son auténticas.",
+    "Llamar a Aristóbulo ‘testigo presencial’ de la escena de Gordio: las páginas leídas dicen que acompañó a Alejandro en la campaña, no que estuviera delante del carro. En el cuerpo: ‘uno de los hombres que fueron con él a Asia’.",
+    "La frase ‘da igual cómo se desate’ puesta en boca de Alejandro como hecho histórico: es de Curcio Rufo, no de Arriano ni de Plutarco. En el cuerpo va atribuida a Curcio.",
+    "Las fechas de Arriano, Plutarco y Curcio (‘cinco siglos después’, etc.): ninguna página leída las da. El prefacio de Arriano, donde explica por qué se fía de Ptolomeo y Aristóbulo, no se pudo abrir (404).",
+    "El mes o la estación exactos: Livius da ‘first months of 333’ en una página y sitúa la llegada ‘during the winter’ tras los últimos meses de 334 en otra; Penn Museum da ‘334 B.C. — 333 B.C.’. En el cuerpo: ‘en el año 333 a.C.’.",
+    "Que el carro estaba en el ‘templo de Zeus’: Chinnock dice que se dedicó ‘in the citadel’ como ofrenda a Zeus. En el cuerpo: ‘en la ciudadela’.",
+    "Que la profecía prometía ‘el imperio del mundo’: es la redacción de Plutarco; Arriano, Curcio y Justino dicen Asia. En el cuerpo: Asia.",
+    "Los truenos y relámpagos de esa noche como confirmación divina: Arriano los cuenta, pero es un prodigio, no un dato. No se usa.",
+    "La inscripción de Gordion en la lista del Patrimonio Mundial (2023): la página de la UNESCO dio 403 y la del Penn Museum no da el año. No se usa.",
+    "El texto de Gutenberg de la traducción de Chinnock (503) y su año, 1884: no se leyeron; el texto se cotejó en Wikisource, que no da el año, y en una segunda traducción escolar (johndclare.net) que coincide en el contenido."
+  ]
+}

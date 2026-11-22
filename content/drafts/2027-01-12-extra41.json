@@ -1,0 +1,83 @@
+{
+  "id": "2027-01-12-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "status": "draft",
+  "core": {
+    "subject": "Sícilo y la canción grabada en su estela",
+    "hook": "La canción completa más antigua que se conserva tiene cuatro versos. Está grabada en una columna de mármol, con la música encima de cada palabra.",
+    "body": [
+      "La columna apareció hacia 1883 en Aydın, en la actual Turquía, durante las obras de un ferrocarril. Allí estuvo la ciudad antigua de Tralles. Ese mismo año, el arqueólogo William Mitchell Ramsay publicó su descripción. Suele fecharse en el siglo I o II de nuestra era.",
+      "La piedra habla en primera persona. Dice: soy una imagen y una piedra; Sícilo me pone aquí, señal duradera de un recuerdo inmortal. Debajo vienen cuatro versos en griego. Sobre las palabras hay unos signos pequeños. Son las notas.",
+      "Existe música escrita más antigua. Pero toda ha llegado en fragmentos. Esta es breve y está entera: se puede cantar de principio a fin tal como se grabó.",
+      "De Sícilo no se sabe nada más. La última línea de la piedra está dañada y se lee de dos maneras: «Sícilo a Euterpe», quizá su esposa, o «Sícilo, hijo de Euterpes». Hay quien piensa que ni siquiera es una tumba, sino un monumento que él mismo se levantó.",
+      "La columna está hoy en Copenhague, en el Museo Nacional de Dinamarca. Lo que quiso que durase no fue un título ni una hazaña. Fue un consejo de cuatro líneas, y la melodía para decirlo."
+    ],
+    "question": "Si solo pudieras dejar cuatro versos, ¿qué dirían?",
+    "quote": {
+      "text": "Mientras vivas, brilla; no te aflijas por nada. La vida dura poco y el tiempo reclama lo suyo.",
+      "author": "Sícilo",
+      "work": "Estela de Sícilo, Tralles, siglo I o II d.C. (Museo Nacional de Dinamarca, inv. 14897)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold",
+    "title": "Sícilo",
+    "subtitle": "Estela de Tralles, siglo I o II d.C."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#EpitafioDeSicilo",
+      "#GreciaAntigua",
+      "#HistoriaDeLaMusica"
+    ],
+    "extended": [
+      "#Citas",
+      "#Musica",
+      "#Arqueologia",
+      "#Epigrafia",
+      "#Antiguedad",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto griego de la canción: ‘ὅσον ζῇς, φαίνου· | μηδὲν ὅλως σὺ | λυποῦ· πρὸς ὀλί|γον ἐστὶ τὸ ζῆν, | τὸ τέλος ὁ χρό|νος ἀπαιτεῖ.’ Traducción de Rohland (2023): ‘As long as you're alive, shine (?), don't be sad at all; life is short, time asks for its due.’ Traducción de M. L. West (1992, p. 301): ‘While you're alive, shine, man, / don't be the least bit blue. / Life's for a little span; / Time demands its due.’ Texto en prosa: ‘εἰκὼν ἡ λίθος | εἰμί· τίθησι μὲ | Σείκιλος ἔνθα | μνήμης ἀθανάτου | σῆμα πολυχρόνιον.’ Última línea: ‘Σείκιλος Εὐτέρ(που)· | ζῇ.’, ‘Seikilos, son of Euterpes; during his lifetime.’ La pieza está ‘now in Copenhagen, National Museum of Denmark (Inv. 14897)’; pie de imagen: ‘Inscription from Tralles (1st century AD)’. La traducción al español de la cita es propia, hecha sobre el griego.",
+      "source": "Michael Gilleland, Laudator Temporis Acti, ‘The Seikilos Inscription’ (20 de marzo de 2024; reproduce el texto y las traducciones de Rohland y West con sus referencias)",
+      "url": "https://laudatortemporisacti.blogspot.com/2024/03/the-seikilos-inscription.html"
+    },
+    {
+      "claim": "Mismo texto griego de la canción (‘ὅσον ζῇς, φαίνου / μηδὲν ὅλως σὺ λυποῦ / πρὸς ὀλίγον ἔστι τὸ ζῆν / τὸ τέλος ὁ χρόνος ἀπαιτεῖ.’) y del dístico en prosa, con la traducción de Armand D'Angour: ‘I am an image and a stone; Seikilos sets me up here as a long-lasting marker of undying memory.’ ‘Dated to around the second century AD.’ Pie de imagen: ‘The Seikilos Stele. Copenhagnen NM inv.14897.’ ‘While we do not know who Seikilos was, his memory survives in oral, aural, and physical memorial.’",
+      "source": "Princeton University, McGraw Center for Teaching and Learning, sitio del curso ‘Death and Ancient Christianity’",
+      "url": "https://commons.princeton.edu/death-and-ancient-christianity/?p=2"
+    },
+    {
+      "claim": "La inscripción ‘preserves the oldest surviving complete musical composition, including musical notation.’ ‘While older music with notation exists (e.g. the Hurrian songs or the Delphic Hymns), all of it is in fragments; the Seikilos epitaph is unique in that it is a complete, though short, composition.’ Es ‘an inscribed marble column’ con ‘vocal notation signs above the words’. ‘The epitaph was discovered sometime around 1883 by British engineer Edward Purser during the construction of a railroad’ en Aydın. ‘In 1883, the archaeologist William Mitchell Ramsay published a description of the epitaph in the Bulletin de correspondance hellénique.’ ‘The find has been variously dated, but the first or second century AD is the most probable guess.’ Última línea: ‘Σεικίλος Εὐτέρ[πῃ]’, ‘Seikilos to Euterpe’, ‘possibly his wife’ (Randel 2003), o ‘Σεικίλος Εὐτέρ[που]’, ‘Seikilos, son of Euterpes’ (Pöhlmann y West 2001). ‘An alternative view, put forward by Armand D'Angour, holds that the inscription does not mark a tomb, but was instead a monument erected by Seikilos himself’. Fue adquirida por ‘the Department of Antiquities of the National Museum of Denmark in Copenhagen’.",
+      "source": "Wikipedia en inglés, ‘Seikilos epitaph’ (fuente secundaria; cita a Landels, Mathiesen, Pöhlmann y West, D'Angour y Rohland)",
+      "url": "https://en.wikipedia.org/wiki/Seikilos_epitaph"
+    },
+    {
+      "claim": "Mismo texto griego de la canción y de la inscripción en prosa. ‘El epitafio data probablemente del siglo I o siglo II d. C.’ ‘El Epitafio de Sícilo es la composición musical completa más antigua que se conserva actualmente.’ ‘Aunque las Canciones hurritas de la Antigua Mesopotamia son más antiguas, en ese caso se trata de fragmentos y no de composiciones completas.’ De aquí se toma la forma española del nombre, Sícilo.",
+      "source": "Wikipedia en español, ‘Epitafio de Sícilo’ (fuente secundaria; contiene errores señalados en do_not_use)",
+      "url": "https://es.wikipedia.org/wiki/Epitafio_de_S%C3%ADcilo"
+    }
+  ],
+  "do_not_use": [
+    "Que Sícilo dedicó la canción ‘a su esposa Euterpe’ como hecho: lo afirma sin matiz Wikipedia en español. La línea está dañada; se reconstruye como ‘a Euterpe’ (‘possibly his wife’) o como ‘hijo de Euterpes’, y Euterpe es además el nombre de una musa. En el cuerpo van las dos lecturas.",
+    "Que es con seguridad una lápida: es la lectura habitual, pero D'Angour sostiene que es un monumento que Sícilo se levantó a sí mismo. En el cuerpo se dice que hay quien lo piensa.",
+    "‘La canción más antigua del mundo’ a secas: hay música anotada más antigua (las canciones hurritas, los himnos délficos), en fragmentos. Lo que se puede decir es ‘la composición completa más antigua que se conserva’.",
+    "Una fecha firme: las fuentes dan siglo I (Mathiesen), siglo II (Pöhlmann y West, Princeton) o ‘siglo I o II’. Una búsqueda devolvió incluso un rango desde el siglo II a.C. En el cuerpo: ‘suele fecharse en el siglo I o II’.",
+    "Quién la descubrió: el texto de Wikipedia en inglés dice que el ingeniero Edward Purser; su ficha y Wikipedia en español dicen que Ramsay. En el cuerpo: ‘apareció hacia 1883’ y Ramsay ‘publicó su descripción’.",
+    "La historia de la maceta (que Purser mandó serrar la base para que su esposa apoyara macetas, y así se perdió una línea): solo está en Wikipedia en inglés; la versión en español cuenta otra cosa (‘una mujer del pueblo’). No se usa.",
+    "El recorrido de la estela (colección De Jongh en Buca, el incendio de Esmirna de 1922, La Haya, llegada a Copenhague en 1966 y presentación al año siguiente): solo en Wikipedia en inglés, y Wikipedia en español lo contradice (‘un museo de Esmirna’). No se usa; solo que hoy está en Copenhague, en lo que coinciden tres fuentes.",
+    "La petición de devolución hecha por Aydın: salió en el resumen de un buscador y en ninguna página leída. No se usa.",
+    "El modo musical (frigio, yástico, mixolidio) y la duración: Wikipedia en inglés y en español no coinciden, y la española se contradice. No se usa.",
+    "La traducción de Wikipedia en español ‘no temas nada en absoluto’: el griego ‘λυποῦ’ es afligirse, no temer; las traducciones de Rohland, Landels y West dicen ‘don't be sad’, ‘don't make yourself miserable’. Tampoco su frase ‘Museo Nacional de Mi Casa’, que es una errata.",
+    "‘Brilla’ como traducción segura de ‘φαίνου’: Rohland la marca con interrogación y Landels traduce ‘let the world see you’. Se mantiene ‘brilla’ por ser la lectura de West, D'Angour y Rohland, pero no se construye nada sobre esa palabra.",
+    "La edición crítica (Pöhlmann y West, Documents of Ancient Greek Music, 2001) no se leyó directamente: se cita a través del blog de Gilleland y de Wikipedia. La página del Museo Nacional de Dinamarca sobre la estela no se encontró; el número de inventario sale del blog y del sitio de Princeton.",
+    "natmus.dk (sin contenido sobre la estela), worldhistory.org y greekreporter.com (403), armand-dangour.com y classics.ox.ac.uk (404), allthatsinteresting.com (tiempo agotado): no cuentan como fuentes verificadas."
+  ]
+}
