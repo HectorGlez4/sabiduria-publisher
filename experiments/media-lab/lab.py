@@ -52,7 +52,7 @@ AGENTE_DESPIERTO = "com.sabiduria.medialab.phone-awake"
 TURNOS = Path(os.environ.get("LAB_TURNOS", LAB / "turnos.json"))
 TURNO_HECHO = Path(os.environ.get("LAB_TURNO_HECHO", LAB / ".turno-hecho"))
 
-DUENOS_VENTANA = ("programada", "manual", "sitio")  # sitio: el bucle de citas del sitio a Instagram
+DUENOS_VENTANA = ("programada", "manual", "sitio", "narrado")  # sitio: el bucle de citas del sitio a Instagram
 ESTADOS_ACTIVOS = ("pedido", "generando", "generado", "aprobado")
 TIMEOUT_CODEX_S = 420
 COLA_BYTES = 1500

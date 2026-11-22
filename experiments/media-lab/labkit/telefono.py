@@ -29,6 +29,8 @@ SERIALES = ("RFCW117Q7FA", "R5CXB1AWYNF")
 _serial: str | None = None
 REMOTO_UI = "/sdcard/lab-ui.xml"
 URI_IMAGENES = "content://media/external/images/media"
+URI_VIDEOS = "content://media/external/video/media"
+CARPETA_VIDEOS = "/sdcard/Movies/SabiduriaLab"
 ESPERA_MEDIASTORE_S = 20
 _BOUNDS = re.compile(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]")
 _NOMBRE_SEGURO = re.compile(r"[A-Za-z0-9._-]+")
@@ -536,3 +538,88 @@ def subir(local: Path, remoto: str) -> dict:
     if remoto_sha != local_sha:
         raise TelefonoError(f"hash distinto en el teléfono: {remoto_sha} != {local_sha}")
     return {"sha256": local_sha, "subido_en": subido_en.isoformat()}
+
+
+# --- Vídeo (reels narrados) ----------------------------------------------------
+
+def consulta_video(nombre: str) -> str:
+    """Orden de shell que busca el vídeo por nombre en MediaStore (id, duración y tamaño)."""
+    if not _NOMBRE_SEGURO.fullmatch(nombre):
+        raise TelefonoError(f"nombre de archivo no apto para la consulta: {nombre!r}")
+    return ("content query --uri " + URI_VIDEOS + " --projection _id:_display_name:duration:width:height"
+            " --where " + shlex.quote(f"_display_name='{nombre}'"))
+
+
+def fila_de_video(salida: str, nombre: str) -> dict | None:
+    """La fila más reciente (_id más alto) de `content query` con ese _display_name exacto:
+    {"id", "duracion_ms", "ancho", "alto"}; None si no hay ninguna."""
+    mejor = None
+    for linea in salida.splitlines():
+        if not linea.startswith("Row:"):
+            continue
+        n = re.search(r"_display_name=(.*?)(?:, \w+=|$)", linea)
+        if not n or n.group(1) != nombre:
+            continue
+        campos = {k: re.search(rf"\b{k}=(\d+)", linea) for k in ("_id", "duration", "width", "height")}
+        if not all(campos.values()):
+            continue
+        fila = {"id": int(campos["_id"].group(1)), "duracion_ms": int(campos["duration"].group(1)),
+                "ancho": int(campos["width"].group(1)), "alto": int(campos["height"].group(1))}
+        if mejor is None or fila["id"] > mejor["id"]:
+            mejor = fila
+    return mejor
+
+
+def sha256_de_video(nombre: str) -> str | None:
+    """sha256 del vídeo en el teléfono; None si el archivo no está."""
+    if not _NOMBRE_SEGURO.fullmatch(nombre):
+        raise TelefonoError(f"nombre de archivo no apto: {nombre!r}")
+    try:
+        salida = shell(f"sha256sum {shlex.quote(f'{CARPETA_VIDEOS}/{nombre}')}")
+    except TelefonoError as e:
+        if "No such file" in str(e):
+            return None
+        raise
+    if "No such file" in salida:
+        return None
+    return sha256_de_salida(salida)
+
+
+def borrar_video(nombre: str) -> bool:
+    """Quita el vídeo del teléfono y su fila de MediaStore. True si ya no queda ninguno de los dos;
+    que ya no estuviera no es un error."""
+    consulta = consulta_video(nombre)
+    remoto = f"{CARPETA_VIDEOS}/{nombre}"
+    shell(f"rm -f {shlex.quote(remoto)}")
+    shell("content delete --uri " + URI_VIDEOS + " --where " + shlex.quote(f"_display_name='{nombre}'"))
+    return sha256_de_video(nombre) is None and fila_de_video(shell(consulta), nombre) is None
+
+
+def subir_video(local: Path, nombre: str) -> dict:
+    """Sube el vídeo, lo registra en MediaStore, comprueba el hash y que mida 1080×1920.
+
+    Si el hash o el tamaño no cuadran, quita lo subido antes de fallar. Devuelve remoto, sha256,
+    `subido_en` (ISO, UTC), duracion_ms, ancho y alto."""
+    consulta = consulta_video(nombre)
+    remoto = f"{CARPETA_VIDEOS}/{nombre}"
+    local_sha = hashlib.sha256(local.read_bytes()).hexdigest()
+    q = shlex.quote(remoto)
+    shell(f"mkdir -p {shlex.quote(CARPETA_VIDEOS)}")
+    adb("push", str(local), remoto, timeout=300)
+    subido_en = datetime.now(timezone.utc)
+    shell(f"touch {q}")
+    shell("am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d " + shlex.quote(f"file://{remoto}"))
+    limite = time.monotonic() + ESPERA_MEDIASTORE_S
+    while (fila := fila_de_video(shell(consulta), nombre)) is None:
+        if time.monotonic() >= limite:
+            raise TelefonoError(f"{nombre} no aparece en MediaStore tras {ESPERA_MEDIASTORE_S} s")
+        time.sleep(1)
+    remoto_sha = sha256_de_salida(shell(f"sha256sum {q}"))
+    if remoto_sha != local_sha:
+        borrar_video(nombre)
+        raise TelefonoError(f"hash distinto en el teléfono: {remoto_sha} != {local_sha}")
+    if (fila["ancho"], fila["alto"]) != (1080, 1920):
+        borrar_video(nombre)
+        raise TelefonoError(f"{nombre} mide {fila['ancho']}×{fila['alto']}, no 1080×1920")
+    return {"remoto": remoto, "sha256": local_sha, "subido_en": subido_en.isoformat(),
+            "duracion_ms": fila["duracion_ms"], "ancho": fila["ancho"], "alto": fila["alto"]}
