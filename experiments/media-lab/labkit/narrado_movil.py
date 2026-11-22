@@ -1097,6 +1097,44 @@ def leyenda_del_reel(xml: str, pie: str) -> str:
     return "ausente"
 
 
+_CUENTA_DE_VISTAS = re.compile(r"[\s,.;:·…-]*\b\d+(?:[\u202f\u00a0 ]\d{3}|[.,]\d+)*\s*[kKmM]?\s*vues?\b.*$")
+
+
+def clave_baldosa(desc: str) -> str:
+    """La clave con la que se cuentan las aperturas de una baldosa: su descripción con los espacios normalizados y sin
+    un recuento de vistas al final («…, 3 vues», «… 1,2 k vues»), que cambia de un volcado a otro. Pura."""
+    return _CUENTA_DE_VISTAS.sub("", _normal(desc))
+
+
+def _tocar_sin_emergente(n: dict, xml: str, que: str) -> None:
+    """`pasos.tocar`, pero antes la misma comprobación que el gesto de refresco: si algo ajeno se dibuja sobre el
+    centro de `n` (`pantalla.motivo_tapado`) o una ventana emergente de Instagram se le solapa
+    (`telefono.ventanas_emergentes`, que la guardia de toques no ve), no se toca: PantallaInesperada."""
+    cx, cy = n["centro"]
+    motivo = pantalla.motivo_tapado(xml, cx, cy, IG)
+    if motivo is None:
+        emergente = pantalla.emergente_solapada(telefono.ventanas_emergentes(IG), [n["bounds"]])
+        if emergente is not None:
+            motivo = f"{pantalla.describe_emergente(emergente)} se le solapa"
+    if motivo is not None:
+        raise PantallaInesperada(f"no se toca {que}: {motivo}")
+    pasos.tocar(n, xml)
+
+
+def _atras_sin_emergente(ev: Path, nombre: str) -> None:
+    """`pasos.atras`, pero no con una ventana emergente de Instagram abierta (PantallaInesperada). Si lo único que
+    falla es la captura de después (ya se pulsó «atrás»), no cuenta: la captura es evidencia, no un paso."""
+    emergentes = telefono.ventanas_emergentes(IG)
+    if emergentes:
+        raise PantallaInesperada(f"no se pulsa «atrás»: {pantalla.describe_emergente(emergentes[0])} abierta")
+    try:
+        pasos.atras(IG, ev, nombre)
+    except (PantallaInesperada, telefono.TelefonoError):
+        raise
+    except Exception:  # noqa: BLE001 — solo puede ser la captura, tras pulsar
+        pass
+
+
 def _ir_al_perfil(ev: Path) -> str:
     """Volcado fresco del perfil de la marca, llegando SOLO con toques de navegación: nunca `exigir_cuenta` (su
     recuperación cierra Instagram, y la subida de lo que se verifica corre en segundo plano dentro de la app), nunca
@@ -1119,14 +1157,14 @@ def _ir_al_perfil(ev: Path) -> str:
         opcion = _opcion_mas_recientes(xml)
         pestanas = _por_id(xml, ID_PESTANA_PROPIA)
         if opcion is not None:
-            pasos.tocar(opcion, xml)
+            _tocar_sin_emergente(opcion, xml, f"«{_t('mas_recientes')}»")
             reloj.dormir(2)
         elif len(pestanas) == 1:
-            pasos.tocar(pestanas[0], xml)
+            _tocar_sin_emergente(pestanas[0], xml, "la pestaña del perfil")
             reloj.dormir(2)
         elif atras_usados < MAX_ATRAS_VERIFICAR:
             atras_usados += 1
-            pasos.atras(IG, ev, f"verificar-atras-{atras_usados}")
+            _atras_sin_emergente(ev, f"verificar-atras-{atras_usados}")
         else:
             raise PantallaInesperada(f"tras {MAX_ATRAS_VERIFICAR} «atrás» no aparece la barra con la pestaña del perfil")
         pasos.exigir_listo()
@@ -1163,12 +1201,12 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[str, str, str | None]:
     xml = pasos.volcado_fresco()
     if not _es_perfil_de_la_marca(xml):
         raise PantallaInesperada(f"el perfil de {CUENTA} ya no está delante: no se abre la cuadrícula")
-    pasos.tocar(_unico(xml, ID_PESTANA_PERFIL, desc=_t("vista_cuadricula")), xml)
+    _tocar_sin_emergente(_unico(xml, ID_PESTANA_PERFIL, desc=_t("vista_cuadricula")), xml, f"«{_t('vista_cuadricula')}»")
     reloj.dormir(2)
     xml = pasos.volcado_fresco()
     opcion = _opcion_mas_recientes(xml)
     if opcion is not None:
-        pasos.tocar(opcion, xml)
+        _tocar_sin_emergente(opcion, xml, f"«{_t('mas_recientes')}»")
         reloj.dormir(2)
 
     def baldosa(x: str):
@@ -1180,7 +1218,7 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[str, str, str | None]:
     primera = baldosa_mas_reciente(xml)
     if not _es_reel(primera):
         return "no_reel", desc, None
-    pasos.tocar(primera, xml)
+    _tocar_sin_emergente(primera, xml, "la baldosa más reciente")
     reloj.dormir(3)
 
     def abierto(x: str):
@@ -1193,9 +1231,13 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[str, str, str | None]:
     except (PantallaInesperada, telefono.TelefonoError):
         leida = "ausente"
     if leida == "coincide":
-        return "coincide", desc, str(telefono.captura(ev / "verificar-1-reel.png"))
+        try:
+            captura = str(telefono.captura(ev / "verificar-1-reel.png"))
+        except Exception:  # noqa: BLE001 — la captura es evidencia: no impide registrar el resultado
+            captura = None
+        return "coincide", desc, captura
     try:
-        pasos.atras(IG, ev, "verificar-2-otro-pie")
+        _atras_sin_emergente(ev, "verificar-2-otro-pie")
     except (PantallaInesperada, telefono.TelefonoError):
         pass  # la ronda siguiente vuelve al perfil con `_ir_al_perfil`
     return ("distinta" if leida == "distinta" else "ilegible"), desc, None
@@ -1212,42 +1254,81 @@ def _texto_aperturas(cuentas: dict[str, int]) -> str:
     return "; ".join(partes)
 
 
+def _mas_de_una(antes: int, despues: int) -> str:
+    return (f"más de una publicación nueva: el perfil pasó de {antes} a {despues}; puede haberse publicado dos veces: "
+            "que lo mire una persona")
+
+
+def _confirmar(antes: int, ev: Path, lectura: dict) -> dict:
+    """La ronda de confirmación tras un +1 con la leyenda que casa: «atrás» desde el Reel, ESPERA_ENTRE_LECTURAS_S, al
+    perfil, sin la barra de subida, refresco y recuento. Sigue en `antes + 1`: «verificado». +2 o más: «incierto» con
+    el texto de más de una publicación. Más bajo, ilegible o con la barra delante: «incierto» con el motivo. Una sola
+    vez, aunque caiga después del plazo. `si.CuentaAjena` sale tal cual, como en cualquier ronda."""
+    try:
+        _atras_sin_emergente(ev, "verificar-2-perfil")
+    except (PantallaInesperada, telefono.TelefonoError):
+        pass  # `_ir_al_perfil` vuelve al perfil con la pestaña
+    reloj.dormir(ESPERA_ENTRE_LECTURAS_S)
+    base = {"encontrada": False, "captura": lectura["captura"], "banner": False, "despues": lectura["despues"]}
+    try:
+        xml = _ir_al_perfil(ev)
+        if subiendo(xml):
+            return {**base, "estado": "incierto", "banner": True,
+                    "problemas": [f"confirmación: la barra de subida («{_t('subiendo')}…») volvió a salir tras ver el "
+                                  "Reel: no se confirma que haya una sola publicación"]}
+        despues, _ = _recuento_refrescado(xml)
+    except si.CuentaAjena:
+        raise
+    except (PantallaInesperada, telefono.TelefonoError) as e:
+        return {**base, "estado": "incierto",
+                "problemas": [f"confirmación: no se pudo releer el recuento tras ver el Reel: {type(e).__name__}: {e}"]}
+    if despues >= antes + 2:
+        return {**base, "estado": "incierto", "despues": despues, "problemas": [f"confirmación: {_mas_de_una(antes, despues)}"]}
+    if despues != antes + 1:
+        return {**base, "estado": "incierto", "despues": despues,
+                "problemas": [f"confirmación: el recuento bajó a {despues} (se esperaba {antes + 1})"]}
+    return {**lectura, "despues": despues, "banner": False}
+
+
 def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
     """Las lecturas de `verificar` hasta el plazo (PLAZO_VERIFICAR_S desde `inicio`), cada ESPERA_ENTRE_LECTURAS_S.
-    Devuelve {"estado", "despues", "encontrada", "problemas", "captura"}. Un fallo de pantalla o de lectura no
-    acaba antes: se reintenta y, si llega el plazo, va a los problemas como último error; solo `si.CuentaAjena` sale
-    en el acto. Una misma baldosa (por su descripción) se abre como mucho MAX_APERTURAS veces con la leyenda distinta o
-    ilegible; después solo se sigue leyendo el recuento (un refresco puede cambiar la baldosa más reciente)."""
+    Devuelve {"estado", "despues", "encontrada", "problemas", "captura", "banner"} (`banner`: la última ronda que llegó
+    a mirarlo vio la barra de subida). Un fallo de pantalla o de lectura no acaba antes: se reintenta y, si llega el
+    plazo, va a los problemas como último error; solo `si.CuentaAjena` sale en el acto. Una misma baldosa
+    (`clave_baldosa`) se abre como mucho MAX_APERTURAS veces con la leyenda distinta o ilegible; después solo se sigue
+    leyendo el recuento. Un +1 con la leyenda que casa pasa por `_confirmar` antes de darse por «verificado»."""
     plazo, espera = PLAZO_VERIFICAR_S, ESPERA_ENTRE_LECTURAS_S
     despues: int | None = None
     motivo = None
     ultimo_error = None
+    banner = False
     aperturas: dict[str, dict[str, int]] = {}
     while True:
         try:
             xml = _ir_al_perfil(ev)
-            if subiendo(xml):
+            banner = subiendo(xml)
+            if banner:
                 motivo = f"la barra de subida («{_t('subiendo')}…») seguía en pantalla"
             else:
                 despues, perfil = _recuento_refrescado(xml)
                 if despues >= antes + 2:
                     return {"estado": "incierto", "despues": despues, "encontrada": False, "captura": None,
-                            "problemas": [f"más de una publicación nueva: el perfil pasó de {antes} a {despues}; "
-                                          "puede haberse publicado dos veces: que lo mire una persona"]}
+                            "banner": False, "problemas": [_mas_de_una(antes, despues)]}
                 if despues == antes + 1:
                     vista = baldosa_mas_reciente(perfil)
-                    vistas = aperturas.get(vista["desc"], {}) if vista is not None else {}
+                    vistas = aperturas.get(clave_baldosa(vista["desc"]), {}) if vista is not None else {}
                     if sum(vistas.values()) >= MAX_APERTURAS:
                         motivo = _texto_aperturas(vistas)
                     else:
+                        motivo = "el recuento subió en una pero no se llegó a leer la leyenda del Reel más reciente"
                         resultado, desc, captura = _abrir_lo_mas_reciente(pie, ev)
                         if resultado == "coincide":
-                            return {"estado": "verificado", "despues": despues, "encontrada": True,
-                                    "captura": captura, "problemas": []}
+                            return _confirmar(antes, ev, {"estado": "verificado", "despues": despues,
+                                                          "encontrada": True, "captura": captura, "problemas": []})
                         if resultado == "no_reel":
                             motivo = f"la publicación más reciente de la cuadrícula no es un Reel ({desc[:60]!r})"
                         else:
-                            cuenta = aperturas.setdefault(desc, {})
+                            cuenta = aperturas.setdefault(clave_baldosa(desc), {})
                             cuenta[resultado] = cuenta.get(resultado, 0) + 1
                             motivo = _texto_aperturas(cuenta)
                 else:
@@ -1264,7 +1345,32 @@ def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
     problemas = [f"tras {plazo} s: {motivo or 'no se llegó a leer el recuento'}"]
     if ultimo_error:
         problemas.append(f"último error: {ultimo_error}")
-    return {"estado": "incierto", "despues": despues, "encontrada": False, "captura": None, "problemas": problemas}
+    return {"estado": "incierto", "despues": despues, "encontrada": False, "captura": None, "banner": banner,
+            "problemas": problemas}
+
+
+VIDEO_CONSERVADO = "vídeo conservado en el móvil: la subida seguía en curso"
+RECUPERADO = "estado recuperado del registro"
+
+
+def _recuperar_del_registro(pieza_id: str, estado: dict, raiz: Path | None) -> dict | None:
+    """Si la línea más reciente del registro para esta cita ya es «verificado» o «incierto» con el mismo
+    `nombre_remoto` (un `verificar` anterior escribió el registro y murió antes del estado), escribe el estado desde
+    ella y devuelve el resultado registrado, sin tocar el teléfono ni añadir otra línea. None si no es el caso."""
+    ultima = narrado.ya_compartida(pieza_id, raiz)
+    if (ultima is None or ultima.get("estado") not in PASOS_VERIFICADOS
+            or ultima.get("nombre_remoto") != estado.get("nombre_remoto")):
+        return None
+    problemas = list(ultima.get("problemas") or []) + [
+        RECUPERADO, f"{estado.get('nombre_remoto')}: el vídeo puede seguir en el móvil (no se borró): `limpiar`"]
+    estado.update(paso=ultima["estado"], verificado_en=ultima.get("verificado_en"),
+                  publicaciones_despues=ultima.get("publicaciones_despues"), problemas_verificar=problemas,
+                  video_conservado=True)
+    narrado.guardar_estado_movil(pieza_id, estado, raiz)
+    return {"estado": ultima["estado"], "publicaciones_antes": ultima.get("publicaciones_antes"),
+            "publicaciones_despues": ultima.get("publicaciones_despues"),
+            "encontrada": ultima["estado"] == "verificado", "problemas": problemas, "captura": None,
+            "video_conservado": True}
 
 
 def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
@@ -1282,12 +1388,21 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     c. con `publicaciones_antes + 1`, la baldosa más reciente de «Vue Grille» («Les plus récents»), si es un Reel, se
        abre y su pie tiene que empezar por la primera línea del pie; luego «atrás». La misma baldosa se abre como
        mucho MAX_APERTURAS veces con la leyenda distinta o ilegible;
-    d. «verificado» con las dos cosas; «incierto» con +2 o más (en el acto), o si llega el plazo sin las dos (el
-       recuento no cambió, la baldosa no es un Reel, otro pie, o fallos de lectura: el último va a los problemas).
+    d. «verificado» con las dos cosas Y una ronda de confirmación (`_confirmar`: otra espera, refresco sin la barra de
+       subida y el recuento sigue en +1; aunque caiga tras el plazo, una vez); «incierto» con +2 o más (en el acto o en
+       la confirmación), o si llega el plazo sin las dos (el recuento no cambió, la baldosa no es un Reel, otro pie, o
+       fallos de lectura: el último va a los problemas).
+    Todos los toques pasan además por `_tocar_sin_emergente` (nada ajeno encima ni una ventana emergente solapada) y
+    «atrás» por `_atras_sin_emergente`: si no, la ronda falla y se reintenta.
     Siempre que se llega a d: la línea {"pieza", "cita", "estado", "verificado_en", "publicaciones_antes",
-    "publicaciones_despues", "problemas", "sha256_mp4", "nombre_remoto"} en el registro (`narrado.registrar`), DESPUÉS
-    el estado (los dos duraderos) y por último `telefono.borrar_video` (un False o un error van a `problemas`).
-    Devuelve {"estado", "publicaciones_antes", "publicaciones_despues", "encontrada", "problemas", "captura"}."""
+    "publicaciones_despues", "problemas", "sha256_mp4", "nombre_remoto", "video_conservado"} en el registro
+    (`narrado.registrar`), DESPUÉS el estado (los dos duraderos; si el estado falla, el error dice que el resultado ya
+    está en el registro) y por último `telefono.borrar_video` (un False o un error van a `problemas`), SALVO que la
+    última ronda viera la barra de subida: entonces el vídeo se conserva (`video_conservado`, se borra luego con
+    `limpiar`). Si al empezar la última línea del registro de la cita ya es «verificado» o «incierto» con este
+    `nombre_remoto`, se recupera el estado de ella sin tocar el teléfono ni escribir otra línea.
+    Devuelve {"estado", "publicaciones_antes", "publicaciones_despues", "encontrada", "problemas", "captura",
+    "video_conservado"}."""
     estado = narrado.estado_movil(pieza_id, raiz)
     paso = estado.get("paso")
     if paso in PASOS_VERIFICADOS:
@@ -1297,6 +1412,9 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     antes, nombre = estado.get("publicaciones_antes"), estado.get("nombre_remoto")
     if not isinstance(antes, int) or isinstance(antes, bool) or not nombre:
         raise ValueError(f"{pieza_id}: el estado no trae publicaciones_antes y nombre_remoto: no se puede verificar")
+    recuperado = _recuperar_del_registro(pieza_id, estado, raiz)
+    if recuperado is not None:
+        return recuperado
     pie = narrado_pie.pie(_pieza_publicada(pieza_id, raiz))
     _primera_linea(pie)
     clave = narrado.clave_de_pieza(pieza_id, raiz)
@@ -1306,29 +1424,53 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     lectura = _sondear(antes, pie, ev, inicio)
 
     problemas = list(lectura["problemas"])
+    conservar = lectura["banner"]
+    if conservar:
+        problemas.append(VIDEO_CONSERVADO)
     verificado_en = datetime.now(timezone.utc).isoformat(timespec="seconds")
     narrado.registrar({"pieza": pieza_id, "cita": clave, "estado": lectura["estado"], "verificado_en": verificado_en,
                        "publicaciones_antes": antes, "publicaciones_despues": lectura["despues"],
-                       "problemas": problemas, "sha256_mp4": estado.get("sha256"), "nombre_remoto": nombre}, raiz)
+                       "problemas": problemas, "sha256_mp4": estado.get("sha256"), "nombre_remoto": nombre,
+                       "video_conservado": conservar}, raiz)
     estado.update(paso=lectura["estado"], verificado_en=verificado_en, publicaciones_despues=lectura["despues"],
-                  problemas_verificar=problemas)
-    narrado.guardar_estado_movil(pieza_id, estado, raiz)
+                  problemas_verificar=problemas, video_conservado=conservar)
+    try:
+        narrado.guardar_estado_movil(pieza_id, estado, raiz)
+    except Exception as e:
+        raise RuntimeError(f"{pieza_id}: no se pudo escribir el estado ({type(e).__name__}: {e}); el resultado ya está "
+                           f"en el registro: {lectura['estado']}. Vuelve a correr `verificar`: lo recupera del registro "
+                           "sin tocar el teléfono") from e
 
     resultado = {"estado": lectura["estado"], "publicaciones_antes": antes, "publicaciones_despues": lectura["despues"],
-                 "encontrada": lectura["encontrada"], "problemas": list(problemas), "captura": lectura["captura"]}
-    if lectura["encontrada"]:
+                 "encontrada": lectura["encontrada"], "problemas": list(problemas), "captura": lectura["captura"],
+                 "video_conservado": conservar}
+    if not conservar:
         try:
-            pasos.atras(IG, ev, "verificar-2-perfil")
-        except (PantallaInesperada, telefono.TelefonoError) as e:
-            resultado["problemas"].append(f"no se volvió al perfil tras leer el pie: {type(e).__name__}: {e}")
-    try:
-        if telefono.borrar_video(nombre) is not True:
-            resultado["problemas"].append(f"{nombre}: no se pudo confirmar que se borró del teléfono")
-    except Exception as e:  # noqa: BLE001 — se informa, no se lanza
-        resultado["problemas"].append(f"{nombre}: el borrado falló: {type(e).__name__}: {e}")
+            if telefono.borrar_video(nombre) is not True:
+                resultado["problemas"].append(f"{nombre}: no se pudo confirmar que se borró del teléfono")
+        except Exception as e:  # noqa: BLE001 — se informa, no se lanza
+            resultado["problemas"].append(f"{nombre}: el borrado falló: {type(e).__name__}: {e}")
     if resultado["captura"] is None:
         try:
             resultado["captura"] = str(telefono.captura(ev / "verificar-final.png"))
         except Exception as e:  # noqa: BLE001 — la captura final es de mejor esfuerzo
             resultado["problemas"].append(f"no se pudo capturar al final: {type(e).__name__}: {e}")
     return resultado
+
+
+def limpiar(pieza_id: str, ev: Path | None = None, raiz: Path | None = None) -> dict:
+    """Borra del teléfono el vídeo de una pieza ya verificada («verificado» o «incierto»; si no, ValueError): para el
+    vídeo que `verificar` conservó porque la subida seguía en curso. Solo `telefono.borrar_video(nombre_remoto)`: no
+    toca nada más del teléfono ni escribe en el registro ni en el estado. `ev` no se usa (la firma es la de los demás
+    pasos). Devuelve {"borrado", "problemas"}; un False o un error van a `problemas`, no se lanzan."""
+    estado = narrado.estado_movil(pieza_id, raiz)
+    if estado.get("paso") not in PASOS_VERIFICADOS:
+        raise ValueError(f"{pieza_id}: el móvil está en {estado.get('paso')!r}: `limpiar` solo va tras `verificar`")
+    nombre = estado.get("nombre_remoto")
+    if not nombre:
+        raise ValueError(f"{pieza_id}: el estado no trae nombre_remoto: no se sabe qué vídeo borrar")
+    try:
+        borrado = telefono.borrar_video(nombre) is True
+    except Exception as e:  # noqa: BLE001 — se informa, no se lanza
+        return {"borrado": False, "problemas": [f"{nombre}: el borrado falló: {type(e).__name__}: {e}"]}
+    return {"borrado": borrado, "problemas": [] if borrado else [f"{nombre}: no se pudo confirmar que se borró"]}
