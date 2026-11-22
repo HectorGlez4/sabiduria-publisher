@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sun, 22 Nov 2026 02:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 12:54:54 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-13-re56-reel</guid>
+      <pubDate>Fri, 13 Nov 2026 19:26:00 +0000</pubDate>
+      <description><![CDATA[En 1816 el verano no llegó, y la causa había explotado un año antes al otro lado del mundo.
+
+El monte Tambora, en la isla indonesia de Sumbawa, empezó a erupcionar el 5 de abril de 1815 y llegó a su clímax el día 10. La montaña perdió cerca de un tercio de su altura: de unos 4.300 metros quedó en 2.851. La explosión se oyó a más de 2.600 kilómetros. Las estimaciones de víctimas van de once mil por el efecto directo a más de setenta mil sumando el hambre y las epidemias que vinieron después.
+
+El polvo dio la vuelta al planeta. En 1816 la temperatura media del hemisferio norte bajó alrededor de medio grado y el verano no llegó. El 6 de junio nevó en Albany, en el estado de Nueva York. A doce mil kilómetros del volcán, junto al lago de Ginebra, la lluvia encerró en una casa a cuatro huéspedes ingleses durante días. Uno de ellos propuso que cada uno escribiera una historia de fantasmas. De ahí salió Frankenstein, que Mary Shelley empezó a los dieciocho años, y el relato que fundó el vampiro moderno.
+
+Medio grado de temperatura media. Bastó para arruinar las cosechas de un continente, provocar la peor hambruna europea del siglo y dejar dos libros que seguimos leyendo doscientos años después. El clima nunca fue el fondo del cuadro.
+
+¿Cuánto de lo que hoy eres empezó lejos, en algo que no elegiste?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-13-re56-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-13-re56-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -475,28 +494,6 @@ Dos años y dos meses después, el 3 de noviembre de 1793, Olympe de Gouges fue 
 #SabiduriaDeBolsillo]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re58-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re58-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>LA EXPRESIÓN QUE HIZO CÉLEBRE A HANNAH ARENDT APARECE UNA SOLA VEZ DENTRO DEL LIBRO</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-04-re56-reel</guid>
-      <pubDate>Wed, 04 Nov 2026 19:26:00 +0000</pubDate>
-      <description><![CDATA["La lección de la terrible banalidad del mal, que desafía las palabras y el pensamiento."
-— Hannah Arendt, Eichmann en Jerusalén, 1963, última frase antes del epílogo
-
-Eichmann en Jerusalén se publicó en 1963: primero por entregas en The New Yorker, entre febrero y marzo, y después como libro en Viking Press. El subtítulo es "Un informe sobre la banalidad del mal". Dentro del texto la expresión aparece una única vez, en la última frase del relato, justo antes del epílogo.
-
-La frase no dice que el mal sea poca cosa. Describe al hombre, no al crimen: Arendt le atribuye una incapacidad genuina para pensar y una superficialidad extraordinaria. Tampoco lo excusa. Sostuvo que Eichmann era responsable y defendió la condena a muerte.
-
-La lectura que se impuso fue la contraria, y la acusó de trivializar los crímenes y de sostener que él solo obedecía órdenes. Ocho años después, en 1971, volvió sobre el asunto para precisarlo: lo que le faltaba a Eichmann era la capacidad de mirar cualquier cosa desde el punto de vista de otro.
-
-Una frase de once palabras, citada millones de veces, sostenida por un libro que casi nadie termina.
-
-¿Cuánto de lo que repetimos lo hemos leído entero?
-
-#SabiduriaDeBolsillo #HannahArendt #Filosofia #Citas]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

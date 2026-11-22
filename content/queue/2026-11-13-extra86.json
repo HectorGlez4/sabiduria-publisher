@@ -69,12 +69,15 @@
     "Que Yugong fuera «tonto» en sentido literal: el nombre 愚公 es irónico frente a 智叟, el «viejo sabio»; el relato invierte la sabiduría. No presentarlo como insulto.",
     "Detalles del cuerpo que circulan en versiones escolares (la viuda vecina con su hijo de siete u ocho años que ayuda, el viaje de ida y vuelta al mar de Bohai que dura un año): están en el texto completo, pero no se pidieron ni comprobaron en esta lectura. No usar."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-13T22:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
