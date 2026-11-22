@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 21 Nov 2026 18:44:48 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 02:03:00 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-12-re55-reel</guid>
+      <pubDate>Fri, 13 Nov 2026 04:26:00 +0000</pubDate>
+      <description><![CDATA[Un manuscrito sin título, sin fecha y sin firma tardó diecinueve años en devolverle el nombre a la mujer que lo escribió.
+
+Entre los años 381 y 384, una mujer hispanorromana llamada Egeria recorrió el Mediterráneo oriental: el Sinaí, Egipto, Constantinopla, Mesopotamia, Edesa. Se quedó tres años en Jerusalén. Iba anotándolo todo en una larga carta dirigida a un grupo de mujeres a las que llamaba hermanas.
+
+Esa carta sobrevivió en una sola copia, hecha en el siglo XI en la abadía de Montecassino. Gian Francesco Gamurrini la encontró en 1884 en una biblioteca de Arezzo: sin título, sin fecha, sin nombre de autor, con el principio y el final perdidos. La atribuyó a otra mujer. En 1903 Marius Férotin dio con la clave en un lugar inesperado: una carta del monje gallego Valerio del Bierzo, escrita casi tres siglos más tarde, que elogiaba a una tal Egeria por haber emprendido con corazón intrépido un camino inmenso.
+
+Gracias a esas páginas sabemos cómo se celebraba la Semana Santa en la Jerusalén del siglo IV. El relato estuvo completo todo ese tiempo. Lo que faltaba era el nombre.
+
+¿Cuánto de lo que hoy sabemos llegó hasta nosotros sin firma?
+
+#SabiduriaDeBolsillo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re55-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-12-re55-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un emperador mandó grabar su arrepentimiento por una matanza en medio imperio, y no lo grabó donde mató.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -478,28 +497,6 @@ Una frase de once palabras, citada millones de veces, sostenida por un libro que
 #SabiduriaDeBolsillo #HannahArendt #Filosofia #Citas]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-04-re56-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>EL POEMA QUE SE REPARTE COMO ELOGIO DE LA PUREZA FEMENINA ES UNA CUENTA PASADA AL HOMBRE QUE LA EXIGE</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-03-re55-reel</guid>
-      <pubDate>Wed, 04 Nov 2026 04:26:00 +0000</pubDate>
-      <description><![CDATA["Entonces, buen hombre, preténdeme blanca, preténdeme nívea, preténdeme casta."
-— Alfonsina Storni, "Tú me quieres blanca", en El dulce daño, Buenos Aires, 1918 — versos finales
-
-El dulce daño salió en Buenos Aires en 1918, publicado por la Sociedad Cooperativa Editorial Limitada e impreso en la Imprenta Mercatali. Era el segundo libro de Alfonsina Storni; el primero, La inquietud del rosal, había aparecido dos años antes. Lo escribió mientras criaba sola a su hijo Alejandro, nacido el 21 de abril de 1912, en una ciudad donde una madre soltera pagaba ese lugar todos los días.
-
-El título dice blanca, pero el primer verso dice otra cosa: "Tú me quieres alba, / me quieres de espumas, / me quieres de nácar". Lo que sigue no habla de ella. Habla de él: de las copas en la mano, de los banquetes, de las alcobas. El poema toma la exigencia y se la devuelve convertida en condición. Lo manda al bosque y a la montaña, a lavarse el cuerpo, a vivir sin lujo y a recuperar el alma que se le quedó enredada.
-
-Solo al final, después de todo eso, llegan los cuatro versos que se citan sueltos. En el poema no son una promesa de pureza: son el precio.
-
-Se lee como un poema sobre la mujer. Está escrito en segunda persona, y la segunda persona es un hombre.
-
-¿Quién puede exigir aquello que no está dispuesto a cumplir?
-
-#SabiduriaDeBolsillo #AlfonsinaStorni #Poesia #Citas]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re55-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-03-re55-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

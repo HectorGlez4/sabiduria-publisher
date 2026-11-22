@@ -69,12 +69,15 @@
     "Que Smith defendiera el egoísmo como virtud: lectura vulgar, discutida por la bibliografía. La Teoría de los sentimientos morales (1759) no se consultó y no se usa en el cuerpo.",
     "Que la última edición en vida sea la de 1789 y que la de Cannan sea la «original»: Cannan es una edición moderna de 1904. El campo work lo indica."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-13T15:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
