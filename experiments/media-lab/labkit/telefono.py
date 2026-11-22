@@ -585,41 +585,77 @@ def sha256_de_video(nombre: str) -> str | None:
     return sha256_de_salida(salida)
 
 
+def sin_filas(salida: str) -> bool:
+    """`content query` no encontró nada: salida vacía o solo «No result found.». Un error del proveedor o una
+    fila que no se sabe leer NO cuentan como «sin filas»."""
+    return salida.strip() in ("", "No result found.")
+
+
+def _fila_sin_leer(salida: str, nombre: str) -> str | None:
+    """La primera línea `Row:` con ese nombre exacto, para citarla cuando no se puede leer (p. ej. width=NULL)."""
+    for linea in salida.splitlines():
+        n = re.search(r"_display_name=(.*?)(?:, \w+=|$)", linea)
+        if linea.startswith("Row:") and n and n.group(1) == nombre:
+            return linea.strip()
+    return None
+
+
 def borrar_video(nombre: str) -> bool:
     """Quita el vídeo del teléfono y su fila de MediaStore. True si ya no queda ninguno de los dos;
     que ya no estuviera no es un error."""
     consulta = consulta_video(nombre)
     remoto = f"{CARPETA_VIDEOS}/{nombre}"
     shell(f"rm -f {shlex.quote(remoto)}")
+    # Borra TODAS las filas con ese nombre, no solo la de esta subida.
     shell("content delete --uri " + URI_VIDEOS + " --where " + shlex.quote(f"_display_name='{nombre}'"))
-    return sha256_de_video(nombre) is None and fila_de_video(shell(consulta), nombre) is None
+    return sha256_de_video(nombre) is None and sin_filas(shell(consulta))
+
+
+def _limpiar(nombre: str) -> str:
+    """Borrado de mejor esfuerzo tras un fallo: nunca lanza. Devuelve el sufijo para el mensaje original."""
+    try:
+        return "" if borrar_video(nombre) else "; y no se pudo borrar"
+    except Exception:  # noqa: BLE001 - el error original es el que importa
+        return "; y no se pudo borrar"
 
 
 def subir_video(local: Path, nombre: str) -> dict:
     """Sube el vídeo, lo registra en MediaStore, comprueba el hash y que mida 1080×1920.
 
-    Si el hash o el tamaño no cuadran, quita lo subido antes de fallar. Devuelve remoto, sha256,
-    `subido_en` (ISO, UTC), duracion_ms, ancho y alto."""
+    Ante cualquier fallo después del push intenta quitar lo subido y lanza el error original (con
+    «y no se pudo borrar» si la limpieza falla). Devuelve remoto, sha256, `subido_en` (ISO, UTC),
+    duracion_ms, ancho y alto."""
     consulta = consulta_video(nombre)
     remoto = f"{CARPETA_VIDEOS}/{nombre}"
     local_sha = hashlib.sha256(local.read_bytes()).hexdigest()
     q = shlex.quote(remoto)
     shell(f"mkdir -p {shlex.quote(CARPETA_VIDEOS)}")
-    adb("push", str(local), remoto, timeout=300)
-    subido_en = datetime.now(timezone.utc)
-    shell(f"touch {q}")
-    shell("am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d " + shlex.quote(f"file://{remoto}"))
-    limite = time.monotonic() + ESPERA_MEDIASTORE_S
-    while (fila := fila_de_video(shell(consulta), nombre)) is None:
-        if time.monotonic() >= limite:
-            raise TelefonoError(f"{nombre} no aparece en MediaStore tras {ESPERA_MEDIASTORE_S} s")
-        time.sleep(1)
-    remoto_sha = sha256_de_salida(shell(f"sha256sum {q}"))
-    if remoto_sha != local_sha:
-        borrar_video(nombre)
-        raise TelefonoError(f"hash distinto en el teléfono: {remoto_sha} != {local_sha}")
-    if (fila["ancho"], fila["alto"]) != (1080, 1920):
-        borrar_video(nombre)
-        raise TelefonoError(f"{nombre} mide {fila['ancho']}×{fila['alto']}, no 1080×1920")
+    try:
+        adb("push", str(local), remoto, timeout=300)
+        subido_en = datetime.now(timezone.utc)
+        shell(f"touch {q}")
+        shell("am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d " + shlex.quote(f"file://{remoto}"))
+        limite = time.monotonic() + ESPERA_MEDIASTORE_S
+        while True:
+            salida = shell(consulta)
+            fila = fila_de_video(salida, nombre)
+            if fila is not None:
+                break
+            if time.monotonic() >= limite:
+                sin_leer = _fila_sin_leer(salida, nombre)
+                if sin_leer:
+                    raise TelefonoError(f"{nombre} está en MediaStore pero la fila no se lee: {sin_leer}")
+                raise TelefonoError(f"{nombre} no aparece en MediaStore tras {ESPERA_MEDIASTORE_S} s")
+            time.sleep(1)
+        remoto_sha = sha256_de_salida(shell(f"sha256sum {q}"))
+        if remoto_sha != local_sha:
+            raise TelefonoError(f"hash distinto en el teléfono: {remoto_sha} != {local_sha}")
+        if (fila["ancho"], fila["alto"]) != (1080, 1920):
+            raise TelefonoError(f"{nombre} mide {fila['ancho']}×{fila['alto']}, no 1080×1920")
+    except BaseException as e:
+        extra = _limpiar(nombre)
+        if extra and isinstance(e, TelefonoError):
+            raise TelefonoError(f"{e}{extra}") from e
+        raise
     return {"remoto": remoto, "sha256": local_sha, "subido_en": subido_en.isoformat(),
             "duracion_ms": fila["duracion_ms"], "ancho": fila["ancho"], "alto": fila["alto"]}

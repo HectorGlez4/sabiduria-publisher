@@ -42,12 +42,14 @@ class Telefono:
     """Doble de adb/shell: anota las órdenes y responde según un estado mínimo del teléfono."""
 
     def __init__(self, *, fila_tras: int = 0, sha: str = SHA, ancho: int = 1080, alto: int = 1920,
-                 archivo: bool = False, fila: bool = False):
+                 archivo: bool = False, fila: bool = False, consulta_fija: str | None = None,
+                 error_en: str | None = None, error_sha: str | None = None):
         self.llamadas: list[str] = []
         self.consultas = 0
         self.fila_tras = fila_tras      # consultas que dicen «No result found.» antes de la fila
         self.sha, self.ancho, self.alto = sha, ancho, alto
         self.archivo, self.fila = archivo, fila
+        self.consulta_fija, self.error_en, self.error_sha = consulta_fija, error_en, error_sha
 
     def adb(self, *args, timeout=60):
         self.llamadas.append("adb " + " ".join(args))
@@ -57,18 +59,24 @@ class Telefono:
 
     def shell(self, cmd, timeout=60):
         self.llamadas.append("shell " + cmd)
+        if self.error_en and cmd.startswith(self.error_en):
+            raise telefono.TelefonoError(f"adb shell {cmd}: sin respuesta")
         if cmd.startswith("rm "):
             self.archivo = False
         elif cmd.startswith("content delete"):
             self.fila = False
         elif cmd.startswith("content query"):
             self.consultas += 1
+            if self.consulta_fija is not None:
+                return self.consulta_fija
             if self.fila or (self.archivo and self.consultas > self.fila_tras):
                 self.fila = True
                 return (f"Row: 0 _id=7, _display_name=a-1b2c3d4e.mp4, duration=27533, "
                         f"width={self.ancho}, height={self.alto}\n")
             return "No result found.\n"
         elif cmd.startswith("sha256sum"):
+            if self.error_sha:
+                raise telefono.TelefonoError(self.error_sha)
             if not self.archivo:
                 raise telefono.TelefonoError("adb shell sha256sum: No such file or directory")
             return f"{self.sha}  /sdcard/Movies/SabiduriaLab/a-1b2c3d4e.mp4\n"
@@ -108,6 +116,10 @@ def seccion_puras() -> None:
           "un nombre no seguro no llega a la consulta")
     dos = LINEA + "\n" + LINEA.replace("_id=1000023376", "_id=1000023999").replace("duration=27533", "duration=1")
     check(telefono.fila_de_video(dos, "narrado-sonda.mp4")["id"] == 1000023999, "con dos filas gana el _id más alto")
+    check(telefono.fila_de_video("Row: 0 _id=5, _display_name=x-narrado-sonda.mp4, duration=1, width=1080, height=1920",
+                                 "narrado-sonda.mp4") is None, "un nombre que lo contiene no casa")
+    check(telefono.sin_filas("No result found.\n") and telefono.sin_filas("") and not telefono.sin_filas(LINEA)
+          and not telefono.sin_filas("Error while accessing provider:media"), "sin_filas solo con salida vacía o «No result found.»")
     check(telefono.URI_VIDEOS.endswith("/video/media") and telefono.CARPETA_VIDEOS == "/sdcard/Movies/SabiduriaLab",
           "constantes del vídeo")
 
@@ -143,6 +155,33 @@ def seccion_subir() -> None:
         check(falla(lambda: con_telefono(f, lambda: telefono.subir_video(local, "a b.mp4"))), "nombre no seguro: error")
         check(f.llamadas == [], "nombre no seguro: no se envía ninguna orden")
 
+        f = Telefono(fila_tras=10**6)
+        try:
+            con_telefono(f, lambda: telefono.subir_video(local, nombre))
+        except telefono.TelefonoError as e:
+            check("no aparece" in str(e) and "no se pudo borrar" not in str(e), "timeout: mensaje original")
+        check(not f.archivo and any(c.startswith("shell rm") for c in f.llamadas)
+              and any(c.startswith("shell content delete") for c in f.llamadas), "timeout: se mandó el borrado")
+
+        f = Telefono(consulta_fija="Row: 0 _id=7, _display_name=a-1b2c3d4e.mp4, duration=NULL, width=NULL, height=NULL")
+        try:
+            con_telefono(f, lambda: telefono.subir_video(local, nombre))
+        except telefono.TelefonoError as e:
+            check("width=NULL" in str(e) and "no aparece" not in str(e), "fila ilegible: el mensaje la cita")
+
+        f = Telefono(sha=OTRO_SHA, error_en="rm ")
+        try:
+            con_telefono(f, lambda: telefono.subir_video(local, nombre))
+        except telefono.TelefonoError as e:
+            check("hash distinto" in str(e) and str(e).endswith("y no se pudo borrar"), "limpieza fallida: error original + «y no se pudo borrar»")
+
+        f = Telefono(error_sha="adb shell sha256sum: Permission denied")
+        try:
+            con_telefono(f, lambda: telefono.subir_video(local, nombre))
+        except telefono.TelefonoError as e:
+            check("Permission denied" in str(e), "error de sha256sum: se propaga")
+        check(not f.archivo, "error de sha256sum: se intentó borrar")
+
 
 def seccion_borrar() -> None:
     print("\n3. borrar_video y sha256_de_video")
@@ -153,6 +192,12 @@ def seccion_borrar() -> None:
     f = Telefono()
     check(con_telefono(f, lambda: telefono.borrar_video(nombre)) is True, "ya borrado: True, sin error")
     check(falla(lambda: con_telefono(Telefono(), lambda: telefono.borrar_video("x';rm.mp4"))), "nombre no seguro: error")
+    check(con_telefono(Telefono(consulta_fija="Error while accessing provider:media"), lambda: telefono.borrar_video(nombre)) is False,
+          "error del proveedor: no cuenta como borrado")
+    check(con_telefono(Telefono(consulta_fija=LINEA.replace("narrado-sonda", "a-1b2c3d4e")), lambda: telefono.borrar_video(nombre)) is False,
+          "queda una fila: False")
+    check(falla(lambda: con_telefono(Telefono(archivo=True, error_sha="adb shell sha256sum: Permission denied"),
+                                     lambda: telefono.sha256_de_video(nombre))), "sha256sum con otro error: TelefonoError")
     check(con_telefono(Telefono(archivo=True), lambda: telefono.sha256_de_video(nombre)) == SHA, "sha del archivo presente")
     check(con_telefono(Telefono(), lambda: telefono.sha256_de_video(nombre)) is None, "sha de un archivo ausente: None")
 
