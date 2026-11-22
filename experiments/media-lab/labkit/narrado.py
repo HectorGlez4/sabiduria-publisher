@@ -6,11 +6,14 @@ distinta y nunca una ya hecha. `elegibles` es pura; `elegir` crea la carpeta del
 añade una línea a `registro.jsonl` sin reescribir las anteriores.
 
 `construir` lleva un guion hasta el mp4 y deja `build/informe.json`; `revisar` anota el veredicto visual.
+`apto_para_publicar` dice si ese build se puede publicar y `build/movil.json` guarda por dónde va su
+publicación desde el móvil (`estado_movil`, `guardar_estado_movil`); construir otra vez lo borra.
 """
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import shutil
 import tempfile
@@ -372,3 +375,78 @@ def revisar(pieza_id: str, veredicto: str, raiz: Path | None = None) -> dict:
         informe["ok"] = False
     ruta.write_text(json.dumps(informe, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return informe
+
+
+# ---------------------------------------------------------------- publicar desde el móvil
+
+PASOS_MOVIL = ("subido", "abierto", "listo", "compartido", "verificado", "incierto", "descartado")
+
+
+def ruta_build(pieza_id: str, raiz: Path | None = None) -> Path:
+    _exigir_id(pieza_id)
+    return _narrados(raiz) / pieza_id / "build"
+
+
+def apto_para_publicar(pieza_id: str, raiz: Path | None = None) -> list[str]:
+    """Lo que impide publicar el build de la pieza, leído del disco ahora mismo; vacío si se puede.
+
+    Hace falta `informe.json` con `ok: true` y `veredicto: "PASS"`, el mp4 del informe con el mismo
+    sha256 que `sha256_mp4` y `guion.json` con el mismo que `sha256_guion`. Un id no válido es ValueError."""
+    ruta = ruta_build(pieza_id, raiz) / "informe.json"
+    if not ruta.is_file():
+        return [f"no hay {ruta}: construye y revisa antes de publicar"]
+    try:
+        informe = json.loads(ruta.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        return [f"{ruta} no se puede leer: {e}"]
+    problemas = []
+    if informe.get("ok") is not True:
+        problemas.append(f"la construcción no está ok (fase {informe.get('fase')})")
+    if informe.get("veredicto") != "PASS":
+        problemas.append(f"el veredicto visual es {informe.get('veredicto')!r}, no «PASS»: falta `revisar`")
+    mp4 = Path(informe["mp4"]) if informe.get("mp4") else None
+    if not informe.get("sha256_mp4"):
+        problemas.append("el informe no trae sha256_mp4")
+    elif mp4 is None or not mp4.is_file():
+        problemas.append(f"no está el mp4 del informe ({informe.get('mp4')})")
+    elif _sha256(mp4) != informe["sha256_mp4"]:
+        problemas.append(f"{mp4.name} no es el que se construyó (sha256 distinto): vuelve a construir y revisar")
+    guion = _ruta_guion(pieza_id, raiz)
+    if not informe.get("sha256_guion"):
+        problemas.append("el informe no trae sha256_guion")
+    elif not guion.is_file() or _sha256(guion) != informe["sha256_guion"]:
+        problemas.append("guion.json cambió desde la construcción (sha256 distinto): vuelve a construir y revisar")
+    return problemas
+
+
+def informe_de(pieza_id: str, raiz: Path | None = None) -> dict:
+    """`build/informe.json` tal cual; ValueError si no está."""
+    ruta = ruta_build(pieza_id, raiz) / "informe.json"
+    if not ruta.is_file():
+        raise ValueError(f"no hay {ruta}: construye y revisa antes de publicar")
+    return json.loads(ruta.read_text(encoding="utf-8"))
+
+
+def estado_movil(pieza_id: str, raiz: Path | None = None) -> dict:
+    """`build/movil.json`, o {} si todavía no hay ninguno."""
+    ruta = ruta_build(pieza_id, raiz) / "movil.json"
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.is_file() else {}
+
+
+def guardar_estado_movil(pieza_id: str, estado: dict, raiz: Path | None = None) -> None:
+    """Escribe `build/movil.json` de una vez (temporal y reemplazo): nunca queda a medias. ValueError si
+    `paso` no es uno de PASOS_MOVIL o si la pieza no tiene build."""
+    if estado.get("paso") not in PASOS_MOVIL:
+        raise ValueError(f"paso del móvil desconocido: {estado.get('paso')!r} (vale {', '.join(PASOS_MOVIL)})")
+    build = ruta_build(pieza_id, raiz)
+    if not build.is_dir():
+        raise ValueError(f"no hay {build}: construye antes de publicar")
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=build, prefix=".movil-", suffix=".tmp",
+                                     delete=False) as f:
+        f.write(json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
+        temporal = Path(f.name)
+    try:
+        os.replace(temporal, build / "movil.json")
+    except BaseException:
+        temporal.unlink(missing_ok=True)
+        raise

@@ -39,6 +39,10 @@ TEXTOS: dict[str, dict[str, str]] = {
         "recomenzar_titulo": "Recommencer ?",
         "recomenzar": "Recommencer",
         "suprimir": "Supprimer",
+        # Reel de vídeo propio (sonda del 22 nov, narrados/sonda-movil-2026-11-22.md)
+        "inicio": "Home",  # content-desc de la pestaña `feed_tab`
+        "nuevo_reel": "Nouveau reel",  # título de la galería y de la pantalla de detalles
+        "miniatura_video": "Miniature de la vidéo",  # en la descripción de una casilla de vídeo de la galería
     },
     "threads": {
         "publicar": "Publier",  # confirmar contra el fixture de S1
