@@ -83,7 +83,7 @@
       "encolada_en": "2026-11-22T16:15:27.918112+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 22-Nov-26 08:15:28 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Sunday, 22-Nov-26 09:41:04 PST."
     }
   },
   "targets": [
@@ -91,6 +91,6 @@
     "instagram",
     "threads"
   ],
-  "attempts": 1,
-  "last_attempt": "2026-11-22T16:15:28.243208+00:00"
+  "attempts": 2,
+  "last_attempt": "2026-11-22T17:41:04.403272+00:00"
 }
