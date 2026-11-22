@@ -116,12 +116,16 @@ def _marcado_pregunta(i: int, p: dict, t: dict, d: dict) -> str:
 
 def _gsap_tachado(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
-    return [f'sube("#s{i}b", {_n(t0 + 0.55 * dur)});',
-            f'tl.fromTo("#s{i}r", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.45, ease: "power2.inOut" }}, '
-            f'{_n(t0 + 0.8 * dur)});']
+    lineas = [f'tl.fromTo("#s{i}r", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.45, ease: "power2.inOut" }}, '
+              f'{_n(t0 + 0.8 * dur)});']
+    if i > 0:  # en la primera escena el nombre ya está en pantalla: es la portada
+        lineas.insert(0, f'sube("#s{i}b", {_n(t0 + 0.55 * dur)});')
+    return lineas
 
 
 def _gsap_cita(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
+    if i == 0:  # portada: la cita entera visible desde el primer fotograma
+        return []
     n = len(p["texto"].split())
     if not palabras or len(palabras) != n:
         paso = (t["fin"] - t["inicio"]) / n
@@ -140,11 +144,13 @@ def _gsap_cita(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
 
 def _gsap_nombre_ano(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
-    lineas = [f'sube("#s{i}b", {_n(t0 + 0.12 * dur)});',
-              f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(t0 + 0.3 * dur)});',
+    filete = f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(t0 + 0.3 * dur)});'
+    if i == 0:  # portada: todo el texto ya está en pantalla; solo el filete entra
+        return [filete]
+    lineas = [f'sube("#s{i}a", {_n(t0)});',
+              f'sube("#s{i}b", {_n(t0 + 0.12 * dur)});',
+              filete,
               f'sube("#s{i}y", {_n(t0 + 0.38 * dur)}, 0.6);']
-    if i > 0:
-        lineas.insert(0, f'sube("#s{i}a", {_n(t0)});')
     if p.get("nota"):
         lineas.append(f'sube("#s{i}e", {_n(t0 + 0.7 * dur)});')
     return lineas
@@ -153,20 +159,27 @@ def _gsap_nombre_ano(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
 def _gsap_contraste(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0, dur = t["inicio"], t["fin"] - t["inicio"]
     giro = t0 + 0.5 * dur
-    return [f'sube("#s{i}a", {_n(t0)});',
-            f'tl.to("#noche", {{ opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {_n(giro)});',
-            f'tl.to("#s{i}a", {{ color: "{d["giro"]}", duration: 0.7 }}, {_n(giro)});',
-            f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
-            f'sube("#s{i}b", {_n(giro + 0.3)}, 0.6);',
-            f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
+    lineas = [f'sube("#s{i}a", {_n(t0)});',
+              f'tl.to("#noche", {{ opacity: 1, duration: 0.7, ease: "power2.inOut" }}, {_n(giro)});',
+              f'tl.to("#s{i}a", {{ color: "{d["giro"]}", duration: 0.7 }}, {_n(giro)});',
+              f'tl.fromTo("#s{i}f", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, {_n(giro + 0.1)});',
+              f'sube("#s{i}b", {_n(giro + 0.3)}, 0.6);',
+              f'tl.to("#noche", {{ opacity: 0, duration: 0.5 }}, {_n(t["escena_hasta"] - SALIDA)});']
+    if i == 0:  # portada: sin entradas de texto (el giro de color y de fondo se conserva)
+        lineas = [l for l in lineas if not l.startswith("sube(")]
+    return lineas
 
 
 def _gsap_texto(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
+    if i == 0:  # portada: el texto ya está en pantalla en el primer fotograma
+        return []
     return [f'sube("#s{i}a", {_n(t["inicio"])}, 0.6);']
 
 
 def _gsap_pregunta(i: int, p: dict, t: dict, d: dict, palabras) -> list[str]:
     t0 = t["inicio"]
+    if i == 0:  # portada: texto, firma y aviso ya están en pantalla en el primer fotograma
+        return []
     return [f'sube("#s{i}a", {_n(t0)}, 0.6);',
             f'sube("#firma", {_n(t0 + 1.2)});',
             f'sube("#aviso", {_n(t0 + 1.5)});']

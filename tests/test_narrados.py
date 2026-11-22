@@ -482,6 +482,50 @@ def seccion_proyecto() -> None:
     except ValueError:
         check(True, "diseño desconocido lanza ValueError")
 
+    # Portada: el primer fotograma lleva todo el texto de la primera escena, sin entrada animada.
+    def animado(js: str, sel: str) -> bool:
+        return f'"{sel}"' in js and any(
+            f'"{sel}"' in linea and ("sube(" in linea or "fromTo(" in linea) for linea in js.splitlines())
+
+    def guion_con_primera(primera: dict) -> tuple[dict, list]:
+        g_p = copy.deepcopy(guion_ok)
+        g_p["escenas"][0] = primera
+        g_p["escenas"][1] = copy.deepcopy(guion_ok["escenas"][2])  # una escena 1 con texto que sí anima
+        return g_p, linea_de_tiempo([e["tipo"] for e in g_p["escenas"]], [3.0, 4.0, 5.0, 6.0, 4.0, 2.0])
+
+    js0 = h.split("<script>", 1)[1]
+    check(not animado(js0, "#s0a") and not animado(js0, "#s0b"),
+          "portada tachado: la etiqueta y el nombre no tienen entrada")
+    check(animado(js0, "#s0r"), "portada tachado: la raya sí se anima")
+    check("palabras1" in js0, "la escena 2 (cita) conserva su palabra a palabra")
+    check(animado(js0, "#s2b") and animado(js0, "#s2y"), "las escenas siguientes conservan sus entradas")
+    primeras = {
+        "nombre_ano": {"tipo": "nombre_ano", "voz": "Viktor Frankl, 1946.",
+                       "pantalla": {"etiqueta": "La citó", "nombre": "Viktor Frankl", "ano": "1946",
+                                    "nota": "al salir"}},
+        "texto": {"tipo": "texto", "voz": "Una frase sola.", "pantalla": {"texto": "Una frase sola."}},
+        "cita": {"tipo": "cita", "voz": "Una cita corta.", "pantalla": {"texto": "Una cita corta."}},
+        "contraste": {"tipo": "contraste", "voz": "Claro y oscuro.",
+                      "pantalla": {"claro": "claro", "oscuro": "oscuro"}},
+        "pregunta": {"tipo": "pregunta", "voz": "¿Y tú?", "pantalla": {"texto": "¿Y tú?"}},
+    }
+    for tipo, escena in primeras.items():
+        g_p, t_p = guion_con_primera(escena)
+        js_p = np_.html(g_p, t_p, 28.52, None).split("<script>", 1)[1]
+        texto0 = [l for l in js_p.splitlines() if '"#s0' in l and ("sube(" in l or "fromTo(" in l)]
+        marcas = [l for l in texto0 if '"#s0f"' in l]
+        check(len(texto0) == len(marcas), f"portada {tipo}: solo las marcas (filete) se animan en la escena 1 ({texto0})")
+        check(not any(animado(js_p, f"#s0{x}") for x in "abye"), f"portada {tipo}: texto sin entrada")
+        check("#s0c .p" not in js_p and "palabras0" not in js_p, f"portada {tipo}: sin palabra a palabra")
+        check(animado(js_p, "#s1b"), f"portada {tipo}: la escena 2 conserva su entrada")
+    g_p, t_p = guion_con_primera(primeras["nombre_ano"])
+    check(animado(np_.html(g_p, t_p, 28.52, None).split("<script>", 1)[1], "#s0f"),
+          "portada nombre_ano: el filete sí se anima")
+    # La escena 1 de una cita no cambia: sigue con comilla y palabras.
+    g_c = copy.deepcopy(guion_ok)
+    js_c = np_.html(g_c, tiempos_ok, 28.52, None).split("<script>", 1)[1]
+    check("palabras1" in js_c and "#s1q" in js_c, "una cita en segunda posición conserva comilla y palabras")
+
     with tempfile.TemporaryDirectory() as d:
         voz = pathlib.Path(d) / "v.wav"
         voz.write_bytes(b"RIFF")
