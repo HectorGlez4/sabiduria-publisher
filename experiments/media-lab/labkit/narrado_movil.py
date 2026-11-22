@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -687,10 +688,44 @@ def _problemas_del_boton(xml: str) -> list[str]:
     return []
 
 
+def cuentas_en_detalles(xml: str) -> list[str]:
+    """Los textos de los títulos de la fila del cruce a Threads (la que ancla el único nodo «Threads · Public»): los
+    nodos de Instagram con texto que son hermanos suyos (mismo padre) y están por encima de él. En los volcados 06 y 07
+    es uno, `sabiduriabolsillo` en [169,1697][889,1754]: la cuenta que publicará. [] si no hay ancla o título. Pura."""
+    lista = telefono.nodos(xml)
+    anclas = [i for i, n in enumerate(lista) if n["package"] == IG and _normal(n["texto"]) == _normal(_t("cruce_threads"))]
+    if len(anclas) != 1:
+        return []
+    i = anclas[0]
+    nivel = lista[i]["profundidad"]
+    padre = next((j for j in range(i - 1, -1, -1) if lista[j]["profundidad"] < nivel), None)
+    if padre is None:
+        return []
+    titulos = []
+    for n in lista[padre + 1:]:
+        if n["profundidad"] <= lista[padre]["profundidad"]:
+            break
+        if (n is not lista[i] and n["profundidad"] == nivel and n["package"] == IG and n["texto"].strip()
+                and n["bounds"][3] <= lista[i]["bounds"][1]):
+            titulos.append(n["texto"])
+    return titulos
+
+
+def _problemas_de_cuenta(xml: str) -> list[str]:
+    """La cuenta que publicará, leída en la fila de Threads de los detalles: tiene que ser exactamente un título igual
+    a la marca. Si no, el mensaje dice qué hay."""
+    titulos = cuentas_en_detalles(xml)
+    if titulos == [CUENTA]:
+        return []
+    return [f"cuenta: la fila de Threads de los detalles no dice solo «{CUENTA}» ({titulos or 'ningún título'}): "
+            "no se sabe con qué cuenta se publicaría"]
+
+
 def _listo_para_compartir(xml: str, emergentes: list[dict], pie: str) -> list[str]:
     """Para `pasos.enviar` (sus dos volcados antes del toque): las filas siguen bien y enteras, el botón es único,
     activo y destapado, y ninguna ventana emergente se le cruza."""
-    problemas = [f for clave, f in _faltas(xml, pie).items() if clave != "pie"] + _problemas_del_boton(xml)
+    problemas = ([f for clave, f in _faltas(xml, pie).items() if clave != "pie"] + _problemas_del_boton(xml)
+                 + _problemas_de_cuenta(xml))
     culpable = pantalla.emergente_solapada(emergentes, [n["bounds"] for n in _por_id(xml, ID_COMPARTIR)])
     if culpable is not None:
         problemas.append(f"una {pantalla.describe_emergente(culpable)} se cruza con «Partager»")
@@ -714,7 +749,7 @@ def _comprobar_antes_de_compartir(pie: str) -> None:
     campos = _por_id(xml_arriba, ID_PIE)
     if len(campos) != 1 or campos[0]["texto"] != pie:
         motivos.append("pie: el campo no tiene el pie entero de la pieza")
-    motivos += _problemas_del_boton(xml_abajo)
+    motivos += _problemas_del_boton(xml_abajo) + _problemas_de_cuenta(xml_abajo)
     if telefono.teclado_estado() is not False:
         motivos.append("el teclado está abierto (o no se sabe)")
     if motivos:
@@ -816,8 +851,9 @@ def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     f. dos lecturas frescas, solo deslizando entre ellas (arriba el pie, abajo los interruptores), con
        `detalles_listos_en_dos` vacío y el campo igual al pie entero: se relee todo después de los toques de `pie`;
     g. en la última, un solo `share_button`, activo y destapado, y el teclado cerrado;
-    h. ANTES del toque, en `observador_nuevo` (que `pasos.enviar` llama tras sus dos volcados, justo antes de pulsar):
-       la línea {"pieza", "cita", "estado": "compartido", "compartido_en", "sha256_mp4", "nombre_remoto"} en
+    h. ANTES del toque, en `observador_nuevo` (que `pasos.enviar` llama tras sus dos volcados, justo antes de pulsar)
+       y con el cerrojo del registro (`narrado.cerrojo_registro`: si otro proceso lo tiene, no se espera y no se pulsa):
+       otra vez ninguna línea de la cita o de la pieza y el estado «listo»; luego la línea {"pieza", "cita", "estado": "compartido", "compartido_en", "sha256_mp4", "nombre_remoto"} en
        `registro.jsonl`, luego el estado «compartido» con `compartido_en`, los dos con fsync del archivo y de la
        carpeta, y se releen los dos. Si cualquiera falla, no se pulsa. Si la línea queda escrita y el toque no llega
        a darse, la cita queda bloqueada para siempre: es a propósito, la dirección segura;
@@ -849,17 +885,26 @@ def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     respondidos: list[str] = compartido["avisos_respondidos"]
 
     def observador_nuevo(boton: dict):
-        # h, todo antes del toque: la línea del registro (fuera de build/), luego el estado, los dos con fsync, y se
-        # releen del disco. Si algo falla aquí `enviar` no pulsa.
-        narrado.registrar(linea, raiz)
-        escrito.append("registro")
-        narrado.guardar_estado_movil(pieza_id, compartido, raiz)
-        escrito.append("estado")
-        leido = narrado.estado_movil(pieza_id, raiz)
-        if leido.get("paso") != "compartido" or leido.get("compartido_en") != compartido["compartido_en"]:
-            raise OSError("el estado leído tras escribirlo no dice «compartido» con este compartido_en")
-        if narrado.ya_compartida(pieza_id, raiz) != linea:
-            raise OSError("la última línea del registro para esta cita no es la que se acaba de escribir")
+        # h, todo antes del toque y con el cerrojo del registro (`fcntl.flock`, sin esperar): otra vez que no hay
+        # línea de esta cita ni de esta pieza y que el estado sigue «listo» (otro `publicar` pudo pasar a–g a la vez);
+        # la línea del registro (fuera de build/), luego el estado, los dos con fsync, y se releen del disco. Si algo
+        # falla aquí `enviar` no pulsa. El cerrojo se suelta antes del toque: desde aquí bloquean la línea y el estado.
+        with narrado.cerrojo_registro(raiz):
+            previa = narrado.ya_compartida(pieza_id, raiz)
+            if previa is not None:
+                raise OSError(f"otro proceso registró esta cita mientras tanto ({_texto_registro(previa)})")
+            ahora = narrado.estado_movil(pieza_id, raiz).get("paso")
+            if ahora != "listo":
+                raise OSError(f"el estado pasó a {ahora!r} mientras tanto: otro proceso")
+            narrado.registrar(linea, raiz)
+            escrito.append("registro")
+            narrado.guardar_estado_movil(pieza_id, compartido, raiz)
+            escrito.append("estado")
+            leido = narrado.estado_movil(pieza_id, raiz)
+            if leido.get("paso") != "compartido" or leido.get("compartido_en") != compartido["compartido_en"]:
+                raise OSError("el estado leído tras escribirlo no dice «compartido» con este compartido_en")
+            if narrado.ya_compartida(pieza_id, raiz) != linea:
+                raise OSError("la última línea del registro para esta cita no es la que se acaba de escribir")
         return lambda xml: dict(pasos.VOLCADO_NO_VALIDO)  # la observación es la de `despues`
 
     def anotar() -> None:
@@ -990,6 +1035,9 @@ def descartar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
 
 # Se leen al llamar (las pruebas los acortan): el plazo cuenta desde el principio de `verificar`, para todo el paso.
 PLAZO_VERIFICAR_S = 180
+LIMITE_DURO_VERIFICAR_S = 360  # tope absoluto, mirado dentro de las lecturas: la confirmación tampoco lo pasa
+TIEMPO_AGOTADO = "tiempo máximo de verificación agotado"
+ESPERA_LIMPIAR_MIN = 15  # `limpiar` no borra antes de esto desde `compartido_en`: la subida podría seguir
 ESPERA_ENTRE_LECTURAS_S = 15
 ESPERA_TRAS_REFRESCO_S = 3
 DESLIZAR_REFRESCO_MS = 500  # como `sitio_instagram.verificar`
@@ -1142,9 +1190,23 @@ def _atras_sin_emergente(ev: Path, nombre: str) -> None:
 _BANNER_EN_RONDA = [False]
 
 
+# Instante (`reloj.monotonic`) en que `verificar` deja de leer pase lo que pase: lo pone `verificar` al empezar
+# (LIMITE_DURO_VERIFICAR_S desde el principio) y lo quita al acabar. `_vistazo` lo mira en cada volcado, también dentro de
+# las lecturas estables y las esperas, así que como mucho se pasa en lo que tarde un volcado.
+_LIMITE_DURO: list[float | None] = [None]
+
+
+class TiempoAgotado(PantallaInesperada):
+    """Se pasó LIMITE_DURO_VERIFICAR_S: `verificar` acaba «incierto» sin otra ronda."""
+
+
 def _vistazo(xml: str) -> str:
+    """Cada volcado de `verificar` pasa por aquí: enciende la marca de la barra de subida de la ronda y, pasado el
+    límite duro, TiempoAgotado."""
     if subiendo(xml):
         _BANNER_EN_RONDA[0] = True
+    if _LIMITE_DURO[0] is not None and reloj.monotonic() >= _LIMITE_DURO[0]:
+        raise TiempoAgotado(f"{TIEMPO_AGOTADO} ({LIMITE_DURO_VERIFICAR_S} s)")
     return xml
 
 
@@ -1241,6 +1303,8 @@ def _abrir_lo_mas_reciente(pie: str, ev: Path) -> tuple[str, str, str | None]:
     try:
         xml, _ = pasos.esperar_estable(abierto, descripcion="el Reel abierto quieto")
         leida = leyenda_del_reel(xml, pie)
+    except TiempoAgotado:
+        raise
     except (PantallaInesperada, telefono.TelefonoError):
         leida = "ausente"
     if leida == "coincide":
@@ -1292,6 +1356,9 @@ def _confirmar(antes: int, ev: Path, lectura: dict) -> dict:
         despues, _ = _recuento_refrescado(xml)
     except si.CuentaAjena:
         raise
+    except TiempoAgotado:
+        return {**base, "estado": "incierto", "banner": _BANNER_EN_RONDA[0],
+                "problemas": [f"confirmación: {TIEMPO_AGOTADO} ({LIMITE_DURO_VERIFICAR_S} s)"]}
     except (PantallaInesperada, telefono.TelefonoError) as e:
         return {**base, "estado": "incierto", "banner": _BANNER_EN_RONDA[0],
                 "problemas": [f"confirmación: no se pudo releer el recuento tras ver el Reel: {type(e).__name__}: {e}"]}
@@ -1316,6 +1383,7 @@ def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
     motivo = None
     ultimo_error = None
     banner = False
+    agotado = False
     aperturas: dict[str, dict[str, int]] = {}
     while True:
         _BANNER_EN_RONDA[0] = False
@@ -1351,6 +1419,10 @@ def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
                               else f"el recuento es {despues}, no {antes + 1}")
         except si.CuentaAjena:
             raise
+        except TiempoAgotado:
+            agotado = True
+            banner = _BANNER_EN_RONDA[0]
+            break
         except (PantallaInesperada, telefono.TelefonoError) as e:
             ultimo_error = f"{type(e).__name__}: {e}"
         banner = _BANNER_EN_RONDA[0]
@@ -1358,6 +1430,8 @@ def _sondear(antes: int, pie: str, ev: Path, inicio: float) -> dict:
             break
         reloj.dormir(espera)
     problemas = [f"tras {plazo} s: {motivo or 'no se llegó a leer el recuento'}"]
+    if agotado:
+        problemas = [f"{TIEMPO_AGOTADO} ({LIMITE_DURO_VERIFICAR_S} s): {motivo or 'no se llegó a leer el recuento'}"]
     if ultimo_error:
         problemas.append(f"último error: {ultimo_error}")
     return {"estado": "incierto", "despues": despues, "encontrada": False, "captura": None, "banner": banner,
@@ -1439,7 +1513,11 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
 
     inicio = reloj.monotonic()
     pasos.exigir_listo()
-    lectura = _sondear(antes, pie, ev, inicio)
+    _LIMITE_DURO[0] = inicio + LIMITE_DURO_VERIFICAR_S
+    try:
+        lectura = _sondear(antes, pie, ev, inicio)
+    finally:
+        _LIMITE_DURO[0] = None
 
     problemas = list(lectura["problemas"])
     # El vídeo solo se borra con «verificado» y sin la barra de subida en ningún volcado de la última ronda ni de la de
@@ -1482,11 +1560,18 @@ def verificar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     return resultado
 
 
+def _ahora() -> datetime:
+    """La hora UTC de ahora; las pruebas la sustituyen."""
+    return datetime.now(timezone.utc)
+
+
 def limpiar(pieza_id: str, ev: Path | None = None, raiz: Path | None = None) -> dict:
     """Borra del teléfono el vídeo de una pieza ya verificada («verificado» o «incierto»; si no, ValueError): para el
     vídeo que `verificar` conservó (resultado incierto, o la subida seguía en curso). Córrelo SOLO cuando la subida
     haya terminado seguro: varios minutos después de compartir y sin la barra «Partage sur…» en el perfil; borrar un
-    vídeo que Instagram todavía lee cortaría la subida. Solo `telefono.borrar_video(nombre_remoto)`: no
+    vídeo que Instagram todavía lee cortaría la subida. Por eso se niega (ValueError, con los minutos que faltan) hasta
+    ESPERA_LIMPIAR_MIN minutos (leído al llamar) después de `compartido_en` (del estado o, si no, del registro), y si no
+    se sabe ese instante. Solo `telefono.borrar_video(nombre_remoto)`: no
     toca nada más del teléfono ni escribe en el registro ni en el estado. `ev` no se usa (la firma es la de los demás
     pasos). Devuelve {"borrado", "problemas"}; un False o un error van a `problemas`, no se lanzan."""
     estado = narrado.estado_movil(pieza_id, raiz)
@@ -1495,6 +1580,18 @@ def limpiar(pieza_id: str, ev: Path | None = None, raiz: Path | None = None) -> 
     nombre = estado.get("nombre_remoto")
     if not nombre:
         raise ValueError(f"{pieza_id}: el estado no trae nombre_remoto: no se sabe qué vídeo borrar")
+    referencia = estado.get("compartido_en") or next(
+        (e.get("compartido_en") for e in reversed(narrado.registro_de(pieza_id, raiz)) if e.get("compartido_en")), None)
+    if not referencia:
+        raise ValueError(f"{pieza_id}: no se sabe cuándo se compartió (ni en el estado ni en el registro): no se borra")
+    momento = datetime.fromisoformat(referencia)
+    if momento.tzinfo is None:
+        momento = momento.replace(tzinfo=timezone.utc)
+    pasado_min = (_ahora() - momento).total_seconds() / 60
+    if pasado_min < ESPERA_LIMPIAR_MIN:
+        faltan = max(1, math.ceil(ESPERA_LIMPIAR_MIN - pasado_min))
+        raise ValueError(f"{pieza_id}: se compartió hace {pasado_min:.0f} min; `limpiar` espera {ESPERA_LIMPIAR_MIN} min "
+                         f"desde {referencia} por si la subida sigue: faltan {faltan} min")
     try:
         borrado = telefono.borrar_video(nombre) is True
     except Exception as e:  # noqa: BLE001 — se informa, no se lanza

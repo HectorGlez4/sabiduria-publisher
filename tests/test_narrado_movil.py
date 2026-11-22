@@ -1754,11 +1754,26 @@ class VerificarSimulado(TelefonoSimulado):
         self.reloj += segundos
 
 
+COMPARTIDO_EN = "2026-11-22T15:00:00+00:00"  # el de `preparado_compartido`
+
+
+def con_ahora(minutos: float, fn):
+    """`fn()` con `narrado_movil._ahora` a `minutos` después de COMPARTIDO_EN."""
+    from datetime import datetime, timedelta
+    from labkit import narrado_movil as nm
+    original = nm._ahora
+    nm._ahora = lambda: datetime.fromisoformat(COMPARTIDO_EN) + timedelta(minutes=minutos)
+    try:
+        return fn()
+    finally:
+        nm._ahora = original
+
+
 def preparado_compartido(d: str) -> pathlib.Path:
     """Como lo deja `publicar`: estado «compartido» y la línea «compartido» en el registro."""
     from labkit import narrado
     raiz = preparado_listo(d)
-    estado = {**narrado.estado_movil(PIEZA, raiz), "paso": "compartido", "compartido_en": "2026-11-22T15:00:00+00:00",
+    estado = {**narrado.estado_movil(PIEZA, raiz), "paso": "compartido", "compartido_en": COMPARTIDO_EN,
               "avisos_respondidos": []}
     narrado.guardar_estado_movil(PIEZA, estado, raiz)
     narrado.registrar({"pieza": PIEZA, "cita": narrado.clave_de_pieza(PIEZA, raiz), "estado": "compartido",
@@ -1852,10 +1867,11 @@ def seccion_verificar() -> None:
         sim = VerificarSimulado(**kw)
         if plazo is not None:
             nm.PLAZO_VERIFICAR_S = plazo
+            nm.LIMITE_DURO_VERIFICAR_S = max(360, 2 * plazo)
         try:
             res, err, borrados, escrituras = correr_verificar(sim, raiz, ev, borrar=borrar)
         finally:
-            nm.PLAZO_VERIFICAR_S = 180
+            nm.PLAZO_VERIFICAR_S, nm.LIMITE_DURO_VERIFICAR_S = 180, 360
         return raiz, sim, res or {}, err, borrados, escrituras
 
     nombre = None
@@ -2061,7 +2077,7 @@ def seccion_verificar() -> None:
         check(ultima(raiz).get("video_conservado") is True
               and narrado.estado_movil(PIEZA, raiz).get("video_conservado") is True,
               "S7: video_conservado en el registro y en el estado")
-        r2, e2, b2 = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: nm.limpiar(PIEZA, raiz=raiz))
+        r2, e2, b2 = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(20, lambda: nm.limpiar(PIEZA, raiz=raiz)))
         check(e2 is None and r2 == {"borrado": True, "problemas": []} and b2 == [nombre],
               f"limpiar tras «incierto» borra el vídeo conservado ({r2}, {b2})")
         check(len(leer_registro(raiz)) == 2, "limpiar no escribe en el registro")
@@ -2077,7 +2093,7 @@ def seccion_verificar() -> None:
             narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": paso}, raiz)
             for borrar in ((True, False, telefono.TelefonoError("adb: sin respuesta")) if bien else (True,)):
                 sim = TelefonoSimulado([jerarquia()])
-                r, e, b = correr_con_video(sim, lambda: nm.limpiar(PIEZA, raiz=raiz), borrar=borrar)
+                r, e, b = correr_con_video(sim, lambda: con_ahora(20, lambda: nm.limpiar(PIEZA, raiz=raiz)), borrar=borrar)
                 if bien:
                     ok = e is None and r["borrado"] is (borrar is True) and bool(r["problemas"]) is (borrar is not True)
                 else:
@@ -2465,9 +2481,209 @@ def seccion_guia() -> None:
         check(codigo in seccion, f"la tabla de salidas tiene la fila {codigo.strip(' |')}")
 
 
+def seccion_ola_final() -> None:
+    print("\n18. Revisión final: cerrojo del registro, cuenta al compartir, limpiar, límite duro, ya_compartida")
+    import fcntl
+    import os
+    from labkit import narrado, narrado_movil as nm
+
+    pie = pie_de_prueba()
+    cerrojo = lambda raiz: raiz / "experiments" / "media-lab" / "narrados" / ".registro.lock"
+
+    def libre(raiz) -> bool:
+        fd = os.open(cerrojo(raiz), os.O_RDWR | os.O_CREAT)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            return True
+        except BlockingIOError:
+            return False
+        finally:
+            os.close(fd)
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie)
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR] and cerrojo(raiz).exists() and libre(raiz),
+              f"camino feliz: un toque, y el cerrojo del registro queda suelto ({err!r})")
+
+    # dos `publicar` a la vez: entre (a) y la sección con cerrojo, el otro escribe su línea de la misma cita
+    for que, otro in (("línea de la misma cita (otra pieza)", "registro"), ("estado «compartido» de otro proceso", "estado")):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            original = narrado.cerrojo_registro
+
+            def el_otro_entra_antes(raiz_=None, _otro=otro, _raiz=raiz):
+                if _otro == "registro":
+                    narrado.registrar({"pieza": "2026-01-01-otra", "cita": narrado.clave_de_pieza(PIEZA, _raiz),
+                                       "estado": "compartido", "compartido_en": "2026-11-22T15:00:00+00:00"}, _raiz)
+                else:
+                    narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, _raiz), "paso": "compartido"},
+                                                 _raiz)
+                return original(raiz_)
+            narrado.cerrojo_registro = el_otro_entra_antes
+            try:
+                sim = PublicarSimulado(pie=pie)
+                res, err = correr_publicar(sim, raiz, ev)
+            finally:
+                narrado.cerrojo_registro = original
+            reg = leer_registro(raiz)
+            check(isinstance(err, nm.NoPublicar) and sim.toques == [] and "otro proceso" in str(err)
+                  and len(reg) == (1 if otro == "registro" else 0) and libre(raiz),
+                  f"dos publicar a la vez ({que}): el segundo no pulsa ni escribe, y suelta el cerrojo ({err!r}, {reg})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        cerrojo(raiz).parent.mkdir(parents=True, exist_ok=True)
+        fd = os.open(cerrojo(raiz), os.O_RDWR | os.O_CREAT)
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        try:
+            sim = PublicarSimulado(pie=pie)
+            res, err = correr_publicar(sim, raiz, ev)
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+            os.close(fd)
+        check(isinstance(err, nm.NoPublicar) and sim.toques == [] and leer_registro(raiz) == []
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "listo" and "cerrojo" in str(err),
+              f"el cerrojo del registro en manos de otro descriptor: no se espera, no se pulsa ni se escribe ({err!r})")
+
+    # FIX NOW: una relectura que no cuadra tras escribir = ningún toque
+    for que in ("registro", "estado"):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            orig_ya, orig_estado = narrado.ya_compartida, narrado.estado_movil
+
+            def ya_falso(pieza_id, raiz_=None):
+                e = orig_ya(pieza_id, raiz_)
+                return {**e, "compartido_en": "otro"} if e is not None else None
+
+            def estado_falso(pieza_id, raiz_=None):
+                e = orig_estado(pieza_id, raiz_)
+                return {**e, "compartido_en": "otro"} if e.get("paso") == "compartido" else e
+            if que == "registro":
+                narrado.ya_compartida = ya_falso
+            else:
+                narrado.estado_movil = estado_falso
+            try:
+                sim = PublicarSimulado(pie=pie)
+                res, err = correr_publicar(sim, raiz, ev)
+            finally:
+                narrado.ya_compartida, narrado.estado_movil = orig_ya, orig_estado
+            check(isinstance(err, nm.NoPublicar) and sim.toques == [] and "no se pulsó" in str(err) and libre(raiz),
+                  f"la relectura del {que} no cuadra tras escribir: ningún toque ({err!r})")
+
+    # CRITICAL 2: la cuenta al compartir, en la fila de Threads de los detalles
+    titulo = 'text="sabiduriabolsillo" resource-id="com.instagram.android:id/title"'
+    for f in ("06-detalles-abajo.xml", "07-mencion-ia.xml"):
+        x = fixture(f)
+        check(nm.cuentas_en_detalles(x) == ["sabiduriabolsillo"] and nm._problemas_de_cuenta(x) == [],
+              f"{f}: la fila de Threads dice «sabiduriabolsillo»")
+        ajena = x.replace(titulo, titulo.replace("sabiduriabolsillo", "cuenta_ajena"))
+        vacia = x.replace(titulo, titulo.replace('text="sabiduriabolsillo"', 'text=""'))
+        i = x.index(titulo)
+        abre, cierra = x.rfind("<node", 0, i), x.index("/>", i) + 2
+        doble = x[:cierra] + x[abre:cierra] + x[cierra:]
+        for nombre, editado, esperado in (("otra cuenta", ajena, "cuenta_ajena"), ("sin título", vacia, "ningún título"),
+                                          ("dos títulos", doble, "sabiduriabolsillo', 'sabiduriabolsillo")):
+            problemas = nm._problemas_de_cuenta(editado)
+            check(len(problemas) == 1 and esperado in problemas[0],
+                  f"{f} con {nombre}: los detalles no están listos y el mensaje dice qué hay ({problemas})")
+    listo = con_estados(pantalla_fin(), {"ia": True, "essai": False, "threads": False, "facebook": False},
+                        INTERRUPTORES_FIN)
+    check(not any("cuenta" in p for p in nm._listo_para_compartir(listo, [], pie))
+          and any("cuenta_ajena" in p for p in nm._listo_para_compartir(
+              listo.replace(titulo, titulo.replace("sabiduriabolsillo", "cuenta_ajena")), [], pie)),
+          "_listo_para_compartir (los dos volcados de enviar) exige la cuenta de la marca")
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, retoque=lambda x: x.replace(titulo, titulo.replace("sabiduriabolsillo", "cuenta_ajena")))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(isinstance(err, nm.NoPublicar) and any("cuenta_ajena" in m for m in err.motivos) and sim.toques == []
+              and leer_registro(raiz) == [], f"publicar con otra cuenta en los detalles: no pulsa ({err!r})")
+
+    # IMPORTANT 1: limpiar espera ESPERA_LIMPIAR_MIN desde compartido_en
+    with tempfile.TemporaryDirectory() as d:
+        raiz = preparado_compartido(d)
+        narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": "incierto"}, raiz)
+        r, e, b = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(5, lambda: nm.limpiar(PIEZA, raiz=raiz)))
+        check(isinstance(e, ValueError) and "faltan 10 min" in str(e) and b == [],
+              f"limpiar a los 5 min de compartir: se niega y dice cuánto falta ({e!r})")
+        r, e, b = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(16, lambda: nm.limpiar(PIEZA, raiz=raiz)))
+        check(e is None and r["borrado"] is True and len(b) == 1, f"limpiar a los 16 min: borra ({r})")
+        nm.ESPERA_LIMPIAR_MIN = 3
+        try:
+            r, e, b = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(5, lambda: nm.limpiar(PIEZA, raiz=raiz)))
+        finally:
+            nm.ESPERA_LIMPIAR_MIN = 15
+        check(e is None and r["borrado"] is True, "ESPERA_LIMPIAR_MIN se lee al llamar")
+        estado = narrado.estado_movil(PIEZA, raiz)
+        estado.pop("compartido_en")
+        narrado.guardar_estado_movil(PIEZA, estado, raiz)
+        r, e, b = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(5, lambda: nm.limpiar(PIEZA, raiz=raiz)))
+        check(isinstance(e, ValueError) and "faltan" in str(e) and b == [],
+              f"sin compartido_en en el estado, la hora sale del registro ({e!r})")
+        (raiz / "experiments" / "media-lab" / "narrados" / "registro.jsonl").write_text("", encoding="utf-8")
+        r, e, b = correr_con_video(TelefonoSimulado([jerarquia()]), lambda: con_ahora(60, lambda: nm.limpiar(PIEZA, raiz=raiz)))
+        check(isinstance(e, ValueError) and "no se sabe cuándo" in str(e) and b == [],
+              f"sin ninguna hora de compartir: no se borra ({e!r})")
+
+    # IMPORTANT 2: límite duro dentro de las lecturas
+    class Lento(VerificarSimulado):
+        def volcado(self, timeout: int = 30) -> str:
+            self.reloj += 25
+            return super().volcado(timeout)
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_compartido(d), pathlib.Path(d) / "ev"
+        sim = Lento(pie_reel=pie, recuentos=(4191,))
+        nm.LIMITE_DURO_VERIFICAR_S = 100
+        try:
+            inicio = sim.reloj
+            res, err, borrados, escrituras = correr_verificar(sim, raiz, ev)
+        finally:
+            nm.LIMITE_DURO_VERIFICAR_S = 360
+        transcurrido = sim.reloj - inicio
+        check(err is None and res["estado"] == "incierto" and any(nm.TIEMPO_AGOTADO in p for p in res["problemas"])
+              and transcurrido < 100 + 60,
+              f"una lectura más larga que el límite duro: «incierto» por tiempo, sin pasarse más de un volcado "
+              f"({transcurrido:.0f} s, {res['problemas'][:1]})")
+        check([r["estado"] for r in leer_registro(raiz)] == ["compartido", "incierto"]
+              and [e[0] for e in escrituras] == ["incierto"] and escrituras[0][1] == leer_registro(raiz)
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "incierto",
+              "por tiempo agotado también: registro y luego estado")
+        check(nm._LIMITE_DURO[0] is None, "el límite duro se quita al acabar")
+    check(nm.LIMITE_DURO_VERIFICAR_S == 360 and nm.ESPERA_LIMPIAR_MIN == 15, "constantes: 360 s y 15 min")
+
+    # IMPORTANT 4: ya_compartida por la cita O por la pieza
+    import json as _json
+    with tempfile.TemporaryDirectory() as d:
+        raiz = arbol(d)
+        clave = narrado.clave_de_pieza(PIEZA, raiz)
+        narrado.registrar({"pieza": PIEZA, "cita": clave, "estado": "compartido"}, raiz)
+        ruta = raiz / "content" / "published" / f"{PIEZA}.json"
+        pieza = _json.loads(ruta.read_text(encoding="utf-8"))
+        pieza["core"]["quote"]["text"] = "Una cita editada después de compartir."
+        ruta.write_text(_json.dumps(pieza), encoding="utf-8")
+        check((narrado.ya_compartida(PIEZA, raiz) or {}).get("estado") == "compartido",
+              "cita editada en la misma pieza: el registro la sigue encontrando por el id")
+    with tempfile.TemporaryDirectory() as d:
+        raiz = arbol(d)
+        narrado.registrar({"pieza": "2026-01-01-otra", "cita": narrado.clave_de_pieza(PIEZA, raiz), "estado": "incierto"}, raiz)
+        check((narrado.ya_compartida(PIEZA, raiz) or {}).get("estado") == "incierto",
+              "la misma cita en otra pieza: encontrada por la cita")
+        (raiz / "experiments" / "media-lab" / "narrados" / "registro.jsonl").write_text(
+            _json.dumps({"pieza": "2026-01-01-otra", "cita": "otra", "estado": "verificado"}) + "\n", encoding="utf-8")
+        check(narrado.ya_compartida(PIEZA, raiz) is None, "ni la cita ni la pieza: None")
+        narrado.registrar({"pieza": PIEZA, "cita": "vieja", "estado": "compartido"}, raiz)
+        narrado.registrar({"pieza": "2026-01-01-otra", "cita": narrado.clave_de_pieza(PIEZA, raiz), "estado": "verificado"}, raiz)
+        check(narrado.ya_compartida(PIEZA, raiz)["estado"] == "verificado", "con las dos, la más reciente")
+
+
+
 SECCIONES = [seccion_puras, seccion_subir, seccion_borrar, seccion_pie, seccion_apto_y_estado, seccion_miniatura,
              seccion_subir_paso, seccion_abrir, seccion_interruptores, seccion_poner_pie, seccion_publicar,
-             seccion_descartar, seccion_verificar, seccion_cli, seccion_guia]
+             seccion_descartar, seccion_verificar, seccion_cli, seccion_guia, seccion_ola_final]
 
 
 def main() -> int:

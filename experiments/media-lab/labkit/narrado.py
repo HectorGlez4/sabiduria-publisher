@@ -13,12 +13,14 @@ Lo compartido queda además en `registro.jsonl` (`ya_compartida`), que sobrevive
 """
 from __future__ import annotations
 
+import fcntl
 import hashlib
 import json
 import os
 import re
 import shutil
 import tempfile
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -159,12 +161,45 @@ def clave_de_pieza(pieza_id: str, raiz: Path | None = None) -> str:
     return clave
 
 
-def ya_compartida(pieza_id: str, raiz: Path | None = None) -> dict | None:
-    """La entrada más reciente de `registro.jsonl` cuya `cita` es la clave de la cita de esta pieza, sea cual sea su
-    `estado`; None si no hay ninguna. Solo lee el disco. ValueError si no se sabe la cita de la pieza."""
+def registro_de(pieza_id: str, raiz: Path | None = None) -> list[dict]:
+    """Las entradas de `registro.jsonl` de esta pieza, en orden: las de la clave de su cita O las de su id (si alguien
+    edita la cita de una pieza ya compartida, el id la sigue bloqueando; si otra pieza tiene la misma cita, la clave).
+    Solo lee el disco. ValueError si no se sabe la cita de la pieza."""
     clave = clave_de_pieza(pieza_id, raiz)
-    coinciden = [e for e in _leer_registro(raiz) if isinstance(e, dict) and e.get("cita") == clave]
+    return [e for e in _leer_registro(raiz)
+            if isinstance(e, dict) and (e.get("cita") == clave or e.get("pieza") == pieza_id)]
+
+
+def ya_compartida(pieza_id: str, raiz: Path | None = None) -> dict | None:
+    """La entrada más reciente de `registro_de(pieza_id)` (la misma cita o la misma pieza), sea cual sea su `estado`;
+    None si no hay ninguna. Solo lee el disco. ValueError si no se sabe la cita de la pieza."""
+    coinciden = registro_de(pieza_id, raiz)
     return coinciden[-1] if coinciden else None
+
+
+class RegistroOcupado(OSError):
+    """Otro proceso tiene el cerrojo de `registro.jsonl`: nadie espera, se niega en el acto."""
+
+
+@contextmanager
+def cerrojo_registro(raiz: Path | None = None):
+    """`fcntl.flock(LOCK_EX | LOCK_NB)` sobre `narrados/.registro.lock` (fuera de git) mientras dura el bloque: lo que
+    se comprueba y se escribe dentro no se cruza con otro proceso. Si está tomado, RegistroOcupado sin esperar. Se
+    suelta al salir del bloque, también con una excepción."""
+    ruta = _narrados(raiz) / ".registro.lock"
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(ruta, os.O_RDWR | os.O_CREAT, 0o644)
+    try:
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as e:
+            raise RegistroOcupado(f"otro proceso tiene el cerrojo del registro ({ruta}): no se espera") from e
+        try:
+            yield
+        finally:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+    finally:
+        os.close(fd)
 
 
 # ---------------------------------------------------------------- construir
