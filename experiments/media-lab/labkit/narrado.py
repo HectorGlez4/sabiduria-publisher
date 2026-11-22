@@ -7,7 +7,9 @@ añade una línea a `registro.jsonl` sin reescribir las anteriores.
 
 `construir` lleva un guion hasta el mp4 y deja `build/informe.json`; `revisar` anota el veredicto visual.
 `apto_para_publicar` dice si ese build se puede publicar y `build/movil.json` guarda por dónde va su
-publicación desde el móvil (`estado_movil`, `guardar_estado_movil`); construir otra vez lo borra.
+publicación desde el móvil (`estado_movil`, `guardar_estado_movil`); construir otra vez lo borra, salvo si
+dice que se compartió («compartido», «verificado», «incierto»): entonces `construir` se niega sin borrar nada.
+Lo compartido queda además en `registro.jsonl` (`ya_compartida`), que sobrevive a cualquier build.
 """
 from __future__ import annotations
 
@@ -122,12 +124,47 @@ def elegir(ahora: datetime | None = None, raiz: Path | None = None) -> dict:
             "carpeta": str(carpeta), "es_falsa_atribucion": True}
 
 
+def _fsync_carpeta(carpeta: Path) -> None:
+    """Lleva al disco la entrada de directorio (un archivo nuevo o reemplazado): sin esto, tras un corte de luz el
+    nombre puede volver a apuntar al archivo viejo."""
+    fd = os.open(carpeta, os.O_RDONLY)
+    try:
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+
+
 def registrar(entrada: dict, raiz: Path | None = None) -> None:
-    """Añade una línea a `registro.jsonl`; crea el archivo con la primera entrada."""
+    """Añade una línea a `registro.jsonl` y la deja en el disco (flush, fsync del archivo y de su carpeta) antes de
+    volver; crea el archivo con la primera entrada. Nunca reescribe las anteriores."""
     ruta = _narrados(raiz) / "registro.jsonl"
     ruta.parent.mkdir(parents=True, exist_ok=True)
     with ruta.open("a", encoding="utf-8") as f:
         f.write(json.dumps(entrada, ensure_ascii=False) + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+    _fsync_carpeta(ruta.parent)
+
+
+def clave_de_pieza(pieza_id: str, raiz: Path | None = None) -> str:
+    """La clave de la cita de la pieza publicada (`content/published/<id>.json`), la misma con la que `elegibles`
+    cruza el registro. ValueError si la pieza no está publicada o no tiene cita."""
+    _exigir_id(pieza_id)
+    ruta = (raiz or RAIZ) / "content" / "published" / f"{pieza_id}.json"
+    if not ruta.is_file():
+        raise ValueError(f"no existe la pieza publicada {ruta}: no se sabe qué cita es")
+    clave = _clave_de(json.loads(ruta.read_text(encoding="utf-8")))
+    if not clave:
+        raise ValueError(f"{pieza_id} no tiene cita: no se puede cruzar con el registro")
+    return clave
+
+
+def ya_compartida(pieza_id: str, raiz: Path | None = None) -> dict | None:
+    """La entrada más reciente de `registro.jsonl` cuya `cita` es la clave de la cita de esta pieza, sea cual sea su
+    `estado`; None si no hay ninguna. Solo lee el disco. ValueError si no se sabe la cita de la pieza."""
+    clave = clave_de_pieza(pieza_id, raiz)
+    coinciden = [e for e in _leer_registro(raiz) if isinstance(e, dict) and e.get("cita") == clave]
+    return coinciden[-1] if coinciden else None
 
 
 # ---------------------------------------------------------------- construir
@@ -299,7 +336,10 @@ def _escribir_informe(salida: Path, informe: dict) -> None:
 
 def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None, tabla: dict | None = None,
               salida: Path | None = None, herramientas: Herramientas | None = None) -> dict:
-    """Del guion al mp4, un paso tras otro. Siempre deja `informe.json` en `salida` y lo devuelve.
+    """Del guion al mp4, un paso tras otro. Deja `informe.json` en `salida` y lo devuelve.
+
+    Excepción: si `salida/movil.json` dice «compartido», «verificado» o «incierto» (o no se lee), devuelve un informe
+    `ok: false` en la fase «movil» SIN tocar la carpeta ni escribir el informe: es el rastro local de esa publicación.
 
     Antes de tocar el disco: id de pieza válido y `salida` admitida (`_salida_segura`); si no, ValueError.
     Orden: borrar el informe anterior → vaciar `salida` → guion válido → tabla de pronunciación sin
@@ -314,6 +354,10 @@ def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None,
     informe = {"ok": False, "pieza": pieza_id, "fase": "guion", "problemas": [], "mp4": None, "hoja": None,
                "duracion": None, "avisos": [], "cita_tiempos": None, "sha256_mp4": None, "sha256_guion": None,
                "construido_en": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "veredicto": None}
+    movil = _movil_compartido(salida)
+    if movil:  # antes de borrar nada: esa carpeta es el único rastro local de lo compartido
+        informe.update(fase="movil", problemas=[movil])
+        return informe
     (salida / "informe.json").unlink(missing_ok=True)  # primero: ningún informe ok viejo sobrevive a un fallo
     try:
         if salida.exists():
@@ -338,6 +382,22 @@ def construir(pieza_id: str, *, motor: str = "kokoro", raiz: Path | None = None,
         raise
     _escribir_informe(salida, informe)
     return informe
+
+
+def _movil_compartido(salida: Path) -> str | None:
+    """Por qué no se puede vaciar `salida`: su `movil.json` dice «compartido», «verificado» o «incierto», o no se
+    puede leer. None si no hay `movil.json` o dice otro paso."""
+    ruta = salida / "movil.json"
+    if not ruta.exists():
+        return None
+    try:
+        paso = json.loads(ruta.read_text(encoding="utf-8")).get("paso")
+    except (OSError, ValueError, AttributeError) as e:
+        return f"{ruta} no se puede leer ({e}): no se vacía la carpeta"
+    if paso in PASOS_COMPARTIDOS:
+        return (f"{ruta} dice «{paso}»: este build se compartió y su carpeta es el rastro de esa publicación; "
+                "no se vuelve a construir encima")
+    return None
 
 
 def _fase_de(error: Exception, informe: dict) -> str:
@@ -380,6 +440,7 @@ def revisar(pieza_id: str, veredicto: str, raiz: Path | None = None) -> dict:
 # ---------------------------------------------------------------- publicar desde el móvil
 
 PASOS_MOVIL = ("subido", "abierto", "listo", "compartido", "verificado", "incierto", "descartado")
+PASOS_COMPARTIDOS = ("compartido", "verificado", "incierto")
 
 
 def ruta_build(pieza_id: str, raiz: Path | None = None) -> Path:
@@ -405,6 +466,8 @@ def apto_para_publicar(pieza_id: str, raiz: Path | None = None) -> list[str]:
     if not isinstance(informe, dict):
         return [f"{ruta} no es un objeto JSON ({type(informe).__name__}): vuelve a construir"]
     problemas = []
+    if informe.get("pieza") != pieza_id:
+        problemas.append(f"el informe es de {informe.get('pieza')!r}, no de {pieza_id}")
     if informe.get("ok") is not True:
         problemas.append(f"la construcción no está ok (fase {informe.get('fase')})")
     if informe.get("veredicto") != "PASS":
@@ -444,7 +507,8 @@ def estado_movil(pieza_id: str, raiz: Path | None = None) -> dict:
 
 
 def guardar_estado_movil(pieza_id: str, estado: dict, raiz: Path | None = None) -> None:
-    """Escribe `build/movil.json` de una vez (temporal y reemplazo): nunca queda a medias. ValueError si
+    """Escribe `build/movil.json` de una vez (temporal con fsync, reemplazo y fsync de la carpeta): nunca queda a
+    medias y, al volver, está en el disco (un corte de luz no trae de vuelta el estado anterior). ValueError si
     `paso` no es uno de PASOS_MOVIL o si la pieza no tiene build."""
     if estado.get("paso") not in PASOS_MOVIL:
         raise ValueError(f"paso del móvil desconocido: {estado.get('paso')!r} (vale {', '.join(PASOS_MOVIL)})")
@@ -453,10 +517,18 @@ def guardar_estado_movil(pieza_id: str, estado: dict, raiz: Path | None = None) 
         raise ValueError(f"no hay {build}: construye antes de publicar")
     with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=build, prefix=".movil-", suffix=".tmp",
                                      delete=False) as f:
-        f.write(json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
         temporal = Path(f.name)
+        try:
+            f.write(json.dumps(estado, ensure_ascii=False, indent=2) + "\n")
+            f.flush()
+            os.fsync(f.fileno())
+        except BaseException:
+            f.close()
+            temporal.unlink(missing_ok=True)
+            raise
     try:
         os.replace(temporal, build / "movil.json")
     except BaseException:
         temporal.unlink(missing_ok=True)
         raise
+    _fsync_carpeta(build)

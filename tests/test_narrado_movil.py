@@ -259,8 +259,9 @@ def seccion_pie() -> None:
 
 
 def arbol(d: str, *, informe: bool = True, **cambios) -> pathlib.Path:
-    """Una pieza construida y revisada en un árbol temporal: guion, mp4 e informe ok con PASS."""
+    """Una pieza publicada, construida y revisada en un árbol temporal: guion, mp4 e informe ok con PASS."""
     import json
+    import shutil
     raiz = pathlib.Path(d)
     carpeta = raiz / "experiments" / "media-lab" / "narrados" / PIEZA
     build = carpeta / "build"
@@ -268,6 +269,9 @@ def arbol(d: str, *, informe: bool = True, **cambios) -> pathlib.Path:
     (carpeta / "guion.json").write_text('{"pieza": "%s"}\n' % PIEZA, encoding="utf-8")
     mp4 = build / f"{PIEZA}.mp4"
     mp4.write_bytes(b"mp4 de prueba")
+    publicadas = raiz / "content" / "published"  # la cita de la pieza: `ya_compartida` cruza el registro con ella
+    publicadas.mkdir(parents=True, exist_ok=True)
+    shutil.copy(ROOT / "content" / "published" / f"{PIEZA}.json", publicadas)
     if informe:
         datos = {"ok": True, "pieza": PIEZA, "fase": "completo", "mp4": str(mp4), "veredicto": "PASS",
                  "sha256_mp4": hashlib.sha256(mp4.read_bytes()).hexdigest(),
@@ -830,9 +834,6 @@ def preparado_abierto(d: str) -> pathlib.Path:
     import shutil
     from labkit import narrado
     raiz = arbol(d)
-    publicadas = raiz / "content" / "published"
-    publicadas.mkdir(parents=True)
-    shutil.copy(ROOT / "content" / "published" / f"{PIEZA}.json", publicadas)
     narrado.guardar_estado_movil(PIEZA, {"paso": "abierto", "nombre_remoto": f"{PIEZA}-12345678.mp4",
                                          "sha256": "1" * 64, "subido_en": SUBIDO_EN, "duracion_ms": DURACION_MS,
                                          "publicaciones_antes": 4191}, raiz)
@@ -983,11 +984,21 @@ XML_AVISO_AUDIO = _dialogo(
              extra='clickable="true" enabled="true"'),
     nodo_xml("[63,1450][1017,1580]", texto="Partager", clase="android.widget.Button",
              extra='clickable="true" enabled="true"'))
+BOTON_PLUS_TARD = (0, 1730, 1080, 1860)
+XML_WHATSAPP = _dialogo(
+    "[0,1400][1080,2316]",
+    nodo_xml("[45,1450][1035,1520]", texto="Partager dans le statut WhatsApp ?",
+             extra=con_id("action_sheet_header_text_view")),
+    nodo_xml("[0,1600][1080,1730]", texto="Partager", clase="android.widget.Button",
+             extra=con_id("action_sheet_row_text_view", 'clickable="true"')),
+    nodo_xml("[0,1730][1080,1860]", texto="Plus tard", clase="android.widget.Button",
+             extra=con_id("action_sheet_row_text_view", 'clickable="true"')))
+XML_WHATSAPP_SIN_PLUS_TARD = XML_WHATSAPP.replace('text="Plus tard"', 'text="Pas maintenant"')
 XML_OTRO_DIALOGO = _dialogo(
     "[0,1400][1080,2316]",
-    nodo_xml("[45,1450][1035,1520]", texto="Partager sur votre statut WhatsApp ?",
+    nodo_xml("[45,1450][1035,1520]", texto="Nouveautés des reels",
              extra=con_id("action_sheet_header_text_view")),
-    nodo_xml("[0,1600][1080,1730]", texto="Plus tard", clase="android.widget.Button",
+    nodo_xml("[0,1600][1080,1730]", texto="OK", clase="android.widget.Button",
              extra=con_id("action_sheet_row_text_view", 'clickable="true"')))
 XML_TRAS_COMPARTIR = jerarquia(
     nodo_xml("[0,94][1080,180]", texto="Partage sur Reels…"),
@@ -995,6 +1006,7 @@ XML_TRAS_COMPARTIR = jerarquia(
     FEED_TAB, PROFILE_TAB, alto=2316)
 CENTRO_COMPARTIR = ((563 + 1035) // 2, (2001 + 2125) // 2)
 CENTRO_DESACTIVAR = ((63 + 1017) // 2, (1300 + 1430) // 2)
+CENTRO_PLUS_TARD = (540, (1730 + 1860) // 2)
 
 
 class PublicarSimulado(DetallesSimulado):
@@ -1038,6 +1050,8 @@ class PublicarSimulado(DetallesSimulado):
                 self.al_compartir()
             self.despues = list(self.tras_compartir)
         elif self.despues is not None and en_pantalla == XML_AVISO_AUDIO and dentro((x, y), BOTON_DESACTIVAR):
+            self.despues = list(self.tras_desactivar)
+        elif self.despues is not None and en_pantalla == XML_WHATSAPP and dentro((x, y), BOTON_PLUS_TARD):
             self.despues = list(self.tras_desactivar)
 
 
@@ -1084,6 +1098,12 @@ def correr_publicar(sim, raiz, ev, *, sha="informe"):
     return res, err
 
 
+def leer_registro(raiz: pathlib.Path) -> list[dict]:
+    import json
+    ruta = raiz / "experiments" / "media-lab" / "narrados" / "registro.jsonl"
+    return [json.loads(l) for l in ruta.read_text(encoding="utf-8").splitlines()] if ruta.exists() else []
+
+
 def seccion_publicar() -> None:
     print("\n13. narrado_movil.publicar con el teléfono simulado")
     from labkit import narrado, narrado_movil as nm
@@ -1093,7 +1113,12 @@ def seccion_publicar() -> None:
     with tempfile.TemporaryDirectory() as d:
         raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
         en_el_toque: list = []
-        sim = PublicarSimulado(pie=pie, al_compartir=lambda: en_el_toque.append(narrado.estado_movil(PIEZA, raiz)))
+        registro_en_el_toque: list = []
+
+        def al_compartir():
+            en_el_toque.append(narrado.estado_movil(PIEZA, raiz))
+            registro_en_el_toque.append(leer_registro(raiz))
+        sim = PublicarSimulado(pie=pie, al_compartir=al_compartir)
         res, err = correr_publicar(sim, raiz, ev)
         res = res or {}
         check(err is None, f"camino feliz sin error ({err!r})")
@@ -1101,6 +1126,12 @@ def seccion_publicar() -> None:
         check(len(en_el_toque) == 1 and en_el_toque[0].get("paso") == "compartido"
               and en_el_toque[0].get("compartido_en"),
               f"en el momento del toque el disco ya dice «compartido» con compartido_en ({en_el_toque})")
+        informe = narrado.informe_de(PIEZA, raiz)
+        check(len(registro_en_el_toque) == 1 and registro_en_el_toque[0] == [{
+            "pieza": PIEZA, "cita": narrado.clave_de_pieza(PIEZA, raiz), "estado": "compartido",
+            "compartido_en": en_el_toque[0].get("compartido_en"), "sha256_mp4": informe["sha256_mp4"],
+            "nombre_remoto": en_el_toque[0].get("nombre_remoto")}],
+              f"en el momento del toque registro.jsonl ya tiene la línea «compartido» ({registro_en_el_toque})")
         estado = narrado.estado_movil(PIEZA, raiz)
         check(estado.get("paso") == "compartido" and estado.get("compartido_en") == res.get("compartido_en")
               and estado.get("pie_sha256") and estado.get("publicaciones_antes") == 4191,
@@ -1231,6 +1262,113 @@ def seccion_publicar() -> None:
               and narrado.estado_movil(PIEZA, raiz).get("paso") == "listo",
               f"no se puede escribir «compartido»: no se toca nada ({err!r}, {sim.toques})")
 
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie)
+        original = narrado.registrar
+
+        def no_registra(*a, **k):
+            raise OSError("registro de solo lectura")
+        narrado.registrar = no_registra
+        try:
+            res, err = correr_publicar(sim, raiz, ev)
+        finally:
+            narrado.registrar = original
+        check(isinstance(err, nm.NoPublicar) and "solo lectura" in str(err) and sim.toques == []
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "listo" and leer_registro(raiz) == [],
+              f"no se puede escribir el registro: ni estado ni toque ({err!r}, {sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie)
+        original = narrado.guardar_estado_movil
+
+        def y_se_bloquea(pieza_id, estado, raiz=None):
+            original(pieza_id, estado, raiz)
+            if estado.get("paso") == "compartido":
+                sim.listo = False  # el último `exigir_listo` de `enviar`, tras las escrituras, falla
+        narrado.guardar_estado_movil = y_se_bloquea
+        try:
+            res, err = correr_publicar(sim, raiz, ev)
+        finally:
+            narrado.guardar_estado_movil = original
+        check(isinstance(err, nm.NoPublicar) and "no se tocó nada" in str(err) and sim.toques == []
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido"
+              and [e["estado"] for e in leer_registro(raiz)] == ["compartido"],
+              f"falla el último control de enviar tras escribir: cero toques, registro y estado «compartido», y lo "
+              f"dice ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        detalles = con_estados(pantalla_fin(), {"ia": True, "essai": False, "threads": False, "facebook": False},
+                               INTERRUPTORES_FIN)
+        sim = PublicarSimulado(pie=pie, tras_compartir=(detalles,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR]
+              and any("sigue delante" in a for a in (res or {}).get("avisos", [])),
+              f"los detalles siguen delante tras el toque: un solo toque y queda en los avisos ({res and res['avisos']})")
+
+    print("\n13b. El registro de la cita sobrevive a reconstruir build/")
+    import shutil
+    from labkit import narrado_movil as nm2
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        res, err = correr_publicar(PublicarSimulado(pie=pie), raiz, ev)
+        check(err is None and len(leer_registro(raiz)) == 1, "una publicación deja una línea en el registro")
+        build = raiz / "experiments" / "media-lab" / "narrados" / PIEZA / "build"
+        shutil.rmtree(build)
+        arbol_de_nuevo = arbol(str(pathlib.Path(d) / "otra"))  # un build nuevo con PASS, copiado sobre el borrado
+        shutil.copytree(arbol_de_nuevo / "experiments" / "media-lab" / "narrados" / PIEZA / "build", build)
+        import json
+        ruta_inf = build / "informe.json"
+        datos = json.loads(ruta_inf.read_text(encoding="utf-8"))
+        ruta_inf.write_text(json.dumps({**datos, "mp4": str(build / f"{PIEZA}.mp4")}), encoding="utf-8")
+        check(narrado.apto_para_publicar(PIEZA, raiz) == [] and narrado.estado_movil(PIEZA, raiz) == {},
+              "tras reconstruir: build apto, sin movil.json")
+        llamadas: list = []
+        guardado = telefono.subir_video
+        telefono.subir_video = lambda *a: llamadas.append(a)
+        try:
+            sim = TelefonoSimulado([jerarquia()])
+            _, err = con_telefono_simulado(sim, lambda: nm2.subir(PIEZA, ev, raiz=raiz))
+        finally:
+            telefono.subir_video = guardado
+        check(isinstance(err, ValueError) and "registro" in str(err) and llamadas == [] and sim.toques == [],
+              f"con la cita en el registro, subir se niega aunque build/ sea nuevo ({err!r})")
+        sha = narrado.informe_de(PIEZA, raiz)["sha256_mp4"]
+        narrado.guardar_estado_movil(PIEZA, {"paso": "listo", "nombre_remoto": nm2.nombre_remoto(PIEZA, sha),
+                                             "sha256": sha, "pie_sha256": hashlib.sha256(pie.encode()).hexdigest()},
+                                     raiz)
+        sim = PublicarSimulado(pie=pie)
+        res, err = correr_publicar(sim, raiz, ev)
+        check(isinstance(err, nm2.NoPublicar) and len(err.motivos) == 1
+              and err.motivos[0].startswith("ya hay un registro de esta cita: compartido el ")
+              and sim.toques == [] and sim.volcados_leidos == 0,
+              f"y publicar, aun con un estado «listo» a mano, también ({err!r})")
+
+    print("\n13c. Las escrituras llegan al disco (fsync del archivo y de la carpeta)")
+    import os
+    import stat
+    with tempfile.TemporaryDirectory() as d:
+        raiz = arbol(d)
+        llamadas_fsync: list[str] = []
+        original_fsync = os.fsync
+
+        def fsync_anotado(fd):
+            llamadas_fsync.append("carpeta" if stat.S_ISDIR(os.fstat(fd).st_mode) else "archivo")
+            return original_fsync(fd)
+        os.fsync = fsync_anotado
+        try:
+            narrado.registrar({"pieza": PIEZA, "cita": "x", "estado": "compartido"}, raiz)
+            del_registro = list(llamadas_fsync)
+            llamadas_fsync.clear()
+            narrado.guardar_estado_movil(PIEZA, {"paso": "subido"}, raiz)
+            del_estado = list(llamadas_fsync)
+        finally:
+            os.fsync = original_fsync
+        check(del_registro == ["archivo", "carpeta"], f"registrar: fsync del archivo y luego de la carpeta ({del_registro})")
+        check(del_estado == ["archivo", "carpeta"], f"guardar_estado_movil: fsync del temporal y de build/ ({del_estado})")
+
     print("\n14. Tras «Partager»: el aviso del audio original y nada más")
     with tempfile.TemporaryDirectory() as d:
         raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
@@ -1255,7 +1393,7 @@ def seccion_publicar() -> None:
         sim = PublicarSimulado(pie=pie, tras_compartir=(XML_OTRO_DIALOGO, XML_OTRO_DIALOGO, XML_TRAS_COMPARTIR))
         res, err = correr_publicar(sim, raiz, ev)
         check(err is None and sim.toques == [CENTRO_COMPARTIR]
-              and any("WhatsApp" in a for a in (res or {}).get("avisos", []))
+              and any("Nouveautés des reels" in a for a in (res or {}).get("avisos", []))
               and narrado.estado_movil(PIEZA, raiz).get("avisos_respondidos") == [],
               f"otro diálogo: no se toca nada y queda en los avisos ({res and res['avisos']})")
 
@@ -1267,8 +1405,38 @@ def seccion_publicar() -> None:
               and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido",
               f"sin volcados tras compartir: vuelve normal y sigue «compartido» ({err!r})")
 
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_WHATSAPP,), tras_desactivar=(XML_TRAS_COMPARTIR,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR, CENTRO_PLUS_TARD]
+              and narrado.estado_movil(PIEZA, raiz).get("avisos_respondidos") == ["whatsapp"],
+              f"la hoja del estado de WhatsApp: «Plus tard» una vez y nada más ({err!r}, {sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_WHATSAPP,), tras_desactivar=(XML_WHATSAPP,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR, CENTRO_PLUS_TARD],
+              f"si la hoja no se va, «Plus tard» no se repite ({sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_WHATSAPP_SIN_PLUS_TARD,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR]
+              and narrado.estado_movil(PIEZA, raiz).get("avisos_respondidos") == []
+              and any("WhatsApp" in a for a in (res or {}).get("avisos", [])),
+              f"la hoja sin «Plus tard»: nada se toca y queda en los avisos ({sim.toques})")
+
     from labkit import pantalla, pasos
     from labkit.pantalla import PantallaInesperada
+    partager = next(n for n in telefono.nodos(XML_WHATSAPP) if n["texto"] == "Partager")
+    for permitir, nombre in ((), "vacía"), (nm.PERMITIR_AVISO_AUDIO, "PERMITIR_AVISO_AUDIO"):
+        sim = TelefonoSimulado([XML_WHATSAPP])
+        _, err = con_telefono_simulado(sim, lambda: pasos.tocar(partager, XML_WHATSAPP, permitir=permitir))
+        check(isinstance(err, PantallaInesperada) and sim.toques == [],
+              f"en la hoja de WhatsApp la guardia sigue rechazando «Partager» (lista blanca {nombre})")
     boton = next(n for n in telefono.nodos(XML_AVISO_AUDIO) if n["texto"] == "Désactiver et partager")
     check(not pantalla.es_envio(XML_AVISO_AUDIO, boton, ignorar=nm.PERMITIR_AVISO_AUDIO),
           "con PERMITIR_AVISO_AUDIO la guardia deja tocar «Désactiver et partager»")
@@ -1382,6 +1550,27 @@ def seccion_descartar() -> None:
               and narrado.estado_movil(PIEZA, raiz).get("paso") == "descartado",
               f"la hoja sin «Recommencer»: no se toca ninguna fila, se informa y se limpia ({res and res['problemas']})")
 
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = salida("detalles", detalles_listos_xml)
+
+        def accion():
+            # mientras se borra el vídeo, otro proceso (`publicar`) escribe «compartido»
+            guardado = telefono.borrar_video
+
+            def borrar_y_compartir(nombre):
+                narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": "compartido",
+                                                     "compartido_en": "2026-11-22T15:00:00+00:00"}, raiz)
+                return guardado(nombre)
+            telefono.borrar_video = borrar_y_compartir
+            try:
+                return nm.descartar(PIEZA, ev, raiz=raiz)
+            finally:
+                telefono.borrar_video = guardado
+        res, err, borrados = correr_con_video(sim, accion)
+        check(isinstance(err, ValueError) and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido",
+              f"el estado pasa a «compartido» a media salida: descartar no lo pisa ({err!r})")
+
     print("\n16. apto_para_publicar endurecido")
     import json
     with tempfile.TemporaryDirectory() as d:
@@ -1402,6 +1591,9 @@ def seccion_descartar() -> None:
         ruta.write_text(json.dumps({**datos, "mp4": str(carpeta / "build" / ".." / "build" / f"{PIEZA}.mp4")}),
                         encoding="utf-8")
         check(narrado.apto_para_publicar(PIEZA, raiz) == [], "una ruta con «..» que acaba en build/: apta")
+        ruta.write_text(json.dumps({**datos, "pieza": "2026-01-01-otra"}), encoding="utf-8")
+        check(any("2026-01-01-otra" in p for p in narrado.apto_para_publicar(PIEZA, raiz)),
+              "un informe de otra pieza: no apto")
         for malo, que in (([1, 2], "una lista"), ({**datos, "mp4": 123}, "mp4 numérico"),
                           ({**datos, "mp4": ["a"]}, "mp4 lista"), ("texto", "una cadena")):
             ruta.write_text(json.dumps(malo), encoding="utf-8")

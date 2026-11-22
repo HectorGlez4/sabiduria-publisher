@@ -57,6 +57,10 @@ TEXTOS: dict[str, dict[str, str]] = {
         # la hoja al salir del editor del reel (volcado 09 de la sonda del 22 nov): solo se toca «Recommencer»
         "hoja_borrador": "Enregistrer le brouillon ?",
         "guardar_borrador": "Enregistrer le brouillon",  # fila de la hoja y `save_draft_button`: nunca se toca
+        # tras «Partager»: la hoja «Partager dans le statut WhatsApp ?» se cierra con «Plus tard» (decisión del
+        # 2026-11-07 en el bucle del sitio: nunca se comparte a los contactos, y la hoja abierta retenía la publicación)
+        "statut_whatsapp": "statut WhatsApp",
+        "plus_tard": "Plus tard",
     },
     "threads": {
         "publicar": "Publier",  # confirmar contra el fixture de S1

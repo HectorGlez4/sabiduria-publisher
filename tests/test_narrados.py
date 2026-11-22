@@ -885,6 +885,33 @@ def seccion_construir() -> None:
         quitar = lambda x: {k: v for k, v in x.items() if k != "construido_en"}
         check(quitar(inf) == quitar(inf2), "dos corridas dan el mismo informe salvo construido_en")
 
+    # 2b. un build compartido desde el móvil no se vuelve a construir encima: build/ queda intacto
+    for paso, rehace in (("compartido", False), ("verificado", False), ("incierto", False), ("descartado", True)):
+        with tempfile.TemporaryDirectory() as d:
+            raiz = raiz_falsa(Path(d))
+            build = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build"
+            build.mkdir()
+            (build / "informe.json").write_text('{"viejo": true}', encoding="utf-8")
+            (build / "movil.json").write_text(json.dumps({"paso": paso}), encoding="utf-8")
+            (build / "2026-08-23-tarde.mp4").write_bytes(b"mp4 publicado")
+            antes = sorted((p.name, p.read_bytes()) for p in build.iterdir())
+            f = Falsas()
+            inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=f.herramientas())
+            if rehace:
+                check(inf["ok"] is True and not (build / "movil.json").exists(),
+                      "movil.json «descartado»: se reconstruye como siempre")
+            else:
+                check(inf["ok"] is False and inf["fase"] == "movil" and any(paso in p for p in inf["problemas"])
+                      and f.sintetizadas == [] and sorted((p.name, p.read_bytes()) for p in build.iterdir()) == antes,
+                      f"movil.json «{paso}»: ok false, fase «movil» y build/ intacto ({inf['fase']})")
+    with tempfile.TemporaryDirectory() as d:
+        raiz = raiz_falsa(Path(d))
+        build = raiz / "experiments/media-lab/narrados/2026-08-23-tarde/build"
+        build.mkdir()
+        (build / "movil.json").write_text("{roto", encoding="utf-8")
+        inf = nr.construir("2026-08-23-tarde", raiz=raiz, tabla=aprobada, herramientas=Falsas().herramientas())
+        check(inf["fase"] == "movil" and (build / "movil.json").exists(), "movil.json ilegible: tampoco se vacía")
+
     # 3. a la transcripción le falta una palabra
     with tempfile.TemporaryDirectory() as d:
         raiz = raiz_falsa(Path(d))

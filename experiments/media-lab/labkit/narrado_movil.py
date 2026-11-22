@@ -161,12 +161,16 @@ def _estado_en(pieza_id: str, pasos_validos: tuple[str, ...], raiz: Path | None)
 def subir(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     """Sube el mp4 revisado al teléfono y deja el estado en «subido».
 
-    Antes de nada: `apto_para_publicar` vacío (si no, ValueError con los problemas) y ninguna publicación
+    Antes de nada: `apto_para_publicar` vacío (si no, ValueError con los problemas), ninguna línea del registro
+    para la cita de la pieza (`narrado.ya_compartida`, que sobrevive a una reconstrucción) y ninguna publicación
     ya compartida de este build. Luego teléfono listo → `telefono.subir_video` con el nombre
     `<pieza>-<8 hex>.mp4` → el sha256 subido es el del informe → estado → captura."""
     problemas = narrado.apto_para_publicar(pieza_id, raiz)
     if problemas:
         raise ValueError(f"{pieza_id} no se puede publicar: {'; '.join(problemas)}")
+    registro = narrado.ya_compartida(pieza_id, raiz)
+    if registro is not None:
+        raise ValueError(f"{pieza_id}: {_texto_registro(registro)}: esta cita no se vuelve a subir")
     previo = narrado.estado_movil(pieza_id, raiz).get("paso")
     if previo in NO_SUBIR_OTRA_VEZ:
         raise ValueError(f"{pieza_id} ya está «{previo}» en el móvil: este build no se vuelve a subir")
@@ -586,6 +590,24 @@ class NoPublicar(Exception):
         super().__init__("; ".join(self.motivos))
 
 
+def _texto_registro(entrada: dict) -> str:
+    fecha = entrada.get("compartido_en") or entrada.get("publicado_en") or entrada.get("construido_en") or "?"
+    return f"ya hay un registro de esta cita: {entrada.get('estado', '?')} el {fecha}"
+
+
+def _exigir_sin_registro(pieza_id: str, raiz: Path | None) -> str:
+    """La clave de la cita, si `registro.jsonl` no tiene ninguna línea suya; si la tiene, o no se puede leer,
+    NoPublicar."""
+    try:
+        registro = narrado.ya_compartida(pieza_id, raiz)
+        clave = narrado.clave_de_pieza(pieza_id, raiz)
+    except (OSError, ValueError) as e:
+        raise NoPublicar([f"no se puede consultar el registro de la cita: {e}"]) from e
+    if registro is not None:
+        raise NoPublicar([_texto_registro(registro)])
+    return clave
+
+
 def _estado_para_publicar(pieza_id: str, raiz: Path | None) -> dict:
     try:
         estado = narrado.estado_movil(pieza_id, raiz)
@@ -611,9 +633,9 @@ def _pie_comprobado(pieza_id: str, estado: dict, raiz: Path | None) -> str:
     return pie
 
 
-def _exigir_video_en_el_telefono(pieza_id: str, estado: dict, raiz: Path | None) -> None:
+def _exigir_video_en_el_telefono(pieza_id: str, estado: dict, raiz: Path | None) -> str:
     """El vídeo del teléfono es el mp4 revisado: el nombre del estado es el de este build y su sha256, leído ahora,
-    el `sha256_mp4` del informe. None (no está) o un error al leerlo: NoPublicar."""
+    el `sha256_mp4` del informe, que devuelve. None (no está) o un error al leerlo: NoPublicar."""
     try:
         informe = narrado.informe_de(pieza_id, raiz)
         esperado = informe["sha256_mp4"]
@@ -629,6 +651,7 @@ def _exigir_video_en_el_telefono(pieza_id: str, estado: dict, raiz: Path | None)
         raise NoPublicar([f"{nombre} no está en el teléfono"])
     if en_el_telefono != esperado:
         raise NoPublicar([f"el vídeo del teléfono ({en_el_telefono[:8]}) no es el revisado ({esperado[:8]})"])
+    return esperado
 
 
 def _pie_a_la_vista() -> str:
@@ -708,47 +731,81 @@ def _es_dialogo(xml: str) -> bool:
         for n in telefono.nodos(xml))
 
 
+def _boton_plus_tard(xml: str) -> dict | None:
+    """«Plus tard» de la hoja del estado de WhatsApp: solo si algún nodo contiene «statut WhatsApp» y hay exactamente
+    un nodo de Instagram cuyo texto es «Plus tard». None si no."""
+    marca = textos.normalizar(_t("statut_whatsapp"))
+    if not any(marca in textos.normalizar(n["texto"]) or marca in textos.normalizar(n["desc"])
+               for n in telefono.nodos(xml)):
+        return None
+    lista = [n for n in telefono.nodos(xml) if n["package"] == IG and n["texto"] == _t("plus_tard")]
+    return lista[0] if len(lista) == 1 else None
+
+
+# (clave en `avisos_respondidos`, cómo se encuentra el botón, su texto, `permitir`): lo único que se toca tras compartir
+RESPUESTAS_TRAS_COMPARTIR = (
+    ("audio_original", _boton_aviso_audio, "desactivar_y_compartir", PERMITIR_AVISO_AUDIO),  # decisión del 3 nov
+    ("whatsapp", _boton_plus_tard, "plus_tard", ()),  # decisión del 7 nov: nunca a los contactos; la hoja retiene
+)
+
+
 def _vigilar_tras_compartir(avisos: list[str], respondidos: list[str], anotar) -> None:
-    """Tras el toque, VIGILANCIA_TRAS_COMPARTIR_S: si el aviso del audio original sale en dos volcados seguidos en el
-    mismo sitio, «Désactiver et partager» con `pasos.tocar` y PERMITIR_AVISO_AUDIO, una sola vez (aunque el aviso
-    siga, aunque el toque falle). Cualquier otro diálogo se anota en `avisos` y no se toca. Nunca se toca nada más."""
+    """Tras el toque, VIGILANCIA_TRAS_COMPARTIR_S. Para cada aviso de RESPUESTAS_TRAS_COMPARTIR (el del audio original:
+    «Désactiver et partager»; la hoja del estado de WhatsApp: «Plus tard»), si sale en dos volcados seguidos con el
+    botón en el mismo sitio, se toca ese botón con `pasos.tocar` y su `permitir`, una sola vez por aviso (aunque siga,
+    aunque el toque falle o la guardia lo rechace: eso queda en `avisos` y no se amplía nada). Cualquier otro diálogo
+    se anota en `avisos` y no se toca, y si al acabar los detalles siguen delante, también. Nunca se toca nada más."""
     inicio = reloj.monotonic()
-    previo, intentado, vistos = None, False, set()
+    previos: dict[str, tuple] = {}
+    intentados: set[str] = set()
+    vistos: set = set()
+    ultimo = None
     while reloj.monotonic() - inicio < VIGILANCIA_TRAS_COMPARTIR_S:
         reloj.dormir(1.5)
         try:
             xml = telefono.volcado(timeout=10)
         except telefono.TelefonoError:
-            previo = None
+            previos.clear()
             continue
-        boton = _boton_aviso_audio(xml)
-        if boton is not None:
-            if not intentado and previo == boton["bounds"]:
-                intentado = True
+        ultimo = xml
+        encontrado = None
+        for clave, buscar, texto_clave, permitir in RESPUESTAS_TRAS_COMPARTIR:
+            boton = buscar(xml)
+            if boton is not None:
+                encontrado = (clave, boton, texto_clave, permitir)
+                break
+        if encontrado is not None:
+            clave, boton, texto_clave, permitir = encontrado
+            if clave not in intentados and previos.get(clave) == boton["bounds"]:
+                intentados.add(clave)
                 try:
                     pasos.exigir_listo()
-                    pasos.tocar(boton, xml, permitir=PERMITIR_AVISO_AUDIO)
+                    pasos.tocar(boton, xml, permitir=permitir)
                 except (PantallaInesperada, telefono.TelefonoError) as e:
-                    avisos.append(f"aviso de audio original: no se tocó «{_t('desactivar_y_compartir')}»: {e}")
+                    avisos.append(f"{clave}: no se tocó «{_t(texto_clave)}»: {e}")
                 else:
-                    respondidos.append("audio_original")
-                    avisos.append(f"aviso de audio original: «{_t('desactivar_y_compartir')}»")
+                    respondidos.append(clave)
+                    avisos.append(f"{clave}: «{_t(texto_clave)}»")
                     anotar()
-            previo = boton["bounds"]
+            previos = {clave: boton["bounds"]}
             continue
-        previo = None
+        previos.clear()
         if _es_dialogo(xml):
             firma = tuple(n["texto"] or n["desc"] for n in telefono.nodos(xml) if n["texto"] or n["desc"])[:6]
             if firma not in vistos:
                 vistos.add(firma)
                 avisos.append(f"otro diálogo tras compartir, no se toca: {list(firma)}")
+    if ultimo is not None and _es_detalles_reel(ultimo):
+        avisos.append("la pantalla de detalles sigue delante tras compartir")
 
 
 def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     """El único toque que publica el reel: «Partager», una sola vez en la vida del build. Nunca se reintenta.
 
     En este orden, y a la primera que falle NoPublicar(motivos) sin haber tocado nada:
-    a. el estado es «listo» («compartido», «verificado» o «incierto»: NoPublicar(["ya se compartió"]));
+    a. el estado es «listo» («compartido», «verificado» o «incierto»: NoPublicar(["ya se compartió"])), y
+       `narrado.ya_compartida` no tiene ninguna línea de esta cita en `registro.jsonl` (sobrevive a reconstruir
+       `build/`): si la tiene, NoPublicar(["ya hay un registro de esta cita: <estado> el <fecha>"]);
     b. `narrado.apto_para_publicar` vacío;
     c. el pie recalculado de la pieza tiene el `pie_sha256` guardado;
     d. el sha256 del vídeo del teléfono (`telefono.sha256_de_video`) es el `sha256_mp4` del informe;
@@ -756,36 +813,50 @@ def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     f. dos lecturas frescas, solo deslizando entre ellas (arriba el pie, abajo los interruptores), con
        `detalles_listos_en_dos` vacío y el campo igual al pie entero: se relee todo después de los toques de `pie`;
     g. en la última, un solo `share_button`, activo y destapado, y el teclado cerrado;
-    h. el estado «compartido» con `compartido_en` se escribe en el disco ANTES del toque: `pasos.enviar` lo pide a
-       `observador_nuevo` tras sus dos volcados y justo antes de pulsar; si no se puede escribir, no se pulsa;
+    h. ANTES del toque, en `observador_nuevo` (que `pasos.enviar` llama tras sus dos volcados, justo antes de pulsar):
+       la línea {"pieza", "cita", "estado": "compartido", "compartido_en", "sha256_mp4", "nombre_remoto"} en
+       `registro.jsonl`, luego el estado «compartido» con `compartido_en`, los dos con fsync del archivo y de la
+       carpeta, y se releen los dos. Si cualquiera falla, no se pulsa. Si la línea queda escrita y el toque no llega
+       a darse, la cita queda bloqueada para siempre: es a propósito, la dirección segura;
     i. una sola llamada a `pasos.enviar`, sin reintento de ningún tipo pase lo que pase;
-    j. después, VIGILANCIA_TRAS_COMPARTIR_S vigilando el aviso del audio original (`_vigilar_tras_compartir`): solo
-       «Désactiver et partager», una vez; lo respondido queda en `avisos_respondidos` del estado.
+    j. después, VIGILANCIA_TRAS_COMPARTIR_S vigilando (`_vigilar_tras_compartir`): solo «Désactiver et partager»
+       en el aviso del audio original y «Plus tard» en la hoja del estado de WhatsApp, una vez cada uno; lo
+       respondido queda en `avisos_respondidos` del estado.
 
     Desde el toque nada se propaga: devuelve {"compartido_en", "avisos", "captura_antes", "captura"} y el estado
     sigue «compartido»; lo que haya pasado lo resuelve `verificar`. Si el toque mismo lanza, o el proceso muere
     entre h e i, el estado queda «compartido» y también lo resuelve `verificar`, nunca otro `publicar`. Si
-    `pasos.enviar` se niega después de h (solo puede ser su último `exigir_listo`, antes de pulsar), NoPublicar y el
-    estado sigue «compartido» por la misma regla."""
+    `pasos.enviar` se niega después de h (solo puede ser su último `exigir_listo`, antes de pulsar), NoPublicar
+    diciendo que no se tocó nada, y el registro y el estado siguen «compartido» por la misma regla."""
     estado = _estado_para_publicar(pieza_id, raiz)  # a
+    clave = _exigir_sin_registro(pieza_id, raiz)  # a': ninguna línea del registro para esta cita
     problemas = narrado.apto_para_publicar(pieza_id, raiz)  # b
     if problemas:
         raise NoPublicar(problemas)
     pie = _pie_comprobado(pieza_id, estado, raiz)  # c
-    _exigir_video_en_el_telefono(pieza_id, estado, raiz)  # d
+    sha256_mp4 = _exigir_video_en_el_telefono(pieza_id, estado, raiz)  # d
     _comprobar_antes_de_compartir(pie)  # e, f, g
 
     compartido = {**estado, "paso": "compartido",
                   "compartido_en": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                   "avisos_respondidos": []}
-    escrito: list[bool] = []
+    linea = {"pieza": pieza_id, "cita": clave, "estado": "compartido", "compartido_en": compartido["compartido_en"],
+             "sha256_mp4": sha256_mp4, "nombre_remoto": estado.get("nombre_remoto")}
+    escrito: list[str] = []
     respondidos: list[str] = compartido["avisos_respondidos"]
 
     def observador_nuevo(boton: dict):
-        narrado.guardar_estado_movil(pieza_id, compartido, raiz)  # h: antes del toque
-        if narrado.estado_movil(pieza_id, raiz).get("paso") != "compartido":
-            raise OSError("el estado leído tras escribirlo no dice «compartido»")
-        escrito.append(True)
+        # h, todo antes del toque: la línea del registro (fuera de build/), luego el estado, los dos con fsync, y se
+        # releen del disco. Si algo falla aquí `enviar` no pulsa.
+        narrado.registrar(linea, raiz)
+        escrito.append("registro")
+        narrado.guardar_estado_movil(pieza_id, compartido, raiz)
+        escrito.append("estado")
+        leido = narrado.estado_movil(pieza_id, raiz)
+        if leido.get("paso") != "compartido" or leido.get("compartido_en") != compartido["compartido_en"]:
+            raise OSError("el estado leído tras escribirlo no dice «compartido» con este compartido_en")
+        if narrado.ya_compartida(pieza_id, raiz) != linea:
+            raise OSError("la última línea del registro para esta cita no es la que se acaba de escribir")
         return lambda xml: dict(pasos.VOLCADO_NO_VALIDO)  # la observación es la de `despues`
 
     def anotar() -> None:
@@ -810,8 +881,9 @@ def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
             observador_nuevo=observador_nuevo, despues=despues, plazo=0)
     except Exception as e:  # noqa: BLE001 — `enviar` solo propaga lo de antes del toque
         if escrito:
-            raise NoPublicar([f"no se pulsó «Partager» ({type(e).__name__}: {e}), pero el estado ya dice "
-                              "«compartido»: lo resuelve `verificar`, nunca otro `publicar`"]) from e
+            raise NoPublicar([f"no se pulsó «Partager», no se tocó nada ({type(e).__name__}: {e}); pero ya se "
+                              f"escribió {' y '.join(escrito)} como «compartido»: la cita queda bloqueada y lo "
+                              "resuelve `verificar`, nunca otro `publicar`"]) from e
         raise NoPublicar([f"no se pulsó «Partager»: {type(e).__name__}: {e}"]) from e
 
     avisos = list(resultado.get("avisos") or []) + avisos_previos
@@ -881,7 +953,8 @@ def descartar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     `verificar`. Sin vídeo subido no hay nada que descartar (ValueError). Si Instagram está en los detalles o en el
     editor del reel, sale por «Recommencer» (`_salir_del_compositor`); si está en otra parte, no navega. Siempre, aunque
     la salida falle: `telefono.borrar_video` (un False o un error van a `problemas`, no se lanzan) y estado
-    «descartado». Devuelve {"paso", "navegacion", "video_borrado", "problemas"}."""
+    «descartado», salvo que el estado releído justo antes de escribir diga ya «compartido», «verificado» o
+    «incierto» (ValueError, el estado no se toca). Devuelve {"paso", "navegacion", "video_borrado", "problemas"}."""
     estado = narrado.estado_movil(pieza_id, raiz)
     paso = estado.get("paso")
     if paso in ESTADOS_COMPARTIDOS:
@@ -900,6 +973,10 @@ def descartar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
             resultado["problemas"].append(f"{nombre}: no se pudo confirmar que se borró del teléfono")
     except Exception as e:  # noqa: BLE001 — se informa, no se lanza
         resultado["problemas"].append(f"{nombre}: el borrado falló: {type(e).__name__}: {e}")
+    ahora = narrado.estado_movil(pieza_id, raiz).get("paso")  # releído: un `publicar` pudo escribir entretanto
+    if ahora in ESTADOS_COMPARTIDOS:
+        raise ValueError(f"{pieza_id} pasó a «{ahora}» mientras se descartaba: no se escribe «descartado» "
+                         f"(lo resuelve `verificar`); {resultado}")
     estado.update(paso="descartado", descartado_en=datetime.now(timezone.utc).isoformat(timespec="seconds"),
                   video_borrado=resultado["video_borrado"])
     narrado.guardar_estado_movil(pieza_id, estado, raiz)
