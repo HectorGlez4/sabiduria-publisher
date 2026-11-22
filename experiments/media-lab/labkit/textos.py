@@ -50,6 +50,13 @@ TEXTOS: dict[str, dict[str, str]] = {
         "partager_aussi": "Partager aussi sur...",  # cabecera de los cruces: empieza por «partager» (envío)
         "cruce_threads": "Threads · Public",  # subtítulo de la fila del cruce a Threads
         "cruce_facebook": "Facebook · Public",  # subtítulo de la fila del cruce a Facebook
+        # tras «Partager» en un Reel (sitio_instagram.publicar; decisión del usuario del 2026-11-03): se contesta
+        # «Désactiver et partager». No volcado todavía en un reel narrado.
+        "aviso_audio": "Mise à jour de votre audio d’origine",
+        "desactivar_y_compartir": "Désactiver et partager",
+        # la hoja al salir del editor del reel (volcado 09 de la sonda del 22 nov): solo se toca «Recommencer»
+        "hoja_borrador": "Enregistrer le brouillon ?",
+        "guardar_borrador": "Enregistrer le brouillon",  # fila de la hoja y `save_draft_button`: nunca se toca
     },
     "threads": {
         "publicar": "Publier",  # confirmar contra el fixture de S1

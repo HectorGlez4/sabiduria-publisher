@@ -7,15 +7,15 @@ subido → editor → «Suivant» → detalles → pie, mención IA y cruces apa
 hace su parte y lo deja en el paso siguiente. Nada se adivina: si una pantalla no es la esperada,
 PantallaInesperada y no se toca más.
 
-Todo el teléfono pasa por `pasos.*` (los toques, por `pasos.tocar`, que no pulsa nada que publique) y
-por funciones con nombre de `telefono`. Del bucle del sitio solo se usa `exigir_cuenta`, a través de la
+Todo el teléfono pasa por `pasos.*` (los toques, por `pasos.tocar`, que no pulsa nada que publique; el único
+«Partager», por `pasos.enviar` desde `publicar`) y por funciones con nombre de `telefono`. Del bucle del sitio solo se usa `exigir_cuenta`, a través de la
 referencia de este módulo, que las pruebas sustituyen porque llama a `telefono.shell`.
 """
 from __future__ import annotations
 
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from labkit import instagram_pantallas as ip
@@ -561,3 +561,346 @@ def poner_pie(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
     estado.update(paso="listo", pie_sha256=hashlib.sha256(pie.encode("utf-8")).hexdigest())
     narrado.guardar_estado_movil(pieza_id, estado, raiz)
     return estado
+
+
+# ---------------------------------------------------------------- publicar: el único toque que comparte
+
+ESTADOS_COMPARTIDOS = NO_SUBIR_OTRA_VEZ  # «compartido», «verificado», «incierto»: nunca otro «Partager»
+FALTA_PARA_LISTO = {None: "falta `subir`", "subido": "falta `abrir`", "abierto": "falta `pie`",
+                    "descartado": "se descartó: hay que volver a `subir`"}
+VIGILANCIA_TRAS_COMPARTIR_S = 30  # como `sitio_instagram.publicar`: el aviso de audio puede salir con retraso
+# La guardia (`pantalla.es_envio`) no rechaza «Désactiver et partager»: no está en `ENVIO` y no empieza por ningún
+# prefijo de envío (empieza por «désactiver»), así que no hace falta eximir nada y la lista blanca más estrecha es la
+# vacía. Con ella, «Partager», `share_button`, `save_draft_button` (dentro del contenedor de «Partager») y cualquier
+# «Partager» del propio aviso siguen rechazados (prueba 14). SUPOSICIÓN: el aviso se vuelca solo, como la hoja 09; si
+# saliera encima de la lista de detalles, la cabecera «Partager aussi sur...» bloquearía el toque, no se tocaría y
+# quedaría en los avisos.
+PERMITIR_AVISO_AUDIO: tuple[str, ...] = ()
+
+
+class NoPublicar(Exception):
+    """`publicar` se niega sin haber tocado nada. `motivos` dice por qué, uno por condición."""
+
+    def __init__(self, motivos: list[str]):
+        self.motivos = list(motivos)
+        super().__init__("; ".join(self.motivos))
+
+
+def _estado_para_publicar(pieza_id: str, raiz: Path | None) -> dict:
+    try:
+        estado = narrado.estado_movil(pieza_id, raiz)
+    except (OSError, ValueError) as e:
+        raise NoPublicar([f"no se puede leer el estado del móvil: {e}"]) from e
+    paso = estado.get("paso") if isinstance(estado, dict) else None
+    if paso in ESTADOS_COMPARTIDOS:
+        raise NoPublicar(["ya se compartió"])
+    if paso != "listo":
+        raise NoPublicar([f"el móvil está en {paso!r}, no en «listo»: "
+                          f"{FALTA_PARA_LISTO.get(paso, 'estado desconocido')}"])
+    return estado
+
+
+def _pie_comprobado(pieza_id: str, estado: dict, raiz: Path | None) -> str:
+    """El pie recalculado de la pieza, si su sha256 es el `pie_sha256` que `poner_pie` dejó escrito."""
+    try:
+        pie = narrado_pie.pie(_pieza_publicada(pieza_id, raiz))
+    except (OSError, ValueError) as e:
+        raise NoPublicar([f"no se puede recalcular el pie: {e}"]) from e
+    if hashlib.sha256(pie.encode("utf-8")).hexdigest() != estado.get("pie_sha256"):
+        raise NoPublicar(["el pie de la pieza ya no es el que se pegó (pie_sha256 distinto): vuelve a `descartar`"])
+    return pie
+
+
+def _exigir_video_en_el_telefono(pieza_id: str, estado: dict, raiz: Path | None) -> None:
+    """El vídeo del teléfono es el mp4 revisado: el nombre del estado es el de este build y su sha256, leído ahora,
+    el `sha256_mp4` del informe. None (no está) o un error al leerlo: NoPublicar."""
+    try:
+        informe = narrado.informe_de(pieza_id, raiz)
+        esperado = informe["sha256_mp4"]
+        nombre = estado.get("nombre_remoto")
+        if nombre != nombre_remoto(pieza_id, esperado):
+            raise NoPublicar([f"el vídeo del teléfono ({nombre!r}) no es el de este build"])
+        en_el_telefono = telefono.sha256_de_video(nombre)
+    except NoPublicar:
+        raise
+    except Exception as e:  # noqa: BLE001 — cualquier duda sobre el vídeo es una negativa
+        raise NoPublicar([f"no se pudo leer el vídeo del teléfono: {type(e).__name__}: {e}"]) from e
+    if en_el_telefono is None:
+        raise NoPublicar([f"{nombre} no está en el teléfono"])
+    if en_el_telefono != esperado:
+        raise NoPublicar([f"el vídeo del teléfono ({en_el_telefono[:8]}) no es el revisado ({esperado[:8]})"])
+
+
+def _pie_a_la_vista() -> str:
+    """Volcado quieto de los detalles con el campo del pie entero en pantalla, deslizando la lista hacia el pie (solo
+    deslizando) MAX_DESLIZAMIENTOS veces como mucho. Si no aparece, PantallaInesperada."""
+    for intento in range(MAX_DESLIZAMIENTOS + 1):
+        xml = _leer_detalles("la pantalla de detalles quieta, con el pie")
+        if _campo_pie_visible(xml) is not None:
+            return xml
+        if intento == MAX_DESLIZAMIENTOS:
+            break
+        pasos.exigir_listo()
+        telefono.deslizar(*gesto_de_lista(xml, "subir"), DESLIZAR_MS)
+        reloj.dormir(1.5)
+    raise PantallaInesperada(f"tras {MAX_DESLIZAMIENTOS} deslizamientos el campo del pie sigue sin verse entero")
+
+
+def _problemas_del_boton(xml: str) -> list[str]:
+    """Lo que impide pulsar «Partager» en este volcado: no es la pantalla de detalles, no hay exactamente un
+    `share_button`, está desactivado o hay algo dibujado encima de su centro."""
+    if not any(n["texto"] == _t("nuevo_reel") for n in _por_id(xml, ID_TITULO)) or _franja(xml) is None:
+        return [f"no es la pantalla de detalles «{_t('nuevo_reel')}»"]
+    botones = _por_id(xml, ID_COMPARTIR)
+    if len(botones) != 1:
+        return [f"hay {len(botones)} share_button, no uno"]
+    if not botones[0]["enabled"]:
+        return ["el share_button está desactivado"]
+    if telefono.tapado(xml, botones[0]):
+        return ["algo tapa el share_button"]
+    return []
+
+
+def _listo_para_compartir(xml: str, emergentes: list[dict], pie: str) -> list[str]:
+    """Para `pasos.enviar` (sus dos volcados antes del toque): las filas siguen bien y enteras, el botón es único,
+    activo y destapado, y ninguna ventana emergente se le cruza."""
+    problemas = [f for clave, f in _faltas(xml, pie).items() if clave != "pie"] + _problemas_del_boton(xml)
+    culpable = pantalla.emergente_solapada(emergentes, [n["bounds"] for n in _por_id(xml, ID_COMPARTIR)])
+    if culpable is not None:
+        problemas.append(f"una {pantalla.describe_emergente(culpable)} se cruza con «Partager»")
+    return problemas
+
+
+def _comprobar_antes_de_compartir(pie: str) -> None:
+    """e, f y g de `publicar`: teléfono listo; los detalles delante; dos lecturas frescas sin más que deslizar (arriba
+    el pie, abajo los interruptores) con `detalles_listos_en_dos` vacío y el campo igual al pie entero; en la última,
+    un solo `share_button`, activo y destapado, y el teclado cerrado. NoPublicar con los motivos si algo falla."""
+    try:
+        pasos.exigir_listo()
+        delante = pasos.volcado_fresco()
+        if not _es_detalles_reel(delante):
+            raise NoPublicar([f"los detalles «{_t('nuevo_reel')}» no están delante"])
+        xml_arriba = _pie_a_la_vista()
+        xml_abajo = _filas_a_la_vista()
+    except (PantallaInesperada, telefono.TelefonoError) as e:
+        raise NoPublicar([f"{type(e).__name__}: {e}"]) from e
+    motivos = detalles_listos_en_dos(xml_arriba, xml_abajo, pie)
+    campos = _por_id(xml_arriba, ID_PIE)
+    if len(campos) != 1 or campos[0]["texto"] != pie:
+        motivos.append("pie: el campo no tiene el pie entero de la pieza")
+    motivos += _problemas_del_boton(xml_abajo)
+    if telefono.teclado_estado() is not False:
+        motivos.append("el teclado está abierto (o no se sabe)")
+    if motivos:
+        raise NoPublicar(motivos)
+
+
+def _boton_aviso_audio(xml: str) -> dict | None:
+    lista = [n for n in telefono.nodos(xml) if n["package"] == IG
+             and textos.normalizar(n["texto"]) == textos.normalizar(_t("desactivar_y_compartir"))]
+    return lista[0] if len(lista) == 1 else None
+
+
+def _es_dialogo(xml: str) -> bool:
+    """Un diálogo u hoja: el volcado es una ventana emergente o lleva una hoja de acciones o un diálogo de Instagram."""
+    return pantalla.volcado_de_emergente(xml) or any(
+        n["resource_id"].rsplit("/", 1)[-1].startswith(("bottom_sheet", "action_sheet", "dialog"))
+        for n in telefono.nodos(xml))
+
+
+def _vigilar_tras_compartir(avisos: list[str], respondidos: list[str], anotar) -> None:
+    """Tras el toque, VIGILANCIA_TRAS_COMPARTIR_S: si el aviso del audio original sale en dos volcados seguidos en el
+    mismo sitio, «Désactiver et partager» con `pasos.tocar` y PERMITIR_AVISO_AUDIO, una sola vez (aunque el aviso
+    siga, aunque el toque falle). Cualquier otro diálogo se anota en `avisos` y no se toca. Nunca se toca nada más."""
+    inicio = reloj.monotonic()
+    previo, intentado, vistos = None, False, set()
+    while reloj.monotonic() - inicio < VIGILANCIA_TRAS_COMPARTIR_S:
+        reloj.dormir(1.5)
+        try:
+            xml = telefono.volcado(timeout=10)
+        except telefono.TelefonoError:
+            previo = None
+            continue
+        boton = _boton_aviso_audio(xml)
+        if boton is not None:
+            if not intentado and previo == boton["bounds"]:
+                intentado = True
+                try:
+                    pasos.exigir_listo()
+                    pasos.tocar(boton, xml, permitir=PERMITIR_AVISO_AUDIO)
+                except (PantallaInesperada, telefono.TelefonoError) as e:
+                    avisos.append(f"aviso de audio original: no se tocó «{_t('desactivar_y_compartir')}»: {e}")
+                else:
+                    respondidos.append("audio_original")
+                    avisos.append(f"aviso de audio original: «{_t('desactivar_y_compartir')}»")
+                    anotar()
+            previo = boton["bounds"]
+            continue
+        previo = None
+        if _es_dialogo(xml):
+            firma = tuple(n["texto"] or n["desc"] for n in telefono.nodos(xml) if n["texto"] or n["desc"])[:6]
+            if firma not in vistos:
+                vistos.add(firma)
+                avisos.append(f"otro diálogo tras compartir, no se toca: {list(firma)}")
+
+
+def publicar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
+    """El único toque que publica el reel: «Partager», una sola vez en la vida del build. Nunca se reintenta.
+
+    En este orden, y a la primera que falle NoPublicar(motivos) sin haber tocado nada:
+    a. el estado es «listo» («compartido», «verificado» o «incierto»: NoPublicar(["ya se compartió"]));
+    b. `narrado.apto_para_publicar` vacío;
+    c. el pie recalculado de la pieza tiene el `pie_sha256` guardado;
+    d. el sha256 del vídeo del teléfono (`telefono.sha256_de_video`) es el `sha256_mp4` del informe;
+    e. teléfono listo y los detalles del reel delante;
+    f. dos lecturas frescas, solo deslizando entre ellas (arriba el pie, abajo los interruptores), con
+       `detalles_listos_en_dos` vacío y el campo igual al pie entero: se relee todo después de los toques de `pie`;
+    g. en la última, un solo `share_button`, activo y destapado, y el teclado cerrado;
+    h. el estado «compartido» con `compartido_en` se escribe en el disco ANTES del toque: `pasos.enviar` lo pide a
+       `observador_nuevo` tras sus dos volcados y justo antes de pulsar; si no se puede escribir, no se pulsa;
+    i. una sola llamada a `pasos.enviar`, sin reintento de ningún tipo pase lo que pase;
+    j. después, VIGILANCIA_TRAS_COMPARTIR_S vigilando el aviso del audio original (`_vigilar_tras_compartir`): solo
+       «Désactiver et partager», una vez; lo respondido queda en `avisos_respondidos` del estado.
+
+    Desde el toque nada se propaga: devuelve {"compartido_en", "avisos", "captura_antes", "captura"} y el estado
+    sigue «compartido»; lo que haya pasado lo resuelve `verificar`. Si el toque mismo lanza, o el proceso muere
+    entre h e i, el estado queda «compartido» y también lo resuelve `verificar`, nunca otro `publicar`. Si
+    `pasos.enviar` se niega después de h (solo puede ser su último `exigir_listo`, antes de pulsar), NoPublicar y el
+    estado sigue «compartido» por la misma regla."""
+    estado = _estado_para_publicar(pieza_id, raiz)  # a
+    problemas = narrado.apto_para_publicar(pieza_id, raiz)  # b
+    if problemas:
+        raise NoPublicar(problemas)
+    pie = _pie_comprobado(pieza_id, estado, raiz)  # c
+    _exigir_video_en_el_telefono(pieza_id, estado, raiz)  # d
+    _comprobar_antes_de_compartir(pie)  # e, f, g
+
+    compartido = {**estado, "paso": "compartido",
+                  "compartido_en": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                  "avisos_respondidos": []}
+    escrito: list[bool] = []
+    respondidos: list[str] = compartido["avisos_respondidos"]
+
+    def observador_nuevo(boton: dict):
+        narrado.guardar_estado_movil(pieza_id, compartido, raiz)  # h: antes del toque
+        if narrado.estado_movil(pieza_id, raiz).get("paso") != "compartido":
+            raise OSError("el estado leído tras escribirlo no dice «compartido»")
+        escrito.append(True)
+        return lambda xml: dict(pasos.VOLCADO_NO_VALIDO)  # la observación es la de `despues`
+
+    def anotar() -> None:
+        try:
+            narrado.guardar_estado_movil(pieza_id, compartido, raiz)
+        except Exception as e:  # noqa: BLE001 — tras el toque nada se propaga
+            avisos_previos.append(f"no se pudo anotar el aviso respondido en el estado: {e}")
+
+    avisos_previos: list[str] = []
+
+    def despues(resultado: dict, _estado_envio: str) -> str:
+        _vigilar_tras_compartir(resultado["avisos"], respondidos, anotar)
+        return "compartido"
+
+    try:
+        resultado = pasos.enviar(  # i: la única llamada
+            paquete=IG, nombre_app="Instagram", etiqueta=_t("compartir"), evidencia=ev,
+            captura_antes="publicar-1-antes.png", captura_final="publicar-2-despues.png",
+            captura_error="publicar-error.png",
+            listo=lambda xml, emergentes: _listo_para_compartir(xml, emergentes, pie),
+            botones=lambda xml: _por_id(xml, ID_COMPARTIR),
+            observador_nuevo=observador_nuevo, despues=despues, plazo=0)
+    except Exception as e:  # noqa: BLE001 — `enviar` solo propaga lo de antes del toque
+        if escrito:
+            raise NoPublicar([f"no se pulsó «Partager» ({type(e).__name__}: {e}), pero el estado ya dice "
+                              "«compartido»: lo resuelve `verificar`, nunca otro `publicar`"]) from e
+        raise NoPublicar([f"no se pulsó «Partager»: {type(e).__name__}: {e}"]) from e
+
+    avisos = list(resultado.get("avisos") or []) + avisos_previos
+    if resultado.get("estado") == "error_tras_pulsar":
+        avisos.append(f"error tras pulsar «Partager»: {resultado.get('error')}")
+    return {"compartido_en": compartido["compartido_en"], "avisos": avisos,
+            "captura_antes": resultado.get("captura_antes"),
+            "captura": resultado.get("captura") or resultado.get("captura_error")}
+
+
+# ---------------------------------------------------------------- descartar: la salida antes de compartir
+
+def _es_hoja_borrador(xml: str) -> bool:
+    titulo = textos.normalizar_titulo(_t("hoja_borrador"))
+    return any(n["package"] == IG and titulo in (textos.normalizar_titulo(n["texto"]), textos.normalizar_titulo(n["desc"]))
+               for n in telefono.nodos(xml))
+
+
+def _boton_recommencer(hoja: str) -> dict:
+    """«Recommencer» de la hoja «Enregistrer le brouillon ?», por `pantalla.boton_descarte`, y solo si es esa fila y su
+    centro no cae en «Enregistrer le brouillon» (fila o `save_draft_button`). Si no, PantallaInesperada."""
+    if not _es_hoja_borrador(hoja):
+        raise PantallaInesperada(f"no está la hoja «{_t('hoja_borrador')}»: no se toca nada")
+    boton = pantalla.boton_descarte(hoja, "instagram")
+    if textos.normalizar(boton["texto"]) != textos.normalizar(_t("recomenzar")):
+        raise PantallaInesperada(f"el botón de descarte de la hoja es {boton['texto']!r}, no «{_t('recomenzar')}»: "
+                                 "no se toca")
+    cx, cy = boton["centro"]
+    borrador = textos.normalizar(_t("guardar_borrador"))
+    for n in telefono.nodos(hoja):
+        if borrador in (textos.normalizar(n["texto"]), textos.normalizar(n["desc"])) \
+                or n["resource_id"] == f"{IG}:id/{ID_BORRADOR}":
+            x1, y1, x2, y2 = n["bounds"]
+            if x1 <= cx < x2 and y1 <= cy < y2:
+                raise PantallaInesperada(f"«{_t('recomenzar')}» cae sobre «{_t('guardar_borrador')}»: no se toca")
+    return boton
+
+
+def _salir_del_compositor(ev: Path) -> list[str]:
+    """Desde los detalles o el editor del reel: «atrás» (al editor), «atrás» (a la hoja «Enregistrer le brouillon ?»),
+    «Recommencer» con `pasos.tocar`, y «atrás» para salir de la galería. Si Instagram está en otra parte, no navega.
+    Devuelve lo hecho; cualquier pantalla que no cuadre es PantallaInesperada."""
+    pasos.exigir_listo()
+    xml = pasos.volcado_fresco()
+    hecho: list[str] = []
+    if _es_detalles_reel(xml) or _es_detalles(xml):
+        pasos.atras(IG, ev, "descartar-1-editor")
+        pasos.esperar_que(_es_editor, "el editor del reel tras «atrás»", app="instagram")
+        hecho.append("detalles → editor")
+    elif not _es_editor(xml):
+        return ["Instagram no está en los detalles ni en el editor del reel: no se navega"]
+    pasos.atras(IG, ev, "descartar-2-hoja")
+    hoja = pasos.esperar_que(_es_hoja_borrador, f"la hoja «{_t('hoja_borrador')}»", app="instagram")
+    pasos.tocar(_boton_recommencer(hoja), hoja)
+    hecho.append(f"editor → «{_t('recomenzar')}»")
+    pasos.esperar_que(_es_galeria, f"la galería tras «{_t('recomenzar')}»", app="instagram")
+    pasos.atras(IG, ev, "descartar-3-salida")
+    hecho.append("galería → " + ("portada" if _es_portada(pasos.volcado_fresco()) else "fuera de la galería"))
+    return hecho
+
+
+def descartar(pieza_id: str, ev: Path, raiz: Path | None = None) -> dict:
+    """La salida de cualquier paso antes de `publicar`: deja Instagram sin el borrador, borra el vídeo del teléfono y
+    pone el estado en «descartado». Nunca toca «Enregistrer le brouillon» ni «Partager».
+
+    En «compartido», «verificado» o «incierto» se niega (ValueError) sin tocar el teléfono: eso lo resuelve
+    `verificar`. Sin vídeo subido no hay nada que descartar (ValueError). Si Instagram está en los detalles o en el
+    editor del reel, sale por «Recommencer» (`_salir_del_compositor`); si está en otra parte, no navega. Siempre, aunque
+    la salida falle: `telefono.borrar_video` (un False o un error van a `problemas`, no se lanzan) y estado
+    «descartado». Devuelve {"paso", "navegacion", "video_borrado", "problemas"}."""
+    estado = narrado.estado_movil(pieza_id, raiz)
+    paso = estado.get("paso")
+    if paso in ESTADOS_COMPARTIDOS:
+        raise ValueError(f"{pieza_id} está «{paso}»: ya se compartió, no se descarta (lo resuelve `verificar`)")
+    nombre = estado.get("nombre_remoto")
+    if not nombre:
+        raise ValueError(f"{pieza_id}: no hay vídeo subido que descartar (estado {paso!r})")
+    resultado = {"paso": "descartado", "navegacion": [], "video_borrado": False, "problemas": []}
+    try:
+        resultado["navegacion"] = _salir_del_compositor(ev)
+    except (PantallaInesperada, telefono.TelefonoError) as e:
+        resultado["problemas"].append(f"al salir de Instagram: {type(e).__name__}: {e}")
+    try:
+        resultado["video_borrado"] = telefono.borrar_video(nombre) is True
+        if not resultado["video_borrado"]:
+            resultado["problemas"].append(f"{nombre}: no se pudo confirmar que se borró del teléfono")
+    except Exception as e:  # noqa: BLE001 — se informa, no se lanza
+        resultado["problemas"].append(f"{nombre}: el borrado falló: {type(e).__name__}: {e}")
+    estado.update(paso="descartado", descartado_en=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                  video_borrado=resultado["video_borrado"])
+    narrado.guardar_estado_movil(pieza_id, estado, raiz)
+    return resultado

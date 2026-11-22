@@ -964,8 +964,457 @@ def seccion_poner_pie() -> None:
         check(err is None and sim.teclas == [4], f"con el teclado abierto tras pegar, un «atrás» y sigue ({err!r}, {sim.teclas})")
 
 
+# ---------------------------------------------------------------- tarea 5: publicar y descartar
+
+# Lo que enseña Instagram tras «Partager» NUNCA se ha volcado en el teléfono real: estas pantallas son una SUPOSICIÓN
+# (el texto del aviso de audio sale de `sitio_instagram.publicar` y de la nota del 3 nov; la forma, de la hoja 09, que
+# se vuelca sola, sin la pantalla de debajo). La tarea 8 guarda los volcados reales como fixtures.
+def _dialogo(bounds: str, *hijos: str) -> str:
+    raiz = nodo_xml(bounds, clase="android.widget.FrameLayout", hijos="".join(hijos))
+    return f"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?><hierarchy rotation=\"0\">{raiz}</hierarchy>"
+
+
+BOTON_DESACTIVAR = (63, 1300, 1017, 1430)
+XML_AVISO_AUDIO = _dialogo(
+    "[63,780][1017,1600]",
+    nodo_xml("[111,830][969,900]", texto="Mise à jour de votre audio d’origine"),
+    nodo_xml("[111,920][969,1200]", texto="Votre audio d’origine pourra être réutilisé."),
+    nodo_xml("[63,1300][1017,1430]", texto="Désactiver et partager", clase="android.widget.Button",
+             extra='clickable="true" enabled="true"'),
+    nodo_xml("[63,1450][1017,1580]", texto="Partager", clase="android.widget.Button",
+             extra='clickable="true" enabled="true"'))
+XML_OTRO_DIALOGO = _dialogo(
+    "[0,1400][1080,2316]",
+    nodo_xml("[45,1450][1035,1520]", texto="Partager sur votre statut WhatsApp ?",
+             extra=con_id("action_sheet_header_text_view")),
+    nodo_xml("[0,1600][1080,1730]", texto="Plus tard", clase="android.widget.Button",
+             extra=con_id("action_sheet_row_text_view", 'clickable="true"')))
+XML_TRAS_COMPARTIR = jerarquia(
+    nodo_xml("[0,94][1080,180]", texto="Partage sur Reels…"),
+    nodo_xml("[900,1500][1000,1600]", desc="Partager", clase="android.widget.ImageView", extra='clickable="true"'),
+    FEED_TAB, PROFILE_TAB, alto=2316)
+CENTRO_COMPARTIR = ((563 + 1035) // 2, (2001 + 2125) // 2)
+CENTRO_DESACTIVAR = ((63 + 1017) // 2, (1300 + 1430) // 2)
+
+
+class PublicarSimulado(DetallesSimulado):
+    """Los detalles del reel ya listos (pie pegado, IA encendida, cruces y «Essai» apagados), con la lista abajo. Un toque
+    en «Partager» llama a `al_compartir` y pasa a `tras_compartir` (el último se repite); uno en «Désactiver et
+    partager», con el aviso en pantalla, pasa a `tras_desactivar`. `retoque(xml)` cambia la pantalla de detalles."""
+
+    def __init__(self, *, pie: str, tras_compartir=(XML_TRAS_COMPARTIR,), tras_desactivar=(XML_TRAS_COMPARTIR,),
+                 retoque=None, al_compartir=None, **kw):
+        kw.setdefault("ia", True)
+        kw.setdefault("threads", False)
+        kw.setdefault("facebook", False)
+        super().__init__(pie_pegado=pie, **kw)
+        self.posicion = "abajo"
+        self.tras_compartir, self.tras_desactivar = list(tras_compartir), list(tras_desactivar)
+        self.retoque, self.al_compartir = retoque, al_compartir
+        self.despues: list[str] | None = None
+        self.lecturas = []  # posición de cada volcado de detalles: «arriba» / «abajo»
+
+    def volcado(self, timeout: int = 30) -> str:
+        self.volcados_leidos += 1
+        v = self.pantalla()
+        if isinstance(v, BaseException):
+            raise v
+        self.ultimo = v
+        return v
+
+    def pantalla(self) -> str:
+        if self.despues is not None:
+            return self._siguiente(self.despues)
+        xml = super().pantalla()
+        if not self.dialogo:
+            self.lecturas.append(self.posicion)
+        return self.retoque(xml) if self.retoque else xml
+
+    def tocar(self, x: int, y: int) -> None:
+        en_pantalla = self.ultimo
+        super().tocar(x, y)
+        if self.despues is None and dentro((x, y), BARRA["share_button"]):
+            if self.al_compartir:
+                self.al_compartir()
+            self.despues = list(self.tras_compartir)
+        elif self.despues is not None and en_pantalla == XML_AVISO_AUDIO and dentro((x, y), BOTON_DESACTIVAR):
+            self.despues = list(self.tras_desactivar)
+
+
+def preparado_listo(d: str) -> pathlib.Path:
+    from labkit import narrado, narrado_movil as nm
+    raiz = preparado_abierto(d)
+    sha = narrado.informe_de(PIEZA, raiz)["sha256_mp4"]
+    narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": "listo",
+                                         "nombre_remoto": nm.nombre_remoto(PIEZA, sha), "sha256": sha,
+                                         "pie_sha256": hashlib.sha256(pie_de_prueba().encode()).hexdigest()}, raiz)
+    return raiz
+
+
+def correr_con_video(sim: TelefonoSimulado, accion, *, sha=None, borrar=True):
+    """`accion()` con el teléfono simulado y `telefono.sha256_de_video` / `borrar_video` sustituidos: `sha` es lo que
+    devuelve el primero (una excepción se lanza) y `borrar` lo del segundo. Devuelve (resultado, error, borrados)."""
+    borrados: list[str] = []
+
+    def sha_falso(nombre):
+        if isinstance(sha, BaseException):
+            raise sha
+        return sha
+
+    def borrar_falso(nombre):
+        borrados.append(nombre)
+        if isinstance(borrar, BaseException):
+            raise borrar
+        return borrar
+
+    guardado = (telefono.sha256_de_video, telefono.borrar_video)
+    telefono.sha256_de_video, telefono.borrar_video = sha_falso, borrar_falso
+    try:
+        res, err = con_telefono_simulado(sim, accion)
+    finally:
+        telefono.sha256_de_video, telefono.borrar_video = guardado
+    return res, err, borrados
+
+
+def correr_publicar(sim, raiz, ev, *, sha="informe"):
+    from labkit import narrado, narrado_movil as nm
+    if sha == "informe":
+        sha = narrado.informe_de(PIEZA, raiz)["sha256_mp4"]
+    res, err, _ = correr_con_video(sim, lambda: nm.publicar(PIEZA, ev, raiz=raiz), sha=sha)
+    return res, err
+
+
+def seccion_publicar() -> None:
+    print("\n13. narrado_movil.publicar con el teléfono simulado")
+    from labkit import narrado, narrado_movil as nm
+
+    pie = pie_de_prueba()
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        en_el_toque: list = []
+        sim = PublicarSimulado(pie=pie, al_compartir=lambda: en_el_toque.append(narrado.estado_movil(PIEZA, raiz)))
+        res, err = correr_publicar(sim, raiz, ev)
+        res = res or {}
+        check(err is None, f"camino feliz sin error ({err!r})")
+        check(sim.toques == [CENTRO_COMPARTIR], f"toca «Partager» exactamente una vez y nada más ({sim.toques})")
+        check(len(en_el_toque) == 1 and en_el_toque[0].get("paso") == "compartido"
+              and en_el_toque[0].get("compartido_en"),
+              f"en el momento del toque el disco ya dice «compartido» con compartido_en ({en_el_toque})")
+        estado = narrado.estado_movil(PIEZA, raiz)
+        check(estado.get("paso") == "compartido" and estado.get("compartido_en") == res.get("compartido_en")
+              and estado.get("pie_sha256") and estado.get("publicaciones_antes") == 4191,
+              f"queda «compartido», con lo anterior intacto ({estado})")
+        check(set(res) == {"compartido_en", "avisos", "captura_antes", "captura"} and isinstance(res["avisos"], list)
+              and res["captura_antes"] and res["captura"], f"devuelve lo observado ({res})")
+        check("arriba" in sim.lecturas and sim.lecturas.index("arriba") < len(sim.lecturas) - 1
+              and sim.lecturas[-1] == "abajo",
+              f"relee el pie arriba (deslizando) y luego los interruptores abajo ({sim.lecturas[:3]}…)")
+        check(sim.deslizamientos and all(FRANJA[0] < y < FRANJA[1] for g in sim.deslizamientos for y in (g[1], g[3])),
+              f"para releer solo desliza, dentro de la lista ({sim.deslizamientos})")
+
+        sim2 = PublicarSimulado(pie=pie)
+        res2, err2 = correr_publicar(sim2, raiz, ev)
+        check(isinstance(err2, nm.NoPublicar) and err2.motivos == ["ya se compartió"]
+              and sim2.toques == [] and sim2.volcados_leidos == 0,
+              f"una segunda llamada: NoPublicar([«ya se compartió»]) sin tocar el teléfono ({err2!r})")
+
+    for paso in ("verificado", "incierto"):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": paso}, raiz)
+            sim = PublicarSimulado(pie=pie)
+            res, err = correr_publicar(sim, raiz, ev)
+            check(isinstance(err, nm.NoPublicar) and err.motivos == ["ya se compartió"] and sim.toques == [],
+                  f"en «{paso}»: ya se compartió ({err!r})")
+
+    def negativa(etiqueta: str, *, preparar=None, sha="informe", busca: str = "", **kw):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            if preparar:
+                preparar(raiz)
+            kw.setdefault("pie", pie)
+            dialogo = kw.pop("dialogo", False)
+            sim = PublicarSimulado(**kw)
+            sim.dialogo = dialogo
+            res, err = correr_publicar(sim, raiz, ev, sha=sha)
+            texto = " ".join(err.motivos) if isinstance(err, nm.NoPublicar) else ""
+            check(isinstance(err, nm.NoPublicar) and busca.lower() in texto.lower() and sim.toques == []
+                  and narrado.estado_movil(PIEZA, raiz).get("paso") != "compartido",
+                  f"{etiqueta}: NoPublicar sin ningún toque ({err!r}, {sim.toques})")
+
+    def con_paso(paso):
+        return lambda raiz: narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": paso}, raiz)
+
+    def con_informe(**cambios):
+        import json
+        def hacer(raiz):
+            ruta = raiz / "experiments" / "media-lab" / "narrados" / PIEZA / "build" / "informe.json"
+            datos = json.loads(ruta.read_text(encoding="utf-8"))
+            datos.update(cambios)
+            ruta.write_text(json.dumps(datos), encoding="utf-8")
+        return hacer
+
+    def mp4_cambiado(raiz):
+        mp4 = raiz / "experiments" / "media-lab" / "narrados" / PIEZA / "build" / f"{PIEZA}.mp4"
+        mp4.write_bytes(mp4.read_bytes() + b"X")
+
+    def otro_pie_guardado(raiz):
+        narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "pie_sha256": "0" * 64}, raiz)
+
+    def con_dos_botones(xml):
+        return xml.replace("</hierarchy>", '<node index="9" text="" resource-id="com.instagram.android:id/share_button" '
+                           'class="android.widget.Button" package="com.instagram.android" content-desc="Partager" '
+                           'clickable="true" enabled="true" bounds="[600,300][700,400]" /></hierarchy>')
+
+    def boton_apagado(xml):
+        viejo = 'content-desc="Partager" checkable="false" checked="false" clickable="true" enabled="true"'
+        assert viejo in xml
+        return xml.replace(viejo, viejo.replace('enabled="true"', 'enabled="false"'))
+
+    def boton_tapado(xml):
+        return xml.replace("</hierarchy>", '<node index="9" text="" resource-id="" class="android.widget.FrameLayout" '
+                           'package="com.instagram.android" content-desc="" clickable="false" enabled="true" '
+                           'bounds="[500,1980][1080,2150]" /></hierarchy>')
+
+    negativa("estado «abierto»", preparar=con_paso("abierto"), busca="pie")
+    negativa("estado «subido»", preparar=con_paso("subido"), busca="abrir")
+    negativa("sin veredicto", preparar=con_informe(veredicto=None), busca="veredicto")
+    negativa("MP4 cambiado en el disco", preparar=mp4_cambiado, busca="sha256")
+    negativa("el pie de la pieza ya no es el que se pegó", preparar=otro_pie_guardado, busca="pie")
+    negativa("el vídeo del teléfono es otro", sha=OTRO_SHA, busca="teléfono")
+    negativa("el vídeo no está en el teléfono", sha=None, busca="teléfono")
+    negativa("sha256_de_video lanza", sha=telefono.TelefonoError("adb: sin respuesta"), busca="teléfono")
+    negativa("teléfono bloqueado", listo=False, busca="listo")
+    negativa("no están los detalles delante", busca="detalles", dialogo=True)
+    negativa("el pie en pantalla es otro (misma primera línea)", pie=pie.replace("Voz sintética", "Voz humana"),
+             busca="pie")
+    negativa("el pie en pantalla es otro (desde el principio)", pie="Otro texto\n\n#x", busca="pie")
+    negativa("Threads vuelve a estar encendido", threads=True, busca="Threads")
+    negativa("la mención IA está apagada", ia=False, busca="IA")
+    negativa("«Essai» encendido", essai=True, busca="Essai")
+    # Con dos share_button la pantalla ya no cuenta como los detalles (`_es_detalles_reel` exige uno): se para en e/f.
+    negativa("dos share_button", retoque=con_dos_botones)
+    fin_ok = con_estados(pantalla_fin(), {"ia": True, "essai": False, "threads": False, "facebook": False},
+                         INTERRUPTORES_FIN)
+    check(nm._problemas_del_boton(fin_ok) == [] and any("2 share_button" in p for p in nm._problemas_del_boton(
+        con_dos_botones(fin_ok))) and nm._problemas_del_boton(boton_apagado(fin_ok)) != []
+          and nm._problemas_del_boton(boton_tapado(fin_ok)) != [],
+          "el botón: uno, activo y destapado; dos, desactivado o tapado no vale")
+    negativa("share_button desactivado", retoque=boton_apagado, busca="share_button")
+    negativa("share_button tapado", retoque=boton_tapado, busca="share_button")
+    negativa("teclado abierto", teclado=(True,), busca="teclado")
+    negativa("no se sabe si el teclado está abierto", teclado=(None,), busca="teclado")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, falla_tocar=telefono.TelefonoError("adb: se cortó"))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR]
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido"
+              and any("se cortó" in a for a in (res or {}).get("avisos", [])),
+              f"el toque lanza: vuelve normal, un solo intento y el estado sigue «compartido» ({err!r}, {res})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie)
+        original = narrado.guardar_estado_movil
+
+        def no_escribe(*a, **k):
+            raise OSError("disco lleno")
+        narrado.guardar_estado_movil = no_escribe
+        try:
+            res, err = correr_publicar(sim, raiz, ev)
+        finally:
+            narrado.guardar_estado_movil = original
+        check(isinstance(err, nm.NoPublicar) and "disco lleno" in str(err) and sim.toques == []
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "listo",
+              f"no se puede escribir «compartido»: no se toca nada ({err!r}, {sim.toques})")
+
+    print("\n14. Tras «Partager»: el aviso del audio original y nada más")
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_AVISO_AUDIO,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR, CENTRO_DESACTIVAR],
+              f"el aviso de audio sale: «Désactiver et partager» una vez ({err!r}, {sim.toques})")
+        estado = narrado.estado_movil(PIEZA, raiz)
+        check(estado.get("paso") == "compartido" and estado.get("avisos_respondidos") == ["audio_original"]
+              and any("Désactiver et partager" in a for a in (res or {}).get("avisos", [])),
+              f"el estado sigue «compartido» y anota el aviso respondido ({estado.get('avisos_respondidos')})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_AVISO_AUDIO,), tras_desactivar=(XML_AVISO_AUDIO,))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR, CENTRO_DESACTIVAR],
+              f"si el aviso no se va, no se vuelve a tocar ({sim.toques})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(XML_OTRO_DIALOGO, XML_OTRO_DIALOGO, XML_TRAS_COMPARTIR))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR]
+              and any("WhatsApp" in a for a in (res or {}).get("avisos", []))
+              and narrado.estado_movil(PIEZA, raiz).get("avisos_respondidos") == [],
+              f"otro diálogo: no se toca nada y queda en los avisos ({res and res['avisos']})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = PublicarSimulado(pie=pie, tras_compartir=(telefono.TelefonoError("volcado roto"),))
+        res, err = correr_publicar(sim, raiz, ev)
+        check(err is None and sim.toques == [CENTRO_COMPARTIR]
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "compartido",
+              f"sin volcados tras compartir: vuelve normal y sigue «compartido» ({err!r})")
+
+    from labkit import pantalla, pasos
+    from labkit.pantalla import PantallaInesperada
+    boton = next(n for n in telefono.nodos(XML_AVISO_AUDIO) if n["texto"] == "Désactiver et partager")
+    check(not pantalla.es_envio(XML_AVISO_AUDIO, boton, ignorar=nm.PERMITIR_AVISO_AUDIO),
+          "con PERMITIR_AVISO_AUDIO la guardia deja tocar «Désactiver et partager»")
+    fin = con_estados(pantalla_fin(), {"ia": True, "essai": False, "threads": False, "facebook": False},
+                      INTERRUPTORES_FIN)
+    prohibidos = [(fin, next(n for n in telefono.nodos(fin) if n["resource_id"] == f"{IG}:id/share_button")),
+                  (fin, next(n for n in telefono.nodos(fin) if n["resource_id"] == f"{IG}:id/save_draft_button")),
+                  (XML_AVISO_AUDIO, next(n for n in telefono.nodos(XML_AVISO_AUDIO) if n["texto"] == "Partager")),
+                  (XML_TRAS_COMPARTIR, next(n for n in telefono.nodos(XML_TRAS_COMPARTIR) if n["desc"] == "Partager"))]
+    for xml, n in prohibidos:
+        sim = TelefonoSimulado([xml])
+        _, err = con_telefono_simulado(sim, lambda: pasos.tocar(n, xml, permitir=nm.PERMITIR_AVISO_AUDIO))
+        check(isinstance(err, PantallaInesperada) and sim.toques == [],
+              f"con PERMITIR_AVISO_AUDIO, «{n['texto'] or n['desc']}» ({n['resource_id'] or 'sin id'}) sigue rechazado")
+
+
+def seccion_descartar() -> None:
+    print("\n15. narrado_movil.descartar")
+    from labkit import narrado, narrado_movil as nm
+
+    hoja = fixture("09-atras-2.xml")
+    filas = {n["texto"]: n for n in telefono.nodos(hoja) if n["resource_id"].endswith("action_sheet_row_text_view")}
+    recommencer = filas["Recommencer"]["centro"]
+    prohibidas = [filas["Enregistrer le brouillon"]["bounds"], BARRA["save_draft_button"]]
+
+    class SalidaSimulada(MovilSimulado):
+        ATRAS = {"detalles": "editor", "editor": "hoja", "galeria": "inicio"}
+
+        def tecla(self, codigo: int) -> None:
+            super().tecla(codigo)
+            if codigo == 4 and self.recorrido[-1] in self.ATRAS:
+                self.ir(self.ATRAS[self.recorrido[-1]])
+
+    def salida(inicial: str, detalles: str | None = None) -> SalidaSimulada:
+        pantallas = {"detalles": detalles or fixture("05-detalles.xml"), "editor": fixture("04-editor.xml"),
+                     "hoja": hoja, "galeria": fixture("03-crear.xml"), "inicio": XML_INICIO_MOVIL, "reels": XML_REELS}
+        return SalidaSimulada(pantallas, inicial, [("hoja", recommencer, "galeria")])
+
+    def correr(sim, raiz, ev, borrar=True):
+        return correr_con_video(sim, lambda: nm.descartar(PIEZA, ev, raiz=raiz), borrar=borrar)
+
+    def nunca_borrador(sim) -> bool:
+        return not any(dentro(t, b) for t in sim.toques for b in prohibidas)
+
+    detalles_listos_xml = con_estados(pantalla_fin(), {"ia": True, "essai": False, "threads": False,
+                                                       "facebook": False}, INTERRUPTORES_FIN)
+    for paso, inicial, detalles in (("listo", "detalles", detalles_listos_xml), ("abierto", "detalles", None)):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": paso}, raiz)
+            nombre = narrado.estado_movil(PIEZA, raiz)["nombre_remoto"]
+            sim = salida(inicial, detalles)
+            res, err, borrados = correr(sim, raiz, ev)
+            check(err is None and sim.recorrido == [inicial, "editor", "hoja", "galeria", "inicio"]
+                  and sim.teclas == [4, 4, 4] and sim.toques == [recommencer],
+                  f"desde «{paso}»: atrás, atrás, «Recommencer», atrás hasta la portada ({err!r}, {sim.recorrido}, {sim.toques})")
+            check(nunca_borrador(sim), f"desde «{paso}»: ningún toque en «Enregistrer le brouillon»")
+            estado = narrado.estado_movil(PIEZA, raiz)
+            check(borrados == [nombre] and estado.get("paso") == "descartado" and (res or {}).get("video_borrado") is True,
+                  f"desde «{paso}»: borra el vídeo del teléfono y queda «descartado» ({borrados}, {estado.get('paso')})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": "subido"}, raiz)
+        sim = salida("reels")
+        res, err, borrados = correr(sim, raiz, ev)
+        check(err is None and sim.toques == [] and sim.teclas == [] and len(borrados) == 1
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "descartado",
+              f"desde «subido» con Instagram en otra parte: no navega, solo limpia ({err!r}, {sim.teclas})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = salida("editor")
+        res, err, borrados = correr(sim, raiz, ev)
+        check(err is None and sim.recorrido == ["editor", "hoja", "galeria", "inicio"] and sim.toques == [recommencer],
+              f"desde el editor: un «atrás» menos ({sim.recorrido})")
+
+    for paso in ("compartido", "verificado", "incierto"):
+        with tempfile.TemporaryDirectory() as d:
+            raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+            narrado.guardar_estado_movil(PIEZA, {**narrado.estado_movil(PIEZA, raiz), "paso": paso}, raiz)
+            sim = salida("detalles", detalles_listos_xml)
+            res, err, borrados = correr(sim, raiz, ev)
+            check(isinstance(err, ValueError) and sim.volcados_leidos == 0 and sim.toques == [] and sim.teclas == []
+                  and borrados == [] and narrado.estado_movil(PIEZA, raiz).get("paso") == paso,
+                  f"en «{paso}» se niega sin tocar nada ni borrar el vídeo ({err!r})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = salida("detalles", detalles_listos_xml)
+        res, err, borrados = correr(sim, raiz, ev, borrar=False)
+        check(err is None and res.get("video_borrado") is False and any("borr" in p for p in res["problemas"])
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "descartado",
+              f"borrar_video da False: se informa, no se lanza ({res})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        sim = salida("detalles", detalles_listos_xml)
+        res, err, borrados = correr(sim, raiz, ev, borrar=telefono.TelefonoError("adb: sin respuesta"))
+        check(err is None and res.get("video_borrado") is False and any("sin respuesta" in p for p in res["problemas"])
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "descartado",
+              f"borrar_video lanza: se informa, no se lanza ({res})")
+
+    with tempfile.TemporaryDirectory() as d:
+        raiz, ev = preparado_listo(d), pathlib.Path(d) / "ev"
+        cambiada = hoja.replace('text="Recommencer"', 'text="Recommencer plus tard"')
+        sim = salida("detalles", detalles_listos_xml)
+        sim.pantallas["hoja"] = cambiada
+        res, err, borrados = correr(sim, raiz, ev)
+        check(err is None and sim.toques == [] and nunca_borrador(sim) and res["problemas"]
+              and narrado.estado_movil(PIEZA, raiz).get("paso") == "descartado",
+              f"la hoja sin «Recommencer»: no se toca ninguna fila, se informa y se limpia ({res and res['problemas']})")
+
+    print("\n16. apto_para_publicar endurecido")
+    import json
+    with tempfile.TemporaryDirectory() as d:
+        raiz = arbol(d)
+        carpeta = raiz / "experiments" / "media-lab" / "narrados" / PIEZA
+        fuera = carpeta / f"{PIEZA}.mp4"
+        fuera.write_bytes((carpeta / "build" / f"{PIEZA}.mp4").read_bytes())
+        ruta = carpeta / "build" / "informe.json"
+        datos = json.loads(ruta.read_text(encoding="utf-8"))
+        ruta.write_text(json.dumps({**datos, "mp4": str(fuera)}), encoding="utf-8")
+        problemas = narrado.apto_para_publicar(PIEZA, raiz)
+        check(any("build" in p for p in problemas), f"un MP4 fuera de build/ (mismo sha): no apto ({problemas})")
+        sub = carpeta / "build" / "sub"
+        sub.mkdir()
+        (sub / f"{PIEZA}.mp4").write_bytes(fuera.read_bytes())
+        ruta.write_text(json.dumps({**datos, "mp4": str(sub / f"{PIEZA}.mp4")}), encoding="utf-8")
+        check(any("build" in p for p in narrado.apto_para_publicar(PIEZA, raiz)), "en una subcarpeta de build/: no apto")
+        ruta.write_text(json.dumps({**datos, "mp4": str(carpeta / "build" / ".." / "build" / f"{PIEZA}.mp4")}),
+                        encoding="utf-8")
+        check(narrado.apto_para_publicar(PIEZA, raiz) == [], "una ruta con «..» que acaba en build/: apta")
+        for malo, que in (([1, 2], "una lista"), ({**datos, "mp4": 123}, "mp4 numérico"),
+                          ({**datos, "mp4": ["a"]}, "mp4 lista"), ("texto", "una cadena")):
+            ruta.write_text(json.dumps(malo), encoding="utf-8")
+            try:
+                problemas = narrado.apto_para_publicar(PIEZA, raiz)
+            except Exception as e:  # noqa: BLE001
+                problemas = [f"LANZÓ {e!r}"]
+            check(problemas and not any("LANZÓ" in p for p in problemas), f"informe malformado ({que}): problema, no excepción ({problemas})")
+
+
 SECCIONES = [seccion_puras, seccion_subir, seccion_borrar, seccion_pie, seccion_apto_y_estado, seccion_miniatura,
-             seccion_subir_paso, seccion_abrir, seccion_interruptores, seccion_poner_pie]
+             seccion_subir_paso, seccion_abrir, seccion_interruptores, seccion_poner_pie, seccion_publicar,
+             seccion_descartar]
 
 
 def main() -> int:

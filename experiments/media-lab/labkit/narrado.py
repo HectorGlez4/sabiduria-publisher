@@ -390,25 +390,35 @@ def ruta_build(pieza_id: str, raiz: Path | None = None) -> Path:
 def apto_para_publicar(pieza_id: str, raiz: Path | None = None) -> list[str]:
     """Lo que impide publicar el build de la pieza, leído del disco ahora mismo; vacío si se puede.
 
-    Hace falta `informe.json` con `ok: true` y `veredicto: "PASS"`, el mp4 del informe con el mismo
-    sha256 que `sha256_mp4` y `guion.json` con el mismo que `sha256_guion`. Un id no válido es ValueError."""
-    ruta = ruta_build(pieza_id, raiz) / "informe.json"
+    Hace falta `informe.json` (un objeto) con `ok: true` y `veredicto: "PASS"`, el mp4 del informe (una ruta que
+    lleva a un archivo directamente dentro del `build/` de la pieza) con el mismo sha256 que `sha256_mp4` y
+    `guion.json` con el mismo que `sha256_guion`. Un informe malformado es un problema, no una excepción. Un id no
+    válido es ValueError."""
+    build = ruta_build(pieza_id, raiz)
+    ruta = build / "informe.json"
     if not ruta.is_file():
         return [f"no hay {ruta}: construye y revisa antes de publicar"]
     try:
         informe = json.loads(ruta.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         return [f"{ruta} no se puede leer: {e}"]
+    if not isinstance(informe, dict):
+        return [f"{ruta} no es un objeto JSON ({type(informe).__name__}): vuelve a construir"]
     problemas = []
     if informe.get("ok") is not True:
         problemas.append(f"la construcción no está ok (fase {informe.get('fase')})")
     if informe.get("veredicto") != "PASS":
         problemas.append(f"el veredicto visual es {informe.get('veredicto')!r}, no «PASS»: falta `revisar`")
-    mp4 = Path(informe["mp4"]) if informe.get("mp4") else None
+    valor = informe.get("mp4")
+    mp4 = Path(valor) if isinstance(valor, str) and valor else None
     if not informe.get("sha256_mp4"):
         problemas.append("el informe no trae sha256_mp4")
+    elif valor is not None and not isinstance(valor, str):
+        problemas.append(f"el mp4 del informe no es una ruta ({type(valor).__name__})")
     elif mp4 is None or not mp4.is_file():
-        problemas.append(f"no está el mp4 del informe ({informe.get('mp4')})")
+        problemas.append(f"no está el mp4 del informe ({valor})")
+    elif mp4.resolve().parent != build.resolve():
+        problemas.append(f"el mp4 del informe ({valor}) no está directamente dentro de {build}")
     elif _sha256(mp4) != informe["sha256_mp4"]:
         problemas.append(f"{mp4.name} no es el que se construyó (sha256 distinto): vuelve a construir y revisar")
     guion = _ruta_guion(pieza_id, raiz)
