@@ -1,0 +1,65 @@
+{
+  "id": "2027-01-14-manana",
+  "slot": "manana",
+  "pillar": "curiosidad",
+  "core": {
+    "subject": "la plaga del baile de Estrasburgo (1518)",
+    "hook": "En 1518, Estrasburgo combatió una epidemia de baile con más baile: el consejo pagó músicos y montó tarimas.",
+    "body": [
+      "En julio de 1518, una mujer a la que las crónicas llaman Frau Troffea empezó a bailar en una calle de Estrasburgo, sin música. Según el relato más repetido, fue el 14 de julio. En pocos días se le sumaron decenas de personas, y una crónica familiar de la época habla de cuatrocientos ciudadanos al cabo de un mes. Los historiadores modernos prefieren un rango más prudente: entre cincuenta y cuatrocientos.",
+      "El consejo municipal no consultó al clero, que culpaba a san Vito, sino al gremio de médicos. Los médicos dictaminaron que era una enfermedad natural causada por «sangre sobrecalentada». La receta fue bailar hasta quitársela. El consejo habilitó salones de gremios, levantó tarimas en el mercado de caballos y en el de grano, y contrató músicos con tambores, violines y flautas.",
+      "No funcionó: los espectadores lo tomaron por un castigo del santo y muchos se unieron. Entonces el consejo cambió de rumbo: derribó las tarimas, prohibió casi toda música y baile hasta septiembre, y envió en carretas a los casos peores al santuario de san Vito, en Saverne.",
+      "El historiador John Waller sostiene que el cornezuelo del centeno no explica un brote que obligaba a bailar durante días: esa intoxicación restringe la circulación en las extremidades. Su lectura es psicógena: un contagio mental en una población con hambre, miedo y una fe que creía posible ese castigo."
+    ],
+    "question": "¿Qué remedio de hoy empeora el problema porque alimenta lo mismo que quiere curar?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Estrasburgo, julio de 1518",
+    "subtitle": "La epidemia que se trató con orquesta",
+    "body": "Una mujer bailó sin música en una calle. Un mes después, según una crónica, eran cuatrocientos. El consejo pagó músicos para curarlos."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Historia",
+      "#Estrasburgo",
+      "#SigloXVI"
+    ],
+    "extended": [
+      "#Curiosidades",
+      "#HistoriaDeLaMedicina",
+      "#Paracelso",
+      "#EdadModerna",
+      "#HistoriaOlvidada",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Frau Troffea empieza a bailar en una calle de Estrasburgo, sin música, el 14 de julio de 1518; los médicos declaran la danza «enfermedad natural» de sangre sobrecalentada; el consejo monta tarimas en los mercados y paga músicos; después prohíbe casi todo baile y música hasta septiembre; los peores casos se envían a san Vito en Saverne; la crónica familiar Imlin da 400 en un mes; Waller descarta el cornezuelo porque restringe la circulación de las extremidades. Lectura directa.",
+      "source": "Ned Pennant-Rea, «The Dancing Plague of 1518», The Public Domain Review, 10 de julio de 2018 (cita a Midelfort 1999, Waller 2009, Backman 1952)",
+      "url": "https://publicdomainreview.org/essay/the-dancing-plague-of-1518/"
+    },
+    {
+      "claim": "Brote en Estrasburgo entre julio y septiembre de 1518; rango de 50 a 400 afectados; las fuentes municipales de la época no mencionan muertes; Waller considera poco tenible la hipótesis del cornezuelo (The Lancet 373, 2009, 624-625). Lectura directa.",
+      "source": "«Dancing plague of 1518», Wikipedia (cita Waller, The Lancet 2009; Miller, Dance Research 2017; Clementz, Revue d'Alsace 2016)",
+      "url": "https://en.wikipedia.org/wiki/Dancing_plague_of_1518"
+    },
+    {
+      "claim": "Carta de John Waller sobre la manía danzante: sobre la hipótesis del cornezuelo y el carácter psicógeno. Citada a través de las dos páginas anteriores; no se leyó el texto de la carta.",
+      "source": "John Waller, «A forgotten plague: making sense of dancing mania», The Lancet 373(9664), 2009, pp. 624-625",
+      "url": "https://doi.org/10.1016/S0140-6736(09)60386-X"
+    }
+  ],
+  "do_not_use": [
+    "«Quince muertes al día en el pico» y «cientos de muertos»: proceden de relatos posteriores; las fuentes municipales de la época no mencionan muertes. Si se cita, como dato disputado, nunca como hecho.",
+    "El nombre de la primera bailarina como certeza: hay fuentes que hablan solo de «una mujer».",
+    "La causa como intoxicación por cornezuelo: Waller la considera poco tenible; no presentarla como explicación aceptada.",
+    "La duración del baile de Frau Troffea: «de cuatro a seis días» o «una semana» según la fuente; no dar cifra.",
+    "Que el consejo mandara bailar «hasta morir» o similares: el consejo siguió el dictamen médico de bailar para liberarse del mal.",
+    "Las fuentes leídas son secundarias (ensayo, Wikipedia que cita a Waller, Midelfort); no se leyeron los libros ni las crónicas originales. Antes de publicar conviene cotejar con Waller (2009) o Midelfort (1999)."
+  ],
+  "status": "draft"
+}

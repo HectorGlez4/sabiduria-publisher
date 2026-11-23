@@ -1,0 +1,66 @@
+{
+  "id": "2027-01-14-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Chimamanda Adichie y el peligro de la historia única",
+    "hook": "La frase de Adichie sobre las historias que reparan la dignidad viene pegada a otra, y esa otra es la advertencia.",
+    "quote": {
+      "text": "Las historias pueden quebrar la dignidad de un pueblo, pero también pueden reparar esa dignidad quebrada.",
+      "author": "Chimamanda Ngozi Adichie",
+      "work": "The Danger of a Single Story, charla en TEDGlobal, 2009",
+      "attribution_verified": true
+    },
+    "body": [
+      "Chimamanda Ngozi Adichie, novelista nigeriana, dio la charla «El peligro de una sola historia» en TEDGlobal en 2009. Hacia el final dice: «Las historias importan. Muchas historias importan».",
+      "Y sigue con dos frases que forman pareja. Primero: «las historias se han usado para despojar y para difamar». Después: «pero también pueden usarse para empoderar y para humanizar». La cita que circula suele quedarse con la mitad que consuela.",
+      "En el original las dos mitades pesan lo mismo: la misma herramienta sirve para quebrar la dignidad de un pueblo y para repararla. Lo que cambia es cuántas versiones existen y quién las cuenta."
+    ],
+    "question": "¿De qué lugar o de qué gente conoces una sola historia?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ChimamandaNgoziAdichie",
+      "#Citas",
+      "#Literatura"
+    ],
+    "extended": [
+      "#LiteraturaAfricana",
+      "#Narrativa",
+      "#TED",
+      "#Nigeria",
+      "#Humanidades",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Transcripción de «The Danger of a Single Story» con las frases: «Stories matter. Many stories matter. Stories have been used to dispossess and to malign, but stories can also be used to empower and to humanize. Stories can break the dignity of a people, but stories can also repair that broken dignity.»; charla en TEDGlobal, julio de 2009. Lectura directa.",
+      "source": "James Clear, Great Speeches, «The Danger of a Single Story» (transcripción alojada por un tercero)",
+      "url": "https://jamesclear.com/great-speeches/the-danger-of-a-single-story-by-chimamanda-ngozi-adichie"
+    },
+    {
+      "claim": "Mismas frases, con idéntica redacción y puntuación; la página dice que Adichie dio la charla en TEDGlobal en 2009. No menciona el mes. Lectura directa.",
+      "source": "Farnam Street, Great Talks, «The Danger of a Single Story»",
+      "url": "https://fs.blog/great-talks/danger-of-a-single-story/"
+    },
+    {
+      "claim": "Existencia y fecha de la charla (TEDGlobal 2009) y de otras transcripciones (NPR, OER Project). Solo vista en resultados de búsqueda, sin lectura de la página.",
+      "source": "NPR, «What Are The Dangers Of A Single Story?», 20 de septiembre de 2013",
+      "url": "https://www.npr.org/2013/09/20/186303292/what-are-the-dangers-of-a-single-story"
+    }
+  ],
+  "do_not_use": [
+    "Verificación incompleta: no se leyó la transcripción oficial de ted.com ni el vídeo; el texto inglés se tomó de dos transcripciones de terceros que coinciden entre sí. Cotejar con ted.com antes de publicar.",
+    "La traducción es propia; no corresponde a una edición española concreta.",
+    "El mes (julio) y el lugar (Oxford) de la charla: el mes solo aparece en resultados de búsqueda y el lugar no se comprobó. No afirmarlos.",
+    "Presentar la frase como cierre de la charla o como cita aislada optimista: va emparejada con la advertencia sobre las historias que despojan.",
+    "Atribuirle a Adichie «la historia única» como concepto original sin matiz: aquí solo se cita su charla."
+  ],
+  "status": "draft"
+}

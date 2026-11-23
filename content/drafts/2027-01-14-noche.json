@@ -1,0 +1,70 @@
+{
+  "id": "2027-01-14-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "la púrpura de Tiro y sus doce mil caracoles",
+    "hook": "Doce mil caracoles dan, como mucho, un gramo y medio de tinte: lo justo para el ribete de una prenda.",
+    "body": [
+      "La púrpura de Tiro salía de unos caracoles de mar, entre ellos Bolinus brandaris. El tinte se extraía de una glándula del animal, la hipobranquial, que al contacto con el aire y la luz pasaba del amarillento al violeta. Según el historiador David Jacoby, el experimento del químico Paul Friedländer mostró que doce mil de esos caracoles rendían no más de 1,4 gramos de tinte puro, suficiente para el ribete de una sola prenda.",
+      "Por eso fue un color de poder. En Tiro, Sidón y otras ciudades fenicias hubo instalaciones para procesar los caracoles; los datos de Tiro indican que se juntaban en grandes tinas y se dejaban descomponer. Plinio, en el libro IX de su Historia natural, describe el proceso: sal, tres días de remojo, caldo hervido en vasijas de estaño o plomo.",
+      "En 1909, Friedländer publicó la fórmula del pigmento: 6,6'-dibromoíndigo. Es la molécula que daba el color a las telas de reyes y emperadores. Hoy se sabe qué es, pero el método antiguo de producción masiva no se ha reconstruido con éxito."
+    ],
+    "question": "¿Qué sabemos hoy de cómo se hacía algo que costaba más que lo que cabía en un dedal?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "La púrpura de Tiro",
+    "subtitle": "Un color que costaba miles de vidas de caracol",
+    "body": "Doce mil caracoles. Como mucho, 1,4 gramos de tinte. Era lo justo para el ribete de una prenda."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Fenicios",
+      "#PurpuraDeTiro",
+      "#HistoriaAntigua"
+    ],
+    "extended": [
+      "#Tiro",
+      "#Plinio",
+      "#Quimica",
+      "#Mediterraneo",
+      "#Historia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "David Jacoby, citando el experimento de Paul Friedländer: 12.000 Murex brandaris rinden no más de 1,4 g (22 granos) de tinte puro, suficiente solo para el ribete de una prenda (Jacoby 2004, p. 210). Los datos de Tiro indican que los caracoles se recogían en tinas y se dejaban descomponer; Plinio, HN IX, 60-65 (cap. 62: sal, tres días, hervido en estaño o plomo); el método antiguo de producción masiva no se ha reconstruido con éxito. Lectura directa de la página; Jacoby no se leyó.",
+      "source": "«Tyrian purple», Wikipedia (cita Jacoby, Dumbarton Oaks Papers 58, 2004; Plinio, trad. Bostock y Riley, 1855, Perseus)",
+      "url": "https://en.wikipedia.org/wiki/Tyrian_purple"
+    },
+    {
+      "claim": "«12.000 moluscos de tamaño medio para producir apenas 0,05 onzas de tinte»; instalaciones de procesado en Arwad, Beirut, Sidón, Sarepta y Tiro. Lectura directa.",
+      "source": "National Geographic, «Purple reign: the passion for Phoenician dye that built a vast trading empire»",
+      "url": "https://www.nationalgeographic.com/history/history-magazine/article/purple-reign-passion-phoenician-dye-built-vast-trading-empire"
+    },
+    {
+      "claim": "Paul Friedländer identificó en 1909 el componente principal, 6,6'-dibromoíndigo («Zur Kenntnis des Farbstoffes des antiken Purpurs aus Murex brandaris», Monatshefte für Chemie 30, 247-253). Lectura directa de la página; el artículo original no se leyó.",
+      "source": "«6,6'-Dibromoindigo», Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/6,6'-Dibromoindigo"
+    },
+    {
+      "claim": "Revisión de la química y arqueología del 6,6'-dibromoíndigo y compuestos relacionados. Solo localizada, no leída.",
+      "source": "C. J. Cooksey, «Tyrian purple: 6,6'-dibromoindigo and related compounds», Molecules 6(9), 2001, pp. 736-769",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6236399"
+    }
+  ],
+  "do_not_use": [
+    "«Diez mil caracoles por gramo» (Daily Maverick): discrepa de la cifra de Jacoby y Nat Geo; usar solo 12.000 caracoles y 1,4 g, atribuidas a Jacoby.",
+    "Que Friedländer sacara la cifra en 1909: Wikipedia fecha el experimento en 1908 (Jacoby) y la publicación en 1909. No se leyó el original; no afirmar el año del experimento.",
+    "Inicio de la producción: Wikipedia da 1200 a. C. y 1570 a. C. en dos pasajes. No fechar el comienzo.",
+    "«Valía su peso en oro»: Teopompo (vía Ateneo) habla de plata y Nat Geo dice oro. Contradictorio; no usarlo.",
+    "El edicto de precios de Diocleciano y cualquier ley suntuaria concreta: no se verificaron en las fuentes leídas.",
+    "El proceso exacto: Nat Geo dice diez días en agua salada y Plinio habla de tres días de remojo y hervido; no describir pasos más allá de lo atribuido a Plinio.",
+    "Las fuentes leídas son secundarias; ni Jacoby, ni Friedländer, ni Cooksey se leyeron. Cotejar antes de publicar."
+  ],
+  "status": "draft"
+}
