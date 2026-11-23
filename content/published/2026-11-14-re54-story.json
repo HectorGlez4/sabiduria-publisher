@@ -2,7 +2,7 @@
   "id": "2026-11-14-re54-story",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Kenkō y la segunda flecha del arquero",
     "hook": "Un maestro de tiro con arco le prohíbe al aprendiz llevar dos flechas. No porque la segunda estorbe: porque existiendo ya arruina la primera. El texto es japonés y tiene cerca de setecientos años.",
@@ -83,6 +83,19 @@
     "instagram_story"
   ],
   "publish_at": "2026-11-14T23:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1866791997850753",
+      "photo_id": "1162217196602939",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-11-23T13:41:20.269513+00:00"
+    },
+    "instagram_story": {
+      "via": "telefono",
+      "pendiente": true,
+      "encolada_en": "2026-11-23T13:41:20.270068+00:00"
+    }
+  },
   "reemision_de": "2026-09-13-extra85"
 }
