@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-22-extra41",
+  "id": "2026-11-25-extra85",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#ThomasPaine", "#Citas", "#Revolucion"],
-    "extended": ["#Historia", "#Siglo18", "#FrasesCelebres", "#Libertad", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#ThomasPaine",
+      "#Citas",
+      "#Revolucion"
+    ],
+    "extended": [
+      "#Historia",
+      "#Siglo18",
+      "#FrasesCelebres",
+      "#Libertad",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "La traducción al español es propia; no cita edición española. La paginación de la edición Conway no se verificó.",
     "Presentar la frase de la tiranía como la más famosa del texto: la más citada es la primera línea y la del soldado de verano; esta es la que sigue."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-26T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-12-extra41",
+  "id": "2026-11-25-extra82",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Sícilo y la canción grabada en su estela",
     "hook": "La canción completa más antigua que se conserva tiene cuatro versos. Está grabada en una columna de mármol, con la música encima de cada palabra.",
@@ -23,7 +23,7 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold",
+    "variant": "cream",
     "title": "Sícilo",
     "subtitle": "Estela de Tralles, siglo I o II d.C."
   },
@@ -79,5 +79,12 @@
     "‘Brilla’ como traducción segura de ‘φαίνου’: Rohland la marca con interrogación y Landels traduce ‘let the world see you’. Se mantiene ‘brilla’ por ser la lectura de West, D'Angour y Rohland, pero no se construye nada sobre esa palabra.",
     "La edición crítica (Pöhlmann y West, Documents of Ancient Greek Music, 2001) no se leyó directamente: se cita a través del blog de Gilleland y de Wikipedia. La página del Museo Nacional de Dinamarca sobre la estela no se encontró; el número de inventario sale del blog y del sitio de Princeton.",
     "natmus.dk (sin contenido sobre la estela), worldhistory.org y greekreporter.com (403), armand-dangour.com y classics.ox.ac.uk (404), allthatsinteresting.com (tiempo agotado): no cuentan como fuentes verificadas."
+  ],
+  "publish_at": "2026-11-25T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }

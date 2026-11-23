@@ -1,8 +1,8 @@
 {
-  "id": "2027-01-10-tarde",
+  "id": "2026-11-25-extra81",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "draft",
+  "status": "ready",
   "core": {
     "subject": "Simónides y el epitafio de las Termópilas",
     "hook": "El epitafio más célebre de Grecia tiene dos versos. Heródoto, que lo copió, no dice quién lo escribió.",
@@ -73,5 +73,12 @@
     "El año de las «Tusculanas» (45 a.C.): no se verificó en una página leída. No se da.",
     "La versión ‘Caminante, ve a Esparta y di…’ entrecomillada como texto de Heródoto: hay muchas traducciones libres en circulación; la de la ficha es traducción propia y literal del griego.",
     "Perseus (hopper) para Heródoto, Wikisource en inglés, sacred-texts y Scaife: devolvieron solo navegación, 404, 403 o un bloqueo de bots. No cuentan como fuentes verificadas; el capítulo se leyó en LacusCurtius."
+  ],
+  "publish_at": "2026-11-25T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
   ]
 }
