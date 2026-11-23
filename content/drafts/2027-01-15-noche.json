@@ -1,0 +1,64 @@
+{
+  "id": "2027-01-15-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Carnéades y la embajada filosófica a Roma de 155 a.C.",
+    "hook": "Atenas mandó a Roma a un filósofo a pedir una rebaja de multa, y la tradición dice que habló un día a favor de la justicia y al siguiente en contra.",
+    "body": [
+      "En 155 a.C. Atenas envió a Roma una embajada con Carnéades, jefe de la Academia, y el estoico Diogenes. Según Plutarco, iban a pedir que se revocara una multa de quinientos talentos: un tribunal de Sición había fallado contra Atenas en un pleito de Oropo al que los atenienses no se presentaron.",
+      "La tradición añade que Carnéades dio en Roma dos conferencias: un día defendió la justicia y al siguiente rebatió sus propios argumentos. La Enciclopedia de Filosofía de Stanford advierte que todas las fuentes son muy posteriores y que se ha dudado de toda la historia, incluidas las conferencias. El discurso de Filo en el libro tercero de «De re publica», de Cicerón, puede conservar rastros del discurso contra la justicia, aunque es materia de controversia.",
+      "Lo que Plutarco sí cuenta es la reacción de Catón. Quiso librar a la ciudad de los filósofos y pidió al Senado que decidiera pronto, para que volvieran a «sus escuelas» a dar clase a los hijos de Grecia. Lo hizo, dice Plutarco, no por rencor personal contra Carnéades, sino porque era enemigo de la filosofía."
+    ],
+    "question": "¿Podrías defender hoy, con la misma fuerza, la postura contraria a la tuya?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Roma, 155 a.C.",
+    "subtitle": "La embajada que hablaba por los dos lados",
+    "body": "Atenas pidió perdón por una multa de quinientos talentos. La tradición recuerda otra cosa: dos discursos sobre la justicia, uno al día siguiente del otro, y Catón apurando su despedida."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Carneades",
+      "#FilosofiaAntigua",
+      "#Roma"
+    ],
+    "extended": [
+      "#Justicia",
+      "#Escepticismo",
+      "#Catón",
+      "#HistoriaAntigua",
+      "#Grecia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Plutarco, Vida de Catón el Viejo, 22: la embajada de Carnéades el académico y Diogenes el estoico para pedir la revocación de una multa de quinientos talentos; el pleito de Oropo con jueces de Sición; Catón decide librar a la ciudad de ellos, quiere que vuelvan «a sus escuelas» y lo hace no por hostilidad personal sino por aversión a la filosofía. La fecha 155 a.C. es una nota de la edición Perseus (Perrin). Lectura directa.",
+      "source": "Plutarco, Marcus Cato, cap. 22.1-23.3, traducción de B. Perrin (Loeb, 1914), Perseus/Perseids",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0007/tlg025/perseus-eng2/22.1-23.3"
+    },
+    {
+      "claim": "Carnéades fue enviado a Roma con Diogenes y Critolao antes de 155 a.C.; según la tradición dio dos conferencias, a favor y en contra de la justicia; las fuentes son mucho más tardías y se ha dudado de la historia; el discurso de Filo en De re publica III puede conservar rastros del discurso contra la justicia, aunque es controvertido. Lectura directa de las primeras ~40.000 de 51.600 caracteres.",
+      "source": "Stanford Encyclopedia of Philosophy, «Carneades»",
+      "url": "https://plato.stanford.edu/entries/carneades/"
+    },
+    {
+      "claim": "Texto del pasaje de Plutarco con la cabecera editorial que sitúa la embajada en 155 a.C. y la menciona como «tres filósofos»; el propio texto de Plutarco nombra solo a dos. Lectura directa.",
+      "source": "Fordham University, Ancient History Sourcebook, «Plutarch: Cato and Carneades»",
+      "url": "https://sourcebooks.web.fordham.edu/ancient/plut_carneades.asp"
+    }
+  ],
+  "do_not_use": [
+    "Que las dos conferencias son un hecho: el SEP dice que solo son tradición, recogida por fuentes muy posteriores, y que se ha dudado de su realidad. Plutarco, en el pasaje leído, no las menciona.",
+    "Que Roma expulsó a los filósofos o que «los tres fueron devueltos a Atenas» como hecho probado: lo dice la cabecera editorial de Fordham, no el texto de Plutarco, que recoge la propuesta de Catón de despedirlos.",
+    "Atribuir a Carnéades las palabras del discurso de Filo en De re publica III como citas suyas: Cicerón rehace el argumento y es controvertido hasta qué punto lo conserva.",
+    "Que la multa fue revocada o reducida: Plutarco, en el pasaje leído, no lo dice. No afirmarlo.",
+    "Que Critolao figura en Plutarco 22: lo nombra el SEP, no el pasaje de Plutarco leído.",
+    "Verificación incompleta: no se leyó a Lactancio (Institutiones divinae V, 14-16) ni el texto de De re publica III. Las conferencias se sostienen solo con el SEP; leer a Lactancio antes de publicar."
+  ],
+  "status": "draft"
+}

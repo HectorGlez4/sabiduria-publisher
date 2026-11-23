@@ -1,0 +1,64 @@
+{
+  "id": "2027-01-15-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Agnesi y la curva que un traductor convirtió en bruja",
+    "hook": "Una curva de cálculo se llama en inglés «la bruja de Agnesi» por una palabra italiana que significa otra cosa.",
+    "body": [
+      "Maria Gaetana Agnesi nació en Milán en 1718. En 1748 publicó el primer volumen de las «Instituzioni analitiche ad uso della gioventù italiana», un manual de análisis para estudiantes; el segundo salió al año siguiente. Entre sus páginas aparece una curva que en Italia ya se llamaba «la versiera».",
+      "La palabra se atribuye a Guido Grandi, que en 1718 le dio el nombre latino «versoria»: la cuerda que hace girar una vela. Pero en italiano antiguo una palabra casi idéntica, «aversiera» o «avversiera», designaba a la mujer del diablo. El traductor inglés John Colson, que murió en 1760, habría confundido las dos. Su versión no se publicó hasta 1801.",
+      "La historia, sin embargo, no es tan limpia como se cuenta. El matemático Dirk Struik señaló que el primero en usar «witch» con este sentido pudo ser B. Williamson, en 1875. Lo seguro es lo último: los libros de texto en inglés conservaron el apodo, y la curva lleva todavía una brujería que ni Agnesi ni Grandi quisieron darle."
+    ],
+    "question": "¿Qué nombre mal puesto ha sobrevivido en tu oficio solo porque nadie lo corrigió?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "La versiera de Agnesi",
+    "subtitle": "Milán, 1748: una curva con nombre de cuerda",
+    "body": "Una palabra italiana para la cuerda de una vela se confundió con otra que significaba «mujer del diablo». Desde entonces, en inglés, la curva de Agnesi es una bruja."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#MariaAgnesi",
+      "#Matematicas",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#MujeresEnLaCiencia",
+      "#Calculo",
+      "#SigloXVIII",
+      "#Curiosidades",
+      "#Italia",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Agnesi nació en Milán el 16 de mayo de 1718 y murió en Milán el 9 de enero de 1799; el primer volumen de las Instituzioni analitiche se publicó en 1748 y el segundo al año siguiente; Agnesi afirma en su libro que la curva se llamaba «la versiera»; Grandi le dio en 1718 el nombre latino «versoria», «cuerda que gira una vela»; Colson tradujo la obra antes de 1760, año de su muerte, y la traducción no se publicó hasta 1801; Colson confundió «la versiera» con «l'aversiera», «la bruja» o «diablesa». Lectura directa.",
+      "source": "MacTutor History of Mathematics (Univ. of St Andrews), biografía de Maria Gaetana Agnesi",
+      "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Agnesi/"
+    },
+    {
+      "claim": "Etimología de «versiera» (latín versoria, y el uso de aversiero/avversiera como «mujer del diablo»); cita a Struik: «algún ingenioso en Inglaterra la tradujo como witch» y que el primero en usar «witch» en este sentido pudo ser B. Williamson, Integral Calculus, 1875; discrepancias internas sobre fechas de Grandi. Lectura directa.",
+      "source": "«Witch of Agnesi», Wikipedia (cita a Struik, Stigler)",
+      "url": "https://en.wikipedia.org/wiki/Witch_of_Agnesi"
+    },
+    {
+      "claim": "Que el nombre «witch» procede de un error de traducción de «versiera» y que ha persistido en los libros de texto. Solo visto en resultados de búsqueda (la página dio 403 al leerla); no se lee como fuente directa.",
+      "source": "Smithsonian Magazine, «The Witch of Agnesi»",
+      "url": "https://www.smithsonianmag.com/smart-news/witch-agnesi-180963221/"
+    }
+  ],
+  "do_not_use": [
+    "Que Colson escribió «witch» en su traducción: MacTutor dice que confundió la palabra, pero Struik (citado en Wikipedia) apunta a Williamson (1875) como el primero en usar «witch». No afirmarlo como hecho; el cuerpo lo deja como disputado.",
+    "Que Agnesi bautizó la curva: el nombre «versiera» es de Grandi; las fuentes se contradicen en el detalle (una dice que Agnesi la nombró siguiendo a Grandi, otra solo que lo recoge).",
+    "Las fechas exactas de Grandi (1703 la construcción, 1718 el nombre latino): MacTutor y Wikipedia no coinciden entre sí. Solo se usa 1718 con la atribución a MacTutor.",
+    "El lugar de impresión de las Instituzioni (Milán): MacTutor dice que se imprimieron en su casa, sin nombrar la ciudad. No afirmarlo.",
+    "Que Colson fuera profesor de Cambridge o aprendiera italiano para traducir: la primera solo la dice Wikipedia y la segunda solo un resultado de búsqueda; no usar.",
+    "Verificación incompleta: la fuente tercera (Smithsonian) y el PDF de Strick no se pudieron leer. Dos fuentes leídas, no tres; conviene un tercer cotejo antes de publicar."
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-15-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Phillis Wheatley y el pareado final de 1773",
+    "hook": "El poema más célebre de Phillis Wheatley termina dirigiéndose a quienes lo leen, no a quien lo escribe.",
+    "quote": {
+      "text": "Recuerden, cristianos, que los negros, negros como Caín, pueden ser refinados y unirse al cortejo de los ángeles.",
+      "author": "Phillis Wheatley",
+      "work": "«On Being Brought from Africa to America», Poems on Various Subjects (Londres, 1773)",
+      "attribution_verified": true
+    },
+    "body": [
+      "En 1773 se publicó en Londres, impreso por A. Bell, «Poems on Various Subjects, Religious and Moral», de Phillis Wheatley. Uno de sus poemas, de solo ocho versos en pareados, empieza con una frase de gratitud: «'Twas mercy brought me from my Pagan land».",
+      "En el verso seis recoge el prejuicio de otros: que el color de los africanos es «a diabolic die», un tinte diabólico. Y cierra con un pareado que cambia de destinatario: «Remember, Christians, Negros, black as Cain, / May be refin'd, and join th' angelic train».",
+      "Se ha leído el poema de dos maneras: como una aceptación de la esclavitud y como una acusación contra quienes la sostenían. El verso final admite las dos, pero el imperativo, «recuerden», va dirigido a los cristianos que la miraban desde arriba."
+    ],
+    "question": "¿Qué frase tuya cambia de sentido según quién la lea?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PhillisWheatley",
+      "#Citas",
+      "#Poesia"
+    ],
+    "extended": [
+      "#LiteraturaAfroamericana",
+      "#SigloXVIII",
+      "#Poemas",
+      "#HistoriaLiteraria",
+      "#Humanidades",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema con la ortografía de 1773 («'Twas mercy brought me from my Pagan land», verso 1; «Their colour is a diabolic die», verso 6; «Remember, Christians, Negros, black as Cain, / May be refin'd, and join th' angelic train», versos 7-8); procedencia: Poems on Various Subjects, Religious and Moral (Londres: A. Bell, para Cox y Berry, Boston, 1773), p. 18. Lectura directa.",
+      "source": "Representative Poetry Online (Univ. of Toronto Libraries), «On Being Brought from Africa to America»",
+      "url": "https://rpo.library.utoronto.ca/poems/being-brought-africa-america"
+    },
+    {
+      "claim": "Mismo poema en ortografía modernizada («May be refined, and join the angelic train»); el libro es de 1773 (cabecera «1773 | Boston»). Lectura directa.",
+      "source": "Lapham's Quarterly, «Aboard the Angelic Train»",
+      "url": "https://laphamsquarterly.org/religion/aboard-angelic-train"
+    },
+    {
+      "claim": "Publicación del libro en Londres por A. Bell el 1 de septiembre de 1773, y que el poema se lee tanto como prueba de conformidad como acusación contra la esclavitud. Solo visto en un resultado de búsqueda; no se leyó la página.",
+      "source": "«Poems on Various Subjects, Religious and Moral», Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Poems_on_Various_Subjects,_Religious_and_Moral"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia; no corresponde a una edición española concreta. «Negros» es el término de 1773 en el original.",
+    "Verificación incompleta: solo dos páginas leídas (Toronto y Lapham, esta con ortografía modernizada); las del repositorio de Poetry Foundation y de la Universidad de Virginia devolvieron 403. La lectura doble del poema (aceptación y acusación) solo consta en un resultado de búsqueda. Cotejar antes de publicar.",
+    "Que Wheatley fue la primera mujer afroamericana en publicar un libro, su año de llegada a América (1761 según una fuente) o su lugar de nacimiento: no se verificaron; no afirmarlos.",
+    "Su carta de 1774 a Samson Occom sobre la libertad: no se localizó una fuente leída; no citarla.",
+    "Presentar el pareado como cita aislada sin los versos 1 y 6: el poema abre con gratitud y no se puede reducir a una sola lectura.",
+    "Los versos 2 a 5 no se leyeron de fuente directa; no citarlos."
+  ],
+  "status": "draft"
+}

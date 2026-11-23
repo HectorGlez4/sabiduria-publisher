@@ -1,0 +1,68 @@
+{
+  "id": "2027-01-15-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Stanton y la Declaración de Sentimientos de Seneca Falls (1848)",
+    "hook": "En 1848 una frase de 1776 ganó dos palabras, y la primera lista de agravios que vino detrás pedía el voto.",
+    "quote": {
+      "text": "Sostenemos como evidentes estas verdades: que todos los hombres y mujeres son creados iguales.",
+      "author": "Elizabeth Cady Stanton (autora principal)",
+      "work": "Declaración de Sentimientos, Seneca Falls, 1848",
+      "attribution_verified": true
+    },
+    "body": [
+      "La Convención de Seneca Falls se celebró el 19 y el 20 de julio de 1848 en la capilla metodista wesleyana de esa ciudad del estado de Nueva York. Asistieron más de trescientas personas. El texto que adoptó, la Declaración de Sentimientos, tuvo como autora principal a Elizabeth Cady Stanton, que lo modeló sobre la Declaración de Independencia de 1776.",
+      "El segundo párrafo reescribe la frase más famosa de aquella con un añadido: «que todos los hombres y mujeres son creados iguales». Después viene la acusación: «la historia de la humanidad es una historia de repetidos agravios y usurpaciones del hombre hacia la mujer, con el objeto directo de establecer sobre ella una tiranía absoluta». Entre los agravios figura que nunca se le permitió ejercer «su inalienable derecho al sufragio».",
+      "El documento lo firmaron, según el texto de Fordham, sesenta y ocho mujeres y treinta y dos hombres."
+    ],
+    "question": "¿Qué derecho te parece hoy tan evidente que cuesta creer que alguien tuvo que redactarlo?"
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ElizabethCadyStanton",
+      "#Citas",
+      "#SenecaFalls"
+    ],
+    "extended": [
+      "#Sufragio",
+      "#DerechosDeLaMujer",
+      "#Historia",
+      "#SigloXIX",
+      "#Humanidades",
+      "#Sabiduria"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la Declaración de Sentimientos: «We hold these truths to be self-evident: that all men and women are created equal», la frase «The history of mankind is a history of repeated injuries and usurpations on the part of man toward woman, having in direct object the establishment of an absolute tyranny over her» y «He has never permitted her to exercise her inalienable right to the elective franchise»; firmada por 68 mujeres y 32 hombres; extraída de E. C. Stanton, A History of Woman Suffrage, vol. 1 (Rochester: Fowler and Wells, 1889), pp. 70-71. Lectura directa.",
+      "source": "Fordham University, Modern History Sourcebook, «The Declaration of Sentiments, Seneca Falls Conference, 1848»",
+      "url": "https://sourcebooks.web.fordham.edu/mod/senecafalls.asp"
+    },
+    {
+      "claim": "Misma frase, la lista de agravios y la frase del sufragio; la convención se celebró el 19 y 20 de julio en la capilla wesleyana de Seneca Falls, con más de 300 asistentes; firmaron cien personas en total. Lectura directa.",
+      "source": "National Park Service, «Declaration of Sentiments: The First Women's Rights Convention»",
+      "url": "https://www.nps.gov/articles/declaration-of-sentiments-the-first-women-s-rights-convention.htm"
+    },
+    {
+      "claim": "Stanton fue la autora principal y modeló el texto sobre la Declaración de Independencia; firmaron 68 mujeres y 32 hombres; la convención se celebró en la capilla wesleyana de Seneca Falls. Lectura directa de la parte inicial.",
+      "source": "«Declaration of Sentiments», Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Declaration_of_Sentiments"
+    }
+  ],
+  "do_not_use": [
+    "La traducción al español es propia; no corresponde a una edición española concreta.",
+    "Que la Declaración la escribió Stanton sola: fue la autora principal, pero el texto se discutió y adoptó en la convención.",
+    "Que el sufragio fue el único agravio o la única resolución no unánime: ni Fordham ni el NPS dicen nada de unanimidad. No afirmarlo.",
+    "Que la frase «y mujeres» corrige a Jefferson «a propósito»: la fuente leída dice que el texto se modeló sobre la Declaración de Independencia; el texto de 1776 («all men are created equal») no se leyó en una fuente directa de esta ejecución.",
+    "Presentar la Declaración como voz de todas las mujeres: según un resultado de búsqueda (Britannica, no leída), se dirige a mujeres blancas y no menciona la esclavitud.",
+    "El número de firmantes: Fordham da 68 mujeres y 32 hombres y el NPS dice «cien»; son consistentes, pero el NPS no desglosa. Atribuir el desglose a Fordham.",
+    "Verificación incompleta: las páginas de Archivos Nacionales y de la Biblioteca del Congreso devolvieron 404. Las dos páginas leídas con texto íntegro (Fordham y NPS) coinciden en el texto; la tercera es secundaria."
+  ],
+  "status": "draft"
+}
