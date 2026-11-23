@@ -69,12 +69,15 @@
     "Que Hölderlin escribiera «Patmos» ya enfermo o en la torre de Tübingen: la torre es posterior (desde 1807).",
     "La traducción al español es propia, desde el alemán; no corresponde a ninguna edición española concreta."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-14T20:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

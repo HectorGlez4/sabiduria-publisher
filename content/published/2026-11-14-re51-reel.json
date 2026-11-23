@@ -2,7 +2,7 @@
   "id": "2026-11-14-re51-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Maimónides y los grados de la caridad",
     "hook": "En la escala de la caridad de Maimónides, el escalón más alto no es dar en secreto. Es un préstamo, una sociedad o un trabajo.",
@@ -80,6 +80,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-14T17:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "2105056616795862",
+      "url": "/reel/2105056616795862/",
+      "published_at": "2026-11-23T09:43:03.214819+00:00"
+    }
+  },
   "reemision_de": "2026-09-13-extra81"
 }
