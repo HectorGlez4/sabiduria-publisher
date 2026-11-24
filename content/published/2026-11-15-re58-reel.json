@@ -2,7 +2,7 @@
   "id": "2026-11-15-re58-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Christine de Pizan y la Ciudad de las Damas",
     "hook": "En 1405, después de leer un libro que la dejó avergonzada de ser mujer, Christine de Pizan escribió la respuesta. Y después se ocupó ella misma de vigilar cómo la copiaban.",
@@ -76,6 +76,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-15T20:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1474596689075927",
+      "url": "/reel/1474596689075927/",
+      "published_at": "2026-11-24T13:43:15.802119+00:00"
+    }
+  },
   "reemision_de": "2026-09-14-extra89"
 }
