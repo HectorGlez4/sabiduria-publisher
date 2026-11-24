@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Tertuliano y la semilla de Apologeticum 50",
+    "hook": "«LA SANGRE DE LOS MÁRTIRES ES SEMILLA DE LA IGLESIA»: TERTULIANO ESCRIBIÓ UNA FRASE MÁS CORTA Y MÁS DURA",
+    "body": [
+      "La frase se repite con «mártires» e «Iglesia», pero esas dos palabras no están en el original. En el capítulo 50 del Apologeticum, Tertuliano escribió: «Plures efficimur quotiens metimur a vobis; semen est sanguis Christianorum».",
+      "Literalmente: nos hacemos más cada vez que ustedes nos siegan; semilla es la sangre de los cristianos. El verbo es «metere», segar, cosechar. La imagen no es la de un templo que crece, sino la de un campo al que la hoz vuelve a dejar brotes.",
+      "El Apologeticum se presenta como una defensa dirigida a los gobernadores del Imperio, en concreto a los magistrados de Cartago, y suele fecharse hacia el año 197, aunque la fecha es discutida. La frase no consuela a nadie: le dice al poder que la persecución no logra su propósito."
+    ],
+    "question": "¿Qué cambia en una frase cuando se le quitan las palabras que no escribió el autor?",
+    "quote": {
+      "text": "Nos hacemos más cada vez que ustedes nos siegan; semilla es la sangre de los cristianos.",
+      "author": "Tertuliano",
+      "work": "Apologeticum, cap. 50, 13 (hacia 197)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Tertuliano",
+      "#Apologeticum",
+      "#Cartago"
+    ],
+    "extended": [
+      "#Citas",
+      "#Latin",
+      "#HistoriaAntigua",
+      "#Roma",
+      "#Frases",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino del capítulo L (50): «Plures efficimur quotiens metimur a vobis; semen est sanguis Christianorum», y su traducción inglesa «The oftener we are mown down by you, the more in number we grow; the blood of Christians is seed»",
+      "source": "Bibliothek der Kirchenväter, Tertullian, Apologeticum (texto latino y traducción inglesa), cap. L",
+      "url": "https://bkv.unifr.ch/works/cpl-3/compare/the-apology/51/apologeticum"
+    },
+    {
+      "claim": "Traducción moderna del pasaje: «The more you cut us down, the more of us you make; for the blood of Christians is seed» (William H. Campbell, 2021/2023)",
+      "source": "Fordham University, Internet Medieval Sourcebook, Tertullian, Apologeticus 49-50",
+      "url": "https://sourcebooks.web.fordham.edu/source/tertullian-apologeticus49-50.asp"
+    },
+    {
+      "claim": "Traducción clásica de S. Thelwall (Ante-Nicene Fathers vol. 3, 1885): «the blood of Christians is seed»; la expresión «mártires» e «Iglesia» no aparece en el pasaje",
+      "source": "New Advent, Tertullian, Apology, cap. 50 (ANF vol. 3)",
+      "url": "https://www.newadvent.org/fathers/0301.htm"
+    },
+    {
+      "claim": "La obra se dirige a los gobernadores provinciales, en concreto a los magistrados de Cartago; se suele datar en 197, fecha discutida (Bardenhewer: «dudosa»); la forma «sangre de los mártires es semilla de la Iglesia» es una traducción libre y apócrifa",
+      "source": "Wikipedia en inglés, «Apologeticum»",
+      "url": "https://en.wikipedia.org/wiki/Apologeticum"
+    }
+  ],
+  "do_not_use": [
+    "«La sangre de los mártires es la semilla de la Iglesia» como cita literal de Tertuliano: es una paráfrasis libre; el latín dice «sanguis Christianorum» (sangre de los cristianos) y no contiene «Iglesia»",
+    "el año 197 como fecha cierta del Apologeticum (Bardenhewer: fecha «dudosa o muy discutida»; usar «suele fecharse hacia 197»)",
+    "las fechas de vida de Tertuliano (las fuentes dan c. 155/160 – c. 220/240; no hacen falta)",
+    "la numeración del pasaje: Wikipedia lo cita como L.13, Fordham lo agrupa en 49-50; usar «cap. 50»",
+    "atribuir la traducción «mártires/Iglesia» a un traductor concreto: Wikipedia menciona a Alexander Souter (1917) como ejemplo de traducción con licencias, pero no se comprobó que sea el origen de la fórmula"
+  ],
+  "status": "draft"
+}

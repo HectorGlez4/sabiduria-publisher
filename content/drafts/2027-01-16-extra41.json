@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Wang Zhihuan y la Torre de la Cigüeña",
+    "hook": "DE WANG ZHIHUAN SOLO SE CONSERVAN SEIS POEMAS, Y EN UNO DE ELLOS HAY UN CONSEJO DE DIEZ CARACTERES SOBRE SUBIR UN PISO MÁS",
+    "body": [
+      "Solo seis poemas de Wang Zhihuan han llegado hasta hoy, todos cuartetas. El más conocido es «Subiendo a la Torre de la Cigüeña», que aparece en el tomo 253 de la antología oficial Quan Tang shi, con una nota que dice que otra versión lo da como obra de un tal Zhu Bin.",
+      "Los dos primeros versos describen lo que ve quien está arriba: el sol que se apoya en las montañas hasta apagarse, el Río Amarillo que entra en el mar. Los dos últimos dan la regla: «Si quieres ver mil li más lejos, sube un piso más».",
+      "La torre estaba en Puzhou, junto al Río Amarillo, en la actual provincia de Shanxi. Tenía tres pisos. Se perdió en las guerras del siglo XIII y se reconstruyó a finales del siglo XX; la nueva se inauguró en 2002. El consejo, en cambio, nunca dependió del edificio."
+    ],
+    "question": "¿Qué piso te falta por subir antes de decidir que ya ves bastante?",
+    "quote": {
+      "text": "Si quieres ver mil li más lejos, sube un piso más.",
+      "author": "Wang Zhihuan",
+      "work": "Subiendo a la Torre de la Cigüeña, Quan Tang shi, 253",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WangZhihuan",
+      "#PoesiaTang",
+      "#China"
+    ],
+    "extended": [
+      "#Citas",
+      "#Poesia",
+      "#RioAmarillo",
+      "#LiteraturaChina",
+      "#Frases",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema 登鸛雀樓 en el Quan Tang shi, tomo 253, bajo Wang Zhihuan (詩六首), con la nota «一作朱斌詩»: 白日依山盡 / 黃河入海流 / 欲窮千里目 / 更上一層樓",
+      "source": "Wikisource chino, 御定全唐詩 (四庫全書本), 卷253",
+      "url": "https://zh.wikisource.org/wiki/%E5%BE%A1%E5%AE%9A%E5%85%A8%E5%94%90%E8%A9%A9_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)/%E5%8D%B7253"
+    },
+    {
+      "claim": "Solo seis poemas de Wang Zhihuan sobreviven, todos cuartetas (Owen, pp. 295-296); no se hizo una colección de sus poemas",
+      "source": "Wikipedia en inglés, «Wang Zhihuan»",
+      "url": "https://en.wikipedia.org/wiki/Wang_Zhihuan"
+    },
+    {
+      "claim": "La torre estaba en Puzhou (hoy Yongji, Shanxi), junto al Río Amarillo; era de tres pisos; se perdió en las guerras entre Jin y mongoles; la reconstrucción se inauguró el 26 de septiembre de 2002; Shen Kuo (Mengxi bitan) cita el poema de Wang Zhihuan entre los pocos que describen bien el lugar",
+      "source": "Wikipedia en inglés, «Stork Tower»",
+      "url": "https://en.wikipedia.org/wiki/Stork_Tower"
+    },
+    {
+      "claim": "Confirmación de ubicación (Puzhou, Yongji, Shanxi), altura de la torre reconstruida (73,9 m) y estructura de tres pisos",
+      "source": "Wikipedia en chino, 鹳雀楼",
+      "url": "https://zh.wikipedia.org/wiki/%E9%B9%B3%E9%9B%80%E6%A8%93"
+    }
+  ],
+  "do_not_use": [
+    "la fecha de composición («hacia 704») y las fechas de vida de Wang Zhihuan (688-742): vienen de una sola fuente (Wikipedia) y las demás páginas no las confirman",
+    "la atribución a Zhu Bin como hecho: solo consta como nota de variante («一作朱斌詩») en el Quan Tang shi; ninguna de las páginas leídas desarrolla la disputa",
+    "la fecha exacta de destrucción de la torre: la edición inglesa de Wikipedia da 1222 (incendio) como discutido por el Jinshi y habla de destrucción «probable» en las guerras; la china da dos fechas distintas (1222 y «principios de la dinastía Yuan»); decir solo «guerras del siglo XIII»",
+    "la fecha de inicio de las obras de la reconstrucción (1997 / «años 90»): las páginas discrepan; solo se afirma la inauguración en 2002 (26 de septiembre en el cuerpo de ambas, pero la infobox china da diciembre)",
+    "«mil li» convertido a kilómetros: la equivalencia cambió según la época y no hace falta",
+    "cualquier afirmación sobre que los niños chinos memorizan el poema (no se encontró fuente)",
+    "el verso 3 con 黄 o 黃: la edición Siku imprime 黄 (variante); la grafía no se discute en la pieza"
+  ],
+  "status": "draft"
+}
