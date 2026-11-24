@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-16-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Aristóteles y el papiro de la Constitución de Atenas",
+    "hook": "LA CONSTITUCIÓN DE ATENAS SE SALVÓ EN EL DORSO DE UNAS CUENTAS AGRÍCOLAS DE EGIPTO",
+    "body": [
+      "Durante siglos la «Constitución de los atenienses», atribuida a Aristóteles, solo se conoció por citas de autores antiguos y por un resumen. En 1890 el Museo Británico compró en El Cairo cuatro rollos de papiro: tres el 12 de abril, a un doctor llamado John R. Alexander, y el cuarto el 12 de julio.",
+      "Por un lado estaban las cuentas de una finca cerca de Hermópolis, escritas por un empleado llamado Dídimo en los años 78 y 79. Por el otro, en treinta y siete columnas, copiada hacia el año 100, la obra perdida. La Biblioteca Británica la cataloga hoy como la única copia que se conserva casi completa.",
+      "Frederic Kenyon, del departamento de manuscritos, la editó en 1891. Los estudiosos aún discuten si la escribió el propio Aristóteles o alguno de sus alumnos. Lo que no se discute es que un texto sobre cómo se gobernó Atenas llegó hasta nosotros en el reverso de un rollo de contabilidad."
+    ],
+    "question": "¿Qué se ha salvado gracias a que alguien no tiró algo que parecía inservible?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "ATENAS, 1890",
+    "subtitle": "El texto que sobrevivió en el reverso de unas cuentas",
+    "body": "En 1890 el Museo Británico compró cuatro rollos en El Cairo. En un lado, cuentas de una finca de los años 78-79. En el otro, copiada hacia el año 100, la Constitución de los atenienses. Es la única copia casi completa."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Aristoteles",
+      "#Atenas",
+      "#Papiros"
+    ],
+    "extended": [
+      "#GreciaAntigua",
+      "#Historia",
+      "#BritishLibrary",
+      "#Egipto",
+      "#Manuscritos",
+      "#Filologia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Cuatro rollos: tres comprados el 12 de abril de 1890 a «Doctor John R. Alexander of Cairo» dentro de un lote de los papiros 130-137, el cuarto el 12 de julio; procedencia «Hermopolis (?)»",
+      "source": "British Library, registro del Papyrus 131 (Custodial History)",
+      "url": "https://searcharchives.bl.uk/catalog/040-002104511"
+    },
+    {
+      "claim": "Recto: cuentas agrícolas de una finca cerca de Hermópolis, fechadas en 78-79, escritas por Dídimo, empleado de Epímaco; verso: la Athenaion Politeia (P.Lond.Lit. 108), 37 columnas, escrita hacia el 100 d. C., única copia existente casi completa",
+      "source": "British Library, registro del Papyrus 131",
+      "url": "https://searcharchives.bl.uk/catalog/040-002104511"
+    },
+    {
+      "claim": "Editio princeps de F. G. Kenyon, Londres, Trustees of the British Museum, 1891",
+      "source": "British Library, registro del Papyrus 131",
+      "url": "https://searcharchives.bl.uk/catalog/040-002104511"
+    },
+    {
+      "claim": "La obra se conocía solo por citas antiguas y por el epítome de Heraclides Lembo; se discute si la escribió Aristóteles o alguno de sus alumnos (Rhodes 1981); composición entre 328 y 322 a. C.",
+      "source": "Wikipedia en inglés, «Constitution of the Athenians (Aristotle)»",
+      "url": "https://en.wikipedia.org/wiki/Constitution_of_the_Athenians_(Aristotle)"
+    }
+  ],
+  "do_not_use": [
+    "que el papiro lo comprara «un misionero estadounidense» y Budge lo adquiriera después ese año (Wikipedia lo dice; el registro de la British Library dice «Doctor John R. Alexander of Cairo» y no coincide)",
+    "llamar comerciante a Alexander (la British Library solo dice «Doctor… of Cairo»)",
+    "«las cuentas están al dorso» (al revés: las cuentas están en el recto y la Constitución en el verso)",
+    "que el rollo se reutilizara como dato de la fuente (es inferencia a partir de las fechas, 78-79 y hacia el 100; la British Library no lo afirma con esas palabras)",
+    "la cifra de 158 constituciones y su atribución a Diógenes Laercio o Heraclides (Wikipedia la da sin fuente concreta)",
+    "dónde se halló el fragmento de Berlín de 1879 (Wikipedia dice Fayum, otra fuente dice Oxirrinco; sin resolver)",
+    "fecha del prefacio de Kenyon y mes de publicación en 1891 (el PDF de archive.org no se pudo leer; Wikipedia dice enero)",
+    "que Aristóteles la escribiera como hecho cerrado"
+  ],
+  "status": "draft"
+}

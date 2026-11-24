@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-16-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "el cuestionario de Pombal tras el terremoto de 1755",
+    "hook": "DESPUÉS DEL TERREMOTO DE LISBOA, EL GOBIERNO HIZO UNA PREGUNTA A CADA PARROQUIA: ¿CUÁNTO DURÓ?",
+    "body": [
+      "El 1 de noviembre de 1755 un terremoto destruyó gran parte de Lisboa. En enero de 1756, Sebastião José de Carvalho e Melo, el futuro marqués de Pombal, hizo llegar a los párrocos del reino un cuestionario de trece preguntas.",
+      "Preguntaba, sobre todo, por hechos que se podían medir. A qué hora empezó el temblor y cuánto duró. Cuántas réplicas hubo y a qué hora. Si el mar bajó o subió primero, y cuántas veces. Si se abrieron grietas en el suelo y qué se vio dentro. Qué casas cayeron y cuánto duró el incendio.",
+      "Las respuestas se guardan hoy en el Arquivo Nacional Torre do Tombo, en Lisboa. Muchos estudiosos ven en este cuestionario el origen de la sismología moderna: contar lo que ocurrió, en el mismo orden y con las mismas preguntas, en cada pueblo."
+    ],
+    "question": "¿Qué pregunta harías tú después de una catástrofe antes de buscar culpables?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "LISBOA, 1756",
+    "subtitle": "La pregunta que se hizo a cada parroquia",
+    "body": "Tras el terremoto de 1755, el gobierno portugués envió a los párrocos trece preguntas: hora de inicio, duración, réplicas, comportamiento del mar, grietas, casas caídas. Las respuestas se conservan en la Torre do Tombo."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Lisboa1755",
+      "#Sismologia",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Terremoto",
+      "#Portugal",
+      "#Pombal",
+      "#Ilustracion",
+      "#Ciencia",
+      "#Historia",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En enero de 1756 Sebastião José de Carvalho e Melo, futuro marqués de Pombal, envió un Inquérito de trece preguntas; la primera pregunta la hora de inicio y la duración; hay preguntas sobre réplicas, mar, grietas, daños e incendio",
+      "source": "Lisbonquake, «Inquérito» (blog)",
+      "url": "https://lisbonquake.com/en-GB/blog/inquerito"
+    },
+    {
+      "claim": "El terremoto del 1 de noviembre de 1755 es considerado por algunos el inicio del estudio científico de la sismología; Pombal reunió respuestas de las parroquias",
+      "source": "Earth Magazine, «Benchmarks: November 1, 1755: Earthquake destroys Lisbon»",
+      "url": "https://www.earthmagazine.org/article/benchmarks-november-1-1755-earthquake-destroys-lisbon"
+    },
+    {
+      "claim": "Las respuestas parroquiales se conservan en el Arquivo Nacional Torre do Tombo; Pombal es considerado precursor de los sismólogos modernos (Kozák y Čermák 2010)",
+      "source": "Wikipedia en inglés, «Parochial Memories of 1758»",
+      "url": "https://en.wikipedia.org/wiki/Parochial_Memories_of_1758"
+    },
+    {
+      "claim": "Pombal reunió respuestas de las parroquias tras el terremoto de 1755",
+      "source": "Hakai Magazine, «The Earthquake That Brought Enlightenment»",
+      "url": "https://hakaimagazine.com/?p=32437"
+    }
+  ],
+  "do_not_use": [
+    "«primer estudio científico de un terremoto» como hecho cerrado (las fuentes dicen «considerado por muchos/algunos» el origen de la sismología moderna; ninguna cita un estudio historiográfico que establezca la prioridad)",
+    "confundir el Inquérito de 1756 (13 preguntas) con las Memórias Paroquiais de 1758 (27+13+20 preguntas, un plan distinto del que solo la pregunta 26 menciona el terremoto)",
+    "número de respuestas conservadas (Lisbonquake dice «miles», Hakai habla de 646; sin confirmar en el archivo)",
+    "fecha exacta de envío (la carta citada por Lisbonquake lleva fecha del 20 de enero de 1756 y el texto dice 26 de enero: sin resolver, usar «enero de 1756»)",
+    "si llegó a los párrocos a través de los obispos o directamente (las fuentes discrepan)",
+    "cifras de muertos, magnitud (8,5 u 8,7), altura del tsunami: discrepan entre fuentes y no hacen falta",
+    "«el cuestionario no menciona a Dios» como dato (aparece en un resultado de búsqueda, no se comprobó en las páginas leídas)"
+  ],
+  "status": "draft"
+}
