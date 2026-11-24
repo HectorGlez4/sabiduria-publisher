@@ -2,7 +2,7 @@
   "id": "2026-11-14-re55-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Ida B. Wells y el educador que es la prensa",
     "hook": "Escribió que no hay educador comparable a la prensa cinco meses después de que una turba destruyera la suya y vendieran la maquinaria para cobrarse las deudas.",
@@ -82,6 +82,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-15T02:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "970543912515675",
+      "url": "/reel/970543912515675/",
+      "published_at": "2026-11-23T23:43:16.333498+00:00"
+    }
+  },
   "reemision_de": "2026-09-14-extra86"
 }

@@ -70,12 +70,15 @@
     "La frase «Je préfère mourir la tête haute»: es de la misma carta, pero no se leyó en el original francés. No usarla.",
     "La traducción al español es propia, desde el francés de Afrik.com y el inglés de la edición de Moscú."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-15T03:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
