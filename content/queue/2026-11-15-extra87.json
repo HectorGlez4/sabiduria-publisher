@@ -68,7 +68,7 @@
     "No se verificó el año de una edición crítica concreta (Ruiz Salvador, EDE, u otras); la cita se apoya en la transcripción carmelita y en el Catecismo.",
     "Datos biográficos (Fontiveros 1542, Úbeda 1591, doctor de la Iglesia en 1926): no se leyeron en fuentes verificadas en esta ronda; no se usan."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-15T23:26:00Z",
   "results": {
     "facebook": {
@@ -82,7 +82,7 @@
       "encolada_en": "2026-11-24T14:27:30.036886+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 09:40:57 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 13:24:18 PST."
     }
   },
   "targets": [
@@ -90,6 +90,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-24T17:40:57.187350+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-24T21:24:18.838418+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 13:24:18 PST."
+  ]
 }
