@@ -69,12 +69,15 @@
     "La forma «Publio Siro» circula, pero Duff y The Latin Library lo llaman Publilius; no se verificó de dónde viene la variante, así que se usa Publilio.",
     "La traducción al español de la sentencia es propia, desde el latín y la versión de Duff."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-15T19:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

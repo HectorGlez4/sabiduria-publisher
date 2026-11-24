@@ -2,7 +2,7 @@
   "id": "2026-11-15-re57-story",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Kafka y el hacha para el mar helado",
     "hook": "La frase más repetida de Kafka sobre los libros no está en ninguno de sus libros: está en una carta que escribió a los veinte años.",
@@ -75,6 +75,19 @@
     "instagram_story"
   ],
   "publish_at": "2026-11-15T17:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "2593732134474271",
+      "photo_id": "1163154553175870",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-11-24T11:33:36.403955+00:00"
+    },
+    "instagram_story": {
+      "via": "telefono",
+      "pendiente": true,
+      "encolada_en": "2026-11-24T11:33:36.404503+00:00"
+    }
+  },
   "reemision_de": "2026-09-14-extra88"
 }
