@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-24-tarde",
+  "id": "2026-11-26-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#IsaacNewton", "#HombrosDeGigantes", "#Citas"],
-    "extended": ["#Ciencia", "#HistoriaDeLaCiencia", "#Siglo17", "#RoyalSociety", "#FrasesCelebres", "#Sabiduria"]
+    "topic": [
+      "#IsaacNewton",
+      "#HombrosDeGigantes",
+      "#Citas"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#HistoriaDeLaCiencia",
+      "#Siglo17",
+      "#RoyalSociety",
+      "#FrasesCelebres",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -51,5 +62,12 @@
     "Que la carta se publicó en 1855: lo dice Wikipedia, sin fuente directa abierta; no entra.",
     "Que Newton hablaba de Descartes y no de Hooke: un blog lo sostiene; los demás textos leídos recogen el elogio a ambos."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-27T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

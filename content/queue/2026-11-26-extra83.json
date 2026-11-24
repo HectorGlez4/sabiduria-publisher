@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-23-tarde",
+  "id": "2026-11-26-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,19 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#JaneAusten", "#OrgulloYPrejuicio", "#Citas"],
-    "extended": ["#Literatura", "#Novela", "#Siglo19", "#LiteraturaInglesa", "#FrasesCelebres", "#Sabiduria"]
+    "topic": [
+      "#JaneAusten",
+      "#OrgulloYPrejuicio",
+      "#Citas"
+    ],
+    "extended": [
+      "#Literatura",
+      "#Novela",
+      "#Siglo19",
+      "#LiteraturaInglesa",
+      "#FrasesCelebres",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "Frases sueltas que circulan como «de Austen» sobre el matrimonio o la riqueza sin capítulo: no se han verificado; la cita usa solo la primera frase del capítulo I.",
     "La traducción es propia. Sabemos que las ediciones en español varían («tiene que estar buscando esposa», «necesita una esposa»); no se atribuye a ninguna edición concreta."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-27T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

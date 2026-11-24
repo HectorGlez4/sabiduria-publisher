@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-22-tarde",
+  "id": "2026-11-26-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Emerson", "#Citas", "#SelfReliance"],
-    "extended": ["#Filosofia", "#Trascendentalismo", "#Siglo19", "#FrasesCelebres", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#Emerson",
+      "#Citas",
+      "#SelfReliance"
+    ],
+    "extended": [
+      "#Filosofia",
+      "#Trascendentalismo",
+      "#Siglo19",
+      "#FrasesCelebres",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -51,5 +62,12 @@
     "El año del texto: Gutenberg no fecha la edición que reproduce; se leyó una transcripción de la edición de 1847 y la fecha de primera publicación (1841) sale de Emerson Central. La pieza fecha el ensayo en 1841 y no afirma que cada palabra sea de esa primera impresión.",
     "La edición crítica de Harvard (Collected Works, 1979) y la primera edición escaneada no se abrieron; no se cita la paginación de ninguna."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-26T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

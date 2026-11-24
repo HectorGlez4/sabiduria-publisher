@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-23-extra41",
+  "id": "2026-11-26-extra82",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Keats", "#OdaAUnaUrnaGriega", "#Citas"],
-    "extended": ["#Poesia", "#Romanticismo", "#Siglo19", "#LiteraturaInglesa", "#FrasesCelebres", "#Sabiduria"]
+    "topic": [
+      "#Keats",
+      "#OdaAUnaUrnaGriega",
+      "#Citas"
+    ],
+    "extended": [
+      "#Poesia",
+      "#Romanticismo",
+      "#Siglo19",
+      "#LiteraturaInglesa",
+      "#FrasesCelebres",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -53,5 +64,12 @@
     "La traducción es propia (ye = «vosotros»/«ustedes»; aquí «sabéis», registro literario). No se atribuye a una edición en español.",
     "Presentar «belleza es verdad» como tesis personal de Keats sin matiz: es justo lo que la discusión de las comillas deja abierto."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-26T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
