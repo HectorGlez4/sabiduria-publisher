@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-16-extra42",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Coleridge y la fe poética de la Biographia (1817)",
+    "hook": "\"Esa voluntaria suspensión de la incredulidad por el momento, que constituye la fe poética.\"\n— Samuel Taylor Coleridge",
+    "body": [
+      "Hoy se cita acortada, como \"suspensión de la incredulidad\". Coleridge escribió algo más preciso: voluntaria, por el momento, y a cambio de una fe poética.",
+      "Está en el capítulo XIV de la Biographia Literaria, publicada en Londres en 1817 en dos volúmenes. Coleridge cuenta ahí el reparto de los Lyrical Ballads: él pondría personajes sobrenaturales, o al menos novelescos, y Wordsworth el encanto de las cosas de cada día.",
+      "El poeta debía dar a esas sombras de la imaginación un interés humano y una apariencia de verdad. El lector hace su parte: acepta creer, a sabiendas, solo mientras dura el poema."
+    ],
+    "question": "¿Qué historia imposible te has creído por completo mientras la leías?",
+    "quote": {
+      "text": "Esa voluntaria suspensión de la incredulidad por el momento, que constituye la fe poética.",
+      "author": "Samuel Taylor Coleridge",
+      "work": "Biographia Literaria, cap. XIV (1817), traducción propia",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Coleridge",
+      "#Romanticismo",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Poesia",
+      "#Lectura",
+      "#Ficcion",
+      "#Imaginacion",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del capítulo XIV: \"persons and characters supernatural, or at least romantic\" y \"willing suspension of disbelief for the moment, which constitutes poetic faith\"; el reparto entre lo sobrenatural (Coleridge) y lo cotidiano (Wordsworth); edición Vol. II, Londres, Fenner, 1817.",
+      "source": "Universidad de Wuppertal, Lyriktheorie, 1817 Coleridge: Biographia Literaria (Chapter XIV)",
+      "url": "https://www.lyriktheorie.uni-wuppertal.de/lyriktheorie/texte/1817_coleridge1.html"
+    },
+    {
+      "claim": "La expresión \"willing suspension of disbelief for the moment, which constitutes poetic faith\" fue acuñada por Coleridge en la Biographia Literaria de 1817; la forma corta es el uso común.",
+      "source": "Wikipedia, Suspension of disbelief",
+      "url": "https://en.wikipedia.org/wiki/Suspension_of_disbelief"
+    },
+    {
+      "claim": "La Biographia Literaria se publicó en 1817 en dos volúmenes y su capítulo XIV es el origen del concepto.",
+      "source": "Wikipedia, Biographia Literaria",
+      "url": "https://en.wikipedia.org/wiki/Biographia_Literaria"
+    }
+  ],
+  "do_not_use": [
+    "la forma corta \"suspension of disbelief\" como cita textual de Coleridge: él escribió \"willing suspension of disbelief for the moment\"",
+    "decir que Coleridge es el primero en pensar en la credulidad voluntaria del lector: la página de Wikipedia señala antecedentes (Brucker, Cicerón) que no se verificaron; limitarse a que la fórmula inglesa es suya",
+    "una fecha de 1798 para el reparto de los Lyrical Ballads como dato del capítulo: las fuentes leídas describen el plan sin fecharlo en ese texto",
+    "1818 como año de la obra: un artículo lo usa, pero lo habitual y lo que dan las fuentes es 1817",
+    "usar la traducción como si fuera de una edición publicada: es traducción propia del inglés"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

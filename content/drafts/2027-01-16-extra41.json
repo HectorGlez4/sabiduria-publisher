@@ -1,0 +1,77 @@
+{
+  "id": "2027-01-16-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Bai Juyi y la hierba de la antigua llanura",
+    "hook": "\"El fuego del campo no la consume: el viento de primavera la hace nacer de nuevo.\"\n— Bai Juyi",
+    "body": [
+      "Se lee como un himno a la resistencia. En el poema es otra cosa: una despedida. La hierba crece sobre el camino antiguo, y el poeta vuelve a despedir a un joven señor, un \"wangsun\". El último verso dice que la hierba espesa llena todo de sentimiento de despedida.",
+      "El título empieza por \"fude\" (赋得), la fórmula de los poemas compuestos sobre un tema dado, como un ejercicio. La tradición lo fecha en el 787, cuando Bai Juyi tenía 16 años. Otro texto lo supone hecho a los catorce o quince, antes de presentarse a examen.",
+      "Hay una anécdota famosa: el poeta Gu Kuang, al leer el dístico, habría dicho que vivir en Chang'an ya no sería difícil para él. Aparece en textos de la dinastía Tang tardía y varios estudiosos dudan de que ocurriera."
+    ],
+    "question": "¿Qué te vuelve a crecer cada primavera, aunque algo lo haya quemado?",
+    "quote": {
+      "text": "El fuego del campo no la consume: el viento de primavera la hace nacer de nuevo.",
+      "author": "Bai Juyi",
+      "work": "\"Despedida sobre la hierba de la antigua llanura\" (赋得古原草送别), versos 3-4",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#BaiJuyi",
+      "#PoesiaChina",
+      "#DinastiaTang"
+    ],
+    "extended": [
+      "#China",
+      "#Poesia",
+      "#Resiliencia",
+      "#Primavera",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto chino de los ocho versos: \"野火烧不尽，春风吹又生\" son los versos 3-4; el verso 8 es \"萋萋满别情\" y el 7 \"又送王孙去\". El poema es de despedida.",
+      "source": "Wikipedia en chino, 赋得古原草送别 (texto de la Baishi Changqing ji)",
+      "url": "https://zh.wikipedia.org/wiki/%E8%B5%8B%E5%BE%97%E5%8F%A4%E5%8E%9F%E8%8D%89%E9%80%81%E5%88%AB"
+    },
+    {
+      "claim": "Fecha tradicional 787 (Bai a los 16, según Chen Zhensun y los nianpu); la anécdota de Gu Kuang viene de Youxian gu chui y Tang zhi yan, y el artículo la juzga fabricación de la Tang tardía, no hecho histórico.",
+      "source": "China Social Sciences Network (cssn.cn), Wei Jingbo, 2023-12-08",
+      "url": "https://cssn.cn/skgz/bwyc/202312/t20231208_5702302.shtml"
+    },
+    {
+      "claim": "Reproduce el poema completo, lo describe como obra de juventud \"antes de presentarse a examen\" y dice que Bai tendría quizá catorce o quince años; deja aparte si el diálogo con Gu Kuang ocurrió.",
+      "source": "Diario del Pueblo, edición de ultramar, 2026-03-18",
+      "url": "https://paper.people.com.cn/rmrbhwb/pc/content/202603/18/content_30145729.html"
+    },
+    {
+      "claim": "\"Fude\" indica un poema compuesto sobre un tema tomado de obras anteriores; traducciones al inglés del dístico.",
+      "source": "East Asia Student, Bai Juyi, Farewells on Grassland",
+      "url": "https://eastasiastudent.net/china/classical/bai-juyi-farewell-grassland/"
+    }
+  ],
+  "do_not_use": [
+    "presentar el dístico como lema de superación: el poema es una despedida y sus dos últimos versos son de separación",
+    "contar la anécdota de Gu Kuang como hecho: Fu Xuancong y otros la dudan; el propio texto de cssn la llama fabricación posterior",
+    "un año de 788: las fuentes leídas dan 787 (tradición) o \"a los catorce o quince años\"; no hay fecha segura",
+    "la variante \"咸阳原上草\" en el primer verso: es la versión de la anécdota en Youxian gu chui; el texto de las obras reunidas dice \"离离原上草\"",
+    "el verso 5 de algunas ediciones (\"远芳复古道\") frente a \"远芳侵古道\": hay variante; no citar ese verso"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

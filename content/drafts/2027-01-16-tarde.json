@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-16-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Locke y el §57 del Segundo tratado",
+    "hook": "\"Donde no hay ley, no hay libertad.\"\n— John Locke, Segundo tratado sobre el gobierno civil",
+    "body": [
+      "Se cita casi siempre sola, como si Locke dijera que la libertad se paga con obediencia. Es la segunda mitad de un argumento más largo.",
+      "Está en el capítulo VI del Segundo tratado, titulado \"Del poder paterno\", sección 57. La frase entera dice que el fin de la ley no es abolir ni restringir la libertad, sino conservarla y ampliarla. Y da la razón: en todos los estados de seres creados capaces de leyes, donde no hay ley no hay libertad.",
+      "Así que no autoriza cualquier ley. Dice para qué sirve la ley: para ensanchar la libertad, no para recortarla."
+    ],
+    "question": "¿Qué ley de tu país amplía de verdad la libertad de alguien?",
+    "quote": {
+      "text": "Donde no hay ley, no hay libertad.",
+      "author": "John Locke",
+      "work": "Segundo tratado sobre el gobierno civil, cap. VI, §57 (1690)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JohnLocke",
+      "#Libertad",
+      "#Filosofia"
+    ],
+    "extended": [
+      "#Ilustracion",
+      "#Derecho",
+      "#Ley",
+      "#Politica",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Segundo tratado, cap. VI \"Of Paternal Power\", sec. 57: \"the end of law is not to abolish or restrain, but to preserve and enlarge freedom: for in all the states of created beings capable of laws, where there is no law, there is no freedom\".",
+      "source": "Constitution Society, John Locke, Second Treatise of Civil Government, ch. 6",
+      "url": "https://www.constitution.org/jl/2ndtr06.htm"
+    },
+    {
+      "claim": "Mismo texto y mismas dos frases en la sec. 57 del cap. VI; la página fecha la obra en 1690.",
+      "source": "Marxists Internet Archive, John Locke, Second Treatise of Civil Government (1690), ch. VI",
+      "url": "https://www.marxists.org/reference/subject/politics/locke/ch06.htm"
+    },
+    {
+      "claim": "Un capítulo de Essential Locke cita la frase como ST §57. Solo se vio en el extracto del buscador; la página no se abrió.",
+      "source": "Fraser Institute / Essential Scholars, Essential Locke, cap. 2",
+      "url": "https://www.essentialscholars.org/sites/default/files/2022-12/essential-locke-chapter-2.pdf"
+    }
+  ],
+  "do_not_use": [
+    "la frase sola como lema de que toda ley es libertad: Locke la limita a \"seres capaces de leyes\" y define el fin de la ley como conservar y ampliar la libertad",
+    "\"Donde termina la ley comienza la tiranía\": se le atribuye a Locke pero no se verificó en ninguna fuente leída; no usarla",
+    "una fecha de 1689 para la obra: las páginas leídas dan 1690; no se verificó la publicación anónima",
+    "decir que el capítulo trata de la libertad política en general: el título leído es \"Del poder paterno\"; no se leyó el resto del capítulo"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
