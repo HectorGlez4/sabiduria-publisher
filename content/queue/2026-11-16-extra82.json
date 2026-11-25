@@ -69,7 +69,7 @@
     "El nombre del manuscrito: el texto base de RPO trae «No thing remains beside»; la lectura «Nothing beside remains» es la de 1819, que es la que circula.",
     "La traducción al español es propia; no se cotejó con una edición publicada."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-16T20:26:00Z",
   "results": {
     "facebook": {
@@ -83,7 +83,7 @@
       "encolada_en": "2026-11-25T14:27:35.321783+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 25-Nov-26 07:48:39 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 25-Nov-26 11:40:54 PST."
     }
   },
   "targets": [
@@ -91,6 +91,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-25T15:48:39.333105+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-25T19:40:54.106075+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Wednesday, 25-Nov-26 11:40:54 PST."
+  ]
 }
