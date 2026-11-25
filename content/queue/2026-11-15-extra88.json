@@ -70,12 +70,15 @@
     "Otras máximas que circulan con el nombre de Alberdi: no se verificaron en esta ronda; no se usan.",
     "Que Argentina «repite la frase desde 1852» es una formulación del gancho; el respaldo documental es la queja del propio Alberdi en 1879 de que se repetía «a cada paso»."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-16T02:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
