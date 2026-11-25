@@ -1,0 +1,65 @@
+{
+  "id": "2027-01-17-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Poverty Point, el monumento de tierra sin agricultura",
+    "hook": "MOVIERON MILLONES DE PIES CÚBICOS DE TIERRA Y NO VIVÍAN DE LA AGRICULTURA",
+    "body": [
+      "Entre el 1700 y el 1100 a.C., en lo que hoy es Luisiana, un pueblo levantó cinco montículos y seis crestas de tierra en semielipses concéntricas, con una plaza plana en el centro. La cresta exterior mide unos 1,14 kilómetros de diámetro. La plaza ocupa 17,4 hectáreas.",
+      "Lo hizo gente que vivía de la caza, la pesca y la recolección: peces, tortugas, ranas, aves acuáticas y plantas de agua. Muchos montículos de Norteamérica los construyeron sociedades agrícolas; este no. El Servicio de Parques Nacionales calcula unos 53 millones de pies cúbicos de tierra, llevada cesta a cesta.",
+      "Además importaron toneladas de piedra y minerales desde más de mil kilómetros. De quiénes eran sabemos poco: no se conoce cómo se llamaban, qué lengua hablaban ni qué creían, y nadie ha explicado para qué servía el diseño. La UNESCO lo inscribió en 2014."
+    ],
+    "question": "¿Qué levantarías hoy sin saber si alguien entenderá para qué sirve?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "POVERTY POINT",
+    "subtitle": "Una obra enorme de gente que no cultivaba la tierra",
+    "body": "Entre el 1700 y el 1100 a.C., cazadores y recolectores de Luisiana levantaron montículos y seis crestas de tierra concéntricas, con una cresta exterior de 1,14 km. Trajeron piedra de muy lejos. Su nombre y su lengua no se conocen."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PovertyPoint",
+      "#Arqueologia",
+      "#Luisiana"
+    ],
+    "extended": [
+      "#Historia",
+      "#PatrimonioMundial",
+      "#UNESCO",
+      "#AmericaAntigua",
+      "#Civilizaciones",
+      "#Prehistoria",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Se construyó entre 1700 y 1100 a.C.; unos 53 millones de pies cúbicos de tierra; los constructores eran cazadores-recolectores que comían peces, tortugas, ranas, aves acuáticas y plantas acuáticas; se importaron toneladas de rocas y minerales de hasta 1.000 millas; se sabe poco de su nombre, lengua o religión.",
+      "source": "National Park Service, Monumental Earthworks of Poverty Point World Heritage Site (actualizado 23 julio 2020)",
+      "url": "https://www.nps.gov/articles/000/monumental-earthworks-of-poverty-point-world-heritage-site.htm"
+    },
+    {
+      "claim": "Cresta exterior de unos 1,14 km de diámetro; plaza de 17,4 hectáreas; unos 750.000 m³ en montículos, crestas y plaza, y otro tanto en preparación y mantenimiento; materiales traídos de hasta casi 700 millas; constructores que no dependían de la agricultura; inscripción UNESCO el 22 de junio de 2014.",
+      "source": "64 Parishes (Louisiana Endowment for the Humanities), Poverty Point",
+      "url": "https://64parishes.org/?p=36940"
+    }
+  ],
+  "do_not_use": [
+    "una cifra única de tierra movida: el NPS da 53 millones de pies cúbicos y 64 Parishes unos 750.000 m³ (más otro tanto de preparación); las fuentes no se concilian, por eso el cuerpo cita solo el cálculo del NPS",
+    "una distancia exacta de los materiales: el NPS dice hasta 1.000 millas y 64 Parishes casi 700; el cuerpo dice solo \"más de mil kilómetros\", que cabe en ambas",
+    "\"construido en 90 días\" y la altura del Montículo A: no se encontraron en ninguna fuente leída",
+    "\"capital de una cultura\": el NPS dice solo que \"algunos especulan\"",
+    "viviendas en las crestas: no hay evidencia inequívoca de casas",
+    "el número de montículos como dato cerrado: el NPS cuenta cinco; 64 Parishes menciona un sexto añadido hacia el 700 d.C. por otro grupo"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

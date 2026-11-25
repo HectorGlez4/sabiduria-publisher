@@ -1,0 +1,67 @@
+{
+  "id": "2027-01-17-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Plinio el Joven y el multum, non multa de la carta VII, 9",
+    "hook": "\"Dicen que hay que leer mucho, no muchas cosas.\"\n— Plinio el Joven, carta a Fusco",
+    "body": [
+      "Es una frase de consejo, escrita en una carta de estudio. Plinio se la manda a un tal Fusco y le explica cómo formarse: traducir del griego al latín, imitar a los mejores, y leer con criterio. Justo antes de la frase le pide que elija con cuidado a los autores de cada género.",
+      "Plinio no la presenta como suya. El latín dice \"aiunt enim\": \"pues dicen que\". Cita un dicho que ya corría, y lo único que añade es dónde ponerlo: en una carta que trata de elegir bien.",
+      "El latín dice \"multa\", que es \"muchas cosas\", no \"muchos libros\". La traducción inglesa clásica de Melmoth lo vierte como libros, y de ahí viene la versión que más circula."
+    ],
+    "question": "¿Cuál es el libro que has leído más de una vez, y por qué ese?",
+    "quote": {
+      "text": "Dicen que hay que leer mucho, no muchas cosas.",
+      "author": "Plinio el Joven",
+      "work": "Cartas, VII, 9, 15",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PlinioElJoven",
+      "#Lectura",
+      "#Roma"
+    ],
+    "extended": [
+      "#Latin",
+      "#Cartas",
+      "#Libros",
+      "#Clasicos",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "El texto latino \"Tu memineris sui cuiusque generis auctores diligenter eligere. Aiunt enim multum legendum esse, non multa\" está en el libro VII, carta 9, sección 15, dirigida a Fusco, y trata de cómo estudiar y escribir.",
+      "source": "The Latin Library, C. Plini Caecili Secundi Epistularum Liber Septimus",
+      "url": "https://www.thelatinlibrary.com/pliny.ep7.html"
+    },
+    {
+      "claim": "La traducción de William Melmoth de la carta 7.9 rinde la sentencia como \"though we should read much, we should not read many books\" (libros, no \"cosas\"). La página rotula la carta como dirigida a \"Tuscus\", variante del nombre.",
+      "source": "Pliny's Letters, Books 6-9 (selections), trad. William Melmoth, Pomona College",
+      "url": "https://pages.pomona.edu/~cmc24747/sources/plin_6-10.htm"
+    }
+  ],
+  "do_not_use": [
+    "presentar la frase como invención de Plinio: él la introduce con \"aiunt\" (dicen), es un dicho anterior a su carta",
+    "\"muchos libros\" como traducción literal: el latín dice \"multa\" (muchas cosas); \"libros\" es la lectura de Melmoth",
+    "una fecha para el libro VII o para la carta: no se verificó en ninguna fuente leída",
+    "atribuirla a Plinio el Viejo, su tío: la carta es del sobrino, Plinio el Joven",
+    "el destinatario como \"Fusco Salinator\": la fuente leída dice solo \"Fusco\" (la página de Pomona escribe \"Tuscus\")"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
