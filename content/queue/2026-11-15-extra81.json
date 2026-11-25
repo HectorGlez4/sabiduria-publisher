@@ -74,7 +74,7 @@
     "Atribuir a Eurípides la frase «a quien los dioses quieren destruir, primero lo enloquecen»: es un adagio posterior sin verso identificable en su obra.",
     "La traducción al español del verso es propia, a partir del griego y de la versión de Kovacs."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-16T03:26:00Z",
   "results": {
     "facebook": {
@@ -88,7 +88,7 @@
       "encolada_en": "2026-11-25T03:40:54.848406+00:00"
     },
     "threads": {
-      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 20:57:54 PST."
+      "error": "HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 23:40:58 PST."
     }
   },
   "targets": [
@@ -96,6 +96,9 @@
     "instagram",
     "threads"
   ],
-  "attempts": 2,
-  "last_attempt": "2026-11-25T04:57:55.012810+00:00"
+  "attempts": 3,
+  "last_attempt": "2026-11-25T07:40:58.752119+00:00",
+  "blocked_reason": [
+    "falló 3 veces en la plataforma; último error: threads: HTTP 400 · code=190 subcode=0 · Error validating access token: Session has expired on Monday, 26-Oct-26 13:37:08 PDT. The current time is Tuesday, 24-Nov-26 23:40:58 PST."
+  ]
 }
