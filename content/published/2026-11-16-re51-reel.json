@@ -2,7 +2,7 @@
   "id": "2026-11-16-re51-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Tiruvalluvar y el dístico 314 del Tirukkural",
     "hook": "Un poema tamil de hace unos quince siglos manda castigar a quien te hizo daño. El castigo que prescribe es hacerle un bien, y la instrucción no termina ahí: termina en olvidar las dos cosas.",
@@ -76,6 +76,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-16T17:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1735062398188068",
+      "url": "/reel/1735062398188068/",
+      "published_at": "2026-11-25T13:43:18.160742+00:00"
+    }
+  },
   "reemision_de": "2026-09-15-extra92"
 }

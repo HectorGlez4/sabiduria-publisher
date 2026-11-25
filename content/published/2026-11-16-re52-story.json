@@ -88,8 +88,21 @@
     "facebook_story",
     "instagram_story"
   ],
-  "status": "ready",
+  "status": "published",
   "publish_at": "2026-11-16T19:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_story": {
+      "post_id": "1688819692985706",
+      "photo_id": "1164386066386052",
+      "url": null,
+      "caduca": "24h",
+      "published_at": "2026-11-25T14:05:27.407451+00:00"
+    },
+    "instagram_story": {
+      "via": "telefono",
+      "pendiente": true,
+      "encolada_en": "2026-11-25T14:05:27.408011+00:00"
+    }
+  },
   "reemision_de": "2026-10-03-extra86"
 }
