@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-16-extra41",
+  "id": "2026-11-27-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -69,5 +69,12 @@
     "cualquier afirmación sobre que los niños chinos memorizan el poema (no se encontró fuente)",
     "el verso 3 con 黄 o 黃: la edición Siku imprime 黄 (variante); la grafía no se discute en la pieza"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-27T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

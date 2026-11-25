@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-26-tarde",
+  "id": "2026-11-27-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "cream"
+    "variant": "gold"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Heródoto", "#Creso", "#GreciaAntigua"],
-    "extended": ["#Citas", "#Historia", "#Guerra", "#Paz", "#Lidia", "#Ciro", "#Clasicos", "#Sabiduria"]
+    "topic": [
+      "#Heródoto",
+      "#Creso",
+      "#GreciaAntigua"
+    ],
+    "extended": [
+      "#Citas",
+      "#Historia",
+      "#Guerra",
+      "#Paz",
+      "#Lidia",
+      "#Ciro",
+      "#Clasicos",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +65,12 @@
     "Atribuir la frase a Heródoto sin más, ni a Ciro: el que habla es Creso, y habla con Ciro delante.",
     "Citar el comentario de Arieti como leído en directo: solo se conoce por resumen, ver nota en la fuente."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-28T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

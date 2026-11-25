@@ -1,5 +1,5 @@
 {
-  "id": "2027-01-16-tarde",
+  "id": "2026-11-27-extra82",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -67,5 +67,12 @@
     "la numeración del pasaje: Wikipedia lo cita como L.13, Fordham lo agrupa en 49-50; usar «cap. 50»",
     "atribuir la traducción «mártires/Iglesia» a un traductor concreto: Wikipedia menciona a Alexander Souter (1917) como ejemplo de traducción con licencias, pero no se comprobó que sea el origen de la fórmula"
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-27T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

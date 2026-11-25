@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-26-extra42",
+  "id": "2026-11-27-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#OscarWilde", "#LadyWindermere", "#Teatro"],
-    "extended": ["#Citas", "#Literatura", "#SigloXIX", "#Londres", "#Sabiduria", "#Estrellas", "#Comedia", "#Libros"]
+    "topic": [
+      "#OscarWilde",
+      "#LadyWindermere",
+      "#Teatro"
+    ],
+    "extended": [
+      "#Citas",
+      "#Literatura",
+      "#SigloXIX",
+      "#Londres",
+      "#Sabiduria",
+      "#Estrellas",
+      "#Comedia",
+      "#Libros"
+    ]
   },
   "sources": [
     {
@@ -52,5 +65,12 @@
     "Citar cualquier opinión de Wilde sobre Darlington: aparece en una búsqueda sin fuente leída en directo.",
     "Dar el texto castellano como de una traducción concreta: es traducción propia del original inglés."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-28T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

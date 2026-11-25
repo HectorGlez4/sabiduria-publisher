@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-26-extra41",
+  "id": "2026-11-27-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#PirkeiAvot", "#Mishna", "#TradicionJudia"],
-    "extended": ["#Citas", "#Talmud", "#Sabiduria", "#RabiTarfon", "#Hebreo", "#Filosofia", "#Perseverancia", "#Historia"]
+    "topic": [
+      "#PirkeiAvot",
+      "#Mishna",
+      "#TradicionJudia"
+    ],
+    "extended": [
+      "#Citas",
+      "#Talmud",
+      "#Sabiduria",
+      "#RabiTarfon",
+      "#Hebreo",
+      "#Filosofia",
+      "#Perseverancia",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -53,5 +66,12 @@
     "Dar el texto castellano como de una traducción concreta: es traducción propia a partir de la versión hebrea y de la inglesa de Kulp.",
     "Verificación incompleta: solo una fuente leída de primera mano (Sefaria); las otras dos, por resumen."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-28T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
