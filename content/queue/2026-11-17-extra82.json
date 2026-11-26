@@ -69,12 +69,15 @@
     "Fecha de nacimiento, Calw y el Nobel de 1946: no se leyeron en fuente directa en esta ejecución (nobelprize.org dio 403). No se usan.",
     "Cifras de ventas o de lectores: no se verificó ninguna. No se dan números; el hook dice «generaciones de lectores»."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-17T20:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }

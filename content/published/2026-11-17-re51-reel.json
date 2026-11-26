@@ -2,7 +2,7 @@
   "id": "2026-11-17-re51-reel",
   "slot": "noche",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Mencio y el soberano que pesa menos",
     "hook": "Un texto chino del siglo IV a.C. ordena tres cosas por su valor y deja al gobernante en último lugar. Mil setecientos años después, un emperador lo mandó recortar.",
@@ -69,6 +69,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-17T17:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1141337475197148",
+      "url": "/reel/1141337475197148/",
+      "published_at": "2026-11-26T19:45:51.314770+00:00"
+    }
+  },
   "reemision_de": "2026-09-16-extra83"
 }
