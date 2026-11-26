@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Wed, 25 Nov 2026 14:05:27 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:05:28 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>La frase que se cita como consuelo no cierra el párrafo: lo abre. Lo que viene después dice que ve el mundo convertirse en un desierto y que oye acercarse el trueno que también los destruirá a ellos.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-16-re53-reel</guid>
+      <pubDate>Mon, 16 Nov 2026 22:26:00 +0000</pubDate>
+      <description><![CDATA["Sigo creyendo, a pesar de todo, que la gente es buena de corazón."
+— Ana Frank, Diario, 15 de julio de 1944
+
+La anotación es del 15 de julio de 1944, escrita en la Casa de atrás de Ámsterdam. Después de esa línea siguen otras cuatro. Dice que le resulta imposible construir su vida sobre un cimiento de caos, sufrimiento y muerte. Que ve el mundo convertirse poco a poco en un desierto. Que oye el trueno acercarse y que un día los destruirá también a ellos. Que siente el sufrimiento de millones. Solo entonces mira al cielo y piensa que todo cambiará para bien. La esperanza está ahí, pero llega la última y viene detrás del inventario.
+
+Veinte días más tarde, el 4 de agosto de 1944, la policía entró en el escondite. La última anotación del diario es del 1 de agosto. De los ocho escondidos sobrevivió uno, su padre. Ana y su hermana Margot murieron en Bergen-Belsen: la fecha oficial fue durante décadas el 31 de marzo de 1945, hasta que en 2015 la Casa de Ana Frank cruzó los archivos de la Cruz Roja, del Servicio Internacional de Búsquedas de Bad Arolsen y del memorial del campo con testimonios de supervivientes, y concluyó que habían muerto en febrero. El libro se publicó el 25 de junio de 1947.
+
+Después empezó la carrera de la frase por su cuenta. La obra de teatro de Frances Goodrich y Albert Hackett se estrenó en Broadway el 5 de octubre de 1955 y ganó el Pulitzer al año siguiente; Otto Frank no asistió nunca a una función. La crítica Hazel Rochman escribió que esa oración fue arrancada de su contexto y proclamada en escenarios y pantallas de todo el mundo como un mensaje sentimental de curación y esperanza. El contexto que se quitó no es un matiz: es la parte en la que una muchacha de quince años cuenta exactamente lo que está viendo venir.
+
+¿Qué se pierde cuando una frase se cita sin lo que venía después?
+
+#SabiduriaDeBolsillo #AnaFrank #Diario #SegundaGuerraMundial]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-16-re53-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-16-re53-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Un poema tamil de hace unos quince siglos manda castigar a quien te hizo daño. El castigo que prescribe es hacerle un bien, y la instrucción no termina ahí: termina en olvidar las dos cosas.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -482,22 +502,6 @@ El poema no dice que la esperanza consuele. Dice que canta más dulce en el vend
 #SabiduriaDeBolsillo #EmilyDickinson #Poesia #Esperanza]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>No haré cosa alguna por la opinión, harélas todas por la conciencia.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-07-re60-reel</guid>
-      <pubDate>Sun, 08 Nov 2026 01:26:00 +0000</pubDate>
-      <description><![CDATA["No haré cosa alguna por la opinión, harélas todas por la conciencia."
-— Séneca (-4-65), De la vida bienaventurada
-
-Filósofo estoico nacido en Córdoba, tutor y después consejero de Nerón. Su obra moral, escrita casi toda en forma de carta o de diálogo, trata de cómo vivir con lo que no se puede cambiar.
-
-¿Qué virtud admiras y no practicas?
-
-#SabiduriaDeBolsillo]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re60-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-07-re60-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
