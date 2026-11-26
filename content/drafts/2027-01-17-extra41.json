@@ -1,0 +1,77 @@
+{
+  "id": "2027-01-17-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Shakespeare y los sueños de Próspero",
+    "hook": "\"Estamos hechos de la materia de que están hechos los sueños, y nuestra breve vida se cierra con un sueño.\"\n— William Shakespeare",
+    "body": [
+      "Lo dice Próspero en La tempestad, acto IV, escena 1. No es una meditación tranquila: la pronuncia justo después de interrumpir de golpe la mascarada que ofrecía a los novios, porque ha recordado la conspiración de Calibán contra su vida.",
+      "Empieza con \"Our revels now are ended\" y habla de actores que se disuelven en el aire. El Folio de 1623 imprime \"stuffe / As dreames are made on\". Hoy se cita casi siempre \"made of\", pero lo que escribió el texto es \"made on\".",
+      "El verso termina con \"rounded with a sleep\": la vida se cierra, o se completa, con un sueño. Poco después Próspero dice que caminará un poco para calmar su mente agitada."
+    ],
+    "question": "¿Qué parte de tu vida tratas como sólida y se parece más a una función que ha de terminar?",
+    "quote": {
+      "text": "Estamos hechos de la materia de que están hechos los sueños, y nuestra breve vida se cierra con un sueño.",
+      "author": "William Shakespeare",
+      "work": "La tempestad, IV.1 (Primer Folio, 1623); trad. propia",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Shakespeare",
+      "#LaTempestad",
+      "#Literatura"
+    ],
+    "extended": [
+      "#Teatro",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Clasicos",
+      "#Poesia",
+      "#Vida"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Transcripción del Primer Folio (1623): TLN 1819 \"Our Reuels now are ended\"; TLN 1827-1829 \"we are such stuffe / As dreames are made on; and our little life / Is rounded with a sleepe\".",
+      "source": "Internet Shakespeare Editions, The Tempest (Folio 1, 1623), 4.1, ed. Whitted y Yachnin",
+      "url": "https://internetshakespeare.uvic.ca/doc/Tmp_F1/scene/4.1/index.html"
+    },
+    {
+      "claim": "Contexto escénico: Próspero se sobresalta durante la mascarada de Iris, Ceres y Juno por la conspiración de Calibán; los espíritus se desvanecen; después dice que caminará para calmar su mente.",
+      "source": "Internet Shakespeare Editions, Folio 1, TLN 1807-1811 y 1834",
+      "url": "https://internetshakespeare.uvic.ca/doc/Tmp_F1/scene/4.1/index.html"
+    },
+    {
+      "claim": "El texto moderno de la Folger y la facsímil de la Bodleian dan el mismo pasaje con \"made on\" (confirmado solo por resultados de búsqueda; ambas páginas no se pudieron abrir).",
+      "source": "Folger Shakespeare Library, The Tempest, Act 4 Scene 1; Bodleian First Folio",
+      "url": "https://www.folger.edu/explore/shakespeares-works/the-tempest/act-4-scene-1/"
+    },
+    {
+      "claim": "La forma \"made of\" es una cita habitual con variante respecto al original.",
+      "source": "Interesting Literature, The Meaning and Origins of 'We Are Such Stuff As Dreams Are Made On' (2021; fuente secundaria, solo para la mención de la variante)",
+      "url": "https://interestingliterature.com/2021/07/tempest-such-stuff-dreams-made-on-meaning-analysis/"
+    }
+  ],
+  "do_not_use": [
+    "citar \"made of\" como si fuera la frase original: el Folio de 1623 dice \"made on\"",
+    "decir que la frase es de Hamlet o un soneto: es de La tempestad, IV.1",
+    "una fecha de estreno o de composición: no se verificó en esta ejecución",
+    "presentar el discurso como serenidad pura: se pronuncia en un momento de agitación de Próspero",
+    "la traducción al español como si fuera de una edición concreta: es propia"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

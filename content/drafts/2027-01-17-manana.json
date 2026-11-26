@@ -1,0 +1,75 @@
+{
+  "id": "2027-01-17-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "John Dalton y sus ojos conservados",
+    "hook": "John Dalton pidió que, al morir, le estudiaran los ojos. Ciento cincuenta años después, su ADN corrigió el diagnóstico que él mismo había dado.",
+    "body": [
+      "Dalton describió su visión de los colores en un trabajo de 1794. Veía lo que otros llaman rojo como poco más que una sombra o una falta de luz. Pensó que algo en el humor vítreo de su ojo lo explicaba, y pidió que se examinara después de su muerte.",
+      "Murió en 1844. Su ayudante, Joseph Ransome, extrajo los ojos, exprimió el líquido y lo encontró normal. Concluyó que la ceguera al color no venía de un cambio físico en el globo ocular. Se equivocaba, pero no tenía medios para saberlo.",
+      "La tradición, apoyada en Thomas Young, lo tenía por protanope: sin la parte del ojo que percibe el rojo. En 1995, un equipo de Cambridge amplificó ADN de la retina conservada y publicó el resultado en Science. Dalton tenía un solo gen de onda larga y le faltaba el de onda media. Era deuteranope.",
+      "En francés, la ceguera al color sigue llamándose daltonisme."
+    ],
+    "question": "¿Qué parte de lo que crees ver con claridad no la has comprobado nunca con otra mirada?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "John Dalton y sus ojos",
+    "subtitle": "Un diagnóstico corregido 151 años después",
+    "body": "Dalton pidió que le estudiaran los ojos al morir, en 1844. Su ayudante halló el líquido normal. En 1995, el ADN de la retina mostró que le faltaba el gen de onda media: era deuteranope, no protanope."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#JohnDalton",
+      "#Daltonismo",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Genetica",
+      "#Curiosidades",
+      "#Vision",
+      "#Historia",
+      "#DatosCuriosos",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Dalton, en su trabajo de 1794, ya señala casos familiares de visión cromática defectuosa, incluido su hermano; la creencia tradicional era que fue protanope, apoyada en Young; el análisis de ADN mostró un solo gen de onda larga y ausencia del de onda media: deuteranope.",
+      "source": "Hektoen International, J. Franklin, John Dalton's Eyes: A History of the Eye and Color Vision, Part Two",
+      "url": "https://hekint.org/2017/01/22/john-daltons-eyes-a-history-of-the-eye-and-color-vision-part-two/"
+    },
+    {
+      "claim": "Dalton pidió que sus ojos se extrajeran y estudiaran tras su muerte; su ayudante Joseph Ransome lo hizo, halló el líquido normal y concluyó erróneamente que no había cambio físico; el ojo estuvo en un frasco desde 1844; la ceguera al color se dice daltonisme en francés.",
+      "source": "McGill Office for Science and Society, Joe Schwarcz, 2 oct 2024",
+      "url": "https://www.mcgill.ca/oss/node/10099"
+    },
+    {
+      "claim": "Los ojos desecados se conservaban en la Manchester Literary and Philosophical Society; el estudio de ADN de 1995 (Hunt, Mollon y colegas) concluyó que era deuteranope, contrario a la tesis protanope.",
+      "source": "Gizmodo, Inglis-Arkell, 28 nov 2014 (remite a PubMed 7863342)",
+      "url": "https://gizmodo.com/we-tested-centuries-old-eyes-for-colorblindness-1664234699"
+    },
+    {
+      "claim": "Hunt DM, Dulai KS, Bowmaker JK, Mollon JD. The Chemistry of John Dalton's Color Blindness. Science 267(5200):984-988, 17 feb 1995.",
+      "source": "Science, 1995 (referencia obtenida de un resultado de búsqueda; la ficha de scilit.com dio 403 y no se leyó)",
+      "url": "https://www.scilit.net/publications/3b8d949937b6790f1033a4649e212c89"
+    }
+  ],
+  "do_not_use": [
+    "que Dalton esperaba un humor vítreo azul: es un dato muy repetido, pero ninguna de las tres páginas leídas dice \"azul\"; solo hablan de un color distinto",
+    "que sus ojos estuvieron guardados \"hasta 1995\" o que están en otro museo: Gizmodo y Hektoen no coinciden y ninguna da la fecha de traslado",
+    "llamar autopsia a la extracción: las fuentes dicen que Ransome, ayudante, retiró los ojos",
+    "dar a Dalton como protanope: es la creencia anterior a 1995, corregida por el ADN",
+    "el volumen \"232\" que da Hektoen para el artículo de Science: parece errata; el número de la búsqueda es 267"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
