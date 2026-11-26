@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-18-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Washington y la sinagoga de Newport (1790)",
+    "hook": "\"El Gobierno de los Estados Unidos, que no da sanción al fanatismo ni asistencia a la persecución…\"\n— George Washington",
+    "body": [
+      "La frase más célebre de la carta de Washington a la congregación hebrea de Newport no es suya. El 17 de agosto de 1790, Moses Seixas, en nombre de la congregación, le había escrito que ese nuevo Gobierno era uno \"que al fanatismo no da sanción, a la persecución ninguna asistencia\".",
+      "Washington copió las palabras casi enteras, con el orden cambiado, y las puso como descripción de su propio Gobierno. Era una forma de aceptar el elogio como compromiso: lo que le habían dicho que era, lo dijo que sería.",
+      "Antes había escrito algo más audaz. Ya no se habla de tolerancia, dijo, como si una clase de personas concediera a otra, por indulgencia, el ejercicio de sus derechos naturales inherentes. La libertad de conciencia no se concede: se posee.",
+      "Y fijó una sola condición: que quienes viven bajo su protección se conduzcan como buenos ciudadanos."
+    ],
+    "question": "¿Qué derechos damos hoy por concedidos que alguien debería poseer sin permiso de nadie?",
+    "quote": {
+      "text": "El Gobierno de los Estados Unidos, que no da sanción al fanatismo ni asistencia a la persecución, solo exige que quienes viven bajo su protección se conduzcan como buenos ciudadanos.",
+      "author": "George Washington",
+      "work": "Carta a la congregación hebrea de Newport, agosto de 1790",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#GeorgeWashington",
+      "#LibertadReligiosa",
+      "#Frases"
+    ],
+    "extended": [
+      "#Historia",
+      "#Tolerancia",
+      "#EstadosUnidos",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto de la respuesta de Washington: \"For happily the Government of the United States, which gives to bigotry no sanction, to persecution no assistance, requires only that they who live under its protection should demean themselves as good citizens\"; la frase \"It is now no more that toleration is spoken of, as if it was by the indulgence of one class of people, that another enjoyed the exercise of their inherent natural rights\"; el texto de Seixas, fechado el 17 de agosto de 1790: \"a Government, which to bigotry gives no sanction, to persecution no assistance\".",
+      "source": "Wikisource, \"Letter to Touro Synagogue\" (transcripción con ortografía original, leída; no cita edición)",
+      "url": "https://en.wikisource.org/wiki/Letter_to_Touro_Synagogue"
+    },
+    {
+      "claim": "Ficha del documento en la edición crítica: respuesta de Washington a la congregación hebrea de Newport, 18 de agosto de 1790, con nota sobre la dirección de Seixas (solo localizada en resultados de búsqueda; la página devolvió HTTP 202 vacío y no se leyó).",
+      "source": "Founders Online (National Archives), The Papers of George Washington, Presidential Series",
+      "url": "https://founders.archives.gov/documents/Washington/05-06-02-0135"
+    },
+    {
+      "claim": "Resumen de la carta y su fecha; algunas fuentes dan el 21 de agosto frente al 18 de Founders (solo resultados de búsqueda; Mount Vernon y Loeb devolvieron 403).",
+      "source": "Búsqueda web: National Constitution Center, Mount Vernon, Loeb Gateway (GWU)",
+      "url": "https://constitutioncenter.org/the-constitution/historic-document-library/detail/george-washington-letter-to-the-hebrew-congregation-in-newport-rhode-island-1790"
+    }
+  ],
+  "do_not_use": [
+    "dar una fecha exacta para la carta de Washington: Founders Online dice 18 de agosto de 1790, otras páginas dicen 21; usar solo \"agosto de 1790\"",
+    "que Jefferson redactó la respuesta: Founders lo menciona como sugerencia, no como hecho establecido",
+    "decir que la frase es original de Washington: el texto de Seixas del 17 de agosto de 1790 ya la contiene casi igual",
+    "presentar la carta como origen de la Primera Enmienda: es una lectura posterior, no un hecho",
+    "traducir \"bigotry\" como \"intolerancia\" sin matiz: es fanatismo o intolerancia religiosa; la traducción es nuestra, el texto original es el inglés",
+    "la edición exacta (volumen y páginas de The Papers of George Washington): no se pudo comprobar en esta ejecución"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-18-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Inana y las siete puertas del inframundo",
+    "hook": "En cada una de las siete puertas del inframundo le quitaron a Inana una insignia de su poder. Volvió, pero alguien tenía que ocupar su lugar.",
+    "body": [
+      "La composición sumeria se llama \"El descenso de Inana\". Empieza con una línea que no explica nada: del gran cielo, Inana puso su mente en el gran abajo. Abandonó cielo y tierra, y también los santuarios que la veneraban, y bajó.",
+      "Antes de partir dio una instrucción a su ministra: si no volvía, debía lamentarse en los templos y acudir a tres dioses. A Enlil, después a Nanna, y por último a Enki. Los dos primeros no ayudaron. Enki sí.",
+      "En el inframundo, su hermana Ereshkigal ordenó cerrar las siete puertas y abrirlas una a una. En cada una, el portero le quitó algo: el turbante, las cuentas del cuello, las del pecho, el pectoral, el anillo de oro, la vara y la cuerda de lapislázuli, y por último el vestido. A cada protesta contestaba lo mismo: un poder divino del inframundo se ha cumplido.",
+      "Los jueces la miraron, y se volvió cadáver, colgado de un gancho. Enki hizo, con la suciedad de sus uñas, dos seres. Con la planta y el agua de la vida revivieron a Inana. El inframundo exigió un sustituto, y ella lo escogió: Dumuzi. El texto termina con un reparto: tú, la mitad del año; tu hermana, la otra mitad."
+    ],
+    "question": "¿Qué dejarías en cada puerta si el camino de vuelta exigiera una prenda por cada una?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Inana y las siete puertas",
+    "subtitle": "Un mito sumerio sobre el inframundo",
+    "body": "Inana bajó al inframundo y en cada una de las siete puertas le quitaron una insignia de su poder. Su hermana Ereshkigal la convirtió en cadáver. Enki la revivió con dos seres hechos de la suciedad de sus uñas, pero el inframundo exigió un sustituto."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Inana",
+      "#Sumeria",
+      "#Mitologia"
+    ],
+    "extended": [
+      "#Mesopotamia",
+      "#Historia",
+      "#Inframundo",
+      "#LiteraturaAntigua",
+      "#Civilizaciones",
+      "#Curiosidades",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Traducción de \"Inana's descent to the nether world\": línea inicial \"From the great heaven she set her mind on the great below\"; instrucciones a su ministra (líneas 32-67) con tres lamentos a Enlil, Nanna y Enki, y solo Enki ayuda; las siete puertas (líneas 123-163) con una insignia retirada en cada una; el cadáver colgado de un gancho (líneas 164-172); Enki crea al kur-jara y al gala-tura (217-225) y Inana revive (273-281); sustitución de Dumuzid (329-358) y reparto de medio año (404-410).",
+      "source": "The Electronic Text Corpus of Sumerian Literature (ETCSL), Universidad de Oxford, composición 1.4.1",
+      "url": "https://etcsl.orinst.ox.ac.uk/section1/tr141.htm"
+    },
+    {
+      "claim": "Bibliografía y manuscritos de la composición (Alster 1996, Jacobsen 1987, Römer y Edzard 1993, Sladek 1974); la página de la edición.",
+      "source": "ETCSL, bibliografía de la composición 1.4.1",
+      "url": "https://etcsl.orinst.ox.ac.uk/section1/b141.htm"
+    },
+    {
+      "claim": "Resumen divulgativo de la composición: Ereshkigal es la hermana que gobierna el reino de los muertos; las siete puertas; el episodio final de Dumuzi y su hermana como sustitutos (solo localizado en resultados de búsqueda, la página no se abrió).",
+      "source": "World History Encyclopedia, \"The Descent of Inanna\"",
+      "url": "https://www.worldhistory.org/article/215/"
+    }
+  ],
+  "do_not_use": [
+    "llamar a la hermana de Inana \"Ereshkigal\" con certeza de ortografía: ETCSL la escribe Erec-ki-gala; usar la forma convencional Ereshkigal",
+    "decir que se desnuda en las siete puertas \"de todo\" o que es un rito de iniciación: la fuente solo enumera las siete prendas; no hay explicación en el texto",
+    "una fecha de composición o de tablillas concretas: la página de ETCSL no da procedencia de los manuscritos",
+    "tres días de espera: la traducción leída y resumida no permite confirmar ese plazo; no ponerlo",
+    "identificar el reparto de medio año como mito de las estaciones o paralelo de Perséfone: es interpretación moderna; el texto no lo plantea así",
+    "el nombre de Geshtinanna como la hermana del reparto: la línea 404 de la traducción es fragmentaria en ese punto"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

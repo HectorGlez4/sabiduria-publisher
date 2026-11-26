@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-18-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Chandrasekhar y el límite de masa de 1935",
+    "hook": "A los 24 años, Chandrasekhar calculó el límite de masa de una estrella enana blanca. Arthur Eddington le respondió que debía haber una ley de la naturaleza que lo impidiera.",
+    "body": [
+      "El 11 de enero de 1935, en una reunión de la Royal Astronomical Society, Subrahmanyan Chandrasekhar presentó su resultado: una enana blanca por encima de cierta masa no puede sostenerse. Su valor inicial era 0,91 masas solares. Con una estimación corregida de la composición de las estrellas, pasó a 1,44.",
+      "Eddington había dispuesto exponer su propio trabajo justo después, y lo tituló \"Degeneración relativista\". Atacó el cálculo por mezclar mecánica relativista con teoría cuántica no relativista: no consideraba al fruto de esa unión \"nacido en legítimo matrimonio\". Y añadió que debería existir una ley de la naturaleza que impidiera a una estrella comportarse de un modo tan absurdo.",
+      "La famosa \"payasada estelar\" no se dijo ese día. Es de una conferencia de Eddington en Harvard, en 1936, publicada en Scientific Monthly en noviembre de ese año. La prensa y la memoria de los físicos suelen juntar las dos escenas en una.",
+      "El límite resistió. Chandrasekhar recibió en 1983 el Nobel de Física, compartido con William Fowler, por sus estudios teóricos de los procesos físicos importantes para la estructura y evolución de las estrellas."
+    ],
+    "question": "¿Qué has dejado de decir en voz alta porque alguien con más autoridad se rió de ello?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Chandrasekhar y Eddington",
+    "subtitle": "Enero de 1935, Royal Astronomical Society",
+    "body": "Chandrasekhar, de 24 años, presentó el límite de masa de las enanas blancas. Eddington lo rechazó en la misma reunión, con ironía. El límite, hoy fijado en 1,44 masas solares, se confirmó, y a Chandrasekhar le valió el Nobel de 1983."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Chandrasekhar",
+      "#Astrofisica",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Ciencia",
+      "#Astronomia",
+      "#Eddington",
+      "#Nobel",
+      "#Estrellas",
+      "#Curiosidades",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Reunión de enero de 1935 (segundo viernes del mes, en Londres); Eddington dispuso exponer su ponencia \"Relativistic Degeneracy\" justo después de Chandrasekhar; las frases sobre \"lawful wedlock\" y \"a law of Nature to prevent a star from behaving in this absurd way\"; \"stellar buffoonery\" es de su conferencia de Harvard de 1936 (Scientific Monthly, noviembre de 1936); valor inicial 0,91 masas solares, luego 1,44.",
+      "source": "MacTutor (Universidad de St Andrews), \"The Chandrasekhar-Eddington dispute\", Mena y Peres, 2018",
+      "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/Chandrasekhar_Eddington/"
+    },
+    {
+      "claim": "La reunión de la Royal Astronomical Society fue el 11 de enero de 1935; en 1936, en una reunión en Harvard, Eddington habló de \"stellar buffoonery\"; Nobel compartido con Fowler en 1983.",
+      "source": "Wikipedia en inglés, \"Chandrasekhar–Eddington dispute\" (leída; remite a Mena y Peres)",
+      "url": "https://en.wikipedia.org/wiki/Chandrasekhar%E2%80%93Eddington_dispute"
+    },
+    {
+      "claim": "Nacimiento el 19 de octubre de 1910 en Lahore (de ahí, 24 años en enero de 1935, cálculo propio); Nobel de Física 1983 \"por sus estudios teóricos de los procesos físicos de importancia para la estructura y evolución de las estrellas\".",
+      "source": "Wikipedia en inglés, \"Subrahmanyan Chandrasekhar\" (leída solo la primera parte; la página Nobel oficial dio 403 y no se leyó)",
+      "url": "https://en.wikipedia.org/wiki/Subrahmanyan_Chandrasekhar"
+    }
+  ],
+  "do_not_use": [
+    "que Eddington dijo \"stellar buffoonery\" en el mismo acto de enero de 1935: MacTutor lo sitúa en su conferencia de Harvard de 1936",
+    "que Eddington rompió la ponencia de Chandrasekhar en público: ninguna fuente leída lo dice",
+    "dar 1,4 como el valor original: el valor de 1935 era 0,91; 1,44 llegó al corregir la composición estelar",
+    "la edad exacta de Chandrasekhar como dato de las fuentes: ninguna la da; son 24 años por la fecha de nacimiento",
+    "el título y la revista del artículo de 1931 o el nombre de Yerkes: no se pudieron verificar en esta ejecución",
+    "atribuir el Nobel solo al límite de masa: la cita del premio es general sobre estructura y evolución estelar"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

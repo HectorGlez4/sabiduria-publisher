@@ -1,0 +1,72 @@
+{
+  "id": "2027-01-18-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Pasteur y los espíritus preparados (1854)",
+    "hook": "\"En los campos de la observación, el azar solo favorece a los espíritus preparados.\"\n— Louis Pasteur",
+    "body": [
+      "Se cita como una máxima sobre la suerte y el talento. En el discurso de Pasteur es un paréntesis dentro de una escena concreta: un físico sueco con un hilo de cobre unido a una pila, y una aguja imantada que se mueve sobre su mesa.",
+      "Pasteur lo pronunció el 7 de diciembre de 1854, en Douai, en la instalación solemne de la Facultad de Letras de Douai y de la de Ciencias de Lille. Contó que Œrsted vio de pronto la aguja desviarse, y puso la objeción en boca de su público: por azar, diréis quizá. Y respondió con la frase.",
+      "El argumento de fondo era otro. Un hilo con corriente que desvía una aguja parecía no servir para nada, y de ahí nació el telégrafo. Pasteur defendía ante una facultad nueva que la ciencia no se mide por su utilidad inmediata.",
+      "Dicha sin la aguja, la frase suena a consuelo. Con ella, es una exigencia: el azar pasa por delante de todos, y solo se detiene ante quien ya sabía qué mirar."
+    ],
+    "question": "¿Qué llevas años preparando sin saber todavía si algún día te lo va a servir el azar?",
+    "quote": {
+      "text": "En los campos de la observación, el azar solo favorece a los espíritus preparados.",
+      "author": "Louis Pasteur",
+      "work": "Discurso en Douai, 7 dic. 1854 (Œuvres, t. VII, Masson, 1939, pp. 135-138)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#LouisPasteur",
+      "#Ciencia",
+      "#Frases"
+    ],
+    "extended": [
+      "#Observacion",
+      "#Descubrimiento",
+      "#HistoriaDeLaCiencia",
+      "#FrasesEnEspanol",
+      "#Reflexiones",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto francés del discurso: \"dans les champs de l'observation le hasard ne favorise que les esprits préparés\", dentro de la escena de Œrsted y la aguja imantada, seguida de \"voilà, messieurs, la naissance du télégraphe actuel\"; título \"Prononcé à Douai, le 7 décembre 1854, à l'occasion de l'installation solennelle de la Faculté des lettres de Douai et de la Faculté des sciences de Lille\".",
+      "source": "Wikisource francés, transcripción de Œuvres de Pasteur réunies par Pasteur Vallery-Radot, t. 7, Masson et Cie, 1939, pp. 135-138 (impreso original: Douai, A. d'Aubers, 1854)",
+      "url": "https://fr.wikisource.org/wiki/Discours_prononc%C3%A9_%C3%A0_Douai_le_7_d%C3%A9cembre_1854_%C3%A0_l'occasion_de_l'installation_solennelle_de_la_facult%C3%A9_des_lettres_de_Douai_et_de_la_facult%C3%A9_des_sciences_de_Lille"
+    },
+    {
+      "claim": "La frase atribuida a una \"Lecture, University of Lille (7 December 1854)\"; la entrada no cita obra: muestra por qué circula con el lugar equivocado.",
+      "source": "Wikiquote, Louis Pasteur (leída; sin edición citada)",
+      "url": "https://en.wikiquote.org/wiki/Louis_Pasteur"
+    },
+    {
+      "claim": "Las fuentes secundarias sitúan el discurso en Lille; la transcripción de las obras de Pasteur lo sitúa en Douai, con el mismo día (7 de diciembre de 1854).",
+      "source": "Búsqueda web y comparación de las dos fuentes anteriores (no se halló una edición crítica ni escaneo del original)",
+      "url": "https://en.wikiquote.org/wiki/Louis_Pasteur"
+    }
+  ],
+  "do_not_use": [
+    "decir que Pasteur lo dijo en Lille o como discurso inaugural de Lille: la transcripción de las obras lo da en Douai; muchas páginas de citas dicen Lille",
+    "la forma inglesa \"chance favors the prepared mind\": es una paráfrasis popular; el texto francés dice \"ne favorise que\" y \"dans les champs de l'observation\"",
+    "la fecha de 1822 que Pasteur da al experimento de Œrsted: la discutida por la historia es abril de 1820; no repetirla y no usar el año en el cuerpo",
+    "presentarla como frase sobre la suerte en general: va limitada a \"los campos de la observación\"",
+    "no se pudo comprobar con un escaneo del original; la verificación descansa en la edición de 1939 transcrita en Wikisource"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
