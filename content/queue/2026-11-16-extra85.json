@@ -70,12 +70,15 @@
     "El contexto de las guerras civiles y de Augusto no se sostuvo con una fuente leída para esta pieza. Se quitó del cuerpo.",
     "The Latin Library no numera las secciones; la 9 y la 10 siguen la numeración habitual de las ediciones, confirmada por Roberts y Sententiae Antiquae."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-17T04:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
