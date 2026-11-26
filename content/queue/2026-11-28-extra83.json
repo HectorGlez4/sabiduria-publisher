@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-27-extra41",
+  "id": "2026-11-28-extra83",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,25 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Salustio", "#Latin", "#GuerraDeYugurta"],
-    "extended": ["#Citas", "#Roma", "#Historia", "#Sabiduria", "#Concordia", "#Literatura", "#Clasicos", "#Filosofia"]
+    "topic": [
+      "#Salustio",
+      "#Latin",
+      "#GuerraDeYugurta"
+    ],
+    "extended": [
+      "#Citas",
+      "#Roma",
+      "#Historia",
+      "#Sabiduria",
+      "#Concordia",
+      "#Literatura",
+      "#Clasicos",
+      "#Filosofia"
+    ]
   },
   "sources": [
     {
@@ -53,5 +66,12 @@
     "Dar la traducción castellana como de una edición concreta: es propia, comprobada contra Watson y Loeb.",
     "Verificación incompleta: ninguna edición crítica latina se consultó; Wikisource latino no indica editor; la fuente de Loeb es un sitio de citas con atribución de edición, tratada con cautela."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-29T01:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

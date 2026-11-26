@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-27-tarde",
+  "id": "2026-11-28-extra84",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Epicuro", "#FilosofiaGriega", "#CartaAMeneceo"],
-    "extended": ["#Citas", "#Epicureismo", "#Muerte", "#Sabiduria", "#DiogenesLaercio", "#Grecia", "#Filosofia", "#Historia"]
+    "topic": [
+      "#Epicuro",
+      "#FilosofiaGriega",
+      "#CartaAMeneceo"
+    ],
+    "extended": [
+      "#Citas",
+      "#Epicureismo",
+      "#Muerte",
+      "#Sabiduria",
+      "#DiogenesLaercio",
+      "#Grecia",
+      "#Filosofia",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -53,5 +66,12 @@
     "Atribuirle el «tetrafármaco» u otras fórmulas posteriores a este pasaje.",
     "Verificación incompleta: ninguna edición crítica del griego se consultó; las tres fuentes son una web de la escuela epicúrea, Wikisource (con Hicks) y la edición Hicks en Perseus. Páginas de epicurus.info y de Perseus clásico dieron error."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-29T03:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
