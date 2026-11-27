@@ -75,12 +75,15 @@
     "Detalles de cómo Poggio sacó los manuscritos de San Galo (carros, abades descuidados): son relatos secundarios discutidos. Solo se dice que lo halló y lo que escribió en la carta.",
     "La versión latina con «oportet» que dan muchas páginas: en Quintiliano es infinitivo, «oportere», dentro de una oración indirecta."
   ],
-  "status": "ready",
+  "status": "blocked",
   "publish_at": "2026-11-18T15:26:00Z",
   "results": {},
   "targets": [
     "facebook",
     "instagram",
     "threads"
+  ],
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
   ]
 }
