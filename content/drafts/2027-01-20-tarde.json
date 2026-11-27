@@ -1,0 +1,81 @@
+{
+  "id": "2027-01-20-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Henley y los versos de Invictus (1875, 1888)",
+    "hook": "\"I am the master of my fate:\nI am the captain of my soul.\"\n— William Ernest Henley",
+    "body": [
+      "Henley escribió estos versos en 1875, después de dos años de hospital. A los 16 le habían amputado la pierna izquierda por debajo de la rodilla. En 1873 viajó a Edimburgo con la derecha en peligro, y durante casi dos años fue paciente del cirujano Joseph Lister en la Infirmary.",
+      "El poema se publicó en 1888 en su primer libro, A Book of Verses. En español: «Soy el amo de mi destino: soy el capitán de mi alma» (traducción nuestra).",
+      "Cuando se cita sola, la frase suena a triunfo. En el poema llega después de otra cosa: más allá de este lugar de ira y lágrimas, dice Henley, solo asoma el horror de la sombra, y no importa cuán estrecha sea la puerta ni cuán cargado de castigos esté el pergamino.",
+      "No es una promesa de que todo saldrá bien. Es lo que queda en pie cuando se ha admitido lo peor."
+    ],
+    "question": "¿Qué parte de tu destino sigue siendo tuya aunque lo demás no lo sea?",
+    "quote": {
+      "text": "I am the master of my fate: I am the captain of my soul.",
+      "author": "William Ernest Henley",
+      "work": "Out of the night that covers me, en A Book of Verses (1888)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#WilliamErnestHenley",
+      "#Invictus",
+      "#PoesiaVictoriana"
+    ],
+    "extended": [
+      "#Poesia",
+      "#Resiliencia",
+      "#LiteraturaInglesa",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Los versos finales («It matters not how strait the gate, / How charged with punishments the scroll, / I am the master of my fate: / I am the captain of my soul») y los anteriores («Beyond this place of wrath and tears / Looms but the Horror of the shade»); el poema, de 1875, se publicó en 1888 en Book of Verses; amputación de la pierna izquierda a los 16; Lister, Edimburgo, 1873.",
+      "source": "Wikipedia en inglés, «Invictus» (leída completa)",
+      "url": "https://en.wikipedia.org/wiki/Invictus"
+    },
+    {
+      "claim": "Henley estuvo «casi dos años» bajo el cuidado de Lister en la Infirmary de Edimburgo; la pierna izquierda fue amputada bajo la rodilla; «Invictus (1875)».",
+      "source": "The Victorian Web, introducción a Henley (leída vía lector de páginas)",
+      "url": "https://victorianweb.org/authors/henley/introduction.html"
+    },
+    {
+      "claim": "Henley estuvo en la Infirmary de Edimburgo de agosto de 1873 a mayo de 1875 (la fecha de alta sin fuente indicada en el blog); amputación de la pierna izquierda por debajo de la rodilla a los 16 años.",
+      "source": "Lothian Health Services Archive, «A poetic patient», 2017 (leída vía lector de páginas)",
+      "url": "https://lhsa.blogspot.com/2017/08/a-poetic-patient.html"
+    },
+    {
+      "claim": "Verso inicial «Out of the night that covers me», conocido como «Invictus» (solo se leyó la portada, sin el texto completo).",
+      "source": "Wikisource en inglés, «Out of the night that covers me»",
+      "url": "https://en.wikisource.org/wiki/Out_of_the_night_that_covers_me"
+    }
+  ],
+  "do_not_use": [
+    "decir que Henley escribió el poema «en el hospital» o «en la cama»: Wikipedia dice que se sintió impulsado a escribirlo mientras se recuperaba en la enfermería, pero ninguna otra fuente leída lo ubica; el cuerpo solo da 1875 y los dos años de hospital",
+    "el título «Invictus» y su origen (Arthur Quiller-Couch, Oxford Book of English Verse, 1900): lo da solo Wikipedia, con discrepancia de año en sus referencias (1900/1902); el cuerpo no lo usa, y el campo work cita el primer verso, no el título",
+    "los títulos con que los periódicos reimprimieron el poema («Myself», «Song of a Strong Soul», etc.): salen de una sola fuente, no entran en el cuerpo",
+    "que el poema se publicó «sin título» en 1888: lo afirma Wikipedia; la ficha de Wikisource lista una aparición previa en Littell's Living Age del 28 de julio de 1888; no afirmar cuál fue la primera",
+    "usar la fecha 1891 para A Book of Verses: algunas páginas la dan, pero la edición de 1888 es la fecha habitual y la que da Wikipedia; se usa 1888",
+    "que Henley fue modelo de Long John Silver y que Stevenson lo dijo: no se verificó para esta pieza",
+    "atribuir el poema a Nelson Mandela: el poema es de Henley; el uso posterior no se trata aquí",
+    "Poetry Foundation dio 403: no cuenta como fuente leída; el texto completo del poema no se pudo leer en Wikisource (la página solo muestra el primer verso), por lo que la comprobación textual de los versos finales descansa en Wikipedia y en el epígrafe de Victorian Web",
+    "estrofa 1 y 2 del poema («Out of the night...», «In the fell clutch of circumstance...»): no se leyeron en esta ejecución; no citarlas"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

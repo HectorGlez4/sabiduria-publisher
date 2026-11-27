@@ -1,0 +1,78 @@
+{
+  "id": "2027-01-20-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Hrozný y la frase del pan y el agua (1915)",
+    "hook": "En 1906 apareció en Anatolia un archivo real escrito en una lengua que nadie conocía. Una frase sobre pan y agua ayudó a demostrar que era indoeuropea.",
+    "body": [
+      "En 1906 una expedición alemana halló en Boğazköy, en el centro de Anatolia, los archivos de los reyes hititas: tablillas en escritura cuneiforme. Los signos podían leerse, pero la lengua que escondían era desconocida.",
+      "En 1915 el filólogo checo Bedřich Hrozný sostuvo que era indoeuropea, de la misma familia que el griego, el latín o el sánscrito. Su ejemplo más citado es una frase: nu NINDA-an ezzatteni watar-ma ekutteni, «ahora comeréis pan y beberéis agua». Un lector actual reconoce en watar la palabra inglesa water.",
+      "Lo presentó en noviembre de 1915, en Berlín, en plena guerra, y lo publicó ese año como «Die Lösung des hethitischen Problems». En 1917 salió su gramática, Die Sprache der Hethiter.",
+      "Los textos que él descifró datan de mediados del segundo milenio a. C. Una lengua enterrada durante unos tres mil años volvió a poder leerse gracias, en parte, a una frase sobre algo tan simple como la comida."
+    ],
+    "question": "¿Qué lengua olvidada te gustaría oír hablar una vez?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Hrozný, el pan y el agua",
+    "subtitle": "Anatolia, 1906-1915",
+    "body": "Las tablillas de Boğazköy estaban en una lengua desconocida. En 1915 Bedřich Hrozný la identificó como indoeuropea, apoyándose en frases como «ahora comeréis pan y beberéis agua»."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Hititas",
+      "#Desciframiento",
+      "#Anatolia"
+    ],
+    "extended": [
+      "#Historia",
+      "#Linguistica",
+      "#EdadDelBronce",
+      "#Arqueologia",
+      "#Curiosidades",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "En 1906 una expedición alemana halló los archivos de los reyes hititas en cuneiforme pero en una lengua desconocida; Hrozný la identificó como indoeuropea; «Die Lösung des hethitischen Problems», Mitteilungen der Deutschen Orient-Gesellschaft 56 (1915): 17-50; Die Sprache der Hethiter, Leipzig, 1917; la frase «nu NINDA-an ezzatteni watar-ma ekutteni» (texto completo de la página leído).",
+      "source": "Wikipedia en inglés, «Bedřich Hrozný»",
+      "url": "https://en.wikipedia.org/wiki/Bed%C5%99ich_Hrozn%C3%BD"
+    },
+    {
+      "claim": "La misma frase, en la grafía «NU NINDA-AN EZZATENI WATAR-MA EKUTENI», traducida «Now you will eat bread and drink water»; Hrozný lo identifica como lengua indoeuropea.",
+      "source": "Radio Prague International, «Bedřich Hrozný, re-discoverer of the Hittite language» (leída vía lector de páginas; es un reportaje radiofónico, no una fuente académica)",
+      "url": "https://english.radio.cz/en/section/czechs/bedrich-hrozny-re-discoverer-of-the-hittite-language"
+    },
+    {
+      "claim": "El hitita, atestiguado en documentos cuneiformes de Anatolia central desde mediados del segundo milenio a. C., fue identificado como miembro de la familia indoeuropea (resumen de búsqueda del artículo; el PDF no se abrió).",
+      "source": "H. Craig Melchert (UCLA), artículo de 2018 en las Actas de Marburgo 2015",
+      "url": "https://linguistics.ucla.edu/people/Melchert/melchert2018AktenMarburg2015.pdf"
+    },
+    {
+      "claim": "Hrozný presentó su hallazgo en una conferencia en Berlín el 24 de noviembre de 1915 (resumen de búsqueda del artículo; no se abrió la página).",
+      "source": "Historica Olomucensia 53 (2017), «Smlouva o vydávání chetitských textů a rozluštění chetitského jazyka»",
+      "url": "https://historica.upol.cz/artkey/hol-201702-0014_smlouva-o-vydavani-chetitskych-textu-a-rozlusteni-chetitskeho-jazyka-i-cast.php"
+    }
+  ],
+  "do_not_use": [
+    "el día exacto «24 de noviembre de 1915»: sale solo de un resumen de búsqueda del artículo checo, que no se abrió; el cuerpo dice «noviembre de 1915»",
+    "la grafía «vadar-ma»: las dos fuentes leídas escriben «watar-ma»; la forma exacta de la frase varía entre ellas (ezzatteni/ezzateni, ekutteni/ekuteni, NINDA-an/NINDA-AN); el cuerpo sigue la de Wikipedia",
+    "«más antigua que el sánscrito y el griego» (Radio Prague, cita de Jay Jasanoff): no se usa porque no se contrastó en una fuente académica",
+    "«decenas de miles de tablillas» o cualquier cifra del archivo de Boğazköy: la cifra (más de 30.000) solo apareció en un resumen de modelo de Wikipedia; no se usa",
+    "Hugo Winckler y Theodor Makridi como excavadores de 1906: Winckler aparece solo en un resumen de modelo; Makridi no aparece en ninguna fuente leída; el cuerpo dice «una expedición alemana»",
+    "que Hrozný fue el único o el primero en sospechar el carácter indoeuropeo del hitita: Wikipedia señala que Knudtzon lo había argumentado en 1902 a partir de dos cartas de El-Amarna (resumen de modelo); no se afirma «primero»",
+    "que descifró la escritura: el cuneiforme ya se leía; lo que él demostró es la lengua; el cuerpo lo distingue",
+    "la comparación con el alemán essen: no se verificó en esta ejecución; solo se usa la observación de que watar recuerda a water",
+    "Britannica (403) y el DOI de Buck 1920 (403): no leídos; no contarlos como fuentes"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

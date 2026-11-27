@@ -1,0 +1,79 @@
+{
+  "id": "2027-01-20-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Ynés Mexía, botánica desde los 51 años",
+    "hook": "Ynés Mexía tenía 51 años cuando se matriculó en botánica en Berkeley. Antes de morir dejó unos 145.000 ejemplares y unas 500 especies nuevas para la ciencia.",
+    "body": [
+      "Mexía nació en 1870. En 1921 se inscribió en clases de botánica en la Universidad de California en Berkeley, con 51 años. Al año siguiente, a los 52, hizo su primera expedición botánica con esa universidad.",
+      "En 1928 recogió plantas en el actual parque nacional Denali, en Alaska: según la Academia Estadounidense de las Artes y las Ciencias, fue la primera colección general de su flora. Después viajó por Sudamérica.",
+      "Reunió unos 145.000 ejemplares, entre ellos unas 500 especies desconocidas para la ciencia y al menos dos géneros nuevos. Uno de ellos, Mexianthus, lleva su nombre.",
+      "Murió el 12 de julio de 1938, poco después de enfermar en Oaxaca durante un viaje de recolección. La botánica le llegó después de los cincuenta, y su trabajo de campo duró hasta el último año de su vida."
+    ],
+    "question": "¿Qué has dejado para empezar cuando ya sea tarde?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Ynés Mexía, botánica a los 51",
+    "subtitle": "Berkeley, 1921",
+    "body": "Se matriculó en botánica a los 51 años. Reunió unos 145.000 ejemplares, unas 500 especies nuevas, y el género Mexianthus lleva su nombre."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#YnesMexia",
+      "#Botanica",
+      "#MujeresEnLaCiencia"
+    ],
+    "extended": [
+      "#Mexico",
+      "#Berkeley",
+      "#Naturaleza",
+      "#Ciencia",
+      "#Historia",
+      "#Aprender",
+      "#Curiosidades"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Mexía nació en 1870; se matriculó en Berkeley en 1921 y empezó clases de botánica; recogió unos 145.000 ejemplares, unas 500 especies nuevas, al menos dos géneros nuevos, y más de cincuenta especies llevan su nombre; Mexianthus; primera colección general de flora del parque Denali.",
+      "source": "American Academy of Arts & Sciences, ficha de Ynés Enriquetta Julietta Mexía (leída vía lector de páginas)",
+      "url": "https://www.amacad.org/person/ynes-enriquetta-julietta-mexia"
+    },
+    {
+      "claim": "En 1922, con 52 años, Mexía hizo su primera expedición botánica con la Universidad de California en Berkeley; unos 145.000 ejemplares; dos géneros nuevos; murió el 12 de julio de 1938.",
+      "source": "JSTOR Daily, «Ynés Mexía, botanical trailblazer» (leída vía lector de páginas)",
+      "url": "https://daily.jstor.org/ynes-mexia-botanical-trailblazer"
+    },
+    {
+      "claim": "En 1921 tenía 51 años; más de 145.000 ejemplares; 500 especies no documentadas antes; dos géneros nuevos.",
+      "source": "Library of Congress, Inside Adams, Claire D'Mura, 11 de octubre de 2024 (leída vía lector de páginas)",
+      "url": "https://blogs.loc.gov/inside_adams/2024/10/ynesmexia/"
+    },
+    {
+      "claim": "Fechas de nacimiento (24 de mayo de 1870) y muerte (12 de julio de 1938); enfermó en Oaxaca y murió un mes después; expedición de 1928 a Denali; Mexianthus (leída vía lector de páginas; el tramo final de referencias no se leyó).",
+      "source": "Wikipedia en inglés, «Ynes Mexia»",
+      "url": "https://en.wikipedia.org/wiki/Ynes_Mexia"
+    }
+  ],
+  "do_not_use": [
+    "«empezó a los 55 años»: no lo sostiene ninguna fuente leída; las fechas dan 51 (1921, LOC y AMACAD) o 52 (1922, JSTOR); «mid-50s» es solo descripción general",
+    "el total de ejemplares como cifra exacta: AMACAD, JSTOR y LOC dicen unos 145.000; el encabezado de Wikipedia dice más de 150.000; el cuerpo dice «unos»",
+    "el número de especies nuevas como cifra exacta: AMACAD y LOC dicen 500, JSTOR dice unas 600; el cuerpo dice «unas 500»",
+    "una «caída en 1934»: la caída documentada fue en 1925 en México, no en 1934",
+    "la dirección del recorrido por el Amazonas: Wikipedia dice río abajo y LOC dice río arriba desde la costa; no se afirma",
+    "Sinaloa o Mazatlán como lugar de la expedición de 1925: no aparece en ninguna fuente leída",
+    "que haya viajado a Chile o Argentina: ninguna fuente leída lo confirma (solo Tierra del Fuego, en Wikipedia, sin detalle)",
+    "el 403 del archivo del Smithsonian impidió leer esa ficha; no contarla como fuente verificada",
+    "datos de sus matrimonios o de su crisis de 1909: se leyeron en Wikipedia pero no se necesitan y no se usan"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

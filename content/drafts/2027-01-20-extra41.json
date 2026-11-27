@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-20-extra41",
+  "slot": "noche",
+  "pillar": "cita",
+  "core": {
+    "subject": "Sidney y el último verso de Astrophil and Stella 1",
+    "hook": "\"Fool,\" said my Muse to me, \"look in thy heart, and write.\"\n— Sir Philip Sidney",
+    "body": [
+      "Es el último verso del primer soneto de Astrophil and Stella, la secuencia de Sidney. En español: «“Necio”, me dijo mi Musa, “mira en tu corazón y escribe”» (traducción nuestra).",
+      "El consejo llega al final de un soneto de queja. Astrophil quiere mostrar su amor en verso para que ella, «la querida», encuentre algún placer en su dolor. Pero las palabras no vienen, y el soneto termina con él mordiendo la pluma y golpeándose por despecho.",
+      "La respuesta de la Musa es breve y no suena a elogio: lo llama necio, y le dice dónde estaba lo que buscaba.",
+      "La secuencia se imprimió en 1591, en tres ediciones en cuarto. El texto que siguen las ediciones modernas es el del in-folio de 1598, revisado por la hermana de Sidney, la condesa de Pembroke."
+    ],
+    "question": "¿Qué escribirías si dejaras de buscar fuera?",
+    "quote": {
+      "text": "\"Fool,\" said my Muse to me, \"look in thy heart, and write.\"",
+      "author": "Sir Philip Sidney",
+      "work": "Astrophil and Stella, soneto 1 (impreso en 1591; texto del in-folio de 1598)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#PhilipSidney",
+      "#Soneto",
+      "#PoesiaIsabelina"
+    ],
+    "extended": [
+      "#Poesia",
+      "#Escritura",
+      "#LiteraturaInglesa",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Versos 1, 2, 13 y 14 del soneto 1: «Loving in truth, and fain in verse my love to show, / That she, dear she, might take some pleasure of my pain,--», «Biting my truant pen, beating myself for spite, / ‘Fool,’ said my Muse to me, ‘look in thy heart, and write.’»; primera impresión «[J. Charlewood] for T. Newman, 1591»; tres ediciones en cuarto en 1591; texto base del in-folio de 1598 con la revisión de la condesa de Pembroke; Sidney (1554-1586).",
+      "source": "Representative Poetry Online (Universidad de Toronto), «Astrophel and Stella I» (leída vía lector de páginas)",
+      "url": "https://rpo.library.utoronto.ca/poems/astrophel-and-stella-i"
+    },
+    {
+      "claim": "Transcripción de la edición de 1591 de Newman; «looke in thy heart and write» en la ortografía original (solo resumen de búsqueda; la página devolvió 503 al intentar abrirla).",
+      "source": "Project Gutenberg, «Sir P.S.: His Astrophel and Stella» (ebook 56375)",
+      "url": "https://gutenberg.org/cache/epub/56375/pg56375-images.html"
+    },
+    {
+      "claim": "Primera edición, Londres, Thomas Newman, 1591 (solo resumen de búsqueda; el wiki exige inicio de sesión).",
+      "source": "Universidad de Oldenburg, wiki de anglística, «Sidney, Loving in Truth (1591)»",
+      "url": "https://wiki.angl-am.uni-oldenburg.de/index.php/Sidney,_Loving_in_Truth_(1591)"
+    }
+  ],
+  "do_not_use": [
+    "decir que la secuencia se publicó «póstumamente» sin matiz: RPO da la muerte de Sidney en 1586 en su encabezado pero no dice que la impresión de 1591 sea póstuma; el cuerpo solo da las fechas de impresión",
+    "la ortografía de 1591 («looke in thy heart and write»): solo salió en un resumen de búsqueda; el verso citado es el de RPO, basado en el in-folio de 1598",
+    "la fecha de composición de la secuencia: RPO dice que la compuso antes de la boda de septiembre de 1583 (dato de la ficha, sin más detalle); no se usa",
+    "identificar a Stella con Penelope Devereux: no se verificó para esta pieza",
+    "que sea una sentencia sobre la autenticidad en general: es el cierre de un soneto sobre la dificultad de escribir; el cuerpo lo conserva en ese contexto",
+    "Gutenberg (503) y la wiki de Oldenburg (inicio de sesión) no se pudieron abrir: la verificación textual descansa en una sola fuente leída (RPO), y las otras dos solo están como resumen de búsqueda",
+    "el número de la edición in-folio como «la mejor»: RPO dice «a better text» según la edición moderna de Pollard y Wilson; se usa solo como «texto que siguen las ediciones modernas»"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
