@@ -7,8 +7,27 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 27 Nov 2026 00:05:46 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 09:43:11 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-17-re55-reel</guid>
+      <pubDate>Wed, 18 Nov 2026 02:26:00 +0000</pubDate>
+      <description><![CDATA[Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.
+
+Muhammad ibn Musa al-Juarismi vivió aproximadamente entre el 780 y el 850 y trabajó en la Casa de la Sabiduría de Bagdad, la academia que fundó el califa al-Mamún. Allí escribió el «Kitab al-mujtasar fi hisab al-yabr wa-l-muqabala». Las dos palabras del título son dos operaciones: «al-yabr» es completar, quitar de una ecuación los términos negativos; «al-muqabala» es equilibrar, reducir los términos iguales de ambos lados. De la primera salió «álgebra». La sección final del libro no es teoría: son repartos de testamentos y legados según el derecho islámico de sucesiones. El álgebra empezó como herramienta de notario.
+
+Con «algoritmo» la cosa se complica. Su aritmética llegó a Europa en una traducción latina cuyo único manuscrito conocido está en la Universidad de Cambridge, con la signatura Ms. Ii.6.5, y que empieza con dos palabras: «Dixit Algorizmi», dijo al-Juarismi. De ese nombre latinizado sale «algorismus». El título por el que se cita el manuscrito, «Algoritmi de numero Indorum», no es medieval: lo puso Baldassarre Boncompagni al editarlo en 1857. Y el Diccionario de la lengua española no suscribe esa etimología: para «algoritmo» propone «quizá del lat. tardío *algobarismus». La derivación desde el nombre propio se la reserva a «guarismo».
+
+El diccionario tiene además un tropiezo peor, y está documentado. Antonio J. Durán, del Instituto de Matemáticas de la Universidad de Sevilla, revisó siglo y medio de ediciones: la de 1956 atribuyó a al-Juarismi la invención de los logaritmos, y el error siguió impreso en 1970 y en 1984. Los logaritmos los publicó John Napier en Edimburgo en 1614: unos ocho siglos más tarde. Un nombre puede sobrevivir mil doscientos años dentro de una palabra de uso diario y seguir sin que se sepa bien de quién es.
+
+¿Cuántas palabras que usas a diario son el nombre de alguien?
+
+#SabiduriaDeBolsillo #AlJuarismi #Algebra #HistoriaDeLasMatematicas]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-17-re55-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-17-re55-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Tres mil doscientos versos contando cómo el talento de una mujer la fue destruyendo. Y al final, el poeta pone el talento en tercer lugar.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,26 +506,6 @@ No se publicaron ni se entendieron hasta finales del siglo XIX. Para entonces la
 #SabiduriaDeBolsillo #Leonardo #Anatomia #Ciencia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>No tenemos poco tiempo: hemos perdido mucho.</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-08-re56-reel</guid>
-      <pubDate>Mon, 09 Nov 2026 03:26:00 +0000</pubDate>
-      <description><![CDATA["No tenemos poco tiempo: hemos perdido mucho."
-— Séneca, Sobre la brevedad de la vida, 1.3 (hacia el año 49)
-
-Séneca no escribió eso para consolar a nadie. Lo escribió como un reproche, dirigido a un funcionario romano que administraba el abasto de trigo de la ciudad y se quejaba de no tener horas.
-
-El original latino usa un tiempo pasado: hemos perdido. No es un problema de agenda. Es una cuenta ya cerrada, de la que no se recupera nada.
-
-Casi dos mil años después seguimos diciendo la misma frase, palabra por palabra: que no nos alcanza el día.
-
-¿En qué se te fue el tiempo que hoy dirías que no tuviste?
-
-#SabiduriaDeBolsillo #Seneca #Estoicismo #Reflexiones]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re56-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-08-re56-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

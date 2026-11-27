@@ -65,12 +65,15 @@
     "Modernizar la cita del todo. Se actualizaron acentos y puntuación y se conservó ‘ajuera’; el original escribe ‘union’ sin tilde y separa los versos con rayas.",
     "Atribuir a Hernández la invención de la poesía gauchesca. Lo precedieron Bartolomé Hidalgo, Hilario Ascasubi y Estanislao del Campo, y esa filiación no se verificó aquí en detalle."
   ],
-  "status": "ready",
+  "status": "blocked",
   "targets": [
     "facebook",
     "instagram",
     "threads"
   ],
   "publish_at": "2026-11-18T03:26:00Z",
-  "results": {}
+  "results": {},
+  "blocked_reason": [
+    "variante 'gold' repetida: la ultima publicacion real (2026-10-25-extra85) tambien salio gold"
+  ]
 }
