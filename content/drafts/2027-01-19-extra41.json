@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-19-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Kipling y If— (1910)",
+    "hook": "\"If you can meet with Triumph and Disaster\nAnd treat those two impostors just the same.\"\n— Rudyard Kipling",
+    "body": [
+      "En español se conoce como \"Si\" y se enseña como consejo de padre a hijo. El poema de Kipling apareció en 1910, en el libro Rewards and Fairies, justo después del cuento Brother Square-Toes.",
+      "Años después, en su autobiografía Something of Myself, publicada en 1937, Kipling contó que esos versos estaban sacados del carácter de Leander Starr Jameson. Jameson fue el hombre que dirigió en 1895 la incursión contra la república bóer del Transvaal: un fracaso militar y político.",
+      "También escribió que entre los versos de aquel libro había uno que \"se escapó del libro y durante un tiempo corrió por el mundo\".",
+      "El consejo sobre el triunfo y el desastre, entonces, no salió de un manual: salió de mirar a un hombre que había conocido las dos cosas. Los críticos advierten que no conviene exagerar el peso de Jameson en el poema, y que la propia memoria de Kipling es la primera vez que el vínculo aparece impreso."
+    ],
+    "question": "¿Cuál de las dos impostoras te cuesta más tratar igual?",
+    "quote": {
+      "text": "If you can meet with Triumph and Disaster And treat those two impostors just the same.",
+      "author": "Rudyard Kipling",
+      "work": "If—, en Rewards and Fairies (1910)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#RudyardKipling",
+      "#Poesia",
+      "#If"
+    ],
+    "extended": [
+      "#LiteraturaInglesa",
+      "#Frases",
+      "#Reflexiones",
+      "#Aprender",
+      "#Historia",
+      "#Poemas"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Publicado en Rewards and Fairies (1910) tras el cuento Brother Square-Toes; Kipling dijo en Something of Myself (p. 146 de la edición citada) que los versos fueron «sacados del carácter de Jameson» y que uno de los poemas del libro «se escapó del libro y durante un tiempo corrió por el mundo».",
+      "source": "The Kipling Society, Readers' Guide, «If—» (leída)",
+      "url": "https://www.kiplingsociety.co.uk/readers-guide/rg_if1.htm"
+    },
+    {
+      "claim": "Primera publicación en Rewards and Fairies (1910); escrito como homenaje a Leander Starr Jameson, líder del fallido Jameson Raid; versos literales: «If you can meet with Triumph and Disaster / And treat those two impostors just the same:».",
+      "source": "Wikipedia en inglés, «If—» (leída)",
+      "url": "https://en.wikipedia.org/wiki/If%E2%80%94"
+    },
+    {
+      "claim": "Oliver Tearle advierte que sería fácil exagerar el papel del Jameson Raid en el poema y que la autobiografía es la primera vez que ese vínculo aparece impreso; Jameson dirigió la incursión de 1895 contra la república bóer del Transvaal.",
+      "source": "Interesting Literature (Oliver Tearle, Loughborough University), análisis breve de If— (solo el resumen de búsqueda; no se abrió la página)",
+      "url": "https://interestingliterature.com/2017/04/a-short-analysis-of-rudyard-kiplings-if/"
+    }
+  ],
+  "do_not_use": [
+    "fechar el poema en 1895 como si se hubiera publicado entonces: algunas fuentes dan 1895 como composición, que no se pudo verificar; Wikipedia y la Kipling Society solo confirman publicación en 1910",
+    "decir que Kipling lo escribió pensando en su hijo John: el poema adopta la forma de consejo a un hijo, pero Kipling vinculó su origen a Jameson; el cuerpo no afirma una intención paterna",
+    "citar el primer verso como su frase más conocida sin el contexto: el verso sobre mantener la cabeza («If you can keep your head...») sí es de Kipling; esta pieza usa los dos versos sobre el triunfo y el desastre",
+    "la puntuación final de los dos versos: Wikipedia da dos puntos; la cita termina con punto; el texto completo del poema no se pudo contrastar con Project Gutenberg (503 al intentarlo) ni con la Poetry Foundation (403)",
+    "atribuir a Jameson el carácter ejemplar del poema sin matiz: Tearle advierte que el vínculo aparece primero en la autobiografía de 1937",
+    "traducción propia de «Si»: no hay traducción al español verificada en esta ejecución; el cuerpo cita en inglés y explica en español"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

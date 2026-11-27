@@ -1,0 +1,74 @@
+{
+  "id": "2027-01-19-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Huidobro y Arte poética (1916)",
+    "hook": "\"Por qué cantáis la rosa, ¡oh Poetas!\nHacedla florecer en el poema;\"\n— Vicente Huidobro",
+    "body": [
+      "Huidobro lo escribió como un reproche a los poetas que describen. \"Arte poética\" abre El espejo de agua, publicado en Buenos Aires en 1916, y su primera estrofa pide que el verso sea \"como una llave / que abra mil puertas\".",
+      "La orden sobre la rosa no prohíbe escribirle a las rosas. Pide que el poema no se limite a nombrarla: que la haga existir ahí, con su propia vida. Unos versos después, el poema lo dice sin rodeos: \"El Poeta es un pequeño Dios.\"",
+      "Esa idea fue la base del creacionismo, el movimiento que Huidobro defendió: el poema como objeto nuevo, no como copia de la naturaleza.",
+      "Cuando se cita sola, la frase parece un consejo de estilo. En el poema forma parte de una declaración de principios, y el verso siguiente no cierra la frase: la deja abierta con un punto y coma."
+    ],
+    "question": "¿Qué has nombrado tantas veces que ya no la ves florecer?",
+    "quote": {
+      "text": "Por qué cantáis la rosa, ¡oh Poetas! Hacedla florecer en el poema;",
+      "author": "Vicente Huidobro",
+      "work": "Arte poética, en El espejo de agua (Buenos Aires, 1916)",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "gold"
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#VicenteHuidobro",
+      "#Poesia",
+      "#Creacionismo"
+    ],
+    "extended": [
+      "#PoesiaChilena",
+      "#ArtePoetica",
+      "#LiteraturaLatinoamericana",
+      "#Frases",
+      "#FrasesEnEspanol",
+      "#Reflexiones"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema Arte poética: «Que el verso sea como una llave / Que abra mil puertas», «Por qué cantáis la rosa, ¡oh Poetas! / Hacedla florecer en el poema ;» y «El Poeta es un pequeño Dios»; ficha: «Del poemario El espejo de agua (1916)».",
+      "source": "USC, antología Liter·Alia (Scalar), «Arte poética (1916)» (leída; el texto va en la entrada enlazada de la misma antología)",
+      "url": "https://scalar.usc.edu/works/literalia/arte-potica-1916"
+    },
+    {
+      "claim": "El espejo de agua se publicó en Buenos Aires en 1916 (Orión) y se abre con Arte poética; la fecha de esa edición fue cuestionada por Pierre Reverdy y otros, y René de Costa documentó su autenticidad.",
+      "source": "Resultados de búsqueda sobre el ensayo de Oscar Hahn (Revista de Crítica Literaria Latinoamericana) y la introducción de Federico Schopf (Universidad de Chile); no se abrió ninguna de las dos páginas completas, solo los resúmenes de búsqueda",
+      "url": "https://uchile.cl/cultura/huidobro/ensayo_federico_schopf.htm"
+    },
+    {
+      "claim": "Arte poética figura como poema de El espejo de agua (1916) en material didáctico universitario de literatura hispanoamericana (el PDF lista el poema; no se pudo abrir).",
+      "source": "UNAM, Facultad de Ingeniería, material didáctico (solo el resumen de búsqueda)",
+      "url": "https://www.ingenieria.unam.mx/dcsyhfi/material_didactico/Literatura_Hispanoamericana_Contemporanea/Autores_H/HUIDOBRO/Arte.pdf"
+    }
+  ],
+  "do_not_use": [
+    "decir que 1916 es una fecha indiscutida: Pierre Reverdy y otros acusaron a Huidobro de adelantarla; René de Costa defendió su autenticidad; el cuerpo solo dice «publicado en Buenos Aires en 1916», que es la fecha de la ficha, y se queda ahí",
+    "dar la editorial o el número de páginas: no se pudieron verificar en esta ejecución (Orión sale de un resumen de búsqueda)",
+    "citar «El poeta es un pequeño Dios» con minúscula: la página consultada pone «Poeta» con mayúscula",
+    "la puntuación exacta tras «poema»: la página transcribe «poema ;» con espacio; se normaliza a «poema;»; la edición original no se pudo consultar",
+    "atribuir a Huidobro la frase «el poeta es un pequeño dios» como sentencia suelta: es un verso del poema y va con su contexto",
+    "no se pudo comprobar con un escaneo de la edición de 1916; la verificación descansa en una antología universitaria en línea",
+    "las lecturas en PDF del poema (UNAM, universidades chilenas): no se abrieron; no contarlas como fuentes verificadas del texto"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

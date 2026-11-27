@@ -1,0 +1,73 @@
+{
+  "id": "2027-01-19-noche",
+  "slot": "noche",
+  "pillar": "civilizacion",
+  "core": {
+    "subject": "Atrahasis y el diluvio por el ruido",
+    "hook": "En un poema mesopotámico de hace casi cuatro mil años, los dioses deciden destruir a la humanidad por una razón concreta: hace demasiado ruido.",
+    "body": [
+      "Es el Atrahasis, escrito en acadio. Cuenta que los seres humanos se multiplicaron hasta perturbar con su ruido a los dioses, y que estos buscaron la forma de reducirlos.",
+      "Primero llegaron plagas y sequías, y la humanidad sobrevivió a cada una. Al final se decretó un diluvio. Pero el dios Enki, que sabía lo decidido, envió un sueño a Atrahasis, el hombre que da nombre al poema, para que se salvara.",
+      "La copia más antigua que se conoce se fecha por su colofón en el reinado de Amí-Saduqa de Babilonia, entre 1646 y 1626 a.C., aproximadamente. Un fragmento conservado en la Morgan Library lleva el título antiguo del poema, tomado de su primer verso: «Cuando los dioses eran hombres».",
+      "Lo notable no es que haya un diluvio: es la causa. En esta versión, la catástrofe no nace de un pecado moral sino de una molestia, y la humanidad se salva por la astucia de un dios que contradice a otro."
+    ],
+    "question": "¿Qué dice de una cultura que explica su peor catástrofe con una molestia?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "El diluvio por el ruido",
+    "subtitle": "Atrahasis, Mesopotamia",
+    "body": "En el poema acadio de Atrahasis, la humanidad crece tanto que su ruido perturba a los dioses. Tras plagas y sequías, se decreta un diluvio, y Enki avisa en sueños a Atrahasis. La copia más antigua se fecha hacia 1650 a.C."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#Atrahasis",
+      "#Mesopotamia",
+      "#Mitologia"
+    ],
+    "extended": [
+      "#Diluvio",
+      "#Acadio",
+      "#Babilonia",
+      "#HistoriaAntigua",
+      "#Epopeya",
+      "#Curiosidades",
+      "#Aprender"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Los seres humanos se multiplicaron hasta perturbar a los dioses con su ruido (Tablilla I); Namtar envía una plaga, Adad la sequía y las tormentas, luego Nisaba; la copia más antigua se fecha por colofón en el reinado de Ammi-Saduqa (1646-1626 a.C.).",
+      "source": "Wikipedia en inglés, «Atra-Hasis» (leído solo el primer tramo, unos 40 000 de 70 000 caracteres; el artículo lleva avisos de citas insuficientes)",
+      "url": "https://en.wikipedia.org/wiki/Atra-Hasis"
+    },
+    {
+      "claim": "Los hombres hacen tanto ruido que los dioses deciden exterminarlos; el plan del diluvio lo traiciona Enki, que envía un sueño a Atrahasis; la tercera versión, en tres tablillas, se escribió en el reinado de Ammi-Saduqa (c. 1647-c. 1626 a.C.).",
+      "source": "Livius.org, «The Great Flood: Atrahasis» (leída completa; la página tiene lagunas en el texto original)",
+      "url": "https://www.livius.org/articles/misc/great-flood/flood3_t-arahasis/"
+    },
+    {
+      "claim": "Fragmento de la tablilla II con colofón que da el título «Cuando los dioses eran hombres», el escriba y la fecha: Sippar, undécimo año de Ammi-Saduqa.",
+      "source": "The Morgan Library & Museum, ficha de la tablilla (solo el resumen de búsqueda; la página no se abrió)",
+      "url": "https://www.themorgan.org/node/3492"
+    }
+  ],
+  "do_not_use": [
+    "presentarlo como la fuente directa del diluvio de Noé: la relación entre ambos relatos es objeto de debate; el cuerpo no la afirma",
+    "decir que es la historia de diluvio más antigua: Wikipedia menciona versiones de época Ur III, y no se pudo comprobar",
+    "dar el nombre del escriba: Morgan dice Ku-Aya; una página divulgativa dice Nur-Aya; no se resolvió",
+    "situar las tablillas en el British Museum o en Nueva York: solo una página divulgativa lo dice; no se verificó",
+    "la duración de cada plaga: ninguna fuente leída la da en el texto abierto",
+    "fechar la copia en 1650 a.C. con precisión: Wikipedia da 1646-1626 a.C. por el colofón y c. 1650 a.C. para la recensión paleobabilónica más completa; Livius da c. 1647-c. 1626; el cuerpo dice «entre 1646 y 1626 a.C., aproximadamente»",
+    "que Enlil sea el único autor del diluvio o que el ruido sea el único motivo en todas las versiones: solo se verificó el ruido como motivo de la Tablilla I y de la síntesis de Livius",
+    "la traducción de «Atrahasis» como «extremadamente sabio»: no se verificó en esta ejecución"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}

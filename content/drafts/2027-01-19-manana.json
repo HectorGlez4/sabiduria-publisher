@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-19-manana",
+  "slot": "manana",
+  "pillar": "arte-ciencia",
+  "core": {
+    "subject": "Shen Kuo y el bambú petrificado de Yanzhou",
+    "hook": "Hacia 1080, un derrumbe destapó bambúes petrificados donde nadie recordaba haber visto bambú. Shen Kuo dedujo que el clima de aquel lugar había sido otro.",
+    "body": [
+      "Shen Kuo (1031-1095) fue funcionario y científico de la dinastía Song. Hacia 1080, en Yanzhou, hoy Yan'an, la orilla de un río se desplomó y dejó a la vista un bosquecillo de bambúes convertidos en piedra. En esa región, según el relato, no crecía bambú en la memoria de los vivos.",
+      "Pudo haberlo tomado por una rareza. Razonó al revés: si el bambú había crecido allí, las condiciones de aquel lugar tuvieron que ser distintas en tiempos remotos. El clima, concluyó, no era algo fijo, y podía cambiar a lo largo de periodos muy largos.",
+      "Lo dejó escrito en los Ensayos de la charca de los sueños, que redactó hacia 1088. En el mismo libro registró que la aguja imantada no apunta exactamente al norte verdadero, y que el desvío puede medirse.",
+      "Los divulgadores suelen llamarlo el primer paleoclimatólogo. Más sobrio es lo que sí consta: ante un hallazgo que no encajaba, escribió una explicación y la puso por escrito."
+    ],
+    "question": "¿Qué hallazgo que no encaja has descartado por parecer una rareza?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "cream",
+    "title": "Shen Kuo y el bambú de piedra",
+    "subtitle": "Yanzhou, hacia 1080",
+    "body": "Un derrumbe destapó bambúes petrificados en una región sin bambú. Shen Kuo concluyó que el clima podía cambiar durante periodos muy largos, y lo escribió hacia 1088 en los Ensayos de la charca de los sueños."
+  },
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [
+      "#ShenKuo",
+      "#DinastiaSong",
+      "#HistoriaDeLaCiencia"
+    ],
+    "extended": [
+      "#Clima",
+      "#China",
+      "#Paleontologia",
+      "#Ciencia",
+      "#Curiosidades",
+      "#Aprender",
+      "#Historia"
+    ]
+  },
+  "sources": [
+    {
+      "claim": "Hacia 1080 un gran derrumbe en la orilla de un río cerca de Yanzhou (hoy Yan'an) dejó a la vista un bosquecillo de bambúes petrificados; en 1080 no había bambú en la región en la memoria de los vivos; Shen concluyó que «el clima no era algo estático, podía cambiar durante largos periodos»; el libro es Dream Pool Essays.",
+      "source": "Geological Society of London (blog), «The first evidence for climate change», 2014 (leída completa)",
+      "url": "https://blog.geolsoc.org.uk/2014/03/03/the-first-evidence-for-climate-change/"
+    },
+    {
+      "claim": "Shen Kuo vivió 1031-1095; Dream Pool Essays (Mengxi Bitan) de 1088; hipótesis de cambio climático gradual a partir de bambúes petrificados; hipótesis geológica de formación de tierras.",
+      "source": "Wikipedia en inglés, «Shen Kuo» (leído solo el primer tramo, unos 40 000 de 214 000 caracteres)",
+      "url": "https://en.wikipedia.org/wiki/Shen_Kuo"
+    },
+    {
+      "claim": "Shen reconoció que el norte magnético no es el norte verdadero y calculó correctamente la declinación; los Dream Pool Essays se escribieron hacia 1088; dedujo un cambio de clima a partir del bambú petrificado en una provincia seca del norte.",
+      "source": "AAAS (Steven A. Edwards), «Shen Kuo, the first Renaissance man?», 15 de marzo de 2012",
+      "url": "https://www.aaas.org/shen-kuo-first-renaissance-man"
+    }
+  ],
+  "do_not_use": [
+    "«primer paleoclimatólogo» o «primera referencia al cambio climático» dicho como hecho: es afirmación de divulgación (el blog de la Geological Society y la AAAS la hacen con reserva); en el cuerpo va atribuida a «los divulgadores»",
+    "un valor numérico para la declinación magnética de Shen: ninguna fuente leída lo da en el texto verificado",
+    "la fecha exacta del hallazgo del bambú: el blog dice «hacia 1080»; la AAAS no da fecha; no afirmar un año preciso",
+    "el hábitat antiguo: el blog subraya que el bambú prefiere sitios húmedos y fríos; Wikipedia dice «seco» para el norte actual; el cuerpo evita describir el clima antiguo con adjetivos",
+    "el número de ensayos del libro (507) y la reorganización de 1166: salen de un resumen de modelo de Wikipedia, no del texto leído",
+    "el blog de la Geological Society confunde «Western Xia» con «Western Xiu»; no copiar su ortografía"
+  ],
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ],
+  "status": "draft"
+}
