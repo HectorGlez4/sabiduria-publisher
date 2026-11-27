@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-29-noche",
+  "id": "2026-11-29-extra82",
   "slot": "noche",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,20 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Zhuangzi", "#Taoismo", "#FilosofiaChina"],
-    "extended": ["#Citas", "#China", "#Lenguaje", "#Filosofia", "#Historia", "#Pensamiento", "#Sabiduria"]
+    "topic": [
+      "#Zhuangzi",
+      "#Taoismo",
+      "#FilosofiaChina"
+    ],
+    "extended": [
+      "#Citas",
+      "#China",
+      "#Lenguaje",
+      "#Filosofia",
+      "#Historia",
+      "#Pensamiento",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -53,5 +65,12 @@
     "Que la última pregunta sea un chiste intencional del autor: se lee así en algunas notas de traducción (resumen de búsqueda); en la pieza se dice solo que el hecho de hablar exigiría palabras.",
     "Verificación incompleta: ctext.org y la edición de Legge no se leyeron; Watson se leyó en parte; la cita 26:13 de la SEP corresponde al mismo pasaje pero la numeración no se comprobó contra la edición. Revisar antes de encolar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-29T20:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }

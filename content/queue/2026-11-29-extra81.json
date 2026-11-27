@@ -1,5 +1,5 @@
 {
-  "id": "2026-11-28-tarde",
+  "id": "2026-11-29-extra81",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -24,8 +24,21 @@
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Leopardi", "#LInfinito", "#PoesiaItaliana"],
-    "extended": ["#Citas", "#Poesia", "#Romanticismo", "#Italia", "#Recanati", "#Sabiduria", "#Literatura", "#Historia"]
+    "topic": [
+      "#Leopardi",
+      "#LInfinito",
+      "#PoesiaItaliana"
+    ],
+    "extended": [
+      "#Citas",
+      "#Poesia",
+      "#Romanticismo",
+      "#Italia",
+      "#Recanati",
+      "#Sabiduria",
+      "#Literatura",
+      "#Historia"
+    ]
   },
   "sources": [
     {
@@ -39,8 +52,7 @@
       "url": "https://en.wikipedia.org/wiki/L%27infinito"
     },
     {
-      "claim": "Escrito en Recanati en 1819; primera impresión en el Nuovo Ricoglitore (Milán, diciembre de 1825), luego Versi (Bolonia, 1826) y Canti (Florencia, Piatti, 1831); idillio de 15 endecasílabos sueltos; autógrafo en la Biblioteca Nazionale de Nápoles; el seto limita la vista. Solo por resumen de búsqueda de varias páginas escolares (sololibri.net, studenti.it, sapere.it); no se leyó una edición crítica."
-      ,
+      "claim": "Escrito en Recanati en 1819; primera impresión en el Nuovo Ricoglitore (Milán, diciembre de 1825), luego Versi (Bolonia, 1826) y Canti (Florencia, Piatti, 1831); idillio de 15 endecasílabos sueltos; autógrafo en la Biblioteca Nazionale de Nápoles; el seto limita la vista. Solo por resumen de búsqueda de varias páginas escolares (sololibri.net, studenti.it, sapere.it); no se leyó una edición crítica.",
       "source": "sololibri.net, L'infinito, analisi del testo",
       "url": "https://www.sololibri.net/L-infinito-Leopardi-analisi-testo.html"
     }
@@ -54,5 +66,12 @@
     "La traducción al español es propia, no de una edición concreta.",
     "Verificación incompleta: ninguna edición crítica ni PDF consultado; los datos de publicación (1825, 1826, 1831) vienen de resúmenes de búsqueda. Revisar antes de encolar."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-11-29T15:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
