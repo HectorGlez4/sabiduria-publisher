@@ -2,7 +2,7 @@
   "id": "2026-11-17-re53-reel",
   "slot": "tarde",
   "pillar": "cita",
-  "status": "ready",
+  "status": "published",
   "core": {
     "subject": "Nguyễn Du y el cierre del Truyện Kiều",
     "hook": "Tres mil doscientos versos contando cómo el talento de una mujer la fue destruyendo. Y al final, el poeta pone el talento en tercer lugar.",
@@ -90,6 +90,12 @@
     "facebook_reel"
   ],
   "publish_at": "2026-11-17T22:26:00Z",
-  "results": {},
+  "results": {
+    "facebook_reel": {
+      "post_id": "1618172492810655",
+      "url": "/reel/1618172492810655/",
+      "published_at": "2026-11-26T23:43:35.532510+00:00"
+    }
+  },
   "reemision_de": "2026-10-04-extra81"
 }
