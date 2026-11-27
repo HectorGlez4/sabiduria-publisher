@@ -7,8 +7,28 @@
     <link>https://sabiduriadebolsillo.net/</link>
     <description>Historia, filosofía y curiosidades verificadas antes de salir.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 27 Nov 2026 09:43:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 22:33:26 +0000</lastBuildDate>
     <atom:link href="https://sabiduria.work-it.fr/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Se cita como prueba de que al ser humano le gusta ver el desastre ajeno desde lugar seguro. Lucrecio lo desmiente en el verso siguiente, y ese verso casi nunca se copia.</title>
+      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
+      <guid isPermaLink="false">sdb-2026-11-18-re51-reel</guid>
+      <pubDate>Wed, 18 Nov 2026 17:26:00 +0000</pubDate>
+      <description><![CDATA["Dulce es, cuando en el vasto mar los vientos revuelven las aguas, contemplar desde tierra el duro trabajo de otro; no porque ver a nadie en apuros sea un gozo agradable, sino porque es dulce advertir de qué males estás libre."
+— Lucrecio, «De rerum natura», libro II, versos 1-4 (h. mediados del siglo I a.C.)
+
+El libro II de «De rerum natura» empieza con una escena marina. Hay tormenta, un hombre en apuros mar adentro y alguien que lo mira desde la playa. Son cuatro versos, y las dos primeras palabras latinas —«suave, mari magno»— se volvieron proverbiales solas. El poema entero son unos siete mil cuatrocientos hexámetros en seis libros, escritos hacia mediados del siglo I a.C. para explicar en verso la física de Epicuro: todo está hecho de átomos y vacío, y no hay nada que temer después de la muerte.
+
+El tercer verso es el que cambia el sentido de los dos primeros: «non quia vexari quemquamst iucunda voluptas». No porque ver a nadie en apuros sea un gozo agradable. El placer no está en el naufragio; está en caer en la cuenta de qué males no le están tocando a uno. Y Lucrecio tampoco se queda en la orilla. Ocho versos más abajo escribe que nada es más dulce que habitar las alturas serenas, fortificadas por la doctrina de los sabios. La playa no es el destino del pasaje. Es el escalón bajo.
+
+En 1625, Francis Bacon abrió su ensayo «De la verdad» con esta misma imagen: el placer de mirar los barcos sacudidos desde la costa, el de ver una batalla desde la ventana de un castillo, y por encima de ambos el de estar en la altura de la verdad y ver desde allí los errores y las tempestades del valle. Y le añadió una condición que no está en el latín: que esa mirada sea con compasión y no con soberbia. El texto llegó hasta él por poco: los dos manuscritos más antiguos que lo conservan, el Códice Oblongus y el Códice Quadratus, están en Leiden y son del siglo IX; el primero se copió en la escuela palatina de Carlomagno poco después del año 800.
+
+¿Desde dónde está mirando usted lo que les pasa a los demás?
+
+#SabiduriaDeBolsillo #Lucrecio #Citas #Epicureismo]]></description>
+      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-18-re51-reel.png" type="image/png" length="0"/>
+      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-18-re51-reel.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Tres palabras del castellano —álgebra, guarismo y algoritmo— vienen del mismo hombre y del mismo libro, escrito en Bagdad hacia el año 820. La parte final de ese libro trata de repartir herencias.</title>
       <link>https://sabiduriadebolsillo.net/?de=facebook</link>
@@ -487,25 +507,6 @@ Lo tradujeron un rey de Inglaterra, Chaucer y la reina Isabel I.
 #SabiduriaDeBolsillo #Boecio #Filosofia #EdadMedia]]></description>
       <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re53-reel.png" type="image/png" length="0"/>
       <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re53-reel.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ</title>
-      <link>https://sabiduriadebolsillo.net/?de=facebook</link>
-      <guid isPermaLink="false">sdb-2026-11-09-re51-reel</guid>
-      <pubDate>Mon, 09 Nov 2026 17:26:00 +0000</pubDate>
-      <description><![CDATA[LEONARDO DIBUJÓ EL CUERPO HUMANO MEJOR QUE NADIE Y LA MEDICINA NO SE ENTERÓ
-
-Diseccionó alrededor de treinta cuerpos humanos a lo largo de su vida. En el invierno de 1510 y 1511 trabajó en la facultad de medicina de Pavía, junto al catedrático de anatomía Marcantonio della Torre, y solo esa temporada pudo abrir hasta veinte cadáveres. De ahí salieron cientos de hojas de dibujos con miles de palabras de notas.
-
-Los dos planeaban un tratado ilustrado. Della Torre murió de peste en 1511, a los treinta años. Leonardo siguió solo, nunca lo terminó, y murió en 1519. Sus papeles pasaron a su discípulo Francesco Melzi, un coleccionista los encuadernó después en un álbum, y ese álbum entró en la colección real inglesa hacia 1670. Ahí se quedaron.
-
-No se publicaron ni se entendieron hasta finales del siglo XIX. Para entonces la anatomía moderna llevaba más de tres siglos en marcha: la había fundado otro libro, impreso en 1543.
-
-¿Qué guardas terminado a medias, esperando el momento perfecto?
-
-#SabiduriaDeBolsillo #Leonardo #Anatomia #Ciencia]]></description>
-      <enclosure url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" type="image/png" length="0"/>
-      <media:content url="https://raw.githubusercontent.com/HectorGlez4/sabiduria-publisher/main/assets/2026-11-09-re51-reel.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>
