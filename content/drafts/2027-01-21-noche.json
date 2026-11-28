@@ -1,0 +1,59 @@
+{
+  "id": "2027-01-21-noche",
+  "slot": "noche",
+  "pillar": "filosofia",
+  "core": {
+    "subject": "Ni Yue y el caballo blanco del paso fronterizo",
+    "hook": "Un debatiente que probaba que un caballo blanco no es un caballo pagó el impuesto del caballo al cruzar la frontera.",
+    "body": [
+      "«El caballo blanco no es un caballo» es una de las paradojas más famosas de la China antigua. Se asocia sobre todo a Gongsun Long, que vivió hacia 320-250 a. C. y sirvió al señor de Pingyuan, en el estado de Zhao. De los catorce escritos que se le atribuían se conservan seis.",
+      "Pero la anécdota del impuesto no es suya. Está en el Han Feizi, y su protagonista es Ni Yue, de Song, «buen debatiente»: con esa tesis, dice el texto, convenció a los polemistas de Jixia, en Qi. Y cuando cruzó un paso de frontera montado en un caballo blanco, pagó el impuesto por el caballo. El texto no nombra a Gongsun Long.",
+      "La moraleja está en la frase de cierre: quien se apoya en palabras vacías puede vencer a un reino entero; quien examina los hechos y comprueba las formas no puede engañar a un solo hombre. Los estudiosos siguen discutiendo si la tesis niega que el caballo blanco sea un caballo o solo que sea lo mismo que un caballo: la ambigüedad de «ser» entre pertenecer a una clase e identificarse con ella. El guardia de la frontera no tenía ese problema."
+    ],
+    "question": "¿En qué discusión tuya habría ganado la lógica y perdido la realidad?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "El caballo blanco y la frontera",
+    "subtitle": "Han Feizi y el debatiente Ni Yue",
+    "body": "Con palabras vacías se vence a un reino; examinando los hechos no se engaña ni a un solo hombre."
+  },
+  "sources": [
+    {
+      "claim": "Texto chino del Han Feizi, «Waichu shuo zuo shang»: «兒說，宋人，善辯者也，持「白馬非馬也」服齊稷下之辯者。乘白馬而過關，則顧白馬之賦。故籍之虚辭，則能勝一國；考實按形，不能謾於一人。» Ni Yue de Song, buen debatiente, sostenía que el caballo blanco no es caballo y convenció a los debatientes de Jixia de Qi; al cruzar la frontera en un caballo blanco, pagó el impuesto del caballo; moraleja: con palabras vacías se vence a un reino, examinando hechos y formas no se engaña a un solo hombre. Gongsun Long no aparece nombrado.",
+      "source": "Wikisource chino, Han Feizi, «外儲說左上»",
+      "url": "https://zh.wikisource.org/wiki/韓非子/外儲說左上"
+    },
+    {
+      "claim": "Gongsun Long fue asesor del señor de Pingyuan (m. 252 a. C.) en el estado de Zhao; su obra consta de catorce rollos según el Han shu y hoy se conservan cinco diálogos breves y una introducción; el Bai ma lun plantea «el blanco no es el caballo; un caballo blanco es un caballo junto con el blanco»; la ambigüedad entre «mismo» como clase e identidad es el centro de la lectura; hay amplio consenso en que el texto probablemente no trata de universales.",
+      "source": "Stanford Encyclopedia of Philosophy, «School of Names» (secciones 2 y 6)",
+      "url": "https://plato.stanford.edu/entries/school-names/"
+    },
+    {
+      "claim": "Fechas aproximadas de Gongsun Long (c. 320-250 a. C.); solo seis de los catorce ensayos originales se conservan.",
+      "source": "Wikipedia, «Gongsun Long»",
+      "url": "https://en.wikipedia.org/wiki/Gongsun_Long"
+    },
+    {
+      "claim": "El diálogo 白馬論 plantea «¿Se puede afirmar que un caballo blanco no es un caballo?»; el Han Feizi contiene otras referencias tempranas a la tesis; el texto recibido conserva seis de los catorce capítulos registrados.",
+      "source": "Wikipedia, «White Horse Dialogue»",
+      "url": "https://en.wikipedia.org/wiki/White_Horse_Dialogue"
+    }
+  ],
+  "do_not_use": [
+    "Que Gongsun Long pagó el impuesto del caballo. El pasaje del Han Feizi protagoniza a Ni Yue (兒說) y no nombra a Gongsun Long. La anécdota circula atribuida a Gongsun Long en muchos sitios; no se encontró fuente primaria que lo respalde. No reintroducirlo.",
+    "Fechas de Ni Yue. No aparecen en ninguna fuente leída; no decir si fue anterior o posterior a Gongsun Long.",
+    "Citar el comienzo chino del Bai ma lun. La página de Wikisource chino devolvió 404 y ctext.org bloqueó la lectura; no se verificó el texto original del diálogo, solo la cita inglesa «Can ‘a white horse is not a horse’ be asserted?» y la frase de SEP.",
+    "Afirmar una única interpretación del diálogo (sofisma, lógica de clases, mereología, sustantivos de masa de Hansen). SEP la presenta como disputada. La pieza solo dice que se discute si niega identidad o pertenencia.",
+    "La cifra de «catorce» escritos como dato de edición moderna: es la cifra del registro bibliográfico antiguo (Han shu, según SEP); Wikipedia habla de seis conservados y SEP de cinco diálogos breves y una introducción: en conjunto, seis piezas. No dar un número de capítulos distinto.",
+    "La traducción de la moraleja es nuestra, hecha sobre el texto chino leído; no atribuirla a un traductor publicado. «顧» se tradujo como «pagar» según el contexto: dato interpretativo, no verificado en un glosario.",
+    "Que el paso de frontera fuera de un estado concreto. El texto no lo dice."
+  ],
+  "status": "draft",
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
+}

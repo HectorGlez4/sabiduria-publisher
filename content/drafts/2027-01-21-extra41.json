@@ -1,0 +1,68 @@
+{
+  "id": "2027-01-21-extra41",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Stevenson y el epitafio de Vaea",
+    "hook": "«Aquí yace donde quiso estar.» Stevenson escribió su epitafio catorce años antes de morir.",
+    "body": [
+      "Se titula «Requiem» y son ocho versos. Los publicó Robert Louis Stevenson en Underwoods (Londres, Chatto and Windus, 1887), como poema XXI del libro primero. Empieza con una orden: «Under the wide and starry sky, / Dig the grave and let me lie». Bajo el cielo ancho y estrellado, cava la tumba y déjame yacer.",
+      "El poema lleva su propia instrucción: «This be the verse you grave for me». Que este sea el verso que grabes para mí. Según Victorianweb, el primer borrador es de 1880, cuando Stevenson, enfermo, había viajado a San Francisco para casarse con Fanny Osbourne. Murió el 3 de diciembre de 1894, a los 44 años, en Samoa. Al día siguiente, dice Wikipedia, su ataúd fue llevado por samoanos a la cumbre del monte Vaea. En su tumba, según Victorianweb, están las líneas de «Requiem», como él pidió.",
+      "Es un epitafio escrito con serenidad por un hombre enfermo y joven, y la vida tardó catorce años en cumplirlo. El poema dice que él vivió contento y que se acostó de buena gana, y no pide otra cosa que volver a donde quería estar."
+    ],
+    "question": "¿Dónde querrías haber llegado cuando todo termine?",
+    "quote": {
+      "text": "Aquí yace donde quiso estar: el marino vuelto del mar, y el cazador vuelto de la colina.",
+      "author": "Robert Louis Stevenson",
+      "work": "Requiem, en Underwoods (1887); trad. nuestra",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto exacto de «Requiem»: «Under the wide and starry sky, / Dig the grave and let me lie. / Glad did I live and gladly die, / And I laid me down with a will. / This be the verse you grave for me: / Here he lies where he longed to be; / Home is the sailor; home from sea, / And the hunter home from the hill.» Libro I, poema XXI, p. 43, de Underwoods (Londres, Chatto and Windus, 1887).",
+      "source": "Wikisource, Underwoods (Stevenson), «Requiem» y portada",
+      "url": "https://en.wikisource.org/wiki/Underwoods_(Stevenson)/Requiem"
+    },
+    {
+      "claim": "Mismo texto, con una coma en lugar del punto y coma en el verso 7; dominio público.",
+      "source": "Academy of American Poets, poets.org, «Requiem»",
+      "url": "https://poets.org/poem/requiem"
+    },
+    {
+      "claim": "Primer borrador de 1880, en San Francisco, cuando Stevenson enfermó yendo a casarse con Fanny Osbourne, contra la fecha del manuscrito; en su tumba están, como él dispuso, las líneas de «Requiem»; el verso 7 en la carta de febrero de 1880 aparece como «Home is the sailor, home from sea».",
+      "source": "The Victorian Web, «Requiem» (Stevenson)",
+      "url": "https://victorianweb.org/authors/stevenson/requiem.html"
+    },
+    {
+      "claim": "El epitafio está inscrito en la tumba de Stevenson en el monte Vaea; al día siguiente de su muerte (3 de diciembre de 1894) su ataúd fue llevado por samoanos a la cumbre; nota 4: las ediciones suelen decir «home from sea» y la lápida lleva el artículo.",
+      "source": "Wikipedia, «Mount Vaea»",
+      "url": "https://en.wikipedia.org/wiki/Mount_Vaea"
+    },
+    {
+      "claim": "Murió el 3 de diciembre de 1894 en Vailima, Upolu (Samoa), a los 44 años; lugar de descanso: monte Vaea.",
+      "source": "Wikipedia, «Robert Louis Stevenson»",
+      "url": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson"
+    }
+  ],
+  "do_not_use": [
+    "Si la lápida dice «home from sea» o «home from the sea». Wikipedia (nota 4, con una foto de agencia) dice que la piedra lleva el artículo; Victorianweb da «from sea» y no menciona diferencia; un periódico de 1930 hablaba de un error al grabar. No hay verificación fotográfica propia: no afirmar el texto de la lápida; la pieza solo dice que, según una nota de Wikipedia, llevaría «the sea».",
+    "Que escribió «Requiem» en 1879. Una fuente lo dice, pero Victorianweb corrige la fecha del manuscrito: primer borrador de 1880. Tampoco la nota «Hyères, May, 1884» al pie del poema como fecha de redacción: Victorianweb no la presenta como tal.",
+    "Que Underwoods es de 1890. Victorianweb cita «Underwoods (1890)»; la portada en Wikisource dice Chatto and Windus, 1887. Usar 1887, edición que se leyó.",
+    "Los primeros versos «Under the wide and starry sky…» como si fueran de un poema titulado «Starry sky»: el título es «Requiem».",
+    "Fecha del entierro («4 de diciembre»): deducida de «al día siguiente» de Wikipedia; ninguna fuente la da explícita. La pieza dice «al día siguiente».",
+    "Atribuir la causa de la muerte con certeza: Wikipedia dice «stroke» (derrame); algún resumen habla de hemorragia cerebral. No usarla.",
+    "La traducción al español del epitafio es nuestra; no atribuirla a un traductor publicado.",
+    "La página de la NLS (digital.nls.uk/rlstevenson/requiem.html) no se pudo leer (HTTP 405): nada de lo dicho se apoya en ella."
+  ],
+  "status": "draft",
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
+}

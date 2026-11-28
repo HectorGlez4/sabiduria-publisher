@@ -1,0 +1,57 @@
+{
+  "id": "2027-01-21-tarde",
+  "slot": "tarde",
+  "pillar": "cita",
+  "core": {
+    "subject": "Longfellow y el Salmo de la vida (1838)",
+    "hook": "«Aprende a trabajar y a esperar.» Cierra un poema que empieza mandando callar a un pesimista.",
+    "body": [
+      "El poema es «A Psalm of Life». Salió en la revista The Knickerbocker en septiembre de 1838, firmado solo con una L., y en 1839 entró en el libro Voices of the Night. Su primer verso es una orden: «Tell me not, in mournful numbers, / Life is but an empty dream!». Que no le digan, en versos lúgubres, que la vida es un sueño vacío.",
+      "Las estrofas siguientes son la réplica. «Life is real! Life is earnest!», dice la segunda: la vida es real, la vida es seria, y la tumba no es su meta. Cita allí la frase del Génesis «polvo eres, y al polvo volverás» para añadir que eso no se dijo del alma. La novena estrofa cierra con el consejo que aquí se cita, que son dos verbos y no uno: trabajar y esperar.",
+      "Hoy se repite como una consigna de ánimo. En el poema hace otro trabajo: es la última palabra de una discusión con alguien que ya había decidido que nada valía la pena. Y pide las dos cosas a la vez, el esfuerzo y la paciencia, que casi nadie quiere juntas."
+    ],
+    "question": "¿Qué llevas tiempo haciendo bien sin ver todavía el resultado?",
+    "quote": {
+      "text": "Aprende a trabajar y a esperar.",
+      "author": "Henry Wadsworth Longfellow",
+      "work": "A Psalm of Life (1838), estrofa 9; trad. nuestra",
+      "attribution_verified": true
+    }
+  },
+  "card": {
+    "renderer": "quote_card",
+    "variant": "cream"
+  },
+  "sources": [
+    {
+      "claim": "Texto del poema (dominio público): estrofa 1 «Tell me not, in mournful numbers, / Life is but an empty dream!», estrofa 2 «Life is real! Life is earnest! / And the grave is not its goal; / «Dust thou art, to dust returnest,» / Was not spoken of the soul.» y estrofa 9 que termina «Learn to labor and to wait.»",
+      "source": "Academy of American Poets, poets.org, «A Psalm of Life»",
+      "url": "https://poets.org/poem/psalm-life"
+    },
+    {
+      "claim": "Texto del poema cotejado palabra por palabra con el anterior, sin diferencias de contenido.",
+      "source": "Wikisource, «A Psalm of Life»",
+      "url": "https://en.wikisource.org/wiki/A_Psalm_of_Life"
+    },
+    {
+      "claim": "Primera publicación en el número de septiembre de 1838 de The Knickerbocker, atribuida solo a «L.»; recogido en Voices of the Night (1839).",
+      "source": "Wikipedia, «A Psalm of Life»",
+      "url": "https://en.wikipedia.org/wiki/A_Psalm_of_Life"
+    }
+  ],
+  "do_not_use": [
+    "Que Longfellow lo escribió para consolar a alguien concreto o que «salvó la vida» de alguien. Wikipedia recoge una anécdota de un hombre al que una copia manuscrita habría librado del suicidio y la presenta como «one story has it»: sin confirmar.",
+    "La fecha exacta de redacción («julio de 1838») y el lugar (Cambridge). No aparecen en las tres fuentes leídas. Solo se afirma lo publicado: The Knickerbocker, septiembre de 1838.",
+    "Que el verso «Art is long, and Time is fleeting» viene de Hipócrates como cita directa del poeta. Wikipedia solo lo enlaza a la expresión Ars longa, vita brevis; ninguna fuente leída establece la relación. No usarlo.",
+    "Una atribución a «Longfellow, Salmo de la vida» como lema de superación sin contexto: el poema es una réplica a un pesimista, no un eslogan.",
+    "Que sea una traducción o adaptación de Goethe. Longfellow lo negó (1854), según Wikipedia; tampoco afirmar lo contrario sin fuente.",
+    "La traducción al español del verso es nuestra: no atribuirla a un traductor publicado ni citarla como «versión oficial».",
+    "Los versos del Génesis como cita original de Longfellow: «Dust thou art, to dust returnest» va entrecomillado en el poema porque es cita bíblica."
+  ],
+  "status": "draft",
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
+}

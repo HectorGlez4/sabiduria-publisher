@@ -1,0 +1,71 @@
+{
+  "id": "2027-01-21-manana",
+  "slot": "manana",
+  "pillar": "figura",
+  "core": {
+    "subject": "Frances Kelsey y la talidomida (1960)",
+    "hook": "En su primer mes en la FDA le tocó un sedante que ya se vendía en decenas de países. Dijo que no durante un año.",
+    "body": [
+      "Frances Oldham Kelsey nació en 1914 en Cobble Hill, en la isla de Vancouver. Tenía un doctorado en farmacología (Chicago, 1938) y un título de medicina (Chicago, 1950). En 1960 entró a la Administración de Alimentos y Medicamentos de Estados Unidos, y una de sus primeras asignaciones fue la solicitud para vender la talidomida, con el nombre comercial de Kevadon, como sedante.",
+      "La ley le daba 60 días para decidir. Cada vez que el plazo se cumplía, pedía más datos y el reloj volvía a empezar, durante más de un año. No sabía que el fármaco dañara a nadie. Lo que no había eran ensayos en humanos ni seguridad demostrada, según el Linda Hall: los testimonios de médicos no eran un estudio. La empresa presionó, incluso por encima de ella. Sus superiores la respaldaron.",
+      "Mientras tanto, en Europa nacían niños con las extremidades deformadas: al menos 4.000 según el relato de la Biblioteca Nacional de Medicina de Estados Unidos; más de 10.000 en 46 países según la Enciclopedia Canadiense. El 7 de agosto de 1962 el presidente Kennedy le entregó el Premio a la Distinguida Labor Civil Federal, y el 10 de octubre firmó las enmiendas Kefauver-Harris, que exigen demostrar que un fármaco es seguro y eficaz antes de venderlo. Una de las decisiones más importantes de la medicina moderna consistió en no aprobar algo."
+    ],
+    "question": "¿Qué decisión tuya mejoraría hoy con un «todavía no»?"
+  },
+  "card": {
+    "renderer": "text_card",
+    "variant": "gold",
+    "title": "Frances Kelsey",
+    "subtitle": "La funcionaria que retuvo la talidomida, 1960",
+    "body": "Tenía 60 días para decidir. Pidió datos cada vez que el plazo se cumplía, durante más de un año."
+  },
+  "sources": [
+    {
+      "claim": "En 1960, recién contratada por la FDA, se le asignó revisar la solicitud de talidomida; se negó a aprobarla por falta de pruebas pese a la presión constante de la empresa; el fármaco nunca se comercializó en EE. UU.; recibió el Premio Presidencial al Servicio Civil Federal Distinguido; nació en Cobble Hill, Columbia Británica; doctorado en 1938 y medicina en 1950 en Chicago.",
+      "source": "FDA, «Frances Oldham Kelsey: Medical Reviewer, Famous for Averting a Public Health Tragedy»",
+      "url": "https://www.fda.gov/about-fda/fda-history-exhibits/frances-oldham-kelsey-medical-reviewer-famous-averting-public-health-tragedy"
+    },
+    {
+      "claim": "La talidomida fue su primera asignación, en su primer mes en la FDA; retuvo la aprobación aunque los fabricantes intentaron esquivarla; al menos 4.000 niños afectados en Europa; el 7 de agosto de 1962 Kennedy le dio el President's Award for Distinguished Federal Civilian Service, y fue la segunda mujer en recibirlo.",
+      "source": "U.S. National Library of Medicine, «Dr. Frances Kathleen Oldham Kelsey», Changing the Face of Medicine",
+      "url": "https://nlm.nih.gov/exhibition/changing-the-face-of-medicine/physicians/biography_frances_kelsey.html"
+    },
+    {
+      "claim": "La empresa esperaba que pasaran los 60 días y reenviaba; Kelsey rechazó la solicitud cada dos meses durante un año; no había evidencia científica de eficacia ni seguridad demostrada ni ensayos clínicos en humanos; sus superiores la respaldaron; muestras se distribuyeron a médicos antes de la aprobación; entre 17 y 40 nacimientos con malformaciones en EE. UU.; unos 10.000 bebés en total, sobre todo en Alemania e Inglaterra; firma de las enmiendas Kefauver-Harris el 10 de octubre de 1962.",
+      "source": "Linda Hall Library, «Frances Oldham Kelsey», Scientist of the Day",
+      "url": "https://www.lindahall.org/about/news/scientist-of-the-day/frances-oldham-kelsey/"
+    },
+    {
+      "claim": "Más de 10.000 niños afectados en 46 países; nació el 24 de julio de 1914 en Cobble Hill; recibió el premio el 7 de agosto de 1962; doctorado en 1938 y MD en 1950.",
+      "source": "The Canadian Encyclopedia, «Frances Kelsey»",
+      "url": "https://www.thecanadianencyclopedia.ca/en/article/frances-kelsey"
+    },
+    {
+      "claim": "Doctorado (1938) y medicina (1950) por la Universidad de Chicago; su decisión frenó una tragedia en EE. UU.",
+      "source": "University of Chicago News, «Frances Oldham Kelsey, PhD’38, MD’50, FDA scientist who spurred drug reform, 1914-2015»",
+      "url": "https://news.uchicago.edu/story/frances-oldham-kelsey-phd38-md50-fda-scientist-who-spurred-drug-reform-1914-2015"
+    },
+    {
+      "claim": "Nombre comercial Kevadon; pidió datos cada 60 días durante más de un año; reconoció el trabajo de sus asistentes Jiro Oyama y Lee Geismar; sus superiores la respaldaron. Fuente enciclopédica de apoyo, cotejada con las anteriores.",
+      "source": "Wikipedia, «Frances Oldham Kelsey»",
+      "url": "https://en.wikipedia.org/wiki/Frances_Oldham_Kelsey"
+    }
+  ],
+  "do_not_use": [
+    "Que Kelsey rechazó la talidomida sola. No es exacto: Wikipedia nombra a sus asistentes Jiro Oyama y Lee Geismar, la Enciclopedia Canadiense habla de dos colegas (un químico y un farmacólogo) con las mismas dudas, y sus superiores la respaldaron. Ella tomó la decisión de retener la aprobación; no escribir que lo hizo en soledad.",
+    "Que sabía que el fármaco causaba malformaciones. Su objeción fue falta de pruebas de seguridad y de datos en animales preñados, no un daño conocido. Los síntomas neurológicos (carta en el BMJ, diciembre de 1960, según Wikipedia) se añadieron después a sus peticiones. No usar «lo sabía».",
+    "«No hubo ningún caso en Estados Unidos». La FDA y la NLM dicen que el fármaco nunca se comercializó, pero el Linda Hall habla de muestras entregadas a médicos y de entre 17 y 40 nacimientos con malformaciones en EE. UU. Escribir «nunca se vendió», no «nadie resultó afectado».",
+    "Una cifra exacta de afectados en el mundo. Las fuentes discrepan: «al menos 4.000» en Europa (NLM), «unos 10.000» (Linda Hall), «más de 10.000 en 46 países» (Enciclopedia Canadiense). La pieza da las dos con su atribución.",
+    "El nombre del premio. Las fuentes lo dan como President's Award for Distinguished Federal Civilian Service; no abreviarlo a «Medalla de la Libertad» ni a otro galardón.",
+    "La fecha exacta de la solicitud (septiembre de 1960). No aparece en ninguna de las fuentes leídas; solo «en su primer mes». No fecharla.",
+    "La fecha de retirada del mercado europeo. Las fuentes discrepan (finales de 1961 o primavera de 1962). No usarla.",
+    "Que el rumor de la industria la tachó de perezosa. Wikipedia lo menciona y lo califica de lo contrario de la verdad; no reintroducirlo ni siquiera para desmentirlo en la tarjeta.",
+    "La fecha de su muerte y la discrepancia sobre su ingreso en la Orden de Canadá (junio frente a 6 de agosto de 2015). No relevante para la pieza."
+  ],
+  "status": "draft",
+  "tags": {
+    "primary": "#SabiduriaDeBolsillo",
+    "topic": [],
+    "extended": []
+  }
+}
