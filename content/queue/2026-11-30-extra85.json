@@ -1,5 +1,5 @@
 {
-  "id": "2026-12-15-tarde",
+  "id": "2026-11-30-extra85",
   "slot": "tarde",
   "pillar": "cita",
   "core": {
@@ -20,12 +20,23 @@
   },
   "card": {
     "renderer": "quote_card",
-    "variant": "gold"
+    "variant": "cream"
   },
   "tags": {
     "primary": "#SabiduriaDeBolsillo",
-    "topic": ["#Wittgenstein", "#Citas", "#Tractatus"],
-    "extended": ["#Filosofia", "#Lenguaje", "#SigloXX", "#Silencio", "#Literatura", "#Sabiduria"]
+    "topic": [
+      "#Wittgenstein",
+      "#Citas",
+      "#Tractatus"
+    ],
+    "extended": [
+      "#Filosofia",
+      "#Lenguaje",
+      "#SigloXX",
+      "#Silencio",
+      "#Literatura",
+      "#Sabiduria"
+    ]
   },
   "sources": [
     {
@@ -52,5 +63,12 @@
     "La carta a Ficker (1919) y la reacción a Carnap se tomaron de Wikipedia; no se contrastaron con la correspondencia publicada. La carta a Schlick sobre Carnap figura sin fecha. Antes de publicar, convendría contrastarlas con una edición de las cartas.",
     "El año de la carta de Wittgenstein sobre Carnap y su destinatario exacto: no se fijan en el cuerpo."
   ],
-  "status": "draft"
+  "status": "ready",
+  "publish_at": "2026-12-01T04:26:00Z",
+  "results": {},
+  "targets": [
+    "facebook",
+    "instagram",
+    "threads"
+  ]
 }
